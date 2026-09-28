@@ -1,8 +1,10 @@
 node_modules
 .next
 out
+dist
+.vinext
+.wrangler
 .env
 .env.local
-.vercel
 *.log
 .DS_Store
