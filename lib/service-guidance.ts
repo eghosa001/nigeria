@@ -205,7 +205,6 @@ const explicit: Record<string, DetailedServiceGuidance> = {
       { title: "Use the correction guide if the certificate itself is wrong", detail: "Do not alter or annotate the certificate yourself; use WAEC's official correction process.", linkHref: "/services/waec-correct-certificate-error", linkLabel: "Open certificate correction guide →" },
     ],
   },
-};
 
   "nysc-remobilization": {
     route: {
@@ -257,6 +256,7 @@ const explicit: Record<string, DetailedServiceGuidance> = {
       { title: "Resolve browser/device access through NIMC", detail: "If the original self-service account is inaccessible because of the browser/device restriction, use NIMC's official unlink/support route rather than registering conflicting modification accounts.", linkHref: "/offices", linkLabel: "Find NIMC support routes →" },
     ],
   },
+};
 
 const agencyFallback: Record<string, string> = {
   nis: "Use the Nigeria Immigration Service's official passport office/contact route and keep the application reference and payment evidence ready.",
