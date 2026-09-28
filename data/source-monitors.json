@@ -1,0 +1,42 @@
+[
+  {
+    "name": "NIS passport fees",
+    "url": "https://immigration.gov.ng/nigeria-immigration-service-announces-upward-review-of-nigerian-standard-passport-fees/",
+    "expectedAll": ["100,000", "200,000"]
+  },
+  {
+    "name": "FRSC driver's licence fees",
+    "url": "https://nigeriadriverslicence.frsc.gov.ng/faq",
+    "expectedAll": ["7,000", "21,000"]
+  },
+  {
+    "name": "NIMC fees",
+    "url": "https://nimc.gov.ng/fees",
+    "expectedAny": ["28,574", "date of birth", "Date of Birth"]
+  },
+  {
+    "name": "JAMB profile-code instructions",
+    "url": "https://www.jamb.gov.ng/FAQ",
+    "expectedAll": ["55019", "66019"]
+  },
+  {
+    "name": "WAEC local confirmation fee",
+    "url": "https://www.waecnigeria.org/article/requirements-confirmation-result-school-candidates",
+    "expectedAll": ["19,500", "13,000"]
+  },
+  {
+    "name": "NPC adult birth attestation",
+    "url": "https://attestation.nationalpopulation.gov.ng/",
+    "expectedAny": ["USD80", "USD 80"]
+  },
+  {
+    "name": "CAC service timeline",
+    "url": "https://www.cac.gov.ng/services/service-timelines",
+    "expectedAll": ["24 Working Hours", "Name Reservation"]
+  },
+  {
+    "name": "NRS taxpayer registration",
+    "url": "https://selfservice.nrs.gov.ng/registration",
+    "expectedAll": ["CORPORATE", "INDIVIDUALS"]
+  }
+]
