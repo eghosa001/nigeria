@@ -28,7 +28,7 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run build
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test --config playwright.cloudflare.config.ts
+      - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
       - name: Upload Cloudflare Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v4

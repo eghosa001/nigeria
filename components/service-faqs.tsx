@@ -18,9 +18,9 @@ export function ServiceFaqs({ service }: { service: Service }) {
       </p>
       <div className="faq-list">
         <details>
-          <summary>Exactly what documents, details or prerequisites do I need?</summary>
+          <summary>What should I prepare before I start?</summary>
           <div className="faq-answer">
-            <p>Prepare every item below before beginning. The detailed checklist above explains why each one is needed and whether the source specifies an original, copy or upload.</p>
+            <p>Prepare before you begin by gathering every item below. The detailed checklist above explains why each one is needed, where it is used, and whether the official source specifies an original, copy or upload.</p>
             <ul>{requirementDetails.map((item) => <li key={item.item}><strong>{item.item}</strong> — {item.kind}</li>)}</ul>
           </div>
         </details>
