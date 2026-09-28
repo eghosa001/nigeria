@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAgency, services } from "@/lib/data";
+import { AdminServiceEditor } from "@/components/admin-service-editor";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -43,6 +44,8 @@ export default async function AdminServiceDetailPage({ params }: { params: Promi
           <div><span>Steps</span><strong>{service.steps.length}</strong></div>
           <div><span>Sources</span><strong>{service.sources.length}</strong></div>
         </div>
+
+        <AdminServiceEditor service={service} />
 
         <div className="admin-detail-grid">
           <section className="admin-panel">

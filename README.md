@@ -19,12 +19,12 @@ MyNigeriaGuide turns official government information into clear, source-linked g
 - Verified/conflict/review editorial states
 - Review-pending content is automatically excluded from public search, agency pages and the XML sitemap
 - Official-source links and last-checked dates on every public guide
-- Read-only `/admin` verification dashboard
+- Protected `/admin` verification dashboard plus review-only guide editing that creates GitHub pull requests
 - Google Analytics and Search Console hooks
-- Weekly source-integrity GitHub Action
+- Daily source-integrity GitHub Action plus six-hour production-health monitoring
 - GitHub CI for TypeScript/production builds plus Playwright desktop/mobile browser QA
 - Automated WCAG A/AA serious/critical accessibility checks
-- Weekly full official-link audit in addition to key fee/process marker monitoring
+- Daily full official-link audit in addition to key fee/process marker monitoring
 - Production security headers and installable web-app manifest
 - Conditional `ads.txt` endpoint that stays disabled until AdSense is configured
 - Verified-guide assistant that matches plain-language tasks to published source-linked guides
@@ -94,7 +94,8 @@ Copy `.env.example` to `.env.local`.
 - `GA4_PROPERTY_ID`: GA4 property used by the private Visits dashboard
 - `GA4_SERVICE_ACCOUNT_EMAIL`: service-account email with read access to that property
 - `GA4_SERVICE_ACCOUNT_PRIVATE_KEY`: server-only service-account private key
-- `MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY`: server-only passphrase protecting `/admin/visits`
+- `MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY`: server-only passphrase protecting private analytics and guide editing
+- `MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN`: fine-grained server-only GitHub token used only to create review branches/pull requests for guide edits
 - `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client
 - `NEXT_PUBLIC_ADSENSE_SLOT_GUIDE`: optional service-guide ad slot
 
@@ -108,7 +109,7 @@ A guide with status `review` must never be publicly indexable.
 
 `data/source-monitors.json` tracks high-value official source markers such as major passport, licence, JAMB, WAEC, NPC, CAC, NIMC and NRS information.
 
-The weekly GitHub workflow runs `scripts/check-sources.mjs`. If a critical marker disappears, the workflow fails so the source can be manually re-verified before the public guide is changed.
+The daily GitHub workflow runs `scripts/check-sources.mjs` and the full official-link audit. If a critical marker disappears or a source is definitively broken, the workflow fails so the guide can be re-verified before publication.
 
 ## Production launch
 

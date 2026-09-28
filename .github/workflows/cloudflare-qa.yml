@@ -15,6 +15,18 @@ on:
       - "package.json"
       - "playwright.cloudflare.config.ts"
       - ".github/workflows/cloudflare-qa.yml"
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "data/**"
+      - "tests/**"
+      - "vite.config.ts"
+      - "wrangler.jsonc"
+      - "package.json"
+      - "playwright.cloudflare.config.ts"
+      - ".github/workflows/cloudflare-qa.yml"
 
 jobs:
   workers-smoke:

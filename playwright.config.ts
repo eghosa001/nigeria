@@ -13,6 +13,10 @@ export default defineConfig({
   webServer: {
     command: "npm run start",
     url: "http://127.0.0.1:3000",
+    env: {
+      MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY: "qa-only-passphrase",
+      MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN: "qa-only-token",
+    },
     reuseExistingServer: false,
     timeout: 120_000,
   },

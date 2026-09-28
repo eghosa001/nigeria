@@ -11,6 +11,14 @@ on:
       - "tests/**"
       - "playwright.config.ts"
       - "package.json"
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "tests/**"
+      - "playwright.config.ts"
+      - "package.json"
 
 jobs:
   smoke:
@@ -24,6 +32,8 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run build:next
       - run: npx playwright install --with-deps chromium
+      - name: Run admin editing regression first
+        run: npx playwright test tests/admin-editing.spec.ts tests/admin-github.spec.ts --project=desktop --workers=1
       - run: npm run test:e2e
       - name: Upload Playwright report on failure
         if: failure()

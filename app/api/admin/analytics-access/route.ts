@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { adminCookieOptions } from "@/lib/admin-access";
 import {
   analyticsAdminAccessConfigured,
   analyticsAdminCookieName,
@@ -23,24 +24,12 @@ export async function POST(request: Request) {
   }
 
   const store = await cookies();
-  store.set(analyticsAdminCookieName(), analyticsAdminCookieValue(), {
-    httpOnly: true,
-    secure: true,
-    sameSite: "strict",
-    path: "/",
-    maxAge: 60 * 60 * 12,
-  });
+  store.set(analyticsAdminCookieName(), analyticsAdminCookieValue(), adminCookieOptions);
   return Response.json({ ok: true });
 }
 
 export async function DELETE() {
   const store = await cookies();
-  store.set(analyticsAdminCookieName(), "", {
-    httpOnly: true,
-    secure: true,
-    sameSite: "strict",
-    path: "/",
-    maxAge: 0,
-  });
+  store.set(analyticsAdminCookieName(), "", { ...adminCookieOptions, maxAge: 0 });
   return Response.json({ ok: true });
 }
