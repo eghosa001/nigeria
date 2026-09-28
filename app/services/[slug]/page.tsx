@@ -114,8 +114,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {service.status === "conflict" ? (
         <div className="container conflict-alert">
-          <strong>⚠ Official sources currently disagree</strong>
-          <p>We are showing the conflict instead of silently choosing a figure. Confirm the amount on the official payment channel before paying.</p>
+          <strong>Confirm current details before payment</strong>
+          <p>Two official pages currently differ on this detail. Use the latest linked official payment or application channel to confirm the amount before paying.</p>
         </div>
       ) : null}
 
