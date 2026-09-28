@@ -37,7 +37,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   if (!service) notFound();
 
   const agency = getAgency(service.agencySlug);
-  const related = service.related.map(getPublicService).filter(Boolean);
+  const related = publicServices
+    .filter((item) =>
+      item.slug !== service.slug &&
+      (service.related.includes(item.slug) || item.category === service.category),
+    )
+    .sort((a, b) =>
+      Number(service.related.includes(b.slug)) - Number(service.related.includes(a.slug)),
+    )
+    .slice(0, 4);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
   const breadcrumbs = [
@@ -184,6 +192,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span>Responsible agency</span>
               <strong>{agency?.name}</strong>
               {agency ? <Link href={"/agencies/" + agency.slug}>View agency guides →</Link> : null}
+            </div>
+            <div className="sidebar-card">
+              <span>Compare fees</span>
+              <strong>Browse the verified fee directory.</strong>
+              <Link href="/fees">View government fees →</Link>
             </div>
             <div className="sidebar-card">
               <span>Need an office?</span>
