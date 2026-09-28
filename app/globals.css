@@ -781,3 +781,71 @@ h3 { font-size: 1.22rem; }
 .error-state > p { color: var(--muted); font-size: 1.02rem; }
 .error-state > div { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 24px; }
 .error-state .button, .error-state .text-link { margin-top: 0; }
+
+
+/* Clear online / physical service journeys */
+.journey-section { margin-bottom: 42px; }
+.journey-heading { align-items: center; }
+.journey-mode {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: .76rem;
+  font-weight: 850;
+}
+.journey-mode-online { background: #e9f6ef; color: #075339; }
+.journey-mode-hybrid { background: #eef4ff; color: #284e8a; }
+.journey-mode-physical { background: #fff5df; color: #7d4300; }
+.journey-mode-agency-guided { background: #f0edf9; color: #563b88; }
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.journey-card {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+}
+.journey-card-primary { border-color: #b8cec1; background: #f8fcf9; }
+.journey-card > span {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.journey-card h3 { margin: 9px 0 8px; font-size: 1.12rem; }
+.journey-card p { color: var(--muted); font-size: .9rem; }
+.journey-trust-note {
+  margin-top: 12px;
+  padding: 13px 15px;
+  border-left: 3px solid var(--green);
+  background: #f7faf8;
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.aftercare-section { margin-top: 38px; }
+.aftercare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+.aftercare-grid > div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: white;
+}
+.aftercare-grid p { color: var(--muted); font-size: .9rem; margin-bottom: 0; }
+
+@media (max-width: 800px) {
+  .journey-grid { grid-template-columns: 1fr; }
+  .aftercare-grid { grid-template-columns: 1fr; }
+  .journey-heading { align-items: flex-start; }
+}
