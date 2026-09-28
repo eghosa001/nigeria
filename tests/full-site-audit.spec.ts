@@ -63,6 +63,18 @@ test("primary navigation works on desktop and mobile menu states", async ({ page
   await expect(page).toHaveURL(/\/assistant(?:$|\?)/);
 });
 
+test("foreign visas are directly discoverable without using search", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.getByRole("link", { name: /Foreign visas/i }).first()).toBeVisible();
+
+  await page.goto("/categories/foreign-visas");
+  await expect(page.getByRole("heading", { name: "Where are you travelling to?" })).toBeVisible();
+  expect(await page.locator(".visa-country-grid a").count()).toBeGreaterThanOrEqual(14);
+
+  await page.goto("/services");
+  await expect(page.locator(".service-category-nav a.featured")).toContainText("Foreign visas");
+});
+
 test("every guide is structured for a viewer completing the service", async ({ page }) => {
   test.setTimeout(180_000);
   for (const service of publicServices) {
