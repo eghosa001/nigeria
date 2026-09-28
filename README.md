@@ -14,28 +14,48 @@ GovGuide turns official government information into clear, source-linked guides 
 - Verified/conflict/review editorial states
 - Review-pending content is automatically excluded from public search, agency pages and the XML sitemap
 - Official-source links and last-checked dates on every public guide
-- Correction-reporting UI (activates after the new dedicated Supabase project is connected)
 - Read-only `/admin` verification dashboard
-- Google Analytics and Search Console verification hooks via environment variables
+- Google Analytics and Search Console hooks
 - Weekly source-integrity GitHub Action
-- Supabase schema prepared for a **new, dedicated GovGuide project**
 - GitHub CI for TypeScript/production builds plus Playwright desktop/mobile browser QA
 - Verified-guide assistant that matches plain-language tasks to published source-linked guides
 - Privacy, terms, editorial, corrections and contact pages
 - Favicon/social preview assets and environment-gated AdSense plumbing
 
-## Important Supabase rule
+## No database subscription required
 
-Do **not** run `supabase/schema.sql` against the existing education Supabase project.
+GovGuide's public website runs from checked-in verified content and does **not** require Supabase, PostgreSQL, or any paid monthly database.
 
-Create/connect a new Supabase account/project for GovGuide, then use:
+Core features that work without a database:
+
+- all public service guides
+- search and filters
+- GovGuide Assistant
+- agency and office finders
+- saved/watch guides on the user's device
+- WhatsApp/native sharing
+- SEO/sitemaps
+- analytics hooks
+- source monitoring
+- CI/browser QA
+
+Persistent correction reports and verification history are optional extras.
+
+## Optional Cloudflare D1 persistence
+
+If persistent correction reports are needed later, the repository includes:
+
+- `cloudflare/d1/schema.sql`
+- `cloudflare/worker-example.ts`
+
+The Next.js API remains backend-neutral. Configure only:
 
 ```env
-SUPABASE_URL=
-SUPABASE_PUBLISHABLE_KEY=
+GOVGUIDE_REPORT_ENDPOINT=
+GOVGUIDE_REPORT_TOKEN=
 ```
 
-The schema uses `govguide_*` table names, enables RLS, publishes only verified/conflict service records, keeps verification events private, and allows anonymous correction-report inserts without public read access.
+The endpoint can be a small Cloudflare Worker backed by D1. If these variables are absent, GovGuide still builds and the full public site continues to work.
 
 ## Local development
 
@@ -57,15 +77,13 @@ npm run test:e2e
 
 Copy `.env.example` to `.env.local`.
 
-- `SUPABASE_URL`: new GovGuide Supabase project URL
-- `SUPABASE_PUBLISHABLE_KEY`: publishable key for that new project
+- `GOVGUIDE_REPORT_ENDPOINT`: optional correction-report endpoint
+- `GOVGUIDE_REPORT_TOKEN`: optional server-side shared token for that endpoint
 - `NEXT_PUBLIC_SITE_URL`: production origin/custom domain
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: optional Google Analytics measurement ID
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: optional Search Console verification token
-- `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client (ads remain disabled without it)
+- `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client
 - `NEXT_PUBLIC_ADSENSE_SLOT_GUIDE`: optional service-guide ad slot
-
-The public website remains functional if Supabase is not configured.
 
 ## Editorial rule
 
@@ -78,13 +96,3 @@ A guide with status `review` must never be publicly indexable.
 `data/source-monitors.json` tracks high-value official source markers such as major passport, licence, JAMB, WAEC, NPC, CAC, NIMC and NRS information.
 
 The weekly GitHub workflow runs `scripts/check-sources.mjs`. If a critical marker disappears, the workflow fails so the source can be manually re-verified before the public guide is changed.
-
-## Next database phase
-
-Once a new GovGuide Supabase project is connected:
-
-1. Apply `supabase/schema.sql`.
-2. Seed the checked-in verified guides into `govguide_agencies`, `govguide_services` and `govguide_sources`.
-3. Add authenticated editor/admin policies.
-4. Move correction-report review and verification history into the dashboard.
-5. Keep checked-in seed content as a safe public fallback during database outages.
