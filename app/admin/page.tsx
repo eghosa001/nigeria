@@ -1,19 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { agencies, publicServices, services } from "@/lib/data";
+import { agencies, categories, publicServices, services } from "@/lib/data";
 import { isReportBackendConfigured } from "@/lib/report-backend";
 
-export const metadata: Metadata = {
-  title: "Verification dashboard",
-  robots: { index: false, follow: false },
-};
+export const metadata: Metadata = { title: "Dashboard" };
 
 export default function AdminPage() {
   const verified = services.filter((service) => service.status === "verified");
   const conflicts = services.filter((service) => service.status === "conflict");
   const reviews = services.filter((service) => service.status === "review");
+  const foreignVisas = publicServices.filter((service) => service.category === "Foreign visas");
   const sourceCount = new Set(services.flatMap((service) => service.sources.map((source) => source.url))).size;
   const backendConnected = isReportBackendConfigured();
+
+  const categoryRows = categories
+    .map((category) => ({
+      name: category.name,
+      count: publicServices.filter((service) => service.category === category.name).length,
+    }))
+    .filter((row) => row.count > 0)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
   return (
     <section className="section page-top admin-page">
@@ -21,11 +27,11 @@ export default function AdminPage() {
         <div className="admin-heading">
           <div>
             <span className="eyebrow">Operations</span>
-            <h1>Verification dashboard</h1>
-            <p className="page-intro">Read-only by design. The public site does not require a database; persistent correction reports are optional.</p>
+            <h1>Content & verification dashboard</h1>
+            <p className="page-intro">Review the whole guide library, foreign visas, official sources and published updates from one place.</p>
           </div>
           <span className={"db-state " + (backendConnected ? "connected" : "offline")}>
-            {backendConnected ? "Report backend connected" : "No report backend required"}
+            {backendConnected ? "Correction backend connected" : "Read-only operations mode"}
           </span>
         </div>
 
@@ -34,35 +40,55 @@ export default function AdminPage() {
           <div><strong>{verified.length}</strong><span>Verified</span></div>
           <div><strong>{conflicts.length}</strong><span>Conflicts</span></div>
           <div><strong>{reviews.length}</strong><span>Review queue</span></div>
-          <div><strong>{agencies.length}</strong><span>Agencies</span></div>
+          <div><strong>{foreignVisas.length}</strong><span>Foreign visas</span></div>
           <div><strong>{sourceCount}</strong><span>Official source URLs</span></div>
         </div>
 
-        <section className="admin-panel">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Editorial queue</span>
-              <h2>Guides awaiting verification</h2>
-            </div>
-          </div>
-          <div className="review-table">
-            {reviews.map((service) => (
-              <div key={service.slug}>
-                <span>
-                  <strong>{service.shortTitle}</strong>
-                  <small>{service.category} · {service.agencySlug.toUpperCase()}</small>
-                </span>
-                <span>{service.sources.length} source{service.sources.length === 1 ? "" : "s"}</span>
-              </div>
-            ))}
-          </div>
-        </section>
+        <div className="admin-action-grid">
+          <Link href="/admin/services"><span>Content library</span><strong>Browse every guide</strong><small>Search by category, status or keyword and inspect the full content record.</small><i>→</i></Link>
+          <Link href="/admin/foreign-visas"><span>International</span><strong>Foreign visa centre</strong><small>Review all destination guides, fees, documents and source coverage together.</small><i>→</i></Link>
+          <Link href="/admin/sources"><span>Verification</span><strong>Official sources</strong><small>See source coverage and the URLs under automatic content monitoring.</small><i>→</i></Link>
+          <Link href="/admin/updates"><span>Publishing</span><strong>Verified updates</strong><small>Review the fee, process and clarification updates currently surfaced publicly.</small><i>→</i></Link>
+        </div>
 
-        <section className="admin-panel">
-          <span className="eyebrow">Publishing rule</span>
-          <h2>Review status never publishes</h2>
-          <p>Only verified guides and deliberately marked official-source conflicts can appear in public search, agency pages or the XML sitemap.</p>
-          <Link className="text-link" href="/services">Inspect public directory →</Link>
+        <div className="admin-two-column">
+          <section className="admin-panel">
+            <div className="section-heading">
+              <div><span className="eyebrow">Categories</span><h2>Guide coverage</h2></div>
+              <Link href="/admin/services">All guides →</Link>
+            </div>
+            <div className="admin-category-list">
+              {categoryRows.map((row) => (
+                <Link key={row.name} href={"/services?category=" + encodeURIComponent(row.name)}>
+                  <span>{row.name}</span><strong>{row.count}</strong>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section className="admin-panel">
+            <div className="section-heading">
+              <div><span className="eyebrow">Editorial queue</span><h2>Needs attention</h2></div>
+            </div>
+            {reviews.length || conflicts.length ? (
+              <div className="review-table">
+                {[...reviews, ...conflicts].slice(0, 12).map((service) => (
+                  <Link href={"/admin/services/" + service.slug} key={service.slug}>
+                    <span><strong>{service.shortTitle}</strong><small>{service.category} · {service.agencySlug.toUpperCase()}</small></span>
+                    <span>{service.status}</span>
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <div className="admin-empty"><strong>No unresolved public conflicts.</strong><p>Review-status guides remain unpublished until verified.</p></div>
+            )}
+          </section>
+        </div>
+
+        <section className="admin-panel admin-safety-note">
+          <span className="eyebrow">Write protection</span>
+          <h2>Browser editing is intentionally disabled until admin authentication exists</h2>
+          <p>The site currently has no secure administrator sign-in. Keeping this console read-only prevents anyone who discovers the admin URL from modifying public government-service information. Content changes continue through the repository workflow and deployment checks.</p>
         </section>
       </div>
     </section>

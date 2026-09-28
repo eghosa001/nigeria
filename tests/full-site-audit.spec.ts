@@ -63,6 +63,27 @@ test("primary navigation works on desktop and mobile menu states", async ({ page
   await expect(page).toHaveURL(/\/assistant(?:$|\?)/);
 });
 
+test("admin workspace exposes the full content operation areas", async ({ page }) => {
+  await page.goto("/admin");
+  const adminNav = page.getByRole("navigation", { name: "Admin navigation" });
+  await expect(adminNav.getByRole("link", { name: "Dashboard" })).toBeVisible();
+  await expect(adminNav.getByRole("link", { name: "Guides" })).toBeVisible();
+  await expect(adminNav.getByRole("link", { name: "Foreign visas" })).toBeVisible();
+  await expect(adminNav.getByRole("link", { name: "Sources" })).toBeVisible();
+  await expect(adminNav.getByRole("link", { name: "Updates" })).toBeVisible();
+
+  await page.goto("/admin/foreign-visas");
+  expect(await page.locator(".admin-visa-grid > a").count()).toBeGreaterThanOrEqual(14);
+
+  await page.goto("/admin/services");
+  await expect(page.getByRole("heading", { name: "All service guides" })).toBeVisible();
+  await expect(page.locator(".admin-guide-table")).toBeVisible();
+
+  await page.goto("/admin/sources");
+  await expect(page.getByRole("heading", { name: "Official source registry" })).toBeVisible();
+  expect(await page.locator(".admin-source-registry > a").count()).toBeGreaterThan(20);
+});
+
 test("foreign visas are directly discoverable without using search", async ({ page }) => {
   await page.goto("/");
   await expect(page.getByRole("link", { name: /Foreign visas/i }).first()).toBeVisible();
