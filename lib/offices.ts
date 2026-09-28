@@ -10,6 +10,24 @@ export type OfficeDirectory = {
 
 export const officeDirectories: OfficeDirectory[] = [
   {
+    agency: "Nigeria Police Force",
+    service: "Police specialised services (POSSAP)",
+    coverage: "Online / nationwide",
+    description: "Use POSSAP for Police Character Certificate and other specialised police-service requests, payment and document validation.",
+    directoryUrl: "https://possap.gov.ng/",
+    sourceLabel: "Nigeria Police Force POSSAP portal",
+    checked: "2026-09-28",
+  },
+  {
+    agency: "Independent National Electoral Commission (INEC)",
+    service: "PVC status and collection centre",
+    coverage: "Nationwide",
+    description: "INEC's current CVR portal lets existing registered voters check PVC status and find the collection centre even though CVR registration is currently closed.",
+    directoryUrl: "https://cvr.inecnigeria.org/",
+    sourceLabel: "INEC Continuous Voter Registration portal",
+    checked: "2026-09-28",
+  },
+  {
     agency: "Central Bank of Nigeria / authorised BVN channels",
     service: "BVN enrolment routes",
     coverage: "Nationwide",

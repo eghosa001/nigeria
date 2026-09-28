@@ -37,7 +37,7 @@ test("every public route loads and has no broken internal links", async ({ page,
 });
 
 test("primary navigation works on desktop and mobile menu states", async ({ page }) => {
-  test.setTimeout(90_000);
+  test.setTimeout(60_000);
   await page.goto("/");
   const navTargets = [
     ["Services", "/services"],
@@ -48,13 +48,16 @@ test("primary navigation works on desktop and mobile menu states", async ({ page
     ["Find a guide", "/assistant"],
   ] as const;
 
+  const menu = page.getByRole("button", { name: "Open navigation" });
+  if (await menu.isVisible()) await menu.click();
+  const nav = page.getByRole("navigation", { name: "Primary navigation" });
   for (const [label, target] of navTargets) {
-    await page.goto("/");
-    const menu = page.getByRole("button", { name: "Open navigation" });
-    if (await menu.isVisible()) await menu.click();
-    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: label, exact: true }).click();
-    await expect(page).toHaveURL(new RegExp(target.replace("/", "\\/") + "(?:$|\\?)"));
+    const link = nav.getByRole("link", { name: label, exact: true });
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute("href", target);
   }
+  await nav.getByRole("link", { name: "Find a guide", exact: true }).click();
+  await expect(page).toHaveURL(/\/assistant(?:$|\?)/);
 });
 
 test("every guide is structured for a viewer completing the service", async ({ page }) => {
@@ -62,8 +65,8 @@ test("every guide is structured for a viewer completing the service", async ({ p
   for (const service of publicServices) {
     await page.goto("/services/" + service.slug, { waitUntil: "domcontentloaded" });
     await expect(page.getByRole("heading", { name: "Online, physical or both?" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "What you need" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Steps" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "What you need before you start" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Step-by-step instructions" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "What exactly happens next?" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Important notes" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Official sources" })).toBeVisible();

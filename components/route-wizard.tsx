@@ -11,6 +11,8 @@ const groups = [
   { id:"identity", title:"NIN & identity", text:"NIMC enrolment and record corrections.", options:[["Get a NIN","nin-enrolment"],["Correct date of birth","nin-date-of-birth-modification"],["Change phone number","nin-phone-modification"],["Reissue my NIN slip","nin-slip-reissue"]] },
   { id:"education", title:"School & youth service", text:"JAMB, WAEC, NECO and NYSC.", options:[["Register for JAMB UTME","jamb-2026-utme-registration"],["JAMB Direct Entry","jamb-direct-entry-2026"],["Check WAEC result","waec-check-result"],["Check NECO result","neco-check-result"],["NYSC registration","nysc-registration-local"]] },
   { id:"business", title:"Business & company", text:"CAC registration and company records.", options:[["Register a business name","cac-business-name-registration"],["Register a company","cac-company-registration"],["Get CAC status report","cac-status-report"]] },
+  { id:"police", title:"Police certificate", text:"Request an official Police Character Certificate.", options:[["Get Police Character Certificate","police-character-certificate"]] },
+  { id:"civic", title:"PVC & voter record", text:"Check an existing PVC record and collection centre.", options:[["Check my PVC status","inec-pvc-status"]] },
 ] as const;
 
 export function RouteWizard({ services }: { services: Service[] }) {

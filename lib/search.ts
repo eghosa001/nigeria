@@ -37,6 +37,10 @@ const aliases: Record<string, string[]> = {
   international: ["travel", "passport", "ecowas", "yellow"],
   yellowcard: ["yellow", "card", "travel", "vaccination"],
   ecowas: ["travel", "certificate", "west", "africa"],
+  police: ["pcc", "possap", "clearance", "character"],
+  pcc: ["police", "possap", "clearance", "character"],
+  pvc: ["inec", "voter", "card", "collection"],
+  voter: ["inec", "pvc", "registration"],
 };
 
 function normalize(value: string) {
@@ -48,7 +52,7 @@ function normalize(value: string) {
     .trim();
 }
 
-const fuzzyTargets = ["jamb","bvn","waec","neco","nysc","nin","nimc","cac","frsc","passport","travel","yellow","ecowas","immigration","licence","certificate"];
+const fuzzyTargets = ["jamb","bvn","waec","neco","nysc","nin","nimc","cac","frsc","passport","travel","yellow","ecowas","immigration","licence","certificate","police","possap","pcc","pvc","inec","voter"];
 
 function editDistance(a: string, b: string) {
   const rows = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);

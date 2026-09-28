@@ -98,3 +98,11 @@ test("international travel category exposes travel services", async ({ page }) =
   await expect(page.getByRole("heading", { name: /International travel services in Nigeria/i })).toBeVisible();
   await expect(page.getByRole("heading", { name: /Yellow Card|ECOWAS Travel Certificate|Landing/i }).first()).toBeVisible();
 });
+
+test("police and PVC guides are discoverable", async ({ page }) => {
+  await page.goto("/");
+  await page.getByLabel("What do you want to do?").fill("police clearance");
+  await expect(page.locator(".search-results").getByRole("link", { name: /Police Character Certificate/i })).toBeVisible();
+  await page.getByLabel("What do you want to do?").fill("find my pvc");
+  await expect(page.locator(".search-results").getByRole("link", { name: /PVC status/i })).toBeVisible();
+});
