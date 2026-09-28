@@ -1,6 +1,9 @@
 import { expect, test } from "@playwright/test";
-import { services, publicServices } from "@/lib/data";
+import fs from "node:fs";
 import { serializeServiceCatalog, validateServiceCatalog } from "@/lib/service-records";
+
+const services = validateServiceCatalog(JSON.parse(fs.readFileSync(new URL("../data/services.json", import.meta.url), "utf8")));
+const publicServices = services.filter((service) => service.status !== "review");
 
 const expectedSlugs = [
   "passport-renewal",
