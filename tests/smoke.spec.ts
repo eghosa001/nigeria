@@ -75,3 +75,26 @@ test("core pages do not overflow horizontally", async ({ page }) => {
     expect(overflow, path + " horizontal overflow").toBeLessThanOrEqual(1);
   }
 });
+
+test("typo-tolerant search finds JAMB and new BVN guides", async ({ page }) => {
+  await page.goto("/");
+  await page.getByLabel("What do you want to do?").fill("jamn registration");
+  await expect(page.locator(".search-results").getByRole("link", { name: /JAMB|UTME/i }).first()).toBeVisible();
+  await page.getByLabel("What do you want to do?").fill("forgot bvn");
+  await expect(page.locator(".search-results").getByRole("link", { name: /Retrieve BVN/i })).toBeVisible();
+});
+
+test("service process tracker can start and persist locally", async ({ page }) => {
+  await page.goto("/services/bvn-enrolment");
+  await page.getByRole("button", { name: /Start this process/i }).click();
+  await expect(page.getByRole("heading", { name: /items completed/i })).toBeVisible();
+  await page.locator(".process-check input").first().check();
+  await page.reload();
+  await expect(page.locator(".process-check input").first()).toBeChecked();
+});
+
+test("international travel category exposes travel services", async ({ page }) => {
+  await page.goto("/categories/international-travel");
+  await expect(page.getByRole("heading", { name: /International travel services in Nigeria/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Yellow Card|ECOWAS Travel Certificate|Landing/i }).first()).toBeVisible();
+});

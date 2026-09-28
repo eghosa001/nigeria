@@ -14,7 +14,9 @@ function getWatchlist() {
   }
 }
 
-export function ShareWatch({ slug, title }: { slug: string; title: string }) {
+const snapshotKey = "mynigeriaguide:watch-snapshots";
+
+export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: string; title: string; feeLabel?: string; lastVerified?: string }) {
   const [watched, setWatched] = useState(false);
   const [copied, setCopied] = useState(false);
   const [pageUrl, setPageUrl] = useState("");
@@ -30,6 +32,12 @@ export function ShareWatch({ slug, title }: { slug: string; title: string }) {
     else current.add(slug);
 
     localStorage.setItem(storageKey, JSON.stringify([...current]));
+    try {
+      const snapshots = JSON.parse(localStorage.getItem(snapshotKey) ?? "{}");
+      if (current.has(slug)) snapshots[slug] = { title, feeLabel, lastVerified };
+      else delete snapshots[slug];
+      localStorage.setItem(snapshotKey, JSON.stringify(snapshots));
+    } catch {}
     setWatched(current.has(slug));
     window.dispatchEvent(new Event(watchEvent));
   }
@@ -60,7 +68,7 @@ export function ShareWatch({ slug, title }: { slug: string; title: string }) {
         {watched ? "Watching" : "Watch this guide"}
       </button>
       <small>
-        Watching saves this guide on this device. Live change alerts will activate only when the notification backend is connected.
+        Watching saves a comparison snapshot on this device. Saved Guides will flag fee or verification changes when you return.
       </small>
     </div>
   );

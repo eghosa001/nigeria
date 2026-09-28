@@ -5,6 +5,7 @@ import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 
 const siteUrl = getSiteUrl();
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
+        <ServiceWorkerRegister />
         <Analytics />
         <AdsenseScript />
       </body>

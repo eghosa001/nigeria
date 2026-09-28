@@ -7,7 +7,9 @@ type CategoryName =
   | "Youth service"
   | "Civil records"
   | "Tax"
-  | "State services";
+  | "State services"
+  | "Banking"
+  | "International travel";
 
 function IconBase({ children }: { children: React.ReactNode }) {
   return (
@@ -39,6 +41,10 @@ export function CategoryIcon({ category }: { category: string }) {
       return <IconBase><path d="M7 3h10v18l-2-1.4L13 21l-2-1.4L9 21l-2-1.4V3Z" {...common}/><path d="M10 8h4M10 12h4M10 16h2" {...common}/></IconBase>;
     case "State services":
       return <IconBase><path d="m3 9 9-5 9 5M5 10h14M6 10v8M10 10v8M14 10v8M18 10v8M4 20h16" {...common}/></IconBase>;
+    case "Banking":
+      return <IconBase><rect x="3" y="6" width="18" height="12" rx="2.5" {...common}/><path d="M3 10h18M7 14h3M14 14h3" {...common}/></IconBase>;
+    case "International travel":
+      return <IconBase><circle cx="12" cy="12" r="8" {...common}/><path d="M4 12h16M12 4c2.5 2.3 3.5 5 3.5 8S14.5 17.7 12 20M12 4c-2.5 2.3-3.5 5-3.5 8s1 5.7 3.5 8M15.5 9.5l4-2-2 4" {...common}/></IconBase>;
     default:
       return <IconBase><circle cx="12" cy="12" r="8" {...common}/><path d="M12 8v8M8 12h8" {...common}/></IconBase>;
   }

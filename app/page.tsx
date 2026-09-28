@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CategoryIcon } from "@/components/category-icon";
 import { GuideAssistant } from "@/components/guide-assistant";
 import { ServiceSearch } from "@/components/search";
+import { RouteWizard } from "@/components/route-wizard";
 import { ServiceCard } from "@/components/service-card";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { categorySlug } from "@/lib/category";
@@ -10,6 +11,8 @@ import { agencies, categories, publicServices } from "@/lib/data";
 const popular = [
   { label: "Passport", href: "/services/passport-renewal" },
   { label: "NIN", href: "/categories/identity" },
+  { label: "BVN", href: "/categories/banking" },
+  { label: "Travel", href: "/categories/international-travel" },
   { label: "JAMB", href: "/categories/education" },
   { label: "Driver's licence", href: "/categories/driving" },
   { label: "CAC", href: "/categories/business" },
@@ -66,6 +69,10 @@ export default function HomePage() {
           <div><span aria-hidden="true">03</span><strong>Pay only where official</strong><small>Source-linked fees and official payment routes.</small></div>
           <div><span aria-hidden="true">04</span><strong>Know what happens next</strong><small>Follow-up, collection and support guidance.</small></div>
         </div>
+      </section>
+
+      <section className="section wizard-section">
+        <div className="container narrow-wide"><RouteWizard services={publicServices} /></div>
       </section>
 
       <section className="section">

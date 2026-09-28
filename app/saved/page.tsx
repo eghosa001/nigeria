@@ -15,7 +15,7 @@ export default function SavedPage() {
         <span className="eyebrow">Your device</span>
         <h1>Saved guides</h1>
         <p className="page-intro">
-          These guides are stored in your browser only. Saving does not yet create an email or push notification subscription.
+          These guides and their review snapshots are stored in your browser only. When a watched guide changes, this page can flag it the next time you return; email or push notifications are not enabled yet.
         </p>
         <SavedGuides services={publicServices} />
       </div>

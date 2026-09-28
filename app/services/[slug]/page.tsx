@@ -7,6 +7,8 @@ import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
+import { ProcessTracker } from "@/components/process-tracker";
+import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceAftercare } from "@/components/service-aftercare";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
@@ -96,7 +98,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <StatusBadge status={service.status} />
                 <span className="checked-date">Checked {service.lastVerified}</span>
               </div>
-              <ShareWatch slug={service.slug} title={service.title} />
+              <ShareWatch slug={service.slug} title={service.title} feeLabel={service.feeLabel} lastVerified={service.lastVerified} />
             </div>
             <aside className="fee-card">
               <span>Current fee / status</span>
@@ -110,6 +112,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <small>MyNigeriaGuide does not collect this payment.</small>
             </aside>
           </div>
+          <ServiceStatusStrip service={service} />
         </div>
       </section>
 
@@ -131,6 +134,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <a href="#after-submit">After submission</a>
               <a href="#official-sources">Sources</a>
             </nav>
+
+            <ProcessTracker service={service} />
 
             <ServiceJourney service={service} />
 

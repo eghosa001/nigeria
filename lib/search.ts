@@ -31,6 +31,12 @@ const aliases: Record<string, string[]> = {
   nysc: ["youth", "service", "mobilisation", "mobilization"],
   birth: ["npc", "certificate", "attestation"],
   tax: ["nrs", "taxpayer"],
+  bvn: ["bank", "banking", "verification", "nibss"],
+  banking: ["bvn", "bank", "nibss"],
+  travel: ["international", "passport", "ecowas", "yellow", "immigration"],
+  international: ["travel", "passport", "ecowas", "yellow"],
+  yellowcard: ["yellow", "card", "travel", "vaccination"],
+  ecowas: ["travel", "certificate", "west", "africa"],
 };
 
 function normalize(value: string) {
@@ -42,11 +48,27 @@ function normalize(value: string) {
     .trim();
 }
 
+const fuzzyTargets = ["jamb","bvn","waec","neco","nysc","nin","nimc","cac","frsc","passport","travel","yellow","ecowas","immigration","licence","certificate"];
+
+function editDistance(a: string, b: string) {
+  const rows = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
+  for (let j = 0; j <= b.length; j++) rows[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) rows[i][j] = Math.min(rows[i - 1][j] + 1, rows[i][j - 1] + 1, rows[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  return rows[a.length][b.length];
+}
+
 function queryTokens(query: string) {
   const base = normalize(query).split(/\s+/).filter(Boolean).filter((token) => !stopWords.has(token));
   const expanded = new Set(base);
   for (const token of base) {
     for (const alias of aliases[token] ?? []) expanded.add(alias);
+    if (token.length >= 4) for (const target of fuzzyTargets) {
+      const allowed = Math.max(token.length, target.length) >= 8 ? 2 : 1;
+      if (editDistance(token, target) <= allowed) {
+        expanded.add(target);
+        for (const alias of aliases[target] ?? []) expanded.add(alias);
+      }
+    }
   }
   return [...expanded];
 }

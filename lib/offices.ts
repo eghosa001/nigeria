@@ -10,6 +10,24 @@ export type OfficeDirectory = {
 
 export const officeDirectories: OfficeDirectory[] = [
   {
+    agency: "Central Bank of Nigeria / authorised BVN channels",
+    service: "BVN enrolment routes",
+    coverage: "Nationwide",
+    description: "CBN says BVN enrolment is available through banks, while its SANEF guidance confirms BVN enrolment is also provided through authorised agent locations.",
+    directoryUrl: "https://www.cbn.gov.ng/DFD/energy/sanef.html",
+    sourceLabel: "CBN SANEF and BVN guidance",
+    checked: "2026-09-28",
+  },
+  {
+    agency: "Federal Ministry of Health and Social Welfare",
+    service: "Yellow Card / Port Health route",
+    coverage: "Designated Port Health offices",
+    description: "Register and pay on the official Yellow Card portal before attending a designated Port Health Services office.",
+    directoryUrl: "https://yellowcard.health.gov.ng",
+    sourceLabel: "Federal Ministry of Health Port Health guidance",
+    checked: "2026-09-28",
+  },
+  {
     agency: "Federal Capital Territory Internal Revenue Service (FCT-IRS)",
     service: "FCT tax offices",
     coverage: "Federal Capital Territory",
