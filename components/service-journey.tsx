@@ -17,7 +17,7 @@ export function ServiceJourney({ service }: { service: Service }) {
 
       <div className="journey-grid">
         <article className="journey-card journey-card-primary">
-          <span className="journey-number">01</span>
+          <span className="journey-number" aria-hidden="true">01</span>
           <span className="journey-label">Recommended start</span>
           <h3>{journey.startLabel}</h3>
           <p>{journey.startDetail}</p>
@@ -29,7 +29,7 @@ export function ServiceJourney({ service }: { service: Service }) {
         </article>
 
         <article className="journey-card">
-          <span className="journey-number">02</span>
+          <span className="journey-number" aria-hidden="true">02</span>
           <span className="journey-label">Physical visit</span>
           <h3>{journey.physicalLabel}</h3>
           <p>
@@ -43,7 +43,7 @@ export function ServiceJourney({ service }: { service: Service }) {
         </article>
 
         <article className="journey-card">
-          <span className="journey-number">03</span>
+          <span className="journey-number" aria-hidden="true">03</span>
           <span className="journey-label">Fallback</span>
           <h3>{journey.alternativeLabel}</h3>
           <p>{journey.alternativeDetail}</p>

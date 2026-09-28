@@ -135,7 +135,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ServiceJourney service={service} />
 
             <section id="requirements">
-              <span className="section-number">01</span>
+              <span className="section-number" aria-hidden="true">01</span>
               <h2>What you need</h2>
               <ul className="checklist">
                 {service.requirements.map((item) => <li key={item}>{item}</li>)}
@@ -143,7 +143,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </section>
 
             <section id="steps">
-              <span className="section-number">02</span>
+              <span className="section-number" aria-hidden="true">02</span>
               <h2>Steps</h2>
               <ol className="steps">
                 {service.steps.map((step, index) => (
@@ -157,13 +157,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GUIDE} />
 
             <section id="notes">
-              <span className="section-number">03</span>
+              <span className="section-number" aria-hidden="true">03</span>
               <h2>Important notes</h2>
               <ul>{service.notes.map((note) => <li key={note}>{note}</li>)}</ul>
             </section>
 
             <section id="questions">
-              <span className="section-number">04</span>
+              <span className="section-number" aria-hidden="true">04</span>
               <h2>Common questions</h2>
               <div className="faq-list">
                 <details>
@@ -186,7 +186,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </section>
 
             <section id="official-sources">
-              <span className="section-number">05</span>
+              <span className="section-number" aria-hidden="true">05</span>
               <h2>Official sources</h2>
               <p className="source-intro">These are the government or agency pages used to verify this guide. Open them directly whenever you want to confirm the source.</p>
               <div className="source-list">

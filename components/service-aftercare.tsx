@@ -12,13 +12,13 @@ export function ServiceAftercare({ service }: { service: Service }) {
 
       <div className="aftercare-grid">
         <div>
-          <span className="aftercare-number">01</span>
+          <span className="aftercare-number" aria-hidden="true">01</span>
           <strong>Keep your evidence</strong>
           <p>Save the application reference, payment receipt, acknowledgement, transaction slip or confirmation page the official process gives you.</p>
         </div>
 
         <div>
-          <span className="aftercare-number">02</span>
+          <span className="aftercare-number" aria-hidden="true">02</span>
           <strong>Complete the remaining stage</strong>
           <p>
             {journey.physicalStatus === "required"
@@ -30,7 +30,7 @@ export function ServiceAftercare({ service }: { service: Service }) {
         </div>
 
         <div>
-          <span className="aftercare-number">03</span>
+          <span className="aftercare-number" aria-hidden="true">03</span>
           <strong>Know when to follow up</strong>
           <p>
             {service.timeline
@@ -40,7 +40,7 @@ export function ServiceAftercare({ service }: { service: Service }) {
         </div>
 
         <div>
-          <span className="aftercare-number">04</span>
+          <span className="aftercare-number" aria-hidden="true">04</span>
           <strong>If something goes wrong</strong>
           <p>Re-check the official source and your application details first. If the process still fails, use the responsible agency's official support or office route.</p>
           <Link className="text-link" href="/offices">Official office/centre finders →</Link>

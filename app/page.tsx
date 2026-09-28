@@ -61,10 +61,10 @@ export default function HomePage() {
 
       <section className="proof-strip" aria-label="Why use MyNigeriaGuide">
         <div className="container proof-grid">
-          <div><span>01</span><strong>Know what to prepare</strong><small>Documents and eligibility before you start.</small></div>
-          <div><span>02</span><strong>Choose the right route</strong><small>Online, physical or a combination of both.</small></div>
-          <div><span>03</span><strong>Pay only where official</strong><small>Source-linked fees and official payment routes.</small></div>
-          <div><span>04</span><strong>Know what happens next</strong><small>Follow-up, collection and support guidance.</small></div>
+          <div><span aria-hidden="true">01</span><strong>Know what to prepare</strong><small>Documents and eligibility before you start.</small></div>
+          <div><span aria-hidden="true">02</span><strong>Choose the right route</strong><small>Online, physical or a combination of both.</small></div>
+          <div><span aria-hidden="true">03</span><strong>Pay only where official</strong><small>Source-linked fees and official payment routes.</small></div>
+          <div><span aria-hidden="true">04</span><strong>Know what happens next</strong><small>Follow-up, collection and support guidance.</small></div>
         </div>
       </section>
 

@@ -10,6 +10,7 @@
   --line: #d9e2dc;
   --white: #ffffff;
   --gold: #d1a24a;
+  --gold-ink: #7a5515;
   --gold-soft: #f3e8d1;
   --amber: #96600d;
   --amber-bg: #fff7e8;
@@ -1042,7 +1043,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
 .proof-grid > div { position: relative; padding: 26px 24px; border-left: 1px solid rgba(6,63,45,.08); }
 .proof-grid > div:first-child { border-left: 0; }
-.proof-grid > div > span { display: block; margin-bottom: 12px; color: var(--gold); font-size: .72rem; font-weight: 900; letter-spacing: .11em; }
+.proof-grid > div > span { display: block; margin-bottom: 12px; color: var(--gold-ink); font-size: .72rem; font-weight: 900; letter-spacing: .11em; }
 .proof-grid strong { display: block; color: var(--green-deep); font-size: .92rem; }
 .proof-grid small { display: block; margin-top: 5px; color: var(--muted); font-size: .76rem; line-height: 1.45; }
 
@@ -1239,7 +1240,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 .section-number {
   display: inline-flex;
   margin-bottom: 8px;
-  color: var(--gold);
+  color: var(--gold-ink);
   font-size: .7rem;
   font-weight: 900;
   letter-spacing: .12em;
@@ -1252,7 +1253,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 .journey-grid { gap: 13px; }
 .journey-card { position: relative; overflow: hidden; min-height: 245px; padding: 21px; border-color: rgba(6,63,45,.11); border-radius: 17px; background: var(--surface); }
 .journey-card-primary { border-color: rgba(8,112,68,.22); background: linear-gradient(145deg, #f6fbf7, #edf7f0); }
-.journey-number { position: absolute; right: 16px; top: 13px; color: rgba(6,63,45,.13) !important; font-size: 2rem !important; letter-spacing: -.08em !important; }
+.journey-number { position: absolute; right: 16px; top: 13px; color: #6e8177 !important; font-size: 2rem !important; letter-spacing: -.08em !important; }
 .journey-label { color: var(--muted); font-size: .7rem; font-weight: 850; text-transform: uppercase; letter-spacing: .07em; }
 .journey-card h3 { margin-top: 13px; }
 .journey-mode { min-height: 36px; padding-inline: 12px; border: 1px solid rgba(6,63,45,.08); }
@@ -1262,7 +1263,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 
 .aftercare-grid { gap: 13px; }
 .aftercare-grid > div { position: relative; padding: 20px; border-color: rgba(6,63,45,.10); border-radius: 16px; background: var(--surface); }
-.aftercare-number { display: block; margin-bottom: 13px; color: var(--gold); font-size: .7rem; font-weight: 900; letter-spacing: .11em; }
+.aftercare-number { display: block; margin-bottom: 13px; color: var(--gold-ink); font-size: .7rem; font-weight: 900; letter-spacing: .11em; }
 .aftercare-grid strong { color: var(--green-deep); }
 
 .checklist { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
@@ -1276,7 +1277,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 
 .faq-list details { border-color: rgba(6,63,45,.10); border-radius: 14px; background: var(--surface); }
 .faq-list summary { position: relative; padding-right: 32px; }
-.faq-list summary::after { content: "+"; position: absolute; right: 0; color: var(--gold); font-size: 1.2rem; }
+.faq-list summary::after { content: "+"; position: absolute; right: 0; color: var(--gold-ink); font-size: 1.2rem; }
 .faq-list details[open] summary::after { content: "−"; }
 
 .source-intro { max-width: 700px; color: var(--muted); }
