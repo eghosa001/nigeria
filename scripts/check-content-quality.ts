@@ -21,6 +21,12 @@ const priorityGuides = new Set([
 
 const vaguePattern = /follow (?:the )?(?:portal|official|process)|complete (?:the )?(?:process|registration)|as instructed|where required|details requested by|through the .* process/i;
 
+const opaqueRequirementPattern = /^(?:registered entity details|service details|candidate and examination details|supporting documents required(?:\b| for)|documents required(?:\b| for)|required .* information for the entity type|.*details required by the .* portal)$/i;
+
+function requirementIsOpaque(value: string) {
+  return opaqueRequirementPattern.test(value.trim()) && !/such as|including|for example|depends on|does not use one identical|does not publish one universal/i.test(value);
+}
+
 for (const service of publicServices) {
   const prefix = service.slug + ": ";
 
@@ -95,6 +101,11 @@ for (const service of publicServices) {
   const vague = [...service.requirements, ...service.steps].filter((value) => vaguePattern.test(value));
   if (vague.length) {
     errors.push(prefix + "contains generic process wording that must be made concrete: " + vague[0]);
+  }
+
+  const opaqueRequirement = service.requirements.find(requirementIsOpaque);
+  if (opaqueRequirement) {
+    errors.push(prefix + "contains an opaque requirement instead of naming the document/detail or explaining why the exact list varies: " + opaqueRequirement);
   }
 }
 
