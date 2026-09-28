@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ServiceCard } from "@/components/service-card";
-import { services } from "@/lib/data";
+import { publicServices } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Government service directory",
@@ -15,7 +15,7 @@ export default function ServicesPage() {
         <h1>Government service guides</h1>
         <p className="page-intro">The directory starts small by design: publish verified guides first, then expand.</p>
         <div className="service-grid top-gap">
-          {services.map((service) => <ServiceCard key={service.slug} service={service} />)}
+          {publicServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
         </div>
       </div>
     </section>
