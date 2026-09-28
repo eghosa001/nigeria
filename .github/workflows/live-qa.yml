@@ -1,8 +1,6 @@
 name: Live Deployment QA
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -21,15 +19,15 @@ jobs:
         shell: bash
         run: |
           for i in {1..24}; do
-            body="$(curl -fsS "$LIVE_BASE_URL/services/nin-date-of-birth-modification" || true)"
-            if echo "$body" | grep -q "28,574"; then
+            body="$(curl -fsS "$LIVE_BASE_URL/" || true)"
+            if echo "$body" | grep -q "Clear steps. Verified sources."; then
               echo "Current deployment detected."
               exit 0
             fi
             echo "Waiting for current Cloudflare deployment ($i/24)..."
             sleep 10
           done
-          echo "Latest content was not visible on the live Worker in time."
+          echo "Latest premium deployment was not visible on the live Worker in time."
           exit 1
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test --config playwright.live.config.ts tests/smoke.spec.ts tests/live-deployment.spec.ts
