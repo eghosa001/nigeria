@@ -207,6 +207,57 @@ const explicit: Record<string, DetailedServiceGuidance> = {
   },
 };
 
+  "nysc-remobilization": {
+    route: {
+      startTitle: "Use remobilization only if you previously absconded from service",
+      startDetail: "NYSC distinguishes remobilization from revalidation. Remobilization is for a corps member who was mobilized in an earlier batch and absconded; revalidation is for someone who was deployed but never reported to camp.",
+      physicalTitle: "The first stage is an online approval application",
+      physicalDetail: "The current NYSC remobilization form asks for the previous call-up number, state code, batch, deployment state and phone number. Married female applicants seeking the relevant concession also upload the marital/residence evidence listed by NYSC.",
+      fallbackTitle: "If the old service record cannot be matched",
+      fallbackDetail: "Use NYSC's official mobilisation support lines or State Secretariat with the previous call-up number and state code. Do not create a fresh-registration profile to bypass the earlier service record.",
+    },
+    aftercare: [
+      { title: "Treat submission as an approval request, not completed remobilization", detail: "NYSC states that the application goes through an approval process and only approved applicants become eligible for remobilization registration." },
+      { title: "Keep the previous call-up and state-code details", detail: "These identify the earlier service record and are the details to quote if the remobilization application needs support." },
+      { title: "Return to the NYSC portal after approval", detail: "Once NYSC approves the remobilization request, follow the remobilization-registration instruction made available through the official portal rather than starting a new fresh-registration record." },
+      { title: "Escalate mobilisation problems through NYSC", detail: "NYSC publishes dedicated mobilisation support lines and State Secretariat support for registration/mobilisation issues.", linkHref: "/offices", linkLabel: "See official NYSC routes →" },
+    ],
+  },
+
+  "official-nigerian-passport": {
+    route: {
+      startTitle: "Confirm eligibility before paying for an official passport",
+      startDetail: "NIS limits the blue official passport to published categories of eligible public officials. Prepare the organisation introduction letter and the appointment/promotion, official-ID, age and electoral-return evidence that applies to the applicant.",
+      physicalTitle: "Apply online, then attend the selected processing centre",
+      physicalDetail: "NIS's Service Level Agreement says to apply online, choose a Passport Processing Centre, book data enrolment and appear at that selected centre for enrolment.",
+      fallbackTitle: "Eligibility questions should go through the applicant's organisation and NIS",
+      fallbackDetail: "An official passport is not a standard-passport upgrade that an agent can arrange. If the public-service grade or office is unclear, confirm eligibility through the applicant's organisation and the Nigeria Immigration Service before payment.",
+    },
+    aftercare: [
+      { title: "Keep the organisation letter, payment and enrolment records", detail: "These documents connect the passport request to the eligible office or organisation and should be retained until issuance." },
+      { title: "Complete data enrolment at the selected PPC", detail: "The online application is not the final stage; NIS requires appearance at the selected processing centre for enrolment." },
+      { title: "Count the published timeline from successful enrolment", detail: "NIS's 2025 Service Level Agreement lists 7 days after successful enrolment for the official passport, not 7 days from creating the online application." },
+      { title: "Use NIS SERVICOM/support for a stalled eligible application", detail: "Follow up through the selected processing centre or NIS's official service/contact channel with the application and enrolment references.", linkHref: "/offices", linkLabel: "Find official NIS routes →" },
+    ],
+  },
+
+  "nin-phone-modification": {
+    route: {
+      startTitle: "Use NIMC's self-service phone-number modification",
+      startDetail: "Sign in to the self-service modification account, choose Phone Number, upload the police report for the lost or damaged-number case, enter the replacement Nigerian number in +234 format without the leading zero, pay, preview and submit.",
+      physicalTitle: "A centre visit is the fallback if self-service access cannot be resolved",
+      physicalDetail: "NIMC publishes the phone-number change as a self-service modification. It also warns that the account can be tied to the original browser or device, so an access problem may need the official unlink/support process rather than a new account.",
+      fallbackTitle: "If the portal will not open the registered account",
+      fallbackDetail: "Use NIMC's official self-service account-unlink/support process or an official NIMC centre. Do not give an unofficial agent the NIN, portal password or police report to unlock the account.",
+    },
+    aftercare: [
+      { title: "Save the modification transaction slip", detail: "The self-service dashboard produces a modification transaction slip; keep it as the reference for the request." },
+      { title: "Check the modification table/dashboard for approval", detail: "Payment and submission do not by themselves prove the NIN record has changed. Return to the dashboard and monitor the submitted modification until NIMC approves it." },
+      { title: "Verify the updated NIN record before relying on the new number", detail: "After approval, confirm that the NIN record now shows the replacement phone number before using it for services that depend on NIN-linked contact details." },
+      { title: "Resolve browser/device access through NIMC", detail: "If the original self-service account is inaccessible because of the browser/device restriction, use NIMC's official unlink/support route rather than registering conflicting modification accounts.", linkHref: "/offices", linkLabel: "Find NIMC support routes →" },
+    ],
+  },
+
 const agencyFallback: Record<string, string> = {
   nis: "Use the Nigeria Immigration Service's official passport office/contact route and keep the application reference and payment evidence ready.",
   nimc: "Use NIMC's official support or enrolment/modification centre. Take the NIN and any transaction/supporting-document evidence connected to the request.",
