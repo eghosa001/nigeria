@@ -51,6 +51,29 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.getByLabel("Analytics passphrase")).toBeVisible();
   });
 
+
+  test("live admin guide editor is configured and protected", async ({ page, request }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only admin editing configuration check.");
+
+    const response = await request.get("/api/admin/content-access", { failOnStatusCode: false });
+    const body = await response.json() as {
+      configured?: boolean;
+      accessConfigured?: boolean;
+      githubConfigured?: boolean;
+      authenticated?: boolean;
+    };
+
+    expect(response.status(), "Admin editing setup response: " + JSON.stringify(body)).toBe(200);
+    expect(body.configured).toBe(true);
+    expect(body.accessConfigured).toBe(true);
+    expect(body.githubConfigured).toBe(true);
+    expect(body.authenticated).toBe(false);
+
+    await page.goto("/admin/services/passport-renewal");
+    await expect(page.getByLabel("Admin passphrase")).toBeVisible();
+    await expect(page.getByText(/server configuration/i)).toHaveCount(0);
+  });
+
   test("live core pages do not horizontally overflow", async ({ page }) => {
     for (const path of ["/", "/services", "/fees", "/updates", "/offices", "/assistant", "/services/jamb-direct-entry-2026"]) {
       await page.goto(path);
