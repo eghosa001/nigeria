@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ServiceCard } from "@/components/service-card";
 import { searchServices } from "@/lib/search";
 import type { Service } from "@/lib/types";
@@ -15,6 +15,20 @@ export function ServiceDirectory({ services, initialQuery = "", initialCategory 
     () => [...new Set(services.map((service) => service.category))].sort(),
     [services],
   );
+
+  useEffect(() => {
+    function syncFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const nextQuery = params.get("q") ?? "";
+      const requestedCategory = params.get("category") ?? "all";
+      setQuery(nextQuery);
+      setCategory(requestedCategory === "all" || categories.includes(requestedCategory) ? requestedCategory : "all");
+    }
+
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, [categories]);
 
   const filtered = useMemo(() => {
     let rows = services.filter((service) =>

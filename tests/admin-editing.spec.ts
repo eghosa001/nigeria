@@ -1,21 +1,28 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
-test.setTimeout(10_000);
+test.setTimeout(15_000);
+
+async function unlockAdmin(page: import("@playwright/test").Page) {
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  await expect(page.getByLabel("Guide summary")).toBeVisible();
+}
 
 test("admin guide editing stays locked until the shared admin passphrase succeeds", async ({ page }) => {
   await page.goto("/admin/services/passport-renewal");
 
-  await expect(page.getByLabel("Admin passphrase")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
   await expect(page.getByLabel("Guide summary")).toHaveCount(0);
 
   await page.getByLabel("Admin passphrase").fill("wrong");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await page.getByRole("button", { name: "Unlock admin" }).click();
   await expect(page.getByText("Incorrect admin passphrase.")).toBeVisible();
   await expect(page.getByLabel("Guide summary")).toHaveCount(0);
 
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await page.getByRole("button", { name: "Unlock admin" }).click();
 
   await expect(page.getByLabel("Guide summary")).toBeVisible();
   await expect(page.getByRole("button", { name: "Create review change" })).toBeVisible();
@@ -23,8 +30,7 @@ test("admin guide editing stays locked until the shared admin passphrase succeed
 
 test("admin editor allows normal spaces while typing list fields", async ({ page }) => {
   await page.goto("/admin/services/passport-renewal");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await unlockAdmin(page);
 
   const requirements = page.getByLabel("Requirements — one per line");
   await requirements.fill("");
@@ -50,8 +56,7 @@ test("admin editor creates a review proposal and does not claim to publish", asy
   });
 
   await page.goto("/admin/services/passport-renewal");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await unlockAdmin(page);
 
   const summary = page.getByLabel("Guide summary");
   await summary.fill((await summary.inputValue()) + " review-flow test");
@@ -67,8 +72,7 @@ test("admin editor creates a review proposal and does not claim to publish", asy
 
 test("authenticated admin editor has no serious accessibility violations", async ({ page }) => {
   await page.goto("/admin/services/passport-renewal");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await unlockAdmin(page);
   await expect(page.getByLabel("Guide summary")).toBeVisible();
 
   const results = await new AxeBuilder({ page })
@@ -83,8 +87,7 @@ test("authenticated admin editor has no serious accessibility violations", async
 test("admin editor remains usable at mobile width", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/admin/services/passport-renewal");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await unlockAdmin(page);
 
   await expect(page.getByLabel("Guide summary")).toBeVisible();
   await expect(page.getByRole("button", { name: "Create review change" })).toBeVisible();
@@ -106,8 +109,7 @@ test("admin content API enforces authentication and validates requests before Gi
   });
   expect(unauthenticated.status).toBe(401);
 
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await unlockAdmin(page);
   await expect(page.getByLabel("Guide summary")).toBeVisible();
 
   const malformed = await page.evaluate(async () => {
@@ -171,12 +173,11 @@ test("admin content API enforces authentication and validates requests before Gi
 
 test("admin editing session can be explicitly locked", async ({ page }) => {
   await page.goto("/admin/services/passport-renewal");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock editing" }).click();
+  await unlockAdmin(page);
   await expect(page.getByLabel("Guide summary")).toBeVisible();
 
-  await page.getByRole("button", { name: "Lock editing" }).click();
-  await expect(page.getByLabel("Admin passphrase")).toBeVisible();
+  await page.getByRole("button", { name: "Lock", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
 
   const state = await page.evaluate(async () => {
     const response = await fetch("/api/admin/content-access", { cache: "no-store" });

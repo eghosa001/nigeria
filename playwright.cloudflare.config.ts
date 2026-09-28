@@ -12,7 +12,7 @@ export default defineConfig({
     screenshot: "only-on-failure",
   },
   webServer: {
-    command: "npx wrangler dev --config dist/server/wrangler.json --port 8787",
+    command: "npx wrangler dev --config dist/server/wrangler.json --port 8787 --var MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY:qa-only-passphrase --var MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN:qa-only-token",
     url: "http://127.0.0.1:8787",
     reuseExistingServer: false,
     timeout: 120_000,

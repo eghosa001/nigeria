@@ -10,12 +10,15 @@ test("admin pages hide all operational content until the shared admin session is
   await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
   await expect(page.getByText("Passport renewal", { exact: true })).toHaveCount(0);
 
-  const unauthenticatedProposal = await request.post("/api/admin/services/passport-renewal/proposal", {
-    data: { service: {} },
-    headers: { Origin: "http://127.0.0.1:3000" },
-    failOnStatusCode: false,
+  const unauthenticatedProposal = await page.evaluate(async () => {
+    const response = await fetch("/api/admin/services/passport-renewal/proposal", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ service: {} }),
+    });
+    return response.status;
   });
-  expect(unauthenticatedProposal.status()).toBe(401);
+  expect(unauthenticatedProposal).toBe(401);
 
   await page.getByLabel("Admin passphrase").fill("wrong-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();

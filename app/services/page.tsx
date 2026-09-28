@@ -10,15 +10,9 @@ export const metadata: Metadata = {
   description: "Search and filter MyNigeriaGuide's source-linked government service guides.",
 };
 
-export default async function ServicesPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string; category?: string }>;
-}) {
-  const params = await searchParams;
-  const publicCategoryNames = new Set(publicServices.map((service) => service.category));
-  const initialCategory = params.category && publicCategoryNames.has(params.category) ? params.category : "all";
+export const dynamic = "force-static";
 
+export default function ServicesPage() {
   return (
     <section className="section page-top">
       <div className="container">
@@ -40,11 +34,7 @@ export default async function ServicesPage({
           })}
         </nav>
 
-        <ServiceDirectory
-          services={publicServices}
-          initialQuery={params.q ?? ""}
-          initialCategory={initialCategory}
-        />
+        <ServiceDirectory services={publicServices} />
       </div>
     </section>
   );
