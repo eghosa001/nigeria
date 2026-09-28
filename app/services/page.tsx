@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceDirectory } from "@/components/service-directory";
 import { categorySlug } from "@/lib/category";
-import { categories, publicServices } from "@/lib/data";
+import { categories, publicServiceListings, publicServices } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
@@ -34,7 +34,7 @@ export default function ServicesPage() {
           })}
         </nav>
 
-        <ServiceDirectory services={publicServices} />
+        <ServiceDirectory services={publicServiceListings} />
       </div>
     </section>
   );

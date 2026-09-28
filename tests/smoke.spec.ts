@@ -22,14 +22,14 @@ test("admin pages hide all operational content until the shared admin session is
 
   await page.getByLabel("Admin passphrase").fill("wrong-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
-  await expect(page.getByRole("alert")).toContainText("Incorrect admin passphrase");
+  await expect(page.locator(".form-message.error")).toContainText("Incorrect admin passphrase");
 
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
   await expect(page.getByRole("heading", { name: /Passport renewal/i })).toBeVisible();
   await expect(page.getByRole("navigation", { name: "Admin navigation" })).toBeVisible();
 
-  await page.getByRole("button", { name: "Lock" }).click();
+  await page.getByRole("button", { name: "Lock", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
   await expect(page.getByRole("navigation", { name: "Admin navigation" })).toHaveCount(0);
 });
@@ -199,6 +199,17 @@ test("homepage has a canonical URL and offline fallback is not indexable", async
 
   await page.goto("/offline");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
+});
+
+test("security headers protect public and admin responses", async ({ request }) => {
+  for (const path of ["/", "/admin"]) {
+    const response = await request.get(path);
+    expect(response.headers()["content-security-policy"]).toContain("default-src 'self'");
+    expect(response.headers()["x-content-type-options"]).toBe("nosniff");
+    expect(response.headers()["x-frame-options"]).toBe("SAMEORIGIN");
+    expect(response.headers()["referrer-policy"]).toBe("strict-origin-when-cross-origin");
+    expect(response.headers()["strict-transport-security"]).toContain("max-age=31536000");
+  }
 });
 
 test("health endpoint reports the published catalog", async ({ request }) => {

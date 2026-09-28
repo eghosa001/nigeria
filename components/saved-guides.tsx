@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ServiceCard } from "@/components/service-card";
 import { watchEvent } from "@/components/share-watch";
-import type { Service } from "@/lib/types";
+import type { PublicServiceListing } from "@/lib/data";
 
 const storageKey = "mynigeriaguide:watchlist";
 const snapshotKey = "mynigeriaguide:watch-snapshots";
@@ -19,7 +19,7 @@ function loadIds() {
   }
 }
 
-export function SavedGuides({ services }: { services: Service[] }) {
+export function SavedGuides({ services }: { services: PublicServiceListing[] }) {
   const [ids, setIds] = useState<string[]>([]);
   const [snapshots, setSnapshots] = useState<Snapshots>({});
 
@@ -48,7 +48,7 @@ export function SavedGuides({ services }: { services: Service[] }) {
     );
   }
 
-  function markReviewed(service: Service) {
+  function markReviewed(service: PublicServiceListing) {
     const next = { ...snapshots, [service.slug]: { title: service.title, feeLabel: service.feeLabel, lastVerified: service.lastVerified } };
     localStorage.setItem(snapshotKey, JSON.stringify(next));
     setSnapshots(next);

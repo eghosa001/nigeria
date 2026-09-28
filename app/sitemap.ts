@@ -1,10 +1,17 @@
 import type { MetadataRoute } from "next";
 import { categorySlug } from "@/lib/category";
+import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
+function latestDate(values: string[]) {
+  return values.reduce((latest, value) => value > latest ? value : latest, "");
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
+  const catalogModified = latestDate(publicServices.map((service) => service.lastVerified));
+  const updatesModified = latestDate(myNigeriaGuideUpdates.map((update) => update.date)) || catalogModified;
   const staticPages = [
     ["", "weekly", 1],
     ["/services", "weekly", 0.9],
@@ -21,9 +28,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ] as const;
 
   return [
-    ...staticPages.map(([path, changeFrequency, priority]) => ({ url: base + path, changeFrequency, priority })),
+    ...staticPages.map(([path, changeFrequency, priority]) => ({
+      url: base + path,
+      lastModified: path === "/updates" ? updatesModified : catalogModified,
+      changeFrequency,
+      priority,
+    })),
     ...categories.map((category) => ({
       url: base + "/categories/" + categorySlug(category.name),
+      lastModified: latestDate(publicServices.filter((service) => service.category === category.name).map((service) => service.lastVerified)) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
@@ -35,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     ...agencies.map((agency) => ({
       url: base + "/agencies/" + agency.slug,
+      lastModified: latestDate(publicServices.filter((service) => service.agencySlug === agency.slug).map((service) => service.lastVerified)) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.7,
     })),

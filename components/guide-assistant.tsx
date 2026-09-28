@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { FormEvent, useMemo, useState } from "react";
 import { searchServices } from "@/lib/search";
-import type { Service } from "@/lib/types";
+import type { PublicServiceListing } from "@/lib/data";
 
-export function GuideAssistant({ services }: { services: Service[] }) {
+export function GuideAssistant({ services }: { services: PublicServiceListing[] }) {
   const [draft, setDraft] = useState("");
   const [question, setQuestion] = useState("");
 

@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { checkAdminLoginRateLimit, clearAdminLoginFailures, recordAdminLoginFailure } from "@/lib/admin-rate-limit";
 import {
   adminAccessConfigured,
   adminCookieName,
@@ -39,6 +40,14 @@ export async function POST(request: Request) {
   }
   if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {
     return Response.json({ error: "Content-Type must be application/json." }, { status: 415, headers: { "Cache-Control": "private, no-store" } });
+  }
+
+  const limit = checkAdminLoginRateLimit(request);
+  if (!limit.allowed) {
+    return Response.json(
+      { error: "Too many failed admin sign-in attempts. Try again later." },
+      { status: 429, headers: { ...privateHeaders, "Retry-After": String(limit.retryAfterSeconds) } },
+    );
   }
 
   let body: { password?: string };

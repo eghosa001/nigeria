@@ -1,5 +1,11 @@
 import type { Service } from "@/lib/types";
 
+type SearchableService = Pick<Service, "slug" | "title" | "shortTitle" | "summary" | "category" | "status" | "searchTerms"> & {
+  requirements?: string[];
+  steps?: string[];
+  searchText?: string;
+};
+
 const stopWords = new Set([
   "a","an","and","are","can","do","for","how","i","in","is","it","me","my","of","on","please","the","to","what","where","with",
 ]);
@@ -87,7 +93,7 @@ function countMatches(text: string, tokens: string[]) {
   return tokens.reduce((score, token) => score + (normalized.includes(token) ? 1 : 0), 0);
 }
 
-export function scoreService(service: Service, query: string) {
+export function scoreService(service: SearchableService, query: string) {
   const normalizedQuery = normalize(query);
   const tokens = queryTokens(query);
   if (!normalizedQuery || !tokens.length) return 0;
@@ -98,8 +104,9 @@ export function scoreService(service: Service, query: string) {
   const terms = normalize(service.searchTerms.join(" "));
   const summary = normalize(service.summary);
   const category = normalize(service.category);
-  const requirements = normalize(service.requirements.join(" "));
-  const steps = normalize(service.steps.join(" "));
+  const requirements = normalize(service.requirements?.join(" ") ?? "");
+  const steps = normalize(service.steps?.join(" ") ?? "");
+  const searchText = normalize(service.searchText ?? "");
 
   if (title.includes(normalizedQuery) || shortTitle.includes(normalizedQuery)) score += 40;
   score += countMatches(title, tokens) * 9;
@@ -109,10 +116,11 @@ export function scoreService(service: Service, query: string) {
   score += countMatches(summary, tokens) * 3;
   score += countMatches(requirements, tokens) * 2;
   score += countMatches(steps, tokens);
+  score += countMatches(searchText, tokens);
 
   const originalTokens = normalize(query).split(/\s+/).filter((token) => token && !stopWords.has(token));
   const coverage = originalTokens.filter((token) =>
-    [title, shortTitle, terms, summary, category, requirements, steps].some((field) => field.includes(token)),
+    [title, shortTitle, terms, summary, category, requirements, steps, searchText].some((field) => field.includes(token)),
   ).length;
 
   if (originalTokens.length && coverage === originalTokens.length) score += 15;
@@ -121,7 +129,7 @@ export function scoreService(service: Service, query: string) {
   return score;
 }
 
-export function searchServices(services: Service[], query: string, limit = 8) {
+export function searchServices<T extends SearchableService>(services: T[], query: string, limit = 8) {
   const clean = query.trim();
   if (!clean) return services.slice(0, limit).map((service) => ({ service, score: 0 }));
 

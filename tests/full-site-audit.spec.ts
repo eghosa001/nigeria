@@ -65,6 +65,9 @@ test("primary navigation works on desktop and mobile menu states", async ({ page
 
 test("admin workspace exposes the full content operation areas", async ({ page }) => {
   await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
   const adminNav = page.getByRole("navigation", { name: "Admin navigation" });
   await expect(adminNav.getByRole("link", { name: "Dashboard" })).toBeVisible();
   await expect(adminNav.getByRole("link", { name: "Guides" })).toBeVisible();

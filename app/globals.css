@@ -2316,3 +2316,22 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .admin-public-link { display: none; }
   .admin-lock-button { min-width: 54px; }
 }
+
+.directory-load-more {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  margin-top: 26px;
+}
+.directory-load-more button {
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid var(--green);
+  border-radius: 10px;
+  background: var(--green);
+  color: white;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+.directory-load-more small { color: var(--muted); }

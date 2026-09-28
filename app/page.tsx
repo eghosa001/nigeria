@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ServiceSearch } from "@/components/search";
 import { RouteWizard } from "@/components/route-wizard";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
-import { agencies, publicServices } from "@/lib/data";
+import { agencies, publicServiceListings, publicServices } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Nigerian Government Services Guide",
@@ -37,7 +37,7 @@ export default function HomePage() {
             <p className="hero-lead">
               Current fees, requirements, online and physical routes, official portals and what happens next — explained in plain language.
             </p>
-            <ServiceSearch services={publicServices} />
+            <ServiceSearch services={publicServiceListings} />
             <div className="hero-popular" aria-label="Popular guides">
               <span>Popular</span>
               {popular.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
@@ -98,7 +98,7 @@ export default function HomePage() {
 
       <section className="section service-discovery-section">
         <div className="container">
-          <RouteWizard services={publicServices} />
+          <RouteWizard availableSlugs={publicServiceListings.map((service) => service.slug)} />
         </div>
       </section>
 

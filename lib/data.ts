@@ -232,6 +232,25 @@ export const agencies: Agency[] = [
 export const services: Service[] = validateServiceCatalog(serviceRecords);
 export const publicServices = services.filter((service) => service.status !== "review");
 
+export type PublicServiceListing = Pick<
+  Service,
+  "slug" | "title" | "shortTitle" | "summary" | "category" | "agencySlug" | "feeLabel" | "status" | "lastVerified" | "searchTerms"
+> & { searchText: string };
+
+export const publicServiceListings: PublicServiceListing[] = publicServices.map((service) => ({
+  slug: service.slug,
+  title: service.title,
+  shortTitle: service.shortTitle,
+  summary: service.summary,
+  category: service.category,
+  agencySlug: service.agencySlug,
+  feeLabel: service.feeLabel,
+  status: service.status,
+  lastVerified: service.lastVerified,
+  searchTerms: service.searchTerms,
+  searchText: [service.requirements.join(" "), service.steps.join(" "), service.notes.join(" ")].join(" ").slice(0, 1200),
+}));
+
 export const categories = [
   {
     "name": "Identity",

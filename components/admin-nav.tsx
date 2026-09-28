@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const items = [
   { href: "/admin", label: "Dashboard", exact: true },
@@ -14,12 +14,10 @@ const items = [
 
 export function AdminNav() {
   const pathname = usePathname();
-  const router = useRouter();
 
   async function lockAdmin() {
-    await fetch("/api/admin/access", { method: "DELETE" });
-    router.replace("/admin");
-    router.refresh();
+    const response = await fetch("/api/admin/access", { method: "DELETE" });
+    if (response.ok) window.location.replace("/admin");
   }
 
   return (

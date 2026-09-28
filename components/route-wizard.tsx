@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import type { Service } from "@/lib/types";
 
 const groups = [
   { id:"banking", title:"BVN & banking", text:"Get, retrieve, correct or use BVN from abroad.", options:[["Get my first BVN","bvn-enrolment"],["Change/correct BVN details","bvn-change-details"],["I forgot my BVN","bvn-retrieval"],["I live outside Nigeria","non-resident-bvn"]] },
@@ -20,9 +19,9 @@ const groups = [
   { id:"civic", title:"PVC & voter record", text:"Check an existing PVC record and collection centre.", options:[["Check my PVC status","inec-pvc-status"]] },
 ] as const;
 
-export function RouteWizard({ services }: { services: Service[] }) {
+export function RouteWizard({ availableSlugs }: { availableSlugs: string[] }) {
   const [selected, setSelected] = useState<string | null>(null);
-  const available = useMemo(() => new Set(services.map((service) => service.slug)), [services]);
+  const available = useMemo(() => new Set(availableSlugs), [availableSlugs]);
   const group = groups.find((item) => item.id === selected);
   return (
     <div className="route-wizard">

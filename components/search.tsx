@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { searchServices } from "@/lib/search";
-import type { Service } from "@/lib/types";
+import type { PublicServiceListing } from "@/lib/data";
 
-export function ServiceSearch({ services }: { services: Service[] }) {
+export function ServiceSearch({ services }: { services: PublicServiceListing[] }) {
   const [query, setQuery] = useState("");
 
   const results = useMemo(() => searchServices(services, query, 7), [query, services]);

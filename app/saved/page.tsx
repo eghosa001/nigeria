@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SavedGuides } from "@/components/saved-guides";
-import { publicServices } from "@/lib/data";
+import { publicServiceListings } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Saved guides",
@@ -17,7 +17,7 @@ export default function SavedPage() {
         <p className="page-intro">
           These guides and their review snapshots are stored in your browser only. When a watched guide changes, this page can flag it the next time you return; email or push notifications are not enabled yet.
         </p>
-        <SavedGuides services={publicServices} />
+        <SavedGuides services={publicServiceListings} />
       </div>
     </section>
   );

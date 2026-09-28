@@ -3,13 +3,16 @@
 import { useEffect, useMemo, useState } from "react";
 import { ServiceCard } from "@/components/service-card";
 import { searchServices } from "@/lib/search";
-import type { Service } from "@/lib/types";
+import type { PublicServiceListing } from "@/lib/data";
 
-export function ServiceDirectory({ services, initialQuery = "", initialCategory = "all" }: { services: Service[]; initialQuery?: string; initialCategory?: string }) {
+const PAGE_SIZE = 24;
+
+export function ServiceDirectory({ services, initialQuery = "", initialCategory = "all" }: { services: PublicServiceListing[]; initialQuery?: string; initialCategory?: string }) {
   const [query, setQuery] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("relevance");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const categories = useMemo(
     () => [...new Set(services.map((service) => service.category))].sort(),
@@ -30,6 +33,10 @@ export function ServiceDirectory({ services, initialQuery = "", initialCategory 
     return () => window.removeEventListener("popstate", syncFromUrl);
   }, [categories]);
 
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [query, category, status, sort]);
+
   const filtered = useMemo(() => {
     let rows = services.filter((service) =>
       (category === "all" || service.category === category) &&
@@ -46,6 +53,8 @@ export function ServiceDirectory({ services, initialQuery = "", initialCategory 
 
     return rows;
   }, [services, query, category, status, sort]);
+
+  const visible = filtered.slice(0, visibleCount);
 
   return (
     <>
@@ -90,7 +99,7 @@ export function ServiceDirectory({ services, initialQuery = "", initialCategory 
 
       {filtered.length ? (
         <div className="service-grid">
-          {filtered.map((service) => <ServiceCard key={service.slug} service={service} />)}
+          {visible.map((service) => <ServiceCard key={service.slug} service={service} />)}
         </div>
       ) : (
         <div className="empty-state">
@@ -98,6 +107,13 @@ export function ServiceDirectory({ services, initialQuery = "", initialCategory 
           <p>Try a broader search or clear one of the filters.</p>
         </div>
       )}
+
+      {visibleCount < filtered.length ? (
+        <div className="directory-load-more">
+          <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>Show more guides</button>
+          <small>Showing {visible.length} of {filtered.length}</small>
+        </div>
+      ) : null}
     </>
   );
 }

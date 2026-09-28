@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { CategoryIcon } from "@/components/category-icon";
 import { getAgency } from "@/lib/data";
+import type { PublicServiceListing } from "@/lib/data";
 import type { Service } from "@/lib/types";
 import { StatusBadge } from "@/components/status-badge";
 
-export function ServiceCard({ service }: { service: Service }) {
+type CardService = Pick<Service, "slug" | "shortTitle" | "summary" | "category" | "agencySlug" | "feeLabel" | "status"> | PublicServiceListing;
+
+export function ServiceCard({ service }: { service: CardService }) {
   const agency = getAgency(service.agencySlug);
 
   return (
