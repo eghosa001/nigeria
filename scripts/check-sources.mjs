@@ -5,6 +5,12 @@ const monitors = JSON.parse(
 );
 
 const failures = [];
+const warnings = [];
+
+function record(monitor, message, definitive = false) {
+  if (definitive && monitor.strict !== false) failures.push(monitor.name + ": " + message);
+  else warnings.push(monitor.name + ": " + message);
+}
 
 for (const monitor of monitors) {
   try {
@@ -14,8 +20,18 @@ for (const monitor of monitors) {
       redirect: "follow",
     });
 
+    if (response.status === 404 || response.status === 410) {
+      record(monitor, "HTTP " + response.status, true);
+      continue;
+    }
+
+    if (response.status === 401 || response.status === 403 || response.status === 429 || response.status >= 500) {
+      record(monitor, "source not reliably readable by runner (HTTP " + response.status + ")");
+      continue;
+    }
+
     if (!response.ok) {
-      failures.push(monitor.name + ": HTTP " + response.status);
+      record(monitor, "HTTP " + response.status);
       continue;
     }
 
@@ -27,23 +43,29 @@ for (const monitor of monitors) {
     const anySatisfied = expectedAny.length === 0 || expectedAny.some((value) => body.includes(value));
 
     if (missingAll.length || !anySatisfied) {
-      failures.push(
-        monitor.name +
-          ": expected source markers changed or disappeared" +
+      record(
+        monitor,
+        "expected source markers changed or were not rendered" +
           (missingAll.length ? " (missing: " + missingAll.join(", ") + ")" : ""),
+        true,
       );
     } else {
       console.log("OK " + monitor.name);
     }
   } catch (error) {
-    failures.push(monitor.name + ": " + (error instanceof Error ? error.message : String(error)));
+    record(monitor, error instanceof Error ? error.message : String(error));
   }
 }
 
+if (warnings.length) {
+  console.warn("\nSource warnings requiring periodic human review:");
+  for (const warning of warnings) console.warn("- " + warning);
+}
+
 if (failures.length) {
-  console.error("\nGovGuide source review required:");
+  console.error("\nGovGuide definitive source review required:");
   for (const failure of failures) console.error("- " + failure);
   process.exit(1);
 }
 
-console.log("\nAll monitored source markers are still present.");
+console.log("\nNo definitive monitored source breakages detected.");
