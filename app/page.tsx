@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GuideAssistant } from "@/components/guide-assistant";
 import { ServiceSearch } from "@/components/search";
 import { ServiceCard } from "@/components/service-card";
+import { categorySlug } from "@/lib/category";
 import { agencies, categories, publicServices } from "@/lib/data";
 
 export default function HomePage() {
@@ -46,7 +47,7 @@ export default function HomePage() {
             {categories.map((category) => {
               const count = publicServices.filter((service) => service.category === category.name).length;
               return (
-                <Link className="category-card" key={category.name} href={"/services?category=" + encodeURIComponent(category.name)}>
+                <Link className="category-card" key={category.name} href={"/categories/" + categorySlug(category.name)}>
                   <span className="category-icon" aria-hidden="true">{category.name.slice(0, 1)}</span>
                   <div>
                     <h3>{category.name}</h3>
