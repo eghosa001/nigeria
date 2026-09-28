@@ -15,6 +15,16 @@ on:
       - "scripts/check-sources.mjs"
       - "scripts/check-links.mjs"
       - ".github/workflows/source-monitor.yml"
+  pull_request:
+    paths:
+      - "lib/data.ts"
+      - "data/services.json"
+      - "lib/offices.ts"
+      - "lib/official-links.ts"
+      - "data/source-monitors.json"
+      - "scripts/check-sources.mjs"
+      - "scripts/check-links.mjs"
+      - ".github/workflows/source-monitor.yml"
 
 jobs:
   check:
