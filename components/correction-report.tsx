@@ -1,10 +1,28 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export function CorrectionReport({ serviceSlug }: { serviceSlug: string }) {
+  const [availability, setAvailability] = useState<"checking" | "available" | "unavailable">("checking");
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    let active = true;
+
+    fetch("/api/reports", { cache: "no-store" })
+      .then((response) => response.json())
+      .then((data: { configured?: boolean }) => {
+        if (active) setAvailability(data.configured ? "available" : "unavailable");
+      })
+      .catch(() => {
+        if (active) setAvailability("unavailable");
+      });
+
+    return () => {
+      active = false;
+    };
+  }, []);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,12 +57,37 @@ export function CorrectionReport({ serviceSlug }: { serviceSlug: string }) {
     setMessage("Thanks. The correction has been queued for verification.");
   }
 
+  if (availability === "checking") {
+    return (
+      <section className="correction-box correction-box-loading" aria-live="polite">
+        <span className="eyebrow">Accuracy</span>
+        <p>Checking correction-report availability…</p>
+      </section>
+    );
+  }
+
+  if (availability === "unavailable") {
+    return (
+      <section className="correction-box">
+        <div>
+          <span className="eyebrow">Accuracy monitoring</span>
+          <h2>See something that looks outdated?</h2>
+          <p>
+            Persistent public submissions are not enabled yet, so GovGuide will not ask you to fill a form it cannot save.
+            Official source pages are automatically monitored and rechecked periodically.
+          </p>
+          <a className="text-link" href="#official-sources">Compare the official sources below →</a>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="correction-box">
       <div>
         <span className="eyebrow">Help keep this accurate</span>
         <h2>See something outdated?</h2>
-        <p>Report a fee, requirement or official-link problem. Persistent submission is optional; GovGuide itself does not require a database.</p>
+        <p>Report a fee, requirement or official-link problem. Reports are reviewed against official sources before a guide changes.</p>
       </div>
 
       <form onSubmit={submit}>
