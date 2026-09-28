@@ -2,7 +2,7 @@ import type { VerificationStatus } from "@/lib/types";
 
 const labels: Record<VerificationStatus, string> = {
   verified: "Verified",
-  conflict: "Official sources conflict",
+  conflict: "Confirm current details",
   review: "Review pending",
 };
 
