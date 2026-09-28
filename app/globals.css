@@ -613,3 +613,5 @@ h3 { font-size: 1.22rem; }
   .assistant-form button { width: 100%; }
   .guide-actions button, .guide-actions a { flex: 1 1 calc(50% - 8px); justify-content: center; }
 }
+
+.site-footer .footer-brand small { color: #b8cdc2; }
