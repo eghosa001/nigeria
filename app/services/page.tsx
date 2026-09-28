@@ -3,6 +3,7 @@ import { ServiceDirectory } from "@/components/service-directory";
 import { publicServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Government service directory",
   description: "Search and filter GovGuide Nigeria's source-linked government service guides.",
 };
