@@ -1,0 +1,37 @@
+name: Cloudflare Runtime QA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "data/**"
+      - "tests/**"
+      - "vite.config.ts"
+      - "wrangler.jsonc"
+      - "package.json"
+      - "playwright.cloudflare.config.ts"
+
+jobs:
+  workers-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run build:vinext
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --config playwright.cloudflare.config.ts
+      - name: Upload Cloudflare Playwright report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-cloudflare
+          path: playwright-report-cloudflare/
+          retention-days: 7
