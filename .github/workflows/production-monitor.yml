@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/production-monitor.yml"
 
 permissions:
   contents: read
@@ -46,12 +50,10 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/api/health" |
+          curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/api/health" > /tmp/health.json
           node --input-type=module <<'NODE'
-          let body = "";
-          process.stdin.setEncoding("utf8");
-          for await (const chunk of process.stdin) body += chunk;
-          const value = JSON.parse(body);
+          import fs from "node:fs";
+          const value = JSON.parse(fs.readFileSync("/tmp/health.json", "utf8"));
           if (value.status !== "ok") throw new Error("Health status is not ok.");
           if (value.product !== "MyNigeriaGuide") throw new Error("Unexpected health product.");
           if (!Number.isInteger(value.publicGuides) || value.publicGuides < 106) {

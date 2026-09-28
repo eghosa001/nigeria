@@ -13,6 +13,7 @@ on:
       - "data/source-monitors.json"
       - "scripts/check-sources.mjs"
       - "scripts/check-links.mjs"
+      - ".github/workflows/source-monitor.yml"
 
 jobs:
   check:
