@@ -14,7 +14,8 @@
     "check:cloudflare": "vinext check",
     "build:vinext": "vinext build",
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
-    "deploy:cloudflare": "vinext-cloudflare deploy --config dist/server/wrangler.json"
+    "deploy:cloudflare": "vinext-cloudflare deploy --config dist/server/wrangler.json",
+    "check:content": "tsx scripts/check-content-quality.ts"
   },
   "dependencies": {
     "next": "16.3.6",
@@ -35,7 +36,8 @@
     "@vitejs/plugin-rsc": "0.5.35",
     "@vitejs/plugin-react": "6.1.1",
     "@cloudflare/vite-plugin": "1.54.11",
-    "wrangler": "4.133.0"
+    "wrangler": "4.133.0",
+    "tsx": "^4.20.6"
   },
   "type": "module"
 }
