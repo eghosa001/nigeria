@@ -22,7 +22,7 @@ const priorityGuides = new Set([
 
 const vaguePattern = /follow (?:the )?(?:portal|official|process)|complete (?:the )?(?:process|registration)|as instructed|where required|details requested by|through the .* process/i;
 
-const opaqueRequirementPattern = /^(?:registered entity details|service details|candidate and examination details|supporting documents required(?:\b| for)|documents required(?:\b| for)|required .* information for the entity type|.*details required by the .* portal)$/i;
+const opaqueRequirementPattern = /^(?:registered entity details|service details|candidate(?:\/| and )examination details|candidate examination details|existing (?:birth|record|birth\/attestation) details|relevant assessment\/liability details|supporting documents required(?:\b| for)|documents required(?:\b| for)|required .* information for the entity type|.*details required by the .* portal)$/i;
 
 function requirementIsOpaque(value: string) {
   return opaqueRequirementPattern.test(value.trim()) && !/such as|including|for example|depends on|does not use one identical|does not publish one universal/i.test(value);

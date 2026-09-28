@@ -84,8 +84,12 @@ test("every guide is structured for a viewer completing the service", async ({ p
     await expect(status).toContainText("Agency");
     await expect(status).toContainText("Checked");
 
-    expect(await page.locator("#steps li").count(), service.slug + " actionable steps").toBeGreaterThanOrEqual(3);
-    expect(await page.locator("#requirements li").count(), service.slug + " requirements").toBeGreaterThanOrEqual(2);
+    expect(await page.locator("#steps .detailed-step").count(), service.slug + " detailed actionable steps").toBe(service.steps.length);
+    expect(await page.locator("#requirements .requirement-detail-card").count(), service.slug + " detailed requirements").toBe(service.requirements.length);
+    await expect(page.locator("#steps .detailed-step").first()).toContainText("Check before moving on");
+    await expect(page.locator("#steps .detailed-step").first()).toContainText("Keep as evidence");
+    await expect(page.locator("#requirements .requirement-detail-card").first()).toContainText("Why you need it");
+    await expect(page.locator("#requirements .requirement-detail-card").first()).toContainText("Original, copy or upload?");
     expect(await page.locator("#after-submit .aftercare-grid > div").count(), service.slug + " aftercare").toBeGreaterThanOrEqual(4);
     expect(await page.locator("#questions details").count(), service.slug + " contextual FAQs").toBeGreaterThanOrEqual(9);
     expect(await page.locator("#official-sources a").count(), service.slug + " official sources").toBeGreaterThanOrEqual(1);
