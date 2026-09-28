@@ -73,7 +73,7 @@ export function CorrectionReport({ serviceSlug }: { serviceSlug: string }) {
           <span className="eyebrow">Accuracy monitoring</span>
           <h2>See something that looks outdated?</h2>
           <p>
-            Persistent public submissions are not enabled yet, so GovGuide will not ask you to fill a form it cannot save.
+            Persistent public submissions are not enabled yet, so MyNigeriaGuide will not ask you to fill a form it cannot save.
             Official source pages are automatically monitored and rechecked periodically.
           </p>
           <a className="text-link" href="#official-sources">Compare the official sources below →</a>

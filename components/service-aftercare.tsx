@@ -34,7 +34,7 @@ export function ServiceAftercare({ service }: { service: Service }) {
           <p>
             {service.timeline
               ? service.timeline
-              : "The official sources we currently use do not give GovGuide a reliable fixed completion time for this service. Do not treat an unofficial agent's promised timeline as official."}
+              : "The official sources we currently use do not give MyNigeriaGuide a reliable fixed completion time for this service. Do not treat an unofficial agent's promised timeline as official."}
           </p>
         </div>
 

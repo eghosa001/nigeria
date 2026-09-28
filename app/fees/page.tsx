@@ -35,13 +35,13 @@ export default function FeesPage() {
           <span className="eyebrow">Verified fee directory</span>
           <h1>Nigeria government fees and service charges</h1>
           <p className="page-intro">
-            Search current fee figures and fee-status notes from GovGuide's published service guides.
+            Search current fee figures and fee-status notes from MyNigeriaGuide's published service guides.
             Every row opens the full guide with its scope, requirements, last-checked date and official sources.
           </p>
 
           <div className="info-box fees-warning">
             Government charges can depend on applicant type, validity period, entity class or application route.
-            If official sources disagree, GovGuide marks the entry as a conflict instead of presenting one amount as settled fact.
+            If official sources disagree, MyNigeriaGuide marks the entry as a conflict instead of presenting one amount as settled fact.
           </div>
 
           <FeeDirectory services={publicServices} />

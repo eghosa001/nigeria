@@ -73,7 +73,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     description: service.summary,
     url: pageUrl,
     dateModified: service.lastVerified,
-    isPartOf: { "@type": "WebSite", name: "GovGuide Nigeria", url: base },
+    isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     about: agency ? { "@type": "Organization", name: agency.name, url: agency.website } : undefined,
   };
 
@@ -158,15 +158,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 </details>
                 <details>
                   <summary>Where should I complete the application?</summary>
-                  <p>{service.officialPortal ? "Use the official portal linked on this page. GovGuide does not take government payments." : "Use the responsible agency's official website and contact channel."}</p>
+                  <p>{service.officialPortal ? "Use the official portal linked on this page. MyNigeriaGuide does not take government payments." : "Use the responsible agency's official website and contact channel."}</p>
                 </details>
                 <details>
                   <summary>How current is this guide?</summary>
                   <p>Its official sources were last checked on {service.lastVerified}. The source links are listed below so you can inspect them directly.</p>
                 </details>
                 <details>
-                  <summary>Is GovGuide an official government website?</summary>
-                  <p>No. GovGuide is an independent information service that links back to the responsible government agency.</p>
+                  <summary>Is MyNigeriaGuide an official government website?</summary>
+                  <p>No. MyNigeriaGuide is an independent information service that links back to the responsible government agency.</p>
                 </details>
               </div>
             </section>
@@ -204,7 +204,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
             <div className="sidebar-card safety-card">
               <span>Payment safety</span>
-              <strong>GovGuide never collects government fees.</strong>
+              <strong>MyNigeriaGuide never collects government fees.</strong>
               <p>Use only the official portal or payment method published by the responsible agency.</p>
             </div>
           </aside>

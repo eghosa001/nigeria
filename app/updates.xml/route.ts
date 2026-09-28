@@ -1,4 +1,4 @@
-import { govGuideUpdates } from "@/data/updates";
+import { myNigeriaGuideUpdates } from "@/data/updates";
 import { getSiteUrl } from "@/lib/site";
 
 function escapeXml(value: string) {
@@ -12,7 +12,7 @@ function escapeXml(value: string) {
 
 export function GET() {
   const base = getSiteUrl();
-  const items = govGuideUpdates.map((update) => {
+  const items = myNigeriaGuideUpdates.map((update) => {
     const link = base + "/updates#" + update.id;
     const pubDate = new Date(update.date + "T12:00:00Z").toUTCString();
 
@@ -30,7 +30,7 @@ export function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-<title>GovGuide Nigeria — Verified Updates</title>
+<title>MyNigeriaGuide — Verified Updates</title>
 <link>${escapeXml(base + "/updates")}</link>
 <description>Verified changes to Nigerian government service fees, processes and official guidance.</description>
 <language>en-ng</language>

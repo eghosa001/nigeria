@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "How verification works",
-  description: "How GovGuide Nigeria verifies government service information and handles conflicting sources.",
+  description: "How MyNigeriaGuide verifies government service information and handles conflicting sources.",
 };
 
 export default function AboutPage() {
@@ -11,9 +11,9 @@ export default function AboutPage() {
     <section className="section page-top">
       <div className="container narrow">
         <span className="eyebrow">Trust policy</span>
-        <h1>How GovGuide verifies information</h1>
+        <h1>How MyNigeriaGuide verifies information</h1>
         <p className="page-intro">
-          GovGuide Nigeria is an independent information service. It is not affiliated with the Federal Government of Nigeria or any government agency.
+          MyNigeriaGuide is an independent information service. It is not affiliated with the Federal Government of Nigeria or any government agency.
         </p>
 
         <div className="policy-stack">
@@ -31,7 +31,7 @@ export default function AboutPage() {
           </section>
           <section>
             <strong>4</strong>
-            <div><h2>Payments stay on official channels</h2><p>GovGuide does not collect passport, NIN, licence, CAC or other government application fees.</p></div>
+            <div><h2>Payments stay on official channels</h2><p>MyNigeriaGuide does not collect passport, NIN, licence, CAC or other government application fees.</p></div>
           </section>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function OfficesPage() {
         <span className="eyebrow">Locations</span>
         <h1>Official office and centre finders</h1>
         <p className="page-intro">
-          Office addresses change. Where an agency maintains a live official directory, GovGuide sends you there instead of copying an address that can become stale.
+          Office addresses change. Where an agency maintains a live official directory, MyNigeriaGuide sends you there instead of copying an address that can become stale.
         </p>
 
         <div className="office-grid">
@@ -31,7 +31,7 @@ export default function OfficesPage() {
         </div>
 
         <div className="info-box office-note">
-          If an official directory is unavailable or unclear, GovGuide does not invent a local office address. Use the responsible agency's official contact channel instead.
+          If an official directory is unavailable or unclear, MyNigeriaGuide does not invent a local office address. Use the responsible agency's official contact channel instead.
         </div>
       </div>
     </section>

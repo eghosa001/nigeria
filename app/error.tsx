@@ -11,16 +11,16 @@ export default function ErrorPage({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error("GovGuide route error", error);
+    console.error("MyNigeriaGuide route error", error);
   }, [error]);
 
   return (
     <section className="section page-top">
       <div className="container narrow error-state">
         <span className="eyebrow">Something went wrong</span>
-        <h1>This GovGuide page could not load.</h1>
+        <h1>This MyNigeriaGuide page could not load.</h1>
         <p>
-          Your government application has not been affected—GovGuide does not submit or store government applications.
+          Your government application has not been affected—MyNigeriaGuide does not submit or store government applications.
           You can retry this page or return to the service directory.
         </p>
         <div>
