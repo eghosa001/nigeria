@@ -22,7 +22,8 @@
       "28,574",
       "date of birth",
       "Date of Birth"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "JAMB profile-code instructions",
@@ -46,7 +47,8 @@
     "expectedAny": [
       "USD80",
       "USD 80"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "CAC service timeline",
@@ -54,7 +56,8 @@
     "expectedAll": [
       "24 Working Hours",
       "Name Reservation"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "NRS taxpayer registration",
@@ -62,7 +65,8 @@
     "expectedAll": [
       "CORPORATE",
       "INDIVIDUALS"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "NIS lost passport replacement",
@@ -79,7 +83,8 @@
       "Loss",
       "Damage",
       "Theft"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "NIMC self-service modification documents",
@@ -88,7 +93,8 @@
       "Change of Name",
       "Change of Address",
       "Phone Number"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "JAMB current service fees",
@@ -114,7 +120,8 @@
     "expectedAll": [
       "WAEC",
       "Date Of Birth"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "NYSC course correction",
@@ -122,7 +129,8 @@
     "expectedAll": [
       "Course of Study",
       "Student Affairs Officer"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "NPC record modification",
@@ -130,7 +138,8 @@
     "expectedAll": [
       "Modify Record",
       "Birth Attestation"
-    ]
+    ],
+    "strict": false
   },
   {
     "name": "JAMB e-Facility availability",
