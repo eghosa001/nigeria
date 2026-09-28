@@ -462,7 +462,7 @@ const published: Service[] = [
     requirements:["Registered NRS taxpayer account","Compliance information required by the NRS portal"],
     steps:["Sign in through the official NRS self-service portal.","Open the Tax Clearance service.","Follow the portal instructions for the taxpayer account."],
     notes:["The portal also provides self tax filing, payments, refunds, assessments and tax-wallet functions."], sources:[S.nrsPortal],
-  }),,
+  }),
   guide({
     slug:"cac-status-report", title:"How to obtain a CAC status report", shortTitle:"CAC status report",
     summary:"CAC lists status reports among its post-registration services and currently describes the service timeline as instant.",
