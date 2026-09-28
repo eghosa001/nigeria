@@ -45,6 +45,14 @@ test("verified updates link back to affected guides and official sources", async
   await expect(page.getByRole("link", { name: /2026 JAMB registration/i }).first()).toBeVisible();
 });
 
+test("health endpoint reports the published catalog", async ({ request }) => {
+  const response = await request.get("/api/health");
+  expect(response.ok()).toBeTruthy();
+  const body = await response.json();
+  expect(body.status).toBe("ok");
+  expect(body.publicGuides).toBeGreaterThanOrEqual(76);
+});
+
 test("core pages do not overflow horizontally", async ({ page }) => {
   for (const path of ["/", "/services", "/fees", "/updates", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
     await page.goto(path);
