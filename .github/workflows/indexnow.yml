@@ -1,0 +1,55 @@
+name: IndexNow
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "data/services.json"
+      - "data/updates.ts"
+      - "app/**/page.tsx"
+      - "app/page.tsx"
+      - "app/sitemap.ts"
+      - "app/robots.ts"
+      - "public/6ce5a25890f63884432abbd2a7223bd6.txt"
+      - "scripts/submit-indexnow.mjs"
+      - ".github/workflows/indexnow.yml"
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      LIVE_BASE_URL: https://mynigeriaguide.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Wait for this exact commit to reach production
+        shell: bash
+        run: |
+          expected="$GITHUB_SHA"
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            deployed="$(printf '%s' "$body" | node -e '
+              let data="";
+              process.stdin.on("data", c => data += c);
+              process.stdin.on("end", () => {
+                try { process.stdout.write(JSON.parse(data).commit || ""); } catch {}
+              });
+            ')"
+            if [ "$deployed" = "$expected" ]; then
+              echo "Verified production deployment: $expected"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Production did not reach commit $expected within 10 minutes."
+          exit 1
+      - name: Submit live sitemap URLs to IndexNow
+        run: node scripts/submit-indexnow.mjs
