@@ -6,9 +6,11 @@ GovGuide turns official government information into clear, source-linked guides 
 
 ## Current product
 
-- Searchable public service directory
-- Agency and category navigation
-- Dynamic service-guide pages
+- 65 public source-linked guides across 14 federal, state and FCT agencies/services
+- 12 additional guides held in the editorial review queue
+- Plain-language searchable public service directory with category/status filters and sorting
+- Agency/category navigation plus official office/centre finder links
+- Dynamic service-guide pages with breadcrumbs, FAQs, sharing, WhatsApp and local saved-guide watchlist
 - Verified/conflict/review editorial states
 - Review-pending content is automatically excluded from public search, agency pages and the XML sitemap
 - Official-source links and last-checked dates on every public guide
@@ -17,7 +19,10 @@ GovGuide turns official government information into clear, source-linked guides 
 - Google Analytics and Search Console verification hooks via environment variables
 - Weekly source-integrity GitHub Action
 - Supabase schema prepared for a **new, dedicated GovGuide project**
-- GitHub CI for TypeScript checking and production builds
+- GitHub CI for TypeScript/production builds plus Playwright desktop/mobile browser QA
+- Verified-guide assistant that matches plain-language tasks to published source-linked guides
+- Privacy, terms, editorial, corrections and contact pages
+- Favicon/social preview assets and environment-gated AdSense plumbing
 
 ## Important Supabase rule
 
@@ -45,6 +50,7 @@ Useful checks:
 npm run typecheck
 npm run build
 npm run check:sources
+npm run test:e2e
 ```
 
 ## Environment
@@ -56,6 +62,8 @@ Copy `.env.example` to `.env.local`.
 - `NEXT_PUBLIC_SITE_URL`: production origin/custom domain
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: optional Google Analytics measurement ID
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: optional Search Console verification token
+- `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client (ads remain disabled without it)
+- `NEXT_PUBLIC_ADSENSE_SLOT_GUIDE`: optional service-guide ad slot
 
 The public website remains functional if Supabase is not configured.
 
