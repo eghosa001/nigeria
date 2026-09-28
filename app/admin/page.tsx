@@ -86,9 +86,9 @@ export default function AdminPage() {
         </div>
 
         <section className="admin-panel admin-safety-note">
-          <span className="eyebrow">Write protection</span>
-          <h2>Browser editing is intentionally disabled until admin authentication exists</h2>
-          <p>The site currently has no secure administrator sign-in. Keeping this console read-only prevents anyone who discovers the admin URL from modifying public government-service information. Content changes continue through the repository workflow and deployment checks.</p>
+          <span className="eyebrow">Protected operations</span>
+          <h2>Admin access and publishing are separated</h2>
+          <p>The whole admin area requires the private passphrase. Guide edits remain review-only: a successful edit creates a GitHub pull request and does not change production until the review checks pass and the change is merged.</p>
         </section>
       </div>
     </section>

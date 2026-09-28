@@ -2227,3 +2227,92 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .assistant-results a { grid-template-columns: 30px minmax(0,1fr); }
   .assistant-results a > span:last-child { display: none; }
 }
+
+
+/* Full admin route privacy */
+.admin-gate-shell {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(209,162,74,.12), transparent 24rem),
+    radial-gradient(circle at 10% 85%, rgba(8,112,68,.10), transparent 25rem),
+    var(--cream);
+}
+.admin-gate-card {
+  width: min(100%, 520px);
+  padding: 34px;
+  border: 1px solid rgba(6,63,45,.12);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.admin-gate-mark {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  background: var(--green-deep);
+  color: var(--gold);
+  font-weight: 950;
+}
+.admin-gate-card h1 {
+  margin: 9px 0 12px;
+  font-size: clamp(2rem, 7vw, 2.8rem);
+}
+.admin-gate-card > p { color: var(--muted); }
+.admin-gate-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+.admin-gate-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 800;
+}
+.admin-gate-form input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 13px;
+  border: 1px solid #cbd9d1;
+  border-radius: 11px;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+.admin-gate-form button {
+  min-height: 50px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--green-deep);
+  color: white;
+  font-weight: 850;
+  cursor: pointer;
+}
+.admin-gate-form button:disabled { opacity: .65; cursor: wait; }
+.admin-lock-button {
+  flex: 0 0 auto;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #315647;
+  border-radius: 8px;
+  background: transparent;
+  color: #d7e7df;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+.admin-lock-button:hover { background: #173b2d; color: white; }
+
+@media (max-width: 760px) {
+  .admin-gate-card { padding: 24px 20px; border-radius: 18px; }
+  .admin-public-link { display: none; }
+  .admin-lock-button { min-width: 54px; }
+}

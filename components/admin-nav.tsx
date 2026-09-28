@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const items = [
   { href: "/admin", label: "Dashboard", exact: true },
@@ -14,6 +14,13 @@ const items = [
 
 export function AdminNav() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  async function lockAdmin() {
+    await fetch("/api/admin/access", { method: "DELETE" });
+    router.replace("/admin");
+    router.refresh();
+  }
 
   return (
     <nav className="admin-nav" aria-label="Admin navigation">
@@ -33,6 +40,7 @@ export function AdminNav() {
           })}
         </div>
         <Link className="admin-public-link" href="/">Public site ↗</Link>
+        <button className="admin-lock-button" type="button" onClick={lockAdmin}>Lock</button>
       </div>
     </nav>
   );

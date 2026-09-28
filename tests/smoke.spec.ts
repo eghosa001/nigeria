@@ -1,5 +1,36 @@
 import { expect, test } from "@playwright/test";
 
+test("admin pages hide all operational content until the shared admin session is unlocked", async ({ page, request }) => {
+  await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await expect(page.getByText("Content & verification dashboard", { exact: true })).toHaveCount(0);
+  await expect(page.getByRole("navigation", { name: "Admin navigation" })).toHaveCount(0);
+
+  await page.goto("/admin/services/passport-renewal");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await expect(page.getByText("Passport renewal", { exact: true })).toHaveCount(0);
+
+  const unauthenticatedProposal = await request.post("/api/admin/services/passport-renewal/proposal", {
+    data: { service: {} },
+    headers: { Origin: "http://127.0.0.1:3000" },
+    failOnStatusCode: false,
+  });
+  expect(unauthenticatedProposal.status()).toBe(401);
+
+  await page.getByLabel("Admin passphrase").fill("wrong-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  await expect(page.getByRole("alert")).toContainText("Incorrect admin passphrase");
+
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  await expect(page.getByRole("heading", { name: /Passport renewal/i })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Admin navigation" })).toBeVisible();
+
+  await page.getByRole("button", { name: "Lock" }).click();
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await expect(page.getByRole("navigation", { name: "Admin navigation" })).toHaveCount(0);
+});
+
 test("visits unlock displays reports immediately and can be locked again", async ({ page }) => {
   // Keep the real form and rendering; only replace the external analytics boundary.
   let authenticated = false;
@@ -30,6 +61,10 @@ test("visits unlock displays reports immediately and can be locked again", async
   });
 
   await page.goto("/admin/visits");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
   await page.getByLabel("Analytics passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock visits" }).click();
   await expect(page.getByRole("button", { name: "Lock analytics" })).toBeVisible();

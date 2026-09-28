@@ -68,9 +68,9 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(body.authenticated).toBe(false);
 
     await page.goto("/admin/visits");
-    await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
-    await expect(page.getByText("Visits data is protected", { exact: true })).toBeVisible();
-    await expect(page.getByLabel("Analytics passphrase")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Visits & page views" })).toHaveCount(0);
+    await expect(page.getByLabel("Admin passphrase")).toBeVisible();
   });
 
 
@@ -92,6 +92,8 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(body.authenticated).toBe(false);
 
     await page.goto("/admin/services/passport-renewal");
+    await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+    await expect(page.getByText("Passport renewal", { exact: true })).toHaveCount(0);
     await expect(page.getByLabel("Admin passphrase")).toBeVisible();
     await expect(page.getByText(/server configuration/i)).toHaveCount(0);
   });
