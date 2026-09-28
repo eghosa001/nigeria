@@ -80,7 +80,7 @@ for (const service of publicServices) {
   }
 
   if (!service.timeline) {
-    warnings.push(prefix + "no reliable official completion timeline is published in the guide");
+    warnings.push(prefix + "agency has not published a reliable fixed completion timeline; the guide must display that explicitly");
   }
 
   const vague = [...service.requirements, ...service.steps].filter((value) => vaguePattern.test(value));

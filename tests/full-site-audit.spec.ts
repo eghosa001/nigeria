@@ -18,6 +18,9 @@ test("every public route loads and has no broken internal links", async ({ page,
     const response = await page.goto(route, { waitUntil: "domcontentloaded" });
     expect(response?.status(), route + " status").toBeLessThan(400);
     await expect(page.locator("main#main-content")).toBeVisible();
+    const homeLogo = page.getByRole("link", { name: "MyNigeriaGuide home" });
+    await expect(homeLogo, route + " home logo").toBeVisible();
+    await expect(homeLogo, route + " home logo target").toHaveAttribute("href", "/");
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow, route + " horizontal overflow").toBeLessThanOrEqual(1);
@@ -69,9 +72,27 @@ test("every guide is structured for a viewer completing the service", async ({ p
     await expect(page.getByRole("heading", { name: "Step-by-step instructions" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "What exactly happens next?" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Important notes" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Common questions" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Official sources" })).toBeVisible();
+
+    const status = page.locator('[aria-label="Service at a glance"]');
+    await expect(status, service.slug + " service summary").toBeVisible();
+    expect(await status.locator(":scope > div").count(), service.slug + " summary fields").toBe(5);
+    await expect(status).toContainText("Cost");
+    await expect(status).toContainText("Timeline");
+    await expect(status).toContainText("Route");
+    await expect(status).toContainText("Agency");
+    await expect(status).toContainText("Checked");
+
     expect(await page.locator("#steps li").count(), service.slug + " actionable steps").toBeGreaterThanOrEqual(3);
     expect(await page.locator("#requirements li").count(), service.slug + " requirements").toBeGreaterThanOrEqual(2);
     expect(await page.locator("#after-submit .aftercare-grid > div").count(), service.slug + " aftercare").toBeGreaterThanOrEqual(4);
+    expect(await page.locator("#questions details").count(), service.slug + " contextual FAQs").toBeGreaterThanOrEqual(9);
+    expect(await page.locator("#official-sources a").count(), service.slug + " official sources").toBeGreaterThanOrEqual(1);
+
+    const faqText = await page.locator("#questions").innerText();
+    for (const expected of ["prepare before", "online", "cost", "long", "after", "stuck", "careful", "current", "government website"]) {
+      expect(faqText.toLowerCase(), service.slug + " FAQ coverage: " + expected).toContain(expected);
+    }
   }
 });
