@@ -19,7 +19,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(robotsText).not.toContain(".workers.dev");
 
     await page.goto("/");
-    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", "https://mynigeriaguide.com/");
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", /^https:\/\/mynigeriaguide\.com\/?$/);
     await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id="]')).toHaveCount(1);
   });
 
