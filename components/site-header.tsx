@@ -22,9 +22,9 @@ export function SiteHeader() {
     <header className="site-header">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="MyNigeriaGuide home" onClick={() => setOpen(false)}>
+        <a className="brand brand-home-link" href="/" aria-label="MyNigeriaGuide home" onClick={() => setOpen(false)}>
           <BrandLogo />
-        </Link>
+        </a>
 
         <button
           className={"menu-toggle" + (open ? " is-open" : "")}

@@ -136,3 +136,21 @@ test("guide anchors do not trap browser Back after starting a process", async ({
   await expect(page).toHaveURL(/\/services\?category=Banking$/);
   await expect(page.getByRole("heading", { name: "Government service guides" })).toBeVisible();
 });
+
+test("brand logo always returns home, including after process activity", async ({ page }) => {
+  await page.goto("/services/bvn-enrolment");
+  await page.getByRole("button", { name: /Start this process/i }).click();
+  await page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Steps" }).click();
+  await page.getByRole("link", { name: "MyNigeriaGuide home" }).click();
+  await expect(page).toHaveURL(/\/$/);
+  await expect(page.getByRole("heading", { name: /Get government services done/i })).toBeVisible();
+});
+
+test("service FAQ answers are contextual and complete enough to guide the next action", async ({ page }) => {
+  await page.goto("/services/passport-renewal");
+  const questions = page.locator("#questions details");
+  await expect(questions).toHaveCount(9);
+  await expect(page.locator("#questions")).toContainText("Online + physical visit");
+  await expect(page.locator("#questions")).toContainText(/official|agency/i);
+  await expect(page.locator("#questions")).toContainText(/last checked|checked on/i);
+});

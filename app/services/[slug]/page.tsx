@@ -9,6 +9,7 @@ import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
+import { ServiceFaqs } from "@/components/service-faqs";
 import { ServiceAftercare } from "@/components/service-aftercare";
 import { GuideQuickNav } from "@/components/guide-quick-nav";
 import { StatusBadge } from "@/components/status-badge";
@@ -163,28 +164,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ul>{service.notes.map((note) => <li key={note}>{note}</li>)}</ul>
             </section>
 
-            <section id="questions">
-              <span className="section-number" aria-hidden="true">04</span>
-              <h2>Common questions</h2>
-              <div className="faq-list">
-                <details>
-                  <summary>How much does this service cost?</summary>
-                  <p><strong>{service.feeLabel}</strong>{service.feeNote ? " — " + service.feeNote : "."}</p>
-                </details>
-                <details>
-                  <summary>Where should I complete the application?</summary>
-                  <p>{service.officialPortal ? "Use the official portal linked on this page. MyNigeriaGuide does not take government payments." : "Use the responsible agency's official website and contact channel."}</p>
-                </details>
-                <details>
-                  <summary>How current is this guide?</summary>
-                  <p>Its official sources were last checked on {service.lastVerified}. The source links are listed below so you can inspect them directly.</p>
-                </details>
-                <details>
-                  <summary>Is MyNigeriaGuide an official government website?</summary>
-                  <p>No. MyNigeriaGuide is an independent information service that links back to the responsible government agency.</p>
-                </details>
-              </div>
-            </section>
+            <ServiceFaqs service={service} />
 
             <section id="official-sources">
               <span className="section-number" aria-hidden="true">05</span>
