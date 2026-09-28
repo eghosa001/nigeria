@@ -29,6 +29,22 @@ test.describe("live MyNigeriaGuide deployment", () => {
     }
   });
 
+
+  test("live visits dashboard is configured and protected", async ({ page, request }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics configuration check.");
+
+    const response = await request.get("/api/admin/analytics?range=7d", { failOnStatusCode: false });
+    expect(response.status()).toBe(401);
+    const body = await response.json() as { configured?: boolean; authenticated?: boolean };
+    expect(body.configured).toBe(true);
+    expect(body.authenticated).toBe(false);
+
+    await page.goto("/admin/visits");
+    await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
+    await expect(page.getByText("Visits data is protected", { exact: true })).toBeVisible();
+    await expect(page.getByLabel("Analytics passphrase")).toBeVisible();
+  });
+
   test("live core pages do not horizontally overflow", async ({ page }) => {
     for (const path of ["/", "/services", "/fees", "/updates", "/offices", "/assistant", "/services/jamb-direct-entry-2026"]) {
       await page.goto(path);
