@@ -244,7 +244,12 @@ Use:
 
 for uptime checks.
 
-GitHub Actions separately monitors government source changes and official links.
+The repository now has two scheduled GitHub Actions monitors:
+
+- **Production health monitor** runs every six hours against the live Worker and verifies critical public routes, the health payload, sitemap/robots discovery, deployment metadata, and that private analytics remains configured and locked.
+- **Source integrity monitor** runs daily and checks monitored government source markers plus the full official/source link registry.
+
+A failed scheduled workflow is the operational alert signal and uses the existing GitHub Actions notification path. These checks add no KV or database reads to normal visitor traffic.
 
 ## Deployment discipline
 

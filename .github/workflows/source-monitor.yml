@@ -3,7 +3,7 @@ name: Source integrity monitor
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 7 * * 1"
+    - cron: "0 7 * * *"
   push:
     branches: [main]
     paths:
