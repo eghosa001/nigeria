@@ -44,7 +44,7 @@ export function CorrectionReport({ serviceSlug }: { serviceSlug: string }) {
       <div>
         <span className="eyebrow">Help keep this accurate</span>
         <h2>See something outdated?</h2>
-        <p>Report a fee, requirement or official-link problem. Reports are reviewed before any guide changes.</p>
+        <p>Report a fee, requirement or official-link problem. Persistent submission is optional; GovGuide itself does not require a database.</p>
       </div>
 
       <form onSubmit={submit}>
