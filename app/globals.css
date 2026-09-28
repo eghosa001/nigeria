@@ -897,7 +897,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 .brand-lockup-footer .brand-wordmark small { color: #bcd0c5; }
 
 .primary-nav { gap: 5px; align-items: center; font-size: .88rem; }
-.primary-nav > a:not(.header-cta) {
+.primary-nav > a {
   min-height: 42px;
   display: inline-flex;
   align-items: center;
@@ -906,24 +906,11 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
   color: #40554b;
   transition: background 160ms ease, color 160ms ease;
 }
-.primary-nav > a:not(.header-cta):hover,
+.primary-nav > a:hover,
 .primary-nav > a.nav-active {
   background: rgba(8,112,68,.08);
   color: var(--green-dark);
 }
-.header-cta {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  margin-left: 8px;
-  padding: 0 16px;
-  border-radius: 12px;
-  background: var(--green-dark);
-  color: white !important;
-  box-shadow: 0 10px 24px rgba(6,63,45,.14);
-  font-weight: 800;
-}
-.header-cta:hover { background: #052f22; transform: translateY(-1px); }
 .menu-toggle { display: none; }
 
 .hero {
@@ -1364,8 +1351,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
     box-shadow: var(--shadow);
   }
   .primary-nav.is-open { display: grid; }
-  .primary-nav > a:not(.header-cta) { min-height: 48px; padding-inline: 13px; }
-  .primary-nav > .header-cta { display: inline-flex; margin: 5px 0 0; min-height: 50px; justify-content: center; }
+  .primary-nav > a { min-height: 48px; padding-inline: 13px; }
   .nav-offices { display: inline-flex; }
   .hero { padding: 62px 0 58px; }
   .hero h1 { font-size: clamp(2.8rem, 12vw, 4.1rem); }
@@ -1477,3 +1463,6 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
   .site-header,.site-footer,.guide-sidebar,.guide-quick-nav,.guide-actions,.process-actions,.ad-slot { display:none !important; }
   .process-tracker { box-shadow:none; border:1px solid #bbb; }
 }
+
+.service-discovery-section { background: #f1f5f1; border-block: 1px solid var(--line); }
+.service-discovery-section .route-wizard { max-width: 1160px; margin: 0 auto; }

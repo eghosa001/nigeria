@@ -18,17 +18,21 @@ export function SiteFooter() {
         <div className="footer-grid">
           <div>
             <strong>Explore</strong>
-            <Link href="/services">Service directory</Link>
-            <Link href="/fees">Government fee directory</Link>
-            <Link href="/updates">Verified updates</Link>
-            <Link href="/offices">Official office finders</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/fees">Fees</Link>
+            <Link href="/updates">Updates</Link>
+            <Link href="/offices">Offices</Link>
+            <Link href="/saved">Saved</Link>
+            <Link href="/assistant">Find a guide</Link>
           </div>
           <div>
-            <strong>Tools</strong>
-            <Link href="/assistant">Guide finder</Link>
-            <Link href="/saved">Saved guides</Link>
+            <strong>Popular categories</strong>
+            <Link href="/categories/banking">Banking & BVN</Link>
+            <Link href="/categories/international-travel">International travel</Link>
+            <Link href="/categories/identity">Identity & NIN</Link>
             <Link href="/categories/education">Education</Link>
-            <Link href="/categories/identity">Identity</Link>
+            <Link href="/categories/business">Business</Link>
+            <Link href="/categories/driving">Driving</Link>
           </div>
           <div>
             <strong>Trust & policies</strong>

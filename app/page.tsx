@@ -1,12 +1,8 @@
 import Link from "next/link";
-import { CategoryIcon } from "@/components/category-icon";
-import { GuideAssistant } from "@/components/guide-assistant";
 import { ServiceSearch } from "@/components/search";
 import { RouteWizard } from "@/components/route-wizard";
-import { ServiceCard } from "@/components/service-card";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
-import { categorySlug } from "@/lib/category";
-import { agencies, categories, publicServices } from "@/lib/data";
+import { agencies, publicServices } from "@/lib/data";
 
 const popular = [
   { label: "Passport", href: "/services/passport-renewal" },
@@ -71,55 +67,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section wizard-section">
-        <div className="container narrow-wide"><RouteWizard services={publicServices} /></div>
-      </section>
-
-      <section className="section">
+      <section className="section service-discovery-section">
         <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Browse by need</span>
-              <h2>Everything starts with the right service.</h2>
-            </div>
-            <Link href="/services">View all guides <span aria-hidden="true">→</span></Link>
-          </div>
-          <div className="category-grid">
-            {categories.map((category) => {
-              const count = publicServices.filter((service) => service.category === category.name).length;
-              return (
-                <Link className="category-card" key={category.name} href={"/categories/" + categorySlug(category.name)}>
-                  <span className="category-icon"><CategoryIcon category={category.name} /></span>
-                  <div>
-                    <h3>{category.name}</h3>
-                    <p>{category.description}</p>
-                    <small>{count} verified guide{count === 1 ? "" : "s"} <span aria-hidden="true">↗</span></small>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section assistant-section">
-        <div className="container narrow-wide">
-          <GuideAssistant services={publicServices} />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">High-demand starters</span>
-              <h2>Popular verified guides.</h2>
-            </div>
-            <Link href="/services">Search all {publicServices.length} guides <span aria-hidden="true">→</span></Link>
-          </div>
-          <div className="service-grid">
-            {publicServices.slice(0, 9).map((service) => <ServiceCard key={service.slug} service={service} />)}
-          </div>
+          <RouteWizard services={publicServices} />
         </div>
       </section>
 

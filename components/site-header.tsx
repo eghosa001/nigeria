@@ -11,6 +11,7 @@ const navigation = [
   { href: "/updates", label: "Updates" },
   { href: "/offices", label: "Offices" },
   { href: "/saved", label: "Saved" },
+  { href: "/assistant", label: "Find a guide" },
 ];
 
 export function SiteHeader() {
@@ -53,9 +54,6 @@ export function SiteHeader() {
               </Link>
             );
           })}
-          <Link className="header-cta" href="/assistant" onClick={() => setOpen(false)}>
-            Find a guide
-          </Link>
         </nav>
       </div>
     </header>
