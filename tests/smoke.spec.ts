@@ -145,6 +145,14 @@ test("verified update RSS feed is available without a backend", async ({ request
   expect(xml).toContain("JAMB confirms no increase in 2026 UTME registration fees");
 });
 
+test("homepage has a canonical URL and offline fallback is not indexable", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "http://localhost:3000/");
+
+  await page.goto("/offline");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
+});
+
 test("health endpoint reports the published catalog", async ({ request }) => {
   const response = await request.get("/api/health");
   expect(response.ok()).toBeTruthy();

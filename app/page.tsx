@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceSearch } from "@/components/search";
 import { RouteWizard } from "@/components/route-wizard";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { agencies, publicServices } from "@/lib/data";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const popular = [
   { label: "Passport", href: "/services/passport-renewal" },
