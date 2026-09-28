@@ -65,7 +65,7 @@ test("health endpoint reports the published catalog", async ({ request }) => {
   expect(response.ok()).toBeTruthy();
   const body = await response.json();
   expect(body.status).toBe("ok");
-  expect(body.publicGuides).toBeGreaterThanOrEqual(76);
+  expect(body.publicGuides).toBeGreaterThanOrEqual(106);
 });
 
 test("core pages do not overflow horizontally", async ({ page }) => {
