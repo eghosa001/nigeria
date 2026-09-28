@@ -16,7 +16,7 @@ function getWatchlist() {
 
 export function ShareWatch({ slug, title }: { slug: string; title: string }) {
   const [watched, setWatched] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false);\n  const [pageUrl, setPageUrl] = useState("");
 
   useEffect(() => {
     setWatched(getWatchlist().includes(slug));
