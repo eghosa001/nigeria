@@ -13,6 +13,10 @@ export const agencies: Agency[] = [
   { slug:"nysc", name:"National Youth Service Corps", shortName:"NYSC", description:"Mobilisation, registration, relocation and certificate services.", website:"https://www.nysc.gov.ng" },
   { slug:"npc", name:"National Population Commission", shortName:"NPC", description:"Birth registration, attestation and certificate services.", website:"https://www.nationalpopulation.gov.ng" },
   { slug:"nrs", name:"Nigeria Revenue Service", shortName:"NRS", description:"Federal taxpayer registration and self-service tax processes.", website:"https://www.nrs.gov.ng" },
+  { slug:"fctirs", name:"Federal Capital Territory Internal Revenue Service", shortName:"FCT-IRS", description:"Tax filing, clearance and taxpayer services for residents of the FCT.", website:"https://fctirs.gov.ng" },
+  { slug:"eirs", name:"Edo State Internal Revenue Service", shortName:"EIRS", description:"Taxpayer and revenue services for Edo State.", website:"https://eirs.gov.ng" },
+  { slug:"airs", name:"Anambra State Internal Revenue Service", shortName:"AIRS", description:"Anambra State tax, ASIN and revenue services.", website:"https://airs.an.gov.ng" },
+  { slug:"lagos-revenue", name:"Lagos State Revenue Portal", shortName:"LASG Revenue", description:"Lagos State payer identity and MDA revenue services.", website:"https://revenue.lagosstate.gov.ng" },
 ];
 
 const source = (label:string, agency:string, url:string, published?:string): Source => ({
@@ -52,6 +56,12 @@ const S = {
   npcAttest: source("NPC Birth Attestation Self-Service", "National Population Commission", "https://attestation.nationalpopulation.gov.ng/"),
   nrsRegister: source("NRS Taxpayer Registration", "Nigeria Revenue Service", "https://selfservice.nrs.gov.ng/registration"),
   nrsPortal: source("NRS Taxpayer Self-Service Portal", "Nigeria Revenue Service", "https://selfservice.nrs.gov.ng/"),
+  fctHome: source("FCT-IRS official website", "Federal Capital Territory Internal Revenue Service", "https://fctirs.gov.ng/"),
+  fctReturns: source("FCT-IRS filing tax return guide", "Federal Capital Territory Internal Revenue Service", "https://fctirs.gov.ng/howto/steps-on-filling-return/"),
+  edoTaxId: source("EIRS Tax ID registration notice", "Edo State Internal Revenue Service", "https://eirs.gov.ng/tax-reforms-edo-irs-decentralizes-tin-registration-introduces-ussd-code-to-ease-tax-compliance/", "2025-12-04"),
+  edoPortal: source("Edo Revenue Administration System", "Edo State Internal Revenue Service", "https://eras.eirs.gov.ng/"),
+  anambraAsin: source("AIRS ASIN registration", "Anambra State Internal Revenue Service", "https://tax.services.an.gov.ng/create-asin"),
+  lagosRevenue: source("Lagos State Revenue Portal", "Lagos State Government", "https://revenue.lagosstate.gov.ng/Login"),
 };
 
 type GuideInput = Omit<Service, "lastVerified" | "sources" | "searchTerms" | "related"> & {
@@ -641,6 +651,56 @@ const published: Service[] = [
     steps:["Use the NIS international passport application route.","Complete the relevant online application.","Follow the nearest Nigerian mission's instructions for submission, appointment and biometrics."],
     notes:["Do not assume Nigeria-local passport fees apply to an application processed abroad."], sources:[S.nisPassports],
   })
+  guide({
+    slug:"fct-file-individual-tax-return", title:"How to file an individual tax return in the FCT", shortTitle:"FCT individual tax return",
+    summary:"FCT-IRS publishes an electronic filing route through its taxpayer self-service portal.",
+    category:"State services", agencySlug:"fctirs", feeLabel:"Filing service is provided through FCT-IRS",
+    status:"verified", officialPortal:"https://taxporta.fctirs.gov.ng/",
+    requirements:["FCT-IRS taxpayer account/TIN details","Information needed for the applicable assessment year","Accurate personal and income details requested by the return form"],
+    steps:["Open the FCT-IRS self-service portal.","Sign in or register for self-service access.","Open Tax Returns and choose File Returns.","Create a new return for the relevant assessment year.","Complete the required return sections and submit through the portal."],
+    notes:["FCT-IRS states that electronic filing is the approved method for individual annual returns.","Use the live portal for the current filing window and any current deadline notice."],
+    sources:[S.fctReturns,S.fctHome],
+  }),
+  guide({
+    slug:"fct-verify-tax-clearance", title:"How to verify an FCT tax clearance certificate", shortTitle:"Verify FCT tax clearance",
+    summary:"FCT-IRS provides an online Tax Clearance Certificate verification service from its official digital services.",
+    category:"State services", agencySlug:"fctirs", feeLabel:"Verification service listed by FCT-IRS",
+    status:"verified", officialPortal:"https://fctirs.gov.ng/",
+    requirements:["Tax Clearance Certificate details required by the FCT-IRS verification flow"],
+    steps:["Open the official FCT-IRS website.","Choose the Verify TCC service.","Enter the certificate details requested by the verification page.","Confirm the result before relying on the certificate."],
+    notes:["Use the live FCT-IRS service rather than a screenshot or third-party certificate checker."],
+    sources:[S.fctHome],
+  }),
+  guide({
+    slug:"edo-tax-id-access", title:"How to register or verify a Tax ID from Edo State", shortTitle:"Edo Tax ID access",
+    summary:"Edo IRS directs taxpayers to official Tax ID registration/verification channels and provides its ERAS portal for revenue services.",
+    category:"State services", agencySlug:"eirs", feeLabel:"Use official EIRS/JRB channels",
+    status:"verified", officialPortal:"https://eras.eirs.gov.ng/",
+    requirements:["Identity or business registration details required by the official Tax ID route","For individuals, identity data should match the government identity record used by the Tax ID system"],
+    steps:["Open the Edo Revenue Administration System or the Tax ID link published by EIRS.","Choose the applicable taxpayer registration or verification route.","Complete identity/business verification through the official system.","Keep the official Tax ID/verification result for tax transactions."],
+    notes:["EIRS has published Tax ID registration access through its offices and official JTB/JRB-linked channels.","Office structures can change, so GovGuide links the live EIRS channels instead of reproducing an old office list."],
+    sources:[S.edoTaxId,S.edoPortal],
+  }),
+  guide({
+    slug:"anambra-asin-registration", title:"How to get an Anambra State Identity Number (ASIN)", shortTitle:"Anambra ASIN registration",
+    summary:"AIRS provides an online enumeration route for individuals, informal enterprises and corporate entities to obtain an ASIN.",
+    category:"State services", agencySlug:"airs", feeLabel:"Use the official AIRS enumeration process",
+    status:"verified", officialPortal:"https://tax.services.an.gov.ng/create-asin",
+    requirements:["Choose the correct applicant type: individual, informal/enterprise or corporate","Provide the identity, contact and entity details requested by AIRS"],
+    steps:["Open the official AIRS ASIN page.","Choose the applicant type.","Complete the enumeration process with the requested details.","Keep the generated ASIN for applicable Anambra State government and revenue services."],
+    notes:["AIRS describes ASIN as a unique one-time identifier issued to individuals and corporate entities/residents by the Anambra State Government."],
+    sources:[S.anambraAsin],
+  }),
+  guide({
+    slug:"lagos-payer-id", title:"How to create a Lagos State Payer ID", shortTitle:"Lagos Payer ID",
+    summary:"The Lagos State Revenue Portal provides an online Create Payer ID process using identity/contact matching.",
+    category:"State services", agencySlug:"lagos-revenue", feeLabel:"Create through the official Lagos Revenue Portal",
+    status:"verified", officialPortal:"https://revenue.lagosstate.gov.ng/Login",
+    requirements:["Name details","One of the identity/contact options accepted by the portal, such as NIN, BVN or phone number, as applicable"],
+    steps:["Open the official Lagos State Revenue Portal login page.","Choose Create Payer ID.","Select the identity/search criterion offered by the portal.","Enter the requested name and matching identity/contact details.","Continue through the portal to create or confirm the payer record."],
+    notes:["Do not enter identity details on a copied or unofficial payment page; use the Lagos State Revenue Portal domain linked here."],
+    sources:[S.lagosRevenue],
+  }),
 ];
 
 const reviewQueue: Service[] = [
@@ -686,6 +746,7 @@ export const categories = [
   { name:"Youth service", description:"NYSC mobilisation and certificate services." },
   { name:"Civil records", description:"Birth registration and certificate services." },
   { name:"Tax", description:"Federal taxpayer self-service." },
+  { name:"State services", description:"Verified state and FCT digital services." },
 ];
 
 export function getAgency(slug:string) { return agencies.find((agency) => agency.slug === slug); }
