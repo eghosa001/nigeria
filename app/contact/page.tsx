@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Contact GovGuide" };
+export const metadata: Metadata = { title: "Contact GovGuide", alternates: { canonical: "/contact" } };
 
 export default function ContactPage() {
   return (
