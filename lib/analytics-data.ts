@@ -19,11 +19,13 @@ export type AnalyticsDashboardData = {
   referrers: Array<{ source: string; medium: string; sessions: number; users: number }>;
 };
 
+type ReportRow = {
+  dimensionValues?: Array<{ value?: string }>;
+  metricValues?: Array<{ value?: string }>;
+};
+
 type RunReportResponse = {
-  rows?: Array<{
-    dimensionValues?: Array<{ value?: string }>;
-    metricValues?: Array<{ value?: string }>;
-  }>;
+  rows?: ReportRow[];
   totals?: Array<{ metricValues?: Array<{ value?: string }> }>;
 };
 
@@ -148,11 +150,11 @@ async function runRealtime() {
   return Number(body.rows?.[0]?.metricValues?.[0]?.value ?? 0);
 }
 
-function metric(row: RunReportResponse["rows"] extends Array<infer R> ? R : never, index: number) {
+function metric(row: ReportRow, index: number) {
   return Number(row?.metricValues?.[index]?.value ?? 0);
 }
 
-function dimension(row: RunReportResponse["rows"] extends Array<infer R> ? R : never, index: number) {
+function dimension(row: ReportRow, index: number) {
   return row?.dimensionValues?.[index]?.value ?? "";
 }
 
