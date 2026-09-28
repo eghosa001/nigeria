@@ -6,12 +6,12 @@ export type CorrectionReport = {
 };
 
 export function isReportBackendConfigured() {
-  return Boolean(process.env.GOVGUIDE_REPORT_ENDPOINT);
+  return Boolean(process.env.MYNIGERIAGUIDE_REPORT_ENDPOINT);
 }
 
 export async function submitCorrectionReport(report: CorrectionReport) {
-  const endpoint = process.env.GOVGUIDE_REPORT_ENDPOINT;
-  const token = process.env.GOVGUIDE_REPORT_TOKEN;
+  const endpoint = process.env.MYNIGERIAGUIDE_REPORT_ENDPOINT;
+  const token = process.env.MYNIGERIAGUIDE_REPORT_TOKEN;
 
   if (!endpoint) {
     return { ok: false as const, reason: "not_configured" as const };

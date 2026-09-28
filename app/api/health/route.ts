@@ -6,7 +6,7 @@ export function GET() {
   return Response.json(
     {
       status: "ok",
-      product: "GovGuide Nigeria",
+      product: "MyNigeriaGuide",
       publicGuides: publicServices.length,
       timestamp: new Date().toISOString(),
     },

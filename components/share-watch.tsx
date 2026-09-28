@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 
-const storageKey = "govguide:watchlist";
-export const watchEvent = "govguide-watchlist-updated";
+const storageKey = "mynigeriaguide:watchlist";
+export const watchEvent = "mynigeriaguide-watchlist-updated";
 
 function getWatchlist() {
   try {
@@ -36,7 +36,7 @@ export function ShareWatch({ slug, title }: { slug: string; title: string }) {
 
   async function share() {
     const url = window.location.href;
-    const text = title + " — current requirements, fees and official links on GovGuide Nigeria.";
+    const text = title + " — current requirements, fees and official links on MyNigeriaGuide.";
 
     if (navigator.share) {
       await navigator.share({ title, text, url }).catch(() => undefined);

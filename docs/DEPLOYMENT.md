@@ -1,6 +1,6 @@
-# GovGuide Nigeria — Cloudflare production launch
+# MyNigeriaGuide — Cloudflare production launch
 
-GovGuide is Cloudflare-first. The public website does not require a database, KV namespace, or paid monthly backend.
+MyNigeriaGuide is Cloudflare-first. The public website does not require a database, KV namespace, or paid monthly backend.
 
 Cloudflare's current recommended deployment path for an existing Next.js 16 app is vinext on Cloudflare Workers. This repository is already configured for that path.
 
@@ -47,7 +47,7 @@ In Cloudflare Dashboard:
 2. Create a new Worker from a Git repository.
 3. Connect GitHub repository `eghosa001/nigeria`.
 4. Use the repository root.
-5. Keep this as its own Worker named `govguide-nigeria`.
+5. Keep this as its own Worker named `mynigeriaguide`.
 6. Do not attach KV, D1, R2, or other bindings for the initial launch.
 
 The repository already contains:
@@ -92,11 +92,11 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
 NEXT_PUBLIC_ADSENSE_CLIENT=
 NEXT_PUBLIC_ADSENSE_SLOT_GUIDE=
-GOVGUIDE_REPORT_ENDPOINT=
-GOVGUIDE_REPORT_TOKEN=
+MYNIGERIAGUIDE_REPORT_ENDPOINT=
+MYNIGERIAGUIDE_REPORT_TOKEN=
 ```
 
-GovGuide works without all optional variables.
+MyNigeriaGuide works without all optional variables.
 
 ## KV rule
 
@@ -215,7 +215,7 @@ NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-...
 NEXT_PUBLIC_ADSENSE_SLOT_GUIDE=...
 ```
 
-GovGuide exposes `/ads.txt` only when the AdSense client is configured.
+MyNigeriaGuide exposes `/ads.txt` only when the AdSense client is configured.
 
 ## Monitoring
 

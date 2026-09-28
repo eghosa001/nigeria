@@ -5,10 +5,10 @@ export function SiteHeader() {
     <header className="site-header">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="GovGuide Nigeria home">
+        <Link className="brand" href="/" aria-label="MyNigeriaGuide home">
           <span className="brand-mark" aria-hidden="true">G</span>
           <span>
-            <strong>GovGuide</strong>
+            <strong>MyNigeriaGuide</strong>
             <small>Nigeria</small>
           </span>
         </Link>

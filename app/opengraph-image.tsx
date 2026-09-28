@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "GovGuide Nigeria — government services, clearly explained";
+export const alt = "MyNigeriaGuide — government services, clearly explained";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -18,7 +18,7 @@ export default function Image() {
             display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "38px",
           }}>G</div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <strong style={{ fontSize: "34px" }}>GovGuide</strong>
+            <strong style={{ fontSize: "34px" }}>MyNigeriaGuide</strong>
             <span style={{ fontSize: "21px", color: "#5f6f67" }}>Nigeria</span>
           </div>
         </div>

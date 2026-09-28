@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "GovGuide Nigeria",
-    short_name: "GovGuide",
+    name: "MyNigeriaGuide",
+    short_name: "MyNigeriaGuide",
     description: "Verified Nigerian government service guides, fees, requirements and official portals.",
     start_url: "/",
     display: "standalone",

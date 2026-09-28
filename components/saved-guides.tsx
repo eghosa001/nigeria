@@ -5,7 +5,7 @@ import { ServiceCard } from "@/components/service-card";
 import { watchEvent } from "@/components/share-watch";
 import type { Service } from "@/lib/types";
 
-const storageKey = "govguide:watchlist";
+const storageKey = "mynigeriaguide:watchlist";
 
 function loadIds() {
   try {

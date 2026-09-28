@@ -1,4 +1,4 @@
-export const siteName = "GovGuide Nigeria";
+export const siteName = "MyNigeriaGuide";
 
 export const siteDescription =
   "Clear, independently verified guides to Nigerian government services, fees, requirements and official portals.";

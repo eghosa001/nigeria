@@ -22,7 +22,7 @@ export function GuideAssistant({ services }: { services: Service[] }) {
         <span className="eyebrow">Verified guide finder</span>
         <h2>Describe the government task in your own words</h2>
         <p>
-          This assistant does not invent answers. It finds the closest source-linked GovGuide pages so you can use the verified process and official portal.
+          This assistant does not invent answers. It finds the closest source-linked MyNigeriaGuide pages so you can use the verified process and official portal.
         </p>
       </div>
 

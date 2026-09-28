@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div>
           <div className="brand footer-brand">
             <span className="brand-mark" aria-hidden="true">G</span>
-            <span><strong>GovGuide</strong><small>Nigeria</small></span>
+            <span><strong>MyNigeriaGuide</strong><small>Nigeria</small></span>
           </div>
           <p>Independent guidance for Nigerian public services. We are not a government agency.</p>
         </div>
@@ -31,7 +31,7 @@ export function SiteFooter() {
         </div>
         <div>
           <strong>Safety</strong>
-          <p>Always confirm payment on the linked official government portal before paying. GovGuide does not collect government fees.</p>
+          <p>Always confirm payment on the linked official government portal before paying. MyNigeriaGuide does not collect government fees.</p>
         </div>
       </div>
     </footer>

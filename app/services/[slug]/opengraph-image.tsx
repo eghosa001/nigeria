@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getPublicService } from "@/lib/data";
 
-export const alt = "GovGuide Nigeria service guide";
+export const alt = "MyNigeriaGuide service guide";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -52,7 +52,7 @@ export default async function Image({
               G
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <strong style={{ fontSize: "30px" }}>GovGuide Nigeria</strong>
+              <strong style={{ fontSize: "30px" }}>MyNigeriaGuide</strong>
               <span style={{ fontSize: "18px", color: "#5f6f67" }}>{category}</span>
             </div>
           </div>

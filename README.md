@@ -1,8 +1,8 @@
-# GovGuide Nigeria
+# MyNigeriaGuide
 
 Independent Nigerian government-service navigation website.
 
-GovGuide turns official government information into clear, source-linked guides showing fees, requirements, steps and official portals. It is **not** a government website and it never collects government application fees.
+MyNigeriaGuide turns official government information into clear, source-linked guides showing fees, requirements, steps and official portals. It is **not** a government website and it never collects government application fees.
 
 ## Current product
 
@@ -33,13 +33,13 @@ GovGuide turns official government information into clear, source-linked guides 
 
 ## No database subscription required
 
-GovGuide's public website runs from checked-in verified content and does **not** require Supabase, PostgreSQL, or any paid monthly database.
+MyNigeriaGuide's public website runs from checked-in verified content and does **not** require Supabase, PostgreSQL, or any paid monthly database.
 
 Core features that work without a database:
 
 - all public service guides
 - search and filters
-- GovGuide Assistant
+- MyNigeriaGuide Assistant
 - agency and office finders
 - saved/watch guides on the user's device
 - WhatsApp/native sharing
@@ -60,11 +60,11 @@ If persistent correction reports are needed later, the repository includes:
 The Next.js API remains backend-neutral. Configure only:
 
 ```env
-GOVGUIDE_REPORT_ENDPOINT=
-GOVGUIDE_REPORT_TOKEN=
+MYNIGERIAGUIDE_REPORT_ENDPOINT=
+MYNIGERIAGUIDE_REPORT_TOKEN=
 ```
 
-The endpoint can be a small Cloudflare Worker backed by D1. If these variables are absent, GovGuide still builds and the full public site continues to work.
+The endpoint can be a small Cloudflare Worker backed by D1. If these variables are absent, MyNigeriaGuide still builds and the full public site continues to work.
 
 ## Local development
 
@@ -86,8 +86,8 @@ npm run test:e2e
 
 Copy `.env.example` to `.env.local`.
 
-- `GOVGUIDE_REPORT_ENDPOINT`: optional correction-report endpoint
-- `GOVGUIDE_REPORT_TOKEN`: optional server-side shared token for that endpoint
+- `MYNIGERIAGUIDE_REPORT_ENDPOINT`: optional correction-report endpoint
+- `MYNIGERIAGUIDE_REPORT_TOKEN`: optional server-side shared token for that endpoint
 - `NEXT_PUBLIC_SITE_URL`: production origin/custom domain
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: optional Google Analytics measurement ID
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: optional Search Console verification token
