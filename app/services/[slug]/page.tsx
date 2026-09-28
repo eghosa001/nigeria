@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
+import { ServiceJourney } from "@/components/service-journey";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
@@ -120,6 +121,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section">
         <div className="container guide-layout">
           <article className="guide-content">
+            <ServiceJourney service={service} />
+
             <section>
               <h2>What you need</h2>
               <ul className="checklist">
