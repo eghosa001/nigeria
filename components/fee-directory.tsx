@@ -59,7 +59,7 @@ export function FeeDirectory({ services }: { services: Service[] }) {
           <select value={status} onChange={(event) => setStatus(event.target.value)}>
             <option value="all">All public statuses</option>
             <option value="verified">Verified</option>
-            <option value="conflict">Official-source conflicts</option>
+            <option value="conflict">Needs confirmation</option>
           </select>
         </label>
       </div>
@@ -87,7 +87,7 @@ export function FeeDirectory({ services }: { services: Service[] }) {
                 {service.feeNote ? <small>{service.feeNote}</small> : null}
               </span>
               <span className={"fee-status fee-status-" + service.status}>
-                {service.status === "verified" ? "Verified" : "Check conflict"}
+                {service.status === "verified" ? "Verified" : "Confirm details"}
               </span>
               <span className="fee-checked">Checked {service.lastVerified}</span>
               <span className="fee-arrow" aria-hidden="true">→</span>
