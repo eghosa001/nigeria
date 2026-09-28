@@ -49,7 +49,7 @@ export default async function Image({
                 fontSize: "34px",
               }}
             >
-              G
+              M
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <strong style={{ fontSize: "30px" }}>MyNigeriaGuide</strong>
