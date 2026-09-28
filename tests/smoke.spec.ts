@@ -401,3 +401,11 @@ test("admin login rate limit blocks repeated bad passwords", async ({ request })
   expect(blocked.status()).toBe(429);
   expect(blocked.headers()["retry-after"]).toBeTruthy();
 });
+
+
+test("service metadata descriptions are meaningful", async ({ page }) => {
+  await page.goto("/services/jamb-direct-entry-2026");
+  const description = await page.locator('meta[name="description"]').getAttribute("content");
+  expect(description?.length ?? 0).toBeGreaterThan(80);
+  expect(description).toContain("2026 JAMB training manual");
+});
