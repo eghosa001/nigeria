@@ -172,7 +172,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
             </section>
 
-            <section>
+            <section id="official-sources">
               <h2>Official sources</h2>
               <div className="source-list">
                 {service.sources.map((source) => (
