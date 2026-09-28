@@ -2,31 +2,81 @@
 
 Independent Nigerian government-service navigation website.
 
-## What is in the first build
+GovGuide turns official government information into clear, source-linked guides showing fees, requirements, steps and official portals. It is **not** a government website and it never collects government application fees.
 
-- Searchable service directory
+## Current product
+
+- Searchable public service directory
 - Agency and category navigation
-- Structured service guides
-- Official-source citations and verification dates
-- Conflict warnings when official sources disagree
-- SEO sitemap and robots metadata
-- Supabase-ready schema for agencies, services, sources, verification history, and user reports
-- GitHub CI for typecheck + production build
+- Dynamic service-guide pages
+- Verified/conflict/review editorial states
+- Review-pending content is automatically excluded from public search, agency pages and the XML sitemap
+- Official-source links and last-checked dates on every public guide
+- Correction-reporting UI (activates after the new dedicated Supabase project is connected)
+- Read-only `/admin` verification dashboard
+- Google Analytics and Search Console verification hooks via environment variables
+- Weekly source-integrity GitHub Action
+- Supabase schema prepared for a **new, dedicated GovGuide project**
+- GitHub CI for TypeScript checking and production builds
+
+## Important Supabase rule
+
+Do **not** run `supabase/schema.sql` against the existing education Supabase project.
+
+Create/connect a new Supabase account/project for GovGuide, then use:
+
+```env
+SUPABASE_URL=
+SUPABASE_PUBLISHABLE_KEY=
+```
+
+The schema uses `govguide_*` table names, enables RLS, publishes only verified/conflict service records, keeps verification events private, and allows anonymous correction-report inserts without public read access.
 
 ## Local development
 
-1. Install dependencies with npm install
-2. Run npm run dev
-3. Open http://localhost:3000
+```bash
+npm install
+npm run dev
+```
+
+Useful checks:
+
+```bash
+npm run typecheck
+npm run build
+npm run check:sources
+```
 
 ## Environment
 
-Set NEXT_PUBLIC_SITE_URL to the production origin when a custom domain is chosen.
+Copy `.env.example` to `.env.local`.
+
+- `SUPABASE_URL`: new GovGuide Supabase project URL
+- `SUPABASE_PUBLISHABLE_KEY`: publishable key for that new project
+- `NEXT_PUBLIC_SITE_URL`: production origin/custom domain
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: optional Google Analytics measurement ID
+- `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: optional Search Console verification token
+
+The public website remains functional if Supabase is not configured.
 
 ## Editorial rule
 
 Never silently resolve conflicting official information. Record the conflict, show the official sources, and require review before publishing a changed value.
 
-## Current status
+A guide with status `review` must never be publicly indexable.
 
-The repository starts with a small, verified seed set so the product structure can be tested before expanding to the planned 60+ launch guides.
+## Source monitoring
+
+`data/source-monitors.json` tracks high-value official source markers such as major passport, licence, JAMB, WAEC, NPC, CAC, NIMC and NRS information.
+
+The weekly GitHub workflow runs `scripts/check-sources.mjs`. If a critical marker disappears, the workflow fails so the source can be manually re-verified before the public guide is changed.
+
+## Next database phase
+
+Once a new GovGuide Supabase project is connected:
+
+1. Apply `supabase/schema.sql`.
+2. Seed the checked-in verified guides into `govguide_agencies`, `govguide_services` and `govguide_sources`.
+3. Add authenticated editor/admin policies.
+4. Move correction-report review and verification history into the dashboard.
+5. Keep checked-in seed content as a safe public fallback during database outages.
