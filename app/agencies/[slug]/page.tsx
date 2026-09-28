@@ -3,6 +3,9 @@ import { notFound } from "next/navigation";
 import { ServiceCard } from "@/components/service-card";
 import { agencies, getAgency, getServicesByAgency } from "@/lib/data";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return agencies.map((agency) => ({ slug: agency.slug }));
 }

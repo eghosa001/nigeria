@@ -1,15 +1,18 @@
-import { createHash, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "mng_admin_analytics";
+const SESSION_TTL_SECONDS = 60 * 60 * 12;
 
 function adminSecret() {
   return process.env.MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY?.trim() ?? "";
 }
 
-function expectedToken() {
+function sessionMac(payload: string) {
   const secret = adminSecret();
-  return secret ? createHash("sha256").update("mynigeriaguide-admin:" + secret).digest("hex") : "";
+  return secret
+    ? createHmac("sha256", secret).update("mynigeriaguide-admin-session:" + payload).digest("hex")
+    : "";
 }
 
 export function adminAccessConfigured() {
@@ -21,23 +24,37 @@ export function adminCookieName() {
 }
 
 export function adminCookieValue() {
-  return expectedToken();
+  const expiresAt = Math.floor(Date.now() / 1000) + SESSION_TTL_SECONDS;
+  const payload = "v1." + expiresAt;
+  return payload + "." + sessionMac(payload);
 }
 
 export function verifyAdminPassword(value: string) {
   const secret = adminSecret();
   if (!secret || !value) return false;
-  const a = Buffer.from(value);
-  const b = Buffer.from(secret);
-  return a.length === b.length && timingSafeEqual(a, b);
+  const supplied = createHash("sha256").update(value).digest();
+  const expected = createHash("sha256").update(secret).digest();
+  return timingSafeEqual(supplied, expected);
 }
 
 export function verifyAdminCookie(value?: string) {
-  const expected = expectedToken();
-  if (!expected || !value) return false;
-  const a = Buffer.from(value);
-  const b = Buffer.from(expected);
-  return a.length === b.length && timingSafeEqual(a, b);
+  if (!adminSecret() || !value) return false;
+
+  const parts = value.split(".");
+  if (parts.length !== 3 || parts[0] !== "v1" || !/^\d+$/.test(parts[1]) || !/^[0-9a-f]{64}$/i.test(parts[2])) {
+    return false;
+  }
+
+  const expiresAt = Number(parts[1]);
+  if (!Number.isSafeInteger(expiresAt) || expiresAt <= Math.floor(Date.now() / 1000)) {
+    return false;
+  }
+
+  const payload = parts[0] + "." + parts[1];
+  const expected = sessionMac(payload);
+  const suppliedBuffer = Buffer.from(parts[2], "hex");
+  const expectedBuffer = Buffer.from(expected, "hex");
+  return suppliedBuffer.length === expectedBuffer.length && timingSafeEqual(suppliedBuffer, expectedBuffer);
 }
 
 export async function hasAdminSession() {
@@ -50,5 +67,5 @@ export const adminCookieOptions = {
   secure: true,
   sameSite: "strict" as const,
   path: "/",
-  maxAge: 60 * 60 * 12,
+  maxAge: SESSION_TTL_SECONDS,
 };

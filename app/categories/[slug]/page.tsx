@@ -8,6 +8,9 @@ import { categorySlug } from "@/lib/category";
 import { categories, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return categories.map((category) => ({ slug: categorySlug(category.name) }));
 }

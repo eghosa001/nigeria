@@ -21,6 +21,9 @@ import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getSiteUrl } from "@/lib/site";
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return publicServices.map((service) => ({ slug: service.slug }));
 }
