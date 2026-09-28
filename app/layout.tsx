@@ -47,6 +47,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="en">
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="GovGuide Nigeria — Verified Updates" href="/updates.xml" />
+      </head>
       <body>
         <JsonLd data={websiteLd} />
         <SiteHeader />
