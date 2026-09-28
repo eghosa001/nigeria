@@ -10,6 +10,7 @@ import { ServiceJourney } from "@/components/service-journey";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceAftercare } from "@/components/service-aftercare";
+import { GuideQuickNav } from "@/components/guide-quick-nav";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
@@ -126,14 +127,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
-            <nav className="guide-quick-nav" aria-label="On this page">
-              <span>On this page</span>
-              <a href="#journey">Route</a>
-              <a href="#requirements">Requirements</a>
-              <a href="#steps">Steps</a>
-              <a href="#after-submit">After submission</a>
-              <a href="#official-sources">Sources</a>
-            </nav>
+            <GuideQuickNav />
 
             <ProcessTracker service={service} />
 

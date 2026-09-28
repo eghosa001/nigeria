@@ -122,3 +122,17 @@ test("BVN change and Nigeria visa guides are discoverable", async ({ page }) => 
   await page.goto("/services/bvn-change-details");
   await expect(page.locator("#notes")).toContainText(/phone number may be changed only once/i);
 });
+
+test("guide anchors do not trap browser Back after starting a process", async ({ page }) => {
+  await page.goto("/services?category=Banking");
+  await page.getByRole("heading", { name: /BVN enrolment/i }).first().click();
+  await expect(page).toHaveURL(/\/services\/bvn-enrolment/);
+
+  await page.getByRole("button", { name: /Start this process/i }).click();
+  await page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Steps" }).click();
+  await expect(page).toHaveURL(/\/services\/bvn-enrolment#steps$/);
+
+  await page.goBack();
+  await expect(page).toHaveURL(/\/services\?category=Banking$/);
+  await expect(page.getByRole("heading", { name: "Government service guides" })).toBeVisible();
+});
