@@ -69,6 +69,7 @@ test("admin workspace exposes the full content operation areas", async ({ page }
   await expect(adminNav.getByRole("link", { name: "Dashboard" })).toBeVisible();
   await expect(adminNav.getByRole("link", { name: "Guides" })).toBeVisible();
   await expect(adminNav.getByRole("link", { name: "Foreign visas" })).toBeVisible();
+  await expect(adminNav.getByRole("link", { name: "Visits" })).toBeVisible();
   await expect(adminNav.getByRole("link", { name: "Sources" })).toBeVisible();
   await expect(adminNav.getByRole("link", { name: "Updates" })).toBeVisible();
 
@@ -82,6 +83,10 @@ test("admin workspace exposes the full content operation areas", async ({ page }
   await page.goto("/admin/sources");
   await expect(page.getByRole("heading", { name: "Official source registry" })).toBeVisible();
   expect(await page.locator(".admin-source-registry > a").count()).toBeGreaterThan(20);
+
+  await page.goto("/admin/visits");
+  await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
+  await expect(page.locator(".admin-analytics-state, .analytics-metric-grid").first()).toBeVisible();
 });
 
 test("foreign visas are directly discoverable without using search", async ({ page }) => {

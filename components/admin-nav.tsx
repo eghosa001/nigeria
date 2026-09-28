@@ -7,6 +7,7 @@ const items = [
   { href: "/admin", label: "Dashboard", exact: true },
   { href: "/admin/services", label: "Guides" },
   { href: "/admin/foreign-visas", label: "Foreign visas" },
+  { href: "/admin/visits", label: "Visits" },
   { href: "/admin/sources", label: "Sources" },
   { href: "/admin/updates", label: "Updates" },
 ];
