@@ -1,8 +1,24 @@
 import { publicServices } from "../lib/data";
 import { getServiceJourney } from "../lib/journey";
+import { hasExplicitServiceGuidance } from "../lib/service-guidance";
 
 const errors: string[] = [];
 const warnings: string[] = [];
+
+const priorityGuides = new Set([
+  "passport-renewal",
+  "first-nigerian-passport",
+  "nin-date-of-birth-modification",
+  "new-drivers-licence",
+  "cac-business-name-registration",
+  "jamb-2026-utme-registration",
+  "jamb-direct-entry-2026",
+  "waec-check-result",
+  "waec-collect-certificate",
+  "nysc-registration-local",
+]);
+
+const vaguePattern = /follow (?:the )?(?:portal|official|process)|complete (?:the )?(?:process|registration)|as instructed|where required|details requested by|through the .* process/i;
 
 for (const service of publicServices) {
   const prefix = service.slug + ": ";
@@ -39,6 +55,10 @@ for (const service of publicServices) {
     errors.push(prefix + "has neither an official portal nor an official source route");
   }
 
+  if (priorityGuides.has(service.slug) && !hasExplicitServiceGuidance(service.slug)) {
+    errors.push(prefix + "high-demand guide must have explicit route and after-submission guidance");
+  }
+
   const journey = getServiceJourney(service);
 
   if (journey.mode === "agency-guided") {
@@ -47,6 +67,11 @@ for (const service of publicServices) {
 
   if (!service.timeline) {
     warnings.push(prefix + "no reliable official completion timeline is published in the guide");
+  }
+
+  const vague = [...service.requirements, ...service.steps].filter((value) => vaguePattern.test(value));
+  if (vague.length) {
+    warnings.push(prefix + "contains wording that should be made more concrete: " + vague[0]);
   }
 }
 

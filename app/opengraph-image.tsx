@@ -6,10 +6,14 @@ export const contentType = "image/png";
 
 function Mark() {
   return (
-    <div style={{ position: "relative", width: "82px", height: "82px", borderRadius: "22px", background: "#063F2D", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "42px", fontWeight: 800 }}>
-      M
-      <div style={{ position: "absolute", right: "9px", top: "8px", width: "14px", height: "14px", borderRadius: "4px", background: "#D1A24A", transform: "rotate(45deg)" }} />
-    </div>
+    <svg width="82" height="82" viewBox="0 0 82 82">
+      <rect width="82" height="82" rx="22" fill="#063F2D" />
+      <circle cx="41" cy="41" r="25.5" fill="none" stroke="rgba(255,253,248,.18)" strokeWidth="2" />
+      <path d="M23 59C27 49 32 53 36 44C40 34 46 32 54 32" fill="none" stroke="#FFFDF8" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="23" cy="59" r="5" fill="#D1A24A" stroke="#FFFDF8" strokeWidth="2" />
+      <path d="M55 22C48 22 43 27 43 34C43 43 55 57 55 57C55 57 67 43 67 34C67 27 62 22 55 22Z" fill="#D1A24A" stroke="#FFFDF8" strokeWidth="2" />
+      <path d="M50 34L54 38L61 30" fill="none" stroke="#063F2D" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }
 

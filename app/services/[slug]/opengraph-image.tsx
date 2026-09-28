@@ -20,10 +20,13 @@ export default async function Image({ params }: { params: Promise<{ slug: string
 
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", zIndex: 2 }}>
           <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-            <div style={{ position: "relative", width: "68px", height: "68px", borderRadius: "18px", background: "#063F2D", color: "white", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "34px" }}>
-              M
-              <div style={{ position: "absolute", right: "7px", top: "7px", width: "12px", height: "12px", borderRadius: "3px", background: "#D1A24A", transform: "rotate(45deg)" }} />
-            </div>
+            <svg width="68" height="68" viewBox="0 0 68 68">
+              <rect width="68" height="68" rx="18" fill="#063F2D" />
+              <path d="M18 49C22 41 26 44 30 37C34 29 39 28 45 28" fill="none" stroke="#FFFDF8" strokeWidth="4.2" strokeLinecap="round" />
+              <circle cx="18" cy="49" r="4.2" fill="#D1A24A" stroke="#FFFDF8" strokeWidth="1.8" />
+              <path d="M46 20C40 20 36 24 36 30C36 38 46 50 46 50C46 50 56 38 56 30C56 24 52 20 46 20Z" fill="#D1A24A" stroke="#FFFDF8" strokeWidth="1.8" />
+              <path d="M42 30L45 33L51 27" fill="none" stroke="#063F2D" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <strong style={{ fontSize: "30px" }}>MyNigeriaGuide</strong>
               <span style={{ fontSize: "18px", color: "#607168" }}>{category}</span>

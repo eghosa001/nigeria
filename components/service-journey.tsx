@@ -1,9 +1,11 @@
 import Link from "next/link";
 import type { Service } from "@/lib/types";
 import { getServiceJourney } from "@/lib/journey";
+import { getDetailedServiceGuidance } from "@/lib/service-guidance";
 
 export function ServiceJourney({ service }: { service: Service }) {
   const journey = getServiceJourney(service);
+  const guidance = getDetailedServiceGuidance(service);
 
   return (
     <section className="journey-section" id="journey">
@@ -19,8 +21,8 @@ export function ServiceJourney({ service }: { service: Service }) {
         <article className="journey-card journey-card-primary">
           <span className="journey-number" aria-hidden="true">01</span>
           <span className="journey-label">Recommended start</span>
-          <h3>{journey.startLabel}</h3>
-          <p>{journey.startDetail}</p>
+          <h3>{guidance.route.startTitle}</h3>
+          <p>{guidance.route.startDetail}</p>
           {service.officialPortal ? (
             <a className="text-link" href={service.officialPortal} target="_blank" rel="noreferrer">
               Open official online route ↗
@@ -30,23 +32,17 @@ export function ServiceJourney({ service }: { service: Service }) {
 
         <article className="journey-card">
           <span className="journey-number" aria-hidden="true">02</span>
-          <span className="journey-label">Physical visit</span>
-          <h3>{journey.physicalLabel}</h3>
-          <p>
-            {journey.physicalStatus === "required"
-              ? "Do not assume the online form means the whole process is online. Complete the physical stage listed in the steps below."
-              : journey.physicalStatus === "may-be-required"
-                ? "The official process can involve an office, institution or accredited centre depending on your case."
-                : "Our current official sources do not state a compulsory walk-in step for the standard route."}
-          </p>
+          <span className="journey-label">Physical / assisted stage</span>
+          <h3>{guidance.route.physicalTitle}</h3>
+          <p>{guidance.route.physicalDetail}</p>
           <Link className="text-link" href="/offices">Find official offices/centres →</Link>
         </article>
 
         <article className="journey-card">
           <span className="journey-number" aria-hidden="true">03</span>
-          <span className="journey-label">Fallback</span>
-          <h3>{journey.alternativeLabel}</h3>
-          <p>{journey.alternativeDetail}</p>
+          <span className="journey-label">If something blocks you</span>
+          <h3>{guidance.route.fallbackTitle}</h3>
+          <p>{guidance.route.fallbackDetail}</p>
           <Link className="text-link" href={"/agencies/" + service.agencySlug}>View agency guidance →</Link>
         </article>
       </div>
