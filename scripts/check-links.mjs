@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-const files = ["lib/data.ts", "lib/offices.ts"];
+const files = ["lib/data.ts", "lib/offices.ts", "data/updates.ts"];
 const urls = new Set();
 
 for (const file of files) {
