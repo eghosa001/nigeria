@@ -6,8 +6,8 @@ export function SiteFooter() {
       <div className="container footer-grid">
         <div>
           <div className="brand footer-brand">
-            <span className="brand-mark" aria-hidden="true">G</span>
-            <span><strong>MyNigeriaGuide</strong><small>Nigeria</small></span>
+            <span className="brand-mark" aria-hidden="true">M</span>
+            <span><strong>MyNigeriaGuide</strong><small>Government services</small></span>
           </div>
           <p>Independent guidance for Nigerian public services. We are not a government agency.</p>
         </div>
