@@ -108,4 +108,4 @@ The weekly GitHub workflow runs `scripts/check-sources.mjs`. If a critical marke
 
 ## Production launch
 
-Follow `docs/DEPLOYMENT.md` for the single-deployment Vercel launch sequence, environment variables, post-deploy checks, Search Console setup, AdSense timing and optional D1 reporting.
+Follow `docs/DEPLOYMENT.md` for the Cloudflare Workers launch sequence, environment variables, post-deploy checks, Search Console setup, AdSense timing and optional D1 reporting.
