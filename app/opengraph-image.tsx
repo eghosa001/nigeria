@@ -16,10 +16,10 @@ export default function Image() {
           <div style={{
             width: "76px", height: "76px", borderRadius: "18px", background: "#0b6b46", color: "white",
             display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: "38px",
-          }}>G</div>
+          }}>M</div>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <strong style={{ fontSize: "34px" }}>MyNigeriaGuide</strong>
-            <span style={{ fontSize: "21px", color: "#5f6f67" }}>Nigeria</span>
+            <span style={{ fontSize: "21px", color: "#5f6f67" }}>Government services made simple</span>
           </div>
         </div>
 
