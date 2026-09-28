@@ -65,6 +65,46 @@ test("service guides expose trust and sharing actions", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Official sources" })).toBeVisible();
 });
 
+test("correction API rejects malformed and tampered submissions before any backend call", async ({ page }) => {
+  await page.goto("/");
+
+  const statuses = await page.evaluate(async () => {
+    const nonJson = await fetch("/api/reports", {
+      method: "POST",
+      headers: { "Content-Type": "text/plain" },
+      body: "not-json",
+    });
+
+    const unknownService = await fetch("/api/reports", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_slug: "not-a-real-service",
+        report_type: "incorrect_fee",
+        message: "This is long enough to be a valid report body.",
+        contact_email: "",
+        website: "",
+      }),
+    });
+
+    const invalidEmail = await fetch("/api/reports", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        service_slug: "passport-renewal",
+        report_type: "incorrect_fee",
+        message: "This is long enough to be a valid report body.",
+        contact_email: "not-an-email",
+        website: "",
+      }),
+    });
+
+    return [nonJson.status, unknownService.status, invalidEmail.status];
+  });
+
+  expect(statuses).toEqual([415, 400, 400]);
+});
+
 test("database-free launch never shows a dead correction form", async ({ page }) => {
   await page.goto("/services/passport-renewal");
   await expect(page.getByText("Persistent public submissions are not enabled yet")).toBeVisible();

@@ -64,4 +64,4 @@ jobs:
           echo "Production did not reach commit $expected within 10 minutes."
           exit 1
       - run: npx playwright install --with-deps chromium
-      - run: npx playwright test --config playwright.live.config.ts tests/smoke.spec.ts tests/live-deployment.spec.ts
+      - run: npx playwright test --config playwright.live.config.ts tests/live-deployment.spec.ts

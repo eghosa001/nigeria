@@ -96,6 +96,26 @@ jobs:
           console.log("Analytics is configured and protected.");
           NODE
 
+      - name: Verify guide editor remains configured and locked
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail-with-body --silent --show-error --max-time 30 \
+            "$LIVE_BASE_URL/api/admin/content-access" > /tmp/content-access.json
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const value = JSON.parse(fs.readFileSync("/tmp/content-access.json", "utf8"));
+          if (
+            value.configured !== true ||
+            value.accessConfigured !== true ||
+            value.githubConfigured !== true ||
+            value.authenticated !== false
+          ) {
+            throw new Error("Guide editor is not in the expected configured-and-locked state.");
+          }
+          console.log("Guide editor is configured and protected.");
+          NODE
+
       - name: Verify deployment metadata is present
         shell: bash
         run: |
