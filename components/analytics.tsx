@@ -4,11 +4,10 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { shouldEnableAnalytics } from "@/lib/analytics-safety";
 
-type AnalyticsWindow = Window & {
+type AnalyticsWindow = Window & typeof globalThis & {
   dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
   __mngGaInitialized?: boolean;
-  [key: `ga-disable-${string}`]: unknown;
 };
 
 export function Analytics() {
@@ -21,7 +20,7 @@ export function Analytics() {
     const analyticsWindow = window as AnalyticsWindow;
     const disabledKey = `ga-disable-${id}`;
     const enabled = shouldEnableAnalytics(pathname, navigator.webdriver);
-    analyticsWindow[disabledKey] = !enabled;
+    Reflect.set(analyticsWindow, disabledKey, !enabled);
     if (!enabled) return;
 
     const dataLayer = analyticsWindow.dataLayer ?? (analyticsWindow.dataLayer = []);
