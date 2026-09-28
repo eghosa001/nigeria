@@ -1,31 +1,91 @@
-# GovGuide Nigeria — production launch runbook
+# GovGuide Nigeria — Cloudflare production launch
 
-The application is designed to launch without a database.
+GovGuide is Cloudflare-first. The public website does not require a database, KV namespace, or paid monthly backend.
 
-## 1. Create a dedicated Vercel project
+Cloudflare's current recommended deployment path for an existing Next.js 16 app is vinext on Cloudflare Workers. This repository is already configured for that path.
 
-Import the GitHub repository:
+## Architecture
 
-`eghosa001/nigeria`
+- GitHub: source code and CI
+- Cloudflare Workers: Next.js application runtime
+- Cloudflare static assets: built application assets
+- Cloudflare custom domain/CDN: production delivery
+- GitHub Actions: source monitoring, link auditing, browser QA
+- Cloudflare D1: optional later, only for features that truly require persistence
+- Cloudflare KV: **not used**
 
-Use a **new** Vercel project named `govguide-nigeria` (or another unique GovGuide name). Do not attach the repository to the existing `web`, `educationalwebsite`, or `backend` projects.
+There is deliberately no KV binding in `wrangler.jsonc`.
 
-Framework: Next.js  
-Root directory: repository root  
-Build command: `npm run build`  
-Install command: `npm install`
+## Local commands
 
-No database environment variables are required.
+Normal Next.js development remains available:
 
-## 2. First-deploy environment
-
-Set:
-
-```env
-NEXT_PUBLIC_SITE_URL=https://<production-domain>
+```bash
+npm install
+npm run dev
 ```
 
-Leave these blank until the corresponding account/configuration is ready:
+Cloudflare/vinext compatibility:
+
+```bash
+npm run check:cloudflare
+npm run build:vinext
+npm run start:vinext
+```
+
+The normal Next.js build is also retained as an independent compatibility check:
+
+```bash
+npm run build
+```
+
+## First Cloudflare deployment
+
+In Cloudflare Dashboard:
+
+1. Open **Workers & Pages** / **Workers Builds**.
+2. Create a new Worker from a Git repository.
+3. Connect GitHub repository `eghosa001/nigeria`.
+4. Use the repository root.
+5. Keep this as its own Worker named `govguide-nigeria`.
+6. Do not attach KV, D1, R2, or other bindings for the initial launch.
+
+The repository already contains:
+
+- `vite.config.ts`
+- `wrangler.jsonc`
+- vinext Cloudflare dependencies
+- Cloudflare build scripts
+
+For Workers Builds, the simplest deployment command is:
+
+```bash
+npm run deploy:cloudflare
+```
+
+If Cloudflare asks for a separate build command, use:
+
+```bash
+npm run build:vinext
+```
+
+and deploy the generated Workers config with:
+
+```bash
+npx wrangler deploy --config dist/server/wrangler.json
+```
+
+Avoid configuring both a full vinext deploy command and a separate vinext build if that would cause the project to build twice.
+
+## Environment variables
+
+For the first production deployment, set:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://<final-domain>
+```
+
+Leave these unset until the corresponding service is actually configured:
 
 ```env
 NEXT_PUBLIC_GA_MEASUREMENT_ID=
@@ -36,28 +96,61 @@ GOVGUIDE_REPORT_ENDPOINT=
 GOVGUIDE_REPORT_TOKEN=
 ```
 
-## 3. Pre-deploy gate
+GovGuide works without all optional variables.
 
-The main branch must have green checks for:
+## KV rule
 
-- CI: TypeScript
-- CI: Next.js production build
-- Browser QA: desktop
-- Browser QA: mobile
-- Browser QA: serious/critical WCAG A/AA checks
-- Source integrity monitor
-- Official-link audit
+Do **not** add a Workers KV namespace merely for normal page rendering, search, service guides, saved guides, SEO, or source monitoring.
 
-Do not deploy a red source-integrity commit unless the failure has been investigated.
+The current site does not need KV.
 
-## 4. Post-deploy smoke checks
+If persistent application data is needed later:
 
-Check these production routes:
+1. prefer D1 for structured records such as correction reports;
+2. add it only to the feature that needs it;
+3. keep public content in the repository;
+4. do not put every page request through a KV lookup.
+
+This is specifically intended to prevent a high-read architecture where ordinary traffic consumes the free KV quota.
+
+## Optional D1
+
+D1 is not required for launch.
+
+The repository contains an optional schema and Worker example under:
+
+```
+cloudflare/d1/schema.sql
+cloudflare/worker-example.ts
+```
+
+Use that only when persistent correction reports or similar server-side records are needed.
+
+## Pre-deploy gate
+
+Deploy only a green `main` branch.
+
+Required checks:
+
+- TypeScript
+- Next.js production build
+- vinext compatibility check
+- vinext Cloudflare production build
+- Playwright desktop QA
+- Playwright mobile QA
+- WCAG serious/critical checks
+- source-integrity monitor
+- official-link audit
+
+## Post-deploy smoke checks
+
+Check:
 
 - `/`
 - `/services`
 - `/fees`
 - `/updates`
+- `/updates.xml`
 - `/categories/education`
 - `/services/passport-renewal`
 - `/offices`
@@ -67,71 +160,79 @@ Check these production routes:
 - `/manifest.webmanifest`
 - `/api/health`
 
-Verify the response headers include:
+Also test:
 
-- `X-Content-Type-Options: nosniff`
-- `Referrer-Policy: strict-origin-when-cross-origin`
-- `X-Frame-Options: SAMEORIGIN`
-- HSTS on HTTPS
+- plain-language search
+- category filters
+- mobile navigation
+- WhatsApp sharing
+- saved guides
+- service-specific social preview cards
 
-## 5. Search launch
+## Custom domain
+
+After the Worker is healthy on its `workers.dev` URL:
+
+1. add the final custom domain in the Worker's domain settings;
+2. set `NEXT_PUBLIC_SITE_URL` to that HTTPS domain;
+3. rebuild once so canonical URLs, sitemap links, RSS URLs, and social metadata use the final origin.
+
+If the domain is already managed in the same Cloudflare account, keep DNS/proxy management inside Cloudflare.
+
+## Search Console
 
 After the final domain is live:
 
-1. Add the domain to Google Search Console.
-2. Put its verification token in `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`.
-3. Redeploy once.
-4. Submit `https://<domain>/sitemap.xml`.
-5. Request indexing for the home page, fee directory, update tracker and the strongest service/category pages.
+1. add the domain/property to Google Search Console;
+2. set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`;
+3. deploy once;
+4. submit `/sitemap.xml`;
+5. request indexing for the home page, `/fees`, `/updates`, and the strongest category/service pages.
 
-## 6. Analytics
+## Analytics
 
-Only set `NEXT_PUBLIC_GA_MEASUREMENT_ID` after the analytics property is created.
+Only configure `NEXT_PUBLIC_GA_MEASUREMENT_ID` after creating the analytics property.
 
-The site works fully without analytics.
+The site does not depend on analytics.
 
-## 7. AdSense
+## AdSense
 
-Do not set AdSense variables until:
+Do not enable ads simply because the code supports them.
+
+Wait until:
 
 - the final domain is live;
-- policy/trust pages are accessible;
-- the content is indexed and has meaningful organic traffic;
-- an AdSense account/site has been approved or is ready for review;
-- Google privacy/consent requirements applicable to the site's visitors have been configured in AdSense/Google's certified consent tooling.
+- trust/policy pages are accessible;
+- content is indexed;
+- meaningful traffic exists;
+- the site is ready for AdSense review;
+- applicable consent/privacy requirements are configured.
 
-When ready:
+Then set:
 
 ```env
 NEXT_PUBLIC_ADSENSE_CLIENT=ca-pub-...
 NEXT_PUBLIC_ADSENSE_SLOT_GUIDE=...
 ```
 
-The site will then expose a matching `/ads.txt` response. With no AdSense client configured, `/ads.txt` intentionally returns 404.
+GovGuide exposes `/ads.txt` only when the AdSense client is configured.
 
-## 8. Optional correction-report persistence
+## Monitoring
 
-GovGuide does not require this for launch.
+Use:
 
-If persistent reports are later wanted, deploy the example Cloudflare Worker and D1 schema under `cloudflare/`, then set:
-
-```env
-GOVGUIDE_REPORT_ENDPOINT=
-GOVGUIDE_REPORT_TOKEN=
+```
+/api/health
 ```
 
-## 9. Monitoring
+for uptime checks.
 
-Use `/api/health` for uptime checks.
+GitHub Actions separately monitors government source changes and official links.
 
-GitHub Actions independently checks official sources and public government links whenever source data changes and on the weekly schedule.
+## Deployment discipline
 
-## 10. Deployment discipline
-
-Because deployment quota is limited:
-
-- build and test in GitHub Actions first;
+- test in GitHub Actions first;
 - deploy only green `main`;
-- avoid redeploying for content drafts;
-- batch environment-variable changes;
-- use a preview only when visual production behavior cannot be validated in CI.
+- batch content and environment changes;
+- avoid unnecessary preview/production deployments;
+- do not add storage products until a concrete feature requires them.
