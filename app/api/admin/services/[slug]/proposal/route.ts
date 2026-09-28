@@ -1,4 +1,4 @@
-import { getService } from "@/lib/data";
+import { categories, getAgency, getService, services } from "@/lib/data";
 import { hasAdminSession } from "@/lib/admin-access";
 import { createServiceProposal, githubAdminConfigured } from "@/lib/admin-github";
 import { validateServiceRecord } from "@/lib/service-records";
@@ -58,6 +58,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ slu
   }
   if (service.slug !== slug) {
     return Response.json({ error: "The guide slug cannot be changed." }, { status: 400 });
+  }
+  if (!getAgency(service.agencySlug)) {
+    return Response.json({ error: "Unknown agency slug." }, { status: 400 });
+  }
+  if (!categories.some((category) => category.name === service.category)) {
+    return Response.json({ error: "Unknown service category." }, { status: 400 });
+  }
+  const knownSlugs = new Set(services.map((item) => item.slug));
+  if (service.related.some((related) => related === slug || !knownSlugs.has(related))) {
+    return Response.json({ error: "Related guides must reference other known guide slugs." }, { status: 400 });
   }
 
   try {
