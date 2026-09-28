@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   title: { default: siteName, template: "%s | " + siteName },
   description: siteDescription,
   applicationName: siteName,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName,
