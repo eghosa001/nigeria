@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Corrections policy" };
+export const metadata: Metadata = { title: "Corrections policy", alternates: { canonical: "/corrections" } };
 
 export default function CorrectionsPage() {
   return (
