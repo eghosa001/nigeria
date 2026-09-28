@@ -650,7 +650,7 @@ const published: Service[] = [
     requirements:["Passport application documents for the relevant fresh/renewal/change-of-data route","Mission-specific appointment/submission requirements"],
     steps:["Use the NIS international passport application route.","Complete the relevant online application.","Follow the nearest Nigerian mission's instructions for submission, appointment and biometrics."],
     notes:["Do not assume Nigeria-local passport fees apply to an application processed abroad."], sources:[S.nisPassports],
-  })
+  }),
   guide({
     slug:"fct-file-individual-tax-return", title:"How to file an individual tax return in the FCT", shortTitle:"FCT individual tax return",
     summary:"FCT-IRS publishes an electronic filing route through its taxpayer self-service portal.",
