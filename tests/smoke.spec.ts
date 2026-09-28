@@ -51,6 +51,15 @@ test("verified updates link back to affected guides and official sources", async
   await expect(page.getByRole("link", { name: /2026 JAMB registration/i }).first()).toBeVisible();
 });
 
+test("verified update RSS feed is available without a backend", async ({ request }) => {
+  const response = await request.get("/updates.xml");
+  expect(response.ok()).toBeTruthy();
+  expect(response.headers()["content-type"]).toContain("application/rss+xml");
+  const xml = await response.text();
+  expect(xml).toContain("<rss");
+  expect(xml).toContain("JAMB confirms no increase in 2026 UTME registration fees");
+});
+
 test("health endpoint reports the published catalog", async ({ request }) => {
   const response = await request.get("/api/health");
   expect(response.ok()).toBeTruthy();
