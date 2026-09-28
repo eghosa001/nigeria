@@ -9,8 +9,8 @@ function sameOrigin(request: Request) {
   const target = new URL(request.url);
   const origin = request.headers.get("origin");
   const fetchSite = request.headers.get("sec-fetch-site");
-  if (origin && origin !== target.origin) return false;
-  if (fetchSite && fetchSite !== "same-origin" && fetchSite !== "same-site") return false;
+  if (origin !== target.origin) return false;
+  if (fetchSite && fetchSite !== "same-origin") return false;
   return true;
 }
 
