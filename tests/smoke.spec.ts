@@ -38,8 +38,15 @@ test("fee directory and category pages are discoverable", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /JAMB|WAEC|NECO/i }).first()).toBeVisible();
 });
 
+test("verified updates link back to affected guides and official sources", async ({ page }) => {
+  await page.goto("/updates");
+  await expect(page.getByRole("heading", { name: "Verified government service updates" })).toBeVisible();
+  await expect(page.getByText("JAMB confirms no increase in 2026 UTME registration fees")).toBeVisible();
+  await expect(page.getByRole("link", { name: /2026 JAMB registration/i }).first()).toBeVisible();
+});
+
 test("core pages do not overflow horizontally", async ({ page }) => {
-  for (const path of ["/", "/services", "/fees", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
+  for (const path of ["/", "/services", "/fees", "/updates", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
     await page.goto(path);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow, path + " horizontal overflow").toBeLessThanOrEqual(1);
