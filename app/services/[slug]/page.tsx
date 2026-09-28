@@ -136,7 +136,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <section id="requirements">
               <span className="section-number" aria-hidden="true">01</span>
-              <h2>What you need</h2>
+              <h2>What you need before you start</h2>
+              <p className="guide-section-intro">Get these details, documents or prerequisites ready first so you do not have to stop midway through the official process.</p>
               <ul className="checklist">
                 {service.requirements.map((item) => <li key={item}>{item}</li>)}
               </ul>
@@ -144,7 +145,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <section id="steps">
               <span className="section-number" aria-hidden="true">02</span>
-              <h2>Steps</h2>
+              <h2>Step-by-step instructions</h2>
+              <p className="guide-section-intro">Follow these steps in order. Where a payment, upload or physical visit is required, complete it only through the official route linked on this guide.</p>
               <ol className="steps">
                 {service.steps.map((step, index) => (
                   <li key={step}><span>{index + 1}</span><p>{step}</p></li>

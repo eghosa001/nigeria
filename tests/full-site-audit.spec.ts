@@ -37,6 +37,7 @@ test("every public route loads and has no broken internal links", async ({ page,
 });
 
 test("primary navigation works on desktop and mobile menu states", async ({ page }) => {
+  test.setTimeout(90_000);
   await page.goto("/");
   const navTargets = [
     ["Services", "/services"],

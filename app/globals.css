@@ -1406,3 +1406,5 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+.guide-section-intro { max-width: 760px; margin: -8px 0 20px; color: var(--muted); line-height: 1.7; }
