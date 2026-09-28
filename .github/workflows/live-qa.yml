@@ -2,11 +2,28 @@ name: Live Deployment QA
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "data/**"
+      - "public/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+      - "playwright.live.config.ts"
+      - ".github/workflows/live-qa.yml"
+
+concurrency:
+  group: live-deployment-qa
+  cancel-in-progress: true
 
 jobs:
   live-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     env:
       LIVE_BASE_URL: https://mynigeriaguide.aighewieghosa111.workers.dev
     steps:
@@ -15,19 +32,27 @@ jobs:
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-      - name: Wait for Cloudflare to publish current content
+      - name: Wait for this exact commit to reach Cloudflare production
         shell: bash
         run: |
-          for i in {1..24}; do
-            body="$(curl -fsS "$LIVE_BASE_URL/" || true)"
-            if echo "$body" | grep -q "Clear steps. Verified sources."; then
-              echo "Current deployment detected."
+          expected="$GITHUB_SHA"
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            deployed="$(printf '%s' "$body" | node -e '
+              let data="";
+              process.stdin.on("data", c => data += c);
+              process.stdin.on("end", () => {
+                try { process.stdout.write(JSON.parse(data).commit || ""); } catch {}
+              });
+            ')"
+            if [ "$deployed" = "$expected" ]; then
+              echo "Verified production deployment: $expected"
               exit 0
             fi
-            echo "Waiting for current Cloudflare deployment ($i/24)..."
+            echo "Waiting for Cloudflare production ($i/60). Expected $(echo "$expected" | cut -c1-12), found $(echo "$deployed" | cut -c1-12)."
             sleep 10
           done
-          echo "Latest premium deployment was not visible on the live Worker in time."
+          echo "Production did not reach commit $expected within 10 minutes."
           exit 1
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test --config playwright.live.config.ts tests/smoke.spec.ts tests/live-deployment.spec.ts
