@@ -20,7 +20,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
 
     await page.goto("/");
     await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", /^https:\/\/mynigeriaguide\.com\/?$/);
-    await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id="]')).toHaveCount(1);
+    await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id="]')).toHaveCount(0);
   });
 
   test("brand, navigation and core service route are live", async ({ page }) => {
