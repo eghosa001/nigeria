@@ -1,9 +1,9 @@
-import { insertCorrectionReport, isSupabaseConfigured } from "@/lib/supabase-rest";
+import { isReportBackendConfigured, submitCorrectionReport } from "@/lib/report-backend";
 
 const allowedTypes = new Set(["incorrect_fee", "outdated_requirement", "broken_link", "other"]);
 
 export async function GET() {
-  return Response.json({ configured: isSupabaseConfigured() });
+  return Response.json({ configured: isReportBackendConfigured() });
 }
 
 export async function POST(request: Request) {
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Email address is too long." }, { status: 400 });
   }
 
-  const result = await insertCorrectionReport({
+  const result = await submitCorrectionReport({
     service_slug: serviceSlug,
     report_type: reportType as "incorrect_fee" | "outdated_requirement" | "broken_link" | "other",
     message,
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
 
   if (!result.ok && result.reason === "not_configured") {
     return Response.json(
-      { error: "Correction reporting will be enabled when the new GovGuide database is connected." },
+      { error: "Correction submission is not enabled yet. The public site works without a database." },
       { status: 503 },
     );
   }
