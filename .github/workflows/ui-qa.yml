@@ -33,7 +33,7 @@ jobs:
       - run: npm run build:next
       - run: npx playwright install --with-deps chromium
       - name: Run admin editing regression first
-        run: npx playwright test tests/admin-editing.spec.ts --project=desktop --workers=1
+        run: npx playwright test tests/admin-editing.spec.ts tests/admin-github.spec.ts --project=desktop --workers=1
       - run: npm run test:e2e
       - name: Upload Playwright report on failure
         if: failure()
