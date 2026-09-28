@@ -777,3 +777,7 @@ h3 { font-size: 1.22rem; }
 @media (max-width: 800px) {
   .home-updates-grid { grid-template-columns: 1fr; }
 }
+
+.error-state > p { color: var(--muted); font-size: 1.02rem; }
+.error-state > div { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-top: 24px; }
+.error-state .button, .error-state .text-link { margin-top: 0; }
