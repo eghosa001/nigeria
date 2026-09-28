@@ -4,6 +4,14 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 7 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - "lib/data.ts"
+      - "lib/offices.ts"
+      - "data/source-monitors.json"
+      - "scripts/check-sources.mjs"
+      - "scripts/check-links.mjs"
 
 jobs:
   check:
