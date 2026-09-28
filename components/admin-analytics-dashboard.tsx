@@ -144,6 +144,10 @@ export function AdminAnalyticsDashboard() {
         <button type="button" onClick={logout}>Lock analytics</button>
       </div>
 
+      <p className="analytics-clean-note">
+        Clean traffic reporting starts {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}. Earlier automated QA traffic is excluded.
+      </p>
+
       <div className="analytics-metric-grid">
         <div><span>Users</span><strong>{number(data.summary.activeUsers)}</strong><small>Distinct active visitors</small></div>
         <div><span>Visits</span><strong>{number(data.summary.sessions)}</strong><small>Sessions</small></div>

@@ -2335,3 +2335,13 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   cursor: pointer;
 }
 .directory-load-more small { color: var(--muted); }
+
+.analytics-clean-note {
+  margin: 14px 0 4px;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--mint);
+  color: var(--green-dark);
+  font-size: .84rem;
+}

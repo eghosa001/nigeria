@@ -1,10 +1,12 @@
 import { Buffer } from "node:buffer";
+import { ANALYTICS_CLEAN_START, analyticsStartDate } from "@/lib/analytics-safety";
 
 export type AnalyticsRange = "7d" | "30d" | "90d";
 
 export type AnalyticsDashboardData = {
   range: AnalyticsRange;
   generatedAt: string;
+  dataStartDate: string;
   summary: {
     activeUsers: number;
     sessions: number;
@@ -164,7 +166,14 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
   if (cached && cached.expiresAt > Date.now()) return cached.data;
 
   const days = daysForRange(range);
-  const dateRanges = [{ startDate: (days - 1) + "daysAgo", endDate: "today" }];
+  const today = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Africa/Lagos",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+  const dataStartDate = analyticsStartDate(days, today);
+  const dateRanges = [{ startDate: dataStartDate, endDate: "today" }];
 
   const [summaryReport, dailyReport, countryReport, pageReport, referrerReport, realtimeActiveUsers] = await Promise.all([
     runReport({
@@ -213,6 +222,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
   const data: AnalyticsDashboardData = {
     range,
     generatedAt: new Date().toISOString(),
+    dataStartDate,
     summary: {
       activeUsers: Number(totalValues[0]?.value ?? 0),
       sessions: Number(totalValues[1]?.value ?? 0),
