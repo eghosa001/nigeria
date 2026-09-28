@@ -2,6 +2,7 @@ import Link from "next/link";
 import { GuideAssistant } from "@/components/guide-assistant";
 import { ServiceSearch } from "@/components/search";
 import { ServiceCard } from "@/components/service-card";
+import { govGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { categorySlug } from "@/lib/category";
 import { agencies, categories, publicServices } from "@/lib/data";
 
@@ -78,6 +79,32 @@ export default function HomePage() {
           </div>
           <div className="service-grid">
             {publicServices.slice(0, 9).map((service) => <ServiceCard key={service.slug} service={service} />)}
+          </div>
+        </div>
+      </section>
+
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Verified updates</span>
+              <h2>What changed recently</h2>
+            </div>
+            <Link href="/updates">View all updates →</Link>
+          </div>
+          <div className="home-updates-grid">
+            {govGuideUpdates.slice(0, 3).map((update) => (
+              <article className="home-update-card" key={update.id}>
+                <div>
+                  <span>{updateTypeLabel(update.type)}</span>
+                  <time dateTime={update.date}>{update.date}</time>
+                </div>
+                <h3>{update.title}</h3>
+                <p>{update.summary}</p>
+                <Link href={"/updates#" + update.id}>View verified update →</Link>
+              </article>
+            ))}
           </div>
         </div>
       </section>
