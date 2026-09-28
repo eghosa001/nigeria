@@ -4,10 +4,21 @@ import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
+  const staticPages = [
+    ["", "weekly", 1],
+    ["/services", "weekly", 0.9],
+    ["/assistant", "weekly", 0.7],
+    ["/offices", "monthly", 0.7],
+    ["/about", "monthly", 0.5],
+    ["/editorial-policy", "monthly", 0.4],
+    ["/corrections", "monthly", 0.4],
+    ["/privacy", "yearly", 0.2],
+    ["/terms", "yearly", 0.2],
+    ["/contact", "monthly", 0.3],
+  ] as const;
+
   return [
-    { url: base, changeFrequency: "weekly", priority: 1 },
-    { url: base + "/services", changeFrequency: "weekly", priority: 0.9 },
-    { url: base + "/about", changeFrequency: "monthly", priority: 0.5 },
+    ...staticPages.map(([path, changeFrequency, priority]) => ({ url: base + path, changeFrequency, priority })),
     ...publicServices.map((service) => ({
       url: base + "/services/" + service.slug,
       lastModified: service.lastVerified,

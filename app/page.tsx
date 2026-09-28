@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GuideAssistant } from "@/components/guide-assistant";
 import { ServiceSearch } from "@/components/search";
 import { ServiceCard } from "@/components/service-card";
 import { agencies, categories, publicServices } from "@/lib/data";
@@ -23,7 +24,7 @@ export default function HomePage() {
           </div>
           <aside className="trust-panel">
             <span className="trust-kicker">Verification snapshot</span>
-            <strong>{verifiedCount} starter guides verified</strong>
+            <strong>{verifiedCount} guides verified</strong>
             <p>Each published fact keeps its source and last-check date.</p>
             <div className="trust-row"><span>✓</span> Official sources first</div>
             <div className="trust-row"><span>✓</span> Conflicts shown, not hidden</div>
@@ -45,14 +46,14 @@ export default function HomePage() {
             {categories.map((category) => {
               const count = publicServices.filter((service) => service.category === category.name).length;
               return (
-                <div className="category-card" key={category.name}>
+                <Link className="category-card" key={category.name} href={"/services?category=" + encodeURIComponent(category.name)}>
                   <span className="category-icon" aria-hidden="true">{category.name.slice(0, 1)}</span>
                   <div>
                     <h3>{category.name}</h3>
                     <p>{category.description}</p>
-                    <small>{count ? count + " live guide" + (count > 1 ? "s" : "") : "Coming next"}</small>
+                    <small>{count} live guide{count === 1 ? "" : "s"}</small>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -60,25 +61,33 @@ export default function HomePage() {
       </section>
 
       <section className="section section-muted">
+        <div className="container narrow-wide">
+          <GuideAssistant services={publicServices} />
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <div className="section-heading">
             <div>
               <span className="eyebrow">High-demand starters</span>
               <h2>Verified guides you can use now</h2>
             </div>
+            <Link href="/services">Search all {publicServices.length} guides →</Link>
           </div>
           <div className="service-grid">
-            {publicServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
+            {publicServices.slice(0, 9).map((service) => <ServiceCard key={service.slug} service={service} />)}
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-muted">
         <div className="container agency-strip">
           <div>
             <span className="eyebrow">Source transparency</span>
             <h2>Built around official agencies</h2>
             <p>Every service connects back to the agency responsible for it.</p>
+            <Link className="text-link" href="/offices">Find official offices and centres →</Link>
           </div>
           <div className="agency-list">
             {agencies.map((agency) => (

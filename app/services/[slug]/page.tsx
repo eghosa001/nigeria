@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AdSlot } from "@/components/ad-slot";
+import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CorrectionReport } from "@/components/correction-report";
+import { JsonLd } from "@/components/json-ld";
+import { ShareWatch } from "@/components/share-watch";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
+import { getSiteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
   return publicServices.map((service) => ({ slug: service.slug }));
@@ -16,6 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: service.shortTitle,
     description: service.summary,
+    alternates: { canonical: "/services/" + service.slug },
+    openGraph: {
+      title: service.title,
+      description: service.summary,
+      type: "article",
+      url: "/services/" + service.slug,
+    },
   };
 }
 
@@ -26,35 +38,67 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   const agency = getAgency(service.agencySlug);
   const related = service.related.map(getPublicService).filter(Boolean);
+  const base = getSiteUrl();
+  const pageUrl = base + "/services/" + service.slug;
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: service.shortTitle },
+  ];
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: base },
+      { "@type": "ListItem", position: 2, name: "Services", item: base + "/services" },
+      { "@type": "ListItem", position: 3, name: service.shortTitle, item: pageUrl },
+    ],
+  };
+
+  const webpageLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: service.title,
+    description: service.summary,
+    url: pageUrl,
+    dateModified: service.lastVerified,
+    isPartOf: { "@type": "WebSite", name: "GovGuide Nigeria", url: base },
+    about: agency ? { "@type": "Organization", name: agency.name, url: agency.website } : undefined,
+  };
 
   return (
     <>
+      <JsonLd data={[breadcrumbLd, webpageLd]} />
       <section className="guide-hero">
-        <div className="container guide-hero-grid">
-          <div>
-            <Link className="back-link" href="/services">← All services</Link>
-            <div className="guide-meta">
-              <span>{service.category}</span>
-              <span>•</span>
-              <span>{agency?.shortName}</span>
+        <div className="container">
+          <Breadcrumbs items={breadcrumbs} />
+          <div className="guide-hero-grid">
+            <div>
+              <div className="guide-meta">
+                <span>{service.category}</span>
+                <span>•</span>
+                <span>{agency?.shortName}</span>
+              </div>
+              <h1>{service.title}</h1>
+              <p>{service.summary}</p>
+              <div className="guide-badges">
+                <StatusBadge status={service.status} />
+                <span className="checked-date">Checked {service.lastVerified}</span>
+              </div>
+              <ShareWatch slug={service.slug} title={service.title} />
             </div>
-            <h1>{service.title}</h1>
-            <p>{service.summary}</p>
-            <div className="guide-badges">
-              <StatusBadge status={service.status} />
-              <span className="checked-date">Checked {service.lastVerified}</span>
-            </div>
+            <aside className="fee-card">
+              <span>Official fee status</span>
+              <strong>{service.feeLabel}</strong>
+              {service.feeNote ? <p>{service.feeNote}</p> : null}
+              {service.officialPortal ? (
+                <a className="button" href={service.officialPortal} target="_blank" rel="noreferrer">
+                  Open official portal ↗
+                </a>
+              ) : null}
+            </aside>
           </div>
-          <aside className="fee-card">
-            <span>Official fee status</span>
-            <strong>{service.feeLabel}</strong>
-            {service.feeNote ? <p>{service.feeNote}</p> : null}
-            {service.officialPortal ? (
-              <a className="button" href={service.officialPortal} target="_blank" rel="noreferrer">
-                Open official portal ↗
-              </a>
-            ) : null}
-          </aside>
         </div>
       </section>
 
@@ -91,11 +135,33 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </section>
             ) : null}
 
+            <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GUIDE} />
+
             <section>
               <h2>Important notes</h2>
-              <ul>
-                {service.notes.map((note) => <li key={note}>{note}</li>)}
-              </ul>
+              <ul>{service.notes.map((note) => <li key={note}>{note}</li>)}</ul>
+            </section>
+
+            <section>
+              <h2>Common questions</h2>
+              <div className="faq-list">
+                <details>
+                  <summary>How much does this service cost?</summary>
+                  <p><strong>{service.feeLabel}</strong>{service.feeNote ? " — " + service.feeNote : "."}</p>
+                </details>
+                <details>
+                  <summary>Where should I complete the application?</summary>
+                  <p>{service.officialPortal ? "Use the official portal linked on this page. GovGuide does not take government payments." : "Use the responsible agency's official website and contact channel."}</p>
+                </details>
+                <details>
+                  <summary>How current is this guide?</summary>
+                  <p>Its official sources were last checked on {service.lastVerified}. The source links are listed below so you can inspect them directly.</p>
+                </details>
+                <details>
+                  <summary>Is GovGuide an official government website?</summary>
+                  <p>No. GovGuide is an independent information service that links back to the responsible government agency.</p>
+                </details>
+              </div>
             </section>
 
             <section>
@@ -103,13 +169,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <div className="source-list">
                 {service.sources.map((source) => (
                   <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
-                    <span>
-                      <strong>{source.label}</strong>
-                      <small>{source.agency}</small>
-                    </span>
-                    <span>
-                      Checked {source.lastChecked} ↗
-                    </span>
+                    <span><strong>{source.label}</strong><small>{source.agency}</small></span>
+                    <span>Checked {source.lastChecked} ↗</span>
                   </a>
                 ))}
               </div>
@@ -123,6 +184,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span>Responsible agency</span>
               <strong>{agency?.name}</strong>
               {agency ? <Link href={"/agencies/" + agency.slug}>View agency guides →</Link> : null}
+            </div>
+            <div className="sidebar-card">
+              <span>Need an office?</span>
+              <strong>Use live official location directories.</strong>
+              <Link href="/offices">Find offices and centres →</Link>
             </div>
             <div className="sidebar-card safety-card">
               <span>Payment safety</span>
