@@ -50,7 +50,7 @@ test("admin editor creates a review proposal and does not claim to publish", asy
     "https://github.com/eghosa001/nigeria/pull/999",
   );
   await expect(page.getByText(/Production has not changed yet/i)).toBeVisible();
-  await expect(page.getByText(/published/i)).not.toContainText("published successfully");
+  await expect(page.getByText(/published successfully/i)).toHaveCount(0);
 });
 
 test("authenticated admin editor has no serious accessibility violations", async ({ page }) => {
