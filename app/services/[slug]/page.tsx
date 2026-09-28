@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
-import { getAgency, getService, services } from "@/lib/data";
+import { getAgency, getPublicService, publicServices } from "@/lib/data";
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return publicServices.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const service = getService(slug);
+  const service = getPublicService(slug);
   if (!service) return {};
   return {
     title: service.shortTitle,
@@ -20,11 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const service = getService(slug);
+  const service = getPublicService(slug);
   if (!service) notFound();
 
   const agency = getAgency(service.agencySlug);
-  const related = service.related.map(getService).filter(Boolean);
+  const related = service.related.map(getPublicService).filter(Boolean);
 
   return (
     <>
