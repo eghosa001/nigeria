@@ -37,6 +37,7 @@ async function github<T>(path: string, init: RequestInit = {}): Promise<T> {
     const safe = await response.text().catch(() => "");
     throw new Error("GitHub request failed (" + response.status + ")" + (safe ? ": " + safe.slice(0, 300) : ""));
   }
+  if (response.status === 204) return undefined as T;
   return await response.json() as T;
 }
 
@@ -84,16 +85,28 @@ export async function createServiceProposal(
 
   const updated = [...currentCatalog];
   updated[index] = next;
-  const branch = branchName(slug);
+  let branch = branchName(slug);
   let branchCreated = false;
 
   try {
-    await github("/git/refs", {
-      method: "POST",
-      body: JSON.stringify({ ref: "refs/heads/" + branch, sha: mainSha }),
-      headers: { "Content-Type": "application/json" },
-    });
-    branchCreated = true;
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      try {
+        await github("/git/refs", {
+          method: "POST",
+          body: JSON.stringify({ ref: "refs/heads/" + branch, sha: mainSha }),
+          headers: { "Content-Type": "application/json" },
+        });
+        branchCreated = true;
+        break;
+      } catch (error) {
+        if (attempt === 0 && error instanceof Error && /GitHub request failed \(422\)/.test(error.message)) {
+          branch = branchName(slug);
+          continue;
+        }
+        throw error;
+      }
+    }
+    if (!branchCreated) throw new Error("GitHub could not create a unique review branch.");
 
     await github("/contents/" + CONTENT_PATH, {
       method: "PUT",
