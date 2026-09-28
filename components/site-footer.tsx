@@ -15,6 +15,7 @@ export function SiteFooter() {
           <strong>Explore</strong>
           <Link href="/services">Service directory</Link>
           <Link href="/fees">Government fee directory</Link>
+          <Link href="/updates">Verified service updates</Link>
           <Link href="/offices">Official office finders</Link>
           <Link href="/assistant">Guide assistant</Link>
           <Link href="/saved">Saved guides</Link>
