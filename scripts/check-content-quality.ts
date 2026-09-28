@@ -35,6 +35,20 @@ for (const service of publicServices) {
     errors.push(prefix + "must contain at least three actionable process steps");
   }
 
+  const processText = service.steps.join(" ");
+  const hasStartAction = /open|sign in|register|create|visit|attend|contact|present|enter|complete|check|confirm|obtain|buy|pay|submit|upload|select|request|collect|download|apply|enrol|verify|generate/i.test(service.steps[0] ?? "");
+  if (!hasStartAction) {
+    errors.push(prefix + "first step must tell the viewer exactly how to start");
+  }
+
+  if (service.steps.some((step) => step.trim().length < 35)) {
+    errors.push(prefix + "contains a step that is too brief to guide a viewer safely");
+  }
+
+  if (!/submit|pay|payment|attend|visit|capture|collect|download|print|receive|verify|approval|complete|upload|book|confirm|register|issue|check|track|generate|obtain|request/i.test(processText)) {
+    errors.push(prefix + "steps do not explain a meaningful submission, verification, payment, collection or completion action");
+  }
+
   if (service.notes.length < 1) {
     errors.push(prefix + "must include at least one important note, limitation or safety point");
   }
