@@ -71,7 +71,7 @@ for (const service of publicServices) {
 
   const vague = [...service.requirements, ...service.steps].filter((value) => vaguePattern.test(value));
   if (vague.length) {
-    warnings.push(prefix + "contains wording that should be made more concrete: " + vague[0]);
+    errors.push(prefix + "contains generic process wording that must be made concrete: " + vague[0]);
   }
 }
 
