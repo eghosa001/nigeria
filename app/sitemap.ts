@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/fees", "weekly", 0.9],
     ["/updates", "weekly", 0.9],
     ["/assistant", "weekly", 0.7],
-    ["/saved", "weekly", 0.5],
     ["/offices", "monthly", 0.7],
     ["/about", "monthly", 0.5],
     ["/editorial-policy", "monthly", 0.4],
