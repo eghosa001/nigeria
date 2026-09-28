@@ -381,11 +381,11 @@ test("service links distinguish exact guidance from transaction portal", async (
 });
 
 
-test("admin login rate limit blocks repeated bad passwords", async ({ request }) => {
+test("admin login rate limit blocks repeated bad passwords", async ({ request }, testInfo) => {
   const headers = {
     "Content-Type": "application/json",
     "Sec-Fetch-Site": "same-origin",
-    "User-Agent": "mynigeriaguide-rate-limit-test",
+    "User-Agent": `mynigeriaguide-rate-limit-test-${testInfo.project.name}-${testInfo.retry}`,
   };
   for (let attempt = 0; attempt < 8; attempt++) {
     const response = await request.post("/api/admin/access", {
