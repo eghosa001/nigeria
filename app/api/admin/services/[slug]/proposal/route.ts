@@ -6,6 +6,9 @@ import { validateServiceRecord } from "@/lib/service-records";
 const MAX_BODY_BYTES = 180_000;
 
 function sameOrigin(request: Request) {
+  const fetchSite = request.headers.get("sec-fetch-site");
+  if (fetchSite) return fetchSite === "same-origin";
+
   const origin = request.headers.get("origin");
   if (!origin) return false;
 
@@ -21,11 +24,8 @@ function sameOrigin(request: Request) {
   const host = forwardedHost || request.headers.get("host") || target.host;
   const forwardedProto = request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim();
   const protocol = forwardedProto || target.protocol.replace(":", "");
-  const fetchSite = request.headers.get("sec-fetch-site");
 
-  if (source.host !== host || source.protocol !== protocol + ":") return false;
-  if (fetchSite && fetchSite !== "same-origin") return false;
-  return true;
+  return source.host === host && source.protocol === protocol + ":";
 }
 
 export async function POST(request: Request, { params }: { params: Promise<{ slug: string }> }) {
