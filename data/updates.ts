@@ -12,6 +12,34 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "neco-2026-ssce-internal-fee", date: "2026-01-01", type: "fee", agency: "NECO",
+    title: "NECO sets 2026 SSCE Internal registration at ₦30,000",
+    summary: "NECO's official 2026 guidelines set the SSCE Internal registration fee at ₦30,000 per candidate, inclusive of the four-figure mathematical table and waterproof certificate jacket/folder. Late registration adds ₦5,000; stamp duty, service and Remita charges also apply.",
+    sourceLabel: "NECO 2026 SSCE Internal Registration Guidelines", sourceUrl: "https://neco.gov.ng/2026%20GUIDELINES.pdf",
+    affectedServices: ["neco-2026-ssce-internal-registration"],
+  },
+  {
+    id: "nimc-fee-page-conflict", date: "2026-09-28", type: "clarification", agency: "NIMC",
+    title: "NIMC official pages currently show conflicting modification fees",
+    summary: "NIMC's dedicated Fees page lists ₦2,000 per ordinary updatable field and ₦28,574 for date-of-birth modification, while an older adult-modification page still states ₦15,000 for date of birth. MyNigeriaGuide follows the dedicated Fees page and flags the conflict instead of hiding it.",
+    sourceLabel: "NIMC current Fees page", sourceUrl: "https://nimc.gov.ng/fees",
+    affectedServices: ["nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification"],
+  },
+  {
+    id: "waec-confirmation-fee-clarification", date: "2026-09-28", type: "clarification", agency: "WAEC",
+    title: "WAEC current FAQ confirms ₦19,500 local and ₦39,000 overseas result confirmation",
+    summary: "WAEC's current FAQ repeatedly lists ₦19,500 per result for institutions within Nigeria and ₦39,000 for overseas institutions. A separate WAEC requirements page displays ₦39,000,000 for international confirmation; the repeated FAQ figure is used while the official-page inconsistency is clearly flagged.",
+    sourceLabel: "WAEC Nigeria FAQ", sourceUrl: "https://www.waecnigeria.org/faq",
+    affectedServices: ["waec-confirm-result-nigeria", "waec-result-confirmation-overseas"],
+  },
+  {
+    id: "police-character-certificate-current-fee", date: "2026-09-28", type: "clarification", agency: "Nigeria Police / POSSAP",
+    title: "Current POSSAP invoices show ₦30,000 for Police Character Certificates",
+    summary: "Current official POSSAP invoice pages show a ₦30,000 charge for Police Character Certificate requests, including diaspora examples. This is recorded as a current observed official charge, not presented as a newly announced fee increase.",
+    sourceLabel: "Police Specialized Services Automation Project (POSSAP)", sourceUrl: "https://possap.gov.ng/",
+    affectedServices: [],
+  },
+  {
     id: "jamb-2026-fee-clarification",
     date: "2026-03-02",
     type: "clarification",

@@ -149,5 +149,24 @@
       "Admission",
       "Results"
     ]
+  },
+  {
+    "name": "NECO 2026 SSCE Internal fee",
+    "url": "https://neco.gov.ng/2026%20GUIDELINES.pdf",
+    "expectedAll": [
+      "30,000",
+      "Late Registration",
+      "5,000"
+    ],
+    "strict": false
+  },
+  {
+    "name": "Police Character Certificate fee",
+    "url": "https://possap.gov.ng/p/request-invoice/PCC0000161175",
+    "expectedAll": [
+      "POLICE CHARACTER CERTIFICATE",
+      "30,000"
+    ],
+    "strict": false
   }
 ]
