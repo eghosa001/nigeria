@@ -665,7 +665,7 @@ const published: Service[] = [
     slug:"fct-file-individual-tax-return", title:"How to file an individual tax return in the FCT", shortTitle:"FCT individual tax return",
     summary:"FCT-IRS publishes an electronic filing route through its taxpayer self-service portal.",
     category:"State services", agencySlug:"fctirs", feeLabel:"Filing service is provided through FCT-IRS",
-    status:"verified", officialPortal:"https://fcttaxportal.fctirs.gov.ng/selfservice/account/signin",
+    status:"verified", officialPortal:"https://taxporta.fctirs.gov.ng/login",
     requirements:["FCT-IRS taxpayer account/TIN details","Information needed for the applicable assessment year","Accurate personal and income details requested by the return form"],
     steps:["Open the FCT-IRS self-service portal.","Sign in or register for self-service access.","Open Tax Returns and choose File Returns.","Create a new return for the relevant assessment year.","Complete the required return sections and submit through the portal."],
     notes:["FCT-IRS states that electronic filing is the approved method for individual annual returns.","Use the live portal for the current filing window and any current deadline notice."],
