@@ -17,9 +17,9 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npm run typecheck
       - run: npm run check:content
-      - run: npm run build
+      - run: npm run build:next
       - run: npm run check:cloudflare
-      - run: npm run build:vinext
+      - run: npm run build
       - name: Prevent accidental KV dependency
         run: |
           node --input-type=module <<'NODE'
