@@ -20,6 +20,7 @@ test("GitHub proposal retries a colliding branch name", async () => {
   process.env.MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN = "unit-test-token";
 
   let branchAttempts = 0;
+  let uploadedCatalogText = "";
   const calls: Array<{ url: string; method: string }> = [];
 
   globalThis.fetch = async (input, init = {}) => {
@@ -43,6 +44,8 @@ test("GitHub proposal retries a colliding branch name", async () => {
       return json({ ref: "refs/heads/admin/test" }, 201);
     }
     if (url.endsWith("/contents/data/services.json") && method === "PUT") {
+      const payload = JSON.parse(String(init.body)) as { content: string };
+      uploadedCatalogText = Buffer.from(payload.content, "base64").toString("utf8");
       return json({ content: { sha: "updated-sha" } }, 200);
     }
     if (url.endsWith("/pulls") && method === "POST") {
@@ -58,6 +61,12 @@ test("GitHub proposal retries a colliding branch name", async () => {
     expect(branchAttempts).toBe(2);
     expect(result.pullRequestNumber).toBe(123);
     expect(calls.some((call) => call.method === "PUT" && call.url.endsWith("/contents/data/services.json"))).toBe(true);
+
+    const originalRaw = JSON.parse(catalogText) as Array<Record<string, unknown>>;
+    const uploadedRaw = JSON.parse(uploadedCatalogText) as Array<Record<string, unknown>>;
+    expect(uploadedRaw[0].summary).toBe(next.summary);
+    expect(Object.keys(uploadedRaw[0])).toEqual(Object.keys(originalRaw[0]));
+    expect(JSON.stringify(uploadedRaw.slice(1))).toBe(JSON.stringify(originalRaw.slice(1)));
   } finally {
     globalThis.fetch = originalFetch;
     if (originalToken == null) delete process.env.MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN;

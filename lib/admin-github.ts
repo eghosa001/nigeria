@@ -1,6 +1,6 @@
 import { Buffer } from "node:buffer";
 import type { Service } from "@/lib/types";
-import { serializeServiceCatalog, validateServiceCatalog, validateServiceRecord } from "@/lib/service-records";
+import { validateServiceCatalog, validateServiceRecord } from "@/lib/service-records";
 
 const OWNER = "eghosa001";
 const REPO = "nigeria";
@@ -47,6 +47,33 @@ function branchName(slug: string) {
   return "admin/" + slug + "-" + stamp + "-" + suffix;
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function preserveJsonKeyOrder(current: unknown, next: unknown): unknown {
+  if (Array.isArray(next)) {
+    const currentArray = Array.isArray(current) ? current : [];
+    return next.map((item, index) => preserveJsonKeyOrder(currentArray[index], item));
+  }
+  if (isRecord(next)) {
+    const currentRecord = isRecord(current) ? current : {};
+    const result: Record<string, unknown> = {};
+    for (const key of Object.keys(currentRecord)) {
+      if (Object.prototype.hasOwnProperty.call(next, key)) {
+        result[key] = preserveJsonKeyOrder(currentRecord[key], next[key]);
+      }
+    }
+    for (const key of Object.keys(next)) {
+      if (!Object.prototype.hasOwnProperty.call(result, key)) {
+        result[key] = preserveJsonKeyOrder(undefined, next[key]);
+      }
+    }
+    return result;
+  }
+  return next;
+}
+
 export function changedServiceFields(current: Service, next: Service) {
   const fields: (keyof Service)[] = [
     "title", "shortTitle", "summary", "category", "agencySlug", "feeLabel", "feeNote",
@@ -75,7 +102,9 @@ export async function createServiceProposal(
   }
 
   const decoded = Buffer.from(file.content.replace(/\n/g, ""), "base64").toString("utf8");
-  const currentCatalog = validateServiceCatalog(JSON.parse(decoded));
+  const rawCatalog = JSON.parse(decoded) as unknown;
+  const currentCatalog = validateServiceCatalog(rawCatalog);
+  if (!Array.isArray(rawCatalog)) throw new Error("Service catalog is not an array.");
   const index = currentCatalog.findIndex((service) => service.slug === slug);
   if (index < 0) throw new Error("The service no longer exists on main.");
 
@@ -83,8 +112,9 @@ export async function createServiceProposal(
   const changes = changedServiceFields(current, next);
   if (changes.length === 0) throw new Error("No guide changes were detected.");
 
-  const updated = [...currentCatalog];
-  updated[index] = next;
+  const updated = [...rawCatalog];
+  updated[index] = preserveJsonKeyOrder(rawCatalog[index], next);
+  validateServiceCatalog(updated);
   let branch = branchName(slug);
   let branchCreated = false;
 
@@ -112,7 +142,7 @@ export async function createServiceProposal(
       method: "PUT",
       body: JSON.stringify({
         message: "content: propose update to " + slug,
-        content: Buffer.from(serializeServiceCatalog(updated), "utf8").toString("base64"),
+        content: Buffer.from(JSON.stringify(updated, null, 2) + "\n", "utf8").toString("base64"),
         sha: contentSha,
         branch,
       }),
