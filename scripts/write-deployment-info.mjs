@@ -9,8 +9,8 @@ function git(...args) {
   }
 }
 
-const commit = process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || process.env.COMMIT_SHA || git("rev-parse", "HEAD") || "unknown";
-const branch = process.env.CF_PAGES_BRANCH || process.env.GITHUB_REF_NAME || git("rev-parse", "--abbrev-ref", "HEAD") || "unknown";
+const commit = process.env.WORKERS_CI_COMMIT_SHA || process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || process.env.COMMIT_SHA || git("rev-parse", "HEAD") || "unknown";
+const branch = process.env.WORKERS_CI_BRANCH || process.env.CF_PAGES_BRANCH || process.env.GITHUB_REF_NAME || git("rev-parse", "--abbrev-ref", "HEAD") || "unknown";
 const payload = { commit, shortCommit: commit === "unknown" ? "unknown" : commit.slice(0, 12), branch, builtAt: new Date().toISOString() };
 
 await mkdir("public", { recursive: true });
