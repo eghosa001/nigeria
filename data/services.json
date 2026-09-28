@@ -10,12 +10,13 @@
     "feeNote": "For applications in Nigeria: 32-page 5-year passport ₦100,000; 64-page 10-year passport ₦200,000. Bank charges are excluded.",
     "timeline": "NIS's 2025 Service Level Agreement lists standard-passport reissue at 21 days after successful enrolment.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "NIN slip",
       "Current passport booklet",
       "Valid email address for NIS communication",
-      "For a simple expiry renewal, keep the NIN and current passport ready; if the request is actually a reissue for loss, damage or data change, use the dedicated guide because the supporting evidence changes with the reason"
+      "For a simple expiry renewal, keep the NIN and current passport ready; if the request is actually a reissue for loss, damage or data change, use the dedicated guide because the supporting evidence changes with the reasonforchange"
     ],
     "steps": [
       "Sign in to the NIS passport application dashboard and choose Apply for Renewal/Reissue.",
@@ -44,26 +45,25 @@
         "label": "NIS passport fee review",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/nigeria-immigration-service-announces-upward-review-of-nigerian-standard-passport-fees/",
-        "published": "2025-08-28",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-08-28"
       },
       {
         "label": "NIS Service Level Agreement 2025",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2025/10/SERVICE_LEVEL_AGREEMENT_2025_.pdf",
-        "published": "2025",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025"
       }
     ],
-    "related": [
-      "first-nigerian-passport",
-      "passport-change-of-data"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Passport renewal",
       "How to renew a Nigerian passport",
       "Immigration"
+    ],
+    "related": [
+      "first-nigerian-passport",
+      "passport-change-of-data"
     ]
   },
   {
@@ -77,6 +77,7 @@
     "feeNote": "For applications in Nigeria: 32-page 5-year passport ₦100,000; 64-page 10-year passport ₦200,000. Bank charges are excluded.",
     "timeline": "NIS's 2025 Service Level Agreement lists fresh standard-passport applications at 42 days after successful enrolment.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "NIN slip",
@@ -112,25 +113,24 @@
         "label": "NIS passport fee review",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/nigeria-immigration-service-announces-upward-review-of-nigerian-standard-passport-fees/",
-        "published": "2025-08-28",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-08-28"
       },
       {
         "label": "NIS Service Level Agreement 2025",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2025/10/SERVICE_LEVEL_AGREEMENT_2025_.pdf",
-        "published": "2025",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025"
       }
     ],
-    "related": [
-      "passport-renewal"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "First Nigerian passport",
       "How to apply for your first Nigerian passport",
       "Immigration"
+    ],
+    "related": [
+      "passport-renewal"
     ]
   },
   {
@@ -143,6 +143,7 @@
     "feeLabel": "Administrative charge applies",
     "feeNote": "NIS instructs applicants to complete the online application and pay the non-refundable administrative charge shown in the official process.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "Current passport data page",
@@ -166,14 +167,13 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "related": [
-      "passport-renewal"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Passport change of data",
       "How to change data on a Nigerian passport",
       "Immigration"
+    ],
+    "related": [
+      "passport-renewal"
     ]
   },
   {
@@ -186,6 +186,7 @@
     "feeLabel": "FREE",
     "feeNote": "NIMC's current NIN and fees pages state that enrolment and obtaining a NIN are free.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nimc.gov.ng/NIN",
     "requirements": [
       "Eligibility as a Nigerian citizen or legal resident",
@@ -215,7 +216,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NIN enrolment",
       "How to enrol for a NIN",
@@ -233,6 +233,7 @@
     "feeLabel": "₦28,574",
     "feeNote": "Fee shown follows NIMC's dedicated current Fees page. An older modification detail page still shows the former ₦15,000 amount, so confirm the amount generated by the official payment route before completing payment.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservicemodification.nimc.gov.ng/",
     "requirements": [
       "Existing NIN",
@@ -272,7 +273,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NIN date-of-birth correction",
       "How to change your date of birth on NIN",
@@ -290,6 +290,7 @@
     "feeLabel": "From ₦7,000",
     "feeNote": "FRSC lists Class A at ₦7,000 for 3 years or ₦11,000 for 5 years; other classes at ₦15,000 for 3 years or ₦21,000 for 5 years. Payment-channel charges may apply.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng",
     "requirements": [
       "Applicant must be at least 18 years old",
@@ -315,15 +316,14 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "related": [
-      "renew-drivers-licence",
-      "replace-lost-drivers-licence"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "New driver's licence",
       "How to get a new Nigerian driver's licence",
       "Driving"
+    ],
+    "related": [
+      "renew-drivers-licence",
+      "replace-lost-drivers-licence"
     ]
   },
   {
@@ -336,6 +336,7 @@
     "feeLabel": "From ₦7,000",
     "feeNote": "FRSC lists Class A at ₦7,000 for 3 years or ₦11,000 for 5 years; other classes at ₦15,000 for 3 years or ₦21,000 for 5 years.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng",
     "requirements": [
       "Existing driver's licence number",
@@ -361,15 +362,14 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "related": [
-      "new-drivers-licence",
-      "replace-lost-drivers-licence"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Driver's licence renewal",
       "How to renew a Nigerian driver's licence",
       "Driving"
+    ],
+    "related": [
+      "new-drivers-licence",
+      "replace-lost-drivers-licence"
     ]
   },
   {
@@ -381,6 +381,7 @@
     "agencySlug": "frsc",
     "feeLabel": "Licence fee depends on class/validity",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng",
     "requirements": [
       "Existing driver's licence number",
@@ -411,14 +412,13 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "related": [
-      "renew-drivers-licence"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Replace lost driver's licence",
       "How to replace a lost or stolen Nigerian driver's licence",
       "Driving"
+    ],
+    "related": [
+      "renew-drivers-licence"
     ]
   },
   {
@@ -430,6 +430,7 @@
     "agencySlug": "frsc",
     "feeLabel": "Depends on licence class",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng",
     "requirements": [
       "Existing driver's licence number",
@@ -458,7 +459,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Upgrade driver's licence class",
       "How to add or remove classes on a Nigerian driver's licence",
@@ -475,6 +475,7 @@
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "Proposed business name",
@@ -506,7 +507,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
@@ -524,6 +524,7 @@
     "feeLabel": "Depends on company/share structure",
     "timeline": "CAC publishes a 24-working-hour service timeline for company registration once complete documents are submitted and any query is resolved.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "Proposed company name",
@@ -554,7 +555,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
@@ -571,6 +571,7 @@
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "Reserved proposed name",
@@ -603,7 +604,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Incorporated trustee registration",
       "How to register an incorporated trustee with CAC",
@@ -621,6 +621,7 @@
     "feeLabel": "See current CAC fee schedule",
     "timeline": "CAC currently lists 4 working hours for availability/name search and 6 working hours for name substitution.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "A proposed entity name",
@@ -657,7 +658,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "CAC name reservation",
       "How CAC name reservation works",
@@ -675,6 +675,7 @@
     "feeLabel": "Fee varies by entity and filing",
     "timeline": "CAC currently lists 24 working hours for company annual returns.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "CAC entity name/registration number and access to the entity record in CRP",
@@ -702,7 +703,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "CAC annual returns",
       "How to file CAC annual returns",
@@ -719,6 +719,7 @@
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "11-digit NIN",
@@ -744,19 +745,18 @@
         "label": "2026 UTME Training Manual",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
-    "related": [
-      "jamb-2026-utme-registration",
-      "jamb-retrieve-profile-code"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "JAMB profile code",
       "How to generate a JAMB profile code",
       "Education"
+    ],
+    "related": [
+      "jamb-2026-utme-registration",
+      "jamb-retrieve-profile-code"
     ]
   },
   {
@@ -769,6 +769,7 @@
     "feeLabel": "₦7,200 UTME only / ₦8,700 with mock",
     "feeNote": "JAMB's 2026 training manual states UTME only ₦7,200, UTME with mock ₦8,700, and Direct Entry e-PIN ₦5,700.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "NIN",
@@ -789,8 +790,8 @@
         "label": "2026 UTME Training Manual",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "JAMB FAQ",
@@ -799,14 +800,13 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "related": [
-      "jamb-profile-code"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "2026 JAMB registration",
       "How much is JAMB UTME registration in 2026?",
       "Education"
+    ],
+    "related": [
+      "jamb-profile-code"
     ]
   },
   {
@@ -818,6 +818,7 @@
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "The same unique mobile number originally used for the JAMB profile",
@@ -841,14 +842,13 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "related": [
-      "jamb-profile-code"
-    ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Retrieve JAMB profile code",
       "How to retrieve a lost JAMB profile code",
       "Education"
+    ],
+    "related": [
+      "jamb-profile-code"
     ]
   },
   {
@@ -860,6 +860,7 @@
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "The unique mobile number linked to the candidate profile",
@@ -883,7 +884,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Retrieve lost JAMB e-PIN",
       "How to retrieve a lost JAMB UTME e-PIN",
@@ -900,6 +900,7 @@
     "agencySlug": "jamb",
     "feeLabel": "No separate fee stated on CAPS overview",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://jamb.gov.ng/caps",
     "requirements": [
       "Access to the candidate's JAMB e-Facility account",
@@ -929,7 +930,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "JAMB CAPS",
       "How JAMB CAPS works for admission",
@@ -946,6 +946,7 @@
     "agencySlug": "waec",
     "feeLabel": "Requires a valid WAEC result-checker e-PIN",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.waecdirect.org/",
     "requirements": [
       "WAEC examination number",
@@ -972,7 +973,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Check WAEC result",
       "How to check a WAEC result online",
@@ -989,6 +989,7 @@
     "agencySlug": "waec",
     "feeLabel": "Platform charges may apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.waec.org/account/register",
     "requirements": [
       "Examination number, examination year/type and candidate biodata used to match the WAEC record",
@@ -1012,7 +1013,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "WAEC digital certificate",
       "How to access a WAEC digital certificate",
@@ -1029,6 +1029,7 @@
     "agencySlug": "waec",
     "feeLabel": "Collection process depends on candidate type",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.waecnigeria.org",
     "requirements": [
       "Candidate full name, WAEC examination number, examination year, examination type and school/centre used to identify the certificate record",
@@ -1053,7 +1054,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Collect WAEC certificate",
       "How to collect a WAEC certificate",
@@ -1071,6 +1071,7 @@
     "feeLabel": "₦19,500 administrative charge",
     "feeNote": "WAEC's current FAQ/requirements page lists ₦19,500 per result/recipient for institutions within Nigeria, plus other required items/courier costs.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.waecnigeria.org/article/requirements-confirmation-result-school-candidates",
     "requirements": [
       "Copy of certificate or online result printout",
@@ -1101,7 +1102,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "WAEC result confirmation in Nigeria",
       "How to confirm a WAEC result for an institution in Nigeria",
@@ -1118,6 +1118,7 @@
     "agencySlug": "waec",
     "feeLabel": "Fee depends on requested service",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.waecnigeria.org",
     "requirements": [
       "Candidate name, examination number, year, examination type and school/centre details used to identify the WAEC record",
@@ -1139,7 +1140,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Lost WAEC certificate",
       "What to do if a WAEC certificate is lost or damaged",
@@ -1158,6 +1158,7 @@
     "feeNote": "NECO's 2026 guidelines list ₦30,000 per candidate. Stamp duty, service and Remita charges apply. Late registration attracts an additional ₦5,000 per candidate.",
     "timeline": "Normal school registration closed 25 May 2026; late registration closed 29 May 2026. NECO stated there would be no extension.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://ssceinternal.neco.gov.ng/",
     "requirements": [
       "Registration through the candidate's school/approved SSCE Internal centre",
@@ -1185,11 +1186,10 @@
         "label": "2026 SSCE Internal Registration Guidelines",
         "agency": "National Examinations Council",
         "url": "https://neco.gov.ng/2026%20GUIDELINES.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NECO 2026 SSCE Internal",
       "NECO 2026 SSCE Internal registration fees and deadlines",
@@ -1206,6 +1206,7 @@
     "agencySlug": "neco",
     "feeLabel": "Requires a NECO result token",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://results.neco.gov.ng/",
     "requirements": [
       "Examination year",
@@ -1231,7 +1232,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Check NECO result",
       "How to check a NECO result online",
@@ -1248,6 +1248,7 @@
     "agencySlug": "neco",
     "feeLabel": "Current token price shown in NECO purchase flow",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://results.neco.gov.ng/",
     "requirements": [
       "An account on the official NECO Results Portal, or the ability to create one",
@@ -1271,7 +1272,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NECO result token",
       "How to purchase a NECO result token",
@@ -1288,6 +1288,7 @@
     "agencySlug": "neco",
     "feeLabel": "Payment token required",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://everify.neco.gov.ng/index.php",
     "requirements": [
       "NECO e-Verify account",
@@ -1312,7 +1313,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NECO e-Verify",
       "How to verify or confirm a NECO result with e-Verify",
@@ -1329,6 +1329,7 @@
     "agencySlug": "neco",
     "feeLabel": "Depends on NECO service",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://payments.neco.gov.ng/",
     "requirements": [
       "Correct NECO payment item code",
@@ -1352,7 +1353,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NECO service payment",
       "How to make an official NECO service payment",
@@ -1369,6 +1369,7 @@
     "agencySlug": "nysc",
     "feeLabel": "Portal payment applies to optional/portal services as shown by NYSC",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "Functional personal email address",
@@ -1401,7 +1402,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC registration",
       "How NYSC registration works for locally trained graduates",
@@ -1418,6 +1418,7 @@
     "agencySlug": "nysc",
     "feeLabel": "Use official NYSC portal for any applicable payment",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "Original first degree or HND certificate",
@@ -1450,7 +1451,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC foreign-trained registration",
       "How NYSC registration works for foreign-trained Nigerian graduates",
@@ -1467,6 +1467,7 @@
     "agencySlug": "nysc",
     "feeLabel": "Use the active NYSC portal process",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "A previous NYSC deployment or call-up in which the prospective corps member did not report to orientation camp",
@@ -1497,7 +1498,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC revalidation",
       "When and how to use NYSC revalidation",
@@ -1514,6 +1514,7 @@
     "agencySlug": "nysc",
     "feeLabel": "Use the active NYSC portal process",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "A previous NYSC mobilisation/service record for a corps member who absconded from service",
@@ -1550,7 +1551,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC remobilization",
       "When and how to use NYSC remobilization",
@@ -1567,6 +1567,7 @@
     "agencySlug": "nysc",
     "feeLabel": "Use the official NYSC portal process",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "NYSC registration/state-code/profile details used to identify the serving corps member",
@@ -1591,7 +1592,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC relocation",
       "How NYSC relocation works",
@@ -1608,6 +1608,7 @@
     "agencySlug": "nysc",
     "feeLabel": "NYSC does not reprint lost/burnt certificates",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.nysc.gov.ng/certcollectcns.html",
     "requirements": [
       "Police extract/report",
@@ -1633,7 +1634,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Lost NYSC discharge certificate",
       "What to do if an NYSC discharge certificate is lost",
@@ -1650,6 +1650,7 @@
     "agencySlug": "nysc",
     "feeLabel": "NYSC does not reprint lost/burnt certificates",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.nysc.gov.ng/certcollectexp.html",
     "requirements": [
       "Letter of notification/request",
@@ -1676,7 +1677,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Lost NYSC exemption certificate",
       "What to do if an NYSC exemption certificate is lost",
@@ -1693,6 +1693,7 @@
     "agencySlug": "npc",
     "feeLabel": "USD 80 convenience fee shown by NPC self-service",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://attestation.nationalpopulation.gov.ng/",
     "requirements": [
       "Age 18 or above",
@@ -1725,7 +1726,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NPC birth attestation",
       "How to apply for NPC birth attestation as an adult",
@@ -1742,6 +1742,7 @@
     "agencySlug": "npc",
     "feeLabel": "Check current NPC self-service portal",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.nationalpopulation.gov.ng",
     "requirements": [
       "Child aged 0 to 17",
@@ -1771,7 +1772,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NPC child birth registration",
       "How NPC birth registration works for a child",
@@ -1788,6 +1788,7 @@
     "agencySlug": "npc",
     "feeLabel": "Check current NPC self-service portal",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.reissuance.nationalpopulation.gov.ng/",
     "requirements": [
       "NPC self-service account",
@@ -1824,7 +1825,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Digital birth certificate reissuance",
       "How to get a digital version of an old NPC birth certificate",
@@ -1841,6 +1841,7 @@
     "agencySlug": "npc",
     "feeLabel": "Reprint payment required",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.certificatereprint.nationalpopulation.gov.ng/",
     "requirements": [
       "NPC self-service account",
@@ -1875,7 +1876,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NPC certificate reprint",
       "How to reprint an NPC birth certificate",
@@ -1892,6 +1892,7 @@
     "agencySlug": "nrs",
     "feeLabel": "No registration fee stated on NRS self-service page",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservice.nrs.gov.ng/registration",
     "requirements": [
       "NIN for the Individuals registration category",
@@ -1915,7 +1916,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NRS individual taxpayer registration",
       "How to register as an individual taxpayer with NRS",
@@ -1932,6 +1932,7 @@
     "agencySlug": "nrs",
     "feeLabel": "No registration fee stated on NRS self-service page",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservice.nrs.gov.ng/registration",
     "requirements": [
       "A business/entity incorporated with CAC under CAMA",
@@ -1955,7 +1956,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NRS corporate taxpayer registration",
       "How to register a corporate taxpayer with NRS",
@@ -1972,6 +1972,7 @@
     "agencySlug": "nrs",
     "feeLabel": "Depends on tax position/obligations",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservice.nrs.gov.ng/",
     "requirements": [
       "Registered NRS taxpayer account",
@@ -1994,7 +1995,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NRS tax clearance",
       "Where to access tax clearance on the NRS portal",
@@ -2012,6 +2012,7 @@
     "feeLabel": "See current CAC fee schedule",
     "timeline": "CAC currently lists Status Report as an instant service.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "A registered CAC entity",
@@ -2043,7 +2044,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "CAC status report",
       "How to obtain a CAC status report",
@@ -2061,6 +2061,7 @@
     "feeLabel": "See current CAC fee schedule",
     "timeline": "CAC currently lists Certified True Copy of Certificates under a 12-working-hour post-registration timeline.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "CAC entity name/registration number used to locate the record",
@@ -2088,7 +2089,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "CAC Certified True Copy",
       "How to request a CAC Certified True Copy",
@@ -2106,6 +2106,7 @@
     "feeLabel": "₦5,700 e-PIN",
     "feeNote": "JAMB's 2026 UTME training manual lists the Direct Entry e-PIN at ₦5,700.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "NIN",
@@ -2132,8 +2133,8 @@
         "label": "2026 UTME Training Manual",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "JAMB FAQ",
@@ -2142,7 +2143,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "2026 JAMB Direct Entry",
       "How much is JAMB Direct Entry registration in 2026?",
@@ -2159,6 +2159,7 @@
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "The same mobile number tied to the JAMB profile",
@@ -2182,7 +2183,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Reset JAMB password",
       "How to reset a JAMB profile password",
@@ -2199,6 +2199,7 @@
     "agencySlug": "waec",
     "feeLabel": "A fee may apply if the error came from the candidate",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.waecnigeria.org",
     "requirements": [
       "Original certificate",
@@ -2221,7 +2222,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Correct WAEC certificate error",
       "How to request correction of an error on a WAEC certificate",
@@ -2239,6 +2239,7 @@
     "feeLabel": "₦39,000 per result/recipient",
     "feeNote": "WAEC's FAQ/help page lists ₦39,000 for overseas institutions. Courier charges are separate and depend on destination and courier.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.waecnigeria.org/faq",
     "requirements": [
       "Copy of certificate or online result printout",
@@ -2271,7 +2272,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "WAEC overseas result confirmation",
       "How to confirm a WAEC result for an overseas institution",
@@ -2288,6 +2288,7 @@
     "agencySlug": "neco",
     "feeLabel": "Verification payment/token required",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://everify.neco.gov.ng/index.php",
     "requirements": [
       "Institution e-Verify account",
@@ -2310,7 +2311,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NECO institution verification",
       "How institutions verify NECO results with e-Verify",
@@ -2327,6 +2327,7 @@
     "agencySlug": "nysc",
     "feeLabel": "No separate fee stated for the list check",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "Locally trained graduate details, including the institution or matriculation information requested by NYSC",
@@ -2363,7 +2364,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC senate list",
       "How to check the NYSC senate list",
@@ -2380,6 +2380,7 @@
     "agencySlug": "nysc",
     "feeLabel": "Portal printing/subscription rules apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "Successful NYSC registration/mobilisation",
@@ -2407,7 +2408,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC call-up letter",
       "How to access an NYSC call-up letter",
@@ -2424,6 +2424,7 @@
     "agencySlug": "nysc",
     "feeLabel": "No general certificate fee stated on NYSC guidance",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.nysc.gov.ng/certcollectexp.html",
     "requirements": [
       "NYSC registration/classification as exempted",
@@ -2446,7 +2447,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC exemption certificate",
       "How NYSC exemption certificates are issued and collected",
@@ -2463,6 +2463,7 @@
     "agencySlug": "npc",
     "feeLabel": "No extra status-check fee stated",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://attestation.nationalpopulation.gov.ng/",
     "requirements": [
       "A birth-attestation application that has already reached the payment-reference stage",
@@ -2493,7 +2494,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NPC attestation status",
       "How to check NPC birth-attestation status",
@@ -2510,6 +2510,7 @@
     "agencySlug": "nrs",
     "feeLabel": "Tax liability depends on the taxpayer",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservice.nrs.gov.ng/",
     "requirements": [
       "Registered NRS taxpayer account",
@@ -2533,7 +2534,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NRS self tax filing",
       "Where to file tax through NRS self-service",
@@ -2550,6 +2550,7 @@
     "agencySlug": "nrs",
     "feeLabel": "Amount depends on the taxpayer's liability/assessment",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservice.nrs.gov.ng/",
     "requirements": [
       "Registered NRS taxpayer account",
@@ -2573,7 +2574,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NRS tax payment",
       "Where to make a federal tax payment through NRS",
@@ -2590,6 +2590,7 @@
     "agencySlug": "nrs",
     "feeLabel": "No tracking fee stated on the portal overview",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://selfservice.nrs.gov.ng/",
     "requirements": [
       "Registered NRS taxpayer account",
@@ -2613,7 +2614,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NRS refund tracking",
       "How to track a tax refund on the NRS portal",
@@ -2630,6 +2630,7 @@
     "agencySlug": "nis",
     "feeLabel": "Official application/administrative charges apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "Birth certificate from NPC or High Court declaration of age",
@@ -2657,7 +2658,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Passport marital-status change",
       "How to change Nigerian passport data after a change in marital status",
@@ -2674,6 +2674,7 @@
     "agencySlug": "nis",
     "feeLabel": "Non-refundable administrative charge applies",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "Birth certificate from NPC or High Court declaration of age",
@@ -2701,7 +2702,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Passport name change",
       "How to add, delete, replace or rearrange names on a Nigerian passport",
@@ -2720,6 +2720,7 @@
     "feeNote": "NIS's 2025 Service Level Agreement lists the official-passport cost at ₦40,000.",
     "timeline": "NIS's 2025 Service Level Agreement lists 7 days after successful enrolment.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "Letter of application/introduction from the applicant's organisation",
@@ -2751,11 +2752,10 @@
         "label": "NIS Service Level Agreement 2025",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2025/10/SERVICE_LEVEL_AGREEMENT_2025_.pdf",
-        "published": "2025",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Nigerian official passport",
       "Who is eligible for a Nigerian official passport?",
@@ -2772,6 +2772,7 @@
     "agencySlug": "nis",
     "feeLabel": "Diaspora fees/process depend on the relevant mission and passport route",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passportintl.immigration.gov.ng",
     "requirements": [
       "Passport application documents for the relevant fresh/renewal/change-of-data route",
@@ -2795,7 +2796,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Passport application abroad",
       "How Nigerians abroad apply for or renew a Nigerian passport",
@@ -2812,6 +2812,7 @@
     "agencySlug": "fctirs",
     "feeLabel": "Filing service is provided through FCT-IRS",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://taxporta.fctirs.gov.ng/login",
     "requirements": [
       "FCT-IRS self-service account with TIN and password",
@@ -2843,7 +2844,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "FCT individual tax return",
       "How to file an individual tax return in the FCT",
@@ -2860,6 +2860,7 @@
     "agencySlug": "fctirs",
     "feeLabel": "Verification service listed by FCT-IRS",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://fctirs.gov.ng/",
     "requirements": [
       "The TCC reference number printed on the certificate",
@@ -2890,7 +2891,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Verify FCT tax clearance",
       "How to verify an FCT tax clearance certificate",
@@ -2907,6 +2907,7 @@
     "agencySlug": "eirs",
     "feeLabel": "Use official EIRS/JRB channels",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://eras.eirs.gov.ng/",
     "requirements": [
       "For an individual, the government identity details used by the Tax ID route; for a business, the CAC/business registration details used to identify the taxpayer",
@@ -2927,8 +2928,8 @@
         "label": "EIRS Tax ID registration notice",
         "agency": "Edo State Internal Revenue Service",
         "url": "https://eirs.gov.ng/tax-reforms-edo-irs-decentralizes-tin-registration-introduces-ussd-code-to-ease-tax-compliance/",
-        "published": "2025-12-04",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-12-04"
       },
       {
         "label": "Edo Revenue Administration System",
@@ -2937,7 +2938,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Edo Tax ID access",
       "How to register or verify a Tax ID from Edo State",
@@ -2954,6 +2954,7 @@
     "agencySlug": "airs",
     "feeLabel": "Use the official AIRS enumeration process",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://tax.services.an.gov.ng/create-asin",
     "requirements": [
       "Choose the correct ASIN applicant type: Individual, Informal/Enterprise or Corporate",
@@ -2978,7 +2979,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Anambra ASIN registration",
       "How to get an Anambra State Identity Number (ASIN)",
@@ -2995,6 +2995,7 @@
     "agencySlug": "lagos-revenue",
     "feeLabel": "Create through the official Lagos Revenue Portal",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://revenue.lagosstate.gov.ng/Login",
     "requirements": [
       "Name details",
@@ -3018,7 +3019,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Lagos Payer ID",
       "How to create a Lagos State Payer ID",
@@ -3035,6 +3035,7 @@
     "agencySlug": "nis",
     "feeLabel": "Replacement passport fees apply",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
       "Birth certificate issued by NPC or a qualifying declaration of age",
@@ -3058,8 +3059,8 @@
         "label": "NIS replacement of lost passport",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/how-to-apply-for-the-replacement-of-lost-passport/",
-        "published": "2025-07-28",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-07-28"
       },
       {
         "label": "NIS Passports",
@@ -3068,7 +3069,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "Lost Nigerian passport",
       "What to do if your Nigerian passport is lost",
@@ -3086,6 +3086,7 @@
     "feeLabel": "₦600 loss/damage/theft; ₦1,000 per modified field",
     "feeNote": "Fee shown follows NIMC's dedicated current Fees page. The older re-issuance detail page still displays ₦500 figures.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nimc.gov.ng/nin/nin-slip-reissuance",
     "requirements": [
       "For loss/theft: recent police report, court affidavit and photo ID",
@@ -3117,7 +3118,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NIN slip reissue",
       "How to reissue a lost, damaged or stolen NIN slip",
@@ -3135,6 +3135,7 @@
     "feeLabel": "₦2,000 per updatable field",
     "feeNote": "NIMC's current Fees page lists ₦2,000 per ordinary updatable field; date of birth is separately priced.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nimc.gov.ng/self-service-modifications/",
     "requirements": [
       "Court affidavit",
@@ -3171,7 +3172,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NIN name modification",
       "How to change your name on NIN",
@@ -3188,6 +3188,7 @@
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nimc.gov.ng/self-service-modifications/",
     "requirements": [
       "Police report for the lost/damaged-phone-number modification case",
@@ -3225,7 +3226,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NIN phone-number modification",
       "How to change your phone number on NIN",
@@ -3242,6 +3242,7 @@
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nimc.gov.ng/self-service-modifications/",
     "requirements": [
       "Existing NIN and access to the NIMC self-service modification account",
@@ -3278,7 +3279,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NIN address modification",
       "How to change your address on NIN",
@@ -3295,6 +3295,7 @@
     "agencySlug": "jamb",
     "feeLabel": "₦1,000 + ₦100 CBT service charge",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://efacility.jamb.gov.ng/account/",
     "requirements": [
       "JAMB e-Facility account/candidate details",
@@ -3323,7 +3324,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "JAMB result slip",
       "How to print a JAMB result slip",
@@ -3340,6 +3340,7 @@
     "agencySlug": "jamb",
     "feeLabel": "₦1,000 + ₦100 CBT service charge",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://efacility.jamb.gov.ng/account/",
     "requirements": [
       "JAMB e-Facility account/candidate details",
@@ -3376,7 +3377,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "JAMB admission letter",
       "How to print a JAMB admission letter",
@@ -3393,6 +3393,7 @@
     "agencySlug": "waec",
     "feeLabel": "No complaint fee stated on WAEC's notice",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://waecinternational.org/complaints",
     "requirements": [
       "The candidate and examination information needed to identify the specific held/withheld result",
@@ -3415,7 +3416,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "WAEC withheld-result complaint",
       "How to lodge a complaint about a withheld or held WAEC result",
@@ -3432,6 +3432,7 @@
     "agencySlug": "nysc",
     "feeLabel": "WAEC verification PIN required",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "WAEC verification PIN",
@@ -3462,7 +3463,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC DOB correction",
       "How NYSC date-of-birth correction works",
@@ -3479,6 +3479,7 @@
     "agencySlug": "nysc",
     "feeLabel": "No correction fee stated on NYSC guidance",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
       "Access to the NYSC dashboard",
@@ -3509,7 +3510,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NYSC course correction",
       "How to correct your course of study on NYSC",
@@ -3526,6 +3526,7 @@
     "agencySlug": "npc",
     "feeLabel": "Current modification charge is shown in the NPC self-service flow",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.nationalpopulation.gov.ng/FAQs",
     "requirements": [
       "NPC self-service account",
@@ -3549,7 +3550,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NPC record modification",
       "How to modify an NPC birth or attestation record",
@@ -3568,6 +3568,7 @@
     "feeNote": "CBN has stated that BVN registration within Nigeria is free. Do not pay an unofficial enrolment fee.",
     "timeline": "NIBSS says a BVN can be obtained within 72 hours after enrolment once the enrolment data has synchronised with the central database.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "requirements": [
       "Applicant must be at least 18 years old under the CBN amendment effective 1 May 2026",
       "A valid means of identification accepted by the enrolling bank or authorised channel",
@@ -3597,8 +3598,8 @@
         "label": "CBN Reforms and Initiatives",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/AboutCBN/Reforms.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "NIBSS BVN enrolment completion guidance",
@@ -3625,8 +3626,7 @@
     "related": [
       "bvn-retrieval",
       "non-resident-bvn"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "bvn-retrieval",
@@ -3638,6 +3638,7 @@
     "feeLabel": "₦20",
     "feeNote": "NIBSS states that the *565*0# BVN retrieval service costs ₦20.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "requirements": [
       "A BVN that has already been enrolled",
       "The same phone number registered to that BVN",
@@ -3679,8 +3680,7 @@
     "related": [
       "bvn-enrolment",
       "non-resident-bvn"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "non-resident-bvn",
@@ -3692,6 +3692,7 @@
     "feeLabel": "About US$50 processing cost",
     "feeNote": "CBN says the approximate US$50 amount is a remote biometric and due-diligence processing cost for NRBVN, not a fee for the BVN itself.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nibss-plc.com.ng/nrbvn",
     "requirements": [
       "A Nigerian applicant residing outside Nigeria",
@@ -3715,22 +3716,22 @@
         "label": "CBN NRBVN launch guidance",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/Out/2025/CCD/CBN%20UPDATE%20MAY%202025%20EDITION.pdf",
-        "published": "2025-05",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-05"
       },
       {
         "label": "CBN clarification of NRBVN processing cost",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/Out/2025/CCD/CBN%20UPDATE%20JULY%202025.pdf",
-        "published": "2025-07",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-07"
       },
       {
         "label": "CBN Reforms and Initiatives",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/AboutCBN/Reforms.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -3744,8 +3745,7 @@
       "bvn-enrolment",
       "bvn-retrieval",
       "passport-application-abroad"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "ecowas-travel-certificate",
@@ -3758,6 +3758,7 @@
     "feeNote": "NIS's published service-level schedule lists fresh at ₦2,600 and renewal at ₦1,300, excluding bank charges.",
     "timeline": "NIS lists 24 hours for the ECOWAS Travel Certificate service once a complete application is submitted through the official route.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://portal.immigration.gov.ng/pages",
     "requirements": [
       "NIN slip",
@@ -3789,8 +3790,8 @@
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -3804,8 +3805,7 @@
       "first-nigerian-passport",
       "passport-renewal",
       "yellow-card"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "yellow-card",
@@ -3817,6 +3817,7 @@
     "feeLabel": "Pay through the official Yellow Card portal",
     "feeNote": "The Federal Ministry of Health directs travellers to register and pay online before visiting a designated Port Health Services office; use the amount shown by the official portal.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://yellowcard.health.gov.ng",
     "requirements": [
       "A traveller who needs Yellow Fever vaccination proof for entry into or departure from Nigeria",
@@ -3860,8 +3861,7 @@
       "ecowas-travel-certificate",
       "passport-renewal",
       "nigeria-landing-exit-card"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-landing-exit-card",
@@ -3873,6 +3873,7 @@
     "feeLabel": "FREE",
     "timeline": "The official portal says processing is instant after valid details are submitted and the traveller meets the requirements.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://lecard.immigration.gov.ng/",
     "requirements": [
       "A foreign traveller entering or departing Nigeria who is covered by the NIS portal",
@@ -3918,8 +3919,7 @@
     "related": [
       "yellow-card",
       "passport-application-abroad"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "police-character-certificate",
@@ -3931,6 +3931,7 @@
     "feeLabel": "₦30,000 shown on recent POSSAP invoices",
     "feeNote": "Recent official POSSAP Police Character Certificate and diaspora PCC invoices show ₦30,000. Confirm the amount generated for your own request before paying.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://possap.gov.ng/",
     "requirements": [
       "A POSSAP account; new individual users provide a recognised identification type and number and upload the identification file",
@@ -3967,15 +3968,15 @@
         "label": "Recent POSSAP Police Character Certificate invoice",
         "agency": "Nigeria Police Force",
         "url": "https://possap.gov.ng/p/request-invoice/PCC0000161175",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "NPF Police Character Certificate validation guidance",
         "agency": "Nigeria Police Force",
         "url": "https://www.npf.gov.ng/news/details/528",
-        "published": "2024-12-02",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2024-12-02"
       }
     ],
     "searchTerms": [
@@ -3987,7 +3988,6 @@
       "criminal record certificate",
       "police certificate"
     ],
-    "lastVerified": "2026-09-28",
     "related": []
   },
   {
@@ -4000,6 +4000,7 @@
     "feeLabel": "PVC status check is FREE",
     "feeNote": "INEC's current portal does not state a fee for checking an existing voter's PVC status or collection centre.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://cvr.inecnigeria.org/",
     "requirements": [
       "An existing INEC voter registration record",
@@ -4034,7 +4035,6 @@
       "PVC collection centre",
       "voter registration status"
     ],
-    "lastVerified": "2026-09-28",
     "related": []
   },
   {
@@ -4048,6 +4048,7 @@
     "feeNote": "CBN rules define which BVN fields may be changed, but the regulatory framework does not publish one universal customer-facing modification fee. Confirm any charge with the institution processing the update before paying.",
     "timeline": "CBN's BVN-issue clarification states that BVN issues should be resolved within 5 working days after all required documents are submitted, although complex verification can take longer.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "requirements": [
       "Existing BVN and access to the bank or authorised BVN participant handling the record",
       "Valid identification showing the correct personal details",
@@ -4072,22 +4073,22 @@
         "label": "CBN Revised Regulatory Framework for BVN Operations",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/Out/2021/CCD/REVISED%20REGULATORY%20FRAMEWORK%20FOR%20BANK%20VERIFICATION%20NUMBER%20%28BVN%29%20OPERATIONS%20AND%20WATCH-LIST%20FOR%20THE%20NIGERIAN%20BANKING%20INDUSTRY%20121021%20FINAL.pdf",
-        "published": "2021",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2021"
       },
       {
         "label": "CBN clarification on BVN record corrections",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/out/2016/bpsd/bvn%20issues%20circular.pdf",
-        "published": "2016-02-24",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2016-02-24"
       },
       {
         "label": "CBN Reforms and Initiatives",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/AboutCBN/Reforms.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4104,8 +4105,7 @@
       "bvn-enrolment",
       "bvn-retrieval",
       "non-resident-bvn"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-evisa-application",
@@ -4118,6 +4118,7 @@
     "feeNote": "NIS visa fees depend on the visa category and applicable reciprocity. Use the amount generated by the official NIS visa portal for the selected applicant and class.",
     "timeline": "NIS states that eligible e-Visa applications are generally processed within 48 hours when there is no local objection, but incomplete documentation can delay approval.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.immigration.gov.ng/",
     "requirements": [
       "A passport with at least 6 months validity and the blank pages required for the selected visa class",
@@ -4148,15 +4149,15 @@
         "label": "NIS e-Visa application guidance",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/?echo_kb_faq=how-do-i-apply-for-an-e-visa",
-        "published": "2025-03-30",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-03-30"
       },
       {
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4172,8 +4173,7 @@
       "nigeria-business-visa",
       "nigeria-visiting-visa",
       "nigeria-transit-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-tourism-visa",
@@ -4186,6 +4186,7 @@
     "feeNote": "NIS directs applicants to pay the visa fee generated for the F5A application; the amount can vary by nationality and reciprocity.",
     "timeline": "NIS lists 48 hours for the F5A e-Visa where there is no local objection.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.immigration.gov.ng/",
     "requirements": [
       "Valid passport with at least 6 months validity",
@@ -4218,8 +4219,8 @@
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4233,8 +4234,7 @@
       "nigeria-evisa-application",
       "nigeria-visiting-visa",
       "yellow-card"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-business-visa",
@@ -4247,6 +4247,7 @@
     "feeNote": "The official NIS visa portal calculates the applicable F4A visa fee for the applicant and nationality.",
     "timeline": "NIS lists 48 hours for the F4A e-Visa where there is no local objection.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.immigration.gov.ng/",
     "requirements": [
       "Valid passport with at least 6 months validity",
@@ -4279,8 +4280,8 @@
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4294,8 +4295,7 @@
       "nigeria-evisa-application",
       "nigeria-tourism-visa",
       "nigeria-temporary-work-permit"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-visiting-visa",
@@ -4308,6 +4308,7 @@
     "feeNote": "The applicable F6A fee is generated through the official NIS visa application route and can vary by nationality.",
     "timeline": "NIS lists 48 hours for the F6A e-Visa where there is no local objection.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.immigration.gov.ng/",
     "requirements": [
       "Invitation letter from the family member or friend in Nigeria accepting immigration responsibility",
@@ -4340,8 +4341,8 @@
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4354,8 +4355,7 @@
     "related": [
       "nigeria-evisa-application",
       "nigeria-tourism-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-transit-visa",
@@ -4368,6 +4368,7 @@
     "feeNote": "Use the transit-visa fee generated by the official NIS portal for the traveller's nationality and application.",
     "timeline": "NIS lists 48 hours for the F3B e-Visa where there is no local objection.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.immigration.gov.ng/",
     "requirements": [
       "Valid passport with at least 6 months validity",
@@ -4401,8 +4402,8 @@
         "label": "NIS Service Level Agreement 2026",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4415,8 +4416,7 @@
     "related": [
       "nigeria-evisa-application",
       "nigeria-tourism-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "nigeria-temporary-work-permit",
@@ -4428,6 +4428,7 @@
     "feeLabel": "Varies by nationality and application",
     "feeNote": "The host and applicant should use only the fee and payment route generated by NIS for the approved Temporary Work Permit visa application.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.immigration.gov.ng/",
     "requirements": [
       "Visa Authority Letter or other NIS pre-approval obtained for the temporary work assignment",
@@ -4471,8 +4472,7 @@
     "related": [
       "nigeria-business-visa",
       "nigeria-evisa-application"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "uk-standard-visitor-visa",
@@ -4485,6 +4485,7 @@
     "feeNote": "UKVI lists £135 for a Standard Visitor visa of up to 6 months. Long-term and special visitor categories have different fees.",
     "timeline": "UKVI says a Standard Visitor visa decision is usually made within 3 weeks after the online application, identity check and supporting documents are completed.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
     "requirements": [
       "A valid Nigerian passport or travel document that remains valid for the whole UK stay",
@@ -4512,22 +4513,22 @@
         "label": "GOV.UK Standard Visitor visa application guidance",
         "agency": "UK Visas and Immigration",
         "url": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "GOV.UK visa application centres",
         "agency": "UK Visas and Immigration",
         "url": "https://www.gov.uk/find-a-visa-application-centre",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "UK visa requirements for international carriers",
         "agency": "UK Visas and Immigration",
         "url": "https://www.gov.uk/government/publications/uk-visa-requirements-list-for-carriers/uk-visa-requirements-for-international-carriers",
-        "published": "2026-08-03",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026-08-03"
       }
     ],
     "searchTerms": [
@@ -4541,8 +4542,7 @@
       "canada-visitor-visa",
       "us-b1-b2-visitor-visa",
       "france-schengen-short-stay-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "us-b1-b2-visitor-visa",
@@ -4553,7 +4553,9 @@
     "agencySlug": "usdos",
     "feeLabel": "US$185 non-refundable application fee",
     "feeNote": "The U.S. Department of State lists US$185 for non-petition-based visitor visas such as B1/B2. A separate issuance fee may apply only where the reciprocity schedule requires one.",
+    "timeline": "The U.S. Department of State does not publish one fixed total B1/B2 processing time: interview wait times vary by post and some cases require additional administrative processing.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://ceac.state.gov/GenNIV/",
     "requirements": [
       "A passport valid for travel to the United States, normally at least 6 months beyond the intended stay unless a country-specific exemption applies",
@@ -4563,7 +4565,6 @@
       "Evidence supporting the temporary purpose of the trip, the applicant's ability to pay for the visit and the intention to leave the United States after the authorised stay",
       "Access to the current U.S. visa appointment instructions for the applicant's country of nationality or residence"
     ],
-    "timeline": "The U.S. Department of State does not publish one fixed total B1/B2 processing time: interview wait times vary by post and some cases require additional administrative processing.",
     "steps": [
       "Complete the DS-160 online in the Consular Electronic Application Center, answer every question accurately, submit it electronically and save/print the barcode confirmation page.",
       "Follow the current U.S. visa appointment instructions for Nigerian applicants, pay the MRV fee through the authorised route and schedule the required nonimmigrant visa interview at the post designated by the current system.",
@@ -4581,36 +4582,36 @@
         "label": "U.S. Visitor Visa B1/B2 guidance",
         "agency": "U.S. Department of State",
         "url": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "U.S. DS-160 online nonimmigrant visa application",
         "agency": "U.S. Department of State",
         "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/forms/ds-160-online-nonimmigrant-visa-application.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "U.S. visa service fees",
         "agency": "U.S. Department of State",
         "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "U.S. nonimmigrant visa interview location guidance",
         "agency": "U.S. Department of State",
         "url": "https://travel.state.gov/content/travel/en/News/visas-news/adjudicating-niv-applicants-in-their-country-of-residence.html",
-        "published": "2026-07-15",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026-07-15"
       },
       {
         "label": "U.S. visa services realignment in Africa",
         "agency": "U.S. Department of State",
         "url": "https://travel.state.gov/content/travel/en/News/visas-news/realignment-of-us-visa-services-in-africa-to-regional-hubs.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4624,8 +4625,7 @@
       "uk-standard-visitor-visa",
       "canada-visitor-visa",
       "france-schengen-short-stay-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "canada-visitor-visa",
@@ -4636,7 +4636,9 @@
     "agencySlug": "ircc",
     "feeLabel": "CAD 100 visa fee + CAD 85 biometrics if required",
     "feeNote": "IRCC lists CAD 100 for an individual visitor visa and CAD 85 for individual biometrics where biometrics are required.",
+    "timeline": "IRCC publishes a live processing-time tool rather than one fixed Canada visitor-visa timeline; the estimate varies by where the application is processed and does not include time taken to give biometrics.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/portal-application-process.html",
     "requirements": [
       "A digital copy of a valid passport or travel document; IRCC currently advises that the passport should be valid for at least 6 months from the planned travel date",
@@ -4647,7 +4649,6 @@
       "For a minor child where applicable, the travel-authorisation letter and any additional child-travel documents required by IRCC for whether the child travels alone, with one parent or with another adult",
       "Biometrics instruction letter after submission if IRCC asks the applicant to provide fingerprints and a photograph"
     ],
-    "timeline": "IRCC publishes a live processing-time tool rather than one fixed Canada visitor-visa timeline; the estimate varies by where the application is processed and does not include time taken to give biometrics.",
     "steps": [
       "Use IRCC's visitor-visa guidance to select the travel purpose and gather the personalised supporting documents before starting the online application.",
       "Create or sign in to the correct IRCC visitor-visa account/portal, complete the online form and upload the passport, financial, employment, invitation and travel-purpose evidence that applies to the case.",
@@ -4665,22 +4666,22 @@
         "label": "Canada visitor visa application guide",
         "agency": "Immigration, Refugees and Citizenship Canada",
         "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "IRCC Portal visitor visa application process",
         "agency": "Immigration, Refugees and Citizenship Canada",
         "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/portal-application-process.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Canada visa application centres",
         "agency": "Immigration, Refugees and Citizenship Canada",
         "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/contact-ircc/offices/find-visa-application-centre.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4694,8 +4695,7 @@
       "uk-standard-visitor-visa",
       "us-b1-b2-visitor-visa",
       "australia-visitor-visa-600"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "france-schengen-short-stay-visa",
@@ -4708,6 +4708,7 @@
     "feeNote": "The European Commission lists €90 for adults and €45 for children aged 6–12. An authorised visa-centre service charge can be additional.",
     "timeline": "The normal Schengen decision period is 15 days and can extend to 45 days. France-Visas Nigeria advises short-stay applicants to allow more than 1 month between lodging the file and the planned departure.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://france-visas.gouv.fr/en/web/france-visas/online-application",
     "requirements": [
       "A valid passport issued within the previous 10 years, with at least two blank pages and normally valid for at least 3 months after the planned departure from the Schengen area",
@@ -4734,29 +4735,29 @@
         "label": "France-Visas tourist stay under 3 months",
         "agency": "France-Visas",
         "url": "https://france-visas.gouv.fr/en/sejour-touristique-de-moins-de-3-mois",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "France-Visas Nigeria submission guidance",
         "agency": "France-Visas",
         "url": "https://www.france-visas.gouv.fr/web/france-visas/nigeria",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "France-Visas online application",
         "agency": "France-Visas",
         "url": "https://france-visas.gouv.fr/en/web/france-visas/online-application",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "European Commission Schengen visa application rules",
         "agency": "European Commission",
         "url": "https://home-affairs.ec.europa.eu/policies/schengen/visa-policy/applying-schengen-visa_en",
-        "published": "2025-12-02",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2025-12-02"
       }
     ],
     "searchTerms": [
@@ -4770,8 +4771,7 @@
       "uk-standard-visitor-visa",
       "us-b1-b2-visitor-visa",
       "canada-visitor-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "australia-visitor-visa-600",
@@ -4782,7 +4782,9 @@
     "agencySlug": "au-home-affairs",
     "feeLabel": "From AUD 250",
     "feeNote": "The Australian Department of Home Affairs lists the Tourist stream application charge from AUD 250 for applications outside Australia; other health, police or biometrics costs can apply.",
+    "timeline": "Australia uses a live visa processing-time guide for subclass 600 rather than guaranteeing one fixed decision period; the displayed estimate is based on recently decided applications.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/apply-and-manage-your-application",
     "requirements": [
       "A valid passport, including clear colour scans of the photo/personal-details and issue/expiry pages",
@@ -4793,7 +4795,6 @@
       "Clear colour scans or photographs of every supporting document, with multi-page documents saved together as one clear file",
       "For an applicant under 18: birth certificate naming both parents and, when a person with legal decision-making responsibility is not travelling, Form 1229 or a statutory declaration of consent; Form 1257 is also used when the child will stay with someone other than a relative or legal guardian"
     ],
-    "timeline": "Australia uses a live visa processing-time guide for subclass 600 rather than guaranteeing one fixed decision period; the displayed estimate is based on recently decided applications.",
     "steps": [
       "Confirm eligibility for the Visitor visa subclass 600 Tourist stream and prepare a valid passport plus the financial, travel-purpose and return-to-Nigeria evidence before opening the application.",
       "Create or sign in to ImmiAccount, start a new Visitor visa application and complete the personal, passport, travel and background information accurately.",
@@ -4811,15 +4812,15 @@
         "label": "Australia Visitor visa subclass 600 – Tourist stream outside Australia",
         "agency": "Australian Department of Home Affairs",
         "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Australian ImmiAccount application guidance",
         "agency": "Australian Department of Home Affairs",
         "url": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/apply-and-manage-your-application",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4833,8 +4834,7 @@
       "canada-visitor-visa",
       "uk-standard-visitor-visa",
       "france-schengen-short-stay-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "uae-tourist-visa",
@@ -4847,6 +4847,7 @@
     "feeNote": "The UAE does not publish one flat fee for every ordinary tourist visa because the visa may be arranged by an authorised UAE airline, hotel or licensed travel/tourism establishment. Confirm the exact government and provider charges before payment.",
     "timeline": "UAE ICP states that eligible tourist-entry permits can be completed after requirements are fulfilled; ordinary provider processing time can vary by sponsor and visa type.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://icp.gov.ae/en/faq/",
     "requirements": [
       "Passport valid for at least 6 months",
@@ -4873,15 +4874,15 @@
         "label": "UAE ICP tourist visa requirements",
         "agency": "UAE Federal Authority for Identity, Citizenship, Customs & Port Security",
         "url": "https://icp.gov.ae/en/faq/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "UAE ICP tourist visa requirements",
         "agency": "UAE Federal Authority for Identity, Citizenship, Customs & Port Security",
         "url": "https://icp.gov.ae/en/faq/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4895,8 +4896,7 @@
       "turkiye-tourist-visa",
       "south-africa-holiday-visa",
       "uk-standard-visitor-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "south-africa-holiday-visa",
@@ -4909,6 +4909,7 @@
     "feeNote": "VFS Nigeria currently lists a ₦10,400 Holiday Visa fee plus a ₦29,400 service charge for Lagos/Abuja applications; the Port Harcourt service charge is listed as ₦49,400. Fees can change with exchange rates.",
     "timeline": "The South African High Commission's Nigeria guidance lists a minimum of 15 working days for short-term visa processing, although individual cases can take longer.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visa.vfsglobal.com/nga/en/zaf/visa-type",
     "requirements": [
       "Passport or travel document valid for at least 30 days after the intended South Africa visit, with unused visa/endorsement pages",
@@ -4936,15 +4937,15 @@
         "label": "South Africa visa application process in Nigeria",
         "agency": "VFS Global / South African Department of Home Affairs",
         "url": "https://visa.vfsglobal.com/nga/en/zaf/visa-type",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "South Africa Nigeria visa information",
         "agency": "VFS Global / South African Department of Home Affairs",
         "url": "https://visa.vfsglobal.com/one-pager/southafrica/nigeria/english/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -4958,8 +4959,7 @@
       "uae-tourist-visa",
       "turkiye-tourist-visa",
       "ireland-short-stay-visit-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "ireland-short-stay-visit-visa",
@@ -4972,6 +4972,7 @@
     "feeNote": "Ireland's current visa fee schedule lists €60 for a single-entry Short Stay C visa and €100 for multiple entry. Extra local submission/consular charges can apply.",
     "timeline": "Irish Immigration states that a short-stay visit application generally receives a decision about 8 weeks after the visa office receives the documents, but verification or missing documents can extend this.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.visas.inis.gov.ie/AVATS/OnlineHome.aspx",
     "requirements": [
       "Current passport valid for at least 6 months after the date the applicant plans to leave Ireland, plus copies of previous passports where available",
@@ -5000,22 +5001,22 @@
         "label": "Ireland short-stay visit visa application guidance",
         "agency": "Immigration Service Delivery Ireland",
         "url": "https://www.irishimmigration.ie/coming-to-visit-ireland/how-to-apply-for-a-short-stay-c-visit-tourist-visa/visit-family-friend-visa/",
-        "published": "2026-05-29",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026-05-29"
       },
       {
         "label": "Ireland short-stay visa policy",
         "agency": "Immigration Service Delivery Ireland",
         "url": "https://www.irishimmigration.ie/short-stay-visas-policy/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Ireland visa fees",
         "agency": "Immigration Service Delivery Ireland",
         "url": "https://www.irishimmigration.ie/preclearance-and-entry-visas-fees/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -5029,8 +5030,7 @@
       "uk-standard-visitor-visa",
       "france-schengen-short-stay-visa",
       "germany-schengen-tourist-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "germany-schengen-tourist-visa",
@@ -5043,6 +5043,7 @@
     "feeNote": "Germany's missions in Nigeria list €90 for the standard Schengen visa, payable at the current mission exchange rate in Nigerian naira; reductions or waivers apply to specified categories.",
     "timeline": "German missions in Nigeria state that Schengen processing is generally at least/up to 15 calendar days and can be extended in individual cases.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://nigeria.diplo.de/ng-en/2746378-2746378",
     "requirements": [
       "Completed and personally signed VIDEX/Schengen visa application form",
@@ -5072,22 +5073,22 @@
         "label": "Germany Schengen visa in Nigeria",
         "agency": "German Federal Foreign Office",
         "url": "https://nigeria.diplo.de/ng-en/2746378-2746378",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Germany tourism visa checklist for Nigeria",
         "agency": "German Federal Foreign Office",
         "url": "https://nigeria.diplo.de/ng-en/2753074-2753074",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Germany visa fees in Nigeria",
         "agency": "German Federal Foreign Office",
         "url": "https://nigeria.diplo.de/ng-en/2746334-2746334",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -5101,8 +5102,7 @@
       "france-schengen-short-stay-visa",
       "italy-schengen-tourist-visa",
       "netherlands-schengen-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "italy-schengen-tourist-visa",
@@ -5115,6 +5115,7 @@
     "feeNote": "The Italian Consulate General in Lagos lists €90 for adults and €45 for children aged 6–12; TLScontact service charges are additional.",
     "timeline": "Schengen rules generally provide a 15-calendar-day decision period that can be extended in individual cases; applicants should apply well before the intended trip.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://visas-it.tlscontact.com/en-us/country/ng",
     "requirements": [
       "Valid passport meeting Schengen validity and blank-page rules",
@@ -5142,29 +5143,29 @@
         "label": "Official Italy visa guidance for applicants in Nigeria",
         "agency": "Italian Consulate General in Lagos",
         "url": "https://conslagos.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Where to apply for an Italy visa in Nigeria",
         "agency": "Italian Embassy Abuja",
         "url": "https://ambabuja.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/dove-chiedere-un-visto/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Italy visa fees in Nigeria",
         "agency": "Italian Consulate General Lagos",
         "url": "https://conslagos.esteri.it/en/servizi-consolari-e-visti/servizi-per-il-cittadino-straniero/visti/quanto-costa-un-visto-e-come-pagare/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Italy visa application centres in Nigeria",
         "agency": "TLScontact / Italian Consulate General",
         "url": "https://visas-it.tlscontact.com/en-us/country/ng",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -5178,8 +5179,7 @@
       "germany-schengen-tourist-visa",
       "spain-schengen-tourist-visa",
       "france-schengen-short-stay-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "spain-schengen-tourist-visa",
@@ -5192,6 +5192,7 @@
     "feeNote": "The Spanish Consulate's current Schengen guidance lists €90 for applicants aged 12 and above, €45 for children aged 6–12, and no visa fee for children under 6; BLS service charges are additional.",
     "timeline": "Spain lists a legal decision period of 15 calendar days from submission, extendable to 45 calendar days when additional documents or an interview are required.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.exteriores.gob.es/Consulados/lagos/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
     "requirements": [
       "Completed and signed Schengen visa application form",
@@ -5219,15 +5220,15 @@
         "label": "Spain Schengen visa requirements in Nigeria",
         "agency": "Consulate General of Spain in Lagos",
         "url": "https://www.exteriores.gob.es/Consulados/lagos/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Spain Schengen visa submission in Nigeria",
         "agency": "Consulate General of Spain in Lagos",
         "url": "https://www.exteriores.gob.es/Consulados/lagos/es/ServiciosConsulares/Paginas/index.aspx?scca=Visados&scco=Nigeria&scd=170&scs=Lugar+de+presentaci%C3%B3n+de+solicitudes+de+visado",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -5241,8 +5242,7 @@
       "france-schengen-short-stay-visa",
       "italy-schengen-tourist-visa",
       "netherlands-schengen-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "netherlands-schengen-visa",
@@ -5255,6 +5255,7 @@
     "feeNote": "NetherlandsWorldwide lists the standard Schengen fee as €90, €45 for children aged 6–11 and free for children under 6; the authorised TLS service fee is additional.",
     "timeline": "NetherlandsWorldwide currently reports an average Schengen processing time of about 25 calendar days during high volume, with some cases taking up to 45 days.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-nigeria",
     "requirements": [
       "Valid passport/travel document meeting Schengen validity rules and proof of legal residence in Nigeria where applicable",
@@ -5283,22 +5284,22 @@
         "label": "Netherlands Schengen visa application in Nigeria",
         "agency": "NetherlandsWorldwide",
         "url": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-nigeria",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Netherlands Schengen tourism checklist",
         "agency": "NetherlandsWorldwide",
         "url": "https://www.netherlandsworldwide.nl/visa-the-netherlands/checklist-schengen-visa-tourism",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Netherlands visa processing times",
         "agency": "NetherlandsWorldwide",
         "url": "https://www.netherlandsworldwide.nl/visa-the-netherlands/waiting-time-after-visa-application",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -5312,8 +5313,7 @@
       "france-schengen-short-stay-visa",
       "germany-schengen-tourist-visa",
       "spain-schengen-tourist-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "turkiye-tourist-visa",
@@ -5324,7 +5324,9 @@
     "agencySlug": "turkiye-mfa",
     "feeLabel": "Confirm current visa + SEFA service charges before submission",
     "feeNote": "Türkiye's Embassy/authorised provider can update visa and service charges. Use SEFA Visa's current Nigeria fee/payment instructions at the time of appointment rather than an old agent price list.",
+    "timeline": "The Turkish Embassy/SEFA Visa Nigeria does not publish one guaranteed total tourist-visa decision time; applicants should use the appointment and tracking system for the live case status.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://sefavisa.com/ng/en",
     "requirements": [
       "Passport valid for at least 6 months, with the required blank page(s), plus two photocopies of the identity page and previous passports/visas where available",
@@ -5336,7 +5338,6 @@
       "For an applicant under 18: birth certificate, a consent letter personally signed and notarised by both parents and the parents' official ID documents",
       "Nigeria residence permit for non-Nigerian applicants applying from Nigeria"
     ],
-    "timeline": "The Turkish Embassy/SEFA Visa Nigeria does not publish one guaranteed total tourist-visa decision time; applicants should use the appointment and tracking system for the live case status.",
     "steps": [
       "Confirm that an ordinary Nigerian passport requires a visa for Türkiye, then use the current SEFA Visa Nigeria tourist-visa checklist rather than an old embassy/agent checklist.",
       "Prepare the passport copies, biometric photos, six-month stamped bank statement, employment/business-status evidence, flight/accommodation reservations and any sponsorship/personal-petition documents that apply.",
@@ -5354,36 +5355,36 @@
         "label": "Türkiye visa information for foreigners",
         "agency": "Republic of Türkiye Ministry of Foreign Affairs",
         "url": "https://www.mfa.gov.tr/visa-information-for-foreigners.en.mfa",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Türkiye visa application arrangements for Nigerians",
         "agency": "Turkish Embassy Abuja",
         "url": "https://abuja-emb.mfa.gov.tr/Mission/ShowAnnouncement/416143",
-        "published": "2026-01-03",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026-01-03"
       },
       {
         "label": "Türkiye SEFA Visa Lagos office announcement",
         "agency": "Turkish Embassy Abuja",
         "url": "https://abuja-emb.mfa.gov.tr/Mission/ShowAnnouncement/418248",
-        "published": "2026-06-01",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026-06-01"
       },
       {
         "label": "Türkiye visa types and requirements in Nigeria",
         "agency": "SEFA Visa / Turkish Embassy Abuja",
         "url": "https://sefavisa.com/ng/en/visa-types",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       },
       {
         "label": "Türkiye authorised visa application centre in Nigeria",
         "agency": "SEFA Visa / Turkish Embassy Abuja",
         "url": "https://sefavisa.com/ng/en",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2026"
       }
     ],
     "searchTerms": [
@@ -5397,8 +5398,7 @@
       "uae-tourist-visa",
       "south-africa-holiday-visa",
       "italy-schengen-tourist-visa"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "china-tourist-visa-nigeria",
@@ -5411,6 +5411,7 @@
     "feeNote": "The Chinese Embassy's published Nigeria schedule lists ₦10,500 for single entry, ₦15,750 double entry, ₦21,000 six-month multiple entry and ₦31,500 twelve-month multiple entry; CVAC service fees are additional.",
     "timeline": "The Chinese Embassy in Nigeria states that normal visa processing is usually 4 working days, subject to the visa officer's decision and any additional requirements.",
     "status": "verified",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.visaforchina.cn/",
     "requirements": [
       "Original passport with at least 6 months remaining validity and blank visa pages, plus a photocopy of the passport data page",
@@ -5437,8 +5438,8 @@
         "label": "Chinese visa application guidelines for Nigerian citizens",
         "agency": "Embassy of China in Nigeria",
         "url": "https://ng.china-embassy.gov.cn/eng/lsfw/zytz/202409/t20240906_11486896.htm",
-        "published": "2024-09-06",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-09-28",
+        "published": "2024-09-06"
       }
     ],
     "searchTerms": [
@@ -5452,8 +5453,7 @@
       "turkiye-tourist-visa",
       "uae-tourist-visa",
       "australia-visitor-visa-600"
-    ],
-    "lastVerified": "2026-09-28"
+    ]
   },
   {
     "slug": "neco-certificate-service",
@@ -5464,6 +5464,7 @@
     "agencySlug": "neco",
     "feeLabel": "Review pending",
     "status": "review",
+    "lastVerified": "2026-09-28",
     "officialPortal": "https://www.neco.gov.ng",
     "requirements": [
       "Requirements are being checked against current official sources."
@@ -5482,7 +5483,6 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
     "searchTerms": [
       "NECO certificate service",
       "How to request NECO certificate-related services",
