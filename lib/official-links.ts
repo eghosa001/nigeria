@@ -53,6 +53,15 @@ const exactGuidanceOverrides: Record<string, string> = {
   "canada-visitor-visa": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html",
   "france-schengen-short-stay-visa": "https://www.france-visas.gouv.fr/web/france-visas/nigeria",
   "australia-visitor-visa-600": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas",
+  "uae-tourist-visa": "https://u.ae/en/information-and-services/visa-and-emirates-id/tourist-visa",
+  "south-africa-holiday-visa": "https://visa.vfsglobal.com/one-pager/southafrica/nigeria/english/",
+  "ireland-short-stay-visit-visa": "https://www.irishimmigration.ie/coming-to-visit-ireland/how-to-apply-for-a-short-stay-c-visit-tourist-visa/visit-family-friend-visa/",
+  "germany-schengen-tourist-visa": "https://nigeria.diplo.de/ng-en/2697250-2697250",
+  "italy-schengen-tourist-visa": "https://vistoperitalia.esteri.it/home/en",
+  "spain-schengen-tourist-visa": "https://www.exteriores.gob.es/Consulados/lagos/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
+  "netherlands-schengen-visa": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-nigeria",
+  "turkiye-tourist-visa": "https://sefavisa.com/ng/en/visa-types",
+  "china-tourist-visa-nigeria": "https://ng.china-embassy.gov.cn/eng/lsfw/zytz/202409/t20240906_11486896.htm",
 };
 
 const actionOverrides: Record<string, string | null> = {
@@ -82,6 +91,15 @@ const actionOverrides: Record<string, string | null> = {
   "canada-visitor-visa": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/portal-application-process.html",
   "france-schengen-short-stay-visa": "https://france-visas.gouv.fr/en/web/france-visas/online-application",
   "australia-visitor-visa-600": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/apply-and-manage-your-application",
+  "uae-tourist-visa": null,
+  "south-africa-holiday-visa": "https://visa.vfsglobal.com/nga/en/zaf/visa-type",
+  "ireland-short-stay-visit-visa": "https://www.visas.inis.gov.ie/AVATS/OnlineHome.aspx",
+  "germany-schengen-tourist-visa": null,
+  "italy-schengen-tourist-visa": "https://visas-it.tlscontact.com/en-us/country/ng",
+  "spain-schengen-tourist-visa": "https://nigeria.blsspainvisa.com/",
+  "netherlands-schengen-visa": null,
+  "turkiye-tourist-visa": "https://sefavisa.com/ng/en/appointment",
+  "china-tourist-visa-nigeria": "https://www.visaforchina.cn/",
 };
 
 const transactionHosts = new Set([
@@ -137,6 +155,15 @@ const genericAgencyHosts = new Set([
   "eirs.gov.ng", "www.eirs.gov.ng",
   "airs.an.gov.ng", "www.airs.an.gov.ng",
   "revenue.lagosstate.gov.ng",
+  "icp.gov.ae", "www.icp.gov.ae",
+  "dha.gov.za", "www.dha.gov.za",
+  "irishimmigration.ie", "www.irishimmigration.ie",
+  "auswaertiges-amt.de", "www.auswaertiges-amt.de",
+  "esteri.it", "www.esteri.it",
+  "exteriores.gob.es", "www.exteriores.gob.es",
+  "netherlandsworldwide.nl", "www.netherlandsworldwide.nl",
+  "mfa.gov.tr", "www.mfa.gov.tr",
+  "ng.china-embassy.gov.cn",
 ]);
 
 function normalized(raw: string) {
