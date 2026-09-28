@@ -20,6 +20,12 @@ test("service guides expose trust and sharing actions", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Official sources" })).toBeVisible();
 });
 
+test("database-free launch never shows a dead correction form", async ({ page }) => {
+  await page.goto("/services/passport-renewal");
+  await expect(page.getByText("Persistent public submissions are not enabled yet")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Report an issue" })).toHaveCount(0);
+});
+
 test("watching a guide persists on the device", async ({ page }) => {
   await page.goto("/services/passport-renewal");
   await page.getByRole("button", { name: "Watch this guide" }).click();
