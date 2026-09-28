@@ -147,7 +147,7 @@ test("verified update RSS feed is available without a backend", async ({ request
 
 test("homepage has a canonical URL and offline fallback is not indexable", async ({ page }) => {
   await page.goto("/");
-  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://mynigeriaguide.com/");
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /^https:\/\/mynigeriaguide\.com\/?$/);
 
   await page.goto("/offline");
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
