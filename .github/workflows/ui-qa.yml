@@ -12,6 +12,7 @@ on:
       - "playwright.config.ts"
       - "package.json"
       - "next.config.ts"
+      - ".github/workflows/ui-qa.yml"
   pull_request:
     paths:
       - "app/**"
@@ -20,6 +21,8 @@ on:
       - "tests/**"
       - "playwright.config.ts"
       - "package.json"
+      - "next.config.ts"
+      - ".github/workflows/ui-qa.yml"
 
 jobs:
   smoke:
