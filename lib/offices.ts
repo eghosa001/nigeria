@@ -10,6 +10,15 @@ export type OfficeDirectory = {
 
 export const officeDirectories: OfficeDirectory[] = [
   {
+    agency: "Federal Capital Territory Internal Revenue Service (FCT-IRS)",
+    service: "FCT tax offices",
+    coverage: "Federal Capital Territory",
+    description: "FCT-IRS publishes a live contact page with tax-office addresses across Abuja and the Area Councils.",
+    directoryUrl: "https://fctirs.gov.ng/contact-us/",
+    sourceLabel: "FCT-IRS official office directory",
+    checked: "2026-09-28",
+  },
+  {
     agency: "Federal Road Safety Corps (FRSC)",
     service: "Driver's licence capture centres",
     coverage: "State and LGA search",
