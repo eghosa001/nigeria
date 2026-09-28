@@ -11,6 +11,14 @@ on:
       - "tests/**"
       - "playwright.config.ts"
       - "package.json"
+  pull_request:
+    paths:
+      - "app/**"
+      - "components/**"
+      - "lib/**"
+      - "tests/**"
+      - "playwright.config.ts"
+      - "package.json"
 
 jobs:
   smoke:
