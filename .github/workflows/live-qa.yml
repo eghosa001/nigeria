@@ -32,11 +32,14 @@ jobs:
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-      - name: Probe analytics configuration flags
+      - name: Probe private admin configuration flags
         shell: bash
         run: |
           echo "Current production analytics setup (booleans only; no credentials):"
           curl -sS --max-time 15 "$LIVE_BASE_URL/api/admin/analytics?range=7d" || true
+          echo
+          echo "Current production guide-editor setup (booleans only; no credentials):"
+          curl -sS --max-time 15 "$LIVE_BASE_URL/api/admin/content-access" || true
           echo
       - name: Wait for this exact commit to reach Cloudflare production
         shell: bash
