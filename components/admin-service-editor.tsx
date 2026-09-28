@@ -101,7 +101,7 @@ export function AdminServiceEditor({ service }: { service: Service }) {
       <section className="admin-panel admin-editor-state">
         <span className="eyebrow">Editing</span>
         <h2>Admin editing needs server configuration</h2>
-        <p>Configure the private admin passphrase before browser editing can be unlocked.</p>
+        <p>Configure the private admin passphrase and the server-only GitHub review token before browser editing can be unlocked.</p>
       </section>
     );
   }
