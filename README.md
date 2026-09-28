@@ -9,6 +9,11 @@ GovGuide turns official government information into clear, source-linked guides 
 - 76 public source-linked guides across 14 federal, state and FCT agencies/services
 - 1 additional guide held in the editorial review queue because its current official fee evidence is not strong enough
 - Plain-language searchable public service directory with category/status filters and sorting
+- Launch runbook under `docs/DEPLOYMENT.md`
+- Production error recovery and `/api/health` monitoring endpoint
+- Service-specific social preview cards for WhatsApp/social sharing
+- Verified fee/process update tracker with a backend-free RSS feed
+- Indexable category landing pages and a searchable government fee directory
 - Agency/category navigation plus official office/centre finder links
 - Dynamic service-guide pages with breadcrumbs, FAQs, sharing, WhatsApp and local saved-guide watchlist
 - Verified/conflict/review editorial states
@@ -100,3 +105,7 @@ A guide with status `review` must never be publicly indexable.
 `data/source-monitors.json` tracks high-value official source markers such as major passport, licence, JAMB, WAEC, NPC, CAC, NIMC and NRS information.
 
 The weekly GitHub workflow runs `scripts/check-sources.mjs`. If a critical marker disappears, the workflow fails so the source can be manually re-verified before the public guide is changed.
+
+## Production launch
+
+Follow `docs/DEPLOYMENT.md` for the single-deployment Vercel launch sequence, environment variables, post-deploy checks, Search Console setup, AdSense timing and optional D1 reporting.
