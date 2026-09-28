@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const agency = getAgency(slug);
   if (!agency) return {};
-  return { title: agency.shortName + " services", description: agency.description };
+  return { title: agency.shortName + " services", description: agency.description, alternates: { canonical: "/agencies/" + agency.slug } };
 }
 
 export default async function AgencyPage({ params }: { params: Promise<{ slug: string }> }) {
