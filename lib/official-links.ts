@@ -178,10 +178,13 @@ export function getOfficialServiceLinks(service: Service): OfficialServiceLinks 
   }
 
   const same = guidanceUrl && actionUrl && normalized(guidanceUrl) === normalized(actionUrl);
+  const samePortalLabel = same && actionUrl ? "Open the official service portal ↗" : undefined;
 
   return {
     guidanceUrl,
-    guidanceLabel: guidanceUrl ? (guidanceOverride ? "Open exact official instructions ↗" : "Open official service guidance ↗") : undefined,
+    guidanceLabel: guidanceUrl
+      ? (samePortalLabel ?? (guidanceOverride ? "Open exact official instructions ↗" : "Open official service guidance ↗"))
+      : undefined,
     actionUrl: same ? undefined : actionUrl,
     actionLabel: actionUrl && !same ? "Start on the official service portal ↗" : undefined,
   };
