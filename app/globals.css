@@ -709,3 +709,71 @@ h3 { font-size: 1.22rem; }
   .category-summary > div { padding: 14px; }
   .category-summary strong { font-size: 1.45rem; }
 }
+
+
+/* Verified government-service updates */
+.home-updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.home-update-card,
+.update-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.home-update-card { padding: 20px; }
+.home-update-card > div,
+.update-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  color: var(--muted);
+  font-size: .76rem;
+}
+.home-update-card > div > span,
+.update-type {
+  color: var(--green-dark);
+  background: var(--mint);
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-weight: 850;
+}
+.home-update-card h3 { margin: 14px 0 8px; }
+.home-update-card p { color: var(--muted); font-size: .9rem; }
+.home-update-card > a { color: var(--green); font-size: .86rem; font-weight: 850; }
+
+.updates-stack {
+  display: grid;
+  gap: 16px;
+  max-width: 940px;
+  margin-top: 36px;
+}
+.update-card {
+  padding: 26px;
+  scroll-margin-top: 100px;
+}
+.update-card h2 { margin: 14px 0 10px; font-size: 1.55rem; }
+.update-card > p { color: var(--muted); }
+.update-type-fee { background: #e9f6ef; color: #075339; }
+.update-type-process { background: #eef4ff; color: #284e8a; }
+.update-type-deadline { background: #fff5df; color: #7d4300; }
+.update-type-clarification { background: #f0edf9; color: #563b88; }
+.update-services { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.update-services > strong { display: block; margin-bottom: 8px; font-size: .82rem; }
+.update-services > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.update-services a {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  color: var(--green);
+  font-size: .8rem;
+  font-weight: 800;
+}
+.update-source { display: inline-flex; margin-top: 18px; color: var(--green); font-size: .84rem; font-weight: 850; }
+
+@media (max-width: 800px) {
+  .home-updates-grid { grid-template-columns: 1fr; }
+}
