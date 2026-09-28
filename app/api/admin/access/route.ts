@@ -8,6 +8,8 @@ import {
   verifyAdminPassword,
 } from "@/lib/admin-access";
 
+const privateHeaders = { "Cache-Control": "private, no-store" };
+
 function sameOrigin(request: Request) {
   const fetchSite = request.headers.get("sec-fetch-site");
   if (fetchSite) return fetchSite === "same-origin";
