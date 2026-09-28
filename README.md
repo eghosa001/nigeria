@@ -6,8 +6,8 @@ MyNigeriaGuide turns official government information into clear, source-linked g
 
 ## Current product
 
-- 76 public source-linked guides across 14 federal, state and FCT agencies/services
-- 1 additional guide held in the editorial review queue because its current official fee evidence is not strong enough
+- 106 public source-linked guides across 32 Nigerian and destination-country agency groups
+- 1 additional guide held in the editorial review queue until its evidence is strong enough for publication
 - Plain-language searchable public service directory with category/status filters and sorting
 - Launch runbook under `docs/DEPLOYMENT.md`
 - Production error recovery and `/api/health` monitoring endpoint
