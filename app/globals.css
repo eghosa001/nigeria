@@ -1911,3 +1911,319 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .admin-editor-wide { grid-column:auto; }
   .admin-editor-actions > button { width:100%; }
 }
+
+
+/* --------------------------------------------------------------------------
+   Mobile layout consolidation
+   Keep all public surfaces on one predictable mobile rhythm. This block is
+   intentionally last so it resolves older breakpoint conflicts in one place.
+   -------------------------------------------------------------------------- */
+@media (max-width: 760px) {
+  html, body { max-width: 100%; overflow-x: clip; }
+
+  .container,
+  .narrow,
+  .narrow-wide {
+    width: min(calc(100% - 32px), 1160px);
+  }
+
+  .site-header { overflow: visible; }
+  .header-inner {
+    position: relative;
+    min-height: 66px;
+    gap: 12px;
+  }
+  .brand-home-link {
+    min-width: 0;
+    max-width: calc(100% - 58px);
+    padding-right: 4px;
+  }
+  .brand-lockup { min-width: 0; gap: 9px; }
+  .brand-logo-mark { width: 38px; height: 38px; }
+  .brand-wordmark { min-width: 0; }
+  .brand-wordmark strong {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .95rem;
+  }
+  .brand-wordmark small { display: none; }
+
+  .menu-toggle {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+  .primary-nav {
+    left: 16px;
+    right: 16px;
+    top: calc(100% + 6px);
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+    gap: 2px;
+    padding: 8px;
+    border-radius: 14px;
+  }
+  .primary-nav.is-open { display: grid; grid-template-columns: 1fr; }
+  .primary-nav > a {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 12px;
+    border-radius: 9px;
+    font-size: .9rem;
+  }
+
+  .hero {
+    padding: 42px 0 38px;
+  }
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 26px;
+  }
+  .hero h1,
+  h1 {
+    max-width: 100%;
+    font-size: clamp(2.15rem, 10vw, 2.7rem);
+    line-height: 1.03;
+    overflow-wrap: anywhere;
+  }
+  .hero-lead,
+  .page-intro {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .search-shell { margin-top: 24px; }
+  .search-input-wrap {
+    min-height: 56px;
+    padding: 0 14px;
+    border-radius: 13px;
+  }
+  .search-results a {
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+  .hero-popular { align-items: flex-start; }
+  .hero-popular > span { flex-basis: 100%; }
+  .trust-panel { padding: 20px; border-radius: 18px; }
+  .trust-panel > strong { font-size: 1.65rem; }
+  .trust-metrics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .proof-grid { grid-template-columns: 1fr; }
+
+  .section { padding: 46px 0; }
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .section-heading h2 { font-size: clamp(1.75rem, 8vw, 2.15rem); }
+  .section-heading > a { margin-top: 2px; }
+
+  .category-grid,
+  .service-grid,
+  .home-updates-grid,
+  .agency-list,
+  .home-category-grid,
+  .service-category-nav,
+  .visa-country-grid,
+  .journey-grid,
+  .aftercare-grid,
+  .office-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .category-card,
+  .service-card,
+  .home-category-card,
+  .home-update-card,
+  .office-card {
+    min-height: 0;
+  }
+  .category-card,
+  .service-card { padding: 18px; }
+  .category-card { align-items: flex-start; }
+  .category-card p { min-height: 0; }
+  .service-card h3 { font-size: 1.2rem; }
+  .service-meta {
+    grid-template-columns: minmax(0,1fr) auto;
+    align-items: center;
+    gap: 10px;
+  }
+  .service-card-arrow { display: none; }
+  .service-agency { max-width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  .directory-controls,
+  .fee-controls,
+  .office-controls {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin: 22px 0 14px;
+    padding: 12px;
+  }
+  .directory-controls input,
+  .directory-controls select,
+  .fee-controls input,
+  .fee-controls select,
+  .office-controls input,
+  .office-controls select {
+    min-width: 0;
+    min-height: 48px;
+  }
+  .directory-summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .directory-summary button { margin-left: 0; }
+
+  .fee-row { grid-template-columns: minmax(0,1fr); gap: 7px; padding: 15px; }
+  .category-summary {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 7px;
+    margin: 22px 0 38px;
+  }
+  .category-summary > div { min-width: 0; padding: 12px 9px; }
+  .category-summary strong { font-size: 1.25rem; }
+  .category-summary span { font-size: .7rem; line-height: 1.25; }
+
+  .assistant-card { padding: 18px; border-radius: 17px; }
+  .assistant-intro { grid-template-columns: 1fr; gap: 12px; }
+  .assistant-symbol { width: 44px; height: 44px; }
+  .assistant-intro h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); }
+  .assistant-form > div { grid-template-columns: minmax(0,1fr); }
+  .assistant-form input,
+  .assistant-form button { width: 100%; min-width: 0; min-height: 52px; }
+  .assistant-results a {
+    grid-template-columns: 32px minmax(0,1fr) auto;
+    gap: 9px;
+    padding: 12px;
+  }
+  .assistant-results strong,
+  .assistant-results small { overflow-wrap: anywhere; }
+
+  .guide-hero { padding: 40px 0 34px; }
+  .guide-hero-grid,
+  .guide-layout,
+  .agency-strip,
+  .footer-top,
+  .footer-grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .guide-hero-grid { gap: 22px; }
+  .guide-hero h1 { font-size: clamp(2rem, 9vw, 2.55rem); }
+  .guide-meta,
+  .guide-badges,
+  .category-return {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .guide-badges { flex-direction: row; }
+  .fee-card {
+    position: static;
+    padding: 20px;
+    border-radius: 17px;
+  }
+  .fee-card > strong { font-size: 1.7rem; }
+
+  .guide-main-section { overflow: clip; }
+  .guide-layout { gap: 28px; }
+  .guide-quick-nav {
+    top: 66px;
+    margin: -4px -16px 28px;
+    padding: 8px 16px;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+  .guide-content section { margin-bottom: 30px; padding-bottom: 30px; }
+  .guide-content h2 { font-size: 1.5rem; }
+  .checklist { grid-template-columns: minmax(0,1fr); }
+  .steps li { grid-template-columns: 36px minmax(0,1fr); padding: 14px; }
+  .steps li > span { width: 34px; height: 34px; }
+
+  .guide-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    align-items: stretch;
+  }
+  .guide-actions button,
+  .guide-actions a {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .guide-actions small { grid-column: 1 / -1; }
+
+  .source-list a { flex-direction: column; gap: 5px; }
+  .related-links { display: grid; grid-template-columns: minmax(0,1fr); }
+  .related-links a { width: 100%; }
+
+  .service-status-strip,
+  .process-columns,
+  .route-wizard-grid,
+  .detailed-step-grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .service-status-strip > div:last-child { grid-column: auto; }
+  .process-tracker,
+  .route-wizard,
+  .correction-box { padding: 18px; border-radius: 16px; }
+  .process-tracker-start,
+  .process-tracker-head,
+  .route-wizard-head { flex-direction: column; align-items: stretch; }
+  .process-tracker-start button,
+  .route-wizard-head > button { width: 100%; }
+  .process-columns { gap: 16px; }
+  .route-wizard-grid button { min-height: 96px; }
+  .requirement-detail-card,
+  .detailed-step { padding: 16px; }
+  .requirement-detail-card dl > div { grid-template-columns: minmax(0,1fr); gap: 3px; }
+
+  .breadcrumbs { margin-bottom: 16px; }
+  .breadcrumbs ol { gap: 5px 7px; font-size: .76rem; }
+  .policy-stack section {
+    grid-template-columns: 38px minmax(0,1fr);
+    gap: 12px;
+    padding: 17px;
+  }
+  .policy-stack section > strong { width: 36px; height: 36px; }
+
+  .footer-top { gap: 28px; padding-block: 42px 34px; }
+  .footer-grid { gap: 26px; }
+  .footer-grid > div { gap: 7px; }
+  .footer-grid a { min-width: 0; overflow-wrap: anywhere; }
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    padding-block: 16px 22px;
+  }
+
+  .admin-panel,
+  .admin-analytics-state { padding: 18px; }
+}
+
+@media (max-width: 520px) {
+  .container,
+  .narrow,
+  .narrow-wide {
+    width: min(calc(100% - 24px), 1160px);
+  }
+  .primary-nav { left: 12px; right: 12px; }
+  .hero { padding-top: 34px; }
+  .hero h1,
+  h1 { font-size: clamp(2rem, 10vw, 2.4rem); }
+  .section { padding: 40px 0; }
+  .trust-metrics { grid-template-columns: minmax(0,1fr); }
+  .guide-quick-nav { margin-inline: -12px; padding-inline: 12px; }
+  .guide-actions { grid-template-columns: minmax(0,1fr); }
+  .category-summary { grid-template-columns: minmax(0,1fr); }
+  .category-summary > div { padding: 13px; }
+  .service-meta { grid-template-columns: minmax(0,1fr); align-items: start; }
+  .service-agency { max-width: 100%; justify-self: start; }
+  .assistant-results a { grid-template-columns: 30px minmax(0,1fr); }
+  .assistant-results a > span:last-child { display: none; }
+}
