@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CorrectionReport } from "@/components/correction-report";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 
@@ -113,6 +114,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 ))}
               </div>
             </section>
+
+            <CorrectionReport serviceSlug={service.slug} />
           </article>
 
           <aside className="guide-sidebar">
