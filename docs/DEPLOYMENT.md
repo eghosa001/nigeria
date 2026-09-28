@@ -72,10 +72,10 @@ npm run build:vinext
 and deploy the generated Workers config with:
 
 ```bash
-npx wrangler deploy --config dist/server/wrangler.json
+npx @vinext/cloudflare deploy
 ```
 
-Avoid configuring both a full vinext deploy command and a separate vinext build if that would cause the project to build twice.
+For Cloudflare Workers Builds, use `npm run build:vinext` as the Build command and `npm run deploy:cloudflare` as the Deploy command. The Worker created in the Cloudflare dashboard must be named exactly `mynigeriaguide` so it matches `wrangler.jsonc`.
 
 ## Environment variables
 
