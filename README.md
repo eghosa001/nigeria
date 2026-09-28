@@ -91,6 +91,10 @@ Copy `.env.example` to `.env.local`.
 - `NEXT_PUBLIC_SITE_URL`: production origin/custom domain
 - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: optional Google Analytics measurement ID
 - `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`: optional Search Console verification token
+- `GA4_PROPERTY_ID`: GA4 property used by the private Visits dashboard
+- `GA4_SERVICE_ACCOUNT_EMAIL`: service-account email with read access to that property
+- `GA4_SERVICE_ACCOUNT_PRIVATE_KEY`: server-only service-account private key
+- `MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY`: server-only passphrase protecting `/admin/visits`
 - `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client
 - `NEXT_PUBLIC_ADSENSE_SLOT_GUIDE`: optional service-guide ad slot
 

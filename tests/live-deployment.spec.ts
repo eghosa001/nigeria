@@ -34,8 +34,14 @@ test.describe("live MyNigeriaGuide deployment", () => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics configuration check.");
 
     const response = await request.get("/api/admin/analytics?range=7d", { failOnStatusCode: false });
-    expect(response.status()).toBe(401);
-    const body = await response.json() as { configured?: boolean; authenticated?: boolean };
+    const body = await response.json() as {
+      configured?: boolean;
+      authenticated?: boolean;
+      accessConfigured?: boolean;
+      readConfigured?: boolean;
+      trackingConfigured?: boolean;
+    };
+    expect(response.status(), "Analytics setup response: " + JSON.stringify(body)).toBe(401);
     expect(body.configured).toBe(true);
     expect(body.authenticated).toBe(false);
 

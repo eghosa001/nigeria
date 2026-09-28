@@ -102,7 +102,18 @@ MYNIGERIAGUIDE_REPORT_ENDPOINT=
 MYNIGERIAGUIDE_REPORT_TOKEN=
 ```
 
-MyNigeriaGuide works without all optional variables.
+To enable the private `/admin/visits` dashboard, also configure these values on the deployed Worker:
+
+```env
+GA4_PROPERTY_ID=
+GA4_SERVICE_ACCOUNT_EMAIL=
+GA4_SERVICE_ACCOUNT_PRIVATE_KEY=
+MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY=
+```
+
+Keep the private key and admin analytics key server-side. The service account must have read access to the selected GA4 property.
+
+MyNigeriaGuide's public guides work without these analytics values, but the Visits dashboard intentionally reports setup as incomplete until they are present.
 
 ## KV rule
 
@@ -197,9 +208,9 @@ After the final domain is live:
 
 ## Analytics
 
-Only configure `NEXT_PUBLIC_GA_MEASUREMENT_ID` after creating the analytics property.
+Configure `NEXT_PUBLIC_GA_MEASUREMENT_ID` after creating the GA4 property so public page views are collected. The private Visits dashboard additionally requires `GA4_PROPERTY_ID`, `GA4_SERVICE_ACCOUNT_EMAIL`, `GA4_SERVICE_ACCOUNT_PRIVATE_KEY`, and `MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY`.
 
-The site does not depend on analytics.
+After deployment, `/api/admin/analytics?range=7d` should return **401** while locked. A **503** means one or more analytics configuration groups are missing. `/admin/visits` should show the passphrase form before any traffic data is returned.
 
 ## AdSense
 
