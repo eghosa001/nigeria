@@ -1,6 +1,8 @@
 import AxeBuilder from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 
+test.setTimeout(10_000);
+
 test("admin guide editing stays locked until the shared admin passphrase succeeds", async ({ page }) => {
   await page.goto("/admin/services/passport-renewal");
 
