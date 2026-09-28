@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!category) return {};
 
   return {
-    title: category.name + " government services in Nigeria",
+    title: category.name + " services in Nigeria",
     description: category.description + " Browse source-linked fees, requirements, official portals and last-checked guidance.",
     alternates: { canonical: "/categories/" + slug },
   };

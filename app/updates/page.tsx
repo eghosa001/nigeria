@@ -7,7 +7,7 @@ import { getPublicService } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Nigeria government service fee and process updates",
+  title: "Nigeria government service updates",
   description: "Dated, source-linked updates to Nigerian government service fees, registration processes and official guidance.",
   alternates: { canonical: "/updates" },
 };
