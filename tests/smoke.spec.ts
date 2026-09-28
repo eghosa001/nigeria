@@ -154,3 +154,24 @@ test("service FAQ answers are contextual and complete enough to guide the next a
   await expect(page.locator("#questions")).toContainText(/official|agency/i);
   await expect(page.locator("#questions")).toContainText(/last checked|checked on/i);
 });
+
+test("service links distinguish exact guidance from transaction portal", async ({ page }) => {
+  await page.goto("/services/nin-name-modification");
+  await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /nimc\.gov\.ng\/self-service-modifications/);
+  await expect(page.locator('a[data-official-purpose="action"]')).toHaveAttribute("href", /selfservicemodification\.nimc\.gov\.ng/);
+
+  await page.goto("/services/passport-renewal");
+  await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /immigration\.gov\.ng\/info-center\/renewal-of-passport/);
+  await expect(page.locator('a[data-official-purpose="action"]')).toHaveAttribute("href", /passport\.immigration\.gov\.ng/);
+
+  await page.goto("/services/jamb-profile-code");
+  await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /jamb\.gov\.ng\/FAQ/i);
+  await expect(page.locator('a[data-official-purpose="action"]')).toHaveCount(0);
+
+  await page.goto("/services/npc-digital-birth-certificate-reissuance");
+  await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /reissuance\.nationalpopulation\.gov\.ng/);
+
+  await page.goto("/services/nigeria-tourism-visa");
+  await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /immigration\.gov\.ng\/info-center\/tourism-visa-f5a/);
+  await expect(page.locator('a[data-official-purpose="action"]')).toHaveAttribute("href", /visa\.immigration\.gov\.ng/);
+});

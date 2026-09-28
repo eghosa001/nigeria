@@ -2,10 +2,12 @@ import Link from "next/link";
 import type { Service } from "@/lib/types";
 import { getServiceJourney } from "@/lib/journey";
 import { getDetailedServiceGuidance } from "@/lib/service-guidance";
+import { getOfficialServiceLinks } from "@/lib/official-links";
 
 export function ServiceJourney({ service }: { service: Service }) {
   const journey = getServiceJourney(service);
   const guidance = getDetailedServiceGuidance(service);
+  const officialLinks = getOfficialServiceLinks(service);
 
   return (
     <section className="journey-section" id="journey">
@@ -23,11 +25,18 @@ export function ServiceJourney({ service }: { service: Service }) {
           <span className="journey-label">Recommended start</span>
           <h3>{guidance.route.startTitle}</h3>
           <p>{guidance.route.startDetail}</p>
-          {service.officialPortal ? (
-            <a className="text-link" href={service.officialPortal} target="_blank" rel="noreferrer">
-              Open official online route ↗
-            </a>
-          ) : null}
+          <div className="official-link-stack">
+            {officialLinks.guidanceUrl && officialLinks.guidanceLabel ? (
+              <a className="text-link official-service-link" data-official-purpose="guidance" href={officialLinks.guidanceUrl} target="_blank" rel="noreferrer">
+                {officialLinks.guidanceLabel}
+              </a>
+            ) : null}
+            {officialLinks.actionUrl && officialLinks.actionLabel ? (
+              <a className="text-link official-service-link" data-official-purpose="action" href={officialLinks.actionUrl} target="_blank" rel="noreferrer">
+                {officialLinks.actionLabel}
+              </a>
+            ) : null}
+          </div>
         </article>
 
         <article className="journey-card">

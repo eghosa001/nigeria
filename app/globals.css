@@ -1489,3 +1489,6 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 @media (max-width:760px) {
   .brand-home-link { min-height: 50px; padding-right: 10px; }
 }
+
+.official-link-stack { display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin-top:8px; }
+.official-link-stack .text-link { margin-top:0; }
