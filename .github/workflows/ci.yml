@@ -21,9 +21,17 @@ jobs:
       - run: npm run build:vinext
       - name: Prevent accidental KV dependency
         run: |
-          if grep -R '"kv_namespaces"' wrangler.jsonc dist/server/wrangler.json 2>/dev/null; then
-            echo "Unexpected KV namespace detected. GovGuide launch must stay KV-free."
-            exit 1
-          fi
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const files = ["wrangler.jsonc", "dist/server/wrangler.json"];
+          for (const file of files) {
+            const config = JSON.parse(fs.readFileSync(file, "utf8"));
+            if (Array.isArray(config.kv_namespaces) && config.kv_namespaces.length > 0) {
+              console.error("Unexpected KV namespace detected in " + file);
+              process.exit(1);
+            }
+          }
+          console.log("KV-free deployment confirmed.");
+          NODE
       - name: Package Cloudflare Worker without deploying
         run: npx wrangler deploy --dry-run --config dist/server/wrangler.json
