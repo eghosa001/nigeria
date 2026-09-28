@@ -77,6 +77,18 @@ for (const service of publicServices) {
     errors.push(prefix + "must include at least one important note, limitation or safety point");
   }
 
+  if (service.category === "Foreign visas") {
+    if (service.requirements.length < 6) errors.push(prefix + "foreign visa guide must list at least six concrete application requirements");
+    if (service.steps.length < 5) errors.push(prefix + "foreign visa guide must explain at least five application stages");
+    if (service.notes.length < 3) errors.push(prefix + "foreign visa guide must include at least three country-specific cautions or conditions");
+    const foreignText = [...service.requirements, ...service.steps, ...service.notes].join(" ");
+    if (!/passport|travel document/i.test(foreignText)) errors.push(prefix + "foreign visa guide must explain passport/travel-document requirements");
+    if (!/bank|financial|fund|income|salary|sponsor|payment|fee/i.test(foreignText)) errors.push(prefix + "foreign visa guide must explain finances, sponsorship or payment evidence");
+    if (!/flight|travel|accommodation|hotel|host|invitation|itinerary/i.test(foreignText)) errors.push(prefix + "foreign visa guide must explain travel/accommodation or host evidence");
+    if (!/appointment|interview|biometric|fingerprint|visa application centre|visa application center|submit/i.test(foreignText)) errors.push(prefix + "foreign visa guide must explain the physical/biometric/submission stage");
+    if (!service.feeNote?.trim()) errors.push(prefix + "foreign visa guide must explain what the displayed fee does and does not cover");
+  }
+
   if (service.sources.length < 1) {
     errors.push(prefix + "has no official source");
   }

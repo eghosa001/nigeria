@@ -56,7 +56,7 @@ const exactGuidanceOverrides: Record<string, string> = {
   "uae-tourist-visa": "https://u.ae/en/information-and-services/visa-and-emirates-id/tourist-visa",
   "south-africa-holiday-visa": "https://visa.vfsglobal.com/one-pager/southafrica/nigeria/english/",
   "ireland-short-stay-visit-visa": "https://www.irishimmigration.ie/coming-to-visit-ireland/how-to-apply-for-a-short-stay-c-visit-tourist-visa/visit-family-friend-visa/",
-  "germany-schengen-tourist-visa": "https://nigeria.diplo.de/ng-en/2697250-2697250",
+  "germany-schengen-tourist-visa": "https://nigeria.diplo.de/ng-en/2753074-2753074",
   "italy-schengen-tourist-visa": "https://vistoperitalia.esteri.it/home/en",
   "spain-schengen-tourist-visa": "https://www.exteriores.gob.es/Consulados/lagos/en/ServiciosConsulares/Paginas/Consular/Visados-Schengen.aspx",
   "netherlands-schengen-visa": "https://www.netherlandsworldwide.nl/visa-the-netherlands/schengen-visa/apply-nigeria",

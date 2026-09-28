@@ -68,7 +68,7 @@ test("every guide is structured for a viewer completing the service", async ({ p
   for (const service of publicServices) {
     await page.goto("/services/" + service.slug, { waitUntil: "domcontentloaded" });
     await expect(page.getByRole("heading", { name: "Online, physical or both?" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "What you need before you start" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Documents, details and prerequisites you need" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Step-by-step instructions" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "What exactly happens next?" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Important notes" })).toBeVisible();
@@ -92,6 +92,10 @@ test("every guide is structured for a viewer completing the service", async ({ p
     await expect(page.locator("#requirements .requirement-detail-card").first()).toContainText("Original, copy or upload?");
     expect(await page.locator("#after-submit .aftercare-grid > div").count(), service.slug + " aftercare").toBeGreaterThanOrEqual(4);
     expect(await page.locator("#questions details").count(), service.slug + " contextual FAQs").toBeGreaterThanOrEqual(9);
+    if (service.category === "Foreign visas") {
+      await expect(page.getByRole("heading", { name: "Visa questions Nigerians commonly need answered" })).toBeVisible();
+      expect(await page.locator("#foreign-visa-questions details").count(), service.slug + " foreign visa FAQ depth").toBeGreaterThanOrEqual(7);
+    }
     expect(await page.locator("#official-sources a").count(), service.slug + " official sources").toBeGreaterThanOrEqual(1);
 
     const faqText = await page.locator("#questions").innerText();

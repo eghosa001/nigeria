@@ -12,6 +12,7 @@ import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceFaqs } from "@/components/service-faqs";
+import { ForeignVisaFaqs } from "@/components/foreign-visa-faqs";
 import { ServiceAftercare } from "@/components/service-aftercare";
 import { GuideQuickNav } from "@/components/guide-quick-nav";
 import { StatusBadge } from "@/components/status-badge";
@@ -159,6 +160,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </section>
 
             <ServiceFaqs service={service} />
+
+            <ForeignVisaFaqs service={service} />
 
             <section id="official-sources">
               <span className="section-number" aria-hidden="true">05</span>
