@@ -5,9 +5,9 @@ import { ServiceCard } from "@/components/service-card";
 import { searchServices } from "@/lib/search";
 import type { Service } from "@/lib/types";
 
-export function ServiceDirectory({ services }: { services: Service[] }) {
-  const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("all");
+export function ServiceDirectory({ services, initialQuery = "", initialCategory = "all" }: { services: Service[]; initialQuery?: string; initialCategory?: string }) {
+  const [query, setQuery] = useState(initialQuery);
+  const [category, setCategory] = useState(initialCategory);
   const [status, setStatus] = useState("all");
   const [sort, setSort] = useState("relevance");
 
