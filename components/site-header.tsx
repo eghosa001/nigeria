@@ -6,11 +6,11 @@ import { useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 
 const navigation = [
-  { href: "/services", label: "Services" },
+  { href: "/categories/foreign-visas", label: "Foreign visas" },
+  { href: "/services", label: "All services" },
   { href: "/fees", label: "Fees" },
-  { href: "/updates", label: "Updates" },
   { href: "/offices", label: "Offices" },
-  { href: "/saved", label: "Saved" },
+  { href: "/updates", label: "Updates" },
   { href: "/assistant", label: "Find a guide" },
 ];
 

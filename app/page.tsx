@@ -8,7 +8,8 @@ const popular = [
   { label: "Passport", href: "/services/passport-renewal" },
   { label: "NIN", href: "/categories/identity" },
   { label: "BVN", href: "/categories/banking" },
-  { label: "Travel", href: "/categories/international-travel" },
+  { label: "Foreign visas", href: "/categories/foreign-visas" },
+  { label: "Nigeria travel", href: "/categories/international-travel" },
   { label: "JAMB", href: "/categories/education" },
   { label: "Driver's licence", href: "/categories/driving" },
   { label: "CAC", href: "/categories/business" },
@@ -64,6 +65,28 @@ export default function HomePage() {
           <div><span aria-hidden="true">02</span><strong>Choose the right route</strong><small>Online, physical or a combination of both.</small></div>
           <div><span aria-hidden="true">03</span><strong>Pay only where official</strong><small>Source-linked fees and official payment routes.</small></div>
           <div><span aria-hidden="true">04</span><strong>Know what happens next</strong><small>Follow-up, collection and support guidance.</small></div>
+        </div>
+      </section>
+
+      <section className="section home-category-shortcuts">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Browse directly</span>
+              <h2>Go straight to the service area you need.</h2>
+            </div>
+            <Link href="/services">See all services →</Link>
+          </div>
+          <div className="home-category-grid">
+            <Link className="home-category-card visa-card" href="/categories/foreign-visas"><span>Travel abroad</span><strong>Foreign visas</strong><small>UK, US, Canada, Schengen, UAE, South Africa, China and more.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/international-travel"><span>Travel to / from Nigeria</span><strong>Nigeria travel</strong><small>Nigeria visas, Yellow Card, ECOWAS certificate and border forms.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/identity"><span>Identity</span><strong>NIN services</strong><small>Enrolment, corrections and NIN slip services.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/banking"><span>Banking identity</span><strong>BVN services</strong><small>Get, retrieve or correct BVN and use BVN from abroad.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/education"><span>Education</span><strong>JAMB, WAEC & NECO</strong><small>Registration, results, certificates and admission processes.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/youth-service"><span>Youth service</span><strong>NYSC</strong><small>Registration, mobilisation, relocation and certificates.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/business"><span>Business</span><strong>CAC services</strong><small>Business names, companies and corporate filings.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/driving"><span>Driving</span><strong>Driver's licence</strong><small>New, renewal, reissue and class changes.</small><i>→</i></Link>
+          </div>
         </div>
       </section>
 

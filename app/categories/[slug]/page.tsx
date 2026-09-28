@@ -77,6 +77,24 @@ export default async function CategoryPage({
             <div><strong>{services.filter((service) => service.status === "conflict").length}</strong><span>official-source conflicts</span></div>
           </div>
 
+          {category.name === "Foreign visas" ? (
+            <section className="visa-country-picker" aria-labelledby="visa-country-picker-title">
+              <div>
+                <span className="eyebrow">Choose destination</span>
+                <h2 id="visa-country-picker-title">Where are you travelling to?</h2>
+                <p>Pick a country to go straight to its Nigerian-applicant visa guide.</p>
+              </div>
+              <div className="visa-country-grid">
+                {services.map((service) => (
+                  <Link key={service.slug} href={"/services/" + service.slug}>
+                    <strong>{service.shortTitle.replace(/ visa.*$/i, "").replace(/ visitor.*$/i, "")}</strong>
+                    <span>Requirements, fees & application →</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
           <div className="section-heading category-page-heading">
             <div>
               <span className="eyebrow">Published guidance</span>

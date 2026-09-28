@@ -16,6 +16,7 @@ import { ForeignVisaFaqs } from "@/components/foreign-visa-faqs";
 import { ServiceAftercare } from "@/components/service-aftercare";
 import { GuideQuickNav } from "@/components/guide-quick-nav";
 import { StatusBadge } from "@/components/status-badge";
+import { categorySlug } from "@/lib/category";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getSiteUrl } from "@/lib/site";
@@ -65,9 +66,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     .slice(0, 4);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
+  const categoryHref = "/categories/" + categorySlug(service.category);
   const breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
+    { label: service.category, href: categoryHref },
     { label: service.shortTitle },
   ];
 
@@ -77,7 +80,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: base },
       { "@type": "ListItem", position: 2, name: "Services", item: base + "/services" },
-      { "@type": "ListItem", position: 3, name: service.shortTitle, item: pageUrl },
+      { "@type": "ListItem", position: 3, name: service.category, item: base + categoryHref },
+      { "@type": "ListItem", position: 4, name: service.shortTitle, item: pageUrl },
     ],
   };
 
@@ -101,7 +105,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="guide-hero-grid">
             <div>
               <div className="guide-meta">
-                <span>{service.category}</span>
+                <Link href={categoryHref}>{service.category}</Link>
                 <span>•</span>
                 <span>{agency?.shortName}</span>
               </div>
@@ -205,17 +209,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {related.length ? (
-        <section className="section related-section">
-          <div className="container">
-            <span className="eyebrow">Keep going</span>
-            <h2>Related services</h2>
-            <div className="related-links">
-              {related.map((item) => item ? <Link key={item.slug} href={"/services/" + item.slug}>{item.shortTitle} <span aria-hidden="true">→</span></Link> : null)}
-            </div>
+      <section className="section related-section">
+        <div className="container">
+          <div className="category-return">
+            <Link href={categoryHref}>← Back to all {service.category} guides</Link>
+            <Link href="/services">Browse all services →</Link>
           </div>
-        </section>
-      ) : null}
+          {related.length ? (
+            <>
+              <span className="eyebrow">Keep going</span>
+              <h2>Related services</h2>
+              <div className="related-links">
+                {related.map((item) => item ? <Link key={item.slug} href={"/services/" + item.slug}>{item.shortTitle} <span aria-hidden="true">→</span></Link> : null)}
+              </div>
+            </>
+          ) : null}
+        </div>
+      </section>
     </>
   );
 }
