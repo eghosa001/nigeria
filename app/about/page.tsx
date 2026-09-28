@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "How verification works",
   description: "How GovGuide Nigeria verifies government service information and handles conflicting sources.",
 };
