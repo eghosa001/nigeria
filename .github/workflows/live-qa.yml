@@ -1,0 +1,35 @@
+name: Live Deployment QA
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  live-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      LIVE_BASE_URL: https://mynigeriaguide.aighewieghosa111.workers.dev
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - name: Wait for Cloudflare to publish current content
+        shell: bash
+        run: |
+          for i in {1..24}; do
+            body="$(curl -fsS "$LIVE_BASE_URL/services/nin-date-of-birth-modification" || true)"
+            if echo "$body" | grep -q "28,574"; then
+              echo "Current deployment detected."
+              exit 0
+            fi
+            echo "Waiting for current Cloudflare deployment ($i/24)..."
+            sleep 10
+          done
+          echo "Latest content was not visible on the live Worker in time."
+          exit 1
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --config playwright.live.config.ts tests/smoke.spec.ts tests/live-deployment.spec.ts
