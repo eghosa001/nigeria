@@ -109,11 +109,27 @@ GA4_PROPERTY_ID=
 GA4_SERVICE_ACCOUNT_EMAIL=
 GA4_SERVICE_ACCOUNT_PRIVATE_KEY=
 MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY=
+MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN=
 ```
 
-Keep the private key and admin analytics key server-side. The service account must have read access to the selected GA4 property.
+Keep the private key, admin passphrase and GitHub token server-side. The GitHub token is used only by protected guide editing and must be a fine-grained token limited to `eghosa001/nigeria` with **Contents: read/write** and **Pull requests: read/write**. The service account must have read access to the selected GA4 property.
 
-MyNigeriaGuide's public guides work without these analytics values, but the Visits dashboard intentionally reports setup as incomplete until they are present.
+MyNigeriaGuide's public guides work without these private values. The Visits dashboard intentionally reports setup as incomplete until its analytics values are present; guide editing remains locked/setup-only until the admin passphrase and GitHub token are configured.
+
+## Protected guide editing
+
+The admin guide editor is deliberately review-only:
+
+1. open a guide under `/admin/services/<slug>`;
+2. unlock editing with `MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY`;
+3. edit the structured guide fields;
+4. choose **Create review change**;
+5. the Worker creates a dedicated GitHub branch and pull request;
+6. production remains unchanged until that pull request is reviewed, its checks are green, and it is merged.
+
+The browser never receives `MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN`. Public visitors continue to read the checked-in `data/services.json` catalog and do not generate GitHub, KV, D1 or database reads.
+
+If GitHub proposal creation fails, the editor must show an error and must not claim that production changed.
 
 ## KV rule
 
