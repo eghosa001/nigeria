@@ -20,7 +20,7 @@ async function check(url) {
     const response = await fetch(url, {
       method: "GET",
       redirect: "follow",
-      headers: { "User-Agent": "GovGuideNigeria-LinkAudit/1.0" },
+      headers: { "User-Agent": "MyNigeriaGuide-LinkAudit/1.0" },
       signal: AbortSignal.timeout(15000),
     });
 

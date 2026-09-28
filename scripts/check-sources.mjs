@@ -17,7 +17,7 @@ function record(monitor, message, definitive = false) {
 async function check(monitor) {
   try {
     const response = await fetch(monitor.url, {
-      headers: { "User-Agent": "GovGuideNigeria-SourceMonitor/1.0" },
+      headers: { "User-Agent": "MyNigeriaGuide-SourceMonitor/1.0" },
       signal: AbortSignal.timeout(15000),
       redirect: "follow",
     });
@@ -75,7 +75,7 @@ if (warnings.length) {
 }
 
 if (failures.length) {
-  console.error("\nGovGuide definitive source review required:");
+  console.error("\nMyNigeriaGuide definitive source review required:");
   for (const failure of failures.sort()) console.error("- " + failure);
   process.exit(1);
 }

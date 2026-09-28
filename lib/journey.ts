@@ -77,8 +77,8 @@ export function getServiceJourney(service: Service): ServiceJourney {
       physicalLabel: "A physical step is required",
       alternativeLabel: assisted ? "Assisted / physical route" : "If you cannot finish online",
       alternativeDetail: assisted
-        ? "The official process also involves an agency, institution, accredited centre or government office. Use GovGuide's official office links rather than an unofficial agent."
-        : "Use the responsible agency's official office/contact channel. GovGuide does not currently confirm a separate walk-in-only application route for this service.",
+        ? "The official process also involves an agency, institution, accredited centre or government office. Use MyNigeriaGuide's official office links rather than an unofficial agent."
+        : "Use the responsible agency's official office/contact channel. MyNigeriaGuide does not currently confirm a separate walk-in-only application route for this service.",
     };
   }
 
@@ -108,7 +108,7 @@ export function getServiceJourney(service: Service): ServiceJourney {
       physicalStatus: "required",
       physicalLabel: "Plan for a physical or institution-assisted step",
       alternativeLabel: "Online alternative",
-      alternativeDetail: "GovGuide does not currently have enough official evidence to claim this service can be completed fully online.",
+      alternativeDetail: "MyNigeriaGuide does not currently have enough official evidence to claim this service can be completed fully online.",
     };
   }
 
@@ -121,6 +121,6 @@ export function getServiceJourney(service: Service): ServiceJourney {
     physicalStatus: "not-stated",
     physicalLabel: "Physical requirement is not clearly stated",
     alternativeLabel: "Alternative route",
-    alternativeDetail: "Where the official sources do not confirm an alternative, GovGuide does not invent one. Use the agency's official portal/contact details for clarification.",
+    alternativeDetail: "Where the official sources do not confirm an alternative, MyNigeriaGuide does not invent one. Use the agency's official portal/contact details for clarification.",
   };
 }

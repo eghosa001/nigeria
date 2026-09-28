@@ -2,7 +2,7 @@ import Link from "next/link";
 import { GuideAssistant } from "@/components/guide-assistant";
 import { ServiceSearch } from "@/components/search";
 import { ServiceCard } from "@/components/service-card";
-import { govGuideUpdates, updateTypeLabel } from "@/data/updates";
+import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { categorySlug } from "@/lib/category";
 import { agencies, categories, publicServices } from "@/lib/data";
 
@@ -94,7 +94,7 @@ export default function HomePage() {
             <Link href="/updates">View all updates →</Link>
           </div>
           <div className="home-updates-grid">
-            {govGuideUpdates.slice(0, 3).map((update) => (
+            {myNigeriaGuideUpdates.slice(0, 3).map((update) => (
               <article className="home-update-card" key={update.id}>
                 <div>
                   <span>{updateTypeLabel(update.type)}</span>

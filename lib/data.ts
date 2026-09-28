@@ -148,9 +148,9 @@ const published: Service[] = [
   }),
   guide({
     slug:"nin-date-of-birth-modification", title:"How to change your date of birth on NIN", shortTitle:"NIN date-of-birth correction",
-    summary:"NIMC currently presents conflicting official fee information for date-of-birth modification, so GovGuide shows the conflict rather than guessing.",
+    summary:"NIMC currently presents conflicting official fee information for date-of-birth modification, so MyNigeriaGuide shows the conflict rather than guessing.",
     category:"Identity", agencySlug:"nimc", feeLabel:"Official sources require re-check",
-    feeNote:"NIMC's live fee information has not been sufficiently consistent for GovGuide to present one amount as definitive.",
+    feeNote:"NIMC's live fee information has not been sufficiently consistent for MyNigeriaGuide to present one amount as definitive.",
     status:"conflict", officialPortal:"https://nimc.gov.ng",
     requirements:["Existing NIN","Supporting civil documents for the requested correction","Payment only through the currently approved NIMC channel"],
     steps:["Check the live NIMC fee/process page immediately before payment.","Follow the official NIMC modification route.","Keep payment and submission evidence."],
@@ -691,7 +691,7 @@ const published: Service[] = [
     status:"verified", officialPortal:"https://eras.eirs.gov.ng/",
     requirements:["Identity or business registration details required by the official Tax ID route","For individuals, identity data should match the government identity record used by the Tax ID system"],
     steps:["Open the Edo Revenue Administration System or the Tax ID link published by EIRS.","Choose the applicable taxpayer registration or verification route.","Complete identity/business verification through the official system.","Keep the official Tax ID/verification result for tax transactions."],
-    notes:["EIRS has published Tax ID registration access through its offices and official JTB/JRB-linked channels.","Office structures can change, so GovGuide links the live EIRS channels instead of reproducing an old office list."],
+    notes:["EIRS has published Tax ID registration access through its offices and official JTB/JRB-linked channels.","Office structures can change, so MyNigeriaGuide links the live EIRS channels instead of reproducing an old office list."],
     sources:[S.edoTaxId,S.edoPortal],
   }),
   guide({
@@ -732,7 +732,7 @@ const published: Service[] = [
     status:"conflict", officialPortal:"https://nimc.gov.ng/nin/nin-slip-reissuance",
     requirements:["For loss/theft: recent police report, court affidavit and photo ID","For damage: the damaged NIN slip","For post-modification reissue: the modification transaction slip","Evidence of the current official payment"],
     steps:["Check the NIMC Fees page immediately before paying.","Prepare the documents for the reason you need re-issuance.","Use the NIMC process and retain the payment evidence.","Collect or download the reissued slip through the approved NIMC route."],
-    notes:["GovGuide shows the live fee conflict rather than choosing one figure silently."],
+    notes:["MyNigeriaGuide shows the live fee conflict rather than choosing one figure silently."],
     sources:[S.nimcFees,S.nimcReissue],
   }),
   guide({

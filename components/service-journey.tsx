@@ -49,7 +49,7 @@ export function ServiceJourney({ service }: { service: Service }) {
       </div>
 
       <div className="journey-trust-note">
-        <strong>What GovGuide will not do:</strong> we do not label an unofficial agent, cybercafé or third-party payment page as an “alternative” unless the responsible agency itself authorises that route.
+        <strong>What MyNigeriaGuide will not do:</strong> we do not label an unofficial agent, cybercafé or third-party payment page as an “alternative” unless the responsible agency itself authorises that route.
       </div>
     </section>
   );

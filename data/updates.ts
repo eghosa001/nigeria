@@ -1,4 +1,4 @@
-export type GovGuideUpdate = {
+export type MyNigeriaGuideUpdate = {
   id: string;
   date: string;
   type: "fee" | "process" | "deadline" | "clarification";
@@ -10,7 +10,7 @@ export type GovGuideUpdate = {
   affectedServices: string[];
 };
 
-export const govGuideUpdates: GovGuideUpdate[] = [
+export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
     id: "jamb-2026-fee-clarification",
     date: "2026-03-02",
@@ -68,7 +68,7 @@ export const govGuideUpdates: GovGuideUpdate[] = [
   },
 ];
 
-export function updateTypeLabel(type: GovGuideUpdate["type"]) {
+export function updateTypeLabel(type: MyNigeriaGuideUpdate["type"]) {
   if (type === "fee") return "Fee update";
   if (type === "deadline") return "Deadline";
   if (type === "clarification") return "Official clarification";

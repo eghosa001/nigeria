@@ -51,7 +51,7 @@ for (const service of publicServices) {
 }
 
 console.log(
-  "Checked " + publicServices.length + " public GovGuide service guides for minimum usefulness.",
+  "Checked " + publicServices.length + " public MyNigeriaGuide service guides for minimum usefulness.",
 );
 
 if (warnings.length) {

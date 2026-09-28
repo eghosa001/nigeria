@@ -1,4 +1,4 @@
--- Optional GovGuide persistence for Cloudflare D1.
+-- Optional MyNigeriaGuide persistence for Cloudflare D1.
 -- The public website does not require this database.
 
 CREATE TABLE IF NOT EXISTS correction_reports (
