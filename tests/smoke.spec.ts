@@ -1,5 +1,50 @@
 import { expect, test } from "@playwright/test";
 
+test("visits unlock displays reports immediately and can be locked again", async ({ page }) => {
+  // Keep the real form and rendering; only replace the external analytics boundary.
+  let authenticated = false;
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  await page.route("**/api/admin/analytics-access", async (route) => {
+    if (route.request().method() === "DELETE") {
+      authenticated = false;
+    } else {
+      authenticated = route.request().postDataJSON().password === "qa-only-passphrase";
+    }
+    await route.fulfill({ json: { authenticated } });
+  });
+  await page.route("**/api/admin/analytics?*", async (route) => {
+    if (!authenticated) {
+      await route.fulfill({ status: 401, json: { configured: true, authenticated: false } });
+      return;
+    }
+    await route.fulfill({ json: { configured: true, authenticated: true, data: {
+      range: "30d", generatedAt: "2026-09-28T12:00:00Z",
+      summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
+      realtimeActiveUsers: 2,
+      daily: [{ date: "20260928", users: 12, sessions: 18, pageViews: 35 }],
+      countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
+      pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
+      referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
+    } } });
+  });
+
+  await page.goto("/admin/visits");
+  await page.getByLabel("Analytics passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock visits" }).click();
+  await expect(page.getByRole("button", { name: "Lock analytics" })).toBeVisible();
+  await expect(page.locator(".analytics-metric-grid")).toContainText("12");
+  await expect(page.locator(".analytics-metric-grid")).toContainText("18");
+  await expect(page.locator(".analytics-metric-grid")).toContainText("35");
+  await expect(page.getByLabel("Daily page views").locator("[title]")).toHaveAttribute("title", /35 page views/);
+  await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
+  await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
+  await expect(page.locator(".analytics-page-table")).toContainText("Passport renewal");
+  await page.getByRole("button", { name: "Lock analytics" }).click();
+  await expect(page.getByLabel("Analytics passphrase")).toBeEmpty();
+  expect(errors).toEqual([]);
+});
+
 test("plain-language search finds the right service", async ({ page }) => {
   await page.goto("/");
   await page.getByLabel("What do you want to do?").fill("my passport expired");

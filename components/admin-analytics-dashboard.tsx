@@ -58,8 +58,9 @@ export function AdminAnalyticsDashboard() {
 
   async function login(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const formElement = event.currentTarget;
     setMessage("");
-    const form = new FormData(event.currentTarget);
+    const form = new FormData(formElement);
     const response = await fetch("/api/admin/analytics-access", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -70,7 +71,7 @@ export function AdminAnalyticsDashboard() {
       setMessage(body.error ?? "Access denied.");
       return;
     }
-    event.currentTarget.reset();
+    formElement.reset();
     await load(range);
   }
 
