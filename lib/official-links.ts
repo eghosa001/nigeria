@@ -48,6 +48,11 @@ const exactGuidanceOverrides: Record<string, string> = {
   "nigeria-landing-exit-card": "https://immigration.gov.ng/lecard/",
   "fct-file-individual-tax-return": "https://fctirs.gov.ng/howto/steps-on-filling-return/",
   "fct-verify-tax-clearance": "https://fctirs.gov.ng/howto/tcc-verification/",
+  "uk-standard-visitor-visa": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
+  "us-b1-b2-visitor-visa": "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html",
+  "canada-visitor-visa": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/apply-visitor-visa.html",
+  "france-schengen-short-stay-visa": "https://www.france-visas.gouv.fr/web/france-visas/nigeria",
+  "australia-visitor-visa-600": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600/tourist-stream-overseas",
 };
 
 const actionOverrides: Record<string, string | null> = {
@@ -72,6 +77,11 @@ const actionOverrides: Record<string, string | null> = {
   "waec-correct-certificate-error": null,
   "npc-digital-birth-certificate-reissuance": "https://www.reissuance.nationalpopulation.gov.ng/",
   "npc-birth-certificate-reprint": "https://www.certificatereprint.nationalpopulation.gov.ng/",
+  "uk-standard-visitor-visa": "https://www.gov.uk/standard-visitor/apply-standard-visitor-visa",
+  "us-b1-b2-visitor-visa": "https://ceac.state.gov/GenNIV/",
+  "canada-visitor-visa": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/portal-application-process.html",
+  "france-schengen-short-stay-visa": "https://france-visas.gouv.fr/en/web/france-visas/online-application",
+  "australia-visitor-visa-600": "https://immi.homeaffairs.gov.au/help-support/applying-online-or-on-paper/online/apply-and-manage-your-application",
 };
 
 const transactionHosts = new Set([
