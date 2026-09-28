@@ -1,4 +1,4 @@
-import serviceRecords from "@/data/services.json";
+import serviceRecords from "@/data/services.json" with { type: "json" };
 import type { Agency, Service, VerificationStatus } from "@/lib/types";
 import { validateServiceCatalog } from "@/lib/service-records";
 
