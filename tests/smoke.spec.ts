@@ -120,5 +120,5 @@ test("BVN change and Nigeria visa guides are discoverable", async ({ page }) => 
   await expect(page.getByRole("heading", { name: "Step-by-step instructions" })).toBeVisible();
 
   await page.goto("/services/bvn-change-details");
-  await expect(page.getByText(/phone number may be changed only once/i).first()).toBeVisible();
+  await expect(page.locator("#notes")).toContainText(/phone number may be changed only once/i);
 });
