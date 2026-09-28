@@ -48,6 +48,7 @@ export default function UpdatesPage() {
             Important fee, process and official-guidance changes that affect GovGuide services.
             Every entry is dated and links to the government source used to verify it.
           </p>
+          <a className="text-link rss-link" href="/updates.xml">Subscribe to verified updates via RSS →</a>
 
           <div className="updates-stack">
             {govGuideUpdates.map((update) => {
