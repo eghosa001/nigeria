@@ -29,14 +29,20 @@ Cloudflare/vinext compatibility:
 
 ```bash
 npm run check:cloudflare
-npm run build:vinext
+npm run build
 npm run start:vinext
 ```
 
-The normal Next.js build is also retained as an independent compatibility check:
+The default production build is the Cloudflare/vinext build:
 
 ```bash
 npm run build
+```
+
+The original Next.js production build remains available for independent QA:
+
+```bash
+npm run build:next
 ```
 
 ## First Cloudflare deployment
@@ -66,16 +72,16 @@ npm run deploy:cloudflare
 If Cloudflare asks for a separate build command, use:
 
 ```bash
-npm run build:vinext
+npm run build
 ```
 
 and deploy the generated Workers config with:
 
 ```bash
-npx @vinext/cloudflare deploy
+npm run deploy:cloudflare
 ```
 
-For Cloudflare Workers Builds, use `npm run build:vinext` as the Build command and `npm run deploy:cloudflare` as the Deploy command. The Worker created in the Cloudflare dashboard must be named exactly `mynigeriaguide` so it matches `wrangler.jsonc`.
+For Cloudflare Workers Builds, use `npm run build` as the Build command and `npm run deploy:cloudflare` as the Deploy command. The Worker created in the Cloudflare dashboard must be named exactly `mynigeriaguide` so it matches `wrangler.jsonc`.
 
 ## Environment variables
 
