@@ -27,8 +27,19 @@ test("watching a guide persists on the device", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Passport renewal" })).toBeVisible();
 });
 
+test("fee directory and category pages are discoverable", async ({ page }) => {
+  await page.goto("/fees");
+  await expect(page.getByRole("heading", { name: "Nigeria government fees and service charges" })).toBeVisible();
+  await page.getByLabel("Search fees").fill("passport");
+  await expect(page.getByRole("listitem").filter({ hasText: "Passport renewal" }).first()).toBeVisible();
+
+  await page.goto("/categories/education");
+  await expect(page.getByRole("heading", { name: "Education services in Nigeria" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /JAMB|WAEC|NECO/i }).first()).toBeVisible();
+});
+
 test("core pages do not overflow horizontally", async ({ page }) => {
-  for (const path of ["/", "/services", "/services/passport-renewal", "/offices", "/assistant"]) {
+  for (const path of ["/", "/services", "/fees", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
     await page.goto(path);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow, path + " horizontal overflow").toBeLessThanOrEqual(1);
