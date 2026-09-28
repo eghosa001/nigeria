@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { officeDirectories } from "@/lib/offices";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/offices" },
   title: "Official office and centre finders",
   description: "Find official Nigerian government office and service-centre directories without relying on copied or stale addresses.",
 };
