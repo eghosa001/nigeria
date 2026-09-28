@@ -60,15 +60,21 @@ export async function POST(request: Request) {
   }
 
   if (!verifyAdminPassword(body.password ?? "")) {
-    return Response.json({ error: "Incorrect admin passphrase." }, { status: 401, headers: { "Cache-Control": "private, no-store" } });
+    recordAdminLoginFailure(request);
+    return Response.json({ error: "Incorrect admin passphrase." }, { status: 401, headers: privateHeaders });
   }
+
+  clearAdminLoginFailures(request);
 
   const store = await cookies();
   store.set(adminCookieName(), adminCookieValue(), adminCookieOptions);
   return Response.json({ authenticated: true }, { headers: { "Cache-Control": "private, no-store" } });
 }
 
-export async function DELETE() {
+export async function DELETE(request: Request) {
+  if (!sameOrigin(request)) {
+    return Response.json({ error: "Cross-origin admin requests are not allowed." }, { status: 403, headers: privateHeaders });
+  }
   const store = await cookies();
   store.set(adminCookieName(), "", { ...adminCookieOptions, maxAge: 0 });
   return Response.json({ authenticated: false }, { headers: { "Cache-Control": "private, no-store" } });

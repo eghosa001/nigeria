@@ -379,3 +379,25 @@ test("service links distinguish exact guidance from transaction portal", async (
   await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /immigration\.gov\.ng\/info-center\/tourism-visa-f5a/);
   await expect(page.locator('a[data-official-purpose="action"]')).toHaveAttribute("href", /visa\.immigration\.gov\.ng/);
 });
+
+
+test("admin login rate limit blocks repeated bad passwords", async ({ request }) => {
+  const headers = {
+    "Content-Type": "application/json",
+    "Sec-Fetch-Site": "same-origin",
+    "User-Agent": "mynigeriaguide-rate-limit-test",
+  };
+  for (let attempt = 0; attempt < 8; attempt++) {
+    const response = await request.post("/api/admin/access", {
+      headers,
+      data: { password: "definitely-wrong" },
+    });
+    expect(response.status()).toBe(401);
+  }
+  const blocked = await request.post("/api/admin/access", {
+    headers,
+    data: { password: "definitely-wrong" },
+  });
+  expect(blocked.status()).toBe(429);
+  expect(blocked.headers()["retry-after"]).toBeTruthy();
+});
