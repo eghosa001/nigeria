@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { githubAdminConfigured } from "@/lib/admin-github";
 import {
   adminAccessConfigured,
   adminCookieName,
@@ -9,15 +10,19 @@ import {
 } from "@/lib/admin-access";
 
 export async function GET() {
+  const accessConfigured = adminAccessConfigured();
+  const githubConfigured = githubAdminConfigured();
   return Response.json({
-    configured: adminAccessConfigured(),
-    authenticated: await hasAdminSession(),
+    configured: accessConfigured && githubConfigured,
+    accessConfigured,
+    githubConfigured,
+    authenticated: accessConfigured && githubConfigured ? await hasAdminSession() : false,
   }, { headers: { "Cache-Control": "no-store" } });
 }
 
 export async function POST(request: Request) {
-  if (!adminAccessConfigured()) {
-    return Response.json({ error: "Admin editing access is not configured." }, { status: 503 });
+  if (!adminAccessConfigured() || !githubAdminConfigured()) {
+    return Response.json({ error: "Admin editing is not fully configured." }, { status: 503 });
   }
 
   let body: { password?: string };
