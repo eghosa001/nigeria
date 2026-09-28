@@ -612,7 +612,7 @@ const published: Service[] = [
     summary:"NECO e-Verify supports institutional single/bulk verification and API integration.",
     category:"Education", agencySlug:"neco", feeLabel:"Verification payment/token required",
     status:"verified", officialPortal:"https://everify.neco.gov.ng/index.php",
-    requirements:["Institution e-Verify account","Candidate examination details","Payment token/RRR as applicable"],
+    requirements:["Institution e-Verify account","Candidate full name, NECO examination number, examination year and examination type used to locate the result record","Payment token/RRR as applicable"],
     steps:["Create or sign in to the institution e-Verify account.","Generate/validate the required payment token.","Submit the candidate verification request or use the supported institutional/API route."],
     notes:["NECO states that institutions can carry out single or bulk verification and can integrate through its e-Verify API."], sources:[S.necoVerify],
   }),
