@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { agencies, publicServices } from "@/lib/data";
+import { categorySlug } from "@/lib/category";
+import { agencies, categories, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -7,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     ["", "weekly", 1],
     ["/services", "weekly", 0.9],
+    ["/fees", "weekly", 0.9],
     ["/assistant", "weekly", 0.7],
     ["/offices", "monthly", 0.7],
     ["/about", "monthly", 0.5],
@@ -19,6 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages.map(([path, changeFrequency, priority]) => ({ url: base + path, changeFrequency, priority })),
+    ...categories.map((category) => ({
+      url: base + "/categories/" + categorySlug(category.name),
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
     ...publicServices.map((service) => ({
       url: base + "/services/" + service.slug,
       lastModified: service.lastVerified,
