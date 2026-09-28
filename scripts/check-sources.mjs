@@ -6,33 +6,35 @@ const monitors = JSON.parse(
 
 const failures = [];
 const warnings = [];
+const queue = [...monitors];
+const concurrency = 5;
 
 function record(monitor, message, definitive = false) {
   if (definitive && monitor.strict !== false) failures.push(monitor.name + ": " + message);
   else warnings.push(monitor.name + ": " + message);
 }
 
-for (const monitor of monitors) {
+async function check(monitor) {
   try {
     const response = await fetch(monitor.url, {
       headers: { "User-Agent": "GovGuideNigeria-SourceMonitor/1.0" },
-      signal: AbortSignal.timeout(20000),
+      signal: AbortSignal.timeout(15000),
       redirect: "follow",
     });
 
     if (response.status === 404 || response.status === 410) {
       record(monitor, "HTTP " + response.status, true);
-      continue;
+      return;
     }
 
     if (response.status === 401 || response.status === 403 || response.status === 429 || response.status >= 500) {
       record(monitor, "source not reliably readable by runner (HTTP " + response.status + ")");
-      continue;
+      return;
     }
 
     if (!response.ok) {
       record(monitor, "HTTP " + response.status);
-      continue;
+      return;
     }
 
     const body = (await response.text()).replace(/\s+/g, " ");
@@ -49,22 +51,32 @@ for (const monitor of monitors) {
           (missingAll.length ? " (missing: " + missingAll.join(", ") + ")" : ""),
         true,
       );
-    } else {
-      console.log("OK " + monitor.name);
+      return;
     }
+
+    console.log("OK " + monitor.name);
   } catch (error) {
     record(monitor, error instanceof Error ? error.message : String(error));
   }
 }
 
+async function worker() {
+  while (queue.length) {
+    const monitor = queue.shift();
+    if (monitor) await check(monitor);
+  }
+}
+
+await Promise.all(Array.from({ length: concurrency }, () => worker()));
+
 if (warnings.length) {
   console.warn("\nSource warnings requiring periodic human review:");
-  for (const warning of warnings) console.warn("- " + warning);
+  for (const warning of warnings.sort()) console.warn("- " + warning);
 }
 
 if (failures.length) {
   console.error("\nGovGuide definitive source review required:");
-  for (const failure of failures) console.error("- " + failure);
+  for (const failure of failures.sort()) console.error("- " + failure);
   process.exit(1);
 }
 
