@@ -7,6 +7,7 @@ import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
+import { ServiceAftercare } from "@/components/service-aftercare";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
@@ -139,12 +140,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </ol>
             </section>
 
-            {service.timeline ? (
-              <section>
-                <h2>Official service timeline</h2>
-                <div className="info-box">{service.timeline}</div>
-              </section>
-            ) : null}
+            <ServiceAftercare service={service} />
 
             <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GUIDE} />
 
