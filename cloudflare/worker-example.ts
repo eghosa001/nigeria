@@ -1,5 +1,14 @@
+interface D1PreparedStatement {
+  bind(...values: unknown[]): D1PreparedStatement;
+  run(): Promise<unknown>;
+}
+
+interface D1DatabaseLike {
+  prepare(query: string): D1PreparedStatement;
+}
+
 export interface Env {
-  DB: D1Database;
+  DB: D1DatabaseLike;
   REPORT_TOKEN?: string;
 }
 
@@ -20,7 +29,7 @@ export default {
 
     let body: Record<string, unknown>;
     try {
-      body = await request.json();
+      body = await request.json() as Record<string, unknown>;
     } catch {
       return Response.json({ error: "Invalid JSON" }, { status: 400 });
     }
