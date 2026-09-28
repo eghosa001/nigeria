@@ -108,14 +108,25 @@ const transactionHosts = new Set([
   "portal.immigration.gov.ng",
 ]);
 
-const genericHomeUrls = new Set([
-  "https://www.jamb.gov.ng/",
-  "https://jamb.gov.ng/",
-  "https://www.waecnigeria.org/",
-  "https://waecnigeria.org/",
-  "https://www.nationalpopulation.gov.ng/",
-  "https://nationalpopulation.gov.ng/",
-  "https://fctirs.gov.ng/",
+const genericAgencyHosts = new Set([
+  "immigration.gov.ng", "www.immigration.gov.ng",
+  "nimc.gov.ng", "www.nimc.gov.ng",
+  "cbn.gov.ng", "www.cbn.gov.ng",
+  "health.gov.ng", "www.health.gov.ng",
+  "npf.gov.ng", "www.npf.gov.ng",
+  "inecnigeria.org", "www.inecnigeria.org",
+  "frsc.gov.ng", "www.frsc.gov.ng",
+  "cac.gov.ng", "www.cac.gov.ng",
+  "jamb.gov.ng", "www.jamb.gov.ng",
+  "waecnigeria.org", "www.waecnigeria.org",
+  "neco.gov.ng", "www.neco.gov.ng",
+  "nysc.gov.ng", "www.nysc.gov.ng",
+  "nationalpopulation.gov.ng", "www.nationalpopulation.gov.ng",
+  "nrs.gov.ng", "www.nrs.gov.ng",
+  "fctirs.gov.ng", "www.fctirs.gov.ng",
+  "eirs.gov.ng", "www.eirs.gov.ng",
+  "airs.an.gov.ng", "www.airs.an.gov.ng",
+  "revenue.lagosstate.gov.ng",
 ]);
 
 function normalized(raw: string) {
@@ -129,8 +140,12 @@ function normalized(raw: string) {
 }
 
 function isGenericHomepage(raw: string) {
-  const n = normalized(raw);
-  return genericHomeUrls.has(n);
+  try {
+    const url = new URL(raw);
+    return genericAgencyHosts.has(url.host) && (url.pathname === "/" || url.pathname === "");
+  } catch {
+    return false;
+  }
 }
 
 function sourceScore(source: Source) {

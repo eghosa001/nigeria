@@ -99,15 +99,7 @@ test("every guide is structured for a viewer completing the service", async ({ p
 
 test("official service link is never a generic agency homepage", async ({ page }) => {
   test.setTimeout(180_000);
-  const forbidden = new Set([
-    "https://www.jamb.gov.ng/",
-    "https://jamb.gov.ng/",
-    "https://www.waecnigeria.org/",
-    "https://waecnigeria.org/",
-    "https://www.nationalpopulation.gov.ng/",
-    "https://nationalpopulation.gov.ng/",
-    "https://fctirs.gov.ng/",
-  ]);
+  const agencyHomepageHosts = new Set(agencies.map((agency) => new URL(agency.website).host));
 
   for (const service of publicServices) {
     await page.goto("/services/" + service.slug, { waitUntil: "domcontentloaded" });
@@ -115,7 +107,9 @@ test("official service link is never a generic agency homepage", async ({ page }
     expect(await links.count(), service.slug + " official service links").toBeGreaterThanOrEqual(1);
     const hrefs = await links.evaluateAll((nodes) => nodes.map((node) => (node as HTMLAnchorElement).href));
     for (const href of hrefs) {
-      expect(forbidden.has(href), service.slug + " should not use a generic agency homepage as its service CTA").toBeFalsy();
+      const url = new URL(href);
+      const isGenericAgencyHomepage = agencyHomepageHosts.has(url.host) && (url.pathname === "/" || url.pathname === "");
+      expect(isGenericAgencyHomepage, service.slug + " should not use a generic agency homepage as its service CTA").toBeFalsy();
     }
   }
 });

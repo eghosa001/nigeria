@@ -14,6 +14,7 @@ import { ServiceAftercare } from "@/components/service-aftercare";
 import { GuideQuickNav } from "@/components/guide-quick-nav";
 import { StatusBadge } from "@/components/status-badge";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
+import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getSiteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -41,6 +42,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const service = getPublicService(slug);
   if (!service) notFound();
+
+  const officialLinks = getOfficialServiceLinks(service);
+  const primaryOfficialLink = officialLinks.actionUrl && officialLinks.actionLabel
+    ? { url: officialLinks.actionUrl, label: officialLinks.actionLabel }
+    : officialLinks.guidanceUrl && officialLinks.guidanceLabel
+      ? { url: officialLinks.guidanceUrl, label: officialLinks.guidanceLabel }
+      : undefined;
 
   const agency = getAgency(service.agencySlug);
   const related = publicServices
@@ -106,9 +114,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span>Current fee / status</span>
               <strong>{service.feeLabel}</strong>
               {service.feeNote ? <p>{service.feeNote}</p> : null}
-              {service.officialPortal ? (
-                <a className="button" href={service.officialPortal} target="_blank" rel="noreferrer">
-                  Continue on official portal ↗
+              {primaryOfficialLink ? (
+                <a className="button official-service-link" href={primaryOfficialLink.url} target="_blank" rel="noreferrer">
+                  {primaryOfficialLink.label}
                 </a>
               ) : null}
               <small>MyNigeriaGuide does not collect this payment.</small>
