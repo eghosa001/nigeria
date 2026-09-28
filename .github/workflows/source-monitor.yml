@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "lib/data.ts"
+      - "data/services.json"
       - "lib/offices.ts"
       - "lib/official-links.ts"
       - "data/source-monitors.json"
