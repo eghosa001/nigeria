@@ -6,8 +6,8 @@ GovGuide turns official government information into clear, source-linked guides 
 
 ## Current product
 
-- 65 public source-linked guides across 14 federal, state and FCT agencies/services
-- 12 additional guides held in the editorial review queue
+- 76 public source-linked guides across 14 federal, state and FCT agencies/services
+- 1 additional guide held in the editorial review queue because its current official fee evidence is not strong enough
 - Plain-language searchable public service directory with category/status filters and sorting
 - Agency/category navigation plus official office/centre finder links
 - Dynamic service-guide pages with breadcrumbs, FAQs, sharing, WhatsApp and local saved-guide watchlist
@@ -18,6 +18,10 @@ GovGuide turns official government information into clear, source-linked guides 
 - Google Analytics and Search Console hooks
 - Weekly source-integrity GitHub Action
 - GitHub CI for TypeScript/production builds plus Playwright desktop/mobile browser QA
+- Automated WCAG A/AA serious/critical accessibility checks
+- Weekly full official-link audit in addition to key fee/process marker monitoring
+- Production security headers and installable web-app manifest
+- Conditional `ads.txt` endpoint that stays disabled until AdSense is configured
 - Verified-guide assistant that matches plain-language tasks to published source-linked guides
 - Privacy, terms, editorial, corrections and contact pages
 - Favicon/social preview assets and environment-gated AdSense plumbing
