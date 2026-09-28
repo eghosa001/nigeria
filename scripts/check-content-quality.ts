@@ -2,6 +2,7 @@ import { publicServices } from "../lib/data";
 import { getServiceJourney } from "../lib/journey";
 import { hasExplicitServiceGuidance } from "../lib/service-guidance";
 import { getRequirementDetails } from "../lib/requirement-details";
+import { getStepDetails } from "../lib/step-details";
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -48,6 +49,14 @@ for (const service of publicServices) {
 
   if (service.steps.length < 3) {
     errors.push(prefix + "must contain at least three actionable process steps");
+  }
+
+  const detailedSteps = getStepDetails(service);
+  if (detailedSteps.length !== service.steps.length) {
+    errors.push(prefix + "every process step must have viewer-facing preparation, checkpoint and evidence guidance");
+  }
+  if (detailedSteps.some((step) => !step.stage.trim() || !step.checkpoint.trim() || !step.keep.trim())) {
+    errors.push(prefix + "contains an incomplete detailed process step");
   }
 
   const processText = service.steps.join(" ");

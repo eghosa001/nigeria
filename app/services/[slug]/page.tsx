@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
 import { ServiceRequirements } from "@/components/service-requirements";
+import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceFaqs } from "@/components/service-faqs";
@@ -145,16 +146,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <ServiceRequirements service={service} />
 
-            <section id="steps">
-              <span className="section-number" aria-hidden="true">02</span>
-              <h2>Step-by-step instructions</h2>
-              <p className="guide-section-intro">Follow these steps in order. Where a payment, upload or physical visit is required, complete it only through the official route linked on this guide.</p>
-              <ol className="steps">
-                {service.steps.map((step, index) => (
-                  <li key={step}><span>{index + 1}</span><p>{step}</p></li>
-                ))}
-              </ol>
-            </section>
+            <ServiceSteps service={service} />
 
             <ServiceAftercare service={service} />
 
