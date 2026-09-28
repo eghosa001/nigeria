@@ -6,7 +6,7 @@ export function ServiceJourney({ service }: { service: Service }) {
   const journey = getServiceJourney(service);
 
   return (
-    <section className="journey-section">
+    <section className="journey-section" id="journey">
       <div className="section-heading journey-heading">
         <div>
           <span className="eyebrow">How to get this service</span>
@@ -17,7 +17,8 @@ export function ServiceJourney({ service }: { service: Service }) {
 
       <div className="journey-grid">
         <article className="journey-card journey-card-primary">
-          <span>Recommended start</span>
+          <span className="journey-number">01</span>
+          <span className="journey-label">Recommended start</span>
           <h3>{journey.startLabel}</h3>
           <p>{journey.startDetail}</p>
           {service.officialPortal ? (
@@ -28,7 +29,8 @@ export function ServiceJourney({ service }: { service: Service }) {
         </article>
 
         <article className="journey-card">
-          <span>Physical visit</span>
+          <span className="journey-number">02</span>
+          <span className="journey-label">Physical visit</span>
           <h3>{journey.physicalLabel}</h3>
           <p>
             {journey.physicalStatus === "required"
@@ -41,7 +43,8 @@ export function ServiceJourney({ service }: { service: Service }) {
         </article>
 
         <article className="journey-card">
-          <span>Alternative / fallback</span>
+          <span className="journey-number">03</span>
+          <span className="journey-label">Fallback</span>
           <h3>{journey.alternativeLabel}</h3>
           <p>{journey.alternativeDetail}</p>
           <Link className="text-link" href={"/agencies/" + service.agencySlug}>View agency guidance →</Link>
@@ -49,7 +52,8 @@ export function ServiceJourney({ service }: { service: Service }) {
       </div>
 
       <div className="journey-trust-note">
-        <strong>What MyNigeriaGuide will not do:</strong> we do not label an unofficial agent, cybercafé or third-party payment page as an “alternative” unless the responsible agency itself authorises that route.
+        <span aria-hidden="true">✓</span>
+        <p><strong>Only authorised routes.</strong> We never present an unofficial agent, cybercafé or third-party payment page as an alternative unless the responsible agency authorises it.</p>
       </div>
     </section>
   );

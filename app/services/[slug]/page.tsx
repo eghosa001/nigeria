@@ -99,14 +99,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ShareWatch slug={service.slug} title={service.title} />
             </div>
             <aside className="fee-card">
-              <span>Official fee status</span>
+              <span>Current fee / status</span>
               <strong>{service.feeLabel}</strong>
               {service.feeNote ? <p>{service.feeNote}</p> : null}
               {service.officialPortal ? (
                 <a className="button" href={service.officialPortal} target="_blank" rel="noreferrer">
-                  Open official portal ↗
+                  Continue on official portal ↗
                 </a>
               ) : null}
+              <small>MyNigeriaGuide does not collect this payment.</small>
             </aside>
           </div>
         </div>
@@ -119,19 +120,30 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       ) : null}
 
-      <section className="section">
+      <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
+            <nav className="guide-quick-nav" aria-label="On this page">
+              <span>On this page</span>
+              <a href="#journey">Route</a>
+              <a href="#requirements">Requirements</a>
+              <a href="#steps">Steps</a>
+              <a href="#after-submit">After submission</a>
+              <a href="#official-sources">Sources</a>
+            </nav>
+
             <ServiceJourney service={service} />
 
-            <section>
+            <section id="requirements">
+              <span className="section-number">01</span>
               <h2>What you need</h2>
               <ul className="checklist">
                 {service.requirements.map((item) => <li key={item}>{item}</li>)}
               </ul>
             </section>
 
-            <section>
+            <section id="steps">
+              <span className="section-number">02</span>
               <h2>Steps</h2>
               <ol className="steps">
                 {service.steps.map((step, index) => (
@@ -144,12 +156,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GUIDE} />
 
-            <section>
+            <section id="notes">
+              <span className="section-number">03</span>
               <h2>Important notes</h2>
               <ul>{service.notes.map((note) => <li key={note}>{note}</li>)}</ul>
             </section>
 
-            <section>
+            <section id="questions">
+              <span className="section-number">04</span>
               <h2>Common questions</h2>
               <div className="faq-list">
                 <details>
@@ -172,7 +186,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </section>
 
             <section id="official-sources">
+              <span className="section-number">05</span>
               <h2>Official sources</h2>
+              <p className="source-intro">These are the government or agency pages used to verify this guide. Open them directly whenever you want to confirm the source.</p>
               <div className="source-list">
                 {service.sources.map((source) => (
                   <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
@@ -187,14 +203,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </article>
 
           <aside className="guide-sidebar">
-            <div className="sidebar-card">
+            <div className="sidebar-card sidebar-agency">
               <span>Responsible agency</span>
               <strong>{agency?.name}</strong>
               {agency ? <Link href={"/agencies/" + agency.slug}>View agency guides →</Link> : null}
             </div>
             <div className="sidebar-card">
               <span>Compare fees</span>
-              <strong>Browse the verified fee directory.</strong>
+              <strong>Check the verified fee directory.</strong>
               <Link href="/fees">View government fees →</Link>
             </div>
             <div className="sidebar-card">
@@ -204,19 +220,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
             <div className="sidebar-card safety-card">
               <span>Payment safety</span>
-              <strong>MyNigeriaGuide never collects government fees.</strong>
-              <p>Use only the official portal or payment method published by the responsible agency.</p>
+              <strong>Pay only through the responsible agency.</strong>
+              <p>MyNigeriaGuide never collects government application fees or asks for your password, card PIN or NIN.</p>
             </div>
           </aside>
         </div>
       </section>
 
       {related.length ? (
-        <section className="section section-muted">
+        <section className="section related-section">
           <div className="container">
+            <span className="eyebrow">Keep going</span>
             <h2>Related services</h2>
             <div className="related-links">
-              {related.map((item) => item ? <Link key={item.slug} href={"/services/" + item.slug}>{item.shortTitle} →</Link> : null)}
+              {related.map((item) => item ? <Link key={item.slug} href={"/services/" + item.slug}>{item.shortTitle} <span aria-hidden="true">→</span></Link> : null)}
             </div>
           </div>
         </section>

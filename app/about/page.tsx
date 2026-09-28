@@ -27,7 +27,7 @@ export default function AboutPage() {
           </section>
           <section>
             <strong>3</strong>
-            <div><h2>Conflicts stay visible</h2><p>If two official pages disagree, the guide is marked as a conflict. We do not quietly pick whichever figure looks newer without evidence.</p></div>
+            <div><h2>Discrepancies are explained</h2><p>When official pages differ, we compare their purpose and currency, follow the clearest current source where justified, and keep older inconsistencies visible in the guide notes.</p></div>
           </section>
           <section>
             <strong>4</strong>

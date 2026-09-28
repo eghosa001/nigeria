@@ -41,7 +41,7 @@ export default function FeesPage() {
 
           <div className="info-box fees-warning">
             Government charges can depend on applicant type, validity period, entity class or application route.
-            If official sources disagree, MyNigeriaGuide marks the entry as a conflict instead of presenting one amount as settled fact.
+            Where official pages differ, MyNigeriaGuide follows the clearest current purpose-built source and keeps any older discrepancy visible in the guide notes.
           </div>
 
           <FeeDirectory services={publicServices} />

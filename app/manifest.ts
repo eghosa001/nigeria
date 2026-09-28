@@ -4,11 +4,11 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "MyNigeriaGuide",
     short_name: "MyNigeriaGuide",
-    description: "Verified Nigerian government service guides, fees, requirements and official portals.",
+    description: "Clear, source-linked Nigerian government service guides, fees, requirements and official portals.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fbfaf5",
-    theme_color: "#0b6b46",
+    background_color: "#F8F5ED",
+    theme_color: "#063F2D",
     icons: [
       {
         src: "/icon.svg",

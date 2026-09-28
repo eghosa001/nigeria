@@ -52,7 +52,7 @@ export function ServiceDirectory({ services, initialQuery = "", initialCategory 
           <select value={status} onChange={(event) => setStatus(event.target.value)}>
             <option value="all">All public statuses</option>
             <option value="verified">Verified</option>
-            <option value="conflict">Official-source conflicts</option>
+            <option value="conflict">Needs confirmation</option>
           </select>
         </label>
         <label>

@@ -18,12 +18,15 @@ export function GuideAssistant({ services }: { services: Service[] }) {
 
   return (
     <div className="assistant-card">
-      <div>
-        <span className="eyebrow">Verified guide finder</span>
-        <h2>Describe the government task in your own words</h2>
-        <p>
-          This assistant does not invent answers. It finds the closest source-linked MyNigeriaGuide pages so you can use the verified process and official portal.
-        </p>
+      <div className="assistant-intro">
+        <span className="assistant-symbol" aria-hidden="true">✦</span>
+        <div>
+          <span className="eyebrow">Verified guide finder</span>
+          <h2>Tell us what you need to get done.</h2>
+          <p>
+            Describe the task naturally. We match you to source-linked MyNigeriaGuide pages instead of inventing an answer.
+          </p>
+        </div>
       </div>
 
       <form onSubmit={submit} className="assistant-form">
@@ -35,7 +38,7 @@ export function GuideAssistant({ services }: { services: Service[] }) {
             onChange={(event) => setDraft(event.target.value)}
             placeholder="e.g. I changed my surname and need to update my passport"
           />
-          <button type="submit">Find guide</button>
+          <button type="submit">Find my guide <span aria-hidden="true">→</span></button>
         </div>
       </form>
 
@@ -46,7 +49,7 @@ export function GuideAssistant({ services }: { services: Service[] }) {
               <small>Best matches for “{question}”</small>
               {results.map(({ service }, index) => (
                 <Link key={service.slug} href={"/services/" + service.slug}>
-                  <span className="assistant-rank">{index + 1}</span>
+                  <span className="assistant-rank">{String(index + 1).padStart(2, "0")}</span>
                   <span>
                     <strong>{service.shortTitle}</strong>
                     <small>{service.summary}</small>

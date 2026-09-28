@@ -1,24 +1,61 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { BrandLogo } from "@/components/brand-logo";
+
+const navigation = [
+  { href: "/services", label: "Services" },
+  { href: "/fees", label: "Fees" },
+  { href: "/updates", label: "Updates" },
+  { href: "/offices", label: "Offices" },
+  { href: "/saved", label: "Saved" },
+];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="site-header">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="MyNigeriaGuide home">
-          <span className="brand-mark" aria-hidden="true">M</span>
-          <span>
-            <strong>MyNigeriaGuide</strong>
-            <small>Government services</small>
-          </span>
+        <Link className="brand" href="/" aria-label="MyNigeriaGuide home" onClick={() => setOpen(false)}>
+          <BrandLogo />
         </Link>
-        <nav className="primary-nav" aria-label="Primary navigation">
-          <Link href="/services">Services</Link>
-          <Link href="/fees">Fees</Link>
-          <Link href="/updates">Updates</Link>
-          <Link className="nav-offices" href="/offices">Offices</Link>
-          <Link href="/assistant">Assistant</Link>
-          <Link href="/saved">Saved</Link>
+
+        <button
+          className={"menu-toggle" + (open ? " is-open" : "")}
+          type="button"
+          aria-expanded={open}
+          aria-controls="primary-navigation"
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav id="primary-navigation" className={"primary-nav" + (open ? " is-open" : "")} aria-label="Primary navigation">
+          {navigation.map((item) => {
+            const active = pathname === item.href || pathname.startsWith(item.href + "/");
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={active ? "nav-active" : undefined}
+                aria-current={active ? "page" : undefined}
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+          <Link className="header-cta" href="/assistant" onClick={() => setOpen(false)}>
+            Find a guide
+          </Link>
         </nav>
       </div>
     </header>
