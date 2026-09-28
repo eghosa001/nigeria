@@ -201,6 +201,17 @@ test("homepage has a canonical URL and offline fallback is not indexable", async
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
 });
 
+test("service worker never stores private or no-store responses", async ({ request }) => {
+  const response = await request.get("/sw.js");
+  expect(response.ok()).toBeTruthy();
+  const source = await response.text();
+  expect(source).toContain('"/admin"');
+  expect(source).toContain('"/api/"');
+  expect(source).toContain('cacheControl.includes("no-store")');
+  expect(source).toContain('cacheControl.includes("private")');
+  expect(source).toContain('mynigeriaguide-v2');
+});
+
 test("security headers protect public and admin responses", async ({ request }) => {
   for (const path of ["/", "/admin"]) {
     const response = await request.get(path);
