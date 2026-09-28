@@ -204,13 +204,13 @@ Also test:
 
 ## Custom domain
 
-After the Worker is healthy on its `workers.dev` URL:
+Production domain: `https://mynigeriaguide.com`.
 
-1. add the final custom domain in the Worker's domain settings;
-2. set `NEXT_PUBLIC_SITE_URL` to that HTTPS domain;
-3. rebuild once so canonical URLs, sitemap links, RSS URLs, and social metadata use the final origin.
+The Worker should serve this custom domain as the public origin. Set `NEXT_PUBLIC_SITE_URL=https://mynigeriaguide.com`. The application also falls back to this domain in production if the environment value is missing or still points at the legacy `workers.dev` host.
 
-If the domain is already managed in the same Cloudflare account, keep DNS/proxy management inside Cloudflare.
+The legacy `mynigeriaguide.aighewieghosa111.workers.dev` host permanently redirects to the matching path on `https://mynigeriaguide.com` to avoid duplicate public origins. Production monitoring and live QA must target the custom domain.
+
+Keep DNS/proxy management inside Cloudflare.
 
 ## Search Console
 

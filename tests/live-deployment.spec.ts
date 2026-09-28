@@ -1,6 +1,28 @@
 import { expect, test } from "@playwright/test";
 
 test.describe("live MyNigeriaGuide deployment", () => {
+  test("custom domain owns SEO discovery and public analytics", async ({ page, request }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only custom-domain check.");
+
+    expect(process.env.LIVE_BASE_URL).toBe("https://mynigeriaguide.com");
+
+    const sitemap = await request.get("/sitemap.xml");
+    expect(sitemap.ok()).toBeTruthy();
+    const sitemapText = await sitemap.text();
+    expect(sitemapText).toContain("https://mynigeriaguide.com/");
+    expect(sitemapText).not.toContain(".workers.dev");
+
+    const robots = await request.get("/robots.txt");
+    expect(robots.ok()).toBeTruthy();
+    const robotsText = await robots.text();
+    expect(robotsText).toContain("Sitemap: https://mynigeriaguide.com/sitemap.xml");
+    expect(robotsText).not.toContain(".workers.dev");
+
+    await page.goto("/");
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", "https://mynigeriaguide.com/");
+    await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id="]')).toHaveCount(1);
+  });
+
   test("brand, navigation and core service route are live", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByText("MyNigeriaGuide", { exact: true }).first()).toBeVisible();
