@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Editorial policy" };
+export const metadata: Metadata = { title: "Editorial policy", alternates: { canonical: "/editorial-policy" } };
 
 export default function EditorialPolicyPage() {
   return (
