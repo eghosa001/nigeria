@@ -16,8 +16,8 @@ export default async function ServicesPage({
   searchParams: Promise<{ q?: string; category?: string }>;
 }) {
   const params = await searchParams;
-  const categories = new Set(publicServices.map((service) => service.category));
-  const initialCategory = params.category && categories.has(params.category) ? params.category : "all";
+  const publicCategoryNames = new Set(publicServices.map((service) => service.category));
+  const initialCategory = params.category && publicCategoryNames.has(params.category) ? params.category : "all";
 
   return (
     <section className="section page-top">
