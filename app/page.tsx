@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ServiceSearch } from "@/components/search";
 import { ServiceCard } from "@/components/service-card";
-import { agencies, categories, services } from "@/lib/data";
+import { agencies, categories, publicServices } from "@/lib/data";
 
 export default function HomePage() {
-  const verifiedCount = services.filter((service) => service.status === "verified").length;
+  const verifiedCount = publicServices.filter((service) => service.status === "verified").length;
 
   return (
     <>
@@ -16,7 +16,7 @@ export default function HomePage() {
             <p className="hero-lead">
               Find current fees, documents, steps and official portals — with visible warnings when official sources disagree.
             </p>
-            <ServiceSearch services={services} />
+            <ServiceSearch services={publicServices} />
             <p className="hero-note">
               We never take government payments. Official actions happen on the government portals we link to.
             </p>
@@ -43,7 +43,7 @@ export default function HomePage() {
           </div>
           <div className="category-grid">
             {categories.map((category) => {
-              const count = services.filter((service) => service.category === category.name).length;
+              const count = publicServices.filter((service) => service.category === category.name).length;
               return (
                 <div className="category-card" key={category.name}>
                   <span className="category-icon" aria-hidden="true">{category.name.slice(0, 1)}</span>
@@ -68,7 +68,7 @@ export default function HomePage() {
             </div>
           </div>
           <div className="service-grid">
-            {services.map((service) => <ServiceCard key={service.slug} service={service} />)}
+            {publicServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
           </div>
         </div>
       </section>
