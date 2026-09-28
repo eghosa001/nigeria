@@ -57,6 +57,16 @@ test("directory supports deep-linked category filters", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /JAMB|WAEC|NECO/i }).first()).toBeVisible();
 });
 
+test("assistant has one H1 and JAMB Direct Entry exposes a useful meta description", async ({ page }) => {
+  await page.goto("/assistant");
+  await expect(page.locator("h1")).toHaveCount(1);
+  await expect(page.locator("h1")).toContainText(/what you need to get done/i);
+
+  await page.goto("/services/jamb-direct-entry-2026");
+  const description = await page.locator('meta[name="description"]').getAttribute("content");
+  expect(description?.length ?? 0).toBeGreaterThan(80);
+});
+
 test("service guides expose trust and sharing actions", async ({ page }) => {
   await page.goto("/services/passport-renewal");
   await expect(page.getByText("Verified", { exact: true })).toBeVisible();

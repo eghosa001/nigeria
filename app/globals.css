@@ -1078,7 +1078,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 }
 .assistant-intro { display: grid; grid-template-columns: 54px 1fr; gap: 18px; align-items: start; }
 .assistant-symbol { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 16px; background: var(--green-dark); color: var(--gold); font-size: 1.35rem; box-shadow: 0 12px 24px rgba(6,63,45,.12); }
-.assistant-intro h2 { margin: 5px 0 8px; }
+.assistant-intro h1 { margin: 5px 0 8px; }
 .assistant-form input { min-height: 58px; border-radius: 13px; background: #fff; }
 .assistant-form button { min-height: 58px; border-radius: 13px; background: var(--green-dark); box-shadow: 0 10px 22px rgba(6,63,45,.12); }
 .assistant-form button:hover { background: #052f22; }

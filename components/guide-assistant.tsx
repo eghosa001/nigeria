@@ -22,7 +22,7 @@ export function GuideAssistant({ services }: { services: Service[] }) {
         <span className="assistant-symbol" aria-hidden="true">✦</span>
         <div>
           <span className="eyebrow">Verified guide finder</span>
-          <h2>Tell us what you need to get done.</h2>
+          <h1>Tell us what you need to get done.</h1>
           <p>
             Describe the task naturally. We match you to source-linked MyNigeriaGuide pages instead of inventing an answer.
           </p>

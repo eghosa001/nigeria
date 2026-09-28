@@ -6,6 +6,7 @@ import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { agencies, publicServices } from "@/lib/data";
 
 export const metadata: Metadata = {
+  title: "Nigerian Government Services Guide",
   alternates: { canonical: "/" },
 };
 

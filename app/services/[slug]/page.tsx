@@ -93,7 +93,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     url: pageUrl,
     dateModified: service.lastVerified,
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
-    about: agency ? { "@type": "Organization", name: agency.name, url: agency.website } : undefined,
+    about: agency ? { "@type": "Thing", name: agency.name, url: agency.website } : undefined,
   };
 
   return (
