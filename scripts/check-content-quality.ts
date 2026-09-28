@@ -1,6 +1,7 @@
 import { publicServices } from "../lib/data";
 import { getServiceJourney } from "../lib/journey";
 import { hasExplicitServiceGuidance } from "../lib/service-guidance";
+import { getRequirementDetails } from "../lib/requirement-details";
 
 const errors: string[] = [];
 const warnings: string[] = [];
@@ -29,6 +30,14 @@ for (const service of publicServices) {
 
   if (service.requirements.length < 2) {
     errors.push(prefix + "must list at least two concrete requirements or eligibility items");
+  }
+
+  const detailedRequirements = getRequirementDetails(service);
+  if (detailedRequirements.length !== service.requirements.length) {
+    errors.push(prefix + "every requirement must have a detailed viewer-facing explanation");
+  }
+  if (detailedRequirements.some((item) => !item.why.trim() || !item.whenUsed.trim() || !item.format.trim())) {
+    errors.push(prefix + "contains an incomplete requirement explanation");
   }
 
   if (service.steps.length < 3) {

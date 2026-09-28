@@ -7,6 +7,7 @@ import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
+import { ServiceRequirements } from "@/components/service-requirements";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceFaqs } from "@/components/service-faqs";
@@ -142,14 +143,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <ServiceJourney service={service} />
 
-            <section id="requirements">
-              <span className="section-number" aria-hidden="true">01</span>
-              <h2>What you need before you start</h2>
-              <p className="guide-section-intro">Get these details, documents or prerequisites ready first so you do not have to stop midway through the official process.</p>
-              <ul className="checklist">
-                {service.requirements.map((item) => <li key={item}>{item}</li>)}
-              </ul>
-            </section>
+            <ServiceRequirements service={service} />
 
             <section id="steps">
               <span className="section-number" aria-hidden="true">02</span>

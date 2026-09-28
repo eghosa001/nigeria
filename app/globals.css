@@ -1492,3 +1492,83 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
 
 .official-link-stack { display:flex; flex-direction:column; align-items:flex-start; gap:8px; margin-top:8px; }
 .official-link-stack .text-link { margin-top:0; }
+
+
+/* Detailed per-service document and prerequisite checklist */
+.requirement-summary {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0 0 18px;
+}
+.requirement-summary span {
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  min-height:34px;
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.72);
+  color:var(--muted);
+  font-size:.78rem;
+}
+.requirement-summary strong { color:var(--green-deep); }
+.requirement-detail-list { display:grid; gap:12px; }
+.requirement-detail-card {
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:var(--white);
+}
+.requirement-detail-heading {
+  display:flex;
+  gap:13px;
+  align-items:flex-start;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+}
+.requirement-index {
+  flex:0 0 auto;
+  display:grid;
+  place-items:center;
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:var(--mint);
+  color:var(--green-deep);
+  font-size:.76rem;
+  font-weight:900;
+}
+.requirement-kind {
+  display:block;
+  margin-bottom:4px;
+  color:var(--green);
+  font-size:.7rem;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.requirement-detail-card h3 { margin:0; font-size:1.05rem; line-height:1.4; }
+.requirement-detail-card dl { display:grid; gap:10px; margin:14px 0 0; }
+.requirement-detail-card dl > div {
+  display:grid;
+  grid-template-columns:minmax(130px, .34fr) 1fr;
+  gap:16px;
+  align-items:start;
+}
+.requirement-detail-card dt {
+  color:var(--green-deep);
+  font-size:.78rem;
+  font-weight:850;
+}
+.requirement-detail-card dd {
+  margin:0;
+  color:var(--muted);
+  font-size:.9rem;
+  line-height:1.6;
+}
+@media (max-width:640px) {
+  .requirement-detail-card { padding:16px; }
+  .requirement-detail-card dl > div { grid-template-columns:1fr; gap:3px; }
+}

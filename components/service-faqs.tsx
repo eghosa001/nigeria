@@ -1,11 +1,12 @@
 import type { Service } from "@/lib/types";
 import { getServiceJourney } from "@/lib/journey";
 import { getDetailedServiceGuidance } from "@/lib/service-guidance";
+import { getRequirementDetails } from "@/lib/requirement-details";
 
 export function ServiceFaqs({ service }: { service: Service }) {
   const journey = getServiceJourney(service);
   const guidance = getDetailedServiceGuidance(service);
-  const topRequirements = service.requirements.slice(0, 3);
+  const requirementDetails = getRequirementDetails(service);
   const safetyNotes = service.notes.slice(0, 2);
 
   return (
@@ -17,11 +18,10 @@ export function ServiceFaqs({ service }: { service: Service }) {
       </p>
       <div className="faq-list">
         <details>
-          <summary>What should I prepare before I start?</summary>
+          <summary>Exactly what documents, details or prerequisites do I need?</summary>
           <div className="faq-answer">
-            <p>At minimum, prepare the items below before beginning:</p>
-            <ul>{topRequirements.map((item) => <li key={item}>{item}</li>)}</ul>
-            {service.requirements.length > topRequirements.length ? <p>The full requirements list above contains {service.requirements.length} items.</p> : null}
+            <p>Prepare every item below before beginning. The detailed checklist above explains why each one is needed and whether the source specifies an original, copy or upload.</p>
+            <ul>{requirementDetails.map((item) => <li key={item.item}><strong>{item.item}</strong> — {item.kind}</li>)}</ul>
           </div>
         </details>
 
