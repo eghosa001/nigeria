@@ -31,10 +31,15 @@ const aliases: Record<string, string[]> = {
   nysc: ["youth", "service", "mobilisation", "mobilization"],
   birth: ["npc", "certificate", "attestation"],
   tax: ["nrs", "taxpayer"],
-  bvn: ["bank", "banking", "verification", "nibss"],
+  bvn: ["bank", "banking", "verification", "nibss", "change", "correction", "update"],
   banking: ["bvn", "bank", "nibss"],
   travel: ["international", "passport", "ecowas", "yellow", "immigration"],
-  international: ["travel", "passport", "ecowas", "yellow"],
+  international: ["travel", "passport", "ecowas", "yellow", "visa"],
+  visa: ["evisa", "immigration", "travel", "tourism", "business", "visiting", "transit"],
+  evisa: ["visa", "immigration", "travel", "tourism", "business"],
+  tourist: ["tourism", "visa", "travel"],
+  tourism: ["tourist", "visa", "travel"],
+  transit: ["visa", "travel", "layover"],
   yellowcard: ["yellow", "card", "travel", "vaccination"],
   ecowas: ["travel", "certificate", "west", "africa"],
   police: ["pcc", "possap", "clearance", "character"],
@@ -52,7 +57,7 @@ function normalize(value: string) {
     .trim();
 }
 
-const fuzzyTargets = ["jamb","bvn","waec","neco","nysc","nin","nimc","cac","frsc","passport","travel","yellow","ecowas","immigration","licence","certificate","police","possap","pcc","pvc","inec","voter"];
+const fuzzyTargets = ["jamb","bvn","waec","neco","nysc","nin","nimc","cac","frsc","passport","travel","yellow","ecowas","immigration","licence","certificate","police","possap","pcc","pvc","inec","voter","visa","evisa","tourism","tourist","transit"];
 
 function editDistance(a: string, b: string) {
   const rows = Array.from({ length: a.length + 1 }, (_, i) => [i, ...Array(b.length).fill(0)]);
