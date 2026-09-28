@@ -21,6 +21,18 @@ test("admin guide editing stays locked until the shared admin passphrase succeed
   await expect(page.getByRole("button", { name: "Create review change" })).toBeVisible();
 });
 
+test("admin editor allows normal spaces while typing list fields", async ({ page }) => {
+  await page.goto("/admin/services/passport-renewal");
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock editing" }).click();
+
+  const requirements = page.getByLabel("Requirements — one per line");
+  await requirements.fill("");
+  await requirements.pressSequentially("Proof of address with normal spaces");
+
+  await expect(requirements).toHaveValue("Proof of address with normal spaces");
+});
+
 test("admin editor creates a review proposal and does not claim to publish", async ({ page }) => {
   await page.route("**/api/admin/services/passport-renewal/proposal", async (route) => {
     expect(route.request().method()).toBe("POST");

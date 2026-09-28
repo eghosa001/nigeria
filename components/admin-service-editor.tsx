@@ -10,7 +10,11 @@ function lines(value: string[]) {
   return value.join("\n");
 }
 function fromLines(value: string) {
-  return value.split("\n").map((item) => item.trim()).filter(Boolean);
+  return value.split("\n");
+}
+
+function normalizeLines(value: string[]) {
+  return value.map((item) => item.trim()).filter(Boolean);
 }
 
 export function AdminServiceEditor({ service }: { service: Service }) {
@@ -77,7 +81,16 @@ export function AdminServiceEditor({ service }: { service: Service }) {
       const response = await fetch("/api/admin/services/" + encodeURIComponent(service.slug) + "/proposal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ service: draft }),
+        body: JSON.stringify({
+          service: {
+            ...draft,
+            requirements: normalizeLines(draft.requirements),
+            steps: normalizeLines(draft.steps),
+            notes: normalizeLines(draft.notes),
+            searchTerms: normalizeLines(draft.searchTerms),
+            related: normalizeLines(draft.related),
+          },
+        }),
       });
       const body = await response.json() as Proposal & { error?: string };
       if (!response.ok) {
