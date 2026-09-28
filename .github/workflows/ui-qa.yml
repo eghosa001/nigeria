@@ -11,6 +11,7 @@ on:
       - "tests/**"
       - "playwright.config.ts"
       - "package.json"
+      - "next.config.ts"
   pull_request:
     paths:
       - "app/**"

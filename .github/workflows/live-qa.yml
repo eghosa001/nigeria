@@ -13,6 +13,7 @@ on:
       - "scripts/**"
       - "tests/**"
       - "package.json"
+      - "next.config.ts"
       - "playwright.live.config.ts"
       - ".github/workflows/live-qa.yml"
 
