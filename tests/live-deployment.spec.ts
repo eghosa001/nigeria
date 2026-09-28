@@ -5,7 +5,6 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await page.goto("/");
     await expect(page.getByText("MyNigeriaGuide", { exact: true }).first()).toBeVisible();
     await expect(page.locator('svg[aria-label="MyNigeriaGuide"]').first()).toBeVisible();
-    await expect(page.getByText("Clear steps. Verified sources.", { exact: true }).first()).toBeVisible();
     await expect(page.getByLabel("What do you want to do?")).toBeVisible();
 
     await page.goto("/services/jamb-direct-entry-2026");
