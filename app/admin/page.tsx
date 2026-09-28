@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { agencies, publicServices, services } from "@/lib/data";
-import { isSupabaseConfigured } from "@/lib/supabase-rest";
+import { isReportBackendConfigured } from "@/lib/report-backend";
 
 export const metadata: Metadata = {
   title: "Verification dashboard",
@@ -13,7 +13,7 @@ export default function AdminPage() {
   const conflicts = services.filter((service) => service.status === "conflict");
   const reviews = services.filter((service) => service.status === "review");
   const sourceCount = new Set(services.flatMap((service) => service.sources.map((source) => source.url))).size;
-  const databaseConnected = isSupabaseConfigured();
+  const backendConnected = isReportBackendConfigured();
 
   return (
     <section className="section page-top admin-page">
@@ -22,10 +22,10 @@ export default function AdminPage() {
           <div>
             <span className="eyebrow">Operations</span>
             <h1>Verification dashboard</h1>
-            <p className="page-intro">Read-only until the new dedicated GovGuide Supabase project is connected.</p>
+            <p className="page-intro">Read-only by design. The public site does not require a database; persistent correction reports are optional.</p>
           </div>
-          <span className={"db-state " + (databaseConnected ? "connected" : "offline")}>
-            {databaseConnected ? "Database connected" : "Database not connected"}
+          <span className={"db-state " + (backendConnected ? "connected" : "offline")}>
+            {backendConnected ? "Report backend connected" : "No report backend required"}
           </span>
         </div>
 
