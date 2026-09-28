@@ -15,7 +15,7 @@ export default async function Image({
 
   const title = service?.shortTitle ?? "Government service guide";
   const fee = service?.feeLabel ?? "Check official guide";
-  const status = service?.status === "conflict" ? "Official-source conflict" : "Verified guide";
+  const status = service?.status === "conflict" ? "Confirm current details" : "Verified guide";
   const category = service?.category ?? "Nigeria";
 
   return new ImageResponse(
