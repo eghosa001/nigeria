@@ -6,10 +6,10 @@ import { useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 
 const navigation = [
-  { href: "/categories/foreign-visas", label: "Foreign visas" },
   { href: "/services", label: "Services" },
+  { href: "/explore", label: "Explore Nigeria" },
+  { href: "/categories/foreign-visas", label: "Foreign visas" },
   { href: "/fees", label: "Fees" },
-  { href: "/offices", label: "Offices" },
   { href: "/updates", label: "Updates" },
   { href: "/saved", label: "Saved" },
   { href: "/assistant", label: "Find a guide" },

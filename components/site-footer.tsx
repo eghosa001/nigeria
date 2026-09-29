@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container footer-top">
         <div className="footer-intro">
           <div className="brand footer-brand"><BrandLogo footer /></div>
-          <p>Independent, source-linked guidance for Nigerian public services. We explain the process; the responsible agency remains the official authority.</p>
+          <p>Independent, source-linked guidance for getting things done and exploring Nigeria. Public-service applications and payments still happen only through the responsible official authority.</p>
           <div className="footer-trust">
             <span>Independent guide</span>
             <span>Official links only</span>
@@ -19,6 +19,7 @@ export function SiteFooter() {
           <div>
             <strong>Explore</strong>
             <Link href="/services">Services</Link>
+            <Link href="/explore">Explore Nigeria</Link>
             <Link href="/fees">Fees</Link>
             <Link href="/updates">Updates</Link>
             <Link href="/offices">Offices</Link>

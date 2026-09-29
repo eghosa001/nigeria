@@ -67,6 +67,38 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section home-platform-pillars" aria-labelledby="platform-pillars-title">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">MyNigeriaGuide</span>
+              <h2 id="platform-pillars-title">What do you want to do in Nigeria?</h2>
+              <p>Use one clear starting point, then move into the guide built for that job.</p>
+            </div>
+          </div>
+          <div className="home-category-grid">
+            <Link className="home-category-card" href="/services">
+              <span>Get something done</span>
+              <strong>Service Guide</strong>
+              <small>Government processes, documents, fees, official portals, visas, NYSC, NIN, CAC and more.</small>
+              <i>Browse services →</i>
+            </Link>
+            <Link className="home-category-card" href="/explore">
+              <span>Explore Nigeria</span>
+              <strong>Tour Guide</strong>
+              <small>City guides, major attractions, weekend ideas and practical trip-planning notes across Nigeria.</small>
+              <i>Start exploring →</i>
+            </Link>
+            <div className="home-category-card" aria-label="Movies and entertainment guide coming next">
+              <span>Watch &amp; enjoy</span>
+              <strong>Entertainment Guide</strong>
+              <small>Nollywood, cinemas, streaming, music, events and venues are the next pillar being built.</small>
+              <i>Coming next</i>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="proof-strip" aria-label="Why use MyNigeriaGuide">
         <div className="container proof-grid">
           <div><span aria-hidden="true">01</span><strong>Know what to prepare</strong><small>Documents and eligibility before you start.</small></div>

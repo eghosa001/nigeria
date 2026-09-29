@@ -1,0 +1,153 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { JsonLd } from "@/components/json-ld";
+import { exploreGuides, getExploreGuide } from "@/lib/explore";
+import { getSiteUrl } from "@/lib/site";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return exploreGuides.map((guide) => ({ slug: guide.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const guide = getExploreGuide(slug);
+  if (!guide) return {};
+
+  return {
+    title: guide.title,
+    description: guide.summary,
+    alternates: { canonical: "/explore/" + guide.slug },
+    openGraph: {
+      title: guide.title,
+      description: guide.summary,
+      type: "website",
+      url: "/explore/" + guide.slug,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: guide.title,
+      description: guide.summary,
+    },
+  };
+}
+
+export default async function ExploreGuidePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const guide = getExploreGuide(slug);
+  if (!guide) notFound();
+
+  const base = getSiteUrl();
+  const pageUrl = base + "/explore/" + guide.slug;
+  const related = exploreGuides.filter((item) => item.slug !== guide.slug && item.kind === guide.kind).slice(0, 3);
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: base },
+      { "@type": "ListItem", position: 2, name: "Explore Nigeria", item: base + "/explore" },
+      { "@type": "ListItem", position: 3, name: guide.shortTitle, item: pageUrl },
+    ],
+  };
+
+  const guideLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAction",
+    name: guide.title,
+    description: guide.summary,
+    url: pageUrl,
+    object: {
+      "@type": "Place",
+      name: guide.shortTitle,
+      address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
+    },
+  };
+
+  return (
+    <>
+      <JsonLd data={[breadcrumbLd, guideLd]} />
+      <section className="section page-top">
+        <div className="container">
+          <Breadcrumbs items={[
+            { label: "Home", href: "/" },
+            { label: "Explore Nigeria", href: "/explore" },
+            { label: guide.shortTitle },
+          ]} />
+          <span className="eyebrow">{guide.region}</span>
+          <h1>{guide.title}</h1>
+          <p className="page-intro">{guide.summary}</p>
+          <div className="topic-copy">
+            {guide.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
+          <p className="hero-note">Reviewed {guide.lastReviewed}. Confirm live opening hours, ticketing, road access, weather, security conditions and event schedules directly before travelling.</p>
+        </div>
+      </section>
+
+      <section className="proof-strip" aria-label={"Best reasons to visit " + guide.shortTitle}>
+        <div className="container proof-grid">
+          {guide.bestFor.slice(0, 4).map((item, index) => (
+            <div key={item}><span aria-hidden="true">0{index + 1}</span><strong>{item}</strong><small>Build it into your trip only if it fits your time and route.</small></div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading"><div><span className="eyebrow">What to build around</span><h2>Highlights worth planning properly.</h2></div></div>
+          <div className="home-category-grid">
+            {guide.highlights.map((highlight) => (
+              <article className="home-category-card" key={highlight.name}>
+                <span>Highlight</span>
+                <strong>{highlight.name}</strong>
+                <small>{highlight.detail}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section premium-dark-section">
+        <div className="container">
+          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Make the practical decisions first.</h2></div></div>
+          <div className="home-updates-grid">
+            {guide.planning.map((item) => (
+              <article className="home-update-card" key={item.label}>
+                <div><span>Plan</span></div>
+                <h3>{item.label}</h3>
+                <p>{item.detail}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container agency-strip">
+          <div>
+            <span className="eyebrow">Source &amp; verification</span>
+            <h2>Use this guide to plan. Confirm live details at the source.</h2>
+            <p>MyNigeriaGuide does not treat old prices, social posts or copied travel lists as permanent facts. Dynamic details should be checked close to your travel date.</p>
+            {guide.source ? (
+              <div className="related-links">
+                <a href={guide.source.href} target="_blank" rel="noreferrer">{guide.source.label} ↗</a>
+              </div>
+            ) : null}
+          </div>
+          <div>
+            <span className="eyebrow">Keep exploring</span>
+            <h2>Related {guide.kind === "city" ? "cities" : "trip guides"}</h2>
+            <div className="related-links">
+              {related.map((item) => <Link href={"/explore/" + item.slug} key={item.slug}>{item.shortTitle} →</Link>)}
+              <Link href="/explore">All Explore Nigeria guides →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

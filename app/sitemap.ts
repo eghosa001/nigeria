@@ -3,6 +3,7 @@ import { categorySlug } from "@/lib/category";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { growthHubs } from "@/lib/growth-hubs";
+import { exploreGuides } from "@/lib/explore";
 import { getSiteUrl } from "@/lib/site";
 
 function latestDate(values: string[]) {
@@ -16,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     ["", "weekly", 1],
     ["/services", "weekly", 0.9],
+    ["/explore", "weekly", 0.8],
     ["/fees", "weekly", 0.9],
     ["/updates", "weekly", 0.9],
     ["/assistant", "weekly", 0.7],
@@ -51,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    })),
+    ...exploreGuides.map((guide) => ({
+      url: base + "/explore/" + guide.slug,
+      lastModified: guide.lastReviewed,
+      changeFrequency: "monthly" as const,
+      priority: guide.kind === "city" ? 0.75 : 0.7,
     })),
     ...publicServices.map((service) => ({
       url: base + "/services/" + service.slug,
