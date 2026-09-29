@@ -95,7 +95,18 @@ export default function ExplorePage() {
             </div>
           </div>
           <ExplorePlaceDirectory
-            places={explorePlaces}
+            places={explorePlaces.map((place) => ({
+              slug: place.slug,
+              guideSlug: place.guideSlug,
+              name: place.name,
+              kind: place.kind,
+              area: place.area,
+              address: place.address,
+              summary: place.summary,
+              cost: place.cost,
+              mapQuery: place.mapQuery,
+              tags: place.tags,
+            }))}
             guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle }))}
           />
         </div>
