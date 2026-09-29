@@ -75,7 +75,7 @@ export function EntertainmentArtwork({
 }) {
   if (canDisplayEntertainmentArtwork(title) && title.artwork) {
     return (
-      <figure className={"entertainment-artwork entertainment-artwork-approved entertainment-artwork-" + variant}>
+      <figure className={"entertainment-artwork entertainment-artwork-approved entertainment-artwork-" + variant} data-artwork-source="licensed" data-rights-status="approved">
         <img
           src={title.artwork.url}
           alt={title.title + " official promotional artwork"}
