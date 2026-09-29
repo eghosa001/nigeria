@@ -136,3 +136,25 @@ test("latest hub links all three platform pillars", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Services", exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Tour Nigeria", exact: true })).toBeVisible();
 });
+
+
+test("every visible curated movie has a poster-format visual", async ({ page }) => {
+  await page.goto("/entertainment/movies");
+  const posters = page.locator(".movie-tile .entertainment-artwork[data-poster-guaranteed='true']");
+  await expect(posters).toHaveCount(30);
+  const box = await posters.first().boundingBox();
+  expect(box).not.toBeNull();
+  expect(box!.height).toBeGreaterThan(box!.width * 1.3);
+});
+
+test("duplicate approved uploads are surfaced as alternate official sources", async ({ page }) => {
+  await page.goto("/entertainment/movies/plus-one");
+  await expect(page.getByText("Omoni Oboli TV", { exact: false }).first()).toBeVisible();
+  await expect(page.getByText("Maurice Sam TV", { exact: false }).first()).toBeVisible();
+});
+
+test("official platform cards explain legal offline viewing instead of third-party downloads", async ({ page }) => {
+  await page.goto("/entertainment/movies/anikulapo");
+  await expect(page.getByText(/downloaded in the Netflix app for offline viewing/i)).toBeVisible();
+  await expect(page.getByText(/does not link to third-party movie-download mirrors/i)).toBeVisible();
+});

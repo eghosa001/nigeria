@@ -4,8 +4,9 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
-import { entertainmentTitles, getEntertainmentTitle, getFeaturedCast } from "@/lib/entertainment";
-import { entertainmentPeople } from "@/lib/entertainment-extras";
+import { entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type WatchLink } from "@/lib/entertainment";
+import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
+import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -51,14 +52,52 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const title = getEntertainmentTitle(slug);
   if (!title) notFound();
 
+  const availabilityLinks: WatchLink[] = [];
+  const seenAvailability = new Set<string>();
+  for (const link of title.watchLinks) {
+    if (link.platform !== "YouTube") {
+      if (!seenAvailability.has(link.href)) {
+        availabilityLinks.push(link);
+        seenAvailability.add(link.href);
+      }
+      continue;
+    }
+
+    const videoId = getYouTubeVideoId(link.href);
+    const libraryMovie = videoId ? getYouTubeMovieById(videoId) : undefined;
+    const primary = libraryMovie ? {
+      ...link,
+      publisher: link.publisher ?? libraryMovie.channelName,
+      publisherUrl: link.publisherUrl ?? libraryMovie.channelUrl,
+    } : link;
+    if (!seenAvailability.has(primary.href)) {
+      availabilityLinks.push(primary);
+      seenAvailability.add(primary.href);
+    }
+    for (const source of libraryMovie?.alternateSources ?? []) {
+      if (seenAvailability.has(source.videoUrl)) continue;
+      availabilityLinks.push({
+        platform: "YouTube",
+        label: "Watch on " + source.channelName,
+        href: source.videoUrl,
+        access: "full-movie",
+        lastChecked: source.lastChecked,
+        note: "Alternate approved full-movie upload from " + source.channelName + ".",
+        publisher: source.channelName,
+        publisherUrl: source.channelUrl,
+      });
+      seenAvailability.add(source.videoUrl);
+    }
+  }
+
   const base = getSiteUrl();
   const pageUrl = base + "/entertainment/movies/" + title.slug;
   const allCheckedDates = [
-    ...title.watchLinks.map((link) => link.lastChecked),
+    ...availabilityLinks.map((link) => link.lastChecked),
     ...(title.trailer ? [title.trailer.lastChecked] : []),
   ];
   const lastChecked = allCheckedDates.reduce((latest, value) => value > latest ? value : latest, "");
-  const platforms = [...new Set(title.watchLinks.map((link) => link.platform))];
+  const platforms = [...new Set(availabilityLinks.map((link) => link.platform))];
   const featuredCast = getFeaturedCast(title);
 
   const movieLd = {
@@ -71,8 +110,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     inLanguage: title.languages,
     actor: title.cast.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
-    sameAs: title.watchLinks.map((link) => link.href),
-    potentialAction: title.watchLinks.map((link) => ({ "@type": "WatchAction", target: link.href })),
+    sameAs: availabilityLinks.map((link) => link.href),
+    potentialAction: availabilityLinks.map((link) => ({ "@type": "WatchAction", target: link.href })),
   };
 
   const breadcrumbLd = {
@@ -125,7 +164,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
 
               <div className="movie-detail-actions">
-                {title.watchLinks.slice(0, 2).map((link) => (
+                {availabilityLinks.slice(0, 3).map((link) => (
                   <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>
                     {link.label} ↗
                   </a>
@@ -210,22 +249,27 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <span className="eyebrow">Official availability</span>
               <h2>Where to watch {title.title}</h2>
               <div className="movie-watch-options">
-                {title.watchLinks.map((link) => (
-                  <article key={link.href}>
-                    <div>
-                      <span>{link.platform}</span>
-                      <strong>{link.label}</strong>
-                    </div>
-                    <dl>
-                      <div><dt>Access</dt><dd>{accessLabel(link.access)}</dd></div>
-                      {link.publisher ? <div><dt>Publisher</dt><dd>{link.publisher}</dd></div> : null}
-                      <div><dt>Checked</dt><dd>{link.lastChecked}</dd></div>
-                    </dl>
-                    <p>{link.note}</p>
-                    <a className="button" href={link.href} target="_blank" rel="noreferrer">Open official source ↗</a>
-                  </article>
-                ))}
+                {availabilityLinks.map((link) => {
+                  const platformGuide = getPlatformGuide(link.platform);
+                  return (
+                    <article key={link.href}>
+                      <div>
+                        <span>{link.platform}</span>
+                        <strong>{link.label}</strong>
+                      </div>
+                      <dl>
+                        <div><dt>Access</dt><dd>{accessLabel(link.access)}</dd></div>
+                        {link.publisher ? <div><dt>Publisher</dt><dd>{link.publisherUrl ? <a href={link.publisherUrl} target="_blank" rel="noreferrer">{link.publisher} ↗</a> : link.publisher}</dd></div> : null}
+                        {platformGuide?.offlineLabel ? <div><dt>Offline</dt><dd>{platformGuide.offlineHelpUrl ? <a href={platformGuide.offlineHelpUrl} target="_blank" rel="noreferrer">{platformGuide.offlineLabel} ↗</a> : platformGuide.offlineLabel}</dd></div> : null}
+                        <div><dt>Checked</dt><dd>{link.lastChecked}</dd></div>
+                      </dl>
+                      <p>{link.note}</p>
+                      <a className="button" href={link.href} target="_blank" rel="noreferrer">Open official source ↗</a>
+                    </article>
+                  );
+                })}
               </div>
+              <p className="movie-download-note">Download links are only shown as official platform-managed offline options or rights-holder downloads. MyNigeriaGuide does not link to third-party movie-download mirrors.</p>
             </section>
 
             {title.trailer ? (

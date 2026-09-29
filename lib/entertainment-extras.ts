@@ -54,9 +54,13 @@ export const entertainmentPeople: EntertainmentPerson[] = [
 export type PlatformGuide = {
   slug: string;
   name: string;
+  aliases?: string[];
   officialUrl: string;
   summary: string;
   status: string;
+  sourceKind: "streaming" | "rental" | "publisher" | "catalog";
+  offlineLabel?: string;
+  offlineHelpUrl?: string;
   lastChecked: string;
 };
 
@@ -67,6 +71,9 @@ export const platformGuides: PlatformGuide[] = [
     officialUrl: "https://www.netflix.com/ng-en/browse/genre/1077508",
     summary: "Netflix maintains a dedicated Nollywood catalog in Nigeria with movies and series from Nigerian creators.",
     status: "Active Nigerian catalog",
+    sourceKind: "streaming",
+    offlineLabel: "Eligible titles can be downloaded in the Netflix app for offline viewing.",
+    offlineHelpUrl: "https://help.netflix.com/en/node/54816",
     lastChecked: "2026-09-29",
   },
   {
@@ -75,6 +82,9 @@ export const platformGuides: PlatformGuide[] = [
     officialUrl: "https://www.youtube.com/",
     summary: "Some Nigerian producers publish complete films directly on their verified YouTube channels. MyNigeriaGuide links only to identifiable rights-holder or producer uploads.",
     status: "Official channel uploads",
+    sourceKind: "publisher",
+    offlineLabel: "YouTube Premium can download eligible videos for offline playback where the feature is available.",
+    offlineHelpUrl: "https://support.google.com/youtube/answer/11977233?hl=en",
     lastChecked: "2026-09-29",
   },
   {
@@ -83,17 +93,41 @@ export const platformGuides: PlatformGuide[] = [
     officialUrl: "https://www.primevideo.com/",
     summary: "Prime Video carries Nigerian films through subscription, rental and purchase models that can differ by country.",
     status: "Availability varies by title and region",
+    sourceKind: "streaming",
+    offlineLabel: "Eligible Prime Video titles can be downloaded in supported Prime Video apps for offline viewing.",
+    offlineHelpUrl: "https://www.primevideo.com/help?nodeId=GMF637NHNEF9D8GT",
     lastChecked: "2026-09-29",
   },
   {
-    slug: "showmax-dstv-stream",
-    name: "Showmax / DStv Stream",
-    officialUrl: "https://www.showmax.com/join/eng/bbn/ng",
-    summary: "Showmax Originals in Nigeria moved into DStv Stream in 2026, so older Showmax links may no longer be the correct playback destination.",
-    status: "Showmax app discontinued; migration in effect",
+    slug: "dstv-stream-boxoffice",
+    name: "DStv Stream / BoxOffice",
+    aliases: ["DStv Stream"],
+    officialUrl: "https://www.dstv.com/en-ng/watch/stream-with-dstv/",
+    summary: "DStv Stream carries subscription entertainment in Nigeria and BoxOffice provides official movie rentals where available. Showmax was retired in 2026 as MultiChoice moved customers toward its broader streaming platform.",
+    status: "Active in Nigeria; title availability varies by package and region",
+    sourceKind: "rental",
+    offlineLabel: "The DStv app supports up to 25 offline items for eligible content.",
+    offlineHelpUrl: "https://www.dstv.com/en-ng/watch/stream-with-dstv/",
+    lastChecked: "2026-09-29",
+  },
+  {
+    slug: "nollywood-com",
+    name: "Nollywood.com",
+    officialUrl: "https://www.nollywood.com/",
+    summary: "A Nigerian-film catalog with movie, cast, crew and box-office records. MyNigeriaGuide can use exact title pages as an additional industry reference, but not as proof that a movie is legally playable or downloadable.",
+    status: "Industry catalog and app",
+    sourceKind: "catalog",
     lastChecked: "2026-09-29",
   },
 ];
+
+export function getPlatformGuide(name: string) {
+  const normalized = name.trim().toLowerCase();
+  return platformGuides.find((guide) =>
+    guide.name.toLowerCase() === normalized ||
+    guide.aliases?.some((alias) => alias.toLowerCase() === normalized),
+  );
+}
 
 export type CinemaGuide = {
   slug: string;

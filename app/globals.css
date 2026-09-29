@@ -2916,13 +2916,14 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   background: #0d3024;
   box-shadow: 0 12px 26px rgba(0,0,0,.14);
 }
-.entertainment-artwork-card,
-.entertainment-artwork-hero { aspect-ratio: 16 / 9; }
+.entertainment-artwork-card { aspect-ratio: 2 / 3; }
+.entertainment-artwork-hero { aspect-ratio: 2 / 3; max-width: 440px; }
 .entertainment-artwork img {
   width: 100%;
   height: calc(100% - 25px);
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   background: #050f0b;
 }
 .entertainment-artwork figcaption {
@@ -4435,7 +4436,7 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   box-shadow: none;
 }
 .minimal-movie-card .entertainment-artwork-card {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 2 / 3;
 }
 .minimal-movie-card figcaption {
   display: none;
@@ -4680,4 +4681,21 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .compact-category-grid .home-category-card {
     min-height: 0;
   }
+}
+
+
+/* Scalable movie poster and source coverage */
+.movie-download-note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
+}
+.movie-watch-options dd a {
+  color: var(--green);
+  font-weight: 780;
+}
+.movie-watch-options .text-link {
+  display: inline-flex;
+  margin-top: 10px;
 }

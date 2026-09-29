@@ -65,7 +65,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     duration: movie.durationMinutes ? "PT" + movie.durationMinutes + "M" : undefined,
     datePublished: movie.publishedAt,
     potentialAction: { "@type": "WatchAction", target: movie.videoUrl },
-    sameAs: [movie.videoUrl],
+    sameAs: [movie.videoUrl, ...movie.alternateSources.map((source) => source.videoUrl)],
     url: base + "/entertainment/youtube/" + movie.videoId,
   };
 
@@ -183,13 +183,28 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                   <dl>
                     <div><dt>Published</dt><dd>{movie.publishedAt.slice(0, 10)}</dd></div>
                     <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
+                    <div><dt>Offline</dt><dd><a href="https://support.google.com/youtube/answer/11977233?hl=en" target="_blank" rel="noreferrer">YouTube Premium download, where eligible ↗</a></dd></div>
                     <div><dt>Checked</dt><dd>{movie.lastChecked}</dd></div>
                   </dl>
                   <p>The original movie page remains the authority for playback availability, publisher information and any changes to the video.</p>
                   <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Open official YouTube movie ↗</a>
                   {publisherSource ? <Link className="text-link" href={"/entertainment/youtube/sources#source-" + publisherSource.slug}>View approved publisher record →</Link> : null}
                 </article>
+                {movie.alternateSources.map((source) => (
+                  <article key={source.videoId}>
+                    <div><span>Alternate official source</span><strong>{source.channelName}</strong></div>
+                    <dl>
+                      <div><dt>Published</dt><dd>{source.publishedAt.slice(0, 10)}</dd></div>
+                      <div><dt>Offline</dt><dd><a href="https://support.google.com/youtube/answer/11977233?hl=en" target="_blank" rel="noreferrer">YouTube Premium download, where eligible ↗</a></dd></div>
+                      <div><dt>Checked</dt><dd>{source.lastChecked}</dd></div>
+                    </dl>
+                    <p>This is another approved publisher upload matched to the same movie title and supporting metadata.</p>
+                    <a className="button" href={source.videoUrl} target="_blank" rel="noreferrer">Open alternate official source ↗</a>
+                    {source.channelUrl ? <a className="text-link" href={source.channelUrl} target="_blank" rel="noreferrer">Publisher channel ↗</a> : null}
+                  </article>
+                ))}
               </div>
+              <p className="movie-download-note">Offline downloads remain inside YouTube or the relevant official app. MyNigeriaGuide does not provide third-party MP4 download links.</p>
             </section>
 
             <details className="movie-rights-details">
