@@ -360,8 +360,8 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
     .filter((line) =>
       line.length >= 70 &&
       !/https?:\/\//i.test(line) &&
-      !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#)/i.test(line) &&
-      !/\b(?:subscribe to|social media|instagram|tiktok|facebook|youtube channel)\b/i.test(line),
+      !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#|welcome\b|please\s+watch\b|thank\s+you\b)/i.test(line) &&
+      !/\b(?:subscribe to|social media|instagram|tiktok|facebook|youtube channel|our channel|don't forget to|do not forget to|like and share|like, share)\b/i.test(line),
     );
   const chosen = paragraphs[0];
   if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
