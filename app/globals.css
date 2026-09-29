@@ -2646,7 +2646,7 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .primary-nav > a { padding-inline: 9px; }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   .platform-pillar-grid { grid-template-columns: 1fr; }
   .platform-pillar-card { min-height: 230px; }
 
