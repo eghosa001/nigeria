@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/entertainment/cinemas", "weekly", 0.7],
     ["/entertainment/platforms", "weekly", 0.7],
     ["/entertainment/people", "weekly", 0.7],
+    ["/entertainment/image-rights", "monthly", 0.4],
     ["/fees", "weekly", 0.9],
     ["/updates", "weekly", 0.9],
     ["/assistant", "weekly", 0.7],
