@@ -79,8 +79,9 @@ test("visits unlock displays reports immediately and can be locked again", async
   await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-page-table")).toContainText("Passport renewal");
-  await expect(page.getByRole("heading", { name: "What visitors actually do" })).toBeVisible();
-  await expect(page.locator(".analytics-ranking")).toContainText("Official service link opened");
+  const interactionPanel = page.getByRole("heading", { name: "What visitors actually do" }).locator("xpath=ancestor::section");
+  await expect(interactionPanel).toBeVisible();
+  await expect(interactionPanel).toContainText("Official service link opened");
   await page.getByRole("button", { name: "Lock analytics" }).click();
   await expect(page.getByLabel("Analytics passphrase")).toBeEmpty();
   expect(errors).toEqual([]);
