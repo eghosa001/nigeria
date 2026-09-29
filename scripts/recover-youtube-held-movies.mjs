@@ -84,20 +84,25 @@ function fallbackSynopsis(title, channelName, cast) {
 }
 
 function usableSynopsis(text, title, channelName, cast) {
-  let value = String(text ?? "").replace(/\s+/g, " ").trim();
+  let value = String(text ?? "")
+    .replace(/[\u200E\u200F\uFEFF]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
   if (!value) return fallbackSynopsis(title, channelName, cast);
 
+  const original = value;
   const synopsisMarker = value.match(/\bSYNOPSIS\s*:\s*(.+)$/i);
   if (synopsisMarker) value = synopsisMarker[1].trim();
 
-  const hashtagCount = (value.match(/#[A-Za-z0-9_]+/g) ?? []).length;
+  const hashtagCount = (original.match(/#[A-Za-z0-9_]+/g) ?? []).length;
+  const firstTagIndex = original.search(/[@#][A-Za-z0-9_]/);
   value = value.replace(/^(?:\s*[@#][A-Za-z0-9_.-]+[,.;:]?)+\s*/g, "").trim();
 
   if (
     value.length < 70 ||
     promoText.test(value.slice(0, 420)) ||
     /https?:\/\//i.test(value.slice(0, 420)) ||
-    (/^#/.test(String(text).trim()) && hashtagCount >= 3 && !synopsisMarker)
+    (!synopsisMarker && hashtagCount >= 3 && firstTagIndex >= 0 && firstTagIndex < 40)
   ) {
     return fallbackSynopsis(title, channelName, cast);
   }
@@ -110,6 +115,16 @@ function usableSynopsis(text, title, channelName, cast) {
 function cleanTitleFromCast(rawTitle, currentTitle, cast) {
   const raw = String(rawTitle ?? currentTitle ?? "").trim();
   let title = String(currentTitle ?? raw).trim();
+
+  if (/^watch\b/i.test(raw)) {
+    const namedAtEnd = raw.match(/\bin\s+([A-Z][A-Z0-9 '&.\-]{3,80})(?:\s*\||\s*$)/);
+    if (namedAtEnd) title = namedAtEnd[1];
+  }
+
+  const suffixTitle = raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s*-\s*(?:LATEST|NEW|20\d{2})\b/i)
+    ?? raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s+20\d{2}\s*$/);
+  if (suffixTitle) title = suffixTitle[1];
+
   const lowerRaw = raw.toLowerCase();
   const hits = [];
 
@@ -123,15 +138,23 @@ function cleanTitleFromCast(rawTitle, currentTitle, cast) {
   hits.sort((a, b) => a - b);
   if (hits.length >= 2) {
     const prefix = raw.slice(0, hits[0]);
-    if (/[-–—:/]\s*$/.test(prefix) || /\s{2,}$/.test(prefix)) {
+    if (
+      /(?:[-–—:/.]\s*|[-–—:/]\s*watch\s*|\b(?:starring|staring|featuring)\s*|[-–—:/]?\s*\([^)]*(?:movie|film)[^)]*\)\s*)$/i.test(prefix) ||
+      /\s{2,}$/.test(prefix)
+    ) {
       title = prefix;
     }
   }
 
+  const plotTagline = title.match(/^([A-Z0-9 '&\-]{4,60}):\s+[A-Z][a-z]/);
+  if (plotTagline) title = plotTagline[1];
+
   title = title
-    .replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ")
+    .replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie|official\s+movie|fullnigerianmovie)\s*\)/gi, " ")
+    .replace(/\s*[-–—:/]\s*watch\s*$/i, " ")
+    .replace(/\b(?:starring|staring|featuring)\s*$/i, " ")
     .split("|")[0]
-    .replace(/\s*[-–—/|]+\s*$/g, " ")
+    .replace(/\s*[-–—/|:.]+\s*$/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 
@@ -146,10 +169,27 @@ let polishedExisting = 0;
 for (const movie of generated.movies ?? []) {
   const beforeTitle = movie.title;
   const beforeSynopsis = movie.synopsis;
+  const beforeCast = JSON.stringify(movie.cast ?? []);
+
+  const titleActors = castFromTitle(movie.rawTitle);
+  if (titleActors.length >= 2) {
+    const seen = new Set((movie.cast ?? []).map((name) => normalize(cleanName(name))));
+    for (const actor of titleActors) {
+      const key = normalize(cleanName(actor));
+      if (!key || seen.has(key)) continue;
+      seen.add(key);
+      movie.cast.push(actor);
+    }
+  }
+
   movie.title = cleanTitleFromCast(movie.rawTitle, movie.title, movie.cast ?? []);
   movie.synopsis = usableSynopsis(movie.synopsis, movie.title, movie.channelName, movie.cast ?? []);
   movie.featuredCast = (movie.cast ?? []).slice(0, 3);
-  if (movie.title !== beforeTitle || movie.synopsis !== beforeSynopsis) polishedExisting++;
+  if (
+    movie.title !== beforeTitle ||
+    movie.synopsis !== beforeSynopsis ||
+    JSON.stringify(movie.cast ?? []) !== beforeCast
+  ) polishedExisting++;
 }
 
 const byVideoId = new Map((generated.movies ?? []).map((movie) => [movie.videoId, movie]));
