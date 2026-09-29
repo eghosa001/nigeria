@@ -34,7 +34,8 @@ export function SiteFooter() {
           </div>
           <div>
             <strong>MyNigeriaGuide</strong>
-            <Link href="/assistant">Find a guide</Link>
+            <Link href="/search">Search the whole site</Link>
+            <Link href="/assistant">Find a service guide</Link>
             <Link href="/saved">Saved guides</Link>
             <Link href="/about">How verification works</Link>
             <Link href="/editorial-policy">Editorial policy</Link>
