@@ -39,9 +39,8 @@ assert(Array.isArray(generated.movies), "generated movie catalog must contain a 
 if (generated.generatedAt !== null) {
   assert(generated.sourceCount === sources.sources.length, "generated sourceCount must match approved source registry");
   assert(generated.importedCount === generated.movies.length, "generated importedCount must match movie array length");
-  if (generated.syncMode === "full") {
-    assert(Number(generated.failedSourceCount ?? 0) === 0, "full sync cannot publish with failed sources");
-  }
+  assert(Number(generated.failedSourceCount ?? 0) === 0, "sync cannot publish with failed sources");
+  assert(generated.movies.length >= 1000, "published YouTube movie catalog must remain at least 1,000 records");
 }
 
 const videoIds = new Set();
