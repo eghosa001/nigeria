@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
+import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -44,6 +45,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
   const base = getSiteUrl();
   const pageUrl = base + "/explore/" + guide.slug;
   const related = exploreGuides.filter((item) => item.slug !== guide.slug && item.kind === guide.kind).slice(0, 3);
+  const places = getExplorePlacesForGuide(guide.slug);
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -68,9 +70,26 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     },
   };
 
+  const placesLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    numberOfItems: places.length,
+    itemListElement: places.map((place, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": place.kind === "restaurant" ? "Restaurant" : place.kind === "hotel" ? "Hotel" : "TouristAttraction",
+        name: place.name,
+        description: place.summary,
+        address: place.address,
+        url: pageUrl + "#place-" + place.slug,
+      },
+    })),
+  };
+
   return (
     <>
-      <JsonLd data={[breadcrumbLd, guideLd]} />
+      <JsonLd data={[breadcrumbLd, guideLd, placesLd]} />
       <section className="section page-top">
         <div className="container">
           <Breadcrumbs items={[
@@ -105,6 +124,43 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
                 <span>Highlight</span>
                 <strong>{highlight.name}</strong>
                 <small>{highlight.detail}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section explore-guide-places" id="places">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Address, maps & cost</span>
+              <h2>Places to visit, eat & stay.</h2>
+              <p>Prices are marked as current estimates or variable instead of being presented as permanent facts.</p>
+            </div>
+          </div>
+          <div className="explore-place-grid">
+            {places.map((place) => (
+              <article className="explore-place-card explore-place-card-detail" id={"place-" + place.slug} key={place.slug}>
+                <div className="explore-place-topline">
+                  <span>{explorePlaceKindLabel[place.kind]}</span>
+                  <small>Checked {place.checkedAt}</small>
+                </div>
+                <h3>{place.name}</h3>
+                <p>{place.summary}</p>
+                <dl>
+                  <div><dt>Area</dt><dd>{place.area}</dd></div>
+                  <div><dt>Address</dt><dd>{place.address}</dd></div>
+                  <div><dt>Cost</dt><dd>{place.cost}</dd></div>
+                  {place.hours ? <div><dt>Hours</dt><dd>{place.hours}</dd></div> : null}
+                  {place.phone ? <div><dt>Phone</dt><dd><a href={"tel:" + place.phone.replace(/[^+\\d]/g, "")}>{place.phone}</a></dd></div> : null}
+                </dl>
+                {place.costNote ? <p className="explore-cost-note">{place.costNote}</p> : null}
+                <div className="explore-place-actions">
+                  <a href={googleMapsUrl(place)} target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
+                  {place.website ? <a href={place.website} target="_blank" rel="noreferrer">Official website ↗</a> : null}
+                  {place.source ? <a href={place.source.href} target="_blank" rel="noreferrer">{place.source.label} ↗</a> : null}
+                </div>
               </article>
             ))}
           </div>

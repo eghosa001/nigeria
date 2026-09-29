@@ -21,7 +21,8 @@
     "prebuild:vinext": "node scripts/write-deployment-info.mjs",
     "prebuild:next": "node scripts/write-deployment-info.mjs",
     "check:service-catalog": "tsx scripts/verify-service-migration.ts",
-    "check:analytics-safety": "tsx scripts/check-analytics-safety.ts"
+    "check:analytics-safety": "tsx scripts/check-analytics-safety.ts",
+    "check:explore": "tsx scripts/check-explore-content.ts"
   },
   "dependencies": {
     "next": "16.3.6",

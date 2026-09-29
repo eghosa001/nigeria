@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
+import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
 import { exploreGuides } from "@/lib/explore";
+import { explorePlaces } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -56,8 +58,8 @@ export default function ExplorePage() {
               <span className="trust-kicker">Travel guide approach</span>
               <span className="trust-live"><i aria-hidden="true" />Growing</span>
             </div>
-            <strong>{exploreGuides.length} focused guides</strong>
-            <p>Useful first-party planning pages instead of hundreds of thin destination listings.</p>
+            <strong>{exploreGuides.length} focused guides · {explorePlaces.length} mapped places</strong>
+            <p>Useful first-party planning pages with addresses, map links and price notes instead of hundreds of thin destination listings.</p>
             <div className="trust-row"><span>✓</span><div><strong>Practical before pretty</strong><small>Transport, timing and access come before hype.</small></div></div>
             <div className="trust-row"><span>✓</span><div><strong>Current checks matter</strong><small>Volatile details are flagged for direct confirmation.</small></div></div>
             <div className="trust-row"><span>✓</span><div><strong>Built to expand cleanly</strong><small>Hotels, food, events and itineraries can plug into the same structure.</small></div></div>
@@ -80,6 +82,22 @@ export default function ExplorePage() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section explore-place-section" id="places">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Places directory</span>
+              <h2>Find somewhere to visit, eat or stay.</h2>
+              <p>Addresses and Google Maps links are kept separate from volatile prices. Restaurant cost notes show the source/verification date on the destination page.</p>
+            </div>
+          </div>
+          <ExplorePlaceDirectory
+            places={explorePlaces}
+            guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle }))}
+          />
         </div>
       </section>
 

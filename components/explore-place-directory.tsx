@@ -1,0 +1,101 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import type { ExplorePlace, ExplorePlaceKind } from "@/lib/explore-places";
+import { explorePlaceKindLabel, googleMapsUrl } from "@/lib/explore-places";
+
+type GuideSummary = { slug: string; shortTitle: string };
+
+export function ExplorePlaceDirectory({ places, guides }: { places: ExplorePlace[]; guides: GuideSummary[] }) {
+  const [query, setQuery] = useState("");
+  const [kind, setKind] = useState<ExplorePlaceKind | "all">("all");
+  const [guide, setGuide] = useState("all");
+
+  const guideNames = useMemo(() => new Map(guides.map((item) => [item.slug, item.shortTitle])), [guides]);
+  const filtered = useMemo(() => {
+    const needle = query.trim().toLowerCase();
+    return places.filter((place) => {
+      if (kind !== "all" && place.kind !== kind) return false;
+      if (guide !== "all" && place.guideSlug !== guide) return false;
+      if (!needle) return true;
+      return [
+        place.name,
+        place.area,
+        place.address,
+        place.summary,
+        place.tags.join(" "),
+        guideNames.get(place.guideSlug) || "",
+      ].join(" ").toLowerCase().includes(needle);
+    });
+  }, [places, kind, guide, query, guideNames]);
+
+  return (
+    <div className="explore-directory">
+      <div className="explore-directory-controls">
+        <label>
+          Search places
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Restaurant, museum, park, city..."
+            type="search"
+          />
+        </label>
+        <label>
+          Type
+          <select value={kind} onChange={(event) => setKind(event.target.value as ExplorePlaceKind | "all")}>
+            <option value="all">All types</option>
+            <option value="attraction">Attractions</option>
+            <option value="nature">Nature</option>
+            <option value="landmark">Landmarks</option>
+            <option value="restaurant">Restaurants</option>
+            <option value="hotel">Places to stay</option>
+          </select>
+        </label>
+        <label>
+          Destination
+          <select value={guide} onChange={(event) => setGuide(event.target.value)}>
+            <option value="all">All destinations</option>
+            {guides.map((item) => <option key={item.slug} value={item.slug}>{item.shortTitle}</option>)}
+          </select>
+        </label>
+      </div>
+
+      <div className="directory-summary">
+        <span><strong>{filtered.length}</strong> place{filtered.length === 1 ? "" : "s"} shown</span>
+        {(query || kind !== "all" || guide !== "all") ? (
+          <button type="button" onClick={() => { setQuery(""); setKind("all"); setGuide("all"); }}>Clear filters</button>
+        ) : null}
+      </div>
+
+      {filtered.length ? (
+        <div className="explore-place-grid">
+          {filtered.map((place) => (
+            <article className="explore-place-card" key={place.slug}>
+              <div className="explore-place-topline">
+                <span>{explorePlaceKindLabel[place.kind]}</span>
+                <small>{guideNames.get(place.guideSlug)}</small>
+              </div>
+              <h3>{place.name}</h3>
+              <p>{place.summary}</p>
+              <dl>
+                <div><dt>Address</dt><dd>{place.address}</dd></div>
+                <div><dt>Cost</dt><dd>{place.cost}</dd></div>
+              </dl>
+              <div className="explore-place-actions">
+                <a href={googleMapsUrl(place)} target="_blank" rel="noreferrer">Google Maps ↗</a>
+                <Link href={"/explore/" + place.guideSlug + "#place-" + place.slug}>Full details →</Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="empty-state">
+          <strong>No places match those filters.</strong>
+          <p>Try a city name, another category or clear the filters.</p>
+        </div>
+      )}
+    </div>
+  );
+}

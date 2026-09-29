@@ -7,7 +7,8 @@ import { agencies, publicServiceListings, publicServices } from "@/lib/data";
 import { growthHubs } from "@/lib/growth-hubs";
 
 export const metadata: Metadata = {
-  title: "Nigerian Government Services Guide",
+  title: "Nigeria Services & Travel Guide",
+  description: "Practical service guidance and travel planning for Nigeria, with official links, clear steps, places, addresses, map links and current verification notes.",
   alternates: { canonical: "/" },
 };
 
@@ -33,11 +34,11 @@ export default function HomePage() {
           <div className="hero-copy">
             <div className="hero-kicker">
               <span className="hero-kicker-dot" aria-hidden="true" />
-              Independent Nigerian service guide
+              Independent Nigeria guide
             </div>
-            <h1>Get government services done with <span>clearer steps.</span></h1>
+            <h1>Get things done and explore Nigeria with <span>clearer guidance.</span></h1>
             <p className="hero-lead">
-              Current fees, requirements, online and physical routes, official portals and what happens next — explained in plain language.
+              Practical service guides, current requirements, official links and travel planning — organised so you can quickly find the next useful step.
             </p>
             <ServiceSearch services={publicServiceListings} />
             <div className="hero-popular" aria-label="Popular guides">
@@ -45,13 +46,13 @@ export default function HomePage() {
               {popular.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
             </div>
             <p className="hero-note">
-              MyNigeriaGuide never collects government payments. Transactions happen only on the official channels we link to.
+              For regulated and public services, MyNigeriaGuide never collects payments. Transactions happen only on the official channels we link to.
             </p>
           </div>
 
           <aside className="trust-panel" aria-label="MyNigeriaGuide verification">
             <div className="trust-panel-top">
-              <span className="trust-kicker">Verification snapshot</span>
+              <span className="trust-kicker">Service verification snapshot</span>
               <span className="trust-live"><i aria-hidden="true" />Live</span>
             </div>
             <strong>{verifiedCount} published guides</strong>
@@ -80,7 +81,7 @@ export default function HomePage() {
             <Link className="home-category-card" href="/services">
               <span>Get something done</span>
               <strong>Service Guide</strong>
-              <small>Government processes, documents, fees, official portals, visas, NYSC, NIN, CAC and more.</small>
+              <small>Government and practical services, documents, fees, official portals, visas, NYSC, NIN, CAC and more as coverage expands.</small>
               <i>Browse services →</i>
             </Link>
             <Link className="home-category-card" href="/explore">
