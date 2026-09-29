@@ -7,36 +7,33 @@ export function SiteFooter() {
       <div className="container footer-top">
         <div className="footer-intro">
           <div className="brand footer-brand"><BrandLogo footer /></div>
-          <p>Independent, source-linked guidance for Nigerian public services. We explain the process; the responsible agency remains the official authority.</p>
+          <p>Independent, source-linked guidance for Nigerian services, travel and entertainment. Applications, payments, bookings and playback stay with the responsible official provider.</p>
           <div className="footer-trust">
             <span>Independent guide</span>
-            <span>Official links only</span>
+            <span>Sources stay visible</span>
             <span>No government fees collected</span>
           </div>
         </div>
 
         <div className="footer-grid">
           <div>
-            <strong>Explore</strong>
-            <Link href="/services">Services</Link>
-            <Link href="/fees">Fees</Link>
-            <Link href="/updates">Updates</Link>
-            <Link href="/offices">Offices</Link>
-            <Link href="/official-portals">Official portals</Link>
-            <Link href="/saved">Saved</Link>
+            <strong>MyNigeriaGuide</strong>
+            <Link href="/services">Service Guide</Link>
+            <Link href="/explore">Explore Nigeria</Link>
+            <Link href="/entertainment">Movies &amp; Entertainment</Link>
             <Link href="/assistant">Find a guide</Link>
+            <Link href="/saved">Saved guides</Link>
           </div>
           <div>
-            <strong>Popular categories</strong>
-            <Link href="/categories/banking">Banking & BVN</Link>
-            <Link href="/categories/international-travel">International travel</Link>
-            <Link href="/categories/identity">Identity & NIN</Link>
-            <Link href="/categories/education">Education</Link>
-            <Link href="/categories/business">Business</Link>
-            <Link href="/categories/driving">Driving</Link>
+            <strong>Useful links</strong>
+            <Link href="/fees">Fees</Link>
+            <Link href="/updates">Verified updates</Link>
+            <Link href="/offices">Official offices</Link>
+            <Link href="/official-portals">Official portals</Link>
+            <Link href="/categories/foreign-visas">Foreign visas</Link>
           </div>
           <div>
-            <strong>Trust & policies</strong>
+            <strong>Trust &amp; policies</strong>
             <Link href="/about">How verification works</Link>
             <Link href="/editorial-policy">Editorial policy</Link>
             <Link href="/corrections">Corrections</Link>
@@ -49,7 +46,7 @@ export function SiteFooter() {
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getUTCFullYear()} MyNigeriaGuide</span>
-        <span>Not affiliated with the Government of Nigeria or any government agency.</span>
+        <span>Independent guide. Not affiliated with the Government of Nigeria or any government agency.</span>
       </div>
     </footer>
   );
