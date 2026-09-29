@@ -30,6 +30,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "Nigerians abroad should use the passport-abroad guide and the processing route for the relevant Nigerian mission or approved overseas passport centre. The exact appointment and biometric location depends on the country.",
       source: { label: "NIS passports information", url: "https://immigration.gov.ng/passports/" },
       relatedSlugs: ["passport-application-abroad"]
+    },
+    {
+      question: "How do I check my passport application status or find the earliest available processing centre?",
+      answer: "The official NIS passport portal provides separate options to check application status/print a receipt and to check centre availability before booking or changing an appointment.",
+      source: { label: "NIS Passport Application Portal", url: "https://passport.immigration.gov.ng/" },
+      relatedSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-abroad"]
     }
   ],
   "Identity": [
@@ -82,6 +88,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "Use the official Track DL Application Status option and provide the application ID or driver's licence number together with the applicant's date of birth.",
       source: { label: "Nigeria Driver's Licence FAQ", url: "https://nigeriadriverslicence.frsc.gov.ng/faq" },
       relatedSlugs: ["new-drivers-licence", "renew-drivers-licence", "replace-lost-drivers-licence"]
+    },
+    {
+      question: "Can a commercial driver start a driver's licence application entirely online?",
+      answer: "FRSC says commercial-licence applications are not started from the public portal home page. The applicant should visit a capture centre with the required medical certificate and driving-school certificate so an FRSC operator can initiate the commercial application.",
+      source: { label: "Nigeria Driver's Licence FAQ", url: "https://nigeriadriverslicence.frsc.gov.ng/faq" },
+      relatedSlugs: ["new-drivers-licence"]
     }
   ],
   "Business": [
@@ -108,6 +120,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "CAC's Company Registration Portal provides electronic registration documents and post-registration services. Use the exact guide for an e-certificate/status report or Certified True Copy so you choose the correct request.",
       source: { label: "CAC Company Registration Portal", url: "https://icrp.cac.gov.ng/" },
       relatedSlugs: ["cac-status-report", "cac-certified-true-copy", "cac-company-registration"]
+    },
+    {
+      question: "How long do CAC registration and post-registration services usually take?",
+      answer: "CAC publishes service timelines rather than one universal turnaround time. Its current schedule lists different targets by service, including instant Status Reports and working-day targets for several post-registration requests. The clock can depend on receiving a complete application and resolving any query.",
+      source: { label: "CAC service timelines", url: "https://www.cac.gov.ng/services/service-timelines" },
+      relatedSlugs: ["cac-status-report", "cac-certified-true-copy", "cac-annual-returns"]
     }
   ],
   "Education": [
@@ -146,6 +164,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "The official NECO results portal asks for the examination year, examination type, result token and registration number. A token can be purchased from the portal when needed.",
       source: { label: "NECO Results Portal", url: "https://results.neco.gov.ng/" },
       relatedSlugs: ["neco-check-result", "neco-purchase-result-token"]
+    },
+    {
+      question: "Can I pay cash directly to someone for JAMB registration or Direct Entry?",
+      answer: "JAMB says its UTME and Direct Entry registration system is cashless. Obtain the required profile code/e-PIN through the approved channels and complete registration at an accredited CBT centre; do not hand an unofficial agent cash as a substitute for the official payment route.",
+      source: { label: "JAMB FAQ", url: "https://www.jamb.gov.ng/FAQ" },
+      relatedSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code"]
     }
   ],
   "Youth service": [
@@ -210,6 +234,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "NPC provides separate self-service routes for modification, certificate reprint and reissuance. The modification service states that only digitised birth attestation/registration records can be modified through that route.",
       source: { label: "NPC record modification service", url: "https://modification.nationalpopulation.gov.ng/" },
       relatedSlugs: ["npc-modify-birth-record", "npc-birth-certificate-reprint", "npc-digital-birth-certificate-reissuance"]
+    },
+    {
+      question: "Can I use an NPC Temporary Attestation Number for a NIN date-of-birth modification?",
+      answer: "No. NPC says the Temporary Attestation Number is for applicants without a NIN to use during NIN enrolment; it cannot be validated on the NIMC web modification portal for a date-of-birth change.",
+      source: { label: "NPC Vital Registration FAQ", url: "https://nationalpopulation.gov.ng/faq-vitalreg" },
+      relatedSlugs: ["npc-birth-attestation", "nin-date-of-birth-modification", "nin-enrolment"]
     }
   ],
   "Tax": [
@@ -236,6 +266,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "The current self-service portal exposes self tax filing, payments, tax clearance, tax wallet, refunds and assessments from one account area.",
       source: { label: "NRS Taxpayer Self-Service Portal", url: "https://selfservice.nrs.gov.ng/" },
       relatedSlugs: ["nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
+    },
+    {
+      question: "What is the new Nigerian Tax ID and does it replace the old TIN?",
+      answer: "The JRB/NRS 2026 rollout introduced a 13-digit Tax ID for tax administration. For individuals it is linked to the NIN, while registered entities use their CAC registration number. The official announcement says the new Tax ID became effective from 1 January 2026, replacing previously issued TINs for this purpose, and can be retrieved through the official Tax ID portals.",
+      source: { label: "Nigerian Tax ID rollout notice", url: "https://fctirs.gov.ng/nigerian-tax-id-portal-goes-live/" },
+      relatedSlugs: ["nrs-individual-tax-registration", "nrs-corporate-tax-registration"]
     }
   ],
   "State services": [
@@ -288,6 +324,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "Yes. NIBSS's NRBVN platform is designed for eligible Nigerians in the diaspora to complete remote BVN enrolment and related non-resident onboarding without returning to Nigeria solely for the capture process.",
       source: { label: "NIBSS NRBVN", url: "https://nibss-plc.com.ng/nrbvn/" },
       relatedSlugs: ["non-resident-bvn"]
+    },
+    {
+      question: "Can someone under 18 enrol for a BVN, and how often can the BVN-linked phone number be changed?",
+      answer: "Under the CBN amendment effective 1 May 2026, only people aged 18 and above may enrol for a BVN. The same amendment says a BVN-linked phone number may be changed only once.",
+      source: { label: "CBN reforms and BVN amendment", url: "https://www.cbn.gov.ng/AboutCBN/Reforms.html" },
+      relatedSlugs: ["bvn-enrolment", "bvn-change-details"]
     }
   ],
   "International travel": [
@@ -332,6 +374,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       answer: "NIS says the certificate is valid for travel within the ECOWAS sub-region for two years and can be renewed for a further two-year period. Separate replacement rules apply for a lost, stolen, mutilated or exhausted certificate.",
       source: { label: "NIS ECOWAS Travel Certificate", url: "https://immigration.gov.ng/ecowas-travel-certificate/" },
       relatedSlugs: ["ecowas-travel-certificate"]
+    },
+    {
+      question: "Does Nigeria's Landing or Exit Card apply to transit passengers, and what if I lose my copy?",
+      answer: "The NIS portal says the Landing/Exit Card is not intended for transit passengers. For covered travellers, a successful submission sends a copy by email; if the printed copy is lost, the emailed copy can be reprinted, and the portal also provides a last-card retrieval function.",
+      source: { label: "NIS Landing and Exit Card FAQ", url: "https://lecard.immigration.gov.ng/faq" },
+      relatedSlugs: ["nigeria-landing-exit-card", "nigeria-transit-visa"]
     }
   ],
   "Police & security": [
@@ -383,6 +431,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       question: "Where do I find my PVC collection centre?",
       answer: "Use INEC's official registered-voter/PVC lookup. The MyNigeriaGuide PVC-status page links to that administrative service and does not provide voting advice or candidate recommendations.",
       source: { label: "INEC CVR portal", url: "https://cvr.inecnigeria.org/" },
+      relatedSlugs: ["inec-pvc-status"]
+    },
+    {
+      question: "Can I transfer my voter registration, update my details or replace a lost or damaged PVC online?",
+      answer: "INEC's CVR portal provides service paths for voter-information updates, transfers and lost/damaged PVC replacement. Availability can depend on the current registration exercise, so start from the live INEC portal and check whether the specific administrative service is open before submitting anything.",
+      source: { label: "INEC CVR services portal", url: "https://cvr.inecnigeria.org/Public/getStarted" },
       relatedSlugs: ["inec-pvc-status"]
     }
   ],
