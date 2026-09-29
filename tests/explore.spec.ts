@@ -40,3 +40,21 @@ test("city guide keeps place verification and map actions visible", async ({ pag
   await expect(nok.getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("target", "_blank");
   await expect(nok).toContainText("Checked 2026-09-29");
 });
+
+
+test("new Ondo destination guides use the existing explore route and map-ready records", async ({ page }) => {
+  for (const slug of ["araromi-beach", "ebomi-lake", "igbokoda-waterfront"]) {
+    await page.goto("/explore/" + slug);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Places to visit, eat & stay." })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
+    await expect(page.getByText("Checked 2026-09-29")).toBeVisible();
+  }
+});
+
+test("tour directory exposes new Ondo destinations without structural changes", async ({ page }) => {
+  await page.goto("/explore");
+  await expect(page.getByRole("link", { name: /Araromi Beach/ }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /Ebomi Lake/ }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /Igbokoda Waterfront/ }).first()).toBeVisible();
+});
