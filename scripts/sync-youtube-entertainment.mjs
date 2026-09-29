@@ -566,6 +566,10 @@ for (const source of registry.sources) {
     }
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
+    if (/quotaExceeded|exceeded[^\n]*quota/i.test(message)) {
+      console.error("YouTube Data API quota exhausted. Existing catalog files are preserved.");
+      throw error;
+    }
     sourceErrors.push({ slug: source.slug, name: source.searchName, message });
     console.error("Source skipped:", source.searchName, "-", message);
   }
