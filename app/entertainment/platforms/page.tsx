@@ -6,7 +6,7 @@ import { platformGuides } from "@/lib/entertainment-extras";
 
 export const metadata: Metadata = {
   title: "Where to Watch Nigerian Movies",
-  description: "Compare legal Nigerian movie sources across Netflix, YouTube, Prime Video, Kava, NolliStream and DStv/BoxOffice, including official offline options."
+  description: "Compare legal Nigerian movie sources across Netflix, YouTube, Prime Video, Kava, NolliStream and DStv/BoxOffice, including official offline options.",
   alternates: { canonical: "/entertainment/platforms" },
 };
 
