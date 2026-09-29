@@ -372,26 +372,6 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
     ". Watch it through the publisher's official YouTube release.";
 }
 
-function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
-  const description = video.snippet?.description ?? "";
-  const paragraphs = description
-    .split(/\n\s*\n|\r?\n/)
-    .map((line) => line.trim())
-    .filter((line) =>
-      line.length >= 70 &&
-      !/https?:\/\//i.test(line) &&
-      !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#)/i.test(line) &&
-      !/\b(?:subscribe to|social media|instagram|tiktok|facebook|youtube channel)\b/i.test(line),
-    );
-  const chosen = paragraphs[0];
-  if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
-
-  const featured = cast.slice(0, 3).join(", ");
-  return displayTitle + " is a full-length Nigerian film published by " + channelTitle +
-    (featured ? ", featuring " + featured : "") +
-    ". Watch it through the publisher's official YouTube release.";
-}
-
 function cleanTitle(raw, cast = []) {
   let title = String(raw ?? "").trim();
   title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
