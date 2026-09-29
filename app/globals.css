@@ -698,6 +698,9 @@ h3 { font-size: 1.22rem; }
 .category-summary strong { font-size: 1.8rem; line-height: 1; }
 .category-summary span { margin-top: 7px; color: var(--muted); font-size: .78rem; }
 .category-page-heading { margin-top: 0; }
+.category-faqs { margin-top: 64px; }
+.category-faqs > .page-intro { margin-bottom: 24px; }
+.category-faqs .faq-answer a { color: var(--green-dark); font-weight: 750; }
 
 @media (max-width: 900px) {
   .fee-row { grid-template-columns: minmax(180px, 1fr) minmax(220px, 1fr) 110px; }
