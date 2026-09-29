@@ -75,5 +75,5 @@ export const youtubeLibraryGeneratedAt = generatedData.generatedAt as string | n
 export const youtubePendingQualityCount = generatedData.pendingQualityCount ?? 0;
 
 export function getYouTubeMovieById(videoId: string) {
-  return youtubeMovieLibrary.find((movie) => movie.videoId === videoId);
+  return byVideoId.get(videoId);
 }
