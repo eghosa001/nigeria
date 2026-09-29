@@ -31,7 +31,7 @@ export function BrandLogo({ footer = false }: { footer?: boolean }) {
       <BrandMark className="brand-logo-mark" />
       <span className="brand-wordmark">
         <strong><span>MyNigeria</span><em>Guide</em></strong>
-        <small>Services · Travel · Movies</small>
+        <small>Movies · Services · Travel</small>
       </span>
     </span>
   );
