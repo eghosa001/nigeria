@@ -4625,5 +4625,5 @@ a.admin-guide-row:hover { background:#f8fcf9; }
     gap: 12px;
   }
   .minimal-movie-row { gap: 18px 8px; }
-  .minimal-footer-links { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px 18px; }
+  .minimal-footer-links { grid-template-columns: minmax(0,1fr); gap: 26px; }
 }
