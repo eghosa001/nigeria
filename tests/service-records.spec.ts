@@ -259,3 +259,18 @@ test("catalog serialization is deterministic and round-trips", () => {
   expect(serialized).toBe(JSON.stringify(services, null, 2) + "\n");
   expect(validateServiceCatalog(JSON.parse(serialized))).toEqual(services);
 });
+
+
+test("NIBSS USSD utility services are public and the generic BVN-change guide is removed", async ({ page }) => {
+  await page.goto("/services/nip-transfer-status");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("NIP transfer");
+  await expect(page.getByText("*565*5#", { exact: false }).first()).toBeVisible();
+  await expect(page.getByText("₦20", { exact: false }).first()).toBeVisible();
+
+  await page.goto("/services/vehicle-insurance-validation-ussd");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("vehicle insurance");
+  await expect(page.getByText("*565*11#", { exact: false }).first()).toBeVisible();
+
+  const removed = await page.request.get("/services/bvn-change-details");
+  expect(removed.status()).toBe(404);
+});
