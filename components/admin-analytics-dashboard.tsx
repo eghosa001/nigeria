@@ -23,6 +23,20 @@ function readableDate(value: string) {
   return date.toLocaleDateString("en-NG", { month: "short", day: "numeric" });
 }
 
+function interactionLabel(event: string) {
+  const labels: Record<string, string> = {
+    service_search_click: "Search result opened",
+    official_link_click: "Official service link opened",
+    official_source_click: "Official source opened",
+    guide_share: "Guide shared",
+    guide_watch_add: "Guide saved",
+    guide_watch_remove: "Guide removed from saved",
+    process_start: "Process checklist started",
+    process_complete: "Process checklist completed",
+  };
+  return labels[event] ?? event;
+}
+
 export function AdminAnalyticsDashboard() {
   const [range, setRange] = useState<AnalyticsRange>("30d");
   const [state, setState] = useState<"loading" | "setup" | "locked" | "ready" | "error">("loading");
@@ -211,6 +225,30 @@ export function AdminAnalyticsDashboard() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="admin-panel">
+        <div className="section-heading">
+          <div><span className="eyebrow">Useful actions</span><h2>What visitors actually do</h2></div>
+          <small>Privacy-safe aggregate events only</small>
+        </div>
+        {(data.interactions ?? []).length ? (
+          <div className="analytics-ranking">
+            {(data.interactions ?? []).map((row, index) => (
+              <div key={row.event}>
+                <span>{index + 1}</span>
+                <strong>{interactionLabel(row.event)}</strong>
+                <small>{row.event}</small>
+                <b>{number(row.count)} events</b>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="admin-empty">
+            <strong>No interaction events yet.</strong>
+            <p>Search clicks, official-link clicks, shares, saved guides and checklist activity will appear here after visitors use them.</p>
+          </div>
+        )}
       </section>
     </>
   );
