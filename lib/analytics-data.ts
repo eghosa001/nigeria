@@ -19,6 +19,7 @@ export type AnalyticsDashboardData = {
   countries: Array<{ country: string; users: number; sessions: number; pageViews: number }>;
   pages: Array<{ path: string; title: string; users: number; pageViews: number }>;
   referrers: Array<{ source: string; medium: string; sessions: number; users: number }>;
+  interactions: Array<{ event: string; count: number }>;
 };
 
 type ReportRow = {
@@ -30,6 +31,21 @@ type RunReportResponse = {
   rows?: ReportRow[];
   totals?: Array<{ metricValues?: Array<{ value?: string }> }>;
 };
+
+type BatchRunReportsResponse = {
+  reports?: RunReportResponse[];
+};
+
+const interactionEvents = [
+  "service_search_click",
+  "official_link_click",
+  "official_source_click",
+  "guide_share",
+  "guide_watch_add",
+  "guide_watch_remove",
+  "process_start",
+  "process_complete",
+];
 
 let tokenCache: { token: string; expiresAt: number } | null = null;
 const reportCache = new Map<string, { expiresAt: number; data: AnalyticsDashboardData }>();
@@ -134,6 +150,26 @@ async function runReport(body: Record<string, unknown>) {
   return await response.json() as RunReportResponse;
 }
 
+async function batchRunReports(requests: Array<Record<string, unknown>>) {
+  const { propertyId } = config();
+  if (!propertyId) throw new Error("GA4 property ID is not configured.");
+  const token = await getAccessToken();
+  const response = await fetch(
+    "https://analyticsdata.googleapis.com/v1beta/properties/" + encodeURIComponent(propertyId) + ":batchRunReports",
+    {
+      method: "POST",
+      headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" },
+      body: JSON.stringify({ requests }),
+      cache: "no-store",
+    },
+  );
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error("Google Analytics batch report request failed (" + response.status + "): " + message.slice(0, 300));
+  }
+  return await response.json() as BatchRunReportsResponse;
+}
+
 async function runRealtime() {
   const { propertyId } = config();
   if (!propertyId) return null;
@@ -175,8 +211,8 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
   const dataStartDate = analyticsStartDate(days, today);
   const dateRanges = [{ startDate: dataStartDate, endDate: "today" }];
 
-  const [summaryReport, dailyReport, countryReport, pageReport, referrerReport, realtimeActiveUsers] = await Promise.all([
-    runReport({
+  const coreRequests = [
+    {
       dateRanges,
       metrics: [
         { name: "activeUsers" },
@@ -186,37 +222,58 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
         { name: "engagementRate" },
       ],
       metricAggregations: ["TOTAL"],
-    }),
-    runReport({
+    },
+    {
       dateRanges,
       dimensions: [{ name: "date" }],
       metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "screenPageViews" }],
       orderBys: [{ dimension: { dimensionName: "date" } }],
       limit: 100,
-    }),
-    runReport({
+    },
+    {
       dateRanges,
       dimensions: [{ name: "country" }],
       metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "screenPageViews" }],
       orderBys: [{ metric: { metricName: "activeUsers" }, desc: true }],
       limit: 15,
-    }),
-    runReport({
+    },
+    {
       dateRanges,
       dimensions: [{ name: "pagePath" }, { name: "pageTitle" }],
       metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }],
       orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
       limit: 20,
-    }),
-    runReport({
+    },
+    {
       dateRanges,
       dimensions: [{ name: "sessionSource" }, { name: "sessionMedium" }],
       metrics: [{ name: "sessions" }, { name: "activeUsers" }],
       orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
       limit: 15,
-    }),
+    },
+  ];
+
+  const interactionRequest = {
+    dateRanges,
+    dimensions: [{ name: "eventName" }],
+    metrics: [{ name: "eventCount" }],
+    dimensionFilter: {
+      filter: {
+        fieldName: "eventName",
+        inListFilter: { values: interactionEvents },
+      },
+    },
+    orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
+    limit: 20,
+  };
+
+  const [batch, interactionReport, realtimeActiveUsers] = await Promise.all([
+    batchRunReports(coreRequests),
+    runReport(interactionRequest),
     runRealtime(),
   ]);
+
+  const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
 
   const totalValues = summaryReport.totals?.[0]?.metricValues ?? summaryReport.rows?.[0]?.metricValues ?? [];
   const data: AnalyticsDashboardData = {
@@ -254,6 +311,10 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
       medium: dimension(row, 1) || "(none)",
       sessions: metric(row, 0),
       users: metric(row, 1),
+    })),
+    interactions: (interactionReport.rows ?? []).map((row) => ({
+      event: dimension(row, 0),
+      count: metric(row, 0),
     })),
   };
 
