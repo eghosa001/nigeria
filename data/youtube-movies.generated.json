@@ -1,23 +1,18 @@
 {
-  "generatedAt": "2026-09-29T09:32:46.228Z",
+  "generatedAt": "2026-09-29T09:37:21.434Z",
   "syncMode": "full",
   "sourceCount": 32,
-  "importedCount": 631,
-  "importedThisRun": 631,
-  "pendingQualityCount": 931,
-  "pendingThisRun": 931,
+  "importedCount": 728,
+  "importedThisRun": 728,
+  "pendingQualityCount": 954,
+  "pendingThisRun": 954,
   "duplicateTitleCount": 0,
-  "failedSourceCount": 7,
+  "failedSourceCount": 5,
   "sourceErrors": [
     {
       "slug": "uchenna-mbunabo-tv",
       "name": "Uchenna Mbunabo TV",
       "message": "Resolved channel failed identity or publisher-context check: Uchenna Mbunabo TV"
-    },
-    {
-      "slug": "maurice-sam-tv",
-      "name": "Maurice Sam TV",
-      "message": "Resolved channel failed identity or publisher-context check: Maurice Sam TV"
     },
     {
       "slug": "bolaji-ogunmola-tv",
@@ -38,11 +33,6 @@
       "slug": "bimbo-ademoye-tv",
       "name": "Bimbo Ademoye TV",
       "message": "Resolved channel failed identity or publisher-context check: Bimbo Ademoye TV"
-    },
-    {
-      "slug": "brain-jotter",
-      "name": "Brain Jotter",
-      "message": "Resolved channel failed identity or publisher-context check: Brain Jotter"
     }
   ],
   "movies": [
@@ -143,6 +133,30 @@
       "year": 2026,
       "durationMinutes": 104,
       "videoUrl": "https://www.youtube.com/watch?v=ULYjuxatLag",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "negcmBrWxm0",
+      "title": "A TURN OF EVENTS",
+      "rawTitle": "A TURN OF EVENTS - MAURICE SAM, SARIAN MARTIN, Latest 2026 Nigerian Full Movie",
+      "synopsis": "A TURN OF EVENTS is an emotional Nollywood drama about love, trust, difficult choices, unexpected changes, and how quickly life can take a completely different direction.",
+      "cast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "MANY OTHERS."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "MANY OTHERS."
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-09-22T17:00:20Z",
+      "year": 2026,
+      "durationMinutes": 167,
+      "videoUrl": "https://www.youtube.com/watch?v=negcmBrWxm0",
       "lastChecked": "2026-09-29"
     },
     {
@@ -299,6 +313,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "ORIBBpN7YMs",
+      "title": "WHAT LOVE IS",
+      "rawTitle": "WHAT LOVE IS - MAURICE SAM, ERICA NLEWEDIM, Latest 2026 Nigerian Full Movie",
+      "synopsis": "WHAT LOVE IS is an emotional Nollywood romance filled with love, trust, uncertainty, relationship struggles, and unexpected twists.",
+      "cast": [
+        "MAURICE SAM",
+        "ERICA NLEWEDIM",
+        "MANY OTHERS."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "ERICA NLEWEDIM",
+        "MANY OTHERS."
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-09-08T17:00:12Z",
+      "year": 2026,
+      "durationMinutes": 122,
+      "videoUrl": "https://www.youtube.com/watch?v=ORIBBpN7YMs",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "Mobxiqc-vFY",
       "title": "MR CASH AND PRIDE",
       "rawTitle": "MR CASH AND PRIDE - UZOR ARUKWE, PAMELA OKOYE, EMEM UFOT, INEM PETERS, Latest 2026 Nigerian Movie",
@@ -371,6 +409,30 @@
       "year": 2026,
       "durationMinutes": 130,
       "videoUrl": "https://www.youtube.com/watch?v=zGqiEDVR0A4",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "8Y-Z6tA7Yjw",
+      "title": "ECHOES OF DESIRE",
+      "rawTitle": "ECHOES OF DESIRE - MAURICE SAM, DAMILOLA ADEGBITE, Latest 2026 Nigerian Movie",
+      "synopsis": "ECHOES OF DESIRE is an emotional Nollywood drama about love, desire, unresolved feelings, and the powerful memories that can change the course of two people's lives.",
+      "cast": [
+        "MAURICE SAM",
+        "DAMILOLA ADEGBITE",
+        "MANY OTHERS."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "DAMILOLA ADEGBITE",
+        "MANY OTHERS."
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-09-01T17:00:10Z",
+      "year": 2026,
+      "durationMinutes": 155,
+      "videoUrl": "https://www.youtube.com/watch?v=8Y-Z6tA7Yjw",
       "lastChecked": "2026-09-29"
     },
     {
@@ -461,6 +523,30 @@
       "year": 2026,
       "durationMinutes": 114,
       "videoUrl": "https://www.youtube.com/watch?v=jrlFE0MPTtM",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "q5Vg0jUMl-s",
+      "title": "NEVER LET GO",
+      "rawTitle": "NEVER LET GO - MAURICE SAM, NADIA BUARI, Latest 2026 Nigerian Movie",
+      "synopsis": "NEVER LET GO is an emotional Nollywood drama about love, heartbreak, second chances, and the strength it takes to hold on when everything seems to be falling apart.",
+      "cast": [
+        "MAURICE SAM",
+        "NADIA BUARI",
+        "MANY OTHERS."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "NADIA BUARI",
+        "MANY OTHERS."
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-08-25T17:00:18Z",
+      "year": 2026,
+      "durationMinutes": 112,
+      "videoUrl": "https://www.youtube.com/watch?v=q5Vg0jUMl-s",
       "lastChecked": "2026-09-29"
     },
     {
@@ -692,6 +778,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "WIQUH0YSZAs",
+      "title": "JUST BEFORE FOREVER",
+      "rawTitle": "JUST BEFORE FOREVER - MAURICE SAM, UCHE MONTANA, PAMELA OKOYE, Latest 2026 Nigerian Movie",
+      "synopsis": "JUST BEFORE FOREVER is a romantic Nollywood drama filled with love, emotions, difficult choices, and unexpected moments that will keep you watching until the end.",
+      "cast": [
+        "MAURICE SAM",
+        "UCHE MONTANA",
+        "PAMELA OKOYE",
+        "MANY OTHERS."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "UCHE MONTANA",
+        "PAMELA OKOYE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-08-11T17:00:10Z",
+      "year": 2026,
+      "durationMinutes": 113,
+      "videoUrl": "https://www.youtube.com/watch?v=WIQUH0YSZAs",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "VyaPwFRhwM8",
       "title": "For The Love of Kene",
       "rawTitle": "For The Love of Kene - New Nigerian Movie starring Bimbo Ademoye, Blessing J Nze, Elijah Chukwuemeka",
@@ -764,6 +875,31 @@
       "year": 2026,
       "durationMinutes": 103,
       "videoUrl": "https://www.youtube.com/watch?v=Yu-QxqPDmXM",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "N0rneHL28SU",
+      "title": "BEHIND THESE LAUGHS",
+      "rawTitle": "BEHIND THESE LAUGHS - MAURICE SAM, SHAZNAY OKAWA, REAL JUDY, Latest 2026 Nigerian Movie",
+      "synopsis": "BEHIND THESE LAUGHS is an emotional Nollywood family drama that will keep you watching until the very end.",
+      "cast": [
+        "MAURICE SAM",
+        "SHAZNAY OKAWA",
+        "REAL JUDY",
+        "MANY OTHERS."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SHAZNAY OKAWA",
+        "REAL JUDY"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-08-04T17:00:33Z",
+      "year": 2026,
+      "durationMinutes": 120,
+      "videoUrl": "https://www.youtube.com/watch?v=N0rneHL28SU",
       "lastChecked": "2026-09-29"
     },
     {
@@ -922,6 +1058,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "MCJk0fudJao",
+      "title": "THE STRANGE WOMAN",
+      "rawTitle": "THE STRANGE WOMAN - MAURICE SAM, SOPHIE ALAKIJA, EMEM UDONQUAK, Latest 2026 Nigerian Movie",
+      "synopsis": "THE STRANGE WOMAN is a gripping story filled with mystery, love, betrayal, shocking secrets, and unexpected twists that will keep you watching until the very end.",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "EMEM UDONQUAK",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "EMEM UDONQUAK"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-07-21T17:00:23Z",
+      "year": 2026,
+      "durationMinutes": 111,
+      "videoUrl": "https://www.youtube.com/watch?v=MCJk0fudJao",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "MQjZJNpSK9Y",
       "title": "COST OF TRUST",
       "rawTitle": "COST OF TRUST - UZOR ARUKWE, PAMELA OKOYE, Nigerian Movies 2026 Latest Full Movies",
@@ -997,6 +1158,30 @@
       "year": 2026,
       "durationMinutes": 105,
       "videoUrl": "https://www.youtube.com/watch?v=l7n8dcBFMns",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "2XzPBjsVOTk",
+      "title": "TERMS OF ATTRACTION",
+      "rawTitle": "TERMS OF ATTRACTION - MAURICE SAM, RUTH KADIRI, Latest 2026 Nigerian Movie",
+      "synopsis": "A painful accident brings two people together in a way they never expected.",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI",
+        "MANY OTHERS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-07-14T17:00:30Z",
+      "year": 2026,
+      "durationMinutes": 119,
+      "videoUrl": "https://www.youtube.com/watch?v=2XzPBjsVOTk",
       "lastChecked": "2026-09-29"
     },
     {
@@ -1127,6 +1312,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "YM_rr_Y9Nko",
+      "title": "TWO CAN PLAY",
+      "rawTitle": "TWO CAN PLAY - MAURICE SAM, JACKIE APPIAH, PRISMA JAMES, Latest 2026 Nigerian Movie",
+      "synopsis": "TWO CAN PLAY is a captivating story about love, betrayal, jealousy, and the dangerous games people play with each other's hearts.",
+      "cast": [
+        "MAURICE SAM",
+        "JACKIE APPIAH",
+        "PRISMA JAMES",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "JACKIE APPIAH",
+        "PRISMA JAMES"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-06-30T17:00:29Z",
+      "year": 2026,
+      "durationMinutes": 161,
+      "videoUrl": "https://www.youtube.com/watch?v=YM_rr_Y9Nko",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "wtJ6EGzzjIk",
       "title": "ON SINKING GROUNDS",
       "rawTitle": "ON SINKING GROUNDS - CLINTON JOSHUA, EFE IRELE - Nigerian Movies 2026 Latest Full Movies",
@@ -1249,6 +1459,30 @@
       "year": 2026,
       "durationMinutes": 121,
       "videoUrl": "https://www.youtube.com/watch?v=jc3-X3OCQRo",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "idgopZx1YSw",
+      "title": "LESSONS IN LOVE",
+      "rawTitle": "LESSONS IN LOVE - MAURICE SAM, DAMILOLA ADEGBITE, Latest 2026 Nigerian Movie",
+      "synopsis": "LESSONS IN LOVE is a touching story about love, growth, forgiveness, and finding the right person when you least expect it.",
+      "cast": [
+        "MAURICE SAM",
+        "DAMILOLA ADEGBITE",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "DAMILOLA ADEGBITE",
+        "MANY OTHERS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-06-23T17:00:03Z",
+      "year": 2026,
+      "durationMinutes": 158,
+      "videoUrl": "https://www.youtube.com/watch?v=idgopZx1YSw",
       "lastChecked": "2026-09-29"
     },
     {
@@ -1427,6 +1661,54 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "TytlO4n8uno",
+      "title": "YOURS BEFORE WORDS",
+      "rawTitle": "YOURS BEFORE WORDS - MAURICE SAM, PEARL WATS, Latest 2026 Nigerian Movie",
+      "synopsis": "Yours Before Words is an emotional story about love, heartbreak, betrayal, and second chances that will keep you watching until the very end.",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "MANY OTHERS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-06-09T17:00:30Z",
+      "year": 2026,
+      "durationMinutes": 171,
+      "videoUrl": "https://www.youtube.com/watch?v=TytlO4n8uno",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "XwWYI8FMrQ4",
+      "title": "ROCK, PAPER, SCISSORS",
+      "rawTitle": "ROCK, PAPER, SCISSORS - MAURICE SAM, NANCY ISIME, Latest 2026 Nigerian Movie",
+      "synopsis": "ROCK, PAPER, SCISSORS is a gripping drama packed with romance, suspense, deception, and unexpected twists that will keep you guessing until the very end.",
+      "cast": [
+        "MAURICE SAM",
+        "NANCY ISIME",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "NANCY ISIME",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-06-02T17:00:32Z",
+      "year": 2026,
+      "durationMinutes": 154,
+      "videoUrl": "https://www.youtube.com/watch?v=XwWYI8FMrQ4",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "EIQbBg-PPkY",
       "title": "FOREVER IN A MINUTE",
       "rawTitle": "FOREVER IN A MINUTE - SANDRA OKUNZUWA, DANIEL ETIM, CHIDIMMA UGWU - LATEST 2026 NIGERIAN MOVIE",
@@ -1527,6 +1809,30 @@
       "year": 2026,
       "durationMinutes": 113,
       "videoUrl": "https://www.youtube.com/watch?v=UwXzT0LY4Wg",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "CvNE-FaF4EY",
+      "title": "FOR RICHER, FOR POORER",
+      "rawTitle": "FOR RICHER, FOR POORER - MAURICE SAM, SOPHIE ALAKIJA, MAUREEN IHUA, Latest 2026 Nigerian Movie",
+      "synopsis": "FOR RICHER, FOR POORER is a powerful story about love, loyalty, sacrifice, and the painful reality many couples face behind closed doors.",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-05-26T17:00:09Z",
+      "year": 2026,
+      "durationMinutes": 163,
+      "videoUrl": "https://www.youtube.com/watch?v=CvNE-FaF4EY",
       "lastChecked": "2026-09-29"
     },
     {
@@ -1761,6 +2067,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "PtVt354WmDE",
+      "title": "MY DEAR CRIMINAL",
+      "rawTitle": "MY DEAR CRIMINAL - MAURICE SAM, TENIOLA ALADESE, OBY TITUS, Latest 2026 Nigerian Movie",
+      "synopsis": "MY DEAR CRIMINAL is a gripping story of accusation, survival, and the dangerous cost of being misunderstood.",
+      "cast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-05-05T17:00:36Z",
+      "year": 2026,
+      "durationMinutes": 128,
+      "videoUrl": "https://www.youtube.com/watch?v=PtVt354WmDE",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "HdJic_PmN4I",
       "title": "YARD PEOPLE",
       "rawTitle": "YARD PEOPLE - SANDRA OKUNZUWA, CHIOMA NWOSU, NINI MBONU, ATEWE RAPHAEL, Latest 2026 Nigerian Movie",
@@ -1911,6 +2241,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "R8AUxXXo0Z8",
+      "title": "PROFESSOR MADU",
+      "rawTitle": "PROFESSOR MADU - MAURICE SAM, OSAS IGHODARO, BIBI SONYE, Latest Nigerian Movie",
+      "synopsis": "PROFESSOR MADU is a funny romantic drama full of surprises, tension, and unforgettable moments.",
+      "cast": [
+        "MAURICE SAM",
+        "OSAS IGHODARO",
+        "BIBI SONYE",
+        "MANY MORE."
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "OSAS IGHODARO",
+        "BIBI SONYE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-04-22T17:00:37Z",
+      "year": 2026,
+      "durationMinutes": 187,
+      "videoUrl": "https://www.youtube.com/watch?v=R8AUxXXo0Z8",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "xSXyNn1bgpQ",
       "title": "LOVE BEYOND WORDS",
       "rawTitle": "LOVE BEYOND WORDS | Nigerian movies 2026 Latest full movies",
@@ -2035,6 +2390,30 @@
       "year": 2026,
       "durationMinutes": 133,
       "videoUrl": "https://www.youtube.com/watch?v=imfDkoTAEE4",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "gQ_-ZUxtLDc",
+      "title": "FREE JEMIMAH",
+      "rawTitle": "FREE JEMIMAH - MAURICE SAM, SARIAN MARTIN, Latest 2026 Nigerian Movie",
+      "synopsis": "FREE JEMIMAH is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "SARIAN MARTIN",
+        "MAURICE SAM",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "SARIAN MARTIN",
+        "MAURICE SAM",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-04-08T17:00:52Z",
+      "year": 2026,
+      "durationMinutes": 128,
+      "videoUrl": "https://www.youtube.com/watch?v=gQ_-ZUxtLDc",
       "lastChecked": "2026-09-29"
     },
     {
@@ -2294,6 +2673,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "i-Dd_zjzRcs",
+      "title": "SWAPPED",
+      "rawTitle": "SWAPPED - MAURICE SAM, CHINENYE NNEBE, Latest 2026 Nigerian Movie",
+      "synopsis": "SWAPPED is a gripping drama filled with suspense, conflict, and shocking revelations.",
+      "cast": [
+        "MAURICE SAM",
+        "CHINENYE NNEBE",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "CHINENYE NNEBE",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-03-24T17:00:57Z",
+      "year": 2026,
+      "durationMinutes": 129,
+      "videoUrl": "https://www.youtube.com/watch?v=i-Dd_zjzRcs",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "G8DHZC-JJgU",
       "title": "WINGS TO FLY",
       "rawTitle": "WINGS TO FLY - UCHE MONTANA, BLOSSOM CHUKWUJEKWU, MICHAEL DAPPA, Latest 2026 Nigerian Movie",
@@ -2421,6 +2824,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "kHjps_KJjoU",
+      "title": "THUG LOVE 2",
+      "rawTitle": "THUG LOVE 2 - MAURICE SAM, NADIA BUHARI, JERRY AMILO, Latest 2026 Nigerian Movie",
+      "synopsis": "THUG LOVE 2 is a powerful Nollywood drama packed with love, suspense, and unexpected twists that will keep you watching till the very end.",
+      "cast": [
+        "MAURICE SAM",
+        "NADIA BUHARI",
+        "JERRY AMILO",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "NADIA BUHARI",
+        "JERRY AMILO"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-03-10T17:01:10Z",
+      "year": 2026,
+      "durationMinutes": 121,
+      "videoUrl": "https://www.youtube.com/watch?v=kHjps_KJjoU",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "apRTBP_nkxE",
       "title": "OUR PERFECT MATCH",
       "rawTitle": "OUR PERFECT MATCH | Nigerian movies 2026 Latest full movies",
@@ -2517,6 +2945,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "_Q7xBLD2rhU",
+      "title": "HALF IN HALF",
+      "rawTitle": "HALF IN HALF - MAURICE SAM, OKAWA SHAZNAY, MICHELLE OLUWAFEMI, Latest 2026 Nigerian Movie",
+      "synopsis": "HALF IN HALF is an emotional family drama packed with suspense, betrayal, and unexpected revelations.",
+      "cast": [
+        "MAURICE SAM",
+        "OKAWA SHAZNAY",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "OKAWA SHAZNAY",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-03-03T17:00:56Z",
+      "year": 2026,
+      "durationMinutes": 110,
+      "videoUrl": "https://www.youtube.com/watch?v=_Q7xBLD2rhU",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "OnC2mJ71t2w",
       "title": "LOOSE ENDS /",
       "rawTitle": "LOOSE ENDS / Nigerian Movies 2026 Latest Full movies",
@@ -2594,6 +3046,30 @@
       "year": 2026,
       "durationMinutes": 124,
       "videoUrl": "https://www.youtube.com/watch?v=G1CqWmTE3Sg",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "BjO0Ttk0HYU",
+      "title": "WILD FIRE",
+      "rawTitle": "WILD FIRE - MAURICE SAM, ONYII ALEX, AUDREY HARRISON, Latest 2026 Nigerian Movie",
+      "synopsis": "WILD FIRE is a gripping emotional drama filled with intense conflict, shocking twists, and powerful lessons about trust and loyalty.",
+      "cast": [
+        "MAURICE SAM",
+        "ONYII ALEX",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "ONYII ALEX",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-02-24T17:00:21Z",
+      "year": 2026,
+      "durationMinutes": 143,
+      "videoUrl": "https://www.youtube.com/watch?v=BjO0Ttk0HYU",
       "lastChecked": "2026-09-29"
     },
     {
@@ -2850,6 +3326,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "5Lai7WmbmaQ",
+      "title": "HER FIFTH SENSE",
+      "rawTitle": "HER FIFTH SENSE - MAURICE SAM, PEARL WATS, Latest 2026 Nigerian Movie",
+      "synopsis": "HER FIFTH SENSE is a gripping emotional drama packed with tension, secrets, and unexpected twists.",
+      "cast": [
+        "PEARL WATS",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "PEARL WATS",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-02-10T17:00:07Z",
+      "year": 2026,
+      "durationMinutes": 173,
+      "videoUrl": "https://www.youtube.com/watch?v=5Lai7WmbmaQ",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "zKVOPrubIcE",
       "title": "MISSING PIECE",
       "rawTitle": "MISSING PIECE - PAMELA OKOYE, MICHAEL DAPPA, VICTORY MICHAEL, New 2026 Nigerian Movie",
@@ -2955,6 +3453,28 @@
       "year": 2026,
       "durationMinutes": 89,
       "videoUrl": "https://www.youtube.com/watch?v=A7ECqcZLAgw",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "uT766VzbPyI",
+      "title": "SOMETHING BORROWED",
+      "rawTitle": "SOMETHING BORROWED - MAURICE SAM, CHIOMA NWAOHA, 2026 Latest Full Nigerian Movie",
+      "synopsis": "SOMETHING BORROWED is an intense drama about desire, betrayal, and the cost of taking what isn’t yours.",
+      "cast": [
+        "MAURICE SAM",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-02-04T17:01:36Z",
+      "year": 2026,
+      "durationMinutes": 154,
+      "videoUrl": "https://www.youtube.com/watch?v=uT766VzbPyI",
       "lastChecked": "2026-09-29"
     },
     {
@@ -3129,6 +3649,28 @@
       "year": 2026,
       "durationMinutes": 113,
       "videoUrl": "https://www.youtube.com/watch?v=KlMFGIqx2dU",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "0OCFvXZyy8U",
+      "title": "MAN OF THE YEAR",
+      "rawTitle": "MAN OF THE YEAR - MAURICE SAM, SARIAN MARTIN, 2026 Latest Full Nigerian Movie",
+      "synopsis": "When love, pride, and destiny collide, one man must prove his worth beyond strength and fame.",
+      "cast": [
+        "MAURICE SAM",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "MANY OTHERS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-01-20T17:00:01Z",
+      "year": 2026,
+      "durationMinutes": 126,
+      "videoUrl": "https://www.youtube.com/watch?v=0OCFvXZyy8U",
       "lastChecked": "2026-09-29"
     },
     {
@@ -3356,6 +3898,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "Frgk7EFKYiM",
+      "title": "LAUGHING HEARTS",
+      "rawTitle": "LAUGHING HEARTS - MAURICE SAM, RUTH KADIRI, 2025 Latest Full Nigerian Movie",
+      "synopsis": "LAUGHING HEARTS delivers humor, and life lessons wrapped in pure entertainment.",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2026-01-06T17:00:34Z",
+      "year": 2025,
+      "durationMinutes": 129,
+      "videoUrl": "https://www.youtube.com/watch?v=Frgk7EFKYiM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "4cYYzgVu4-g",
       "title": "FOR HER SAKE",
       "rawTitle": "FOR HER SAKE - CLINTON JOSHUA, RUBY OKEZIE, BLESSING ONUKWE, EMEKA EZE, RAPHAEL, 2026 Nigerian Movie",
@@ -3503,6 +4069,31 @@
       "year": 2025,
       "durationMinutes": 129,
       "videoUrl": "https://www.youtube.com/watch?v=1zv1MjGaamc",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "UXQ09ZZqceA",
+      "title": "LOVE BUG",
+      "rawTitle": "LOVE BUG - MAURICE SAM, UCHE MONTANA, EVANNY PATRICK, 2025 Latest Full Nigerian Movie",
+      "synopsis": "LOVE BUG is a sweet yet intense story about love, timing, and the risks that come with opening your heart.",
+      "cast": [
+        "MAURICE SAM",
+        "UCHE MONTANA",
+        "EVANNY PATRICK",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "UCHE MONTANA",
+        "EVANNY PATRICK"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-12-24T17:00:52Z",
+      "year": 2025,
+      "durationMinutes": 141,
+      "videoUrl": "https://www.youtube.com/watch?v=UXQ09ZZqceA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -3767,6 +4358,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "hPQ1p3ogoiI",
+      "title": "ONE LAST BITE",
+      "rawTitle": "ONE LAST BITE - MAURICE SAM, SOPHIE ALAKIJA, 2025 Latest Full Nigerian Movie",
+      "synopsis": "ONE LAST BITE is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-12-09T17:01:15Z",
+      "year": 2025,
+      "durationMinutes": 109,
+      "videoUrl": "https://www.youtube.com/watch?v=hPQ1p3ogoiI",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "obys-u_6-BU",
       "title": "ASA AND ODOGWU",
       "rawTitle": "ASA AND ODOGWU - UZOR ARUKWE, SARIAN MARTIN - Nigerian Movies 2025 Latest Full Movies",
@@ -3890,6 +4505,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "m-Q8F7RHIRs",
+      "title": "ACCIDENTAL BRIDE",
+      "rawTitle": "ACCIDENTAL BRIDE - MAURICE SAM, SONIA UCHE, 2025 Latest Full Nigerian Movie",
+      "synopsis": "ACCIDENTAL BRIDE is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "SONIA UCHE",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SONIA UCHE",
+        "MANY MORE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-12-02T17:00:58Z",
+      "year": 2025,
+      "durationMinutes": 129,
+      "videoUrl": "https://www.youtube.com/watch?v=m-Q8F7RHIRs",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "_8IDQgclayI",
       "title": "WHAT REMAINS OF US",
       "rawTitle": "WHAT REMAINS OF US - SANDRA OKUNZUWA, LATEEF ADEDIMEJI  - A Story of Love, Sacrifice and Betrayal",
@@ -3983,6 +4622,31 @@
       "year": 2025,
       "durationMinutes": 124,
       "videoUrl": "https://www.youtube.com/watch?v=PNcysMN68Ys",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "cfbv4RviU3U",
+      "title": "SLEEPY HEAD",
+      "rawTitle": "SLEEPY HEAD - MAURICE SAM, MERCY EKE, ISOKEN IGBINIGIE, 2025 Latest Full Nigerian Movie",
+      "synopsis": "SLEEPY HEAD is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "MERCY EKE",
+        "ISOKEN IGBINIGIE",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "MERCY EKE",
+        "ISOKEN IGBINIGIE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-11-25T17:01:10Z",
+      "year": 2025,
+      "durationMinutes": 117,
+      "videoUrl": "https://www.youtube.com/watch?v=cfbv4RviU3U",
       "lastChecked": "2026-09-29"
     },
     {
@@ -4101,6 +4765,33 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "rAP9gk3eqlU",
+      "title": "THE MIX UP",
+      "rawTitle": "THE MIX UP - MAURICE SAM, PEARL WATS, OBY TITUS, Nigerian Movie",
+      "synopsis": "THE MIXED UP tells a funny, engaging story about mistakes, assumptions, and how one small mix-up can cause big trouble.",
+      "cast": [
+        "EMMA ONYEKUMARU",
+        "ANITA NWACHI",
+        "MAURICE SAM",
+        "PEARL WATS",
+        "OBY TITUS",
+        "MANY MORE"
+      ],
+      "featuredCast": [
+        "EMMA ONYEKUMARU",
+        "ANITA NWACHI",
+        "MAURICE SAM"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-11-18T17:01:27Z",
+      "year": 2025,
+      "durationMinutes": 159,
+      "videoUrl": "https://www.youtube.com/watch?v=rAP9gk3eqlU",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "JJA_75qhzOA",
       "title": "Mothers in Action",
       "rawTitle": "Mothers in Action - New Nigerian movie starring  Patience Ozokwo (Mama G) and Ebele Okaro",
@@ -4193,6 +4884,30 @@
       "year": 2025,
       "durationMinutes": 100,
       "videoUrl": "https://www.youtube.com/watch?v=Rt8sXj0E6fM",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "sSGt_ylr6rM",
+      "title": "A PLACE TO HEAL",
+      "rawTitle": "A PLACE TO HEAL - MAURICE SAM, OSAS IGHODARO, 2025 Latest Full Nigerian Movie",
+      "synopsis": "Don’t miss this touching Nollywood story about forgiveness, second chances, and the power of healing.",
+      "cast": [
+        "MAURICE SAM",
+        "OSAS IGHODARO",
+        "Many More"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "OSAS IGHODARO",
+        "Many More"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-11-11T17:01:34Z",
+      "year": 2025,
+      "durationMinutes": 133,
+      "videoUrl": "https://www.youtube.com/watch?v=sSGt_ylr6rM",
       "lastChecked": "2026-09-29"
     },
     {
@@ -4289,6 +5004,30 @@
       "year": 2025,
       "durationMinutes": 62,
       "videoUrl": "https://www.youtube.com/watch?v=oknYax6hNHY",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "s2i9a9HeLvA",
+      "title": "I WANT YOUR MAN",
+      "rawTitle": "I WANT YOUR MAN - MAURICE SAM, NADIA BUARI, 2025 Latest Full Nigerian Movie",
+      "synopsis": "Enjoy this sizzling Nollywood drama filled with jealousy, temptation, and unexpected twists!",
+      "cast": [
+        "MAURICE SAM",
+        "NADIA BUARI",
+        "Many More"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "NADIA BUARI",
+        "Many More"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-10-29T17:00:48Z",
+      "year": 2025,
+      "durationMinutes": 133,
+      "videoUrl": "https://www.youtube.com/watch?v=s2i9a9HeLvA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -4487,6 +5226,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "o9-jd12ibKU",
+      "title": "BODY AND SOUL",
+      "rawTitle": "BODY AND SOUL - MAURICE SAM, CHIOMA NWAOHA, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "Don’t miss this captivating romantic drama that will touch your body and soul!",
+      "cast": [
+        "MAURICE SAM",
+        "CHIOMA NWAOHA",
+        "Many More"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "CHIOMA NWAOHA",
+        "Many More"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-10-21T17:01:07Z",
+      "year": 2025,
+      "durationMinutes": 109,
+      "videoUrl": "https://www.youtube.com/watch?v=o9-jd12ibKU",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "vAgJnNvTSuQ",
       "title": "IYA OLOKPA",
       "rawTitle": "IYA OLOKPA - CLINTON JOSHUA, PRISCA NWAOBODO, ELIZABETH POPOLA JULIUS, New Nigerian Movie",
@@ -4578,6 +5341,30 @@
       "year": 2025,
       "durationMinutes": 121,
       "videoUrl": "https://www.youtube.com/watch?v=LRlZdDn75Zc",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "DQTthAKnbiQ",
+      "title": "SWEET DIJA",
+      "rawTitle": "SWEET DIJA - MAURICE SAM, RUTH KADIRI, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "A beautiful story about love, pain, and second chances — where true love is put to the test.",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI",
+        "MANY OTHERS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI",
+        "MANY OTHERS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-10-14T17:00:18Z",
+      "year": 2025,
+      "durationMinutes": 137,
+      "videoUrl": "https://www.youtube.com/watch?v=DQTthAKnbiQ",
       "lastChecked": "2026-09-29"
     },
     {
@@ -4734,6 +5521,31 @@
       "year": 2025,
       "durationMinutes": 56,
       "videoUrl": "https://www.youtube.com/watch?v=qlBFbeYfAEk",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "TnvhNMJhKt8",
+      "title": "MORE THAN FLATMATES",
+      "rawTitle": "MORE THAN FLATMATES - MAURICE SAM, PEARL WATS, MICHAEL DAPPA, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing masterpiece will make you day...very educative and captivating",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "MICHAEL DAPPA",
+        "Many Others"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "MICHAEL DAPPA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-10-07T17:00:42Z",
+      "year": 2025,
+      "durationMinutes": 99,
+      "videoUrl": "https://www.youtube.com/watch?v=TnvhNMJhKt8",
       "lastChecked": "2026-09-29"
     },
     {
@@ -4914,6 +5726,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "rQF3r7rBie4",
+      "title": "ELIGIBLE BACHELORS",
+      "rawTitle": "ELIGIBLE BACHELORS - MAURICE SAM, VAN VICKER, OKAWA SHAZNAY, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "Eligible Bachelors is a thrilling drama starring Maurice Sam, Okawa Shaznay, and Van Vicker — a story of romance, rivalry, and the true meaning of love.",
+      "cast": [
+        "MAURICE SAM",
+        "VAN VICKER",
+        "OKAWA SHAZNAY"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "VAN VICKER",
+        "OKAWA SHAZNAY"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-09-23T17:00:45Z",
+      "year": 2025,
+      "durationMinutes": 117,
+      "videoUrl": "https://www.youtube.com/watch?v=rQF3r7rBie4",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "ikcr5MxjhOM",
       "title": "HERE COMES LOVE",
       "rawTitle": "HERE COMES LOVE - PAMELA OKOYE, CHIKE DANIELS, DERA OSADEBE, Latest Full 2025 Nigerian Movie",
@@ -4960,6 +5796,28 @@
       "year": 2025,
       "durationMinutes": 107,
       "videoUrl": "https://www.youtube.com/watch?v=z23V34_G3aI",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "KgmFDZskEi4",
+      "title": "LOVE ON THE STREET",
+      "rawTitle": "LOVE ON THE STREET - MAURICE SAM, TENIOLA ALADESE, 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "Love on the Street is a touching story about life, struggles, and finding love in unexpected places. Starring Maurice Sam and Teniola Aladese. Watch now on Maurice Sam TV",
+      "cast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-09-16T17:00:34Z",
+      "year": 2025,
+      "durationMinutes": 151,
+      "videoUrl": "https://www.youtube.com/watch?v=KgmFDZskEi4",
       "lastChecked": "2026-09-29"
     },
     {
@@ -5060,6 +5918,30 @@
       "year": 2025,
       "durationMinutes": 103,
       "videoUrl": "https://www.youtube.com/watch?v=5pT1ZZ1tEW8",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "BQIkLblxai0",
+      "title": "NEVER SAY GOODBYE",
+      "rawTitle": "NEVER SAY GOODBYE - MAURICE SAM, MARTHA EHINOME, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "This movie is going to make your day ... a must watch for every young couple.... very intriguing and very interesting",
+      "cast": [
+        "MAURICE SAM",
+        "MARTHA EHINOME",
+        "Many Others"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "MARTHA EHINOME",
+        "Many Others"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-09-02T17:02:17Z",
+      "year": 2025,
+      "durationMinutes": 118,
+      "videoUrl": "https://www.youtube.com/watch?v=BQIkLblxai0",
       "lastChecked": "2026-09-29"
     },
     {
@@ -5179,6 +6061,50 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "VpaOmZZYy3c",
+      "title": "THUG LOVE",
+      "rawTitle": "THUG LOVE  - MAURICE SAM, NADIA BUARI, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "Now showing on Maurice Sam TV. Don’t forget to like, comment, and subscribe!",
+      "cast": [
+        "MAURICE SAM",
+        "NADIA BUARI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "NADIA BUARI"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-08-26T17:07:46Z",
+      "year": 2025,
+      "durationMinutes": 135,
+      "videoUrl": "https://www.youtube.com/watch?v=VpaOmZZYy3c",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "jCQ8oqYAwG4",
+      "title": "IF WE MEET AGAIN",
+      "rawTitle": "IF WE MEET AGAIN - MAURICE SAM, SOPHIE ALAKIJA, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "Now showing on Maurice Sam TV. Don’t forget to like, comment, and subscribe!",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-08-19T17:01:02Z",
+      "year": 2025,
+      "durationMinutes": 101,
+      "videoUrl": "https://www.youtube.com/watch?v=jCQ8oqYAwG4",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "VENKBg6dbwc",
       "title": "BEAUTIFUL DECEIT",
       "rawTitle": "BEAUTIFUL DECEIT - PAMELA OKOYE, JOHN EKANEM, MICHAEL DAPPA, Latest Full 2025 Nigerian Movie",
@@ -5279,6 +6205,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "1kMn8EZCmXM",
+      "title": "IF WE PERISH",
+      "rawTitle": "IF WE PERISH - MAURICE SAM, SARIAN MARTIN, 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing action packed love movie is going to make your day ... a must watch for every young couple.... very intriguing and very interesting",
+      "cast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "Many Others"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "Many Others"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-08-12T17:00:02Z",
+      "year": 2025,
+      "durationMinutes": 124,
+      "videoUrl": "https://www.youtube.com/watch?v=1kMn8EZCmXM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "H-lPtmCQz7o",
       "title": "HUSTLE CODE",
       "rawTitle": "HUSTLE CODE - UCHE MONTANA, CHINENYE NNEBE, PHYNA OTABOR, Latest 2025 Nigerian Movie",
@@ -5327,6 +6277,30 @@
       "year": 2025,
       "durationMinutes": 145,
       "videoUrl": "https://www.youtube.com/watch?v=CgcD-h76p3g",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "572vxSyu-yk",
+      "title": "OBIANUJU",
+      "rawTitle": "OBIANUJU - MAURICE SAM, ONYII ALEX, 2025 Latest Nigerian Movie",
+      "synopsis": "This amazing funny movie will blow your mind....very educative and intriguing. A must watch for every family",
+      "cast": [
+        "MAURICE SAM",
+        "ONYII ALEX",
+        "Many Others"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "ONYII ALEX",
+        "Many Others"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-07-31T17:30:11Z",
+      "year": 2025,
+      "durationMinutes": 133,
+      "videoUrl": "https://www.youtube.com/watch?v=572vxSyu-yk",
       "lastChecked": "2026-09-29"
     },
     {
@@ -5470,6 +6444,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "vI8SLuhss-s",
+      "title": "ABOVE AND BEYOND",
+      "rawTitle": "ABOVE AND BEYOND - MAURICE SAM, PEARL WATS, BIBI SONYE, 2025 Latest Full Nigerian Movie",
+      "synopsis": "Above and Beyond - Maurice Sam, Pearl Wats, Bibi Sonye, Fred Amata, Ndidi Obi and Many Others",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "BIBI SONYE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "BIBI SONYE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-07-15T17:01:04Z",
+      "year": 2025,
+      "durationMinutes": 182,
+      "videoUrl": "https://www.youtube.com/watch?v=vI8SLuhss-s",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "mXAQMgyVXEM",
       "title": "She Stole Her Best Friend’s Children, Her Reason Will Shock You",
       "rawTitle": "She Stole Her Best Friend’s Children, Her Reason Will Shock You - BONDS OF BETRAYAL - NIGERIAN MOVIE",
@@ -5569,6 +6567,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "Q9cwJpOzdSo",
+      "title": "A MATCH MADE IN LAGOS",
+      "rawTitle": "A MATCH MADE IN LAGOS - MAURICE SAM, EGO NWOSU, 2025 Latest Nigerian Movie",
+      "synopsis": "This amazing romantic movie will blow your mind....very educative and intriguing. A must watch for every young couple.",
+      "cast": [
+        "MAURICE SAM",
+        "EGO NWOSU",
+        "Many Others"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "EGO NWOSU",
+        "Many Others"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-07-08T17:00:35Z",
+      "year": 2025,
+      "durationMinutes": 137,
+      "videoUrl": "https://www.youtube.com/watch?v=Q9cwJpOzdSo",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "iUPXBXabs9A",
       "title": "WORK ON ME",
       "rawTitle": "WORK ON ME - CHINENYE ULAEGBU, PETER KOMBA, ENITAN OLUWOLE LATEST 2025 NIGERIAN MOVIE",
@@ -5593,6 +6615,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "oJmq32s66SA",
+      "title": "HEART AND CHAINS",
+      "rawTitle": "HEART AND CHAINS - MAURICE SAM, OSAS IGHODARO, 2025 Latest Nigerian Movie",
+      "synopsis": "This raw, emotional story about love, control, and the fight to reclaim yourself, will make your day.. A must watch for everyone!",
+      "cast": [
+        "MAURICE SAM",
+        "OSAS IGHODARO"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "OSAS IGHODARO"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-07-01T17:00:58Z",
+      "year": 2025,
+      "durationMinutes": 183,
+      "videoUrl": "https://www.youtube.com/watch?v=oJmq32s66SA",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "RXYB0LSJpfY",
       "title": "Rich Man Falls in Love with a Poor Stammering Girl : MORE THAN WORDS -",
       "rawTitle": "Rich Man Falls in Love with a Poor Stammering Girl : MORE THAN WORDS - LATEST 2025 NIGERIAN MOVIE",
@@ -5614,6 +6658,31 @@
       "year": 2025,
       "durationMinutes": 102,
       "videoUrl": "https://www.youtube.com/watch?v=RXYB0LSJpfY",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "l1IyTt49xNI",
+      "title": "PLUS ONE",
+      "rawTitle": "PLUS ONE - MAURICE SAM, DESTINY ETIKO, OBY TITUS, BIBI SONYE, 2025 Latest Nigerian Movie",
+      "synopsis": "This is the most interesting and funny movie you will see today .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "DESTINY ETIKO",
+        "OBY TITUS",
+        "BIBI SONYE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "DESTINY ETIKO",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-06-25T16:01:24Z",
+      "year": 2025,
+      "durationMinutes": 156,
+      "videoUrl": "https://www.youtube.com/watch?v=l1IyTt49xNI",
       "lastChecked": "2026-09-29"
     },
     {
@@ -5839,6 +6908,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "apqPsNAHwvM",
+      "title": "TEN DAYS IN A BROTHEL",
+      "rawTitle": "TEN DAYS IN A BROTHEL - MAURICE SAM, NANCY ISIME, 2025 Latest Nigerian Movie",
+      "synopsis": "This amazing rollercoaster will touch your heart and lift your spirits.",
+      "cast": [
+        "MAURICE SAM",
+        "NANCY ISIME"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "NANCY ISIME"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-06-10T17:00:03Z",
+      "year": 2025,
+      "durationMinutes": 131,
+      "videoUrl": "https://www.youtube.com/watch?v=apqPsNAHwvM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "Nd14lLZZDHs",
       "title": "Undying Love PT 5 (New Movie) Onny Michael, Rosabell Andrew 2025 Latest New Nigerian",
       "rawTitle": "Undying Love PT 5 (New Movie) Onny Michael, Rosabell Andrew 2025 Latest New Nigerian Nollywood Movie",
@@ -5894,6 +6985,30 @@
       "year": 2025,
       "durationMinutes": 56,
       "videoUrl": "https://www.youtube.com/watch?v=ZTYmzqEQq6Y",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "J6zM3yO2F-0",
+      "title": "WORTHY WORDS",
+      "rawTitle": "WORTHY WORDS - MAURICE SAM, EKAMA ETIM INYANG, MICHELLE OLUWAFEMI, 2025 Latest Nigerian Movie",
+      "synopsis": "Get ready for an inspiring journey of courage, hope, and determination.",
+      "cast": [
+        "MAURICE SAM",
+        "EKAMA ETIM INYANG",
+        "MICHELLE OLUWAFEMI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "EKAMA ETIM INYANG",
+        "MICHELLE OLUWAFEMI"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-06-03T17:00:23Z",
+      "year": 2025,
+      "durationMinutes": 113,
+      "videoUrl": "https://www.youtube.com/watch?v=J6zM3yO2F-0",
       "lastChecked": "2026-09-29"
     },
     {
@@ -6058,6 +7173,30 @@
       "year": 2025,
       "durationMinutes": 106,
       "videoUrl": "https://www.youtube.com/watch?v=3gd_IGSR8Ps",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "9zxfZD9mhMY",
+      "title": "FOR EVE'S SAKE",
+      "rawTitle": "FOR EVE'S SAKE - MAURICE SAM, SOPHIE ALAKIJA, DAVID JONES, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "Now showing on Maurice Sam TV. Don’t forget to like, comment, and subscribe!",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "DAVID JONES"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKIJA",
+        "DAVID JONES"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-05-27T17:00:12Z",
+      "year": 2025,
+      "durationMinutes": 110,
+      "videoUrl": "https://www.youtube.com/watch?v=9zxfZD9mhMY",
       "lastChecked": "2026-09-29"
     },
     {
@@ -6452,6 +7591,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "WVgpA9A_mVw",
+      "title": "A TRUE KING",
+      "rawTitle": "A TRUE KING - MAURICE SAM, SARIAN MARTIN, OBY TITUS, ATEWE RAPHAEL, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "A TRUE KING stars Maurice Sam, Sarian Martin, Oby Titus, and Atewe Raphael in a gripping epic tale of power, legacy, and royal sacrifice.",
+      "cast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "OBY TITUS",
+        "ATEWE RAPHAEL"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-05-13T17:00:42Z",
+      "year": 2025,
+      "durationMinutes": 178,
+      "videoUrl": "https://www.youtube.com/watch?v=WVgpA9A_mVw",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "9zpYWyDRigI",
       "title": "A COPY OF LOVE - 2025 New Movie Starring: John Ekanem BAM BAM Tessy Ogbonna",
       "rawTitle": "A COPY OF LOVE - 2025 New Movie Starring: John Ekanem BAM BAM Tessy Ogbonna Latest Nigerian Movie",
@@ -6493,6 +7657,28 @@
       "year": 2025,
       "durationMinutes": 118,
       "videoUrl": "https://www.youtube.com/watch?v=LMYvdbYSwG0",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "ZV9pChnXeIw",
+      "title": "OVER HER SHOULDER",
+      "rawTitle": "OVER HER SHOULDER - MAURICE SAM, CHIOMA NWAOHA, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "This is the best romantic movie you will see today, very educative and intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "CHIOMA NWAOHA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "CHIOMA NWAOHA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-05-06T17:00:45Z",
+      "year": 2025,
+      "durationMinutes": 108,
+      "videoUrl": "https://www.youtube.com/watch?v=ZV9pChnXeIw",
       "lastChecked": "2026-09-29"
     },
     {
@@ -6666,6 +7852,32 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "Vu7Y7NEvppA",
+      "title": "IN HIS ARMS",
+      "rawTitle": "IN HIS ARMS - MAURICE SAM, REGINA DANIELS, CHUKS CHYKE, PRINCE NWAFOR, NEW 2025 NIGERIAN MOVIE",
+      "synopsis": "This is the best romantic movie you will see today, very educative and intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "REGINA DANIELS",
+        "CHUKS CHYKE",
+        "PRINCE NWAFOR",
+        "RUTHWEALTH SUOWARI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "REGINA DANIELS",
+        "CHUKS CHYKE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-04-22T17:00:38Z",
+      "year": 2025,
+      "durationMinutes": 98,
+      "videoUrl": "https://www.youtube.com/watch?v=Vu7Y7NEvppA",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "utt53Vpdsx8",
       "title": "LOVE IN TRANSIT",
       "rawTitle": "LOVE IN TRANSIT - New Nigerian Movie starring Bimbo Ademoye, Daniel Etim, Ayanime Edem",
@@ -6762,6 +7974,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "5wTsoBB4Vx8",
+      "title": "WHATEVER IT TAKES",
+      "rawTitle": "WHATEVER IT TAKES - MAURICE SAM, BIMBO ADEMOYE, 2025 LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "This is the best movie you will see today, very educative and intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "BIMBO ADEMOYE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "BIMBO ADEMOYE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-04-08T17:00:10Z",
+      "year": 2025,
+      "durationMinutes": 102,
+      "videoUrl": "https://www.youtube.com/watch?v=5wTsoBB4Vx8",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "qtj9_Fm3hik",
       "title": "HERE COMES THE BRIDE",
       "rawTitle": "HERE COMES THE BRIDE - Nigerian Movies 2025 Latest Full Movies",
@@ -6808,6 +8042,30 @@
       "year": 2025,
       "durationMinutes": 108,
       "videoUrl": "https://www.youtube.com/watch?v=LUYxgFSJxR8",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "5f-wyCP7tzc",
+      "title": "LOUD SILENCE",
+      "rawTitle": "LOUD SILENCE  - MAURICE SAM, OKAWA SHAZNAY, OBY TITUS, 2025 LATEST NIGERIAN MOVIE",
+      "synopsis": "This will teach you alot of lessons, very inspiring .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "OKAWA SHAZNAY",
+        "OBY TITUS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "OKAWA SHAZNAY",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-04-01T17:00:04Z",
+      "year": 2025,
+      "durationMinutes": 98,
+      "videoUrl": "https://www.youtube.com/watch?v=5f-wyCP7tzc",
       "lastChecked": "2026-09-29"
     },
     {
@@ -6859,6 +8117,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "u55qVTCdT-8",
+      "title": "ONE WISH",
+      "rawTitle": "ONE WISH - MAURICE SAM, NOSA REX, PEARL WATS, 2025 LATEST NIGERIAN MOVIE",
+      "synopsis": "This is the most interesting and funny movie you will see today .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "BABA REX"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "BABA REX"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-03-25T17:01:03Z",
+      "year": 2025,
+      "durationMinutes": 131,
+      "videoUrl": "https://www.youtube.com/watch?v=u55qVTCdT-8",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "pnGMdZtGgp4",
       "title": "PARTNERS IN CRIME",
       "rawTitle": "PARTNERS IN CRIME - SONIA UCHE, EBUBE OBIO, CHIBUIKEM DARLINGTON, 2025 LATEST NIGERIAN MOVIE",
@@ -6880,6 +8162,28 @@
       "year": 2025,
       "durationMinutes": 133,
       "videoUrl": "https://www.youtube.com/watch?v=pnGMdZtGgp4",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "cHdH8uFtHsA",
+      "title": "DEEP ASSESSMENT",
+      "rawTitle": "DEEP ASSESSMENT - MAURICE SAM, EBUBE NWAGBO, 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "This is a must watch romantic movie... you can't afford to miss this one",
+      "cast": [
+        "MAURICE SAM",
+        "EBUBE NWAGBO"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "EBUBE NWAGBO"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-03-18T17:00:44Z",
+      "year": 2025,
+      "durationMinutes": 123,
+      "videoUrl": "https://www.youtube.com/watch?v=cHdH8uFtHsA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -7067,6 +8371,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "4_T4ycXAihI",
+      "title": "FEARLESS LISA",
+      "rawTitle": "FEARLESS LISA - MAURICE SAM, PEARL WATS 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing masterpiece will make you day...very educative and captivating",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-02-25T17:00:08Z",
+      "year": 2025,
+      "durationMinutes": 106,
+      "videoUrl": "https://www.youtube.com/watch?v=4_T4ycXAihI",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "XuTgE2l7OuA",
       "title": "HUSBAND OF MINE -",
       "rawTitle": "HUSBAND OF MINE - LATEST 2025 NIGERIAN MOVIE - SANDRA OKUZUWA, STAN NZE, CHIOMA NWOSU",
@@ -7088,6 +8414,28 @@
       "year": 2025,
       "durationMinutes": 148,
       "videoUrl": "https://www.youtube.com/watch?v=XuTgE2l7OuA",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "AxPmYhcxlQk",
+      "title": "HEART TO HEART",
+      "rawTitle": "HEART TO HEART  - MAURICE SAM, RUTH KADIRI LATEST 2025 NIGERIAN MOVIE",
+      "synopsis": "This is amazing movie will blow your mind .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-02-18T17:00:11Z",
+      "year": 2025,
+      "durationMinutes": 104,
+      "videoUrl": "https://www.youtube.com/watch?v=AxPmYhcxlQk",
       "lastChecked": "2026-09-29"
     },
     {
@@ -7137,6 +8485,50 @@
       "year": 2025,
       "durationMinutes": 103,
       "videoUrl": "https://www.youtube.com/watch?v=BlzUS8TO2iA",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "qdg-czmSRwg",
+      "title": "ADDICTED",
+      "rawTitle": "ADDICTED - MAURICE SAM, TENIOLA ALADESE 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will melt your heart ....very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-02-11T17:01:01Z",
+      "year": 2025,
+      "durationMinutes": 96,
+      "videoUrl": "https://www.youtube.com/watch?v=qdg-czmSRwg",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "9TdtUwcwVpQ",
+      "title": "LOVE AND SACRIFICE",
+      "rawTitle": "LOVE AND SACRIFICE - MAURICE SAM, SHAZNAY OKAWA, 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will make your day .... very educative and interesting",
+      "cast": [
+        "MAURICE SAM",
+        "SHAZNAY OKAWA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SHAZNAY OKAWA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-02-04T17:00:10Z",
+      "year": 2025,
+      "durationMinutes": 114,
+      "videoUrl": "https://www.youtube.com/watch?v=9TdtUwcwVpQ",
       "lastChecked": "2026-09-29"
     },
     {
@@ -7358,6 +8750,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "iT-ezKNUBrM",
+      "title": "RULE NUMBER ONE",
+      "rawTitle": "RULE NUMBER ONE - MAURICE SAM, SHINE ROSMAN, 2025 FULL NIGERIAN MOVIE",
+      "synopsis": "This is amazing movie will blow your mind .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "SHINE ROSMAN"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SHINE ROSMAN"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-01-21T17:00:46Z",
+      "year": 2025,
+      "durationMinutes": 119,
+      "videoUrl": "https://www.youtube.com/watch?v=iT-ezKNUBrM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "kZisoBCl4ws",
       "title": "MRS DAMACO'S DIARY FUL MOVIE - (New Movie) Ola Daniels 2025 Latest Nigerian",
       "rawTitle": "MRS DAMACO'S DIARY FUL MOVIE - (New Movie) Ola Daniels 2025 Latest Nigerian Nollywood Movie",
@@ -7470,6 +8884,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "qD75sVmXB3U",
+      "title": "INSANE OBSESSION",
+      "rawTitle": "INSANE OBSESSION - MAURICE SAM, UCHE MONTANA LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "This is the best movie you will see today, very educative and intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "UCHE MONTANA",
+        "TONY BASHEL"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "UCHE MONTANA",
+        "TONY BASHEL"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-01-14T17:00:50Z",
+      "year": 2025,
+      "durationMinutes": 104,
+      "videoUrl": "https://www.youtube.com/watch?v=qD75sVmXB3U",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "0ETYKv1AG98",
       "title": "IF TOMORROW NEVER COMES FULL MOVIE - (New Movie) Sharon Ifedi  - 2024",
       "rawTitle": "IF TOMORROW NEVER COMES FULL MOVIE - (New Movie) Sharon Ifedi  - 2024 Latest Nollywood Movie",
@@ -7578,6 +9016,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "lBpI2AimadM",
+      "title": "IN HER SHOES",
+      "rawTitle": "IN HER SHOES - MAURICE SAM, RUTH KADIRI LATEST FULL NIGERIAN MOVIE",
+      "synopsis": "This is amazing movie will blow your mind .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2025-01-07T17:00:47Z",
+      "year": 2025,
+      "durationMinutes": 108,
+      "videoUrl": "https://www.youtube.com/watch?v=lBpI2AimadM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "IhkDo_DTO1Q",
       "title": "THE KING MUST DIE FULL MOVIE - (New Movie) Zubby Micheal - 2025",
       "rawTitle": "THE KING MUST DIE FULL MOVIE - (New Movie) Zubby Micheal - 2025 Latest Nollywood Movie",
@@ -7658,6 +9118,30 @@
       "year": 2025,
       "durationMinutes": 177,
       "videoUrl": "https://www.youtube.com/watch?v=5_Bm5_wBQVE",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "_0qeKYP_lag",
+      "title": "HEART OF STEEL",
+      "rawTitle": "HEART OF STEEL - MAURICE SAM, SARIAN MARTIN, DAVID JONES, 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This is amazing movie will blow your mind .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "DAVID JONES"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN",
+        "DAVID JONES"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-12-31T17:00:39Z",
+      "year": 2024,
+      "durationMinutes": 138,
+      "videoUrl": "https://www.youtube.com/watch?v=_0qeKYP_lag",
       "lastChecked": "2026-09-29"
     },
     {
@@ -7825,6 +9309,28 @@
       "year": 2024,
       "durationMinutes": 118,
       "videoUrl": "https://www.youtube.com/watch?v=IR4eNBF0zQ0",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "ENxJiLUDjsM",
+      "title": "WITNESS PROTECTION",
+      "rawTitle": "WITNESS PROTECTION -  MAURICE SAM, SONIA UCHE, 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This is amazing movie will blow your mind .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "SONIA UCHE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SONIA UCHE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-12-24T17:00:12Z",
+      "year": 2024,
+      "durationMinutes": 100,
+      "videoUrl": "https://www.youtube.com/watch?v=ENxJiLUDjsM",
       "lastChecked": "2026-09-29"
     },
     {
@@ -8022,6 +9528,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "YZ_V4vYWZMY",
+      "title": "BECOMING MRS JAXON",
+      "rawTitle": "BECOMING MRS JAXON - MAURICE SAM, SANDRA OKUNZUWA, ATEWE RAPHEL 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This is amazing movie will blow your mind .... very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "SANDRA OKUNZUWA",
+        "ATEWE RAPHEL"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SANDRA OKUNZUWA",
+        "ATEWE RAPHEL"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-12-10T17:00:37Z",
+      "year": 2024,
+      "durationMinutes": 124,
+      "videoUrl": "https://www.youtube.com/watch?v=YZ_V4vYWZMY",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "Gmvsa_swZEE",
       "title": "A CHRISTMAS WISH",
       "rawTitle": "A CHRISTMAS WISH - Nigerian Movies 2024 Latest Full Movies",
@@ -8044,6 +9574,28 @@
       "year": 2024,
       "durationMinutes": 78,
       "videoUrl": "https://www.youtube.com/watch?v=Gmvsa_swZEE",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "qWKSV-t1k68",
+      "title": "ZAZA",
+      "rawTitle": "ZAZA - MAURICE SAM, PEARL WATS -  2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This is the best movie you will see today... very interesting and a watch must!",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-12-03T17:01:01Z",
+      "year": 2024,
+      "durationMinutes": 144,
+      "videoUrl": "https://www.youtube.com/watch?v=qWKSV-t1k68",
       "lastChecked": "2026-09-29"
     },
     {
@@ -8164,6 +9716,28 @@
       "year": 2024,
       "durationMinutes": 116,
       "videoUrl": "https://www.youtube.com/watch?v=DOZq1KqxGbQ",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "w7SadV0VkS4",
+      "title": "PERFECTLY IMPERFECT",
+      "rawTitle": "PERFECTLY IMPERFECT - MAURICE SAM, ONYII ALEX 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing masterpiece will blow your mind... very interesting and a watch must!",
+      "cast": [
+        "MAURICE SAM",
+        "ONYII ALEX"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "ONYII ALEX"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-11-26T17:01:03Z",
+      "year": 2024,
+      "durationMinutes": 104,
+      "videoUrl": "https://www.youtube.com/watch?v=w7SadV0VkS4",
       "lastChecked": "2026-09-29"
     },
     {
@@ -8289,6 +9863,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "cvVby807SXg",
+      "title": "HEARTS IN TUNE",
+      "rawTitle": "HEARTS IN TUNE - MAURICE SAM, EGO NWOSU 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing romantic movie will blow your mind....very educative and intriguing. A must watch for every young couple.",
+      "cast": [
+        "MAURICE SAM",
+        "EGO NWOSU"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "EGO NWOSU"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-11-19T17:00:40Z",
+      "year": 2024,
+      "durationMinutes": 92,
+      "videoUrl": "https://www.youtube.com/watch?v=cvVby807SXg",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "R-wFUPwmtv8",
       "title": "A RIDE TO LOVE",
       "rawTitle": "A RIDE TO LOVE - Nigerian Movies 2024 Latest Full Movies",
@@ -8409,6 +10005,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "E2538CNdehE",
+      "title": "THE LOVE YOU GAVE",
+      "rawTitle": "THE LOVE YOU GAVE - MAURICE SAM, CHINENYE NNEBE  2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing masterpiece will blow your mind... very educative and intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "CHINENYE NNEBE",
+        "OBY TITUS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "CHINENYE NNEBE",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-11-05T17:00:14Z",
+      "year": 2024,
+      "durationMinutes": 126,
+      "videoUrl": "https://www.youtube.com/watch?v=E2538CNdehE",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "ONNUmIy7QU8",
       "title": "HEARTBEAT",
       "rawTitle": "HEARTBEAT - Nigerian Movies 2024 Latest Full Movies",
@@ -8478,6 +10098,31 @@
       "year": 2024,
       "durationMinutes": 110,
       "videoUrl": "https://www.youtube.com/watch?v=aTkBx8P2e9A",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "XKm0ORHkveA",
+      "title": "EXCATION",
+      "rawTitle": "EXCATION - MAURICE SAM, EMEM INWANG, JENNIFER NNORUGA, OBY ETUK 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This movie is the best you will see today ....very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "JENNIFER NNORUGA",
+        "EMEM INWANG",
+        "OBY ETUK"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "JENNIFER NNORUGA",
+        "EMEM INWANG"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-10-29T17:00:36Z",
+      "year": 2024,
+      "durationMinutes": 113,
+      "videoUrl": "https://www.youtube.com/watch?v=XKm0ORHkveA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -8572,6 +10217,30 @@
       "year": 2024,
       "durationMinutes": 119,
       "videoUrl": "https://www.youtube.com/watch?v=pVhlPsVBLOA",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "i0YFNa8EC84",
+      "title": "MOM FIRST",
+      "rawTitle": "MOM FIRST - MAURICE SAM, MERCY ISOYIP, OBY TITUS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will melt your heart ....very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "MERCY ISOYIP",
+        "OBY TITUS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "MERCY ISOYIP",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-10-22T17:00:37Z",
+      "year": 2024,
+      "durationMinutes": 121,
+      "videoUrl": "https://www.youtube.com/watch?v=i0YFNa8EC84",
       "lastChecked": "2026-09-29"
     },
     {
@@ -8776,6 +10445,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "QSHd4WJMw5g",
+      "title": "MORE THAN A DREAM",
+      "rawTitle": "MORE THAN A DREAM - MAURICE SAM, MERCY EKE 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing masterpiece will blow your mind... very educative and intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "MERCY EKE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "MERCY EKE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-10-08T17:00:17Z",
+      "year": 2024,
+      "durationMinutes": 88,
+      "videoUrl": "https://www.youtube.com/watch?v=QSHd4WJMw5g",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "IC5tkxPVrlY",
       "title": "HEART IMPOSSIBLE",
       "rawTitle": "HEART IMPOSSIBLE - SONIA UCHE, CLINTON JOSHUA, CHUKS CHYKE 2024 FULL NIGERIAN MOVIE",
@@ -8821,6 +10512,28 @@
       "year": 2025,
       "durationMinutes": 119,
       "videoUrl": "https://www.youtube.com/watch?v=YnyYTIzSzRo",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "t8DRf_grEUk",
+      "title": "DOWN LOVE'S PATH",
+      "rawTitle": "DOWN LOVE'S PATH - MAURICE SAM, SARIAN MARTIN 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing romantic comedy movie is going to make your day ... a must watch for every young couple.... very intriguing",
+      "cast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-10-01T17:10:52Z",
+      "year": 2024,
+      "durationMinutes": 119,
+      "videoUrl": "https://www.youtube.com/watch?v=t8DRf_grEUk",
       "lastChecked": "2026-09-29"
     },
     {
@@ -8921,6 +10634,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "-Y4ZkexCbvM",
+      "title": "THE BRIDE",
+      "rawTitle": "THE BRIDE - MAURICE SAM, TENIOLA ALADESE 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will melt your heart ....very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "TENIOLA ALADESE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-09-24T17:00:00Z",
+      "year": 2024,
+      "durationMinutes": 106,
+      "videoUrl": "https://www.youtube.com/watch?v=-Y4ZkexCbvM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "wudCstp4MPo",
       "title": "AGAINST ALL ODDS",
       "rawTitle": "AGAINST ALL ODDS - UCHE MONTANA / VINE OLUGU / JERRY MUDIAGA",
@@ -9016,6 +10751,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "XCz_c-elIiM",
+      "title": "LOST IN LOVE",
+      "rawTitle": "LOST IN LOVE - MAURICE SAM, PEARL WATS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will blow your mind, a must watch for all the singles",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-09-17T17:00:31Z",
+      "year": 2024,
+      "durationMinutes": 155,
+      "videoUrl": "https://www.youtube.com/watch?v=XCz_c-elIiM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "ueIlwm0QXNI",
       "title": "PURITY'S NIGHTMARE (D MOVIE) MERCY JOHNSON OKOJIE CHIKE DANIELS -2024 LATEST NIGERIA",
       "rawTitle": "PURITY'S NIGHTMARE (D MOVIE) MERCY JOHNSON OKOJIE CHIKE DANIELS -2024 LATEST NIGERIA NOLLYWOOD MOVIE",
@@ -9086,6 +10843,28 @@
       "year": 2024,
       "durationMinutes": 115,
       "videoUrl": "https://www.youtube.com/watch?v=SLBfXNEOu40",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "6rvck-FqfwM",
+      "title": "A SPECIAL KIND OF LOVE",
+      "rawTitle": "A SPECIAL KIND OF LOVE - MAURICE SAM, SHAZNAY OKAWA 2024 FULL NIGERIAN MOVIES",
+      "synopsis": "This amazing movie will make your day ...very emotional and very interesting",
+      "cast": [
+        "MAURICE SAM",
+        "SHAZNAY OKAWA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SHAZNAY OKAWA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-09-10T17:00:04Z",
+      "year": 2024,
+      "durationMinutes": 101,
+      "videoUrl": "https://www.youtube.com/watch?v=6rvck-FqfwM",
       "lastChecked": "2026-09-29"
     },
     {
@@ -9330,6 +11109,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "qF_AtT6mEeE",
+      "title": "A HERO COMES ALONG",
+      "rawTitle": "A HERO COMES ALONG - MAURICE SAM, RUTH KADIRI 2024 FULL NIGERIAN MOVIES",
+      "synopsis": "This amazing movie will blow your mind ...very emotional and educative",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-08-27T17:00:48Z",
+      "year": 2024,
+      "durationMinutes": 98,
+      "videoUrl": "https://www.youtube.com/watch?v=qF_AtT6mEeE",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "NlaAnNbf83w",
       "title": "NOTHING TO LOOSE (D MOVIE)MERCY JOHNSON OKOJIE ERNEST OBI JOSEPH JONIOR-2024 NIGERIA",
       "rawTitle": "NOTHING TO LOOSE (D MOVIE)MERCY JOHNSON OKOJIE ERNEST OBI JOSEPH JONIOR-2024 NIGERIA NOLLYWOOD MOVIE",
@@ -9347,6 +11148,28 @@
       "year": 2024,
       "durationMinutes": 125,
       "videoUrl": "https://www.youtube.com/watch?v=NlaAnNbf83w",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "HZT_24Z6Vuc",
+      "title": "EXTRA PACKAGE",
+      "rawTitle": "EXTRA PACKAGE - MAURICE SAM, EBUBE NWAGBO 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This is a must watch romantic comedy ... you can't afford to miss this one",
+      "cast": [
+        "MAURICE SAM",
+        "EBUBE NWAGBO"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "EBUBE NWAGBO"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-08-20T17:00:13Z",
+      "year": 2024,
+      "durationMinutes": 107,
+      "videoUrl": "https://www.youtube.com/watch?v=HZT_24Z6Vuc",
       "lastChecked": "2026-09-29"
     },
     {
@@ -9520,6 +11343,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "CmK_5I4YDRM",
+      "title": "YOU ME FOREVER",
+      "rawTitle": "YOU ME FOREVER - MAURICE SAM, SONIA UCHE 2024 full nigerian movie",
+      "synopsis": "This amazing movie will make your day... a must watch for all the ladies, with lots of lessons",
+      "cast": [
+        "MARICE SAM",
+        "SONIA UCHE"
+      ],
+      "featuredCast": [
+        "MARICE SAM",
+        "SONIA UCHE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-08-06T17:00:15Z",
+      "year": 2024,
+      "durationMinutes": 134,
+      "videoUrl": "https://www.youtube.com/watch?v=CmK_5I4YDRM",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "nwD9uYM44mw",
       "title": "BEYOND PERFECTION",
       "rawTitle": "BEYOND PERFECTION - RUTH KADIRI, DEZA THE GREAT, TESSY OGBONNA, ADEBOLA DESALU",
@@ -9542,6 +11387,28 @@
       "year": 2024,
       "durationMinutes": 89,
       "videoUrl": "https://www.youtube.com/watch?v=nwD9uYM44mw",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "UNPXOUVkTtM",
+      "title": "LOVE LIES BLEEDING",
+      "rawTitle": "LOVE LIES BLEEDING - MAURICE SAM, SOPHIA ALAKIJA 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will melt your heart ....very educative and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIA ALAKIJA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIA ALAKIJA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-07-30T17:00:19Z",
+      "year": 2024,
+      "durationMinutes": 126,
+      "videoUrl": "https://www.youtube.com/watch?v=UNPXOUVkTtM",
       "lastChecked": "2026-09-29"
     },
     {
@@ -9688,6 +11555,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "D-mALGzlCIE",
+      "title": "TWO GIRLS",
+      "rawTitle": "TWO GIRLS - MAURICE SAM, SONIA UCHE, PEARL WATS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "Maurice and Sonia will make your heart melt in this emotional rollercoaster....very intriguing.",
+      "cast": [
+        "MAURICE SAM",
+        "SONIA UCHE",
+        "PEARL WATS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SONIA UCHE",
+        "PEARL WATS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-07-09T17:00:07Z",
+      "year": 2024,
+      "durationMinutes": 94,
+      "videoUrl": "https://www.youtube.com/watch?v=D-mALGzlCIE",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "M6AzkVW6vZQ",
       "title": "THE SEER",
       "rawTitle": "THE SEER - PAMELA OKOYE, RAY EMORDI, DANIEL ROCKY",
@@ -9709,6 +11600,28 @@
       "year": 2024,
       "durationMinutes": 134,
       "videoUrl": "https://www.youtube.com/watch?v=M6AzkVW6vZQ",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "31O1wqX0BCA",
+      "title": "LOVE & DOUBT",
+      "rawTitle": "LOVE & DOUBT - MAURICE SAM, PEARL WATS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will make your day, a must watch for all the singles",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-07-02T17:00:02Z",
+      "year": 2024,
+      "durationMinutes": 112,
+      "videoUrl": "https://www.youtube.com/watch?v=31O1wqX0BCA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -9781,6 +11694,28 @@
       "year": 2024,
       "durationMinutes": 107,
       "videoUrl": "https://www.youtube.com/watch?v=SL97GUo8FiU",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "-aPGmMFCcMA",
+      "title": "LOVE HEALS",
+      "rawTitle": "LOVE HEALS - MAURICE SAM, CHIOMA NWAOHA 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing love story will melt your heart....very emotional and educative",
+      "cast": [
+        "MAURICE SAM",
+        "CHIOMA NWAOHA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "CHIOMA NWAOHA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-06-19T17:00:00Z",
+      "year": 2024,
+      "durationMinutes": 118,
+      "videoUrl": "https://www.youtube.com/watch?v=-aPGmMFCcMA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -9876,6 +11811,30 @@
       "year": 2024,
       "durationMinutes": 146,
       "videoUrl": "https://www.youtube.com/watch?v=AJyPQ294E44",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "meChavitXoY",
+      "title": "ENCHANTED",
+      "rawTitle": "ENCHANTED - MAURICE SAM, THELMA NWOSU, OBY TITUS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "ENCHANTED is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "THELMA NWOSU",
+        "OBY TITUS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "THELMA NWOSU",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-06-11T17:00:30Z",
+      "year": 2024,
+      "durationMinutes": 100,
+      "videoUrl": "https://www.youtube.com/watch?v=meChavitXoY",
       "lastChecked": "2026-09-29"
     },
     {
@@ -9999,6 +11958,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "7MFgjdPoL_o",
+      "title": "CRAZY ABOUT YOU",
+      "rawTitle": "CRAZY ABOUT YOU - MAURICE SAM, SOPHIE ALAKHIJA, DENRELE EDUN 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "CRAZY ABOUT YOU is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKHIJA",
+        "DENRELE EDUN"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SOPHIE ALAKHIJA",
+        "DENRELE EDUN"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-05-28T17:00:04Z",
+      "year": 2024,
+      "durationMinutes": 137,
+      "videoUrl": "https://www.youtube.com/watch?v=7MFgjdPoL_o",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "YmCvKkUlIuQ",
       "title": "INTERTWINED FATE",
       "rawTitle": "INTERTWINED FATE - CHRIS OKAGBUE, PAMELA OKOYE, VIVIAM KAIMA, RAPHAEL EHIZ",
@@ -10095,6 +12078,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "lgvwzc0pbPo",
+      "title": "STAR STRUCK",
+      "rawTitle": "STAR STRUCK - MAURICE SAM, SARIAN MARTIN 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing romantic movie will make your day very interesting and emotional",
+      "cast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "SARIAN MARTIN"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-05-21T17:00:28Z",
+      "year": 2024,
+      "durationMinutes": 136,
+      "videoUrl": "https://www.youtube.com/watch?v=lgvwzc0pbPo",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "ZRPTLJVcggU",
       "title": "BRAVEHEART",
       "rawTitle": "BRAVEHEART - DESTINY ETIKO, ZUBBY MICHAEL, GENTLE JACK 2024 FULL NIGERIAN MOVIE",
@@ -10187,6 +12192,28 @@
       "year": 2024,
       "durationMinutes": 114,
       "videoUrl": "https://www.youtube.com/watch?v=m5oZ_ysJD-0",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "7EzHu8IWzUo",
+      "title": "NATIVE FOWL",
+      "rawTitle": "NATIVE FOWL - MAURICE SAM, ONYII ALEX 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "Maurice and Onyii will crack your ribs in this amazing romantic comedy. A must watch for everyone.",
+      "cast": [
+        "MAURICE SAM",
+        "ONYII ALEX"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "ONYII ALEX"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-05-14T17:00:08Z",
+      "year": 2024,
+      "durationMinutes": 115,
+      "videoUrl": "https://www.youtube.com/watch?v=7EzHu8IWzUo",
       "lastChecked": "2026-09-29"
     },
     {
@@ -10320,6 +12347,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "EOb4hZaw0zo",
+      "title": "I DEY FOR YOU",
+      "rawTitle": "I DEY FOR YOU - MAURICE SAM, PEARL WATS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "I DEY FOR YOU is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-05-07T17:00:08Z",
+      "year": 2024,
+      "durationMinutes": 154,
+      "videoUrl": "https://www.youtube.com/watch?v=EOb4hZaw0zo",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "eI2THi6STXk",
       "title": "PURE HEART",
       "rawTitle": "PURE HEART - CLINTON JOSHUA, PRINCESS ORJI, QUEENDI DUDU latest 2024 nigerian movie",
@@ -10433,6 +12482,28 @@
       "year": 2024,
       "durationMinutes": 82,
       "videoUrl": "https://www.youtube.com/watch?v=rb8k9jE0qo0",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "E31PpRJNZgU",
+      "title": "MR HEART BREAKER",
+      "rawTitle": "MR HEART BREAKER - MAURICE SAM, EKAMA ETIM-INYANG 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "MR HEART BREAKER is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "EKAMA ETIM IYANG"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "EKAMA ETIM IYANG"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-04-23T17:00:08Z",
+      "year": 2024,
+      "durationMinutes": 93,
+      "videoUrl": "https://www.youtube.com/watch?v=E31PpRJNZgU",
       "lastChecked": "2026-09-29"
     },
     {
@@ -10586,6 +12657,28 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "VD3Lwxi7gcw",
+      "title": "A PLAYER'S HEART",
+      "rawTitle": "A PLAYER'S HEART - MAURICE SAM, UCHE MONTANA 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This movie is a must watch for all the singles very emotional and intriguing",
+      "cast": [
+        "MAURICE SAM",
+        "UCHE MONTANA"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "UCHE MONTANA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-04-09T17:00:24Z",
+      "year": 2024,
+      "durationMinutes": 95,
+      "videoUrl": "https://www.youtube.com/watch?v=VD3Lwxi7gcw",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "GZ5v_pdivbU",
       "title": "CLEAN HEART",
       "rawTitle": "CLEAN HEART - RUTH KADIRI, EDDIE WATSON, VICH VITALIS",
@@ -10705,6 +12798,31 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "jaBvTwVQ3OI",
+      "title": "FOOLS AND MORE",
+      "rawTitle": "FOOLS AND MORE - MAURICE SAM, PEARL WATS, SARIAN MARTIN, RAPHEL ATEWE 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "Maurice Sam will make your day in this amazing movie...very educative and hilarious.",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "RAPHEL ATEWE",
+        "SARIAN MARTIN"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "RAPHEL ATEWE"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-03-26T17:00:36Z",
+      "year": 2024,
+      "durationMinutes": 135,
+      "videoUrl": "https://www.youtube.com/watch?v=jaBvTwVQ3OI",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "_z8DHM2Vxwo",
       "title": "A RIDE FOR LOVE",
       "rawTitle": "A RIDE FOR LOVE  - MAURICE SAM, SARIAN MARTIN, EMEKA DARLIGTON",
@@ -10781,6 +12899,28 @@
       "year": 2024,
       "durationMinutes": 82,
       "videoUrl": "https://www.youtube.com/watch?v=lNYQnzqLSnE",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "E38aKEb0axA",
+      "title": "STEAL MY HEART",
+      "rawTitle": "STEAL MY HEART - MAURICE SAM, RUTH KADIRI 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This is the best romantic comedy you will watch today... very intriguing and funny.",
+      "cast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "RUTH KADIRI"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-03-19T17:00:11Z",
+      "year": 2024,
+      "durationMinutes": 128,
+      "videoUrl": "https://www.youtube.com/watch?v=E38aKEb0axA",
       "lastChecked": "2026-09-29"
     },
     {
@@ -10913,6 +13053,30 @@
       "lastChecked": "2026-09-29"
     },
     {
+      "videoId": "Upm67GgY7rA",
+      "title": "FIRE HEARTS",
+      "rawTitle": "FIRE HEARTS - MAURICE SAM, OKAWA SHAZNAY, OBY TITUS 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will leave you in stitches... very interesting and captivating",
+      "cast": [
+        "MAURICE SAM",
+        "OKAWA SHAZNAY",
+        "OBY TITUS"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "OKAWA SHAZNAY",
+        "OBY TITUS"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-03-05T17:00:18Z",
+      "year": 2024,
+      "durationMinutes": 110,
+      "videoUrl": "https://www.youtube.com/watch?v=Upm67GgY7rA",
+      "lastChecked": "2026-09-29"
+    },
+    {
       "videoId": "cXroMkQuNqo",
       "title": "The Thing About Men",
       "rawTitle": "The Thing About Men  - Bimbo Ademoye, Ekamma Etim-Inyang | Latest Full Nigerian Movies 2024",
@@ -11016,6 +13180,30 @@
       "year": 2024,
       "durationMinutes": 208,
       "videoUrl": "https://www.youtube.com/watch?v=LkqQGDz40s8",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "9a0R2Vyqb44",
+      "title": "MONEY GAME",
+      "rawTitle": "MONEY GAME - MAURICE SAM, PEARL WATS, SARIAN MARTIN 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This movie will make your day a must watch for everyone... very intriguing",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "SARIAN MARTIN"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "SARIAN MARTIN"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-02-27T16:00:05Z",
+      "year": 2024,
+      "durationMinutes": 127,
+      "videoUrl": "https://www.youtube.com/watch?v=9a0R2Vyqb44",
       "lastChecked": "2026-09-29"
     },
     {
@@ -11171,6 +13359,30 @@
       "year": 2024,
       "durationMinutes": 101,
       "videoUrl": "https://www.youtube.com/watch?v=Hjs3K3TVX8Q",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "KzO_04Hg1Ko",
+      "title": "YOUR EYES ON ME",
+      "rawTitle": "YOUR EYES ON ME - MAURICE SAM, PEARL WATS, CHRIS AKWARANDU 2024 FULL NIGERIAN MOVIE",
+      "synopsis": "This amazing movie will blow your mind...a must watch for all the singles",
+      "cast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "CHRIS AKWARANDU"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "PEARL WATS",
+        "CHRIS AKWARANDU"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-02-13T16:00:22Z",
+      "year": 2024,
+      "durationMinutes": 147,
+      "videoUrl": "https://www.youtube.com/watch?v=KzO_04Hg1Ko",
       "lastChecked": "2026-09-29"
     },
     {
@@ -11354,6 +13566,31 @@
       "year": 2024,
       "durationMinutes": 97,
       "videoUrl": "https://www.youtube.com/watch?v=OSeSRYtBJKw",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "RLt63rOgjt4",
+      "title": "LOVE TRIANGLE",
+      "rawTitle": "LOVE TRIANGLE - MAURICE SAM, CHIOMA, NWAOHA, CHRIS AKWARANDU 2024 full nigerian movie",
+      "synopsis": "LOVE TRIANGLE is a full Nigerian movie published by Maurice Sam TV on its official YouTube channel.",
+      "cast": [
+        "MAURICE SAM",
+        "CHIOMA",
+        "NWAOHA",
+        "CHRIS AKWARANDU"
+      ],
+      "featuredCast": [
+        "MAURICE SAM",
+        "CHIOMA",
+        "NWAOHA"
+      ],
+      "channelName": "Maurice Sam TV",
+      "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
+      "channelUrl": "https://www.youtube.com/@mauricesamtv",
+      "publishedAt": "2024-01-30T17:00:18Z",
+      "year": 2024,
+      "durationMinutes": 129,
+      "videoUrl": "https://www.youtube.com/watch?v=RLt63rOgjt4",
       "lastChecked": "2026-09-29"
     },
     {
@@ -12661,6 +14898,26 @@
       "year": 2023,
       "durationMinutes": 106,
       "videoUrl": "https://www.youtube.com/watch?v=tiQvg00SHoY",
+      "lastChecked": "2026-09-29"
+    },
+    {
+      "videoId": "qUUVK0AKyOk",
+      "title": "Brain Jotter",
+      "rawTitle": "Brain Jotter - Accidental King Part2. Ft Ebelle okaro",
+      "synopsis": "Brainjotter finally wants a wife for him self so he called to test the royal maidens of the community",
+      "cast": [
+        "Ebelle okaro"
+      ],
+      "featuredCast": [
+        "Ebelle okaro"
+      ],
+      "channelName": "Brain Jotter",
+      "channelId": "UCxyb0darxVM-h7I4xYWrb4A",
+      "channelUrl": "https://www.youtube.com/@brainjottercomedian",
+      "publishedAt": "2023-07-29T17:55:00Z",
+      "year": 2023,
+      "durationMinutes": 101,
+      "videoUrl": "https://www.youtube.com/watch?v=qUUVK0AKyOk",
       "lastChecked": "2026-09-29"
     },
     {
