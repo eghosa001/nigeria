@@ -419,7 +419,8 @@
       "Replace lost driver's licence",
       "How to replace a lost or stolen Nigerian driver's licence",
       "Driving"
-    ]
+    ],
+    "feeNote": "The reissue amount is not presented here as one universal figure because the transaction depends on the licence class and validity selected. Confirm the amount generated on the official FRSC licence portal before paying."
   },
   {
     "slug": "upgrade-drivers-licence-class",
@@ -464,7 +465,8 @@
       "How to add or remove classes on a Nigerian driver's licence",
       "Driving"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "A class upgrade is handled through the applicable renewal/reissue route, so MyNigeriaGuide does not quote one universal upgrade amount. Confirm the class, validity and amount shown by the official FRSC portal before payment."
   },
   {
     "slug": "cac-business-name-registration",
@@ -560,7 +562,8 @@
       "How to register a company with CAC",
       "Business"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "Company-registration charges are not one fixed amount across every incorporation because the filing depends on the company and share structure. Confirm the calculated amount in CAC's official registration portal before payment."
   },
   {
     "slug": "cac-incorporated-trustee-registration",
@@ -708,7 +711,8 @@
       "How to file CAC annual returns",
       "Business"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "Annual-return charges vary with the entity and filing being submitted. Confirm the entity type, filing period and amount displayed in CAC's official registration portal before payment."
   },
   {
     "slug": "jamb-profile-code",
@@ -978,7 +982,8 @@
       "How to check a WAEC result online",
       "Education"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "This label describes the required result-checker credential rather than quoting a universal e-PIN price. Confirm the current price and purchase route through WAEC Direct or another WAEC-authorised channel before paying."
   },
   {
     "slug": "waec-digital-certificate",
@@ -1059,7 +1064,8 @@
       "How to collect a WAEC certificate",
       "Education"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "MyNigeriaGuide does not quote one universal collection fee because WAEC's collection route depends on the candidate type. Follow the official WAEC instructions for your record and confirm any payment requested there before paying."
   },
   {
     "slug": "waec-confirm-result-nigeria",
@@ -1145,7 +1151,8 @@
       "What to do if a WAEC certificate is lost or damaged",
       "Education"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "WAEC's guidance does not treat a lost certificate as a simple duplicate-certificate purchase. Confirm the exact confirmation, attestation or other service available for your case and its current fee through WAEC before paying."
   },
   {
     "slug": "neco-2026-ssce-internal-registration",
@@ -1358,7 +1365,8 @@
       "How to make an official NECO service payment",
       "Education"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "The NECO payment portal prices the specific service selected rather than one universal NECO fee. Verify the service description and amount on the official payment page before completing payment."
   },
   {
     "slug": "nysc-registration-local",
@@ -1777,7 +1785,8 @@
       "How NPC birth registration works for a child",
       "Civil records"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "No single current amount is quoted here unless it is shown by the verified NPC route. Confirm any charge displayed in NPC's official self-service process before payment."
   },
   {
     "slug": "npc-digital-birth-certificate-reissuance",
@@ -1830,7 +1839,8 @@
       "How to get a digital version of an old NPC birth certificate",
       "Civil records"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "No single current reissuance amount is quoted here unless it is shown by the verified NPC route. Confirm the amount displayed in the official NPC reissuance process before payment."
   },
   {
     "slug": "npc-birth-certificate-reprint",
@@ -2000,7 +2010,8 @@
       "Where to access tax clearance on the NRS portal",
       "Tax"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "This guide does not treat a taxpayer's liability or assessment as a fixed certificate-processing fee. Check the taxpayer's current position in the official NRS self-service portal and confirm any amount due before payment."
   },
   {
     "slug": "cac-status-report",
@@ -2369,7 +2380,8 @@
       "How to check the NYSC senate list",
       "Youth service"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "The verified NYSC sources do not state a separate charge simply to check the Senate/Academic Board list. Any later NYSC transaction or optional service is separate and should be confirmed on the official NYSC portal."
   },
   {
     "slug": "nysc-call-up-letter",
@@ -2499,7 +2511,8 @@
       "How to check NPC birth-attestation status",
       "Civil records"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "The verified NPC sources do not state an extra fee merely to resume or check an existing attestation with its payment reference. This does not replace any fee that applied to the original attestation request."
   },
   {
     "slug": "nrs-self-tax-filing",
@@ -2539,7 +2552,8 @@
       "Where to file tax through NRS self-service",
       "Tax"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "This is not a fixed service-fee amount: any tax due depends on the taxpayer's return, assessment and obligations. Review the figures in the official NRS self-service portal before filing or paying."
   },
   {
     "slug": "nrs-tax-payment",
@@ -2579,7 +2593,8 @@
       "Where to make a federal tax payment through NRS",
       "Tax"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "This is not a universal service fee. The amount is the liability or assessment attached to the taxpayer's record, so confirm the taxpayer, assessment and amount in the official NRS self-service portal before paying."
   },
   {
     "slug": "nrs-refund-tracking",

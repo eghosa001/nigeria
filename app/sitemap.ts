@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/updates", "weekly", 0.9],
     ["/assistant", "weekly", 0.7],
     ["/offices", "monthly", 0.7],
+    ["/official-portals", "weekly", 0.8],
     ["/about", "monthly", 0.5],
     ["/editorial-policy", "monthly", 0.4],
     ["/corrections", "monthly", 0.4],

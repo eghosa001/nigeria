@@ -1,4 +1,4 @@
-import { publicServices } from "../lib/data";
+import { publicServices, services } from "../lib/data";
 import { getServiceJourney } from "../lib/journey";
 import { hasExplicitServiceGuidance } from "../lib/service-guidance";
 import { getRequirementDetails } from "../lib/requirement-details";
@@ -21,6 +21,9 @@ const priorityGuides = new Set([
 ]);
 
 const vaguePattern = /follow (?:the )?(?:portal|official|process)|complete (?:the )?(?:process|registration)|as instructed|where required|details requested by|through the .* process/i;
+const conditionalFeePattern = /depends|varies|check current|no separate|no extra|requires a valid|tax liability|amount depends/i;
+const isoDatePattern = /^\d{4}-\d{2}-\d{2}$/;
+const knownServiceSlugs = new Set(services.map((service) => service.slug));
 
 const opaqueRequirementPattern = /^(?:registered entity details|service details|candidate(?:\/| and )examination details|candidate examination details|existing (?:birth|record|birth\/attestation) details|relevant assessment\/liability details|supporting documents required(?:\b| for)|documents required(?:\b| for)|required .* information for the entity type|.*details required by the .* portal)$/i;
 
@@ -93,8 +96,32 @@ for (const service of publicServices) {
     errors.push(prefix + "has no official source");
   }
 
+  if (!isoDatePattern.test(service.lastVerified)) {
+    errors.push(prefix + "lastVerified must use YYYY-MM-DD");
+  }
+
+  const seenSources = new Set<string>();
+  for (const source of service.sources) {
+    if (!source.url.startsWith("https://")) errors.push(prefix + "official source must use HTTPS: " + source.url);
+    if (!isoDatePattern.test(source.lastChecked)) errors.push(prefix + "source lastChecked must use YYYY-MM-DD: " + source.label);
+    if (source.lastChecked > service.lastVerified) errors.push(prefix + "lastVerified cannot be older than source check: " + source.label);
+    if (seenSources.has(source.url)) errors.push(prefix + "contains a duplicate official source URL: " + source.url);
+    seenSources.add(source.url);
+  }
+
+  const seenRelated = new Set<string>();
+  for (const related of service.related) {
+    if (related === service.slug || !knownServiceSlugs.has(related)) errors.push(prefix + "contains an invalid related guide slug: " + related);
+    if (seenRelated.has(related)) errors.push(prefix + "contains a duplicate related guide slug: " + related);
+    seenRelated.add(related);
+  }
+
   if (!service.feeLabel.trim()) {
     errors.push(prefix + "has no fee/status label");
+  }
+
+  if (conditionalFeePattern.test(service.feeLabel) && !service.feeNote?.trim()) {
+    errors.push(prefix + "conditional or variable fee/status labels must explain what the viewer should verify before payment");
   }
 
   if (service.status === "conflict" && !service.feeNote) {

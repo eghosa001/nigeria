@@ -33,7 +33,7 @@ export function generateStaticParams() {
 }
 
 function normalizeMetadataText(value: string) {
-  return value.replace(/'/g, "’").replace(/\\s+/g, " ").trim();
+  return value.replace(/'/g, "’").replace(/\s+/g, " ").trim();
 }
 
 function truncateMetadataText(value: string, maxLength: number) {
@@ -45,12 +45,17 @@ function truncateMetadataText(value: string, maxLength: number) {
   return (lastSpace > Math.floor(maxLength * 0.7) ? shortened.slice(0, lastSpace) : shortened).trimEnd() + "…";
 }
 
-function getServiceSeoTitle(shortTitle: string, lastVerified: string) {
+function getServiceSeoTitle(shortTitle: string, fullTitle: string, lastVerified: string) {
   const year = lastVerified.slice(0, 4);
-  const normalizedTitle = normalizeMetadataText(shortTitle);
-  const hasYear = new RegExp("\\b" + year + "\\b").test(normalizedTitle);
+  const normalizedShort = normalizeMetadataText(shortTitle);
+  const shortHasYear = new RegExp("\\b" + year + "\\b").test(normalizedShort);
+  const compact = `${normalizedShort}${shortHasYear ? "" : " " + year}: Fees & Steps`;
+  if (compact.length >= 30) return truncateMetadataText(compact, 60);
+
+  const normalizedFull = normalizeMetadataText(fullTitle);
+  const fullHasYear = new RegExp("\\b" + year + "\\b").test(normalizedFull);
   return truncateMetadataText(
-    `${normalizedTitle}${hasYear ? "" : " " + year}: Fees & Steps`,
+    `${normalizedFull}${fullHasYear ? "" : " " + year}: Official Guide`,
     60,
   );
 }
@@ -61,7 +66,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!service) return {};
 
   const year = service.lastVerified.slice(0, 4);
-  const title = getServiceSeoTitle(service.shortTitle, service.lastVerified);
+  const title = getServiceSeoTitle(service.shortTitle, service.title, service.lastVerified);
   const summary = normalizeMetadataText(service.summary);
   const description = truncateMetadataText(
     summary.length >= 80

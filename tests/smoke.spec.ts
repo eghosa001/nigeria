@@ -99,14 +99,15 @@ test("directory supports deep-linked category filters", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /JAMB|WAEC|NECO/i }).first()).toBeVisible();
 });
 
-test("assistant has one H1 and JAMB Direct Entry exposes a useful meta description", async ({ page }) => {
+test("assistant has one H1 and service metadata is search-ready", async ({ page }) => {
   await page.goto("/assistant");
   await expect(page.locator("h1")).toHaveCount(1);
   await expect(page.locator("h1")).toContainText(/what you need to get done/i);
-
   await page.goto("/services/jamb-direct-entry-2026");
   const description = await page.locator('meta[name="description"]').getAttribute("content");
   expect(description?.length ?? 0).toBeGreaterThan(80);
+  await page.goto("/services/jamb-caps");
+  expect((await page.title()).length).toBeGreaterThanOrEqual(30);
 });
 
 test("service guides expose trust and sharing actions", async ({ page }) => {
@@ -157,10 +158,21 @@ test("correction API rejects malformed and tampered submissions before any backe
   expect(statuses).toEqual([415, 400, 400]);
 });
 
-test("database-free launch never shows a dead correction form", async ({ page }) => {
+test("guide pages defer correction-backend checks until the visitor wants to report", async ({ page }) => {
+  let availabilityChecks = 0;
+  await page.route("**/api/reports", async (route) => {
+    if (route.request().method() === "GET") {
+      availabilityChecks += 1;
+      await route.fulfill({ json: { configured: false } });
+      return;
+    }
+    await route.continue();
+  });
   await page.goto("/services/passport-renewal");
-  await expect(page.getByText("Persistent public submissions are not enabled yet")).toBeVisible();
-  await expect(page.getByRole("button", { name: "Report an issue" })).toHaveCount(0);
+  expect(availabilityChecks).toBe(0);
+  await page.getByRole("button", { name: "Report an issue" }).click();
+  await expect(page.getByText("Persistent public submissions are not enabled right now")).toBeVisible();
+  expect(availabilityChecks).toBe(1);
 });
 
 test("watching a guide persists on the device", async ({ page }) => {
@@ -454,4 +466,12 @@ test("topic search phrases point to exact guides", async ({ page }) => {
   const searches = page.locator(".topic-searches");
   await expect(searches.getByRole("link", { name: /JAMB Direct Entry 2026/ })).toHaveAttribute("href", "/services/jamb-direct-entry-2026");
   await expect(searches.getByRole("link", { name: "JAMB CAPS", exact: true })).toHaveAttribute("href", "/services/jamb-caps");
+});
+
+
+test("official portal reference page exposes direct authorities and guide routes", async ({ page }) => {
+  await page.goto("/official-portals");
+  await expect(page.getByRole("heading", { name: "Official government and service portals" })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Open official website ↗" }).first()).toHaveAttribute("href", /^https:\/\//);
+  await expect(page.getByRole("link", { name: "View verified guides →" }).first()).toHaveAttribute("href", /^\/agencies\//);
 });

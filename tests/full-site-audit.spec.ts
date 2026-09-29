@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { categorySlug } from "@/lib/category";
 
-const staticRoutes = ["/", "/services", "/fees", "/updates", "/offices", "/saved", "/assistant", "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact"];
+const staticRoutes = ["/", "/services", "/fees", "/updates", "/offices", "/official-portals", "/saved", "/assistant", "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact"];
 const routes = [
   ...staticRoutes,
   ...categories.map((category) => "/categories/" + categorySlug(category.name)),
@@ -115,6 +115,10 @@ test("every guide is structured for a viewer completing the service", async ({ p
     await expect(page.getByRole("heading", { name: "Important notes" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Common questions" })).toBeVisible();
     await expect(page.getByRole("heading", { name: "Official sources" })).toBeVisible();
+
+    const pageTitle = await page.title();
+    expect(pageTitle.length, service.slug + " metadata title too short").toBeGreaterThanOrEqual(30);
+    expect(pageTitle.length, service.slug + " metadata title too long").toBeLessThanOrEqual(60);
 
     const status = page.locator('[aria-label="Service at a glance"]');
     await expect(status, service.slug + " service summary").toBeVisible();
