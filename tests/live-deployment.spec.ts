@@ -55,7 +55,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
   test("live visits dashboard is protected by Cloudflare Access", async ({ page, request }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics protection check.");
 
-    const response = await request.get("/api/admin/analytics?range=7d", {
+    const response = await request.get("/admin/api/analytics?range=7d", {
       failOnStatusCode: false,
       maxRedirects: 0,
     });
@@ -73,7 +73,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
   test("live admin guide editor is protected by Cloudflare Access", async ({ page, request }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only admin editing protection check.");
 
-    const response = await request.get("/api/admin/content-access", {
+    const response = await request.get("/admin/api/content-access", {
       failOnStatusCode: false,
       maxRedirects: 0,
     });
