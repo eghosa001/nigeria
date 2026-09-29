@@ -11,6 +11,7 @@ const navigation = [
   { href: "/entertainment", label: "Entertainment", matches: ["/entertainment"] },
   { href: "/fees", label: "Fees", matches: ["/fees"] },
   { href: "/updates", label: "Updates", matches: ["/updates"] },
+  { href: "/offices", label: "Offices", matches: ["/offices"] },
   { href: "/saved", label: "Saved", matches: ["/saved"] },
   { href: "/assistant", label: "Find a guide", matches: ["/assistant"] },
 ];
