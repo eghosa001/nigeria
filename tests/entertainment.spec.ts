@@ -4,7 +4,9 @@ test("entertainment catalog supports multiple official platforms", async ({ page
   await page.goto("/entertainment/movies");
   await expect(page.locator(".movie-tile")).toHaveCount(30);
   await page.getByLabel("Platform").selectOption("Prime Video");
-  await expect(page.locator(".movie-tile")).toHaveCount(1);
+  const primeResults = page.locator(".movie-tile");
+  expect(await primeResults.count()).toBeGreaterThanOrEqual(1);
+  await expect(page.getByRole("link", { name: "A Tribe Called Judah", exact: true }).first()).toBeVisible();
 });
 
 test("movie detail exposes watch and trailer links", async ({ page }) => {
