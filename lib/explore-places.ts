@@ -1022,7 +1022,7 @@ export const explorePlaces: ExplorePlace[] = [
 
   {
     slug: "araromi-seaside",
-    guideSlug: "araromi-beach",
+    guideSlug: "ondo-state-highlights",
     name: "Araromi Seaside",
     kind: "nature",
     area: "Ilaje",
@@ -1038,7 +1038,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     slug: "ebomi-lake-ipesi",
-    guideSlug: "ebomi-lake",
+    guideSlug: "ondo-state-highlights",
     name: "Ebomi Lake",
     kind: "nature",
     area: "Ipesi-Akoko",
@@ -1053,7 +1053,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     slug: "igbokoda-waterfront-ondo",
-    guideSlug: "igbokoda-waterfront",
+    guideSlug: "ondo-state-highlights",
     name: "Igbokoda Waterfront",
     kind: "nature",
     area: "Igbokoda",
