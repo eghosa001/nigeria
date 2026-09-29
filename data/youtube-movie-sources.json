@@ -1,0 +1,307 @@
+{
+  "checkedAt": "2026-09-29",
+  "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
+  "sources": [
+    {
+      "slug": "ruthkadiri247",
+      "searchName": "RuthKadiri247",
+      "aliases": [
+        "RuthKadiri247",
+        "Ruthkadiri247"
+      ],
+      "estimatedMovieCount": 174
+    },
+    {
+      "slug": "uchenna-mbunabo-tv",
+      "searchName": "Uchenna Mbunabo TV",
+      "aliases": [
+        "Uchenna Mbunabo TV",
+        "UCHENNA MBUNABO TV"
+      ],
+      "estimatedMovieCount": 170,
+      "knownUrl": "https://www.youtube.com/@uchennambunabotv02"
+    },
+    {
+      "slug": "omoni-oboli-tv",
+      "searchName": "Omoni Oboli TV",
+      "aliases": [
+        "Omoni Oboli TV"
+      ],
+      "estimatedMovieCount": 111,
+      "knownUrl": "https://www.youtube.com/@OmoniOboliTV"
+    },
+    {
+      "slug": "oluchi-afundu-tv",
+      "searchName": "Oluchi Afundu TV",
+      "aliases": [
+        "Oluchi Afundu TV"
+      ],
+      "estimatedMovieCount": 97
+    },
+    {
+      "slug": "maurice-sam-tv",
+      "searchName": "Maurice Sam TV",
+      "aliases": [
+        "Maurice Sam TV"
+      ],
+      "estimatedMovieCount": 96,
+      "knownUrl": "https://www.youtube.com/@mauricesamtv"
+    },
+    {
+      "slug": "uduak-isong-tv",
+      "searchName": "Uduak Isong TV",
+      "aliases": [
+        "Uduak Isong TV"
+      ],
+      "estimatedMovieCount": 79
+    },
+    {
+      "slug": "chinneyloveeze-tv",
+      "searchName": "ChinneyLoveEze Tv",
+      "aliases": [
+        "ChinneyLoveEze Tv",
+        "Chinneyloveeze TV"
+      ],
+      "estimatedMovieCount": 66,
+      "knownUrl": "https://www.youtube.com/@chinneyloveezetv"
+    },
+    {
+      "slug": "mercy-johnson-okogie-tv",
+      "searchName": "Mercyjohnsonokojie TV",
+      "aliases": [
+        "Mercyjohnsonokojie TV",
+        "Mercy Johnson Okojie TV"
+      ],
+      "estimatedMovieCount": 56
+    },
+    {
+      "slug": "sonia-uche-tv",
+      "searchName": "Sonia Uche TV",
+      "aliases": [
+        "Sonia Uche TV"
+      ],
+      "estimatedMovieCount": 56
+    },
+    {
+      "slug": "uche-jombo-tv",
+      "searchName": "Uche Jombo TV",
+      "aliases": [
+        "Uche Jombo TV"
+      ],
+      "estimatedMovieCount": 49
+    },
+    {
+      "slug": "sandra-okunzuwa-tv",
+      "searchName": "Sandra Okunzuwa TV",
+      "aliases": [
+        "Sandra Okunzuwa TV"
+      ],
+      "estimatedMovieCount": 46
+    },
+    {
+      "slug": "bolaji-ogunmola-tv",
+      "searchName": "Bolaji Ogunmola TV",
+      "aliases": [
+        "Bolaji Ogunmola TV"
+      ],
+      "estimatedMovieCount": 42,
+      "knownUrl": "https://www.youtube.com/@bolajiogunmolatv"
+    },
+    {
+      "slug": "biodun-stephen-tv",
+      "searchName": "BIODUNSTEPHEN TV",
+      "aliases": [
+        "BIODUNSTEPHEN TV",
+        "Biodunstephen TV"
+      ],
+      "estimatedMovieCount": 36,
+      "knownUrl": "https://www.youtube.com/@biodunstephentv"
+    },
+    {
+      "slug": "sarian-martin-tv",
+      "searchName": "Sarian Martin TV",
+      "aliases": [
+        "Sarian Martin TV"
+      ],
+      "estimatedMovieCount": 34,
+      "knownUrl": "https://www.youtube.com/@sarianmartinTV."
+    },
+    {
+      "slug": "eddie-watson-tv",
+      "searchName": "Eddie Watson TV",
+      "aliases": [
+        "Eddie Watson TV"
+      ],
+      "estimatedMovieCount": 28
+    },
+    {
+      "slug": "frederick-leonard-tv",
+      "searchName": "Frederick Leonard TV",
+      "aliases": [
+        "Frederick Leonard TV",
+        "Frederick Leonard TV."
+      ],
+      "estimatedMovieCount": 26
+    },
+    {
+      "slug": "blessing-obasi-tv",
+      "searchName": "Blessing Obasi TV",
+      "aliases": [
+        "Blessing Obasi TV"
+      ],
+      "estimatedMovieCount": 24
+    },
+    {
+      "slug": "uche-montana-tv",
+      "searchName": "Uche Montana TV",
+      "aliases": [
+        "Uche Montana TV"
+      ],
+      "estimatedMovieCount": 24,
+      "knownUrl": "https://www.youtube.com/@UchemontanaTV"
+    },
+    {
+      "slug": "toyin-abraham-tv",
+      "searchName": "Toyin Abraham TV",
+      "aliases": [
+        "Toyin Abraham TV"
+      ],
+      "estimatedMovieCount": 19,
+      "knownUrl": "https://www.youtube.com/@ToyinAbrahamTv1"
+    },
+    {
+      "slug": "bimbo-ademoye-tv",
+      "searchName": "Bimbo Ademoye TV",
+      "aliases": [
+        "Bimbo Ademoye TV",
+        "Bimbo Ademoye Tv"
+      ],
+      "estimatedMovieCount": 14,
+      "knownUrl": "https://www.youtube.com/@bimboademoyetv"
+    },
+    {
+      "slug": "ini-edo-tv",
+      "searchName": "Ini Edo TV",
+      "aliases": [
+        "Ini Edo TV",
+        "Ini Edo Tv"
+      ],
+      "estimatedMovieCount": 9,
+      "knownUrl": "https://www.youtube.com/@iniedotv"
+    },
+    {
+      "slug": "destiny-etiko-tv",
+      "searchName": "DestinyEtiko Tv",
+      "aliases": [
+        "DestinyEtiko Tv",
+        "Destiny Etiko TV"
+      ],
+      "estimatedMovieCount": 100,
+      "knownUrl": "https://www.youtube.com/@Destinyetikotv"
+    },
+    {
+      "slug": "clinton-joshua-tv",
+      "searchName": "Clinton Joshua Tv",
+      "aliases": [
+        "Clinton Joshua Tv",
+        "Clinton Joshua TV"
+      ],
+      "estimatedMovieCount": 12,
+      "knownUrl": "https://www.youtube.com/@clintonjoshuaTv001"
+    },
+    {
+      "slug": "deza-the-great-tv",
+      "searchName": "DezaTheGreatTV",
+      "aliases": [
+        "DezaTheGreatTV",
+        "Dezathegreattv"
+      ],
+      "estimatedMovieCount": 15,
+      "knownUrl": "https://www.youtube.com/@dezathegreat"
+    },
+    {
+      "slug": "one-and-two-films-tv",
+      "searchName": "One And Two Films Tv",
+      "aliases": [
+        "One And Two Films Tv",
+        "One And Two Films TV",
+        "One And Two Films"
+      ],
+      "estimatedMovieCount": 36,
+      "knownUrl": "https://www.youtube.com/@Oneandtwofilmstv"
+    },
+    {
+      "slug": "bdaniels-tv",
+      "searchName": "BDANIELS TV",
+      "aliases": [
+        "BDANIELS TV",
+        "Bdaniels TV",
+        "BDANIELS Tv"
+      ],
+      "estimatedMovieCount": 100,
+      "knownUrl": "https://www.youtube.com/@bdanielstv"
+    },
+    {
+      "slug": "brain-jotter",
+      "searchName": "Brain Jotter",
+      "aliases": [
+        "Brain Jotter",
+        "BrainJotter"
+      ],
+      "estimatedMovieCount": 10,
+      "knownUrl": "https://www.youtube.com/@brainjottercomedian"
+    },
+    {
+      "slug": "nollywood-pictures-tv",
+      "searchName": "Nollywoodpicturestv",
+      "aliases": [
+        "Nollywoodpicturestv",
+        "Nollywood Pictures Tv",
+        "NOLLYWOOD PICTURES TV"
+      ],
+      "estimatedMovieCount": 500,
+      "knownUrl": "https://www.youtube.com/@NollywoodPicturestv"
+    },
+    {
+      "slug": "royal-arts-tv",
+      "searchName": "Royal Arts TV",
+      "aliases": [
+        "Royal Arts TV",
+        "Royal Arts Tv"
+      ],
+      "estimatedMovieCount": 83,
+      "knownUrl": "https://www.youtube.com/@RoyalArtsTV"
+    },
+    {
+      "slug": "pamela-okoye-tv",
+      "searchName": "PAMELA OKOYE TV",
+      "aliases": [
+        "PAMELA OKOYE TV",
+        "Pamela Okoye TV"
+      ],
+      "estimatedMovieCount": 24,
+      "knownUrl": "https://www.youtube.com/@pamelaokoyetv"
+    },
+    {
+      "slug": "enyinna-jonas-tv",
+      "searchName": "ENYINNA JONAS TV",
+      "aliases": [
+        "ENYINNA JONAS TV",
+        "Enyinna Jonas TV",
+        "Enyinna Jonas Tv"
+      ],
+      "estimatedMovieCount": 22,
+      "knownUrl": "https://www.youtube.com/@enyinnajonastv"
+    },
+    {
+      "slug": "ego-nwosu-tv",
+      "searchName": "Ego Nwosu Tv",
+      "aliases": [
+        "Ego Nwosu Tv",
+        "Ego Nwosu TV"
+      ],
+      "estimatedMovieCount": 14,
+      "knownUrl": "https://www.youtube.com/channel/UCMpZ4ghi2I9GMGOICB9YRtg"
+    }
+  ]
+}

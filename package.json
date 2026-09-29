@@ -21,7 +21,10 @@
     "prebuild:vinext": "node scripts/write-deployment-info.mjs",
     "prebuild:next": "node scripts/write-deployment-info.mjs",
     "check:service-catalog": "tsx scripts/verify-service-migration.ts",
-    "check:analytics-safety": "tsx scripts/check-analytics-safety.ts"
+    "check:analytics-safety": "tsx scripts/check-analytics-safety.ts",
+    "sync:youtube-entertainment": "node scripts/sync-youtube-entertainment.mjs",
+    "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs",
+    "check:explore": "tsx scripts/check-explore-content.ts"
   },
   "dependencies": {
     "next": "16.3.6",
