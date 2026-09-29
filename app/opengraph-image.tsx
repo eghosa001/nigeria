@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "MyNigeriaGuide — clear steps for Nigerian government services";
+export const alt = "MyNigeriaGuide — Nigerian services, travel and entertainment";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -8,11 +8,10 @@ function Mark() {
   return (
     <svg width="82" height="82" viewBox="0 0 82 82">
       <rect width="82" height="82" rx="22" fill="#063F2D" />
-      <circle cx="41" cy="41" r="25.5" fill="none" stroke="rgba(255,253,248,.18)" strokeWidth="2" />
-      <path d="M23 59C27 49 32 53 36 44C40 34 46 32 54 32" fill="none" stroke="#FFFDF8" strokeWidth="5" strokeLinecap="round" />
-      <circle cx="23" cy="59" r="5" fill="#D1A24A" stroke="#FFFDF8" strokeWidth="2" />
-      <path d="M55 22C48 22 43 27 43 34C43 43 55 57 55 57C55 57 67 43 67 34C67 27 62 22 55 22Z" fill="#D1A24A" stroke="#FFFDF8" strokeWidth="2" />
-      <path d="M50 34L54 38L61 30" fill="none" stroke="#063F2D" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="2" y="2" width="78" height="78" rx="20" fill="none" stroke="rgba(255,253,248,.14)" strokeWidth="2" />
+      <path d="M23 59V26L59 58V23" fill="none" stroke="#FFFDF8" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="23" cy="59" r="5.5" fill="#D1A24A" stroke="#063F2D" strokeWidth="2" />
+      <path d="M59 15L61.5 20.5L67 23L61.5 25.5L59 31L56.5 25.5L51 23L56.5 20.5L59 15Z" fill="#D1A24A" />
     </svg>
   );
 }
@@ -21,23 +20,23 @@ export default function Image() {
   return new ImageResponse(
     (
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "68px 72px", background: "#F8F5ED", color: "#10251C", fontFamily: "Arial, sans-serif", position: "relative", overflow: "hidden" }}>
-        <div style={{ position: "absolute", width: "480px", height: "480px", borderRadius: "240px", right: "-160px", top: "-210px", background: "#E3F1E8" }} />
-        <div style={{ position: "absolute", width: "300px", height: "300px", borderRadius: "150px", right: "30px", bottom: "-220px", background: "#F3E8D1" }} />
+        <div style={{ position: "absolute", width: "500px", height: "500px", borderRadius: "250px", right: "-180px", top: "-220px", background: "#E3F1E8" }} />
+        <div style={{ position: "absolute", width: "330px", height: "330px", borderRadius: "165px", right: "25px", bottom: "-235px", background: "#F3E8D1" }} />
 
         <div style={{ display: "flex", alignItems: "center", gap: "20px", zIndex: 2 }}>
           <Mark />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <strong style={{ fontSize: "36px", letterSpacing: "-1px" }}>MyNigeriaGuide</strong>
-            <span style={{ fontSize: "20px", color: "#607168" }}>Clear steps. Verified sources.</span>
+            <span style={{ fontSize: "20px", color: "#607168" }}>Services · Travel · Movies</span>
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", zIndex: 2 }}>
-          <div style={{ fontSize: "68px", fontWeight: 800, lineHeight: 1.02, maxWidth: "920px", letterSpacing: "-2.5px" }}>
-            Get government services done with clearer steps.
+          <div style={{ fontSize: "65px", fontWeight: 800, lineHeight: 1.02, maxWidth: "920px", letterSpacing: "-2.5px" }}>
+            Services, travel and entertainment in one Nigerian guide.
           </div>
-          <div style={{ marginTop: "26px", fontSize: "25px", color: "#607168" }}>
-            Fees · requirements · online & physical routes · official links
+          <div style={{ marginTop: "25px", fontSize: "24px", color: "#607168" }}>
+            Official routes · practical planning · places · Nigerian movies
           </div>
         </div>
 

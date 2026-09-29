@@ -255,22 +255,26 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
   await page.setViewportSize({ width: 390, height: 844 });
 
   await page.goto("/");
-  await expect(page.getByRole("button", { name: "Open navigation" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Open navigation" })).toHaveCount(0);
   await expect(page.getByRole("navigation", { name: "Primary navigation" })).toBeHidden();
-  await page.getByRole("button", { name: "Open navigation" }).click();
-  await expect(page.getByRole("navigation", { name: "Primary navigation" })).toBeVisible();
 
-  const navBox = await page.getByRole("navigation", { name: "Primary navigation" }).boundingBox();
+  const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
+  await expect(mobileNav).toBeVisible();
+  await expect(mobileNav.getByRole("link", { name: "Home", exact: true })).toHaveAttribute("aria-current", "page");
+  await expect(page.locator(".mobile-header-action")).toBeVisible();
+
+  const navBox = await mobileNav.boundingBox();
   expect(navBox?.x ?? -1).toBeGreaterThanOrEqual(0);
   expect((navBox?.x ?? 0) + (navBox?.width ?? 0)).toBeLessThanOrEqual(390);
+  expect((navBox?.y ?? 0) + (navBox?.height ?? 0)).toBeLessThanOrEqual(844);
 
-  await page.getByRole("button", { name: "Close navigation" }).click();
   const heroColumns = await page.locator(".hero-grid").evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").filter(Boolean).length);
   expect(heroColumns).toBe(1);
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   expect(homeOverflow).toBeLessThanOrEqual(1);
 
   await page.goto("/services");
+  await expect(page.getByRole("navigation", { name: "Mobile navigation" }).getByRole("link", { name: "Services", exact: true })).toHaveAttribute("aria-current", "page");
   const directoryColumns = await page.locator(".directory-controls").evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").filter(Boolean).length);
   expect(directoryColumns).toBe(1);
 

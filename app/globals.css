@@ -3958,3 +3958,261 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .youtube-detail-artwork { border-radius: 14px; }
   .youtube-movie-card-footer { align-items: flex-start; }
 }
+
+
+/* Brand + navigation polish — 2026-09-29 */
+.brand-wordmark strong {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  font-weight: 860;
+}
+.brand-wordmark strong span { color: var(--green-deep); }
+.brand-wordmark strong em {
+  color: var(--green);
+  font-style: normal;
+  font-weight: 900;
+}
+.brand-wordmark small {
+  color: #66786f;
+  letter-spacing: .025em;
+}
+.brand-logo-mark {
+  filter: drop-shadow(0 9px 18px rgba(6,63,45,.15));
+}
+.mobile-header-action,
+.mobile-bottom-nav { display: none; }
+
+.home-launch-card {
+  position: relative;
+  overflow: hidden;
+  border-left-width: 1px;
+}
+.home-launch-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  opacity: .92;
+}
+.service-launch-card::before { background: linear-gradient(90deg, var(--green-dark), var(--green)); }
+.explore-launch-card::before { background: linear-gradient(90deg, #8d661f, var(--gold)); }
+.entertainment-launch-card::before { background: linear-gradient(90deg, #172035, #445071); }
+
+.home-pillar-panel,
+.movie-tile,
+.youtube-movie-card,
+.sidebar-card,
+.directory-page-note {
+  box-shadow: 0 12px 32px rgba(16,55,39,.045);
+}
+
+@media (min-width: 921px) and (max-width: 1020px) {
+  .premium-primary-nav {
+    position: static !important;
+    display: flex !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    gap: 8px !important;
+  }
+  .primary-nav-main,
+  .primary-nav-utilities {
+    display: flex !important;
+    gap: 1px !important;
+  }
+  .primary-nav-main a,
+  .primary-nav-utilities a {
+    width: auto !important;
+    min-height: 40px !important;
+    padding: 0 8px !important;
+    font-size: .79rem !important;
+  }
+  .primary-nav-utilities { padding-left: 8px !important; }
+  .brand-wordmark small { display: none; }
+}
+
+@media (max-width: 920px) {
+  body {
+    padding-bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .site-header {
+    background: rgba(251,250,245,.965);
+    backdrop-filter: blur(18px);
+  }
+
+  .header-inner {
+    min-height: 64px !important;
+    gap: 10px !important;
+  }
+
+  .brand-home-link {
+    max-width: calc(100% - 76px) !important;
+    min-height: 48px !important;
+  }
+
+  .brand-lockup { gap: 8px !important; }
+  .brand-logo-mark {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .brand-wordmark strong {
+    font-size: .96rem !important;
+    letter-spacing: -.04em !important;
+  }
+  .brand-wordmark small {
+    display: block !important;
+    margin-top: 3px !important;
+    font-size: .58rem !important;
+    letter-spacing: .02em !important;
+  }
+
+  .premium-primary-nav {
+    display: none !important;
+  }
+
+  .mobile-header-action {
+    flex: 0 0 auto;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 11px;
+    border: 1px solid rgba(6,63,45,.12);
+    border-radius: 999px;
+    background: rgba(255,255,255,.78);
+    color: var(--green-dark);
+    box-shadow: 0 5px 16px rgba(16,55,39,.045);
+    font-size: .76rem;
+    font-weight: 820;
+  }
+  .mobile-header-action svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .section-nav-shell {
+    background: rgba(255,255,255,.965);
+  }
+  .section-nav-inner {
+    min-height: 42px;
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 0;
+  }
+  .section-nav-inner > strong { display: none; }
+  .section-nav-inner nav {
+    width: 100%;
+    gap: 0;
+    overflow-x: auto;
+    padding-right: 14px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .section-nav-inner nav::-webkit-scrollbar { display: none; }
+  .section-nav-inner nav a {
+    min-height: 42px;
+    padding: 0 11px;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent !important;
+  }
+  .section-nav-inner nav a.is-current {
+    border-bottom-color: var(--green);
+    color: var(--green-dark);
+  }
+
+  .mobile-bottom-nav {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: max(8px, env(safe-area-inset-bottom));
+    z-index: 120;
+    display: block;
+    padding: 5px;
+    border: 1px solid rgba(6,63,45,.13);
+    border-radius: 20px;
+    background: rgba(255,253,248,.955);
+    box-shadow: 0 18px 48px rgba(8,47,36,.20);
+    backdrop-filter: blur(18px);
+  }
+  .mobile-bottom-nav-inner {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    align-items: stretch;
+    gap: 2px;
+  }
+  .mobile-bottom-nav a {
+    min-width: 0;
+    min-height: 56px;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 3px;
+    padding: 5px 3px;
+    border-radius: 15px;
+    color: #6a786f;
+    transition: background 150ms ease, color 150ms ease, transform 150ms ease;
+  }
+  .mobile-bottom-nav a:active { transform: scale(.97); }
+  .mobile-bottom-nav a svg {
+    width: 20px;
+    height: 20px;
+  }
+  .mobile-bottom-nav a span {
+    max-width: 100%;
+    overflow: hidden;
+    font-size: .61rem;
+    font-weight: 760;
+    line-height: 1.1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .mobile-bottom-nav a.is-current {
+    background: #edf6f0;
+    color: var(--green-dark);
+  }
+  .mobile-bottom-nav a.is-current svg {
+    color: var(--green);
+    stroke-width: 2.2;
+  }
+
+  .guide-quick-nav,
+  .movie-detail-subnav {
+    top: 106px !important;
+  }
+
+  .site-footer {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-wordmark small { display: none !important; }
+  .brand-logo-mark {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .brand-wordmark strong {
+    font-size: .9rem !important;
+  }
+  .mobile-header-action {
+    min-height: 38px;
+    padding-inline: 10px;
+  }
+  .mobile-bottom-nav {
+    left: 7px;
+    right: 7px;
+    border-radius: 18px;
+  }
+  .mobile-bottom-nav a {
+    min-height: 54px;
+    border-radius: 13px;
+  }
+}
