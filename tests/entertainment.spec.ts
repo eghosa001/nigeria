@@ -147,10 +147,16 @@ test("every visible curated movie has a poster-format visual", async ({ page }) 
   expect(box!.height).toBeGreaterThan(box!.width * 1.3);
 });
 
-test("duplicate approved uploads are surfaced as alternate official sources", async ({ page }) => {
+test("duplicate approved uploads are surfaced only with identity evidence", async ({ page }) => {
+  await page.goto("/entertainment/youtube/32k-gIzh4aQ");
+  await expect(page.getByText("Alternate official source", { exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Open alternate official source/i })).toHaveAttribute(
+    "href",
+    "https://www.youtube.com/watch?v=b9CapDAe6UE",
+  );
+
   await page.goto("/entertainment/movies/plus-one");
-  await expect(page.getByText("Omoni Oboli TV", { exact: false }).first()).toBeVisible();
-  await expect(page.getByText("Maurice Sam TV", { exact: false }).first()).toBeVisible();
+  await expect(page.getByText("Maurice Sam TV", { exact: false })).toHaveCount(0);
 });
 
 test("official platform cards explain legal offline viewing instead of third-party downloads", async ({ page }) => {
