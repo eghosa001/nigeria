@@ -75,10 +75,10 @@ test("global and section navigation work on desktop and mobile", async ({ page }
 
   if (await mobileNav.isVisible()) {
     for (const [label, target] of [
-      ["Home", "/"],
-      ["Services", "/services"],
-      ["Explore", "/explore"],
       ["Movies", "/entertainment/movies"],
+      ["Services", "/services"],
+      ["Tour", "/explore"],
+      ["Home", "/"],
       ["Saved", "/saved"],
     ] as const) {
       const link = mobileNav.getByRole("link", { name: label, exact: true });
@@ -89,9 +89,9 @@ test("global and section navigation work on desktop and mobile", async ({ page }
     await expect(page.locator(".mobile-header-action")).toHaveAttribute("href", "/assistant");
   } else {
     for (const [label, target] of [
+      ["Movies", "/entertainment/movies"],
       ["Services", "/services"],
-      ["Explore Nigeria", "/explore"],
-      ["Entertainment", "/entertainment"],
+      ["Tour Nigeria", "/explore"],
       ["Saved", "/saved"],
       ["Find a guide", "/assistant"],
     ] as const) {
