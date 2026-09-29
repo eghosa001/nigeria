@@ -1,0 +1,64 @@
+name: YouTube Entertainment Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 4 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - id: api-key
+        name: Check YouTube API credential
+        env:
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+        run: |
+          if [ -n "$YOUTUBE_DATA_API_KEY" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::YOUTUBE_DATA_API_KEY is not configured; sync skipped."
+          fi
+
+      - name: Sync approved YouTube movie channels
+        if: steps.api-key.outputs.present == 'true'
+        env:
+          YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+        run: node scripts/sync-youtube-entertainment.mjs
+
+      - id: changes
+        if: steps.api-key.outputs.present == 'true'
+        run: |
+          if git diff --quiet -- data/youtube-channel-cache.json data/youtube-movies.generated.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or update sync PR
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="automation/youtube-entertainment-sync"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
+          git add data/youtube-channel-cache.json data/youtube-movies.generated.json
+          git commit -m "Refresh approved YouTube movie catalog"
+          git push --force origin "$BRANCH"
+          gh pr create             --base main             --head "$BRANCH"             --title "Refresh approved YouTube movie catalog"             --body "Automated metadata refresh from the official YouTube Data API. Only approved channels and full-length movies that pass quality filters are included."             || gh pr edit "$BRANCH" --title "Refresh approved YouTube movie catalog" --body "Automated metadata refresh from the official YouTube Data API. Only approved channels and full-length movies that pass quality filters are included."

@@ -4,6 +4,7 @@ import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
+import { generatedYouTubeMovies } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
@@ -26,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/entertainment", "weekly", 0.8],
     ["/entertainment/movies", "weekly", 0.8],
     ["/entertainment/youtube", "daily", 0.8],
+    ["/entertainment/youtube/sources", "weekly", 0.6],
     ["/entertainment/releases", "daily", 0.8],
     ["/entertainment/cinemas", "weekly", 0.7],
     ["/entertainment/platforms", "weekly", 0.7],
@@ -62,6 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestDate(publicServices.filter((service) => hub.serviceSlugs.includes(service.slug)).map((service) => service.lastVerified)) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    })),
+    ...generatedYouTubeMovies.map((movie) => ({
+      url: base + "/entertainment/youtube/" + movie.videoId,
+      lastModified: movie.lastChecked,
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
     })),
     ...entertainmentTitles.map((title) => ({
       url: base + "/entertainment/movies/" + title.slug,

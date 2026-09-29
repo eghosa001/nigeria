@@ -57,3 +57,13 @@ test("youtube movie directory is populated from approved channels", async ({ pag
   await expect(page.getByText("Love in Every Word", { exact: true })).toBeVisible();
   await expect(page.getByText("The Long Way Home", { exact: true })).toBeVisible();
 });
+
+
+test("youtube source network is sized for more than one thousand movies", async ({ page }) => {
+  await page.goto("/entertainment/youtube/sources");
+  await expect(page.getByRole("heading", { name: /Approved YouTube movie sources/i })).toBeVisible();
+  await expect(page.getByText(/1,2\d{2}\+/)).toBeVisible();
+  await expect(page.getByText("RuthKadiri247", { exact: true })).toBeVisible();
+  await expect(page.getByText("Uchenna Mbunabo TV", { exact: true })).toBeVisible();
+  await expect(page.getByText("Omoni Oboli TV", { exact: true })).toBeVisible();
+});
