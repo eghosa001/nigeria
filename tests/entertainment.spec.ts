@@ -46,3 +46,14 @@ test("expanded catalog includes verified Nigerian Netflix titles", async ({ page
   await expect(page.getByText("House of Ga'a", { exact: true })).toBeVisible();
   await expect(page.getByText("Femi Branch", { exact: false })).toBeVisible();
 });
+
+
+test("youtube movie directory is populated from approved channels", async ({ page }) => {
+  await page.goto("/entertainment/youtube");
+  await expect(page.getByRole("heading", { name: /Nigerian movies on official YouTube channels/i })).toBeVisible();
+  await expect(page.getByText("Omoni Oboli TV", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Maurice Sam TV", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Uche Montana TV", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("Love in Every Word", { exact: true })).toBeVisible();
+  await expect(page.getByText("The Long Way Home", { exact: true })).toBeVisible();
+});

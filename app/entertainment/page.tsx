@@ -77,6 +77,7 @@ export default function EntertainmentPage() {
           </div>
           <div className="home-category-grid">
             <Link className="home-category-card" href="/entertainment/movies"><span>Watch</span><strong>Movies</strong><small>Search Nigerian titles by actor, genre, language or platform.</small><i>Browse movies →</i></Link>
+            <Link className="home-category-card" href="/entertainment/youtube"><span>Free to watch</span><strong>YouTube movies</strong><small>Full Nigerian movies from approved producer and rightsholder channels.</small><i>Browse YouTube movies →</i></Link>
             <Link className="home-category-card" href="/entertainment/releases"><span>Current</span><strong>New &amp; upcoming</strong><small>Fresh streaming additions, films now showing and upcoming film events.</small><i>See releases →</i></Link>
             <Link className="home-category-card" href="/entertainment/cinemas"><span>Big screen</span><strong>Cinemas</strong><small>Filmhouse, Silverbird and Viva booking routes, locations and price guidance.</small><i>Find cinemas →</i></Link>
             <Link className="home-category-card" href="/entertainment/platforms"><span>Streaming</span><strong>Platforms</strong><small>Netflix, YouTube, Prime Video and the Showmax-to-DStv Stream transition.</small><i>Compare platforms →</i></Link>
