@@ -277,7 +277,15 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <span className="eyebrow">Preview</span>
                 <h2>Official trailer</h2>
                 <div className="movie-trailer-card">
-                  <div><strong>{title.trailer.label}</strong><span>YouTube · checked {title.trailer.lastChecked}</span></div>
+                  <div>
+                    <strong>{title.trailer.label}</strong>
+                    <span>
+                      {title.trailer.publisherUrl ? (
+                        <a href={title.trailer.publisherUrl} target="_blank" rel="noreferrer">{title.trailer.publisher} ↗</a>
+                      ) : title.trailer.publisher ?? "YouTube"}
+                      {" · checked " + title.trailer.lastChecked}
+                    </span>
+                  </div>
                   <a className="button button-secondary" href={title.trailer.href} target="_blank" rel="noreferrer">Watch trailer ↗</a>
                 </div>
               </section>
