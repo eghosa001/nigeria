@@ -25,12 +25,13 @@ test("cinema and releases guides expose official source routes", async ({ page }
 });
 
 
-test("movie posters stay rights-gated while official YouTube previews can display", async ({ page }) => {
+test("every curated movie uses a rights-safe visual strategy", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
-  const heroArtwork = page.locator(".movie-detail-artwork");
-  await expect(heroArtwork.locator('[data-artwork-source="youtube"]')).toBeVisible();
-  await expect(heroArtwork.locator('[data-rights-status="poster-pending"]')).toBeVisible();
-  await expect(heroArtwork.getByText("No cleared poster artwork yet.")).toBeVisible();
+  await expect(page.locator(".movie-detail-artwork [data-artwork-source]").first()).toBeVisible();
+
+  await page.goto("/entertainment/movies/chief-daddy");
+  await expect(page.locator(".movie-detail-artwork [data-artwork-source]").first()).toBeVisible();
+  await expect(page.locator(".entertainment-artwork-placeholder")).toHaveCount(0);
 });
 
 
@@ -54,7 +55,7 @@ test("youtube movie directory is populated from approved channels", async ({ pag
   await page.goto("/entertainment/youtube");
   await expect(page.getByRole("heading", { name: /Nigerian movies from approved YouTube publishers/i })).toBeVisible();
   await expect(page.locator(".youtube-movie-card")).toHaveCount(48);
-  await expect(page.locator(".movie-stat-cluster")).toContainText("published");
+  await expect(page.locator(".movie-stat-cluster")).toHaveCount(0);
   const publisher = page.getByLabel("Publisher");
   await expect(publisher.locator('option[value="Omoni Oboli TV"]')).toHaveCount(1);
   await expect(publisher.locator('option[value="Maurice Sam TV"]')).toHaveCount(1);
@@ -62,22 +63,21 @@ test("youtube movie directory is populated from approved channels", async ({ pag
 });
 
 
-test("youtube source network is sized for more than one thousand movies", async ({ page }) => {
+test("youtube source page focuses on approved publishers instead of catalog size", async ({ page }) => {
   await page.goto("/entertainment/youtube/sources");
   await expect(page.getByRole("heading", { name: /Approved YouTube movie sources/i })).toBeVisible();
-  await expect(page.getByText(/\d{1,3},\d{3}\+/)).toBeVisible();
+  await expect(page.locator(".category-summary")).toHaveCount(0);
   await expect(page.getByText("RuthKadiri247", { exact: true })).toBeVisible();
   await expect(page.getByText("Uchenna Mbunabo TV", { exact: true })).toBeVisible();
   await expect(page.getByText("Omoni Oboli TV", { exact: true })).toBeVisible();
 });
 
 
-test("main movies page exposes the full server-paginated YouTube library", async ({ page }) => {
+test("main movies page leads with movies without catalog-size statistics", async ({ page }) => {
   await page.goto("/entertainment/movies");
-  const summary = page.locator(".movie-stat-cluster");
-  await expect(summary).toContainText(/\d{1,3},\d{3}/);
-  await expect(summary).toContainText("free full movies");
-  await expect(page.getByRole("link", { name: /Browse all/i })).toHaveAttribute("href", "/entertainment/youtube");
+  await expect(page.locator(".movie-stat-cluster")).toHaveCount(0);
+  await expect(page.getByRole("heading", { name: "Find something worth watching." })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Browse all free movies/i })).toHaveAttribute("href", "/entertainment/youtube");
 });
 
 
@@ -103,6 +103,8 @@ test("movie browse page is image-led and exposes several titles at once", async 
   await expect(page.locator(".youtube-movie-card")).toHaveCount(10);
   await expect(page.locator(".youtube-movie-card img").first()).toHaveAttribute("src", /i\.ytimg\.com\/vi\/.*\/mqdefault\.jpg/);
   await expect(page.locator(".movie-tile")).toHaveCount(30);
+  await expect(page.locator(".movie-tile .entertainment-artwork[data-artwork-source]")).toHaveCount(30);
+  await expect(page.locator(".entertainment-artwork-placeholder")).toHaveCount(0);
 });
 
 test("youtube catalog renders thumbnails in a dense movie grid", async ({ page }) => {
