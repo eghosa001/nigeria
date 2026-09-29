@@ -16,6 +16,8 @@ export type TrailerLink = {
   href: string;
   platform: "YouTube";
   lastChecked: string;
+  publisher?: string;
+  publisherUrl?: string;
 };
 
 export type EntertainmentImageUsageBasis =
@@ -134,6 +136,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "After his son is framed for kidnapping, a grieving deacon confronts a corrupt police gang while trying to clear his son's name.",
     cast: ["Richard Mofe-Damijo", "Ade Laoye", "Sam Dede"],
     featured: true,
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=6PPH4SOm9gk",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [
       {
         platform: "Netflix",
@@ -313,6 +323,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Under pressure in 1980s Lagos, a young woman is drawn into drug smuggling and must deal with the consequences.",
     cast: ["Eniola 'Niyola' Akinbo", "Ijeoma Grace Agu", "Deyemi Okanlawon", "Chioma Chukwuka Akpotha", "Eniola Badmus", "Kevin Ikeduba", "Mercy Aigbe"],
     featuredCast: ["Eniola 'Niyola' Akinbo", "Deyemi Okanlawon", "Chioma Chukwuka Akpotha"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=WH19OJ7k270",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81392180", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -325,6 +343,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A man who rejected a strict religious upbringing struggles to reconcile the life he chose with the faith he left behind.",
     cast: ["Akah Nnani", "Osas Ighodaro", "Atlanta Bridget Johnson", "Dorcas Shola Fapson", "Jude Chukwuka", "Ayo Mogaji", "Olumide Oworu", "Patrick Doyle", "Eucharia Anunobi", "Mawuli Gavor"],
     featuredCast: ["Akah Nnani", "Osas Ighodaro", "Olumide Oworu"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=E5ugUvUTFpE",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81572291", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -337,6 +363,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A university student challenges the academic establishment after reporting sexual misconduct by a respected professor.",
     cast: ["Temi Otedola", "Jimmy Jean-Louis", "Joke Silva", "Gabriel Afolayan", "Adjetey Anang", "Ini Edo", "Sadiq Daba", "Yomi Fash-Lanso", "Bukunmi Oluwashina"],
     featuredCast: ["Temi Otedola", "Joke Silva", "Ini Edo"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=1eMAYynMc1w",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81294345", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -349,6 +383,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A group of women enter a world of wealth and high-end escorts, but violence and theft put their lives and ambitions at risk.",
     cast: ["Nse Ikpe-Etim", "Sharon Ooja", "Joselyn Dumas", "Toke Makinwa", "Segilola Ogidan", "James Gardiner"],
     featuredCast: ["Nse Ikpe-Etim", "Sharon Ooja", "Joselyn Dumas"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=XnyuqAJ9_kI",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81478629", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix title page." }],
   },
   {
@@ -373,6 +415,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Three brothers compete to fulfil their mother's Christmas wish, turning the festive season into a chaotic race for love and approval.",
     cast: ["Rachel Oniga", "Kunle Remi", "Segilola Ogidan", "Efa Iwara", "Linda Osifo", "Mercy Johnson Okojie", "Lateef Adedimeji"],
     featuredCast: ["Rachel Oniga", "Kunle Remi", "Mercy Johnson Okojie"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=0pzE10-3nzI",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81434660", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -397,6 +447,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "The Beecroft family returns to fight over Chief Daddy's inheritance while a determined company executive complicates their plans.",
     cast: ["Shaffy Bello", "Funke Akindele", "Joke Silva", "Kate Henshaw-Nuttal", "Rahama Sadau", "Mawuli Gavor", "Beverly Naya", "Falz"],
     featuredCast: ["Shaffy Bello", "Funke Akindele", "Joke Silva"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=9OG-NzwzOYQ",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81323628", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -433,6 +491,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "At the height of the Oyo Empire, Bashorun Ga'a rises above the kings he helps install until power and family turn against him.",
     cast: ["Femi Branch", "Mike Afolarin", "Funke Akindele", "Femi Adebayo", "Ibrahim Chatta", "Toyin Abraham", "Bimbo Manuel", "Lateef Adedimeji"],
     featuredCast: ["Femi Branch", "Mike Afolarin", "Funke Akindele"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=I6uNj0Zlak8",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81681233", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -445,6 +511,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Four men hijack an aircraft in a politically charged attempt to challenge a military-backed government.",
     cast: ["Nancy Isime", "Sharon Ooja", "Jemima Osunde", "Idia Aisien", "Efa Iwara", "John Dumelo"],
     featuredCast: ["Nancy Isime", "Sharon Ooja", "Jemima Osunde"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=rNJzWqKUlwM",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81676888", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -482,6 +556,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "In 16th-century Zazzau, a gifted warrior uses her military skill and strategy to defend her family's kingdom.",
     cast: ["Lucy Ameh", "Ali Nuhu", "Clarion Chukwura", "Chris Gbakann", "Yakubu Mohammed", "Habiba Ummi Mohammed"],
     featuredCast: ["Lucy Ameh", "Ali Nuhu", "Clarion Chukwura"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=RW87asYGq7g",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81450071", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -506,6 +588,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A Yoruba folk hero leads a rebellion against an oppressive empire in a fight for freedom that changes the course of his people.",
     cast: ["Lateef Adedimeji", "Adebimpe Oyebade", "Ibrahim Yekini Itele", "Gabriel Afolayan", "Olumide Oworu", "Kevin Ikeduba"],
     featuredCast: ["Lateef Adedimeji", "Adebimpe Oyebade", "Ibrahim Yekini Itele"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=EyjesbX13vM",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81789163", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
 
