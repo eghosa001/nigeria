@@ -85,7 +85,7 @@ export default async function YouTubeMoviesPage({
                 <span>{movie.year}</span>
                 <span>{movie.channelName}</span>
               </div>
-              <h3><Link href={movie.internalHref}>{movie.title}</Link></h3>
+              <h3><Link href={movie.internalHref} prefetch={false}>{movie.title}</Link></h3>
               <p>{movie.synopsis}</p>
               <p className="movie-card-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
               <div className="service-meta">
@@ -99,9 +99,9 @@ export default async function YouTubeMoviesPage({
         {pageCount > 1 ? (
           <div className="directory-load-more">
             <div className="related-links">
-              {page > 1 ? <Link href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page - 1 } }}>← Previous</Link> : null}
+              {page > 1 ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page - 1 } }}>← Previous</Link> : null}
               <span>Page {page} of {pageCount}</span>
-              {page < pageCount ? <Link href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page + 1 } }}>Next →</Link> : null}
+              {page < pageCount ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page + 1 } }}>Next →</Link> : null}
             </div>
           </div>
         ) : null}
