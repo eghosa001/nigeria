@@ -251,6 +251,7 @@ function cleanName(value) {
 
 const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
 const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
+const promoSynopsis = /^(?:please\s+)?(?:watch|subscribe|follow|welcome)\b|\b(?:subscribe to|our channel|youtube channel|like, share|don't forget to|do not forget to)\b/i;
 
 function looksLikePersonName(name) {
   const words = name.split(/\s+/).filter(Boolean);
@@ -368,7 +369,8 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
       line.length >= 70 &&
       !/https?:\/\//i.test(line) &&
       !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#|welcome\b|please\s+watch\b|thank\s+you\b)/i.test(line) &&
-      !/\b(?:subscribe to|social media|instagram|tiktok|facebook|youtube channel|our channel|don't forget to|do not forget to|like and share|like, share)\b/i.test(line),
+      !/\b(?:social media|instagram|tiktok|facebook)\b/i.test(line) &&
+      !promoSynopsis.test(line),
     );
   const chosen = paragraphs[0];
   if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
