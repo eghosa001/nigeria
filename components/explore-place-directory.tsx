@@ -2,12 +2,37 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import type { ExplorePlace, ExplorePlaceKind } from "@/lib/explore-places";
-import { explorePlaceKindLabel, googleMapsUrl } from "@/lib/explore-places";
+import type { ExplorePlaceKind } from "@/lib/explore-places";
 
 type GuideSummary = { slug: string; shortTitle: string };
+export type ExploreDirectoryPlace = {
+  slug: string;
+  guideSlug: string;
+  name: string;
+  kind: ExplorePlaceKind;
+  area: string;
+  address: string;
+  summary: string;
+  cost: string;
+  mapQuery?: string;
+  tags: string[];
+};
 
-export function ExplorePlaceDirectory({ places, guides }: { places: ExplorePlace[]; guides: GuideSummary[] }) {
+const kindLabel: Record<ExplorePlaceKind, string> = {
+  attraction: "Attraction",
+  nature: "Nature",
+  restaurant: "Restaurant",
+  hotel: "Stay",
+  shopping: "Shopping",
+  landmark: "Landmark",
+};
+
+function googleMapsUrl(place: ExploreDirectoryPlace) {
+  const query = place.mapQuery || [place.name, place.address].filter(Boolean).join(" ");
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
+}
+
+export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirectoryPlace[]; guides: GuideSummary[] }) {
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState<ExplorePlaceKind | "all">("all");
   const [guide, setGuide] = useState("all");
@@ -74,7 +99,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExplorePlace
           {filtered.map((place) => (
             <article className="explore-place-card" key={place.slug}>
               <div className="explore-place-topline">
-                <span>{explorePlaceKindLabel[place.kind]}</span>
+                <span>{kindLabel[place.kind]}</span>
                 <small>{guideNames.get(place.guideSlug)}</small>
               </div>
               <h3>{place.name}</h3>
