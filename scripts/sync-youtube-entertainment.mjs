@@ -575,6 +575,14 @@ for (const source of registry.sources) {
   }
 }
 
+if (fullSync && sourceErrors.length > 0) {
+  console.error(
+    "Full sync aborted because " + sourceErrors.length +
+    " approved source(s) failed. Existing catalog files are preserved.",
+  );
+  process.exit(3);
+}
+
 const approvedSlugs = new Set(registry.sources.map((source) => source.slug));
 for (const slug of Object.keys(cache)) {
   if (!approvedSlugs.has(slug)) delete cache[slug];
