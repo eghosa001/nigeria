@@ -12,7 +12,6 @@ const navigation = [
   { href: "/fees", label: "Fees", matches: ["/fees"] },
   { href: "/offices", label: "Offices", matches: ["/offices"] },
   { href: "/updates", label: "Updates", matches: ["/updates"] },
-  { href: "/offices", label: "Offices", matches: ["/offices"] },
   { href: "/saved", label: "Saved", matches: ["/saved"] },
   { href: "/assistant", label: "Find a guide", matches: ["/assistant"] },
 ];
