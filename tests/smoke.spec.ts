@@ -93,6 +93,17 @@ test("plain-language search finds the right service", async ({ page }) => {
   await expect(page.locator(".search-results").getByRole("link", { name: /Passport renewal/i })).toBeVisible();
 });
 
+test("site search crosses services travel and movies", async ({ page }) => {
+  await page.goto("/search?q=passport");
+  await expect(page.getByRole("link", { name: /Passport renewal/i }).first()).toBeVisible();
+
+  await page.goto("/search?q=Lagos");
+  await expect(page.getByRole("link", { name: /Lagos Travel Guide/i }).first()).toBeVisible();
+
+  await page.goto("/search?q=Anikulapo");
+  await expect(page.getByRole("link", { name: "Aníkúlápó", exact: true }).first()).toBeVisible();
+});
+
 test("directory supports deep-linked category filters", async ({ page }) => {
   await page.goto("/services?category=Education");
   await expect(page.getByLabel("Category")).toHaveValue("Education");
@@ -262,6 +273,7 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
   await expect(mobileNav).toBeVisible();
   await expect(mobileNav.getByRole("link", { name: "Home", exact: true })).toHaveAttribute("aria-current", "page");
   await expect(page.locator(".mobile-header-action")).toBeVisible();
+  await expect(page.locator(".mobile-header-action")).toHaveAttribute("href", "/search");
 
   const navBox = await mobileNav.boundingBox();
   expect(navBox?.x ?? -1).toBeGreaterThanOrEqual(0);
@@ -297,7 +309,7 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
 });
 
 test("core pages do not overflow horizontally", async ({ page }) => {
-  for (const path of ["/", "/services", "/explore", "/entertainment", "/entertainment/youtube", "/fees", "/updates", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
+  for (const path of ["/", "/search", "/services", "/explore", "/entertainment", "/entertainment/youtube", "/fees", "/updates", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
     await page.goto(path);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow, path + " horizontal overflow").toBeLessThanOrEqual(1);
