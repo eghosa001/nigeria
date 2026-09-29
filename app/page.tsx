@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 };
 
 const popular = [
-  { label: "Passport", href: "/services/passport-renewal" },
-  { label: "NIN", href: "/categories/identity" },
-  { label: "BVN", href: "/categories/banking" },
-  { label: "Foreign visas", href: "/categories/foreign-visas" },
-  { label: "Nigeria travel", href: "/categories/international-travel" },
-  { label: "JAMB", href: "/categories/education" },
-  { label: "Driver's licence", href: "/categories/driving" },
-  { label: "CAC", href: "/categories/business" },
+  { label: "Passport renewal", href: "/services/passport-renewal" },
+  { label: "NIN correction", href: "/services/nin-date-of-birth-modification" },
+  { label: "Retrieve BVN", href: "/services/bvn-retrieval" },
+  { label: "JAMB 2026", href: "/services/jamb-2026-utme-registration" },
+  { label: "NYSC senate list", href: "/services/nysc-senate-list" },
+  { label: "CAC registration", href: "/services/cac-business-name-registration" },
+  { label: "Licence renewal", href: "/services/renew-drivers-licence" },
+  { label: "UK visitor visa", href: "/services/uk-standard-visitor-visa" },
 ];
 
 export default function HomePage() {
