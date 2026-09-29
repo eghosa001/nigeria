@@ -5,7 +5,7 @@ const generated = JSON.parse(fs.readFileSync("data/youtube-movies.generated.json
 
 const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
 const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
-const promoSynopsis = /^(?:(?:please\s+)?watch|subscribe|follow|thank\s+you)\b|^welcome\s+to\s+.+\b(?:tv|channel)\b|\b(?:subscribe to|our channel|youtube channel|like, share|don't forget to|do not forget to)\b/i;
+const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching)\b/i;
 
 function assert(condition, message) {
   if (!condition) {
@@ -39,6 +39,9 @@ assert(Array.isArray(generated.movies), "generated movie catalog must contain a 
 if (generated.generatedAt !== null) {
   assert(generated.sourceCount === sources.sources.length, "generated sourceCount must match approved source registry");
   assert(generated.importedCount === generated.movies.length, "generated importedCount must match movie array length");
+  if (generated.syncMode === "full") {
+    assert(Number(generated.failedSourceCount ?? 0) === 0, "full sync cannot publish with failed sources");
+  }
 }
 
 const videoIds = new Set();
