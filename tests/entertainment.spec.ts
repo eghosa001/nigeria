@@ -68,3 +68,12 @@ test("youtube source network is sized for more than one thousand movies", async 
   await expect(page.getByText("Uchenna Mbunabo TV", { exact: true })).toBeVisible();
   await expect(page.getByText("Omoni Oboli TV", { exact: true })).toBeVisible();
 });
+
+
+test("main movies page exposes the full server-paginated YouTube library", async ({ page }) => {
+  await page.goto("/entertainment/movies");
+  const summary = page.locator(".category-summary");
+  await expect(summary).toContainText("1,550");
+  await expect(summary).toContainText("full YouTube movies");
+  await expect(page.getByRole("link", { name: /Browse the full YouTube movie library/i })).toHaveAttribute("href", "/entertainment/youtube");
+});
