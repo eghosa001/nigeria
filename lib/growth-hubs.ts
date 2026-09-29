@@ -35,15 +35,15 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "bvn",
-    title: "BVN Guide: Enrolment, Retrieval & Corrections",
+    title: "BVN Guide: Enrolment, Retrieval & NRBVN",
     shortTitle: "BVN services",
-    description: "Get, retrieve or correct your BVN, including the official route for Nigerians abroad.",
+    description: "Get or retrieve your BVN and use the official NRBVN route for eligible Nigerians abroad.",
     intro: [
-      "Use this hub for the most common BVN tasks: first-time enrolment, retrieving an existing BVN, correcting details and obtaining a BVN while outside Nigeria.",
-      "The linked guides separate bank or NIBSS steps from unofficial advice and explain the evidence or channel required for each task."
+      "Use this hub for first-time BVN enrolment, retrieving an existing BVN and obtaining a BVN through the non-resident route while outside Nigeria.",
+      "The linked guides separate bank and NIBSS routes from unofficial advice and point you to the exact channel for each supported BVN task."
     ],
-    searches: [{ query: "retrieve BVN", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "change phone number on BVN", serviceSlug: "bvn-change-details" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
-    serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "bvn-change-details", "non-resident-bvn"]
+    searches: [{ query: "retrieve BVN", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
+    serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "non-resident-bvn"]
   },
   {
     slug: "jamb-2026",
