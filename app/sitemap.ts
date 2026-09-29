@@ -4,6 +4,7 @@ import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
+import { exploreGuides } from "@/lib/explore";
 import { generatedYouTubeMovies } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
@@ -16,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
   const catalogModified = latestDate(publicServices.map((service) => service.lastVerified));
   const updatesModified = latestDate(myNigeriaGuideUpdates.map((update) => update.date)) || catalogModified;
+  const exploreModified = latestDate(exploreGuides.map((guide) => guide.lastReviewed)) || catalogModified;
   const entertainmentModified = latestDate([
     ...entertainmentTitles.flatMap((title) => title.watchLinks.map((link) => link.lastChecked)),
     ...releaseItems.map((item) => item.lastChecked),
@@ -24,7 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     ["", "weekly", 1],
     ["/services", "weekly", 0.9],
-    ["/entertainment", "weekly", 0.8],
+    ["/explore", "weekly", 0.85],
+    ["/entertainment", "weekly", 0.85],
     ["/entertainment/movies", "weekly", 0.8],
     ["/entertainment/youtube", "daily", 0.8],
     ["/entertainment/youtube/sources", "weekly", 0.6],
@@ -49,7 +52,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages.map(([path, changeFrequency, priority]) => ({
       url: base + path,
-      lastModified: path.startsWith("/entertainment") ? entertainmentModified : path === "/updates" ? updatesModified : catalogModified,
+      lastModified: path.startsWith("/entertainment")
+        ? entertainmentModified
+        : path.startsWith("/explore")
+          ? exploreModified
+          : path === "/updates"
+            ? updatesModified
+            : catalogModified,
       changeFrequency,
       priority,
     })),
@@ -64,6 +73,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestDate(publicServices.filter((service) => hub.serviceSlugs.includes(service.slug)).map((service) => service.lastVerified)) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    })),
+    ...exploreGuides.map((guide) => ({
+      url: base + "/explore/" + guide.slug,
+      lastModified: guide.lastReviewed,
+      changeFrequency: "monthly" as const,
+      priority: guide.kind === "city" ? 0.75 : 0.7,
     })),
     ...generatedYouTubeMovies.map((movie) => ({
       url: base + "/entertainment/youtube/" + movie.videoId,
