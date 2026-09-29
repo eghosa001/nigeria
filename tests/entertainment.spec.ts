@@ -184,3 +184,14 @@ test("licensed third-party Kava titles use existing movie routes and offline gui
   await expect(page.getByRole("link", { name: /Watch on Kava/ }).first()).toHaveAttribute("href", "https://watch.kava.tv/big-love");
   await expect(page.getByText(/Kava supports downloading eligible titles/i)).toBeVisible();
 });
+
+
+test("movie source cards distinguish licensed third-party streaming", async ({ page }) => {
+  await page.goto("/entertainment/movies/big-love");
+  await expect(page.getByText("Licensed third-party streaming", { exact: true })).toBeVisible();
+
+  await page.goto("/entertainment/platforms");
+  await expect(page.getByRole("heading", { name: "Kava", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "NolliStream", exact: true })).toBeVisible();
+  await expect(page.getByText(/offline downloads inside its app/i)).toBeVisible();
+});
