@@ -195,3 +195,24 @@ test("movie source cards distinguish licensed third-party streaming", async ({ p
   await expect(page.getByRole("heading", { name: "NolliStream", exact: true })).toBeVisible();
   await expect(page.getByText(/offline downloads inside its app/i)).toBeVisible();
 });
+
+
+test("second Kava batch is discoverable through existing movie routes", async ({ page }) => {
+  await page.goto("/entertainment/movies?platform=Kava");
+  for (const title of ["Ijakumo", "Iyalode", "Love in a Pandemic", "The Cartel"]) {
+    await expect(page.getByRole("link", { name: title, exact: true }).first()).toBeVisible();
+  }
+
+  await page.goto("/entertainment/movies/ijakumo");
+  await expect(page.getByRole("link", { name: /Watch on Kava/ }).first()).toHaveAttribute("href", "https://watch.kava.tv/ijakumo");
+});
+
+test("expanded people profiles cross-link the growing movie catalog", async ({ page }) => {
+  await page.goto("/entertainment/people/toyin-abraham");
+  await expect(page.getByRole("link", { name: "Ijakumo", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Iyalode", exact: true })).toBeVisible();
+
+  await page.goto("/entertainment/people/timini-egbuson");
+  await expect(page.getByRole("link", { name: "Ajosepo", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Love and New Notes", exact: true })).toBeVisible();
+});
