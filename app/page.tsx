@@ -99,7 +99,7 @@ export default function HomePage() {
             <Link className="platform-pillar-card platform-pillar-explore" href="/explore">
               <span className="platform-pillar-number">02</span>
               <span className="eyebrow">Tour Guide · Go somewhere</span>
-              <strong>Explore Nigeria</strong>
+              <strong>Tour Guide</strong>
               <p>City guides, attractions, restaurants, stays, addresses, Google Maps routes, price notes and short-trip ideas.</p>
               <i>Plan a trip <span aria-hidden="true">→</span></i>
             </Link>
