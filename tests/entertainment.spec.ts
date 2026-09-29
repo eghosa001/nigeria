@@ -115,3 +115,24 @@ test("youtube catalog renders thumbnails in a dense movie grid", async ({ page }
   await expect(page.locator(".youtube-movie-card img").first()).toHaveAttribute("src", /i\.ytimg\.com\/vi\/.*\/mqdefault\.jpg/);
   await expect(page.locator(".youtube-movie-card").first()).toContainText("YouTube");
 });
+
+
+test("youtube pagination uses crawlable path URLs and filtered pages stay separate", async ({ page }) => {
+  await page.goto("/entertainment/youtube");
+  await expect(page.getByRole("link", { name: "Next →" })).toHaveAttribute("href", "/entertainment/youtube/page/2");
+
+  await page.goto("/entertainment/youtube/page/2");
+  await expect(page.getByText(/Page 2 of/)).toBeVisible();
+  await expect(page.getByRole("link", { name: "← Previous" })).toHaveAttribute("href", "/entertainment/youtube");
+
+  await page.goto("/entertainment/youtube?q=Private%20Equity");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
+});
+
+test("latest hub links all three platform pillars", async ({ page }) => {
+  await page.goto("/latest");
+  await expect(page.getByRole("heading", { name: /Recently added and updated/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Movies", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Services", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Tour Nigeria", exact: true })).toBeVisible();
+});

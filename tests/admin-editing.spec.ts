@@ -240,3 +240,15 @@ test("editor re-locks if its signed session expires before submit", async ({ pag
   await expect(page.getByRole("heading", { name: "Unlock guide editing" })).toBeVisible();
   await expect(page.getByText("Your admin editing session expired. Unlock editing and try again.")).toBeVisible();
 });
+
+
+test("admin dashboard reflects movies, services and Tour Nigeria", async ({ page }) => {
+  await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+
+  await expect(page.getByRole("heading", { name: "Platform operations dashboard" })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Entertainment catalog/ })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Travel catalog/ })).toBeVisible();
+});

@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-pagination";
 
-export const metadata: Metadata = {
-  title: "Full Nigerian Movies on YouTube",
-  description: "Browse full Nigerian and Nollywood movies visually from approved producer and rightsholder YouTube channels.",
-  alternates: { canonical: "/entertainment/youtube" },
-};
-
-const PAGE_SIZE = 48;
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string; channel?: string; page?: string }>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const filtered = Boolean((params.q ?? "").trim() || (params.channel ?? "").trim() || Number(params.page ?? "1") > 1);
+  return {
+    title: "Full Nigerian Movies on YouTube",
+    description: "Browse full Nigerian and Nollywood movies visually from approved producer and rightsholder YouTube channels.",
+    alternates: { canonical: "/entertainment/youtube" },
+    robots: filtered ? { index: false, follow: true } : undefined,
+  };
+}
 
 export default async function YouTubeMoviesPage({
   searchParams,
@@ -22,15 +31,20 @@ export default async function YouTubeMoviesPage({
   const query = (params.q ?? "").trim().toLowerCase();
   const channel = (params.channel ?? "").trim();
   const requestedPage = Math.max(1, Number(params.page ?? "1") || 1);
+  const filteredMode = Boolean(query || channel);
+
+  if (!filteredMode && requestedPage > 1) {
+    redirect("/entertainment/youtube/page/" + requestedPage);
+  }
 
   const filtered = youtubeMovieLibrary.filter((movie) => {
     const searchable = [movie.title, movie.synopsis, ...movie.cast, movie.channelName].join(" ").toLowerCase();
     return (!query || searchable.includes(query)) && (!channel || movie.channelName === channel);
   });
 
-  const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const pageCount = Math.max(1, Math.ceil(filtered.length / YOUTUBE_CATALOG_PAGE_SIZE));
   const page = Math.min(requestedPage, pageCount);
-  const visible = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const visible = filtered.slice((page - 1) * YOUTUBE_CATALOG_PAGE_SIZE, page * YOUTUBE_CATALOG_PAGE_SIZE);
 
   return (
     <>
@@ -85,9 +99,17 @@ export default async function YouTubeMoviesPage({
 
           {pageCount > 1 ? (
             <nav className="movie-pagination" aria-label="Movie result pages">
-              {page > 1 ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page - 1 } }}>← Previous</Link> : <span />}
+              {page > 1 ? (
+                filteredMode
+                  ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page - 1 } }}>← Previous</Link>
+                  : <Link prefetch={false} href={page === 2 ? "/entertainment/youtube" : "/entertainment/youtube/page/" + (page - 1)}>← Previous</Link>
+              ) : <span />}
               <span>Page {page} of {pageCount}</span>
-              {page < pageCount ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page + 1 } }}>Next →</Link> : <span />}
+              {page < pageCount ? (
+                filteredMode
+                  ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page + 1 } }}>Next →</Link>
+                  : <Link prefetch={false} href={"/entertainment/youtube/page/" + (page + 1)}>Next →</Link>
+              ) : <span />}
             </nav>
           ) : null}
         </div>

@@ -44,7 +44,18 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   const base = getSiteUrl();
   const pageUrl = base + "/explore/" + guide.slug;
-  const related = exploreGuides.filter((item) => item.slug !== guide.slug && item.kind === guide.kind).slice(0, 3);
+  const related = exploreGuides
+    .filter((item) => item.slug !== guide.slug)
+    .map((item) => ({
+      item,
+      score:
+        (item.region === guide.region ? 5 : 0) +
+        (item.kind === guide.kind ? 2 : 0) +
+        item.bestFor.filter((value) => guide.bestFor.includes(value)).length,
+    }))
+    .sort((a, b) => b.score - a.score || a.item.shortTitle.localeCompare(b.item.shortTitle))
+    .slice(0, 4)
+    .map((entry) => entry.item);
   const places = getExplorePlacesForGuide(guide.slug);
 
   const breadcrumbLd = {
