@@ -2369,3 +2369,17 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .topic-searches { gap:7px; }
   .topic-searches span { width:100%; border-radius:10px; }
 }
+
+
+/* Search-intent quick answers */
+.search-answer-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.search-answer-grid article { padding:18px; border:1px solid rgba(6,63,45,.10); border-radius:14px; background:var(--surface); }
+.search-answer-grid h3 { margin:0 0 8px; color:var(--green-deep); font-size:1rem; line-height:1.35; }
+.search-answer-grid p { margin:0; color:#405148; font-size:.9rem; line-height:1.65; }
+.topic-searches a { display:inline-flex; align-items:center; gap:6px; padding:10px 13px; border:1px solid rgba(6,63,45,.11); border-radius:999px; background:var(--surface); color:var(--green-dark); font-size:.84rem; font-weight:750; }
+.topic-searches a:hover { border-color:var(--green); background:var(--mint); }
+.topic-searches a span { color:var(--gold-ink); }
+@media (max-width:620px) {
+  .search-answer-grid { grid-template-columns:1fr; }
+  .topic-searches a { width:100%; justify-content:space-between; border-radius:10px; }
+}

@@ -4,7 +4,7 @@ export type GrowthHub = {
   shortTitle: string;
   description: string;
   intro: string[];
-  searches: string[];
+  searches: Array<{ query: string; serviceSlug: string }>;
   serviceSlugs: string[];
 };
 
@@ -18,7 +18,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub when you need a Nigerian passport and are not sure which process applies to your situation. It separates fresh applications, renewals, applications from abroad, lost passports and data changes so you can start with the right NIS route.",
       "Each linked guide shows the current fee or status, what to prepare, the official application portal and what happens after submission or biometric enrolment."
     ],
-    searches: ["renew Nigerian passport", "Nigerian passport requirements", "passport renewal fee", "lost Nigerian passport", "renew Nigerian passport abroad"],
+    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }],
     serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-abroad", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
   },
   {
@@ -30,7 +30,7 @@ export const growthHubs: GrowthHub[] = [
       "NIN requests are easy to mix up because enrolment, self-service modifications and slip reissue use different routes. This hub groups the main NIMC tasks so you can go straight to the exact correction or enrolment process.",
       "Before paying, open the relevant guide to confirm the current fee, required evidence and whether the task is completed online or needs an enrolment centre."
     ],
-    searches: ["NIN date of birth correction", "change name on NIN", "change phone number on NIN", "NIN enrolment", "replace NIN slip"],
+    searches: [{ query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
     serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "nin-slip-reissue"]
   },
   {
@@ -42,7 +42,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub for the most common BVN tasks: first-time enrolment, retrieving an existing BVN, correcting details and obtaining a BVN while outside Nigeria.",
       "The linked guides separate bank or NIBSS steps from unofficial advice and explain the evidence or channel required for each task."
     ],
-    searches: ["retrieve BVN", "forgot my BVN", "change phone number on BVN", "BVN enrolment", "BVN for Nigerians abroad"],
+    searches: [{ query: "retrieve BVN", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "change phone number on BVN", serviceSlug: "bvn-change-details" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
     serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "bvn-change-details", "non-resident-bvn"]
   },
   {
@@ -54,7 +54,7 @@ export const growthHubs: GrowthHub[] = [
       "This hub brings together the JAMB tasks candidates commonly need before, during and after registration. Start with the exact task instead of searching through several unrelated pages.",
       "The guides cover official JAMB fees and routes, profile-code issues, CAPS, result slips and admission letters, with links back to JAMB sources."
     ],
-    searches: ["JAMB registration 2026", "JAMB Direct Entry 2026", "JAMB profile code", "JAMB CAPS", "print JAMB result", "JAMB admission letter"],
+    searches: [{ query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" }, { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" }, { query: "JAMB profile code", serviceSlug: "jamb-profile-code" }, { query: "JAMB CAPS", serviceSlug: "jamb-caps" }, { query: "print JAMB result", serviceSlug: "jamb-print-result" }, { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" }],
     serviceSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code", "jamb-retrieve-profile-code", "jamb-caps", "jamb-print-result", "jamb-admission-letter"]
   },
   {
@@ -66,7 +66,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this NYSC hub from mobilisation through camp and post-registration issues. It links the main actions prospective corps members search for instead of making you guess which NYSC page applies.",
       "Each guide explains what you need to prepare, where the official action happens and what to do next if your record, call-up or relocation process needs attention."
     ],
-    searches: ["NYSC registration", "NYSC senate list", "NYSC call up letter", "NYSC relocation", "NYSC date of birth correction", "NYSC exemption certificate"],
+    searches: [{ query: "NYSC registration", serviceSlug: "nysc-registration-local" }, { query: "NYSC senate list", serviceSlug: "nysc-senate-list" }, { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" }, { query: "NYSC relocation", serviceSlug: "nysc-relocation" }, { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" }, { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }],
     serviceSlugs: ["nysc-registration-local", "nysc-senate-list", "nysc-call-up-letter", "nysc-relocation", "nysc-correct-date-of-birth", "nysc-exemption-certificate"]
   },
   {
@@ -78,7 +78,7 @@ export const growthHubs: GrowthHub[] = [
       "This hub groups the CAC tasks most business owners need from choosing a name through registration and later compliance documents.",
       "Use the exact guide for your task because business-name registration, company incorporation, annual returns and certified documents have different requirements and fees."
     ],
-    searches: ["register business name CAC", "register company CAC", "CAC name reservation", "CAC annual returns", "CAC certified true copy", "CAC status report"],
+    searches: [{ query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
     serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report"]
   },
   {
@@ -90,7 +90,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub to identify the right driver’s-licence process before visiting a centre or paying. New applications, renewals, lost licences and class changes are separate tasks.",
       "The linked guides explain the official route, preparation steps and current fee/status information available from FRSC sources."
     ],
-    searches: ["renew Nigerian driver's licence", "new driver's licence Nigeria", "replace lost driver's licence", "driver's licence fee Nigeria", "upgrade driver's licence class"],
+    searches: [{ query: "renew Nigerian driver\'s licence", serviceSlug: "renew-drivers-licence" }, { query: "new driver\'s licence Nigeria", serviceSlug: "new-drivers-licence" }, { query: "replace lost driver\'s licence", serviceSlug: "replace-lost-drivers-licence" }, { query: "driver\'s licence fee Nigeria", serviceSlug: "renew-drivers-licence" }, { query: "upgrade driver\'s licence class", serviceSlug: "upgrade-drivers-licence-class" }],
     serviceSlugs: ["renew-drivers-licence", "new-drivers-licence", "replace-lost-drivers-licence", "upgrade-drivers-licence-class"]
   },
   {
@@ -102,7 +102,7 @@ export const growthHubs: GrowthHub[] = [
       "This hub separates child birth registration from adult attestation and from later certificate or record changes. Choose the task that matches the record you already have.",
       "Each guide points to the NPC route used for that service and explains the documents, steps and follow-up involved."
     ],
-    searches: ["birth certificate Nigeria", "NPC birth attestation", "reprint birth certificate", "digital birth certificate Nigeria", "correct birth record Nigeria"],
+    searches: [{ query: "birth certificate Nigeria", serviceSlug: "npc-child-birth-registration" }, { query: "NPC birth attestation", serviceSlug: "npc-birth-attestation" }, { query: "reprint birth certificate", serviceSlug: "npc-birth-certificate-reprint" }, { query: "digital birth certificate Nigeria", serviceSlug: "npc-digital-birth-certificate-reissuance" }, { query: "correct birth record Nigeria", serviceSlug: "npc-modify-birth-record" }],
     serviceSlugs: ["npc-child-birth-registration", "npc-birth-attestation", "npc-digital-birth-certificate-reissuance", "npc-birth-certificate-reprint", "npc-modify-birth-record"]
   },
   {
@@ -114,7 +114,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub to compare the official starting points for popular visitor-visa destinations without mixing requirements between countries.",
       "Open the destination guide for country-specific fees, documents, biometrics, financial evidence and application steps. Visa rules differ, so the destination authority remains the final source."
     ],
-    searches: ["UK visitor visa Nigeria", "Canada visitor visa Nigeria", "US B1 B2 visa Nigeria", "Schengen visa Nigeria", "Australia visitor visa Nigeria"],
+    searches: [{ query: "UK visitor visa Nigeria", serviceSlug: "uk-standard-visitor-visa" }, { query: "Canada visitor visa Nigeria", serviceSlug: "canada-visitor-visa" }, { query: "US B1 B2 visa Nigeria", serviceSlug: "us-b1-b2-visitor-visa" }, { query: "Schengen visa Nigeria", serviceSlug: "france-schengen-short-stay-visa" }, { query: "Australia visitor visa Nigeria", serviceSlug: "australia-visitor-visa-600" }],
     serviceSlugs: ["uk-standard-visitor-visa", "canada-visitor-visa", "us-b1-b2-visitor-visa", "france-schengen-short-stay-visa", "australia-visitor-visa-600"]
   }
 ];

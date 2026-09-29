@@ -11,6 +11,7 @@ import { ServiceRequirements } from "@/components/service-requirements";
 import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
+import { ServiceSearchAnswers } from "@/components/service-search-answers";
 import { ServiceFaqs } from "@/components/service-faqs";
 import { ForeignVisaFaqs } from "@/components/foreign-visa-faqs";
 import { ServiceAftercare } from "@/components/service-aftercare";
@@ -20,6 +21,7 @@ import { categorySlug } from "@/lib/category";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getGrowthHubsForService } from "@/lib/growth-hubs";
+import { getServiceSearchAnswers } from "@/lib/search-answers";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -108,6 +110,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     )
     .slice(0, 4);
   const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
+  const searchAnswers = getServiceSearchAnswers(service);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
   const categoryHref = "/categories/" + categorySlug(service.category);
@@ -140,9 +143,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     about: agency ? { "@type": "Thing", name: agency.name, url: agency.website } : undefined,
   };
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: searchAnswers.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <>
-      <JsonLd data={[breadcrumbLd, webpageLd]} />
+      <JsonLd data={[breadcrumbLd, webpageLd, faqLd]} />
       <section className="guide-hero">
         <div className="container">
           <Breadcrumbs items={breadcrumbs} />
@@ -198,6 +214,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ServiceSteps service={service} />
 
             <ServiceAftercare service={service} />
+
+            <ServiceSearchAnswers service={service} />
 
             <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GUIDE} />
 

@@ -5,6 +5,7 @@ const items = [
   ["requirements", "Requirements"],
   ["steps", "Steps"],
   ["after-submit", "After submission"],
+  ["quick-answers", "Quick answers"],
   ["official-sources", "Sources"],
 ] as const;
 

@@ -93,7 +93,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             <span className="eyebrow">Common searches</span>
             <h2 id="common-searches">Find the exact task faster</h2>
             <div className="related-links topic-searches">
-              {hub.searches.map((search) => <span key={search}>{search}</span>)}
+              {hub.searches.map((search) => <Link key={search.query} href={"/services/" + search.serviceSlug}>{search.query} <span aria-hidden="true">→</span></Link>)}
             </div>
           </section>
 
