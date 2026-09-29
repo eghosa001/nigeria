@@ -10,14 +10,10 @@
   background: linear-gradient(145deg, #0d241b, #174c38);
 }
 
-.entertainment-artwork-card {
-  min-height: 180px;
-  aspect-ratio: 16 / 10;
-}
-
+.entertainment-artwork-card,
 .entertainment-artwork-hero {
   width: 100%;
-  min-height: 280px;
+  min-height: 0;
   aspect-ratio: 2 / 3;
 }
 
@@ -83,9 +79,10 @@
 }
 
 @media (max-width: 760px) {
+  .entertainment-artwork-card,
   .entertainment-artwork-hero {
-    min-height: 220px;
-    aspect-ratio: 16 / 10;
+    min-height: 0;
+    aspect-ratio: 2 / 3;
   }
 }
 

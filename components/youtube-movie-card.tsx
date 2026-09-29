@@ -43,7 +43,9 @@ export function YouTubeMovieCard({
           {movie.featuredCast.length ? movie.featuredCast.join(" · ") : "Full Nigerian movie"}
         </p>
         <div className="youtube-movie-card-footer">
-          <span className="youtube-movie-publisher">{movie.channelName}</span>
+          <span className="youtube-movie-publisher">
+            {movie.channelName}{movie.alternateSources.length ? " · " + (movie.alternateSources.length + 1) + " official sources" : ""}
+          </span>
           <Link href={movie.internalHref} prefetch={false}>Details →</Link>
         </div>
       </div>

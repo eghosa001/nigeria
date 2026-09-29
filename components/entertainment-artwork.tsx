@@ -34,26 +34,27 @@ function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; varia
       className={"entertainment-artwork entertainment-artwork-generated entertainment-artwork-" + variant}
       data-artwork-source="generated"
       data-rights-status="original"
+      data-poster-guaranteed="true"
     >
-      <div className="generated-movie-art" role="img" aria-label={"Original MyNigeriaGuide artwork for " + title.title}>
-        <svg viewBox="0 0 800 450" aria-hidden="true" focusable="false">
+      <div className="generated-movie-art" role="img" aria-label={"Original MyNigeriaGuide poster for " + title.title}>
+        <svg viewBox="0 0 600 900" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id={"g-" + title.slug} x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#082f24" />
               <stop offset="55%" stopColor="#0b573b" />
               <stop offset="100%" stopColor="#15213a" />
             </linearGradient>
-            <radialGradient id={"r-" + title.slug} cx="75%" cy="22%" r="65%">
-              <stop offset="0%" stopColor="#d1a24a" stopOpacity=".42" />
+            <radialGradient id={"r-" + title.slug} cx="78%" cy="16%" r="70%">
+              <stop offset="0%" stopColor="#d1a24a" stopOpacity=".46" />
               <stop offset="100%" stopColor="#d1a24a" stopOpacity="0" />
             </radialGradient>
           </defs>
-          <rect width="800" height="450" fill={"url(#g-" + title.slug + ")"} />
-          <rect width="800" height="450" fill={"url(#r-" + title.slug + ")"} />
-          <circle cx="690" cy="95" r="170" fill="none" stroke="rgba(255,255,255,.13)" strokeWidth="2" />
-          <circle cx="690" cy="95" r="120" fill="none" stroke="rgba(255,255,255,.08)" strokeWidth="2" />
-          <path d="M-30 390C155 250 300 460 475 292C586 185 690 232 840 80" fill="none" stroke="rgba(255,255,255,.13)" strokeWidth="12" strokeLinecap="round" />
-          <path d="M-10 410C170 290 315 468 500 305C610 208 710 248 825 130" fill="none" stroke="rgba(209,162,74,.34)" strokeWidth="3" strokeLinecap="round" />
+          <rect width="600" height="900" fill={"url(#g-" + title.slug + ")"} />
+          <rect width="600" height="900" fill={"url(#r-" + title.slug + ")"} />
+          <circle cx="500" cy="170" r="210" fill="none" stroke="rgba(255,255,255,.13)" strokeWidth="2" />
+          <circle cx="500" cy="170" r="145" fill="none" stroke="rgba(255,255,255,.08)" strokeWidth="2" />
+          <path d="M-40 770C110 610 230 840 390 610C480 480 535 520 660 330" fill="none" stroke="rgba(255,255,255,.13)" strokeWidth="14" strokeLinecap="round" />
+          <path d="M-20 805C135 650 255 850 410 630C500 505 555 545 650 390" fill="none" stroke="rgba(209,162,74,.36)" strokeWidth="4" strokeLinecap="round" />
         </svg>
         <div className="generated-movie-art-copy">
           <span>{title.year} · {genre}</span>
@@ -61,7 +62,7 @@ function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; varia
           <b aria-hidden="true">{initials || "NG"}</b>
         </div>
       </div>
-      <figcaption><span>Original MyNigeriaGuide artwork</span></figcaption>
+      <figcaption><span>Original MyNigeriaGuide poster</span></figcaption>
     </figure>
   );
 }
@@ -75,7 +76,7 @@ export function EntertainmentArtwork({
 }) {
   if (canDisplayEntertainmentArtwork(title) && title.artwork) {
     return (
-      <figure className={"entertainment-artwork entertainment-artwork-approved entertainment-artwork-" + variant} data-artwork-source="licensed" data-rights-status="approved">
+      <figure className={"entertainment-artwork entertainment-artwork-approved entertainment-artwork-" + variant} data-artwork-source="licensed" data-rights-status="approved" data-poster-guaranteed="true">
         <img
           src={title.artwork.url}
           alt={title.title + " official promotional artwork"}
@@ -98,10 +99,11 @@ export function EntertainmentArtwork({
         className={"entertainment-artwork entertainment-artwork-youtube entertainment-artwork-" + variant}
         data-artwork-source="youtube"
         data-rights-status="video-preview"
+        data-poster-guaranteed="true"
       >
         <img
-          src={"https://i.ytimg.com/vi/" + youtubePreview.videoId + "/mqdefault.jpg"}
-          alt={title.title + " official YouTube video thumbnail"}
+          src={"https://i.ytimg.com/vi/" + youtubePreview.videoId + "/hqdefault.jpg"}
+          alt={title.title + " official YouTube video artwork"}
           loading={variant === "card" ? "lazy" : "eager"}
           decoding="async"
           referrerPolicy="no-referrer"
