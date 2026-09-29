@@ -5,6 +5,7 @@ const root = process.cwd();
 const sourcesPath = path.join(root, "data/youtube-movie-sources.json");
 const cachePath = path.join(root, "data/youtube-channel-cache.json");
 const outputPath = path.join(root, "data/youtube-movies.generated.json");
+const reviewPath = path.join(root, "data/youtube-movies-review.generated.json");
 const apiKey = process.env.YOUTUBE_DATA_API_KEY;
 
 if (!apiKey) {
@@ -18,6 +19,8 @@ try { cache = JSON.parse(await fs.readFile(cachePath, "utf8")); } catch {}
 
 let previousGenerated = { movies: [], pendingQualityCount: 0 };
 try { previousGenerated = JSON.parse(await fs.readFile(outputPath, "utf8")); } catch {}
+let previousReview = { candidates: [] };
+try { previousReview = JSON.parse(await fs.readFile(reviewPath, "utf8")); } catch {}
 const previousMovies = Array.isArray(previousGenerated.movies) ? previousGenerated.movies : [];
 const fullSync = process.env.YOUTUBE_FULL_SYNC === "1" || previousMovies.length === 0;
 const now = new Date();
@@ -92,7 +95,8 @@ function verifiedChannelRecord(source, channel) {
 
   const description = normalize(channel.snippet?.description);
   const purposeWords = ["movie", "film", "nollywood", "producer", "production", "official", "entertainment"];
-  if (!purposeWords.some((word) => description.includes(word))) return null;
+  const manuallyPinned = Boolean(source.knownUrl);
+  if (!manuallyPinned && !purposeWords.some((word) => description.includes(word))) return null;
 
   const customUrl = channel.snippet?.customUrl || undefined;
   const uploadsPlaylistId = channel.contentDetails?.relatedPlaylists?.uploads;
@@ -327,6 +331,12 @@ function yearFor(video) {
 const moviesByVideoId = new Map(
   fullSync ? [] : previousMovies.map((movie) => [movie.videoId, movie]),
 );
+const pendingByVideoId = new Map(
+  fullSync
+    ? []
+    : (Array.isArray(previousReview.candidates) ? previousReview.candidates : [])
+        .map((candidate) => [candidate.videoId, candidate]),
+);
 let pendingQualityCount = fullSync ? 0 : Number(previousGenerated.pendingQualityCount ?? 0);
 let importedThisRun = 0;
 let pendingThisRun = 0;
@@ -348,13 +358,30 @@ for (const source of registry.sources) {
     const cast = extractCast(video);
     const title = cleanTitle(video.snippet?.title);
     const synopsis = synopsisFromDescription(video, title, channel.channelTitle);
+    const seconds = durationSeconds(video.contentDetails?.duration);
     if (!cast.length) {
       pendingQualityCount++;
       pendingThisRun++;
+      pendingByVideoId.set(video.id, {
+        videoId: video.id,
+        rawTitle: video.snippet?.title ?? title,
+        title,
+        channelName: channel.channelTitle,
+        channelId: channel.channelId,
+        channelUrl: channel.channelUrl,
+        publishedAt: video.snippet?.publishedAt ?? now.toISOString(),
+        durationMinutes: Math.round(seconds / 60),
+        videoUrl: "https://www.youtube.com/watch?v=" + video.id,
+        reason: "missing-cast",
+        descriptionExcerpt: String(video.snippet?.description ?? "")
+          .replace(/\s+/g, " ")
+          .trim()
+          .slice(0, 1800),
+      });
       continue;
     }
 
-    const seconds = durationSeconds(video.contentDetails?.duration);
+    pendingByVideoId.delete(video.id);
     const publishedAt = video.snippet?.publishedAt ?? now.toISOString();
     moviesByVideoId.set(video.id, {
       videoId: video.id,
@@ -418,6 +445,13 @@ for (const movie of sorted) {
 const movies = [...uniqueByPublisherTitle.values()];
 
 await fs.writeFile(cachePath, JSON.stringify(cache, null, 2) + "\n");
+await fs.writeFile(reviewPath, JSON.stringify({
+  generatedAt: now.toISOString(),
+  syncMode: fullSync ? "full" : "incremental",
+  candidateCount: pendingByVideoId.size,
+  candidates: [...pendingByVideoId.values()]
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt)),
+}, null, 2) + "\n");
 await fs.writeFile(outputPath, JSON.stringify({
   generatedAt: now.toISOString(),
   syncMode: fullSync ? "full" : "incremental",
