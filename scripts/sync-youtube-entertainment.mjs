@@ -239,10 +239,15 @@ function cleanName(value) {
   return value
     .replace(/\([^)]*\)/g, "")
     .replace(/\b(starring|featuring|feat\.?|ft\.?)\b/gi, "")
+    .replace(/and\s+many\s+(?:more|others?)\.?$/i, "")
     .replace(/[#|]/g, " ")
     .replace(/\s+/g, " ")
-    .trim();
+    .trim()
+    .replace(/^[,.;:!?\s]+|[,.;:!?\s]+$/g, "");
 }
+
+const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend)$/i;
+const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share)\b/i;
 
 function looksLikePersonName(name) {
   const words = name.split(/\s+/).filter(Boolean);
@@ -260,6 +265,8 @@ function splitNames(value) {
       name.length <= 60 &&
       /^[A-Za-zÀ-ÖØ-öø-ÿ'’.\-\s]+$/.test(name) &&
       looksLikePersonName(name) &&
+      !castNoiseExact.test(name) &&
+      !castNoiseContains.test(name) &&
       !/\b(movie|film|latest|nigerian|nollywood|full|official|watch|youtube|tv|production|director|producer|channel|welcome|subscribe|romantic|drama|comedy|trending)\b/i.test(name),
     )
     .slice(0, 12);
