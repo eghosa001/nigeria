@@ -16,6 +16,10 @@ on:
       - ".github/workflows/ui-qa.yml"
   pull_request:
 
+concurrency:
+  group: browser-qa-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   smoke:
     runs-on: ubuntu-latest
