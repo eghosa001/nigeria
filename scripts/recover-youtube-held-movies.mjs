@@ -76,18 +76,80 @@ function yearFor(candidate) {
   return Number(String(candidate.publishedAt ?? currentYear).slice(0, 4));
 }
 
-function synopsisFor(candidate, cast) {
-  const text = String(candidate.descriptionExcerpt ?? "").replace(/\s+/g, " ").trim();
-  if (text && !promoText.test(text.slice(0, 420)) && !/https?:\/\//i.test(text.slice(0, 420))) {
-    const sentence = text.match(/^(.{70,360}?[.!?])(?:\s|$)/)?.[1];
-    if (sentence) return sentence.trim();
-    if (text.length >= 70) return text.slice(0, 360).trim();
+function fallbackSynopsis(title, channelName, cast) {
+  const featured = cast.slice(0, 3).join(", ");
+  return title + " is a full-length Nigerian film published by " +
+    channelName + (featured ? ", featuring " + featured : "") +
+    ". Watch it through the publisher's official YouTube release.";
+}
+
+function usableSynopsis(text, title, channelName, cast) {
+  let value = String(text ?? "").replace(/\s+/g, " ").trim();
+  if (!value) return fallbackSynopsis(title, channelName, cast);
+
+  const synopsisMarker = value.match(/\bSYNOPSIS\s*:\s*(.+)$/i);
+  if (synopsisMarker) value = synopsisMarker[1].trim();
+
+  const hashtagCount = (value.match(/#[A-Za-z0-9_]+/g) ?? []).length;
+  value = value.replace(/^(?:\s*[@#][A-Za-z0-9_.-]+[,.;:]?)+\s*/g, "").trim();
+
+  if (
+    value.length < 70 ||
+    promoText.test(value.slice(0, 420)) ||
+    /https?:\/\//i.test(value.slice(0, 420)) ||
+    (/^#/.test(String(text).trim()) && hashtagCount >= 3 && !synopsisMarker)
+  ) {
+    return fallbackSynopsis(title, channelName, cast);
   }
 
-  const featured = cast.slice(0, 3).join(", ");
-  return candidate.title + " is a full-length Nigerian film published by " +
-    candidate.channelName + ", featuring " + featured +
-    ". Watch it through the publisher's official YouTube release.";
+  const sentence = value.match(/^(.{70,360}?[.!?])(?:\s|$)/)?.[1];
+  if (sentence) return sentence.trim();
+  return value.slice(0, 360).trim();
+}
+
+function cleanTitleFromCast(rawTitle, currentTitle, cast) {
+  const raw = String(rawTitle ?? currentTitle ?? "").trim();
+  let title = String(currentTitle ?? raw).trim();
+  const lowerRaw = raw.toLowerCase();
+  const hits = [];
+
+  for (const rawName of cast ?? []) {
+    const name = cleanName(rawName);
+    if (name.length < 4) continue;
+    const index = lowerRaw.indexOf(name.toLowerCase());
+    if (index >= 0) hits.push(index);
+  }
+
+  hits.sort((a, b) => a - b);
+  if (hits.length >= 2) {
+    const prefix = raw.slice(0, hits[0]);
+    if (/[-–—:/]\s*$/.test(prefix) || /\s{2,}$/.test(prefix)) {
+      title = prefix;
+    }
+  }
+
+  title = title
+    .replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ")
+    .split("|")[0]
+    .replace(/\s*[-–—/|]+\s*$/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return title || String(currentTitle ?? raw).trim();
+}
+
+function synopsisFor(candidate, cast, title) {
+  return usableSynopsis(candidate.descriptionExcerpt, title, candidate.channelName, cast);
+}
+
+let polishedExisting = 0;
+for (const movie of generated.movies ?? []) {
+  const beforeTitle = movie.title;
+  const beforeSynopsis = movie.synopsis;
+  movie.title = cleanTitleFromCast(movie.rawTitle, movie.title, movie.cast ?? []);
+  movie.synopsis = usableSynopsis(movie.synopsis, movie.title, movie.channelName, movie.cast ?? []);
+  movie.featuredCast = (movie.cast ?? []).slice(0, 3);
+  if (movie.title !== beforeTitle || movie.synopsis !== beforeSynopsis) polishedExisting++;
 }
 
 const byVideoId = new Map((generated.movies ?? []).map((movie) => [movie.videoId, movie]));
@@ -115,7 +177,8 @@ for (const candidate of review.candidates ?? []) {
   }
 
   const year = yearFor(candidate);
-  const dedupeKey = [candidate.channelId, normalize(candidate.title), year].join("|");
+  const cleanTitle = cleanTitleFromCast(candidate.rawTitle, candidate.title, cast);
+  const dedupeKey = [candidate.channelId, normalize(cleanTitle), year].join("|");
   if (byVideoId.has(candidate.videoId) || existingPublisherTitleYear.has(dedupeKey)) {
     skippedDuplicate++;
     continue;
@@ -123,9 +186,9 @@ for (const candidate of review.candidates ?? []) {
 
   const movie = {
     videoId: candidate.videoId,
-    title: candidate.title,
-    rawTitle: candidate.rawTitle ?? candidate.title,
-    synopsis: synopsisFor(candidate, cast),
+    title: cleanTitle,
+    rawTitle: candidate.rawTitle ?? cleanTitle,
+    synopsis: synopsisFor(candidate, cast, cleanTitle),
     cast,
     featuredCast: cast.slice(0, 3),
     channelName: candidate.channelName,
@@ -168,6 +231,7 @@ fs.writeFileSync(reviewPath, JSON.stringify(review, null, 2) + "\n");
 console.log(
   "Recovered", recovered,
   "held movies without YouTube API calls;",
+  "polished", polishedExisting, "existing movie records;",
   remaining.length, "remain for review;",
   skippedNonMovie, "non-movie candidates kept held;",
   skippedDuplicate, "duplicates skipped.",
