@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!title) return {};
 
   return {
-    title: title.title + " — Where to Watch",
+    title: title.title + " — Cast, Details & Where to Watch",
     description: title.synopsis,
     alternates: { canonical: "/entertainment/movies/" + title.slug },
     openGraph: {
@@ -38,6 +38,14 @@ function personHref(name: string) {
   return person ? "/entertainment/people/" + person.slug : null;
 }
 
+function accessLabel(access: string) {
+  if (access === "full-movie") return "Free full movie";
+  if (access === "subscription") return "Subscription";
+  if (access === "rent-or-buy") return "Rent or buy";
+  if (access === "subscription-or-rent") return "Subscription or rental";
+  return "Official platform";
+}
+
 export default async function MovieDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const title = getEntertainmentTitle(slug);
@@ -50,6 +58,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     ...(title.trailer ? [title.trailer.lastChecked] : []),
   ];
   const lastChecked = allCheckedDates.reduce((latest, value) => value > latest ? value : latest, "");
+  const platforms = [...new Set(title.watchLinks.map((link) => link.platform))];
+  const featuredCast = getFeaturedCast(title);
 
   const movieLd = {
     "@context": "https://schema.org",
@@ -78,121 +88,218 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
   const related = entertainmentTitles
     .filter((item) => item.slug !== title.slug && item.genres.some((genre) => title.genres.includes(genre)))
-    .slice(0, 3);
+    .slice(0, 4);
 
   return (
     <>
       <JsonLd data={[movieLd, breadcrumbLd]} />
-      <section className="guide-hero">
-        <div className="container guide-hero-grid">
-          <div>
-            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Entertainment", href: "/entertainment" }, { label: "Movies", href: "/entertainment/movies" }, { label: title.title }]} />
-            <span className="eyebrow">{title.year} Nigerian movie</span>
-            <h1>{title.title}</h1>
-            <p>{title.synopsis}</p>
-            <p className="movie-hero-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
-            <div className="guide-badges">
-              {title.genres.map((genre) => <span className="status-badge status-verified" key={genre}>{genre}</span>)}
-            </div>
-            <p className="hero-note">Watch and trailer links last checked {lastChecked}. Streaming availability can change by country and date.</p>
-          </div>
 
-          <aside className="movie-hero-side">
-            <EntertainmentArtwork title={title} variant="hero" />
-            <div className="fee-card movie-watch-card">
-            <span>Where to watch</span>
-            <strong>{title.watchLinks.length} official option{title.watchLinks.length === 1 ? "" : "s"}</strong>
-            <p>MyNigeriaGuide does not host the film. Use the verified platform link below.</p>
-            {title.watchLinks.map((link) => (
-              <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label} ↗</a>
-            ))}
-            {title.trailer ? <a className="button" href={title.trailer.href} target="_blank" rel="noreferrer">{title.trailer.label} ↗</a> : null}
+      <section className="movie-detail-hero">
+        <div className="container">
+          <Breadcrumbs items={[
+            { label: "Home", href: "/" },
+            { label: "Entertainment", href: "/entertainment" },
+            { label: "Movies", href: "/entertainment/movies" },
+            { label: title.title },
+          ]} />
+
+          <div className="movie-detail-hero-grid">
+            <div className="movie-detail-artwork">
+              <EntertainmentArtwork title={title} variant="hero" />
+              {!title.artwork ? <p className="movie-artwork-rights-note">No cleared poster artwork yet.</p> : null}
+            </div>
+
+            <div className="movie-detail-copy">
+              <span className="eyebrow">{title.year} Nigerian movie</span>
+              <h1>{title.title}</h1>
+              <div className="movie-detail-factline">
+                <span>{title.year}</span>
+                {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : null}
+                <span>{title.languages.join(" / ")}</span>
+                <span>{platforms.join(" / ")}</span>
+              </div>
+              <p className="movie-detail-synopsis">{title.synopsis}</p>
+              <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
+
+              <div className="movie-detail-genres">
+                {title.genres.map((genre) => <span key={genre}>{genre}</span>)}
+              </div>
+
+              <div className="movie-detail-actions">
+                {title.watchLinks.slice(0, 2).map((link) => (
+                  <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+                    {link.label} ↗
+                  </a>
+                ))}
+                {title.trailer ? (
+                  <a className="button button-secondary" href={title.trailer.href} target="_blank" rel="noreferrer">
+                    Official trailer ↗
+                  </a>
+                ) : null}
+              </div>
+              <small className="movie-freshness-note">Official links last checked {lastChecked}. Availability can change by region, date and subscription plan.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav className="movie-detail-subnav" aria-label="Movie page sections">
+        <div className="container">
+          <a href="#overview">Overview</a>
+          <a href="#cast">Cast & crew</a>
+          <a href="#watch">Where to watch</a>
+          {title.trailer ? <a href="#trailer">Trailer</a> : null}
+          <a href="#related">Related movies</a>
+        </div>
+      </nav>
+
+      <section className="section movie-detail-main" id="overview">
+        <div className="container movie-detail-layout">
+          <article className="movie-detail-primary">
+            <section className="movie-overview-section">
+              <span className="eyebrow">About the movie</span>
+              <h2>{title.title}: story and quick details</h2>
+              <p className="movie-long-summary">{title.synopsis}</p>
+              <p>
+                This is a {title.genres.slice(0, 2).join(" / ").toLowerCase()} Nigerian film from {title.year}.
+                {title.languages.length ? " It is listed in " + title.languages.join(" and ") + "." : ""}
+                {platforms.length ? " MyNigeriaGuide currently links to official viewing through " + platforms.join(" and ") + "." : ""}
+              </p>
+            </section>
+
+            <section>
+              <span className="eyebrow">At a glance</span>
+              <div className="movie-fact-grid">
+                <article><span>Release year</span><strong>{title.year}</strong></article>
+                <article><span>Format</span><strong>Feature film</strong></article>
+                {title.runtimeMinutes ? <article><span>Runtime</span><strong>{title.runtimeMinutes} minutes</strong></article> : null}
+                <article><span>Languages</span><strong>{title.languages.join(", ")}</strong></article>
+                <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
+                <article><span>Official platforms</span><strong>{platforms.join(", ")}</strong></article>
+                <article><span>Cast recorded</span><strong>{title.cast.length} people</strong></article>
+                <article><span>Link freshness</span><strong>{lastChecked}</strong></article>
+              </div>
+            </section>
+
+            <section id="cast">
+              <span className="eyebrow">Cast & crew</span>
+              <h2>People connected to {title.title}</h2>
+
+              {title.directors?.length ? (
+                <div className="movie-credit-group">
+                  <h3>Director{title.directors.length > 1 ? "s" : ""}</h3>
+                  <div className="movie-person-list">
+                    {title.directors.map((name) => {
+                      const href = personHref(name);
+                      return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
+                    })}
+                  </div>
+                </div>
+              ) : null}
+
+              <div className="movie-credit-group">
+                <h3>Cast</h3>
+                <div className="movie-person-list">
+                  {title.cast.map((name) => {
+                    const href = personHref(name);
+                    return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
+                  })}
+                </div>
+              </div>
+            </section>
+
+            <section id="watch">
+              <span className="eyebrow">Official availability</span>
+              <h2>Where to watch {title.title}</h2>
+              <div className="movie-watch-options">
+                {title.watchLinks.map((link) => (
+                  <article key={link.href}>
+                    <div>
+                      <span>{link.platform}</span>
+                      <strong>{link.label}</strong>
+                    </div>
+                    <dl>
+                      <div><dt>Access</dt><dd>{accessLabel(link.access)}</dd></div>
+                      {link.publisher ? <div><dt>Publisher</dt><dd>{link.publisher}</dd></div> : null}
+                      <div><dt>Checked</dt><dd>{link.lastChecked}</dd></div>
+                    </dl>
+                    <p>{link.note}</p>
+                    <a className="button" href={link.href} target="_blank" rel="noreferrer">Open official source ↗</a>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            {title.trailer ? (
+              <section id="trailer">
+                <span className="eyebrow">Preview</span>
+                <h2>Official trailer</h2>
+                <div className="movie-trailer-card">
+                  <div><strong>{title.trailer.label}</strong><span>YouTube · checked {title.trailer.lastChecked}</span></div>
+                  <a className="button button-secondary" href={title.trailer.href} target="_blank" rel="noreferrer">Watch trailer ↗</a>
+                </div>
+              </section>
+            ) : null}
+
+            <details className="movie-rights-details">
+              <summary>Artwork and availability transparency</summary>
+              <div>
+                <p>Streaming catalogs can change, so the official platform page is the final authority for current access.</p>
+                {title.artwork ? (
+                  <p>Promotional artwork is shown from <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">{title.artwork.credit}</a> under the recorded reuse basis. Checked {title.artwork.lastChecked}.</p>
+                ) : (
+                  <p>Reusable poster artwork has not yet been cleared. When an official YouTube video exists, its attributed video thumbnail may be used as a preview instead.</p>
+                )}
+              </div>
+            </details>
+          </article>
+
+          <aside className="movie-detail-sidebar">
+            <div className="sidebar-card movie-sidebar-card">
+              <span>Quick facts</span>
+              <strong>{title.title}</strong>
+              <dl>
+                <div><dt>Year</dt><dd>{title.year}</dd></div>
+                <div><dt>Language</dt><dd>{title.languages.join(", ")}</dd></div>
+                {title.runtimeMinutes ? <div><dt>Runtime</dt><dd>{title.runtimeMinutes} min</dd></div> : null}
+                <div><dt>Genre</dt><dd>{title.genres.slice(0, 3).join(", ")}</dd></div>
+              </dl>
+            </div>
+            <div className="sidebar-card">
+              <span>Keep exploring</span>
+              <div className="related-links">
+                <Link href="/entertainment/movies">All movies →</Link>
+                <Link href="/entertainment/youtube">Free YouTube movies →</Link>
+                <Link href="/entertainment/releases">New & upcoming →</Link>
+                <Link href="/entertainment/cinemas">Cinemas →</Link>
+              </div>
             </div>
           </aside>
         </div>
       </section>
 
-      <section className="section guide-main-section">
-        <div className="container guide-layout">
-          <article className="guide-content">
-            <section>
-              <h2>Movie details</h2>
-              <div className="service-context-grid">
-                <article><h3>Year</h3><p>{title.year}</p></article>
-                <article><h3>Language</h3><p>{title.languages.join(", ")}</p></article>
-                {title.runtimeMinutes ? <article><h3>Runtime</h3><p>{title.runtimeMinutes} minutes</p></article> : null}
-                {title.directors?.length ? <article><h3>Director</h3><p>{title.directors.map((name, index) => {
-                  const href = personHref(name);
-                  return <span key={name}>{index ? ", " : ""}{href ? <Link className="text-link" href={href}>{name}</Link> : name}</span>;
-                })}</p></article> : null}
-                <article><h3>Cast</h3><p>{title.cast.map((name, index) => {
-                  const href = personHref(name);
-                  return <span key={name}>{index ? ", " : ""}{href ? <Link className="text-link" href={href}>{name}</Link> : name}</span>;
-                })}</p></article>
-                <article><h3>Genres</h3><p>{title.genres.join(", ")}</p></article>
-              </div>
-            </section>
-
-            {title.trailer ? (
-              <section>
-                <h2>Official trailer</h2>
-                <div className="source-list">
-                  <a href={title.trailer.href} target="_blank" rel="noreferrer">
-                    <span><strong>{title.trailer.label}</strong><small>Published on the official rights-holder/platform channel.</small></span>
-                    <span>Checked {title.trailer.lastChecked} ↗</span>
-                  </a>
-                </div>
-              </section>
-            ) : null}
-
-            <section>
-              <h2>Official watch links</h2>
-              <div className="source-list">
-                {title.watchLinks.map((link) => (
-                  <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
-                    <span><strong>{link.platform} — {link.label}</strong><small>{link.note}</small></span>
-                    <span>Checked {link.lastChecked} ↗</span>
-                  </a>
-                ))}
-              </div>
-            </section>
-
-            <section>
-              <h2>Poster artwork rights</h2>
-              {title.artwork ? (
-                <div className="source-list">
-                  <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">
-                    <span>
-                      <strong>{title.artwork.credit}</strong>
-                      <small>{title.artwork.licenseNote}</small>
-                    </span>
-                    <span>Checked {title.artwork.lastChecked} ↗</span>
-                  </a>
-                </div>
-              ) : (
-                <div className="info-box">
-                  <strong>No cleared poster artwork yet.</strong>
-                  <p>Poster artwork stays hidden until a press-kit permission, direct permission, licence or valid Creative Commons basis is recorded. An attributed official YouTube video thumbnail may still appear above as a separate preview.</p>
-                </div>
-              )}
-            </section>
-
-            <section>
-              <h2>Availability note</h2>
-              <div className="info-box"><strong>Platforms can change their catalogs.</strong><p>Use the last-checked date as a freshness signal. If a title is removed, moved or region-restricted, the official platform page is the final authority.</p></div>
-            </section>
-          </article>
-
-          <aside className="guide-sidebar">
-            <div className="sidebar-card">
-              <span>Related movies</span><strong>Keep browsing</strong>
-              <div className="related-links">
-                {related.map((item) => <Link href={"/entertainment/movies/" + item.slug} key={item.slug}>{item.title} →</Link>)}
-                <Link href="/entertainment/movies">All movies →</Link>
-              </div>
+      <section className="section movie-related-section" id="related">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">More like this</span>
+              <h2>Related Nigerian movies.</h2>
             </div>
-            <div className="sidebar-card safety-card"><span>Rights &amp; safety</span><strong>Official sources only</strong><p>We do not link to piracy mirrors, file-sharing copies or unofficial re-uploads.</p></div>
-          </aside>
+            <Link href="/entertainment/movies">Browse the full catalog →</Link>
+          </div>
+
+          <div className="movie-grid movie-related-grid">
+            {related.map((item) => (
+              <article className="movie-tile" key={item.slug}>
+                <EntertainmentArtwork title={item} />
+                <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
+                <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>
+                <p className="movie-tile-description">{item.synopsis}</p>
+                <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(item).join(" · ")}</p>
+                <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + item.slug}>Details →</Link></div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </>

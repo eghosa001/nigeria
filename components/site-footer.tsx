@@ -11,29 +11,31 @@ export function SiteFooter() {
           <div className="footer-trust">
             <span>Independent guide</span>
             <span>Sources stay visible</span>
-            <span>No government fees collected</span>
+            <span>Freshness stays in context</span>
           </div>
         </div>
 
         <div className="footer-grid">
           <div>
-            <strong>MyNigeriaGuide</strong>
-            <Link href="/services">Service Guide</Link>
+            <strong>Discover Nigeria</strong>
             <Link href="/explore">Explore Nigeria</Link>
-            <Link href="/entertainment">Movies &amp; Entertainment</Link>
-            <Link href="/assistant">Find a guide</Link>
-            <Link href="/saved">Saved guides</Link>
+            <Link href="/explore#places">Places, food &amp; stays</Link>
+            <Link href="/entertainment/movies">Nigerian movies</Link>
+            <Link href="/entertainment/youtube">Free YouTube movies</Link>
+            <Link href="/entertainment/cinemas">Cinemas</Link>
           </div>
           <div>
-            <strong>Useful links</strong>
+            <strong>Services</strong>
+            <Link href="/services">All service guides</Link>
             <Link href="/fees">Fees</Link>
-            <Link href="/updates">Verified updates</Link>
             <Link href="/offices">Official offices</Link>
             <Link href="/official-portals">Official portals</Link>
-            <Link href="/categories/foreign-visas">Foreign visas</Link>
+            <Link href="/updates">Verified updates</Link>
           </div>
           <div>
-            <strong>Trust &amp; policies</strong>
+            <strong>MyNigeriaGuide</strong>
+            <Link href="/assistant">Find a guide</Link>
+            <Link href="/saved">Saved guides</Link>
             <Link href="/about">How verification works</Link>
             <Link href="/editorial-policy">Editorial policy</Link>
             <Link href="/corrections">Corrections</Link>

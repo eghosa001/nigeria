@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
-import { RouteWizard } from "@/components/route-wizard";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
-import { agencies, publicServiceListings, publicServices } from "@/lib/data";
-import { growthHubs } from "@/lib/growth-hubs";
+import { publicServiceListings, publicServices } from "@/lib/data";
+import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { exploreGuides } from "@/lib/explore";
 
 export const metadata: Metadata = {
   title: "Nigeria Services, Travel & Entertainment Guide",
@@ -12,164 +13,147 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const popular = [
+const popularServices = [
   { label: "Passport renewal", href: "/services/passport-renewal" },
   { label: "NIN correction", href: "/services/nin-date-of-birth-modification" },
   { label: "Retrieve BVN", href: "/services/bvn-retrieval" },
   { label: "JAMB 2026", href: "/services/jamb-2026-utme-registration" },
   { label: "NYSC senate list", href: "/services/nysc-senate-list" },
   { label: "CAC registration", href: "/services/cac-business-name-registration" },
-  { label: "UK visitor visa", href: "/services/uk-standard-visitor-visa" },
+  { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 
 export default function HomePage() {
   const verifiedCount = publicServices.filter((service) => service.status === "verified").length;
+  const travelHighlights = exploreGuides
+    .filter((guide) => guide.kind === "city" || guide.kind === "destination")
+    .slice(0, 4);
+  const movieHighlights = entertainmentTitles
+    .filter((title) => title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie"))
+    .slice(0, 4);
 
   return (
     <>
-      <section className="hero home-hero">
+      <section className="hero home-hero premium-home-hero">
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-kicker">
               <span className="hero-kicker-dot" aria-hidden="true" />
               One practical guide to Nigeria
             </div>
-            <h1>Services, travel and entertainment — <span>clearly organised.</span></h1>
+            <h1>Services, travel and entertainment <span>in one Nigerian guide.</span></h1>
             <p className="hero-lead">
-              Get something done, plan somewhere to go, or find Nigerian movies through official sources without jumping between confusing directories.
+              Get something done, discover somewhere worth going, or find a Nigerian movie to watch — without navigating a site that feels like three unrelated products.
             </p>
 
-            <div className="hero-pillar-links" aria-label="Main MyNigeriaGuide sections">
-              <Link href="/services">Service Guide</Link>
-              <Link href="/explore">Explore Nigeria</Link>
-              <Link href="/entertainment">Entertainment</Link>
+            <div className="premium-home-actions">
+              <Link className="button" href="/services">Browse services</Link>
+              <Link className="button button-secondary" href="/explore">Explore Nigeria</Link>
+              <Link className="button button-secondary" href="/entertainment/movies">Find a movie</Link>
             </div>
 
-            <div className="home-service-search">
-              <span className="eyebrow">Search service guides</span>
-              <ServiceSearch services={publicServiceListings} />
+            <div className="home-trust-line" aria-label="MyNigeriaGuide principles">
+              <span>Source-linked guidance</span>
+              <span>Official destinations</span>
+              <span>Freshness shown clearly</span>
             </div>
-
-            <div className="hero-popular" aria-label="Popular service guides">
-              <span>Popular</span>
-              {popular.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
-            </div>
-            <p className="hero-note">
-              Public-service applications and payments stay on official channels. Travel bookings and entertainment playback stay with the original provider.
-            </p>
           </div>
 
-          <aside className="trust-panel" aria-label="MyNigeriaGuide quality approach">
-            <div className="trust-panel-top">
-              <span className="trust-kicker">Quality snapshot</span>
-              <span className="trust-live"><i aria-hidden="true" />Live</span>
-            </div>
-            <strong>{verifiedCount} published service guides</strong>
-            <p>Across the site, source links and freshness notes stay visible so you can tell what to trust and what to re-check.</p>
-            <div className="trust-metrics">
-              <div><strong>{agencies.length}</strong><span>agency groups</span></div>
-              <div><strong>3</strong><span>clear guide areas</span></div>
-            </div>
-            <div className="trust-row"><span>✓</span><div><strong>Services</strong><small>Requirements, fees, official portals and next steps.</small></div></div>
-            <div className="trust-row"><span>✓</span><div><strong>Travel</strong><small>Addresses, maps, cost notes and practical planning.</small></div></div>
-            <div className="trust-row"><span>✓</span><div><strong>Entertainment</strong><small>Official watch routes, cinemas and verified publishers.</small></div></div>
+          <aside className="home-launchpad" aria-label="Choose a MyNigeriaGuide section">
+            <Link href="/services" className="home-launch-card service-launch-card">
+              <span>01 · Get something done</span>
+              <strong>Services</strong>
+              <p>{verifiedCount} published guides covering identity, travel documents, education, business, banking, driving and more.</p>
+              <i>Open services →</i>
+            </Link>
+            <Link href="/explore" className="home-launch-card explore-launch-card">
+              <span>02 · Go somewhere</span>
+              <strong>Explore Nigeria</strong>
+              <p>{exploreGuides.length} city, destination and itinerary guides with practical planning details.</p>
+              <i>Plan a trip →</i>
+            </Link>
+            <Link href="/entertainment" className="home-launch-card entertainment-launch-card">
+              <span>03 · Watch something</span>
+              <strong>Entertainment</strong>
+              <p>{entertainmentTitles.length} curated movie pages plus official YouTube, streaming, cinema and release routes.</p>
+              <i>Explore entertainment →</i>
+            </Link>
           </aside>
         </div>
       </section>
 
-      <section className="section home-platform-pillars" aria-labelledby="platform-pillars-title">
+      <section className="section home-discovery-section" aria-labelledby="home-discovery-title">
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Choose your route</span>
-              <h2 id="platform-pillars-title">What do you want to do in Nigeria?</h2>
-              <p className="section-lead">The site is organised as three focused products, with a shared design and navigation system.</p>
+              <span className="eyebrow">Start anywhere</span>
+              <h2 id="home-discovery-title">Three clear ways into MyNigeriaGuide.</h2>
+              <p className="section-lead">Each area has its own focused tools and navigation, while the overall site keeps the same visual system.</p>
             </div>
           </div>
 
-          <div className="platform-pillar-grid">
-            <Link className="platform-pillar-card platform-pillar-services" href="/services">
-              <span className="platform-pillar-number">01</span>
-              <span className="eyebrow">Get something done</span>
-              <strong>Service Guide</strong>
-              <p>Government and practical services, documents, fees, visas, NYSC, NIN, CAC, education, driving and more.</p>
-              <i>Browse services <span aria-hidden="true">→</span></i>
-            </Link>
+          <div className="home-pillar-showcase-grid">
+            <article className="home-pillar-panel services-panel">
+              <div className="home-pillar-panel-heading">
+                <span className="eyebrow">Services</span>
+                <h3>Find the process you need.</h3>
+                <p>Search by the words you would naturally use, then follow requirements, costs, official links and next steps.</p>
+              </div>
+              <ServiceSearch services={publicServiceListings} />
+              <div className="home-panel-links">
+                {popularServices.map((item) => <Link key={item.href} href={item.href}>{item.label}<span>→</span></Link>)}
+              </div>
+              <Link className="home-panel-cta" href="/services">Browse all services →</Link>
+            </article>
 
-            <Link className="platform-pillar-card platform-pillar-explore" href="/explore">
-              <span className="platform-pillar-number">02</span>
-              <span className="eyebrow">Tour Guide · Go somewhere</span>
-              <strong>Tour Guide</strong>
-              <p>City guides, attractions, restaurants, stays, addresses, Google Maps routes, price notes and short-trip ideas.</p>
-              <i>Plan a trip <span aria-hidden="true">→</span></i>
-            </Link>
+            <article className="home-pillar-panel explore-panel">
+              <div className="home-pillar-panel-heading">
+                <span className="eyebrow">Explore Nigeria</span>
+                <h3>Choose a city or destination.</h3>
+                <p>Move from inspiration to useful planning details: places, timing, transport, addresses, maps and cost notes.</p>
+              </div>
+              <div className="home-panel-links home-travel-links">
+                {travelHighlights.map((guide) => (
+                  <Link href={"/explore/" + guide.slug} key={guide.slug}>
+                    <span><strong>{guide.shortTitle}</strong><small>{guide.region} · {guide.kind}</small></span>
+                    <b>→</b>
+                  </Link>
+                ))}
+              </div>
+              <Link className="home-panel-cta" href="/explore">Explore destinations →</Link>
+            </article>
 
-            <Link className="platform-pillar-card platform-pillar-entertainment" href="/entertainment">
-              <span className="platform-pillar-number">03</span>
-              <span className="eyebrow">Watch &amp; enjoy</span>
-              <strong>Entertainment Guide</strong>
-              <p>Nigerian movies, official YouTube publishers, streaming routes, cinemas, releases, actors and filmmakers.</p>
-              <i>Explore entertainment <span aria-hidden="true">→</span></i>
-            </Link>
+            <article className="home-pillar-panel entertainment-panel">
+              <div className="home-pillar-panel-heading">
+                <span className="eyebrow">Entertainment</span>
+                <h3>Find a movie and know where to watch it.</h3>
+                <p>Browse cast, genres, languages, availability notes and verified official watch routes.</p>
+              </div>
+              <div className="home-movie-mini-grid">
+                {movieHighlights.map((title) => (
+                  <article key={title.slug} className="home-movie-mini-card">
+                    <EntertainmentArtwork title={title} />
+                    <Link href={"/entertainment/movies/" + title.slug}>
+                      <strong>{title.title}</strong>
+                      <small>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</small>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+              <Link className="home-panel-cta" href="/entertainment/movies">Browse movies →</Link>
+            </article>
           </div>
         </div>
       </section>
 
-      <section className="proof-strip" aria-label="How MyNigeriaGuide stays useful">
-        <div className="container proof-grid">
-          <div><span aria-hidden="true">01</span><strong>Clear next steps</strong><small>Know what to prepare and where to start.</small></div>
-          <div><span aria-hidden="true">02</span><strong>Useful locations</strong><small>Addresses and map routes where place matters.</small></div>
-          <div><span aria-hidden="true">03</span><strong>Official destinations</strong><small>Applications, bookings and playback stay at the source.</small></div>
-          <div><span aria-hidden="true">04</span><strong>Freshness visible</strong><small>Review and verification dates are kept in context.</small></div>
-        </div>
-      </section>
-
-      <section className="section home-category-shortcuts">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Popular service areas</span>
-              <h2>Go straight to the service area you need.</h2>
-            </div>
-            <Link href="/services">See all services →</Link>
-          </div>
-          <div className="home-category-grid">
-            <Link className="home-category-card visa-card" href="/categories/foreign-visas"><span>Travel abroad</span><strong>Foreign visas</strong><small>UK, US, Canada, Schengen, UAE, South Africa, China and more.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/international-travel"><span>Travel to / from Nigeria</span><strong>Nigeria travel</strong><small>Nigeria visas, Yellow Card, ECOWAS certificate and border forms.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/identity"><span>Identity</span><strong>NIN services</strong><small>Enrolment, corrections and NIN slip services.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/banking"><span>Banking identity</span><strong>BVN services</strong><small>Get, retrieve or correct BVN and use BVN from abroad.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/education"><span>Education</span><strong>JAMB, WAEC &amp; NECO</strong><small>Registration, results, certificates and admission processes.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/youth-service"><span>Youth service</span><strong>NYSC</strong><small>Registration, mobilisation, relocation and certificates.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/business"><span>Business</span><strong>CAC services</strong><small>Business names, companies and corporate filings.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/driving"><span>Driving</span><strong>Driver's licence</strong><small>New, renewal, reissue and class changes.</small><i>→</i></Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section home-topic-hubs">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">Popular tasks</span>
-              <h2>Start with the question you are actually trying to solve.</h2>
-            </div>
-          </div>
-          <div className="home-category-grid">
-            {growthHubs.map((hub) => (
-              <Link className="home-category-card topic-home-card" href={"/topics/" + hub.slug} key={hub.slug}>
-                <span>Task hub</span>
-                <strong>{hub.shortTitle}</strong>
-                <small>{hub.description}</small>
-                <i>Explore guides →</i>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section service-discovery-section">
-        <div className="container">
-          <RouteWizard availableSlugs={publicServiceListings.map((service) => service.slug)} />
+      <section className="home-utility-strip" aria-label="Useful shortcuts">
+        <div className="container home-utility-grid">
+          <Link href="/fees"><span>Service planning</span><strong>Check fees</strong><i>→</i></Link>
+          <Link href="/offices"><span>In-person help</span><strong>Find official offices</strong><i>→</i></Link>
+          <Link href="/explore#places"><span>Travel discovery</span><strong>Browse places</strong><i>→</i></Link>
+          <Link href="/entertainment/youtube"><span>Free entertainment</span><strong>Watch official YouTube movies</strong><i>→</i></Link>
+          <Link href="/entertainment/cinemas"><span>Big screen</span><strong>Find cinemas</strong><i>→</i></Link>
+          <Link href="/saved"><span>Come back later</span><strong>Saved guides</strong><i>→</i></Link>
         </div>
       </section>
 
@@ -177,8 +161,9 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading section-heading-light">
             <div>
-              <span className="eyebrow">Verified service updates</span>
-              <h2>Know when a public process changes.</h2>
+              <span className="eyebrow">Verified service changes</span>
+              <h2>Important process updates, without taking over the homepage.</h2>
+              <p className="section-lead">Public-service rules change more often than travel inspiration or movie metadata, so the latest verified changes stay easy to reach here.</p>
             </div>
             <Link href="/updates">View all updates <span aria-hidden="true">→</span></Link>
           </div>
@@ -198,25 +183,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container agency-strip">
-          <div>
-            <span className="eyebrow">Source transparency</span>
-            <h2>Public-service guidance stays tied to the responsible agency.</h2>
-            <p>MyNigeriaGuide explains the process, but applications, payments and final decisions remain with the official authority.</p>
-            <div className="related-links"><Link href="/official-portals">Official portal directory →</Link><Link href="/offices">Find official offices and centres →</Link></div>
+      <section className="section home-platform-principles">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">One consistent platform</span>
+              <h2>Useful information stays close to the action.</h2>
+            </div>
           </div>
-          <div className="agency-list">
-            {agencies.map((agency) => (
-              <Link href={"/agencies/" + agency.slug} key={agency.slug}>
-                <span className="agency-monogram" aria-hidden="true">{agency.shortName.slice(0, 3)}</span>
-                <span>
-                  <strong>{agency.shortName}</strong>
-                  <small>{agency.name}</small>
-                </span>
-                <span className="agency-arrow" aria-hidden="true">→</span>
-              </Link>
-            ))}
+          <div className="proof-grid">
+            <div><span aria-hidden="true">01</span><strong>Clear hierarchy</strong><small>Three top-level areas instead of a crowded menu.</small></div>
+            <div><span aria-hidden="true">02</span><strong>Context navigation</strong><small>Each section shows the most useful routes for that task.</small></div>
+            <div><span aria-hidden="true">03</span><strong>Official destinations</strong><small>Applications, bookings and playback stay with the source.</small></div>
+            <div><span aria-hidden="true">04</span><strong>Mobile-first scanning</strong><small>Cards, filters and details collapse cleanly on small screens.</small></div>
           </div>
         </div>
       </section>

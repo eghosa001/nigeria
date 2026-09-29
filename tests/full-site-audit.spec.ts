@@ -66,27 +66,43 @@ test("every guide in a multi-guide category receives a service-to-service crawl 
   }
 });
 
-test("primary navigation works on desktop and mobile menu states", async ({ page }) => {
+test("global and section navigation work on desktop and mobile", async ({ page }) => {
   test.setTimeout(60_000);
   await page.goto("/");
-  const navTargets = [
+
+  const menu = page.getByRole("button", { name: "Open navigation" });
+  if (await menu.isVisible()) await menu.click();
+
+  const nav = page.getByRole("navigation", { name: "Primary navigation" });
+  const globalTargets = [
     ["Services", "/services"],
-    ["Fees", "/fees"],
-    ["Updates", "/updates"],
-    ["Offices", "/offices"],
+    ["Explore Nigeria", "/explore"],
+    ["Entertainment", "/entertainment"],
     ["Saved", "/saved"],
     ["Find a guide", "/assistant"],
   ] as const;
 
-  const menu = page.getByRole("button", { name: "Open navigation" });
-  if (await menu.isVisible()) await menu.click();
-  const nav = page.getByRole("navigation", { name: "Primary navigation" });
-  for (const [label, target] of navTargets) {
+  for (const [label, target] of globalTargets) {
     const link = nav.getByRole("link", { name: label, exact: true });
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute("href", target);
   }
-  await nav.getByRole("link", { name: "Find a guide", exact: true }).click();
+
+  await page.goto("/services");
+  const serviceNav = page.getByRole("navigation", { name: "Services guide navigation" });
+  for (const [label, target] of [
+    ["Fees", "/fees"],
+    ["Offices", "/offices"],
+    ["Official portals", "/official-portals"],
+    ["Updates", "/updates"],
+  ] as const) {
+    await expect(serviceNav.getByRole("link", { name: label, exact: true })).toHaveAttribute("href", target);
+  }
+
+  await page.goto("/");
+  const mobileMenu = page.getByRole("button", { name: "Open navigation" });
+  if (await mobileMenu.isVisible()) await mobileMenu.click();
+  await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Find a guide", exact: true }).click();
   await expect(page).toHaveURL(/\/assistant(?:$|\?)/);
 });
 

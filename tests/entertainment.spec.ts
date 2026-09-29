@@ -9,7 +9,7 @@ test("entertainment catalog supports multiple official platforms", async ({ page
 
 test("movie detail exposes watch and trailer links", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
-  await expect(page.getByRole("heading", { name: "Aníkúlápó" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Aníkúlápó", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: /Watch on Netflix/ }).first()).toHaveAttribute("href", /netflix\.com/);
   await expect(page.getByRole("link", { name: /official trailer/i }).first()).toHaveAttribute("href", /youtube\.com/);
 });
@@ -27,9 +27,10 @@ test("cinema and releases guides expose official source routes", async ({ page }
 
 test("movie posters stay rights-gated while official YouTube previews can display", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
-  await expect(page.locator('[data-artwork-source="youtube"]')).toBeVisible();
-  await expect(page.locator('[data-rights-status="poster-pending"]')).toBeVisible();
-  await expect(page.getByText("No cleared poster artwork yet.")).toBeVisible();
+  const heroArtwork = page.locator(".movie-detail-artwork");
+  await expect(heroArtwork.locator('[data-artwork-source="youtube"]')).toBeVisible();
+  await expect(heroArtwork.locator('[data-rights-status="poster-pending"]')).toBeVisible();
+  await expect(heroArtwork.getByText("No cleared poster artwork yet.")).toBeVisible();
 });
 
 
