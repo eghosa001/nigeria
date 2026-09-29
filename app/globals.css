@@ -2891,8 +2891,6 @@ a.admin-guide-row:hover { background:#f8fcf9; }
 .movie-tile,
 .youtube-movie-card {
   min-width: 0;
-  content-visibility: auto;
-  contain-intrinsic-size: 260px;
 }
 .movie-tile { display: flex; flex-direction: column; }
 .movie-tile h3,
