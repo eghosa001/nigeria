@@ -368,7 +368,8 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
     .filter((line) =>
       line.length >= 70 &&
       !/https?:\/\//i.test(line) &&
-      !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#|welcome\b|please\s+watch\b|thank\s+you\b)/i.test(line) &&
+      !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#|please\s+watch\b|thank\s+you\b)/i.test(line) &&
+      !/^welcome\s+to\s+.+\b(?:tv|channel)\b/i.test(line) &&
       !/\b(?:social media|instagram|tiktok|facebook)\b/i.test(line) &&
       !promoSynopsis.test(line),
     );
