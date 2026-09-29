@@ -1,7 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="17" fill="#063F2D"/>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="15.5" fill="none" stroke="#FFFDF8" stroke-opacity=".14" stroke-width="2"/>
-  <path d="M18 46V20.3L46 45.6V18" fill="none" stroke="#FFFDF8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="18" cy="46" r="4.2" fill="#D1A24A" stroke="#063F2D" stroke-width="1.6"/>
-  <path d="m46 11.8 1.9 4.4 4.3 1.8-4.3 1.9-1.9 4.3-1.8-4.3-4.4-1.9 4.4-1.8 1.8-4.4Z" fill="#D1A24A"/>
+  <rect width="64" height="64" rx="18" fill="#063F2D"/>
+  <circle cx="32" cy="46" r="4.4" fill="#D1A24A"/>
+  <path d="M32 42V31.5" fill="none" stroke="#FFFDF8" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M32 32C27.2 27.3 22.8 23.7 17.6 20.5" fill="none" stroke="#FFFDF8" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M32 32C37 26.9 41.4 23.4 46.9 20.2" fill="none" stroke="#FFFDF8" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="17" cy="20" r="3.5" fill="#FFFDF8"/>
+  <rect x="28.5" y="14" width="7" height="7" rx="2" fill="#FFFDF8"/>
+  <path d="m47.5 14 5 5-5 5-5-5 5-5Z" fill="#FFFDF8"/>
 </svg>

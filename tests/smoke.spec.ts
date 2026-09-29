@@ -268,7 +268,7 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
   expect((navBox?.x ?? 0) + (navBox?.width ?? 0)).toBeLessThanOrEqual(390);
   expect((navBox?.y ?? 0) + (navBox?.height ?? 0)).toBeLessThanOrEqual(844);
 
-  const heroColumns = await page.locator(".hero-grid").evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").filter(Boolean).length);
+  const heroColumns = await page.locator(".minimal-home-hero-inner").evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(" ").filter(Boolean).length);
   expect(heroColumns).toBe(1);
   const homeOverflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
   expect(homeOverflow).toBeLessThanOrEqual(1);
@@ -371,7 +371,7 @@ test("brand logo always returns home, including after process activity", async (
   await page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Steps" }).click();
   await page.getByRole("link", { name: "MyNigeriaGuide home" }).click();
   await expect(page).toHaveURL(/\/$/);
-  await expect(page.getByRole("heading", { name: /Movies, services and places to explore/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Nigeria, easier to explore/i })).toBeVisible();
 });
 
 test("service FAQ answers are contextual and complete enough to guide the next action", async ({ page }) => {

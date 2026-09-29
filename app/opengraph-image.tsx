@@ -7,11 +7,14 @@ export const contentType = "image/png";
 function Mark() {
   return (
     <svg width="82" height="82" viewBox="0 0 82 82">
-      <rect width="82" height="82" rx="22" fill="#063F2D" />
-      <rect x="2" y="2" width="78" height="78" rx="20" fill="none" stroke="rgba(255,253,248,.14)" strokeWidth="2" />
-      <path d="M23 59V26L59 58V23" fill="none" stroke="#FFFDF8" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="23" cy="59" r="5.5" fill="#D1A24A" stroke="#063F2D" strokeWidth="2" />
-      <path d="M59 15L61.5 20.5L67 23L61.5 25.5L59 31L56.5 25.5L51 23L56.5 20.5L59 15Z" fill="#D1A24A" />
+      <rect width="82" height="82" rx="23" fill="#063F2D" />
+      <circle cx="41" cy="58" r="5.4" fill="#D1A24A" />
+      <path d="M41 53V40" fill="none" stroke="#FFFDF8" strokeWidth="5.6" strokeLinecap="round" />
+      <path d="M41 41C34.8 34.8 29.4 30.3 22.5 26" fill="none" stroke="#FFFDF8" strokeWidth="5.6" strokeLinecap="round" />
+      <path d="M41 41C47.3 34.5 52.9 30 59.7 26" fill="none" stroke="#FFFDF8" strokeWidth="5.6" strokeLinecap="round" />
+      <circle cx="21.7" cy="25.5" r="4.2" fill="#FFFDF8" />
+      <rect x="36.8" y="17.1" width="8.4" height="8.4" rx="2.3" fill="#FFFDF8" />
+      <path d="m60.4 18.1 6 6-6 6-6-6 6-6Z" fill="#FFFDF8" />
     </svg>
   );
 }
@@ -27,22 +30,22 @@ export default function Image() {
           <Mark />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <strong style={{ fontSize: "36px", letterSpacing: "-1px" }}>MyNigeriaGuide</strong>
-            <span style={{ fontSize: "20px", color: "#607168" }}>Movies · Services · Travel</span>
+            <span style={{ fontSize: "20px", color: "#607168" }}>Movies · Services · Tour Nigeria</span>
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", zIndex: 2 }}>
           <div style={{ fontSize: "65px", fontWeight: 800, lineHeight: 1.02, maxWidth: "920px", letterSpacing: "-2.5px" }}>
-            Movies, services and travel in one Nigerian guide.
+            Nigeria, easier to explore.
           </div>
           <div style={{ marginTop: "25px", fontSize: "24px", color: "#607168" }}>
-            Nigerian movies · official routes · practical services · places
+            Movies · services · places to go
           </div>
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", zIndex: 2 }}>
           <div style={{ display: "flex", gap: "12px", fontSize: "18px", color: "#063F2D", fontWeight: 700 }}>
-            <span>Independent</span><span>•</span><span>Source-linked</span><span>•</span><span>Nigeria-focused</span>
+            <span>MyNigeriaGuide</span>
           </div>
           <div style={{ width: "130px", height: "5px", borderRadius: "999px", background: "#D1A24A" }} />
         </div>
