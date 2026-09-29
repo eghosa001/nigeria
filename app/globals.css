@@ -3419,19 +3419,19 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   min-height: 0;
 }
 .home-movie-mini-card figcaption { display: none; }
-.home-movie-mini-card > span {
+.home-movie-mini-card > a {
   display: grid;
   gap: 4px;
   padding: 9px 10px 11px;
 }
-.home-movie-mini-card > span strong {
+.home-movie-mini-card > a strong {
   overflow: hidden;
   color: var(--ink);
   font-size: .78rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.home-movie-mini-card > span small {
+.home-movie-mini-card > a small {
   overflow: hidden;
   color: var(--muted);
   font-size: .66rem;
