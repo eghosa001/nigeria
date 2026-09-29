@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T11:13:48.787Z",
+  "generatedAt": "2026-09-29T11:17:25.691Z",
   "syncMode": "metadata-recovery",
   "sourceCount": 32,
   "importedCount": 1633,
@@ -36,7 +36,7 @@
     },
     {
       "videoId": "2Ficn2BMlI8",
-      "title": "WHAT TOMORROW HOLDS: After years of infertility,she became a mother but jealousy destroyed herfamily",
+      "title": "WHAT TOMORROW HOLDS",
       "rawTitle": "WHAT TOMORROW HOLDS: After years of infertility,she became a mother but jealousy destroyed herfamily",
       "synopsis": "WHAT TOMORROW HOLDS: After years of infertility,she became a mother but jealousy destroyed herfamily is a full-length Nigerian film published by SANDRA OKUNZUWA TV, featuring SANDRA OKUNZUWA, CHIOMA NWOSU, KALU IKEAGWU.",
       "cast": [
@@ -136,7 +136,7 @@
     },
     {
       "videoId": "ULYjuxatLag",
-      "title": "PAINTED HEARTS",
+      "title": "PAINTED HEARTS - Nollywood Movie",
       "rawTitle": "PAINTED HEARTS - Nollywood Movie starring Ekama Etim Inyang, Osereme, Ichie Fuego, Yemi Blaq",
       "synopsis": "PAINTED HEARTS is a full-length Nigerian film published by Uduak Isong TV, featuring Ekama Etim Inyang, Osereme, Ichie Fuego.",
       "cast": [
@@ -920,7 +920,7 @@
     },
     {
       "videoId": "jrlFE0MPTtM",
-      "title": "BECOMING",
+      "title": "BECOMING - New Nollywood Movie",
       "rawTitle": "BECOMING - New Nollywood Movie starring Bimbo Ademoye, Daniel Etim Effiong, Baaj Adebule, Obey Etok",
       "synopsis": "BECOMING is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Daniel Etim Effiong, Baaj Adebule.",
       "cast": [
@@ -1060,13 +1060,14 @@
     },
     {
       "videoId": "EbhUEJdXJ_U",
-      "title": "Lagos Big Girls",
+      "title": "Lagos Big Girls - Nollywood Movie",
       "rawTitle": "Lagos Big Girls - Nollywood Movie starring Omeche Oko, Teniola Aladese, Osereme I. Mike Godson",
       "synopsis": "Lagos Big Girls is a full-length Nigerian film published by Uduak Isong TV, featuring Omeche Oko, Teniola Aladese, Osereme I.",
       "cast": [
         "Omeche Oko",
         "Teniola Aladese",
-        "Osereme I. Mike Godson"
+        "Osereme I. Mike Godson",
+        "Mike Godson"
       ],
       "featuredCast": [
         "Omeche Oko",
@@ -1182,7 +1183,7 @@
     },
     {
       "videoId": "PPaoZoWubNg",
-      "title": "STUCK ON YOU",
+      "title": "STUCK ON YOU - New Nigerian Movie",
       "rawTitle": "STUCK ON YOU - New Nigerian Movie starring Michael Dappa, Sophia Chisom (Soso), Ifeoma Odukwe",
       "synopsis": "STUCK ON YOU is a full-length Nigerian film published by Uduak Isong TV, featuring Michael Dappa, Sophia Chisom, Ifeoma Odukwe.",
       "cast": [
@@ -1307,10 +1308,12 @@
       "rawTitle": "GUARDED - SONIA UCHE, JOHN EKANEM, CHISOM AGOAWUIKE 2026 LATEST NIGERIAN MOVIE",
       "synopsis": "GUARDED a story of heartbreak, resilience, independence, and the unexpected vulnerability that comes with learning to let someone in.",
       "cast": [
-        "Sonia Uche"
+        "Sonia Uche",
+        "Chisom Agoawuike"
       ],
       "featuredCast": [
-        "Sonia Uche"
+        "Sonia Uche",
+        "Chisom Agoawuike"
       ],
       "channelName": "Sonia Uche Tv",
       "channelId": "UCHY9J0IWIWht6GqIBiLidBA",
@@ -1397,7 +1400,7 @@
     },
     {
       "videoId": "VyaPwFRhwM8",
-      "title": "For The Love of Kene",
+      "title": "For The Love of Kene - New Nigerian Movie",
       "rawTitle": "For The Love of Kene - New Nigerian Movie starring Bimbo Ademoye, Blessing J Nze, Elijah Chukwuemeka",
       "synopsis": "For The Love of Kene is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Blessing J Nze, Elijah Chukwuemeka.",
       "cast": [
@@ -1711,7 +1714,7 @@
     },
     {
       "videoId": "HAk97psM9h0",
-      "title": "SIBE",
+      "title": "SIBE STARRING",
       "rawTitle": "SIBE (THE MOVIE) STARRING. BIMBO ADEMOYE,UCHE MONTANA,UZOR ARUKWE,DEYEMI OKANLAWON. 2026 COMEDY",
       "synopsis": "SIBE is a full-length Nigerian film published by Bimbo Ademoye TV, featuring BIMBO ADEMOYE, UCHE MONTANA, UZOR ARUKWE.",
       "cast": [
@@ -2199,7 +2202,7 @@
     },
     {
       "videoId": "aLuSZ6aCJ3k",
-      "title": "It's Complicated",
+      "title": "It's Complicated - New Nigerian Movie",
       "rawTitle": "It's Complicated - New Nigerian Movie starring Eso Dike, Ekama Etim Inyang, Michael Ejoor",
       "synopsis": "It's Complicated is a full-length Nigerian film published by Uduak Isong TV, featuring Eso Dike, Ekama Etim Inyang, Michael Ejoor.",
       "cast": [
@@ -2261,7 +2264,8 @@
         "Bolaji Ogunmola",
         "Mojola Osifuywa",
         "Ifeoluwa Daramola",
-        "Bisola Salami"
+        "Bisola Salami",
+        "Toyin Abraham"
       ],
       "featuredCast": [
         "Toyin Abraham Ajeyemi",
@@ -2671,7 +2675,8 @@
         "Kuoye Yetunde",
         "Bianca Ugowanne",
         "Tobi Igbenoba",
-        "Juliet Itanyi"
+        "Juliet Itanyi",
+        "Toyin Abraham"
       ],
       "featuredCast": [
         "Toyin Abraham Ajeyemi",
@@ -2927,7 +2932,8 @@
       "cast": [
         "Uche Jombo",
         "Mercy Aigbe",
-        "David eyo"
+        "David eyo",
+        "Bianca Ugowanne"
       ],
       "featuredCast": [
         "Uche Jombo",
@@ -2973,7 +2979,8 @@
       "cast": [
         "Maurice Sam",
         "Regina Daniels",
-        "OCHANYA"
+        "OCHANYA",
+        "MAUREEN IHUA"
       ],
       "featuredCast": [
         "Maurice Sam",
@@ -3133,7 +3140,7 @@
       "videoId": "WnAOWx5MzjQ",
       "title": "PRIVATE EQUITY",
       "rawTitle": "PRIVATE EQUITY- FRANCESS NWABUNIKE DANIEL EFFIONG OBY TITUS",
-      "synopsis": "PRIVATE EQUITY is a full-length Nigerian film published by RuthKadiri247, featuring FRANCESS NWABUNIKE, Oby Titus. Watch it through the publisher's official YouTube release.",
+      "synopsis": "PRIVATE EQUITY is a full-length Nigerian film published by RuthKadiri247, featuring FRANCESS NWABUNIKE, Oby Titus.",
       "cast": [
         "FRANCESS NWABUNIKE",
         "Oby Titus"
@@ -3543,7 +3550,7 @@
     },
     {
       "videoId": "KWIpR47N9hc",
-      "title": "LOVE ALWAYS WINS",
+      "title": "LOVE ALWAYS WINS - Nollywood movie",
       "rawTitle": "LOVE ALWAYS WINS - Nollywood movie starring Omeche Oko, Bryan Okoye, Jeffery Nortey",
       "synopsis": "LOVE ALWAYS WINS is a full-length Nigerian film published by Uduak Isong TV, featuring Omeche Oko, Bryan Okoye, Jeffery Nortey.",
       "cast": [
@@ -3621,11 +3628,13 @@
       "synopsis": "SUGAR AND SPICE serves hot drama, romance, jealousy, and shocking twists that will leave your jaw on the floor.",
       "cast": [
         "Sarian Martin",
-        "Ruth Kadiri"
+        "Ruth Kadiri",
+        "Micheal Dappa"
       ],
       "featuredCast": [
         "Sarian Martin",
-        "Ruth Kadiri"
+        "Ruth Kadiri",
+        "Micheal Dappa"
       ],
       "channelName": "Sarian Martin Tv",
       "channelId": "UCpho61bUzmt4gFFb--Kggkw",
@@ -3867,7 +3876,7 @@
     },
     {
       "videoId": "k8c19b8nHX0",
-      "title": "Two Brides and A groom",
+      "title": "Two Brides and A groom - New Nollywood Movie",
       "rawTitle": "Two Brides and A groom - New Nollywood Movie starring Debby Felix, Inem King, Symon Oko",
       "synopsis": "Two Brides and A groom is a full-length Nigerian film published by Uduak Isong TV, featuring Debby Felix, Inem King, Symon Oko.",
       "cast": [
@@ -4052,13 +4061,14 @@
     },
     {
       "videoId": "DAGH-RIdUIU",
-      "title": "AND THERE WAS YOU ( Official Movie ) : CLINTON JOSHUA, OMECHE OKO, THELMA CHUKWUNWEM, CHUDY IBEKWE.",
+      "title": "AND THERE WAS YOU ( Official Movie )",
       "rawTitle": "AND THERE WAS YOU ( Official Movie ) : CLINTON JOSHUA, OMECHE OKO, THELMA CHUKWUNWEM, CHUDY IBEKWE.",
       "synopsis": "AND THERE WAS YOU ( Official Movie ) : CLINTON JOSHUA, OMECHE OKO, THELMA CHUKWUNWEM, CHUDY IBEKWE.",
       "cast": [
         "Omeche Oko",
         "Thelma Chukwunwem",
-        "CHUDY IBEKWE"
+        "CHUDY IBEKWE",
+        "Clinton Joshua"
       ],
       "featuredCast": [
         "Omeche Oko",
@@ -4441,7 +4451,8 @@
         "ADEOLUWA AKINTOBA",
         "ADEYEMI KIRAH",
         "DAMILARE OLUWATIMILEYIN",
-        "OLUKANMI ABAYOMI"
+        "OLUKANMI ABAYOMI",
+        "Toyin Abraham"
       ],
       "featuredCast": [
         "YVONNE JEGEDE",
@@ -4961,7 +4972,7 @@
       "videoId": "j9wT5Pw-ofs",
       "title": "MANAGING DIRECTOR",
       "rawTitle": "MANAGING DIRECTOR- PRISMA JAMES VAN VICKER STEFANIA BASSEY ",
-      "synopsis": "MANAGING DIRECTOR is a full-length Nigerian film published by RuthKadiri247, featuring PRISMA JAMES, Stefania Bassey. Watch it through the publisher's official YouTube release.",
+      "synopsis": "MANAGING DIRECTOR is a full-length Nigerian film published by RuthKadiri247, featuring PRISMA JAMES, Stefania Bassey.",
       "cast": [
         "PRISMA JAMES",
         "Stefania Bassey"
@@ -5285,11 +5296,13 @@
       "synopsis": "This amazing masterpiece will blow your mind, a must watch for all the singles.",
       "cast": [
         "MARTHA ANKOMAH",
-        "Chris Okagbue"
+        "Chris Okagbue",
+        "CHUKS CHYKE"
       ],
       "featuredCast": [
         "MARTHA ANKOMAH",
-        "Chris Okagbue"
+        "Chris Okagbue",
+        "CHUKS CHYKE"
       ],
       "channelName": "One And Two Films Tv",
       "channelId": "UChKCY9X0CIYtnRgIOH_egFg",
@@ -5313,7 +5326,8 @@
         "Ayo Mogaji",
         "Godspower Nwogwugwu",
         "Joseph Owosagba",
-        "Damilare Oluwatimilehin"
+        "Damilare Oluwatimilehin",
+        "Toyin Abraham"
       ],
       "featuredCast": [
         "Toyin Abraham Ajeyemi",
@@ -5335,10 +5349,14 @@
       "rawTitle": "BOND AND CURRENCY - RUTH KADIRI  ANTHON JEFFTA  DANIEL ETIM",
       "synopsis": "LemFi is a mobile app for users in the USA, EU, UK, and Canada to send money to Nigeria, Ghana, and 8 other African countries in minutes with zero transfer fees.",
       "cast": [
-        "A DANIEL ETIM"
+        "A DANIEL ETIM",
+        "Ruth Kadiri",
+        "Daniel Etim"
       ],
       "featuredCast": [
-        "A DANIEL ETIM"
+        "A DANIEL ETIM",
+        "Ruth Kadiri",
+        "Daniel Etim"
       ],
       "channelName": "RuthKadiri247",
       "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
@@ -5356,11 +5374,13 @@
       "synopsis": "HALF IN HALF is an emotional family drama packed with suspense, betrayal, and unexpected revelations.",
       "cast": [
         "Maurice Sam",
-        "Okawa Shaznay"
+        "Okawa Shaznay",
+        "MICHELLE OLUWAFEMI"
       ],
       "featuredCast": [
         "Maurice Sam",
-        "Okawa Shaznay"
+        "Okawa Shaznay",
+        "MICHELLE OLUWAFEMI"
       ],
       "channelName": "Maurice Sam TV",
       "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
@@ -5470,7 +5490,7 @@
       "videoId": "vb4AVL36Ap0",
       "title": "WIFE MARKET",
       "rawTitle": "WIFE  MARKET -  TOOSWEET ANNAN PRISMA JAMES OBY TITUS STEFFANIA BASSEY",
-      "synopsis": "WIFE MARKET is a full-length Nigerian film published by RuthKadiri247, featuring Toosweet Annan, Oby Titus. Watch it through the publisher's official YouTube release.",
+      "synopsis": "WIFE MARKET is a full-length Nigerian film published by RuthKadiri247, featuring Toosweet Annan, Oby Titus.",
       "cast": [
         "Toosweet Annan",
         "Oby Titus"
@@ -5544,11 +5564,13 @@
       "synopsis": "WILD FIRE is a gripping emotional drama filled with intense conflict, shocking twists, and powerful lessons about trust and loyalty.",
       "cast": [
         "Maurice Sam",
-        "Onyii Alex"
+        "Onyii Alex",
+        "Audrey Harrison"
       ],
       "featuredCast": [
         "Maurice Sam",
-        "Onyii Alex"
+        "Onyii Alex",
+        "Audrey Harrison"
       ],
       "channelName": "Maurice Sam TV",
       "channelId": "UCThviXLHvH8VwqxQEa4vZaw",
@@ -5682,7 +5704,7 @@
       "videoId": "VDu94-uBf64",
       "title": "JOB HUNT",
       "rawTitle": "JOB HUNT - DEZA THE GREAT FRANCESS NWABUNIKE OBY TITUS  DANIEL ETIM ",
-      "synopsis": "JOB HUNT is a full-length Nigerian film published by RuthKadiri247, featuring FRANCESS NWABUNIKE, Daniel Etim. Watch it through the publisher's official YouTube release.",
+      "synopsis": "JOB HUNT is a full-length Nigerian film published by RuthKadiri247, featuring FRANCESS NWABUNIKE, Daniel Etim.",
       "cast": [
         "FRANCESS NWABUNIKE",
         "Daniel Etim"
@@ -6198,7 +6220,8 @@
         "BAMBAM OLAWUNMI ADENIBUYAN",
         "Pamela Okoye",
         "SHAMMAH AGAH",
-        "Ichie Fuego"
+        "Ichie Fuego",
+        "BAMBAM ADENIBUYAN"
       ],
       "featuredCast": [
         "BAMBAM OLAWUNMI ADENIBUYAN",
@@ -6297,7 +6320,8 @@
       "cast": [
         "Sandra Okunzuwa",
         "Angel Unigwe",
-        "Peter komba"
+        "Peter komba",
+        "Chioma Nwosu"
       ],
       "featuredCast": [
         "Sandra Okunzuwa",
@@ -6455,11 +6479,13 @@
       "synopsis": "LOST PAGES is a gripping story of love, betrayal, and the dangerous price of uncovering the truth.",
       "cast": [
         "Clinton Joshua",
-        "Sophia Chisom"
+        "Sophia Chisom",
+        "VERA AGANAGA"
       ],
       "featuredCast": [
         "Clinton Joshua",
-        "Sophia Chisom"
+        "Sophia Chisom",
+        "VERA AGANAGA"
       ],
       "channelName": "Clinton Joshua Tv",
       "channelId": "UCu8jOPs1uHwsD2jZTDiOW3w",
@@ -6593,7 +6619,7 @@
     },
     {
       "videoId": "0SLHDG7MU3w",
-      "title": "GRAY LINES : Hidden Truth Looms Over Everything OLA DANIELS, GIFT IGAH, 2025",
+      "title": "GRAY LINES",
       "rawTitle": "GRAY LINES : Hidden Truth Looms Over Everything OLA DANIELS, GIFT IGAH, 2025 LATEST NIGERIAN MOVIE",
       "synopsis": "GRAY LINES : Hidden Truth Looms Over Everything OLA DANIELS, GIFT IGAH, 2025 is a full-length Nigerian film published by Mercyjohnsonokojie TV, featuring IGAH.",
       "cast": [
@@ -7484,7 +7510,7 @@
     },
     {
       "videoId": "OQv5NzsNnrc",
-      "title": "AJOKE",
+      "title": "AJOKE - New Nigerian Movie",
       "rawTitle": "AJOKE - New Nigerian Movie starring Bimbo Ademoye, Blessing Jessica Nze ",
       "synopsis": "AJOKE is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Blessing Jessica Nze.",
       "cast": [
@@ -7724,7 +7750,7 @@
     },
     {
       "videoId": "rUeAXriDk0M",
-      "title": "THE LAST PAYCHECK",
+      "title": "THE LAST PAYCHECK - New Nigerian Movie",
       "rawTitle": "THE LAST PAYCHECK - New Nigerian Movie starring Inem king, Osereme I., Gregory Ojefua ",
       "synopsis": "Tired of being owed salaries, three young women decide enough is enough and set out to take back what belongs to them.",
       "cast": [
@@ -7888,7 +7914,7 @@
     },
     {
       "videoId": "QB_1_yrINTs",
-      "title": "Whispers of Love",
+      "title": "Whispers of Love - New Nollywood Movie",
       "rawTitle": "Whispers of Love - New Nollywood Movie starring Eso Dike, Debby Felix",
       "synopsis": "Whispers of Love is a full-length Nigerian film published by Uduak Isong TV, featuring Eso Dike, Debby Felix.",
       "cast": [
@@ -8078,7 +8104,7 @@
       "videoId": "8_Y8mkqaJME",
       "title": "LAND OF GOLD",
       "rawTitle": "LAND OF GOLD   -TOOSWEET ANNAN DEZA THE GREAT  PRISMA JAMES FRANCESS NWABUNIKE OBY TITUS ",
-      "synopsis": "LAND OF GOLD is a full-length Nigerian film published by RuthKadiri247, featuring Toosweet Annan, FRANCESS NWABUNIKE. Watch it through the publisher's official YouTube release.",
+      "synopsis": "LAND OF GOLD is a full-length Nigerian film published by RuthKadiri247, featuring Toosweet Annan, FRANCESS NWABUNIKE.",
       "cast": [
         "Toosweet Annan",
         "FRANCESS NWABUNIKE"
@@ -8122,7 +8148,7 @@
     },
     {
       "videoId": "h5eUMVZByYo",
-      "title": "STAY WITH ME",
+      "title": "STAY WITH ME - New Nigerian Movie",
       "rawTitle": "STAY WITH ME - New Nigerian Movie starring Daniel Effiong, Bimbo Ademoye ",
       "synopsis": "STAY WITH ME is a full-length Nigerian film published by Uduak Isong TV, featuring Daniel Effiong, Bimbo Ademoye.",
       "cast": [
@@ -8242,7 +8268,7 @@
     },
     {
       "videoId": "JJA_75qhzOA",
-      "title": "Mothers in Action - New Nigerian movie starring",
+      "title": "Mothers in Action - New Nigerian movie",
       "rawTitle": "Mothers in Action - New Nigerian movie starring  Patience Ozokwo (Mama G) and Ebele Okaro",
       "synopsis": "Mothers in Action is a full-length Nigerian film published by Uduak Isong TV, featuring Patience Ozokwo, Ebele Okaro.",
       "cast": [
@@ -8339,11 +8365,13 @@
       "synopsis": "I DONT NEED YOUR LOVE is a full-length Nigerian film published by RuthKadiri247, featuring RUTH KADIRI, KWASI BLAY.",
       "cast": [
         "Ruth Kadiri",
-        "KWASI BLAY"
+        "KWASI BLAY",
+        "Frances Nwabunike"
       ],
       "featuredCast": [
         "Ruth Kadiri",
-        "KWASI BLAY"
+        "KWASI BLAY",
+        "Frances Nwabunike"
       ],
       "channelName": "RuthKadiri247",
       "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
@@ -8498,7 +8526,7 @@
     },
     {
       "videoId": "V1Z748V5NyU",
-      "title": "A SEASON FOR LOVE",
+      "title": "A SEASON FOR LOVE - New Nigerian Movie",
       "rawTitle": "A SEASON FOR LOVE - New Nigerian Movie starring Daniel Effiong, Chinonso Arubayi ",
       "synopsis": "A SEASON FOR LOVE is a full-length Nigerian film published by Uduak Isong TV, featuring Daniel Effiong, Chinonso Arubayi.",
       "cast": [
@@ -8883,7 +8911,7 @@
       "videoId": "wnGQaTHRkUc",
       "title": "ROYAL BANK",
       "rawTitle": "ROYAL BANK- DEZA THE GREAT RUTH KADIRI SIR CHRIS AKWARANDU ",
-      "synopsis": "ROYAL BANK is a full-length Nigerian film published by RuthKadiri247, featuring Deza The Great, Sir Chris Akwarandu. Watch it through the publisher's official YouTube release.",
+      "synopsis": "ROYAL BANK is a full-length Nigerian film published by RuthKadiri247, featuring Deza The Great, Sir Chris Akwarandu.",
       "cast": [
         "Deza The Great",
         "Sir Chris Akwarandu"
@@ -9072,7 +9100,8 @@
         "Bimbo Ademoye",
         "Uzor Arukwe",
         "Kunle Remi",
-        "DEYEMI OKANLAWON. TBAF"
+        "DEYEMI OKANLAWON. TBAF",
+        "Deyemi Okanlawon"
       ],
       "featuredCast": [
         "Bimbo Ademoye",
@@ -10103,7 +10132,7 @@
       "videoId": "w1FFL3J_Pbw",
       "title": "VAULTED HEART",
       "rawTitle": "VAULTED HEART- OSAS IGHODARO QWASI BLAY  OBY TITUS",
-      "synopsis": "VAULTED HEART is a full-length Nigerian film published by RuthKadiri247, featuring Osas Ighodaro, Oby Titus. Watch it through the publisher's official YouTube release.",
+      "synopsis": "VAULTED HEART is a full-length Nigerian film published by RuthKadiri247, featuring Osas Ighodaro, Oby Titus.",
       "cast": [
         "Osas Ighodaro",
         "Oby Titus"
@@ -10506,7 +10535,7 @@
       "videoId": "UnmhUohdG_4",
       "title": "LAND OF DREAMS",
       "rawTitle": "LAND OF DREAMS - EVERY DECISION HAS A PRICE RUTH KADIRI TOOSWEET ANANN DEZA THE GREAT ",
-      "synopsis": "LAND OF DREAMS is a full-length Nigerian film published by RuthKadiri247, featuring Ruth Kadiri, Deza The Great. Watch it through the publisher's official YouTube release.",
+      "synopsis": "LAND OF DREAMS is a full-length Nigerian film published by RuthKadiri247, featuring Ruth Kadiri, Deza The Great.",
       "cast": [
         "Ruth Kadiri",
         "Deza The Great"
@@ -10630,7 +10659,8 @@
         "Frederick Odunayo",
         "Zubby Micheal",
         "Fausat Balogun",
-        "Efe Irele"
+        "Efe Irele",
+        "Toyin Abraham"
       ],
       "featuredCast": [
         "Toyin Abraham Ajeyemi",
@@ -11631,7 +11661,7 @@
       "videoId": "yeMPSEnvqwk",
       "title": "PERFECT HEART",
       "rawTitle": "PERFECT HEART- TIMINI EGBUSON CHELSEA EZE PRISMA JAMES",
-      "synopsis": "PERFECT HEART is a full-length Nigerian film published by RuthKadiri247, featuring Timini Egbuson, PRISMA JAMES. Watch it through the publisher's official YouTube release.",
+      "synopsis": "PERFECT HEART is a full-length Nigerian film published by RuthKadiri247, featuring Timini Egbuson, PRISMA JAMES.",
       "cast": [
         "Timini Egbuson",
         "PRISMA JAMES"
@@ -11901,7 +11931,8 @@
       "cast": [
         "Deyemi Okanlanwon",
         "Debbie felix",
-        "Biodun Stephen"
+        "Biodun Stephen",
+        "Deyemi Okanlawon"
       ],
       "featuredCast": [
         "Deyemi Okanlanwon",
@@ -12545,7 +12576,7 @@
     },
     {
       "videoId": "3gd_IGSR8Ps",
-      "title": "FAMILY HURT",
+      "title": "FAMILY HURT - Nigerian Movies 2025 Latest Full Movies",
       "rawTitle": "FAMILY HURT - Nigerian Movies 2025 Latest Full Movies. WUMI TORIOLA. BLESSING NZE. MIWA OLORUNFEMI",
       "synopsis": "Araola sacrificed a lot to make sure that her elder sister and her daughter were well taken care of.",
       "cast": [
@@ -12965,7 +12996,7 @@
     },
     {
       "videoId": "FFF_cIVrWvg",
-      "title": "FIRST LOVE",
+      "title": "FIRST LOVE - New Nigerian Movie",
       "rawTitle": "FIRST LOVE - New Nigerian Movie starring Daniel Etim Effiong, Debby Felix, Iveren Antiev",
       "synopsis": "FIRST LOVE is a full-length Nigerian film published by Uduak Isong TV, featuring Daniel Etim Effiong, Debby Felix, Iveren Antiev.",
       "cast": [
@@ -13212,7 +13243,8 @@
       "cast": [
         "Maurice Sam",
         "Sarian Martin",
-        "Oby Titus"
+        "Oby Titus",
+        "ATEWE RAPHAEL"
       ],
       "featuredCast": [
         "Maurice Sam",
@@ -13230,16 +13262,18 @@
     },
     {
       "videoId": "9zpYWyDRigI",
-      "title": "A COPY OF LOVE",
+      "title": "A COPY OF LOVE - 2025 New Movie Starring",
       "rawTitle": "A COPY OF LOVE - 2025 New Movie Starring: John Ekanem BAM BAM Tessy Ogbonna Latest Nigerian Movie",
       "synopsis": "A COPY OF LOVE - In the world where a sister's love isn't enough, A COPY OF LOVE is a story about a sister who had to stand in for her sister who fell into a coma few days to her already Planned wedding.",
       "cast": [
         "Bambam",
-        "John Ekanem"
+        "John Ekanem",
+        "TESSY OGBONNA"
       ],
       "featuredCast": [
         "Bambam",
-        "John Ekanem"
+        "John Ekanem",
+        "TESSY OGBONNA"
       ],
       "channelName": "ENYINNA JONAS TV",
       "channelId": "UCPIJsFthtewO-NVgMojgSwA",
@@ -13283,7 +13317,8 @@
         "Bolaji Ogunmola",
         "Ozain",
         "Adeolu Akintoba",
-        "Bianca Ugowanne"
+        "Bianca Ugowanne",
+        "Toyin Abraham"
       ],
       "featuredCast": [
         "Bolaji Ogunmola",
@@ -13425,7 +13460,8 @@
         "staring BLESSING OBASI NZE",
         "Okey Jude",
         "Inem King",
-        "Kachi Nnochiri"
+        "Kachi Nnochiri",
+        "BLESSING OBASI NZE"
       ],
       "featuredCast": [
         "staring BLESSING OBASI NZE",
@@ -13614,7 +13650,7 @@
       "videoId": "mqZ8CkGfWSI",
       "title": "HEART BUDGET",
       "rawTitle": "HEART BUDGET -  OSAS IGHODARO JOHN EKANEM PRISMA JAMES",
-      "synopsis": "HEART BUDGET is a full-length Nigerian film published by RuthKadiri247, featuring Osas Ighodaro, PRISMA JAMES. Watch it through the publisher's official YouTube release.",
+      "synopsis": "HEART BUDGET is a full-length Nigerian film published by RuthKadiri247, featuring Osas Ighodaro, PRISMA JAMES.",
       "cast": [
         "Osas Ighodaro",
         "PRISMA JAMES"
@@ -13735,7 +13771,7 @@
     },
     {
       "videoId": "utt53Vpdsx8",
-      "title": "LOVE IN TRANSIT",
+      "title": "LOVE IN TRANSIT - New Nigerian Movie",
       "rawTitle": "LOVE IN TRANSIT - New Nigerian Movie starring Bimbo Ademoye, Daniel Etim, Ayanime Edem",
       "synopsis": "LOVE IN TRANSIT is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Daniel Etim, Ayanime Edem.",
       "cast": [
@@ -14237,7 +14273,7 @@
       "videoId": "-Dpwts3ECLU",
       "title": "MADE IN GOLD",
       "rawTitle": "MADE IN GOLD -FREDERICK LEONARD, SARIAN MARTIN Latest Nigerian Movie 2025 #trending #comedy #love",
-      "synopsis": "‎@FrederickLeonardTv. MADE IN GOLD is A Hilarious love Drama likened after carton characters TOM and JERRY.",
+      "synopsis": "MADE IN GOLD is A Hilarious love Drama likened after carton characters TOM and JERRY.",
       "cast": [
         "Frederick Leonard",
         "Sarian Martin"
@@ -15079,7 +15115,7 @@
       "videoId": "_86CuSRi6E4",
       "title": "ONE MORE NIGHT",
       "rawTitle": "ONE MORE NIGHT -FREDERICK LEONARD, CYNTHIA CLARKE, Latest Full Nigerian Movie 2025 #trending #comedy",
-      "synopsis": "ONE MORE NIGHT is a full-length Nigerian film published by Frederick Leonard TV., featuring Frederick Leonard, Cynthia Clarke. Watch it through the publisher's official YouTube release.",
+      "synopsis": "ONE MORE NIGHT is a full-length Nigerian film published by Frederick Leonard TV., featuring Frederick Leonard, Cynthia Clarke.",
       "cast": [
         "Frederick Leonard",
         "Cynthia Clarke"
@@ -15217,7 +15253,7 @@
     },
     {
       "videoId": "6tcKdDd05SQ",
-      "title": "LOVE AT LAST",
+      "title": "LOVE AT LAST FULL MOVIE",
       "rawTitle": "LOVE AT LAST FULL MOVIE - (New Movie)Mike Godson / Ella Idu 2025 Latest Nigerian Nollywood Movie",
       "synopsis": "Sometimes we have to be careful of our words and actions because later someday those words and actions will always leave a huge wound that might come back to haunt us with regrets in our hearts and life.",
       "cast": [
@@ -15247,7 +15283,7 @@
     },
     {
       "videoId": "ZJ0fbDkp4B0",
-      "title": "OUR FIANCE",
+      "title": "OUR FIANCE FULL MOVIE",
       "rawTitle": "OUR FIANCE FULL MOVIE- (New Movie)Rosabelle Andrews /Alex cross 2025 Latest Nigerian Nollywood Movie",
       "synopsis": "Torn between his love for the elder sister and his growing feelings for the younger, he faced an impossible decision.",
       "cast": [
@@ -15507,7 +15543,7 @@
     },
     {
       "videoId": "I4GstqEX4Ug",
-      "title": "LOVE MADE ME CRY",
+      "title": "LOVE MADE ME CRY FULL MOVIE",
       "rawTitle": "LOVE MADE ME CRY FULL MOVIE-(New Movie)Uju Okoli /Dave Ogbeni - 2025 Latest Nigerian Nollywood Movie",
       "synopsis": "Do not allow yourself to be pushed to the level of desperation, where you sacrifice your dignity to please anyone.",
       "cast": [
@@ -16194,7 +16230,7 @@
     },
     {
       "videoId": "jSwB2pErfIo",
-      "title": "SOMETHING MORE- Blossom Chukuwujekwu,Bolaji Ogunmola,Blessing Onukwe, Michael Ejoor & Charles born.",
+      "title": "SOMETHING MORE- Blossom Chukuwujekwu,Bolaji Ogunmola,Blessing Onukwe, Michael Ejoor & Charles born",
       "rawTitle": "SOMETHING MORE- Blossom Chukuwujekwu,Bolaji Ogunmola,Blessing Onukwe, Michael Ejoor & Charles born.",
       "synopsis": "SOMETHING MORE- Blossom Chukuwujekwu,Bolaji Ogunmola,Blessing Onukwe, Lucy Edet Ghost_Beatz_Penn_Station FX1NRBYGXVRVGJ52 Wicked_Cinema_Extinction NDGNFADADRWZDJQ0 Reveille_Reprieval 05SEEMOJP1OWPC6W Cody_Martin_Half_Empty 5EC20UZJQZKU8CCN When All Have Left Kurtis Parks MCB4WXPIOELBNV39 Rest_Settle_Slowing_Down NH2HXHU5TTLQDJ4V Matt_Wigton_Listen_To_Your_He",
       "cast": [
@@ -16339,10 +16375,14 @@
       "rawTitle": "PUT A RING ON IT - INI EDO, UZOR ARUKWE, CHIKE DANIELS",
       "synopsis": "💔 Dora has waited 15 years for love to turn into commitment… but how long is too long to wait for a ring?",
       "cast": [
-        "the stunning Ini Edo"
+        "the stunning Ini Edo",
+        "Ini Edo",
+        "Chike Daniels"
       ],
       "featuredCast": [
-        "the stunning Ini Edo"
+        "the stunning Ini Edo",
+        "Ini Edo",
+        "Chike Daniels"
       ],
       "channelName": "Ini Edo Tv",
       "channelId": "UC1Ti2Ku3o8k0gcL8ku4lyrg",
@@ -16355,7 +16395,7 @@
     },
     {
       "videoId": "cuATJ5Mlrok",
-      "title": "THE HOMECOMING",
+      "title": "THE HOMECOMING. LATEST ROMANTIC MOVIE",
       "rawTitle": "THE HOMECOMING. LATEST ROMANTIC MOVIE. STARRING BIMBO ADEMOYE ,TIMINI EGBUSON, BISOLA AIYEOLA",
       "synopsis": "THE HOMECOMING is a full-length Nigerian film published by Bimbo Ademoye TV, featuring BIMBO ADEMOYE, TIMINI EGBUSON, BISOLA AIYEOLA.",
       "cast": [
@@ -17372,7 +17412,7 @@
     },
     {
       "videoId": "VrOljY6rivs",
-      "title": "TEACHER DORCAS",
+      "title": "TEACHER DORCAS - New Nigerian film",
       "rawTitle": "TEACHER DORCAS - New Nigerian film starring Bimbo Ademoye, Lateef Adedimeji, Ehis Perfect",
       "synopsis": "TEACHER DORCAS is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Lateef Adedimeji, Ehis Perfect.",
       "cast": [
@@ -17496,7 +17536,7 @@
       "videoId": "DAroPHujCdI",
       "title": "MR LECTURER",
       "rawTitle": "MR LECTURER - FREDERICK LEONARD, SARIAN MARTIN. Latest Full Nigerian Movie. 2024. #trending #comedy",
-      "synopsis": "MR LECTURER is a full-length Nigerian film published by Frederick Leonard TV., featuring Frederick Leonard, Sarian Martin. Watch it through the publisher's official YouTube release.",
+      "synopsis": "MR LECTURER is a full-length Nigerian film published by Frederick Leonard TV., featuring Frederick Leonard, Sarian Martin.",
       "cast": [
         "Frederick Leonard",
         "Sarian Martin"
@@ -17516,7 +17556,7 @@
     },
     {
       "videoId": "3aQFM1ZtMG0",
-      "title": "THE GHOST WE CHASE",
+      "title": "THE GHOST WE CHASE (LATEST NIGERIAN MOVIE)",
       "rawTitle": "THE GHOST WE CHASE (LATEST NIGERIAN MOVIE) MICHAEL DAPPA, TOPE OLOWONIYAN, BOLAJI OGUNMOLA, ESO DIKE",
       "synopsis": "The Ghost We Chase - Michael Dappa, tope olowoniyan ,Bolaji Ogunmola, ESO dike",
       "cast": [
@@ -17572,7 +17612,8 @@
       "cast": [
         "Maurice Sam",
         "Sonia Uche",
-        "CHISOM AGOAWUIKE THELMA C"
+        "CHISOM AGOAWUIKE THELMA C",
+        "Chisom Agoawuike"
       ],
       "featuredCast": [
         "Maurice Sam",
@@ -17830,7 +17871,7 @@
     },
     {
       "videoId": "BvXhlAFIwmw",
-      "title": "OLD HABITS (FULLNIGERIANMOVIE)",
+      "title": "OLD HABITS",
       "rawTitle": "OLD HABITS (FULLNIGERIANMOVIE)- KACHINNOCHIRI, SANDRA OKUNZUWA,BOLAJIOGUNMOLA,LUCY AMEH&DANIEL ABUA",
       "synopsis": "Old habits - David and Boye chit-chat about David’s proposal plans. Boye meets his new Neighbor, Ruby, it is an awkward one.",
       "cast": [
@@ -18052,7 +18093,7 @@
     },
     {
       "videoId": "pVhlPsVBLOA",
-      "title": "MAID FOR LOVE",
+      "title": "MAID FOR LOVE - New Nigerian movie",
       "rawTitle": "MAID FOR LOVE - New Nigerian movie starring Eso Dike and Debby Felix",
       "synopsis": "MAID FOR LOVE is a full-length Nigerian film published by Uduak Isong TV, featuring Eso Dike, Debby Felix.",
       "cast": [
@@ -18299,11 +18340,13 @@
       "synopsis": "BEND OR BREAK- New Ruth Kadiri movie is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Detola jones, Felix omokhodion.",
       "cast": [
         "Detola Jones",
-        "Felix omokhodion"
+        "Felix omokhodion",
+        "Ruth Kadiri"
       ],
       "featuredCast": [
         "Detola Jones",
-        "Felix omokhodion"
+        "Felix omokhodion",
+        "Ruth Kadiri"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -18441,7 +18484,7 @@
     },
     {
       "videoId": "GoWZfsdd1yw",
-      "title": "THE BEAUTY OF BROKEN THINGS",
+      "title": "THE BEAUTY OF BROKEN THINGS (LATEST NIGERIAN MOVIE)",
       "rawTitle": "THE BEAUTY OF BROKEN THINGS (LATEST NIGERIAN MOVIE) MICHAEL DAPPA, BOLAJI OGUNMOLA, BISOLA AIYEOLA",
       "synopsis": "THE BEAUTY OF BROKEN THINGS (LATEST NIGERIAN MOVIE) MICHAEL DAPPA, BOLAJi OGUNMOLA, BISOLA AIYEOLA, BIMBO AKINTOLA, TIN MBA, CHARLES BORN, DAVID EYO",
       "cast": [
@@ -18563,7 +18606,7 @@
       "videoId": "T1-buA-yAmo",
       "title": "HOLY MATRIMONY",
       "rawTitle": "HOLY MATRIMONY -FREDERICK LEONARD, ONYI ALEX, NINI MBONU. Latest Full Nigerian Movie 2024. #trending",
-      "synopsis": "‎@FrederickLeonardTv. #trending #love #comedy #movie #drama #frederickleonard #onyialex #latest #latestnews #latestnollywoodmovies #trending",
+      "synopsis": "HOLY MATRIMONY is a full-length Nigerian film published by Frederick Leonard TV., featuring Frederick Leonard, ONYI ALEX, Nini Mbonu. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Frederick Leonard",
         "ONYI ALEX",
@@ -18804,11 +18847,13 @@
       "synopsis": "MAD CRAZY INSANE (Beauty & The Beast) is a full-length Nigerian film published by EDDIE WATSON TV, featuring Eddie Watson, Detola Jones.",
       "cast": [
         "Eddie Watson",
-        "Detola Jones"
+        "Detola Jones",
+        "MORGAN NWAMBA"
       ],
       "featuredCast": [
         "Eddie Watson",
-        "Detola Jones"
+        "Detola Jones",
+        "MORGAN NWAMBA"
       ],
       "channelName": "EDDIE WATSON TV",
       "channelId": "UCvI40C0yn2mE0bRB2RjzHyA",
@@ -18938,7 +18983,7 @@
     },
     {
       "videoId": "rxKrZZJ5C50",
-      "title": "The Thought Of You",
+      "title": "The Thought Of You - New Nigerian Movie",
       "rawTitle": "The Thought Of You - New Nigerian Movie starring Daniel Etim, Debby Felix",
       "synopsis": "The Thought Of You is a full-length Nigerian film published by Uduak Isong TV, featuring Daniel Etim, Debby Felix.",
       "cast": [
@@ -19076,7 +19121,7 @@
     },
     {
       "videoId": "3rNo06AZd-s",
-      "title": "RUSE.",
+      "title": "RUSE. 2024 LATEST COMEDY",
       "rawTitle": "RUSE. 2024 LATEST COMEDY. STARRING BIMBO ADEMOYE, KUNLE REMI,SOPHIE ALAKIIJA",
       "synopsis": "RUSE. is a full-length Nigerian film published by Bimbo Ademoye TV, featuring BIMBO ADEMOYE, KUNLE REMI, SOPHIE ALAKIIJA.",
       "cast": [
@@ -19246,11 +19291,13 @@
       "synopsis": "This amazing masterpiece will melt your heart very emotional and intriguing...",
       "cast": [
         "ONYI ALEX",
-        "JAMES GARDINER"
+        "JAMES GARDINER",
+        "DESTINY ETIKO"
       ],
       "featuredCast": [
         "ONYI ALEX",
-        "JAMES GARDINER"
+        "JAMES GARDINER",
+        "DESTINY ETIKO"
       ],
       "channelName": "One And Two Films Tv",
       "channelId": "UChKCY9X0CIYtnRgIOH_egFg",
@@ -19359,7 +19406,7 @@
     },
     {
       "videoId": "HN-X5xCbNTw",
-      "title": "IMPERFECT MATCH2-(FULLNIGERIANMOVIE)IK OGBONNA,BOLAJIOGUNMOLA,SARIAN MARTIN,CHIOMA NWOSU,JOHN EKANEM",
+      "title": "IMPERFECT MATCH2",
       "rawTitle": "IMPERFECT MATCH2-(FULLNIGERIANMOVIE)IK OGBONNA,BOLAJIOGUNMOLA,SARIAN MARTIN,CHIOMA NWOSU,JOHN EKANEM",
       "synopsis": "Imperfect Match- IK OGBONNA, BOLAJI OGUNMOLA, SARIAN MARTIN, CHIOMA NWOSU, JOHN EKANEM Ghost_Beatz_Rainmaker 4AZZ3NAZGAJAYLVR Alsever_Lake_Where_The_Heart_Is Y1JRSHFM4DOPHGKU Brent_Wood_The_Sweetest_Thing BVFWUEFWGDSDOZWM Cast_Of_Characters_Curious_Play HYCRGN8D0W4H9BGD Stephen_Keech_Music_Box F3AYAK2ORHUUP7FC Alsever_Lake_Finding_My_Way 398CXAZO03UQNM0I Ton",
       "cast": [
@@ -19963,7 +20010,8 @@
         "Michelle Oluwapemi",
         "Ogbonnaya Blessing",
         "Wole Olayinka",
-        "Peter Onwuka"
+        "Peter Onwuka",
+        "BLESSING OBASI NZE"
       ],
       "featuredCast": [
         "Omeche Oko",
@@ -20034,7 +20082,7 @@
     },
     {
       "videoId": "_e6QYzFbKB4",
-      "title": "WEDDING NIGHT MERCY JOHNSON ANNAN TOOSWEET SHAZNAY OKAWA - 2024",
+      "title": "WEDDING NIGHT",
       "rawTitle": "WEDDING NIGHT (THE MOVIE) MERCY JOHNSON ANNAN TOOSWEET SHAZNAY OKAWA - 2024 LATEST NIGERIAN MOVIE",
       "synopsis": "Another mind blowing nollywood blockbuster movie you can not afford to miss Mercy Johnson, Annan Toosweet And Shaznay Okawa nailed this one.",
       "cast": [
@@ -20056,7 +20104,7 @@
     },
     {
       "videoId": "UCZz-qi4ORk",
-      "title": "Last Straw",
+      "title": "Last Straw - New Nigerian movie",
       "rawTitle": "Last Straw - New Nigerian movie starring Bimbo Ademoye, Timini Egbuson, Shaffy Bello",
       "synopsis": "Last Straw is a full-length Nigerian film published by Bimbo Ademoye TV, featuring Bimbo Ademoye, Timini Egbuson, Shaffy Bello.",
       "cast": [
@@ -20080,7 +20128,7 @@
     },
     {
       "videoId": "Gv2zVYlwaRs",
-      "title": "The Perfect Wedding Dress",
+      "title": "The Perfect Wedding Dress - New Nigerian movie",
       "rawTitle": "The Perfect Wedding Dress - New Nigerian movie starring Omeche Oko, Teniola Aladese, Mike Godson",
       "synopsis": "The Perfect Wedding Dress is a full-length Nigerian film published by Uduak Isong TV, featuring Omeche Oko, Teniola Aladese, Mike Godson.",
       "cast": [
@@ -20231,7 +20279,8 @@
         "DORIS IFEKA",
         "BESTMAN THOMPSON",
         "NY ADDAE",
-        "NANA BOAMAH"
+        "NANA BOAMAH",
+        "Peter komba"
       ],
       "featuredCast": [
         "Timini Egbuson",
@@ -20327,7 +20376,7 @@
       "videoId": "OOM2fxlZ0dg",
       "title": "MY TAXI DRIVER. MIKE EZURUONYE, MIRACLE GODWIN, SOMTO EZE, CHIDI NWACHUKWU, HANNAH CYRIL",
       "rawTitle": "MY TAXI DRIVER. MIKE EZURUONYE, MIRACLE GODWIN, SOMTO EZE, CHIDI NWACHUKWU, HANNAH CYRIL",
-      "synopsis": "MY TAXI DRIVER. MIKE EZURUONYE, MIRACLE GODWIN, SOMTO EZE, CHIDI NWACHUKWU, HANNAH CYRIL is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Miracle Godwin, CHIDI NWACHUKWU. Watch it through the publisher's official YouTube release.",
+      "synopsis": "MY TAXI DRIVER. MIKE EZURUONYE, MIRACLE GODWIN, SOMTO EZE, CHIDI NWACHUKWU, HANNAH CYRIL is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Miracle Godwin, CHIDI NWACHUKWU.",
       "cast": [
         "Miracle Godwin",
         "CHIDI NWACHUKWU"
@@ -20492,7 +20541,7 @@
     },
     {
       "videoId": "jgMAm05pBRI",
-      "title": "MY BABY DOLL :",
+      "title": "MY BABY DOLL",
       "rawTitle": "MY BABY DOLL : INI EDO , IK OGBONNA, PATIENCE OZOKWO.  2024 LATEST FULL NIGERIAN MOVIE",
       "synopsis": "After enduring unimaginable tragedies, a woman's life takes a suprising turn when she finds a doll and names 'her' Precious.",
       "cast": [
@@ -20679,7 +20728,7 @@
     },
     {
       "videoId": "24EmtFR6pWM",
-      "title": "Unexpected R0mance",
+      "title": "Unexpected R0mance - Nollywood Movie",
       "rawTitle": "Unexpected R0mance - Nollywood Movie starring Bimbo Ademoye, Eso Dike, Omeche Oko",
       "synopsis": "Unexpected R0mance is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Eso Dike, Omeche Oko.",
       "cast": [
@@ -20901,7 +20950,8 @@
       "cast": [
         "Bimbo Ademoye",
         "Chioma Akpotha",
-        "Kunle Remi"
+        "Kunle Remi",
+        "Ernest Obi"
       ],
       "featuredCast": [
         "Bimbo Ademoye",
@@ -21011,12 +21061,16 @@
       "videoId": "AJyPQ294E44",
       "title": "MAN IN LOVE",
       "rawTitle": "MAN IN LOVE  - FREDERICK LEONARD, UJU OKOLIE, CHIOMA OKAFOR Latest Full Nigerian Movie 2024",
-      "synopsis": "‎@FrederickLeonardTv. #frederickleonard #ujuokoli #chiomaokafor #trending",
+      "synopsis": "MAN IN LOVE is a full-length Nigerian film published by Frederick Leonard TV., featuring Sister Victoria, Frederick Leonard, Chioma Okafor. Watch it through the publisher's official YouTube release.",
       "cast": [
-        "Sister Victoria"
+        "Sister Victoria",
+        "Frederick Leonard",
+        "Chioma Okafor"
       ],
       "featuredCast": [
-        "Sister Victoria"
+        "Sister Victoria",
+        "Frederick Leonard",
+        "Chioma Okafor"
       ],
       "channelName": "Frederick Leonard TV.",
       "channelId": "UCzeFm4h5hkGm4y6SV9zvGjA",
@@ -21257,11 +21311,13 @@
       "synopsis": "AFTER SCHOOL is a full-length Nigerian film published by RuthKadiri247, featuring FAITH STANLEY, KELVIN EZIKE.",
       "cast": [
         "FAITH STANLEY",
-        "KELVIN EZIKE"
+        "KELVIN EZIKE",
+        "Annabel Apara"
       ],
       "featuredCast": [
         "FAITH STANLEY",
-        "KELVIN EZIKE"
+        "KELVIN EZIKE",
+        "Annabel Apara"
       ],
       "channelName": "RuthKadiri247",
       "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
@@ -21469,7 +21525,7 @@
     },
     {
       "videoId": "afPlyob29Ts",
-      "title": "TO LOVE A GIRL",
+      "title": "TO LOVE A GIRL - Nollywood movie",
       "rawTitle": "TO LOVE A GIRL - Nollywood movie starring Ekamma Etim Inyang, Saga Deolu, Omeche Oko, Ichie Fuego",
       "synopsis": "TO LOVE A GIRL is a full-length Nigerian film published by Uduak Isong TV, featuring Ekamma Etim Inyang, Saga Deolu, Omeche Oko.",
       "cast": [
@@ -21991,7 +22047,7 @@
     },
     {
       "videoId": "oLHhAlFsy4I",
-      "title": "SNEAKY LINK",
+      "title": "SNEAKY LINK - New Nollywood movie",
       "rawTitle": "SNEAKY LINK - New Nollywood movie starring Uzor Arukwe, Teniola Aladese, Omeche Oko.",
       "synopsis": "SNEAKY LINK is a full-length Nigerian film published by Uduak Isong TV, featuring Uzor Arukwe, Teniola Aladese, Omeche Oko.",
       "cast": [
@@ -22089,7 +22145,7 @@
     },
     {
       "videoId": "kDBF_HhbiZs",
-      "title": "STRANGE AFFECTION ETINOSA IDEMUDIA EUCHARIA ANUNOBI NOSA REX - 2024",
+      "title": "STRANGE AFFECTION",
       "rawTitle": "STRANGE AFFECTION (THE MOVIE)ETINOSA IDEMUDIA EUCHARIA ANUNOBI NOSA REX - 2024 LATEST NIGERIAN MOVIE",
       "synopsis": "Watch Best Of Nigerian Nollywood Movies ,Watch Best of Nigerian actress,Best Of Nigerian Actors, Best Of Mercy Johnson, Best Of Fredrick Leonard, Best Of Zubby Micheal, only on Mercy Johnson Okojie TV",
       "cast": [
@@ -22233,7 +22289,8 @@
         "Sarian Martin",
         "DANIEL ROCKEY",
         "BECKY PATRICK EMEKA DARLINGTON",
-        "Miracle Godwin"
+        "Miracle Godwin",
+        "Emeka Darlington"
       ],
       "featuredCast": [
         "Sarian Martin",
@@ -22251,7 +22308,7 @@
     },
     {
       "videoId": "qq0CRAwWoBM",
-      "title": "A PERFECT PROPOSAL",
+      "title": "A PERFECT PROPOSAL - New Nollywood love story",
       "rawTitle": "A PERFECT PROPOSAL - New Nollywood love story starring Majid Michel, Ekamma Inyang, Flora 222.",
       "synopsis": "A PERFECT PROPOSAL is a full-length Nigerian film published by Uduak Isong TV, featuring Majid Michel, Ekamma Inyang.",
       "cast": [
@@ -22273,7 +22330,7 @@
     },
     {
       "videoId": "aoJklXLE7PY",
-      "title": "A nurse falls involve with his billionaire patient",
+      "title": "STAR CROSSED",
       "rawTitle": "A nurse falls involve with his billionaire patient -  STAR CROSSED - LATEST FULL NIGERIAN MOVIE 2025",
       "synopsis": "STAR CROSSED - SANDRA OKUNZUWA, CHIDI DIKE, CHIOMA NWOSU, LATEST FULL NIGERIAN MOVIE 2025",
       "cast": [
@@ -22398,7 +22455,7 @@
     },
     {
       "videoId": "Kdxm9Pa2aiE",
-      "title": "HEALING DESIRES",
+      "title": "HEALING DESIRES - New Nollywood drama",
       "rawTitle": "HEALING DESIRES - New Nollywood drama featuring Daniel Etim Effiong and Scarlet Gomez.",
       "synopsis": "HEALING DESIRES is a full-length Nigerian film published by Uduak Isong TV, featuring Daniel Etim Effiong, Scarlet Gomez.",
       "cast": [
@@ -22510,7 +22567,7 @@
     },
     {
       "videoId": "8MD2YqtL09o",
-      "title": "MY MADAM.",
+      "title": "MY MADAM",
       "rawTitle": "MY MADAM. LATEST NOLLYWOOD MOVIE  BRAINJOTTER | BOBBY EKPE | 2024 MOVIE",
       "synopsis": "MY MADAM. is a full-length Nigerian film published by Brain Jotter, featuring Brainjotter.",
       "cast": [
@@ -22821,7 +22878,7 @@
     },
     {
       "videoId": "9D5g2MWLV6M",
-      "title": "IT'S ABOUT US",
+      "title": "IT'S ABOUT US - New Nollywood Romantic Comedy",
       "rawTitle": "IT'S ABOUT US - New Nollywood Romantic Comedy  starring Bimbo Ademoye, Uzor Arukwe",
       "synopsis": "IT'S ABOUT US is a full-length Nigerian film published by Uduak Isong TV, featuring Bimbo Ademoye, Uzor Arukwe.",
       "cast": [
@@ -22920,7 +22977,7 @@
       "videoId": "SdtIqR8NvBI",
       "title": "WHEN ATTITTUDE MEETS ARROGANCE",
       "rawTitle": "WHEN ATTITTUDE MEETS ARROGANCE- ESO DIKE, HERO DANIEL, CHIDI NWACHUKWU, BECKY PATRICK",
-      "synopsis": "WHEN ATTITTUDE MEETS ARROGANCE is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Eso Dike, CHIDI NWACHUKWU. Watch it through the publisher's official YouTube release.",
+      "synopsis": "WHEN ATTITTUDE MEETS ARROGANCE is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Eso Dike, CHIDI NWACHUKWU.",
       "cast": [
         "Eso Dike",
         "CHIDI NWACHUKWU"
@@ -22993,11 +23050,13 @@
       "synopsis": "This is the best movie you will see on the internet today....very educative and funny.",
       "cast": [
         "Chike Daniels",
-        "SOSO"
+        "SOSO",
+        "Sophia Chisom"
       ],
       "featuredCast": [
         "Chike Daniels",
-        "SOSO"
+        "SOSO",
+        "Sophia Chisom"
       ],
       "channelName": "Uchenna Mbunabo Tv",
       "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
@@ -24391,11 +24450,14 @@
       "synopsis": "AFTER 1970 is a full-length Nigerian film published by DestinyEtiko Tv, featuring JERRY WILLIAMS, MARY IGWE LIZZY GOLD.",
       "cast": [
         "JERRY WILLIAMS",
-        "MARY IGWE LIZZY GOLD"
+        "MARY IGWE LIZZY GOLD",
+        "DESTINY ETIKO",
+        "MARY IGWE"
       ],
       "featuredCast": [
         "JERRY WILLIAMS",
-        "MARY IGWE LIZZY GOLD"
+        "MARY IGWE LIZZY GOLD",
+        "DESTINY ETIKO"
       ],
       "channelName": "DestinyEtiko Tv",
       "channelId": "UCj5sfwkIpMOlRWd4xJlmwXg",
@@ -24414,7 +24476,8 @@
       "cast": [
         "SPOT - CHINENYE NNEBE",
         "Pamela Okoye",
-        "Chike Daniels"
+        "Chike Daniels",
+        "Chinenye Nnebe"
       ],
       "featuredCast": [
         "SPOT - CHINENYE NNEBE",
@@ -24605,7 +24668,7 @@
       "videoId": "vlOa1O6cIC4",
       "title": "GHETTO LOVE- CHRIS OKAGBUE, SARIAN MARTIN, BECKY PATRICK, SIR CHRIS AKWARANDU",
       "rawTitle": "GHETTO LOVE- CHRIS OKAGBUE, SARIAN MARTIN, BECKY PATRICK, SIR CHRIS AKWARANDU",
-      "synopsis": "GHETTO LOVE- CHRIS OKAGBUE, SARIAN MARTIN, BECKY PATRICK, SIR CHRIS AKWARANDU is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Sarian Martin, Sir Chris Akwarandu. Watch it through the publisher's official YouTube release.",
+      "synopsis": "GHETTO LOVE- CHRIS OKAGBUE, SARIAN MARTIN, BECKY PATRICK, SIR CHRIS AKWARANDU is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Sarian Martin, Sir Chris Akwarandu.",
       "cast": [
         "Sarian Martin",
         "Sir Chris Akwarandu"
@@ -24653,7 +24716,8 @@
       "cast": [
         "Frederick Leonard",
         "Ebube Nwagbo",
-        "Bryan Okwara"
+        "Bryan Okwara",
+        "Victoria Egbuchere"
       ],
       "featuredCast": [
         "Frederick Leonard",
@@ -24717,7 +24781,7 @@
     },
     {
       "videoId": "_nAtm_bd9L4",
-      "title": "My single mother - A Christian movie starring",
+      "title": "My single mother - A Christian movie",
       "rawTitle": "My single mother - A Christian movie starring  Miwa Olorunfemi, Ujams Chukwunonso, Chike",
       "synopsis": "My single mother is a full-length Nigerian film published by Uduak Isong TV, featuring Miwa Olorunfemi, Ujams Chukwunonso, Chike.",
       "cast": [
@@ -24942,7 +25006,8 @@
         "Uche Montana",
         "Chike Daniels",
         "FIONA GARBA",
-        "EMMA AYALOGU"
+        "EMMA AYALOGU",
+        "CHIOMA EDAK"
       ],
       "featuredCast": [
         "Uche Montana",
@@ -25059,7 +25124,8 @@
         "Seleye Fubara",
         "Kachi Nnochiri",
         "KEIRA HEWATCH CHIOMA NWOSU",
-        "Rita Edochie"
+        "Rita Edochie",
+        "Chioma Nwosu"
       ],
       "featuredCast": [
         "Seleye Fubara",
@@ -25082,11 +25148,13 @@
       "synopsis": "Until You is written by Adaeze Ibechukwu, directed by Val Edochie and produced by Onyinye Udezeh",
       "cast": [
         "Sandra Ifudu",
-        "Omeche Oko in this"
+        "Omeche Oko in this",
+        "Omeche Oko"
       ],
       "featuredCast": [
         "Sandra Ifudu",
-        "Omeche Oko in this"
+        "Omeche Oko in this",
+        "Omeche Oko"
       ],
       "channelName": "Uduak Isong TV",
       "channelId": "UCVVs7iCZgDTBi7nPs4m4ksg",
@@ -25242,7 +25310,7 @@
       "videoId": "vUGbA5_MjQE",
       "title": "PRISON BREAK",
       "rawTitle": "PRISON BREAK - BIMBO ADEMOYE, KENNETH NWADIKE, SARIAN MARTIN",
-      "synopsis": "vies #nollywoodpicturestv #nollywoodnigerianmovies #nollywoodchanneltv #sorrowgate #chididike #oluchiafundu #mauricesammovies #films #film #entertainment #love #homeentertainment #wrongmove #nigerianmovies #nigeriaentertainment #lagos #unitedkingdom #unitedstates #ghanaentertainment #ghanamovies #kannywood #canada #canada #collywood #botswood #ghallywood #ka",
+      "synopsis": "PRISON BREAK is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring Bimbo Ademoye, Kenneth Nwadike, Sarian Martin. Watch it through the publisher's official YouTube release.",
       "cast": [
         "Bimbo Ademoye",
         "Kenneth Nwadike",
@@ -25294,7 +25362,8 @@
       "cast": [
         "Frederick Leonard",
         "Onyii Alex",
-        "PATIENCE UJAH"
+        "PATIENCE UJAH",
+        "Anthony Woode"
       ],
       "featuredCast": [
         "Frederick Leonard",
@@ -25321,7 +25390,9 @@
         "Emem Ufot",
         "Opeyemi Dada",
         "Ayanime Edem",
-        "Ivie Iveren"
+        "Ivie Iveren",
+        "Bimbo Ademoye",
+        "Daniel Etim"
       ],
       "featuredCast": [
         "Ehis Perfect",
@@ -25506,7 +25577,7 @@
     },
     {
       "videoId": "rHYx7G-d8nU",
-      "title": "JUST TWO OF US",
+      "title": "JUST TWO OF US - New Nollywood drama",
       "rawTitle": "JUST TWO OF US - New Nollywood drama featuring Ego Nwosu, Chioma Nwosu, Kenneth Nwadike",
       "synopsis": "Just The Two Of Us is written by Ogugua Ajayi, directed by Akin Tijani",
       "cast": [
@@ -25701,11 +25772,13 @@
       "synopsis": "A man in the midst of a marital dispute, loses his memory in an auto crash.",
       "cast": [
         "Ebube Nwagbo",
-        "Onyii Alex"
+        "Onyii Alex",
+        "Bryan Okwara"
       ],
       "featuredCast": [
         "Ebube Nwagbo",
-        "Onyii Alex"
+        "Onyii Alex",
+        "Bryan Okwara"
       ],
       "channelName": "Uchenna Mbunabo Tv",
       "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
@@ -26034,7 +26107,7 @@
     },
     {
       "videoId": "aOtziIRQ900",
-      "title": "AN UNLIKELY PAIR",
+      "title": "AN UNLIKELY PAIR - New Nollywood Romantic movie",
       "rawTitle": "AN UNLIKELY PAIR - New Nollywood Romantic  movie starring Shine Rossman, Uzor Arukwe, Femi Branch",
       "synopsis": "An unlikely pair is written by Gift Collins and directed by Onyinye Udezeh of Mazinni Pictures.",
       "cast": [
@@ -26246,16 +26319,18 @@
     },
     {
       "videoId": "cVTnG_emA6w",
-      "title": "FOR A BETTER TOMORROW/ Ruth Kadiri movies",
+      "title": "FOR A BETTER TOMORROW",
       "rawTitle": "FOR A BETTER TOMORROW/ Ruth Kadiri movies/ Onyii Alex/Hero Daniel’s",
       "synopsis": "FOR A BETTER TOMORROW/ Ruth Kadiri movies is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Onyii Alex, Hero Daniel’s.",
       "cast": [
         "Onyii Alex",
-        "Hero Daniel’s"
+        "Hero Daniel’s",
+        "Ruth Kadiri"
       ],
       "featuredCast": [
         "Onyii Alex",
-        "Hero Daniel’s"
+        "Hero Daniel’s",
+        "Ruth Kadiri"
       ],
       "channelName": "ChinneyLoveEze Tv",
       "channelId": "UCnZ28GESUBXyZSIvzcs1RXA",
@@ -26302,7 +26377,8 @@
         "Ruth Kadiri",
         "KENNETH KENNETH NWADIKE",
         "Oby Titus",
-        "MARYROSE EMEKA"
+        "MARYROSE EMEKA",
+        "Kenneth Nwadike"
       ],
       "featuredCast": [
         "Ruth Kadiri",
@@ -26350,11 +26426,13 @@
       "synopsis": "Nollywood drama is a full-length Nigerian film published by Uduak Isong TV, featuring Maurice Sam, Jessica Nze.",
       "cast": [
         "Maurice Sam",
-        "Jessica Nze"
+        "Jessica Nze",
+        "CHIDI NWACHUKWU"
       ],
       "featuredCast": [
         "Maurice Sam",
-        "Jessica Nze"
+        "Jessica Nze",
+        "CHIDI NWACHUKWU"
       ],
       "channelName": "Uduak Isong TV",
       "channelId": "UCVVs7iCZgDTBi7nPs4m4ksg",
@@ -26423,7 +26501,8 @@
         "Deza The Great",
         "Sandra Okunzuwa",
         "Ese Eriata",
-        "SIRT CHRIS AKWARANDU"
+        "SIRT CHRIS AKWARANDU",
+        "Chris Akwarandu"
       ],
       "featuredCast": [
         "Deza The Great",
@@ -26463,7 +26542,7 @@
     },
     {
       "videoId": "4sKi9iG0JuA",
-      "title": "A Holiday Affair",
+      "title": "A Holiday Affair - New Nollywood Romantic Movie",
       "rawTitle": "A Holiday Affair - New Nollywood Romantic Movie starring Maurice Sam, Ekamma Etim-Inyang, Ben Olaye",
       "synopsis": "A Holiday Affair is written by Amina Anyaegbuna, directed by Seun Afolabi for Uduak Isong TV.",
       "cast": [
@@ -26514,7 +26593,7 @@
     },
     {
       "videoId": "CnJhw0vI6-k",
-      "title": "Watch Ruke (Maurice Sam) and Jess (Omeche Oko) begin to fall in love. Nollywood drama.",
+      "title": "Watch Ruke (Maurice Sam) and Jess (Omeche Oko) begin to fall in love. Nollywood drama",
       "rawTitle": "Watch Ruke (Maurice Sam) and Jess (Omeche Oko) begin to fall in love. Nollywood drama.",
       "synopsis": "Watch Ruke (Maurice Sam) and Jess (Omeche Oko) begin to fall in love. Nollywood drama.",
       "cast": [
@@ -26667,11 +26746,13 @@
       "synopsis": "When you mixes business with pleasure one is bent to suffer... could this be the beginning of the end?",
       "cast": [
         "Sonia Uche",
-        "Maurice Sam"
+        "Maurice Sam",
+        "CHIKE DANIEL"
       ],
       "featuredCast": [
         "Sonia Uche",
-        "Maurice Sam"
+        "Maurice Sam",
+        "CHIKE DANIEL"
       ],
       "channelName": "Uchenna Mbunabo Tv",
       "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
@@ -26921,7 +27002,7 @@
     },
     {
       "videoId": "IMB9EERsm88",
-      "title": "LOVE IN LAGOS Sandra Okonzuwa Deza the Great Onyeka Mercy. Atewe Rapheal Bianca Ugowanne.",
+      "title": "LOVE IN LAGOS Sandra Okonzuwa Deza the Great Onyeka Mercy. Atewe Rapheal Bianca Ugowanne",
       "rawTitle": "LOVE IN LAGOS Sandra Okonzuwa Deza the Great  Onyeka Mercy. Atewe Rapheal  Bianca Ugowanne.",
       "synopsis": "LOVE IN LAGOS Sandra Okonzuwa Deza the Great Onyeka Mercy. Atewe Rapheal Bianca Ugowanne.",
       "cast": [
@@ -27165,11 +27246,13 @@
       "synopsis": "Mary(Ese Eriata), the young beautiful widow stepmom of Jason(Eddie Watson), stopped at nothing in her strive to make Jason see her as the right woman for him.",
       "cast": [
         "Ruth Kadiri",
-        "Ese Eriata"
+        "Ese Eriata",
+        "Eddie Watson"
       ],
       "featuredCast": [
         "Ruth Kadiri",
-        "Ese Eriata"
+        "Ese Eriata",
+        "Eddie Watson"
       ],
       "channelName": "EDDIE WATSON TV",
       "channelId": "UCvI40C0yn2mE0bRB2RjzHyA",
@@ -27357,7 +27440,7 @@
     },
     {
       "videoId": "p4Cp1n8ybrM",
-      "title": "SOMEONE SPECIAL",
+      "title": "SOMEONE SPECIAL - New Nollywood Romantic Movie",
       "rawTitle": "SOMEONE SPECIAL - New Nollywood Romantic Movie featuring Ego Nwosu and IK Ogbonna",
       "synopsis": "Someone Special is written by Adaeze Ibechukwu, directed by Michael Olowojaiye for Closer Pictures.",
       "cast": [
@@ -27428,7 +27511,7 @@
     },
     {
       "videoId": "fphNKKE9jZA",
-      "title": "A GIRL LIKE YOU",
+      "title": "A GIRL LIKE YOU - New Nollywood drama",
       "rawTitle": "A GIRL LIKE YOU - New Nollywood drama starring Maurice Sam, Miwa Olorunfemi, Aaliyah Agida.",
       "synopsis": "A GIRL LIKE YOU is brought to you by Closer Pictures and African Stories Untold.",
       "cast": [
@@ -27501,11 +27584,13 @@
       "synopsis": "TOO LITTLE TOO SWEET is a full-length Nigerian film published by OLUCHI AFUNDU TV, featuring SHINE ROSEMAN, KENNETH NWADIKE.",
       "cast": [
         "SHINE ROSEMAN",
-        "Kenneth Nwadike"
+        "Kenneth Nwadike",
+        "Toosweet Annan"
       ],
       "featuredCast": [
         "SHINE ROSEMAN",
-        "Kenneth Nwadike"
+        "Kenneth Nwadike",
+        "Toosweet Annan"
       ],
       "channelName": "OLUCHI AFUNDU TV",
       "channelId": "UCg_y41ulw0L-YmPtDV7zkgw",
@@ -27616,7 +27701,7 @@
     },
     {
       "videoId": "TvG3t5Qyigo",
-      "title": "Miz Behaviour",
+      "title": "Nollywood Movie (NEW): Miz Behaviour",
       "rawTitle": "Nollywood Movie (NEW): Miz Behaviour - Starring Blessing Obasi, Bimbo Ademoye and Bolaji Ogunmola",
       "synopsis": "A generous but arrogant woman is compelled to discover what true friendship is all about.",
       "cast": [
@@ -27627,7 +27712,8 @@
         "Bolaji Ogunmola",
         "Chidubem Osungade",
         "Joshua Richard",
-        "Biodun Stephen"
+        "Biodun Stephen",
+        "Blessing Obasi"
       ],
       "featuredCast": [
         "Bimbo Ademoye",
@@ -27777,7 +27863,8 @@
         "Favour Innah",
         "Efe Henry",
         "Chris Aguarand",
-        "Vivian Pius"
+        "Vivian Pius",
+        "Rachael Okonkwo"
       ],
       "featuredCast": [
         "Eddie Watson",
@@ -27820,7 +27907,7 @@
     },
     {
       "videoId": "ZDAxMQhek5g",
-      "title": "Watch Ujams Chukwunonso, Ekama Etim-Inyang and John Ekanem in CUSTOMER SERVICE",
+      "title": "CUSTOMER SERVICE",
       "rawTitle": "Watch Ujams Chukwunonso, Ekama Etim-Inyang and John Ekanem in CUSTOMER SERVICE | New Nollywood Movie",
       "synopsis": "Watch Ujams Chukwunonso, Ekama Etim-Inyang and John Ekanem in CUSTOMER SERVICE is a full-length Nigerian film published by Royal Arts TV, featuring Ekama Etim Inyang, John Ekanem.",
       "cast": [
@@ -27985,7 +28072,7 @@
     },
     {
       "videoId": "2NRj_2uc5X0",
-      "title": "The Recipient",
+      "title": "The Recipient - New Nollywood Movie",
       "rawTitle": "The Recipient - New Nollywood Movie Starring Stan Nze, Blessing Obasi, Bimbo Ademoye, Uzor Arukwe.",
       "synopsis": "A wife must decide whether to cheat on her husband in order to preserve his life.",
       "cast": [
@@ -28101,7 +28188,7 @@
     },
     {
       "videoId": "QLAOxzvlA-Q",
-      "title": "Watch Ray Emodi, Sam Maurice, Stella Udeze in LOVE TRAP",
+      "title": "LOVE TRAP",
       "rawTitle": "Watch Ray Emodi, Sam Maurice, Stella Udeze in LOVE TRAP | Trending Nollywood Film",
       "synopsis": "Watch Ray Emodi, Sam Maurice, Stella Udeze in LOVE TRAP is a full-length Nigerian film published by Royal Arts TV, featuring Ray Emodi, Stella Udeze.",
       "cast": [
@@ -28145,7 +28232,7 @@
     },
     {
       "videoId": "6d6NDdfrM0Q",
-      "title": "A CHRISTMAS GETAWAY",
+      "title": "A CHRISTMAS GETAWAY - A romantic comedy",
       "rawTitle": "A CHRISTMAS GETAWAY -  A romantic comedy starring Daniel Effiong, Shine Rosman",
       "synopsis": "A Christmas Getaway is written by Adeayo Sangowawa, directed by Kingsley Onyenma and produced by Uduak Isong.",
       "cast": [
@@ -28191,7 +28278,7 @@
     },
     {
       "videoId": "1pGLfEyLxfQ",
-      "title": "Watch Maurice Sam and Tana Adelana in CROSSED LINES",
+      "title": "CROSSED LINES",
       "rawTitle": "Watch Maurice Sam and Tana Adelana in CROSSED LINES | Latest Nollywood Trending Movie 2022",
       "synopsis": "Watch Maurice Sam and Tana Adelana in CROSSED LINES is a full-length Nigerian film published by Royal Arts TV, featuring Maurice Sam, Tana Adelana.",
       "cast": [
@@ -28308,7 +28395,7 @@
     },
     {
       "videoId": "MyVG-UcdLU8",
-      "title": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom",
+      "title": "PERFECT ASSISTANT",
       "rawTitle": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom",
       "synopsis": "PERFECT ASSISTANT- Watch Maurice Sam and Shine rosman in another fine romcom is a full-length Nigerian film published by ChinneyLoveEze Tv, featuring Maurice Sam, Shine rosman.",
       "cast": [
@@ -28419,7 +28506,7 @@
     },
     {
       "videoId": "Fxk-evaehas",
-      "title": "SELINA 2",
+      "title": "SELINA 2 - Nollywood romantic drama",
       "rawTitle": "SELINA 2 - Nollywood romantic drama starring Bimbo Ademoye, Daniel Etim, Ehis Perfect",
       "synopsis": "Selina and Reuben enjoy a lovely relationship until Reuben's sister shows up.",
       "cast": [
@@ -28465,7 +28552,7 @@
     },
     {
       "videoId": "f-xPNxQ9ipo",
-      "title": "(NEW) Nollywood Movies I Music Friendship & Conflict l Starring Kehinde Bankole, Bisola Aiyeola ...",
+      "title": "(NEW) Nollywood Movies I Music Friendship & Conflict l",
       "rawTitle": "(NEW) Nollywood Movies I Music Friendship & Conflict l Starring Kehinde Bankole, Bisola Aiyeola ...",
       "synopsis": "(NEW) Nollywood Movies I Music Friendship & Conflict l Starring Kehinde Bankole, Bisola Aiyeola ...",
       "cast": [
@@ -28537,7 +28624,7 @@
     },
     {
       "videoId": "omYbgmiHsMQ",
-      "title": "The Good Neighbor",
+      "title": "The Good Neighbor - A Nollywood love story",
       "rawTitle": "The Good Neighbor - A Nollywood love story featuring Bimbo Ademoye and Kachi Nnochiri",
       "synopsis": "From Selina to The Good Neighbour Bimbo Ademoye always gives a good performance.",
       "cast": [
@@ -28559,7 +28646,7 @@
     },
     {
       "videoId": "oCG64y7gBHk",
-      "title": "MAN AND WIFE staring Ruth Kadiri Melvin Oduah, Oby titus. #ruthkadirifilms #ruthkadiri247",
+      "title": "MAN AND WIFE",
       "rawTitle": "MAN AND WIFE staring Ruth Kadiri Melvin Oduah, Oby titus. #ruthkadirifilms #ruthkadiri247",
       "synopsis": "MAN AND WIFE staring Ruth Kadiri Melvin Oduah, Oby titus. #ruthkadirifilms #ruthkadiri247 is a full-length Nigerian film published by RuthKadiri247, featuring Ruth Kadiri, Oby Titus.",
       "cast": [
@@ -28603,7 +28690,7 @@
     },
     {
       "videoId": "WnPcQVAeiWY",
-      "title": "SELINA",
+      "title": "SELINA - Nollywood Romantic Comedy",
       "rawTitle": "SELINA - Nollywood Romantic Comedy starring Bimbo Ademoye and Daniel Etim Effiong | Part 1.",
       "synopsis": "She's a local cook with big dreams. Will they come true? Selina is written and produced by Uduak Oguamanam and directed by Bunmi Akingbola.",
       "cast": [
@@ -28768,7 +28855,7 @@
     },
     {
       "videoId": "THVHCneR3OE",
-      "title": "See How This Lady Tried to Steal her Best friends Husband",
+      "title": "GIRL HUSTLE",
       "rawTitle": "See How This Lady Tried to Steal her Best friends Husband - GIRL HUSTLE - Latest Nollywood Film 2021",
       "synopsis": "Music/Sound Created by George Nathaniel for RoyalArtsTV and Licensed by RoyalArtsTv.",
       "cast": [
@@ -28793,7 +28880,7 @@
     },
     {
       "videoId": "qJeYHlblpUc",
-      "title": "Rich Man Falls Deeply In Love With His Local House Help -GLASS SLIPPERS",
+      "title": "GLASS SLIPPERS",
       "rawTitle": "Rich Man Falls Deeply In Love With His Local House Help -GLASS SLIPPERS -LATEST NOLLYWOOD MOVIE 2021",
       "synopsis": "Glass slippers is a romantic comedy about a relationship between the unlikeliest of people and how class, status and tribe disappears when they truly fall in love.",
       "cast": [
@@ -29089,7 +29176,7 @@
     },
     {
       "videoId": "Ocil4o4jbL4",
-      "title": "Best Friends",
+      "title": "Best Friends With Benefits",
       "rawTitle": "Best Friends - Best Friends With Benefits- New Nigerian Movie starring Bimbo Ademoye/Daniel Effiong",
       "synopsis": "Two friends, one man, one baby. Best Friends Movie starring Daniel Etim Effiong, Bimbo Ademoye, Nsikan Issac.",
       "cast": [
@@ -39833,7 +39920,7 @@
     },
     {
       "videoId": "gWv7ZB3zUNs",
-      "title": "ROYAL CROWN.",
+      "title": "ROYAL CROWN",
       "rawTitle": "ROYAL CROWN. -   Nigerian Nollywood movie",
       "synopsis": "ROYAL CROWN. is a full-length Nigerian film published by Nollywoodpicturestv, featuring Ini Edo, Sam Loco Efe, Muna Obiekwe.",
       "cast": [
