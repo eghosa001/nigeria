@@ -52,50 +52,32 @@ test.describe("live MyNigeriaGuide deployment", () => {
   });
 
 
-  test("live visits dashboard is configured and protected", async ({ page, request }) => {
-    test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics configuration check.");
+  test("Cloudflare Access protects admin UI and admin APIs", async ({ request }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only Cloudflare Access check.");
 
-    const response = await request.get("/api/admin/analytics?range=7d", { failOnStatusCode: false });
-    const body = await response.json() as {
-      configured?: boolean;
-      authenticated?: boolean;
-      accessConfigured?: boolean;
-      readConfigured?: boolean;
-      trackingConfigured?: boolean;
-    };
-    expect(response.status(), "Analytics setup response: " + JSON.stringify(body)).toBe(401);
-    expect(body.configured).toBe(true);
-    expect(body.authenticated).toBe(false);
+    for (const path of [
+      "/admin/visits",
+      "/admin/services/passport-renewal",
+      "/api/admin/analytics?range=7d",
+      "/api/admin/content-access",
+    ]) {
+      const response = await request.get(path, {
+        failOnStatusCode: false,
+        maxRedirects: 0,
+      });
 
-    await page.goto("/admin/visits");
-    await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
-    await expect(page.getByRole("heading", { name: "Visits & page views" })).toHaveCount(0);
-    await expect(page.getByLabel("Admin passphrase")).toBeVisible();
-  });
+      const location = response.headers()["location"] ?? "";
+      const isAccessRedirect =
+        response.status() >= 300 &&
+        response.status() < 400 &&
+        /cloudflareaccess\.com|\/cdn-cgi\/access\/login/i.test(location);
+      const isAccessDeny = [401, 403].includes(response.status());
 
-
-  test("live admin guide editor is configured and protected", async ({ page, request }) => {
-    test.skip(!process.env.LIVE_BASE_URL, "Production-only admin editing configuration check.");
-
-    const response = await request.get("/api/admin/content-access", { failOnStatusCode: false });
-    const body = await response.json() as {
-      configured?: boolean;
-      accessConfigured?: boolean;
-      githubConfigured?: boolean;
-      authenticated?: boolean;
-    };
-
-    expect(response.status(), "Admin editing setup response: " + JSON.stringify(body)).toBe(200);
-    expect(body.configured).toBe(true);
-    expect(body.accessConfigured).toBe(true);
-    expect(body.githubConfigured).toBe(true);
-    expect(body.authenticated).toBe(false);
-
-    await page.goto("/admin/services/passport-renewal");
-    await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
-    await expect(page.getByText("Passport renewal", { exact: true })).toHaveCount(0);
-    await expect(page.getByLabel("Admin passphrase")).toBeVisible();
-    await expect(page.getByText(/server configuration/i)).toHaveCount(0);
+      expect(
+        isAccessRedirect || isAccessDeny,
+        `${path} must be blocked by Cloudflare Access before the application. status=${response.status()} location=${location}`,
+      ).toBeTruthy();
+    }
   });
 
   test("live core pages do not horizontally overflow", async ({ page }) => {
