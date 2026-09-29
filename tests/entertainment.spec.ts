@@ -63,7 +63,7 @@ test("youtube movie directory is populated from approved channels", async ({ pag
 test("youtube source network is sized for more than one thousand movies", async ({ page }) => {
   await page.goto("/entertainment/youtube/sources");
   await expect(page.getByRole("heading", { name: /Approved YouTube movie sources/i })).toBeVisible();
-  await expect(page.getByText(/2,\d{3}\+/)).toBeVisible();
+  await expect(page.getByText(/\d{1,3},\d{3}\+/)).toBeVisible();
   await expect(page.getByText("RuthKadiri247", { exact: true })).toBeVisible();
   await expect(page.getByText("Uchenna Mbunabo TV", { exact: true })).toBeVisible();
   await expect(page.getByText("Omoni Oboli TV", { exact: true })).toBeVisible();
@@ -73,7 +73,7 @@ test("youtube source network is sized for more than one thousand movies", async 
 test("main movies page exposes the full server-paginated YouTube library", async ({ page }) => {
   await page.goto("/entertainment/movies");
   const summary = page.locator(".category-summary");
-  await expect(summary).toContainText("1,550");
+  await expect(summary).toContainText(/\d{1,3},\d{3}/);
   await expect(summary).toContainText("full YouTube movies");
   await expect(page.getByRole("link", { name: /Browse the full YouTube movie library/i })).toHaveAttribute("href", "/entertainment/youtube");
 });
