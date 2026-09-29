@@ -19,6 +19,7 @@ jobs:
       - run: npm run typecheck
       - run: npm run check:service-catalog
       - run: npm run check:content
+      - run: npm run check:explore
       - run: npm run check:entertainment-scale
       - run: npm run check:analytics-safety
       - run: npm run build:next
