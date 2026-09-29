@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 
 const navigation = [
-  { href: "/services", label: "Services", matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/offices"] },
+  { href: "/services", label: "Services", matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals"] },
   { href: "/explore", label: "Explore Nigeria", matches: ["/explore"] },
   { href: "/entertainment", label: "Entertainment", matches: ["/entertainment"] },
   { href: "/fees", label: "Fees", matches: ["/fees"] },
+  { href: "/offices", label: "Offices", matches: ["/offices"] },
   { href: "/updates", label: "Updates", matches: ["/updates"] },
   { href: "/offices", label: "Offices", matches: ["/offices"] },
   { href: "/saved", label: "Saved", matches: ["/saved"] },
