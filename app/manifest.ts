@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "MyNigeriaGuide",
     short_name: "MyNigeriaGuide",
-    description: "A practical Nigerian guide for services, travel, places and entertainment, with source-linked information and official routes.",
+    description: "Discover Nigerian movies first, then practical services and travel ideas, with source-linked information and official routes.",
     start_url: "/",
     display: "standalone",
     background_color: "#F8F5ED",
