@@ -38,10 +38,14 @@ export function YouTubeMovieCard({
           <span>{runtimeLabel(movie.durationMinutes)}</span>
         </div>
         <h3><Link href={movie.internalHref} prefetch={false}>{movie.title}</Link></h3>
+        <p className="youtube-movie-description">{movie.synopsis}</p>
         <p className="youtube-movie-cast">
           {movie.featuredCast.length ? movie.featuredCast.join(" · ") : "Full Nigerian movie"}
         </p>
-        <span className="youtube-movie-publisher">{movie.channelName}</span>
+        <div className="youtube-movie-card-footer">
+          <span className="youtube-movie-publisher">{movie.channelName}</span>
+          <Link href={movie.internalHref} prefetch={false}>Details →</Link>
+        </div>
       </div>
     </article>
   );
