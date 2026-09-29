@@ -223,6 +223,10 @@ test("security headers protect public and admin responses", async ({ request }) 
     expect(response.headers()["x-frame-options"]).toBe("SAMEORIGIN");
     expect(response.headers()["referrer-policy"]).toBe("strict-origin-when-cross-origin");
     expect(response.headers()["strict-transport-security"]).toContain("max-age=31536000");
+    if (path === "/admin") {
+      expect(response.headers()["cache-control"]).toContain("private");
+      expect(response.headers()["cache-control"]).toContain("no-store");
+    }
   }
 });
 
