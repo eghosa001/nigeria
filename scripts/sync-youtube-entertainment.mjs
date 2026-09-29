@@ -240,7 +240,7 @@ function cleanName(value) {
     .replace(/\([^)]*\)/g, "")
     .replace(/\b(starring|featuring|feat\.?|ft\.?)\b/gi, "")
     .replace(/and\s+many\s+(?:more|others?)\.?$/i, "")
-    .replace(/^(?:with|also)\s+/i, "")
+    .replace(/^\s*(?:with|also)\s+/i, "")
     .replace(/\s+as\s+[A-Za-zÀ-ÖØ-öø-ÿ'’.\-\s]+$/i, "")
     .replace(/[#|]/g, " ")
     .replace(/\s+/g, " ")
@@ -374,8 +374,10 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
 
 function cleanTitle(raw, cast = []) {
   let title = String(raw ?? "").trim();
+  title = title.replace(/^(?:nollywood|nigerian)\s+movie(?:\s*\([^)]*\))?\s*:\s*/i, "");
   title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
   title = title.split("|")[0].trim();
+  title = title.replace(/\s*(?:\[\s*full\s+movie\s*\]|\(\s*full\s+movie\s*\)|\bfull\s+movie\b).*$/i, " ");
 
   const lowerTitle = title.toLowerCase();
   const castHits = cast
@@ -394,13 +396,19 @@ function cleanTitle(raw, cast = []) {
   }
 
   title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, " ");
-  title = title.replace(/\s+\b(?:starring|featuring|feat\.?|ft\.?)\b.*$/i, " ");
+  title = title.replace(/[.\s-]*\b(?:starring|featuring|feat\.?|ft\.?)\b.*$/i, " ");
+  title = title.replace(/\s*-\s*new\s+["'“”]?latest\b.*$/i, " ");
+  title = title.replace(/\s*[-–—]\s*latest\s+nollywood\b.*$/i, " ");
+  title = title.replace(/\s*[.]\s*latest\s+20\d{2}\s+nigeria(?:n)?\s+movie.*$/i, " ");
+  title = title.replace(/\s*[.]\s*latest\s+romantic\s+movie.*$/i, " ");
+  title = title.replace(/\s+["'“”]?latest\s+nollywood\b.*$/i, " ");
   title = title.replace(/\s*[-–—/]\s*(?:nigerian|nollywood|african)\s+movies?\s+20\d{2}.*$/i, " ");
   title = title.replace(/\s+(?:latest\s+)?(?:20\d{2}\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movies?.*$/i, " ");
   title = title.replace(/\s*[-–—]\s*20\d{2}\s+(?:latest|new|full)\b.*$/i, " ");
   title = title.replace(/\s+20\d{2}\s+(?:latest|new|full)\b.*$/i, " ");
   title = title.replace(/\s+(?:full|complete)\s+movie(?:\s+20\d{2})?\s*$/i, " ");
   title = title.replace(/\s*\((?:latest|new|full)\b.*$/i, " ");
+  title = title.replace(/\s*-\s*latest\s*$/i, " ");
   title = title.replace(/\s*[-–—/|]+\s*$/g, " ");
   title = title.replace(/\s+/g, " ").trim();
   return title || String(raw ?? "").trim();
