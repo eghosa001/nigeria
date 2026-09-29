@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/breadcrumbs";
+import { Breadcrumbs } from "@/components/breadcrumbs";\nimport { CategoryFaqs } from "@/components/category-faqs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
-import { categorySlug } from "@/lib/category";
+import { getCategoryFaqs } from "@/data/category-faqs";\nimport { categorySlug } from "@/lib/category";
 import { categories, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
@@ -42,7 +42,7 @@ export default async function CategoryPage({
 
   const services = publicServices.filter((service) => service.category === category.name);
   const agencies = [...new Set(services.map((service) => service.agencySlug.toUpperCase()))];
-  const base = getSiteUrl();
+  const base = getSiteUrl();\n  const faqs = getCategoryFaqs(category.name);
 
   const itemList = {
     "@context": "https://schema.org",
