@@ -110,6 +110,17 @@ export const platformGuides: PlatformGuide[] = [
     lastChecked: "2026-09-29",
   },
   {
+    slug: "nollistream",
+    name: "NolliStream",
+    officialUrl: "https://nollistream.com/",
+    summary: "NolliStream is a Nigerian ad-supported Nollywood platform whose terms state that its catalog content is owned by NolliStream or its licensors.",
+    status: "Legal third-party AVOD platform; exact title availability must be verified before linking",
+    sourceKind: "streaming",
+    offlineLabel: "The NolliStream service advertises offline downloads inside its app for supported titles.",
+    offlineHelpUrl: "https://nollistream.com/",
+    lastChecked: "2026-09-29",
+  },
+  {
     slug: "dstv-stream-boxoffice",
     name: "DStv Stream / BoxOffice",
     aliases: ["DStv Stream"],
