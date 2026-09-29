@@ -28,19 +28,37 @@ export function generateStaticParams() {
   return publicServices.map((service) => ({ slug: service.slug }));
 }
 
+function getServiceSeoTitle(shortTitle: string, lastVerified: string) {
+  const year = lastVerified.slice(0, 4);
+  const hasYear = new RegExp("\\b" + year + "\\b").test(shortTitle);
+  return `${shortTitle}${hasYear ? "" : " " + year}: Fees, Requirements & Steps`;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const service = getPublicService(slug);
   if (!service) return {};
+
+  const year = service.lastVerified.slice(0, 4);
+  const title = getServiceSeoTitle(service.shortTitle, service.lastVerified);
+  const description =
+    service.summary +
+    ` Updated ${year} with current requirements, fee/status, step-by-step instructions and official application links.`;
+
   return {
-    title: service.shortTitle,
-    description: service.summary,
+    title,
+    description,
     alternates: { canonical: "/services/" + service.slug },
     openGraph: {
-      title: service.title,
-      description: service.summary,
+      title,
+      description,
       type: "article",
       url: "/services/" + service.slug,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
   };
 }
