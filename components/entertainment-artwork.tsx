@@ -20,7 +20,7 @@ function getYouTubePreview(title: EntertainmentTitle) {
   return videoId ? { videoId, href: source.href } : null;
 }
 
-function GeneratedArtwork({ title }: { title: EntertainmentTitle }) {
+function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; variant: "card" | "hero" }) {
   const genre = title.genres[0] ?? "Nigerian film";
   const initials = title.title
     .split(/\s+/)
@@ -31,7 +31,7 @@ function GeneratedArtwork({ title }: { title: EntertainmentTitle }) {
 
   return (
     <figure
-      className="entertainment-artwork entertainment-artwork-generated"
+      className={"entertainment-artwork entertainment-artwork-generated entertainment-artwork-" + variant}
       data-artwork-source="generated"
       data-rights-status="original"
     >
@@ -114,5 +114,5 @@ export function EntertainmentArtwork({
     );
   }
 
-  return <GeneratedArtwork title={title} />;
+  return <GeneratedArtwork title={title} variant={variant} />;
 }
