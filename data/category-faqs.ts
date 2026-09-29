@@ -40,9 +40,9 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       relatedSlugs: ["nin-name-modification", "nin-date-of-birth-modification", "nin-phone-modification", "nin-address-modification"]
     },
     {
-      question: "What document is needed for an adult NIN date-of-birth correction?",
-      answer: "NIMC's adult modification guidance requires an NPC Letter of Attestation for applicants aged 18 and above, together with the other modification requirements shown by the official process.",
-      source: { label: "NIMC NIN modifications guidance", url: "https://nimc.gov.ng/nin/nin-modifications-adults/" },
+      question: "What document is needed for a NIN date-of-birth correction?",
+      answer: "NIMC's current self-service guidance says applicants born after 1992 use a digitised NPC birth certificate, while applicants born before 1992 use a digitised NPC attestation certificate. Use the date-of-birth guide for the current payment and submission steps.",
+      source: { label: "NIMC self-service modifications", url: "https://nimc.gov.ng/self-service-modifications/" },
       relatedSlugs: ["nin-date-of-birth-modification", "npc-birth-attestation"]
     },
     {
