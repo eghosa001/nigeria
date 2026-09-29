@@ -76,8 +76,8 @@ jobs:
           set -euo pipefail
           paths=(
             "/admin/visits"
-            "/api/admin/analytics?range=7d"
-            "/api/admin/content-access"
+            "/admin/api/analytics?range=7d"
+            "/admin/api/content-access"
           )
           for path in "${paths[@]}"; do
             headers="$(mktemp)"
