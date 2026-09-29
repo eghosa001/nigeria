@@ -335,10 +335,10 @@ test("police and PVC guides are discoverable", async ({ page }) => {
   await expect(page.locator(".search-results").getByRole("link", { name: /PVC status/i })).toBeVisible();
 });
 
-test("BVN change and Nigeria visa guides are discoverable", async ({ page }) => {
+test("NIBSS transfer and Nigeria visa guides are discoverable", async ({ page }) => {
   await page.goto("/");
-  await page.getByLabel("What do you want to do?").fill("change phone number on bvn");
-  await expect(page.locator(".search-results").getByRole("link", { name: /Change BVN details/i })).toBeVisible();
+  await page.getByLabel("What do you want to do?").fill("check transfer status");
+  await expect(page.locator(".search-results").getByRole("link", { name: /NIP transfer status/i })).toBeVisible();
 
   await page.getByLabel("What do you want to do?").fill("apply nigeria tourist visa");
   await expect(page.locator(".search-results").getByRole("link", { name: /Nigeria Tourism Visa/i })).toBeVisible();
@@ -347,8 +347,8 @@ test("BVN change and Nigeria visa guides are discoverable", async ({ page }) => 
   await expect(page.getByRole("heading", { name: "How to apply for a Nigeria e-Visa" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Step-by-step instructions" })).toBeVisible();
 
-  await page.goto("/services/bvn-change-details");
-  await expect(page.locator("#notes")).toContainText(/phone number may be changed only once/i);
+  await page.goto("/services/nip-transfer-status");
+  await expect(page.locator("#notes")).toContainText(/previous 48 hours/i);
 });
 
 test("guide anchors do not trap browser Back after starting a process", async ({ page }) => {
