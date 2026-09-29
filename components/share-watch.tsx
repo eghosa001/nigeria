@@ -19,6 +19,7 @@ const snapshotKey = "mynigeriaguide:watch-snapshots";
 export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: string; title: string; feeLabel?: string; lastVerified?: string }) {
   const [watched, setWatched] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [summaryCopied, setSummaryCopied] = useState(false);
   const [pageUrl, setPageUrl] = useState("");
 
   useEffect(() => {
@@ -42,33 +43,49 @@ export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: stri
     window.dispatchEvent(new Event(watchEvent));
   }
 
+  function buildShareText(url: string) {
+    return [
+      title,
+      feeLabel ? "Fee / status: " + feeLabel : "",
+      lastVerified ? "Checked: " + lastVerified : "",
+      "Requirements, steps and official sources:",
+      url,
+    ].filter(Boolean).join("\n");
+  }
+
   async function share() {
     const url = window.location.href;
-    const text = title + " — current requirements, fees and official links on MyNigeriaGuide.";
+    const text = buildShareText(url);
 
     if (navigator.share) {
       await navigator.share({ title, text, url }).catch(() => undefined);
       return;
     }
 
-    await navigator.clipboard?.writeText(url);
+    await navigator.clipboard?.writeText(text);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1600);
   }
 
-  const whatsappText = encodeURIComponent(
-    title + "\nCurrent requirements, fees and official links:\n" + pageUrl,
-  );
+  async function copySummary() {
+    const text = buildShareText(window.location.href);
+    await navigator.clipboard?.writeText(text);
+    setSummaryCopied(true);
+    window.setTimeout(() => setSummaryCopied(false), 1600);
+  }
+
+  const whatsappText = encodeURIComponent(buildShareText(pageUrl));
 
   return (
     <div className="guide-actions" aria-label="Guide actions">
-      <button type="button" onClick={share}>{copied ? "Link copied" : "Share"}</button>
+      <button type="button" onClick={share}>{copied ? "Copied" : "Share"}</button>
       <a href={"https://wa.me/?text=" + whatsappText} target="_blank" rel="noreferrer">WhatsApp</a>
+      <button type="button" onClick={copySummary}>{summaryCopied ? "Summary copied" : "Copy summary"}</button>
       <button type="button" className={watched ? "active" : ""} onClick={toggleWatch}>
         {watched ? "Watching" : "Watch this guide"}
       </button>
       <small>
-        Watching saves a comparison snapshot on this device. Saved Guides will flag fee or verification changes when you return.
+        Share text includes the current fee/status, last-checked date and this guide link. Watching saves a comparison snapshot on this device.
       </small>
     </div>
   );
