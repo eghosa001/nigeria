@@ -41,6 +41,23 @@ jobs:
               "$LIVE_BASE_URL$path" > /tmp/mng-response
           done
 
+      - name: Detect intermittent Worker resource failures
+        shell: bash
+        run: |
+          set -euo pipefail
+          for round in 1 2 3; do
+            for path in "/" "/services/passport-renewal" "/topics/nigerian-passport"; do
+              body="$(mktemp)"
+              status="$(curl --silent --show-error --max-time 30 --output "$body" --write-out '%{http_code}' "$LIVE_BASE_URL$path")"
+              if [ "$status" -ge 500 ] || grep -Eqi 'Worker exceeded resource limits|Error 1102' "$body"; then
+                echo "Worker resource failure detected on $path during round $round (HTTP $status)."
+                cat "$body"
+                exit 1
+              fi
+            done
+          done
+          echo "Repeated Worker stability probes passed."
+
       - name: Verify health payload
         shell: bash
         run: |
