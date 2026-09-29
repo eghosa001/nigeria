@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-09-29",
-  "note": "Discovery estimates are used only for capacity planning. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
+  "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
   "sources": [
     {
       "slug": "ruthkadiri247",
@@ -183,6 +183,79 @@
       ],
       "estimatedMovieCount": 9,
       "knownUrl": "https://www.youtube.com/@iniedotv"
+    },
+    {
+      "slug": "destiny-etiko-tv",
+      "searchName": "DestinyEtiko Tv",
+      "aliases": [
+        "DestinyEtiko Tv",
+        "Destiny Etiko TV"
+      ],
+      "estimatedMovieCount": 100,
+      "knownUrl": "https://www.youtube.com/@Destinyetikotv"
+    },
+    {
+      "slug": "clinton-joshua-tv",
+      "searchName": "Clinton Joshua Tv",
+      "aliases": [
+        "Clinton Joshua Tv",
+        "Clinton Joshua TV"
+      ],
+      "estimatedMovieCount": 12,
+      "knownUrl": "https://www.youtube.com/@clintonjoshuaTv001"
+    },
+    {
+      "slug": "deza-the-great-tv",
+      "searchName": "DezaTheGreatTV",
+      "aliases": [
+        "DezaTheGreatTV",
+        "Dezathegreattv"
+      ],
+      "estimatedMovieCount": 15,
+      "knownUrl": "https://www.youtube.com/@dezathegreat"
+    },
+    {
+      "slug": "one-and-two-films-tv",
+      "searchName": "One And Two Films Tv",
+      "aliases": [
+        "One And Two Films Tv",
+        "One And Two Films TV",
+        "One And Two Films"
+      ],
+      "estimatedMovieCount": 36,
+      "knownUrl": "https://www.youtube.com/@Oneandtwofilmstv"
+    },
+    {
+      "slug": "bdaniels-tv",
+      "searchName": "BDANIELS TV",
+      "aliases": [
+        "BDANIELS TV",
+        "Bdaniels TV",
+        "BDANIELS Tv"
+      ],
+      "estimatedMovieCount": 100,
+      "knownUrl": "https://www.youtube.com/@bdanielstv"
+    },
+    {
+      "slug": "brain-jotter",
+      "searchName": "Brain Jotter",
+      "aliases": [
+        "Brain Jotter",
+        "BrainJotter"
+      ],
+      "estimatedMovieCount": 10,
+      "knownUrl": "https://www.youtube.com/@brainjottercomedian"
+    },
+    {
+      "slug": "nollywood-pictures-tv",
+      "searchName": "Nollywoodpicturestv",
+      "aliases": [
+        "Nollywoodpicturestv",
+        "Nollywood Pictures Tv",
+        "NOLLYWOOD PICTURES TV"
+      ],
+      "estimatedMovieCount": 500,
+      "knownUrl": "https://www.youtube.com/@NollywoodPicturestv"
     }
   ]
 }
