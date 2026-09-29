@@ -2,15 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
-import { entertainmentTitles, getFeaturedCast, getPlatformCount } from "@/lib/entertainment";
-import { cinemaGuides, entertainmentPeople, platformGuides, releaseItems } from "@/lib/entertainment-extras";
-import { youtubeMovieLibrary, youtubePendingQualityCount } from "@/lib/youtube-library";
-import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
+import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { releaseItems } from "@/lib/entertainment-extras";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies & Entertainment",
-  description: "Discover Nigerian movies, cinemas, filmmakers, current releases and verified official links to watch on Netflix, YouTube, Prime Video and supported platforms.",
+  description: "Discover Nigerian movies first, then cinemas, filmmakers, current releases and verified official links to watch on Netflix, YouTube, Prime Video and supported platforms.",
   alternates: { canonical: "/entertainment" },
 };
 
@@ -22,7 +20,7 @@ export default function EntertainmentPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Nigerian Movies & Entertainment",
-    description: "A growing guide to Nigerian movies, cinemas, filmmakers and official places to watch.",
+    description: "A guide to Nigerian movies, cinemas, filmmakers and official places to watch.",
     url: base + "/entertainment",
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
@@ -43,32 +41,27 @@ export default function EntertainmentPage() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <div className="hero-kicker"><span className="hero-kicker-dot" aria-hidden="true" />Movies &amp; entertainment</div>
-            <h1>Find Nigerian entertainment and <span>where to experience it.</span></h1>
+            <div className="hero-kicker"><span className="hero-kicker-dot" aria-hidden="true" />Movies first</div>
+            <h1>Find a Nigerian movie and <span>know where to watch it.</span></h1>
             <p className="hero-lead">
-              Browse Nigerian movies, official streaming links, cinema chains, new releases, film events and the people behind the work.
+              Browse movies visually, check cast and story details, then continue to the official streaming, YouTube or cinema source.
             </p>
             <div className="related-links">
-              <Link href="/entertainment/movies">Movies →</Link>
+              <Link href="/entertainment/movies">Browse movies →</Link>
+              <Link href="/entertainment/youtube">Free on YouTube →</Link>
               <Link href="/entertainment/releases">New &amp; upcoming →</Link>
               <Link href="/entertainment/cinemas">Cinemas →</Link>
-              <Link href="/entertainment/people">Actors &amp; filmmakers →</Link>
             </div>
-            <p className="hero-note">MyNigeriaGuide links to official platforms and venues. We do not host or re-upload films.</p>
+            <p className="hero-note">MyNigeriaGuide does not host or re-upload films. Playback stays with the official publisher or platform.</p>
           </div>
 
-          <aside className="trust-panel" aria-label="Entertainment catalog snapshot">
-            <div className="trust-panel-top"><span className="trust-kicker">Catalog snapshot</span><span className="trust-live"><i aria-hidden="true" />Growing</span></div>
-            <strong>{youtubeMovieLibrary.length.toLocaleString()} full YouTube movies</strong>
-            <p>Plus a curated cross-platform catalog for Netflix, Prime Video and selected official releases. Watch links carry freshness dates because availability changes quickly.</p>
-            <div className="trust-metrics">
-              <div><strong>{verifiedYouTubeMovieChannels.length}</strong><span>approved YouTube publishers</span></div>
-              <div><strong>{getPlatformCount("Netflix") + getPlatformCount("Prime Video")}</strong><span>curated streaming titles</span></div>
-              <div><strong>{youtubePendingQualityCount}</strong><span>held for metadata review</span></div>
-            </div>
-            <div className="trust-row"><span>✓</span><div><strong>Official watch links</strong><small>No piracy mirrors or scraped streaming pages.</small></div></div>
-            <div className="trust-row"><span>✓</span><div><strong>Current cinema routes</strong><small>Go to the cinema's own booking or showtime page.</small></div></div>
-            <div className="trust-row"><span>✓</span><div><strong>Lightweight by design</strong><small>Playback stays on the original platform.</small></div></div>
+          <aside className="trust-panel" aria-label="How movie discovery works">
+            <div className="trust-panel-top"><span className="trust-kicker">Simple by design</span><span className="trust-live"><i aria-hidden="true" />Official routes</span></div>
+            <strong>Discover here. Watch from the source.</strong>
+            <p>Movie pages focus on useful details and direct routes instead of catalog statistics, technical sync information or copied playback.</p>
+            <div className="trust-row"><span>✓</span><div><strong>Every movie has artwork</strong><small>Cleared promotional art, official YouTube thumbnails or original MyNigeriaGuide artwork.</small></div></div>
+            <div className="trust-row"><span>✓</span><div><strong>Official watch links</strong><small>No piracy mirrors or copied streaming pages.</small></div></div>
+            <div className="trust-row"><span>✓</span><div><strong>Useful movie details</strong><small>Story, cast, genres, language and availability stay close to the title.</small></div></div>
           </aside>
         </div>
       </section>
@@ -76,15 +69,15 @@ export default function EntertainmentPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <div><span className="eyebrow">Explore entertainment</span><h2>Choose what you want to discover.</h2></div>
+            <div><span className="eyebrow">Start with movies</span><h2>Choose how you want to watch.</h2></div>
           </div>
           <div className="home-category-grid">
-            <Link className="home-category-card" href="/entertainment/movies"><span>Watch</span><strong>Movies</strong><small>Search curated streaming titles and jump into the {youtubeMovieLibrary.length.toLocaleString()}-title YouTube library.</small><i>Browse movies →</i></Link>
+            <Link className="home-category-card" href="/entertainment/movies"><span>Discover</span><strong>Movies</strong><small>Browse Nigerian films across streaming platforms and official publisher channels.</small><i>Browse movies →</i></Link>
             <Link className="home-category-card" href="/entertainment/youtube"><span>Free to watch</span><strong>YouTube movies</strong><small>Full Nigerian movies from approved producer and rightsholder channels.</small><i>Browse YouTube movies →</i></Link>
             <Link className="home-category-card" href="/entertainment/releases"><span>Current</span><strong>New &amp; upcoming</strong><small>Fresh streaming additions, films now showing and upcoming film events.</small><i>See releases →</i></Link>
-            <Link className="home-category-card" href="/entertainment/cinemas"><span>Big screen</span><strong>Cinemas</strong><small>Filmhouse, Silverbird and Viva booking routes, locations and price guidance.</small><i>Find cinemas →</i></Link>
-            <Link className="home-category-card" href="/entertainment/platforms"><span>Streaming</span><strong>Platforms</strong><small>Netflix, YouTube, Prime Video and the Showmax-to-DStv Stream transition.</small><i>Compare platforms →</i></Link>
-            <Link className="home-category-card" href="/entertainment/people"><span>People</span><strong>Actors &amp; filmmakers</strong><small>Browse people connected to titles already in the catalog.</small><i>Explore people →</i></Link>
+            <Link className="home-category-card" href="/entertainment/cinemas"><span>Big screen</span><strong>Cinemas</strong><small>Official booking routes, locations and practical price guidance.</small><i>Find cinemas →</i></Link>
+            <Link className="home-category-card" href="/entertainment/platforms"><span>Streaming</span><strong>Platforms</strong><small>Understand the official routes for Netflix, YouTube, Prime Video and supported services.</small><i>Compare platforms →</i></Link>
+            <Link className="home-category-card" href="/entertainment/people"><span>People</span><strong>Actors &amp; filmmakers</strong><small>Explore people connected to movies already in the guide.</small><i>Explore people →</i></Link>
           </div>
         </div>
       </section>
@@ -129,15 +122,15 @@ export default function EntertainmentPage() {
       <section className="section">
         <div className="container agency-strip">
           <div>
-            <span className="eyebrow">Growing without becoming heavy</span>
-            <h2>Metadata here. Playback elsewhere.</h2>
-            <p>The entertainment catalog stores lightweight text, links and verification dates. Netflix, Prime Video and YouTube still serve the actual video, while cinema chains handle their own ticketing.</p>
+            <span className="eyebrow">Image and playback policy</span>
+            <h2>Useful visuals without copying what we do not own.</h2>
+            <p>Cleared promotional art is used when its reuse basis is documented. Official YouTube video thumbnails stay linked to their source. Otherwise MyNigeriaGuide creates original title artwork instead of copying a poster or film still.</p>
           </div>
           <div className="policy-stack">
-            <section><strong>✓</strong><div><h2>Image-rights gate</h2><p>Movie artwork is hidden until its source, credit, permission or licence basis and review date are recorded.</p></div></section>
-            <section><strong>{platformGuides.length}</strong><div><h2>Platform guides</h2><p>Current platform routing and availability notes.</p></div></section>
-            <section><strong>{cinemaGuides.length}</strong><div><h2>Cinema chains</h2><p>Official booking and price links instead of copied schedules.</p></div></section>
-            <section><strong>{entertainmentPeople.length}</strong><div><h2>People profiles</h2><p>Connected to films already present in the catalog.</p></div></section>
+            <section><strong>✓</strong><div><h2>Cleared promotional art</h2><p>Used only when permission, licence or another recorded reuse basis supports it.</p></div></section>
+            <section><strong>✓</strong><div><h2>Official YouTube previews</h2><p>Unmodified video thumbnails remain connected to the original YouTube source.</p></div></section>
+            <section><strong>✓</strong><div><h2>Original fallback artwork</h2><p>When no reusable poster is recorded, the site creates its own visual from title metadata.</p></div></section>
+            <section><strong>↗</strong><div><h2>Playback stays official</h2><p>Streaming and cinema actions continue on the responsible platform or publisher site.</p></div></section>
           </div>
         </div>
       </section>

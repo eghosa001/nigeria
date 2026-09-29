@@ -106,7 +106,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
           <div className="movie-detail-hero-grid">
             <div className="movie-detail-artwork">
               <EntertainmentArtwork title={title} variant="hero" />
-              {!title.artwork ? <p className="movie-artwork-rights-note">No cleared poster artwork yet.</p> : null}
             </div>
 
             <div className="movie-detail-copy">
@@ -176,7 +175,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <article><span>Languages</span><strong>{title.languages.join(", ")}</strong></article>
                 <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
                 <article><span>Official platforms</span><strong>{platforms.join(", ")}</strong></article>
-                <article><span>Cast recorded</span><strong>{title.cast.length} people</strong></article>
                 <article><span>Link freshness</span><strong>{lastChecked}</strong></article>
               </div>
             </section>
@@ -248,7 +246,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 {title.artwork ? (
                   <p>Promotional artwork is shown from <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">{title.artwork.credit}</a> under the recorded reuse basis. Checked {title.artwork.lastChecked}.</p>
                 ) : (
-                  <p>Reusable poster artwork has not yet been cleared. When an official YouTube video exists, its attributed video thumbnail may be used as a preview instead.</p>
+                  <p>When reusable promotional artwork is not recorded, MyNigeriaGuide uses an original generated visual based only on the movie title, year and genre. Official YouTube video thumbnails may be shown unmodified when a verified video source is available.</p>
                 )}
               </div>
             </details>

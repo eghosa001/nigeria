@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentCatalog } from "@/components/entertainment-catalog";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { entertainmentPlatforms, entertainmentTitles, getEntertainmentGenres } from "@/lib/entertainment";
-import { youtubeMovieLibrary, youtubePendingQualityCount } from "@/lib/youtube-library";
+import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
@@ -42,11 +42,6 @@ export default async function MoviesPage({
                 Browse a visual catalog of Nigerian movies, then open the verified official platform when you are ready to watch.
               </p>
             </div>
-            <div className="movie-stat-cluster" aria-label="Movie catalog summary">
-              <div><strong>{youtubeMovieLibrary.length.toLocaleString()}</strong><span>free full movies</span></div>
-              <div><strong>{entertainmentTitles.length}</strong><span>curated titles</span></div>
-              <div><strong>{youtubePendingQualityCount}</strong><span>under review</span></div>
-            </div>
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">
             <a href="#free-movies">Free on YouTube</a>
@@ -65,7 +60,7 @@ export default async function MoviesPage({
               <h2>Full movies from approved YouTube publishers.</h2>
               <p>Real video thumbnails, compact cards and direct publisher links make it easy to scan several titles at once.</p>
             </div>
-            <Link href="/entertainment/youtube">Browse all {youtubeMovieLibrary.length.toLocaleString()} →</Link>
+            <Link href="/entertainment/youtube">Browse all free movies →</Link>
           </div>
           <div className="youtube-movie-grid movie-preview-grid">
             {freePreview.map((movie, index) => (

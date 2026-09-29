@@ -5,13 +5,13 @@ import { usePathname } from "next/navigation";
 import { BrandLogo } from "@/components/brand-logo";
 
 const primaryNavigation = [
+  { href: "/entertainment/movies", label: "Movies", matches: ["/entertainment"] },
   {
     href: "/services",
     label: "Services",
     matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/updates"],
   },
-  { href: "/explore", label: "Explore Nigeria", matches: ["/explore"] },
-  { href: "/entertainment", label: "Entertainment", matches: ["/entertainment"] },
+  { href: "/explore", label: "Tour Nigeria", matches: ["/explore"] },
 ];
 
 const sectionNavigation = {
@@ -26,7 +26,7 @@ const sectionNavigation = {
     ],
   },
   explore: {
-    label: "Explore Nigeria",
+    label: "Tour Nigeria",
     links: [
       { href: "/explore", label: "Overview" },
       { href: "/explore#places", label: "Places" },
@@ -35,14 +35,14 @@ const sectionNavigation = {
     ],
   },
   entertainment: {
-    label: "Entertainment",
+    label: "Movies & entertainment",
     links: [
-      { href: "/entertainment", label: "Overview" },
       { href: "/entertainment/movies", label: "Movies" },
       { href: "/entertainment/youtube", label: "Free on YouTube" },
       { href: "/entertainment/releases", label: "New & upcoming" },
       { href: "/entertainment/cinemas", label: "Cinemas" },
       { href: "/entertainment/people", label: "People" },
+      { href: "/entertainment", label: "More" },
     ],
   },
 } as const;
@@ -90,10 +90,10 @@ function isMobileItemActive(pathname: string, href: string) {
 }
 
 const mobileNavigation = [
-  { href: "/", label: "Home", icon: "home" as const },
-  { href: "/services", label: "Services", icon: "services" as const },
-  { href: "/explore", label: "Explore", icon: "explore" as const },
   { href: "/entertainment/movies", label: "Movies", icon: "movies" as const },
+  { href: "/services", label: "Services", icon: "services" as const },
+  { href: "/explore", label: "Tour", icon: "explore" as const },
+  { href: "/", label: "Home", icon: "home" as const },
   { href: "/saved", label: "Saved", icon: "saved" as const },
 ];
 
@@ -152,7 +152,8 @@ export function SiteHeader() {
               <nav aria-label={context.label + " navigation"}>
                 {context.links.map((item) => {
                   const cleanHref = item.href.split("#")[0];
-                  const active = item.label === "Overview"
+                  const exactOnly = item.label === "Overview" || item.href === "/entertainment";
+                  const active = exactOnly
                     ? pathname === cleanHref
                     : pathname === cleanHref || (cleanHref !== "/services" && pathname.startsWith(cleanHref + "/"));
                   return (

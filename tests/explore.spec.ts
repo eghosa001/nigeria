@@ -1,11 +1,15 @@
 import { expect, test } from "@playwright/test";
 
-test("homepage exposes the three platform pillars", async ({ page }) => {
+test("homepage exposes movies first, then services, then tour", async ({ page }) => {
   await page.goto("/");
-  const launchpad = page.locator(".home-launchpad");
-  await expect(launchpad).toContainText("Services");
-  await expect(launchpad.getByRole("link", { name: /Explore Nigeria/ })).toHaveAttribute("href", "/explore");
-  await expect(launchpad.getByRole("link", { name: /Entertainment/ })).toHaveAttribute("href", "/entertainment");
+  const cards = page.locator(".home-launchpad .home-launch-card");
+  await expect(cards).toHaveCount(3);
+  await expect(cards.nth(0)).toContainText("Movies");
+  await expect(cards.nth(0)).toHaveAttribute("href", "/entertainment/movies");
+  await expect(cards.nth(1)).toContainText("Services");
+  await expect(cards.nth(1)).toHaveAttribute("href", "/services");
+  await expect(cards.nth(2)).toContainText("Tour Nigeria");
+  await expect(cards.nth(2)).toHaveAttribute("href", "/explore");
 });
 
 test("Explore Nigeria hub and city guide are navigable", async ({ page }) => {

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
-import { approvedYouTubeSourceCapacity, verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
-import { youtubeMovieLibrary, youtubeLibraryGeneratedAt, youtubePendingQualityCount } from "@/lib/youtube-library";
+import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
+import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Full Nigerian Movies on YouTube",
@@ -49,11 +49,6 @@ export default async function YouTubeMoviesPage({
                 Scan real YouTube thumbnails, search titles or actors, filter by publisher and open the original video on YouTube.
               </p>
             </div>
-            <div className="movie-stat-cluster" aria-label="YouTube movie summary">
-              <div><strong>{youtubeMovieLibrary.length.toLocaleString()}</strong><span>published</span></div>
-              <div><strong>{verifiedYouTubeMovieChannels.length}</strong><span>publishers</span></div>
-              <div><strong>{approvedYouTubeSourceCapacity.toLocaleString()}+</strong><span>source pool</span></div>
-            </div>
           </div>
           <div className="movie-browse-tabs">
             <Link href="/entertainment/movies">All movies</Link>
@@ -82,11 +77,6 @@ export default async function YouTubeMoviesPage({
             <button className="movie-filter-submit" type="submit">Search</button>
           </form>
 
-          <div className="movie-directory-summary" aria-live="polite">
-            <span><strong>{filtered.length}</strong> matching full movie{filtered.length === 1 ? "" : "s"}</span>
-            {youtubeLibraryGeneratedAt ? <span>API sync {youtubeLibraryGeneratedAt.slice(0, 10)}</span> : <span>Bulk API sync pending</span>}
-          </div>
-
           <div className="youtube-movie-grid">
             {visible.map((movie, index) => (
               <YouTubeMovieCard movie={movie} priority={index < 5} key={movie.videoId} />
@@ -99,13 +89,6 @@ export default async function YouTubeMoviesPage({
               <span>Page {page} of {pageCount}</span>
               {page < pageCount ? <Link prefetch={false} href={{ pathname: "/entertainment/youtube", query: { q: params.q || undefined, channel: channel || undefined, page: page + 1 } }}>Next →</Link> : <span />}
             </nav>
-          ) : null}
-
-          {youtubePendingQualityCount ? (
-            <div className="movie-review-note">
-              <strong>{youtubePendingQualityCount} additional videos are held for metadata review.</strong>
-              <p>They stay unpublished until their movie metadata is usable, which keeps this large catalog from degrading into title-only results.</p>
-            </div>
           ) : null}
         </div>
       </section>

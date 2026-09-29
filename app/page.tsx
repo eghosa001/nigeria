@@ -3,13 +3,13 @@ import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
-import { publicServiceListings, publicServices } from "@/lib/data";
+import { publicServiceListings } from "@/lib/data";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
 
 export const metadata: Metadata = {
-  title: "Nigeria Services, Travel & Entertainment Guide",
-  description: "Use MyNigeriaGuide for clear Nigerian service guidance, practical travel planning and official routes to Nigerian movies and entertainment.",
+  title: "Nigerian Movies, Services & Travel Guide",
+  description: "Discover Nigerian movies first, then practical service guidance and travel ideas across Nigeria, with official routes and source-linked information.",
   alternates: { canonical: "/" },
 };
 
@@ -24,7 +24,6 @@ const popularServices = [
 ];
 
 export default function HomePage() {
-  const verifiedCount = publicServices.filter((service) => service.status === "verified").length;
   const travelHighlights = exploreGuides
     .filter((guide) => guide.kind === "city" || guide.kind === "destination")
     .slice(0, 4);
@@ -41,15 +40,15 @@ export default function HomePage() {
               <span className="hero-kicker-dot" aria-hidden="true" />
               One practical guide to Nigeria
             </div>
-            <h1>Services, travel and entertainment <span>in one Nigerian guide.</span></h1>
+            <h1>Movies, services and places to explore <span>in one Nigerian guide.</span></h1>
             <p className="hero-lead">
-              Get something done, discover somewhere worth going, or find a Nigerian movie to watch — without navigating a site that feels like three unrelated products.
+              Find a Nigerian movie first, then get something done or discover somewhere worth going — all inside one consistent guide.
             </p>
 
             <div className="premium-home-actions">
-              <Link className="button" href="/services">Browse services</Link>
-              <Link className="button button-secondary" href="/explore">Explore Nigeria</Link>
-              <Link className="button button-secondary" href="/entertainment/movies">Find a movie</Link>
+              <Link className="button" href="/entertainment/movies">Find a movie</Link>
+              <Link className="button button-secondary" href="/services">Browse services</Link>
+              <Link className="button button-secondary" href="/explore">Tour Nigeria</Link>
             </div>
 
             <div className="home-trust-line" aria-label="MyNigeriaGuide principles">
@@ -60,23 +59,23 @@ export default function HomePage() {
           </div>
 
           <aside className="home-launchpad" aria-label="Choose a MyNigeriaGuide section">
+            <Link href="/entertainment/movies" className="home-launch-card entertainment-launch-card">
+              <span>01 · Watch something</span>
+              <strong>Movies</strong>
+              <p>Browse Nigerian films with images, cast details, descriptions and official places to watch.</p>
+              <i>Find a movie →</i>
+            </Link>
             <Link href="/services" className="home-launch-card service-launch-card">
-              <span>01 · Get something done</span>
+              <span>02 · Get something done</span>
               <strong>Services</strong>
-              <p>{verifiedCount} published guides covering identity, travel documents, education, business, banking, driving and more.</p>
+              <p>Follow clear requirements, costs, official links and next steps for practical Nigerian services.</p>
               <i>Open services →</i>
             </Link>
             <Link href="/explore" className="home-launch-card explore-launch-card">
-              <span>02 · Go somewhere</span>
-              <strong>Explore Nigeria</strong>
-              <p>{exploreGuides.length} city, destination and itinerary guides with practical planning details.</p>
+              <span>03 · Go somewhere</span>
+              <strong>Tour Nigeria</strong>
+              <p>Plan cities, destinations and places with practical location, timing, transport and cost details.</p>
               <i>Plan a trip →</i>
-            </Link>
-            <Link href="/entertainment" className="home-launch-card entertainment-launch-card">
-              <span>03 · Watch something</span>
-              <strong>Entertainment</strong>
-              <p>{entertainmentTitles.length} curated movie pages plus official YouTube, streaming, cinema and release routes.</p>
-              <i>Explore entertainment →</i>
             </Link>
           </aside>
         </div>
@@ -93,6 +92,26 @@ export default function HomePage() {
           </div>
 
           <div className="home-pillar-showcase-grid">
+            <article className="home-pillar-panel entertainment-panel">
+              <div className="home-pillar-panel-heading">
+                <span className="eyebrow">Movies</span>
+                <h3>Find something worth watching.</h3>
+                <p>Browse images, cast, descriptions, genres and verified official watch routes without opening multiple sites.</p>
+              </div>
+              <div className="home-movie-mini-grid">
+                {movieHighlights.map((title) => (
+                  <article key={title.slug} className="home-movie-mini-card">
+                    <EntertainmentArtwork title={title} />
+                    <Link href={"/entertainment/movies/" + title.slug}>
+                      <strong>{title.title}</strong>
+                      <small>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</small>
+                    </Link>
+                  </article>
+                ))}
+              </div>
+              <Link className="home-panel-cta" href="/entertainment/movies">Browse movies →</Link>
+            </article>
+
             <article className="home-pillar-panel services-panel">
               <div className="home-pillar-panel-heading">
                 <span className="eyebrow">Services</span>
@@ -108,7 +127,7 @@ export default function HomePage() {
 
             <article className="home-pillar-panel explore-panel">
               <div className="home-pillar-panel-heading">
-                <span className="eyebrow">Explore Nigeria</span>
+                <span className="eyebrow">Tour Nigeria</span>
                 <h3>Choose a city or destination.</h3>
                 <p>Move from inspiration to useful planning details: places, timing, transport, addresses, maps and cost notes.</p>
               </div>
@@ -122,37 +141,17 @@ export default function HomePage() {
               </div>
               <Link className="home-panel-cta" href="/explore">Explore destinations →</Link>
             </article>
-
-            <article className="home-pillar-panel entertainment-panel">
-              <div className="home-pillar-panel-heading">
-                <span className="eyebrow">Entertainment</span>
-                <h3>Find a movie and know where to watch it.</h3>
-                <p>Browse cast, genres, languages, availability notes and verified official watch routes.</p>
-              </div>
-              <div className="home-movie-mini-grid">
-                {movieHighlights.map((title) => (
-                  <article key={title.slug} className="home-movie-mini-card">
-                    <EntertainmentArtwork title={title} />
-                    <Link href={"/entertainment/movies/" + title.slug}>
-                      <strong>{title.title}</strong>
-                      <small>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</small>
-                    </Link>
-                  </article>
-                ))}
-              </div>
-              <Link className="home-panel-cta" href="/entertainment/movies">Browse movies →</Link>
-            </article>
           </div>
         </div>
       </section>
 
       <section className="home-utility-strip" aria-label="Useful shortcuts">
         <div className="container home-utility-grid">
+          <Link href="/entertainment/youtube"><span>Watch free</span><strong>Official YouTube movies</strong><i>→</i></Link>
+          <Link href="/entertainment/releases"><span>Movie discovery</span><strong>New & upcoming</strong><i>→</i></Link>
           <Link href="/fees"><span>Service planning</span><strong>Check fees</strong><i>→</i></Link>
           <Link href="/offices"><span>In-person help</span><strong>Find official offices</strong><i>→</i></Link>
-          <Link href="/explore#places"><span>Travel discovery</span><strong>Browse places</strong><i>→</i></Link>
-          <Link href="/entertainment/youtube"><span>Free entertainment</span><strong>Watch official YouTube movies</strong><i>→</i></Link>
-          <Link href="/entertainment/cinemas"><span>Big screen</span><strong>Find cinemas</strong><i>→</i></Link>
+          <Link href="/explore#places"><span>Tour Nigeria</span><strong>Browse places</strong><i>→</i></Link>
           <Link href="/saved"><span>Come back later</span><strong>Saved guides</strong><i>→</i></Link>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "MyNigeriaGuide — Nigerian services, travel and entertainment";
+export const alt = "MyNigeriaGuide — Nigerian movies, services and travel";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -27,16 +27,16 @@ export default function Image() {
           <Mark />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <strong style={{ fontSize: "36px", letterSpacing: "-1px" }}>MyNigeriaGuide</strong>
-            <span style={{ fontSize: "20px", color: "#607168" }}>Services · Travel · Movies</span>
+            <span style={{ fontSize: "20px", color: "#607168" }}>Movies · Services · Travel</span>
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", zIndex: 2 }}>
           <div style={{ fontSize: "65px", fontWeight: 800, lineHeight: 1.02, maxWidth: "920px", letterSpacing: "-2.5px" }}>
-            Services, travel and entertainment in one Nigerian guide.
+            Movies, services and travel in one Nigerian guide.
           </div>
           <div style={{ marginTop: "25px", fontSize: "24px", color: "#607168" }}>
-            Official routes · practical planning · places · Nigerian movies
+            Nigerian movies · official routes · practical services · places
           </div>
         </div>
 

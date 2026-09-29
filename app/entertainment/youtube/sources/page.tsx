@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { approvedYouTubeSourceCapacity, verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
+import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 
 export const metadata: Metadata = {
   title: "Approved Nollywood YouTube Sources",
@@ -24,12 +24,6 @@ export default function YouTubeSourcesPage() {
           These channels are editorially approved as producer, filmmaker or rightsholder sources. The importer still requires an exact identity match from the official YouTube Data API before it trusts a channel.
         </p>
 
-        <div className="category-summary">
-          <div><strong>{verifiedYouTubeMovieChannels.length}</strong><span>approved channels</span></div>
-          <div><strong>{approvedYouTubeSourceCapacity.toLocaleString()}+</strong><span>estimated full-movie capacity</span></div>
-          <div><strong>0</strong><span>general-search channels accepted automatically</span></div>
-        </div>
-
         <div className="service-grid">
           {verifiedYouTubeMovieChannels.map((source) => (
             <article className="service-card" key={source.slug}>
@@ -40,7 +34,7 @@ export default function YouTubeSourcesPage() {
               <h3>{source.name}</h3>
               <p>{source.verificationBasis}</p>
               <div className="service-meta">
-                <strong>~{source.estimatedMovieCount} discovery candidates</strong>
+                <strong>Approved publisher</strong>
                 {source.channelUrl ? <a href={source.channelUrl} target="_blank" rel="noreferrer">Official channel →</a> : <span>API identity pending</span>}
               </div>
             </article>
