@@ -34,7 +34,13 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   async headers() {
-    return [{ source: "/(.*)", headers: securityHeaders }];
+    const privateAdminHeaders = [{ key: "Cache-Control", value: "private, no-store" }];
+    return [
+      { source: "/admin", headers: privateAdminHeaders },
+      { source: "/admin/:path*", headers: privateAdminHeaders },
+      { source: "/api/admin/:path*", headers: privateAdminHeaders },
+      { source: "/(.*)", headers: securityHeaders },
+    ];
   },
   async redirects() {
     return [

@@ -14,6 +14,7 @@ on:
       - "tests/**"
       - "package.json"
       - "next.config.ts"
+      - "wrangler.jsonc"
       - "playwright.live.config.ts"
       - ".github/workflows/live-qa.yml"
 
@@ -37,7 +38,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for path in "/admin/visits" "/api/admin/analytics?range=7d" "/api/admin/content-access"; do
+          for path in "/admin/visits" "/admin/api/analytics?range=7d" "/admin/api/content-access"; do
             headers="$(mktemp)"
             status="$(curl -sS --max-time 15 --max-redirs 0 \
               --dump-header "$headers" --output /dev/null --write-out '%{http_code}' \

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { Service } from "@/lib/types";
+import { trackEvent } from "@/lib/client-analytics";
 
 type Progress = { started: boolean; requirements: boolean[]; steps: boolean[] };
 
@@ -12,6 +13,7 @@ function empty(service: Service): Progress {
 export function ProcessTracker({ service }: { service: Service }) {
   const key = "mynigeriaguide:process:" + service.slug;
   const [progress, setProgress] = useState<Progress>(() => empty(service));
+  const completionKey = key + ":completion-tracked";
 
   useEffect(() => {
     try {
@@ -49,16 +51,31 @@ export function ProcessTracker({ service }: { service: Service }) {
           <h2>Turn this guide into your personal checklist.</h2>
           <p>Track documents and steps on this device. No account is needed and your progress stays in this browser.</p>
         </div>
-        <button type="button" onClick={() => setProgress({ ...empty(service), started: true })}>Start this process →</button>
+        <button type="button" onClick={() => { setProgress({ ...empty(service), started: true }); trackEvent("process_start", { service_slug: service.slug }); }}>Start this process →</button>
       </section>
     );
   }
 
+  function recordCompletion(next: Progress) {
+    const complete = [...next.requirements, ...next.steps].every(Boolean);
+    if (!complete || localStorage.getItem(completionKey)) return;
+    localStorage.setItem(completionKey, "1");
+    trackEvent("process_complete", { service_slug: service.slug });
+  }
+
   function toggleRequirement(index: number) {
-    setProgress((current) => ({ ...current, requirements: current.requirements.map((value, i) => i === index ? !value : value) }));
+    setProgress((current) => {
+      const next = { ...current, requirements: current.requirements.map((value, i) => i === index ? !value : value) };
+      recordCompletion(next);
+      return next;
+    });
   }
   function toggleStep(index: number) {
-    setProgress((current) => ({ ...current, steps: current.steps.map((value, i) => i === index ? !value : value) }));
+    setProgress((current) => {
+      const next = { ...current, steps: current.steps.map((value, i) => i === index ? !value : value) };
+      recordCompletion(next);
+      return next;
+    });
   }
 
   return (
@@ -94,7 +111,7 @@ export function ProcessTracker({ service }: { service: Service }) {
       </div>
       <div className="process-actions">
         <button type="button" onClick={() => window.print()}>Print checklist</button>
-        <button type="button" className="quiet" onClick={() => { localStorage.removeItem(key); setProgress(empty(service)); }}>Reset progress</button>
+        <button type="button" className="quiet" onClick={() => { localStorage.removeItem(key); localStorage.removeItem(completionKey); setProgress(empty(service)); }}>Reset progress</button>
       </div>
     </section>
   );

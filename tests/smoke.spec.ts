@@ -60,6 +60,7 @@ test("visits unlock displays reports immediately and can be locked again", async
       countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
       pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
       referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
+      interactions: [{ event: "official_link_click", count: 9 }, { event: "guide_share", count: 4 }],
     } } });
   });
 
@@ -78,6 +79,9 @@ test("visits unlock displays reports immediately and can be locked again", async
   await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-page-table")).toContainText("Passport renewal");
+  const interactionPanel = page.locator(".analytics-interactions");
+  await expect(interactionPanel).toBeVisible();
+  await expect(interactionPanel).toContainText("Official service link opened");
   await page.getByRole("button", { name: "Lock analytics" }).click();
   await expect(page.getByLabel("Analytics passphrase")).toBeEmpty();
   expect(errors).toEqual([]);
@@ -220,6 +224,10 @@ test("security headers protect public and admin responses", async ({ request }) 
     expect(response.headers()["x-frame-options"]).toBe("SAMEORIGIN");
     expect(response.headers()["referrer-policy"]).toBe("strict-origin-when-cross-origin");
     expect(response.headers()["strict-transport-security"]).toContain("max-age=31536000");
+    if (path === "/admin") {
+      expect(response.headers()["cache-control"]).toContain("private");
+      expect(response.headers()["cache-control"]).toContain("no-store");
+    }
   }
 });
 

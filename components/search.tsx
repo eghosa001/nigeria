@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { searchServices } from "@/lib/search";
 import type { PublicServiceListing } from "@/lib/data";
+import { trackEvent } from "@/lib/client-analytics";
 
 export function ServiceSearch({ services }: { services: PublicServiceListing[] }) {
   const [query, setQuery] = useState("");
@@ -28,7 +29,7 @@ export function ServiceSearch({ services }: { services: PublicServiceListing[] }
         <div className="search-results" aria-live="polite">
           {results.length ? (
             results.map(({ service }) => (
-              <Link key={service.slug} href={"/services/" + service.slug}>
+              <Link key={service.slug} href={"/services/" + service.slug} onClick={() => trackEvent("service_search_click", { service_slug: service.slug, search_term: query.trim().slice(0, 80) })}>
                 <span>
                   <strong>{service.shortTitle}</strong>
                   <small>{service.category} · {service.status === "conflict" ? "official-source conflict" : "verified"}</small>

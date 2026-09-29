@@ -16,6 +16,7 @@ const popular = [
   { label: "NIN correction", href: "/services/nin-date-of-birth-modification" },
   { label: "Retrieve BVN", href: "/services/bvn-retrieval" },
   { label: "JAMB 2026", href: "/services/jamb-2026-utme-registration" },
+  { label: "JAMB Direct Entry", href: "/services/jamb-direct-entry-2026" },
   { label: "NYSC senate list", href: "/services/nysc-senate-list" },
   { label: "CAC registration", href: "/services/cac-business-name-registration" },
   { label: "Licence renewal", href: "/services/renew-drivers-licence" },
