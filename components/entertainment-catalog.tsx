@@ -120,6 +120,11 @@ export function EntertainmentCatalog({
                 </div>
                 <h3><Link href={"/entertainment/movies/" + title.slug} prefetch={false}>{title.title}</Link></h3>
                 <p className="movie-tile-description">{title.synopsis}</p>
+                <div className="movie-tile-facts">
+                  {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : <span>Feature film</span>}
+                  <span>{title.languages.slice(0, 2).join(" / ")}</span>
+                  <span>{title.cast.length} cast</span>
+                </div>
                 <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
                 <div className="movie-tile-footer">
                   <span>{title.genres.slice(0, 2).join(" · ")}</span>
