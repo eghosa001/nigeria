@@ -244,17 +244,61 @@ function cleanName(value) {
     .trim();
 }
 
+function looksLikePersonName(name) {
+  const words = name.split(/\s+/).filter(Boolean);
+  if (!words.length || words.length > 4) return false;
+  if (name === name.toLowerCase()) return false;
+  return words.every((word) => /^[A-Za-zÀ-ÖØ-öø-ÿ'’.\-]+$/.test(word));
+}
+
 function splitNames(value) {
   return value
-    .split(/,|\s+&\s+|\s+and\s+|\s*\/\s*/i)
+    .split(/,|\s*&\s*|\s+and\s+|\s*\/\s*/i)
     .map(cleanName)
     .filter((name) =>
       name.length >= 4 &&
       name.length <= 60 &&
       /^[A-Za-zÀ-ÖØ-öø-ÿ'’.\-\s]+$/.test(name) &&
-      !/\b(movie|film|latest|nigerian|nollywood|full|official|watch|youtube|tv|production|director|producer)\b/i.test(name),
+      looksLikePersonName(name) &&
+      !/\b(movie|film|latest|nigerian|nollywood|full|official|watch|youtube|tv|production|director|producer|channel|welcome|subscribe|romantic|drama|comedy|trending)\b/i.test(name),
     )
     .slice(0, 12);
+}
+
+function inlineDescriptionCast(description) {
+  const marker = /\b(?:cast(?:\s+includes)?|starring|stars?|featuring)\s*(?:is|are)?\s*[:\-]?\s*/ig;
+  let match;
+  while ((match = marker.exec(description))) {
+    let tail = description.slice(match.index + match[0].length, match.index + match[0].length + 260);
+    tail = tail.split(/\b(?:watch|welcome|subscribe|if you|this movie|the movie|brings you|on our channel)\b/i)[0];
+    tail = tail.split(/[.!?]\s/)[0];
+    const names = splitNames(tail);
+    if (names.length) return names;
+  }
+  return [];
+}
+
+function titleEmbeddedCast(title) {
+  const candidates = [];
+  const pipeParts = title.split(/\s*\|\s*/);
+  if (pipeParts.length > 1) candidates.push(...pipeParts.slice(1, -1).concat(pipeParts.slice(1, 2)));
+
+  const movieTail = title.match(/\b(?:the\s+movie|d\s+movie|movie)\)?\s*[:\-]?\s*([^|#]{6,180})/i);
+  if (movieTail) candidates.push(movieTail[1]);
+
+  for (const match of title.matchAll(/\s[-–—]\s*([^|#]{6,180})/g)) {
+    candidates.push(match[1]);
+  }
+
+  for (let value of candidates) {
+    value = value
+      .replace(/\b20\d{2}\b.*$/i, "")
+      .replace(/\b(?:latest|nigerian|nollywood|full|movie|romcom|romantic|drama|comedy|trending)\b.*$/i, "")
+      .trim();
+    const names = splitNames(value);
+    if (names.length >= 2) return names;
+  }
+  return [];
 }
 
 function extractCast(video) {
@@ -278,12 +322,18 @@ function extractCast(video) {
     }
   }
 
+  const inline = inlineDescriptionCast(description);
+  if (inline.length) return inline;
+
   const title = video.snippet?.title ?? "";
   const starring = title.match(/(?:starring|featuring|feat\.?|ft\.?)\s*[:.\-]?\s*(.+?)(?:\||\b20\d{2}\b|\blatest\b|\bnigerian\b|\bnollywood\b|\bfull\b|$)/i);
   if (starring) {
     const names = splitNames(starring[1]);
     if (names.length) return names;
   }
+
+  const embedded = titleEmbeddedCast(title);
+  if (embedded.length) return embedded;
 
   const segments = title.split(/\s+-\s+/);
   if (segments.length > 1) {
