@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!hub) return {};
 
   return {
-    title: hub.title,
+    title: { absolute: hub.title },
     description: hub.description,
     alternates: { canonical: "/topics/" + hub.slug },
     openGraph: {
