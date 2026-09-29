@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
-// Recovery sync trigger: reuse previously validated title cast for held candidates.
+// Recovery sync trigger: validated title-cast pass after validator repair.
 const sourcesPath = path.join(root, "data/youtube-movie-sources.json");
 const cachePath = path.join(root, "data/youtube-channel-cache.json");
 const outputPath = path.join(root, "data/youtube-movies.generated.json");
