@@ -142,9 +142,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <article><span>Runtime</span><strong>{runtimeLabel(movie.durationMinutes)}</strong></article>
                 <article><span>Publisher</span><strong>{movie.channelName}</strong></article>
                 <article><span>Published</span><strong>{movie.publishedAt.slice(0, 10)}</strong></article>
-                <article><span>Cast recorded</span><strong>{movie.cast.length} people</strong></article>
                 <article><span>Access</span><strong>Free on YouTube</strong></article>
-                <article><span>Source type</span><strong>{movie.source === "curated" ? "Curated" : "YouTube API"}</strong></article>
                 <article><span>Source checked</span><strong>{movie.lastChecked}</strong></article>
               </div>
             </section>
@@ -197,8 +195,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <div><dt>Year</dt><dd>{movie.year}</dd></div>
                 <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
                 <div><dt>Publisher</dt><dd>{movie.channelName}</dd></div>
-                <div><dt>Cast</dt><dd>{movie.cast.length || "Expanding"}</dd></div>
-              </dl>
+                              </dl>
             </div>
             <div className="sidebar-card">
               <span>Keep exploring</span>
