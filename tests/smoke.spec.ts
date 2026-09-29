@@ -60,6 +60,7 @@ test("visits unlock displays reports immediately and can be locked again", async
       countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
       pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
       referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
+      interactions: [{ event: "official_link_click", count: 9 }, { event: "guide_share", count: 4 }],
     } } });
   });
 
@@ -78,6 +79,8 @@ test("visits unlock displays reports immediately and can be locked again", async
   await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-page-table")).toContainText("Passport renewal");
+  await expect(page.getByRole("heading", { name: "What visitors actually do" })).toBeVisible();
+  await expect(page.locator(".analytics-ranking")).toContainText("Official service link opened");
   await page.getByRole("button", { name: "Lock analytics" }).click();
   await expect(page.getByLabel("Analytics passphrase")).toBeEmpty();
   expect(errors).toEqual([]);
