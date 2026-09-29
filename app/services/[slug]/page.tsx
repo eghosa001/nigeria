@@ -7,6 +7,7 @@ import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
 import { ShareWatch } from "@/components/share-watch";
 import { ServiceJourney } from "@/components/service-journey";
+import { ServiceContext } from "@/components/service-context";
 import { ServiceRequirements } from "@/components/service-requirements";
 import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
@@ -208,6 +209,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <ProcessTracker service={service} />
 
             <ServiceJourney service={service} />
+
+            <ServiceContext service={service} />
 
             <ServiceRequirements service={service} />
 
