@@ -2,8 +2,15 @@ name: YouTube Entertainment Sync
 
 on:
   workflow_dispatch:
+    inputs:
+      full_sync:
+        description: Re-scan the complete approved-channel back catalog
+        required: false
+        default: false
+        type: boolean
   schedule:
-    - cron: "23 4 * * *"
+    - cron: "23 4 * * 1-6"
+    - cron: "17 5 * * 0"
 
 permissions:
   contents: write
@@ -34,11 +41,32 @@ jobs:
             echo "::notice::YOUTUBE_DATA_API_KEY is not configured; sync skipped."
           fi
 
+      - id: sync-mode
+        if: steps.api-key.outputs.present == 'true'
+        name: Choose incremental or full scan
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          MANUAL_FULL_SYNC: ${{ inputs.full_sync }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$MANUAL_FULL_SYNC" = "true" ]; then
+            echo "full=1" >> "$GITHUB_OUTPUT"
+          elif [ "$EVENT_NAME" = "schedule" ] && [ "$SCHEDULE" = "17 5 * * 0" ]; then
+            echo "full=1" >> "$GITHUB_OUTPUT"
+          else
+            echo "full=0" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Sync approved YouTube movie channels
         if: steps.api-key.outputs.present == 'true'
         env:
           YOUTUBE_DATA_API_KEY: ${{ secrets.YOUTUBE_DATA_API_KEY }}
+          YOUTUBE_FULL_SYNC: ${{ steps.sync-mode.outputs.full }}
         run: node scripts/sync-youtube-entertainment.mjs
+
+      - name: Validate generated entertainment catalog
+        if: steps.api-key.outputs.present == 'true'
+        run: node scripts/check-entertainment-scale.mjs
 
       - id: changes
         if: steps.api-key.outputs.present == 'true'
@@ -61,4 +89,11 @@ jobs:
           git add data/youtube-channel-cache.json data/youtube-movies.generated.json
           git commit -m "Refresh approved YouTube movie catalog"
           git push --force origin "$BRANCH"
-          gh pr create             --base main             --head "$BRANCH"             --title "Refresh approved YouTube movie catalog"             --body "Automated metadata refresh from the official YouTube Data API. Only approved channels and full-length movies that pass quality filters are included."             || gh pr edit "$BRANCH" --title "Refresh approved YouTube movie catalog" --body "Automated metadata refresh from the official YouTube Data API. Only approved channels and full-length movies that pass quality filters are included."
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "Refresh approved YouTube movie catalog" \
+            --body "Automated metadata refresh from the official YouTube Data API. Daily runs ingest only uploads newer than each channel's saved frontier; the Sunday run performs a complete revalidation. Only approved channels and full-length movies that pass quality filters are included." \
+            || gh pr edit "$BRANCH" \
+              --title "Refresh approved YouTube movie catalog" \
+              --body "Automated metadata refresh from the official YouTube Data API. Daily runs ingest only uploads newer than each channel's saved frontier; the Sunday run performs a complete revalidation. Only approved channels and full-length movies that pass quality filters are included."
