@@ -34,7 +34,10 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   async headers() {
-    const privateAdminHeaders = [{ key: "Cache-Control", value: "private, no-store" }];
+    const privateAdminHeaders = [
+      { key: "Cache-Control", value: "private, no-store" },
+      { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+    ];
     return [
       { source: "/admin", headers: privateAdminHeaders },
       { source: "/admin/:path*", headers: privateAdminHeaders },

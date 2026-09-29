@@ -939,7 +939,8 @@
       "How JAMB CAPS works for admission",
       "Education"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "The verified JAMB CAPS overview does not state a separate charge simply to view or use the CAPS admission-status functions. Any other JAMB service fee is separate and should be confirmed in JAMB e-Facility before payment."
   },
   {
     "slug": "waec-check-result",
@@ -4884,13 +4885,6 @@
       "A separate five-year self-sponsored multiple-entry tourist visa exists with different financial and insurance requirements; do not confuse it with the ordinary sponsored tourist visa."
     ],
     "sources": [
-      {
-        "label": "UAE ICP tourist visa requirements",
-        "agency": "UAE Federal Authority for Identity, Citizenship, Customs & Port Security",
-        "url": "https://icp.gov.ae/en/faq/",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
-      },
       {
         "label": "UAE ICP tourist visa requirements",
         "agency": "UAE Federal Authority for Identity, Citizenship, Customs & Port Security",

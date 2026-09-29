@@ -3,6 +3,16 @@ import { hasAdminSession } from "@/lib/admin-access";
 import { createServiceProposal, githubAdminConfigured } from "@/lib/admin-github";
 import { validateServiceRecord } from "@/lib/service-records";
 
+const privateHeaders = { "Cache-Control": "private, no-store" };
+
+function protectedAdminApi(request: Request) {
+  return new URL(request.url).pathname.startsWith("/admin/api/");
+}
+
+function legacyRouteResponse() {
+  return Response.json({ error: "Not found." }, { status: 404, headers: privateHeaders });
+}
+
 const MAX_BODY_BYTES = 180_000;
 
 function sameOrigin(request: Request) {
@@ -29,6 +39,7 @@ function sameOrigin(request: Request) {
 }
 
 export async function POST(request: Request, { params }: { params: Promise<{ slug: string }> }) {
+  if (!protectedAdminApi(request)) return legacyRouteResponse();
   if (!(await hasAdminSession())) {
     return Response.json({ error: "Admin authentication required." }, { status: 401 });
   }
