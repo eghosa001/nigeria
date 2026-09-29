@@ -16,6 +16,13 @@ const registry = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
 let cache = {};
 try { cache = JSON.parse(await fs.readFile(cachePath, "utf8")); } catch {}
 
+let previousGenerated = { movies: [], pendingQualityCount: 0 };
+try { previousGenerated = JSON.parse(await fs.readFile(outputPath, "utf8")); } catch {}
+const previousMovies = Array.isArray(previousGenerated.movies) ? previousGenerated.movies : [];
+const fullSync = process.env.YOUTUBE_FULL_SYNC === "1" || previousMovies.length === 0;
+const now = new Date();
+const checkedDate = now.toISOString().slice(0, 10);
+
 const API = "https://www.googleapis.com/youtube/v3";
 
 function normalize(value) {
@@ -25,17 +32,31 @@ function normalize(value) {
     .trim();
 }
 
+function wait(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 async function youtube(endpoint, params) {
   const url = new URL(API + "/" + endpoint);
-  for (const [key, value] of Object.entries({...params, key: apiKey})) {
+  for (const [key, value] of Object.entries({ ...params, key: apiKey })) {
     if (value !== undefined && value !== null) url.searchParams.set(key, String(value));
   }
-  const response = await fetch(url, {headers: {"accept":"application/json"}});
-  if (!response.ok) {
+
+  for (let attempt = 1; attempt <= 4; attempt++) {
+    const response = await fetch(url, { headers: { accept: "application/json" } });
+    if (response.ok) return response.json();
+
     const body = await response.text();
-    throw new Error(endpoint + " failed (" + response.status + "): " + body.slice(0, 500));
+    const retryable = response.status === 429 || response.status >= 500;
+    if (!retryable || attempt === 4) {
+      throw new Error(endpoint + " failed (" + response.status + "): " + body.slice(0, 500));
+    }
+
+    const retryAfter = Number(response.headers.get("retry-after") ?? 0);
+    await wait(retryAfter > 0 ? retryAfter * 1000 : 500 * (2 ** (attempt - 1)));
   }
-  return response.json();
+
+  throw new Error(endpoint + " failed after retries");
 }
 
 function exactChannelMatch(source, title) {
@@ -43,9 +64,60 @@ function exactChannelMatch(source, title) {
   return source.aliases.some((alias) => normalize(alias) === target);
 }
 
+function knownHandle(source) {
+  if (!source.knownUrl) return null;
+  try {
+    const url = new URL(source.knownUrl);
+    const segment = url.pathname.split("/").filter(Boolean).find((part) => part.startsWith("@"));
+    return segment ? segment.slice(1) : null;
+  } catch {
+    return null;
+  }
+}
+
+function verifiedChannelRecord(source, channel) {
+  if (!channel || !exactChannelMatch(source, channel.snippet?.title)) return null;
+
+  const description = normalize(channel.snippet?.description);
+  const purposeWords = ["movie", "film", "nollywood", "producer", "production", "official", "entertainment"];
+  if (!purposeWords.some((word) => description.includes(word))) return null;
+
+  const customUrl = channel.snippet?.customUrl || undefined;
+  const uploadsPlaylistId = channel.contentDetails?.relatedPlaylists?.uploads;
+  if (!uploadsPlaylistId) return null;
+
+  return {
+    channelId: channel.id,
+    channelTitle: channel.snippet.title,
+    channelUrl: customUrl ? "https://www.youtube.com/" + customUrl : "https://www.youtube.com/channel/" + channel.id,
+    customUrl,
+    uploadsPlaylistId,
+    resolvedAt: new Date().toISOString(),
+  };
+}
+
 async function resolveChannel(source) {
   const cached = cache[source.slug];
-  if (cached?.channelId && exactChannelMatch(source, cached.channelTitle)) return cached;
+  if (
+    cached?.channelId &&
+    cached?.uploadsPlaylistId &&
+    exactChannelMatch(source, cached.channelTitle)
+  ) {
+    return cached;
+  }
+
+  const handle = knownHandle(source);
+  if (handle) {
+    const details = await youtube("channels", {
+      part: "snippet,contentDetails,status",
+      forHandle: handle,
+    });
+    const resolved = verifiedChannelRecord(source, details.items?.[0]);
+    if (resolved) {
+      cache[source.slug] = resolved;
+      return resolved;
+    }
+  }
 
   const found = await youtube("search", {
     part: "snippet",
@@ -60,34 +132,21 @@ async function resolveChannel(source) {
     part: "snippet,contentDetails,status",
     id: match.id.channelId,
   });
-  const channel = details.items?.[0];
-  if (!channel || !exactChannelMatch(source, channel.snippet?.title)) {
-    throw new Error("Resolved channel failed identity check: " + source.searchName);
+  const resolved = verifiedChannelRecord(source, details.items?.[0]);
+  if (!resolved) {
+    throw new Error("Resolved channel failed identity or publisher-context check: " + source.searchName);
   }
 
-  const description = normalize(channel.snippet?.description);
-  const purposeWords = ["movie", "film", "nollywood", "producer", "production", "official", "entertainment"];
-  if (!purposeWords.some((word) => description.includes(word))) {
-    throw new Error("Channel description does not establish movie/producer context: " + source.searchName);
-  }
-
-  const customUrl = channel.snippet?.customUrl || undefined;
-  const resolved = {
-    channelId: channel.id,
-    channelTitle: channel.snippet.title,
-    channelUrl: customUrl ? "https://www.youtube.com/" + customUrl : "https://www.youtube.com/channel/" + channel.id,
-    customUrl,
-    uploadsPlaylistId: channel.contentDetails?.relatedPlaylists?.uploads,
-    resolvedAt: new Date().toISOString(),
-  };
-  if (!resolved.uploadsPlaylistId) throw new Error("No uploads playlist for " + source.searchName);
   cache[source.slug] = resolved;
   return resolved;
 }
 
-async function allUploads(playlistId) {
+async function uploadsSince(playlistId, stopAtVideoId) {
   const items = [];
   let pageToken;
+  let latestUploadVideoId = null;
+  let reachedPreviousUpload = false;
+
   do {
     const page = await youtube("playlistItems", {
       part: "snippet,contentDetails",
@@ -95,10 +154,23 @@ async function allUploads(playlistId) {
       maxResults: 50,
       pageToken,
     });
-    items.push(...(page.items ?? []));
+
+    for (const item of page.items ?? []) {
+      const videoId = item.contentDetails?.videoId;
+      if (!videoId) continue;
+      if (!latestUploadVideoId) latestUploadVideoId = videoId;
+      if (stopAtVideoId && videoId === stopAtVideoId) {
+        reachedPreviousUpload = true;
+        break;
+      }
+      items.push(item);
+    }
+
+    if (reachedPreviousUpload) break;
     pageToken = page.nextPageToken;
   } while (pageToken);
-  return items;
+
+  return { items, latestUploadVideoId, reachedPreviousUpload };
 }
 
 async function videoDetails(ids) {
@@ -117,7 +189,7 @@ async function videoDetails(ids) {
 function durationSeconds(iso) {
   const match = String(iso ?? "").match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
   if (!match) return 0;
-  return Number(match[1] ?? 0) * 3600 + Number(match[2] ?? 0) * 60 + Number(match[3] ?? 0);
+  return Number(match[1] ?? 0) * 3600 + Number(match[2] ?? 0) * 60 + Number(match[3] ?? 0) * 60 + Number(match[3] ?? 0);
 }
 
 const excludeTitle = /\b(trailer|teaser|behind\s+the\s+scenes|\bbts\b|clip\b|short\s+film|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|soundtrack|music\s+video|making\s+of|preview)\b/i;
@@ -166,7 +238,7 @@ function extractCast(video) {
       const names = splitNames(direct[1]);
       if (names.length) return names;
     }
-    if (/^(?:cast|starring|stars?|featuring)\s*:?s*$/i.test(line)) {
+    if (/^(?:cast|starring|stars?|featuring)\s*:?\s*$/i.test(line)) {
       const block = [];
       for (let j = i + 1; j < Math.min(lines.length, i + 12); j++) {
         if (/^(?:crew|director|producer|written|screenplay|dop|sound|editor|subscribe|follow)\b/i.test(lines[j])) break;
@@ -224,30 +296,37 @@ function yearFor(video) {
   return Number((video.snippet?.publishedAt ?? "2026").slice(0, 4));
 }
 
-const movies = [];
-let pendingQualityCount = 0;
-const seen = new Set();
+const moviesByVideoId = new Map(
+  fullSync ? [] : previousMovies.map((movie) => [movie.videoId, movie]),
+);
+let pendingQualityCount = fullSync ? 0 : Number(previousGenerated.pendingQualityCount ?? 0);
+let importedThisRun = 0;
+let pendingThisRun = 0;
+let duplicateTitleCount = 0;
 
 for (const source of registry.sources) {
-  console.log("Resolving", source.searchName);
+  console.log((fullSync ? "Full scan " : "Incremental scan ") + source.searchName);
   const channel = await resolveChannel(source);
-  const uploads = await allUploads(channel.uploadsPlaylistId);
-  const ids = uploads.map((item) => item.contentDetails?.videoId).filter(Boolean);
+  const cached = cache[source.slug] ?? channel;
+  const stopAtVideoId = fullSync ? null : cached.latestUploadVideoId ?? null;
+  const scan = await uploadsSince(channel.uploadsPlaylistId, stopAtVideoId);
+  const ids = scan.items.map((item) => item.contentDetails?.videoId).filter(Boolean);
   const details = await videoDetails(ids);
 
   for (const video of details) {
-    if (!isMovie(video) || seen.has(video.id)) continue;
-    seen.add(video.id);
+    if (!isMovie(video)) continue;
     const cast = extractCast(video);
     const title = cleanTitle(video.snippet?.title);
     const synopsis = synopsisFromDescription(video, title, channel.channelTitle);
     if (!cast.length) {
       pendingQualityCount++;
+      pendingThisRun++;
       continue;
     }
+
     const seconds = durationSeconds(video.contentDetails?.duration);
-    const publishedAt = video.snippet?.publishedAt ?? new Date().toISOString();
-    movies.push({
+    const publishedAt = video.snippet?.publishedAt ?? now.toISOString();
+    moviesByVideoId.set(video.id, {
       videoId: video.id,
       title,
       rawTitle: video.snippet?.title ?? title,
@@ -261,21 +340,61 @@ for (const source of registry.sources) {
       year: yearFor(video),
       durationMinutes: Math.round(seconds / 60),
       videoUrl: "https://www.youtube.com/watch?v=" + video.id,
-      lastChecked: new Date().toISOString().slice(0, 10),
+      lastChecked: checkedDate,
     });
+    importedThisRun++;
+  }
+
+  if (fullSync || scan.items.length > 0 || !cached.latestUploadVideoId) {
+    cache[source.slug] = {
+      ...channel,
+      latestUploadVideoId: scan.latestUploadVideoId ?? cached.latestUploadVideoId,
+      lastScannedAt: now.toISOString(),
+      lastScanMode: fullSync ? "full" : "incremental",
+      reachedPreviousUpload: scan.reachedPreviousUpload,
+    };
   }
 }
 
-movies.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
+const approvedSlugs = new Set(registry.sources.map((source) => source.slug));
+for (const slug of Object.keys(cache)) {
+  if (!approvedSlugs.has(slug)) delete cache[slug];
+}
+
+const approvedChannelIds = new Set(
+  registry.sources
+    .map((source) => cache[source.slug]?.channelId)
+    .filter(Boolean),
+);
+
+const sorted = [...moviesByVideoId.values()]
+  .filter((movie) => approvedChannelIds.has(movie.channelId))
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
+
+const uniqueByPublisherTitle = new Map();
+for (const movie of sorted) {
+  const key = [movie.channelId, normalize(movie.title), movie.year].join("|");
+  if (uniqueByPublisherTitle.has(key)) {
+    duplicateTitleCount++;
+    continue;
+  }
+  uniqueByPublisherTitle.set(key, movie);
+}
+const movies = [...uniqueByPublisherTitle.values()];
 
 await fs.writeFile(cachePath, JSON.stringify(cache, null, 2) + "\n");
 await fs.writeFile(outputPath, JSON.stringify({
-  generatedAt: new Date().toISOString(),
+  generatedAt: now.toISOString(),
+  syncMode: fullSync ? "full" : "incremental",
   sourceCount: registry.sources.length,
   importedCount: movies.length,
+  importedThisRun,
   pendingQualityCount,
+  pendingThisRun,
+  duplicateTitleCount,
   movies,
 }, null, 2) + "\n");
 
-console.log("Imported", movies.length, "full movies from", registry.sources.length, "approved sources.");
-console.log("Held for missing cast metadata:", pendingQualityCount);
+console.log("Catalog now contains", movies.length, "full movies from", registry.sources.length, "approved sources.");
+console.log("Imported this run:", importedThisRun, "| held for metadata review this run:", pendingThisRun);
+console.log("Duplicate publisher/title/year entries skipped:", duplicateTitleCount);
