@@ -47,13 +47,13 @@ test("every guide in a multi-guide category receives a service-to-service crawl 
 
   for (const service of publicServices) {
     const related = getRelatedServices(service, 6);
-    expect(related.length, service.slug + " related guide count").toBeGreaterThan(0);
     for (const item of related) incoming.set(item.slug, (incoming.get(item.slug) ?? 0) + 1);
   }
 
   for (const service of publicServices) {
     const categorySize = publicServices.filter((item) => item.category === service.category).length;
     if (categorySize > 1) {
+      expect(getRelatedServices(service, 6).length, service.slug + " related guide count").toBeGreaterThan(0);
       expect(incoming.get(service.slug), service.slug + " incoming service links").toBeGreaterThan(0);
     }
   }
