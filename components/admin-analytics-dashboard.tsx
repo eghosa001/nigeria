@@ -227,7 +227,7 @@ export function AdminAnalyticsDashboard() {
         </div>
       </section>
 
-      <section className="admin-panel">
+      <section className="admin-panel analytics-interactions">
         <div className="section-heading">
           <div><span className="eyebrow">Useful actions</span><h2>What visitors actually do</h2></div>
           <small>Privacy-safe aggregate events only</small>
