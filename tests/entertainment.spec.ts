@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test("entertainment catalog supports multiple official platforms", async ({ page }) => {
   await page.goto("/entertainment/movies");
   await expect(page.locator(".movie-tile")).toHaveCount(30);
-  await page.getByLabel("Where to watch").selectOption("Prime Video");
+  await page.getByLabel("Platform").selectOption("Prime Video");
   await expect(page.locator(".movie-tile")).toHaveCount(1);
 });
 
@@ -53,7 +53,7 @@ test("youtube movie directory is populated from approved channels", async ({ pag
   await page.goto("/entertainment/youtube");
   await expect(page.getByRole("heading", { name: /Nigerian movies from approved YouTube publishers/i })).toBeVisible();
   await expect(page.locator(".youtube-movie-card")).toHaveCount(48);
-  await expect(page.locator(".category-summary")).toContainText("published YouTube movies");
+  await expect(page.locator(".movie-stat-cluster")).toContainText("published");
   const publisher = page.getByLabel("Publisher");
   await expect(publisher.locator('option[value="Omoni Oboli TV"]')).toHaveCount(1);
   await expect(publisher.locator('option[value="Maurice Sam TV"]')).toHaveCount(1);
@@ -73,10 +73,10 @@ test("youtube source network is sized for more than one thousand movies", async 
 
 test("main movies page exposes the full server-paginated YouTube library", async ({ page }) => {
   await page.goto("/entertainment/movies");
-  const summary = page.locator(".category-summary");
+  const summary = page.locator(".movie-stat-cluster");
   await expect(summary).toContainText(/\d{1,3},\d{3}/);
-  await expect(summary).toContainText("full YouTube movies");
-  await expect(page.getByRole("link", { name: /Browse the full YouTube movie library/i })).toHaveAttribute("href", "/entertainment/youtube");
+  await expect(summary).toContainText("free full movies");
+  await expect(page.getByRole("link", { name: /Browse all/i })).toHaveAttribute("href", "/entertainment/youtube");
 });
 
 
