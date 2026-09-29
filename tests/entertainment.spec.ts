@@ -77,3 +77,10 @@ test("main movies page exposes the full server-paginated YouTube library", async
   await expect(summary).toContainText("full YouTube movies");
   await expect(page.getByRole("link", { name: /Browse the full YouTube movie library/i })).toHaveAttribute("href", "/entertainment/youtube");
 });
+
+
+test("legitimate movie titles beginning with Welcome remain searchable", async ({ page }) => {
+  await page.goto("/entertainment/youtube?q=Welcome%20to%20Nigeria");
+  await expect(page.getByText("WELCOME TO NIGERIA", { exact: true }).first()).toBeVisible();
+  await expect(page.locator(".service-card").first()).toContainText("OLUCHI AFUNDU TV");
+});
