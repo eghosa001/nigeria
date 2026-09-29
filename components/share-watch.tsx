@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackEvent } from "@/lib/client-analytics";
 
 const storageKey = "mynigeriaguide:watchlist";
 export const watchEvent = "mynigeriaguide-watchlist-updated";
@@ -39,7 +40,9 @@ export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: stri
       else delete snapshots[slug];
       localStorage.setItem(snapshotKey, JSON.stringify(snapshots));
     } catch {}
-    setWatched(current.has(slug));
+    const isWatched = current.has(slug);
+    setWatched(isWatched);
+    trackEvent(isWatched ? "guide_watch_add" : "guide_watch_remove", { service_slug: slug });
     window.dispatchEvent(new Event(watchEvent));
   }
 
@@ -58,11 +61,13 @@ export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: stri
     const text = buildShareText(url);
 
     if (navigator.share) {
-      await navigator.share({ title, text, url }).catch(() => undefined);
+      const shared = await navigator.share({ title, text, url }).then(() => true).catch(() => false);
+      if (shared) trackEvent("guide_share", { service_slug: slug, method: "native" });
       return;
     }
 
     await navigator.clipboard?.writeText(text);
+    trackEvent("guide_share", { service_slug: slug, method: "copy_fallback" });
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1600);
   }
@@ -70,6 +75,7 @@ export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: stri
   async function copySummary() {
     const text = buildShareText(window.location.href);
     await navigator.clipboard?.writeText(text);
+    trackEvent("guide_share", { service_slug: slug, method: "copy_summary" });
     setSummaryCopied(true);
     window.setTimeout(() => setSummaryCopied(false), 1600);
   }
@@ -79,7 +85,7 @@ export function ShareWatch({ slug, title, feeLabel, lastVerified }: { slug: stri
   return (
     <div className="guide-actions" aria-label="Guide actions">
       <button type="button" onClick={share}>{copied ? "Copied" : "Share"}</button>
-      <a href={"https://wa.me/?text=" + whatsappText} target="_blank" rel="noreferrer">WhatsApp</a>
+      <a href={"https://wa.me/?text=" + whatsappText} target="_blank" rel="noreferrer" onClick={() => trackEvent("guide_share", { service_slug: slug, method: "whatsapp" })}>WhatsApp</a>
       <button type="button" onClick={copySummary}>{summaryCopied ? "Summary copied" : "Copy summary"}</button>
       <button type="button" className={watched ? "active" : ""} onClick={toggleWatch}>
         {watched ? "Watching" : "Watch this guide"}
