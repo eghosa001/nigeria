@@ -8,7 +8,7 @@ import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
-  description: "Browse Nigerian movies visually by title, actor, genre and platform, with verified Netflix, YouTube, Prime Video and licensed Kava links."
+  description: "Browse Nigerian movies visually by title, actor, genre and platform, with verified Netflix, YouTube, Prime Video and licensed Kava links.",
   alternates: { canonical: "/entertainment/movies" },
 };
 
