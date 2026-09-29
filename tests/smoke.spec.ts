@@ -101,8 +101,11 @@ test("assistant has one H1 and JAMB Direct Entry exposes a useful meta descripti
   await expect(page.locator("h1")).toContainText(/what you need to get done/i);
 
   await page.goto("/services/jamb-direct-entry-2026");
+  const title = await page.title();
   const description = await page.locator('meta[name="description"]').getAttribute("content");
+  expect(title.length).toBeLessThanOrEqual(60);
   expect(description?.length ?? 0).toBeGreaterThan(80);
+  expect(description?.length ?? 0).toBeLessThanOrEqual(160);
 });
 
 test("service guides expose trust and sharing actions", async ({ page }) => {

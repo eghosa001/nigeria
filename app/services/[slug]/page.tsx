@@ -28,10 +28,28 @@ export function generateStaticParams() {
   return publicServices.map((service) => ({ slug: service.slug }));
 }
 
+function truncateSeoText(value: string, maxLength: number) {
+  if (value.length <= maxLength) return value;
+  const clipped = value.slice(0, maxLength - 1).trimEnd();
+  const atWordBoundary = clipped.replace(/\\s+\\S*$/, "").trimEnd();
+  return `${atWordBoundary || clipped}…`;
+}
+
 function getServiceSeoTitle(shortTitle: string, lastVerified: string) {
   const year = lastVerified.slice(0, 4);
   const hasYear = new RegExp("\\b" + year + "\\b").test(shortTitle);
-  return `${shortTitle}${hasYear ? "" : " " + year}: Fees, Requirements & Steps`;
+  const base = `${shortTitle}${hasYear ? "" : " " + year}`;
+  const intentTitle = `${base}: Fees & Steps`;
+  // Root metadata adds " | MyNigeriaGuide" (17 chars), so keep page titles <= 43.
+  return intentTitle.length <= 43 ? intentTitle : truncateSeoText(base, 43);
+}
+
+function getServiceSeoDescription(summary: string, lastVerified: string) {
+  const year = lastVerified.slice(0, 4);
+  const expanded = summary.length >= 110
+    ? summary
+    : `${summary} Updated ${year} with requirements, fees and official links.`;
+  return truncateSeoText(expanded, 155);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -39,11 +57,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const service = getPublicService(slug);
   if (!service) return {};
 
-  const year = service.lastVerified.slice(0, 4);
   const title = getServiceSeoTitle(service.shortTitle, service.lastVerified);
-  const description =
-    service.summary +
-    ` Updated ${year} with current requirements, fee/status, step-by-step instructions and official application links.`;
+  const description = getServiceSeoDescription(service.summary, service.lastVerified);
 
   return {
     title,
