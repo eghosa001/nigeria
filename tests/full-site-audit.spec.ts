@@ -70,22 +70,35 @@ test("global and section navigation work on desktop and mobile", async ({ page }
   test.setTimeout(60_000);
   await page.goto("/");
 
-  const menu = page.getByRole("button", { name: "Open navigation" });
-  if (await menu.isVisible()) await menu.click();
+  const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
+  const primaryNav = page.getByRole("navigation", { name: "Primary navigation" });
 
-  const nav = page.getByRole("navigation", { name: "Primary navigation" });
-  const globalTargets = [
-    ["Services", "/services"],
-    ["Explore Nigeria", "/explore"],
-    ["Entertainment", "/entertainment"],
-    ["Saved", "/saved"],
-    ["Find a guide", "/assistant"],
-  ] as const;
-
-  for (const [label, target] of globalTargets) {
-    const link = nav.getByRole("link", { name: label, exact: true });
-    await expect(link).toBeVisible();
-    await expect(link).toHaveAttribute("href", target);
+  if (await mobileNav.isVisible()) {
+    for (const [label, target] of [
+      ["Home", "/"],
+      ["Services", "/services"],
+      ["Explore", "/explore"],
+      ["Movies", "/entertainment/movies"],
+      ["Saved", "/saved"],
+    ] as const) {
+      const link = mobileNav.getByRole("link", { name: label, exact: true });
+      await expect(link).toBeVisible();
+      await expect(link).toHaveAttribute("href", target);
+    }
+    await expect(primaryNav).toBeHidden();
+    await expect(page.getByRole("link", { name: "Find a guide", exact: true })).toHaveAttribute("href", "/assistant");
+  } else {
+    for (const [label, target] of [
+      ["Services", "/services"],
+      ["Explore Nigeria", "/explore"],
+      ["Entertainment", "/entertainment"],
+      ["Saved", "/saved"],
+      ["Find a guide", "/assistant"],
+    ] as const) {
+      const link = primaryNav.getByRole("link", { name: label, exact: true });
+      await expect(link).toBeVisible();
+      await expect(link).toHaveAttribute("href", target);
+    }
   }
 
   await page.goto("/services");
@@ -100,9 +113,11 @@ test("global and section navigation work on desktop and mobile", async ({ page }
   }
 
   await page.goto("/");
-  const mobileMenu = page.getByRole("button", { name: "Open navigation" });
-  if (await mobileMenu.isVisible()) await mobileMenu.click();
-  await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Find a guide", exact: true }).click();
+  if (await page.getByRole("navigation", { name: "Mobile navigation" }).isVisible()) {
+    await page.getByRole("link", { name: "Find a guide", exact: true }).click();
+  } else {
+    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Find a guide", exact: true }).click();
+  }
   await expect(page).toHaveURL(/\/assistant(?:$|\?)/);
 });
 
