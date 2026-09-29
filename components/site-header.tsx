@@ -19,6 +19,7 @@ const sectionNavigation = {
     label: "Services guide",
     links: [
       { href: "/services", label: "Overview" },
+      { href: "/assistant", label: "Find a guide" },
       { href: "/fees", label: "Fees" },
       { href: "/offices", label: "Offices" },
       { href: "/official-portals", label: "Official portals" },
@@ -112,9 +113,9 @@ export function SiteHeader() {
             <BrandLogo />
           </a>
 
-          <Link className="mobile-header-action" href="/assistant" aria-label="Find a guide">
+          <Link className="mobile-header-action" href="/search" aria-label="Search MyNigeriaGuide">
             <NavIcon name="search" />
-            <span>Find</span>
+            <span>Search</span>
           </Link>
 
           <nav id="primary-navigation" className="primary-nav premium-primary-nav" aria-label="Primary navigation">
@@ -135,8 +136,8 @@ export function SiteHeader() {
             </div>
 
             <div className="primary-nav-utilities" aria-label="Utilities">
-              <Link href="/assistant" className={pathname.startsWith("/assistant") ? "nav-active" : undefined}>
-                Find a guide
+              <Link href="/search" className={pathname.startsWith("/search") ? "nav-active" : undefined}>
+                Search
               </Link>
               <Link href="/saved" className={pathname.startsWith("/saved") ? "nav-active" : undefined}>
                 Saved
