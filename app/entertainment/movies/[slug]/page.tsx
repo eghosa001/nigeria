@@ -106,6 +106,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
           <div className="movie-detail-hero-grid">
             <div className="movie-detail-artwork">
               <EntertainmentArtwork title={title} variant="hero" />
+              {!title.artwork ? <p className="movie-artwork-rights-note">No cleared poster artwork yet.</p> : null}
             </div>
 
             <div className="movie-detail-copy">
