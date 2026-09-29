@@ -8,6 +8,7 @@ import { ServiceCard } from "@/components/service-card";
 import { getCategoryFaqs } from "@/data/category-faqs";
 import { categorySlug } from "@/lib/category";
 import { categories, publicServices } from "@/lib/data";
+import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -46,6 +47,8 @@ export default async function CategoryPage({
   const agencies = [...new Set(services.map((service) => service.agencySlug.toUpperCase()))];
   const base = getSiteUrl();
   const faqs = getCategoryFaqs(category.name);
+  const serviceSlugs = new Set(services.map((service) => service.slug));
+  const topicHubs = growthHubs.filter((hub) => hub.serviceSlugs.some((serviceSlug) => serviceSlugs.has(serviceSlug)));
 
   const itemList = {
     "@context": "https://schema.org",
@@ -95,6 +98,20 @@ export default async function CategoryPage({
             <div><strong>{agencies.length}</strong><span>agency group{agencies.length === 1 ? "" : "s"}</span></div>
             <div><strong>{services.filter((service) => service.status === "conflict").length}</strong><span>official-source conflicts</span></div>
           </div>
+
+          {topicHubs.length ? (
+            <section className="service-topic-links" aria-labelledby="category-topic-hubs">
+              <span className="eyebrow">Explore by topic</span>
+              <h2 id="category-topic-hubs">Start with a focused guide collection</h2>
+              <div className="related-links">
+                {topicHubs.map((hub) => (
+                  <Link key={hub.slug} href={"/topics/" + hub.slug}>
+                    {hub.title} <span aria-hidden="true">→</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
 
           {category.name === "Foreign visas" ? (
             <section className="visa-country-picker" aria-labelledby="visa-country-picker-title">
