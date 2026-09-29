@@ -91,7 +91,6 @@ const expectedSlugs = [
   "nigeria-landing-exit-card",
   "police-character-certificate",
   "inec-pvc-status",
-  "bvn-change-details",
   "nigeria-evisa-application",
   "nigeria-tourism-visa",
   "nigeria-business-visa",
@@ -112,7 +111,9 @@ const expectedSlugs = [
   "netherlands-schengen-visa",
   "turkiye-tourist-visa",
   "china-tourist-visa-nigeria",
-  "neco-certificate-service"
+  "neco-certificate-service",
+  "nip-transfer-status",
+  "vehicle-insurance-validation-ussd"
 ] as const;
 const representative = [
   {
@@ -229,8 +230,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(107);
-  expect(publicServices).toHaveLength(106);
+  expect(services).toHaveLength(108);
+  expect(publicServices).toHaveLength(107);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
@@ -271,6 +272,7 @@ test("NIBSS USSD utility services are public and the generic BVN-change guide is
   await expect(page.getByRole("heading", { level: 1 })).toContainText("vehicle insurance");
   await expect(page.getByText("*565*11#", { exact: false }).first()).toBeVisible();
 
-  const removed = await page.request.get("/services/bvn-change-details");
-  expect(removed.status()).toBe(404);
+  await page.goto("/services/bvn-change-details");
+  await expect(page).toHaveURL(/\/topics\/bvn$/);
+  await expect(page.getByRole("heading", { name: /BVN Guide: Enrolment, Retrieval & NRBVN/i })).toBeVisible();
 });
