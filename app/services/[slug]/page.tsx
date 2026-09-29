@@ -19,6 +19,7 @@ import { StatusBadge } from "@/components/status-badge";
 import { categorySlug } from "@/lib/category";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
+import { getGrowthHubsForService } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -85,6 +86,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       Number(service.related.includes(b.slug)) - Number(service.related.includes(a.slug)),
     )
     .slice(0, 4);
+  const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
   const categoryHref = "/categories/" + categorySlug(service.category);
@@ -236,6 +238,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <Link href={categoryHref}>← Back to all {service.category} guides</Link>
             <Link href="/services">Browse all services →</Link>
           </div>
+          {topicHubs.length ? (
+            <div className="service-topic-links">
+              <span className="eyebrow">Explore the full topic</span>
+              <div className="related-links">
+                {topicHubs.map((hub) => (
+                  <Link key={hub.slug} href={"/topics/" + hub.slug}>
+                    {hub.title} <span aria-hidden="true">→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
           {related.length ? (
             <>
               <span className="eyebrow">Keep going</span>
