@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { entertainmentTitles, getEntertainmentTitle } from "@/lib/entertainment";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
@@ -95,7 +96,9 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <p className="hero-note">Watch and trailer links last checked {lastChecked}. Streaming availability can change by country and date.</p>
           </div>
 
-          <aside className="fee-card">
+          <aside className="movie-hero-side">
+            <EntertainmentArtwork title={title} variant="hero" />
+            <div className="fee-card movie-watch-card">
             <span>Where to watch</span>
             <strong>{title.watchLinks.length} official option{title.watchLinks.length === 1 ? "" : "s"}</strong>
             <p>MyNigeriaGuide does not host the film. Use the verified platform link below.</p>
@@ -103,6 +106,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label} ↗</a>
             ))}
             {title.trailer ? <a className="button" href={title.trailer.href} target="_blank" rel="noreferrer">{title.trailer.label} ↗</a> : null}
+            </div>
           </aside>
         </div>
       </section>
@@ -150,6 +154,26 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                   </a>
                 ))}
               </div>
+            </section>
+
+            <section>
+              <h2>Artwork rights</h2>
+              {title.artwork ? (
+                <div className="source-list">
+                  <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">
+                    <span>
+                      <strong>{title.artwork.credit}</strong>
+                      <small>{title.artwork.licenseNote}</small>
+                    </span>
+                    <span>Checked {title.artwork.lastChecked} ↗</span>
+                  </a>
+                </div>
+              ) : (
+                <div className="info-box">
+                  <strong>No cleared artwork yet.</strong>
+                  <p>The site intentionally shows a placeholder until a press-kit permission, direct permission, licence or valid Creative Commons basis is recorded.</p>
+                </div>
+              )}
             </section>
 
             <section>

@@ -16,6 +16,22 @@ export type TrailerLink = {
   lastChecked: string;
 };
 
+export type EntertainmentImageUsageBasis =
+  | "press-kit-permission"
+  | "direct-permission"
+  | "licensed"
+  | "creative-commons";
+
+export type EntertainmentArtwork = {
+  url: string;
+  sourceUrl: string;
+  credit: string;
+  usageBasis: EntertainmentImageUsageBasis;
+  licenseNote: string;
+  lastChecked: string;
+  status: "approved";
+};
+
 export type EntertainmentTitle = {
   slug: string;
   title: string;
@@ -28,6 +44,7 @@ export type EntertainmentTitle = {
   directors?: string[];
   runtimeMinutes?: number;
   trailer?: TrailerLink;
+  artwork?: EntertainmentArtwork;
   featured?: boolean;
   watchLinks: WatchLink[];
 };
@@ -272,4 +289,19 @@ export function getEntertainmentGenres() {
 
 export function getPlatformCount(platform: EntertainmentPlatform) {
   return entertainmentTitles.filter((item) => item.watchLinks.some((link) => link.platform === platform)).length;
+}
+
+
+export function canDisplayEntertainmentArtwork(title: EntertainmentTitle) {
+  const artwork = title.artwork;
+  return Boolean(
+    artwork &&
+    artwork.status === "approved" &&
+    artwork.url &&
+    artwork.sourceUrl &&
+    artwork.credit &&
+    artwork.licenseNote &&
+    artwork.lastChecked &&
+    ["press-kit-permission", "direct-permission", "licensed", "creative-commons"].includes(artwork.usageBasis),
+  );
 }

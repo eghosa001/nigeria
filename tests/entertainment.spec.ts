@@ -23,3 +23,10 @@ test("cinema and releases guides expose official source routes", async ({ page }
   await expect(page.getByText("Ordinary People")).toBeVisible();
   await expect(page.getByText("After Credits Club — First Edition")).toBeVisible();
 });
+
+
+test("movie artwork is withheld until rights are cleared", async ({ page }) => {
+  await page.goto("/entertainment/movies/anikulapo");
+  await expect(page.locator('[data-rights-status="pending"]')).toBeVisible();
+  await expect(page.getByText("No cleared artwork yet.")).toBeVisible();
+});

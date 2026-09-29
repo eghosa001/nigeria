@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import type { EntertainmentTitle } from "@/lib/entertainment";
 
 const PAGE_SIZE = 24;
@@ -121,7 +122,8 @@ export function EntertainmentCatalog({
           {visible.map((title) => {
             const platformsForTitle = [...new Set(title.watchLinks.map((link) => link.platform))];
             return (
-              <article className="service-card" key={title.slug}>
+              <article className="service-card entertainment-movie-card" key={title.slug}>
+                <EntertainmentArtwork title={title} />
                 <div className="card-topline">
                   <span>{title.year}</span>
                   <span>{platformsForTitle.join(" · ")}</span>

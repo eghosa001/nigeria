@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { entertainmentTitles, getPlatformCount } from "@/lib/entertainment";
 import { cinemaGuides, entertainmentPeople, platformGuides, releaseItems } from "@/lib/entertainment-extras";
@@ -108,7 +109,8 @@ export default function EntertainmentPage() {
           <div className="section-heading"><div><span className="eyebrow">Featured movies</span><h2>Start with verified places to watch.</h2></div><Link href="/entertainment/movies">Full catalog →</Link></div>
           <div className="service-grid">
             {featured.map((title) => (
-              <article className="service-card" key={title.slug}>
+              <article className="service-card entertainment-movie-card" key={title.slug}>
+                <EntertainmentArtwork title={title} />
                 <div className="card-topline"><span>{title.year}</span><span>{[...new Set(title.watchLinks.map((link) => link.platform))].join(" · ")}</span></div>
                 <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
                 <p>{title.synopsis}</p>
@@ -127,6 +129,7 @@ export default function EntertainmentPage() {
             <p>The entertainment catalog stores lightweight text, links and verification dates. Netflix, Prime Video and YouTube still serve the actual video, while cinema chains handle their own ticketing.</p>
           </div>
           <div className="policy-stack">
+            <section><strong>✓</strong><div><h2>Image-rights gate</h2><p>Movie artwork is hidden until its source, credit, permission or licence basis and review date are recorded.</p></div></section>
             <section><strong>{platformGuides.length}</strong><div><h2>Platform guides</h2><p>Current platform routing and availability notes.</p></div></section>
             <section><strong>{cinemaGuides.length}</strong><div><h2>Cinema chains</h2><p>Official booking and price links instead of copied schedules.</p></div></section>
             <section><strong>{entertainmentPeople.length}</strong><div><h2>People profiles</h2><p>Connected to films already present in the catalog.</p></div></section>
