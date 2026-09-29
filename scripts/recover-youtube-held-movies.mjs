@@ -23,7 +23,7 @@ function cleanName(value) {
     .replace(/[#|]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
-    .replace(/^[,.;:!?\s]+|[,.;:!?\s]+$/g, "");
+    .replace(/^[-–—,.;:!?\s]+|[-–—,.;:!?\s]+$/g, "");
 }
 
 const actorStats = new Map();
