@@ -367,7 +367,7 @@ test("brand logo always returns home, including after process activity", async (
   await page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Steps" }).click();
   await page.getByRole("link", { name: "MyNigeriaGuide home" }).click();
   await expect(page).toHaveURL(/\/$/);
-  await expect(page.getByRole("heading", { name: /Get government services done/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Get things done and explore Nigeria/i })).toBeVisible();
 });
 
 test("service FAQ answers are contextual and complete enough to guide the next action", async ({ page }) => {
