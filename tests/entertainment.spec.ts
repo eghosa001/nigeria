@@ -216,3 +216,22 @@ test("expanded people profiles cross-link the growing movie catalog", async ({ p
   await expect(page.getByRole("link", { name: "Ajosepo", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Love and New Notes", exact: true })).toBeVisible();
 });
+
+
+test("people profiles self-enrich from catalog credits and expose Person schema", async ({ page }) => {
+  await page.goto("/entertainment/people/toyin-abraham");
+  await expect(page.getByRole("heading", { name: /connected titles in MyNigeriaGuide/i })).toBeVisible();
+  await expect(page.getByText(/automatically expands with the person's matching cast or directing credits/i)).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ijakumo", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Ghost and the Tout", exact: true })).toBeVisible();
+
+  const schemas = await page.locator('script[type="application/ld+json"]').allTextContents();
+  expect(schemas.some((value) => value.includes('"@type":"Person"') && value.includes('"name":"Toyin Abraham"'))).toBeTruthy();
+});
+
+test("people profile credits grow from cast data beyond manually seeded titles", async ({ page }) => {
+  await page.goto("/entertainment/people/nancy-isime");
+  await expect(page.getByRole("link", { name: "Love in a Pandemic", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Teni's Big Day", exact: true })).toBeVisible();
+  await expect(page.getByText(/Current legal availability across these records is tracked on/i)).toBeVisible();
+});
