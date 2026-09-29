@@ -86,7 +86,7 @@ test("global and section navigation work on desktop and mobile", async ({ page }
       await expect(link).toHaveAttribute("href", target);
     }
     await expect(primaryNav).toBeHidden();
-    await expect(page.getByRole("link", { name: "Find a guide", exact: true })).toHaveAttribute("href", "/assistant");
+    await expect(page.locator(".mobile-header-action")).toHaveAttribute("href", "/assistant");
   } else {
     for (const [label, target] of [
       ["Services", "/services"],
@@ -114,7 +114,7 @@ test("global and section navigation work on desktop and mobile", async ({ page }
 
   await page.goto("/");
   if (await page.getByRole("navigation", { name: "Mobile navigation" }).isVisible()) {
-    await page.getByRole("link", { name: "Find a guide", exact: true }).click();
+    await page.locator(".mobile-header-action").click();
   } else {
     await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Find a guide", exact: true }).click();
   }
