@@ -99,6 +99,17 @@ export const platformGuides: PlatformGuide[] = [
     lastChecked: "2026-09-29",
   },
   {
+    slug: "kava",
+    name: "Kava",
+    officialUrl: "https://kava.tv/",
+    summary: "Kava is a subscription-based third-party Nollywood and African cinema platform. Its terms state that content is offered in territories where Kava has licensed it.",
+    status: "Licensed third-party streaming platform; availability varies by region",
+    sourceKind: "streaming",
+    offlineLabel: "Kava supports downloading eligible titles inside its service for offline viewing.",
+    offlineHelpUrl: "https://kava.tv/help",
+    lastChecked: "2026-09-29",
+  },
+  {
     slug: "dstv-stream-boxoffice",
     name: "DStv Stream / BoxOffice",
     aliases: ["DStv Stream"],
