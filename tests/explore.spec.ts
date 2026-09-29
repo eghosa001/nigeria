@@ -40,3 +40,25 @@ test("city guide keeps place verification and map actions visible", async ({ pag
   await expect(nok.getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("target", "_blank");
   await expect(nok).toContainText("Checked 2026-09-29");
 });
+
+
+
+test("Ondo highlights expands with new map-ready coastal and nature places", async ({ page }) => {
+  await page.goto("/explore/ondo-state-highlights");
+  for (const id of ["place-araromi-seaside", "place-ebomi-lake-ipesi", "place-igbokoda-waterfront-ondo"]) {
+    const card = page.locator("#" + id);
+    await expect(card).toBeVisible();
+    await expect(card.getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
+    await expect(card).toContainText("Checked 2026-09-29");
+  }
+});
+
+test("travel directory exposes the expanded Ondo place records", async ({ page }) => {
+  await page.goto("/explore");
+  const search = page.getByLabel("Search places");
+
+  for (const place of ["Araromi Seaside", "Ebomi Lake", "Igbokoda Waterfront"]) {
+    await search.fill(place);
+    await expect(page.locator(".explore-place-card").filter({ hasText: place })).toBeVisible();
+  }
+});

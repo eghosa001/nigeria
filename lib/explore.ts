@@ -556,6 +556,8 @@ export const exploreGuides: ExploreGuide[] = [
     source: { label: "Anambra State Ministry of Culture, Entertainment and Tourism", href: "https://anambrastate.gov.ng/ministry-of-culture-entertainment-and-tourism/" },
     lastReviewed: "2026-09-29",
   },
+
+
 ];
 
 export function getExploreGuide(slug: string) {
