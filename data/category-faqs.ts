@@ -53,8 +53,8 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
     },
     {
       question: "What if I have lost my NIN slip but still know my NIN?",
-      answer: "Use the NIN slip reissue/download route. Losing the printed slip does not mean you should enrol for a new NIN.",
-      source: { label: "NIMC NIN information", url: "https://nimc.gov.ng/NIN" },
+      answer: "NIMC's NINAuth service now lets users download an official NIN slip directly in the app free of charge. NIMC separately lists fees for formal reissuance after loss, damage or theft. Losing the printed slip does not mean you should enrol for a new NIN.",
+      source: { label: "NINAuth official NIN slip download guidance", url: "https://ninauth.nimc.gov.ng/news-room/download-your-nin-slip" },
       relatedSlugs: ["nin-slip-reissue", "nin-enrolment"]
     }
   ],
