@@ -5,7 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { getFeaturedCast, type EntertainmentTitle } from "@/lib/entertainment";
 
-const PAGE_SIZE = 24;
+const PAGE_SIZE = 30;
 
 export function EntertainmentCatalog({
   titles,
@@ -39,7 +39,6 @@ export function EntertainmentCatalog({
 
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
-
     const rows = titles.filter((title) => {
       const searchable = [
         title.title,
@@ -67,17 +66,13 @@ export function EntertainmentCatalog({
 
   return (
     <>
-      <div className="directory-controls">
-        <label className="directory-search">
+      <div className="movie-filter-bar">
+        <label className="movie-filter-search">
           <span>Search movies</span>
-          <input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="title, actor, genre or language…"
-          />
+          <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Title, actor, genre or language…" />
         </label>
         <label>
-          <span>Where to watch</span>
+          <span>Platform</span>
           <select value={platform} onChange={(event) => setPlatform(event.target.value)}>
             <option value="all">All platforms</option>
             {platforms.map((item) => <option key={item} value={item}>{item}</option>)}
@@ -93,61 +88,56 @@ export function EntertainmentCatalog({
         <label>
           <span>Sort</span>
           <select value={sort} onChange={(event) => setSort(event.target.value)}>
-            <option value="newest">Newest first</option>
-            <option value="oldest">Oldest first</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
             <option value="az">A–Z</option>
           </select>
         </label>
       </div>
 
-      <div className="directory-summary" aria-live="polite">
-        <strong>{filtered.length}</strong> movie{filtered.length === 1 ? "" : "s"} shown
+      <div className="movie-directory-summary" aria-live="polite">
+        <span><strong>{filtered.length}</strong> curated movie{filtered.length === 1 ? "" : "s"}</span>
         {(query || platform !== "all" || genre !== "all") ? (
-          <button
-            type="button"
-            onClick={() => {
-              setQuery("");
-              setPlatform("all");
-              setGenre("all");
-              setSort("newest");
-            }}
-          >
-            Clear filters
-          </button>
+          <button type="button" onClick={() => {
+            setQuery("");
+            setPlatform("all");
+            setGenre("all");
+            setSort("newest");
+          }}>Clear filters</button>
         ) : null}
       </div>
 
       {filtered.length ? (
-        <div className="service-grid">
+        <div className="movie-grid">
           {visible.map((title) => {
             const platformsForTitle = [...new Set(title.watchLinks.map((link) => link.platform))];
             return (
-              <article className="service-card entertainment-movie-card" key={title.slug}>
+              <article className="movie-tile" key={title.slug}>
                 <EntertainmentArtwork title={title} />
-                <div className="card-topline">
+                <div className="movie-tile-meta">
                   <span>{title.year}</span>
                   <span>{platformsForTitle.join(" · ")}</span>
                 </div>
                 <h3><Link href={"/entertainment/movies/" + title.slug} prefetch={false}>{title.title}</Link></h3>
-                <p>{title.synopsis}</p>
+                <p className="movie-tile-description">{title.synopsis}</p>
                 <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
-                <div className="service-meta">
-                  <strong>{title.genres.slice(0, 2).join(" · ")}</strong>
-                  <Link href={"/entertainment/movies/" + title.slug} prefetch={false}>Where to watch →</Link>
+                <div className="movie-tile-footer">
+                  <span>{title.genres.slice(0, 2).join(" · ")}</span>
+                  <Link href={"/entertainment/movies/" + title.slug} prefetch={false}>Details →</Link>
                 </div>
               </article>
             );
           })}
         </div>
       ) : (
-        <div className="empty-state">
+        <div className="movie-empty-state">
           <strong>No matching movie yet.</strong>
           <p>Try another actor, title, platform or genre.</p>
         </div>
       )}
 
       {visibleCount < filtered.length ? (
-        <div className="directory-load-more">
+        <div className="movie-load-more">
           <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>Show more movies</button>
           <small>Showing {visible.length} of {filtered.length}</small>
         </div>
