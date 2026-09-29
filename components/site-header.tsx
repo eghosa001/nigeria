@@ -10,6 +10,7 @@ const navigation = [
   { href: "/explore", label: "Explore Nigeria" },
   { href: "/categories/foreign-visas", label: "Foreign visas" },
   { href: "/fees", label: "Fees" },
+  { href: "/offices", label: "Offices" },
   { href: "/updates", label: "Updates" },
   { href: "/saved", label: "Saved" },
   { href: "/assistant", label: "Find a guide" },
