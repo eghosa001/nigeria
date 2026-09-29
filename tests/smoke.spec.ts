@@ -435,7 +435,10 @@ test("service guides expose verified search-intent quick answers", async ({ page
   await expect(quick.getByRole("heading", { name: /Quick answers about Passport renewal/i })).toBeVisible();
   await expect(quick.getByRole("heading", { name: /How much does Passport renewal cost in 2026/i })).toBeVisible();
   await expect(quick).toContainText("₦100,000 / ₦200,000");
-  await expect(page.locator('#main-content script[type="application/ld+json"]')).toContainText("FAQPage");
+  const hasFaqSchema = await page.locator('#main-content script[type="application/ld+json"]').evaluateAll(
+    (scripts) => scripts.some((script) => script.innerHTML.includes("FAQPage")),
+  );
+  expect(hasFaqSchema).toBeTruthy();
 });
 
 test("topic search phrases point to exact guides", async ({ page }) => {
