@@ -7,6 +7,8 @@ on:
     paths:
       - data/youtube-movie-sources.json
       - .github/workflows/youtube-entertainment-sync.yml
+      - scripts/sync-youtube-entertainment.mjs
+      - scripts/check-entertainment-scale.mjs
   workflow_dispatch:
     inputs:
       full_sync:
