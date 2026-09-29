@@ -303,17 +303,19 @@ let pendingQualityCount = fullSync ? 0 : Number(previousGenerated.pendingQuality
 let importedThisRun = 0;
 let pendingThisRun = 0;
 let duplicateTitleCount = 0;
+const sourceErrors = [];
 
 for (const source of registry.sources) {
   console.log((fullSync ? "Full scan " : "Incremental scan ") + source.searchName);
-  const channel = await resolveChannel(source);
-  const cached = cache[source.slug] ?? channel;
-  const stopAtVideoId = fullSync ? null : cached.latestUploadVideoId ?? null;
-  const scan = await uploadsSince(channel.uploadsPlaylistId, stopAtVideoId);
-  const ids = scan.items.map((item) => item.contentDetails?.videoId).filter(Boolean);
-  const details = await videoDetails(ids);
+  try {
+    const channel = await resolveChannel(source);
+    const cached = cache[source.slug] ?? channel;
+    const stopAtVideoId = fullSync ? null : cached.latestUploadVideoId ?? null;
+    const scan = await uploadsSince(channel.uploadsPlaylistId, stopAtVideoId);
+    const ids = scan.items.map((item) => item.contentDetails?.videoId).filter(Boolean);
+    const details = await videoDetails(ids);
 
-  for (const video of details) {
+    for (const video of details) {
     if (!isMovie(video)) continue;
     const cast = extractCast(video);
     const title = cleanTitle(video.snippet?.title);
@@ -342,17 +344,22 @@ for (const source of registry.sources) {
       videoUrl: "https://www.youtube.com/watch?v=" + video.id,
       lastChecked: checkedDate,
     });
-    importedThisRun++;
-  }
+      importedThisRun++;
+    }
 
-  if (fullSync || scan.items.length > 0 || !cached.latestUploadVideoId) {
-    cache[source.slug] = {
-      ...channel,
-      latestUploadVideoId: scan.latestUploadVideoId ?? cached.latestUploadVideoId,
-      lastScannedAt: now.toISOString(),
-      lastScanMode: fullSync ? "full" : "incremental",
-      reachedPreviousUpload: scan.reachedPreviousUpload,
-    };
+    if (fullSync || scan.items.length > 0 || !cached.latestUploadVideoId) {
+      cache[source.slug] = {
+        ...channel,
+        latestUploadVideoId: scan.latestUploadVideoId ?? cached.latestUploadVideoId,
+        lastScannedAt: now.toISOString(),
+        lastScanMode: fullSync ? "full" : "incremental",
+        reachedPreviousUpload: scan.reachedPreviousUpload,
+      };
+    }
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    sourceErrors.push({ slug: source.slug, name: source.searchName, message });
+    console.error("Source skipped:", source.searchName, "-", message);
   }
 }
 
@@ -392,9 +399,12 @@ await fs.writeFile(outputPath, JSON.stringify({
   pendingQualityCount,
   pendingThisRun,
   duplicateTitleCount,
+  failedSourceCount: sourceErrors.length,
+  sourceErrors,
   movies,
 }, null, 2) + "\n");
 
 console.log("Catalog now contains", movies.length, "full movies from", registry.sources.length, "approved sources.");
 console.log("Imported this run:", importedThisRun, "| held for metadata review this run:", pendingThisRun);
 console.log("Duplicate publisher/title/year entries skipped:", duplicateTitleCount);
+console.log("Sources needing review:", sourceErrors.length);
