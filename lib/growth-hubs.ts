@@ -115,7 +115,25 @@ export const growthHubs: GrowthHub[] = [
       "Open the destination guide for country-specific fees, documents, biometrics, financial evidence and application steps. Visa rules differ, so the destination authority remains the final source."
     ],
     searches: [{ query: "UK visitor visa Nigeria", serviceSlug: "uk-standard-visitor-visa" }, { query: "Canada visitor visa Nigeria", serviceSlug: "canada-visitor-visa" }, { query: "US B1 B2 visa Nigeria", serviceSlug: "us-b1-b2-visitor-visa" }, { query: "Schengen visa Nigeria", serviceSlug: "france-schengen-short-stay-visa" }, { query: "Australia visitor visa Nigeria", serviceSlug: "australia-visitor-visa-600" }],
-    serviceSlugs: ["uk-standard-visitor-visa", "canada-visitor-visa", "us-b1-b2-visitor-visa", "france-schengen-short-stay-visa", "australia-visitor-visa-600"]
+    serviceSlugs: ["uk-standard-visitor-visa", "canada-visitor-visa", "us-b1-b2-visitor-visa", "france-schengen-short-stay-visa", "australia-visitor-visa-600", "uae-tourist-visa", "south-africa-holiday-visa", "ireland-short-stay-visit-visa", "germany-schengen-tourist-visa", "italy-schengen-tourist-visa", "spain-schengen-tourist-visa", "netherlands-schengen-visa", "turkiye-tourist-visa", "china-tourist-visa-nigeria"]
+  },
+  {
+    slug: "schengen-visas-nigeria",
+    title: "Schengen Visa Guides for Nigerians 2026",
+    shortTitle: "Schengen visas",
+    description: "Compare Nigeria-specific Schengen application routes for Germany, France, Italy, Spain and the Netherlands with official requirements, fees and submission centres.",
+    intro: [
+      "Use this hub when your trip is to the Schengen area and you need to identify the correct destination guide. Each country page keeps its own Nigeria-specific submission route, documents, fee guidance and official sources.",
+      "Apply through the country responsible for your trip under Schengen rules rather than choosing a visa centre only because it is convenient. Open the destination guide below for the current Nigerian application route."
+    ],
+    searches: [
+      { query: "Germany visa from Nigeria", serviceSlug: "germany-schengen-tourist-visa" },
+      { query: "France Schengen visa Nigeria", serviceSlug: "france-schengen-short-stay-visa" },
+      { query: "Italy tourist visa Nigeria", serviceSlug: "italy-schengen-tourist-visa" },
+      { query: "Spain Schengen visa Nigeria", serviceSlug: "spain-schengen-tourist-visa" },
+      { query: "Netherlands visa Nigeria", serviceSlug: "netherlands-schengen-visa" }
+    ],
+    serviceSlugs: ["germany-schengen-tourist-visa", "france-schengen-short-stay-visa", "italy-schengen-tourist-visa", "spain-schengen-tourist-visa", "netherlands-schengen-visa"]
   }
 ];
 
