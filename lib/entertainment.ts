@@ -94,6 +94,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Sharon Ooja", "Omoni Oboli", "Blossom Chukwujekwu"],
     directors: ["Kenneth Gyang"],
     featured: true,
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=2UnCt9cKwS0",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [
       {
         platform: "Netflix",
@@ -435,6 +443,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "After a wealthy patriarch dies unexpectedly, his relatives, friends and staff scramble over the fortune he leaves behind.",
     cast: ["Taiwo Obileye", "Joke Silva", "Falz", "Dakore Egbuson-Akande", "Funke Akindele", "Zainab Balogun", "Shaffy Bello", "Ini Edo", "Mawuli Gavor"],
     featuredCast: ["Joke Silva", "Funke Akindele", "Falz"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=S00tp6ZnLhk",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81074015", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -467,6 +483,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A powerful businesswoman's political ambitions collide with her underworld connections, triggering a brutal struggle for power.",
     cast: ["Sola Sobowale", "Adesua Etomi", "Remilekun 'Reminisce' Safaru", "Tobechukwu 'iLLbliss' Ejiofor", "Toni Tones", "Jide Kosoko", "Sharon Ooja"],
     featuredCast: ["Sola Sobowale", "Adesua Etomi", "Remilekun 'Reminisce' Safaru"],
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=cF-FQLKaUCk",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "Kemi Adetiba Visuals",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81172721", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -705,6 +728,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Lifelong best friends Uche and Toyin fall for the same complicated man, putting their friendship under pressure as a painful revelation changes what each of them wants.",
     cast: ["Dakore Egbuson-Akande", "Nse Ikpe-Etim", "Oris Erhuero", "Alexx Ekubo", "Uzor Osimkpa", "Hilda Dokubo"],
     featuredCast: ["Dakore Egbuson-Akande", "Nse Ikpe-Etim", "Oris Erhuero"],
+    trailer: {
+      label: "Watch the official Netflix trailer",
+      href: "https://www.youtube.com/watch?v=U7cnzv1zdPg",
+      platform: "YouTube",
+      lastChecked: "2026-09-29",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{
       platform: "Netflix",
       label: "Watch on Netflix",
