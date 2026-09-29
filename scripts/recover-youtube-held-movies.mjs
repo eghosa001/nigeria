@@ -121,9 +121,10 @@ function cleanTitleFromCast(rawTitle, currentTitle, cast) {
     if (namedAtEnd) title = namedAtEnd[1];
   }
 
-  const suffixTitle = raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s*-\s*(?:LATEST|NEW|20\d{2})\b/i)
-    ?? raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s+20\d{2}\s*$/);
-  if (suffixTitle) title = suffixTitle[1];
+  const suffixTitle = raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s*-\s*(?:LATEST|NEW|20\d{2})\b/i);
+  if (suffixTitle && !/\b(?:CLASSIC\s+NOLLYWOOD\s+FILM|FULL\s+MOVIE|NOLLYWOOD\s+MOVIE)\b/i.test(suffixTitle[1])) {
+    title = suffixTitle[1];
+  }
 
   const lowerRaw = raw.toLowerCase();
   const hits = [];
