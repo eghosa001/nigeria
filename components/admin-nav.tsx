@@ -16,7 +16,7 @@ export function AdminNav() {
   const pathname = usePathname();
 
   async function lockAdmin() {
-    const response = await fetch("/api/admin/access", { method: "DELETE" });
+    const response = await fetch("/admin/api/access", { method: "DELETE" });
     if (response.ok) window.location.replace("/admin");
   }
 

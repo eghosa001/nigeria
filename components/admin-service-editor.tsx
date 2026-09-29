@@ -25,7 +25,7 @@ export function AdminServiceEditor({ service }: { service: Service }) {
   const [submitting, setSubmitting] = useState(false);
 
   async function refreshAccess() {
-    const response = await fetch("/api/admin/content-access", { cache: "no-store" });
+    const response = await fetch("/admin/api/content-access", { cache: "no-store" });
     const body = await response.json() as { configured?: boolean; authenticated?: boolean };
     setAccess(!body.configured ? "setup" : body.authenticated ? "ready" : "locked");
   }
@@ -37,7 +37,7 @@ export function AdminServiceEditor({ service }: { service: Service }) {
     setMessage("");
     const form = event.currentTarget;
     const data = new FormData(form);
-    const response = await fetch("/api/admin/content-access", {
+    const response = await fetch("/admin/api/content-access", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password: data.get("password") }),
@@ -52,7 +52,7 @@ export function AdminServiceEditor({ service }: { service: Service }) {
   }
 
   async function lock() {
-    await fetch("/api/admin/content-access", { method: "DELETE" });
+    await fetch("/admin/api/content-access", { method: "DELETE" });
     setProposal(null);
     setAccess("locked");
   }
@@ -78,7 +78,7 @@ export function AdminServiceEditor({ service }: { service: Service }) {
     setMessage("");
     setProposal(null);
     try {
-      const response = await fetch("/api/admin/services/" + encodeURIComponent(service.slug) + "/proposal", {
+      const response = await fetch("/admin/api/services/" + encodeURIComponent(service.slug) + "/proposal", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
