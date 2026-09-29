@@ -1,7 +1,7 @@
 export const siteName = "MyNigeriaGuide";
 
 export const siteDescription =
-  "Clear, independently verified guides to Nigerian government services, fees, requirements and official portals.";
+  "Practical, independently verified guides to Nigerian services, travel and entertainment, with official links, clear steps, addresses, map links and current verification notes.";
 
 export const productionSiteUrl = "https://mynigeriaguide.com";
 
