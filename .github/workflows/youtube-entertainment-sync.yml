@@ -1,5 +1,7 @@
 name: YouTube Entertainment Sync
 
+# API credential trigger: configured
+
 on:
   push:
     branches:
