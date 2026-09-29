@@ -109,7 +109,7 @@ export default async function YouTubeMoviesPage({
         {youtubePendingQualityCount ? (
           <div className="info-box top-gap">
             <strong>{youtubePendingQualityCount} additional videos are held for metadata review.</strong>
-            <p>They are not published until a recognizable cast can be extracted or verified. This keeps the 1,000+ target from turning into low-quality title-only pages.</p>
+            <p>They are not published until a recognizable cast can be extracted or verified. This keeps the growing catalog from turning into low-quality title-only pages.</p>
           </div>
         ) : null}
       </div>
