@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { CategoryFaqs } from "@/components/category-faqs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
+import { getCategoryFaqs } from "@/data/category-faqs";
 import { categorySlug } from "@/lib/category";
 import { categories, publicServices } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
@@ -43,6 +45,7 @@ export default async function CategoryPage({
   const services = publicServices.filter((service) => service.category === category.name);
   const agencies = [...new Set(services.map((service) => service.agencySlug.toUpperCase()))];
   const base = getSiteUrl();
+  const faqs = getCategoryFaqs(category.name);
 
   const itemList = {
     "@context": "https://schema.org",
@@ -57,9 +60,22 @@ export default async function CategoryPage({
     })),
   };
 
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <>
-      <JsonLd data={itemList} />
+      <JsonLd data={[itemList, faqLd]} />
       <section className="section page-top">
         <div className="container">
           <Breadcrumbs
@@ -109,6 +125,8 @@ export default async function CategoryPage({
           <div className="service-grid">
             {services.map((service) => <ServiceCard key={service.slug} service={service} />)}
           </div>
+
+          <CategoryFaqs category={category.name} />
         </div>
       </section>
     </>
