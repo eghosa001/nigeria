@@ -14,6 +14,7 @@ on:
       - "tests/**"
       - "package.json"
       - "next.config.ts"
+      - "wrangler.jsonc"
       - "playwright.live.config.ts"
       - ".github/workflows/live-qa.yml"
 
