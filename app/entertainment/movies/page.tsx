@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentCatalog } from "@/components/entertainment-catalog";
 import { entertainmentPlatforms, entertainmentTitles, getEntertainmentGenres } from "@/lib/entertainment";
+import { youtubeMovieLibrary, youtubePendingQualityCount } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
@@ -32,8 +34,25 @@ export default async function MoviesPage({
         <span className="eyebrow">Nigerian movie directory</span>
         <h1>Movies and official places to watch.</h1>
         <p className="page-intro">
-          Filter the catalog without loading video players or giant media files. Open a movie to see its verified official watch links and the date those links were checked.
+          Filter the curated cross-platform catalog without loading video players or giant media files. Open a movie to see its verified official watch links and the date those links were checked.
         </p>
+
+        <div className="category-summary">
+          <div><strong>{youtubeMovieLibrary.length.toLocaleString()}</strong><span>full YouTube movies</span></div>
+          <div><strong>{entertainmentTitles.length}</strong><span>curated cross-platform titles</span></div>
+          <div><strong>{youtubePendingQualityCount}</strong><span>held for metadata review</span></div>
+        </div>
+
+        <div className="info-box top-gap">
+          <strong>The large YouTube library is already live in this section.</strong>
+          <p>
+            Browse all {youtubeMovieLibrary.length.toLocaleString()} approved full movies with server-side search and pagination, including actor and publisher filters.
+          </p>
+          <div className="related-links">
+            <Link href="/entertainment/youtube">Browse the full YouTube movie library →</Link>
+          </div>
+        </div>
+
         <EntertainmentCatalog
           titles={entertainmentTitles}
           initialQuery={params.q ?? ""}
