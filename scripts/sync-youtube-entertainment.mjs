@@ -189,7 +189,7 @@ async function videoDetails(ids) {
 function durationSeconds(iso) {
   const match = String(iso ?? "").match(/^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/);
   if (!match) return 0;
-  return Number(match[1] ?? 0) * 3600 + Number(match[2] ?? 0) * 60 + Number(match[3] ?? 0) * 60 + Number(match[3] ?? 0);
+  return Number(match[1] ?? 0) * 3600 + Number(match[2] ?? 0) * 60 + Number(match[3] ?? 0);
 }
 
 const excludeTitle = /\b(trailer|teaser|behind\s+the\s+scenes|\bbts\b|clip\b|short\s+film|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|soundtrack|music\s+video|making\s+of|preview)\b/i;
