@@ -372,8 +372,7 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
     ". Watch it through the publisher's official YouTube release.";
 }
 
-function escapeRegExp(value) {
-  return String(value).replace(/[.*+?^$\\{\\}()|[\\]\\\\]/g, "\\function synopsisFromDescription(video, displayTitle, channelTitle) {
+function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
   const description = video.snippet?.description ?? "";
   const paragraphs = description
     .split(/\n\s*\n|\r?\n/)
@@ -386,18 +385,11 @@ function escapeRegExp(value) {
     );
   const chosen = paragraphs[0];
   if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
-  return displayTitle + " is a full Nigerian movie published by " + channelTitle + " on its official YouTube channel.";
-}
 
-function cleanTitle(raw) {
-  let title = String(raw ?? "").trim();
-  title = title.replace(/\((?:full\s+movie|the\s+movie|complete\s+movie)\)/gi, "");
-  title = title.split("|")[0].trim();
-  title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, "").trim();
-  title = title.replace(/\s+(?:latest\s+)?(?:20\d{2}\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movie.*$/i, "").trim();
-  return title || String(raw ?? "").trim();
-}
-");
+  const featured = cast.slice(0, 3).join(", ");
+  return displayTitle + " is a full-length Nigerian film published by " + channelTitle +
+    (featured ? ", featuring " + featured : "") +
+    ". Watch it through the publisher's official YouTube release.";
 }
 
 function cleanTitle(raw, cast = []) {
@@ -405,13 +397,11 @@ function cleanTitle(raw, cast = []) {
   title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
   title = title.split("|")[0].trim();
 
+  const lowerTitle = title.toLowerCase();
   const castHits = cast
     .map((name) => cleanName(name))
     .filter((name) => name.length >= 4)
-    .map((name) => {
-      const match = title.match(new RegExp(escapeRegExp(name), "i"));
-      return match && typeof match.index === "number" ? match.index : -1;
-    })
+    .map((name) => lowerTitle.indexOf(name.toLowerCase()))
     .filter((index) => index >= 0)
     .sort((a, b) => a - b);
 
