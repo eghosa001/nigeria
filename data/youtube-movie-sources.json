@@ -256,6 +256,47 @@
       ],
       "estimatedMovieCount": 500,
       "knownUrl": "https://www.youtube.com/@NollywoodPicturestv"
+    },
+    {
+      "slug": "royal-arts-tv",
+      "searchName": "Royal Arts TV",
+      "aliases": [
+        "Royal Arts TV",
+        "Royal Arts Tv"
+      ],
+      "estimatedMovieCount": 83,
+      "knownUrl": "https://www.youtube.com/@RoyalArtsTV"
+    },
+    {
+      "slug": "pamela-okoye-tv",
+      "searchName": "PAMELA OKOYE TV",
+      "aliases": [
+        "PAMELA OKOYE TV",
+        "Pamela Okoye TV"
+      ],
+      "estimatedMovieCount": 24,
+      "knownUrl": "https://www.youtube.com/@pamelaokoyetv"
+    },
+    {
+      "slug": "enyinna-jonas-tv",
+      "searchName": "ENYINNA JONAS TV",
+      "aliases": [
+        "ENYINNA JONAS TV",
+        "Enyinna Jonas TV",
+        "Enyinna Jonas Tv"
+      ],
+      "estimatedMovieCount": 22,
+      "knownUrl": "https://www.youtube.com/@enyinnajonastv"
+    },
+    {
+      "slug": "ego-nwosu-tv",
+      "searchName": "Ego Nwosu Tv",
+      "aliases": [
+        "Ego Nwosu Tv",
+        "Ego Nwosu TV"
+      ],
+      "estimatedMovieCount": 14,
+      "knownUrl": "https://www.youtube.com/channel/UCMpZ4ghi2I9GMGOICB9YRtg"
     }
   ]
 }
