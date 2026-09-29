@@ -1,0 +1,320 @@
+export type ExploreGuideKind = "city" | "destination" | "itinerary";
+
+export type ExploreGuide = {
+  slug: string;
+  title: string;
+  shortTitle: string;
+  kind: ExploreGuideKind;
+  region: string;
+  summary: string;
+  intro: string[];
+  bestFor: string[];
+  highlights: Array<{ name: string; detail: string }>;
+  planning: Array<{ label: string; detail: string }>;
+  source?: { label: string; href: string };
+  lastReviewed: string;
+};
+
+export const exploreGuides: ExploreGuide[] = [
+  {
+    slug: "lagos",
+    title: "Lagos Travel Guide",
+    shortTitle: "Lagos",
+    kind: "city",
+    region: "Lagos State",
+    summary: "Plan Lagos by area: culture, nature, beaches, art and food without turning the trip into one long traffic jam.",
+    intro: [
+      "Lagos rewards planning by neighbourhood. Pick one or two areas for each day instead of crossing the city repeatedly, and keep generous time around airport, bridge and rush-hour journeys.",
+      "This starter guide focuses on durable places and planning decisions rather than fragile lists of today's hotel prices or venue opening hours.",
+    ],
+    bestFor: ["Art & culture", "Beaches", "Food", "Short city breaks"],
+    highlights: [
+      { name: "Lekki Conservation Centre", detail: "A nature-focused stop on the Lekki axis with forest walks and elevated walkways. Confirm current admission and operating details before setting out." },
+      { name: "Nike Art Gallery", detail: "A strong starting point for Nigerian visual art and craft in Lagos, especially if you want an indoor cultural stop." },
+      { name: "National Museum Lagos", detail: "Useful for historical context before exploring the city's newer creative and commercial districts." },
+      { name: "Tarkwa Bay", detail: "A beach outing normally reached by boat. Use a reputable operator, confirm return arrangements and check weather before departure." },
+    ],
+    planning: [
+      { label: "Cluster your day", detail: "Plan Island, Lekki/Victoria Island and Mainland stops in separate blocks where possible." },
+      { label: "Build in traffic time", detail: "Do not schedule airport transfers, cinema tickets or reservations back-to-back with cross-city journeys." },
+      { label: "Treat water trips separately", detail: "Confirm boat operator, boarding point, return time, weather and life-jacket arrangements before a beach or waterfront trip." },
+      { label: "Keep a return plan", detail: "For late outings, decide how you are getting back before you leave rather than depending on last-minute availability." },
+    ],
+    source: { label: "Lagos State Ministry of Tourism, Arts & Culture", href: "https://tourismartandculture.lagosstate.gov.ng/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "abuja",
+    title: "Abuja Travel Guide",
+    shortTitle: "Abuja",
+    kind: "city",
+    region: "Federal Capital Territory",
+    summary: "A practical Abuja guide for parks, lakes, landmarks, neighbourhood dining and easy day planning around the capital.",
+    intro: [
+      "Abuja is easier to enjoy when you group stops by district and leave time for security checks around formal government areas.",
+      "The city mixes monumental landmarks with parks, lakes, markets, galleries, restaurants and nearby hills, so a balanced itinerary can work well even on a short stay.",
+    ],
+    bestFor: ["City breaks", "Parks", "Landmarks", "Dining"],
+    highlights: [
+      { name: "Millennium Park", detail: "A central green-space stop that works well as a low-pressure break between busier parts of an Abuja day." },
+      { name: "Jabi Lake", detail: "A waterfront area for relaxed afternoons, dining and recreation; check any activity operator directly before booking." },
+      { name: "National Mosque & National Christian Centre", detail: "Major city landmarks. Be respectful of worship, dress requirements, photography rules and restricted areas." },
+      { name: "Arts and craft shopping", detail: "Abuja has established craft and market options; compare quality and prices and keep valuables secure in busy areas." },
+    ],
+    planning: [
+      { label: "Plan by district", detail: "Maitama, Wuse, Central Area, Jabi and Gwarinpa can be far enough apart to make poor sequencing expensive in time." },
+      { label: "Respect controlled areas", detail: "Government and diplomatic zones may have photography, parking or access restrictions." },
+      { label: "Check the weather", detail: "Heat and heavy rainy-season storms can change the best time for parks, hills and lake activities." },
+      { label: "Arrange return transport", detail: "For evening plans or less central stops, confirm your return option before staying late." },
+    ],
+    source: { label: "Visit Abuja visitor information", href: "https://www.visitabuja.org/about-abuja/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "benin-city",
+    title: "Benin City Travel Guide",
+    shortTitle: "Benin City",
+    kind: "city",
+    region: "Edo State",
+    summary: "Explore Benin City's royal history, bronze-casting tradition, museums and wider Edo heritage with the right cultural context.",
+    intro: [
+      "Benin City is strongest as a heritage trip. The best experience comes from understanding the Benin Kingdom, its art traditions and the living cultural institutions behind the places you visit.",
+      "Some heritage locations are active royal, religious or community spaces rather than conventional tourist attractions, so access and photography rules should be treated seriously.",
+    ],
+    bestFor: ["History", "Benin art", "Culture", "Heritage"],
+    highlights: [
+      { name: "Benin City National Museum", detail: "A useful first stop for historical context and collections connected to Benin and wider Nigerian heritage." },
+      { name: "Igun Street", detail: "Known for the city's bronze-casting tradition and craft workshops; ask before photographing people or workspaces." },
+      { name: "Oba's Palace area", detail: "Central to Benin's living royal institution. Visit only areas open to the public and follow local guidance." },
+      { name: "Great Benin earthworks", detail: "The historic moat and earthwork system is part of the city's larger heritage story; access varies by section." },
+    ],
+    planning: [
+      { label: "Start with context", detail: "A museum or knowledgeable local guide can make later heritage stops much more meaningful." },
+      { label: "Ask before photographing", detail: "Royal, sacred and workshop settings may restrict photography even when the surrounding area is public." },
+      { label: "Separate city and day trips", detail: "Okomu and other Edo attractions sit outside the central city and need their own transport plan." },
+      { label: "Confirm access", detail: "Palace-related and heritage sites can change visitor access for ceremonies, maintenance or local events." },
+    ],
+    source: { label: "Edo State Government tourism overview", href: "https://edostate.gov.ng/visit-edo-state-to-enjoy-her-unique-hospitality-and-tourism-signature/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "calabar",
+    title: "Calabar Travel Guide",
+    shortTitle: "Calabar",
+    kind: "city",
+    region: "Cross River State",
+    summary: "Plan Calabar around history, waterfront leisure, Efik culture and the wider Cross River tourism circuit.",
+    intro: [
+      "Calabar works both as a city break and as the gateway to wider Cross River trips. History-focused stops, the waterfront and December events attract very different crowds, so timing changes the experience.",
+      "If you are travelling around the year-end festival season, book transport and accommodation early and verify event dates rather than relying on old schedules.",
+    ],
+    bestFor: ["History", "Culture", "Waterfront", "December travel"],
+    highlights: [
+      { name: "Marina Resort", detail: "A waterfront leisure area in Calabar with recreation and visitor facilities; individual attractions inside can change, so check what is operating." },
+      { name: "Slave History Museum", detail: "A history-focused stop connected to Calabar's role in the transatlantic slave trade." },
+      { name: "Old Residency / museum circuit", detail: "Useful for understanding colonial-era and regional history before moving into modern Calabar." },
+      { name: "Wider Cross River trips", detail: "Calabar can be a base for planning rainforest, wildlife and mountain destinations elsewhere in the state." },
+    ],
+    planning: [
+      { label: "December needs early booking", detail: "Carnival and festive-season demand can change transport, hotel availability and road conditions." },
+      { label: "Check rainfall", detail: "Outdoor and rainforest plans are more comfortable when you account for wet-season conditions." },
+      { label: "Do not overpack day trips", detail: "Cross River destinations can involve substantial road travel; give major excursions a full day or more." },
+      { label: "Verify individual attractions", detail: "Facilities inside resorts and leisure complexes can open, close or undergo redevelopment independently." },
+    ],
+    source: { label: "Calabar Municipal tourist attractions", href: "https://calabar.municipal.crossriverstate.gov.ng/tourist-attractions" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "port-harcourt",
+    title: "Port Harcourt Travel Guide",
+    shortTitle: "Port Harcourt",
+    kind: "city",
+    region: "Rivers State",
+    summary: "Use Port Harcourt as a base for parks, food, culture and carefully planned waterfront or riverine excursions.",
+    intro: [
+      "Port Harcourt is best approached as both an urban destination and a gateway to Rivers State. Build the city part around food, parks and cultural experiences, then plan riverine or coastal trips separately.",
+      "Water-based excursions need more preparation than ordinary city sightseeing: use an established operator and confirm transport, weather and local access conditions.",
+    ],
+    bestFor: ["Food", "Parks", "Culture", "Riverine trips"],
+    highlights: [
+      { name: "Port Harcourt Pleasure Park", detail: "A major urban recreation stop that works well for families, relaxed afternoons and a break from road-heavy sightseeing." },
+      { name: "City food culture", detail: "Build time around Rivers cuisine rather than treating meals as an afterthought; ask locals for current, well-regarded options." },
+      { name: "Bonny Island planning", detail: "A historically and economically significant island trip that requires transport and access planning rather than a spontaneous detour." },
+      { name: "Rivers coastal destinations", detail: "The state tourism agency highlights destinations beyond the city; use local guidance for current routes and conditions." },
+    ],
+    planning: [
+      { label: "Separate land and water days", detail: "Do not make a riverine trip depend on a tight city schedule." },
+      { label: "Use established operators", detail: "For boats and remote coastal stops, verify the operator, boarding point, life-jacket arrangements and return plan." },
+      { label: "Watch the weather", detail: "Heavy rainfall can affect road, water and outdoor plans quickly." },
+      { label: "Ask about local access", detail: "Conditions for specific riverine communities or sites may change; current local guidance matters." },
+    ],
+    source: { label: "Rivers State Tourism Development Agency", href: "https://rstda.rv.gov.ng/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "kano",
+    title: "Kano Travel Guide",
+    shortTitle: "Kano",
+    kind: "city",
+    region: "Kano State",
+    summary: "Discover Kano's old-city history, markets, museums and landmarks with practical guidance on culture, dress and photography.",
+    intro: [
+      "Kano's strongest visitor experience is cultural and historical. The old city, markets and museums make more sense when you understand the city's long role in trans-Saharan trade and Hausa history.",
+      "Dress and behaviour should fit the local setting, particularly around religious, royal and traditional spaces.",
+    ],
+    bestFor: ["History", "Markets", "Architecture", "Culture"],
+    highlights: [
+      { name: "Gidan Makama Museum", detail: "A key place to build context around Kano's history, traditional architecture and material culture." },
+      { name: "Kurmi Market", detail: "A historic commercial area whose long trading tradition remains part of Kano's identity." },
+      { name: "Dala Hill", detail: "Closely connected to the early history of Kano; plan the visit in cooler parts of the day." },
+      { name: "Old-city walls and gates", detail: "Use them as part of a wider old-city route rather than isolated photo stops, and ask before photographing people." },
+    ],
+    planning: [
+      { label: "Dress for the setting", detail: "Modest clothing is the practical choice for markets, traditional areas and religious landmarks." },
+      { label: "Ask before photographing", detail: "People, worship spaces, royal areas and some security-sensitive locations may not welcome photography." },
+      { label: "Plan for heat", detail: "Outdoor walking is easier earlier or later in the day, with water and sun protection." },
+      { label: "Allow for prayer times", detail: "Friday prayers and daily worship can affect traffic, opening patterns and access around major religious areas." },
+    ],
+    source: { label: "Kano State Government history", href: "https://kanostate.gov.ng/history/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "jos",
+    title: "Jos Travel Guide",
+    shortTitle: "Jos",
+    kind: "city",
+    region: "Plateau State",
+    summary: "Plan a Jos highland break around museums, wildlife, rock formations, cooler weather and wider Plateau scenery.",
+    intro: [
+      "Jos and the Plateau reward travellers who mix city stops with outdoor scenery. The climate can feel different from much of Nigeria, but rain, fog and road conditions still need to be part of your plan.",
+      "For hills, rocks and less formal nature sites, local guidance is more valuable than relying on an old blog post or map pin.",
+    ],
+    bestFor: ["Highlands", "Hiking", "Museums", "Nature"],
+    highlights: [
+      { name: "Jos Museum", detail: "A foundational cultural stop for Plateau and Nigerian history before heading to outdoor sites." },
+      { name: "Jos Wildlife Park", detail: "A long-established recreation and wildlife stop; confirm current visitor conditions before travelling." },
+      { name: "Shere Hills", detail: "A major Plateau highland destination for scenery and climbing; go with appropriate local guidance for the route you choose." },
+      { name: "Riyom Rock", detail: "A distinctive rock formation south of Jos that fits naturally into a broader Plateau road trip." },
+    ],
+    planning: [
+      { label: "Pack for changing weather", detail: "Highland conditions can shift quickly, especially in the rainy season and around exposed viewpoints." },
+      { label: "Use local guidance outdoors", detail: "For hiking or unfamiliar rock routes, do not depend only on a map pin." },
+      { label: "Keep road time realistic", detail: "Plateau attractions can be spread across different local-government areas." },
+      { label: "Check current access", detail: "Nature sites and parks may change opening or access arrangements; verify shortly before travel." },
+    ],
+    source: { label: "Visit Plateau tourism platform", href: "https://visitplateau.com/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "enugu",
+    title: "Enugu Travel Guide",
+    shortTitle: "Enugu",
+    kind: "city",
+    region: "Enugu State",
+    summary: "Explore Enugu's hills, forests, lakes and nearby waterfalls while accounting for ongoing tourism upgrades and road travel.",
+    intro: [
+      "Enugu is a strong base for a nature-heavy break because several of its best-known attractions sit outside the dense city centre.",
+      "The state has been upgrading tourism sites, so current access can differ from older travel posts. Verify the specific site before building a day around it.",
+    ],
+    bestFor: ["Nature", "Hills", "Waterfalls", "Weekend breaks"],
+    highlights: [
+      { name: "Ngwo Pine Forest", detail: "A popular forest-and-cave outing near Enugu. Confirm current access and any redevelopment work before travelling." },
+      { name: "Nike Lake", detail: "A calmer city-side option that can balance a trip dominated by road journeys and hikes." },
+      { name: "Milken Hills", detail: "Known for views over Enugu; use a safe access route and avoid relying on an unverified shortcut." },
+      { name: "Awhum Waterfall & Cave", detail: "A well-known day-trip destination outside central Enugu. Check access status, road conditions and local rules in advance." },
+    ],
+    planning: [
+      { label: "Verify upgraded sites", detail: "Enugu State has announced tourism redevelopment at several natural attractions, so old directions may be outdated." },
+      { label: "Give nature trips a full block", detail: "Do not squeeze waterfalls or forest trips between fixed city appointments." },
+      { label: "Prepare for rain", detail: "Trails, rocks and access roads can change significantly after heavy rainfall." },
+      { label: "Use known access routes", detail: "For hills and caves, prefer current local guidance over unofficial shortcuts." },
+    ],
+    source: { label: "Enugu State Government 2026 tourism update", href: "https://enugustate.gov.ng/2025/12/02/full-text-of-the-proposed-2026-budget-of-renewed-momentum-presented-by-governor-peter-mbah-to-the-house-of-assembly-today/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "obudu-mountain-resort",
+    title: "Obudu Mountain Resort Guide",
+    shortTitle: "Obudu Mountain Resort",
+    kind: "destination",
+    region: "Cross River State",
+    summary: "Plan Obudu as a mountain destination, with realistic transport, weather and facility checks before the long journey.",
+    intro: [
+      "Obudu is a destination trip rather than a quick Calabar add-on. Road logistics, accommodation, mountain weather and the status of individual resort facilities should all be confirmed before departure.",
+      "Cross River State announced a new concession and rehabilitation programme in 2026, including work on the cable car and hospitality infrastructure. Do not assume every legacy attraction is operating simply because it appears in older travel material.",
+    ],
+    bestFor: ["Mountain scenery", "Nature", "Resort stays", "Long weekends"],
+    highlights: [
+      { name: "Highland viewpoints", detail: "The mountain landscape is the core reason to visit; give yourself enough daylight to enjoy it rather than arriving late and leaving early." },
+      { name: "Becheve Nature Reserve", detail: "One of the nature-oriented experiences associated with the resort area; confirm guided-access arrangements locally." },
+      { name: "Nature walks", detail: "Shorter guided walks can be a better choice than trying to cover every attraction in one day." },
+      { name: "Resort recreation", detail: "Facilities can change during rehabilitation. Confirm what is actually open for your dates before paying or travelling." },
+    ],
+    planning: [
+      { label: "Confirm transport end-to-end", detail: "Plan the full road journey, fuel stops, driver arrangements and arrival time before setting out." },
+      { label: "Check mountain weather", detail: "Visibility, rain and cooler temperatures can change what you can comfortably do." },
+      { label: "Verify cable-car status", detail: "The state announced cable-car rehabilitation in 2026, so direct confirmation is essential before making it central to your itinerary." },
+      { label: "Confirm rooms and facilities", detail: "Get current accommodation and activity confirmation directly from the resort or operator, not from an old listing." },
+    ],
+    source: { label: "Cross River State 2026 Obudu rehabilitation update", href: "https://news.crossriverstate.gov.ng/obudu-ranch-concession-will-transform-obanliku-create-jobs-boost-tourism-gov-otu/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "yankari-game-reserve",
+    title: "Yankari Game Reserve Guide",
+    shortTitle: "Yankari Game Reserve",
+    kind: "destination",
+    region: "Bauchi State",
+    summary: "Prepare for wildlife viewing, Wikki Warm Spring and a multi-day reserve visit with the right season and logistics.",
+    intro: [
+      "Yankari is one of Nigeria's best-known wildlife destinations and is far enough from Bauchi city that it should be planned as its own trip.",
+      "Bauchi State notes that wildlife viewing is generally better in the dry season, when animals are more likely to gather around water sources. Always confirm current reserve rules, accommodation and guided-drive arrangements.",
+    ],
+    bestFor: ["Wildlife", "Warm spring", "Nature", "Multi-day trips"],
+    highlights: [
+      { name: "Wildlife viewing", detail: "The reserve is known for species including elephants, baboons, buffalo and other wildlife; sightings are never guaranteed." },
+      { name: "Wikki Warm Spring", detail: "A signature Yankari attraction and a natural break from vehicle-based wildlife activities." },
+      { name: "Marshall Caves", detail: "Part of the wider historical and natural-interest circuit within the reserve." },
+      { name: "Dry-season planning", detail: "Bauchi State tourism guidance says wildlife is generally easier to watch between November and May." },
+    ],
+    planning: [
+      { label: "Plan more than a few hours", detail: "The travel distance and reserve scale make an overnight or multi-day plan more practical than a rushed stop." },
+      { label: "Confirm guided activities", detail: "Check the current process for game drives, guides, vehicle requirements and restricted areas." },
+      { label: "Book accommodation directly", detail: "Verify room availability and payment instructions using current reserve or official channels." },
+      { label: "Pack for wildlife conditions", detail: "Bring water, sun protection, suitable footwear and realistic expectations about sightings." },
+    ],
+    source: { label: "Bauchi State Government tourism guide", href: "https://www.bauchistate.gov.ng/tourism/" },
+    lastReviewed: "2026-09-29",
+  },
+  {
+    slug: "weekend-trips-from-lagos",
+    title: "Weekend Trips from Lagos",
+    shortTitle: "Weekend trips from Lagos",
+    kind: "itinerary",
+    region: "South West Nigeria",
+    summary: "Choose a weekend escape from Lagos by travel effort, trip style and how much road time you actually want.",
+    intro: [
+      "A good Lagos weekend trip is not just a list of places. The deciding factor is how much of the weekend you are willing to spend in traffic or on the road.",
+      "Leave Friday-night and Sunday-return congestion in your plan, and verify accommodation or attraction access before driving several hours for a single stop.",
+    ],
+    bestFor: ["2-day breaks", "Road trips", "Heritage", "Nature"],
+    highlights: [
+      { name: "Badagry heritage day or overnight", detail: "A history-focused option within Lagos State. Build the trip around verified heritage sites instead of trying to rush every stop." },
+      { name: "Abeokuta & Olumo Rock", detail: "A classic Ogun State city-and-landmark combination that can work as a full day or relaxed overnight." },
+      { name: "Epe and the eastern Lagos axis", detail: "A lower-intensity option if your priority is food, water-side scenery and a slower pace rather than a long interstate drive." },
+      { name: "Ibadan city break", detail: "Works better as an overnight when you want food, culture and multiple city stops rather than one attraction." },
+    ],
+    planning: [
+      { label: "Choose by road time", detail: "Pick the destination that leaves enough of the weekend for the actual experience, not just the drive." },
+      { label: "Avoid optimistic departure times", detail: "Friday evenings and Sunday returns can add major delays; leave margin around check-in and tickets." },
+      { label: "Verify the anchor attraction", detail: "If one attraction is the reason for the trip, confirm its access before committing to the journey." },
+      { label: "Keep the return simple", detail: "Do not stack a final late activity onto the same day as a long drive back into Lagos." },
+    ],
+    source: { label: "Lagos State Ministry of Tourism, Arts & Culture", href: "https://tourismartandculture.lagosstate.gov.ng/" },
+    lastReviewed: "2026-09-29",
+  },
+];
+
+export function getExploreGuide(slug: string) {
+  return exploreGuides.find((guide) => guide.slug === slug);
+}
