@@ -33,15 +33,22 @@ jobs:
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-      - name: Probe private admin configuration flags
+      - name: Confirm Cloudflare Access intercepts private admin routes
         shell: bash
         run: |
-          echo "Current production analytics setup (booleans only; no credentials):"
-          curl -sS --max-time 15 "$LIVE_BASE_URL/api/admin/analytics?range=7d" || true
-          echo
-          echo "Current production guide-editor setup (booleans only; no credentials):"
-          curl -sS --max-time 15 "$LIVE_BASE_URL/api/admin/content-access" || true
-          echo
+          set -euo pipefail
+          for path in "/admin/visits" "/api/admin/analytics?range=7d" "/api/admin/content-access"; do
+            headers="$(mktemp)"
+            status="$(curl -sS --max-time 15 --max-redirs 0 \
+              --dump-header "$headers" --output /dev/null --write-out '%{http_code}' \
+              "$LIVE_BASE_URL$path")"
+            location="$(awk 'BEGIN{IGNORECASE=1} /^location:/{sub(/^[^:]+:[[:space:]]*/, ""); sub(/\r$/, ""); print; exit}' "$headers")"
+            if [ "$status" != "302" ] || ! printf '%s' "$location" | grep -Eq '^https://[^/]+\.cloudflareaccess\.com/cdn-cgi/access/login/'; then
+              echo "Cloudflare Access did not intercept $path as expected (status=$status, location=$location)."
+              exit 1
+            fi
+            echo "Cloudflare Access confirmed for $path."
+          done
       - name: Wait for this exact commit to reach Cloudflare production
         shell: bash
         run: |

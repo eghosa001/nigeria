@@ -29,7 +29,6 @@ jobs:
             "/fees"
             "/categories/foreign-visas"
             "/services/passport-renewal"
-            "/admin/visits"
             "/sitemap.xml"
             "/robots.txt"
             "/api/health"
@@ -71,46 +70,32 @@ jobs:
           printf '%s' "$robots" | grep -qi "disallow: /admin"
           echo "Sitemap and robots discovery checks passed."
 
-      - name: Verify analytics remains configured and locked
+      - name: Verify Cloudflare Access protects admin surfaces
         shell: bash
         run: |
           set -euo pipefail
-          status="$(curl --silent --show-error --max-time 30 \
-            --output /tmp/analytics.json --write-out '%{http_code}' \
-            "$LIVE_BASE_URL/api/admin/analytics?range=7d")"
-          if [ "$status" != "401" ]; then
-            echo "Expected analytics endpoint to be protected with HTTP 401, got $status."
-            cat /tmp/analytics.json
-            exit 1
-          fi
-          node --input-type=module <<'NODE'
-          import fs from "node:fs";
-          const value = JSON.parse(fs.readFileSync("/tmp/analytics.json", "utf8"));
-          if (value.configured !== true || value.authenticated !== false) {
-            throw new Error("Analytics is not in the expected configured-and-locked state.");
-          }
-          console.log("Analytics is configured and protected.");
-          NODE
-
-      - name: Verify guide editor remains configured and locked
-        shell: bash
-        run: |
-          set -euo pipefail
-          curl --fail-with-body --silent --show-error --max-time 30 \
-            "$LIVE_BASE_URL/api/admin/content-access" > /tmp/content-access.json
-          node --input-type=module <<'NODE'
-          import fs from "node:fs";
-          const value = JSON.parse(fs.readFileSync("/tmp/content-access.json", "utf8"));
-          if (
-            value.configured !== true ||
-            value.accessConfigured !== true ||
-            value.githubConfigured !== true ||
-            value.authenticated !== false
-          ) {
-            throw new Error("Guide editor is not in the expected configured-and-locked state.");
-          }
-          console.log("Guide editor is configured and protected.");
-          NODE
+          paths=(
+            "/admin/visits"
+            "/api/admin/analytics?range=7d"
+            "/api/admin/content-access"
+          )
+          for path in "${paths[@]}"; do
+            headers="$(mktemp)"
+            status="$(curl --silent --show-error --max-time 30 --max-redirs 0 \
+              --dump-header "$headers" --output /dev/null --write-out '%{http_code}' \
+              "$LIVE_BASE_URL$path")"
+            if [ "$status" != "302" ]; then
+              echo "Expected Cloudflare Access redirect for $path, got HTTP $status."
+              cat "$headers"
+              exit 1
+            fi
+            location="$(awk 'BEGIN{IGNORECASE=1} /^location:/{sub(/^[^:]+:[[:space:]]*/, ""); sub(/\r$/, ""); print; exit}' "$headers")"
+            if ! printf '%s' "$location" | grep -Eq '^https://[^/]+\.cloudflareaccess\.com/cdn-cgi/access/login/'; then
+              echo "Unexpected Access redirect for $path: $location"
+              exit 1
+            fi
+            echo "Cloudflare Access protects $path."
+          done
 
       - name: Verify deployment metadata is present
         shell: bash
