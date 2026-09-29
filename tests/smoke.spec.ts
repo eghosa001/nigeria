@@ -293,7 +293,7 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
 });
 
 test("core pages do not overflow horizontally", async ({ page }) => {
-  for (const path of ["/", "/services", "/fees", "/updates", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
+  for (const path of ["/", "/services", "/explore", "/entertainment", "/entertainment/youtube", "/fees", "/updates", "/categories/education", "/services/passport-renewal", "/offices", "/assistant"]) {
     await page.goto(path);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     expect(overflow, path + " horizontal overflow").toBeLessThanOrEqual(1);
@@ -367,7 +367,7 @@ test("brand logo always returns home, including after process activity", async (
   await page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Steps" }).click();
   await page.getByRole("link", { name: "MyNigeriaGuide home" }).click();
   await expect(page).toHaveURL(/\/$/);
-  await expect(page.getByRole("heading", { name: /Get government services done/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Services, travel and entertainment/i })).toBeVisible();
 });
 
 test("service FAQ answers are contextual and complete enough to guide the next action", async ({ page }) => {
