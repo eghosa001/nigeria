@@ -25,6 +25,13 @@ export const agencies: Agency[] = [
     "website": "https://www.cbn.gov.ng"
   },
   {
+    "slug": "nibss",
+    "name": "Nigeria Inter-Bank Settlement System",
+    "shortName": "NIBSS",
+    "description": "Inter-bank payment infrastructure, BVN services and official 565 USSD validation utilities.",
+    "website": "https://nibss-plc.com.ng"
+  },
+  {
     "slug": "fmoh",
     "name": "Federal Ministry of Health and Social Welfare",
     "shortName": "FMoH",
@@ -259,6 +266,10 @@ export const categories = [
   {
     "name": "Banking",
     "description": "BVN and regulated banking-identity services."
+  },
+  {
+    "name": "Insurance",
+    "description": "Official policy-validation and insurance verification services."
   },
   {
     "name": "International travel",
