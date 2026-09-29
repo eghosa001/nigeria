@@ -10,7 +10,7 @@ export function SiteFooter() {
           <p>Movies, services and places across Nigeria — with direct links to the responsible source when you are ready to act.</p>
         </div>
 
-        <div className="minimal-footer-links">
+        <div className="minimal-footer-links footer-grid">
           <div>
             <strong>Explore</strong>
             <Link href="/entertainment/movies">Movies</Link>
