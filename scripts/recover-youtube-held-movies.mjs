@@ -119,7 +119,21 @@ function cleanTitleFromCast(rawTitle, currentTitle, cast) {
   if (/^watch\b/i.test(raw)) {
     const namedAtEnd = raw.match(/\bin\s+([A-Z][A-Z0-9 '&.\-]{3,80})(?:\s*\||\s*$)/);
     if (namedAtEnd) title = namedAtEnd[1];
+
+    const finalNamedTitle = raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s+20\d{2}\s*$/);
+    if (
+      finalNamedTitle &&
+      !/\b(?:CLASSIC\s+NOLLYWOOD\s+FILM|FULL\s+MOVIE|NOLLYWOOD\s+MOVIE)\b/i.test(finalNamedTitle[1])
+    ) {
+      title = finalNamedTitle[1];
+    }
   }
+
+  const movieMarkerTitle = raw.match(/^([A-Z0-9][A-Z0-9 '&.\-]{3,60})\s*\([^)]*(?:MOVIE|FILM)[^)]*\)/i);
+  if (movieMarkerTitle) title = movieMarkerTitle[1];
+
+  const seoSuffixTitle = raw.match(/^(.{3,80}?)\s*-\s*(?:NIGERIAN|NOLLYWOOD|AFRICAN)\s+MOVIES?\s+20\d{2}\b/i);
+  if (seoSuffixTitle) title = seoSuffixTitle[1];
 
   const suffixTitle = raw.match(/-\s*([A-Z][A-Z0-9 '&.\-]{3,80})\s*-\s*(?:LATEST|NEW|20\d{2})\b/i);
   if (suffixTitle && !/\b(?:CLASSIC\s+NOLLYWOOD\s+FILM|FULL\s+MOVIE|NOLLYWOOD\s+MOVIE)\b/i.test(suffixTitle[1])) {
@@ -139,7 +153,10 @@ function cleanTitleFromCast(rawTitle, currentTitle, cast) {
   hits.sort((a, b) => a - b);
   if (hits.length >= 2) {
     const prefix = raw.slice(0, hits[0]);
-    if (
+    const explicitLeadingTitle = raw.match(/^([A-Z0-9][A-Z0-9 '&]{2,60})\s*[-.]\s+/);
+    if (explicitLeadingTitle && hits[0] >= explicitLeadingTitle[0].length) {
+      title = explicitLeadingTitle[1];
+    } else if (
       /(?:[-–—:/.]\s*|[-–—:/]\s*watch\s*|\b(?:starring|staring|featuring)\s*|[-–—:/]?\s*\([^)]*(?:movie|film)[^)]*\)\s*)$/i.test(prefix) ||
       /\s{2,}$/.test(prefix)
     ) {
@@ -171,6 +188,17 @@ for (const movie of generated.movies ?? []) {
   const beforeTitle = movie.title;
   const beforeSynopsis = movie.synopsis;
   const beforeCast = JSON.stringify(movie.cast ?? []);
+
+  const cleanedCast = [];
+  const cleanedSeen = new Set();
+  for (const rawName of movie.cast ?? []) {
+    const name = cleanName(rawName);
+    const key = normalize(name);
+    if (!name || !key || cleanedSeen.has(key)) continue;
+    cleanedSeen.add(key);
+    cleanedCast.push(name);
+  }
+  movie.cast = cleanedCast;
 
   const titleActors = castFromTitle(movie.rawTitle);
   if (titleActors.length >= 2) {
