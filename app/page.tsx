@@ -20,6 +20,7 @@ const popularServices = [
   { label: "JAMB 2026", href: "/services/jamb-2026-utme-registration" },
   { label: "NYSC senate list", href: "/services/nysc-senate-list" },
   { label: "CAC registration", href: "/services/cac-business-name-registration" },
+  { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 
 export default function HomePage() {
