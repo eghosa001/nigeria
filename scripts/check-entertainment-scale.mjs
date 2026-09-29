@@ -5,7 +5,7 @@ const generated = JSON.parse(fs.readFileSync("data/youtube-movies.generated.json
 
 const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
 const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
-const promoSynopsis = /^(?:please\s+)?(?:watch|subscribe|follow|welcome)\b|\b(?:subscribe to|our channel|youtube channel|like, share|don't forget to|do not forget to)\b/i;
+const promoSynopsis = /^(?:please\s+)?(?:watch|subscribe|follow|welcome|thank\s+you)\b|\b(?:subscribe to|our channel|youtube channel|like, share|don't forget to|do not forget to)\b/i;
 
 function assert(condition, message) {
   if (!condition) {
@@ -52,6 +52,7 @@ for (const movie of generated.movies) {
   assert(!/[\\/|]\\s*$/.test(movie.title), "movie title must not end with a feed separator: " + movie.title);
   assert(!/\\bfull\\s+movie\\b/i.test(movie.title), "movie title must not contain FULL MOVIE SEO text: " + movie.title);
   assert(!/^(?:nollywood|nigerian)\\s+movie\\b/i.test(movie.title), "movie title must not be a generic platform label: " + movie.title);
+  assert(!/^watch\\s+.+?\\s+in\\s+/i.test(movie.title), "movie title must not keep YouTube watch-prefix text: " + movie.title);
   assert(!/\\blatest\\s+(?:20\\d{2}|nollywood|romantic\\s+movie)\\b/i.test(movie.title), "movie title must not contain legacy latest-movie SEO text: " + movie.title);
   assert(Array.isArray(movie.cast) && movie.cast.length > 0, "cast is required for " + movie.videoId);
   assert(Array.isArray(movie.featuredCast) && movie.featuredCast.length > 0, "featured cast is required for " + movie.videoId);
