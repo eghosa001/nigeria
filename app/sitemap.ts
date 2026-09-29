@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { categorySlug } from "@/lib/category";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
+import { entertainmentTitles } from "@/lib/entertainment";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
@@ -13,9 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
   const catalogModified = latestDate(publicServices.map((service) => service.lastVerified));
   const updatesModified = latestDate(myNigeriaGuideUpdates.map((update) => update.date)) || catalogModified;
+  const entertainmentModified = latestDate(
+    entertainmentTitles.flatMap((title) => title.watchLinks.map((link) => link.lastChecked)),
+  ) || catalogModified;
   const staticPages = [
     ["", "weekly", 1],
     ["/services", "weekly", 0.9],
+    ["/entertainment", "weekly", 0.8],
+    ["/entertainment/movies", "weekly", 0.8],
     ["/fees", "weekly", 0.9],
     ["/updates", "weekly", 0.9],
     ["/assistant", "weekly", 0.7],
@@ -32,7 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages.map(([path, changeFrequency, priority]) => ({
       url: base + path,
-      lastModified: path === "/updates" ? updatesModified : catalogModified,
+      lastModified: path.startsWith("/entertainment")
+        ? entertainmentModified
+        : path === "/updates"
+          ? updatesModified
+          : catalogModified,
       changeFrequency,
       priority,
     })),
@@ -51,6 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.9,
+    })),
+    ...entertainmentTitles.map((title) => ({
+      url: base + "/entertainment/movies/" + title.slug,
+      lastModified: latestDate(title.watchLinks.map((link) => link.lastChecked)) || entertainmentModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
     })),
     ...publicServices.map((service) => ({
       url: base + "/services/" + service.slug,
