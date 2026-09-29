@@ -2,9 +2,9 @@ import { expect, test } from "@playwright/test";
 
 test("entertainment catalog supports multiple official platforms", async ({ page }) => {
   await page.goto("/entertainment/movies");
-  await expect(page.locator(".service-card")).toHaveCount(24);
-  await page.getByLabel("Where to watch").selectOption("Prime Video");
-  await expect(page.locator(".service-card")).toHaveCount(1);
+  await expect(page.locator(".movie-tile")).toHaveCount(30);
+  await page.getByLabel("Platform").selectOption("Prime Video");
+  await expect(page.locator(".movie-tile")).toHaveCount(1);
 });
 
 test("movie detail exposes watch and trailer links", async ({ page }) => {
@@ -25,16 +25,17 @@ test("cinema and releases guides expose official source routes", async ({ page }
 });
 
 
-test("movie artwork is withheld until rights are cleared", async ({ page }) => {
+test("movie posters stay rights-gated while official YouTube previews can display", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
-  await expect(page.locator('[data-rights-status="pending"]')).toBeVisible();
-  await expect(page.getByText("No cleared artwork yet.")).toBeVisible();
+  await expect(page.locator('[data-artwork-source="youtube"]')).toBeVisible();
+  await expect(page.locator('[data-rights-status="poster-pending"]')).toBeVisible();
+  await expect(page.getByText("No cleared poster artwork yet.")).toBeVisible();
 });
 
 
 test("movie cards show a short description and featured cast", async ({ page }) => {
   await page.goto("/entertainment/movies?q=Jagun%20Jagun");
-  const card = page.locator(".service-card").first();
+  const card = page.locator(".movie-tile").first();
   await expect(card).toContainText("young man joins an elite warrior school");
   await expect(card).toContainText("Featuring:");
   await expect(card).toContainText("Femi Adebayo");
@@ -51,8 +52,8 @@ test("expanded catalog includes verified Nigerian Netflix titles", async ({ page
 test("youtube movie directory is populated from approved channels", async ({ page }) => {
   await page.goto("/entertainment/youtube");
   await expect(page.getByRole("heading", { name: /Nigerian movies from approved YouTube publishers/i })).toBeVisible();
-  await expect(page.locator(".service-card")).toHaveCount(48);
-  await expect(page.locator(".category-summary")).toContainText("published YouTube movies");
+  await expect(page.locator(".youtube-movie-card")).toHaveCount(48);
+  await expect(page.locator(".movie-stat-cluster")).toContainText("published");
   const publisher = page.getByLabel("Publisher");
   await expect(publisher.locator('option[value="Omoni Oboli TV"]')).toHaveCount(1);
   await expect(publisher.locator('option[value="Maurice Sam TV"]')).toHaveCount(1);
@@ -72,25 +73,40 @@ test("youtube source network is sized for more than one thousand movies", async 
 
 test("main movies page exposes the full server-paginated YouTube library", async ({ page }) => {
   await page.goto("/entertainment/movies");
-  const summary = page.locator(".category-summary");
+  const summary = page.locator(".movie-stat-cluster");
   await expect(summary).toContainText(/\d{1,3},\d{3}/);
-  await expect(summary).toContainText("full YouTube movies");
-  await expect(page.getByRole("link", { name: /Browse the full YouTube movie library/i })).toHaveAttribute("href", "/entertainment/youtube");
+  await expect(summary).toContainText("free full movies");
+  await expect(page.getByRole("link", { name: /Browse all/i })).toHaveAttribute("href", "/entertainment/youtube");
 });
 
 
 test("legitimate movie titles beginning with Welcome remain searchable", async ({ page }) => {
   await page.goto("/entertainment/youtube?q=Welcome%20to%20Nigeria");
   await expect(page.getByText("WELCOME TO NIGERIA", { exact: true }).first()).toBeVisible();
-  await expect(page.locator(".service-card").first()).toContainText("OLUCHI AFUNDU TV");
+  await expect(page.locator(".youtube-movie-card").first()).toContainText("OLUCHI AFUNDU TV");
 });
 
 
 test("quota-free recovered movie metadata stays clean", async ({ page }) => {
   await page.goto("/entertainment/youtube?q=Private%20Equity");
-  const card = page.locator(".service-card").first();
+  const card = page.locator(".youtube-movie-card").first();
   await expect(card).toContainText("PRIVATE EQUITY");
   await expect(card).toContainText("FRANCESS NWABUNIKE");
   await expect(card).toContainText("Oby Titus");
   await expect(card).not.toContainText("#ruthkadiri");
+});
+
+
+test("movie browse page is image-led and exposes several titles at once", async ({ page }) => {
+  await page.goto("/entertainment/movies");
+  await expect(page.locator(".youtube-movie-card")).toHaveCount(10);
+  await expect(page.locator(".youtube-movie-card img").first()).toHaveAttribute("src", /i\.ytimg\.com\/vi\/.*\/mqdefault\.jpg/);
+  await expect(page.locator(".movie-tile")).toHaveCount(30);
+});
+
+test("youtube catalog renders thumbnails in a dense movie grid", async ({ page }) => {
+  await page.goto("/entertainment/youtube");
+  await expect(page.locator(".youtube-movie-card")).toHaveCount(48);
+  await expect(page.locator(".youtube-movie-card img").first()).toHaveAttribute("src", /i\.ytimg\.com\/vi\/.*\/mqdefault\.jpg/);
+  await expect(page.locator(".youtube-movie-card").first()).toContainText("YouTube");
 });

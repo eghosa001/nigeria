@@ -158,7 +158,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             </section>
 
             <section>
-              <h2>Artwork rights</h2>
+              <h2>Poster artwork rights</h2>
               {title.artwork ? (
                 <div className="source-list">
                   <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">
@@ -171,8 +171,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 </div>
               ) : (
                 <div className="info-box">
-                  <strong>No cleared artwork yet.</strong>
-                  <p>The site intentionally shows a placeholder until a press-kit permission, direct permission, licence or valid Creative Commons basis is recorded.</p>
+                  <strong>No cleared poster artwork yet.</strong>
+                  <p>Poster artwork stays hidden until a press-kit permission, direct permission, licence or valid Creative Commons basis is recorded. An attributed official YouTube video thumbnail may still appear above as a separate preview.</p>
                 </div>
               )}
             </section>

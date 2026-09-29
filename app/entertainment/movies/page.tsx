@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentCatalog } from "@/components/entertainment-catalog";
+import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { entertainmentPlatforms, entertainmentTitles, getEntertainmentGenres } from "@/lib/entertainment";
 import { youtubeMovieLibrary, youtubePendingQualityCount } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
-  description: "Browse Nigerian movies by title, actor, genre and platform, with official Netflix and YouTube watch links.",
+  description: "Browse Nigerian movies visually by title, actor, genre and platform, with official Netflix, YouTube and Prime Video links.",
   alternates: { canonical: "/entertainment/movies" },
 };
 
@@ -22,44 +23,76 @@ export default async function MoviesPage({
     : "all";
   const genres = getEntertainmentGenres();
   const initialGenre = params.genre && genres.includes(params.genre) ? params.genre : "all";
+  const freePreview = youtubeMovieLibrary.slice(0, 10);
 
   return (
-    <section className="section page-top">
-      <div className="container">
-        <Breadcrumbs items={[
-          { label: "Home", href: "/" },
-          { label: "Entertainment", href: "/entertainment" },
-          { label: "Movies" },
-        ]} />
-        <span className="eyebrow">Nigerian movie directory</span>
-        <h1>Movies and official places to watch.</h1>
-        <p className="page-intro">
-          Filter the curated cross-platform catalog without loading video players or giant media files. Open a movie to see its verified official watch links and the date those links were checked.
-        </p>
-
-        <div className="category-summary">
-          <div><strong>{youtubeMovieLibrary.length.toLocaleString()}</strong><span>full YouTube movies</span></div>
-          <div><strong>{entertainmentTitles.length}</strong><span>curated cross-platform titles</span></div>
-          <div><strong>{youtubePendingQualityCount}</strong><span>held for metadata review</span></div>
+    <>
+      <section className="movie-browse-hero">
+        <div className="container">
+          <Breadcrumbs items={[
+            { label: "Home", href: "/" },
+            { label: "Entertainment", href: "/entertainment" },
+            { label: "Movies" },
+          ]} />
+          <div className="movie-browse-heading">
+            <div>
+              <span className="eyebrow">Nigerian movie discovery</span>
+              <h1>Find something worth watching.</h1>
+              <p className="page-intro">
+                Browse a visual catalog of Nigerian movies, then open the verified official platform when you are ready to watch.
+              </p>
+            </div>
+            <div className="movie-stat-cluster" aria-label="Movie catalog summary">
+              <div><strong>{youtubeMovieLibrary.length.toLocaleString()}</strong><span>free full movies</span></div>
+              <div><strong>{entertainmentTitles.length}</strong><span>curated titles</span></div>
+              <div><strong>{youtubePendingQualityCount}</strong><span>under review</span></div>
+            </div>
+          </div>
+          <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">
+            <a href="#free-movies">Free on YouTube</a>
+            <a href="#curated-movies">Netflix · Prime · YouTube</a>
+            <Link href="/entertainment/releases">New &amp; upcoming</Link>
+            <Link href="/entertainment/cinemas">Cinemas</Link>
+          </nav>
         </div>
+      </section>
 
-        <div className="info-box top-gap">
-          <strong>The large YouTube library is already live in this section.</strong>
-          <p>
-            Browse all {youtubeMovieLibrary.length.toLocaleString()} approved full movies with server-side search and pagination, including actor and publisher filters.
-          </p>
-          <div className="related-links">
-            <Link href="/entertainment/youtube">Browse the full YouTube movie library →</Link>
+      <section className="movie-shelf-section" id="free-movies">
+        <div className="container">
+          <div className="movie-section-heading">
+            <div>
+              <span className="eyebrow">Watch free</span>
+              <h2>Full movies from approved YouTube publishers.</h2>
+              <p>Real video thumbnails, compact cards and direct publisher links make it easy to scan several titles at once.</p>
+            </div>
+            <Link href="/entertainment/youtube">Browse all {youtubeMovieLibrary.length.toLocaleString()} →</Link>
+          </div>
+          <div className="youtube-movie-grid movie-preview-grid">
+            {freePreview.map((movie, index) => (
+              <YouTubeMovieCard movie={movie} priority={index < 5} key={movie.videoId} />
+            ))}
           </div>
         </div>
+      </section>
 
-        <EntertainmentCatalog
-          titles={entertainmentTitles}
-          initialQuery={params.q ?? ""}
-          initialPlatform={initialPlatform ?? "all"}
-          initialGenre={initialGenre}
-        />
-      </div>
-    </section>
+      <section className="movie-catalog-section" id="curated-movies">
+        <div className="container">
+          <div className="movie-section-heading">
+            <div>
+              <span className="eyebrow">Curated across platforms</span>
+              <h2>Netflix, Prime Video and selected YouTube films.</h2>
+              <p>Search by movie, actor, genre or platform. Descriptions and featured cast stay compact so the screen remains visual.</p>
+            </div>
+            <Link href="/entertainment/image-rights">How images are sourced →</Link>
+          </div>
+          <EntertainmentCatalog
+            titles={entertainmentTitles}
+            initialQuery={params.q ?? ""}
+            initialPlatform={initialPlatform ?? "all"}
+            initialGenre={initialGenre}
+          />
+        </div>
+      </section>
+    </>
   );
 }
