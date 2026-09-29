@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
+import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
-import { getYouTubeMovieById } from "@/lib/youtube-library";
+import { getYouTubeMovieById, youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const revalidate = 86400;
 
@@ -12,10 +14,17 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const movie = getYouTubeMovieById(videoId);
   if (!movie) return {};
   return {
-    title: movie.title + " — Watch Free on YouTube",
+    title: movie.title + " — Cast, Details & Watch Free on YouTube",
     description: movie.synopsis,
     alternates: { canonical: "/entertainment/youtube/" + movie.videoId },
   };
+}
+
+function runtimeLabel(minutes: number) {
+  if (!minutes) return "Full movie";
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  return hours ? hours + "h " + (mins ? mins + "m" : "") : mins + "m";
 }
 
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
@@ -24,12 +33,28 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   if (!movie) notFound();
 
   const base = getSiteUrl();
+  const related = youtubeMovieLibrary
+    .filter((item) => item.videoId !== movie.videoId)
+    .map((item) => ({
+      item,
+      score:
+        (item.channelName === movie.channelName ? 4 : 0) +
+        item.cast.filter((name) => movie.cast.includes(name)).length * 2 +
+        (item.year === movie.year ? 1 : 0),
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt))
+    .slice(0, 4)
+    .map((entry) => entry.item);
+
   const ld = {
     "@context": "https://schema.org",
     "@type": "Movie",
     name: movie.title,
     description: movie.synopsis,
     actor: movie.cast.map((name) => ({ "@type": "Person", name })),
+    duration: movie.durationMinutes ? "PT" + movie.durationMinutes + "M" : undefined,
+    datePublished: movie.publishedAt,
     potentialAction: { "@type": "WatchAction", target: movie.videoUrl },
     sameAs: [movie.videoUrl],
     url: base + "/entertainment/youtube/" + movie.videoId,
@@ -38,50 +63,173 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   return (
     <>
       <JsonLd data={ld} />
-      <section className="guide-hero">
-        <div className="container guide-hero-grid">
-          <div>
-            <Breadcrumbs items={[
-              { label: "Home", href: "/" },
-              { label: "Entertainment", href: "/entertainment" },
-              { label: "YouTube movies", href: "/entertainment/youtube" },
-              { label: movie.title },
-            ]} />
-            <span className="eyebrow">{movie.year} · {movie.channelName}</span>
-            <h1>{movie.title}</h1>
-            <p>{movie.synopsis}</p>
-            <p className="movie-hero-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
-            <p className="hero-note">YouTube source checked {movie.lastChecked}. No movie file or thumbnail is copied to MyNigeriaGuide.</p>
+
+      <section className="movie-detail-hero youtube-detail-hero">
+        <div className="container">
+          <Breadcrumbs items={[
+            { label: "Home", href: "/" },
+            { label: "Entertainment", href: "/entertainment" },
+            { label: "YouTube movies", href: "/entertainment/youtube" },
+            { label: movie.title },
+          ]} />
+
+          <div className="movie-detail-hero-grid">
+            <figure className="youtube-detail-artwork">
+              <img
+                src={"https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg"}
+                alt={movie.title + " official YouTube thumbnail"}
+                decoding="async"
+                referrerPolicy="no-referrer"
+              />
+              <figcaption>
+                <span>Official YouTube preview</span>
+                <a href={movie.videoUrl} target="_blank" rel="noreferrer">Open source ↗</a>
+              </figcaption>
+            </figure>
+
+            <div className="movie-detail-copy">
+              <span className="eyebrow">{movie.year} · Official full movie</span>
+              <h1>{movie.title}</h1>
+              <div className="movie-detail-factline">
+                <span>{movie.year}</span>
+                <span>{runtimeLabel(movie.durationMinutes)}</span>
+                <span>{movie.channelName}</span>
+              </div>
+              <p className="movie-detail-synopsis">{movie.synopsis}</p>
+              {movie.featuredCast.length ? (
+                <p className="movie-hero-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
+              ) : null}
+
+              <div className="movie-detail-actions">
+                <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Watch full movie on YouTube ↗</a>
+                {movie.channelUrl ? <a className="button button-secondary" href={movie.channelUrl} target="_blank" rel="noreferrer">Publisher channel ↗</a> : null}
+              </div>
+              <small className="movie-freshness-note">
+                Published {movie.publishedAt.slice(0, 10)} by {movie.channelName}. Source checked {movie.lastChecked}. Playback stays on YouTube.
+              </small>
+            </div>
           </div>
-          <aside className="fee-card">
-            <span>Official full movie</span>
-            <strong>{movie.durationMinutes ? movie.durationMinutes + " minutes" : "Full length"}</strong>
-            <p>Published by {movie.channelName}. Playback remains on YouTube.</p>
-            <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
-            {movie.channelUrl ? <a className="button" href={movie.channelUrl} target="_blank" rel="noreferrer">Open publisher channel ↗</a> : null}
+        </div>
+      </section>
+
+      <nav className="movie-detail-subnav" aria-label="Movie page sections">
+        <div className="container">
+          <a href="#overview">Overview</a>
+          <a href="#cast">Cast</a>
+          <a href="#source">Source details</a>
+          {related.length ? <a href="#related">Related movies</a> : null}
+        </div>
+      </nav>
+
+      <section className="section movie-detail-main" id="overview">
+        <div className="container movie-detail-layout">
+          <article className="movie-detail-primary">
+            <section className="movie-overview-section">
+              <span className="eyebrow">About the movie</span>
+              <h2>{movie.title}</h2>
+              <p className="movie-long-summary">{movie.synopsis}</p>
+              <p>
+                This full Nigerian movie is published on the verified {movie.channelName} YouTube channel.
+                {movie.durationMinutes ? " The listed runtime is " + runtimeLabel(movie.durationMinutes) + "." : ""}
+                {" "}MyNigeriaGuide keeps the movie on its original publisher platform rather than mirroring the video.
+              </p>
+            </section>
+
+            <section>
+              <span className="eyebrow">At a glance</span>
+              <div className="movie-fact-grid">
+                <article><span>Year</span><strong>{movie.year}</strong></article>
+                <article><span>Runtime</span><strong>{runtimeLabel(movie.durationMinutes)}</strong></article>
+                <article><span>Publisher</span><strong>{movie.channelName}</strong></article>
+                <article><span>Published</span><strong>{movie.publishedAt.slice(0, 10)}</strong></article>
+                <article><span>Cast recorded</span><strong>{movie.cast.length} people</strong></article>
+                <article><span>Access</span><strong>Free on YouTube</strong></article>
+                <article><span>Source type</span><strong>{movie.source === "curated" ? "Curated" : "YouTube API"}</strong></article>
+                <article><span>Source checked</span><strong>{movie.lastChecked}</strong></article>
+              </div>
+            </section>
+
+            <section id="cast">
+              <span className="eyebrow">Cast</span>
+              <h2>People listed for {movie.title}</h2>
+              {movie.cast.length ? (
+                <div className="movie-person-list">
+                  {movie.cast.map((name) => <span key={name}>{name}</span>)}
+                </div>
+              ) : (
+                <div className="info-box">
+                  <strong>Cast metadata is still being expanded.</strong>
+                  <p>The movie remains published because its title, description, source and full-movie status passed the catalog quality checks.</p>
+                </div>
+              )}
+            </section>
+
+            <section id="source">
+              <span className="eyebrow">Official source</span>
+              <h2>Publisher and playback details</h2>
+              <div className="movie-watch-options">
+                <article>
+                  <div><span>YouTube</span><strong>{movie.channelName}</strong></div>
+                  <dl>
+                    <div><dt>Published</dt><dd>{movie.publishedAt.slice(0, 10)}</dd></div>
+                    <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
+                    <div><dt>Checked</dt><dd>{movie.lastChecked}</dd></div>
+                  </dl>
+                  <p>The original movie page remains the authority for playback availability, publisher information and any changes to the video.</p>
+                  <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Open official YouTube movie ↗</a>
+                </article>
+              </div>
+            </section>
+
+            <details className="movie-rights-details">
+              <summary>Thumbnail and rights transparency</summary>
+              <div>
+                <p>The preview above is loaded from YouTube's thumbnail endpoint and links back to the original publisher video. MyNigeriaGuide does not download, mirror or rehost the movie file.</p>
+              </div>
+            </details>
+          </article>
+
+          <aside className="movie-detail-sidebar">
+            <div className="sidebar-card movie-sidebar-card">
+              <span>Quick facts</span>
+              <strong>{movie.title}</strong>
+              <dl>
+                <div><dt>Year</dt><dd>{movie.year}</dd></div>
+                <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
+                <div><dt>Publisher</dt><dd>{movie.channelName}</dd></div>
+                <div><dt>Cast</dt><dd>{movie.cast.length || "Expanding"}</dd></div>
+              </dl>
+            </div>
+            <div className="sidebar-card">
+              <span>Keep exploring</span>
+              <div className="related-links">
+                <Link href="/entertainment/youtube">All YouTube movies →</Link>
+                <Link href="/entertainment/movies">Curated movies →</Link>
+                <Link href="/entertainment/releases">New &amp; upcoming →</Link>
+                <Link href="/entertainment/cinemas">Cinemas →</Link>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section className="section guide-main-section">
-        <div className="container guide-layout">
-          <article className="guide-content">
-            <section>
-              <h2>Cast</h2>
-              <p>{movie.cast.join(", ")}</p>
-            </section>
-            <section>
-              <h2>Source details</h2>
-              <div className="service-context-grid">
-                <article><h3>Publisher</h3><p>{movie.channelName}</p></article>
-                <article><h3>Published</h3><p>{movie.publishedAt.slice(0, 10)}</p></article>
-                <article><h3>Runtime</h3><p>{movie.durationMinutes ? movie.durationMinutes + " minutes" : "Full movie"}</p></article>
-                <article><h3>Rights handling</h3><p>MyNigeriaGuide links to the publisher's YouTube video and does not download, mirror or rehost the film or thumbnail.</p></article>
+      {related.length ? (
+        <section className="section movie-related-section" id="related">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="eyebrow">More to watch</span>
+                <h2>Related official YouTube movies.</h2>
+                <p className="section-lead">Prioritised by shared publisher, cast and release year using metadata already in the catalog.</p>
               </div>
-            </section>
-          </article>
-        </div>
-      </section>
+              <Link href="/entertainment/youtube">Browse all YouTube movies →</Link>
+            </div>
+            <div className="youtube-movie-grid movie-preview-grid">
+              {related.map((item) => <YouTubeMovieCard movie={item} key={item.videoId} />)}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }
