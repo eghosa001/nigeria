@@ -170,6 +170,6 @@ test("verified Netflix trailers enrich existing movie posters without new routes
   for (const slug of ["citation", "house-of-gaa", "hijack-93", "amina"]) {
     await page.goto("/entertainment/movies/" + slug);
     await expect(page.locator(".movie-detail-artwork [data-artwork-source='youtube']")).toBeVisible();
-    await expect(page.getByText("Preview: AfricaOnNetflix", { exact: true })).toBeVisible();
+    await expect(page.locator(".movie-detail-artwork").getByText("Preview: AfricaOnNetflix", { exact: true })).toBeVisible();
   }
 });
