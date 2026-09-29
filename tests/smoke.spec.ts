@@ -95,7 +95,7 @@ test("plain-language search finds the right service", async ({ page }) => {
 
 test("site search crosses services travel and movies", async ({ page }) => {
   await page.goto("/search?q=passport");
-  await expect(page.getByRole("link", { name: /Passport renewal/i }).first()).toBeVisible();
+  await expect(page.locator('a[href="/services/passport-renewal"]').first()).toBeVisible();
 
   await page.goto("/search?q=Lagos");
   await expect(page.getByRole("link", { name: /Lagos Travel Guide/i }).first()).toBeVisible();
