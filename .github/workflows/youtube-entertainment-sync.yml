@@ -49,6 +49,12 @@ jobs:
             echo "::notice::YOUTUBE_DATA_API_KEY is not configured; sync skipped."
           fi
 
+      - name: Require YouTube API credential for requested population
+        if: steps.api-key.outputs.present != 'true' && github.event_name != 'schedule'
+        run: |
+          echo "::error::YOUTUBE_DATA_API_KEY is missing. Enable YouTube Data API v3, create an API key, and save it as a repository Actions secret named YOUTUBE_DATA_API_KEY."
+          exit 1
+
       - id: sync-mode
         if: steps.api-key.outputs.present == 'true'
         name: Choose incremental or full scan
