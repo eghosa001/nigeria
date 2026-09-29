@@ -3,6 +3,9 @@ import fs from "node:fs";
 const sources = JSON.parse(fs.readFileSync("data/youtube-movie-sources.json", "utf8"));
 const generated = JSON.parse(fs.readFileSync("data/youtube-movies.generated.json", "utf8"));
 
+const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend)$/i;
+const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share)\b/i;
+
 function assert(condition, message) {
   if (!condition) {
     console.error("Entertainment scale check failed:", message);
@@ -46,6 +49,12 @@ for (const movie of generated.movies) {
   assert(movie.title && movie.synopsis, "title and synopsis are required for " + movie.videoId);
   assert(Array.isArray(movie.cast) && movie.cast.length > 0, "cast is required for " + movie.videoId);
   assert(Array.isArray(movie.featuredCast) && movie.featuredCast.length > 0, "featured cast is required for " + movie.videoId);
+  for (const castName of movie.cast) {
+    assert(
+      !castNoiseExact.test(String(castName).trim()) && !castNoiseContains.test(String(castName)),
+      "promotional/noise cast entry is not allowed: " + castName + " (" + movie.videoId + ")",
+    );
+  }
   assert(Number(movie.durationMinutes) >= 55, "movie runtime must remain full-length for " + movie.videoId);
   assert(approvedNames.has(normalize(movie.channelName)), "unapproved publisher in generated catalog: " + movie.channelName);
   assert(/^https:\/\/www\.youtube\.com\/watch\?v=/.test(movie.videoUrl), "movie must link to YouTube watch page: " + movie.videoId);
