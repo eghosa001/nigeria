@@ -10,7 +10,7 @@ test("entertainment catalog supports multiple official platforms", async ({ page
 test("movie detail exposes watch and trailer links", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
   await expect(page.getByRole("heading", { name: "Aníkúlápó" })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Watch on Netflix/ })).toHaveAttribute("href", /netflix\.com/);
+  await expect(page.getByRole("link", { name: /Watch on Netflix/ }).first()).toHaveAttribute("href", /netflix\.com/);
   await expect(page.getByRole("link", { name: /official trailer/i }).first()).toHaveAttribute("href", /youtube\.com/);
 });
 
@@ -43,19 +43,20 @@ test("movie cards show a short description and featured cast", async ({ page }) 
 
 test("expanded catalog includes verified Nigerian Netflix titles", async ({ page }) => {
   await page.goto("/entertainment/movies?q=House%20of%20Ga");
-  await expect(page.getByText("House of Ga'a", { exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "House of Ga'a", exact: true }).first()).toBeVisible();
   await expect(page.getByText("Femi Branch", { exact: false })).toBeVisible();
 });
 
 
 test("youtube movie directory is populated from approved channels", async ({ page }) => {
   await page.goto("/entertainment/youtube");
-  await expect(page.getByRole("heading", { name: /Nigerian movies on official YouTube channels/i })).toBeVisible();
-  await expect(page.getByText("Omoni Oboli TV", { exact: true }).first()).toBeVisible();
-  await expect(page.getByText("Maurice Sam TV", { exact: true }).first()).toBeVisible();
-  await expect(page.getByText("Uche Montana TV", { exact: true }).first()).toBeVisible();
-  await expect(page.getByText("Love in Every Word", { exact: true })).toBeVisible();
-  await expect(page.getByText("The Long Way Home", { exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Nigerian movies from approved YouTube publishers/i })).toBeVisible();
+  await expect(page.locator(".service-card")).toHaveCount(48);
+  await expect(page.locator(".category-summary")).toContainText("published YouTube movies");
+  const publisher = page.getByLabel("Publisher");
+  await expect(publisher.locator('option[value="Omoni Oboli TV"]')).toHaveCount(1);
+  await expect(publisher.locator('option[value="Maurice Sam TV"]')).toHaveCount(1);
+  await expect(publisher.locator('option[value="Uche Montana TV"]')).toHaveCount(1);
 });
 
 
