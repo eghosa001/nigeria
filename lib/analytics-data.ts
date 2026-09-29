@@ -48,6 +48,7 @@ const interactionEvents = [
 ];
 
 let tokenCache: { token: string; expiresAt: number } | null = null;
+let tokenPromise: Promise<string> | null = null;
 const reportCache = new Map<string, { expiresAt: number; data: AnalyticsDashboardData }>();
 
 function config() {
@@ -74,56 +75,66 @@ function base64Url(input: string | Uint8Array) {
 async function getAccessToken() {
   const now = Math.floor(Date.now() / 1000);
   if (tokenCache && tokenCache.expiresAt - 120 > now) return tokenCache.token;
+  if (tokenPromise) return tokenPromise;
 
-  const { clientEmail, privateKey } = config();
-  if (!clientEmail || !privateKey) throw new Error("Google Analytics service-account credentials are not configured.");
+  tokenPromise = (async () => {
+    const { clientEmail, privateKey } = config();
+    if (!clientEmail || !privateKey) throw new Error("Google Analytics service-account credentials are not configured.");
 
-  const header = base64Url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
-  const payload = base64Url(JSON.stringify({
-    iss: clientEmail,
-    scope: "https://www.googleapis.com/auth/analytics.readonly",
-    aud: "https://oauth2.googleapis.com/token",
-    iat: now - 30,
-    exp: now + 3600,
-  }));
-  const signingInput = header + "." + payload;
+    const issuedAt = Math.floor(Date.now() / 1000);
+    const header = base64Url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
+    const payload = base64Url(JSON.stringify({
+      iss: clientEmail,
+      scope: "https://www.googleapis.com/auth/analytics.readonly",
+      aud: "https://oauth2.googleapis.com/token",
+      iat: issuedAt - 30,
+      exp: issuedAt + 3600,
+    }));
+    const signingInput = header + "." + payload;
 
-  const der = Buffer.from(
-    privateKey
-      .replace("-----BEGIN PRIVATE KEY-----", "")
-      .replace("-----END PRIVATE KEY-----", "")
-      .replace(/\s/g, ""),
-    "base64",
-  );
-  const key = await crypto.subtle.importKey(
-    "pkcs8",
-    der,
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["sign"],
-  );
-  const signature = await crypto.subtle.sign(
-    "RSASSA-PKCS1-v1_5",
-    key,
-    new TextEncoder().encode(signingInput),
-  );
-  const assertion = signingInput + "." + base64Url(new Uint8Array(signature));
+    const der = Buffer.from(
+      privateKey
+        .replace("-----BEGIN PRIVATE KEY-----", "")
+        .replace("-----END PRIVATE KEY-----", "")
+        .replace(/\s/g, ""),
+      "base64",
+    );
+    const key = await crypto.subtle.importKey(
+      "pkcs8",
+      der,
+      { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
+      false,
+      ["sign"],
+    );
+    const signature = await crypto.subtle.sign(
+      "RSASSA-PKCS1-v1_5",
+      key,
+      new TextEncoder().encode(signingInput),
+    );
+    const assertion = signingInput + "." + base64Url(new Uint8Array(signature));
 
-  const response = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion,
-    }),
-    cache: "no-store",
-  });
-  if (!response.ok) throw new Error("Google Analytics authentication failed.");
-  const body = await response.json() as { access_token?: string; expires_in?: number };
-  if (!body.access_token) throw new Error("Google Analytics did not return an access token.");
+    const response = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+        assertion,
+      }),
+      cache: "no-store",
+    });
+    if (!response.ok) throw new Error("Google Analytics authentication failed.");
+    const body = await response.json() as { access_token?: string; expires_in?: number };
+    if (!body.access_token) throw new Error("Google Analytics did not return an access token.");
 
-  tokenCache = { token: body.access_token, expiresAt: now + (body.expires_in ?? 3600) };
-  return body.access_token;
+    tokenCache = { token: body.access_token, expiresAt: issuedAt + (body.expires_in ?? 3600) };
+    return body.access_token;
+  })();
+
+  try {
+    return await tokenPromise;
+  } finally {
+    tokenPromise = null;
+  }
 }
 
 function daysForRange(range: AnalyticsRange) {
