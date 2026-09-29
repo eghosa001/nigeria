@@ -130,13 +130,13 @@ export default function HomePage() {
               </div>
               <div className="home-movie-mini-grid">
                 {movieHighlights.map((title) => (
-                  <Link href={"/entertainment/movies/" + title.slug} key={title.slug} className="home-movie-mini-card">
+                  <article key={title.slug} className="home-movie-mini-card">
                     <EntertainmentArtwork title={title} />
-                    <span>
+                    <Link href={"/entertainment/movies/" + title.slug}>
                       <strong>{title.title}</strong>
                       <small>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</small>
-                    </span>
-                  </Link>
+                    </Link>
+                  </article>
                 ))}
               </div>
               <Link className="home-panel-cta" href="/entertainment/movies">Browse movies →</Link>
