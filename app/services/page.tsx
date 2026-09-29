@@ -6,21 +6,32 @@ import { categories, publicServiceListings, publicServices } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
-  title: "Government service directory",
-  description: "Search and filter MyNigeriaGuide's source-linked government service guides.",
+  title: "Nigeria service directory",
+  description: "Search and filter MyNigeriaGuide's source-linked Nigerian service guides, including identity, travel, education, banking, business, driving and other practical processes.",
 };
 
 export const dynamic = "force-static";
 
 export default function ServicesPage() {
   return (
-    <section className="section page-top">
+    <section className="section page-top services-directory-page">
       <div className="container">
-        <span className="eyebrow">Directory</span>
-        <h1>Government service guides</h1>
-        <p className="page-intro">
-          Start with a service area below, or search by everyday language. Review-pending content never appears here.
-        </p>
+        <div className="directory-page-heading">
+          <div>
+            <span className="eyebrow">Services</span>
+            <h1>Government service guides</h1>
+            <p className="page-intro">
+              Government services are the current core of this directory, but the structure is designed for practical non-government services too. Start with a service area or search by everyday language.
+            </p>
+          </div>
+          <div className="directory-page-note">
+            <strong>What you get in a guide</strong>
+            <span>Requirements</span>
+            <span>Fees and timing</span>
+            <span>Official portals</span>
+            <span>What happens next</span>
+          </div>
+        </div>
 
         <nav className="service-category-nav" aria-label="Browse service categories">
           {categories.map((category) => {
