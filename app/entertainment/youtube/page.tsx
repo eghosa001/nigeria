@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
-import { YOUTUBE_CATALOG_YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-pagination";
+import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-pagination";
 
 export async function generateMetadata({
   searchParams,
