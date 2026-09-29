@@ -1,5 +1,6 @@
 name: YouTube Entertainment Sync
 
+# Production refresh runs manually or on schedule; catalog updates land through a PR.
 on:
   workflow_dispatch:
     inputs:
