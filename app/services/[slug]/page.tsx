@@ -29,10 +29,27 @@ export function generateStaticParams() {
   return publicServices.map((service) => ({ slug: service.slug }));
 }
 
+function normalizeMetadataText(value: string) {
+  return value.replace(/'/g, "’").replace(/\\s+/g, " ").trim();
+}
+
+function truncateMetadataText(value: string, maxLength: number) {
+  const normalized = normalizeMetadataText(value);
+  if (normalized.length <= maxLength) return normalized;
+
+  const shortened = normalized.slice(0, maxLength - 1);
+  const lastSpace = shortened.lastIndexOf(" ");
+  return (lastSpace > Math.floor(maxLength * 0.7) ? shortened.slice(0, lastSpace) : shortened).trimEnd() + "…";
+}
+
 function getServiceSeoTitle(shortTitle: string, lastVerified: string) {
   const year = lastVerified.slice(0, 4);
-  const hasYear = new RegExp("\\b" + year + "\\b").test(shortTitle);
-  return `${shortTitle}${hasYear ? "" : " " + year}: Fees, Requirements & Steps`;
+  const normalizedTitle = normalizeMetadataText(shortTitle);
+  const hasYear = new RegExp("\\b" + year + "\\b").test(normalizedTitle);
+  return truncateMetadataText(
+    `${normalizedTitle}${hasYear ? "" : " " + year}: Fees & Steps`,
+    60,
+  );
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -42,12 +59,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const year = service.lastVerified.slice(0, 4);
   const title = getServiceSeoTitle(service.shortTitle, service.lastVerified);
-  const description =
-    service.summary +
-    ` Updated ${year} with current requirements, fee/status, step-by-step instructions and official application links.`;
+  const summary = normalizeMetadataText(service.summary);
+  const description = truncateMetadataText(
+    summary.length >= 80
+      ? `${summary} Verified ${year}.`
+      : `${summary} Updated ${year}: current requirements, fees/status, steps and official application links.`,
+    155,
+  );
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: "/services/" + service.slug },
     openGraph: {
