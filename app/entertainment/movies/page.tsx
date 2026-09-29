@@ -8,7 +8,7 @@ import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
-  description: "Browse Nigerian movies visually by title, actor, genre and platform, with official Netflix, YouTube and Prime Video links.",
+  description: "Browse Nigerian movies visually by title, actor, genre and platform, with verified Netflix, YouTube, Prime Video and licensed Kava links.",
   alternates: { canonical: "/entertainment/movies" },
 };
 
@@ -45,7 +45,7 @@ export default async function MoviesPage({
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">
             <a href="#free-movies">Free on YouTube</a>
-            <a href="#curated-movies">Netflix · Prime · YouTube</a>
+            <a href="#curated-movies">Netflix · Prime · YouTube · Kava</a>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
           </nav>

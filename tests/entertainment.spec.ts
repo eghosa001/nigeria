@@ -164,3 +164,34 @@ test("official platform cards explain legal offline viewing instead of third-par
   await expect(page.getByText(/downloaded in the Netflix app for offline viewing/i)).toBeVisible();
   await expect(page.getByText(/does not link to third-party movie-download mirrors/i)).toBeVisible();
 });
+
+
+test("verified Netflix trailers enrich existing movie posters without new routes", async ({ page }) => {
+  for (const slug of ["citation", "house-of-gaa", "hijack-93", "amina"]) {
+    await page.goto("/entertainment/movies/" + slug);
+    await expect(page.locator(".movie-detail-artwork [data-artwork-source='youtube']")).toBeVisible();
+    await expect(page.locator(".movie-detail-artwork").getByText("Preview: AfricaOnNetflix", { exact: true })).toBeVisible();
+  }
+});
+
+
+test("licensed third-party Kava titles use existing movie routes and offline guidance", async ({ page }) => {
+  await page.goto("/entertainment/movies?platform=Kava");
+  await expect(page.getByRole("link", { name: "Big Love", exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Okanjuwa", exact: true }).first()).toBeVisible();
+
+  await page.goto("/entertainment/movies/big-love");
+  await expect(page.getByRole("link", { name: /Watch on Kava/ }).first()).toHaveAttribute("href", "https://watch.kava.tv/big-love");
+  await expect(page.getByText(/Kava supports downloading eligible titles/i)).toBeVisible();
+});
+
+
+test("movie source cards distinguish licensed third-party streaming", async ({ page }) => {
+  await page.goto("/entertainment/movies/big-love");
+  await expect(page.getByText("Licensed third-party streaming", { exact: true })).toBeVisible();
+
+  await page.goto("/entertainment/platforms");
+  await expect(page.getByRole("heading", { name: "Kava", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "NolliStream", exact: true })).toBeVisible();
+  await expect(page.getByText(/offline downloads inside its app/i)).toBeVisible();
+});

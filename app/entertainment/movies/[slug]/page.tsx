@@ -260,6 +260,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                       <dl>
                         <div><dt>Access</dt><dd>{accessLabel(link.access)}</dd></div>
                         {link.publisher ? <div><dt>Publisher</dt><dd>{link.publisherUrl ? <a href={link.publisherUrl} target="_blank" rel="noreferrer">{link.publisher} ↗</a> : link.publisher}</dd></div> : null}
+                        {platformGuide ? <div><dt>Source type</dt><dd>{platformGuide.sourceKind === "publisher" ? "Official publisher / rights-holder" : platformGuide.sourceKind === "rental" ? "Official rental / streaming" : platformGuide.sourceKind === "catalog" ? "Reference catalog" : platformGuide.name === "Kava" || platformGuide.name === "NolliStream" ? "Licensed third-party streaming" : "Official streaming platform"}</dd></div> : null}
                         {platformGuide?.offlineLabel ? <div><dt>Offline</dt><dd>{platformGuide.offlineHelpUrl ? <a href={platformGuide.offlineHelpUrl} target="_blank" rel="noreferrer">{platformGuide.offlineLabel} ↗</a> : platformGuide.offlineLabel}</dd></div> : null}
                         <div><dt>Checked</dt><dd>{link.lastChecked}</dd></div>
                       </dl>
@@ -277,7 +278,15 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <span className="eyebrow">Preview</span>
                 <h2>Official trailer</h2>
                 <div className="movie-trailer-card">
-                  <div><strong>{title.trailer.label}</strong><span>YouTube · checked {title.trailer.lastChecked}</span></div>
+                  <div>
+                    <strong>{title.trailer.label}</strong>
+                    <span>
+                      {title.trailer.publisherUrl ? (
+                        <a href={title.trailer.publisherUrl} target="_blank" rel="noreferrer">{title.trailer.publisher} ↗</a>
+                      ) : title.trailer.publisher ?? "YouTube"}
+                      {" · checked " + title.trailer.lastChecked}
+                    </span>
+                  </div>
                   <a className="button button-secondary" href={title.trailer.href} target="_blank" rel="noreferrer">Watch trailer ↗</a>
                 </div>
               </section>

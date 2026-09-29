@@ -6,7 +6,7 @@ import { platformGuides } from "@/lib/entertainment-extras";
 
 export const metadata: Metadata = {
   title: "Where to Watch Nigerian Movies",
-  description: "Compare official Nigerian movie routes across Netflix, YouTube, Prime Video and the Showmax/DStv Stream transition.",
+  description: "Compare legal Nigerian movie sources across Netflix, YouTube, Prime Video, Kava, NolliStream and DStv/BoxOffice, including official offline options.",
   alternates: { canonical: "/entertainment/platforms" },
 };
 
@@ -26,6 +26,7 @@ export default function EntertainmentPlatformsPage() {
                 <div className="card-topline"><span>{platform.status}</span><span>Checked {platform.lastChecked}</span></div>
                 <h3>{platform.name}</h3>
                 <p>{platform.summary}</p>
+                {platform.offlineLabel ? <p><strong>Offline:</strong> {platform.offlineLabel}</p> : null}
                 <div className="service-meta">
                   <strong>{titleCount ? titleCount + " catalog title" + (titleCount === 1 ? "" : "s") : "Platform guide"}</strong>
                   <a href={platform.officialUrl} target="_blank" rel="noreferrer">Official platform →</a>
