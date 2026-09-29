@@ -469,6 +469,43 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Adesua Etomi", "Jim Iyke", "Dakore Egbuson-Akande"],
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81270837", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix title page." }],
   },
+
+  {
+    slug: "amina",
+    title: "Amina",
+    year: 2021,
+    format: "movie",
+    genres: ["Drama", "Action", "Period", "Nollywood"],
+    languages: ["English"],
+    synopsis: "In 16th-century Zazzau, a gifted warrior uses her military skill and strategy to defend her family's kingdom.",
+    cast: ["Lucy Ameh", "Ali Nuhu", "Clarion Chukwura", "Chris Gbakann", "Yakubu Mohammed", "Habiba Ummi Mohammed"],
+    featuredCast: ["Lucy Ameh", "Ali Nuhu", "Clarion Chukwura"],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81450071", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+  },
+  {
+    slug: "tokunbo",
+    title: "Tòkunbọ̀",
+    year: 2024,
+    format: "movie",
+    genres: ["Crime", "Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "An ex-car smuggler is given only hours to deliver a government official's daughter to her captor or risk losing his own family.",
+    cast: ["Gideon Okeke", "Funlola Aofiyebi-Raimi", "Darasimi Nadi", "Norbert Young", "Ivie Okujaye", "Adunni Ade", "Chidi Mokeme", "Majid Michel"],
+    featuredCast: ["Gideon Okeke", "Funlola Aofiyebi-Raimi", "Chidi Mokeme"],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81729081", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+  },
+  {
+    slug: "lisabi-the-uprising",
+    title: "Lísàbí: The Uprising",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Period", "Historical", "Nollywood"],
+    languages: ["Yoruba", "English"],
+    synopsis: "A Yoruba folk hero leads a rebellion against an oppressive empire in a fight for freedom that changes the course of his people.",
+    cast: ["Lateef Adedimeji", "Adebimpe Oyebade", "Ibrahim Yekini Itele", "Gabriel Afolayan", "Olumide Oworu", "Kevin Ikeduba"],
+    featuredCast: ["Lateef Adedimeji", "Adebimpe Oyebade", "Ibrahim Yekini Itele"],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81789163", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+  },
 ];
 
 export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video"] as const;
