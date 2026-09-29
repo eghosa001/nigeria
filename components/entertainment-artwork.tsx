@@ -17,7 +17,11 @@ function getYouTubePreview(title: EntertainmentTitle) {
   const source = fullMovie ?? title.trailer;
   if (!source) return null;
   const videoId = youtubeVideoId(source.href);
-  return videoId ? { videoId, href: source.href } : null;
+  return videoId ? {
+    videoId,
+    href: source.href,
+    publisher: source.publisher,
+  } : null;
 }
 
 function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; variant: "card" | "hero" }) {
@@ -109,7 +113,7 @@ export function EntertainmentArtwork({
           referrerPolicy="no-referrer"
         />
         <figcaption>
-          <span>Official YouTube preview</span>
+          <span>{youtubePreview.publisher ? "Preview: " + youtubePreview.publisher : "Official YouTube preview"}</span>
           <a href={youtubePreview.href} target="_blank" rel="noreferrer">Open source ↗</a>
         </figcaption>
       </figure>
