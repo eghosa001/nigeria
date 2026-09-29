@@ -240,6 +240,8 @@ function cleanName(value) {
     .replace(/\([^)]*\)/g, "")
     .replace(/\b(starring|featuring|feat\.?|ft\.?)\b/gi, "")
     .replace(/and\s+many\s+(?:more|others?)\.?$/i, "")
+    .replace(/^(?:with|also)\s+/i, "")
+    .replace(/\s+as\s+[A-Za-zÀ-ÖØ-öø-ÿ'’.\-\s]+$/i, "")
     .replace(/[#|]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -350,7 +352,28 @@ function extractCast(video) {
   return [];
 }
 
-function synopsisFromDescription(video, displayTitle, channelTitle) {
+function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
+  const description = video.snippet?.description ?? "";
+  const paragraphs = description
+    .split(/\n\s*\n|\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) =>
+      line.length >= 70 &&
+      !/https?:\/\//i.test(line) &&
+      !/^(?:cast|starring|crew|subscribe|follow|watch|produced|directed|written|#)/i.test(line) &&
+      !/\b(?:subscribe to|social media|instagram|tiktok|facebook|youtube channel)\b/i.test(line),
+    );
+  const chosen = paragraphs[0];
+  if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
+
+  const featured = cast.slice(0, 3).join(", ");
+  return displayTitle + " is a full-length Nigerian film published by " + channelTitle +
+    (featured ? ", featuring " + featured : "") +
+    ". Watch it through the publisher's official YouTube release.";
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^$\\{\\}()|[\\]\\\\]/g, "\\function synopsisFromDescription(video, displayTitle, channelTitle) {
   const description = video.snippet?.description ?? "";
   const paragraphs = description
     .split(/\n\s*\n|\r?\n/)
@@ -372,6 +395,44 @@ function cleanTitle(raw) {
   title = title.split("|")[0].trim();
   title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, "").trim();
   title = title.replace(/\s+(?:latest\s+)?(?:20\d{2}\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movie.*$/i, "").trim();
+  return title || String(raw ?? "").trim();
+}
+");
+}
+
+function cleanTitle(raw, cast = []) {
+  let title = String(raw ?? "").trim();
+  title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
+  title = title.split("|")[0].trim();
+
+  const castHits = cast
+    .map((name) => cleanName(name))
+    .filter((name) => name.length >= 4)
+    .map((name) => {
+      const match = title.match(new RegExp(escapeRegExp(name), "i"));
+      return match && typeof match.index === "number" ? match.index : -1;
+    })
+    .filter((index) => index >= 0)
+    .sort((a, b) => a - b);
+
+  if (castHits.length >= 2) {
+    const earliest = castHits[0];
+    const prefix = title.slice(0, earliest);
+    if (/[-–—:/]\s*$/.test(prefix) || /\s{2,}$/.test(prefix)) {
+      title = prefix;
+    }
+  }
+
+  title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, " ");
+  title = title.replace(/\s+\b(?:starring|featuring|feat\.?|ft\.?)\b.*$/i, " ");
+  title = title.replace(/\s*[-–—/]\s*(?:nigerian|nollywood|african)\s+movies?\s+20\d{2}.*$/i, " ");
+  title = title.replace(/\s+(?:latest\s+)?(?:20\d{2}\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movies?.*$/i, " ");
+  title = title.replace(/\s*[-–—]\s*20\d{2}\s+(?:latest|new|full)\b.*$/i, " ");
+  title = title.replace(/\s+20\d{2}\s+(?:latest|new|full)\b.*$/i, " ");
+  title = title.replace(/\s+(?:full|complete)\s+movie(?:\s+20\d{2})?\s*$/i, " ");
+  title = title.replace(/\s*\((?:latest|new|full)\b.*$/i, " ");
+  title = title.replace(/\s*[-–—/|]+\s*$/g, " ");
+  title = title.replace(/\s+/g, " ").trim();
   return title || String(raw ?? "").trim();
 }
 
@@ -413,8 +474,8 @@ for (const source of registry.sources) {
     for (const video of details) {
     if (!isMovie(video)) continue;
     const cast = extractCast(video);
-    const title = cleanTitle(video.snippet?.title);
-    const synopsis = synopsisFromDescription(video, title, channel.channelTitle);
+    const title = cleanTitle(video.snippet?.title, cast);
+    const synopsis = synopsisFromDescription(video, title, channel.channelTitle, cast);
     const seconds = durationSeconds(video.contentDetails?.duration);
     if (!cast.length) {
       pendingQualityCount++;
