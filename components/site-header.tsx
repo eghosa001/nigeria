@@ -2,22 +2,34 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 
 const navigation = [
-  { href: "/categories/foreign-visas", label: "Foreign visas" },
-  { href: "/services", label: "Services" },
-  { href: "/fees", label: "Fees" },
-  { href: "/offices", label: "Offices" },
-  { href: "/updates", label: "Updates" },
-  { href: "/saved", label: "Saved" },
-  { href: "/assistant", label: "Find a guide" },
+  { href: "/services", label: "Services", matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/offices"] },
+  { href: "/explore", label: "Explore Nigeria", matches: ["/explore"] },
+  { href: "/entertainment", label: "Entertainment", matches: ["/entertainment"] },
+  { href: "/fees", label: "Fees", matches: ["/fees"] },
+  { href: "/updates", label: "Updates", matches: ["/updates"] },
+  { href: "/saved", label: "Saved", matches: ["/saved"] },
+  { href: "/assistant", label: "Find a guide", matches: ["/assistant"] },
 ];
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") setOpen(false);
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   return (
     <header className="site-header">
@@ -42,7 +54,7 @@ export function SiteHeader() {
 
         <nav id="primary-navigation" className={"primary-nav" + (open ? " is-open" : "")} aria-label="Primary navigation">
           {navigation.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(item.href + "/");
+            const active = item.matches.some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/"));
             return (
               <Link
                 key={item.href}
