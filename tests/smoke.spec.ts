@@ -427,3 +427,19 @@ test("guide sharing exposes a reusable current summary", async ({ page }) => {
   await expect(whatsapp).toHaveAttribute("href", /Fee%20%2F%20status/);
   await expect(whatsapp).toHaveAttribute("href", /Checked%3A/);
 });
+
+
+test("service guides expose verified search-intent quick answers", async ({ page }) => {
+  await page.goto("/services/passport-renewal");
+  const quick = page.locator("#quick-answers");
+  await expect(quick.getByRole("heading", { name: /Quick answers about Passport renewal/i })).toBeVisible();
+  await expect(quick.getByRole("heading", { name: /How much does Passport renewal cost in 2026/i })).toBeVisible();
+  await expect(quick).toContainText("₦100,000 / ₦200,000");
+  await expect(page.locator('script[type="application/ld+json"]')).toContainText("FAQPage");
+});
+
+test("topic search phrases point to exact guides", async ({ page }) => {
+  await page.goto("/topics/jamb-2026");
+  await expect(page.getByRole("link", { name: /JAMB Direct Entry 2026/ })).toHaveAttribute("href", "/services/jamb-direct-entry-2026");
+  await expect(page.getByRole("link", { name: /JAMB CAPS/ })).toHaveAttribute("href", "/services/jamb-caps");
+});
