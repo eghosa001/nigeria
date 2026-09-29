@@ -12,10 +12,16 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(sitemapText).toContain("https://mynigeriaguide.com/");
     expect(sitemapText).not.toContain(".workers.dev");
 
+    const sitemapIndex = await request.get("/sitemap-index.xml");
+    expect(sitemapIndex.ok()).toBeTruthy();
+    const sitemapIndexText = await sitemapIndex.text();
+    expect(sitemapIndexText).toContain("https://mynigeriaguide.com/sitemaps/services.xml");
+    expect(sitemapIndexText).toContain("https://mynigeriaguide.com/sitemaps/youtube.xml");
+
     const robots = await request.get("/robots.txt");
     expect(robots.ok()).toBeTruthy();
     const robotsText = await robots.text();
-    expect(robotsText).toContain("Sitemap: https://mynigeriaguide.com/sitemap.xml");
+    expect(robotsText).toContain("Sitemap: https://mynigeriaguide.com/sitemap-index.xml");
     expect(robotsText).not.toContain(".workers.dev");
 
     await page.goto("/");

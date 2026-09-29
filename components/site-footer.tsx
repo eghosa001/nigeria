@@ -23,6 +23,7 @@ export function SiteFooter() {
             <Link href="/assistant">Find a guide</Link>
             <Link href="/saved">Saved</Link>
             <Link href="/fees">Fees</Link>
+            <Link href="/latest">Latest additions</Link>
             <Link href="/offices">Official offices</Link>
           </div>
           <div>

@@ -1,9 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { agencies, categories, publicServices, services } from "@/lib/data";
+import { categories, publicServices, services } from "@/lib/data";
+import { entertainmentTitles } from "@/lib/entertainment";
+import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
+import { exploreGuides } from "@/lib/explore";
+import { explorePlaces } from "@/lib/explore-places";
 import { isReportBackendConfigured } from "@/lib/report-backend";
+import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
+import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = { title: "Dashboard" };
+
+function latest(values: string[]) {
+  return values.reduce((current, value) => value > current ? value : current, "");
+}
 
 export default function AdminPage() {
   const verified = services.filter((service) => service.status === "verified");
@@ -21,14 +31,18 @@ export default function AdminPage() {
     .filter((row) => row.count > 0)
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
+  const movieFreshness = latest(entertainmentTitles.flatMap((title) => title.watchLinks.map((link) => link.lastChecked)));
+  const travelFreshness = latest(exploreGuides.map((guide) => guide.lastReviewed));
+  const serviceFreshness = latest(publicServices.map((service) => service.lastVerified));
+
   return (
     <section className="section page-top admin-page">
       <div className="container">
         <div className="admin-heading">
           <div>
             <span className="eyebrow">Operations</span>
-            <h1>Content & verification dashboard</h1>
-            <p className="page-intro">Review the whole guide library, foreign visas, official sources and published updates from one place.</p>
+            <h1>Platform operations dashboard</h1>
+            <p className="page-intro">Manage and review the three public pillars of MyNigeriaGuide: movies, practical services and Tour Nigeria, with analytics and verification tools in one workspace.</p>
           </div>
           <span className={"db-state " + (backendConnected ? "connected" : "offline")}>
             {backendConnected ? "Correction backend connected" : "Read-only operations mode"}
@@ -36,40 +50,37 @@ export default function AdminPage() {
         </div>
 
         <div className="metric-grid">
-          <div><strong>{publicServices.length}</strong><span>Public guides</span></div>
-          <div><strong>{verified.length}</strong><span>Verified</span></div>
-          <div><strong>{conflicts.length}</strong><span>Conflicts</span></div>
-          <div><strong>{reviews.length}</strong><span>Review queue</span></div>
-          <div><strong>{foreignVisas.length}</strong><span>Foreign visas</span></div>
-          <div><strong>{sourceCount}</strong><span>Official source URLs</span></div>
+          <div><strong>{youtubeMovieLibrary.length}</strong><span>YouTube movies</span></div>
+          <div><strong>{entertainmentTitles.length}</strong><span>Curated movies</span></div>
+          <div><strong>{publicServices.length}</strong><span>Service guides</span></div>
+          <div><strong>{exploreGuides.length}</strong><span>Travel guides</span></div>
+          <div><strong>{explorePlaces.length}</strong><span>Travel places</span></div>
+          <div><strong>{sourceCount + verifiedYouTubeMovieChannels.length}</strong><span>Tracked sources</span></div>
         </div>
 
         <div className="admin-action-grid">
-          <Link href="/admin/services"><span>Content library</span><strong>Browse every guide</strong><small>Search by category, status or keyword and inspect the full content record.</small><i>→</i></Link>
-          <Link href="/admin/foreign-visas"><span>International</span><strong>Foreign visa centre</strong><small>Review all destination guides, fees, documents and source coverage together.</small><i>→</i></Link>
-          <Link href="/admin/sources"><span>Verification</span><strong>Official sources</strong><small>See source coverage and the URLs under automatic content monitoring.</small><i>→</i></Link>
-          <Link href="/admin/updates"><span>Publishing</span><strong>Verified updates</strong><small>Review the fee, process and clarification updates currently surfaced publicly.</small><i>→</i></Link>
+          <Link href="/admin/entertainment"><span>Movies</span><strong>Entertainment catalog</strong><small>Review curated titles, full YouTube movies, publishers, people and release freshness.</small><i>→</i></Link>
+          <Link href="/admin/services"><span>Services</span><strong>Content library</strong><small>Search every service guide by category, status or keyword and inspect its full source record.</small><i>→</i></Link>
+          <Link href="/admin/explore"><span>Tour Nigeria</span><strong>Travel catalog</strong><small>Review destination coverage, mapped places, costs, addresses and last-reviewed dates.</small><i>→</i></Link>
+          <Link href="/admin/visits"><span>Audience</span><strong>Visits & discovery</strong><small>See traffic, countries, page views, referrers and the pages users are reaching.</small><i>→</i></Link>
         </div>
 
         <div className="admin-two-column">
           <section className="admin-panel">
             <div className="section-heading">
-              <div><span className="eyebrow">Categories</span><h2>Guide coverage</h2></div>
-              <Link href="/admin/services">All guides →</Link>
+              <div><span className="eyebrow">Platform freshness</span><h2>Current review dates</h2></div>
+              <Link href="/latest">Public latest hub →</Link>
             </div>
             <div className="admin-category-list">
-              {categoryRows.map((row) => (
-                <Link key={row.name} href={"/services?category=" + encodeURIComponent(row.name)}>
-                  <span>{row.name}</span><strong>{row.count}</strong>
-                </Link>
-              ))}
+              <Link href="/admin/entertainment"><span>Movies and entertainment</span><strong>{movieFreshness || "—"}</strong></Link>
+              <Link href="/admin/services"><span>Service guidance</span><strong>{serviceFreshness || "—"}</strong></Link>
+              <Link href="/admin/explore"><span>Tour Nigeria</span><strong>{travelFreshness || "—"}</strong></Link>
+              <Link href="/admin/updates"><span>Release / update records</span><strong>{releaseItems.length}</strong></Link>
             </div>
           </section>
 
           <section className="admin-panel">
-            <div className="section-heading">
-              <div><span className="eyebrow">Editorial queue</span><h2>Needs attention</h2></div>
-            </div>
+            <div className="section-heading"><div><span className="eyebrow">Editorial queue</span><h2>Needs attention</h2></div></div>
             {reviews.length || conflicts.length ? (
               <div className="review-table">
                 {[...reviews, ...conflicts].slice(0, 12).map((service) => (
@@ -85,10 +96,34 @@ export default function AdminPage() {
           </section>
         </div>
 
-        <section className="admin-panel admin-safety-note">
+        <div className="admin-two-column top-gap">
+          <section className="admin-panel">
+            <div className="section-heading"><div><span className="eyebrow">Service coverage</span><h2>Largest categories</h2></div><Link href="/admin/services">All guides →</Link></div>
+            <div className="admin-category-list">
+              {categoryRows.slice(0, 10).map((row) => (
+                <Link key={row.name} href={"/services?category=" + encodeURIComponent(row.name)}>
+                  <span>{row.name}</span><strong>{row.count}</strong>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section className="admin-panel">
+            <div className="section-heading"><div><span className="eyebrow">Discovery coverage</span><h2>Catalog relationships</h2></div></div>
+            <div className="admin-category-list">
+              <Link href="/admin/entertainment"><span>Approved YouTube publishers</span><strong>{verifiedYouTubeMovieChannels.length}</strong></Link>
+              <Link href="/admin/entertainment"><span>Actor / filmmaker profiles</span><strong>{entertainmentPeople.length}</strong></Link>
+              <Link href="/admin/explore"><span>Travel places with map-ready records</span><strong>{explorePlaces.length}</strong></Link>
+              <Link href="/admin/foreign-visas"><span>Foreign visa guides</span><strong>{foreignVisas.length}</strong></Link>
+              <Link href="/admin/sources"><span>Official service source URLs</span><strong>{sourceCount}</strong></Link>
+            </div>
+          </section>
+        </div>
+
+        <section className="admin-panel admin-safety-note top-gap">
           <span className="eyebrow">Protected operations</span>
-          <h2>Admin access and publishing are separated</h2>
-          <p>The whole admin area requires the private passphrase. Guide edits remain review-only: a successful edit creates a GitHub pull request and does not change production until the review checks pass and the change is merged.</p>
+          <h2>Admin access and publishing remain separated</h2>
+          <p>The admin area is private. Service edits continue through review pull requests, while the newer movie and travel workspaces provide operational visibility without bypassing repository review and deployment checks.</p>
         </section>
       </div>
     </section>

@@ -26,7 +26,7 @@ export default function YouTubeSourcesPage() {
 
         <div className="service-grid">
           {verifiedYouTubeMovieChannels.map((source) => (
-            <article className="service-card" key={source.slug}>
+            <article className="service-card" id={"source-" + source.slug} key={source.slug}>
               <div className="card-topline">
                 <span>Approved source</span>
                 <span>Checked {source.lastChecked}</span>

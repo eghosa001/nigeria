@@ -5,6 +5,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
+import { entertainmentPeople } from "@/lib/entertainment-extras";
+import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { getYouTubeMovieById, youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const revalidate = 86400;
@@ -27,12 +29,19 @@ function runtimeLabel(minutes: number) {
   return hours ? hours + "h " + (mins ? mins + "m" : "") : mins + "m";
 }
 
+function personHref(name: string) {
+  const normalized = name.trim().toLowerCase();
+  const person = entertainmentPeople.find((item) => item.name.trim().toLowerCase() === normalized);
+  return person ? "/entertainment/people/" + person.slug : null;
+}
+
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
   const movie = getYouTubeMovieById(videoId);
   if (!movie) notFound();
 
   const base = getSiteUrl();
+  const publisherSource = verifiedYouTubeMovieChannels.find((source) => source.name === movie.channelName);
   const related = youtubeMovieLibrary
     .filter((item) => item.videoId !== movie.videoId)
     .map((item) => ({
@@ -152,7 +161,10 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <h2>People listed for {movie.title}</h2>
               {movie.cast.length ? (
                 <div className="movie-person-list">
-                  {movie.cast.map((name) => <span key={name}>{name}</span>)}
+                  {movie.cast.map((name) => {
+                    const href = personHref(name);
+                    return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
+                  })}
                 </div>
               ) : (
                 <div className="info-box">
@@ -175,6 +187,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                   </dl>
                   <p>The original movie page remains the authority for playback availability, publisher information and any changes to the video.</p>
                   <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Open official YouTube movie ↗</a>
+                  {publisherSource ? <Link className="text-link" href={"/entertainment/youtube/sources#source-" + publisherSource.slug}>View approved publisher record →</Link> : null}
                 </article>
               </div>
             </section>

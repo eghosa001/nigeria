@@ -30,6 +30,12 @@ jobs:
             "/categories/foreign-visas"
             "/services/passport-renewal"
             "/sitemap.xml"
+            "/sitemap-index.xml"
+            "/sitemaps/core.xml"
+            "/sitemaps/services.xml"
+            "/sitemaps/travel.xml"
+            "/sitemaps/movies.xml"
+            "/sitemaps/youtube.xml"
             "/robots.txt"
             "/api/health"
             "/deployment.json"
@@ -78,14 +84,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sitemap="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemap.xml")"
-          printf '%s' "$sitemap" | grep -q "/services/passport-renewal"
-          printf '%s' "$sitemap" | grep -q "/categories/foreign-visas"
+          index="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemap-index.xml")"
+          printf '%s' "$index" | grep -q "/sitemaps/services.xml"
+          printf '%s' "$index" | grep -q "/sitemaps/youtube.xml"
+
+          services="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/services.xml")"
+          printf '%s' "$services" | grep -q "/services/passport-renewal"
+
+          youtube="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/youtube.xml")"
+          printf '%s' "$youtube" | grep -q "/entertainment/youtube/page/2"
 
           robots="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/robots.txt")"
-          printf '%s' "$robots" | grep -qi "sitemap:"
+          printf '%s' "$robots" | grep -qi "sitemap: $LIVE_BASE_URL/sitemap-index.xml"
           printf '%s' "$robots" | grep -qi "disallow: /admin"
-          echo "Sitemap and robots discovery checks passed."
+          echo "Sitemap index, section sitemaps and robots discovery checks passed."
 
       - name: Verify Cloudflare Access protects admin surfaces
         shell: bash
