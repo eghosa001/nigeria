@@ -33,7 +33,7 @@ export function AdminAnalyticsDashboard() {
   async function load(nextRange = range) {
     setState("loading");
     setMessage("");
-    const response = await fetch("/api/admin/analytics?range=" + nextRange, { cache: "no-store" });
+    const response = await fetch("/admin/api/analytics?range=" + nextRange, { cache: "no-store" });
     const body = await response.json() as ApiResponse;
 
     if (response.status === 503 && body.configured === false) {
@@ -61,7 +61,7 @@ export function AdminAnalyticsDashboard() {
     const formElement = event.currentTarget;
     setMessage("");
     const form = new FormData(formElement);
-    const response = await fetch("/api/admin/analytics-access", {
+    const response = await fetch("/admin/api/analytics-access", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password: form.get("password") }),
@@ -76,7 +76,7 @@ export function AdminAnalyticsDashboard() {
   }
 
   async function logout() {
-    await fetch("/api/admin/analytics-access", { method: "DELETE" });
+    await fetch("/admin/api/analytics-access", { method: "DELETE" });
     setData(null);
     setState("locked");
   }
