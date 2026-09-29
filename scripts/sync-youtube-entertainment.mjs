@@ -248,8 +248,8 @@ function cleanName(value) {
     .replace(/^[,.;:!?\s]+|[,.;:!?\s]+$/g, "");
 }
 
-const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend)$/i;
-const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share)\b/i;
+const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
+const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
 
 function looksLikePersonName(name) {
   const words = name.split(/\s+/).filter(Boolean);
@@ -424,6 +424,50 @@ function yearFor(video) {
   return Number((video.snippet?.publishedAt ?? now.toISOString()).slice(0, 4));
 }
 
+const priorActorStats = new Map();
+for (const movie of previousMovies) {
+  for (const rawName of movie.cast ?? []) {
+    const name = cleanName(rawName);
+    if (
+      !name ||
+      castNoiseExact.test(name) ||
+      castNoiseContains.test(name) ||
+      !looksLikePersonName(name) ||
+      name.split(/\s+/).length < 2
+    ) continue;
+    const key = normalize(name);
+    const current = priorActorStats.get(key) ?? { name, count: 0 };
+    current.count++;
+    if (name.length > current.name.length) current.name = name;
+    priorActorStats.set(key, current);
+  }
+}
+
+const priorActorIndex = [...priorActorStats.entries()]
+  .filter(([, value]) => value.count >= 2)
+  .map(([key, value]) => ({ key, name: value.name }))
+  .sort((a, b) => b.key.length - a.key.length);
+
+function castFromPriorCatalogTitle(rawTitle) {
+  if (!priorActorIndex.length) return [];
+  const title = " " + normalize(rawTitle) + " ";
+  const matches = [];
+
+  for (const actor of priorActorIndex) {
+    const needle = " " + actor.key + " ";
+    const index = title.indexOf(needle);
+    if (index < 0) continue;
+    const end = index + needle.length;
+    if (matches.some((match) => index < match.end && end > match.index)) continue;
+    matches.push({ ...actor, index, end });
+    if (matches.length >= 8) break;
+  }
+
+  return matches.length >= 2
+    ? matches.sort((a, b) => a.index - b.index).map((match) => match.name)
+    : [];
+}
+
 const moviesByVideoId = new Map(
   fullSync ? [] : previousMovies.map((movie) => [movie.videoId, movie]),
 );
@@ -451,7 +495,8 @@ for (const source of registry.sources) {
 
     for (const video of details) {
     if (!isMovie(video)) continue;
-    const cast = extractCast(video);
+    let cast = extractCast(video);
+    if (!cast.length) cast = castFromPriorCatalogTitle(video.snippet?.title ?? "");
     const title = cleanTitle(video.snippet?.title, cast);
     const synopsis = synopsisFromDescription(video, title, channel.channelTitle, cast);
     const seconds = durationSeconds(video.contentDetails?.duration);
