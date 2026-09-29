@@ -84,3 +84,13 @@ test("legitimate movie titles beginning with Welcome remain searchable", async (
   await expect(page.getByText("WELCOME TO NIGERIA", { exact: true }).first()).toBeVisible();
   await expect(page.locator(".service-card").first()).toContainText("OLUCHI AFUNDU TV");
 });
+
+
+test("quota-free recovered movie metadata stays clean", async ({ page }) => {
+  await page.goto("/entertainment/youtube?q=Private%20Equity");
+  const card = page.locator(".service-card").first();
+  await expect(card).toContainText("PRIVATE EQUITY");
+  await expect(card).toContainText("FRANCESS NWABUNIKE");
+  await expect(card).toContainText("Oby Titus");
+  await expect(card).not.toContainText("#ruthkadiri");
+});
