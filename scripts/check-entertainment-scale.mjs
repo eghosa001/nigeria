@@ -47,6 +47,7 @@ for (const movie of generated.movies) {
   assert(movie.videoId && !videoIds.has(movie.videoId), "video IDs must be unique: " + movie.videoId);
   videoIds.add(movie.videoId);
   assert(movie.title && movie.synopsis, "title and synopsis are required for " + movie.videoId);
+  assert(!promoSynopsis.test(String(movie.synopsis)), "promotional synopsis is not allowed: " + movie.videoId);
   assert(!/[\\/|]\\s*$/.test(movie.title), "movie title must not end with a feed separator: " + movie.title);
   assert(!/\\bfull\\s+movie\\b/i.test(movie.title), "movie title must not contain FULL MOVIE SEO text: " + movie.title);
   assert(!/^(?:nollywood|nigerian)\\s+movie\\b/i.test(movie.title), "movie title must not be a generic platform label: " + movie.title);
