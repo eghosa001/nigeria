@@ -1,9 +1,13 @@
+export type SearchQueryOverride = Partial<{
+  fee: string;
+  requirements: string;
+  online: string;
+  timeline: string;
+  start: string;
+}>;
+
 /**
- * Future Search Console tuning layer.
- *
- * Keep this empty until Search Console returns real query impressions.
- * When a query is observed, add only user wording here; factual answers still
- * come from the verified Service record so SEO tuning cannot change fees,
- * requirements or process facts.
+ * Populate only from real Search Console query wording once impressions exist.
+ * Answers remain derived from verified Service data; this layer changes wording only.
  */
-export const searchQueryOverrides: Record<string, string[]> = {};
+export const searchQueryOverrides: Record<string, SearchQueryOverride> = {};
