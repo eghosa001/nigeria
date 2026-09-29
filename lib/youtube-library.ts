@@ -54,15 +54,17 @@ function movieIdentity(value: string) {
     .trim();
 }
 
-function castOverlap(a: BaseYouTubeMovieRecord, b: BaseYouTubeMovieRecord) {
-  if (!a.cast.length || !b.cast.length) return false;
+function sharedCastCount(a: BaseYouTubeMovieRecord, b: BaseYouTubeMovieRecord) {
+  if (!a.cast.length || !b.cast.length) return 0;
   const names = new Set(a.cast.map((name) => name.trim().toLowerCase()));
-  return b.cast.some((name) => names.has(name.trim().toLowerCase()));
+  return b.cast.filter((name) => names.has(name.trim().toLowerCase())).length;
 }
 
 function likelySameMovie(a: BaseYouTubeMovieRecord, b: BaseYouTubeMovieRecord) {
   if (movieIdentity(a.title) !== movieIdentity(b.title)) return false;
-  return a.year === b.year || castOverlap(a, b);
+  const shared = sharedCastCount(a, b);
+  const evidenceThreshold = Math.min(2, a.cast.length, b.cast.length);
+  return evidenceThreshold > 0 && shared >= evidenceThreshold;
 }
 
 function asSource(movie: BaseYouTubeMovieRecord): YouTubeMovieSource {
