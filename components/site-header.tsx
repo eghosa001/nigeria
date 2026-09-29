@@ -20,7 +20,6 @@ const sectionNavigation = {
     label: "Services guide",
     links: [
       { href: "/services", label: "Overview" },
-      { href: "/services", label: "All services" },
       { href: "/fees", label: "Fees" },
       { href: "/offices", label: "Offices" },
       { href: "/official-portals", label: "Official portals" },
