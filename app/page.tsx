@@ -7,7 +7,8 @@ import { agencies, publicServiceListings, publicServices } from "@/lib/data";
 import { growthHubs } from "@/lib/growth-hubs";
 
 export const metadata: Metadata = {
-  title: "Nigerian Government Services Guide",
+  title: "Nigeria Services, Travel & Entertainment Guide",
+  description: "Use MyNigeriaGuide for clear Nigerian service guidance, practical travel planning and official routes to Nigerian movies and entertainment.",
   alternates: { canonical: "/" },
 };
 
@@ -16,10 +17,8 @@ const popular = [
   { label: "NIN correction", href: "/services/nin-date-of-birth-modification" },
   { label: "Retrieve BVN", href: "/services/bvn-retrieval" },
   { label: "JAMB 2026", href: "/services/jamb-2026-utme-registration" },
-  { label: "JAMB Direct Entry", href: "/services/jamb-direct-entry-2026" },
   { label: "NYSC senate list", href: "/services/nysc-senate-list" },
   { label: "CAC registration", href: "/services/cac-business-name-registration" },
-  { label: "Licence renewal", href: "/services/renew-drivers-licence" },
   { label: "UK visitor visa", href: "/services/uk-standard-visitor-visa" },
 ];
 
@@ -28,51 +27,100 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero home-hero">
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-kicker">
               <span className="hero-kicker-dot" aria-hidden="true" />
-              Independent Nigerian service guide
+              One practical guide to Nigeria
             </div>
-            <h1>Get government services done with <span>clearer steps.</span></h1>
+            <h1>Services, travel and entertainment — <span>clearly organised.</span></h1>
             <p className="hero-lead">
-              Current fees, requirements, online and physical routes, official portals and what happens next — explained in plain language.
+              Get something done, plan somewhere to go, or find Nigerian movies through official sources without jumping between confusing directories.
             </p>
-            <ServiceSearch services={publicServiceListings} />
-            <div className="hero-popular" aria-label="Popular guides">
+
+            <div className="hero-pillar-links" aria-label="Main MyNigeriaGuide sections">
+              <Link href="/services">Service Guide</Link>
+              <Link href="/explore">Explore Nigeria</Link>
+              <Link href="/entertainment">Entertainment</Link>
+            </div>
+
+            <div className="home-service-search">
+              <span className="eyebrow">Search service guides</span>
+              <ServiceSearch services={publicServiceListings} />
+            </div>
+
+            <div className="hero-popular" aria-label="Popular service guides">
               <span>Popular</span>
               {popular.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
             </div>
             <p className="hero-note">
-              MyNigeriaGuide never collects government payments. Transactions happen only on the official channels we link to.
+              Public-service applications and payments stay on official channels. Travel bookings and entertainment playback stay with the original provider.
             </p>
           </div>
 
-          <aside className="trust-panel" aria-label="MyNigeriaGuide verification">
+          <aside className="trust-panel" aria-label="MyNigeriaGuide quality approach">
             <div className="trust-panel-top">
-              <span className="trust-kicker">Verification snapshot</span>
+              <span className="trust-kicker">Quality snapshot</span>
               <span className="trust-live"><i aria-hidden="true" />Live</span>
             </div>
-            <strong>{verifiedCount} published guides</strong>
-            <p>Every public guide keeps its responsible agency, official sources and last-checked date visible.</p>
+            <strong>{verifiedCount} published service guides</strong>
+            <p>Across the site, source links and freshness notes stay visible so you can tell what to trust and what to re-check.</p>
             <div className="trust-metrics">
               <div><strong>{agencies.length}</strong><span>agency groups</span></div>
-              <div><strong>0</strong><span>public conflicts</span></div>
+              <div><strong>3</strong><span>clear guide areas</span></div>
             </div>
-            <div className="trust-row"><span>✓</span><div><strong>Official sources first</strong><small>Direct agency links stay visible.</small></div></div>
-            <div className="trust-row"><span>✓</span><div><strong>Online vs physical made clear</strong><small>Know where each process actually starts.</small></div></div>
-            <div className="trust-row"><span>✓</span><div><strong>No unofficial payment buttons</strong><small>We do not collect government fees.</small></div></div>
+            <div className="trust-row"><span>✓</span><div><strong>Services</strong><small>Requirements, fees, official portals and next steps.</small></div></div>
+            <div className="trust-row"><span>✓</span><div><strong>Travel</strong><small>Addresses, maps, cost notes and practical planning.</small></div></div>
+            <div className="trust-row"><span>✓</span><div><strong>Entertainment</strong><small>Official watch routes, cinemas and verified publishers.</small></div></div>
           </aside>
         </div>
       </section>
 
-      <section className="proof-strip" aria-label="Why use MyNigeriaGuide">
+      <section className="section home-platform-pillars" aria-labelledby="platform-pillars-title">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Choose your route</span>
+              <h2 id="platform-pillars-title">Start in the part of Nigeria you need.</h2>
+              <p className="section-lead">The site is organised as three focused products, with a shared design and navigation system.</p>
+            </div>
+          </div>
+
+          <div className="platform-pillar-grid">
+            <Link className="platform-pillar-card platform-pillar-services" href="/services">
+              <span className="platform-pillar-number">01</span>
+              <span className="eyebrow">Get something done</span>
+              <strong>Service Guide</strong>
+              <p>Government and practical services, documents, fees, visas, NYSC, NIN, CAC, education, driving and more.</p>
+              <i>Browse services <span aria-hidden="true">→</span></i>
+            </Link>
+
+            <Link className="platform-pillar-card platform-pillar-explore" href="/explore">
+              <span className="platform-pillar-number">02</span>
+              <span className="eyebrow">Go somewhere</span>
+              <strong>Explore Nigeria</strong>
+              <p>City guides, attractions, restaurants, stays, addresses, Google Maps routes, price notes and short-trip ideas.</p>
+              <i>Plan a trip <span aria-hidden="true">→</span></i>
+            </Link>
+
+            <Link className="platform-pillar-card platform-pillar-entertainment" href="/entertainment">
+              <span className="platform-pillar-number">03</span>
+              <span className="eyebrow">Watch &amp; enjoy</span>
+              <strong>Entertainment Guide</strong>
+              <p>Nigerian movies, official YouTube publishers, streaming routes, cinemas, releases, actors and filmmakers.</p>
+              <i>Explore entertainment <span aria-hidden="true">→</span></i>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="proof-strip" aria-label="How MyNigeriaGuide stays useful">
         <div className="container proof-grid">
-          <div><span aria-hidden="true">01</span><strong>Know what to prepare</strong><small>Documents and eligibility before you start.</small></div>
-          <div><span aria-hidden="true">02</span><strong>Choose the right route</strong><small>Online, physical or a combination of both.</small></div>
-          <div><span aria-hidden="true">03</span><strong>Pay only where official</strong><small>Source-linked fees and official payment routes.</small></div>
-          <div><span aria-hidden="true">04</span><strong>Know what happens next</strong><small>Follow-up, collection and support guidance.</small></div>
+          <div><span aria-hidden="true">01</span><strong>Clear next steps</strong><small>Know what to prepare and where to start.</small></div>
+          <div><span aria-hidden="true">02</span><strong>Useful locations</strong><small>Addresses and map routes where place matters.</small></div>
+          <div><span aria-hidden="true">03</span><strong>Official destinations</strong><small>Applications, bookings and playback stay at the source.</small></div>
+          <div><span aria-hidden="true">04</span><strong>Freshness visible</strong><small>Review and verification dates are kept in context.</small></div>
         </div>
       </section>
 
@@ -80,7 +128,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Browse directly</span>
+              <span className="eyebrow">Popular service areas</span>
               <h2>Go straight to the service area you need.</h2>
             </div>
             <Link href="/services">See all services →</Link>
@@ -90,7 +138,7 @@ export default function HomePage() {
             <Link className="home-category-card" href="/categories/international-travel"><span>Travel to / from Nigeria</span><strong>Nigeria travel</strong><small>Nigeria visas, Yellow Card, ECOWAS certificate and border forms.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/identity"><span>Identity</span><strong>NIN services</strong><small>Enrolment, corrections and NIN slip services.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/banking"><span>Banking identity</span><strong>BVN services</strong><small>Get, retrieve or correct BVN and use BVN from abroad.</small><i>→</i></Link>
-            <Link className="home-category-card" href="/categories/education"><span>Education</span><strong>JAMB, WAEC & NECO</strong><small>Registration, results, certificates and admission processes.</small><i>→</i></Link>
+            <Link className="home-category-card" href="/categories/education"><span>Education</span><strong>JAMB, WAEC &amp; NECO</strong><small>Registration, results, certificates and admission processes.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/youth-service"><span>Youth service</span><strong>NYSC</strong><small>Registration, mobilisation, relocation and certificates.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/business"><span>Business</span><strong>CAC services</strong><small>Business names, companies and corporate filings.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/driving"><span>Driving</span><strong>Driver's licence</strong><small>New, renewal, reissue and class changes.</small><i>→</i></Link>
@@ -129,8 +177,8 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading section-heading-light">
             <div>
-              <span className="eyebrow">Verified updates</span>
-              <h2>Know when the process changes.</h2>
+              <span className="eyebrow">Verified service updates</span>
+              <h2>Know when a public process changes.</h2>
             </div>
             <Link href="/updates">View all updates <span aria-hidden="true">→</span></Link>
           </div>
@@ -154,8 +202,8 @@ export default function HomePage() {
         <div className="container agency-strip">
           <div>
             <span className="eyebrow">Source transparency</span>
-            <h2>Built around the agency responsible.</h2>
-            <p>We do not pretend to be the authority. Every guide sends you back to the official agency for applications, payments and final decisions.</p>
+            <h2>Public-service guidance stays tied to the responsible agency.</h2>
+            <p>MyNigeriaGuide explains the process, but applications, payments and final decisions remain with the official authority.</p>
             <div className="related-links"><Link href="/official-portals">Official portal directory →</Link><Link href="/offices">Find official offices and centres →</Link></div>
           </div>
           <div className="agency-list">
