@@ -95,17 +95,16 @@ export function EntertainmentCatalog({
         </label>
       </div>
 
-      <div className="movie-directory-summary" aria-live="polite">
-        <span><strong>{filtered.length}</strong> curated movie{filtered.length === 1 ? "" : "s"}</span>
-        {(query || platform !== "all" || genre !== "all") ? (
+      {(query || platform !== "all" || genre !== "all") ? (
+        <div className="movie-directory-summary">
           <button type="button" onClick={() => {
             setQuery("");
             setPlatform("all");
             setGenre("all");
             setSort("newest");
           }}>Clear filters</button>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
 
       {filtered.length ? (
         <div className="movie-grid">
@@ -121,9 +120,8 @@ export function EntertainmentCatalog({
                 <h3><Link href={"/entertainment/movies/" + title.slug} prefetch={false}>{title.title}</Link></h3>
                 <p className="movie-tile-description">{title.synopsis}</p>
                 <div className="movie-tile-facts">
-                  {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : <span>Feature film</span>}
+                  {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : null}
                   <span>{title.languages.slice(0, 2).join(" / ")}</span>
-                  <span>{title.cast.length} cast</span>
                 </div>
                 <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
                 <div className="movie-tile-footer">
@@ -144,7 +142,6 @@ export function EntertainmentCatalog({
       {visibleCount < filtered.length ? (
         <div className="movie-load-more">
           <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>Show more movies</button>
-          <small>Showing {visible.length} of {filtered.length}</small>
         </div>
       ) : null}
     </>
