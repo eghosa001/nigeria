@@ -128,12 +128,12 @@ export function EntertainmentCatalog({
                   <span>{title.year}</span>
                   <span>{platformsForTitle.join(" · ")}</span>
                 </div>
-                <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
+                <h3><Link href={"/entertainment/movies/" + title.slug} prefetch={false}>{title.title}</Link></h3>
                 <p>{title.synopsis}</p>
                 <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
                 <div className="service-meta">
                   <strong>{title.genres.slice(0, 2).join(" · ")}</strong>
-                  <Link href={"/entertainment/movies/" + title.slug}>Where to watch →</Link>
+                  <Link href={"/entertainment/movies/" + title.slug} prefetch={false}>Where to watch →</Link>
                 </div>
               </article>
             );
