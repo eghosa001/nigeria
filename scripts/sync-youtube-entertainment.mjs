@@ -75,6 +75,18 @@ function knownHandle(source) {
   }
 }
 
+function knownChannelId(source) {
+  if (!source.knownUrl) return null;
+  try {
+    const url = new URL(source.knownUrl);
+    const parts = url.pathname.split("/").filter(Boolean);
+    const index = parts.indexOf("channel");
+    return index >= 0 ? parts[index + 1] ?? null : null;
+  } catch {
+    return null;
+  }
+}
+
 function verifiedChannelRecord(source, channel) {
   if (!channel || !exactChannelMatch(source, channel.snippet?.title)) return null;
 
@@ -104,6 +116,19 @@ async function resolveChannel(source) {
     exactChannelMatch(source, cached.channelTitle)
   ) {
     return cached;
+  }
+
+  const channelId = knownChannelId(source);
+  if (channelId) {
+    const details = await youtube("channels", {
+      part: "snippet,contentDetails,status",
+      id: channelId,
+    });
+    const resolved = verifiedChannelRecord(source, details.items?.[0]);
+    if (resolved) {
+      cache[source.slug] = resolved;
+      return resolved;
+    }
   }
 
   const handle = knownHandle(source);
@@ -290,10 +315,13 @@ function cleanTitle(raw) {
 }
 
 function yearFor(video) {
+  const currentYear = now.getUTCFullYear();
   const text = (video.snippet?.title ?? "") + "\n" + (video.snippet?.description ?? "");
-  const years = [...text.matchAll(/\b(20(?:2[0-6]|1\d))\b/g)].map((match) => Number(match[1]));
-  if (years.length) return Math.max(...years.filter((year) => year <= 2026));
-  return Number((video.snippet?.publishedAt ?? "2026").slice(0, 4));
+  const years = [...text.matchAll(/\b(20\d{2})\b/g)]
+    .map((match) => Number(match[1]))
+    .filter((year) => year >= 2000 && year <= currentYear + 1);
+  if (years.length) return Math.max(...years);
+  return Number((video.snippet?.publishedAt ?? now.toISOString()).slice(0, 4));
 }
 
 const moviesByVideoId = new Map(
