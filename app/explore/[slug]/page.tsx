@@ -153,7 +153,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
                   <div><dt>Address</dt><dd>{place.address}</dd></div>
                   <div><dt>Cost</dt><dd>{place.cost}</dd></div>
                   {place.hours ? <div><dt>Hours</dt><dd>{place.hours}</dd></div> : null}
-                  {place.phone ? <div><dt>Phone</dt><dd><a href={"tel:" + place.phone.replace(/[^+\\d]/g, "")}>{place.phone}</a></dd></div> : null}
+                  {place.phone ? <div><dt>Phone</dt><dd><a href={"tel:" + place.phone.replace(/[^+\d]/g, "")}>{place.phone}</a></dd></div> : null}
                 </dl>
                 {place.costNote ? <p className="explore-cost-note">{place.costNote}</p> : null}
                 <div className="explore-place-actions">
