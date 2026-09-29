@@ -2345,3 +2345,27 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   color: var(--green-dark);
   font-size: .84rem;
 }
+
+
+/* Organic discovery topic hubs */
+.home-topic-hubs { background:#eef4ef; border-block:1px solid rgba(6,63,45,.08); }
+.topic-home-card { background:linear-gradient(160deg,#fffdf8,#f7fbf8); }
+.topic-page { padding-top:70px; }
+.topic-copy { max-width:820px; margin:24px 0 34px; }
+.topic-copy p { color:#405148; font-size:1.02rem; line-height:1.75; }
+.topic-search-section { margin:0 0 44px; padding:24px; border:1px solid rgba(6,63,45,.11); border-radius:18px; background:#f3f8f4; }
+.topic-search-section h2 { margin:6px 0 16px; font-size:1.55rem; }
+.topic-searches span { padding:10px 13px; border:1px solid rgba(6,63,45,.11); border-radius:999px; background:var(--surface); color:var(--green-dark); font-size:.84rem; font-weight:750; }
+.topic-services-heading { margin-top:10px; }
+.topic-trust-note { margin-top:34px; padding:20px 22px; border-left:4px solid var(--green); border-radius:12px; background:var(--mint); }
+.topic-trust-note strong { display:block; margin-bottom:5px; color:var(--green-deep); }
+.topic-trust-note p { margin:0; color:#405148; }
+.service-topic-links { margin-bottom:28px; }
+.service-topic-links > .eyebrow { display:block; margin-bottom:10px; }
+
+@media (max-width:620px) {
+  .topic-page { padding-top:48px; }
+  .topic-search-section { padding:18px; }
+  .topic-searches { gap:7px; }
+  .topic-searches span { width:100%; border-radius:10px; }
+}

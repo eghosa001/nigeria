@@ -4,6 +4,7 @@ import { ServiceSearch } from "@/components/search";
 import { RouteWizard } from "@/components/route-wizard";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { agencies, publicServiceListings, publicServices } from "@/lib/data";
+import { growthHubs } from "@/lib/growth-hubs";
 
 export const metadata: Metadata = {
   title: "Nigerian Government Services Guide",
@@ -92,6 +93,27 @@ export default function HomePage() {
             <Link className="home-category-card" href="/categories/youth-service"><span>Youth service</span><strong>NYSC</strong><small>Registration, mobilisation, relocation and certificates.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/business"><span>Business</span><strong>CAC services</strong><small>Business names, companies and corporate filings.</small><i>→</i></Link>
             <Link className="home-category-card" href="/categories/driving"><span>Driving</span><strong>Driver's licence</strong><small>New, renewal, reissue and class changes.</small><i>→</i></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section home-topic-hubs">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Popular tasks</span>
+              <h2>Start with the question you are actually trying to solve.</h2>
+            </div>
+          </div>
+          <div className="home-category-grid">
+            {growthHubs.map((hub) => (
+              <Link className="home-category-card topic-home-card" href={"/topics/" + hub.slug} key={hub.slug}>
+                <span>Task hub</span>
+                <strong>{hub.shortTitle}</strong>
+                <small>{hub.description}</small>
+                <i>Explore guides →</i>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

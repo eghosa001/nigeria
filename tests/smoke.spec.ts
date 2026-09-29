@@ -409,3 +409,21 @@ test("service metadata descriptions are meaningful", async ({ page }) => {
   expect(description?.length ?? 0).toBeGreaterThan(80);
   expect(description).toContain("2026 JAMB training manual");
 });
+
+
+test("topic hubs cross-link high-intent tasks and service guides", async ({ page }) => {
+  await page.goto("/topics/nigerian-passport");
+  await expect(page.getByRole("heading", { name: "Nigerian Passport Guide 2026" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Passport renewal" })).toBeVisible();
+
+  await page.goto("/services/passport-renewal");
+  await expect(page.getByRole("link", { name: /Nigerian Passport Guide 2026/ })).toBeVisible();
+});
+
+test("guide sharing exposes a reusable current summary", async ({ page }) => {
+  await page.goto("/services/passport-renewal");
+  await expect(page.getByRole("button", { name: "Copy summary" })).toBeVisible();
+  const whatsapp = page.getByRole("link", { name: "WhatsApp" });
+  await expect(whatsapp).toHaveAttribute("href", /Fee%20%2F%20status/);
+  await expect(whatsapp).toHaveAttribute("href", /Checked%3A/);
+});
