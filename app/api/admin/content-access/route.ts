@@ -12,6 +12,14 @@ import {
 
 const privateHeaders = { "Cache-Control": "private, no-store" };
 
+function protectedAdminApi(request: Request) {
+  return new URL(request.url).pathname.startsWith("/admin/api/");
+}
+
+function legacyRouteResponse() {
+  return Response.json({ error: "Not found." }, { status: 404, headers: privateHeaders });
+}
+
 function sameOrigin(request: Request) {
   const fetchSite = request.headers.get("sec-fetch-site");
   if (fetchSite) return fetchSite === "same-origin";
@@ -35,7 +43,8 @@ function sameOrigin(request: Request) {
   return source.host === host && source.protocol === protocol + ":";
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  if (!protectedAdminApi(request)) return legacyRouteResponse();
   const accessConfigured = adminAccessConfigured();
   const githubConfigured = githubAdminConfigured();
   return Response.json({
@@ -47,6 +56,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  if (!protectedAdminApi(request)) return legacyRouteResponse();
   if (!adminAccessConfigured() || !githubAdminConfigured()) {
     return Response.json({ error: "Admin editing is not fully configured." }, { status: 503, headers: privateHeaders });
   }
@@ -85,6 +95,7 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
+  if (!protectedAdminApi(request)) return legacyRouteResponse();
   if (!sameOrigin(request)) {
     return Response.json({ error: "Cross-origin admin requests are not allowed." }, { status: 403, headers: privateHeaders });
   }

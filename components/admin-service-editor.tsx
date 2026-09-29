@@ -93,6 +93,11 @@ export function AdminServiceEditor({ service }: { service: Service }) {
         }),
       });
       const body = await response.json() as Proposal & { error?: string };
+      if (response.status === 401) {
+        setAccess("locked");
+        setMessage("Your admin editing session expired. Unlock editing and try again.");
+        return;
+      }
       if (!response.ok) {
         setMessage(body.error ?? "Unable to create review change.");
         return;

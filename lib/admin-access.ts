@@ -66,6 +66,6 @@ export const adminCookieOptions = {
   httpOnly: true,
   secure: true,
   sameSite: "strict" as const,
-  path: "/",
+  path: "/admin",
   maxAge: SESSION_TTL_SECONDS,
 };

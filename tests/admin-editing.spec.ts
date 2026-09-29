@@ -185,3 +185,58 @@ test("admin editing session can be explicitly locked", async ({ page }) => {
   });
   expect(state.authenticated).toBe(false);
 });
+
+
+test("legacy admin API aliases stay closed outside the Cloudflare Access path", async ({ request }) => {
+  const headers = { "Content-Type": "application/json", "Sec-Fetch-Site": "same-origin" };
+  expect((await request.post("/api/admin/access", { headers, data: { password: "qa-only-passphrase" } })).status()).toBe(404);
+  expect((await request.get("/api/admin/content-access")).status()).toBe(404);
+  expect((await request.get("/api/admin/analytics")).status()).toBe(404);
+  expect((await request.post("/api/admin/services/passport-renewal/proposal", { headers, data: { service: {} } })).status()).toBe(404);
+});
+
+test("admin auth rejects cross-origin and non-JSON requests", async ({ request }) => {
+  const crossOrigin = await request.post("/admin/api/access", {
+    headers: { "Content-Type": "application/json", "Sec-Fetch-Site": "cross-site", Origin: "https://attacker.example" },
+    data: { password: "qa-only-passphrase" },
+  });
+  expect(crossOrigin.status()).toBe(403);
+
+  const wrongType = await request.post("/admin/api/access", {
+    headers: { "Content-Type": "text/plain", "Sec-Fetch-Site": "same-origin" },
+    data: "qa-only-passphrase",
+  });
+  expect(wrongType.status()).toBe(415);
+
+  const analyticsCrossOrigin = await request.post("/admin/api/analytics-access", {
+    headers: { "Content-Type": "application/json", "Sec-Fetch-Site": "cross-site", Origin: "https://attacker.example" },
+    data: { password: "qa-only-passphrase" },
+  });
+  expect(analyticsCrossOrigin.status()).toBe(403);
+});
+
+test("admin session cookie is least-privilege and hardened", async ({ request }) => {
+  const response = await request.post("/admin/api/access", {
+    headers: { "Content-Type": "application/json", "Sec-Fetch-Site": "same-origin" },
+    data: { password: "qa-only-passphrase" },
+  });
+  expect(response.status()).toBe(200);
+  const cookie = response.headers()["set-cookie"];
+  expect(cookie).toMatch(/Path=\/admin(?:;|$)/i);
+  expect(cookie).toMatch(/HttpOnly/i);
+  expect(cookie).toMatch(/Secure/i);
+  expect(cookie).toMatch(/SameSite=Strict/i);
+});
+
+test("editor re-locks if its signed session expires before submit", async ({ page }) => {
+  await page.goto("/admin/services/passport-renewal");
+  await unlockAdmin(page);
+  await page.route("**/admin/api/services/passport-renewal/proposal", (route) =>
+    route.fulfill({ status: 401, json: { error: "Admin authentication required." } }),
+  );
+  const summary = page.getByLabel("Guide summary");
+  await summary.fill((await summary.inputValue()) + " session-expiry-test");
+  await page.getByRole("button", { name: "Create review change" }).click();
+  await expect(page.getByRole("heading", { name: "Unlock guide editing" })).toBeVisible();
+  await expect(page.getByText("Your admin editing session expired. Unlock editing and try again.")).toBeVisible();
+});

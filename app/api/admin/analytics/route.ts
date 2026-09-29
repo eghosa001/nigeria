@@ -2,9 +2,20 @@ import { cookies } from "next/headers";
 import { getAnalyticsDashboard, analyticsReadConfigured, analyticsTrackingConfigured, type AnalyticsRange } from "@/lib/analytics-data";
 import { analyticsAdminAccessConfigured, analyticsAdminCookieName, verifyAnalyticsAdminCookie } from "@/lib/admin-analytics-access";
 
+const privateHeaders = { "Cache-Control": "private, no-store" };
+
+function protectedAdminApi(request: Request) {
+  return new URL(request.url).pathname.startsWith("/admin/api/");
+}
+
+function legacyRouteResponse() {
+  return Response.json({ error: "Not found." }, { status: 404, headers: privateHeaders });
+}
+
 const ranges = new Set<AnalyticsRange>(["7d", "30d", "90d"]);
 
 export async function GET(request: Request) {
+  if (!protectedAdminApi(request)) return legacyRouteResponse();
   const accessConfigured = analyticsAdminAccessConfigured();
   const readConfigured = analyticsReadConfigured();
   const trackingConfigured = analyticsTrackingConfigured();

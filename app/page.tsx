@@ -156,7 +156,7 @@ export default function HomePage() {
             <span className="eyebrow">Source transparency</span>
             <h2>Built around the agency responsible.</h2>
             <p>We do not pretend to be the authority. Every guide sends you back to the official agency for applications, payments and final decisions.</p>
-            <Link className="text-link" href="/offices">Find official offices and centres →</Link>
+            <div className="related-links"><Link href="/official-portals">Official portal directory →</Link><Link href="/offices">Find official offices and centres →</Link></div>
           </div>
           <div className="agency-list">
             {agencies.map((agency) => (
