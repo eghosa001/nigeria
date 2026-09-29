@@ -4216,3 +4216,99 @@ a.admin-guide-row:hover { background:#f8fcf9; }
     border-radius: 13px;
   }
 }
+
+
+/* Movie-first polish and rights-safe original artwork */
+.entertainment-artwork-generated {
+  position: relative;
+  overflow: hidden;
+  background: #082f24;
+}
+.generated-movie-art {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 25px);
+  min-height: 0;
+  overflow: hidden;
+  background: #082f24;
+}
+.generated-movie-art > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.generated-movie-art-copy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(14px, 4vw, 28px);
+  background: linear-gradient(180deg, transparent 30%, rgba(4,18,13,.22) 62%, rgba(4,18,13,.72) 100%);
+}
+.generated-movie-art-copy > span {
+  margin-bottom: 6px;
+  color: #eed39b;
+  font-size: clamp(.56rem, 1.2vw, .75rem);
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.generated-movie-art-copy > strong {
+  max-width: 78%;
+  color: white;
+  font-size: clamp(1rem, 3vw, 2rem);
+  line-height: .98;
+  letter-spacing: -.045em;
+  text-wrap: balance;
+}
+.generated-movie-art-copy > b {
+  position: absolute;
+  top: 12%;
+  right: 7%;
+  color: rgba(255,255,255,.12);
+  font-size: clamp(2.8rem, 10vw, 7rem);
+  line-height: 1;
+  letter-spacing: -.08em;
+}
+.entertainment-artwork-card .generated-movie-art-copy {
+  padding: 12px;
+}
+.entertainment-artwork-card .generated-movie-art-copy > strong {
+  max-width: 82%;
+  font-size: clamp(.82rem, 1.5vw, 1.08rem);
+  line-height: 1.02;
+}
+.entertainment-artwork-card .generated-movie-art-copy > b {
+  top: 10%;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+.entertainment-artwork-generated figcaption {
+  justify-content: flex-start;
+}
+.entertainment-artwork-generated figcaption span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.movie-directory-summary:has(button) {
+  min-height: 32px;
+  justify-content: flex-end;
+}
+.movie-directory-summary:has(button) button {
+  margin-left: 0;
+}
+.movie-load-more {
+  gap: 0;
+}
+.movie-artwork-rights-note {
+  display: none;
+}
+@media (max-width: 620px) {
+  .generated-movie-art-copy > span { font-size: .52rem; }
+  .generated-movie-art-copy > strong { font-size: .82rem; }
+  .generated-movie-art-copy > b { font-size: 2.6rem; }
+}
