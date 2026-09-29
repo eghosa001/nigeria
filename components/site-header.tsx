@@ -152,7 +152,8 @@ export function SiteHeader() {
               <nav aria-label={context.label + " navigation"}>
                 {context.links.map((item) => {
                   const cleanHref = item.href.split("#")[0];
-                  const active = item.label === "Overview"
+                  const exactOnly = item.label === "Overview" || item.href === "/entertainment";
+                  const active = exactOnly
                     ? pathname === cleanHref
                     : pathname === cleanHref || (cleanHref !== "/services" && pathname.startsWith(cleanHref + "/"));
                   return (
