@@ -82,7 +82,7 @@ export default function HomePage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow">Choose your route</span>
-              <h2 id="platform-pillars-title">Start in the part of Nigeria you need.</h2>
+              <h2 id="platform-pillars-title">What do you want to do in Nigeria?</h2>
               <p className="section-lead">The site is organised as three focused products, with a shared design and navigation system.</p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function HomePage() {
 
             <Link className="platform-pillar-card platform-pillar-explore" href="/explore">
               <span className="platform-pillar-number">02</span>
-              <span className="eyebrow">Go somewhere</span>
+              <span className="eyebrow">Tour Guide · Go somewhere</span>
               <strong>Explore Nigeria</strong>
               <p>City guides, attractions, restaurants, stays, addresses, Google Maps routes, price notes and short-trip ideas.</p>
               <i>Plan a trip <span aria-hidden="true">→</span></i>
