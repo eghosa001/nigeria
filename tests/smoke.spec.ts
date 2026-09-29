@@ -11,7 +11,7 @@ test("admin pages hide all operational content until the shared admin session is
   await expect(page.getByText("Passport renewal", { exact: true })).toHaveCount(0);
 
   const unauthenticatedProposal = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/services/passport-renewal/proposal", {
+    const response = await fetch("/admin/api/services/passport-renewal/proposal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ service: {} }),
@@ -39,7 +39,7 @@ test("visits unlock displays reports immediately and can be locked again", async
   let authenticated = false;
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
-  await page.route("**/api/admin/analytics-access", async (route) => {
+  await page.route("**/admin/api/analytics-access", async (route) => {
     if (route.request().method() === "DELETE") {
       authenticated = false;
     } else {
@@ -47,7 +47,7 @@ test("visits unlock displays reports immediately and can be locked again", async
     }
     await route.fulfill({ json: { authenticated } });
   });
-  await page.route("**/api/admin/analytics?*", async (route) => {
+  await page.route("**/admin/api/analytics?*", async (route) => {
     if (!authenticated) {
       await route.fulfill({ status: 401, json: { configured: true, authenticated: false } });
       return;
@@ -388,13 +388,13 @@ test("admin login rate limit blocks repeated bad passwords", async ({ request },
     "User-Agent": `mynigeriaguide-rate-limit-test-${testInfo.project.name}-${testInfo.retry}`,
   };
   for (let attempt = 0; attempt < 8; attempt++) {
-    const response = await request.post("/api/admin/access", {
+    const response = await request.post("/admin/api/access", {
       headers,
       data: { password: "definitely-wrong" },
     });
     expect(response.status()).toBe(401);
   }
-  const blocked = await request.post("/api/admin/access", {
+  const blocked = await request.post("/admin/api/access", {
     headers,
     data: { password: "definitely-wrong" },
   });
