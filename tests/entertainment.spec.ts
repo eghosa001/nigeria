@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 test("entertainment catalog supports multiple official platforms", async ({ page }) => {
   await page.goto("/entertainment/movies");
-  await expect(page.locator(".service-card")).toHaveCount(10);
+  await expect(page.locator(".service-card")).toHaveCount(24);
   await page.getByLabel("Where to watch").selectOption("Prime Video");
   await expect(page.locator(".service-card")).toHaveCount(1);
 });
@@ -29,4 +29,20 @@ test("movie artwork is withheld until rights are cleared", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
   await expect(page.locator('[data-rights-status="pending"]')).toBeVisible();
   await expect(page.getByText("No cleared artwork yet.")).toBeVisible();
+});
+
+
+test("movie cards show a short description and featured cast", async ({ page }) => {
+  await page.goto("/entertainment/movies?q=Jagun%20Jagun");
+  const card = page.locator(".service-card").first();
+  await expect(card).toContainText("young man joins an elite warrior school");
+  await expect(card).toContainText("Featuring:");
+  await expect(card).toContainText("Femi Adebayo");
+  await expect(card).toContainText("Lateef Adedimeji");
+});
+
+test("expanded catalog includes verified Nigerian Netflix titles", async ({ page }) => {
+  await page.goto("/entertainment/movies?q=House%20of%20Ga");
+  await expect(page.getByText("House of Ga'a", { exact: true })).toBeVisible();
+  await expect(page.getByText("Femi Branch", { exact: false })).toBeVisible();
 });

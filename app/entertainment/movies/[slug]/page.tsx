@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
-import { entertainmentTitles, getEntertainmentTitle } from "@/lib/entertainment";
+import { entertainmentTitles, getEntertainmentTitle, getFeaturedCast } from "@/lib/entertainment";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
 import { getSiteUrl } from "@/lib/site";
 
@@ -90,6 +90,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <span className="eyebrow">{title.year} Nigerian movie</span>
             <h1>{title.title}</h1>
             <p>{title.synopsis}</p>
+            <p className="movie-hero-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
             <div className="guide-badges">
               {title.genres.map((genre) => <span className="status-badge status-verified" key={genre}>{genre}</span>)}
             </div>

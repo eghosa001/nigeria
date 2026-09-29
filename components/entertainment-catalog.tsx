@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
-import type { EntertainmentTitle } from "@/lib/entertainment";
+import { getFeaturedCast, type EntertainmentTitle } from "@/lib/entertainment";
 
 const PAGE_SIZE = 24;
 
@@ -130,6 +130,7 @@ export function EntertainmentCatalog({
                 </div>
                 <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
                 <p>{title.synopsis}</p>
+                <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
                 <div className="service-meta">
                   <strong>{title.genres.slice(0, 2).join(" · ")}</strong>
                   <Link href={"/entertainment/movies/" + title.slug}>Where to watch →</Link>

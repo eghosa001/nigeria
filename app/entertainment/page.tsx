@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
-import { entertainmentTitles, getPlatformCount } from "@/lib/entertainment";
+import { entertainmentTitles, getFeaturedCast, getPlatformCount } from "@/lib/entertainment";
 import { cinemaGuides, entertainmentPeople, platformGuides, releaseItems } from "@/lib/entertainment-extras";
 import { getSiteUrl } from "@/lib/site";
 
@@ -114,6 +114,7 @@ export default function EntertainmentPage() {
                 <div className="card-topline"><span>{title.year}</span><span>{[...new Set(title.watchLinks.map((link) => link.platform))].join(" · ")}</span></div>
                 <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
                 <p>{title.synopsis}</p>
+                <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(title).join(" · ")}</p>
                 <div className="service-meta"><strong>{title.genres.slice(0, 2).join(" · ")}</strong><Link href={"/entertainment/movies/" + title.slug}>Open movie →</Link></div>
               </article>
             ))}
