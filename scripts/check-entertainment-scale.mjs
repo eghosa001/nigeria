@@ -47,12 +47,20 @@ for (const movie of generated.movies) {
   assert(movie.videoId && !videoIds.has(movie.videoId), "video IDs must be unique: " + movie.videoId);
   videoIds.add(movie.videoId);
   assert(movie.title && movie.synopsis, "title and synopsis are required for " + movie.videoId);
+  assert(!/[\\/|]\\s*$/.test(movie.title), "movie title must not end with a feed separator: " + movie.title);
+  assert(!/\\bfull\\s+movie\\b/i.test(movie.title), "movie title must not contain FULL MOVIE SEO text: " + movie.title);
+  assert(!/^(?:nollywood|nigerian)\\s+movie\\b/i.test(movie.title), "movie title must not be a generic platform label: " + movie.title);
+  assert(!/\\blatest\\s+(?:20\\d{2}|nollywood|romantic\\s+movie)\\b/i.test(movie.title), "movie title must not contain legacy latest-movie SEO text: " + movie.title);
   assert(Array.isArray(movie.cast) && movie.cast.length > 0, "cast is required for " + movie.videoId);
   assert(Array.isArray(movie.featuredCast) && movie.featuredCast.length > 0, "featured cast is required for " + movie.videoId);
   for (const castName of movie.cast) {
     assert(
       !castNoiseExact.test(String(castName).trim()) && !castNoiseContains.test(String(castName)),
       "promotional/noise cast entry is not allowed: " + castName + " (" + movie.videoId + ")",
+    );
+    assert(
+      !/\\s+as\\s+|^\\s*(?:with|also)\\s+/i.test(String(castName)),
+      "cast entry must be a person name without role/prefix text: " + castName + " (" + movie.videoId + ")",
     );
   }
   assert(Number(movie.durationMinutes) >= 55, "movie runtime must remain full-length for " + movie.videoId);
