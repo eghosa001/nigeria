@@ -173,3 +173,14 @@ test("verified Netflix trailers enrich existing movie posters without new routes
     await expect(page.locator(".movie-detail-artwork").getByText("Preview: AfricaOnNetflix", { exact: true })).toBeVisible();
   }
 });
+
+
+test("licensed third-party Kava titles use existing movie routes and offline guidance", async ({ page }) => {
+  await page.goto("/entertainment/movies?platform=Kava");
+  await expect(page.getByRole("link", { name: "Big Love", exact: true }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Okanjuwa", exact: true }).first()).toBeVisible();
+
+  await page.goto("/entertainment/movies/big-love");
+  await expect(page.getByRole("link", { name: /Watch on Kava/ }).first()).toHaveAttribute("href", "https://watch.kava.tv/big-love");
+  await expect(page.getByText(/Kava supports downloading eligible titles/i)).toBeVisible();
+});
