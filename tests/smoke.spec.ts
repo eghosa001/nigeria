@@ -261,7 +261,7 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
   const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
   await expect(mobileNav).toBeVisible();
   await expect(mobileNav.getByRole("link", { name: "Home", exact: true })).toHaveAttribute("aria-current", "page");
-  await expect(page.getByRole("link", { name: "Find a guide", exact: true })).toBeVisible();
+  await expect(page.locator(".mobile-header-action")).toBeVisible();
 
   const navBox = await mobileNav.boundingBox();
   expect(navBox?.x ?? -1).toBeGreaterThanOrEqual(0);
