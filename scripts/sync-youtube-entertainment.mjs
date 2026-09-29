@@ -357,7 +357,13 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
   const description = video.snippet?.description ?? "";
   const paragraphs = description
     .split(/\n\s*\n|\r?\n/)
-    .map((line) => line.trim())
+    .map((line) => line.replace(/\s+/g, " ").trim())
+    .map((line) =>
+      line.replace(
+        /^now\s+showing\s+on\s+our\s+channel\s+is\s+the\s+movie\s+["'“”][^"'“”]+["'“”]\s*/i,
+        "",
+      ),
+    )
     .filter((line) =>
       line.length >= 70 &&
       !/https?:\/\//i.test(line) &&
@@ -375,6 +381,8 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
 
 function cleanTitle(raw, cast = []) {
   let title = String(raw ?? "").trim();
+  const watchInMatch = title.match(/^watch\s+.+?\s+in\s+(.+?)(?:\s*[-|]\s*(?:nigerian|nollywood|african|latest|20\d{2})\b.*)?$/i);
+  if (watchInMatch?.[1]) title = watchInMatch[1].trim();
   title = title.replace(/^(?:nollywood|nigerian)\s+movie(?:\s*\([^)]*\))?\s*:\s*/i, "");
   title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
   title = title.split("|")[0].trim();
