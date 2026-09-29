@@ -121,7 +121,7 @@ export const growthHubs: GrowthHub[] = [
     slug: "schengen-visas-nigeria",
     title: "Schengen Visa Guides for Nigerians 2026",
     shortTitle: "Schengen visas",
-    description: "Compare Nigeria-specific Schengen application routes for Germany, France, Italy, Spain and the Netherlands with official requirements, fees and submission centres.",
+    description: "Compare Schengen visa routes from Nigeria for Germany, France, Italy, Spain and the Netherlands, with official requirements, fees and submission centres.",
     intro: [
       "Use this hub when your trip is to the Schengen area and you need to identify the correct destination guide. Each country page keeps its own Nigeria-specific submission route, documents, fee guidance and official sources.",
       "Apply through the country responsible for your trip under Schengen rules rather than choosing a visa centre only because it is convenient. Open the destination guide below for the current Nigerian application route."
