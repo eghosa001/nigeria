@@ -40,7 +40,7 @@ test("admin editor allows normal spaces while typing list fields", async ({ page
 });
 
 test("admin editor creates a review proposal and does not claim to publish", async ({ page }) => {
-  await page.route("**/api/admin/services/passport-renewal/proposal", async (route) => {
+  await page.route("**/admin/api/services/passport-renewal/proposal", async (route) => {
     expect(route.request().method()).toBe("POST");
     const body = route.request().postDataJSON();
     expect(body.service.slug).toBe("passport-renewal");
@@ -100,7 +100,7 @@ test("admin content API enforces authentication and validates requests before Gi
   await page.goto("/admin/services/passport-renewal");
 
   const unauthenticated = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/services/passport-renewal/proposal", {
+    const response = await fetch("/admin/api/services/passport-renewal/proposal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({}),
@@ -113,7 +113,7 @@ test("admin content API enforces authentication and validates requests before Gi
   await expect(page.getByLabel("Guide summary")).toBeVisible();
 
   const malformed = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/services/passport-renewal/proposal", {
+    const response = await fetch("/admin/api/services/passport-renewal/proposal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: "{bad-json",
@@ -123,7 +123,7 @@ test("admin content API enforces authentication and validates requests before Gi
   expect(malformed).toBe(400);
 
   const changedSlug = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/services/passport-renewal/proposal", {
+    const response = await fetch("/admin/api/services/passport-renewal/proposal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -151,7 +151,7 @@ test("admin content API enforces authentication and validates requests before Gi
   expect(changedSlug).toBe(400);
 
   const unknown = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/services/not-a-real-guide/proposal", {
+    const response = await fetch("/admin/api/services/not-a-real-guide/proposal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ service: {} }),
@@ -161,7 +161,7 @@ test("admin content API enforces authentication and validates requests before Gi
   expect(unknown).toBe(404);
 
   const tooLarge = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/services/passport-renewal/proposal", {
+    const response = await fetch("/admin/api/services/passport-renewal/proposal", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ service: { summary: "x".repeat(190_000) } }),
@@ -180,7 +180,7 @@ test("admin editing session can be explicitly locked", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
 
   const state = await page.evaluate(async () => {
-    const response = await fetch("/api/admin/content-access", { cache: "no-store" });
+    const response = await fetch("/admin/api/content-access", { cache: "no-store" });
     return await response.json();
   });
   expect(state.authenticated).toBe(false);
