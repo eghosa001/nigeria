@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { categorySlug } from "@/lib/category";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
+import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
 function latestDate(values: string[]) {
@@ -39,6 +40,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestDate(publicServices.filter((service) => service.category === category.name).map((service) => service.lastVerified)) || catalogModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
+    })),
+    ...growthHubs.map((hub) => ({
+      url: base + "/topics/" + hub.slug,
+      lastModified: latestDate(
+        publicServices
+          .filter((service) => hub.serviceSlugs.includes(service.slug))
+          .map((service) => service.lastVerified),
+      ) || catalogModified,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
     })),
     ...publicServices.map((service) => ({
       url: base + "/services/" + service.slug,
