@@ -2,14 +2,14 @@ import { expect, test } from "@playwright/test";
 
 test("homepage exposes movies first, then services, then tour", async ({ page }) => {
   await page.goto("/");
-  const cards = page.locator(".home-launchpad .home-launch-card");
-  await expect(cards).toHaveCount(3);
-  await expect(cards.nth(0)).toContainText("Movies");
-  await expect(cards.nth(0)).toHaveAttribute("href", "/entertainment/movies");
-  await expect(cards.nth(1)).toContainText("Services");
-  await expect(cards.nth(1)).toHaveAttribute("href", "/services");
-  await expect(cards.nth(2)).toContainText("Tour Nigeria");
-  await expect(cards.nth(2)).toHaveAttribute("href", "/explore");
+  const paths = page.locator(".home-paths .home-path");
+  await expect(paths).toHaveCount(3);
+  await expect(paths.nth(0)).toContainText("Movies");
+  await expect(paths.nth(0)).toHaveAttribute("href", "/entertainment/movies");
+  await expect(paths.nth(1)).toContainText("Services");
+  await expect(paths.nth(1)).toHaveAttribute("href", "/services");
+  await expect(paths.nth(2)).toContainText("Tour Nigeria");
+  await expect(paths.nth(2)).toHaveAttribute("href", "/explore");
 });
 
 test("Explore Nigeria hub and city guide are navigable", async ({ page }) => {
