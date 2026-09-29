@@ -4054,76 +4054,6 @@
     "related": []
   },
   {
-    "slug": "bvn-change-details",
-    "title": "How to change or correct details on your BVN",
-    "shortTitle": "Change BVN details",
-    "summary": "How to correct a BVN name, date of birth, phone number or other eligible record through the bank or authorised BVN participant that handles BVN updates.",
-    "category": "Banking",
-    "agencySlug": "cbn",
-    "feeLabel": "Confirm with your bank or authorised BVN participant",
-    "feeNote": "CBN rules define which BVN fields may be changed, but the regulatory framework does not publish one universal customer-facing modification fee. Confirm any charge with the institution processing the update before paying.",
-    "timeline": "CBN's BVN-issue clarification states that BVN issues should be resolved within 5 working days after all required documents are submitted, although complex verification can take longer.",
-    "status": "verified",
-    "requirements": [
-      "Existing BVN and access to the bank or authorised BVN participant handling the record",
-      "Valid identification showing the correct personal details",
-      "Supporting civil or legal documents for the requested change, such as a marriage/divorce certificate, affidavit, newspaper publication or date-of-birth evidence where applicable",
-      "Access to the BVN-linked phone number or additional identity verification requested by the processing institution"
-    ],
-    "steps": [
-      "Contact a bank or authorised BVN participant that processes BVN record updates and state exactly which field is wrong or has legally changed before presenting documents.",
-      "For a date-of-birth correction, present documentary evidence of the correct date; CBN permits this correction only once, so verify every digit before authorising the update.",
-      "For a name change or spelling correction, provide the identification and legal documents that support the new or corrected name, and make sure the requested BVN name will match the identity you use across your bank accounts.",
-      "For a BVN-linked phone-number change, present the identification and verification evidence required by the processing institution, then confirm the replacement number carefully; CBN's 2026 amendment permits the linked phone number to be changed only once.",
-      "Collect the update acknowledgement or reference from the processing institution, allow the BVN record to be updated, then confirm the corrected details with your bank; if the issue remains unresolved after the published resolution window, lodge a formal complaint with the bank and escalate the unresolved complaint to CBN where necessary."
-    ],
-    "notes": [
-      "CBN allows correction of date of birth on a BVN record once, supported by evidence of the correct date.",
-      "Name changes arising from marriage, divorce or religion require supporting documents; minor spelling corrections require valid identification showing the correct name.",
-      "CBN's March 2026 amendment says a BVN-linked phone number may be changed only once from 1 May 2026.",
-      "The name attached to the BVN should be consistent across the customer's banking relationships."
-    ],
-    "sources": [
-      {
-        "label": "CBN Revised Regulatory Framework for BVN Operations",
-        "agency": "Central Bank of Nigeria",
-        "url": "https://www.cbn.gov.ng/Out/2021/CCD/REVISED%20REGULATORY%20FRAMEWORK%20FOR%20BANK%20VERIFICATION%20NUMBER%20%28BVN%29%20OPERATIONS%20AND%20WATCH-LIST%20FOR%20THE%20NIGERIAN%20BANKING%20INDUSTRY%20121021%20FINAL.pdf",
-        "published": "2021",
-        "lastChecked": "2026-09-28"
-      },
-      {
-        "label": "CBN clarification on BVN record corrections",
-        "agency": "Central Bank of Nigeria",
-        "url": "https://www.cbn.gov.ng/out/2016/bpsd/bvn%20issues%20circular.pdf",
-        "published": "2016-02-24",
-        "lastChecked": "2026-09-28"
-      },
-      {
-        "label": "CBN Reforms and Initiatives",
-        "agency": "Central Bank of Nigeria",
-        "url": "https://www.cbn.gov.ng/AboutCBN/Reforms.html",
-        "published": "2026",
-        "lastChecked": "2026-09-28"
-      }
-    ],
-    "searchTerms": [
-      "change BVN details",
-      "correct BVN",
-      "BVN modification",
-      "BVN name change",
-      "BVN date of birth correction",
-      "BVN phone number change",
-      "update BVN",
-      "BVN wrong name"
-    ],
-    "related": [
-      "bvn-enrolment",
-      "bvn-retrieval",
-      "non-resident-bvn"
-    ],
-    "lastVerified": "2026-09-28"
-  },
-  {
     "slug": "nigeria-evisa-application",
     "title": "How to apply for a Nigeria e-Visa",
     "shortTitle": "Nigeria e-Visa application",
@@ -5498,5 +5428,102 @@
       "Education"
     ],
     "related": []
+  },
+  {
+    "slug": "nip-transfer-status",
+    "title": "How to check the status of a NIP transfer with *565*5#",
+    "shortTitle": "Check NIP transfer status",
+    "summary": "The official NIBSS USSD route for checking whether a recent Nigeria Instant Payment transfer was processed successfully, failed or is still awaiting processing.",
+    "category": "Banking",
+    "agencySlug": "cbn",
+    "feeLabel": "₦20",
+    "feeNote": "NIBSS states that the *565*5# NIP Transaction Tracker service costs ₦20 per lookup.",
+    "timeline": "The tracker covers NIP transactions completed within the previous 48 hours.",
+    "status": "verified",
+    "requirements": [
+      "The sender's mobile phone number that is linked to the bank account used for the transfer",
+      "The sender's bank account number",
+      "The exact transaction amount for the NIP transfer being checked",
+      "Enough airtime for the ₦20 NIBSS USSD service charge"
+    ],
+    "steps": [
+      "Use the phone number linked to the sender's bank account and dial *565*5# to open the NIBSS NIP Transaction Tracker.",
+      "Enter the sender's account number when the USSD session requests it, then provide the exact amount of the transfer you want to check.",
+      "Review the result returned by NIBSS: a successful transfer is shown as successful, an unsuccessful transfer is shown as failed, and a missing transaction can mean the sending bank has not yet processed it.",
+      "If the tracker shows that the transfer succeeded but the beneficiary has not received value, ask the beneficiary to contact their bank with the transfer details.",
+      "If the transfer failed and the expected reversal does not arrive, contact the sending bank with the transaction details instead of repeatedly paying for new USSD lookups."
+    ],
+    "notes": [
+      "NIBSS says the tracker only checks NIP transactions completed within the previous 48 hours.",
+      "The service must be used from the phone number linked to the sender's bank account.",
+      "A result of 'account not found' can mean the supplied phone number is not linked to the account number entered."
+    ],
+    "sources": [
+      {
+        "label": "NIBSS 565 USSD validation services",
+        "agency": "Nigeria Inter-Bank Settlement System",
+        "url": "https://nibss-plc.com.ng/ussd-validation-services/",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "searchTerms": [
+      "NIP transfer status",
+      "check bank transfer",
+      "565 5",
+      "transfer tracker",
+      "NIBSS transfer status",
+      "instant payment status",
+      "failed transfer",
+      "bank transfer reversal"
+    ],
+    "related": [
+      "bvn-retrieval"
+    ],
+    "lastVerified": "2026-09-29"
+  },
+  {
+    "slug": "vehicle-insurance-validation-ussd",
+    "title": "How to validate a vehicle insurance policy with *565*11#",
+    "shortTitle": "Validate vehicle insurance",
+    "summary": "The official NIBSS USSD method for checking whether a vehicle registration number is linked to a valid motor insurance policy in Nigeria.",
+    "category": "Insurance",
+    "agencySlug": "cbn",
+    "feeLabel": "₦20",
+    "feeNote": "NIBSS states that the *565*11# vehicle-insurance validation service costs ₦20 per lookup.",
+    "status": "verified",
+    "requirements": [
+      "The vehicle registration number exactly as issued for the vehicle",
+      "A mobile phone that can access the NIBSS *565# USSD service",
+      "Enough airtime for the ₦20 NIBSS USSD service charge"
+    ],
+    "steps": [
+      "Dial *565*11# from your mobile phone to open the NIBSS vehicle-insurance validation service.",
+      "Enter the vehicle registration number exactly as it appears on the vehicle record and submit the USSD request.",
+      "Read the response returned by NIBSS; where the vehicle has a current policy, the session shows the policy-validity information.",
+      "If the service reports that the registration number was not found, check the registration number for typing errors and confirm the insurance record with the insurer.",
+      "If a policy should be active but NIBSS still does not return a valid record, contact the insurer that issued the policy and ask them to verify or correct the record before relying on the cover."
+    ],
+    "notes": [
+      "NIBSS says a 'vehicle registration number not found' response can mean the registration number is invalid, the vehicle has never had valid insurance cover, or the cover expired more than one year ago.",
+      "Validation confirms what the NIBSS service returns for the registration number; it does not replace the policy document or insurer's own claims process."
+    ],
+    "sources": [
+      {
+        "label": "NIBSS 565 USSD validation services",
+        "agency": "Nigeria Inter-Bank Settlement System",
+        "url": "https://nibss-plc.com.ng/ussd-validation-services/",
+        "lastChecked": "2026-09-29"
+      }
+    ],
+    "searchTerms": [
+      "vehicle insurance validation",
+      "check car insurance",
+      "565 11",
+      "motor insurance check",
+      "NIBSS insurance validation",
+      "vehicle policy validity"
+    ],
+    "related": [],
+    "lastVerified": "2026-09-29"
   }
 ]
