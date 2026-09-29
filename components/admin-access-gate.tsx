@@ -17,7 +17,7 @@ export function AdminAccessGate({ configured }: { configured: boolean }) {
     const form = new FormData(formElement);
 
     try {
-      const response = await fetch("/api/admin/access", {
+      const response = await fetch("/admin/api/access", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password: form.get("password") }),
