@@ -1,12 +1,15 @@
 import { expect, test } from "@playwright/test";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { categorySlug } from "@/lib/category";
+import { growthHubs } from "@/lib/growth-hubs";
+import { getRelatedServices } from "@/lib/internal-links";
 
 const staticRoutes = ["/", "/services", "/fees", "/updates", "/offices", "/official-portals", "/saved", "/assistant", "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact"];
 const routes = [
   ...staticRoutes,
   ...categories.map((category) => "/categories/" + categorySlug(category.name)),
   ...agencies.map((agency) => "/agencies/" + agency.slug),
+  ...growthHubs.map((hub) => "/topics/" + hub.slug),
   ...publicServices.map((service) => "/services/" + service.slug),
 ];
 
@@ -35,6 +38,30 @@ test("every public route loads and has no broken internal links", async ({ page,
       checked.add(path);
       const linked = await request.get(path, { failOnStatusCode: false });
       expect(linked.status(), route + " -> " + href).toBeLessThan(400);
+    }
+  }
+});
+
+test("every guide in a multi-guide category receives a service-to-service crawl path", () => {
+  const incoming = new Map(publicServices.map((service) => [service.slug, 0]));
+
+  for (const service of publicServices) {
+    const related = getRelatedServices(service, 6);
+    for (const item of related) incoming.set(item.slug, (incoming.get(item.slug) ?? 0) + 1);
+  }
+
+  for (const service of publicServices) {
+    const categorySize = publicServices.filter((item) => item.category === service.category).length;
+    if (categorySize > 1) {
+      expect(getRelatedServices(service, 6).length, service.slug + " related guide count").toBeGreaterThan(0);
+      expect(incoming.get(service.slug), service.slug + " incoming service links").toBeGreaterThan(0);
+    }
+  }
+
+  for (const hub of growthHubs) {
+    expect(hub.serviceSlugs.length, hub.slug + " hub size").toBeGreaterThan(1);
+    for (const serviceSlug of hub.serviceSlugs) {
+      expect(publicServices.some((service) => service.slug === serviceSlug), hub.slug + " -> " + serviceSlug).toBeTruthy();
     }
   }
 });

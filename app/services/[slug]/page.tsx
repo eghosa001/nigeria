@@ -22,6 +22,7 @@ import { categorySlug } from "@/lib/category";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getGrowthHubsForService } from "@/lib/growth-hubs";
+import { getRelatedServices } from "@/lib/internal-links";
 import { getServiceSearchAnswers } from "@/lib/search-answers";
 import { getSiteUrl } from "@/lib/site";
 
@@ -106,15 +107,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       : undefined;
 
   const agency = getAgency(service.agencySlug);
-  const related = publicServices
-    .filter((item) =>
-      item.slug !== service.slug &&
-      (service.related.includes(item.slug) || item.category === service.category),
-    )
-    .sort((a, b) =>
-      Number(service.related.includes(b.slug)) - Number(service.related.includes(a.slug)),
-    )
-    .slice(0, 4);
+  const related = getRelatedServices(service, 6);
   const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
   const searchAnswers = getServiceSearchAnswers(service);
   const base = getSiteUrl();
