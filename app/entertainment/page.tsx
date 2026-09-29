@@ -4,6 +4,8 @@ import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { entertainmentTitles, getFeaturedCast, getPlatformCount } from "@/lib/entertainment";
 import { cinemaGuides, entertainmentPeople, platformGuides, releaseItems } from "@/lib/entertainment-extras";
+import { youtubeMovieLibrary, youtubePendingQualityCount } from "@/lib/youtube-library";
+import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -57,11 +59,12 @@ export default function EntertainmentPage() {
 
           <aside className="trust-panel" aria-label="Entertainment catalog snapshot">
             <div className="trust-panel-top"><span className="trust-kicker">Catalog snapshot</span><span className="trust-live"><i aria-hidden="true" />Growing</span></div>
-            <strong>{entertainmentTitles.length} movie entries</strong>
-            <p>Watch links, cinema guides and release listings carry freshness dates because entertainment availability changes quickly.</p>
+            <strong>{youtubeMovieLibrary.length.toLocaleString()} full YouTube movies</strong>
+            <p>Plus a curated cross-platform catalog for Netflix, Prime Video and selected official releases. Watch links carry freshness dates because availability changes quickly.</p>
             <div className="trust-metrics">
-              <div><strong>{getPlatformCount("YouTube")}</strong><span>YouTube full movies</span></div>
-              <div><strong>{getPlatformCount("Netflix") + getPlatformCount("Prime Video")}</strong><span>streaming titles</span></div>
+              <div><strong>{verifiedYouTubeMovieChannels.length}</strong><span>approved YouTube publishers</span></div>
+              <div><strong>{getPlatformCount("Netflix") + getPlatformCount("Prime Video")}</strong><span>curated streaming titles</span></div>
+              <div><strong>{youtubePendingQualityCount}</strong><span>held for metadata review</span></div>
             </div>
             <div className="trust-row"><span>✓</span><div><strong>Official watch links</strong><small>No piracy mirrors or scraped streaming pages.</small></div></div>
             <div className="trust-row"><span>✓</span><div><strong>Current cinema routes</strong><small>Go to the cinema's own booking or showtime page.</small></div></div>
@@ -76,7 +79,7 @@ export default function EntertainmentPage() {
             <div><span className="eyebrow">Explore entertainment</span><h2>Choose what you want to discover.</h2></div>
           </div>
           <div className="home-category-grid">
-            <Link className="home-category-card" href="/entertainment/movies"><span>Watch</span><strong>Movies</strong><small>Search Nigerian titles by actor, genre, language or platform.</small><i>Browse movies →</i></Link>
+            <Link className="home-category-card" href="/entertainment/movies"><span>Watch</span><strong>Movies</strong><small>Search curated streaming titles and jump into the ${youtubeMovieLibrary.length.toLocaleString()}-title YouTube library.</small><i>Browse movies →</i></Link>
             <Link className="home-category-card" href="/entertainment/youtube"><span>Free to watch</span><strong>YouTube movies</strong><small>Full Nigerian movies from approved producer and rightsholder channels.</small><i>Browse YouTube movies →</i></Link>
             <Link className="home-category-card" href="/entertainment/releases"><span>Current</span><strong>New &amp; upcoming</strong><small>Fresh streaming additions, films now showing and upcoming film events.</small><i>See releases →</i></Link>
             <Link className="home-category-card" href="/entertainment/cinemas"><span>Big screen</span><strong>Cinemas</strong><small>Filmhouse, Silverbird and Viva booking routes, locations and price guidance.</small><i>Find cinemas →</i></Link>
