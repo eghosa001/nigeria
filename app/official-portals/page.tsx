@@ -7,8 +7,8 @@ import { getSiteUrl } from "@/lib/site";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Official Government & Service Portals for Nigerians",
-  description: "Direct official websites for Nigerian public services and foreign visa authorities used by MyNigeriaGuide, linked to the verified guides that explain each process.",
+  title: { absolute: "Official Service Portals for Nigerians | MyNigeriaGuide" },
+  description: "Direct official websites for Nigerian public services and foreign visa authorities, linked to MyNigeriaGuide's verified process guides.",
   alternates: { canonical: "/official-portals" },
 };
 
@@ -30,7 +30,8 @@ export default function OfficialPortalsPage() {
       itemListElement: rows.map(({ agency }, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        item: { "@type": "Organization", name: agency.name, url: agency.website },
+        name: agency.name,
+        url: base + "/agencies/" + agency.slug,
       })),
     },
   };
