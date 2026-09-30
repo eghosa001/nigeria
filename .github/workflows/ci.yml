@@ -40,4 +40,4 @@ jobs:
           console.log("KV-free deployment confirmed.");
           NODE
       - name: Package Cloudflare Worker without deploying
-        run: npx wrangler deploy --dry-run --config dist/server/wrangler.json
+        run: npx wrangler deploy --dry-run
