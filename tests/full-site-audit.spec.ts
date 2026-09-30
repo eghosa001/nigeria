@@ -4,7 +4,7 @@ import { categorySlug } from "@/lib/category";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getRelatedServices } from "@/lib/internal-links";
 
-const staticRoutes = ["/", "/services", "/fees", "/updates", "/offices", "/official-portals", "/saved", "/assistant", "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact"];
+const staticRoutes = ["/", "/search", "/services", "/fees", "/updates", "/offices", "/official-portals", "/saved", "/assistant", "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact"];
 const routes = [
   ...staticRoutes,
   ...categories.map((category) => "/categories/" + categorySlug(category.name)),
@@ -86,14 +86,14 @@ test("global and section navigation work on desktop and mobile", async ({ page }
       await expect(link).toHaveAttribute("href", target);
     }
     await expect(primaryNav).toBeHidden();
-    await expect(page.locator(".mobile-header-action")).toHaveAttribute("href", "/assistant");
+    await expect(page.locator(".mobile-header-action")).toHaveAttribute("href", "/search");
   } else {
     for (const [label, target] of [
       ["Movies", "/entertainment/movies"],
       ["Services", "/services"],
       ["Tour Nigeria", "/explore"],
       ["Saved", "/saved"],
-      ["Find a guide", "/assistant"],
+      ["Search", "/search"],
     ] as const) {
       const link = primaryNav.getByRole("link", { name: label, exact: true });
       await expect(link).toBeVisible();
@@ -104,6 +104,7 @@ test("global and section navigation work on desktop and mobile", async ({ page }
   await page.goto("/services");
   const serviceNav = page.getByRole("navigation", { name: "Services guide navigation" });
   for (const [label, target] of [
+    ["Find a guide", "/assistant"],
     ["Fees", "/fees"],
     ["Offices", "/offices"],
     ["Official portals", "/official-portals"],
@@ -116,9 +117,9 @@ test("global and section navigation work on desktop and mobile", async ({ page }
   if (await page.getByRole("navigation", { name: "Mobile navigation" }).isVisible()) {
     await page.locator(".mobile-header-action").click();
   } else {
-    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Find a guide", exact: true }).click();
+    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Search", exact: true }).click();
   }
-  await expect(page).toHaveURL(/\/assistant(?:$|\?)/);
+  await expect(page).toHaveURL(/\/search(?:$|\?)/);
 });
 
 test("admin workspace exposes the full content operation areas", async ({ page }) => {
