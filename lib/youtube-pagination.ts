@@ -1,6 +1,7 @@
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 
-export const YOUTUBE_CATALOG_PAGE_SIZE = 48;
+export { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 
 export function getYouTubeCatalogPageCount() {
   return Math.max(1, Math.ceil(youtubeMovieLibrary.length / YOUTUBE_CATALOG_PAGE_SIZE));
