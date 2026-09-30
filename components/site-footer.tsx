@@ -20,7 +20,8 @@ export function SiteFooter() {
           </div>
           <div>
             <strong>Useful</strong>
-            <Link href="/assistant">Find a guide</Link>
+            <Link href="/search">Search the whole site</Link>
+            <Link href="/assistant">Find a service guide</Link>
             <Link href="/saved">Saved</Link>
             <Link href="/fees">Fees</Link>
             <Link href="/latest">Latest additions</Link>
