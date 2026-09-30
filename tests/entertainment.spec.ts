@@ -251,3 +251,16 @@ test("new curated YouTube movie batch exposes official full-movie sources", asyn
   }
 });
 
+test("curated YouTube records resolve to one canonical movie URL", async ({ page, request }) => {
+  await page.goto("/entertainment/youtube/HAk97psM9h0");
+  await expect(page).toHaveURL(/\/entertainment\/movies\/sibe$/);
+
+  const youtubeSitemap = await request.get("/sitemaps/youtube.xml");
+  expect(youtubeSitemap.ok()).toBeTruthy();
+  expect(await youtubeSitemap.text()).not.toContain("/entertainment/youtube/HAk97psM9h0");
+
+  const movieSitemap = await request.get("/sitemaps/movies.xml");
+  expect(movieSitemap.ok()).toBeTruthy();
+  expect(await movieSitemap.text()).toContain("/entertainment/movies/sibe");
+});
+
