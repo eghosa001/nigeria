@@ -48,6 +48,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/services/bvn-change-details",
+        destination: "/topics/bvn",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],
         destination: "https://mynigeriaguide.com/:path*",

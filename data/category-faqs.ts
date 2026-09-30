@@ -314,10 +314,10 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       relatedSlugs: ["bvn-retrieval"]
     },
     {
-      question: "How do I change a wrong name, phone number or other BVN detail?",
-      answer: "Use the bank or authorised update process described in the BVN change-details guide. The documents and verification needed depend on the field being corrected, so do not rely on an unofficial agent.",
-      source: { label: "CBN BVN guidance", url: "https://www.cbn.gov.ng/PaymentsSystem/BVN.html" },
-      relatedSlugs: ["bvn-change-details"]
+      question: "How can I check whether a recent NIP bank transfer succeeded?",
+      answer: "NIBSS provides the *565*5# NIP Transaction Tracker for transfers completed within the previous 48 hours. Use the sender's registered phone number, account number and transaction amount to check the status.",
+      source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
+      relatedSlugs: ["nip-transfer-status"]
     },
     {
       question: "Can a Nigerian living abroad obtain a BVN remotely?",
@@ -329,7 +329,33 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       question: "Can someone under 18 enrol for a BVN, and how often can the BVN-linked phone number be changed?",
       answer: "Under the CBN amendment effective 1 May 2026, only people aged 18 and above may enrol for a BVN. The same amendment says a BVN-linked phone number may be changed only once.",
       source: { label: "CBN reforms and BVN amendment", url: "https://www.cbn.gov.ng/AboutCBN/Reforms.html" },
-      relatedSlugs: ["bvn-enrolment", "bvn-change-details"]
+      relatedSlugs: ["bvn-enrolment"]
+    }
+  ],
+  "Insurance": [
+    {
+      question: "How can I check whether a vehicle insurance policy is valid?",
+      answer: "NIBSS provides *565*11# as an official USSD validation service. Enter the vehicle registration number and the service returns the policy-validity information available for that registration.",
+      source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
+      relatedSlugs: ["vehicle-insurance-validation-ussd"]
+    },
+    {
+      question: "How much does the NIBSS vehicle-insurance validation check cost?",
+      answer: "NIBSS currently states that the *565*11# validation lookup has a ₦20 service fee. Keep enough airtime on the line before starting the USSD session.",
+      source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
+      relatedSlugs: ["vehicle-insurance-validation-ussd"]
+    },
+    {
+      question: "What does 'vehicle registration number not found' mean on *565*11#?",
+      answer: "NIBSS says this response can mean the registration number is invalid, the vehicle has never had valid insurance cover, or its previous cover expired more than one year ago. Recheck the registration number and contact the insurer if a current policy should exist.",
+      source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
+      relatedSlugs: ["vehicle-insurance-validation-ussd"]
+    },
+    {
+      question: "Does a successful *565*11# check replace the motor-insurance policy document?",
+      answer: "No. The USSD service is a validation check for the registration number. Keep the insurer-issued policy evidence and use the insurer's own claims or correction process when you need policy servicing.",
+      source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
+      relatedSlugs: ["vehicle-insurance-validation-ussd"]
     }
   ],
   "International travel": [
