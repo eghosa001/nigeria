@@ -34,8 +34,8 @@ function youtubeVideoId(value: string) {
   }
 }
 
-function getYouTubeSitemapPageCount() {
-  const ids = new Set(generatedYouTubeMovies.map((movie) => movie.videoId));
+function getCuratedYouTubeVideoIds() {
+  const ids = new Set<string>();
   for (const title of entertainmentTitles) {
     for (const link of title.watchLinks) {
       if (link.platform !== "YouTube" || link.access !== "full-movie") continue;
@@ -43,6 +43,12 @@ function getYouTubeSitemapPageCount() {
       if (videoId) ids.add(videoId);
     }
   }
+  return ids;
+}
+
+function getYouTubeSitemapPageCount() {
+  const ids = new Set(generatedYouTubeMovies.map((movie) => movie.videoId));
+  for (const videoId of getCuratedYouTubeVideoIds()) ids.add(videoId);
   return Math.max(1, Math.ceil(ids.size / YOUTUBE_CATALOG_PAGE_SIZE));
 }
 
@@ -139,14 +145,18 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     lastModified: youtubeModified,
   }));
 
+  const curatedVideoIds = getCuratedYouTubeVideoIds();
+
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     { url: base + "/entertainment/youtube/sources", lastModified: youtubeModified },
     ...pagination,
-    ...generatedYouTubeMovies.map((movie) => ({
-      url: base + "/entertainment/youtube/" + movie.videoId,
-      lastModified: movie.lastChecked,
-    })),
+    ...generatedYouTubeMovies
+      .filter((movie) => !curatedVideoIds.has(movie.videoId))
+      .map((movie) => ({
+        url: base + "/entertainment/youtube/" + movie.videoId,
+        lastModified: movie.lastChecked,
+      })),
   ];
 }
 

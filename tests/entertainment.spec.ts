@@ -235,3 +235,32 @@ test("people profile credits grow from cast data beyond manually seeded titles",
   await expect(page.getByRole("link", { name: "Teni's Big Day", exact: true })).toBeVisible();
   await expect(page.getByText(/Current legal availability across these records is tracked on/i)).toBeVisible();
 });
+
+test("new curated YouTube movie batch exposes official full-movie sources", async ({ page }) => {
+  for (const [slug, title, href] of [
+    ["sibe", "Sibe", "https://www.youtube.com/watch?v=HAk97psM9h0"],
+    ["millionaire-until-morning", "Millionaire Until Morning", "https://www.youtube.com/watch?v=pG_962LtEf8"],
+    ["monica", "Monica", "https://www.youtube.com/watch?v=-yVrN03f610"],
+    ["fruit-covenant", "Fruit Covenant", "https://www.youtube.com/watch?v=OLmUOAjZqOg"],
+    ["bowale", "Bowale", "https://www.youtube.com/watch?v=GrxitJ4fHT8"],
+  ] as const) {
+    await page.goto("/entertainment/movies/" + slug);
+    await expect(page.getByRole("heading", { level: 1, name: title, exact: true })).toBeVisible();
+    await expect(page.getByRole("link", { name: /Watch the full movie on YouTube/i }).first()).toHaveAttribute("href", href);
+    await expect(page.locator(".movie-detail-artwork [data-artwork-source='youtube']")).toBeVisible();
+  }
+});
+
+test("curated YouTube records resolve to one canonical movie URL", async ({ page, request }) => {
+  await page.goto("/entertainment/youtube/HAk97psM9h0");
+  await expect(page).toHaveURL(/\/entertainment\/movies\/sibe$/);
+
+  const youtubeSitemap = await request.get("/sitemaps/youtube.xml");
+  expect(youtubeSitemap.ok()).toBeTruthy();
+  expect(await youtubeSitemap.text()).not.toContain("/entertainment/youtube/HAk97psM9h0");
+
+  const movieSitemap = await request.get("/sitemaps/movies.xml");
+  expect(movieSitemap.ok()).toBeTruthy();
+  expect(await movieSitemap.text()).toContain("/entertainment/movies/sibe");
+});
+

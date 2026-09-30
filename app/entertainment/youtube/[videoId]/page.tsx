@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   return {
     title: movie.title + " — Cast, Details & Watch Free on YouTube",
     description: movie.synopsis,
-    alternates: { canonical: "/entertainment/youtube/" + movie.videoId },
+    alternates: { canonical: movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId },
   };
 }
 
@@ -39,6 +39,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   const { videoId } = await params;
   const movie = getYouTubeMovieById(videoId);
   if (!movie) notFound();
+  if (movie.source === "curated") redirect(movie.internalHref);
 
   const base = getSiteUrl();
   const publisherSource = verifiedYouTubeMovieChannels.find((source) => source.name === movie.channelName);
