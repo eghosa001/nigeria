@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentCatalog } from "@/components/entertainment-catalog";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { entertainmentPlatforms, entertainmentTitles, getEntertainmentGenres } from "@/lib/entertainment";
+import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
@@ -24,6 +25,7 @@ export default async function MoviesPage({
   const genres = getEntertainmentGenres();
   const initialGenre = params.genre && genres.includes(params.genre) ? params.genre : "all";
   const freePreview = youtubeMovieLibrary.slice(0, 10);
+  const catalogPageCount = getEntertainmentCatalogPageCount();
 
   return (
     <>
@@ -86,6 +88,12 @@ export default async function MoviesPage({
             initialPlatform={initialPlatform ?? "all"}
             initialGenre={initialGenre}
           />
+          {catalogPageCount > 1 ? (
+            <nav className="movie-pagination" aria-label="Curated movie catalog pages">
+              <span>Page 1 of {catalogPageCount}</span>
+              <Link prefetch={false} href="/entertainment/movies/page/2">Next →</Link>
+            </nav>
+          ) : null}
         </div>
       </section>
     </>
