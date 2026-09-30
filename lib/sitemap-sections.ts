@@ -1,11 +1,11 @@
+import generatedYouTubeData from "@/data/youtube-movies.generated.json";
 import { categorySlug } from "@/lib/category";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
-import { generatedYouTubeMovies } from "@/lib/youtube-library";
-import { getYouTubeCatalogPageCount } from "@/lib/youtube-pagination";
+import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
@@ -16,6 +16,35 @@ export type SitemapEntry = {
   url: string;
   lastModified: string;
 };
+
+type SitemapYouTubeMovie = {
+  videoId: string;
+  lastChecked: string;
+};
+
+const generatedYouTubeMovies = generatedYouTubeData.movies as SitemapYouTubeMovie[];
+
+function youtubeVideoId(value: string) {
+  try {
+    const parsed = new URL(value);
+    if (parsed.hostname === "youtu.be") return parsed.pathname.slice(1);
+    return parsed.searchParams.get("v");
+  } catch {
+    return null;
+  }
+}
+
+function getYouTubeSitemapPageCount() {
+  const ids = new Set(generatedYouTubeMovies.map((movie) => movie.videoId));
+  for (const title of entertainmentTitles) {
+    for (const link of title.watchLinks) {
+      if (link.platform !== "YouTube" || link.access !== "full-movie") continue;
+      const videoId = youtubeVideoId(link.href);
+      if (videoId) ids.add(videoId);
+    }
+  }
+  return Math.max(1, Math.ceil(ids.size / YOUTUBE_CATALOG_PAGE_SIZE));
+}
 
 function latestDate(values: string[]) {
   return values.reduce((latest, value) => value > latest ? value : latest, "");
@@ -105,7 +134,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   }
 
   const youtubeModified = latestDate(generatedYouTubeMovies.map((movie) => movie.lastChecked)) || movieCatalogModified;
-  const pagination = Array.from({ length: Math.max(0, getYouTubeCatalogPageCount() - 1) }, (_, index) => ({
+  const pagination = Array.from({ length: Math.max(0, getYouTubeSitemapPageCount() - 1) }, (_, index) => ({
     url: base + "/entertainment/youtube/page/" + (index + 2),
     lastModified: youtubeModified,
   }));
