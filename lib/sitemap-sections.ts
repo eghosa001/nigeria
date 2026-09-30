@@ -3,6 +3,7 @@ import { categorySlug } from "@/lib/category";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
+import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
@@ -128,6 +129,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
       { url: base + "/entertainment/people", lastModified: movieCatalogModified },
       { url: base + "/entertainment/image-rights", lastModified: movieCatalogModified },
+      ...Array.from({ length: Math.max(0, getEntertainmentCatalogPageCount() - 1) }, (_, index) => ({
+        url: base + "/entertainment/movies/page/" + (index + 2),
+        lastModified: movieCatalogModified,
+      })),
       ...entertainmentTitles.map((title) => ({
         url: base + "/entertainment/movies/" + title.slug,
         lastModified: movieModified(title) || movieCatalogModified,

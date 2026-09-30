@@ -264,3 +264,18 @@ test("curated YouTube records resolve to one canonical movie URL", async ({ page
   expect(await movieSitemap.text()).toContain("/entertainment/movies/sibe");
 });
 
+
+
+test("curated movie catalog exposes crawlable internal pagination", async ({ page, request }) => {
+  await page.goto("/entertainment/movies");
+  const pagination = page.getByRole("navigation", { name: "Curated movie catalog pages" });
+  await expect(pagination.getByRole("link", { name: "Next →" })).toHaveAttribute("href", "/entertainment/movies/page/2");
+
+  await page.goto("/entertainment/movies/page/2");
+  await expect(page.locator(".movie-tile")).toHaveCount(30);
+  await expect(page.getByRole("link", { name: "← Previous" })).toHaveAttribute("href", "/entertainment/movies");
+
+  const sitemap = await request.get("/sitemaps/movies.xml");
+  expect(sitemap.ok()).toBeTruthy();
+  expect(await sitemap.text()).toContain("/entertainment/movies/page/2");
+});
