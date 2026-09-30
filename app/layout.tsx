@@ -41,7 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     description: siteDescription,
     potentialAction: {
       "@type": "SearchAction",
-      target: siteUrl + "/services?q={search_term_string}",
+      target: siteUrl + "/search?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
