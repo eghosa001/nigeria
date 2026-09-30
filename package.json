@@ -25,7 +25,9 @@
     "sync:youtube-entertainment": "node scripts/sync-youtube-entertainment.mjs",
     "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs",
     "check:explore": "tsx scripts/check-explore-content.ts",
-    "check:crawl-resilience": "node scripts/check-crawl-resilience.mjs"
+    "check:crawl-resilience": "node scripts/check-crawl-resilience.mjs",
+    "postbuild": "node scripts/write-wrangler-deploy-config.mjs",
+    "postbuild:vinext": "node scripts/write-wrangler-deploy-config.mjs"
   },
   "dependencies": {
     "next": "16.3.6",
