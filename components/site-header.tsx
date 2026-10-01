@@ -119,7 +119,7 @@ export function SiteHeader() {
               <NavIcon name="search" />
               <span>Search</span>
             </Link>
-            <Link className="mobile-header-action" href="/admin" aria-label="Admin login">
+            <Link className="mobile-admin-action" href="/admin" aria-label="Admin login">
               <NavIcon name="admin" />
               <span>Admin</span>
             </Link>
