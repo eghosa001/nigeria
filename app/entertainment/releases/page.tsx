@@ -22,15 +22,12 @@ export default function EntertainmentReleasesPage() {
     <section className="section page-top">
       <div className="container">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Entertainment", href: "/entertainment" }, { label: "New & upcoming" }]} />
-        <span className="eyebrow">Freshness-first entertainment</span>
+        <span className="eyebrow">New releases</span>
         <h1>New, now showing and upcoming.</h1>
-        <p className="page-intro">This page is intentionally date-sensitive. Each item links back to the platform, cinema or event organizer that controls the live information.</p>
-
         <div className="movie-section-heading top-gap">
           <div>
             <span className="eyebrow">Latest official uploads</span>
-            <h2>New Nigerian movies on YouTube.</h2>
-            <p>This shelf updates from approved publisher channels and is ordered by publication date.</p>
+            <h2>Latest Nigerian movies on YouTube.</h2>
           </div>
         </div>
         <div className="youtube-movie-grid movie-preview-grid">
