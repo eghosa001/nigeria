@@ -126,7 +126,7 @@ async function resolveChannel(source) {
   const channelId = knownChannelId(source);
   if (channelId) {
     const details = await youtube("channels", {
-      part: "snippet,contentDetails,status",
+      part: "snippet,contentDetails,status,statistics",
       id: channelId,
     });
     const resolved = verifiedChannelRecord(source, details.items?.[0]);
@@ -222,7 +222,7 @@ function durationSeconds(iso) {
   return Number(match[1] ?? 0) * 3600 + Number(match[2] ?? 0) * 60 + Number(match[3] ?? 0);
 }
 
-const excludeTitle = /\b(trailer|teaser|behind\s+the\s+scenes|\bbts\b|clip\b|short\s+film|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|soundtrack|music\s+video|making\s+of|preview)\b/i;
+const excludeTitle = /\b(trailer|teaser|behind\s+the\s+scenes|\bbts\b|clip\b|short\s+film|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|soundtrack|music\s+video|making\s+of|preview|concert|live\s*stream|livestream|watch\s+party|webinar)\b/i;
 const positiveMovie = /\b(full\s+movie|full\s+film|nollywood|nigerian\s+movie|african\s+movie|latest\s+movie|movie\b|film\b)/i;
 
 function isMovie(video) {
@@ -512,7 +512,8 @@ for (const source of registry.sources) {
     const title = cleanTitle(video.snippet?.title, cast);
     const synopsis = synopsisFromDescription(video, title, channel.channelTitle, cast);
     const seconds = durationSeconds(video.contentDetails?.duration);
-    if (!cast.length) {
+    const castPending = cast.length === 0;
+    if (castPending) {
       pendingQualityCount++;
       pendingThisRun++;
       pendingByVideoId.set(video.id, {
@@ -531,10 +532,10 @@ for (const source of registry.sources) {
           .trim()
           .slice(0, 1800),
       });
-      continue;
+    } else {
+      pendingByVideoId.delete(video.id);
     }
 
-    pendingByVideoId.delete(video.id);
     const publishedAt = video.snippet?.publishedAt ?? now.toISOString();
     moviesByVideoId.set(video.id, {
       videoId: video.id,
@@ -549,6 +550,8 @@ for (const source of registry.sources) {
       publishedAt,
       year: yearFor(video),
       durationMinutes: Math.round(seconds / 60),
+      viewCount: Number(video.statistics?.viewCount ?? 0),
+      metadataStatus: castPending ? "cast-pending" : "complete",
       videoUrl: "https://www.youtube.com/watch?v=" + video.id,
       lastChecked: checkedDate,
     });
@@ -570,15 +573,16 @@ for (const source of registry.sources) {
       console.error("YouTube Data API quota exhausted. Existing catalog files are preserved.");
       throw error;
     }
-    sourceErrors.push({ slug: source.slug, name: source.searchName, message });
+    sourceErrors.push({ slug: source.slug, name: source.searchName, optional: source.optional === true, message });
     console.error("Source skipped:", source.searchName, "-", message);
   }
 }
 
-if (fullSync && sourceErrors.length > 0) {
+const requiredSourceErrors = sourceErrors.filter((error) => !error.optional);
+if (fullSync && requiredSourceErrors.length > 0) {
   console.error(
-    "Full sync aborted because " + sourceErrors.length +
-    " approved source(s) failed. Existing catalog files are preserved.",
+    "Full sync aborted because " + requiredSourceErrors.length +
+    " required approved source(s) failed. Existing catalog files are preserved.",
   );
   process.exit(3);
 }
@@ -627,6 +631,7 @@ await fs.writeFile(outputPath, JSON.stringify({
   pendingThisRun,
   duplicateTitleCount,
   failedSourceCount: sourceErrors.length,
+  requiredFailedSourceCount: requiredSourceErrors.length,
   sourceErrors,
   movies,
 }, null, 2) + "\n");
