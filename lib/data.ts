@@ -137,6 +137,76 @@ export const agencies: Agency[] = [
     "website": "https://revenue.lagosstate.gov.ng"
   },
   {
+    "slug": "ncc",
+    "name": "Nigerian Communications Commission",
+    "shortName": "NCC",
+    "description": "Telecommunications regulation, SIM-NIN linkage and consumer information.",
+    "website": "https://www.ncc.gov.ng"
+  },
+  {
+    "slug": "nelfund",
+    "name": "Nigerian Education Loan Fund",
+    "shortName": "NELFUND",
+    "description": "Federal student-loan application, disbursement and repayment services.",
+    "website": "https://nelf.gov.ng"
+  },
+  {
+    "slug": "nerc",
+    "name": "Nigerian Electricity Regulatory Commission",
+    "shortName": "NERC",
+    "description": "Electricity metering, billing, tariffs and consumer-redress guidance.",
+    "website": "https://nerc.gov.ng"
+  },
+  {
+    "slug": "nhia",
+    "name": "National Health Insurance Authority",
+    "shortName": "NHIA",
+    "description": "National health-insurance enrolment and coverage programmes.",
+    "website": "https://www.nhia.gov.ng"
+  },
+  {
+    "slug": "pencom",
+    "name": "National Pension Commission",
+    "shortName": "PenCom",
+    "description": "Retirement Savings Accounts, pension transfers and contribution complaints.",
+    "website": "https://www.pencom.gov.ng"
+  },
+  {
+    "slug": "nafdac",
+    "name": "National Agency for Food and Drug Administration and Control",
+    "shortName": "NAFDAC",
+    "description": "Registration, renewal and verification of regulated products.",
+    "website": "https://www.nafdac.gov.ng"
+  },
+  {
+    "slug": "fccpc",
+    "name": "Federal Competition and Consumer Protection Commission",
+    "shortName": "FCCPC",
+    "description": "Consumer complaints, redress and competition/consumer-protection services.",
+    "website": "https://fccpc.gov.ng"
+  },
+  {
+    "slug": "fmbn",
+    "name": "Federal Mortgage Bank of Nigeria",
+    "shortName": "FMBN",
+    "description": "National Housing Fund contributions, mortgages and refunds.",
+    "website": "https://fmbn.gov.ng"
+  },
+  {
+    "slug": "ncs",
+    "name": "Nigeria Customs Service",
+    "shortName": "NCS",
+    "description": "Customs clearance, vehicle verification and trade-related services.",
+    "website": "https://customs.gov.ng"
+  },
+  {
+    "slug": "interior",
+    "name": "Federal Ministry of Interior",
+    "shortName": "Ministry of Interior",
+    "description": "Federal statutory marriage registration and document services.",
+    "website": "https://interior.gov.ng"
+  },
+  {
     "slug": "ukvi",
     "name": "UK Visas and Immigration",
     "shortName": "UKVI",
@@ -270,6 +340,42 @@ export const categories = [
   {
     "name": "Insurance",
     "description": "Official policy-validation and insurance verification services."
+  },
+  {
+    "name": "Telecommunications",
+    "description": "SIM registration, NIN linkage and telecom consumer services."
+  },
+  {
+    "name": "Student finance",
+    "description": "Federal student-loan application, disbursement and repayment services."
+  },
+  {
+    "name": "Electricity",
+    "description": "Metering, billing, tariffs and electricity complaint services."
+  },
+  {
+    "name": "Health insurance",
+    "description": "NHIA enrolment and health-insurance programme guidance."
+  },
+  {
+    "name": "Pensions",
+    "description": "Retirement Savings Account and pension contribution services."
+  },
+  {
+    "name": "Product regulation",
+    "description": "NAFDAC product registration, renewal and verification services."
+  },
+  {
+    "name": "Consumer protection",
+    "description": "Consumer complaints and redress services."
+  },
+  {
+    "name": "Housing",
+    "description": "NHF contributions, mortgages and housing-finance services."
+  },
+  {
+    "name": "Customs",
+    "description": "Vehicle customs verification and customs digital services."
   },
   {
     "name": "International travel",
