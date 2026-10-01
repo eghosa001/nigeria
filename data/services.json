@@ -7081,7 +7081,7 @@
     "feeNote": "Where the Customs verification system generates a payment, rely on that official amount and reference rather than a third-party quote.",
     "timeline": "Online verification depends on the vehicle record and the current Customs verification system.",
     "status": "verified",
-    "officialPortal": "https://customs.gov.ng/",
+    "officialPortal": "https://cvms.nigeriatradehub.gov.ng/",
     "requirements": [
       "Vehicle chassis/VIN",
       "Import/clearance documents or duty-payment information available from the owner/seller",
@@ -7100,6 +7100,12 @@
       "Do not use unofficial 'customs checker' websites that ask for vehicle data or payment when an official NCS route is available."
     ],
     "sources": [
+      {
+        "label": "Customs Verification Management System",
+        "agency": "Nigeria Customs Service / Trade Modernisation Project",
+        "url": "https://cvms.nigeriatradehub.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
       {
         "label": "Nigeria Customs Service — official services",
         "agency": "Nigeria Customs Service",
