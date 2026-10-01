@@ -97,17 +97,17 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/youtube" className="home-path">
               <span>Free</span>
               <strong>YouTube movies</strong>
-              <small>Full movies from approved publisher channels.</small>
+              <small>Full Nigerian movies on YouTube.</small>
             </Link>
             <Link href="/entertainment/cinemas" className="home-path">
               <span>Go out</span>
               <strong>Cinemas</strong>
-              <small>Official cinema routes, locations and booking links.</small>
+              <small>Locations, showtimes and booking links.</small>
             </Link>
             <Link href="/entertainment/people" className="home-path">
               <span>Discover</span>
               <strong>Actors &amp; filmmakers</strong>
-              <small>People connected to movies in the guide.</small>
+              <small>Browse actors and filmmakers.</small>
             </Link>
           </div>
         </div>
