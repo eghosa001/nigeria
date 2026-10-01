@@ -1,4 +1,3 @@
-import generatedYouTubeData from "@/data/youtube-movies.generated.json";
 import { categorySlug } from "@/lib/category";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
@@ -7,6 +6,7 @@ import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
+import { youtubeMovieLibrary } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
@@ -17,13 +17,6 @@ export type SitemapEntry = {
   url: string;
   lastModified: string;
 };
-
-type SitemapYouTubeMovie = {
-  videoId: string;
-  lastChecked: string;
-};
-
-const generatedYouTubeMovies = generatedYouTubeData.movies as SitemapYouTubeMovie[];
 
 function youtubeVideoId(value: string) {
   try {
@@ -48,9 +41,7 @@ function getCuratedYouTubeVideoIds() {
 }
 
 function getYouTubeSitemapPageCount() {
-  const ids = new Set(generatedYouTubeMovies.map((movie) => movie.videoId));
-  for (const videoId of getCuratedYouTubeVideoIds()) ids.add(videoId);
-  return Math.max(1, Math.ceil(ids.size / YOUTUBE_CATALOG_PAGE_SIZE));
+  return Math.max(1, Math.ceil(youtubeMovieLibrary.length / YOUTUBE_CATALOG_PAGE_SIZE));
 }
 
 function latestDate(values: string[]) {
@@ -144,20 +135,18 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     ];
   }
 
-  const youtubeModified = latestDate(generatedYouTubeMovies.map((movie) => movie.lastChecked)) || movieCatalogModified;
+  const youtubeModified = latestDate(youtubeMovieLibrary.map((movie) => movie.lastChecked)) || movieCatalogModified;
   const pagination = Array.from({ length: Math.max(0, getYouTubeSitemapPageCount() - 1) }, (_, index) => ({
     url: base + "/entertainment/youtube/page/" + (index + 2),
     lastModified: youtubeModified,
   }));
 
-  const curatedVideoIds = getCuratedYouTubeVideoIds();
-
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     { url: base + "/entertainment/youtube/sources", lastModified: youtubeModified },
     ...pagination,
-    ...generatedYouTubeMovies
-      .filter((movie) => !curatedVideoIds.has(movie.videoId))
+    ...youtubeMovieLibrary
+      .filter((movie) => movie.source !== "curated")
       .map((movie) => ({
         url: base + "/entertainment/youtube/" + movie.videoId,
         lastModified: movie.lastChecked,
