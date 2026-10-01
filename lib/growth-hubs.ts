@@ -257,6 +257,26 @@ export const growthHubs: GrowthHub[] = [
       { query: "NSITF compliance certificate", serviceSlug: "nsitf-compliance-certificate" }
     ],
     serviceSlugs: ["nde-rhei-registration", "itf-employer-registration", "itf-compliance-certificate", "nsitf-employer-registration", "nsitf-workplace-injury-claim", "nsitf-compliance-certificate"]
+  },,
+  {
+    slug: "state-services-nigeria",
+    title: "State Government Services in Nigeria",
+    shortTitle: "State services",
+    description: "Official state-level tax, resident identity, property and compliance guides for Lagos, FCT, Ogun, Rivers, Edo and Anambra.",
+    intro: [
+      "State-government services are not interchangeable across Nigeria. A Lagos Payer ID, FCT tax record, Ogun S-TIN, Rivers RIVTIN, Edo Tax ID and Anambra ASIN belong to different state systems.",
+      "Use this hub to start with the correct state portal for resident registration, tax clearance, property charges and related state services instead of applying through a federal or another state's system."
+    ],
+    searches: [
+      { query: "LASRRA registration", serviceSlug: "lagos-lasrra-registration" },
+      { query: "Lagos Land Use Charge", serviceSlug: "lagos-land-use-charge" },
+      { query: "Lagos tax clearance verification", serviceSlug: "lagos-tax-clearance-verification" },
+      { query: "FCT tax clearance certificate", serviceSlug: "fct-tax-clearance-application" },
+      { query: "Ogun tax clearance certificate", serviceSlug: "ogun-tax-clearance-certificate" },
+      { query: "RIVTIN registration", serviceSlug: "rivers-rivtin-registration" },
+      { query: "Rivers tax clearance certificate", serviceSlug: "rivers-tax-clearance-certificate" }
+    ],
+    serviceSlugs: ["lagos-lasrra-registration", "lagos-payer-id", "lagos-land-use-charge", "lagos-tax-clearance-verification", "lagos-building-completion-certificate", "fct-file-individual-tax-return", "fct-tax-clearance-application", "fct-verify-tax-clearance", "ogun-taxpayer-registration", "ogun-tax-clearance-certificate", "rivers-rivtin-registration", "rivers-tax-clearance-certificate", "edo-tax-id-access", "anambra-asin-registration"]
   },
 ];
 
