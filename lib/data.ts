@@ -263,6 +263,20 @@ export const agencies: Agency[] = [
     "website": "https://nde.gov.ng"
   },
   {
+    "slug": "scuml",
+    "name": "Special Control Unit Against Money Laundering",
+    "shortName": "SCUML",
+    "description": "EFCC registration, certification and verification for designated non-financial businesses and professions.",
+    "website": "https://scuml.efcc.gov.ng"
+  },
+  {
+    "slug": "itf",
+    "name": "Industrial Training Fund",
+    "shortName": "ITF",
+    "description": "Employer registration, statutory training contributions and compliance certificates.",
+    "website": "https://www.itf.gov.ng"
+  },
+  {
     "slug": "ukvi",
     "name": "UK Visas and Immigration",
     "shortName": "UKVI",
