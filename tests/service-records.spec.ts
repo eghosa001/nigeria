@@ -179,7 +179,16 @@ const expectedSlugs = [
   "scuml-certificate-verification",
   "pencom-pension-clearance-certificate",
   "itf-employer-registration",
-  "itf-compliance-certificate"
+  "itf-compliance-certificate",
+  "lagos-lasrra-registration",
+  "lagos-land-use-charge",
+  "lagos-tax-clearance-verification",
+  "lagos-building-completion-certificate",
+  "fct-tax-clearance-application",
+  "ogun-taxpayer-registration",
+  "ogun-tax-clearance-certificate",
+  "rivers-rivtin-registration",
+  "rivers-tax-clearance-certificate"
 ] as const;
 const representative = [
   {
@@ -296,8 +305,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(174);
-  expect(publicServices).toHaveLength(173);
+  expect(services).toHaveLength(183);
+  expect(publicServices).toHaveLength(182);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
