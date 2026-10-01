@@ -8975,7 +8975,8 @@
       "scuml-certificate-verification",
       "cac-company-registration",
       "cac-business-name-registration"
-    ]
+    ],
+    "lastVerified": "2026-10-01"
   },
   {
     "slug": "scuml-certificate-verification",
@@ -9027,7 +9028,8 @@
     "related": [
       "scuml-certificate-registration",
       "cac-status-report"
-    ]
+    ],
+    "lastVerified": "2026-10-01"
   },
   {
     "slug": "pencom-pension-clearance-certificate",
@@ -9094,7 +9096,8 @@
       "itf-compliance-certificate",
       "nsitf-compliance-certificate",
       "bpp-contractor-registration"
-    ]
+    ],
+    "lastVerified": "2026-10-01"
   },
   {
     "slug": "itf-employer-registration",
@@ -9152,7 +9155,8 @@
       "itf-compliance-certificate",
       "bpp-contractor-registration",
       "nsitf-employer-registration"
-    ]
+    ],
+    "lastVerified": "2026-10-01"
   },
   {
     "slug": "itf-compliance-certificate",
@@ -9217,6 +9221,7 @@
       "pencom-pension-clearance-certificate",
       "nsitf-compliance-certificate",
       "bpp-contractor-registration"
-    ]
+    ],
+    "lastVerified": "2026-10-01"
   }
 ]
