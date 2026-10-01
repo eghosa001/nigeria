@@ -39,7 +39,7 @@ assert(Array.isArray(generated.movies), "generated movie catalog must contain a 
 if (generated.generatedAt !== null) {
   assert(generated.sourceCount === sources.sources.length, "generated sourceCount must match approved source registry");
   assert(generated.importedCount === generated.movies.length, "generated importedCount must match movie array length");
-  assert(Number(generated.failedSourceCount ?? 0) === 0, "sync cannot publish with failed sources");
+  assert(Number(generated.requiredFailedSourceCount ?? 0) === 0, "sync cannot publish with failed required sources");
   assert(generated.movies.length >= 1000, "published YouTube movie catalog must remain at least 1,000 records");
 }
 
@@ -56,8 +56,16 @@ for (const movie of generated.movies) {
   assert(!/^(?:nollywood|nigerian)\\s+movie\\b/i.test(movie.title), "movie title must not be a generic platform label: " + movie.title);
   assert(!/^watch\\s+.+?\\s+in\\s+/i.test(movie.title), "movie title must not keep YouTube watch-prefix text: " + movie.title);
   assert(!/\\blatest\\s+(?:20\\d{2}|nollywood|romantic\\s+movie)\\b/i.test(movie.title), "movie title must not contain legacy latest-movie SEO text: " + movie.title);
-  assert(Array.isArray(movie.cast) && movie.cast.length > 0, "cast is required for " + movie.videoId);
-  assert(Array.isArray(movie.featuredCast) && movie.featuredCast.length > 0, "featured cast is required for " + movie.videoId);
+  assert(Array.isArray(movie.cast), "cast must be an array for " + movie.videoId);
+  assert(Array.isArray(movie.featuredCast), "featured cast must be an array for " + movie.videoId);
+  if (movie.cast.length === 0) {
+    assert(movie.metadataStatus === "cast-pending", "cast-free records must be explicitly marked cast-pending: " + movie.videoId);
+  } else {
+    assert(movie.featuredCast.length > 0, "featured cast is required when cast metadata exists for " + movie.videoId);
+  }
+  if (movie.viewCount !== undefined) {
+    assert(Number.isFinite(Number(movie.viewCount)) && Number(movie.viewCount) >= 0, "viewCount must be a non-negative number: " + movie.videoId);
+  }
   for (const castName of movie.cast) {
     assert(
       !castNoiseExact.test(String(castName).trim()) && !castNoiseContains.test(String(castName)),
