@@ -18,8 +18,8 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub when you need a Nigerian passport and are not sure which process applies to your situation. It separates fresh applications, renewals, applications from abroad, lost passports and data changes so you can start with the right NIS route.",
       "Each linked guide shows the current fee or status, what to prepare, the official application portal and what happens after submission or biometric enrolment."
     ],
-    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }],
-    serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-abroad", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
+    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }],
+    serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-abroad", "diaspora-contactless-passport-renewal", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
   },
   {
     slug: "nin-corrections",
@@ -54,8 +54,8 @@ export const growthHubs: GrowthHub[] = [
       "This hub brings together the JAMB tasks candidates commonly need before, during and after registration. Start with the exact task instead of searching through several unrelated pages.",
       "The guides cover official JAMB fees and routes, profile-code issues, CAPS, result slips and admission letters, with links back to JAMB sources."
     ],
-    searches: [{ query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" }, { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" }, { query: "JAMB profile code", serviceSlug: "jamb-profile-code" }, { query: "JAMB CAPS", serviceSlug: "jamb-caps" }, { query: "print JAMB result", serviceSlug: "jamb-print-result" }, { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" }],
-    serviceSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code", "jamb-retrieve-profile-code", "jamb-caps", "jamb-print-result", "jamb-admission-letter"]
+    searches: [{ query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" }, { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" }, { query: "JAMB profile code", serviceSlug: "jamb-profile-code" }, { query: "JAMB CAPS", serviceSlug: "jamb-caps" }, { query: "print JAMB result", serviceSlug: "jamb-print-result" }, { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" }, { query: "JAMB change of institution", serviceSlug: "jamb-change-course-institution" }, { query: "JAMB name correction", serviceSlug: "jamb-change-name" }, { query: "JAMB date of birth correction", serviceSlug: "jamb-correct-date-of-birth" }],
+    serviceSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code", "jamb-retrieve-profile-code", "jamb-caps", "jamb-print-result", "jamb-admission-letter", "jamb-change-course-institution", "jamb-change-name", "jamb-correct-date-of-birth", "jamb-correct-gender", "jamb-correct-state-lga"]
   },
   {
     slug: "nysc",
@@ -134,7 +134,130 @@ export const growthHubs: GrowthHub[] = [
       { query: "Netherlands visa Nigeria", serviceSlug: "netherlands-schengen-visa" }
     ],
     serviceSlugs: ["germany-schengen-tourist-visa", "france-schengen-short-stay-visa", "italy-schengen-tourist-visa", "spain-schengen-tourist-visa", "netherlands-schengen-visa"]
-  }
+  },
+  {
+    slug: "product-certification-nigeria",
+    title: "Product Registration & Certification in Nigeria",
+    shortTitle: "Product certification",
+    description: "Find the right NAFDAC or SON route for product registration, verification, MANCAP and SONCAP certification in Nigeria.",
+    intro: [
+      "Product regulation in Nigeria depends on what you make, sell or import. This hub separates NAFDAC registration from SON product registration, local-manufacturing MANCAP and import-focused SONCAP so businesses can start with the correct regulator.",
+      "Open the exact guide before paying or shipping goods. Each page keeps the official source, current fee/status guidance, required documents and the next step after submission."
+    ],
+    searches: [
+      { query: "NAFDAC product registration", serviceSlug: "nafdac-product-registration" },
+      { query: "verify NAFDAC number", serviceSlug: "nafdac-product-verification" },
+      { query: "SONCAP certificate Nigeria", serviceSlug: "soncap-import-certification" },
+      { query: "MANCAP certification", serviceSlug: "son-mancap-certification" },
+      { query: "SON product registration", serviceSlug: "son-product-registration" }
+    ],
+    serviceSlugs: ["nafdac-product-registration", "nafdac-product-verification", "nafdac-product-renewal", "soncap-import-certification", "son-mancap-certification", "son-product-registration"]
+  },
+  {
+    slug: "business-compliance-nigeria",
+    title: "Business Registration, IP, Export & Compliance Guide",
+    shortTitle: "Business compliance",
+    description: "CAC registration, trademarks and patents, SMEDAN, NEPC exporter registration, BPP contractor registration and core compliance routes in one hub.",
+    intro: [
+      "Starting a business legally is only the first layer. Depending on what the business does, it may also need intellectual-property protection, exporter registration, MSME onboarding, procurement registration or social-insurance compliance.",
+      "Use this collection to move from CAC registration into the next official service that matches the business activity instead of assuming one certificate covers every requirement."
+    ],
+    searches: [
+      { query: "register business CAC", serviceSlug: "cac-business-name-registration" },
+      { query: "trademark registration Nigeria", serviceSlug: "nipo-trademark-registration" },
+      { query: "register exporter NEPC", serviceSlug: "nepc-exporter-registration" },
+      { query: "SMEDAN registration", serviceSlug: "smedan-msme-registration" },
+      { query: "BPP contractor registration", serviceSlug: "bpp-contractor-registration" }
+    ],
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "bpp-contractor-registration", "nsitf-employer-registration", "nsitf-compliance-certificate"]
+  },
+  {
+    slug: "pension-services-nigeria",
+    title: "Pension & RSA Services in Nigeria",
+    shortTitle: "Pension services",
+    description: "Open or transfer an RSA, resolve missing pension contributions, use Micro Pension and understand the 25% job-loss withdrawal route.",
+    intro: [
+      "This hub groups the pension tasks workers and self-employed Nigerians most often need, from opening an RSA through transfers, contribution problems and access to permitted benefits.",
+      "Each guide separates what the PFA handles from what PenCom regulates, so you can use the correct route and avoid unofficial pension-withdrawal offers."
+    ],
+    searches: [
+      { query: "open RSA Nigeria", serviceSlug: "pencom-open-rsa" },
+      { query: "change PFA Nigeria", serviceSlug: "pencom-transfer-rsa" },
+      { query: "employer not paying pension", serviceSlug: "pencom-unremitted-contributions" },
+      { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
+      { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" }
+    ],
+    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration"]
+  },
+  {
+    slug: "consumer-complaints-nigeria",
+    title: "Consumer Complaint & Dispute Routes in Nigeria",
+    shortTitle: "Consumer complaints",
+    description: "Escalate unresolved bank, telecom, electricity and general consumer complaints to the correct Nigerian regulator.",
+    intro: [
+      "Many complaints fail because they are sent to the wrong regulator or escalated before the provider has been given the first opportunity to resolve them. This hub separates bank, telecom, electricity and broader consumer-protection routes.",
+      "Keep the provider ticket, transaction evidence and complaint chronology before escalating. The linked guides explain the correct regulator and what evidence to retain."
+    ],
+    searches: [
+      { query: "report bank to CBN", serviceSlug: "cbn-bank-complaint" },
+      { query: "NCC complaint", serviceSlug: "ncc-telecom-complaint" },
+      { query: "electricity complaint NERC", serviceSlug: "electricity-complaint-escalation" },
+      { query: "FCCPC consumer complaint", serviceSlug: "fccpc-consumer-complaint" }
+    ],
+    serviceSlugs: ["cbn-bank-complaint", "ncc-telecom-complaint", "electricity-complaint-escalation", "electricity-estimated-billing-dispute", "fccpc-consumer-complaint"]
+  },
+  {
+    slug: "vehicle-services-nigeria",
+    title: "Vehicle Registration, Verification & Driving Services in Nigeria",
+    shortTitle: "Vehicle services",
+    description: "Register and verify a Nigerian vehicle, check ownership, insurance and Customs clearance, and reach the correct driver's-licence guide.",
+    intro: [
+      "A vehicle can have a valid-looking plate while ownership, insurance or Customs clearance still needs separate verification. This hub groups those checks so buyers and owners can verify the right record.",
+      "Driver's-licence services are also linked here because licensing the driver and registering the vehicle are separate processes handled through different official records."
+    ],
+    searches: [
+      { query: "register vehicle Nigeria", serviceSlug: "vehicle-registration-nvis" },
+      { query: "verify number plate Nigeria", serviceSlug: "verify-vehicle-number-plate" },
+      { query: "verify vehicle ownership Nigeria", serviceSlug: "vehicle-proof-of-ownership-verification" },
+      { query: "check vehicle insurance Nigeria", serviceSlug: "vehicle-insurance-validation-ussd" },
+      { query: "verify customs duty car Nigeria", serviceSlug: "customs-vehicle-duty-verification" }
+    ],
+    serviceSlugs: ["vehicle-registration-nvis", "verify-vehicle-number-plate", "vehicle-proof-of-ownership-verification", "vehicle-insurance-validation-ussd", "customs-vehicle-duty-verification", "customs-846-non-standard-vin", "new-drivers-licence", "renew-drivers-licence"]
+  },
+  {
+    slug: "housing-finance-nigeria",
+    title: "NHF & FMBN Housing Finance Guide",
+    shortTitle: "Housing finance",
+    description: "Register for NHF, verify contributions, apply for an FMBN mortgage or renovation loan, and understand contribution refunds.",
+    intro: [
+      "Use this hub for the main Federal Mortgage Bank and National Housing Fund processes instead of treating NHF contribution, mortgage approval and refunds as the same transaction.",
+      "The linked guides explain contribution history, eligibility, current product terms and which official FMBN route to use for each housing-finance task."
+    ],
+    searches: [
+      { query: "NHF registration Nigeria", serviceSlug: "nhf-registration-and-contributions" },
+      { query: "FMBN mortgage loan", serviceSlug: "nhf-mortgage-loan" },
+      { query: "FMBN home renovation loan", serviceSlug: "fmbn-home-renovation-loan" },
+      { query: "NHF refund", serviceSlug: "nhf-contribution-refund" }
+    ],
+    serviceSlugs: ["nhf-registration-and-contributions", "nhf-mortgage-loan", "fmbn-home-renovation-loan", "nhf-contribution-refund"]
+  },
+  {
+    slug: "employment-support-nigeria",
+    title: "Employment, Skills & Worker Protection Services in Nigeria",
+    shortTitle: "Employment support",
+    description: "Find NDE job-creation programmes and NSITF employer registration, compensation claims and compliance services.",
+    intro: [
+      "This hub separates employment and skills programmes from workplace social insurance. NDE supports job creation and skills pathways, while NSITF administers the Employees' Compensation Scheme for registered employers and workers.",
+      "Use the specific guide for registration, a workplace claim or an employer compliance certificate so the correct evidence reaches the correct agency."
+    ],
+    searches: [
+      { query: "NDE registration 2026", serviceSlug: "nde-rhei-registration" },
+      { query: "NSITF registration", serviceSlug: "nsitf-employer-registration" },
+      { query: "workplace injury compensation Nigeria", serviceSlug: "nsitf-workplace-injury-claim" },
+      { query: "NSITF compliance certificate", serviceSlug: "nsitf-compliance-certificate" }
+    ],
+    serviceSlugs: ["nde-rhei-registration", "nsitf-employer-registration", "nsitf-workplace-injury-claim", "nsitf-compliance-certificate"]
+  },
 ];
 
 export function getGrowthHub(slug: string) {
