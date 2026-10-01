@@ -9739,5 +9739,204 @@
       "fct-tax-clearance-application"
     ],
     "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "cac-change-director",
+    "title": "How to add, remove or change a company director with CAC",
+    "shortTitle": "Change CAC director",
+    "summary": "How a Nigerian company files a post-incorporation director appointment, removal or change of director particulars through the CAC iCRP system.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "CAC post-incorporation filing fee applies",
+    "feeNote": "Use the current CAC fee schedule and the amount generated in iCRP for the exact director filing; late filings can attract additional charges.",
+    "timeline": "CAC's current service timelines list 12 working hours for director post-registration filings after receipt of the required documents or resolution of a query.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "The company's CAC registration number and access to the authorised iCRP account used for post-incorporation filings",
+      "The board/shareholder resolution or other corporate approval supporting the appointment, removal or change",
+      "Identity and required particulars of the incoming or affected director",
+      "Any consent, notice or supporting document required by CAC for the specific director change"
+    ],
+    "steps": [
+      "Sign in to CAC iCRP with an account authorised to file post-incorporation changes for the company.",
+      "Open the company's post-incorporation services and select the director appointment, removal or particulars-change process that matches the intended transaction.",
+      "Enter the affected director information and upload the corporate resolution, identity and consent or notice documents required by the filing.",
+      "Review the filing carefully, generate the official CAC transaction and pay the filing or late fee shown by iCRP.",
+      "Submit the application, monitor the iCRP dashboard for queries and download the updated status report or approved record after CAC completes the change."
+    ],
+    "notes": [
+      "CAC's iCRP FAQ states that post-incorporation processes are handled through the new iCRP system.",
+      "Changing a director is not the same as changing a shareholder; use the filing that matches the legal change actually approved by the company.",
+      "Check the updated company record after approval before relying on the change for banking, contracts or regulatory filings."
+    ],
+    "sources": [
+      {
+        "label": "CAC iCRP FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Companies Regulations 2021",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://pre.cac.gov.ng/assets/images/REGULATIONS-2021.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "change director CAC",
+      "add director CAC Nigeria",
+      "remove director CAC",
+      "CAC post incorporation director",
+      "CAC 7 director"
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-status-report",
+      "cac-beneficial-ownership-psc",
+      "cac-change-registered-address"
+    ]
+  },
+  {
+    "slug": "cac-change-registered-address",
+    "title": "How to change a company's registered address with CAC",
+    "shortTitle": "Change CAC registered address",
+    "summary": "How a Nigerian company updates its registered office address through CAC post-incorporation services and confirms the change on the company record.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "CAC post-incorporation filing fee applies",
+    "feeNote": "Use the current CAC fee schedule and the amount generated in iCRP for the address-change filing; late filing can attract additional charges.",
+    "timeline": "CAC's current service timelines list 12 working hours for registered-address post-registration filings after receipt of the required documents or resolution of a query.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "The company's registration number and authorised iCRP access",
+      "The full new registered-office address, including house/building number, street, locality, state and other requested address fields",
+      "The company resolution or other internal approval supporting the registered-office change when the company's governance documents require that approval",
+      "Any evidence or notice CAC requests for the specific post-incorporation filing"
+    ],
+    "steps": [
+      "Sign in to the CAC iCRP account authorised to manage the company's post-incorporation filings.",
+      "Open post-incorporation services for the company and select the registered-address change process.",
+      "Enter the new registered-office details exactly and upload the corporate approval or other supporting evidence requested by CAC.",
+      "Review the address before payment, complete the official CAC filing charge generated by iCRP and submit the application.",
+      "Track any CAC query and, after approval, download or check the updated status report to confirm that the new registered address is now on the company record."
+    ],
+    "notes": [
+      "The registered office is the legal address held by CAC; changing a trading location does not automatically update the CAC record.",
+      "CAC's service timeline page treats registered-address changes as post-registration filings.",
+      "After approval, update banks, tax records and other regulators separately where they maintain their own address records."
+    ],
+    "sources": [
+      {
+        "label": "CAC iCRP FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Companies Regulations 2021",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://pre.cac.gov.ng/assets/images/REGULATIONS-2021.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "change company address CAC",
+      "CAC registered address change",
+      "CAC post incorporation address",
+      "change office address CAC Nigeria"
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-status-report",
+      "cac-change-director"
+    ]
+  },
+  {
+    "slug": "cac-beneficial-ownership-psc",
+    "title": "How to file or update Persons with Significant Control (PSC) with CAC",
+    "shortTitle": "CAC beneficial ownership / PSC",
+    "summary": "How companies and LLPs report or update beneficial ownership information for Persons with Significant Control under CAC's PSC rules and public register.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "CAC filing rules and fees apply",
+    "feeNote": "PSC information is filed through CAC's incorporation, annual-return or amendment processes as applicable. Use the current iCRP transaction and CAC fee schedule for any paid post-incorporation filing.",
+    "timeline": "CAC's current service timelines list 12 working hours for a change of Person with Significant Control after receipt of the required filing or resolution of a query.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "The company's or LLP's CAC registration details and authorised iCRP access",
+      "The full identity and contact particulars of each natural person who meets the PSC or beneficial-owner test",
+      "Details of the shareholding, voting rights or other ownership/control basis that makes the person reportable",
+      "The date the person became, changed or ceased to be a PSC and any supporting corporate record requested by CAC"
+    ],
+    "steps": [
+      "Check CAC's PSC rules to identify which natural person or persons meet the Persons with Significant Control test before filing the ownership information.",
+      "Sign in to CAC iCRP and open the incorporation, annual-return or post-incorporation process through which the PSC information must be reported or amended.",
+      "Enter each reportable person's identity, ownership/control basis and effective date accurately, then attach any supporting record the filing requests.",
+      "Review the beneficial-ownership information, complete any official filing charge generated by iCRP and submit the transaction.",
+      "After CAC processes the filing, confirm the updated company record and use CAC's public Beneficial Ownership Register to check the published PSC information where appropriate."
+    ],
+    "notes": [
+      "CAC's PSC Regulations require companies and LLPs to submit beneficial-owner information during incorporation, annual returns, amendments and other cases determined by the Commission.",
+      "The PSC register is designed to identify the natural people who ultimately own or control an entity, not only intermediary companies.",
+      "Incorrect beneficial-ownership information can affect compliance and due-diligence checks, so changes should be filed when control changes."
+    ],
+    "sources": [
+      {
+        "label": "CAC PSC Regulations 2022",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2023/01/PSC-Regulations-2022.pdf",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Beneficial Ownership Register",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://bor.cac.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC iCRP FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "CAC beneficial ownership",
+      "CAC PSC filing",
+      "Persons with Significant Control Nigeria",
+      "update PSC CAC",
+      "beneficial owner register Nigeria"
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-annual-returns",
+      "cac-change-director",
+      "cac-status-report"
+    ]
   }
 ]
