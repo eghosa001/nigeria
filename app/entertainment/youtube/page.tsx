@@ -37,10 +37,18 @@ export default async function YouTubeMoviesPage({
     redirect("/entertainment/youtube/page/" + requestedPage);
   }
 
-  const filtered = youtubeMovieLibrary.filter((movie) => {
-    const searchable = [movie.title, movie.synopsis, ...movie.cast, movie.channelName].join(" ").toLowerCase();
-    return (!query || searchable.includes(query)) && (!channel || movie.channelName === channel);
-  });
+  const filtered = youtubeMovieLibrary
+    .filter((movie) => {
+      const searchable = [movie.title, movie.synopsis, ...movie.cast, movie.channelName].join(" ").toLowerCase();
+      return (!query || searchable.includes(query)) && (!channel || movie.channelName === channel);
+    })
+    .sort((a, b) => {
+      if (!query) return b.publishedAt.localeCompare(a.publishedAt);
+      const aTitle = a.title.toLowerCase();
+      const bTitle = b.title.toLowerCase();
+      const rank = (title: string) => title === query ? 3 : title.startsWith(query) ? 2 : title.includes(query) ? 1 : 0;
+      return rank(bTitle) - rank(aTitle) || b.publishedAt.localeCompare(a.publishedAt);
+    });
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / YOUTUBE_CATALOG_PAGE_SIZE));
   const page = Math.min(requestedPage, pageCount);
