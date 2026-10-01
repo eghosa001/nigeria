@@ -5,7 +5,7 @@ import { EntertainmentCatalog } from "@/components/entertainment-catalog";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { entertainmentPlatforms, entertainmentTitles, getEntertainmentGenres } from "@/lib/entertainment";
 import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
-import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
@@ -24,7 +24,7 @@ export default async function MoviesPage({
     : "all";
   const genres = getEntertainmentGenres();
   const initialGenre = params.genre && genres.includes(params.genre) ? params.genre : "all";
-  const freePreview = youtubeMovieLibrary.slice(0, 10);
+  const freePreview = trendingYouTubeMovies.slice(0, 10);
   const catalogPageCount = getEntertainmentCatalogPageCount();
 
   return (
@@ -58,9 +58,9 @@ export default async function MoviesPage({
         <div className="container">
           <div className="movie-section-heading">
             <div>
-              <span className="eyebrow">Watch free</span>
-              <h2>Full movies from approved YouTube publishers.</h2>
-              <p>Real video thumbnails, compact cards and direct publisher links make it easy to scan several titles at once.</p>
+              <span className="eyebrow">New &amp; trending</span>
+              <h2>Fresh Nigerian movies from approved YouTube publishers.</h2>
+              <p>Recent releases are prioritised first, with public YouTube viewing signals used when available. Every watch link stays on the original publisher platform.</p>
             </div>
             <Link href="/entertainment/youtube">Browse all free movies →</Link>
           </div>

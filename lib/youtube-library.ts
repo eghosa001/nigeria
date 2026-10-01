@@ -1,5 +1,7 @@
 import generatedData from "@/data/youtube-movies.generated.json";
+import reviewData from "@/data/youtube-movies-review.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
 export type YouTubeMovieSource = {
   videoId: string;
@@ -25,7 +27,9 @@ type BaseYouTubeMovieRecord = {
   durationMinutes: number;
   videoUrl: string;
   lastChecked: string;
-  source: "curated" | "youtube-api";
+  viewCount?: number;
+  metadataStatus?: "complete" | "cast-pending";
+  source: "curated" | "youtube-api" | "youtube-review";
   internalHref: string;
 };
 
@@ -108,7 +112,70 @@ export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]
   internalHref: "/entertainment/youtube/" + movie.videoId,
 }));
 
+type ReviewCandidate = {
+  videoId: string;
+  rawTitle: string;
+  title: string;
+  channelName: string;
+  channelUrl?: string;
+  publishedAt: string;
+  durationMinutes: number;
+  videoUrl: string;
+  reason: string;
+  descriptionExcerpt?: string;
+};
+
+const reviewGeneratedAt = String(reviewData.generatedAt ?? "").slice(0, 10) || new Date().toISOString().slice(0, 10);
+const reviewNonMovieTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|watch\s+party|webinar|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|music\s+video|making\s+of)\b/i;
+const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget)\b/i;
+
+function cleanReviewTitle(value: string) {
+  return value
+    .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
+    .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function reviewSynopsis(candidate: ReviewCandidate) {
+  const text = String(candidate.descriptionExcerpt ?? "").replace(/\s+/g, " ").trim();
+  const firstUseful = text
+    .split(/(?<=[.!?])\s+/)
+    .find((sentence) => sentence.length >= 70 && !reviewPromoText.test(sentence));
+  if (firstUseful) return firstUseful.slice(0, 360);
+  return cleanReviewTitle(candidate.title) + " is a full-length Nigerian film published by " + candidate.channelName +
+    ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
+}
+
+const reviewYouTubeMovies: BaseYouTubeMovieRecord[] = ((reviewData.candidates ?? []) as ReviewCandidate[])
+  .filter((candidate) =>
+    candidate.reason === "missing-cast" &&
+    Number(candidate.durationMinutes) >= 55 &&
+    !reviewNonMovieTitle.test(candidate.rawTitle ?? candidate.title) &&
+    isApprovedYouTubeMoviePublisher(candidate.channelName),
+  )
+  .map((candidate) => ({
+    videoId: candidate.videoId,
+    title: cleanReviewTitle(candidate.title),
+    rawTitle: candidate.rawTitle,
+    synopsis: reviewSynopsis(candidate),
+    cast: [],
+    featuredCast: [],
+    channelName: candidate.channelName,
+    channelUrl: candidate.channelUrl,
+    publishedAt: candidate.publishedAt,
+    year: Number(candidate.publishedAt.slice(0, 4)),
+    durationMinutes: candidate.durationMinutes,
+    videoUrl: candidate.videoUrl,
+    lastChecked: reviewGeneratedAt,
+    viewCount: 0,
+    metadataStatus: "cast-pending",
+    source: "youtube-review" as const,
+    internalHref: "/entertainment/youtube/" + candidate.videoId,
+  }));
+
 const byVideoIdBase = new Map<string, BaseYouTubeMovieRecord>();
+for (const movie of reviewYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
 for (const movie of generatedYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
 for (const movie of curated) {
   const discovered = byVideoIdBase.get(movie.videoId);
@@ -148,8 +215,24 @@ const byVideoId = new Map<string, YouTubeMovieRecord>(
   youtubeMovieLibrary.map((movie) => [movie.videoId, movie]),
 );
 
+function trendScore(movie: YouTubeMovieRecord) {
+  const published = Date.parse(movie.publishedAt);
+  const ageDays = Number.isFinite(published) ? Math.max(0, (Date.now() - published) / 86_400_000) : 3650;
+  const recency = Math.max(0, 120 - Math.min(ageDays, 120)) / 120;
+  const popularity = Math.log10(Math.max(0, Number(movie.viewCount ?? 0)) + 1) / 8;
+  return recency * 0.72 + Math.min(1, popularity) * 0.28;
+}
+
+export const latestYouTubeMovies = youtubeMovieLibrary;
+export const trendingYouTubeMovies = [...youtubeMovieLibrary].sort(
+  (a, b) => trendScore(b) - trendScore(a) || b.publishedAt.localeCompare(a.publishedAt),
+);
+
 export const youtubeLibraryGeneratedAt = generatedData.generatedAt as string | null;
 export const youtubePendingQualityCount = generatedData.pendingQualityCount ?? 0;
+export const youtubeReviewVisibleCount = reviewYouTubeMovies.filter(
+  (movie) => !generatedYouTubeMovies.some((generated) => generated.videoId === movie.videoId),
+).length;
 
 export function getYouTubeMovieById(videoId: string) {
   return byVideoId.get(videoId);

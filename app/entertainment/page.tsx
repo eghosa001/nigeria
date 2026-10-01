@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
+import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { JsonLd } from "@/components/json-ld";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { getSiteUrl } from "@/lib/site";
+import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies & Entertainment",
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
 
 export default function EntertainmentPage() {
   const featured = entertainmentTitles.filter((title) => title.featured).slice(0, 6);
+  const fresh = trendingYouTubeMovies.slice(0, 6);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -48,6 +51,20 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div><span className="eyebrow">New &amp; trending</span><h2>Fresh Nigerian movies.</h2></div>
+            <Link href="/entertainment/youtube">Browse all free movies →</Link>
+          </div>
+          <div className="youtube-movie-grid movie-preview-grid">
+            {fresh.map((movie, index) => (
+              <YouTubeMovieCard movie={movie} priority={index < 3} key={movie.videoId} />
+            ))}
           </div>
         </div>
       </section>

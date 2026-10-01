@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-29",
+  "checkedAt": "2026-10-01",
   "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
   "sources": [
     {
@@ -302,6 +302,305 @@
       ],
       "estimatedMovieCount": 14,
       "knownUrl": "https://www.youtube.com/channel/UCMpZ4ghi2I9GMGOICB9YRtg"
+    },
+    {
+      "slug": "uche-nancy-tv",
+      "searchName": "Uche Nancy tv",
+      "aliases": [
+        "Uche Nancy tv",
+        "Uche Nancy TV"
+      ],
+      "estimatedMovieCount": 250,
+      "knownUrl": "https://www.youtube.com/@uchenancytv"
+    },
+    {
+      "slug": "chukwudubem-tv",
+      "searchName": "Chukwudubem TV",
+      "aliases": [
+        "Chukwudubem TV"
+      ],
+      "estimatedMovieCount": 50,
+      "optional": true
+    },
+    {
+      "slug": "fespris-tv",
+      "searchName": "Fespris Tv",
+      "aliases": [
+        "Fespris Tv",
+        "Fespris TV"
+      ],
+      "estimatedMovieCount": 50,
+      "optional": true
+    },
+    {
+      "slug": "global-crown-tv",
+      "searchName": "Global Crown TV",
+      "aliases": [
+        "Global Crown TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "chizzyflix",
+      "searchName": "Chizzyflix",
+      "aliases": [
+        "Chizzyflix"
+      ],
+      "estimatedMovieCount": 50,
+      "optional": true
+    },
+    {
+      "slug": "orji-tv",
+      "searchName": "OrjiTv",
+      "aliases": [
+        "OrjiTv",
+        "Orji TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "kiki-bakare-tv",
+      "searchName": "Kiki Bakare TV",
+      "aliases": [
+        "Kiki Bakare TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "efe-irele-tv",
+      "searchName": "Efe Irele Tv",
+      "aliases": [
+        "Efe Irele Tv",
+        "Efe Irele TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "chika-ike-tv",
+      "searchName": "Chika Ike TV",
+      "aliases": [
+        "Chika Ike TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "movie-mac-tv",
+      "searchName": "Movie Mac Tv",
+      "aliases": [
+        "Movie Mac Tv",
+        "Movie Mac TV"
+      ],
+      "estimatedMovieCount": 50,
+      "optional": true
+    },
+    {
+      "slug": "awele-hansel-tv-365",
+      "searchName": "Awele Hansel TV 365",
+      "aliases": [
+        "Awele Hansel TV 365"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "chinedu-benjamin-tv",
+      "searchName": "Chinedu Benjamin TV",
+      "aliases": [
+        "Chinedu Benjamin TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "tope-olowoniyan-tv",
+      "searchName": "Tope Olowoniyan TV",
+      "aliases": [
+        "Tope Olowoniyan TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "divine-touch-tv",
+      "searchName": "Divine Touch TV",
+      "aliases": [
+        "Divine Touch TV"
+      ],
+      "estimatedMovieCount": 45,
+      "optional": true
+    },
+    {
+      "slug": "goldentide-tv",
+      "searchName": "Goldentide TV",
+      "aliases": [
+        "Goldentide TV",
+        "GoldenTide TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "three-tv",
+      "searchName": "Three TV",
+      "aliases": [
+        "Three TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "reality-motion-pictures",
+      "searchName": "Reality Motion Pictures",
+      "aliases": [
+        "Reality Motion Pictures"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "adekaz-premium-tv",
+      "searchName": "Adekaz Premium TV",
+      "aliases": [
+        "Adekaz Premium TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "kasimma-tv",
+      "searchName": "Kasimma TV",
+      "aliases": [
+        "Kasimma TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "lilian-afegbai-tv",
+      "searchName": "Lilian Afegbai TV",
+      "aliases": [
+        "Lilian Afegbai TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "mercy-aigbe-tv",
+      "searchName": "Mercy Aigbe TV",
+      "aliases": [
+        "Mercy Aigbe TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "anike-ami-tv",
+      "searchName": "Anike Ami TV",
+      "aliases": [
+        "Anike Ami TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "joyon-tv",
+      "searchName": "Joyon TV",
+      "aliases": [
+        "Joyon TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "love-story-media",
+      "searchName": "Love Story Media",
+      "aliases": [
+        "Love Story Media"
+      ],
+      "estimatedMovieCount": 45,
+      "optional": true
+    },
+    {
+      "slug": "uche-nancy-update-tv",
+      "searchName": "Uche Nancy Update TV",
+      "aliases": [
+        "Uche Nancy Update TV"
+      ],
+      "estimatedMovieCount": 60,
+      "optional": true
+    },
+    {
+      "slug": "beth-sheba-tv",
+      "searchName": "Beth-Sheba TV",
+      "aliases": [
+        "Beth-Sheba TV",
+        "Beth Sheba TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "temple-premium-tv",
+      "searchName": "Temple Premium Tv",
+      "aliases": [
+        "Temple Premium Tv",
+        "Temple Premium TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "onyiialextv",
+      "searchName": "Onyiialextv",
+      "aliases": [
+        "Onyiialextv",
+        "Onyiialex TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "ifycabana-media",
+      "searchName": "Ifycabana Media",
+      "aliases": [
+        "Ifycabana Media"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "damilola-oni-tv",
+      "searchName": "The Damilola Oni TV",
+      "aliases": [
+        "The Damilola Oni TV",
+        "Damilola Oni TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "leorence-tv",
+      "searchName": "Leorence Tv",
+      "aliases": [
+        "Leorence Tv",
+        "Leorence TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "rachel-edwards",
+      "searchName": "Rachel Edwards",
+      "aliases": [
+        "Rachel Edwards"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
     }
   ]
 }
