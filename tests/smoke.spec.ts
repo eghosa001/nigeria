@@ -1,3 +1,29 @@
+test("phone shell fits and exposes admin login without hydration errors", async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+  const hydrationErrors: string[] = [];
+  const capture = (message: string) => {
+    if (/react error #418|hydration|hydrating|server rendered html|did not match/i.test(message)) hydrationErrors.push(message);
+  };
+  page.on("pageerror", (error) => capture(error.message));
+  page.on("console", (message) => message.type() === "error" && capture(message.text()));
+
+  for (const path of ["/", "/services", "/entertainment/movies", "/explore"]) {
+    await page.goto(path);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), path).toBeLessThanOrEqual(1);
+  }
+
+  await page.goto("/");
+  await expect(page.getByRole("link", { name: "Admin login" }).first()).toBeVisible();
+
+  await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await expect(page.getByLabel("Admin passphrase")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Unlock admin" })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), "/admin").toBeLessThanOrEqual(1);
+
+  expect(hydrationErrors).toEqual([]);
+});
+
 import { expect, test } from "@playwright/test";
 
 test("admin pages hide all operational content until the shared admin session is unlocked", async ({ page, request }) => {

@@ -74,9 +74,11 @@ function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; varia
 export function EntertainmentArtwork({
   title,
   variant = "card",
+  showSourceLink = true,
 }: {
   title: EntertainmentTitle;
   variant?: "card" | "hero";
+  showSourceLink?: boolean;
 }) {
   if (canDisplayEntertainmentArtwork(title) && title.artwork) {
     return (
@@ -90,7 +92,7 @@ export function EntertainmentArtwork({
         />
         <figcaption>
           <span>Image: {title.artwork.credit}</span>
-          <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">Rights source ↗</a>
+          {showSourceLink ? <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">Rights source ↗</a> : null}
         </figcaption>
       </figure>
     );
@@ -114,7 +116,7 @@ export function EntertainmentArtwork({
         />
         <figcaption>
           <span>{youtubePreview.publisher ? "Preview: " + youtubePreview.publisher : "Official YouTube preview"}</span>
-          <a href={youtubePreview.href} target="_blank" rel="noreferrer">Open source ↗</a>
+          {showSourceLink ? <a href={youtubePreview.href} target="_blank" rel="noreferrer">Open source ↗</a> : null}
         </figcaption>
       </figure>
     );

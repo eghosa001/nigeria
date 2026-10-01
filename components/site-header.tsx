@@ -49,7 +49,7 @@ const sectionNavigation = {
 } as const;
 
 type SectionKey = keyof typeof sectionNavigation;
-type IconName = "home" | "services" | "explore" | "movies" | "saved" | "search";
+type IconName = "home" | "services" | "explore" | "movies" | "saved" | "search" | "admin";
 
 function sectionForPath(pathname: string): SectionKey | null {
   if (
@@ -79,6 +79,7 @@ function NavIcon({ name }: { name: IconName }) {
   if (name === "explore") return <svg {...common}><circle cx="12" cy="12" r="8.4" /><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1 5.1-2.1Z" /></svg>;
   if (name === "movies") return <svg {...common}><rect x="3.5" y="5.2" width="17" height="13.6" rx="2.2" /><path d="m10 9 5 3-5 3V9Z" /></svg>;
   if (name === "saved") return <svg {...common}><path d="M6.2 4.2A2.2 2.2 0 0 1 8.4 2h7.2a2.2 2.2 0 0 1 2.2 2.2V22L12 18.2 6.2 22V4.2Z" /></svg>;
+  if (name === "admin") return <svg {...common}><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>;
   return <svg {...common}><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg>;
 }
 
@@ -113,10 +114,16 @@ export function SiteHeader() {
             <BrandLogo />
           </a>
 
-          <Link className="mobile-header-action" href="/search" aria-label="Search MyNigeriaGuide">
-            <NavIcon name="search" />
-            <span>Search</span>
-          </Link>
+          <div className="mobile-header-actions" aria-label="Quick actions">
+            <Link className="mobile-header-action" href="/search" aria-label="Search MyNigeriaGuide">
+              <NavIcon name="search" />
+              <span>Search</span>
+            </Link>
+            <Link className="mobile-admin-action" href="/admin" aria-label="Admin login">
+              <NavIcon name="admin" />
+              <span>Admin</span>
+            </Link>
+          </div>
 
           <nav id="primary-navigation" className="primary-nav premium-primary-nav" aria-label="Primary navigation">
             <div className="primary-nav-main">
@@ -141,6 +148,9 @@ export function SiteHeader() {
               </Link>
               <Link href="/saved" className={pathname.startsWith("/saved") ? "nav-active" : undefined}>
                 Saved
+              </Link>
+              <Link href="/admin" className={pathname.startsWith("/admin") ? "nav-active" : undefined}>
+                Admin
               </Link>
             </div>
           </nav>

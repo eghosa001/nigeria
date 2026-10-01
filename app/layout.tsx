@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
+import "@/app/mobile.css";
 import { AdsenseScript } from "@/components/adsense";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";

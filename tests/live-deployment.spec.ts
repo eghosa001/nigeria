@@ -42,7 +42,34 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.getByRole("heading", { name: "What exactly happens next?" })).toBeVisible();
   });
 
-  test("resolved fee guides no longer show conflict warnings", async ({ page }) => {
+  
+test("phone layout fits and public pages do not hydrate with React mismatches", async ({ page }) => {
+  await page.setViewportSize({ width: 360, height: 800 });
+
+  const hydrationErrors: string[] = [];
+  const capture = (message: string) => {
+    if (/react error #418|hydration|hydrating|server rendered html|did not match/i.test(message)) {
+      hydrationErrors.push(message);
+    }
+  };
+  page.on("pageerror", (error) => capture(error.message));
+  page.on("console", (message) => {
+    if (message.type() === "error") capture(message.text());
+  });
+
+  for (const path of ["/", "/services", "/entertainment/movies", "/explore", "/services/jamb-direct-entry-2026"]) {
+    await page.goto(path, { waitUntil: "domcontentloaded" });
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
+    expect(overflow, path + " horizontal overflow at 360px").toBeLessThanOrEqual(1);
+  }
+
+  await page.goto("/");
+  await expect(page.getByRole("link", { name: "Admin login" }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Search MyNigeriaGuide" }).first()).toBeVisible();
+  expect(hydrationErrors).toEqual([]);
+});
+
+test("resolved fee guides no longer show conflict warnings", async ({ page }) => {
     const cases = [
       ["/services/nin-date-of-birth-modification", "₦28,574"],
       ["/services/nin-slip-reissue", "₦600"],
