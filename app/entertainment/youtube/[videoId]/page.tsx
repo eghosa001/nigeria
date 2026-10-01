@@ -15,10 +15,18 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const { videoId } = await params;
   const movie = getYouTubeMovieById(videoId);
   if (!movie) return {};
+  const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
+  const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   return {
     title: movie.title + " — Cast, Details & Watch Free on YouTube",
     description: movie.synopsis,
-    alternates: { canonical: movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId },
+    alternates: { canonical },
+    openGraph: {
+      title: movie.title + " — Nigerian Movie",
+      description: movie.synopsis,
+      type: "video.other",
+      images: [{ url: image, alt: movie.title + " official YouTube thumbnail" }],
+    },
   };
 }
 
