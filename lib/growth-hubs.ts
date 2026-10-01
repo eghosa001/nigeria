@@ -164,12 +164,15 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "register business CAC", serviceSlug: "cac-business-name-registration" },
+      { query: "change director CAC", serviceSlug: "cac-change-director" },
+      { query: "change registered address CAC", serviceSlug: "cac-change-registered-address" },
+      { query: "CAC beneficial ownership PSC", serviceSlug: "cac-beneficial-ownership-psc" },
       { query: "trademark registration Nigeria", serviceSlug: "nipo-trademark-registration" },
       { query: "register exporter NEPC", serviceSlug: "nepc-exporter-registration" },
       { query: "SMEDAN registration", serviceSlug: "smedan-msme-registration" },
       { query: "BPP contractor registration", serviceSlug: "bpp-contractor-registration" }, { query: "SCUML registration", serviceSlug: "scuml-certificate-registration" }, { query: "pension clearance certificate", serviceSlug: "pencom-pension-clearance-certificate" }, { query: "ITF compliance certificate", serviceSlug: "itf-compliance-certificate" }
     ],
-    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "scuml-certificate-registration", "scuml-certificate-verification", "bpp-contractor-registration", "pencom-pension-clearance-certificate", "itf-compliance-certificate", "nsitf-employer-registration", "nsitf-compliance-certificate"]
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-change-director", "cac-change-registered-address", "cac-beneficial-ownership-psc", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "scuml-certificate-registration", "scuml-certificate-verification", "bpp-contractor-registration", "pencom-pension-clearance-certificate", "itf-compliance-certificate", "nsitf-employer-registration", "nsitf-compliance-certificate"]
   },
   {
     slug: "pension-services-nigeria",
