@@ -5525,5 +5525,1817 @@
     ],
     "related": [],
     "lastVerified": "2026-09-29"
+  },
+  {
+    "slug": "nin-sim-linkage",
+    "title": "How to link your NIN to a Nigerian SIM",
+    "shortTitle": "Link NIN to SIM",
+    "summary": "The official NCC-guided route for linking a NIN to a mobile line, including the network self-service code and what must match before linkage succeeds.",
+    "category": "Telecommunications",
+    "agencySlug": "ncc",
+    "feeLabel": "No NCC linkage fee",
+    "feeNote": "NCC states that the *996# SIM-NIN service is free. Your mobile network may still apply its normal rules for other unrelated services.",
+    "timeline": "Linkage timing depends on successful NIN validation and the mobile network's processing.",
+    "status": "verified",
+    "officialPortal": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage",
+    "requirements": [
+      "A valid NIN belonging to the person who owns the SIM",
+      "The Nigerian mobile line to be linked",
+      "Customer details on the SIM registration record that match the NIN identity record",
+      "Access to the network's approved NIN-linkage channel or the NCC-supported *996# self-service route"
+    ],
+    "steps": [
+      "Confirm that the NIN belongs to the registered owner of the SIM and that the names and other core identity details are consistent.",
+      "Dial *996# from the affected line and follow the SIM-NIN options, or use the linkage channel provided by your mobile network.",
+      "Provide the NIN or the requested Virtual NIN information exactly as prompted by the operator.",
+      "Wait for the network to validate the identity information against NIMC records.",
+      "Check the linkage status after submission rather than repeating the process immediately if confirmation is still pending."
+    ],
+    "notes": [
+      "NCC says the *996# SIM-NIN service is free.",
+      "A mismatch between the SIM registration record and the NIN record can stop successful linkage.",
+      "NCC states that a subscriber may have up to four SIMs on one network linked to the same NIN.",
+      "If the SIM is being used by someone other than its registered owner, the user should visit the operator and complete the proper ownership/re-registration process instead of trying to link another person's identity."
+    ],
+    "sources": [
+      {
+        "label": "NCC SIM-NIN Linkage FAQ",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NCC NIN and SIM Integration FAQ",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://www.ncc.gov.ng/media-center/public-notices/frequently-asked-questions-nin-and-sim-integration",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "check-nin-sim-linkage-status",
+      "fix-failed-nin-sim-linkage",
+      "nin-enrolment"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "link NIN to SIM",
+      "NIN SIM linkage",
+      "link NIN MTN Airtel Glo T2",
+      "*996# NIN",
+      "SIM NIN Nigeria"
+    ]
+  },
+  {
+    "slug": "check-nin-sim-linkage-status",
+    "title": "How to check whether your NIN is linked to your SIM",
+    "shortTitle": "Check NIN-SIM status",
+    "summary": "How to use the NCC-supported self-service route to confirm a line's NIN-linkage status before visiting a network shop.",
+    "category": "Telecommunications",
+    "agencySlug": "ncc",
+    "feeLabel": "Free via *996#",
+    "feeNote": "NCC says *996# is a free SIM-NIN service.",
+    "timeline": "Usually displayed through the self-service flow, subject to network availability.",
+    "status": "verified",
+    "officialPortal": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage",
+    "requirements": [
+      "The mobile line you want to check",
+      "Access to the line on a phone",
+      "The registered owner's NIN if the network asks you to complete or correct linkage"
+    ],
+    "steps": [
+      "Insert or activate the mobile line you want to check.",
+      "Dial *996# and select the option for checking SIM-NIN linkage status.",
+      "Read the result carefully to distinguish a completed linkage from a pending, failed or identity-mismatch case.",
+      "If the line is not linked, use the same approved flow or your operator's official channel to submit the NIN.",
+      "If the status remains incorrect after a valid submission, follow the failed-linkage troubleshooting guide and contact the operator."
+    ],
+    "notes": [
+      "Checking the status first can avoid unnecessary repeat submissions.",
+      "If the number is not registered in your own name, the correct fix is normally an operator-assisted ownership or registration update.",
+      "Do not provide your NIN to unofficial agents or unverified websites."
+    ],
+    "sources": [
+      {
+        "label": "NCC SIM-NIN Linkage FAQ",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nin-sim-linkage",
+      "fix-failed-nin-sim-linkage"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "check NIN linked to SIM",
+      "NIN linkage status",
+      "*996# check NIN",
+      "SIM barred NIN status"
+    ]
+  },
+  {
+    "slug": "fix-failed-nin-sim-linkage",
+    "title": "What to do when NIN-to-SIM linkage fails or your line remains barred",
+    "shortTitle": "Fix failed NIN-SIM linkage",
+    "summary": "A practical troubleshooting route for NIN validation failures, record mismatches and lines that remain restricted after a linkage attempt.",
+    "category": "Telecommunications",
+    "agencySlug": "ncc",
+    "feeLabel": "No NCC troubleshooting fee",
+    "feeNote": "Use the operator's official support and service centres; do not pay an unofficial agent to 'unlock' a line.",
+    "timeline": "Depends on whether the issue is a network processing delay, SIM ownership problem or a NIMC identity-record correction.",
+    "status": "verified",
+    "officialPortal": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage",
+    "requirements": [
+      "The affected phone number",
+      "The registered owner's NIN",
+      "Valid identity information that matches the SIM record",
+      "Proof of ownership/usage if the operator requests re-registration"
+    ],
+    "steps": [
+      "Use *996# to confirm the current linkage status and avoid assuming that a submitted request has already been validated.",
+      "Compare the subscriber details registered on the line with the NIN identity record, especially the registered owner and core biodata.",
+      "If the NIN itself contains an error, correct the relevant NIMC record first before repeatedly resubmitting the same mismatch.",
+      "If NIN verification continues to fail or the line remains barred, visit the mobile operator's official outlet with the NIN and requested identity evidence.",
+      "If the SIM is not registered to you, ask the operator to transfer or re-register ownership and present the proof of ownership or usage it asks for."
+    ],
+    "notes": [
+      "NCC guidance says subscribers with NIN-verification problems should visit their service provider.",
+      "A successful NIN record does not automatically fix a SIM registered in another person's name.",
+      "Keep any operator ticket, SMS or reference number until the restriction has been resolved."
+    ],
+    "sources": [
+      {
+        "label": "NCC SIM-NIN Linkage FAQ",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NCC NIN and SIM Integration FAQ",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://www.ncc.gov.ng/media-center/public-notices/frequently-asked-questions-nin-and-sim-integration",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nin-sim-linkage",
+      "check-nin-sim-linkage-status",
+      "nin-name-modification",
+      "nin-phone-modification"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "SIM still barred after linking NIN",
+      "NIN verification failed SIM",
+      "NIN SIM name mismatch",
+      "failed NIN linkage"
+    ]
+  },
+  {
+    "slug": "nelfund-student-loan-application",
+    "title": "How to apply for a NELFUND student loan",
+    "shortTitle": "NELFUND student loan",
+    "summary": "Eligibility checks, account setup, school verification and the official application flow for Nigeria's interest-free student loan.",
+    "category": "Student finance",
+    "agencySlug": "nelfund",
+    "feeLabel": "Interest-free loan",
+    "feeNote": "NELFUND describes the student loan as interest-free. Apply only through the official NELFUND portal.",
+    "timeline": "NELFUND says an application can be completed in about 15–30 minutes; verification and disbursement take additional time.",
+    "status": "verified",
+    "officialPortal": "https://portal.nelf.gov.ng/auth/register",
+    "requirements": [
+      "Nigerian citizenship",
+      "Admission or enrolment at an eligible institution, with a student record that NELFUND can verify",
+      "Identity and education information requested by the portal, including NIN and JAMB/education verification where applicable",
+      "A working email address and phone number",
+      "Personal bank details for upkeep payments when requested"
+    ],
+    "steps": [
+      "Open the official NELFUND portal and create a student account.",
+      "Complete the citizenship and identity checks and provide the education information requested by the portal.",
+      "Verify your institution/student record and correct any mismatch before submitting a loan request.",
+      "Choose Request for Student Loan and complete the application details and declarations.",
+      "Submit the application and use your dashboard to follow verification and disbursement progress.",
+      "When approved, institutional charges are paid to the institution while approved upkeep is paid to the student's bank account."
+    ],
+    "notes": [
+      "Do not pay an agent to submit a NELFUND application.",
+      "A school-record or identity mismatch can delay verification; correct the underlying record instead of creating duplicate applications.",
+      "Institutional charges and upkeep are handled separately, so one may appear before the other.",
+      "Keep your portal login and bank details current throughout the application."
+    ],
+    "sources": [
+      {
+        "label": "NELFUND official website",
+        "agency": "Nigerian Education Loan Fund",
+        "url": "https://nelf.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NELFUND application portal",
+        "agency": "Nigerian Education Loan Fund",
+        "url": "https://portal.nelf.gov.ng/auth/register",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NELFUND portal introduction",
+        "agency": "Nigerian Education Loan Fund",
+        "url": "https://portal.nelf.gov.ng/auth/welcome",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nelfund-loan-status-and-upkeep",
+      "nelfund-loan-repayment",
+      "jamb-profile-code"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NELFUND apply",
+      "student loan Nigeria",
+      "NELFUND requirements",
+      "NELFUND application portal",
+      "NELFUND upkeep"
+    ]
+  },
+  {
+    "slug": "nelfund-loan-status-and-upkeep",
+    "title": "How to check NELFUND loan status and understand upkeep payments",
+    "shortTitle": "NELFUND status & upkeep",
+    "summary": "What the NELFUND dashboard is showing, how institutional charges differ from upkeep and what to check when a payment is still pending.",
+    "category": "Student finance",
+    "agencySlug": "nelfund",
+    "feeLabel": "No status-check fee",
+    "feeNote": "Use the official student dashboard to check application and payment progress.",
+    "timeline": "Verification and disbursement timing varies by institution, record validation and the stage shown on the dashboard.",
+    "status": "verified",
+    "officialPortal": "https://portal.nelf.gov.ng/",
+    "requirements": [
+      "Your NELFUND account credentials",
+      "The same verified student identity used for the application",
+      "A valid bank account for upkeep where applicable"
+    ],
+    "steps": [
+      "Sign in to the official NELFUND student portal with the account used for the loan application.",
+      "Open the loan/application area and read the current verification or payment status.",
+      "Distinguish institutional charges from upkeep: approved school charges are sent to the institution, while approved upkeep is sent to the student's bank account.",
+      "Confirm that your school record and bank details are accurate if the dashboard shows an unresolved verification or payment issue.",
+      "Use NELFUND's official support route for a status that appears stuck rather than creating another application."
+    ],
+    "notes": [
+      "A school payment and an upkeep payment are different disbursements and do not have to appear at the same time.",
+      "Do not share your portal password or one-time codes with people offering to 'speed up' disbursement.",
+      "Keep evidence of any dashboard status and transaction reference when contacting support."
+    ],
+    "sources": [
+      {
+        "label": "NELFUND official website",
+        "agency": "Nigerian Education Loan Fund",
+        "url": "https://nelf.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NELFUND student portal",
+        "agency": "Nigerian Education Loan Fund",
+        "url": "https://portal.nelf.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nelfund-student-loan-application",
+      "nelfund-loan-repayment"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NELFUND status",
+      "NELFUND upkeep not received",
+      "NELFUND disbursement",
+      "student loan status Nigeria"
+    ]
+  },
+  {
+    "slug": "nelfund-loan-repayment",
+    "title": "How NELFUND student-loan repayment works",
+    "shortTitle": "NELFUND repayment",
+    "summary": "When repayment begins and what employed, self-employed and early-repayment borrowers are expected to do.",
+    "category": "Student finance",
+    "agencySlug": "nelfund",
+    "feeLabel": "10% payroll deduction for employed borrowers",
+    "feeNote": "NELFUND terms state that employed borrowers repay through a 10% monthly salary deduction after repayment becomes due; the rules differ for self-employed borrowers.",
+    "timeline": "NELFUND states that repayment begins two years after completion of NYSC for borrowers who participated in NYSC.",
+    "status": "verified",
+    "officialPortal": "https://nelf.gov.ng/terms",
+    "requirements": [
+      "A NELFUND loan that has entered its repayment stage",
+      "Current employment or self-employment details",
+      "Updated employer/business information when required by NELFUND"
+    ],
+    "steps": [
+      "Confirm that your loan has reached the repayment stage under the NELFUND terms.",
+      "If employed, keep your employer information updated so the required salary deduction can be applied.",
+      "If self-employed, provide the business details required by the terms, including the business address and other requested ownership/banking information.",
+      "Review your repayment record and keep evidence of deductions or payments.",
+      "If you want to repay earlier, use NELFUND's official route for full or partial early repayment."
+    ],
+    "notes": [
+      "NELFUND states that borrowers may repay early in full or in part.",
+      "Self-employed borrowers have separate disclosure/update obligations under the loan terms.",
+      "Repayment rules can change, so check the current NELFUND terms when your repayment period begins."
+    ],
+    "sources": [
+      {
+        "label": "NELFUND Terms and Conditions",
+        "agency": "Nigerian Education Loan Fund",
+        "url": "https://nelf.gov.ng/terms",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nelfund-student-loan-application",
+      "nelfund-loan-status-and-upkeep"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NELFUND repayment",
+      "when do I repay NELFUND",
+      "NELFUND salary deduction",
+      "student loan repayment Nigeria"
+    ]
+  },
+  {
+    "slug": "electricity-prepaid-meter-application",
+    "title": "How to apply and pay for a prepaid electricity meter",
+    "shortTitle": "Apply for prepaid meter",
+    "summary": "The NERC-backed metering route, what to confirm before paying and what happens after a Meter Asset Provider payment.",
+    "category": "Electricity",
+    "agencySlug": "nerc",
+    "feeLabel": "Current approved meter price",
+    "feeNote": "Meter prices can change. Confirm the current NERC/DisCo-approved amount before making any payment.",
+    "timeline": "NERC's metering FAQ says a MAP meter should be installed within 10 working days after full payment.",
+    "status": "verified",
+    "officialPortal": "https://nerc.gov.ng/faq/metering/",
+    "requirements": [
+      "An electricity customer/account number with your DisCo",
+      "The service address plus the customer/account information shown on your DisCo bill or account",
+      "Payment through the official DisCo/MAP route if using the upfront MAP option"
+    ],
+    "steps": [
+      "Identify your electricity Distribution Company and open its official metering channel.",
+      "Complete the meter request with your customer/account and property information.",
+      "Review the meter type and current approved price shown by the authorised channel before paying.",
+      "Pay only through the official DisCo/MAP payment route and keep the receipt/reference.",
+      "Track the installation request and make the premises accessible when an appointment is arranged.",
+      "If a paid MAP meter is not installed within the NERC-stated window, use the delayed-installation complaint route."
+    ],
+    "notes": [
+      "NERC says customers should verify current meter prices with the relevant DisCo.",
+      "Under the MAP arrangement, the meter remains part of the electricity distribution system even where the customer pays upfront.",
+      "Do not pay cash to an unofficial installer without an official invoice or receipt."
+    ],
+    "sources": [
+      {
+        "label": "NERC Metering FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/metering/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "electricity-meter-paid-not-installed",
+      "electricity-estimated-billing-dispute",
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "prepaid meter application Nigeria",
+      "MAP meter",
+      "how to get prepaid meter",
+      "electricity meter price Nigeria"
+    ]
+  },
+  {
+    "slug": "electricity-meter-paid-not-installed",
+    "title": "What to do if you paid for an electricity meter but it was not installed",
+    "shortTitle": "Paid meter not installed",
+    "summary": "How to document a delayed MAP meter, complain to the DisCo and escalate if the installation remains unresolved.",
+    "category": "Electricity",
+    "agencySlug": "nerc",
+    "feeLabel": "No extra official installation payment should be improvised",
+    "feeNote": "Keep the original official payment evidence; do not pay a second unofficial fee to move the request forward.",
+    "timeline": "NERC's metering FAQ says a MAP meter should be installed within 10 working days after full payment.",
+    "status": "verified",
+    "officialPortal": "https://nerc.gov.ng/faq/metering/",
+    "requirements": [
+      "Meter payment receipt or transaction reference",
+      "DisCo customer/account number",
+      "Property/service address",
+      "Any installation ticket or prior correspondence"
+    ],
+    "steps": [
+      "Confirm that the payment was made through the authorised MAP/DisCo channel and note the payment date.",
+      "If the NERC-stated installation period has passed, contact the DisCo with the payment evidence, account number and service address.",
+      "Request a complaint or ticket reference and keep a copy of the complaint.",
+      "If the DisCo does not resolve the case, escalate it through the applicable electricity complaint channel.",
+      "Where your state's electricity market has transferred to a state regulator, use that regulator's complaint route; otherwise follow NERC's current escalation guidance."
+    ],
+    "notes": [
+      "NERC specifically advises customers to report paid meters that are not installed within the stated period and to provide evidence of payment.",
+      "Do not discard the receipt after installation because it may be needed for any credit/refund or complaint issue.",
+      "Regulatory responsibility has transferred to state electricity regulators in a growing number of states, so the correct escalation body depends on location."
+    ],
+    "sources": [
+      {
+        "label": "NERC Metering FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/metering/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NERC Electricity Complaint Channels",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/new-electricity-complaint-channels-for-15-states/",
+        "published": "2026-05-04",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "electricity-prepaid-meter-application",
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "paid for meter not installed",
+      "prepaid meter delay Nigeria",
+      "MAP meter not installed",
+      "DisCo meter complaint"
+    ]
+  },
+  {
+    "slug": "electricity-estimated-billing-dispute",
+    "title": "How to challenge an estimated electricity bill in Nigeria",
+    "shortTitle": "Dispute estimated bill",
+    "summary": "What NERC's billing rules say and how to challenge an estimated bill with the DisCo before escalating the complaint.",
+    "category": "Electricity",
+    "agencySlug": "nerc",
+    "feeLabel": "No complaint filing fee stated",
+    "feeNote": "The complaint process itself should start with the DisCo's customer complaint route.",
+    "timeline": "NERC says complaints sent to a DisCo Customer Complaints Unit should generally be resolved within 15 working days, depending on complexity.",
+    "status": "verified",
+    "officialPortal": "https://nerc.gov.ng/faq/billing/",
+    "requirements": [
+      "Recent electricity bills or vending records",
+      "Customer/account number",
+      "Meter number if applicable",
+      "Evidence of meter fault/removal or prior complaints if relevant"
+    ],
+    "steps": [
+      "Check the disputed bill against your recent billing or vending history and identify the exact amount and billing period you are challenging.",
+      "Check whether the account is metered, the meter is faulty/removed, or the bill is an estimate subject to NERC's capping rules.",
+      "Submit a written complaint to the DisCo Customer Complaints Unit with the account number and supporting bills or meter evidence.",
+      "Ask for an acknowledgment or complaint reference and keep it.",
+      "If the DisCo does not resolve the issue within the applicable complaint process, escalate to the regulator responsible for your state."
+    ],
+    "notes": [
+      "NERC states that estimated billing is capped rather than unlimited.",
+      "Where a faulty or obsolete meter is removed and not immediately replaced, NERC's billing guidance restricts how the customer should be billed.",
+      "Keep paying undisputed current charges where appropriate while the disputed amount is being formally reviewed."
+    ],
+    "sources": [
+      {
+        "label": "NERC Billing FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/billing/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NERC How to File a Complaint",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "electricity-complaint-escalation",
+      "electricity-prepaid-meter-application",
+      "electricity-tariff-band"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "estimated bill complaint Nigeria",
+      "NERC estimated billing",
+      "DisCo overbilling",
+      "challenge electricity bill"
+    ]
+  },
+  {
+    "slug": "electricity-complaint-escalation",
+    "title": "How to escalate an unresolved electricity complaint",
+    "shortTitle": "Escalate electricity complaint",
+    "summary": "The complaint ladder from your DisCo to the correct electricity regulator, including the records you should keep.",
+    "category": "Electricity",
+    "agencySlug": "nerc",
+    "feeLabel": "No regulatory complaint fee stated",
+    "feeNote": "Start with the DisCo complaint unit and keep evidence before escalating.",
+    "timeline": "NERC guidance says a DisCo complaint should generally be resolved within 15 working days depending on complexity.",
+    "status": "verified",
+    "officialPortal": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
+    "requirements": [
+      "A complaint already lodged with the DisCo",
+      "DisCo acknowledgment or ticket/reference",
+      "Bills, receipts, meter records, photographs or correspondence relevant to the complaint",
+      "Customer/account and contact details"
+    ],
+    "steps": [
+      "Submit the complaint first to the DisCo's Customer Complaints Unit and obtain an acknowledgment or reference.",
+      "Allow the DisCo's complaint process to run and keep all replies and evidence.",
+      "If it remains unresolved, identify whether electricity regulation in your state has transferred to a state electricity regulator.",
+      "Escalate to the applicable state regulator where responsibility has transferred; otherwise use NERC's current complaint/Consumer Forum route.",
+      "Attach the original complaint, DisCo response or proof of non-resolution, and all relevant account evidence.",
+      "If the regulator asks for additional information, respond using the same complaint reference so the record remains connected."
+    ],
+    "notes": [
+      "The correct escalation body is now location-dependent because some states regulate their intrastate electricity market.",
+      "A verbal complaint without a reference is harder to escalate; submit it through a channel that leaves a record.",
+      "Do not start a fresh unrelated complaint at every stage—carry the same evidence and chronology forward."
+    ],
+    "sources": [
+      {
+        "label": "NERC How to File a Complaint",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NERC Complaints and Redress FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/complaints-and-redress-procedure/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NERC New Electricity Complaint Channels",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/new-electricity-complaint-channels-for-15-states/",
+        "published": "2026-05-04",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "electricity-estimated-billing-dispute",
+      "electricity-meter-paid-not-installed",
+      "electricity-tariff-band"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NERC complaint",
+      "electricity complaint Nigeria",
+      "DisCo complaint unresolved",
+      "electricity consumer forum"
+    ]
+  },
+  {
+    "slug": "electricity-tariff-band",
+    "title": "How to check your electricity tariff band and service level",
+    "shortTitle": "Check electricity band",
+    "summary": "What Bands A–E mean under the Service-Based Tariff framework and where to confirm the band actually applied to your account.",
+    "category": "Electricity",
+    "agencySlug": "nerc",
+    "feeLabel": "No fee to check",
+    "feeNote": "Your applicable tariff should be shown by your DisCo on billing or vending information.",
+    "timeline": "Immediate once you have your bill, vending receipt or DisCo account information.",
+    "status": "verified",
+    "officialPortal": "https://nerc.gov.ng/faq/electricity-tariffs/",
+    "requirements": [
+      "A recent electricity bill or prepaid vending receipt",
+      "Your DisCo/customer account information"
+    ],
+    "steps": [
+      "Check the tariff/class information printed on your latest bill or prepaid vending receipt.",
+      "Use the DisCo's official account or tariff checker if one is provided.",
+      "Compare the stated band with NERC's service-level definitions: Band A is at least 20 hours/day, B at least 16, C at least 12, D at least 8 and E at least 4.",
+      "If the tariff/band on your account appears inconsistent with the service level or DisCo information, submit a complaint to the DisCo with the bill or vending evidence.",
+      "Escalate an unresolved complaint through the regulator responsible for your state."
+    ],
+    "notes": [
+      "The band is tied to the service level assigned to the feeder/customer class, not simply to the customer's preference.",
+      "Tariff rates can be reviewed, so use the current DisCo/NERC information for the actual amount per kWh.",
+      "Keep recent vending receipts because they show the tariff information applied when you bought energy."
+    ],
+    "sources": [
+      {
+        "label": "NERC Electricity Tariffs FAQ",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/faq/electricity-tariffs/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "electricity-estimated-billing-dispute",
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "Band A electricity Nigeria",
+      "check electricity band",
+      "NERC tariff band",
+      "Band B C D E Nigeria"
+    ]
+  },
+  {
+    "slug": "vehicle-registration-nvis",
+    "title": "How to register a vehicle through Nigeria's NVIS system",
+    "shortTitle": "Vehicle registration",
+    "summary": "The FRSC NVIS vehicle-registration data requirements and the official route for creating a Nigerian vehicle registration record.",
+    "category": "Driving",
+    "agencySlug": "frsc",
+    "feeLabel": "Varies by vehicle and registration services",
+    "feeNote": "Official charges depend on the vehicle/plate/registration items selected. Use the authorised registration channel for the current amount.",
+    "timeline": "Processing depends on data verification, payment and the state/registration centre handling the application.",
+    "status": "verified",
+    "officialPortal": "https://nvis.frsc.gov.ng/VehicleManagement/RegisterVehicle",
+    "requirements": [
+      "Vehicle category, make, model, colour, fuel type and year",
+      "Chassis/VIN and engine number",
+      "Owner identity, phone and address information",
+      "Insurance policy details where requested",
+      "Driver's licence/identity information and state of plate allocation"
+    ],
+    "steps": [
+      "Open the official FRSC NVIS vehicle-registration page or use an authorised registration centre.",
+      "Enter the vehicle category and technical details exactly as they appear on the supporting documents.",
+      "Provide the chassis/VIN, engine number, insurance policy information, owner's phone/address and driver's-licence or identity information shown on the NVIS form.",
+      "Select the state/plate allocation information and any permitted plate option.",
+      "Review the submitted identifiers carefully before payment or final processing because an incorrect VIN/engine number can create later verification problems.",
+      "Complete the authorised payment/physical processing and keep the registration, plate and proof-of-ownership records issued for the vehicle."
+    ],
+    "notes": [
+      "Use the chassis/VIN and engine number from the vehicle itself and its import/ownership documents rather than relying on a handwritten copy.",
+      "Vehicle registration is separate from driver's-licence issuance.",
+      "After registration, the number plate and proof-of-ownership record can be checked through FRSC's official verification services."
+    ],
+    "sources": [
+      {
+        "label": "FRSC NVIS Vehicle Registration",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/VehicleManagement/RegisterVehicle",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "verify-vehicle-number-plate",
+      "vehicle-proof-of-ownership-verification",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "register car Nigeria",
+      "vehicle registration FRSC",
+      "NVIS registration",
+      "number plate registration Nigeria"
+    ]
+  },
+  {
+    "slug": "verify-vehicle-number-plate",
+    "title": "How to verify a Nigerian vehicle number plate",
+    "shortTitle": "Verify number plate",
+    "summary": "Use FRSC's NVIS plate verification service to check a plate record before relying on a printed document or third-party claim.",
+    "category": "Driving",
+    "agencySlug": "frsc",
+    "feeLabel": "No verification fee stated",
+    "feeNote": "Use the official FRSC NVIS verification page.",
+    "timeline": "Online lookup when the FRSC service is available.",
+    "status": "verified",
+    "officialPortal": "https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo",
+    "requirements": [
+      "The Nigerian vehicle number plate to be checked",
+      "The vehicle make/model or ownership document you will compare with the NVIS result"
+    ],
+    "steps": [
+      "Open the FRSC NVIS Verify Plate Number page.",
+      "Enter the plate number in the format requested by the portal.",
+      "Submit the lookup and compare the returned record with the vehicle and documents presented to you.",
+      "If the result is missing or materially inconsistent, do not assume a paper document proves the plate is genuine; confirm through FRSC or the relevant registration authority."
+    ],
+    "notes": [
+      "Plate verification is useful when buying a used vehicle or checking a registration record.",
+      "A valid-looking plate does not replace separate checks of ownership, insurance and customs status where those checks are relevant."
+    ],
+    "sources": [
+      {
+        "label": "FRSC NVIS Verify Plate Number",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "vehicle-registration-nvis",
+      "vehicle-proof-of-ownership-verification",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "verify number plate Nigeria",
+      "FRSC plate verification",
+      "check plate number Nigeria",
+      "is my plate number genuine"
+    ]
+  },
+  {
+    "slug": "vehicle-proof-of-ownership-verification",
+    "title": "How to verify a vehicle Proof of Ownership in Nigeria",
+    "shortTitle": "Verify Proof of Ownership",
+    "summary": "The official FRSC Proof of Ownership Certificate verification route and why it should be checked separately from a plate or insurance policy.",
+    "category": "Driving",
+    "agencySlug": "frsc",
+    "feeLabel": "Verification route",
+    "feeNote": "Use the official FRSC Proof of Ownership Certificate portal.",
+    "timeline": "Online verification when the service is available.",
+    "status": "verified",
+    "officialPortal": "https://poc.frsc.gov.ng/",
+    "requirements": [
+      "The Proof of Ownership Certificate details or vehicle information requested by the official portal",
+      "The vehicle registration/plate or seller/owner information you will compare with the returned ownership record"
+    ],
+    "steps": [
+      "Open the official FRSC Proof of Ownership Certificate portal.",
+      "Choose the verification/search function provided for the certificate or vehicle record.",
+      "Enter the requested ownership or vehicle details exactly as shown on the document.",
+      "Compare the returned information with the seller/owner and vehicle details.",
+      "If the ownership record conflicts with the vehicle being sold or transferred, resolve the discrepancy with the relevant registration authority before completing the transaction."
+    ],
+    "notes": [
+      "Proof of ownership, number-plate verification, insurance verification and customs-duty verification answer different questions.",
+      "For a used vehicle purchase, checking more than one official record reduces the risk of relying on a forged document."
+    ],
+    "sources": [
+      {
+        "label": "FRSC Proof of Ownership Certificate Portal",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://poc.frsc.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "FRSC NVIS Proof of Ownership Print/Search",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/ApplicationProcess/ProofOfOwnershipPrint?area=Identity&page=%2FAccount%2FLogin",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "vehicle-registration-nvis",
+      "verify-vehicle-number-plate",
+      "vehicle-insurance-validation-ussd",
+      "customs-vehicle-duty-verification"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "proof of ownership certificate Nigeria",
+      "verify vehicle ownership Nigeria",
+      "FRSC POC",
+      "vehicle ownership verification"
+    ]
+  },
+  {
+    "slug": "nhia-gifship-enrolment",
+    "title": "How to enrol for NHIA GIFSHIP health insurance",
+    "shortTitle": "NHIA GIFSHIP enrolment",
+    "summary": "How individuals, families and eligible groups can start NHIA Group, Individual and Family Social Health Insurance Programme enrolment.",
+    "category": "Health insurance",
+    "agencySlug": "nhia",
+    "feeLabel": "Check current NHIA premium",
+    "feeNote": "NHIA premium information can change. Confirm the current amount in the NHIA/Remita enrolment process before payment.",
+    "timeline": "Depends on payment confirmation, identity verification and the HMO/HCP selection process.",
+    "status": "verified",
+    "officialPortal": "https://www.nhia.gov.ng/service/land-insurance/",
+    "requirements": [
+      "NIN for the principal enrollee plus full name, date of birth, phone and email used for NHIA enrolment",
+      "Phone number and email",
+      "Preferred HMO and healthcare provider from the options NHIA makes available for the enrolment",
+      "Dependant information for family enrolment",
+      "Official payment reference where a premium is due"
+    ],
+    "steps": [
+      "Use NHIA's Get Covered/plan information to confirm that GIFSHIP is the appropriate route for you, your family or group.",
+      "Prepare the principal enrollee's NIN, contact details, date of birth and the eligible dependant information that will be entered on the NHIA enrolment form.",
+      "Complete the NHIA enrolment process online or through an NHIA office and choose the HMO/healthcare provider options offered.",
+      "Pay only through the official NHIA/Remita route and keep the receipt/reference.",
+      "Confirm enrolment/identity details and follow the activation or ID instructions provided by NHIA."
+    ],
+    "notes": [
+      "GIFSHIP is designed to extend coverage to people outside compulsory public-sector arrangements, including individuals, families and groups.",
+      "Check the current premium at the point of enrolment rather than relying on an old social-media price.",
+      "The healthcare provider/HMO available to you can depend on the programme and location."
+    ],
+    "sources": [
+      {
+        "label": "NHIA Get Covered",
+        "agency": "National Health Insurance Authority",
+        "url": "https://www.nhia.gov.ng/get-covered/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NHIA Individual/Family Health Insurance Information",
+        "agency": "National Health Insurance Authority",
+        "url": "https://www.nhia.gov.ng/service/land-insurance/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NHIA enrolment form",
+        "agency": "National Health Insurance Authority",
+        "url": "https://www.nhia.gov.ng/get-enrolled-form/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nhia-find-right-health-plan",
+      "nhia-private-sector-coverage"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NHIA GIFSHIP",
+      "health insurance Nigeria self employed",
+      "NHIA family plan",
+      "register NHIA"
+    ]
+  },
+  {
+    "slug": "nhia-find-right-health-plan",
+    "title": "How to find the right NHIA health-insurance programme",
+    "shortTitle": "Choose NHIA plan",
+    "summary": "Use NHIA's official coverage route to narrow the programme by employment status, individual/family needs and group eligibility.",
+    "category": "Health insurance",
+    "agencySlug": "nhia",
+    "feeLabel": "Depends on programme",
+    "feeNote": "The contribution or premium differs by programme; confirm the current amount on the official NHIA route.",
+    "timeline": "Plan selection is immediate; enrolment and activation take additional processing time.",
+    "status": "verified",
+    "officialPortal": "https://www.nhia.gov.ng/get-covered/",
+    "requirements": [
+      "Your employment status",
+      "Whether cover is for one person, a family or a group",
+      "Location and provider preferences where relevant"
+    ],
+    "steps": [
+      "Open NHIA's official Get Covered page and start with the employment-status question so the programme options are narrowed correctly.",
+      "Select the employment/status option that best describes you.",
+      "Indicate whether you need individual, family or group coverage where the tool asks.",
+      "Review the programme route NHIA presents and open its official enrolment instructions.",
+      "Confirm the current premium/contribution, covered dependants and provider options before paying."
+    ],
+    "notes": [
+      "Do not choose a programme only by name; NHIA programmes have different eligibility and contribution rules.",
+      "For family cover, verify which dependants the specific programme permits.",
+      "A private employer may have a different NHIA route from a self-employed individual."
+    ],
+    "sources": [
+      {
+        "label": "NHIA Get Covered",
+        "agency": "National Health Insurance Authority",
+        "url": "https://www.nhia.gov.ng/get-covered/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nhia-gifship-enrolment",
+      "nhia-private-sector-coverage"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "which NHIA plan",
+      "NHIA health plan Nigeria",
+      "NHIA self employed",
+      "NHIA family coverage"
+    ]
+  },
+  {
+    "slug": "nhia-private-sector-coverage",
+    "title": "How NHIA coverage works for private-sector employees",
+    "shortTitle": "NHIA private-sector cover",
+    "summary": "What a private employer and employee should check when arranging NHIA-recognised health coverage and adding eligible family members.",
+    "category": "Health insurance",
+    "agencySlug": "nhia",
+    "feeLabel": "Programme-dependent contribution",
+    "feeNote": "Confirm the applicable employer/programme contribution directly with NHIA and the approved enrolment route.",
+    "timeline": "Depends on employer registration, employee data and provider/HMO onboarding.",
+    "status": "verified",
+    "officialPortal": "https://www.nhia.gov.ng/get-covered/",
+    "requirements": [
+      "Employer/company information",
+      "Employee NIN and biodata",
+      "Eligible dependant details where the programme allows family cover",
+      "HMO/healthcare provider choices requested during enrolment"
+    ],
+    "steps": [
+      "Confirm through NHIA's Get Covered route which programme applies to the employer and workforce.",
+      "Have the employer complete the organisational/enrolment requirements specified by NHIA.",
+      "Submit each employee's NIN, biodata and the eligible spouse/child information included in the employer's NHIA enrolment.",
+      "Select the HMO and healthcare provider offered for the employer's programme and location.",
+      "Confirm activation before relying on the cover for a planned hospital visit."
+    ],
+    "notes": [
+      "Private-sector coverage is not the same as simply buying an unverified health card from a third party.",
+      "Employees should know the HMO and primary healthcare provider attached to their enrolment.",
+      "Use NHIA's current programme information because scheme names and implementation details can change."
+    ],
+    "sources": [
+      {
+        "label": "NHIA Get Covered",
+        "agency": "National Health Insurance Authority",
+        "url": "https://www.nhia.gov.ng/get-covered/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NHIA service programmes",
+        "agency": "National Health Insurance Authority",
+        "url": "https://www.nhia.gov.ng/service/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nhia-gifship-enrolment",
+      "nhia-find-right-health-plan"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NHIA private sector",
+      "health insurance employees Nigeria",
+      "NHIA employer registration",
+      "NHIA employee coverage"
+    ]
+  },
+  {
+    "slug": "pencom-open-rsa",
+    "title": "How to open a Retirement Savings Account (RSA) in Nigeria",
+    "shortTitle": "Open a pension RSA",
+    "summary": "What an RSA is, how to choose a Pension Fund Administrator and the information needed to start pension contributions.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "Open the RSA through a PenCom-licensed Pension Fund Administrator.",
+    "timeline": "Depends on identity/data verification by the selected PFA.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/what-is-a-retirement-savings-account-rsa/",
+    "requirements": [
+      "Identity information requested by the chosen PFA",
+      "NIN/identity verification information required under the current pension onboarding process",
+      "Employment information if you are opening the RSA as an employee",
+      "Contact details"
+    ],
+    "steps": [
+      "Select a Pension Fund Administrator from PenCom's licensed PFA list before starting the RSA registration.",
+      "Complete the PFA's RSA registration form and identity verification requirements.",
+      "Receive and keep the RSA PIN/account information issued after successful registration.",
+      "Give the RSA details to your employer so pension contributions can be remitted to the correct account.",
+      "Check your PFA statements/alerts to confirm that contributions are being credited."
+    ],
+    "notes": [
+      "Your RSA stays with you when you change jobs.",
+      "You are not required to keep the same employer to keep the same RSA.",
+      "Keep your contact information with the PFA current so you receive contribution statements and alerts."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — What is a Retirement Savings Account?",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/what-is-a-retirement-savings-account-rsa/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom — What happens to my RSA when I change jobs?",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/what-happens-to-my-rsa-when-i-change-jobs/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "pencom-transfer-rsa",
+      "pencom-unremitted-contributions"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "open RSA Nigeria",
+      "pension account Nigeria",
+      "choose PFA",
+      "Retirement Savings Account Nigeria"
+    ]
+  },
+  {
+    "slug": "pencom-transfer-rsa",
+    "title": "How to transfer your RSA from one PFA to another",
+    "shortTitle": "Transfer pension PFA",
+    "summary": "PenCom's RSA transfer rule and the practical steps to move a retirement account without changing the account's ownership.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "Check PFA/PenCom transfer rules",
+    "feeNote": "Use the regulated RSA Transfer System and your chosen receiving PFA.",
+    "timeline": "Transfer processing depends on the RSA Transfer System window and identity/data verification.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/can-i-move-my-account-from-one-pfa-to-another/",
+    "requirements": [
+      "Existing RSA PIN/account",
+      "Identity verification required by the receiving PFA",
+      "A receiving PFA licensed by PenCom"
+    ],
+    "steps": [
+      "Select the PenCom-licensed PFA you want to receive your existing RSA.",
+      "Contact the receiving PFA and start its RSA transfer process.",
+      "Complete the identity/data verification required for the transfer.",
+      "Wait for the transfer to be processed through the regulated RSA Transfer System.",
+      "Confirm that the receiving PFA now shows your RSA balance and that future employer contributions are directed correctly."
+    ],
+    "notes": [
+      "PenCom says an RSA holder may move from one PFA to another once in a year without giving a reason.",
+      "Changing PFA is different from opening a second RSA.",
+      "Tell your employer when the receiving PFA details become effective so future remittances do not go to the old PFA."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — Can I move my account from one PFA to another?",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/can-i-move-my-account-from-one-pfa-to-another/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-unremitted-contributions"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "change PFA Nigeria",
+      "transfer RSA",
+      "pension transfer Nigeria",
+      "move pension account"
+    ]
+  },
+  {
+    "slug": "pencom-unremitted-contributions",
+    "title": "What to do if your employer has not remitted your pension contributions",
+    "shortTitle": "Unremitted pension",
+    "summary": "How to gather evidence, check your PFA records and escalate missing employer pension remittances to PenCom.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No complaint fee stated",
+    "feeNote": "Use your PFA and PenCom's official complaint channels.",
+    "timeline": "Resolution varies with the employer's records, outstanding periods and recovery process.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/home-page-test/home-page/contact-us/",
+    "requirements": [
+      "RSA PIN and PFA name",
+      "Employer name and address",
+      "Employment/start-date details",
+      "PFA statements or alerts showing the missing contribution periods",
+      "Payslips or other evidence of deductions where available"
+    ],
+    "steps": [
+      "Check your PFA statement to identify the exact months for which contributions are missing.",
+      "Ask the employer/payroll unit to confirm whether the contributions were remitted and obtain any payment schedule or explanation available.",
+      "Contact your PFA so it can confirm whether any uncredited remittance is awaiting data reconciliation.",
+      "If the employer has failed to remit, submit a complaint to PenCom with the RSA PIN, PFA, employer identity and affected periods.",
+      "Keep the PenCom complaint reference and provide any additional employment or payroll evidence requested."
+    ],
+    "notes": [
+      "PenCom guidance tells employees with contribution problems to provide enough employer/RSA information for the account to be identified.",
+      "A deduction shown on a payslip is not the same as a contribution credited to the RSA; verify the PFA statement.",
+      "PenCom can pursue recovery from defaulting employers under the pension compliance process."
+    ],
+    "sources": [
+      {
+        "label": "PenCom Guidance Note for Employees",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/guidance-note-employees-2/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom Contact and Complaints",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/home-page-test/home-page/contact-us/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-transfer-rsa"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "employer not paying pension Nigeria",
+      "unremitted pension",
+      "PenCom complaint",
+      "missing pension contribution"
+    ]
+  },
+  {
+    "slug": "tinted-glass-permit",
+    "title": "How to apply for a Nigerian tinted-glass permit through POSSAP",
+    "shortTitle": "Tinted-glass permit",
+    "summary": "The official NPF/POSSAP application, supporting-document and biometric route for a motor-vehicle tinted-glass permit.",
+    "category": "Police & security",
+    "agencySlug": "npf",
+    "feeLabel": "Use the official POSSAP invoice",
+    "feeNote": "The amount shown on POSSAP is the amount to rely on; avoid third-party agents quoting an unofficial fee.",
+    "timeline": "NPF guidance states that applications, including the permit decision, are processed within five working days after the required process is completed.",
+    "status": "verified",
+    "officialPortal": "https://possap.gov.ng/",
+    "requirements": [
+      "Applicant identity/account details for POSSAP",
+      "Vehicle licence",
+      "Proof of vehicle ownership",
+      "Vehicle make/model, registration number, chassis/VIN and other identifying information shown on the POSSAP Tint Permit form",
+      "Supporting medical report from a government hospital if applying on medical grounds, where applicable",
+      "Biometric capture at the designated police intelligence office"
+    ],
+    "steps": [
+      "Open the official Police Specialized Services Automation Project (POSSAP) portal and choose the Tint Permit service.",
+      "Create/sign in to your account and complete the vehicle and applicant details.",
+      "Upload the vehicle licence, proof of ownership and any supporting document required for the reason claimed.",
+      "Generate the official invoice and pay through a payment option offered by POSSAP.",
+      "Print or retain the application/submission reference and attend the designated State Intelligence Bureau location for biometric capture when instructed.",
+      "Track the application through the official portal and keep the issued permit with the vehicle records."
+    ],
+    "notes": [
+      "NPF has stated that tinted-glass permission is based on the applicable legal and security criteria, not merely payment.",
+      "A medical-ground application should use the supporting medical evidence requested by the police.",
+      "Use POSSAP rather than a social-media agent or unofficial payment account."
+    ],
+    "sources": [
+      {
+        "label": "NPF Motor Vehicle Tinted Glass Permit guidance",
+        "agency": "Nigeria Police Force",
+        "url": "https://police.gov.ng/news/details/16",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "POSSAP official portal",
+        "agency": "Nigeria Police Force",
+        "url": "https://possap.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NPF tinted-glass permit statement",
+        "agency": "Nigeria Police Force",
+        "url": "https://www.police.gov.ng/news/details/697",
+        "published": "2026-01-13",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "police-character-certificate",
+      "vehicle-registration-nvis"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "tinted glass permit Nigeria",
+      "POSSAP tint permit",
+      "police tinted permit",
+      "tinted permit requirements"
+    ]
+  },
+  {
+    "slug": "nafdac-product-registration",
+    "title": "How to register a product with NAFDAC",
+    "shortTitle": "NAFDAC product registration",
+    "summary": "The official NAPAMS product-registration route for food, cosmetics, medicines, water, medical devices and other regulated products.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Varies by product and application",
+    "feeNote": "Use NAFDAC's current fee schedule and the amount generated in the official application workflow.",
+    "timeline": "Varies by product category, dossier completeness, inspection/testing needs and NAFDAC review.",
+    "status": "verified",
+    "officialPortal": "https://registration.nafdac.gov.ng/Home/",
+    "requirements": [
+      "A NAPAMS applicant/company account",
+      "Company or business registration and Tax ID details requested during account setup",
+      "Product category and product details",
+      "Manufacturing/importation and facility documents applicable to the product type",
+      "Product labels/artwork and technical/supporting documents requested by the relevant NAFDAC guideline"
+    ],
+    "steps": [
+      "Create or sign in to the official NAFDAC NAPAMS account for the applicant/company.",
+      "Choose Registration Form and start a New Product Registration for the correct product category.",
+      "Complete the company, product, manufacturer and facility information requested by the portal.",
+      "Upload the supporting documents required for that product type and submit the application.",
+      "Pay only through the official NAFDAC-generated payment route and keep the reference.",
+      "Track the submitted application and respond to queries, inspection/testing requests or corrections until a final decision is issued."
+    ],
+    "notes": [
+      "Requirements differ significantly between foods, cosmetics, drugs, water and medical devices; use the category-specific NAFDAC guideline.",
+      "Do not copy another product's registration number or label claim.",
+      "A submitted application is not the same as an approved product registration."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC Automated Product Administration and Monitoring System",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/Home/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NAFDAC Services Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nafdac-product-verification",
+      "nafdac-product-renewal",
+      "cac-business-name-registration"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NAFDAC registration",
+      "register food NAFDAC",
+      "NAFDAC cosmetics registration",
+      "NAFDAC product registration requirements"
+    ]
+  },
+  {
+    "slug": "nafdac-product-verification",
+    "title": "How to verify a NAFDAC product registration",
+    "shortTitle": "Verify NAFDAC product",
+    "summary": "How to check a NAFDAC registration claim instead of relying only on the number printed on a product label.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Official verification service",
+    "feeNote": "Use NAFDAC's official product-verification route.",
+    "timeline": "Online lookup when the official service is available.",
+    "status": "verified",
+    "officialPortal": "https://services.nafdac.gov.ng/",
+    "requirements": [
+      "The product's NAFDAC registration number and/or identifying product details",
+      "The product name, brand/manufacturer or pack information needed to confirm that the returned registration belongs to the same product"
+    ],
+    "steps": [
+      "Open the official NAFDAC services portal.",
+      "Choose the product verification/search service.",
+      "Enter the NAFDAC registration number and the product-identifying information shown by the official verification search.",
+      "Compare the returned product, company and registration information with the item you are checking.",
+      "If the number does not resolve correctly or appears to belong to a different product, treat the claim as unresolved and contact/report it through NAFDAC's official channels."
+    ],
+    "notes": [
+      "A NAFDAC number printed on packaging can be copied or misused, so verify the record rather than relying on appearance alone.",
+      "Check the product name and holder/manufacturer information, not just whether a number exists.",
+      "For a business preparing to sell a regulated product, verification does not replace the need to obtain its own required approval."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC Services Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nafdac-product-registration",
+      "nafdac-product-renewal"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "verify NAFDAC number",
+      "check NAFDAC product",
+      "NAFDAC verification",
+      "is NAFDAC number genuine"
+    ]
+  },
+  {
+    "slug": "nafdac-product-renewal",
+    "title": "How to renew a NAFDAC product registration",
+    "shortTitle": "Renew NAFDAC registration",
+    "summary": "Where renewal sits in NAPAMS, including what to do when an older product record is not yet visible in the online account.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Varies by product",
+    "feeNote": "Use the current NAFDAC fee schedule and the invoice generated for the renewal application.",
+    "timeline": "Varies by product type, submitted documents and NAFDAC review.",
+    "status": "verified",
+    "officialPortal": "https://registration.nafdac.gov.ng/Home/",
+    "requirements": [
+      "NAPAMS account for the registration holder",
+      "Existing product registration details",
+      "Updated product/company documents requested for the renewal",
+      "Current labels/artwork and any compliance documents required by the product category"
+    ],
+    "steps": [
+      "Sign in to NAPAMS with the account for the registration holder.",
+      "Check Submitted Applications/Product Listing for the product that needs renewal.",
+      "Start the renewal action for the existing product and update any company/product information requested.",
+      "If a legacy product is not present in the online listing, use the NAFDAC data-capture route before attempting renewal.",
+      "Upload the renewal documents, pay the official invoice and submit the application.",
+      "Track the renewal and respond to any query or correction request from NAFDAC."
+    ],
+    "notes": [
+      "Renew the existing registration rather than creating a duplicate new-product record unless NAFDAC specifically directs you to do so.",
+      "Legacy registrations may need data capture before they can be managed in NAPAMS.",
+      "Continue to use only the claims and product information permitted by the current registration."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC NAPAMS",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/Home/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NAFDAC Services Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nafdac-product-registration",
+      "nafdac-product-verification"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "renew NAFDAC number",
+      "NAFDAC renewal",
+      "renew product registration NAFDAC",
+      "NAPAMS renewal"
+    ]
+  },
+  {
+    "slug": "fccpc-consumer-complaint",
+    "title": "How to file a consumer complaint with FCCPC",
+    "shortTitle": "FCCPC consumer complaint",
+    "summary": "How to document a failed transaction or poor service, submit it to FCCPC and keep enough evidence for resolution.",
+    "category": "Consumer protection",
+    "agencySlug": "fccpc",
+    "feeLabel": "No complaint fee stated",
+    "feeNote": "FCCPC provides official complaint channels online and through its offices.",
+    "timeline": "FCCPC says complaint resolution may take about 1–45 days, although more complex cases can take longer.",
+    "status": "verified",
+    "officialPortal": "https://fccpc.gov.ng/consumers/complaint-handling/",
+    "requirements": [
+      "Your contact details",
+      "The business/provider's details",
+      "A clear description and chronology of the problem",
+      "Receipts, invoices, agreements, screenshots, emails/messages or other supporting evidence",
+      "Evidence of any attempt to resolve the issue directly with the business where available"
+    ],
+    "steps": [
+      "Collect the transaction documents and write a short timeline of what happened, what you requested and what the business did or failed to do.",
+      "Use FCCPC's official complaint route to create/submit the complaint and attach the relevant evidence.",
+      "Keep the tracking code or acknowledgment sent after submission.",
+      "Monitor the case and respond if FCCPC requests clarification or additional documents.",
+      "Do not delete the original receipts or correspondence until the matter is closed."
+    ],
+    "notes": [
+      "A concise chronology with receipts and correspondence is more useful than an unsupported accusation.",
+      "FCCPC also accepts complaints through other official channels such as email, letters or walk-in contact where appropriate.",
+      "Resolution time varies with the type of transaction and cooperation required from the business."
+    ],
+    "sources": [
+      {
+        "label": "FCCPC Complaint Handling",
+        "agency": "Federal Competition and Consumer Protection Commission",
+        "url": "https://fccpc.gov.ng/consumers/complaint-handling/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "report business Nigeria",
+      "FCCPC complaint",
+      "consumer complaint Nigeria",
+      "refund complaint FCCPC"
+    ]
+  },
+  {
+    "slug": "nhf-registration-and-contributions",
+    "title": "How to register for the National Housing Fund (NHF) and check contributions",
+    "shortTitle": "NHF registration",
+    "summary": "How NHF contributions work, where to verify contribution records and what information to keep for future housing or refund applications.",
+    "category": "Housing",
+    "agencySlug": "fmbn",
+    "feeLabel": "2.5% monthly income contribution",
+    "feeNote": "FMBN's NHF information states a 2.5% monthly contribution basis; check the current official rule that applies to your employment/self-employment status.",
+    "timeline": "Registration and crediting of contributions depend on employer/self-employed remittance and FMBN processing.",
+    "status": "verified",
+    "officialPortal": "https://fmbn.gov.ng/",
+    "requirements": [
+      "Personal identity and employment/self-employment details",
+      "NHF registration/contribution number once issued",
+      "Employer/payroll information for employees",
+      "Evidence of contributions where a record discrepancy needs to be resolved"
+    ],
+    "steps": [
+      "Use FMBN's official NHF route or the approved employer/self-employed registration process to obtain your NHF contributor record.",
+      "Ensure your personal details are correct before regular contributions begin.",
+      "Keep your NHF number and check that employer or personal remittances are being credited.",
+      "Use FMBN's contribution verification service to review the record periodically.",
+      "If contributions are missing, reconcile the affected months with the employer and FMBN before applying for a mortgage or refund."
+    ],
+    "notes": [
+      "The NHF contribution record is important for later mortgage/refund eligibility.",
+      "Do not assume a payroll deduction has reached FMBN until it appears in the contribution record.",
+      "Keep old employer details if you change jobs so missing remittances can be traced."
+    ],
+    "sources": [
+      {
+        "label": "FMBN official website and NHF services",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "FMBN NHF Scheme FAQ",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/products/nhf-scheme/faqs",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nhf-mortgage-loan",
+      "nhf-contribution-refund"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NHF registration Nigeria",
+      "check NHF contribution",
+      "FMBN NHF",
+      "housing fund contribution"
+    ]
+  },
+  {
+    "slug": "nhf-mortgage-loan",
+    "title": "How to apply for an NHF mortgage loan",
+    "shortTitle": "NHF mortgage loan",
+    "summary": "The FMBN-backed mortgage route for eligible NHF contributors, including the contribution history, mortgage bank and affordability steps.",
+    "category": "Housing",
+    "agencySlug": "fmbn",
+    "feeLabel": "6% p.a. NHF mortgage rate",
+    "feeNote": "FMBN's current product page states that participating mortgage banks on-lend NHF mortgage funds to contributors at 6% per annum.",
+    "timeline": "Depends on property documentation, affordability assessment, participating mortgage bank processing and FMBN approval.",
+    "status": "verified",
+    "officialPortal": "https://fmbn.gov.ng/products/nhf_mortgage_loan",
+    "requirements": [
+      "NHF contributor status with at least six months of continuous contributions under the current FMBN product terms",
+      "Evidence of income and ability to repay",
+      "A qualifying residential property and its title/development documents",
+      "Application through an accredited/licensed participating mortgage bank",
+      "Identity and other documents requested by the mortgage bank/FMBN"
+    ],
+    "steps": [
+      "Confirm that your NHF contribution record meets the current minimum contribution history.",
+      "Identify a participating mortgage bank and discuss the property/loan amount you can afford.",
+      "Prepare the income, identity and property documents requested for underwriting.",
+      "Submit the mortgage application through the participating mortgage bank rather than paying an unofficial intermediary.",
+      "Respond to valuation, title, affordability or documentation queries raised during processing.",
+      "If approved, review the mortgage terms, repayment schedule and property documentation before completion."
+    ],
+    "notes": [
+      "FMBN's current product page lists a maximum tenor of up to 30 years and a loan ceiling of up to ₦50 million, subject to eligibility and affordability.",
+      "Approval is not automatic after six months of contributions; the property and repayment capacity are also assessed.",
+      "Verify that the mortgage bank and payment instructions are part of the official NHF process."
+    ],
+    "sources": [
+      {
+        "label": "FMBN NHF Mortgage Loan",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/products/nhf_mortgage_loan",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nhf-registration-and-contributions",
+      "nhf-contribution-refund"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NHF mortgage loan",
+      "FMBN mortgage",
+      "NHF loan 6 percent",
+      "housing loan Nigeria"
+    ]
+  },
+  {
+    "slug": "nhf-contribution-refund",
+    "title": "How to apply for an NHF contribution refund",
+    "shortTitle": "NHF contribution refund",
+    "summary": "How to confirm that you meet the NHF refund conditions, prepare the contribution record and submit through FMBN's official refund process.",
+    "category": "Housing",
+    "agencySlug": "fmbn",
+    "feeLabel": "Official refund process",
+    "feeNote": "Do not pay an unofficial agent to release an NHF refund.",
+    "timeline": "Varies with eligibility verification, contribution reconciliation and FMBN processing.",
+    "status": "verified",
+    "officialPortal": "https://fmbn.gov.ng/",
+    "requirements": [
+      "NHF contributor number and contribution record",
+      "Identity information",
+      "Evidence supporting the applicable refund condition, such as retirement or another condition recognised by the current NHF rules",
+      "A Nigerian bank account in the eligible contributor's name for any refund payment information FMBN asks to confirm"
+    ],
+    "steps": [
+      "Check the current FMBN/NHF refund eligibility rules and confirm that your situation qualifies.",
+      "Verify your contribution history and resolve missing or incorrect remittances before submitting the refund request.",
+      "Prepare the identity, contributor and supporting eligibility documents requested by FMBN.",
+      "Submit the refund through FMBN's official process and keep the acknowledgment/reference.",
+      "Track the request and respond to any contribution or eligibility verification query."
+    ],
+    "notes": [
+      "Leaving one employer does not automatically mean every contributor is immediately entitled to withdraw NHF contributions.",
+      "Refund eligibility is controlled by the NHF rules, so use the current FMBN conditions rather than an old age/retirement claim from social media.",
+      "A complete contribution record reduces delays when FMBN checks the amount due."
+    ],
+    "sources": [
+      {
+        "label": "FMBN official services",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "FMBN NHF legal framework",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/products/nhf-scheme/legal-framework",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "nhf-registration-and-contributions",
+      "nhf-mortgage-loan"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "NHF refund",
+      "FMBN contribution refund",
+      "withdraw NHF contributions",
+      "housing fund refund Nigeria"
+    ]
+  },
+  {
+    "slug": "customs-vehicle-duty-verification",
+    "title": "How to verify customs duty and clearance on an imported vehicle",
+    "shortTitle": "Verify vehicle customs duty",
+    "summary": "Use the Nigeria Customs Service verification route to check whether an imported vehicle's clearance/duty claim matches an official customs record.",
+    "category": "Customs",
+    "agencySlug": "ncs",
+    "feeLabel": "Use the official Customs verification charge shown",
+    "feeNote": "Where the Customs verification system generates a payment, rely on that official amount and reference rather than a third-party quote.",
+    "timeline": "Online verification depends on the vehicle record and the current Customs verification system.",
+    "status": "verified",
+    "officialPortal": "https://cvms.nigeriatradehub.gov.ng/",
+    "requirements": [
+      "Vehicle chassis/VIN",
+      "Import/clearance documents or duty-payment information available from the owner/seller",
+      "Accurate vehicle details for comparison with the returned Customs record"
+    ],
+    "steps": [
+      "Open the official Nigeria Customs Service website and use its Customs Verification Management System/service link.",
+      "Enter the vehicle chassis/VIN and other requested vehicle details exactly as shown on the vehicle.",
+      "Complete any official verification payment step generated by the system and keep its reference.",
+      "Review the returned clearance/duty information and compare it with the documents supplied for the vehicle.",
+      "If the record cannot be verified or conflicts with the documents, resolve the discrepancy with Customs before relying on the vehicle's clearance claim."
+    ],
+    "notes": [
+      "A customs verification answers a different question from FRSC ownership, number-plate or insurance verification.",
+      "For a used imported vehicle, verify the VIN directly on the vehicle rather than relying only on a document supplied by the seller.",
+      "Do not use unofficial 'customs checker' websites that ask for vehicle data or payment when an official NCS route is available."
+    ],
+    "sources": [
+      {
+        "label": "Customs Verification Management System",
+        "agency": "Nigeria Customs Service / Trade Modernisation Project",
+        "url": "https://cvms.nigeriatradehub.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Nigeria Customs Service — official services",
+        "agency": "Nigeria Customs Service",
+        "url": "https://customs.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "customs-846-non-standard-vin",
+      "vehicle-proof-of-ownership-verification",
+      "verify-vehicle-number-plate"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "verify customs duty car Nigeria",
+      "customs vehicle verification",
+      "check customs duty VIN Nigeria",
+      "vehicle clearance Nigeria"
+    ]
+  },
+  {
+    "slug": "customs-846-non-standard-vin",
+    "title": "How the Nigeria Customs 846 non-standard VIN portal works",
+    "shortTitle": "Customs 846 VIN portal",
+    "summary": "What the NCS 846 route is for, who should use it and how an authorised declarant handles a vehicle that cannot follow the standard VIN valuation path.",
+    "category": "Customs",
+    "agencySlug": "ncs",
+    "feeLabel": "Customs assessment applies",
+    "feeNote": "Duties/charges depend on the vehicle assessment and Customs process; use only the amount generated through the official route.",
+    "timeline": "Depends on submission, assessment and Customs processing.",
+    "status": "verified",
+    "officialPortal": "https://846.customs.gov.ng/",
+    "requirements": [
+      "A non-standard/challenged VIN case that requires the 846 process",
+      "Registered portal user/authorised declarant credentials",
+      "Valid Customs agent licence where the portal requires it",
+      "Vehicle/import details and supporting documents requested in the application"
+    ],
+    "steps": [
+      "Confirm that the vehicle actually requires the 846/non-standard VIN process rather than the normal VIN valuation route.",
+      "An authorised user/declarant signs in to the official 846 Customs portal.",
+      "Create the application and enter the vehicle/import details and supporting documents requested.",
+      "Submit the case for Customs assessment and follow the status through the portal.",
+      "Complete only the official assessment/payment instructions and retain the generated reference/receipt.",
+      "Use the portal's verification/status tools to confirm the resulting record."
+    ],
+    "notes": [
+      "This is not a general consumer shortcut for reducing vehicle duty; the portal is designed for the applicable non-standard VIN/customs-declaration cases.",
+      "The portal's account requirements can involve a licensed Customs agent/declarant.",
+      "A buyer can still ask for the resulting official Customs record and separately verify vehicle ownership and registration."
+    ],
+    "sources": [
+      {
+        "label": "Nigeria Customs 846 portal",
+        "agency": "Nigeria Customs Service",
+        "url": "https://846.customs.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Nigeria Customs 846 verification",
+        "agency": "Nigeria Customs Service",
+        "url": "https://846.customs.gov.ng/verify/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "customs-vehicle-duty-verification",
+      "vehicle-registration-nvis"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "Customs 846 Nigeria",
+      "non standard VIN customs",
+      "846 vehicle portal",
+      "Nigeria customs VIN"
+    ]
+  },
+  {
+    "slug": "federal-marriage-application",
+    "title": "How to apply for a federal statutory marriage in Nigeria",
+    "shortTitle": "Federal marriage application",
+    "summary": "How to use the Federal Ministry of Interior marriage portal for an ordinary or special statutory marriage and proceed to the selected federal registry.",
+    "category": "Civil records",
+    "agencySlug": "interior",
+    "feeLabel": "₦75,000 ordinary / ₦100,000 special",
+    "feeNote": "The Ministry of Interior marriage portal currently lists ₦75,000 for Ordinary Marriage and ₦100,000 for Special Marriage. Confirm the displayed amount before payment.",
+    "timeline": "Depends on the marriage type, statutory notice/appointment requirements and the registry date selected.",
+    "status": "verified",
+    "officialPortal": "https://candb.interior.gov.ng/marriage/",
+    "requirements": [
+      "Applicant accounts/details for both parties as requested by the portal",
+      "Identity and personal-status documents requested for the marriage type",
+      "Choice of federal marriage registry/venue",
+      "Official portal payment and appointment details"
+    ],
+    "steps": [
+      "Open the Ministry of Interior marriage portal and create/sign in to the required account.",
+      "Choose the applicable statutory marriage service, such as Ordinary Marriage or Special Marriage.",
+      "Complete the parties' personal information and upload the documents requested by the portal.",
+      "Choose the registry/venue and available appointment details presented by the system.",
+      "Review the application and pay the official portal fee.",
+      "Attend the selected federal marriage registry on the portal-assigned date with the original identity and civil-status documents listed on your appointment/application record."
+    ],
+    "notes": [
+      "The federal statutory-marriage process is different from customary or religious ceremonies that are not being registered through this federal route.",
+      "Use the fee shown on the official Ministry of Interior portal because charges can be revised.",
+      "Do not pay a private account to reserve a federal registry date."
+    ],
+    "sources": [
+      {
+        "label": "Federal Ministry of Interior Marriage Portal",
+        "agency": "Federal Ministry of Interior",
+        "url": "https://candb.interior.gov.ng/marriage/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Federal Marriage Portal account registration",
+        "agency": "Federal Ministry of Interior",
+        "url": "https://candb.interior.gov.ng/marriage/register",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "marriage-document-verification-and-ctc",
+      "npc-birth-attestation"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "marriage registry Nigeria",
+      "federal marriage Lagos Abuja",
+      "ordinary marriage Nigeria",
+      "Ministry of Interior marriage"
+    ]
+  },
+  {
+    "slug": "marriage-document-verification-and-ctc",
+    "title": "How to verify a federal marriage document or request a Certified True Copy",
+    "shortTitle": "Verify marriage document",
+    "summary": "The Ministry of Interior's online document-verification and Certified True Copy services for federal statutory marriage records.",
+    "category": "Civil records",
+    "agencySlug": "interior",
+    "feeLabel": "₦50,000",
+    "feeNote": "The Ministry of Interior marriage portal currently lists ₦50,000 for Document Verification and ₦50,000 for a Certified True Copy. Confirm the amount before payment.",
+    "timeline": "Depends on successful record matching and Ministry processing.",
+    "status": "verified",
+    "officialPortal": "https://candb.interior.gov.ng/marriage/",
+    "requirements": [
+      "Marriage certificate or record details such as the parties' names, marriage date, registry and certificate/reference number available on the record",
+      "Applicant contact/account details",
+      "Information that allows the Ministry to identify the federal marriage record"
+    ],
+    "steps": [
+      "Open the Ministry of Interior marriage portal.",
+      "Choose Document Verification if you need to check a record, or Certified True Copy if you need an authenticated copy.",
+      "Enter the marriage/certificate details requested so the record can be located.",
+      "Review the service and pay the official portal amount.",
+      "Track the request and follow any instruction to provide additional record details or collect/download the result."
+    ],
+    "notes": [
+      "Verification and a Certified True Copy are different services: verification checks the record, while the CTC is an authenticated copy of the record.",
+      "A church/customary marriage that was never registered in the federal statutory-marriage system may not be found there.",
+      "Check names and marriage date carefully before submitting because a data mismatch can prevent record matching."
+    ],
+    "sources": [
+      {
+        "label": "Federal Ministry of Interior Marriage Portal",
+        "agency": "Federal Ministry of Interior",
+        "url": "https://candb.interior.gov.ng/marriage/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "federal-marriage-application"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "verify marriage certificate Nigeria",
+      "certified true copy marriage certificate",
+      "federal marriage verification",
+      "marriage CTC Nigeria"
+    ]
+  },
+  {
+    "slug": "npc-death-registration",
+    "title": "How to register a death with the National Population Commission",
+    "shortTitle": "NPC death registration",
+    "summary": "The official NPC death-notification/registration route, including the informant's NIN requirement and confirmation process.",
+    "category": "Civil records",
+    "agencySlug": "npc",
+    "feeLabel": "Free",
+    "feeNote": "NPC's official death-registration portal states that death registration is free.",
+    "timeline": "Depends on the submitted record and NPC verification/registration processing.",
+    "status": "verified",
+    "officialPortal": "https://www.deathnotification.nationalpopulation.gov.ng/",
+    "requirements": [
+      "NIN of the person acting as informant",
+      "Details of the deceased and death requested by the NPC portal",
+      "A working email address for confirmation/communication",
+      "Supporting information or documents requested for the death record"
+    ],
+    "steps": [
+      "Open the official NPC death-notification/registration portal.",
+      "Enter the informant's NIN and complete the identity information requested.",
+      "Provide the deceased person's and death details accurately.",
+      "Submit the record and any supporting information requested by NPC.",
+      "Watch the supplied email/contact channel for successful-registration confirmation or any request for correction."
+    ],
+    "notes": [
+      "NPC states that death registration is free.",
+      "The informant should use a valid NIN and accurate contact information.",
+      "Death registration is a civil-record process; a hospital or burial document does not automatically replace the NPC registration record."
+    ],
+    "sources": [
+      {
+        "label": "NPC Death Notification and Registration Portal",
+        "agency": "National Population Commission",
+        "url": "https://www.deathnotification.nationalpopulation.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "related": [
+      "npc-child-birth-registration",
+      "npc-birth-attestation"
+    ],
+    "lastVerified": "2026-10-01",
+    "searchTerms": [
+      "death certificate Nigeria",
+      "register death NPC",
+      "NPC death registration",
+      "death registration free Nigeria"
+    ]
   }
 ]

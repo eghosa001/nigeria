@@ -113,7 +113,40 @@ const expectedSlugs = [
   "china-tourist-visa-nigeria",
   "neco-certificate-service",
   "nip-transfer-status",
-  "vehicle-insurance-validation-ussd"
+  "vehicle-insurance-validation-ussd",
+  "nin-sim-linkage",
+  "check-nin-sim-linkage-status",
+  "fix-failed-nin-sim-linkage",
+  "nelfund-student-loan-application",
+  "nelfund-loan-status-and-upkeep",
+  "nelfund-loan-repayment",
+  "electricity-prepaid-meter-application",
+  "electricity-meter-paid-not-installed",
+  "electricity-estimated-billing-dispute",
+  "electricity-complaint-escalation",
+  "electricity-tariff-band",
+  "vehicle-registration-nvis",
+  "verify-vehicle-number-plate",
+  "vehicle-proof-of-ownership-verification",
+  "nhia-gifship-enrolment",
+  "nhia-find-right-health-plan",
+  "nhia-private-sector-coverage",
+  "pencom-open-rsa",
+  "pencom-transfer-rsa",
+  "pencom-unremitted-contributions",
+  "tinted-glass-permit",
+  "nafdac-product-registration",
+  "nafdac-product-verification",
+  "nafdac-product-renewal",
+  "fccpc-consumer-complaint",
+  "nhf-registration-and-contributions",
+  "nhf-mortgage-loan",
+  "nhf-contribution-refund",
+  "customs-vehicle-duty-verification",
+  "customs-846-non-standard-vin",
+  "federal-marriage-application",
+  "marriage-document-verification-and-ctc",
+  "npc-death-registration"
 ] as const;
 const representative = [
   {
@@ -230,8 +263,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(108);
-  expect(publicServices).toHaveLength(107);
+  expect(services).toHaveLength(141);
+  expect(publicServices).toHaveLength(140);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
