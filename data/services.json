@@ -5657,7 +5657,7 @@
       "Compare the subscriber details registered on the line with the NIN identity record, especially the registered owner and core biodata.",
       "If the NIN itself contains an error, correct the relevant NIMC record first before repeatedly resubmitting the same mismatch.",
       "If NIN verification continues to fail or the line remains barred, visit the mobile operator's official outlet with the NIN and requested identity evidence.",
-      "If the SIM is not registered to you, ask the operator for the correct ownership/re-registration process and provide proof of ownership or usage where required."
+      "If the SIM is not registered to you, ask the operator to transfer or re-register ownership and present the proof of ownership or usage it asks for."
     ],
     "notes": [
       "NCC guidance says subscribers with NIN-verification problems should visit their service provider.",
@@ -5706,7 +5706,7 @@
     "officialPortal": "https://portal.nelf.gov.ng/auth/register",
     "requirements": [
       "Nigerian citizenship",
-      "Admission/enrolment at an eligible institution that can be verified through the NELFUND process",
+      "Admission or enrolment at an eligible institution, with a student record that NELFUND can verify",
       "Identity and education information requested by the portal, including NIN and JAMB/education verification where applicable",
       "A working email address and phone number",
       "Personal bank details for upkeep payments when requested"
@@ -5877,7 +5877,7 @@
     "officialPortal": "https://nerc.gov.ng/faq/metering/",
     "requirements": [
       "An electricity customer/account number with your DisCo",
-      "Service/address details requested by the DisCo or MAP",
+      "The service address plus the customer/account information shown on your DisCo bill or account",
       "Payment through the official DisCo/MAP route if using the upfront MAP option"
     ],
     "steps": [
@@ -6163,7 +6163,7 @@
     "steps": [
       "Open the official FRSC NVIS vehicle-registration page or use an authorised registration centre.",
       "Enter the vehicle category and technical details exactly as they appear on the supporting documents.",
-      "Provide the chassis/VIN, engine number, insurance information and owner details requested by NVIS.",
+      "Provide the chassis/VIN, engine number, insurance policy information, owner's phone/address and driver's-licence or identity information shown on the NVIS form.",
       "Select the state/plate allocation information and any permitted plate option.",
       "Review the submitted identifiers carefully before payment or final processing because an incorrect VIN/engine number can create later verification problems.",
       "Complete the authorised payment/physical processing and keep the registration, plate and proof-of-ownership records issued for the vehicle."
@@ -6307,15 +6307,15 @@
     "status": "verified",
     "officialPortal": "https://www.nhia.gov.ng/service/land-insurance/",
     "requirements": [
-      "NIN for the principal enrollee and other identity details requested by NHIA",
+      "NIN for the principal enrollee plus full name, date of birth, phone and email used for NHIA enrolment",
       "Phone number and email",
-      "Choice of HMO and healthcare provider where required",
+      "Preferred HMO and healthcare provider from the options NHIA makes available for the enrolment",
       "Dependant information for family enrolment",
       "Official payment reference where a premium is due"
     ],
     "steps": [
       "Use NHIA's Get Covered/plan information to confirm that GIFSHIP is the appropriate route for you, your family or group.",
-      "Prepare the NIN and enrollee/dependant details requested by NHIA.",
+      "Prepare the principal enrollee's NIN, contact details, date of birth and the eligible dependant information that will be entered on the NHIA enrolment form.",
       "Complete the NHIA enrolment process online or through an NHIA office and choose the HMO/healthcare provider options offered.",
       "Pay only through the official NHIA/Remita route and keep the receipt/reference.",
       "Confirm enrolment/identity details and follow the activation or ID instructions provided by NHIA."
@@ -6375,7 +6375,7 @@
       "Location and provider preferences where relevant"
     ],
     "steps": [
-      "Open NHIA's Get Covered page.",
+      "Open NHIA's official Get Covered page and start with the employment-status question so the programme options are narrowed correctly.",
       "Select the employment/status option that best describes you.",
       "Indicate whether you need individual, family or group coverage where the tool asks.",
       "Review the programme route NHIA presents and open its official enrolment instructions.",
@@ -6427,8 +6427,8 @@
     "steps": [
       "Confirm through NHIA's Get Covered route which programme applies to the employer and workforce.",
       "Have the employer complete the organisational/enrolment requirements specified by NHIA.",
-      "Submit employee identity information and eligible dependant details through the approved process.",
-      "Select the available HMO/healthcare provider options where required.",
+      "Submit each employee's NIN, biodata and the eligible spouse/child information included in the employer's NHIA enrolment.",
+      "Select the HMO and healthcare provider offered for the employer's programme and location.",
       "Confirm activation before relying on the cover for a planned hospital visit."
     ],
     "notes": [
@@ -6640,7 +6640,7 @@
       "Applicant identity/account details for POSSAP",
       "Vehicle licence",
       "Proof of vehicle ownership",
-      "Vehicle details requested by the portal",
+      "Vehicle make/model, registration number, chassis/VIN and other identifying information shown on the POSSAP Tint Permit form",
       "Supporting medical report from a government hospital if applying on medical grounds, where applicable",
       "Biometric capture at the designated police intelligence office"
     ],
@@ -6767,7 +6767,7 @@
     "steps": [
       "Open the official NAFDAC services portal.",
       "Choose the product verification/search service.",
-      "Enter the NAFDAC number or product details requested by the service.",
+      "Enter the NAFDAC registration number and the product-identifying information shown by the official verification search.",
       "Compare the returned product, company and registration information with the item you are checking.",
       "If the number does not resolve correctly or appears to belong to a different product, treat the claim as unresolved and contact/report it through NAFDAC's official channels."
     ],
@@ -7027,7 +7027,7 @@
       "NHF contributor number and contribution record",
       "Identity information",
       "Evidence supporting the applicable refund condition, such as retirement or another condition recognised by the current NHF rules",
-      "Bank/payment details requested by FMBN"
+      "A Nigerian bank account in the eligible contributor's name for any refund payment information FMBN asks to confirm"
     ],
     "steps": [
       "Check the current FMBN/NHF refund eligibility rules and confirm that your situation qualifies.",
@@ -7198,7 +7198,7 @@
       "Complete the parties' personal information and upload the documents requested by the portal.",
       "Choose the registry/venue and available appointment details presented by the system.",
       "Review the application and pay the official portal fee.",
-      "Follow the portal/registry instructions for notice, interview or appearance and attend with the original documents requested."
+      "Attend the selected federal marriage registry on the portal-assigned date with the original identity and civil-status documents listed on your appointment/application record."
     ],
     "notes": [
       "The federal statutory-marriage process is different from customary or religious ceremonies that are not being registered through this federal route.",
@@ -7244,7 +7244,7 @@
     "status": "verified",
     "officialPortal": "https://candb.interior.gov.ng/marriage/",
     "requirements": [
-      "Marriage record/certificate details requested by the portal",
+      "Marriage certificate or record details such as the parties' names, marriage date, registry and certificate/reference number available on the record",
       "Applicant contact/account details",
       "Information that allows the Ministry to identify the federal marriage record"
     ],
