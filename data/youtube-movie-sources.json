@@ -524,6 +524,83 @@
       ],
       "estimatedMovieCount": 45,
       "optional": true
+    },
+    {
+      "slug": "uche-nancy-update-tv",
+      "searchName": "Uche Nancy Update TV",
+      "aliases": [
+        "Uche Nancy Update TV"
+      ],
+      "estimatedMovieCount": 60,
+      "optional": true
+    },
+    {
+      "slug": "beth-sheba-tv",
+      "searchName": "Beth-Sheba TV",
+      "aliases": [
+        "Beth-Sheba TV",
+        "Beth Sheba TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "temple-premium-tv",
+      "searchName": "Temple Premium Tv",
+      "aliases": [
+        "Temple Premium Tv",
+        "Temple Premium TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "onyiialextv",
+      "searchName": "Onyiialextv",
+      "aliases": [
+        "Onyiialextv",
+        "Onyiialex TV"
+      ],
+      "estimatedMovieCount": 40,
+      "optional": true
+    },
+    {
+      "slug": "ifycabana-media",
+      "searchName": "Ifycabana Media",
+      "aliases": [
+        "Ifycabana Media"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "damilola-oni-tv",
+      "searchName": "The Damilola Oni TV",
+      "aliases": [
+        "The Damilola Oni TV",
+        "Damilola Oni TV"
+      ],
+      "estimatedMovieCount": 35,
+      "optional": true
+    },
+    {
+      "slug": "leorence-tv",
+      "searchName": "Leorence Tv",
+      "aliases": [
+        "Leorence Tv",
+        "Leorence TV"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "rachel-edwards",
+      "searchName": "Rachel Edwards",
+      "aliases": [
+        "Rachel Edwards"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
     }
   ]
 }
