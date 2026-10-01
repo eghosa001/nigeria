@@ -14,6 +14,13 @@ test("phone shell fits and exposes admin login without hydration errors", async 
 
   await page.goto("/");
   await expect(page.getByRole("link", { name: "Admin login" }).first()).toBeVisible();
+
+  await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await expect(page.getByLabel("Admin passphrase")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Unlock admin" })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), "/admin").toBeLessThanOrEqual(1);
+
   expect(hydrationErrors).toEqual([]);
 });
 
