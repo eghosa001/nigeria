@@ -407,6 +407,7 @@ function cleanTitle(raw, cast = []) {
     }
   }
 
+  title = title.replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ");
   title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, " ");
   title = title.replace(/[.\s-]*\b(?:starring|featuring|feat\.?|ft\.?)\b.*$/i, " ");
   title = title.replace(/\s*-\s*new\s+["'“”]?latest\b.*$/i, " ");
