@@ -7,7 +7,7 @@ import { categories, publicServiceListings } from "@/lib/data";
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
   title: "Nigeria service directory",
-  description: "Search and filter MyNigeriaGuide's source-linked Nigerian service guides, including identity, travel, education, banking, business, driving and other practical processes.",
+  description: "Search source-linked Nigerian service guides for fees, requirements, official portals and practical application steps.",
 };
 
 export const dynamic = "force-static";
