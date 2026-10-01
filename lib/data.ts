@@ -207,6 +207,62 @@ export const agencies: Agency[] = [
     "website": "https://interior.gov.ng"
   },
   {
+    "slug": "nipo",
+    "name": "Nigerian Industrial Property Office",
+    "shortName": "NIPO",
+    "description": "Trademark, patent and industrial-design registration services.",
+    "website": "https://nipo.gov.ng"
+  },
+  {
+    "slug": "copyright-commission",
+    "name": "Nigerian Copyright Commission",
+    "shortName": "Copyright Commission",
+    "description": "Copyright registration, certification and anti-piracy services.",
+    "website": "https://copyright.gov.ng"
+  },
+  {
+    "slug": "nepc",
+    "name": "Nigerian Export Promotion Council",
+    "shortName": "NEPC",
+    "description": "Exporter registration, certification and export-support services.",
+    "website": "https://nepc.gov.ng"
+  },
+  {
+    "slug": "smedan",
+    "name": "Small and Medium Enterprises Development Agency of Nigeria",
+    "shortName": "SMEDAN",
+    "description": "MSME registration, business-development and enterprise-support services.",
+    "website": "https://smedan.gov.ng"
+  },
+  {
+    "slug": "bpp",
+    "name": "Bureau of Public Procurement",
+    "shortName": "BPP",
+    "description": "Federal contractor, consultant and service-provider registration.",
+    "website": "https://bpp.gov.ng"
+  },
+  {
+    "slug": "son",
+    "name": "Standards Organisation of Nigeria",
+    "shortName": "SON",
+    "description": "SONCAP, MANCAP and regulated-product certification services.",
+    "website": "https://son.gov.ng"
+  },
+  {
+    "slug": "nsitf",
+    "name": "Nigeria Social Insurance Trust Fund",
+    "shortName": "NSITF",
+    "description": "Employees' Compensation Scheme registration, claims and compliance.",
+    "website": "https://nsitf.gov.ng"
+  },
+  {
+    "slug": "nde",
+    "name": "National Directorate of Employment",
+    "shortName": "NDE",
+    "description": "Employment, vocational-skills and job-creation programme services.",
+    "website": "https://nderegistrationportal.ng"
+  },
+  {
     "slug": "ukvi",
     "name": "UK Visas and Immigration",
     "shortName": "UKVI",
@@ -376,6 +432,10 @@ export const categories = [
   {
     "name": "Customs",
     "description": "Vehicle customs verification and customs digital services."
+  },
+  {
+    "name": "Employment & social protection",
+    "description": "Employment programmes, employer social insurance and workplace compensation services."
   },
   {
     "name": "International travel",
