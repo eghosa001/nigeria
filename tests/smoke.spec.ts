@@ -449,11 +449,11 @@ test("service metadata descriptions are meaningful", async ({ page }) => {
 
 test("topic hubs cross-link high-intent tasks and service guides", async ({ page }) => {
   await page.goto("/topics/nigerian-passport");
-  await expect(page.getByRole("heading", { name: "Nigerian Passport Guide 2026" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Nigerian Passport Application & Renewal Guide 2026" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Passport renewal" })).toBeVisible();
 
   await page.goto("/services/passport-renewal");
-  await expect(page.getByRole("link", { name: /Nigerian Passport Guide 2026/ })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Nigerian Passport Application & Renewal Guide 2026/ })).toBeVisible();
 });
 
 test("guide sharing exposes a reusable current summary", async ({ page }) => {
