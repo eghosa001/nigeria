@@ -129,13 +129,21 @@ const reviewGeneratedAt = String(reviewData.generatedAt ?? "").slice(0, 10) || n
 const reviewNonMovieTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|watch\s+party|webinar|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|music\s+video|making\s+of)\b/i;
 const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget)\b/i;
 
+function cleanReviewTitle(value: string) {
+  return value
+    .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
+    .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function reviewSynopsis(candidate: ReviewCandidate) {
   const text = String(candidate.descriptionExcerpt ?? "").replace(/\s+/g, " ").trim();
   const firstUseful = text
     .split(/(?<=[.!?])\s+/)
     .find((sentence) => sentence.length >= 70 && !reviewPromoText.test(sentence));
   if (firstUseful) return firstUseful.slice(0, 360);
-  return candidate.title + " is a full-length Nigerian film published by " + candidate.channelName +
+  return cleanReviewTitle(candidate.title) + " is a full-length Nigerian film published by " + candidate.channelName +
     ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
 }
 
@@ -148,7 +156,7 @@ const reviewYouTubeMovies: BaseYouTubeMovieRecord[] = ((reviewData.candidates ??
   )
   .map((candidate) => ({
     videoId: candidate.videoId,
-    title: candidate.title,
+    title: cleanReviewTitle(candidate.title),
     rawTitle: candidate.rawTitle,
     synopsis: reviewSynopsis(candidate),
     cast: [],
