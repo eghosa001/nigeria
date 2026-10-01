@@ -7337,5 +7337,1584 @@
       "NPC death registration",
       "death registration free Nigeria"
     ]
+  },
+  {
+    "slug": "nipo-trademark-registration",
+    "title": "How to register a trademark in Nigeria",
+    "shortTitle": "Register a trademark",
+    "summary": "The Nigerian Industrial Property Office process for checking availability, filing a trademark, passing examination and publication, and obtaining the registration certificate.",
+    "category": "Business",
+    "agencySlug": "nipo",
+    "feeLabel": "NIPO filing and certificate fees apply",
+    "feeNote": "NIPO's current service schedule lists separate charges for availability search, filing and certificate issuance. Confirm the live invoice before payment.",
+    "timeline": "NIPO's SLA lists 24 hours for preliminary search and filing stages, but full registration also includes examination, journal publication and a two-month opposition period.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nipo.gov.ng/trademark.jsp",
+    "requirements": [
+      "The proposed word mark, logo or other distinctive sign and the correct trademark class",
+      "Applicant or company name, address and nationality",
+      "A clear representation of the mark",
+      "Authorisation or power of attorney for the accredited agent filing the application"
+    ],
+    "steps": [
+      "Check the proposed mark through NIPO's preliminary search route and identify the correct trademark class before filing.",
+      "File the trademark application through a NIPO-accredited agent and keep the official acknowledgement number and filing date.",
+      "Track examination and respond to any refusal, query or correction raised by the Registry before acceptance.",
+      "After acceptance, confirm publication in the Nigerian Trademark Journal and allow the statutory two-month opposition period to run.",
+      "If no opposition succeeds, pay the certificate-stage fee through the official NIPO route and retain the issued registration certificate."
+    ],
+    "notes": [
+      "NIPO states that online trademark, patent and design filings are handled through certified agents.",
+      "Trademark registration is different from CAC business-name or company registration; CAC registration does not itself create a trademark right.",
+      "A colour-specific filing can limit protection to the registered colours, according to NIPO's trademark guidance."
+    ],
+    "sources": [
+      {
+        "label": "NIPO Trademark Filing Procedure",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://nipo.gov.ng/trademark.jsp",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIPO Service Level Agreement",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://www.nipo.gov.ng/eula.jsp",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIPO Fees and Charges",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://nipo.gov.ng/feesandcharges.jsp",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "trademark registration Nigeria",
+      "register logo Nigeria",
+      "NIPO trademark",
+      "trademark search Nigeria",
+      "protect business name Nigeria"
+    ],
+    "related": [
+      "cac-business-name-registration",
+      "cac-company-registration",
+      "nipo-patent-registration",
+      "copyright-work-registration"
+    ]
+  },
+  {
+    "slug": "nipo-patent-registration",
+    "title": "How to apply for a patent in Nigeria",
+    "shortTitle": "Register a patent",
+    "summary": "How inventors use the Nigerian Industrial Property Office patent route, including search, filing, supporting specifications and ongoing renewal obligations.",
+    "category": "Business",
+    "agencySlug": "nipo",
+    "feeLabel": "NIPO patent filing fees apply",
+    "feeNote": "NIPO publishes separate fees for patent search, grant applications, renewals and later record changes. Confirm the current invoice for the exact filing type.",
+    "timeline": "Processing depends on the completeness of the patent specification and Registry review; NIPO does not publish one universal end-to-end completion time on the filing page.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nipo.gov.ng/patents.jsp",
+    "requirements": [
+      "A new invention that is capable of industrial application and falls within patentable subject matter",
+      "Applicant and inventor identity/address information",
+      "A patent specification describing the invention, with claims and drawings where needed",
+      "Authorisation for the accredited agent handling the Nigerian filing"
+    ],
+    "steps": [
+      "Review NIPO's patentability guidance and confirm that the invention is suitable for patent protection rather than trademark, design or copyright treatment.",
+      "Prepare the technical specification, claims and any drawings with the accredited agent before the application is filed.",
+      "Submit the patent application through the official NIPO filing route and retain the acknowledgement or application number.",
+      "Respond to any formal examination query and keep the grant document when the Registry completes the application.",
+      "Track annual patent-renewal obligations and pay the applicable annuity through the official NIPO process to keep the right in force."
+    ],
+    "notes": [
+      "NIPO says patents protect qualifying inventions, not merely business ideas, artistic works or discoveries as such.",
+      "Patent disclosure can affect later rights, so applicants with commercially sensitive inventions should prepare the filing before unnecessary public disclosure.",
+      "Patent registration and trademark registration protect different kinds of intellectual property."
+    ],
+    "sources": [
+      {
+        "label": "NIPO Patent Filing Procedure",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://nipo.gov.ng/patents.jsp",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIPO Fees and Charges",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://nipo.gov.ng/feesandcharges.jsp",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "patent registration Nigeria",
+      "register invention Nigeria",
+      "NIPO patent",
+      "patent application Nigeria"
+    ],
+    "related": [
+      "nipo-trademark-registration",
+      "nipo-industrial-design-registration",
+      "copyright-work-registration"
+    ]
+  },
+  {
+    "slug": "nipo-industrial-design-registration",
+    "title": "How to register an industrial design in Nigeria",
+    "shortTitle": "Register industrial design",
+    "summary": "The NIPO route for protecting the visual or ornamental appearance of a product, including design search, novelty statement, representation and renewal.",
+    "category": "Business",
+    "agencySlug": "nipo",
+    "feeLabel": "NIPO design fees apply",
+    "feeNote": "NIPO publishes separate design search, application and renewal charges. Confirm the current fee schedule before payment.",
+    "timeline": "NIPO processes the filing after the required design representation, novelty statement and authorisation are submitted; the page does not state one universal end-to-end timeline.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nipo.gov.ng/design.jsp",
+    "requirements": [
+      "A design that is new or original and concerns the visual or ornamental appearance of an article",
+      "A statement of novelty identifying the visual features claimed",
+      "Graphic or photographic representations or specimens of the design",
+      "Authorisation or power of attorney for the agent filing the application"
+    ],
+    "steps": [
+      "Check NIPO's design guidance and conduct an availability search before filing the design application.",
+      "Prepare the correct design form, statement of novelty and clear visual representations that show the features being claimed.",
+      "Submit the design application through the recognised NIPO filing route with the agent authorisation and official payment.",
+      "Keep the application reference and respond to any Registry query until the design certificate is issued.",
+      "Calendar the five-year renewal points because NIPO states that industrial-design protection can continue up to 15 years subject to renewal."
+    ],
+    "notes": [
+      "Industrial design protects visual appearance rather than the technical function of an invention.",
+      "NIPO states that the Nigerian design registration can last up to 15 years, subject to renewal after each five-year period.",
+      "Copyright and industrial-design protection can involve different legal questions; choose the route that matches the asset."
+    ],
+    "sources": [
+      {
+        "label": "NIPO Industrial Design Filing Procedure",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://nipo.gov.ng/design.jsp",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIPO Fees and Charges",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://nipo.gov.ng/feesandcharges.jsp",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "industrial design registration Nigeria",
+      "register product design Nigeria",
+      "NIPO design",
+      "design patent Nigeria"
+    ],
+    "related": [
+      "nipo-patent-registration",
+      "nipo-trademark-registration",
+      "copyright-work-registration"
+    ]
+  },
+  {
+    "slug": "copyright-work-registration",
+    "title": "How to register a copyright work in Nigeria",
+    "shortTitle": "Copyright registration",
+    "summary": "How authors and right owners voluntarily record a copyright work through the Nigerian Copyright e-Registration System and obtain an acknowledgement certificate.",
+    "category": "Business",
+    "agencySlug": "copyright-commission",
+    "feeLabel": "₦10,000 registration fee",
+    "feeNote": "The Nigerian Copyright Commission's current NCeRS help page lists ₦10,000 for a Nigerian-currency copyright registration application and separate fees for certified copies or later corrections.",
+    "timeline": "The Commission says applications are generally processed within about 10 working days, with online submissions potentially taking less time.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://eregistration.copyright.gov.ng/",
+    "requirements": [
+      "An original copyright work or a right acquired in the work that you are entitled to register",
+      "Applicant/author/right-owner identity and contact information",
+      "A copy of the work in the format accepted by NCeRS",
+      "A separate official payment reference for the individual work or application"
+    ],
+    "steps": [
+      "Create and activate an NCeRS account using an email address you can access throughout the application.",
+      "Start a new copyright registration, identify the work and right owner accurately, and upload the copy of the work.",
+      "Pay the prescribed fee through an official NCeRS payment method and attach or validate the payment reference for that application.",
+      "Submit the application and monitor the account for approval, correction requests or other Commission communication.",
+      "After approval, open the approved-application area and retain the electronic certificate or acknowledgement connected to the registered work."
+    ],
+    "notes": [
+      "Copyright protection exists automatically when an eligible original work is created; registration is voluntary and provides an official evidentiary record.",
+      "NCeRS says separate works normally require separate applications, although a collection such as an album may be registered as one titled collection in the circumstances described by the Commission.",
+      "Do not confuse the Nigerian Copyright Commission with the Nigerian Communications Commission; both use the abbreviation NCC."
+    ],
+    "sources": [
+      {
+        "label": "Nigerian Copyright e-Registration System",
+        "agency": "Nigerian Copyright Commission",
+        "url": "https://eregistration.copyright.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NCeRS Help and Fees",
+        "agency": "Nigerian Copyright Commission",
+        "url": "https://www.eregistration.copyright.gov.ng/ncc/help",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "copyright registration Nigeria",
+      "register song copyright Nigeria",
+      "register book copyright Nigeria",
+      "NCeRS",
+      "Nigerian Copyright Commission registration"
+    ],
+    "related": [
+      "nipo-trademark-registration",
+      "nipo-industrial-design-registration"
+    ]
+  },
+  {
+    "slug": "nepc-exporter-registration",
+    "title": "How to register as an exporter with NEPC",
+    "shortTitle": "NEPC exporter registration",
+    "summary": "The official Nigerian Export Promotion Council e-registration process for obtaining an Exporter's Certificate before formal non-oil export activities.",
+    "category": "Business",
+    "agencySlug": "nepc",
+    "feeLabel": "₦13,500 new certificate",
+    "feeNote": "NEPC currently lists ₦13,500 for a new Exporter's Certificate, excluding payment-channel charges. Confirm the amount displayed by the e-registration platform.",
+    "timeline": "NEPC says the certificate is issued within one working day after payment confirmation when the application information and documents are complete.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nepc.gov.ng/ereg/exporter/",
+    "requirements": [
+      "A qualifying registered business, cooperative, government organisation or NGO",
+      "Entity-specific registration documents such as CAC incorporation records or cooperative registration",
+      "The governing or constitutional documents applicable to the entity type",
+      "A board resolution to register with NEPC where NEPC lists one for the entity type"
+    ],
+    "steps": [
+      "Open the NEPC e-registration platform and create the exporter account for the legal entity that will carry out the export activity.",
+      "Complete the entity profile and upload the registration, governance and board-resolution documents applicable to that entity type.",
+      "Generate and pay the official NEPC registration charge using one of the payment methods offered on the platform.",
+      "Use the transaction Order ID in the payment-status function to confirm that NEPC has received the payment.",
+      "After approval, open Registration Details and download or print the electronic Exporter's Certificate instead of travelling to an NEPC office for collection."
+    ],
+    "notes": [
+      "NEPC states that formal exporters must register and obtain an Exporter's Certificate through its e-registration platform.",
+      "The initial certificate is valid for two years; later renewals are annual under NEPC's current guidance.",
+      "Exporter registration does not replace product-specific approvals, Customs documentation or destination-country requirements."
+    ],
+    "sources": [
+      {
+        "label": "NEPC E-registration Guidance",
+        "agency": "Nigerian Export Promotion Council",
+        "url": "https://nepc.gov.ng/get-started/e-registration/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NEPC Exporter E-registration Platform",
+        "agency": "Nigerian Export Promotion Council",
+        "url": "https://nepc.gov.ng/ereg/exporter/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "NEPC registration",
+      "exporter certificate Nigeria",
+      "register exporter Nigeria",
+      "NEPC exporter certificate"
+    ],
+    "related": [
+      "nepc-exporter-certificate-renewal-verification",
+      "soncap-import-certification",
+      "cac-company-registration"
+    ]
+  },
+  {
+    "slug": "nepc-exporter-certificate-renewal-verification",
+    "title": "How to renew or verify an NEPC Exporter's Certificate",
+    "shortTitle": "Renew/verify NEPC certificate",
+    "summary": "How existing Nigerian exporters renew an expired NEPC certificate, deal with late renewal and verify exporter status through the Council's official tools.",
+    "category": "Business",
+    "agencySlug": "nepc",
+    "feeLabel": "₦7,500 renewal / ₦12,500 late renewal",
+    "feeNote": "NEPC currently lists ₦7,500 for expired-certificate renewal and ₦12,500 for late renewal after three months, excluding payment-channel charges.",
+    "timeline": "NEPC states that exporter certificates are issued within one working day after payment confirmation when the record and supporting information are complete.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nepc.gov.ng/ereg/exporter/",
+    "requirements": [
+      "The existing exporter account and certificate registration information",
+      "Current entity records if NEPC requires an update during renewal",
+      "An official renewal payment generated through the NEPC platform"
+    ],
+    "steps": [
+      "Sign in to the existing NEPC exporter account and open the registration or certificate-renewal action rather than creating a duplicate exporter identity.",
+      "Review the legal-entity information and update any record the platform marks as outdated before submitting the renewal.",
+      "Pay the renewal or late-renewal amount generated by the official NEPC platform and retain the transaction Order ID.",
+      "Confirm the payment status in the NEPC transaction log and download the renewed certificate after approval.",
+      "For third-party verification, use NEPC's Exporter Certificate Verification Portal and search by company name or certificate registration number."
+    ],
+    "notes": [
+      "NEPC says the first certificate is valid for 24 months and later renewals are annual.",
+      "A certificate can be checked independently through NEPC's public verification portal.",
+      "Renewing NEPC registration does not by itself satisfy all export documentation or product-regulatory requirements."
+    ],
+    "sources": [
+      {
+        "label": "NEPC E-registration Guidance",
+        "agency": "Nigerian Export Promotion Council",
+        "url": "https://nepc.gov.ng/get-started/e-registration/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NEPC Exporter Verification Portal",
+        "agency": "Nigerian Export Promotion Council",
+        "url": "https://nepc.gov.ng/verify-exporter/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "renew NEPC certificate",
+      "verify exporter Nigeria",
+      "NEPC certificate expired",
+      "NEPC exporter verification"
+    ],
+    "related": [
+      "nepc-exporter-registration"
+    ]
+  },
+  {
+    "slug": "smedan-msme-registration",
+    "title": "How to register a business with SMEDAN",
+    "shortTitle": "SMEDAN registration",
+    "summary": "How Nigerian micro, small and medium businesses create a SMEDAN account, complete business onboarding and access the agency's support-service ecosystem.",
+    "category": "Business",
+    "agencySlug": "smedan",
+    "feeLabel": "Use the official SMEDAN portal",
+    "feeNote": "SMEDAN's registration pages do not publish a general onboarding charge. Do not pay an unofficial agent merely to create the portal account.",
+    "timeline": "Account creation is online; access to individual SMEDAN programmes, grants, loans or support services follows each programme's own eligibility and timeline.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://portal.smedan.gov.ng/signup",
+    "requirements": [
+      "Business owner's first name, last name and working email address",
+      "Business information including CAC registration status, line of business, main product and business location",
+      "Annual-turnover and employment information used to classify the enterprise"
+    ],
+    "steps": [
+      "Create a SMEDAN portal account with your real name, email address and a password you can retain securely.",
+      "Continue the onboarding and state whether the business already has CAC registration before entering the business identity information.",
+      "Complete the business description, industry, location, annual-turnover category and employment category accurately.",
+      "Finish the business profile and open the Services area to see the support programmes and assessments currently available to that enterprise.",
+      "Keep the SMEDAN profile current because individual financing, training or grant opportunities can use the registered business information for eligibility checks."
+    ],
+    "notes": [
+      "SMEDAN registration is not the same as CAC legal registration; the two systems serve different purposes.",
+      "Registration can provide access to business-development, finance, training and other opportunities, but it does not guarantee a loan or grant.",
+      "Use the official SMEDAN domain because fraudulent grant and loan registration pages are common."
+    ],
+    "sources": [
+      {
+        "label": "SMEDAN Registration",
+        "agency": "Small and Medium Enterprises Development Agency of Nigeria",
+        "url": "https://smedan.gov.ng/register-now/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SMEDAN Portal Sign Up",
+        "agency": "Small and Medium Enterprises Development Agency of Nigeria",
+        "url": "https://portal.smedan.gov.ng/signup",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SMEDAN Business Onboarding",
+        "agency": "Small and Medium Enterprises Development Agency of Nigeria",
+        "url": "https://portal.smedan.gov.ng/business-information",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "SMEDAN registration",
+      "register business SMEDAN",
+      "SMEDAN certificate",
+      "SMEDAN number",
+      "MSME registration Nigeria"
+    ],
+    "related": [
+      "cac-business-name-registration",
+      "cac-company-registration",
+      "nepc-exporter-registration"
+    ]
+  },
+  {
+    "slug": "bpp-contractor-registration",
+    "title": "How to register as a federal contractor with BPP",
+    "shortTitle": "BPP contractor registration",
+    "summary": "How contractors, consultants and service providers join the Bureau of Public Procurement national database used for Federal Government procurement.",
+    "category": "Business",
+    "agencySlug": "bpp",
+    "feeLabel": "Use the BPP registration system",
+    "feeNote": "BPP's published registration procedure focuses on online registration and compliance information. Do not pay a private 'federal contractor registration' fee outside the official system.",
+    "timeline": "Timing depends on completion of the company, compliance, personnel, financial, equipment and completed-job information required by the database.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://www.bpp.gov.ng/contractor",
+    "requirements": [
+      "A legally registered corporate entity intending to supply goods, works, consultancy or services to the Federal Government",
+      "Company name, address and working email for creation of the temporary contractor ID",
+      "Tax, pension, ITF/social-security compliance information applicable to the company",
+      "Board/director, business-category, financial, personnel, equipment and completed-job information"
+    ],
+    "steps": [
+      "Open BPP's Contractor, Consultant and Service Provider registration page and use the Contractor Registration system link.",
+      "Create the company account with the basic company identity, address and email, then retrieve the temporary contractor ID and password sent to the email account.",
+      "Sign in with the temporary credentials and complete the compliance, directors, business-category, financial, personnel, equipment and completed-jobs sections.",
+      "Review the company record carefully and submit the application once the required sections and supporting information are complete.",
+      "After successful completion, print the Interim Registration Report that BPP identifies as evidence of registration for Federal Government procurement."
+    ],
+    "notes": [
+      "BPP says the database is for contractors, consultants and service providers doing or intending to do business with the Federal Government.",
+      "The BPP record does not replace professional licences or sector-specific registrations required for a particular procurement.",
+      "Foreign contractors and suppliers can also fall within the database requirements described by BPP."
+    ],
+    "sources": [
+      {
+        "label": "BPP Contractor Registration",
+        "agency": "Bureau of Public Procurement",
+        "url": "https://www.bpp.gov.ng/contractor",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "BPP Registration Procedure",
+        "agency": "Bureau of Public Procurement",
+        "url": "https://bpp.gov.ng/wp-content/uploads/2019/01/REGISTRATION-PROCEDURE.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "BPP contractor registration",
+      "federal contractor registration Nigeria",
+      "BPP IRR",
+      "register contractor Nigeria"
+    ],
+    "related": [
+      "cac-company-registration",
+      "nsitf-compliance-certificate"
+    ]
+  },
+  {
+    "slug": "soncap-import-certification",
+    "title": "How SONCAP certification works for imports into Nigeria",
+    "shortTitle": "SONCAP certification",
+    "summary": "The Standards Organisation of Nigeria process for regulated imports, from Product Certificate and conformity assessment to the SONCAP Certificate used for Customs clearance.",
+    "category": "Product regulation",
+    "agencySlug": "son",
+    "feeLabel": "SONCAP and conformity-assessment fees apply",
+    "feeNote": "Charges vary by certificate route, accredited conformity-assessment firm and service. Use SON's current approved fee schedule and official portal invoice.",
+    "timeline": "SON says Product Certificates, SONCAP Certificates and qualifying SONCAP Import Permits have a maximum 96-hour turnaround after all application requirements are met; external testing or conformity work can add time.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://soncap.son.gov.ng/",
+    "requirements": [
+      "A regulated imported product identified by its correct product description and HS code",
+      "Importer TIN that is valid for the Nigerian trade/PAAR process",
+      "Product conformity documents and test/inspection evidence produced through a SON-approved Independent Accredited Firm",
+      "The appropriate Product Certificate for the import route before Form M processing"
+    ],
+    "steps": [
+      "Check whether the product is SONCAP-regulated and identify the applicable Route A, B or C Product Certificate process before shipment.",
+      "Work through a SON-approved Independent Accredited Firm for the required product verification, inspection, testing and Certificate of Conformity process.",
+      "Use the Product Certificate in the Form M process and ensure the importer TIN and shipment information are consistent across trade documents.",
+      "Register or activate the relevant certificate through the official e-SONCAP portal and retain the certificate/status reference.",
+      "Use the issued SONCAP Certificate in the PAAR and Nigerian Customs clearance process for the regulated shipment."
+    ],
+    "notes": [
+      "SONCAP is a pre-shipment conformity process; waiting until goods arrive in Nigeria can create detention, testing and other clearance problems.",
+      "SON distinguishes a Product Certificate from the shipment-level SONCAP Certificate.",
+      "Some products or importer circumstances use exemptions or import permits; verify the exact product status with SON before shipment."
+    ],
+    "sources": [
+      {
+        "label": "SONCAP Service",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/soncapservice/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "e-SONCAP Portal",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://soncap.son.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SONCAP FAQ",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/soncap-faq/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "SONCAP Nigeria",
+      "SONCAP certificate",
+      "Product Certificate Nigeria import",
+      "SONCAP Form M",
+      "e SONCAP"
+    ],
+    "related": [
+      "son-product-registration",
+      "customs-vehicle-duty-verification",
+      "nepc-exporter-registration"
+    ]
+  },
+  {
+    "slug": "son-mancap-certification",
+    "title": "How to get MANCAP certification for a Nigerian-made product",
+    "shortTitle": "MANCAP certification",
+    "summary": "How local manufacturers work with the Standards Organisation of Nigeria to inspect, test and certify products under the Mandatory Conformity Assessment Programme.",
+    "category": "Product regulation",
+    "agencySlug": "son",
+    "feeLabel": "MANCAP administrative and testing charges apply",
+    "feeNote": "SON publishes MANCAP administrative charges and the relevant laboratory/testing costs can depend on the product. Confirm the current schedule with the State Office.",
+    "timeline": "Certification includes at least two quarterly inspections under SON's current MANCAP FAQ, so it is not an instant one-visit process.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://son.gov.ng/mancapservice/",
+    "requirements": [
+      "A locally manufactured product that is subject to the relevant Nigerian Industrial Standard",
+      "CAC certificate of incorporation or business registration for the manufacturer",
+      "SON or IPAN-accredited laboratory test evidence where the required on-the-spot testing is not comprehensive",
+      "Evidence of official payment for the MANCAP form and certification process"
+    ],
+    "steps": [
+      "Contact the nearest SON State Office and obtain the MANCAP application route for the locally manufactured product.",
+      "Submit the manufacturer registration documents, application and applicable test evidence with the official payment records.",
+      "Make the production facility and product available for SON inspection, sampling and testing against the relevant Nigerian Industrial Standard.",
+      "Complete the required inspection cycle and correct any non-conformity identified by SON before certification is recommended.",
+      "After approval, retain the MANCAP certificate and unique identification information and continue to meet surveillance and renewal requirements."
+    ],
+    "notes": [
+      "MANCAP applies to locally manufactured products; SONCAP is the conformity route for many regulated imports.",
+      "SON's FAQ says a minimum of two quarterly inspections are required before MANCAP certification.",
+      "Certification is tied to continued conformity with the relevant Nigerian Industrial Standard."
+    ],
+    "sources": [
+      {
+        "label": "SON MANCAP Service",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/mancapservice/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SON MANCAP FAQ",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/mancap-faq/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "MANCAP certification",
+      "SON MANCAP Nigeria",
+      "certify locally made product Nigeria",
+      "MANCAP requirements"
+    ],
+    "related": [
+      "son-product-registration",
+      "soncap-import-certification",
+      "nafdac-product-registration"
+    ]
+  },
+  {
+    "slug": "son-product-registration",
+    "title": "How to register a regulated product with SON",
+    "shortTitle": "SON product registration",
+    "summary": "The Standards Organisation of Nigeria product-registration requirements for regulated products distributed in Nigeria, including company, trademark, authority and test records.",
+    "category": "Product regulation",
+    "agencySlug": "son",
+    "feeLabel": "SON product-registration charges apply",
+    "feeNote": "SON requires official payment evidence and publishes current product-certification charges separately. Confirm the live charge for the product category.",
+    "timeline": "SON's Product Registration FAQ states a six-week period from payment to certificate issuance when the application proceeds normally.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://son.gov.ng/product-registration-faq/",
+    "requirements": [
+      "CAC registration for the Nigerian business responsible for the product",
+      "Trademark certificate for the product or brand",
+      "Letter of authority to distribute the product in Nigeria where applicable",
+      "Laboratory test result and official payment evidence"
+    ],
+    "steps": [
+      "Check SON's product-registration guidance and confirm that the product belongs under SON rather than another regulator such as NAFDAC.",
+      "Prepare the CAC record, trademark certificate, distribution authority and laboratory test result before lodging the application.",
+      "Submit the product-registration application through the SON service channel and make only the official payment shown for the transaction.",
+      "Respond to any technical, labelling or documentation query raised during the review and retain the application reference.",
+      "When SON notifies you that processing is complete, obtain the Product Registration Certificate and calendar its validity or renewal requirements."
+    ],
+    "notes": [
+      "SON states that its Product Registration Certificate is not the same as a SONCAP Product Certificate.",
+      "The current SON FAQ lists a one-year validity period for the Product Registration Certificate.",
+      "Regulatory responsibility depends on the product type; do not assume SON registration replaces NAFDAC or another sector regulator."
+    ],
+    "sources": [
+      {
+        "label": "SON Product Registration FAQ",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/product-registration-faq/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SON Product Certification",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://www.son.gov.ng/son-product-certification/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "SON product registration",
+      "register product SON Nigeria",
+      "SON certificate product",
+      "SON product registration requirements"
+    ],
+    "related": [
+      "son-mancap-certification",
+      "soncap-import-certification",
+      "nafdac-product-registration"
+    ]
+  },
+  {
+    "slug": "nsitf-employer-registration",
+    "title": "How to register an employer with NSITF",
+    "shortTitle": "NSITF employer registration",
+    "summary": "How Nigerian employers onboard to the Employees' Compensation Scheme, obtain an ECS number and begin statutory contribution and compliance management.",
+    "category": "Employment & social protection",
+    "agencySlug": "nsitf",
+    "feeLabel": "Official ECS onboarding applies",
+    "feeNote": "NSITF's current digital services page directs employers to the Employer Self-Service Portal for registration and contribution payments. Use the amount generated by that official system.",
+    "timeline": "NSITF's service charter lists employer registration within 24 hours when the pre-specified documentation is complete.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://ecsonline.nsitf.gov.ng/",
+    "requirements": [
+      "Employer legal name, business type, incorporation or registration information and operating address",
+      "Employer phone number, email and responsible-contact information",
+      "Employee and payroll information needed for Employees' Compensation Scheme onboarding",
+      "Supporting business documents needed to establish the employer's legal identity"
+    ],
+    "steps": [
+      "Create an employer account on the official NSITF Employer Self-Service Portal and enter the organisation's legal identity information.",
+      "Complete the business-address, contact and employer-registration sections and upload the supporting organisation records shown in the onboarding flow.",
+      "Add the workforce or payroll information needed to establish the Employees' Compensation Scheme account.",
+      "Submit the employer onboarding and retain the ECS number or registration confirmation produced by NSITF.",
+      "Use the same employer account for monthly contribution, employee management and later compliance-certificate actions."
+    ],
+    "notes": [
+      "NSITF states that the Employees' Compensation Scheme contribution is employer-funded, not a deduction that employees should separately pay to an agent.",
+      "The digital portal can also be activated for employers who previously registered at an NSITF branch.",
+      "Keep employee and payroll records current because they affect contribution and claim administration."
+    ],
+    "sources": [
+      {
+        "label": "NSITF Employer Onboarding Portal",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://ecsonline.nsitf.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NSITF Services",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://nsitf.gov.ng/services",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "NSITF registration",
+      "register employer NSITF",
+      "ECS number Nigeria",
+      "NSITF employer portal"
+    ],
+    "related": [
+      "nsitf-compliance-certificate",
+      "nsitf-workplace-injury-claim",
+      "bpp-contractor-registration"
+    ]
+  },
+  {
+    "slug": "nsitf-workplace-injury-claim",
+    "title": "How to file an NSITF workplace injury or compensation claim",
+    "shortTitle": "NSITF compensation claim",
+    "summary": "How a registered worker or employer reports a work-related injury, occupational disease, disability or death and follows the NSITF Employees' Compensation Scheme claim.",
+    "category": "Employment & social protection",
+    "agencySlug": "nsitf",
+    "feeLabel": "No worker claim fee stated",
+    "feeNote": "NSITF describes employee protection under the Employees' Compensation Scheme as statutory and employer-funded. Do not pay an unofficial claims agent.",
+    "timeline": "NSITF's current services page says claims are processed within about seven working days, although investigation, medical evidence or complex disability cases can take longer.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nsitf.gov.ng/compensation",
+    "requirements": [
+      "The affected worker's identity and employer/ECS information",
+      "Date, location and factual description of the workplace incident or occupational condition",
+      "Medical, hospital or other evidence showing the injury, disease, disability or death",
+      "Employer incident report and any witness or investigation information available"
+    ],
+    "steps": [
+      "Report the workplace injury, occupational disease or fatal incident promptly to the employer and preserve the basic incident evidence.",
+      "Open the NSITF claim route and identify the employee, registered employer, incident date and type of compensation being requested.",
+      "Upload or present the medical records, incident documents and other evidence that support the claim and the employment relationship.",
+      "Keep the claim reference and cooperate with any NSITF accident investigation, medical assessment or request for additional records.",
+      "Track the claim outcome and retain the approval, benefit schedule or rehabilitation instructions issued under the Employees' Compensation Scheme."
+    ],
+    "notes": [
+      "NSITF says the scheme covers work-related injury, occupational disease, disability and death regardless of fault, subject to the statutory claim rules.",
+      "Compensation can include medical care, income replacement, disability payments, counselling, rehabilitation and dependant support depending on the case.",
+      "A worker should not include bank PINs or passwords in claim documents or support correspondence."
+    ],
+    "sources": [
+      {
+        "label": "NSITF Compensation",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://nsitf.gov.ng/compensation",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NSITF Services",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://nsitf.gov.ng/services",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "NSITF claim",
+      "workplace injury compensation Nigeria",
+      "employee compensation Nigeria",
+      "NSITF accident claim"
+    ],
+    "related": [
+      "nsitf-employer-registration",
+      "nsitf-compliance-certificate"
+    ]
+  },
+  {
+    "slug": "nsitf-compliance-certificate",
+    "title": "How to obtain or verify an NSITF compliance certificate",
+    "shortTitle": "NSITF compliance certificate",
+    "summary": "How registered employers use the NSITF employer portal for contribution compliance and obtain or independently verify an Employees' Compensation Scheme certificate.",
+    "category": "Employment & social protection",
+    "agencySlug": "nsitf",
+    "feeLabel": "Current NSITF certificate charge applies",
+    "feeNote": "NSITF's service charter publishes a compliance-certificate charge, while the digital portal handles current payment. Confirm the live portal amount before payment.",
+    "timeline": "NSITF's service charter lists yearly compliance-certificate issuance within 48 hours after receipt at headquarters when the employer meets the conditions.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nsitf.gov.ng/services",
+    "requirements": [
+      "A registered employer with an ECS number",
+      "Up-to-date employer and employee records",
+      "Evidence that the required Employees' Compensation Scheme contributions have been remitted for the relevant period"
+    ],
+    "steps": [
+      "Sign in to the NSITF Employer Self-Service Portal with the employer's ECS account and review outstanding contribution or compliance issues.",
+      "Bring employee records and contribution payments up to date before starting the yearly compliance-certificate request.",
+      "Start the compliance-certificate action and pay the official amount generated through the NSITF employer system.",
+      "Retain the issued certificate and its identifying number after NSITF completes the compliance review.",
+      "When checking a certificate from another company, use NSITF's official Verify a Certificate service rather than relying on a PDF or photocopy alone."
+    ],
+    "notes": [
+      "NSITF's service page links employer registration, monthly contributions and compliance certification in the same employer system.",
+      "A compliance certificate can be relevant to procurement and regulatory processes but does not replace tax, pension or other sector certificates.",
+      "Verification is important because a visually convincing certificate can still be invalid or expired."
+    ],
+    "sources": [
+      {
+        "label": "NSITF Services",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://nsitf.gov.ng/services",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NSITF Service Charter",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://nsitf.gov.ng/wp-content/uploads/2025/02/NSITF-SERVICE-CHARTER.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "NSITF compliance certificate",
+      "verify NSITF certificate",
+      "NSITF compliance",
+      "NSITF certificate Nigeria"
+    ],
+    "related": [
+      "nsitf-employer-registration",
+      "bpp-contractor-registration"
+    ]
+  },
+  {
+    "slug": "nde-rhei-registration",
+    "title": "How to register for NDE Renewed Hope Employment Initiative programmes",
+    "shortTitle": "NDE RHEI registration",
+    "summary": "How applicants use the National Directorate of Employment Job Creation Portal for the 2026 RHEI programme, including pre-enrolment assessment and programme matching.",
+    "category": "Employment & social protection",
+    "agencySlug": "nde",
+    "feeLabel": "No application fee published",
+    "feeNote": "The official NDE Job Creation Portal does not publish an application fee for the RHEI pre-enrolment process. Do not pay an unofficial person for a placement slot.",
+    "timeline": "Programme timing varies by the selected RHEI scheme, state allocation and training cycle; many listed 2026 training schemes run for about three months.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://nderegistrationportal.ng/",
+    "requirements": [
+      "A profile that meets the age and other eligibility rule for the specific NDE scheme",
+      "A valid identity document for the portal's identity verification",
+      "BVN and bank-account information for the portal's verification stage",
+      "A suitable passport photograph and state-of-residence information for programme matching"
+    ],
+    "steps": [
+      "Open the official NDE Job Creation Portal and complete the pre-enrolment assessment before choosing a training scheme.",
+      "Enter the identity, age, state-of-residence and bank-verification information used by the portal to assess eligibility.",
+      "Review the RHEI programme groups and choose an available scheme whose age range, skill area and location match your profile.",
+      "Complete the application and keep the client-account credentials or application reference for later status checks.",
+      "Sign in to the Client Portal to monitor the application, training-centre information and any programme-specific instruction issued by NDE."
+    ],
+    "notes": [
+      "The portal currently identifies the programme as RHEI Phase 3 for 2026 and lists scheme-specific age ranges and allocations.",
+      "Eligibility for one NDE scheme does not automatically make an applicant eligible for every other scheme.",
+      "Use the official NDE portal because employment and empowerment programmes are frequent targets for fake registration pages."
+    ],
+    "sources": [
+      {
+        "label": "NDE Job Creation Portal",
+        "agency": "National Directorate of Employment",
+        "url": "https://nderegistrationportal.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NDE Client Portal",
+        "agency": "National Directorate of Employment",
+        "url": "https://www.nderegistrationportal.ng/client-login",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "NDE registration 2026",
+      "NDE RHEI",
+      "NDE job creation portal",
+      "Renewed Hope Employment Initiative"
+    ],
+    "related": [
+      "smedan-msme-registration",
+      "nelfund-student-loan-application"
+    ]
+  },
+  {
+    "slug": "e-cerpac-application",
+    "title": "How to apply for Nigeria's e-CERPAC residence permit",
+    "shortTitle": "e-CERPAC application",
+    "summary": "How eligible foreign nationals start the Nigerian Immigration Service e-CERPAC process for employment, study, dependant or other long-term residence categories.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "Category-specific e-CERPAC fee",
+    "feeNote": "e-CERPAC charges depend on the residence category. Use the amount generated on the official NIS e-CERPAC portal and do not pay an unofficial account.",
+    "timeline": "Processing depends on category eligibility, document review, payment and biometric requirements shown by the e-CERPAC system.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://cerpac.immigration.gov.ng/requirements",
+    "requirements": [
+      "A passport and immigration status that support the chosen residence-permit category",
+      "The category-specific evidence shown by NIS, such as employment/quota, student, dependant or spouse documentation",
+      "A valid email address and contact information for the e-CERPAC account",
+      "Funds for the official category-specific e-CERPAC payment"
+    ],
+    "steps": [
+      "Open the NIS e-CERPAC requirements page and select the residence category that matches the applicant's actual purpose in Nigeria.",
+      "Create the e-CERPAC account and start the application with the passport number and the identity information shown in the travel document.",
+      "Upload the category-specific immigration, employment, study, dependant or family evidence listed for that permit class.",
+      "Review the application, make the official payment through the e-CERPAC system and retain the payment/application reference.",
+      "Follow the portal's approval and biometric instruction and keep the issued residence-permit information with the passport and immigration records."
+    ],
+    "notes": [
+      "NIS states that CERPAC is required for many non-Nigerians staying in Nigeria beyond the short-visit period for work, business or long-term residence.",
+      "The documents differ materially by residence category, so do not copy an employee checklist for a student, dependant or spouse application.",
+      "A CERPAC is a residence/identity permit and is not identical to an entry visa."
+    ],
+    "sources": [
+      {
+        "label": "NIS e-CERPAC Requirements",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://cerpac.immigration.gov.ng/requirements",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Nigeria Immigration Service",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "CERPAC Nigeria",
+      "e CERPAC application",
+      "Nigeria residence permit",
+      "work permit Nigeria foreigner"
+    ],
+    "related": [
+      "e-cerpac-renewal",
+      "nigeria-temporary-work-permit",
+      "nigeria-business-visa"
+    ]
+  },
+  {
+    "slug": "e-cerpac-renewal",
+    "title": "How to renew an e-CERPAC residence permit in Nigeria",
+    "shortTitle": "Renew e-CERPAC",
+    "summary": "What existing CERPAC holders should prepare before expiry and how the NIS e-CERPAC portal handles renewal of an eligible residence-permit category.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "Category-specific renewal fee",
+    "feeNote": "Use the renewal amount generated by the official e-CERPAC system because charges differ by residence category.",
+    "timeline": "Renewal timing depends on the permit category, continued eligibility and NIS review; start before the current permit expires.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://cerpac.immigration.gov.ng/requirements",
+    "requirements": [
+      "The current CERPAC/residence-permit record and passport",
+      "Continued evidence that the holder still qualifies for the same or new residence category",
+      "Updated employment, quota, study, dependant or family records applicable to the renewal"
+    ],
+    "steps": [
+      "Check the expiry date on the current CERPAC and open the official NIS e-CERPAC system before the residence permission lapses.",
+      "Sign in to the holder's account and confirm whether the existing category remains correct for the person's current activity in Nigeria.",
+      "Update the passport and category-specific supporting records and resolve any employer, school or dependant change before submission.",
+      "Submit the renewal and complete the official e-CERPAC payment while keeping the application and transaction references.",
+      "Follow NIS instructions for approval, biometrics or card issuance and verify the new validity period when the renewal is completed."
+    ],
+    "notes": [
+      "NIS advises applicants to renew before expiry; an expired immigration status can create separate compliance problems.",
+      "A change of employer or residence category can require more than a simple like-for-like renewal.",
+      "Keep the old permit and payment/application records until the new CERPAC has been issued."
+    ],
+    "sources": [
+      {
+        "label": "NIS e-CERPAC Requirements and FAQ",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://cerpac.immigration.gov.ng/requirements",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "renew CERPAC Nigeria",
+      "CERPAC renewal",
+      "e CERPAC expired",
+      "Nigeria residence permit renewal"
+    ],
+    "related": [
+      "e-cerpac-application"
+    ]
+  },
+  {
+    "slug": "diaspora-contactless-passport-renewal",
+    "title": "How contactless Nigerian passport renewal works for Nigerians abroad",
+    "shortTitle": "Contactless passport renewal",
+    "summary": "The NIS Mobile contactless-biometric passport route for eligible Nigerians in the diaspora, including app enrolment, documents, payment and passport submission.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "Passport fee + $100 contactless biometric service",
+    "feeNote": "NIS's 2026 Service Level Agreement lists the normal overseas passport booklet fee plus a $100 contactless biometric service charge, exclusive of bank charges.",
+    "timeline": "NIS's 2026 Service Level Agreement lists 21 days after successful enrolment where there is no local objection.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://immigration.gov.ng/passports/",
+    "requirements": [
+      "Current Nigerian passport booklet",
+      "NIN slip",
+      "Birth certificate or High Court declaration of age",
+      "Local Government or indigene certificate",
+      "ICAO-compliant passport photograph and access to the NIS Mobile app"
+    ],
+    "steps": [
+      "Confirm that you are applying from the diaspora and that the contactless-biometric route is available for your location before paying.",
+      "Download NIS Mobile from the official app store, create a profile with your email address and follow the identity-verification prompts.",
+      "Enter the passport/NIN information and upload the birth or age record, origin record and ICAO-compliant photograph used for the renewal.",
+      "Complete the passport and contactless-service payment through the official application flow and retain the receipts.",
+      "Follow the NIS Mobile instruction for enrolment and send the current passport booklet and payment receipt to the designated Nigerian mission using the stated mailing process."
+    ],
+    "notes": [
+      "The NIS SLA describes contactless biometrics as a service for Nigerians in the diaspora, not the standard domestic renewal route.",
+      "NIS has acknowledged occasional technical problems with the app and publishes support channels for payment OTP or application issues.",
+      "Do not post a passport booklet until the official app/mission instruction confirms the address and submission stage."
+    ],
+    "sources": [
+      {
+        "label": "NIS Passports",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/passports/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIS 2026 Service Level Agreement",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
+        "published": "2026-04-01",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NIS Contactless Support Notice",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/nis-addresses-technical-challenges-on-contactless-passport-application-system/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "contactless passport renewal Nigeria",
+      "NIS Mobile passport",
+      "Nigerian passport renewal abroad contactless",
+      "diaspora passport renewal Nigeria"
+    ],
+    "related": [
+      "passport-application-abroad",
+      "passport-renewal"
+    ]
+  },
+  {
+    "slug": "pencom-job-loss-25-percent-withdrawal",
+    "title": "How the 25% RSA withdrawal after job loss works",
+    "shortTitle": "25% pension withdrawal",
+    "summary": "The PenCom rule for eligible RSA holders under 50 who remain unemployed after leaving a job and want to access up to 25% of their Retirement Savings Account balance.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom application fee stated",
+    "feeNote": "The benefit is paid from the eligible person's own RSA through the PFA. Do not pay an agent to 'unlock' pension funds.",
+    "timeline": "PenCom's current reports describe eligibility after four months without another job; PFA verification and PenCom approval add processing time.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://www.pencom.gov.ng/category/frequently-asked-questions/payment-of-retirement-benefits/",
+    "requirements": [
+      "An RSA holder who is below the retirement age threshold applicable to the temporary job-loss benefit",
+      "Evidence that employment ended and that another job has not been secured after the required four-month period",
+      "The RSA/PFA identity and employment-separation records needed by the Pension Fund Administrator"
+    ],
+    "steps": [
+      "Confirm with your Pension Fund Administrator that your employment exit and age fit PenCom's temporary job-loss withdrawal rule.",
+      "Allow the required four-month unemployment period to pass before submitting the benefit request unless current PenCom rules state otherwise.",
+      "Give the PFA the RSA identity, employment-separation evidence and any additional document used to verify that the job has ended.",
+      "Complete the PFA benefit application and keep the acknowledgement while the request moves through the regulated approval process.",
+      "Check the amount paid against the approved percentage and retain the PFA/PenCom benefit record for future retirement-account reconciliation."
+    ],
+    "notes": [
+      "PenCom's 2025 report states that the 25% benefit applies to people unable to secure another job four months after exiting employment.",
+      "Taking the job-loss benefit reduces the amount remaining in the RSA for future retirement benefits.",
+      "A person already at normal retirement eligibility follows the retirement-benefit rules rather than the temporary job-loss route."
+    ],
+    "sources": [
+      {
+        "label": "PenCom Q2 2025 Report",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2025/12/Q2-2025-REPORT.pdf",
+        "published": "2025-12-01",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom Retirement Benefits FAQs",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/category/frequently-asked-questions/payment-of-retirement-benefits/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "withdraw 25 percent pension Nigeria",
+      "job loss pension withdrawal",
+      "RSA 25% withdrawal",
+      "PenCom unemployment withdrawal"
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-transfer-rsa",
+      "pencom-micro-pension-registration"
+    ]
+  },
+  {
+    "slug": "pencom-micro-pension-registration",
+    "title": "How to join Nigeria's Micro Pension Plan",
+    "shortTitle": "Micro Pension registration",
+    "summary": "How self-employed and informal-sector workers join the PenCom-regulated Micro Pension Plan through a licensed Pension Fund Administrator and flexible contributions.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "Contribution amount is flexible",
+    "feeNote": "The Micro Pension framework is designed for irregular earners; contribution frequency and amount can be flexible within the applicable PFA/PenCom rules.",
+    "timeline": "Registration timing depends on identity verification and the chosen PFA's onboarding process.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://www.pencom.gov.ng/micro-pension/",
+    "requirements": [
+      "A self-employed person or worker in an organisation covered by the Micro Pension rules",
+      "Age and identity information meeting the current Micro Pension registration requirements",
+      "A selected PenCom-licensed Pension Fund Administrator",
+      "Contact and payment information for making contributions to the pension account"
+    ],
+    "steps": [
+      "Review PenCom's Micro Pension information and choose a licensed Pension Fund Administrator that offers the plan.",
+      "Complete the PFA's Micro Pension/RSA opening process with the identity information used for PenCom contributor registration.",
+      "Confirm the issued RSA or contributor PIN and check that your personal information is correct before making regular contributions.",
+      "Choose a practical daily, weekly, monthly or other permitted contribution pattern that fits your income flow.",
+      "Keep statements or contribution alerts and contact the PFA promptly if a payment is missing or the account biodata is incorrect."
+    ],
+    "notes": [
+      "PenCom designed Micro Pension for self-employed and informal-sector workers and employees of very small organisations covered by the framework.",
+      "The plan allows flexible contribution patterns because many participants have irregular income.",
+      "PenCom has been rebranding/expanding informal-sector pension coverage, so check the current PFA product name and terms at registration."
+    ],
+    "sources": [
+      {
+        "label": "PenCom Micro Pension",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/micro-pension/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom Micro Pension Guidelines",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/guidelines-for-micro-pension-plan/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom RSA Registration Guidelines",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/revised-guidelines-for-retirement-savings-account-rsa-registration/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "micro pension Nigeria",
+      "self employed pension Nigeria",
+      "PenCom micro pension registration",
+      "informal sector pension"
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-job-loss-25-percent-withdrawal"
+    ]
+  },
+  {
+    "slug": "jamb-change-course-institution",
+    "title": "How to change course or institution on JAMB",
+    "shortTitle": "JAMB change of course/institution",
+    "summary": "The JAMB Correction of Data process for changing first, second, third or fourth choice course or institution after UTME results are released.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "₦2,500 JAMB service fee",
+    "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of Course/Institution, with payment processed through the official JAMB route.",
+    "timeline": "JAMB says the service opens after release of official UTME results and remains available until the final institution admission cut-off date.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://portal.jamb.gov.ng/changeOfCourse_Inst.htm",
+    "requirements": [
+      "JAMB profile login and registration number for the candidate",
+      "The new course and/or institution choices that are still available and suitable for the candidate",
+      "Official JAMB payment for the Correction of Data service"
+    ],
+    "steps": [
+      "Sign in to the candidate's JAMB profile and open Correction of Data, then choose Course/Institution.",
+      "Review the generated transaction and candidate information before making the official JAMB service payment.",
+      "Select the new institution and/or course choice and confirm that the intended change is entered in the correct choice position.",
+      "Submit the correction through the JAMB route and keep the transaction receipt or confirmation.",
+      "Check the JAMB profile after processing and confirm that the new choice is reflected before relying on it for a school's screening or admission process."
+    ],
+    "notes": [
+      "JAMB says candidates can change first through fourth choice institutions during the service window.",
+      "A JAMB change can take time to appear on a university's separate portal; if JAMB is correct but the school is not, contact the institution or JAMB support rather than paying another unofficial agent.",
+      "Course and institution changes remain subject to admission requirements and available programmes."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Change of Course/Institution",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://portal.jamb.gov.ng/changeOfCourse_Inst.htm",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "JAMB Support FAQs",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://support.jamb.gov.ng/faqs",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "JAMB change of institution",
+      "JAMB change of course",
+      "change school JAMB",
+      "JAMB correction of data course institution"
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-change-name"
+    ]
+  },
+  {
+    "slug": "jamb-change-name",
+    "title": "How to correct a name on JAMB",
+    "shortTitle": "JAMB name correction",
+    "summary": "How candidates use JAMB's Correction of Data service to fix spelling or arrangement errors in names on their JAMB profile and examination record.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "₦2,500 JAMB service fee",
+    "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of Name. Supporting identity evidence may still be required.",
+    "timeline": "Timing depends on payment clearance, supporting evidence and JAMB processing.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
+    "requirements": [
+      "JAMB profile and registration information",
+      "Correct identity/name evidence that supports the requested spelling or arrangement",
+      "Official payment for the JAMB Change of Name service"
+    ],
+    "steps": [
+      "Sign in to the JAMB e-Facility profile and open Correction of Data, then select the name-correction option.",
+      "Compare the JAMB record with the authoritative identity document and decide the exact spelling or name order that must be corrected.",
+      "Generate the JAMB transaction, pay through the official route and keep the payment confirmation.",
+      "Submit the corrected name and supporting identity evidence through the JAMB process.",
+      "Check the JAMB record after processing and make sure the corrected name is consistent with the identity and admission records you will use later."
+    ],
+    "notes": [
+      "JAMB describes this service for spelling errors or errors in the arrangement of surname, first name or last name.",
+      "A mismatch between JAMB and NIN/other official identity records can cause later verification problems, so correct the underlying identity record where necessary.",
+      "Do not create a second JAMB profile to solve a name mistake."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Correction of Data",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://portal.jamb.gov.ng/correction.htm",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "JAMB name correction",
+      "change name on JAMB",
+      "JAMB correction of data name",
+      "wrong name JAMB"
+    ],
+    "related": [
+      "jamb-change-course-institution",
+      "nin-name-modification"
+    ]
+  },
+  {
+    "slug": "jamb-correct-date-of-birth",
+    "title": "How to correct date of birth on JAMB",
+    "shortTitle": "JAMB DOB correction",
+    "summary": "The JAMB Correction of Data route for a wrong date of birth, including the supporting evidence and institution-approved indemnity stage described by JAMB.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "₦2,500 JAMB service fee",
+    "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Date of Birth correction.",
+    "timeline": "Processing depends on payment, supporting civil/identity evidence and completion of the indemnity approval stage.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
+    "requirements": [
+      "JAMB profile and candidate registration information",
+      "Authoritative birth/date-of-birth evidence supporting the correct date",
+      "The JAMB indemnity form printed and completed for institution approval"
+    ],
+    "steps": [
+      "Sign in to JAMB e-Facility and open Correction of Data, then choose the Date of Birth service.",
+      "Confirm the correct date against the supporting civil or identity record before generating the transaction.",
+      "Pay the official JAMB fee and download the indemnity form generated for the correction.",
+      "Complete the indemnity form and submit it with the supporting date-of-birth evidence through the candidate's institution for approval.",
+      "Monitor the JAMB record and retain the correction evidence after the approved date is reflected."
+    ],
+    "notes": [
+      "JAMB specifically states that supporting documents and an institution-approved indemnity form are part of this correction.",
+      "If the NIN or birth record itself is wrong, correct that authoritative source rather than creating conflicting dates across systems.",
+      "The JAMB date-of-birth correction is separate from NYSC's date-of-birth correction procedure."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Correction of Data",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://portal.jamb.gov.ng/correction.htm",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "JAMB date of birth correction",
+      "change DOB JAMB",
+      "wrong age JAMB",
+      "JAMB correction date birth"
+    ],
+    "related": [
+      "nin-date-of-birth-modification",
+      "nysc-correct-date-of-birth",
+      "jamb-change-name"
+    ]
+  },
+  {
+    "slug": "jamb-correct-gender",
+    "title": "How to correct gender on JAMB",
+    "shortTitle": "JAMB gender correction",
+    "summary": "How a candidate uses JAMB's Correction of Data service to request a gender correction and complete the supporting-document and indemnity process.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "₦2,500 JAMB service fee",
+    "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of Gender.",
+    "timeline": "Processing depends on payment, supporting evidence and the indemnity approval stage.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
+    "requirements": [
+      "JAMB profile and registration information",
+      "Identity or civil evidence supporting the correct gender entry",
+      "The JAMB indemnity form used for institution approval"
+    ],
+    "steps": [
+      "Sign in to the JAMB e-Facility account and open Correction of Data, then select Change of Gender.",
+      "Review the current record and prepare the identity evidence that supports the correction before paying.",
+      "Generate and pay the official JAMB transaction and download the indemnity form connected to the request.",
+      "Complete the indemnity form and route it with the supporting evidence through the candidate's institution for approval.",
+      "Check the JAMB profile after processing and retain the approved correction record for admission or NYSC reconciliation."
+    ],
+    "notes": [
+      "JAMB states that supporting documents may be required and an indemnity form is used for institution approval.",
+      "Keep JAMB, NIN and school biodata consistent to reduce later identity-matching problems.",
+      "Use only the official JAMB e-Facility or accredited support route for the correction."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Correction of Data",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://portal.jamb.gov.ng/correction.htm",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "JAMB gender correction",
+      "change gender JAMB",
+      "JAMB correction of data gender"
+    ],
+    "related": [
+      "jamb-change-name",
+      "jamb-correct-state-lga"
+    ]
+  },
+  {
+    "slug": "jamb-correct-state-lga",
+    "title": "How to correct state or LGA of origin on JAMB",
+    "shortTitle": "JAMB state/LGA correction",
+    "summary": "The JAMB Correction of Data service for an incorrect state or Local Government Area of origin, including supporting evidence and indemnity approval.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "₦2,500 JAMB service fee",
+    "feeNote": "JAMB's post-registration e-Facility currently lists ₦2,500 for Change of State/L.G.A.",
+    "timeline": "Processing depends on payment, supporting origin evidence and completion of the institution-approved indemnity step.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://portal.jamb.gov.ng/correction.htm",
+    "requirements": [
+      "JAMB profile and registration information",
+      "State/LGA or indigene evidence supporting the correct origin entry",
+      "The JAMB indemnity form used for institution approval"
+    ],
+    "steps": [
+      "Sign in to the JAMB e-Facility profile and open Correction of Data, then select Change of State/L.G.A.",
+      "Check the existing JAMB entry against the official state/LGA or indigene evidence before starting the transaction.",
+      "Generate the official JAMB transaction, complete payment and download the indemnity form.",
+      "Complete the form and send it with the supporting origin evidence through the candidate's institution for approval.",
+      "Verify the corrected state and LGA on the JAMB record after processing and keep the evidence for later admission or mobilisation checks."
+    ],
+    "notes": [
+      "JAMB states that supporting documents are required for this correction.",
+      "Do not use a state/LGA change to create a record that conflicts with genuine origin evidence.",
+      "A JAMB origin correction does not automatically change NIN or other government records."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Correction of Data",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://portal.jamb.gov.ng/correction.htm",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "JAMB state of origin correction",
+      "change LGA JAMB",
+      "JAMB state LGA correction"
+    ],
+    "related": [
+      "jamb-correct-gender",
+      "jamb-change-name"
+    ]
+  },
+  {
+    "slug": "cbn-bank-complaint",
+    "title": "How to escalate an unresolved bank complaint to CBN",
+    "shortTitle": "CBN bank complaint",
+    "summary": "The Central Bank of Nigeria complaint route for customers whose bank or other CBN-regulated financial institution has not resolved a documented complaint.",
+    "category": "Banking",
+    "agencySlug": "cbn",
+    "feeLabel": "No CBN complaint fee stated",
+    "feeNote": "The CBN complaint process is a consumer-redress channel. Do not pay an intermediary to lodge a complaint.",
+    "timeline": "CBN guidance says customers should first allow the financial institution the applicable resolution period before escalation; some complaint categories have different timelines.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://complaintsportal.cbn.gov.ng/",
+    "requirements": [
+      "A complaint already lodged with the bank or other CBN-regulated institution",
+      "The financial institution's complaint or tracking reference number",
+      "Transaction date, disputed amount and a concise chronology of the problem",
+      "Receipts, statements, correspondence or screenshots supporting the complaint"
+    ],
+    "steps": [
+      "Report the issue first through the financial institution's complaint channel and obtain a complaint or tracking reference.",
+      "Allow the applicable bank resolution period to run while preserving statements, receipts and correspondence connected to the dispute.",
+      "Open the CBN complaints portal and use the bank's tracking reference plus the identifying information needed to locate or escalate the complaint.",
+      "Provide a concise chronology, disputed amount and supporting documents without including PINs, passwords or one-time codes.",
+      "Keep the CBN tracking information and respond to any request for further evidence until the complaint is closed."
+    ],
+    "notes": [
+      "CBN says customers must normally complain to the regulated institution first before escalating to the Consumer Protection function.",
+      "CBN's older published guidance refers to two weeks for many complaints and longer periods for some excess-charge or loan complaints; use the live portal and current rules for the exact category.",
+      "Never include a card PIN, internet-banking password or OTP in a complaint submission."
+    ],
+    "sources": [
+      {
+        "label": "CBN Complaints Portal",
+        "agency": "Central Bank of Nigeria",
+        "url": "https://complaintsportal.cbn.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CBN Complaints Management",
+        "agency": "Central Bank of Nigeria",
+        "url": "https://www.cbn.gov.ng/supervision/cpdcomgt.html",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "report bank to CBN",
+      "CBN complaint portal",
+      "bank complaint Nigeria",
+      "failed transfer complaint CBN",
+      "bank did not refund Nigeria"
+    ],
+    "related": [
+      "nip-transfer-status",
+      "fccpc-consumer-complaint"
+    ]
+  },
+  {
+    "slug": "ncc-telecom-complaint",
+    "title": "How to escalate a telecom complaint to NCC",
+    "shortTitle": "NCC telecom complaint",
+    "summary": "The Nigerian Communications Commission complaint process for unresolved billing, data depletion, service quality and other telecom problems after contacting the provider.",
+    "category": "Telecommunications",
+    "agencySlug": "ncc",
+    "feeLabel": "No NCC complaint fee stated",
+    "feeNote": "NCC provides complaint channels for consumers after the service provider has been contacted. Do not pay a third party to create a complaint ticket.",
+    "timeline": "The service provider gets the first opportunity to resolve the complaint; NCC escalation follows when the provider does not resolve it within the applicable timeline.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://consumer.ncc.gov.ng/consumer-complaints/complaint-form",
+    "requirements": [
+      "The affected phone number and service provider",
+      "The service provider's complaint ticket/reference number",
+      "Date of the first provider complaint and a clear description of the unresolved issue",
+      "Bills, screenshots, service agreements or other evidence relevant to the complaint"
+    ],
+    "steps": [
+      "Contact the telecom service provider first through customer care, an official service centre, email or another provider support channel.",
+      "Explain the problem clearly and obtain a complaint ticket or reference number before ending the provider interaction.",
+      "Allow the provider the applicable resolution period and keep the ticket plus any SMS, bill or screenshot showing the issue.",
+      "If the problem remains unresolved, open the NCC Consumer Complaint Form and enter the provider ticket, affected number, dates and complaint category.",
+      "Submit the evidence and desired remedy to NCC and keep the Commission complaint reference for follow-up."
+    ],
+    "notes": [
+      "NCC specifically requires the consumer to complain to the service provider first and keep the ticket number before escalation.",
+      "The complaint route covers issues such as billing, data depletion, quality of service and value-added services.",
+      "NCC also publishes consumer contact channels for people who cannot complete the web form."
+    ],
+    "sources": [
+      {
+        "label": "NCC Telecom Complaint Resolution Guide",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/articles/115-telecom-complaint-resolution-a-step-by-step-guide",
+        "published": "2026-06-18",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "NCC Consumer Complaint Form",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/consumer-complaints/complaint-form",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "NCC complaint",
+      "report MTN Airtel Glo to NCC",
+      "telecom complaint Nigeria",
+      "data complaint NCC",
+      "billing complaint NCC"
+    ],
+    "related": [
+      "nin-sim-linkage",
+      "fix-failed-nin-sim-linkage",
+      "fccpc-consumer-complaint"
+    ]
+  },
+  {
+    "slug": "fmbn-home-renovation-loan",
+    "title": "How to apply for an FMBN Home Renovation Loan",
+    "shortTitle": "FMBN renovation loan",
+    "summary": "How eligible NHF contributors finance renovation or improvement of an existing home through the Federal Mortgage Bank of Nigeria Home Renovation Loan route.",
+    "category": "Housing",
+    "agencySlug": "fmbn",
+    "feeLabel": "Product terms apply",
+    "feeNote": "FMBN's public documents contain legacy and current product descriptions with differing figures, so confirm the live loan ceiling, interest rate and tenor with FMBN before accepting an offer.",
+    "timeline": "FMBN's older SERVICOM charter listed up to three months after receipt of a complete application; current processing can vary by employer/aggregator and documentation.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://fmbn.gov.ng/products/nhf-scheme/faqs",
+    "requirements": [
+      "An applicant aged 18 or older who has contributed to the NHF for at least six months",
+      "Evidence of regular income sufficient for the proposed repayment",
+      "Ownership or family-ownership basis for the existing property being renovated",
+      "A certified Bill of Quantities or renovation-cost evidence where FMBN requires it"
+    ],
+    "steps": [
+      "Verify the applicant's NHF contribution history and confirm that the minimum contribution period has been met.",
+      "Ask FMBN or the recognised employer/authority channel which current Home Renovation Loan application route applies to the applicant's employment category.",
+      "Prepare the income evidence, property basis, NHF contribution record and certified renovation-cost documentation before submission.",
+      "Submit the application through the recognised FMBN aggregation or online route and keep the acknowledgement or application reference.",
+      "Review the approved amount, interest rate, tenor and repayment deduction carefully before accepting the loan offer and draw-down conditions."
+    ],
+    "notes": [
+      "FMBN states that the Home Renovation Loan is for improving an existing home owned personally or through family ownership.",
+      "Product limits and terms have changed in FMBN materials over time; the live offer and current FMBN product terms should control rather than an old PDF shared online.",
+      "NHF contribution by itself does not guarantee approval; income and eligibility checks still apply."
+    ],
+    "sources": [
+      {
+        "label": "FMBN NHF Scheme FAQs",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/products/nhf-scheme/faqs",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "FMBN Home Renovation Loan Conditions",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://www.fmbn.gov.ng/documents/hrl_conditions.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "FMBN home renovation loan",
+      "NHF renovation loan",
+      "house renovation loan Nigeria",
+      "FMBN loan requirements"
+    ],
+    "related": [
+      "nhf-registration-and-contributions",
+      "nhf-mortgage-loan"
+    ]
   }
 ]
