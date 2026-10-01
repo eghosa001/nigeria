@@ -3,7 +3,7 @@ import Link from "next/link";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
-import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { youtubeMovieLibrary, youtubePendingQualityCount, youtubeReviewVisibleCount } from "@/lib/youtube-library";
 
 export const metadata: Metadata = { title: "Movies" };
 
@@ -27,6 +27,8 @@ export default function AdminEntertainmentPage() {
           <div><strong>{youtubeMovieLibrary.length}</strong><span>YouTube movies</span></div>
           <div><strong>{entertainmentTitles.length}</strong><span>Curated movies</span></div>
           <div><strong>{verifiedYouTubeMovieChannels.length}</strong><span>Approved publishers</span></div>
+          <div><strong>{youtubeReviewVisibleCount}</strong><span>Held movies safely visible</span></div>
+          <div><strong>{youtubePendingQualityCount}</strong><span>Metadata items to enrich</span></div>
           <div><strong>{entertainmentPeople.length}</strong><span>People profiles</span></div>
           <div><strong>{releaseItems.length}</strong><span>Release items</span></div>
           <div><strong>{youtubeFreshness || curatedFreshness}</strong><span>Latest source check</span></div>
