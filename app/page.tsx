@@ -72,7 +72,7 @@ export default function HomePage() {
             {movieHighlights.map((title) => (
               <article className="minimal-movie-card" key={title.slug}>
                 <Link href={"/entertainment/movies/" + title.slug} aria-label={"Open " + title.title}>
-                  <EntertainmentArtwork title={title} />
+                  <EntertainmentArtwork title={title} showSourceLink={false} />
                 </Link>
                 <div>
                   <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
