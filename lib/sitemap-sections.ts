@@ -18,28 +18,6 @@ export type SitemapEntry = {
   lastModified: string;
 };
 
-function youtubeVideoId(value: string) {
-  try {
-    const parsed = new URL(value);
-    if (parsed.hostname === "youtu.be") return parsed.pathname.slice(1);
-    return parsed.searchParams.get("v");
-  } catch {
-    return null;
-  }
-}
-
-function getCuratedYouTubeVideoIds() {
-  const ids = new Set<string>();
-  for (const title of entertainmentTitles) {
-    for (const link of title.watchLinks) {
-      if (link.platform !== "YouTube" || link.access !== "full-movie") continue;
-      const videoId = youtubeVideoId(link.href);
-      if (videoId) ids.add(videoId);
-    }
-  }
-  return ids;
-}
-
 function getYouTubeSitemapPageCount() {
   return Math.max(1, Math.ceil(youtubeMovieLibrary.length / YOUTUBE_CATALOG_PAGE_SIZE));
 }
