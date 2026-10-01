@@ -935,6 +935,32 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
         "verify-vehicle-number-plate"
       ]
     }
+  ],
+  "Employment & social protection": [
+    {
+      question: "Who pays the NSITF Employees' Compensation Scheme contribution?",
+      answer: "NSITF describes the Employees' Compensation Scheme as employer-funded. Its current services page states that registered employers remit 1% of total monthly payroll, while the worker accesses statutory protection without paying an unofficial claims fee.",
+      source: { label: "NSITF Services", url: "https://nsitf.gov.ng/services" },
+      relatedSlugs: ["nsitf-employer-registration", "nsitf-workplace-injury-claim"]
+    },
+    {
+      question: "What kinds of workplace problems can NSITF compensation cover?",
+      answer: "NSITF lists work-related injury, occupational disease, disability and death among compensable scenarios, with benefits that can include medical treatment, income replacement, rehabilitation and dependant support depending on the case.",
+      source: { label: "NSITF Compensation", url: "https://nsitf.gov.ng/compensation" },
+      relatedSlugs: ["nsitf-workplace-injury-claim"]
+    },
+    {
+      question: "How do I prove that an NSITF compliance certificate is genuine?",
+      answer: "Use NSITF's official certificate-verification service rather than relying on a PDF or photocopy. The employer should also have a valid ECS registration and up-to-date contribution record before a yearly compliance certificate is issued.",
+      source: { label: "NSITF Services", url: "https://nsitf.gov.ng/services" },
+      relatedSlugs: ["nsitf-compliance-certificate", "nsitf-employer-registration"]
+    },
+    {
+      question: "How do I apply for an NDE skills or employment programme in 2026?",
+      answer: "Use the official NDE Job Creation Portal, complete the pre-enrolment assessment and then select an available RHEI scheme that matches your age, state and skill interest. The portal performs identity, BVN/bank, programme-availability and proximity checks.",
+      source: { label: "NDE Job Creation Portal", url: "https://nderegistrationportal.ng/" },
+      relatedSlugs: ["nde-rhei-registration"]
+    }
   ]
 };
 
