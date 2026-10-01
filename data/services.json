@@ -5990,7 +5990,7 @@
       "Evidence of meter fault/removal or prior complaints if relevant"
     ],
     "steps": [
-      "Compare the disputed bill with your recent billing or vending history and identify the exact amount/period you are challenging.",
+      "Check the disputed bill against your recent billing or vending history and identify the exact amount and billing period you are challenging.",
       "Check whether the account is metered, the meter is faulty/removed, or the bill is an estimate subject to NERC's capping rules.",
       "Submit a written complaint to the DisCo Customer Complaints Unit with the account number and supporting bills or meter evidence.",
       "Ask for an acknowledgment or complaint reference and keep it.",
@@ -6207,7 +6207,8 @@
     "status": "verified",
     "officialPortal": "https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo",
     "requirements": [
-      "The Nigerian vehicle number plate to be checked"
+      "The Nigerian vehicle number plate to be checked",
+      "The vehicle make/model or ownership document you will compare with the NVIS result"
     ],
     "steps": [
       "Open the FRSC NVIS Verify Plate Number page.",
@@ -6253,7 +6254,8 @@
     "status": "verified",
     "officialPortal": "https://poc.frsc.gov.ng/",
     "requirements": [
-      "The Proof of Ownership Certificate details or vehicle information requested by the official portal"
+      "The Proof of Ownership Certificate details or vehicle information requested by the official portal",
+      "The vehicle registration/plate or seller/owner information you will compare with the returned ownership record"
     ],
     "steps": [
       "Open the official FRSC Proof of Ownership Certificate portal.",
@@ -6481,7 +6483,7 @@
       "Contact details"
     ],
     "steps": [
-      "Choose a Pension Fund Administrator licensed by PenCom.",
+      "Select a Pension Fund Administrator from PenCom's licensed PFA list before starting the RSA registration.",
       "Complete the PFA's RSA registration form and identity verification requirements.",
       "Receive and keep the RSA PIN/account information issued after successful registration.",
       "Give the RSA details to your employer so pension contributions can be remitted to the correct account.",
@@ -6536,7 +6538,7 @@
       "A receiving PFA licensed by PenCom"
     ],
     "steps": [
-      "Choose the licensed PFA you want to move your RSA to.",
+      "Select the PenCom-licensed PFA you want to receive your existing RSA.",
       "Contact the receiving PFA and start its RSA transfer process.",
       "Complete the identity/data verification required for the transfer.",
       "Wait for the transfer to be processed through the regulated RSA Transfer System.",
@@ -6762,7 +6764,8 @@
     "status": "verified",
     "officialPortal": "https://services.nafdac.gov.ng/",
     "requirements": [
-      "The product's NAFDAC registration number and/or identifying product details"
+      "The product's NAFDAC registration number and/or identifying product details",
+      "The product name, brand/manufacturer or pack information needed to confirm that the returned registration belongs to the same product"
     ],
     "steps": [
       "Open the official NAFDAC services portal.",
