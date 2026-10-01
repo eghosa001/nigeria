@@ -9638,7 +9638,7 @@
     "feeNote": "Use the official Rivers RIVTAMIS platform for account registration and RIVTIN activation.",
     "timeline": "Rivers State IRS says account activation takes about 24 hours after registration.",
     "status": "verified",
-    "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html",
+    "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html?url=individual",
     "requirements": [
       "Individual or corporate identity information used to search for an existing taxpayer record before creating a new one",
       "A valid email address and phone number for account access and activation",
@@ -9654,7 +9654,8 @@
     "notes": [
       "Rivers State IRS says users should search first because an individual or organisation may already exist in the system.",
       "RIVTAMIS also supports tax calculation, payments, annual returns, TCC requests and TCC verification.",
-      "An informal-sector group can use the organised-group route where the portal makes that category available."
+      "An informal-sector group can use the organised-group route where the portal makes that category available.",
+      "If you are registering an organisation rather than an individual, use the same RIVTAMIS sign-up flow and select the Corporate account type described by Rivers State IRS."
     ],
     "sources": [
       {
