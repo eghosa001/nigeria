@@ -503,6 +503,438 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       source: { label: "UK Standard Visitor guidance", url: "https://www.gov.uk/standard-visitor" },
       relatedSlugs: ["uk-standard-visitor-visa", "canada-visitor-visa", "australia-visitor-visa-600"]
     }
+  ],
+  "Telecommunications": [
+    {
+      "question": "Can I use *996# to check whether my NIN is linked to my SIM?",
+      "answer": "Yes. NCC's SIM-NIN guidance identifies *996# as the self-service route for SIM-NIN functions, including checking linkage status. NCC also states that the *996# service is free.",
+      "source": {
+        "label": "NCC SIM-NIN Linkage FAQ",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage"
+      },
+      "relatedSlugs": [
+        "check-nin-sim-linkage-status",
+        "nin-sim-linkage"
+      ]
+    },
+    {
+      "question": "What should I do if my SIM is registered in another person's name?",
+      "answer": "Do not try to solve an ownership problem by attaching your NIN to another person's subscriber record. NCC guidance directs users to the mobile operator so the line can be properly re-registered or ownership can be addressed with the evidence the operator requests.",
+      "source": {
+        "label": "NCC SIM-NIN Linkage FAQ",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage"
+      },
+      "relatedSlugs": [
+        "fix-failed-nin-sim-linkage",
+        "nin-sim-linkage"
+      ]
+    },
+    {
+      "question": "Why can NIN-to-SIM linkage fail even when my NIN is valid?",
+      "answer": "A valid NIN can still fail linkage when the subscriber record and NIN identity data do not match or the operator cannot validate the record. Check the linkage status first, then correct the underlying NIMC or SIM-registration issue instead of repeatedly submitting the same mismatch.",
+      "source": {
+        "label": "NCC NIN and SIM Integration FAQ",
+        "url": "https://www.ncc.gov.ng/media-center/public-notices/frequently-asked-questions-nin-and-sim-integration"
+      },
+      "relatedSlugs": [
+        "fix-failed-nin-sim-linkage",
+        "nin-name-modification"
+      ]
+    },
+    {
+      "question": "How many SIMs can I link to one NIN on the same network?",
+      "answer": "NCC's current SIM-NIN FAQ says a subscriber may have up to four SIMs on one network linked to the same NIN. The lines still need to be correctly registered to that subscriber.",
+      "source": {
+        "label": "NCC SIM-NIN Linkage FAQ",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/82-sim-nin-linkage"
+      },
+      "relatedSlugs": [
+        "nin-sim-linkage",
+        "check-nin-sim-linkage-status"
+      ]
+    }
+  ],
+  "Student finance": [
+    {
+      "question": "Is the NELFUND student loan interest-free?",
+      "answer": "NELFUND describes its student loan as interest-free. Apply through the official NELFUND student portal and use the dashboard rather than paying an agent to obtain or speed up a loan.",
+      "source": {
+        "label": "NELFUND student portal",
+        "url": "https://portal.nelf.gov.ng/auth/welcome"
+      },
+      "relatedSlugs": [
+        "nelfund-student-loan-application"
+      ]
+    },
+    {
+      "question": "Are NELFUND institutional charges and upkeep paid to the same place?",
+      "answer": "No. NELFUND's application information separates the two: approved institutional charges are paid to the institution, while approved upkeep is paid to the student's bank account.",
+      "source": {
+        "label": "NELFUND official website",
+        "url": "https://nelf.gov.ng/"
+      },
+      "relatedSlugs": [
+        "nelfund-student-loan-application",
+        "nelfund-loan-status-and-upkeep"
+      ]
+    },
+    {
+      "question": "When does NELFUND loan repayment start after NYSC?",
+      "answer": "NELFUND's current terms state that a borrower who participated in NYSC begins repayment two years after completing NYSC. Borrowers should check the live terms again when their repayment period approaches.",
+      "source": {
+        "label": "NELFUND Terms and Conditions",
+        "url": "https://nelf.gov.ng/terms"
+      },
+      "relatedSlugs": [
+        "nelfund-loan-repayment"
+      ]
+    },
+    {
+      "question": "What does a self-employed NELFUND borrower need to do for repayment?",
+      "answer": "NELFUND's terms require self-employed borrowers to keep the Fund updated with business information within the stated period, including the business address and other ownership, registration or banking details that apply. Early repayment in full or in part is also permitted.",
+      "source": {
+        "label": "NELFUND Terms and Conditions",
+        "url": "https://nelf.gov.ng/terms"
+      },
+      "relatedSlugs": [
+        "nelfund-loan-repayment",
+        "nelfund-loan-status-and-upkeep"
+      ]
+    }
+  ],
+  "Electricity": [
+    {
+      "question": "How long should a paid MAP prepaid meter take to be installed?",
+      "answer": "NERC's metering FAQ says a Meter Asset Provider meter should be installed within 10 working days after full payment. If that period passes, report the delay to the DisCo with the official payment evidence.",
+      "source": {
+        "label": "NERC Metering FAQ",
+        "url": "https://nerc.gov.ng/faq/metering/"
+      },
+      "relatedSlugs": [
+        "electricity-prepaid-meter-application",
+        "electricity-meter-paid-not-installed"
+      ]
+    },
+    {
+      "question": "Can a DisCo give me any estimated bill it wants when I have no working meter?",
+      "answer": "No. NERC's billing guidance applies capping and other rules to estimated billing. A meter fault, removal or delayed replacement does not give a DisCo unlimited discretion to invent an estimate.",
+      "source": {
+        "label": "NERC Billing FAQ",
+        "url": "https://nerc.gov.ng/faq/billing/"
+      },
+      "relatedSlugs": [
+        "electricity-estimated-billing-dispute",
+        "electricity-prepaid-meter-application"
+      ]
+    },
+    {
+      "question": "What do electricity Bands A, B, C, D and E mean?",
+      "answer": "Under NERC's service-based tariff framework, the bands correspond to minimum daily supply commitments: Band A at least 20 hours, B 16, C 12, D 8 and E 4. Confirm the band actually applied to your account on the bill, vending receipt or DisCo system.",
+      "source": {
+        "label": "NERC Electricity Tariffs FAQ",
+        "url": "https://nerc.gov.ng/faq/electricity-tariffs/"
+      },
+      "relatedSlugs": [
+        "electricity-tariff-band"
+      ]
+    },
+    {
+      "question": "Where do I escalate an electricity complaint that my DisCo has not resolved?",
+      "answer": "Start with the DisCo Customer Complaints Unit and keep the acknowledgment. For unresolved cases, the next regulator now depends on location because some state electricity markets have transferred to state regulators; use NERC's current complaint-channel list to identify the right body.",
+      "source": {
+        "label": "NERC complaint channels",
+        "url": "https://nerc.gov.ng/media/new-electricity-complaint-channels-for-15-states/"
+      },
+      "relatedSlugs": [
+        "electricity-complaint-escalation",
+        "electricity-estimated-billing-dispute"
+      ]
+    }
+  ],
+  "Health insurance": [
+    {
+      "question": "Which NHIA programme can a self-employed person or family use?",
+      "answer": "NHIA identifies GIFSHIP as a route for people outside other compulsory arrangements, including self-employed people, individuals, families, small groups, retirees and other listed categories. Use Get Covered to confirm the programme that fits your situation.",
+      "source": {
+        "label": "NHIA GIFSHIP",
+        "url": "https://www.nhia.gov.ng/service/land-insurance/"
+      },
+      "relatedSlugs": [
+        "nhia-gifship-enrolment",
+        "nhia-find-right-health-plan"
+      ]
+    },
+    {
+      "question": "How do I decide which NHIA programme applies to me?",
+      "answer": "NHIA's Get Covered tool starts with employment status and whether coverage is for an individual, family or group. Use that route before paying so you do not enrol into a programme designed for a different category.",
+      "source": {
+        "label": "NHIA Get Covered",
+        "url": "https://www.nhia.gov.ng/get-covered/"
+      },
+      "relatedSlugs": [
+        "nhia-find-right-health-plan",
+        "nhia-gifship-enrolment"
+      ]
+    },
+    {
+      "question": "Does NHIA have a programme for private-sector employees?",
+      "answer": "Yes. NHIA describes OPSSHIP as its organised private-sector programme. The current programme page says eligible private companies enrol employees through NHIA, so an employee should confirm the employer's programme and provider rather than buying an unrelated card.",
+      "source": {
+        "label": "NHIA OPSSHIP",
+        "url": "https://www.nhia.gov.ng/service/gifship/"
+      },
+      "relatedSlugs": [
+        "nhia-private-sector-coverage"
+      ]
+    },
+    {
+      "question": "Can NHIA coverage include a spouse and children?",
+      "answer": "NHIA's current private-sector information says employee coverage can include a spouse and up to four children under 18, with additional family-member rules depending on the programme. Confirm the exact dependant terms for the plan you are joining.",
+      "source": {
+        "label": "NHIA OPSSHIP",
+        "url": "https://www.nhia.gov.ng/service/gifship/"
+      },
+      "relatedSlugs": [
+        "nhia-private-sector-coverage",
+        "nhia-gifship-enrolment"
+      ]
+    }
+  ],
+  "Pensions": [
+    {
+      "question": "Do I lose my Retirement Savings Account when I change jobs?",
+      "answer": "No. PenCom states that the RSA remains the worker's account when employment changes. Give the existing RSA details to the new employer so future contributions continue to the correct account.",
+      "source": {
+        "label": "PenCom — RSA when changing jobs",
+        "url": "https://www.pencom.gov.ng/what-happens-to-my-rsa-when-i-change-jobs/"
+      },
+      "relatedSlugs": [
+        "pencom-open-rsa"
+      ]
+    },
+    {
+      "question": "Can I move my pension from one PFA to another?",
+      "answer": "Yes. PenCom says an RSA holder can transfer from one Pension Fund Administrator to another once in a year without giving a reason, using the regulated RSA transfer process.",
+      "source": {
+        "label": "PenCom — Move RSA to another PFA",
+        "url": "https://www.pencom.gov.ng/can-i-move-my-account-from-one-pfa-to-another/"
+      },
+      "relatedSlugs": [
+        "pencom-transfer-rsa"
+      ]
+    },
+    {
+      "question": "What should I do if pension is deducted from my salary but not credited to my RSA?",
+      "answer": "Check the PFA statement first and identify the missing months. Then reconcile with the employer/PFA and, if the employer has not remitted the contribution, complain to PenCom with the RSA PIN, PFA, employer identity and affected periods.",
+      "source": {
+        "label": "PenCom Guidance Note for Employees",
+        "url": "https://www.pencom.gov.ng/guidance-note-employees-2/"
+      },
+      "relatedSlugs": [
+        "pencom-unremitted-contributions"
+      ]
+    },
+    {
+      "question": "Do I need to open a new RSA when I move to another employer?",
+      "answer": "No. An RSA is portable between jobs. Keep the same RSA unless you are using the regulated PFA-transfer process; creating another account is not the normal way to handle a job change.",
+      "source": {
+        "label": "PenCom — What is an RSA?",
+        "url": "https://www.pencom.gov.ng/what-is-a-retirement-savings-account-rsa/"
+      },
+      "relatedSlugs": [
+        "pencom-open-rsa",
+        "pencom-transfer-rsa"
+      ]
+    }
+  ],
+  "Product regulation": [
+    {
+      "question": "Where should I start a NAFDAC product registration application?",
+      "answer": "Start in NAFDAC's official NAPAMS system, choose New Product Registration and use the category that matches the regulated product. Food, cosmetics, medicines, water and medical devices can have different supporting requirements.",
+      "source": {
+        "label": "NAFDAC NAPAMS",
+        "url": "https://registration.nafdac.gov.ng/Home/"
+      },
+      "relatedSlugs": [
+        "nafdac-product-registration"
+      ]
+    },
+    {
+      "question": "Is a NAFDAC number printed on a label enough to prove a product is registered?",
+      "answer": "No. A printed number can be copied or misused. Use NAFDAC's official verification service and compare the returned product and registration-holder information with the item in front of you.",
+      "source": {
+        "label": "NAFDAC Services Portal",
+        "url": "https://services.nafdac.gov.ng/"
+      },
+      "relatedSlugs": [
+        "nafdac-product-verification"
+      ]
+    },
+    {
+      "question": "How do I renew an older NAFDAC registration that is missing from NAPAMS?",
+      "answer": "NAFDAC's online workflow provides a data-capture route for legacy products that are not yet present in the applicant's product listing. Bring the old record into the online system first, then use the renewal workflow rather than creating an unnecessary duplicate product.",
+      "source": {
+        "label": "NAFDAC NAPAMS",
+        "url": "https://registration.nafdac.gov.ng/Home/"
+      },
+      "relatedSlugs": [
+        "nafdac-product-renewal"
+      ]
+    },
+    {
+      "question": "Is there one NAFDAC registration fee for every kind of product?",
+      "answer": "No. Charges depend on the product category and application. Use NAFDAC's current services/fee information and the invoice generated by the official application rather than relying on an old price shared by an agent.",
+      "source": {
+        "label": "NAFDAC Services Portal",
+        "url": "https://services.nafdac.gov.ng/"
+      },
+      "relatedSlugs": [
+        "nafdac-product-registration",
+        "nafdac-product-renewal"
+      ]
+    }
+  ],
+  "Consumer protection": [
+    {
+      "question": "What evidence should I attach to an FCCPC consumer complaint?",
+      "answer": "FCCPC asks consumers to provide information and documents relevant to the transaction. Useful evidence includes receipts, invoices, agreements, screenshots, correspondence and a short chronology showing what happened and what remedy you requested.",
+      "source": {
+        "label": "FCCPC Complaint Handling",
+        "url": "https://fccpc.gov.ng/consumers/complaint-handling/"
+      },
+      "relatedSlugs": [
+        "fccpc-consumer-complaint"
+      ]
+    },
+    {
+      "question": "How long can an FCCPC complaint take to resolve?",
+      "answer": "FCCPC's complaint-handling guidance says resolution may take about 1–45 days, while more complex cases can take longer. Keep the tracking reference and respond promptly if additional evidence is requested.",
+      "source": {
+        "label": "FCCPC Complaint Handling",
+        "url": "https://fccpc.gov.ng/consumers/complaint-handling/"
+      },
+      "relatedSlugs": [
+        "fccpc-consumer-complaint"
+      ]
+    },
+    {
+      "question": "How do I track a complaint after submitting it to FCCPC?",
+      "answer": "Keep the tracking code or acknowledgment generated after submission. FCCPC's complaint process allows the consumer to monitor the case and provide follow-up material when the Commission requests it.",
+      "source": {
+        "label": "FCCPC Complaint Handling",
+        "url": "https://fccpc.gov.ng/consumers/complaint-handling/"
+      },
+      "relatedSlugs": [
+        "fccpc-consumer-complaint"
+      ]
+    },
+    {
+      "question": "Can I submit an FCCPC complaint without visiting an office?",
+      "answer": "Yes. FCCPC publishes an online complaint route and also recognises other official channels such as email, letters and walk-in contact. Use a channel that leaves a clear record and keep copies of every document submitted.",
+      "source": {
+        "label": "FCCPC Complaint Handling",
+        "url": "https://fccpc.gov.ng/consumers/complaint-handling/"
+      },
+      "relatedSlugs": [
+        "fccpc-consumer-complaint"
+      ]
+    }
+  ],
+  "Housing": [
+    {
+      "question": "How much is the standard NHF contribution?",
+      "answer": "FMBN's NHF information states a contribution basis of 2.5% of monthly income for the applicable contributor class. Check the current FMBN rule for your employment status and verify that remittances are actually appearing on your contribution record.",
+      "source": {
+        "label": "FMBN NHF Scheme FAQ",
+        "url": "https://fmbn.gov.ng/products/nhf-scheme/faqs"
+      },
+      "relatedSlugs": [
+        "nhf-registration-and-contributions"
+      ]
+    },
+    {
+      "question": "How long must I contribute before applying for an NHF mortgage?",
+      "answer": "FMBN's current NHF mortgage product page states that an applicant must have at least six months of continuous contributions. The mortgage still requires affordability, property and participating-mortgage-bank checks.",
+      "source": {
+        "label": "FMBN NHF Mortgage Loan",
+        "url": "https://fmbn.gov.ng/products/nhf_mortgage_loan"
+      },
+      "relatedSlugs": [
+        "nhf-mortgage-loan",
+        "nhf-registration-and-contributions"
+      ]
+    },
+    {
+      "question": "What rate and maximum tenor does FMBN publish for the NHF mortgage?",
+      "answer": "FMBN's current product page states that participating mortgage banks on-lend NHF mortgage funds to contributors at 6% per annum, with a maximum tenor of up to 30 years subject to eligibility and affordability.",
+      "source": {
+        "label": "FMBN NHF Mortgage Loan",
+        "url": "https://fmbn.gov.ng/products/nhf_mortgage_loan"
+      },
+      "relatedSlugs": [
+        "nhf-mortgage-loan"
+      ]
+    },
+    {
+      "question": "Can I automatically withdraw all my NHF contributions when I leave a job?",
+      "answer": "Not simply because one employment ends. NHF refunds follow the eligibility conditions in the applicable NHF rules. Verify your contribution history and the current refund condition with FMBN before submitting a request.",
+      "source": {
+        "label": "FMBN NHF legal framework",
+        "url": "https://fmbn.gov.ng/products/nhf-scheme/legal-framework"
+      },
+      "relatedSlugs": [
+        "nhf-contribution-refund",
+        "nhf-registration-and-contributions"
+      ]
+    }
+  ],
+  "Customs": [
+    {
+      "question": "What does the Customs Verification Management System check on a vehicle?",
+      "answer": "CVMS allows a user to enter a vehicle VIN or chassis number and verify the customs clearance and duty-payment record. Nigeria Customs describes it as a way for individuals and businesses to confirm vehicle duty status before relying on a clearance claim.",
+      "source": {
+        "label": "Customs Verification Management System",
+        "url": "https://cvms.nigeriatradehub.gov.ng/"
+      },
+      "relatedSlugs": [
+        "customs-vehicle-duty-verification"
+      ]
+    },
+    {
+      "question": "What do I receive after a successful CVMS vehicle verification?",
+      "answer": "The CVMS process says the user enters the VIN, completes the secure payment step and can download an official Customs Verification Receipt. The receipt includes verification information that can be checked instead of relying only on a seller's paper copy.",
+      "source": {
+        "label": "Customs Verification Management System",
+        "url": "https://cvms.nigeriatradehub.gov.ng/"
+      },
+      "relatedSlugs": [
+        "customs-vehicle-duty-verification"
+      ]
+    },
+    {
+      "question": "What is the Nigeria Customs 846 non-standard VIN portal for?",
+      "answer": "The 846 portal is for the applicable Customs cases involving a non-standard or challenged VIN and uses an authorised declaration/assessment route. It is not a general shortcut for ordinary buyers to reduce customs duty.",
+      "source": {
+        "label": "Nigeria Customs 846 portal",
+        "url": "https://846.customs.gov.ng/"
+      },
+      "relatedSlugs": [
+        "customs-846-non-standard-vin"
+      ]
+    },
+    {
+      "question": "Does a successful Customs vehicle check also prove who owns the vehicle?",
+      "answer": "No. Customs verification checks the import clearance/duty record. Ownership, Nigerian number-plate registration and motor insurance are separate records, so a used-vehicle buyer should verify each relevant record independently.",
+      "source": {
+        "label": "Nigeria Customs Service CVMS information",
+        "url": "https://customs.gov.ng/"
+      },
+      "relatedSlugs": [
+        "customs-vehicle-duty-verification",
+        "vehicle-proof-of-ownership-verification",
+        "verify-vehicle-number-plate"
+      ]
+    }
   ]
 };
 
