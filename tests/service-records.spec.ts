@@ -146,7 +146,35 @@ const expectedSlugs = [
   "customs-846-non-standard-vin",
   "federal-marriage-application",
   "marriage-document-verification-and-ctc",
-  "npc-death-registration"
+  "npc-death-registration",
+  "nipo-trademark-registration",
+  "nipo-patent-registration",
+  "nipo-industrial-design-registration",
+  "copyright-work-registration",
+  "nepc-exporter-registration",
+  "nepc-exporter-certificate-renewal-verification",
+  "smedan-msme-registration",
+  "bpp-contractor-registration",
+  "soncap-import-certification",
+  "son-mancap-certification",
+  "son-product-registration",
+  "nsitf-employer-registration",
+  "nsitf-workplace-injury-claim",
+  "nsitf-compliance-certificate",
+  "nde-rhei-registration",
+  "e-cerpac-application",
+  "e-cerpac-renewal",
+  "diaspora-contactless-passport-renewal",
+  "pencom-job-loss-25-percent-withdrawal",
+  "pencom-micro-pension-registration",
+  "jamb-change-course-institution",
+  "jamb-change-name",
+  "jamb-correct-date-of-birth",
+  "jamb-correct-gender",
+  "jamb-correct-state-lga",
+  "cbn-bank-complaint",
+  "ncc-telecom-complaint",
+  "fmbn-home-renovation-loan"
 ] as const;
 const representative = [
   {
@@ -263,8 +291,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(141);
-  expect(publicServices).toHaveLength(140);
+  expect(services).toHaveLength(169);
+  expect(publicServices).toHaveLength(168);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
