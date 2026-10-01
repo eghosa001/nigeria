@@ -9694,7 +9694,7 @@
     "feeNote": "Rivers State IRS does not publish one universal TCC amount; the taxpayer must settle the assessment and use the official RIVTAMIS payment process.",
     "timeline": "Processing depends on registration, assessment, payment and review; RIVTAMIS provides request tracking after submission.",
     "status": "verified",
-    "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html",
+    "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html?url=individual",
     "requirements": [
       "An active RIVTIN linked to the taxpayer's RIVTAMIS account",
       "A complete taxpayer or company profile with a valid email address and phone number",
@@ -9712,7 +9712,8 @@
     "notes": [
       "Rivers State IRS says Direct Assessment is the route used by an individual taxpayer to declare income and process personal tax obligations directly.",
       "Corporate TCC requests depend on the organisation's annual returns, profile and employee records being complete.",
-      "RIVTAMIS provides a separate public verification function, so a third party can check a TCC instead of relying only on a paper copy."
+      "RIVTAMIS provides a separate public verification function, so a third party can check a TCC instead of relying only on a paper copy.",
+      "For a company or PAYE employer, sign in with the corporate RIVTAMIS account and use the TCC Requests menu after the organisation's annual returns and employee records are complete."
     ],
     "sources": [
       {
