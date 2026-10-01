@@ -9130,7 +9130,7 @@
     "requirements": [
       "The company's registration number and authorised iCRP access",
       "The full new registered-office address, including house/building number, street, locality, state and other requested address fields",
-      "The company resolution or internal approval supporting the registered-office change where required",
+      "The company resolution or other internal approval supporting the registered-office change when the company's governance documents require that approval",
       "Any evidence or notice CAC requests for the specific post-incorporation filing"
     ],
     "steps": [
