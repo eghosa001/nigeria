@@ -11,7 +11,7 @@ export type GrowthHub = {
 export const growthHubs: GrowthHub[] = [
   {
     slug: "nigerian-passport",
-    title: "Nigerian Passport Guide 2026",
+    title: "Nigerian Passport Application & Renewal Guide 2026",
     shortTitle: "Nigerian passport",
     description: "Renew, replace, correct or apply for a Nigerian passport with source-linked requirements, current fees and official NIS routes.",
     intro: [
@@ -208,7 +208,7 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "vehicle-services-nigeria",
-    title: "Vehicle Registration, Verification & Driving Services in Nigeria",
+    title: "Nigeria Vehicle Registration & Verification Guide",
     shortTitle: "Vehicle services",
     description: "Register and verify a Nigerian vehicle, check ownership, insurance and Customs clearance, and reach the correct driver's-licence guide.",
     intro: [
