@@ -8911,5 +8911,341 @@
       "nhf-registration-and-contributions",
       "nhf-mortgage-loan"
     ]
+  },
+  {
+    "slug": "scuml-certificate-registration",
+    "title": "How to register for a SCUML certificate in Nigeria",
+    "shortTitle": "SCUML certificate registration",
+    "summary": "How Designated Non-Financial Businesses and Professions register with SCUML, upload sector-specific evidence and obtain the free electronic compliance certificate.",
+    "category": "Business",
+    "agencySlug": "scuml",
+    "feeLabel": "Free",
+    "feeNote": "SCUML states that registration and certification are completely free of charge. Do not pay a third party to obtain or accelerate the certificate.",
+    "timeline": "SCUML's FAQ says the e-certificate is generally ready about 7 to 10 days after approval.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://scumlportal.efcc.gov.ng/scuml-registration-guideline.php",
+    "requirements": [
+      "A business or profession that falls within the Designated Non-Financial Businesses and Professions categories regulated by SCUML",
+      "CAC incorporation or business-name registration documents appropriate to the entity type",
+      "Tax Identification Number printout or applicable tax-exemption evidence",
+      "Any sector-specific professional licence, association registration or regulatory evidence listed in the SCUML registration guideline"
+    ],
+    "steps": [
+      "Open the official SCUML registration guideline and select the business sector that matches the entity before starting the application.",
+      "Review the sector-specific checklist and prepare the CAC, TIN and any professional or regulator documents SCUML lists for that sector.",
+      "Proceed from the official guideline page into the SCUML portal and complete the entity, director/proprietor and contact information exactly as shown on the supporting records.",
+      "Upload the required documents, submit the registration and keep the application details used to check registration status.",
+      "After approval, monitor the registered director or entity email and the SCUML portal for the electronic certificate, then verify the certificate through SCUML's official verification service when needed."
+    ],
+    "notes": [
+      "SCUML registration applies only to businesses and professions covered by the DNFBP rules; not every Nigerian business requires a SCUML certificate.",
+      "SCUML warns that it has no authorised private agents for certificate registration and that the certificate itself is free.",
+      "From 1 January 2026, SCUML states that applicable CTR/CBTR reports must be submitted through its portal rather than by email."
+    ],
+    "sources": [
+      {
+        "label": "SCUML Registration Guideline",
+        "agency": "Special Control Unit against Money Laundering",
+        "url": "https://scumlportal.efcc.gov.ng/scuml-registration-guideline.php",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SCUML Official Website",
+        "agency": "Special Control Unit against Money Laundering",
+        "url": "https://scuml.efcc.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SCUML FAQs",
+        "agency": "Special Control Unit against Money Laundering",
+        "url": "https://scuml.efcc.gov.ng/faqs/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "SCUML registration",
+      "SCUML certificate Nigeria",
+      "SCUML requirements",
+      "EFCC SCUML certificate",
+      "register SCUML online"
+    ],
+    "related": [
+      "cac-business-name-registration",
+      "cac-company-registration",
+      "cac-status-report"
+    ]
+  },
+  {
+    "slug": "pencom-pension-clearance-certificate",
+    "title": "How an employer gets a PenCom Pension Clearance Certificate",
+    "shortTitle": "Pension Clearance Certificate",
+    "summary": "How Nigerian employers apply online for PenCom's Pension Clearance Certificate with employee, contribution and group-life-insurance compliance evidence.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom application fee stated",
+    "feeNote": "PenCom's current PCC requirements and e-PCC guidance do not publish a separate application fee. Use only the official PenCom portal and ignore unofficial payment requests.",
+    "timeline": "PenCom's revised service charter lists 15 working days for issuance when the required compliance evidence is complete.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://pcc.pencom.gov.ng/",
+    "requirements": [
+      "A certified list of the organisation's employees as at the end of the last fiscal year",
+      "Certified employer and employee pension-contribution rates meeting the applicable statutory minimums",
+      "Evidence of pension contribution remittance for the required fiscal years or, for newer organisations, from incorporation or registration",
+      "Evidence that outstanding pension contributions and applicable penalties have been remitted",
+      "A current group life insurance policy covering the organisation's employees, plus any legacy pension-asset evidence PenCom requires where applicable"
+    ],
+    "steps": [
+      "Open PenCom's e-Pension Clearance Certificate portal and create or access the employer application account.",
+      "Prepare the certified employee list, contribution-rate information, remittance history and current group life insurance evidence before starting the submission.",
+      "Complete the employer information and upload the compliance evidence requested by the e-PCC application.",
+      "Submit the application and use the portal's tracking features to respond to any PenCom compliance query or missing-document request.",
+      "After approval, download and retain the electronic Pension Clearance Certificate and verify that the employer name and certificate period are correct before using it for procurement or compliance."
+    ],
+    "notes": [
+      "PenCom introduced the e-PCC platform so employers can submit applications, track them and print certificates online.",
+      "The certificate is an employer-compliance document and is separate from an employee's personal RSA.",
+      "PenCom publishes lists of organisations issued PCCs, so third parties should verify current compliance rather than relying only on a copied certificate."
+    ],
+    "sources": [
+      {
+        "label": "PenCom Online PCC Guide",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/step-by-step-online-pension-clearance-certificate-guide/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom PCC Requirements",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2017/04/PCC-REQUIREMENTS-1.pdf",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom e-PCC Notice",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2024/11/PRESS-RELEASE-PCC.pdf",
+        "published": "2024-11-01",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom Revised Service Charter",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2025/05/FINAL-REVISED-SERVICE-CHARTER.pdf",
+        "published": "2025-05-01",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "PenCom clearance certificate",
+      "Pension Clearance Certificate Nigeria",
+      "PCC PenCom",
+      "pension compliance certificate employer Nigeria"
+    ],
+    "related": [
+      "pencom-unremitted-contributions",
+      "pencom-open-rsa",
+      "nsitf-compliance-certificate",
+      "bpp-contractor-registration"
+    ]
+  },
+  {
+    "slug": "cac-change-director",
+    "title": "How to add, remove or change a company director with CAC",
+    "shortTitle": "Change CAC director",
+    "summary": "How a Nigerian company files a post-incorporation director appointment, removal or change of director particulars through the CAC iCRP system.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "CAC post-incorporation filing fee applies",
+    "feeNote": "Use the current CAC fee schedule and the amount generated in iCRP for the exact director filing; late filings can attract additional charges.",
+    "timeline": "CAC's current service timelines list 12 working hours for director post-registration filings after receipt of the required documents or resolution of a query.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "The company's CAC registration number and access to the authorised iCRP account used for post-incorporation filings",
+      "The board/shareholder resolution or other corporate approval supporting the appointment, removal or change",
+      "Identity and required particulars of the incoming or affected director",
+      "Any consent, notice or supporting document required by CAC for the specific director change"
+    ],
+    "steps": [
+      "Sign in to CAC iCRP with an account authorised to file post-incorporation changes for the company.",
+      "Open the company's post-incorporation services and select the director appointment, removal or particulars-change process that matches the intended transaction.",
+      "Enter the affected director information and upload the corporate resolution, identity and consent or notice documents required by the filing.",
+      "Review the filing carefully, generate the official CAC transaction and pay the filing or late fee shown by iCRP.",
+      "Submit the application, monitor the iCRP dashboard for queries and download the updated status report or approved record after CAC completes the change."
+    ],
+    "notes": [
+      "CAC's iCRP FAQ states that post-incorporation processes are handled through the new iCRP system.",
+      "Changing a director is not the same as changing a shareholder; use the filing that matches the legal change actually approved by the company.",
+      "Check the updated company record after approval before relying on the change for banking, contracts or regulatory filings."
+    ],
+    "sources": [
+      {
+        "label": "CAC iCRP FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Companies Regulations 2021",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://pre.cac.gov.ng/assets/images/REGULATIONS-2021.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "change director CAC",
+      "add director CAC Nigeria",
+      "remove director CAC",
+      "CAC post incorporation director",
+      "CAC 7 director"
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-status-report",
+      "cac-beneficial-ownership-psc",
+      "cac-change-registered-address"
+    ]
+  },
+  {
+    "slug": "cac-change-registered-address",
+    "title": "How to change a company's registered address with CAC",
+    "shortTitle": "Change CAC registered address",
+    "summary": "How a Nigerian company updates its registered office address through CAC post-incorporation services and confirms the change on the company record.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "CAC post-incorporation filing fee applies",
+    "feeNote": "Use the current CAC fee schedule and the amount generated in iCRP for the address-change filing; late filing can attract additional charges.",
+    "timeline": "CAC's current service timelines list 12 working hours for registered-address post-registration filings after receipt of the required documents or resolution of a query.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "The company's registration number and authorised iCRP access",
+      "The full new registered-office address, including house/building number, street, locality, state and other requested address fields",
+      "The company resolution or internal approval supporting the registered-office change where required",
+      "Any evidence or notice CAC requests for the specific post-incorporation filing"
+    ],
+    "steps": [
+      "Sign in to the CAC iCRP account authorised to manage the company's post-incorporation filings.",
+      "Open post-incorporation services for the company and select the registered-address change process.",
+      "Enter the new registered-office details exactly and upload the corporate approval or other supporting evidence requested by CAC.",
+      "Review the address before payment, complete the official CAC filing charge generated by iCRP and submit the application.",
+      "Track any CAC query and, after approval, download or check the updated status report to confirm that the new registered address is now on the company record."
+    ],
+    "notes": [
+      "The registered office is the legal address held by CAC; changing a trading location does not automatically update the CAC record.",
+      "CAC's service timeline page treats registered-address changes as post-registration filings.",
+      "After approval, update banks, tax records and other regulators separately where they maintain their own address records."
+    ],
+    "sources": [
+      {
+        "label": "CAC iCRP FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Companies Regulations 2021",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://pre.cac.gov.ng/assets/images/REGULATIONS-2021.pdf",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "change company address CAC",
+      "CAC registered address change",
+      "CAC post incorporation address",
+      "change office address CAC Nigeria"
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-status-report",
+      "cac-change-director"
+    ]
+  },
+  {
+    "slug": "cac-beneficial-ownership-psc",
+    "title": "How to file or update Persons with Significant Control (PSC) with CAC",
+    "shortTitle": "CAC beneficial ownership / PSC",
+    "summary": "How companies and LLPs report or update beneficial ownership information for Persons with Significant Control under CAC's PSC rules and public register.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "CAC filing rules and fees apply",
+    "feeNote": "PSC information is filed through CAC's incorporation, annual-return or amendment processes as applicable. Use the current iCRP transaction and CAC fee schedule for any paid post-incorporation filing.",
+    "timeline": "CAC's current service timelines list 12 working hours for a change of Person with Significant Control after receipt of the required filing or resolution of a query.",
+    "status": "verified",
+    "lastVerified": "2026-10-01",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "The company's or LLP's CAC registration details and authorised iCRP access",
+      "The full identity and contact particulars of each natural person who meets the PSC or beneficial-owner test",
+      "Details of the shareholding, voting rights or other ownership/control basis that makes the person reportable",
+      "The date the person became, changed or ceased to be a PSC and any supporting corporate record requested by CAC"
+    ],
+    "steps": [
+      "Determine which natural person or persons meet CAC's Persons with Significant Control rules before filing the ownership information.",
+      "Sign in to CAC iCRP and open the incorporation, annual-return or post-incorporation process through which the PSC information must be reported or amended.",
+      "Enter each reportable person's identity, ownership/control basis and effective date accurately, then attach any supporting record the filing requests.",
+      "Review the beneficial-ownership information, complete any official filing charge generated by iCRP and submit the transaction.",
+      "After CAC processes the filing, confirm the updated company record and use CAC's public Beneficial Ownership Register to check the published PSC information where appropriate."
+    ],
+    "notes": [
+      "CAC's PSC Regulations require companies and LLPs to submit beneficial-owner information during incorporation, annual returns, amendments and other cases determined by the Commission.",
+      "The PSC register is designed to identify the natural people who ultimately own or control an entity, not only intermediary companies.",
+      "Incorrect beneficial-ownership information can affect compliance and due-diligence checks, so changes should be filed when control changes."
+    ],
+    "sources": [
+      {
+        "label": "CAC PSC Regulations 2022",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2023/01/PSC-Regulations-2022.pdf",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Beneficial Ownership Register",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://bor.cac.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "CAC iCRP FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "CAC beneficial ownership",
+      "CAC PSC filing",
+      "Persons with Significant Control Nigeria",
+      "update PSC CAC",
+      "beneficial owner register Nigeria"
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-annual-returns",
+      "cac-change-director",
+      "cac-status-report"
+    ]
   }
 ]
