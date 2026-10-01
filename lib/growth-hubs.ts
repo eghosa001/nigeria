@@ -257,7 +257,7 @@ export const growthHubs: GrowthHub[] = [
       { query: "NSITF compliance certificate", serviceSlug: "nsitf-compliance-certificate" }
     ],
     serviceSlugs: ["nde-rhei-registration", "itf-employer-registration", "itf-compliance-certificate", "nsitf-employer-registration", "nsitf-workplace-injury-claim", "nsitf-compliance-certificate"]
-  },,
+  },
   {
     slug: "state-services-nigeria",
     title: "State Government Services in Nigeria",
