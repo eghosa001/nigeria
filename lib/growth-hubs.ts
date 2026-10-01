@@ -167,9 +167,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "trademark registration Nigeria", serviceSlug: "nipo-trademark-registration" },
       { query: "register exporter NEPC", serviceSlug: "nepc-exporter-registration" },
       { query: "SMEDAN registration", serviceSlug: "smedan-msme-registration" },
-      { query: "BPP contractor registration", serviceSlug: "bpp-contractor-registration" }
+      { query: "BPP contractor registration", serviceSlug: "bpp-contractor-registration" },
+      { query: "SCUML certificate registration", serviceSlug: "scuml-certificate-registration" },
+      { query: "CAC beneficial ownership PSC", serviceSlug: "cac-beneficial-ownership-psc" }
     ],
-    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "bpp-contractor-registration", "nsitf-employer-registration", "nsitf-compliance-certificate"]
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-change-director", "cac-change-registered-address", "cac-beneficial-ownership-psc", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "bpp-contractor-registration", "scuml-certificate-registration", "nsitf-employer-registration", "nsitf-compliance-certificate"]
   },
   {
     slug: "pension-services-nigeria",
@@ -185,9 +187,10 @@ export const growthHubs: GrowthHub[] = [
       { query: "change PFA Nigeria", serviceSlug: "pencom-transfer-rsa" },
       { query: "employer not paying pension", serviceSlug: "pencom-unremitted-contributions" },
       { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
-      { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" }
+      { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" },
+      { query: "PenCom Pension Clearance Certificate", serviceSlug: "pencom-pension-clearance-certificate" }
     ],
-    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration"]
+    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration", "pencom-pension-clearance-certificate"]
   },
   {
     slug: "consumer-complaints-nigeria",
