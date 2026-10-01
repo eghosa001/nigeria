@@ -8911,5 +8911,312 @@
       "nhf-registration-and-contributions",
       "nhf-mortgage-loan"
     ]
+  },
+  {
+    "slug": "scuml-certificate-registration",
+    "title": "How to register for a SCUML certificate in Nigeria",
+    "shortTitle": "SCUML registration",
+    "summary": "The official EFCC-SCUML registration process for Designated Non-Financial Businesses and Professions, including sector-specific documents, online filing and e-certificate timing.",
+    "category": "Business",
+    "agencySlug": "scuml",
+    "feeLabel": "Free",
+    "feeNote": "SCUML states that registration and certification are completely free of charge. Do not pay an agent for a SCUML certificate.",
+    "timeline": "SCUML's current FAQ says the e-certificate is normally ready about 7–10 days after approval.",
+    "status": "verified",
+    "officialPortal": "https://scumlportal.efcc.gov.ng/mhatabz.php",
+    "requirements": [
+      "CAC registration documents that match the entity type, such as the Certificate of Incorporation or Business Name certificate and the applicable status/MEMART records",
+      "Tax Identification Number (TIN) printout for the registered entity",
+      "Sector-specific professional licence, association certificate or regulator approval where SCUML lists one for that DNFBP category",
+      "Organisation address, phone and email plus the director/contact person's name, NIN, address, email and mobile number",
+      "Bank/account information and source-of-funds/source-of-wealth information requested by the current SCUML registration form"
+    ],
+    "steps": [
+      "Check SCUML's registration guideline and confirm that the business or profession falls within a Designated Non-Financial Business or Profession category before filing.",
+      "Open the official SCUML registration form and select the business category, CAC registration type and sector that match the registered entity.",
+      "Enter the CAC/NEPZA number, registered name, incorporation date, TIN, head-office address, bank details and organisation contact information exactly as shown in the supporting records.",
+      "Enter the director or organisation contact person's NIN and contact details, then upload the CAC, tax and sector-specific documents listed for that business type.",
+      "Review the attestation and submit the registration through the official SCUML portal, keeping the application or registration reference.",
+      "Track the application on the SCUML portal and, after approval, download the e-certificate when it becomes available."
+    ],
+    "notes": [
+      "SCUML warns that third parties advertising paid registration or certification are not its authorised agents.",
+      "The exact document list depends on the business sector; professional firms can require an additional professional licence or certificate.",
+      "From 1 January 2026, SCUML says relevant transaction reports such as CTR/CBTR submissions are handled through the SCUML portal rather than email."
+    ],
+    "sources": [
+      {
+        "label": "SCUML Registration Guideline",
+        "agency": "Special Control Unit Against Money Laundering / EFCC",
+        "url": "https://scuml.efcc.gov.ng/registration-guideline/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SCUML Online Registration Form",
+        "agency": "Special Control Unit Against Money Laundering / EFCC",
+        "url": "https://scumlportal.efcc.gov.ng/mhatabz.php",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SCUML FAQs",
+        "agency": "Special Control Unit Against Money Laundering / EFCC",
+        "url": "https://scuml.efcc.gov.ng/faqs/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "SCUML registration",
+      "SCUML certificate Nigeria",
+      "register SCUML online",
+      "SCUML requirements",
+      "SCUML free registration"
+    ],
+    "related": [
+      "scuml-certificate-verification",
+      "cac-company-registration",
+      "cac-business-name-registration"
+    ]
+  },
+  {
+    "slug": "scuml-certificate-verification",
+    "title": "How to verify a SCUML certificate",
+    "shortTitle": "Verify SCUML certificate",
+    "summary": "Use the official EFCC-SCUML verification service to check a certificate instead of relying only on a PDF, printout or certificate image supplied by a business.",
+    "category": "Business",
+    "agencySlug": "scuml",
+    "feeLabel": "Free verification",
+    "feeNote": "Use SCUML's official certificate-verification page; no verification payment is stated.",
+    "timeline": "Online verification is available when the SCUML portal is reachable.",
+    "status": "verified",
+    "officialPortal": "https://scumlportal.efcc.gov.ng/verify.php",
+    "requirements": [
+      "The SCUML certificate or registration reference shown on the certificate being checked",
+      "The registered business name and CAC details needed to compare the returned record with the entity presenting the certificate"
+    ],
+    "steps": [
+      "Open the official SCUML certificate-verification page and confirm that the address is on the scumlportal.efcc.gov.ng domain.",
+      "Enter the certificate or registration information requested by the verification service.",
+      "Submit the lookup and compare the returned registered entity information with the business name and certificate presented to you.",
+      "If the certificate cannot be verified or the returned entity does not match, treat the certificate as unresolved and contact SCUML through its official channels."
+    ],
+    "notes": [
+      "A certificate image or PDF can be copied, altered or outdated, so use the official verification service for an independent check.",
+      "SCUML itself tells users to make sure the verification page is on the official scumlportal.efcc.gov.ng domain.",
+      "Verification does not replace checking other licences or registrations required for the business's sector."
+    ],
+    "sources": [
+      {
+        "label": "SCUML Certificate Verification",
+        "agency": "Special Control Unit Against Money Laundering / EFCC",
+        "url": "https://scumlportal.efcc.gov.ng/verify.php",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "SCUML Official Website",
+        "agency": "Special Control Unit Against Money Laundering / EFCC",
+        "url": "https://scuml.efcc.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "verify SCUML certificate",
+      "check SCUML certificate",
+      "SCUML verification",
+      "is SCUML certificate genuine"
+    ],
+    "related": [
+      "scuml-certificate-registration",
+      "cac-status-report"
+    ]
+  },
+  {
+    "slug": "pencom-pension-clearance-certificate",
+    "title": "How an employer applies for a PenCom Pension Clearance Certificate",
+    "shortTitle": "PenCom PCC",
+    "summary": "The current Employer Hub route for Nigerian employers applying for a Pension Clearance Certificate, including employee schedules, remittance evidence and group-life cover.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom application fee stated",
+    "feeNote": "PenCom's published PCC requirements focus on statutory pension compliance and supporting evidence rather than a separate application fee.",
+    "timeline": "PenCom's published service charter lists 15 working days for issuance when the required records are complete.",
+    "status": "verified",
+    "officialPortal": "https://ehub.pencom.gov.ng",
+    "requirements": [
+      "A PenCom employer code and access to the current Employer Hub used for new PCC applications",
+      "Certified list of the organisation's employees as at the end of the last fiscal year",
+      "Certified monthly pension contribution rates showing at least 10% employer and 8% employee contributions under the published PCC requirements",
+      "Evidence of monthly pension remittances for the last three fiscal years, or from incorporation/registration/licensing where the organisation is newer",
+      "Evidence that outstanding pension contributions and late-remittance penalties identified by PenCom have been settled, where applicable",
+      "Current group life insurance evidence for employees and legacy pension-asset transfer evidence where those requirements apply"
+    ],
+    "steps": [
+      "Open the PenCom Employer Hub and register or sign in with the employer code used for the organisation's pension-compliance record.",
+      "Confirm that the company profile and employer information are current before starting the Pension Clearance Certificate application.",
+      "Prepare the certified employee list, contribution-rate statement, pension-remittance evidence and current group-life insurance record required for the application.",
+      "Upload the supporting compliance documents and submit the PCC application through the Employer Hub.",
+      "Track the application in the Employer Hub and respond to any PenCom query about missing remittances, employee records or compliance evidence.",
+      "After approval, download and retain the Pension Clearance Certificate and check its validity before using it for procurement or another compliance purpose."
+    ],
+    "notes": [
+      "Effective 1 July 2026, PenCom says new PCC applications moved to the Employer Hub; the older pcc.pencom.gov.ng portal is now for viewing, downloading and printing certificates issued before that date.",
+      "PenCom issues PCCs as evidence that an eligible organisation has complied with the pension requirements applicable to the certificate period.",
+      "A PCC does not replace ITF, NSITF, tax or other compliance certificates that a procurement process may separately require."
+    ],
+    "sources": [
+      {
+        "label": "PenCom PCC Portal Migration Notice",
+        "agency": "National Pension Commission",
+        "url": "https://pcc.pencom.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom Pension Clearance Requirements",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/requirements-for-compliance-certificate/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom Pension Compliance",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/category/compliance-certificates/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "PenCom pension clearance certificate",
+      "PCC Nigeria employer",
+      "PenCom Employer Hub",
+      "pension compliance certificate Nigeria",
+      "PCC requirements"
+    ],
+    "related": [
+      "pencom-unremitted-contributions",
+      "itf-compliance-certificate",
+      "nsitf-compliance-certificate",
+      "bpp-contractor-registration"
+    ]
+  },
+  {
+    "slug": "itf-employer-registration",
+    "title": "How to register an employer with the Industrial Training Fund",
+    "shortTitle": "ITF employer registration",
+    "summary": "The Industrial Training Fund employer-registration route for obtaining an ITF National Number and setting up the organisation for statutory training contributions and compliance.",
+    "category": "Employment & social protection",
+    "agencySlug": "itf",
+    "feeLabel": "No separate registration fee stated",
+    "feeNote": "ITF's public employer guidance directs organisations to the official e-collection portal or an ITF Area Office for registration.",
+    "timeline": "Registration timing depends on the completeness of the employer's corporate, tax, payroll and address records.",
+    "status": "verified",
+    "officialPortal": "https://www.pay.itf.gov.ng/Identity/Account/Registeremp?returnUrl=%2F",
+    "requirements": [
+      "CAC Certificate of Incorporation or other recognised organisation-registration evidence",
+      "Tax Identification Number and Tax Clearance Certificate information used in the ITF employer account",
+      "Operational business address and the ITF Area Office responsible for the employer",
+      "Staff-strength and payroll information used to determine contribution liability",
+      "Audited accounts where ITF requests them for the organisation type or registration review"
+    ],
+    "steps": [
+      "Open the official ITF e-collection employer-registration page and search for the company using the registered company information.",
+      "Enter the TIN, Tax Clearance Certificate number, CAC RC number, responsible ITF Area Office, email, phone and account-user information.",
+      "Submit the employer account and provide the incorporation, operational-address, staff-strength, payroll and audited-account records requested by ITF.",
+      "Follow any Area Office verification instruction and keep the employer registration reference while the organisation's record is reviewed.",
+      "After successful registration, retain the ITF National Number and use the employer account for statutory contribution and compliance-certificate processes."
+    ],
+    "notes": [
+      "ITF says employers with five or more employees, or employers with fewer than five employees but annual turnover of ₦50 million or more, are liable under the contribution rules.",
+      "The ITF National Number is the unique identifier issued to a registered organisation.",
+      "Employer registration is separate from SIWES employer participation and from an individual's training-course certificate."
+    ],
+    "sources": [
+      {
+        "label": "ITF Employer Guidance and FAQs",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.itf.gov.ng/?id=15",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "ITF Employer E-collection Registration",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.pay.itf.gov.ng/Identity/Account/Registeremp?returnUrl=%2F",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "ITF employer registration",
+      "ITF National Number",
+      "register company ITF",
+      "Industrial Training Fund registration",
+      "pay ITF Nigeria"
+    ],
+    "related": [
+      "itf-compliance-certificate",
+      "bpp-contractor-registration",
+      "nsitf-employer-registration"
+    ]
+  },
+  {
+    "slug": "itf-compliance-certificate",
+    "title": "How to obtain an ITF compliance certificate",
+    "shortTitle": "ITF compliance certificate",
+    "summary": "How Nigerian employers meet Industrial Training Fund contribution requirements and obtain the compliance certificate commonly requested for Federal Government procurement.",
+    "category": "Employment & social protection",
+    "agencySlug": "itf",
+    "feeLabel": "1% statutory training contribution for liable employers",
+    "feeNote": "ITF states that liable employers contribute 1% of total annual payroll. The exact compliance amount depends on the employer's verified payroll and contribution position.",
+    "timeline": "Processing depends on employer registration, payroll verification, payment confirmation and the responsible ITF Area Office.",
+    "status": "verified",
+    "officialPortal": "https://e-certificate.itf.gov.ng/",
+    "requirements": [
+      "A registered employer with an ITF National Number or completed ITF employer-registration record",
+      "Current staff and payroll records used to calculate the organisation's statutory contribution",
+      "Evidence of payment of the applicable 1% annual training contribution and any outstanding statutory amount",
+      "Corporate and tax records requested by the responsible ITF Area Office during compliance verification"
+    ],
+    "steps": [
+      "Confirm that the organisation's ITF registration and National Number are active and that the staff and payroll records are current.",
+      "Calculate and remit the statutory training contribution through the official ITF payment route using the payroll accepted for the compliance period.",
+      "Submit the payroll, payment and supporting corporate records required by the responsible ITF Area Office for compliance verification.",
+      "Resolve any outstanding contribution or record discrepancy identified during the ITF review and keep the official payment evidence.",
+      "After approval, sign in to the ITF e-certificate service to manage the issued compliance certificate and retain its certificate reference for verification or procurement use."
+    ],
+    "notes": [
+      "ITF says the contribution rule applies to employers with five or more employees, or fewer than five employees with annual turnover of at least ₦50 million.",
+      "ITF's FAQ says failure to remit within the statutory period can attract 5% compounded interest on the unpaid amount monthly.",
+      "ITF also states that a company seeking Federal Government contracts may need an ITF compliance certificate even where its staff/turnover falls below the normal contribution threshold.",
+      "Federal procurement can separately require PenCom, NSITF, tax and BPP compliance records."
+    ],
+    "sources": [
+      {
+        "label": "ITF Employer Guidance and FAQs",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.itf.gov.ng/?id=15",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "ITF E-Certificate",
+        "agency": "Industrial Training Fund",
+        "url": "https://e-certificate.itf.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "ITF E-collection Employer Portal",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.pay.itf.gov.ng/Identity/Account/Registeremp?returnUrl=%2F",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "ITF compliance certificate",
+      "ITF 1 percent contribution",
+      "ITF certificate Nigeria",
+      "ITF compliance government contract",
+      "Industrial Training Fund certificate"
+    ],
+    "related": [
+      "itf-employer-registration",
+      "pencom-pension-clearance-certificate",
+      "nsitf-compliance-certificate",
+      "bpp-contractor-registration"
+    ]
   }
 ]
