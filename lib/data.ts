@@ -260,7 +260,7 @@ export const agencies: Agency[] = [
     "name": "National Directorate of Employment",
     "shortName": "NDE",
     "description": "Employment, vocational-skills and job-creation programme services.",
-    "website": "https://nderegistrationportal.ng"
+    "website": "https://nde.gov.ng"
   },
   {
     "slug": "ukvi",
