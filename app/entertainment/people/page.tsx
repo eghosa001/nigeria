@@ -16,7 +16,6 @@ export default function EntertainmentPeoplePage() {
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Entertainment", href: "/entertainment" }, { label: "People" }]} />
         <span className="eyebrow">Actors &amp; filmmakers</span>
         <h1>The people behind the titles.</h1>
-        <p className="page-intro">Profiles connect creators and performers to movies already present in the catalog instead of creating disconnected celebrity pages.</p>
         <div className="service-grid top-gap">
           {entertainmentPeople.map((person) => (
             <article className="service-card" key={person.slug}>
