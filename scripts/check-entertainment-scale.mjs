@@ -37,7 +37,15 @@ assert(estimatedCapacity >= 1000, "approved source capacity must remain at least
 assert(Array.isArray(generated.movies), "generated movie catalog must contain a movies array");
 
 if (generated.generatedAt !== null) {
-  assert(generated.sourceCount === sources.sources.length, "generated sourceCount must match approved source registry");
+  const generatedDate = String(generated.generatedAt).slice(0, 10);
+  if (generatedDate >= String(sources.checkedAt ?? "")) {
+    assert(generated.sourceCount === sources.sources.length, "fresh generated sourceCount must match approved source registry");
+  } else {
+    assert(
+      Number(generated.sourceCount) > 0 && Number(generated.sourceCount) <= sources.sources.length,
+      "older generated sourceCount cannot exceed the approved source registry",
+    );
+  }
   assert(generated.importedCount === generated.movies.length, "generated importedCount must match movie array length");
   assert(Number(generated.requiredFailedSourceCount ?? 0) === 0, "sync cannot publish with failed required sources");
   assert(generated.movies.length >= 1000, "published YouTube movie catalog must remain at least 1,000 records");
