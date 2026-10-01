@@ -282,10 +282,10 @@ export const releaseItems: ReleaseItem[] = [
     title: "Agbara Nla: The Return",
     kind: "cinema",
     status: "now-showing",
-    dateLabel: "Released 1 October 2026",
+    dateLabel: "Advance screenings 1 October · release 2 October 2026",
     platform: "Nigerian cinemas",
-    summary: "The latest instalment in the Mount Zion faith-based franchise, opening Nigeria's October cinema slate.",
-    officialUrl: "https://silverbirdcinemas.com/",
+    summary: "The latest instalment in the Mount Zion faith-based franchise, with advance screenings ahead of its 2 October cinema release.",
+    officialUrl: "https://silverbirdcinemas.com/cinema/galleria/",
     lastChecked: "2026-10-01",
   },
   {
@@ -296,7 +296,7 @@ export const releaseItems: ReleaseItem[] = [
     dateLabel: "In cinemas 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "A Nollywood drama listed by Silverbird among its 2 October releases.",
-    officialUrl: "https://silverbirdcinemas.com/",
+    officialUrl: "https://silverbirdcinemas.com/cinema/galleria/",
     lastChecked: "2026-10-01",
   },
   {
@@ -307,7 +307,7 @@ export const releaseItems: ReleaseItem[] = [
     dateLabel: "In cinemas 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "Ose Oyamendan's documentary on M.K.O. Abiola begins its Nigerian theatrical release on 2 October.",
-    officialUrl: "https://silverbirdcinemas.com/",
+    officialUrl: "https://silverbirdcinemas.com/cinema/galleria/",
     lastChecked: "2026-10-01",
   },
   {
