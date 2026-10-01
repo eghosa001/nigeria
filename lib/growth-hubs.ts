@@ -167,9 +167,9 @@ export const growthHubs: GrowthHub[] = [
       { query: "trademark registration Nigeria", serviceSlug: "nipo-trademark-registration" },
       { query: "register exporter NEPC", serviceSlug: "nepc-exporter-registration" },
       { query: "SMEDAN registration", serviceSlug: "smedan-msme-registration" },
-      { query: "BPP contractor registration", serviceSlug: "bpp-contractor-registration" }
+      { query: "BPP contractor registration", serviceSlug: "bpp-contractor-registration" }, { query: "SCUML registration", serviceSlug: "scuml-certificate-registration" }, { query: "pension clearance certificate", serviceSlug: "pencom-pension-clearance-certificate" }, { query: "ITF compliance certificate", serviceSlug: "itf-compliance-certificate" }
     ],
-    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "bpp-contractor-registration", "nsitf-employer-registration", "nsitf-compliance-certificate"]
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "nipo-trademark-registration", "nipo-patent-registration", "nipo-industrial-design-registration", "copyright-work-registration", "smedan-msme-registration", "nepc-exporter-registration", "nepc-exporter-certificate-renewal-verification", "scuml-certificate-registration", "scuml-certificate-verification", "bpp-contractor-registration", "pencom-pension-clearance-certificate", "itf-compliance-certificate", "nsitf-employer-registration", "nsitf-compliance-certificate"]
   },
   {
     slug: "pension-services-nigeria",
@@ -252,11 +252,11 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "NDE registration 2026", serviceSlug: "nde-rhei-registration" },
-      { query: "NSITF registration", serviceSlug: "nsitf-employer-registration" },
+      { query: "ITF employer registration", serviceSlug: "itf-employer-registration" }, { query: "ITF compliance certificate", serviceSlug: "itf-compliance-certificate" }, { query: "NSITF registration", serviceSlug: "nsitf-employer-registration" },
       { query: "workplace injury compensation Nigeria", serviceSlug: "nsitf-workplace-injury-claim" },
       { query: "NSITF compliance certificate", serviceSlug: "nsitf-compliance-certificate" }
     ],
-    serviceSlugs: ["nde-rhei-registration", "nsitf-employer-registration", "nsitf-workplace-injury-claim", "nsitf-compliance-certificate"]
+    serviceSlugs: ["nde-rhei-registration", "itf-employer-registration", "itf-compliance-certificate", "nsitf-employer-registration", "nsitf-workplace-injury-claim", "nsitf-compliance-certificate"]
   },
 ];
 
