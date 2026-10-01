@@ -126,7 +126,7 @@ async function resolveChannel(source) {
   const channelId = knownChannelId(source);
   if (channelId) {
     const details = await youtube("channels", {
-      part: "snippet,contentDetails,status,statistics",
+      part: "snippet,contentDetails,status",
       id: channelId,
     });
     const resolved = verifiedChannelRecord(source, details.items?.[0]);
@@ -207,7 +207,7 @@ async function videoDetails(ids) {
   const rows = [];
   for (let i = 0; i < ids.length; i += 50) {
     const page = await youtube("videos", {
-      part: "snippet,contentDetails,status",
+      part: "snippet,contentDetails,status,statistics",
       id: ids.slice(i, i + 50).join(","),
       maxResults: 50,
     });
