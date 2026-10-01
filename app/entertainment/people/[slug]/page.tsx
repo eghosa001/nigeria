@@ -39,10 +39,6 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
   const genres = [...new Set(credits.flatMap((title) => title.genres.filter((genre) => genre !== "Nollywood")))].slice(0, 6);
-  const platforms = [...new Set(credits.flatMap((title) => title.watchLinks.map((link) => link.platform)))];
-  const years = credits.map((title) => title.year).sort((a, b) => a - b);
-  const firstYear = years[0];
-  const lastYear = years[years.length - 1];
   const base = getSiteUrl();
   const pageUrl = base + "/entertainment/people/" + person.slug;
 
@@ -71,21 +67,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
         <h1>{person.name}</h1>
         <p className="page-intro">{person.summary}</p>
 
-        {credits.length ? (
-          <section className="admin-panel top-gap" aria-labelledby="catalog-snapshot">
-            <span className="eyebrow">Catalog snapshot</span>
-            <h2 id="catalog-snapshot">{credits.length} connected title{credits.length === 1 ? "" : "s"} in MyNigeriaGuide.</h2>
-            <p>
-              This profile is built from verified movie records in the MyNigeriaGuide catalog rather than an exhaustive career biography.
-              {firstYear && lastYear ? " The connected titles currently span " + (firstYear === lastYear ? String(firstYear) : firstYear + "–" + lastYear) + "." : ""}
-              {genres.length ? " They include " + genres.slice(0, 4).join(", ") + "." : ""}
-              {platforms.length ? " Current legal availability across these records is tracked on " + platforms.join(", ") + "." : ""}
-            </p>
-            <p>As additional verified movies are added, this page automatically expands with the person's matching cast or directing credits and links back to each title's legal watch sources.</p>
-          </section>
-        ) : null}
-
-        <div className="section-heading top-gap"><div><span className="eyebrow">Connected titles</span><h2>In the MyNigeriaGuide catalog.</h2></div></div>
+<div className="section-heading top-gap"><div><span className="eyebrow">Movies</span><h2>Titles featuring {person.name}.</h2></div></div>
         {credits.length ? (
           <div className="service-grid">
             {credits.map((title) => {
@@ -104,7 +86,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
             })}
           </div>
         ) : (
-          <div className="info-box"><strong>Profile seeded.</strong><p>More verified title connections will appear as the movie catalog expands.</p></div>
+          <div className="info-box"><p>No linked titles yet.</p></div>
         )}
       </div>
     </section>

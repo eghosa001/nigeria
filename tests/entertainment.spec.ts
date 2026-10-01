@@ -16,9 +16,9 @@ test("movie detail exposes watch and trailer links", async ({ page }) => {
   await expect(page.getByRole("link", { name: /official trailer/i }).first()).toHaveAttribute("href", /youtube\.com/);
 });
 
-test("cinema and releases guides expose official source routes", async ({ page }) => {
+test("cinema and releases guides stay focused on useful visitor information", async ({ page }) => {
   await page.goto("/entertainment/cinemas");
-  await expect(page.getByRole("heading", { name: /Find showtimes/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Find cinemas, showtimes and booking links/i })).toBeVisible();
   await expect(page.getByText("Filmhouse Cinemas")).toBeVisible();
 
   await page.goto("/entertainment/releases");
@@ -53,9 +53,9 @@ test("expanded catalog includes verified Nigerian Netflix titles", async ({ page
 });
 
 
-test("youtube movie directory is populated from approved channels", async ({ page }) => {
+test("youtube movie directory is populated and searchable by publisher", async ({ page }) => {
   await page.goto("/entertainment/youtube");
-  await expect(page.getByRole("heading", { name: /Nigerian movies from approved YouTube publishers/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Full Nigerian movies on YouTube/i })).toBeVisible();
   await expect(page.locator(".youtube-movie-card")).toHaveCount(48);
   await expect(page.locator(".movie-stat-cluster")).toHaveCount(0);
   const publisher = page.getByLabel("Publisher");
@@ -65,13 +65,15 @@ test("youtube movie directory is populated from approved channels", async ({ pag
 });
 
 
-test("youtube source page focuses on approved publishers instead of catalog size", async ({ page }) => {
-  await page.goto("/entertainment/youtube/sources");
-  await expect(page.getByRole("heading", { name: /Approved YouTube movie sources/i })).toBeVisible();
-  await expect(page.locator(".category-summary")).toHaveCount(0);
-  await expect(page.getByText("RuthKadiri247", { exact: true })).toBeVisible();
-  await expect(page.getByText("Uchenna Mbunabo TV", { exact: true })).toBeVisible();
-  await expect(page.getByText("Omoni Oboli TV", { exact: true })).toBeVisible();
+test("policy-only entertainment routes are not part of the public experience", async ({ page, request }) => {
+  await page.goto("/entertainment/youtube");
+  await expect(page.getByRole("link", { name: "Approved sources", exact: true })).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "Image policy", exact: true })).toHaveCount(0);
+
+  const sourcePage = await request.get("/entertainment/youtube/sources");
+  expect(sourcePage.status()).toBe(404);
+  const imagePolicyPage = await request.get("/entertainment/image-rights");
+  expect(imagePolicyPage.status()).toBe(404);
 });
 
 
@@ -159,10 +161,10 @@ test("duplicate approved uploads are surfaced only with identity evidence", asyn
   await expect(page.getByText("Maurice Sam TV", { exact: false })).toHaveCount(0);
 });
 
-test("official platform cards explain legal offline viewing instead of third-party downloads", async ({ page }) => {
+test("movie pages keep useful offline viewing information without policy copy", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
   await expect(page.getByText(/downloaded in the Netflix app for offline viewing/i)).toBeVisible();
-  await expect(page.getByText(/does not link to third-party movie-download mirrors/i)).toBeVisible();
+  await expect(page.getByText(/does not link to third-party movie-download mirrors/i)).toHaveCount(0);
 });
 
 
@@ -186,9 +188,9 @@ test("licensed third-party Kava titles use existing movie routes and offline gui
 });
 
 
-test("movie source cards distinguish licensed third-party streaming", async ({ page }) => {
+test("platform pages keep useful Kava and NolliStream viewing information", async ({ page }) => {
   await page.goto("/entertainment/movies/big-love");
-  await expect(page.getByText("Licensed third-party streaming", { exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Watch on Kava/ }).first()).toBeVisible();
 
   await page.goto("/entertainment/platforms");
   await expect(page.getByRole("heading", { name: "Kava", exact: true })).toBeVisible();
@@ -220,8 +222,7 @@ test("expanded people profiles cross-link the growing movie catalog", async ({ p
 
 test("people profiles self-enrich from catalog credits and expose Person schema", async ({ page }) => {
   await page.goto("/entertainment/people/toyin-abraham");
-  await expect(page.getByRole("heading", { name: /connected titles in MyNigeriaGuide/i })).toBeVisible();
-  await expect(page.getByText(/automatically expands with the person's matching cast or directing credits/i)).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Titles featuring Toyin Abraham." })).toBeVisible();
   await expect(page.getByRole("link", { name: "Ijakumo", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Ghost and the Tout", exact: true })).toBeVisible();
 
@@ -231,9 +232,9 @@ test("people profiles self-enrich from catalog credits and expose Person schema"
 
 test("people profile credits grow from cast data beyond manually seeded titles", async ({ page }) => {
   await page.goto("/entertainment/people/nancy-isime");
+  await expect(page.getByRole("heading", { name: "Titles featuring Nancy Isime." })).toBeVisible();
   await expect(page.getByRole("link", { name: "Love in a Pandemic", exact: true })).toBeVisible();
   await expect(page.getByRole("link", { name: "Teni's Big Day", exact: true })).toBeVisible();
-  await expect(page.getByText(/Current legal availability across these records is tracked on/i)).toBeVisible();
 });
 
 test("new curated YouTube movie batch exposes official full-movie sources", async ({ page }) => {

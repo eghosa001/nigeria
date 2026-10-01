@@ -16,8 +16,7 @@ export default function EntertainmentPlatformsPage() {
       <div className="container">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Entertainment", href: "/entertainment" }, { label: "Platforms" }]} />
         <span className="eyebrow">Streaming platforms</span>
-        <h1>Where Nigerian movies are available.</h1>
-        <p className="page-intro">Platform availability changes. These are routing guides, not permanent claims that every title will remain available.</p>
+        <h1>Where to watch Nigerian movies.</h1>
         <div className="service-grid top-gap">
           {platformGuides.map((platform) => {
             const titleCount = entertainmentTitles.filter((title) => title.watchLinks.some((link) => link.platform === platform.name)).length;

@@ -13,10 +13,8 @@ export default function CinemasPage() {
     <section className="section page-top">
       <div className="container">
         <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Entertainment", href: "/entertainment" }, { label: "Cinemas" }]} />
-        <span className="eyebrow">Cinema guide</span>
-        <h1>Find showtimes and book from the cinema itself.</h1>
-        <p className="page-intro">Cinema prices and schedules change too quickly to copy safely. MyNigeriaGuide keeps the stable location context and sends the final booking to the cinema's own current system.</p>
-
+        <span className="eyebrow">Cinemas</span>
+        <h1>Find cinemas, showtimes and booking links.</h1>
         <div className="service-grid top-gap">
           {cinemaGuides.map((cinema) => (
             <article className="service-card" key={cinema.slug}>

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
 
   return {
     title: "Full Nigerian Movies on YouTube — Page " + value,
-    description: "Browse page " + value + " of full Nigerian and Nollywood movies from approved producer and rightsholder YouTube channels.",
+    description: "Browse page " + value + " of full Nigerian and Nollywood movies on YouTube.",
     alternates: { canonical: "/entertainment/youtube/page/" + value },
   };
 }
@@ -47,15 +47,15 @@ export default async function YouTubeMoviesPaginationPage({ params }: { params: 
           ]} />
           <div className="movie-browse-heading">
             <div>
-              <span className="eyebrow">Free full movies</span>
-              <h1>Nigerian movies from approved YouTube publishers.</h1>
-              <p className="page-intro">Browse page {pageNumber} of the full publisher-verified movie directory.</p>
+              <span className="eyebrow">Free on YouTube</span>
+              <h1>Full Nigerian movies on YouTube.</h1>
+              <p className="page-intro">Page {pageNumber}.</p>
             </div>
           </div>
           <div className="movie-browse-tabs">
             <Link href="/entertainment/movies">All movies</Link>
-            <Link href="/entertainment/youtube/sources">Approved sources</Link>
-            <Link href="/entertainment/image-rights">Image policy</Link>
+            <Link href="/entertainment/releases">New &amp; upcoming</Link>
+            <Link href="/entertainment/cinemas">Cinemas</Link>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default async function YouTubeMoviesPaginationPage({ params }: { params: 
             <label>
               <span>Publisher</span>
               <select name="channel" defaultValue="">
-                <option value="">All approved channels</option>
+                <option value="">All publishers</option>
                 {verifiedYouTubeMovieChannels.map((source) => (
                   <option key={source.slug} value={source.name}>{source.name}</option>
                 ))}

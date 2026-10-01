@@ -97,7 +97,6 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
       { url: base + "/entertainment/people", lastModified: movieCatalogModified },
-      { url: base + "/entertainment/image-rights", lastModified: movieCatalogModified },
       ...Array.from({ length: Math.max(0, getEntertainmentCatalogPageCount() - 1) }, (_, index) => ({
         url: base + "/entertainment/movies/page/" + (index + 2),
         lastModified: movieCatalogModified,
@@ -121,7 +120,6 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
-    { url: base + "/entertainment/youtube/sources", lastModified: youtubeModified },
     ...pagination,
     ...youtubeMovieLibrary
       .filter((movie) => movie.source !== "curated")

@@ -16,7 +16,7 @@ export async function generateMetadata({
   const filtered = Boolean((params.q ?? "").trim() || (params.channel ?? "").trim() || Number(params.page ?? "1") > 1);
   return {
     title: "Full Nigerian Movies on YouTube",
-    description: "Browse full Nigerian and Nollywood movies visually from approved producer and rightsholder YouTube channels.",
+    description: "Browse full Nigerian and Nollywood movies on YouTube by title, actor and publisher.",
     alternates: { canonical: "/entertainment/youtube" },
     robots: filtered ? { index: false, follow: true } : undefined,
   };
@@ -65,17 +65,15 @@ export default async function YouTubeMoviesPage({
           ]} />
           <div className="movie-browse-heading">
             <div>
-              <span className="eyebrow">Free full movies</span>
-              <h1>Nigerian movies from approved YouTube publishers.</h1>
-              <p className="page-intro">
-                Scan real YouTube thumbnails, search titles or actors, filter by publisher and open the original video on YouTube.
-              </p>
+              <span className="eyebrow">Free on YouTube</span>
+              <h1>Full Nigerian movies on YouTube.</h1>
+              <p className="page-intro">Search by movie, actor or publisher, then open the video on YouTube.</p>
             </div>
           </div>
           <div className="movie-browse-tabs">
             <Link href="/entertainment/movies">All movies</Link>
-            <Link href="/entertainment/youtube/sources">Approved sources</Link>
-            <Link href="/entertainment/image-rights">Image policy</Link>
+            <Link href="/entertainment/releases">New &amp; upcoming</Link>
+            <Link href="/entertainment/cinemas">Cinemas</Link>
           </div>
         </div>
       </section>
@@ -90,7 +88,7 @@ export default async function YouTubeMoviesPage({
             <label>
               <span>Publisher</span>
               <select name="channel" defaultValue={channel}>
-                <option value="">All approved channels</option>
+                <option value="">All publishers</option>
                 {verifiedYouTubeMovieChannels.map((source) => (
                   <option key={source.slug} value={source.name}>{source.name}</option>
                 ))}

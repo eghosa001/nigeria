@@ -9,7 +9,7 @@ import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies — Where to Watch",
-  description: "Browse Nigerian movies visually by title, actor, genre and platform, with verified Netflix, YouTube, Prime Video and licensed Kava links.",
+  description: "Browse Nigerian movies by title, actor, genre and platform, with links to Netflix, YouTube, Prime Video and other supported platforms.",
   alternates: { canonical: "/entertainment/movies" },
 };
 
@@ -38,11 +38,9 @@ export default async function MoviesPage({
           ]} />
           <div className="movie-browse-heading">
             <div>
-              <span className="eyebrow">Nigerian movie discovery</span>
+              <span className="eyebrow">Movies</span>
               <h1>Find something worth watching.</h1>
-              <p className="page-intro">
-                Browse a visual catalog of Nigerian movies, then open the verified official platform when you are ready to watch.
-              </p>
+              <p className="page-intro">Browse Nigerian movies and open the platform when you are ready to watch.</p>
             </div>
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">
@@ -59,8 +57,7 @@ export default async function MoviesPage({
           <div className="movie-section-heading">
             <div>
               <span className="eyebrow">New &amp; trending</span>
-              <h2>Fresh Nigerian movies from approved YouTube publishers.</h2>
-              <p>Recent releases are prioritised first, with public YouTube viewing signals used when available. Every watch link stays on the original publisher platform.</p>
+              <h2>New Nigerian movies on YouTube.</h2>
             </div>
             <Link href="/entertainment/youtube">Browse all free movies →</Link>
           </div>
@@ -77,10 +74,8 @@ export default async function MoviesPage({
           <div className="movie-section-heading">
             <div>
               <span className="eyebrow">Curated across platforms</span>
-              <h2>Netflix, Prime Video and selected YouTube films.</h2>
-              <p>Search by movie, actor, genre or platform. Descriptions and featured cast stay compact so the screen remains visual.</p>
+              <h2>Movies across major platforms.</h2>
             </div>
-            <Link href="/entertainment/image-rights">How images are sourced →</Link>
           </div>
           <EntertainmentCatalog
             titles={entertainmentTitles}

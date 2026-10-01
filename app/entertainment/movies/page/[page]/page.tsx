@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
 
   return {
     title: "Nigerian Movies — Page " + page,
-    description: "Browse page " + page + " of Nigerian movies with verified official viewing links and cast details.",
+    description: "Browse page " + page + " of Nigerian movies with cast details and viewing links.",
     alternates: { canonical: "/entertainment/movies/page/" + page },
   };
 }
@@ -47,9 +47,9 @@ export default async function CuratedMoviesPaginationPage({ params }: { params: 
           ]} />
           <div className="movie-browse-heading">
             <div>
-              <span className="eyebrow">Nigerian movie discovery</span>
+              <span className="eyebrow">Movies</span>
               <h1>Browse more Nigerian movies.</h1>
-              <p className="page-intro">Page {page} of the curated catalog, with direct internal links to every movie detail page.</p>
+              <p className="page-intro">Page {page}.</p>
             </div>
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">

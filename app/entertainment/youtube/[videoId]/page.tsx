@@ -6,7 +6,6 @@ import { JsonLd } from "@/components/json-ld";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { getYouTubeMovieById, youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const revalidate = 86400;
@@ -50,7 +49,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   if (movie.source === "curated") redirect(movie.internalHref);
 
   const base = getSiteUrl();
-  const publisherSource = verifiedYouTubeMovieChannels.find((source) => source.name === movie.channelName);
   const related = youtubeMovieLibrary
     .filter((item) => item.videoId !== movie.videoId)
     .map((item) => ({
@@ -100,13 +98,13 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 referrerPolicy="no-referrer"
               />
               <figcaption>
-                <span>Official YouTube preview</span>
+                <span>YouTube</span>
                 <a href={movie.videoUrl} target="_blank" rel="noreferrer">Open source ↗</a>
               </figcaption>
             </figure>
 
             <div className="movie-detail-copy">
-              <span className="eyebrow">{movie.year} · Official full movie</span>
+              <span className="eyebrow">{movie.year} · Full movie</span>
               <h1>{movie.title}</h1>
               <div className="movie-detail-factline">
                 <span>{movie.year}</span>
@@ -123,7 +121,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 {movie.channelUrl ? <a className="button button-secondary" href={movie.channelUrl} target="_blank" rel="noreferrer">Publisher channel ↗</a> : null}
               </div>
               <small className="movie-freshness-note">
-                Published {movie.publishedAt.slice(0, 10)} by {movie.channelName}. Source checked {movie.lastChecked}. Playback stays on YouTube.
+                Published {movie.publishedAt.slice(0, 10)} · {movie.channelName}
               </small>
             </div>
           </div>
@@ -134,7 +132,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
         <div className="container">
           <a href="#overview">Overview</a>
           <a href="#cast">Cast</a>
-          <a href="#source">Source details</a>
+          <a href="#source">Watch</a>
           {related.length ? <a href="#related">Related movies</a> : null}
         </div>
       </nav>
@@ -146,12 +144,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <span className="eyebrow">About the movie</span>
               <h2>{movie.title}</h2>
               <p className="movie-long-summary">{movie.synopsis}</p>
-              <p>
-                This full Nigerian movie is published on the verified {movie.channelName} YouTube channel.
-                {movie.durationMinutes ? " The listed runtime is " + runtimeLabel(movie.durationMinutes) + "." : ""}
-                {" "}MyNigeriaGuide keeps the movie on its original publisher platform rather than mirroring the video.
-              </p>
-            </section>
+</section>
 
             <section>
               <span className="eyebrow">At a glance</span>
@@ -176,53 +169,38 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                   })}
                 </div>
               ) : (
-                <div className="info-box">
-                  <strong>Cast metadata is still being expanded.</strong>
-                  <p>The movie remains published because its title, description, source and full-movie status passed the catalog quality checks.</p>
-                </div>
+                <p>Cast details are not available yet.</p>
               )}
             </section>
 
             <section id="source">
-              <span className="eyebrow">Official source</span>
-              <h2>Publisher and playback details</h2>
+              <span className="eyebrow">Watch</span>
+              <h2>Watch on YouTube</h2>
               <div className="movie-watch-options">
                 <article>
                   <div><span>YouTube</span><strong>{movie.channelName}</strong></div>
                   <dl>
                     <div><dt>Published</dt><dd>{movie.publishedAt.slice(0, 10)}</dd></div>
                     <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
-                    <div><dt>Offline</dt><dd><a href="https://support.google.com/youtube/answer/11977233?hl=en" target="_blank" rel="noreferrer">YouTube Premium download, where eligible ↗</a></dd></div>
                     <div><dt>Checked</dt><dd>{movie.lastChecked}</dd></div>
                   </dl>
-                  <p>The original movie page remains the authority for playback availability, publisher information and any changes to the video.</p>
                   <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Open official YouTube movie ↗</a>
-                  {publisherSource ? <Link className="text-link" href={"/entertainment/youtube/sources#source-" + publisherSource.slug}>View approved publisher record →</Link> : null}
                 </article>
                 {movie.alternateSources.map((source) => (
                   <article key={source.videoId}>
                     <div><span>Alternate official source</span><strong>{source.channelName}</strong></div>
                     <dl>
                       <div><dt>Published</dt><dd>{source.publishedAt.slice(0, 10)}</dd></div>
-                      <div><dt>Offline</dt><dd><a href="https://support.google.com/youtube/answer/11977233?hl=en" target="_blank" rel="noreferrer">YouTube Premium download, where eligible ↗</a></dd></div>
                       <div><dt>Checked</dt><dd>{source.lastChecked}</dd></div>
                     </dl>
-                    <p>This is another approved publisher upload matched to the same movie title and supporting metadata.</p>
                     <a className="button" href={source.videoUrl} target="_blank" rel="noreferrer">Open alternate official source ↗</a>
                     {source.channelUrl ? <a className="text-link" href={source.channelUrl} target="_blank" rel="noreferrer">Publisher channel ↗</a> : null}
                   </article>
                 ))}
               </div>
-              <p className="movie-download-note">Offline downloads remain inside YouTube or the relevant official app. MyNigeriaGuide does not provide third-party MP4 download links.</p>
             </section>
 
-            <details className="movie-rights-details">
-              <summary>Thumbnail and rights transparency</summary>
-              <div>
-                <p>The preview above is loaded from YouTube's thumbnail endpoint and links back to the original publisher video. MyNigeriaGuide does not download, mirror or rehost the movie file.</p>
-              </div>
-            </details>
-          </article>
+</article>
 
           <aside className="movie-detail-sidebar">
             <div className="sidebar-card movie-sidebar-card">
@@ -254,7 +232,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <div>
                 <span className="eyebrow">More to watch</span>
                 <h2>Related official YouTube movies.</h2>
-                <p className="section-lead">Prioritised by shared publisher, cast and release year using metadata already in the catalog.</p>
               </div>
               <Link href="/entertainment/youtube">Browse all YouTube movies →</Link>
             </div>
