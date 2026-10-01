@@ -230,8 +230,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(108);
-  expect(publicServices).toHaveLength(107);
+  expect(services).toHaveLength(141);
+  expect(publicServices).toHaveLength(140);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
