@@ -175,7 +175,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                   </a>
                 ) : null}
               </div>
-              <small className="movie-freshness-note">Official links last checked {lastChecked}. Availability can change by region, date and subscription plan.</small>
+              <small className="movie-freshness-note">Links checked {lastChecked}.</small>
             </div>
           </div>
         </div>
@@ -198,12 +198,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <span className="eyebrow">About the movie</span>
               <h2>{title.title}: story and quick details</h2>
               <p className="movie-long-summary">{title.synopsis}</p>
-              <p>
-                This is a {title.genres.slice(0, 2).join(" / ").toLowerCase()} Nigerian film from {title.year}.
-                {title.languages.length ? " It is listed in " + title.languages.join(" and ") + "." : ""}
-                {platforms.length ? " MyNigeriaGuide currently links to official viewing through " + platforms.join(" and ") + "." : ""}
-              </p>
-            </section>
+</section>
 
             <section>
               <span className="eyebrow">At a glance</span>
@@ -260,17 +255,14 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                       <dl>
                         <div><dt>Access</dt><dd>{accessLabel(link.access)}</dd></div>
                         {link.publisher ? <div><dt>Publisher</dt><dd>{link.publisherUrl ? <a href={link.publisherUrl} target="_blank" rel="noreferrer">{link.publisher} ↗</a> : link.publisher}</dd></div> : null}
-                        {platformGuide ? <div><dt>Source type</dt><dd>{platformGuide.sourceKind === "publisher" ? "Official publisher / rights-holder" : platformGuide.sourceKind === "rental" ? "Official rental / streaming" : platformGuide.sourceKind === "catalog" ? "Reference catalog" : platformGuide.name === "Kava" || platformGuide.name === "NolliStream" ? "Licensed third-party streaming" : "Official streaming platform"}</dd></div> : null}
                         {platformGuide?.offlineLabel ? <div><dt>Offline</dt><dd>{platformGuide.offlineHelpUrl ? <a href={platformGuide.offlineHelpUrl} target="_blank" rel="noreferrer">{platformGuide.offlineLabel} ↗</a> : platformGuide.offlineLabel}</dd></div> : null}
                         <div><dt>Checked</dt><dd>{link.lastChecked}</dd></div>
                       </dl>
-                      <p>{link.note}</p>
                       <a className="button" href={link.href} target="_blank" rel="noreferrer">Open official source ↗</a>
                     </article>
                   );
                 })}
               </div>
-              <p className="movie-download-note">Download links are only shown as official platform-managed offline options or rights-holder downloads. MyNigeriaGuide does not link to third-party movie-download mirrors.</p>
             </section>
 
             {title.trailer ? (
@@ -292,18 +284,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </section>
             ) : null}
 
-            <details className="movie-rights-details">
-              <summary>Artwork and availability transparency</summary>
-              <div>
-                <p>Streaming catalogs can change, so the official platform page is the final authority for current access.</p>
-                {title.artwork ? (
-                  <p>Promotional artwork is shown from <a href={title.artwork.sourceUrl} target="_blank" rel="noreferrer">{title.artwork.credit}</a> under the recorded reuse basis. Checked {title.artwork.lastChecked}.</p>
-                ) : (
-                  <p>When reusable promotional artwork is not recorded, MyNigeriaGuide uses an original generated visual based only on the movie title, year and genre. Official YouTube video thumbnails may be shown unmodified when a verified video source is available.</p>
-                )}
-              </div>
-            </details>
-          </article>
+</article>
 
           <aside className="movie-detail-sidebar">
             <div className="sidebar-card movie-sidebar-card">
