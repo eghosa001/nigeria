@@ -137,6 +137,41 @@ export const agencies: Agency[] = [
     "website": "https://revenue.lagosstate.gov.ng"
   },
   {
+    "slug": "lasrra",
+    "name": "Lagos State Residents Registration Agency",
+    "shortName": "LASRRA",
+    "description": "Lagos resident registration, biometric capture and LAG-ID services.",
+    "website": "https://www.lagosresidents.gov.ng"
+  },
+  {
+    "slug": "lagos-luc",
+    "name": "Lagos State Land Use Charge",
+    "shortName": "Lagos LUC",
+    "description": "Lagos property Land Use Charge billing, payment and account services.",
+    "website": "https://luc.lagosstate.gov.ng"
+  },
+  {
+    "slug": "lasbca",
+    "name": "Lagos State Building Control Agency",
+    "shortName": "LASBCA",
+    "description": "Lagos building control, inspections and completion/fitness certification.",
+    "website": "https://lasbca.lagosstate.gov.ng"
+  },
+  {
+    "slug": "ogirs",
+    "name": "Ogun State Internal Revenue Service",
+    "shortName": "OGIRS",
+    "description": "Ogun taxpayer registration, eTCC and state revenue services.",
+    "website": "https://www.ogunstaterevenue.com"
+  },
+  {
+    "slug": "rivers-birs",
+    "name": "Rivers State Internal Revenue Service",
+    "shortName": "Rivers IRS",
+    "description": "RIVTIN, RIVTAMIS, tax clearance and Rivers State revenue services.",
+    "website": "https://riversbirs.gov.ng"
+  },
+  {
     "slug": "ncc",
     "name": "Nigerian Communications Commission",
     "shortName": "NCC",

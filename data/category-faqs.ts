@@ -282,10 +282,46 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       relatedSlugs: ["fct-file-individual-tax-return"]
     },
     {
-      question: "How do I verify an FCT tax clearance certificate?",
-      answer: "Use the official FCT-IRS verification route rather than relying on a screenshot or copy supplied by a third party. Compare the verification result with the certificate details.",
-      source: { label: "FCT-IRS", url: "https://fctirs.gov.ng/" },
-      relatedSlugs: ["fct-verify-tax-clearance"]
+      question: "How do I apply for an FCT Tax Clearance Certificate?",
+      answer: "FCT-IRS requires a valid FCT tax record plus the applicable Form A, TCC application form, identity and prior income/tax evidence. Its FAQ states that issuance should take no more than 14 days when the application is complete and the tax position is in order.",
+      source: { label: "FCT-IRS TCC checklist", url: "https://fctirs.gov.ng/tax-clearance-certificate-tcc-checklist/" },
+      relatedSlugs: ["fct-tax-clearance-application", "fct-verify-tax-clearance"]
+    },
+    {
+      question: "Who should register with LASRRA?",
+      answer: "LASRRA states that anyone who resides in Lagos State and intends to remain for at least three months should be registered, irrespective of age, gender, ethnicity, religion or nationality.",
+      source: { label: "LASRRA mandate", url: "https://www.lagosresidents.gov.ng/our-mandate/" },
+      relatedSlugs: ["lagos-lasrra-registration"]
+    },
+    {
+      question: "How do I pay Lagos Land Use Charge?",
+      answer: "Retrieve the property bill through the official Lagos Land Use Charge service, confirm the property and amount, then use one of the state-approved payment channels. Keep the payment reference and check the portal afterward for the updated status.",
+      source: { label: "Lagos Land Use Charge", url: "https://luc.lagosstate.gov.ng/" },
+      relatedSlugs: ["lagos-land-use-charge"]
+    },
+    {
+      question: "Can I verify a Lagos Tax Clearance Certificate online?",
+      answer: "Yes. LIRS eTax provides a Tax Clearance Certificate verification field. Enter the certificate number and compare the returned record with the document you were given.",
+      source: { label: "LIRS eTax", url: "https://etax.lirs.net/" },
+      relatedSlugs: ["lagos-tax-clearance-verification", "lagos-payer-id"]
+    },
+    {
+      question: "How long does Ogun State say an eTCC takes?",
+      answer: "Ogun State IRS says an eTCC can be obtained within about 72 hours after payment and proper filing of the required documents. The certificate-processing service itself is listed as free.",
+      source: { label: "Ogun IRS eTCC FAQ", url: "https://www.ogunstaterevenue.com/en/etcc" },
+      relatedSlugs: ["ogun-tax-clearance-certificate", "ogun-taxpayer-registration"]
+    },
+    {
+      question: "How do I get a Rivers State RIVTIN?",
+      answer: "Rivers State IRS says to search for your existing name or company record in RIVTAMIS, register or update the information, confirm and activate the account, then obtain the RIVTIN. It states that account activation takes about 24 hours.",
+      source: { label: "Rivers State IRS / RIVTAMIS", url: "https://riversbirs.gov.ng/" },
+      relatedSlugs: ["rivers-rivtin-registration"]
+    },
+    {
+      question: "Can I apply for a Rivers State TCC online?",
+      answer: "Yes. RIVTAMIS supports individual Direct Assessment/TCC requests and corporate TCC requests, with tracking and public TCC verification. The exact flow depends on whether the taxpayer is applying personally or through an employer.",
+      source: { label: "Rivers State IRS / RIVTAMIS", url: "https://riversbirs.gov.ng/" },
+      relatedSlugs: ["rivers-tax-clearance-certificate", "rivers-rivtin-registration"]
     },
     {
       question: "What is an Anambra ASIN?",
@@ -294,10 +330,10 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       relatedSlugs: ["anambra-asin-registration"]
     },
     {
-      question: "Are Edo Tax ID, Anambra ASIN and Lagos Payer ID the same thing?",
-      answer: "No. They belong to different state revenue systems. Use the guide for the state whose service or tax obligation you are dealing with instead of trying to reuse another state's identifier.",
+      question: "Are Edo Tax ID, Anambra ASIN, Lagos Payer ID and Rivers RIVTIN the same thing?",
+      answer: "No. They belong to different state revenue systems. Use the identifier and service guide for the state whose tax or government process you are dealing with.",
       source: { label: "Lagos State Revenue Portal", url: "https://revenue.lagosstate.gov.ng/Login" },
-      relatedSlugs: ["edo-tax-id-access", "anambra-asin-registration", "lagos-payer-id"]
+      relatedSlugs: ["edo-tax-id-access", "anambra-asin-registration", "lagos-payer-id", "rivers-rivtin-registration"]
     }
   ],
   "Banking": [

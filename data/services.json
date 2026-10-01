@@ -7785,12 +7785,6 @@
         "agency": "Bureau of Public Procurement",
         "url": "https://www.bpp.gov.ng/contractor",
         "lastChecked": "2026-10-01"
-      },
-      {
-        "label": "BPP Contractor Database FAQ",
-        "agency": "Bureau of Public Procurement",
-        "url": "https://www.bpp.gov.ng/wp-content/uploads/2019/01/Public-Procurement-Journal_p51-60.pdf",
-        "lastChecked": "2026-10-01"
       }
     ],
     "searchTerms": [
@@ -9221,6 +9215,536 @@
       "pencom-pension-clearance-certificate",
       "nsitf-compliance-certificate",
       "bpp-contractor-registration"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "lagos-lasrra-registration",
+    "title": "How to register for a Lagos State Resident ID with LASRRA",
+    "shortTitle": "LASRRA registration",
+    "summary": "The official Lagos State Residents Registration Agency process for pre-registering, completing biometric capture and obtaining a LAG-ID as a Lagos resident.",
+    "category": "State services",
+    "agencySlug": "lasrra",
+    "feeLabel": "Free registration",
+    "feeNote": "LASRRA's resident-registration service is a government identity-registration process. Use the official Lagos resident portal and do not pay an unofficial agent to create a record.",
+    "timeline": "Online pre-registration can be started immediately; final completion depends on biometric capture and LASRRA processing.",
+    "status": "verified",
+    "officialPortal": "https://registration.lagosresidents.gov.ng/register/",
+    "requirements": [
+      "A person who lives in Lagos State and intends to remain in the state for at least three months",
+      "Personal identity and contact information used to create the resident record",
+      "Biometric capture for adults and children aged 16 or older",
+      "For a child below 16, the birth certificate plus the photographs and guardian information requested by LASRRA"
+    ],
+    "steps": [
+      "Open the official LASRRA registration portal and start a new resident registration or retrieve a previously saved application.",
+      "Enter the resident's identity, address and contact information carefully so the record matches the documents that will be presented later.",
+      "Submit the online pre-registration and keep the reference or registration details needed to continue the process.",
+      "Attend the LASRRA capture point or follow the appointment instruction for biometric capture if the registrant is aged 16 or above.",
+      "For a child below 16, present the birth certificate, two recent passport photographs and the parent or guardian information LASRRA uses for child registration.",
+      "Use LASRRA's record or card-status services to follow the registration until the LAG-ID is ready."
+    ],
+    "notes": [
+      "LASRRA states that registration applies to Lagos residents irrespective of age, gender, ethnicity, religion or nationality when they reside in the state and intend to remain for three months or more.",
+      "Children below 16 are registered without biometric capture until they reach the age threshold stated by LASRRA.",
+      "A Lagos resident ID is a state resident record and does not replace NIN, passport or another federal identity document."
+    ],
+    "sources": [
+      {
+        "label": "LASRRA Mandate and Registration Rules",
+        "agency": "Lagos State Residents Registration Agency",
+        "url": "https://www.lagosresidents.gov.ng/our-mandate/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "LASRRA Online Registration",
+        "agency": "Lagos State Residents Registration Agency",
+        "url": "https://registration.lagosresidents.gov.ng/register/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Lagos State Citizens Gate — LASRRA",
+        "agency": "Lagos State Government",
+        "url": "https://citizensgate.lagosstate.gov.ng/index.php",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "LASRRA registration",
+      "Lagos resident ID",
+      "LAG ID registration",
+      "Lagos State resident card",
+      "register LASRRA online"
+    ],
+    "related": [
+      "lagos-payer-id",
+      "nin-enrolment"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "lagos-land-use-charge",
+    "title": "How to check and pay Lagos State Land Use Charge",
+    "shortTitle": "Lagos Land Use Charge",
+    "summary": "How Lagos property owners retrieve a Land Use Charge bill, check pending charges, make an official payment and keep evidence of the transaction.",
+    "category": "State services",
+    "agencySlug": "lagos-luc",
+    "feeLabel": "Amount depends on the property bill",
+    "feeNote": "The payable amount is the Land Use Charge assessed for the specific property. Retrieve the current official bill rather than relying on an old rate or third-party estimate.",
+    "timeline": "Bill retrieval and online payment are immediate when the property/payment record is available; reconciliation can take longer if the record has an error.",
+    "status": "verified",
+    "officialPortal": "https://luc.lagosstate.gov.ng/",
+    "requirements": [
+      "The property's Land Use Charge bill or the Bank Payment Code shown on the official demand notice",
+      "A phone number and property details sufficient to retrieve or reconcile the bill",
+      "An approved payment method offered through the Lagos Land Use Charge portal or other official channel"
+    ],
+    "steps": [
+      "Open the Lagos State Land Use Charge portal and retrieve the current bill or payment record for the property.",
+      "Check the property details, assessment period and amount due before making a payment.",
+      "Choose an official payment channel offered by Lagos State, such as the portal or another channel listed on the Land Use Charge service.",
+      "Complete the payment and retain the official transaction reference or receipt.",
+      "Return to the portal to confirm payment status and check whether any pending bill remains on the property record.",
+      "If the property record, ownership information or charge appears wrong, contact the Land Use Charge service using its official contact route rather than paying an unofficial collector."
+    ],
+    "notes": [
+      "Lagos State describes Land Use Charge as a consolidation of property and land-based rates under the state's Land Use Charge framework.",
+      "The property owner is primarily responsible for the charge, although the law can allow an occupier to pay and seek reimbursement in the circumstances described by the state.",
+      "Exemptions and discounts can depend on current law, property status and the payment period, so use the live bill and current state guidance."
+    ],
+    "sources": [
+      {
+        "label": "Lagos State Land Use Charge",
+        "agency": "Lagos State Ministry of Finance",
+        "url": "https://luc.lagosstate.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Land Use Charge Bill Payment",
+        "agency": "Lagos State Ministry of Finance",
+        "url": "https://luc.lagosstate.gov.ng/bill-payment",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "Lagos Land Use Charge",
+      "pay land use charge Lagos",
+      "check LUC Lagos",
+      "property tax Lagos",
+      "Lagos land use charge bill"
+    ],
+    "related": [
+      "lagos-lasrra-registration",
+      "lagos-payer-id",
+      "lagos-tax-clearance-verification"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "lagos-tax-clearance-verification",
+    "title": "How to verify a Lagos Tax Clearance Certificate online",
+    "shortTitle": "Verify Lagos TCC",
+    "summary": "Use the official Lagos LIRS eTax service to verify a Tax Clearance Certificate instead of relying only on a PDF, screenshot or printed copy.",
+    "category": "State services",
+    "agencySlug": "lagos-revenue",
+    "feeLabel": "No verification fee stated",
+    "feeNote": "The eTax TCC verification field is available on the official LIRS platform.",
+    "timeline": "Online lookup is immediate when the certificate record is available.",
+    "status": "verified",
+    "officialPortal": "https://etax.lirs.net/",
+    "requirements": [
+      "The Lagos Tax Clearance Certificate number in the format recognised by LIRS eTax",
+      "The taxpayer name or other certificate details needed to compare the returned record with the document being checked"
+    ],
+    "steps": [
+      "Open the official Lagos LIRS eTax portal and locate the Tax Clearance Certificate verification section.",
+      "Enter the certificate number exactly as shown on the Lagos TCC and submit the verification request.",
+      "Compare the returned taxpayer and certificate information with the document presented to you.",
+      "If the certificate cannot be verified or the details conflict, treat the document as unresolved and contact LIRS through an official support channel.",
+      "For your own tax account, sign in to eTax to review filing, payment and certificate information linked to your Payer ID."
+    ],
+    "notes": [
+      "LIRS eTax also supports taxpayer registration, Payer ID generation, tax payments, return filing and access to tax certificates.",
+      "A printed certificate can be copied or altered, so verification is preferable when a TCC is being used for a transaction.",
+      "A Lagos TCC is part of the Lagos tax system and should not be confused with an FCT or another state's tax clearance certificate."
+    ],
+    "sources": [
+      {
+        "label": "LIRS eTax",
+        "agency": "Lagos State Internal Revenue Service",
+        "url": "https://etax.lirs.net/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "verify Lagos tax clearance certificate",
+      "LIRS TCC verification",
+      "Lagos TCC check",
+      "etax Lagos certificate"
+    ],
+    "related": [
+      "lagos-payer-id",
+      "lagos-land-use-charge",
+      "fct-verify-tax-clearance"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "lagos-building-completion-certificate",
+    "title": "How to get a Lagos building Completion and Fitness for Habitation certificate",
+    "shortTitle": "Lagos building completion",
+    "summary": "The LASBCA process after construction is finished, including final inspection and the Certificate of Completion and Fitness for Habitation or Use.",
+    "category": "State services",
+    "agencySlug": "lasbca",
+    "feeLabel": "LASBCA charges may apply",
+    "feeNote": "LASBCA states that applicable service charges are paid to Lagos State Government accounts. Confirm the current amount for the project before payment.",
+    "timeline": "Timing depends on final inspection, project compliance and whether LASBCA requires corrective work or additional documents.",
+    "status": "verified",
+    "officialPortal": "https://lasbca.lagosstate.gov.ng/service/inspectorate-and-quality-control/",
+    "requirements": [
+      "The approved development permit and approved drawings for the completed project",
+      "An application or written notice that construction has been completed and final inspection is requested",
+      "Construction and professional records requested by LASBCA, including project and contractor information",
+      "Evidence that the completed building complies with the approved permit, building regulations, safety and fitness requirements"
+    ],
+    "steps": [
+      "Contact LASBCA when the project is complete and request the final inspection required for the Completion and Fitness certificate.",
+      "Prepare the approved development permit, approved drawings and the project documentation LASBCA uses to compare the finished building with the authorised design.",
+      "Make the building available for final inspection by the LASBCA technical team and relevant construction professionals.",
+      "Correct any non-compliance or outstanding safety/documentation issue identified during the inspection.",
+      "After LASBCA confirms satisfactory completion, collect or retain the Certificate of Completion and Fitness for Habitation or Use issued for the building."
+    ],
+    "notes": [
+      "LASBCA says owners and developers should contact Building Control before construction and at relevant construction stages, not only after the building is finished.",
+      "The certificate confirms that the completed work has satisfied the building-control process; it is different from the original planning/development permit.",
+      "LASBCA may withhold or withdraw certification where the building does not remain compliant or safe."
+    ],
+    "sources": [
+      {
+        "label": "LASBCA Inspectorate and Quality Control",
+        "agency": "Lagos State Building Control Agency",
+        "url": "https://lasbca.lagosstate.gov.ng/service/inspectorate-and-quality-control/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "LASBCA FAQ",
+        "agency": "Lagos State Building Control Agency",
+        "url": "https://lasbca.lagosstate.gov.ng/faq/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "Lagos completion certificate building",
+      "LASBCA certificate of fitness",
+      "fitness for habitation Lagos",
+      "building completion certificate Lagos"
+    ],
+    "related": [
+      "lagos-land-use-charge"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "fct-tax-clearance-application",
+    "title": "How to apply for an FCT Tax Clearance Certificate",
+    "shortTitle": "Apply for FCT TCC",
+    "summary": "The FCT-IRS requirements and application process for an individual Tax Clearance Certificate, including Form A, prior income evidence and the expected service window.",
+    "category": "State services",
+    "agencySlug": "fctirs",
+    "feeLabel": "Free FCT-IRS service",
+    "feeNote": "FCT-IRS states that its services are rendered free of charge and that processing fees or gratification should not be paid.",
+    "timeline": "FCT-IRS states that a TCC should be issued within a maximum of 14 days when the application and tax position are in order.",
+    "status": "verified",
+    "officialPortal": "https://fctirs.gov.ng/tax-clearance-certificate-tcc-checklist/",
+    "requirements": [
+      "An FCT-IRS Tax ID/TIN domiciled with the relevant FCT tax office",
+      "A completed Personal Income Tax Annual Returns Form (Form A) and the individual TCC application form",
+      "Income evidence for the preceding three years, such as payslips or a bank statement where the checklist permits it",
+      "For employees, employer PAYE annual-declaration/remittance evidence and allowable-deduction evidence where applicable",
+      "A valid means of identification and the previous TCC when applying for renewal"
+    ],
+    "steps": [
+      "Check the current FCT-IRS TCC checklist and make sure the taxpayer's FCT tax record and prior returns are up to date.",
+      "Complete Form A and the individual Tax Clearance Certificate application form using the taxpayer's actual income information for the required years.",
+      "Prepare the identification, income, employer-remittance and deduction evidence that applies to the taxpayer's employment or business status.",
+      "Submit the application through the relevant FCT-IRS tax office or the current service route identified by FCT-IRS and keep the acknowledgement.",
+      "Respond to any assessment or document query raised by FCT-IRS during review.",
+      "After issuance, retain the TCC and use the FCT verification guide when a third party needs to confirm its authenticity."
+    ],
+    "notes": [
+      "FCT-IRS says a TCC is generally valid until 31 December of the issuing year, although a restricted certificate can have a shorter period.",
+      "The application can differ between an employee and a self-employed taxpayer because their income and remittance evidence are different.",
+      "FCT-IRS warns that offering or accepting a processing fee or gratification for its services is not allowed."
+    ],
+    "sources": [
+      {
+        "label": "FCT-IRS TCC Checklist",
+        "agency": "Federal Capital Territory Internal Revenue Service",
+        "url": "https://fctirs.gov.ng/tax-clearance-certificate-tcc-checklist/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "FCT-IRS FAQ",
+        "agency": "Federal Capital Territory Internal Revenue Service",
+        "url": "https://fctirs.gov.ng/faq/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "FCT-IRS Downloads",
+        "agency": "Federal Capital Territory Internal Revenue Service",
+        "url": "https://fctirs.gov.ng/downloads/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "FCT tax clearance certificate",
+      "apply FCT TCC",
+      "Abuja tax clearance",
+      "FCT IRS TCC requirements"
+    ],
+    "related": [
+      "fct-verify-tax-clearance",
+      "fct-file-individual-tax-return"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "ogun-taxpayer-registration",
+    "title": "How to register as a taxpayer with Ogun State IRS",
+    "shortTitle": "Ogun taxpayer registration",
+    "summary": "How an individual or organisation enters the Ogun State Internal Revenue Service taxpayer system and obtains access to the state's tax self-service tools.",
+    "category": "State services",
+    "agencySlug": "ogirs",
+    "feeLabel": "No registration fee stated",
+    "feeNote": "Use the official Ogun State IRS taxpayer registration route and approved revenue channels.",
+    "timeline": "Account access depends on registration details being accepted by Ogun State IRS.",
+    "status": "verified",
+    "officialPortal": "https://www.ogunstaterevenue.com/",
+    "requirements": [
+      "Individual or organisation identity information appropriate to the taxpayer type",
+      "Contact and address information used by Ogun State IRS to create the taxpayer record",
+      "For organisations, legal registration details and employer/tax-agent information where applicable"
+    ],
+    "steps": [
+      "Open the official Ogun State Internal Revenue Service website and choose TaxPayer Registration for the appropriate taxpayer type.",
+      "Enter the taxpayer's legal name, taxpayer type, residential or business address, phone number and email shown on the Ogun State registration form.",
+      "Submit the registration and keep the S-TIN or taxpayer identifier and access information issued for the account.",
+      "Use the taxpayer account to review payments, returns and other Ogun State tax services.",
+      "Keep the taxpayer record current when the address, employer, organisation or contact information changes."
+    ],
+    "notes": [
+      "Ogun State IRS provides separate taxpayer and tax-agent/employer registration functions.",
+      "The taxpayer identifier is used across the state's receipt, payment and tax-clearance services.",
+      "Do not send tax payments to an account provided only by an unofficial agent; verify current payment routes through Ogun State IRS."
+    ],
+    "sources": [
+      {
+        "label": "Ogun State Internal Revenue Service",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://www.ogunstaterevenue.com/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Ogun IRS Taxpayer Access",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://www.ogunstaterevenue.com/OgunRevenue/Login.aspx",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "Ogun taxpayer registration",
+      "Ogun S-TIN",
+      "register Ogun IRS",
+      "Ogun State tax ID"
+    ],
+    "related": [
+      "ogun-tax-clearance-certificate",
+      "fct-tax-clearance-application"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "ogun-tax-clearance-certificate",
+    "title": "How to obtain and verify an Ogun State eTCC",
+    "shortTitle": "Ogun eTCC",
+    "summary": "The Ogun State IRS process for a Tax Clearance Certificate, including the preceding tax record, employee/self-employed evidence and online certificate verification.",
+    "category": "State services",
+    "agencySlug": "ogirs",
+    "feeLabel": "Free TCC processing",
+    "feeNote": "Ogun State IRS states that there is no processing fee for obtaining an eTCC. Tax liabilities themselves must still be settled.",
+    "timeline": "Ogun State IRS says an eTCC can be obtained within about 72 hours after payment and proper filing of all required documents.",
+    "status": "verified",
+    "officialPortal": "https://www.ogunstaterevenue.com/en/etcc",
+    "requirements": [
+      "An Ogun State taxpayer/S-TIN record",
+      "Evidence that the relevant personal income tax obligations for the preceding years have been paid or properly assessed",
+      "For a self-employed applicant, receipts and income/tax records for the three years preceding the application year",
+      "For an employee, employer income and tax-remittance evidence for the preceding three years",
+      "Any additional document requested by the Ogun State assessment authority"
+    ],
+    "steps": [
+      "Check the taxpayer's Ogun State registration and payment history and resolve missing tax payments before requesting the certificate.",
+      "If self-employed, submit the eTCC request to the relevant assessment authority with the preceding three-year payment evidence.",
+      "If employed, have the employer provide the income and tax-remittance information needed for the assessment authority to confirm the preceding years.",
+      "Wait for the Ogun State assessment authority to review the records and notify you when the eTCC is ready.",
+      "Use the official Ogun State TCC verification page with the TCC number and S-TIN when the certificate needs to be independently checked."
+    ],
+    "notes": [
+      "Ogun State IRS says the eTCC covers the three years preceding the year of application and is renewed annually.",
+      "The published FAQ says eTCC processing itself is free; that does not remove any unpaid tax liability that must be settled.",
+      "Use the current state portal when verifying a certificate rather than relying only on the printed copy."
+    ],
+    "sources": [
+      {
+        "label": "Ogun State IRS eTCC FAQ",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://www.ogunstaterevenue.com/en/etcc",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Ogun State TCC Verification",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://www.ogunstaterevenue.com/en/ConfirmTCC",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "Ogun tax clearance certificate",
+      "Ogun eTCC",
+      "verify Ogun TCC",
+      "Ogun State tax clearance"
+    ],
+    "related": [
+      "ogun-taxpayer-registration",
+      "fct-tax-clearance-application",
+      "lagos-tax-clearance-verification"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "rivers-rivtin-registration",
+    "title": "How to get a Rivers State RIVTIN",
+    "shortTitle": "Rivers RIVTIN",
+    "summary": "The Rivers State Internal Revenue Service registration process for individuals and organisations to obtain and activate a RIVTIN on RIVTAMIS.",
+    "category": "State services",
+    "agencySlug": "rivers-birs",
+    "feeLabel": "No taxpayer-registration fee stated",
+    "feeNote": "Use the official Rivers RIVTAMIS platform for account registration and RIVTIN activation.",
+    "timeline": "Rivers State IRS says account activation takes about 24 hours after registration.",
+    "status": "verified",
+    "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html?url=individual",
+    "requirements": [
+      "Individual or corporate identity information used to search for an existing taxpayer record before creating a new one",
+      "A valid email address and phone number for account access and activation",
+      "For organisations, the registered organisation name and corporate information required by RIVTAMIS"
+    ],
+    "steps": [
+      "Open the official RIVTAMIS platform and search for your name or company before creating a duplicate taxpayer record.",
+      "Choose the individual or corporate registration route and complete or update the taxpayer information shown by the portal.",
+      "Submit the registration and confirm or activate the account using the contact information provided.",
+      "Allow the stated activation period and sign in with the email, phone number or RIVTIN/TAXID once the account is active.",
+      "Retrieve and retain the RIVTIN for later direct assessment, tax payments, annual returns and TCC applications."
+    ],
+    "notes": [
+      "Rivers State IRS says users should search first because an individual or organisation may already exist in the system.",
+      "RIVTAMIS also supports tax calculation, payments, annual returns, TCC requests and TCC verification.",
+      "An informal-sector group can use the organised-group route where the portal makes that category available.",
+      "If you are registering an organisation rather than an individual, use the same RIVTAMIS sign-up flow and select the Corporate account type described by Rivers State IRS."
+    ],
+    "sources": [
+      {
+        "label": "RIVTAMIS Registration and RIVTIN Portal",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://rivtamis.riversbirs.gov.ng/home.html",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Rivers State IRS / RIVTAMIS Guidance",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://riversbirs.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "RIVTAMIS Portal",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://rivtamis.riversbirs.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "RIVTIN registration",
+      "Rivers tax ID",
+      "Rivers State taxpayer registration",
+      "RIVTAMIS register"
+    ],
+    "related": [
+      "rivers-tax-clearance-certificate",
+      "ogun-taxpayer-registration"
+    ],
+    "lastVerified": "2026-10-01"
+  },
+  {
+    "slug": "rivers-tax-clearance-certificate",
+    "title": "How to apply for and verify a Rivers State Tax Clearance Certificate",
+    "shortTitle": "Rivers TCC",
+    "summary": "How individuals and organisations use RIVTAMIS for direct assessment or corporate TCC requests, track the application and verify a Rivers State certificate.",
+    "category": "State services",
+    "agencySlug": "rivers-birs",
+    "feeLabel": "Tax liability depends on the assessment",
+    "feeNote": "Rivers State IRS does not publish one universal TCC amount; the taxpayer must settle the assessment and use the official RIVTAMIS payment process.",
+    "timeline": "Processing depends on registration, assessment, payment and review; RIVTAMIS provides request tracking after submission.",
+    "status": "verified",
+    "officialPortal": "https://rivtamis.riversbirs.gov.ng/home.html?url=individual",
+    "requirements": [
+      "An active RIVTIN linked to the taxpayer's RIVTAMIS account",
+      "A complete taxpayer or company profile with a valid email address and phone number",
+      "For direct assessment, the relevant invoice/payment information and supporting PDF documents",
+      "For a corporate request, approved annual returns and an updated employee list before generating staff TCCs"
+    ],
+    "steps": [
+      "Sign in to RIVTAMIS with the taxpayer's email, phone number or RIVTIN/TAXID and confirm that the profile is complete.",
+      "For an individual using Direct Assessment, open TCC > Direct Assessment, select the tax year and tax station, and enter the required payment or assessment information.",
+      "Upload the supporting documents and payment receipt in the format accepted by RIVTAMIS, then submit the TCC request.",
+      "For a corporate TCC request, confirm that annual returns are approved, open TCC Requests, select the year and employee type, and generate the certificate request for the relevant staff.",
+      "Track the request from the TCC history or tracking area until the certificate is issued.",
+      "When checking an existing certificate, use RIVTAMIS TCC Verification and compare the result with the certificate presented."
+    ],
+    "notes": [
+      "Rivers State IRS says Direct Assessment is the route used by an individual taxpayer to declare income and process personal tax obligations directly.",
+      "Corporate TCC requests depend on the organisation's annual returns, profile and employee records being complete.",
+      "RIVTAMIS provides a separate public verification function, so a third party can check a TCC instead of relying only on a paper copy.",
+      "For a company or PAYE employer, sign in with the corporate RIVTAMIS account and use the TCC Requests menu after the organisation's annual returns and employee records are complete."
+    ],
+    "sources": [
+      {
+        "label": "RIVTAMIS Tax and TCC Service Portal",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://rivtamis.riversbirs.gov.ng/home.html",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Rivers State IRS / RIVTAMIS Guidance",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://riversbirs.gov.ng/",
+        "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "RIVTAMIS Portal",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://rivtamis.riversbirs.gov.ng/",
+        "lastChecked": "2026-10-01"
+      }
+    ],
+    "searchTerms": [
+      "Rivers tax clearance certificate",
+      "RIVTAMIS TCC",
+      "Rivers TCC verification",
+      "Rivers direct assessment"
+    ],
+    "related": [
+      "rivers-rivtin-registration",
+      "ogun-tax-clearance-certificate",
+      "fct-tax-clearance-application"
     ],
     "lastVerified": "2026-10-01"
   }
