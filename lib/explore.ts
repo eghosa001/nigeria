@@ -558,6 +558,143 @@ export const exploreGuides: ExploreGuide[] = [
   },
 
 
+
+  {
+    slug: "gashaka-gumti-national-park",
+    title: "Gashaka-Gumti National Park Guide",
+    shortTitle: "Gashaka-Gumti National Park",
+    kind: "destination",
+    region: "Taraba & Adamawa States",
+    summary: "Plan a serious nature trip to Nigeria's largest national park with realistic road, guide, weather and park-access checks before departure.",
+    intro: [
+      "Gashaka-Gumti is Nigeria's largest national park. Nigeria Park Service lists it across Taraba and Adamawa states at 6,731 square kilometres, so it should be treated as a destination trip rather than a casual roadside stop.",
+      "Remote nature travel changes quickly with weather, road and local access conditions. Confirm the exact park entry point, guide arrangements and current visitor advice with Nigeria Park Service before travelling.",
+    ],
+    bestFor: ["Wildlife", "Hiking", "Biodiversity", "Multi-day nature trips"],
+    highlights: [
+      { name: "Large protected landscape", detail: "At 6,731 sq km in the Nigeria Park Service overview, the park covers a much larger area than a conventional city attraction and needs realistic travel time." },
+      { name: "Biodiversity", detail: "The park is promoted nationally for its rich fauna, flora and nature experiences; use park guidance rather than attempting unfamiliar routes independently." },
+      { name: "Highland scenery", detail: "Its position around the Taraba-Adamawa highland zone makes landscape and nature observation central to the visit." },
+      { name: "Conservation-focused visit", detail: "Treat wildlife encounters as observation, follow ranger instructions and avoid disturbing animals or habitats." },
+    ],
+    planning: [
+      { label: "Contact the park first", detail: "Confirm the current visitor entrance, opening arrangements, guide/ranger requirements and any charges before starting the road journey." },
+      { label: "Plan transport end-to-end", detail: "Do not assume ordinary ride-hailing or same-day return transport will be practical for a remote national-park trip." },
+      { label: "Check weather and roads", detail: "Rain can materially change road and trail conditions; build daylight and contingency time into the trip." },
+      { label: "Check current local advice", detail: "For any remote trip, confirm current access and security conditions with the park or relevant authorities shortly before departure." },
+    ],
+    source: { label: "Nigeria Park Service — National Parks Overview", href: "https://nigeriaparkservice.gov.ng/overview/" },
+    lastReviewed: "2026-10-02",
+  },
+  {
+    slug: "sukur-cultural-landscape",
+    title: "Sukur Cultural Landscape Guide",
+    shortTitle: "Sukur Cultural Landscape",
+    kind: "destination",
+    region: "Adamawa State",
+    summary: "Visit Nigeria's UNESCO-listed Sukur Cultural Landscape with context on its hilltop settlement, terraces, stone architecture and living heritage.",
+    intro: [
+      "Sukur is one of Nigeria's UNESCO World Heritage properties. UNESCO describes a living cultural landscape shaped by the Hidi's Palace, terraced fields, stone-paved walkways, sacred features and the remains of a historic iron industry.",
+      "This is a living community and heritage landscape, not an amusement attraction. Plan around local guidance, cultural respect, walking conditions and current access information.",
+    ],
+    bestFor: ["World Heritage", "History", "Cultural landscapes", "Walking"],
+    highlights: [
+      { name: "Hidi's Palace", detail: "The palace sits above the villages and is one of the landscape's central architectural and cultural features." },
+      { name: "Terraced landscape", detail: "Agricultural terraces, stone structures and paved paths express a long relationship between settlement, farming and the mountain environment." },
+      { name: "Iron-working heritage", detail: "UNESCO records extensive remains associated with a formerly flourishing iron industry." },
+      { name: "Living culture", detail: "Sukur remains a living cultural landscape, so visitor behaviour should respect community life, sacred areas and local instructions." },
+    ],
+    planning: [
+      { label: "Arrange local guidance", detail: "A knowledgeable local guide is valuable for route-finding, cultural context and understanding where visitors may or may not enter." },
+      { label: "Prepare for walking", detail: "The hilltop setting, stone paths and uneven terrain call for suitable footwear, water and enough daylight." },
+      { label: "Ask before photography", detail: "Do not assume homes, ceremonies, people or sacred places are automatically open to photography." },
+      { label: "Verify current access", detail: "Check transport, local conditions and site access shortly before travel rather than relying only on old itineraries." },
+    ],
+    source: { label: "UNESCO World Heritage Centre — Sukur Cultural Landscape", href: "https://whc.unesco.org/en/list/938" },
+    lastReviewed: "2026-10-02",
+  },
+  {
+    slug: "erin-ijesha-waterfall",
+    title: "Erin-Ijesha Waterfall Guide",
+    shortTitle: "Erin-Ijesha Waterfall",
+    kind: "destination",
+    region: "Osun State",
+    summary: "Plan an Erin-Ijesha waterfall day trip around weather, footwear, daylight, local access and a safe return plan.",
+    intro: [
+      "Nigeria's federal e-government tourism portal lists Erin-Ijesha Waterfall among the country's featured attractions and describes it as a popular destination for excursions and nature photography.",
+      "A waterfall trip is most enjoyable when you plan for slippery terrain, rainfall, changing water conditions and enough daylight rather than treating it like an indoor attraction with fixed conditions.",
+    ],
+    bestFor: ["Waterfalls", "Nature", "Day trips", "Photography"],
+    highlights: [
+      { name: "Waterfall scenery", detail: "The waterfall itself is the main experience, with the surrounding natural setting making it suitable for a dedicated outdoor day trip." },
+      { name: "Nature photography", detail: "The federal tourism portal specifically highlights the site for nature photography; protect equipment against spray and rain." },
+      { name: "Active outing", detail: "Expect uneven and potentially wet ground, and choose footwear and clothing for an outdoor visit." },
+      { name: "Osun road-trip pairing", detail: "It can fit into a wider Osun itinerary, but keep enough time for the waterfall rather than squeezing it between distant fixed appointments." },
+    ],
+    planning: [
+      { label: "Check the weather", detail: "Heavy rain can change water flow, footing and road conditions; reassess the plan when weather is poor." },
+      { label: "Wear suitable footwear", detail: "Use shoes with reliable grip and expect wet or uneven surfaces around a waterfall environment." },
+      { label: "Keep to daylight", detail: "Give yourself enough daylight for the visit and return journey, especially if travelling from another town." },
+      { label: "Confirm current local access", detail: "Entrance arrangements, guide expectations and charges can change, so verify locally before setting out." },
+    ],
+    source: { label: "Nigeria e-Government Portal — Visit Nigeria", href: "https://services.gov.ng/visit-nigeria" },
+    lastReviewed: "2026-10-02",
+  },
+  {
+    slug: "zuma-rock-gurara-falls",
+    title: "Zuma Rock & Gurara Falls Trip Guide",
+    shortTitle: "Zuma Rock & Gurara Falls",
+    kind: "destination",
+    region: "Niger State / Abuja corridor",
+    summary: "Plan two of the best-known natural landmarks on the Abuja–Niger axis without underestimating road time, weather or waterfall conditions.",
+    intro: [
+      "The Federal Ministry of Information and National Orientation's tourism guide highlights both Zuma Rock on the Kaduna-Abuja highway corridor and Gurara Waterfalls off the Minna-Suleja road in Niger State.",
+      "They work best as a road-trip plan rather than as two quick photo stops. Keep the driving sequence, daylight, rainfall and your return to Abuja or another base in view.",
+    ],
+    bestFor: ["Road trips", "Landmarks", "Waterfalls", "Photography"],
+    highlights: [
+      { name: "Zuma Rock", detail: "A prominent granite formation in Niger State near the Abuja corridor, long associated with Gwari history and one of the country's most recognisable rock landmarks." },
+      { name: "Gurara Waterfalls", detail: "A major Niger State waterfall whose appearance changes substantially with seasonal water levels." },
+      { name: "Seasonal contrast", detail: "The federal tourism guide describes higher water levels around April to August and lower levels from September to March, so the experience changes through the year." },
+      { name: "Easy pairing from Abuja", detail: "Both sites sit on routes accessible from the Abuja area, but road conditions and actual travel time should be checked on the day." },
+    ],
+    planning: [
+      { label: "Do not climb casually", detail: "Treat rock faces and unfamiliar paths as outdoor terrain, not informal climbing routes; follow local access rules." },
+      { label: "Respect waterfall conditions", detail: "Keep back from dangerous water and slippery edges, especially when flow is strong after rain." },
+      { label: "Sequence the drive", detail: "Check live road conditions and decide which stop comes first before leaving Abuja or another base." },
+      { label: "Confirm local charges", detail: "Parking, entrance or guide arrangements can change and should be confirmed at the destination." },
+    ],
+    source: { label: "Federal Ministry of Information and National Orientation — Tourism", href: "https://fmino.gov.ng/culture/tourism/" },
+    lastReviewed: "2026-10-02",
+  },
+  {
+    slug: "kainji-lake-national-park",
+    title: "Kainji Lake National Park Guide",
+    shortTitle: "Kainji Lake National Park",
+    kind: "destination",
+    region: "Niger & Kwara States",
+    summary: "Plan a Kainji Lake National Park trip with park-led access, realistic travel time and current checks on routes, guides and visitor conditions.",
+    intro: [
+      "Nigeria Park Service lists Kainji Lake National Park across Niger and Kwara states at 5,382 square kilometres, making it one of the country's largest protected areas.",
+      "Because a national park covers a broad landscape rather than a single gate-and-building attraction, confirm the specific visitor area, route and ranger or guide arrangements before travelling.",
+    ],
+    bestFor: ["National parks", "Wildlife", "Nature", "Road trips"],
+    highlights: [
+      { name: "Large conservation area", detail: "Nigeria Park Service lists the park at 5,382 sq km across Niger and Kwara states." },
+      { name: "Wildlife-focused travel", detail: "Plan around observation and conservation rules, and follow park staff on where visitors may go." },
+      { name: "Nature landscape", detail: "The scale of the park makes route selection and travel time part of the experience rather than an afterthought." },
+      { name: "Multi-stop potential", detail: "The wider Kainji area can support a longer nature itinerary, but only after confirming which visitor facilities are currently operating." },
+    ],
+    planning: [
+      { label: "Confirm the visitor route", detail: "Ask Nigeria Park Service which entrance, sector or visitor area is appropriate for the trip you intend to make." },
+      { label: "Arrange guides where required", detail: "Use park-approved guidance for wildlife areas and unfamiliar tracks rather than exploring independently." },
+      { label: "Plan fuel and daylight", detail: "Long road distances and limited last-mile options make early departure and a clear return plan important." },
+      { label: "Recheck conditions", detail: "Weather, road access, park operations and local conditions can change, so reconfirm shortly before travel." },
+    ],
+    source: { label: "Nigeria Park Service — National Parks Overview", href: "https://nigeriaparkservice.gov.ng/overview/" },
+    lastReviewed: "2026-10-02",
+  },
+
 ];
 
 export function getExploreGuide(slug: string) {
