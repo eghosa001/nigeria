@@ -10083,9 +10083,9 @@
     ],
     "sources": [
       {
-        "label": "INEC Guide for Voter Update",
+        "label": "INEC archive — Guide for Voter Update",
         "agency": "Independent National Electoral Commission",
-        "url": "https://www.inecnigeria.org/guide-for-voter-update/",
+        "url": "https://wp1.inecnigeria.org/author/admin/",
         "lastChecked": "2026-10-02"
       },
       {
@@ -10201,9 +10201,10 @@
         "lastChecked": "2026-10-02"
       },
       {
-        "label": "INEC 2021 CVR Guidelines — PVC collection",
+        "label": "INEC remarks on personal PVC collection",
         "agency": "Independent National Electoral Commission",
-        "url": "https://inecnigeria.org/wp-content/uploads/2022/11/2021-CVR-Guidelines-Final.pdf",
+        "url": "https://wp1.inecnigeria.org/remarks-by-the-chairman-inec-prof-mahmood-yakubu-at-a-meeting-with-the-resident-electoral-commissioners-recs-held-at-the-inec-conference-room-abuja-on-19th-august-2024/",
+        "published": "2024-08-19",
         "lastChecked": "2026-10-02"
       }
     ],
