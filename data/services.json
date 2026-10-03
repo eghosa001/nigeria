@@ -10914,5 +10914,135 @@
       "neco-check-result"
     ],
     "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "ninauth-nin-verification",
+    "title": "How to verify your identity with NINAuth",
+    "shortTitle": "NIN verification with NINAuth",
+    "summary": "Use NIMC's official NINAuth app to verify and share your identity securely with participating organisations by QR code or time-limited Sharecode.",
+    "category": "Identity",
+    "agencySlug": "nimc",
+    "feeLabel": "No individual app fee stated on the official NINAuth guide",
+    "feeNote": "NINAuth's public individual guidance does not state a charge simply to install the app or use its individual identity-sharing features. Verification partners and aggregators have separate commercial arrangements.",
+    "timeline": "Identity sharing or verification is designed to happen during the app interaction once your NINAuth profile is active and the requesting organisation supports NINAuth.",
+    "status": "verified",
+    "officialPortal": "https://ninauth.nimc.gov.ng/download",
+    "requirements": [
+      "An existing National Identification Number (NIN)",
+      "An Android or iOS smartphone that meets NINAuth requirements",
+      "An active NINAuth profile on the device",
+      "A participating organisation's NINAuth QR code or a request that accepts a NINAuth Sharecode"
+    ],
+    "steps": [
+      "Open NIMC's official NINAuth website and use its download route to install the app from the official app store listing.",
+      "Register or activate NINAuth with your NIN and complete the identity checks required by the app.",
+      "When an organisation asks for NINAuth verification, review exactly what information it is requesting before you approve anything.",
+      "Scan the organisation's NINAuth QR code or generate a time-limited Sharecode in your NINAuth profile, depending on the verification method offered.",
+      "Approve only the requested data you intend to share, then confirm the verification result in the app or with the requesting organisation."
+    ],
+    "notes": [
+      "NIMC describes NINAuth as a consent-based digital identity verification service for online and in-person use.",
+      "A NINAuth Sharecode is intended to let you share verified identity information without handing over more data than the supported verification requires.",
+      "NINAuth cannot enrol a person for a new NIN; people without a NIN must complete NIMC enrolment first."
+    ],
+    "sources": [
+      {
+        "label": "NINAuth for Individuals",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/individuals",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NINAuth Get Started",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/get-started",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "Download NINAuth",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/download",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "NIN verification",
+      "verify NIN",
+      "NINAuth",
+      "NIMC verification",
+      "NIN verification app",
+      "NINAuth share code"
+    ],
+    "related": [
+      "nin-enrolment",
+      "nin-slip-reissue",
+      "nin-name-modification"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "nabteb-result-checker",
+    "title": "How to check a NABTEB result online",
+    "shortTitle": "NABTEB result checker",
+    "summary": "Check NABTEB NBC, NTC, ANBC, ANTC and other supported examination results through the official eWorld result checker using the candidate number, exam details, card serial number and PIN.",
+    "category": "Education",
+    "agencySlug": "nabteb",
+    "feeLabel": "Requires a valid NABTEB result-checking PIN",
+    "feeNote": "NABTEB's official result checker requires a valid 12-digit PIN from a NABTEB eWorld result-checking card. Confirm the current official purchase/payment route before paying because the public result page does not display one universal permanent PIN price.",
+    "timeline": "The result checker returns the available result online after the required candidate and PIN details are submitted correctly.",
+    "status": "verified",
+    "officialPortal": "https://eworld.nabteb.gov.ng/",
+    "requirements": [
+      "NABTEB candidate identification number",
+      "Correct examination type",
+      "Four-digit examination year",
+      "Card serial number from the valid result-checking card",
+      "12-digit NABTEB result-checking PIN"
+    ],
+    "steps": [
+      "Open the official NABTEB eWorld result checker.",
+      "Enter the candidate identification number exactly as issued by NABTEB.",
+      "Select the correct examination type and examination year.",
+      "Enter the card serial number and the 12-digit result-checking PIN.",
+      "Submit the form and wait for the result window to load; save or print the result if needed."
+    ],
+    "notes": [
+      "NABTEB says a result-checking PIN is tied to the eWorld scratch card and should not be reused for a different candidate.",
+      "The official eWorld page also publishes an SMS result-checking format, but users should confirm that the shortcode and mobile route are still available before relying on it."
+    ],
+    "sources": [
+      {
+        "label": "NABTEB eWorld Result Checker",
+        "agency": "National Business and Technical Examinations Board",
+        "url": "https://eworld.nabteb.gov.ng/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NABTEB official website — Result Checker",
+        "agency": "National Business and Technical Examinations Board",
+        "url": "https://nabteb.gov.ng/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NABTEB 2026 NBC/NTC result release",
+        "agency": "National Business and Technical Examinations Board",
+        "url": "https://nabteb.gov.ng/2026/09/02/nabteb-releases-2026-nbc-ntc-results/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "NABTEB result checker",
+      "NABTEB result checker 2026",
+      "check NABTEB result",
+      "NABTEB eWorld",
+      "NABTEB result PIN",
+      "NABTEB NBC result",
+      "NABTEB NTC result"
+    ],
+    "related": [
+      "waec-check-result",
+      "neco-check-result"
+    ],
+    "lastVerified": "2026-10-03"
   }
 ]
