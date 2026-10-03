@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { serviceLocationCities } from "@/data/service-locations";
 import { officeDirectories } from "@/lib/offices";
 import { OfficeFinder } from "@/components/office-finder";
 
@@ -19,6 +21,18 @@ export default function OfficesPage() {
         </p>
 
         <OfficeFinder directories={officeDirectories} />
+
+        <section className="service-topic-links" aria-labelledby="city-service-locations">
+          <span className="eyebrow">Search by city</span>
+          <h2 id="city-service-locations">Government service locations in major cities</h2>
+          <div className="related-links">
+            {serviceLocationCities.map((city) => (
+              <Link key={city.slug} href={"/locations/" + city.slug}>
+                {city.city} service offices <span aria-hidden="true">→</span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <div className="info-box office-note">
           If an official directory is unavailable or unclear, MyNigeriaGuide does not invent a local office address. Use the responsible agency's official contact channel instead.
