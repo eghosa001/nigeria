@@ -1146,6 +1146,244 @@ export const jobOpportunities: CareerOpportunity[] = [
     ]
   },
   {
+    slug: "dangote-group-careers",
+    title: "Dangote Group Jobs, Graduate Trainee & Industrial Careers",
+    organization: "Dangote Industries Limited",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Live vacancies",
+    summary: "Dangote's official careers system currently carries a large live vacancy catalogue across cement, refinery, food, corporate and industrial operations, alongside a structured Graduate Trainee pathway.",
+    location: "Nigeria and other Dangote operating markets",
+    employmentType: "Live vacancies / graduate trainee / experienced hire",
+    audiences: ["Graduates", "Engineers", "Technicians", "Experienced professionals", "Operations applicants"],
+    fields: ["Engineering", "Manufacturing", "Refinery", "Cement", "IT", "Finance", "Supply chain", "Sales", "Human resources"],
+    qualifications: [
+      "Requirements vary substantially across the current live vacancies.",
+      "Dangote's careers FAQ confirms that the Group runs a Graduate Trainee Program with structured training, on-the-job learning and hands-on projects.",
+      "Applicants should rely on the exact education and experience requirements in each live job description."
+    ],
+    requirements: [
+      "Create or use an official Dangote careers profile.",
+      "Search by role, business unit and location before applying.",
+      "Meet the specific education, experience and competence criteria shown for the chosen vacancy."
+    ],
+    documents: ["CV/resume", "Academic/professional credentials relevant to the role", "Experience information required by the selected vacancy", "Other documents requested through the Dangote careers system"],
+    applicationSteps: [
+      "Open Dangote's official careers portal.",
+      "Use View All Jobs or search by location/business area.",
+      "Open the full job description and check qualifications and experience.",
+      "Create/sign into your careers profile and submit through the official system.",
+      "Use your careers profile to monitor application status and job alerts."
+    ],
+    officialUrl: "https://careers.dangote.com/",
+    officialUrlLabel: "Search live Dangote jobs",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "The official careers catalogue currently contains active Nigeria roles across multiple Dangote business units.",
+    feeNote: "Apply through careers.dangote.com and verify the exact vacancy before sharing credentials.",
+    sourceNotes: [
+      "Dangote's official careers site currently exposes a broad live job catalogue.",
+      "The Group's careers FAQ confirms its Graduate Trainee Program and candidate-profile/job-alert system."
+    ],
+    sources: [
+      { label: "Dangote Careers", url: "https://careers.dangote.com/", lastChecked: "2026-10-03" },
+      { label: "Dangote Jobs Catalogue", url: "https://careers.dangote.com/go/Roles-At-Dangote/9056002/", lastChecked: "2026-10-03" },
+      { label: "Dangote Careers FAQ", url: "https://careers.dangote.com/content/Careers-FAQ/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "seplat-energy-careers",
+    title: "Seplat Energy Graduate Trainee, Internship & Professional Careers",
+    organization: "Seplat Energy",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers programmes",
+    summary: "Seplat Energy's careers site combines current professional vacancies with undergraduate internships, graduate trainee and technical graduate trainee pathways.",
+    location: "Nigeria",
+    employmentType: "Graduate trainee / internship / professional energy careers",
+    audiences: ["Undergraduates", "Graduates", "Engineers", "Experienced professionals"],
+    fields: ["Mechanical Engineering", "Chemical Engineering", "Electrical/Electronics", "Petroleum", "Geoscience", "Finance", "Law", "Business"],
+    qualifications: [
+      "Graduate Trainee: Seplat publishes a minimum Second Class Upper degree or equivalent in relevant science, engineering or selected social-science/business disciplines.",
+      "Graduate applicants need at least five O'Level credits including Mathematics and English in one sitting and NYSC completion/exemption where applicable.",
+      "Undergraduate Internship: applicant must have completed at least one year of university and provide an SIWES letter from the Head of Department.",
+      "Technical Graduate Trainee: published criteria include a 2:1 Bachelor's degree in a relevant pure science or engineering discipline, five O'Level credits including Mathematics and English in one sitting, and NYSC completion/exemption."
+    ],
+    requirements: [
+      "Use the official Seplat careers opportunity page and programme form.",
+      "Internship applicants must present an SIWES letter addressed to Seplat HR.",
+      "Shortlisted graduate candidates can move through online/face-to-face assessments, assessment centres and panel interviews."
+    ],
+    documents: ["CV/resume", "Degree evidence", "O'Level results", "NYSC discharge/exemption for graduate routes", "SIWES letter for undergraduate internships"],
+    applicationSteps: [
+      "Open Seplat Energy's official career-opportunities page.",
+      "Choose current vacancy, internship, Graduate Trainee or Technical Graduate Trainee as applicable.",
+      "Check the programme-specific eligibility criteria.",
+      "Complete the official form or vacancy application.",
+      "If shortlisted, follow the assessment and interview instructions issued by Seplat."
+    ],
+    officialUrl: "https://www.seplatenergy.com/careers/career-opportunities/",
+    officialUrlLabel: "Open Seplat career opportunities",
+    verifiedAt: "2026-10-03",
+    feeNote: "Seplat Energy explicitly states that it will never ask applicants for money to support a job application.",
+    sourceNotes: [
+      "Seplat publishes detailed internship, graduate and technical-graduate eligibility requirements.",
+      "The official career-opportunities page also links current vacancies."
+    ],
+    sources: [
+      { label: "Seplat Career Opportunities", url: "https://www.seplatenergy.com/careers/career-opportunities/", lastChecked: "2026-10-03" },
+      { label: "Seplat Careers", url: "https://www.seplatenergy.com/careers/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "flutterwave-nigeria-careers",
+    title: "Flutterwave Nigeria Jobs & Graduate Programme",
+    organization: "Flutterwave",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Live Nigeria vacancies",
+    summary: "Flutterwave's official vacancies page currently lists multiple Nigeria roles across engineering, product, risk, data, operations and business functions, alongside a Nigeria-focused graduate programme.",
+    location: "Nigeria / remote Nigeria",
+    employmentType: "Live fintech vacancies / graduate programme",
+    audiences: ["Graduates", "Engineers", "Product applicants", "Risk & compliance applicants", "Operations applicants"],
+    fields: ["Software Engineering", "Data", "Product", "Risk", "Compliance", "Finance", "Business Development", "Operations"],
+    qualifications: [
+      "Requirements vary by live role and should be checked in the exact Flutterwave vacancy.",
+      "Flutterwave describes its graduate programme as a 12-month immersive programme for recent graduates and says it is currently piloted in Nigeria."
+    ],
+    requirements: [
+      "Search the official vacancies page by Nigeria/location and job family.",
+      "Open the exact role to confirm experience, skills and location requirements before applying."
+    ],
+    documents: ["CV/resume", "Portfolio or technical information where required", "Education/experience information requested by the role"],
+    applicationSteps: [
+      "Open Flutterwave's official vacancies page.",
+      "Filter or scan for Nigeria-based and remote-Nigeria roles.",
+      "Open the selected job and review all requirements.",
+      "Submit through Flutterwave's official application flow.",
+      "Recent graduates can also review the official Graduate Program page for programme availability."
+    ],
+    officialUrl: "https://flutterwave.com/ng/careers/vacancies",
+    officialUrlLabel: "View live Flutterwave Nigeria roles",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "The official vacancies page currently shows multiple active Nigeria roles.",
+    feeNote: "Use Flutterwave's official careers domain and the exact vacancy page when applying.",
+    sourceNotes: [
+      "Flutterwave's official vacancies page currently lists a range of Nigeria-based roles.",
+      "Its graduate page describes a 12-month programme currently piloted in Nigeria."
+    ],
+    sources: [
+      { label: "Flutterwave Vacancies", url: "https://flutterwave.com/ng/careers/vacancies", lastChecked: "2026-10-03" },
+      { label: "Flutterwave Graduate Program", url: "https://www.flutterwave.com/ng/careers/graduates", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "paystack-nigeria-careers",
+    title: "Paystack Nigeria Jobs",
+    organization: "Paystack",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Live Nigeria vacancies",
+    summary: "Paystack's official careers site currently lists active Nigeria roles, including product, security, QA, backend engineering and other hybrid/multi-location technology positions.",
+    location: "Nigeria / Lagos / hybrid and multi-location roles",
+    employmentType: "Live fintech and technology vacancies",
+    audiences: ["Engineers", "Product managers", "Security applicants", "Technology professionals"],
+    fields: ["Engineering", "Product", "Security", "Data", "Quality Assurance", "Revenue", "Technology"],
+    qualifications: ["Requirements depend on the specific live Paystack role and seniority level."],
+    requirements: [
+      "Use Paystack's official job-openings page to confirm that the selected role is still ongoing.",
+      "Check whether the vacancy is Nigeria-only, Lagos, hybrid or multi-location before applying."
+    ],
+    documents: ["CV/resume", "Professional experience information", "Portfolio/technical information where requested by the selected vacancy"],
+    applicationSteps: [
+      "Open Paystack's official job openings.",
+      "Select a Nigeria-based or Nigeria-eligible vacancy.",
+      "Read the full responsibilities and qualifications.",
+      "Use the official Apply Now flow.",
+      "Track communication through the contact details used in the application."
+    ],
+    officialUrl: "https://careers.paystack.com/jobs",
+    officialUrlLabel: "View current Paystack jobs",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "Paystack's official job page currently marks multiple Nigeria-based roles as ongoing.",
+    feeNote: "Apply from Paystack's official careers pages rather than copied vacancy forms.",
+    sourceNotes: [
+      "The official Paystack careers page currently lists active Nigeria positions across product and engineering-related functions."
+    ],
+    sources: [
+      { label: "Paystack Careers", url: "https://paystack.com.ng/careers", lastChecked: "2026-10-03" },
+      { label: "Paystack Current Jobs", url: "https://careers.paystack.com/jobs", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "moniepoint-nigeria-careers",
+    title: "Moniepoint Nigeria Jobs",
+    organization: "Moniepoint Inc.",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Live Nigeria vacancies",
+    summary: "Moniepoint's official careers site currently carries a wide range of Nigeria opportunities across states, including enterprise sales, field credit, customer support, product, engineering, data, finance and operations.",
+    location: "Nigeria / multiple states / remote",
+    employmentType: "Live fintech, banking and operations vacancies",
+    audiences: ["Graduates", "Technology professionals", "Field applicants", "Finance applicants", "Operations applicants"],
+    fields: ["Engineering", "Data", "Finance", "Banking operations", "Credit", "Sales", "Customer Success", "Compliance", "Product Design"],
+    qualifications: ["Requirements vary by the selected Moniepoint role and location."],
+    requirements: [
+      "Use the official careers page and filter by Nigeria, state or team.",
+      "Confirm whether the role is office-based, state-specific or remote before applying.",
+      "Follow the experience and skill requirements shown on the exact vacancy."
+    ],
+    documents: ["CV/resume", "Professional/education information required by the role", "Role-specific application materials"],
+    applicationSteps: [
+      "Open Moniepoint's official careers page.",
+      "Filter by Nigeria, state or team.",
+      "Open the selected role and confirm duties, location and qualification requirements.",
+      "Apply through the official Moniepoint careers flow.",
+      "Follow the recruitment stages communicated for that vacancy."
+    ],
+    officialUrl: "https://moniepoint.com/careers",
+    officialUrlLabel: "Search Moniepoint Nigeria roles",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "The official careers catalogue currently contains numerous Nigeria roles across multiple states and remote teams.",
+    feeNote: "Use Moniepoint's official careers page and exact role page when submitting application information.",
+    sourceNotes: ["Moniepoint's careers catalogue currently exposes a large set of Nigeria roles across technical and non-technical functions."],
+    sources: [
+      { label: "Moniepoint Careers", url: "https://moniepoint.com/careers", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "interswitch-careers",
+    title: "Interswitch Nigeria Careers",
+    organization: "Interswitch Group",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers page",
+    summary: "Interswitch's official careers page provides its recruitment entry point for applicants interested in payments, fintech, technology and business roles in Nigeria.",
+    location: "Nigeria",
+    employmentType: "Fintech / technology careers",
+    audiences: ["Graduates", "Technology professionals", "Business professionals"],
+    fields: ["Payments", "Software Engineering", "Product", "Technology", "Commercial", "Operations", "Finance"],
+    qualifications: ["Requirements vary by the role available through Interswitch's recruitment system."],
+    requirements: [
+      "Use Interswitch's official careers route or Join Our Team flow.",
+      "Review the exact vacancy requirements when a suitable position is available."
+    ],
+    documents: ["CV/resume", "Academic and professional information required by the vacancy", "Technical/portfolio information where applicable"],
+    applicationSteps: [
+      "Open Interswitch's official careers page.",
+      "Use Join Our Team/current opportunities.",
+      "Select a suitable role and check requirements.",
+      "Submit through the official application route."
+    ],
+    officialUrl: "https://interswitchgroup.com/company/careers",
+    officialUrlLabel: "Open Interswitch careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "Use the official Interswitch Group careers domain before entering application information.",
+    sourceNotes: ["Interswitch maintains an official Nigeria-focused careers entry point for fintech and payments opportunities."],
+    sources: [
+      { label: "Interswitch Careers", url: "https://interswitchgroup.com/company/careers", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
     slug: "pwc-nigeria-careers",
     title: "PwC Nigeria Careers",
     organization: "PwC Nigeria",
