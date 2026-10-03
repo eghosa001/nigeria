@@ -330,3 +330,62 @@ body:has(.admin-nav) > .mobile-bottom-nav,
 body:has(.admin-nav) > .site-footer {
   display: none !important;
 }
+
+
+/* Jobs & Careers mobile layout */
+@media (max-width: 920px) {
+  .home-paths { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .jobs-hero-grid,
+  .job-detail-hero-grid,
+  .job-detail-layout,
+  .jobs-safety-grid,
+  .home-jobs-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .jobs-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jobs-path-grid .jobs-path-card:last-child { grid-column: 1 / -1; min-height: 210px; }
+  .jobs-status-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jobs-controls { grid-template-columns: minmax(0, 1fr) repeat(2, minmax(150px, .45fr)); }
+  .job-detail-sidebar,
+  .job-apply-card { position: static; }
+  .jobs-tracker-row { grid-template-columns: 120px minmax(0, 1fr); }
+  .jobs-tracker-row > div:last-child { grid-column: 2; }
+}
+
+@media (max-width: 620px) {
+  .home-paths,
+  .jobs-path-grid,
+  .jobs-status-row,
+  .jobs-card-grid,
+  .jobs-private-grid,
+  .jobs-controls,
+  .job-facts {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  .jobs-path-grid .jobs-path-card:last-child { grid-column: auto; }
+  .jobs-hero { padding: 48px 0 42px; }
+  .jobs-hero h1 { font-size: clamp(2.3rem, 13vw, 3.7rem); }
+  .jobs-hero-grid,
+  .job-detail-hero-grid { gap: 30px; }
+  .jobs-hero-actions { align-items: stretch; }
+  .jobs-hero-actions .button,
+  .jobs-text-action { width: 100%; justify-content: center; text-align: center; }
+  .jobs-trust-panel,
+  .job-apply-card { border-radius: 18px; padding: 21px; }
+  .jobs-trust-panel > div { grid-template-columns: 54px 1fr; }
+  .jobs-controls { padding: 12px; }
+  .job-card { min-height: 0; }
+  .job-card-top,
+  .job-card-footer { align-items: flex-start; flex-direction: column; }
+  .job-card-footer { gap: 7px; }
+  .home-job-feature { min-height: 280px; }
+  .job-detail-status-line { align-items: flex-start; }
+  .job-source-list a { flex-direction: column; gap: 4px; }
+  .jobs-tracker-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 18px;
+  }
+  .jobs-tracker-row > div:last-child { grid-column: auto; }
+  .jobs-safety-grid { gap: 25px; }
+}
