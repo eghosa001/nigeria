@@ -23,20 +23,39 @@ export function JobsDirectory({ opportunities }: Props) {
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return opportunities.filter((item) => {
-      if (sector !== "All" && item.sector !== sector) return false;
-      if (status !== "all" && item.status !== status) return false;
-      if (!needle) return true;
-      return [
-        item.title,
-        item.organization,
-        item.summary,
-        item.location,
-        ...item.audiences,
-        ...item.fields,
-        ...item.qualifications
-      ].join(" ").toLowerCase().includes(needle);
-    });
+    const priority: Record<JobStatus, number> = {
+      open: 0,
+      screening: 1,
+      training: 2,
+      upcoming: 3,
+      "career-page": 4,
+      closed: 5
+    };
+
+    return opportunities
+      .filter((item) => {
+        if (sector !== "All" && item.sector !== sector) return false;
+        if (status !== "all" && item.status !== status) return false;
+        if (!needle) return true;
+        return [
+          item.title,
+          item.organization,
+          item.summary,
+          item.location,
+          item.employmentType,
+          ...item.audiences,
+          ...item.fields,
+          ...item.qualifications
+        ].join(" ").toLowerCase().includes(needle);
+      })
+      .sort((a, b) => {
+        const statusOrder = priority[a.status] - priority[b.status];
+        if (statusOrder !== 0) return statusOrder;
+        if (a.deadline && b.deadline) return a.deadline.localeCompare(b.deadline);
+        if (a.deadline) return -1;
+        if (b.deadline) return 1;
+        return a.organization.localeCompare(b.organization);
+      });
   }, [opportunities, query, sector, status]);
 
   return (
