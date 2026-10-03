@@ -23,14 +23,14 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "nin-corrections",
-    title: "NIN Registration & Correction Guide 2026",
+    title: "NIN Modification Portal & Correction Guide 2026",
     shortTitle: "NIN corrections",
-    description: "Find the correct NIMC process for NIN enrolment, date-of-birth, name, phone and address changes, plus NIN slip reissue.",
+    description: "Use the official NIN modification portal routes for date-of-birth, name, phone and address changes, plus enrolment and NIN slip reissue.",
     intro: [
       "NIN requests are easy to mix up because enrolment, self-service modifications and slip reissue use different routes. This hub groups the main NIMC tasks so you can go straight to the exact correction or enrolment process.",
       "Before paying, open the relevant guide to confirm the current fee, required evidence and whether the task is completed online or needs an enrolment centre."
     ],
-    searches: [{ query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
+    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
     serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "nin-slip-reissue"]
   },
   {
@@ -47,7 +47,7 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "jamb-2026",
-    title: "JAMB 2026 Guide: Registration, CAPS, Results & Admission",
+    title: "JAMB 2026 Guide: CAPS, Matriculation List, Registration & Results",
     shortTitle: "JAMB 2026",
     description: "JAMB 2026 registration, Direct Entry, profile codes, CAPS, results and admission documents in one source-linked hub.",
     intro: [
@@ -59,21 +59,21 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "nysc",
-    title: "NYSC Guide: Registration, Senate List, Call-Up & Relocation",
+    title: "NYSC Portal Guide: Registration, Senate List, Call-Up & Relocation",
     shortTitle: "NYSC",
-    description: "NYSC registration, senate-list checks, call-up letters, relocation, corrections and exemption guidance for prospective corps members.",
+    description: "Use the official NYSC portal routes for registration, senate-list checks, call-up letters, relocation, corrections and exemption guidance.",
     intro: [
       "Use this NYSC hub from mobilisation through camp and post-registration issues. It links the main actions prospective corps members search for instead of making you guess which NYSC page applies.",
       "Each guide explains what you need to prepare, where the official action happens and what to do next if your record, call-up or relocation process needs attention."
     ],
-    searches: [{ query: "NYSC registration", serviceSlug: "nysc-registration-local" }, { query: "NYSC senate list", serviceSlug: "nysc-senate-list" }, { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" }, { query: "NYSC relocation", serviceSlug: "nysc-relocation" }, { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" }, { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }],
+    searches: [{ query: "NYSC portal", serviceSlug: "nysc-registration-local" }, { query: "NYSC registration", serviceSlug: "nysc-registration-local" }, { query: "NYSC senate list", serviceSlug: "nysc-senate-list" }, { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" }, { query: "NYSC relocation", serviceSlug: "nysc-relocation" }, { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" }, { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }],
     serviceSlugs: ["nysc-registration-local", "nysc-senate-list", "nysc-call-up-letter", "nysc-relocation", "nysc-correct-date-of-birth", "nysc-exemption-certificate"]
   },
   {
     slug: "cac-business",
-    title: "CAC Business Registration & Filing Guide",
+    title: "CAC Registration, Public Search & Filing Guide",
     shortTitle: "CAC business",
-    description: "Register a business or company with CAC and find common post-registration filings, status reports and certified copies.",
+    description: "Register a business or company with CAC, search existing entities, and find post-registration filings, status reports and certified copies.",
     intro: [
       "This hub groups the CAC tasks most business owners need from choosing a name through registration and later compliance documents.",
       "Use the exact guide for your task because business-name registration, company incorporation, annual returns and certified documents have different requirements and fees."
@@ -283,7 +283,7 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "waec-neco-results",
-    title: "WAEC & NECO Results, Certificates and Verification Guide",
+    title: "WAEC & NECO Result Checker, Certificates and Verification Guide",
     shortTitle: "WAEC & NECO results",
     description: "Check WAEC or NECO results, get result tokens, access certificates and use the correct verification or confirmation route.",
     intro: [
@@ -395,6 +395,24 @@ export const growthHubs: GrowthHub[] = [
       { query: "Nigeria exit card", serviceSlug: "nigeria-landing-exit-card" }
     ],
     serviceSlugs: ["ecowas-travel-certificate", "yellow-card", "nigeria-landing-exit-card"]
+  },
+  {
+    slug: "nelfund-student-loan",
+    title: "NELFUND Portal Guide: Student Loan, Status, Upkeep & Repayment",
+    shortTitle: "NELFUND",
+    description: "Use the official NELFUND portal for student-loan applications, status checks, upkeep payments and repayment guidance.",
+    intro: [
+      "This hub separates the main NELFUND tasks so students can move from application to verification, status tracking and upkeep without confusing the different stages.",
+      "Use the linked guide that matches your current stage, and sign in only through the official NELFUND portal rather than third-party loan agents."
+    ],
+    searches: [
+      { query: "NELFUND portal", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND student loan", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND loan status", serviceSlug: "nelfund-loan-status-and-upkeep" },
+      { query: "NELFUND upkeep", serviceSlug: "nelfund-loan-status-and-upkeep" },
+      { query: "NELFUND repayment", serviceSlug: "nelfund-loan-repayment" }
+    ],
+    serviceSlugs: ["nelfund-student-loan-application", "nelfund-loan-status-and-upkeep", "nelfund-loan-repayment"]
   },
   {
     slug: "federal-tax-services",
