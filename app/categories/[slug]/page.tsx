@@ -51,6 +51,7 @@ export default async function CategoryPage({
   const topicHubs = growthHubs.filter((hub) => hub.serviceSlugs.some((serviceSlug) => serviceSlugs.has(serviceSlug)));
   const popularSearches = topicHubs
     .flatMap((hub) => hub.searches)
+    .filter((item) => serviceSlugs.has(item.serviceSlug))
     .filter((item, index, items) => items.findIndex((candidate) => candidate.query === item.query) === index)
     .slice(0, 12);
 
