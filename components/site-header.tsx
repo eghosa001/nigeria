@@ -32,8 +32,12 @@ const sectionNavigation = {
     label: "Jobs & Careers",
     links: [
       { href: "/jobs", label: "Overview" },
+      { href: "/jobs/deadlines", label: "Open now" },
       { href: "/jobs/government", label: "Government" },
       { href: "/jobs/private", label: "Private sector" },
+      { href: "/jobs/graduate", label: "Graduates" },
+      { href: "/jobs/internships", label: "Internships" },
+      { href: "/jobs/engineering", label: "Engineering" },
     ],
   },
   explore: {
