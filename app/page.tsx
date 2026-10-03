@@ -56,6 +56,11 @@ export default function HomePage() {
               <strong>Tour Nigeria</strong>
               <small>Discover cities, places, food, stays and practical trip details.</small>
             </Link>
+            <Link href="/jobs" className="home-path home-path-jobs">
+              <span>Work</span>
+              <strong>Jobs & Careers</strong>
+              <small>Track verified recruitment, deadlines, graduate programmes and employer career routes.</small>
+            </Link>
           </nav>
         </div>
       </section>
