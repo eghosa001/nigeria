@@ -3,13 +3,14 @@ import Link from "next/link";
 import { publicServiceListings } from "@/lib/data";
 import { exploreGuides } from "@/lib/explore";
 import { entertainmentTitles } from "@/lib/entertainment";
+import { jobOpportunities } from "@/lib/jobs";
 import generatedYouTubeData from "@/data/youtube-movies.generated.json";
 
 const generatedYouTubeMovies = generatedYouTubeData.movies;
 
 export const metadata: Metadata = {
   title: "Search MyNigeriaGuide",
-  description: "Search Nigerian service guides, travel destinations, places and Nigerian movies across MyNigeriaGuide.",
+  description: "Search Nigerian service guides, verified jobs and careers, travel destinations, places and Nigerian movies across MyNigeriaGuide.",
   alternates: { canonical: "/search" },
   robots: { index: false, follow: true },
 };
@@ -76,6 +77,22 @@ export default async function SearchPage({
         .map((entry) => entry.item)
     : [];
 
+  const jobResults = query
+    ? jobOpportunities
+        .map((item) => ({
+          item,
+          score: relevance(
+            query,
+            item.title,
+            [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
+          ),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
+        .slice(0, 8)
+        .map((entry) => entry.item)
+    : [];
+
   const exploreResults = query
     ? exploreGuides
         .map((item) => ({
@@ -131,16 +148,16 @@ export default async function SearchPage({
         .map((entry) => entry.item)
     : [];
 
-  const totalShown = serviceResults.length + exploreResults.length + movieResults.length + youtubeResults.length;
+  const totalShown = serviceResults.length + jobResults.length + exploreResults.length + movieResults.length + youtubeResults.length;
 
   return (
     <>
       <section className="global-search-hero">
         <div className="container global-search-hero-inner">
           <span className="eyebrow">Search MyNigeriaGuide</span>
-          <h1>One search for services, places and movies.</h1>
+          <h1>One search for services, jobs, places and movies.</h1>
           <p>
-            You do not need to know which section something belongs in first. Search a task, city, attraction, actor, movie or publisher.
+            You do not need to know which section something belongs in first. Search a task, employer, career path, city, attraction, actor, movie or publisher.
           </p>
 
           <form className="global-search-form" method="get" action="/search">
@@ -151,7 +168,7 @@ export default async function SearchPage({
                 id="global-search-input"
                 name="q"
                 defaultValue={query}
-                placeholder="Try passport, Lagos, Aníkúlápó, Maurice Sam…"
+                placeholder="Try Customs, engineering, passport, Lagos, Aníkúlápó…"
                 autoComplete="off"
               />
               <button type="submit">Search</button>
@@ -162,6 +179,8 @@ export default async function SearchPage({
             <span>Try</span>
             <Link href="/search?q=passport">Passport</Link>
             <Link href="/search?q=Lagos">Lagos</Link>
+            <Link href="/search?q=government+recruitment">Government jobs</Link>
+            <Link href="/search?q=engineering">Engineering careers</Link>
             <Link href="/search?q=foreign+visa">Foreign visa</Link>
             <Link href="/search?q=Maurice+Sam">Maurice Sam</Link>
             <Link href="/search?q=YouTube+movie">YouTube movies</Link>
@@ -178,13 +197,18 @@ export default async function SearchPage({
                 <p>Processes, requirements, fees, official portals and what happens next.</p>
                 <b>Browse services →</b>
               </Link>
+              <Link href="/jobs">
+                <span>02</span><strong>Jobs & Careers</strong>
+                <p>Government recruitment, graduate pathways, internships and reputable employer careers.</p>
+                <b>Browse careers →</b>
+              </Link>
               <Link href="/explore">
-                <span>02</span><strong>Explore Nigeria</strong>
+                <span>03</span><strong>Explore Nigeria</strong>
                 <p>Cities, destinations, places, addresses, maps and practical trip planning.</p>
                 <b>Explore places →</b>
               </Link>
               <Link href="/entertainment/movies">
-                <span>03</span><strong>Entertainment</strong>
+                <span>04</span><strong>Entertainment</strong>
                 <p>Nigerian movies, actors, official streaming routes and free YouTube titles.</p>
                 <b>Browse movies →</b>
               </Link>
@@ -205,6 +229,7 @@ export default async function SearchPage({
                   <p>Try fewer words, a person’s name, a city, or the task you want to complete.</p>
                   <div>
                     <Link href="/services">Browse services →</Link>
+                    <Link href="/jobs">Browse jobs & careers →</Link>
                     <Link href="/explore">Explore Nigeria →</Link>
                     <Link href="/entertainment/movies">Browse movies →</Link>
                   </div>
@@ -224,6 +249,26 @@ export default async function SearchPage({
                         <strong>{item.title}</strong>
                         <p>{item.summary}</p>
                         <small>{item.status === "verified" ? "Verified guide" : "Guide"} · checked {item.lastVerified}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {jobResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Jobs & Careers</span><strong>{jobResults.length} shown</strong></div>
+                    <Link href="/jobs">Open careers hub →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {jobResults.map((item) => (
+                      <Link href={"/jobs/" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Career · {item.sector} · {item.statusLabel}</span>
+                        <strong>{item.title}</strong>
+                        <p>{item.summary}</p>
+                        <small>{item.organization} · checked {item.verifiedAt}</small>
                         <b aria-hidden="true">→</b>
                       </Link>
                     ))}
