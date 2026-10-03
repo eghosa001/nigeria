@@ -276,7 +276,10 @@
     "searchTerms": [
       "NIN date-of-birth correction",
       "How to change your date of birth on NIN",
-      "Identity"
+      "Identity",
+      "NIN modification portal",
+      "NIN correction portal",
+      "NIN date of birth correction online"
     ],
     "related": []
   },
@@ -512,7 +515,11 @@
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
-      "Business"
+      "Business",
+      "CAC registration",
+      "CAC registration portal",
+      "CAC business registration",
+      "register business name online Nigeria"
     ],
     "related": []
   },
@@ -560,7 +567,10 @@
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
-      "Business"
+      "Business",
+      "CAC registration",
+      "CAC company registration portal",
+      "register company online Nigeria"
     ],
     "related": [],
     "feeNote": "Company-registration charges are not one fixed amount across every incorporation because the filing depends on the company and share structure. Confirm the calculated amount in CAC's official registration portal before payment."
@@ -897,9 +907,9 @@
   },
   {
     "slug": "jamb-caps",
-    "title": "How JAMB CAPS works for admission",
+    "title": "JAMB CAPS: how to check admission status and use CAPS",
     "shortTitle": "JAMB CAPS",
-    "summary": "What JAMB's Central Admissions Processing System is designed to do in the tertiary admission process.",
+    "summary": "Use JAMB CAPS through e-Facility to review the admission status and institution/programme details shown for your candidate record, then take only the actions JAMB presents.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "No separate fee stated on CAPS overview",
@@ -937,16 +947,20 @@
     "searchTerms": [
       "JAMB CAPS",
       "How JAMB CAPS works for admission",
-      "Education"
+      "Education",
+      "JAMB CAPS portal",
+      "JAMB CAPS admission status",
+      "check admission status on JAMB CAPS",
+      "accept admission JAMB CAPS"
     ],
     "related": [],
     "feeNote": "The verified JAMB CAPS overview does not state a separate charge simply to view or use the CAPS admission-status functions. Any other JAMB service fee is separate and should be confirmed in JAMB e-Facility before payment."
   },
   {
     "slug": "waec-check-result",
-    "title": "How to check a WAEC result online",
+    "title": "WAEC Result Checker: how to check a WAEC result online",
     "shortTitle": "Check WAEC result",
-    "summary": "The fields WAEC Direct requires to check a WASSCE result online.",
+    "summary": "Use the official WAEC Result Checker with your examination number, year, exam type, e-PIN and serial number, then save or print the result.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Requires a valid WAEC result-checker e-PIN",
@@ -981,7 +995,11 @@
     "searchTerms": [
       "Check WAEC result",
       "How to check a WAEC result online",
-      "Education"
+      "Education",
+      "WAEC result checker",
+      "WAEC result checker 2026",
+      "WAEC result checker pin",
+      "WAEC Direct result checker"
     ],
     "related": [],
     "feeNote": "This label describes the required result-checker credential rather than quoting a universal e-PIN price. Confirm the current price and purchase route through WAEC Direct or another WAEC-authorised channel before paying."
@@ -1207,9 +1225,9 @@
   },
   {
     "slug": "neco-check-result",
-    "title": "How to check a NECO result online",
+    "title": "NECO Result Checker: how to check a NECO result online",
     "shortTitle": "Check NECO result",
-    "summary": "The official NECO Results Portal process using exam year/type, token and registration number.",
+    "summary": "Use the official NECO Result Checker with the examination year, exam type, token and registration number; the portal also links to token purchase.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Requires a NECO result token",
@@ -1243,7 +1261,11 @@
     "searchTerms": [
       "Check NECO result",
       "How to check a NECO result online",
-      "Education"
+      "Education",
+      "NECO result checker",
+      "NECO result checker 2026",
+      "NECO result token",
+      "NECO results portal"
     ],
     "related": []
   },
@@ -1414,7 +1436,11 @@
     "searchTerms": [
       "NYSC registration",
       "How NYSC registration works for locally trained graduates",
-      "Youth service"
+      "Youth service",
+      "NYSC portal",
+      "NYSC portal registration",
+      "NYSC registration portal",
+      "NYSC online registration"
     ],
     "related": []
   },
@@ -2379,7 +2405,10 @@
     "searchTerms": [
       "NYSC senate list",
       "How to check the NYSC senate list",
-      "Youth service"
+      "Youth service",
+      "NYSC senate list portal",
+      "check NYSC senate list",
+      "NYSC mobilization list"
     ],
     "related": [],
     "feeNote": "The verified NYSC sources do not state a separate charge simply to check the Senate/Academic Board list. Any later NYSC transaction or optional service is separate and should be confirmed on the official NYSC portal."
@@ -2424,7 +2453,10 @@
     "searchTerms": [
       "NYSC call-up letter",
       "How to access an NYSC call-up letter",
-      "Youth service"
+      "Youth service",
+      "NYSC portal call up letter",
+      "print NYSC call up letter",
+      "NYSC call up letter portal"
     ],
     "related": []
   },
@@ -3191,7 +3223,10 @@
     "searchTerms": [
       "NIN name modification",
       "How to change your name on NIN",
-      "Identity"
+      "Identity",
+      "NIN modification portal",
+      "NIN name correction",
+      "change name on NIN online"
     ],
     "related": []
   },
@@ -3245,7 +3280,10 @@
     "searchTerms": [
       "NIN phone-number modification",
       "How to change your phone number on NIN",
-      "Identity"
+      "Identity",
+      "NIN modification portal",
+      "NIN phone number correction",
+      "change NIN phone number online"
     ],
     "related": []
   },
