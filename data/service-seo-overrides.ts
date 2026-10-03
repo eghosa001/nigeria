@@ -1,0 +1,37 @@
+export const serviceSeoTitleTemplates: Record<string, string> = {
+  "ecowas-travel-certificate": "ECOWAS Travel Certificate Nigeria {year}: Cost & Requirements",
+  "nin-phone-modification": "Change NIN Phone Number {year}: Fee, Police Report & Steps",
+  "passport-change-of-data": "Nigerian Passport Data Change {year}: Requirements & Fees",
+  "npc-check-attestation-status": "NPC Birth Attestation Status {year}: Check & Download",
+  "lost-nigerian-passport": "Lost Nigerian Passport {year}: Replacement & Requirements",
+  "police-character-certificate": "Police Character Certificate Nigeria {year}: Cost & Apply",
+  "nigeria-landing-exit-card": "Nigeria Landing & Exit Card {year}: Online Form & Guide",
+  "passport-renewal": "Nigerian Passport Renewal {year}: Fee & Requirements",
+  "npc-birth-attestation": "NPC Birth Attestation {year}: Requirements & Application",
+  "jamb-admission-letter": "JAMB Admission Letter {year}: How to Print Online",
+  "waec-check-result": "WAEC Result Checker {year}: Check Result Online",
+  "neco-check-result": "NECO Result Checker {year}: Check Result Online",
+  "jamb-caps": "JAMB CAPS {year}: Check Admission Status & Accept Admission",
+  "cac-company-registration": "CAC Company Registration {year}: Cost, Form & Process",
+  "cac-business-name-registration": "CAC Business Name Registration {year}: Cost & Steps",
+  "jamb-direct-entry-2026": "JAMB Direct Entry {year}: Form, Fee & Registration",
+  "pencom-open-rsa": "Open Pension RSA in Nigeria {year}: Requirements & Steps",
+  "pencom-transfer-rsa": "Transfer Pension PFA {year}: Requirements & Steps",
+  "nrs-individual-tax-registration": "NRS Taxpayer Registration {year}: How to Register",
+  "passport-name-change": "Passport Name Change Nigeria {year}: Requirements & Fees",
+  "jamb-matriculation-list": "JAMB Matriculation List {year}: Check Your Name Online",
+  "jamb-regularization-condonement": "JAMB Regularization {year}: Condonement Fee & Steps",
+  "cac-public-search": "CAC Public Search {year}: Verify Company or Business",
+  "bvn-validation": "BVN Validation {year}: Check a BVN with *565*1#",
+  "bvn-data-update": "BVN Correction {year}: Update Name, DOB or Other Details",
+  "nrs-tax-id-retrieval": "Nigeria Tax ID Retrieval {year}: Find Tax ID with NIN or CAC",
+  "passport-application-tracking": "Nigerian Passport Tracking {year}: Check Application Status",
+  "drivers-licence-verification": "Driver's Licence Verification Nigeria {year}: Check Online",
+  "waec-2026-private-candidates-timetable": "WAEC Timetable {year}: Private Candidates Second Series",
+  "neco-2026-timetable": "NECO Timetable {year}: Download Official SSCE Timetable",
+};
+
+export function getServiceSeoTitleOverride(slug: string, year: string) {
+  const template = serviceSeoTitleTemplates[slug];
+  return template ? template.replaceAll("{year}", year) : null;
+}
