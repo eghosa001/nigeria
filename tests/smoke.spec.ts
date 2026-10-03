@@ -1,4 +1,4 @@
-test("phone shell fits and exposes admin login without hydration errors", async ({ page }) => {
+test("phone shell fits and keeps admin out of public navigation without hydration errors", async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 800 });
   const hydrationErrors: string[] = [];
   const capture = (message: string) => {
@@ -13,7 +13,7 @@ test("phone shell fits and exposes admin login without hydration errors", async 
   }
 
   await page.goto("/");
-  await expect(page.getByRole("link", { name: "Admin login" }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Admin login" })).toHaveCount(0);
 
   await page.goto("/admin");
   await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
