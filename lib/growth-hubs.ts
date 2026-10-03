@@ -30,8 +30,8 @@ export const growthHubs: GrowthHub[] = [
       "NIN requests are easy to mix up because enrolment, self-service modifications and slip reissue use different routes. This hub groups the main NIMC tasks so you can go straight to the exact correction or enrolment process.",
       "Before paying, open the relevant guide to confirm the current fee, required evidence and whether the task is completed online or needs an enrolment centre."
     ],
-    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
-    serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "nin-slip-reissue"]
+    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "NIN verification", serviceSlug: "ninauth-nin-verification" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
+    serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "ninauth-nin-verification", "nin-slip-reissue"]
   },
   {
     slug: "bvn",
@@ -283,9 +283,9 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "waec-neco-results",
-    title: "WAEC & NECO Result Checker, Certificates and Verification Guide",
-    shortTitle: "WAEC & NECO results",
-    description: "Check WAEC or NECO results, get result tokens, access certificates and use the correct verification or confirmation route.",
+    title: "WAEC, NECO & NABTEB Result Checker and Certificate Guide",
+    shortTitle: "Exam results",
+    description: "Check WAEC, NECO or NABTEB results, get the right result-checking credential, access certificates and use official verification routes.",
     intro: [
       "Result checking, certificate collection and institutional verification are different tasks. This hub separates them so students, graduates and institutions can start with the correct WAEC or NECO service.",
       "Use the linked guide for the exact task you need, especially when a school, employer or foreign institution asks for formal confirmation rather than a normal online result check."
@@ -300,9 +300,10 @@ export const growthHubs: GrowthHub[] = [
       { query: "buy NECO result token", serviceSlug: "neco-purchase-result-token" },
       { query: "verify NECO result", serviceSlug: "neco-e-verify" },
       { query: "WAEC timetable 2026", serviceSlug: "waec-2026-private-candidates-timetable" },
-      { query: "NECO timetable 2026", serviceSlug: "neco-2026-timetable" }
+      { query: "NECO timetable 2026", serviceSlug: "neco-2026-timetable" },
+      { query: "NABTEB result checker", serviceSlug: "nabteb-result-checker" }
     ],
-    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "waec-2026-private-candidates-timetable", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification", "neco-2026-timetable"]
+    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "waec-2026-private-candidates-timetable", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification", "neco-2026-timetable", "nabteb-result-checker"]
   },
   {
     slug: "electricity-meter-billing",
