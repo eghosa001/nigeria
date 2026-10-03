@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
-import { entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type WatchLink } from "@/lib/entertainment";
+import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
@@ -16,10 +16,28 @@ export function generateStaticParams() {
   return entertainmentTitles.map((title) => ({ slug: title.slug }));
 }
 
+function videoIdFromUrl(href: string) {
+  try {
+    const url = new URL(href);
+    if (url.hostname === "youtu.be") return url.pathname.slice(1);
+    if (url.hostname.endsWith("youtube.com")) return url.searchParams.get("v");
+  } catch {}
+  return null;
+}
+
+function movieImageUrl(title: EntertainmentTitle) {
+  if (canDisplayEntertainmentArtwork(title) && title.artwork) return title.artwork.url;
+  const fullMovie = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
+  const source = fullMovie ?? title.trailer;
+  const videoId = source ? videoIdFromUrl(source.href) : null;
+  return videoId ? "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg" : null;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const title = getEntertainmentTitle(slug);
   if (!title) return {};
+  const image = movieImageUrl(title);
 
   return {
     title: title.title + " — Cast, Details & Where to Watch",
@@ -30,6 +48,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: title.title,
       description: title.synopsis,
       url: "/entertainment/movies/" + title.slug,
+      images: image ? [{ url: image, alt: title.title + " artwork" }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: title.title,
+      description: title.synopsis,
+      images: image ? [image] : undefined,
     },
   };
 }
@@ -99,6 +124,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const lastChecked = allCheckedDates.reduce((latest, value) => value > latest ? value : latest, "");
   const platforms = [...new Set(availabilityLinks.map((link) => link.platform))];
   const featuredCast = getFeaturedCast(title);
+  const image = movieImageUrl(title);
 
   const movieLd = {
     "@context": "https://schema.org",
@@ -110,6 +136,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     inLanguage: title.languages,
     actor: title.cast.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
+    image: image || undefined,
     sameAs: availabilityLinks.map((link) => link.href),
     potentialAction: availabilityLinks.map((link) => ({ "@type": "WatchAction", target: link.href })),
   };
