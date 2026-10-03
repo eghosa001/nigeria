@@ -26,6 +26,7 @@ const exactGuidanceOverrides: Record<string, string> = {
   "jamb-reset-profile-password": "https://www.jamb.gov.ng/FAQ",
   "jamb-2026-utme-registration": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
   "jamb-direct-entry-2026": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
+  "neco-2026-timetable": "https://neco.gov.ng/2026%20SSCE%20EXTERNAL%20TIMETABLE.pdf",
   "waec-collect-certificate": "https://waecnigeria.org/faq",
   "waec-lost-certificate": "https://waecnigeria.org/faq",
   "waec-correct-certificate-error": "https://waecnigeria.org/faq",
