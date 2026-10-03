@@ -168,5 +168,50 @@
       "30,000"
     ],
     "strict": false
+  },
+  {
+    "name": "NAF 2026 Airmen/Airwomen recruitment status",
+    "url": "https://nafrecruitment.airforce.mil.ng/",
+    "expectedAny": [
+      "Airmen/Airwomen",
+      "BMTC"
+    ],
+    "strict": false
+  },
+  {
+    "name": "Nigerian Army 92RRI recruitment status",
+    "url": "https://recruit.army.mil.ng/",
+    "expectedAny": [
+      "92RRI",
+      "Online Application is ongoing"
+    ],
+    "strict": false
+  },
+  {
+    "name": "Nigerian Navy Batch 39 recruitment",
+    "url": "https://joinnigeriannavy.navy.mil.ng/",
+    "expectedAll": [
+      "BATCH 39",
+      "31 October 2026"
+    ],
+    "strict": false
+  },
+  {
+    "name": "NNPC recruitment application status",
+    "url": "https://careers.nnpcgroup.com/",
+    "expectedAny": [
+      "Application submission is now closed",
+      "Graduate Trainee"
+    ],
+    "strict": false
+  },
+  {
+    "name": "Nigeria Customs training-stage recruitment",
+    "url": "https://updates.customs.gov.ng/trn/",
+    "expectedAny": [
+      "training",
+      "Training"
+    ],
+    "strict": false
   }
 ]
