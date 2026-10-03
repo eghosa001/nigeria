@@ -14,18 +14,57 @@ export function generateStaticParams() {
   return exploreGuides.map((guide) => ({ slug: guide.slug }));
 }
 
+function truncateSeo(value: string, limit: number) {
+  if (value.length <= limit) return value;
+  const shortened = value.slice(0, limit - 1);
+  const lastSpace = shortened.lastIndexOf(" ");
+  return (lastSpace > Math.floor(limit * 0.7) ? shortened.slice(0, lastSpace) : shortened).trimEnd() + "…";
+}
+
+function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
+  if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide 2026: Things to Do & Places to Visit", 60);
+  if (guide.kind === "itinerary") return truncateSeo(guide.title + " 2026: Itinerary & Things to Do", 60);
+  return truncateSeo(guide.title + " 2026: Things to Do & Trip Planning", 60);
+}
+
+function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
+  const highlights = guide.highlights.slice(0, 4).map((item) => item.name);
+  const firstPlanning = guide.planning[0]?.detail ?? "Group nearby stops together and confirm live access before travelling.";
+  return [
+    {
+      question: "What are the best things to do in " + guide.shortTitle + "?",
+      answer: "Start with " + highlights.slice(0, 3).join(", ") + ". The guide below explains how to fit these into a realistic trip.",
+    },
+    {
+      question: "What places should I visit in " + guide.shortTitle + "?",
+      answer: highlights.length ? "Useful starting points include " + highlights.join(", ") + "." : guide.summary,
+    },
+    {
+      question: "What is " + guide.shortTitle + " best known for?",
+      answer: guide.shortTitle + " is especially useful for travellers interested in " + guide.bestFor.join(", ") + ".",
+    },
+    {
+      question: "How should I plan a trip to " + guide.shortTitle + "?",
+      answer: firstPlanning,
+    },
+  ];
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const guide = getExploreGuide(slug);
   if (!guide) return {};
 
+  const title = getExploreSeoTitle(guide);
+  const description = truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
+
   return {
-    title: guide.title,
-    description: guide.summary,
+    title: { absolute: title },
+    description,
     alternates: { canonical: "/explore/" + guide.slug },
     openGraph: {
-      title: guide.title,
-      description: guide.summary,
+      title,
+      description,
       type: "website",
       url: "/explore/" + guide.slug,
     },
@@ -57,6 +96,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     .slice(0, 4)
     .map((entry) => entry.item);
   const places = getExplorePlacesForGuide(guide.slug);
+  const questions = getExploreQuestions(guide);
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -70,15 +110,32 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   const guideLd = {
     "@context": "https://schema.org",
-    "@type": "TravelAction",
+    "@type": "TouristDestination",
+    name: guide.shortTitle,
+    description: guide.summary,
+    url: pageUrl,
+    address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
+    touristType: guide.bestFor,
+  };
+
+  const webpageLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
     name: guide.title,
     description: guide.summary,
     url: pageUrl,
-    object: {
-      "@type": "Place",
-      name: guide.shortTitle,
-      address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
-    },
+    dateModified: guide.lastReviewed,
+    about: { "@type": "TouristDestination", name: guide.shortTitle },
+  };
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   const placesLd = {
@@ -100,7 +157,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd, guideLd, placesLd]} />
+      <JsonLd data={[breadcrumbLd, webpageLd, guideLd, placesLd, faqLd]} />
       <section className="section page-top">
         <div className="container">
           <Breadcrumbs items={[
@@ -172,6 +229,25 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
                   {place.website ? <a href={place.website} target="_blank" rel="noreferrer">Official website ↗</a> : null}
                   {place.source ? <a href={place.source.href} target="_blank" rel="noreferrer">{place.source.label} ↗</a> : null}
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Common trip questions</span>
+              <h2>Planning {guide.shortTitle}</h2>
+            </div>
+          </div>
+          <div className="search-answer-grid">
+            {questions.map((item) => (
+              <article key={item.question}>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
               </article>
             ))}
           </div>
