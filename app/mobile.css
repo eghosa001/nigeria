@@ -343,6 +343,7 @@ body:has(.admin-nav) > .site-footer {
     grid-template-columns: minmax(0, 1fr) !important;
   }
   .jobs-path-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .jobs-open-grid { grid-template-columns: minmax(0, 1fr); }
   .jobs-path-grid .jobs-path-card:last-child { grid-column: 1 / -1; min-height: 210px; }
   .jobs-status-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .jobs-controls { grid-template-columns: minmax(0, 1fr) repeat(2, minmax(150px, .45fr)); }
