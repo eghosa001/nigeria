@@ -20,19 +20,15 @@ import { ServiceAftercare } from "@/components/service-aftercare";
 import { GuideQuickNav } from "@/components/guide-quick-nav";
 import { StatusBadge } from "@/components/status-badge";
 import { categorySlug } from "@/lib/category";
-import { getAgency, getPublicService, publicServices } from "@/lib/data";
+import { getAgency, getPublicService } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getGrowthHubsForService } from "@/lib/growth-hubs";
 import { getRelatedServices } from "@/lib/internal-links";
 import { getServiceSearchAnswers } from "@/lib/search-answers";
 import { getSiteUrl } from "@/lib/site";
 
-export const dynamic = "force-static";
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return publicServices.map((service) => ({ slug: service.slug }));
-}
+export const revalidate = 86400;
+export const dynamicParams = true;
 
 function normalizeMetadataText(value: string) {
   return value.replace(/'/g, "’").replace(/\s+/g, " ").trim();
