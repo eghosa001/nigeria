@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = getServiceSeoTitle(service.shortTitle, service.title, service.lastVerified);
   const summary = normalizeMetadataText(service.summary);
   const description = truncateMetadataText(
-    summary.length >= 80
+    summary.length >= 110
       ? `${summary} Verified ${year}.`
       : `${summary} Updated ${year}: current requirements, fees/status, steps and official application links.`,
     155,
@@ -147,18 +147,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     about: agency ? { "@type": "Thing", name: agency.name, url: agency.website } : undefined,
   };
 
-  const articleLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: service.title,
-    description: service.summary,
-    mainEntityOfPage: pageUrl,
-    dateModified: service.lastVerified,
-    author: { "@type": "Organization", name: "MyNigeriaGuide", url: base },
-    publisher: { "@type": "Organization", name: "MyNigeriaGuide", url: base },
-    isAccessibleForFree: true,
-  };
-
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -174,7 +162,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd, webpageLd, articleLd, faqLd]} />
+      <JsonLd data={[breadcrumbLd, webpageLd, faqLd]} />
       <section className="guide-hero">
         <div className="container">
           <Breadcrumbs items={breadcrumbs} />
