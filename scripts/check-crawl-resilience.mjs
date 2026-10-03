@@ -1,8 +1,8 @@
 const base = (process.env.CRAWL_BASE_URL || process.env.LIVE_BASE_URL || "https://mynigeriaguide.com").replace(/\/$/, "");
 
 const checks = [
-  ["/robots.txt", /sitemap-index\.xml/i],
-  ["/sitemap-index.xml", /sitemaps\/youtube\.xml/i],
+  ["/robots.txt", /sitemap\.xml/i],
+  ["/sitemap.xml", /sitemaps\/youtube\.xml/i],
   ["/sitemaps/core.xml", /<urlset/i],
   ["/sitemaps/services.xml", /services\/passport-renewal/i],
   ["/sitemaps/travel.xml", /explore\/lagos/i],
