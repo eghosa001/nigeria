@@ -35,6 +35,57 @@ export type CareerOpportunity = {
 
 export const jobOpportunities: CareerOpportunity[] = [
   {
+    slug: "nigerian-air-force-airmen-airwomen-recruitment-2026",
+    title: "Nigerian Air Force Airmen/Airwomen Recruitment 2026",
+    organization: "Nigerian Air Force",
+    sector: "Government",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "The Nigerian Air Force 2026 Airmen/Airwomen Basic Military Training Course recruitment is open. The official portal shows an application window from 3 September to 14 October 2026.",
+    location: "Nigeria",
+    employmentType: "Military recruitment / Basic Military Training Course",
+    audiences: ["SSCE holders", "ND/NCE holders", "Tradesmen/Women", "Non-Tradesmen/Women"],
+    fields: ["Military service", "Technical trades", "Non-trade roles", "Air Force"],
+    qualifications: [
+      "The official portal states a minimum of 7 credits including English and Mathematics for Airmen/Airwomen recruitment.",
+      "Trade applicants additionally require the relevant Trade Test Certificate or ND/NCE qualification.",
+      "The portal describes BMTC as suitable for holders of Secondary School Certificate, National Diploma, NABTEB, RN/RM/NCE, City & Guild or Trade Test qualifications, depending on category."
+    ],
+    requirements: [
+      "Non-Tradesmen/Women: official portal states an age range of 18–22 years.",
+      "Tradesmen/Women: official portal states an age range of 18–25 years.",
+      "Minimum height published by the NAF portal is 1.63 m for female applicants and 1.66 m for male applicants.",
+      "Applicants should read the current exercise instructions on the official portal because category-specific conditions may apply."
+    ],
+    documents: [
+      "Academic certificates matching the selected category",
+      "Trade Test, ND or NCE evidence where applying through a trade category",
+      "Identity and personal information requested in the official NAF application",
+      "Any additional documents listed in the current application instructions"
+    ],
+    applicationSteps: [
+      "Open the official Nigerian Air Force recruitment portal.",
+      "Confirm that you are applying for the open Airmen/Airwomen BMTC exercise, not the closed DSSC route.",
+      "Read the current exercise instructions and verify your age, height and qualification category.",
+      "Start a new application through the official portal and complete the requested information.",
+      "Keep your application details so you can continue or check later stages through the same portal."
+    ],
+    officialUrl: "https://nafrecruitment.airforce.mil.ng/",
+    officialUrlLabel: "Apply on the official NAF recruitment portal",
+    verifiedAt: "2026-10-03",
+    deadline: "2026-10-14",
+    nextMilestone: "Applications are open until 14 October 2026 according to the official portal.",
+    feeNote: "The Nigerian Air Force states that recruitment/enlistment is FREE and is done through its official recruitment portal.",
+    sourceNotes: [
+      "The official NAF portal marks the Airmen/Airwomen BMTC exercise as open.",
+      "The portal lists 3 September 2026 to 14 October 2026 for the current exercise.",
+      "The DSSC section on the same portal is currently marked closed."
+    ],
+    sources: [
+      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
     slug: "nigeria-customs-service-recruitment",
     title: "Nigeria Customs Service Recruitment",
     organization: "Nigeria Customs Service",
