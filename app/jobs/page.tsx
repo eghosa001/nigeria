@@ -17,6 +17,7 @@ export default function JobsPage() {
   const base = getSiteUrl();
   const activeGovernment = governmentOpportunities.filter((item) => item.status === "open" || item.status === "screening" || item.status === "training").length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
+  const openOpportunities = jobOpportunities.filter((item) => item.status === "open");
 
   const collectionLd = {
     "@context": "https://schema.org",
@@ -63,6 +64,40 @@ export default function JobsPage() {
           </aside>
         </div>
       </section>
+
+      {openOpportunities.length ? (
+        <section className="section jobs-open-section">
+          <div className="container">
+            <div className="minimal-section-heading">
+              <div>
+                <span className="eyebrow">Open now</span>
+                <h2>Applications you can act on today.</h2>
+                <p>Only opportunities whose official source currently shows an open application window appear here.</p>
+              </div>
+            </div>
+            <div className="jobs-open-grid">
+              {openOpportunities.map((item) => (
+                <article className="job-card job-card-open" key={item.slug}>
+                  <div className="job-card-top">
+                    <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+                    <span>{item.sector}</span>
+                  </div>
+                  <div className="job-card-body">
+                    <p className="job-organisation">{item.organization}</p>
+                    <h3><Link href={"/jobs/" + item.slug}>{item.title}</Link></h3>
+                    <p>{item.summary}</p>
+                    {item.deadline ? <p className="job-deadline"><strong>Deadline:</strong> {new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</p> : null}
+                  </div>
+                  <div className="job-card-footer">
+                    <span>Official source checked {item.verifiedAt}</span>
+                    <Link href={"/jobs/" + item.slug}>Requirements & apply →</Link>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section jobs-path-section">
         <div className="container">
