@@ -26,6 +26,7 @@ export function SiteFooter() {
             <Link href="/fees">Fees</Link>
             <Link href="/latest">Latest additions</Link>
             <Link href="/offices">Official offices</Link>
+            <Link href="/locations">Service locations by city</Link>
           </div>
           <div>
             <strong>About</strong>
