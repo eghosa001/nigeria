@@ -18,21 +18,66 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Detect product-CI-relevant changes
+        id: scope
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.base_ref }}" --depth=1
+            changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+          else
+            before="${{ github.event.before }}"
+            if [ -n "$before" ] && [ "$before" != "0000000000000000000000000000000000000000" ]; then
+              git fetch origin "$before" --depth=1 || true
+              changed="$(git diff --name-only "$before" "${{ github.sha }}" 2>/dev/null || git diff --name-only HEAD^1 HEAD)"
+            else
+              changed="$(git diff --name-only HEAD^1 HEAD 2>/dev/null || true)"
+            fi
+          fi
+
+          relevant="$(
+            printf '%s\n' "$changed" |
+              grep -E '^(app|components|lib|data|tests)/|^scripts/|^(package(-lock)?\.json|tsconfig\.json|next\.config\.(js|mjs|ts)|vite\.config\.ts|wrangler\.jsonc|playwright.*\.config\.ts)$' |
+              grep -v '^scripts/fast_path_guard\.py$' || true
+          )"
+
+          if [ -z "$relevant" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "No product-CI-relevant changes; required CI check can finish immediately."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            printf 'Product-CI-relevant files:\n%s\n' "$relevant"
+          fi
       - uses: actions/setup-node@v4
+        if: steps.scope.outputs.run == 'true'
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
+        if: steps.scope.outputs.run == 'true'
       - run: node scripts/check-production-audit.mjs
+        if: steps.scope.outputs.run == 'true'
       - run: npm run typecheck
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:service-catalog
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:content
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:explore
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:entertainment-scale
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:analytics-safety
+        if: steps.scope.outputs.run == 'true'
       - run: npm run build:next
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:cloudflare
+        if: steps.scope.outputs.run == 'true'
       - run: npm run build
+        if: steps.scope.outputs.run == 'true'
       - name: Prevent accidental KV dependency
+        if: steps.scope.outputs.run == 'true'
         run: |
           node --input-type=module <<'NODE'
           import fs from "node:fs";
@@ -47,4 +92,5 @@ jobs:
           console.log("KV-free deployment confirmed.");
           NODE
       - name: Package Cloudflare Worker without deploying
+        if: steps.scope.outputs.run == 'true'
         run: npx wrangler deploy --dry-run
