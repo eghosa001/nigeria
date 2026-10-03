@@ -26,7 +26,7 @@ export default function GovernmentJobsPage() {
               <article key={item.slug} className="jobs-tracker-row">
                 <div><span className={"job-status job-status-" + item.status}>{item.statusLabel}</span></div>
                 <div><small>{item.organization}</small><h2><Link href={"/jobs/" + item.slug}>{item.title}</Link></h2><p>{item.summary}</p>{item.nextMilestone ? <strong>{item.nextMilestone}</strong> : null}</div>
-                <div><span>Last checked</span><b>{item.verifiedAt}</b><Link href={"/jobs/" + item.slug}>Requirements →</Link></div>
+                <div><span>{item.deadline ? "Deadline" : "Last checked"}</span><b>{item.deadline || item.verifiedAt}</b><Link href={"/jobs/" + item.slug}>Requirements →</Link></div>
               </article>
             ))}
           </div>
