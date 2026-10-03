@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const person = getEntertainmentPerson(slug);
   if (!person) return {};
   return {
-    title: person.name + " — Nigerian Entertainment",
-    description: person.summary,
+    title: person.name + " Movies, Cast Credits & Nigerian Film Profile",
+    description: person.summary + " See Nigerian movies featuring " + person.name + " and linked film credits.",
     alternates: { canonical: "/entertainment/people/" + person.slug },
   };
 }
@@ -67,7 +67,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
         <h1>{person.name}</h1>
         <p className="page-intro">{person.summary}</p>
 
-<div className="section-heading top-gap"><div><span className="eyebrow">Movies</span><h2>Titles featuring {person.name}.</h2></div></div>
+<div className="section-heading top-gap"><div><span className="eyebrow">Movies</span><h2>{person.name} movies and film credits</h2></div></div>
         {credits.length ? (
           <div className="service-grid">
             {credits.map((title) => {

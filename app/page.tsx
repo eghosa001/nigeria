@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 };
 
 const quickServices = [
-  { label: "Passport renewal", href: "/services/passport-renewal" },
-  { label: "NIN correction", href: "/services/nin-date-of-birth-modification" },
-  { label: "JAMB", href: "/services/jamb-2026-utme-registration" },
-  { label: "Foreign visas", href: "/categories/foreign-visas" },
+  { label: "Nigerian passport", href: "/topics/nigerian-passport" },
+  { label: "NIN correction", href: "/topics/nin-corrections" },
+  { label: "CAC registration", href: "/topics/cac-business" },
+  { label: "JAMB 2026", href: "/topics/jamb-2026" },
 ];
 
 export default function HomePage() {

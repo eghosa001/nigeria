@@ -30,7 +30,7 @@ export const growthHubs: GrowthHub[] = [
       "NIN requests are easy to mix up because enrolment, self-service modifications and slip reissue use different routes. This hub groups the main NIMC tasks so you can go straight to the exact correction or enrolment process.",
       "Before paying, open the relevant guide to confirm the current fee, required evidence and whether the task is completed online or needs an enrolment centre."
     ],
-    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "NIN verification", serviceSlug: "ninauth-nin-verification" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
+    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN portal for change of date of birth", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "police report for NIN change of number", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "NIN verification", serviceSlug: "ninauth-nin-verification" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
     serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "ninauth-nin-verification", "nin-slip-reissue"]
   },
   {
@@ -42,7 +42,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub for first-time BVN enrolment, retrieving an existing BVN and obtaining a BVN through the non-resident route while outside Nigeria.",
       "The linked guides separate bank and NIBSS routes from unofficial advice and point you to the exact channel for each supported BVN task."
     ],
-    searches: [{ query: "retrieve BVN", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "validate BVN", serviceSlug: "bvn-validation" }, { query: "change BVN details", serviceSlug: "bvn-data-update" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
+    searches: [{ query: "BVN retrieval", serviceSlug: "bvn-retrieval" }, { query: "how to retrieve BVN number", serviceSlug: "bvn-retrieval" }, { query: "NIBSS BVN online portal", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "validate BVN", serviceSlug: "bvn-validation" }, { query: "change BVN details", serviceSlug: "bvn-data-update" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN enrolment form", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
     serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "bvn-validation", "bvn-data-update", "non-resident-bvn"]
   },
   {
@@ -71,14 +71,14 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "cac-business",
-    title: "CAC Registration, Public Search & Filing Guide",
+    title: "CAC Registration Nigeria 2026: Cost, Portal, Business Name & Company",
     shortTitle: "CAC business",
-    description: "Register a business or company with CAC, search existing entities, and find post-registration filings, status reports and certified copies.",
+    description: "CAC registration in Nigeria: use the official portal for business-name or company registration, then find public search, fees and post-registration filings.",
     intro: [
       "This hub groups the CAC tasks most business owners need from choosing a name through registration and later compliance documents.",
       "Use the exact guide for your task because business-name registration, company incorporation, annual returns and certified documents have different requirements and fees."
     ],
-    searches: [{ query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC public search", serviceSlug: "cac-public-search" }, { query: "CAC company search", serviceSlug: "cac-public-search" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
+    searches: [{ query: "CAC registration", serviceSlug: "cac-business-name-registration" }, { query: "CAC registration cost", serviceSlug: "cac-business-name-registration" }, { query: "CAC official website", serviceSlug: "cac-public-search" }, { query: "CAC registration portal", serviceSlug: "cac-business-name-registration" }, { query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC public search", serviceSlug: "cac-public-search" }, { query: "CAC company search", serviceSlug: "cac-public-search" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
     serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report"]
   },
   {
@@ -185,7 +185,10 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "open RSA Nigeria", serviceSlug: "pencom-open-rsa" },
+      { query: "open RSA online", serviceSlug: "pencom-open-rsa" },
+      { query: "NIN for RSA registration", serviceSlug: "pencom-open-rsa" },
       { query: "change PFA Nigeria", serviceSlug: "pencom-transfer-rsa" },
+      { query: "how to transfer pension PFA", serviceSlug: "pencom-transfer-rsa" },
       { query: "employer not paying pension", serviceSlug: "pencom-unremitted-contributions" },
       { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
       { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" }
@@ -223,7 +226,9 @@ export const growthHubs: GrowthHub[] = [
       { query: "verify number plate Nigeria", serviceSlug: "verify-vehicle-number-plate" },
       { query: "verify vehicle ownership Nigeria", serviceSlug: "vehicle-proof-of-ownership-verification" },
       { query: "check vehicle insurance Nigeria", serviceSlug: "vehicle-insurance-validation-ussd" },
-      { query: "verify customs duty car Nigeria", serviceSlug: "customs-vehicle-duty-verification" }
+      { query: "verify customs duty car Nigeria", serviceSlug: "customs-vehicle-duty-verification" },
+      { query: "846 customs", serviceSlug: "customs-846-non-standard-vin" },
+      { query: "846 e application verification portal NCS", serviceSlug: "customs-846-non-standard-vin" }
     ],
     serviceSlugs: ["vehicle-registration-nvis", "verify-vehicle-number-plate", "vehicle-proof-of-ownership-verification", "vehicle-insurance-validation-ussd", "customs-vehicle-duty-verification", "customs-846-non-standard-vin", "new-drivers-licence", "renew-drivers-licence"]
   },
@@ -274,6 +279,8 @@ export const growthHubs: GrowthHub[] = [
       { query: "LASRRA registration", serviceSlug: "lagos-lasrra-registration" },
       { query: "Lagos Land Use Charge", serviceSlug: "lagos-land-use-charge" },
       { query: "Lagos tax clearance verification", serviceSlug: "lagos-tax-clearance-verification" },
+      { query: "ASIN registration", serviceSlug: "anambra-asin-registration" },
+      { query: "ASIN registration online", serviceSlug: "anambra-asin-registration" },
       { query: "FCT tax clearance certificate", serviceSlug: "fct-tax-clearance-application" },
       { query: "Ogun tax clearance certificate", serviceSlug: "ogun-tax-clearance-certificate" },
       { query: "RIVTIN registration", serviceSlug: "rivers-rivtin-registration" },
@@ -371,6 +378,7 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "check bank transfer status Nigeria", serviceSlug: "nip-transfer-status" },
+      { query: "NIP status checker", serviceSlug: "nip-transfer-status" },
       { query: "NIP transfer status", serviceSlug: "nip-transfer-status" },
       { query: "failed bank transfer reversal", serviceSlug: "nip-transfer-status" },
       { query: "report bank to CBN", serviceSlug: "cbn-bank-complaint" },
@@ -390,6 +398,9 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "ECOWAS travel certificate Nigeria", serviceSlug: "ecowas-travel-certificate" },
+      { query: "ECOWAS travel certificate price", serviceSlug: "ecowas-travel-certificate" },
+      { query: "ECOWAS travel certificate application form", serviceSlug: "ecowas-travel-certificate" },
+      { query: "ECOWAS certificate", serviceSlug: "ecowas-travel-certificate" },
       { query: "ECOWAS passport Nigeria", serviceSlug: "ecowas-travel-certificate" },
       { query: "Yellow Card Nigeria", serviceSlug: "yellow-card" },
       { query: "Nigeria landing card", serviceSlug: "nigeria-landing-exit-card" },

@@ -16,13 +16,15 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   if (!movie) return {};
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
+  const cast = movie.featuredCast.slice(0, 4);
+  const description = `${movie.title} is a ${movie.year} Nigerian movie. ${cast.length ? "Cast includes " + cast.join(", ") + ". " : ""}${movie.synopsis}`;
   return {
-    title: movie.title + " — Cast, Details & Watch Free on YouTube",
-    description: movie.synopsis,
+    title: movie.title + " Nigerian Movie: Cast & Watch Free on YouTube",
+    description,
     alternates: { canonical },
     openGraph: {
       title: movie.title + " — Nigerian Movie",
-      description: movie.synopsis,
+      description,
       type: "video.other",
       images: [{ url: image, alt: movie.title + " official YouTube thumbnail" }],
     },
@@ -142,7 +144,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
           <article className="movie-detail-primary">
             <section className="movie-overview-section">
               <span className="eyebrow">About the movie</span>
-              <h2>{movie.title}</h2>
+              <h2>{movie.title} Nigerian movie: story and details</h2>
               <p className="movie-long-summary">{movie.synopsis}</p>
 </section>
 
@@ -160,7 +162,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
             <section id="cast">
               <span className="eyebrow">Cast</span>
-              <h2>People listed for {movie.title}</h2>
+              <h2>{movie.title} cast</h2>
               {movie.cast.length ? (
                 <div className="movie-person-list">
                   {movie.cast.map((name) => {
