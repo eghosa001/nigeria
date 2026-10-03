@@ -5,10 +5,11 @@ import { ServiceSearch } from "@/components/search";
 import { publicServiceListings } from "@/lib/data";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
+import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
 
 export const metadata: Metadata = {
-  title: "Nigerian Movies, Services & Travel Guide",
-  description: "Discover Nigerian movies, practical service guidance and places to explore across Nigeria in one clear guide.",
+  title: "Nigerian Movies, Services, Jobs & Travel Guide",
+  description: "Discover Nigerian movies, practical service guidance, verified jobs and careers, and places to explore across Nigeria.",
   alternates: { canonical: "/" },
 };
 
@@ -35,8 +36,8 @@ export default function HomePage() {
         <div className="container minimal-home-hero-inner">
           <div className="minimal-home-copy">
             <span className="eyebrow">MyNigeriaGuide</span>
-            <h1>Nigeria, easier to explore.</h1>
-            <p>Watch Nigerian movies, handle essential services, and find places worth going.</p>
+            <h1>Nigeria, easier to navigate.</h1>
+            <p>Watch Nigerian movies, handle essential services, find verified career opportunities, and discover places worth going.</p>
           </div>
 
           <nav className="home-paths" aria-label="Start with MyNigeriaGuide">
@@ -49,6 +50,11 @@ export default function HomePage() {
               <span>Do</span>
               <strong>Services</strong>
               <small>Clear steps for documents, applications and everyday processes.</small>
+            </Link>
+            <Link href="/jobs" className="home-path home-path-jobs">
+              <span>Work</span>
+              <strong>Jobs & Careers</strong>
+              <small>Track government recruitment and verified employer career routes.</small>
             </Link>
             <Link href="/explore" className="home-path home-path-tour">
               <span>Go</span>
@@ -104,6 +110,40 @@ export default function HomePage() {
 
           <div className="minimal-service-search">
             <ServiceSearch services={publicServiceListings} />
+          </div>
+        </div>
+      </section>
+
+      <section className="minimal-home-section minimal-home-jobs" aria-labelledby="home-jobs-title">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Jobs & Careers</span>
+              <h2 id="home-jobs-title">Know what is open before you apply.</h2>
+            </div>
+            <Link href="/jobs">Browse careers →</Link>
+          </div>
+
+          <div className="home-jobs-grid">
+            <Link href="/jobs/government" className="home-job-feature">
+              <span>Government tracker</span>
+              <strong>{governmentOpportunities.length} verified recruitment guides</strong>
+              <small>Applications, shortlist, screening, CBT and training status from official sources.</small>
+            </Link>
+            <div className="home-job-list">
+              {governmentOpportunities.slice(0, 2).map((item) => (
+                <Link href={"/jobs/" + item.slug} key={item.slug}>
+                  <span>{item.statusLabel}</span>
+                  <strong>{item.organization}</strong>
+                  <small>{item.nextMilestone || item.summary}</small>
+                </Link>
+              ))}
+              <Link href="/jobs/private">
+                <span>Private institutions</span>
+                <strong>{privateOpportunities.length} official employer career routes</strong>
+                <small>Graduate programmes, SIWES, internships and professional opportunities.</small>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
