@@ -5346,3 +5346,17 @@ a.admin-guide-row:hover { background:#f8fcf9; }
 .jobs-editorial-note { margin-top: 28px; padding: 24px; border-radius: 18px; background: #eaf3ed; }
 .jobs-editorial-note strong { font-size: 1.15rem; }
 .jobs-editorial-note p { margin: 7px 0 0; color: var(--muted); max-width: 850px; }
+
+/* Jobs integration with global search */
+.search-start-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 920px) {
+  .search-start-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+  .search-start-grid { grid-template-columns: minmax(0, 1fr); }
+  .home-path + .home-path { border-left: 0; }
+  .home-path { border-bottom: 1px solid rgba(6,63,45,.10); }
+  .home-path:last-child { border-bottom: 0; }
+}
