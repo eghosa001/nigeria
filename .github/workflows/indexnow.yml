@@ -7,6 +7,10 @@ on:
     paths:
       - "data/services.json"
       - "data/updates.ts"
+      - "data/search-query-overrides.ts"
+      - "data/service-locations.ts"
+      - "lib/growth-hubs.ts"
+      - "lib/sitemap-sections.ts"
       - "app/**/page.tsx"
       - "app/page.tsx"
       - "app/sitemap.ts"
