@@ -30,6 +30,14 @@ export default function HomePage() {
     .filter((guide) => guide.kind === "city" || guide.kind === "destination")
     .slice(0, 3);
 
+  const openGovernmentHighlights = governmentOpportunities
+    .filter((item) => item.status === "open")
+    .slice(0, 3);
+
+  const activeGovernmentCount = governmentOpportunities.filter(
+    (item) => item.status === "open" || item.status === "screening" || item.status === "training",
+  ).length;
+
   return (
     <>
       <section className="minimal-home-hero">
@@ -126,9 +134,27 @@ export default function HomePage() {
 
           <div className="home-jobs-grid">
             <Link href="/jobs/government" className="home-job-feature">
-              <span>Government tracker</span>
-              <strong>{governmentOpportunities.length} verified recruitment guides</strong>
-              <small>Applications, shortlist, screening, CBT and training status from official sources.</small>
+              <div className="home-job-feature-summary">
+                <span>Government tracker</span>
+                <strong>{governmentOpportunities.length} verified recruitment guides</strong>
+                <small>{activeGovernmentCount} recruitments are currently open or in an active later stage.</small>
+              </div>
+
+              <div className="home-job-feature-live">
+                <span>Open now</span>
+                {openGovernmentHighlights.map((item) => (
+                  <div className="home-job-feature-live-item" key={item.slug}>
+                    <b>{item.organization}</b>
+                    <small>
+                      {item.deadline
+                        ? "Closes " + new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", timeZone: "UTC" })
+                        : item.statusLabel}
+                    </small>
+                  </div>
+                ))}
+              </div>
+
+              <b className="home-job-feature-cta">Open government tracker →</b>
             </Link>
             <div className="home-job-list">
               {governmentOpportunities.slice(0, 2).map((item) => (
