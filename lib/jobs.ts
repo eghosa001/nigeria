@@ -208,6 +208,56 @@ export const jobOpportunities: CareerOpportunity[] = [
     ]
   },
   {
+    slug: "cdcfib-paramilitary-recruitment",
+    title: "CDCFIB Paramilitary Recruitment: NSCDC, NIS, NCoS & Federal Fire Service",
+    organization: "Civil Defence, Correctional, Fire and Immigration Services Board",
+    sector: "Government",
+    status: "closed",
+    statusLabel: "Recruitment concluded",
+    summary: "The official CDCFIB recruitment portal currently states that the recruitment exercise has concluded. The cycle covered NSCDC, Nigeria Immigration Service, Nigerian Correctional Service and Federal Fire Service.",
+    location: "Nigeria",
+    employmentType: "Federal paramilitary recruitment",
+    audiences: ["Graduates", "HND holders", "ND/NCE holders", "SSCE holders", "Applicants"],
+    fields: ["Civil Defence", "Immigration", "Corrections", "Fire Service", "Paramilitary"],
+    qualifications: [
+      "Superintendent Cadre: the published eligibility structure includes a recognised Bachelor's degree or HND, with specialist positions able to require professional qualifications.",
+      "Inspectorate Cadre: the published structure includes ND, NCE or equivalent qualifications; registered nurses and midwives may qualify for relevant positions.",
+      "Assistant Cadre: the published structure includes SSCE, NECO, GCE or NABTEB credits including English Language and Mathematics, with Trade Test certificates used for some artisan/technical positions."
+    ],
+    requirements: [
+      "Applicant must be a Nigerian citizen by birth under the published general criteria.",
+      "The published age range for the recruitment cycle is 18–35 years, subject to the exact advert.",
+      "Published minimum height: 1.65 m for male applicants and 1.60 m for female applicants.",
+      "Applicants must meet medical/physical fitness and good-character requirements.",
+      "Only one of the four services may be selected in a recruitment cycle; multiple applications can lead to disqualification."
+    ],
+    documents: [
+      "Academic certificates for the cadre applied for",
+      "Evidence of Nigerian citizenship/identity requested by the recruitment portal",
+      "Medical or fitness documentation where required at screening",
+      "Other credentials specified for the selected service and cadre"
+    ],
+    applicationSteps: [
+      "The current recruitment exercise is concluded, so do not submit a new application through unofficial forms.",
+      "Existing applicants should use only the official CDCFIB recruitment domain for any status or archival information still available.",
+      "For a future cycle, choose only one participating service and the cadre matching your qualification.",
+      "Read the official advert and portal instructions before uploading documents or attending screening."
+    ],
+    officialUrl: "https://recruitment.cdcfib.gov.ng/",
+    officialUrlLabel: "Open official CDCFIB recruitment portal",
+    verifiedAt: "2026-10-03",
+    feeNote: "CDCFIB states that the recruitment process is free. Do not pay agents for applications, shortlisting, screening or final selection.",
+    sourceNotes: [
+      "The current official recruitment portal is marked Recruitment Exercise Concluded.",
+      "The recruitment cycle covered NSCDC, Nigeria Immigration Service, Nigerian Correctional Service and Federal Fire Service.",
+      "The published eligibility structure grouped applicants into Superintendent, Inspectorate and Assistant cadres."
+    ],
+    sources: [
+      { label: "Official CDCFIB Recruitment Portal", url: "https://recruitment.cdcfib.gov.ng/", lastChecked: "2026-10-03" },
+      { label: "Nigerian Correctional Service recruitment notice", url: "https://www.corrections.gov.ng/news/recruitment-notice!?news_id=137", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
     slug: "ndlea-careers",
     title: "NDLEA Careers and Recruitment",
     organization: "National Drug Law Enforcement Agency",
