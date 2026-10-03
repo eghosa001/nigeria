@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
+import { getServiceSeoTitleOverride } from "@/data/service-seo-overrides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
@@ -67,7 +68,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!service) return {};
 
   const year = service.lastVerified.slice(0, 4);
-  const title = getServiceSeoTitle(service.shortTitle, service.title, service.lastVerified);
+  const title = truncateMetadataText(
+    getServiceSeoTitleOverride(service.slug, year) ??
+      getServiceSeoTitle(service.shortTitle, service.title, service.lastVerified),
+    60,
+  );
   const summary = normalizeMetadataText(service.summary);
   const description = truncateMetadataText(
     summary.length >= 110
