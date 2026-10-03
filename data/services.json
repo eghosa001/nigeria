@@ -10275,5 +10275,70 @@
       "inec-voter-transfer",
       "inec-find-pvc-pickup-location"
     ]
+  },
+  {
+    "slug": "nigeria-embassy-netherlands-contact",
+    "title": "Nigeria Embassy in the Netherlands: contact, hours and consular services",
+    "shortTitle": "Nigeria Embassy Netherlands",
+    "summary": "Official contact details, consular hours and starting points for Nigerians and visa applicants using the Embassy of Nigeria in The Hague.",
+    "category": "International travel",
+    "agencySlug": "nigeria-embassy-netherlands",
+    "feeLabel": "No fee to contact the embassy; consular service fees vary",
+    "feeNote": "Contacting the embassy does not itself have a published fee. Passport, visa, emergency-document and other consular services can have separate official fees.",
+    "timeline": "The embassy does not publish one response-time guarantee. Its official FAQ lists consular service hours as 9:00 AM to 4:00 PM, Monday to Friday, excluding public holidays.",
+    "status": "verified",
+    "officialPortal": "https://nigerianembassythehague.nl/contact/",
+    "requirements": [
+      "Know which consular service you need before contacting the embassy",
+      "For an existing application, keep the relevant application, passport or payment reference available",
+      "For an in-person consular service, check the embassy's current appointment and document instructions before travelling"
+    ],
+    "steps": [
+      "Open the official Embassy of Nigeria in the Netherlands website and choose the relevant consular service or contact page.",
+      "For general enquiries, use the embassy's published contact details at Wagenaarweg 5, 2597 LL The Hague, Netherlands, or the official phone/email channels on its contact page.",
+      "If your request concerns a passport or visa, follow the service-specific instructions and online application route before arranging any required embassy appointment.",
+      "For a lost passport or urgent travel-document problem, use the embassy's official emergency or Emergency Travel Certificate guidance and keep the required police or identity evidence.",
+      "Before travelling to the embassy, confirm the current appointment requirement, opening arrangement and documents on the official site."
+    ],
+    "notes": [
+      "The official embassy contact page lists Wagenaarweg 5, 2597 LL The Hague, The Netherlands.",
+      "The embassy FAQ lists consular services from 9:00 AM to 4:00 PM Monday to Friday, excluding public holidays.",
+      "The official site publishes separate instructions for passports, visas, emergency travel certificates and citizenship-related services."
+    ],
+    "sources": [
+      {
+        "label": "Embassy of Nigeria, Netherlands — Contact",
+        "agency": "Embassy of Nigeria, The Netherlands",
+        "url": "https://nigerianembassythehague.nl/contact/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "Embassy of Nigeria, Netherlands — FAQ",
+        "agency": "Embassy of Nigeria, The Netherlands",
+        "url": "https://nigerianembassythehague.nl/faq/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "Embassy of Nigeria, Netherlands — Emergency Travel Certificate",
+        "agency": "Embassy of Nigeria, The Netherlands",
+        "url": "https://nigerianembassythehague.nl/emergency-travel-certificate/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "Nigeria embassy in Holland",
+      "Nigeria embassy Netherlands",
+      "Nigerian embassy The Hague",
+      "Nigeria embassy Netherlands contact",
+      "Nigeria embassy Netherlands address",
+      "Nigeria embassy Netherlands opening hours",
+      "Nigerian passport Netherlands"
+    ],
+    "related": [
+      "passport-application-abroad",
+      "diaspora-contactless-passport-renewal",
+      "lost-nigerian-passport"
+    ],
+    "lastVerified": "2026-10-03"
   }
 ]
