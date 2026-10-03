@@ -35,9 +35,9 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "lost-nigerian-passport": {
     fee: "How much does it cost to replace a lost Nigerian passport?",
     requirements: "What documents do I need to replace a lost Nigerian passport?",
-    online: "Can I report and replace a lost Nigerian passport online?",
+    online: "Can I replace a lost Nigerian passport online?",
     timeline: "How long does replacement of a lost Nigerian passport take?",
-    start: "What should I do if my Nigerian passport is lost?",
+    start: "Where do I start replacing a lost Nigerian passport?",
   },
   "new-drivers-licence": {
     fee: "How much is a new driver's licence in Nigeria?",
