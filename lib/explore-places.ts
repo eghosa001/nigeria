@@ -1298,7 +1298,26 @@ export const explorePlaces: ExplorePlace[] = [
 
 ];
 
+const nationalLandmarkPlaceSlugs = [
+  "lekki-conservation-centre",
+  "national-museum-lagos",
+  "olumo-rock",
+  "osun-osogbo-sacred-grove",
+  "obudu-mountain-resort-main",
+  "yankari-game-reserve-main",
+  "gashaka-gumti-national-park-main",
+  "sukur-cultural-landscape-main",
+  "erin-ijesha-waterfall-main",
+  "zuma-rock",
+  "gurara-waterfalls",
+  "kainji-lake-national-park-main",
+] as const;
+
 export function getExplorePlacesForGuide(guideSlug: string) {
+  if (guideSlug === "nigeria-landmarks-places-to-visit") {
+    const selected = new Set<string>(nationalLandmarkPlaceSlugs);
+    return explorePlaces.filter((place) => selected.has(place.slug));
+  }
   return explorePlaces.filter((place) => place.guideSlug === guideSlug);
 }
 
