@@ -495,7 +495,7 @@ test("service guides expose verified search-intent quick answers", async ({ page
   await page.goto("/services/passport-renewal");
   const quick = page.locator("#quick-answers");
   await expect(quick.getByRole("heading", { name: /Quick answers about Passport renewal/i })).toBeVisible();
-  await expect(quick.getByRole("heading", { name: /How much does Passport renewal cost in 2026/i })).toBeVisible();
+  await expect(quick.getByRole("heading", { name: /How much is Nigerian passport renewal\?/i })).toBeVisible();
   await expect(quick).toContainText("₦100,000 / ₦200,000");
   const hasFaqSchema = await page.locator('#main-content script[type="application/ld+json"]').evaluateAll(
     (scripts) => scripts.some((script) => script.innerHTML.includes("FAQPage")),
