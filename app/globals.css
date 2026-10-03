@@ -5360,3 +5360,19 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .home-path { border-bottom: 1px solid rgba(6,63,45,.10); }
   .home-path:last-child { border-bottom: 0; }
 }
+
+/* Open-now career callout */
+.jobs-open-section {
+  padding-top: 46px;
+  padding-bottom: 46px;
+  background: #fff8e8;
+  border-bottom: 1px solid #ead9aa;
+}
+.jobs-open-section .minimal-section-heading p { max-width: 720px; color: var(--muted); }
+.jobs-open-grid { display: grid; grid-template-columns: minmax(0, 1fr); }
+.job-card-open {
+  border-color: #e2c982;
+  box-shadow: 0 18px 46px rgba(122,85,21,.08);
+}
+.job-deadline { margin-top: 18px !important; color: #69490d !important; }
+.job-deadline strong { color: #4d3509; }
