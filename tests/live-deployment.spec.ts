@@ -64,7 +64,7 @@ test("phone layout fits and public pages do not hydrate with React mismatches", 
   }
 
   await page.goto("/");
-  await expect(page.getByRole("link", { name: "Admin login" }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: "Admin login" })).toHaveCount(0);
   await expect(page.getByRole("link", { name: "Search MyNigeriaGuide" }).first()).toBeVisible();
   expect(hydrationErrors).toEqual([]);
 });

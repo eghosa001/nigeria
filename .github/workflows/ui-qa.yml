@@ -34,13 +34,28 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" != "pull_request" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=full" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if git diff --quiet HEAD^1 HEAD -- app components lib public tests playwright.config.ts package.json next.config.ts; then
+
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|tests)/|^(playwright\.config\.ts|package\.json|next\.config\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
+
+          if [ -z "$relevant" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "No browser-relevant changes; required smoke check can finish without the full suite."
+            echo "mode=none" >> "$GITHUB_OUTPUT"
+            echo "No browser-relevant changes; required smoke check can finish immediately."
+            exit 0
+          fi
+
+          non_navigation="$(printf '%s\n' "$changed" | grep -Ev '^(components/site-header\.tsx|components/site-footer\.tsx|tests/smoke\.spec\.ts|tests/live-deployment\.spec\.ts|\.github/workflows/cloudflare-direct-deploy\.yml|\.github/workflows/ui-qa\.yml)$' || true)"
+          echo "run=true" >> "$GITHUB_OUTPUT"
+          if [ -z "$non_navigation" ]; then
+            echo "mode=navigation" >> "$GITHUB_OUTPUT"
+            echo "Navigation-only change; running focused navigation regression."
           else
-            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=full" >> "$GITHUB_OUTPUT"
           fi
       - uses: actions/setup-node@v4
         if: steps.scope.outputs.run == 'true'
@@ -52,11 +67,15 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Run navigation regression
+        if: steps.scope.outputs.mode == 'navigation'
+        run: npx playwright test tests/smoke.spec.ts --project=desktop --workers=1 --grep "phone shell fits and keeps admin out of public navigation without hydration errors|mobile public layout uses a single-column hierarchy and usable navigation"
       - name: Run admin editing regression first
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
         run: npx playwright test tests/admin-editing.spec.ts tests/admin-github.spec.ts --project=desktop --workers=1
-      - run: npm run test:e2e
-        if: steps.scope.outputs.run == 'true'
+      - name: Run full browser suite
+        if: steps.scope.outputs.mode == 'full'
+        run: npm run test:e2e
       - name: Upload Playwright report on failure
         if: failure() && steps.scope.outputs.run == 'true'
         uses: actions/upload-artifact@v4
