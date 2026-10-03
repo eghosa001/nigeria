@@ -47,13 +47,23 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     },
   };
 
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: siteUrl,
+    logo: siteUrl + "/icon.svg",
+    email: "contact@mynigeriaguide.com",
+    publishingPrinciples: siteUrl + "/editorial-policy",
+  };
+
   return (
     <html lang="en">
       <head>
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
       <body>
-        <JsonLd data={websiteLd} />
+        <JsonLd data={[websiteLd, organizationLd]} />
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />

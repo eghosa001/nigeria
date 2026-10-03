@@ -109,6 +109,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const agency = getAgency(service.agencySlug);
   const related = getRelatedServices(service, 6);
   const topicHubs = getGrowthHubsForService(service.slug).slice(0, 2);
+  const topicSearches = topicHubs
+    .flatMap((hub) => hub.searches)
+    .filter((item) => item.serviceSlug !== service.slug)
+    .filter((item, index, items) => items.findIndex((candidate) => candidate.query === item.query) === index)
+    .slice(0, 6);
   const searchAnswers = getServiceSearchAnswers(service);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
@@ -142,6 +147,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     about: agency ? { "@type": "Thing", name: agency.name, url: agency.website } : undefined,
   };
 
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: service.title,
+    description: service.summary,
+    mainEntityOfPage: pageUrl,
+    dateModified: service.lastVerified,
+    author: { "@type": "Organization", name: "MyNigeriaGuide", url: base },
+    publisher: { "@type": "Organization", name: "MyNigeriaGuide", url: base },
+    isAccessibleForFree: true,
+  };
+
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -157,7 +174,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd, webpageLd, faqLd]} />
+      <JsonLd data={[breadcrumbLd, webpageLd, articleLd, faqLd]} />
       <section className="guide-hero">
         <div className="container">
           <Breadcrumbs items={breadcrumbs} />
@@ -285,6 +302,18 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 {topicHubs.map((hub) => (
                   <Link key={hub.slug} href={"/topics/" + hub.slug}>
                     {hub.title} <span aria-hidden="true">→</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : null}
+          {topicSearches.length ? (
+            <div className="service-topic-links">
+              <span className="eyebrow">People also search for</span>
+              <div className="related-links">
+                {topicSearches.map((item) => (
+                  <Link key={item.query} href={"/services/" + item.serviceSlug}>
+                    {item.query} <span aria-hidden="true">→</span>
                   </Link>
                 ))}
               </div>

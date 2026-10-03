@@ -8,6 +8,7 @@ import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
+import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 
 export const sitemapSectionNames = ["core", "services", "travel", "movies", "youtube"] as const;
@@ -46,7 +47,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   if (section === "core") {
     const staticPaths = [
-      "", "/latest", "/fees", "/updates", "/assistant", "/offices", "/official-portals",
+      "", "/latest", "/fees", "/updates", "/assistant", "/offices", "/locations", "/official-portals",
       "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact",
     ];
     return [
@@ -61,6 +62,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       ...growthHubs.map((hub) => ({
         url: base + "/topics/" + hub.slug,
         lastModified: latestDate(publicServices.filter((service) => hub.serviceSlugs.includes(service.slug)).map((service) => service.lastVerified)) || serviceModified,
+      })),
+      ...serviceLocationCities.map((city) => ({
+        url: base + "/locations/" + city.slug,
+        lastModified: city.lastVerified,
       })),
     ];
   }

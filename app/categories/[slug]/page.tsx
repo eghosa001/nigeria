@@ -49,6 +49,29 @@ export default async function CategoryPage({
   const faqs = getCategoryFaqs(category.name);
   const serviceSlugs = new Set(services.map((service) => service.slug));
   const topicHubs = growthHubs.filter((hub) => hub.serviceSlugs.some((serviceSlug) => serviceSlugs.has(serviceSlug)));
+  const popularSearches = topicHubs
+    .flatMap((hub) => hub.searches)
+    .filter((item) => serviceSlugs.has(item.serviceSlug))
+    .filter((item, index, items) => items.findIndex((candidate) => candidate.query === item.query) === index)
+    .slice(0, 12);
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: base },
+      { "@type": "ListItem", position: 2, name: "Services", item: base + "/services" },
+      { "@type": "ListItem", position: 3, name: category.name, item: base + "/categories/" + slug },
+    ],
+  };
+
+  const collectionLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: category.name + " services in Nigeria",
+    description: category.description,
+    url: base + "/categories/" + slug,
+  };
 
   const itemList = {
     "@context": "https://schema.org",
@@ -78,7 +101,7 @@ export default async function CategoryPage({
 
   return (
     <>
-      <JsonLd data={[itemList, faqLd]} />
+      <JsonLd data={[breadcrumbLd, collectionLd, itemList, faqLd]} />
       <section className="section page-top">
         <div className="container">
           <Breadcrumbs
@@ -107,6 +130,20 @@ export default async function CategoryPage({
                 {topicHubs.map((hub) => (
                   <Link key={hub.slug} href={"/topics/" + hub.slug}>
                     {hub.title} <span aria-hidden="true">→</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          ) : null}
+
+          {popularSearches.length ? (
+            <section className="service-topic-links" aria-labelledby="category-common-searches">
+              <span className="eyebrow">Common searches</span>
+              <h2 id="category-common-searches">Popular tasks in {category.name}</h2>
+              <div className="related-links topic-searches">
+                {popularSearches.map((item) => (
+                  <Link key={item.query} href={"/services/" + item.serviceSlug}>
+                    {item.query} <span aria-hidden="true">→</span>
                   </Link>
                 ))}
               </div>

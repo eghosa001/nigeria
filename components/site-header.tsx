@@ -9,7 +9,7 @@ const primaryNavigation = [
   {
     href: "/services",
     label: "Services",
-    matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/updates"],
+    matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"],
   },
   { href: "/explore", label: "Tour Nigeria", matches: ["/explore"] },
 ];
@@ -22,6 +22,7 @@ const sectionNavigation = {
       { href: "/assistant", label: "Find a guide" },
       { href: "/fees", label: "Fees" },
       { href: "/offices", label: "Offices" },
+      { href: "/locations", label: "Locations" },
       { href: "/official-portals", label: "Official portals" },
       { href: "/updates", label: "Updates" },
     ],
@@ -53,7 +54,7 @@ type IconName = "home" | "services" | "explore" | "movies" | "saved" | "search" 
 
 function sectionForPath(pathname: string): SectionKey | null {
   if (
-    ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/updates"]
+    ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"]
       .some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/"))
   ) return "services";
   if (pathname === "/explore" || pathname.startsWith("/explore/")) return "explore";
