@@ -397,6 +397,146 @@ export const jobOpportunities: CareerOpportunity[] = [
     ]
   },
   {
+    slug: "access-bank-early-careers",
+    title: "Access Bank Entry Level Training Programme & Internships",
+    organization: "Access Bank",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Open positions portal",
+    summary: "Access Bank's official careers platform provides early-career routes through its Entry Level Training Programme (ELTP) and internships, with links to current open positions.",
+    location: "Nigeria and Access Bank operating markets",
+    employmentType: "Graduate training / internship",
+    audiences: ["Graduates", "Students", "Early-career applicants"],
+    fields: ["Banking", "Finance", "Technology", "Commercial", "Risk", "Operations"],
+    qualifications: [
+      "Eligibility depends on the specific ELTP pathway, internship or open position selected.",
+      "Access Bank describes Graduate, Retail and Tech pathways under its Entry Level Training Programme.",
+      "Applicants should use the qualification criteria shown on the current vacancy before submitting."
+    ],
+    requirements: [
+      "Apply online through Access Bank's official careers platform.",
+      "Monitor the email address used for the application, including spam/junk folders.",
+      "Submit requested documents and eligibility information promptly during the recruitment process."
+    ],
+    documents: [
+      "CV/resume and personal details requested for the selected opportunity",
+      "Academic and eligibility documents requested during verification",
+      "Other role-specific documents shown in the official vacancy"
+    ],
+    applicationSteps: [
+      "Open the official Access Bank careers platform and choose Early Careers.",
+      "Select the Entry Level Training Programme, internship or another open role that matches your profile.",
+      "Review the current vacancy requirements and submit the online application.",
+      "If shortlisted, Access Bank describes a process that can include online assessment, physical assessment, document/eligibility verification, interviews and medical fitness.",
+      "For ELTP candidates who progress successfully, the published process includes a six-month training period before commencing the professional role."
+    ],
+    officialUrl: "https://careers.accessbankplc.com/jobs",
+    officialUrlLabel: "View Access Bank open positions",
+    verifiedAt: "2026-10-03",
+    feeNote: "Use Access Bank's official careers domain for applications and assessment instructions.",
+    sourceNotes: [
+      "Access Bank's Early Careers platform lists ELTP and internship pathways.",
+      "The official hiring-process page describes application, assessment, eligibility verification, interviews, medical fitness and training stages."
+    ],
+    sources: [
+      { label: "Access Bank Careers", url: "https://careers.accessbankplc.com/", lastChecked: "2026-10-03" },
+      { label: "Access Bank Early Careers", url: "https://careers.accessbankplc.com/careers", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "gtbank-entry-level-careers",
+    title: "GTBank Entry Level Programme & Graduate Careers",
+    organization: "Guaranty Trust Bank",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers page",
+    summary: "GTBank's official career page publishes clear entry-level eligibility criteria and the recruitment stages used for graduate applicants.",
+    location: "Nigeria",
+    employmentType: "Graduate entry-level programme",
+    audiences: ["Graduates", "NYSC-completed applicants", "Early-career applicants"],
+    fields: ["Banking", "Finance", "Operations", "Technology", "Customer service"],
+    qualifications: [
+      "Minimum Second Class Lower degree from an accredited university.",
+      "Completed compulsory NYSC with an NYSC certificate.",
+      "WAEC/NECO with at least five credits including Mathematics and English in no more than two sittings.",
+      "GTBank's published entry-level criteria state that candidates must be no more than 26 years old."
+    ],
+    requirements: [
+      "Meet the current entry-level eligibility requirements shown by GTBank.",
+      "Be prepared for GTBank's assessment and credential-verification stages.",
+      "Use only GTBank's official careers pages and application routes."
+    ],
+    documents: [
+      "University degree evidence",
+      "NYSC certificate",
+      "WAEC/NECO results meeting the published criteria",
+      "Other identity and application documents requested during pre-interview verification"
+    ],
+    applicationSteps: [
+      "Review GTBank's official career opportunities page and confirm the current programme/application route.",
+      "Check that you meet the degree, NYSC, O'Level and age criteria.",
+      "Submit through the official application process when an entry-level opening is available.",
+      "Eligible applicants may be invited for a computer-based assessment covering reasoning and data-interpretation areas.",
+      "Successful candidates move through documentation and later recruitment stages described by the bank."
+    ],
+    officialUrl: "https://www.gtbank.com/about/careers/career-opportunities",
+    officialUrlLabel: "Open GTBank career opportunities",
+    verifiedAt: "2026-10-03",
+    feeNote: "GTBank warns applicants to be mindful of fake sites and not disclose personal or financial details to fraudulent parties.",
+    sourceNotes: [
+      "GTBank publishes explicit degree, NYSC, O'Level and age criteria for its entry-level programme.",
+      "The bank also publishes its staged recruitment process, beginning with a computer-based assessment."
+    ],
+    sources: [
+      { label: "GTBank Career Opportunities", url: "https://www.gtbank.com/about/careers/career-opportunities", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "uba-careers-graduate-programme",
+    title: "UBA Careers & Graduate Programme",
+    organization: "United Bank for Africa",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers page",
+    summary: "UBA's official careers pages provide a Graduate Programme, a career application route and current-vacancy listings for applicants interested in banking careers.",
+    location: "Nigeria and UBA operating markets",
+    employmentType: "Graduate programme / professional vacancies",
+    audiences: ["Graduates", "Experienced professionals"],
+    fields: ["Banking", "Finance", "Technology", "Operations", "Commercial", "Risk"],
+    qualifications: [
+      "Graduate-programme and professional-role requirements vary by the current opportunity.",
+      "Applicants should use the qualification and experience requirements shown in the specific UBA vacancy."
+    ],
+    requirements: [
+      "Apply through UBA's official careers or career-application route.",
+      "Read the exact vacancy requirements before submitting.",
+      "Do not pay for an assessment or application."
+    ],
+    documents: [
+      "CV/resume",
+      "Academic and professional credentials relevant to the selected vacancy",
+      "Other documents requested by UBA's official application process"
+    ],
+    applicationSteps: [
+      "Open UBA's official careers application page.",
+      "Review the Graduate Programme information or latest vacancies.",
+      "Select an opportunity matching your education and experience.",
+      "Complete the application through the official UBA route.",
+      "Follow assessment/interview instructions sent through verified UBA channels."
+    ],
+    officialUrl: "https://roa.ubagroup.com/about-uba/careers/career-application/",
+    officialUrlLabel: "Open UBA career applications",
+    verifiedAt: "2026-10-03",
+    feeNote: "UBA states that it will never require applicants to pay for an assessment or application.",
+    sourceNotes: [
+      "UBA publishes a Graduate Programme and career application route.",
+      "Its careers page includes a Job Scam Alert stating that applicants are not required to pay for assessments or applications."
+    ],
+    sources: [
+      { label: "UBA Career Application", url: "https://roa.ubagroup.com/about-uba/careers/career-application/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
     slug: "pwc-nigeria-careers",
     title: "PwC Nigeria Careers",
     organization: "PwC Nigeria",
