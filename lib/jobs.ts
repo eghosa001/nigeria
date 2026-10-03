@@ -738,6 +738,414 @@ export const jobOpportunities: CareerOpportunity[] = [
     ]
   },
   {
+    slug: "mtn-nigeria-careers",
+    title: "MTN Nigeria Careers & Global Graduate Programme",
+    organization: "MTN Nigeria",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers portal",
+    summary: "MTN Nigeria's official careers site links current vacancies and its Global Graduate Development Programme, combining formal development with on-the-job placement into strategic roles.",
+    location: "Nigeria",
+    employmentType: "Graduate programme / professional vacancies",
+    audiences: ["Graduates", "Experienced professionals", "Technology applicants"],
+    fields: ["Telecommunications", "Technology", "Digital services", "Commercial", "Finance", "Network operations"],
+    qualifications: [
+      "Vacancy requirements vary by role and should be checked on the official MTN job posting.",
+      "MTN's broader Global Graduate Programme describes applicants as high-achieving graduates seeking future-skills employment; its programme criteria include an average academic score of 70% or above and an age range of 20–27 for participating markets."
+    ],
+    requirements: [
+      "Create an official MTN careers profile to apply and reuse your details for suitable vacancies.",
+      "Apply only for roles whose skills and experience requirements you meet.",
+      "Applicants for employment must be at least 18; MTN notes that interns receiving on-the-job training are treated differently under that minimum-age rule."
+    ],
+    documents: [
+      "CV/resume",
+      "Birth certificate or age declaration when requested as employment data",
+      "Academic and professional information required by the selected vacancy",
+      "Other role-specific credentials shown in the MTN application portal"
+    ],
+    applicationSteps: [
+      "Open MTN Nigeria's official careers page.",
+      "Choose current vacancies or the graduate-programme route.",
+      "Create a careers profile and select a role that matches your skills.",
+      "Review all role-specific requirements before submitting.",
+      "Track subsequent recruitment communication through the details registered in your MTN careers profile."
+    ],
+    officialUrl: "https://www.mtn.ng/careers-home/",
+    officialUrlLabel: "Open MTN Nigeria careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "MTN Nigeria states that it will never ask applicants to make any payment to facilitate recruitment.",
+    sourceNotes: [
+      "MTN Nigeria's careers page links vacancies and its Global Graduate Development Programme.",
+      "MTN publishes a recruitment disclaimer stating that it does not request payment from job applicants."
+    ],
+    sources: [
+      { label: "MTN Nigeria Careers", url: "https://www.mtn.ng/careers-home/", lastChecked: "2026-10-03" },
+      { label: "MTN Global Graduates", url: "https://www.mtn.ng/career/global-graduates/", lastChecked: "2026-10-03" },
+      { label: "MTN Careers Terms", url: "https://www.mtn.ng/legal/mtn-careers/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "airtel-nigeria-careers",
+    title: "Airtel Nigeria Careers, Graduate Internship & Undergraduate Internship",
+    organization: "Airtel Nigeria",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers page",
+    summary: "Airtel Nigeria's official careers page links current openings, describes its recruitment stages, and publishes undergraduate and graduate internship pathways.",
+    location: "Nigeria",
+    employmentType: "Professional vacancies / internships",
+    audiences: ["Students", "Fresh graduates", "Experienced professionals"],
+    fields: ["Telecommunications", "Technology", "Network operations", "Commercial", "Finance", "Customer experience"],
+    qualifications: [
+      "Current vacancy requirements vary by role.",
+      "Airtel says its undergraduate internship typically runs July–September, with applications promoted around April–June.",
+      "Airtel also directs fresh graduates to look out for its Graduate Internship programme."
+    ],
+    requirements: [
+      "Applicants begin the recruitment process with a cognitive assessment.",
+      "Candidates who pass the assessment progress to panel interviews, with later interviews dependent on success at preceding stages.",
+      "Applicants should use Airtel's official careers page/current-openings route."
+    ],
+    documents: [
+      "CV/resume",
+      "Academic information relevant to internship or graduate applications",
+      "Professional/experience information required by the selected vacancy"
+    ],
+    applicationSteps: [
+      "Open Airtel Nigeria's official careers page.",
+      "Use the current-openings link or monitor the relevant internship window.",
+      "Submit the application/CV through the official Airtel route.",
+      "Complete the cognitive assessment if invited.",
+      "Progress through panel and subsequent interview stages if successful."
+    ],
+    officialUrl: "https://www.airtel.com.ng/ng/about/careers",
+    officialUrlLabel: "Open Airtel Nigeria careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "Use Airtel's official careers route and verified company communication before sharing sensitive recruitment information.",
+    sourceNotes: [
+      "Airtel Nigeria publishes current-opening links, internship timing and its assessment/interview sequence on its careers page."
+    ],
+    sources: [
+      { label: "Airtel Nigeria Careers", url: "https://www.airtel.com.ng/ng/about/careers", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "firstbank-graduate-trainee-careers",
+    title: "FirstBank Graduate Trainee & Experienced Hire Careers",
+    organization: "First Bank of Nigeria",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers page",
+    summary: "FirstBank's careers site describes a yearly Graduate Trainee Programme for fresh graduates and a separate recruitment route for experienced hires.",
+    location: "Nigeria",
+    employmentType: "Graduate trainee / experienced hire",
+    audiences: ["Fresh graduates", "HND holders", "Experienced professionals"],
+    fields: ["Banking", "Finance", "Technology", "Risk", "Operations", "Commercial"],
+    qualifications: [
+      "FirstBank says its Graduate Trainee Programme is designed for fresh graduates below 27 years.",
+      "Published minimum qualification is a Bachelor's degree with at least Second Class Lower or HND with Upper Credit.",
+      "Experienced-hire eligibility is role-specific and focuses on functional/behavioural competencies and relevant hands-on experience."
+    ],
+    requirements: [
+      "Use the official FirstBank jobs route to confirm that a recruitment window or suitable vacancy is currently available.",
+      "Match your qualification and experience to the route selected."
+    ],
+    documents: [
+      "CV/resume",
+      "Degree or HND evidence",
+      "Personal and professional information requested in the official application",
+      "Role-specific credentials for experienced-hire vacancies"
+    ],
+    applicationSteps: [
+      "Open FirstBank's official jobs page.",
+      "Choose Graduate Trainee or an available experienced-hire vacancy.",
+      "Confirm age/qualification or role-specific eligibility.",
+      "Follow the official View and Apply for Jobs route.",
+      "Retain application records and follow only verified FirstBank recruitment communication."
+    ],
+    officialUrl: "https://firstbankgroup.com/ng/home/careers/jobs/",
+    officialUrlLabel: "Open FirstBank jobs",
+    verifiedAt: "2026-10-03",
+    feeNote: "Apply through the official FirstBank careers/jobs route and verify any third-party recruitment platform linked from it before entering credentials.",
+    sourceNotes: [
+      "FirstBank publishes the graduate programme as a yearly recruitment exercise.",
+      "The bank states a below-27 age criterion and minimum 2:2 degree or HND Upper Credit for the programme."
+    ],
+    sources: [
+      { label: "FirstBank Jobs", url: "https://firstbankgroup.com/ng/home/careers/jobs/", lastChecked: "2026-10-03" },
+      { label: "FirstBank Careers", url: "https://firstbankgroup.com/ng/home/careers/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "stanbic-ibtc-careers",
+    title: "Stanbic IBTC Careers & Graduate Opportunities",
+    organization: "Stanbic IBTC Holdings",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers page",
+    summary: "Stanbic IBTC's official careers page links its live opportunities and recruitment system for applicants seeking banking, technology and professional roles in Nigeria.",
+    location: "Nigeria",
+    employmentType: "Graduate / professional careers",
+    audiences: ["Graduates", "Experienced professionals", "Technology applicants"],
+    fields: ["Banking", "Finance", "Technology", "Risk", "Wealth", "Operations"],
+    qualifications: ["Requirements vary by vacancy and graduate opportunity; use the exact criteria in the official role listing."],
+    requirements: [
+      "Use Stanbic IBTC's official careers page and linked opportunity system.",
+      "Read the role location, education and experience requirements before applying."
+    ],
+    documents: ["CV/resume", "Academic and professional credentials relevant to the role", "Information requested in the official candidate profile"],
+    applicationSteps: [
+      "Open Stanbic IBTC's official careers page.",
+      "Select View opportunities.",
+      "Filter for a suitable Nigeria-based role or graduate opportunity.",
+      "Review the requirements and submit through the official recruitment system."
+    ],
+    officialUrl: "https://www.stanbicibtc.com/nigeriaholdings/careers",
+    officialUrlLabel: "View Stanbic IBTC opportunities",
+    verifiedAt: "2026-10-03",
+    feeNote: "Use the official Stanbic IBTC careers route and role listing when submitting application information.",
+    sourceNotes: ["Stanbic IBTC's careers page provides a direct View opportunities route into its current recruitment system."],
+    sources: [
+      { label: "Stanbic IBTC Careers", url: "https://www.stanbicibtc.com/nigeriaholdings/careers", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "chevron-nigeria-careers",
+    title: "Chevron Nigeria Careers",
+    organization: "Chevron Nigeria",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official job search",
+    summary: "Chevron's Nigeria careers page provides a country-specific route to professional, internship and early-career opportunities connected to its Nigerian energy operations.",
+    location: "Nigeria",
+    employmentType: "Professional / early-career energy roles",
+    audiences: ["Engineers", "Graduates", "Experienced professionals", "Internship applicants"],
+    fields: ["Engineering", "Operations", "Energy", "Geoscience", "Information Technology", "Finance", "HSE"],
+    qualifications: ["Qualifications vary by the specific Chevron vacancy or early-career programme."],
+    requirements: [
+      "Search by Nigeria/location and review the exact role requirements.",
+      "Create the candidate profile required by Chevron's official job-search system.",
+      "A CV/resume is required to complete the online profile when applying for an open position."
+    ],
+    documents: ["CV/resume", "Education and experience information required by the selected role", "Other vacancy-specific documents"],
+    applicationSteps: [
+      "Open Chevron's Nigeria careers page.",
+      "Use See jobs to search the official careers system.",
+      "Open a Nigeria-relevant role and read the eligibility criteria.",
+      "Create the required candidate profile and attach your CV/resume.",
+      "Submit only through Chevron's official careers system."
+    ],
+    officialUrl: "https://careers.chevron.com/nigeria",
+    officialUrlLabel: "Search Chevron Nigeria jobs",
+    verifiedAt: "2026-10-03",
+    feeNote: "Chevron states that it only accepts applications through its Careers website and never seeks fees from job applicants.",
+    sourceNotes: [
+      "Chevron maintains a Nigeria-specific careers page.",
+      "Its hiring-process page states that applicants create an online profile and provide a CV/resume."
+    ],
+    sources: [
+      { label: "Chevron Nigeria Careers", url: "https://careers.chevron.com/nigeria", lastChecked: "2026-10-03" },
+      { label: "Chevron Hiring Process", url: "https://careers.chevron.com/how-we-hire", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "totalenergies-nigeria-graduate-careers",
+    title: "TotalEnergies Nigeria & Africa Young Graduate Careers",
+    organization: "TotalEnergies",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers programmes",
+    summary: "TotalEnergies' official careers platform lists professional jobs, internships and graduate programmes, including an Africa-focused Young Graduate pathway for early-career African graduates.",
+    location: "Nigeria / Africa",
+    employmentType: "Graduate programme / professional energy careers",
+    audiences: ["Young graduates", "Engineers", "Scientists", "Commercial graduates", "Experienced professionals"],
+    fields: ["Engineering", "Energy", "Renewables", "Finance", "Sales", "Commercial", "Operations"],
+    qualifications: [
+      "Role requirements vary across TotalEnergies vacancies and graduate programmes.",
+      "The Africa Young Graduate programme describes eligible candidates as young African graduates with a Master's degree or equivalent, aged 26 or under.",
+      "Programme availability must be confirmed in the current official offer before applying."
+    ],
+    requirements: [
+      "Use TotalEnergies' official job/graduate-programme pages to verify current availability.",
+      "Match your academic discipline and country eligibility to the specific programme or vacancy."
+    ],
+    documents: ["CV/resume", "Academic qualifications", "Other information required in the selected TotalEnergies vacancy/programme"],
+    applicationSteps: [
+      "Open TotalEnergies' official careers site.",
+      "Search fixed-term/permanent, internship or graduate opportunities.",
+      "For graduate programmes, confirm that recruitment is currently open for the exact programme/country.",
+      "Submit through the official TotalEnergies careers system."
+    ],
+    officialUrl: "https://careers.totalenergies.com/",
+    officialUrlLabel: "Search TotalEnergies careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "Verify the exact vacancy in TotalEnergies' official careers system before submitting personal information.",
+    sourceNotes: [
+      "TotalEnergies publishes several graduate programmes plus fixed-term, permanent and internship vacancies.",
+      "Its Africa Young Graduate programme describes an 18-month pathway with home-country and international phases."
+    ],
+    sources: [
+      { label: "TotalEnergies Careers", url: "https://totalenergies.com/careers", lastChecked: "2026-10-03" },
+      { label: "TotalEnergies Graduate Programmes", url: "https://careers.totalenergies.com/en/who-are-we/company-supporting-new-graduates/graduate-programs", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "unilever-nigeria-careers",
+    title: "Unilever Nigeria Careers",
+    organization: "Unilever Nigeria",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official job portal",
+    summary: "Unilever maintains a Nigeria-specific careers page with available opportunities and a talent network for applicants who want to be notified when suitable roles appear.",
+    location: "Nigeria",
+    employmentType: "Graduate / professional / operations careers",
+    audiences: ["Graduates", "Experienced professionals", "Supply-chain applicants", "Commercial applicants"],
+    fields: ["Supply chain", "Manufacturing", "Marketing", "Sales", "Finance", "Technology", "Human resources"],
+    qualifications: ["Qualification and experience requirements depend on the specific Unilever vacancy."],
+    requirements: [
+      "Use the Nigeria careers page and the exact job listing for current requirements.",
+      "Do not send money or card details as part of recruitment."
+    ],
+    documents: ["CV/resume", "Academic/professional information requested by the selected job", "Other role-specific application information"],
+    applicationSteps: [
+      "Open Unilever's Nigeria careers page.",
+      "View available opportunities or search for a matching role.",
+      "Read the vacancy requirements and location carefully.",
+      "Submit through the official Unilever careers system or join the official talent network."
+    ],
+    officialUrl: "https://careers.unilever.com/en/nigeria",
+    officialUrlLabel: "View Unilever Nigeria jobs",
+    verifiedAt: "2026-10-03",
+    feeNote: "Unilever warns that it will never ask for money or credit-card details during recruitment.",
+    sourceNotes: ["Unilever's Nigeria careers page provides current-opportunity and talent-network routes plus an explicit recruitment-fraud warning."],
+    sources: [
+      { label: "Unilever Nigeria Careers", url: "https://careers.unilever.com/en/nigeria", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "nestle-nigeria-careers",
+    title: "Nestlé Nigeria & Graduate Careers",
+    organization: "Nestlé",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers portal",
+    summary: "Nestlé's official careers system supports location-based job search, students and graduates, internships and professional roles across technical and corporate functions.",
+    location: "Nigeria / global careers system",
+    employmentType: "Graduate / internship / professional careers",
+    audiences: ["Students", "Graduates", "Experienced professionals", "Technical applicants"],
+    fields: ["Engineering", "Finance", "IT", "Marketing", "Research & Development", "Production", "Sales", "Supply chain"],
+    qualifications: ["Qualifications depend on the specific Nestlé Nigeria vacancy, internship or graduate opportunity."],
+    requirements: [
+      "Search the official Nestlé careers system by location and job area.",
+      "Use the specific vacancy criteria rather than assuming a general graduate requirement applies."
+    ],
+    documents: ["CV/resume", "Academic and professional information required by the job", "Other role-specific candidate information"],
+    applicationSteps: [
+      "Open Nestlé's official careers platform.",
+      "Search by Nigeria/location and the career area that matches your background.",
+      "Review the exact vacancy or student/graduate opportunity.",
+      "Create/sign into the candidate profile and submit through the official system."
+    ],
+    officialUrl: "https://www.nestle.com/jobs",
+    officialUrlLabel: "Search Nestlé careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "Apply through Nestlé's official careers system and confirm the role/location before sharing application details.",
+    sourceNotes: ["Nestlé's official careers site exposes student/graduate routes, internships and multiple professional career areas."],
+    sources: [
+      { label: "Nestlé Careers", url: "https://www.nestle.com/jobs", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "kpmg-nigeria-careers",
+    title: "KPMG Nigeria Graduate Trainee, Internship & Experienced Hire Careers",
+    organization: "KPMG Nigeria",
+    sector: "Private",
+    status: "career-page",
+    statusLabel: "Official careers programmes",
+    summary: "KPMG Nigeria's careers platform publishes graduate-trainee, undergraduate internship, graduate internship, pre-NYSC/NYSC and experienced-hire pathways with detailed eligibility criteria.",
+    location: "Nigeria",
+    employmentType: "Graduate trainee / internship / experienced hire",
+    audiences: ["Undergraduates", "Pre-NYSC graduates", "NYSC members", "Fresh graduates", "Experienced professionals"],
+    fields: ["Audit", "Tax", "Advisory", "Technology", "Risk", "Consulting", "Deals"],
+    qualifications: [
+      "Graduate Trainee: minimum Second Class Upper degree, at least five O'Level credits including English and Mathematics, completed NYSC and generally below 28 at application.",
+      "Undergraduate Internship: at least second year but not final year, strong academic standing equivalent to 2:1, and published age limit below 24.",
+      "Pre-NYSC Internship: minimum 2:1 degree, below 26, at least five credits including Mathematics and English, and availability for at least 12 weeks.",
+      "Experienced Hire: KPMG publishes a general minimum of three years relevant post-NYSC experience plus a 2:1 degree and five O'Level credits including English and Mathematics."
+    ],
+    requirements: [
+      "Applicants should choose the KPMG pathway matching their current education/NYSC/experience status.",
+      "Graduate-trainee applicants should not have taken KPMG's aptitude test more than once within the previous 12 months.",
+      "Programme/vacancy availability should be confirmed on the official careers portal before applying."
+    ],
+    documents: ["CV/resume", "O'Level results", "Degree/transcript information", "NYSC evidence where required", "Professional credentials for relevant experienced roles"],
+    applicationSteps: [
+      "Open KPMG Nigeria's careers platform.",
+      "Choose internships, graduate trainee, experienced hire or available vacancies.",
+      "Confirm all age, qualification and NYSC criteria for that route.",
+      "Submit through the official programme or vacancy page.",
+      "For graduate trainee recruitment, KPMG describes a journey through application, aptitude testing, assessment centre and partner interview."
+    ],
+    officialUrl: "https://apps.ng.kpmg.com/careers/",
+    officialUrlLabel: "Open KPMG Nigeria careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "Use KPMG Nigeria's official careers platform and published careers contact details when verifying recruitment communication.",
+    sourceNotes: [
+      "KPMG Nigeria publishes detailed internship and graduate-trainee eligibility rules.",
+      "Its careers portal also exposes current vacancies and experienced-hire pathways.",
+      "The FY27 Graduate Trainee application window closed on 6 March 2026, so that historic campaign is not presented here as currently open."
+    ],
+    sources: [
+      { label: "KPMG Nigeria Careers", url: "https://apps.ng.kpmg.com/careers/", lastChecked: "2026-10-03" },
+      { label: "KPMG Programmes & Eligibility", url: "https://apps.ng.kpmg.com/careers/team.html", lastChecked: "2026-10-03" },
+      { label: "KPMG Current Vacancies", url: "https://apps.ng.kpmg.com/careers/jobs.html", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "deloitte-nigeria-early-careers",
+    title: "Deloitte Nigeria Early Careers & Graduate Opportunities",
+    organization: "Deloitte Nigeria",
+    sector: "Private",
+    status: "closed",
+    statusLabel: "2026 early-career applications closed",
+    summary: "Deloitte Nigeria publishes early-career routes across Audit & Assurance, Consulting and Tax/Legal. The 2026 early-career application window displayed on its official site closed on 10 April 2026.",
+    location: "Nigeria",
+    employmentType: "Graduate / early-career professional services",
+    audiences: ["Fresh graduates", "NYSC-completed applicants", "Professional-services applicants"],
+    fields: ["Audit & Assurance", "Consulting", "Tax & Legal", "Risk", "Financial Advisory"],
+    qualifications: [
+      "Minimum Second Class Upper degree or HND Upper Credit/equivalent from a recognised university or polytechnic.",
+      "At least five O'Level credits including Mathematics and English in one sitting.",
+      "Published maximum age is 26 years at the date of application.",
+      "Applicant must have completed NYSC.",
+      "Deloitte's published early-career criteria say applicants must not have written the Deloitte aptitude test before."
+    ],
+    requirements: [
+      "The specific 2026 early-career window is closed; do not use reposted third-party forms claiming it remains open.",
+      "Use Deloitte Nigeria's official careers page for future graduate or experienced-hire openings."
+    ],
+    documents: ["CV/resume", "University/polytechnic qualification evidence", "O'Level results", "NYSC completion evidence", "Other information requested by the official application"],
+    applicationSteps: [
+      "The 2026 early-career application window has closed.",
+      "Review Deloitte Nigeria's official careers page for a new graduate/early-career cycle or other current vacancies.",
+      "When a new cycle opens, choose the service line that matches your interests and confirm the published eligibility criteria.",
+      "Submit only through Deloitte's official careers system."
+    ],
+    officialUrl: "https://www.deloitte.com/ng/en/careers.html",
+    officialUrlLabel: "Open Deloitte Nigeria careers",
+    verifiedAt: "2026-10-03",
+    feeNote: "Use Deloitte's official Nigeria careers pages for application links and current eligibility information.",
+    sourceNotes: [
+      "Deloitte's 2026 early-career page lists degree/HND, O'Level, age and NYSC criteria.",
+      "The same official page states that 2026 applications closed on Friday, 10 April 2026."
+    ],
+    sources: [
+      { label: "Deloitte Nigeria Careers", url: "https://www.deloitte.com/ng/en/careers.html", lastChecked: "2026-10-03" },
+      { label: "Deloitte Early Career Programmes", url: "https://www.deloitte.com/ng/en/careers/explore-your-fit/experienced/early-careers-programmes.html", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
     slug: "pwc-nigeria-careers",
     title: "PwC Nigeria Careers",
     organization: "PwC Nigeria",
