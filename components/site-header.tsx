@@ -11,8 +11,8 @@ const primaryNavigation = [
     label: "Services",
     matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"],
   },
-  { href: "/jobs", label: "Jobs & Careers", matches: ["/jobs"] },
   { href: "/explore", label: "Tour Nigeria", matches: ["/explore"] },
+  { href: "/jobs", label: "Jobs & Careers", matches: ["/jobs"] },
 ];
 
 const sectionNavigation = {
@@ -110,9 +110,10 @@ function isMobileItemActive(pathname: string, href: string) {
 const mobileNavigation = [
   { href: "/entertainment/movies", label: "Movies", icon: "movies" as const },
   { href: "/services", label: "Services", icon: "services" as const },
-  { href: "/jobs", label: "Jobs", icon: "jobs" as const },
   { href: "/explore", label: "Tour", icon: "explore" as const },
+  { href: "/jobs", label: "Jobs", icon: "jobs" as const },
   { href: "/", label: "Home", icon: "home" as const },
+  { href: "/saved", label: "Saved", icon: "saved" as const },
 ];
 
 export function SiteHeader() {
