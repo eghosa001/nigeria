@@ -36,8 +36,7 @@ export function SiteFooter() {
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/contact">Contact</Link>
-            <Link href="/admin">Admin login</Link>
-            <a href="mailto:contact@mynigeriaguide.com">contact@mynigeriaguide.com</a>
+<a href="mailto:contact@mynigeriaguide.com">contact@mynigeriaguide.com</a>
           </div>
         </div>
       </div>
