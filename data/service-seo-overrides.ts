@@ -1,7 +1,7 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
-  "ecowas-travel-certificate": "ECOWAS Travel Certificate Nigeria {year}: Cost & Requirements",
+  "ecowas-travel-certificate": "ECOWAS Travel Certificate {year}: Price, Form & Requirements",
   "nin-phone-modification": "Change NIN Phone Number {year}: Fee, Police Report & Steps",
-  "passport-change-of-data": "Nigerian Passport Data Change {year}: Requirements & Fees",
+  "passport-change-of-data": "Nigerian Passport Change of Data {year}: Cost & Requirements",
   "npc-check-attestation-status": "NPC Birth Attestation Status {year}: Check & Download",
   "lost-nigerian-passport": "Lost Nigerian Passport {year}: Replacement & Requirements",
   "police-character-certificate": "Police Character Certificate Nigeria {year}: Cost & Apply",
@@ -12,8 +12,8 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "waec-check-result": "WAEC Result Checker {year}: Check Result Online",
   "neco-check-result": "NECO Result Checker {year}: Check Result Online",
   "jamb-caps": "JAMB CAPS {year}: Check Admission Status & Accept Admission",
-  "cac-company-registration": "CAC Company Registration {year}: Cost, Form & Process",
-  "cac-business-name-registration": "CAC Business Name Registration {year}: Cost & Steps",
+  "cac-company-registration": "CAC Company Registration {year}: Cost, Portal & Steps",
+  "cac-business-name-registration": "CAC Business Name Registration {year}: Cost, Portal & Steps",
   "jamb-direct-entry-2026": "JAMB Direct Entry {year}: Form, Fee & Registration",
   "pencom-open-rsa": "Open Pension RSA in Nigeria {year}: Requirements & Steps",
   "pencom-transfer-rsa": "Transfer Pension PFA {year}: Requirements & Steps",
@@ -30,7 +30,14 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "waec-2026-private-candidates-timetable": "WAEC Timetable {year}: Private Candidates Second Series",
   "neco-2026-timetable": "NECO Timetable {year}: Download Official SSCE Timetable",
   "ninauth-nin-verification": "NIN Verification {year}: Use the Official NINAuth App",
-  "nabteb-result-checker": "NABTEB Result Checker {year}: Check Result Online",
+  "nabteb-result-checker": "NABTEB Result Checker {year}: Check Result Online",  "anambra-asin-registration": "ASIN Registration Online {year}: Anambra Portal & Steps",
+  "nip-transfer-status": "NIP Status Checker {year}: Check Bank Transfer Status",
+  "lagos-lasrra-registration": "LASRRA Registration Online {year}: Lagos Portal & Steps",
+  "customs-846-non-standard-vin": "Customs 846 e-Application {year}: Verify Non-Standard VIN",
+  "bvn-retrieval": "Retrieve BVN {year}: *565*0# Code, Fee & Steps",
+  "npc-child-birth-registration": "NPC Birth Registration {year}: Certificate, Portal & Steps",
+  "scuml-certificate-registration": "SCUML Registration {year}: Login, Certificate & Status",
+  "pencom-job-loss-25-percent-withdrawal": "25% Pension Withdrawal Nigeria {year}: Eligibility & Steps",
 };
 
 export function getServiceSeoTitleOverride(slug: string, year: string) {

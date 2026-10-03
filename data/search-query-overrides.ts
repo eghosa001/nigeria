@@ -28,7 +28,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "ecowas-travel-certificate": {
     fee: "How much is the ECOWAS Travel Certificate in Nigeria?",
     requirements: "What are the requirements for an ECOWAS Travel Certificate?",
-    online: "Can I apply for an ECOWAS Travel Certificate online?",
+    online: "Where is the ECOWAS Travel Certificate application form?",
     timeline: "How long does an ECOWAS Travel Certificate take in Nigeria?",
     start: "How do I apply for an ECOWAS Travel Certificate in Nigeria?",
   },
@@ -47,7 +47,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I get a new driver's licence in Nigeria?",
   },
   "nin-date-of-birth-modification": {
-    fee: "How much is NIN date of birth correction?",
+    fee: "How much is correction of date of birth on NIN?",
     requirements: "What do I need to change my date of birth on NIN?",
     online: "Can I change my NIN date of birth online?",
     timeline: "How long does NIN date of birth modification take?",
@@ -55,7 +55,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   },
   "nin-phone-modification": {
     fee: "How much is NIN phone number modification?",
-    requirements: "What do I need to change my phone number on NIN?",
+    requirements: "Do I need a police report for NIN phone number change?",
     online: "Can I change my NIN phone number online?",
     timeline: "How long does NIN phone number modification take?",
     start: "How do I change the phone number on my NIN?",
@@ -68,7 +68,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I apply for NYSC relocation?",
   },
   "passport-change-of-data": {
-    fee: "How much does Nigerian passport change of data cost?",
+    fee: "How much is change of data on a Nigerian passport?",
     requirements: "What documents are needed to change data on a Nigerian passport?",
     online: "Can I change Nigerian passport data online?",
     timeline: "How long does Nigerian passport data correction take?",
@@ -108,8 +108,8 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   },
   "bvn-retrieval": {
     fee: "How much does it cost to retrieve my BVN?",
-    online: "Can I retrieve my BVN online or by USSD?",
-    start: "How do I retrieve my BVN?",
+    online: "Can I retrieve BVN from the NIBSS online portal or by USSD?",
+    start: "How do I retrieve my BVN number?",
   },
   "jamb-direct-entry-2026": {
     fee: "How much is the JAMB Direct Entry form for 2026?",
@@ -117,12 +117,13 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I get the JAMB Direct Entry form for 2026?",
   },
   "pencom-open-rsa": {
-    requirements: "What do I need to open a pension RSA account?",
-    start: "How do I open an RSA pension account in Nigeria?",
+    requirements: "Do I need NIN for RSA registration?",
+    online: "Can I open an RSA online?",
+    start: "How do I register for an RSA pension account in Nigeria?",
   },
   "pencom-transfer-rsa": {
     requirements: "What do I need to transfer my pension PFA?",
-    start: "How do I transfer my pension from one PFA to another?",
+    start: "How do I transfer my pension PFA?",
   },
   "npc-birth-attestation": {
     requirements: "What do I need for NPC birth attestation?",
@@ -135,5 +136,28 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     online: "Can I renew my Nigerian passport online?",
     timeline: "How long does Nigerian passport renewal take?",
     start: "How do I renew my Nigerian passport?",
+  },
+  "anambra-asin-registration": {
+    requirements: "What do I need for ASIN registration?",
+    online: "Can I complete ASIN registration online?",
+    start: "Where is the ASIN registration online portal?",
+  },
+  "nip-transfer-status": {
+    online: "Can I check NIP transfer status online?",
+    start: "How do I use the NIP status checker?",
+  },
+  "customs-846-non-standard-vin": {
+    requirements: "What do I need for a Customs 846 e-Application?",
+    online: "Can I complete the Customs 846 verification online?",
+    start: "Where is the Customs 846 e-Application verification portal?",
+  },
+  "scuml-certificate-registration": {
+    requirements: "What do I need for SCUML registration?",
+    online: "Can I complete SCUML registration online?",
+    start: "Where do I log in for SCUML registration?",
+  },
+  "pencom-job-loss-25-percent-withdrawal": {
+    requirements: "What are the requirements for 25 percent pension withdrawal?",
+    start: "How do I apply for a 25 percent pension withdrawal after job loss?",
   },
 };

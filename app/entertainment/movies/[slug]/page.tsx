@@ -38,22 +38,24 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = getEntertainmentTitle(slug);
   if (!title) return {};
   const image = movieImageUrl(title);
+  const featuredCast = getFeaturedCast(title).slice(0, 4);
+  const description = `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + ". " : ""}${title.synopsis}`;
 
   return {
-    title: title.title + " — Cast, Details & Where to Watch",
-    description: title.synopsis,
+    title: title.title + " Nigerian Movie: Cast & Where to Watch",
+    description,
     alternates: { canonical: "/entertainment/movies/" + title.slug },
     openGraph: {
       type: "video.movie",
       title: title.title,
-      description: title.synopsis,
+      description,
       url: "/entertainment/movies/" + title.slug,
       images: image ? [{ url: image, alt: title.title + " artwork" }] : undefined,
     },
     twitter: {
       card: "summary_large_image",
       title: title.title,
-      description: title.synopsis,
+      description,
       images: image ? [image] : undefined,
     },
   };
@@ -242,7 +244,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
             <section id="cast">
               <span className="eyebrow">Cast & crew</span>
-              <h2>People connected to {title.title}</h2>
+              <h2>{title.title} cast and crew</h2>
 
               {title.directors?.length ? (
                 <div className="movie-credit-group">
@@ -257,7 +259,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               ) : null}
 
               <div className="movie-credit-group">
-                <h3>Cast</h3>
+                <h3>Full cast</h3>
                 <div className="movie-person-list">
                   {title.cast.map((name) => {
                     const href = personHref(name);
