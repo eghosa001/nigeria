@@ -695,6 +695,38 @@ export const exploreGuides: ExploreGuide[] = [
     lastReviewed: "2026-10-02",
   },
 
+  {
+    slug: "nigeria-landmarks-places-to-visit",
+    title: "Landmarks & Places to Visit in Nigeria",
+    shortTitle: "Nigeria",
+    kind: "itinerary",
+    region: "Nigeria",
+    summary: "A practical national shortlist of Nigerian landmarks, heritage sites, waterfalls, wildlife destinations and city attractions, with links into detailed trip guides.",
+    intro: [
+      "Nigeria is too large and varied for one generic tourist checklist. Use this guide as a starting map: choose the kind of trip you want, then open the linked city or destination guide for current access, transport and planning details.",
+      "The shortlist deliberately mixes cultural heritage, national parks, waterfalls, city landmarks and nature destinations instead of ranking places as if one trip style fits everyone.",
+    ],
+    bestFor: ["Landmarks", "Heritage", "Nature", "First-time trip planning"],
+    highlights: [
+      { name: "Osun-Osogbo Sacred Grove", detail: "A UNESCO-listed cultural landscape in Osun State and one of the country's clearest combinations of living tradition, art and protected forest." },
+      { name: "Sukur Cultural Landscape", detail: "A UNESCO World Heritage cultural landscape in Adamawa State with terraced fields, stone architecture and a hilltop palace complex." },
+      { name: "Olumo Rock", detail: "A major Abeokuta landmark tied to Egba history and one of the easiest heritage-and-viewpoint combinations to build into a South West trip." },
+      { name: "Zuma Rock & Gurara Falls", detail: "Two Niger State landmarks that can fit a road-trip route from Abuja when road, weather and daylight conditions are planned carefully." },
+      { name: "Yankari Game Reserve", detail: "A Bauchi State wildlife destination best treated as an overnight or multi-day trip, with Wikki Warm Spring as another major draw." },
+      { name: "Obudu Mountain Resort", detail: "A Cross River highland destination where weather, long road travel and the current status of resort facilities matter as much as the scenery." },
+      { name: "Gashaka-Gumti National Park", detail: "Nigeria's largest national park, spanning Taraba and Adamawa, suited to travellers prepared for a remote nature trip with park guidance." },
+      { name: "Erin-Ijesha Waterfall", detail: "A major Osun State waterfall that works well as a nature-focused day trip when access and wet-season conditions are checked first." },
+    ],
+    planning: [
+      { label: "Choose a region before choosing attractions", detail: "Nigeria's major places are spread across long road and flight distances. Build a South West, North Central, North East or South South circuit instead of trying to combine distant landmarks casually." },
+      { label: "Confirm live access", detail: "Opening arrangements, road conditions, weather, rehabilitation work and local visitor rules can change. Re-check the detailed guide and official source close to travel." },
+      { label: "Treat nature trips differently from city stops", detail: "Parks, waterfalls, mountains and remote heritage landscapes need daylight, weather planning, reliable transport and often local or official guidance." },
+      { label: "Keep security conditions current", detail: "Travel conditions can change by route and locality. Use current official/local guidance rather than an old itinerary before committing to a long road trip." },
+    ],
+    source: { label: "Tour Nigeria — Nigerian Tourism Development Authority", href: "https://tournigeria.gov.ng/" },
+    lastReviewed: "2026-10-03",
+  },
+
 ];
 
 export function getExploreGuide(slug: string) {
