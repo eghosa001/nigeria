@@ -90,7 +90,7 @@ export function JobsDirectory({ opportunities }: Props) {
               </div>
             </div>
             <div className="job-card-footer">
-              <span>Checked {new Date(item.verifiedAt + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}</span>
+              <span>{item.deadline ? "Deadline " + new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }) : "Checked " + new Date(item.verifiedAt + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}</span>
               <Link href={"/jobs/" + item.slug}>View requirements →</Link>
             </div>
           </article>
