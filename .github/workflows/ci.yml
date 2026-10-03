@@ -18,6 +18,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - name: Enforce shortest-path policy
+        run: python3 scripts/fast_path_guard.py
       - uses: actions/setup-node@v4
         with:
           node-version: 22
