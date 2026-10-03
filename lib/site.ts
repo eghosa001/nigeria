@@ -1,7 +1,7 @@
 export const siteName = "MyNigeriaGuide";
 
 export const siteDescription =
-  "Discover Nigerian movies first, then practical service guides and travel ideas, with official links, clear steps, addresses, map links and current verification notes.";
+  "Discover Nigerian movies, practical service guides, verified jobs and career pathways, and travel ideas, with official links, clear steps and current verification notes.";
 
 export const productionSiteUrl = "https://mynigeriaguide.com";
 
