@@ -51,11 +51,6 @@ export default function HomePage() {
               <strong>Services</strong>
               <small>Clear steps for documents, applications and everyday processes.</small>
             </Link>
-            <Link href="/jobs" className="home-path home-path-jobs">
-              <span>Work</span>
-              <strong>Jobs & Careers</strong>
-              <small>Track government recruitment and verified employer career routes.</small>
-            </Link>
             <Link href="/explore" className="home-path home-path-tour">
               <span>Go</span>
               <strong>Tour Nigeria</strong>
