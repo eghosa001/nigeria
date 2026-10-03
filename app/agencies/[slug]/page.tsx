@@ -83,8 +83,8 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               <p>
                 This page covers the Netherlands authority used for Dutch visa guidance. The Embassy of Nigeria in the Netherlands is a different office in The Hague.
               </p>
-              <a href="https://nigerianembassythehague.nl/contact/" target="_blank" rel="noreferrer">
-                Open the official Embassy of Nigeria, Netherlands contact page ↗
+              <a href="/services/nigeria-embassy-netherlands-contact">
+                Open the Nigeria Embassy Netherlands guide →
               </a>
             </div>
           ) : null}

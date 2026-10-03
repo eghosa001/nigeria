@@ -4,6 +4,13 @@ import { validateServiceCatalog } from "@/lib/service-records";
 
 export const agencies: Agency[] = [
   {
+    "slug": "nigeria-embassy-netherlands",
+    "name": "Embassy of Nigeria, The Netherlands",
+    "shortName": "Nigeria Embassy The Hague",
+    "description": "Consular services for Nigerians and visa applicants in the Netherlands.",
+    "website": "https://nigerianembassythehague.nl/"
+  },
+  {
     "slug": "nis",
     "name": "Nigeria Immigration Service",
     "shortName": "NIS",
