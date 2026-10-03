@@ -58,7 +58,7 @@ export default function JobsPage() {
             <span>Verification first</span>
             <strong>No copied “apply now” forms.</strong>
             <p>MyNigeriaGuide explains the requirements and sends you to the responsible organisation to apply.</p>
-            <div><b>{activeGovernment}</b><small>government processes currently beyond the application stage</small></div>
+            <div><b>{activeGovernment}</b><small>government recruitments currently open or in an active later stage</small></div>
             <div><b>{careerPages}</b><small>official employer career pathways checked</small></div>
             <div><b>₦0</b><small>fees collected by MyNigeriaGuide</small></div>
           </aside>
