@@ -179,7 +179,7 @@ function normalized(raw: string) {
 function isGenericHomepage(raw: string) {
   try {
     const url = new URL(raw);
-    return genericAgencyHosts.has(url.host) && (url.pathname === "/" || url.pathname === "");
+    return genericAgencyHosts.has(url.host) && (url.pathname === "/" || url.pathname === "") && !url.search;
   } catch {
     return false;
   }
