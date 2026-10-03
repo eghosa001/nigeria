@@ -18,7 +18,7 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub when you need a Nigerian passport and are not sure which process applies to your situation. It separates fresh applications, renewals, applications from abroad, lost passports and data changes so you can start with the right NIS route.",
       "Each linked guide shows the current fee or status, what to prepare, the official application portal and what happens after submission or biometric enrolment."
     ],
-    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }],
+    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "change data on Nigerian passport", serviceSlug: "passport-change-of-data" }, { query: "correct name on Nigerian passport", serviceSlug: "passport-name-change" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }],
     serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-abroad", "diaspora-contactless-passport-renewal", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
   },
   {
@@ -102,8 +102,8 @@ export const growthHubs: GrowthHub[] = [
       "This hub separates child birth registration from adult attestation and from later certificate or record changes. Choose the task that matches the record you already have.",
       "Each guide points to the NPC route used for that service and explains the documents, steps and follow-up involved."
     ],
-    searches: [{ query: "birth certificate Nigeria", serviceSlug: "npc-child-birth-registration" }, { query: "NPC birth attestation", serviceSlug: "npc-birth-attestation" }, { query: "reprint birth certificate", serviceSlug: "npc-birth-certificate-reprint" }, { query: "digital birth certificate Nigeria", serviceSlug: "npc-digital-birth-certificate-reissuance" }, { query: "correct birth record Nigeria", serviceSlug: "npc-modify-birth-record" }],
-    serviceSlugs: ["npc-child-birth-registration", "npc-birth-attestation", "npc-digital-birth-certificate-reissuance", "npc-birth-certificate-reprint", "npc-modify-birth-record"]
+    searches: [{ query: "birth certificate Nigeria", serviceSlug: "npc-child-birth-registration" }, { query: "NPC birth attestation", serviceSlug: "npc-birth-attestation" }, { query: "check NPC attestation status", serviceSlug: "npc-check-attestation-status" }, { query: "reprint birth certificate", serviceSlug: "npc-birth-certificate-reprint" }, { query: "digital birth certificate Nigeria", serviceSlug: "npc-digital-birth-certificate-reissuance" }, { query: "correct birth record Nigeria", serviceSlug: "npc-modify-birth-record" }],
+    serviceSlugs: ["npc-child-birth-registration", "npc-birth-attestation", "npc-check-attestation-status", "npc-digital-birth-certificate-reissuance", "npc-birth-certificate-reprint", "npc-modify-birth-record"]
   },
   {
     slug: "visitor-visas",
@@ -374,6 +374,44 @@ export const growthHubs: GrowthHub[] = [
       { query: "CBN bank complaint", serviceSlug: "cbn-bank-complaint" }
     ],
     serviceSlugs: ["nip-transfer-status", "cbn-bank-complaint"]
+  },
+
+  {
+    slug: "nigeria-travel-documents",
+    title: "Nigeria Travel Documents, ECOWAS Certificate & Yellow Card Guide",
+    shortTitle: "Travel documents",
+    description: "Find the correct Nigerian travel-document route for an ECOWAS Travel Certificate, Yellow Card, landing/exit card and related cross-border travel requirements.",
+    intro: [
+      "Travel documents are not interchangeable. A Nigerian passport, ECOWAS Travel Certificate, Yellow Card and landing or exit card each serve a different purpose.",
+      "Use this hub to start with the exact document you need, confirm the official fee and requirements, and avoid paying for the wrong service."
+    ],
+    searches: [
+      { query: "ECOWAS travel certificate Nigeria", serviceSlug: "ecowas-travel-certificate" },
+      { query: "ECOWAS passport Nigeria", serviceSlug: "ecowas-travel-certificate" },
+      { query: "Yellow Card Nigeria", serviceSlug: "yellow-card" },
+      { query: "Nigeria landing card", serviceSlug: "nigeria-landing-exit-card" },
+      { query: "Nigeria exit card", serviceSlug: "nigeria-landing-exit-card" }
+    ],
+    serviceSlugs: ["ecowas-travel-certificate", "yellow-card", "nigeria-landing-exit-card"]
+  },
+  {
+    slug: "federal-tax-services",
+    title: "Nigeria Federal Tax Registration, Filing, Payment & Refund Guide",
+    shortTitle: "Federal tax services",
+    description: "Use the NRS route for individual or corporate tax registration, tax clearance, self-filing, tax payment and refund tracking.",
+    intro: [
+      "Federal taxpayer registration, filing, payment, tax-clearance requests and refund tracking are separate tasks inside the Nigeria Revenue Service system.",
+      "Choose the exact task below so you can prepare the correct taxpayer information and use the official NRS self-service route."
+    ],
+    searches: [
+      { query: "NRS tax registration", serviceSlug: "nrs-individual-tax-registration" },
+      { query: "NRS corporate tax registration", serviceSlug: "nrs-corporate-tax-registration" },
+      { query: "NRS tax clearance certificate", serviceSlug: "nrs-tax-clearance-certificate" },
+      { query: "file tax return Nigeria NRS", serviceSlug: "nrs-self-tax-filing" },
+      { query: "pay tax online Nigeria NRS", serviceSlug: "nrs-tax-payment" },
+      { query: "track NRS tax refund", serviceSlug: "nrs-refund-tracking" }
+    ],
+    serviceSlugs: ["nrs-individual-tax-registration", "nrs-corporate-tax-registration", "nrs-tax-clearance-certificate", "nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
   },
 
 ];
