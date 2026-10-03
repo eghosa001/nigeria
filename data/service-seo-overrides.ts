@@ -29,6 +29,8 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "drivers-licence-verification": "Driver's Licence Verification Nigeria {year}: Check Online",
   "waec-2026-private-candidates-timetable": "WAEC Timetable {year}: Private Candidates Second Series",
   "neco-2026-timetable": "NECO Timetable {year}: Download Official SSCE Timetable",
+  "ninauth-nin-verification": "NIN Verification {year}: Use the Official NINAuth App",
+  "nabteb-result-checker": "NABTEB Result Checker {year}: Check Result Online",
 };
 
 export function getServiceSeoTitleOverride(slug: string, year: string) {
