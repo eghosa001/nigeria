@@ -10,8 +10,9 @@ import { youtubeMovieLibrary } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
+import { jobOpportunities } from "@/lib/jobs";
 
-export const sitemapSectionNames = ["core", "services", "travel", "movies", "youtube"] as const;
+export const sitemapSectionNames = ["core", "services", "jobs", "travel", "movies", "youtube"] as const;
 export type SitemapSectionName = (typeof sitemapSectionNames)[number];
 
 export type SitemapEntry = {
@@ -39,6 +40,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   const base = getSiteUrl();
   const serviceModified = latestDate(publicServices.map((service) => service.lastVerified));
   const exploreModified = latestDate(exploreGuides.map((guide) => guide.lastReviewed));
+  const jobsModified = latestDate(jobOpportunities.map((item) => item.verifiedAt));
   const movieCatalogModified = latestDate([
     ...entertainmentTitles.map(movieModified),
     ...releaseItems.map((item) => item.lastChecked),
@@ -80,6 +82,22 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       ...agencies.map((agency) => ({
         url: base + "/agencies/" + agency.slug,
         lastModified: latestDate(publicServices.filter((service) => service.agencySlug === agency.slug).map((service) => service.lastVerified)) || serviceModified,
+      })),
+    ];
+  }
+
+  if (section === "jobs") {
+    return [
+      { url: base + "/jobs", lastModified: jobsModified },
+      { url: base + "/jobs/government", lastModified: jobsModified },
+      { url: base + "/jobs/private", lastModified: jobsModified },
+      { url: base + "/jobs/deadlines", lastModified: jobsModified },
+      { url: base + "/jobs/graduate", lastModified: jobsModified },
+      { url: base + "/jobs/internships", lastModified: jobsModified },
+      { url: base + "/jobs/engineering", lastModified: jobsModified },
+      ...jobOpportunities.map((item) => ({
+        url: base + "/jobs/" + item.slug,
+        lastModified: item.verifiedAt,
       })),
     ];
   }
