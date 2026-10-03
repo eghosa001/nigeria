@@ -41,7 +41,7 @@ export default function LocationsPage() {
           <div className="related-links">
             {serviceLocationCities.map((city) => (
               <Link key={city.slug} href={"/locations/" + city.slug}>
-                <strong>{city.city}</strong> — JAMB, passport, NIN, driver's licence and CAC routes <span aria-hidden="true">→</span>
+                <strong>{city.city}</strong> — {city.entries.map((entry) => entry.agency).join(", ")} <span aria-hidden="true">→</span>
               </Link>
             ))}
           </div>
