@@ -91,6 +91,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/jobs", lastModified: jobsModified },
       { url: base + "/jobs/government", lastModified: jobsModified },
       { url: base + "/jobs/private", lastModified: jobsModified },
+      { url: base + "/jobs/deadlines", lastModified: jobsModified },
+      { url: base + "/jobs/graduate", lastModified: jobsModified },
+      { url: base + "/jobs/internships", lastModified: jobsModified },
+      { url: base + "/jobs/engineering", lastModified: jobsModified },
       ...jobOpportunities.map((item) => ({
         url: base + "/jobs/" + item.slug,
         lastModified: item.verifiedAt,
