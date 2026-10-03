@@ -75,6 +75,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
                 <div><small>Sector</small><strong>{item.sector}</strong></div>
                 <div><small>Location</small><strong>{item.location}</strong></div>
                 <div><small>Opportunity type</small><strong>{item.employmentType}</strong></div>
+                {item.deadline ? <div><small>Application deadline</small><strong>{new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</strong></div> : null}
               </div>
             </section>
 
