@@ -300,7 +300,7 @@ export const growthHubs: GrowthHub[] = [
       { query: "buy NECO result token", serviceSlug: "neco-purchase-result-token" },
       { query: "verify NECO result", serviceSlug: "neco-e-verify" }
     ],
-    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification", "neco-certificate-service"]
+    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification"]
   },
   {
     slug: "electricity-meter-billing",
