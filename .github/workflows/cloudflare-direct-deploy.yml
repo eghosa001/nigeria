@@ -1,0 +1,45 @@
+name: Cloudflare Direct Deploy Fallback
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cloudflare-direct-deploy.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cloudflare-direct-deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check deploy credentials
+        id: credentials
+        shell: bash
+        run: |
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "No CLOUDFLARE_API_TOKEN secret is configured; leaving deployment to Workers Builds."
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+      - run: npm install --no-audit --no-fund
+        if: steps.credentials.outputs.available == 'true'
+      - run: npm run build
+        if: steps.credentials.outputs.available == 'true'
+      - name: Deploy directly with Wrangler
+        if: steps.credentials.outputs.available == 'true'
+        run: npx wrangler deploy --config dist/server/wrangler.json
