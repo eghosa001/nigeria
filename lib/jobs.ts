@@ -86,6 +86,207 @@ export const jobOpportunities: CareerOpportunity[] = [
     ]
   },
   {
+    slug: "nigerian-army-92rri-2026",
+    title: "Nigerian Army 92RRI Recruitment 2026",
+    organization: "Nigerian Army",
+    sector: "Government",
+    status: "open",
+    statusLabel: "Applications ongoing",
+    summary: "The Nigerian Army's official recruitment portal currently states that 92 Regular Recruits Intake (92RRI) online applications are ongoing for trades and non-trades applicants.",
+    location: "Nigeria",
+    employmentType: "Military recruitment / Regular Recruit Intake",
+    audiences: ["SSCE holders", "Tradesmen/Women", "Non-Tradesmen/Women", "Skilled applicants"],
+    fields: ["Military service", "Technical trades", "Skilled trades", "Non-trade roles"],
+    qualifications: [
+      "Applicants must have at least four passes including English Language in not more than two sittings in WASSCE, GCE, NECO, NABTEB or NBAIS.",
+      "Tradesmen/Women must also hold an appropriate Trade Test or City & Guild certificate."
+    ],
+    requirements: [
+      "Applicants must be single Nigerian citizens by birth.",
+      "A National Identification Number/National Identity Card and BVN slip are required, and identity details should match across credentials.",
+      "Applicants must be medically, physically and psychologically fit and have no criminal conviction.",
+      "The official portal states ages 18–22 for non-trades applicants; trades applicants must not be above 26 years by 21 October 2026.",
+      "Minimum height is 1.68 m for male applicants and 1.65 m for female applicants.",
+      "Applicants must apply using their state of origin rather than state of residence."
+    ],
+    documents: [
+      "National Identity Card/NIN details and BVN slip",
+      "Birth certificate or acceptable age declaration",
+      "Certificate of state of origin",
+      "WASSCE/GCE/NECO/NABTEB/NBAIS credentials",
+      "Trade Test or City & Guild certificate where applicable",
+      "Printed photo card and completed guarantor/declaration forms for screening"
+    ],
+    applicationSteps: [
+      "Open the official Nigerian Army recruitment portal.",
+      "Create or use your recruitment account and complete the online form.",
+      "Submit the application online and print the photo card.",
+      "Complete the guarantor and other required forms before screening.",
+      "If shortlisted, report to your state-of-origin screening centre with the signed documents requested by the Army."
+    ],
+    officialUrl: "https://recruit.army.mil.ng/",
+    officialUrlLabel: "Apply on the official Nigerian Army portal",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "The official portal says shortlisted candidates are expected to attend state screening from 17 November to 1 December 2026.",
+    feeNote: "The Nigerian Army states that recruitment is FREE. Do not pay for application access, shortlisting or screening.",
+    sourceNotes: [
+      "The Nigerian Army portal currently labels 92RRI online application as ongoing.",
+      "The portal publishes the qualification, age, height, identity and screening-document requirements used in this guide."
+    ],
+    sources: [
+      { label: "Nigerian Army Recruitment Portal", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "nigerian-navy-batch-39-recruitment-2026",
+    title: "Nigerian Navy Batch 39 Recruitment 2026",
+    organization: "Nigerian Navy",
+    sector: "Government",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "Nigerian Navy Basic Training School Batch 39 recruitment is open on the Navy's official portal, with online registration running through 31 October 2026.",
+    location: "Nigeria",
+    employmentType: "Military recruitment / Basic Training School",
+    audiences: ["School leavers", "Technical applicants", "ND/NCE holders", "Maritime-career applicants"],
+    fields: ["Seaman", "Engineering", "Cyber & ICT", "Medical services", "Technical trades", "Maritime operations"],
+    qualifications: [
+      "Eligibility depends on the naval branch/category selected and the qualification attached to that category.",
+      "The current portal directs applicants through an eligibility check before account registration and application."
+    ],
+    requirements: [
+      "Applications are handled through the Nigerian Navy's official digital recruitment portal.",
+      "The portal verifies identity using NIN and NIMC-linked identity checks.",
+      "Applicants should choose the branch/category that matches their qualification before submitting credentials."
+    ],
+    documents: [
+      "NIN-linked identity information",
+      "Academic/professional credentials required by the selected branch",
+      "Personal information and documents requested in the guided application",
+      "Exam/screening documents generated later for shortlisted applicants"
+    ],
+    applicationSteps: [
+      "Open the official Nigerian Navy Batch 39 recruitment portal.",
+      "Use the eligibility check or review the available branches before choosing a pathway.",
+      "Create an account and verify email, phone and identity details.",
+      "Complete the guided online application and upload the requested credentials.",
+      "After submission, follow status updates and download the aptitude-test or screening slip if shortlisted."
+    ],
+    officialUrl: "https://joinnigeriannavy.navy.mil.ng/",
+    officialUrlLabel: "Apply on the official Nigerian Navy portal",
+    verifiedAt: "2026-10-03",
+    deadline: "2026-10-31",
+    nextMilestone: "Batch 39 aptitude testing is scheduled for 21 November 2026; the portal lists basic training for the first quarter of 2027.",
+    feeNote: "Use only the official Nigerian Navy recruitment domain. MyNigeriaGuide does not collect recruitment fees or credentials.",
+    sourceNotes: [
+      "The official portal says Batch 39 applications opened on 2 October 2026 and close on 31 October 2026 at 23:59 WAT.",
+      "The Navy portal lists the aptitude test for 21 November 2026 and describes identity verification, application and status tracking stages."
+    ],
+    sources: [
+      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "nigeria-police-constable-recruitment-2026",
+    title: "Nigeria Police Force Constable Recruitment 2026",
+    organization: "Police Service Commission / Nigeria Police Force",
+    sector: "Government",
+    status: "closed",
+    statusLabel: "Applications closed",
+    summary: "The 50,000-constable recruitment application window has closed. The Police Service Commission later moved eligible candidates through physical/credential screening and a written examination held in April 2026.",
+    location: "Nigeria",
+    employmentType: "Police constable recruitment",
+    audiences: ["SSCE holders", "General Duty applicants", "Specialist applicants", "Existing applicants"],
+    fields: ["Policing", "General Duty", "Technical/specialist roles", "Public safety"],
+    qualifications: [
+      "General Duty applicants were required to have at least five O'Level credits including English Language and Mathematics in not more than two sittings.",
+      "Specialist applicants were required to have at least four O'Level credits including English Language and Mathematics, plus relevant experience/trade tests for the specialist field."
+    ],
+    requirements: [
+      "Published age range was 18–25 years for General Duty and 18–28 years for Specialists.",
+      "Applicants had to be Nigerian citizens by birth and medically, physically and psychologically fit.",
+      "Published General Duty minimum heights were 1.67 m for male applicants and 1.64 m for female applicants."
+    ],
+    documents: [
+      "NIN slip with clear photograph for later recruitment stages",
+      "Printed recruitment/examination invitation documents",
+      "O'Level and specialist/trade credentials used for the original application",
+      "Other screening credentials requested through the official recruitment process"
+    ],
+    applicationSteps: [
+      "Do not submit a new application: the application window is closed.",
+      "Existing applicants should rely on Police Service Commission and official NPF recruitment communications for any further stage.",
+      "Use only the official recruitment portal referenced by the Police Service Commission.",
+      "Ignore requests for payment for recruitment, shortlisting, tests or appointments."
+    ],
+    officialUrl: "https://psc.gov.ng/",
+    officialUrlLabel: "Check Police Service Commission recruitment updates",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "The latest recruitment-stage notice located on the PSC website covered the written examination held 28–30 April 2026; applicants should check PSC for any newer official stage.",
+    feeNote: "The Police Service Commission states that recruitment is free and has warned applicants against illegal charges and fake portals.",
+    sourceNotes: [
+      "The 50,000-constable application deadline was extended to 8 February 2026.",
+      "PSC later announced written examinations for candidates who passed physical and credential screening."
+    ],
+    sources: [
+      { label: "Police Service Commission", url: "https://psc.gov.ng/", lastChecked: "2026-10-03" },
+      { label: "PSC recruitment announcement", url: "https://psc.gov.ng/2025/12/11/recruitment-of-50000-constables-into-the-nigeria-police-force-portal-opens-applications-invited-as-psc-npf-commit-to-a-seamless-process/", lastChecked: "2026-10-03" },
+      { label: "PSC written-examination update", url: "https://psc.gov.ng/2026/04/24/police-recruitment-written-examination-holds-28-30-april-as-psc-warns-against-scams/", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
+    slug: "nnpc-limited-recruitment",
+    title: "NNPC Limited Graduate Trainee & Experienced Hire Recruitment",
+    organization: "NNPC Limited",
+    sector: "Government",
+    status: "closed",
+    statusLabel: "Applications closed",
+    summary: "NNPC Limited's official careers portal currently states that application submission is closed. Its career system keeps the graduate-trainee and experienced-hire routes, application guide and candidate journey available.",
+    location: "Nigeria",
+    employmentType: "Graduate trainee / experienced hire",
+    audiences: ["Graduates", "Experienced professionals", "Existing applicants"],
+    fields: ["Engineering", "Energy", "Finance", "ICT", "Security", "Commercial", "Corporate services"],
+    qualifications: [
+      "Graduate and experienced-hire eligibility varies by route and skill pool.",
+      "NNPC's official application guide references degree/HND class requirements, NYSC details and professional memberships where applicable.",
+      "Applicants should use the current vacancy eligibility criteria when a new application cycle opens."
+    ],
+    requirements: [
+      "A functioning email address and reachable phone number are required for the official application system.",
+      "Applicants should prepare all requested credentials before beginning an application.",
+      "Only applications submitted through careers.nnpcgroup.com are recognised by NNPC."
+    ],
+    documents: [
+      "Birth certificate",
+      "Indigene certificate",
+      "Passport photograph",
+      "Secondary and tertiary educational certificates",
+      "NIN",
+      "NYSC certificate or exemption",
+      "Professional membership certificates where applicable",
+      "CV/work-history information for relevant roles"
+    ],
+    applicationSteps: [
+      "The current application cycle is closed, so do not submit credentials through third-party recruitment forms.",
+      "Review NNPC's official careers portal and eligibility pages for graduate-trainee or experienced-hire routes.",
+      "When applications reopen, create a profile and complete biodata, education, NYSC, work history and professional-certification sections as required.",
+      "Existing candidates should use the official candidate journey/status tools for recruitment progress."
+    ],
+    officialUrl: "https://careers.nnpcgroup.com/",
+    officialUrlLabel: "Open NNPC Limited careers portal",
+    verifiedAt: "2026-10-03",
+    nextMilestone: "The official candidate journey currently shows application submission closed and keeps later recruitment stages/status information on the careers portal.",
+    feeNote: "NNPC Limited states that it does not charge fees for job applications and is not responsible for applications submitted outside careers.nnpcgroup.com.",
+    sourceNotes: [
+      "The current NNPC careers site displays 'Application submission is now closed'.",
+      "Its application guide lists identity, education, NYSC and professional documents used during recruitment."
+    ],
+    sources: [
+      { label: "NNPC Limited Careers", url: "https://careers.nnpcgroup.com/", lastChecked: "2026-10-03" },
+      { label: "NNPC Application Guide", url: "https://careers.nnpcgroup.com/how-to", lastChecked: "2026-10-03" },
+      { label: "NNPC Candidate Journey", url: "https://careers.nnpcgroup.com/journey", lastChecked: "2026-10-03" }
+    ]
+  },
+  {
     slug: "nigeria-customs-service-recruitment",
     title: "Nigeria Customs Service Recruitment",
     organization: "Nigeria Customs Service",
