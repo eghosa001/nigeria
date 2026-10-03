@@ -281,6 +281,101 @@ export const growthHubs: GrowthHub[] = [
     ],
     serviceSlugs: ["lagos-lasrra-registration", "lagos-payer-id", "lagos-land-use-charge", "lagos-tax-clearance-verification", "lagos-building-completion-certificate", "fct-file-individual-tax-return", "fct-tax-clearance-application", "fct-verify-tax-clearance", "ogun-taxpayer-registration", "ogun-tax-clearance-certificate", "rivers-rivtin-registration", "rivers-tax-clearance-certificate", "edo-tax-id-access", "anambra-asin-registration"]
   },
+  {
+    slug: "waec-neco-results",
+    title: "WAEC & NECO Results, Certificates and Verification Guide",
+    shortTitle: "WAEC & NECO results",
+    description: "Check WAEC or NECO results, get result tokens, access certificates and use the correct verification or confirmation route.",
+    intro: [
+      "Result checking, certificate collection and institutional verification are different tasks. This hub separates them so students, graduates and institutions can start with the correct WAEC or NECO service.",
+      "Use the linked guide for the exact task you need, especially when a school, employer or foreign institution asks for formal confirmation rather than a normal online result check."
+    ],
+    searches: [
+      { query: "check WAEC result", serviceSlug: "waec-check-result" },
+      { query: "WAEC digital certificate", serviceSlug: "waec-digital-certificate" },
+      { query: "collect WAEC certificate", serviceSlug: "waec-collect-certificate" },
+      { query: "WAEC result confirmation", serviceSlug: "waec-confirm-result-nigeria" },
+      { query: "lost WAEC certificate", serviceSlug: "waec-lost-certificate" },
+      { query: "check NECO result", serviceSlug: "neco-check-result" },
+      { query: "buy NECO result token", serviceSlug: "neco-purchase-result-token" },
+      { query: "verify NECO result", serviceSlug: "neco-e-verify" }
+    ],
+    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification", "neco-certificate-service"]
+  },
+  {
+    slug: "electricity-meter-billing",
+    title: "Electricity Meter, Billing and NERC Complaint Guide",
+    shortTitle: "Electricity help",
+    description: "Apply for a prepaid meter, challenge estimated billing, escalate unresolved DisCo complaints and check electricity tariff bands.",
+    intro: [
+      "Meter applications, billing disputes and regulatory complaints follow different routes. Start with the exact issue so you do not send a meter problem to the wrong complaint channel.",
+      "The guides below keep the official NERC or electricity-industry route, evidence to keep and the escalation step to use when a DisCo does not resolve the problem."
+    ],
+    searches: [
+      { query: "prepaid meter application Nigeria", serviceSlug: "electricity-prepaid-meter-application" },
+      { query: "paid for meter but not installed", serviceSlug: "electricity-meter-paid-not-installed" },
+      { query: "estimated bill complaint Nigeria", serviceSlug: "electricity-estimated-billing-dispute" },
+      { query: "NERC complaint", serviceSlug: "electricity-complaint-escalation" },
+      { query: "check electricity tariff band", serviceSlug: "electricity-tariff-band" }
+    ],
+    serviceSlugs: ["electricity-prepaid-meter-application", "electricity-meter-paid-not-installed", "electricity-estimated-billing-dispute", "electricity-complaint-escalation", "electricity-tariff-band"]
+  },
+  {
+    slug: "nin-sim-linkage",
+    title: "NIN-SIM Linkage, Status and Failed Verification Guide",
+    shortTitle: "NIN-SIM linkage",
+    description: "Link NIN to a Nigerian SIM, check linkage status, fix failed verification and escalate unresolved telecom complaints.",
+    intro: [
+      "A SIM can remain restricted even after a customer submits a NIN if the record has not verified successfully. This hub separates first-time linkage from status checks and failed-linkage troubleshooting.",
+      "If the network does not resolve the issue after the required first complaint, use the NCC complaint guide for the escalation route and evidence to keep."
+    ],
+    searches: [
+      { query: "link NIN to SIM", serviceSlug: "nin-sim-linkage" },
+      { query: "check NIN SIM linkage status", serviceSlug: "check-nin-sim-linkage-status" },
+      { query: "SIM still barred after linking NIN", serviceSlug: "fix-failed-nin-sim-linkage" },
+      { query: "NCC telecom complaint", serviceSlug: "ncc-telecom-complaint" }
+    ],
+    serviceSlugs: ["nin-sim-linkage", "check-nin-sim-linkage-status", "fix-failed-nin-sim-linkage", "ncc-telecom-complaint"]
+  },
+  {
+    slug: "inec-voter-services",
+    title: "INEC Voter Registration, PVC, Transfer and Polling Unit Guide",
+    shortTitle: "INEC voter services",
+    description: "Find the correct INEC route for voter registration, PVC status, transfer, record correction, replacement and polling-unit lookup.",
+    intro: [
+      "INEC voter services change by electoral timetable, so registration availability and PVC collection should always be checked against the current official portal.",
+      "Use this hub to separate a new registration from transfer, information correction, replacement, pickup and polling-unit lookup before you start."
+    ],
+    searches: [
+      { query: "INEC voter registration", serviceSlug: "inec-new-voter-registration" },
+      { query: "check PVC status", serviceSlug: "inec-pvc-status" },
+      { query: "transfer voter registration", serviceSlug: "inec-voter-transfer" },
+      { query: "correct PVC details", serviceSlug: "inec-update-voter-information" },
+      { query: "replace lost PVC", serviceSlug: "inec-replace-lost-damaged-pvc" },
+      { query: "where to collect PVC", serviceSlug: "inec-find-pvc-pickup-location" },
+      { query: "find polling unit", serviceSlug: "inec-polling-unit-locator" }
+    ],
+    serviceSlugs: ["inec-pvc-status", "inec-new-voter-registration", "inec-voter-transfer", "inec-update-voter-information", "inec-replace-lost-damaged-pvc", "inec-find-pvc-pickup-location", "inec-polling-unit-locator"]
+  },
+  {
+    slug: "bank-transfer-complaints",
+    title: "Failed Bank Transfer, NIP Status and CBN Complaint Guide",
+    shortTitle: "Bank transfer help",
+    description: "Check an NIP transfer, understand delayed reversals and use the CBN complaint route after first reporting the issue to your bank.",
+    intro: [
+      "A failed, pending or reversed transfer can involve the sending bank, receiving bank and the NIP transaction record. Start by checking the transaction status and keeping the reference details.",
+      "If the bank does not resolve a complaint through its own channel, the CBN guide below explains the escalation route and the evidence you should retain."
+    ],
+    searches: [
+      { query: "check bank transfer status Nigeria", serviceSlug: "nip-transfer-status" },
+      { query: "NIP transfer status", serviceSlug: "nip-transfer-status" },
+      { query: "failed bank transfer reversal", serviceSlug: "nip-transfer-status" },
+      { query: "report bank to CBN", serviceSlug: "cbn-bank-complaint" },
+      { query: "CBN bank complaint", serviceSlug: "cbn-bank-complaint" }
+    ],
+    serviceSlugs: ["nip-transfer-status", "cbn-bank-complaint"]
+  },
+
 ];
 
 export function getGrowthHub(slug: string) {
