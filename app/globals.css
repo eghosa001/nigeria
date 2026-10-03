@@ -5020,7 +5020,7 @@ a.admin-guide-row:hover { background:#f8fcf9; }
 
 
 /* Jobs & Careers */
-.home-paths { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.home-paths { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .home-path-jobs { background: linear-gradient(150deg, #f1f8f3 0%, #fffdf8 72%); }
 .home-path-jobs span { color: var(--green); }
 
