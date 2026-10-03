@@ -49,7 +49,7 @@ jobs:
             exit 0
           fi
 
-          non_navigation="$(printf '%s\n' "$changed" | grep -Ev '^(components/site-header\.tsx|tests/smoke\.spec\.ts|tests/live-deployment\.spec\.ts|\.github/workflows/cloudflare-direct-deploy\.yml|\.github/workflows/ui-qa\.yml)$' || true)"
+          non_navigation="$(printf '%s\n' "$changed" | grep -Ev '^(components/site-header\.tsx|components/site-footer\.tsx|tests/smoke\.spec\.ts|tests/live-deployment\.spec\.ts|\.github/workflows/cloudflare-direct-deploy\.yml|\.github/workflows/ui-qa\.yml)$' || true)"
           echo "run=true" >> "$GITHUB_OUTPUT"
           if [ -z "$non_navigation" ]; then
             echo "mode=navigation" >> "$GITHUB_OUTPUT"
