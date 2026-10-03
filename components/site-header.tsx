@@ -11,6 +11,7 @@ const primaryNavigation = [
     label: "Services",
     matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"],
   },
+  { href: "/jobs", label: "Jobs & Careers", matches: ["/jobs"] },
   { href: "/explore", label: "Tour Nigeria", matches: ["/explore"] },
 ];
 
@@ -25,6 +26,14 @@ const sectionNavigation = {
       { href: "/locations", label: "Locations" },
       { href: "/official-portals", label: "Official portals" },
       { href: "/updates", label: "Updates" },
+    ],
+  },
+  jobs: {
+    label: "Jobs & Careers",
+    links: [
+      { href: "/jobs", label: "Overview" },
+      { href: "/jobs/government", label: "Government" },
+      { href: "/jobs/private", label: "Private sector" },
     ],
   },
   explore: {
@@ -50,13 +59,14 @@ const sectionNavigation = {
 } as const;
 
 type SectionKey = keyof typeof sectionNavigation;
-type IconName = "home" | "services" | "explore" | "movies" | "saved" | "search";
+type IconName = "home" | "services" | "jobs" | "explore" | "movies" | "saved" | "search";
 
 function sectionForPath(pathname: string): SectionKey | null {
   if (
     ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"]
       .some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/"))
   ) return "services";
+  if (pathname === "/jobs" || pathname.startsWith("/jobs/")) return "jobs";
   if (pathname === "/explore" || pathname.startsWith("/explore/")) return "explore";
   if (pathname === "/entertainment" || pathname.startsWith("/entertainment/")) return "entertainment";
   return null;
@@ -77,6 +87,7 @@ function NavIcon({ name }: { name: IconName }) {
 
   if (name === "home") return <svg {...common}><path d="m3.5 10.5 8.5-7 8.5 7" /><path d="M5.5 9.2V21h13V9.2" /><path d="M9.3 21v-6.6h5.4V21" /></svg>;
   if (name === "services") return <svg {...common}><rect x="4" y="4" width="6" height="6" rx="1.4" /><rect x="14" y="4" width="6" height="6" rx="1.4" /><rect x="4" y="14" width="6" height="6" rx="1.4" /><path d="m14.8 17 1.7 1.7 3.2-3.5" /></svg>;
+  if (name === "jobs") return <svg {...common}><rect x="3.5" y="6.5" width="17" height="13" rx="2.2" /><path d="M8.5 6.5V4.8c0-1 .8-1.8 1.8-1.8h3.4c1 0 1.8.8 1.8 1.8v1.7" /><path d="M3.5 11.5h17" /><path d="M10 11.5v1.7h4v-1.7" /></svg>;
   if (name === "explore") return <svg {...common}><circle cx="12" cy="12" r="8.4" /><path d="m15.6 8.4-2.1 5.1-5.1 2.1 2.1-5.1 5.1-2.1Z" /></svg>;
   if (name === "movies") return <svg {...common}><rect x="3.5" y="5.2" width="17" height="13.6" rx="2.2" /><path d="m10 9 5 3-5 3V9Z" /></svg>;
   if (name === "saved") return <svg {...common}><path d="M6.2 4.2A2.2 2.2 0 0 1 8.4 2h7.2a2.2 2.2 0 0 1 2.2 2.2V22L12 18.2 6.2 22V4.2Z" /></svg>;
@@ -86,6 +97,7 @@ function NavIcon({ name }: { name: IconName }) {
 function isMobileItemActive(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
   if (href === "/services") return sectionForPath(pathname) === "services";
+  if (href === "/jobs") return sectionForPath(pathname) === "jobs";
   if (href === "/explore") return sectionForPath(pathname) === "explore";
   if (href === "/entertainment/movies") return sectionForPath(pathname) === "entertainment";
   return pathname === href || pathname.startsWith(href + "/");
@@ -94,9 +106,9 @@ function isMobileItemActive(pathname: string, href: string) {
 const mobileNavigation = [
   { href: "/entertainment/movies", label: "Movies", icon: "movies" as const },
   { href: "/services", label: "Services", icon: "services" as const },
+  { href: "/jobs", label: "Jobs", icon: "jobs" as const },
   { href: "/explore", label: "Tour", icon: "explore" as const },
   { href: "/", label: "Home", icon: "home" as const },
-  { href: "/saved", label: "Saved", icon: "saved" as const },
 ];
 
 export function SiteHeader() {
