@@ -60,6 +60,34 @@ function text(service: Service) {
 }
 
 export function getServiceJourney(service: Service): ServiceJourney {
+  if (service.slug === "bvn-validation") {
+    return {
+      mode: "agency-guided",
+      modeLabel: "USSD service",
+      startLabel: "Dial the official NIBSS USSD code",
+      startDetail: "Start from a Nigerian mobile line by dialing *565*1#. This is a USSD validation service, not a web application.",
+      onlineAvailable: false,
+      physicalStatus: "not-stated",
+      physicalLabel: "No office visit is stated for the standard USSD check",
+      alternativeLabel: "If the USSD request fails",
+      alternativeDetail: "Confirm the mobile line can use USSD and use NIBSS's official support/guidance route rather than a third-party BVN checker.",
+    };
+  }
+
+  if (service.slug === "bvn-data-update") {
+    return {
+      mode: "physical",
+      modeLabel: "Bank-assisted process",
+      startLabel: "Start with the bank handling your BVN amendment",
+      startDetail: "The correction is handled through a bank-assisted BVN amendment process. The CBN page is guidance, not an online self-service correction portal.",
+      onlineAvailable: false,
+      physicalStatus: "required",
+      physicalLabel: "Bank verification and document submission are required",
+      alternativeLabel: "If the bank does not resolve the update",
+      alternativeDetail: "Keep the amendment reference and escalate through the bank's complaint channel, then use the appropriate CBN complaint route if the bank does not resolve a complete request.",
+    };
+  }
+
   const body = text(service);
   const hasPortal = Boolean(service.officialPortal);
   const physicalRequired = physicalRequiredPatterns.some((pattern) => pattern.test(body));

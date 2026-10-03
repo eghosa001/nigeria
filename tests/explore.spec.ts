@@ -62,3 +62,14 @@ test("travel directory exposes the expanded Ondo place records", async ({ page }
     await expect(page.locator(".explore-place-card").filter({ hasText: place })).toBeVisible();
   }
 });
+
+
+test("national landmarks guide reuses verified place records", async ({ page }) => {
+  await page.goto("/explore/nigeria-landmarks-places-to-visit");
+  await expect(page.getByRole("heading", { name: "Landmarks & Places to Visit in Nigeria" })).toBeVisible();
+  for (const id of ["place-olumo-rock", "place-osun-osogbo-sacred-grove", "place-yankari-game-reserve-main", "place-zuma-rock"]) {
+    const card = page.locator("#" + id);
+    await expect(card).toBeVisible();
+    await expect(card.getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
+  }
+});

@@ -18,20 +18,20 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub when you need a Nigerian passport and are not sure which process applies to your situation. It separates fresh applications, renewals, applications from abroad, lost passports and data changes so you can start with the right NIS route.",
       "Each linked guide shows the current fee or status, what to prepare, the official application portal and what happens after submission or biometric enrolment."
     ],
-    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "change data on Nigerian passport", serviceSlug: "passport-change-of-data" }, { query: "correct name on Nigerian passport", serviceSlug: "passport-name-change" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }],
-    serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-abroad", "diaspora-contactless-passport-renewal", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
+    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "track Nigerian passport application", serviceSlug: "passport-application-tracking" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "change data on Nigerian passport", serviceSlug: "passport-change-of-data" }, { query: "correct name on Nigerian passport", serviceSlug: "passport-name-change" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }],
+    serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-tracking", "passport-application-abroad", "diaspora-contactless-passport-renewal", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
   },
   {
     slug: "nin-corrections",
-    title: "NIN Registration & Correction Guide 2026",
+    title: "NIN Modification Portal & Correction Guide 2026",
     shortTitle: "NIN corrections",
-    description: "Find the correct NIMC process for NIN enrolment, date-of-birth, name, phone and address changes, plus NIN slip reissue.",
+    description: "Use the official NIN modification portal routes for date-of-birth, name, phone and address changes, plus enrolment and NIN slip reissue.",
     intro: [
       "NIN requests are easy to mix up because enrolment, self-service modifications and slip reissue use different routes. This hub groups the main NIMC tasks so you can go straight to the exact correction or enrolment process.",
       "Before paying, open the relevant guide to confirm the current fee, required evidence and whether the task is completed online or needs an enrolment centre."
     ],
-    searches: [{ query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
-    serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "nin-slip-reissue"]
+    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "NIN verification", serviceSlug: "ninauth-nin-verification" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
+    serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "ninauth-nin-verification", "nin-slip-reissue"]
   },
   {
     slug: "bvn",
@@ -42,44 +42,44 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub for first-time BVN enrolment, retrieving an existing BVN and obtaining a BVN through the non-resident route while outside Nigeria.",
       "The linked guides separate bank and NIBSS routes from unofficial advice and point you to the exact channel for each supported BVN task."
     ],
-    searches: [{ query: "retrieve BVN", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
-    serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "non-resident-bvn"]
+    searches: [{ query: "retrieve BVN", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "validate BVN", serviceSlug: "bvn-validation" }, { query: "change BVN details", serviceSlug: "bvn-data-update" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
+    serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "bvn-validation", "bvn-data-update", "non-resident-bvn"]
   },
   {
     slug: "jamb-2026",
-    title: "JAMB 2026 Guide: Registration, CAPS, Results & Admission",
+    title: "JAMB 2026 Guide: CAPS, Matriculation List, Registration & Results",
     shortTitle: "JAMB 2026",
     description: "JAMB 2026 registration, Direct Entry, profile codes, CAPS, results and admission documents in one source-linked hub.",
     intro: [
       "This hub brings together the JAMB tasks candidates commonly need before, during and after registration. Start with the exact task instead of searching through several unrelated pages.",
       "The guides cover official JAMB fees and routes, profile-code issues, CAPS, result slips and admission letters, with links back to JAMB sources."
     ],
-    searches: [{ query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" }, { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" }, { query: "JAMB profile code", serviceSlug: "jamb-profile-code" }, { query: "JAMB CAPS", serviceSlug: "jamb-caps" }, { query: "print JAMB result", serviceSlug: "jamb-print-result" }, { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" }, { query: "JAMB change of institution", serviceSlug: "jamb-change-course-institution" }, { query: "JAMB name correction", serviceSlug: "jamb-change-name" }, { query: "JAMB date of birth correction", serviceSlug: "jamb-correct-date-of-birth" }],
-    serviceSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code", "jamb-retrieve-profile-code", "jamb-caps", "jamb-print-result", "jamb-admission-letter", "jamb-change-course-institution", "jamb-change-name", "jamb-correct-date-of-birth", "jamb-correct-gender", "jamb-correct-state-lga"]
+    searches: [{ query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" }, { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" }, { query: "JAMB profile code", serviceSlug: "jamb-profile-code" }, { query: "JAMB CAPS", serviceSlug: "jamb-caps" }, { query: "JAMB matriculation list", serviceSlug: "jamb-matriculation-list" }, { query: "JAMB regularization", serviceSlug: "jamb-regularization-condonement" }, { query: "print JAMB result", serviceSlug: "jamb-print-result" }, { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" }, { query: "JAMB change of institution", serviceSlug: "jamb-change-course-institution" }, { query: "JAMB name correction", serviceSlug: "jamb-change-name" }, { query: "JAMB date of birth correction", serviceSlug: "jamb-correct-date-of-birth" }],
+    serviceSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code", "jamb-retrieve-profile-code", "jamb-caps", "jamb-matriculation-list", "jamb-regularization-condonement", "jamb-print-result", "jamb-admission-letter", "jamb-change-course-institution", "jamb-change-name", "jamb-correct-date-of-birth", "jamb-correct-gender", "jamb-correct-state-lga"]
   },
   {
     slug: "nysc",
-    title: "NYSC Guide: Registration, Senate List, Call-Up & Relocation",
+    title: "NYSC Portal Guide: Registration, Senate List, Call-Up & Relocation",
     shortTitle: "NYSC",
-    description: "NYSC registration, senate-list checks, call-up letters, relocation, corrections and exemption guidance for prospective corps members.",
+    description: "Use the official NYSC portal routes for registration, senate-list checks, call-up letters, relocation, corrections and exemption guidance.",
     intro: [
       "Use this NYSC hub from mobilisation through camp and post-registration issues. It links the main actions prospective corps members search for instead of making you guess which NYSC page applies.",
       "Each guide explains what you need to prepare, where the official action happens and what to do next if your record, call-up or relocation process needs attention."
     ],
-    searches: [{ query: "NYSC registration", serviceSlug: "nysc-registration-local" }, { query: "NYSC senate list", serviceSlug: "nysc-senate-list" }, { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" }, { query: "NYSC relocation", serviceSlug: "nysc-relocation" }, { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" }, { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }],
+    searches: [{ query: "NYSC portal", serviceSlug: "nysc-registration-local" }, { query: "NYSC registration", serviceSlug: "nysc-registration-local" }, { query: "NYSC senate list", serviceSlug: "nysc-senate-list" }, { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" }, { query: "NYSC relocation", serviceSlug: "nysc-relocation" }, { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" }, { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }],
     serviceSlugs: ["nysc-registration-local", "nysc-senate-list", "nysc-call-up-letter", "nysc-relocation", "nysc-correct-date-of-birth", "nysc-exemption-certificate"]
   },
   {
     slug: "cac-business",
-    title: "CAC Business Registration & Filing Guide",
+    title: "CAC Registration, Public Search & Filing Guide",
     shortTitle: "CAC business",
-    description: "Register a business or company with CAC and find common post-registration filings, status reports and certified copies.",
+    description: "Register a business or company with CAC, search existing entities, and find post-registration filings, status reports and certified copies.",
     intro: [
       "This hub groups the CAC tasks most business owners need from choosing a name through registration and later compliance documents.",
       "Use the exact guide for your task because business-name registration, company incorporation, annual returns and certified documents have different requirements and fees."
     ],
-    searches: [{ query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
-    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report"]
+    searches: [{ query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC public search", serviceSlug: "cac-public-search" }, { query: "CAC company search", serviceSlug: "cac-public-search" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report"]
   },
   {
     slug: "drivers-licence",
@@ -90,8 +90,8 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub to identify the right driver’s-licence process before visiting a centre or paying. New applications, renewals, lost licences and class changes are separate tasks.",
       "The linked guides explain the official route, preparation steps and current fee/status information available from FRSC sources."
     ],
-    searches: [{ query: "renew Nigerian driver\'s licence", serviceSlug: "renew-drivers-licence" }, { query: "new driver\'s licence Nigeria", serviceSlug: "new-drivers-licence" }, { query: "replace lost driver\'s licence", serviceSlug: "replace-lost-drivers-licence" }, { query: "driver\'s licence fee Nigeria", serviceSlug: "renew-drivers-licence" }, { query: "upgrade driver\'s licence class", serviceSlug: "upgrade-drivers-licence-class" }],
-    serviceSlugs: ["renew-drivers-licence", "new-drivers-licence", "replace-lost-drivers-licence", "upgrade-drivers-licence-class"]
+    searches: [{ query: "renew Nigerian driver\'s licence", serviceSlug: "renew-drivers-licence" }, { query: "new driver\'s licence Nigeria", serviceSlug: "new-drivers-licence" }, { query: "verify Nigerian driver\'s licence", serviceSlug: "drivers-licence-verification" }, { query: "replace lost driver\'s licence", serviceSlug: "replace-lost-drivers-licence" }, { query: "driver\'s licence fee Nigeria", serviceSlug: "renew-drivers-licence" }, { query: "upgrade driver\'s licence class", serviceSlug: "upgrade-drivers-licence-class" }],
+    serviceSlugs: ["renew-drivers-licence", "new-drivers-licence", "drivers-licence-verification", "replace-lost-drivers-licence", "upgrade-drivers-licence-class"]
   },
   {
     slug: "birth-records",
@@ -283,9 +283,9 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "waec-neco-results",
-    title: "WAEC & NECO Results, Certificates and Verification Guide",
-    shortTitle: "WAEC & NECO results",
-    description: "Check WAEC or NECO results, get result tokens, access certificates and use the correct verification or confirmation route.",
+    title: "WAEC, NECO & NABTEB Result Checker and Certificate Guide",
+    shortTitle: "Exam results",
+    description: "Check WAEC, NECO or NABTEB results, get the right result-checking credential, access certificates and use official verification routes.",
     intro: [
       "Result checking, certificate collection and institutional verification are different tasks. This hub separates them so students, graduates and institutions can start with the correct WAEC or NECO service.",
       "Use the linked guide for the exact task you need, especially when a school, employer or foreign institution asks for formal confirmation rather than a normal online result check."
@@ -298,9 +298,12 @@ export const growthHubs: GrowthHub[] = [
       { query: "lost WAEC certificate", serviceSlug: "waec-lost-certificate" },
       { query: "check NECO result", serviceSlug: "neco-check-result" },
       { query: "buy NECO result token", serviceSlug: "neco-purchase-result-token" },
-      { query: "verify NECO result", serviceSlug: "neco-e-verify" }
+      { query: "verify NECO result", serviceSlug: "neco-e-verify" },
+      { query: "WAEC timetable 2026", serviceSlug: "waec-2026-private-candidates-timetable" },
+      { query: "NECO timetable 2026", serviceSlug: "neco-2026-timetable" },
+      { query: "NABTEB result checker", serviceSlug: "nabteb-result-checker" }
     ],
-    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification"]
+    serviceSlugs: ["waec-check-result", "waec-digital-certificate", "waec-collect-certificate", "waec-confirm-result-nigeria", "waec-lost-certificate", "waec-correct-certificate-error", "waec-withheld-result-complaint", "waec-2026-private-candidates-timetable", "neco-check-result", "neco-purchase-result-token", "neco-e-verify", "neco-institution-verification", "neco-2026-timetable", "nabteb-result-checker"]
   },
   {
     slug: "electricity-meter-billing",
@@ -395,6 +398,24 @@ export const growthHubs: GrowthHub[] = [
     serviceSlugs: ["ecowas-travel-certificate", "yellow-card", "nigeria-landing-exit-card"]
   },
   {
+    slug: "nelfund-student-loan",
+    title: "NELFUND Portal Guide: Student Loan, Status, Upkeep & Repayment",
+    shortTitle: "NELFUND",
+    description: "Use the official NELFUND portal for student-loan applications, status checks, upkeep payments and repayment guidance.",
+    intro: [
+      "This hub separates the main NELFUND tasks so students can move from application to verification, status tracking and upkeep without confusing the different stages.",
+      "Use the linked guide that matches your current stage, and sign in only through the official NELFUND portal rather than third-party loan agents."
+    ],
+    searches: [
+      { query: "NELFUND portal", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND student loan", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND loan status", serviceSlug: "nelfund-loan-status-and-upkeep" },
+      { query: "NELFUND upkeep", serviceSlug: "nelfund-loan-status-and-upkeep" },
+      { query: "NELFUND repayment", serviceSlug: "nelfund-loan-repayment" }
+    ],
+    serviceSlugs: ["nelfund-student-loan-application", "nelfund-loan-status-and-upkeep", "nelfund-loan-repayment"]
+  },
+  {
     slug: "federal-tax-services",
     title: "Nigeria Federal Tax Registration, Filing, Payment & Refund Guide",
     shortTitle: "Federal tax services",
@@ -404,6 +425,7 @@ export const growthHubs: GrowthHub[] = [
       "Choose the exact task below so you can prepare the correct taxpayer information and use the official NRS self-service route."
     ],
     searches: [
+      { query: "retrieve Nigerian Tax ID", serviceSlug: "nrs-tax-id-retrieval" },
       { query: "NRS tax registration", serviceSlug: "nrs-individual-tax-registration" },
       { query: "NRS corporate tax registration", serviceSlug: "nrs-corporate-tax-registration" },
       { query: "NRS tax clearance certificate", serviceSlug: "nrs-tax-clearance-certificate" },
@@ -411,7 +433,7 @@ export const growthHubs: GrowthHub[] = [
       { query: "pay tax online Nigeria NRS", serviceSlug: "nrs-tax-payment" },
       { query: "track NRS tax refund", serviceSlug: "nrs-refund-tracking" }
     ],
-    serviceSlugs: ["nrs-individual-tax-registration", "nrs-corporate-tax-registration", "nrs-tax-clearance-certificate", "nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
+    serviceSlugs: ["nrs-tax-id-retrieval", "nrs-individual-tax-registration", "nrs-corporate-tax-registration", "nrs-tax-clearance-certificate", "nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
   },
 
 ];

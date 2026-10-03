@@ -95,4 +95,45 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     timeline: "How long does a China visa take in Nigeria?",
     start: "How do I apply for a China tourist visa from Nigeria?",
   },
+  "police-character-certificate": {
+    fee: "How much is a Police Character Certificate in Nigeria for diaspora applicants?",
+    requirements: "What do I need for a Nigerian Police Character Certificate?",
+    online: "Can I apply for a Police Character Certificate online through POSSAP?",
+    timeline: "How long does a Nigerian Police Character Certificate take?",
+    start: "How do I get a Police Character Certificate in Nigeria?",
+  },
+  "nigeria-landing-exit-card": {
+    online: "Can I complete the Nigeria landing and exit card online?",
+    start: "How do I complete Nigeria's landing and exit card?",
+  },
+  "bvn-retrieval": {
+    fee: "How much does it cost to retrieve my BVN?",
+    online: "Can I retrieve my BVN online or by USSD?",
+    start: "How do I retrieve my BVN?",
+  },
+  "jamb-direct-entry-2026": {
+    fee: "How much is the JAMB Direct Entry form for 2026?",
+    requirements: "What do I need for JAMB Direct Entry registration?",
+    start: "How do I get the JAMB Direct Entry form for 2026?",
+  },
+  "pencom-open-rsa": {
+    requirements: "What do I need to open a pension RSA account?",
+    start: "How do I open an RSA pension account in Nigeria?",
+  },
+  "pencom-transfer-rsa": {
+    requirements: "What do I need to transfer my pension PFA?",
+    start: "How do I transfer my pension from one PFA to another?",
+  },
+  "npc-birth-attestation": {
+    requirements: "What do I need for NPC birth attestation?",
+    online: "Can I apply for NPC birth attestation online?",
+    start: "How do I get a birth attestation from the National Population Commission?",
+  },
+  "passport-renewal": {
+    fee: "How much is Nigerian passport renewal?",
+    requirements: "What do I need to renew a Nigerian passport?",
+    online: "Can I renew my Nigerian passport online?",
+    timeline: "How long does Nigerian passport renewal take?",
+    start: "How do I renew my Nigerian passport?",
+  },
 };

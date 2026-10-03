@@ -1,12 +1,12 @@
 import { exploreGuides } from "../lib/explore";
-import { explorePlaces } from "../lib/explore-places";
+import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
 const errors: string[] = [];
 const guideSlugs = new Set(exploreGuides.map((guide) => guide.slug));
 const placeSlugs = new Set<string>();
 
 for (const guide of exploreGuides) {
-  const places = explorePlaces.filter((place) => place.guideSlug === guide.slug);
+  const places = getExplorePlacesForGuide(guide.slug);
   if (places.length < 3) errors.push(`${guide.slug}: expected at least 3 mapped places, found ${places.length}`);
 }
 

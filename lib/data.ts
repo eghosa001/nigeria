@@ -95,6 +95,13 @@ export const agencies: Agency[] = [
     "website": "https://www.neco.gov.ng"
   },
   {
+    "slug": "nabteb",
+    "name": "National Business and Technical Examinations Board",
+    "shortName": "NABTEB",
+    "description": "Technical and business examinations, results and certificate services.",
+    "website": "https://nabteb.gov.ng"
+  },
+  {
     "slug": "nysc",
     "name": "National Youth Service Corps",
     "shortName": "NYSC",

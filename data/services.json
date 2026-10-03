@@ -276,7 +276,10 @@
     "searchTerms": [
       "NIN date-of-birth correction",
       "How to change your date of birth on NIN",
-      "Identity"
+      "Identity",
+      "NIN modification portal",
+      "NIN correction portal",
+      "NIN date of birth correction online"
     ],
     "related": []
   },
@@ -512,7 +515,11 @@
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
-      "Business"
+      "Business",
+      "CAC registration",
+      "CAC registration portal",
+      "CAC business registration",
+      "register business name online Nigeria"
     ],
     "related": []
   },
@@ -560,7 +567,10 @@
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
-      "Business"
+      "Business",
+      "CAC registration",
+      "CAC company registration portal",
+      "register company online Nigeria"
     ],
     "related": [],
     "feeNote": "Company-registration charges are not one fixed amount across every incorporation because the filing depends on the company and share structure. Confirm the calculated amount in CAC's official registration portal before payment."
@@ -897,9 +907,9 @@
   },
   {
     "slug": "jamb-caps",
-    "title": "How JAMB CAPS works for admission",
+    "title": "JAMB CAPS: how to check admission status and use CAPS",
     "shortTitle": "JAMB CAPS",
-    "summary": "What JAMB's Central Admissions Processing System is designed to do in the tertiary admission process.",
+    "summary": "Use JAMB CAPS through e-Facility to review the admission status and institution/programme details shown for your candidate record, then take only the actions JAMB presents.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "No separate fee stated on CAPS overview",
@@ -937,16 +947,20 @@
     "searchTerms": [
       "JAMB CAPS",
       "How JAMB CAPS works for admission",
-      "Education"
+      "Education",
+      "JAMB CAPS portal",
+      "JAMB CAPS admission status",
+      "check admission status on JAMB CAPS",
+      "accept admission JAMB CAPS"
     ],
     "related": [],
     "feeNote": "The verified JAMB CAPS overview does not state a separate charge simply to view or use the CAPS admission-status functions. Any other JAMB service fee is separate and should be confirmed in JAMB e-Facility before payment."
   },
   {
     "slug": "waec-check-result",
-    "title": "How to check a WAEC result online",
+    "title": "WAEC Result Checker: how to check a WAEC result online",
     "shortTitle": "Check WAEC result",
-    "summary": "The fields WAEC Direct requires to check a WASSCE result online.",
+    "summary": "Use the official WAEC Result Checker with your examination number, year, exam type, e-PIN and serial number, then save or print the result.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Requires a valid WAEC result-checker e-PIN",
@@ -981,7 +995,11 @@
     "searchTerms": [
       "Check WAEC result",
       "How to check a WAEC result online",
-      "Education"
+      "Education",
+      "WAEC result checker",
+      "WAEC result checker 2026",
+      "WAEC result checker pin",
+      "WAEC Direct result checker"
     ],
     "related": [],
     "feeNote": "This label describes the required result-checker credential rather than quoting a universal e-PIN price. Confirm the current price and purchase route through WAEC Direct or another WAEC-authorised channel before paying."
@@ -1207,9 +1225,9 @@
   },
   {
     "slug": "neco-check-result",
-    "title": "How to check a NECO result online",
+    "title": "NECO Result Checker: how to check a NECO result online",
     "shortTitle": "Check NECO result",
-    "summary": "The official NECO Results Portal process using exam year/type, token and registration number.",
+    "summary": "Use the official NECO Result Checker with the examination year, exam type, token and registration number; the portal also links to token purchase.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Requires a NECO result token",
@@ -1243,7 +1261,11 @@
     "searchTerms": [
       "Check NECO result",
       "How to check a NECO result online",
-      "Education"
+      "Education",
+      "NECO result checker",
+      "NECO result checker 2026",
+      "NECO result token",
+      "NECO results portal"
     ],
     "related": []
   },
@@ -1414,7 +1436,11 @@
     "searchTerms": [
       "NYSC registration",
       "How NYSC registration works for locally trained graduates",
-      "Youth service"
+      "Youth service",
+      "NYSC portal",
+      "NYSC portal registration",
+      "NYSC registration portal",
+      "NYSC online registration"
     ],
     "related": []
   },
@@ -2379,7 +2405,10 @@
     "searchTerms": [
       "NYSC senate list",
       "How to check the NYSC senate list",
-      "Youth service"
+      "Youth service",
+      "NYSC senate list portal",
+      "check NYSC senate list",
+      "NYSC mobilization list"
     ],
     "related": [],
     "feeNote": "The verified NYSC sources do not state a separate charge simply to check the Senate/Academic Board list. Any later NYSC transaction or optional service is separate and should be confirmed on the official NYSC portal."
@@ -2424,7 +2453,10 @@
     "searchTerms": [
       "NYSC call-up letter",
       "How to access an NYSC call-up letter",
-      "Youth service"
+      "Youth service",
+      "NYSC portal call up letter",
+      "print NYSC call up letter",
+      "NYSC call up letter portal"
     ],
     "related": []
   },
@@ -3191,7 +3223,10 @@
     "searchTerms": [
       "NIN name modification",
       "How to change your name on NIN",
-      "Identity"
+      "Identity",
+      "NIN modification portal",
+      "NIN name correction",
+      "change name on NIN online"
     ],
     "related": []
   },
@@ -3245,7 +3280,10 @@
     "searchTerms": [
       "NIN phone-number modification",
       "How to change your phone number on NIN",
-      "Identity"
+      "Identity",
+      "NIN modification portal",
+      "NIN phone number correction",
+      "change NIN phone number online"
     ],
     "related": []
   },
@@ -10338,6 +10376,684 @@
       "passport-application-abroad",
       "diaspora-contactless-passport-renewal",
       "lost-nigerian-passport"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "jamb-matriculation-list",
+    "title": "How to check the JAMB matriculation list",
+    "shortTitle": "JAMB matriculation list",
+    "summary": "Check whether JAMB recognises your admission on the matriculation list and see what to do if your name is missing before NYSC mobilisation.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "Free to check the matriculation list",
+    "feeNote": "JAMB's matriculation-list checker itself does not show a fee. If you need to print a JAMB result slip or admission letter to complete the process, JAMB lists each document service separately on its payment-services page.",
+    "timeline": "The online check is immediate once you enter the required examination details and registration number. Fixing a missing record depends on completing the required JAMB documents and your institution verifying them.",
+    "status": "verified",
+    "officialPortal": "https://efacility.jamb.gov.ng/CheckMatriculationList",
+    "requirements": [
+      "JAMB registration number",
+      "Examination year/type used for the admission",
+      "Access to your JAMB e-Facility records if you need to print your result slip or admission letter"
+    ],
+    "steps": [
+      "Open JAMB's official Matriculation List checker.",
+      "Select the examination details requested and enter your JAMB registration number.",
+      "Check whether your name appears on the matriculation list.",
+      "If your name is missing, confirm that you have printed your JAMB Admission Letter and Result Slip.",
+      "Take the required JAMB documents to the admission officer in your institution for verification, because JAMB states that recognised admission records are required for NYSC eligibility."
+    ],
+    "notes": [
+      "JAMB states that only candidates whose names are on the matriculation list are recognised as bona fide students for this purpose.",
+      "JAMB's official checker says printing the admission letter and result slip, then verifying them with the institution's admission officer, is part of qualifying for the list."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Matriculation List checker",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://efacility.jamb.gov.ng/CheckMatriculationList",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "JAMB Payment & Services",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://jamb.gov.ng/Payment-Services",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "JAMB matriculation list",
+      "check JAMB matriculation list",
+      "JAMB matriculation list portal",
+      "name not on JAMB matriculation list",
+      "JAMB matriculation list NYSC"
+    ],
+    "related": [
+      "jamb-admission-letter",
+      "jamb-print-result",
+      "nysc-senate-list"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "jamb-regularization-condonement",
+    "title": "How JAMB regularization / condonement of illegal admission works",
+    "shortTitle": "JAMB regularization / condonement",
+    "summary": "Understand JAMB's current condonement route for an admission that was not originally processed through JAMB and the official service fee before starting.",
+    "category": "Education",
+    "agencySlug": "jamb",
+    "feeLabel": "₦10,000 JAMB service fee",
+    "feeNote": "JAMB's Payment & Services page lists Condonement of Illegal Admission (Foreign/Local) at ₦10,000, with a ₦300 CBT service charge.",
+    "timeline": "There is no single public completion time. The process can depend on institution-side confirmation and JAMB review after the required service is initiated.",
+    "status": "verified",
+    "officialPortal": "https://portal.jamb.gov.ng/",
+    "requirements": [
+      "A JAMB profile/e-Facility account tied to the admission record you need to regularise",
+      "The institution, programme, admission year and other admission particulars shown on your school record",
+      "A payment method accepted by the JAMB e-Facility service after the transaction is generated"
+    ],
+    "steps": [
+      "Sign in to the official JAMB e-Facility portal with the profile connected to the admission record you need to regularise.",
+      "Open the admission-related service area and choose the current Condonement of Illegal Admission service that matches a local or foreign admission record.",
+      "Generate the JAMB service transaction, review the displayed ₦10,000 service fee and ₦300 CBT service charge, then complete payment through the approved payment option shown in e-Facility.",
+      "Complete the admission particulars requested in the condonement application and save the acknowledgement or transaction reference generated by JAMB.",
+      "Present or submit the acknowledgement and admission evidence to your institution when JAMB requires institution-side confirmation, then return to e-Facility to confirm that the admission record has been updated."
+    ],
+    "notes": [
+      "JAMB currently labels this paid service 'Condonement of Illegal Admission (Foreign/Local)' on its Payment & Services page.",
+      "Do not pay an agent outside the official JAMB/approved CBT route."
+    ],
+    "sources": [
+      {
+        "label": "JAMB Payment & Services",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://jamb.gov.ng/Payment-Services",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "JAMB e-Facility",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://portal.jamb.gov.ng/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "JAMB regularization",
+      "JAMB regularisation",
+      "JAMB condonement",
+      "condonement of illegal admission JAMB",
+      "JAMB admission regularization fee"
+    ],
+    "related": [
+      "jamb-matriculation-list",
+      "jamb-admission-letter",
+      "jamb-caps"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "cac-public-search",
+    "title": "How to search and verify a company or business on CAC Public Search",
+    "shortTitle": "CAC Public Search",
+    "summary": "Use CAC's official public-search service to look up a Nigerian company or business by entity name, RC number or available search identifier before paying for certified records.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "Basic public search is available online",
+    "feeNote": "CAC's public-search page provides the search interface. Paid documents such as a Certified True Copy or status report are separate CAC services.",
+    "timeline": "Basic search results are returned online after you submit the search details.",
+    "status": "verified",
+    "officialPortal": "https://icrp.cac.gov.ng/public-search/",
+    "requirements": [
+      "The registered entity name, RC/BN number or other search identifier you want to check",
+      "Enough identifying information to distinguish the correct entity when CAC returns similar names"
+    ],
+    "steps": [
+      "Open the official CAC iCRP Public Search page and place the entity name, RC/BN number or other available identifier in the public-search field.",
+      "Submit the search form and open the matching entity result returned by CAC.",
+      "Compare the returned registered name, registration number, entity type and status with the company or business you are checking.",
+      "If you need formal evidence rather than an on-screen public search, open the separate CAC Status Report or Certified True Copy service and complete that document request."
+    ],
+    "notes": [
+      "CAC describes Public Search as a way to search existing companies and business entities.",
+      "CAC also publishes a separate Company Search service for verifying registration status and company information."
+    ],
+    "sources": [
+      {
+        "label": "CAC Public Search",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/public-search/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "CAC Company Search",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/company-search",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "CAC public search",
+      "CAC company search",
+      "CAC business name search",
+      "search CAC company",
+      "verify company CAC",
+      "CAC RC number search"
+    ],
+    "related": [
+      "cac-status-report",
+      "cac-certified-true-copy",
+      "cac-company-registration"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "bvn-validation",
+    "title": "How to validate a BVN with NIBSS *565*1#",
+    "shortTitle": "Validate BVN",
+    "summary": "Confirm whether a BVN is valid and see the name registered to it using NIBSS's official *565*1# USSD validation service.",
+    "category": "Banking",
+    "agencySlug": "nibss",
+    "feeLabel": "₦20",
+    "feeNote": "NIBSS states that BVN validation through *565*1# carries a ₦20 service fee.",
+    "timeline": "The validation result is returned during the USSD session.",
+    "status": "verified",
+    "officialPortal": "https://nibss-plc.com.ng/ussd-validation-services/",
+    "requirements": [
+      "The 11-digit BVN you want to validate",
+      "A Nigerian mobile line that can dial NIBSS *565# USSD services",
+      "At least ₦20 airtime for the NIBSS BVN-validation service charge"
+    ],
+    "steps": [
+      "Open the phone dialler on a Nigerian mobile line and dial *565*1# to start the NIBSS BVN-validation service.",
+      "Enter the 11-digit BVN in the USSD prompt and review the number before sending the request.",
+      "Confirm the request so the ₦20 NIBSS service charge can be applied to the USSD session.",
+      "Read the validation response and compare the returned registered name with the person or record you are checking before relying on the BVN."
+    ],
+    "notes": [
+      "NIBSS says the service confirms that a BVN is correct and returns the name registered to the BVN.",
+      "This is different from retrieving your own forgotten BVN with *565*0#."
+    ],
+    "sources": [
+      {
+        "label": "NIBSS USSD Validation Services",
+        "agency": "Nigeria Inter-Bank Settlement System",
+        "url": "https://nibss-plc.com.ng/ussd-validation-services/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "BVN validation",
+      "validate BVN",
+      "check if BVN is valid",
+      "BVN validation code",
+      "*565*1#",
+      "BVN name check"
+    ],
+    "related": [
+      "bvn-retrieval",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "bvn-data-update",
+    "title": "How to correct or update BVN details",
+    "shortTitle": "Update BVN details",
+    "summary": "Correct a BVN name, date of birth or other permitted demographic detail through the banking channel allowed under CBN's BVN framework.",
+    "category": "Banking",
+    "agencySlug": "cbn",
+    "feeLabel": "No single central BVN-update fee is published by CBN",
+    "feeNote": "CBN sets the conditions for allowed BVN record changes. Your bank handles the customer update process and may provide its own current operational requirements.",
+    "timeline": "CBN guidance states that BVN issue resolution should be completed within five working days once all required documents have been submitted.",
+    "status": "verified",
+    "officialPortal": "https://www.cbn.gov.ng/PaymentsSystem/BVN.html",
+    "requirements": [
+      "Your existing BVN and a valid government-issued identity document",
+      "A completed BVN data-amendment form supplied by the bank handling the correction",
+      "For a name change: the legal evidence accepted for the change, such as a marriage certificate, divorce document, court order or other bank-accepted supporting record",
+      "For a date-of-birth correction: documentary evidence showing the correct date of birth, noting that the CBN framework permits this correction only once"
+    ],
+    "steps": [
+      "Visit or contact the bank that will handle the BVN amendment and request its current BVN data-amendment form for the exact field you need to correct.",
+      "Complete the amendment form with your existing BVN and the corrected demographic information exactly as supported by your identity records.",
+      "Submit the completed form, valid identification and the supporting document for the requested name, date-of-birth or other permitted correction.",
+      "Complete the identity or biometric verification requested by the bank and collect a reference, acknowledgement or complaint ticket for the submitted amendment.",
+      "Check the updated BVN record through your bank after processing and escalate the request to the bank if a complete submission remains unresolved beyond the applicable handling period."
+    ],
+    "notes": [
+      "CBN allows date-of-birth correction once with supporting documents and permits supported name changes and minor corrections.",
+      "A BVN itself does not change when the underlying customer record is corrected."
+    ],
+    "sources": [
+      {
+        "label": "CBN Bank Verification Number overview",
+        "agency": "Central Bank of Nigeria",
+        "url": "https://www.cbn.gov.ng/PaymentsSystem/BVN.html",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "CBN regulatory framework for BVN record updates",
+        "agency": "Central Bank of Nigeria",
+        "url": "https://www.cbn.gov.ng/out/2017/bpsd/circular%20on%20the%20regulatory%20framework%20for%20bvn%20%20watchlist%20for%20nigerian%20financial%20system.pdf",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "how to change BVN details",
+      "BVN correction",
+      "BVN date of birth correction",
+      "BVN name correction",
+      "change phone number on BVN",
+      "update BVN information"
+    ],
+    "related": [
+      "bvn-validation",
+      "bvn-retrieval",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "nrs-tax-id-retrieval",
+    "title": "How to retrieve your Nigerian Tax ID with NRS",
+    "shortTitle": "Retrieve Nigerian Tax ID",
+    "summary": "Retrieve the harmonised Nigerian Tax ID using the official NRS/JRB portal, with NIN for individuals or CAC registration details for businesses.",
+    "category": "Tax",
+    "agencySlug": "nrs",
+    "feeLabel": "No fee is shown on the official Tax ID retrieval portal",
+    "feeNote": "The official Tax ID portal presents retrieval as an online identity-confirmation service and does not display a retrieval fee on the public workflow.",
+    "timeline": "The portal checks the submitted identity details online; successful matching can display the recognised Tax ID during the retrieval process.",
+    "status": "verified",
+    "officialPortal": "https://taxid.nrs.gov.ng/",
+    "requirements": [
+      "Individuals: your 11-digit NIN and the personal identity information used on the NIMC record",
+      "Registered companies or business entities: the CAC registration number or registered entity information accepted by the Tax ID portal",
+      "Access to a phone or computer that can complete the Tax ID portal's identity check"
+    ],
+    "steps": [
+      "Open the official Nigerian Tax ID portal and choose the Tax ID retrieval option.",
+      "Select Individual, Corporate or the entity type that matches the taxpayer whose Tax ID you need.",
+      "For an individual, enter the NIN and matching personal identity fields; for a registered organisation, enter the CAC registration information requested by the portal.",
+      "Complete the portal security check and submit the identity match request.",
+      "Review and save the Tax ID returned by the official portal, or correct the underlying NIN/CAC identity record first if the portal reports a mismatch."
+    ],
+    "notes": [
+      "NRS/JRB describe the Tax ID as a harmonised national tax identity linked to foundational records such as NIN for individuals and CAC registration for businesses.",
+      "If identity records do not match, the portal can require the underlying NIN/CAC record to be corrected first."
+    ],
+    "sources": [
+      {
+        "label": "Nigerian Tax ID Retrieval Portal",
+        "agency": "Nigeria Revenue Service / Joint Revenue Board",
+        "url": "https://taxid.nrs.gov.ng/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "How Tax ID Retrieval Works",
+        "agency": "Nigeria Revenue Service / Joint Revenue Board",
+        "url": "https://taxid.nrs.gov.ng/how-it-works",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "Tax ID Nigeria",
+      "Tax ID retrieval",
+      "retrieve TIN Nigeria",
+      "NRS Tax ID",
+      "Nigerian Tax ID portal",
+      "get Tax ID with NIN"
+    ],
+    "related": [
+      "nrs-individual-tax-registration",
+      "nrs-corporate-tax-registration",
+      "nrs-tax-clearance-certificate"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "passport-application-tracking",
+    "title": "How to track a Nigerian passport application",
+    "shortTitle": "Track passport application",
+    "summary": "Check the status of a Nigerian passport application on the official Nigeria Immigration Service tracker using the application and reference numbers.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "No fee is shown for the online status check",
+    "feeNote": "The NIS tracking page provides the application-status lookup. Any passport application or issuance fee is separate from checking status.",
+    "timeline": "The tracker returns the available application status online after valid application details are submitted.",
+    "status": "verified",
+    "officialPortal": "https://track.immigration.gov.ng/",
+    "requirements": [
+      "The passport application number shown on your NIS application confirmation",
+      "The reference number shown on the same NIS application or payment record"
+    ],
+    "steps": [
+      "Open the official Nigeria Immigration Service passport tracker at track.immigration.gov.ng.",
+      "Enter the full passport Application Number from your NIS application confirmation in the Application Number field.",
+      "Enter the corresponding Reference Number from the NIS application or payment record in the Reference Number field.",
+      "Submit the tracking form to display the latest application status recorded by NIS.",
+      "Read the returned status together with any NIS email or appointment notice and follow the next action shown for biometrics, production or collection."
+    ],
+    "notes": [
+      "The NIS passport portal also provides an Application Status/Print Receipt function in the domestic passport application flow.",
+      "Use only the official NIS tracking or passport portal for status checks."
+    ],
+    "sources": [
+      {
+        "label": "NIS Passport Application Tracking",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://track.immigration.gov.ng/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NIS Passports information",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/passports/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "Nigerian passport tracking",
+      "passport application status Nigeria",
+      "track Nigerian passport",
+      "NIS passport status",
+      "passport tracking Nigeria"
+    ],
+    "related": [
+      "passport-renewal",
+      "first-nigerian-passport",
+      "lost-nigerian-passport"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "drivers-licence-verification",
+    "title": "How to verify a Nigerian driver's licence",
+    "shortTitle": "Verify driver's licence",
+    "summary": "Check the authenticity of a Nigerian driver's-licence document through FRSC's official verification service using the RID or licence number.",
+    "category": "Driving",
+    "agencySlug": "frsc",
+    "feeLabel": "Public document check is available on the FRSC verification page",
+    "feeNote": "FRSC also offers a broader verification-request workflow that can require verification and/or shipping payment for institutional requests. The public document-check page itself presents an RID/licence-number lookup.",
+    "timeline": "The public verification check is performed online after you submit the RID or licence number.",
+    "status": "verified",
+    "officialPortal": "https://ndlverification.frsc.gov.ng/verify",
+    "requirements": [
+      "The RID number printed on the driver's-licence record or verification document, if available",
+      "The Nigerian driver's-licence number when using the licence-number lookup",
+      "A phone or computer with internet access to the official FRSC verification portal"
+    ],
+    "steps": [
+      "Open the official FRSC driver's-licence verification page at ndlverification.frsc.gov.ng/verify.",
+      "Choose the available document lookup and enter the RID number or driver's-licence number exactly as printed on the record.",
+      "Submit the verification form and wait for the FRSC portal to return the document information.",
+      "Compare the returned identity and licence details with the physical or digital licence you are checking, and use the FRSC contact route on the portal if the records do not match."
+    ],
+    "notes": [
+      "FRSC advises authorities to verify both old and new licence documents through the secure portal.",
+      "The institutional verification workflow is different from simply renewing or applying for a licence."
+    ],
+    "sources": [
+      {
+        "label": "FRSC Driver's Licence Document Verification",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://ndlverification.frsc.gov.ng/verify",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "FRSC Driver's Licence Verification Portal",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://ndlverification.frsc.gov.ng/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "drivers licence verification Nigeria",
+      "verify Nigerian drivers licence",
+      "FRSC licence verification",
+      "check drivers licence Nigeria",
+      "RID licence verification"
+    ],
+    "related": [
+      "new-drivers-licence",
+      "renew-drivers-licence",
+      "replace-lost-drivers-licence"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "waec-2026-private-candidates-timetable",
+    "title": "Where to get the 2026 WAEC Private Candidates Second Series timetable",
+    "shortTitle": "WAEC 2026 timetable",
+    "summary": "Download the official 2026 WASSCE for Private Candidates Second Series final timetable from WAEC Nigeria and avoid unofficial schedule copies.",
+    "category": "Education",
+    "agencySlug": "waec",
+    "feeLabel": "Free official timetable download",
+    "feeNote": "WAEC publishes the timetable as an official attachment on its Nigeria website.",
+    "timeline": "The timetable can be downloaded immediately from the current WAEC notice.",
+    "status": "verified",
+    "officialPortal": "https://www.waecnigeria.org/index.php/article/wassce-private-candidates-2026-second-series-final-timetable",
+    "requirements": [
+      "Confirmation that you are checking the 2026 WASSCE for Private Candidates Second Series timetable rather than a school-candidate timetable",
+      "Your registered subjects so you can identify every paper you are expected to write",
+      "A phone or computer with a PDF viewer for the official WAEC timetable attachment"
+    ],
+    "steps": [
+      "Open WAEC Nigeria's official 2026 WASSCE for Private Candidates Second Series timetable notice.",
+      "Open or download the final timetable PDF attached to the official WAEC notice.",
+      "Find each registered subject in the PDF and record the date, start time and paper code exactly as WAEC lists them.",
+      "Save or print the official timetable and check the WAEC Nigeria notice again before your first paper in case WAEC publishes an amendment."
+    ],
+    "notes": [
+      "This guide is specifically for the 2026 WASSCE for Private Candidates Second Series final timetable.",
+      "Do not use a timetable from an unofficial blog if it conflicts with the WAEC Nigeria attachment."
+    ],
+    "sources": [
+      {
+        "label": "WAEC Nigeria — WASSCE Private Candidates 2026 Second Series Final Timetable",
+        "agency": "West African Examinations Council Nigeria",
+        "url": "https://www.waecnigeria.org/index.php/article/wassce-private-candidates-2026-second-series-final-timetable",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "WAEC timetable 2026",
+      "WAEC private candidate timetable 2026",
+      "WASSCE private candidates timetable",
+      "WAEC second series timetable 2026"
+    ],
+    "related": [
+      "waec-check-result",
+      "waec-digital-certificate"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "neco-2026-timetable",
+    "title": "Where to download the official 2026 NECO timetable",
+    "shortTitle": "NECO 2026 timetable",
+    "summary": "Find NECO's official 2026 SSCE Internal and External timetables, including the current External examination schedule published by NECO.",
+    "category": "Education",
+    "agencySlug": "neco",
+    "feeLabel": "Free official timetable download",
+    "feeNote": "NECO publishes timetable downloads on its official website.",
+    "timeline": "The timetable can be downloaded immediately from NECO's official timetable section.",
+    "status": "verified",
+    "officialPortal": "https://neco.gov.ng/?page_id=27",
+    "requirements": [
+      "Confirmation that you need the 2026 SSCE Internal timetable or the 2026 SSCE External timetable",
+      "Your registered NECO subjects so you can identify every scheduled paper",
+      "A phone or computer with a PDF viewer for the official NECO timetable download"
+    ],
+    "steps": [
+      "Open NECO's official examination-timetable page at neco.gov.ng and locate the 2026 timetable downloads.",
+      "Select the 2026 SSCE Internal or 2026 SSCE External timetable that matches the examination for which you are registered.",
+      "Download the official timetable PDF and identify every registered subject, paper code, date and start time.",
+      "Save or print the official copy and re-check NECO's timetable page before the examination starts for any amended schedule."
+    ],
+    "notes": [
+      "NECO's current page publishes both the 2026 SSCE Internal and 2026 SSCE External timetable downloads.",
+      "The official page states that the 2026 SSCE External examination runs from 4 November to 21 November 2026."
+    ],
+    "sources": [
+      {
+        "label": "NECO official examination timetables",
+        "agency": "National Examinations Council",
+        "url": "https://neco.gov.ng/?page_id=27",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NECO 2026 SSCE External Timetable",
+        "agency": "National Examinations Council",
+        "url": "https://neco.gov.ng/2026%20SSCE%20EXTERNAL%20TIMETABLE.pdf",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NECO 2026 SSCE Internal Timetable",
+        "agency": "National Examinations Council",
+        "url": "https://neco.gov.ng/2026%20SSCE%20INTERNAL%20TIMETABLE-2.pdf",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "NECO timetable 2026",
+      "NECO 2026 timetable",
+      "NECO external timetable 2026",
+      "NECO internal timetable 2026",
+      "download NECO timetable"
+    ],
+    "related": [
+      "neco-2026-ssce-internal-registration",
+      "neco-check-result"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "ninauth-nin-verification",
+    "title": "How to verify your identity with NINAuth",
+    "shortTitle": "NIN verification with NINAuth",
+    "summary": "Use NIMC's official NINAuth app to verify and share your identity securely with participating organisations by QR code or time-limited Sharecode.",
+    "category": "Identity",
+    "agencySlug": "nimc",
+    "feeLabel": "No individual app fee stated on the official NINAuth guide",
+    "feeNote": "NINAuth's public individual guidance does not state a charge simply to install the app or use its individual identity-sharing features. Verification partners and aggregators have separate commercial arrangements.",
+    "timeline": "Identity sharing or verification is designed to happen during the app interaction once your NINAuth profile is active and the requesting organisation supports NINAuth.",
+    "status": "verified",
+    "officialPortal": "https://ninauth.nimc.gov.ng/download",
+    "requirements": [
+      "An existing National Identification Number (NIN)",
+      "An Android or iOS smartphone that meets NINAuth requirements",
+      "An active NINAuth profile on the device",
+      "A participating organisation's NINAuth QR code or a request that accepts a NINAuth Sharecode"
+    ],
+    "steps": [
+      "Open NIMC's official NINAuth website and use its download route to install the app from the official app store listing.",
+      "Register or activate NINAuth with your NIN and complete the identity checks required by the app.",
+      "When an organisation asks for NINAuth verification, review exactly what information it is requesting before you approve anything.",
+      "Scan the organisation's NINAuth QR code or generate a time-limited Sharecode in your NINAuth profile, depending on the verification method offered.",
+      "Approve only the requested data you intend to share, then confirm the verification result in the app or with the requesting organisation."
+    ],
+    "notes": [
+      "NIMC describes NINAuth as a consent-based digital identity verification service for online and in-person use.",
+      "A NINAuth Sharecode is intended to let you share verified identity information without handing over more data than the supported verification requires.",
+      "NINAuth cannot enrol a person for a new NIN; people without a NIN must complete NIMC enrolment first."
+    ],
+    "sources": [
+      {
+        "label": "NINAuth for Individuals",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/individuals",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NINAuth Get Started",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/get-started",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "Download NINAuth",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/download",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "NIN verification",
+      "verify NIN",
+      "NINAuth",
+      "NIMC verification",
+      "NIN verification app",
+      "NINAuth share code"
+    ],
+    "related": [
+      "nin-enrolment",
+      "nin-slip-reissue",
+      "nin-name-modification"
+    ],
+    "lastVerified": "2026-10-03"
+  },
+  {
+    "slug": "nabteb-result-checker",
+    "title": "How to check a NABTEB result online",
+    "shortTitle": "NABTEB result checker",
+    "summary": "Check NABTEB NBC, NTC, ANBC, ANTC and other supported examination results through the official eWorld result checker using the candidate number, exam details, card serial number and PIN.",
+    "category": "Education",
+    "agencySlug": "nabteb",
+    "feeLabel": "Requires a valid NABTEB result-checking PIN",
+    "feeNote": "NABTEB's official result checker requires a valid 12-digit PIN from a NABTEB eWorld result-checking card. Confirm the current official purchase/payment route before paying because the public result page does not display one universal permanent PIN price.",
+    "timeline": "The result checker returns the available result online after the required candidate and PIN details are submitted correctly.",
+    "status": "verified",
+    "officialPortal": "https://eworld.nabteb.gov.ng/",
+    "requirements": [
+      "NABTEB candidate identification number",
+      "Correct examination type",
+      "Four-digit examination year",
+      "Card serial number from the valid result-checking card",
+      "12-digit NABTEB result-checking PIN"
+    ],
+    "steps": [
+      "Open the official NABTEB eWorld result checker.",
+      "Enter the candidate identification number exactly as issued by NABTEB.",
+      "Select the correct examination type and examination year.",
+      "Enter the card serial number and the 12-digit result-checking PIN.",
+      "Submit the form and wait for the result window to load; save or print the result if needed."
+    ],
+    "notes": [
+      "NABTEB says a result-checking PIN is tied to the eWorld scratch card and should not be reused for a different candidate.",
+      "The official eWorld page also publishes an SMS result-checking format, but users should confirm that the shortcode and mobile route are still available before relying on it."
+    ],
+    "sources": [
+      {
+        "label": "NABTEB eWorld Result Checker",
+        "agency": "National Business and Technical Examinations Board",
+        "url": "https://eworld.nabteb.gov.ng/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NABTEB official website — Result Checker",
+        "agency": "National Business and Technical Examinations Board",
+        "url": "https://nabteb.gov.ng/",
+        "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "NABTEB 2026 NBC/NTC result release",
+        "agency": "National Business and Technical Examinations Board",
+        "url": "https://nabteb.gov.ng/2026/09/02/nabteb-releases-2026-nbc-ntc-results/",
+        "lastChecked": "2026-10-03"
+      }
+    ],
+    "searchTerms": [
+      "NABTEB result checker",
+      "NABTEB result checker 2026",
+      "check NABTEB result",
+      "NABTEB eWorld",
+      "NABTEB result PIN",
+      "NABTEB NBC result",
+      "NABTEB NTC result"
+    ],
+    "related": [
+      "waec-check-result",
+      "neco-check-result"
     ],
     "lastVerified": "2026-10-03"
   }

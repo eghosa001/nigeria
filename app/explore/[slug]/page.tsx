@@ -23,6 +23,7 @@ function truncateSeo(value: string, limit: number) {
 
 function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
   const year = guide.lastReviewed.slice(0, 4);
+  if (guide.slug === "nigeria-landmarks-places-to-visit") return "Landmarks & Places to Visit in Nigeria " + year;
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide " + year + ": Things to Do & Places to Visit", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
