@@ -120,12 +120,19 @@ export default function JobsPage() {
               <p>Graduate programmes, internships, SIWES and professional roles from official employer career systems.</p>
               <b>{privateOpportunities.length} verified guides →</b>
             </Link>
-            <a href="#opportunities" className="jobs-path-card jobs-path-card-dark">
-              <span>Match by qualification</span>
-              <strong>Search across both</strong>
-              <p>Search engineering, graduate, student, HND, public service and other terms across verified pathways.</p>
-              <b>Search opportunities ↓</b>
-            </a>
+            <Link href="/jobs/deadlines" className="jobs-path-card jobs-path-card-dark">
+              <span>Open now</span>
+              <strong>Deadline tracker</strong>
+              <p>See verified applications with published closing dates and employer systems currently showing live roles.</p>
+              <b>View deadlines →</b>
+            </Link>
+          </div>
+
+          <div className="jobs-topic-links" aria-label="Browse careers by applicant type">
+            <Link href="/jobs/graduate">Graduate jobs & trainee programmes</Link>
+            <Link href="/jobs/internships">Internships & SIWES</Link>
+            <Link href="/jobs/engineering">Engineering & technical careers</Link>
+            <a href="#opportunities">Search the full directory</a>
           </div>
         </div>
       </section>
