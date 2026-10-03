@@ -22,9 +22,10 @@ function truncateSeo(value: string, limit: number) {
 }
 
 function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
-  if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide 2026: Things to Do & Places to Visit", 60);
-  if (guide.kind === "itinerary") return truncateSeo(guide.title + " 2026: Itinerary & Things to Do", 60);
-  return truncateSeo(guide.title + " 2026: Things to Do & Trip Planning", 60);
+  const year = guide.lastReviewed.slice(0, 4);
+  if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide " + year + ": Things to Do & Places to Visit", 60);
+  if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
+  return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
 }
 
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
@@ -108,15 +109,23 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     ],
   };
 
-  const guideLd = {
-    "@context": "https://schema.org",
-    "@type": "TouristDestination",
-    name: guide.shortTitle,
-    description: guide.summary,
-    url: pageUrl,
-    address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
-    touristType: guide.bestFor,
-  };
+  const guideLd = guide.kind === "itinerary"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Trip",
+        name: guide.title,
+        description: guide.summary,
+        url: pageUrl,
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "TouristDestination",
+        name: guide.shortTitle,
+        description: guide.summary,
+        url: pageUrl,
+        address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
+        touristType: guide.bestFor,
+      };
 
   const webpageLd = {
     "@context": "https://schema.org",
@@ -125,7 +134,9 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     description: guide.summary,
     url: pageUrl,
     dateModified: guide.lastReviewed,
-    about: { "@type": "TouristDestination", name: guide.shortTitle },
+    about: guide.kind === "itinerary"
+      ? { "@type": "Trip", name: guide.title }
+      : { "@type": "TouristDestination", name: guide.shortTitle },
   };
 
   const faqLd = {
