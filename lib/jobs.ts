@@ -72,7 +72,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://nafrecruitment.airforce.mil.ng/",
     officialUrlLabel: "Apply on the official NAF recruitment portal",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-04",
     deadline: "2026-10-14",
     nextMilestone: "Applications are open until 14 October 2026 according to the official portal.",
     feeNote: "The Nigerian Air Force states that recruitment/enlistment is FREE and is done through its official recruitment portal.",
@@ -82,7 +82,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The DSSC section on the same portal is currently marked closed."
     ],
     sources: [
-      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-03" }
+      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-04" }
     ]
   },
   {
@@ -126,7 +126,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://recruit.army.mil.ng/",
     officialUrlLabel: "Apply on the official Nigerian Army portal",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-04",
     nextMilestone: "The official portal says shortlisted candidates are expected to attend state screening from 17 November to 1 December 2026.",
     feeNote: "The Nigerian Army states that recruitment is FREE. Do not pay for application access, shortlisting or screening.",
     sourceNotes: [
@@ -134,7 +134,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The portal publishes the qualification, age, height, identity and screening-document requirements used in this guide."
     ],
     sources: [
-      { label: "Nigerian Army Recruitment Portal", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-03" }
+      { label: "Nigerian Army Recruitment Portal", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-04" }
     ]
   },
   {
@@ -173,7 +173,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://joinnigeriannavy.navy.mil.ng/",
     officialUrlLabel: "Apply on the official Nigerian Navy portal",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-04",
     deadline: "2026-10-31",
     nextMilestone: "Batch 39 aptitude testing is scheduled for 21 November 2026; the portal lists basic training for the first quarter of 2027.",
     feeNote: "Use only the official Nigerian Navy recruitment domain. MyNigeriaGuide does not collect recruitment fees or credentials.",
@@ -182,7 +182,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The Navy portal lists the aptitude test for 21 November 2026 and describes identity verification, application and status tracking stages."
     ],
     sources: [
-      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-03" }
+      { label: "Nigerian Navy Batch 39 Recruitment Portal", url: "https://joinnigeriannavy.navy.mil.ng/", lastChecked: "2026-10-04" }
     ]
   },
   {
@@ -1342,12 +1342,15 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://moniepoint.com/careers",
     officialUrlLabel: "Search Moniepoint Nigeria roles",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-04",
     nextMilestone: "The official careers catalogue currently contains numerous Nigeria roles across multiple states and remote teams.",
     feeNote: "Use Moniepoint's official careers page and exact role page when submitting application information.",
-    sourceNotes: ["Moniepoint's careers catalogue currently exposes a large set of Nigeria roles across technical and non-technical functions."],
+    sourceNotes: [
+      "Moniepoint's official careers catalogue currently exposes a large set of Nigeria roles across technical and non-technical functions.",
+      "When checked on 4 October 2026, the official global careers page showed active Nigeria openings across enterprise sales, field credit, customer support, engineering, data, finance, operations and design."
+    ],
     sources: [
-      { label: "Moniepoint Careers", url: "https://moniepoint.com/careers", lastChecked: "2026-10-03" }
+      { label: "Moniepoint Careers", url: "https://moniepoint.com/careers", lastChecked: "2026-10-04" }
     ]
   },
   {
