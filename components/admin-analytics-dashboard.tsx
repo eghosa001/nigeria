@@ -167,6 +167,7 @@ export function AdminAnalyticsDashboard() {
         {mode === "all"
           ? <>Showing the full GA4 Data API total for this {range === "7d" ? "7-day" : range === "30d" ? "30-day" : "90-day"} window, starting {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}. This matches GA4 reporting and can include historical QA traffic.</>
           : <>Clean traffic starts {new Date(data.cleanStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })} to exclude the known pre-cleanup QA period.</>}
+        {" "}GA4 property: {data.propertyId || "unknown"}.
       </p>
 
       <div className="analytics-metric-grid">
