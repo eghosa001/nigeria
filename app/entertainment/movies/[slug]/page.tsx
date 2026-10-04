@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
+import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
@@ -172,6 +173,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   ];
   const lastChecked = allCheckedDates.reduce((latest, value) => value > latest ? value : latest, "");
   const platforms = [...new Set(availabilityLinks.map((link) => link.platform))];
+  const watchHereSource = availabilityLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
+  const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const featuredCast = getFeaturedCast(title);
   const image = movieImageUrl(title);
 
@@ -240,6 +243,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
 
               <div className="movie-detail-actions">
+                {watchHereVideoId ? <a className="button" href="#watch-here">Watch here</a> : null}
                 {availabilityLinks.slice(0, 3).map((link) => (
                   <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>
                     {link.label} ↗
@@ -268,7 +272,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             links={[
               { href: "#cast", label: "See cast" },
               { href: "#watch", label: "Where to watch" },
-              ...(availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
+              ...(watchHereVideoId ? [{ href: "#watch-here", label: "Watch here", primary: true }] : []),
+              ...(!watchHereVideoId && availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
             ]}
             note="The essentials are above. The sections below add the full cast, verified source details and related movies."
           />
@@ -337,6 +342,16 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <section id="watch">
               <span className="eyebrow">Official availability</span>
               <h2>Where to watch {title.title}</h2>
+              {watchHereVideoId && watchHereSource ? (
+                <div id="watch-here" className="movie-watch-here">
+                  <LazyYouTubePlayer
+                    videoId={watchHereVideoId}
+                    title={title.title}
+                    sourceUrl={watchHereSource.href}
+                    publisher={watchHereSource.publisher}
+                  />
+                </div>
+              ) : null}
               <div className="movie-watch-options">
                 {availabilityLinks.map((link) => {
                   const platformGuide = getPlatformGuide(link.platform);

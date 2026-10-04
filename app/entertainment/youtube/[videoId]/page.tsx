@@ -4,6 +4,7 @@ import { notFound, redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
+import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
@@ -120,7 +121,8 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               ) : null}
 
               <div className="movie-detail-actions">
-                <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Watch full movie on YouTube ↗</a>
+                <a className="button" href="#watch-here">Watch here</a>
+                <a className="button button-secondary" href={movie.videoUrl} target="_blank" rel="noreferrer">Open on YouTube ↗</a>
                 {movie.channelUrl ? <a className="button button-secondary" href={movie.channelUrl} target="_blank" rel="noreferrer">Publisher channel ↗</a> : null}
               </div>
               <small className="movie-freshness-note">
@@ -142,7 +144,8 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
             links={[
               { href: "#cast", label: "See cast" },
               { href: "#source", label: "Source details" },
-              { href: movie.videoUrl, label: "Watch full movie", external: true, primary: true },
+              { href: "#watch-here", label: "Watch here", primary: true },
+              { href: movie.videoUrl, label: "Open on YouTube", external: true },
             ]}
             note={"Official source checked " + movie.lastChecked + ". Continue below for cast, alternate official sources and related movies."}
           />
@@ -196,7 +199,15 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
             <section id="source">
               <span className="eyebrow">Watch</span>
-              <h2>Watch on YouTube</h2>
+              <h2>Watch {movie.title} here</h2>
+              <div id="watch-here" className="movie-watch-here">
+                <LazyYouTubePlayer
+                  videoId={movie.videoId}
+                  title={movie.title}
+                  sourceUrl={movie.videoUrl}
+                  publisher={movie.channelName}
+                />
+              </div>
               <div className="movie-watch-options">
                 <article>
                   <div><span>YouTube</span><strong>{movie.channelName}</strong></div>
