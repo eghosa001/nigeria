@@ -81,7 +81,7 @@ export default function EntertainmentPage() {
               <article className="minimal-movie-card movie-card-clickable" key={title.slug}>
                 <Link className="movie-card-hitarea" href={"/entertainment/movies/" + title.slug} aria-label={"View details for " + title.title} />
                 <Link href={"/entertainment/movies/" + title.slug} aria-label={"Open " + title.title}>
-                  <EntertainmentArtwork title={title} />
+                  <EntertainmentArtwork title={title} showSourceLink={false} />
                 </Link>
                 <div>
                   <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
