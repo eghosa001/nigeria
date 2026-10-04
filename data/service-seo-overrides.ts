@@ -1,5 +1,5 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
-  "ecowas-travel-certificate": "ECOWAS Travel Certificate {year}: Price, Form & Requirements",
+  "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Fee, Form & Requirements",
   "nin-phone-modification": "Change NIN Phone Number {year}: Fee, Police Report & Steps",
   "passport-change-of-data": "Nigerian Passport Change of Data {year}: Cost & Requirements",
   "npc-check-attestation-status": "NPC Birth Attestation Status {year}: Check & Download",
@@ -38,6 +38,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "npc-child-birth-registration": "NPC Birth Registration {year}: Certificate, Portal & Steps",
   "scuml-certificate-registration": "SCUML Registration {year}: Login, Certificate & Status",
   "pencom-job-loss-25-percent-withdrawal": "25% Pension Withdrawal Nigeria {year}: Eligibility & Steps",
+  "ogun-tax-clearance-certificate": "Ogun Tax Clearance Certificate {year}: eTCC, Fee & Verify",
 };
 
 export function getServiceSeoTitleOverride(slug: string, year: string) {
