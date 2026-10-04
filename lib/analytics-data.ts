@@ -2,11 +2,15 @@ import { Buffer } from "node:buffer";
 import { ANALYTICS_CLEAN_START, analyticsStartDate } from "@/lib/analytics-safety";
 
 export type AnalyticsRange = "7d" | "30d" | "90d";
+export type AnalyticsTrafficMode = "all" | "clean";
 
 export type AnalyticsDashboardData = {
   range: AnalyticsRange;
+  mode: AnalyticsTrafficMode;
+  propertyId: string;
   generatedAt: string;
   dataStartDate: string;
+  cleanStartDate: string;
   summary: {
     activeUsers: number;
     sessions: number;
@@ -207,9 +211,10 @@ function dimension(row: ReportRow, index: number) {
   return row?.dimensionValues?.[index]?.value ?? "";
 }
 
-export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<AnalyticsDashboardData> {
+export async function getAnalyticsDashboard(range: AnalyticsRange, mode: AnalyticsTrafficMode = "all"): Promise<AnalyticsDashboardData> {
   if (!analyticsReadConfigured()) throw new Error("Google Analytics Data API is not configured.");
-  const cached = reportCache.get(range);
+  const cacheKey = range + ":" + mode;
+  const cached = reportCache.get(cacheKey);
   if (cached && cached.expiresAt > Date.now()) return cached.data;
 
   const days = daysForRange(range);
@@ -219,7 +224,10 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
     month: "2-digit",
     day: "2-digit",
   }).format(new Date());
-  const dataStartDate = analyticsStartDate(days, today);
+  const rollingDate = new Date(today + "T12:00:00Z");
+  rollingDate.setUTCDate(rollingDate.getUTCDate() - Math.max(0, days - 1));
+  const rollingStartDate = rollingDate.toISOString().slice(0, 10);
+  const dataStartDate = mode === "clean" ? analyticsStartDate(days, today) : rollingStartDate;
   const dateRanges = [{ startDate: dataStartDate, endDate: "today" }];
 
   const coreRequests = [
@@ -287,10 +295,14 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
 
   const totalValues = summaryReport.totals?.[0]?.metricValues ?? summaryReport.rows?.[0]?.metricValues ?? [];
+  const { propertyId = "" } = config();
   const data: AnalyticsDashboardData = {
     range,
+    mode,
+    propertyId,
     generatedAt: new Date().toISOString(),
     dataStartDate,
+    cleanStartDate: ANALYTICS_CLEAN_START,
     summary: {
       activeUsers: Number(totalValues[0]?.value ?? 0),
       sessions: Number(totalValues[1]?.value ?? 0),
@@ -329,6 +341,6 @@ export async function getAnalyticsDashboard(range: AnalyticsRange): Promise<Anal
     })),
   };
 
-  reportCache.set(range, { data, expiresAt: Date.now() + 5 * 60 * 1000 });
+  reportCache.set(cacheKey, { data, expiresAt: Date.now() + 5 * 60 * 1000 });
   return data;
 }

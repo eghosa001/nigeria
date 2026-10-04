@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import type { AnalyticsDashboardData, AnalyticsRange } from "@/lib/analytics-data";
+import type { AnalyticsDashboardData, AnalyticsRange, AnalyticsTrafficMode } from "@/lib/analytics-data";
 
 type ApiResponse = {
   configured?: boolean;
@@ -39,15 +39,16 @@ function interactionLabel(event: string) {
 
 export function AdminAnalyticsDashboard() {
   const [range, setRange] = useState<AnalyticsRange>("30d");
+  const [mode, setMode] = useState<AnalyticsTrafficMode>("all");
   const [state, setState] = useState<"loading" | "setup" | "locked" | "ready" | "error">("loading");
   const [data, setData] = useState<AnalyticsDashboardData | null>(null);
   const [setup, setSetup] = useState<ApiResponse>({});
   const [message, setMessage] = useState("");
 
-  async function load(nextRange = range) {
+  async function load(nextRange = range, nextMode = mode) {
     setState("loading");
     setMessage("");
-    const response = await fetch("/admin/api/analytics?range=" + nextRange, { cache: "no-store" });
+    const response = await fetch("/admin/api/analytics?range=" + nextRange + "&mode=" + nextMode, { cache: "no-store" });
     const body = await response.json() as ApiResponse;
 
     if (response.status === 503 && body.configured === false) {
@@ -68,7 +69,7 @@ export function AdminAnalyticsDashboard() {
     setState("ready");
   }
 
-  useEffect(() => { void load(range); }, [range]);
+  useEffect(() => { void load(range, mode); }, [range, mode]);
 
   async function login(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -86,7 +87,7 @@ export function AdminAnalyticsDashboard() {
       return;
     }
     formElement.reset();
-    await load(range);
+    await load(range, mode);
   }
 
   async function logout() {
@@ -155,11 +156,18 @@ export function AdminAnalyticsDashboard() {
           <button type="button" className={range === "30d" ? "active" : undefined} onClick={() => setRange("30d")}>30 days</button>
           <button type="button" className={range === "90d" ? "active" : undefined} onClick={() => setRange("90d")}>90 days</button>
         </div>
+        <div>
+          <button type="button" className={mode === "all" ? "active" : undefined} onClick={() => setMode("all")}>GA4 all traffic</button>
+          <button type="button" className={mode === "clean" ? "active" : undefined} onClick={() => setMode("clean")}>Clean traffic</button>
+        </div>
         <button type="button" onClick={logout}>Lock analytics</button>
       </div>
 
       <p className="analytics-clean-note">
-        Clean traffic reporting starts {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}. Earlier automated QA traffic is excluded.
+        {mode === "all"
+          ? <>Showing the full GA4 Data API total for this {range === "7d" ? "7-day" : range === "30d" ? "30-day" : "90-day"} window, starting {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}. This matches GA4 reporting and can include historical QA traffic.</>
+          : <>Clean traffic starts {new Date(data.cleanStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })} to exclude the known pre-cleanup QA period.</>}
+        {" "}GA4 property: {data.propertyId || "unknown"}.
       </p>
 
       <div className="analytics-metric-grid">
