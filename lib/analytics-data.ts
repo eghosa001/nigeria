@@ -465,8 +465,8 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
 
   const [batch, interactionReport, realtimeActiveUsers, searchPerformance] = await Promise.all([
     batchRunReports(coreRequests),
-    runReport(interactionRequest),
-    runRealtime(),
+    runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
+    runRealtime().catch(() => null),
     getSearchPerformance(days),
   ]);
 
