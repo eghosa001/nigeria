@@ -184,6 +184,8 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             {guide.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
           <p className="hero-note">Reviewed {guide.lastReviewed}. Confirm live opening hours, ticketing, road access, weather, security conditions and event schedules directly before travelling.</p>
+          {guide.slug === "lagos" ? <div className="minimal-inline-links"><Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link></div> : null}
+          {guide.slug === "abuja" ? <div className="minimal-inline-links"><Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link></div> : null}
         </div>
       </section>
 

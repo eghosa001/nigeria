@@ -11,6 +11,7 @@ import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 import { jobOpportunities } from "@/lib/jobs";
+import { seriesTitles, seriesLastChecked } from "@/lib/series";
 
 export const sitemapSectionNames = ["core", "services", "jobs", "travel", "movies", "youtube"] as const;
 export type SitemapSectionName = (typeof sitemapSectionNames)[number];
@@ -95,6 +96,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/jobs/graduate", lastModified: jobsModified },
       { url: base + "/jobs/internships", lastModified: jobsModified },
       { url: base + "/jobs/engineering", lastModified: jobsModified },
+      { url: base + "/jobs/remote", lastModified: "2026-10-04" },
       ...jobOpportunities.map((item) => ({
         url: base + "/jobs/" + item.slug,
         lastModified: item.verifiedAt,
@@ -105,6 +107,8 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "travel") {
     return [
       { url: base + "/explore", lastModified: exploreModified },
+      { url: base + "/explore/things-to-do-lagos", lastModified: "2026-10-04" },
+      { url: base + "/explore/things-to-do-abuja", lastModified: "2026-10-04" },
       ...exploreGuides.map((guide) => ({
         url: base + "/explore/" + guide.slug,
         lastModified: guide.lastReviewed,
@@ -121,6 +125,11 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
       { url: base + "/entertainment/people", lastModified: movieCatalogModified },
+      { url: base + "/entertainment/series", lastModified: latestDate(seriesTitles.map(seriesLastChecked)) || movieCatalogModified },
+      ...seriesTitles.map((item) => ({
+        url: base + "/entertainment/series/" + item.slug,
+        lastModified: seriesLastChecked(item) || movieCatalogModified,
+      })),
       ...Array.from({ length: Math.max(0, getEntertainmentCatalogPageCount() - 1) }, (_, index) => ({
         url: base + "/entertainment/movies/page/" + (index + 2),
         lastModified: movieCatalogModified,

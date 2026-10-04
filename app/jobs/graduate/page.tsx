@@ -4,7 +4,7 @@ import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 
 export const metadata: Metadata = {
-  title: "Graduate Jobs & Trainee Programmes in Nigeria",
+  title: "Graduate Jobs in Nigeria 2026: Trainee & Entry-Level Programmes",
   description: "Verified graduate trainee programmes, entry-level careers and graduate job routes in Nigeria with qualifications, NYSC requirements and official links.",
   alternates: { canonical: "/jobs/graduate" }
 };

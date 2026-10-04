@@ -14,10 +14,14 @@ export const metadata: Metadata = {
 };
 
 const quickServices = [
-  { label: "Nigerian passport", href: "/topics/nigerian-passport" },
-  { label: "NIN correction", href: "/topics/nin-corrections" },
+  { label: "JAMB portal guide", href: "/topics/jamb-2026" },
+  { label: "NYSC portal guide", href: "/topics/nysc" },
+  { label: "WAEC results", href: "/topics/waec" },
+  { label: "NECO results", href: "/topics/neco" },
+  { label: "NELFUND", href: "/topics/nelfund" },
+  { label: "NIN services", href: "/topics/nin-corrections" },
+  { label: "BVN services", href: "/topics/bvn" },
   { label: "CAC registration", href: "/topics/cac-business" },
-  { label: "JAMB 2026", href: "/topics/jamb-2026" },
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 

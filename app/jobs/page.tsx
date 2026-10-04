@@ -132,6 +132,7 @@ export default function JobsPage() {
             <Link href="/jobs/graduate">Graduate jobs & trainee programmes</Link>
             <Link href="/jobs/internships">Internships & SIWES</Link>
             <Link href="/jobs/engineering">Engineering & technical careers</Link>
+            <Link href="/jobs/remote">Remote & hybrid jobs</Link>
             <a href="#opportunities">Search the full directory</a>
           </div>
         </div>

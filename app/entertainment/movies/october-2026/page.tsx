@@ -22,6 +22,7 @@ const releases: OctoberRelease[] = [
     title: "Agbara Nla: The Return",
     where: "Nigerian cinemas",
     detail: "Mount Zion's return to the Agbara Nla story arrives in cinemas with Mike Bamiloye returning as Isawuru.",
+    href: "/entertainment/movies/agbara-nla-the-return",
   },
   {
     date: "2 October",
@@ -37,34 +38,39 @@ const releases: OctoberRelease[] = [
     href: "/entertainment/movies/oversabi-aunty",
   },
   {
-    date: "18 October",
+    date: "16 October",
     title: "First Lady",
     where: "Nigerian cinemas",
     detail: "A political drama led by Fehintola Olulana, with Desmond Elliot, Ibrahim Suleiman, Ngozi Nwosu and Jaiye Kuti.",
+    href: "/entertainment/movies/first-lady-2026",
   },
   {
     date: "18 October",
     title: "Pushing 30",
     where: "Africa Magic Showcase",
     detail: "An ensemble dramedy about a 30-year-old tech founder whose birthday brunch exposes old rivalries, romance and career pressure.",
+    href: "/entertainment/movies/pushing-30-2026",
   },
   {
     date: "23 October",
     title: "A Land Apart",
     where: "Nigerian cinemas",
     detail: "Richard Mofe-Damijo, Princess Mufeedah and Daniel Etim Effiong star in a drama built around agriculture, inheritance and global power.",
+    href: "/entertainment/movies/a-land-apart-2026",
   },
   {
     date: "23 October",
     title: "Tele x Zikora",
     where: "Nigerian cinemas",
     detail: "Mike Afolarin and Genoveva Umeh lead a university-set young-adult drama about ambition, identity and relationships.",
+    href: "/entertainment/movies/tele-x-zikora-2026",
   },
   {
     date: "30 October",
     title: "Phoenix Fury",
     where: "Nigerian cinemas",
     detail: "Ifeoma Chukwuogo's revenge drama arrives in Nigeria and Ghana after its AFRIFF run.",
+    href: "/entertainment/movies/phoenix-fury-2026",
   },
   {
     date: "30 October",

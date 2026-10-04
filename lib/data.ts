@@ -32,6 +32,13 @@ export const agencies: Agency[] = [
     "website": "https://www.cbn.gov.ng"
   },
   {
+    "slug": "sec",
+    "name": "Securities and Exchange Commission Nigeria",
+    "shortName": "SEC",
+    "description": "Investor protection, capital-market regulation, unclaimed-dividend and e-Dividend services.",
+    "website": "https://sec.gov.ng"
+  },
+  {
     "slug": "nibss",
     "name": "Nigeria Inter-Bank Settlement System",
     "shortName": "NIBSS",
@@ -455,6 +462,10 @@ export const categories = [
   {
     "name": "Banking",
     "description": "BVN and regulated banking-identity services."
+  },
+  {
+    "name": "Investing",
+    "description": "Investor records, dividends and Nigerian capital-market services."
   },
   {
     "name": "Insurance",

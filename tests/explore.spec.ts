@@ -17,7 +17,7 @@ test("homepage exposes movies, services, tour and jobs as primary paths", async 
 test("Explore Nigeria hub and city guide are navigable", async ({ page }) => {
   await page.goto("/explore");
   await expect(page.getByRole("heading", { name: /Plan the trip/ })).toBeVisible();
-  await page.getByRole("link", { name: /Lagos/ }).first().click();
+  await page.locator('a[href="/explore/lagos"]').first().click();
   await expect(page).toHaveURL(/\/explore\/lagos$/);
   await expect(page.getByRole("heading", { name: "Lagos Travel Guide" })).toBeVisible();
 });
