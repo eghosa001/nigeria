@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
 import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { getSiteUrl } from "@/lib/site";
@@ -63,6 +64,25 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <small>Verify the destination domain before entering personal information.</small>
           </aside>
         </div>
+
+        <div className="container">
+          <AnswerFirst
+            title={"Should you apply for " + item.title + "?"}
+            summary={item.summary}
+            facts={[
+              { label: "Status", value: item.statusLabel },
+              { label: "Location", value: item.location },
+              { label: "Deadline / next step", value: item.deadline ? new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : (item.nextMilestone ?? "Check the live official page") },
+              { label: "Best fit", value: item.audiences.slice(0, 3).join(", ") },
+            ]}
+            links={[
+              { href: "#requirements", label: "Check requirements" },
+              { href: "#apply", label: "How to apply" },
+              { href: item.officialUrl, label: item.officialUrlLabel, external: true, primary: true },
+            ]}
+            note={"Verified " + item.verifiedAt + ". Check eligibility first; only then open the official application source."}
+          />
+        </div>
       </section>
 
       <section className="section">
@@ -86,7 +106,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <div className="job-tags">{item.fields.map((tag) => <span key={tag}>{tag}</span>)}</div>
             </section>
 
-            <section>
+            <section id="requirements">
               <h2>Qualification requirements</h2>
               <ul className="checklist">{item.qualifications.map((text) => <li key={text}>{text}</li>)}</ul>
             </section>
@@ -96,12 +116,12 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <ul className="checklist">{item.requirements.map((text) => <li key={text}>{text}</li>)}</ul>
             </section>
 
-            <section>
+            <section id="documents">
               <h2>Documents to prepare</h2>
               <ul>{item.documents.map((text) => <li key={text}>{text}</li>)}</ul>
             </section>
 
-            <section>
+            <section id="apply">
               <h2>How to apply or check your status</h2>
               <ol className="job-steps">{item.applicationSteps.map((text, index) => <li key={text}><span>{index + 1}</span><p>{text}</p></li>)}</ol>
             </section>
