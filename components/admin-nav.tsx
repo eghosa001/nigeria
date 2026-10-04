@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const items = [
   { href: "/admin", label: "Dashboard", exact: true },
@@ -39,8 +40,11 @@ export function AdminNav() {
             );
           })}
         </div>
-        <Link className="admin-public-link" href="/">Public site ↗</Link>
-        <button className="admin-lock-button" type="button" onClick={lockAdmin}>Lock</button>
+        <div className="admin-nav-actions">
+          <ThemeToggle />
+          <Link className="admin-public-link" href="/">Public site ↗</Link>
+          <button className="admin-lock-button" type="button" onClick={lockAdmin}>Lock</button>
+        </div>
       </div>
     </nav>
   );
