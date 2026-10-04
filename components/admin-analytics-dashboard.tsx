@@ -47,25 +47,30 @@ export function AdminAnalyticsDashboard() {
   async function load(nextRange = range) {
     setState("loading");
     setMessage("");
-    const response = await fetch("/admin/api/analytics?range=" + nextRange + "&mode=clean", { cache: "no-store" });
-    const body = await response.json() as ApiResponse;
+    try {
+      const response = await fetch("/admin/api/analytics?range=" + nextRange + "&mode=clean", { cache: "no-store" });
+      const body = await response.json().catch(() => ({ error: "Analytics server returned an invalid response." })) as ApiResponse;
 
-    if (response.status === 503 && body.configured === false) {
-      setSetup(body);
-      setState("setup");
-      return;
-    }
-    if (response.status === 401) {
-      setState("locked");
-      return;
-    }
-    if (!response.ok || !body.data) {
-      setMessage(body.error ?? "Unable to load visit analytics.");
+      if (response.status === 503 && body.configured === false) {
+        setSetup(body);
+        setState("setup");
+        return;
+      }
+      if (response.status === 401) {
+        setState("locked");
+        return;
+      }
+      if (!response.ok || !body.data) {
+        setMessage(body.error ?? "Unable to load visit analytics.");
+        setState("error");
+        return;
+      }
+      setData(body.data);
+      setState("ready");
+    } catch (error) {
+      setMessage(error instanceof Error ? error.message : "Unable to reach the analytics server.");
       setState("error");
-      return;
     }
-    setData(body.data);
-    setState("ready");
   }
 
   useEffect(() => { void load(range); }, [range]);
@@ -178,23 +183,23 @@ export function AdminAnalyticsDashboard() {
           </div>
           <small>Search Console · freshest available data</small>
         </div>
-        {data.searchPerformance.available ? (
+        {data.searchPerformance?.available ? (
           <>
             <div className="analytics-metric-grid">
-              <div><span>Impressions</span><strong>{number(data.searchPerformance.impressions ?? 0)}</strong><small>Times MyNigeriaGuide appeared in Google Search</small></div>
-              <div><span>Search clicks</span><strong>{number(data.searchPerformance.clicks ?? 0)}</strong><small>Clicks from Google Search results</small></div>
-              <div><span>Search CTR</span><strong>{((data.searchPerformance.ctr ?? 0) * 100).toFixed(2)}%</strong><small>Clicks divided by impressions</small></div>
-              <div><span>Average position</span><strong>{(data.searchPerformance.position ?? 0).toFixed(1)}</strong><small>Average top result position</small></div>
+              <div><span>Impressions</span><strong>{number(data.searchPerformance?.impressions ?? 0)}</strong><small>Times MyNigeriaGuide appeared in Google Search</small></div>
+              <div><span>Search clicks</span><strong>{number(data.searchPerformance?.clicks ?? 0)}</strong><small>Clicks from Google Search results</small></div>
+              <div><span>Search CTR</span><strong>{((data.searchPerformance?.ctr ?? 0) * 100).toFixed(2)}%</strong><small>Clicks divided by impressions</small></div>
+              <div><span>Average position</span><strong>{(data.searchPerformance?.position ?? 0).toFixed(1)}</strong><small>Average top result position</small></div>
             </div>
             <p className="analytics-clean-note">
-              Search Console range: {data.searchPerformance.startDate} to {data.searchPerformance.endDate}. Latest date returned: {data.searchPerformance.latestDate ?? "none yet"}.
-              {data.searchPerformance.firstIncompleteDate ? <> Data from {data.searchPerformance.firstIncompleteDate} onward is preliminary and can still change.</> : null}
+              Search Console range: {data.searchPerformance?.startDate} to {data.searchPerformance?.endDate}. Latest date returned: {data.searchPerformance?.latestDate ?? "none yet"}.
+              {data.searchPerformance?.firstIncompleteDate ? <> Data from {data.searchPerformance?.firstIncompleteDate} onward is preliminary and can still change.</> : null}
             </p>
           </>
         ) : (
           <div className="admin-empty">
             <strong>Search impressions are not available to this server connection yet.</strong>
-            <p>The dashboard will use the Search Console API directly once its service account has read access to {data.searchPerformance.siteUrl}. Visitor analytics will continue to work independently.</p>
+            <p>The dashboard will use the Search Console API directly once its service account has read access to {data.searchPerformance?.siteUrl ?? "sc-domain:mynigeriaguide.com"}. Visitor analytics will continue to work independently.</p>
           </div>
         )}
       </section>
