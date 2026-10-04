@@ -50,6 +50,8 @@ export default function ExplorePage() {
             <a href="#cities">City guides</a>
             <a href="#places">Places</a>
             <a href="#destinations">Destinations</a>
+            <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
+            <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
           </div>
         </div>
       </section>
