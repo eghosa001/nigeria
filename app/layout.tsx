@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import "@/app/mobile.css";
+import "@/app/theme.css";
 import { AdsenseScript } from "@/components/adsense";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
@@ -10,6 +11,20 @@ import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 
 const siteUrl = getSiteUrl();
+
+const themeBootstrap = `
+(function () {
+  try {
+    var preference = localStorage.getItem("mng-theme") || "system";
+    if (preference !== "light" && preference !== "dark" && preference !== "system") preference = "system";
+    var dark = preference === "dark" || (preference === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    var theme = dark ? "dark" : "light";
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.themePreference = preference;
+    document.documentElement.style.colorScheme = theme;
+  } catch (_) {}
+})();
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -58,8 +73,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f5ed" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1410" />
+        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
       <body>
