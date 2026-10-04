@@ -1,5 +1,5 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
-  "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Fee, Form & Requirements",
+  "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Form & Requirements",
   "nin-phone-modification": "Change NIN Phone Number {year}: Fee, Police Report & Steps",
   "passport-change-of-data": "Nigerian Passport Change of Data {year}: Cost & Requirements",
   "npc-check-attestation-status": "NPC Birth Attestation Status {year}: Check & Download",
