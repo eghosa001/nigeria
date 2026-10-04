@@ -22,6 +22,7 @@ const quickServices = [
   { label: "NIN services", href: "/topics/nin-corrections" },
   { label: "BVN services", href: "/topics/bvn" },
   { label: "CAC registration", href: "/topics/cac-business" },
+  { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 
 export default function HomePage() {
