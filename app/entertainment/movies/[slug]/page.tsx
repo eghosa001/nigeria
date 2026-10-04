@@ -91,6 +91,7 @@ function accessLabel(access: string) {
   if (access === "subscription") return "Subscription";
   if (access === "rent-or-buy") return "Rent or buy";
   if (access === "subscription-or-rent") return "Subscription or rental";
+  if (access === "cinema") return "Cinema ticket / showtime";
   return "Official platform";
 }
 
