@@ -733,7 +733,12 @@
       "CAC CRP annual returns",
       "business name annual returns Nigeria"
     ],
-    "related": [],
+    "related": [
+      "cac-company-registration",
+      "cac-business-name-registration",
+      "cac-public-search",
+      "cac-certified-true-copy"
+    ],
     "feeNote": "Annual-return charges vary with the entity and filing being submitted. Confirm the entity type, filing period and amount displayed in CAC's official registration portal before payment."
   },
   {
@@ -984,7 +989,12 @@
       "accept admission on CAPS",
       "JAMB CAPS login"
     ],
-    "related": [],
+    "related": [
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "jamb-regularization-condonement",
+      "jamb-direct-entry-2026"
+    ],
     "feeNote": "The verified JAMB CAPS overview does not state a separate charge simply to view or use the CAPS admission-status functions. Any other JAMB service fee is separate and should be confirmed in JAMB e-Facility before payment."
   },
   {
@@ -3319,7 +3329,12 @@
       "NIMC phone number modification fee",
       "NIN phone correction police report"
     ],
-    "related": []
+    "related": [
+      "nin-date-of-birth-modification",
+      "nin-name-modification",
+      "nin-address-modification",
+      "ninauth-nin-verification"
+    ]
   },
   {
     "slug": "nin-address-modification",
