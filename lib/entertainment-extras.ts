@@ -402,7 +402,7 @@ export const releaseItems: ReleaseItem[] = [
     id: "mko-documentary-cinema",
     title: "MKO",
     kind: "cinema",
-    status: "upcoming",
+    status: "now-showing",
     dateLabel: "In cinemas 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "Ose Oyamendan's documentary on M.K.O. Abiola begins its Nigerian theatrical release on 2 October.",
