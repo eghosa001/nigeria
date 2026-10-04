@@ -41,6 +41,16 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
   const base=getSiteUrl();
   const pageUrl=base+"/entertainment/series/"+item.slug;
   const checked=seriesLastChecked(item);
+  const related=seriesTitles
+    .filter((candidate)=>candidate.slug!==item.slug)
+    .map((candidate)=>({
+      item:candidate,
+      score:candidate.genres.filter((genre)=>item.genres.includes(genre)).length +
+        candidate.languages.filter((language)=>item.languages.includes(language)).length
+    }))
+    .sort((a,b)=>b.score-a.score || a.item.title.localeCompare(b.item.title))
+    .slice(0,3)
+    .map((entry)=>entry.item);
 
   const ld={
     "@context":"https://schema.org",
@@ -78,6 +88,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
               <span className="eyebrow">At a glance</span>
               <div className="movie-fact-grid">
                 <article><span>Year</span><strong>{item.year}</strong></article>
+                <article><span>Country</span><strong>{item.country}</strong></article>
                 <article><span>Status</span><strong>{item.status}</strong></article>
                 {item.premiereLabel?<article><span>Release</span><strong>{item.premiereLabel}</strong></article>:null}
                 {item.episodeInfo?<article><span>Episodes / run</span><strong>{item.episodeInfo}</strong></article>:null}
@@ -109,6 +120,20 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
                     <a className="button" href={link.href} target="_blank" rel="noreferrer">Open official source ↗</a>
                   </article>
                 ))}
+              </div>
+            </section>
+
+            <section>
+              <span className="eyebrow">Artwork & rights</span>
+              <h2>How visuals are handled</h2>
+              <p className="movie-long-summary">{item.artworkNote}</p>
+            </section>
+
+            <section>
+              <span className="eyebrow">Related series</span>
+              <h2>Continue watching Nigerian series</h2>
+              <div className="related-links">
+                {related.map((candidate)=><Link href={"/entertainment/series/"+candidate.slug} key={candidate.slug}>{candidate.title} →</Link>)}
               </div>
             </section>
 
