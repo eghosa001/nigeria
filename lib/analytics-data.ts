@@ -18,6 +18,14 @@ export type SearchPerformanceSummary = {
   error?: string;
 };
 
+export type AnalyticsConnectionStatus = {
+  verified: boolean;
+  measurementId: string;
+  propertyId: string;
+  streams: Array<{ measurementId: string; defaultUri: string; displayName: string }>;
+  error?: string;
+};
+
 export type AnalyticsDashboardData = {
   range: AnalyticsRange;
   mode: AnalyticsTrafficMode;
@@ -41,6 +49,7 @@ export type AnalyticsDashboardData = {
   referrers: Array<{ source: string; medium: string; sessions: number; users: number }>;
   interactions: Array<{ event: string; count: number }>;
   searchPerformance: SearchPerformanceSummary;
+  connection: AnalyticsConnectionStatus;
 };
 
 type ReportRow = {
@@ -68,6 +77,19 @@ type SearchAnalyticsRow = {
 type SearchAnalyticsResponse = {
   rows?: SearchAnalyticsRow[];
   metadata?: { first_incomplete_date?: string };
+};
+
+type DataStream = {
+  type?: string;
+  displayName?: string;
+  webStreamData?: {
+    measurementId?: string;
+    defaultUri?: string;
+  };
+};
+
+type DataStreamsResponse = {
+  dataStreams?: DataStream[];
 };
 
 const interactionEvents = [
@@ -229,6 +251,60 @@ async function batchRunReports(requests: Array<Record<string, unknown>>) {
     throw new Error("Google Analytics batch report request failed (" + response.status + "): " + message.slice(0, 300));
   }
   return await response.json() as BatchRunReportsResponse;
+}
+
+async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
+  const { propertyId = "" } = config();
+  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
+
+  if (!propertyId || !measurementId) {
+    return {
+      verified: false,
+      measurementId,
+      propertyId,
+      streams: [],
+      error: "GA4 property or measurement ID is not configured.",
+    };
+  }
+
+  try {
+    const token = await getAccessToken();
+    const response = await fetch(
+      "https://analyticsadmin.googleapis.com/v1beta/properties/" + encodeURIComponent(propertyId) + "/dataStreams?pageSize=200",
+      {
+        headers: { Authorization: "Bearer " + token },
+        cache: "no-store",
+      },
+    );
+    if (!response.ok) {
+      const message = await response.text();
+      throw new Error("Analytics Admin API request failed (" + response.status + "): " + message.slice(0, 180));
+    }
+
+    const body = await response.json() as DataStreamsResponse;
+    const streams = (body.dataStreams ?? [])
+      .filter((stream) => stream.type === "WEB_DATA_STREAM" || Boolean(stream.webStreamData))
+      .map((stream) => ({
+        measurementId: stream.webStreamData?.measurementId ?? "",
+        defaultUri: stream.webStreamData?.defaultUri ?? "",
+        displayName: stream.displayName ?? "",
+      }));
+
+    return {
+      verified: streams.some((stream) => stream.measurementId === measurementId),
+      measurementId,
+      propertyId,
+      streams,
+    };
+  } catch (error) {
+    return {
+      verified: false,
+      measurementId,
+      propertyId,
+      streams: [],
+      error: error instanceof Error ? error.message : "Unable to verify GA4 property wiring.",
+    };
+  }
 }
 
 async function runRealtime() {
@@ -477,11 +553,12 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
     limit: 20,
   };
 
-  const [batch, interactionReport, realtime, searchPerformance] = await Promise.all([
+  const [batch, interactionReport, realtime, searchPerformance, connection] = await Promise.all([
     batchRunReports(coreRequests),
     runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
     runRealtime().catch(() => null),
     getSearchPerformance(dataStartDate),
+    verifyAnalyticsConnection(),
   ]);
 
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
@@ -534,6 +611,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       count: metric(row, 0),
     })),
     searchPerformance,
+    connection,
   };
 
   reportCache.set(cacheKey, { data, expiresAt: Date.now() + 5 * 60 * 1000 });
