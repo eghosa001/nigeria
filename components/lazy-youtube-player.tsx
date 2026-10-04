@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
   videoId: string;
@@ -9,13 +9,47 @@ type Props = {
   publisher?: string;
 };
 
+type LockableOrientation = ScreenOrientation & {
+  lock?: (orientation: "landscape") => Promise<void>;
+  unlock?: () => void;
+};
+
 export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Props) {
   const [active, setActive] = useState(false);
+  const [fullscreenSupported, setFullscreenSupported] = useState(false);
+  const playerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setFullscreenSupported(Boolean(document.fullscreenEnabled && playerRef.current?.requestFullscreen));
+
+    const handleFullscreenChange = () => {
+      if (!document.fullscreenElement) {
+        try {
+          (screen.orientation as LockableOrientation).unlock?.();
+        } catch {}
+      }
+    };
+
+    document.addEventListener("fullscreenchange", handleFullscreenChange);
+    return () => document.removeEventListener("fullscreenchange", handleFullscreenChange);
+  }, []);
+
+  async function openLandscapeFullscreen() {
+    const player = playerRef.current;
+    if (!player?.requestFullscreen) return;
+
+    try {
+      await player.requestFullscreen();
+      try {
+        await (screen.orientation as LockableOrientation).lock?.("landscape");
+      } catch {}
+    } catch {}
+  }
   const thumbnail = "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg";
   const embed = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1&playsinline=1&rel=0";
 
   return (
-    <div className="lazy-youtube-player">
+    <div className="lazy-youtube-player" ref={playerRef}>
       <div className="lazy-youtube-frame">
         {active ? (
           <iframe
@@ -52,6 +86,11 @@ export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Prop
             ? "Playing from YouTube in privacy-enhanced mode."
             : "The YouTube player loads only after you tap Watch here, keeping this page fast."}
         </span>
+        {active && fullscreenSupported ? (
+          <button type="button" className="lazy-youtube-fullscreen" onClick={openLandscapeFullscreen}>
+            Full screen landscape
+          </button>
+        ) : null}
         <a href={sourceUrl} target="_blank" rel="noreferrer">
           Open on YouTube ↗
         </a>
