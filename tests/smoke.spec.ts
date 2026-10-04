@@ -79,14 +79,20 @@ test("visits unlock displays reports immediately and can be locked again", async
       return;
     }
     await route.fulfill({ json: { configured: true, authenticated: true, data: {
-      range: "30d", generatedAt: "2026-09-28T12:00:00Z",
+      range: "30d", mode: "clean", propertyId: "556260033",
+      generatedAt: "2026-10-04T12:00:00Z", dataStartDate: "2026-09-29", cleanStartDate: "2026-09-29",
       summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
       realtimeActiveUsers: 2,
-      daily: [{ date: "20260928", users: 12, sessions: 18, pageViews: 35 }],
+      daily: [{ date: "20261004", users: 12, sessions: 18, pageViews: 35 }],
       countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
       pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
       referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
       interactions: [{ event: "official_link_click", count: 9 }, { event: "guide_share", count: 4 }],
+      searchPerformance: {
+        available: true, siteUrl: "sc-domain:mynigeriaguide.com",
+        startDate: "2026-09-05", endDate: "2026-10-04", latestDate: "2026-10-03",
+        firstIncompleteDate: null, impressions: 1460, clicks: 27, ctr: 0.0185, position: 22.5
+      },
     } } });
   });
 
