@@ -25,7 +25,8 @@ export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Prop
     const handleFullscreenChange = () => {
       if (document.fullscreenElement) {
         try {
-          void (screen.orientation as LockableOrientation).lock?.("landscape");
+          const lockAttempt = (screen.orientation as LockableOrientation).lock?.("landscape");
+          void lockAttempt?.catch(() => undefined);
         } catch {}
         return;
       }
