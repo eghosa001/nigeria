@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
-import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies Coming in October 2026: Nollywood Release Calendar",
@@ -9,7 +8,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/entertainment/movies/october-2026" },
 };
 
-const releases = [
+type OctoberRelease = {
+  date: string;
+  title: string;
+  where: string;
+  detail: string;
+  href?: string;
+};
+
+const releases: OctoberRelease[] = [
   {
     date: "1 October",
     title: "Agbara Nla: The Return",
@@ -65,10 +72,9 @@ const releases = [
     where: "Nigerian cinemas",
     detail: "A crime thriller starring Hanks Anuku, Gideon Okeke, Deyemi Okanlawon, Mike Afolarin, Rita Edochie and Teddy A.",
   },
-] as const;
+];
 
 export default function OctoberMoviesPage() {
-  const base = getSiteUrl();
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
