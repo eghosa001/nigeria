@@ -115,7 +115,7 @@ function base64Url(input: string | Uint8Array) {
 
 async function getAccessToken(
   scope = "https://www.googleapis.com/auth/analytics.readonly",
-  credentials = config(),
+  credentials: { clientEmail?: string; privateKey?: string } = config(),
 ) {
   const clientEmail = credentials.clientEmail;
   const privateKey = credentials.privateKey;
