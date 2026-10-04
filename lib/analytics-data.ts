@@ -372,13 +372,27 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
   const dateRanges = [{ startDate: dataStartDate, endDate: "today" }];
   const cleanPublicFilter = {
     notExpression: {
-      filter: {
-        fieldName: "pagePath",
-        stringFilter: {
-          matchType: "FULL_REGEXP",
-          value: "^/(?:admin(?:/|$)|api(?:/|$)|_next(?:/|$))",
-          caseSensitive: false,
-        },
+      orGroup: {
+        expressions: [
+          {
+            filter: {
+              fieldName: "pagePath",
+              stringFilter: { matchType: "BEGINS_WITH", value: "/admin", caseSensitive: false },
+            },
+          },
+          {
+            filter: {
+              fieldName: "pagePath",
+              stringFilter: { matchType: "BEGINS_WITH", value: "/api", caseSensitive: false },
+            },
+          },
+          {
+            filter: {
+              fieldName: "pagePath",
+              stringFilter: { matchType: "BEGINS_WITH", value: "/_next", caseSensitive: false },
+            },
+          },
+        ],
       },
     },
   };
