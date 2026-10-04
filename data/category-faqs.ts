@@ -368,6 +368,32 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       relatedSlugs: ["bvn-enrolment"]
     }
   ],
+  "Investing": [
+    {
+      question: "How do I check whether I have unclaimed dividends in Nigeria?",
+      answer: "Start with the Securities and Exchange Commission's official unclaimed-dividend search. Search the shareholder name and use the result to identify the company holding and the registrar responsible for the record before starting a claim.",
+      source: { label: "SEC unclaimed-dividend search", url: "https://sec.gov.ng/non-mandated/" },
+      relatedSlugs: ["unclaimed-dividends-nigeria"]
+    },
+    {
+      question: "Why do I need to know the registrar before claiming a dividend?",
+      answer: "Different public companies use different registrars. SEC's unclaimed-dividend search identifies the registrar attached to a matching holding so the investor can follow the correct mandate, documentation and follow-up route instead of sending documents to the wrong firm.",
+      source: { label: "SEC FAQ on unclaimed-dividend retrieval", url: "https://home.sec.gov.ng/about/resources/frequently-asked-questions/faqs-on-unclaimed-dividends-retrieval-process/" },
+      relatedSlugs: ["unclaimed-dividends-nigeria"]
+    },
+    {
+      question: "Can I set up an e-Dividend mandate without visiting a registrar?",
+      answer: "SEC's revamped e-Dividend Mandate Management System includes a self-service route for eligible investors. The exact verification steps can depend on the shareholder and bank record, so use SEC's current route and follow any registrar or bank validation shown for the holding.",
+      source: { label: "SEC revamped e-Dividend system", url: "https://sec.gov.ng/for-investors/keep-track-of-circulars/revamped-e-dividend-mandate-management-system-portal/" },
+      relatedSlugs: ["unclaimed-dividends-nigeria"]
+    },
+    {
+      question: "Should I pay an agent just to find or claim an unclaimed dividend?",
+      answer: "Begin with SEC's official search and the registrar identified for the holding. Do not send shareholder identity or bank information to an unverified intermediary, and confirm any requested payment through the official SEC, registrar or bank channel before proceeding.",
+      source: { label: "SEC investor guidance", url: "https://sec.gov.ng/non-mandated/" },
+      relatedSlugs: ["unclaimed-dividends-nigeria"]
+    }
+  ],
   "Insurance": [
     {
       question: "How can I check whether a vehicle insurance policy is valid?",
