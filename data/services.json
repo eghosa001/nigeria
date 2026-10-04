@@ -11147,7 +11147,7 @@
       "If the phone route cannot recover the record, access to a NIMC office for assistance"
     ],
     "steps": [
-      "Dial *346# on your phone and follow the NIMC phone-service prompts for NIN retrieval or the relevant identity option shown on your line.",
+      "Open your phone dialler, dial *346#, and follow the NIMC phone-service prompts for NIN retrieval or the relevant identity option shown on your line.",
       "Read each prompt before confirming because NIMC also uses the *346# service for other identity functions.",
       "Keep the NIN private once it is returned; do not post the number publicly or give it to an unverified agent.",
       "If you cannot remember the NIN and the phone service does not resolve it, use NIMC's official office/contact route for assistance rather than paying an unofficial recovery service."
