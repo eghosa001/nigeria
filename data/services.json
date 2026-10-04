@@ -224,7 +224,10 @@
     "searchTerms": [
       "NIN enrolment",
       "How to enrol for a NIN",
-      "Identity"
+      "Identity",
+      "NIN portal",
+      "NIMC NIN portal",
+      "NIN registration"
     ],
     "related": []
   },
@@ -3430,7 +3433,13 @@
     "searchTerms": [
       "JAMB result slip",
       "How to print a JAMB result slip",
-      "Education"
+      "Education",
+      "JAMB result",
+      "JAMB result 2026",
+      "JAMB result checker",
+      "check JAMB result",
+      "JAMB result portal",
+      "print JAMB result"
     ],
     "related": []
   },
@@ -3774,9 +3783,14 @@
     "searchTerms": [
       "BVN",
       "check BVN",
+      "how to check BVN",
+      "check my BVN",
       "retrieve BVN",
+      "how to retrieve BVN number",
       "forgot BVN",
       "565",
+      "*565*0#",
+      "BVN code",
       "bank verification number"
     ],
     "related": [
@@ -5843,8 +5857,12 @@
     ],
     "lastVerified": "2026-10-01",
     "searchTerms": [
+      "NELFUND",
+      "NELFUND portal",
+      "NELFUND login",
       "NELFUND apply",
       "student loan Nigeria",
+      "student loan portal Nigeria",
       "NELFUND requirements",
       "NELFUND application portal",
       "NELFUND upkeep"
@@ -5900,6 +5918,8 @@
     "lastVerified": "2026-10-01",
     "searchTerms": [
       "NELFUND status",
+      "NELFUND loan status",
+      "NELFUND upkeep",
       "NELFUND upkeep not received",
       "NELFUND disbursement",
       "student loan status Nigeria"
@@ -5949,6 +5969,7 @@
     "lastVerified": "2026-10-01",
     "searchTerms": [
       "NELFUND repayment",
+      "NELFUND loan repayment",
       "when do I repay NELFUND",
       "NELFUND salary deduction",
       "student loan repayment Nigeria"
