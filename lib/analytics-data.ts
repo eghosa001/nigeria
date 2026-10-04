@@ -19,6 +19,7 @@ export type SearchPerformanceSummary = {
 };
 
 export type AnalyticsConnectionStatus = {
+  status: "verified" | "mismatch" | "unavailable";
   verified: boolean;
   measurementId: string;
   propertyId: string;
@@ -259,6 +260,7 @@ async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
 
   if (!propertyId || !measurementId) {
     return {
+      status: "unavailable",
       verified: false,
       measurementId,
       propertyId,
@@ -278,6 +280,21 @@ async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
     );
     if (!response.ok) {
       const message = await response.text();
+      const adminApiDisabled =
+        response.status === 403 &&
+        (message.includes("analyticsadmin.googleapis.com") ||
+          message.includes("has not been used") ||
+          message.includes("SERVICE_DISABLED"));
+      if (adminApiDisabled) {
+        return {
+          status: "unavailable",
+          verified: false,
+          measurementId,
+          propertyId,
+          streams: [],
+          error: "Google Analytics Admin API is disabled for the Google Cloud project used by this service account. The tracking/property match has not been tested yet; this is not a mismatch.",
+        };
+      }
       throw new Error("Analytics Admin API request failed (" + response.status + "): " + message.slice(0, 180));
     }
 
@@ -290,14 +307,17 @@ async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
         displayName: stream.displayName ?? "",
       }));
 
+    const verified = streams.some((stream) => stream.measurementId === measurementId);
     return {
-      verified: streams.some((stream) => stream.measurementId === measurementId),
+      status: verified ? "verified" : "mismatch",
+      verified,
       measurementId,
       propertyId,
       streams,
     };
   } catch (error) {
     return {
+      status: "unavailable",
       verified: false,
       measurementId,
       propertyId,
