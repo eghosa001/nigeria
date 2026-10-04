@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import "@/app/mobile.css";
-import "@/app/theme.css";
 import { AdsenseScript } from "@/components/adsense";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
@@ -11,26 +10,6 @@ import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 
 const siteUrl = getSiteUrl();
-
-const themeBootstrap = `
-(function () {
-  var preference = "system";
-  try {
-    var stored = localStorage.getItem("mng-theme");
-    if (stored === "light" || stored === "dark" || stored === "system") preference = stored;
-  } catch (_) {}
-
-  try {
-    var dark = preference === "dark" || (preference === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-    var theme = dark ? "dark" : "light";
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.dataset.themePreference = preference;
-    document.documentElement.style.colorScheme = theme;
-    var themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#f8f5ed");
-  } catch (_) {}
-})();
-`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -79,11 +58,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
-        <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" content="#f8f5ed" />
-        <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
       <body>

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BrandLogo } from "@/components/brand-logo";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const primaryNavigation = [
   { href: "/entertainment/movies", label: "Movies", matches: ["/entertainment"] },
@@ -165,8 +164,6 @@ export function SiteHeader() {
               </Link>
             </div>
           </nav>
-
-          <ThemeToggle />
         </div>
 
         {context ? (

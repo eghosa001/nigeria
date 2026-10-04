@@ -1,4 +1,4 @@
-const CACHE = "mynigeriaguide-v3";
+const CACHE = "mynigeriaguide-v2";
 const CORE = ["/", "/services", "/saved", "/offline", "/manifest.webmanifest"];
 const PRIVATE_PREFIXES = ["/admin", "/api/"];
 
