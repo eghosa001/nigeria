@@ -131,12 +131,13 @@ test("youtube pagination uses crawlable path URLs and filtered pages stay separa
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
 });
 
-test("latest hub links all three platform pillars", async ({ page }) => {
+test("latest hub links all four platform pillars", async ({ page }) => {
   await page.goto("/latest");
-  await expect(page.getByRole("heading", { name: /Recently added and updated/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /What is new and worth checking now/i })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Movies", exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Services", exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Tour Nigeria", exact: true })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Jobs & Careers", exact: true })).toBeVisible();
 });
 
 

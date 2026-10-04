@@ -727,6 +727,62 @@ export const exploreGuides: ExploreGuide[] = [
     lastReviewed: "2026-10-03",
   },
 
+
+  {
+    slug: "detty-december-lagos-2026",
+    title: "Detty December Lagos 2026 Guide",
+    shortTitle: "Detty December 2026",
+    kind: "itinerary",
+    region: "Lagos State",
+    summary: "Plan Detty December 2026 in Lagos around the confirmed 18–30 December festival season, major concerts, transport, accommodation and safe late-night movement.",
+    intro: [
+      "Lagos' 2026 Detty December season is already taking shape, with the official Detty December Fest calendar running from 18 to 30 December and a Grand Opening Concert featuring Wizkid on 18 December.",
+      "Treat December as a logistics problem as much as an entertainment calendar: accommodation, airport transfers, traffic, late-night transport and event-to-event movement can matter more than squeezing in one extra show.",
+    ],
+    bestFor: ["December travel", "Concerts", "Nightlife", "IJGB planning"],
+    highlights: [
+      { name: "18–30 December festival window", detail: "Detty December Fest lists 13 festival days in Lagos, so visitors can plan around a defined run instead of relying on scattered social posts." },
+      { name: "Grand Opening Concert — 18 December", detail: "The official 2026 calendar lists Wizkid for the Grand Opening Concert on the first night." },
+      { name: "Multiple event formats", detail: "The official programme includes concerts, parties, daytime experiences, food, fashion and family-focused activities across the festival period." },
+      { name: "Peak-week planning", detail: "The busiest movement usually clusters around the Christmas week and late-December headline dates; keep large buffers between venues and airport journeys." },
+    ],
+    planning: [
+      { label: "Book the fixed parts first", detail: "Lock in flights and accommodation before buying multiple event tickets; changing hotels or crossing Lagos nightly can erase the benefit of a cheaper room." },
+      { label: "Stay near your main event cluster", detail: "Choose accommodation based on the part of Lagos where most of your confirmed events are taking place, not just the lowest nightly rate." },
+      { label: "Pre-plan late-night transport", detail: "Decide the return route before entering an event. Use established transport options and avoid depending on one last-minute pickup after major concerts." },
+      { label: "Use official ticket links", detail: "Confirm dates, venue and ticket status from the organiser or official ticketing partner before paying; popular December events are frequently copied by unofficial sellers." },
+    ],
+    source: { label: "Detty December Fest 2026 official calendar", href: "https://dettydecfest.com/events/" },
+    lastReviewed: "2026-10-04",
+  },
+  {
+    slug: "calabar-carnival-2026",
+    title: "Calabar Carnival 2026 Guide & Official Schedule",
+    shortTitle: "Calabar Carnival 2026",
+    kind: "itinerary",
+    region: "Cross River State",
+    summary: "Use the official 2026 Calabar Carnival schedule to plan the festival season, including the 28 December Parade of Bands, 29 December Bikers Carnival and the wider December programme.",
+    intro: [
+      "Carnival Calabar's official 2026 calendar runs from the 30 November Christmas Tree Lighting through New Year activities, with dozens of cultural, music, food and carnival events across the month.",
+      "The main Parade of Bands is scheduled for 28 December, while the Bikers Carnival is scheduled for 29 December. Travellers who only want the headline carnival should still arrive early enough to absorb transport delays and secure accommodation.",
+    ],
+    bestFor: ["Carnival", "Culture", "December travel", "Family trips"],
+    highlights: [
+      { name: "30 November — Christmas Tree Lighting", detail: "The official programme opens the festive season with the Christmas Tree Lighting at Millennium Park." },
+      { name: "1 December — Festival Village opens", detail: "Festival Village begins the month-long event run with performances and activations." },
+      { name: "28 December — Parade of Bands", detail: "Carnival Calabar and the Parade of Bands is scheduled for 10:00 AM on the official Carnival Route." },
+      { name: "29 December — Bikers Carnival", detail: "The official schedule places the Bikers Carnival on the Carnival Route at 12:00 PM." },
+    ],
+    planning: [
+      { label: "Book before the peak week", detail: "Hotel and transport demand rises sharply around the Parade of Bands. Secure accommodation before building smaller activities around it." },
+      { label: "Use the official schedule", detail: "The 2026 calendar contains many events and times can be revised; re-check the official Cross River carnival schedule shortly before travel." },
+      { label: "Plan city movement around closures", detail: "Carnival Route activity can change normal traffic patterns, so do not schedule tight airport, bus or hotel transfers around parade hours." },
+      { label: "Add daytime culture", detail: "The wider programme includes exhibitions, food, waterfront and cultural events, which can make a longer stay more useful than travelling only for parade day." },
+    ],
+    source: { label: "Carnival Calabar 2026 official schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
+    lastReviewed: "2026-10-04",
+  },
+
 ];
 
 export function getExploreGuide(slug: string) {

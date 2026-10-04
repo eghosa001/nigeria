@@ -25,6 +25,25 @@ function videoIdFromUrl(href: string) {
   return null;
 }
 
+const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "millionaire-until-morning": {
+    title: "Millionaire Until Morning: Cast & Full Movie on YouTube",
+    description: "Millionaire Until Morning cast, story, runtime and the official Omoni Oboli TV full-movie link. Starring Chris Attoh, Sophia Chisom and Chimsom Chuka.",
+  },
+  "the-man-i-never-knew": {
+    title: "The Man I Never Knew: Cast & Full Movie on YouTube",
+    description: "The Man I Never Knew cast, story and the official Royal Arts TV full-movie link. Starring TooSweet Annan, Chisom Agoawuike and Mojoyin Fadaka.",
+  },
+  "pieces-that-fit": {
+    title: "Pieces That Fit: Cast & Full Movie on YouTube",
+    description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
+  },
+  "oversabi-aunty": {
+    title: "Oversabi Aunty Cast & Where to Watch on Netflix",
+    description: "Oversabi Aunty cast, story, runtime and official streaming information for Toyin Abraham's hit comedy-drama, now available on Netflix in Nigeria.",
+  },
+};
+
 function movieImageUrl(title: EntertainmentTitle) {
   if (canDisplayEntertainmentArtwork(title) && title.artwork) return title.artwork.url;
   const fullMovie = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
@@ -39,10 +58,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!title) return {};
   const image = movieImageUrl(title);
   const featuredCast = getFeaturedCast(title).slice(0, 4);
-  const description = `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + ". " : ""}${title.synopsis}`;
+  const override = movieSeoOverrides[title.slug];
+  const description = override?.description ?? `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + ". " : ""}${title.synopsis}`;
 
   return {
-    title: title.title + " Nigerian Movie: Cast & Where to Watch",
+    title: override?.title ?? title.title + " Nigerian Movie: Cast & Where to Watch",
     description,
     alternates: { canonical: "/entertainment/movies/" + title.slug },
     openGraph: {
