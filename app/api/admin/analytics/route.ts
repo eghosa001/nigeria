@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { getAnalyticsDashboard, analyticsReadConfigured, analyticsTrackingConfigured, type AnalyticsRange } from "@/lib/analytics-data";
+import { getAnalyticsDashboard, analyticsReadConfigured, analyticsTrackingConfigured, type AnalyticsRange, type AnalyticsTrafficMode } from "@/lib/analytics-data";
 import { analyticsAdminAccessConfigured, analyticsAdminCookieName, verifyAnalyticsAdminCookie } from "@/lib/admin-analytics-access";
 
 const privateHeaders = { "Cache-Control": "private, no-store" };
@@ -13,6 +13,7 @@ function legacyRouteResponse() {
 }
 
 const ranges = new Set<AnalyticsRange>(["7d", "30d", "90d"]);
+const modes = new Set<AnalyticsTrafficMode>(["all", "clean"]);
 
 export async function GET(request: Request) {
   if (!protectedAdminApi(request)) return legacyRouteResponse();
@@ -37,9 +38,11 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const requestedRange = url.searchParams.get("range") as AnalyticsRange | null;
   const range: AnalyticsRange = requestedRange && ranges.has(requestedRange) ? requestedRange : "30d";
+  const requestedMode = url.searchParams.get("mode") as AnalyticsTrafficMode | null;
+  const mode: AnalyticsTrafficMode = requestedMode && modes.has(requestedMode) ? requestedMode : "all";
 
   try {
-    const data = await getAnalyticsDashboard(range);
+    const data = await getAnalyticsDashboard(range, mode);
     return Response.json({ configured: true, authenticated: true, data }, { headers: { "Cache-Control": "private, no-store" } });
   } catch (error) {
     return Response.json({
