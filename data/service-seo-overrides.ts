@@ -1,5 +1,6 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
   "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Form & Requirements",
+  "check-nin-number": "How to Check NIN {year}: *346# Retrieval Guide",
   "nin-phone-modification": "Change NIN Phone Number {year}: Fee, Police Report & Steps",
   "passport-change-of-data": "Nigerian Passport Change of Data {year}: Cost & Requirements",
   "npc-check-attestation-status": "NPC Birth Attestation Status {year}: Check & Download",
@@ -10,6 +11,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "npc-birth-attestation": "NPC Birth Attestation {year}: Requirements & Application",
   "jamb-admission-letter": "JAMB Admission Letter {year}: How to Print Online",
   "jamb-print-result": "JAMB Result {year}: Check & Print Result Slip",
+  "jamb-examination-slip-2026": "JAMB Reprint {year}: Print Examination Slip & Venue",
   "waec-check-result": "WAEC Result Checker {year}: Check Result Online",
   "neco-check-result": "NECO Result Checker {year}: Check Result Online",
   "jamb-caps": "JAMB CAPS {year}: Check Admission Status & Accept Admission",
@@ -26,6 +28,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "bvn-validation": "BVN Validation {year}: Check a BVN with *565*1#",
   "bvn-data-update": "BVN Correction {year}: Update Name, DOB or Other Details",
   "nrs-tax-id-retrieval": "Nigeria Tax ID Retrieval {year}: Find Tax ID with NIN or CAC",
+  "unclaimed-dividends-nigeria": "Unclaimed Dividends Nigeria {year}: Check & Claim",
   "passport-application-tracking": "Nigerian Passport Tracking {year}: Check Application Status",
   "drivers-licence-verification": "Driver's Licence Verification Nigeria {year}: Check Online",
   "waec-2026-private-candidates-timetable": "WAEC Timetable {year}: Private Candidates Second Series",
