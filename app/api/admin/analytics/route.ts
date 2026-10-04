@@ -40,9 +40,10 @@ export async function GET(request: Request) {
   const range: AnalyticsRange = requestedRange && ranges.has(requestedRange) ? requestedRange : "30d";
   const requestedMode = url.searchParams.get("mode") as AnalyticsTrafficMode | null;
   const mode: AnalyticsTrafficMode = requestedMode && modes.has(requestedMode) ? requestedMode : "clean";
+  const forceFresh = url.searchParams.get("fresh") === "1";
 
   try {
-    const data = await getAnalyticsDashboard(range, mode);
+    const data = await getAnalyticsDashboard(range, mode, forceFresh);
     return Response.json({ configured: true, authenticated: true, data }, { headers: { "Cache-Control": "private, no-store" } });
   } catch (error) {
     return Response.json({
