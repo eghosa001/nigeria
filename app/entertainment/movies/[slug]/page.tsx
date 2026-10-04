@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { AnswerFirst } from "@/components/answer-first";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
@@ -253,6 +254,24 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <small className="movie-freshness-note">Links checked {lastChecked}.</small>
             </div>
           </div>
+
+          <AnswerFirst
+            eyebrow="Quick answer"
+            title={"What to know before you keep reading"}
+            summary={title.synopsis}
+            facts={[
+              { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
+              { label: "Featured cast", value: featuredCast.slice(0, 3).join(", ") || "See the full cast below" },
+              { label: "Runtime", value: title.runtimeMinutes ? title.runtimeMinutes + " minutes" : "Runtime not listed" },
+              { label: "Link freshness", value: lastChecked || "See current source links" },
+            ]}
+            links={[
+              { href: "#cast", label: "See cast" },
+              { href: "#watch", label: "Where to watch" },
+              ...(availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
+            ]}
+            note="The essentials are above. The sections below add the full cast, verified source details and related movies."
+          />
         </div>
       </section>
 
