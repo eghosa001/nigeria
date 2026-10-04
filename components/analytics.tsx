@@ -9,7 +9,7 @@ import { trackEvent } from "@/lib/client-analytics";
 type AnalyticsWindow = Window & typeof globalThis & {
   dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
-  __mngGaInitialized?: boolean;
+  __mngLastTrackedPath?: string;
 };
 
 export function Analytics() {
@@ -29,27 +29,16 @@ export function Analytics() {
     const gtag = analyticsWindow.gtag ?? ((...args: unknown[]) => { dataLayer.push(args); });
     analyticsWindow.gtag = gtag;
 
-    const loadAnalyticsScript = () => {
-      if (document.querySelector('script[data-mynigeriaguide-ga]')) return;
-      const script = document.createElement("script");
-      script.async = true;
-      script.dataset.mynigeriaguideGa = "true";
-      script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
-      document.head.appendChild(script);
-    };
-    loadAnalyticsScript();
-
-    if (!analyticsWindow.__mngGaInitialized) {
-      gtag("js", new Date());
-      gtag("config", id, { anonymize_ip: true, send_page_view: false });
-      analyticsWindow.__mngGaInitialized = true;
+    // The initial page_view is sent by the pre-hydration bootstrap in <head>.
+    // Only send another page_view when Next.js changes routes client-side.
+    if (analyticsWindow.__mngLastTrackedPath !== pathname) {
+      gtag("event", "page_view", {
+        page_path: pathname,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+      analyticsWindow.__mngLastTrackedPath = pathname;
     }
-
-    gtag("event", "page_view", {
-      page_path: pathname,
-      page_location: window.location.href,
-      page_title: document.title,
-    });
 
     function onClick(event: MouseEvent) {
       const target = event.target;
