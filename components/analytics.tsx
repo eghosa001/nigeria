@@ -28,7 +28,6 @@ export function Analytics() {
     const gtag = analyticsWindow.gtag ?? ((...args: unknown[]) => { dataLayer.push(args); });
     analyticsWindow.gtag = gtag;
 
-    let analyticsTimer: number | undefined;
     const loadAnalyticsScript = () => {
       if (document.querySelector('script[data-mynigeriaguide-ga]')) return;
       const script = document.createElement("script");
@@ -37,11 +36,7 @@ export function Analytics() {
       script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
       document.head.appendChild(script);
     };
-    const scheduleAnalyticsScript = () => {
-      analyticsTimer = window.setTimeout(loadAnalyticsScript, 1200);
-    };
-    if (document.readyState === "complete") scheduleAnalyticsScript();
-    else window.addEventListener("load", scheduleAnalyticsScript, { once: true });
+    loadAnalyticsScript();
 
     if (!analyticsWindow.__mngGaInitialized) {
       gtag("js", new Date());
@@ -84,8 +79,6 @@ export function Analytics() {
 
     document.addEventListener("click", onClick);
     return () => {
-      if (analyticsTimer !== undefined) window.clearTimeout(analyticsTimer);
-      window.removeEventListener("load", scheduleAnalyticsScript);
       document.removeEventListener("click", onClick);
     };
   }, [id, pathname]);
