@@ -304,3 +304,64 @@ html[data-theme="dark"] .conflict-alert p {
   .theme-toggle,
   .theme-menu { transition: none !important; }
 }
+
+
+/* Theme edge cases */
+html { accent-color: var(--green); }
+
+html[data-theme="dark"] .movie-filter-bar select option {
+  color: var(--ink);
+  background: var(--theme-input);
+}
+
+html[data-theme="dark"] .status-review,
+html[data-theme="dark"] .db-state.offline,
+html[data-theme="dark"] .job-status-closed {
+  background: #253129;
+  color: #c6d2cc;
+}
+html[data-theme="dark"] .job-status-open {
+  background: #163a2a;
+  color: #9ce6bd;
+}
+html[data-theme="dark"] .job-status-screening,
+html[data-theme="dark"] .job-status-training {
+  background: #172c45;
+  color: #a9c8f2;
+}
+html[data-theme="dark"] .job-status-upcoming {
+  background: #3a2d16;
+  color: #edc875;
+}
+html[data-theme="dark"] .job-status-career-page {
+  background: #2c243d;
+  color: #cbb9ee;
+}
+
+.admin-nav-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.admin-nav-actions .admin-public-link { margin-left: 0; }
+.admin-nav .theme-toggle {
+  min-height: 38px;
+  background: transparent;
+  border-color: #315647;
+  color: #d7e7df;
+}
+.admin-nav .theme-toggle:hover {
+  background: #173b2d;
+  color: white;
+}
+
+@media (max-width: 920px) {
+  .admin-nav-actions {
+    margin-left: 0;
+    justify-self: end;
+  }
+  .admin-nav-actions .admin-public-link {
+    display: none !important;
+  }
+}
