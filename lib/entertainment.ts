@@ -1,10 +1,10 @@
-export type EntertainmentPlatform = "Netflix" | "YouTube" | "Prime Video" | "Kava";
+export type EntertainmentPlatform = "Netflix" | "YouTube" | "Prime Video" | "Kava" | "Cinema";
 
 export type WatchLink = {
   platform: EntertainmentPlatform;
   label: string;
   href: string;
-  access: "subscription" | "full-movie" | "rent-or-buy" | "subscription-or-rent";
+  access: "subscription" | "full-movie" | "rent-or-buy" | "subscription-or-rent" | "cinema";
   lastChecked: string;
   note: string;
   publisher?: string;
@@ -55,6 +55,50 @@ export type EntertainmentTitle = {
 };
 
 export const entertainmentTitles: EntertainmentTitle[] = [
+  {
+    slug: "agbara-nla-the-return",
+    title: "Agbara Nla: The Return",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Faith", "Fantasy", "Nollywood"],
+    languages: ["Yoruba", "English"],
+    synopsis: "Olaboye and Olatomi leave city life for Muwonleru, where their mission confronts the dark influence of herbalist Isawuru and forces the community into a spiritual battle over faith, sacrifice and restoration.",
+    cast: ["Mike Bamiloye", "Yemi Adepoju", "Mosiko Remilekun Adesina", "Omolara Ayoola", "Gloria Bamiloye"],
+    directors: ["Damilola Mike-Bamiloye", "Joshua Bamiloye"],
+    runtimeMinutes: 157,
+    featured: true,
+    watchLinks: [
+      {
+        platform: "Cinema",
+        label: "See current Silverbird showtimes",
+        href: "https://silverbirdcinemas.com/movie/agbara-nla-the-return/",
+        access: "cinema",
+        lastChecked: "2026-10-04",
+        note: "Silverbird lists the film in Nigerian cinemas. Showtime and location availability can change."
+      }
+    ]
+  },
+  {
+    slug: "first-lady-2026",
+    title: "First Lady",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Political", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Adunola, the First Lady of Lagos State, appears to have status and influence but is privately consumed by her desire for a child, and a long-awaited pregnancy threatens her marriage, reputation and carefully controlled public life.",
+    cast: ["Fehintola Olulana", "Desmond Elliot", "Ibrahim Suleiman", "Ngozi Nwosu", "Jaiye Kuti", "Abiola Segun-Williams", "Oluwakemi Iyanda"],
+    directors: ["Yinka Akanbi"],
+    watchLinks: [
+      {
+        platform: "Cinema",
+        label: "Check the distributor release page",
+        href: "https://www.tntheatrical.com/post/desmond-elliot-ibrahim-suleiman-and-fehintola-olulana-lead-new-political-drama-first-lady-in-cinem",
+        access: "cinema",
+        lastChecked: "2026-10-04",
+        note: "Tribe Nation Theatrical Distribution lists the West African cinema release for 16 October 2026."
+      }
+    ]
+  },
   {
     slug: "anikulapo",
     title: "Aníkúlápó",
