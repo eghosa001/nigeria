@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import type { AnalyticsDashboardData, AnalyticsRange, AnalyticsTrafficMode } from "@/lib/analytics-data";
+import type { AnalyticsDashboardData, AnalyticsRange } from "@/lib/analytics-data";
 
 type ApiResponse = {
   configured?: boolean;
@@ -39,16 +39,15 @@ function interactionLabel(event: string) {
 
 export function AdminAnalyticsDashboard() {
   const [range, setRange] = useState<AnalyticsRange>("30d");
-  const [mode, setMode] = useState<AnalyticsTrafficMode>("all");
   const [state, setState] = useState<"loading" | "setup" | "locked" | "ready" | "error">("loading");
   const [data, setData] = useState<AnalyticsDashboardData | null>(null);
   const [setup, setSetup] = useState<ApiResponse>({});
   const [message, setMessage] = useState("");
 
-  async function load(nextRange = range, nextMode = mode) {
+  async function load(nextRange = range) {
     setState("loading");
     setMessage("");
-    const response = await fetch("/admin/api/analytics?range=" + nextRange + "&mode=" + nextMode, { cache: "no-store" });
+    const response = await fetch("/admin/api/analytics?range=" + nextRange + "&mode=clean", { cache: "no-store" });
     const body = await response.json() as ApiResponse;
 
     if (response.status === 503 && body.configured === false) {
@@ -69,7 +68,7 @@ export function AdminAnalyticsDashboard() {
     setState("ready");
   }
 
-  useEffect(() => { void load(range, mode); }, [range, mode]);
+  useEffect(() => { void load(range); }, [range]);
 
   async function login(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -87,7 +86,7 @@ export function AdminAnalyticsDashboard() {
       return;
     }
     formElement.reset();
-    await load(range, mode);
+    await load(range);
   }
 
   async function logout() {
@@ -156,27 +155,49 @@ export function AdminAnalyticsDashboard() {
           <button type="button" className={range === "30d" ? "active" : undefined} onClick={() => setRange("30d")}>30 days</button>
           <button type="button" className={range === "90d" ? "active" : undefined} onClick={() => setRange("90d")}>90 days</button>
         </div>
-        <div>
-          <button type="button" className={mode === "all" ? "active" : undefined} onClick={() => setMode("all")}>GA4 all traffic</button>
-          <button type="button" className={mode === "clean" ? "active" : undefined} onClick={() => setMode("clean")}>Clean traffic</button>
-        </div>
         <button type="button" onClick={logout}>Lock analytics</button>
       </div>
 
       <p className="analytics-clean-note">
-        {mode === "all"
-          ? <>Showing the full GA4 Data API total for this {range === "7d" ? "7-day" : range === "30d" ? "30-day" : "90-day"} window, starting {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}. This matches GA4 reporting and can include historical QA traffic.</>
-          : <>Clean traffic starts {new Date(data.cleanStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })} to exclude the known pre-cleanup QA period.</>}
-        {" "}GA4 property: {data.propertyId || "unknown"}.
+        Real public visitors only. Historical reporting starts {new Date(data.cleanStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })} because earlier GA4 data contains known QA traffic. Admin, API and Next.js asset paths are excluded. GA4 property: {data.propertyId || "unknown"}.
       </p>
 
       <div className="analytics-metric-grid">
-        <div><span>Users</span><strong>{number(data.summary.activeUsers)}</strong><small>Distinct active visitors</small></div>
+        <div><span>Real visitors</span><strong>{number(data.summary.activeUsers)}</strong><small>Public-site active users</small></div>
         <div><span>Visits</span><strong>{number(data.summary.sessions)}</strong><small>Sessions</small></div>
         <div><span>Page views</span><strong>{number(data.summary.pageViews)}</strong><small>Repeated views included</small></div>
         <div><span>Engaged visits</span><strong>{number(data.summary.engagedSessions)}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
         <div><span>Live now</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Active users in realtime report</small></div>
       </div>
+
+      <section className="admin-panel">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Google Search visibility</span>
+            <h2>Impressions and search clicks</h2>
+          </div>
+          <small>Search Console · freshest available data</small>
+        </div>
+        {data.searchPerformance.available ? (
+          <>
+            <div className="analytics-metric-grid">
+              <div><span>Impressions</span><strong>{number(data.searchPerformance.impressions ?? 0)}</strong><small>Times MyNigeriaGuide appeared in Google Search</small></div>
+              <div><span>Search clicks</span><strong>{number(data.searchPerformance.clicks ?? 0)}</strong><small>Clicks from Google Search results</small></div>
+              <div><span>Search CTR</span><strong>{((data.searchPerformance.ctr ?? 0) * 100).toFixed(2)}%</strong><small>Clicks divided by impressions</small></div>
+              <div><span>Average position</span><strong>{(data.searchPerformance.position ?? 0).toFixed(1)}</strong><small>Average top result position</small></div>
+            </div>
+            <p className="analytics-clean-note">
+              Search Console range: {data.searchPerformance.startDate} to {data.searchPerformance.endDate}. Latest date returned: {data.searchPerformance.latestDate ?? "none yet"}.
+              {data.searchPerformance.firstIncompleteDate ? <> Data from {data.searchPerformance.firstIncompleteDate} onward is preliminary and can still change.</> : null}
+            </p>
+          </>
+        ) : (
+          <div className="admin-empty">
+            <strong>Search impressions are not available to this server connection yet.</strong>
+            <p>The dashboard will use the Search Console API directly once its service account has read access to {data.searchPerformance.siteUrl}. Visitor analytics will continue to work independently.</p>
+          </div>
+        )}
+      </section>
 
       <section className="admin-panel analytics-trend">
         <div className="section-heading"><div><span className="eyebrow">Traffic trend</span><h2>Page views by day</h2></div><small>Updated {new Date(data.generatedAt).toLocaleString("en-NG")}</small></div>

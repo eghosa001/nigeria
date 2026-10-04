@@ -79,14 +79,20 @@ test("visits unlock displays reports immediately and can be locked again", async
       return;
     }
     await route.fulfill({ json: { configured: true, authenticated: true, data: {
-      range: "30d", generatedAt: "2026-09-28T12:00:00Z",
+      range: "30d", mode: "clean", propertyId: "556260033",
+      generatedAt: "2026-10-04T12:00:00Z", dataStartDate: "2026-09-29", cleanStartDate: "2026-09-29",
       summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
       realtimeActiveUsers: 2,
-      daily: [{ date: "20260928", users: 12, sessions: 18, pageViews: 35 }],
+      daily: [{ date: "20261004", users: 12, sessions: 18, pageViews: 35 }],
       countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
       pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
       referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
       interactions: [{ event: "official_link_click", count: 9 }, { event: "guide_share", count: 4 }],
+      searchPerformance: {
+        available: true, siteUrl: "sc-domain:mynigeriaguide.com",
+        startDate: "2026-09-05", endDate: "2026-10-04", latestDate: "2026-10-03",
+        firstIncompleteDate: null, impressions: 1460, clicks: 27, ctr: 0.0185, position: 22.5
+      },
     } } });
   });
 
@@ -98,9 +104,13 @@ test("visits unlock displays reports immediately and can be locked again", async
   await page.getByLabel("Analytics passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock visits" }).click();
   await expect(page.getByRole("button", { name: "Lock analytics" })).toBeVisible();
-  await expect(page.locator(".analytics-metric-grid")).toContainText("12");
-  await expect(page.locator(".analytics-metric-grid")).toContainText("18");
-  await expect(page.locator(".analytics-metric-grid")).toContainText("35");
+  const visitorMetrics = page.locator(".analytics-metric-grid").first();
+  await expect(visitorMetrics).toContainText("12");
+  await expect(visitorMetrics).toContainText("18");
+  await expect(visitorMetrics).toContainText("35");
+  const searchMetrics = page.locator(".analytics-metric-grid").nth(1);
+  await expect(searchMetrics).toContainText("1,460");
+  await expect(searchMetrics).toContainText("27");
   await expect(page.getByLabel("Daily page views").locator("[title]")).toHaveAttribute("title", /35 page views/);
   await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
