@@ -116,6 +116,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     return [
       { url: base + "/entertainment", lastModified: movieCatalogModified },
       { url: base + "/entertainment/movies", lastModified: movieCatalogModified },
+      { url: base + "/entertainment/movies/october-2026", lastModified: "2026-10-04" },
       { url: base + "/entertainment/releases", lastModified: movieCatalogModified },
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
