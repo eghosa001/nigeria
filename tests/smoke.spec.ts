@@ -277,7 +277,7 @@ test("service worker never stores private or no-store responses", async ({ reque
   expect(source).toContain('"/api/"');
   expect(source).toContain('cacheControl.includes("no-store")');
   expect(source).toContain('cacheControl.includes("private")');
-  expect(source).toContain('mynigeriaguide-v2');
+  expect(source).toContain('mynigeriaguide-v3');
 });
 
 test("security headers protect public and admin responses", async ({ request }) => {

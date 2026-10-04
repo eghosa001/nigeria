@@ -14,9 +14,13 @@ const siteUrl = getSiteUrl();
 
 const themeBootstrap = `
 (function () {
+  var preference = "system";
   try {
-    var preference = localStorage.getItem("mng-theme") || "system";
-    if (preference !== "light" && preference !== "dark" && preference !== "system") preference = "system";
+    var stored = localStorage.getItem("mng-theme");
+    if (stored === "light" || stored === "dark" || stored === "system") preference = stored;
+  } catch (_) {}
+
+  try {
     var dark = preference === "dark" || (preference === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
     var theme = dark ? "dark" : "light";
     document.documentElement.dataset.theme = theme;

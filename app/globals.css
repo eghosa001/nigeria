@@ -3709,7 +3709,7 @@ a.admin-guide-row:hover { background:var(--surface); }
   border: 1px solid var(--line);
   border-radius: 11px;
   background: var(--white);
-  color: #31483c;
+  color: var(--ink);
   font-size: .82rem;
   font-weight: 780;
 }

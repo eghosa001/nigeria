@@ -6,6 +6,27 @@ type ThemePreference = "system" | "light" | "dark";
 
 const STORAGE_KEY = "mng-theme";
 
+function isThemePreference(value: string | null): value is ThemePreference {
+  return value === "system" || value === "light" || value === "dark";
+}
+
+function readThemePreference(): ThemePreference {
+  try {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    return isThemePreference(stored) ? stored : "system";
+  } catch {
+    return "system";
+  }
+}
+
+function writeThemePreference(preference: ThemePreference) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, preference);
+  } catch {
+    // The theme still applies for this tab when storage is blocked.
+  }
+}
+
 function resolvedTheme(preference: ThemePreference) {
   if (preference !== "system") return preference;
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
@@ -36,18 +57,28 @@ export function ThemeToggle() {
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    const initial: ThemePreference = stored === "light" || stored === "dark" || stored === "system" ? stored : "system";
+    const initial = readThemePreference();
     setPreference(initial);
     applyTheme(initial);
 
     const media = window.matchMedia("(prefers-color-scheme: dark)");
     const onSystemChange = () => {
-      const current = (window.localStorage.getItem(STORAGE_KEY) || "system") as ThemePreference;
-      if (current === "system") applyTheme("system");
+      if ((document.documentElement.dataset.themePreference || "system") === "system") {
+        applyTheme("system");
+      }
+    };
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== STORAGE_KEY) return;
+      const next = isThemePreference(event.newValue) ? event.newValue : "system";
+      setPreference(next);
+      applyTheme(next);
     };
     media.addEventListener("change", onSystemChange);
-    return () => media.removeEventListener("change", onSystemChange);
+    window.addEventListener("storage", onStorage);
+    return () => {
+      media.removeEventListener("change", onSystemChange);
+      window.removeEventListener("storage", onStorage);
+    };
   }, []);
 
   useEffect(() => {
@@ -67,7 +98,7 @@ export function ThemeToggle() {
   }, [open]);
 
   function choose(next: ThemePreference) {
-    window.localStorage.setItem(STORAGE_KEY, next);
+    writeThemePreference(next);
     setPreference(next);
     applyTheme(next);
     setOpen(false);
