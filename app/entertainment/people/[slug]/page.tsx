@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { entertainmentPeople, getEntertainmentPerson } from "@/lib/entertainment-extras";
@@ -67,7 +68,24 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
         <h1>{person.name}</h1>
         <p className="page-intro">{person.summary}</p>
 
-<div className="section-heading top-gap"><div><span className="eyebrow">Movies</span><h2>Titles featuring {person.name}.</h2></div></div>
+        <AnswerFirst
+          eyebrow="Quick profile"
+          title={"Who is " + person.name + "?"}
+          summary={person.summary}
+          facts={[
+            { label: "Known for here", value: credits.slice(0, 3).map((title) => title.title).join(", ") || "No linked titles yet" },
+            { label: "Roles", value: person.roles.join(", ") },
+            { label: "Genres", value: genres.join(", ") || "See linked credits" },
+            { label: "Linked titles", value: String(credits.length) },
+          ]}
+          links={[
+            ...(credits[0] ? [{ href: "/entertainment/movies/" + credits[0].slug, label: "Open latest linked title", primary: true }] : []),
+            { href: "#credits", label: "See all linked credits" },
+          ]}
+          note="Use the profile summary first, then open individual movie pages for cast, story and official watch links."
+        />
+
+<div className="section-heading top-gap" id="credits"><div><span className="eyebrow">Movies</span><h2>Titles featuring {person.name}.</h2></div></div>
         {credits.length ? (
           <div className="service-grid">
             {credits.map((title) => {
