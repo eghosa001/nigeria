@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { shouldEnableAnalytics } from "@/lib/analytics-safety";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 import { trackEvent } from "@/lib/client-analytics";
 
 type AnalyticsWindow = Window & typeof globalThis & {
@@ -12,7 +13,7 @@ type AnalyticsWindow = Window & typeof globalThis & {
 };
 
 export function Analytics() {
-  const id = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const id = GA_MEASUREMENT_ID;
   const pathname = usePathname();
 
   useEffect(() => {
