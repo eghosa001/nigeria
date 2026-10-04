@@ -164,15 +164,17 @@ export function AdminAnalyticsDashboard() {
       </div>
 
       <p className="analytics-clean-note">
-        Real public visitors only. Historical reporting starts {new Date(data.cleanStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })} because earlier GA4 data contains known QA traffic. Admin, API and Next.js asset paths are excluded. GA4 property: {data.propertyId || "unknown"}.
+        GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. GA4 property: {data.propertyId || "unknown"}.
       </p>
 
       <div className="analytics-metric-grid">
-        <div><span>Real visitors</span><strong>{number(data.summary.activeUsers)}</strong><small>Public-site active users</small></div>
-        <div><span>Visits</span><strong>{number(data.summary.sessions)}</strong><small>Sessions</small></div>
+        <div><span>GA4 visitors</span><strong>{number(data.summary.activeUsers)}</strong><small>Public-site active users</small></div>
+        <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
+        <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
+        <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Google Search appearances</small></div>
         <div><span>Page views</span><strong>{number(data.summary.pageViews)}</strong><small>Repeated views included</small></div>
-        <div><span>Engaged visits</span><strong>{number(data.summary.engagedSessions)}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
-        <div><span>Live now</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Active users in realtime report</small></div>
+        <div><span>Engaged sessions</span><strong>{number(data.summary.engagedSessions)}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
+        <div><span>Live now</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>GA4 realtime active users</small></div>
       </div>
 
       <section className="admin-panel">
