@@ -49,7 +49,7 @@ export default async function YouTubeMoviesPaginationPage({ params }: { params: 
             <div>
               <span className="eyebrow">Free on YouTube</span>
               <h1>Full Nigerian movies on YouTube.</h1>
-              <p className="page-intro">Page {pageNumber}.</p>
+              <p className="page-intro">Page {pageNumber}. Open a movie for details before choosing its verified YouTube source.</p>
             </div>
           </div>
           <div className="movie-browse-tabs">
