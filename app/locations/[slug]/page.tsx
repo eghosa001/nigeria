@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getServiceLocationCity, serviceLocationCities } from "@/data/service-locations";
@@ -91,7 +92,23 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           <p className="page-intro">{city.description}</p>
           <p className="checked-date">Official sources checked {city.lastVerified}</p>
 
-          <div className="service-grid">
+          <AnswerFirst
+            title={"Find the right official service point in " + city.city}
+            summary={city.description}
+            facts={[
+              { label: "Published service points", value: String(city.entries.length) },
+              { label: "State", value: city.state },
+              { label: "Services covered", value: city.entries.slice(0, 3).map((entry) => entry.service).join(", ") },
+              { label: "Verified", value: city.lastVerified },
+            ]}
+            links={[
+              { href: "#offices", label: "See service points", primary: true },
+              ...(relatedServices[0] ? [{ href: "/services/" + relatedServices[0].slug, label: "Open a service guide" }] : []),
+            ]}
+            note="Check the exact service guide before travelling; appointment and centre arrangements can change."
+          />
+
+          <div className="service-grid" id="offices">
             {city.entries.map((entry) => (
               <article className="sidebar-card" key={entry.agency + entry.service}>
                 <span>{entry.agency}</span>
