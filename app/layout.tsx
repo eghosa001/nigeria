@@ -9,8 +9,37 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 
 const siteUrl = getSiteUrl();
+
+const gaBootstrap = `
+(function () {
+  var id = "${GA_MEASUREMENT_ID}";
+  var path = window.location.pathname;
+  var automated = navigator.webdriver === true;
+  var admin = path === "/admin" || path.indexOf("/admin/") === 0;
+  var disabledKey = "ga-disable-" + id;
+
+  window[disabledKey] = automated || admin;
+  if (automated || admin) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+  if (!document.querySelector("script[data-mynigeriaguide-ga]")) {
+    var script = document.createElement("script");
+    script.async = true;
+    script.setAttribute("data-mynigeriaguide-ga", "true");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(script);
+  }
+
+  window.gtag("js", new Date());
+  window.gtag("config", id, { anonymize_ip: true });
+  window.__mngLastTrackedPath = path;
+})();
+`;
 
 const themeBootstrap = `
 (function () {
@@ -84,6 +113,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="color-scheme" content="light dark" />
         <meta name="theme-color" content="#f8f5ed" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+        <script dangerouslySetInnerHTML={{ __html: gaBootstrap }} />
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
       <body>
