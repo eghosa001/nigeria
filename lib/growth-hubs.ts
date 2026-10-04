@@ -23,51 +23,227 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "nin-corrections",
-    title: "NIN Modification Portal & Correction Guide 2026",
-    shortTitle: "NIN corrections",
-    description: "Use the official NIN modification portal routes for date-of-birth, name, phone and address changes, plus enrolment and NIN slip reissue.",
+    title: "NIN Portal Guide 2026: Enrolment, Verification & Corrections",
+    shortTitle: "NIN services",
+    description: "Find the correct NIMC route for NIN enrolment, verification, slip reissue, SIM linkage and date-of-birth, name, phone or address changes.",
     intro: [
-      "NIN requests are easy to mix up because enrolment, self-service modifications and slip reissue use different routes. This hub groups the main NIMC tasks so you can go straight to the exact correction or enrolment process.",
-      "Before paying, open the relevant guide to confirm the current fee, required evidence and whether the task is completed online or needs an enrolment centre."
+      "Use this hub when you need to enrol for a NIN, verify or replace your NIN record, link it to a SIM, or correct information already attached to your identity record. These tasks do not all use the same NIMC route.",
+      "Choose the exact task below before paying or submitting documents. Each linked guide keeps its own official sources, current status and last-checked date."
     ],
-    searches: [{ query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN portal for change of date of birth", serviceSlug: "nin-date-of-birth-modification" }, { query: "NIN date of birth correction", serviceSlug: "nin-date-of-birth-modification" }, { query: "change name on NIN", serviceSlug: "nin-name-modification" }, { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" }, { query: "police report for NIN change of number", serviceSlug: "nin-phone-modification" }, { query: "NIN enrolment", serviceSlug: "nin-enrolment" }, { query: "NIN verification", serviceSlug: "ninauth-nin-verification" }, { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" }],
-    serviceSlugs: ["nin-enrolment", "nin-date-of-birth-modification", "nin-name-modification", "nin-phone-modification", "nin-address-modification", "ninauth-nin-verification", "nin-slip-reissue"]
+    searches: [
+      { query: "NIN portal", serviceSlug: "nin-enrolment" },
+      { query: "NIN enrolment", serviceSlug: "nin-enrolment" },
+      { query: "NIN verification", serviceSlug: "ninauth-nin-verification" },
+      { query: "replace NIN slip", serviceSlug: "nin-slip-reissue" },
+      { query: "NIN SIM linkage", serviceSlug: "nin-sim-linkage" },
+      { query: "check NIN SIM linkage status", serviceSlug: "check-nin-sim-linkage-status" },
+      { query: "NIN modification portal", serviceSlug: "nin-date-of-birth-modification" },
+      { query: "change date of birth on NIN", serviceSlug: "nin-date-of-birth-modification" },
+      { query: "change name on NIN", serviceSlug: "nin-name-modification" },
+      { query: "change phone number on NIN", serviceSlug: "nin-phone-modification" },
+      { query: "change address on NIN", serviceSlug: "nin-address-modification" }
+    ],
+    serviceSlugs: [
+      "nin-enrolment",
+      "ninauth-nin-verification",
+      "nin-slip-reissue",
+      "nin-sim-linkage",
+      "check-nin-sim-linkage-status",
+      "fix-failed-nin-sim-linkage",
+      "nin-date-of-birth-modification",
+      "nin-name-modification",
+      "nin-phone-modification",
+      "nin-address-modification"
+    ]
   },
   {
     slug: "bvn",
-    title: "BVN Guide: Enrolment, Retrieval & NRBVN",
+    title: "How to Check BVN 2026: Retrieval, Validation & Correction",
     shortTitle: "BVN services",
-    description: "Get or retrieve your BVN and use the official NRBVN route for eligible Nigerians abroad.",
+    description: "Check or retrieve your BVN, validate a BVN, correct BVN details, enrol for the first time or use the official non-resident BVN route.",
     intro: [
-      "Use this hub for first-time BVN enrolment, retrieving an existing BVN and obtaining a BVN through the non-resident route while outside Nigeria.",
-      "The linked guides separate bank and NIBSS routes from unofficial advice and point you to the exact channel for each supported BVN task."
+      "Use this hub when you need to find an existing BVN, confirm it, correct its details or enrol. MyNigeriaGuide does not collect BVN data; the linked guides explain the official bank, NIBSS or approved route for each task.",
+      "If you simply want to know your existing BVN, start with BVN retrieval. Validation and data correction are separate tasks and should not be confused with retrieval."
     ],
-    searches: [{ query: "BVN retrieval", serviceSlug: "bvn-retrieval" }, { query: "how to retrieve BVN number", serviceSlug: "bvn-retrieval" }, { query: "NIBSS BVN online portal", serviceSlug: "bvn-retrieval" }, { query: "forgot my BVN", serviceSlug: "bvn-retrieval" }, { query: "validate BVN", serviceSlug: "bvn-validation" }, { query: "change BVN details", serviceSlug: "bvn-data-update" }, { query: "BVN enrolment", serviceSlug: "bvn-enrolment" }, { query: "BVN enrolment form", serviceSlug: "bvn-enrolment" }, { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }],
-    serviceSlugs: ["bvn-enrolment", "bvn-retrieval", "bvn-validation", "bvn-data-update", "non-resident-bvn"]
+    searches: [
+      { query: "how to check BVN", serviceSlug: "bvn-retrieval" },
+      { query: "check my BVN", serviceSlug: "bvn-retrieval" },
+      { query: "BVN retrieval", serviceSlug: "bvn-retrieval" },
+      { query: "how to retrieve BVN number", serviceSlug: "bvn-retrieval" },
+      { query: "forgot my BVN", serviceSlug: "bvn-retrieval" },
+      { query: "validate BVN", serviceSlug: "bvn-validation" },
+      { query: "BVN correction", serviceSlug: "bvn-data-update" },
+      { query: "change BVN details", serviceSlug: "bvn-data-update" },
+      { query: "BVN enrolment", serviceSlug: "bvn-enrolment" },
+      { query: "BVN for Nigerians abroad", serviceSlug: "non-resident-bvn" }
+    ],
+    serviceSlugs: ["bvn-retrieval", "bvn-validation", "bvn-data-update", "bvn-enrolment", "non-resident-bvn"]
   },
   {
     slug: "jamb-2026",
-    title: "JAMB 2026 Guide: CAPS, Matriculation List, Registration & Results",
+    title: "JAMB Portal 2026: CAPS, Registration, Results & Admission",
     shortTitle: "JAMB 2026",
-    description: "JAMB 2026 registration, Direct Entry, profile codes, CAPS, results and admission documents in one source-linked hub.",
+    description: "Use the right JAMB portal route for 2026 registration, CAPS, admission status, results, profile codes, corrections and admission documents.",
     intro: [
-      "This hub brings together the JAMB tasks candidates commonly need before, during and after registration. Start with the exact task instead of searching through several unrelated pages.",
-      "The guides cover official JAMB fees and routes, profile-code issues, CAPS, result slips and admission letters, with links back to JAMB sources."
+      "This is an independent JAMB task hub for candidates who know what they need to do but are not sure which official JAMB route applies. It groups registration, CAPS, results, admission documents, profile-code issues and corrections without pretending to be the JAMB portal.",
+      "Choose the exact task below. Each MyNigeriaGuide page explains the official route and links you to the responsible JAMB service."
     ],
-    searches: [{ query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" }, { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" }, { query: "JAMB profile code", serviceSlug: "jamb-profile-code" }, { query: "JAMB CAPS", serviceSlug: "jamb-caps" }, { query: "JAMB matriculation list", serviceSlug: "jamb-matriculation-list" }, { query: "JAMB regularization", serviceSlug: "jamb-regularization-condonement" }, { query: "print JAMB result", serviceSlug: "jamb-print-result" }, { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" }, { query: "JAMB change of institution", serviceSlug: "jamb-change-course-institution" }, { query: "JAMB name correction", serviceSlug: "jamb-change-name" }, { query: "JAMB date of birth correction", serviceSlug: "jamb-correct-date-of-birth" }],
-    serviceSlugs: ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "jamb-profile-code", "jamb-retrieve-profile-code", "jamb-caps", "jamb-matriculation-list", "jamb-regularization-condonement", "jamb-print-result", "jamb-admission-letter", "jamb-change-course-institution", "jamb-change-name", "jamb-correct-date-of-birth", "jamb-correct-gender", "jamb-correct-state-lga"]
+    searches: [
+      { query: "JAMB portal", serviceSlug: "jamb-2026-utme-registration" },
+      { query: "JAMB portal login", serviceSlug: "jamb-2026-utme-registration" },
+      { query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" },
+      { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" },
+      { query: "JAMB profile code", serviceSlug: "jamb-profile-code" },
+      { query: "JAMB CAPS login", serviceSlug: "jamb-caps" },
+      { query: "check JAMB admission status", serviceSlug: "jamb-caps" },
+      { query: "JAMB result checker", serviceSlug: "jamb-print-result" },
+      { query: "print JAMB result", serviceSlug: "jamb-print-result" },
+      { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" },
+      { query: "JAMB matriculation list", serviceSlug: "jamb-matriculation-list" },
+      { query: "JAMB regularization", serviceSlug: "jamb-regularization-condonement" },
+      { query: "JAMB change of institution", serviceSlug: "jamb-change-course-institution" },
+      { query: "JAMB name correction", serviceSlug: "jamb-change-name" },
+      { query: "JAMB date of birth correction", serviceSlug: "jamb-correct-date-of-birth" }
+    ],
+    serviceSlugs: [
+      "jamb-2026-utme-registration",
+      "jamb-direct-entry-2026",
+      "jamb-profile-code",
+      "jamb-retrieve-profile-code",
+      "jamb-retrieve-lost-epin",
+      "jamb-caps",
+      "jamb-print-result",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "jamb-regularization-condonement",
+      "jamb-change-course-institution",
+      "jamb-change-name",
+      "jamb-correct-date-of-birth",
+      "jamb-correct-gender",
+      "jamb-correct-state-lga"
+    ]
   },
   {
     slug: "nysc",
-    title: "NYSC Portal Guide: Registration, Senate List, Call-Up & Relocation",
+    title: "NYSC Portal 2026: Login, Registration, Senate List & Call-Up",
     shortTitle: "NYSC",
-    description: "Use the official NYSC portal routes for registration, senate-list checks, call-up letters, relocation, corrections and exemption guidance.",
+    description: "Use the correct NYSC portal route for registration, senate-list checks, call-up letters, relocation, revalidation, remobilization, corrections and exemption guidance.",
     intro: [
-      "Use this NYSC hub from mobilisation through camp and post-registration issues. It links the main actions prospective corps members search for instead of making you guess which NYSC page applies.",
-      "Each guide explains what you need to prepare, where the official action happens and what to do next if your record, call-up or relocation process needs attention."
+      "Use this independent NYSC task hub from mobilisation through post-registration issues. It maps common NYSC portal and login searches to the exact verified guide instead of creating separate thin pages for every login wording.",
+      "Each guide explains what to prepare, where the official action happens and what to do next if your record, call-up, relocation or certificate process needs attention."
     ],
-    searches: [{ query: "NYSC portal", serviceSlug: "nysc-registration-local" }, { query: "NYSC registration", serviceSlug: "nysc-registration-local" }, { query: "NYSC senate list", serviceSlug: "nysc-senate-list" }, { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" }, { query: "NYSC relocation", serviceSlug: "nysc-relocation" }, { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" }, { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }],
-    serviceSlugs: ["nysc-registration-local", "nysc-senate-list", "nysc-call-up-letter", "nysc-relocation", "nysc-correct-date-of-birth", "nysc-exemption-certificate"]
+    searches: [
+      { query: "NYSC portal", serviceSlug: "nysc-registration-local" },
+      { query: "NYSC portal login", serviceSlug: "nysc-registration-local" },
+      { query: "NYSC login", serviceSlug: "nysc-registration-local" },
+      { query: "NYSC registration", serviceSlug: "nysc-registration-local" },
+      { query: "NYSC foreign trained registration", serviceSlug: "nysc-foreign-trained-registration" },
+      { query: "NYSC senate list", serviceSlug: "nysc-senate-list" },
+      { query: "NYSC call up letter", serviceSlug: "nysc-call-up-letter" },
+      { query: "NYSC relocation", serviceSlug: "nysc-relocation" },
+      { query: "NYSC revalidation", serviceSlug: "nysc-revalidation" },
+      { query: "NYSC remobilization", serviceSlug: "nysc-remobilization" },
+      { query: "NYSC date of birth correction", serviceSlug: "nysc-correct-date-of-birth" },
+      { query: "NYSC course correction", serviceSlug: "nysc-correct-course-of-study" },
+      { query: "NYSC exemption certificate", serviceSlug: "nysc-exemption-certificate" }
+    ],
+    serviceSlugs: [
+      "nysc-registration-local",
+      "nysc-foreign-trained-registration",
+      "nysc-senate-list",
+      "nysc-call-up-letter",
+      "nysc-relocation",
+      "nysc-revalidation",
+      "nysc-remobilization",
+      "nysc-correct-date-of-birth",
+      "nysc-correct-course-of-study",
+      "nysc-exemption-certificate",
+      "nysc-lost-discharge-certificate",
+      "nysc-lost-exemption-certificate"
+    ]
+  },
+  {
+    slug: "waec",
+    title: "WAEC Result Checker 2026: Results, Certificates & Timetable",
+    shortTitle: "WAEC",
+    description: "Check WAEC result guidance, digital certificates, certificate collection and corrections, result confirmation, complaints and current timetable information.",
+    intro: [
+      "Use this WAEC hub to reach the correct result or certificate task without confusing MyNigeriaGuide with WAEC's own result-checking service. The result guide explains what you need and then sends you to the official WAEC route.",
+      "Certificate collection, digital certificates, confirmation, corrections and withheld-result complaints are different processes, so choose the exact task below."
+    ],
+    searches: [
+      { query: "WAEC result checker", serviceSlug: "waec-check-result" },
+      { query: "how to check WAEC result", serviceSlug: "waec-check-result" },
+      { query: "WAEC result", serviceSlug: "waec-check-result" },
+      { query: "WAEC digital certificate", serviceSlug: "waec-digital-certificate" },
+      { query: "collect WAEC certificate", serviceSlug: "waec-collect-certificate" },
+      { query: "WAEC result confirmation", serviceSlug: "waec-confirm-result-nigeria" },
+      { query: "correct WAEC certificate error", serviceSlug: "waec-correct-certificate-error" },
+      { query: "WAEC withheld result complaint", serviceSlug: "waec-withheld-result-complaint" },
+      { query: "WAEC timetable 2026", serviceSlug: "waec-2026-private-candidates-timetable" }
+    ],
+    serviceSlugs: [
+      "waec-check-result",
+      "waec-digital-certificate",
+      "waec-collect-certificate",
+      "waec-confirm-result-nigeria",
+      "waec-lost-certificate",
+      "waec-correct-certificate-error",
+      "waec-result-confirmation-overseas",
+      "waec-withheld-result-complaint",
+      "waec-2026-private-candidates-timetable"
+    ]
+  },
+  {
+    slug: "neco",
+    title: "NECO Result Checker 2026: Results, Token, Certificate & Timetable",
+    shortTitle: "NECO",
+    description: "Use the official NECO routes for result checking, result tokens, certificate services, e-Verify, institutional verification, payments and timetable information.",
+    intro: [
+      "Use this NECO hub to choose the exact result, token, certificate or verification task. MyNigeriaGuide explains the process and links to the responsible NECO service rather than collecting result credentials.",
+      "If you want to see a result, start with the result-checker guide. Token purchase, institutional verification and certificate services are separate tasks."
+    ],
+    searches: [
+      { query: "NECO result checker", serviceSlug: "neco-check-result" },
+      { query: "check NECO result", serviceSlug: "neco-check-result" },
+      { query: "NECO result token", serviceSlug: "neco-purchase-result-token" },
+      { query: "NECO e Verify", serviceSlug: "neco-e-verify" },
+      { query: "NECO certificate", serviceSlug: "neco-certificate-service" },
+      { query: "NECO institutional verification", serviceSlug: "neco-institution-verification" },
+      { query: "NECO payment", serviceSlug: "neco-payment" },
+      { query: "NECO timetable 2026", serviceSlug: "neco-2026-timetable" }
+    ],
+    serviceSlugs: [
+      "neco-check-result",
+      "neco-purchase-result-token",
+      "neco-e-verify",
+      "neco-certificate-service",
+      "neco-institution-verification",
+      "neco-payment",
+      "neco-2026-ssce-internal-registration",
+      "neco-2026-timetable"
+    ]
+  },
+  {
+    slug: "nelfund",
+    title: "NELFUND Portal Guide 2026: Student Loan, Login, Status & Repayment",
+    shortTitle: "NELFUND",
+    description: "Use the correct NELFUND student-loan route for applications, status and upkeep, then understand repayment when it becomes relevant.",
+    intro: [
+      "Use this independent NELFUND task hub if you are looking for the student-loan portal, application steps, loan status or upkeep information. It routes each search to an existing source-linked MyNigeriaGuide guide and then to NELFUND's official service.",
+      "Application, disbursement/status and repayment are different stages. Choose the stage that matches what you need now."
+    ],
+    searches: [
+      { query: "NELFUND", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND portal", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND login", serviceSlug: "nelfund-student-loan-application" },
+      { query: "student loan portal Nigeria", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND application", serviceSlug: "nelfund-student-loan-application" },
+      { query: "NELFUND loan status", serviceSlug: "nelfund-loan-status-and-upkeep" },
+      { query: "NELFUND upkeep", serviceSlug: "nelfund-loan-status-and-upkeep" },
+      { query: "NELFUND repayment", serviceSlug: "nelfund-loan-repayment" }
+    ],
+    serviceSlugs: ["nelfund-student-loan-application", "nelfund-loan-status-and-upkeep", "nelfund-loan-repayment"]
   },
   {
     slug: "cac-business",
