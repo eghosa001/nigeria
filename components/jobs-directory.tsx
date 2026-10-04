@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { CareerOpportunity, JobSector, JobStatus } from "@/lib/jobs";
 
@@ -20,6 +20,16 @@ export function JobsDirectory({ opportunities }: Props) {
   const [query, setQuery] = useState("");
   const [sector, setSector] = useState<JobSector | "All">("All");
   const [status, setStatus] = useState<JobStatus | "all">("all");
+
+  useEffect(() => {
+    const syncFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      setQuery(params.get("q") ?? "");
+    };
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, []);
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();

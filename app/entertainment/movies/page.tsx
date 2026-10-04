@@ -41,6 +41,13 @@ export default async function MoviesPage({
               <span className="eyebrow">Movies</span>
               <h1>Find something worth watching.</h1>
               <p className="page-intro">Browse Nigerian movies and open the platform when you are ready to watch.</p>
+              <form className="section-quick-search" action="/entertainment/movies#curated-movies" method="get" role="search">
+                <label>
+                  <span>Search movies</span>
+                  <input type="search" name="q" defaultValue={params.q ?? ""} placeholder="Movie, actor, genre or language…" />
+                </label>
+                <button type="submit">Search movies</button>
+              </form>
             </div>
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">

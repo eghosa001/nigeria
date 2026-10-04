@@ -48,6 +48,13 @@ export default function JobsPage() {
             <span className="eyebrow">Jobs & Careers</span>
             <h1>Know what is open. Know what you need. Apply at the source.</h1>
             <p className="page-intro">Government recruitment, graduate opportunities, internships and reputable employer career routes — checked against the organisation responsible for the application.</p>
+            <form className="section-quick-search" action="/jobs#opportunities" method="get" role="search">
+              <label>
+                <span>Search jobs & careers</span>
+                <input type="search" name="q" placeholder="Employer, role, qualification or field…" />
+              </label>
+              <button type="submit">Search jobs</button>
+            </form>
             <div className="jobs-hero-actions">
               <a href="#opportunities" className="button inline-button">Browse verified opportunities</a>
               <Link href="/jobs/government" className="jobs-text-action">Government tracker →</Link>

@@ -109,11 +109,11 @@ function isMobileItemActive(pathname: string, href: string) {
 }
 
 const mobileNavigation = [
+  { href: "/", label: "Home", icon: "home" as const },
   { href: "/entertainment/movies", label: "Movies", icon: "movies" as const },
   { href: "/services", label: "Services", icon: "services" as const },
   { href: "/explore", label: "Tour", icon: "explore" as const },
   { href: "/jobs", label: "Jobs", icon: "jobs" as const },
-  { href: "/", label: "Home", icon: "home" as const },
   { href: "/saved", label: "Saved", icon: "saved" as const },
 ];
 

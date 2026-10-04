@@ -20,6 +20,13 @@ export default function ServicesPage() {
           <span className="eyebrow">Services</span>
           <h1>Government service guides</h1>
           <p className="page-intro">Search by what you need to do, or choose a service area.</p>
+          <form className="section-quick-search" action="/services#service-directory" method="get" role="search">
+            <label>
+              <span>Search services</span>
+              <input type="search" name="q" placeholder="Passport, NIN, CAC, NYSC, visa…" />
+            </label>
+            <button type="submit">Search services</button>
+          </form>
         </div>
 
         <nav className="service-category-nav minimal-category-nav" aria-label="Browse service categories">
@@ -34,7 +41,9 @@ export default function ServicesPage() {
           ))}
         </nav>
 
-        <ServiceDirectory services={publicServiceListings} />
+        <div id="service-directory" className="section-search-target">
+          <ServiceDirectory services={publicServiceListings} />
+        </div>
       </div>
     </section>
   );

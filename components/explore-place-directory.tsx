@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { ExplorePlaceKind } from "@/lib/explore-places";
 
@@ -36,6 +36,16 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState<ExplorePlaceKind | "all">("all");
   const [guide, setGuide] = useState("all");
+
+  useEffect(() => {
+    const syncFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      setQuery(params.get("q") ?? "");
+    };
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, []);
 
   const guideNames = useMemo(() => new Map(guides.map((item) => [item.slug, item.shortTitle])), [guides]);
   const filtered = useMemo(() => {
