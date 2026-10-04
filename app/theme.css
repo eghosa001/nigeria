@@ -751,3 +751,123 @@ html[data-theme="dark"] .route-wizard-options a:hover {
   border-color: #3d5f50 !important;
   color: var(--ink) !important;
 }
+
+
+/* Dark-mode semantic color audit — 2026-10-05.
+   In dark mode, --green-dark/--green-deep are deliberately light foreground
+   colors. Any component that used those same tokens as backgrounds needs a
+   dedicated dark surface instead, otherwise text becomes low-contrast. */
+html[data-theme="dark"] {
+  --theme-action: #146b49;
+  --theme-action-hover: #1b8058;
+  --theme-deep-panel: #0d2d21;
+  --theme-deep-panel-2: #10291f;
+}
+
+/* Tour / guide surfaces shown in the regression screenshots. */
+html[data-theme="dark"] .proof-strip {
+  background: var(--theme-soft) !important;
+  border-block-color: var(--line) !important;
+}
+html[data-theme="dark"] .proof-grid > div {
+  border-left-color: var(--line) !important;
+}
+html[data-theme="dark"] .proof-grid strong {
+  color: var(--ink) !important;
+}
+html[data-theme="dark"] .proof-grid small {
+  color: var(--muted) !important;
+}
+
+html[data-theme="dark"] .premium-dark-section {
+  background:
+    radial-gradient(circle at 85% 0%, rgba(224,180,95,.10), transparent 25rem),
+    var(--theme-deep-panel) !important;
+  color: #f5fbf8 !important;
+}
+html[data-theme="dark"] .premium-dark-section .section-heading-light h2,
+html[data-theme="dark"] .premium-dark-section .home-update-card h3 {
+  color: #f5fbf8 !important;
+}
+html[data-theme="dark"] .premium-dark-section .home-update-card {
+  background: rgba(255,255,255,.045) !important;
+  border-color: rgba(255,255,255,.10) !important;
+}
+html[data-theme="dark"] .premium-dark-section .home-update-card p,
+html[data-theme="dark"] .premium-dark-section .home-update-card time {
+  color: #bfd0c7 !important;
+}
+
+/* Dark panels that previously inherited a light foreground token as a fill. */
+html[data-theme="dark"] :where(
+  .fee-card,
+  .admin-gate-mark,
+  .assistant-symbol,
+  .agency-monogram
+) {
+  background: var(--theme-deep-panel) !important;
+}
+
+html[data-theme="dark"] .fee-card {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(224,180,95,.12), transparent 12rem),
+    var(--theme-deep-panel) !important;
+}
+
+/* Primary actions must remain dark enough for white labels. */
+html[data-theme="dark"] :where(
+  .inline-button,
+  .report-button,
+  .assistant-form button,
+  .analytics-login-form button,
+  .admin-analytics-state.error button,
+  .admin-editor-unlock button,
+  .admin-editor-actions > button:first-child,
+  .admin-gate-form button,
+  .directory-load-more button,
+  .global-search-form button,
+  .section-quick-search button,
+  .process-tracker button,
+  .answer-first-action.is-primary
+) {
+  background: var(--theme-action) !important;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] :where(
+  .assistant-form button:hover,
+  .global-search-form button:hover,
+  .section-quick-search button:hover,
+  .process-tracker button:hover,
+  .answer-first-action.is-primary:hover
+) {
+  background: var(--theme-action-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Number markers use a dark green fill rather than the light accent token. */
+html[data-theme="dark"] :where(
+  .steps li > span,
+  .detailed-step-number,
+  .job-steps li > span
+) {
+  background: var(--theme-action) !important;
+  color: #ffffff !important;
+}
+
+/* Legacy nav CTA can still render on a few responsive/older shells. */
+html[data-theme="dark"] .primary-nav > a:last-child {
+  background: var(--theme-action) !important;
+  color: #ffffff !important;
+}
+html[data-theme="dark"] .primary-nav > a:last-child:hover,
+html[data-theme="dark"] .primary-nav > a:last-child.nav-active {
+  background: var(--theme-action-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Smaller green-dark fills that otherwise become pale blocks in dark mode. */
+html[data-theme="dark"] .category-card:hover .category-icon {
+  background: var(--theme-deep-panel-2) !important;
+  color: var(--gold) !important;
+}
