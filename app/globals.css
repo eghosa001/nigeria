@@ -5499,6 +5499,84 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .home-trending-links { grid-template-columns: minmax(0, 1fr); }
 }
 
+
+/* Section-scoped search: one fast search entry point for Movies, Services, Tour and Jobs */
+.section-quick-search {
+  width: min(720px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 9px;
+  align-items: end;
+  margin-top: 24px;
+}
+.section-quick-search label {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+.section-quick-search label > span {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 820;
+}
+.section-quick-search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  padding: 0 14px;
+  border: 1px solid #c9d7cf;
+  border-radius: 12px;
+  outline: 0;
+  background: white;
+  color: var(--ink);
+  font: inherit;
+}
+.section-quick-search input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(8,112,68,.10);
+}
+.section-quick-search button {
+  min-height: 50px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--green-dark);
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 850;
+  white-space: nowrap;
+}
+.section-quick-search button:hover { background: var(--green); }
+.section-search-target,
+#places,
+#opportunities,
+#curated-movies {
+  scroll-margin-top: 132px;
+}
+
+.movie-browse-hero .section-quick-search label > span { color: #9fb4aa; }
+.movie-browse-hero .section-quick-search input {
+  border-color: rgba(255,255,255,.14);
+  background: rgba(255,255,255,.075);
+  color: #f4f8f5;
+}
+.movie-browse-hero .section-quick-search input::placeholder { color: #81988c; }
+.movie-browse-hero .section-quick-search button {
+  background: #e8c36f;
+  color: #1c2c24;
+}
+.movie-browse-hero .section-quick-search button:hover { background: #f0d48f; }
+
+@media (max-width: 620px) {
+  .section-quick-search {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .section-quick-search button { width: 100%; }
+}
+
 /* Answer-first retention pattern — important information before long-form detail */
 .answer-first {
   margin-top: 26px;
