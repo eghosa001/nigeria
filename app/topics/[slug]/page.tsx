@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
@@ -84,6 +85,21 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
           <span className="eyebrow">Popular task hub</span>
           <h1>{hub.title}</h1>
           <p className="page-intro">{hub.description}</p>
+
+          <AnswerFirst
+            title="Choose the exact task before reading the full hub"
+            summary={hub.description}
+            facts={[
+              { label: "Verified guides", value: String(services.length) },
+              { label: "Common searches", value: String(hub.searches.length) },
+              { label: "Start with", value: hub.searches[0]?.query ?? services[0]?.shortTitle ?? "Browse the guides below" },
+              { label: "Source policy", value: "Each guide keeps its own official sources and checked date" },
+            ]}
+            links={[
+              ...(hub.searches[0] ? [{ href: "/services/" + hub.searches[0].serviceSlug, label: hub.searches[0].query }] : []),
+              { href: "#common-searches", label: "See common searches", primary: true },
+            ]}
+          />
 
           <div className="topic-copy">
             {hub.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
