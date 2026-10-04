@@ -1,10 +1,10 @@
-export type EntertainmentPlatform = "Netflix" | "YouTube" | "Prime Video" | "Kava" | "Cinema";
+export type EntertainmentPlatform = "Netflix" | "YouTube" | "Prime Video" | "Kava" | "Cinema" | "Africa Magic";
 
 export type WatchLink = {
   platform: EntertainmentPlatform;
   label: string;
   href: string;
-  access: "subscription" | "full-movie" | "rent-or-buy" | "subscription-or-rent" | "cinema";
+  access: "subscription" | "full-movie" | "rent-or-buy" | "subscription-or-rent" | "cinema" | "broadcast";
   lastChecked: string;
   note: string;
   publisher?: string;
@@ -96,6 +96,90 @@ export const entertainmentTitles: EntertainmentTitle[] = [
         access: "cinema",
         lastChecked: "2026-10-04",
         note: "Tribe Nation Theatrical Distribution lists the West African cinema release for 16 October 2026."
+      }
+    ]
+  },
+  {
+    slug: "phoenix-fury-2026",
+    title: "Phoenix Fury",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Revenge", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A revenge drama about two women from different worlds whose lives collide after trauma, pushing them through grief, power and the consequences of choosing retaliation.",
+    cast: ["Uzoamaka Power", "Onyinye Odokoro", "Ama K. Abebrese", "Ijeoma Grace Agu", "Adjetey Anang", "Tina Mba", "Richard Mofe-Damijo"],
+    directors: ["Ifeoma Nkiruka Chukwuogo"],
+    watchLinks: [
+      {
+        platform: "Cinema",
+        label: "Open the filmmaker's official film page",
+        href: "https://ifeomachukwuogo.com/film",
+        access: "cinema",
+        lastChecked: "2026-10-04",
+        note: "The filmmaker's official site lists Phoenix Fury as a 2026 feature film. Current release communications place its Nigeria/Ghana cinema release on 30 October 2026."
+      }
+    ]
+  },
+  {
+    slug: "a-land-apart-2026",
+    title: "A Land Apart",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Alternate history", "Nollywood"],
+    languages: ["English", "Hausa"],
+    synopsis: "An alternate-history Nigerian drama imagines a country whose power grew around agriculture rather than oil, then follows a struggle over inheritance, food systems and global influence.",
+    cast: ["Richard Mofe-Damijo", "Princess Mufeedah", "Daniel Etim Effiong", "Adam Garba", "Sam Dede", "Onyeka Onwenu"],
+    directors: ["Pever Bem"],
+    runtimeMinutes: 118,
+    watchLinks: [
+      {
+        platform: "Cinema",
+        label: "Open the official production links",
+        href: "https://linktr.ee/sutoriteraprojects",
+        access: "cinema",
+        lastChecked: "2026-10-04",
+        note: "Sutori Tera's official project links include A Land Apart trailer/release material. The current Nigerian cinema date is 23 October 2026."
+      }
+    ]
+  },
+  {
+    slug: "tele-x-zikora-2026",
+    title: "Tele x Zikora",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Coming of age", "Campus", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Two very different students at a fictional Lagos university collide as ambition, identity, friendship and romance reshape the lives they expected to have.",
+    cast: ["Mike Afolarin", "Genoveva Umeh"],
+    directors: ["Adenike Adebayo-Esho"],
+    watchLinks: [
+      {
+        platform: "Cinema",
+        label: "Open the film's official updates",
+        href: "https://x.com/telexzikora",
+        access: "cinema",
+        lastChecked: "2026-10-04",
+        note: "The film's official social account carries its current release campaign. Nigerian cinema release is listed for 23 October 2026."
+      }
+    ]
+  },
+  {
+    slug: "pushing-30-2026",
+    title: "Pushing 30",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Comedy", "Friendship", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A tech founder's 30th-birthday brunch turns into a pressure test for friendship, romance, adulthood and the career expectations surrounding her circle.",
+    cast: [],
+    watchLinks: [
+      {
+        platform: "Africa Magic",
+        label: "Check Africa Magic Showcase",
+        href: "https://www.dstv.com/africamagic/en-ng",
+        access: "broadcast",
+        lastChecked: "2026-10-04",
+        note: "Current release information lists Pushing 30 for Africa Magic Showcase on 18 October 2026 at 8 PM. Replay and package availability can vary."
       }
     ]
   },
