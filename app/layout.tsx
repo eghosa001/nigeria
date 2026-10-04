@@ -9,10 +9,11 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 
 const siteUrl = getSiteUrl();
 
-const themeBootstrap = `
+const gaBootstrap = `\n(function () {\n  var id = "${GA_MEASUREMENT_ID}";\n  var path = window.location.pathname;\n  var automated = navigator.webdriver === true;\n  var admin = path === "/admin" || path.indexOf("/admin/") === 0;\n  var disabledKey = "ga-disable-" + id;\n\n  window[disabledKey] = automated || admin;\n  if (automated || admin) return;\n\n  window.dataLayer = window.dataLayer || [];\n  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };\n\n  if (!document.querySelector("script[data-mynigeriaguide-ga]")) {\n    var script = document.createElement("script");\n    script.async = true;\n    script.setAttribute("data-mynigeriaguide-ga", "true");\n    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);\n    document.head.appendChild(script);\n  }\n\n  window.gtag("js", new Date());\n  window.gtag("config", id, { anonymize_ip: true });\n  window.__mngLastTrackedPath = path;\n})();\n`;\n\nconst themeBootstrap = `
 (function () {
   var preference = "light";
   try {
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="color-scheme" content="light dark" />
         <meta name="theme-color" content="#f8f5ed" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
+        <script dangerouslySetInnerHTML={{ __html: gaBootstrap }} />
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
       <body>
