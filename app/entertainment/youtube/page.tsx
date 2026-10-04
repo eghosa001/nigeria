@@ -67,7 +67,7 @@ export default async function YouTubeMoviesPage({
             <div>
               <span className="eyebrow">Free on YouTube</span>
               <h1>Full Nigerian movies on YouTube.</h1>
-              <p className="page-intro">Search by movie, actor or publisher, then open the video on YouTube.</p>
+              <p className="page-intro">Search by movie, actor or publisher, open the details page, then use the verified YouTube watch link.</p>
             </div>
           </div>
           <div className="movie-browse-tabs">
