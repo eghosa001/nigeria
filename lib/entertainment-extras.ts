@@ -366,6 +366,17 @@ export const releaseItems: ReleaseItem[] = [
     lastChecked: "2026-10-04",
   },
   {
+    id: "phoenix-fury-cinema-2026",
+    title: "Phoenix Fury",
+    kind: "cinema",
+    status: "upcoming",
+    dateLabel: "In cinemas 30 October 2026",
+    platform: "Nigeria & Ghana cinemas",
+    summary: "Ifeoma Nkiruka Chukwuogo's revenge drama follows two women from different worlds through trauma, power and retaliation.",
+    officialUrl: "https://ifeomachukwuogo.com/film",
+    lastChecked: "2026-10-04",
+  },
+  {
     id: "wire-transfer-cinema-2026",
     title: "Wire Transfer",
     kind: "cinema",
