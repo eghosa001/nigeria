@@ -171,7 +171,8 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Drama", "Comedy", "Friendship", "Nollywood"],
     languages: ["English"],
     synopsis: "A tech founder's 30th-birthday brunch turns into a pressure test for friendship, romance, adulthood and the career expectations surrounding her circle.",
-    cast: [],
+    cast: ["Deji Osikoya", "Darasimi Ogbetah", "Mayowa Mula", "Kanaga Emmanuel Eme", "Kanyin Eros", "Uzor Daniel", "Sharon Rotimi", "Doris Okorie", "Floyd Igbo"],
+    directors: ["Orobosa Ikponmwen"],
     watchLinks: [
       {
         platform: "Africa Magic",
