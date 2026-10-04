@@ -138,10 +138,10 @@ These are directional priorities based on the 2026 research pass and should be r
 
 **Tasks:**
 
-- [ ] Rename/reposition the JAMB topic hub around “JAMB Portal 2026” intent while clearly remaining an independent guide.
-- [ ] Add hub search variants: JAMB portal, JAMB portal login, JAMB CAPS login, JAMB result checker, JAMB admission status, JAMB reprint/result printing.
-- [ ] Ensure `jamb-caps` metadata leads with “JAMB CAPS 2026”.
-- [ ] Ensure `jamb-print-result` targets “JAMB result checker / print result” without pretending MyNigeriaGuide is the checker.
+- [x] Rename/reposition the JAMB topic hub around “JAMB Portal 2026” intent while clearly remaining an independent guide.
+- [x] Add hub search variants: JAMB portal, JAMB portal login, JAMB CAPS login, JAMB result checker, JAMB admission status and result printing.
+- [x] Ensure `jamb-caps` metadata leads with “JAMB CAPS 2026”.
+- [x] Ensure `jamb-print-result` targets JAMB-result/check/print intent without pretending MyNigeriaGuide is the official checker.
 - [ ] Keep all routes pointing users to official JAMB actions.
 - [ ] Review whether exam-slip/reprint intent is already covered; create a new guide only if the official workflow is distinct.
 
@@ -153,42 +153,42 @@ These are directional priorities based on the 2026 research pass and should be r
 
 **Tasks:**
 
-- [ ] Strengthen the NYSC hub title/description around “NYSC Portal / Login”.
-- [ ] Add exact hub search variants for NYSC portal, login, senate list, call-up letter, relocation and registration.
-- [ ] Expand hub `serviceSlugs` to include the complete verified NYSC journey already in `services.json`.
+- [x] Strengthen the NYSC hub title/description around “NYSC Portal / Login”.
+- [x] Add exact hub search variants for NYSC portal, login, senate list, call-up letter, relocation and registration.
+- [x] Expand hub `serviceSlugs` to include the complete verified NYSC journey already in `services.json`.
 - [ ] Review missing corps-member journey topics such as camp/PPA/clearance only against official NYSC sources before adding pages.
 - [ ] Avoid thin pages for login variants.
 
 ### 4.3 WAEC
 
-- [ ] Add a WAEC topic hub.
-- [ ] Route “WAEC result checker”, “check WAEC result”, “WAEC digital certificate”, certificate collection, result confirmation, withheld-result complaint, corrections and timetable intent to existing guides.
-- [ ] Strengthen `waec-check-result` metadata/search terms.
+- [x] Add a WAEC topic hub.
+- [x] Route “WAEC result checker”, “check WAEC result”, “WAEC digital certificate”, certificate collection, result confirmation, withheld-result complaint, corrections and timetable intent to existing guides.
+- [x] Strengthen `waec-check-result` metadata/search terms.
 - [ ] Keep result-checker language clear that the actual result is checked at WAEC’s official service.
 
 ### 4.4 NECO
 
-- [ ] Add a NECO topic hub.
-- [ ] Route result checker, result token, e-verify, payment, certificate, institutional verification and timetable intents.
-- [ ] Strengthen `neco-check-result` metadata/search terms.
+- [x] Add a NECO topic hub.
+- [x] Route result checker, result token, e-verify, payment, certificate, institutional verification and timetable intents.
+- [x] Strengthen `neco-check-result` metadata/search terms.
 - [ ] Avoid creating a duplicate token/check-result page when existing pages cover the action.
 
 ### 4.5 BVN
 
-- [ ] Retitle/reposition BVN hub around “How to Check/Retrieve BVN”.
-- [ ] Add search variants “how to check BVN”, “check BVN”, “retrieve BVN”, USSD retrieval, validation and correction.
-- [ ] Strengthen `bvn-retrieval` SEO title/search terms rather than creating a competing page.
+- [x] Retitle/reposition BVN hub around “How to Check/Retrieve BVN”.
+- [x] Add search variants “how to check BVN”, “check BVN”, “retrieve BVN”, USSD retrieval, validation and correction.
+- [x] Strengthen `bvn-retrieval` SEO title/search terms rather than creating a competing page.
 
 ### 4.6 NELFUND
 
-- [ ] Add NELFUND topic hub.
-- [ ] Route NELFUND portal/login/student-loan intent to application, status/upkeep and repayment guides.
+- [x] Add NELFUND topic hub.
+- [x] Route NELFUND portal/login/student-loan intent to application, status/upkeep and repayment guides.
 - [ ] Add any institutional verification/troubleshooting page only if supported by official NELFUND material and not already answered in an existing guide.
 
 ### 4.7 NIN
 
-- [ ] Expand the existing NIN hub beyond only “corrections”.
-- [ ] Include enrolment, verification, slip reissue, SIM linkage and modifications.
+- [x] Expand the existing NIN hub beyond only “corrections”.
+- [x] Include enrolment, verification, slip reissue, SIM linkage and modifications.
 - [ ] Keep the planned “check NIN number/NIN code” page separate only if current official NIMC guidance proves a distinct user task.
 
 ---
@@ -467,14 +467,14 @@ Track:
 
 ### Batch A — existing-service hubs and query alignment
 
-- [ ] JAMB hub update
-- [ ] NYSC hub update
-- [ ] BVN hub update
-- [ ] NIN hub expansion
-- [ ] WAEC hub
-- [ ] NECO hub
-- [ ] NELFUND hub
-- [ ] related service SEO/search-term adjustments
+- [x] JAMB hub update
+- [x] NYSC hub update
+- [x] BVN hub update
+- [x] NIN hub expansion
+- [x] WAEC hub
+- [x] NECO hub
+- [x] NELFUND hub
+- [x] related service SEO/search-term adjustments
 
 **Validation:** content references resolve to existing public service slugs; focused content/schema validation only.
 
@@ -552,8 +552,10 @@ This roadmap is complete only when:
 
 ### 2026-10-04
 
+- [x] Batch A focused validation: all topic-hub service references resolve, hub slugs are unique, homepage topic links resolve and SEO-title-map formatting is clean.
+- [x] High-demand hubs now exposed from the homepage quick-service links.
 - [x] Repository inventory reviewed.
 - [x] Existing service, job, movie and Explore coverage compared against search-demand research.
 - [x] Duplicate-page avoidance rules defined.
 - [x] Detailed repository roadmap created.
-- [ ] Batch A implementation in progress.
+- [x] Batch A core hub/query-alignment implementation completed.
