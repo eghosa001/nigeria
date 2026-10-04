@@ -210,7 +210,10 @@ const expectedSlugs = [
   "waec-2026-private-candidates-timetable",
   "neco-2026-timetable",
   "ninauth-nin-verification",
-  "nabteb-result-checker"
+  "nabteb-result-checker",
+  "check-nin-number",
+  "unclaimed-dividends-nigeria",
+  "jamb-examination-slip-2026"
 ] as const;
 const representative = [
   {
@@ -327,8 +330,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(205);
-  expect(publicServices).toHaveLength(204);
+  expect(services).toHaveLength(208);
+  expect(publicServices).toHaveLength(208);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
@@ -371,5 +374,5 @@ test("NIBSS USSD utility services are public and the generic BVN-change guide is
 
   await page.goto("/services/bvn-change-details");
   await expect(page).toHaveURL(/\/topics\/bvn$/);
-  await expect(page.getByRole("heading", { name: /BVN Guide: Enrolment, Retrieval & NRBVN/i })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /How to Check BVN/i })).toBeVisible();
 });
