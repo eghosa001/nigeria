@@ -7,6 +7,7 @@ export type AnalyticsTrafficMode = "all" | "clean";
 export type AnalyticsDashboardData = {
   range: AnalyticsRange;
   mode: AnalyticsTrafficMode;
+  propertyId: string;
   generatedAt: string;
   dataStartDate: string;
   cleanStartDate: string;
@@ -294,9 +295,11 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
 
   const totalValues = summaryReport.totals?.[0]?.metricValues ?? summaryReport.rows?.[0]?.metricValues ?? [];
+  const { propertyId = "" } = config();
   const data: AnalyticsDashboardData = {
     range,
     mode,
+    propertyId,
     generatedAt: new Date().toISOString(),
     dataStartDate,
     cleanStartDate: ANALYTICS_CLEAN_START,
