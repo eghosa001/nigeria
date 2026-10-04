@@ -174,22 +174,44 @@ export function AdminAnalyticsDashboard() {
         <div className="section-heading">
           <div>
             <span className="eyebrow">Analytics connection</span>
-            <h2>{data.connection?.verified ? "GA4 property verified" : "GA4 property needs attention"}</h2>
+            <h2>{
+              data.connection?.status === "verified"
+                ? "GA4 property verified"
+                : data.connection?.status === "mismatch"
+                  ? "GA4 property mismatch"
+                  : "GA4 verification unavailable"
+            }</h2>
           </div>
-          <small>{data.connection?.verified ? "Tracking and reporting point to the same property" : "Measurement/property match not confirmed"}</small>
+          <small>{
+            data.connection?.status === "verified"
+              ? "Tracking and reporting point to the same property"
+              : data.connection?.status === "mismatch"
+                ? "Tracking and reporting point to different GA4 configuration"
+                : "Google could not run the stream/property verification"
+          }</small>
         </div>
         <div className="analytics-ranking">
           <div>
             <span>1</span>
             <strong>Measurement ID</strong>
             <small>{data.connection?.measurementId || "Not configured"}</small>
-            <b>{data.connection?.verified ? "Matched" : "Check"}</b>
+            <b>{
+              data.connection?.status === "verified"
+                ? "Matched"
+                : data.connection?.status === "mismatch"
+                  ? "Mismatch"
+                  : "Unverified"
+            }</b>
           </div>
           <div>
             <span>2</span>
             <strong>Property ID</strong>
             <small>{data.connection?.propertyId || "Not configured"}</small>
-            <b>{data.connection?.streams?.length ?? 0} web stream{(data.connection?.streams?.length ?? 0) === 1 ? "" : "s"}</b>
+            <b>{
+              data.connection?.status === "unavailable"
+                ? "Not checked"
+                : `${data.connection?.streams?.length ?? 0} web stream${(data.connection?.streams?.length ?? 0) === 1 ? "" : "s"}`
+            }</b>
           </div>
           {(data.connection?.streams ?? []).map((stream, index) => (
             <div key={stream.measurementId + stream.defaultUri}>
@@ -200,10 +222,15 @@ export function AdminAnalyticsDashboard() {
             </div>
           ))}
         </div>
-        {!data.connection?.verified ? (
+        {data.connection?.status === "unavailable" ? (
           <div className="admin-empty">
-            <strong>The dashboard is not yet proven to be reading the same GA4 property that the public site sends data to.</strong>
-            <p>{data.connection?.error || "The configured public measurement ID was not found among this GA4 property's web streams."}</p>
+            <strong>Verification could not run; this does not mean the IDs are mismatched.</strong>
+            <p>{data.connection?.error || "Google did not allow the web-stream verification request."}</p>
+          </div>
+        ) : data.connection?.status === "mismatch" ? (
+          <div className="admin-empty">
+            <strong>The configured public measurement ID was not found in this GA4 property's web streams.</strong>
+            <p>Do not rely on the visitor totals until the tracking and reporting configuration is corrected.</p>
           </div>
         ) : null}
       </section>
