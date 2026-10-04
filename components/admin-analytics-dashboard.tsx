@@ -168,7 +168,8 @@ export function AdminAnalyticsDashboard() {
       </p>
 
       <div className="analytics-metric-grid">
-        <div><span>GA4 visitors</span><strong>{number(data.summary.activeUsers)}</strong><small>Public-site active users</small></div>
+        <div><span>GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Total unique users recorded by Analytics</small></div>
+        <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
         <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
         <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
         <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Google Search appearances</small></div>
@@ -194,7 +195,7 @@ export function AdminAnalyticsDashboard() {
               <div><span>Average position</span><strong>{(data.searchPerformance?.position ?? 0).toFixed(1)}</strong><small>Average top result position</small></div>
             </div>
             <p className="analytics-clean-note">
-              Search Console range: {data.searchPerformance?.startDate} to {data.searchPerformance?.endDate}. Latest date returned: {data.searchPerformance?.latestDate ?? "none yet"}.
+              Comparison range starts {data.searchPerformance?.startDate}, matching the GA4 clean-data window. Search Console requested through {data.searchPerformance?.endDate}; latest date actually returned: {data.searchPerformance?.latestDate ?? "none yet"}.
               {data.searchPerformance?.firstIncompleteDate ? <> Data from {data.searchPerformance?.firstIncompleteDate} onward is preliminary and can still change.</> : null}
             </p>
           </>
