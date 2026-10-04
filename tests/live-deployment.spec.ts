@@ -29,6 +29,29 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id="]')).toHaveCount(0);
   });
 
+  test("normal-browser public analytics emits a GA4 collection request", async ({ page }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
+
+    await page.addInitScript(() => {
+      Object.defineProperty(Navigator.prototype, "webdriver", {
+        configurable: true,
+        get: () => false,
+      });
+    });
+
+    let collectUrl = "";
+    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, async (route) => {
+      collectUrl = route.request().url();
+      await route.abort();
+    });
+
+    await page.goto("/");
+    await expect(
+      page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
+    ).toHaveCount(1);
+    await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
+  });
+
   test("brand, navigation and core service route are live", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByText("MyNigeriaGuide", { exact: true }).first()).toBeVisible();
