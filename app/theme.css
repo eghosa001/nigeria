@@ -331,6 +331,64 @@ html[data-theme="dark"] .journey-card strong {
   color: var(--ink) !important;
 }
 
+
+/* Public dark-mode contrast safety net.
+   These components have explicit light backgrounds in the production stylesheet,
+   so they need equally explicit dark overrides. Entertainment catalogue surfaces
+   that are already permanently dark are intentionally excluded. */
+html[data-theme="dark"] :where(
+  .assistant-results a,
+  .requirement-summary span,
+  .hero-pillar-links a,
+  .global-search-suggestions a,
+  .jobs-topic-links a
+) {
+  background: var(--theme-raised) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] :where(
+  .fee-controls input,
+  .fee-controls select,
+  .office-controls input,
+  .office-controls select
+) {
+  background: var(--theme-input) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] .fee-row:hover,
+html[data-theme="dark"] .home-path:hover {
+  background: var(--theme-hover) !important;
+}
+
+html[data-theme="dark"] .journey-card-primary {
+  background: var(--theme-soft) !important;
+  border-color: #3d5f50 !important;
+}
+
+html[data-theme="dark"] .saved-change,
+html[data-theme="dark"] .update-type-deadline,
+html[data-theme="dark"] .journey-mode-physical {
+  background: var(--amber-bg) !important;
+  border-color: #5a4726 !important;
+  color: #f0d9a7 !important;
+}
+
+html[data-theme="dark"] .saved-change span {
+  color: #d7c18e !important;
+}
+
+html[data-theme="dark"] :where(
+  .assistant-results a small,
+  .requirement-summary span,
+  .global-search-suggestions a
+) {
+  color: var(--muted) !important;
+}
+
 /* Theme control */
 .theme-control {
   position: relative;
