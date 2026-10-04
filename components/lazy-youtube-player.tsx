@@ -23,11 +23,17 @@ export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Prop
     setFullscreenSupported(Boolean(document.fullscreenEnabled && playerRef.current?.requestFullscreen));
 
     const handleFullscreenChange = () => {
-      if (!document.fullscreenElement) {
+      if (document.fullscreenElement) {
         try {
-          (screen.orientation as LockableOrientation).unlock?.();
+          const lockAttempt = (screen.orientation as LockableOrientation).lock?.("landscape");
+          void lockAttempt?.catch(() => undefined);
         } catch {}
+        return;
       }
+
+      try {
+        (screen.orientation as LockableOrientation).unlock?.();
+      } catch {}
     };
 
     document.addEventListener("fullscreenchange", handleFullscreenChange);
@@ -46,19 +52,31 @@ export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Prop
     } catch {}
   }
   const thumbnail = "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg";
-  const embed = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1&playsinline=1&rel=0";
+  const embed = "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1&playsinline=1&rel=0&fs=0";
 
   return (
     <div className="lazy-youtube-player" ref={playerRef}>
       <div className="lazy-youtube-frame">
         {active ? (
-          <iframe
-            src={embed}
-            title={"Watch " + title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />
+          <>
+            <iframe
+              src={embed}
+              title={"Watch " + title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+            {fullscreenSupported ? (
+              <button
+                type="button"
+                className="lazy-youtube-landscape-overlay"
+                onClick={openLandscapeFullscreen}
+                aria-label="Open video in landscape full screen"
+              >
+                Landscape
+              </button>
+            ) : null}
+          </>
         ) : (
           <button
             type="button"
