@@ -39,7 +39,7 @@ export async function GET(request: Request) {
   const requestedRange = url.searchParams.get("range") as AnalyticsRange | null;
   const range: AnalyticsRange = requestedRange && ranges.has(requestedRange) ? requestedRange : "30d";
   const requestedMode = url.searchParams.get("mode") as AnalyticsTrafficMode | null;
-  const mode: AnalyticsTrafficMode = requestedMode && modes.has(requestedMode) ? requestedMode : "all";
+  const mode: AnalyticsTrafficMode = requestedMode && modes.has(requestedMode) ? requestedMode : "clean";
 
   try {
     const data = await getAnalyticsDashboard(range, mode);
