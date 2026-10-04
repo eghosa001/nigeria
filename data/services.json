@@ -137,7 +137,7 @@
     "slug": "passport-change-of-data",
     "title": "How to change data on a Nigerian passport",
     "shortTitle": "Passport change of data",
-    "summary": "NIS requirements for correction of errors and other approved data changes on a passport.",
+    "summary": "NIS requirements for correcting or changing passport data, including the supporting civil documents, online application route and in-person biometric capture.",
     "category": "Immigration",
     "agencySlug": "nis",
     "feeLabel": "Administrative charge applies",
@@ -167,13 +167,18 @@
       }
     ],
     "related": [
-      "passport-renewal"
+      "passport-renewal",
+      "passport-name-change"
     ],
     "lastVerified": "2026-09-28",
     "searchTerms": [
       "Passport change of data",
       "How to change data on a Nigerian passport",
-      "Immigration"
+      "Immigration",
+      "Nigerian passport data correction",
+      "passport name correction Nigeria",
+      "passport date of birth correction Nigeria",
+      "passport change of data fee"
     ]
   },
   {
@@ -682,7 +687,7 @@
     "slug": "cac-annual-returns",
     "title": "How to file CAC annual returns",
     "shortTitle": "CAC annual returns",
-    "summary": "Where annual returns sit in CAC's compliance process and the current published service timeline.",
+    "summary": "CAC annual returns guidance for 2026, including the current business-name filing notice, the official CRP route and CAC's published processing timeline.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Fee varies by entity and filing",
@@ -699,27 +704,34 @@
       "Complete the filing and pay the official fee shown in the portal."
     ],
     "notes": [
-      "CAC's portal currently carries a public notice about annual returns for business names and ongoing system upgrades."
+      "CAC's current CRP notice says annual-return filing is available for business names registered before July 2025.",
+      "CAC says it is upgrading the business-name system with an AI-powered annual-returns process intended to support both older business names and those created after July 2025.",
+      "Company, business-name and incorporated-trustee annual returns use different filing fields and fees, so use the entity-specific form shown in CRP."
     ],
     "sources": [
       {
         "label": "CAC Company Registration Portal",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
       },
       {
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-04",
     "searchTerms": [
       "CAC annual returns",
       "How to file CAC annual returns",
-      "Business"
+      "Business",
+      "CAC annual returns 2026",
+      "CAC annual returns business name",
+      "CAC annual returns portal",
+      "CAC CRP annual returns",
+      "business name annual returns Nigeria"
     ],
     "related": [],
     "feeNote": "Annual-return charges vary with the entity and filing being submitted. Confirm the entity type, filing period and amount displayed in CAC's official registration portal before payment."
@@ -909,7 +921,7 @@
     "slug": "jamb-caps",
     "title": "JAMB CAPS: how to check admission status and use CAPS",
     "shortTitle": "JAMB CAPS",
-    "summary": "Use JAMB CAPS through e-Facility to review the admission status and institution/programme details shown for your candidate record, then take only the actions JAMB presents.",
+    "summary": "JAMB CAPS for the 2026/2027 admission cycle: check admission status, institution/course details and any accept/reject action shown in the candidate's official e-Facility account.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "No separate fee stated on CAPS overview",
@@ -926,24 +938,38 @@
       "Use only the acceptance, rejection or other admission action actually presented by JAMB for that profile."
     ],
     "notes": [
-      "JAMB describes CAPS as the system used to automate and streamline tertiary admissions.",
-      "Available CAPS actions can differ by candidate profile and admission cycle."
+      "JAMB's official CAPS dashboard is currently operating for the 2026/2027 admission year.",
+      "The 2026 Policy Meeting set the minimum tolerable admission scores at 150 for universities and colleges of nursing, and 100 for polytechnics, monotechnics, colleges of agriculture, colleges of education and IEIs.",
+      "The general minimum age for admission remains 16 years.",
+      "Available CAPS actions differ by candidate profile and admission stage; act only on what JAMB displays for the candidate."
     ],
     "sources": [
       {
         "label": "JAMB CAPS",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://jamb.gov.ng/caps",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
+      },
+      {
+        "label": "JAMB CAPS dashboard",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://caps.jamb.gov.ng/dashboard.aspx",
+        "lastChecked": "2026-10-04"
+      },
+      {
+        "label": "JAMB 2026 admission policy",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://jamb.gov.ng/",
+        "lastChecked": "2026-10-04"
       },
       {
         "label": "JAMB e-Facility",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://efacility.jamb.gov.ng/account/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-04",
     "searchTerms": [
       "JAMB CAPS",
       "How JAMB CAPS works for admission",
@@ -951,7 +977,12 @@
       "JAMB CAPS portal",
       "JAMB CAPS admission status",
       "check admission status on JAMB CAPS",
-      "accept admission JAMB CAPS"
+      "accept admission JAMB CAPS",
+      "JAMB CAPS 2026",
+      "JAMB admission status 2026",
+      "JAMB 2026/2027 admission",
+      "accept admission on CAPS",
+      "JAMB CAPS login"
     ],
     "related": [],
     "feeNote": "The verified JAMB CAPS overview does not state a separate charge simply to view or use the CAPS admission-status functions. Any other JAMB service fee is separate and should be confirmed in JAMB e-Facility before payment."
@@ -3234,7 +3265,7 @@
     "slug": "nin-phone-modification",
     "title": "How to change your phone number on NIN",
     "shortTitle": "NIN phone-number modification",
-    "summary": "NIMC lists phone number as an updatable NIN field and publishes a police-report requirement for the self-service process.",
+    "summary": "Change the phone number on a NIN through NIMC's official modification route. Current NIMC fees list ₦2,000 per ordinary updatable field; a police report is required for the lost/damaged-number case.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
@@ -3261,29 +3292,32 @@
         "label": "NIMC self-service modifications",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/self-service-modifications/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
       },
       {
         "label": "NIMC Fees",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/fees",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
       },
       {
         "label": "NIMC adult NIN modifications",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/nin/nin-modifications-adults/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-04",
     "searchTerms": [
       "NIN phone-number modification",
       "How to change your phone number on NIN",
       "Identity",
       "NIN modification portal",
       "NIN phone number correction",
-      "change NIN phone number online"
+      "change NIN phone number online",
+      "NIN phone number change fee 2026",
+      "NIMC phone number modification fee",
+      "NIN phone correction police report"
     ],
     "related": []
   },
@@ -3852,7 +3886,11 @@
       "travel within West Africa",
       "ECOWAS passport",
       "West Africa travel document",
-      "international travel"
+      "international travel",
+      "ECOWAS travel certificate price",
+      "ECOWAS travel certificate fee",
+      "ECOWAS travel certificate form",
+      "ECOWAS travel certificate requirements"
     ],
     "related": [
       "first-nigerian-passport",
