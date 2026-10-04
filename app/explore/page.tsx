@@ -46,6 +46,13 @@ export default function ExplorePage() {
           <span className="eyebrow">Tour Nigeria</span>
           <h1>Plan the trip, not just the destination.</h1>
           <p className="page-intro">Cities, places, food, stays and practical details for getting around.</p>
+          <form className="section-quick-search" action="/explore#places" method="get" role="search">
+            <label>
+              <span>Search Tour Nigeria</span>
+              <input type="search" name="q" placeholder="City, restaurant, hotel, attraction…" />
+            </label>
+            <button type="submit">Search places</button>
+          </form>
           <div className="minimal-inline-links">
             <a href="#cities">City guides</a>
             <a href="#places">Places</a>
