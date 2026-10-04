@@ -19,6 +19,8 @@ export type SeriesTitle = {
   slug: string;
   title: string;
   year: number;
+  country: string;
+  artworkNote: string;
   genres: string[];
   languages: string[];
   synopsis: string;
@@ -36,6 +38,8 @@ export const seriesTitles: SeriesTitle[] = [
     slug: "to-kill-a-monkey",
     title: "To Kill a Monkey",
     year: 2025,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Crime", "Drama", "Thriller", "Nollywood"],
     languages: ["English"],
     synopsis: "A struggling father is drawn into cybercrime by the promise of fast money, forcing him into increasingly dangerous moral compromises.",
@@ -61,6 +65,8 @@ export const seriesTitles: SeriesTitle[] = [
     slug: "koleoso",
     title: "Koleoso",
     year: 2025,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Supernatural", "Yoruba", "Nollywood"],
     languages: ["Yoruba"],
     synopsis: "A continuing Yoruba supernatural family saga built around power, loyalty, betrayal and spiritual conflict.",
@@ -88,6 +94,8 @@ export const seriesTitles: SeriesTitle[] = [
     slug: "wata-shida",
     title: "Wata Shida",
     year: 2025,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Romance", "Kannywood"],
     languages: ["Hausa"],
     synopsis: "A northern Nigerian drama about family pressure, relationships and a marriage arrangement that grows into a larger web of rivalry, inheritance and reputation.",
@@ -113,6 +121,8 @@ export const seriesTitles: SeriesTitle[] = [
     slug: "better-half-2026",
     title: "Better Half",
     year: 2026,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
     synopsis: "A relationship expert whose public advice has become a success story discovers that her own marriage is far more complicated than the formula she shares with others.",
@@ -138,6 +148,8 @@ export const seriesTitles: SeriesTitle[] = [
     slug: "the-ten-2026",
     title: "The Ten",
     year: 2026,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Faith", "Nollywood"],
     languages: ["English"],
     synopsis: "Ten survivors are brought back together by faith, forcing them to confront unresolved history, accountability, forgiveness and the limits of redemption.",
@@ -163,6 +175,8 @@ export const seriesTitles: SeriesTitle[] = [
     slug: "afobaje-2026",
     title: "Afobaje",
     year: 2026,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Mystery", "Supernatural", "Yoruba"],
     languages: ["Yoruba"],
     synopsis: "A royal heir becomes the main suspect as a mysterious force targets heirs to the throne of Ekinrinade, drawing succession, tradition and supernatural danger into one investigation.",
