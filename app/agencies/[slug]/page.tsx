@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
@@ -75,7 +76,21 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
           <span className="eyebrow">Official agency</span>
           <h1>{agency.name}</h1>
           <p className="page-intro">{agency.description}</p>
-          <a className="text-link" href={agency.website} target="_blank" rel="noreferrer">Visit official website ↗</a>
+          <AnswerFirst
+            title={"What " + agency.shortName + " handles here"}
+            summary={agency.description}
+            facts={[
+              { label: "Published guides", value: String(agencyServices.length) },
+              { label: "Covered services", value: agencyServices.slice(0, 3).map((service) => service.shortTitle).join(", ") || "No published guides yet" },
+              { label: "Source", value: "Official agency website" },
+              { label: "Best next step", value: agencyServices[0]?.shortTitle ?? "Open the official website" },
+            ]}
+            links={[
+              ...(agencyServices[0] ? [{ href: "/services/" + agencyServices[0].slug, label: "Open a verified guide" }] : []),
+              { href: agency.website, label: "Visit official website", external: true, primary: true },
+            ]}
+            note="Choose a guide when you need steps, fees or requirements; use the official website for live transactions."
+          />
 
           {slug === "netherlands-mfa" ? (
             <div className="info-box top-gap">
