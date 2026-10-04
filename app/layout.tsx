@@ -22,6 +22,8 @@ const themeBootstrap = `
     document.documentElement.dataset.theme = theme;
     document.documentElement.dataset.themePreference = preference;
     document.documentElement.style.colorScheme = theme;
+    var themeColor = document.querySelector('meta[name="theme-color"]');
+    if (themeColor) themeColor.setAttribute("content", theme === "dark" ? "#0b1410" : "#f8f5ed");
   } catch (_) {}
 })();
 `;
@@ -76,8 +78,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="color-scheme" content="light dark" />
-        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8f5ed" />
-        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1410" />
+        <meta name="theme-color" content="#f8f5ed" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
