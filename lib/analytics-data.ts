@@ -26,6 +26,7 @@ export type AnalyticsDashboardData = {
   dataStartDate: string;
   cleanStartDate: string;
   summary: {
+    totalUsers: number;
     activeUsers: number;
     sessions: number;
     pageViews: number;
@@ -285,10 +286,9 @@ async function searchConsoleQuery(body: Record<string, unknown>) {
   return await response.json() as SearchAnalyticsResponse;
 }
 
-async function getSearchPerformance(days: number): Promise<SearchPerformanceSummary> {
+async function getSearchPerformance(startDate: string): Promise<SearchPerformanceSummary> {
   const settings = searchConsoleConfig();
   const endDate = dateInTimeZone("America/Los_Angeles");
-  const startDate = subtractDays(endDate, Math.max(0, days - 1));
 
   try {
     const [summary, byDate] = await Promise.all([
@@ -402,6 +402,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
     {
       dateRanges,
       metrics: [
+        { name: "totalUsers" },
         { name: "activeUsers" },
         { name: "sessions" },
         { name: "screenPageViews" },
@@ -467,7 +468,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
     batchRunReports(coreRequests),
     runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
     runRealtime().catch(() => null),
-    getSearchPerformance(days),
+    getSearchPerformance(dataStartDate),
   ]);
 
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
@@ -482,11 +483,12 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
     dataStartDate,
     cleanStartDate: ANALYTICS_CLEAN_START,
     summary: {
-      activeUsers: Number(totalValues[0]?.value ?? 0),
-      sessions: Number(totalValues[1]?.value ?? 0),
-      pageViews: Number(totalValues[2]?.value ?? 0),
-      engagedSessions: Number(totalValues[3]?.value ?? 0),
-      engagementRate: Number(totalValues[4]?.value ?? 0),
+      totalUsers: Number(totalValues[0]?.value ?? 0),
+      activeUsers: Number(totalValues[1]?.value ?? 0),
+      sessions: Number(totalValues[2]?.value ?? 0),
+      pageViews: Number(totalValues[3]?.value ?? 0),
+      engagedSessions: Number(totalValues[4]?.value ?? 0),
+      engagementRate: Number(totalValues[5]?.value ?? 0),
     },
     realtimeActiveUsers,
     daily: (dailyReport.rows ?? []).map((row) => ({
