@@ -694,3 +694,60 @@ html[data-theme="dark"] textarea::placeholder {
   color: #82988d;
   opacity: 1;
 }
+
+
+/* Remaining light-surface normalization found by the dark-mode audit. */
+html[data-theme="dark"] :where(
+  .assistant-section,
+  .guide-main-section,
+  .related-section,
+  .home-topic-hubs,
+  .topic-home-card
+) {
+  background: var(--theme-soft) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] :where(
+  .process-tracker,
+  .category-icon
+) {
+  background: var(--theme-raised) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] .process-bar {
+  background: var(--line) !important;
+}
+
+html[data-theme="dark"] :where(
+  .service-agency,
+  .admin-status-review
+) {
+  background: #253129 !important;
+  color: #c6d2cc !important;
+}
+
+html[data-theme="dark"] :where(
+  .update-type-fee,
+  .journey-mode-online
+) {
+  background: #163a2a !important;
+  color: #9ce6bd !important;
+}
+
+html[data-theme="dark"] :where(
+  .update-type-process,
+  .journey-mode-hybrid
+) {
+  background: #172c45 !important;
+  color: #a9c8f2 !important;
+}
+
+html[data-theme="dark"] .route-wizard-options a:hover {
+  background: var(--theme-hover) !important;
+  border-color: #3d5f50 !important;
+  color: var(--ink) !important;
+}
