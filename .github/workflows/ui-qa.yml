@@ -7,6 +7,7 @@ on:
     paths:
       - "app/**"
       - "components/**"
+      - "data/**"
       - "lib/**"
       - "public/**"
       - "tests/**"
@@ -32,16 +33,21 @@ jobs:
         id: scope
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" != "pull_request" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=full" >> "$GITHUB_OUTPUT"
+            echo "Manual dispatch: full browser suite explicitly requested."
             exit 0
           fi
 
-          git fetch origin "${{ github.base_ref }}" --depth=1
-          changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
-          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|tests)/|^(playwright\.config\.ts|package\.json|next\.config\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.base_ref }}" --depth=1
+            changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+          else
+            changed="$(git diff --name-only HEAD^1 HEAD)"
+          fi
 
+          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|data|lib|public|tests)/|^(playwright\.config\.ts|package\.json|next\.config\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
           if [ -z "$relevant" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=none" >> "$GITHUB_OUTPUT"
@@ -51,6 +57,8 @@ jobs:
 
           non_navigation="$(printf '%s\n' "$changed" | grep -Ev '^(components/site-header\.tsx|components/site-footer\.tsx|tests/smoke\.spec\.ts|tests/live-deployment\.spec\.ts|\.github/workflows/cloudflare-direct-deploy\.yml|\.github/workflows/ui-qa\.yml)$' || true)"
           non_homepage="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/globals\.css|tests/explore\.spec\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
+          non_growth="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/jobs/(page\.tsx|graduate/page\.tsx|remote/page\.tsx)|app/entertainment/(page\.tsx|series/(page\.tsx|\[slug\]/page\.tsx)|movies/(\[slug\]/page\.tsx|october-2026/page\.tsx))|app/explore/(page\.tsx|\[slug\]/page\.tsx|things-to-do-(lagos|abuja)/page\.tsx)|data/(category-faqs|service-seo-overrides)\.ts|data/services\.json|lib/(data|growth-hubs|series|entertainment|entertainment-extras|sitemap-sections)\.ts|docs/SEARCH_DEMAND_GROWTH_PLAN\.md|scripts/verify-service-migration\.ts|tests/(explore|service-records|search-demand-growth)\.spec\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
+
           echo "run=true" >> "$GITHUB_OUTPUT"
           if [ -z "$non_navigation" ]; then
             echo "mode=navigation" >> "$GITHUB_OUTPUT"
@@ -58,8 +66,12 @@ jobs:
           elif [ -z "$non_homepage" ]; then
             echo "mode=homepage" >> "$GITHUB_OUTPUT"
             echo "Homepage-only change; running focused homepage regression."
+          elif [ -z "$non_growth" ]; then
+            echo "mode=growth" >> "$GITHUB_OUTPUT"
+            echo "Search-demand growth change; running focused growth regression."
           else
-            echo "mode=full" >> "$GITHUB_OUTPUT"
+            echo "mode=smoke" >> "$GITHUB_OUTPUT"
+            echo "Browser-relevant change; running focused smoke regression only."
           fi
       - uses: actions/setup-node@v4
         if: steps.scope.outputs.run == 'true'
@@ -77,6 +89,12 @@ jobs:
       - name: Run homepage regression
         if: steps.scope.outputs.mode == 'homepage'
         run: npx playwright test tests/explore.spec.ts --project=desktop --project=mobile --workers=1 --grep "homepage exposes movies, services, tour and jobs as primary paths"
+      - name: Run search-demand growth regression
+        if: steps.scope.outputs.mode == 'growth'
+        run: npx playwright test tests/search-demand-growth.spec.ts --project=desktop --workers=1
+      - name: Run browser smoke regression
+        if: steps.scope.outputs.mode == 'smoke'
+        run: npx playwright test tests/smoke.spec.ts --project=desktop --workers=1
       - name: Run admin editing regression first
         if: steps.scope.outputs.mode == 'full'
         run: npx playwright test tests/admin-editing.spec.ts tests/admin-github.spec.ts --project=desktop --workers=1
