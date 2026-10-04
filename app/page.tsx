@@ -73,6 +73,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="home-trending-strip" aria-labelledby="home-trending-title">
+        <div className="container">
+          <div className="home-trending-heading">
+            <div>
+              <span className="eyebrow">Trending now</span>
+              <h2 id="home-trending-title">Fresh things people are checking.</h2>
+            </div>
+            <Link href="/latest">See all latest updates →</Link>
+          </div>
+          <div className="home-trending-links">
+            <Link href="/entertainment/movies/october-2026">
+              <span>Movies</span>
+              <strong>October 2026 Nigerian releases</strong>
+            </Link>
+            <Link href="/services/jamb-caps">
+              <span>Services</span>
+              <strong>JAMB 2026/27 CAPS admissions</strong>
+            </Link>
+            <Link href="/explore/detty-december-lagos-2026">
+              <span>Tour Nigeria</span>
+              <strong>Detty December Lagos 2026</strong>
+            </Link>
+            <Link href="/jobs/deadlines">
+              <span>Jobs & Careers</span>
+              <strong>Applications open now</strong>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="minimal-home-section minimal-home-movies" aria-labelledby="home-movies-title">
         <div className="container">
           <div className="minimal-section-heading">
