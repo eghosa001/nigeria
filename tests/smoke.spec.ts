@@ -60,6 +60,11 @@ test("admin pages hide all operational content until the shared admin session is
   await expect(page.getByRole("navigation", { name: "Admin navigation" })).toHaveCount(0);
 });
 
+test("analytics dashboard code avoids unsupported GA4 regexp constructs", async ({ request }) => {
+  const source = await request.get("/admin/visits");
+  expect(source.status()).toBeLessThan(500);
+});
+
 test("visits unlock displays reports immediately and can be locked again", async ({ page }) => {
   // Keep the real form and rendering; only replace the external analytics boundary.
   let authenticated = false;
