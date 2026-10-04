@@ -12,6 +12,29 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "jamb-caps-2026-admissions-active",
+    date: "2026-10-04",
+    type: "process",
+    agency: "JAMB",
+    title: "JAMB CAPS is processing the 2026/2027 admission cycle",
+    summary: "JAMB's current CAPS dashboard is operating for the 2026/2027 admission year. The 2026 admission policy retains a minimum tolerable score of 150 for universities and colleges of nursing, 100 for polytechnics and related institutions, and a general minimum admission age of 16.",
+    sourceLabel: "JAMB CAPS and 2026 admission policy",
+    sourceUrl: "https://jamb.gov.ng/caps",
+    affectedServices: ["jamb-caps", "jamb-admission-letter"],
+  },
+  {
+    id: "cac-business-name-annual-returns-ai-upgrade",
+    date: "2026-10-04",
+    type: "process",
+    agency: "CAC",
+    title: "CAC updates business-name annual returns while preparing AI-powered processing",
+    summary: "CAC's current CRP notice says annual-return filing is available for business names registered before July 2025 and that an AI-powered process is being introduced to support both older and newer business names.",
+    sourceLabel: "CAC Company Registration Portal notice",
+    sourceUrl: "https://icrp.cac.gov.ng/",
+    affectedServices: ["cac-annual-returns"],
+  },
+
+  {
     id: "neco-2026-ssce-internal-fee", date: "2026-01-01", type: "fee", agency: "NECO",
     title: "NECO sets 2026 SSCE Internal registration at ₦30,000",
     summary: "NECO's official 2026 guidelines set the SSCE Internal registration fee at ₦30,000 per candidate, inclusive of the four-figure mathematical table and waterproof certificate jacket/folder. Late registration adds ₦5,000; stamp duty, service and Remita charges also apply.",
