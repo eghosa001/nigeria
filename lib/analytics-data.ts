@@ -4,6 +4,20 @@ import { ANALYTICS_CLEAN_START, analyticsStartDate } from "@/lib/analytics-safet
 export type AnalyticsRange = "7d" | "30d" | "90d";
 export type AnalyticsTrafficMode = "all" | "clean";
 
+export type SearchPerformanceSummary = {
+  available: boolean;
+  siteUrl: string;
+  startDate: string;
+  endDate: string;
+  latestDate: string | null;
+  firstIncompleteDate: string | null;
+  impressions: number | null;
+  clicks: number | null;
+  ctr: number | null;
+  position: number | null;
+  error?: string;
+};
+
 export type AnalyticsDashboardData = {
   range: AnalyticsRange;
   mode: AnalyticsTrafficMode;
@@ -24,6 +38,7 @@ export type AnalyticsDashboardData = {
   pages: Array<{ path: string; title: string; users: number; pageViews: number }>;
   referrers: Array<{ source: string; medium: string; sessions: number; users: number }>;
   interactions: Array<{ event: string; count: number }>;
+  searchPerformance: SearchPerformanceSummary;
 };
 
 type ReportRow = {
@@ -40,6 +55,19 @@ type BatchRunReportsResponse = {
   reports?: RunReportResponse[];
 };
 
+type SearchAnalyticsRow = {
+  keys?: string[];
+  clicks?: number;
+  impressions?: number;
+  ctr?: number;
+  position?: number;
+};
+
+type SearchAnalyticsResponse = {
+  rows?: SearchAnalyticsRow[];
+  metadata?: { first_incomplete_date?: string };
+};
+
 const interactionEvents = [
   "service_search_click",
   "official_link_click",
@@ -51,8 +79,8 @@ const interactionEvents = [
   "process_complete",
 ];
 
-let tokenCache: { token: string; expiresAt: number } | null = null;
-let tokenPromise: Promise<string> | null = null;
+const tokenCache = new Map<string, { token: string; expiresAt: number }>();
+const tokenPromises = new Map<string, Promise<string>>();
 const reportCache = new Map<string, { expiresAt: number; data: AnalyticsDashboardData }>();
 
 function config() {
@@ -60,6 +88,15 @@ function config() {
   const clientEmail = process.env.GA4_SERVICE_ACCOUNT_EMAIL?.trim();
   const privateKey = process.env.GA4_SERVICE_ACCOUNT_PRIVATE_KEY?.replace(/\\n/g, "\n").trim();
   return { propertyId, clientEmail, privateKey };
+}
+
+function searchConsoleConfig() {
+  const analytics = config();
+  return {
+    siteUrl: process.env.GSC_SITE_URL?.trim() || "sc-domain:mynigeriaguide.com",
+    clientEmail: process.env.GSC_SERVICE_ACCOUNT_EMAIL?.trim() || analytics.clientEmail,
+    privateKey: process.env.GSC_SERVICE_ACCOUNT_PRIVATE_KEY?.replace(/\\n/g, "\n").trim() || analytics.privateKey,
+  };
 }
 
 export function analyticsReadConfigured() {
@@ -76,20 +113,27 @@ function base64Url(input: string | Uint8Array) {
   return bytes.toString("base64").replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
 }
 
-async function getAccessToken() {
+async function getAccessToken(
+  scope = "https://www.googleapis.com/auth/analytics.readonly",
+  credentials = config(),
+) {
+  const clientEmail = credentials.clientEmail;
+  const privateKey = credentials.privateKey;
+  if (!clientEmail || !privateKey) throw new Error("Google service-account credentials are not configured.");
+
+  const cacheKey = clientEmail + "|" + scope;
   const now = Math.floor(Date.now() / 1000);
-  if (tokenCache && tokenCache.expiresAt - 120 > now) return tokenCache.token;
-  if (tokenPromise) return tokenPromise;
+  const cached = tokenCache.get(cacheKey);
+  if (cached && cached.expiresAt - 120 > now) return cached.token;
+  const pending = tokenPromises.get(cacheKey);
+  if (pending) return pending;
 
-  tokenPromise = (async () => {
-    const { clientEmail, privateKey } = config();
-    if (!clientEmail || !privateKey) throw new Error("Google Analytics service-account credentials are not configured.");
-
+  const promise = (async () => {
     const issuedAt = Math.floor(Date.now() / 1000);
     const header = base64Url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
     const payload = base64Url(JSON.stringify({
       iss: clientEmail,
-      scope: "https://www.googleapis.com/auth/analytics.readonly",
+      scope,
       aud: "https://oauth2.googleapis.com/token",
       iat: issuedAt - 30,
       exp: issuedAt + 3600,
@@ -126,21 +170,21 @@ async function getAccessToken() {
       }),
       cache: "no-store",
     });
-    if (!response.ok) throw new Error("Google Analytics authentication failed.");
+    if (!response.ok) throw new Error("Google authentication failed.");
     const body = await response.json() as { access_token?: string; expires_in?: number };
-    if (!body.access_token) throw new Error("Google Analytics did not return an access token.");
+    if (!body.access_token) throw new Error("Google did not return an access token.");
 
-    tokenCache = { token: body.access_token, expiresAt: issuedAt + (body.expires_in ?? 3600) };
+    tokenCache.set(cacheKey, { token: body.access_token, expiresAt: issuedAt + (body.expires_in ?? 3600) });
     return body.access_token;
   })();
 
+  tokenPromises.set(cacheKey, promise);
   try {
-    return await tokenPromise;
+    return await promise;
   } finally {
-    tokenPromise = null;
+    tokenPromises.delete(cacheKey);
   }
 }
-
 function daysForRange(range: AnalyticsRange) {
   return range === "7d" ? 7 : range === "90d" ? 90 : 30;
 }
@@ -203,6 +247,103 @@ async function runRealtime() {
   return Number(body.rows?.[0]?.metricValues?.[0]?.value ?? 0);
 }
 
+function dateInTimeZone(timeZone: string) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
+function subtractDays(dateIso: string, days: number) {
+  const date = new Date(dateIso + "T12:00:00Z");
+  date.setUTCDate(date.getUTCDate() - days);
+  return date.toISOString().slice(0, 10);
+}
+
+async function searchConsoleQuery(body: Record<string, unknown>) {
+  const settings = searchConsoleConfig();
+  if (!settings.clientEmail || !settings.privateKey) throw new Error("Search Console credentials are not configured.");
+  const token = await getAccessToken(
+    "https://www.googleapis.com/auth/webmasters.readonly",
+    settings,
+  );
+  const response = await fetch(
+    "https://www.googleapis.com/webmasters/v3/sites/" + encodeURIComponent(settings.siteUrl) + "/searchAnalytics/query",
+    {
+      method: "POST",
+      headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      cache: "no-store",
+    },
+  );
+  if (!response.ok) {
+    const message = await response.text();
+    throw new Error("Search Console request failed (" + response.status + "): " + message.slice(0, 180));
+  }
+  return await response.json() as SearchAnalyticsResponse;
+}
+
+async function getSearchPerformance(days: number): Promise<SearchPerformanceSummary> {
+  const settings = searchConsoleConfig();
+  const endDate = dateInTimeZone("America/Los_Angeles");
+  const startDate = subtractDays(endDate, Math.max(0, days - 1));
+
+  try {
+    const [summary, byDate] = await Promise.all([
+      searchConsoleQuery({
+        startDate,
+        endDate,
+        type: "web",
+        dataState: "all",
+        aggregationType: "byProperty",
+        rowLimit: 1,
+      }),
+      searchConsoleQuery({
+        startDate,
+        endDate,
+        type: "web",
+        dataState: "all",
+        dimensions: ["date"],
+        aggregationType: "byProperty",
+        rowLimit: Math.max(days + 5, 100),
+      }),
+    ]);
+
+    const total = summary.rows?.[0];
+    const datedRows = byDate.rows ?? [];
+    const latestDate = datedRows.length ? datedRows[datedRows.length - 1]?.keys?.[0] ?? null : null;
+
+    return {
+      available: true,
+      siteUrl: settings.siteUrl,
+      startDate,
+      endDate,
+      latestDate,
+      firstIncompleteDate: byDate.metadata?.first_incomplete_date ?? null,
+      impressions: total?.impressions ?? 0,
+      clicks: total?.clicks ?? 0,
+      ctr: total?.ctr ?? 0,
+      position: total?.position ?? 0,
+    };
+  } catch (error) {
+    return {
+      available: false,
+      siteUrl: settings.siteUrl,
+      startDate,
+      endDate,
+      latestDate: null,
+      firstIncompleteDate: null,
+      impressions: null,
+      clicks: null,
+      ctr: null,
+      position: null,
+      error: error instanceof Error ? error.message : "Search Console data is unavailable.",
+    };
+  }
+}
+
 function metric(row: ReportRow, index: number) {
   return Number(row?.metricValues?.[index]?.value ?? 0);
 }
@@ -211,7 +352,7 @@ function dimension(row: ReportRow, index: number) {
   return row?.dimensionValues?.[index]?.value ?? "";
 }
 
-export async function getAnalyticsDashboard(range: AnalyticsRange, mode: AnalyticsTrafficMode = "all"): Promise<AnalyticsDashboardData> {
+export async function getAnalyticsDashboard(range: AnalyticsRange, mode: AnalyticsTrafficMode = "clean"): Promise<AnalyticsDashboardData> {
   if (!analyticsReadConfigured()) throw new Error("Google Analytics Data API is not configured.");
   const cacheKey = range + ":" + mode;
   const cached = reportCache.get(cacheKey);
@@ -229,6 +370,19 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
   const rollingStartDate = rollingDate.toISOString().slice(0, 10);
   const dataStartDate = mode === "clean" ? analyticsStartDate(days, today) : rollingStartDate;
   const dateRanges = [{ startDate: dataStartDate, endDate: "today" }];
+  const cleanPublicFilter = {
+    notExpression: {
+      filter: {
+        fieldName: "pagePath",
+        stringFilter: {
+          matchType: "FULL_REGEXP",
+          value: "^/(?:admin(?:/|$)|api(?:/|$)|_next(?:/|$))",
+          caseSensitive: false,
+        },
+      },
+    },
+  };
+  const publicFilter = mode === "clean" ? { dimensionFilter: cleanPublicFilter } : {};
 
   const coreRequests = [
     {
@@ -241,6 +395,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
         { name: "engagementRate" },
       ],
       metricAggregations: ["TOTAL"],
+      ...publicFilter,
     },
     {
       dateRanges,
@@ -248,6 +403,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "screenPageViews" }],
       orderBys: [{ dimension: { dimensionName: "date" } }],
       limit: 100,
+      ...publicFilter,
     },
     {
       dateRanges,
@@ -255,6 +411,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       metrics: [{ name: "activeUsers" }, { name: "sessions" }, { name: "screenPageViews" }],
       orderBys: [{ metric: { metricName: "activeUsers" }, desc: true }],
       limit: 15,
+      ...publicFilter,
     },
     {
       dateRanges,
@@ -262,6 +419,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }],
       orderBys: [{ metric: { metricName: "screenPageViews" }, desc: true }],
       limit: 20,
+      ...publicFilter,
     },
     {
       dateRanges,
@@ -269,27 +427,33 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       metrics: [{ name: "sessions" }, { name: "activeUsers" }],
       orderBys: [{ metric: { metricName: "sessions" }, desc: true }],
       limit: 15,
+      ...publicFilter,
     },
   ];
+
+  const interactionEventFilter = {
+    filter: {
+      fieldName: "eventName",
+      inListFilter: { values: interactionEvents },
+    },
+  };
 
   const interactionRequest = {
     dateRanges,
     dimensions: [{ name: "eventName" }],
     metrics: [{ name: "eventCount" }],
-    dimensionFilter: {
-      filter: {
-        fieldName: "eventName",
-        inListFilter: { values: interactionEvents },
-      },
-    },
+    dimensionFilter: mode === "clean"
+      ? { andGroup: { expressions: [interactionEventFilter, cleanPublicFilter] } }
+      : interactionEventFilter,
     orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
     limit: 20,
   };
 
-  const [batch, interactionReport, realtimeActiveUsers] = await Promise.all([
+  const [batch, interactionReport, realtimeActiveUsers, searchPerformance] = await Promise.all([
     batchRunReports(coreRequests),
     runReport(interactionRequest),
     runRealtime(),
+    getSearchPerformance(days),
   ]);
 
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
@@ -339,6 +503,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       event: dimension(row, 0),
       count: metric(row, 0),
     })),
+    searchPerformance,
   };
 
   reportCache.set(cacheKey, { data, expiresAt: Date.now() + 5 * 60 * 1000 });
