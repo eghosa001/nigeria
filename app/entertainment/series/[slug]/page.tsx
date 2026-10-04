@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getSeriesTitle, seriesLastChecked, seriesTitles } from "@/lib/series";
@@ -73,6 +74,23 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
           <span className="eyebrow">{item.year} Nigerian series</span>
           <h1>{item.title}</h1>
           <p className="page-intro">{item.synopsis}</p>
+          <AnswerFirst
+            eyebrow="Quick answer"
+            title={"Cast, status and where to watch " + item.title}
+            summary={item.synopsis}
+            facts={[
+              { label: "Status", value: item.status },
+              { label: "Release", value: item.premiereLabel ?? String(item.year) },
+              { label: "Featured cast", value: item.cast.slice(0, 3).join(", ") || "Cast not listed yet" },
+              { label: "Where to watch", value: [...new Set(item.watchLinks.map((link) => link.platform))].join(" / ") || "No current official platform listed" },
+            ]}
+            links={[
+              { href: "#cast", label: "See cast" },
+              { href: "#watch", label: "Where to watch" },
+              ...(item.watchLinks[0] ? [{ href: item.watchLinks[0].href, label: item.watchLinks[0].label, external: true, primary: true }] : []),
+            ]}
+            note={"Availability and sources checked " + checked + "."}
+          />
           <div className="movie-detail-genres">{item.genres.map((genre)=><span key={genre}>{genre}</span>)}</div>
           <div className="movie-detail-actions">
             {item.watchLinks.map((link)=><a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>{link.label} ↗</a>)}
@@ -98,14 +116,14 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
             </section>
 
             {item.cast.length?(
-              <section>
+              <section id="cast">
                 <span className="eyebrow">Cast</span>
                 <h2>{item.title} cast</h2>
                 <div className="movie-person-list">{item.cast.map((name)=><span key={name}>{name}</span>)}</div>
               </section>
             ):null}
 
-            <section>
+            <section id="watch">
               <span className="eyebrow">Official availability</span>
               <h2>Where to watch {item.title}</h2>
               <div className="movie-watch-options">
