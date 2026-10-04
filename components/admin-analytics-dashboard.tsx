@@ -160,22 +160,26 @@ export function AdminAnalyticsDashboard() {
           <button type="button" className={range === "30d" ? "active" : undefined} onClick={() => setRange("30d")}>30 days</button>
           <button type="button" className={range === "90d" ? "active" : undefined} onClick={() => setRange("90d")}>90 days</button>
         </div>
-        <button type="button" onClick={logout}>Lock analytics</button>
+        <div>
+          <button type="button" onClick={() => void load(range)}>Refresh now</button>
+          <button type="button" onClick={logout}>Lock analytics</button>
+        </div>
       </div>
 
       <p className="analytics-clean-note">
-        GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. GA4 property: {data.propertyId || "unknown"}.
+        GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.
       </p>
 
       <div className="analytics-metric-grid">
-        <div><span>GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Total unique users recorded by Analytics</small></div>
+        <div><span>GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Processed unique users; recent traffic can take time to enter this total</small></div>
         <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
         <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
         <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
         <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Google Search appearances</small></div>
-        <div><span>Page views</span><strong>{number(data.summary.pageViews)}</strong><small>Repeated views included</small></div>
+        <div><span>Page views</span><strong>{number(data.summary.pageViews)}</strong><small>Processed GA4 views; repeated views included</small></div>
         <div><span>Engaged sessions</span><strong>{number(data.summary.engagedSessions)}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
-        <div><span>Live now</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>GA4 realtime active users</small></div>
+        <div><span>Users · last 30 min</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Realtime GA4 users; refreshed directly from Google</small></div>
+        <div><span>Views · last 30 min</span><strong>{data.realtimePageViews == null ? "—" : number(data.realtimePageViews)}</strong><small>Realtime page views; recent visits appear here first</small></div>
       </div>
 
       <section className="admin-panel">

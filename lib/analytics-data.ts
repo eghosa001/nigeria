@@ -34,6 +34,7 @@ export type AnalyticsDashboardData = {
     engagementRate: number;
   };
   realtimeActiveUsers: number | null;
+  realtimePageViews: number | null;
   daily: Array<{ date: string; users: number; sessions: number; pageViews: number }>;
   countries: Array<{ country: string; users: number; sessions: number; pageViews: number }>;
   pages: Array<{ path: string; title: string; users: number; pageViews: number }>;
@@ -239,13 +240,17 @@ async function runRealtime() {
     {
       method: "POST",
       headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" },
-      body: JSON.stringify({ metrics: [{ name: "activeUsers" }] }),
+      body: JSON.stringify({ metrics: [{ name: "activeUsers" }, { name: "screenPageViews" }] }),
       cache: "no-store",
     },
   );
   if (!response.ok) return null;
   const body = await response.json() as RunReportResponse;
-  return Number(body.rows?.[0]?.metricValues?.[0]?.value ?? 0);
+  const values = body.rows?.[0]?.metricValues ?? [];
+  return {
+    activeUsers: Number(values[0]?.value ?? 0),
+    pageViews: Number(values[1]?.value ?? 0),
+  };
 }
 
 function dateInTimeZone(timeZone: string) {
@@ -356,7 +361,15 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
   if (!analyticsReadConfigured()) throw new Error("Google Analytics Data API is not configured.");
   const cacheKey = range + ":" + mode;
   const cached = reportCache.get(cacheKey);
-  if (cached && cached.expiresAt > Date.now()) return cached.data;
+  if (cached && cached.expiresAt > Date.now()) {
+    const realtime = await runRealtime().catch(() => null);
+    return {
+      ...cached.data,
+      generatedAt: new Date().toISOString(),
+      realtimeActiveUsers: realtime?.activeUsers ?? null,
+      realtimePageViews: realtime?.pageViews ?? null,
+    };
+  }
 
   const days = daysForRange(range);
   const today = new Intl.DateTimeFormat("en-CA", {
@@ -464,7 +477,7 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
     limit: 20,
   };
 
-  const [batch, interactionReport, realtimeActiveUsers, searchPerformance] = await Promise.all([
+  const [batch, interactionReport, realtime, searchPerformance] = await Promise.all([
     batchRunReports(coreRequests),
     runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
     runRealtime().catch(() => null),
@@ -490,7 +503,8 @@ export async function getAnalyticsDashboard(range: AnalyticsRange, mode: Analyti
       engagedSessions: Number(totalValues[4]?.value ?? 0),
       engagementRate: Number(totalValues[5]?.value ?? 0),
     },
-    realtimeActiveUsers,
+    realtimeActiveUsers: realtime?.activeUsers ?? null,
+    realtimePageViews: realtime?.pageViews ?? null,
     daily: (dailyReport.rows ?? []).map((row) => ({
       date: dimension(row, 0),
       users: metric(row, 0),
