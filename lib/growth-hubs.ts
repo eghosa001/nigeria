@@ -97,6 +97,7 @@ export const growthHubs: GrowthHub[] = [
       { query: "JAMB registration 2026", serviceSlug: "jamb-2026-utme-registration" },
       { query: "JAMB Direct Entry 2026", serviceSlug: "jamb-direct-entry-2026" },
       { query: "JAMB profile code", serviceSlug: "jamb-profile-code" },
+      { query: "JAMB CAPS", serviceSlug: "jamb-caps" },
       { query: "JAMB CAPS login", serviceSlug: "jamb-caps" },
       { query: "check JAMB admission status", serviceSlug: "jamb-caps" },
       { query: "JAMB reprint portal", serviceSlug: "jamb-examination-slip-2026" },
