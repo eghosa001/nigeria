@@ -48,6 +48,7 @@ export default function EntertainmentPage() {
           <p className="page-intro">Browse Nigerian films, see the important details, then continue to the official source.</p>
           <div className="minimal-inline-links">
             <Link href="/entertainment/movies">All movies</Link>
+            <Link href="/entertainment/series">TV & web series</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
@@ -103,6 +104,11 @@ export default function EntertainmentPage() {
               <span>Go out</span>
               <strong>Cinemas</strong>
               <small>Locations, showtimes and booking links.</small>
+            </Link>
+            <Link href="/entertainment/series" className="home-path">
+              <span>Follow</span>
+              <strong>TV & web series</strong>
+              <small>Nollywood, Yoruba and Hausa series with verified viewing links.</small>
             </Link>
             <Link href="/entertainment/people" className="home-path">
               <span>Discover</span>
