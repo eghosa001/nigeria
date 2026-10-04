@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
@@ -127,6 +128,24 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               </small>
             </div>
           </div>
+
+          <AnswerFirst
+            eyebrow="Quick answer"
+            title={"Watch, cast and runtime at a glance"}
+            summary={movie.synopsis}
+            facts={[
+              { label: "Access", value: "Free full movie on YouTube" },
+              { label: "Runtime", value: runtimeLabel(movie.durationMinutes) },
+              { label: "Featured cast", value: movie.featuredCast.slice(0, 3).join(", ") || "See cast details below" },
+              { label: "Publisher", value: movie.channelName },
+            ]}
+            links={[
+              { href: "#cast", label: "See cast" },
+              { href: "#source", label: "Source details" },
+              { href: movie.videoUrl, label: "Watch full movie", external: true, primary: true },
+            ]}
+            note={"Official source checked " + movie.lastChecked + ". Continue below for cast, alternate official sources and related movies."}
+          />
         </div>
       </section>
 

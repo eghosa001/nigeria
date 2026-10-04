@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { AnswerFirst } from "@/components/answer-first";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
@@ -63,8 +64,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty Cast & Where to Watch on Netflix",
-    description: "Oversabi Aunty cast, story, runtime and official streaming information for Toyin Abraham's hit comedy-drama, now available on Netflix in Nigeria.",
+    title: "Oversabi Aunty Cast, Netflix & Where to Watch",
+    description: "Oversabi Aunty cast: Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa and more. See the story, 127-minute runtime and official Netflix Nigeria link.",
   },
 };
 
@@ -253,6 +254,24 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <small className="movie-freshness-note">Links checked {lastChecked}.</small>
             </div>
           </div>
+
+          <AnswerFirst
+            eyebrow="Quick answer"
+            title={"What to know before you keep reading"}
+            summary={title.synopsis}
+            facts={[
+              { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
+              { label: "Featured cast", value: featuredCast.slice(0, 3).join(", ") || "See the full cast below" },
+              { label: "Runtime", value: title.runtimeMinutes ? title.runtimeMinutes + " minutes" : "Runtime not listed" },
+              { label: "Link freshness", value: lastChecked || "See current source links" },
+            ]}
+            links={[
+              { href: "#cast", label: "See cast" },
+              { href: "#watch", label: "Where to watch" },
+              ...(availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
+            ]}
+            note="The essentials are above. The sections below add the full cast, verified source details and related movies."
+          />
         </div>
       </section>
 

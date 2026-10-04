@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
@@ -180,6 +181,21 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <span className="eyebrow">{guide.region}</span>
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
+          <AnswerFirst
+            title={"Plan " + guide.shortTitle + " without digging through the whole page"}
+            summary={questions[0]?.answer ?? guide.summary}
+            facts={[
+              { label: "Region", value: guide.region },
+              { label: "Best for", value: guide.bestFor.slice(0, 3).join(", ") },
+              { label: "Top places", value: guide.highlights.slice(0, 3).map((item) => item.name).join(", ") },
+              { label: "Reviewed", value: guide.lastReviewed },
+            ]}
+            links={[
+              { href: "#places", label: "See places" },
+              { href: "#planning", label: "Before you go" },
+            ]}
+            note="Use the quick answer to decide whether this trip fits you, then open only the sections you need."
+          />
           <div className="topic-copy">
             {guide.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
@@ -268,7 +284,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         </div>
       </section>
 
-      <section className="section premium-dark-section">
+      <section className="section premium-dark-section" id="planning">
         <div className="container">
           <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Make the practical decisions first.</h2></div></div>
           <div className="home-updates-grid">

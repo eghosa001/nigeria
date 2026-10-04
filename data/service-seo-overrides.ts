@@ -52,3 +52,19 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
   const template = serviceSeoTitleTemplates[slug];
   return template ? template.replaceAll("{year}", year) : null;
 }
+
+
+export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "nin-phone-modification": "Change the phone number on your NIN in {year}: ₦2,000 NIMC fee, police-report rule, requirements, steps and official self-service portal.",
+  "nigeria-landing-exit-card": "Nigeria Landing & Exit Card {year}: who must complete it, what details you need, when to submit, and the official NIS online form. Free.",
+  "anambra-asin-registration": "ASIN registration online {year}: Anambra AIRS portal, applicant types, requirements and step-by-step enumeration for individuals and businesses.",
+  "passport-change-of-data": "Nigerian passport change of data {year}: requirements, supporting documents, fees/status, online application and biometric capture steps.",
+  "cac-business-name-registration": "CAC business name registration {year}: name reservation, proprietor details, registration steps, fees and the official CAC CRP.",
+  "passport-renewal": "Nigerian passport renewal {year}: current NIS fees, NIN and passport requirements, online reissue steps and official application portal.",
+  "ecowas-travel-certificate": "ECOWAS Travel Certificate {year}: current price, requirements, application steps and the official Nigeria Immigration Service route.",
+};
+
+export function getServiceSeoDescriptionOverride(slug: string, year: string) {
+  const template = serviceSeoDescriptionTemplates[slug];
+  return template ? template.replaceAll("{year}", year) : null;
+}
