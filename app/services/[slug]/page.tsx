@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
 import { AnswerFirst } from "@/components/answer-first";
-import { getServiceSeoTitleOverride } from "@/data/service-seo-overrides";
+import { getServiceSeoDescriptionOverride, getServiceSeoTitleOverride } from "@/data/service-seo-overrides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CorrectionReport } from "@/components/correction-report";
 import { JsonLd } from "@/components/json-ld";
@@ -76,9 +76,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   );
   const summary = normalizeMetadataText(service.summary);
   const description = truncateMetadataText(
-    summary.length >= 110
-      ? `${summary} Verified ${year}.`
-      : `${summary} Updated ${year}: current requirements, fees/status, steps and official application links.`,
+    getServiceSeoDescriptionOverride(service.slug, year) ??
+      (summary.length >= 110
+        ? `${summary} Verified ${year}.`
+        : `${summary} Updated ${year}: current requirements, fees/status, steps and official application links.`),
     155,
   );
 
