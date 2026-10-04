@@ -17,12 +17,11 @@ export function YouTubeMovieCard({
 }) {
   return (
     <article className="youtube-movie-card">
-      <a
+      <Link
         className="youtube-movie-thumbnail"
-        href={movie.videoUrl}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={"Watch " + movie.title + " on YouTube"}
+        href={movie.internalHref}
+        prefetch={false}
+        aria-label={"View details for " + movie.title}
       >
         <img
           src={"https://i.ytimg.com/vi/" + movie.videoId + "/mqdefault.jpg"}
@@ -31,7 +30,7 @@ export function YouTubeMovieCard({
           decoding="async"
           referrerPolicy="no-referrer"
         />
-      </a>
+      </Link>
       <div className="youtube-movie-body">
         <div className="youtube-movie-meta">
           <span>YouTube · {movie.year}</span>
