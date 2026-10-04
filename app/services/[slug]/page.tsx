@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
+import { AnswerFirst } from "@/components/answer-first";
 import { getServiceSeoTitleOverride } from "@/data/service-seo-overrides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CorrectionReport } from "@/components/correction-report";
@@ -199,6 +200,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </aside>
           </div>
           <ServiceStatusStrip service={service} />
+          <AnswerFirst
+            title={"What you need to know about " + service.shortTitle}
+            summary={service.summary}
+            facts={[
+              { label: "Cost / status", value: service.feeLabel },
+              { label: "Timeline", value: service.timeline ?? "No fixed official timeline published" },
+              { label: "First requirement", value: service.requirements[0] ?? "See the verified requirements below" },
+              { label: "First step", value: service.steps[0] ?? "Use the official agency route below" },
+            ]}
+            links={[
+              { href: "#requirements", label: "See requirements" },
+              { href: "#steps", label: "See the steps" },
+              ...(primaryOfficialLink ? [{ href: primaryOfficialLink.url, label: primaryOfficialLink.label, external: true, primary: true }] : []),
+            ]}
+            note={"Verified " + service.lastVerified + ". Read the quick answer first, then use the detailed guide only for the parts you need."}
+          />
         </div>
       </section>
 
