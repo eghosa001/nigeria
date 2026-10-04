@@ -31,6 +31,8 @@ export const growthHubs: GrowthHub[] = [
       "Choose the exact task below before paying or submitting documents. Each linked guide keeps its own official sources, current status and last-checked date."
     ],
     searches: [
+      { query: "check my NIN", serviceSlug: "check-nin-number" },
+      { query: "code to check NIN", serviceSlug: "check-nin-number" },
       { query: "NIN portal", serviceSlug: "nin-enrolment" },
       { query: "NIN enrolment", serviceSlug: "nin-enrolment" },
       { query: "NIN verification", serviceSlug: "ninauth-nin-verification" },
@@ -44,6 +46,7 @@ export const growthHubs: GrowthHub[] = [
       { query: "change address on NIN", serviceSlug: "nin-address-modification" }
     ],
     serviceSlugs: [
+      "check-nin-number",
       "nin-enrolment",
       "ninauth-nin-verification",
       "nin-slip-reissue",
@@ -96,6 +99,8 @@ export const growthHubs: GrowthHub[] = [
       { query: "JAMB profile code", serviceSlug: "jamb-profile-code" },
       { query: "JAMB CAPS login", serviceSlug: "jamb-caps" },
       { query: "check JAMB admission status", serviceSlug: "jamb-caps" },
+      { query: "JAMB reprint portal", serviceSlug: "jamb-examination-slip-2026" },
+      { query: "JAMB examination slip", serviceSlug: "jamb-examination-slip-2026" },
       { query: "JAMB result checker", serviceSlug: "jamb-print-result" },
       { query: "print JAMB result", serviceSlug: "jamb-print-result" },
       { query: "JAMB admission letter", serviceSlug: "jamb-admission-letter" },
@@ -112,6 +117,7 @@ export const growthHubs: GrowthHub[] = [
       "jamb-retrieve-profile-code",
       "jamb-retrieve-lost-epin",
       "jamb-caps",
+      "jamb-examination-slip-2026",
       "jamb-print-result",
       "jamb-admission-letter",
       "jamb-matriculation-list",
