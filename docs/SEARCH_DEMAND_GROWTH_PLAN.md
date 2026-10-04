@@ -1,6 +1,6 @@
 # MyNigeriaGuide Search-Demand Growth Implementation Plan
 
-**Status:** Active implementation plan  
+**Status:** Implementation complete through Batch F; post-deployment GSC measurement pending  
 **Created:** 2026-10-04  
 **Owner:** MyNigeriaGuide  
 **Working branch:** `seo/search-demand-roadmap-20261004`  
@@ -12,12 +12,13 @@
 
 MyNigeriaGuide already has substantial content coverage:
 
-- 205 verified public service guides in `data/services.json`
-- 84 curated Nigerian movie records in `lib/entertainment.ts`
+- 208 verified public service guides in `data/services.json`
+- 90 curated Nigerian movie records in `lib/entertainment.ts`
 - 33 jobs/career records in `lib/jobs.ts`
 - 28 editorial Explore guides in `lib/explore.ts`
 - a reusable topic-hub architecture in `lib/growth-hubs.ts`
 - dedicated Jobs, Entertainment and Explore product surfaces
+- 6 initial verified Nigerian TV/web-series records in `lib/series.ts`
 
 The main growth problem is therefore **not simply lack of URLs**. The highest-value work is to:
 
@@ -142,8 +143,8 @@ These are directional priorities based on the 2026 research pass and should be r
 - [x] Add hub search variants: JAMB portal, JAMB portal login, JAMB CAPS login, JAMB result checker, JAMB admission status and result printing.
 - [x] Ensure `jamb-caps` metadata leads with “JAMB CAPS 2026”.
 - [x] Ensure `jamb-print-result` targets JAMB-result/check/print intent without pretending MyNigeriaGuide is the official checker.
-- [ ] Keep all routes pointing users to official JAMB actions.
-- [ ] Review whether exam-slip/reprint intent is already covered; create a new guide only if the official workflow is distinct.
+- [x] Keep all routes pointing users to official JAMB actions.
+- [x] Review whether exam-slip/reprint intent is already covered; the distinct official 2026 examination-slip workflow is implemented as `jamb-examination-slip-2026`.
 
 **Definition of done:** One authoritative hub routes each major JAMB intent to exactly one canonical guide and no new page duplicates an existing task.
 
@@ -156,22 +157,22 @@ These are directional priorities based on the 2026 research pass and should be r
 - [x] Strengthen the NYSC hub title/description around “NYSC Portal / Login”.
 - [x] Add exact hub search variants for NYSC portal, login, senate list, call-up letter, relocation and registration.
 - [x] Expand hub `serviceSlugs` to include the complete verified NYSC journey already in `services.json`.
-- [ ] Review missing corps-member journey topics such as camp/PPA/clearance only against official NYSC sources before adding pages.
-- [ ] Avoid thin pages for login variants.
+- [x] Review missing corps-member journey topics against official NYSC sources. Official camp/FAQ material exists, but no extra thin PPA/clearance page was added without a distinct proven search task.
+- [x] Avoid thin pages for login variants.
 
 ### 4.3 WAEC
 
 - [x] Add a WAEC topic hub.
 - [x] Route “WAEC result checker”, “check WAEC result”, “WAEC digital certificate”, certificate collection, result confirmation, withheld-result complaint, corrections and timetable intent to existing guides.
 - [x] Strengthen `waec-check-result` metadata/search terms.
-- [ ] Keep result-checker language clear that the actual result is checked at WAEC’s official service.
+- [x] Keep result-checker language clear that the actual result is checked at WAEC’s official service.
 
 ### 4.4 NECO
 
 - [x] Add a NECO topic hub.
 - [x] Route result checker, result token, e-verify, payment, certificate, institutional verification and timetable intents.
 - [x] Strengthen `neco-check-result` metadata/search terms.
-- [ ] Avoid creating a duplicate token/check-result page when existing pages cover the action.
+- [x] Avoid creating a duplicate token/check-result page when existing pages cover the action.
 
 ### 4.5 BVN
 
@@ -183,13 +184,13 @@ These are directional priorities based on the 2026 research pass and should be r
 
 - [x] Add NELFUND topic hub.
 - [x] Route NELFUND portal/login/student-loan intent to application, status/upkeep and repayment guides.
-- [ ] Add any institutional verification/troubleshooting page only if supported by official NELFUND material and not already answered in an existing guide.
+- [x] Review NELFUND verification/troubleshooting. The official application flow already performs educational/JAMB verification, so no duplicate thin page was added.
 
 ### 4.7 NIN
 
 - [x] Expand the existing NIN hub beyond only “corrections”.
 - [x] Include enrolment, verification, slip reissue, SIM linkage and modifications.
-- [ ] Keep the planned “check NIN number/NIN code” page separate only if current official NIMC guidance proves a distinct user task.
+- [x] Keep the NIN retrieval page separate: current NIMC guidance confirms forgotten-NIN retrieval via the *346# phone service or NIMC assistance.
 
 ---
 
@@ -201,12 +202,12 @@ These are directional priorities based on the 2026 research pass and should be r
 
 Before implementation:
 
-- [ ] Verify the current NIMC-supported method(s) from official NIMC material.
-- [ ] Confirm whether USSD, NIMC app, portal or enrolment-centre routes are current in October 2026.
-- [ ] Do not copy obsolete third-party “code to check NIN” instructions.
-- [ ] Add official sources and last-checked dates.
-- [ ] Add internal links from the NIN hub and relevant NIN guides.
-- [ ] Add SEO title/search terms only after the route is verified.
+- [x] Verify the current NIMC-supported method(s) from official NIMC material.
+- [x] Confirm whether USSD, NIMC app, portal or enrolment-centre routes are current in October 2026.
+- [x] Do not copy obsolete third-party “code to check NIN” instructions.
+- [x] Add official sources and last-checked dates.
+- [x] Add internal links from the NIN hub and relevant NIN guides.
+- [x] Add SEO title/search terms only after the route is verified.
 
 ### 5.2 Unclaimed dividends
 
@@ -214,17 +215,17 @@ Before implementation:
 
 Before implementation:
 
-- [ ] Verify SEC Nigeria’s current unclaimed-dividend lookup/claim route.
-- [ ] Document e-dividend mandate only from SEC/official registrar/bank guidance.
-- [ ] Explain how to identify the correct registrar.
-- [ ] Include scam warning and source links.
-- [ ] Link to any related identity/bank services only when useful.
+- [x] Verify SEC Nigeria’s current unclaimed-dividend lookup/claim route.
+- [x] Document e-dividend mandate only from SEC/official registrar/bank guidance.
+- [x] Explain how to identify the correct registrar.
+- [x] Include scam warning and source links.
+- [x] Link to any related identity/bank services only when useful.
 
 ### 5.3 JAMB exam slip/reprint
 
-- [ ] Verify whether the current official JAMB workflow is sufficiently distinct from result printing.
-- [ ] If distinct, create one canonical guide.
-- [ ] If not distinct, strengthen the existing JAMB page instead.
+- [x] Verify whether the current official JAMB workflow is sufficiently distinct from result printing.
+- [x] If distinct, create one canonical guide.
+- [x] If not distinct, strengthen the existing JAMB page instead. Not needed because examination-slip printing is a distinct official workflow.
 
 ---
 
@@ -248,29 +249,29 @@ Do not replace it with scraped vacancy spam.
 
 **Planned route:** `/jobs/remote`
 
-- [ ] Add a useful remote-jobs landing surface.
-- [ ] Separate Nigerian remote roles from global roles that explicitly accept Nigerian applicants.
-- [ ] Reuse verified employer/job data where possible.
-- [ ] Do not manufacture or mirror stale vacancies.
-- [ ] Include applicant-safety guidance.
-- [ ] Add structured metadata and internal links from `/jobs`.
+- [x] Add a useful remote-jobs landing surface.
+- [x] Separate flexible-work eligibility by evidence. The initial page publishes Nigeria-specific remote/hybrid sources only; no global employer is labelled Nigeria-eligible without explicit evidence.
+- [x] Reuse verified employer/job data where possible.
+- [x] Do not manufacture or mirror stale vacancies.
+- [x] Include applicant-safety guidance.
+- [x] Add structured metadata and internal links from `/jobs`.
 
 ### 6.3 Graduate jobs
 
 Existing: `/jobs/graduate`
 
-- [ ] Retarget metadata/copy around “graduate jobs in Nigeria” and “graduate trainee jobs”.
-- [ ] Surface currently open verified opportunities first.
-- [ ] Keep closed programme pages useful by showing current status/next cycle rather than deleting them.
+- [x] Retarget metadata/copy around “graduate jobs in Nigeria” and “graduate trainee jobs”.
+- [x] Surface currently open verified opportunities first.
+- [x] Keep closed programme pages useful by showing current status/next cycle rather than deleting them.
 
 ### 6.4 Recruitment lifecycle SEO
 
 For government recruitment pages:
 
-- [ ] Keep one durable URL per recruitment programme/organization where feasible.
-- [ ] Update that page through application → shortlist → screening → exam → documentation → training/closed.
-- [ ] Avoid spinning up separate thin “shortlist PDF” pages unless intent and official source require a distinct resource.
-- [ ] Update title/status copy when the stage changes.
+- [x] Keep one durable URL per recruitment programme/organization where feasible.
+- [x] Update that page through application → shortlist → screening → exam → documentation → training/closed.
+- [x] Avoid spinning up separate thin “shortlist PDF” pages unless intent and official source require a distinct resource.
+- [x] Update title/status copy when the stage changes.
 
 ---
 
@@ -282,12 +283,12 @@ For government recruitment pages:
 
 Add:
 
-- [ ] `/entertainment/series`
-- [ ] `/entertainment/series/[slug]`
-- [ ] a typed series data model
-- [ ] series sitemap inclusion
-- [ ] entertainment homepage navigation to Series
-- [ ] related series/movie/person links where data supports them
+- [x] `/entertainment/series`
+- [x] `/entertainment/series/[slug]`
+- [x] a typed series data model
+- [x] series sitemap inclusion
+- [x] entertainment homepage navigation to Series
+- [x] related series/movie/person links where data supports them
 
 ### 7.2 Series record requirements
 
@@ -311,12 +312,12 @@ Every indexable series record should contain, where verifiable:
 
 ### 7.3 Priority backfill
 
-- [ ] Koleoso
-- [ ] Koleoso Part 6 / Part 7 represented correctly without creating nonsensical duplicate franchise pages
-- [ ] Wata Shida
-- [ ] Better Half
-- [ ] The Ten
-- [ ] other currently trending Nigerian series verified during implementation
+- [x] Koleoso
+- [x] Koleoso Part 6 / Part 7 represented correctly without creating nonsensical duplicate franchise pages
+- [x] Wata Shida
+- [x] Better Half
+- [x] The Ten
+- [x] other currently trending Nigerian series verified during implementation
 
 ### 7.4 Search intent
 
@@ -341,15 +342,15 @@ No unauthorized streaming/download links.
 
 Research/verify before adding:
 
-- [ ] Agbara Nla: The Return
-- [ ] MKO
-- [ ] First Lady
-- [ ] Pushing 30
-- [ ] A Land Apart
-- [ ] Tele x Zikora
-- [ ] Phoenix Fury
-- [ ] Wire Transfer
-- [ ] To Kill a Monkey
+- [x] Agbara Nla: The Return
+- [x] MKO
+- [x] First Lady
+- [x] Pushing 30
+- [x] A Land Apart
+- [x] Tele x Zikora
+- [x] Phoenix Fury
+- [x] Wire Transfer
+- [x] To Kill a Monkey
 
 Skip a title if reliable/official information is insufficient.
 
@@ -357,10 +358,10 @@ Skip a title if reliable/official information is insufficient.
 
 Existing example: `/entertainment/movies/october-2026`
 
-- [ ] Keep monthly release pages current.
-- [ ] Link each confirmed title to its durable movie/series page.
-- [ ] Do not leave unverified dates presented as confirmed.
-- [ ] Make monthly pages useful for “new Nigerian movies” and “Nollywood releases” intent.
+- [x] Keep monthly release pages current.
+- [x] Link confirmed titles to durable pages where enough verified metadata exists; MKO and Wire Transfer remain release-feed entries rather than thin detail pages.
+- [x] Do not leave unverified dates presented as confirmed.
+- [x] Make monthly pages useful for “new Nigerian movies” and “Nollywood releases” intent.
 
 ### 8.3 Fast-publish workflow
 
@@ -385,14 +386,14 @@ Do not create a new place database if `lib/explore-places.ts` already contains s
 
 Potential routes, only when enough verified entries exist:
 
-- [ ] Cheap hotels in Ikeja
-- [ ] Hotels near Lagos airport
-- [ ] Hotels in Victoria Island
-- [ ] Restaurants in Lekki
-- [ ] Restaurants in Victoria Island
-- [ ] Beaches in Lagos
-- [ ] Things to do in Lagos
-- [ ] Things to do in Abuja
+- [x] Cheap hotels in Ikeja — deferred: current verified inventory does not meet the quality floor for a standalone page.
+- [x] Hotels near Lagos airport — deferred: current verified inventory does not meet the quality floor for a standalone page.
+- [x] Hotels in Victoria Island — deferred: only one verified Victoria Island hotel record currently exists.
+- [x] Restaurants in Lekki — deferred: current verified inventory is insufficient.
+- [x] Restaurants in Victoria Island — deferred: only two verified restaurant records currently exist.
+- [x] Beaches in Lagos — deferred: current verified place inventory is insufficient for a high-quality collection.
+- [x] Things to do in Lagos
+- [x] Things to do in Abuja
 
 ### 9.3 Minimum quality bar
 
@@ -415,19 +416,19 @@ Do not generate thousands of location permutations.
 
 For every new hub or major surface:
 
-- [ ] Include it in the sitemap generation path.
-- [ ] Link to it from at least one crawlable high-level page.
-- [ ] Add relevant cross-links from child pages where architecture permits.
-- [ ] Keep canonicals stable.
-- [ ] Avoid orphan pages.
-- [ ] Confirm robots/indexability only for the changed routes.
-- [ ] Do not mass-submit unchanged URLs.
+- [x] Include it in the sitemap generation path.
+- [x] Link to it from at least one crawlable high-level page.
+- [x] Add relevant cross-links from child pages where architecture permits.
+- [x] Keep canonicals stable.
+- [x] Avoid orphan pages.
+- [x] Confirm robots/indexability only for the changed routes.
+- [x] Do not mass-submit unchanged URLs.
 
 For existing service optimization:
 
-- [ ] Preserve existing canonical URLs.
-- [ ] Update topic-hub queries to match actual user wording.
-- [ ] Keep one task → one strongest guide mapping.
+- [x] Preserve existing canonical URLs.
+- [x] Update topic-hub queries to match actual user wording.
+- [x] Keep one task → one strongest guide mapping.
 
 ---
 
@@ -480,45 +481,45 @@ Track:
 
 ### Batch B — verified service gaps
 
-- [ ] Check NIN number
-- [ ] Unclaimed dividends
-- [ ] JAMB slip/reprint decision + implementation if warranted
+- [x] Check NIN number
+- [x] Unclaimed dividends
+- [x] JAMB slip/reprint decision + implementation if warranted
 
 **Validation:** changed guide schema + changed official links/sources only.
 
 ### Batch C — jobs
 
-- [ ] Remote jobs surface
-- [ ] Graduate jobs search-intent improvement
-- [ ] jobs-home internal linking
+- [x] Remote jobs surface
+- [x] Graduate jobs search-intent improvement
+- [x] jobs-home internal linking
 
 **Validation:** focused jobs route/data checks only.
 
 ### Batch D — series architecture
 
-- [ ] typed series model
-- [ ] series index
-- [ ] series detail route
-- [ ] entertainment nav
-- [ ] sitemap integration
-- [ ] initial verified series records
+- [x] typed series model
+- [x] series index
+- [x] series detail route
+- [x] entertainment nav
+- [x] sitemap integration
+- [x] initial verified series records
 
 **Validation:** focused series route/data checks.
 
 ### Batch E — current entertainment population
 
-- [ ] priority movie records
-- [ ] priority series records
-- [ ] current release page updates
-- [ ] legal trailer/watch links
+- [x] priority movie records
+- [x] priority series records
+- [x] current release page updates
+- [x] legal trailer/watch links
 
 **Validation:** changed entertainment data/source checks only.
 
 ### Batch F — local-search collections
 
-- [ ] first Lagos collection pages
-- [ ] first Abuja collection pages where data supports them
-- [ ] Explore navigation/internal links
+- [x] first Lagos collection pages
+- [x] first Abuja collection pages where data supports them
+- [x] Explore navigation/internal links
 
 **Validation:** focused collection/filter data checks.
 
@@ -535,16 +536,16 @@ Track:
 
 This roadmap is complete only when:
 
-- [ ] every Batch A–F item is either implemented or explicitly marked “rejected/deferred” with a reason;
-- [ ] all major JAMB/NYSC/WAEC/NECO/BVN/NIN/NELFUND intents map to one canonical MyNigeriaGuide destination;
-- [ ] the NIN-check and unclaimed-dividend gaps have been verified and either implemented or rejected with source-based reasons;
-- [ ] Remote Jobs exists or is explicitly rejected for a documented reason;
-- [ ] Nigerian TV/series has first-class architecture and verified initial content;
-- [ ] current entertainment releases have a repeatable update path;
-- [ ] high-intent local collections exist only where the underlying data is sufficient;
-- [ ] new hubs/routes are crawlable and included in discovery/sitemap architecture;
+- [x] every Batch A–F item is either implemented or explicitly marked deferred with a quality/evidence reason;
+- [x] all major JAMB/NYSC/WAEC/NECO/BVN/NIN/NELFUND intents map to one canonical MyNigeriaGuide destination;
+- [x] the NIN-check and unclaimed-dividend gaps have been verified and implemented;
+- [x] Remote Jobs exists with current official employer-source examples;
+- [x] Nigerian TV/series has first-class architecture and verified initial content;
+- [x] current entertainment releases have a repeatable update path;
+- [x] high-intent local collections exist only where the underlying data is sufficient; narrower thin collections are explicitly deferred;
+- [x] new hubs/routes are crawlable and included in discovery/sitemap architecture;
 - [ ] post-deployment GSC measurement has been performed and the next iteration is based on real query data;
-- [ ] no broad test/CI policy was added or run merely for this project.
+- [x] no broad test/CI policy was added or manually run merely for this project.
 
 ---
 
@@ -559,3 +560,10 @@ This roadmap is complete only when:
 - [x] Duplicate-page avoidance rules defined.
 - [x] Detailed repository roadmap created.
 - [x] Batch A core hub/query-alignment implementation completed.
+- [x] Batch B: added verified NIN retrieval, SEC unclaimed-dividend and JAMB examination-slip guides.
+- [x] Batch C: added remote/hybrid jobs surface and strengthened graduate-job intent.
+- [x] Batch D: added first-class Nigerian series architecture, six verified initial series, related-series links and rights provenance.
+- [x] Batch E: expanded the October 2026 release pipeline and added durable pages where primary-source detail is sufficient.
+- [x] Batch F: added curated Things to Do in Lagos and Abuja pages; narrower local permutations were deferred where the verified inventory is too thin.
+- [x] Discovery pass: new hubs/routes are internally linked, sitemap-listed and permitted by robots.
+- [ ] Batch G remains intentionally pending until the merged/deployed URLs have had time to be crawled and generate Search Console data.
