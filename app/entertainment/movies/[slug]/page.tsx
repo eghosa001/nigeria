@@ -26,6 +26,14 @@ function videoIdFromUrl(href: string) {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "agbara-nla-the-return": {
+    title: "Agbara Nla: The Return Cast, Cinema Release & Where to Watch",
+    description: "Agbara Nla: The Return cast, story, runtime, directors and current Nigerian cinema availability for the 2026 Mount Zion film."
+  },
+  "first-lady-2026": {
+    title: "First Lady 2026: Cast, Story & Cinema Release",
+    description: "First Lady 2026 cast, story, director and official October cinema-release information for the Nigerian political drama."
+  },
   "millionaire-until-morning": {
     title: "Millionaire Until Morning: Cast & Full Movie on YouTube",
     description: "Millionaire Until Morning cast, story, runtime and the official Omoni Oboli TV full-movie link. Starring Chris Attoh, Sophia Chisom and Chimsom Chuka.",
