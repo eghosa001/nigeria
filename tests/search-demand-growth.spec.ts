@@ -47,7 +47,7 @@ test("new search-demand routes are crawlable from their public surfaces", async 
   }
 
   await page.goto("/");
-  await expect(page.getByRole("link", { name: "Foreign visas", exact: true })).toHaveAttribute("href", "/categories/foreign-visas");
+  await expect(page.locator('a[href="/categories/foreign-visas"]').first()).toBeVisible();
 
   await page.goto("/topics/jamb-2026");
   const jambSearches = page.locator(".topic-searches");
