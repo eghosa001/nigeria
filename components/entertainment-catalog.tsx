@@ -111,7 +111,8 @@ export function EntertainmentCatalog({
           {visible.map((title) => {
             const platformsForTitle = [...new Set(title.watchLinks.map((link) => link.platform))];
             return (
-              <article className="movie-tile" key={title.slug}>
+              <article className="movie-tile movie-card-clickable" key={title.slug}>
+                <Link className="movie-card-hitarea" href={"/entertainment/movies/" + title.slug} prefetch={false} aria-label={"View details for " + title.title} />
                 <EntertainmentArtwork title={title} />
                 <div className="movie-tile-meta">
                   <span>{title.year}</span>

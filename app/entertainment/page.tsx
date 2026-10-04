@@ -78,9 +78,10 @@ export default function EntertainmentPage() {
           </div>
           <div className="minimal-movie-row">
             {featured.map((title) => (
-              <article className="minimal-movie-card" key={title.slug}>
+              <article className="minimal-movie-card movie-card-clickable" key={title.slug}>
+                <Link className="movie-card-hitarea" href={"/entertainment/movies/" + title.slug} aria-label={"View details for " + title.title} />
                 <Link href={"/entertainment/movies/" + title.slug} aria-label={"Open " + title.title}>
-                  <EntertainmentArtwork title={title} />
+                  <EntertainmentArtwork title={title} showSourceLink={false} />
                 </Link>
                 <div>
                   <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>

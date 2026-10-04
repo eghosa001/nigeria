@@ -431,7 +431,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
           <div className="movie-grid movie-related-grid">
             {related.map((item) => (
-              <article className="movie-tile" key={item.slug}>
+              <article className="movie-tile movie-card-clickable" key={item.slug}>
+                <Link className="movie-card-hitarea" href={"/entertainment/movies/" + item.slug} aria-label={"View details for " + item.title} />
                 <EntertainmentArtwork title={item} />
                 <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
                 <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>

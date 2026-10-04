@@ -16,7 +16,8 @@ export function YouTubeMovieCard({
   priority?: boolean;
 }) {
   return (
-    <article className="youtube-movie-card">
+    <article className="youtube-movie-card movie-card-clickable">
+      <Link className="movie-card-hitarea" href={movie.internalHref} prefetch={false} aria-label={"View details for " + movie.title} />
       <Link
         className="youtube-movie-thumbnail"
         href={movie.internalHref}
