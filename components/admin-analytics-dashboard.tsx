@@ -44,11 +44,14 @@ export function AdminAnalyticsDashboard() {
   const [setup, setSetup] = useState<ApiResponse>({});
   const [message, setMessage] = useState("");
 
-  async function load(nextRange = range) {
+  async function load(nextRange = range, forceFresh = false) {
     setState("loading");
     setMessage("");
     try {
-      const response = await fetch("/admin/api/analytics?range=" + nextRange + "&mode=clean", { cache: "no-store" });
+      const response = await fetch(
+        "/admin/api/analytics?range=" + nextRange + "&mode=clean" + (forceFresh ? "&fresh=1" : ""),
+        { cache: "no-store" },
+      );
       const body = await response.json().catch(() => ({ error: "Analytics server returned an invalid response." })) as ApiResponse;
 
       if (response.status === 503 && body.configured === false) {
@@ -91,7 +94,7 @@ export function AdminAnalyticsDashboard() {
       return;
     }
     formElement.reset();
-    await load(range);
+    await load(range, true);
   }
 
   async function logout() {
@@ -147,7 +150,7 @@ export function AdminAnalyticsDashboard() {
       <div className="admin-analytics-state error">
         <strong>Analytics could not be loaded</strong>
         <p>{message || "The reporting API returned an error."}</p>
-        <button type="button" onClick={() => void load(range)}>Retry</button>
+        <button type="button" onClick={() => void load(range, true)}>Retry</button>
       </div>
     );
   }
@@ -161,7 +164,7 @@ export function AdminAnalyticsDashboard() {
           <button type="button" className={range === "90d" ? "active" : undefined} onClick={() => setRange("90d")}>90 days</button>
         </div>
         <div>
-          <button type="button" onClick={() => void load(range)}>Refresh now</button>
+          <button type="button" onClick={() => void load(range, true)}>Refresh now</button>
           <button type="button" onClick={logout}>Lock analytics</button>
         </div>
       </div>
@@ -236,14 +239,14 @@ export function AdminAnalyticsDashboard() {
       </section>
 
       <div className="analytics-metric-grid">
-        <div><span>GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Processed unique users; recent traffic can take time to enter this total</small></div>
+        <div><span>Processed GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
         <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
         <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
         <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
         <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Google Search appearances</small></div>
         <div><span>Page views</span><strong>{number(data.summary.pageViews)}</strong><small>Processed GA4 views; repeated views included</small></div>
         <div><span>Engaged sessions</span><strong>{number(data.summary.engagedSessions)}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
-        <div><span>Users · last 30 min</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Realtime GA4 users; refreshed directly from Google</small></div>
+        <div><span>Live users · last 30 min</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Received by GA4 now; not added to the processed unique total until Google processes and deduplicates them</small></div>
         <div><span>Views · last 30 min</span><strong>{data.realtimePageViews == null ? "—" : number(data.realtimePageViews)}</strong><small>Realtime page views; recent visits appear here first</small></div>
       </div>
 

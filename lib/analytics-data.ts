@@ -454,11 +454,15 @@ function dimension(row: ReportRow, index: number) {
   return row?.dimensionValues?.[index]?.value ?? "";
 }
 
-export async function getAnalyticsDashboard(range: AnalyticsRange, mode: AnalyticsTrafficMode = "clean"): Promise<AnalyticsDashboardData> {
+export async function getAnalyticsDashboard(
+  range: AnalyticsRange,
+  mode: AnalyticsTrafficMode = "clean",
+  forceFresh = false,
+): Promise<AnalyticsDashboardData> {
   if (!analyticsReadConfigured()) throw new Error("Google Analytics Data API is not configured.");
   const cacheKey = range + ":" + mode;
   const cached = reportCache.get(cacheKey);
-  if (cached && cached.expiresAt > Date.now()) {
+  if (!forceFresh && cached && cached.expiresAt > Date.now()) {
     const realtime = await runRealtime().catch(() => null);
     return {
       ...cached.data,
