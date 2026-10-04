@@ -34,6 +34,22 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "First Lady 2026: Cast, Story & Cinema Release",
     description: "First Lady 2026 cast, story, director and official October cinema-release information for the Nigerian political drama."
   },
+  "phoenix-fury-2026": {
+    title: "Phoenix Fury 2026: Cast, Story & Cinema Release",
+    description: "Phoenix Fury cast, story, director and current Nigeria/Ghana cinema-release information for Ifeoma Nkiruka Chukwuogo's revenge drama."
+  },
+  "a-land-apart-2026": {
+    title: "A Land Apart 2026: Cast, Story & Cinema Release",
+    description: "A Land Apart cast, story, runtime and current cinema-release information for Pever Bem's Nigerian alternate-history drama."
+  },
+  "tele-x-zikora-2026": {
+    title: "Tele x Zikora 2026: Cast, Story & Cinema Release",
+    description: "Tele x Zikora cast, story, director and current cinema-release information for the Nigerian university-set coming-of-age drama."
+  },
+  "pushing-30-2026": {
+    title: "Pushing 30 2026: Story & Where to Watch",
+    description: "Pushing 30 story and current Africa Magic Showcase premiere information for the Nigerian friendship and adulthood dramedy."
+  },
   "millionaire-until-morning": {
     title: "Millionaire Until Morning: Cast & Full Movie on YouTube",
     description: "Millionaire Until Morning cast, story, runtime and the official Omoni Oboli TV full-movie link. Starring Chris Attoh, Sophia Chisom and Chimsom Chuka.",
@@ -100,6 +116,7 @@ function accessLabel(access: string) {
   if (access === "rent-or-buy") return "Rent or buy";
   if (access === "subscription-or-rent") return "Subscription or rental";
   if (access === "cinema") return "Cinema ticket / showtime";
+  if (access === "broadcast") return "TV / broadcaster";
   return "Official platform";
 }
 
