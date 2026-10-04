@@ -559,3 +559,138 @@ html[data-theme="dark"] .job-status-career-page {
     display: none !important;
   }
 }
+
+
+/* Dark-mode contrast hardening — 2026-10-04.
+   Keep every light-only production surface on the dark palette. This layer is
+   intentionally last so hard-coded light backgrounds in globals.css cannot
+   leave pale text on white cards. */
+html[data-theme="dark"] .home-path-jobs {
+  background: var(--theme-raised) !important;
+}
+html[data-theme="dark"] .home-path + .home-path {
+  border-left-color: var(--line) !important;
+}
+html[data-theme="dark"] .home-path:hover {
+  background: var(--theme-hover) !important;
+}
+
+html[data-theme="dark"] :where(
+  .journey-trust-note,
+  .service-discovery-section,
+  .visa-country-picker,
+  .topic-search-section,
+  .movie-rights-details,
+  .movie-related-section
+) {
+  background: var(--theme-soft) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] :where(
+  .admin-action-grid > a,
+  .admin-filterbar,
+  .admin-guide-table,
+  .admin-detail-metrics > div,
+  .admin-visa-grid > a,
+  .admin-source-registry > a,
+  .admin-update-list article,
+  .analytics-metric-grid > div,
+  .admin-source-editor,
+  .admin-editor-secondary
+) {
+  background: var(--theme-raised) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] :where(
+  .admin-filterbar input,
+  .admin-filterbar select,
+  .analytics-toolbar button,
+  .admin-editor-unlock input,
+  .admin-service-editor input,
+  .admin-service-editor textarea,
+  .admin-service-editor select,
+  .admin-gate-form input,
+  .section-quick-search input
+) {
+  background: var(--theme-input) !important;
+  border-color: var(--line) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] :where(
+  .admin-guide-head,
+  .admin-safety-note
+) {
+  background: var(--theme-soft) !important;
+  border-color: var(--line) !important;
+  color: var(--muted) !important;
+}
+
+html[data-theme="dark"] a.admin-guide-row:hover,
+html[data-theme="dark"] .admin-action-grid > a:hover,
+html[data-theme="dark"] .admin-visa-grid > a:hover,
+html[data-theme="dark"] .admin-source-registry > a:hover,
+html[data-theme="dark"] .analytics-toolbar button:hover,
+html[data-theme="dark"] .admin-editor-secondary:hover {
+  background: var(--theme-hover) !important;
+  border-color: #3d5f50 !important;
+}
+
+html[data-theme="dark"] .admin-content-list li {
+  color: var(--ink) !important;
+}
+html[data-theme="dark"] .admin-visa-grid em,
+html[data-theme="dark"] .analytics-ranking > div > span,
+html[data-theme="dark"] .source-monitor-badge {
+  background: #253129 !important;
+  color: #c6d2cc !important;
+}
+html[data-theme="dark"] .source-monitor-badge.monitored {
+  background: #163a2a !important;
+  color: #9ce6bd !important;
+}
+html[data-theme="dark"] .admin-analytics-state details code {
+  background: var(--theme-input) !important;
+  color: var(--ink) !important;
+}
+
+html[data-theme="dark"] .analytics-setup-grid > div.ok,
+html[data-theme="dark"] .admin-editor-success {
+  background: #132d20 !important;
+  border-color: #315b43 !important;
+  color: var(--ink) !important;
+}
+html[data-theme="dark"] .analytics-setup-grid > div.missing {
+  background: #302714 !important;
+  border-color: #66522a !important;
+  color: #f0d9a7 !important;
+}
+
+html[data-theme="dark"] .update-type-clarification,
+html[data-theme="dark"] .journey-mode-agency-guided {
+  background: #2c243d !important;
+  border-color: #4b3d66 !important;
+  color: #d8c7f3 !important;
+}
+
+html[data-theme="dark"] .premium-primary-nav {
+  background: var(--theme-raised);
+  border-color: var(--line);
+}
+@media (max-width: 1020px) {
+  html[data-theme="dark"] .premium-primary-nav {
+    background: var(--theme-raised) !important;
+    border-color: var(--line) !important;
+    box-shadow: var(--shadow) !important;
+  }
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+  color: #82988d;
+  opacity: 1;
+}
