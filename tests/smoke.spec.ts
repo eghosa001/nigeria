@@ -104,9 +104,13 @@ test("visits unlock displays reports immediately and can be locked again", async
   await page.getByLabel("Analytics passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock visits" }).click();
   await expect(page.getByRole("button", { name: "Lock analytics" })).toBeVisible();
-  await expect(page.locator(".analytics-metric-grid")).toContainText("12");
-  await expect(page.locator(".analytics-metric-grid")).toContainText("18");
-  await expect(page.locator(".analytics-metric-grid")).toContainText("35");
+  const visitorMetrics = page.locator(".analytics-metric-grid").first();
+  await expect(visitorMetrics).toContainText("12");
+  await expect(visitorMetrics).toContainText("18");
+  await expect(visitorMetrics).toContainText("35");
+  const searchMetrics = page.locator(".analytics-metric-grid").nth(1);
+  await expect(searchMetrics).toContainText("1,460");
+  await expect(searchMetrics).toContainText("27");
   await expect(page.getByLabel("Daily page views").locator("[title]")).toHaveAttribute("title", /35 page views/);
   await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
   await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
