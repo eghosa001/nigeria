@@ -1,5 +1,7 @@
 "use client";
 
+import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
+
 type AnalyticsWindow = Window & typeof globalThis & {
   gtag?: (...args: unknown[]) => void;
 };
@@ -8,7 +10,7 @@ export type AnalyticsEventParams = Record<string, string | number | boolean | un
 
 export function trackEvent(name: string, params: AnalyticsEventParams = {}) {
   if (typeof window === "undefined") return;
-  const id = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const id = GA_MEASUREMENT_ID;
   if (!id) return;
 
   const analyticsWindow = window as AnalyticsWindow;

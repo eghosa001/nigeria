@@ -1,5 +1,6 @@
 import { Buffer } from "node:buffer";
 import { ANALYTICS_CLEAN_START, analyticsStartDate } from "@/lib/analytics-safety";
+import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 
 export type AnalyticsRange = "7d" | "30d" | "90d";
 export type AnalyticsTrafficMode = "all" | "clean";
@@ -130,7 +131,7 @@ export function analyticsReadConfigured() {
 }
 
 export function analyticsTrackingConfigured() {
-  return Boolean(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim());
+  return Boolean(GA_MEASUREMENT_ID);
 }
 
 function base64Url(input: string | Uint8Array) {
@@ -256,7 +257,7 @@ async function batchRunReports(requests: Array<Record<string, unknown>>) {
 
 async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
   const { propertyId = "" } = config();
-  const measurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "";
+  const measurementId = GA_MEASUREMENT_ID;
 
   if (!propertyId || !measurementId) {
     return {
