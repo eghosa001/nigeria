@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CategoryFaqs } from "@/components/category-faqs";
 import { JsonLd } from "@/components/json-ld";
@@ -115,6 +116,21 @@ export default async function CategoryPage({
           <span className="eyebrow">Service category</span>
           <h1>{category.name} services in Nigeria</h1>
           <p className="page-intro">{category.description}</p>
+
+          <AnswerFirst
+            title={"Find the right " + category.name.toLowerCase() + " task quickly"}
+            summary={"Start with the exact task you need. Each guide below shows the current fee or status, requirements, steps, official links and last-checked date."}
+            facts={[
+              { label: "Published guides", value: String(services.length) },
+              { label: "Agency groups", value: String(agencies.length) },
+              { label: "Source conflicts", value: String(services.filter((service) => service.status === "conflict").length) },
+              { label: "Common task", value: popularSearches[0]?.query ?? services[0]?.shortTitle ?? "Browse the guides below" },
+            ]}
+            links={[
+              ...(popularSearches[0] ? [{ href: "/services/" + popularSearches[0].serviceSlug, label: popularSearches[0].query }] : []),
+              { href: "/services?category=" + encodeURIComponent(category.name), label: "View all in directory", primary: true },
+            ]}
+          />
 
           <div className="category-summary">
             <div><strong>{services.length}</strong><span>published guides</span></div>
