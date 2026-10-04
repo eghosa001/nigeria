@@ -13,7 +13,35 @@ import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 
 const siteUrl = getSiteUrl();
 
-const gaBootstrap = `\n(function () {\n  var id = "${GA_MEASUREMENT_ID}";\n  var path = window.location.pathname;\n  var automated = navigator.webdriver === true;\n  var admin = path === "/admin" || path.indexOf("/admin/") === 0;\n  var disabledKey = "ga-disable-" + id;\n\n  window[disabledKey] = automated || admin;\n  if (automated || admin) return;\n\n  window.dataLayer = window.dataLayer || [];\n  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };\n\n  if (!document.querySelector("script[data-mynigeriaguide-ga]")) {\n    var script = document.createElement("script");\n    script.async = true;\n    script.setAttribute("data-mynigeriaguide-ga", "true");\n    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);\n    document.head.appendChild(script);\n  }\n\n  window.gtag("js", new Date());\n  window.gtag("config", id, { anonymize_ip: true });\n  window.__mngLastTrackedPath = path;\n})();\n`;\n\nconst themeBootstrap = `
+const gaBootstrap = `
+(function () {
+  var id = "${GA_MEASUREMENT_ID}";
+  var path = window.location.pathname;
+  var automated = navigator.webdriver === true;
+  var admin = path === "/admin" || path.indexOf("/admin/") === 0;
+  var disabledKey = "ga-disable-" + id;
+
+  window[disabledKey] = automated || admin;
+  if (automated || admin) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+
+  if (!document.querySelector("script[data-mynigeriaguide-ga]")) {
+    var script = document.createElement("script");
+    script.async = true;
+    script.setAttribute("data-mynigeriaguide-ga", "true");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(id);
+    document.head.appendChild(script);
+  }
+
+  window.gtag("js", new Date());
+  window.gtag("config", id, { anonymize_ip: true });
+  window.__mngLastTrackedPath = path;
+})();
+`;
+
+const themeBootstrap = `
 (function () {
   var preference = "light";
   try {
