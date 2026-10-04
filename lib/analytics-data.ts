@@ -307,7 +307,7 @@ async function getSearchPerformance(startDate: string): Promise<SearchPerformanc
         dataState: "all",
         dimensions: ["date"],
         aggregationType: "byProperty",
-        rowLimit: Math.max(days + 5, 100),
+        rowLimit: 100,
       }),
     ]);
 
