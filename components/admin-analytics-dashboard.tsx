@@ -170,6 +170,44 @@ export function AdminAnalyticsDashboard() {
         GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.
       </p>
 
+      <section className="admin-panel">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Analytics connection</span>
+            <h2>{data.connection?.verified ? "GA4 property verified" : "GA4 property needs attention"}</h2>
+          </div>
+          <small>{data.connection?.verified ? "Tracking and reporting point to the same property" : "Measurement/property match not confirmed"}</small>
+        </div>
+        <div className="analytics-ranking">
+          <div>
+            <span>1</span>
+            <strong>Measurement ID</strong>
+            <small>{data.connection?.measurementId || "Not configured"}</small>
+            <b>{data.connection?.verified ? "Matched" : "Check"}</b>
+          </div>
+          <div>
+            <span>2</span>
+            <strong>Property ID</strong>
+            <small>{data.connection?.propertyId || "Not configured"}</small>
+            <b>{data.connection?.streams?.length ?? 0} web stream{(data.connection?.streams?.length ?? 0) === 1 ? "" : "s"}</b>
+          </div>
+          {(data.connection?.streams ?? []).map((stream, index) => (
+            <div key={stream.measurementId + stream.defaultUri}>
+              <span>{index + 3}</span>
+              <strong>{stream.displayName || "Web stream"}</strong>
+              <small>{stream.defaultUri || stream.measurementId}</small>
+              <b>{stream.measurementId}</b>
+            </div>
+          ))}
+        </div>
+        {!data.connection?.verified ? (
+          <div className="admin-empty">
+            <strong>The dashboard is not yet proven to be reading the same GA4 property that the public site sends data to.</strong>
+            <p>{data.connection?.error || "The configured public measurement ID was not found among this GA4 property's web streams."}</p>
+          </div>
+        ) : null}
+      </section>
+
       <div className="analytics-metric-grid">
         <div><span>GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Processed unique users; recent traffic can take time to enter this total</small></div>
         <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
