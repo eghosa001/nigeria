@@ -21766,7 +21766,7 @@
     "steps": [
       "Dial *770# from the phone linked to the Fidelity Bank account and select a transaction from the menu.",
       "When prompted to register, enter the Fidelity account number.",
-      "Create the private *770# transaction PIN and complete the registration.",
+      "Create the private *770# transaction PIN, re-enter it when Fidelity asks for confirmation, and wait for the USSD registration success message.",
       "Dial *770*1# or another published *770# short code and choose the transfer, airtime, bill, balance, card or account service needed.",
       "Authenticate the transaction with the USSD PIN and keep the success or reference message."
     ],
