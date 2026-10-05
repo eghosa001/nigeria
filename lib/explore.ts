@@ -1,4 +1,4 @@
-export type ExploreGuideKind = "city" | "destination" | "itinerary";
+export type ExploreGuideKind = "city" | "destination" | "itinerary" | "event";
 
 export type ExploreGuide = {
   slug: string;
