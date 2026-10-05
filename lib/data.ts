@@ -975,6 +975,27 @@ export const agencies: Agency[] = [
     "shortName": "Max Air",
     "description": "Private Nigerian airline offering domestic/international booking, online check-in, booking management and baggage services.",
     "website": "https://maxair.com.ng/"
+  },
+  {
+    "slug": "carbon",
+    "name": "Carbon Microfinance Bank",
+    "shortName": "Carbon",
+    "description": "Private CBN-licensed digital bank offering current accounts, payments, KYC-tier services and personal credit in Nigeria.",
+    "website": "https://www.getcarbon.co/"
+  },
+  {
+    "slug": "fairmoney",
+    "name": "FairMoney Microfinance Bank",
+    "shortName": "FairMoney",
+    "description": "Private CBN-licensed digital bank offering personal and business accounts, payments, cards, savings and credit services.",
+    "website": "https://fairmoney.io/"
+  },
+  {
+    "slug": "abc-transport",
+    "name": "ABC Transport Plc",
+    "shortName": "ABC Transport",
+    "description": "Private Nigerian intercity and cross-border transport operator offering route schedules and online bus booking.",
+    "website": "https://www.abctransport.com/"
   }
 ];
 
