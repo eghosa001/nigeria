@@ -3445,7 +3445,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       { label: "EHA Clinics — Assistant Manager, Laboratory and Diagnostics", url: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180", lastChecked: "2026-10-05" },
       { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
     ]
-  },,
+  },
   ...jobScaleWave
 ];
 
