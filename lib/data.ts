@@ -996,6 +996,27 @@ export const agencies: Agency[] = [
     "shortName": "ABC Transport",
     "description": "Private Nigerian intercity and cross-border transport operator offering route schedules and online bus booking.",
     "website": "https://www.abctransport.com/"
+  },
+  {
+    "slug": "remita",
+    "name": "Remita Payment Services Limited",
+    "shortName": "Remita",
+    "description": "Private CBN-licensed payment platform for biller payments, RRR invoices and electronic payment services in Nigeria.",
+    "website": "https://www.remita.net/"
+  },
+  {
+    "slug": "red-star-express",
+    "name": "Red Star Express Plc",
+    "shortName": "Red Star Express",
+    "description": "Private Nigerian courier and logistics provider and FedEx licensee offering domestic/international shipping and tracking.",
+    "website": "https://redstarplc.com/"
+  },
+  {
+    "slug": "aiico",
+    "name": "AIICO Insurance Plc",
+    "shortName": "AIICO",
+    "description": "Private Nigerian composite insurer offering motor, life, health, travel and other insurance purchase and claims services.",
+    "website": "https://www.aiicoplc.com/"
   }
 ];
 
