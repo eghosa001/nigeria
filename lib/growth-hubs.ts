@@ -1059,7 +1059,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "buy Tangerine third party motor insurance", serviceSlug: "tangerine-buy-third-party-motor-insurance" },
       { query: "file Tangerine insurance claim", serviceSlug: "tangerine-file-track-insurance-claim" },
       { query: "buy Sovereign Trust motor insurance", serviceSlug: "sovereign-trust-buy-motor-insurance-online" },
-      { query: "file Sovereign Trust motor claim", serviceSlug: "sovereign-trust-file-motor-claim" }
+      { query: "file Sovereign Trust motor claim", serviceSlug: "sovereign-trust-file-motor-claim" },
+      { query: "open Stanbic IBTC pension RSA", serviceSlug: "stanbic-pension-rsa-registration" },
+      { query: "get Stanbic pension statement", serviceSlug: "stanbic-pension-rsa-statement" },
+      { query: "update Stanbic pension biodata", serviceSlug: "stanbic-pension-update-biodata" },
+      { query: "recover Stanbic pension RSA PIN", serviceSlug: "stanbic-pension-recover-pin-passcode" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1429,7 +1433,11 @@ export const growthHubs: GrowthHub[] = [
       "tangerine-buy-third-party-motor-insurance",
       "tangerine-file-track-insurance-claim",
       "sovereign-trust-buy-motor-insurance-online",
-      "sovereign-trust-file-motor-claim"
+      "sovereign-trust-file-motor-claim",
+      "stanbic-pension-rsa-registration",
+      "stanbic-pension-rsa-statement",
+      "stanbic-pension-update-biodata",
+      "stanbic-pension-recover-pin-passcode"
     ]
   },
 
