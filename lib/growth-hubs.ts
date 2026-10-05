@@ -278,9 +278,17 @@ export const growthHubs: GrowthHub[] = [
       { query: "CAC change company name", serviceSlug: "cac-change-company-name" },
       { query: "increase share capital CAC", serviceSlug: "cac-increase-issued-share-capital" },
       { query: "CAC letter of good standing", serviceSlug: "cac-letter-good-standing" },
-      { query: "change company secretary CAC", serviceSlug: "cac-company-secretary-change" }
+      { query: "change company secretary CAC", serviceSlug: "cac-company-secretary-change" },
+      { query: "alter memorandum and articles CAC", serviceSlug: "cac-alter-memorandum-articles" },
+      { query: "convert private company to public CAC", serviceSlug: "cac-private-to-public-reregistration" },
+      { query: "convert public company to private CAC", serviceSlug: "cac-public-to-private-reregistration" },
+      { query: "reduce share capital CAC", serviceSlug: "cac-reduce-issued-share-capital" },
+      { query: "CAC return of allotment", serviceSlug: "cac-return-of-allotment" },
+      { query: "register company charge CAC", serviceSlug: "cac-register-company-charge" },
+      { query: "CAC satisfaction of charge", serviceSlug: "cac-satisfy-company-charge" },
+      { query: "CAC voluntary striking off", serviceSlug: "cac-voluntary-striking-off" }
     ],
-    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report", "cac-change-company-name", "cac-increase-issued-share-capital", "cac-letter-good-standing", "cac-company-secretary-change"]
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report", "cac-change-company-name", "cac-increase-issued-share-capital", "cac-letter-good-standing", "cac-company-secretary-change", "cac-alter-memorandum-articles", "cac-private-to-public-reregistration", "cac-public-to-private-reregistration", "cac-reduce-issued-share-capital", "cac-return-of-allotment", "cac-register-company-charge", "cac-satisfy-company-charge", "cac-voluntary-striking-off"]
   },
   {
     slug: "drivers-licence",
@@ -354,9 +362,12 @@ export const growthHubs: GrowthHub[] = [
       { query: "verify NAFDAC number", serviceSlug: "nafdac-product-verification" },
       { query: "SONCAP certificate Nigeria", serviceSlug: "soncap-import-certification" },
       { query: "MANCAP certification", serviceSlug: "son-mancap-certification" },
-      { query: "SON product registration", serviceSlug: "son-product-registration" }
+      { query: "SON product registration", serviceSlug: "son-product-registration" },
+      { query: "NAFDAC herbal medicine registration", serviceSlug: "nafdac-herbal-supplement-registration" },
+      { query: "NAFDAC pesticide registration", serviceSlug: "nafdac-pesticide-registration" },
+      { query: "NAFDAC animal feed registration", serviceSlug: "nafdac-animal-feed-registration" }
     ],
-    serviceSlugs: ["nafdac-product-registration", "nafdac-food-product-registration", "nafdac-cosmetics-registration", "nafdac-medical-device-registration", "nafdac-drug-product-registration", "nafdac-product-verification", "nafdac-product-renewal", "soncap-import-certification", "son-mancap-certification", "son-product-registration"]
+    serviceSlugs: ["nafdac-product-registration", "nafdac-food-product-registration", "nafdac-cosmetics-registration", "nafdac-medical-device-registration", "nafdac-drug-product-registration", "nafdac-product-verification", "nafdac-product-renewal", "soncap-import-certification", "son-mancap-certification", "son-product-registration", "nafdac-herbal-supplement-registration", "nafdac-pesticide-registration", "nafdac-animal-feed-registration"]
   },
   {
     slug: "business-compliance-nigeria",
