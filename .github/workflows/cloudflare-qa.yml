@@ -35,11 +35,26 @@ jobs:
         id: scope
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" != "pull_request" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if git diff --quiet HEAD^1 HEAD -- app components lib public data tests vite.config.ts wrangler.jsonc package.json next.config.ts playwright.cloudflare.config.ts; then
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            changed="$(git diff --name-only HEAD^1 HEAD^2)"
+          else
+            changed="$(git diff --name-only HEAD^1 HEAD)"
+          fi
+
+          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/check-jobs-content\.ts$)' || true)"
+          if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "Jobs-only change; focused validation runs in CI, so Cloudflare browser QA is skipped."
+            exit 0
+          fi
+
+          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|data|tests)/|^(vite\.config\.ts|wrangler\.jsonc|package\.json|next\.config\.ts|playwright\.cloudflare\.config\.ts|\.github/workflows/cloudflare-qa\.yml)$' || true)"
+          if [ -z "$relevant" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "No Cloudflare-runtime changes; required workflow can finish without the full suite."
           else
