@@ -19213,7 +19213,7 @@
       "Open JED's official website and choose Apply for MAP Meter or the metering request option.",
       "Complete the customer/account and premises information requested for the meter application.",
       "Submit the request and wait for JED to place the customer into the applicable NERC-approved deployment or MAP process.",
-      "If the application is assigned to an upfront MAP route, pay only the approved amount through the provider-authorised process.",
+      "If JED assigns the application to an upfront MAP route, pay only the meter amount shown in the provider-approved MAP payment instruction and keep the receipt.",
       "Keep the meter application and payment evidence and follow the request through JED customer care or the metering portal."
     ],
     "notes": [
@@ -19496,7 +19496,7 @@
     "steps": [
       "Dial *7111*0# from the mobile number registered with Keystone Bank.",
       "Choose Register, enter the Keystone Bank account number and enter the customer's year of birth.",
-      "Create the private transaction PIN and complete the registration confirmation.",
+      "Create the private transaction PIN, enter it again when Keystone asks for confirmation, and wait for the registration success message.",
       "Dial *7111# again and choose the required balance, transfer, airtime, data, bills, card or other supported service.",
       "Authenticate financial transactions with the transaction PIN and keep the success message or reference."
     ],
@@ -19637,7 +19637,7 @@
     "related": [
       "avon-provider-directory",
       "hygeia-health-plan-purchase",
-      "nhia-individual-family-enrolment"
+      "nhia-gifship-enrolment"
     ],
     "lastVerified": "2026-10-05",
     "searchTerms": [
@@ -19984,7 +19984,7 @@
       "The installation form for the new replacement meter"
     ],
     "steps": [
-      "Prepare a written complaint explaining that unused units from the old JED prepaid meter need to be moved to the replacement meter.",
+      "Contact JED customer care and prepare a written complaint stating that unused units from the old prepaid meter need to be moved to the replacement meter.",
       "Include the old meter serial number and the amount/value of the affected prepaid token or remaining units.",
       "Attach the token purchase evidence and a clear photograph showing the units remaining on the old meter.",
       "Attach the installation form for the new meter and submit the complaint to JED customer care.",
