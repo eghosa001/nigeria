@@ -6488,5 +6488,721 @@
       "Silverbird gift card Nigeria",
       "use Silverbird movie voucher"
     ]
+  },
+  {
+    "slug": "smartcash-wallet-opening",
+    "title": "How to open a SmartCash PSB wallet",
+    "shortTitle": "SmartCash wallet",
+    "summary": "SmartCash Payment Service Bank's wallet-registration route through the mobile app or *939#, starting with a phone-number account and allowing higher KYC tiers as more identity information is added.",
+    "category": "Banking",
+    "agencySlug": "smartcash-psb",
+    "feeLabel": "No wallet-opening fee stated",
+    "feeNote": "SmartCash does not state a separate fee for creating the wallet through its app or USSD registration route.",
+    "timeline": "The Tier 1 wallet is created through the app or *939# after registration; higher tiers require additional identity verification.",
+    "status": "verified",
+    "officialPortal": "https://smartcashpsb.ng/help-and-support",
+    "requirements": [
+      "A mobile phone number for the initial SmartCash wallet",
+      "The personal details requested during app or USSD registration",
+      "BVN, passport photograph and valid ID when upgrading to the higher KYC tier that requires them",
+      "A private wallet PIN for later transactions"
+    ],
+    "steps": [
+      "Download the official SmartCash PSB app or dial *939# and choose the wallet-registration option.",
+      "Enter the mobile number and personal information requested for the new wallet.",
+      "Create the wallet security PIN and complete the Tier 1 registration prompts.",
+      "Fund the wallet from another SmartCash wallet, a Nigerian bank or an authorised SmartCash agent when ready to transact.",
+      "Use the in-app or USSD upgrade route later if higher limits require BVN, NIN or additional identity evidence."
+    ],
+    "notes": [
+      "SmartCash says Tier 1 requires a mobile number and name, while higher tiers require additional identity evidence.",
+      "The provider supports transfers, airtime/data, bills, QR payments and transaction history from the wallet.",
+      "Never share the wallet PIN or OTP with a caller or agent."
+    ],
+    "sources": [
+      {
+        "label": "SmartCash Help & Support",
+        "agency": "SmartCash Payment Service Bank",
+        "url": "https://smartcashpsb.ng/help-and-support",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SmartCash Home",
+        "agency": "SmartCash Payment Service Bank",
+        "url": "https://smartcashpsb.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "smartcash-wallet-upgrade",
+      "smartcash-emergency-block-wallet",
+      "smartcash-agent-onboarding",
+      "9psb-ussd-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open SmartCash wallet",
+      "SmartCash PSB account",
+      "SmartCash *939#",
+      "SmartCash wallet registration",
+      "SmartCash PSB Nigeria"
+    ]
+  },
+  {
+    "slug": "smartcash-wallet-upgrade",
+    "title": "How to upgrade a SmartCash PSB wallet",
+    "shortTitle": "SmartCash wallet upgrade",
+    "summary": "SmartCash's app and USSD routes for increasing a wallet's KYC level by adding BVN/NIN, personal information and an accepted identity document.",
+    "category": "Banking",
+    "agencySlug": "smartcash-psb",
+    "feeLabel": "No wallet-upgrade fee stated",
+    "feeNote": "SmartCash does not state a separate fee for the published account-upgrade process.",
+    "timeline": "The upgrade is submitted through the app or USSD after the required verification information is entered; completion depends on successful identity validation.",
+    "status": "verified",
+    "officialPortal": "https://smartcashpsb.ng/help-and-support",
+    "requirements": [
+      "An existing SmartCash PSB wallet",
+      "The wallet PIN for the USSD upgrade route",
+      "The customer's BVN and NIN where requested",
+      "The personal details and valid ID information required for the target KYC level"
+    ],
+    "steps": [
+      "Sign in to the SmartCash app and open the account/profile upgrade option, or dial *939# for the USSD route.",
+      "For USSD, choose My Profile and then Upgrade Wallet/Account.",
+      "Enter the wallet PIN and provide the BVN/NIN requested by SmartCash.",
+      "Complete the personal information and valid-ID fields shown for the target account level.",
+      "Submit the upgrade and confirm the revised wallet tier/limits after SmartCash completes verification."
+    ],
+    "notes": [
+      "SmartCash publishes different requirements and limits for Tier 1, Tier 2 and Tier 3 wallets.",
+      "The exact transaction/balance limit should be checked in the current app/help page because limits can change.",
+      "Use only the official SmartCash app or *939# for the upgrade."
+    ],
+    "sources": [
+      {
+        "label": "SmartCash Help & Support",
+        "agency": "SmartCash Payment Service Bank",
+        "url": "https://smartcashpsb.ng/help-and-support",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "smartcash-wallet-opening",
+      "smartcash-emergency-block-wallet",
+      "bvn-retrieval",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "upgrade SmartCash wallet",
+      "SmartCash Tier 2",
+      "SmartCash Tier 3",
+      "SmartCash BVN NIN upgrade",
+      "SmartCash account limit"
+    ]
+  },
+  {
+    "slug": "smartcash-emergency-block-wallet",
+    "title": "How to block a SmartCash wallet if a phone is lost or compromised",
+    "shortTitle": "Block SmartCash wallet",
+    "summary": "SmartCash's emergency wallet-lock route using *939*911# from the registered line or *939*911*customer-number# from another phone, followed by the wallet PIN.",
+    "category": "Banking",
+    "agencySlug": "smartcash-psb",
+    "feeLabel": "No emergency-block fee stated",
+    "feeNote": "SmartCash does not state a separate fee for using its published emergency wallet-block code.",
+    "timeline": "SmartCash presents the USSD route as an emergency security action; contact customer care immediately if the block cannot be completed.",
+    "status": "verified",
+    "officialPortal": "https://smartcashpsb.ng/help-and-support",
+    "requirements": [
+      "The registered SmartCash phone number for the wallet that needs to be blocked",
+      "The wallet PIN used to authenticate the emergency request",
+      "Access to the registered phone or another phone capable of dialing the emergency USSD code"
+    ],
+    "steps": [
+      "From the registered SmartCash number, dial *939*911#; from another phone, dial *939*911*customer-phone-number#.",
+      "Enter the PIN linked to the wallet when the USSD prompt requests authentication.",
+      "Confirm the emergency block request and stop using any compromised device or session.",
+      "Contact SmartCash customer care if the USSD action fails or if suspicious transactions are already visible.",
+      "Use the provider's official customer-care route when ready to request wallet unblocking or further fraud investigation."
+    ],
+    "notes": [
+      "SmartCash explicitly labels this route for a lost, stolen or compromised phone/wallet.",
+      "The provider's help page says unblocking requires contacting customer service.",
+      "Do not disclose the PIN to anyone assisting with the emergency block."
+    ],
+    "sources": [
+      {
+        "label": "SmartCash Help & Support",
+        "agency": "SmartCash Payment Service Bank",
+        "url": "https://smartcashpsb.ng/help-and-support",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "smartcash-wallet-opening",
+      "smartcash-wallet-upgrade",
+      "opay-emergency-lock-account-card"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block SmartCash wallet",
+      "SmartCash emergency code",
+      "*939*911#",
+      "lost SmartCash phone",
+      "SmartCash fraud block"
+    ]
+  },
+  {
+    "slug": "smartcash-agent-onboarding",
+    "title": "How to become a SmartCash PSB agent",
+    "shortTitle": "SmartCash agent signup",
+    "summary": "SmartCash PSB's online agent-onboarding form for submitting personal, BVN/NIN, outlet and recent address-evidence information before the provider reviews the application.",
+    "category": "Business",
+    "agencySlug": "smartcash-psb",
+    "feeLabel": "Agent commercial terms confirmed during onboarding",
+    "feeNote": "SmartCash's public agent form does not state one universal onboarding or terminal fee. Confirm any commercial charge with the provider before payment.",
+    "timeline": "SmartCash does not publish one guaranteed approval time on the agent form; onboarding depends on review of the submitted identity and outlet information.",
+    "status": "verified",
+    "officialPortal": "https://smartcashpsb.ng/become-an-agent",
+    "requirements": [
+      "Full name, mobile number and email address",
+      "BVN and NIN for the applicant",
+      "Date of birth, gender and state/region information",
+      "Outlet name, shop type and full outlet address",
+      "A utility bill, rent agreement or bank statement not older than three months"
+    ],
+    "steps": [
+      "Open SmartCash PSB's official Become an Agent form.",
+      "Enter the applicant's contact information, BVN, NIN, gender and date of birth.",
+      "Complete the outlet name, shop type, address, city, region and state fields.",
+      "Upload an accepted recent address document in the file format and size allowed by the form.",
+      "Submit the application and use SmartCash's official contact channels for status or follow-up."
+    ],
+    "notes": [
+      "The public form accepts an electricity bill, water bill, rent agreement or bank statement as recent address evidence.",
+      "The agent application is separate from opening an ordinary SmartCash wallet.",
+      "Do not pay an intermediary whose charges cannot be confirmed by SmartCash."
+    ],
+    "sources": [
+      {
+        "label": "SmartCash Become an Agent",
+        "agency": "SmartCash Payment Service Bank",
+        "url": "https://smartcashpsb.ng/become-an-agent",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SmartCash Help & Support",
+        "agency": "SmartCash Payment Service Bank",
+        "url": "https://smartcashpsb.ng/help-and-support",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "smartcash-wallet-opening",
+      "9psb-agent-onboarding",
+      "nomba-pos-terminal"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "SmartCash agent registration",
+      "become SmartCash agent",
+      "SmartCash POS agent",
+      "SmartCash agent requirements",
+      "SmartCash PSB agent form"
+    ]
+  },
+  {
+    "slug": "hope-psbank-account-opening",
+    "title": "How to open a Hope PSBank account",
+    "shortTitle": "Hope PSBank account",
+    "summary": "Hope Payment Service Bank's free digital account-opening route through its website or mobile app for individuals and businesses seeking a phone-based payment-service-bank account.",
+    "category": "Banking",
+    "agencySlug": "hope-psbank",
+    "feeLabel": "Free account opening",
+    "feeNote": "Hope PSBank currently advertises opening an account for free.",
+    "timeline": "Hope PSBank promotes a four-step digital account-opening flow; final access depends on successful completion of the registration and identity checks.",
+    "status": "verified",
+    "officialPortal": "https://hopepsbank.com/",
+    "requirements": [
+      "A mobile phone number and personal contact information for the digital account",
+      "The identity/KYC information requested by Hope PSBank during registration",
+      "Access to the Hope Digital App or official account-opening route",
+      "A private PIN/security credential for transactions after registration"
+    ],
+    "steps": [
+      "Open Hope PSBank's official website or Hope Digital App and choose Open Account.",
+      "Enter the personal/contact information requested by the account-registration flow.",
+      "Complete the identity/KYC prompts displayed by Hope PSBank and create the account security credential.",
+      "Review the account details and finish the registration process.",
+      "Use the Hope Digital App or other official channels for transfers, bills and other supported services after activation."
+    ],
+    "notes": [
+      "Hope PSBank describes itself as a digital-first payment service bank and advertises free account opening.",
+      "The provider also allows phone-number-based transfers and wallet services.",
+      "Use the current app/website limits rather than assuming promotional transfer terms remain permanent."
+    ],
+    "sources": [
+      {
+        "label": "Hope Payment Service Bank",
+        "agency": "Hope Payment Service Bank",
+        "url": "https://hopepsbank.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hope-psbank-wallet-activation",
+      "hope-psbank-agent-onboarding",
+      "9psb-ussd-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Hope PSBank account",
+      "Hope PSBank registration",
+      "Hope Payment Service Bank account",
+      "Hope Digital App account",
+      "Hope PSBank Nigeria"
+    ]
+  },
+  {
+    "slug": "hope-psbank-wallet-activation",
+    "title": "How to activate Hope Wallet with *569*9#",
+    "shortTitle": "Activate Hope Wallet",
+    "summary": "Hope PSBank's published *569*9# route for activating Hope Wallet and using the phone number for supported ATM, POS, web and peer-to-peer payment functions.",
+    "category": "Banking",
+    "agencySlug": "hope-psbank",
+    "feeLabel": "No wallet-activation fee stated",
+    "feeNote": "Hope PSBank does not state a separate fee for the published wallet activation code.",
+    "timeline": "Wallet activation occurs through the *569*9# USSD flow after the customer's registration/security prompts are completed.",
+    "status": "verified",
+    "officialPortal": "https://hopepsbank.com/",
+    "requirements": [
+      "A mobile phone and phone number for the Hope Wallet",
+      "The personal/KYC information requested during the wallet activation process",
+      "A private 6–8 digit PIN or security credential used for Hope PSBank transactions"
+    ],
+    "steps": [
+      "Dial *569*9# on the mobile phone and select the Hope Wallet activation option.",
+      "Enter the personal/account information requested by the USSD prompts.",
+      "Create or confirm the transaction PIN/security credential.",
+      "Finish the activation and verify that the wallet is available for transfers and supported payment channels.",
+      "Use the Hope Digital App or official support channel if activation fails or the wallet cannot transact."
+    ],
+    "notes": [
+      "Hope PSBank says the wallet can support ATM, POS, web and person-to-person transactions.",
+      "The provider emphasizes entering the PIN only on the customer's own handset or personal device.",
+      "The exact wallet transaction limits should be checked in the current service channel."
+    ],
+    "sources": [
+      {
+        "label": "Hope Payment Service Bank",
+        "agency": "Hope Payment Service Bank",
+        "url": "https://hopepsbank.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hope-psbank-account-opening",
+      "hope-psbank-agent-onboarding",
+      "smartcash-wallet-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hope Wallet activation",
+      "*569*9#",
+      "Hope PSBank USSD",
+      "activate Hope Wallet",
+      "Hope PSBank wallet"
+    ]
+  },
+  {
+    "slug": "hope-psbank-agent-onboarding",
+    "title": "How to become a Hope PSBank agent",
+    "shortTitle": "Hope PSBank agent",
+    "summary": "Hope PSBank's agency-banking route for individuals, registered businesses and larger retail organisations to become agents through the website/app, with a separate email route for Branch Partners.",
+    "category": "Business",
+    "agencySlug": "hope-psbank",
+    "feeLabel": "Agent commercial terms confirmed during onboarding",
+    "feeNote": "Hope PSBank does not publish one universal agent fee on the agency page. Confirm any equipment, float or commercial requirement during the official onboarding.",
+    "timeline": "Hope PSBank says Agent Managers or Agents can start the application through its website/app; final activation depends on the provider's onboarding review.",
+    "status": "verified",
+    "officialPortal": "https://hopepsbank.com/Agency",
+    "requirements": [
+      "An applicant category accepted by Hope PSBank, such as an individual/unregistered business, registered enterprise or qualifying corporate retail network",
+      "The identity and business information requested by the digital agent-onboarding flow",
+      "A suitable operating location and the funding/operational information required during the provider's review"
+    ],
+    "steps": [
+      "Open Hope PSBank's official Agency page or Hope Digital App and choose the Agent or Agent Manager onboarding route.",
+      "Select the applicant/business category and enter the identity, contact and outlet information requested.",
+      "Submit any supporting KYC/business information required by the onboarding flow.",
+      "Complete the provider's review and commercial setup for the agency profile.",
+      "Begin supported cash-in/out, transfers, bills and other agent services only after Hope PSBank activates the agent account."
+    ],
+    "notes": [
+      "Hope PSBank says individuals, registered businesses and corporates with retail/distribution networks can qualify for agent roles.",
+      "Branch Partner applications use a separate contact route from ordinary Agent/Agent Manager onboarding.",
+      "Agent transactions are PIN protected; credentials should not be shared."
+    ],
+    "sources": [
+      {
+        "label": "Hope PSBank Agency",
+        "agency": "Hope Payment Service Bank",
+        "url": "https://hopepsbank.com/Agency",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Hope Payment Service Bank",
+        "agency": "Hope Payment Service Bank",
+        "url": "https://hopepsbank.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hope-psbank-account-opening",
+      "9psb-agent-onboarding",
+      "smartcash-agent-onboarding"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hope PSBank agent",
+      "become Hope PSBank agent",
+      "Hope agency banking",
+      "Hope PSBank POS agent",
+      "Hope agent registration"
+    ]
+  },
+  {
+    "slug": "clinix-book-appointment",
+    "title": "How to book an appointment at Clinix Healthcare",
+    "shortTitle": "Clinix appointment",
+    "summary": "Clinix Healthcare's appointment route for patients seeking diagnostic or clinical services through the provider's booking/contact channels and branch network.",
+    "category": "Healthcare",
+    "agencySlug": "clinix-healthcare",
+    "feeLabel": "Fee depends on the selected service or test",
+    "feeNote": "Clinix does not publish one universal appointment fee because pricing depends on the selected diagnostic or healthcare service.",
+    "timeline": "Appointment timing depends on the selected branch and service; Clinix states that its Ilupeju head office operates 24 hours and other locations have their own schedules.",
+    "status": "verified",
+    "officialPortal": "https://clinixhealthcare.com.ng/contact-us/",
+    "requirements": [
+      "The patient's name and contact information",
+      "The diagnostic test, imaging service or clinical appointment being requested",
+      "A preferred Clinix location and appointment time where the booking route requests them",
+      "Any referral, previous result or preparation information relevant to the selected service"
+    ],
+    "steps": [
+      "Open Clinix Healthcare's official Contact/Appointment page and choose the appointment route.",
+      "Enter the patient's contact information and identify the service or diagnostic test required.",
+      "Choose the Clinix branch and preferred appointment information shown by the booking form.",
+      "Submit the booking request and wait for the provider's confirmation or further preparation instruction.",
+      "Use the emergency contact numbers instead of a routine appointment form when immediate emergency care is required."
+    ],
+    "notes": [
+      "Clinix operates diagnostic services including pathology, imaging and other medical services.",
+      "Different tests can require different preparation, so follow instructions for the exact test rather than a generic rule.",
+      "This guide explains booking mechanics and does not recommend a test or treatment."
+    ],
+    "sources": [
+      {
+        "label": "Clinix Contact and Appointment",
+        "agency": "Clinix Healthcare",
+        "url": "https://clinixhealthcare.com.ng/contact-us/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Clinix Healthcare",
+        "agency": "Clinix Healthcare",
+        "url": "https://clinixhealthcare.com.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "clinix-home-sample-collection",
+      "clinix-ambulance-request",
+      "synlab-home-sample-collection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Clinix appointment",
+      "book Clinix Healthcare",
+      "Clinix diagnostic appointment",
+      "Clinix Lagos booking",
+      "Clinix test booking"
+    ]
+  },
+  {
+    "slug": "clinix-home-sample-collection",
+    "title": "How to book Clinix home sample collection",
+    "shortTitle": "Clinix home collection",
+    "summary": "Clinix Healthcare's home-sample collection form for patients who want a diagnostic sample collected at an address instead of visiting a centre.",
+    "category": "Healthcare",
+    "agencySlug": "clinix-healthcare",
+    "feeLabel": "Fee depends on the selected test and collection",
+    "feeNote": "Clinix does not publish one universal home-collection fee on the request form. Confirm the amount when the provider confirms the requested test and location.",
+    "timeline": "The form says the appointment is subject to confirmation; timing depends on the requested pickup date/time, branch and availability.",
+    "status": "verified",
+    "officialPortal": "https://clinixhealthcare.com.ng/home-sample-collection/",
+    "requirements": [
+      "The patient's first/other/last names, age and gender",
+      "A requested pickup date and time",
+      "A contact phone number and full collection address including nearest bus stop",
+      "The selected Clinix branch associated with the request"
+    ],
+    "steps": [
+      "Open Clinix Healthcare's official Home Sample Collection form.",
+      "Enter the patient's identity and contact information.",
+      "Choose the requested pickup date/time and enter the collection address plus nearest bus stop.",
+      "Select the relevant Clinix branch and submit the home-collection request.",
+      "Wait for Clinix to confirm the appointment and follow any preparation instructions for the exact test being collected."
+    ],
+    "notes": [
+      "The provider explicitly states that home-collection appointments are subject to confirmation.",
+      "Test preparation varies by diagnostic service and should be confirmed before the collection visit.",
+      "This service is for sample collection and does not replace emergency medical transport."
+    ],
+    "sources": [
+      {
+        "label": "Clinix Home Sample Collection",
+        "agency": "Clinix Healthcare",
+        "url": "https://clinixhealthcare.com.ng/home-sample-collection/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "clinix-book-appointment",
+      "clinix-ambulance-request",
+      "synlab-home-sample-collection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Clinix home sample collection",
+      "Clinix home test Nigeria",
+      "book Clinix home collection",
+      "Clinix lab home service",
+      "Clinix sample pickup"
+    ]
+  },
+  {
+    "slug": "clinix-ambulance-request",
+    "title": "How to request a Clinix Healthcare ambulance",
+    "shortTitle": "Clinix ambulance request",
+    "summary": "Clinix Healthcare's ambulance-request form for entering patient condition, pickup details, preferred branch and oxygen/status information before the provider confirms availability.",
+    "category": "Healthcare",
+    "agencySlug": "clinix-healthcare",
+    "feeLabel": "Ambulance charge confirmed by Clinix",
+    "feeNote": "Clinix does not publish one universal ambulance price on the request form. Confirm the charge and service availability directly with the provider.",
+    "timeline": "Clinix states that the ambulance appointment/request is subject to confirmation; emergency phone support is also published on its contact pages.",
+    "status": "verified",
+    "officialPortal": "https://clinixhealthcare.com.ng/ambulance-service/",
+    "requirements": [
+      "The patient's name, age and gender",
+      "The pickup date/time, contact numbers and pickup address",
+      "The nearest bus stop and selected Clinix branch",
+      "Information about oxygen requirement and whether the patient is stable/unstable and conscious/unconscious"
+    ],
+    "steps": [
+      "Open Clinix Healthcare's official Ambulance Service form or call the provider's emergency contact when immediate assistance is needed.",
+      "Enter the patient's identity and condition information requested by the form.",
+      "Provide the pickup date/time, phone number, address and nearest bus stop.",
+      "Choose the Clinix branch and indicate oxygen, stability and consciousness information.",
+      "Submit the request and wait for Clinix confirmation; use the emergency phone line for time-critical situations rather than relying only on the web form."
+    ],
+    "notes": [
+      "The web form states that the ambulance appointment is subject to confirmation.",
+      "A serious emergency should be escalated through the provider's emergency telephone route as well as the form where appropriate.",
+      "This guide does not assess whether ambulance transport is medically appropriate."
+    ],
+    "sources": [
+      {
+        "label": "Clinix Ambulance Service",
+        "agency": "Clinix Healthcare",
+        "url": "https://clinixhealthcare.com.ng/ambulance-service/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Clinix Contact",
+        "agency": "Clinix Healthcare",
+        "url": "https://clinixhealthcare.com.ng/contact-us/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "clinix-book-appointment",
+      "clinix-home-sample-collection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Clinix ambulance",
+      "Clinix ambulance Lagos",
+      "request Clinix ambulance",
+      "Clinix emergency ambulance",
+      "Clinix healthcare ambulance"
+    ]
+  },
+  {
+    "slug": "clinix-corporate-health-screening",
+    "title": "How to request a Clinix corporate health screening package",
+    "shortTitle": "Clinix corporate screening",
+    "summary": "Clinix Healthcare's corporate enquiry route for employers requesting pre-employment, annual medical, fitness-for-duty, food-handler or occupational screening packages.",
+    "category": "Healthcare",
+    "agencySlug": "clinix-healthcare",
+    "feeLabel": "Corporate quote depends on package and workforce",
+    "feeNote": "Clinix does not publish one universal corporate-screening fee. A customer representative follows up after the organisation submits the package enquiry.",
+    "timeline": "Clinix says a customer representative will reach out after the corporate request form is submitted; scheduling depends on the selected package, branch and workforce requirements.",
+    "status": "verified",
+    "officialPortal": "https://clinixhealthcare.com.ng/corporate/",
+    "requirements": [
+      "The organisation contact person's name and phone number",
+      "The company name, email address and office address",
+      "The city/state and preferred Clinix branch",
+      "A selected corporate package such as pre-employment, annual medical, fitness-for-duty, food-handler or job-specific screening"
+    ],
+    "steps": [
+      "Open Clinix Healthcare's official Corporate page and review the available corporate screening categories.",
+      "Enter the contact person's name, company name, email, office address, city/state and phone number.",
+      "Select the required corporate screening package and preferred Clinix branch.",
+      "Add any workforce or job-specific information needed for the request and submit the form.",
+      "Discuss the final scope, schedule and quote with the Clinix representative who follows up on the enquiry."
+    ],
+    "notes": [
+      "Clinix states that its corporate services include pre-employment, pre-enrolment, annual medical, fitness-for-duty and occupational screening.",
+      "The provider says result authentication/validity can be shared with the company for confirmation and acceptance under its corporate service.",
+      "Employee medical privacy and consent should be handled under the provider/employer's applicable legal obligations."
+    ],
+    "sources": [
+      {
+        "label": "Clinix Corporate Services",
+        "agency": "Clinix Healthcare",
+        "url": "https://clinixhealthcare.com.ng/corporate/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "clinix-book-appointment",
+      "clinix-home-sample-collection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Clinix corporate health screening",
+      "Clinix pre employment medical",
+      "Clinix annual medical corporate",
+      "Clinix fitness for duty",
+      "Clinix occupational screening"
+    ]
+  },
+  {
+    "slug": "filmhouse-book-movie-ticket",
+    "title": "How to book a Filmhouse Cinemas ticket online",
+    "shortTitle": "Filmhouse movie ticket",
+    "summary": "Filmhouse Cinemas' online booking process for selecting an available movie/show, entering correct booking information, paying by card and using the confirmation number at the selected cinema.",
+    "category": "Entertainment services",
+    "agencySlug": "filmhouse-cinemas",
+    "feeLabel": "Ticket price depends on cinema, movie and format",
+    "feeNote": "Filmhouse publishes cinema-specific ticket prices that vary by location, format, blockbuster status and promotion. Use the live booking amount for the selected show.",
+    "timeline": "The booking is accepted after Filmhouse processes the request and sends a confirmation/booking number; the ticket is redeemed at the cinema selected for the purchase.",
+    "status": "verified",
+    "officialPortal": "https://fh-frontend.filmhouseng.com/",
+    "requirements": [
+      "An available Filmhouse movie/show and cinema location",
+      "Accurate customer/booking information",
+      "A debit or credit card for the website ticket-purchase route",
+      "The booking confirmation/proof of purchase for ticket redemption at the selected cinema"
+    ],
+    "steps": [
+      "Open Filmhouse Cinemas' official website and choose the cinema, movie and available showtime.",
+      "Select the ticket option and seat where the booking interface allows seat selection.",
+      "Enter the booking information and review the current ticket price before submitting payment.",
+      "Complete payment with the supported debit/credit-card route and save the booking confirmation number.",
+      "Present the required proof of purchase at the selected Filmhouse cinema to redeem or print the ticket."
+    ],
+    "notes": [
+      "Filmhouse's ticket terms say online tickets are generally non-refundable and non-exchangeable unless law or the provider's discretion permits otherwise.",
+      "The provider publishes location-specific prices and can change showtimes/prices without prior notice.",
+      "Age restrictions apply and photo ID can be requested for classified films."
+    ],
+    "sources": [
+      {
+        "label": "Filmhouse Ticket Sales Terms",
+        "agency": "Filmhouse Cinemas",
+        "url": "https://fh-frontend.filmhouseng.com/ticket-sales-terms",
+        "lastChecked": "2026-10-05",
+        "published": "2024-08-28"
+      },
+      {
+        "label": "Filmhouse Ticket Prices",
+        "agency": "Filmhouse Cinemas",
+        "url": "https://fh-frontend.filmhouseng.com/ticket-prices",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "filmhouse-ticket-refund-support",
+      "silverbird-book-movie-ticket"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Filmhouse ticket booking",
+      "book Filmhouse cinema online",
+      "Filmhouse movie ticket price",
+      "Filmhouse cinemas Nigeria booking",
+      "Filmhouse online ticket"
+    ]
+  },
+  {
+    "slug": "filmhouse-ticket-refund-support",
+    "title": "How to request a Filmhouse ticket cancellation, refund or order confirmation",
+    "shortTitle": "Filmhouse refund support",
+    "summary": "Filmhouse Cinemas' customer-support route for asking the provider to cancel, refund or confirm an order after an online ticket transaction, subject to the company's ticket terms.",
+    "category": "Entertainment services",
+    "agencySlug": "filmhouse-cinemas",
+    "feeLabel": "Refund/handling terms depend on the booking",
+    "feeNote": "Filmhouse's ticket terms generally make movie tickets non-refundable/non-exchangeable, but its support page provides a contact form for cancellation, refund or order-confirmation requests. Any refund remains subject to the provider's terms and discretion.",
+    "timeline": "Filmhouse does not publish one guaranteed response time for ticket-refund/cancellation requests; the support form is the current official escalation route.",
+    "status": "verified",
+    "officialPortal": "https://fh-frontend.filmhouseng.com/contact-us",
+    "requirements": [
+      "The customer's full name, phone number and email address",
+      "The booking/order number and transaction details for the affected ticket",
+      "A clear description of whether the request concerns cancellation, refund or order confirmation",
+      "Payment evidence when the issue involves a charged transaction with missing or unclear confirmation"
+    ],
+    "steps": [
+      "Open Filmhouse Cinemas' official Contact Us page after checking the ticket-sales terms for the booking.",
+      "Enter the customer's name, phone number, email address and a subject identifying the booking problem.",
+      "Provide the booking/order number, payment details and a concise explanation of the cancellation, refund or confirmation request.",
+      "Submit the support form and keep the original booking/payment evidence while Filmhouse reviews the request.",
+      "Do not assume a refund is approved until Filmhouse confirms it because the published ticket terms generally restrict refunds and exchanges."
+    ],
+    "notes": [
+      "Filmhouse's support page specifically directs customers with cancel, refund or order-confirmation requests to its contact form.",
+      "The ticket terms say online movie tickets are normally non-refundable/non-exchangeable unless required by law or allowed by the provider.",
+      "If payment was submitted but no confirmation arrived, Filmhouse says the customer should verify whether the order was actually received/processed rather than assuming failure."
+    ],
+    "sources": [
+      {
+        "label": "Filmhouse Contact Us",
+        "agency": "Filmhouse Cinemas",
+        "url": "https://fh-frontend.filmhouseng.com/contact-us",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Filmhouse Ticket Sales Terms",
+        "agency": "Filmhouse Cinemas",
+        "url": "https://fh-frontend.filmhouseng.com/ticket-sales-terms",
+        "lastChecked": "2026-10-05",
+        "published": "2024-08-28"
+      }
+    ],
+    "related": [
+      "filmhouse-book-movie-ticket",
+      "silverbird-book-movie-ticket"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Filmhouse refund",
+      "Filmhouse cancel ticket",
+      "Filmhouse booking not confirmed",
+      "Filmhouse ticket support",
+      "Filmhouse cinema refund Nigeria"
+    ]
   }
 ]
