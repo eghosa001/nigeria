@@ -4044,5 +4044,510 @@
       "Heyfood business account",
       "Heyfood merchant dashboard"
     ]
+  },
+  {
+    "slug": "healthplus-order-online-nigeria",
+    "title": "How to order from HealthPlus online pharmacy in Nigeria",
+    "shortTitle": "HealthPlus online order",
+    "summary": "HealthPlus Nigeria's e-pharmacy ordering route for browsing health and wellness products, adding items to cart, entering delivery details and paying the order plus the delivery charge shown at checkout.",
+    "category": "Healthcare",
+    "agencySlug": "healthplus",
+    "feeLabel": "Product total plus delivery charge",
+    "feeNote": "HealthPlus calculates delivery cost at checkout based on order weight, dimensions and destination. Product prices and availability can change.",
+    "timeline": "HealthPlus says Lagos domestic shipments are generally in transit for 24–48 hours, with orders placed before 2pm WAT dispatched the same day where stock is available.",
+    "status": "verified",
+    "officialPortal": "https://healthplusnigeria.com/",
+    "requirements": [
+      "A customer profile or checkout details for the HealthPlus e-pharmacy order",
+      "The selected in-stock health, wellness or pharmacy products",
+      "A valid delivery address and contact information",
+      "A supported payment method for the order and delivery charge shown at checkout"
+    ],
+    "steps": [
+      "Open HealthPlus Nigeria's official online pharmacy and search or browse for the required product.",
+      "Review the product details and add the item and quantity to the cart.",
+      "Open the cart and confirm the products, quantities and current prices before checkout.",
+      "Enter the customer contact and delivery information and review the shipping charge calculated for the destination.",
+      "Complete payment and keep the order confirmation while HealthPlus dispatches and delivers the order."
+    ],
+    "notes": [
+      "HealthPlus states that online stock can occasionally differ from actual availability and may contact the customer if an item cannot be fulfilled.",
+      "This guide explains the ordering process only and does not recommend medicines or provide medical advice.",
+      "Products that require professional or prescription verification remain subject to HealthPlus's pharmacy controls and applicable Nigerian rules."
+    ],
+    "sources": [
+      {
+        "label": "HealthPlus Nigeria Online Pharmacy",
+        "agency": "HealthPlus Nigeria",
+        "url": "https://healthplusnigeria.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "HealthPlus Shop",
+        "agency": "HealthPlus Nigeria",
+        "url": "https://shop.healthplusnigeria.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "healthplus-shipping-returns",
+      "medplus-order-online-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "HealthPlus online pharmacy Nigeria",
+      "order HealthPlus online",
+      "HealthPlus delivery Nigeria",
+      "HealthPlus e-pharmacy",
+      "buy from HealthPlus Nigeria"
+    ]
+  },
+  {
+    "slug": "healthplus-shipping-returns",
+    "title": "How HealthPlus shipping and warranty returns work",
+    "shortTitle": "HealthPlus shipping & returns",
+    "summary": "HealthPlus Nigeria's delivery and warranty-return process, including checkout-calculated shipping, Lagos delivery timing and the current seven-day warranty-claim window for eligible items.",
+    "category": "Healthcare",
+    "agencySlug": "healthplus",
+    "feeLabel": "Shipping charge is calculated at checkout",
+    "feeNote": "HealthPlus says shipping cost is calculated from weight, dimensions and destination. For warranty claims, the customer prepays return shipping and those shipping fees are non-refundable.",
+    "timeline": "HealthPlus says Lagos deliveries are generally in transit for 24–48 hours, and valid warranty claims are processed within about 5 working days after the returned item is received.",
+    "status": "verified",
+    "officialPortal": "https://healthplusnigeria.com/policies/shipping-policy",
+    "requirements": [
+      "The HealthPlus order details for the delivery or warranty claim",
+      "An eligible item and issue covered by the current warranty-return policy",
+      "A warranty claim submitted within seven days of receiving the item",
+      "Payment for return shipping when the customer is sending an eligible warranty item back"
+    ],
+    "steps": [
+      "Open HealthPlus's shipping policy and confirm whether the issue concerns delivery timing, stock availability or an eligible warranty return.",
+      "For a return, contact HealthPlus with the order details and raise the warranty claim within the current seven-day window.",
+      "Follow the return instructions and prepay the return shipping required by the policy.",
+      "Keep the return-shipment evidence until HealthPlus confirms receipt of the item.",
+      "After review, choose the available resolution offered by HealthPlus, such as refund to the original method, customer wallet or replacement when stock is available."
+    ],
+    "notes": [
+      "HealthPlus says return shipping fees for warranty claims are non-refundable.",
+      "The provider states that warranty claims are normally processed within five working days after the returned item is received.",
+      "This policy is for eligible warranty issues and should not be interpreted as a general unrestricted return right for every pharmacy product."
+    ],
+    "sources": [
+      {
+        "label": "HealthPlus Shipping Policy",
+        "agency": "HealthPlus Nigeria",
+        "url": "https://healthplusnigeria.com/policies/shipping-policy",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "healthplus-order-online-nigeria",
+      "medplus-order-online-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "HealthPlus shipping policy",
+      "HealthPlus return policy Nigeria",
+      "HealthPlus refund",
+      "HealthPlus delivery time Lagos",
+      "HealthPlus warranty return"
+    ]
+  },
+  {
+    "slug": "medbury-book-diagnostic-test",
+    "title": "How to book a diagnostic test with Medbury Labs",
+    "shortTitle": "Medbury diagnostics booking",
+    "summary": "Medbury Labs' appointment route for diagnostic tests and screening packages, using its official contact/booking channels and available sample-collection centres across Nigeria.",
+    "category": "Healthcare",
+    "agencySlug": "medbury-labs",
+    "feeLabel": "Test price depends on the selected diagnostic service",
+    "feeNote": "Medbury Labs does not publish one universal fee for all tests and screening packages. Confirm the current amount for the selected service before payment.",
+    "timeline": "Appointment and result timing depend on the selected test, location and laboratory process; Medbury does not publish one universal turnaround for every diagnostic service.",
+    "status": "verified",
+    "officialPortal": "https://medburylabs.com/",
+    "requirements": [
+      "The diagnostic test or screening package the patient intends to book",
+      "The patient's contact information",
+      "A preferred Medbury location or sample-collection option",
+      "Any test-specific preparation information provided by Medbury for the selected diagnostic service"
+    ],
+    "steps": [
+      "Open Medbury Labs' official website and review the available diagnostics or screening service needed.",
+      "Use the published contact or appointment route to request the selected test and preferred location.",
+      "Confirm the test name, appointment location, price and any preparation instruction before the visit.",
+      "Attend the Medbury laboratory or sample-collection location at the confirmed time with any requested referral or identity information.",
+      "Keep the payment/appointment record and follow Medbury's result-delivery instruction after the sample is processed."
+    ],
+    "notes": [
+      "Medbury Labs advertises diagnostic and screening services through multiple Nigerian locations.",
+      "Test preparation differs by diagnostic service, so the patient should use the exact instruction supplied for the booked test.",
+      "This guide explains provider booking and does not advise which test a person medically needs."
+    ],
+    "sources": [
+      {
+        "label": "Medbury Labs",
+        "agency": "Medbury Labs",
+        "url": "https://medburylabs.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "synlab-home-sample-collection",
+      "synlab-pathprovider-results",
+      "euracare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Medbury Labs booking",
+      "Medbury diagnostic test Nigeria",
+      "Medbury appointment",
+      "Medbury screening package",
+      "Medbury lab test"
+    ]
+  },
+  {
+    "slug": "custodian-buy-motor-insurance-online",
+    "title": "How to buy Custodian motor insurance in Nigeria",
+    "shortTitle": "Custodian motor insurance",
+    "summary": "Custodian's motor-insurance purchase route for third-party or comprehensive cover, using a proposal form, KYC information and the vehicle/policy details required for the selected motor product.",
+    "category": "Insurance",
+    "agencySlug": "custodian-insurance",
+    "feeLabel": "Premium depends on the vehicle and motor cover",
+    "feeNote": "Custodian calculates the premium from the selected motor policy and vehicle risk details. Obtain the current quote before payment rather than relying on an old fixed rate.",
+    "timeline": "Custodian does not publish one universal completion time for every motor policy; cover is issued after the proposal/KYC and payment requirements are accepted.",
+    "status": "verified",
+    "officialPortal": "https://custodianinsurance.com/personal/comprehensive-motor-insurance/",
+    "requirements": [
+      "A completed motor-insurance proposal form",
+      "The Know Your Customer information required by Custodian",
+      "The vehicle and policyholder details needed for the selected third-party or comprehensive motor cover",
+      "A supported payment method for the premium quoted by Custodian"
+    ],
+    "steps": [
+      "Open Custodian's official motor-insurance page and choose the third-party or comprehensive product that matches the intended cover.",
+      "Complete the proposal and KYC information requested for the policyholder.",
+      "Enter the vehicle details and review the cover features and exclusions for the selected product.",
+      "Request or review the current premium quote and complete payment through Custodian's official route.",
+      "Save the policy and certificate after issuance and keep them available for verification and future claims."
+    ],
+    "notes": [
+      "Custodian publishes separate third-party and comprehensive motor products.",
+      "The purchase requirements include a completed proposal form and KYC form.",
+      "This guide explains the buying process and does not recommend one insurance product as suitable for a particular person."
+    ],
+    "sources": [
+      {
+        "label": "Custodian Comprehensive Motor Insurance",
+        "agency": "Custodian and Allied Insurance Limited",
+        "url": "https://custodianinsurance.com/personal/comprehensive-motor-insurance/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Custodian Third-Party Motor Insurance",
+        "agency": "Custodian and Allied Insurance Limited",
+        "url": "https://custodianinsurance.com/personal/custodian-third-party-motor-insurance/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "custodian-motor-claim",
+      "leadway-buy-motor-insurance-online",
+      "axa-mansard-third-party-motor-insurance",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Custodian motor insurance Nigeria",
+      "buy Custodian insurance online",
+      "Custodian third party motor",
+      "Custodian comprehensive motor",
+      "Custodian car insurance"
+    ]
+  },
+  {
+    "slug": "custodian-motor-claim",
+    "title": "How to file a Custodian motor insurance claim",
+    "shortTitle": "Custodian motor claim",
+    "summary": "Custodian's motor-claim process beginning with immediate notification and a completed motor accident claim form, followed by vehicle photos, repair estimate, driver's licence and police report where applicable.",
+    "category": "Insurance",
+    "agencySlug": "custodian-insurance",
+    "feeLabel": "No claim-filing fee stated",
+    "feeNote": "Custodian does not state a fee for reporting an insurance claim. Claim settlement depends on policy coverage, documentation, inspection and review.",
+    "timeline": "Custodian does not promise one universal settlement time on the motor-product page; the company reviews the completed claim documents and can conduct a physical inspection of the vehicle.",
+    "status": "verified",
+    "officialPortal": "https://custodianinsurance.com/make-a-claim/",
+    "requirements": [
+      "The Custodian motor policy number and immediate notification of the incident",
+      "A completed Motor Accident claim form",
+      "Photographs of the accident-damaged vehicle and an estimate of repairs",
+      "The driver's licence and a police report when the incident requires one",
+      "Any additional documents Custodian requests for the specific claim"
+    ],
+    "steps": [
+      "Notify Custodian immediately through an official phone, app, letter, email or claim-reporting route after the incident.",
+      "Open the official Make a Claim page or obtain the Motor Accident claim form and enter the policy/incident information.",
+      "Submit the completed form with vehicle photographs, repair estimate, driver's licence and police report where applicable.",
+      "Allow Custodian to inspect the vehicle or request further documents when the claim review requires them.",
+      "Keep the claim tracker/reference and check the claim status until Custodian issues its coverage and settlement decision."
+    ],
+    "notes": [
+      "Custodian's motor-product pages state that physical inspection of the insured asset can be conducted.",
+      "A police report is conditional rather than required for every motor incident.",
+      "Claim approval depends on the policy terms and the evidence submitted."
+    ],
+    "sources": [
+      {
+        "label": "Custodian Make a Claim",
+        "agency": "Custodian and Allied Insurance Limited",
+        "url": "https://custodianinsurance.com/make-a-claim/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Custodian Comprehensive Motor Insurance — Claim Process",
+        "agency": "Custodian and Allied Insurance Limited",
+        "url": "https://custodianinsurance.com/personal/comprehensive-motor-insurance/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "custodian-buy-motor-insurance-online",
+      "aiico-motor-insurance-claim",
+      "axa-mansard-motor-claim",
+      "leadway-file-insurance-claim"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Custodian insurance claim",
+      "Custodian motor claim",
+      "Custodian claim form Nigeria",
+      "Custodian car accident claim",
+      "Custodian claim status"
+    ]
+  },
+  {
+    "slug": "nem-buy-insurance-online",
+    "title": "How to buy NEM Insurance online",
+    "shortTitle": "NEM online insurance",
+    "summary": "NEM Insurance's e-insurance route for getting a quote and buying motor, home, travel or SME cover online without visiting a branch.",
+    "category": "Insurance",
+    "agencySlug": "nem-insurance",
+    "feeLabel": "Premium depends on the selected policy and risk details",
+    "feeNote": "NEM calculates the premium from the selected insurance product and customer/risk information. Review the live quote before payment.",
+    "timeline": "NEM says its e-insurance portal handles quote and purchase end-to-end; the final policy is issued after the required information and payment are accepted.",
+    "status": "verified",
+    "officialPortal": "https://nem-insurance.com/",
+    "requirements": [
+      "The insurance product the customer wants to buy, such as motor, home, travel or SME cover",
+      "The policyholder's identity and contact information",
+      "The vehicle, property, trip or business-risk details needed for the selected policy",
+      "A supported payment method for the premium shown in the e-insurance quote"
+    ],
+    "steps": [
+      "Open NEM Insurance's official website and choose Get a Quote or Buy Insurance.",
+      "Select the insurance product and enter the policyholder and insured-risk information.",
+      "Review the cover details and premium generated by the e-insurance portal.",
+      "Complete payment using the available official payment option.",
+      "Save the issued policy/certificate and verify that the insured details are correct before relying on the cover."
+    ],
+    "notes": [
+      "NEM states that its e-insurance portal supports online purchase for motor, home, travel and SME insurance.",
+      "Policy features and premiums differ by insurance type and risk.",
+      "This guide explains the provider's purchase process and does not recommend a specific policy for an individual's financial situation."
+    ],
+    "sources": [
+      {
+        "label": "NEM Insurance",
+        "agency": "NEM Insurance Plc",
+        "url": "https://nem-insurance.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nem-file-claim",
+      "custodian-buy-motor-insurance-online",
+      "leadway-buy-motor-insurance-online"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "NEM Insurance online",
+      "buy NEM motor insurance",
+      "NEM e-insurance Nigeria",
+      "NEM insurance quote",
+      "NEM travel insurance online"
+    ]
+  },
+  {
+    "slug": "nem-file-claim",
+    "title": "How to file an insurance claim with NEM Insurance",
+    "shortTitle": "NEM insurance claim",
+    "summary": "NEM Insurance's online claim-notification route using policy and incident details, followed by the supporting documents required for the claim type and further adjuster review.",
+    "category": "Insurance",
+    "agencySlug": "nem-insurance",
+    "feeLabel": "No claim-filing fee stated",
+    "feeNote": "NEM does not state a fee for submitting a claim. Settlement depends on policy coverage and complete supporting documentation.",
+    "timeline": "NEM's current claim page says covered claims are settled within 48 hours of complete documentation, while the provider's homepage also notes that timing varies by claim type and document completeness.",
+    "status": "conflict",
+    "officialPortal": "https://nem-insurance.com/make-a-claim",
+    "requirements": [
+      "The policyholder's full name, policy number and contact information",
+      "The claim type and date of the incident",
+      "A description of what happened",
+      "The supporting documents NEM requests for that claim type, such as photos, police report or proof of value where applicable"
+    ],
+    "steps": [
+      "Open NEM Insurance's official Make a Claim page and enter the policyholder and policy number.",
+      "Choose the claim type, enter the incident date and describe the event accurately.",
+      "Submit the online claim notification and keep the reference or acknowledgement.",
+      "Provide the supporting documents requested by NEM and respond to any adjuster clarification.",
+      "Follow the claim through NEM support until the insurer communicates the coverage and settlement decision."
+    ],
+    "notes": [
+      "NEM's public pages currently present different timing language: the dedicated claim page says 48 hours after complete documentation, while the homepage says timing depends on claim type and often takes longer.",
+      "Immediate notification is especially important for motor and other incident-based claims.",
+      "A claim submission is not a guarantee of payment; the policy and evidence determine coverage."
+    ],
+    "sources": [
+      {
+        "label": "NEM Make a Claim",
+        "agency": "NEM Insurance Plc",
+        "url": "https://nem-insurance.com/make-a-claim",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NEM Insurance Home — Claims FAQ",
+        "agency": "NEM Insurance Plc",
+        "url": "https://nem-insurance.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nem-buy-insurance-online",
+      "custodian-motor-claim",
+      "aiico-motor-insurance-claim"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "NEM insurance claim",
+      "NEM claim form",
+      "NEM motor claim Nigeria",
+      "NEM claims hotline",
+      "NEM claim status"
+    ]
+  },
+  {
+    "slug": "lagride-book-ride",
+    "title": "How to book a LagRide trip in Lagos",
+    "shortTitle": "Book LagRide",
+    "summary": "LagRide's passenger-app route for booking an electric taxi in Lagos, selecting a vehicle class, paying cashlessly and using real-time driver tracking or advance scheduling.",
+    "category": "Ride-hailing",
+    "agencySlug": "lagride",
+    "feeLabel": "Fare depends on the trip and vehicle class",
+    "feeNote": "LagRide calculates the ride fare from the trip and selected vehicle class. Use the amount shown in the app before confirming the ride.",
+    "timeline": "LagRide advertises booking a ride in under 30 seconds in the app, while pickup time depends on driver/vehicle availability and traffic.",
+    "status": "verified",
+    "officialPortal": "https://lagride.org/download",
+    "requirements": [
+      "The LagRide passenger app on a supported iOS or Android device",
+      "A pickup location and destination within the active LagRide service area",
+      "A selected vehicle class and supported cashless payment method"
+    ],
+    "steps": [
+      "Download the official LagRide passenger app from the provider's download page.",
+      "Enter the pickup location and destination for the trip.",
+      "Choose the available vehicle class and review the ride details and fare shown in the app.",
+      "Confirm the booking and use the app's real-time tracking while the captain approaches and during the trip.",
+      "Complete the cashless payment through the card, transfer or wallet option offered by LagRide and rate the trip after completion."
+    ],
+    "notes": [
+      "LagRide's current passenger page advertises real-time driver tracking, scheduled rides and cashless payments.",
+      "The service is focused on Lagos.",
+      "Ride availability can change by location, time and fleet supply."
+    ],
+    "sources": [
+      {
+        "label": "LagRide Download / Passenger App",
+        "agency": "LagRide Nigeria",
+        "url": "https://lagride.org/download",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "LagRide Home",
+        "agency": "LagRide Nigeria",
+        "url": "https://lagride.org/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "lagride-captain-signup",
+      "uber-request-ride-online-nigeria",
+      "bolt-schedule-ride-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "LagRide booking",
+      "book LagRide Lagos",
+      "LagRide app Nigeria",
+      "LagRide schedule ride",
+      "LagRide taxi Lagos"
+    ]
+  },
+  {
+    "slug": "lagride-captain-signup",
+    "title": "How to apply to become a LagRide Captain",
+    "shortTitle": "LagRide Captain signup",
+    "summary": "LagRide's driver application route for Lagos, using personal details, LGA, vehicle-class preference, driving experience and driver's licence information before academy training and captain onboarding.",
+    "category": "Ride-hailing",
+    "agencySlug": "lagride",
+    "feeLabel": "₦0 upfront cost advertised for current captain programme",
+    "feeNote": "LagRide currently advertises no upfront cost because the programme provides the vehicle, but later operating, earning and vehicle-ownership terms should be reviewed before accepting the captain agreement.",
+    "timeline": "LagRide says its team will contact an applicant within three days after the online application is submitted.",
+    "status": "verified",
+    "officialPortal": "https://lagride.org/drive",
+    "requirements": [
+      "The applicant's first and last name, phone number and email address",
+      "A Lagos Local Government Area and preferred vehicle class",
+      "The applicant's driving-experience information and driver's licence number",
+      "Acceptance of LagRide's terms/privacy and completion of the academy/assessment stages after application"
+    ],
+    "steps": [
+      "Open LagRide's official Drive page and select Apply to Drive.",
+      "Enter the applicant's personal/contact information and Lagos LGA.",
+      "Choose the preferred vehicle class and provide driving-experience and driver's-licence information.",
+      "Submit the application and wait for the LagRide team to contact the applicant within the provider's published response window.",
+      "Complete the LagRide Academy training, assessments and onboarding requirements before starting passenger trips."
+    ],
+    "notes": [
+      "LagRide advertises company-provided vehicles and academy training for its current captain programme.",
+      "The provider says comprehensive vehicle/personal insurance is included in the programme.",
+      "Earnings claims are not guaranteed income and should be evaluated against the actual captain agreement and operating terms."
+    ],
+    "sources": [
+      {
+        "label": "LagRide Become a Captain",
+        "agency": "LagRide Nigeria",
+        "url": "https://lagride.org/drive",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "LagRide Home",
+        "agency": "LagRide Nigeria",
+        "url": "https://lagride.org/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "lagride-book-ride",
+      "uber-driver-signup-nigeria",
+      "bolt-driver-signup-nigeria",
+      "indrive-driver-signup-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "LagRide driver signup",
+      "LagRide captain application",
+      "become LagRide driver",
+      "LagRide vehicle programme",
+      "LagRide driver Lagos"
+    ]
   }
 ]
