@@ -864,5 +864,359 @@
       "Healthtracka sample collection",
       "Healthtracka lab results"
     ]
+  },
+  {
+    "slug": "uber-lost-item-nigeria",
+    "title": "How to recover a lost item after an Uber ride",
+    "shortTitle": "Uber lost item",
+    "summary": "Uber's rider support route for contacting the driver after a completed trip, reporting a lost phone or other item and escalating through Help when the driver cannot be reached.",
+    "category": "Ride-hailing",
+    "agencySlug": "uber-nigeria",
+    "feeLabel": "Possible return fee when an item is returned",
+    "feeNote": "Uber states that a lost-item return fee can apply and the amount varies by city. Confirm the amount shown by Uber when the item is returned.",
+    "timeline": "Contact the driver as soon as possible after the trip; Uber recommends allowing time for a response and does not guarantee recovery of a lost item.",
+    "status": "verified",
+    "officialPortal": "https://help.uber.com/en/riders/article/i-need-to-contact-my-driver-about-a-lost-item?nodeId=3ac8868f-93ac-4548-bfe0-36330d70bda1",
+    "requirements": [
+      "Access to the Uber account that requested the completed trip, or another contact route if the lost item is the phone itself",
+      "The trip in which the item was left",
+      "A phone number Uber can use to connect the rider with the driver",
+      "A clear description of the lost item and enough trip detail to identify it"
+    ],
+    "steps": [
+      "Open the Uber app or help website and select the completed trip in which the item was lost.",
+      "Choose the lost-item option and select the route to contact the driver.",
+      "Enter a phone number Uber can call and use the connection to ask the driver whether the item was found.",
+      "If the lost item is the phone or the driver cannot be reached, use Uber's lost-item support form with the trip and item details.",
+      "Agree on a safe return arrangement if the item is found and review any return fee shown by Uber after recovery."
+    ],
+    "notes": [
+      "Uber says neither it nor the driver can guarantee that a lost item will be found or returned.",
+      "If the lost item is a phone, another reachable phone number can be used in the support form.",
+      "Uber warns customers not to provide bank or card details to someone claiming to return a lost item."
+    ],
+    "sources": [
+      {
+        "label": "Uber Nigeria — Contact and lost items",
+        "agency": "Uber",
+        "url": "https://www.uber.com/ng/en/blog/how-to-contact-uber/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Uber Help — Contact driver about a lost item",
+        "agency": "Uber",
+        "url": "https://help.uber.com/en/riders/article/i-need-to-contact-my-driver-about-a-lost-item?nodeId=3ac8868f-93ac-4548-bfe0-36330d70bda1",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Uber Help — Lost phone",
+        "agency": "Uber",
+        "url": "https://help.uber.com/en/riders/article/i-left-my-phone-in-a-vehicle?nodeId=b371bf38-007e-413d-b6da-9b658be0cd95",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "bolt-lost-item-nigeria",
+      "uber-request-ride-online-nigeria",
+      "uber-reserve-ride-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Uber lost item Nigeria",
+      "forgot phone in Uber",
+      "contact Uber driver lost item",
+      "recover lost item Uber Nigeria",
+      "Uber lost phone"
+    ]
+  },
+  {
+    "slug": "bolt-lost-item-nigeria",
+    "title": "How to recover a lost item after a Bolt ride in Nigeria",
+    "shortTitle": "Bolt lost item",
+    "summary": "Bolt Nigeria's rider route for contacting the driver about a forgotten item within 24 hours and escalating to in-app support or the lost-phone form when direct contact is no longer available.",
+    "category": "Ride-hailing",
+    "agencySlug": "bolt-nigeria",
+    "feeLabel": "No standard recovery fee stated",
+    "feeNote": "Bolt's Nigeria lost-item guidance does not state a standard fee for reporting a forgotten item.",
+    "timeline": "Bolt gives riders a 24-hour window to contact the driver through the app before the support route becomes the main recovery path.",
+    "status": "verified",
+    "officialPortal": "https://bolt.eu/en-ng/support/articles/115002906973/",
+    "requirements": [
+      "The Bolt account used to request the ride",
+      "The completed ride in which the item was left",
+      "A description of the lost item and the phone number used for the order",
+      "A reachable phone number and email when reporting a lost phone through Bolt support"
+    ],
+    "steps": [
+      "Open Bolt and select Activity from the menu, then choose the completed ride in which the item was lost.",
+      "Use the contact-driver option within 24 hours of the trip and ask whether the item was found.",
+      "If the driver does not respond, open Bolt Support in the app and report the lost item with the ride details.",
+      "If more than 24 hours have passed, contact support directly and provide the order phone number and item description.",
+      "For a lost phone, complete Bolt's recovery form with the account phone number, a reachable contact number and trip details."
+    ],
+    "notes": [
+      "Bolt states that neither it nor drivers can guarantee recovery of a forgotten belonging.",
+      "Nigeria's lost-item terms set separate handling expectations for drivers when unclaimed items are handed to Bolt or the police.",
+      "Report high-value or sensitive items promptly and preserve the ride information."
+    ],
+    "sources": [
+      {
+        "label": "Bolt Nigeria — Recovering a lost item",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/support/articles/115002906973/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bolt Nigeria — Lost items terms",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/legal/rides/tnc-lost-items/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uber-lost-item-nigeria",
+      "bolt-schedule-ride-nigeria",
+      "bolt-ride-insurance-claim-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bolt lost item Nigeria",
+      "forgot phone in Bolt",
+      "recover lost item Bolt Nigeria",
+      "contact Bolt driver lost item",
+      "Bolt lost phone"
+    ]
+  },
+  {
+    "slug": "bolt-ride-insurance-claim-nigeria",
+    "title": "How to file a Bolt ride-hailing insurance claim in Nigeria",
+    "shortTitle": "Bolt ride insurance claim",
+    "summary": "Bolt Nigeria's ride-insurance claim route for eligible riders and drivers affected by an insured incident during a Bolt trip, using My CoverGenius channels and the required accident evidence.",
+    "category": "Insurance",
+    "agencySlug": "bolt-nigeria",
+    "feeLabel": "No claim fee; cover is provided at no extra cost",
+    "feeNote": "Bolt says the ride-hailing insurance cover is provided to eligible users at no extra cost. Any claim remains subject to the policy terms, limits and exclusions.",
+    "timeline": "Bolt's insurance document requires notice as soon as possible and no later than 14 days after the accident; claim processing then depends on the evidence and insurer review.",
+    "status": "verified",
+    "officialPortal": "https://bolt.eu/en-ng/insurance/other/insurance-information-document/",
+    "requirements": [
+      "An incident that occurred while the rider or driver was within the policy's effective Bolt-trip period",
+      "A claim reported as soon as possible and within the published 14-day notification period",
+      "The certificates, incident evidence and supporting documents requested by AIICO or My CoverGenius",
+      "Medical examination or other evidence when the claimed loss involves bodily injury, disability or death"
+    ],
+    "steps": [
+      "Report the accident or insured incident to Bolt through the app and notify emergency services where necessary.",
+      "Open Bolt Nigeria's ride-insurance information and choose a My CoverGenius claim channel.",
+      "Submit the claim by the online form, telephone, WhatsApp or email route listed for the Nigeria policy.",
+      "Provide the incident details and supporting evidence requested by the insurer or claims manager.",
+      "Respond to any medical, documentary or verification request and keep the claim reference until a decision is issued."
+    ],
+    "notes": [
+      "The policy covers specified personal accident and personal-effects risks during the effective Bolt trip period and is not vehicle insurance.",
+      "Bolt states that the policy is underwritten by AIICO Insurance and managed operationally by My CoverGenius.",
+      "Claim limits and exclusions apply, so a submitted claim is not automatically payable."
+    ],
+    "sources": [
+      {
+        "label": "Bolt Nigeria — Ride Hailing Insurance Key Information",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/insurance/other/insurance-information-document/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bolt Nigeria — Insurance",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/insurance/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bolt Nigeria — Ride safety",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/rides/safety/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "bolt-lost-item-nigeria",
+      "aiico-motor-insurance-claim",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bolt insurance claim Nigeria",
+      "Bolt accident claim Nigeria",
+      "Bolt ride insurance",
+      "My CoverGenius Bolt claim",
+      "Bolt rider insurance Nigeria"
+    ]
+  },
+  {
+    "slug": "bolt-schedule-ride-nigeria",
+    "title": "How to schedule a Bolt ride in advance in Nigeria",
+    "shortTitle": "Schedule Bolt ride",
+    "summary": "Bolt Nigeria's scheduled-ride feature lets eligible riders reserve a trip in advance, with the current Nigeria rides page stating that rides can be scheduled up to 90 days ahead.",
+    "category": "Ride-hailing",
+    "agencySlug": "bolt-nigeria",
+    "feeLabel": "Ride price shown before confirmation",
+    "feeNote": "Bolt calculates the ride price from the requested route, category and timing and shows an estimate before confirmation. Cancellation or other platform fees can apply under current terms.",
+    "timeline": "A scheduled ride can be requested up to 90 days in advance, but the actual driver arrival can still vary with traffic, demand and driver availability.",
+    "status": "verified",
+    "officialPortal": "https://bolt.eu/en-ng/rides/",
+    "requirements": [
+      "The Bolt rider app and an active customer account",
+      "A pickup location, destination and future pickup date/time",
+      "An available ride category for the selected Nigerian location",
+      "A supported payment method or cash option if the app offers it for the scheduled ride"
+    ],
+    "steps": [
+      "Open Bolt and enter the pickup location and destination for the future ride.",
+      "Choose the option to schedule or book the ride in advance instead of requesting immediate pickup.",
+      "Select the future pickup date and time, which Bolt currently allows up to 90 days ahead.",
+      "Review the available ride category and upfront price estimate and confirm the reservation.",
+      "Check the scheduled trip in the app before departure and monitor driver assignment or any availability notification."
+    ],
+    "notes": [
+      "Bolt says scheduled rides can be booked up to 90 days in advance in Nigeria.",
+      "A scheduled request does not eliminate traffic or availability risk, so arrival time can still change.",
+      "Cancellation fees may apply depending on timing and the current Bolt rules."
+    ],
+    "sources": [
+      {
+        "label": "Bolt Rides Nigeria",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/rides/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bolt Nigeria customer terms",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/legal/rides/tnc-services-customer/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "bolt-lost-item-nigeria",
+      "uber-reserve-ride-nigeria",
+      "bolt-driver-signup-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "schedule Bolt ride Nigeria",
+      "book Bolt in advance",
+      "Bolt reservation Nigeria",
+      "Bolt scheduled ride Lagos",
+      "reserve Bolt ride"
+    ]
+  },
+  {
+    "slug": "uber-reserve-ride-nigeria",
+    "title": "How to reserve an Uber ride in advance",
+    "shortTitle": "Uber Reserve",
+    "summary": "Uber Reserve lets eligible riders schedule a future trip by choosing Reserve, entering pickup and destination details, selecting the date/time and confirming an available ride type.",
+    "category": "Ride-hailing",
+    "agencySlug": "uber-nigeria",
+    "feeLabel": "Reservation price shown before confirmation",
+    "feeNote": "Uber shows the trip price before the reservation is confirmed. Cancellation fees can apply under the Reserve rules.",
+    "timeline": "Uber's current help states that Reservations can be made up to 30 days in advance; the full Reserve feature set generally requires booking at least two hours before pickup.",
+    "status": "verified",
+    "officialPortal": "https://help.uber.com/en/riders/article/i-need-help-with-a-reservation?nodeId=cabcfe4f-fa54-4f97-a687-5584d3e87f51",
+    "requirements": [
+      "An Uber account with access to Reserve in the user's location",
+      "A pickup location, destination and future pickup date/time",
+      "An available Reserve ride type such as UberX, Comfort or another category shown for the trip",
+      "A valid payment method accepted for the reservation"
+    ],
+    "steps": [
+      "Open Uber and select the Reserve tab for a future trip.",
+      "Enter the pickup location and destination.",
+      "Choose the future pickup date and time, staying within the reservation window shown by Uber.",
+      "Select an available ride type and review the reservation price and cancellation conditions.",
+      "Confirm the reservation and monitor it in the Uber account before the scheduled pickup."
+    ],
+    "notes": [
+      "Uber's current help says Reservations can be made up to 30 days ahead.",
+      "Economy and Premium Reserve products have different early-arrival and waiting rules.",
+      "Cancellation fees can apply when the rider cancels late or is not ready within the applicable waiting period."
+    ],
+    "sources": [
+      {
+        "label": "Uber Help — Reservations",
+        "agency": "Uber",
+        "url": "https://help.uber.com/en/riders/article/i-need-help-with-a-reservation?nodeId=cabcfe4f-fa54-4f97-a687-5584d3e87f51",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Uber Nigeria — Request a ride online",
+        "agency": "Uber",
+        "url": "https://www.uber.com/ng/en/ride/how-it-works/request-an-uber-ride-without-the-app/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uber-request-ride-online-nigeria",
+      "bolt-schedule-ride-nigeria",
+      "uber-lost-item-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Uber Reserve Nigeria",
+      "schedule Uber ride Nigeria",
+      "book Uber in advance",
+      "Uber reservation Lagos",
+      "reserve Uber ride"
+    ]
+  },
+  {
+    "slug": "uber-request-ride-online-nigeria",
+    "title": "How to request an Uber ride online without the app in Nigeria",
+    "shortTitle": "Request Uber online",
+    "summary": "Uber Nigeria's web ride-request route lets a customer sign in from a browser, enter pickup and destination details, select an available ride option and request the trip without installing the app.",
+    "category": "Ride-hailing",
+    "agencySlug": "uber-nigeria",
+    "feeLabel": "Ride price shown before confirmation",
+    "feeNote": "Uber shows the available ride options and price estimate before the online ride is requested.",
+    "timeline": "A ride can be requested immediately from the web when online ride ordering is available for the location; pickup time depends on driver availability and traffic.",
+    "status": "verified",
+    "officialPortal": "https://www.uber.com/ng/en/ride/how-it-works/request-an-uber-ride-without-the-app/",
+    "requirements": [
+      "A device with a web browser and internet connection",
+      "An Uber account or a phone number that can be used to create/sign in to an account",
+      "A pickup location and destination in an area where Uber online ride requests are available",
+      "A contact/payment method required by the account and selected ride"
+    ],
+    "steps": [
+      "Open Uber's online ride request page from a browser and sign in with the phone number or create an account.",
+      "Allow location access or manually enter the pickup point.",
+      "Enter the destination address for the trip.",
+      "Choose an available ride option and review the price estimate.",
+      "Confirm the ride request and use the web interface to monitor the driver's arrival and trip details."
+    ],
+    "notes": [
+      "Uber says online ride requests can be made from tablets, laptops and other internet-connected devices.",
+      "The online route can also be used to request a ride for someone else by entering that rider's name and phone number.",
+      "Feature and ride-type availability still depends on the user's location."
+    ],
+    "sources": [
+      {
+        "label": "Uber Nigeria — Request a ride without the app",
+        "agency": "Uber",
+        "url": "https://www.uber.com/ng/en/ride/how-it-works/request-an-uber-ride-without-the-app/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uber-reserve-ride-nigeria",
+      "uber-lost-item-nigeria",
+      "bolt-schedule-ride-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "request Uber online Nigeria",
+      "Uber without app Nigeria",
+      "book Uber from browser",
+      "Uber web Nigeria",
+      "order Uber online Lagos"
+    ]
   }
 ]
