@@ -16992,7 +16992,7 @@
       "Open IBEDC's official MAP Refund Portal and enter the meter number.",
       "Check the eligibility and available refund-token information returned for the meter.",
       "Copy the earliest outstanding refund token shown by the portal.",
-      "Load refund tokens on the meter in ascending issue-date order as instructed by IBEDC.",
+      "Load the refund tokens from the earliest issue date to the latest issue date, because IBEDC requires older refund tokens to be entered before newer ones.",
       "If the portal cannot retrieve an eligible token, contact IBEDC customer care with the meter details for investigation."
     ],
     "notes": [
