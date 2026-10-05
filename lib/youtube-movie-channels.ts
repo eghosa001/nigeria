@@ -4,6 +4,7 @@ import channelCache from "@/data/youtube-channel-cache.json";
 export type VerifiedYouTubeMovieChannel = {
   slug: string;
   name: string;
+  aliases: string[];
   estimatedMovieCount: number;
   channelUrl?: string;
   channelId?: string;
@@ -26,6 +27,7 @@ export const verifiedYouTubeMovieChannels: VerifiedYouTubeMovieChannel[] = sourc
   return {
     slug: source.slug,
     name: source.searchName,
+    aliases: source.aliases,
     estimatedMovieCount: source.estimatedMovieCount,
     channelUrl: resolved?.channelUrl ?? source.knownUrl,
     channelId: resolved?.channelId,
@@ -46,5 +48,22 @@ export function isApprovedYouTubeMoviePublisher(name?: string) {
   const normalized = name.trim().toLowerCase();
   return sourceRegistry.sources.some((source) =>
     source.aliases.some((alias) => alias.trim().toLowerCase() === normalized),
+  );
+}
+
+
+function normalizePublisherName(name: string) {
+  return name.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+export function getVerifiedYouTubeMovieChannelBySlug(slug: string) {
+  return verifiedYouTubeMovieChannels.find((channel) => channel.slug === slug);
+}
+
+export function getVerifiedYouTubeMovieChannelByName(name?: string) {
+  if (!name) return undefined;
+  const normalized = normalizePublisherName(name);
+  return verifiedYouTubeMovieChannels.find((channel) =>
+    channel.aliases.some((alias) => normalizePublisherName(alias) === normalized),
   );
 }
