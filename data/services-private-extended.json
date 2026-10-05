@@ -10855,5 +10855,139 @@
       "TLScontact Nigeria visa tracking",
       "collect passport TLS France"
     ]
+  },
+  {
+    "slug": "tlscontact-italy-visa-appointment-nigeria",
+    "title": "How to book and submit an Italy visa application with TLScontact Nigeria",
+    "shortTitle": "TLScontact Italy appointment",
+    "summary": "TLScontact Nigeria's Italy visa-centre route for choosing the correct travel purpose, creating the TLS account, booking an appointment, paying the service fee and submitting documents and biometrics in Abuja or Lagos.",
+    "category": "Foreign visas",
+    "agencySlug": "tlscontact-italy-nigeria",
+    "feeLabel": "TLScontact service fee plus applicable Italian visa fee",
+    "feeNote": "TLScontact currently publishes a mandatory service fee separately from the consular visa fee; the naira amounts can change with provider/consular updates and exchange-rate adjustments, so use the live fee page before payment.",
+    "timeline": "Appointment availability varies by centre. TLScontact currently says Italian Schengen applications in Lagos should be submitted at least 15 working days before intended travel.",
+    "status": "verified",
+    "officialPortal": "https://visas-it.tlscontact.com/en-us/country/ng",
+    "requirements": [
+      "Selection of the correct Italian visa/travel-purpose category and its current document checklist",
+      "A TLScontact account with applicant details matching the passport",
+      "A completed and signed application form for the selected Italian visa type",
+      "An available appointment at the TLScontact Abuja or Lagos Victoria Island centre",
+      "The required supporting documents, applicable visa/service fees and biometric attendance unless an exemption applies"
+    ],
+    "steps": [
+      "Open TLScontact Italy Nigeria and choose the applicant's main travel purpose and corresponding document checklist.",
+      "Create the TLScontact account and enter the applicant's personal details exactly as required for the visa file.",
+      "Choose an available appointment date/time at the Abuja or Lagos centre and print the appointment notification.",
+      "Prepare and sign the correct application form and assemble the original/supporting documents required for the chosen visa category.",
+      "Attend the centre on time, pay the applicable fees through the official route and complete document submission and biometric capture when required."
+    ],
+    "notes": [
+      "TLScontact is the application-centre operator; the Italian consular authority makes the visa decision.",
+      "TLScontact's current Nigeria process says applicants aged 12 or older generally attend for biometric capture unless an exemption applies.",
+      "The Lagos procedure currently states that Italian Schengen applications must be submitted at least 15 working days before intended travel."
+    ],
+    "sources": [
+      {
+        "label": "TLScontact Italy Nigeria Centres",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Italy Abuja Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngABV2it/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Italy Lagos Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngLGV2it/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Italy Abuja Fees",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngABV2it/application-fees",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "italy-schengen-tourist-visa",
+      "tlscontact-italy-passport-collection-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "TLScontact Italy Nigeria",
+      "Italy visa appointment Nigeria",
+      "Italy visa TLS Lagos",
+      "Italy visa TLS Abuja",
+      "book Italy visa appointment Nigeria"
+    ]
+  },
+  {
+    "slug": "tlscontact-italy-passport-collection-nigeria",
+    "title": "How to collect an Italian visa passport from TLScontact Nigeria",
+    "shortTitle": "TLS Italy passport collection",
+    "summary": "TLScontact Nigeria's Italy passport-return process after the Consulate completes processing, including collection after email notification, representative collection requirements and optional Express Courier Return.",
+    "category": "Foreign visas",
+    "agencySlug": "tlscontact-italy-nigeria",
+    "feeLabel": "Centre collection follows the application; optional courier service has an extra charge",
+    "feeNote": "TLScontact's Express Courier Return is an optional paid service. Check the current added-value-service charge at the selected centre before purchasing it.",
+    "timeline": "Passport collection becomes available after the Consulate returns the passport to TLScontact and the applicant receives the provider's email notification.",
+    "status": "verified",
+    "officialPortal": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngLGV2it/application-process",
+    "requirements": [
+      "An Italian visa application already submitted through TLScontact Nigeria",
+      "The email notification confirming that the passport has returned to the Visa Application Centre",
+      "For personal collection, the TLScontact checklist and a copy of the applicant's ID",
+      "For representative collection, the signed authorisation plus the applicant/representative ID documents and proof of family relationship when required",
+      "For courier return, prior selection/payment of the Express Courier Return service"
+    ],
+    "steps": [
+      "Wait for TLScontact's email confirming that the Italian consular authority has returned the passport to the centre.",
+      "Check the centre's current passport-return opening hours before travelling for collection.",
+      "For personal collection, bring the application checklist and the required applicant identification copy.",
+      "For authorised representative collection, prepare the signed authorisation, checklist, applicant ID copy, representative ID and any required proof of relationship.",
+      "If Express Courier Return was purchased, monitor the delivery instead of attending the centre and verify the returned passport when received."
+    ],
+    "notes": [
+      "TLScontact says applicants do not need to contact the call centre merely to ask whether a processed passport is ready; wait for the email notification.",
+      "The current Nigeria process allows representative collection only with the listed authorisation and identification evidence.",
+      "Passport return is an administrative service and does not indicate whether the visa decision is positive or negative before the passport is received."
+    ],
+    "sources": [
+      {
+        "label": "TLScontact Italy Lagos Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngLGV2it/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Italy Abuja Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngABV2it/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Italy Lagos Opening Hours",
+        "agency": "TLScontact",
+        "url": "https://visas-it.tlscontact.com/en-us/country/ng/vac/ngLGV2it/address-opening-hours",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "italy-schengen-tourist-visa",
+      "tlscontact-italy-visa-appointment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "TLScontact Italy passport collection Nigeria",
+      "collect Italy visa passport Lagos",
+      "Italy visa passport Abuja TLS",
+      "TLS Italy courier return Nigeria",
+      "Italy visa TLS passport return"
+    ]
   }
 ]
