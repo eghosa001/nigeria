@@ -17778,5 +17778,263 @@
       "Hygeia HMO hospitals near me",
       "Hygeia provider category"
     ]
+  },
+  {
+    "slug": "phed-pay-bill-buy-token",
+    "title": "How to pay a PHED bill or buy a prepaid token",
+    "shortTitle": "PHED bill & token payment",
+    "summary": "PHED's online payment route for entering a prepaid meter or customer record, choosing an amount and payment method, then receiving the electricity token and transaction receipt.",
+    "category": "Electricity",
+    "agencySlug": "phed",
+    "feeLabel": "Electricity amount plus any payment-channel charge",
+    "feeNote": "The electricity amount depends on the customer's meter/account and tariff. PHED's payment portal shows the transaction amount before the customer confirms card, transfer, USSD or mobile-money payment.",
+    "timeline": "PHED's current payment portal says prepaid tokens are generated instantly after successful payment and customers should contact support if the token is not received within five minutes.",
+    "status": "verified",
+    "officialPortal": "https://payments.phed.com.ng/",
+    "requirements": [
+      "The PHED prepaid meter number or customer/account information used by the payment portal",
+      "The amount the customer intends to pay or use to purchase electricity",
+      "A phone number or email address for receiving the transaction receipt or token information",
+      "A supported card, bank-transfer, USSD or mobile-money payment method"
+    ],
+    "steps": [
+      "Open PHED's official payment portal and enter the meter/account and customer contact information.",
+      "Enter the electricity amount and confirm that the customer or meter record is the intended one.",
+      "Choose card, bank transfer, USSD or another payment method offered by PHED and complete the transaction.",
+      "Save the generated receipt and copy the 20-digit electricity token for a prepaid meter.",
+      "If the token is not displayed or received within five minutes, use PHED's token requery/support route with the transaction reference."
+    ],
+    "notes": [
+      "PHED's portal states that Visa, Mastercard, Verve, bank transfer, USSD and mobile-money options are supported.",
+      "The payment portal includes a token-check/requery route for a successful transaction whose token did not arrive normally.",
+      "Always verify the meter number before payment because the generated token is linked to that prepaid meter."
+    ],
+    "sources": [
+      {
+        "label": "PHED Payments",
+        "agency": "Port Harcourt Electricity Distribution Plc",
+        "url": "https://payments.phed.com.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PHED Payment Requery",
+        "agency": "Port Harcourt Electricity Distribution Plc",
+        "url": "https://payments.phed.com.ng/Payment/Requery",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PHED Home — Payment Options",
+        "agency": "Port Harcourt Electricity Distribution Plc",
+        "url": "https://phed.com.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "phed-map-meter-application",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PHED buy token",
+      "PHED pay bill online",
+      "Port Harcourt electricity token",
+      "PHED payment portal",
+      "PHED token requery"
+    ]
+  },
+  {
+    "slug": "phed-map-meter-application",
+    "title": "How to apply for a PHED prepaid meter under MAP",
+    "shortTitle": "PHED MAP meter",
+    "summary": "PHED's online MAP meter route for entering customer, premises, ID and meter details, resolving existing arrears, receiving approval and paying securely through the approved meter application portal.",
+    "category": "Electricity",
+    "agencySlug": "phed",
+    "feeLabel": "Meter price depends on approved vendor and meter type",
+    "feeNote": "PHED's live MAP portal publishes approved vendor pricing. Use the price and transaction reference displayed for the approved application rather than an older tariff or a field-agent quote.",
+    "timeline": "PHED provides live application tracking but does not publish one universal installation completion time for every MAP application on the current portal.",
+    "status": "verified",
+    "officialPortal": "https://mapportal.phed.com.ng/",
+    "requirements": [
+      "The customer's name, occupation, phone number and email address",
+      "The service address including state, LGA, house number, bus stop and landmark",
+      "The PHED account number, existing meter information if any, and a valid ID type/number",
+      "The required meter type and accepted MAP payment option selected in the application",
+      "Resolution of existing account arrears through payoff, an accepted installment arrangement or PHED's bill-revision route before approved payment"
+    ],
+    "steps": [
+      "Open PHED's official MAP portal and start a prepaid-meter application for the customer account.",
+      "Enter the customer, premises, account, ID and requested-meter information and submit the meter request.",
+      "Resolve any account arrears by paying them, accepting the installment option PHED offers or opening a bill-revision request if the balance is disputed.",
+      "Wait until PHED marks the application approved for payment, then use the displayed transaction reference and portal payment route to pay the approved meter amount.",
+      "Keep the ticket ID/payment evidence and use PHED's portal to track the meter application through installation."
+    ],
+    "notes": [
+      "PHED's MAP form says the customer must address arrears before completing a meter purchase.",
+      "The current MAP portal publishes approved Meter Asset Provider pricing and supports status tracking and secure payment.",
+      "Customers should quote the PHED ticket ID on transactions connected to the meter application."
+    ],
+    "sources": [
+      {
+        "label": "PHED MAP Portal",
+        "agency": "Port Harcourt Electricity Distribution Plc",
+        "url": "https://mapportal.phed.com.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PHED MAP Application",
+        "agency": "Port Harcourt Electricity Distribution Plc",
+        "url": "https://map.phed.com.ng/MAPRegister/CheckApplicationStatus",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PHED Customer Forms",
+        "agency": "Port Harcourt Electricity Distribution Plc",
+        "url": "https://phed.com.ng/customer-forms/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "phed-pay-bill-buy-token",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PHED prepaid meter application",
+      "PHED MAP meter",
+      "Port Harcourt Disco meter application",
+      "PHED meter portal",
+      "PHED MAP vendor price"
+    ]
+  },
+  {
+    "slug": "kaduna-electric-pay-bill-buy-token",
+    "title": "How to pay a Kaduna Electric bill or buy a prepaid token",
+    "shortTitle": "Kaduna Electric payment",
+    "summary": "Kaduna Electric's official and authorised e-payment routes for entering a prepaid meter or postpaid account, completing payment and receiving the STS token or transaction receipt.",
+    "category": "Electricity",
+    "agencySlug": "kaduna-electric",
+    "feeLabel": "Electricity amount plus any payment-channel charge",
+    "feeNote": "The electricity amount depends on the customer's tariff and purchase. Kaduna Electric lists its direct portal plus authorised banks, fintechs, POS and USSD channels; review the channel checkout before payment.",
+    "timeline": "Kaduna Electric states that its authorised digital vending channels generate prepaid STS tokens instantly after successful payment.",
+    "status": "verified",
+    "officialPortal": "https://kadunaelectric.com/e-payment-centers",
+    "requirements": [
+      "The 11-digit or 13-digit prepaid meter number or the postpaid account reference",
+      "The amount the customer wants to vend or pay toward the monthly electricity bill",
+      "A supported payment option such as debit card, bank transfer, mobile wallet, USSD or an authorised cashier/POS route",
+      "A phone number or email address for the token/transaction notification on digital channels"
+    ],
+    "steps": [
+      "Open Kaduna Electric's official e-payment page or direct customer portal and choose an authorised digital or walk-in payment channel.",
+      "Enter the prepaid meter number or postpaid account reference and confirm the customer record.",
+      "Enter the electricity amount and complete checkout with the selected card, transfer, mobile-wallet, USSD or cash channel.",
+      "For a prepaid meter, copy the 20-digit STS token displayed and sent after successful vending.",
+      "Keep the receipt and contact Kaduna Electric support if the token does not load after the meter/UIU pairing and activation checks are satisfied."
+    ],
+    "notes": [
+      "Kaduna Electric publishes authorised payment partners and physical cashier/service locations across Kaduna, Kebbi, Sokoto and Zamfara.",
+      "Its digital-vending guide says the STS token is returned on-screen and through SMS/email after successful payment.",
+      "A token-loading problem can be caused by UIU pairing or activation rather than the payment itself."
+    ],
+    "sources": [
+      {
+        "label": "Kaduna Electric E-Payment Centers",
+        "agency": "Kaduna Electricity Distribution Company",
+        "url": "https://kadunaelectric.com/e-payment-centers",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kaduna Electric Home",
+        "agency": "Kaduna Electricity Distribution Company",
+        "url": "https://www.kadunaelectric.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kaduna Electric Meter Activation",
+        "agency": "Kaduna Electricity Distribution Company",
+        "url": "https://kadunaelectric.com/metering-activation/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kaduna-electric-map-meter-application",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Kaduna Electric buy token",
+      "Kaduna Electric pay bill",
+      "Kaduna electricity recharge",
+      "Kaduna Electric payment portal",
+      "Kaduna Electric STS token"
+    ]
+  },
+  {
+    "slug": "kaduna-electric-map-meter-application",
+    "title": "How to apply for a Kaduna Electric prepaid meter under MAP",
+    "shortTitle": "Kaduna Electric MAP meter",
+    "summary": "Kaduna Electric's current five-stage MAP route: submit the meter request, pass the premises survey, resolve outstanding debt, pay the approved provider and receive installation after payment confirmation.",
+    "category": "Electricity",
+    "agencySlug": "kaduna-electric",
+    "feeLabel": "Current MAP price depends on provider and meter type",
+    "feeNote": "Kaduna Electric publishes a live provider-by-provider MAP price table. Pay only the current regulated amount shown for the selected single- or three-phase meter and approved MAP provider.",
+    "timeline": "Kaduna Electric states that after MAP payment is confirmed and the site passes inspection, the meter is installed and energised within 10 working days.",
+    "status": "verified",
+    "officialPortal": "https://map.kadunaelectric.com/customer",
+    "requirements": [
+      "An existing Kaduna Electric account/meter reference for an existing customer, or completion of new-customer enrolment before MAP selection",
+      "Customer/account details, valid ID and property information used for the online meter request",
+      "A premises that passes the pre-installation wiring/load and meter-type survey",
+      "Settlement of outstanding electricity debt or an approved flexible repayment arrangement",
+      "Payment directly into the designated account of the approved MAP provider after eligibility and meter type are confirmed"
+    ],
+    "steps": [
+      "Open Kaduna Electric's MAP eligibility portal and enter the account or meter number, or complete new-customer enrolment at the area office first.",
+      "Submit the online meter request with the customer, valid-ID and property information.",
+      "Allow Kaduna Electric/MAP inspectors to assess the premises and determine the required single- or three-phase meter.",
+      "Clear outstanding electricity debt or agree the approved repayment plan, then pay the current MAP amount directly to the designated provider account and upload the receipt.",
+      "Track the request and allow the licensed technicians to install and energise the smart meter within the published 10-working-day post-payment window."
+    ],
+    "notes": [
+      "Kaduna Electric tells new buildings, first-time customers and account-separation applicants to complete area-office enrolment before meter payment.",
+      "The provider warns customers not to pay cash to field technicians or unverified third parties.",
+      "Current MAP prices vary by provider, communication technology and meter phase, so the live MAP price table should be checked immediately before payment."
+    ],
+    "sources": [
+      {
+        "label": "Kaduna Electric MAP Eligibility",
+        "agency": "Kaduna Electricity Distribution Company",
+        "url": "https://map.kadunaelectric.com/customer",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kaduna Electric New Customer Connection & Metering",
+        "agency": "Kaduna Electricity Distribution Company",
+        "url": "https://kadunaelectric.com/metering/new-customer-connection",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kaduna Electric MAP Prices",
+        "agency": "Kaduna Electricity Distribution Company",
+        "url": "https://kadunaelectric.com/metering/map-prices",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kaduna-electric-pay-bill-buy-token",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Kaduna Electric prepaid meter application",
+      "Kaduna Electric MAP",
+      "Kaduna Electric meter price",
+      "Kaduna Electric MAP eligibility",
+      "Kaduna Electric 10 working days meter"
+    ]
   }
 ]
