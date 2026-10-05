@@ -36,7 +36,15 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
   const highlights = guide.highlights.slice(0, 4).map((item) => item.name);
   const firstPlanning = guide.planning[0]?.detail ?? "Group nearby stops together and confirm live access before travelling.";
+  const geographyQuestion = guide.kind === "city"
+    ? [{
+        question: "Where is " + guide.shortTitle + " in Nigeria?",
+        answer: guide.shortTitle + " is in " + guide.region + ", Nigeria. This guide covers what to do there, places to visit and practical trip planning.",
+      }]
+    : [];
+
   return [
+    ...geographyQuestion,
     {
       question: "What are the best things to do in " + guide.shortTitle + "?",
       answer: "Start with " + highlights.slice(0, 3).join(", ") + ". The guide below explains how to fit these into a realistic trip.",
