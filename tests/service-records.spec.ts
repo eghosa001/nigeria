@@ -590,12 +590,15 @@ const representative = [
   "bolt-ride-insurance-claim-nigeria",
   "bolt-schedule-ride-nigeria",
   "uber-reserve-ride-nigeria",
-  "uber-request-ride-online-nigeria"
+  "uber-request-ride-online-nigeria",
+  "wakanow-book-flight-nigeria",
+  "wakanow-book-hotel-nigeria",
+  "wakanow-cancel-hotel-reservation"
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(471);
-  expect(publicServices).toHaveLength(471);
+  expect(services).toHaveLength(474);
+  expect(publicServices).toHaveLength(474);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
