@@ -2999,5 +2999,465 @@
       "MTN FibreX price",
       "MTN FibreX coverage"
     ]
+  },
+  {
+    "slug": "hotelsng-book-hotel",
+    "title": "How to book a hotel on Hotels.ng",
+    "shortTitle": "Hotels.ng hotel booking",
+    "summary": "Hotels.ng's Nigeria accommodation-booking route for searching a city or hotel, choosing a property, placing the reservation and receiving booking confirmation and payment instructions by SMS or email.",
+    "category": "Travel & accommodation",
+    "agencySlug": "hotels-ng",
+    "feeLabel": "Room price and payment terms vary by hotel",
+    "feeNote": "Hotels.ng shows the room price and the accommodation provider's payment conditions for the selected property. Some hotels support payment on arrival while others require prepayment.",
+    "timeline": "Hotels.ng sends confirmation and booking updates after a reservation is placed; final availability can depend on the accommodation provider and its payment/prepayment policy.",
+    "status": "verified",
+    "officialPortal": "https://hotels.ng/",
+    "requirements": [
+      "The destination city or specific hotel the traveller wants to book",
+      "The intended stay dates and room/guest requirements for the reservation",
+      "The guest name and contact details needed for Hotels.ng to send booking updates",
+      "A payment method when the selected hotel requires prepayment rather than pay-on-arrival"
+    ],
+    "steps": [
+      "Open Hotels.ng and search for the destination city or the specific hotel needed for the stay.",
+      "Choose a property and room option, then review the displayed price, room information and payment conditions before placing the reservation.",
+      "Enter the guest and contact information requested for the booking.",
+      "Choose the available payment route for that property, including pay-on-arrival only when the hotel actually offers it.",
+      "Save the Hotels.ng confirmation and monitor the SMS/email updates until the accommodation provider confirms the reservation."
+    ],
+    "notes": [
+      "Hotels.ng says it acts as an intermediary between the traveller and the accommodation provider after a reservation is placed.",
+      "Pay-on-arrival does not guarantee that every hotel will hold a room without prepayment; the provider's terms warn that availability can change.",
+      "Hotel pricing and cancellation conditions are property-specific, so they should be reviewed before payment."
+    ],
+    "sources": [
+      {
+        "label": "Hotels.ng Home",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Hotels.ng Terms of Service",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/terms",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hotelsng-cancel-refund",
+      "wakanow-book-hotel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hotels.ng booking",
+      "book hotel on Hotels.ng",
+      "Hotels.ng Nigeria hotel reservation",
+      "Hotels.ng pay on arrival",
+      "Hotels.ng hotel booking Nigeria"
+    ]
+  },
+  {
+    "slug": "hotelsng-cancel-refund",
+    "title": "How Hotels.ng hotel cancellation and refunds work",
+    "shortTitle": "Hotels.ng cancellation & refund",
+    "summary": "Hotels.ng's cancellation route for an existing reservation, with refund treatment depending on whether the money is still with Hotels.ng or has already been transferred to the accommodation provider.",
+    "category": "Travel & accommodation",
+    "agencySlug": "hotels-ng",
+    "feeLabel": "Cancellation deductions depend on hotel/provider terms",
+    "feeNote": "Hotels.ng states that money paid but not yet transferred to the hotel can receive a full refund, while money already paid to the accommodation provider is subject to that provider's cancellation/no-show charges and Hotels.ng operational deductions.",
+    "timeline": "Hotels.ng does not publish one universal refund completion time because the outcome depends on the accommodation provider and where the payment is held when cancellation is requested.",
+    "status": "verified",
+    "officialPortal": "https://hotels.ng/terms",
+    "requirements": [
+      "The Hotels.ng reservation details and guest contact information for the booking being cancelled",
+      "The payment status showing whether Hotels.ng still holds the money or the accommodation provider has already received it",
+      "The selected hotel's cancellation/no-show terms for any payment already transferred to the property"
+    ],
+    "steps": [
+      "Open the Hotels.ng booking correspondence or contact Hotels.ng support with the reservation details and request cancellation.",
+      "Confirm whether the booking payment is still held by Hotels.ng or has already been transferred to the accommodation provider.",
+      "Review the hotel's cancellation or no-show charge when the accommodation provider has already received the payment.",
+      "Confirm the refund amount that Hotels.ng can process under the applicable payment and hotel conditions.",
+      "Keep the cancellation/refund correspondence until the refund is received or the accommodation provider's decision is fully resolved."
+    ],
+    "notes": [
+      "Hotels.ng states that a payment not yet transferred to the hotel can attract a 100% refund.",
+      "If payment was made directly to the hotel, Hotels.ng says it is not responsible for reimbursing that direct payment.",
+      "A no-show can be treated differently from a cancellation made before arrival, depending on the hotel's policy."
+    ],
+    "sources": [
+      {
+        "label": "Hotels.ng Terms of Service — Cancellation and Refund",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/terms",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hotelsng-book-hotel",
+      "wakanow-cancel-hotel-reservation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hotels.ng refund",
+      "cancel Hotels.ng booking",
+      "Hotels.ng cancellation policy",
+      "Hotels.ng hotel refund Nigeria",
+      "Hotels.ng no show refund"
+    ]
+  },
+  {
+    "slug": "glovo-order-nigeria",
+    "title": "How to place a Glovo order in Nigeria",
+    "shortTitle": "Order with Glovo",
+    "summary": "Glovo Nigeria's app/web order route for entering a delivery address, choosing an available restaurant/store or courier service, reviewing the delivery fee and paying before a courier fulfils the order.",
+    "category": "E-commerce",
+    "agencySlug": "glovo-nigeria",
+    "feeLabel": "Item total plus the delivery/service amount shown before checkout",
+    "feeNote": "Glovo pricing depends on the merchant, basket, distance, delivery method and any active service fee or promotion. Review the full cost breakdown in the app before placing the order.",
+    "timeline": "Delivery time is shown for the selected merchant/order in the Glovo interface and varies by preparation time, distance and courier availability.",
+    "status": "verified",
+    "officialPortal": "https://glovoapp.com/ng/en/",
+    "requirements": [
+      "A Glovo user account or supported web/app checkout profile",
+      "A delivery address inside a Nigerian city/area currently served by Glovo",
+      "An available restaurant, grocery, shop or other service shown after the delivery address is entered",
+      "A supported payment method for the basket and delivery/service charges shown at checkout"
+    ],
+    "steps": [
+      "Open the Glovo app or Nigeria website and enter the delivery address so the platform can show services available in that area.",
+      "Choose the restaurant, store, groceries or supported delivery service and add the required items to the basket.",
+      "Review item quantities, the delivery/service cost and the destination address before checkout.",
+      "Choose an available payment method and place the order after confirming the final total.",
+      "Track the active order in Glovo and use the in-app Help option if the order, courier or delivery develops a problem."
+    ],
+    "notes": [
+      "Glovo's Nigeria platform exposes food, groceries, shops and package-delivery options depending on the city and address.",
+      "Delivery cost is shown before the order is placed and varies by merchant/location.",
+      "The availability of a specific store or service is determined after the customer enters the delivery address."
+    ],
+    "sources": [
+      {
+        "label": "Glovo Nigeria",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://glovoapp.com/ng/en/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glovo Nigeria Terms",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://glovoapp.com/docs/en/legal/terms/?country=ng",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "glovo-cancel-refund-order",
+      "chowdeck-create-account-order"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glovo Nigeria order",
+      "order food Glovo Lagos",
+      "Glovo groceries Nigeria",
+      "Glovo delivery Nigeria",
+      "Glovo app Nigeria"
+    ]
+  },
+  {
+    "slug": "glovo-cancel-refund-order",
+    "title": "How Glovo cancellation and refunds work in Nigeria",
+    "shortTitle": "Glovo cancellation & refund",
+    "summary": "Glovo Nigeria's order-cancellation and dispute route, including when cancellation can still be free, when merchant/courier costs can be charged and how Glovo may process an eligible refund.",
+    "category": "E-commerce",
+    "agencySlug": "glovo-nigeria",
+    "feeLabel": "Cancellation charge depends on order stage",
+    "feeNote": "Glovo's Nigeria terms say cancellation can be free before a courier accepts the order, while cancellation after acceptance/preparation can result in product and/or delivery charges.",
+    "timeline": "Refund timing is not given as one fixed period in Glovo's Nigeria terms; dispute/refund handling depends on the payment method, merchant issue and Glovo's support review.",
+    "status": "verified",
+    "officialPortal": "https://glovoapp.com/docs/en/legal/terms/?country=ng",
+    "requirements": [
+      "The active or completed Glovo order shown in the user's app/account",
+      "The order stage at the time cancellation is requested, including whether the merchant or courier has accepted it",
+      "Evidence of the order problem when the request relates to missing, incorrect or defective products"
+    ],
+    "steps": [
+      "Open the affected Glovo order in the app and use the Help/support route before cancelling or requesting a refund.",
+      "Check the order stage because cancellation consequences change after the merchant or courier has accepted and started processing the order.",
+      "Submit the cancellation or dispute reason and provide order evidence when Glovo requests it.",
+      "Review any cancellation amount shown before confirming a cancellation that is no longer free.",
+      "Monitor the app/support conversation for the refund or dispute outcome and keep the order/payment record until it is resolved."
+    ],
+    "notes": [
+      "Glovo's Nigeria terms say users can cancel free of charge until a courier has accepted the order, but later cancellation can attract substantial charges.",
+      "For cash-payment refunds, Glovo's terms say the refund may be issued as a promo code in the user's Glovo account.",
+      "Some product-return/refund issues are handled directly under the merchant's return policy rather than solely by Glovo."
+    ],
+    "sources": [
+      {
+        "label": "Glovo Nigeria Terms — Refunds and Cancellations",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://glovoapp.com/docs/en/legal/terms/?country=ng",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "glovo-order-nigeria",
+      "chowdeck-create-account-order"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glovo refund Nigeria",
+      "cancel Glovo order",
+      "Glovo cancellation fee Nigeria",
+      "Glovo order complaint",
+      "Glovo refund cash order"
+    ]
+  },
+  {
+    "slug": "kwik-book-delivery-nigeria",
+    "title": "How to book a Kwik delivery in Nigeria",
+    "shortTitle": "Book Kwik delivery",
+    "summary": "Kwik's app/web delivery-booking route for creating an account, entering pickup and drop-off addresses, choosing the delivery option and accepting the distance-based price before dispatch.",
+    "category": "Logistics",
+    "agencySlug": "kwik-delivery",
+    "feeLabel": "Price is calculated from the delivery request",
+    "feeNote": "Kwik says the system proposes a delivery price after pickup/drop-off details and options are entered. Its FAQ says pricing starts from ₦400 depending on distance, but the final app/web quote controls.",
+    "timeline": "Kwik's official pages currently disagree on service coverage: the FAQ says Lagos, Abuja and Ibadan with 2-hour/1-hour commitments, while the Areas Covered page says the platform is now focused on Lagos Metropolitan Area. Check live app availability before relying on a city-specific promise.",
+    "status": "conflict",
+    "officialPortal": "https://kwik.delivery/app/",
+    "requirements": [
+      "A Kwik account created in the app or web service",
+      "The pickup address and destination address for the item being delivered",
+      "The parcel/item size, weight and delivery option needed for the order",
+      "A supported payment method shown by Kwik for the quoted delivery"
+    ],
+    "steps": [
+      "Open Kwik's mobile/web app and create or sign in to the customer account.",
+      "Enter the pickup and delivery addresses and the parcel/service information requested for the order.",
+      "Review the delivery option and price generated by Kwik for the distance and vehicle/service type.",
+      "Choose the available payment route and confirm the delivery order.",
+      "Wait for a Kwik courier assignment and follow the active order in the app until pickup and delivery are completed."
+    ],
+    "notes": [
+      "Kwik's FAQ says its bike box supports up to 25 kg and publishes larger-vehicle options for bigger shipments.",
+      "The provider's FAQ and Areas Covered pages currently conflict on whether ordinary service coverage is Lagos-only or also Abuja/Ibadan.",
+      "A live app quote and availability check should therefore take priority over an older city statement."
+    ],
+    "sources": [
+      {
+        "label": "Kwik Delivery App",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/app/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kwik FAQ",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kwik Areas Covered",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/areas-covered/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kwik-track-delivery-nigeria",
+      "kwik-corporate-account",
+      "gigl-send-parcel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Kwik delivery Nigeria",
+      "book Kwik delivery",
+      "Kwik delivery Lagos",
+      "Kwik delivery price",
+      "Kwik app Nigeria"
+    ]
+  },
+  {
+    "slug": "kwik-track-delivery-nigeria",
+    "title": "How to track a Kwik delivery",
+    "shortTitle": "Track Kwik delivery",
+    "summary": "Kwik's real-time delivery tracking route after a courier has been assigned, using the live tracking link or in-app map to follow the courier until delivery.",
+    "category": "Logistics",
+    "agencySlug": "kwik-delivery",
+    "feeLabel": "No separate tracking fee",
+    "feeNote": "Kwik includes tracking as part of the delivery service and does not state a separate fee for viewing courier progress.",
+    "timeline": "Real-time tracking becomes available after the delivery order is confirmed and assigned to a driver/courier.",
+    "status": "verified",
+    "officialPortal": "https://kwik.delivery/faq/",
+    "requirements": [
+      "An active Kwik delivery order that has been confirmed and assigned to a courier",
+      "Access to the Kwik app or the tracking link generated for that delivery"
+    ],
+    "steps": [
+      "Open the active Kwik order after the platform confirms that a driver/courier has been assigned.",
+      "Use the live map displayed in the app or open the tracking link issued for the shipment.",
+      "Follow the courier's current location and delivery progress until the destination is reached.",
+      "Share the tracking link with the intended recipient when the recipient also needs live delivery visibility.",
+      "Use Kwik's official support contact if the tracking stops updating or the delivery cannot be completed."
+    ],
+    "notes": [
+      "Kwik's FAQ states that the tracking link becomes available after shipment pickup/driver assignment.",
+      "Corporate customers can also share live tracking with recipients.",
+      "Tracking confirms courier progress but does not change prohibited-item, size or weight rules for the shipment."
+    ],
+    "sources": [
+      {
+        "label": "Kwik FAQ — Tracking",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kwik Corporate Clients",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/corporate-clients/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kwik-book-delivery-nigeria",
+      "kwik-corporate-account",
+      "gigl-track-shipment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "track Kwik delivery",
+      "Kwik tracking Nigeria",
+      "Kwik live tracking",
+      "Kwik delivery status",
+      "Kwik tracking link"
+    ]
+  },
+  {
+    "slug": "kwik-corporate-account",
+    "title": "How to create a Kwik corporate delivery account",
+    "shortTitle": "Kwik corporate account",
+    "summary": "Kwik's business-delivery onboarding route for corporate customers that need single or batch orders, scheduled deliveries, multiple vehicle sizes and real-time tracking for recipients.",
+    "category": "Business",
+    "agencySlug": "kwik-delivery",
+    "feeLabel": "Business delivery charges depend on each order/service",
+    "feeNote": "Kwik does not publish one fixed corporate subscription fee on the corporate-client page; delivery pricing depends on the order, distance, vehicle and service.",
+    "timeline": "Kwik does not publish one universal approval time for a corporate account; the business creates the corporate profile and then uses the platform's available delivery functions.",
+    "status": "verified",
+    "officialPortal": "https://kwik.delivery/corporate-clients/",
+    "requirements": [
+      "A business or organisation that needs recurring or batch delivery services",
+      "The corporate contact and account information requested by Kwik during account creation",
+      "Pickup/delivery details for the orders the business will create after onboarding"
+    ],
+    "steps": [
+      "Open Kwik's Corporate Clients page and choose the Corporate account signup option.",
+      "Create the business profile with the organisation and contact information requested by Kwik.",
+      "Sign in to the corporate delivery platform and configure the pickup, destination and delivery information for the first order or batch.",
+      "Choose the vehicle/service type needed for the parcel size or business delivery requirement and review the generated charge.",
+      "Submit the delivery and use Kwik's real-time tracking tools to monitor the order and share progress with the recipient."
+    ],
+    "notes": [
+      "Kwik says corporate accounts can create single or batch orders that are scheduled or sent on demand.",
+      "The provider advertises bikes, vans and trucks for different business shipment sizes.",
+      "Corporate-service availability should be checked in the live platform because Kwik's public pages currently differ on geographic coverage."
+    ],
+    "sources": [
+      {
+        "label": "Kwik Corporate Clients",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/corporate-clients/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kwik FAQ",
+        "agency": "Kwik",
+        "url": "https://kwik.delivery/faq/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kwik-book-delivery-nigeria",
+      "kwik-track-delivery-nigeria",
+      "gigl-send-parcel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Kwik corporate account",
+      "Kwik business delivery Nigeria",
+      "Kwik batch delivery",
+      "Kwik corporate logistics",
+      "Kwik business account"
+    ]
+  },
+  {
+    "slug": "travelstart-existing-booking-support-nigeria",
+    "title": "How to get Travelstart Nigeria support for an existing booking",
+    "shortTitle": "Travelstart existing booking support",
+    "summary": "Travelstart's current support route for Nigerian customers who already have a flight booking, alongside an official notice that Travelstart Nigeria local operations ceased on 31 July 2026.",
+    "category": "Travel & accommodation",
+    "agencySlug": "travelstart-nigeria",
+    "feeLabel": "Support is free to contact; booking changes/refunds can carry fees",
+    "feeNote": "Travelstart says airline/principal penalties plus Travelstart amendment or refund-administration fees can apply to cancellations or changes. The provider's current Nigeria business portal also states that local operations ceased on 31 July 2026.",
+    "timeline": "Travelstart says normal airline refunds often take about 6–8 weeks, but can take longer depending on the airline; existing-booking support remains available through the published contact channels.",
+    "status": "conflict",
+    "officialPortal": "https://www.travelstart.com.ng/contact-us",
+    "requirements": [
+      "The Travelstart booking reference or e-ticket for the existing reservation",
+      "The passenger name and contact details that match the booking",
+      "The specific change, cancellation, refund or ticket-support request that needs review under the airline's fare rules"
+    ],
+    "steps": [
+      "Open Travelstart's current Contact Us page and choose the Existing Flight Booking support route.",
+      "Provide the booking reference, passenger details and a clear description of the change, cancellation, refund or ticket issue.",
+      "Ask Travelstart to confirm the airline fare rule and any Travelstart administration/amendment fee before authorising a change or cancellation.",
+      "If a refund is eligible, keep the support reference while Travelstart submits the request to the airline or supplier.",
+      "Monitor the original payment account and Travelstart correspondence until the ticket issue or refund is fully resolved."
+    ],
+    "notes": [
+      "Travelstart's business portal currently says Travelstart Nigeria ceased local operations effective 31 July 2026.",
+      "At the same time, Travelstart's Nigeria consumer contact page still publishes an Existing Flight Booking support number and WhatsApp route, so this guide is deliberately conflict-marked.",
+      "This page does not recommend making a new Travelstart Nigeria booking while the provider's public operational status remains inconsistent."
+    ],
+    "sources": [
+      {
+        "label": "Travelstart Nigeria Contact Us",
+        "agency": "Travelstart",
+        "url": "https://www.travelstart.com.ng/contact-us",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Travelstart Business Nigeria Operations Notice",
+        "agency": "Travelstart",
+        "url": "https://business.travelstart.com/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Travelstart FAQ — Booking Cancellation",
+        "agency": "Travelstart",
+        "url": "https://go.travelstart.com/lp/faq",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Travelstart Terms and Conditions",
+        "agency": "Travelstart",
+        "url": "https://go.travelstart.com/lp/terms-and-conditions",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "wakanow-book-flight-nigeria",
+      "air-peace-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Travelstart Nigeria support",
+      "Travelstart Nigeria existing booking",
+      "Travelstart refund Nigeria",
+      "Travelstart cancelled Nigeria operations",
+      "Travelstart booking support"
+    ]
   }
 ]
