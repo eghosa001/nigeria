@@ -8,8 +8,8 @@ import { exploreGuides } from "@/lib/explore";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
 
 export const metadata: Metadata = {
-  title: "Nigerian Movies, Services, Jobs & Travel Guide",
-  description: "Discover Nigerian movies, practical service guidance, verified jobs and careers, and places to explore across Nigeria.",
+  title: "Nigerian Movies, Services, Travel & Jobs Guide",
+  description: "Discover Nigerian movies, practical service guidance, places to explore across Nigeria, and verified jobs and careers.",
   alternates: { canonical: "/" },
 };
 
@@ -221,7 +221,9 @@ export default function HomePage() {
             <Link href="/explore?q=hotel#places">Hotels & stays</Link>
           </div>
         </div>
-      </section>      <section className="minimal-home-section minimal-home-jobs" aria-labelledby="home-jobs-title">
+      </section>
+
+      <section className="minimal-home-section minimal-home-jobs" aria-labelledby="home-jobs-title">
         <div className="container">
           <div className="minimal-section-heading">
             <div>
