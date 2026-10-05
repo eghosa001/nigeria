@@ -3497,6 +3497,70 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-10-05",
       note: "Silverbird's current Nollywood listings include 19. Cinema locations, dates and showtimes change, so check the live schedule before travelling."
     }]
+  },
+
+  {
+    slug: "starlomo",
+    title: "Starlomo",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Nollywood"],
+    languages: ["Yoruba"],
+    synopsis: "A Yoruba-language drama built around personal ambition, relationships and the pressures that emerge when private choices begin affecting the people around them.",
+    cast: ["Odunlade Adekola", "Lateef Adedimeji", "Mike Afolarin", "Lanre Adediwura", "Bukunmi Adeaga-Ilori", "Ibrahim Chatta", "Iyabo Ojo", "Koyin", "Samuel Banks"],
+    featuredCast: ["Odunlade Adekola", "Lateef Adedimeji", "Mike Afolarin"],
+    directors: ["Kayode Kasum"],
+    runtimeMinutes: 105,
+    watchLinks: [{
+      platform: "Cinema",
+      label: "Check current cinema showtimes",
+      href: "https://fiesta.ng/genre/drama/",
+      access: "cinema",
+      lastChecked: "2026-10-05",
+      note: "Fiesta currently lists Starlomo as a Yoruba-language Nigerian cinema release with English subtitles. Cinema schedules change, so check the live listing before travelling."
+    }]
+  },
+  {
+    slug: "call-of-my-life",
+    title: "Call of My Life",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Romance", "Romantic comedy", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Still recovering from being jilted, a hopeless romantic begins to see a new possibility for love after a routine work call connects her with a charming stranger.",
+    cast: ["Andrew Yaw Bunting", "Beverly Osu", "Broda Shaggi", "Justin Chukwudi Ugonna", "Nkem Owoh", "Patience Ozokwor", "Uzoamaka Power", "Zubby Michael"],
+    featuredCast: ["Andrew Yaw Bunting", "Beverly Osu", "Broda Shaggi"],
+    directors: ["Dammy Twitch"],
+    runtimeMinutes: 107,
+    watchLinks: [{
+      platform: "Cinema",
+      label: "Check current Silverbird showtimes",
+      href: "https://silverbirdcinemas.com/movie/call-of-my-life/",
+      access: "cinema",
+      lastChecked: "2026-10-05",
+      note: "Silverbird currently lists Call of My Life as showing in its Nigerian cinema network. Cinema schedules change, so check the live listing before travelling."
+    }]
+  },
+  {
+    slug: "invitation-to-kill",
+    title: "Invitation to Kill",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "After his livestock business collapses and his marriage breaks down, an agricultural businessman tries to rebuild his life while remaining present for his daughter.",
+    cast: ["Kalu Ikeagwu", "Greg Ojefua", "Oma Iyasara", "Tonia Chukwurah", "Annabel Thaddeus", "Efua Bona"],
+    featuredCast: ["Kalu Ikeagwu", "Greg Ojefua", "Oma Iyasara"],
+    directors: ["Chuks Obaze"],
+    runtimeMinutes: 112,
+    watchLinks: [{
+      platform: "Cinema",
+      label: "Check the official cinema release source",
+      href: "https://www.tntheatrical.com/post/first-look-kalu-ikeagwu-returns-to-the-big-screen-in-thriller-invitation-to-kill-in-cinemas-sep",
+      access: "cinema",
+      lastChecked: "2026-10-05",
+      note: "Tribe Nation Theatrical Distribution released Invitation to Kill in Nigerian and Ghanaian cinemas on 11 September 2026. Current cinema schedules vary by location."
+    }]
   }
 ];
 
