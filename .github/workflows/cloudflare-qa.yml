@@ -40,8 +40,9 @@ jobs:
             exit 0
           fi
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            git fetch origin "${{ github.base_ref }}" --depth=1
-            changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+            base_sha="${{ github.event.pull_request.base.sha }}"
+            git fetch origin "$base_sha" --depth=1
+            changed="$(git diff --name-only "$base_sha" HEAD)"
           else
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
