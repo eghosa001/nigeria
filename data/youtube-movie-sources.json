@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-01",
+  "checkedAt": "2026-10-05",
   "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
   "sources": [
     {
@@ -348,7 +348,8 @@
         "Chizzyflix"
       ],
       "estimatedMovieCount": 50,
-      "optional": true
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/@chizzyflix"
     },
     {
       "slug": "orji-tv",
@@ -367,7 +368,8 @@
         "Kiki Bakare TV"
       ],
       "estimatedMovieCount": 35,
-      "optional": true
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/channel/UC5jC8VPJvB8V4NuAKZA3t8g"
     },
     {
       "slug": "efe-irele-tv",
@@ -600,6 +602,130 @@
         "Rachel Edwards"
       ],
       "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "kiekie-tv",
+      "searchName": "KieKieTV",
+      "aliases": [
+        "KieKieTV",
+        "KieKie TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/@kiekietv",
+      "optional": true
+    },
+    {
+      "slug": "itelediconstudio",
+      "searchName": "Itelediconstudio",
+      "aliases": [
+        "Itelediconstudio",
+        "Itele D Icon Studio"
+      ],
+      "estimatedMovieCount": 45,
+      "knownUrl": "https://www.youtube.com/@itelediconstudio",
+      "optional": true
+    },
+    {
+      "slug": "chioma-nwaoha-premium-tv",
+      "searchName": "CHIOMA NWAOHA PREMIUM TV",
+      "aliases": [
+        "CHIOMA NWAOHA PREMIUM TV",
+        "Chioma Nwaoha Premium TV"
+      ],
+      "estimatedMovieCount": 35,
+      "knownUrl": "https://www.youtube.com/channel/UCeCZZilhjHUpE3-EH50qLPQ",
+      "optional": true
+    },
+    {
+      "slug": "georgina-ibeh-tv",
+      "searchName": "GEORGINA IBEH TV",
+      "aliases": [
+        "GEORGINA IBEH TV",
+        "Georgina Ibeh TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/channel/UCt8C0h1RscuQL6P0nGDkXIg",
+      "optional": true
+    },
+    {
+      "slug": "oafp-tv",
+      "searchName": "OAFP TV",
+      "aliases": [
+        "OAFP TV",
+        "O.A.F.P TV",
+        "Odunlade Adekola Films Production"
+      ],
+      "estimatedMovieCount": 40,
+      "knownUrl": "https://www.youtube.com/channel/UCp6EsFAaymeJYY0IlqXwmdw",
+      "optional": true
+    },
+    {
+      "slug": "wumi-toriola-tv",
+      "searchName": "Wumitoriolatv",
+      "aliases": [
+        "Wumitoriolatv",
+        "Wumi Toriola TV",
+        "WumiToriolaTV"
+      ],
+      "estimatedMovieCount": 45,
+      "knownUrl": "https://www.youtube.com/@wumitoriolatv",
+      "optional": true
+    },
+    {
+      "slug": "lizzygold-tv",
+      "searchName": "LizzyGold Tv",
+      "aliases": [
+        "LizzyGold Tv",
+        "Lizzygold Tv",
+        "Lizzy Gold TV"
+      ],
+      "estimatedMovieCount": 80,
+      "knownUrl": "https://www.youtube.com/channel/UCDHPAuCA5JKzq_ujcy4meXg",
+      "optional": true
+    },
+    {
+      "slug": "ik-ogbonna-tv",
+      "searchName": "IK Ogbonna tv",
+      "aliases": [
+        "IK Ogbonna tv",
+        "IK Ogbonna TV",
+        "IK Ogbonnatv"
+      ],
+      "estimatedMovieCount": 15,
+      "knownUrl": "https://www.youtube.com/channel/UC5yRp5BM4B18YozMT_1GxKw",
+      "optional": true
+    },
+    {
+      "slug": "mr-aloy-tv",
+      "searchName": "Mr Aloy TV",
+      "aliases": [
+        "Mr Aloy TV",
+        "MrAloyTV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/channel/UCoPAnHtnoM7f0p7BfApC5-g",
+      "optional": true
+    },
+    {
+      "slug": "kanayo-o-kanayo-tv",
+      "searchName": "Kanayo O Kanayo Tv",
+      "aliases": [
+        "Kanayo O Kanayo Tv",
+        "Kanayo O Kanayo TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/@kanayookanayotv",
+      "optional": true
+    },
+    {
+      "slug": "accelerate-movies",
+      "searchName": "Accelerate Movies",
+      "aliases": [
+        "Accelerate Movies"
+      ],
+      "estimatedMovieCount": 20,
+      "knownUrl": "https://www.youtube.com/@AccelerateMovies",
       "optional": true
     }
   ]
