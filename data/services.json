@@ -11401,11 +11401,11 @@
       "Access to the email or phone contact used for the passport application"
     ],
     "steps": [
-      "Open the official NIS domestic passport portal.",
+      "Open the official NIS domestic passport portal and sign in to the account used for the passport application.",
       "Choose Book Appointment from the Passport Application Services options.",
-      "Enter the application details requested by NIS and continue to the appointment flow.",
-      "Choose from the processing-centre/date options the live portal makes available for your application.",
-      "Save or print the appointment confirmation and take the required application/payment slips to the passport office."
+      "Open the passport application shown in your NIS account and continue to its appointment-booking action.",
+      "Choose from the processing-centre and date options the live portal makes available for that application.",
+      "Save or print the appointment confirmation and take the required application and payment slips to the passport office."
     ],
     "notes": [
       "Do not pay an unofficial agent to obtain an appointment slot.",
