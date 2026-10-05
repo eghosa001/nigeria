@@ -37,6 +37,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=full" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           if [ "${{ github.event_name }}" = "pull_request" ]; then
@@ -51,6 +52,8 @@ jobs:
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
           non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
+          quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
+          non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
           if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
@@ -65,12 +68,20 @@ jobs:
             exit 0
           fi
 
+          if [ -n "$quality_trigger" ] && [ -z "$non_quality" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=quality" >> "$GITHUB_OUTPUT"
+            echo "Published-content quality change; running only the directory navigation regression on the Cloudflare runtime."
+            exit 0
+          fi
+
           relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|data|tests)/|^(vite\.config\.ts|wrangler\.jsonc|package\.json|next\.config\.ts|playwright\.cloudflare\.config\.ts|\.github/workflows/cloudflare-qa\.yml)$' || true)"
           if [ -z "$relevant" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "No Cloudflare-runtime changes; required workflow can finish without the full suite."
           else
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=smoke" >> "$GITHUB_OUTPUT"
           fi
       - uses: actions/setup-node@v4
         if: steps.scope.outputs.run == 'true'
@@ -82,8 +93,11 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Run directory navigation regression
+        if: steps.scope.outputs.mode == 'quality'
+        run: npx playwright test tests/directory-navigation.spec.ts --config playwright.cloudflare.config.ts --workers=1
       - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'quality'
       - name: Upload Cloudflare Playwright report on failure
         if: failure() && steps.scope.outputs.run == 'true'
         uses: actions/upload-artifact@v4

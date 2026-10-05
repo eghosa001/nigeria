@@ -1,93 +1,150 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
-import { getFeaturedCast, type EntertainmentTitle } from "@/lib/entertainment";
+import { getFeaturedCast, type EntertainmentPlatform } from "@/lib/entertainment";
+import type {
+  EntertainmentDirectoryResult,
+  EntertainmentDirectorySort,
+} from "@/lib/entertainment-query";
 
-const PAGE_SIZE = 30;
+type Props = {
+  initialResult: EntertainmentDirectoryResult;
+  platforms: EntertainmentPlatform[];
+  genres: string[];
+  initialQuery?: string;
+  initialPlatform?: EntertainmentPlatform | "all";
+  initialGenre?: string;
+  initialSort?: EntertainmentDirectorySort;
+};
 
 export function EntertainmentCatalog({
-  titles,
+  initialResult,
+  platforms,
+  genres,
   initialQuery = "",
   initialPlatform = "all",
   initialGenre = "all",
-}: {
-  titles: EntertainmentTitle[];
-  initialQuery?: string;
-  initialPlatform?: string;
-  initialGenre?: string;
-}) {
+  initialSort = "newest",
+}: Props) {
+  const [result, setResult] = useState(initialResult);
   const [query, setQuery] = useState(initialQuery);
-  const [platform, setPlatform] = useState(initialPlatform);
+  const [platform, setPlatform] = useState<EntertainmentPlatform | "all">(initialPlatform);
   const [genre, setGenre] = useState(initialGenre);
-  const [sort, setSort] = useState("newest");
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-
-  const platforms = useMemo(
-    () => [...new Set(titles.flatMap((title) => title.watchLinks.map((link) => link.platform)))].sort(),
-    [titles],
-  );
-  const genres = useMemo(
-    () => [...new Set(titles.flatMap((title) => title.genres))].sort(),
-    [titles],
-  );
+  const [sort, setSort] = useState<EntertainmentDirectorySort>(initialSort);
+  const [page, setPage] = useState(initialResult.page);
+  const [ready, setReady] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const skipInitialFetch = useRef(true);
 
   useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
-  }, [query, platform, genre, sort]);
+    setReady(true);
 
-  const filtered = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    const rows = titles.filter((title) => {
-      const searchable = [
-        title.title,
-        title.synopsis,
-        ...title.cast,
-        ...title.genres,
-        ...title.languages,
-      ].join(" ").toLowerCase();
+    function syncFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      const nextPlatform = params.get("platform") ?? "all";
+      const nextGenre = params.get("genre") ?? "all";
+      const nextSort = params.get("sort") ?? "newest";
 
-      return (
-        (!normalized || searchable.includes(normalized)) &&
-        (platform === "all" || title.watchLinks.some((link) => link.platform === platform)) &&
-        (genre === "all" || title.genres.includes(genre))
-      );
-    });
+      setQuery(params.get("q") ?? "");
+      setPlatform(nextPlatform === "all" || platforms.includes(nextPlatform as EntertainmentPlatform)
+        ? nextPlatform as EntertainmentPlatform | "all"
+        : "all");
+      setGenre(nextGenre === "all" || genres.includes(nextGenre) ? nextGenre : "all");
+      setSort(["newest", "oldest", "az"].includes(nextSort) ? nextSort as EntertainmentDirectorySort : "newest");
+      setPage(Math.max(1, Number(params.get("page") ?? "1") || 1));
+    }
 
-    return [...rows].sort((a, b) => {
-      if (sort === "az") return a.title.localeCompare(b.title);
-      if (sort === "oldest") return a.year - b.year || a.title.localeCompare(b.title);
-      return b.year - a.year || a.title.localeCompare(b.title);
-    });
-  }, [titles, query, platform, genre, sort]);
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, [platforms, genres]);
 
-  const visible = filtered.slice(0, visibleCount);
+  useEffect(() => {
+    if (!ready) return;
+    if (skipInitialFetch.current) {
+      skipInitialFetch.current = false;
+      return;
+    }
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      setLoading(true);
+      const params = new URLSearchParams();
+      if (query.trim()) params.set("q", query.trim());
+      if (platform !== "all") params.set("platform", platform);
+      if (genre !== "all") params.set("genre", genre);
+      if (sort !== "newest") params.set("sort", sort);
+      if (page > 1) params.set("page", String(page));
+      params.set("pageSize", String(initialResult.pageSize));
+
+      const visibleParams = new URLSearchParams(params);
+      visibleParams.delete("pageSize");
+      const visibleQuery = visibleParams.toString();
+      window.history.replaceState(null, "", "/entertainment/movies" + (visibleQuery ? "?" + visibleQuery : "") + "#curated-movies");
+
+      try {
+        const response = await fetch("/api/entertainment/movies?" + params.toString(), {
+          signal: controller.signal,
+          headers: { Accept: "application/json" },
+        });
+        if (!response.ok) throw new Error("Movie query failed with HTTP " + response.status);
+        const next = await response.json() as EntertainmentDirectoryResult;
+        setResult(next);
+        if (next.page !== page) setPage(next.page);
+      } catch (error) {
+        if ((error as { name?: string }).name !== "AbortError") console.error(error);
+      } finally {
+        if (!controller.signal.aborted) setLoading(false);
+      }
+    }, query ? 200 : 0);
+
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [ready, query, platform, genre, sort, page, initialResult.pageSize]);
+
+  const resetPage = <T,>(setter: (value: T) => void, value: T) => {
+    setter(value);
+    setPage(1);
+  };
+
+  const filtersActive = Boolean(query || platform !== "all" || genre !== "all" || sort !== "newest");
 
   return (
     <>
       <div className="movie-filter-bar">
         <label className="movie-filter-search">
           <span>Search movies</span>
-          <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Title, actor, genre or language…" />
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => resetPage(setQuery, event.target.value)}
+            placeholder="Title, actor, genre or language…"
+          />
         </label>
         <label>
           <span>Platform</span>
-          <select value={platform} onChange={(event) => setPlatform(event.target.value)}>
+          <select value={platform} onChange={(event) => resetPage(setPlatform, event.target.value as EntertainmentPlatform | "all")}>
             <option value="all">All platforms</option>
             {platforms.map((item) => <option key={item} value={item}>{item}</option>)}
           </select>
         </label>
         <label>
           <span>Genre</span>
-          <select value={genre} onChange={(event) => setGenre(event.target.value)}>
+          <select value={genre} onChange={(event) => resetPage(setGenre, event.target.value)}>
             <option value="all">All genres</option>
             {genres.map((item) => <option key={item} value={item}>{item}</option>)}
           </select>
         </label>
         <label>
           <span>Sort</span>
-          <select value={sort} onChange={(event) => setSort(event.target.value)}>
+          <select
+            value={sort}
+            onChange={(event) => resetPage(setSort, event.target.value as EntertainmentDirectorySort)}
+            disabled={Boolean(query.trim())}
+          >
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
             <option value="az">A–Z</option>
@@ -95,20 +152,22 @@ export function EntertainmentCatalog({
         </label>
       </div>
 
-      {(query || platform !== "all" || genre !== "all") ? (
-        <div className="movie-directory-summary">
+      <div className="movie-directory-summary" aria-live="polite">
+        <span><strong>{result.total}</strong> movie{result.total === 1 ? "" : "s"} found{loading ? " · Updating…" : ""}</span>
+        {filtersActive ? (
           <button type="button" onClick={() => {
             setQuery("");
             setPlatform("all");
             setGenre("all");
             setSort("newest");
+            setPage(1);
           }}>Clear filters</button>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
 
-      {filtered.length ? (
+      {result.items.length ? (
         <div className="movie-grid">
-          {visible.map((title) => {
+          {result.items.map((title) => {
             const platformsForTitle = [...new Set(title.watchLinks.map((link) => link.platform))];
             return (
               <article className="movie-tile movie-card-clickable" key={title.slug}>
@@ -116,7 +175,7 @@ export function EntertainmentCatalog({
                 <EntertainmentArtwork title={title} />
                 <div className="movie-tile-meta">
                   <span>{title.year}</span>
-                  <span>{platformsForTitle.join(" · ")}</span>
+                  <span>{platformsForTitle.length ? platformsForTitle.join(" · ") : "Availability unverified"}</span>
                 </div>
                 <h3><Link href={"/entertainment/movies/" + title.slug} prefetch={false}>{title.title}</Link></h3>
                 <p className="movie-tile-description">{title.synopsis}</p>
@@ -140,10 +199,19 @@ export function EntertainmentCatalog({
         </div>
       )}
 
-      {visibleCount < filtered.length ? (
-        <div className="movie-load-more">
-          <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>Show more movies</button>
-        </div>
+      {result.totalPages > 1 ? (
+        filtersActive ? (
+          <nav className="movie-pagination" aria-label="Filtered movie result pages">
+            <button type="button" disabled={page <= 1 || loading} onClick={() => setPage((value) => Math.max(1, value - 1))}>← Previous</button>
+            <span>Page {result.page} of {result.totalPages}</span>
+            <button type="button" disabled={page >= result.totalPages || loading} onClick={() => setPage((value) => Math.min(result.totalPages, value + 1))}>Next →</button>
+          </nav>
+        ) : (
+          <nav className="movie-pagination" aria-label="Curated movie catalog pages">
+            <span>Page 1 of {result.totalPages}</span>
+            <Link prefetch={false} href="/entertainment/movies/page/2">Next →</Link>
+          </nav>
+        )
       ) : null}
     </>
   );

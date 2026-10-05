@@ -693,6 +693,11 @@ function careerPage([organization, slug, sector, category, url, location]: Caree
   const fields = fieldsByCategory[category] ?? ["Operations", "Administration", "Technology"];
   const audiences = audienceByCategory[category] ?? ["Graduates", "Experienced hires"];
   const fieldSummary = fields.slice(0, 5).join(", ");
+  const portalHost = new URL(url).hostname.replace(/^www\./, "");
+  const locationScope = location.includes("global")
+    ? location + " — use the employer's location filter to confirm a Nigeria-eligible role"
+    : location;
+
   return {
     slug,
     title: organization + " Careers & Official Recruitment Portal",
@@ -702,40 +707,44 @@ function careerPage([organization, slug, sector, category, url, location]: Caree
     sector,
     status: "career-page",
     statusLabel: "Official employer career portal",
-    summary: "Use " + organization + "'s verified official careers or recruitment source to find current openings, programmes and application instructions. This is an employer portal guide, not a claim that a particular vacancy is open today.",
+    summary:
+      organization + " uses " + portalHost + " as a verified recruitment route for " + category.toLowerCase() +
+      " and related roles. This guide is scoped to " + locationScope +
+      " and explains how to verify a live role before applying rather than implying that a vacancy is always open.",
     location,
     employmentType: category + " careers / employer recruitment portal",
     audiences,
     fields,
     qualifications: [
       "This is an employer career portal rather than a single vacancy, so there is no one qualification that applies to every role.",
-      "Open the exact vacancy or programme on " + organization + "'s official source and use its published education, experience, licence and location criteria as the controlling requirements."
+      "For " + organization + ", use the exact role on " + portalHost + " as the controlling source for education, experience, professional licence and location eligibility."
     ],
     requirements: [
-      "Choose a specific vacancy or programme that the official source currently shows as available.",
-      "Confirm the role title, location, employment type, deadline and eligibility on the exact employer page before submitting.",
-      "Use only the application route identified by " + organization + "; MyNigeriaGuide does not collect applications or recruitment payments.",
-      "If the official source no longer shows the role you wanted, treat that role as unavailable until the employer republishes it."
+      "Choose a specific " + organization + " vacancy or programme that the official source currently shows as available.",
+      "Confirm the role is valid for the location scope shown on this guide: " + locationScope + ".",
+      "Check the exact role title, employment type, deadline and eligibility before submitting; common hiring areas surfaced for this employer include " + fieldSummary + ".",
+      "Use only the application route identified on " + portalHost + "; MyNigeriaGuide does not collect applications or recruitment payments.",
+      "If the official source no longer shows the role you wanted, treat that role as unavailable until " + organization + " republishes it."
     ],
     documents: [
-      "An up-to-date CV/resume suitable for the exact role.",
-      "Only the academic, professional, identity or portfolio documents requested by the selected " + organization + " vacancy."
+      "An up-to-date CV/resume tailored to the selected " + organization + " role.",
+      "Only the academic, professional, identity or portfolio documents requested by that exact vacancy or programme."
     ],
     applicationSteps: [
-      "Open " + organization + "'s verified official careers or recruitment source.",
-      "Browse or search the employer's current opportunities. Common hiring areas covered by this guide include " + fieldSummary + ".",
-      "Open the exact vacancy or programme before applying; read its responsibilities, qualifications, location, deadline and application method.",
-      "Prepare the documents requested by that exact vacancy instead of sending unrelated credentials.",
-      "Submit through the employer's stated Apply control, recruitment portal or application instruction and keep the confirmation for your records."
+      "Open " + organization + "'s verified recruitment source at " + portalHost + ".",
+      "Use its search, team or location controls where available and confirm the opportunity is relevant to " + locationScope + ".",
+      "Review the exact vacancy or programme; likely hiring areas represented in this guide include " + fieldSummary + ".",
+      "Read the responsibilities, qualifications, location, deadline and application method on that exact role page.",
+      "Prepare only the requested documents, submit through the employer's stated Apply control or recruitment instruction, and keep the confirmation."
     ],
     officialUrl: url,
     officialUrlLabel: "Open " + organization + " official careers source",
     verifiedAt: VERIFIED_AT,
-    feeNote: "Verify any payment, assessment or document request against " + organization + "'s official recruitment instructions. MyNigeriaGuide does not sell access to jobs, shortlists or interviews.",
+    feeNote: "Verify any payment, assessment or document request against " + organization + "'s instructions on " + portalHost + ". MyNigeriaGuide does not sell access to jobs, shortlists or interviews.",
     sourceNotes: [
-      "The linked source is the employer or responsible organisation's own careers, recruitment or talent route.",
-      "This page intentionally does not invent vacancy-specific qualifications where the source is an employer-wide career portal.",
-      "A separate MyNigeriaGuide vacancy page should exist only when a distinct official role source and substantive role details have been verified."
+      "Verified recruitment host: " + portalHost + ". Location scope recorded for this guide: " + locationScope + ".",
+      "The employer is grouped here under " + category + "; the current employer-level hiring areas represented in this guide are " + fieldSummary + ".",
+      "This page intentionally avoids inventing role-specific qualifications or deadlines. A separate vacancy page should exist only when a distinct official role source and substantive role details have been verified."
     ],
     sources: [{ label: organization + " official careers / recruitment source", url, lastChecked: VERIFIED_AT }],
   };

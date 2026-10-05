@@ -1,31 +1,86 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { EntertainmentCatalog } from "@/components/entertainment-catalog";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
-import { entertainmentPlatforms, entertainmentTitles, getEntertainmentGenres } from "@/lib/entertainment";
-import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
+import {
+  entertainmentPlatforms,
+  getEntertainmentGenres,
+} from "@/lib/entertainment";
+import {
+  queryEntertainmentDirectory,
+  type EntertainmentDirectorySort,
+} from "@/lib/entertainment-query";
 import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
-export const metadata: Metadata = {
-  title: "Nigerian Movies — Where to Watch",
-  description: "Browse Nigerian movies by title, actor, genre and platform, with links to Netflix, YouTube, Prime Video and other supported platforms.",
-  alternates: { canonical: "/entertainment/movies" },
+type BrowsePlatform = (typeof entertainmentPlatforms)[number];
+
+type MovieSearchParams = {
+  q?: string;
+  platform?: string;
+  genre?: string;
+  sort?: string;
+  page?: string;
 };
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<MovieSearchParams>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const filtered = Boolean(
+    (params.q ?? "").trim() ||
+    (params.platform ?? "").trim() ||
+    (params.genre ?? "").trim() ||
+    (params.sort ?? "").trim() ||
+    Number(params.page ?? "1") > 1
+  );
+
+  return {
+    title: "Nigerian Movies — Where to Watch",
+    description: "Browse Nigerian movies by title, actor, genre and platform, with links to Netflix, YouTube, Prime Video and other supported platforms.",
+    alternates: { canonical: "/entertainment/movies" },
+    robots: filtered ? { index: false, follow: true } : undefined,
+  };
+}
 
 export default async function MoviesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string; platform?: string; genre?: string }>;
+  searchParams: Promise<MovieSearchParams>;
 }) {
   const params = await searchParams;
-  const initialPlatform = entertainmentPlatforms.includes(params.platform as (typeof entertainmentPlatforms)[number])
-    ? params.platform
-    : "all";
+  const platforms = [...entertainmentPlatforms];
   const genres = getEntertainmentGenres();
+  const initialPlatform = platforms.includes(params.platform as BrowsePlatform)
+    ? params.platform as BrowsePlatform
+    : "all";
   const initialGenre = params.genre && genres.includes(params.genre) ? params.genre : "all";
+  const initialSort = ["oldest", "az"].includes(params.sort ?? "")
+    ? params.sort as EntertainmentDirectorySort
+    : "newest";
+  const requestedPage = Math.max(1, Number(params.page ?? "1") || 1);
+  const filteredMode = Boolean(
+    (params.q ?? "").trim() ||
+    initialPlatform !== "all" ||
+    initialGenre !== "all" ||
+    initialSort !== "newest"
+  );
+
+  if (!filteredMode && requestedPage > 1) {
+    redirect("/entertainment/movies/page/" + requestedPage);
+  }
+
+  const initialResult = queryEntertainmentDirectory({
+    q: params.q,
+    platform: initialPlatform,
+    genre: initialGenre,
+    sort: initialSort,
+    page: requestedPage,
+  });
   const freePreview = trendingYouTubeMovies.slice(0, 10);
-  const catalogPageCount = getEntertainmentCatalogPageCount();
 
   return (
     <>
@@ -86,17 +141,14 @@ export default async function MoviesPage({
             </div>
           </div>
           <EntertainmentCatalog
-            titles={entertainmentTitles}
+            initialResult={initialResult}
+            platforms={platforms}
+            genres={genres}
             initialQuery={params.q ?? ""}
-            initialPlatform={initialPlatform ?? "all"}
+            initialPlatform={initialPlatform}
             initialGenre={initialGenre}
+            initialSort={initialSort}
           />
-          {catalogPageCount > 1 ? (
-            <nav className="movie-pagination" aria-label="Curated movie catalog pages">
-              <span>Page 1 of {catalogPageCount}</span>
-              <Link prefetch={false} href="/entertainment/movies/page/2">Next →</Link>
-            </nav>
-          ) : null}
         </div>
       </section>
     </>

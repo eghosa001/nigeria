@@ -25,13 +25,16 @@
     "check:service-catalog": "tsx scripts/verify-service-migration.ts",
     "check:analytics-safety": "tsx scripts/check-analytics-safety.ts",
     "sync:youtube-entertainment": "node scripts/sync-youtube-entertainment.mjs",
-    "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs",
+    "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs && tsx scripts/check-entertainment-content.ts",
     "check:explore": "tsx scripts/check-explore-content.ts",
     "check:crawl-resilience": "node scripts/check-crawl-resilience.mjs",
     "postbuild": "node scripts/write-wrangler-deploy-config.mjs",
     "postbuild:vinext": "node scripts/write-wrangler-deploy-config.mjs",
     "check:jobs": "tsx scripts/check-jobs-content.ts && tsx scripts/check-job-redirects.ts",
-    "check:job-links": "node scripts/check-job-links.mjs"
+    "check:job-links": "node scripts/check-job-links.mjs",
+    "check:entertainment-content": "tsx scripts/check-entertainment-content.ts",
+    "quality:status": "tsx scripts/report-content-quality.ts",
+    "check:directory-queries": "tsx scripts/check-directory-queries.ts"
   },
   "dependencies": {
     "next": "16.3.6",

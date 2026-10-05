@@ -20,6 +20,13 @@ export type TrailerLink = {
   publisherUrl?: string;
 };
 
+export type EntertainmentReferenceLink = {
+  label: string;
+  href: string;
+  lastChecked: string;
+  note?: string;
+};
+
 export type EntertainmentImageUsageBasis =
   | "press-kit-permission"
   | "direct-permission"
@@ -65,6 +72,7 @@ export type EntertainmentTitle = {
   directors?: string[];
   runtimeMinutes?: number;
   trailer?: TrailerLink;
+  references?: EntertainmentReferenceLink[];
   artwork?: EntertainmentArtwork;
   sourcePreview?: EntertainmentSourcePreview;
   featured?: boolean;
@@ -194,6 +202,12 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Nse Ikpe-Etim", "Jim Iyke", "Lilian Esoro", "Tina Mba", "Jide Awobona", "Nosa Rex"],
     featuredCast: ["Nse Ikpe-Etim", "Jim Iyke", "Lilian Esoro"],
     directors: ["Akay Mason"],
+    references: [{
+      label: "IMDb — No Fury (2024)",
+      href: "https://www.imdb.com/title/tt28575620/",
+      lastChecked: "2026-10-05",
+      note: "Independent catalog reference used to verify the title, year, director and credited cast while no current official viewing platform is listed."
+    }],
     watchLinks: []
   },
   {
@@ -2373,7 +2387,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
   }
 ];
 
-export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava"] as const;
+export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava", "Cinema", "Africa Magic"] as const;
 
 export function getEntertainmentTitle(slug: string) {
   return entertainmentTitles.find((item) => item.slug === slug);

@@ -37,6 +37,31 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Detect whether Jobs links changed
+        id: scope
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo "links=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          base_sha="${{ github.event.pull_request.base.sha }}"
+          git fetch origin "$base_sha" --depth=1
+          changed="$(git diff --name-only "$base_sha" HEAD)"
+
+          other_job_files="$(printf '%s\n' "$changed" | grep -E '^(lib/(jobs|job-runtime|job-query|job-topics|job-facets|job-employers|career-guides)\.ts$|app/api/jobs/|scripts/check-job-links\.mjs$|data/job-retired-redirects\.json$|next\.config\.ts$)' || true)"
+          url_diff="$(git diff "$base_sha" HEAD -- lib/job-scale-wave.ts app/jobs | grep -E '^[+-].*(https?://|officialUrl|sources:|url:|href=["'\'' ]https?://)' || true)"
+
+          if [ -n "$other_job_files" ] || [ -n "$url_diff" ]; then
+            echo "links=true" >> "$GITHUB_OUTPUT"
+            echo "Jobs link-bearing changes detected."
+          else
+            echo "links=false" >> "$GITHUB_OUTPUT"
+            echo "Jobs content changed without URL changes; skipping network-wide link audit."
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -44,4 +69,5 @@ jobs:
       - name: Validate Jobs content and lifecycle
         run: npm run check:jobs
       - name: Audit Jobs official/source links
+        if: steps.scope.outputs.links == 'true'
         run: npm run check:job-links

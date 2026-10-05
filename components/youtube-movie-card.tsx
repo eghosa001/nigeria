@@ -40,7 +40,7 @@ export function YouTubeMovieCard({
         <h3><Link href={movie.internalHref} prefetch={false}>{movie.title}</Link></h3>
         <p className="youtube-movie-description">{movie.synopsis}</p>
         <p className="youtube-movie-cast">
-          {movie.featuredCast.length ? movie.featuredCast.join(" · ") : "Full Nigerian movie"}
+          {movie.featuredCast.length ? movie.featuredCast.join(" · ") : "Cast details pending verification"}
         </p>
         <div className="youtube-movie-card-footer">
           <span className="youtube-movie-publisher">

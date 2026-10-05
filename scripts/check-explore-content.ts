@@ -30,12 +30,19 @@ for (const place of explorePlaces) {
   if (place.kind === "restaurant" && !place.cost.includes("₦") && !/price|menu|cost/i.test(place.cost)) {
     errors.push(`${place.slug}: restaurant needs useful price/cost guidance`);
   }
-  if (place.source && !place.source.href.startsWith("https://")) errors.push(`${place.slug}: source must use https`);
+  if (!place.source?.href) errors.push(`${place.slug}: every published place needs a verification source`);
+  else if (!place.source.href.startsWith("https://")) errors.push(`${place.slug}: source must use https`);
 }
 
 if (errors.length) {
   console.error("Explore content validation failed:\n" + errors.map((error) => "- " + error).join("\n"));
   process.exit(1);
 }
+
+await Promise.all([
+  import("../app/explore/page"),
+  import("../app/explore/[slug]/page"),
+  import("../app/explore/events/page"),
+]);
 
 console.log(`Explore content OK: ${exploreGuides.length} guides, ${explorePlaces.length} mapped places.`);

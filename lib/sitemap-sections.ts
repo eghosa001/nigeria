@@ -6,10 +6,11 @@ import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
-import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
+import { getServiceDirectoryPageCount } from "@/lib/service-query";
 import { jobOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
@@ -47,6 +48,7 @@ function movieModified(title: (typeof entertainmentTitles)[number]) {
   return latestDate([
     ...title.watchLinks.map((link) => link.lastChecked),
     ...(title.trailer ? [title.trailer.lastChecked] : []),
+    ...(title.references ?? []).map((reference) => reference.lastChecked),
     ...(title.artwork ? [title.artwork.lastChecked] : []),
   ]);
 }
@@ -90,6 +92,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "services") {
     return [
       { url: base + "/services", lastModified: serviceModified },
+      ...Array.from({ length: Math.max(0, getServiceDirectoryPageCount() - 1) }, (_, index) => ({
+        url: base + "/services/page/" + (index + 2),
+        lastModified: serviceModified,
+      })),
       ...publicServices.map((service) => ({
         url: base + "/services/" + service.slug,
         lastModified: service.lastVerified,
@@ -190,7 +196,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     ...pagination,
-    ...youtubeMovieLibrary
+    ...indexableYouTubeMovies
       .filter((movie) => movie.source !== "curated")
       .map((movie) => ({
         url: base + "/entertainment/youtube/" + movie.videoId,

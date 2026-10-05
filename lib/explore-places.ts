@@ -14,7 +14,7 @@ export type ExplorePlace = {
   phone?: string;
   website?: string;
   mapQuery?: string;
-  source?: { label: string; href: string };
+  source: { label: string; href: string };
   checkedAt: string;
   tags: string[];
 };
@@ -93,7 +93,7 @@ export const explorePlaces: ExplorePlace[] = [
     area: "Lekki",
     address: "2 Nike Art Gallery Road, Lekki Phase I, Lekki 106104, Lagos",
     summary: "A large collection of Nigerian art, textiles and craft in an easy indoor cultural stop.",
-    cost: "Gallery entry is commonly free; confirm special-event charges",
+    cost: "Confirm current gallery admission and any special-event charges before visiting",
     hours: "Current listing: roughly 10:00–18:00 most days; verify before visiting.",
     phone: "+234 803 409 6656",
     mapQuery: "Nike Art Gallery Lekki Lagos",
@@ -164,7 +164,8 @@ export const explorePlaces: ExplorePlace[] = [
     phone: "+234 708 061 0000",
     mapQuery: "Radisson Blu Anchorage Hotel Lagos",
     website: "https://www.radissonhotels.com/",
-    checkedAt: "2026-09-29",
+    source: { label: "Radisson Hotels — Anchorage Hotel Lagos", href: "https://www.radissonhotels.com/en-us/hotels/radisson-blu-lagos-anchorage" },
+    checkedAt: "2026-10-05",
     tags: ["hotel", "waterfront", "victoria island"],
   },
 
@@ -244,7 +245,8 @@ export const explorePlaces: ExplorePlace[] = [
     cost: "Live nightly rate — check direct for your dates",
     phone: "+234 209 461 2000",
     mapQuery: "Abuja Continental Hotel",
-    checkedAt: "2026-09-29",
+    source: { label: "Abuja Continental — official hotel site", href: "https://www.abujacontinental.com/" },
+    checkedAt: "2026-10-05",
     tags: ["hotel", "wuse", "central"],
   },
 
@@ -399,7 +401,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "A local-food stop built around Port Harcourt's well-known bole and grilled-fish culture.",
     cost: "Menu price varies by fish size and sides — confirm current total before ordering",
     mapQuery: "Bole King Port Harcourt Elekahia",
-    checkedAt: "2026-09-29",
+    source: { label: "Hotels.ng — Bole King Port Harcourt listing", href: "https://hotels.ng/places/restaurant/673-bole-king" },
+    checkedAt: "2026-10-05",
     tags: ["restaurant", "local food", "bole"],
   },
 
@@ -493,7 +496,8 @@ export const explorePlaces: ExplorePlace[] = [
     cost: "Current listing indicates many meals within roughly ₦1–₦10,000",
     phone: "+234 903 686 9736",
     mapQuery: "Ask Me Restaurant Jos",
-    checkedAt: "2026-09-29",
+    source: { label: "Restaurant Guru — Ask Me Restaurant Jos", href: "https://restaurantguru.com/Ask-Me-Restaurant-Jos-Jos" },
+    checkedAt: "2026-10-05",
     tags: ["restaurant", "budget", "local food"],
   },
   {
@@ -507,7 +511,8 @@ export const explorePlaces: ExplorePlace[] = [
     cost: "Current listing indicates roughly ₦20,000–₦30,000 per person",
     phone: "+234 817 488 3779",
     mapQuery: "Barcardi Restaurant Cafe Jos",
-    checkedAt: "2026-09-29",
+    source: { label: "Restaurant Guru — Barcardi Restaurant & Cafe", href: "https://restaurantguru.com/Barcardi-Restaurant-and-Cafe-barcardijos-Jos" },
+    checkedAt: "2026-10-05",
     tags: ["restaurant", "cafe", "gra"],
   },
 
@@ -521,7 +526,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Pine forest and cave/waterfall area close enough to Enugu for a dedicated half-day outing.",
     cost: "Local access/guide charges vary — confirm before departure",
     mapQuery: "Ngwo Pine Forest Enugu",
-    checkedAt: "2026-09-29",
+    source: { label: "Enugu State Government — tourism projects update", href: "https://works.enugustate.gov.ng/news/27" },
+    checkedAt: "2026-10-05",
     tags: ["forest", "hiking", "nature"],
   },
   {
@@ -567,7 +573,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "A day-trip waterfall and cave destination outside central Enugu.",
     cost: "Local access/guide charges vary — verify before travel",
     mapQuery: "Awhum Waterfall Enugu",
-    checkedAt: "2026-09-29",
+    source: { label: "Enugu State Government — tourism projects update", href: "https://works.enugustate.gov.ng/news/27" },
+    checkedAt: "2026-10-05",
     tags: ["waterfall", "nature", "day trip"],
   },
 
@@ -668,7 +675,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "A history-focused weekend or day trip built around museums, heritage sites and the old coastal town.",
     cost: "Museum/site charges vary — confirm each stop",
     mapQuery: "Badagry Heritage Museum Lagos",
-    checkedAt: "2026-09-29",
+    source: { label: "Badagry Local Government — Tourism", href: "https://badagry.lg.gov.ng/tourism/" },
+    checkedAt: "2026-10-05",
     tags: ["history", "heritage", "day trip"],
   },
   {
@@ -681,7 +689,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Major Abeokuta landmark that can anchor a one-day or overnight road trip from Lagos.",
     cost: "Verify current entrance and guide charges",
     mapQuery: "Olumo Rock Abeokuta",
-    checkedAt: "2026-09-29",
+    source: { label: "Olumo Rock Tourist Complex — official site", href: "https://olumorock.ng/" },
+    checkedAt: "2026-10-05",
     tags: ["rock", "history", "viewpoint"],
   },
   {
@@ -694,7 +703,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Historic civic landmark that can be paired with markets, food and other central Ibadan stops.",
     cost: "Exterior viewing is free; confirm access for interior/event use",
     mapQuery: "Mapo Hall Ibadan",
-    checkedAt: "2026-09-29",
+    source: { label: "Oyo State tourism investment guide", href: "https://oysipa.oyostate.gov.ng/admin/uploads/INVEST-IN-TOURISM.pdf" },
+    checkedAt: "2026-10-05",
     tags: ["architecture", "history", "city break"],
   },
   {
@@ -1388,7 +1398,8 @@ export const explorePlaces: ExplorePlace[] = [
     cost: "Gallery entry is commonly free; confirm special-event charges",
     hours: "Verify current opening hours before visiting during the festive period.",
     mapQuery: "Nike Art Gallery Lekki Lagos",
-    checkedAt: "2026-10-04",
+    source: { label: "ART X Lagos — Nike Art Gallery profile", href: "https://www.artxlagos.com/exhibitors/nike-art-gallery-2026" },
+    checkedAt: "2026-10-05",
     tags: ["art", "daytime", "Lekki", "culture"],
   },
   {

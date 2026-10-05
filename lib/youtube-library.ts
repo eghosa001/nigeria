@@ -223,6 +223,12 @@ function trendScore(movie: YouTubeMovieRecord) {
   return recency * 0.72 + Math.min(1, popularity) * 0.28;
 }
 
+export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
+  return movie.metadataStatus !== "cast-pending" && movie.cast.length > 0 && movie.featuredCast.length > 0;
+}
+
+export const indexableYouTubeMovies = youtubeMovieLibrary.filter(isIndexableYouTubeMovie);
+
 export const latestYouTubeMovies = youtubeMovieLibrary;
 export const trendingYouTubeMovies = [...youtubeMovieLibrary].sort(
   (a, b) => trendScore(b) - trendScore(a) || b.publishedAt.localeCompare(a.publishedAt),

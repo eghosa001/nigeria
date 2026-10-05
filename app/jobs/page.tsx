@@ -23,7 +23,7 @@ export default function JobsPage() {
   const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
   const openOpportunities = jobOpportunities.filter((item) => isEffectivelyOpen(item));
-  const openPreview = openOpportunities.slice(0, 12);
+  const openPreview = openOpportunities.slice(0, 6);
   const initialDirectoryResult = queryJobDirectory({ page: 1 });
 
   const collectionLd = {
@@ -158,6 +158,9 @@ export default function JobsPage() {
             <a href="#opportunities">Search the full directory</a>
           </div>
 
+          <details className="browse-disclosure jobs-browse-more">
+            <summary>Browse by industry, location, profession & career tools</summary>
+            <div className="jobs-browse-more-content">
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse by industry</span>
@@ -210,6 +213,10 @@ export default function JobsPage() {
             ))}
           </div>
 
+
+            </div>
+          </details>
+
           {internationalOpportunities.length ? (
             <p className="job-muted">{internationalOpportunities.length} verified international, NGO or UN-system pathways are included in the directory and sector filters.</p>
           ) : null}
@@ -228,7 +235,7 @@ export default function JobsPage() {
           </div>
 
           <div className="jobs-status-row">
-            {governmentOpportunities.map((item) => (
+            {governmentOpportunities.slice(0, 8).map((item) => (
               <Link key={item.slug} href={"/jobs/" + item.slug} className="jobs-status-card">
                 <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                 <strong>{item.organization}</strong>
@@ -236,6 +243,9 @@ export default function JobsPage() {
               </Link>
             ))}
           </div>
+          {governmentOpportunities.length > 8 ? (
+            <p className="job-muted"><Link href="/jobs/government">View all {governmentOpportunities.length} government recruitment guides →</Link></p>
+          ) : null}
         </div>
       </section>
 
