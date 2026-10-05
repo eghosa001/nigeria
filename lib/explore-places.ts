@@ -3204,6 +3204,146 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "national-war-museum-umuahia",
     "ibom-waterfall-arochukwu"
   ],
+  "national-museum-unity-ibadan-guide": [
+    "national-museum-unity-ibadan",
+    "agodi-gardens-ibadan",
+    "bowers-tower-ibadan"
+  ],
+  "nike-art-centre-osogbo-guide": [
+    "nike-art-centre-osogbo",
+    "osun-osogbo-sacred-grove",
+    "ataoja-palace-osogbo"
+  ],
+  "moremi-statue-ile-ife-guide": [
+    "moremi-statue-ile-ife",
+    "ooni-palace-ile-ife",
+    "national-museum-ile-ife"
+  ],
+  "national-museum-ile-ife-guide": [
+    "national-museum-ile-ife",
+    "ooni-palace-ile-ife",
+    "moremi-statue-ile-ife"
+  ],
+  "akure-forest-reserve-guide": [
+    "akure-forest-reserve",
+    "idanre-hills",
+    "owo-museum-antiquities"
+  ],
+  "fajuyi-memorial-park-guide": [
+    "fajuyi-memorial-park",
+    "ikogosi-warm-springs",
+    "arinta-waterfalls"
+  ],
+  "kwara-flower-garden-guide": [
+    "kwara-flower-garden",
+    "ilorin-central-mosque",
+    "owu-falls-kwara"
+  ],
+  "akwa-ibom-arts-culture-centre-guide": [
+    "akwa-ibom-state-centre-arts-culture",
+    "ibom-unity-museum",
+    "ibom-tropicana"
+  ],
+  "ibom-tropicana-guide": [
+    "ibom-tropicana",
+    "ibom-unity-museum",
+    "akwa-ibom-state-centre-arts-culture"
+  ],
+  "igbokoda-waterfront-guide": [
+    "igbokoda-waterfront-ondo",
+    "araromi-seaside",
+    "ebomi-lake-ipesi"
+  ],
+  "royal-niger-akassa-guide": [
+    "royal-niger-company-akassa",
+    "oloibiri-otuabagi-oil-heritage",
+    "ox-bow-lake-yenagoa"
+  ],
+  "ox-bow-lake-yenagoa-guide": [
+    "ox-bow-lake-yenagoa",
+    "oloibiri-otuabagi-oil-heritage",
+    "royal-niger-company-akassa"
+  ],
+  "enemabia-warm-spring-guide": [
+    "enemabia-warm-spring",
+    "makurdi-river-beach",
+    "ushongo-hills"
+  ],
+  "chad-basin-national-park-borno-guide": [
+    "chad-basin-national-park-borno",
+    "lake-chad-borno",
+    "mandara-plateau-borno"
+  ],
+  "lake-chad-borno-guide": [
+    "lake-chad-borno",
+    "chad-basin-national-park-borno",
+    "mandara-plateau-borno"
+  ],
+  "mandara-plateau-borno-guide": [
+    "mandara-plateau-borno",
+    "chad-basin-national-park-borno",
+    "lake-chad-borno"
+  ],
+  "amanchor-cave-guide": [
+    "amanchor-cave-ebonyi",
+    "okposi-salt-lakes",
+    "oferekpe-beach-ebonyi"
+  ],
+  "oferekpe-beach-guide": [
+    "oferekpe-beach-ebonyi",
+    "amanchor-cave-ebonyi",
+    "okposi-salt-lakes"
+  ],
+  "nafada-riverside-guide": [
+    "nafada-riverside",
+    "dadin-kowa-dam",
+    "kaltungo-hills"
+  ],
+  "okigwe-hills-guide": [
+    "okigwe-hills",
+    "oguta-lake",
+    "mbari-centre-owerri"
+  ],
+  "birnin-kudu-heritage-guide": [
+    "birnin-kudu-heritage",
+    "dutse-rock-city",
+    "saminu-turaki-tower-dutse"
+  ],
+  "emirs-palace-katsina-guide": [
+    "emirs-palace-katsina",
+    "gobarau-minaret",
+    "kusugu-well-daura"
+  ],
+  "girmache-shrine-zuru-guide": [
+    "girmache-shrine-zuru",
+    "kanta-museum-argungu",
+    "hubbare-gwandu"
+  ],
+  "lokoja-colonial-heritage-guide": [
+    "lokoja-colonial-heritage",
+    "niger-benue-confluence-lokoja",
+    "mount-patti-lokoja"
+  ],
+  "sokoto-history-bureau-guide": [
+    "sokoto-state-history-bureau",
+    "sultan-palace-sokoto-city",
+    "sultans-palace-sokoto"
+  ],
+  "gorgaram-festival-guide": [
+    "gorgaram-fishing-festival-yobe",
+    "dagona-bird-sanctuary",
+    "dufuna-canoe-heritage-yobe"
+  ],
+  "zamfara-state-museum-guide": [
+    "zamfara-state-museum-gusau",
+    "kwatakashi-rocks-zamfara",
+    "kauran-namoda-tomb"
+  ],
+  "kaura-namoda-tomb-guide": [
+    "kauran-namoda-tomb",
+    "zamfara-state-museum-gusau",
+    "kwatakashi-rocks-zamfara"
+  ],
 };
 
 export function getExplorePlacesForGuide(guideSlug: string) {
