@@ -73,7 +73,7 @@ export default async function SearchPage({
         }))
         .filter((entry) => entry.score > 0)
         .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-        .slice(0, 8)
+        .slice(0, 16)
         .map((entry) => entry.item)
     : [];
 
