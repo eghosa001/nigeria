@@ -47,6 +47,7 @@ function movieModified(title: (typeof entertainmentTitles)[number]) {
   return latestDate([
     ...title.watchLinks.map((link) => link.lastChecked),
     ...(title.trailer ? [title.trailer.lastChecked] : []),
+    ...(title.references ?? []).map((reference) => reference.lastChecked),
     ...(title.artwork ? [title.artwork.lastChecked] : []),
   ]);
 }
