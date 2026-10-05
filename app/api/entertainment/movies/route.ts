@@ -1,7 +1,7 @@
 import { entertainmentPlatforms } from "@/lib/entertainment";
+import { queryEntertainmentDirectory, type EntertainmentDirectorySort } from "@/lib/entertainment-query";
 
 type BrowsePlatform = (typeof entertainmentPlatforms)[number];
-import { queryEntertainmentDirectory, type EntertainmentDirectorySort } from "@/lib/entertainment-query";
 
 export const dynamic = "force-dynamic";
 
