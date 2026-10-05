@@ -38,11 +38,11 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const item = getJobOpportunity(slug);
   if (!item) {
     const replacement = retiredJobRedirects.get(slug);
-    if (replacement) redirect("/jobs/" + replacement);
+    if (replacement) redirect(replacement);
     notFound();
   }
 
-  const isCareerPortal = item.kind === "career-page";
+  const isCareerPortal = item.status === "career-page" || item.kind === "career-page";
   const relatedTopics = getJobTopicsForOpportunity(item);
   const employerOpportunities = getEmployerOpportunities(item.organization, item.slug).slice(0, 4);
   const effectiveStatus = getEffectiveJobStatus(item);
