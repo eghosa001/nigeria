@@ -421,6 +421,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     </article>
                   );
                 })}
+              </div>
               {(title.references ?? []).length ? (
                 <div className="movie-reference-sources">
                   <h3>Verification sources</h3>
@@ -437,7 +438,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                   ))}
                 </div>
               ) : null}
-              </div>
             </section>
 
             <AdSlot slot={AD_SLOTS.movieAfterWatch} label="Advertisement" />
