@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ServiceDirectory } from "@/components/service-directory";
 import { categorySlug } from "@/lib/category";
-import { categories, publicServiceListings } from "@/lib/data";
+import { categories } from "@/lib/data";
+import { queryServiceDirectory, type ServiceDirectorySort, type ServiceDirectoryStatus } from "@/lib/service-query";
 
 const popularServiceLinks = [
   { label: "CAC registration", href: "/topics/cac-business" },
@@ -19,9 +20,31 @@ export const metadata: Metadata = {
   description: "Find Nigerian government and everyday service guides, current fees, official portals, requirements and step-by-step application guidance for 2026.",
 };
 
-export const dynamic = "force-static";
+export const revalidate = 3600;
 
-export default function ServicesPage() {
+export default async function ServicesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string; category?: string; status?: string; sort?: string; page?: string }>;
+}) {
+  const params = await searchParams;
+  const categoryNames = categories.map((category) => category.name);
+  const initialCategory = params.category && categoryNames.includes(params.category) ? params.category : "all";
+  const initialStatus = ["verified", "conflict"].includes(params.status ?? "")
+    ? params.status as ServiceDirectoryStatus
+    : "all";
+  const initialSort = ["az", "recent"].includes(params.sort ?? "")
+    ? params.sort as ServiceDirectorySort
+    : "relevance";
+  const initialPage = Math.max(1, Number(params.page ?? "1") || 1);
+  const initialResult = queryServiceDirectory({
+    q: params.q,
+    category: initialCategory,
+    status: initialStatus,
+    sort: initialSort,
+    page: initialPage,
+  });
+
   return (
     <section className="section page-top services-directory-page">
       <div className="container">
@@ -54,7 +77,14 @@ export default function ServicesPage() {
         </nav>
 
         <div id="service-directory" className="section-search-target">
-          <ServiceDirectory services={publicServiceListings} />
+          <ServiceDirectory
+            initialResult={initialResult}
+            categories={categoryNames}
+            initialQuery={params.q ?? ""}
+            initialCategory={initialCategory}
+            initialStatus={initialStatus}
+            initialSort={initialSort}
+          />
         </div>
       </div>
     </section>
