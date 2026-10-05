@@ -2578,13 +2578,13 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Requirements vary by the Lafarge Africa opening selected."],
     requirements: ["Use Lafarge Africa's official job-opportunities page.", "Open the specific role and confirm its location and criteria.", "Submit through the linked official application route."],
     documents: ["CV/resume", "Role-specific credentials and application information"],
-    applicationSteps: ["Open Lafarge Africa Job Opportunities.", "Select available openings.", "Review role requirements.", "Submit through the official application system."],
-    officialUrl: "https://www.lafarge.com.ng/job-opportunities",
-    officialUrlLabel: "Open Lafarge job opportunities",
+    applicationSteps: ["Open Lafarge Nigeria Careers.", "Select available openings.", "Review role requirements.", "Submit through the official application system."],
+    officialUrl: "https://careers.holcimgroup.com/lafarge_nigeria/",
+    officialUrlLabel: "Open Lafarge Nigeria careers",
     verifiedAt: "2026-10-05",
     feeNote: "Use Lafarge Africa's official careers route.",
     sourceNotes: ["Lafarge Africa's official site provides an openings route and covers internships through management and technical careers."],
-    sources: [{ label: "Lafarge Africa Job Opportunities", url: "https://www.lafarge.com.ng/job-opportunities", lastChecked: "2026-10-05" }]
+    sources: [{ label: "Lafarge Nigeria Careers", url: "https://careers.holcimgroup.com/lafarge_nigeria/", lastChecked: "2026-10-05" }]
   },
   {
     slug: "julius-berger-nigeria-careers",
