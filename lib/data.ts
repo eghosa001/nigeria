@@ -1633,6 +1633,41 @@ export const agencies: Agency[] = [
     "shortName": "TLScontact Belgium",
     "description": "Private visa-application centre operator handling Belgium visa appointments, biometrics, submissions and passport return in Abuja and Lagos.",
     "website": "https://visas-be.tlscontact.com/en-us/country/ng"
+  },
+  {
+    "slug": "risevest",
+    "name": "Risevest",
+    "shortName": "Risevest",
+    "description": "Private Nigerian digital wealth platform offering managed dollar and naira investment services through the Rise app.",
+    "website": "https://www.risevest.com/"
+  },
+  {
+    "slug": "grey",
+    "name": "Grey",
+    "shortName": "Grey",
+    "description": "Private multi-currency financial platform offering foreign accounts, virtual cards and cross-border payment services to Nigerian users.",
+    "website": "https://grey.co/"
+  },
+  {
+    "slug": "lemfi",
+    "name": "LemFi",
+    "shortName": "LemFi",
+    "description": "Private cross-border financial platform offering global accounts and international money services to Nigerian users.",
+    "website": "https://www.lemfi.com/en-ng/"
+  },
+  {
+    "slug": "western-union",
+    "name": "Western Union Nigeria",
+    "shortName": "Western Union",
+    "description": "Private international money-transfer provider offering cash and bank-account receipt and transfer tracking in Nigeria.",
+    "website": "https://www.westernunion.com/ng/en/home.html"
+  },
+  {
+    "slug": "moneygram",
+    "name": "MoneyGram Nigeria",
+    "shortName": "MoneyGram",
+    "description": "Private international money-transfer provider offering bank, mobile-wallet and cash-pickup receipt services across Nigeria.",
+    "website": "https://www.moneygram.com/r/ng/en"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
@@ -1805,6 +1840,10 @@ export const categories = [
   {
     "name": "E-commerce",
     "description": "Marketplace ordering, returns, refunds and seller-onboarding services."
+  },
+  {
+    "name": "Remittances",
+    "description": "Cross-border money receipt, foreign-account, transfer-tracking and remittance services."
   },
   {
     "name": "Property services",
