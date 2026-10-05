@@ -124,7 +124,7 @@ export default function HomePage() {
                 <Link href={"/entertainment/movies/" + title.slug} aria-label={"Open " + title.title}>
                   <EntertainmentArtwork title={title} showSourceLink={false} />
                 </Link>
-                <div>
+                <div className="minimal-movie-card-copy">
                   <h3><Link href={"/entertainment/movies/" + title.slug}>{title.title}</Link></h3>
                   <p>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</p>
                 </div>
