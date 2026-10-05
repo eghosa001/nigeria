@@ -18907,5 +18907,796 @@
       "Sterling emergency account block",
       "OneBank unauthorised access"
     ]
+  },
+  {
+    "slug": "yedc-pay-bill-buy-units",
+    "title": "How to pay a YEDC bill or buy prepaid electricity units",
+    "shortTitle": "YEDC bill & unit payment",
+    "summary": "YEDC's current payment route for postpaid bills and prepaid electricity units, using the customer account or meter record through the provider's online and business-unit payment channels.",
+    "category": "Electricity",
+    "agencySlug": "yedc",
+    "feeLabel": "Electricity amount plus any channel charge",
+    "feeNote": "The amount depends on the customer's bill, meter and tariff. YEDC says prepaid customers can buy units online from its website or at YEDC offices, while postpaid customers can pay through their Business Unit or Service Center.",
+    "timeline": "Payment is applied after the selected channel confirms the transaction; YEDC does not publish one universal crediting time for every payment route.",
+    "status": "verified",
+    "officialPortal": "https://www.yedc.com.ng/",
+    "requirements": [
+      "The YEDC account number for a postpaid customer or prepaid meter number for a vending customer",
+      "The amount the customer wants to pay or use to purchase prepaid electricity units",
+      "Access to YEDC's online purchase route, Business Unit, Service Center or another provider-approved payment point"
+    ],
+    "steps": [
+      "Open YEDC's official website and choose the Buy Units or payment route, or use the relevant YEDC Business Unit or Service Center.",
+      "Enter or provide the customer account or prepaid meter number and confirm the returned customer information before paying.",
+      "Enter the intended payment amount and complete the transaction through the provider-approved payment route.",
+      "Keep the receipt or transaction evidence and, for prepaid vending, save the electricity token returned after payment.",
+      "If payment succeeds but the bill or prepaid units are not reflected, contact YEDC customer care with the account or meter number and transaction evidence."
+    ],
+    "notes": [
+      "YEDC says prepaid customers can now buy units online from the company website or at YEDC offices.",
+      "Postpaid customers can obtain a current bill from the nearest YEDC office when a bill is not delivered.",
+      "Always verify the meter/account number before payment because prepaid units and bill payments are tied to the entered customer record."
+    ],
+    "sources": [
+      {
+        "label": "YEDC Home and Customer FAQ",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://www.yedc.com.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "YEDC Customer Service Bands FAQ",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://www.yedc.com.ng/pages/customer-service-bands",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "yedc-map-meter-application",
+      "yedc-new-electricity-connection",
+      "yedc-online-complaint",
+      "electricity-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "YEDC buy units",
+      "YEDC pay bill",
+      "Yola electricity token",
+      "YEDC prepaid recharge",
+      "YEDC electricity payment"
+    ]
+  },
+  {
+    "slug": "yedc-map-meter-application",
+    "title": "How to apply for a YEDC prepaid meter under MAP",
+    "shortTitle": "YEDC MAP meter",
+    "summary": "YEDC's current Meter Asset Provider request route for an existing or prospective customer, using the online request form or MAP application with account/premises information and site processing.",
+    "category": "Electricity",
+    "agencySlug": "yedc",
+    "feeLabel": "Meter price currently not published as a fixed live amount",
+    "feeNote": "YEDC's current MAP page shows the standard meter reference-price table but marks single-phase and three-phase prices as 'Coming Soon'. Do not pay an unofficial amount; wait for the provider-approved price/process tied to the application.",
+    "timeline": "YEDC says the MAP scheme provides prompt site inspection and installation but does not publish one fixed completion time for every meter request.",
+    "status": "verified",
+    "officialPortal": "https://map.yedc.com.ng/request/intent-form",
+    "requirements": [
+      "A YEDC customer account number or application reference for the meter request",
+      "The customer name, contact phone number, email and service address where the meter is required",
+      "The YEDC Business Unit and the number/type of meters required for the premises",
+      "For a manual application, the customer KYC details that YEDC says should be uploaded into the online process"
+    ],
+    "steps": [
+      "Open YEDC's official Request a Meter page and enter the customer account number or application reference.",
+      "Choose the intended meter-request action and complete the customer, contact and premises information required by YEDC.",
+      "Submit the meter request and allow YEDC to complete the customer KYC and technical/site processing.",
+      "Wait for the provider-approved meter payment or deployment instruction rather than paying an unofficial vendor amount.",
+      "Keep the application reference and use YEDC's meter request/status route or customer care to follow the application."
+    ],
+    "notes": [
+      "YEDC's published MAP form says new customers can be issued Form 74 while existing customers should provide a copy of the bill for the premises.",
+      "The current YEDC MAP page does not yet publish live single-phase or three-phase meter prices.",
+      "A customer should use the YEDC request route rather than paying a private installer who cannot show an approved MAP instruction."
+    ],
+    "sources": [
+      {
+        "label": "YEDC Request a Meter",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://map.yedc.com.ng/request/intent-form",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "YEDC Mass Metering / MAP",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://yedc.com.ng/pages/mass-metering",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "YEDC MAP Application Form",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://www.yedc.com.ng/assets/pdf/request-meter.pdf",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "yedc-pay-bill-buy-units",
+      "yedc-new-electricity-connection",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "YEDC prepaid meter application",
+      "YEDC MAP meter",
+      "Yola electricity meter request",
+      "YEDC meter application online",
+      "YEDC request a meter"
+    ]
+  },
+  {
+    "slug": "yedc-new-electricity-connection",
+    "title": "How to apply for a new YEDC electricity connection",
+    "shortTitle": "YEDC new connection",
+    "summary": "YEDC's current new-supply process for prospective customers, beginning with the service application and load assessment and ending with approval, energisation and metering when requirements are satisfied.",
+    "category": "Electricity",
+    "agencySlug": "yedc",
+    "feeLabel": "Connection costs depend on the approved service and equipment",
+    "feeNote": "YEDC does not publish one flat connection fee for every premises. Costs depend on the approved load, equipment and connection requirements; use the official YEDC assessment rather than an unofficial quote.",
+    "timeline": "YEDC's published new-supply procedure says an approved premises should be energised within 24 hours from the date of approval, after all requirements have been fulfilled.",
+    "status": "verified",
+    "officialPortal": "https://yedc.com.ng/pages/apply-for-electricity",
+    "requirements": [
+      "A formal electricity-service application for the premises and the customer information requested by YEDC",
+      "A completed new-service form containing the terms and conditions for obtaining supply",
+      "Access to the premises so YEDC can carry out the load assessment and evaluate the nearest substation capacity",
+      "Any service, wiring or equipment requirement identified before YEDC grants final approval"
+    ],
+    "steps": [
+      "Open YEDC's official Apply for Electricity page and start the online application or submit the formal request through the nearest Business Unit.",
+      "Complete the new-service form issued for the prospective customer and provide the premises and load information requested.",
+      "Allow YEDC's New Service Officer to assess the premises and compare the expected load with the available capacity of the nearest substation.",
+      "Complete any requirement identified during the assessment and wait for the approving authority to grant the connection request.",
+      "After approval, confirm energisation and meter installation and keep the new YEDC account information for future billing and support."
+    ],
+    "notes": [
+      "YEDC's published process separates ordinary new electricity supply from its Equipment Connection/Modification Request used for customer-owned transformers, feeders, RMUs, poles or cables.",
+      "The provider says future electricity bills for the approved supply address are issued in the customer's name unless otherwise agreed.",
+      "Do not treat the published 24-hour post-approval energisation period as a promise that the entire application process takes 24 hours."
+    ],
+    "sources": [
+      {
+        "label": "YEDC Apply for Electricity",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://yedc.com.ng/pages/apply-for-electricity",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "YEDC Equipment Connection/Modification Request",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://www.yedc.com.ng/pages/newrequestconn",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "yedc-map-meter-application",
+      "yedc-pay-bill-buy-units",
+      "yedc-online-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "YEDC new connection",
+      "apply for electricity YEDC",
+      "Yola electricity new service",
+      "YEDC connection application",
+      "YEDC new customer electricity"
+    ]
+  },
+  {
+    "slug": "yedc-online-complaint",
+    "title": "How to lodge a complaint with YEDC online",
+    "shortTitle": "YEDC online complaint",
+    "summary": "YEDC's online complaint form for billing, meter, supply and other customer issues, using the account or meter number, contact details, incident location, category and complaint description to create a complaint ID.",
+    "category": "Electricity",
+    "agencySlug": "yedc",
+    "feeLabel": "No complaint-submission fee",
+    "feeNote": "YEDC does not state a fee for submitting a customer complaint through its official online complaint form.",
+    "timeline": "YEDC issues a complaint ID after a successful submission; the provider does not publish one universal resolution time for every complaint category.",
+    "status": "verified",
+    "officialPortal": "https://www.yedc.com.ng/pages/complaint",
+    "requirements": [
+      "The YEDC account or meter number connected to the complaint",
+      "A working phone number and email address for customer contact",
+      "The nearest bus stop or landmark for the affected premises or incident",
+      "The correct complaint category, subcategory and a clear description of the problem"
+    ],
+    "steps": [
+      "Open YEDC's official Make Complaint form and enter the account or meter number for the affected customer.",
+      "Enter the email address, phone number and nearest bus stop or landmark for the incident location.",
+      "Choose the complaint category and subcategory that best match the billing, meter, supply or other issue.",
+      "Write a concise complaint description with the relevant dates, transaction references or meter details and submit the form.",
+      "Save the complaint ID returned by YEDC and use it when following up through official customer-care channels."
+    ],
+    "notes": [
+      "YEDC's online form returns a complaint ID after a successful submission.",
+      "Safety incidents should be reported with accurate location details rather than being described only as a general service complaint.",
+      "Keep payment receipts, meter photographs or other evidence when the complaint involves billing or vending."
+    ],
+    "sources": [
+      {
+        "label": "YEDC Online Complaint",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://www.yedc.com.ng/pages/complaint",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "yedc-pay-bill-buy-units",
+      "yedc-map-meter-application",
+      "yedc-new-electricity-connection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "YEDC complaint online",
+      "YEDC customer complaint",
+      "Yola electricity complaint",
+      "YEDC meter complaint",
+      "YEDC billing complaint"
+    ]
+  },
+  {
+    "slug": "jed-prepaid-meter-recharge",
+    "title": "How to recharge a JED prepaid meter online",
+    "shortTitle": "JED prepaid recharge",
+    "summary": "Jos Electricity Distribution's published prepaid-meter recharge route using the company's accredited online vendors, with meter details, payment and the issued token used to load electricity units.",
+    "category": "Electricity",
+    "agencySlug": "jed",
+    "feeLabel": "Electricity amount plus any vendor service charge",
+    "feeNote": "JED says the minimum vend must at least cover one kWh for the customer's tariff band, VAT and any third-party platform service charge. The exact amount depends on the customer's tariff and chosen vendor.",
+    "timeline": "The token is issued after the accredited vendor confirms a successful payment; JED does not publish one universal processing time for every vendor.",
+    "status": "verified",
+    "officialPortal": "https://www.jedplc.com/faqs.php",
+    "requirements": [
+      "The JED prepaid meter number for the electricity account being recharged",
+      "An accredited JED online vending platform such as one of the examples listed by the company",
+      "A payment amount sufficient for the customer's band/tariff, VAT and any applicable third-party platform charge"
+    ],
+    "steps": [
+      "Open one of the online vendors accredited by JED for prepaid electricity vending.",
+      "Enter the JED prepaid meter number and verify that the returned customer information is correct.",
+      "Enter the recharge amount and review the payment total including any vendor service charge.",
+      "Complete payment and save the 20-digit prepaid electricity token returned by the vendor.",
+      "Load the token on the meter/UIU and contact JED customer care if a valid token fails or the meter shows a technical error."
+    ],
+    "notes": [
+      "JED's FAQ lists GPAY, BuyPower and Energize Naija as examples of accredited online vendors.",
+      "A Key Change Token is not required for every recharge; JED says it is used when the meter tariff index needs reconfiguration.",
+      "If units load as zero, JED says possible causes include a negative balance, failed loading or a meter fault."
+    ],
+    "sources": [
+      {
+        "label": "JED FAQs",
+        "agency": "Jos Electricity Distribution Plc",
+        "url": "https://www.jedplc.com/faqs.php",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jed-map-meter-application",
+      "jed-new-electricity-connection",
+      "electricity-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "JED prepaid meter recharge",
+      "Jos Disco buy token",
+      "JED online vending",
+      "JED meter recharge",
+      "Jos electricity token"
+    ]
+  },
+  {
+    "slug": "jed-map-meter-application",
+    "title": "How to apply for a JED prepaid meter",
+    "shortTitle": "JED meter application",
+    "summary": "JED's current meter-request route through its online MAP/metering tools, with customer enrolment, approved Meter Asset Provider processing and the current provider deployment programme.",
+    "category": "Electricity",
+    "agencySlug": "jed",
+    "feeLabel": "Meter amount depends on current approved metering programme",
+    "feeNote": "JED's metering page explains MAP and related metering programmes but does not publish one live universal meter price on the page. Use the payment instruction issued through the provider's official meter process.",
+    "timeline": "JED does not publish one fixed installation time for every meter request on the current metering page.",
+    "status": "verified",
+    "officialPortal": "https://www.jedplc.com/metering.php",
+    "requirements": [
+      "A JED customer record or enrolment in the company's customer database",
+      "A submitted meter request through JED's online or office-based metering process",
+      "Premises/customer information required for the applicable MAP or metering deployment plan",
+      "Payment only through the approved meter programme when an upfront MAP payment applies"
+    ],
+    "steps": [
+      "Open JED's official website and choose Apply for MAP Meter or the metering request option.",
+      "Complete the customer/account and premises information requested for the meter application.",
+      "Submit the request and wait for JED to place the customer into the applicable NERC-approved deployment or MAP process.",
+      "If the application is assigned to an upfront MAP route, pay only the approved amount through the provider-authorised process.",
+      "Keep the meter application and payment evidence and follow the request through JED customer care or the metering portal."
+    ],
+    "notes": [
+      "JED says customers already on the company's database are eligible for metering in line with the approved deployment plan.",
+      "The company's metering page describes MAP and the National Mass Metering Programme as separate historical/current metering mechanisms.",
+      "A customer should not pay a private installer who is not part of JED's approved meter programme."
+    ],
+    "sources": [
+      {
+        "label": "JED Metering",
+        "agency": "Jos Electricity Distribution Plc",
+        "url": "https://jedplc.com/metering.php",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "JED Home / Apply for MAP Meter",
+        "agency": "Jos Electricity Distribution Plc",
+        "url": "https://www.jedplc.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jed-prepaid-meter-recharge",
+      "jed-new-electricity-connection",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "JED prepaid meter application",
+      "Jos Disco MAP meter",
+      "JED meter request",
+      "JED apply for meter",
+      "Jos electricity prepaid meter"
+    ]
+  },
+  {
+    "slug": "jed-new-electricity-connection",
+    "title": "How to request a new JED electricity connection",
+    "shortTitle": "JED new connection",
+    "summary": "JED's customer route for a new electricity connection through its New Connection and Outage Application system, beginning with registration and the provider's service-connection request.",
+    "category": "Electricity",
+    "agencySlug": "jed",
+    "feeLabel": "Connection cost depends on the approved service",
+    "feeNote": "JED does not publish one flat new-connection fee for every premises. The applicable cost depends on the connection and any required network work identified during processing.",
+    "timeline": "JED does not publish one universal completion time for all new electricity connections.",
+    "status": "verified",
+    "officialPortal": "https://www.jedplc.com/new_connection.php",
+    "requirements": [
+      "A prospective-customer profile for the premises that needs a JED electricity connection",
+      "An email/username and account registration for the JED New Connections / Outage Portal where the online route is used",
+      "The premises and contact information requested in the new-connection application",
+      "Completion of any technical, wiring or network requirement identified by JED during assessment"
+    ],
+    "steps": [
+      "Open JED's official New Connection page and follow the linked new-connection portal route.",
+      "Register on the New Connections / Outage Portal if the applicant does not already have a portal account.",
+      "Complete the service-connection request with the customer and premises information requested by JED.",
+      "Submit the request and complete any technical or service requirement communicated during JED's assessment.",
+      "Keep the application details and use the portal or JED customer-care contacts to follow the connection until the supply/account is activated."
+    ],
+    "notes": [
+      "JED's official site exposes a dedicated New Connections / Outage Portal for registered users.",
+      "Connection requirements can vary with the premises and network availability, so a universal fee or timeline should not be assumed.",
+      "The new-connection route is separate from applying for a prepaid meter on an existing account."
+    ],
+    "sources": [
+      {
+        "label": "JED New Connection",
+        "agency": "Jos Electricity Distribution Plc",
+        "url": "https://www.jedplc.com/new_connection.php",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "JED New Connections / Outage Portal",
+        "agency": "Jos Electricity Distribution Plc",
+        "url": "https://outage.jedplc.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jed-map-meter-application",
+      "jed-prepaid-meter-recharge",
+      "yedc-new-electricity-connection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "JED new connection",
+      "Jos Disco new connection",
+      "JED electricity application",
+      "JED new customer connection",
+      "Jos electricity supply application"
+    ]
+  },
+  {
+    "slug": "union-bank-basic-savings-account",
+    "title": "How to open a Union Bank Basic Savings Account",
+    "shortTitle": "Union Bank savings account",
+    "summary": "Union Bank Nigeria's current Basic Savings account-opening route using its online platform with BVN, NIN, identity, proof of address, photographs and the account-opening form.",
+    "category": "Banking",
+    "agencySlug": "union-bank",
+    "feeLabel": "₦2,500 opening balance",
+    "feeNote": "Union Bank's current Basic Savings page lists a ₦2,500 opening balance and ₦1,000 daily minimum operating balance. Confirm live product terms before funding because rates and balances can change.",
+    "timeline": "Union Bank does not publish one fixed completion time for every online Basic Savings application; completion depends on BVN/NIN, liveliness and KYC verification.",
+    "status": "verified",
+    "officialPortal": "https://individualaccount.unionbankng.com/ubn_account_opening/retailAccount/union-save",
+    "requirements": [
+      "A Bank Verification Number and National Identification Number",
+      "A completed Union Bank account-opening form and the applicant's signature",
+      "Two recent passport photographs and a valid means of identification",
+      "Proof of residential address, plus supporting name-change evidence when the account name differs from the identity document"
+    ],
+    "steps": [
+      "Open Union Bank's official account-opening platform and select the savings-account route.",
+      "Enter the BVN and NIN so Union Bank can verify the applicant's identity.",
+      "Complete the customer and next-of-kin information and upload the required signature.",
+      "Complete the liveliness/identity check and provide the additional ID, photographs and proof-of-address evidence requested for the Basic Savings account.",
+      "Submit the application and wait for Union Bank to complete verification before relying on the account for normal banking."
+    ],
+    "notes": [
+      "Union Bank's online platform explicitly includes BVN/NIN verification, customer/next-of-kin information, signature upload and a liveliness check.",
+      "Union Bank publishes multiple savings products with different document and balance requirements; this page is for the Basic Savings route.",
+      "If the account name differs from the identity document, Union Bank can require the published legal name-change evidence."
+    ],
+    "sources": [
+      {
+        "label": "Union Bank Savings Accounts",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://www.unionbankng.com/personal/accounts/savings/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Union Bank Account Opening Platform",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://individualaccount.unionbankng.com/ubn_account_opening/retailAccount/union-save",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "union-bank-debit-card-management",
+      "union-bank-826-ussd",
+      "bvn-enrolment",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Union Bank account online",
+      "Union Bank savings account requirements",
+      "Union Bank Basic Savings",
+      "Union Bank account opening BVN NIN",
+      "Union Bank Nigeria account opening"
+    ]
+  },
+  {
+    "slug": "union-bank-debit-card-management",
+    "title": "How to request, block or unblock a Union Bank debit card",
+    "shortTitle": "Union Bank debit card",
+    "summary": "Union Bank's UnionOnline self-service route for requesting a debit card, choosing the card type and pickup branch, or blocking/unblocking an existing debit card with security-word and OTP/token authentication.",
+    "category": "Banking",
+    "agencySlug": "union-bank",
+    "feeLabel": "Card issuance or replacement charges can apply",
+    "feeNote": "Union Bank's FAQ documents the request/block workflow but does not publish one universal debit-card charge on that page. Confirm the current card fee before submitting a new-card or replacement request.",
+    "timeline": "Union Bank does not publish one universal card-production time on the FAQ; the customer is notified when a requested card is ready for branch pickup.",
+    "status": "verified",
+    "officialPortal": "https://unionbankng.com/support/faqs/",
+    "requirements": [
+      "An existing Union Bank account with access to UnionOnline",
+      "The account number from which the debit card should be requested or managed",
+      "The customer's UnionOnline security word and Token/OTP for authentication",
+      "For a new card, the preferred card type/class and Union Bank branch selected for pickup"
+    ],
+    "steps": [
+      "Sign in to UnionOnline and open the account that needs the debit-card service.",
+      "Open Self Service and choose Request for Debit Card, or choose Block/Unblock Debit Card for an existing card.",
+      "For a new card, select the account, card type/class and the preferred Union Bank pickup branch.",
+      "Enter the security word and Token/OTP and submit the card request or block/unblock instruction.",
+      "For a new card, wait for Union Bank's readiness notification before visiting the selected branch for collection."
+    ],
+    "notes": [
+      "Union Bank also publishes *826*21# for debit-card request/management through USSD.",
+      "Blocking a card is different from blocking the entire bank account.",
+      "If card details are compromised, block the card before waiting to investigate unauthorised transactions."
+    ],
+    "sources": [
+      {
+        "label": "Union Bank FAQs",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://unionbankng.com/support/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Union Bank 24/7 Banking",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://unionbankng.com/services/247-banking/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "union-bank-basic-savings-account",
+      "union-bank-826-ussd",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "request Union Bank debit card",
+      "block Union Bank card",
+      "unblock Union Bank card",
+      "UnionOnline debit card",
+      "Union Bank card request"
+    ]
+  },
+  {
+    "slug": "union-bank-826-ussd",
+    "title": "How to use Union Bank *826# USSD banking",
+    "shortTitle": "Union Bank *826#",
+    "summary": "Union Bank's *826# mobile banking route for transfers, airtime, bills, card management, account blocking and other supported services without needing internet access.",
+    "category": "Banking",
+    "agencySlug": "union-bank",
+    "feeLabel": "USSD and transaction charges can apply",
+    "feeNote": "Union Bank publishes the available *826# functions but charges can depend on the transaction and telecom/banking rules. Review the confirmation screen before authorising a paid transaction.",
+    "timeline": "USSD instructions are processed during the active *826# session when the mobile network and bank service are available.",
+    "status": "verified",
+    "officialPortal": "https://www.unionbankng.com/personal/826-2/",
+    "requirements": [
+      "A mobile phone and Union Bank customer profile for the normal account-linked *826# functions",
+      "The mobile number associated with the Union Bank account for functions that require account authentication",
+      "The Union Bank USSD PIN or security authentication requested before a financial transaction is completed"
+    ],
+    "steps": [
+      "Dial *826# or use the published direct short code for the Union Bank service needed.",
+      "Choose the transfer, airtime, bills, card, balance or other service from the USSD menu.",
+      "Enter the account, recipient or payment information requested for that service.",
+      "Review the transaction details and authenticate the request with the required Union Bank USSD PIN/security step.",
+      "Keep the success or reference message, and use *826*6# if the urgent need is to block the customer's Union Bank account."
+    ],
+    "notes": [
+      "Union Bank publishes direct codes including *826*4# for balance, *826*21# for card management and *826*6# for account blocking.",
+      "The bank also publishes *826*6*mobile number# to block an account from another phone number.",
+      "A debit-card block and an entire account block are separate security actions."
+    ],
+    "sources": [
+      {
+        "label": "Union Bank *826# USSD Banking",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://www.unionbankng.com/personal/826-2/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "union-bank-basic-savings-account",
+      "union-bank-debit-card-management",
+      "keystone-7111-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Union Bank USSD code",
+      "*826# Union Bank",
+      "Union Bank transfer code",
+      "Union Bank block account code",
+      "Union Bank card code"
+    ]
+  },
+  {
+    "slug": "keystone-7111-ussd",
+    "title": "How to register and use Keystone Bank *7111# USSD",
+    "shortTitle": "Keystone *7111#",
+    "summary": "Keystone Bank's *7111# USSD registration and banking route for retail customers, using the registered phone number, account number, year of birth and transaction PIN for transfers, bills and card services.",
+    "category": "Banking",
+    "agencySlug": "keystone-bank",
+    "feeLabel": "Transaction charges can apply",
+    "feeNote": "Keystone publishes the *7111# functions and limits but individual transfer, bill or telecom USSD charges can apply. Review the USSD confirmation before authorising a paid service.",
+    "timeline": "USSD registration completes during the active session after the customer enters the correct account information and creates the transaction PIN.",
+    "status": "verified",
+    "officialPortal": "https://www.keystonebankng.com/ussd-banking/",
+    "requirements": [
+      "An eligible individual Keystone Bank retail account",
+      "The mobile number registered with Keystone Bank",
+      "The Keystone Bank account number and the customer's year of birth",
+      "A private transaction PIN created during *7111# registration"
+    ],
+    "steps": [
+      "Dial *7111*0# from the mobile number registered with Keystone Bank.",
+      "Choose Register, enter the Keystone Bank account number and enter the customer's year of birth.",
+      "Create the private transaction PIN and complete the registration confirmation.",
+      "Dial *7111# again and choose the required balance, transfer, airtime, data, bills, card or other supported service.",
+      "Authenticate financial transactions with the transaction PIN and keep the success message or reference."
+    ],
+    "notes": [
+      "Keystone says *7111# works on MTN, Glo, Airtel and 9mobile and can work outside Nigeria when the registered number is roaming.",
+      "The published maximum daily transfer limit is ₦100,000 across intrabank and interbank USSD transfers.",
+      "Joint, corporate and multiple-signatory accounts are not eligible for the normal *7111# USSD service."
+    ],
+    "sources": [
+      {
+        "label": "Keystone Bank USSD Banking",
+        "agency": "Keystone Bank Limited",
+        "url": "https://www.keystonebankng.com/ussd-banking/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Keystone Bank E-banking",
+        "agency": "Keystone Bank Limited",
+        "url": "https://www.keystonebankng.com/personal-banking/e-services/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "keystone-emergency-account-block",
+      "union-bank-826-ussd",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Keystone Bank USSD code",
+      "*7111#",
+      "register Keystone USSD",
+      "Keystone transfer code",
+      "Keystone Bank *7111*0#"
+    ]
+  },
+  {
+    "slug": "keystone-emergency-account-block",
+    "title": "How to block Keystone Bank accounts if your phone is lost",
+    "shortTitle": "Keystone emergency block",
+    "summary": "Keystone Bank's emergency *7111*911# panic-code route for placing a Post No Debit restriction on a customer's accounts from any phone when the registered phone is lost or account access is at risk.",
+    "category": "Banking",
+    "agencySlug": "keystone-bank",
+    "feeLabel": "No emergency-block fee stated",
+    "feeNote": "Keystone does not state a separate fee for using the published *7111*911# panic code to secure accounts.",
+    "timeline": "Keystone presents the panic code as an immediate emergency action; contact the bank if the code cannot complete the restriction.",
+    "status": "verified",
+    "officialPortal": "https://www.keystonebankng.com/ussd-banking/",
+    "requirements": [
+      "Access to any mobile phone capable of dialing the Keystone Bank emergency USSD code",
+      "The account number or registered phone-number information requested by the panic-code prompts",
+      "An official Keystone Bank support channel as a fallback if the USSD restriction cannot be completed"
+    ],
+    "steps": [
+      "Dial *7111*911# from any available phone as soon as the Keystone Bank account needs to be secured.",
+      "Enter the account or phone information requested by the emergency menu.",
+      "Complete the verification prompt and confirm the instruction to place a Post No Debit restriction on the accounts.",
+      "Contact Keystone Bank immediately through the official contact centre or a branch if the panic-code request fails.",
+      "After the accounts are secured, review recent transactions with the bank and follow its official process before restoring normal account access."
+    ],
+    "notes": [
+      "Keystone explicitly says the *7111*911# panic code can be dialled from any phone.",
+      "The bank says the code places a PND restriction on all the customer's accounts.",
+      "Do not share a transaction PIN, OTP or card PIN with anyone offering to unlock the account."
+    ],
+    "sources": [
+      {
+        "label": "Keystone Bank USSD Banking",
+        "agency": "Keystone Bank Limited",
+        "url": "https://www.keystonebankng.com/ussd-banking/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Keystone KeyMobile App FAQ",
+        "agency": "Keystone Bank Limited",
+        "url": "https://www.keystonebankng.com/keymobile-app/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "keystone-7111-ussd",
+      "union-bank-826-ussd",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Keystone Bank emergency code",
+      "*7111*911#",
+      "block Keystone account lost phone",
+      "Keystone PND code",
+      "Keystone panic code"
+    ]
+  },
+  {
+    "slug": "avon-individual-health-plan",
+    "title": "How to buy an Avon HMO individual health plan",
+    "shortTitle": "Avon individual health plan",
+    "summary": "Avon HMO's direct-to-consumer route for comparing individual plans, checking age eligibility and waiting-period/exclusion information, then buying the chosen annual health plan through Avon's official plan portal.",
+    "category": "Health insurance",
+    "agencySlug": "avon-hmo",
+    "feeLabel": "Annual price depends on the selected Avon plan",
+    "feeNote": "Avon publishes plan-specific annual prices and benefits. Check the live plan portal before purchase because prices and benefits can change.",
+    "timeline": "The plan-purchase process is completed online after the customer selects a plan and provides the enrollee/payment details; waiting periods can apply to specific benefits after enrolment.",
+    "status": "verified",
+    "officialPortal": "https://app.avonhealthcare.com/",
+    "requirements": [
+      "An individual purchaser who meets the published age restriction for the selected Avon individual plan",
+      "The enrollee's personal and contact information for health-plan registration",
+      "A selected Avon individual plan after reviewing the benefits, waiting periods and exclusions",
+      "A supported payment method for the annual price displayed by Avon"
+    ],
+    "steps": [
+      "Open Avon's official individual-plan page or plan comparison portal and review the individual health-plan options.",
+      "Confirm that the enrollee meets the current age eligibility and review any waiting periods or exclusions for the intended benefits.",
+      "Choose the plan whose benefits and annual price the customer wants to purchase.",
+      "Enter the enrollee and contact information and complete payment through Avon's official Buy a Plan route.",
+      "Keep the enrolment confirmation and use Avon's provider directory to identify hospitals and other facilities available under the plan."
+    ],
+    "notes": [
+      "Avon's current individual-plan page says individual plans can be purchased by people aged 18–60.",
+      "Different Avon plans include different benefit levels and waiting periods, so this guide does not recommend one plan as suitable for a particular person's medical or financial needs.",
+      "The provider directory should be checked before relying on a specific hospital for the selected plan."
+    ],
+    "sources": [
+      {
+        "label": "Avon HMO Individual Plans",
+        "agency": "Avon HMO",
+        "url": "https://www.avonhealthcare.com/individual-plan/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Avon HMO Plan Portal",
+        "agency": "Avon HMO",
+        "url": "https://app.avonhealthcare.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "avon-provider-directory",
+      "hygeia-health-plan-purchase",
+      "nhia-individual-family-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Avon HMO individual plan",
+      "buy Avon HMO plan",
+      "Avon health plan Nigeria",
+      "Avon HMO price",
+      "Avon HMO registration"
+    ]
+  },
+  {
+    "slug": "avon-provider-directory",
+    "title": "How to find an Avon HMO hospital or provider",
+    "shortTitle": "Avon provider directory",
+    "summary": "Avon HMO's provider-search route for finding hospitals, optical providers and other network facilities by location or provider name before seeking care under an Avon plan.",
+    "category": "Health insurance",
+    "agencySlug": "avon-hmo",
+    "feeLabel": "No provider-search fee",
+    "feeNote": "Avon provides the provider-directory search without a separate search fee.",
+    "timeline": "Search results appear after the user selects or enters the relevant location/provider criteria; provider availability should still be confirmed before a planned visit.",
+    "status": "verified",
+    "officialPortal": "https://app.avonhealthcare.com/find-my-provider",
+    "requirements": [
+      "An Avon plan or interest in confirming whether a hospital/provider is in the current Avon network",
+      "A state, LGA, provider category, hospital name or address to narrow the provider-directory search",
+      "The plan details needed to confirm that a listed provider offers the intended service under the customer's actual coverage"
+    ],
+    "steps": [
+      "Open Avon's official Find My Provider page.",
+      "Choose the relevant state, area, provider type or other available filters, or search directly by hospital name or address.",
+      "Review the matching provider records and note the hospital/facility name and address.",
+      "Check the customer's actual Avon plan benefits before assuming every service at the listed provider is covered.",
+      "Contact the provider or Avon HMO before a planned visit when confirmation of service availability or authorisation is needed."
+    ],
+    "notes": [
+      "Avon's live directory contains thousands of provider records across Nigeria.",
+      "A provider appearing in the network directory does not mean every procedure or service is covered by every Avon plan.",
+      "For urgent medical needs, use the appropriate emergency route rather than relying only on a directory search."
+    ],
+    "sources": [
+      {
+        "label": "Avon HMO Find My Provider",
+        "agency": "Avon HMO",
+        "url": "https://app.avonhealthcare.com/find-my-provider",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "avon-individual-health-plan",
+      "hygeia-provider-directory",
+      "hygeia-health-plan-purchase"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Avon HMO hospital list",
+      "Avon HMO provider directory",
+      "find Avon hospital",
+      "Avon HMO hospitals near me",
+      "Avon provider network Nigeria"
+    ]
   }
 ]
