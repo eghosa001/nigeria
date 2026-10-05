@@ -22924,7 +22924,7 @@
     "steps": [
       "Download the official SC Mobile Nigeria app and select Open Account.",
       "Enter the BVN and complete the six-digit OTP verification sent to the registered mobile number.",
-      "Review or update the contact information and enter the additional personal details requested by the app.",
+      "Confirm the phone number, email address and residential/contact information shown from the BVN record, then enter any additional occupation, address or profile information requested by SC Mobile.",
       "Take the selfie and upload the valid identity document and optional signature requested by Standard Chartered.",
       "Review the application, accept the terms and submit it; keep the temporary registration details if the account number is not displayed immediately."
     ],
@@ -23038,7 +23038,7 @@
       "Select Register so Standard Chartered sends an OTP to the registered mobile number.",
       "Enter the OTP and create the preferred six-digit SC Mobile Key transaction PIN.",
       "Re-enter the same six-digit PIN to confirm the security key.",
-      "Complete registration and use the Mobile Key PIN when SC Mobile or Online Banking asks for transaction authentication."
+      "After Standard Chartered confirms Mobile Key registration, authorise each SC Mobile or Online Banking transaction by entering the six-digit Mobile Key when the authentication screen appears."
     ],
     "notes": [
       "Standard Chartered describes Mobile Key as a virtual security token for digital banking authentication.",
