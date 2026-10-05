@@ -391,7 +391,22 @@ const expectedSlugs = [
   "fidelity-emergency-block",
   "sat-registration-nigeria",
   "reliance-provider-directory",
-  "reliance-small-business-plan",] as const;
+  "reliance-small-business-plan",
+  "t2-buy-airtime-data-online",
+  "t2-data-transfer",
+  "t2-data-gifting",
+  "startimes-recharge-smartcard",
+  "startimes-change-bouquet",
+  "ipnx-renew-subscription",
+  "ipnx-change-service-plan",
+  "ipnx-report-fault",
+  "fiberone-new-service-installation",
+  "fiberone-renew-subscription",
+  "fiberone-relocate-service",
+  "moniepoint-business-account",
+  "moniepoint-pos-terminal",
+  "nomba-business-account",
+  "nomba-pos-terminal",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -507,8 +522,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(386);
-  expect(publicServices).toHaveLength(386);
+  expect(services).toHaveLength(401);
+  expect(publicServices).toHaveLength(401);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
