@@ -1,4 +1,4 @@
-import type { CareerOpportunity } from "@/lib/jobs";
+import { jobOpportunities, type CareerOpportunity } from "@/lib/jobs";
 
 export type JobFacet = {
   slug: string;
