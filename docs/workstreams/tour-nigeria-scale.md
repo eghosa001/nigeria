@@ -156,6 +156,47 @@ unless a critical shared fix is unavoidable.
 
 Keep any unavoidable shared edit minimal and isolated.
 
+## Inherited MyNigeriaGuide requirements
+
+These requirements come from the existing Tour Nigeria production standard and must be preserved while scaling.
+
+### Coverage and page-worthiness
+
+- Maintain baseline representation for all 36 states plus the FCT.
+- A Tour guide/event page must have enough mapped/supporting content to be useful; the existing content validator expects at least **3 relevant mapped places** for an Explore/event guide.
+- Fragment-only place anchors do **not** count as separate indexable URLs or toward the pillar SEO total. Only distinct pages with independent value count.
+- Individual hotel/restaurant/attraction pages should become indexable only when enough verified, distinct information exists to justify a standalone search result.
+
+### Place accuracy and practical value
+
+- Use mapped/source-backed places with current address/map query, access context and useful planning detail.
+- Where available and current, include cost, hours, phone, website, transport/logistics, best time/day and nearby relevant stops.
+- Do not guess hours, prices, addresses or access rules.
+- The Attractions shortcut/filter must filter by structured place kind, not unreliable free-text matching, so all attraction records remain discoverable.
+- For remote or volatile areas, current official/local safety and access guidance overrides static tourism copy; never turn a tourism page into a real-time safety guarantee.
+
+### SEO and interlinking
+
+- Keep state → city/destination → place/event/itinerary relationships explicit.
+- Every new guide should be linked from its relevant state/city/event hub and should link to related places, itineraries and nearby destinations; update parent/related pages for two-way discovery.
+- Continue targeting “things to do”, attractions, hotels, restaurants, events, transport and itinerary keyword clusters only where the page can provide distinct local value.
+- Keep canonical URLs, breadcrumbs, structured data where valid, server-rendered links and static crawlability.
+- New public pages must enter the appropriate sitemap and existing IndexNow/Bing discovery flow.
+- Use Search Console demand to prioritise cities/destinations already earning impressions.
+
+### Mobile, maps and theme
+
+- Phone-first: destination cards, filters, maps/actions, place details and event sections must fit small screens cleanly.
+- Preserve complete dark-mode readability across travel cards, filters, forms and navigation.
+- Avoid large client-side place payloads and hydration regressions; preserve the site's strong mobile performance/accessibility baseline.
+- Keep ads below useful introductory/answer content, never above the user's main answer.
+
+### Events
+
+- Event dates, venues, tickets/access and schedules must be verified from primary/official sources where possible.
+- Preserve lifecycle states: upcoming/current → completed/archive → verified next edition when available.
+- Do not keep a past event presented as current merely to preserve traffic.
+
 ## Validation
 
 Follow the owner's minimal-test rule. Run only directly relevant explore/content checks. Do not manually run the full repository suite.
