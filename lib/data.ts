@@ -1423,6 +1423,20 @@ export const agencies: Agency[] = [
     "shortName": "Filmhouse",
     "description": "Private Nigerian cinema chain offering movie-ticket booking, cinema pricing and customer entertainment services.",
     "website": "https://filmhouseng.com/"
+  },
+  {
+    "slug": "momo-psb",
+    "name": "MoMo Payment Service Bank",
+    "shortName": "MoMo PSB",
+    "description": "MTN Nigeria's licensed payment service bank offering mobile wallets, agent/merchant onboarding, transfers, bill payments and digital financial services.",
+    "website": "https://www.momo.ng/"
+  },
+  {
+    "slug": "mecure-hospital",
+    "name": "MeCure Hospital",
+    "shortName": "MeCure Hospital",
+    "description": "Private hospital in Lagos offering specialist consultations, appointments and 24/7 emergency services.",
+    "website": "https://www.mecurehospital.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
