@@ -8,8 +8,8 @@ import { exploreGuides } from "@/lib/explore";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
 
 export const metadata: Metadata = {
-  title: "Nigerian Movies, Services, Jobs & Travel Guide",
-  description: "Discover Nigerian movies, practical service guidance, verified jobs and careers, and places to explore across Nigeria.",
+  title: "Nigerian Movies, Services, Travel & Jobs Guide",
+  description: "Discover Nigerian movies, practical service guidance, places to explore across Nigeria, and verified jobs and careers.",
   alternates: { canonical: "/" },
 };
 
@@ -137,6 +137,14 @@ export default function HomePage() {
             <Link href="/entertainment/movies">Browse movies →</Link>
           </div>
 
+          <form className="section-quick-search" action="/entertainment/movies#curated-movies" method="get" role="search">
+            <label>
+              <span>Search movies & entertainment</span>
+              <input type="search" name="q" placeholder="Movie, actor, genre or language…" />
+            </label>
+            <button type="submit">Search movies</button>
+          </form>
+
           <div className="minimal-movie-row">
             {movieHighlights.map((title) => (
               <article className="minimal-movie-card movie-card-clickable" key={title.slug}>
@@ -177,6 +185,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="minimal-home-section minimal-home-tour" aria-labelledby="home-tour-title">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Tour Nigeria</span>
+              <h2 id="home-tour-title">Where to go next.</h2>
+            </div>
+            <Link href="/explore">Explore Nigeria →</Link>
+          </div>
+
+          <form className="section-quick-search" action="/explore#places" method="get" role="search">
+            <label>
+              <span>Search Tour Nigeria</span>
+              <input type="search" name="q" placeholder="City, hotel, restaurant or attraction…" />
+            </label>
+            <button type="submit">Search places</button>
+          </form>
+
+          <div className="minimal-travel-grid">
+            {travelHighlights.map((guide) => (
+              <Link href={"/explore/" + guide.slug} className="minimal-travel-card" key={guide.slug}>
+                <span>{guide.region}</span>
+                <strong>{guide.shortTitle}</strong>
+                <small>{guide.kind === "city" ? "City guide" : "Destination guide"} →</small>
+              </Link>
+            ))}
+          </div>
+
+          <div className="minimal-inline-links" aria-label="Tour Nigeria shortcuts">
+            <Link href="/explore/events">Events & festivals</Link>
+            <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
+            <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
+            <Link href="/explore?q=restaurant#places">Restaurants</Link>
+            <Link href="/explore?q=hotel#places">Hotels & stays</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="minimal-home-section minimal-home-jobs" aria-labelledby="home-jobs-title">
         <div className="container">
           <div className="minimal-section-heading">
@@ -186,6 +232,14 @@ export default function HomePage() {
             </div>
             <Link href="/jobs">Browse careers →</Link>
           </div>
+
+          <form className="section-quick-search" action="/jobs#opportunities" method="get" role="search">
+            <label>
+              <span>Search jobs & careers</span>
+              <input type="search" name="q" placeholder="Employer, role, qualification or field…" />
+            </label>
+            <button type="submit">Search jobs</button>
+          </form>
 
           <div className="home-jobs-grid">
             <Link href="/jobs/government" className="home-job-feature">
@@ -229,27 +283,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="minimal-home-section minimal-home-tour" aria-labelledby="home-tour-title">
-        <div className="container">
-          <div className="minimal-section-heading">
-            <div>
-              <span className="eyebrow">Tour Nigeria</span>
-              <h2 id="home-tour-title">Where to go next.</h2>
-            </div>
-            <Link href="/explore">Explore Nigeria →</Link>
-          </div>
 
-          <div className="minimal-travel-grid">
-            {travelHighlights.map((guide) => (
-              <Link href={"/explore/" + guide.slug} className="minimal-travel-card" key={guide.slug}>
-                <span>{guide.region}</span>
-                <strong>{guide.shortTitle}</strong>
-                <small>{guide.kind === "city" ? "City guide" : "Destination guide"} →</small>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }

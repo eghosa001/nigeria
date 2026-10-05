@@ -10,7 +10,7 @@ const primaryNavigation = [
   {
     href: "/services",
     label: "Services",
-    matches: ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"],
+    matches: ["/services", "/assistant", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"],
   },
   { href: "/explore", label: "Tour Nigeria", matches: ["/explore"] },
   { href: "/jobs", label: "Jobs & Careers", matches: ["/jobs"] },
@@ -38,7 +38,9 @@ const sectionNavigation = {
       { href: "/jobs/private", label: "Private sector" },
       { href: "/jobs/graduate", label: "Graduates" },
       { href: "/jobs/internships", label: "Internships" },
+      { href: "/jobs/nysc", label: "NYSC" },
       { href: "/jobs/engineering", label: "Engineering" },
+      { href: "/jobs/remote", label: "Remote" },
     ],
   },
   explore: {
@@ -48,17 +50,23 @@ const sectionNavigation = {
       { href: "/explore#places", label: "Places" },
       { href: "/explore#cities", label: "City guides" },
       { href: "/explore#destinations", label: "Destinations" },
+      { href: "/explore/events", label: "Events" },
+      { href: "/explore/things-to-do-lagos", label: "Lagos" },
+      { href: "/explore/things-to-do-abuja", label: "Abuja" },
     ],
   },
   entertainment: {
     label: "Movies & entertainment",
     links: [
+      { href: "/entertainment", label: "Overview" },
       { href: "/entertainment/movies", label: "Movies" },
+      { href: "/entertainment/trending", label: "Trending" },
+      { href: "/entertainment/series", label: "Series" },
       { href: "/entertainment/youtube", label: "Free on YouTube" },
       { href: "/entertainment/releases", label: "New & upcoming" },
       { href: "/entertainment/cinemas", label: "Cinemas" },
+      { href: "/entertainment/platforms", label: "Platforms" },
       { href: "/entertainment/people", label: "People" },
-      { href: "/entertainment", label: "More" },
     ],
   },
 } as const;
@@ -68,7 +76,7 @@ type IconName = "home" | "services" | "jobs" | "explore" | "movies" | "saved" | 
 
 function sectionForPath(pathname: string): SectionKey | null {
   if (
-    ["/services", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"]
+    ["/services", "/assistant", "/categories", "/topics", "/agencies", "/official-portals", "/fees", "/offices", "/locations", "/updates"]
       .some((prefix) => pathname === prefix || pathname.startsWith(prefix + "/"))
   ) return "services";
   if (pathname === "/jobs" || pathname.startsWith("/jobs/")) return "jobs";
@@ -176,7 +184,7 @@ export function SiteHeader() {
               <nav aria-label={context.label + " navigation"}>
                 {context.links.map((item) => {
                   const cleanHref = item.href.split("#")[0];
-                  const exactOnly = item.label === "Overview" || item.href === "/entertainment";
+                  const exactOnly = item.label === "Overview";
                   const active = exactOnly
                     ? pathname === cleanHref
                     : pathname === cleanHref || (cleanHref !== "/services" && pathname.startsWith(cleanHref + "/"));

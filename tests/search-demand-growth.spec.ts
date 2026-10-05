@@ -64,3 +64,32 @@ test("new search-demand routes are crawlable from their public surfaces", async 
   await page.goto("/entertainment");
   await expect(page.getByRole("link", { name: /TV & web series/i }).first()).toHaveAttribute("href", "/entertainment/series");
 });
+
+test("four pillars stay ordered and searchable from the homepage", async ({ page }) => {
+  await page.goto("/");
+
+  const order = await page.locator(".minimal-home-section").evaluateAll((nodes) =>
+    nodes.map((node) => String(node.className)).filter((name) =>
+      /minimal-home-(movies|services|tour|jobs)/.test(name),
+    ),
+  );
+
+  expect(order.findIndex((name) => name.includes("minimal-home-movies"))).toBeLessThan(
+    order.findIndex((name) => name.includes("minimal-home-services")),
+  );
+  expect(order.findIndex((name) => name.includes("minimal-home-services"))).toBeLessThan(
+    order.findIndex((name) => name.includes("minimal-home-tour")),
+  );
+  expect(order.findIndex((name) => name.includes("minimal-home-tour"))).toBeLessThan(
+    order.findIndex((name) => name.includes("minimal-home-jobs")),
+  );
+
+  await expect(page.locator('form[action="/entertainment/movies#curated-movies"]')).toBeVisible();
+  await expect(page.locator('form[action="/explore#places"]')).toBeVisible();
+  await expect(page.locator('form[action="/jobs#opportunities"]')).toBeVisible();
+});
+
+test("global search includes individual Tour Nigeria places", async ({ page }) => {
+  await page.goto("/search?q=restaurant");
+  await expect(page.locator(".global-search-group").filter({ hasText: "Tour places" })).toBeVisible();
+});

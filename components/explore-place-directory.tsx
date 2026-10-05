@@ -86,6 +86,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
             <option value="landmark">Landmarks</option>
             <option value="restaurant">Restaurants</option>
             <option value="hotel">Places to stay</option>
+            <option value="shopping">Shopping</option>
           </select>
         </label>
         <label>

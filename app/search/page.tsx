@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { publicServiceListings } from "@/lib/data";
 import { exploreGuides } from "@/lib/explore";
+import { explorePlaces } from "@/lib/explore-places";
 import { entertainmentTitles } from "@/lib/entertainment";
+import { entertainmentPeople } from "@/lib/entertainment-extras";
+import { seriesTitles } from "@/lib/series";
 import { jobOpportunities } from "@/lib/jobs";
 import generatedYouTubeData from "@/data/youtube-movies.generated.json";
 
@@ -116,6 +119,22 @@ export default async function SearchPage({
         .map((entry) => entry.item)
     : [];
 
+  const placeResults = query
+    ? explorePlaces
+        .map((item) => ({
+          item,
+          score: relevance(
+            query,
+            item.name,
+            [item.kind, item.area, item.address, item.summary, item.cost, item.tags.join(" "), item.guideSlug].join(" "),
+          ),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
+        .slice(0, 12)
+        .map((entry) => entry.item)
+    : [];
+
   const movieResults = query
     ? entertainmentTitles
         .map((item) => ({
@@ -128,6 +147,34 @@ export default async function SearchPage({
         }))
         .filter((entry) => entry.score > 0)
         .sort((a, b) => b.score - a.score || b.item.year - a.item.year)
+        .slice(0, 8)
+        .map((entry) => entry.item)
+    : [];
+
+  const seriesResults = query
+    ? seriesTitles
+        .map((item) => ({
+          item,
+          score: relevance(
+            query,
+            item.title,
+            [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.creators?.join(" ") ?? "", String(item.year)].join(" "),
+          ),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score || b.item.year - a.item.year)
+        .slice(0, 8)
+        .map((entry) => entry.item)
+    : [];
+
+  const peopleResults = query
+    ? entertainmentPeople
+        .map((item) => ({
+          item,
+          score: relevance(query, item.name, [item.roles.join(" "), item.summary].join(" ")),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
         .slice(0, 8)
         .map((entry) => entry.item)
     : [];
@@ -148,14 +195,14 @@ export default async function SearchPage({
         .map((entry) => entry.item)
     : [];
 
-  const totalShown = serviceResults.length + jobResults.length + exploreResults.length + movieResults.length + youtubeResults.length;
+  const totalShown = movieResults.length + seriesResults.length + peopleResults.length + youtubeResults.length + serviceResults.length + exploreResults.length + placeResults.length + jobResults.length;
 
   return (
     <>
       <section className="global-search-hero">
         <div className="container global-search-hero-inner">
           <span className="eyebrow">Search MyNigeriaGuide</span>
-          <h1>One search for services, jobs, places and movies.</h1>
+          <h1>One search across all four MyNigeriaGuide pillars.</h1>
           <p>
             You do not need to know which section something belongs in first. Search a task, employer, career path, city, attraction, actor, movie or publisher.
           </p>
@@ -192,25 +239,25 @@ export default async function SearchPage({
         <div className="container">
           {!query ? (
             <div className="search-start-grid">
+              <Link href="/entertainment/movies">
+                <span>01</span><strong>Movies & Entertainment</strong>
+                <p>Nigerian movies, series, actors, cinemas, official streaming routes and free YouTube titles.</p>
+                <b>Browse entertainment →</b>
+              </Link>
               <Link href="/services">
-                <span>01</span><strong>Services</strong>
+                <span>02</span><strong>Services Guide</strong>
                 <p>Processes, requirements, fees, official portals and what happens next.</p>
                 <b>Browse services →</b>
               </Link>
-              <Link href="/jobs">
-                <span>02</span><strong>Jobs & Careers</strong>
-                <p>Government recruitment, graduate pathways, internships and reputable employer careers.</p>
-                <b>Browse careers →</b>
-              </Link>
               <Link href="/explore">
-                <span>03</span><strong>Explore Nigeria</strong>
-                <p>Cities, destinations, places, addresses, maps and practical trip planning.</p>
-                <b>Explore places →</b>
+                <span>03</span><strong>Tour Nigeria</strong>
+                <p>Cities, destinations, hotels, restaurants, attractions, events, addresses and practical trip planning.</p>
+                <b>Explore Nigeria →</b>
               </Link>
-              <Link href="/entertainment/movies">
-                <span>04</span><strong>Entertainment</strong>
-                <p>Nigerian movies, actors, official streaming routes and free YouTube titles.</p>
-                <b>Browse movies →</b>
+              <Link href="/jobs">
+                <span>04</span><strong>Jobs & Careers</strong>
+                <p>Government recruitment, graduate pathways, internships, NYSC opportunities and reputable employer careers.</p>
+                <b>Browse careers →</b>
               </Link>
             </div>
           ) : (
@@ -228,72 +275,12 @@ export default async function SearchPage({
                   <strong>No strong match yet.</strong>
                   <p>Try fewer words, a person’s name, a city, or the task you want to complete.</p>
                   <div>
+                    <Link href="/entertainment/movies">Browse movies & entertainment →</Link>
                     <Link href="/services">Browse services →</Link>
-                    <Link href="/jobs">Browse jobs & careers →</Link>
                     <Link href="/explore">Explore Nigeria →</Link>
-                    <Link href="/entertainment/movies">Browse movies →</Link>
+                    <Link href="/jobs">Browse jobs & careers →</Link>
                   </div>
                 </div>
-              ) : null}
-
-              {serviceResults.length ? (
-                <section className="global-search-group">
-                  <div className="global-search-group-heading">
-                    <div><span>Services</span><strong>{serviceResults.length} shown</strong></div>
-                    <Link href={"/services?q=" + encodeURIComponent(query)}>Search services only →</Link>
-                  </div>
-                  <div className="global-search-list">
-                    {serviceResults.map((item) => (
-                      <Link href={"/services/" + item.slug} key={item.slug}>
-                        <span className="search-result-type">Service · {item.category}</span>
-                        <strong>{item.title}</strong>
-                        <p>{item.summary}</p>
-                        <small>{item.status === "verified" ? "Verified guide" : "Guide"} · checked {item.lastVerified}</small>
-                        <b aria-hidden="true">→</b>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              ) : null}
-
-              {jobResults.length ? (
-                <section className="global-search-group">
-                  <div className="global-search-group-heading">
-                    <div><span>Jobs & Careers</span><strong>{jobResults.length} shown</strong></div>
-                    <Link href="/jobs">Open careers hub →</Link>
-                  </div>
-                  <div className="global-search-list">
-                    {jobResults.map((item) => (
-                      <Link href={"/jobs/" + item.slug} key={item.slug}>
-                        <span className="search-result-type">Career · {item.sector} · {item.statusLabel}</span>
-                        <strong>{item.title}</strong>
-                        <p>{item.summary}</p>
-                        <small>{item.organization} · checked {item.verifiedAt}</small>
-                        <b aria-hidden="true">→</b>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              ) : null}
-
-              {exploreResults.length ? (
-                <section className="global-search-group">
-                  <div className="global-search-group-heading">
-                    <div><span>Explore Nigeria</span><strong>{exploreResults.length} shown</strong></div>
-                    <Link href="/explore">Open travel guide →</Link>
-                  </div>
-                  <div className="global-search-list">
-                    {exploreResults.map((item) => (
-                      <Link href={"/explore/" + item.slug} key={item.slug}>
-                        <span className="search-result-type">Travel · {item.kind}</span>
-                        <strong>{item.title}</strong>
-                        <p>{item.summary}</p>
-                        <small>{item.region} · reviewed {item.lastReviewed}</small>
-                        <b aria-hidden="true">→</b>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
               ) : null}
 
               {movieResults.length ? (
@@ -309,6 +296,45 @@ export default async function SearchPage({
                         <strong>{item.title}</strong>
                         <p>{item.synopsis}</p>
                         <small>{item.genres.slice(0, 3).join(" · ")} · {item.cast.slice(0, 3).join(", ")}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {seriesResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Series</span><strong>{seriesResults.length} shown</strong></div>
+                    <Link href="/entertainment/series">Browse TV & web series →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {seriesResults.map((item) => (
+                      <Link href={"/entertainment/series/" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Series · {item.year} · {item.status}</span>
+                        <strong>{item.title}</strong>
+                        <p>{item.synopsis}</p>
+                        <small>{item.genres.slice(0, 3).join(" · ")} · {item.cast.slice(0, 3).join(", ")}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {peopleResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Actors & filmmakers</span><strong>{peopleResults.length} shown</strong></div>
+                    <Link href="/entertainment/people">Browse people →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {peopleResults.map((item) => (
+                      <Link href={"/entertainment/people/" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Entertainment person · {item.roles.join(" · ")}</span>
+                        <strong>{item.name}</strong>
+                        <p>{item.summary}</p>
                         <b aria-hidden="true">→</b>
                       </Link>
                     ))}
@@ -335,6 +361,87 @@ export default async function SearchPage({
                   </div>
                 </section>
               ) : null}
+
+              {serviceResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Services</span><strong>{serviceResults.length} shown</strong></div>
+                    <Link href={"/services?q=" + encodeURIComponent(query)}>Search services only →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {serviceResults.map((item) => (
+                      <Link href={"/services/" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Service · {item.category}</span>
+                        <strong>{item.title}</strong>
+                        <p>{item.summary}</p>
+                        <small>{item.status === "verified" ? "Verified guide" : "Guide"} · checked {item.lastVerified}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {exploreResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Tour Nigeria guides</span><strong>{exploreResults.length} shown</strong></div>
+                    <Link href="/explore">Open Tour Nigeria →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {exploreResults.map((item) => (
+                      <Link href={"/explore/" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Tour Nigeria · {item.kind}</span>
+                        <strong>{item.title}</strong>
+                        <p>{item.summary}</p>
+                        <small>{item.region} · reviewed {item.lastReviewed}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {placeResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Tour places</span><strong>{placeResults.length} shown</strong></div>
+                    <Link href={"/explore?q=" + encodeURIComponent(query) + "#places"}>Search Tour Nigeria →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {placeResults.map((item) => (
+                      <Link href={"/explore/" + item.guideSlug + "#place-" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Tour Nigeria · {item.kind}</span>
+                        <strong>{item.name}</strong>
+                        <p>{item.summary}</p>
+                        <small>{item.area} · checked {item.checkedAt}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {jobResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Jobs & Careers</span><strong>{jobResults.length} shown</strong></div>
+                    <Link href={"/jobs?q=" + encodeURIComponent(query) + "#opportunities"}>Search careers →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {jobResults.map((item) => (
+                      <Link href={"/jobs/" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Career · {item.sector} · {item.statusLabel}</span>
+                        <strong>{item.title}</strong>
+                        <p>{item.summary}</p>
+                        <small>{item.organization} · checked {item.verifiedAt}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
             </>
           )}
         </div>
