@@ -1,15 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { publicServiceListings } from "@/lib/data";
-import { exploreGuides } from "@/lib/explore";
-import { explorePlaces } from "@/lib/explore-places";
-import { entertainmentTitles } from "@/lib/entertainment";
-import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { seriesTitles } from "@/lib/series";
-import { jobOpportunities } from "@/lib/jobs";
-import generatedYouTubeData from "@/data/youtube-movies.generated.json";
-
-const generatedYouTubeMovies = generatedYouTubeData.movies;
+import { searchGlobalCatalog } from "@/lib/global-search";
 
 export const metadata: Metadata = {
   title: "Search MyNigeriaGuide",
@@ -17,40 +8,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/search" },
   robots: { index: false, follow: true },
 };
-
-function normalise(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-}
-
-function relevance(query: string, title: string, text: string) {
-  const q = normalise(query);
-  if (!q) return 0;
-
-  const titleText = normalise(title);
-  const haystack = normalise(title + " " + text);
-  const tokens = q.split(/\s+/).filter(Boolean);
-
-  if (!tokens.every((token) => haystack.includes(token))) return 0;
-
-  let score = 10;
-  if (titleText === q) score += 100;
-  else if (titleText.startsWith(q)) score += 55;
-  else if (titleText.includes(q)) score += 35;
-  if (haystack.includes(q)) score += 18;
-
-  for (const token of tokens) {
-    if (titleText.split(" ").includes(token)) score += 10;
-    else if (titleText.includes(token)) score += 6;
-    else score += 2;
-  }
-
-  return score;
-}
 
 function resultCountLabel(count: number) {
   return count === 1 ? "1 result" : count + " results";
@@ -64,138 +21,17 @@ export default async function SearchPage({
   const params = await searchParams;
   const query = (params.q ?? "").trim();
 
-  const serviceResults = query
-    ? publicServiceListings
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.title,
-            [item.shortTitle, item.summary, item.category, item.agencySlug, item.searchTerms.join(" "), item.searchText].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-        .slice(0, 16)
-        .map((entry) => entry.item)
-    : [];
-
-  const jobResults = query
-    ? jobOpportunities
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.title,
-            [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-        .slice(0, 8)
-        .map((entry) => entry.item)
-    : [];
-
-  const exploreResults = query
-    ? exploreGuides
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.title,
-            [
-              item.shortTitle,
-              item.region,
-              item.kind,
-              item.summary,
-              item.bestFor.join(" "),
-              item.highlights.map((highlight) => highlight.name + " " + highlight.detail).join(" "),
-            ].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-        .slice(0, 8)
-        .map((entry) => entry.item)
-    : [];
-
-  const placeResults = query
-    ? explorePlaces
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.name,
-            [item.kind, item.area, item.address, item.summary, item.cost, item.tags.join(" "), item.guideSlug].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
-        .slice(0, 12)
-        .map((entry) => entry.item)
-    : [];
-
-  const movieResults = query
-    ? entertainmentTitles
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.title,
-            [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.directors?.join(" ") ?? "", String(item.year)].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || b.item.year - a.item.year)
-        .slice(0, 8)
-        .map((entry) => entry.item)
-    : [];
-
-  const seriesResults = query
-    ? seriesTitles
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.title,
-            [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.creators?.join(" ") ?? "", String(item.year)].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || b.item.year - a.item.year)
-        .slice(0, 8)
-        .map((entry) => entry.item)
-    : [];
-
-  const peopleResults = query
-    ? entertainmentPeople
-        .map((item) => ({
-          item,
-          score: relevance(query, item.name, [item.roles.join(" "), item.summary].join(" ")),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
-        .slice(0, 8)
-        .map((entry) => entry.item)
-    : [];
-
-  const youtubeResults = query
-    ? generatedYouTubeMovies
-        .map((item) => ({
-          item,
-          score: relevance(
-            query,
-            item.title,
-            [item.synopsis, item.cast.join(" "), item.channelName, String(item.year)].join(" "),
-          ),
-        }))
-        .filter((entry) => entry.score > 0)
-        .sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt))
-        .slice(0, 8)
-        .map((entry) => entry.item)
-    : [];
-
-  const totalShown = movieResults.length + seriesResults.length + peopleResults.length + youtubeResults.length + serviceResults.length + exploreResults.length + placeResults.length + jobResults.length;
+  const {
+    serviceResults,
+    jobResults,
+    exploreResults,
+    placeResults,
+    movieResults,
+    seriesResults,
+    peopleResults,
+    youtubeResults,
+    totalShown,
+  } = await searchGlobalCatalog(query);
 
   return (
     <>

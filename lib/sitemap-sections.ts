@@ -16,9 +16,20 @@ import { seriesTitles, seriesLastChecked } from "@/lib/series";
 export const sitemapSectionNames = ["core", "services", "jobs", "travel", "movies", "youtube"] as const;
 export type SitemapSectionName = (typeof sitemapSectionNames)[number];
 
+export const SITEMAP_SHARD_SIZE = 20_000;
+
 export type SitemapEntry = {
   url: string;
   lastModified: string;
+};
+
+export type SitemapShard = {
+  name: string;
+  section: SitemapSectionName;
+  shard: number;
+  url: string;
+  lastModified: string;
+  count: number;
 };
 
 function getYouTubeSitemapPageCount() {
@@ -167,15 +178,47 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   ];
 }
 
-export function getSitemapSections() {
+export function getSitemapShardEntries(section: SitemapSectionName, shard = 1): SitemapEntry[] {
+  if (!Number.isInteger(shard) || shard < 1) return [];
+  const entries = getSitemapEntries(section);
+  const start = (shard - 1) * SITEMAP_SHARD_SIZE;
+  return entries.slice(start, start + SITEMAP_SHARD_SIZE);
+}
+
+export function parseSitemapShardName(raw: string): { section: SitemapSectionName; shard: number } | null {
+  const name = raw.endsWith(".xml") ? raw.slice(0, -4) : raw;
+
+  for (const section of sitemapSectionNames) {
+    if (name === section) return { section, shard: 1 };
+    if (!name.startsWith(section + "-")) continue;
+
+    const shard = Number(name.slice(section.length + 1));
+    if (Number.isInteger(shard) && shard >= 2) return { section, shard };
+  }
+
+  return null;
+}
+
+export function getSitemapSections(): SitemapShard[] {
   const base = getSiteUrl();
-  return sitemapSectionNames.map((name) => {
-    const entries = getSitemapEntries(name);
-    return {
-      name,
-      url: base + "/sitemaps/" + name + ".xml",
-      lastModified: latestDate(entries.map((entry) => entry.lastModified)),
-      count: entries.length,
-    };
+
+  return sitemapSectionNames.flatMap((section) => {
+    const entries = getSitemapEntries(section);
+    const shardCount = Math.max(1, Math.ceil(entries.length / SITEMAP_SHARD_SIZE));
+
+    return Array.from({ length: shardCount }, (_, index) => {
+      const shard = index + 1;
+      const shardEntries = entries.slice(index * SITEMAP_SHARD_SIZE, shard * SITEMAP_SHARD_SIZE);
+      const name = shard === 1 ? section : section + "-" + shard;
+
+      return {
+        name,
+        section,
+        shard,
+        url: base + "/sitemaps/" + name + ".xml",
+        lastModified: latestDate(shardEntries.map((entry) => entry.lastModified)),
+        count: shardEntries.length,
+      };
+    });
   });
 }

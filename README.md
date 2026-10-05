@@ -32,13 +32,17 @@ MyNigeriaGuide turns official government information into clear, source-linked g
 - Privacy, terms, editorial, corrections and contact pages
 - Favicon/social preview assets; the AdSense loader is withheld from `/admin` and automated browsers
 
-## No database subscription required
+## Scale path
 
-MyNigeriaGuide's public website runs from checked-in verified content and does **not** require Supabase, PostgreSQL, or any paid monthly database.
+MyNigeriaGuide still runs from checked-in verified content at the current catalog size, but the repository is now explicitly designed for the Million-Search Expansion.
 
-Core features that work without a database:
+The long-range contract is in `config/scale-targets.json` and `docs/SCALING.md`: 100,000 useful indexable public URLs, a 10 million monthly-pageview design target, and storage/query headroom for at least 1,000,000 underlying content records.
 
-- all public service guides
+Checked-in content remains valid during the small-catalog phase. High-growth pillars must move to the D1 content-store path before they cross the repository's 5,000-record threshold so catalog growth does not permanently inflate the Worker bundle or browser payloads.
+
+Core features continue to work without a database during this migration period:
+
+- public guides and detail pages
 - search and filters
 - MyNigeriaGuide Assistant
 - agency and office finders
@@ -47,16 +51,14 @@ Core features that work without a database:
 - SEO/sitemaps
 - analytics hooks
 - source monitoring
-- CI/browser QA
 
-Persistent correction reports and verification history are optional extras.
+## Cloudflare D1 persistence
 
-## Optional Cloudflare D1 persistence
+The repository includes two D1 paths:
 
-If persistent correction reports are needed later, the repository includes:
-
-- `cloudflare/d1/schema.sql`
-- `cloudflare/worker-example.ts`
+- `cloudflare/d1/schema.sql` for correction reports and verification history.
+- `cloudflare/d1/content-scale-schema.sql` for the future high-volume four-pillar content store and FTS5 search.
+- `cloudflare/worker-example.ts` for the existing lightweight reporting example.
 
 The Next.js API remains backend-neutral. Configure only:
 
