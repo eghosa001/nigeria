@@ -45,6 +45,7 @@ jobs:
             exit 0
           fi
           changed="$(git diff --name-only HEAD^1 HEAD)"
+          qa_workflow_only="$(printf '%s\n' "$changed" | grep -Ev '^\.github/workflows/(ui-qa|cloudflare-qa|live-qa)\.yml
           jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
@@ -126,7 +127,224 @@ jobs:
               echo "Expected redirect for $path, got HTTP $status."
               exit 1
             fi
-            if [ "$location" != "$expected_location" ]; then
+            location_path="${location%%\?*}"
+            if [ "$location_path" != "$expected_location" ]; then
+              echo "Expected $path to redirect to $expected_location, got $location."
+              exit 1
+            fi
+            echo "Retired Jobs route redirected: $path -> $location"
+          }
+
+          check_route "/jobs/eha-pharmacist-abuja-2026" "EHA Clinics Pharmacist"
+          check_redirect "/jobs/reliance-health-associate-data-scientist-2026" "/jobs/reliance-health-careers"
+          check_route "/jobs/federal-university-lafia-staff-recruitment-2026" "Federal University of Lafia"
+          check_route "/jobs/locations/lagos" "Jobs in Lagos"
+          check_route "/jobs/professions/technology" "Technology"
+          check_route "/jobs/new-this-week" "New jobs posted this week"
+          check_route "/jobs/closing-this-week" "Jobs closing this week"
+          check_route "/jobs" "Know what is open"
+          check_route "/api/jobs?page=1&pageSize=5" "\"pageSize\":5"
+
+          echo "Focused Jobs routes, retired-route redirects and paginated API all passed."
+
+  tour-live-smoke:
+    needs: scope
+    if: needs.scope.outputs.tour_live == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      LIVE_BASE_URL: https://mynigeriaguide.com
+    steps:
+      - name: Wait for this exact commit to reach Cloudflare production
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$GITHUB_SHA"
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null || true)"
+            if [ "$deployed" = "$expected" ]; then
+              echo "Verified production deployment: $expected"
+              exit 0
+            fi
+            echo "Waiting for Cloudflare production ($i/60)."
+            sleep 10
+          done
+          echo "Production did not reach commit $expected within 10 minutes."
+          exit 1
+
+      - name: Verify representative Tour routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          check_route() {
+            path="$1"
+            expected="$2"
+            tmp="$(mktemp)"
+            status="$(curl -sS --max-time 20 --retry 2 --retry-delay 2 \
+              --output "$tmp" --write-out '%{http_code}' \
+              "$LIVE_BASE_URL$path?verify=$GITHUB_SHA")"
+            if [ "$status" != "200" ]; then
+              echo "Expected HTTP 200 for $path, got $status."
+              head -c 4000 "$tmp"
+              exit 1
+            fi
+            if ! grep -Fqi "$expected" "$tmp"; then
+              echo "Expected '$expected' in live response for $path."
+              head -c 4000 "$tmp"
+              exit 1
+            fi
+            echo "Live route verified: $path"
+          }
+
+          check_route "/explore" "Explore Nigeria"
+          check_route "/explore/lagos-3-day-itinerary" "Lagos"
+          check_route "/explore/cross-river-national-park-guide" "Cross River National Park"
+
+  live-smoke:
+    needs: scope
+    if: needs.scope.outputs.run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      LIVE_BASE_URL: https://mynigeriaguide.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - name: Confirm Cloudflare Access intercepts private admin routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          for path in "/admin/visits" "/admin/api/analytics?range=7d" "/admin/api/content-access"; do
+            headers="$(mktemp)"
+            status="$(curl -sS --max-time 15 --max-redirs 0 \
+              --dump-header "$headers" --output /dev/null --write-out '%{http_code}' \
+              "$LIVE_BASE_URL$path")"
+            location="$(awk 'BEGIN{IGNORECASE=1} /^location:/{sub(/^[^:]+:[[:space:]]*/, ""); sub(/\r$/, ""); print; exit}' "$headers")"
+            if [ "$status" != "302" ] || ! printf '%s' "$location" | grep -Eq '^https://[^/]+\.cloudflareaccess\.com/cdn-cgi/access/login/'; then
+              echo "Cloudflare Access did not intercept $path as expected (status=$status, location=$location)."
+              exit 1
+            fi
+            echo "Cloudflare Access confirmed for $path."
+          done
+      - name: Wait for this exact commit to reach Cloudflare production
+        shell: bash
+        run: |
+          expected="$GITHUB_SHA"
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            deployed="$(printf '%s' "$body" | node -e '
+              let data="";
+              process.stdin.on("data", c => data += c);
+              process.stdin.on("end", () => {
+                try { process.stdout.write(JSON.parse(data).commit || ""); } catch {}
+              });
+            ')"
+            if [ "$deployed" = "$expected" ]; then
+              echo "Verified production deployment: $expected"
+              exit 0
+            fi
+            echo "Waiting for Cloudflare production ($i/60). Expected $(echo "$expected" | cut -c1-12), found $(echo "$deployed" | cut -c1-12)."
+            sleep 10
+          done
+          echo "Production did not reach commit $expected within 10 minutes."
+          exit 1
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --config playwright.live.config.ts tests/live-deployment.spec.ts
+ || true)"
+          if [ -z "$qa_workflow_only" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "tour_live=false" >> "$GITHUB_OUTPUT"
+            echo "QA-workflow-only maintenance; skip product live tests."
+            exit 0
+          fi
+          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
+          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
+          tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
+          non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
+          if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=true" >> "$GITHUB_OUTPUT"
+            echo "tour_live=false" >> "$GITHUB_OUTPUT"
+            echo "Jobs-only deployment; run the focused live Jobs route probe and skip the broad browser suite."
+          elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "tour_live=true" >> "$GITHUB_OUTPUT"
+            echo "Tour-only deployment; run the focused live Tour route probe and skip the broad browser suite."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "tour_live=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  jobs-live-smoke:
+    needs: scope
+    if: needs.scope.outputs.jobs_live == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      LIVE_BASE_URL: https://mynigeriaguide.com
+    steps:
+      - name: Wait for this exact commit to reach Cloudflare production
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$GITHUB_SHA"
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null || true)"
+            if [ "$deployed" = "$expected" ]; then
+              echo "Verified production deployment: $expected"
+              exit 0
+            fi
+            echo "Waiting for Cloudflare production ($i/60)."
+            sleep 10
+          done
+          echo "Production did not reach commit $expected within 10 minutes."
+          exit 1
+
+      - name: Verify representative Jobs routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          check_route() {
+            path="$1"
+            expected="$2"
+            tmp="$(mktemp)"
+            status="$(curl -sS --max-time 20 --retry 2 --retry-delay 2               --output "$tmp" --write-out '%{http_code}'               "$LIVE_BASE_URL$path?verify=$GITHUB_SHA")"
+            if [ "$status" != "200" ]; then
+              echo "Expected HTTP 200 for $path, got $status."
+              cat "$tmp"
+              exit 1
+            fi
+            if ! grep -Fqi "$expected" "$tmp"; then
+              echo "Expected '$expected' in live response for $path."
+              head -c 4000 "$tmp"
+              exit 1
+            fi
+            echo "Live route verified: $path"
+          }
+
+          # Hard-fail on representative new catalog routes. These are the routes the
+          # external crawler could not confirm because its cache lagged behind production.
+          check_route "/jobs/reliance-health-careers" "Reliance Health"
+          check_redirect() {
+            path="$1"
+            expected_location="$2"
+            headers="$(mktemp)"
+            status="$(curl -sS --max-time 20 --max-redirs 0 --dump-header "$headers" --output /dev/null --write-out '%{http_code}' "$LIVE_BASE_URL$path?verify=$GITHUB_SHA")"
+            location="$(awk 'BEGIN{IGNORECASE=1} /^location:/{sub(/^[^:]+:[[:space:]]*/, ""); sub(/\r$/, ""); print; exit}' "$headers")"
+            if [ "$status" != "307" ] && [ "$status" != "308" ]; then
+              echo "Expected redirect for $path, got HTTP $status."
+              exit 1
+            fi
+            location_path="${location%%\?*}"
+            if [ "$location_path" != "$expected_location" ]; then
               echo "Expected $path to redirect to $expected_location, got $location."
               exit 1
             fi
