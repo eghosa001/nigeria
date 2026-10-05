@@ -1081,6 +1081,41 @@ export const agencies: Agency[] = [
     "description": "Private international courier and logistics provider offering shipment creation, pickup, tracking and Shop & Ship services in Nigeria.",
     "website": "https://www.aramex.com/ng/en"
   },
+  {
+    "slug": "healthtracka",
+    "name": "Healthtracka",
+    "shortName": "Healthtracka",
+    "description": "Private Nigerian health-testing platform offering home sample collection, laboratory testing and digital results.",
+    "website": "https://healthtracka.com/"
+  },
+  {
+    "slug": "oet",
+    "name": "Occupational English Test",
+    "shortName": "OET",
+    "description": "Private English-language test for healthcare professionals with booking routes available to candidates in Nigeria.",
+    "website": "https://oet.com/"
+  },
+  {
+    "slug": "acca",
+    "name": "Association of Chartered Certified Accountants",
+    "shortName": "ACCA",
+    "description": "Professional accountancy body offering exam registration and student services to candidates in Nigeria.",
+    "website": "https://www.accaglobal.com/"
+  },
+  {
+    "slug": "spotify-nigeria",
+    "name": "Spotify Nigeria",
+    "shortName": "Spotify",
+    "description": "Private music-streaming service offering Free and Premium subscriptions in Nigeria.",
+    "website": "https://www.spotify.com/ng/"
+  },
+  {
+    "slug": "netflix-nigeria",
+    "name": "Netflix Nigeria",
+    "shortName": "Netflix",
+    "description": "Private streaming service offering membership, plan management and account support to customers in Nigeria.",
+    "website": "https://www.netflix.com/ng/"
+  },
 
 ];
 
