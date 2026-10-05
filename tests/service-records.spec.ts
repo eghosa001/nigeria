@@ -542,7 +542,11 @@ const expectedSlugs = [
   "nile-university-undergraduate-application-2026",
   "aun-undergraduate-application-2026",
   "redeemers-university-undergraduate-application-2026",
-  "lead-city-undergraduate-application-2026"
+  "lead-city-undergraduate-application-2026",
+  "caleb-undergraduate-application-2026",
+  "bowen-undergraduate-application-2026",
+  "igbinedion-undergraduate-application-2026",
+  "veritas-undergraduate-application-2026"
 ] as const;
 const representative = [
   {
@@ -659,8 +663,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(535);
-  expect(publicServices).toHaveLength(535);
+  expect(services).toHaveLength(539);
+  expect(publicServices).toHaveLength(539);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
