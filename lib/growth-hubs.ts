@@ -978,7 +978,16 @@ export const growthHubs: GrowthHub[] = [
       { query: "list hotel on Hotels.ng", serviceSlug: "hotelsng-add-hotel" },
       { query: "order with Heyfood Nigeria", serviceSlug: "heyfood-order-nigeria" },
       { query: "Heyfood rider signup", serviceSlug: "heyfood-rider-signup" },
-      { query: "Heyfood merchant signup", serviceSlug: "heyfood-merchant-onboarding" }
+      { query: "Heyfood merchant signup", serviceSlug: "heyfood-merchant-onboarding" },
+      { query: "order HealthPlus online", serviceSlug: "healthplus-order-online-nigeria" },
+      { query: "HealthPlus return policy", serviceSlug: "healthplus-shipping-returns" },
+      { query: "book Medbury diagnostic test", serviceSlug: "medbury-book-diagnostic-test" },
+      { query: "buy Custodian motor insurance", serviceSlug: "custodian-buy-motor-insurance-online" },
+      { query: "file Custodian motor claim", serviceSlug: "custodian-motor-claim" },
+      { query: "buy NEM insurance online", serviceSlug: "nem-buy-insurance-online" },
+      { query: "file NEM insurance claim", serviceSlug: "nem-file-claim" },
+      { query: "book LagRide Lagos", serviceSlug: "lagride-book-ride" },
+      { query: "LagRide captain signup", serviceSlug: "lagride-captain-signup" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1267,7 +1276,16 @@ export const growthHubs: GrowthHub[] = [
       "hotelsng-add-hotel",
       "heyfood-order-nigeria",
       "heyfood-rider-signup",
-      "heyfood-merchant-onboarding"
+      "heyfood-merchant-onboarding",
+      "healthplus-order-online-nigeria",
+      "healthplus-shipping-returns",
+      "medbury-book-diagnostic-test",
+      "custodian-buy-motor-insurance-online",
+      "custodian-motor-claim",
+      "nem-buy-insurance-online",
+      "nem-file-claim",
+      "lagride-book-ride",
+      "lagride-captain-signup"
     ]
   },
 
