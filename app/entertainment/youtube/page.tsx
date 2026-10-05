@@ -72,6 +72,7 @@ export default async function YouTubeMoviesPage({
           </div>
           <div className="movie-browse-tabs">
             <Link href="/entertainment/movies">All movies</Link>
+            <Link href="/entertainment/youtube/channels">Publishers</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
           </div>
