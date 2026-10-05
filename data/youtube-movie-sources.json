@@ -749,6 +749,152 @@
       ],
       "estimatedMovieCount": 60,
       "optional": true
+    },
+    {
+      "slug": "ifyeze-nolly-tv",
+      "searchName": "IfyEze Nolly tv",
+      "aliases": [
+        "IfyEze Nolly tv",
+        "IfyEze Nolly TV",
+        "IFY EZE NOLLY TV"
+      ],
+      "estimatedMovieCount": 55,
+      "knownUrl": "https://www.youtube.com/channel/UCFVseBemDz2KhVgh4S0-U1g",
+      "optional": true
+    },
+    {
+      "slug": "wale-rasaq-tv",
+      "searchName": "Wale Rasaq TV",
+      "aliases": [
+        "Wale Rasaq TV"
+      ],
+      "estimatedMovieCount": 70,
+      "knownUrl": "https://www.youtube.com/channel/UCguvNkpwGccivUExfiQyZFA",
+      "optional": true
+    },
+    {
+      "slug": "eso-dike-tv",
+      "searchName": "Eso Dike TV",
+      "aliases": [
+        "Eso Dike TV"
+      ],
+      "estimatedMovieCount": 45,
+      "optional": true
+    },
+    {
+      "slug": "papayaex-tv",
+      "searchName": "PAPAYAEXTV",
+      "aliases": [
+        "PAPAYAEXTV",
+        "PapayaExTV",
+        "Papaya Ex TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/@papayaextv",
+      "optional": true
+    },
+    {
+      "slug": "kolawole-ajeyemi-channel",
+      "searchName": "KolawoleAjeyemi Channel",
+      "aliases": [
+        "KolawoleAjeyemi Channel",
+        "Kolawole Ajeyemi Channel"
+      ],
+      "estimatedMovieCount": 20,
+      "knownUrl": "https://www.youtube.com/channel/UCT7_EAKyFd6WsL8MirybSCw",
+      "optional": true
+    },
+    {
+      "slug": "macida-tv",
+      "searchName": "MacidaTv",
+      "aliases": [
+        "MacidaTv",
+        "Macida TV"
+      ],
+      "estimatedMovieCount": 55,
+      "knownUrl": "https://www.youtube.com/channel/UCwEhtyYsO35SVr9Cf8PexOA",
+      "optional": true
+    },
+    {
+      "slug": "kamdaz-tv",
+      "searchName": "Kamdaz TV",
+      "aliases": [
+        "Kamdaz TV"
+      ],
+      "estimatedMovieCount": 35,
+      "knownUrl": "https://www.youtube.com/channel/UCIHFWe24QxauUBiELaIDbcA",
+      "optional": true
+    },
+    {
+      "slug": "mrlatin-tv",
+      "searchName": "MRLATINTV",
+      "aliases": [
+        "MRLATINTV",
+        "MR LATIN TV",
+        "Mr Latin TV"
+      ],
+      "estimatedMovieCount": 45,
+      "optional": true
+    },
+    {
+      "slug": "sunyrichytek-movies",
+      "searchName": "SUNYRICHYTEK MOVIES",
+      "aliases": [
+        "SUNYRICHYTEK MOVIES",
+        "Sunyrichytek Movies"
+      ],
+      "estimatedMovieCount": 70,
+      "knownUrl": "https://www.youtube.com/channel/UCbdGgurpSOnKCa2wxuvDVeA",
+      "optional": true
+    },
+    {
+      "slug": "whizzy-films",
+      "searchName": "WHIZZY FILMS",
+      "aliases": [
+        "WHIZZY FILMS",
+        "Whizzy Films"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "sotayo-gaga-tv",
+      "searchName": "Sotayo Gaga Tv",
+      "aliases": [
+        "Sotayo Gaga Tv",
+        "Sotayo Gaga TV"
+      ],
+      "estimatedMovieCount": 25,
+      "optional": true
+    },
+    {
+      "slug": "iseda-tv",
+      "searchName": "ISEDATV",
+      "aliases": [
+        "ISEDATV",
+        "ISEDA TV"
+      ],
+      "estimatedMovieCount": 25,
+      "optional": true
+    },
+    {
+      "slug": "debsam-tv",
+      "searchName": "DEBSAM TV",
+      "aliases": [
+        "DEBSAM TV"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
+    },
+    {
+      "slug": "capital-dreams-pictures",
+      "searchName": "CAPital Dreams Pictures",
+      "aliases": [
+        "CAPital Dreams Pictures",
+        "Capital Dreams Pictures"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
     }
   ]
 }
