@@ -10,6 +10,7 @@ on:
       - "data/search-query-overrides.ts"
       - "data/service-locations.ts"
       - "lib/growth-hubs.ts"
+      # Jobs sitemap URLs are derived from these content files.
       - "lib/jobs.ts"
       - "lib/job-topics.ts"
       - "lib/career-guides.ts"
