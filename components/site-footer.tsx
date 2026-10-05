@@ -7,17 +7,16 @@ export function SiteFooter() {
       <div className="container minimal-footer-top">
         <div className="footer-intro">
           <div className="brand footer-brand"><BrandLogo footer /></div>
-          <p>Movies, services, jobs and places across Nigeria — with direct links to the responsible source when you are ready to act.</p>
+          <p>Movies, services, places and careers across Nigeria — organised into four clear pillars with direct links to responsible sources when you are ready to act.</p>
         </div>
 
         <div className="minimal-footer-links footer-grid">
           <div>
-            <strong>Explore</strong>
-            <Link href="/entertainment/movies">Movies</Link>
-            <Link href="/entertainment/youtube">Free on YouTube</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/jobs">Jobs & Careers</Link>
+            <strong>Four pillars</strong>
+            <Link href="/entertainment">Movies & Entertainment</Link>
+            <Link href="/services">Services Guide</Link>
             <Link href="/explore">Tour Nigeria</Link>
+            <Link href="/jobs">Jobs & Careers</Link>
           </div>
           <div>
             <strong>Useful</strong>
