@@ -888,7 +888,13 @@ export const growthHubs: GrowthHub[] = [
       { query: "UPS tracking Nigeria", serviceSlug: "ups-track-package-nigeria" },
       { query: "book Max Air flight", serviceSlug: "max-air-book-flight" },
       { query: "Max Air online check in", serviceSlug: "max-air-online-check-in" },
-      { query: "Max Air baggage allowance", serviceSlug: "max-air-baggage-allowance" }
+      { query: "Max Air baggage allowance", serviceSlug: "max-air-baggage-allowance" },
+      { query: "open Carbon account Nigeria", serviceSlug: "carbon-personal-account-opening" },
+      { query: "apply for Carbon loan", serviceSlug: "carbon-loan-application" },
+      { query: "repay Carbon loan", serviceSlug: "carbon-loan-repayment" },
+      { query: "open FairMoney account", serviceSlug: "fairmoney-personal-account-opening" },
+      { query: "open FairMoney Business account", serviceSlug: "fairmoney-business-account-opening" },
+      { query: "ABC Transport booking", serviceSlug: "abc-transport-book-bus-online" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1087,7 +1093,13 @@ export const growthHubs: GrowthHub[] = [
       "ups-track-package-nigeria",
       "max-air-book-flight",
       "max-air-online-check-in",
-      "max-air-baggage-allowance"
+      "max-air-baggage-allowance",
+      "carbon-personal-account-opening",
+      "carbon-loan-application",
+      "carbon-loan-repayment",
+      "fairmoney-personal-account-opening",
+      "fairmoney-business-account-opening",
+      "abc-transport-book-bus-online"
     ]
   },
 
