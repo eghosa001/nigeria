@@ -10,7 +10,7 @@ function unique(values: string[], label: string) {
 }
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
-assert(jobOpportunities.length >= 50, "Jobs scaling wave must keep at least 50 verified opportunity records.");
+assert(jobOpportunities.length >= 80, "Jobs scaling wave must keep at least 80 verified opportunity records.");
 assert(jobOpportunities.length < 1000, "JobsDirectory currently receives the full catalog; move to server pagination before 1,000 records.");
 unique(jobOpportunities.map((item) => item.slug), "Job slugs");
 unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");
@@ -27,6 +27,7 @@ for (const item of jobOpportunities) {
 for (const topic of jobTopics) {
   assert(getJobTopicOpportunities(topic.slug).length >= 3, topic.slug + " must group at least three verified opportunities.");
   assert(topic.relatedSlugs.every((slug) => slug !== topic.slug), topic.slug + " cannot link to itself.");
+  assert(topic.relatedSlugs.every((slug) => jobTopics.some((candidate) => candidate.slug === slug)), topic.slug + " has an unknown related topic.");
 }
 for (const guide of careerGuides) {
   assert(isoDate.test(guide.reviewedAt), guide.slug + " needs an ISO reviewedAt date.");
