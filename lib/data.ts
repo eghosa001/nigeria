@@ -1346,6 +1346,13 @@ export const agencies: Agency[] = [
     "shortName": "Veritas University",
     "description": "Private university in Abuja offering undergraduate, Direct Entry, transfer, postgraduate and JUPEB admission services.",
     "website": "https://www.veritas.edu.ng/"
+  },
+  {
+    "slug": "bells-university",
+    "name": "Bells University of Technology",
+    "shortName": "Bells University",
+    "description": "Private university of technology in Ota offering undergraduate, JUPEB and postgraduate admission and student-record services.",
+    "website": "https://www.bellsuniversity.edu.ng/"
   }
 
 ];
