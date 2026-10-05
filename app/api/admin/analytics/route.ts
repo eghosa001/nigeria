@@ -21,7 +21,7 @@ export async function GET(request: Request) {
   const readConfigured = analyticsReadConfigured();
   const trackingConfigured = analyticsTrackingConfigured();
 
-  if (!accessConfigured || !readConfigured || !trackingConfigured) {
+  if (!accessConfigured) {
     return Response.json({
       configured: false,
       accessConfigured,
