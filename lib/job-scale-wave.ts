@@ -1,5 +1,7 @@
 import type { CareerOpportunity, JobRecordKind, JobSector } from "@/lib/jobs";
 
+// This module is the verified 191-record wave that brings the Jobs catalog to the 300-record milestone.
+
 const VERIFIED_AT = "2026-10-05";
 
 type CareerSeed = [organization: string, slug: string, sector: JobSector, category: string, url: string, location: string];
