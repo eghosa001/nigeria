@@ -1218,5 +1218,197 @@
       "Uber web Nigeria",
       "order Uber online Lagos"
     ]
+  },
+  {
+    "slug": "wakanow-book-flight-nigeria",
+    "title": "How to book a flight on Wakanow from Nigeria",
+    "shortTitle": "Book flight on Wakanow",
+    "summary": "Wakanow's Nigeria flight-booking route for comparing domestic and international airlines, choosing one-way/round-trip or multi-city travel, entering passenger details and paying in naira.",
+    "category": "Air travel",
+    "agencySlug": "wakanow",
+    "feeLabel": "Fare varies by route, airline and date",
+    "feeNote": "Wakanow displays the live fare for the selected itinerary and states that quoted portal fares include taxes. Airline fare rules, baggage and change conditions still depend on the selected ticket.",
+    "timeline": "A flight booking is confirmed after the selected itinerary and payment are completed; Wakanow's support material notes that some unpaid reservations can expire within the fare's hold period.",
+    "status": "verified",
+    "officialPortal": "https://www.wakanow.com/destinations/nigeria/flights",
+    "requirements": [
+      "The departure city, destination, travel date and one-way, round-trip or multi-city trip type",
+      "The number of travellers and preferred cabin class",
+      "Accurate passenger names and contact information matching the travel documents that will be used",
+      "A supported payment method for the live fare shown by Wakanow"
+    ],
+    "steps": [
+      "Open Wakanow's Nigeria flight page and choose one-way, round-trip or multi-city travel.",
+      "Enter the origin, destination, departure and return dates where applicable, passenger count and preferred cabin class.",
+      "Search the available flights, compare the displayed airlines, schedules and fares and select the itinerary.",
+      "Enter the passenger and contact details accurately, review the fare and ticket conditions and complete payment through Wakanow's checkout.",
+      "Save the confirmation, invoice or e-ticket details sent after the booking and use Wakanow support or Manage Booking for later assistance."
+    ],
+    "notes": [
+      "Wakanow's Nigeria flight page supports payment in naira and compares local and international airlines.",
+      "A fare can change before ticketing when an unpaid booking is only being held, so completing payment promptly matters.",
+      "Visa, passport, transit and entry requirements remain the traveller's responsibility even when the ticket is booked through Wakanow."
+    ],
+    "sources": [
+      {
+        "label": "Wakanow — Book flights from Nigeria",
+        "agency": "Wakanow",
+        "url": "https://www.wakanow.com/destinations/nigeria/flights",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Wakanow — Search available flights",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000288016-how-do-i-search-for-available-flights-on-the-portal-",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Wakanow Flight Reservation FAQ",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000262028-flight-reservation",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "wakanow-book-hotel-nigeria",
+      "air-peace-book-flight",
+      "united-nigeria-book-flight",
+      "valuejet-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Wakanow flight booking Nigeria",
+      "book flight Wakanow",
+      "Wakanow Nigeria flights",
+      "Wakanow pay in naira",
+      "Wakanow flight reservation"
+    ]
+  },
+  {
+    "slug": "wakanow-book-hotel-nigeria",
+    "title": "How to book a hotel on Wakanow",
+    "shortTitle": "Book hotel on Wakanow",
+    "summary": "Wakanow's hotel-booking route for entering a destination, stay dates, room and guest counts, comparing available properties, entering guest details and paying by card or bank transfer.",
+    "category": "International travel",
+    "agencySlug": "wakanow",
+    "feeLabel": "Hotel price varies by property, room and dates",
+    "feeNote": "Wakanow shows the current hotel/room price and whether the room is refundable, non-refundable or subject to a cancellation grace period before booking.",
+    "timeline": "A paid reservation is confirmed after successful payment. Wakanow says some unpaid reservations can remain active for up to 24 hours when the hotel does not require instant purchase.",
+    "status": "verified",
+    "officialPortal": "https://www.wakanow.com/",
+    "requirements": [
+      "The destination city or hotel name, check-in and check-out dates",
+      "The number of rooms and guests",
+      "Accurate guest names and contact information",
+      "A debit/credit card or bank-transfer option accepted for the selected reservation"
+    ],
+    "steps": [
+      "Open Wakanow and select the hotel or Stays booking section.",
+      "Enter the destination or hotel name, check-in/check-out dates, number of rooms and number of guests.",
+      "Search the available properties and compare the location, amenities, room type, price and cancellation conditions.",
+      "Choose the room, enter the required guest details and complete payment using an available card or bank-transfer option.",
+      "Save the booking confirmation voucher sent by email because Wakanow says it serves as proof of the reservation at check-in."
+    ],
+    "notes": [
+      "Wakanow says an unpaid hotel reservation may remain valid for up to 24 hours when instant purchase is not required.",
+      "Room refundability and cancellation conditions vary by hotel and room type.",
+      "Hotel prices and availability can change when an unpaid reservation expires."
+    ],
+    "sources": [
+      {
+        "label": "Wakanow — Complete a hotel reservation",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000167020-how-do-i-complete-a-hotel-reservation-on-the-portal-",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Wakanow — Hotel reservation validity",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000287915-how-long-will-my-hotel-reservation-remain-active-",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Wakanow Hotels in Nigeria",
+        "agency": "Wakanow",
+        "url": "https://guide.wakanow.com/destinations/nigeria/hotels",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "wakanow-cancel-hotel-reservation",
+      "wakanow-book-flight-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Wakanow hotel booking Nigeria",
+      "book hotel Wakanow",
+      "Wakanow hotels Nigeria",
+      "Wakanow hotel reservation",
+      "Wakanow stays"
+    ]
+  },
+  {
+    "slug": "wakanow-cancel-hotel-reservation",
+    "title": "How to cancel a Wakanow hotel reservation",
+    "shortTitle": "Cancel Wakanow hotel",
+    "summary": "Wakanow's hotel-cancellation route depends on the hotel's room policy: some bookings allow free cancellation, some charge a fee and others are non-refundable.",
+    "category": "International travel",
+    "agencySlug": "wakanow",
+    "feeLabel": "Cancellation charge depends on the hotel and room policy",
+    "feeNote": "Wakanow states that cancellation can be free, charged or completely non-refundable depending on the booked hotel/room and cancellation timing. Check the booking's policy before requesting cancellation.",
+    "timeline": "Wakanow's support material says confirmed hotel cancellations should be requested through its support channels at least 48 hours before check-in, subject to the property's cancellation policy.",
+    "status": "verified",
+    "officialPortal": "https://support.wakanow.com/en/support/solutions/articles/63000287949-how-do-i-cancel-my-hotel-reservation-",
+    "requirements": [
+      "The Wakanow hotel booking or confirmation details",
+      "The cancellation policy attached to the booked hotel and room type",
+      "A cancellation request submitted through Wakanow's official support channel",
+      "Bank details when a refundable booking qualifies for a refund and Wakanow requests them"
+    ],
+    "steps": [
+      "Open the Wakanow booking confirmation and read the cancellation terms for the selected room before requesting a change.",
+      "Contact Wakanow through the official in-app/help-centre, email or support route and provide the hotel reservation details.",
+      "Submit the cancellation request at least 48 hours before check-in when the booking policy allows cancellation.",
+      "Review any cancellation charge or non-refundable condition that Wakanow confirms for the booked room.",
+      "For an eligible refund, provide the requested bank details and keep the cancellation/refund confirmation until the money is received."
+    ],
+    "notes": [
+      "A refundable room is not automatically free to cancel at every point; grace periods and later fees can apply.",
+      "Some room rates are non-cancellable and non-refundable from the time of booking.",
+      "Wakanow states that eligible hotel refunds are processed after applicable charges are deducted."
+    ],
+    "sources": [
+      {
+        "label": "Wakanow — Cancel a hotel reservation",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000287949-how-do-i-cancel-my-hotel-reservation-",
+        "lastChecked": "2026-10-05",
+        "published": "2025-12-09"
+      },
+      {
+        "label": "Wakanow Hotel Reservation FAQ",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000262023-hotel-reservation",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Wakanow Customer Support",
+        "agency": "Wakanow",
+        "url": "https://support.wakanow.com/en/support/solutions/articles/63000287933-how-can-i-contact-customer-support-",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "wakanow-book-hotel-nigeria",
+      "wakanow-book-flight-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "cancel Wakanow hotel",
+      "Wakanow hotel refund",
+      "Wakanow hotel cancellation policy",
+      "Wakanow hotel cancellation fee",
+      "Wakanow hotel refund Nigeria"
+    ]
   }
 ]
