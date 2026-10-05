@@ -2713,6 +2713,140 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-10-05",
       note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
     }]
+  },
+
+  {
+    slug: "devil-is-a-liar",
+    title: "Devil Is a Liar",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A successful realtor's relationship with a younger man unravels after tragedy and betrayal turn the life they built together into a dangerous emotional conflict.",
+    cast: ["Nse Ikpe-Etim", "James Gardiner", "Erica Nlewedim", "Nancy Isime", "Padita Agu", "Mercy Aigbe", "Caroline Hutchings Danjuma", "Yemi Blaq", "Tina Mba", "Akin Lewis"],
+    featuredCast: ["Nse Ikpe-Etim", "James Gardiner", "Erica Nlewedim"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/81927811",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "king-of-thieves",
+    title: "King of Thieves",
+    year: 2022,
+    format: "movie",
+    genres: ["Drama", "Period", "Nollywood"],
+    languages: ["Yoruba"],
+    synopsis: "A kingdom facing a feared bandit turns to a determined hunter and a new ruler as the struggle to protect the people grows into an epic contest for power.",
+    cast: ["Femi Adebayo", "Odunlade Adekola", "Ibrahim Chatta", "Toyin Abraham", "Ibrahim Yekini Itele", "Lateef Adedimeji", "Adebayo Salami", "Dele Odule", "Ebun Oloyede", "Peju Ogunmola"],
+    featuredCast: ["Femi Adebayo", "Odunlade Adekola", "Ibrahim Chatta"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/82748702",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "lisabi-a-legend-is-born",
+    title: "Lísàbí: A Legend Is Born",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Historical", "Period", "Nollywood"],
+    languages: ["Yoruba", "English"],
+    synopsis: "The story follows the early rise of Lísàbí Agbongbo-Akala as the future folk hero is drawn toward resistance and the struggle to defend the Egba people from oppressive rule.",
+    cast: ["Lateef Adedimeji", "Adebimpe Oyebade", "Ibrahim Yekini Itele", "Olarotimi Michael Fakunle", "Jide Awobona", "Gabriel Afolayan", "Kola Ajeyemi", "Boma Akpore", "Olumide Oworu", "Kevin Ikeduba"],
+    featuredCast: ["Lateef Adedimeji", "Adebimpe Oyebade", "Ibrahim Yekini Itele"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/81911520",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "shina",
+    title: "Shina",
+    year: 2023,
+    format: "movie",
+    genres: ["Crime", "Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A young Lagos taxi driver takes a mysterious delivery job to pay for his grandmother's medical treatment and is pulled into a dangerous criminal world.",
+    cast: ["Timini Egbuson", "Linda Ejiofor-Suleiman", "Akin Lewis", "Segun Arinze", "Aleiru Idowukeji", "Neo Akpofure", "Immaculata Oko-Kasum", "Shawn Faqua", "Tope Tedela", "Tolulope Adewunmi"],
+    featuredCast: ["Timini Egbuson", "Linda Ejiofor-Suleiman", "Akin Lewis"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/81709709",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "nimbe",
+    title: "Nimbe",
+    year: 2019,
+    format: "movie",
+    genres: ["Crime", "Drama", "Social issue", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A bullied teenager finds belonging with a street gang, but the acceptance he wanted draws him into drugs, organized crime and escalating danger.",
+    cast: ["Odunlade Adekola", "Chimezie Imo", "Sani Danja", "Rachael Okonkwo", "Broda Shaggi", "Toyin Abraham", "Kelechi Udegbe", "Doyin Abiola", "Molawa Davis"],
+    featuredCast: ["Odunlade Adekola", "Chimezie Imo", "Sani Danja"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/81270768",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "sisi-london",
+    title: "Sisi London",
+    year: 2019,
+    format: "movie",
+    genres: ["Drama", "Comedy", "Nollywood"],
+    languages: ["Nigerian Pidgin"],
+    synopsis: "An outspoken market vendor tries to honour a promise to control her temper, but that resolve is tested when her husband brings another wife into their home.",
+    cast: ["Chioma Chukwuka Akpotha", "Omoni Oboli", "Amaechi Muonagor", "Angelina Ibeh", "Chinyere Wilfred", "Mojisola Carew", "Ify Dike"],
+    featuredCast: ["Chioma Chukwuka Akpotha", "Omoni Oboli", "Amaechi Muonagor"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/81708625",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "the-rise-of-igbinogun",
+    title: "The Rise of Igbinogun",
+    year: 2022,
+    format: "movie",
+    genres: ["Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A warrior becomes a target of the king's guards and a symbol to ordinary people after taking from the powerful to help those with less.",
+    cast: ["Akin Lewis", "Shaffy Bello", "Enyinna Nwigwe", "Damilare Kuku", "Tina Mba", "Ego Nwosu", "Blossom Chukwujekwu"],
+    featuredCast: ["Akin Lewis", "Shaffy Bello", "Enyinna Nwigwe"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Open the Netflix title page",
+      href: "https://www.netflix.com/ng/title/81663119",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
+    }]
   }
 ];
 
