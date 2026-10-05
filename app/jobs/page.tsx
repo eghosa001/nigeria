@@ -235,7 +235,7 @@ export default function JobsPage() {
           </div>
 
           <div className="jobs-status-row">
-            {governmentOpportunities.map((item) => (
+            {governmentOpportunities.slice(0, 8).map((item) => (
               <Link key={item.slug} href={"/jobs/" + item.slug} className="jobs-status-card">
                 <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                 <strong>{item.organization}</strong>
@@ -243,6 +243,9 @@ export default function JobsPage() {
               </Link>
             ))}
           </div>
+          {governmentOpportunities.length > 8 ? (
+            <p className="job-muted"><Link href="/jobs/government">View all {governmentOpportunities.length} government recruitment guides →</Link></p>
+          ) : null}
         </div>
       </section>
 

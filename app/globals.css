@@ -6024,7 +6024,7 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   margin-top: 18px;
   border: 1px solid rgba(6,63,45,.12);
   border-radius: 14px;
-  background: rgba(255,255,255,.72);
+  background: var(--surface);
 }
 .compact-link-menu {
   width: min(720px, 100%);
@@ -6065,7 +6065,7 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   padding: 11px 12px;
   border: 1px solid rgba(6,63,45,.10);
   border-radius: 10px;
-  background: white;
+  background: var(--white);
   color: var(--green-dark);
   font-size: .78rem;
   font-weight: 780;
