@@ -1,4 +1,5 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
+import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import type { Agency, Service, VerificationStatus } from "@/lib/types";
 import { validateServiceCatalog } from "@/lib/service-records";
 
@@ -1052,10 +1053,38 @@ export const agencies: Agency[] = [
     "shortName": "Rano Air",
     "description": "Private Nigerian airline offering scheduled flight booking, booking management and passenger support.",
     "website": "https://www.ranoair.com/"
-  }
+  }  {
+    "slug": "indrive-nigeria",
+    "name": "inDrive Nigeria",
+    "shortName": "inDrive",
+    "description": "Private ride-hailing platform offering rider and driver-partner services in Nigerian cities.",
+    "website": "https://indrive.com/"
+  },
+  {
+    "slug": "lagoon-hospitals",
+    "name": "Iwosan Lagoon Hospitals",
+    "shortName": "Lagoon Hospitals",
+    "description": "Private hospital group offering outpatient, specialist and appointment-booking services in Lagos.",
+    "website": "https://www.lagoonhospitals.com/"
+  },
+  {
+    "slug": "reddington-hospital",
+    "name": "Reddington Multi-Specialist Hospital",
+    "shortName": "Reddington",
+    "description": "Private multispecialty hospital offering appointments and specialist care in Lagos.",
+    "website": "https://reddingtonhospital.com/"
+  },
+  {
+    "slug": "aramex-nigeria",
+    "name": "Aramex Nigeria",
+    "shortName": "Aramex",
+    "description": "Private international courier and logistics provider offering shipment creation, pickup, tracking and Shop & Ship services in Nigeria.",
+    "website": "https://www.aramex.com/ng/en"
+  },
+
 ];
 
-export const services: Service[] = validateServiceCatalog(serviceRecords);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
