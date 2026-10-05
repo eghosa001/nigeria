@@ -2273,5 +2273,731 @@
       "Medplus pharmacy delivery",
       "Medplus same day delivery"
     ]
+  },
+  {
+    "slug": "ican-professional-exemption",
+    "title": "How to apply for an ICAN professional examination exemption",
+    "shortTitle": "ICAN professional exemption",
+    "summary": "ICAN's professional-student exemption route uses the candidate's registration details and qualification to determine eligible exempted papers and the exact exemption amount before payment and submission.",
+    "category": "Education",
+    "agencySlug": "ican",
+    "feeLabel": "Varies by qualification and exempted papers",
+    "feeNote": "ICAN publishes qualification-specific professional exemption fees. The Institute warns that a wrong exemption payment will not be refunded, so confirm the current qualification row and portal amount before paying.",
+    "timeline": "ICAN does not publish one fixed processing time for every exemption application; approval depends on the qualification and verification of the student's supporting information.",
+    "status": "verified",
+    "officialPortal": "https://www.icanportal.org/professional/Exemptions",
+    "requirements": [
+      "An existing ICAN professional-student registration number",
+      "The academic or recognised professional qualification on which the exemption request is based",
+      "The school/institution, discipline and year the qualification was obtained",
+      "The referee or ICAN membership information requested by the exemption portal",
+      "Payment of the exact current exemption amount applicable to the candidate's qualification"
+    ],
+    "steps": [
+      "Open ICAN's current Professional Exemption Guide and identify the candidate's exact qualification and the papers that qualification can exempt.",
+      "Open the official professional exemption portal and enter the student's registration and other identification details requested by ICAN.",
+      "Enter the qualification, institution, discipline, year obtained and referee information required for the exemption application.",
+      "Confirm the exact exemption amount shown for that qualification and make only the matching official payment.",
+      "Submit the exemption application and monitor the student's professional portal or ICAN communication for the approved exemption status before registering for later examinations."
+    ],
+    "notes": [
+      "ICAN explicitly warns that a wrong exemption payment is not refundable.",
+      "Exemptions differ by qualification and accreditation status, so two accounting qualifications do not automatically receive the same papers.",
+      "An exemption application is separate from registering for the remaining professional examination papers."
+    ],
+    "sources": [
+      {
+        "label": "ICAN Professional Exemption Guide",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://www.icanig.org/ican/students/professional/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ICAN Professional Students",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/ican/students/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ican-professional-student-registration",
+      "ican-professional-exam-registration",
+      "ican-professional-induction"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ICAN exemption application",
+      "ICAN professional exemption fee",
+      "ICAN exemption portal",
+      "ICAN exemption subjects",
+      "apply ICAN exemption"
+    ]
+  },
+  {
+    "slug": "ican-professional-induction",
+    "title": "How to apply for ICAN professional induction and ACA membership",
+    "shortTitle": "ICAN professional induction",
+    "summary": "ICAN's ACA induction route is for candidates who have passed the professional examinations and completed the required practical experience, with portal registration, supervisor/referee attestations, credentials and induction payment.",
+    "category": "Education",
+    "agencySlug": "ican",
+    "feeLabel": "ICAN official pages currently show ₦130,000 and ₦150,000",
+    "feeNote": "ICAN's current Become an ACA page contains conflicting induction figures: one section states ₦130,000 while the membership-procedure section states ₦150,000. Confirm the amount generated in the induction portal before payment.",
+    "timeline": "ICAN does not publish one universal approval time for every induction application. The current procedure requires the completed application, supporting credentials and financial-status/referee checks before induction.",
+    "status": "conflict",
+    "officialPortal": "https://www.icanportal.org/professional/Inductions",
+    "requirements": [
+      "Successful completion of the requisite ICAN professional examinations",
+      "At least 36 months of qualifying work/practical experience before ACA induction under ICAN's current membership guidance",
+      "No outstanding student or graduate subscription preventing completion of the induction form",
+      "Employment/experience evidence and relevant credentials such as NYSC and academic certificates",
+      "A financial ICAN supervisor/referee able to complete the required attestation or certification"
+    ],
+    "steps": [
+      "Confirm that the candidate has passed the required ICAN examinations, completed the practical-experience period and cleared outstanding subscriptions.",
+      "Send the current ICAN supervisor-attestation link to the supervisor and open the official Professional Induction portal with the student's portal credentials.",
+      "Enter the registration number and referee details, complete every required induction field and save the application.",
+      "Review the live induction amount generated by the portal, pay that official amount and upload the requested credentials and employment evidence.",
+      "Send the generated certification link to the referee and monitor the application until ICAN shows the Membership application form as Completed."
+    ],
+    "notes": [
+      "ICAN's March 2026 induction procedure says referees and supervisors are expected to be financial members.",
+      "The current ICAN website has conflicting induction-fee figures, so this guide does not silently choose one.",
+      "Passing the examinations alone does not complete ACA membership; the experience and induction stages still apply."
+    ],
+    "sources": [
+      {
+        "label": "ICAN — Become an ACA Member",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/ican/members/become-a-member.php",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ICAN 77th Professional Induction Procedure",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/documents/77th_Professional_Induction_Procedure_2026.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2026-03-26"
+      }
+    ],
+    "related": [
+      "ican-professional-exam-registration",
+      "ican-professional-student-registration",
+      "ican-professional-exemption"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ICAN induction application",
+      "ICAN ACA induction",
+      "ICAN induction fee 2026",
+      "ICAN professional induction portal",
+      "become ACA ICAN"
+    ]
+  },
+  {
+    "slug": "cibn-student-membership-registration",
+    "title": "How to register as a CIBN student member",
+    "shortTitle": "CIBN student membership",
+    "summary": "CIBN student membership is the entry route for graduates preparing for the Institute's professional banking examinations, with qualification evidence, membership registration and current student-member charges.",
+    "category": "Education",
+    "agencySlug": "cibn",
+    "feeLabel": "₦10,000 current student-member registration total",
+    "feeNote": "CIBN's current membership-registration page lists a ₦10,000 student-member total: ₦1,000 application, ₦2,500 registration, ₦5,000 annual subscription and ₦1,500 development levy.",
+    "timeline": "CIBN says membership registration is available throughout the year; processing depends on verification of the applicant's qualification and submitted membership information.",
+    "status": "verified",
+    "officialPortal": "https://www.cibng.org/membership-registration-fee/",
+    "requirements": [
+      "A first degree, HND or another approved professional qualification for the CIBN Student Member professional-exam route",
+      "Scanned evidence of the academic or professional qualification used for the application",
+      "The applicant's personal, contact and membership information required by the CIBN online process",
+      "Payment of the current student-member application, registration, subscription and development-levy total"
+    ],
+    "steps": [
+      "Open CIBN's official membership information and confirm that the applicant qualifies for Student Membership rather than the Ordinary Member route.",
+      "Start the individual membership application from the CIBN website and enter the applicant's personal and contact information.",
+      "Upload the scanned qualification evidence requested for verification by the Institute.",
+      "Review the current Student Member registration charges and complete the official payment through the CIBN route.",
+      "Keep the assigned membership number after approval because CIBN uses the student membership number as the examination number for professional exams."
+    ],
+    "notes": [
+      "CIBN's FAQ says people can register for membership at any time of year, while examination registration opens in specific periods.",
+      "CIBN requires candidates for its professional qualification examinations to first register as ordinary or student members.",
+      "The current CIBN main-site fee page is newer than older portal fee tables and is used here for the ₦10,000 total."
+    ],
+    "sources": [
+      {
+        "label": "CIBN Membership Registration Fee",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://www.cibng.org/membership-registration-fee/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIBN Membership Categories",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://www.cibng.org/membership-categories/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIBN FAQ",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://www.cibng.org/faq/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cibn-acib-exam-registration",
+      "cibn-subscription-renewal",
+      "ican-professional-student-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIBN student membership",
+      "CIBN student registration",
+      "CIBN membership fee",
+      "register CIBN student",
+      "CIBN professional student"
+    ]
+  },
+  {
+    "slug": "cibn-acib-exam-registration",
+    "title": "How to register for the CIBN ACIB professional examination",
+    "shortTitle": "CIBN ACIB exam",
+    "summary": "CIBN's ACIB professional examination route is for registered student members, with exam fees and annual subscriptions cleared before selecting the eligible Diploma, Intermediate Professional or Chartered Banker papers.",
+    "category": "Education",
+    "agencySlug": "cibn",
+    "feeLabel": "Exam fee varies by level and number of subjects",
+    "feeNote": "CIBN's current Capacity Building & Certification page publishes different fees for Diploma, Intermediate Professional and Chartered Banker papers. Confirm the amount shown for the candidate's level and selected subjects before payment.",
+    "timeline": "CIBN's FAQ says examination registration occurs several times during the year and candidates are notified when a window opens; registration must be completed before that window closes.",
+    "status": "verified",
+    "officialPortal": "https://portal.cibng.org/cb_students.asp",
+    "requirements": [
+      "An approved CIBN student membership before the intended examination",
+      "The CIBN student membership number, which also serves as the professional examination number",
+      "Current annual subscription and any required outstanding payment cleared before exam registration",
+      "Eligible examination papers at the candidate's Diploma, Intermediate Professional or Chartered Banker stage",
+      "Payment of the current examination amount through the examination portal rather than another CIBN payment category"
+    ],
+    "steps": [
+      "Sign in through CIBN's official website or examination portal with the registered student membership details.",
+      "Confirm the candidate's current ACIB level and the papers eligible for the active examination window.",
+      "Clear the annual subscription and any required membership payment before selecting examination papers.",
+      "Select the exam papers and centre, review the current level-specific examination fee and pay it through the examination-payment route.",
+      "Complete the registration and keep the examination docket/confirmation; CIBN says the authenticated docket is required for admission to the examination."
+    ],
+    "notes": [
+      "CIBN's professional examination has Diploma, Intermediate Professional and Chartered Banker stages.",
+      "CIBN warns candidates not to pay examination fees into exemption, subscription or another unrelated portal because those payments are not counted as exam fees.",
+      "Exam-centre changes must be requested within the registration rules for the active examination window."
+    ],
+    "sources": [
+      {
+        "label": "CIBN Capacity Building & Certification Overview",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://www.cibng.org/cb-c-overview/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIBN Student Examination Registration",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://portal.cibng.org/cb_students.asp",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIBN ACIB Examination",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://portal.cibng.org/cb_prof_exam.asp",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cibn-student-membership-registration",
+      "cibn-subscription-renewal"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIBN ACIB exam registration",
+      "CIBN professional exam",
+      "CIBN examination fees",
+      "ACIB exam Nigeria",
+      "CIBN exam portal"
+    ]
+  },
+  {
+    "slug": "cibn-subscription-renewal",
+    "title": "How to renew a CIBN annual membership subscription",
+    "shortTitle": "CIBN subscription renewal",
+    "summary": "CIBN members can renew annual subscription from the member portal by checking outstanding payments, selecting the current subscription and paying through Paystack, OPay or the CIBN e-wallet.",
+    "category": "Education",
+    "agencySlug": "cibn",
+    "feeLabel": "Student ₦5,000; other grades vary",
+    "feeNote": "CIBN's current renewal page lists ₦5,000 for Student Members, ₦3,000 Ordinary, ₦10,000 Microfinance Certified, ₦18,000 Associate, ₦35,000 Honorary Senior and ₦37,500 Fellows.",
+    "timeline": "The membership dashboard is updated after a successful payment; CIBN does not publish one fixed processing delay for every payment channel.",
+    "status": "verified",
+    "officialPortal": "https://www.cibng.org/subscription-fees-and-renewal/",
+    "requirements": [
+      "An existing CIBN membership ID and portal password",
+      "The current annual subscription and any other outstanding item shown in the member dashboard",
+      "A Paystack, OPay or CIBN e-wallet payment method offered on the renewal page"
+    ],
+    "steps": [
+      "Open the CIBN member portal and sign in with the Membership ID and password.",
+      "Find Outstanding Payment on the dashboard and select Click to Pay.",
+      "Select the current annual subscription and any other outstanding items that the member intends to clear.",
+      "Choose Paystack, OPay or E-Wallet and complete the payment instructions.",
+      "Return to the member profile after payment and confirm that the outstanding subscription has been cleared."
+    ],
+    "notes": [
+      "Subscription amount depends on the member's grade rather than one universal CIBN fee.",
+      "Keeping the annual subscription current can affect access to examinations and other Institute services.",
+      "CIBN's current main-site renewal table supersedes older subscription figures still visible on legacy portal pages."
+    ],
+    "sources": [
+      {
+        "label": "CIBN Subscription Fees and Renewal",
+        "agency": "Chartered Institute of Bankers of Nigeria",
+        "url": "https://www.cibng.org/subscription-fees-and-renewal/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cibn-student-membership-registration",
+      "cibn-acib-exam-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIBN subscription renewal",
+      "CIBN annual subscription",
+      "pay CIBN dues",
+      "CIBN student subscription",
+      "CIBN membership renewal"
+    ]
+  },
+  {
+    "slug": "citn-student-membership-registration",
+    "title": "How to register as a CITN professional student member",
+    "shortTitle": "CITN student membership",
+    "summary": "CITN's professional-student route is for eligible graduates/HND holders and qualifying undergraduates, using the online application, certified documents and current student-registration payment.",
+    "category": "Education",
+    "agencySlug": "citn",
+    "feeLabel": "₦12,000 professional student registration",
+    "feeNote": "CITN's current qualification page states that the ₦12,000 professional-student registration fee includes subscription and identity card; annual subscription is billed at ₦1,500 after registration.",
+    "timeline": "CITN sends account activation and then approval/decline communication after the online application and document/payment checks; no universal number of processing days is published.",
+    "status": "verified",
+    "officialPortal": "https://portal.citn.org/citn-student/",
+    "requirements": [
+      "A first degree, HND or equivalent plus NYSC certificate for the standard professional-student route",
+      "For the undergraduate route, the required O-level credits plus admission and Head-of-Department recommendation evidence",
+      "Certified documents uploaded with the online application",
+      "The applicant's signature and passport photograph",
+      "Payment of the current professional-student registration amount through the CITN online route"
+    ],
+    "steps": [
+      "Open CITN's Professional Student page and confirm whether the applicant uses the graduate/HND route or the undergraduate route.",
+      "Choose Become a Professional Student Member and complete the online application form.",
+      "Upload the certified qualification/NYSC or undergraduate evidence, signature and passport photograph requested by CITN.",
+      "Select Proceed to Payment, generate the reference and complete the current student-registration payment through the official online channel.",
+      "Check the email inbox and spam folder for CITN's account-activation message and later approval or decline notice."
+    ],
+    "notes": [
+      "CITN currently states that undergraduates who meet its conditions receive a 50% cost-reduction package.",
+      "The ₦12,000 current registration fee includes the initial subscription and identity card, while later annual student subscription is separate.",
+      "Professional-student registration is required before using the normal CITN professional examination route."
+    ],
+    "sources": [
+      {
+        "label": "CITN Qualifications and Student Registration",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/qualifications/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CITN Student Portal",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/citn-student/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CITN Associate/Student Registration Procedure",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/associate-registration/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "citn-professional-exam-registration",
+      "citn-subscription-renewal",
+      "citn-induction-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CITN student registration",
+      "CITN professional student",
+      "CITN registration fee",
+      "CITN student membership Nigeria",
+      "join CITN student"
+    ]
+  },
+  {
+    "slug": "citn-professional-exam-registration",
+    "title": "How to register for a CITN professional examination",
+    "shortTitle": "CITN professional exam",
+    "summary": "CITN professional students register for an active CBE/CBT examination diet by signing in, updating the profile and subscription, selecting the exam centre and eligible subjects and paying through the official portal.",
+    "category": "Education",
+    "agencySlug": "citn",
+    "feeLabel": "Exam fee varies by papers and active diet",
+    "feeNote": "CITN publishes diet-specific examination charges and registration notices. Use the amount shown for the candidate's eligible subjects in the current examination portal.",
+    "timeline": "CITN opens registration by examination diet. Its latest 2026 news includes registration for the October 2026 CBE & CBT professional diet; users should confirm the currently active diet before paying.",
+    "status": "verified",
+    "officialPortal": "https://portal.citn.org/citn-student/",
+    "requirements": [
+      "An approved CITN professional-student account",
+      "An up-to-date student profile and any annual subscription required for the examination diet",
+      "The eligible examination subjects displayed for the candidate",
+      "A selected examination centre from the options offered for the active diet",
+      "Online payment of the examination fee shown by CITN"
+    ],
+    "steps": [
+      "Sign in to the CITN student portal and confirm the student's profile and financial/subscription status.",
+      "Open the registration link for the currently active professional examination diet.",
+      "Select the examination centre and review the eligible subjects automatically displayed for the candidate.",
+      "Select the papers to be written, review the generated examination amount and complete the official online payment.",
+      "Save the examination registration confirmation and later check the portal for timetable, venue, docket or CBT/CBE instructions."
+    ],
+    "notes": [
+      "CITN examination registration is diet-specific, so old deadline dates should not be reused for a new diet.",
+      "The active examination format can include computer-based examination or computer-based testing depending on the paper/diet.",
+      "A student should confirm current subscription and profile details before starting the exam registration."
+    ],
+    "sources": [
+      {
+        "label": "CITN Student and Examination Links",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/citn-student/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CITN News — Examination Registration",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/news/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "citn-student-membership-registration",
+      "citn-subscription-renewal",
+      "citn-induction-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CITN exam registration",
+      "CITN professional examination",
+      "CITN CBT exam portal",
+      "CITN examination fee",
+      "CITN student exam"
+    ]
+  },
+  {
+    "slug": "citn-subscription-renewal",
+    "title": "How to renew a CITN membership or student subscription",
+    "shortTitle": "CITN subscription renewal",
+    "summary": "CITN members and students can renew outstanding subscription from MYCITN using the RENEW bill and supported Webpay, Quickteller, Flutterwave or GlobalPay channels, with Quickteller and bank transfer alternatives.",
+    "category": "Education",
+    "agencySlug": "citn",
+    "feeLabel": "Subscription varies by membership/student category",
+    "feeNote": "CITN publishes category-specific annual subscription rates and outstanding bills in the member portal. Check the MYCITN bill before payment rather than using an old amount.",
+    "timeline": "CITN states that services are activated automatically and the member profile is updated after a successful payment; manual evidence can be sent when a payment is not reflected.",
+    "status": "verified",
+    "officialPortal": "https://portal.citn.org/paynow/",
+    "requirements": [
+      "An existing CITN member or student profile and membership/student number",
+      "The outstanding subscription bill shown in MYCITN or the Quickteller CITN payment lookup",
+      "A supported payment method through Webpay, Quickteller, Flutterwave, GlobalPay or the listed bank-transfer route"
+    ],
+    "steps": [
+      "Open the CITN member login, sign in and choose MYCITN.",
+      "Select RENEW to display the outstanding subscription bill.",
+      "Choose Proceed to Payment and select Webpay, Quickteller, Flutterwave or GlobalPay.",
+      "Complete the payment and return to the CITN profile to confirm the financial status has updated.",
+      "If the payment does not reflect, send the payment evidence with the payer name, membership number and reference to the official CITN support address shown on the payment page."
+    ],
+    "notes": [
+      "CITN also supports direct Quickteller subscription payment using the membership number.",
+      "The provider's current page also lists a direct bank-transfer option with evidence requirements.",
+      "Online transaction charges can apply in addition to the subscription amount."
+    ],
+    "sources": [
+      {
+        "label": "CITN Subscription Payment Options",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/paynow/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CITN Subscription Fee",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/subscription-fee/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "citn-student-membership-registration",
+      "citn-professional-exam-registration",
+      "citn-induction-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CITN subscription renewal",
+      "pay CITN annual subscription",
+      "CITN member dues",
+      "CITN Quickteller payment",
+      "CITN renew membership"
+    ]
+  },
+  {
+    "slug": "citn-induction-application",
+    "title": "How to apply for CITN induction after the professional examinations",
+    "shortTitle": "CITN induction application",
+    "summary": "CITN graduate students apply for Associate induction from the membership profile by completing the induction form, generating a payment reference and paying the current graduate-student induction charge.",
+    "category": "Education",
+    "agencySlug": "citn",
+    "feeLabel": "Graduate-student induction fee currently ₦105,000 plus ₦20,000 form",
+    "feeNote": "CITN's current Scale of Professional Fee lists ₦20,000 for the graduate-student associate membership form and ₦105,000 induction fee. Confirm the amount generated in the live portal before paying.",
+    "timeline": "CITN does not publish one universal completion time for every induction application; the application is reviewed after the graduate submits the form and payment.",
+    "status": "verified",
+    "officialPortal": "https://portal.citn.org/associate-registration/",
+    "requirements": [
+      "A CITN graduate-student profile that is eligible for Associate induction",
+      "The member/student login credentials for the CITN membership portal",
+      "A completed induction form and any membership information requested in the profile",
+      "Payment of the current graduate-student induction form and induction amount generated by CITN"
+    ],
+    "steps": [
+      "Sign in to the CITN member portal with the graduate student's username, membership number or email and password.",
+      "Open My Membership and choose Apply for Induction.",
+      "Complete the induction form and review the applicant information before submission.",
+      "Choose Proceed to Payment to generate the reference and pay the current induction amount through the official payment channel.",
+      "Keep the reference/payment evidence and monitor the member profile or CITN communication for the induction approval and event instructions."
+    ],
+    "notes": [
+      "The direct-member induction route has different fees and should not be confused with the graduate-student induction process described here.",
+      "CITN's current fee table lists the graduate Associate form and induction fee separately.",
+      "Induction follows completion of the relevant CITN professional route and is not the same as exam registration."
+    ],
+    "sources": [
+      {
+        "label": "CITN Associate Registration and Induction Procedure",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/associate-registration/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CITN Scale of Professional Fee",
+        "agency": "Chartered Institute of Taxation of Nigeria",
+        "url": "https://portal.citn.org/scale-of-professional-fee/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "citn-professional-exam-registration",
+      "citn-student-membership-registration",
+      "citn-subscription-renewal"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CITN induction application",
+      "CITN associate induction",
+      "CITN induction fee",
+      "CITN graduate induction",
+      "apply CITN induction"
+    ]
+  },
+  {
+    "slug": "mtn-5g-router-purchase-activation",
+    "title": "How to buy and activate an MTN 5G broadband router",
+    "shortTitle": "MTN 5G router activation",
+    "summary": "MTN Nigeria's 5G Router route combines buying the current broadband device, registering the router SIM, activating the device bundle and optionally linking the router number to a primary MTN line for easier management.",
+    "category": "Internet",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "₦40,000 current 5G Router device price",
+    "feeNote": "MTN's current Broadband and Devices pages list the 5G Router at ₦40,000. Device pricing and activation promotions can change, so confirm the live MTN amount before purchase.",
+    "timeline": "The device can be used after the router SIM has been registered/activated and the applicable broadband bundle is active; MTN does not publish one universal completion time for SIM registration at every outlet.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/broadband/",
+    "requirements": [
+      "Availability of MTN 5G coverage in the intended usage area",
+      "An MTN 5G Router purchased through an official MTN route",
+      "Registration of the router SIM at an MTN SIM registration point before use",
+      "A broadband bundle or activation offer applied to the registered router SIM"
+    ],
+    "steps": [
+      "Open MTN Nigeria's Broadband page and check 5G coverage for the location before ordering the current 5G Router.",
+      "Buy the 5G Router through the official MTN order/shop route and keep the purchase details.",
+      "Take or use the included router SIM through an MTN SIM-registration point and complete the required subscriber registration.",
+      "Follow MTN's 5G Router activation guidance to activate the broadband offer or buy the preferred router bundle.",
+      "Optionally dial *312*500# from the primary MTN line and follow the device-linking menu so the router number can be recharged and managed more easily."
+    ],
+    "notes": [
+      "MTN's current 5G Router help says the router SIM must be registered at an MTN SIM registration point.",
+      "MTN publishes *312*500# as the device-linking and management route for broadband devices.",
+      "Activation-bonus volumes are promotional and can change, so this guide does not treat one bonus figure as permanent."
+    ],
+    "sources": [
+      {
+        "label": "MTN Broadband",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/broadband/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN 5G Broadband Router Help",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/helppersonal/5g-broadband-router/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Broadband Devices",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/devices/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-broadband-router-resubscribe",
+      "mtn-fibrex-order-installation",
+      "mtn-esim-activation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MTN 5G router Nigeria",
+      "buy MTN 5G router",
+      "activate MTN 5G router",
+      "MTN broadband router price",
+      "MTN 5G router SIM registration"
+    ]
+  },
+  {
+    "slug": "mtn-broadband-router-resubscribe",
+    "title": "How to renew an MTN broadband router data bundle",
+    "shortTitle": "Renew MTN broadband bundle",
+    "summary": "MTN broadband-router customers can resubscribe through myMTN NG, MTN eShop, myMTN web, Zigi, USSD or MoMo, including linked-device USSD options for buying data from a primary line.",
+    "category": "Internet",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "Bundle price depends on the selected router plan",
+    "feeNote": "MTN router bundles and unlimited-plan prices vary by plan and can change. Review the current broadband bundle shown in the chosen MTN channel before payment.",
+    "timeline": "The selected data bundle is activated after the payment succeeds on the chosen MTN channel; MTN does not publish one fixed delay across every payment method.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/broadband/how-to-guide/",
+    "requirements": [
+      "The MTN broadband Router/MiFi device number or a primary MTN line already linked to the device",
+      "A selected current broadband data or unlimited router bundle",
+      "Access to myMTN NG, MTN eShop, myMTN web, Zigi, USSD or MoMo",
+      "Enough airtime, wallet balance or payment method for the selected bundle"
+    ],
+    "steps": [
+      "Choose one of MTN's official broadband resubscription channels: myMTN NG, eShop, myMTN web, Zigi, *461#, *312*500# or MoMo *671*2#.",
+      "Enter or select the broadband device number and open the Broadband Router bundle options.",
+      "Choose the current data or unlimited bundle and review the plan price, allowance/speed and validity before payment.",
+      "Complete the airtime, card, wallet or other payment requested by the selected MTN channel.",
+      "Check the router balance or bundle status in the MTN self-service channel and keep the transaction reference if the bundle does not appear."
+    ],
+    "notes": [
+      "MTN publishes *461*1# for router bundles and *312*500# for linking/managing broadband devices.",
+      "A primary mobile number can buy a bundle for the router device through the Buy for Others/device-number flow.",
+      "Unlimited 5G-router plans are subject to MTN's current usage-threshold policy."
+    ],
+    "sources": [
+      {
+        "label": "MTN Broadband Router How-To Guide",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/broadband/how-to-guide/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Broadband Router Help",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/helppersonal/broadband-router-how-to-guide/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Router Plans",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/helppersonal/router-plans/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-5g-router-purchase-activation",
+      "mtn-fibrex-order-installation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "renew MTN router data",
+      "MTN broadband resubscription",
+      "MTN router bundle code",
+      "*312*500# MTN router",
+      "MTN *461# broadband"
+    ]
+  },
+  {
+    "slug": "mtn-fibrex-order-installation",
+    "title": "How to order and install MTN FibreX",
+    "shortTitle": "Order MTN FibreX",
+    "summary": "MTN FibreX is a fixed-fibre service available only in covered locations; customers check availability, select an unlimited speed plan and place an order that currently includes free installation and a free-to-use router.",
+    "category": "Internet",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "Plans currently start at ₦30,000 for 30 days",
+    "feeNote": "MTN currently lists unlimited FibreX plans from ₦30,000/50Mbps to ₦200,000/1Gbps for 30 days, with free installation and a free-to-use router. Confirm location availability and current plan price before ordering.",
+    "timeline": "Installation timing depends on FibreX availability, address survey and scheduling; MTN does not publish one universal installation time for every eligible Nigerian address.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/broadband/fibrex/",
+    "requirements": [
+      "A home or business address within a location currently covered by MTN FibreX",
+      "A selected FibreX speed plan that suits the intended connection",
+      "Customer contact and address information for the order and installation visit",
+      "Payment for the selected FibreX subscription after MTN confirms the service can be installed at the address"
+    ],
+    "steps": [
+      "Open MTN's official FibreX page or coverage checker and confirm whether the intended address is within a current FibreX location.",
+      "Compare the available unlimited FibreX speed plans and their current 30-day prices.",
+      "Choose Order/Get FibreX and submit the address and customer contact information requested by MTN.",
+      "Follow MTN's availability/survey and payment instructions after the address is confirmed for installation.",
+      "Allow the MTN team to install the fibre service and free-to-use router, then use the FibreX account-management or support channels for activation and later plan management."
+    ],
+    "notes": [
+      "MTN currently advertises free installation and a free-to-use router with FibreX.",
+      "FibreX is address-dependent; being in a listed city or state does not guarantee that every street is already covered.",
+      "MTN's current FibreX contact channels include 352, 0803-102-1700, WhatsApp 0916 000 8217 and MTNBroadband.NG@mtn.com."
+    ],
+    "sources": [
+      {
+        "label": "MTN FibreX",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/broadband/fibrex/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN FibreX Coverage",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/fibrex-coverage/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Contact — FibreX",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/contact/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-5g-router-purchase-activation",
+      "mtn-broadband-router-resubscribe"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MTN FibreX Nigeria",
+      "order MTN FibreX",
+      "MTN fibre internet installation",
+      "MTN FibreX price",
+      "MTN FibreX coverage"
+    ]
   }
 ]
