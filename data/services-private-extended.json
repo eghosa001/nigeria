@@ -10598,5 +10598,262 @@
       "CFA emergency deferral",
       "defer CFA exam Nigeria"
     ]
+  },
+  {
+    "slug": "vfs-canada-biometrics-appointment-nigeria",
+    "title": "How to book a Canada biometrics appointment at VFS Global Nigeria",
+    "shortTitle": "VFS Canada biometrics",
+    "summary": "VFS Global Nigeria's Canada VAC route for applicants who have submitted an IRCC application and received a Biometric Instruction Letter, covering free appointment booking and in-person biometric enrolment in Abuja or Lagos.",
+    "category": "Foreign visas",
+    "agencySlug": "vfs-global-canada-nigeria",
+    "feeLabel": "VAC biometrics appointment booking is free; Government of Canada biometrics fee may apply",
+    "feeNote": "VFS Global states that booking a Canada VAC appointment for biometric enrolment is free. The separate Government of Canada biometrics fee is part of the IRCC application process.",
+    "timeline": "Applicants book an available VAC slot after IRCC issues the Biometric Instruction Letter. Appointment availability varies between the Abuja and Lagos centres.",
+    "status": "verified",
+    "officialPortal": "https://visa.vfsglobal.com/nga/en/can/",
+    "requirements": [
+      "A submitted Canadian immigration/visa application for which IRCC requires biometric enrolment",
+      "The Biometric Instruction Letter issued by Immigration, Refugees and Citizenship Canada",
+      "A VFS appointment login/account used to schedule the Nigeria VAC visit",
+      "The valid passport or travel document and appointment documents required by the Canada VAC",
+      "The completed VFS consent form or other visit documents requested for biometric processing"
+    ],
+    "steps": [
+      "Wait for IRCC to issue the Biometric Instruction Letter after the Canadian application and required government fees have been submitted.",
+      "Open the official VFS Global Canada Nigeria site and choose Book an appointment for the Abuja or Lagos Visa Application Centre.",
+      "Create or sign in to the VFS appointment account and select an available biometric-enrolment date and time.",
+      "Save the appointment letter and prepare the Biometric Instruction Letter, passport and other documents VFS lists for the visit.",
+      "Attend the VAC at the confirmed time for fingerprint and digital-photo collection and keep the VFS/IRCC receipt or confirmation."
+    ],
+    "notes": [
+      "VFS Global explicitly states that booking a biometric appointment is free of charge.",
+      "The Canada VAC provides administrative and biometric services but does not decide whether a Canadian visa or permit is approved.",
+      "Nigeria currently has Canada Visa Application Centres in Abuja and Lagos."
+    ],
+    "sources": [
+      {
+        "label": "VFS Canada Nigeria",
+        "agency": "VFS Global",
+        "url": "https://visa.vfsglobal.com/nga/en/can/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "VFS Canada Nigeria — Attend a Centre",
+        "agency": "VFS Global",
+        "url": "https://visa.vfsglobal.com/nga/en/can/attend-centre",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "VFS Canada Nigeria — About VFS",
+        "agency": "VFS Global",
+        "url": "https://visa.vfsglobal.com/nga/en/can/about-vfs",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "canada-visitor-visa",
+      "vfs-canada-passport-submission-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "VFS Canada biometrics Nigeria",
+      "Canada biometric appointment Nigeria",
+      "VFS Lagos Canada appointment",
+      "VFS Abuja Canada biometrics",
+      "book Canada VAC Nigeria"
+    ]
+  },
+  {
+    "slug": "vfs-canada-passport-submission-nigeria",
+    "title": "How to submit your passport to VFS Canada in Nigeria",
+    "shortTitle": "VFS Canada passport submission",
+    "summary": "VFS Global Nigeria's Canada passport-submission route after IRCC issues a Passport Request Letter, including in-person or courier submission and the package-transmission rules tied to prior biometric enrolment.",
+    "category": "Foreign visas",
+    "agencySlug": "vfs-global-canada-nigeria",
+    "feeLabel": "Package Transmission charge may apply",
+    "feeNote": "VFS says one package-transmission service is included when biometrics were enrolled at that same VAC and the included transmission has not already been used. Otherwise the current Package Transmission service charge can apply.",
+    "timeline": "Applicants should submit a passport only after IRCC sends a Passport Request Letter. VFS processing/return time then depends on IRCC decision handling and the chosen in-person or courier route.",
+    "status": "verified",
+    "officialPortal": "https://visa.vfsglobal.com/nga/en/can/passport-submission",
+    "requirements": [
+      "A Passport Request Letter issued by Immigration, Refugees and Citizenship Canada for the specific applicant",
+      "The applicant's passport and any additional documents listed in the IRCC request",
+      "The VFS consent and package-transmission documents required by the Nigeria Canada VAC",
+      "Payment of the current package-transmission or courier charge when the applicant is not covered by the included biometric transmission service",
+      "A return/courier arrangement when the applicant chooses passport submission by courier"
+    ],
+    "steps": [
+      "Do not send the passport until IRCC has issued a Passport Request Letter for that applicant.",
+      "Open VFS Canada's Nigeria Passport Submission page and choose the in-person or courier submission route.",
+      "Prepare the passport, IRCC request letter, consent documents and any additional items requested for the submission.",
+      "Check whether the biometric package-transmission inclusion applies; pay the current VFS service charge only when the rules require it.",
+      "Submit the passport through the chosen route and keep the VFS tracking/receipt details until the sealed decision package and passport are returned."
+    ],
+    "notes": [
+      "VFS states that no appointment is required for in-person passport submission at the Nigeria Canada VAC during business hours.",
+      "Family members should not submit another person's passport until IRCC has issued a Passport Request Letter specifically for that individual.",
+      "Submitting biometrics at one VAC and the passport at another can trigger a package-transmission charge."
+    ],
+    "sources": [
+      {
+        "label": "VFS Canada Nigeria — Passport Submission",
+        "agency": "VFS Global",
+        "url": "https://visa.vfsglobal.com/nga/en/can/passport-submission",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "VFS Canada Nigeria — Service Charges",
+        "agency": "VFS Global",
+        "url": "https://visa.vfsglobal.com/nga/en/can/service-charges",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "VFS Canada Nigeria",
+        "agency": "VFS Global",
+        "url": "https://visa.vfsglobal.com/nga/en/can/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "canada-visitor-visa",
+      "vfs-canada-biometrics-appointment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "VFS Canada passport submission Nigeria",
+      "submit passport VFS Lagos Canada",
+      "Canada passport request VFS Nigeria",
+      "VFS package transmission Nigeria",
+      "Canada VAC passport Nigeria"
+    ]
+  },
+  {
+    "slug": "tlscontact-france-visa-appointment-nigeria",
+    "title": "How to book a France visa appointment with TLScontact Nigeria",
+    "shortTitle": "TLScontact France appointment",
+    "summary": "TLScontact Nigeria's France visa-submission route after the France-Visas form is completed, covering TLS account creation, online appointment booking/payment and in-person document/biometric submission in Abuja or Lagos.",
+    "category": "Foreign visas",
+    "agencySlug": "tlscontact-france-nigeria",
+    "feeLabel": "TLScontact service fee plus applicable France visa fee",
+    "feeNote": "TLScontact requires the service fee to be paid through its secure online platform within two hours of booking to confirm the appointment. Visa fees and optional service charges are separate and can change.",
+    "timeline": "Appointment availability depends on the Abuja or Lagos centre. TLScontact cancels an appointment if its required service-fee payment is not received within two hours of booking.",
+    "status": "verified",
+    "officialPortal": "https://visas-fr.tlscontact.com/en-us/country/ng",
+    "requirements": [
+      "A completed France-Visas online application form and receipt printed for submission",
+      "A TLScontact account whose personal details exactly match the passport and France-Visas application",
+      "The personalised supporting-document list generated by France-Visas",
+      "An available appointment at the TLScontact Abuja or Lagos Victoria Island centre",
+      "Payment of the TLScontact service fee and applicable visa fee through the official channels"
+    ],
+    "steps": [
+      "Complete the visa application first on France-Visas and print the application form and receipt.",
+      "Open the official TLScontact France Nigeria site, create a personal account and enter applicant details that exactly match the passport and France-Visas form.",
+      "Choose the Abuja or Lagos Visa Application Centre and book an available date and time.",
+      "Pay the TLScontact service fee through the secure online payment platform within the stated two-hour confirmation window and print the appointment letter.",
+      "Attend the centre with the confirmation and required documents for application submission and biometric collection unless the applicant is exempt."
+    ],
+    "notes": [
+      "TLScontact is an administrative visa-application centre and does not make the French visa decision.",
+      "TLScontact warns Nigerian applicants not to buy appointment slots from third-party intermediaries.",
+      "France visa application centres are currently listed in Abuja and Lagos Victoria Island."
+    ],
+    "sources": [
+      {
+        "label": "TLScontact France Nigeria Centres",
+        "agency": "TLScontact",
+        "url": "https://visas-fr.tlscontact.com/en-us/country/ng",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact France Lagos Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-fr.tlscontact.com/en-us/country/ng/vac/ngLGV2fr/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact France Lagos Fraud Alert",
+        "agency": "TLScontact",
+        "url": "https://visas-fr.tlscontact.com/en-us/country/ng/vac/ngLGV2fr/scam-alert",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "france-schengen-short-stay-visa",
+      "tlscontact-france-track-collect-passport-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "TLScontact France Nigeria appointment",
+      "France visa appointment Lagos",
+      "France visa appointment Abuja",
+      "TLS France Nigeria",
+      "book TLScontact France visa"
+    ]
+  },
+  {
+    "slug": "tlscontact-france-track-collect-passport-nigeria",
+    "title": "How to track and collect a France visa passport from TLScontact Nigeria",
+    "shortTitle": "TLS France tracking & collection",
+    "summary": "TLScontact Nigeria's post-submission route for tracking a France visa file in the applicant account and collecting the passport after TLScontact sends the return notification, including representative and express-return options.",
+    "category": "Foreign visas",
+    "agencySlug": "tlscontact-france-nigeria",
+    "feeLabel": "Tracking is included; optional express return has its own service charge",
+    "feeNote": "TLScontact lets applicants track the file through the personal account. Optional courier/Express return is a paid additional service whose current price should be checked before purchase.",
+    "timeline": "The applicant can track the file after submission. Passport collection becomes available only after the consular authority returns the passport to TLScontact and the applicant receives the email/SMS notification.",
+    "status": "verified",
+    "officialPortal": "https://visas-fr.tlscontact.com/en-us/country/ng/vac/ngLGV2fr/application-process",
+    "requirements": [
+      "A France visa application already submitted through TLScontact Nigeria",
+      "Access to the applicant's TLScontact personal account for status tracking",
+      "The TLScontact collection notification sent after the passport is returned by the consular authority",
+      "For personal collection, the original application checklist and applicant photo identification",
+      "For representative collection, the approved TLScontact authorisation letter plus the representative/applicant identification copies required by TLScontact"
+    ],
+    "steps": [
+      "Sign in to the TLScontact account after application submission to check the current file status.",
+      "Wait until TLScontact sends the email and SMS confirming that the passport has returned to the Visa Application Centre.",
+      "For personal collection, bring the original application checklist plus the original and copy of the applicant's valid photo ID.",
+      "For representative collection, prepare the original approved TLScontact authorisation letter and the representative/applicant identification documents listed by TLScontact.",
+      "If Express return was purchased, follow the courier notification instead of travelling to the centre and verify the passport when it is delivered."
+    ],
+    "notes": [
+      "TLScontact says applicants should not go to collect a passport before receiving the return notification.",
+      "Passports for France applications handled by TLScontact Nigeria are collected from the TLScontact centre, not from the consulate.",
+      "TLScontact tracking indicates administrative progress but does not predict or influence the consular visa decision."
+    ],
+    "sources": [
+      {
+        "label": "TLScontact France Lagos Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-fr.tlscontact.com/en-us/country/ng/vac/ngLGV2fr/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact France Lagos Contact",
+        "agency": "TLScontact",
+        "url": "https://visas-fr.tlscontact.com/en-us/country/ng/vac/ngLGV2fr/contact",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Nigeria Passport Collection Notice",
+        "agency": "TLScontact",
+        "url": "https://visas-fr.tlscontact.com/en-us/country/ng/vac/ngLGV2fr/news/1648",
+        "lastChecked": "2026-10-05",
+        "published": "2025-11-12"
+      }
+    ],
+    "related": [
+      "france-schengen-short-stay-visa",
+      "tlscontact-france-visa-appointment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "track France visa TLScontact Nigeria",
+      "TLScontact passport collection Lagos",
+      "France visa passport collection Abuja",
+      "TLScontact Nigeria visa tracking",
+      "collect passport TLS France"
+    ]
   }
 ]
