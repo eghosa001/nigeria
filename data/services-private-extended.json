@@ -5589,5 +5589,904 @@
       "Caleb University academic records",
       "Caleb MSc transcript"
     ]
+  },
+  {
+    "slug": "9psb-ussd-account-opening",
+    "title": "How to open a 9PSB account with *990*0#",
+    "shortTitle": "9PSB USSD account",
+    "summary": "9 Payment Service Bank's Bank9ja USSD onboarding route for opening a Nigerian payment-service-bank account without mobile data, using phone details plus BVN or NIN verification.",
+    "category": "Banking",
+    "agencySlug": "9psb",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "9PSB does not state a separate fee for creating the account through the published *990*0# registration flow.",
+    "timeline": "The account is created through the USSD registration flow after the required profile and identity verification steps are completed.",
+    "status": "verified",
+    "officialPortal": "https://9psb.com.ng/ussd/",
+    "requirements": [
+      "A mobile phone and Nigerian phone number from which the customer can dial *990*0#",
+      "The customer's date of birth and state of residence for the USSD profile",
+      "A BVN or NIN for the identity-verification option shown during onboarding",
+      "A private four-digit security PIN created for later USSD transactions"
+    ],
+    "steps": [
+      "Dial *990*0# on the mobile phone and select the option to create a USSD profile.",
+      "Enter the date of birth in DDMMYYYY format and the state of residence as requested by 9PSB.",
+      "Agree to the data-verification prompt and choose BVN or NIN as the verification method.",
+      "Complete the identity prompts and create the private security PIN for the account.",
+      "After registration, use *990*0# for transfers, airtime/data, bills and account services or connect the same account to the Bank9ja app."
+    ],
+    "notes": [
+      "9PSB's FAQ says the phone number is also the customer's NUBAN-standard account number.",
+      "A customer who first registers by USSD can later open the mobile app, enter the same phone number and use the password-recovery flow to populate the existing account.",
+      "Never disclose the USSD security PIN or OTP to an agent or caller."
+    ],
+    "sources": [
+      {
+        "label": "9PSB USSD Banking",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/ussd/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "9PSB FAQ",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/faq/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "9psb-account-upgrade",
+      "9psb-agent-onboarding",
+      "opay-account-opening-nigeria",
+      "palmpay-account-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "9PSB account opening",
+      "*990*0#",
+      "Bank9ja account",
+      "9PSB USSD registration",
+      "open 9PSB account"
+    ]
+  },
+  {
+    "slug": "9psb-account-upgrade",
+    "title": "How to upgrade a 9PSB account and transaction limits",
+    "shortTitle": "Upgrade 9PSB account",
+    "summary": "9PSB's account-upgrade route for increasing limits by adding BVN, date of birth, passport photograph and an accepted identity document through the Bank9ja app.",
+    "category": "Banking",
+    "agencySlug": "9psb",
+    "feeLabel": "No account-upgrade fee stated",
+    "feeNote": "9PSB does not state a separate charge for submitting the account-upgrade information through the app.",
+    "timeline": "9PSB's current FAQ describes the in-app upgrade as instant after the required verification information is successfully provided.",
+    "status": "verified",
+    "officialPortal": "https://9psb.com.ng/faq/",
+    "requirements": [
+      "An existing 9PSB/Bank9ja account",
+      "The customer's BVN and date of birth",
+      "A recent passport photograph",
+      "A valid means of identification such as international passport, driver's licence or national ID"
+    ],
+    "steps": [
+      "Sign in to the 9PSB Bank9ja app and open the Unlock more limits and savings prompt on the dashboard.",
+      "Tap Upgrade Now and enter the BVN and date of birth requested by the app.",
+      "Upload the passport photograph and accepted identity document.",
+      "Submit the verification information and allow 9PSB to complete the upgrade check.",
+      "Confirm the revised account limit in the app after the upgrade has been applied."
+    ],
+    "notes": [
+      "9PSB says the upgrade can raise the daily transaction or balance limit to ₦500,000 or more depending on the account level.",
+      "The separate 9PSB Account Update web form can also collect NIN and BVN for customer-record updates.",
+      "Use the current account screen for the actual limit because product and regulatory limits can change."
+    ],
+    "sources": [
+      {
+        "label": "9PSB FAQ",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "9PSB Account Update",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/account-update/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "9psb-ussd-account-opening",
+      "bvn-retrieval",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "upgrade 9PSB account",
+      "9PSB transaction limit",
+      "Bank9ja upgrade account",
+      "9PSB BVN NIN update",
+      "9PSB account tier"
+    ]
+  },
+  {
+    "slug": "9psb-agent-onboarding",
+    "title": "How to become a 9PSB agent",
+    "shortTitle": "9PSB agent onboarding",
+    "summary": "9PSB's agent-banking onboarding route through an approved Service Location Partner or partner support, with BVN, identity, address and business documents before POS mapping.",
+    "category": "Business",
+    "agencySlug": "9psb",
+    "feeLabel": "Agent charges provided by the Service Location Partner",
+    "feeNote": "9PSB says agent onboarding charges are communicated by the approved Service Location Partner, so there is no single public fee that should be hard-coded.",
+    "timeline": "9PSB says an approved agent can begin transacting once onboarding is completed and the Service Location Partner maps a POS terminal to the profile.",
+    "status": "verified",
+    "officialPortal": "https://9psb.com.ng/agent-banking-v2/",
+    "requirements": [
+      "A valid BVN",
+      "A passport photograph on a plain background",
+      "A utility bill not older than three months as proof of address",
+      "A valid ID such as National ID/NIMC card, PVC, driver's licence or international passport",
+      "CAC documents when the agent application is being made as a registered business"
+    ],
+    "steps": [
+      "Locate an approved 9PSB Service Location Partner or contact 9PSB partner support with the applicant's phone number and location.",
+      "Submit the BVN, photograph, recent utility bill and valid identity document, adding CAC documents when the applicant is a business.",
+      "Complete the agent onboarding and any commercial terms provided by the approved Service Location Partner.",
+      "Wait for 9PSB or the Service Location Partner to approve the profile and map a POS terminal to the agent account.",
+      "Use the issued username, default password and PIN to sign up on the 9PSB agent platform, then replace the default credentials before transacting."
+    ],
+    "notes": [
+      "9PSB says agents can perform cash-in/out, transfers, airtime/data purchases and bill payments.",
+      "The provider warns agents not to share passcodes or PINs; 9PSB staff and Service Location Partners should not request those secrets.",
+      "Multiple POS terminals can be requested through the Service Location Partner when the agent operates multiple locations."
+    ],
+    "sources": [
+      {
+        "label": "9PSB FAQ — Agent Banking",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "9PSB Agent Banking",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/agent-banking-v2/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "9psb-merchant-collect",
+      "9psb-ussd-account-opening",
+      "paystack-physical-terminal-nigeria",
+      "nomba-pos-terminal-request"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "become 9PSB agent",
+      "9PSB POS agent requirements",
+      "9PSB agent onboarding",
+      "Bank9ja POS agent",
+      "9PSB agent BVN CAC"
+    ]
+  },
+  {
+    "slug": "9psb-merchant-collect",
+    "title": "How to onboard on 9PSB Bank9ja Merchant Collect",
+    "shortTitle": "9PSB Merchant Collect",
+    "summary": "9PSB's merchant-collection onboarding route for registered businesses or verified individuals to create profiles, nominate settlement accounts, add business profiles and generate collection accounts.",
+    "category": "Business",
+    "agencySlug": "9psb",
+    "feeLabel": "Merchant fees are communicated by 9PSB",
+    "feeNote": "9PSB's Merchant Collect terms say applicable fees and charges are communicated by the bank and can be revised, so the live onboarding terms should be reviewed before activation.",
+    "timeline": "9PSB does not publish one universal merchant-approval time; use begins after onboarding and KYC are completed successfully.",
+    "status": "verified",
+    "officialPortal": "https://9psb.com.ng/bank9jamerchantcollect/",
+    "requirements": [
+      "A registered business or verified individual eligible to enter into the merchant-service agreement",
+      "Accurate KYC information required by 9PSB during merchant onboarding",
+      "A nominated settlement bank account, either an existing account or one opened during onboarding",
+      "Business profile information for each business the merchant intends to receive payments for"
+    ],
+    "steps": [
+      "Open 9PSB's official Bank9ja Merchant Collect page and begin the merchant signup as a business or individual.",
+      "Complete the profile and KYC information required by the onboarding flow.",
+      "Add the preferred settlement account that should receive merchant collections.",
+      "Create the business profile or profiles and generate the virtual collection account numbers supplied by the platform.",
+      "For website payments, open the dashboard Settings area and retrieve the integration credentials or plugin information needed for the supported e-commerce platform."
+    ],
+    "notes": [
+      "9PSB says the platform can create virtual accounts for business collections and supports common e-commerce platforms such as WooCommerce, Joomla, Magento and Shopify.",
+      "International payments are not currently available under the provider's published Merchant Collect FAQ.",
+      "Merchant onboarding is subject to successful KYC and compliance review."
+    ],
+    "sources": [
+      {
+        "label": "9PSB Merchant Collect",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/bank9jamerchantcollect/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "9PSB Merchant Collect Terms",
+        "agency": "9 Payment Service Bank",
+        "url": "https://9psb.com.ng/bmcterms/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "9psb-agent-onboarding",
+      "paystack-business-activation-nigeria",
+      "flutterwave-business-account-nigeria",
+      "nomba-business-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "9PSB Merchant Collect",
+      "Bank9ja Merchant Collect",
+      "9PSB payment gateway",
+      "9PSB merchant onboarding",
+      "9PSB virtual account business"
+    ]
+  },
+  {
+    "slug": "duchess-book-appointment",
+    "title": "How to book an appointment at Duchess International Hospital",
+    "shortTitle": "Duchess appointment booking",
+    "summary": "Duchess International Hospital's myDuchess patient route for booking hospital visits and consultations, using the patient portal or joining the myDuchess community before scheduling care.",
+    "category": "Healthcare",
+    "agencySlug": "duchess-hospital",
+    "feeLabel": "Consultation fee depends on the selected service",
+    "feeNote": "Duchess does not publish one universal consultation fee for every department and clinician on its public booking pages. Confirm the amount shown or communicated for the selected appointment.",
+    "timeline": "The myDuchess signup page says a customer-service agent will contact a new member in less than 24 hours; actual appointment availability depends on the selected service and clinician.",
+    "status": "verified",
+    "officialPortal": "https://duchesshospital.com/myduchess/",
+    "requirements": [
+      "The patient's name, email address and phone number for a new myDuchess signup",
+      "A myDuchess patient profile or Patient ID/password for an existing portal user",
+      "The intended consultation or hospital service and an available appointment slot",
+      "Any medical records or referral information requested for the selected consultation"
+    ],
+    "steps": [
+      "Open Duchess Hospital's official myDuchess page and choose the patient appointment route.",
+      "Existing patients can sign in with the Patient ID and password; new patients should complete the myDuchess signup information.",
+      "Choose the hospital visit or consultation service available in the patient portal and select an appointment option.",
+      "Review the appointment information and any fee or pre-visit instruction shown for the selected service.",
+      "Keep the appointment confirmation and use the hospital's emergency route instead of a routine booking for a life-threatening condition."
+    ],
+    "notes": [
+      "Duchess describes myDuchess as its patient community and portal for digitally managing consultations and hospital visits.",
+      "The hospital separately publishes emergency contact information; routine online booking is not an emergency-care channel.",
+      "This guide explains booking mechanics and does not recommend a clinician or medical treatment."
+    ],
+    "sources": [
+      {
+        "label": "Duchess International Hospital",
+        "agency": "Duchess International Hospital",
+        "url": "https://duchesshospital.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "myDuchess",
+        "agency": "Duchess International Hospital",
+        "url": "https://duchesshospital.com/myduchess/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "myDuchess Patient Login",
+        "agency": "Duchess International Hospital",
+        "url": "https://my.duchesshospital.com/login",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "duchess-telemedicine-appointment",
+      "evercare-book-appointment",
+      "cedarcrest-physical-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Duchess Hospital appointment",
+      "myDuchess booking",
+      "book Duchess Hospital Lagos",
+      "Duchess patient portal",
+      "Duchess consultation appointment"
+    ]
+  },
+  {
+    "slug": "duchess-telemedicine-appointment",
+    "title": "How to book a Duchess Hospital telemedicine consultation",
+    "shortTitle": "Duchess telemedicine",
+    "summary": "Duchess International Hospital's myDuchess route for accessing e-consultations with clinicians through the patient community and portal instead of a physical hospital visit.",
+    "category": "Healthcare",
+    "agencySlug": "duchess-hospital",
+    "feeLabel": "Teleconsultation fee depends on the selected service",
+    "feeNote": "Duchess does not publish one universal telemedicine consultation fee on the public myDuchess page. Confirm the amount shown for the selected e-consultation before payment.",
+    "timeline": "Appointment availability depends on the clinician and session selected in myDuchess; new myDuchess signups are contacted by customer service according to the provider's published signup process.",
+    "status": "verified",
+    "officialPortal": "https://duchesshospital.com/myduchess/",
+    "requirements": [
+      "A myDuchess patient account or completed new-member signup",
+      "A phone, tablet or computer capable of accessing the patient portal and participating in the remote consultation",
+      "The patient's contact details and relevant medical history or previous records requested for the consultation",
+      "A suitable available e-consultation slot offered through myDuchess"
+    ],
+    "steps": [
+      "Open the official myDuchess page and enter the patient portal or complete the signup if the patient is new.",
+      "Choose the e-consultation or telemedicine option provided in the patient experience.",
+      "Select an available consultation and provide the health/contact information requested for the remote visit.",
+      "Review any consultation fee and session instructions and complete the booking through the official portal.",
+      "Join the consultation using the provider's supplied instructions and use emergency services instead if the situation is urgent or life-threatening."
+    ],
+    "notes": [
+      "Duchess says myDuchess supports e-consultations as part of its digital consultation-management experience.",
+      "Telemedicine is not a substitute for emergency care when a patient needs immediate physical assessment.",
+      "This guide does not provide medical advice or decide whether a virtual consultation is clinically appropriate."
+    ],
+    "sources": [
+      {
+        "label": "myDuchess",
+        "agency": "Duchess International Hospital",
+        "url": "https://duchesshospital.com/myduchess/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Duchess International Hospital",
+        "agency": "Duchess International Hospital",
+        "url": "https://duchesshospital.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "duchess-book-appointment",
+      "cedarcrest-virtual-consultation",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Duchess telemedicine",
+      "Duchess virtual consultation",
+      "myDuchess e consultation",
+      "Duchess Hospital online doctor",
+      "Duchess teleconsultation"
+    ]
+  },
+  {
+    "slug": "cedarcrest-physical-appointment",
+    "title": "How to book a physical appointment at Cedarcrest Hospitals",
+    "shortTitle": "Cedarcrest appointment",
+    "summary": "Cedarcrest Hospitals' online booking route for new or registered patients to choose a location, appointment type, specialist and preferred date/time before the hospital confirms the visit.",
+    "category": "Healthcare",
+    "agencySlug": "cedarcrest-hospitals",
+    "feeLabel": "Fee depends on appointment type and specialist",
+    "feeNote": "Cedarcrest's current form shows ₦25,000 for a Family Physician consultation, while specialist and other appointment prices can differ. Use the amount displayed for the selected booking.",
+    "timeline": "Cedarcrest says the customer-service team will contact the patient using the submitted phone/email to confirm the requested appointment; the preferred date/time is subject to availability.",
+    "status": "verified",
+    "officialPortal": "https://cedarcresthospitals.com/book-appointment2-two/",
+    "requirements": [
+      "A selected Cedarcrest location such as Abuja, Victoria Island Lagos, Jebba or Kainji where the requested service is offered",
+      "The patient's name, email, phone number, date of birth and registration details when already registered",
+      "The intended appointment type or specialist",
+      "A preferred appointment date/time and relevant medical records for the consultation"
+    ],
+    "steps": [
+      "Open Cedarcrest Hospitals' official physical-appointment form and choose the hospital location.",
+      "Indicate whether the patient is new or already registered and enter the patient/contact information requested.",
+      "Choose a Family Physician or other specialist appointment and select the applicable specialty when required.",
+      "Select the preferred appointment date/time, review the booking and any displayed payment information, then submit the request.",
+      "Wait for Cedarcrest's phone or email confirmation and take relevant medical records to the appointment."
+    ],
+    "notes": [
+      "Cedarcrest's booking form distinguishes new patients, registered patients and result-review visits.",
+      "Appointment dates shown in the form are requests and the hospital says customer service will confirm availability.",
+      "The hospital tells patients with serious or life-threatening emergencies to use the emergency contact route instead of routine online booking."
+    ],
+    "sources": [
+      {
+        "label": "Cedarcrest Physical Appointment",
+        "agency": "Cedarcrest Hospitals",
+        "url": "https://cedarcresthospitals.com/book-appointment2-two/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cedarcrest Hospitals",
+        "agency": "Cedarcrest Hospitals",
+        "url": "https://cedarcresthospitals.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cedarcrest-virtual-consultation",
+      "duchess-book-appointment",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cedarcrest appointment",
+      "book Cedarcrest Hospital Abuja",
+      "Cedarcrest Lagos appointment",
+      "Cedarcrest specialist booking",
+      "Cedarcrest hospital booking"
+    ]
+  },
+  {
+    "slug": "cedarcrest-virtual-consultation",
+    "title": "How to book a Cedarcrest virtual consultation",
+    "shortTitle": "Cedarcrest virtual consultation",
+    "summary": "Cedarcrest Hospitals' video-consultation booking route for new or registered patients to choose an appointment date, provide patient details, select a physician/specialist and pay before confirmation.",
+    "category": "Healthcare",
+    "agencySlug": "cedarcrest-hospitals",
+    "feeLabel": "Fee depends on consultation type",
+    "feeNote": "Cedarcrest's current virtual-consultation form shows ₦25,000 for a Family Physician consultation; specialist pricing can differ and should be confirmed in the booking form.",
+    "timeline": "The virtual form lets the patient select an available date/time; Cedarcrest then uses the submitted contact details to confirm the consultation.",
+    "status": "verified",
+    "officialPortal": "https://cedarcresthospitals.com/book-a-virtual-consultation/",
+    "requirements": [
+      "The patient's name, email address and phone number",
+      "Additional registration information for a new patient or hospital number for an existing Cedarcrest patient",
+      "A selected appointment date/time and consultation type",
+      "A device and internet connection capable of joining the video consultation",
+      "Advance payment for the selected virtual consultation when the booking form requests it"
+    ],
+    "steps": [
+      "Open Cedarcrest's official virtual-consultation booking page and choose an available appointment date/time.",
+      "Enter the patient contact information and indicate whether the patient is new, registered or booking a result review.",
+      "Choose the Family Physician or specialist consultation and select the relevant specialty where applicable.",
+      "Review the consultation details, complete the required payment step and submit the booking.",
+      "Use the confirmation from Cedarcrest to join the video consultation and use the hospital's emergency contact instead for an urgent life-threatening problem."
+    ],
+    "notes": [
+      "Cedarcrest describes virtual consultations as non-emergency medical advice delivered by video.",
+      "The provider's terms state that virtual consultations are subject to appointment availability and payment in advance.",
+      "This guide explains the booking process and does not recommend a medical specialty or treatment."
+    ],
+    "sources": [
+      {
+        "label": "Cedarcrest Virtual Consultation",
+        "agency": "Cedarcrest Hospitals",
+        "url": "https://cedarcresthospitals.com/book-a-virtual-consultation/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cedarcrest Terms and Conditions",
+        "agency": "Cedarcrest Hospitals",
+        "url": "https://cedarcresthospitals.com/terms-and-conditions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cedarcrest-physical-appointment",
+      "duchess-telemedicine-appointment",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cedarcrest virtual consultation",
+      "Cedarcrest telemedicine",
+      "book Cedarcrest online doctor",
+      "Cedarcrest video consultation",
+      "Cedarcrest virtual appointment"
+    ]
+  },
+  {
+    "slug": "cornerstone-buy-motor-insurance-online",
+    "title": "How to buy Cornerstone motor insurance online",
+    "shortTitle": "Cornerstone motor insurance",
+    "summary": "Cornerstone Insurance's online motor quote and purchase route for third-party or comprehensive cover using vehicle details, policyholder information, online payment and post-purchase document upload.",
+    "category": "Insurance",
+    "agencySlug": "cornerstone-insurance",
+    "feeLabel": "Premium depends on vehicle and selected cover",
+    "feeNote": "Cornerstone calculates the premium from the selected motor cover and vehicle details. Use the live quote shown by the provider rather than a fixed generic premium.",
+    "timeline": "Cornerstone says the e-receipt is sent after successful payment; for comprehensive motor cover, the policy document can follow after vehicle inspection and underwriting review.",
+    "status": "verified",
+    "officialPortal": "https://cornerstone.com.ng/products/detail/MQ%3D%3D",
+    "requirements": [
+      "The vehicle class, make, model and registration number",
+      "The engine number and chassis number from the vehicle licence document",
+      "The policyholder name, email address and phone number",
+      "For comprehensive cover, the vehicle value and any additional cover options selected",
+      "The vehicle licence document and any photographs required after purchase for validation/inspection"
+    ],
+    "steps": [
+      "Open Cornerstone's official motor insurance page and choose third-party or the preferred comprehensive motor option.",
+      "Enter the vehicle and policyholder information requested by the online quote form.",
+      "Review the calculated premium and the cover details before continuing to payment.",
+      "Complete payment through Cornerstone's official checkout and keep the e-receipt sent to the supplied email address.",
+      "Upload the vehicle licence and any requested photographs and complete the provider's inspection/validation process where the selected cover requires it."
+    ],
+    "notes": [
+      "Cornerstone states that false vehicle/policy information can invalidate the online policy.",
+      "Third-party and comprehensive policies provide different cover and document requirements.",
+      "This guide explains the transaction process and does not recommend a specific insurance product."
+    ],
+    "sources": [
+      {
+        "label": "Cornerstone Motor Insurance",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://cornerstone.com.ng/products/detail/MQ%3D%3D",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cornerstone Third Party Quote",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://cornerstone.com.ng/quotes/Mg%3D%3D",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cornerstone Comprehensive Motor Quote",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://www.cornerstone.com.ng/quotes/NTk%3D",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cornerstone-motor-claim",
+      "cornerstone-renew-motor-policy",
+      "leadway-buy-motor-insurance-online",
+      "axa-mansard-third-party-motor-insurance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cornerstone motor insurance",
+      "buy Cornerstone car insurance online",
+      "Cornerstone third party insurance",
+      "Cornerstone comprehensive motor insurance",
+      "Cornerstone insurance quote"
+    ]
+  },
+  {
+    "slug": "cornerstone-motor-claim",
+    "title": "How to file a Cornerstone motor insurance claim",
+    "shortTitle": "Cornerstone motor claim",
+    "summary": "Cornerstone Insurance's online motor-claim route for policyholders to provide policy, driver, vehicle, accident, repairer and third-party information through the insurer's e-claim form.",
+    "category": "Insurance",
+    "agencySlug": "cornerstone-insurance",
+    "feeLabel": "No claim-lodgement fee stated",
+    "feeNote": "Cornerstone does not state a separate fee for lodging an insurance claim through its official online claim form.",
+    "timeline": "Claim handling time depends on the loss, inspection, documents and liability review; Cornerstone does not publish one universal settlement time for every motor claim.",
+    "status": "verified",
+    "officialPortal": "https://app.cornerstone.com.ng/ClaimApp/Customer/AddClaim",
+    "requirements": [
+      "The insured's full name, policy number, email address, mobile number and address",
+      "The driver's name, phone number, licence number and licence expiry information",
+      "The insured vehicle registration, make, year, mileage and use information",
+      "The accident date/time/location and a detailed description of the loss",
+      "Repairer and third-party details where those sections apply to the incident"
+    ],
+    "steps": [
+      "Open Cornerstone's official Customer Claim form and choose the motor insurance claim route.",
+      "Enter the policyholder, policy and driver information requested by the form.",
+      "Enter the vehicle details and identify whether the vehicle is already with a repairer.",
+      "Describe the accident/loss, including date, time, location, road/weather conditions and responsibility information.",
+      "Add the repairer and third-party details where applicable, attach the supporting evidence requested and submit the claim for assessment."
+    ],
+    "notes": [
+      "Submitting the form is not an admission by Cornerstone that the claim is payable.",
+      "The insurer's FAQ directs online motor and several other non-life claims to the e-claim portal.",
+      "Keep photos, repair estimates, police/third-party evidence and correspondence because the insurer can request them during assessment."
+    ],
+    "sources": [
+      {
+        "label": "Cornerstone Motor Claim Form",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://app.cornerstone.com.ng/ClaimApp/Customer/AddClaim",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cornerstone Claims",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://www.cornerstone.com.ng/claim/products",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cornerstone FAQ",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://cornerstone.com.ng/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cornerstone-buy-motor-insurance-online",
+      "cornerstone-renew-motor-policy",
+      "leadway-file-insurance-claim",
+      "aiico-motor-insurance-claim"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cornerstone insurance claim",
+      "Cornerstone motor claim form",
+      "file Cornerstone car claim",
+      "Cornerstone e claim Nigeria",
+      "Cornerstone accident claim"
+    ]
+  },
+  {
+    "slug": "cornerstone-renew-motor-policy",
+    "title": "How to renew a Cornerstone motor insurance policy online",
+    "shortTitle": "Renew Cornerstone motor policy",
+    "summary": "Cornerstone Insurance's three-step motor renewal route for customers who want to renew without changing policy information: enter the vehicle registration, review the renewal premium and pay.",
+    "category": "Insurance",
+    "agencySlug": "cornerstone-insurance",
+    "feeLabel": "Renewal premium shown after policy lookup",
+    "feeNote": "The renewal amount depends on the existing policy and current insurer pricing. Review the premium returned for the vehicle registration number before paying.",
+    "timeline": "The online renewal is completed after the vehicle is matched, the renewal premium is accepted and payment succeeds.",
+    "status": "verified",
+    "officialPortal": "https://cornerstone.com.ng/renew",
+    "requirements": [
+      "An existing Cornerstone motor policy eligible for renewal",
+      "The vehicle registration/plate number linked to the policy",
+      "No required changes to the policy information when using Cornerstone's simplified renewal route",
+      "A supported payment method for the renewal premium"
+    ],
+    "steps": [
+      "Open Cornerstone's official motor renewal page and enter the vehicle registration number.",
+      "Allow the portal to retrieve the existing policy and display the renewal premium.",
+      "Review the policy details and confirm that no information needs to be changed before renewal.",
+      "Pay the displayed renewal premium through the provider's official payment flow.",
+      "Save the renewal confirmation and updated insurance document after the transaction completes."
+    ],
+    "notes": [
+      "Cornerstone describes the current self-service renewal as a route for customers renewing without making policy changes.",
+      "If vehicle or policy information needs correction, contact Cornerstone rather than confirming inaccurate details.",
+      "The premium can change at renewal even when the policyholder makes no other changes."
+    ],
+    "sources": [
+      {
+        "label": "Cornerstone Motor Policy Renewal",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://cornerstone.com.ng/renew",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cornerstone Customer Help Desk",
+        "agency": "Cornerstone Insurance Plc",
+        "url": "https://app.cornerstone.com.ng/CustomerExperience/home/enquiry",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cornerstone-buy-motor-insurance-online",
+      "cornerstone-motor-claim",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "renew Cornerstone insurance",
+      "Cornerstone motor renewal",
+      "Cornerstone policy renewal online",
+      "renew Cornerstone car insurance",
+      "Cornerstone vehicle policy renewal"
+    ]
+  },
+  {
+    "slug": "mutual-benefits-buy-motor-insurance-online",
+    "title": "How to buy Mutual Benefits motor insurance online",
+    "shortTitle": "Mutual Benefits motor insurance",
+    "summary": "Mutual Benefits Assurance's online motor quote route for selecting motor cover, entering vehicle value and licence details, reviewing the premium and purchasing the policy through the insurer's client platform.",
+    "category": "Insurance",
+    "agencySlug": "mutual-benefits",
+    "feeLabel": "Premium depends on vehicle and selected motor cover",
+    "feeNote": "Mutual Benefits calculates the premium from the selected motor product, vehicle value and cover options. Use the quote displayed by the official client platform.",
+    "timeline": "The policy transaction proceeds after the quote information and payment are completed; Mutual Benefits does not publish one universal issue time for every motor product.",
+    "status": "verified",
+    "officialPortal": "https://mutualclient.mutualng.com/technical/quote-edit/product_code%3Dgeneral_motor_vehicle%26renewal%3D",
+    "requirements": [
+      "The value of the vehicle and selected type of motor insurance cover",
+      "The vehicle registration number, make and model",
+      "The name shown on the vehicle licence and other licence information requested by the insurer",
+      "The intended cover start date and duration",
+      "A supported payment method for the premium generated by the quote"
+    ],
+    "steps": [
+      "Open Mutual Benefits' official motor quote page and choose the required motor policy or variant.",
+      "Enter the insured vehicle value and review the premium calculation for the selected cover.",
+      "Complete the vehicle licence information, registration number, make/model and cover start date.",
+      "Review the quote and proceed through the insurer's official payment route.",
+      "Keep the payment confirmation and policy documents issued for the completed motor insurance transaction."
+    ],
+    "notes": [
+      "The provider's motor quote flow includes different motor variants and premium rates rather than one flat comprehensive price.",
+      "The cover start date on the form must fall within the provider's allowed window.",
+      "This guide explains the purchase process and does not recommend a policy as suitable for a particular customer."
+    ],
+    "sources": [
+      {
+        "label": "Mutual Benefits Motor Quote",
+        "agency": "Mutual Benefits Assurance Plc",
+        "url": "https://mutualclient.mutualng.com/technical/quote-edit/product_code%3Dgeneral_motor_vehicle%26renewal%3D",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Mutual Benefits Product Portal",
+        "agency": "Mutual Benefits Assurance Plc",
+        "url": "https://mutualclient.mutualng.com/plc/product-list/product_name%3DHOUSEHOLDER%2BINSURANCE",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mutual-benefits-policy-payment",
+      "cornerstone-buy-motor-insurance-online",
+      "leadway-buy-motor-insurance-online"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Mutual Benefits motor insurance",
+      "buy Mutual Benefits car insurance",
+      "Mutual Benefits motor quote",
+      "Mutual Benefits comprehensive insurance",
+      "Mutual Benefits insurance online"
+    ]
+  },
+  {
+    "slug": "mutual-benefits-policy-payment",
+    "title": "How to pay a Mutual Benefits insurance policy online or by USSD",
+    "shortTitle": "Mutual Benefits policy payment",
+    "summary": "Mutual Benefits' policy lookup and premium-payment route for retrieving policies with the policy number, selecting the payment period and completing payment online or through the generated bank USSD code.",
+    "category": "Insurance",
+    "agencySlug": "mutual-benefits",
+    "feeLabel": "Amount depends on the selected policy and payment period",
+    "feeNote": "The client portal calculates the premium amount from the policy and number of months selected before payment.",
+    "timeline": "Payment is recorded after the selected online or bank-USSD transaction completes successfully; keep the transaction reference in case the policy balance does not update.",
+    "status": "verified",
+    "officialPortal": "https://mutualclient.mutualng.com/plc/index",
+    "requirements": [
+      "An existing Mutual Benefits policy number",
+      "The policy or policies selected after lookup in the client portal",
+      "The number of months or payment period the customer intends to pay",
+      "A supported online payment method or bank account capable of completing the generated USSD payment"
+    ],
+    "steps": [
+      "Open Mutual Benefits' official client portal and enter the policy number in Policy Lookup & Payment.",
+      "Review the policies returned for the customer and select the policy or policies to be paid.",
+      "Choose the number of months or applicable payment period and review the total premium amount.",
+      "Proceed to payment directly or select the bank-USSD option and dial the generated code from the relevant bank line.",
+      "Save the transaction reference and confirm that the policy payment status updates successfully."
+    ],
+    "notes": [
+      "Mutual Benefits advises customers to keep the transaction reference for payment problems.",
+      "The portal can also support mandate creation for recurring policy payments.",
+      "Do not pay to an account supplied through an unsolicited message when the same policy can be verified in the official client portal."
+    ],
+    "sources": [
+      {
+        "label": "Mutual Benefits Client Portal",
+        "agency": "Mutual Benefits Assurance Plc",
+        "url": "https://mutualclient.mutualng.com/plc/index",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Mutual Benefits Policy Payment Portal",
+        "agency": "Mutual Benefits Assurance Plc",
+        "url": "https://mutualclient.mutualng.com/technical/trans-view2/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mutual-benefits-buy-motor-insurance-online",
+      "cornerstone-renew-motor-policy"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "pay Mutual Benefits policy",
+      "Mutual Benefits insurance payment",
+      "Mutual Benefits USSD payment",
+      "Mutual Benefits policy lookup",
+      "Mutual Benefits premium payment"
+    ]
+  },
+  {
+    "slug": "silverbird-book-movie-ticket",
+    "title": "How to book a Silverbird Cinemas movie ticket online",
+    "shortTitle": "Silverbird movie ticket",
+    "summary": "Silverbird Cinemas' online ticket route for choosing a Nigerian cinema location, selecting an available movie/show, submitting booking/payment details and collecting or redeeming the confirmed ticket at the selected cinema.",
+    "category": "Entertainment services",
+    "agencySlug": "silverbird-cinemas",
+    "feeLabel": "Ticket price depends on cinema, movie and show",
+    "feeNote": "Silverbird publishes current cinema-specific prices and promotions, which vary by location, format and movie. Use the amount shown for the chosen booking.",
+    "timeline": "An online booking is formed after Silverbird accepts the booking request and payment; ticket redemption/collection occurs at the cinema selected for the purchase.",
+    "status": "verified",
+    "officialPortal": "https://silverbirdcinemas.com/book-movie-ticket/",
+    "requirements": [
+      "A selected Silverbird cinema location in Nigeria",
+      "An available movie, showtime and ticket option for the selected cinema",
+      "Accurate booking information and a debit card for the website purchase route",
+      "The booking confirmation/proof of purchase needed to redeem the ticket at the cinema"
+    ],
+    "steps": [
+      "Open Silverbird Cinemas' official Book Movie Ticket page and choose the preferred Nigerian cinema location.",
+      "Select the available movie/showtime and ticket option offered for that cinema.",
+      "Enter the booking information accurately and review the current ticket price before payment.",
+      "Complete payment with the supported debit-card route and keep the booking confirmation.",
+      "Present the required proof of purchase at the selected Silverbird location to redeem or collect the booked ticket."
+    ],
+    "notes": [
+      "Silverbird's ticket terms say online movie tickets are generally non-refundable and not available for exchange unless required by law or accepted at the company's discretion.",
+      "Seat allocation is subject to the provider's booking system and availability.",
+      "Age classifications apply and photo identification may be requested for age-restricted films."
+    ],
+    "sources": [
+      {
+        "label": "Silverbird Book Movie Ticket",
+        "agency": "Silverbird Cinemas",
+        "url": "https://silverbirdcinemas.com/book-movie-ticket/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Silverbird Ticket Terms",
+        "agency": "Silverbird Cinemas",
+        "url": "https://silverbirdcinemas.com/terms-and-conditions-for-ticket-sales/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Silverbird Prices & Promos",
+        "agency": "Silverbird Cinemas",
+        "url": "https://silverbirdcinemas.com/promos/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "silverbird-use-voucher-gift-card"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Silverbird movie ticket",
+      "book Silverbird cinema online",
+      "Silverbird ticket price Nigeria",
+      "Silverbird cinemas booking",
+      "Silverbird movie booking"
+    ]
+  },
+  {
+    "slug": "silverbird-use-voucher-gift-card",
+    "title": "How to use a Silverbird Cinemas voucher or gift card",
+    "shortTitle": "Silverbird voucher & gift card",
+    "summary": "Silverbird Cinemas' redemption rules for movie vouchers, food-and-beverage vouchers and gift cards at participating Nigerian cinema locations, including identification and availability conditions.",
+    "category": "Entertainment services",
+    "agencySlug": "silverbird-cinemas",
+    "feeLabel": "Value depends on the voucher or gift card",
+    "feeNote": "The usable value and conditions are those attached to the issued Silverbird voucher or gift card; the provider says these instruments are not redeemable for cash.",
+    "timeline": "Redemption happens at the participating cinema when the voucher/gift card is valid and the requested ticket or food/beverage item is available.",
+    "status": "verified",
+    "officialPortal": "https://silverbirdcinemas.com/terms-and-conditions-for-ticket-sales/",
+    "requirements": [
+      "A valid Silverbird movie voucher, food-and-beverage voucher or gift card",
+      "A participating Silverbird cinema location in Nigeria",
+      "Suitable identification when Silverbird requires it for voucher-ticket collection",
+      "Availability of the movie ticket, admission or food/beverage item being redeemed"
+    ],
+    "steps": [
+      "Check the voucher or gift card conditions and confirm that it is valid for the intended Silverbird cinema service.",
+      "Visit the participating Silverbird cinema or use the applicable ticket-redemption route for the issued voucher/card.",
+      "Present the voucher or gift card and any identification required for collection or redemption.",
+      "Choose an available eligible movie ticket or food/beverage item within the value and conditions of the instrument.",
+      "Keep any resulting ticket or receipt and note that unused value is not treated as a cash balance unless Silverbird's issued terms explicitly say otherwise."
+    ],
+    "notes": [
+      "Silverbird says movie vouchers can be redeemed for movie tickets at its Nigerian cinema locations subject to availability.",
+      "Gift cards can be used for movie tickets or food and beverages up to their value, subject to the issued conditions.",
+      "The provider says vouchers and gift cards are non-refundable, non-exchangeable and cannot be redeemed for cash except where law requires otherwise."
+    ],
+    "sources": [
+      {
+        "label": "Silverbird Ticket Terms — Vouchers & Gift Cards",
+        "agency": "Silverbird Cinemas",
+        "url": "https://silverbirdcinemas.com/terms-and-conditions-for-ticket-sales/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Silverbird Cinemas Home",
+        "agency": "Silverbird Cinemas",
+        "url": "https://silverbirdcinemas.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "silverbird-book-movie-ticket"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Silverbird voucher",
+      "Silverbird gift card",
+      "Silverbird cinema voucher redemption",
+      "Silverbird gift card Nigeria",
+      "use Silverbird movie voucher"
+    ]
   }
 ]
