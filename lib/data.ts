@@ -850,6 +850,27 @@ export const agencies: Agency[] = [
     "description": "Private Nigerian airline offering domestic booking, web check-in, fare and baggage services.",
     "website": "https://www.greenafrica.com/"
   },
+  {
+    "slug": "bedc",
+    "name": "BEDC Electricity Plc",
+    "shortName": "BEDC",
+    "description": "Private electricity distribution company serving Edo, Delta, Ondo and Ekiti with metering, billing, token and customer-support services.",
+    "website": "https://beninelectric.com/"
+  },
+  {
+    "slug": "college-board",
+    "name": "College Board",
+    "shortName": "College Board",
+    "description": "Private/nonprofit education organisation providing SAT registration, international testing and score services used by candidates in Nigeria.",
+    "website": "https://www.collegeboard.org/"
+  },
+  {
+    "slug": "reliance-hmo",
+    "name": "Reliance HMO",
+    "shortName": "Reliance HMO",
+    "description": "Private Nigerian health maintenance organisation offering individual, family and business health plans and provider-network services.",
+    "website": "https://getreliancehealth.com/nigeria/"
+  },
 ];
 
 export const services: Service[] = validateServiceCatalog(serviceRecords);
