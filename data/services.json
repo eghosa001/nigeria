@@ -23817,7 +23817,7 @@
       "For account-linked transactions, the account/security information Unity Bank requests during USSD registration or authentication"
     ],
     "steps": [
-      "Dial *7799# from the mobile phone.",
+      "Dial *7799# from a Nigerian mobile phone and wait for Unity Bank's convenient-banking menu to load.",
       "Choose the required account-opening, balance, airtime/data, transfer, bill-payment, BVN, PIN or other listed service.",
       "Enter the account, beneficiary or bill details shown by the selected USSD menu.",
       "Authenticate the transaction with the Unity Bank security prompt used for that service.",
@@ -23869,7 +23869,7 @@
     ],
     "steps": [
       "Open Paga's official Create Account page and choose Personal.",
-      "Enter the mobile number and personal details requested by Paga.",
+      "Enter the mobile number, legal name and other personal profile information shown on Paga's registration form.",
       "Provide the identification and BVN information used for account setup and verification.",
       "Complete registration and keep the Paga account number assigned to the new wallet.",
       "Fund the account through a Paga agent, partner bank or supported card before using balance-funded transfers or bill payments."
@@ -23930,7 +23930,7 @@
       "For a NIBSS-linked check, the NIBSS session ID and the bank used for the transaction"
     ],
     "steps": [
-      "Open Paga's official Verify page.",
+      "Open Paga's official Verify page in a browser before entering any transaction identifiers.",
       "Enter the Paga user ID associated with the transfer or payment.",
       "Enter the transaction ID or reference number supplied after the transaction.",
       "For a bank/NIBSS transaction, enter the NIBSS Session ID and select the bank used.",
