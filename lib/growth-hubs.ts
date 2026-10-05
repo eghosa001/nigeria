@@ -723,7 +723,16 @@ export const growthHubs: GrowthHub[] = [
       { query: "open Fidelity business account online", serviceSlug: "fidelity-business-account-online" },
       { query: "Flutterwave business account Nigeria", serviceSlug: "flutterwave-business-account-nigeria" },
       { query: "open OPay account Nigeria", serviceSlug: "opay-account-opening-nigeria" },
-      { query: "lock OPay account or card", serviceSlug: "opay-emergency-lock-account-card" }
+      { query: "lock OPay account or card", serviceSlug: "opay-emergency-lock-account-card" },
+      { query: "open Kuda account", serviceSlug: "kuda-personal-account-opening" },
+      { query: "upgrade Kuda account tier", serviceSlug: "kuda-account-tier-upgrade" },
+      { query: "Ikeja Electric buy token", serviceSlug: "ikeja-electric-pay-bill-buy-token" },
+      { query: "Ikeja Electric prepaid meter application", serviceSlug: "ikeja-electric-prepaid-meter-application" },
+      { query: "TOEFL registration Nigeria", serviceSlug: "toefl-registration-nigeria" },
+      { query: "GRE registration Nigeria", serviceSlug: "gre-registration-nigeria" },
+      { query: "PTE registration Nigeria", serviceSlug: "pte-registration-nigeria" },
+      { query: "GMAT registration Nigeria", serviceSlug: "gmat-registration-nigeria" },
+      { query: "AXA Mansard third party motor insurance", serviceSlug: "axa-mansard-third-party-motor-insurance" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -771,7 +780,16 @@ export const growthHubs: GrowthHub[] = [
       "fidelity-business-account-online",
       "flutterwave-business-account-nigeria",
       "opay-account-opening-nigeria",
-      "opay-emergency-lock-account-card"
+      "opay-emergency-lock-account-card",
+      "kuda-personal-account-opening",
+      "kuda-account-tier-upgrade",
+      "ikeja-electric-pay-bill-buy-token",
+      "ikeja-electric-prepaid-meter-application",
+      "toefl-registration-nigeria",
+      "gre-registration-nigeria",
+      "pte-registration-nigeria",
+      "gmat-registration-nigeria",
+      "axa-mansard-third-party-motor-insurance"
     ]
   },
 
