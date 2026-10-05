@@ -291,7 +291,14 @@ const expectedSlugs = [
   "gre-registration-nigeria",
   "pte-registration-nigeria",
   "gmat-registration-nigeria",
-  "axa-mansard-third-party-motor-insurance",] as const;
+  "axa-mansard-third-party-motor-insurance",
+  "gigl-send-parcel-nigeria",
+  "gigl-track-shipment",
+  "gigl-international-export-nigeria",
+  "guo-book-bus-online",
+  "guo-change-travel-date",
+  "palmpay-account-registration",
+  "kuda-business-account-opening",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -407,8 +414,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(286);
-  expect(publicServices).toHaveLength(286);
+  expect(services).toHaveLength(293);
+  expect(publicServices).toHaveLength(293);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
