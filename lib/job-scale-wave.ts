@@ -1,4 +1,5 @@
 import type { CareerOpportunity, JobRecordKind, JobSector } from "@/lib/jobs";
+import retiredJobRoutes from "@/data/job-retired-redirects.json";
 
 // Quality-first employer/recruitment wave.
 // Board-only role names are retained only as redirects; they are not published as thin vacancy pages.
@@ -1390,17 +1391,9 @@ const federalUniversityLafia: CareerOpportunity = {
   sources: [{ label: "Federal Character Commission Recruitment Directory", url: "https://fcc.gov.ng/recruitment/", lastChecked: VERIFIED_AT }],
 };
 
-const careerSlugByOrganization = new Map(careerSeeds.map(([organization, slug]) => [organization, slug]));
-
 export const retiredJobRedirects = new Map<string, string>(
-  retiredVacancyGroups.flatMap(([organization, , , roles]) => {
-    const target = careerSlugByOrganization.get(organization);
-    if (!target) return [];
-    return roles.map(([title]) => [slugify(organization + " " + title + " 2026"), target] as [string, string]);
-  })
+  retiredJobRoutes.map(({ sourceSlug, destinationPath }) => [sourceSlug, destinationPath])
 );
-
-retiredJobRedirects.set("elizade-university-careers", "categories/universities-research");
 
 export const jobScaleWave: CareerOpportunity[] = [
   ...careerSeeds.map(careerPage),

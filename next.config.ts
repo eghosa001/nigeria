@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import retiredJobRoutes from "./data/job-retired-redirects.json";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -47,6 +48,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...retiredJobRoutes.map(({ sourceSlug, destinationPath }) => ({
+        source: "/jobs/" + sourceSlug,
+        destination: destinationPath,
+        permanent: true,
+      })),
       {
         source: "/services/bvn-change-details",
         destination: "/topics/bvn",

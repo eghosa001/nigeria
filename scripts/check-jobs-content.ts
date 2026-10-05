@@ -30,11 +30,13 @@ assert(retiredJobRedirects.size >= 100, "Retired thin vacancy URLs must keep red
 const opportunityBySlug = new Map(jobOpportunities.map((item) => [item.slug, item]));
 for (const [retiredSlug, target] of retiredJobRedirects) {
   assert(!opportunityBySlug.has(retiredSlug), retiredSlug + " is retired and must not remain an indexable opportunity.");
-  if (target.startsWith("categories/")) {
-    const topicSlug = target.slice("categories/".length);
+  assert(target.startsWith("/jobs/"), retiredSlug + " redirect destination must stay inside the Jobs pillar.");
+  if (target.startsWith("/jobs/categories/")) {
+    const topicSlug = target.slice("/jobs/categories/".length);
     assert(jobTopics.some((topic) => topic.slug === topicSlug), retiredSlug + " redirects to an unknown Jobs category.");
   } else {
-    const replacement = opportunityBySlug.get(target);
+    const replacementSlug = target.slice("/jobs/".length);
+    const replacement = opportunityBySlug.get(replacementSlug);
     assert(Boolean(replacement), retiredSlug + " redirects to a missing replacement opportunity.");
     assert(replacement?.kind === "career-page", retiredSlug + " must redirect to an employer career page.");
   }
