@@ -1,6 +1,7 @@
 // Jobs-only source audit; used by the focused Jobs Freshness workflow.
 import fs from "node:fs/promises";
 
+// This Jobs-specific audit also acts as a scope signal for focused Jobs-only deploy verification.
 const files = ["lib/jobs.ts", "lib/job-scale-wave.ts", "lib/career-guides.ts"];
 const urls = new Set();
 
