@@ -12,6 +12,7 @@ on:
       - "lib/growth-hubs.ts"
       # Jobs sitemap URLs are derived from these content files.
       - "lib/jobs.ts"
+      - "lib/job-scale-wave.ts"
       - "lib/job-topics.ts"
       - "lib/job-facets.ts"
       - "lib/job-employers.ts"

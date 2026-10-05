@@ -56,3 +56,10 @@ The public UI is deadline-aware independently of the scheduled workflow, so a kn
 ## Time-sensitive discovery
 
 `/jobs/new-this-week` uses the employer's original `datePosted`, not MyNigeriaGuide's verification date. `/jobs/closing-this-week` only includes effectively-open records with a published deadline in the next seven days. If either view has no qualifying inventory, its metadata is set to noindex while links remain usable for visitors.
+
+
+## Scale-to-300 milestone
+
+The checked-in Jobs catalog now targets 300 verified records. The 191-record expansion that takes the pillar from 109 to 300 is intentionally mixed: new employer/public recruitment pathways plus distinct vacancies that were visibly listed on responsible official job boards on 5 October 2026. A career pathway remains `career-page` unless a current vacancy is explicitly being claimed.
+
+This milestone is the upper end of the comfortable checked-in catalog phase. Before another similarly large Jobs expansion, start the prepared D1/server-pagination migration described above so the browser catalog does not keep growing linearly. Do not turn the 20,000-URL capacity target into a page-generation quota.

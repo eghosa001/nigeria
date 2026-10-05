@@ -13,7 +13,7 @@ function unique(values: string[], label: string) {
 }
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
-assert(jobOpportunities.length >= 109, "Jobs architecture wave must keep at least 109 verified opportunity records.");
+assert(jobOpportunities.length >= 300, "Jobs scale-to-300 wave must keep at least 300 verified opportunity records.");
 assert(jobOpportunities.length < 500, "Move Jobs reads to the prepared D1/server-pagination boundary before the client catalog reaches 500 records.");
 unique(jobOpportunities.map((item) => item.slug), "Job slugs");
 unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");
@@ -28,6 +28,7 @@ for (const item of jobOpportunities) {
   assert(item.qualifications.length > 0, item.slug + " needs qualification guidance.");
   assert(item.requirements.length > 0, item.slug + " needs requirements.");
   assert(item.applicationSteps.length > 0, item.slug + " needs application steps.");
+  assert((item.topicSlugs ?? []).every((slug) => jobTopics.some((topic) => topic.slug === slug)), item.slug + " has an unknown explicit topic slug.");
   assert(item.sources.some((source) => new URL(source.url).hostname === new URL(item.officialUrl).hostname), item.slug + " officialUrl must share a hostname with at least one source.");
   if (item.status === "open") {
     assert(daysSinceIsoDate(item.verifiedAt) <= 14, item.slug + " is marked open but has not been verified in the last 14 days.");

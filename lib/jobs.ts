@@ -1,3 +1,5 @@
+import { jobScaleWave } from "@/lib/job-scale-wave";
+
 export type JobSector = "Government" | "Private" | "International";
 export type JobStatus = "open" | "closed" | "screening" | "training" | "career-page" | "upcoming";
 export type JobRecordKind = "vacancy" | "programme" | "recruitment-exercise" | "career-page";
@@ -28,6 +30,7 @@ export type CareerOpportunity = {
   organization: string;
   kind?: JobRecordKind;
   posting?: JobPostingMetadata;
+  topicSlugs?: string[];
   sector: JobSector;
   status: JobStatus;
   statusLabel: string;
@@ -3442,8 +3445,8 @@ export const jobOpportunities: CareerOpportunity[] = [
       { label: "EHA Clinics — Assistant Manager, Laboratory and Diagnostics", url: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180", lastChecked: "2026-10-05" },
       { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
     ]
-  },
-
+  },,
+  ...jobScaleWave
 ];
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
