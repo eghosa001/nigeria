@@ -6731,6 +6731,65 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://kebbistate.gov.ng/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ojukwu-bunker-guide",
+    "title": "Ojukwu Bunker Umuahia Guide: Biafran History & Visitor Planning",
+    "shortTitle": "Ojukwu Bunker",
+    "kind": "destination",
+    "region": "Abia State",
+    "summary": "Plan an Ojukwu Bunker visit as a focused Umuahia modern-history stop, with current rehabilitation and access status checked before travelling.",
+    "intro": [
+      "Ojukwu Bunker is one of Umuahia's most important Biafran-war heritage sites and supports a distinct history search intent separate from the National War Museum.",
+      "Federal preservation work has been active in 2026, so the first planning step is confirming what is open and how the site is currently interpreted."
+    ],
+    "bestFor": [
+      "Modern history",
+      "Biafran history",
+      "Umuahia",
+      "Heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Historic bunker",
+        "detail": "The site provides direct physical context for the Biafran period and wartime administration."
+      },
+      {
+        "name": "War Museum connection",
+        "detail": "The National War Museum is the natural companion stop for a fuller history day."
+      },
+      {
+        "name": "Preservation work",
+        "detail": "Current rehabilitation can improve interpretation while also changing access."
+      },
+      {
+        "name": "Sensitive history",
+        "detail": "Use careful, evidence-based interpretation rather than sensational storytelling."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm access first",
+        "detail": "Check the current rehabilitation and opening status before travelling."
+      },
+      {
+        "label": "Use credible interpretation",
+        "detail": "Prefer museum, federal or scholarly context for contested historical details."
+      },
+      {
+        "label": "Allow time to read",
+        "detail": "This is a history-heavy visit and benefits from a slower pace."
+      },
+      {
+        "label": "Keep distant Abia sites separate",
+        "detail": "Arochukwu deserves its own road-trip day."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Abia heritage restoration",
+      "href": "https://fmino.gov.ng/federal-governments-war-museum-and-ojukwu-bunker-get-major-historical-preservation-boost-in-abia/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
