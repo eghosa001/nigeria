@@ -1,4 +1,6 @@
-import { entertainmentPlatforms, type EntertainmentPlatform } from "@/lib/entertainment";
+import { entertainmentPlatforms } from "@/lib/entertainment";
+
+type BrowsePlatform = (typeof entertainmentPlatforms)[number];
 import { queryEntertainmentDirectory, type EntertainmentDirectorySort } from "@/lib/entertainment-query";
 
 export const dynamic = "force-dynamic";
@@ -12,8 +14,8 @@ function numberParam(value: string | null) {
 export function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const rawPlatform = searchParams.get("platform") ?? "all";
-  const platform = rawPlatform === "all" || entertainmentPlatforms.includes(rawPlatform as EntertainmentPlatform)
-    ? rawPlatform as EntertainmentPlatform | "all"
+  const platform = rawPlatform === "all" || entertainmentPlatforms.includes(rawPlatform as BrowsePlatform)
+    ? rawPlatform as BrowsePlatform | "all"
     : "all";
   const rawSort = searchParams.get("sort") ?? "newest";
   const sort = ["newest", "oldest", "az"].includes(rawSort) ? rawSort as EntertainmentDirectorySort : "newest";
