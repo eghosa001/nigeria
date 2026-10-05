@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 };
 
 const searchMomentumMovieSlugs = [
+  "colours-of-fire",
+  "king-of-thieves-2",
+  "the-herd",
   "oversabi-aunty",
   "millionaire-until-morning",
-  "bowale",
-  "the-man-i-never-knew",
-  "sister-agatha",
-  "my-housemate",
+  "gingerrr",
 ];
 
 const popularMovieSearchLinks = [

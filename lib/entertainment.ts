@@ -2216,7 +2216,161 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Official Netflix title page. Availability can vary by territory even when the title appears in regional charts.",
     }],
   },
-
+  {
+    slug: "the-herd",
+    title: "The Herd",
+    year: 2025,
+    format: "movie",
+    genres: ["Thriller","Crime","Drama","Nollywood"],
+    languages: ["English"],
+    synopsis: "A joyous wedding turns deadly when a kidnapping forces a newly married couple and their guests into a tense fight for survival.",
+    cast: ["Daniel Etim Effiong","Linda Ejiofor-Suleiman","Genoveva Umeh","Kunle Remi","Mercy Aigbe","Adam Garba","Abba Ali Zaky","Norbert Young","Tina Mba","Patrick Doyle"],
+    featuredCast: ["Daniel Etim Effiong","Linda Ejiofor-Suleiman","Genoveva Umeh"],
+    featured: true,
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/82192371",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "colours-of-fire",
+    title: "Colours of Fire",
+    year: 2025,
+    format: "movie",
+    genres: ["Fantasy","Drama","Romance","Nollywood"],
+    languages: ["English"],
+    synopsis: "A warrior sent to hunt a beast unleashed by a rival clan uncovers a dangerous truth and a forbidden love that could destroy both worlds.",
+    cast: ["Uzor Arukwe","Osas Ighodaro","Ibrahim Chatta","Gabriel Afolayan","Mercy Aigbe","Femi Branch"],
+    featuredCast: ["Uzor Arukwe","Osas Ighodaro","Ibrahim Chatta"],
+    featured: true,
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/82752912",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "king-of-thieves-2",
+    title: "King of Thieves 2",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama","Fantasy","Yoruba","Nollywood"],
+    languages: ["Yoruba"],
+    synopsis: "A king's grip on power begins to collapse when Agesinkole, a powerful spirit sworn to punish broken oaths, returns to unleash vengeance on the corrupt.",
+    cast: ["Femi Adebayo","Yemi Solade","Gabriel Afolayan","Olusegun Akinremi","Kunle Afod","Segun Arinze","Bimbo Akintola","Biola Adebayo","Aliu Gafar","Olarotimi Michael Fakunle"],
+    featuredCast: ["Femi Adebayo","Yemi Solade","Gabriel Afolayan"],
+    featured: true,
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/82748703",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "the-waiter",
+    title: "The Waiter",
+    year: 2024,
+    format: "movie",
+    genres: ["Action","Comedy","Crime","Nollywood"],
+    languages: ["English"],
+    synopsis: "A high-profile political event descends into a hostage crisis, pulling an unlikely waiter into an escalating mix of danger, crime and chaos.",
+    cast: ["Ayo Makun","Deyemi Okanlawon","Regina Daniels","Shaffy Bello","Bucci Franklin","Williams Uchemba","Sunshine Rosman","Uzee Usman"],
+    featuredCast: ["Ayo Makun","Deyemi Okanlawon","Regina Daniels"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/82021995",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "son-of-the-soil",
+    title: "Son of the Soil",
+    year: 2025,
+    format: "movie",
+    genres: ["Action","Thriller","Crime","Nollywood"],
+    languages: ["English"],
+    synopsis: "A discharged soldier returns to Lagos and is drawn into a violent struggle as he tries to protect his sister and confront the forces behind an old grievance.",
+    cast: ["Razaaq Adoti","Patience Ozokwor","Iretiola Doyle","Sunshine Rosman","Taye Arimoro","Damilola Ogunsi"],
+    featuredCast: ["Razaaq Adoti","Patience Ozokwor","Iretiola Doyle"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/82694913",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "ada-omo-daddy",
+    title: "Ada Omo Daddy",
+    year: 2023,
+    format: "movie",
+    genres: ["Drama","Family","Yoruba","Nollywood"],
+    languages: ["English","Yoruba"],
+    synopsis: "A long-hidden family secret surfaces during wedding preparations, forcing a bride-to-be to confront questions about identity, loyalty and the meaning of family.",
+    cast: ["Sola Sobowale","Omowunmi Dada","Dele Odule","Mercy Aigbe","Tayo Faniran","Charles Okafor"],
+    featuredCast: ["Omowunmi Dada","Sola Sobowale","Mercy Aigbe"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/81936680",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "something-like-gold",
+    title: "Something Like Gold",
+    year: 2023,
+    format: "movie",
+    genres: ["Romance","Comedy","Drama","Nollywood"],
+    languages: ["English"],
+    synopsis: "After her engagement collapses and her father's property is seized, a young woman is forced to rebuild her life and discovers an unexpected path to love.",
+    cast: ["Sandra Okunzuwa","Mercy Johnson Okojie","Timini Egbuson","Kunle Remi","Broda Shaggi","Teniola Aladese"],
+    featuredCast: ["Sandra Okunzuwa","Timini Egbuson","Mercy Johnson Okojie"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/81730167",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "up-north",
+    title: "Up North",
+    year: 2018,
+    format: "movie",
+    genres: ["Drama","Coming-of-age","Nollywood"],
+    languages: ["English"],
+    synopsis: "A pampered young heir is sent north for national service, where unfamiliar responsibilities, relationships and community work reshape his priorities.",
+    cast: ["Banky Wellington","Rahama Sadau","Kanayo O. Kanayo","Ibrahim Suleiman","Michelle Dede","Adesua Etomi","Hilda Dokubo","Akin Lewis"],
+    featuredCast: ["Banky Wellington","Rahama Sadau","Kanayo O. Kanayo"],
+    watchLinks: [{
+      platform: "Netflix",
+      label: "Check current Netflix Nigeria availability",
+      href: "https://www.netflix.com/ng/title/81172902",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
+    }]
+  }
 ];
 
 export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava"] as const;

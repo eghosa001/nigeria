@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { exploreGuides } from "@/lib/explore";
 
 test("homepage exposes movies, services, tour and jobs as primary paths", async ({ page }) => {
   await page.goto("/");
@@ -13,6 +14,26 @@ test("homepage exposes movies, services, tour and jobs as primary paths", async 
   await expect(paths.nth(3)).toContainText("Jobs & Careers");
   await expect(paths.nth(3)).toHaveAttribute("href", "/jobs");
 });
+
+test("Tour Nigeria covers all 36 states and FCT", async ({ page }) => {
+  const states = [
+    "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", "Borno",
+    "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", "Gombe", "Imo", "Jigawa",
+    "Kaduna", "Kano", "Katsina", "Kebbi", "Kogi", "Kwara", "Lagos", "Nasarawa", "Niger",
+    "Ogun", "Ondo", "Osun", "Oyo", "Plateau", "Rivers", "Sokoto", "Taraba", "Yobe", "Zamfara",
+  ];
+
+  for (const state of states) {
+    expect(exploreGuides.some((guide) => guide.region.toLowerCase().includes(state.toLowerCase())), state).toBeTruthy();
+  }
+  expect(exploreGuides.some((guide) => guide.region === "Federal Capital Territory")).toBeTruthy();
+
+  await page.goto("/explore");
+  const index = page.getByRole("navigation", { name: "Explore Nigeria by state" });
+  await expect(index.getByRole("link")).toHaveCount(37);
+  await expect(index.getByRole("link", { name: "FCT Abuja" })).toHaveAttribute("href", "/explore/abuja");
+});
+
 
 test("Explore Nigeria hub and city guide are navigable", async ({ page }) => {
   await page.goto("/explore");
