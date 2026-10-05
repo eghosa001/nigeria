@@ -723,11 +723,19 @@ const representative = [
       "Collect the passport through the centre after notification and verify the visa category, number of entries, validity and duration of stay before travelling."
     ]
   }
+  "gokada-book-delivery-lagos",
+  "cips-student-membership-registration",
+  "cips-exam-booking",
+  "pmp-certification-application",
+  "pmp-exam-scheduling",
+  "pearson-vue-schedule-exam",
+  "flyboku-book-flight",
+  "travelstart-book-flight-nigeria",
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(603);
-  expect(publicServices).toHaveLength(603);
+  expect(services).toHaveLength(611);
+  expect(publicServices).toHaveLength(611);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
