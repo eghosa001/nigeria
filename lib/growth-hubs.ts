@@ -758,7 +758,18 @@ export const growthHubs: GrowthHub[] = [
       { query: "open Sterling OneBank account", serviceSlug: "sterling-onebank-account-opening" },
       { query: "upgrade OneBank account", serviceSlug: "sterling-onebank-tier-upgrade" },
       { query: "buy Hygeia HMO plan", serviceSlug: "hygeia-health-plan-purchase" },
-      { query: "find Hygeia hospital", serviceSlug: "hygeia-provider-directory" }
+      { query: "find Hygeia hospital", serviceSlug: "hygeia-provider-directory" },
+      { query: "PHED buy token", serviceSlug: "phed-pay-bill-buy-token" },
+      { query: "PHED prepaid meter application", serviceSlug: "phed-map-meter-application" },
+      { query: "Kaduna Electric buy token", serviceSlug: "kaduna-electric-pay-bill-buy-token" },
+      { query: "Kaduna Electric prepaid meter application", serviceSlug: "kaduna-electric-map-meter-application" },
+      { query: "MTN SIM swap", serviceSlug: "mtn-sim-swap-replacement" },
+      { query: "port number to MTN", serviceSlug: "mtn-port-number-to-mtn" },
+      { query: "Airtel 4G SIM swap", serviceSlug: "airtel-4g-sim-swap" },
+      { query: "Glo SIM replacement", serviceSlug: "glo-sim-replacement" },
+      { query: "port number to Glo", serviceSlug: "glo-port-number-to-glo" },
+      { query: "Glo international roaming", serviceSlug: "glo-international-roaming" },
+      { query: "Glo data roaming bundle", serviceSlug: "glo-data-roaming-bundle" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -841,7 +852,18 @@ export const growthHubs: GrowthHub[] = [
       "sterling-onebank-account-opening",
       "sterling-onebank-tier-upgrade",
       "hygeia-health-plan-purchase",
-      "hygeia-provider-directory"
+      "hygeia-provider-directory",
+      "phed-pay-bill-buy-token",
+      "phed-map-meter-application",
+      "kaduna-electric-pay-bill-buy-token",
+      "kaduna-electric-map-meter-application",
+      "mtn-sim-swap-replacement",
+      "mtn-port-number-to-mtn",
+      "airtel-4g-sim-swap",
+      "glo-sim-replacement",
+      "glo-port-number-to-glo",
+      "glo-international-roaming",
+      "glo-data-roaming-bundle"
     ]
   },
 
