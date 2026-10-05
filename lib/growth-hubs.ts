@@ -995,7 +995,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "Nile University post UTME 2026", serviceSlug: "nile-university-undergraduate-application-2026" },
       { query: "AUN Fall 2026 admission", serviceSlug: "aun-undergraduate-application-2026" },
       { query: "Redeemers University application 2026", serviceSlug: "redeemers-university-undergraduate-application-2026" },
-      { query: "Lead City University application 2026", serviceSlug: "lead-city-undergraduate-application-2026" }
+      { query: "Lead City University application 2026", serviceSlug: "lead-city-undergraduate-application-2026" },
+      { query: "Caleb University application 2026", serviceSlug: "caleb-undergraduate-application-2026" },
+      { query: "Bowen University admission 2026", serviceSlug: "bowen-undergraduate-application-2026" },
+      { query: "Igbinedion University application 2026", serviceSlug: "igbinedion-undergraduate-application-2026" },
+      { query: "Veritas University admission 2026", serviceSlug: "veritas-undergraduate-application-2026" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1301,7 +1305,11 @@ export const growthHubs: GrowthHub[] = [
       "nile-university-undergraduate-application-2026",
       "aun-undergraduate-application-2026",
       "redeemers-university-undergraduate-application-2026",
-      "lead-city-undergraduate-application-2026"
+      "lead-city-undergraduate-application-2026",
+      "caleb-undergraduate-application-2026",
+      "bowen-undergraduate-application-2026",
+      "igbinedion-undergraduate-application-2026",
+      "veritas-undergraduate-application-2026"
     ]
   },
 
