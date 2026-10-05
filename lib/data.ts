@@ -933,7 +933,7 @@ export const agencies: Agency[] = [
     "shortName": "Aero",
     "description": "Private Nigerian airline offering flight booking, manage-booking, online check-in and refund services.",
     "website": "https://flyaero.com/"
-  },,
+  },
   {
     "slug": "jaiz-bank",
     "name": "Jaiz Bank Plc",
