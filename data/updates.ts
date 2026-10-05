@@ -12,6 +12,28 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "nibss-bvn-retrieval-current-fee",
+    date: "2026-10-05",
+    type: "clarification",
+    agency: "NIBSS",
+    title: "NIBSS confirms *565*0# for BVN retrieval at ₦20",
+    summary: "NIBSS currently lists *565*0# as the BVN retrieval code. It must be dialled from the phone number registered to the BVN, and the published service fee is ₦20.",
+    sourceLabel: "NIBSS USSD Validation Services",
+    sourceUrl: "https://nibss-plc.com.ng/ussd-validation-services/",
+    affectedServices: ["bvn-retrieval"],
+  },
+  {
+    id: "nis-ecowas-certificate-current-fees",
+    date: "2026-10-05",
+    type: "fee",
+    agency: "Nigeria Immigration Service",
+    title: "NIS schedule lists ECOWAS Travel Certificate at ₦2,600 fresh / ₦1,300 renewal",
+    summary: "The current NIS service-level schedule lists ₦2,600 for a fresh ECOWAS Travel Certificate and ₦1,300 for renewal, excluding bank charges, with a 24-hour service target for a complete application.",
+    sourceLabel: "Nigeria Immigration Service service-level schedule",
+    sourceUrl: "https://immigration.gov.ng/wp-content/uploads/2026/03/SERVICE-LEVEL-AGREEMENT-2025.pdf",
+    affectedServices: ["ecowas-travel-certificate"],
+  },
+  {
     id: "jamb-caps-2026-admissions-active",
     date: "2026-10-04",
     type: "process",
