@@ -39,4 +39,10 @@ if (errors.length) {
   process.exit(1);
 }
 
+await Promise.all([
+  import("../app/explore/page"),
+  import("../app/explore/[slug]/page"),
+  import("../app/explore/events/page"),
+]);
+
 console.log(`Explore content OK: ${exploreGuides.length} guides, ${explorePlaces.length} mapped places.`);
