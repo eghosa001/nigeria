@@ -846,7 +846,22 @@ export const growthHubs: GrowthHub[] = [
       { query: "block Fidelity card or account", serviceSlug: "fidelity-emergency-block" },
       { query: "SAT registration Nigeria", serviceSlug: "sat-registration-nigeria" },
       { query: "Reliance HMO hospital list", serviceSlug: "reliance-provider-directory" },
-      { query: "Reliance HMO small business plan", serviceSlug: "reliance-small-business-plan" }
+      { query: "Reliance HMO small business plan", serviceSlug: "reliance-small-business-plan" },
+      { query: "buy T2 airtime or data", serviceSlug: "t2-buy-airtime-data-online" },
+      { query: "T2 data transfer", serviceSlug: "t2-data-transfer" },
+      { query: "T2 data gifting", serviceSlug: "t2-data-gifting" },
+      { query: "recharge StarTimes decoder", serviceSlug: "startimes-recharge-smartcard" },
+      { query: "change StarTimes bouquet", serviceSlug: "startimes-change-bouquet" },
+      { query: "renew ipNX subscription", serviceSlug: "ipnx-renew-subscription" },
+      { query: "change ipNX plan", serviceSlug: "ipnx-change-service-plan" },
+      { query: "report ipNX internet fault", serviceSlug: "ipnx-report-fault" },
+      { query: "get FiberOne broadband", serviceSlug: "fiberone-new-service-installation" },
+      { query: "renew FiberOne subscription", serviceSlug: "fiberone-renew-subscription" },
+      { query: "relocate FiberOne service", serviceSlug: "fiberone-relocate-service" },
+      { query: "open Moniepoint business account", serviceSlug: "moniepoint-business-account" },
+      { query: "get Moniepoint POS", serviceSlug: "moniepoint-pos-terminal" },
+      { query: "open Nomba business account", serviceSlug: "nomba-business-account" },
+      { query: "get Nomba POS", serviceSlug: "nomba-pos-terminal" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1003,7 +1018,22 @@ export const growthHubs: GrowthHub[] = [
       "fidelity-emergency-block",
       "sat-registration-nigeria",
       "reliance-provider-directory",
-      "reliance-small-business-plan"
+      "reliance-small-business-plan",
+      "t2-buy-airtime-data-online",
+      "t2-data-transfer",
+      "t2-data-gifting",
+      "startimes-recharge-smartcard",
+      "startimes-change-bouquet",
+      "ipnx-renew-subscription",
+      "ipnx-change-service-plan",
+      "ipnx-report-fault",
+      "fiberone-new-service-installation",
+      "fiberone-renew-subscription",
+      "fiberone-relocate-service",
+      "moniepoint-business-account",
+      "moniepoint-pos-terminal",
+      "nomba-business-account",
+      "nomba-pos-terminal"
     ]
   },
 
