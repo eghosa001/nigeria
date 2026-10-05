@@ -1094,7 +1094,9 @@ export const growthHubs: GrowthHub[] = [
       { query: "TLScontact France Nigeria appointment", serviceSlug: "tlscontact-france-visa-appointment-nigeria" },
       { query: "TLScontact France passport collection Nigeria", serviceSlug: "tlscontact-france-track-collect-passport-nigeria" },
       { query: "TLScontact Italy Nigeria appointment", serviceSlug: "tlscontact-italy-visa-appointment-nigeria" },
-      { query: "TLScontact Italy passport collection Nigeria", serviceSlug: "tlscontact-italy-passport-collection-nigeria" }
+      { query: "TLScontact Italy passport collection Nigeria", serviceSlug: "tlscontact-italy-passport-collection-nigeria" },
+      { query: "TLScontact Belgium Nigeria appointment", serviceSlug: "tlscontact-belgium-visa-appointment-nigeria" },
+      { query: "TLScontact Belgium passport collection Nigeria", serviceSlug: "tlscontact-belgium-track-collect-passport-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1499,7 +1501,9 @@ export const growthHubs: GrowthHub[] = [
       "tlscontact-france-visa-appointment-nigeria",
       "tlscontact-france-track-collect-passport-nigeria",
       "tlscontact-italy-visa-appointment-nigeria",
-      "tlscontact-italy-passport-collection-nigeria"
+      "tlscontact-italy-passport-collection-nigeria",
+      "tlscontact-belgium-visa-appointment-nigeria",
+      "tlscontact-belgium-track-collect-passport-nigeria"
     ]
   },
 
