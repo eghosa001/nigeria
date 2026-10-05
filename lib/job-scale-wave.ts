@@ -39,7 +39,7 @@ const careerSeeds = [
     "lotus-bank-careers",
     "Private",
     "Banking",
-    "https://ns2.lotusbank.com/careers",
+    "https://lotusbank.com/careers",
     "Nigeria"
   ],
   [
@@ -475,19 +475,11 @@ const careerSeeds = [
     "Nigeria"
   ],
   [
-    "Dana Group",
-    "dana-group-careers",
-    "Private",
-    "Manufacturing",
-    "https://career.danagroup.com/",
-    "Nigeria"
-  ],
-  [
     "Arik Air",
     "arik-air-careers",
     "Private",
     "Aviation",
-    "https://web.arikair.com/",
+    "https://arikair.com/?lang=en",
     "Nigeria"
   ],
   [
@@ -623,7 +615,7 @@ const careerSeeds = [
     "nigeria-immigration-service-careers",
     "Government",
     "Public",
-    "https://recruitment.cdcfib.org/",
+    "https://recruitment.cdcfib.gov.ng/",
     "Nigeria"
   ],
   [
@@ -631,7 +623,7 @@ const careerSeeds = [
     "nigerian-correctional-service-careers",
     "Government",
     "Public",
-    "https://www.corrections.gov.ng/news/recruitment-notice%21?news_id=137",
+    "https://recruitment.cdcfib.gov.ng/",
     "Nigeria"
   ],
   [
@@ -639,7 +631,7 @@ const careerSeeds = [
     "federal-fire-service-careers",
     "Government",
     "Public",
-    "https://recruitment.cdcfib.org/",
+    "https://recruitment.cdcfib.gov.ng/",
     "Nigeria"
   ],
   [
@@ -1077,7 +1069,7 @@ const retiredVacancyGroups: Array<[string, JobSector, string, RetiredVacancySeed
   [
     "Dana Group",
     "Private",
-    "https://career.danagroup.com/",
+    "https://www.danagroup.com/",
     [
       [
         "Logistics Officer",
@@ -1400,6 +1392,6 @@ export const jobScaleWave: CareerOpportunity[] = [
   federalUniversityLafia,
 ];
 
-if (jobScaleWave.length !== 81) {
-  throw new Error("Quality-first Jobs scale wave must contain exactly 81 records; found " + jobScaleWave.length);
+if (jobScaleWave.length !== 80) {
+  throw new Error("Quality-first Jobs scale wave must contain exactly 80 records; found " + jobScaleWave.length);
 }

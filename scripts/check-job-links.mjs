@@ -56,8 +56,12 @@ async function check(url) {
   if (!response) {
     const code = errorCode(lastError);
     const message = lastError instanceof Error ? lastError.message : String(lastError);
-    if (code === "ENOTFOUND" || code === "EAI_AGAIN") {
-      warnings.push(url + " -> DNS lookup failed in runner (" + code + "); verify through an independent public source before changing the URL");
+    if (code === "ENOTFOUND") {
+      definitiveFailures.push(url + " -> DNS name not found");
+    } else if (code === "CERT_HAS_EXPIRED" || code === "ERR_TLS_CERT_ALTNAME_INVALID") {
+      definitiveFailures.push(url + " -> " + code);
+    } else if (code === "EAI_AGAIN") {
+      warnings.push(url + " -> transient DNS lookup failure in runner (" + code + ")");
     } else {
       warnings.push(url + " -> " + (code ? code + " " : "") + message);
     }

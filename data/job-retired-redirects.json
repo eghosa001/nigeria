@@ -1,5 +1,257 @@
 [
   {
+    "sourceSlug": "beta-glass-financial-controller-2026",
+    "destinationPath": "/jobs/beta-glass-careers"
+  },
+  {
+    "sourceSlug": "beta-glass-procurement-supervisor-indirect-materials-2026",
+    "destinationPath": "/jobs/beta-glass-careers"
+  },
+  {
+    "sourceSlug": "beta-glass-senior-legal-officer-2026",
+    "destinationPath": "/jobs/beta-glass-careers"
+  },
+  {
+    "sourceSlug": "dana-group-auto-electrician-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-careers",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-chief-security-officer-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-driver-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-finance-manager-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-it-officer-full-stack-developer-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-legal-assistant-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-logistics-officer-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-logistics-officer-dana-motors-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-maintenance-officer-dana-plast-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-marketing-executive-dana-motors-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-production-engineer-dana-plast-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-production-pharmacist-minna-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-sales-executive-dana-motors-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-sales-manager-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-sales-representative-dana-plast-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-sales-representative-household-plastics-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-service-manager-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-superintendent-pharmacist-production-and-warehousing-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-superintendent-pharmacist-regulatory-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "dana-group-technical-training-coordinator-dana-motors-2026",
+    "destinationPath": "/jobs/categories/fmcg-manufacturing"
+  },
+  {
+    "sourceSlug": "elizade-university-careers",
+    "destinationPath": "/jobs/categories/universities-research"
+  },
+  {
+    "sourceSlug": "gig-logistics-contact-centre-and-service-quality-assurance-manager-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-dgm-fleet-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-e-commerce-account-officer-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-finance-executive-receivables-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-fleet-maintenance-manager-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-gateway-manager-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-gateway-supervisor-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-legal-officer-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-senior-business-development-executive-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "gig-logistics-senior-finance-executive-2026",
+    "destinationPath": "/jobs/gig-logistics-careers"
+  },
+  {
+    "sourceSlug": "jumia-cs-sales-team-lead-2026",
+    "destinationPath": "/jobs/jumia-nigeria-careers"
+  },
+  {
+    "sourceSlug": "jumia-first-mile-and-last-mile-manager-2026",
+    "destinationPath": "/jobs/jumia-nigeria-careers"
+  },
+  {
+    "sourceSlug": "jumia-inventory-team-lead-2026",
+    "destinationPath": "/jobs/jumia-nigeria-careers"
+  },
+  {
+    "sourceSlug": "jumia-last-mile-team-lead-door-delivery-2026",
+    "destinationPath": "/jobs/jumia-nigeria-careers"
+  },
+  {
+    "sourceSlug": "jumia-sales-network-manager-regional-2026",
+    "destinationPath": "/jobs/jumia-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-business-developer-multi-state-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-business-developer-pwt-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-call-verification-officer-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-credit-reviewer-hausa-speaker-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-credit-risk-manager-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-dealer-manager-buy-now-pay-later-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-field-verification-officer-multi-state-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-head-of-sales-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-in-shop-sales-promoter-ikeja-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-in-shop-sales-promoter-ogun-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-in-shop-sales-promoter-ondo-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-in-shop-sales-promoter-oyo-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-qa-operations-support-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-agents-bnpl-south-states-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-agents-lagos-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-agents-ogun-ondo-and-oyo-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-manager-bnpl-ajah-ikoyi-and-lekki-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-officer-abuja-kaduna-and-plateau-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-officer-lagos-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "palmpay-sales-officer-south-and-south-east-states-2026",
+    "destinationPath": "/jobs/palmpay-nigeria-careers"
+  },
+  {
+    "sourceSlug": "pz-cussons-factory-machine-operator-2026",
+    "destinationPath": "/jobs/pz-cussons-nigeria-careers"
+  },
+  {
+    "sourceSlug": "pz-cussons-instrumentation-manager-2026",
+    "destinationPath": "/jobs/pz-cussons-nigeria-careers"
+  },
+  {
+    "sourceSlug": "pz-cussons-territory-sales-manager-2026",
+    "destinationPath": "/jobs/pz-cussons-nigeria-careers"
+  },
+  {
     "sourceSlug": "reliance-health-associate-data-scientist-2026",
     "destinationPath": "/jobs/reliance-health-careers"
   },
@@ -132,15 +384,15 @@
     "destinationPath": "/jobs/reliance-health-careers"
   },
   {
+    "sourceSlug": "reliance-health-senior-administrative-associate-ajah-and-lekki-2026",
+    "destinationPath": "/jobs/reliance-health-careers"
+  },
+  {
     "sourceSlug": "reliance-health-senior-administrative-associate-ejigbo-and-akowonjo-2026",
     "destinationPath": "/jobs/reliance-health-careers"
   },
   {
     "sourceSlug": "reliance-health-senior-administrative-associate-port-harcourt-2026",
-    "destinationPath": "/jobs/reliance-health-careers"
-  },
-  {
-    "sourceSlug": "reliance-health-senior-administrative-associate-ajah-and-lekki-2026",
     "destinationPath": "/jobs/reliance-health-careers"
   },
   {
@@ -160,211 +412,7 @@
     "destinationPath": "/jobs/reliance-health-careers"
   },
   {
-    "sourceSlug": "palmpay-sales-officer-lagos-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-credit-risk-manager-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-business-developer-pwt-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-credit-reviewer-hausa-speaker-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-dealer-manager-buy-now-pay-later-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-in-shop-sales-promoter-ikeja-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-in-shop-sales-promoter-ondo-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-in-shop-sales-promoter-oyo-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-in-shop-sales-promoter-ogun-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-sales-agents-ogun-ondo-and-oyo-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-sales-officer-abuja-kaduna-and-plateau-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-sales-officer-south-and-south-east-states-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-sales-agents-lagos-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-sales-manager-bnpl-ajah-ikoyi-and-lekki-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-sales-agents-bnpl-south-states-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-business-developer-multi-state-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-field-verification-officer-multi-state-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-qa-operations-support-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-call-verification-officer-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "palmpay-head-of-sales-2026",
-    "destinationPath": "/jobs/palmpay-nigeria-careers"
-  },
-  {
-    "sourceSlug": "dana-group-logistics-officer-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-technical-training-coordinator-dana-motors-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-finance-manager-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-sales-manager-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-service-manager-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-driver-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-production-pharmacist-minna-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-sales-executive-dana-motors-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-legal-assistant-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-logistics-officer-dana-motors-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-marketing-executive-dana-motors-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-sales-representative-household-plastics-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-sales-representative-dana-plast-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-superintendent-pharmacist-regulatory-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-auto-electrician-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-superintendent-pharmacist-production-and-warehousing-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-it-officer-full-stack-developer-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-chief-security-officer-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-maintenance-officer-dana-plast-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "dana-group-production-engineer-dana-plast-2026",
-    "destinationPath": "/jobs/dana-group-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-legal-officer-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-senior-finance-executive-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-e-commerce-account-officer-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-senior-business-development-executive-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-dgm-fleet-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-fleet-maintenance-manager-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-gateway-manager-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-gateway-supervisor-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-contact-centre-and-service-quality-assurance-manager-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "gig-logistics-finance-executive-receivables-2026",
-    "destinationPath": "/jobs/gig-logistics-careers"
-  },
-  {
-    "sourceSlug": "united-nigeria-airlines-internal-auditor-2026",
-    "destinationPath": "/jobs/united-nigeria-airlines-careers"
-  },
-  {
-    "sourceSlug": "united-nigeria-airlines-senior-internal-auditor-2026",
+    "sourceSlug": "united-nigeria-airlines-duty-manager-2026",
     "destinationPath": "/jobs/united-nigeria-airlines-careers"
   },
   {
@@ -376,7 +424,11 @@
     "destinationPath": "/jobs/united-nigeria-airlines-careers"
   },
   {
-    "sourceSlug": "united-nigeria-airlines-duty-manager-2026",
+    "sourceSlug": "united-nigeria-airlines-head-global-sales-and-marketing-2026",
+    "destinationPath": "/jobs/united-nigeria-airlines-careers"
+  },
+  {
+    "sourceSlug": "united-nigeria-airlines-internal-auditor-2026",
     "destinationPath": "/jobs/united-nigeria-airlines-careers"
   },
   {
@@ -384,59 +436,11 @@
     "destinationPath": "/jobs/united-nigeria-airlines-careers"
   },
   {
-    "sourceSlug": "united-nigeria-airlines-head-global-sales-and-marketing-2026",
+    "sourceSlug": "united-nigeria-airlines-senior-internal-auditor-2026",
     "destinationPath": "/jobs/united-nigeria-airlines-careers"
   },
   {
     "sourceSlug": "united-nigeria-airlines-treasury-officer-analyst-2026",
     "destinationPath": "/jobs/united-nigeria-airlines-careers"
-  },
-  {
-    "sourceSlug": "jumia-cs-sales-team-lead-2026",
-    "destinationPath": "/jobs/jumia-nigeria-careers"
-  },
-  {
-    "sourceSlug": "jumia-inventory-team-lead-2026",
-    "destinationPath": "/jobs/jumia-nigeria-careers"
-  },
-  {
-    "sourceSlug": "jumia-last-mile-team-lead-door-delivery-2026",
-    "destinationPath": "/jobs/jumia-nigeria-careers"
-  },
-  {
-    "sourceSlug": "jumia-first-mile-and-last-mile-manager-2026",
-    "destinationPath": "/jobs/jumia-nigeria-careers"
-  },
-  {
-    "sourceSlug": "jumia-sales-network-manager-regional-2026",
-    "destinationPath": "/jobs/jumia-nigeria-careers"
-  },
-  {
-    "sourceSlug": "beta-glass-financial-controller-2026",
-    "destinationPath": "/jobs/beta-glass-careers"
-  },
-  {
-    "sourceSlug": "beta-glass-procurement-supervisor-indirect-materials-2026",
-    "destinationPath": "/jobs/beta-glass-careers"
-  },
-  {
-    "sourceSlug": "beta-glass-senior-legal-officer-2026",
-    "destinationPath": "/jobs/beta-glass-careers"
-  },
-  {
-    "sourceSlug": "pz-cussons-instrumentation-manager-2026",
-    "destinationPath": "/jobs/pz-cussons-nigeria-careers"
-  },
-  {
-    "sourceSlug": "pz-cussons-territory-sales-manager-2026",
-    "destinationPath": "/jobs/pz-cussons-nigeria-careers"
-  },
-  {
-    "sourceSlug": "pz-cussons-factory-machine-operator-2026",
-    "destinationPath": "/jobs/pz-cussons-nigeria-careers"
-  },
-  {
-    "sourceSlug": "elizade-university-careers",
-    "destinationPath": "/jobs/categories/universities-research"
   }
 ]
