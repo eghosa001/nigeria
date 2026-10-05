@@ -1598,6 +1598,13 @@ export const agencies: Agency[] = [
     "shortName": "CIMA",
     "description": "Professional accounting body providing the CGMA Professional Qualification, candidate registration and computer-based examinations.",
     "website": "https://www.aicpa-cima.com/"
+  },
+  {
+    "slug": "google-cloud-certification",
+    "name": "Google Cloud Certification",
+    "shortName": "Google Cloud",
+    "description": "Google professional cloud-certification programme offering remote and testing-centre certification exams.",
+    "website": "https://cloud.google.com/learn/certification"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
