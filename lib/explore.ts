@@ -2896,6 +2896,1304 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://whc.unesco.org/en/tentativelists/5172/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "lagos-3-day-itinerary",
+    "title": "3 Days in Lagos: A Practical First-Time Itinerary",
+    "shortTitle": "3 Days in Lagos",
+    "kind": "itinerary",
+    "region": "Lagos State",
+    "summary": "Spend three days in Lagos without wasting the trip in traffic: use one cultural day, one Lekki nature-and-art day and one flexible food or waterfront day.",
+    "intro": [
+      "A three-day Lagos trip works best when each day stays in one broad part of the city. The goal is not to collect attractions; it is to reduce cross-city movement and leave enough time for meals, traffic and unexpected delays.",
+      "This itinerary uses durable places already verified in the Lagos guide and keeps live prices, reservations and opening hours as checks to make close to the trip."
+    ],
+    "bestFor": [
+      "First-time visitors",
+      "Long weekends",
+      "Art & culture",
+      "Nature"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Lagos history and culture",
+        "detail": "Start with the National Museum area, then keep the rest of the day around nearby cultural or dining stops instead of crossing the city repeatedly."
+      },
+      {
+        "name": "Day 2 — Lekki nature and art",
+        "detail": "Pair Lekki Conservation Centre with Nike Art Gallery because they sit on the same broad axis and answer different interests without a major cross-city detour."
+      },
+      {
+        "name": "Day 3 — food and waterfront time",
+        "detail": "Keep the final day flexible for a restaurant, waterfront meal, shopping or a slower neighbourhood block before departure."
+      },
+      {
+        "name": "Traffic buffer",
+        "detail": "Protect each day with a generous movement window, especially around bridges, rush hours and airport travel."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Stay near your main cluster",
+        "detail": "Choose accommodation based on where most of your planned stops are, not only on the cheapest room rate."
+      },
+      {
+        "label": "Do not overbook evenings",
+        "detail": "A delayed afternoon journey can easily destroy a tightly timed dinner or show reservation."
+      },
+      {
+        "label": "Confirm attraction access",
+        "detail": "Check opening hours and any admission change for museums, galleries and conservation sites close to the visit."
+      },
+      {
+        "label": "Protect the airport day",
+        "detail": "Keep the final hours light and leave a large buffer for the airport rather than adding one last distant attraction."
+      }
+    ],
+    "source": {
+      "label": "Lagos State Ministry of Tourism, Arts & Culture",
+      "href": "https://tourismartandculture.lagosstate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "abuja-weekend-itinerary",
+    "title": "Weekend in Abuja: 48-Hour First-Time Itinerary",
+    "shortTitle": "Weekend in Abuja",
+    "kind": "itinerary",
+    "region": "Federal Capital Territory",
+    "summary": "Use 48 hours in Abuja for central landmarks, green space, Jabi or dining time and one relaxed final block instead of rushing between distant districts.",
+    "intro": [
+      "Abuja is spread out enough that a weekend works better by district than by a long checklist. Current visitor guidance from Visit Abuja also recommends grouping activities and allowing time between stops.",
+      "The plan below keeps major central landmarks together, leaves room for a park or lake block, and avoids treating a weekend as a race across Maitama, Jabi, Wuse, Garki and the city outskirts."
+    ],
+    "bestFor": [
+      "First-time visitors",
+      "48-hour trips",
+      "Landmarks",
+      "Relaxed city breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Friday — arrive and settle",
+        "detail": "Use the first evening for a nearby meal or a quiet district rather than starting with cross-city sightseeing after the airport drive."
+      },
+      {
+        "name": "Saturday — central landmarks",
+        "detail": "Combine the National Mosque, National Christian Centre and Millennium Park in one central-area block, respecting worship and access rules."
+      },
+      {
+        "name": "Saturday evening — one social district",
+        "detail": "Choose Jabi, Wuse or another single area for dinner and leisure instead of bouncing across the city."
+      },
+      {
+        "name": "Sunday — one final experience",
+        "detail": "Use the last block for a market, gallery, park or relaxed meal before departure rather than trying to finish every major attraction."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Group by district",
+        "detail": "Avoid repeated journeys between Jabi, Maitama, Asokoro and Wuse on the same day."
+      },
+      {
+        "label": "Keep Sunday flexible",
+        "detail": "Leave enough time for brunch, traffic and the airport rather than locking in a distant excursion."
+      },
+      {
+        "label": "Respect formal areas",
+        "detail": "Government and worship zones can have photography, parking or access restrictions."
+      },
+      {
+        "label": "Confirm live hours",
+        "detail": "Check the places you actually plan to enter close to the weekend."
+      }
+    ],
+    "source": {
+      "label": "Visit Abuja — First 48 Hours",
+      "href": "https://www.visitabuja.org/first-48-hours-in-abuja/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "benin-city-weekend-itinerary",
+    "title": "Weekend in Benin City: Heritage, Bronze & Food Itinerary",
+    "shortTitle": "Weekend in Benin City",
+    "kind": "itinerary",
+    "region": "Edo State",
+    "summary": "Build a Benin City weekend around the museum, Igun bronze-casting heritage and relaxed food stops while leaving royal and sacred access to current local guidance.",
+    "intro": [
+      "Benin City is strongest when a short trip has one clear theme: the history and living culture of the Benin Kingdom. That makes a heritage-led weekend more useful than a generic list of places.",
+      "Use the museum and Igun Street for context, then keep royal or ceremonial areas flexible because access and photography rules can change."
+    ],
+    "bestFor": [
+      "History",
+      "Benin art",
+      "Weekend breaks",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — museum context",
+        "detail": "Start with the National Museum so the art, kingdom history and later heritage stops make more sense."
+      },
+      {
+        "name": "Day 1 — Igun Street",
+        "detail": "Visit the bronze-casting district with enough time to look at workshops and ask before photographing people or workspaces."
+      },
+      {
+        "name": "Evening — local dining",
+        "detail": "Use one verified restaurant stop and keep transport simple rather than crossing the city repeatedly."
+      },
+      {
+        "name": "Day 2 — flexible heritage block",
+        "detail": "Use the second morning for an open heritage or palace-area experience only after checking current visitor rules."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Ask before photographing",
+        "detail": "Royal, workshop and sacred settings may have restrictions even when nearby streets are public."
+      },
+      {
+        "label": "Do not force palace access",
+        "detail": "Visit only areas currently open to the public and follow local instructions."
+      },
+      {
+        "label": "Keep Okomu separate",
+        "detail": "The national park deserves its own dedicated trip rather than a rushed add-on to a city weekend."
+      },
+      {
+        "label": "Use daylight for heritage stops",
+        "detail": "Start cultural visits early enough to avoid a rushed close-of-day schedule."
+      }
+    ],
+    "source": {
+      "label": "Edo State Government tourism overview",
+      "href": "https://edostate.gov.ng/your-tourist-destinations-in-edo-state-this-easter-holiday/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "calabar-weekend-itinerary",
+    "title": "Weekend in Calabar: History, Marina & Food Itinerary",
+    "shortTitle": "Weekend in Calabar",
+    "kind": "itinerary",
+    "region": "Cross River State",
+    "summary": "Use a Calabar weekend for the city's history, marina waterfront and food, keeping rainforest and Obudu trips outside the short city itinerary.",
+    "intro": [
+      "Calabar can fill a weekend without forcing a long Cross River road trip. The city works best when history, the waterfront and food are treated as the main experience.",
+      "Remote nature destinations elsewhere in the state deserve separate days. This short itinerary stays in Calabar so the weekend remains realistic."
+    ],
+    "bestFor": [
+      "History",
+      "Waterfront",
+      "Food",
+      "Weekend breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — historic Calabar",
+        "detail": "Use the Slave History Museum and nearby heritage context as the main cultural block rather than rushing between unrelated stops."
+      },
+      {
+        "name": "Day 1 — Marina",
+        "detail": "Move into the Marina Resort area for a slower waterfront period after the history-focused morning."
+      },
+      {
+        "name": "Evening — Calabar food",
+        "detail": "Build dinner around a current local option and leave room for the city's food culture rather than overloading the sightseeing list."
+      },
+      {
+        "name": "Day 2 — flexible city time",
+        "detail": "Use the final day for another museum, waterfront stop or relaxed meal depending on current opening and weather."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Keep Obudu out of a city weekend",
+        "detail": "The road time makes it a separate trip, not a casual Calabar add-on."
+      },
+      {
+        "label": "Check attraction operations",
+        "detail": "Facilities inside leisure complexes can change independently."
+      },
+      {
+        "label": "Book earlier in December",
+        "detail": "Festival season can increase transport and accommodation demand."
+      },
+      {
+        "label": "Leave a weather buffer",
+        "detail": "Heavy rain can change waterfront and outdoor plans quickly."
+      }
+    ],
+    "source": {
+      "label": "Cross River Ministry of Tourism, Arts & Culture",
+      "href": "https://www.crs-motac.org/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "port-harcourt-weekend-itinerary",
+    "title": "Weekend in Port Harcourt: Parks, Bole & City Itinerary",
+    "shortTitle": "Weekend in Port Harcourt",
+    "kind": "itinerary",
+    "region": "Rivers State",
+    "summary": "Plan a Port Harcourt weekend around one recreation block, local food and a comfortable stay while keeping riverine excursions for a separate day.",
+    "intro": [
+      "A short Port Harcourt trip is easier when city experiences stay on land and water-based excursions are treated as a separate decision. That avoids making a weekend depend on boat schedules or remote access.",
+      "Use a park, a strong Rivers-style meal and a relaxed hotel or leisure block as the core, then add anything farther only if current conditions support it."
+    ],
+    "bestFor": [
+      "Food",
+      "City breaks",
+      "Parks",
+      "Relaxed weekends"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Pleasure Park",
+        "detail": "Use the major urban recreation stop as an easy first anchor after arrival."
+      },
+      {
+        "name": "Day 1 — bole and local food",
+        "detail": "Make Rivers food part of the itinerary instead of treating meals as filler between attractions."
+      },
+      {
+        "name": "Evening — one leisure base",
+        "detail": "Keep the evening around a verified hotel, restaurant or nearby entertainment area to reduce unnecessary movement."
+      },
+      {
+        "name": "Day 2 — optional culture block",
+        "detail": "Use the second day for another city experience unless a properly planned riverine trip is already arranged."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Separate water trips",
+        "detail": "Do not make a weekend city plan depend on a last-minute boat excursion."
+      },
+      {
+        "label": "Confirm local transport",
+        "detail": "Arrange a reliable return option before staying out late."
+      },
+      {
+        "label": "Watch heavy rain",
+        "detail": "Weather can affect both roads and waterfront plans."
+      },
+      {
+        "label": "Keep the final day light",
+        "detail": "Allow time for traffic and departure rather than squeezing in a distant stop."
+      }
+    ],
+    "source": {
+      "label": "Rivers State Tourism Development Agency",
+      "href": "https://rstda.rv.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kano-2-day-itinerary",
+    "title": "2 Days in Kano: Old City, Dala Hill & Food Itinerary",
+    "shortTitle": "2 Days in Kano",
+    "kind": "itinerary",
+    "region": "Kano State",
+    "summary": "Use two days in Kano for old-city history, Dala Hill and a relaxed food block, with respectful access around traditional and religious areas.",
+    "intro": [
+      "Kano's strongest short-trip value comes from the old-city story, not from trying to cover the whole metropolis. A two-day plan can give history, views and food enough time to breathe.",
+      "Traditional and religious sites remain active places. Dress appropriately, follow current visitor guidance and ask before photographing people or sensitive spaces."
+    ],
+    "bestFor": [
+      "Old-city history",
+      "Culture",
+      "Architecture",
+      "Short breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Gidan Makama",
+        "detail": "Start with the museum for historical context before exploring other old-city landmarks."
+      },
+      {
+        "name": "Day 1 — Dala Hill",
+        "detail": "Use the hill as a separate viewpoint block and account for heat and the physical climb."
+      },
+      {
+        "name": "Evening — Kano dining",
+        "detail": "Choose a current restaurant or food area and keep the first night relaxed."
+      },
+      {
+        "name": "Day 2 — old-city focus",
+        "detail": "Use the final day for markets, architecture or cultural stops that are open and appropriate to visit."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Respect worship and tradition",
+        "detail": "Dress and behave appropriately around religious and royal areas."
+      },
+      {
+        "label": "Ask before photos",
+        "detail": "Do not assume markets, workshops or traditional sites are unrestricted photography spaces."
+      },
+      {
+        "label": "Avoid peak heat",
+        "detail": "Schedule climbs and long walks earlier or later in the day."
+      },
+      {
+        "label": "Use local guidance",
+        "detail": "A knowledgeable local guide can add context and prevent accidental entry into restricted areas."
+      }
+    ],
+    "source": {
+      "label": "Kano State Government — History",
+      "href": "https://kanostate.gov.ng/history/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "jos-weekend-itinerary",
+    "title": "Weekend in Jos: Museum, Wildlife Park & Plateau Break",
+    "shortTitle": "Weekend in Jos",
+    "kind": "itinerary",
+    "region": "Plateau State",
+    "summary": "Spend a Jos weekend around the museum, wildlife park and the city's cooler plateau atmosphere without overloading the trip with distant Plateau excursions.",
+    "intro": [
+      "Jos can support a comfortable weekend with a museum-and-nature mix inside the city area. That is a different trip from a longer Plateau State road circuit.",
+      "The plan below keeps the short break compact and leaves remote rock formations, waterfalls or rural sites for dedicated excursions."
+    ],
+    "bestFor": [
+      "Cooler weather",
+      "Museums",
+      "Nature",
+      "Weekend breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — museum block",
+        "detail": "Use the Jos Museum area as the first cultural stop while energy and daylight are good."
+      },
+      {
+        "name": "Day 1 — local dining",
+        "detail": "Choose one current restaurant and allow a slower evening rather than adding another distant attraction."
+      },
+      {
+        "name": "Day 2 — wildlife park",
+        "detail": "Use the park as the main outdoor block and confirm current operating details before setting out."
+      },
+      {
+        "name": "Plateau pace",
+        "detail": "Leave room for weather changes and the city's slower highland rhythm."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current opening",
+        "detail": "Museum and wildlife facilities can change hours or operating conditions."
+      },
+      {
+        "label": "Pack for cooler evenings",
+        "detail": "Jos can feel noticeably cooler than many Nigerian cities."
+      },
+      {
+        "label": "Do not chase wildlife",
+        "detail": "Follow park rules and treat sightings as unpredictable."
+      },
+      {
+        "label": "Keep rural trips separate",
+        "detail": "Use another day for destinations well outside Jos."
+      }
+    ],
+    "source": {
+      "label": "Visit Plateau",
+      "href": "https://visitplateau.com/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "enugu-weekend-itinerary",
+    "title": "Weekend in Enugu: City, Ngwo & Food Itinerary",
+    "shortTitle": "Weekend in Enugu",
+    "kind": "itinerary",
+    "region": "Enugu State",
+    "summary": "Plan an Enugu weekend with one city block and one nearby nature trip, choosing Ngwo or Awhum rather than forcing both into an unrealistic schedule.",
+    "intro": [
+      "Enugu works well for a weekend when the city and one nature excursion are balanced. The mistake is trying to fit both Ngwo and Awhum plus several city stops into the same short window.",
+      "Tourism infrastructure around major Enugu attractions is changing, so confirm current access before deciding which nature stop belongs in your weekend."
+    ],
+    "bestFor": [
+      "Nature",
+      "Food",
+      "Weekend breaks",
+      "Short road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Enugu city",
+        "detail": "Use a relaxed city block for food, local culture and your hotel area after arrival."
+      },
+      {
+        "name": "Day 2 — choose Ngwo or Awhum",
+        "detail": "Pick one major nature outing based on current access, weather and road conditions."
+      },
+      {
+        "name": "Nike Lake option",
+        "detail": "A lake or resort stop can work as a slower alternative if a waterfall or forest trip is not suitable."
+      },
+      {
+        "name": "Local food",
+        "detail": "Build time around a proper Enugu meal instead of rushing between distant attractions."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Choose one nature anchor",
+        "detail": "Do not make the weekend depend on two separate rural excursions."
+      },
+      {
+        "label": "Check tourism works",
+        "detail": "Development projects can affect routes and visitor access."
+      },
+      {
+        "label": "Watch rain",
+        "detail": "Wet weather can make forest and waterfall surfaces harder to use."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Keep a daylight buffer for rural approaches and the drive back."
+      }
+    ],
+    "source": {
+      "label": "Enugu State Government",
+      "href": "https://enugustate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ibadan-weekend-itinerary",
+    "title": "Weekend in Ibadan: Agodi, Bower's Tower & Museum Itinerary",
+    "shortTitle": "Weekend in Ibadan",
+    "kind": "itinerary",
+    "region": "Oyo State",
+    "summary": "Use a weekend in Ibadan for one nature block, one city viewpoint and one museum stop, keeping travel time realistic across the large city.",
+    "intro": [
+      "Ibadan is geographically large, so a weekend becomes tiring if the route jumps between distant neighbourhoods. Use one or two clusters per day.",
+      "Agodi Gardens, Bower's Tower and the National Museum of Unity provide a simple nature-viewpoint-history mix without needing a long excursion outside the city."
+    ],
+    "bestFor": [
+      "City breaks",
+      "History",
+      "Parks",
+      "Views"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Agodi Gardens",
+        "detail": "Use the park as a relaxed first stop after arrival rather than beginning with a long cross-city route."
+      },
+      {
+        "name": "Day 1 — city food or evening",
+        "detail": "Keep the rest of the day nearby and leave time for traffic."
+      },
+      {
+        "name": "Day 2 — Bower's Tower",
+        "detail": "Use the elevated landmark as one morning block, checking current access before climbing."
+      },
+      {
+        "name": "Day 2 — museum context",
+        "detail": "Finish with the National Museum of Unity if its current opening fits your departure schedule."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Plan by neighbourhood",
+        "detail": "Ibadan's size makes route order more important than the number of attractions."
+      },
+      {
+        "label": "Check opening times",
+        "detail": "Confirm museum and park operations close to the weekend."
+      },
+      {
+        "label": "Avoid a tight departure",
+        "detail": "Road traffic can extend travel time significantly."
+      },
+      {
+        "label": "Keep one flexible block",
+        "detail": "Leave room to swap stops if weather or access changes."
+      }
+    ],
+    "source": {
+      "label": "Oyo State Government — About Oyo State",
+      "href": "https://oyostate.gov.ng/about-oyo-state/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "abeokuta-day-trip-itinerary",
+    "title": "Abeokuta Day Trip: Olumo Rock, Itoku & Ake Itinerary",
+    "shortTitle": "Abeokuta Day Trip",
+    "kind": "itinerary",
+    "region": "Ogun State",
+    "summary": "Use one day in Abeokuta for Olumo Rock, Itoku adire and the Ake heritage area, keeping the route compact enough for a same-day return.",
+    "intro": [
+      "Abeokuta is one of the strongest day-trip destinations in southwest Nigeria because major heritage stops can be grouped around a clear city story.",
+      "This route starts with the physically demanding rock visit, then shifts to craft and heritage stops so the day becomes easier rather than harder."
+    ],
+    "bestFor": [
+      "Day trips",
+      "Egba history",
+      "Crafts",
+      "Rock scenery"
+    ],
+    "highlights": [
+      {
+        "name": "Morning — Olumo Rock",
+        "detail": "Start early with the climb before the hottest part of the day and while energy is highest."
+      },
+      {
+        "name": "Midday — Itoku Adire Market",
+        "detail": "Move into the nearby textile and craft district for shopping and cultural context."
+      },
+      {
+        "name": "Afternoon — Ake heritage",
+        "detail": "Use the palace and Centenary Hall area as the final historical block if current access permits."
+      },
+      {
+        "name": "Return buffer",
+        "detail": "Leave Abeokuta with enough daylight and road margin instead of adding one more distant stop."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Start early",
+        "detail": "The rock climb is easier before peak heat."
+      },
+      {
+        "label": "Wear practical shoes",
+        "detail": "Steps and rock surfaces need better footwear than a casual city stroll."
+      },
+      {
+        "label": "Ask before photos",
+        "detail": "Markets and palace-related spaces may have their own rules."
+      },
+      {
+        "label": "Protect the return time",
+        "detail": "Do not turn a day trip into a late-night road journey for one extra stop."
+      }
+    ],
+    "source": {
+      "label": "Ogun State investment and tourism information",
+      "href": "https://invest.ogunstate.gov.ng/blogdetails?id=7"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "osogbo-ile-ife-weekend-itinerary",
+    "title": "Osogbo & Ile-Ife Weekend: Yoruba Heritage Itinerary",
+    "shortTitle": "Osogbo & Ile-Ife Weekend",
+    "kind": "itinerary",
+    "region": "Osun State",
+    "summary": "Use a two-city Osun weekend for the Osun-Osogbo Sacred Grove, Osogbo art and Ile-Ife royal and museum heritage without rushing both cities in one day.",
+    "intro": [
+      "Osogbo and Ile-Ife answer a shared Yoruba heritage trip intent but each deserves its own block. A weekend works better than a same-day sprint between every major site.",
+      "The sacred grove, palaces and museums are culturally significant spaces. Current access and photography rules should shape the route."
+    ],
+    "bestFor": [
+      "Yoruba heritage",
+      "UNESCO",
+      "Art",
+      "Weekend road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Osogbo",
+        "detail": "Use the Sacred Grove as the main heritage stop, then add Nike Art Centre or the Ataoja Palace area only if time and access allow."
+      },
+      {
+        "name": "Day 2 — Ile-Ife",
+        "detail": "Build the second day around the Ooni's Palace area, Moremi monument and the National Museum."
+      },
+      {
+        "name": "Cultural context",
+        "detail": "Treat both cities as living cultural centres, not only collections of monuments."
+      },
+      {
+        "name": "Travel buffer",
+        "detail": "Keep enough road time between the two cities and for your final departure."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Respect sacred areas",
+        "detail": "Follow site rules inside the grove and around palace spaces."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume royal or religious spaces allow unrestricted photography."
+      },
+      {
+        "label": "Use local interpretation",
+        "detail": "A knowledgeable guide can add context and reduce shallow or inaccurate storytelling."
+      },
+      {
+        "label": "Do not compress both cities",
+        "detail": "Give each city its own day where possible."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Tourist Centres",
+      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "uyo-weekend-itinerary",
+    "title": "Weekend in Uyo: Museum, Arts & Leisure Itinerary",
+    "shortTitle": "Weekend in Uyo",
+    "kind": "itinerary",
+    "region": "Akwa Ibom State",
+    "summary": "Use a Uyo weekend for museums, arts and leisure in the capital, saving Ibeno and the coastal circuit for a separate road-trip day.",
+    "intro": [
+      "Uyo can support a compact cultural and leisure weekend without depending on a long coastal journey. That makes it a different trip from an Akwa Ibom beach itinerary.",
+      "Use city attractions as the core and add the coast only when you have another full day and current transport information."
+    ],
+    "bestFor": [
+      "City breaks",
+      "Culture",
+      "Leisure",
+      "Weekend trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Ibom Unity Museum",
+        "detail": "Use the museum as the cultural anchor and confirm current visitor access before arrival."
+      },
+      {
+        "name": "Day 1 — arts and culture",
+        "detail": "Pair it with the State Centre for Arts and Culture when programmes or public access are available."
+      },
+      {
+        "name": "Evening — Tropicana area",
+        "detail": "Use the entertainment complex or another current leisure option as a relaxed evening block."
+      },
+      {
+        "name": "Day 2 — flexible city time",
+        "detail": "Keep the second day light unless a separate coastal trip has been planned in advance."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Keep Ibeno separate",
+        "detail": "The coast deserves its own road-time and weather planning."
+      },
+      {
+        "label": "Confirm current operations",
+        "detail": "Large leisure complexes can have individual facilities open or closed independently."
+      },
+      {
+        "label": "Use one transport base",
+        "detail": "Avoid unnecessary cross-city changes during a short stay."
+      },
+      {
+        "label": "Leave departure margin",
+        "detail": "Protect the final hours for traffic and onward travel."
+      }
+    ],
+    "source": {
+      "label": "Akwa Ibom State Government tourism update",
+      "href": "https://akwaibomstate.gov.ng/a-r-i-s-e-agenda-gov-umo-eno-tours-tourism-sites-vows-to-revamp-akwa-ibom-tourism-sector/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ondo-nature-weekend-itinerary",
+    "title": "Ondo Nature Weekend: Idanre Hills, Forest & Heritage Itinerary",
+    "shortTitle": "Ondo Nature Weekend",
+    "kind": "itinerary",
+    "region": "Ondo State",
+    "summary": "Plan a two-day Ondo nature trip around Idanre Hills and one additional nature or heritage stop instead of attempting the state's coast, forests and hills in a single weekend.",
+    "intro": [
+      "Ondo has several strong but widely separated nature destinations. A useful weekend itinerary therefore needs a strict route, not a long list of attractions.",
+      "Make Idanre the main physical activity, then choose one complementary stop based on where you are staying and current road conditions."
+    ],
+    "bestFor": [
+      "Hiking",
+      "Nature",
+      "Road trips",
+      "Weekend breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Idanre Hills",
+        "detail": "Give the climb most of the day and avoid stacking another demanding outdoor activity afterwards."
+      },
+      {
+        "name": "Day 2 — choose one cluster",
+        "detail": "Use Owo Museum, Akure Forest Reserve or another verified stop based on route and weather."
+      },
+      {
+        "name": "Coast is separate",
+        "detail": "Araromi and Igbokoda are a different coastal direction and should not be forced into the same short itinerary."
+      },
+      {
+        "name": "Weather decides the order",
+        "detail": "Rain can make climbs, forest roads and coastal travel less comfortable."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Start the climb early",
+        "detail": "Use cooler hours for Idanre and carry water."
+      },
+      {
+        "label": "Choose one second-day anchor",
+        "detail": "Do not try to cover hills, forest and coast in 48 hours."
+      },
+      {
+        "label": "Check road conditions",
+        "detail": "Rural access can change with weather."
+      },
+      {
+        "label": "Keep daylight for return",
+        "detail": "Build a conservative driving margin."
+      }
+    ],
+    "source": {
+      "label": "Ondo State tourism information",
+      "href": "https://ondostate.gov.ng/tourism"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ekiti-nature-weekend-itinerary",
+    "title": "Ekiti Nature Weekend: Ikogosi, Arinta & Ado-Ekiti Itinerary",
+    "shortTitle": "Ekiti Nature Weekend",
+    "kind": "itinerary",
+    "region": "Ekiti State",
+    "summary": "Use an Ekiti weekend for Ikogosi Warm Springs, Arinta Waterfalls and a light Ado-Ekiti stop while keeping rain and rural road conditions central to the plan.",
+    "intro": [
+      "Ikogosi and Arinta create a natural weekend pair because they serve different experiences without requiring a state-wide sightseeing race.",
+      "Use Ado-Ekiti as the practical base or final city block, and verify current attraction access before leaving for the rural stops."
+    ],
+    "bestFor": [
+      "Warm springs",
+      "Waterfalls",
+      "Nature",
+      "Weekend trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Ikogosi",
+        "detail": "Use the warm springs as the main destination and confirm current resort access and facilities."
+      },
+      {
+        "name": "Day 2 — Arinta",
+        "detail": "Visit the waterfall only when road and weather conditions are suitable."
+      },
+      {
+        "name": "Ado-Ekiti buffer",
+        "detail": "Keep the capital as a flexible food, park or overnight block rather than another demanding excursion."
+      },
+      {
+        "name": "Rain-sensitive route",
+        "detail": "Be ready to reverse or simplify the order after heavy rain."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check both sites live",
+        "detail": "Opening and facility conditions can differ between the spring and waterfall."
+      },
+      {
+        "label": "Wear practical footwear",
+        "detail": "Wet natural surfaces require grip and care."
+      },
+      {
+        "label": "Travel with daylight",
+        "detail": "Rural return journeys are easier before dark."
+      },
+      {
+        "label": "Do not force the waterfall",
+        "detail": "If rain or access is poor, keep the weekend around Ikogosi and Ado-Ekiti."
+      }
+    ],
+    "source": {
+      "label": "Ekiti State Bureau of Tourism Development",
+      "href": "https://www.ekitistate.gov.ng/bureau-of-tourism-development"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kwara-weekend-itinerary",
+    "title": "Kwara Weekend: Ilorin & Owu Falls Itinerary",
+    "shortTitle": "Kwara Weekend",
+    "kind": "itinerary",
+    "region": "Kwara State",
+    "summary": "Use a Kwara weekend for an Ilorin culture block and a separate Owu Falls day, with road and weather checks before the waterfall journey.",
+    "intro": [
+      "Kwara's strongest short itinerary combines an easy Ilorin day with one dedicated nature excursion. The two should not be squeezed together as if Owu Falls were an inner-city stop.",
+      "Use the capital for culture, food and overnight logistics, then make the waterfall the second-day anchor only when the road and weather are suitable."
+    ],
+    "bestFor": [
+      "Ilorin",
+      "Waterfalls",
+      "Culture",
+      "Weekend road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Ilorin",
+        "detail": "Use the Central Mosque area and Flower Garden as a compact city block, respecting worship and local rules."
+      },
+      {
+        "name": "Day 2 — Owu Falls",
+        "detail": "Give the rural waterfall trip its own travel window and current local directions."
+      },
+      {
+        "name": "City base",
+        "detail": "Use Ilorin for accommodation, meals and transport planning rather than changing bases for a short trip."
+      },
+      {
+        "name": "Fallback plan",
+        "detail": "If road or weather conditions are poor, keep the second day in the city instead of forcing the waterfall trip."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check the Owu road",
+        "detail": "Ask about the final approach before departure."
+      },
+      {
+        "label": "Respect worship",
+        "detail": "Dress appropriately and avoid disrupting prayer at the Central Mosque."
+      },
+      {
+        "label": "Carry basics",
+        "detail": "Do not assume full visitor services at the waterfall."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Keep enough road margin for delays."
+      }
+    ],
+    "source": {
+      "label": "Kwara State tourism information",
+      "href": "https://kwarastate.gov.ng/do-business/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "anambra-nature-weekend-itinerary",
+    "title": "Anambra Nature Weekend: Ogbunike, Agulu & Waterfall Itinerary",
+    "shortTitle": "Anambra Nature Weekend",
+    "kind": "itinerary",
+    "region": "Anambra State",
+    "summary": "Plan an Anambra nature weekend around Ogbunike Caves and one additional lake or waterfall stop, respecting cultural rules and realistic road time.",
+    "intro": [
+      "Anambra's cave, lake and waterfall sites can support a strong nature weekend, but they should not be treated as three quick photo stops.",
+      "Make Ogbunike the main heritage-and-physical activity, then choose either Agulu Lake or Owerre-Ezukala according to route, weather and current local access."
+    ],
+    "bestFor": [
+      "Caves",
+      "Nature",
+      "Weekend trips",
+      "Adventure"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Ogbunike",
+        "detail": "Use the cave system as the main destination and allow time for the stair descent and return."
+      },
+      {
+        "name": "Day 2 — choose lake or waterfall",
+        "detail": "Pick Agulu Lake or Owerre-Ezukala rather than trying to rush both."
+      },
+      {
+        "name": "Cultural rules",
+        "detail": "Treat Ogbunike as a living heritage landscape and follow local guidance."
+      },
+      {
+        "name": "Weather flexibility",
+        "detail": "Rain can change cave, waterfall and road conditions quickly."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use a local guide",
+        "detail": "Follow the recognised visitor route at the caves."
+      },
+      {
+        "label": "Wear grip-friendly footwear",
+        "detail": "Steps and natural surfaces may be wet."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Respect culturally sensitive areas."
+      },
+      {
+        "label": "Keep one optional stop",
+        "detail": "Do not make the weekend fail because one rural attraction is inaccessible."
+      }
+    ],
+    "source": {
+      "label": "Anambra State Ministry of Culture, Entertainment and Tourism",
+      "href": "https://anambrastate.gov.ng/ministry-of-culture-entertainment-and-tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "umuahia-history-weekend-itinerary",
+    "title": "Umuahia History Weekend: War Museum & Ojukwu Bunker Itinerary",
+    "shortTitle": "Umuahia History Weekend",
+    "kind": "itinerary",
+    "region": "Abia State",
+    "summary": "Use a history-focused Umuahia weekend for the National War Museum and Ojukwu Bunker, with a live rehabilitation and access check before travelling.",
+    "intro": [
+      "Umuahia's National War Museum and Ojukwu Bunker form a coherent modern-history trip that deserves more time than a quick stop on a wider Abia route.",
+      "Federal preservation work has been active in 2026, so the itinerary depends on confirming what is open rather than assuming old visitor reports still apply."
+    ],
+    "bestFor": [
+      "Modern history",
+      "Museums",
+      "Umuahia",
+      "Weekend trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — National War Museum",
+        "detail": "Use the museum as the main interpretation block and allow enough time to engage with the exhibits."
+      },
+      {
+        "name": "Day 1 or 2 — Ojukwu Bunker",
+        "detail": "Pair the bunker with the museum when access is confirmed because the two sites provide connected historical context."
+      },
+      {
+        "name": "Slow history day",
+        "detail": "Leave room to read and reflect rather than turning the visit into a photo checklist."
+      },
+      {
+        "name": "Arochukwu is separate",
+        "detail": "Use another full day for Arochukwu because the road time and heritage depth do not fit a short Umuahia block."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm rehabilitation status",
+        "detail": "Check which areas are open before the weekend."
+      },
+      {
+        "label": "Use credible interpretation",
+        "detail": "Prefer museum and official historical context over sensational retellings."
+      },
+      {
+        "label": "Keep schedules flexible",
+        "detail": "Works can change visitor flow or hours."
+      },
+      {
+        "label": "Separate distant heritage",
+        "detail": "Do not force Arochukwu into the same short city itinerary."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Abia heritage restoration",
+      "href": "https://fmino.gov.ng/federal-governments-war-museum-and-ojukwu-bunker-get-major-historical-preservation-boost-in-abia/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "lokoja-weekend-itinerary",
+    "title": "Weekend in Lokoja: Confluence, Mount Patti & Heritage Itinerary",
+    "shortTitle": "Weekend in Lokoja",
+    "kind": "itinerary",
+    "region": "Kogi State",
+    "summary": "Use a Lokoja weekend for the Niger–Benue confluence, Mount Patti and colonial heritage with optional boat viewing only when safety conditions are satisfactory.",
+    "intro": [
+      "Lokoja's geography and history fit naturally into a two-day trip: river confluence, elevated views and colonial-era context all tell one connected story.",
+      "A boat is not required for a useful visit. Treat water-level viewing as optional and only use it when the operator, weather and safety equipment are acceptable."
+    ],
+    "bestFor": [
+      "River views",
+      "History",
+      "Road trips",
+      "Weekend breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — confluence and city history",
+        "detail": "Use land-based viewpoints and nearby heritage areas to understand why Lokoja developed where it did."
+      },
+      {
+        "name": "Day 2 — Mount Patti",
+        "detail": "Visit the hill when current access and weather are suitable, leaving enough time for the climb or drive."
+      },
+      {
+        "name": "Optional boat",
+        "detail": "Use a river trip only as a safety-checked extra, not as the foundation of the itinerary."
+      },
+      {
+        "name": "Compact city story",
+        "detail": "Keep the weekend around Lokoja rather than adding distant Kogi attractions."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check weather first",
+        "detail": "Rain and visibility can change both hill and river plans."
+      },
+      {
+        "label": "Verify boat safety",
+        "detail": "Confirm life jackets, operator and return point before boarding."
+      },
+      {
+        "label": "Keep daylight margin",
+        "detail": "Do not leave the hill or river return too late."
+      },
+      {
+        "label": "Use one base",
+        "detail": "Stay in or near Lokoja instead of changing accommodation during a short trip."
+      }
+    ],
+    "source": {
+      "label": "Kogi State Government — About Kogi",
+      "href": "https://kogistate.gov.ng/about-us/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "katsina-heritage-weekend-itinerary",
+    "title": "Katsina Heritage Weekend: Gobarau, Palace & Daura Itinerary",
+    "shortTitle": "Katsina Heritage Weekend",
+    "kind": "itinerary",
+    "region": "Katsina State",
+    "summary": "Use a Katsina heritage weekend for the old-city minaret and palace area, adding Daura only with a realistic second-day road plan.",
+    "intro": [
+      "Katsina city and Daura contain different heritage clusters, so a weekend should give each its own time rather than compressing them into one rushed circuit.",
+      "Religious and royal spaces remain active cultural environments. Dress appropriately, confirm visitor boundaries and ask before photography."
+    ],
+    "bestFor": [
+      "Islamic heritage",
+      "History",
+      "Architecture",
+      "Weekend trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Gobarau Minaret",
+        "detail": "Use the old-city landmark as the central historical anchor."
+      },
+      {
+        "name": "Day 1 — palace area",
+        "detail": "Add the Emir's Palace surroundings only within current visitor rules."
+      },
+      {
+        "name": "Day 2 — Daura option",
+        "detail": "Use Kusugu Well as a separate road-trip block if time and current conditions allow."
+      },
+      {
+        "name": "Living heritage",
+        "detail": "Approach religious and royal sites as active institutions, not static attractions."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Respect worship",
+        "detail": "Avoid prayer times when casual sightseeing would be disruptive."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Royal and religious areas may restrict cameras."
+      },
+      {
+        "label": "Allow road time to Daura",
+        "detail": "Do not treat it as an inner-city stop."
+      },
+      {
+        "label": "Use local guidance",
+        "detail": "Context improves both understanding and access etiquette."
+      }
+    ],
+    "source": {
+      "label": "Katsina State Ministry of Commerce, Industry and Tourism",
+      "href": "https://mocit.kt.gov.ng/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kebbi-heritage-weekend-itinerary",
+    "title": "Kebbi Heritage Weekend: Argungu, Gwandu & Culture Itinerary",
+    "shortTitle": "Kebbi Heritage Weekend",
+    "kind": "itinerary",
+    "region": "Kebbi State",
+    "summary": "Plan a Kebbi heritage weekend around Argungu and one second heritage cluster, rather than trying to cover Argungu, Gwandu and Zuru in a single day.",
+    "intro": [
+      "Kebbi's heritage sites are spread across different towns. A useful weekend therefore needs one primary base and one deliberate road-trip decision.",
+      "Argungu is the strongest starting point for museum and festival context, with Gwandu or Zuru as a separate second-day option when travel conditions support it."
+    ],
+    "bestFor": [
+      "Museums",
+      "Heritage",
+      "Road trips",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Argungu",
+        "detail": "Use Kanta Museum as the main heritage anchor and leave time to understand the town beyond festival imagery."
+      },
+      {
+        "name": "Day 2 — choose Gwandu or Zuru",
+        "detail": "Pick one second cluster rather than chasing distant sites in both directions."
+      },
+      {
+        "name": "Festival context",
+        "detail": "If visiting around a major event, expect different traffic and accommodation demand."
+      },
+      {
+        "name": "Road-first planning",
+        "detail": "Distance between towns is the main constraint, not the number of attractions available."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Choose the second town early",
+        "detail": "Base the decision on current road conditions and where you are staying."
+      },
+      {
+        "label": "Confirm museum opening",
+        "detail": "Do not make a long road journey without checking access first."
+      },
+      {
+        "label": "Use daylight travel",
+        "detail": "Keep a conservative return buffer."
+      },
+      {
+        "label": "Plan festival periods separately",
+        "detail": "Large events can change the entire transport and lodging picture."
+      }
+    ],
+    "source": {
+      "label": "Kebbi State Government",
+      "href": "https://kebbistate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "cross-river-rainforest-road-trip",
+    "title": "Cross River Rainforest Road Trip: Calabar, Agbokim, Afi & Park Planning",
+    "shortTitle": "Cross River Rainforest Road Trip",
+    "kind": "itinerary",
+    "region": "Cross River State",
+    "summary": "Plan a multi-day Cross River nature trip by choosing a realistic sequence between Calabar, Agbokim, Ikom/Alok, Afi and park divisions instead of treating the state as one short excursion.",
+    "intro": [
+      "Cross River's rainforest, waterfalls and monoliths are spread across long road distances. A multi-day route must be built around overnight bases and current access rather than a list of famous names.",
+      "Use Calabar as the arrival gateway, then choose a northern or central nature cluster. Do not attempt every major site on one compressed road trip."
+    ],
+    "bestFor": [
+      "Rainforest",
+      "Waterfalls",
+      "Wildlife",
+      "Multi-day road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Start — Calabar",
+        "detail": "Use the state capital for arrival, supplies and a city buffer before heading inland."
+      },
+      {
+        "name": "Middle — Agbokim and Ikom",
+        "detail": "Pair the waterfall and monolith area only when road, weather and local access make the sequence realistic."
+      },
+      {
+        "name": "Nature extension — Afi",
+        "detail": "Treat the sanctuary as a conservation visit with its own guide and access requirements."
+      },
+      {
+        "name": "Park choice",
+        "detail": "Choose the correct Cross River National Park division for your route rather than assuming one universal entrance."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Plan overnight bases",
+        "detail": "Long distances make same-day returns inefficient and tiring."
+      },
+      {
+        "label": "Confirm each nature site",
+        "detail": "Park, sanctuary and waterfall access can change independently."
+      },
+      {
+        "label": "Build rain flexibility",
+        "detail": "Rainforest weather can alter roads and trails quickly."
+      },
+      {
+        "label": "Do not promise wildlife",
+        "detail": "Treat sightings as unpredictable and conservation rules as mandatory."
+      }
+    ],
+    "source": {
+      "label": "Cross River Ministry of Tourism, Arts & Culture",
+      "href": "https://www.crs-motac.org/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "edo-heritage-nature-itinerary",
+    "title": "Edo Heritage & Nature Itinerary: Benin City and Okomu National Park",
+    "shortTitle": "Edo Heritage & Nature Trip",
+    "kind": "itinerary",
+    "region": "Edo State",
+    "summary": "Use a multi-day Edo trip to combine Benin City heritage with a separately planned Okomu National Park day instead of forcing rainforest travel into a short city schedule.",
+    "intro": [
+      "Benin City and Okomu answer two very different travel intents—living cultural heritage and protected rainforest. Combining them works only when each gets its own day.",
+      "Use the city first for historical context, then contact the park and treat the forest as a dedicated conservation trip with its own transport and weather plan."
+    ],
+    "bestFor": [
+      "Benin heritage",
+      "Rainforest",
+      "Wildlife",
+      "Multi-day trips"
+    ],
+    "highlights": [
+      {
+        "name": "Day 1 — Benin City museum",
+        "detail": "Start with the National Museum to build context for the kingdom and its art traditions."
+      },
+      {
+        "name": "Day 1 — Igun Street",
+        "detail": "Add the bronze-casting district as a living craft experience, asking before photography."
+      },
+      {
+        "name": "Day 2 — Okomu National Park",
+        "detail": "Use the entire day for the park only after confirming entry, guide and road arrangements."
+      },
+      {
+        "name": "Flexible final block",
+        "detail": "Keep an optional meal or city heritage stop after the park rather than another distant excursion."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Contact the park first",
+        "detail": "Do not leave Benin City without current Okomu access information."
+      },
+      {
+        "label": "Prepare for rainforest weather",
+        "detail": "Use suitable footwear, rain protection and insect protection."
+      },
+      {
+        "label": "Respect living heritage",
+        "detail": "Follow workshop, palace and cultural photography rules."
+      },
+      {
+        "label": "Do not combine both in one day",
+        "detail": "The city and national park deserve separate planning blocks."
+      }
+    ],
+    "source": {
+      "label": "Edo State Government tourism overview",
+      "href": "https://edostate.gov.ng/your-tourist-destinations-in-edo-state-this-easter-holiday/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
