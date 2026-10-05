@@ -39,7 +39,7 @@ const careerSeeds = [
     "lotus-bank-careers",
     "Private",
     "Banking",
-    "https://ns1.lotusbank.com/careers",
+    "https://lotusbank.com/careers",
     "Nigeria"
   ],
   [
@@ -472,14 +472,6 @@ const careerSeeds = [
     "Private",
     "Logistics",
     "https://giglogistics.com/careers/",
-    "Nigeria"
-  ],
-  [
-    "Dana Group",
-    "dana-group-careers",
-    "Private",
-    "Manufacturing",
-    "https://danagroup.danapharmaceuticals.com/career/",
     "Nigeria"
   ],
   [
@@ -1077,7 +1069,7 @@ const retiredVacancyGroups: Array<[string, JobSector, string, RetiredVacancySeed
   [
     "Dana Group",
     "Private",
-    "https://danagroup.danapharmaceuticals.com/career/",
+    "https://www.danagroup.com/",
     [
       [
         "Logistics Officer",
@@ -1400,6 +1392,6 @@ export const jobScaleWave: CareerOpportunity[] = [
   federalUniversityLafia,
 ];
 
-if (jobScaleWave.length !== 81) {
-  throw new Error("Quality-first Jobs scale wave must contain exactly 81 records; found " + jobScaleWave.length);
+if (jobScaleWave.length !== 80) {
+  throw new Error("Quality-first Jobs scale wave must contain exactly 80 records; found " + jobScaleWave.length);
 }

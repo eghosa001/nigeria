@@ -80,3 +80,10 @@ The `posting` metadata may still be retained for factual features such as New Th
 The Jobs directory no longer hydrates the full catalog into the browser. `/api/jobs` performs query, sector, status, location and profession filtering on the server and returns at most 24 directory cards by default. The browser receives only the current result page.
 
 Canonical high-quality opportunity pages and sitemap coverage remain unchanged. Retired thin vacancy URLs permanently redirect to their employer portal instead of returning 404. Checked-in TypeScript remains the current server-side source of truth while the prepared D1 schema remains the next storage migration. The focused validator hard-stops before 1,000 in-memory records so D1 storage must be bound before that threshold.
+
+
+## Source reliability rule
+
+An official URL is not sufficient if ordinary users cannot reach it safely. The focused Jobs link audit treats HTTP 404/410, true DNS-not-found, expired TLS certificates and certificate hostname mismatches as failures. Anti-bot 403/429, temporary 5xx responses and transient DNS resolution errors remain review warnings.
+
+The Dana Group career portal is intentionally retired from the active Jobs catalog because the employer's visible career information page currently routes its "View Jobs" action to a host with an expired TLS certificate. Dana's former MyNigeriaGuide career/vacancy URLs permanently redirect to the FMCG & Manufacturing hub until a safe official application route is available.

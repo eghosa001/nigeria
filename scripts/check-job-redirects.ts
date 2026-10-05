@@ -15,7 +15,7 @@ const redirects = await redirectFactory();
 const bySource = new Map(redirects.map((item) => [item.source, item]));
 
 assert(new Set(retiredJobRoutes.map((item) => item.sourceSlug)).size === retiredJobRoutes.length, "Retired Jobs redirect source slugs must be unique.");
-assert(retiredJobRoutes.length === 110, "Retired Jobs redirect table must preserve all 110 compatibility routes.");
+assert(retiredJobRoutes.length === 111, "Retired Jobs redirect table must preserve all 111 compatibility routes.");
 
 for (const item of retiredJobRoutes) {
   const source = "/jobs/" + item.sourceSlug;
@@ -31,4 +31,8 @@ assert(reliance?.destination === "/jobs/reliance-health-careers", "Reliance reti
 console.log("Jobs redirect config check");
 console.log("  retired redirects:", retiredJobRoutes.length);
 console.log("  framework redirects:", redirects.length);
+const dana = bySource.get("/jobs/dana-group-careers");
+assert(dana?.destination === "/jobs/categories/fmcg-manufacturing", "Dana career portal must stay retired while its application route has certificate failures.");
+
 console.log("  Reliance redirect:", reliance?.destination);
+console.log("  Dana redirect:", dana?.destination);
