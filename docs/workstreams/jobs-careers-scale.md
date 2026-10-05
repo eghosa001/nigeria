@@ -167,6 +167,61 @@ unless a critical shared fix is unavoidable.
 
 Keep any unavoidable shared edit minimal and in its own commit.
 
+## Inherited MyNigeriaGuide requirements
+
+These requirements come from the existing Jobs & Careers production standard and must be preserved while scaling.
+
+### Priority and source quality
+
+- Prioritise Nigerian government applications/recruitment and requirements first, then reputable private institutions/employers.
+- Prefer employer-direct vacancy pages and official recruitment portals over copied job-board forms.
+- Every destination/application URL must be checked; job source manifests/link-integrity coverage should include the jobs catalog.
+- Never invent salary, deadline, qualification, location or vacancy status.
+
+### Live-status and lifecycle rules
+
+- “Open now” surfaces must show only genuinely current applications.
+- Deadlines must normalise against the current date and jobs must automatically/explicitly move out of open status when expired.
+- Preserve closed pages where they retain useful search/history value, but mark them clearly closed and remove misleading live-application language.
+- JobPosting structured data is allowed only when the visible vacancy is currently valid; expired pages must not continue exposing misleading live JobPosting markup.
+
+### Job page quality
+
+Each active vacancy should clearly show:
+
+- employer and exact role;
+- location and employment type;
+- current status and deadline;
+- eligibility/qualifications;
+- required documents;
+- application steps;
+- responsible official application link;
+- verified-at/source information;
+- application-fee/scam warning.
+
+Do not collect passwords, government identifiers, CV uploads or other sensitive application data on MyNigeriaGuide when the responsible employer/portal should receive them.
+
+### SEO and interlinking
+
+- Build real journeys: employer hub ↔ vacancy, profession/field hub ↔ vacancy, city/location hub ↔ relevant jobs, NYSC/graduate/internship/government/private hubs ↔ matching opportunities.
+- Update parent and related pages when a new vacancy is published so it is never an orphan.
+- Target real keyword clusters such as employer + role, government recruitment, graduate programme, internship, NYSC, profession and location only when enough real opportunities/content exist.
+- Use Search Console demand to prioritise ranking opportunities, not speculative keyword cloning.
+- New pages must enter the jobs sitemap and existing IndexNow/Bing discovery flow.
+
+### Mobile, trust and presentation
+
+- Phone-first: vacancy cards, qualification lists, deadlines, filters and official-apply actions must fit small screens cleanly.
+- Preserve complete dark-mode readability.
+- Prominently route users to the official application destination and include fraud/fee warnings where appropriate.
+- Preserve clean server-rendered crawlability, strong performance/accessibility and no hydration regressions.
+- Ads stay below the at-a-glance/answer-first job facts.
+
+### Editorial workflow
+
+- Stale/uncertain vacancies should be reviewed or downgraded rather than left falsely open.
+- Publication should continue to use the existing reviewable repository workflow and relevant CI/runtime gates while obeying the owner's minimal-test rule.
+
 ## Validation
 
 Follow the owner's minimal-test rule. Run only directly relevant job/data checks. Do not manually run the full repository suite.
