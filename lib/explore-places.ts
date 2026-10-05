@@ -2195,6 +2195,358 @@ export const explorePlaces: ExplorePlace[] = [
     source: { label: "Zamfara State Ministry of Commerce, Industry and Tourism", href: "https://mocit.zamfara.gov.ng/tourism/" },
     checkedAt: "2026-10-05",
     tags: ["Kaura Namoda","history","Zamfara","tomb"],
+  },
+  {
+    "slug": "badagry-heritage-museum",
+    "guideSlug": "badagry-heritage-guide",
+    "name": "Badagry Heritage Museum",
+    "kind": "landmark",
+    "area": "Badagry historic district",
+    "address": "Badagry Heritage Museum, Badagry, Lagos State, Nigeria",
+    "summary": "A museum in Badagry's historic district that provides context for the town's transatlantic-slavery, missionary and colonial history.",
+    "cost": "Confirm current museum admission and opening hours before travel",
+    "mapQuery": "Badagry Heritage Museum Badagry Lagos Nigeria",
+    "source": {
+      "label": "Badagry Local Government — Historic Monuments",
+      "href": "https://badagry.lg.gov.ng/historical-monuments/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Badagry",
+      "museum",
+      "history",
+      "heritage"
+    ]
+  },
+  {
+    "slug": "gberefu-point-of-no-return",
+    "guideSlug": "badagry-heritage-guide",
+    "name": "Gberefu Point of No Return",
+    "kind": "landmark",
+    "area": "Gberefu Island / Badagry",
+    "address": "Gberefu Island, Badagry, Lagos State, Nigeria",
+    "summary": "A memorial destination on the Badagry slave-route landscape, normally requiring local logistics and a water crossing.",
+    "cost": "Boat crossing and guide costs vary — agree the current total and return arrangement before departure",
+    "mapQuery": "Gberefu Point of No Return Badagry Lagos Nigeria",
+    "source": {
+      "label": "Badagry Local Government — Historic Monuments",
+      "href": "https://badagry.lg.gov.ng/historical-monuments/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Badagry",
+      "Gberefu",
+      "slave route",
+      "heritage"
+    ]
+  },
+  {
+    "slug": "ibeno-beach",
+    "guideSlug": "akwa-ibom-coast-guide",
+    "name": "Ibeno Beach",
+    "kind": "nature",
+    "area": "Ibeno",
+    "address": "Ibeno Beach, Ibeno Local Government Area, Akwa Ibom State, Nigeria",
+    "summary": "Atlantic coastline in Ibeno and one of Akwa Ibom's best-known beach destinations.",
+    "cost": "Public-access and local activity costs vary — confirm current beach access before travelling",
+    "mapQuery": "Ibeno Beach Akwa Ibom Nigeria",
+    "source": {
+      "label": "Akwa Ibom State Government — About Akwa Ibom",
+      "href": "https://akwaibomstate.gov.ng/about-akwa-ibom/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Ibeno",
+      "beach",
+      "Atlantic",
+      "Akwa Ibom"
+    ]
+  },
+  {
+    "slug": "bridge-of-no-return-ikot-abasi",
+    "guideSlug": "akwa-ibom-coast-guide",
+    "name": "Bridge of No Return",
+    "kind": "landmark",
+    "area": "Ikot Abasi",
+    "address": "Bridge of No Return, Ikot Abasi, Akwa Ibom State, Nigeria",
+    "summary": "A historic waterfront landmark in Ikot Abasi associated with the area's slave-trade history and memorial landscape.",
+    "cost": "Confirm current visitor access and local guide arrangements before travel",
+    "mapQuery": "Bridge of No Return Ikot Abasi Akwa Ibom Nigeria",
+    "source": {
+      "label": "Akwa Ibom State Government — About Akwa Ibom",
+      "href": "https://akwaibomstate.gov.ng/about-akwa-ibom/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Ikot Abasi",
+      "history",
+      "heritage",
+      "waterfront"
+    ]
+  },
+  {
+    "slug": "ibom-marina-beach",
+    "guideSlug": "akwa-ibom-coast-guide",
+    "name": "Ibom Marina Beach",
+    "kind": "nature",
+    "area": "Akwa Ibom waterfront",
+    "address": "Ibom Marina Beach, Akwa Ibom State, Nigeria",
+    "summary": "A waterfront leisure stop promoted within Akwa Ibom's tourism programme; confirm the current public-access arrangement before setting out.",
+    "cost": "Access and activity costs vary — check current operating details before travel",
+    "mapQuery": "Ibom Marina Beach Akwa Ibom Nigeria",
+    "source": {
+      "label": "Akwa Ibom State Government — tourism sites tour",
+      "href": "https://akwaibomstate.gov.ng/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "beach",
+      "marina",
+      "waterfront",
+      "Akwa Ibom"
+    ]
+  },
+  {
+    "slug": "agbokim-waterfalls",
+    "guideSlug": "agbokim-waterfalls-guide",
+    "name": "Agbokim Waterfalls",
+    "kind": "nature",
+    "area": "Etung LGA",
+    "address": "Agbokim Waterfalls, Agbokim, Etung Local Government Area, Cross River State, Nigeria",
+    "summary": "A major waterfall landscape in Etung and one of Cross River's established nature attractions.",
+    "cost": "Confirm current road, local access and any guide or community fee before travelling",
+    "mapQuery": "Agbokim Waterfalls Cross River Nigeria",
+    "source": {
+      "label": "Cross River Ministry of Tourism, Arts and Culture — Tourist Sites",
+      "href": "https://crs-motac.org/tourists.php"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Agbokim",
+      "waterfall",
+      "Etung",
+      "Cross River"
+    ]
+  },
+  {
+    "slug": "alok-ikom-monoliths",
+    "guideSlug": "alok-ikom-monoliths-guide",
+    "name": "Alok Ikom Stone Monoliths",
+    "kind": "landmark",
+    "area": "Alok / Ikom area",
+    "address": "Alok, Ikom area, Cross River State, Nigeria",
+    "summary": "Carved stone monolith heritage within the Ikom area, recognised on Nigeria's UNESCO Tentative List.",
+    "cost": "Arrange current community access and local guidance; fees may vary by site",
+    "mapQuery": "Alok Ikom Monoliths Cross River Nigeria",
+    "source": {
+      "label": "UNESCO World Heritage Centre — Alok Ikom Stone Monoliths",
+      "href": "https://whc.unesco.org/en/tentativelists/5173/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Ikom",
+      "monoliths",
+      "archaeology",
+      "heritage"
+    ]
+  },
+  {
+    "slug": "afi-mountain-wildlife-sanctuary",
+    "guideSlug": "afi-mountain-wildlife-guide",
+    "name": "Afi Mountain Wildlife Sanctuary",
+    "kind": "nature",
+    "area": "Boki LGA",
+    "address": "Afi Mountain Wildlife Sanctuary, Boki Local Government Area, Cross River State, Nigeria",
+    "summary": "A protected mountain-forest landscape in Cross River associated with important primate, bird and rainforest conservation.",
+    "cost": "Confirm current sanctuary entry, guide and transport arrangements before travelling",
+    "mapQuery": "Afi Mountain Wildlife Sanctuary Cross River Nigeria",
+    "source": {
+      "label": "Cross River Ministry of Tourism, Arts and Culture — Tourist Sites",
+      "href": "https://crs-motac.org/tourists.php"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Afi Mountain",
+      "wildlife",
+      "Boki",
+      "conservation"
+    ]
+  },
+  {
+    "slug": "okomu-national-park-main",
+    "guideSlug": "okomu-national-park-guide",
+    "name": "Okomu National Park",
+    "kind": "nature",
+    "area": "Ovia South-West / Udo axis",
+    "address": "Okomu National Park, Edo State, Nigeria",
+    "summary": "Protected lowland rainforest in Edo State managed by the Nigeria Park Service and known for forest biodiversity and wildlife conservation.",
+    "cost": "Confirm current park entry, guide and visitor-facility charges directly with the park",
+    "mapQuery": "Okomu National Park Edo Nigeria",
+    "source": {
+      "label": "Nigeria Park Service — Okomu National Park",
+      "href": "https://nigeriaparkservice.gov.ng/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Okomu",
+      "national park",
+      "rainforest",
+      "Edo"
+    ]
+  },
+  {
+    "slug": "mambilla-plateau",
+    "guideSlug": "mambilla-plateau-guide",
+    "name": "Mambilla Plateau",
+    "kind": "nature",
+    "area": "Sardauna LGA",
+    "address": "Mambilla Plateau, Sardauna Local Government Area, Taraba State, Nigeria",
+    "summary": "Highland landscape in southeastern Taraba known for rolling terrain, cooler conditions and expansive viewpoints.",
+    "cost": "Landscape access varies — budget transport and confirm current local routes before travel",
+    "mapQuery": "Mambilla Plateau Taraba Nigeria",
+    "source": {
+      "label": "Taraba State Government",
+      "href": "https://www.tarabastate.gov.ng/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Mambilla",
+      "plateau",
+      "highlands",
+      "Taraba"
+    ]
+  },
+  {
+    "slug": "gembu-highland-base",
+    "guideSlug": "mambilla-plateau-guide",
+    "name": "Gembu",
+    "kind": "landmark",
+    "area": "Gembu / Sardauna LGA",
+    "address": "Gembu, Sardauna Local Government Area, Taraba State, Nigeria",
+    "summary": "The principal highland town and practical base for transport, supplies and local trip planning on the Mambilla Plateau.",
+    "cost": "Town access is public; accommodation and local transport costs vary",
+    "mapQuery": "Gembu Taraba Nigeria",
+    "source": {
+      "label": "Taraba State Government",
+      "href": "https://www.tarabastate.gov.ng/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Gembu",
+      "Mambilla",
+      "gateway",
+      "Taraba"
+    ]
+  },
+  {
+    "slug": "mambilla-tea-landscape",
+    "guideSlug": "mambilla-plateau-guide",
+    "name": "Mambilla Tea Landscape",
+    "kind": "nature",
+    "area": "Mambilla Plateau",
+    "address": "Mambilla Plateau tea-growing area, Taraba State, Nigeria",
+    "summary": "Tea-growing highland landscape associated with the Mambilla Plateau; any estate or factory visit should be arranged directly rather than assumed to be public.",
+    "cost": "Roadside landscape viewing is route-dependent; confirm permission for any estate or facility visit",
+    "mapQuery": "Mambilla Tea Taraba Nigeria",
+    "source": {
+      "label": "Taraba State Government",
+      "href": "https://www.tarabastate.gov.ng/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "tea",
+      "Mambilla",
+      "highlands",
+      "agriculture"
+    ]
+  },
+  {
+    "slug": "cross-river-national-park-main",
+    "guideSlug": "cross-river-national-park-guide",
+    "name": "Cross River National Park",
+    "kind": "nature",
+    "area": "Oban and Okwangwo divisions",
+    "address": "Cross River National Park, Cross River State, Nigeria",
+    "summary": "Large protected rainforest park spanning the Oban and Okwangwo divisions and forming a major part of Nigeria's biodiversity conservation landscape.",
+    "cost": "Confirm current park entry, guide and transport arrangements with park authorities",
+    "mapQuery": "Cross River National Park Nigeria",
+    "source": {
+      "label": "UNESCO World Heritage Centre — Cross River rainforest tentative landscape",
+      "href": "https://whc.unesco.org/en/tentativelists/6204/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "national park",
+      "rainforest",
+      "Cross River",
+      "conservation"
+    ]
+  },
+  {
+    "slug": "oban-division-cross-river-national-park",
+    "guideSlug": "cross-river-national-park-guide",
+    "name": "Oban Division, Cross River National Park",
+    "kind": "nature",
+    "area": "Oban / Akamkpa",
+    "address": "Oban Division, Cross River National Park, Akamkpa, Cross River State, Nigeria",
+    "summary": "Southern rainforest division of Cross River National Park within the wider transboundary biodiversity landscape.",
+    "cost": "Confirm the active visitor entry point, guide and route with park authorities",
+    "mapQuery": "Oban Division Cross River National Park Nigeria",
+    "source": {
+      "label": "UNESCO World Heritage Centre — Cross River rainforest tentative landscape",
+      "href": "https://whc.unesco.org/en/tentativelists/6204/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Oban",
+      "rainforest",
+      "Akamkpa",
+      "national park"
+    ]
+  },
+  {
+    "slug": "okwangwo-division-cross-river-national-park",
+    "guideSlug": "cross-river-national-park-guide",
+    "name": "Okwangwo Division, Cross River National Park",
+    "kind": "nature",
+    "area": "Boki / Obanliku",
+    "address": "Okwangwo Division, Cross River National Park, Cross River State, Nigeria",
+    "summary": "Northern division of Cross River National Park in the mountain-and-rainforest conservation landscape near Boki and Obanliku.",
+    "cost": "Confirm current park access, guide and road arrangements before travelling",
+    "mapQuery": "Okwangwo Division Cross River National Park Nigeria",
+    "source": {
+      "label": "UNESCO World Heritage Centre — Cross River rainforest tentative landscape",
+      "href": "https://whc.unesco.org/en/tentativelists/6204/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Okwangwo",
+      "Boki",
+      "rainforest",
+      "national park"
+    ]
+  },
+  {
+    "slug": "arochukwu-long-juju",
+    "guideSlug": "arochukwu-long-juju-guide",
+    "name": "Arochukwu Long Juju Cave-Temple Landscape",
+    "kind": "landmark",
+    "area": "Arochukwu",
+    "address": "Arochukwu, Abia State, Nigeria",
+    "summary": "Historic cave-temple and sacred heritage landscape in Arochukwu, recognised on Nigeria's UNESCO Tentative List.",
+    "cost": "Arrange current local guide, access and any community fee before the visit",
+    "mapQuery": "Arochukwu Long Juju Abia Nigeria",
+    "source": {
+      "label": "UNESCO World Heritage Centre — Arochukwu Long Juju Slave Route",
+      "href": "https://whc.unesco.org/en/tentativelists/5172/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Arochukwu",
+      "Long Juju",
+      "heritage",
+      "cave"
+    ]
   }
 ];
 
@@ -2229,6 +2581,141 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "federal-palace-lagos-fashion-week-2026",
     "nok-by-alara",
     "nike-art-gallery-lagos",
+  ],
+  "olumo-rock-visitor-guide": [
+    "olumo-rock",
+    "itoku-adire-market",
+    "centenary-hall-abeokuta"
+  ],
+  "idanre-hills-visitor-guide": [
+    "idanre-hills",
+    "owo-museum-antiquities",
+    "akure-forest-reserve"
+  ],
+  "ikogosi-warm-springs-guide": [
+    "ikogosi-warm-springs",
+    "arinta-waterfalls",
+    "fajuyi-memorial-park"
+  ],
+  "ogbunike-caves-guide": [
+    "ogbunike-cave",
+    "agulu-lake",
+    "owerre-ezukala-cave-waterfall"
+  ],
+  "ngwo-pine-forest-guide": [
+    "ngwo-pine-forest",
+    "awhum-waterfall",
+    "landmark-nike-lake-resort"
+  ],
+  "awhum-waterfall-guide": [
+    "awhum-waterfall",
+    "ngwo-pine-forest",
+    "landmark-nike-lake-resort"
+  ],
+  "owu-falls-guide": [
+    "owu-falls-kwara",
+    "kwara-flower-garden",
+    "ilorin-central-mosque"
+  ],
+  "oguta-lake-guide": [
+    "oguta-lake",
+    "mbari-centre-owerri",
+    "okigwe-hills"
+  ],
+  "farin-ruwa-waterfalls-guide": [
+    "farin-ruwa-waterfalls",
+    "eggon-hills-caves",
+    "ara-rock-nasarawa"
+  ],
+  "matsirga-waterfalls-guide": [
+    "matsirga-waterfalls",
+    "kufena-hills-zaria",
+    "zaria-city-walls"
+  ],
+  "national-war-museum-umuahia-guide": [
+    "national-war-museum-umuahia",
+    "ojukwu-bunker-umuahia",
+    "ibom-waterfall-arochukwu"
+  ],
+  "niger-benue-confluence-lokoja-guide": [
+    "niger-benue-confluence-lokoja",
+    "mount-patti-lokoja",
+    "lokoja-colonial-heritage"
+  ],
+  "gobarau-minaret-katsina-guide": [
+    "gobarau-minaret",
+    "emirs-palace-katsina",
+    "kusugu-well-daura"
+  ],
+  "kanta-museum-argungu-guide": [
+    "kanta-museum-argungu",
+    "hubbare-gwandu",
+    "girmache-shrine-zuru"
+  ],
+  "dadin-kowa-dam-guide": [
+    "dadin-kowa-dam",
+    "kaltungo-hills",
+    "nafada-riverside"
+  ],
+  "okposi-salt-lakes-guide": [
+    "okposi-salt-lakes",
+    "amanchor-cave-ebonyi",
+    "oferekpe-beach-ebonyi"
+  ],
+  "river-ethiope-source-guide": [
+    "river-ethiope-source-umuaja",
+    "nana-living-history-palace-koko",
+    "mungo-park-house-asaba"
+  ],
+  "kwatakashi-rocks-guide": [
+    "kwatakashi-rocks-zamfara",
+    "zamfara-state-museum-gusau",
+    "kauran-namoda-tomb"
+  ],
+  "badagry-heritage-guide": [
+    "badagry-heritage-district",
+    "badagry-heritage-museum",
+    "gberefu-point-of-no-return"
+  ],
+  "akwa-ibom-coast-guide": [
+    "ibeno-beach",
+    "bridge-of-no-return-ikot-abasi",
+    "ibom-marina-beach"
+  ],
+  "agbokim-waterfalls-guide": [
+    "agbokim-waterfalls",
+    "alok-ikom-monoliths",
+    "afi-mountain-wildlife-sanctuary"
+  ],
+  "alok-ikom-monoliths-guide": [
+    "alok-ikom-monoliths",
+    "agbokim-waterfalls",
+    "afi-mountain-wildlife-sanctuary"
+  ],
+  "afi-mountain-wildlife-guide": [
+    "afi-mountain-wildlife-sanctuary",
+    "alok-ikom-monoliths",
+    "agbokim-waterfalls"
+  ],
+  "okomu-national-park-guide": [
+    "okomu-national-park-main",
+    "national-museum-benin-city",
+    "igun-street"
+  ],
+  "mambilla-plateau-guide": [
+    "mambilla-plateau",
+    "gembu-highland-base",
+    "mambilla-tea-landscape"
+  ],
+  "cross-river-national-park-guide": [
+    "cross-river-national-park-main",
+    "oban-division-cross-river-national-park",
+    "okwangwo-division-cross-river-national-park"
+  ],
+  "arochukwu-long-juju-guide": [
+    "arochukwu-long-juju",
+    "ibom-waterfall-arochukwu",
+    "national-war-museum-umuahia"
   ],
 };
 

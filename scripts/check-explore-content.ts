@@ -2,10 +2,20 @@ import { exploreGuides } from "../lib/explore";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
 const errors: string[] = [];
-const guideSlugs = new Set(exploreGuides.map((guide) => guide.slug));
+const guideSlugs = new Set<string>();
 const placeSlugs = new Set<string>();
 
 for (const guide of exploreGuides) {
+  if (guideSlugs.has(guide.slug)) errors.push(`duplicate guide slug: ${guide.slug}`);
+  guideSlugs.add(guide.slug);
+
+  if (guide.intro.length < 2) errors.push(`${guide.slug}: expected at least 2 useful intro paragraphs`);
+  if (guide.bestFor.length < 3) errors.push(`${guide.slug}: expected at least 3 best-for signals`);
+  if (guide.highlights.length < 4) errors.push(`${guide.slug}: expected at least 4 substantive highlights`);
+  if (guide.planning.length < 4) errors.push(`${guide.slug}: expected at least 4 planning decisions`);
+  if (!guide.source?.href.startsWith("https://")) errors.push(`${guide.slug}: needs an https verification source`);
+  if (!/^2026-\d{2}-\d{2}$/.test(guide.lastReviewed)) errors.push(`${guide.slug}: invalid lastReviewed`);
+
   const places = getExplorePlacesForGuide(guide.slug);
   if (places.length < 3) errors.push(`${guide.slug}: expected at least 3 mapped places, found ${places.length}`);
 }
