@@ -113,7 +113,8 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Current listing: daytime opening; verify before travel.",
     phone: "+234 1 263 6005",
     mapQuery: "National Museum Lagos Onikan",
-    checkedAt: "2026-09-29",
+    source: { label: "Lagos State Ministry of Tourism, Arts & Culture", href: "https://tourismartandculture.lagosstate.gov.ng/" },
+    checkedAt: "2026-10-05",
     tags: ["history", "museum", "culture"],
   },
   {
@@ -333,7 +334,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "History museum focused on Calabar and the transatlantic slave trade.",
     cost: "Verify current museum admission",
     mapQuery: "Slave History Museum Calabar",
-    checkedAt: "2026-09-29",
+    source: { label: "Calabar Municipal — Tourist Attractions", href: "https://calabar.municipal.crossriverstate.gov.ng/tourist-attractions" },
+    checkedAt: "2026-10-05",
     tags: ["museum", "history", "heritage"],
   },
   {
@@ -367,7 +369,8 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Current listing shows long daily opening hours; verify event-day access.",
     phone: "+234 906 002 2295",
     mapQuery: "Port Harcourt Pleasure Park",
-    checkedAt: "2026-09-29",
+    source: { label: "Rivers State Tourism Development Agency", href: "https://rstda.rv.gov.ng/" },
+    checkedAt: "2026-10-05",
     tags: ["park", "family", "leisure"],
   },
   {
@@ -460,7 +463,8 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Current listing: roughly 10:00–18:00 daily.",
     phone: "+234 816 061 4742",
     mapQuery: "Jos Museum and Zoo",
-    checkedAt: "2026-09-29",
+    source: { label: "VisitPlateau — official tourism platform", href: "https://visitplateau.com/" },
+    checkedAt: "2026-10-05",
     tags: ["museum", "history", "family"],
   },
   {
@@ -592,7 +596,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Nature-focused forest area associated with the Obudu highlands.",
     cost: "Confirm guided-access arrangements locally",
     mapQuery: "Becheve Nature Reserve Obudu",
-    checkedAt: "2026-09-29",
+    source: { label: "Obudu LGA — Tourism", href: "https://obudu.crossriverstate.gov.ng/tourism" },
+    checkedAt: "2026-10-05",
     tags: ["forest", "nature", "guided walk"],
   },
   {
@@ -634,7 +639,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Warm natural spring and one of Yankari's signature visitor experiences.",
     cost: "Usually part of the reserve visit; confirm any separate activity/access charge",
     mapQuery: "Wikki Warm Spring Yankari",
-    checkedAt: "2026-09-29",
+    source: { label: "Bauchi State Government — Tourism", href: "https://www.bauchistate.gov.ng/tourism/" },
+    checkedAt: "2026-10-05",
     tags: ["spring", "swimming", "nature"],
   },
   {
@@ -647,7 +653,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Historic cave site within the wider Yankari reserve circuit.",
     cost: "Confirm guided-access arrangements with the reserve",
     mapQuery: "Marshall Caves Yankari Game Reserve",
-    checkedAt: "2026-09-29",
+    source: { label: "Bauchi State Government — Tourism", href: "https://www.bauchistate.gov.ng/tourism/" },
+    checkedAt: "2026-10-05",
     tags: ["history", "caves", "guided"],
   },
 
@@ -743,7 +750,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "A practical stop for adire textiles, craft shopping and a closer look at Abeokuta's textile tradition.",
     cost: "Market browsing is free; textile prices vary by fabric, design and seller",
     mapQuery: "Itoku Adire Market Abeokuta",
-    checkedAt: "2026-09-29",
+    source: { label: "Ogun State investment and tourism information", href: "https://invest.ogunstate.gov.ng/blogdetails?id=7" },
+    checkedAt: "2026-10-05",
     tags: ["adire", "shopping", "craft"],
   },
   {
@@ -756,7 +764,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "The royal palace of the Alake of Egbaland and an important part of Abeokuta's living heritage.",
     cost: "Public-area access may be free; confirm visitor or guided access before arrival",
     mapQuery: "Alake Palace Abeokuta",
-    checkedAt: "2026-09-29",
+    source: { label: "Ogun State investment and tourism information", href: "https://invest.ogunstate.gov.ng/blogdetails?id=7" },
+    checkedAt: "2026-10-05",
     tags: ["palace", "heritage", "culture"],
   },
   {
@@ -769,7 +778,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Historic civic landmark that fits naturally into a heritage walk around central Abeokuta.",
     cost: "Exterior viewing is free; confirm interior or event access locally",
     mapQuery: "Centenary Hall Abeokuta",
-    checkedAt: "2026-09-29",
+    source: { label: "Ogun State investment and tourism information", href: "https://invest.ogunstate.gov.ng/blogdetails?id=7" },
+    checkedAt: "2026-10-05",
     tags: ["architecture", "history", "landmark"],
   },
 
@@ -811,7 +821,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Royal institution closely connected to Osogbo's history and the annual Osun-Osogbo festival.",
     cost: "Confirm visitor access locally; ceremonies can affect availability",
     mapQuery: "Ataoja Palace Osogbo",
-    checkedAt: "2026-09-29",
+    source: { label: "Osun State Government — Tourist Centres", href: "https://www.osunstate.gov.ng/tourist-centres/" },
+    checkedAt: "2026-10-05",
     tags: ["palace", "heritage", "festival"],
   },
 
@@ -2685,6 +2696,50 @@ export const explorePlaces: ExplorePlace[] = [
       "geology",
       "Plateau",
       "photography"
+    ]
+  },
+  {
+    "slug": "freedom-park-lagos",
+    "guideSlug": "lagos",
+    "name": "Freedom Park Lagos",
+    "kind": "landmark",
+    "area": "Lagos Island",
+    "address": "Freedom Park, Old Prison Ground, 1 Hospital Road, Lagos Island, Lagos State, Nigeria",
+    "summary": "Heritage, arts and recreation site created from the former Broad Street Prison, with an active programme of cultural events.",
+    "cost": "Visit and event pricing varies — check the official site or book a visit before travelling",
+    "mapQuery": "Freedom Park Lagos Nigeria",
+    "source": {
+      "label": "Freedom Park Lagos — official site",
+      "href": "https://freedomparklagos.com/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Freedom Park",
+      "Lagos Island",
+      "heritage",
+      "arts"
+    ]
+  },
+  {
+    "slug": "tafawa-balewa-square-lagos",
+    "guideSlug": "lagos",
+    "name": "Tafawa Balewa Square",
+    "kind": "landmark",
+    "area": "Lagos Island",
+    "address": "Tafawa Balewa Square, Lagos Island, Lagos State, Nigeria",
+    "summary": "Historic national square associated with Nigeria's independence and renewed heritage features including the Independence Obelisk.",
+    "cost": "Public access can change around events and security arrangements — confirm before a dedicated visit",
+    "mapQuery": "Tafawa Balewa Square Lagos Nigeria",
+    "source": {
+      "label": "Lagos State Government — Independence Obelisk at TBS",
+      "href": "https://lagosstate.gov.ng/news/all/view/6920819c88319a643b6df3a8"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Tafawa Balewa Square",
+      "TBS",
+      "independence",
+      "Lagos heritage"
     ]
   }
 ];
