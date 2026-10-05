@@ -640,6 +640,8 @@ const expectedSlugs = [
   "vfs-canada-passport-submission-nigeria",
   "tlscontact-france-visa-appointment-nigeria",
   "tlscontact-france-track-collect-passport-nigeria",
+  "tlscontact-italy-visa-appointment-nigeria",
+  "tlscontact-italy-passport-collection-nigeria",
 ] as const;
 const representative = [
   {
@@ -764,8 +766,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(632);
-  expect(publicServices).toHaveLength(632);
+  expect(services).toHaveLength(634);
+  expect(publicServices).toHaveLength(634);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
