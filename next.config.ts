@@ -40,11 +40,6 @@ const nextConfig: NextConfig = {
       { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
     ];
     return [
-      ...retiredJobRoutes.map(({ sourceSlug, destinationPath }) => ({
-        source: "/jobs/" + sourceSlug,
-        destination: destinationPath,
-        permanent: true,
-      })),
       { source: "/admin", headers: privateAdminHeaders },
       { source: "/admin/:path*", headers: privateAdminHeaders },
       { source: "/api/admin/:path*", headers: privateAdminHeaders },
@@ -53,6 +48,11 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...retiredJobRoutes.map(({ sourceSlug, destinationPath }) => ({
+        source: "/jobs/" + sourceSlug,
+        destination: destinationPath,
+        permanent: true,
+      })),
       {
         source: "/services/bvn-change-details",
         destination: "/topics/bvn",
