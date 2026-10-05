@@ -1179,6 +1179,34 @@ export const agencies: Agency[] = [
     "description": "Professional banking body offering membership, professional examinations and certification services in Nigeria.",
     "website": "https://www.cibng.org/"
   },
+  {
+    "slug": "kwik-delivery",
+    "name": "Kwik",
+    "shortName": "Kwik",
+    "description": "Private Nigerian on-demand logistics platform for parcel delivery, businesses, riders, drivers and service agents.",
+    "website": "https://kwik.delivery/"
+  },
+  {
+    "slug": "glovo-nigeria",
+    "name": "Glovo Nigeria",
+    "shortName": "Glovo",
+    "description": "Private on-demand delivery platform for restaurant, retail, courier, partner and rider services in Nigeria.",
+    "website": "https://glovoapp.com/ng/en/"
+  },
+  {
+    "slug": "hotels-ng",
+    "name": "Hotels.ng",
+    "shortName": "Hotels.ng",
+    "description": "Private Nigerian hotel-booking platform offering accommodation search, reservations, payment and cancellation support.",
+    "website": "https://hotels.ng/"
+  },
+  {
+    "slug": "travelstart-nigeria",
+    "name": "Travelstart Nigeria",
+    "shortName": "Travelstart",
+    "description": "Private online travel platform offering flight booking, hotel and travel support services to Nigerian customers.",
+    "website": "https://www.travelstart.com.ng/"
+  },
 
 ];
 
