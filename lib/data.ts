@@ -716,6 +716,20 @@ export const agencies: Agency[] = [
     "shortName": "PalmPay",
     "description": "Private Nigerian financial-services platform offering accounts, transfers, bills, merchant services and KYC-tiered access.",
     "website": "https://www.palmpay.com/nigeria/"
+  },
+  {
+    "slug": "aedc",
+    "name": "Abuja Electricity Distribution Plc",
+    "shortName": "AEDC",
+    "description": "Private electricity distribution company serving Abuja and surrounding franchise areas with payment, metering, refund and customer self-service.",
+    "website": "https://www.abujaelectricity.com/"
+  },
+  {
+    "slug": "ibedc",
+    "name": "Ibadan Electricity Distribution Company Plc",
+    "shortName": "IBEDC",
+    "description": "Private electricity distribution company serving Oyo, Ogun, Osun, Kwara and parts of Niger, Ekiti and Kogi with payment, metering and customer self-service.",
+    "website": "https://www.ibedc.com/"
   }
 ];
 
