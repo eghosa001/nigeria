@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
@@ -38,7 +38,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const item = getJobOpportunity(slug);
   if (!item) {
     const replacement = retiredJobRedirects.get(slug);
-    if (replacement) permanentRedirect("/jobs/" + replacement);
+    if (replacement) redirect("/jobs/" + replacement);
     notFound();
   }
 
