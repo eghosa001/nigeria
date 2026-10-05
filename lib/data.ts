@@ -1137,6 +1137,34 @@ export const agencies: Agency[] = [
     "description": "Private on-demand delivery platform for food, groceries, pharmacies, local markets, vendors and riders in Nigerian cities.",
     "website": "https://www.chowdeck.com/"
   },
+  {
+    "slug": "medplus-nigeria",
+    "name": "Medplus Nigeria",
+    "shortName": "Medplus",
+    "description": "Private Nigerian pharmacy and health retail platform offering online ordering and nationwide delivery.",
+    "website": "https://medplusnig.com/"
+  },
+  {
+    "slug": "cfa-institute",
+    "name": "CFA Institute",
+    "shortName": "CFA Institute",
+    "description": "Global professional body offering the CFA Program, exam registration, scheduling and credential services to candidates in Nigeria.",
+    "website": "https://www.cfainstitute.org/"
+  },
+  {
+    "slug": "cipm-nigeria",
+    "name": "Chartered Institute of Personnel Management of Nigeria",
+    "shortName": "CIPM",
+    "description": "Professional HR body offering student membership, examinations and professional certification services in Nigeria.",
+    "website": "https://cipmnigeria.org/"
+  },
+  {
+    "slug": "jiji-nigeria",
+    "name": "Jiji Nigeria",
+    "shortName": "Jiji",
+    "description": "Private Nigerian classifieds marketplace with ad posting, Safe Deal buying, delivery and seller services.",
+    "website": "https://jiji.ng/"
+  },
 
 ];
 
