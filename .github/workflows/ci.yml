@@ -55,7 +55,6 @@ jobs:
 
             if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
               echo "mode=jobs" >> "$GITHUB_OUTPUT"
-              if printf '%s\n' "$changed" | grep -qx 'next.config.ts'; then echo "jobs_config=true" >> "$GITHUB_OUTPUT"; else echo "jobs_config=false" >> "$GITHUB_OUTPUT"; fi
               printf 'Jobs-only product files:\n%s\n' "$changed"
             elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
               echo "mode=tour" >> "$GITHUB_OUTPUT"
@@ -76,9 +75,6 @@ jobs:
         run: |
           python3 scripts/fast_path_guard.py
           npm run check:jobs
-      - name: Build Next app for Jobs redirect config
-        if: steps.scope.outputs.mode == 'jobs' && steps.scope.outputs.jobs_config == 'true'
-        run: npm run build:next
       - name: Validate Tour Nigeria changes
         if: steps.scope.outputs.mode == 'tour'
         run: |
