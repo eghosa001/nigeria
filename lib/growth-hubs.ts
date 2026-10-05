@@ -819,7 +819,17 @@ export const growthHubs: GrowthHub[] = [
       { query: "book Arik Air flight", serviceSlug: "arik-air-book-flight" },
       { query: "Arik Air online check in", serviceSlug: "arik-air-online-check-in" },
       { query: "book Green Africa flight", serviceSlug: "green-africa-book-flight" },
-      { query: "Green Africa web check in", serviceSlug: "green-africa-online-check-in" }
+      { query: "Green Africa web check in", serviceSlug: "green-africa-online-check-in" },
+      { query: "UBA USSD code", serviceSlug: "uba-919-ussd-banking" },
+      { query: "block UBA debit card", serviceSlug: "uba-block-debit-card" },
+      { query: "freeze UBA account", serviceSlug: "uba-freeze-account" },
+      { query: "Stanbic IBTC USSD code", serviceSlug: "stanbic-909-ussd-banking" },
+      { query: "Stanbic instant account", serviceSlug: "stanbic-instant-account-909" },
+      { query: "block Stanbic account", serviceSlug: "stanbic-emergency-account-block" },
+      { query: "Access Bank USSD code", serviceSlug: "access-bank-901-ussd" },
+      { query: "block Access Bank account", serviceSlug: "access-bank-block-account" },
+      { query: "Access Money Account", serviceSlug: "access-money-account" },
+      { query: "FirstBank USSD code", serviceSlug: "firstbank-894-ussd" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -949,7 +959,17 @@ export const growthHubs: GrowthHub[] = [
       "arik-air-book-flight",
       "arik-air-online-check-in",
       "green-africa-book-flight",
-      "green-africa-online-check-in"
+      "green-africa-online-check-in",
+      "uba-919-ussd-banking",
+      "uba-block-debit-card",
+      "uba-freeze-account",
+      "stanbic-909-ussd-banking",
+      "stanbic-instant-account-909",
+      "stanbic-emergency-account-block",
+      "access-bank-901-ussd",
+      "access-bank-block-account",
+      "access-money-account",
+      "firstbank-894-ussd"
     ]
   },
 
