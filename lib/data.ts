@@ -1165,6 +1165,20 @@ export const agencies: Agency[] = [
     "description": "Private Nigerian classifieds marketplace with ad posting, Safe Deal buying, delivery and seller services.",
     "website": "https://jiji.ng/"
   },
+  {
+    "slug": "citn",
+    "name": "Chartered Institute of Taxation of Nigeria",
+    "shortName": "CITN",
+    "description": "Professional taxation body offering student membership, examinations, induction and subscription services in Nigeria.",
+    "website": "https://portal.citn.org/"
+  },
+  {
+    "slug": "cibn",
+    "name": "Chartered Institute of Bankers of Nigeria",
+    "shortName": "CIBN",
+    "description": "Professional banking body offering membership, professional examinations and certification services in Nigeria.",
+    "website": "https://www.cibng.org/"
+  },
 
 ];
 
