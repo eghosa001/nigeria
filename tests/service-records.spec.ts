@@ -636,6 +636,10 @@ const expectedSlugs = [
   "cima-cgma-exam-scheduling",
   "google-cloud-certification-exam-scheduling",
   "cfa-exam-deferral",
+  "vfs-canada-biometrics-appointment-nigeria",
+  "vfs-canada-passport-submission-nigeria",
+  "tlscontact-france-visa-appointment-nigeria",
+  "tlscontact-france-track-collect-passport-nigeria",
 ] as const;
 const representative = [
   {
@@ -760,8 +764,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(628);
-  expect(publicServices).toHaveLength(628);
+  expect(services).toHaveLength(632);
+  expect(publicServices).toHaveLength(632);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
