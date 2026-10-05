@@ -28,6 +28,7 @@ jobs:
     timeout-minutes: 2
     outputs:
       run: ${{ steps.scope.outputs.run }}
+      jobs_live: ${{ steps.scope.outputs.jobs_live }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -38,6 +39,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           changed="$(git diff --name-only HEAD^1 HEAD)"
@@ -45,10 +47,69 @@ jobs:
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/check-jobs-content\.ts$)' || true)"
           if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Jobs-only deployment; no broad live browser suite."
+            echo "jobs_live=true" >> "$GITHUB_OUTPUT"
+            echo "Jobs-only deployment; run the focused live Jobs route probe and skip the broad browser suite."
           else
             echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
           fi
+
+  jobs-live-smoke:
+    needs: scope
+    if: needs.scope.outputs.jobs_live == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      LIVE_BASE_URL: https://mynigeriaguide.com
+    steps:
+      - name: Wait for this exact commit to reach Cloudflare production
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$GITHUB_SHA"
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null || true)"
+            if [ "$deployed" = "$expected" ]; then
+              echo "Verified production deployment: $expected"
+              exit 0
+            fi
+            echo "Waiting for Cloudflare production ($i/60)."
+            sleep 10
+          done
+          echo "Production did not reach commit $expected within 10 minutes."
+          exit 1
+
+      - name: Verify representative Jobs routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          check_route() {
+            path="$1"
+            expected="$2"
+            tmp="$(mktemp)"
+            status="$(curl -sS --max-time 20 --retry 2 --retry-delay 2               --output "$tmp" --write-out '%{http_code}'               "$LIVE_BASE_URL$path?verify=$GITHUB_SHA")"
+            if [ "$status" != "200" ]; then
+              echo "Expected HTTP 200 for $path, got $status."
+              cat "$tmp"
+              exit 1
+            fi
+            if ! grep -Fqi "$expected" "$tmp"; then
+              echo "Expected '$expected' in live response for $path."
+              head -c 4000 "$tmp"
+              exit 1
+            fi
+            echo "Live route verified: $path"
+          }
+
+          check_route "/jobs" "300 verified pathways"
+          check_route "/jobs/reliance-health-careers" "Reliance Health"
+          check_route "/jobs/reliance-health-associate-data-scientist-2026" "Associate Data Scientist"
+          check_route "/jobs/federal-university-lafia-staff-recruitment-2026" "Federal University of Lafia"
+          check_route "/jobs/locations/lagos" "Jobs in Lagos"
+          check_route "/jobs/professions/technology" "Technology"
+          check_route "/jobs/new-this-week" "New jobs posted this week"
+          check_route "/jobs/closing-this-week" "Jobs closing this week"
 
   live-smoke:
     needs: scope
