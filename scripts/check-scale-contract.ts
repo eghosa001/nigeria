@@ -50,12 +50,14 @@ assert(
   "Underlying record headroom must be at least as large as the public URL target.",
 );
 
+const indexableYouTubeDetailMovies = indexableYouTubeMovies.filter((movie) => movie.source !== "curated");
+
 const counts = {
   movies_entertainment:
     entertainmentTitles.length +
     seriesTitles.length +
     entertainmentPeople.length +
-    indexableYouTubeMovies.length,
+    indexableYouTubeDetailMovies.length,
   services: publicServices.length,
   tour_nigeria: exploreGuides.length + explorePlaces.length,
   jobs_careers: jobOpportunities.length,
