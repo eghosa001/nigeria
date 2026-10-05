@@ -1368,6 +1368,10 @@ export const categories = [
   {
     "name": "E-commerce",
     "description": "Marketplace ordering, returns, refunds and seller-onboarding services."
+  },
+  {
+    "name": "Travel & accommodation",
+    "description": "Private travel-platform, hotel-booking, reservation, cancellation and traveller-support services."
   }
 ];
 
