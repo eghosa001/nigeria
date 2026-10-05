@@ -942,7 +942,13 @@ export const growthHubs: GrowthHub[] = [
       { query: "Chowdeck rider signup", serviceSlug: "chowdeck-rider-signup" },
       { query: "Chowdeck Ads", serviceSlug: "chowdeck-advertising" },
       { query: "ICAN professional student registration", serviceSlug: "ican-professional-student-registration" },
-      { query: "ICAN exam registration", serviceSlug: "ican-professional-exam-registration" }
+      { query: "ICAN exam registration", serviceSlug: "ican-professional-exam-registration" },
+      { query: "sell on Jiji Nigeria", serviceSlug: "jiji-post-ad-nigeria" },
+      { query: "Jiji Safe Deal Nigeria", serviceSlug: "jiji-safe-deal-buy-nigeria" },
+      { query: "CIPM student registration", serviceSlug: "cipm-student-membership-registration" },
+      { query: "CIPM exam registration", serviceSlug: "cipm-exam-registration" },
+      { query: "CFA exam registration Nigeria", serviceSlug: "cfa-exam-registration-nigeria" },
+      { query: "Medplus online order Nigeria", serviceSlug: "medplus-order-online-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1195,7 +1201,13 @@ export const growthHubs: GrowthHub[] = [
       "chowdeck-rider-signup",
       "chowdeck-advertising",
       "ican-professional-student-registration",
-      "ican-professional-exam-registration"
+      "ican-professional-exam-registration",
+      "jiji-post-ad-nigeria",
+      "jiji-safe-deal-buy-nigeria",
+      "cipm-student-membership-registration",
+      "cipm-exam-registration",
+      "cfa-exam-registration-nigeria",
+      "medplus-order-online-nigeria"
     ]
   },
 
