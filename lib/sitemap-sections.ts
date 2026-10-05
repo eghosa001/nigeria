@@ -8,6 +8,7 @@ import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { indexableYouTubeChannelHubs } from "@/lib/youtube-channel-hubs";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
@@ -173,6 +174,11 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
+    { url: base + "/entertainment/youtube/channels", lastModified: youtubeModified },
+    ...indexableYouTubeChannelHubs.map((hub) => ({
+      url: base + "/entertainment/youtube/channels/" + hub.channel.slug,
+      lastModified: hub.latestChecked || youtubeModified,
+    })),
     ...pagination,
     ...youtubeMovieLibrary
       .filter((movie) => movie.source !== "curated")
