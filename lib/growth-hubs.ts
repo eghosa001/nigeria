@@ -874,7 +874,21 @@ export const growthHubs: GrowthHub[] = [
       { query: "ValueJet baggage allowance", serviceSlug: "valuejet-baggage-allowance" },
       { query: "book Aero Contractors flight", serviceSlug: "aero-contractors-book-flight" },
       { query: "Aero Contractors manage booking check in", serviceSlug: "aero-contractors-manage-check-in" },
-      { query: "Aero Contractors refund", serviceSlug: "aero-contractors-refund" }
+      { query: "Aero Contractors refund", serviceSlug: "aero-contractors-refund" },
+      { query: "open Jaiz Bank account online", serviceSlug: "jaiz-online-account-opening" },
+      { query: "reset Jaiz digital banking password", serviceSlug: "jaiz-digital-banking-password-reset" },
+      { query: "open Unity Bank business account", serviceSlug: "unity-business-account-opening" },
+      { query: "Unity Bank *7799#", serviceSlug: "unity-7799-ussd-banking" },
+      { query: "create Paga account", serviceSlug: "paga-personal-account-registration" },
+      { query: "verify Paga transaction", serviceSlug: "paga-transaction-verification" },
+      { query: "Paga verified business", serviceSlug: "paga-verified-business" },
+      { query: "Quickteller pay bills", serviceSlug: "quickteller-pay-bills" },
+      { query: "Quickteller bank transfer", serviceSlug: "quickteller-transfer-money" },
+      { query: "UPS Nigeria shipping", serviceSlug: "ups-create-shipment-nigeria" },
+      { query: "UPS tracking Nigeria", serviceSlug: "ups-track-package-nigeria" },
+      { query: "book Max Air flight", serviceSlug: "max-air-book-flight" },
+      { query: "Max Air online check in", serviceSlug: "max-air-online-check-in" },
+      { query: "Max Air baggage allowance", serviceSlug: "max-air-baggage-allowance" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1059,7 +1073,21 @@ export const growthHubs: GrowthHub[] = [
       "valuejet-baggage-allowance",
       "aero-contractors-book-flight",
       "aero-contractors-manage-check-in",
-      "aero-contractors-refund"
+      "aero-contractors-refund",
+      "jaiz-online-account-opening",
+      "jaiz-digital-banking-password-reset",
+      "unity-business-account-opening",
+      "unity-7799-ussd-banking",
+      "paga-personal-account-registration",
+      "paga-transaction-verification",
+      "paga-verified-business",
+      "quickteller-pay-bills",
+      "quickteller-transfer-money",
+      "ups-create-shipment-nigeria",
+      "ups-track-package-nigeria",
+      "max-air-book-flight",
+      "max-air-online-check-in",
+      "max-air-baggage-allowance"
     ]
   },
 
