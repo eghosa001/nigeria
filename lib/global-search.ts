@@ -1,3 +1,4 @@
+import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { careerGuides } from "@/lib/career-guides";
 
 function normalise(value: string) {
@@ -120,7 +121,7 @@ export async function searchGlobalCatalog(query: string) {
         query,
         item.title,
         [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
-      ),
+      ) + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4),
     }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))

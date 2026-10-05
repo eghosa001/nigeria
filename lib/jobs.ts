@@ -1,5 +1,20 @@
 export type JobSector = "Government" | "Private" | "International";
 export type JobStatus = "open" | "closed" | "screening" | "training" | "career-page" | "upcoming";
+export type JobRecordKind = "vacancy" | "programme" | "recruitment-exercise" | "career-page";
+export type SchemaEmploymentType = "FULL_TIME" | "PART_TIME" | "CONTRACTOR" | "TEMPORARY" | "INTERN" | "VOLUNTEER" | "PER_DIEM" | "OTHER";
+
+export type JobPostingLocation = {
+  locality?: string;
+  region?: string;
+  country: string;
+};
+
+export type JobPostingMetadata = {
+  jobTitle: string;
+  datePosted: string;
+  employmentType?: SchemaEmploymentType | SchemaEmploymentType[];
+  locations: JobPostingLocation[];
+};
 
 export type JobSource = {
   label: string;
@@ -11,6 +26,8 @@ export type CareerOpportunity = {
   slug: string;
   title: string;
   organization: string;
+  kind?: JobRecordKind;
+  posting?: JobPostingMetadata;
   sector: JobSector;
   status: JobStatus;
   statusLabel: string;
@@ -38,6 +55,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     slug: "snv-energy-advisor-abuja-2026",
     title: "SNV Energy Advisor — Abuja",
     organization: "SNV",
+    kind: "vacancy",
     sector: "International",
     status: "open",
     statusLabel: "Applications open",
@@ -86,6 +104,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     slug: "snv-project-manager-abuja-2026",
     title: "SNV Project Manager — Energy Project, Abuja",
     organization: "SNV",
+    kind: "vacancy",
     sector: "International",
     status: "open",
     statusLabel: "Applications open",
@@ -2107,6 +2126,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     slug: "uniben-teaching-non-teaching-recruitment-2026",
     title: "University of Benin Teaching & Non-Teaching Recruitment 2026",
     organization: "University of Benin",
+    kind: "recruitment-exercise",
     sector: "Government",
     status: "open",
     statusLabel: "Applications open",
@@ -2132,6 +2152,12 @@ export const jobOpportunities: CareerOpportunity[] = [
     slug: "unilag-professorial-chair-2026",
     title: "University of Lagos Professorial Chair Vacancy 2026",
     organization: "University of Lagos",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Senator Douye Diri Professorial Chair in Leadership and Good Governance",
+      datePosted: "2026-09-09",
+      locations: [{ locality: "Akoka", region: "Lagos State", country: "NG" }]
+    },
     sector: "Government",
     status: "open",
     statusLabel: "Applications open",
@@ -2426,6 +2452,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     slug: "coronation-graduate-trainee-2026",
     title: "Coronation 2026 Graduate Trainee Programme",
     organization: "Coronation Group",
+    kind: "programme",
     sector: "Private",
     status: "open",
     statusLabel: "Apply Now on official site",
@@ -3076,6 +3103,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     slug: "may-baker-consumer-healthcare-executive-2026",
     title: "May & Baker Consumer Healthcare Executive 2026",
     organization: "May & Baker Nigeria Plc",
+    kind: "vacancy",
     sector: "Private",
     status: "open",
     statusLabel: "Applications open",
@@ -3119,6 +3147,301 @@ export const jobOpportunities: CareerOpportunity[] = [
     feeNote: "Verify recruitment channels through Promasidor Nigeria's official website.",
     sourceNotes: ["Promasidor Nigeria maintains official company contact and recruitment-related information on its Nigerian website."],
     sources: [{ label: "Promasidor Nigeria", url: "https://www.promasidor.ng/en/contact/", lastChecked: "2026-10-05" }]
+  },
+  {
+    slug: "eha-medical-laboratory-scientist-abuja-2026",
+    title: "EHA Clinics Medical Laboratory Scientist — Abuja",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Medical Laboratory Scientist",
+      datePosted: "2026-10-04",
+      locations: [{ locality: "Abuja", region: "FCT", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Medical Laboratory Scientist in Abuja through its official jobs portal.",
+    location: "Abuja, FCT",
+    employmentType: "Clinical laboratory role",
+    audiences: ["Medical laboratory scientists", "Healthcare professionals", "NYSC-completed applicants"],
+    fields: ["Medical Laboratory Science", "Healthcare", "Diagnostics", "Clinical Services"],
+    qualifications: ["Bachelor's degree in Medical Laboratory Science.", "Valid and up-to-date professional practice licence.", "NYSC completion is required by the employer's eligibility check."],
+    requirements: ["Basic computer knowledge.", "Meet EHA Clinics' professional-licence and NYSC eligibility checks.", "Review the live job page before applying because vacancy status can change."],
+    documents: ["CV/resume", "Professional licence details", "Education and NYSC information requested in the application"],
+    applicationSteps: ["Open EHA Clinics' official job page.", "Review the Medical Laboratory Scientist requirements.", "Complete the eligibility check.", "Continue to the official application flow."],
+    officialUrl: "https://erp.eha.ng/jobs/medical-laboratory-scientist-abuja-649",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Apply only through EHA Clinics' official recruitment system.",
+    sourceNotes: ["EHA Clinics' jobs index listed this Abuja role as posted on 4 October 2026.", "The official detail page includes an active Apply Now eligibility flow."],
+    sources: [
+      { label: "EHA Clinics — Medical Laboratory Scientist, Abuja", url: "https://erp.eha.ng/jobs/medical-laboratory-scientist-abuja-649", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-people-operations-coordinator-2026",
+    title: "EHA Clinics People Operations Coordinator — Abuja / Kano",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "People Operations Coordinator",
+      datePosted: "2026-10-05",
+      locations: [
+        { locality: "Abuja", region: "FCT", country: "NG" },
+        { locality: "Kano", region: "Kano State", country: "NG" }
+      ]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a People Operations Coordinator for Abuja or Kano through its official jobs platform.",
+    location: "Abuja, FCT / Kano State",
+    employmentType: "Human resources / people operations",
+    audiences: ["HR professionals", "People operations professionals", "NYSC-completed applicants"],
+    fields: ["Human Resources", "People Operations", "Administration", "Healthcare"],
+    qualifications: ["Degree in Human Resources or a related field is part of EHA's eligibility check.", "Relevant people-operations capability is required by the role."],
+    requirements: ["NYSC completion.", "Basic computer knowledge.", "Comfort with the listed work locations and employer eligibility checks."],
+    documents: ["CV/resume", "Education and NYSC information requested by EHA Clinics"],
+    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the role and locations.", "Complete the eligibility questions.", "Continue to EHA Clinics' application form."],
+    officialUrl: "https://erp.eha.ng/jobs/people-operations-coordinator-1020",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Use EHA Clinics' official jobs platform.",
+    sourceNotes: ["EHA Clinics' jobs index listed this role as posted on 5 October 2026.", "The official detail page shows Abuja and Kano as work locations and an active application flow."],
+    sources: [
+      { label: "EHA Clinics — People Operations Coordinator", url: "https://erp.eha.ng/jobs/people-operations-coordinator-1020", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-senior-coordinator-talent-management-2026",
+    title: "EHA Clinics Senior Coordinator, Talent Management",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Senior Coordinator, Talent Management",
+      datePosted: "2026-09-24",
+      locations: [
+        { locality: "Abuja", region: "FCT", country: "NG" },
+        { locality: "Kano", region: "Kano State", country: "NG" },
+        { locality: "Lagos", region: "Lagos State", country: "NG" }
+      ]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Senior Coordinator, Talent Management across Abuja, Kano and Lagos.",
+    location: "Abuja / Kano / Lagos",
+    employmentType: "Human resources / talent management",
+    audiences: ["HR professionals", "Talent-management professionals", "Experienced hires"],
+    fields: ["Human Resources", "Talent Management", "Learning and Development", "People Operations"],
+    qualifications: ["Bachelor's degree in Human Resources, Business Administration or a related field.", "Two to four years of HR coordination experience with exposure to talent, performance management or learning and development."],
+    requirements: ["NYSC completion.", "Talent-management knowledge.", "Basic computer skills and role-specific eligibility checks."],
+    documents: ["CV/resume", "Education and experience details requested by EHA Clinics"],
+    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the multi-city work arrangement and requirements.", "Complete the employer's eligibility check.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/senior-coordinator-talent-management-941",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Apply through EHA Clinics' official recruitment system.",
+    sourceNotes: ["EHA Clinics listed this vacancy as posted on 24 September 2026.", "The official role page identifies Abuja, Kano and Lagos as locations."],
+    sources: [
+      { label: "EHA Clinics — Senior Coordinator, Talent Management", url: "https://erp.eha.ng/jobs/senior-coordinator-talent-management-941", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-registered-nurse-yaba-lagos-2026",
+    title: "EHA Clinics Registered Nurse — Yaba, Lagos",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Registered Nurse",
+      datePosted: "2026-09-27",
+      locations: [{ locality: "Yaba", region: "Lagos State", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Registered Nurse for Yaba, Lagos through its official jobs portal.",
+    location: "Yaba, Lagos State",
+    employmentType: "Clinical nursing role",
+    audiences: ["Registered nurses", "Healthcare professionals"],
+    fields: ["Nursing", "Healthcare", "Clinical Services"],
+    qualifications: ["Bachelor's degree or Diploma of Nursing from an accredited institution.", "Current nursing licence to practise in Nigeria.", "Relevant postgraduate clinical experience as stated by EHA Clinics."],
+    requirements: ["Current clinical practice experience.", "Valid professional licence.", "Complete EHA Clinics' eligibility check."],
+    documents: ["CV/resume", "Nursing licence and education details requested by EHA Clinics"],
+    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review clinical experience and licence requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Use EHA Clinics' official jobs system.",
+    sourceNotes: ["EHA Clinics listed the Registered Nurse — Yaba Lagos role as posted on 27 September 2026.", "The employer's detail page includes professional nursing requirements."],
+    sources: [
+      { label: "EHA Clinics — Registered Nurse, Yaba Lagos", url: "https://erp.eha.ng/jobs/registered-nurse-yaba-lagos-1011", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-medical-doctor-abuja-2026",
+    title: "EHA Clinics Medical Doctor — Abuja",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Medical Doctor",
+      datePosted: "2026-10-01",
+      locations: [{ locality: "Abuja", region: "FCT", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Medical Doctor in Abuja through its official jobs platform.",
+    location: "Lifecamp, Abuja, FCT",
+    employmentType: "Clinical medical role",
+    audiences: ["Medical doctors", "Physicians", "Healthcare professionals"],
+    fields: ["Medicine", "Healthcare", "Clinical Services"],
+    qualifications: ["Medical degree such as MBBS, MBChB, MD or DO from a recognised institution.", "Completion of internship and the employer's stated post-NYSC experience.", "Current MDCN registration and practice licence.", "BLS and ACLS completion."],
+    requirements: ["NYSC completion.", "Current professional licence.", "Basic computer knowledge and EHA Clinics' eligibility requirements."],
+    documents: ["CV/resume", "Medical licence and registration details", "Education, internship and NYSC information"],
+    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the medical qualification and experience requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/medical-doctor-abuja-549",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Apply only through EHA Clinics' official jobs portal.",
+    sourceNotes: ["EHA Clinics listed the Abuja Medical Doctor role as posted on 1 October 2026.", "The role page identifies Lifecamp, Abuja and requires an active medical licence."],
+    sources: [
+      { label: "EHA Clinics — Medical Doctor, Abuja", url: "https://erp.eha.ng/jobs/medical-doctor-abuja-549", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-medical-doctor-lagos-2026",
+    title: "EHA Clinics Medical Doctor — Lagos",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Medical Doctor",
+      datePosted: "2026-09-18",
+      locations: [{ locality: "Sangotedo", region: "Lagos State", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Medical Doctor for its Sangotedo, Lagos location.",
+    location: "Sangotedo, Lagos State",
+    employmentType: "Clinical medical role",
+    audiences: ["Medical doctors", "Physicians", "Healthcare professionals"],
+    fields: ["Medicine", "Healthcare", "Clinical Services"],
+    qualifications: ["Medical degree from a recognised institution.", "Completion of compulsory internship and NYSC requirements stated by EHA Clinics.", "Current professional registration and practice licence."],
+    requirements: ["Meet EHA Clinics' clinical and location eligibility checks.", "Maintain current professional registration.", "Review the live vacancy before applying."],
+    documents: ["CV/resume", "Medical licence and registration details", "Education and NYSC information"],
+    applicationSteps: ["Open the EHA Clinics Lagos Medical Doctor vacancy.", "Review professional requirements.", "Complete the eligibility questions.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/medical-doctor-lagos-541",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Use EHA Clinics' official recruitment system.",
+    sourceNotes: ["EHA Clinics listed the Lagos Medical Doctor role as posted on 18 September 2026.", "The employer's detail page places the role in Sangotedo, Lagos."],
+    sources: [
+      { label: "EHA Clinics — Medical Doctor, Lagos", url: "https://erp.eha.ng/jobs/medical-doctor-lagos-541", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-dental-assistant-lagos-2026",
+    title: "EHA Clinics Dental Assistant — Lagos",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Dental Assistant",
+      datePosted: "2026-09-29",
+      locations: [{ locality: "Sangotedo", region: "Lagos State", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Dental Assistant in Sangotedo, Lagos through its official careers system.",
+    location: "Sangotedo, Lagos State",
+    employmentType: "Dental clinical support role",
+    audiences: ["Dental assistants", "Dental health technicians", "Dental surgery technicians"],
+    fields: ["Dentistry", "Dental Health", "Healthcare", "Clinical Services"],
+    qualifications: ["Diploma in Dental Health Technician or Dental Surgery Technician.", "Current registration with the Dental Therapists Registration Board of Nigeria as required by EHA Clinics."],
+    requirements: ["Current professional registration.", "Comfort with the Sangotedo work location.", "Complete the employer's eligibility check."],
+    documents: ["CV/resume", "Professional registration and qualification details"],
+    applicationSteps: ["Open the official EHA Clinics Dental Assistant vacancy.", "Review the professional registration requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/dental-assistant-lagos-585",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Apply through EHA Clinics' official jobs system.",
+    sourceNotes: ["EHA Clinics listed the Dental Assistant — Lagos role as posted on 29 September 2026.", "The detail page places the role in Sangotedo, Lagos."],
+    sources: [
+      { label: "EHA Clinics — Dental Assistant, Lagos", url: "https://erp.eha.ng/jobs/dental-assistant-lagos-585", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-pharmacist-abuja-2026",
+    title: "EHA Clinics Pharmacist — Abuja",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Pharmacist",
+      datePosted: "2026-09-29",
+      locations: [{ locality: "Abuja", region: "FCT", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting a Pharmacist for Abuja through its official jobs portal.",
+    location: "Lugbe / Asba, Abuja, FCT",
+    employmentType: "Clinical pharmacy role",
+    audiences: ["Pharmacists", "Healthcare professionals"],
+    fields: ["Pharmacy", "Healthcare", "Clinical Services"],
+    qualifications: ["Bachelor's degree in Pharmacy, M.Pharm or PharmD.", "Relevant post-NYSC pharmacy experience.", "Current registration with the Pharmacists Council of Nigeria and an up-to-date practice licence."],
+    requirements: ["NYSC completion.", "Current PCN registration and practice licence.", "Complete EHA Clinics' eligibility check."],
+    documents: ["CV/resume", "PCN registration and practice licence details", "Education and NYSC information"],
+    applicationSteps: ["Open the official EHA Clinics Pharmacist vacancy.", "Review qualification and licence requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/pharmacist-546",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Use EHA Clinics' official recruitment platform.",
+    sourceNotes: ["EHA Clinics listed the Pharmacist role as posted on 29 September 2026.", "The official detail page places the role in Abuja and requires a current pharmacy licence."],
+    sources: [
+      { label: "EHA Clinics — Pharmacist", url: "https://erp.eha.ng/jobs/pharmacist-546", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "eha-assistant-manager-laboratory-kano-2026",
+    title: "EHA Clinics Assistant Manager, Laboratory & Diagnostics — Kano",
+    organization: "EHA Clinics",
+    kind: "vacancy",
+    posting: {
+      jobTitle: "Assistant Manager, Laboratory and Diagnostics",
+      datePosted: "2026-09-29",
+      locations: [{ locality: "Kano", region: "Kano State", country: "NG" }]
+    },
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "EHA Clinics is recruiting an Assistant Manager, Laboratory and Diagnostics in Kano.",
+    location: "Kano, Kano State",
+    employmentType: "Laboratory management role",
+    audiences: ["Laboratory managers", "Medical laboratory scientists", "Healthcare managers"],
+    fields: ["Medical Laboratory Science", "Diagnostics", "Healthcare", "Management"],
+    qualifications: ["Applicants should meet the laboratory-management and professional requirements in EHA Clinics' official vacancy."],
+    requirements: ["Valid professional licence.", "Relevant laboratory-management capability.", "Complete EHA Clinics' eligibility check."],
+    documents: ["CV/resume", "Professional licence and qualification details requested by EHA Clinics"],
+    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the laboratory-management requirements.", "Complete the eligibility questions.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180",
+    officialUrlLabel: "Apply on EHA Clinics",
+    verifiedAt: "2026-10-05",
+    feeNote: "Use EHA Clinics' official jobs portal.",
+    sourceNotes: ["EHA Clinics listed this Kano laboratory-management vacancy as posted on 29 September 2026.", "The official detail page includes an active Apply Now eligibility flow."],
+    sources: [
+      { label: "EHA Clinics — Assistant Manager, Laboratory and Diagnostics", url: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180", lastChecked: "2026-10-05" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+    ]
   },
 
 ];

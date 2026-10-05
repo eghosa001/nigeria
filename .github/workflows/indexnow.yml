@@ -13,6 +13,9 @@ on:
       # Jobs sitemap URLs are derived from these content files.
       - "lib/jobs.ts"
       - "lib/job-topics.ts"
+      - "lib/job-facets.ts"
+      - "lib/job-employers.ts"
+      - "lib/job-runtime.ts"
       - "lib/career-guides.ts"
       - "lib/sitemap-sections.ts"
       - "app/**/page.tsx"

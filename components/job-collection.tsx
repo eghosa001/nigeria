@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { CareerOpportunity } from "@/lib/jobs";
+import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 
 export function JobCollection({
   opportunities,
@@ -15,9 +16,9 @@ export function JobCollection({
   return (
     <div className="jobs-card-grid">
       {opportunities.map((item) => (
-        <article className={"job-card" + (item.status === "open" ? " job-card-open" : "")} key={item.slug}>
+        <article className={"job-card" + (getEffectiveJobStatus(item) === "open" ? " job-card-open" : "")} key={item.slug}>
           <div className="job-card-top">
-            <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+            <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
             <span>{item.sector}</span>
           </div>
           <div className="job-card-body">

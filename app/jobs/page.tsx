@@ -5,6 +5,8 @@ import { JobsDirectory } from "@/components/jobs-directory";
 import { governmentOpportunities, internationalOpportunities, jobOpportunities, privateOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
+import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
+import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,13 +15,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/jobs" }
 };
 
-export const dynamic = "force-static";
+export const revalidate = 3600;
 
 export default function JobsPage() {
   const base = getSiteUrl();
-  const activeGovernment = governmentOpportunities.filter((item) => item.status === "open" || item.status === "screening" || item.status === "training").length;
+  const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
-  const openOpportunities = jobOpportunities.filter((item) => item.status === "open");
+  const openOpportunities = jobOpportunities.filter((item) => isEffectivelyOpen(item));
 
   const collectionLd = {
     "@context": "https://schema.org",
@@ -89,7 +91,7 @@ export default function JobsPage() {
               {openOpportunities.map((item) => (
                 <article className="job-card job-card-open" key={item.slug}>
                   <div className="job-card-top">
-                    <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+                    <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                     <span>{item.sector}</span>
                   </div>
                   <div className="job-card-body">
@@ -145,6 +147,8 @@ export default function JobsPage() {
             <Link href="/jobs/internships">Internships & SIWES</Link>
             <Link href="/jobs/engineering">Engineering & technical careers</Link>
             <Link href="/jobs/remote">Remote & hybrid jobs</Link>
+            <Link href="/jobs/new-this-week">New this week</Link>
+            <Link href="/jobs/closing-this-week">Closing this week</Link>
             <a href="#opportunities">Search the full directory</a>
           </div>
 
@@ -158,6 +162,32 @@ export default function JobsPage() {
           <div className="jobs-topic-links" aria-label="Browse jobs by industry">
             {jobTopics.map((topic) => (
               <Link href={"/jobs/categories/" + topic.slug} key={topic.slug}>{topic.shortTitle}</Link>
+            ))}
+          </div>
+
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Browse by location</span>
+              <h2>Start with cities that already have enough verified inventory.</h2>
+              <p>We only create location hubs where the catalog supports a useful page instead of thin city permutations.</p>
+            </div>
+          </div>
+          <div className="jobs-topic-links" aria-label="Browse jobs by location">
+            {jobLocationFacets.map((facet) => (
+              <Link href={"/jobs/locations/" + facet.slug} key={facet.slug}>{facet.shortTitle}</Link>
+            ))}
+          </div>
+
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Browse by profession</span>
+              <h2>Find the work you actually do.</h2>
+              <p>Profession hubs group the same verified records without creating duplicate job pages.</p>
+            </div>
+          </div>
+          <div className="jobs-topic-links" aria-label="Browse jobs by profession">
+            {jobProfessionFacets.map((facet) => (
+              <Link href={"/jobs/professions/" + facet.slug} key={facet.slug}>{facet.shortTitle}</Link>
             ))}
           </div>
 
@@ -194,7 +224,7 @@ export default function JobsPage() {
           <div className="jobs-status-row">
             {governmentOpportunities.map((item) => (
               <Link key={item.slug} href={"/jobs/" + item.slug} className="jobs-status-card">
-                <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+                <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                 <strong>{item.organization}</strong>
                 <small>{item.nextMilestone || item.summary}</small>
               </Link>

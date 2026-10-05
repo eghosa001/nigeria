@@ -13,6 +13,7 @@ import { getSiteUrl } from "@/lib/site";
 import { jobOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
+import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
 import { seriesTitles, seriesLastChecked } from "@/lib/series";
 
 export const sitemapSectionNames = ["core", "services", "jobs", "travel", "movies", "youtube"] as const;
@@ -112,6 +113,16 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/jobs/internships", lastModified: jobsModified },
       { url: base + "/jobs/engineering", lastModified: jobsModified },
       { url: base + "/jobs/remote", lastModified: "2026-10-04" },
+      { url: base + "/jobs/new-this-week", lastModified: jobsModified },
+      { url: base + "/jobs/closing-this-week", lastModified: jobsModified },
+      ...jobLocationFacets.map((facet) => ({
+        url: base + "/jobs/locations/" + facet.slug,
+        lastModified: jobsModified,
+      })),
+      ...jobProfessionFacets.map((facet) => ({
+        url: base + "/jobs/professions/" + facet.slug,
+        lastModified: jobsModified,
+      })),
       ...jobTopics.map((topic) => ({
         url: base + "/jobs/categories/" + topic.slug,
         lastModified: jobsModified,
