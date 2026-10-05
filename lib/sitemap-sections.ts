@@ -4,6 +4,7 @@ import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
+import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
@@ -139,6 +140,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment/releases", lastModified: movieCatalogModified },
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
+      ...indexableEntertainmentPlatformHubs.map((hub) => ({
+        url: base + "/entertainment/platforms/" + hub.slug,
+        lastModified: hub.lastChecked,
+      })),
       { url: base + "/entertainment/people", lastModified: movieCatalogModified },
       { url: base + "/entertainment/series", lastModified: latestDate(seriesTitles.map(seriesLastChecked)) || movieCatalogModified },
       ...seriesTitles.map((item) => ({
