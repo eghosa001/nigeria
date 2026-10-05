@@ -86,6 +86,7 @@ export function EntertainmentArtwork({
 
   const youtubePreview = getYouTubePreview(title);
   if (youtubePreview) {
+    const thumbnail = "https://i.ytimg.com/vi/" + youtubePreview.videoId + "/hqdefault.jpg";
     return (
       <figure
         className={"entertainment-artwork entertainment-artwork-youtube entertainment-artwork-" + variant}
@@ -93,13 +94,25 @@ export function EntertainmentArtwork({
         data-rights-status="video-preview"
         data-poster-guaranteed="true"
       >
-        <img
-          src={"https://i.ytimg.com/vi/" + youtubePreview.videoId + "/hqdefault.jpg"}
-          alt={title.title + (youtubePreview.kind === "trailer" ? " official trailer preview" : " official YouTube video preview")}
-          loading={variant === "card" ? "lazy" : "eager"}
-          decoding="async"
-          referrerPolicy="no-referrer"
-        />
+        <div className="entertainment-youtube-preview-frame">
+          <img
+            className="entertainment-youtube-preview-backdrop"
+            src={thumbnail}
+            alt=""
+            aria-hidden="true"
+            loading={variant === "card" ? "lazy" : "eager"}
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+          <img
+            className="entertainment-youtube-preview-image"
+            src={thumbnail}
+            alt={title.title + (youtubePreview.kind === "trailer" ? " official trailer preview" : " official YouTube video preview")}
+            loading={variant === "card" ? "lazy" : "eager"}
+            decoding="async"
+            referrerPolicy="no-referrer"
+          />
+        </div>
         <figcaption>
           <span>
             {youtubePreview.publisher
