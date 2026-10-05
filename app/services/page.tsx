@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { ServiceDirectory } from "@/components/service-directory";
 import { categorySlug } from "@/lib/category";
 import { categories } from "@/lib/data";
@@ -14,18 +15,42 @@ const popularServiceLinks = [
   { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
 ];
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/services" },
-  title: "Services in Nigeria 2026: Government, Education, Travel, Banking & Business",
-  description: "Find Nigerian government and everyday service guides, current fees, official portals, requirements and step-by-step application guidance for 2026.",
+type ServiceSearchParams = {
+  q?: string;
+  category?: string;
+  status?: string;
+  sort?: string;
+  page?: string;
 };
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<ServiceSearchParams>;
+}): Promise<Metadata> {
+  const params = await searchParams;
+  const filtered = Boolean(
+    (params.q ?? "").trim() ||
+    (params.category ?? "").trim() ||
+    (params.status ?? "").trim() ||
+    (params.sort ?? "").trim() ||
+    Number(params.page ?? "1") > 1
+  );
+
+  return {
+    alternates: { canonical: "/services" },
+    title: "Services in Nigeria 2026: Government, Education, Travel, Banking & Business",
+    description: "Find Nigerian government and everyday service guides, current fees, official portals, requirements and step-by-step application guidance for 2026.",
+    robots: filtered ? { index: false, follow: true } : undefined,
+  };
+}
 
 export const revalidate = 3600;
 
 export default async function ServicesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string; category?: string; status?: string; sort?: string; page?: string }>;
+  searchParams: Promise<ServiceSearchParams>;
 }) {
   const params = await searchParams;
   const categoryNames = categories.map((category) => category.name);
@@ -37,6 +62,17 @@ export default async function ServicesPage({
     ? params.sort as ServiceDirectorySort
     : "relevance";
   const initialPage = Math.max(1, Number(params.page ?? "1") || 1);
+  const filteredMode = Boolean(
+    (params.q ?? "").trim() ||
+    initialCategory !== "all" ||
+    initialStatus !== "all" ||
+    initialSort !== "relevance"
+  );
+
+  if (!filteredMode && initialPage > 1) {
+    redirect("/services/page/" + initialPage);
+  }
+
   const initialResult = queryServiceDirectory({
     q: params.q,
     category: initialCategory,
