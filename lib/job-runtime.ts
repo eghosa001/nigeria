@@ -74,7 +74,7 @@ function listHtml(items: string[]) {
 }
 
 export function buildJobPostingJsonLd(item: CareerOpportunity, pageUrl: string, todayIso = todayIsoUtc()) {
-  if (!item.posting || item.kind !== "vacancy" || !isEffectivelyOpen(item, todayIso)) return null;
+  if (!item.posting || !item.jobPostingAuthorization || item.kind !== "vacancy" || !isEffectivelyOpen(item, todayIso)) return null;
 
   const posting = item.posting;
   const jobLocation = posting.locations.map((location) => ({
