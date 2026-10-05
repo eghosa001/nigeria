@@ -520,6 +520,55 @@ export const agencies: Agency[] = [
     "shortName": "IDP IELTS",
     "description": "Private IELTS booking, testing and candidate-support services across Nigerian test centres.",
     "website": "https://ielts.idp.com/nigeria"
+  },
+  {
+    "slug": "gigm",
+    "name": "GIG Mobility",
+    "shortName": "GIGM",
+    "description": "Private intercity transport booking and mobility services across Nigeria and other African markets.",
+    "website": "https://gigm.com/"
+  },
+  {
+    "slug": "ekedp",
+    "name": "Eko Electricity Distribution Plc",
+    "shortName": "EKEDP",
+    "description": "Private electricity distribution, payment, metering and customer self-service for the Eko distribution area.",
+    "website": "https://www.ekedp.com/"
+  },
+  {
+    "slug": "starlink-nigeria",
+    "name": "Starlink Nigeria",
+    "shortName": "Starlink",
+    "description": "Private satellite-internet hardware, activation, subscription and account-support services in Nigeria.",
+    "website": "https://www.starlink.com/ng/"
+  },
+  {
+    "slug": "synlab-nigeria",
+    "name": "SYNLAB Nigeria",
+    "shortName": "SYNLAB",
+    "description": "Private diagnostic laboratory, sample-collection and online result-access services in Nigeria.",
+    "website": "https://www.synlab.com.ng/"
+  },
+  {
+    "slug": "evercare-hospital-lekki",
+    "name": "Evercare Hospital Lekki",
+    "shortName": "Evercare",
+    "description": "Private multispecialty hospital appointment, teleconsultation, homecare and patient-portal services in Lagos.",
+    "website": "https://www.evercare.ng/"
+  },
+  {
+    "slug": "paystack",
+    "name": "Paystack",
+    "shortName": "Paystack",
+    "description": "Private payment-service provider for Nigerian businesses, including merchant activation, terminals and payment acceptance.",
+    "website": "https://paystack.com/"
+  },
+  {
+    "slug": "leadway-assurance",
+    "name": "Leadway Assurance Company Limited",
+    "shortName": "Leadway",
+    "description": "Private insurance provider offering motor and other insurance services in Nigeria.",
+    "website": "https://www.leadway.com/"
   }
 ];
 
