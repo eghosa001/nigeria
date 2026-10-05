@@ -2,6 +2,11 @@ name: YouTube Entertainment Sync
 
 # Production refresh runs manually or on schedule; catalog updates land through a PR.
 on:
+  push:
+    branches:
+      - scale-movies-entertainment
+    paths:
+      - data/youtube-sync-trigger-3.txt
   workflow_dispatch:
     inputs:
       full_sync:
