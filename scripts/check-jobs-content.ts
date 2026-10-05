@@ -3,6 +3,7 @@ import { getJobTopicOpportunities, jobTopics } from "../lib/job-topics";
 import { jobEmployers } from "../lib/job-employers";
 import { getJobFacetOpportunities, jobLocationFacets, jobProfessionFacets } from "../lib/job-facets";
 import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus } from "../lib/job-runtime";
+import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
 import { jobOpportunities } from "../lib/jobs";
 
 function assert(condition: unknown, message: string): asserts condition {
@@ -14,7 +15,11 @@ function unique(values: string[], label: string) {
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
 assert(jobOpportunities.length >= 300, "Jobs scale-to-300 wave must keep at least 300 verified opportunity records.");
-assert(jobOpportunities.length < 500, "Move Jobs reads to the prepared D1/server-pagination boundary before the client catalog reaches 500 records.");
+assert(jobOpportunities.length < 1000, "Move Jobs storage to the prepared D1 boundary before the in-memory server catalog reaches 1,000 records.");
+const defaultDirectory = queryJobDirectory({ page: 1 });
+assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
+assert(defaultDirectory.items.length <= JOBS_DIRECTORY_PAGE_SIZE, "The browser-facing Jobs directory must be paginated.");
+assert(queryJobDirectory({ q: "Reliance Health", page: 1 }).total > 0, "Server directory search must find verified employers.");
 unique(jobOpportunities.map((item) => item.slug), "Job slugs");
 unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");
 unique(careerGuides.map((guide) => guide.slug), "Career guide slugs");
@@ -39,7 +44,14 @@ for (const item of jobOpportunities) {
     assert(isoDate.test(item.posting.datePosted), item.slug + " needs an ISO JobPosting datePosted.");
     assert(item.posting.datePosted <= item.verifiedAt, item.slug + " datePosted cannot be after verifiedAt.");
     assert(item.posting.locations.length > 0, item.slug + " JobPosting needs at least one location.");
-    assert(Boolean(buildJobPostingJsonLd(item, "https://mynigeriaguide.com/jobs/" + item.slug)), item.slug + " JobPosting must build while the vacancy is open.");
+    const structured = buildJobPostingJsonLd(item, "https://mynigeriaguide.com/jobs/" + item.slug);
+    if (item.jobPostingAuthorization) {
+      assert(item.jobPostingAuthorization.publicEvidenceUrl.startsWith("https://"), item.slug + " JobPosting authorization needs public HTTPS evidence.");
+      assert(isoDate.test(item.jobPostingAuthorization.verifiedAt), item.slug + " JobPosting authorization needs an ISO verifiedAt date.");
+      assert(Boolean(structured), item.slug + " authorised JobPosting must build while the vacancy is open.");
+    } else {
+      assert(structured === null, item.slug + " must not emit third-party JobPosting markup without recorded authorization.");
+    }
   }
   assert(getEffectiveJobStatus(item) !== "open" || !item.deadline || item.deadline >= new Date().toISOString().slice(0, 10), item.slug + " effective status cannot stay open after deadline.");
 }
@@ -71,6 +83,7 @@ await Promise.all([
   import("../app/jobs/new-this-week/page"),
   import("../app/jobs/closing-this-week/page"),
   import("../app/search/page"),
+  import("../app/api/jobs/route"),
 ]);
 
 console.log("Jobs & Careers content check");
@@ -80,3 +93,5 @@ console.log("  location hubs:", jobLocationFacets.length);
 console.log("  profession hubs:", jobProfessionFacets.length);
 console.log("  employers:", jobEmployers.length);
 console.log("  career guides:", careerGuides.length);
+console.log("  directory page size:", defaultDirectory.items.length);
+console.log("  authorised JobPosting pages:", jobOpportunities.filter((item) => item.jobPostingAuthorization).length);
