@@ -511,7 +511,7 @@ export const explorePlaces: ExplorePlace[] = [
     cost: "Current listing indicates roughly ₦20,000–₦30,000 per person",
     phone: "+234 817 488 3779",
     mapQuery: "Barcardi Restaurant Cafe Jos",
-    source: { label: "VisitPlateau — Barcardi Restaurant & Café", href: "https://visitplateau.com/destinations/barcardi-restaurant-cafe" },
+    source: { label: "Restaurant Guru — Barcardi Restaurant & Cafe", href: "https://restaurantguru.com/Barcardi-Restaurant-and-Cafe-barcardijos-Jos" },
     checkedAt: "2026-10-05",
     tags: ["restaurant", "cafe", "gra"],
   },
