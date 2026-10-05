@@ -3084,6 +3084,126 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "dufuna-canoe-heritage-yobe",
     "gorgaram-fishing-festival-yobe"
   ],
+  "agodi-gardens-guide": [
+    "agodi-gardens-ibadan",
+    "bowers-tower-ibadan",
+    "national-museum-unity-ibadan"
+  ],
+  "bowers-tower-guide": [
+    "bowers-tower-ibadan",
+    "agodi-gardens-ibadan",
+    "national-museum-unity-ibadan"
+  ],
+  "osun-osogbo-sacred-grove-guide": [
+    "osun-osogbo-sacred-grove",
+    "nike-art-centre-osogbo",
+    "ataoja-palace-osogbo"
+  ],
+  "ooni-palace-ile-ife-guide": [
+    "ooni-palace-ile-ife",
+    "moremi-statue-ile-ife",
+    "national-museum-ile-ife"
+  ],
+  "araromi-seaside-guide": [
+    "araromi-seaside",
+    "igbokoda-waterfront-ondo",
+    "ebomi-lake-ipesi"
+  ],
+  "ebomi-lake-guide": [
+    "ebomi-lake-ipesi",
+    "araromi-seaside",
+    "igbokoda-waterfront-ondo"
+  ],
+  "ilorin-central-mosque-guide": [
+    "ilorin-central-mosque",
+    "kwara-flower-garden",
+    "owu-falls-kwara"
+  ],
+  "ibom-unity-museum-guide": [
+    "ibom-unity-museum",
+    "akwa-ibom-state-centre-arts-culture",
+    "ibom-tropicana"
+  ],
+  "owerre-ezukala-cave-waterfall-guide": [
+    "owerre-ezukala-cave-waterfall",
+    "ogbunike-cave",
+    "agulu-lake"
+  ],
+  "oloibiri-oil-heritage-guide": [
+    "oloibiri-otuabagi-oil-heritage",
+    "royal-niger-company-akassa",
+    "ox-bow-lake-yenagoa"
+  ],
+  "makurdi-river-benue-guide": [
+    "makurdi-river-beach",
+    "ushongo-hills",
+    "enemabia-warm-spring"
+  ],
+  "ushongo-hills-guide": [
+    "ushongo-hills",
+    "makurdi-river-beach",
+    "enemabia-warm-spring"
+  ],
+  "nana-palace-koko-guide": [
+    "nana-living-history-palace-koko",
+    "river-ethiope-source-umuaja",
+    "mungo-park-house-asaba"
+  ],
+  "mungo-park-house-asaba-guide": [
+    "mungo-park-house-asaba",
+    "nana-living-history-palace-koko",
+    "river-ethiope-source-umuaja"
+  ],
+  "dutse-rock-city-guide": [
+    "dutse-rock-city",
+    "saminu-turaki-tower-dutse",
+    "birnin-kudu-heritage"
+  ],
+  "saminu-turaki-tower-guide": [
+    "saminu-turaki-tower-dutse",
+    "dutse-rock-city",
+    "birnin-kudu-heritage"
+  ],
+  "zaria-city-walls-guide": [
+    "zaria-city-walls",
+    "kufena-hills-zaria",
+    "matsirga-waterfalls"
+  ],
+  "sultans-palace-sokoto-guide": [
+    "sultan-palace-sokoto-city",
+    "sokoto-state-history-bureau",
+    "sultans-palace-sokoto"
+  ],
+  "dufuna-canoe-heritage-guide": [
+    "dufuna-canoe-heritage-yobe",
+    "dagona-bird-sanctuary",
+    "gorgaram-fishing-festival-yobe"
+  ],
+  "kaltungo-hills-guide": [
+    "kaltungo-hills",
+    "dadin-kowa-dam",
+    "nafada-riverside"
+  ],
+  "mbari-cultural-centre-guide": [
+    "mbari-centre-owerri",
+    "oguta-lake",
+    "okigwe-hills"
+  ],
+  "ara-rock-guide": [
+    "ara-rock-nasarawa",
+    "eggon-hills-caves",
+    "farin-ruwa-waterfalls"
+  ],
+  "hubbare-gwandu-guide": [
+    "hubbare-gwandu",
+    "kanta-museum-argungu",
+    "girmache-shrine-zuru"
+  ],
+  "ojukwu-bunker-guide": [
+    "ojukwu-bunker-umuahia",
+    "national-war-museum-umuahia",
+    "ibom-waterfall-arochukwu"
+  ],
 };
 
 export function getExplorePlacesForGuide(guideSlug: string) {
