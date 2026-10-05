@@ -10989,5 +10989,141 @@
       "TLS Italy courier return Nigeria",
       "Italy visa TLS passport return"
     ]
+  },
+  {
+    "slug": "tlscontact-belgium-visa-appointment-nigeria",
+    "title": "How to book and submit a Belgium visa application with TLScontact Nigeria",
+    "shortTitle": "TLScontact Belgium appointment",
+    "summary": "TLScontact Nigeria's Belgium visa-centre route from the Visa On Web form through appointment booking, mandatory TLS service-fee payment, document submission and biometrics at the Abuja or Lagos centre.",
+    "category": "Foreign visas",
+    "agencySlug": "tlscontact-belgium-nigeria",
+    "feeLabel": "Mandatory TLScontact service fee currently NGN 60,440 plus applicable visa fee",
+    "feeNote": "TLScontact's current Abuja fee page lists the mandatory service fee at EUR 36.30 / NGN 60,440. Visa fees are separate and naira amounts can change with the consular exchange rate, so verify the live fee page before payment.",
+    "timeline": "TLScontact currently states that tourist-visa appointment waiting time is about two to three months. Availability and waiting time can change, so use the live booking calendar.",
+    "status": "verified",
+    "officialPortal": "https://visas-be.tlscontact.com/en-us/country/ng",
+    "requirements": [
+      "Selection of the correct Belgium/represented-country visa type and its current supporting-document list",
+      "A completed Visa On Web form printed and signed for the application",
+      "A TLScontact appointment at the Abuja or Lagos Victoria Island centre",
+      "The required original/supporting documents and applicant identity documents",
+      "Payment of the applicable visa fee and mandatory TLScontact service fee"
+    ],
+    "steps": [
+      "Open the official Belgium Visa On Web service, choose the correct visa type and complete the online application form before booking a TLScontact appointment.",
+      "Use the appointment link from Visa On Web to open TLScontact and choose an available date/time at the Abuja or Lagos centre.",
+      "Prepare the printed and signed application form, appointment confirmation and the full supporting-document set for the selected visa category.",
+      "Attend the TLScontact centre on time, pay the applicable fees and submit the application and documents.",
+      "Complete biometric capture when required and keep the TLScontact checklist/reference for later tracking and passport return."
+    ],
+    "notes": [
+      "TLScontact handles administrative submission and biometrics; the Belgian or represented consular authority makes the visa decision.",
+      "The Nigeria Belgium centres also handle some applications for represented Schengen countries under the location and eligibility rules shown on TLScontact.",
+      "TLScontact's current procedure says a previous Schengen biometric record can affect biometric capture requirements, but an appointment remains part of the submission process."
+    ],
+    "sources": [
+      {
+        "label": "TLScontact Belgium Nigeria Centres",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Belgium Lagos Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngLGV2be/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Belgium Abuja Application Fees",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngABV2be/application-fees",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Belgium Nigeria Visa Types",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngLGV2be/visa-types",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "tlscontact-belgium-track-collect-passport-nigeria",
+      "tlscontact-france-visa-appointment-nigeria",
+      "tlscontact-italy-visa-appointment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "TLScontact Belgium Nigeria",
+      "Belgium visa appointment Nigeria",
+      "Belgium visa TLS Lagos",
+      "Belgium visa TLS Abuja",
+      "Belgium visa service fee Nigeria"
+    ]
+  },
+  {
+    "slug": "tlscontact-belgium-track-collect-passport-nigeria",
+    "title": "How to track and collect a Belgium visa passport from TLScontact Nigeria",
+    "shortTitle": "TLS Belgium tracking & collection",
+    "summary": "TLScontact Nigeria's post-submission Belgium workflow for tracking the application in the TLS account and collecting the returned passport after SMS notification, personally, through an authorised representative or by paid courier.",
+    "category": "Foreign visas",
+    "agencySlug": "tlscontact-belgium-nigeria",
+    "feeLabel": "Tracking is included; optional Express Courier Return costs extra",
+    "feeNote": "The standard TLScontact account supports application tracking. Express Courier Return and other optional added-value services have separate current charges shown by the selected centre.",
+    "timeline": "Applicants can track the application after submission. Passport collection starts only after the consular authority returns the passport to TLScontact and the applicant receives the SMS notification.",
+    "status": "verified",
+    "officialPortal": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngLGV2be/application-process",
+    "requirements": [
+      "A Belgium or represented-country visa application already submitted through TLScontact Nigeria",
+      "Access to the applicant's TLScontact account for status tracking",
+      "The TLScontact SMS notification confirming that the passport has returned to the centre",
+      "For personal collection, the application checklist plus original and copy of the applicant's photo ID",
+      "For representative collection, the signed proxy letter plus the applicant and representative identity documents required by TLScontact"
+    ],
+    "steps": [
+      "Sign in to the TLScontact account after submission to review the current application status.",
+      "Wait for TLScontact's SMS confirming that the passport is ready for return before travelling to the centre.",
+      "For personal collection, bring the application checklist together with the original and a copy of the applicant's photo identification.",
+      "For representative collection, provide the checklist, applicant ID copy, representative's original/copy ID and the signed proxy letter.",
+      "If Express Courier Return was selected, follow the delivery notification and verify the passport when it reaches the chosen address."
+    ],
+    "notes": [
+      "TLScontact's tracking/status service does not influence the consular decision.",
+      "The current Nigeria procedure provides personal, representative and paid courier passport-return options.",
+      "Optional TLScontact services do not guarantee an earlier visa appointment or faster consular processing."
+    ],
+    "sources": [
+      {
+        "label": "TLScontact Belgium Lagos Application Procedure",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngLGV2be/application-process",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Belgium Lagos Services",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngLGV2be/services",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "TLScontact Belgium Lagos Opening Hours",
+        "agency": "TLScontact",
+        "url": "https://visas-be.tlscontact.com/en-us/country/ng/vac/ngLGV2be/address-opening-hours",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "tlscontact-belgium-visa-appointment-nigeria",
+      "tlscontact-france-track-collect-passport-nigeria",
+      "tlscontact-italy-passport-collection-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "track Belgium visa TLS Nigeria",
+      "TLScontact Belgium passport collection",
+      "Belgium visa passport Lagos TLS",
+      "Belgium visa tracking Nigeria",
+      "TLS Belgium courier passport Nigeria"
+    ]
   }
 ]
