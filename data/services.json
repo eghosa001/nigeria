@@ -14115,5 +14115,665 @@
       "IDP IELTS test centre Nigeria",
       "IELTS 299000 Nigeria"
     ]
+  },
+  {
+    "slug": "gigm-book-bus-nigeria",
+    "title": "How to book a GIGM bus trip online",
+    "shortTitle": "Book a GIGM bus",
+    "summary": "GIG Mobility's official website and app booking route for choosing an intercity trip, selecting a seat, using eligible pickup points and keeping the booking for travel.",
+    "category": "Intercity transport",
+    "agencySlug": "gigm",
+    "feeLabel": "Fare varies by route and travel date",
+    "feeNote": "GIGM displays the current fare after the passenger selects the departure location, destination and date. Use the live booking amount rather than an older route-price list.",
+    "timeline": "Booking is completed online after trip selection and successful payment; departure time and terminal or pickup information are shown for the selected trip.",
+    "status": "verified",
+    "officialPortal": "https://gigm.com/",
+    "requirements": [
+      "The departure location, destination and intended travel date for the intercity trip",
+      "The number of adult or child passengers being included in the booking",
+      "Passenger contact information needed to keep the reservation linked to the traveller",
+      "A supported payment method for the fare shown during the GIGM booking flow"
+    ],
+    "steps": [
+      "Open GIGM's official website or mobile app and select Book a Seat for an intercity bus journey.",
+      "Choose one-way or the available trip type, then enter the departure location, destination, travel date and passenger count.",
+      "Select an available trip and use the displayed bus layout to choose a preferred seat.",
+      "If complimentary pickup is offered for that trip, select the available pickup point that suits the passenger before checkout.",
+      "Complete the passenger and payment information, then save the booking confirmation so the trip can be viewed or managed later."
+    ],
+    "notes": [
+      "GIGM states that complimentary pickup is available only in select locations, so it should not be assumed for every terminal or route.",
+      "The provider's booking platform also exposes booking history and management tools for signed-in users.",
+      "Do not create a separate SEO page for each city pair unless a route later has genuinely different operational requirements."
+    ],
+    "sources": [
+      {
+        "label": "GIG Mobility booking",
+        "agency": "GIG Mobility",
+        "url": "https://gigm.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GIGM online booking guide",
+        "agency": "GIG Mobility",
+        "url": "https://blog.gigm.com/2024/02/convenience-at-your-fingertips-book-online-with-gigm-and-simplify-your-travel-plans/",
+        "lastChecked": "2026-10-05",
+        "published": "2024-02-01"
+      },
+      {
+        "label": "GIGM booking features",
+        "agency": "GIG Mobility",
+        "url": "https://gigm.com/what-is-new",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "air-peace-book-flight",
+      "dhl-send-parcel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "GIGM booking",
+      "book GIGM bus online",
+      "GIG Motors booking",
+      "GIGM bus ticket Nigeria",
+      "GIGM seat booking"
+    ]
+  },
+  {
+    "slug": "ekedp-pay-bill-buy-token",
+    "title": "How to pay an EKEDP bill or buy a prepaid token online",
+    "shortTitle": "EKEDP bill & token payment",
+    "summary": "Eko Electricity Distribution Company's self-service route for entering an account or meter number, selecting a payment channel and paying a postpaid bill or buying a prepaid electricity token.",
+    "category": "Electricity",
+    "agencySlug": "ekedp",
+    "feeLabel": "Electricity amount plus any payment-channel charge",
+    "feeNote": "The electricity amount depends on the customer's bill, meter purchase amount and tariff. EKEDP redirects payment to the selected payment channel, which can show its own transaction charge before completion.",
+    "timeline": "Payment is processed through the selected channel. If an error appears after payment or a token is not usable, EKEDP directs customers to lodge a complaint through its official support route.",
+    "status": "verified",
+    "officialPortal": "https://www.ekedp.com/",
+    "requirements": [
+      "The EKEDP account number for a postpaid customer or meter number for a prepaid customer",
+      "The amount the customer intends to pay or use to purchase electricity units",
+      "Access to an EKEDP payment channel or Selfcare account",
+      "A supported card or payment method on the selected payment-channel portal"
+    ],
+    "steps": [
+      "Open EKEDP's official website or Selfcare service and choose Pay Bill or Buy Token.",
+      "Enter the EKEDP account number or prepaid meter number and verify that the displayed customer record is the intended one.",
+      "Enter or confirm the payment amount and select one of the payment options offered by EKEDP.",
+      "Complete the payment on the payment-channel page and keep the transaction reference or receipt.",
+      "For a prepaid purchase, load the issued 20-digit token on the meter; if payment or token loading fails, use EKEDP's help or complaint route with the transaction evidence."
+    ],
+    "notes": [
+      "EKEDP's help centre says customers can lodge a complaint on the site after a payment error.",
+      "A prepaid meter communication or CIU problem can stop a valid token from loading even when the payment itself succeeded.",
+      "Use the official EKEDP account or meter lookup before payment to reduce the risk of crediting the wrong account."
+    ],
+    "sources": [
+      {
+        "label": "EKEDP Help Center",
+        "agency": "Eko Electricity Distribution Plc",
+        "url": "https://www.ekedp.com/help-center",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "EKEDP Selfcare and payment channels",
+        "agency": "Eko Electricity Distribution Plc",
+        "url": "https://www.ekedp.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed",
+      "ekedp-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "EKEDP pay bill",
+      "EKEDP buy token",
+      "Eko Disco token payment",
+      "EKEDP prepaid meter recharge",
+      "EKEDP Selfcare payment"
+    ]
+  },
+  {
+    "slug": "ekedp-prepaid-meter-application",
+    "title": "How to apply for an EKEDP prepaid meter",
+    "shortTitle": "EKEDP meter application",
+    "summary": "EKEDP's online metering route for customers who need a prepaid meter or replacement, including the current MAP vendor path and the free DISREP initiative for eligible households.",
+    "category": "Electricity",
+    "agencySlug": "ekedp",
+    "feeLabel": "Depends on the metering programme and meter type",
+    "feeNote": "EKEDP currently offers a paid MAP route through accredited vendors alongside a free DISREP initiative for eligible households. Confirm the programme and vendor price shown on the metering page before making any payment.",
+    "timeline": "EKEDP does not publish one universal installation time for every metering route. Its help centre says a customer who paid for a prepaid meter more than two weeks earlier without installation should send the invoice and details to customer care.",
+    "status": "verified",
+    "officialPortal": "https://www.ekedp.com/metering",
+    "requirements": [
+      "An EKEDP customer account and the service-address information used for the electricity connection",
+      "Selection of a new-meter or replacement application that matches the customer's metering need",
+      "The meter specification and accredited MAP vendor option shown for the customer's eligible application",
+      "Payment evidence when the application is under the paid MAP scheme rather than an eligible free DISREP allocation"
+    ],
+    "steps": [
+      "Open EKEDP's official Metering page and choose Order Online for the prepaid-meter application.",
+      "Select the application type that matches a new meter or replacement request and complete the customer/account information.",
+      "Review the available metering programme and accredited vendor information before accepting a paid MAP option.",
+      "Complete the order and any official vendor payment shown for the selected MAP meter, then keep the invoice and application evidence.",
+      "Track the installation; if a paid meter has not been installed after the period highlighted in EKEDP's help centre, send customer care the invoice and application details."
+    ],
+    "notes": [
+      "EKEDP states that MAP is a paid accredited-vendor route and that DISREP provides free meters to eligible customers.",
+      "Customers should not pay an unlisted private installer or vendor merely because the person claims to have EKEDP meters.",
+      "If EKEDP says an existing meter is not eligible for continued use, its help centre directs the customer to submit a replacement application."
+    ],
+    "sources": [
+      {
+        "label": "EKEDP Metering",
+        "agency": "Eko Electricity Distribution Plc",
+        "url": "https://www.ekedp.com/metering",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "EKEDP Help Center",
+        "agency": "Eko Electricity Distribution Plc",
+        "url": "https://www.ekedp.com/help-center",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ekedp-pay-bill-buy-token",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "EKEDP prepaid meter application",
+      "Eko Disco meter application",
+      "EKEDP MAP meter",
+      "EKEDP order meter online",
+      "EKEDP meter replacement"
+    ]
+  },
+  {
+    "slug": "starlink-activate-kit-nigeria",
+    "title": "How to activate a Starlink kit in Nigeria",
+    "shortTitle": "Activate Starlink Nigeria",
+    "summary": "Starlink's activation route for a kit bought from Starlink, an authorised Nigerian retailer or an eligible transferred owner, using the kit identifier, Nigerian service address and an available service plan.",
+    "category": "Internet",
+    "agencySlug": "starlink-nigeria",
+    "feeLabel": "Current Starlink plan price applies",
+    "feeNote": "For a retailer or third-party kit activated as a new account, Starlink says the upcoming month of service is charged immediately. Hardware and subscription prices can change, so use the amount shown during activation.",
+    "timeline": "Starlink says the service becomes active after the activation flow is completed and the selected subscription is successfully created, subject to plan capacity and kit eligibility.",
+    "status": "verified",
+    "officialPortal": "https://starlink.com/activate",
+    "requirements": [
+      "A Starlink identifier such as the Kit ID, UTID or Starlink serial number for the hardware being activated",
+      "A Nigerian service address or location that has capacity for the selected Standard, Priority or available alternative plan",
+      "A new or existing Starlink account with contact and billing information",
+      "Hardware bought directly from Starlink, an authorised retailer or an eligible previous owner rather than an unauthorised reseller"
+    ],
+    "steps": [
+      "Open Starlink's official activation page and enter the Starlink identifier printed on the kit or available from the hardware.",
+      "Choose whether the kit will be activated on a new Starlink account or an existing eligible account.",
+      "Enter the Nigerian service address and choose an available service plan for that location.",
+      "Provide the contact and billing information and review the subscription charge shown before activation.",
+      "Complete the order to create the service line, then use the Starlink app to finish physical setup and confirm that the terminal comes online."
+    ],
+    "notes": [
+      "Starlink says hardware from an unauthorised retailer cannot be activated.",
+      "Starlink currently states that Nigeria accounts cannot add more than one service line per account.",
+      "Residential/Standard or Priority activation can be restricted when an area is at capacity; an alternative plan may be offered instead."
+    ],
+    "sources": [
+      {
+        "label": "Starlink Activate",
+        "agency": "Starlink",
+        "url": "https://starlink.com/activate",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Starlink activation help",
+        "agency": "Starlink",
+        "url": "https://starlink.com/ng/support/article/9c053dcc-c9ba-f64b-c413-af6afc3d6e13",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Starlink authorised retailers",
+        "agency": "Starlink",
+        "url": "https://starlink.com/ng/support/article/8a90222d-7c32-edd7-51f6-f696ece07105",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "starlink-reactivate-service-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "activate Starlink Nigeria",
+      "Starlink activation Nigeria",
+      "Starlink kit ID activation",
+      "Starlink authorised retailer Nigeria",
+      "Starlink service activation"
+    ]
+  },
+  {
+    "slug": "starlink-reactivate-service-nigeria",
+    "title": "How to reactivate Starlink service in Nigeria",
+    "shortTitle": "Reactivate Starlink",
+    "summary": "Starlink's account route for restoring a cancelled or standby service line by opening the subscription, choosing Activate Plan and selecting an available plan for the service location.",
+    "category": "Internet",
+    "agencySlug": "starlink-nigeria",
+    "feeLabel": "Current selected plan price applies",
+    "feeNote": "Starlink says service-plan prices can change and reactivation availability depends on local capacity. The account shows the plan and amount available before service is resumed.",
+    "timeline": "Reactivation takes effect after the account accepts an available plan and the subscription is restored; Residential availability can be blocked by local capacity.",
+    "status": "verified",
+    "officialPortal": "https://starlink.com/account/home",
+    "requirements": [
+      "Access to the Starlink account that owns the inactive or standby subscription",
+      "An inactive service line that remains eligible for reactivation rather than hardware still assigned to another account",
+      "An available Starlink plan for the service location",
+      "A valid billing method for the subscription charge shown during reactivation"
+    ],
+    "steps": [
+      "Sign in to the Starlink account and open Subscriptions from the account navigation.",
+      "Select the inactive service line, choose Manage and then select Activate Plan.",
+      "Review the previous or alternative plans that Starlink currently makes available for the service address.",
+      "Choose the plan, review the current subscription price and press Continue to restore the service.",
+      "Check the Starlink app or account after activation and use official support if the terminal remains offline despite an active subscription."
+    ],
+    "notes": [
+      "Residential reactivation depends on capacity in the service area after cancellation or standby.",
+      "Starlink says a Roam plan can be an alternative when Residential capacity is unavailable, subject to local regulatory restrictions.",
+      "Hardware from an unauthorised reseller cannot be activated or reactivated through the normal service route."
+    ],
+    "sources": [
+      {
+        "label": "Starlink reactivation help",
+        "agency": "Starlink",
+        "url": "https://starlink.com/ng/support/article/b48d1f99-6343-7a14-795a-142a7a1351a1",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Starlink Nigeria support contact",
+        "agency": "Starlink",
+        "url": "https://starlink.com/ng/support/article/bdb63773-e93b-74e8-8e12-2da2fb6d534e",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "starlink-activate-kit-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "reactivate Starlink Nigeria",
+      "resume Starlink service",
+      "Starlink activate plan",
+      "Starlink cancelled service Nigeria",
+      "Starlink standby reactivation"
+    ]
+  },
+  {
+    "slug": "synlab-home-sample-collection",
+    "title": "How SYNLAB home sample collection works in Nigeria",
+    "shortTitle": "SYNLAB home collection",
+    "summary": "SYNLAB Nigeria's home-collection route for eligible laboratory testing, from selecting and paying for a test or panel to choosing an address/time and receiving results through PathProvider.",
+    "category": "Healthcare",
+    "agencySlug": "synlab-nigeria",
+    "feeLabel": "Depends on the selected test or panel",
+    "feeNote": "SYNLAB publishes different prices for its individual tests and panels. Confirm the amount in the booking flow before payment; home-collection availability can also depend on location.",
+    "timeline": "Turnaround depends on the selected laboratory test. Some published SYNLAB panels state result windows such as 24–72 hours, but there is no universal time for every test.",
+    "status": "verified",
+    "officialPortal": "https://www.synlab.com.ng/",
+    "requirements": [
+      "A selected SYNLAB laboratory test or panel that is available for home collection",
+      "The customer's name, contact information and collection address",
+      "A suitable appointment date or time offered for the collection location",
+      "Payment for the selected test or panel through the official SYNLAB booking route"
+    ],
+    "steps": [
+      "Open SYNLAB Nigeria's official website and select the laboratory test or published panel that matches the requested diagnostic service.",
+      "Choose home collection instead of a walk-in laboratory visit when the booking flow offers that option.",
+      "Enter the collection address and available appointment information, then review and pay the test or panel amount shown by SYNLAB.",
+      "Receive the trained SYNLAB collection professional at the agreed address and complete only the sample collection needed for the booked test.",
+      "Wait for the result notification and open the result in the customer's PathProvider account when processing is complete."
+    ],
+    "notes": [
+      "This guide explains the provider's booking process and does not recommend which laboratory test a person should take.",
+      "SYNLAB also allows walk-in testing at its laboratory locations for services that do not need home collection.",
+      "Test-specific preparation can differ, so follow the preparation information attached to the exact test or panel rather than a generic rule."
+    ],
+    "sources": [
+      {
+        "label": "SYNLAB Peachy — home collection workflow",
+        "agency": "SYNLAB Nigeria",
+        "url": "https://www.synlab.com.ng/peachy/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SYNLAB PathProvider",
+        "agency": "SYNLAB Nigeria",
+        "url": "https://www.synlab.com.ng/path-provider/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "synlab-pathprovider-results",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "SYNLAB home collection Nigeria",
+      "book SYNLAB test at home",
+      "SYNLAB home sample collection",
+      "SYNLAB lab test booking Nigeria",
+      "SYNLAB results Nigeria"
+    ]
+  },
+  {
+    "slug": "synlab-pathprovider-results",
+    "title": "How to access SYNLAB test results with PathProvider",
+    "shortTitle": "SYNLAB PathProvider results",
+    "summary": "SYNLAB Nigeria's PathProvider route for securely viewing current and archived laboratory results online, receiving result-ready alerts and recovering access for an existing testing history.",
+    "category": "Healthcare",
+    "agencySlug": "synlab-nigeria",
+    "feeLabel": "No separate result-access fee stated",
+    "feeNote": "SYNLAB does not state a separate charge for accessing results through PathProvider after the laboratory service has been completed.",
+    "timeline": "The result becomes available when the booked laboratory analysis is complete; SYNLAB says an SMS alert is sent when results are ready.",
+    "status": "verified",
+    "officialPortal": "https://www.synlab.com.ng/path-provider/",
+    "requirements": [
+      "A PathProvider customer profile linked to the person who completed testing with SYNLAB",
+      "The login credentials for the secure PathProvider account",
+      "Identity verification evidence if SYNLAB needs to connect older historical results to an existing customer profile"
+    ],
+    "steps": [
+      "Open SYNLAB Nigeria's PathProvider page and use the customer login for the account linked to the laboratory visit.",
+      "If a profile was not activated previously, ask the SYNLAB facility or customer-care team to activate PathProvider access for the customer.",
+      "Sign in after the result-ready SMS or email notification and open the available laboratory result.",
+      "Use the account archive to view earlier results that are already linked to the same profile.",
+      "If older tests are missing, contact SYNLAB customer care and complete the identity verification needed before historic results are added."
+    ],
+    "notes": [
+      "SYNLAB states that PathProvider can be accessed from smartphones, computers and tablets.",
+      "Historic-result recovery can require extra identity documentation to protect patient confidentiality.",
+      "Online result access does not replace discussion with a qualified clinician when medical interpretation is needed."
+    ],
+    "sources": [
+      {
+        "label": "SYNLAB PathProvider",
+        "agency": "SYNLAB Nigeria",
+        "url": "https://www.synlab.com.ng/path-provider/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SYNLAB online results and home collection information",
+        "agency": "SYNLAB Nigeria",
+        "url": "https://www.synlab.com.ng/info-page/covid/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "synlab-home-sample-collection",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "SYNLAB results login Nigeria",
+      "PathProvider SYNLAB",
+      "check SYNLAB result online",
+      "SYNLAB PathProvider login",
+      "SYNLAB test results Nigeria"
+    ]
+  },
+  {
+    "slug": "evercare-book-appointment",
+    "title": "How to book an Evercare Hospital Lekki appointment online",
+    "shortTitle": "Evercare appointment booking",
+    "summary": "Evercare Hospital Lekki's online appointment route for choosing a facility, specialty, doctor and date, with a separate patient portal for people who already have an Evercare registration number.",
+    "category": "Healthcare",
+    "agencySlug": "evercare-hospital-lekki",
+    "feeLabel": "Consultation/payment depends on the selected service",
+    "feeNote": "Evercare's appointment form does not publish one universal consultation fee for every specialty or doctor. Confirm the amount shown or communicated for the selected appointment before payment.",
+    "timeline": "Appointment availability depends on the selected specialty, doctor and date; the booking portal displays available appointment slots rather than one universal waiting time.",
+    "status": "verified",
+    "officialPortal": "https://onlinebooking.evercare.ng/",
+    "requirements": [
+      "The Evercare facility, medical specialty and doctor the patient wants to book",
+      "The patient's first and last name, date of birth, gender and mobile contact information",
+      "An email address and preferred appointment date for a new online booking",
+      "For an existing registered patient, the UHID/registration number and registered mobile number or patient-portal password can be used for account access"
+    ],
+    "steps": [
+      "Open Evercare's official online booking portal and select the hospital facility for the appointment.",
+      "Choose the medical specialty, available doctor and preferred appointment date shown by the booking form.",
+      "Enter the patient's required identity and contact information, including name, date of birth, mobile number and email.",
+      "Complete the OTP or booking confirmation step shown by Evercare and save the appointment details.",
+      "Existing patients can use the Evercare patient portal to review appointment or payment history and manage information linked to the UHID."
+    ],
+    "notes": [
+      "This guide explains appointment booking only and does not recommend a specialty, doctor or treatment.",
+      "Evercare's main site also offers teleconsultation and homecare booking links, which are separate service routes.",
+      "For an emergency, use the hospital's emergency contact route rather than waiting for a routine online appointment."
+    ],
+    "sources": [
+      {
+        "label": "Evercare Hospital Lekki",
+        "agency": "Evercare Hospital Lekki",
+        "url": "https://www.evercare.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Evercare Online Appointment",
+        "agency": "Evercare Hospital Lekki",
+        "url": "https://onlinebooking.evercare.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Evercare Patient Portal appointment form",
+        "agency": "Evercare Hospital Lekki",
+        "url": "https://myevercare.evercare.ng/PatientDetails/WithoutRegistrationBookAppointment.aspx",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "synlab-home-sample-collection",
+      "synlab-pathprovider-results"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Evercare appointment booking",
+      "book Evercare Lekki appointment",
+      "Evercare doctor appointment",
+      "Evercare patient portal",
+      "Evercare Hospital Lekki booking"
+    ]
+  },
+  {
+    "slug": "paystack-business-activation-nigeria",
+    "title": "How to activate a Paystack business in Nigeria",
+    "shortTitle": "Activate Paystack business",
+    "summary": "Paystack's Nigeria merchant-onboarding route from a free test-mode business account through compliance, owner, bank-account and registration documents to live payment acceptance.",
+    "category": "Business",
+    "agencySlug": "paystack",
+    "feeLabel": "Free account creation; transaction pricing applies after activation",
+    "feeNote": "Paystack states that account creation is free. The charges that apply after activation depend on the payment products and transaction pricing used by the live business.",
+    "timeline": "Paystack's getting-started guidance says submitted compliance documents are reviewed within about 48 hours; its activation guide says the review team contacts a business within 24 hours when submitted information has issues.",
+    "status": "verified",
+    "officialPortal": "https://paystack.com/signup",
+    "requirements": [
+      "A Paystack Business account created with the business name, owner name, email, phone number, country and chosen business type",
+      "For a Nigerian Starter Business, matching government identity information, BVN and a personal bank account in the owner's name",
+      "For a Registered Business, the CAC registration and beneficial-owner or director documentation that matches the registration type",
+      "A payout bank account: a personal account for an eligible Starter Business or a corporate account matching the registered business name",
+      "A valid proof of address and the business website or social-media information used in the compliance profile"
+    ],
+    "steps": [
+      "Create the Paystack Business account on the official signup page and confirm whether the merchant is a Starter Business or Registered Business.",
+      "Open the Compliance section of the Paystack Dashboard and complete the business-profile and office or registered-address information.",
+      "Complete the owner section with the required identity, personal details and proof of address.",
+      "Enter the payout bank-account information and upload the Nigeria compliance documents required for the selected business registration type.",
+      "Confirm that each compliance section shows complete, click Activate Business and monitor the Activation Status until Paystack approves the merchant for live payments."
+    ],
+    "notes": [
+      "A newly created Paystack business starts in Test Mode and cannot process real customer payments until activation requirements are completed.",
+      "Registered Nigerian businesses must use a corporate payout account whose name matches the business registration document.",
+      "Paystack can request corrections when owner, bank or registration details do not match."
+    ],
+    "sources": [
+      {
+        "label": "Paystack — How to activate your business",
+        "agency": "Paystack",
+        "url": "https://support.paystack.com/en/articles/2125506",
+        "lastChecked": "2026-10-05",
+        "published": "2026-09-22"
+      },
+      {
+        "label": "Paystack Nigeria compliance requirements",
+        "agency": "Paystack",
+        "url": "https://support.paystack.com/en/articles/2123970",
+        "lastChecked": "2026-10-05",
+        "published": "2026-09-15"
+      },
+      {
+        "label": "Paystack — Getting started",
+        "agency": "Paystack",
+        "url": "https://support.paystack.com/en/articles/2125250",
+        "lastChecked": "2026-10-05",
+        "published": "2026-09-15"
+      }
+    ],
+    "related": [
+      "paystack-physical-terminal-nigeria",
+      "cac-business-name-registration",
+      "cac-company-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "activate Paystack business Nigeria",
+      "Paystack compliance Nigeria",
+      "Paystack business activation requirements",
+      "open Paystack merchant account",
+      "Paystack registered business Nigeria"
+    ]
+  },
+  {
+    "slug": "paystack-physical-terminal-nigeria",
+    "title": "How to request a Paystack Physical Terminal in Nigeria",
+    "shortTitle": "Paystack Physical Terminal",
+    "summary": "Paystack's dashboard route for an activated Nigeria-based Registered Business to request a live Android payment terminal that accepts cards, USSD and bank-transfer payments.",
+    "category": "Business",
+    "agencySlug": "paystack",
+    "feeLabel": "Terminal price shown in the Paystack request flow",
+    "feeNote": "Paystack's current support article explains eligibility and the request flow but does not state one durable public terminal price. Confirm the amount in the Dashboard before completing the request.",
+    "timeline": "Paystack does not publish one universal delivery or approval time for every terminal request; the business must first be registered and activated before requesting the live device.",
+    "status": "verified",
+    "officialPortal": "https://dashboard.paystack.com/",
+    "requirements": [
+      "A Nigeria-based Paystack Registered Business; Starter Businesses are not eligible for a Physical Terminal",
+      "A Paystack business that has completed compliance and is already activated for live payments",
+      "Access to the business's Paystack Dashboard and Terminals page",
+      "The delivery, business and payment information shown during the live-terminal request"
+    ],
+    "steps": [
+      "Create a Paystack business as a Registered Business if the merchant does not already have an eligible account.",
+      "Complete Paystack business activation and confirm that the merchant is live before requesting hardware.",
+      "Sign in to the Paystack Dashboard and open the Terminals page.",
+      "Request a Live Terminal rather than a Test device and review the terminal information and any current amount shown in the request flow.",
+      "Submit the request and keep the Dashboard record while Paystack processes the live-terminal request for the business."
+    ],
+    "notes": [
+      "Paystack states that its Physical Terminal is currently available only to Nigeria-based Registered Businesses.",
+      "The terminal can accept local cards, USSD and bank-transfer payment methods.",
+      "A Test terminal/debug device is requested in Test Mode and is not the same as a live merchant terminal."
+    ],
+    "sources": [
+      {
+        "label": "Paystack Physical Terminal",
+        "agency": "Paystack",
+        "url": "https://support.paystack.com/en/articles/2132994",
+        "lastChecked": "2026-10-05",
+        "published": "2026-09-16"
+      },
+      {
+        "label": "Paystack business types",
+        "agency": "Paystack",
+        "url": "https://support.paystack.com/en/articles/2128898",
+        "lastChecked": "2026-10-05",
+        "published": "2026-09-15"
+      }
+    ],
+    "related": [
+      "paystack-business-activation-nigeria",
+      "cac-company-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Paystack POS terminal",
+      "Paystack physical terminal Nigeria",
+      "request Paystack terminal",
+      "Paystack POS requirements",
+      "Paystack registered business terminal"
+    ]
+  },
+  {
+    "slug": "leadway-buy-motor-insurance-online",
+    "title": "How to buy Leadway motor insurance online",
+    "shortTitle": "Leadway motor insurance",
+    "summary": "Leadway Assurance's online motor-insurance route for comparing third-party, comprehensive or Autobase cover, entering personal and vehicle details, getting a quote and receiving the policy after payment.",
+    "category": "Insurance",
+    "agencySlug": "leadway-assurance",
+    "feeLabel": "Premium depends on vehicle and selected cover",
+    "feeNote": "Leadway calculates the premium from the selected motor policy and vehicle details. Obtain the current quote in the official purchase flow rather than relying on a generic fixed price.",
+    "timeline": "Leadway's current online-buying guide says an eligible online motor policy can be completed in about two minutes and cover starts after successful payment.",
+    "status": "verified",
+    "officialPortal": "https://www.leadway.com/",
+    "requirements": [
+      "The vehicle make, model, year and registration number for the car being insured",
+      "The current market value when the selected comprehensive cover needs a vehicle-value figure",
+      "The policyholder's full name, address and contact information",
+      "The identification information Leadway uses to verify the online insurance profile",
+      "A payment method for the premium calculated from the selected policy and vehicle information"
+    ],
+    "steps": [
+      "Open Leadway's official website and select Motor Insurance from the available insurance products.",
+      "Choose the intended motor cover, such as third-party, comprehensive or the available Autobase option.",
+      "Enter the policyholder's personal information and complete the identity-verification information requested in the online form.",
+      "Enter the vehicle make, model, year, registration number and market value when the selected product needs it, then review the generated quote.",
+      "Complete payment through Leadway's official purchase route and save the confirmation and policy certificate issued after successful completion."
+    ],
+    "notes": [
+      "Third-party and comprehensive motor insurance cover different risks, so the policy type should be chosen from the actual coverage information rather than price alone.",
+      "Leadway says online cover starts after payment; keep the certificate available for verification and future claims.",
+      "This guide explains the purchase process and does not recommend one insurance product as suitable for a particular person's financial circumstances."
+    ],
+    "sources": [
+      {
+        "label": "Leadway — Buying Motor Insurance Online",
+        "agency": "Leadway Assurance Company Limited",
+        "url": "https://www.leadway.com/a-complete-guide-to-buying-auto-insurance-online-in-nigeria/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Leadway — Arrive Alive Motor Cover",
+        "agency": "Leadway Assurance Company Limited",
+        "url": "https://www.leadway.com/arrive-alive/",
+        "lastChecked": "2026-10-05",
+        "published": "2026-05-01"
+      }
+    ],
+    "related": [
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "buy Leadway motor insurance online",
+      "Leadway third party insurance Nigeria",
+      "Leadway comprehensive car insurance",
+      "Leadway auto insurance Nigeria",
+      "Leadway motor policy online"
+    ]
   }
 ]
