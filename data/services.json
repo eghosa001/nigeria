@@ -23871,7 +23871,7 @@
       "Open Paga's official Create Account page and choose Personal.",
       "Enter the mobile number, legal name and other personal profile information shown on Paga's registration form.",
       "Provide the identification and BVN information used for account setup and verification.",
-      "Complete registration and keep the Paga account number assigned to the new wallet.",
+      "Submit the Personal registration form and save the Paga account number shown or sent after the wallet is successfully created.",
       "Fund the account through a Paga agent, partner bank or supported card before using balance-funded transfers or bill payments."
     ],
     "notes": [
@@ -24628,7 +24628,7 @@
     ],
     "steps": [
       "Download the official FairMoney app from the provider's website or supported app store and choose the account-registration option.",
-      "Enter the customer's legal name, mobile number, email address and other personal details requested by FairMoney.",
+      "Enter the customer's legal name, mobile number, email address and date-of-birth/profile information displayed by the FairMoney signup screen.",
       "Provide the BVN and complete the identity-verification information requested during onboarding.",
       "Review and accept FairMoney's account terms and privacy terms before submitting the registration.",
       "After FairMoney approves the profile, check the available account functions and limits in the app before using transfers, cards, savings or credit services."
