@@ -837,7 +837,16 @@ export const growthHubs: GrowthHub[] = [
       { query: "change GOtv package", serviceSlug: "gotv-change-package" },
       { query: "clear GOtv error", serviceSlug: "gotv-clear-error-code" },
       { query: "track Jumia order", serviceSlug: "jumia-track-order" },
-      { query: "return Jumia order", serviceSlug: "jumia-return-refund" }
+      { query: "return Jumia order", serviceSlug: "jumia-return-refund" },
+      { query: "BEDC prepaid meter application", serviceSlug: "bedc-map-meter-application" },
+      { query: "BEDC complaint", serviceSlug: "bedc-customer-complaint" },
+      { query: "BEDC token not loading", serviceSlug: "bedc-token-resolution" },
+      { query: "block Zenith Bank account", serviceSlug: "zenith-emergency-account-block" },
+      { query: "Fidelity Bank USSD code", serviceSlug: "fidelity-770-ussd-banking" },
+      { query: "block Fidelity card or account", serviceSlug: "fidelity-emergency-block" },
+      { query: "SAT registration Nigeria", serviceSlug: "sat-registration-nigeria" },
+      { query: "Reliance HMO hospital list", serviceSlug: "reliance-provider-directory" },
+      { query: "Reliance HMO small business plan", serviceSlug: "reliance-small-business-plan" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -985,7 +994,16 @@ export const growthHubs: GrowthHub[] = [
       "gotv-change-package",
       "gotv-clear-error-code",
       "jumia-track-order",
-      "jumia-return-refund"
+      "jumia-return-refund",
+      "bedc-map-meter-application",
+      "bedc-customer-complaint",
+      "bedc-token-resolution",
+      "zenith-emergency-account-block",
+      "fidelity-770-ussd-banking",
+      "fidelity-emergency-block",
+      "sat-registration-nigeria",
+      "reliance-provider-directory",
+      "reliance-small-business-plan"
     ]
   },
 
