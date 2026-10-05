@@ -1084,7 +1084,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "Oracle certification exam Nigeria", serviceSlug: "oracle-certification-exam-scheduling" },
       { query: "SeamlessHR Breeze Payer signup", serviceSlug: "seamlesshr-breeze-payer-signup" },
       { query: "fund Shuttlers wallet", serviceSlug: "shuttlers-fund-wallet" },
-      { query: "list apartment on Spleet", serviceSlug: "spleet-list-apartment-host" }
+      { query: "list apartment on Spleet", serviceSlug: "spleet-list-apartment-host" },
+      { query: "CIMA registration Nigeria", serviceSlug: "cima-cgma-candidate-registration" },
+      { query: "CIMA exam booking Nigeria", serviceSlug: "cima-cgma-exam-scheduling" },
+      { query: "Google Cloud certification Nigeria", serviceSlug: "google-cloud-certification-exam-scheduling" },
+      { query: "CFA exam deferral", serviceSlug: "cfa-exam-deferral" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1479,7 +1483,11 @@ export const growthHubs: GrowthHub[] = [
       "oracle-certification-exam-scheduling",
       "seamlesshr-breeze-payer-signup",
       "shuttlers-fund-wallet",
-      "spleet-list-apartment-host"
+      "spleet-list-apartment-host",
+      "cima-cgma-candidate-registration",
+      "cima-cgma-exam-scheduling",
+      "google-cloud-certification-exam-scheduling",
+      "cfa-exam-deferral"
     ]
   },
 
