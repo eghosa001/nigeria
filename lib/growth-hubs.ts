@@ -925,7 +925,13 @@ export const growthHubs: GrowthHub[] = [
       { query: "cancel Spotify Premium", serviceSlug: "spotify-cancel-premium" },
       { query: "ACCA exam booking Nigeria", serviceSlug: "acca-book-exam-nigeria" },
       { query: "OET booking Nigeria", serviceSlug: "oet-book-test-nigeria" },
-      { query: "Healthtracka home test Nigeria", serviceSlug: "healthtracka-home-test-nigeria" }
+      { query: "Healthtracka home test Nigeria", serviceSlug: "healthtracka-home-test-nigeria" },
+      { query: "Uber lost item Nigeria", serviceSlug: "uber-lost-item-nigeria" },
+      { query: "Bolt lost item Nigeria", serviceSlug: "bolt-lost-item-nigeria" },
+      { query: "Bolt ride insurance claim Nigeria", serviceSlug: "bolt-ride-insurance-claim-nigeria" },
+      { query: "schedule Bolt ride Nigeria", serviceSlug: "bolt-schedule-ride-nigeria" },
+      { query: "Uber Reserve Nigeria", serviceSlug: "uber-reserve-ride-nigeria" },
+      { query: "request Uber online Nigeria", serviceSlug: "uber-request-ride-online-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1161,7 +1167,13 @@ export const growthHubs: GrowthHub[] = [
       "spotify-cancel-premium",
       "acca-book-exam-nigeria",
       "oet-book-test-nigeria",
-      "healthtracka-home-test-nigeria"
+      "healthtracka-home-test-nigeria",
+      "uber-lost-item-nigeria",
+      "bolt-lost-item-nigeria",
+      "bolt-ride-insurance-claim-nigeria",
+      "bolt-schedule-ride-nigeria",
+      "uber-reserve-ride-nigeria",
+      "uber-request-ride-online-nigeria"
     ]
   },
 
