@@ -1400,6 +1400,8 @@ export const retiredJobRedirects = new Map<string, string>(
   })
 );
 
+retiredJobRedirects.set("elizade-university-careers", "categories/universities-research");
+
 export const jobScaleWave: CareerOpportunity[] = [
   ...careerSeeds.map(careerPage),
   federalUniversityLafia,

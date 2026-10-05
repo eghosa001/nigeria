@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { JobApplyLink } from "@/components/job-apply-link";
 import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
+import { retiredJobRedirects } from "@/lib/job-scale-wave";
 import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getEmployerOpportunities } from "@/lib/job-employers";
 import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
@@ -22,8 +23,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = getJobOpportunity(slug);
   if (!item) return {};
+  const isCareerPortal = item.kind === "career-page";
   return {
-    title: item.title + ": Requirements, Status & How to Apply",
+    title: isCareerPortal
+      ? item.organization + " Careers: Official Portal & How to Apply"
+      : item.title + ": Requirements, Status & How to Apply",
     description: item.summary,
     alternates: { canonical: "/jobs/" + item.slug }
   };
@@ -32,8 +36,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function JobOpportunityPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const item = getJobOpportunity(slug);
-  if (!item) notFound();
+  if (!item) {
+    const replacement = retiredJobRedirects.get(slug);
+    if (replacement) permanentRedirect("/jobs/" + replacement);
+    notFound();
+  }
 
+  const isCareerPortal = item.kind === "career-page";
   const relatedTopics = getJobTopicsForOpportunity(item);
   const employerOpportunities = getEmployerOpportunities(item.organization, item.slug).slice(0, 4);
   const effectiveStatus = getEffectiveJobStatus(item);
@@ -79,11 +88,11 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
           </div>
 
           <aside className="job-apply-card" id="official-application">
-            <span>Official application source</span>
+            <span>{isCareerPortal ? "Official careers source" : "Official application source"}</span>
             <strong>{item.organization}</strong>
             <p>MyNigeriaGuide does not receive your application, password, NIN or recruitment payment.</p>
             <JobApplyLink className="button" href={item.officialUrl} slug={item.slug} employer={item.organization} status={effectiveStatus}>
-              {effectiveStatus === "open" ? item.officialUrlLabel : "Check current official status"} ↗
+              {isCareerPortal ? item.officialUrlLabel : (effectiveStatus === "open" ? item.officialUrlLabel : "Check current official status")} ↗
             </JobApplyLink>
             <small>Verify the destination domain before entering personal information.</small>
           </aside>
@@ -91,20 +100,22 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
 
         <div className="container">
           <AnswerFirst
-            title={"Should you apply for " + item.title + "?"}
+            title={isCareerPortal ? "How should you use " + item.organization + "'s careers page?" : "Should you apply for " + item.title + "?"}
             summary={item.summary}
             facts={[
               { label: "Status", value: effectiveStatusLabel },
               { label: "Location", value: item.location },
-              { label: "Deadline / next step", value: item.deadline ? new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : (item.nextMilestone ?? "Check the live official page") },
+              { label: isCareerPortal ? "Current vacancies" : "Deadline / next step", value: isCareerPortal ? "Check the live employer source" : (item.deadline ? new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : (item.nextMilestone ?? "Check the live official page")) },
               { label: "Best fit", value: item.audiences.slice(0, 3).join(", ") },
             ]}
             links={[
-              { href: "#requirements", label: "Check requirements" },
-              { href: "#apply", label: "How to apply" },
-              { href: "#official-application", label: effectiveStatus === "open" ? "Open official application" : "Check official status", primary: true },
+              { href: "#requirements", label: isCareerPortal ? "How eligibility works" : "Check requirements" },
+              { href: "#apply", label: isCareerPortal ? "How to use the portal" : "How to apply" },
+              { href: "#official-application", label: isCareerPortal ? "Open official careers source" : (effectiveStatus === "open" ? "Open official application" : "Check official status"), primary: true },
             ]}
-            note={"Verified " + item.verifiedAt + ". Check eligibility first; only then open the official application source."}
+            note={isCareerPortal
+              ? "Verified " + item.verifiedAt + ". This is an employer-wide career source, so role-specific eligibility must come from the exact vacancy you choose."
+              : "Verified " + item.verifiedAt + ". Check eligibility first; only then open the official application source."}
           />
         </div>
       </section>
@@ -133,12 +144,12 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             </section>
 
             <section id="requirements">
-              <h2>Qualification requirements</h2>
+              <h2>{isCareerPortal ? "How eligibility works" : "Qualification requirements"}</h2>
               <ul className="checklist">{item.qualifications.map((text) => <li key={text}>{text}</li>)}</ul>
             </section>
 
             <section>
-              <h2>Other requirements</h2>
+              <h2>{isCareerPortal ? "Before you apply" : "Other requirements"}</h2>
               <ul className="checklist">{item.requirements.map((text) => <li key={text}>{text}</li>)}</ul>
             </section>
 
@@ -148,7 +159,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             </section>
 
             <section id="apply">
-              <h2>How to apply or check your status</h2>
+              <h2>{isCareerPortal ? "How to use the official careers portal" : "How to apply or check your status"}</h2>
               <ol className="job-steps">{item.applicationSteps.map((text, index) => <li key={text}><span>{index + 1}</span><p>{text}</p></li>)}</ol>
             </section>
 
