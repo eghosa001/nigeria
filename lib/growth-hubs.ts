@@ -1075,7 +1075,12 @@ export const growthHubs: GrowthHub[] = [
       { query: "Microsoft certification exam Nigeria", serviceSlug: "microsoft-certification-exam-scheduling" },
       { query: "AWS certification exam Nigeria", serviceSlug: "aws-certification-exam-scheduling" },
       { query: "Cisco certification exam Nigeria", serviceSlug: "cisco-certification-exam-registration" },
-      { query: "book Shuttlers commute", serviceSlug: "shuttlers-book-daily-commute" }
+      { query: "book Shuttlers commute", serviceSlug: "shuttlers-book-daily-commute" },
+      { query: "rent apartment on Spleet", serviceSlug: "spleet-rent-apartment" },
+      { query: "Spleet tenant verification", serviceSlug: "spleet-tenant-verification" },
+      { query: "Spleet Rent Now Pay Later", serviceSlug: "spleet-rent-now-pay-later" },
+      { query: "verify property documents PropertyPro", serviceSlug: "propertypro-property-document-verification" },
+      { query: "PropertyPro agent registration", serviceSlug: "propertypro-agent-registration" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1461,7 +1466,12 @@ export const growthHubs: GrowthHub[] = [
       "microsoft-certification-exam-scheduling",
       "aws-certification-exam-scheduling",
       "cisco-certification-exam-registration",
-      "shuttlers-book-daily-commute"
+      "shuttlers-book-daily-commute",
+      "spleet-rent-apartment",
+      "spleet-tenant-verification",
+      "spleet-rent-now-pay-later",
+      "propertypro-property-document-verification",
+      "propertypro-agent-registration"
     ]
   },
 
