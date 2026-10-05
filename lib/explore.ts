@@ -5374,6 +5374,1422 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://yobeinvest.ng/culture-and-tourism/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "agodi-gardens-guide",
+    "title": "Agodi Gardens Ibadan Guide: Park Visit & Weekend Planning",
+    "shortTitle": "Agodi Gardens",
+    "kind": "destination",
+    "region": "Oyo State",
+    "summary": "Plan Agodi Gardens as an easy Ibadan park stop with current opening, weather and family-activity checks before arrival.",
+    "intro": [
+      "Agodi Gardens is one of Ibadan's best-known urban recreation spaces and supports a distinct park-and-family search intent beyond the broader city guide.",
+      "Use it as a relaxed outdoor block, then keep Bower's Tower or the museum as separate additions depending on time and traffic."
+    ],
+    "bestFor": [
+      "Parks",
+      "Families",
+      "Relaxed outings",
+      "Ibadan"
+    ],
+    "highlights": [
+      {
+        "name": "Urban green space",
+        "detail": "The garden is best used for a slower outdoor break rather than a rushed checklist stop."
+      },
+      {
+        "name": "Family-friendly outing",
+        "detail": "Current facilities and activities can vary, so confirm what is operating before travelling with children."
+      },
+      {
+        "name": "Ibadan pairing",
+        "detail": "Bower's Tower or the National Museum of Unity can fit the same weekend, but not every city stop needs to be in one day."
+      },
+      {
+        "name": "Weather-sensitive",
+        "detail": "Rain and midday heat can change the comfort of an outdoor visit quickly."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current opening",
+        "detail": "Check the park's live operating status before travelling."
+      },
+      {
+        "label": "Use cooler hours",
+        "detail": "Morning or later afternoon can be more comfortable than peak heat."
+      },
+      {
+        "label": "Keep one flexible block",
+        "detail": "Swap outdoor plans if heavy rain arrives."
+      },
+      {
+        "label": "Protect travel time",
+        "detail": "Ibadan is large; avoid pairing the garden with distant stops without a route plan."
+      }
+    ],
+    "source": {
+      "label": "Oyo State Government — About Oyo State",
+      "href": "https://oyostate.gov.ng/about-oyo-state/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "bowers-tower-guide",
+    "title": "Bower's Tower Ibadan Guide: Views, History & Access Planning",
+    "shortTitle": "Bower's Tower",
+    "kind": "destination",
+    "region": "Oyo State",
+    "summary": "Plan Bower's Tower as an Ibadan viewpoint-and-history stop with current access, daylight and road checks before climbing.",
+    "intro": [
+      "Bower's Tower is one of Ibadan's defining hilltop landmarks and answers a focused city-view and heritage intent of its own.",
+      "Use the tower for elevated perspective, then keep museum or park stops nearby enough that traffic does not dominate the rest of the day."
+    ],
+    "bestFor": [
+      "Views",
+      "History",
+      "Photography",
+      "Ibadan"
+    ],
+    "highlights": [
+      {
+        "name": "City panorama",
+        "detail": "The elevated location gives one of the clearest ways to understand Ibadan's scale and terrain."
+      },
+      {
+        "name": "Historic landmark",
+        "detail": "The tower adds colonial-era civic context to a city trip."
+      },
+      {
+        "name": "Compact visit",
+        "detail": "It works well as one focused morning or afternoon block rather than a full-day attraction."
+      },
+      {
+        "name": "Museum pairing",
+        "detail": "The National Museum of Unity can provide historical depth on a separate city block."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check access first",
+        "detail": "Confirm current opening and whether the tower itself is accessible."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Views and footing are better before dark."
+      },
+      {
+        "label": "Wear practical footwear",
+        "detail": "Hill or stair approaches can be tiring."
+      },
+      {
+        "label": "Avoid overpacking the route",
+        "detail": "Ibadan traffic makes a short, clustered itinerary more reliable."
+      }
+    ],
+    "source": {
+      "label": "Oyo State tourism publication",
+      "href": "https://tourism.oyostate.gov.ng/wp-content/uploads/2025/07/NEW-DEAL-BOOK-ITSOYOSTATE-2025.pdf"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "osun-osogbo-sacred-grove-guide",
+    "title": "Osun-Osogbo Sacred Grove Guide: UNESCO Heritage & Visitor Etiquette",
+    "shortTitle": "Osun-Osogbo Sacred Grove",
+    "kind": "destination",
+    "region": "Osun State",
+    "summary": "Visit the Osun-Osogbo Sacred Grove as a living sacred and UNESCO-listed cultural landscape, with respectful access and photography rules.",
+    "intro": [
+      "The Osun-Osogbo Sacred Grove is one of Nigeria's most significant cultural landscapes and is both a heritage destination and a living sacred environment.",
+      "A useful visit depends on cultural respect, current access and interpretation, not just walking through the forest for photographs."
+    ],
+    "bestFor": [
+      "UNESCO heritage",
+      "Yoruba culture",
+      "Sacred landscapes",
+      "Art"
+    ],
+    "highlights": [
+      {
+        "name": "Sacred forest",
+        "detail": "The grove is a living religious landscape rather than a conventional public park."
+      },
+      {
+        "name": "Art and shrines",
+        "detail": "Sculptural works and sacred structures form part of the cultural landscape and should be approached respectfully."
+      },
+      {
+        "name": "Osogbo context",
+        "detail": "Nike Art Centre and the Ataoja Palace area can add wider artistic and royal context."
+      },
+      {
+        "name": "Festival season",
+        "detail": "Osun-Osogbo festival periods can change crowds, access and accommodation demand."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Follow sacred-site rules",
+        "detail": "Do not enter restricted areas or ignore local instructions."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Sacred spaces and people may have restrictions."
+      },
+      {
+        "label": "Use local interpretation",
+        "detail": "A knowledgeable guide adds meaning and reduces shallow storytelling."
+      },
+      {
+        "label": "Plan festival visits separately",
+        "detail": "Major festival periods need different transport and crowd planning."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Tourist Centres",
+      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ooni-palace-ile-ife-guide",
+    "title": "Ooni's Palace Ile-Ife Guide: Royal Heritage & Visitor Etiquette",
+    "shortTitle": "Ooni's Palace Ile-Ife",
+    "kind": "destination",
+    "region": "Osun State",
+    "summary": "Plan a respectful visit to the Ooni's Palace area in Ile-Ife with current access, dress and photography rules checked before arrival.",
+    "intro": [
+      "The Ooni's Palace sits at the centre of Ile-Ife's royal and cultural identity and supports a distinct heritage visit separate from a generic city guide.",
+      "Because it is an active royal institution, public access can change and visitor etiquette matters more than treating the complex like a museum."
+    ],
+    "bestFor": [
+      "Royal heritage",
+      "Yoruba history",
+      "Culture",
+      "Ile-Ife"
+    ],
+    "highlights": [
+      {
+        "name": "Royal institution",
+        "detail": "The palace is a living seat of traditional authority, not a static attraction."
+      },
+      {
+        "name": "Ile-Ife heritage",
+        "detail": "The palace area connects naturally with the National Museum and Moremi monument."
+      },
+      {
+        "name": "Cultural interpretation",
+        "detail": "Local context is essential for understanding the significance of the spaces and traditions."
+      },
+      {
+        "name": "Ceremonial periods",
+        "detail": "Events or palace activity can change visitor movement and access."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public access",
+        "detail": "Check what areas are open before travelling specifically for the palace."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use modest clothing appropriate for a formal traditional institution."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume cameras are permitted throughout palace-related spaces."
+      },
+      {
+        "label": "Follow local instructions",
+        "detail": "Respect security, custodians and ceremonial boundaries."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Tourist Centres",
+      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "araromi-seaside-guide",
+    "title": "Araromi Seaside Guide: Ondo Coast, Access & Safety Planning",
+    "shortTitle": "Araromi Seaside",
+    "kind": "destination",
+    "region": "Ondo State",
+    "summary": "Plan Araromi Seaside as an Ondo coastal road trip with live access, weather, surf and return-transport checks.",
+    "intro": [
+      "Araromi Seaside gives Ondo State a distinct Atlantic-coast travel intent beyond its hill and forest attractions.",
+      "Coastal conditions can change quickly, so sea state, road access and a daylight return plan are more important than a fixed activity list."
+    ],
+    "bestFor": [
+      "Beaches",
+      "Atlantic coast",
+      "Road trips",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Atlantic shoreline",
+        "detail": "The coast is the central attraction and works best as a dedicated beach day."
+      },
+      {
+        "name": "Ilaje landscape",
+        "detail": "The wider coastal environment gives the trip a different character from inland Ondo."
+      },
+      {
+        "name": "Photography",
+        "detail": "Open shoreline and changing light can be attractive without needing to enter rough water."
+      },
+      {
+        "name": "Separate from Idanre",
+        "detail": "The coast and hills are different route directions and should not be forced into one short day."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check sea conditions",
+        "detail": "Do not enter rough water simply because the beach is accessible."
+      },
+      {
+        "label": "Confirm the final road",
+        "detail": "Use current local directions for the approach."
+      },
+      {
+        "label": "Plan the return first",
+        "detail": "Avoid a late rural or coastal departure without reliable transport."
+      },
+      {
+        "label": "Protect valuables",
+        "detail": "Use a water-resistant plan for phones and documents."
+      }
+    ],
+    "source": {
+      "label": "Ondo State Government — coastal tourism update",
+      "href": "https://ondostate.gov.ng/news-details?id=708515"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ebomi-lake-guide",
+    "title": "Ebomi Lake Guide: Ondo Nature Trip & Water Safety Planning",
+    "shortTitle": "Ebomi Lake",
+    "kind": "destination",
+    "region": "Ondo State",
+    "summary": "Use Ebomi Lake as a focused Akoko nature trip with current community access, water-safety and daylight checks.",
+    "intro": [
+      "Ebomi Lake is one of Ondo State's distinctive inland-water attractions and answers a slower nature-and-landscape intent than the state's hill or seaside trips.",
+      "Treat water activities as condition-dependent and use local guidance rather than assuming swimming or boating is automatically available."
+    ],
+    "bestFor": [
+      "Lakes",
+      "Nature",
+      "Photography",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Lake landscape",
+        "detail": "The water and surrounding scenery are the main reasons to visit."
+      },
+      {
+        "name": "Akoko setting",
+        "detail": "The rural location makes local directions and road timing part of the trip."
+      },
+      {
+        "name": "Slow nature stop",
+        "detail": "The lake works best as a dedicated block rather than another item in a long state circuit."
+      },
+      {
+        "name": "Community context",
+        "detail": "Local guidance can clarify appropriate access and any cultural considerations."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm local access",
+        "detail": "Use current community or tourism guidance before travelling."
+      },
+      {
+        "label": "Do not assume water safety",
+        "detail": "Only enter water when current conditions and responsible local guidance support it."
+      },
+      {
+        "label": "Travel in daylight",
+        "detail": "Build a conservative road-time margin."
+      },
+      {
+        "label": "Carry essentials",
+        "detail": "Do not assume full visitor services are available."
+      }
+    ],
+    "source": {
+      "label": "Ondo State profile",
+      "href": "https://mepb.on.gov.ng/meet-us/ondo-state-profile/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ilorin-central-mosque-guide",
+    "title": "Ilorin Central Mosque Guide: Architecture, Worship & Visitor Etiquette",
+    "shortTitle": "Ilorin Central Mosque",
+    "kind": "destination",
+    "region": "Kwara State",
+    "summary": "Plan an Ilorin Central Mosque visit around worship schedules, respectful dress and current visitor boundaries.",
+    "intro": [
+      "Ilorin Central Mosque is one of Kwara's defining religious and architectural landmarks and supports a focused heritage visit.",
+      "It remains an active place of worship, so prayer, dress and photography etiquette take priority over casual sightseeing."
+    ],
+    "bestFor": [
+      "Islamic architecture",
+      "Culture",
+      "History",
+      "Ilorin"
+    ],
+    "highlights": [
+      {
+        "name": "Architecture",
+        "detail": "The mosque is one of the city's most recognisable built landmarks."
+      },
+      {
+        "name": "Living worship space",
+        "detail": "Visitor behaviour should reflect that religious activity takes priority."
+      },
+      {
+        "name": "Ilorin identity",
+        "detail": "The site is closely tied to the city's cultural and historical character."
+      },
+      {
+        "name": "City pairing",
+        "detail": "Flower Garden or another city stop can fit the same day without a long rural drive."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Avoid disrupting prayer",
+        "detail": "Choose a respectful visit time and follow mosque instructions."
+      },
+      {
+        "label": "Dress modestly",
+        "detail": "Use clothing appropriate for an active religious site."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume cameras are permitted in all areas."
+      },
+      {
+        "label": "Follow local guidance",
+        "detail": "Use designated visitor areas and entrances."
+      }
+    ],
+    "source": {
+      "label": "Kwara State tourism information",
+      "href": "https://kwarastate.gov.ng/do-business/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ibom-unity-museum-guide",
+    "title": "Ibom Unity Museum Guide: Uyo History & Culture Visit",
+    "shortTitle": "Ibom Unity Museum",
+    "kind": "destination",
+    "region": "Akwa Ibom State",
+    "summary": "Use Ibom Unity Museum as a focused Uyo culture-and-history stop, with current operating details checked before travelling.",
+    "intro": [
+      "Ibom Unity Museum supports a distinct cultural visit inside Uyo and gives a short city break more depth than leisure-only attractions.",
+      "Akwa Ibom's tourism programme has continued to highlight the site, but live public access should still be confirmed before a dedicated visit."
+    ],
+    "bestFor": [
+      "Museums",
+      "Akwa Ibom history",
+      "Culture",
+      "Uyo"
+    ],
+    "highlights": [
+      {
+        "name": "State heritage",
+        "detail": "The museum provides context for Akwa Ibom's people, identity and history."
+      },
+      {
+        "name": "City location",
+        "detail": "It fits naturally into a Uyo-based itinerary without a long coastal road trip."
+      },
+      {
+        "name": "Arts pairing",
+        "detail": "The State Centre for Arts and Culture can complement the museum when public programmes are available."
+      },
+      {
+        "name": "Indoor alternative",
+        "detail": "The museum can provide a useful weather-proof cultural block during a city weekend."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm opening",
+        "detail": "Check current public hours before travelling."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing indoor collections."
+      },
+      {
+        "label": "Allow interpretation time",
+        "detail": "Do not rush a museum visit between unrelated errands."
+      },
+      {
+        "label": "Keep coastal trips separate",
+        "detail": "Ibeno and other coastal destinations need their own road-time planning."
+      }
+    ],
+    "source": {
+      "label": "Akwa Ibom State Government tourism update",
+      "href": "https://akwaibomstate.gov.ng/a-r-i-s-e-agenda-gov-umo-eno-tours-tourism-sites-vows-to-revamp-akwa-ibom-tourism-sector/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "owerre-ezukala-cave-waterfall-guide",
+    "title": "Owerre-Ezukala Cave & Waterfall Guide: Anambra Nature Planning",
+    "shortTitle": "Owerre-Ezukala Cave & Waterfall",
+    "kind": "destination",
+    "region": "Anambra State",
+    "summary": "Plan Owerre-Ezukala as a dedicated Anambra cave-and-waterfall trip with local guidance, weather and daylight checks.",
+    "intro": [
+      "Owerre-Ezukala combines cave and waterfall features in one destination and supports a different nature intent from Ogbunike or Agulu Lake.",
+      "Anambra has identified the site for tourism development, but current access, route and safety conditions should be checked close to the visit."
+    ],
+    "bestFor": [
+      "Caves",
+      "Waterfalls",
+      "Adventure",
+      "Nature"
+    ],
+    "highlights": [
+      {
+        "name": "Cave setting",
+        "detail": "Use a recognised local route rather than entering unfamiliar cave sections independently."
+      },
+      {
+        "name": "Waterfall landscape",
+        "detail": "Water flow and footing change with rainfall."
+      },
+      {
+        "name": "Rural Anambra trip",
+        "detail": "The journey requires more planning than an urban stop."
+      },
+      {
+        "name": "Separate from Ogbunike",
+        "detail": "Both are strong cave destinations, but each deserves its own trip block."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local guidance",
+        "detail": "Confirm the current visitor route before entering cave or waterfall areas."
+      },
+      {
+        "label": "Wear grip-friendly shoes",
+        "detail": "Expect wet and uneven surfaces."
+      },
+      {
+        "label": "Check rainfall",
+        "detail": "Heavy rain can change water flow and road comfort."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Protect enough daylight for the rural journey back."
+      }
+    ],
+    "source": {
+      "label": "Anambra State tourism development update",
+      "href": "https://anambrastate.gov.ng/soludo-administration-to-develop-five-major-tourism-heritage-sites-in-anambra/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "oloibiri-oil-heritage-guide",
+    "title": "Oloibiri Oil Heritage Guide: Bayelsa History & Visitor Planning",
+    "shortTitle": "Oloibiri Oil Heritage",
+    "kind": "destination",
+    "region": "Bayelsa State",
+    "summary": "Visit the Oloibiri/Otuabagi oil heritage area for Nigeria's petroleum-history context, with current site access and local guidance checked before travelling.",
+    "intro": [
+      "Oloibiri's oil heritage is nationally significant and gives Bayelsa a distinct industrial-history travel intent beyond riverine leisure.",
+      "The useful visit is about historical context and community interpretation, not simply photographing a marker. Confirm what facilities and heritage sites are currently open."
+    ],
+    "bestFor": [
+      "Industrial history",
+      "Nigeria history",
+      "Bayelsa",
+      "Heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Oil-history context",
+        "detail": "The area is associated with Nigeria's early commercial petroleum production and deserves careful historical interpretation."
+      },
+      {
+        "name": "Community setting",
+        "detail": "Use local guidance and respect residents rather than treating the area as an abandoned industrial exhibit."
+      },
+      {
+        "name": "Bayelsa contrast",
+        "detail": "Yenagoa's Ox-Bow Lake offers a different leisure experience for a longer state trip."
+      },
+      {
+        "name": "Heritage infrastructure",
+        "detail": "Visitor facilities can change, so confirm what is actually open before travelling."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm site access",
+        "detail": "Check current public facilities and recognised visitor points."
+      },
+      {
+        "label": "Use local interpretation",
+        "detail": "Historical context matters more than a quick photo stop."
+      },
+      {
+        "label": "Respect community spaces",
+        "detail": "Ask before photographing people or private property."
+      },
+      {
+        "label": "Travel in daylight",
+        "detail": "Use conservative road timing outside Yenagoa."
+      }
+    ],
+    "source": {
+      "label": "Bayelsa Ministry of Tourism Development — Tourism Sites",
+      "href": "https://motd.bayelsastate.gov.ng/tourism-sites/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "makurdi-river-benue-guide",
+    "title": "Makurdi River Benue Guide: Waterfront, Safety & City Planning",
+    "shortTitle": "Makurdi River Benue",
+    "kind": "destination",
+    "region": "Benue State",
+    "summary": "Use Makurdi's River Benue waterfront as a focused city nature stop, with current water, weather and operator checks before any boat activity.",
+    "intro": [
+      "The River Benue is central to Makurdi's identity and supports a distinct waterfront travel intent separate from Benue's hill and spring destinations.",
+      "Treat water activities as optional and condition-dependent. The river can still be a meaningful landscape stop without boarding a boat."
+    ],
+    "bestFor": [
+      "River views",
+      "Makurdi",
+      "Photography",
+      "Relaxed outings"
+    ],
+    "highlights": [
+      {
+        "name": "River landscape",
+        "detail": "The broad river is the main visual and geographic attraction."
+      },
+      {
+        "name": "City identity",
+        "detail": "The waterfront helps explain Makurdi's relationship with the River Benue."
+      },
+      {
+        "name": "Optional boat viewing",
+        "detail": "Use only a suitable operator with clear safety equipment and return arrangements."
+      },
+      {
+        "name": "Benue extension",
+        "detail": "Ushongo Hills or Enemabia Warm Spring are separate road-trip options for a longer stay."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check river conditions",
+        "detail": "Weather and water levels should determine whether water activity is appropriate."
+      },
+      {
+        "label": "Verify life jackets",
+        "detail": "Do not board a boat without suitable safety equipment."
+      },
+      {
+        "label": "Plan your return",
+        "detail": "Agree the return point and transport before a late waterfront period."
+      },
+      {
+        "label": "Keep rural trips separate",
+        "detail": "Do not combine distant Benue destinations casually in one short day."
+      }
+    ],
+    "source": {
+      "label": "Benue State Department of Tourism",
+      "href": "https://bact.benuestate.gov.ng/departments/department-of-tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ushongo-hills-guide",
+    "title": "Ushongo Hills Guide: Benue Hiking & Road Trip Planning",
+    "shortTitle": "Ushongo Hills",
+    "kind": "destination",
+    "region": "Benue State",
+    "summary": "Plan Ushongo Hills as a dedicated Benue outdoor trip with local route, daylight, road and weather checks.",
+    "intro": [
+      "Ushongo Hills gives Benue a distinct hill-and-landscape travel intent beyond Makurdi's riverfront or the state's warm spring.",
+      "Treat the visit as an outdoor activity requiring current local guidance and realistic travel time rather than a roadside viewpoint."
+    ],
+    "bestFor": [
+      "Hiking",
+      "Rock landscapes",
+      "Nature",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Hill terrain",
+        "detail": "The landscape and elevated views are the main reason to visit."
+      },
+      {
+        "name": "Outdoor activity",
+        "detail": "A proper hill visit needs practical footwear, water and enough time."
+      },
+      {
+        "name": "Benue countryside",
+        "detail": "The rural setting is part of the trip and increases the need for route planning."
+      },
+      {
+        "name": "Separate state clusters",
+        "detail": "Makurdi and Otukpo-area attractions are different trip directions."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local guidance",
+        "detail": "Confirm the recognised route and turnaround time."
+      },
+      {
+        "label": "Check current road conditions",
+        "detail": "Weather can change rural access."
+      },
+      {
+        "label": "Carry essentials",
+        "detail": "Bring water, sun protection and basic first-aid."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Keep a conservative daylight margin."
+      }
+    ],
+    "source": {
+      "label": "Benue State Department of Tourism",
+      "href": "https://bact.benuestate.gov.ng/departments/department-of-tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nana-palace-koko-guide",
+    "title": "Nana Living History Palace Guide: Koko Heritage & Delta Planning",
+    "shortTitle": "Nana Living History Palace",
+    "kind": "destination",
+    "region": "Delta State",
+    "summary": "Visit Nana Living History Palace in Koko as a focused Delta heritage stop with current public access and interpretation checked before travelling.",
+    "intro": [
+      "The Nana Living History Palace preserves an important Niger Delta political and trading story and supports a distinct heritage visit beyond Delta's nature attractions.",
+      "Use current official or local guidance for access and interpretation rather than relying on old visitor reports."
+    ],
+    "bestFor": [
+      "History",
+      "Niger Delta heritage",
+      "Museums",
+      "Koko"
+    ],
+    "highlights": [
+      {
+        "name": "Nana Olomu history",
+        "detail": "The site is connected with one of the most significant Itsekiri trading and political figures of the colonial period."
+      },
+      {
+        "name": "Living-history setting",
+        "detail": "The palace context makes the visit more meaningful than a standalone artefact display."
+      },
+      {
+        "name": "Delta heritage circuit",
+        "detail": "Mungo Park House in Asaba forms another separate historical cluster."
+      },
+      {
+        "name": "Community setting",
+        "detail": "Respect local use and any palace-specific boundaries."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public access",
+        "detail": "Check opening and visitor arrangements before travelling."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Palace and heritage spaces may have restrictions."
+      },
+      {
+        "label": "Allow interpretation time",
+        "detail": "Use the visit to understand the history rather than rushing through."
+      },
+      {
+        "label": "Keep distant Delta stops separate",
+        "detail": "Koko and Asaba require realistic road-time planning."
+      }
+    ],
+    "source": {
+      "label": "Federal Presidency South-South Community Engagement — Delta",
+      "href": "https://communityengagementss.presidency.gov.ng/portfolio/delta/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "mungo-park-house-asaba-guide",
+    "title": "Mungo Park House Asaba Guide: Delta Colonial Heritage Visit",
+    "shortTitle": "Mungo Park House Asaba",
+    "kind": "destination",
+    "region": "Delta State",
+    "summary": "Plan Mungo Park House as an Asaba heritage stop with current opening, interpretation and photography rules checked before arrival.",
+    "intro": [
+      "Mungo Park House is one of Delta's documented historic landmarks and supports a focused colonial-history visit inside Asaba.",
+      "The site is most useful with careful historical context rather than a quick landmark photograph."
+    ],
+    "bestFor": [
+      "History",
+      "Asaba",
+      "Heritage",
+      "Architecture"
+    ],
+    "highlights": [
+      {
+        "name": "Historic building",
+        "detail": "The structure provides a tangible link to early colonial-era exploration and administration narratives."
+      },
+      {
+        "name": "Asaba city stop",
+        "detail": "It can fit into a short heritage block without a long rural road trip."
+      },
+      {
+        "name": "Delta history context",
+        "detail": "The site adds a different layer to the state's river, trade and colonial history."
+      },
+      {
+        "name": "Interpretation",
+        "detail": "Use credible historical framing rather than romanticised explorer stories."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm opening",
+        "detail": "Check current public access before travelling."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing interiors or collections."
+      },
+      {
+        "label": "Use credible history",
+        "detail": "Prefer museum or official interpretation over simplified travel summaries."
+      },
+      {
+        "label": "Keep Koko separate",
+        "detail": "Nana Palace is a different Delta heritage cluster with its own road time."
+      }
+    ],
+    "source": {
+      "label": "Federal Presidency South-South Community Engagement — Delta",
+      "href": "https://communityengagementss.presidency.gov.ng/portfolio/delta/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "dutse-rock-city-guide",
+    "title": "Dutse Rock City Guide: Jigawa Landscape & Visitor Planning",
+    "shortTitle": "Dutse Rock City",
+    "kind": "destination",
+    "region": "Jigawa State",
+    "summary": "Use Dutse's surrounding rock landscape as a focused Jigawa city-and-nature trip with daylight, weather and local-route checks.",
+    "intro": [
+      "Dutse is known for its distinctive rocky setting, giving the Jigawa capital a visual identity that supports a dedicated landscape guide.",
+      "Treat the rock environment as open terrain rather than unrestricted climbing space and use current local directions for appropriate viewpoints."
+    ],
+    "bestFor": [
+      "Rock landscapes",
+      "Photography",
+      "Dutse",
+      "Short city trips"
+    ],
+    "highlights": [
+      {
+        "name": "Rocky city setting",
+        "detail": "The formations around Dutse create the main visual character of the destination."
+      },
+      {
+        "name": "City viewpoint potential",
+        "detail": "Use recognised public areas rather than improvising on steep or private terrain."
+      },
+      {
+        "name": "Jigawa heritage pairing",
+        "detail": "Saminu Turaki Tower can add a built-landmark stop to the same city trip."
+      },
+      {
+        "name": "Birnin Kudu extension",
+        "detail": "The heritage area is a separate road block for a longer stay."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use safe public viewpoints",
+        "detail": "Do not climb unstable or restricted rock areas."
+      },
+      {
+        "label": "Avoid peak heat",
+        "detail": "Outdoor rock landscapes can become very hot."
+      },
+      {
+        "label": "Carry water",
+        "detail": "Do not depend on supplies outside central areas."
+      },
+      {
+        "label": "Keep daylight margin",
+        "detail": "Finish outdoor exploration before visibility drops."
+      }
+    ],
+    "source": {
+      "label": "Jigawa State Government",
+      "href": "https://jigawastate.gov.ng/index"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "saminu-turaki-tower-guide",
+    "title": "Saminu Turaki Tower Dutse Guide: Landmark Visit & City Views",
+    "shortTitle": "Saminu Turaki Tower",
+    "kind": "destination",
+    "region": "Jigawa State",
+    "summary": "Plan a Saminu Turaki Tower visit as a Dutse landmark stop with current access, opening and photography rules checked beforehand.",
+    "intro": [
+      "Saminu Turaki Tower is one of Dutse's most recognisable built landmarks and supports a focused city-view and architecture intent.",
+      "Public access and tower operations can change, so confirm current visitor arrangements before travelling specifically for the site."
+    ],
+    "bestFor": [
+      "Architecture",
+      "City views",
+      "Dutse",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Built landmark",
+        "detail": "The tower provides a distinct urban focal point within Dutse."
+      },
+      {
+        "name": "City context",
+        "detail": "It pairs naturally with the wider Dutse rock landscape."
+      },
+      {
+        "name": "Short visit",
+        "detail": "The tower can work as one focused stop in a city itinerary rather than a full-day destination."
+      },
+      {
+        "name": "Photography",
+        "detail": "Use permitted public areas and follow any security restrictions."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public access",
+        "detail": "Check whether the tower is currently open to visitors."
+      },
+      {
+        "label": "Follow security instructions",
+        "detail": "Do not cross barriers or restricted areas for a better photo."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Visit when access and views are easiest to assess."
+      },
+      {
+        "label": "Pair locally",
+        "detail": "Keep the rest of the day around Dutse rather than adding a distant inter-town trip."
+      }
+    ],
+    "source": {
+      "label": "Jigawa State Government",
+      "href": "https://jigawastate.gov.ng/index"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "zaria-city-walls-guide",
+    "title": "Zaria City Walls Guide: Kaduna Heritage & Old City Planning",
+    "shortTitle": "Zaria City Walls",
+    "kind": "destination",
+    "region": "Kaduna State",
+    "summary": "Use Zaria's historic wall remains as a focused old-city heritage visit with local guidance and respectful photography.",
+    "intro": [
+      "Zaria's city walls are part of the historic fabric of one of northern Nigeria's major traditional cities and support a distinct built-heritage search intent.",
+      "Because surviving sections sit within a living city, use local context and current route information rather than expecting a single fenced attraction."
+    ],
+    "bestFor": [
+      "History",
+      "Old cities",
+      "Architecture",
+      "Zaria"
+    ],
+    "highlights": [
+      {
+        "name": "Historic wall remains",
+        "detail": "The surviving sections help explain the old city's defensive and urban form."
+      },
+      {
+        "name": "Living urban context",
+        "detail": "The walls are embedded in contemporary Zaria rather than isolated in a museum setting."
+      },
+      {
+        "name": "Kufena connection",
+        "detail": "Kufena Hills can add a nature block to a longer Zaria stay."
+      },
+      {
+        "name": "Traditional city identity",
+        "detail": "Local interpretation can connect the walls to wider emirate history."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local guidance",
+        "detail": "Ask where the clearest and most appropriate surviving sections can be viewed."
+      },
+      {
+        "label": "Respect residents",
+        "detail": "Do not treat homes or private streets as open heritage exhibits."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Use normal courtesy around people and traditional areas."
+      },
+      {
+        "label": "Stay in daylight",
+        "detail": "Historic streets and wall sections are easier to understand and navigate during the day."
+      }
+    ],
+    "source": {
+      "label": "Kaduna Investment Promotion Agency — tourism publications",
+      "href": "https://kadipa.kdsg.gov.ng/documents.html"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "sultans-palace-sokoto-guide",
+    "title": "Sultan's Palace Sokoto Guide: Caliphate Heritage & Visitor Etiquette",
+    "shortTitle": "Sultan's Palace Sokoto",
+    "kind": "destination",
+    "region": "Sokoto State",
+    "summary": "Plan a respectful visit around the Sultan's Palace area in Sokoto with current public boundaries, dress and photography rules checked first.",
+    "intro": [
+      "The Sultanate heritage area is central to Sokoto's historical and religious identity and supports a focused cultural visit.",
+      "It remains an active traditional and religious institution, so access is not equivalent to a museum ticket and may change around ceremonies or official activity."
+    ],
+    "bestFor": [
+      "Caliphate history",
+      "Royal heritage",
+      "Islamic culture",
+      "Sokoto"
+    ],
+    "highlights": [
+      {
+        "name": "Sultanate heritage",
+        "detail": "The palace area is tied to the continuing institutional legacy of the Sokoto Caliphate."
+      },
+      {
+        "name": "Living institution",
+        "detail": "Traditional and religious functions take priority over sightseeing."
+      },
+      {
+        "name": "History Bureau pairing",
+        "detail": "Sokoto State History Bureau can add documentary context to a heritage day."
+      },
+      {
+        "name": "City cultural context",
+        "detail": "The wider old-city environment helps place the palace in Sokoto's historical landscape."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public boundaries",
+        "detail": "Check which areas can be visited before travelling specifically for the palace."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use modest clothing appropriate for a formal religious and traditional institution."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume cameras are permitted."
+      },
+      {
+        "label": "Avoid ceremonial disruption",
+        "detail": "Follow staff and security directions during official activity."
+      }
+    ],
+    "source": {
+      "label": "Sokoto State Government — History of Sokoto",
+      "href": "https://sokotostate.gov.ng/history-of-sokoto/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "dufuna-canoe-heritage-guide",
+    "title": "Dufuna Canoe Heritage Guide: Yobe Archaeology & Trip Planning",
+    "shortTitle": "Dufuna Canoe Heritage",
+    "kind": "destination",
+    "region": "Yobe State",
+    "summary": "Use Dufuna canoe heritage as a focused archaeology-and-history trip only after confirming current exhibition, access and security conditions.",
+    "intro": [
+      "The Dufuna canoe is one of Africa's most important archaeological discoveries and gives Yobe a distinct ancient-technology and heritage search intent.",
+      "Because the original find, exhibition arrangements and current travel conditions are separate issues, confirm what visitors can actually see before making the journey."
+    ],
+    "bestFor": [
+      "Archaeology",
+      "African history",
+      "Ancient technology",
+      "Yobe heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Ancient canoe heritage",
+        "detail": "The find is significant for understanding early watercraft technology and settlement in the region."
+      },
+      {
+        "name": "Archaeological context",
+        "detail": "The story is more meaningful with careful interpretation rather than a simple 'oldest canoe' headline."
+      },
+      {
+        "name": "Yobe cultural landscape",
+        "detail": "The heritage belongs within the broader historic and Sahel setting of the state."
+      },
+      {
+        "name": "Separate from birding",
+        "detail": "Dagona is a different conservation trip with its own current access requirements."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm what is viewable",
+        "detail": "Check the current exhibition or heritage arrangement before travelling."
+      },
+      {
+        "label": "Check security first",
+        "detail": "Use current official and trusted local advice for the route."
+      },
+      {
+        "label": "Use credible interpretation",
+        "detail": "Prefer museum, archaeological or official context over exaggerated claims."
+      },
+      {
+        "label": "Travel in daylight",
+        "detail": "Use conservative road timing."
+      }
+    ],
+    "source": {
+      "label": "Yobe Investment Promotion Agency — Culture and Tourism",
+      "href": "https://yobeinvest.ng/culture-and-tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kaltungo-hills-guide",
+    "title": "Kaltungo Hills Guide: Gombe Landscape & Road Trip Planning",
+    "shortTitle": "Kaltungo Hills",
+    "kind": "destination",
+    "region": "Gombe State",
+    "summary": "Plan Kaltungo Hills as a dedicated Gombe outdoor trip with current road, local-route and daylight checks.",
+    "intro": [
+      "Kaltungo's hill landscape gives southern Gombe a distinct outdoor destination separate from Dadin Kowa or the state's river corridors.",
+      "Use local guidance for appropriate viewpoints and treat the trip as a road-and-landscape day rather than a quick detour."
+    ],
+    "bestFor": [
+      "Hills",
+      "Road trips",
+      "Photography",
+      "Gombe nature"
+    ],
+    "highlights": [
+      {
+        "name": "Hill landscape",
+        "detail": "The terrain and views are the central experience."
+      },
+      {
+        "name": "Southern Gombe setting",
+        "detail": "The route gives a different landscape perspective from Gombe city."
+      },
+      {
+        "name": "Outdoor stop",
+        "detail": "Plan for heat, water and uneven ground."
+      },
+      {
+        "name": "State nature circuit",
+        "detail": "Dadin Kowa and Nafada are separate route directions."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current access",
+        "detail": "Use local information for suitable viewpoints and routes."
+      },
+      {
+        "label": "Check the road",
+        "detail": "Weather and works can change rural travel time."
+      },
+      {
+        "label": "Carry water",
+        "detail": "Do not assume visitor services on the hills."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Protect enough daylight for the road journey back."
+      }
+    ],
+    "source": {
+      "label": "Gombe State Government — Local Government Areas",
+      "href": "https://gombestate.gov.ng/pages/lgas.php"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "mbari-cultural-centre-guide",
+    "title": "Mbari Cultural Centre Owerri Guide: Igbo Art & Heritage Visit",
+    "shortTitle": "Mbari Cultural Centre",
+    "kind": "destination",
+    "region": "Imo State",
+    "summary": "Use Mbari Cultural Centre as a focused Owerri culture stop with current opening, programme and photography details checked before arrival.",
+    "intro": [
+      "Mbari Cultural Centre offers a distinct art-and-heritage intent inside Owerri and gives an Imo trip a cultural anchor beyond Oguta Lake.",
+      "Current public programming and access can change, so confirm what is operating before travelling specifically for the centre."
+    ],
+    "bestFor": [
+      "Igbo culture",
+      "Art",
+      "Owerri",
+      "Heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Cultural expression",
+        "detail": "The centre is associated with Imo and wider Igbo artistic and cultural identity."
+      },
+      {
+        "name": "Owerri city stop",
+        "detail": "It works as a compact indoor or semi-indoor cultural block."
+      },
+      {
+        "name": "Oguta contrast",
+        "detail": "Oguta Lake provides a separate nature-and-water destination for a longer Imo stay."
+      },
+      {
+        "name": "Programme-dependent experience",
+        "detail": "Events or exhibitions can significantly change what a visitor sees."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm opening and programme",
+        "detail": "Check current public access before travelling."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Follow rules around artworks, performances and people."
+      },
+      {
+        "label": "Allow interpretation time",
+        "detail": "Use the centre for cultural context rather than a quick photo stop."
+      },
+      {
+        "label": "Keep lake trips separate",
+        "detail": "Oguta needs its own road and water-safety planning."
+      }
+    ],
+    "source": {
+      "label": "Imo State Investment Promotion Agency — About Imo",
+      "href": "https://www.isipa.im.gov.ng/about-imo.html"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ara-rock-guide",
+    "title": "Ara Rock Nasarawa Guide: Landscape & Road Trip Planning",
+    "shortTitle": "Ara Rock",
+    "kind": "destination",
+    "region": "Nasarawa State",
+    "summary": "Plan Ara Rock as a dedicated Nasarawa landscape stop with current road, local-access and daylight checks.",
+    "intro": [
+      "Ara Rock is one of Nasarawa's documented natural landmarks and supports a focused geology-and-landscape trip separate from Farin Ruwa or Eggon Hills.",
+      "The rock should be treated as a viewing and landscape destination unless current local guidance specifically supports a recognised climbing route."
+    ],
+    "bestFor": [
+      "Rock landscapes",
+      "Photography",
+      "Road trips",
+      "Nature"
+    ],
+    "highlights": [
+      {
+        "name": "Prominent rock formation",
+        "detail": "The geological landmark is the main reason to travel to Ara."
+      },
+      {
+        "name": "Rural setting",
+        "detail": "The surrounding landscape adds to the trip but increases reliance on current directions."
+      },
+      {
+        "name": "Nasarawa nature circuit",
+        "detail": "Eggon Hills and Farin Ruwa are separate outdoor destinations."
+      },
+      {
+        "name": "Viewpoint-first experience",
+        "detail": "There is no need to climb unstable terrain to appreciate the formation."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm local access",
+        "detail": "Ask where visitors can stop safely and legally."
+      },
+      {
+        "label": "Avoid unapproved climbing",
+        "detail": "Do not improvise a route on unfamiliar rock."
+      },
+      {
+        "label": "Travel in daylight",
+        "detail": "Keep enough return margin for a rural road trip."
+      },
+      {
+        "label": "Carry essentials",
+        "detail": "Bring water and basic supplies rather than assuming visitor facilities."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Nasarawa tourism survey",
+      "href": "https://fmino.gov.ng/report-on-tourism-survey-at-nasarawa-state-from-tuesday-7th-thursday-9th-of-may-2019/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "hubbare-gwandu-guide",
+    "title": "Hubbare Gwandu Guide: Kebbi Caliphate Heritage & Visitor Planning",
+    "shortTitle": "Hubbare Gwandu",
+    "kind": "destination",
+    "region": "Kebbi State",
+    "summary": "Visit Hubbare in Gwandu as a focused caliphate-history and memorial stop with respectful access and local interpretation.",
+    "intro": [
+      "Hubbare, associated with Abdullahi dan Fodio, gives Gwandu a distinct historical and religious heritage intent within Kebbi State.",
+      "The site should be approached as a memorial and living cultural environment, not simply a roadside landmark."
+    ],
+    "bestFor": [
+      "Islamic history",
+      "Gwandu",
+      "Caliphate heritage",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Abdullahi dan Fodio heritage",
+        "detail": "The site connects to one of the major figures in the Sokoto Caliphate's history."
+      },
+      {
+        "name": "Gwandu context",
+        "detail": "Local interpretation helps place the memorial within the emirate's wider historical role."
+      },
+      {
+        "name": "Respectful visit",
+        "detail": "Religious and memorial etiquette should guide photography and behaviour."
+      },
+      {
+        "name": "Kebbi circuit",
+        "detail": "Argungu and Zuru are separate heritage directions for a longer trip."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current access",
+        "detail": "Check the recognised visitor area before travelling."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use modest clothing appropriate for a religious memorial."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume all areas permit cameras."
+      },
+      {
+        "label": "Use local interpretation",
+        "detail": "Context adds value and helps avoid inaccurate historical claims."
+      }
+    ],
+    "source": {
+      "label": "Kebbi State Government",
+      "href": "https://kebbistate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ojukwu-bunker-guide",
+    "title": "Ojukwu Bunker Umuahia Guide: Biafran History & Visitor Planning",
+    "shortTitle": "Ojukwu Bunker",
+    "kind": "destination",
+    "region": "Abia State",
+    "summary": "Plan an Ojukwu Bunker visit as a focused Umuahia modern-history stop, with current rehabilitation and access status checked before travelling.",
+    "intro": [
+      "Ojukwu Bunker is one of Umuahia's most important Biafran-war heritage sites and supports a distinct history search intent separate from the National War Museum.",
+      "Federal preservation work has been active in 2026, so the first planning step is confirming what is open and how the site is currently interpreted."
+    ],
+    "bestFor": [
+      "Modern history",
+      "Biafran history",
+      "Umuahia",
+      "Heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Historic bunker",
+        "detail": "The site provides direct physical context for the Biafran period and wartime administration."
+      },
+      {
+        "name": "War Museum connection",
+        "detail": "The National War Museum is the natural companion stop for a fuller history day."
+      },
+      {
+        "name": "Preservation work",
+        "detail": "Current rehabilitation can improve interpretation while also changing access."
+      },
+      {
+        "name": "Sensitive history",
+        "detail": "Use careful, evidence-based interpretation rather than sensational storytelling."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm access first",
+        "detail": "Check the current rehabilitation and opening status before travelling."
+      },
+      {
+        "label": "Use credible interpretation",
+        "detail": "Prefer museum, federal or scholarly context for contested historical details."
+      },
+      {
+        "label": "Allow time to read",
+        "detail": "This is a history-heavy visit and benefits from a slower pace."
+      },
+      {
+        "label": "Keep distant Abia sites separate",
+        "detail": "Arochukwu deserves its own road-trip day."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Abia heritage restoration",
+      "href": "https://fmino.gov.ng/federal-governments-war-museum-and-ojukwu-bunker-get-major-historical-preservation-boost-in-abia/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
