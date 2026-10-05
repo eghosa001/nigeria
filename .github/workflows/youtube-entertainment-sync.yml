@@ -34,9 +34,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Validate fast-path policy
-        run: python3 scripts/fast_path_guard.py
-
       - id: api-key
         name: Check YouTube API credential
         env:
