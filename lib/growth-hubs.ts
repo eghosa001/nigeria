@@ -697,7 +697,18 @@ export const growthHubs: GrowthHub[] = [
       { query: "send parcel DHL Nigeria", serviceSlug: "dhl-send-parcel-nigeria" },
       { query: "DHL tracking Nigeria", serviceSlug: "dhl-track-shipment-nigeria" },
       { query: "British Council IELTS registration Nigeria", serviceSlug: "british-council-ielts-registration-nigeria" },
-      { query: "IDP IELTS registration Nigeria", serviceSlug: "idp-ielts-registration-nigeria" }
+      { query: "IDP IELTS registration Nigeria", serviceSlug: "idp-ielts-registration-nigeria" },
+      { query: "book GIGM bus online", serviceSlug: "gigm-book-bus-nigeria" },
+      { query: "pay EKEDP bill or buy token", serviceSlug: "ekedp-pay-bill-buy-token" },
+      { query: "apply for EKEDP prepaid meter", serviceSlug: "ekedp-prepaid-meter-application" },
+      { query: "activate Starlink Nigeria", serviceSlug: "starlink-activate-kit-nigeria" },
+      { query: "reactivate Starlink Nigeria", serviceSlug: "starlink-reactivate-service-nigeria" },
+      { query: "SYNLAB home collection Nigeria", serviceSlug: "synlab-home-sample-collection" },
+      { query: "check SYNLAB results online", serviceSlug: "synlab-pathprovider-results" },
+      { query: "book Evercare Hospital appointment", serviceSlug: "evercare-book-appointment" },
+      { query: "activate Paystack business Nigeria", serviceSlug: "paystack-business-activation-nigeria" },
+      { query: "request Paystack terminal", serviceSlug: "paystack-physical-terminal-nigeria" },
+      { query: "buy Leadway motor insurance online", serviceSlug: "leadway-buy-motor-insurance-online" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -719,7 +730,18 @@ export const growthHubs: GrowthHub[] = [
       "dhl-send-parcel-nigeria",
       "dhl-track-shipment-nigeria",
       "british-council-ielts-registration-nigeria",
-      "idp-ielts-registration-nigeria"
+      "idp-ielts-registration-nigeria",
+      "gigm-book-bus-nigeria",
+      "ekedp-pay-bill-buy-token",
+      "ekedp-prepaid-meter-application",
+      "starlink-activate-kit-nigeria",
+      "starlink-reactivate-service-nigeria",
+      "synlab-home-sample-collection",
+      "synlab-pathprovider-results",
+      "evercare-book-appointment",
+      "paystack-business-activation-nigeria",
+      "paystack-physical-terminal-nigeria",
+      "leadway-buy-motor-insurance-online"
     ]
   },
 
