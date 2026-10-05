@@ -668,6 +668,60 @@ export const growthHubs: GrowthHub[] = [
     ],
     serviceSlugs: ["nrs-tax-id-retrieval", "nrs-individual-tax-registration", "nrs-corporate-tax-registration", "nrs-tax-clearance-certificate", "nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
   },
+  {
+    slug: "private-services-nigeria",
+    title: "Private Services in Nigeria: Banking, Telecoms, TV, Flights, Logistics & Tests",
+    shortTitle: "Private services",
+    description: "Verified private-provider service guides for telecoms, banking, pay-TV, airlines, logistics and private examination booking in Nigeria.",
+    intro: [
+      "Private-service pages on MyNigeriaGuide follow the same evidence rule as government guides: a provider task is published only when the provider exposes a stable official route or help source with enough detail to verify what the customer should do.",
+      "Use the exact provider task below rather than a generic third-party tutorial. Fees, eligibility and timing can change, so each guide keeps its own last-verified date, provider links and visible conflict state when official pages disagree."
+    ],
+    searches: [
+      { query: "MTN eSIM Nigeria", serviceSlug: "mtn-esim-activation" },
+      { query: "Airtel eSIM Nigeria", serviceSlug: "airtel-esim-activation" },
+      { query: "Glo eSIM Nigeria", serviceSlug: "glo-esim-activation" },
+      { query: "open Moniepoint account", serviceSlug: "moniepoint-personal-account" },
+      { query: "Moniepoint USSD code", serviceSlug: "moniepoint-ussd-banking" },
+      { query: "open FirstBank account online", serviceSlug: "firstbank-open-account" },
+      { query: "open UBA account online", serviceSlug: "uba-open-account" },
+      { query: "Access Bank Solo Account", serviceSlug: "access-bank-solo-account" },
+      { query: "pay and reconnect DStv", serviceSlug: "dstv-pay-reconnect" },
+      { query: "change DStv package", serviceSlug: "dstv-change-package" },
+      { query: "pay and reconnect GOtv", serviceSlug: "gotv-pay-reconnect" },
+      { query: "book Air Peace flight", serviceSlug: "air-peace-book-flight" },
+      { query: "Air Peace online check in", serviceSlug: "air-peace-online-check-in" },
+      { query: "reschedule Air Peace flight", serviceSlug: "air-peace-reschedule-flight" },
+      { query: "Air Peace extra baggage", serviceSlug: "air-peace-extra-baggage" },
+      { query: "Air Peace lost baggage", serviceSlug: "air-peace-lost-baggage" },
+      { query: "send parcel DHL Nigeria", serviceSlug: "dhl-send-parcel-nigeria" },
+      { query: "DHL tracking Nigeria", serviceSlug: "dhl-track-shipment-nigeria" },
+      { query: "British Council IELTS registration Nigeria", serviceSlug: "british-council-ielts-registration-nigeria" },
+      { query: "IDP IELTS registration Nigeria", serviceSlug: "idp-ielts-registration-nigeria" }
+    ],
+    serviceSlugs: [
+      "mtn-esim-activation",
+      "airtel-esim-activation",
+      "glo-esim-activation",
+      "moniepoint-personal-account",
+      "moniepoint-ussd-banking",
+      "firstbank-open-account",
+      "uba-open-account",
+      "access-bank-solo-account",
+      "dstv-pay-reconnect",
+      "dstv-change-package",
+      "gotv-pay-reconnect",
+      "air-peace-book-flight",
+      "air-peace-online-check-in",
+      "air-peace-reschedule-flight",
+      "air-peace-extra-baggage",
+      "air-peace-lost-baggage",
+      "dhl-send-parcel-nigeria",
+      "dhl-track-shipment-nigeria",
+      "british-council-ielts-registration-nigeria",
+      "idp-ielts-registration-nigeria"
+    ]
+  },
 
 ];
 
