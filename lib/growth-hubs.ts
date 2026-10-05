@@ -1063,7 +1063,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "open Stanbic IBTC pension RSA", serviceSlug: "stanbic-pension-rsa-registration" },
       { query: "get Stanbic pension statement", serviceSlug: "stanbic-pension-rsa-statement" },
       { query: "update Stanbic pension biodata", serviceSlug: "stanbic-pension-update-biodata" },
-      { query: "recover Stanbic pension RSA PIN", serviceSlug: "stanbic-pension-recover-pin-passcode" }
+      { query: "recover Stanbic pension RSA PIN", serviceSlug: "stanbic-pension-recover-pin-passcode" },
+      { query: "book Gokada delivery Lagos", serviceSlug: "gokada-book-delivery-lagos" },
+      { query: "CIPS student membership Nigeria", serviceSlug: "cips-student-membership-registration" },
+      { query: "book CIPS exam Nigeria", serviceSlug: "cips-exam-booking" },
+      { query: "PMP application Nigeria", serviceSlug: "pmp-certification-application" },
+      { query: "schedule PMP exam Nigeria", serviceSlug: "pmp-exam-scheduling" },
+      { query: "Pearson VUE exam Nigeria", serviceSlug: "pearson-vue-schedule-exam" },
+      { query: "book FlyBoku flight", serviceSlug: "flyboku-book-flight" },
+      { query: "book Travelstart flight Nigeria", serviceSlug: "travelstart-book-flight-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1437,7 +1445,15 @@ export const growthHubs: GrowthHub[] = [
       "stanbic-pension-rsa-registration",
       "stanbic-pension-rsa-statement",
       "stanbic-pension-update-biodata",
-      "stanbic-pension-recover-pin-passcode"
+      "stanbic-pension-recover-pin-passcode",
+      "gokada-book-delivery-lagos",
+      "cips-student-membership-registration",
+      "cips-exam-booking",
+      "pmp-certification-application",
+      "pmp-exam-scheduling",
+      "pearson-vue-schedule-exam",
+      "flyboku-book-flight",
+      "travelstart-book-flight-nigeria"
     ]
   },
 
