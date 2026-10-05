@@ -30,17 +30,19 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(0);
   });
 
-  test("normal-browser public analytics emits GA4 and PostHog collection requests", async ({ page }) => {
+  test("public analytics initializes GA4 and the PostHog SDK", async ({ page }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 
     await page.addInitScript(() => {
-      const chromeUserAgent =
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36";
-
+      // GA4 is explicitly disabled for webdriver traffic by MyNigeriaGuide, so
+      // override that one signal for the GA4 request assertion. Keep the
+      // HeadlessChrome signals intact so PostHog's own bot filter prevents this
+      // QA run from becoming a counted website visitor.
       Object.defineProperty(Navigator.prototype, "webdriver", {
         configurable: true,
         get: () => false,
       });
+    });
       Object.defineProperty(Navigator.prototype, "userAgent", {
         configurable: true,
         get: () => chromeUserAgent,
@@ -60,28 +62,22 @@ test.describe("live MyNigeriaGuide deployment", () => {
     });
 
     let collectUrl = "";
-    let posthogCaptureUrl = "";
     await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, async (route) => {
       collectUrl = route.request().url();
       await route.abort();
     });
-    await page.route("https://eu.i.posthog.com/**", async (route) => {
-      const request = route.request();
-      if (request.method() === "POST" && !request.url().includes("/flags")) {
-        posthogCaptureUrl = request.url();
-        await route.abort();
-        return;
-      }
-      await route.continue();
-    });
+
 
     await page.goto("/");
     await expect(
       page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
     ).toHaveCount(1);
     await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(1);
+    await expect.poll(
+      () => page.evaluate(() => typeof (window as Window & { posthog?: { get_distinct_id?: unknown } }).posthog?.get_distinct_id),
+      { timeout: 15_000 },
+    ).toBe("function");
     await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
-    await expect.poll(() => posthogCaptureUrl, { timeout: 15_000 }).toContain("eu.i.posthog.com");
   });
 
   test("brand, navigation and core service route are live", async ({ page }) => {
