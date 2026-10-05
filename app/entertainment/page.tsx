@@ -23,12 +23,14 @@ const searchMomentumMovieSlugs = [
 ];
 
 const popularMovieSearchLinks = [
-  { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
   { label: "The Bride Switch", href: "/entertainment/youtube/zKQoArfptqA" },
+  { label: "Millionaire Until Morning", href: "/entertainment/movies/millionaire-until-morning" },
   { label: "Love Always Wins", href: "/entertainment/youtube/KWIpR47N9hc" },
-  { label: "Once Upon a Village", href: "/entertainment/youtube/Yu-QxqPDmXM" },
   { label: "What Tomorrow Holds", href: "/entertainment/youtube/2Ficn2BMlI8" },
+  { label: "In Every Lifetime", href: "/entertainment/youtube/TH8oDejHrEo" },
+  { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
   { label: "Gingerrr", href: "/entertainment/movies/gingerrr" },
+  { label: "Once Upon a Village", href: "/entertainment/youtube/Yu-QxqPDmXM" },
 ];
 
 export default function EntertainmentPage() {
