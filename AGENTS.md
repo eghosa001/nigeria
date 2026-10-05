@@ -9,6 +9,32 @@ The owner-mandated minimal test/CI rule in that skill is the highest-priority re
 Use the shortest safe execution path and stop after the smallest directly relevant validation proves the requested change.
 
 
+## Million-Search scale contract
+
+MyNigeriaGuide is being grown for the four-pillar Million-Search Expansion. Before adding a large catalog, search surface, sitemap, media workflow, or storage feature, read:
+
+- `config/scale-targets.json`
+- `docs/SCALING.md`
+
+Owner scale targets are:
+
+- 100,000 useful indexable public URLs across the four pillars.
+- Movies & Entertainment: 30,000.
+- Services: 20,000.
+- Tour Nigeria: 30,000.
+- Jobs & Careers: 20,000.
+- Architecture for 10,000,000 monthly pageviews with headroom to 50,000,000.
+- Storage/query architecture for at least 1,000,000 underlying content records.
+
+These are design and coverage targets, not traffic guarantees.
+
+All future additions must assume this scale. Do not introduce a design that requires an entire large pillar catalog to be compiled into one Worker module, shipped to the browser, or scanned client-side. Checked-in TS/JSON is acceptable while catalogs are small, but a pillar must move behind the scale content-store/data-access path before it crosses 5,000 records. Preserve canonical URLs when storage changes.
+
+Do not chase the numeric target with thin, duplicate, doorway, scraped, unverified, or low-value pages. Each indexable page must serve distinct user intent, follow the answer-first rule, keep source/freshness evidence, and add meaningful internal navigation.
+
+Sitemaps must remain sharded at 20,000 URLs per file or fewer. New high-growth directories should use server-side pagination/query boundaries and must not send more than 1,000 catalog records to a browser route.
+
+
 ## Answer-first content rule
 
 For high-intent public pages reached from search (service guides, movies, YouTube titles, travel guides, jobs, agency/category/topic hubs, and future equivalents), put the user's likely answer before long-form detail.
