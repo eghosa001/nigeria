@@ -794,6 +794,41 @@ export const agencies: Agency[] = [
     "description": "Private electricity distribution company serving Kano, Jigawa and Katsina with customer connection, billing and MAP metering services.",
     "website": "https://kedco.ng/"
   }
+  {
+    "slug": "yedc",
+    "name": "Yola Electricity Distribution Company",
+    "shortName": "YEDC",
+    "description": "Private electricity distribution company serving Adamawa, Borno, Taraba and Yobe with payment, metering, new connection and complaint services.",
+    "website": "https://www.yedc.com.ng/"
+  },
+  {
+    "slug": "jed",
+    "name": "Jos Electricity Distribution Plc",
+    "shortName": "JED",
+    "description": "Private electricity distribution company serving Plateau, Bauchi, Benue and Gombe with payment, metering, connection and customer-care services.",
+    "website": "https://www.jedplc.com/"
+  },
+  {
+    "slug": "union-bank",
+    "name": "Union Bank of Nigeria",
+    "shortName": "Union Bank",
+    "description": "Private Nigerian bank offering account opening, debit-card, USSD and online banking services.",
+    "website": "https://unionbankng.com/"
+  },
+  {
+    "slug": "keystone-bank",
+    "name": "Keystone Bank Limited",
+    "shortName": "Keystone Bank",
+    "description": "Private Nigerian bank offering personal accounts, *7111# USSD, card and digital banking services.",
+    "website": "https://www.keystonebankng.com/"
+  },
+  {
+    "slug": "avon-hmo",
+    "name": "Avon HMO",
+    "shortName": "Avon HMO",
+    "description": "Private health maintenance organisation offering individual health plans and provider-network access in Nigeria.",
+    "website": "https://www.avonhealthcare.com/"
+  },
 ];
 
 export const services: Service[] = validateServiceCatalog(serviceRecords);
