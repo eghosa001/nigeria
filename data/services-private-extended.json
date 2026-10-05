@@ -3459,5 +3459,590 @@
       "Travelstart cancelled Nigeria operations",
       "Travelstart booking support"
     ]
+  },
+  {
+    "slug": "sendbox-create-shipment-nigeria",
+    "title": "How to create a Sendbox shipment from Nigeria",
+    "shortTitle": "Sendbox shipment",
+    "summary": "Sendbox's local and international shipping route for Nigerian customers and sellers, using an account to enter origin, destination and parcel details, compare a live quote, choose pickup/drop-off and create the shipment.",
+    "category": "Logistics",
+    "agencySlug": "sendbox",
+    "feeLabel": "Shipping price depends on route, weight, dimensions and service",
+    "feeNote": "Sendbox calculates the charge from the shipment details and selected shipping service. Use the live quote before payment rather than an old fixed rate.",
+    "timeline": "The delivery window is shown in the live shipping quote and depends on destination, service type and courier availability.",
+    "status": "verified",
+    "officialPortal": "https://sendbox.co/",
+    "requirements": [
+      "A Sendbox account for the customer or business creating the shipment",
+      "The sender and recipient names, phone numbers and complete origin/destination addresses",
+      "The parcel weight, dimensions, contents and declared value",
+      "A selected pickup or drop-off option and a supported payment method for the quoted service"
+    ],
+    "steps": [
+      "Open Sendbox and create or sign in to the account used for the shipment.",
+      "Choose the shipping service and enter the origin, destination, sender, recipient and parcel information.",
+      "Review the available shipping quote, delivery window and service level returned for the shipment details.",
+      "Choose pickup or drop-off where available and complete payment for the selected shipping option.",
+      "Save the shipment/tracking code after the order is created and keep it until delivery is completed."
+    ],
+    "notes": [
+      "Sendbox says it supports local and international shipping from Nigeria for personal and business use.",
+      "International shipments can require customs/item information beyond the normal local delivery fields.",
+      "The live quote should be treated as authoritative because delivery price and timing vary by shipment."
+    ],
+    "sources": [
+      {
+        "label": "Sendbox Home",
+        "agency": "Sendbox",
+        "url": "https://sendbox.co/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Sendbox Shipping API — Create Shipment",
+        "agency": "Sendbox",
+        "url": "https://docs.sendbox.co/shipping/create-new-shipment",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Sendbox Shipping API — Request Quotes",
+        "agency": "Sendbox",
+        "url": "https://docs.sendbox.co/shipping/request-shipping-quotes",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sendbox-track-shipment-nigeria",
+      "sendbox-business-account",
+      "gigl-send-parcel-nigeria",
+      "dhl-send-parcel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Sendbox shipping Nigeria",
+      "Sendbox create shipment",
+      "send parcel Sendbox",
+      "Sendbox delivery quote",
+      "Sendbox international shipping Nigeria"
+    ]
+  },
+  {
+    "slug": "sendbox-track-shipment-nigeria",
+    "title": "How to track a Sendbox shipment",
+    "shortTitle": "Track Sendbox shipment",
+    "summary": "Sendbox's shipment-tracking route using the tracking code to view states such as pending, pickup started, in transit and delivered as the parcel moves through the selected courier network.",
+    "category": "Logistics",
+    "agencySlug": "sendbox",
+    "feeLabel": "No separate tracking fee",
+    "feeNote": "Sendbox provides tracking as part of the shipment service and does not state a separate tracking charge.",
+    "timeline": "Tracking events update as the shipment moves through pickup, transit and delivery; there is no fixed interval between status updates.",
+    "status": "verified",
+    "officialPortal": "https://sendbox.co/",
+    "requirements": [
+      "The Sendbox shipment tracking code created for the parcel",
+      "Access to the Sendbox account or tracking interface"
+    ],
+    "steps": [
+      "Open Sendbox and locate the tracking option for the created shipment.",
+      "Enter or select the shipment tracking code.",
+      "Review the current status and tracking events returned for the parcel.",
+      "Keep the tracking code while the shipment remains pending, in pickup or in transit.",
+      "Use Sendbox support if tracking remains stalled or the parcel reaches an exception without resolution."
+    ],
+    "notes": [
+      "Sendbox documents tracking statuses including pending, pickup started/completed, in delivery, in transit and delivered.",
+      "A drafted or on-hold shipment may indicate that the shipping request has not yet been fully paid or activated.",
+      "Tracking information comes from the shipment/courier workflow and should be checked against the exact tracking code."
+    ],
+    "sources": [
+      {
+        "label": "Sendbox Home",
+        "agency": "Sendbox",
+        "url": "https://sendbox.co/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Sendbox Shipping API — Tracking Shipment",
+        "agency": "Sendbox",
+        "url": "https://docs.sendbox.co/shipping/track-shipment",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sendbox-create-shipment-nigeria",
+      "gigl-track-shipment",
+      "dhl-track-shipment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Sendbox tracking Nigeria",
+      "track Sendbox parcel",
+      "Sendbox shipment status",
+      "Sendbox tracking code",
+      "Sendbox delivery tracking"
+    ]
+  },
+  {
+    "slug": "sendbox-business-account",
+    "title": "How to start using Sendbox for business shipping and selling",
+    "shortTitle": "Sendbox business account",
+    "summary": "Sendbox's business route for Nigerian online, social and physical sellers that need delivery tools, shipping discounts, payments and optional marketplace/store features from one account.",
+    "category": "Business",
+    "agencySlug": "sendbox",
+    "feeLabel": "Account setup is free; transaction/listing/shipping charges can apply",
+    "feeNote": "Sendbox's business page currently lists no sales commission, a ₦100 listing fee for marketplace listings, a 2.5% transaction fee and shipping discounts, while normal shipping remains charged by route/service.",
+    "timeline": "Sendbox does not publish one universal business-account approval time; the account is created first and individual shipping/selling features become available through the platform.",
+    "status": "verified",
+    "officialPortal": "https://sendbox.co/business",
+    "requirements": [
+      "A Nigerian seller or business that needs local/international delivery, payments or online-selling tools",
+      "The business/contact information requested during Sendbox account creation",
+      "Product, order and shipping information for any listings or deliveries created after onboarding"
+    ],
+    "steps": [
+      "Open Sendbox's Business page and create the account for the seller or organisation.",
+      "Complete the business/contact profile and sign in to the Sendbox dashboard.",
+      "Choose the shipping, selling or payment features needed for the business rather than enabling unnecessary products.",
+      "Create the first product/order or shipping request and review the applicable transaction, listing and shipping charges before confirmation.",
+      "Use the dashboard to monitor payments, orders and deliveries and configure payout/disbursement preferences where available."
+    ],
+    "notes": [
+      "Sendbox markets its business tools to physical stores, e-commerce sites and social-media sellers.",
+      "Its current business page says there is no sales commission, but transaction/listing and shipping charges can still apply.",
+      "Fees and shipping discounts can change, so use the live business pricing before committing to a workflow."
+    ],
+    "sources": [
+      {
+        "label": "Sendbox Business",
+        "agency": "Sendbox",
+        "url": "https://sendbox.co/business",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Sendbox Home",
+        "agency": "Sendbox",
+        "url": "https://sendbox.co/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sendbox-create-shipment-nigeria",
+      "sendbox-track-shipment-nigeria",
+      "paystack-business-activation-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Sendbox business account",
+      "Sendbox seller Nigeria",
+      "Sendbox business shipping",
+      "Sendbox online store Nigeria",
+      "Sendbox merchant"
+    ]
+  },
+  {
+    "slug": "euracare-book-appointment",
+    "title": "How to book an appointment at Euracare Hospital Lagos",
+    "shortTitle": "Euracare appointment",
+    "summary": "Euracare's appointment route for consultations and specialist care in Lagos using the hospital booking/enquiry form, phone or email with patient contact details and the requested service.",
+    "category": "Healthcare",
+    "agencySlug": "euracare",
+    "feeLabel": "Consultation/service fee depends on the specialty and appointment",
+    "feeNote": "Euracare does not publish one universal consultation fee across all specialties. Confirm the price and payment route for the selected service before the appointment.",
+    "timeline": "Euracare says the hospital contacts patients after an online enquiry/appointment form; urgent enquiries should use the published phone number for the fastest response.",
+    "status": "verified",
+    "officialPortal": "https://euracarehealth.com/enquiry",
+    "requirements": [
+      "The patient's first and last name and valid contact details",
+      "The specialty, doctor or nature of enquiry/appointment requested",
+      "A preferred contact method so Euracare can confirm the appointment"
+    ],
+    "steps": [
+      "Open Euracare's official booking/enquiry page or use the Book Appointment link from the hospital website.",
+      "Enter the patient's first and last name, email address and phone number.",
+      "Describe the nature of the appointment or enquiry and choose the preferred contact method.",
+      "Submit the form and wait for Euracare to confirm the appointment details, or call the hospital when the request is urgent.",
+      "Confirm the appointment time, location, required records and fee/payment details before travelling to the hospital."
+    ],
+    "notes": [
+      "Euracare publishes phone and email appointment routes in addition to the online enquiry form.",
+      "This guide explains booking only and does not recommend a doctor, specialty or treatment.",
+      "Urgent medical problems should use the hospital's urgent/emergency route rather than waiting for a routine web response."
+    ],
+    "sources": [
+      {
+        "label": "Euracare Enquiries and Booking",
+        "agency": "Euracare Multispecialist Hospital",
+        "url": "https://euracarehealth.com/enquiry",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Euracare Hospital Lagos",
+        "agency": "Euracare Multispecialist Hospital",
+        "url": "https://euracarehealth.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "evercare-book-appointment",
+      "reddington-book-appointment",
+      "lagoon-hospital-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Euracare appointment",
+      "book Euracare Lagos",
+      "Euracare hospital booking",
+      "Euracare specialist appointment",
+      "Euracare contact appointment"
+    ]
+  },
+  {
+    "slug": "glovo-rider-signup-nigeria",
+    "title": "How to sign up as a Glovo rider in Nigeria",
+    "shortTitle": "Glovo rider signup",
+    "summary": "Glovo Nigeria's courier onboarding route for adults with a bicycle, motorbike or car, using an official identity document and the driving licence/vehicle insurance required when the chosen vehicle needs them.",
+    "category": "Ride-hailing",
+    "agencySlug": "glovo-nigeria",
+    "feeLabel": "No rider signup fee stated",
+    "feeNote": "Glovo does not state a fee for creating the rider application. The applicant remains responsible for valid vehicle, licence, insurance and legal requirements where applicable.",
+    "timeline": "Glovo does not publish one fixed approval time; the applicant receives email updates through the registration stages and is notified when the request is accepted or rejected.",
+    "status": "verified",
+    "officialPortal": "https://riderhub.glovoapp.com/ng/",
+    "requirements": [
+      "An applicant of legal age with an official identity document",
+      "A bicycle, motorbike or car that can be used for delivery",
+      "A valid driving licence and vehicle insurance when the selected vehicle requires them",
+      "Acceptance of the Glovo rider terms and the legal requirements for courier work in Nigeria"
+    ],
+    "steps": [
+      "Open Glovo Nigeria's rider page and start the official rider registration.",
+      "Choose Nigeria and complete the rider application with the personal and contact information requested.",
+      "Upload the official identity document and the driving-licence/vehicle-insurance documents required for the selected vehicle.",
+      "Monitor the registration email for updates and complete any remaining onboarding instruction Glovo sends.",
+      "After acceptance, download the Glovo Rider app, sign in with the approved account and follow the first-session setup before taking orders."
+    ],
+    "notes": [
+      "Glovo's Nigeria rider guide says applicants can use a bicycle, motorbike or car, subject to legal requirements.",
+      "The Rider app is different from the normal Glovo customer-ordering app.",
+      "Glovo's rider support page provides in-app help for account, bank-detail and vehicle-profile issues after onboarding."
+    ],
+    "sources": [
+      {
+        "label": "Glovo Nigeria Rider Hub",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://riderhub.glovoapp.com/ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glovo Nigeria — Getting Started as a Rider",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://riderhub.glovoapp.com/ng/wiki/getting-started/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glovo Nigeria Rider Terms",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://riderhub.glovoapp.com/ng/terms-conditions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "glovo-partner-onboarding-nigeria",
+      "bolt-driver-signup-nigeria",
+      "uber-driver-signup-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glovo rider signup Nigeria",
+      "become Glovo rider Nigeria",
+      "Glovo courier registration",
+      "Glovo rider requirements Nigeria",
+      "Glovo delivery rider Lagos"
+    ]
+  },
+  {
+    "slug": "glovo-partner-onboarding-nigeria",
+    "title": "How to register a restaurant or store with Glovo Nigeria",
+    "shortTitle": "Glovo partner onboarding",
+    "summary": "Glovo Local's Nigeria business onboarding route for restaurants and retail stores that want to list products, receive orders and choose Glovo courier, own-delivery or customer-pickup fulfilment.",
+    "category": "Business",
+    "agencySlug": "glovo-nigeria",
+    "feeLabel": "Commercial terms depend on the partner agreement",
+    "feeNote": "Glovo does not publish one universal partner fee on its Nigeria signup page. Review the commercial/commission and delivery terms presented during onboarding before accepting the agreement.",
+    "timeline": "Glovo says eligible businesses can complete onboarding after signup; it does not publish one universal approval time for every restaurant or retail store.",
+    "status": "verified",
+    "officialPortal": "https://sell.glovoapp.com/ng/en/",
+    "requirements": [
+      "A restaurant, grocery, retail store or other eligible local business that wants to sell through Glovo",
+      "The business and contact information requested in the Glovo Partner signup",
+      "A product/menu catalogue and operating information for the store once onboarding is accepted"
+    ],
+    "steps": [
+      "Open Glovo for Partners Nigeria and select Get Started for the local business.",
+      "Enter the business and contact information requested in the partner signup.",
+      "Complete the eligibility/onboarding steps and review the commercial and delivery terms offered to the business.",
+      "Add the menu or product catalogue, prices and store operating details to the partner-management tools.",
+      "Choose the available fulfilment model and begin accepting orders only after Glovo activates the partner profile."
+    ],
+    "notes": [
+      "Glovo supports restaurants and multiple retail-store categories through its local partner platform.",
+      "Businesses can use Glovo couriers, their own delivery fleet or customer pickup where the selected model supports it.",
+      "Partner commercial terms can differ, so this guide does not invent a fixed commission percentage."
+    ],
+    "sources": [
+      {
+        "label": "Glovo for Partners Nigeria",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://sell.glovoapp.com/ng/en/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glovo Nigeria Retail Stores Partner Guide",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://sell.glovoapp.com/ng/en/services/retail-stores/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "How Glovo Works for Restaurants — Nigeria",
+        "agency": "Glovoapp Nigeria Limited",
+        "url": "https://sell.glovoapp.com/ng/en/resources/news/how-glovo-works-for-restaurants-everything-you-need-to-know/",
+        "lastChecked": "2026-10-05",
+        "published": "2026-07-20"
+      }
+    ],
+    "related": [
+      "glovo-rider-signup-nigeria",
+      "glovo-order-nigeria",
+      "chowdeck-vendor-onboarding"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glovo partner Nigeria",
+      "register restaurant on Glovo Nigeria",
+      "Glovo vendor signup Nigeria",
+      "sell on Glovo Nigeria",
+      "Glovo store registration"
+    ]
+  },
+  {
+    "slug": "hotelsng-add-hotel",
+    "title": "How to list a hotel on Hotels.ng",
+    "shortTitle": "List hotel on Hotels.ng",
+    "summary": "Hotels.ng's hotel-owner listing route for adding a property with hotel/contact/location details, agreeing to the platform terms and receiving follow-up from the Hotels.ng support team.",
+    "category": "Business",
+    "agencySlug": "hotels-ng",
+    "feeLabel": "Free hotel listing",
+    "feeNote": "Hotels.ng currently states that listing a hotel on its website is completely free.",
+    "timeline": "Hotels.ng says its support team contacts the submitter after the hotel information is provided; no fixed universal approval time is published.",
+    "status": "verified",
+    "officialPortal": "https://hotels.ng/hotel/add",
+    "requirements": [
+      "Permission to add the hotel/property when the submitter is not the owner",
+      "The hotel name, phone number, location/state, city/town and address",
+      "The submitter's full name and email address",
+      "Additional hotel information such as website/details when available"
+    ],
+    "steps": [
+      "Open Hotels.ng's Add Your Hotel page.",
+      "Enter the hotel's name, email/phone, location, city and full address.",
+      "Enter the submitter's personal/contact information and add the hotel website or extra details when available.",
+      "Confirm permission to list the property and accept the Hotels.ng terms of use.",
+      "Submit the listing and wait for the Hotels.ng support team to contact the submitter for any remaining property information."
+    ],
+    "notes": [
+      "Hotels.ng states that hotel listing is free.",
+      "A person can submit a hotel they do not own only when they have permission and provide valid information.",
+      "Hotels.ng says basic hotel information can be submitted first and additional information can be supplied later."
+    ],
+    "sources": [
+      {
+        "label": "Hotels.ng Add Your Hotel",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/hotel/add",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hotelsng-book-hotel",
+      "hotelsng-cancel-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "list hotel on Hotels.ng",
+      "add hotel Hotels.ng",
+      "Hotels.ng hotel owner",
+      "Hotels.ng free hotel listing",
+      "register hotel on Hotels.ng"
+    ]
+  },
+  {
+    "slug": "heyfood-order-nigeria",
+    "title": "How to order food with Heyfood in Nigeria",
+    "shortTitle": "Order with Heyfood",
+    "summary": "Heyfood's app/web ordering route for entering a delivery address, discovering available restaurants/vendors, selecting food or groceries and tracking the order after checkout.",
+    "category": "E-commerce",
+    "agencySlug": "heyfood",
+    "feeLabel": "Order total and delivery charge depend on restaurant, basket and address",
+    "feeNote": "Heyfood displays the available stores and delivery/order pricing for the selected address. Review the total before checkout because merchant prices and delivery charges vary.",
+    "timeline": "The platform shows restaurant/order information and supports live order tracking; preparation and delivery time vary by merchant, distance and rider availability.",
+    "status": "verified",
+    "officialPortal": "https://heyfood.africa/",
+    "requirements": [
+      "A Heyfood account or supported app/web ordering profile",
+      "A delivery address inside a Nigerian area currently served by Heyfood",
+      "An available restaurant or vendor shown for that address",
+      "A supported payment method for the final order total"
+    ],
+    "steps": [
+      "Open Heyfood and enter the delivery address to view restaurants and vendors available in the area.",
+      "Choose a restaurant/store and add the required items to the order.",
+      "Review the basket, delivery address and displayed charges before checkout.",
+      "Complete payment using an available payment method and place the order.",
+      "Track the order in Heyfood until the rider completes delivery."
+    ],
+    "notes": [
+      "Heyfood currently advertises food-delivery coverage in Nigerian cities including Lagos and Ibadan through its location pages.",
+      "Restaurant availability depends on the exact delivery address.",
+      "Order pricing, promotions and delivery charges can change and should be checked at checkout."
+    ],
+    "sources": [
+      {
+        "label": "Heyfood Home",
+        "agency": "Heyfood",
+        "url": "https://heyfood.africa/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Heyfood Lagos",
+        "agency": "Heyfood",
+        "url": "https://heyfood.africa/places/lagos",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "heyfood-rider-signup",
+      "heyfood-merchant-onboarding",
+      "chowdeck-create-account-order",
+      "glovo-order-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Heyfood Nigeria order",
+      "order food Heyfood Lagos",
+      "Heyfood delivery Nigeria",
+      "Heyfood restaurants",
+      "Heyfood app"
+    ]
+  },
+  {
+    "slug": "heyfood-rider-signup",
+    "title": "How to sign up as a Heyfood rider",
+    "shortTitle": "Heyfood rider signup",
+    "summary": "Heyfood's rider onboarding route for adults with a car, scooter or bicycle in eligible cities, using a phone-number application, background-check consent and rider orientation before app activation.",
+    "category": "Ride-hailing",
+    "agencySlug": "heyfood",
+    "feeLabel": "No rider signup fee stated",
+    "feeNote": "Heyfood does not state a signup fee on its rider page.",
+    "timeline": "Heyfood does not publish one fixed approval time; the page says applicants submit the application, complete the background-check/orientation steps and can start after approval.",
+    "status": "verified",
+    "officialPortal": "https://heyfood.africa/driver",
+    "requirements": [
+      "An applicant who is at least 18 years old",
+      "A smartphone and an eligible mode of transportation such as a car, scooter or bicycle where supported",
+      "A phone number for the rider application",
+      "Consent to the background-check and independent-contractor requirements shown during signup"
+    ],
+    "steps": [
+      "Open Heyfood's Driver page and enter the phone number to start the rider application.",
+      "Complete the personal and transport information requested by Heyfood.",
+      "Submit the application and give the required consent for the background-check step.",
+      "Choose or complete the rider orientation when Heyfood makes it available.",
+      "After approval, install/sign in to the rider app, go online and accept only orders whose distance/pay details are shown before acceptance."
+    ],
+    "notes": [
+      "Heyfood says riders can use a car, scooter or bicycle in eligible cities.",
+      "The provider says riders see the distance and guaranteed minimum pay before accepting an order.",
+      "Heyfood states that rider earnings are deposited to the registered bank account daily."
+    ],
+    "sources": [
+      {
+        "label": "Heyfood Driver",
+        "agency": "Heyfood",
+        "url": "https://heyfood.africa/driver",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "heyfood-order-nigeria",
+      "heyfood-merchant-onboarding",
+      "glovo-rider-signup-nigeria",
+      "chowdeck-rider-signup"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Heyfood rider signup",
+      "become Heyfood rider",
+      "Heyfood driver Nigeria",
+      "Heyfood Fooder registration",
+      "Heyfood delivery rider"
+    ]
+  },
+  {
+    "slug": "heyfood-merchant-onboarding",
+    "title": "How to register a restaurant or store with Heyfood",
+    "shortTitle": "Heyfood merchant onboarding",
+    "summary": "Heyfood's merchant signup route for restaurants, groceries, hotels and lounges/bars, beginning with phone verification and business details and leading to a dashboard for menus, orders and online selling.",
+    "category": "Business",
+    "agencySlug": "heyfood",
+    "feeLabel": "Free plan available; 5% online transaction processing rate",
+    "feeNote": "Heyfood's current merchant page lists a ₦0/month free plan with no setup fee and a 5% processing rate per online transaction. Confirm the live merchant pricing before activation.",
+    "timeline": "Heyfood says a business can get its ordering page live quickly after setup; no fixed universal approval time is published for every merchant.",
+    "status": "verified",
+    "officialPortal": "https://dashboard.heyfood.africa/signup",
+    "requirements": [
+      "A Nigerian phone number for merchant OTP verification",
+      "The business name and business type, such as restaurant, grocery/supermarket, hotel or lounge/bar",
+      "The owner/contact person's name, date of birth and account PIN",
+      "Store/location and menu/product information needed to configure the merchant dashboard"
+    ],
+    "steps": [
+      "Open Heyfood's Merchant Dashboard signup and enter the business phone number.",
+      "Verify the phone number with the OTP sent by Heyfood.",
+      "Enter the business name and choose the business type and existing sales channels.",
+      "Complete the owner/contact profile and create the four-digit merchant PIN.",
+      "Finish store/menu setup in the dashboard and review the current free-plan/transaction pricing before accepting online orders."
+    ],
+    "notes": [
+      "Heyfood supports multiple merchant types beyond restaurants, including grocery/supermarket, hotel and lounge/bar.",
+      "Its merchant page currently advertises a free ordering page with no monthly/setup fee and a transaction processing rate.",
+      "Merchant pricing can change, so the live page should be checked before relying on the published rate."
+    ],
+    "sources": [
+      {
+        "label": "Heyfood Merchant Dashboard Signup",
+        "agency": "Heyfood",
+        "url": "https://dashboard.heyfood.africa/signup",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Heyfood Merchant",
+        "agency": "Heyfood",
+        "url": "https://heyfood.africa/merchant",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "heyfood-order-nigeria",
+      "heyfood-rider-signup",
+      "glovo-partner-onboarding-nigeria",
+      "chowdeck-vendor-onboarding"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Heyfood merchant signup",
+      "register restaurant Heyfood",
+      "Heyfood vendor registration",
+      "Heyfood business account",
+      "Heyfood merchant dashboard"
+    ]
   }
 ]
