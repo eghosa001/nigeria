@@ -3500,7 +3500,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
   }
 ];
 
-export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava"] as const;
+export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava", "Cinema", "Africa Magic"] as const;
 
 export function getEntertainmentTitle(slug: string) {
   return entertainmentTitles.find((item) => item.slug === slug);
