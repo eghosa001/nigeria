@@ -1985,8 +1985,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       { label: "EY Careers", url: "https://careers.ey.com/?locale=en", lastChecked: "2026-10-05" }
     ]
   },
-,
-{
+  {
     slug: "lagos-state-civil-service-careers",
     title: "Lagos State Civil Service Recruitment",
     organization: "Lagos State Civil Service Commission",
@@ -2320,8 +2319,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     sourceNotes: ["The UCH employment portal includes applicant login and internship-programme screening notices."],
     sources: [{ label: "UCH Employment Portal", url: "https://employment.uch-ibadan.org.ng/", lastChecked: "2026-10-05" }]
   },
-,
-{
+  {
     slug: "axa-mansard-careers",
     title: "AXA Mansard Careers",
     organization: "AXA Mansard",
@@ -2790,8 +2788,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     sourceNotes: ["FHI 360's official careers system contains Nigeria-labelled roles; older indexed vacancy pages may already be closed, so MyNigeriaGuide uses the careers route rather than marking a stale role open."],
     sources: [{ label: "FHI 360 External Career Portal", url: "https://fhi.wd1.myworkdayjobs.com/FHI_360_External_Career_Portal", lastChecked: "2026-10-05" }]
   },
-,
-{
+  {
     slug: "faan-careers",
     title: "FAAN Careers",
     organization: "Federal Airports Authority of Nigeria",
