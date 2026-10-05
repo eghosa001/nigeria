@@ -16,6 +16,8 @@
     "start:vinext": "wrangler dev --config dist/server/wrangler.json",
     "deploy:cloudflare": "wrangler deploy --config dist/server/wrangler.json",
     "check:content": "tsx scripts/check-content-quality.ts",
+    "check:scale": "tsx scripts/check-scale-contract.ts",
+    "scale:status": "tsx scripts/check-scale-contract.ts",
     "build:next": "next build",
     "prebuild": "node scripts/write-deployment-info.mjs",
     "prebuild:vinext": "node scripts/write-deployment-info.mjs",
