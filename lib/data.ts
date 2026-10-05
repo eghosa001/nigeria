@@ -906,6 +906,34 @@ export const agencies: Agency[] = [
     "description": "Private Nigerian business-banking and payment provider offering accounts, POS terminals, payment links and merchant services.",
     "website": "https://nomba.com/"
   },
+  {
+    "slug": "standard-chartered-nigeria",
+    "name": "Standard Chartered Bank Nigeria",
+    "shortName": "Standard Chartered",
+    "description": "Private bank offering SC Mobile account opening, online/mobile banking, cards and digital service requests in Nigeria.",
+    "website": "https://www.sc.com/ng/"
+  },
+  {
+    "slug": "united-nigeria-airlines",
+    "name": "United Nigeria Airlines",
+    "shortName": "United Nigeria",
+    "description": "Private Nigerian airline offering domestic and regional booking, online check-in, booking management and baggage services.",
+    "website": "https://flyunitednigeria.com/"
+  },
+  {
+    "slug": "valuejet",
+    "name": "ValueJet",
+    "shortName": "ValueJet",
+    "description": "Private Nigerian airline offering booking, online check-in, fare products and baggage services.",
+    "website": "https://www.flyvaluejet.com/"
+  },
+  {
+    "slug": "aero-contractors",
+    "name": "Aero Contractors",
+    "shortName": "Aero",
+    "description": "Private Nigerian airline offering flight booking, manage-booking, online check-in and refund services.",
+    "website": "https://flyaero.com/"
+  },
 ];
 
 export const services: Service[] = validateServiceCatalog(serviceRecords);
