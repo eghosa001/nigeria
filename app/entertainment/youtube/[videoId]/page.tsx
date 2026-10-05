@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
     title: override?.title ?? compactMetadata(`${movie.title} Cast & Full Movie (${movie.year})`, 60),
     description,
     alternates: { canonical },
+    robots: movie.source === "youtube-review" ? { index: false, follow: true } : undefined,
     openGraph: {
       title: movie.title + " — Nigerian Movie",
       description,
