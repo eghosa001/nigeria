@@ -147,6 +147,42 @@ unless a critical shared fix is required.
 
 If a shared file must change, keep the change minimal and commit it separately so it can be reconciled during merge.
 
+## Inherited MyNigeriaGuide requirements
+
+These requirements come from the existing production standard and must be preserved while scaling.
+
+### Crawlability, SEO and internal linking
+
+- Movie, series, people and YouTube catalogs must remain crawlable from server-rendered/static HTML links. Do not rely on JS-only “Show more” discovery or sitemap-only discovery.
+- Keep direct detail links, canonical URLs, breadcrumbs and static Previous/Next pagination where pagination is used.
+- New detail pages must be linked from the strongest relevant hub, cast/person pages, release/platform pages and genuinely related titles where available; update existing pages so discovery works both ways.
+- Add only valid structured data that matches visible content: Movie/VideoObject/Person/BreadcrumbList or equivalents as appropriate.
+- New public pages must enter the correct sitemap and existing IndexNow/Bing discovery flow without breaking canonical sitemap behavior.
+- Use Search Console query/impression data to prioritise ranking quick wins before speculative catalog expansion.
+
+### Artwork, trailers and watch behavior
+
+- Every public movie should have visual coverage. Preferred order: permitted high-quality official/approved poster or artwork → lawful distributor/exhibitor/publisher artwork → official YouTube trailer thumbnail as a last external fallback → original MyNigeriaGuide visual.
+- Do not use an image with unclear rights merely because it looks better.
+- Keep the movie title visibly rendered with the card; artwork must fit its container without awkward cropping/over-expansion.
+- Clicking a movie card/poster must open the internal MyNigeriaGuide details page first, never jump directly to YouTube or another platform.
+- Watch/trailer availability must come from a verified source. If a source is unavailable or uncertain, suppress source-dependent UI/SEO claims rather than inventing them.
+- Embedded trailers should avoid wasted vertical space; mobile fullscreen should behave as landscape where the platform/browser supports it.
+
+### Mobile, theme and performance
+
+- Phone-first: every entertainment page, filter, card, cast section and player must fit small screens cleanly with no text overflow.
+- Preserve complete dark-mode readability across cards, forms, filters, badges, search, navigation and hover/focus states; do not introduce hard-coded light backgrounds.
+- Do not introduce hydration errors or large client-side catalog payloads. Preserve the site's strong mobile SEO/accessibility/performance baseline.
+- Keep AdSense below useful answer/detail content; never place an ad above the answer-first content, and automated-browser QA must not be distorted by ad loading.
+
+### Editorial standard
+
+- Keep current verification dates on watch links, trailers and artwork sources.
+- Do not fabricate cast, runtime, director, release date or platform availability.
+- Prefer primary publisher/distributor/platform sources; clearly distinguish editorial/database evidence from official availability.
+- Original summaries must add value and must not copy publisher descriptions verbatim.
+
 ## Validation
 
 Follow the owner's minimal-test rule. Run only directly relevant entertainment/data checks. Do not manually run the full repository suite.
