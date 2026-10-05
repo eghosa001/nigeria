@@ -829,6 +829,27 @@ export const agencies: Agency[] = [
     "description": "Private health maintenance organisation offering individual health plans and provider-network access in Nigeria.",
     "website": "https://www.avonhealthcare.com/"
   },
+  {
+    "slug": "ibom-air",
+    "name": "Ibom Air",
+    "shortName": "Ibom Air",
+    "description": "Private Nigerian airline offering domestic/regional booking, online check-in, ticket changes and baggage services.",
+    "website": "https://www.ibomair.com/"
+  },
+  {
+    "slug": "arik-air",
+    "name": "Arik Air",
+    "shortName": "Arik Air",
+    "description": "Private Nigerian airline offering domestic flight booking, manage-booking and online check-in services.",
+    "website": "https://arikair.com/"
+  },
+  {
+    "slug": "green-africa",
+    "name": "Green Africa Airways",
+    "shortName": "Green Africa",
+    "description": "Private Nigerian airline offering domestic booking, web check-in, fare and baggage services.",
+    "website": "https://www.greenafrica.com/"
+  },
 ];
 
 export const services: Service[] = validateServiceCatalog(serviceRecords);
