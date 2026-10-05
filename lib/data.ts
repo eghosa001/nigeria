@@ -1535,6 +1535,34 @@ export const agencies: Agency[] = [
     "shortName": "FlyBoku",
     "description": "Private Nigerian online travel platform offering flight search/booking, hotels, tours and travel-support services.",
     "website": "https://flyboku.com/"
+  },
+  {
+    "slug": "microsoft-certification",
+    "name": "Microsoft Certification",
+    "shortName": "Microsoft Learn",
+    "description": "Microsoft professional certification service for exam registration, scheduling, online testing and credential management.",
+    "website": "https://learn.microsoft.com/credentials/"
+  },
+  {
+    "slug": "aws-certification",
+    "name": "AWS Training and Certification",
+    "shortName": "AWS Certification",
+    "description": "Amazon Web Services certification programme offering globally delivered cloud and AI certification exams through Pearson VUE.",
+    "website": "https://aws.amazon.com/certification/"
+  },
+  {
+    "slug": "cisco-certification",
+    "name": "Cisco Certification",
+    "shortName": "Cisco",
+    "description": "Cisco professional certification programme offering networking, cybersecurity and technology exams through Pearson VUE.",
+    "website": "https://www.cisco.com/site/us/en/learn/training-certifications/index.html"
+  },
+  {
+    "slug": "shuttlers",
+    "name": "Shuttlers",
+    "shortName": "Shuttlers",
+    "description": "Private Nigerian scheduled mass-transit platform for daily commute booking, route search, wallet payments and real-time trip tracking.",
+    "website": "https://www.shuttlers.co/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
@@ -1699,6 +1727,10 @@ export const categories = [
   {
     "name": "Ride-hailing",
     "description": "Driver-partner onboarding and mobility-platform service guides."
+  },
+  {
+    "name": "Urban mobility",
+    "description": "Scheduled commuter shuttles, route booking, wallets and urban transport-platform services."
   },
   {
     "name": "E-commerce",
