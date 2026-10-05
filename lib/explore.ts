@@ -11392,6 +11392,1776 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://fmino.gov.ng/culture/culture/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-wildlife-guide",
+    "title": "Wildlife in Nigeria: Parks, Reserves & Responsible Viewing",
+    "shortTitle": "Nigeria Wildlife",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Choose a Nigerian wildlife trip by ecosystem and access rather than expecting the same safari experience everywhere.",
+    "intro": [
+      "Nigeria's wildlife destinations range from savanna reserves to rainforest parks, and each requires different expectations about roads, guides and sightings.",
+      "Wild animals are never guaranteed. The useful planning question is which protected landscape fits your route, season and comfort level."
+    ],
+    "bestFor": [
+      "Wildlife",
+      "National parks",
+      "Conservation",
+      "Nature"
+    ],
+    "highlights": [
+      {
+        "name": "Savanna wildlife",
+        "detail": "Yankari and Kainji offer open-country wildlife and reserve experiences."
+      },
+      {
+        "name": "Rainforest wildlife",
+        "detail": "Cross River, Okomu and Afi focus more on forest biodiversity and conservation."
+      },
+      {
+        "name": "Birding destinations",
+        "detail": "Dagona and several parks reward patient bird-focused visits."
+      },
+      {
+        "name": "Protected-area rules",
+        "detail": "Guides, routes and current access matter more than a checklist of species."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Contact the park or reserve",
+        "detail": "Confirm current entry, guides and routes before travel."
+      },
+      {
+        "label": "Do not expect guaranteed sightings",
+        "detail": "Wildlife activity changes by season and day."
+      },
+      {
+        "label": "Keep distance",
+        "detail": "Never feed or pursue animals for photographs."
+      },
+      {
+        "label": "Prepare for the ecosystem",
+        "detail": "Rainforest, wetland and savanna trips need different clothing and gear."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — National Parks Overview",
+      "href": "https://nigeriaparkservice.gov.ng/overview/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-birdwatching-guide",
+    "title": "Birdwatching in Nigeria: Wetlands, Forests & Park Planning",
+    "shortTitle": "Nigeria Birdwatching",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Plan birding trips around wetland, rainforest and savanna habitats while keeping disturbance low and access conditions current.",
+    "intro": [
+      "Nigeria's ecological variety creates strong birdwatching potential across wetlands, forests and national parks.",
+      "A birding guide should prioritise habitat and quiet observation rather than promising specific sightings."
+    ],
+    "bestFor": [
+      "Birding",
+      "Wetlands",
+      "Forests",
+      "Conservation"
+    ],
+    "highlights": [
+      {
+        "name": "Dagona wetlands",
+        "detail": "A major northern wetland birding destination when current conditions support travel."
+      },
+      {
+        "name": "Rainforest birding",
+        "detail": "Afi, Cross River and Okomu offer forest-focused habitat."
+      },
+      {
+        "name": "Savanna parks",
+        "detail": "Yankari and Kainji add open-country species and water-edge habitats."
+      },
+      {
+        "name": "Seasonal movement",
+        "detail": "Migratory patterns can change what is visible across the year."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check access first",
+        "detail": "Protected and security-sensitive areas need current confirmation."
+      },
+      {
+        "label": "Keep quiet distance",
+        "detail": "Avoid approaching nests or flushing birds."
+      },
+      {
+        "label": "Use early hours",
+        "detail": "Bird activity is often stronger earlier in the day."
+      },
+      {
+        "label": "Bring optics",
+        "detail": "Binoculars reduce the need to approach wildlife closely."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — National Parks Overview",
+      "href": "https://nigeriaparkservice.gov.ng/overview/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-rainforest-guide",
+    "title": "Rainforests in Nigeria: Cross River, Okomu, Afi & Forest Trips",
+    "shortTitle": "Nigeria Rainforests",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Compare Nigeria's major rainforest destinations by access, conservation focus and the level of trekking involved.",
+    "intro": [
+      "Nigeria's remaining major rainforest destinations are concentrated in a few important conservation landscapes, especially in Cross River and Edo.",
+      "Forest visits demand realistic weather, trail and guide planning; they are not ordinary city-park walks."
+    ],
+    "bestFor": [
+      "Rainforest",
+      "Conservation",
+      "Hiking",
+      "Biodiversity"
+    ],
+    "highlights": [
+      {
+        "name": "Cross River National Park",
+        "detail": "One of Nigeria's most important rainforest conservation landscapes."
+      },
+      {
+        "name": "Afi Mountain",
+        "detail": "Combines mountain forest and wildlife-conservation interest."
+      },
+      {
+        "name": "Okomu",
+        "detail": "Provides an Edo rainforest option closer to Benin City."
+      },
+      {
+        "name": "Forest alternatives",
+        "detail": "Akure and Ngwo offer different forest experiences outside national parks."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Prepare for rain",
+        "detail": "Waterproofing and grip matter even outside peak wet season."
+      },
+      {
+        "label": "Use recognised trails",
+        "detail": "Do not enter dense forest independently."
+      },
+      {
+        "label": "Carry insect protection",
+        "detail": "Forest conditions differ from city tourism."
+      },
+      {
+        "label": "Respect conservation rules",
+        "detail": "Do not remove plants or disturb animals."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — National Parks Overview",
+      "href": "https://nigeriaparkservice.gov.ng/overview/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-savanna-nature-guide",
+    "title": "Savanna Nature Trips in Nigeria: Wildlife, Rocks & Open Landscapes",
+    "shortTitle": "Nigeria Savanna Nature",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Choose open-country nature trips across Nigeria's savanna belts by wildlife interest, heat tolerance and road logistics.",
+    "intro": [
+      "Savanna landscapes offer a different travel experience from Nigeria's rainforest and coastal regions, with more exposed terrain, seasonal water and long road approaches.",
+      "The best destination depends on whether you want wildlife, rock landscapes or broad open-country scenery."
+    ],
+    "bestFor": [
+      "Savanna",
+      "Wildlife",
+      "Road trips",
+      "Landscape"
+    ],
+    "highlights": [
+      {
+        "name": "Yankari",
+        "detail": "Combines savanna wildlife with Wikki Warm Spring."
+      },
+      {
+        "name": "Kainji",
+        "detail": "Adds lake, park and large-scale landscape."
+      },
+      {
+        "name": "Plateau edges",
+        "detail": "Rock and hill destinations create dramatic open-country scenery."
+      },
+      {
+        "name": "Northern wetlands",
+        "detail": "Dagona shows how wetland habitats can sit within a wider savanna region."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Plan for heat",
+        "detail": "Carry water and avoid unnecessary midday exposure."
+      },
+      {
+        "label": "Check seasonal access",
+        "detail": "Rain can change roads and wildlife movement."
+      },
+      {
+        "label": "Use protected-area guidance",
+        "detail": "Stay on approved park routes."
+      },
+      {
+        "label": "Keep road days conservative",
+        "detail": "Distances can be longer than they appear on a map."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-archaeology-guide",
+    "title": "Archaeological & Ancient Heritage Sites in Nigeria",
+    "shortTitle": "Nigeria Archaeology",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Explore Nigeria's archaeology and ancient cultural landscapes through stone monoliths, caves, early watercraft heritage and UNESCO-listed sites.",
+    "intro": [
+      "Nigeria's archaeological heritage ranges from the Dufuna canoe story to Alok Ikom monoliths, cave landscapes and the ancient settlement systems preserved at Sukur.",
+      "A good archaeology trip distinguishes physical evidence, oral tradition and later historical interpretation."
+    ],
+    "bestFor": [
+      "Archaeology",
+      "Ancient history",
+      "Heritage",
+      "Museums"
+    ],
+    "highlights": [
+      {
+        "name": "Dufuna canoe heritage",
+        "detail": "One of the country's most important ancient-technology stories."
+      },
+      {
+        "name": "Alok Ikom monoliths",
+        "detail": "Carved stone heritage with strong archaeological significance."
+      },
+      {
+        "name": "Cave landscapes",
+        "detail": "Ogbunike and Arochukwu combine physical sites with long cultural histories."
+      },
+      {
+        "name": "Sukur",
+        "detail": "A UNESCO cultural landscape preserving settlement, palace and terrace systems."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use credible interpretation",
+        "detail": "Separate evidence from legend where necessary."
+      },
+      {
+        "label": "Do not touch artefacts",
+        "detail": "Protect fragile heritage material."
+      },
+      {
+        "label": "Use local guides",
+        "detail": "Community context is essential at living sites."
+      },
+      {
+        "label": "Check access",
+        "detail": "Archaeological sites may not operate like conventional museums."
+      }
+    ],
+    "source": {
+      "label": "UNESCO World Heritage Centre — Nigeria",
+      "href": "https://whc.unesco.org/en/statesparties/ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-war-history-guide",
+    "title": "War History Sites in Nigeria: Umuahia, Kiriji & Conflict Heritage",
+    "shortTitle": "Nigeria War History",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Use Nigeria's war-history sites to understand different conflicts through museums, bunkers and regional interpretation rather than sensational storytelling.",
+    "intro": [
+      "Nigeria's conflict heritage spans very different periods, including the Nigerian Civil War and nineteenth-century Yoruba wars.",
+      "These sites should be approached as historical interpretation spaces, not entertainment attractions."
+    ],
+    "bestFor": [
+      "Military history",
+      "Museums",
+      "Modern history",
+      "Education"
+    ],
+    "highlights": [
+      {
+        "name": "Umuahia",
+        "detail": "The National War Museum and Ojukwu Bunker anchor Civil War interpretation."
+      },
+      {
+        "name": "Kiriji War Museum",
+        "detail": "Provides regional context for nineteenth-century Yoruba conflict."
+      },
+      {
+        "name": "Museum-first planning",
+        "detail": "Formal interpretation helps reduce historical simplification."
+      },
+      {
+        "name": "Sensitive memory",
+        "detail": "Conflict sites can carry personal and community significance."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use credible sources",
+        "detail": "Avoid sensational or partisan retellings."
+      },
+      {
+        "label": "Confirm rehabilitation status",
+        "detail": "Umuahia heritage work can affect access."
+      },
+      {
+        "label": "Allow time to read",
+        "detail": "These visits benefit from a slower pace."
+      },
+      {
+        "label": "Photograph respectfully",
+        "detail": "Follow museum and memorial rules."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Abia heritage restoration",
+      "href": "https://fmino.gov.ng/federal-governments-war-museum-and-ojukwu-bunker-get-major-historical-preservation-boost-in-abia/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-colonial-history-guide",
+    "title": "Colonial History Sites in Nigeria: Lagos, Lokoja, Delta & Akassa",
+    "shortTitle": "Nigeria Colonial History",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Trace colonial-era history through civic spaces, prisons, trading sites and historic buildings while keeping the story grounded in local context.",
+    "intro": [
+      "Nigeria's colonial history is visible in very different site types, from Lagos civic landmarks to Lokoja's administrative history and Niger Delta trading heritage.",
+      "A national hub helps connect those places without reducing the period to architecture alone."
+    ],
+    "bestFor": [
+      "Colonial history",
+      "Architecture",
+      "Museums",
+      "Heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Lagos",
+        "detail": "Freedom Park and Tafawa Balewa Square connect prison, civic and independence history."
+      },
+      {
+        "name": "Lokoja",
+        "detail": "The city's colonial heritage is closely tied to river geography and administration."
+      },
+      {
+        "name": "Delta",
+        "detail": "Mungo Park House and Nana Palace preserve different colonial-era narratives."
+      },
+      {
+        "name": "Akassa",
+        "detail": "Royal Niger Company heritage adds commercial and riverine context."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local interpretation",
+        "detail": "Colonial history should include Nigerian perspectives."
+      },
+      {
+        "label": "Check building access",
+        "detail": "Historic structures may not all be open."
+      },
+      {
+        "label": "Respect memorial context",
+        "detail": "Some sites represent incarceration or conflict."
+      },
+      {
+        "label": "Plan by region",
+        "detail": "These places are spread across several states."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-industrial-heritage-guide",
+    "title": "Industrial & Engineering Heritage in Nigeria: Oil, Dams & Infrastructure",
+    "shortTitle": "Nigeria Industrial Heritage",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Explore Nigeria's industrial-history landmarks through oil heritage, major dams and working infrastructure while respecting operational restrictions.",
+    "intro": [
+      "Nigeria's industrial heritage includes petroleum history in Oloibiri and large engineering landmarks such as Kainji and Dadin Kowa.",
+      "These sites differ from museums because some remain working infrastructure, making legal access and safety central to the visit."
+    ],
+    "bestFor": [
+      "Engineering",
+      "Industrial history",
+      "Infrastructure",
+      "Education"
+    ],
+    "highlights": [
+      {
+        "name": "Oloibiri",
+        "detail": "Connects visitors with the history of commercial petroleum production."
+      },
+      {
+        "name": "Kainji Dam",
+        "detail": "A major national engineering and hydroelectric landmark."
+      },
+      {
+        "name": "Dadin Kowa",
+        "detail": "Adds dam, irrigation and power-generation context in Gombe."
+      },
+      {
+        "name": "Working-site rules",
+        "detail": "Operational areas may be restricted even when the landscape is visible."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Respect security barriers",
+        "detail": "Do not cross operational boundaries."
+      },
+      {
+        "label": "Confirm public viewpoints",
+        "detail": "Use only recognised visitor areas."
+      },
+      {
+        "label": "Do not assume tours",
+        "detail": "Facility access must be explicitly permitted."
+      },
+      {
+        "label": "Use daylight road plans",
+        "detail": "Several sites require out-of-city travel."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-religious-heritage-guide",
+    "title": "Religious Heritage in Nigeria: Mosques, Churches & Sacred Landscapes",
+    "shortTitle": "Nigeria Religious Heritage",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Plan respectful visits to Nigeria's major religious landmarks and sacred landscapes by understanding worship, dress, photography and living traditions.",
+    "intro": [
+      "Nigeria's religious heritage includes major national worship centres, historic mosques and deeply rooted indigenous sacred landscapes.",
+      "These are living religious places first and tourism sites second, so etiquette and access rules matter."
+    ],
+    "bestFor": [
+      "Religious heritage",
+      "Architecture",
+      "Culture",
+      "History"
+    ],
+    "highlights": [
+      {
+        "name": "National worship landmarks",
+        "detail": "Abuja's National Mosque and Christian Centre represent formal national institutions."
+      },
+      {
+        "name": "Historic Islamic centres",
+        "detail": "Gobarau Minaret and Ilorin Central Mosque connect worship with urban heritage."
+      },
+      {
+        "name": "Indigenous sacred landscapes",
+        "detail": "Osun-Osogbo and Arochukwu require different forms of cultural respect."
+      },
+      {
+        "name": "Living practice",
+        "detail": "Prayer, ceremonies and local customs can change visitor access."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Dress appropriately",
+        "detail": "Respect the norms of each site."
+      },
+      {
+        "label": "Avoid disrupting worship",
+        "detail": "Check service or prayer timing."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Sacred spaces often restrict cameras."
+      },
+      {
+        "label": "Accept closed areas",
+        "detail": "Do not push past custodians or security."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-sacred-sites-guide",
+    "title": "Sacred Sites in Nigeria: Groves, Caves, Shrines & Royal Landscapes",
+    "shortTitle": "Nigeria Sacred Sites",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Approach Nigeria's sacred destinations as living cultural places with community rules, not as unrestricted attractions.",
+    "intro": [
+      "Sacred sites in Nigeria span forest groves, caves, shrines and royal-religious landscapes.",
+      "Their visitor value depends on respecting community authority and understanding that some rituals or spaces are not open to tourists."
+    ],
+    "bestFor": [
+      "Sacred heritage",
+      "Culture",
+      "History",
+      "Responsible travel"
+    ],
+    "highlights": [
+      {
+        "name": "Osun-Osogbo",
+        "detail": "A living sacred grove and UNESCO World Heritage property."
+      },
+      {
+        "name": "Arochukwu",
+        "detail": "A cave-temple landscape with deep historical and religious significance."
+      },
+      {
+        "name": "Ogbunike",
+        "detail": "A culturally significant cave system with local rules."
+      },
+      {
+        "name": "Girmache",
+        "detail": "A traditional shrine site where local permission is essential."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local custodians",
+        "detail": "Do not arrive assuming unrestricted access."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Sacred spaces and people may restrict cameras."
+      },
+      {
+        "label": "Respect ritual boundaries",
+        "detail": "Do not enter closed areas."
+      },
+      {
+        "label": "Avoid sensational framing",
+        "detail": "Describe beliefs and traditions carefully."
+      }
+    ],
+    "source": {
+      "label": "UNESCO World Heritage Centre — Nigeria",
+      "href": "https://whc.unesco.org/en/statesparties/ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-afrobeat-heritage-guide",
+    "title": "Afrobeat Heritage in Nigeria: Fela, Shrine & Lagos Culture",
+    "shortTitle": "Nigeria Afrobeat Heritage",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Build an Afrobeat-focused Lagos trip around the New Afrika Shrine and wider cultural venues while planning around live events and late-night transport.",
+    "intro": [
+      "Afrobeat heritage in Nigeria is inseparable from Lagos and the Kuti family's continuing cultural presence.",
+      "A focused guide should connect music history with current live culture instead of treating Fela's legacy as a static museum topic."
+    ],
+    "bestFor": [
+      "Afrobeat",
+      "Music history",
+      "Lagos nightlife",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "New Afrika Shrine",
+        "detail": "The central living venue for the Kuti legacy and major Felabration programming."
+      },
+      {
+        "name": "Felabration",
+        "detail": "The annual festival combines music, debate, fashion, dance and art."
+      },
+      {
+        "name": "National Theatre",
+        "detail": "Provides a broader performing-arts context within Lagos."
+      },
+      {
+        "name": "Freedom Park",
+        "detail": "Adds another active cultural venue with heritage depth."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check event schedules",
+        "detail": "Music venues are programme-driven."
+      },
+      {
+        "label": "Plan late transport",
+        "detail": "Night events require a reliable return option."
+      },
+      {
+        "label": "Expect crowds",
+        "detail": "Felabration and major shows need extra time."
+      },
+      {
+        "label": "Protect valuables",
+        "detail": "Use normal busy-event precautions."
+      }
+    ],
+    "source": {
+      "label": "Voice of Nigeria — Felabration and New Afrika Shrine",
+      "href": "https://von.gov.ng/felabration-promotes-nigerian-culture-yeni-kuti/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-performing-arts-guide",
+    "title": "Performing Arts Destinations in Nigeria: Theatre, Music & Culture",
+    "shortTitle": "Nigeria Performing Arts",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Choose performing-arts venues and culture centres by programme rather than treating them as static landmarks.",
+    "intro": [
+      "Nigeria's performing-arts destinations include national institutions, culture centres and live music venues.",
+      "The experience changes by date, so event calendars and public programmes should decide when and why to visit."
+    ],
+    "bestFor": [
+      "Theatre",
+      "Live music",
+      "Dance",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "National Theatre",
+        "detail": "Nigeria's foremost national performing-arts institution with an active 2026 calendar."
+      },
+      {
+        "name": "Freedom Park",
+        "detail": "Combines live culture with a historic Lagos setting."
+      },
+      {
+        "name": "New Afrika Shrine",
+        "detail": "A leading live-music venue tied to Afrobeat heritage."
+      },
+      {
+        "name": "State culture centres",
+        "detail": "Uyo and other capitals can offer regional performance programmes."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check the programme first",
+        "detail": "Do not travel for a venue name alone."
+      },
+      {
+        "label": "Buy or reserve where needed",
+        "detail": "Ticketing differs by event."
+      },
+      {
+        "label": "Plan late transport",
+        "detail": "Performances may finish after normal daytime travel."
+      },
+      {
+        "label": "Follow recording rules",
+        "detail": "Shows may restrict photography or video."
+      }
+    ],
+    "source": {
+      "label": "National Theatre Nigeria — official site",
+      "href": "https://nationaltheatre.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-textile-craft-guide",
+    "title": "Textile & Craft Heritage in Nigeria: Adire, Bronze, Pottery & Art",
+    "shortTitle": "Nigeria Textile & Craft",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Plan craft-focused travel around working makers, markets and art centres where technique and provenance matter as much as shopping.",
+    "intro": [
+      "Nigeria's craft destinations cover textiles, bronze, pottery and mixed visual arts, with strong regional traditions.",
+      "A craft trip becomes more valuable when visitors ask who made an item and how it was produced."
+    ],
+    "bestFor": [
+      "Textiles",
+      "Craft",
+      "Art",
+      "Shopping"
+    ],
+    "highlights": [
+      {
+        "name": "Itoku",
+        "detail": "Abeokuta's best-known adire market and textile destination."
+      },
+      {
+        "name": "Igun Street",
+        "detail": "Living bronze-casting tradition in Benin City."
+      },
+      {
+        "name": "Suleja",
+        "detail": "Ladi Kwali pottery heritage adds a ceramic tradition."
+      },
+      {
+        "name": "Osogbo and Lagos",
+        "detail": "Nike centres connect gallery and workshop experiences."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Ask about provenance",
+        "detail": "Understand who made a piece."
+      },
+      {
+        "label": "Compare quality",
+        "detail": "Do not assume all market goods are equivalent."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Workshops may restrict cameras."
+      },
+      {
+        "label": "Plan transport",
+        "detail": "Fragile or large purchases need careful packing."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-river-landscapes-guide",
+    "title": "River Landscapes in Nigeria: Confluences, Waterfronts & River Cities",
+    "shortTitle": "Nigeria River Landscapes",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Explore Nigeria's river landscapes through Lokoja, Makurdi, Igbokoda and the River Ethiope while treating boat activity as optional and safety-dependent.",
+    "intro": [
+      "Nigeria's major river destinations offer geography, city identity and cultural history rather than one standard leisure experience.",
+      "A river guide should separate land-based viewing from boating and swimming."
+    ],
+    "bestFor": [
+      "Rivers",
+      "Geography",
+      "Waterfronts",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Lokoja confluence",
+        "detail": "The Niger-Benue meeting point is one of the country's defining geographic landmarks."
+      },
+      {
+        "name": "Makurdi",
+        "detail": "The River Benue shapes the city's identity and waterfront."
+      },
+      {
+        "name": "Igbokoda",
+        "detail": "Provides a riverine coastal-community setting in Ondo."
+      },
+      {
+        "name": "River Ethiope",
+        "detail": "Adds a spring-fed river origin story in Delta."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Do not depend on a boat",
+        "detail": "Build a strong land-based plan first."
+      },
+      {
+        "label": "Verify life jackets",
+        "detail": "Use proper safety equipment on water."
+      },
+      {
+        "label": "Check weather",
+        "detail": "Rain and wind can change water plans."
+      },
+      {
+        "label": "Plan the return",
+        "detail": "Know how you are getting back before staying late."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-dams-engineering-guide",
+    "title": "Dams & Engineering Landmarks in Nigeria: Kainji, Dadin Kowa & More",
+    "shortTitle": "Nigeria Dams & Engineering",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Compare major Nigerian dam and engineering landmarks while respecting working-infrastructure access restrictions.",
+    "intro": [
+      "Large dams are visually impressive but remain operational infrastructure, making them different from ordinary attractions.",
+      "The right visitor approach is public viewpoints, engineering context and strict respect for security boundaries."
+    ],
+    "bestFor": [
+      "Engineering",
+      "Infrastructure",
+      "Landscapes",
+      "Education"
+    ],
+    "highlights": [
+      {
+        "name": "Kainji Dam",
+        "detail": "A major hydroelectric and reservoir landmark."
+      },
+      {
+        "name": "Dadin Kowa",
+        "detail": "Adds power and irrigation context in Gombe."
+      },
+      {
+        "name": "Reservoir landscapes",
+        "detail": "Large water bodies create scenic value beyond the structures themselves."
+      },
+      {
+        "name": "Operational restrictions",
+        "detail": "Working facilities may close or limit visitor access."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Stay outside restricted areas",
+        "detail": "Never cross security barriers."
+      },
+      {
+        "label": "Confirm public viewpoints",
+        "detail": "Ask where visitors may legally stop."
+      },
+      {
+        "label": "Do not assume facility tours",
+        "detail": "Only enter operational areas with explicit permission."
+      },
+      {
+        "label": "Keep photography rules in mind",
+        "detail": "Infrastructure sites may restrict cameras."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-civic-landmarks-guide",
+    "title": "Civic Landmarks in Nigeria: Squares, Halls & National Spaces",
+    "shortTitle": "Nigeria Civic Landmarks",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Explore Nigerian civic landmarks through independence squares, historic halls and national public spaces with current event and security access checked first.",
+    "intro": [
+      "Civic landmarks tell stories about independence, public life and urban identity that are different from palaces, museums or religious sites.",
+      "Many remain active event spaces, so access can change without the landmark itself closing permanently."
+    ],
+    "bestFor": [
+      "Civic history",
+      "Architecture",
+      "National landmarks",
+      "Urban heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Tafawa Balewa Square",
+        "detail": "A major independence and national-event landmark in Lagos."
+      },
+      {
+        "name": "Centenary Hall",
+        "detail": "Abeokuta civic heritage within the Ake cluster."
+      },
+      {
+        "name": "Millennium Park",
+        "detail": "A modern national-capital public space in Abuja."
+      },
+      {
+        "name": "National Theatre",
+        "detail": "Combines civic cultural identity with active performing arts."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check event access",
+        "detail": "Large events can close parts of a site."
+      },
+      {
+        "label": "Follow security instructions",
+        "detail": "National spaces may have controlled areas."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Architecture and context are easier to appreciate."
+      },
+      {
+        "label": "Pair nearby sites",
+        "detail": "Keep city heritage routes compact."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-independence-history-guide",
+    "title": "Nigeria Independence History Sites: Lagos Civic Heritage Guide",
+    "shortTitle": "Nigeria Independence History",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Use Lagos's civic and museum landmarks to build a focused independence-history route grounded in public history rather than symbolism alone.",
+    "intro": [
+      "Nigeria's independence story has a strong physical footprint in Lagos through national civic sites and museum collections.",
+      "A focused guide links the square, museum and surrounding heritage so visitors can understand the political setting rather than only photograph monuments."
+    ],
+    "bestFor": [
+      "Independence history",
+      "Lagos",
+      "Civic heritage",
+      "Museums"
+    ],
+    "highlights": [
+      {
+        "name": "Tafawa Balewa Square",
+        "detail": "Closely associated with national independence history and later state events."
+      },
+      {
+        "name": "National Museum",
+        "detail": "Provides broader historical context beyond one ceremony or monument."
+      },
+      {
+        "name": "Freedom Park",
+        "detail": "Adds colonial prison memory to the city's political history."
+      },
+      {
+        "name": "Historic Lagos Island",
+        "detail": "The concentration of sites makes a compact heritage day possible."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check event restrictions",
+        "detail": "TBS access can change."
+      },
+      {
+        "label": "Start with museum context",
+        "detail": "Collections help frame later outdoor landmarks."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Keep the route easy to navigate."
+      },
+      {
+        "label": "Avoid oversimplifying history",
+        "detail": "Use credible historical interpretation."
+      }
+    ],
+    "source": {
+      "label": "Lagos State Ministry of Tourism, Arts & Culture",
+      "href": "https://tourismartandculture.lagosstate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-caliphate-heritage-guide",
+    "title": "Caliphate & Emirate Heritage in Nigeria: Sokoto, Gwandu, Katsina & Kano",
+    "shortTitle": "Nigeria Caliphate Heritage",
+    "kind": "destination",
+    "region": "Northern Nigeria",
+    "summary": "Explore northern Nigeria's caliphate and emirate heritage through palaces, historic mosques, tombs and documentary institutions with respectful access.",
+    "intro": [
+      "Northern Nigeria's traditional institutions are connected through complex histories of emirates, scholarship, religion and the Sokoto Caliphate.",
+      "A regional guide should distinguish living institutions from museum-style attractions and make etiquette central."
+    ],
+    "bestFor": [
+      "Islamic history",
+      "Caliphate heritage",
+      "Emirates",
+      "Architecture"
+    ],
+    "highlights": [
+      {
+        "name": "Sokoto",
+        "detail": "The Sultanate area and History Bureau anchor caliphate history."
+      },
+      {
+        "name": "Gwandu",
+        "detail": "Hubbare connects visitors with Abdullahi dan Fodio heritage."
+      },
+      {
+        "name": "Katsina",
+        "detail": "Gobarau and the Emir's Palace add older emirate and scholarly context."
+      },
+      {
+        "name": "Kano",
+        "detail": "Gidan Makama and old-city heritage broaden the northern historical picture."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Dress respectfully",
+        "detail": "Traditional and religious sites require appropriate clothing."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Palaces and mosques may restrict cameras."
+      },
+      {
+        "label": "Check current access",
+        "detail": "Living institutions can close areas."
+      },
+      {
+        "label": "Use local guides",
+        "detail": "Regional history benefits from knowledgeable interpretation."
+      }
+    ],
+    "source": {
+      "label": "Sokoto State Government — History of Sokoto",
+      "href": "https://sokotostate.gov.ng/history-of-sokoto/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-yoruba-heritage-guide",
+    "title": "Yoruba Heritage Sites in Nigeria: Ife, Osogbo, Abeokuta, Owo & Ilesa",
+    "shortTitle": "Nigeria Yoruba Heritage",
+    "kind": "destination",
+    "region": "Southwest Nigeria",
+    "summary": "Compare major Yoruba heritage centres through royal institutions, sacred landscapes, museums, craft traditions and conflict history.",
+    "intro": [
+      "Yoruba heritage is distributed across multiple cities and traditions rather than centred in one attraction.",
+      "A regional hub helps travellers choose between sacred Osogbo, royal Ile-Ife, Egba Abeokuta, Owo museum heritage and Ilesa history."
+    ],
+    "bestFor": [
+      "Yoruba heritage",
+      "Royal history",
+      "Sacred sites",
+      "Craft"
+    ],
+    "highlights": [
+      {
+        "name": "Ile-Ife",
+        "detail": "Palace, museum and Moremi heritage anchor royal and artistic history."
+      },
+      {
+        "name": "Osogbo",
+        "detail": "The Sacred Grove, palace and art centre connect religion, royalty and creativity."
+      },
+      {
+        "name": "Abeokuta",
+        "detail": "Olumo, Itoku and Alake heritage tell an Egba city story."
+      },
+      {
+        "name": "Owo and Ilesa",
+        "detail": "Museums and war-history sites broaden the regional picture."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use multiple days",
+        "detail": "Do not compress major cities into one route."
+      },
+      {
+        "label": "Respect sacred and royal spaces",
+        "detail": "Access and photography rules matter."
+      },
+      {
+        "label": "Use museums for context",
+        "detail": "They deepen outdoor-site visits."
+      },
+      {
+        "label": "Plan road time",
+        "detail": "Southwest city transfers can be slower than expected."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Tourist Centres",
+      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-cultural-landscapes-guide",
+    "title": "Cultural Landscapes in Nigeria: Heritage Shaped by People & Place",
+    "shortTitle": "Nigeria Cultural Landscapes",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Explore places where landscape, settlement, religion and history are inseparable—from Sukur and Osun-Osogbo to Idanre and Arochukwu.",
+    "intro": [
+      "Cultural landscapes differ from isolated monuments because their heritage value comes from the relationship between people, land and long-term use.",
+      "Nigeria's UNESCO and Tentative List sites provide strong examples across forest, hill, settlement and sacred landscapes."
+    ],
+    "bestFor": [
+      "Cultural landscapes",
+      "UNESCO",
+      "History",
+      "Geography"
+    ],
+    "highlights": [
+      {
+        "name": "Sukur",
+        "detail": "Terraces, palace and settlement form an integrated UNESCO landscape."
+      },
+      {
+        "name": "Osun-Osogbo",
+        "detail": "Sacred forest, river and art create a living religious landscape."
+      },
+      {
+        "name": "Idanre",
+        "detail": "Hilltop settlement history sits within dramatic geology."
+      },
+      {
+        "name": "Arochukwu",
+        "detail": "Cave-temple heritage is tied to a wider historic cultural route."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Think beyond one monument",
+        "detail": "Give time to the surrounding landscape."
+      },
+      {
+        "label": "Use local interpretation",
+        "detail": "Community history is central."
+      },
+      {
+        "label": "Respect living traditions",
+        "detail": "These are not abandoned heritage zones."
+      },
+      {
+        "label": "Check UNESCO status",
+        "detail": "Distinguish inscribed and tentative sites."
+      }
+    ],
+    "source": {
+      "label": "UNESCO World Heritage Centre — Nigeria",
+      "href": "https://whc.unesco.org/en/statesparties/ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-forest-walks-guide",
+    "title": "Forest Walks in Nigeria: Rainforest, Pine Forest & Reserve Trips",
+    "shortTitle": "Nigeria Forest Walks",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Choose forest walks by trail difficulty, ecosystem and guide needs, from Ngwo's pine landscape to rainforest reserves.",
+    "intro": [
+      "Nigeria's forest outings range from relatively accessible scenic forests to protected rainforest requiring formal park arrangements.",
+      "The experience should be selected by trail conditions and access, not just scenery."
+    ],
+    "bestFor": [
+      "Forest walks",
+      "Hiking",
+      "Nature",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Ngwo",
+        "detail": "A distinctive pine-forest outing near Enugu."
+      },
+      {
+        "name": "Cross River",
+        "detail": "Protected rainforest with higher planning demands."
+      },
+      {
+        "name": "Okomu",
+        "detail": "Rainforest conservation close enough to pair with an Edo trip."
+      },
+      {
+        "name": "Akure and Afi",
+        "detail": "Offer additional forest and mountain-forest settings."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check trail access",
+        "detail": "Some reserves require guides or permission."
+      },
+      {
+        "label": "Prepare for rain",
+        "detail": "Forest surfaces can stay wet."
+      },
+      {
+        "label": "Carry insect protection",
+        "detail": "Natural forest conditions differ from urban parks."
+      },
+      {
+        "label": "Leave no trace",
+        "detail": "Do not remove plants or litter."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-city-parks-guide",
+    "title": "City Parks in Nigeria: Relaxed Green Spaces for Short Visits",
+    "shortTitle": "Nigeria City Parks",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Compare easy urban green-space stops in Abuja, Ibadan, Ilorin, Ado-Ekiti and Port Harcourt for low-complexity city outings.",
+    "intro": [
+      "Not every trip needs a remote waterfall or long road day. Nigeria's urban parks provide simpler outdoor breaks that fit city schedules.",
+      "A city-park hub helps travellers choose a low-logistics option near museums, food or accommodation."
+    ],
+    "bestFor": [
+      "Parks",
+      "Families",
+      "Relaxed outings",
+      "Cities"
+    ],
+    "highlights": [
+      {
+        "name": "Millennium Park",
+        "detail": "Central Abuja green space near national landmarks."
+      },
+      {
+        "name": "Agodi Gardens",
+        "detail": "A major Ibadan recreation option."
+      },
+      {
+        "name": "Fajuyi Memorial Park",
+        "detail": "Combines Ado-Ekiti green space with civic history."
+      },
+      {
+        "name": "Pleasure Park and Flower Garden",
+        "detail": "Port Harcourt and Ilorin add different recreation styles."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current opening",
+        "detail": "Maintenance or events can change access."
+      },
+      {
+        "label": "Use cooler hours",
+        "detail": "Outdoor comfort improves in morning or late afternoon."
+      },
+      {
+        "label": "Watch rain",
+        "detail": "Have an indoor alternative."
+      },
+      {
+        "label": "Keep the route local",
+        "detail": "Use parks as city stops, not reasons for long detours."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "southwest-craft-road-trip",
+    "title": "Southwest Craft Road Trip: Adire, Art, Royal Heritage & Makers",
+    "shortTitle": "Southwest Craft Road Trip",
+    "kind": "itinerary",
+    "region": "Southwest Nigeria",
+    "summary": "Build a craft-focused Southwest trip around Abeokuta adire, Osogbo art and Ile-Ife heritage instead of treating craft shopping as isolated stops.",
+    "intro": [
+      "Southwest Nigeria offers a strong craft-and-art route through cities with distinct textile, gallery and royal traditions.",
+      "Use separate city blocks so making, buying and historical context each get enough time."
+    ],
+    "bestFor": [
+      "Craft",
+      "Art",
+      "Textiles",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Abeokuta",
+        "detail": "Itoku and Olumo connect textile craft with city history."
+      },
+      {
+        "name": "Osogbo",
+        "detail": "Nike Art Centre adds workshop and gallery traditions."
+      },
+      {
+        "name": "Ile-Ife",
+        "detail": "Museum and palace context deepen the region's artistic history."
+      },
+      {
+        "name": "Maker focus",
+        "detail": "Ask about artists and techniques rather than buying anonymously."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use multiple days",
+        "detail": "Do not rush three heritage cities."
+      },
+      {
+        "label": "Protect purchases",
+        "detail": "Plan packaging for textiles and art."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Workshops and palace areas may restrict cameras."
+      },
+      {
+        "label": "Plan road time",
+        "detail": "Allow realistic inter-city transfers."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "southwest-museum-road-trip",
+    "title": "Southwest Museum Road Trip: Lagos, Ibadan, Ife & Owo",
+    "shortTitle": "Southwest Museum Road Trip",
+    "kind": "itinerary",
+    "region": "Southwest Nigeria",
+    "summary": "Plan a museum-focused Southwest route that moves from national collections to Yoruba art, regional history and kingdom heritage.",
+    "intro": [
+      "Southwest Nigeria contains several museums with different collection strengths, making a museum road trip more meaningful than repeating similar city sightseeing.",
+      "Use one museum as an anchor per city and pair it with a nearby heritage site."
+    ],
+    "bestFor": [
+      "Museums",
+      "History",
+      "Art",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Lagos",
+        "detail": "National collections provide a broad opening context."
+      },
+      {
+        "name": "Ibadan",
+        "detail": "National Museum of Unity expands the national cultural frame."
+      },
+      {
+        "name": "Ile-Ife",
+        "detail": "Museum collections connect closely with royal and artistic heritage."
+      },
+      {
+        "name": "Owo",
+        "detail": "Adds a distinct kingdom and antiquities focus."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check opening days",
+        "detail": "Museum schedules can differ."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Collection policies vary."
+      },
+      {
+        "label": "Use nearby heritage",
+        "detail": "Pair each museum with one relevant local site."
+      },
+      {
+        "label": "Do not rush cities",
+        "detail": "Allow interpretation time."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "north-central-rocks-waterfalls-road-trip",
+    "title": "North-Central Rocks & Waterfalls Road Trip: Niger, Kwara & Nasarawa",
+    "shortTitle": "North-Central Rocks & Waterfalls",
+    "kind": "itinerary",
+    "region": "North-Central Nigeria",
+    "summary": "Plan a multi-stage North-Central nature route around Zuma Rock, Gurara, Owu Falls, Farin Ruwa and Ara Rock without compressing long rural drives.",
+    "intro": [
+      "North-Central Nigeria has a strong cluster of rock and waterfall destinations, but they sit across multiple states and cannot be treated as one weekend loop.",
+      "Use the guide to choose a regional segment rather than chasing every landmark."
+    ],
+    "bestFor": [
+      "Waterfalls",
+      "Rock formations",
+      "Road trips",
+      "Nature"
+    ],
+    "highlights": [
+      {
+        "name": "Niger axis",
+        "detail": "Zuma Rock and Gurara Falls form the most accessible FCT-adjacent cluster."
+      },
+      {
+        "name": "Kwara",
+        "detail": "Owu Falls requires its own rural road-day."
+      },
+      {
+        "name": "Nasarawa",
+        "detail": "Farin Ruwa and Ara Rock create another distinct nature segment."
+      },
+      {
+        "name": "Route discipline",
+        "detail": "The distances make state-by-state planning essential."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Choose one state cluster",
+        "detail": "Do not force all destinations into one trip."
+      },
+      {
+        "label": "Check recent rain",
+        "detail": "Waterfall and road conditions change."
+      },
+      {
+        "label": "Travel in daylight",
+        "detail": "Rural return timing matters."
+      },
+      {
+        "label": "Use local directions",
+        "detail": "Final approaches may not be obvious from maps."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "southeast-caves-lakes-road-trip",
+    "title": "Southeast Caves & Lakes Road Trip: Anambra, Imo & Ebonyi",
+    "shortTitle": "Southeast Caves & Lakes",
+    "kind": "itinerary",
+    "region": "Southeast Nigeria",
+    "summary": "Build a Southeast nature route around caves, lakes and waterfalls while keeping each state's rural travel time realistic.",
+    "intro": [
+      "Southeast Nigeria offers several strong cave and lake destinations, but the best route is staged rather than compressed across state lines.",
+      "Use Anambra for caves and lake heritage, Imo for Oguta, and Ebonyi for cave and beach alternatives."
+    ],
+    "bestFor": [
+      "Caves",
+      "Lakes",
+      "Waterfalls",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Anambra",
+        "detail": "Ogbunike, Agulu and Owerre-Ezukala create a strong nature cluster."
+      },
+      {
+        "name": "Imo",
+        "detail": "Oguta Lake provides a slower water-focused stop."
+      },
+      {
+        "name": "Ebonyi",
+        "detail": "Amanchor and Oferekpe add cave and river-beach variety."
+      },
+      {
+        "name": "State-by-state pace",
+        "detail": "Use overnight bases rather than rushing interstate transfers."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local guides for caves",
+        "detail": "Do not enter unfamiliar cave sections alone."
+      },
+      {
+        "label": "Check rainfall",
+        "detail": "Wet weather changes roads and natural surfaces."
+      },
+      {
+        "label": "Do not assume swimming safety",
+        "detail": "Lake and beach conditions vary."
+      },
+      {
+        "label": "Plan multiple days",
+        "detail": "The region is too broad for a single-day circuit."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "south-south-waterfront-heritage-route",
+    "title": "South-South Waterfront & Heritage Route: Bayelsa, Delta, Calabar & Uyo",
+    "shortTitle": "South-South Waterfront Heritage",
+    "kind": "itinerary",
+    "region": "South-South Nigeria",
+    "summary": "Plan a staged South-South route combining riverine landscapes, coastal heritage and museums without pretending the region fits one short trip.",
+    "intro": [
+      "South-South Nigeria's relationship with water runs through coastal communities, trading history, petroleum heritage and river cities.",
+      "The route works best as separate state clusters linked by a broader regional theme."
+    ],
+    "bestFor": [
+      "Waterfronts",
+      "Heritage",
+      "Coast",
+      "Multi-state trips"
+    ],
+    "highlights": [
+      {
+        "name": "Bayelsa",
+        "detail": "Yenagoa lake leisure and Oloibiri/Akassa history."
+      },
+      {
+        "name": "Delta",
+        "detail": "Koko, Asaba and the River Ethiope add trading and river heritage."
+      },
+      {
+        "name": "Cross River",
+        "detail": "Calabar connects waterfront leisure with slavery-history interpretation."
+      },
+      {
+        "name": "Akwa Ibom",
+        "detail": "Ibeno and Ikot Abasi add Atlantic coast and heritage."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Split the route by state",
+        "detail": "Do not drive the full region as one short itinerary."
+      },
+      {
+        "label": "Check water transport",
+        "detail": "Some riverine access may require boats."
+      },
+      {
+        "label": "Use daylight transfers",
+        "detail": "Keep long journeys conservative."
+      },
+      {
+        "label": "Respect sensitive history",
+        "detail": "Use careful museum and local interpretation."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "northwest-heritage-road-trip",
+    "title": "Northwest Heritage Road Trip: Kano, Katsina, Sokoto, Kebbi & Zaria",
+    "shortTitle": "Northwest Heritage Road Trip",
+    "kind": "itinerary",
+    "region": "Northwest Nigeria",
+    "summary": "Build a Northwest heritage route around old cities, emirate history, museums and caliphate sites while checking current route conditions state by state.",
+    "intro": [
+      "Northwest Nigeria contains some of the country's strongest old-city and traditional-institution heritage, but distances and current conditions require staged travel.",
+      "Use major cities as bases and avoid treating the region as one continuous sightseeing loop."
+    ],
+    "bestFor": [
+      "Old cities",
+      "Islamic heritage",
+      "Museums",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Kano",
+        "detail": "Gidan Makama and Dala anchor old-city history."
+      },
+      {
+        "name": "Katsina",
+        "detail": "Gobarau and the Emir's Palace add scholarly and royal heritage."
+      },
+      {
+        "name": "Sokoto and Kebbi",
+        "detail": "Caliphate history extends through palace, bureau and Gwandu sites."
+      },
+      {
+        "name": "Zaria",
+        "detail": "City walls and Kufena Hills add another historic-city cluster."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current conditions",
+        "detail": "Route suitability can change by state."
+      },
+      {
+        "label": "Respect worship and royal sites",
+        "detail": "Dress and photography rules matter."
+      },
+      {
+        "label": "Use daylight road travel",
+        "detail": "Keep inter-city transfers conservative."
+      },
+      {
+        "label": "Plan multiple bases",
+        "detail": "The region is too large for one hotel base."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "northern-museums-heritage-route",
+    "title": "Northern Nigeria Museums & Heritage Route: Kano, Kebbi, Sokoto & Zamfara",
+    "shortTitle": "Northern Museums Heritage",
+    "kind": "itinerary",
+    "region": "Northern Nigeria",
+    "summary": "Plan a museum-and-documentary heritage route through northern cities while using current security and opening information for each state.",
+    "intro": [
+      "Northern Nigeria's museum and heritage institutions provide valuable indoor and documentary context alongside palaces and old-city landmarks.",
+      "A route focused on museums can be more resilient than a nature-heavy itinerary when rural access is uncertain."
+    ],
+    "bestFor": [
+      "Museums",
+      "History",
+      "Northern heritage",
+      "Research"
+    ],
+    "highlights": [
+      {
+        "name": "Kano",
+        "detail": "Gidan Makama provides old-city historical framing."
+      },
+      {
+        "name": "Kebbi",
+        "detail": "Kanta Museum anchors Argungu heritage."
+      },
+      {
+        "name": "Sokoto",
+        "detail": "The History Bureau adds documentary depth to caliphate history."
+      },
+      {
+        "name": "Zamfara",
+        "detail": "The state museum offers a city-based cultural alternative to rural travel."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check opening first",
+        "detail": "Administrative and museum schedules vary."
+      },
+      {
+        "label": "Check security by city",
+        "detail": "Do not rely on old route assumptions."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Collections may restrict cameras."
+      },
+      {
+        "label": "Use museums as anchors",
+        "detail": "Add palaces or landmarks only when current access is suitable."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-scenic-viewpoints-guide",
+    "title": "Best Scenic Viewpoints in Nigeria: Hills, Towers & Rock Landscapes",
+    "shortTitle": "Nigeria Scenic Viewpoints",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Choose scenic viewpoints by access and physical effort, from city towers and hills to major highland road trips.",
+    "intro": [
+      "Nigeria's best viewpoints range from short city climbs to remote mountains, so the key comparison is effort and logistics rather than just elevation.",
+      "A viewpoint guide helps travellers avoid treating every scenic place as a full hiking expedition."
+    ],
+    "bestFor": [
+      "Views",
+      "Photography",
+      "Hills",
+      "Landscapes"
+    ],
+    "highlights": [
+      {
+        "name": "City viewpoints",
+        "detail": "Bower's Tower, Dala Hill and Mount Patti fit shorter urban or city-edge visits."
+      },
+      {
+        "name": "Rock viewpoints",
+        "detail": "Olumo and Riyom offer very different geology-focused experiences."
+      },
+      {
+        "name": "Highland views",
+        "detail": "Mambilla and Obudu require larger road-trip commitments."
+      },
+      {
+        "name": "Weather dependence",
+        "detail": "Mist or heavy rain can remove the main benefit of a viewpoint."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check visibility",
+        "detail": "Do not force a viewpoint in poor weather."
+      },
+      {
+        "label": "Match effort to fitness",
+        "detail": "Some stops involve significant stairs or hiking."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Views and footing are better before dark."
+      },
+      {
+        "label": "Carry water",
+        "detail": "Do not assume summit services."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Tourism",
+      "href": "https://fmino.gov.ng/culture/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
