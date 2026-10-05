@@ -1123,6 +1123,20 @@ export const agencies: Agency[] = [
     "description": "Private Nigerian travel platform offering flight, hotel, package and booking-support services.",
     "website": "https://www.wakanow.com/"
   },
+  {
+    "slug": "ican",
+    "name": "Institute of Chartered Accountants of Nigeria",
+    "shortName": "ICAN",
+    "description": "Professional accountancy body providing student registration, examinations, membership and training services in Nigeria.",
+    "website": "https://icanig.org/"
+  },
+  {
+    "slug": "chowdeck",
+    "name": "Chowdeck",
+    "shortName": "Chowdeck",
+    "description": "Private on-demand delivery platform for food, groceries, pharmacies, local markets, vendors and riders in Nigerian cities.",
+    "website": "https://www.chowdeck.com/"
+  },
 
 ];
 
