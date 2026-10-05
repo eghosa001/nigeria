@@ -18437,5 +18437,475 @@
       "Glo roaming bundle Nigeria",
       "Glo data abroad"
     ]
+  },
+  {
+    "slug": "eedc-pay-bill-online",
+    "title": "How to pay an EEDC electricity bill online",
+    "shortTitle": "EEDC online payment",
+    "summary": "EEDC's payment route through EnergyPay and other approved channels for prepaid and postpaid customers, with customer/account verification and an electronic receipt after successful payment.",
+    "category": "Electricity",
+    "agencySlug": "eedc",
+    "feeLabel": "Electricity amount plus any channel charge",
+    "feeNote": "EEDC states that debit-card payment through its online route does not attract an extra EEDC charge, while some mobile/POS/other channels can charge a transaction fee. Confirm the selected channel before payment.",
+    "timeline": "EEDC issues an electronic receipt after successful online payment; it does not publish one universal crediting time for every approved payment channel.",
+    "status": "verified",
+    "officialPortal": "https://enugudisco.com/",
+    "requirements": [
+      "The EEDC customer/account or prepaid meter information used to identify the electricity service",
+      "The amount the customer intends to pay or vend",
+      "A supported debit card, bank, payment-agent, ATM or other EEDC-listed payment channel",
+      "Access to the electronic receipt after a successful transaction"
+    ],
+    "steps": [
+      "Open EEDC's official website and choose Make Payment or the EnergyPay payment option.",
+      "Enter the customer account or prepaid meter information and verify the returned electricity record before continuing.",
+      "Enter the payment amount and choose an available approved payment channel.",
+      "Complete the payment and save the electronic receipt issued as evidence of the transaction.",
+      "If the payment does not reflect on the customer account, contact EEDC with the account details and electronic receipt for reconciliation."
+    ],
+    "notes": [
+      "EEDC lists online payment, banks, collection agents, ATM and other electronic routes on its current payment guidance.",
+      "The provider says customers should insist on an electronic receipt because it is evidence of payment.",
+      "A payment-status or billing problem should be raised with EEDC using the receipt rather than paying the same bill again immediately."
+    ],
+    "sources": [
+      {
+        "label": "EEDC Payment Options",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://www.enugudisco.com/index.php/locations/ebonyi/42-payment-options",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "EEDC FAQs",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://enugudisco.com/index.php/component/content/category/11-faqs",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "EEDC Home",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://enugudisco.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "eedc-connect-self-service",
+      "eedc-new-service-connection",
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "EEDC payment online",
+      "pay EEDC bill",
+      "EEDC EnergyPay",
+      "EEDC prepaid payment",
+      "Enugu Disco online payment"
+    ]
+  },
+  {
+    "slug": "eedc-connect-self-service",
+    "title": "How to use EEDC Connect for bills and complaints",
+    "shortTitle": "EEDC Connect",
+    "summary": "EEDC's mobile self-service route for registering with OTP, paying bills, viewing payment history, lodging support requests and tracking complaints without visiting a district office.",
+    "category": "Electricity",
+    "agencySlug": "eedc",
+    "feeLabel": "No EEDC Connect registration fee stated",
+    "feeNote": "EEDC does not state a separate charge for registering the self-service app; electricity payments made through supported payment channels remain subject to their normal terms.",
+    "timeline": "Registration is completed after the OTP is validated. Complaint and support resolution times depend on the issue logged with EEDC.",
+    "status": "verified",
+    "officialPortal": "https://enugudisco.com/",
+    "requirements": [
+      "A smartphone that can install the EEDC Connect mobile application",
+      "A customer phone number capable of receiving the registration OTP",
+      "The EEDC customer/account information needed to link electricity services in the app",
+      "Complaint or payment details when the customer uses the support and history features"
+    ],
+    "steps": [
+      "Download EEDC Connect from the app-store route published by EEDC and open the application.",
+      "Register the customer profile and request the one-time password sent to the supplied mobile number.",
+      "Enter the OTP to complete registration and link the relevant EEDC customer/account information.",
+      "Use the app to pay bills, view payment history or submit a customer-support complaint.",
+      "Open the logged complaint or payment history later to check the status and retain the reference until the issue is resolved."
+    ],
+    "notes": [
+      "EEDC describes the app as a self-service platform for bill payment, support, payment history and complaint tracking.",
+      "The app does not replace emergency safety reporting for dangerous electrical faults.",
+      "EEDC also operates other self-service channels such as EEDC BOT and its website."
+    ],
+    "sources": [
+      {
+        "label": "EEDC Connect Mobile App",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://www.enugudisco.com/index.php/locations/36-press-releases/news/513-eedc-mobile-app",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "EEDC Home",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://enugudisco.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "eedc-pay-bill-online",
+      "eedc-new-service-connection",
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "EEDC Connect app",
+      "EEDC complaint app",
+      "EEDC payment history",
+      "EEDC customer app",
+      "EEDC OTP registration"
+    ]
+  },
+  {
+    "slug": "eedc-new-service-connection",
+    "title": "How to apply for a new EEDC electricity connection",
+    "shortTitle": "EEDC new connection",
+    "summary": "EEDC's new-service application route for a premises needing electricity supply, using the customer/service form, identity and premises information, load details, preferred billing/payment information and technical clearance.",
+    "category": "Electricity",
+    "agencySlug": "eedc",
+    "feeLabel": "Connection charges depend on the assessed service",
+    "feeNote": "EEDC does not publish one flat new-connection charge for every premises because the technical load, service work and metering needs can differ. Obtain the official assessed amount before payment.",
+    "timeline": "EEDC does not publish one universal completion time for all new-service connections; the application moves through commercial, metering, credit-control and final approval checks.",
+    "status": "verified",
+    "officialPortal": "https://enugudisco.com/",
+    "requirements": [
+      "The applicant's identity, phone/contact and current or previous residential information",
+      "The full address of the premises requiring electricity supply, including premises type and intended use",
+      "A valid means of identification such as an international passport, driver's licence or PVC",
+      "The requested electrical load/service information and property planning/earthing information shown on EEDC's new-service form"
+    ],
+    "steps": [
+      "Open EEDC's official Customer Information area and obtain the current New Service Form.",
+      "Complete the applicant identity, contact, premises address, premises type and intended electricity-use sections.",
+      "Provide the valid ID details and the electrical/load information needed for the proposed connection.",
+      "Submit the form to EEDC so the commercial, metering and credit-control sections can assess and clear the application.",
+      "Pay only the official assessed connection amount after EEDC approval and keep the receipt and final connection/account information."
+    ],
+    "notes": [
+      "EEDC's new-service form also supports some changes such as additional load, change of customer and additional meter, but those tasks can require separate assessment.",
+      "A new connection can require technical work beyond simply creating a billing account.",
+      "Customers should not pay an unofficial contractor before EEDC has assessed and approved the service."
+    ],
+    "sources": [
+      {
+        "label": "EEDC New Service Form",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://www.enugudisco.com/index.php/extensions/new-service-form?download=4:new-service-form",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "EEDC FAQs",
+        "agency": "Enugu Electricity Distribution Company Plc",
+        "url": "https://www.enugudisco.com/index.php/contact-us/faq-kd",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "eedc-pay-bill-online",
+      "eedc-connect-self-service",
+      "electricity-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "EEDC new connection",
+      "apply electricity connection EEDC",
+      "EEDC new service form",
+      "EEDC connect new house",
+      "Enugu Disco new customer"
+    ]
+  },
+  {
+    "slug": "kedco-map-meter-application",
+    "title": "How to apply for a KEDCO prepaid meter under MAP",
+    "shortTitle": "KEDCO MAP meter",
+    "summary": "KEDCO's MAP meter route for customers in Kano, Jigawa and Katsina, using the online/customer form, approved MAP providers and the NERC-regulated meter programme.",
+    "category": "Electricity",
+    "agencySlug": "kedco",
+    "feeLabel": "Current NERC-approved MAP meter price applies",
+    "feeNote": "KEDCO publishes MAP pricing on its current meter page, but the displayed single- and three-phase figures appear inconsistent. Confirm the correct current meter type and amount directly in KEDCO's application before payment.",
+    "timeline": "KEDCO does not publish one fixed installation time on the current MAP information page; installation depends on application, payment, provider assignment and site readiness.",
+    "status": "conflict",
+    "officialPortal": "https://kedco.ng/apply-for-map-meter/",
+    "requirements": [
+      "A KEDCO customer/account or new-customer record for the premises requiring a meter",
+      "A completed KEDCO MAP meter application form or online application",
+      "The customer and premises information used by KEDCO to determine the appropriate single- or three-phase meter",
+      "Payment only after the approved MAP provider and current official meter amount have been confirmed"
+    ],
+    "steps": [
+      "Open KEDCO's official MAP meter page and start the online application or download the meter form.",
+      "Complete the customer/account, premises and contact information required for the meter request.",
+      "Submit the request through KEDCO or take the completed form to the nearest KEDCO office as the provider directs.",
+      "Confirm the assigned MAP provider, meter phase and current official amount before making payment.",
+      "Keep the application and payment evidence and follow up with KEDCO for provider assignment, site work and meter installation."
+    ],
+    "notes": [
+      "KEDCO's current MAP page names several approved Meter Asset Providers serving Kano, Katsina and Jigawa.",
+      "The meter-price figures displayed on the current KEDCO page appear internally inconsistent by phase, so this guide deliberately marks the fee as a conflict.",
+      "A meter should be acquired through KEDCO/MAP channels rather than an unapproved seller."
+    ],
+    "sources": [
+      {
+        "label": "KEDCO MAP Meter",
+        "agency": "Kano Electricity Distribution Company",
+        "url": "https://kedco.ng/apply-for-map-meter/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "KEDCO Home / FAQ",
+        "agency": "Kano Electricity Distribution Company",
+        "url": "https://kedco.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kedco-new-electricity-connection",
+      "kedco-pay-bill-buy-token",
+      "electricity-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "KEDCO prepaid meter application",
+      "KEDCO MAP meter",
+      "Kano Disco meter application",
+      "KEDCO meter price",
+      "KEDCO MAP provider"
+    ]
+  },
+  {
+    "slug": "kedco-new-electricity-connection",
+    "title": "How to apply for a new KEDCO electricity connection",
+    "shortTitle": "KEDCO new connection",
+    "summary": "KEDCO's published connection route for a new premises, beginning with load assessment and an application prepared through a registered electrical contractor before KEDCO processes the supply request.",
+    "category": "Electricity",
+    "agencySlug": "kedco",
+    "feeLabel": "Connection cost depends on load and required network work",
+    "feeNote": "KEDCO does not publish one flat new-connection price because the supply arrangement depends on load assessment and whether a public or dedicated transformer is required.",
+    "timeline": "KEDCO does not publish one universal completion time for every new connection; technical load assessment and network availability affect processing.",
+    "status": "verified",
+    "officialPortal": "https://kedco.ng/",
+    "requirements": [
+      "The new premises address and intended electricity load requirement",
+      "A registered electrical contractor to prepare and forward the connection application under KEDCO's published route",
+      "Technical information sufficient for KEDCO to assess whether the load can use a public transformer or needs a dedicated transformer",
+      "Any customer identity/property information requested during KEDCO's connection assessment"
+    ],
+    "steps": [
+      "Open KEDCO's official FAQ and confirm the new premises' expected electrical load with a registered electrical contractor.",
+      "Have the registered contractor prepare the new-connection application and required technical information for KEDCO.",
+      "Submit the application to KEDCO for load assessment and network-availability review.",
+      "Receive KEDCO's technical decision on the connection arrangement, including whether a public or dedicated transformer is needed.",
+      "Pay only the official assessed connection charges and keep the approval/account details after KEDCO authorises the new supply."
+    ],
+    "notes": [
+      "KEDCO's current FAQ says loads below 50 KVA can be connected through a public transformer when capacity is available, while higher loads need a dedicated transformer.",
+      "Actual connection voltage and infrastructure depend on load capacity and available mains.",
+      "A registered electrical contractor's involvement does not replace KEDCO's final technical approval."
+    ],
+    "sources": [
+      {
+        "label": "KEDCO FAQ",
+        "agency": "Kano Electricity Distribution Company",
+        "url": "https://kedco.ng/faq-2/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "KEDCO Home",
+        "agency": "Kano Electricity Distribution Company",
+        "url": "https://kedco.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kedco-map-meter-application",
+      "kedco-pay-bill-buy-token",
+      "electricity-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "KEDCO new connection",
+      "Kano electricity new connection",
+      "KEDCO connect new house",
+      "KEDCO load assessment",
+      "KEDCO new customer electricity"
+    ]
+  },
+  {
+    "slug": "kedco-pay-bill-buy-token",
+    "title": "How KEDCO electricity payment and prepaid vending currently work",
+    "shortTitle": "KEDCO payment & token",
+    "summary": "KEDCO's current payment guidance for prepaid and postpaid customers, with a visible conflict between its newer homepage advertising digital token/bill payment and its FAQ describing office-based payment.",
+    "category": "Electricity",
+    "agencySlug": "kedco",
+    "feeLabel": "Electricity amount plus any approved channel charge",
+    "feeNote": "KEDCO's official pages currently disagree on payment availability: the homepage advertises online/direct digital vending while the FAQ still says postpaid bills are paid within the customer's Business Unit and prepaid units at KEDCO offices. Verify the live channel before payment.",
+    "timeline": "KEDCO's current homepage advertises instant prepaid token vending through digital channels, but the older FAQ does not confirm that route for all customers.",
+    "status": "conflict",
+    "officialPortal": "https://kedco.ng/",
+    "requirements": [
+      "The KEDCO prepaid meter number or postpaid account information",
+      "The amount the customer wants to vend or pay toward the electricity bill",
+      "Use of a payment channel that KEDCO currently lists as active for that customer/account",
+      "The transaction receipt or token information needed for any later complaint"
+    ],
+    "steps": [
+      "Open KEDCO's official website and check the current Buy Electricity Token or payment options shown for the customer.",
+      "Enter the prepaid meter or postpaid account reference only on the active KEDCO-authorised channel.",
+      "Confirm the customer record and amount before completing the transaction.",
+      "Save the receipt and, for a prepaid purchase, the generated STS token.",
+      "If the digital route is unavailable or contradicts the account's instructions, contact the nearest KEDCO office/customer care before making a second payment."
+    ],
+    "notes": [
+      "KEDCO's current homepage advertises digital prepaid token and postpaid bill settlement.",
+      "KEDCO's FAQ still says bill payment is restricted to the customer's Business Unit/Sub-Business Unit and prepaid vending is available at KEDCO offices; this conflict is left visible.",
+      "Do not use an unofficial payment link merely because an older KEDCO FAQ appears restrictive."
+    ],
+    "sources": [
+      {
+        "label": "KEDCO Home",
+        "agency": "Kano Electricity Distribution Company",
+        "url": "https://kedco.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "KEDCO FAQ",
+        "agency": "Kano Electricity Distribution Company",
+        "url": "https://kedco.ng/faq-2/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kedco-map-meter-application",
+      "kedco-new-electricity-connection",
+      "electricity-complaint-escalation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "KEDCO pay bill",
+      "KEDCO buy token",
+      "Kano Disco prepaid token",
+      "KEDCO online payment",
+      "KEDCO payment office"
+    ]
+  },
+  {
+    "slug": "leadway-file-insurance-claim",
+    "title": "How to file an insurance claim with Leadway",
+    "shortTitle": "Leadway insurance claim",
+    "summary": "Leadway Assurance's claims route for notifying a loss, providing the policy and supporting evidence, receiving an acknowledgement and completing discharge/payment steps after claim review.",
+    "category": "Insurance",
+    "agencySlug": "leadway-assurance",
+    "feeLabel": "No claim-filing fee stated",
+    "feeNote": "Leadway does not state a separate fee for notifying or filing an insurance claim. Any deductible, excess or coverage limitation depends on the actual policy terms.",
+    "timeline": "Leadway's current claims page targets acknowledgement of general-insurance claims within 48 hours and payment 48–72 working hours after receipt of an executed discharge voucher; life-claim timelines differ by claim type.",
+    "status": "verified",
+    "officialPortal": "https://www.leadway.com/make-claim/",
+    "requirements": [
+      "The Leadway policy number and policy/insured details for the loss being reported",
+      "A completed claim form or claim notification through Leadway's claim channel",
+      "Evidence of the loss such as photographs, repair estimates, receipts or other policy-specific supporting documents",
+      "For motor third-party injury/death claims, the police report or other documents listed by Leadway for the incident"
+    ],
+    "steps": [
+      "Open Leadway's official Make a Claim page or claims channel and notify the insurer promptly about the loss.",
+      "Enter the policy/claim information and complete the applicable claim form.",
+      "Upload or submit the supporting evidence required for the policy, such as damage photographs, repair estimates and police report for applicable motor third-party claims.",
+      "Respond to any loss-adjustment or documentation request and review the claim offer/discharge voucher when Leadway completes assessment.",
+      "Sign/return the discharge voucher when the settlement is accepted and keep the payment/closure record after Leadway settles the approved claim."
+    ],
+    "notes": [
+      "Leadway's third-party motor terms say accidents should be notified within 30 days and provide a claims-centre route.",
+      "Leadway publishes different target timelines for general insurance and life assurance claims.",
+      "This guide explains claim submission only; whether a loss is covered depends on the specific policy wording and claim facts."
+    ],
+    "sources": [
+      {
+        "label": "Leadway Make a Claim",
+        "agency": "Leadway Assurance Company Limited",
+        "url": "https://www.leadway.com/make-claim/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Leadway Claims FAQ",
+        "agency": "Leadway Assurance Company Limited",
+        "url": "https://www.leadway.com/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Leadway Motor Insurance",
+        "agency": "Leadway Assurance Company Limited",
+        "url": "https://www.leadway.com/auto-insurance/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "leadway-buy-motor-insurance-online",
+      "axa-mansard-third-party-motor-insurance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Leadway insurance claim",
+      "file Leadway motor claim",
+      "Leadway claims centre",
+      "Leadway claim documents",
+      "Leadway claim payment timeline"
+    ]
+  },
+  {
+    "slug": "sterling-emergency-block-account",
+    "title": "How to block a Sterling account if your phone is lost",
+    "shortTitle": "Sterling emergency block",
+    "summary": "Sterling Bank's emergency USSD account-block route using *822*911# from any mobile phone for registered Sterling USSD users when a device is lost or unauthorised access is suspected.",
+    "category": "Banking",
+    "agencySlug": "sterling-bank",
+    "feeLabel": "No emergency-block fee stated",
+    "feeNote": "Sterling's OneBank FAQ does not state a separate charge for using the published *822*911# emergency block route.",
+    "timeline": "Sterling presents *822*911# as an immediate emergency action; account recovery after blocking uses Sterling support or branch assistance.",
+    "status": "verified",
+    "officialPortal": "https://sterling.ng/onebank/faqs/",
+    "requirements": [
+      "A Sterling account whose owner has previously registered for Sterling USSD banking",
+      "Access to any mobile phone capable of dialing the *822*911# emergency code",
+      "The account-owner information requested by Sterling's USSD prompts",
+      "Official Sterling support details for follow-up if the account or OneBank profile must later be restored"
+    ],
+    "steps": [
+      "Dial *822*911# from any available mobile phone as soon as the Sterling device/account is at risk.",
+      "Complete the account-identification and security prompts shown by Sterling's emergency USSD menu.",
+      "Confirm the request to block the Sterling account from further unauthorised access.",
+      "Review recent activity through a safe official channel after the account is secured.",
+      "Contact Sterling's One Customer Centre or visit a branch for recovery/unblocking assistance after the threat has been contained."
+    ],
+    "notes": [
+      "Sterling says the emergency code works for customers who are already registered Sterling USSD users.",
+      "A customer who has not registered for USSD can dial *822# and use Registration, but this should not delay other official fraud-reporting steps during an active compromise.",
+      "Sterling warns customers never to disclose OTPs or security credentials to callers or message senders."
+    ],
+    "sources": [
+      {
+        "label": "Sterling OneBank FAQs",
+        "agency": "Sterling Bank",
+        "url": "https://sterling.ng/onebank/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sterling-onebank-account-opening",
+      "sterling-onebank-tier-upgrade",
+      "gtbank-block-debit-card",
+      "opay-emergency-lock-account-card"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block Sterling account",
+      "Sterling *822*911#",
+      "lost phone Sterling Bank",
+      "Sterling emergency account block",
+      "OneBank unauthorised access"
+    ]
   }
 ]
