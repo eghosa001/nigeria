@@ -1138,6 +1138,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Bimbo Ademoye", "Shaffy Bello"],
     directors: ["Biodun Stephen"],
     runtimeMinutes: 102,
+    trailer: {
+      label: "Watch the official Prime Video trailer",
+      href: "https://www.youtube.com/watch?v=qfmVC3FPySE",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Prime Video Naija",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1254,6 +1261,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Mike Afolarin", "Mercy Aigbe"],
     directors: ["Kayode Kasum"],
     runtimeMinutes: 129,
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=seHHMphESu4",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Ajosepo official trailer",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1277,6 +1291,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Bolaji Ogunmola", "Toyin Abraham"],
     directors: ["Kayode Kasum"],
     runtimeMinutes: 112,
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=DnIJO6C7h3g",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Kayode Kasum",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1485,6 +1506,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Toyin Abraham", "Sambasa Nzeribe", "Omowunmi Dada"],
     directors: ["Charles Uwagbai"],
     runtimeMinutes: 102,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=z7ScF17apvQ",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1531,6 +1560,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Sophie Alakija", "Odunlade Adekola"],
     directors: ["Kayode Kasum"],
     runtimeMinutes: 116,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=fILvusx4jso",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1577,6 +1614,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Toyin Abraham", "Kehinde Bankole", "Muyiwa Ademola"],
     directors: ["Adebayo Tijani"],
     runtimeMinutes: 132,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=GNYqr_1_tAg",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
