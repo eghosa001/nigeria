@@ -1,4 +1,9 @@
-import { POSTHOG_COLLECTION_START, POSTHOG_PROJECT_ID, posthogServerReportingConfigured } from "@/lib/posthog-config";
+import {
+  POSTHOG_COLLECTION_START,
+  POSTHOG_PROJECT_ID,
+  posthogServerApiKey,
+  posthogServerReportingConfigured,
+} from "@/lib/posthog-config";
 
 export type PostHogOverview = {
   available: boolean;
@@ -32,7 +37,7 @@ export async function getPostHogOverview(
   forceFresh = false,
 ): Promise<PostHogOverview> {
   const startDate = requestedStartDate > POSTHOG_COLLECTION_START ? requestedStartDate : POSTHOG_COLLECTION_START;
-  const apiKey = process.env.POSTHOG_PERSONAL_API_KEY?.trim();
+  const apiKey = posthogServerApiKey();
 
   if (!posthogServerReportingConfigured() || !apiKey) {
     return {
@@ -45,6 +50,20 @@ export async function getPostHogOverview(
       averageSessionDurationSeconds: null,
       bounceRate: null,
       error: "POSTHOG_PERSONAL_API_KEY is not configured on the server.",
+    };
+  }
+
+  if (apiKey.startsWith("phc_")) {
+    return {
+      available: false,
+      startDate,
+      endDate,
+      visitors: null,
+      views: null,
+      sessions: null,
+      averageSessionDurationSeconds: null,
+      bounceRate: null,
+      error: "Cloudflare has a PostHog project token (phc_...), not a personal API key. Create a server-only personal API key with Query Read permission and save it as POSTHOG_PERSONAL_API_KEY.",
     };
   }
 
