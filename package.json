@@ -33,7 +33,8 @@
     "check:jobs": "tsx scripts/check-jobs-content.ts && tsx scripts/check-job-redirects.ts",
     "check:job-links": "node scripts/check-job-links.mjs",
     "check:entertainment-content": "tsx scripts/check-entertainment-content.ts",
-    "quality:status": "tsx scripts/report-content-quality.ts"
+    "quality:status": "tsx scripts/report-content-quality.ts",
+    "check:directory-queries": "tsx scripts/check-directory-queries.ts"
   },
   "dependencies": {
     "next": "16.3.6",
