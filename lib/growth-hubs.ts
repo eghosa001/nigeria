@@ -829,7 +829,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "Access Bank USSD code", serviceSlug: "access-bank-901-ussd" },
       { query: "block Access Bank account", serviceSlug: "access-bank-block-account" },
       { query: "Access Money Account", serviceSlug: "access-money-account" },
-      { query: "FirstBank USSD code", serviceSlug: "firstbank-894-ussd" }
+      { query: "FirstBank USSD code", serviceSlug: "firstbank-894-ussd" },
+      { query: "MTN airtime transfer", serviceSlug: "mtn-share-airtime" },
+      { query: "MTN data gifting", serviceSlug: "mtn-data-gifting" },
+      { query: "Airtel data gifting", serviceSlug: "airtel-data-gifting" },
+      { query: "clear DStv error", serviceSlug: "dstv-clear-error-code" },
+      { query: "change GOtv package", serviceSlug: "gotv-change-package" },
+      { query: "clear GOtv error", serviceSlug: "gotv-clear-error-code" },
+      { query: "track Jumia order", serviceSlug: "jumia-track-order" },
+      { query: "return Jumia order", serviceSlug: "jumia-return-refund" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -969,7 +977,15 @@ export const growthHubs: GrowthHub[] = [
       "access-bank-901-ussd",
       "access-bank-block-account",
       "access-money-account",
-      "firstbank-894-ussd"
+      "firstbank-894-ussd",
+      "mtn-share-airtime",
+      "mtn-data-gifting",
+      "airtel-data-gifting",
+      "dstv-clear-error-code",
+      "gotv-change-package",
+      "gotv-clear-error-code",
+      "jumia-track-order",
+      "jumia-return-refund"
     ]
   },
 
