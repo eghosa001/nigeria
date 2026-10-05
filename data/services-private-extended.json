@@ -10090,5 +10090,258 @@
       "PropertyPro developer registration",
       "PropertyPro pricing Nigeria"
     ]
+  },
+  {
+    "slug": "oracle-certification-exam-scheduling",
+    "title": "How to schedule an Oracle Certification exam from Nigeria",
+    "shortTitle": "Oracle exam scheduling",
+    "summary": "Oracle University's current certification route for choosing a credential, buying or using an exam attempt, scheduling the exam in Oracle MyLearn and then viewing results and certification activity in CertView.",
+    "category": "Education",
+    "agencySlug": "oracle-certification",
+    "feeLabel": "Exam-attempt price depends on the Oracle certification",
+    "feeNote": "Oracle certification pricing varies by exam and subscription. Confirm the live exam-attempt price in Oracle MyLearn before purchase.",
+    "timeline": "Oracle states that a purchased exam attempt gives the candidate six months to take the scheduled certification exam, subject to the specific subscription terms.",
+    "status": "verified",
+    "officialPortal": "https://www.oracle.com/education/certification/",
+    "requirements": [
+      "An Oracle account used for Oracle MyLearn and CertView",
+      "Selection of the exact Oracle certification exam the candidate intends to take",
+      "A valid exam attempt or eligible certification subscription for paid exams",
+      "Government-issued identification whose legal name matches the Oracle account",
+      "A computer and testing environment that meet Oracle University requirements for online-proctored exams"
+    ],
+    "steps": [
+      "Open Oracle's official Certification page and choose the certification or exam path to pursue.",
+      "Sign in to Oracle MyLearn with the candidate's Oracle account and open the relevant learning/certification path.",
+      "Buy or apply an eligible exam attempt and choose Schedule exam for the certification.",
+      "Select an available exam date/time, verify the legal identity information, accept the exam terms and confirm the appointment.",
+      "After the exam, open Oracle CertView to review the score report and manage certification activity."
+    ],
+    "notes": [
+      "Oracle's current certification page says candidates buy an exam attempt, choose a date and schedule on Oracle MyLearn.",
+      "Oracle University-delivered exams have separate readiness, cancellation and rescheduling rules from older Pearson VUE-delivered Oracle exams.",
+      "Oracle says cancellation or rescheduling for its current online exams should be completed at least 24 hours before the appointment to avoid losing an exam attempt."
+    ],
+    "sources": [
+      {
+        "label": "Oracle Certification",
+        "agency": "Oracle",
+        "url": "https://www.oracle.com/education/certification/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Oracle University Exam Preparation",
+        "agency": "Oracle",
+        "url": "https://www.oracle.com/middleeast/education/certification/exam-prep/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Oracle CertView",
+        "agency": "Oracle",
+        "url": "https://certview.oracle.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "pearson-vue-schedule-exam",
+      "microsoft-certification-exam-scheduling",
+      "aws-certification-exam-scheduling",
+      "cisco-certification-exam-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Oracle certification Nigeria",
+      "Oracle exam Nigeria",
+      "schedule Oracle certification exam",
+      "Oracle MyLearn exam booking",
+      "Oracle CertView Nigeria"
+    ]
+  },
+  {
+    "slug": "seamlesshr-breeze-payer-signup",
+    "title": "How to sign up for SeamlessHR Breeze Payer in Nigeria",
+    "shortTitle": "Breeze Payer signup",
+    "summary": "SeamlessHR's employer onboarding route for Breeze Payer, a Nigeria/Kenya business payment service for salary disbursement and statutory remittances, using the company's RC number and a director/shareholder BVN.",
+    "category": "Business",
+    "agencySlug": "seamlesshr",
+    "feeLabel": "Breeze Payer signup is currently free",
+    "feeNote": "SeamlessHR's current Breeze Payer FAQ says signup is free. Product, financing or transaction charges can still apply to specific services used after onboarding.",
+    "timeline": "SeamlessHR does not publish one universal activation time for every employer; account readiness depends on business verification and any compliance review.",
+    "status": "verified",
+    "officialPortal": "https://support.seamlesshr.com/frequently-asked-questions-on-breeze-payer",
+    "requirements": [
+      "A Nigerian employer or business using Breeze Payer for employee salary and statutory-payment operations",
+      "The registered company's RC number",
+      "The BVN of at least one director or shareholder associated with the business",
+      "A business email address and employer contact information for the account",
+      "Any additional company/compliance information requested during onboarding"
+    ],
+    "steps": [
+      "Open SeamlessHR's official Breeze Payer information or signup route and confirm that the employer is registering a business account.",
+      "Enter the company's business information and RC number.",
+      "Provide the BVN of at least one director or shareholder associated with the business for verification.",
+      "Complete the remaining employer/contact and compliance information requested by SeamlessHR.",
+      "Submit the onboarding profile and wait for activation before using Breeze Payer for salary, pension, tax or other business disbursements."
+    ],
+    "notes": [
+      "SeamlessHR says Breeze Payer is designed for employers, not as a consumer wallet.",
+      "The provider states that Breeze Payer is currently live in Nigeria and Kenya.",
+      "Its published FAQ describes salary payments, pension/tax remittances and employer-focused financial features as part of the service."
+    ],
+    "sources": [
+      {
+        "label": "SeamlessHR Breeze Payer FAQ",
+        "agency": "SeamlessHR",
+        "url": "https://support.seamlesshr.com/frequently-asked-questions-on-breeze-payer",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SeamlessHR Nigeria",
+        "agency": "SeamlessHR",
+        "url": "https://seamlesshr.com/ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SeamlessHR Embedded Finance",
+        "agency": "SeamlessHR",
+        "url": "https://seamlesshr.com/embedded-finance/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "paystack-business-activation-nigeria",
+      "flutterwave-business-account-nigeria",
+      "kuda-business-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "SeamlessHR Breeze Payer Nigeria",
+      "Breeze Payer signup",
+      "SeamlessHR payroll payments Nigeria",
+      "Breeze Payer RC BVN",
+      "SeamlessHR employer payments"
+    ]
+  },
+  {
+    "slug": "shuttlers-fund-wallet",
+    "title": "How to fund a Shuttlers wallet",
+    "shortTitle": "Fund Shuttlers wallet",
+    "summary": "Shuttlers' in-app wallet funding route for passengers who want to preload trip credit before booking scheduled commutes, using the payment options offered inside the platform.",
+    "category": "Urban mobility",
+    "agencySlug": "shuttlers",
+    "feeLabel": "Funding amount plus any payment-channel charge",
+    "feeNote": "Shuttlers supports multiple payment methods. Some direct Paystack or transfer routes can include additional charges, so review the amount shown before confirming.",
+    "timeline": "Shuttlers says bank-payment credit can take about 5–10 minutes to reflect; other supported payment methods can update sooner after successful processing.",
+    "status": "verified",
+    "officialPortal": "https://www.shuttlers.co/",
+    "requirements": [
+      "A registered Shuttlers passenger account",
+      "Access to the Shuttlers app or web account",
+      "The amount the passenger wants to add to the wallet",
+      "A supported payment method such as transfer, card, bank payment or another option offered in the app"
+    ],
+    "steps": [
+      "Open Shuttlers and sign in to the passenger account.",
+      "Open the wallet or payment area and choose the option to fund the wallet.",
+      "Enter the amount to add and choose one of the supported payment methods.",
+      "Complete the payment through the selected channel and keep the transaction confirmation.",
+      "Confirm that the wallet balance updates before using the credit to book a scheduled trip."
+    ],
+    "notes": [
+      "Shuttlers also lets passengers pay directly for trips instead of pre-funding the wallet.",
+      "The provider's getting-started guide lists transfer, card, bank, wallet, company credit and supported offline payment options.",
+      "A bank-payment funding transaction can take several minutes to reflect, so the passenger should verify the wallet before making a second payment."
+    ],
+    "sources": [
+      {
+        "label": "Shuttlers Getting Started",
+        "agency": "Shuttlers",
+        "url": "https://www.shuttlers.co/blog/getting-started",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Shuttlers FAQ",
+        "agency": "Shuttlers",
+        "url": "https://www.shuttlers.co/learn/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "shuttlers-book-daily-commute",
+      "lagride-book-ride"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "fund Shuttlers wallet",
+      "Shuttlers wallet payment",
+      "Shuttlers Paystack charge",
+      "Shuttlers bank transfer",
+      "Shuttlers trip payment"
+    ]
+  },
+  {
+    "slug": "spleet-list-apartment-host",
+    "title": "How to list an apartment as a host on Spleet",
+    "shortTitle": "List apartment on Spleet",
+    "summary": "Spleet's host route for creating a landlord/host account, listing one or multiple apartments and using the platform to reach vetted tenants, manage rentals and collect rent.",
+    "category": "Property services",
+    "agencySlug": "spleet",
+    "feeLabel": "Host/listing terms depend on the Spleet service selected",
+    "feeNote": "Spleet promotes apartment listing through its host platform but does not publish one universal listing fee on the main indexed page. Review the live host terms before accepting paid services.",
+    "timeline": "Listing activation depends on account setup, property information and any verification or review Spleet requires before the apartment becomes available to renters.",
+    "status": "verified",
+    "officialPortal": "https://dashboard.spleet.africa/create-account",
+    "requirements": [
+      "A host/landlord account on Spleet",
+      "Authority to list the apartment or property for rent",
+      "Accurate property details, location, rent terms and supporting listing information",
+      "Contact and payout/rent-collection details requested for the host account",
+      "Compliance with Spleet's current host and property rules"
+    ],
+    "steps": [
+      "Open Spleet's account-creation page and choose Join as a host.",
+      "Create the host account with the landlord/property-manager details requested by Spleet.",
+      "Add the apartment or apartments with accurate property, location, rent and availability information.",
+      "Complete any property or host verification steps required before the listing is made available.",
+      "Use the host/property-management tools to review tenant interest, manage the tenancy and collect rent through the supported platform features."
+    ],
+    "notes": [
+      "Spleet says hosts can list one apartment or hundreds of apartments on the platform.",
+      "The provider also offers tenant-verification and property-management tools alongside marketplace listing.",
+      "A host should only list property they own or have proper authority to market."
+    ],
+    "sources": [
+      {
+        "label": "Spleet Africa",
+        "agency": "Spleet Africa",
+        "url": "https://spleet.africa/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spleet Host Account Creation",
+        "agency": "Spleet Africa",
+        "url": "https://dashboard.spleet.africa/create-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spleet Terms and Privacy",
+        "agency": "Spleet Africa",
+        "url": "https://dashboard.spleet.africa/terms-privacy",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spleet-rent-apartment",
+      "spleet-tenant-verification",
+      "propertypro-agent-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "list apartment Spleet",
+      "Spleet host registration",
+      "Spleet landlord account",
+      "list property Spleet Nigeria",
+      "Spleet property management"
+    ]
   }
 ]
