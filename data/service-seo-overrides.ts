@@ -51,6 +51,8 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "pencom-job-loss-25-percent-withdrawal": "25% Pension Withdrawal Nigeria {year}: Eligibility & Steps",
   "ogun-tax-clearance-certificate": "Ogun Tax Clearance Certificate {year}: eTCC, Fee & Verify",
   "verify-vehicle-number-plate": "Verify Nigerian Number Plate {year}: FRSC Check & Steps",
+  "neco-purchase-result-token": "NECO Token Purchase {year}: Buy Result Token Online",
+  "pencom-micro-pension-registration": "Micro Pension Registration Nigeria {year}: How to Join",
   "inec-replace-lost-damaged-pvc": "Replace Lost or Damaged PVC {year}: INEC Steps",
   "inec-voter-transfer": "INEC Voter Transfer {year}: Change Voting Location",
 };
@@ -83,6 +85,8 @@ export const serviceSeoDescriptionTemplates: Record<string, string> = {
   "customs-846-non-standard-vin": "Nigeria Customs 846 guide for {year}: who should use the non-standard VIN route and how an authorised declarant completes the e-Application process.",
   "lost-nigerian-passport": "Lost Nigerian passport {year}: official NIS replacement process, including the police extract, High Court affidavit and reissue steps.",
   "ogun-tax-clearance-certificate": "Ogun State eTCC {year}: tax-record requirements, employee or self-employed evidence, application steps and online certificate verification.",
+  "neco-purchase-result-token": "Buy a NECO result token in {year} through the official NECO Results Portal, then use it with your exam year, type and registration number.",
+  "pencom-micro-pension-registration": "Micro Pension registration in Nigeria {year}: who can join, how to choose a licensed PFA and how flexible contributions work for informal-sector earners.",
 };
 
 export function getServiceSeoDescriptionOverride(slug: string, year: string) {
