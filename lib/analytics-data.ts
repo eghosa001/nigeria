@@ -7,6 +7,7 @@ import {
   POSTHOG_WEB_URL,
   posthogServerReportingConfigured,
 } from "@/lib/posthog-config";
+import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
 import {
   SEARCH_CONSOLE_HISTORY_THROUGH,
   historicalSearchConsoleSummary,
@@ -69,6 +70,7 @@ export type AnalyticsDashboardData = {
     projectId: number;
     webUrl: string;
     collectionStartDate: string;
+    overview: PostHogOverview;
   };
 };
 
@@ -616,12 +618,13 @@ export async function getAnalyticsDashboard(
     limit: 20,
   };
 
-  const [batch, interactionReport, realtime, searchPerformance, connection] = await Promise.all([
+  const [batch, interactionReport, realtime, searchPerformance, connection, posthogOverview] = await Promise.all([
     batchRunReports(coreRequests),
     runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
     runRealtime().catch(() => null),
     getSearchPerformance(dataStartDate),
     verifyAnalyticsConnection(),
+    getPostHogOverview(dataStartDate, today, forceFresh),
   ]);
 
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
@@ -681,6 +684,7 @@ export async function getAnalyticsDashboard(
       projectId: POSTHOG_PROJECT_ID,
       webUrl: POSTHOG_WEB_URL,
       collectionStartDate: POSTHOG_COLLECTION_START,
+      overview: posthogOverview,
     },
   };
 
