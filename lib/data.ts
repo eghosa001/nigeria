@@ -794,7 +794,7 @@ export const agencies: Agency[] = [
     "shortName": "KEDCO",
     "description": "Private electricity distribution company serving Kano, Jigawa and Katsina with customer connection, billing and MAP metering services.",
     "website": "https://kedco.ng/"
-  }
+  },
   {
     "slug": "yedc",
     "name": "Yola Electricity Distribution Company",
