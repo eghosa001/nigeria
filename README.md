@@ -27,9 +27,10 @@ MyNigeriaGuide turns official government information into clear, source-linked g
 - Daily full official-link audit in addition to key fee/process marker monitoring
 - Production security headers and installable web-app manifest
 - Conditional `ads.txt` endpoint that stays disabled until AdSense is configured
+- Seven named, individually switchable AdSense placements placed after the answer-first block, never above it
 - Verified-guide assistant that matches plain-language tasks to published source-linked guides
 - Privacy, terms, editorial, corrections and contact pages
-- Favicon/social preview assets and environment-gated AdSense plumbing
+- Favicon/social preview assets; the AdSense loader is withheld from `/admin` and automated browsers
 
 ## No database subscription required
 
@@ -96,8 +97,16 @@ Copy `.env.example` to `.env.local`.
 - `GA4_SERVICE_ACCOUNT_PRIVATE_KEY`: server-only service-account private key
 - `MYNIGERIAGUIDE_ADMIN_ANALYTICS_KEY`: server-only passphrase protecting private analytics and guide editing
 - `MYNIGERIAGUIDE_GITHUB_ADMIN_TOKEN`: fine-grained server-only GitHub token used only to create review branches/pull requests for guide edits
-- `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client
-- `NEXT_PUBLIC_ADSENSE_SLOT_GUIDE`: optional service-guide ad slot
+- `NEXT_PUBLIC_ADSENSE_CLIENT`: optional AdSense publisher client (`ca-pub-...`). Blank keeps all advertising and `/ads.txt` disabled
+- `NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_AFTER_ANSWER`: service guide, immediately after the quick answer
+- `NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_MID`: service guide, midway through the detailed guide
+- `NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_CAST`: movie page, after cast and crew
+- `NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_WATCH`: movie page, after the official availability section
+- `NEXT_PUBLIC_ADSENSE_SLOT_JOB_AFTER_FACTS`: job page, after the at-a-glance facts
+- `NEXT_PUBLIC_ADSENSE_SLOT_TOUR_AFTER_INTRO`: explore/tour guide, before the places section
+- `NEXT_PUBLIC_ADSENSE_SLOT_END_MULTIPLEX`: reserved Multiplex unit for the end of long-form articles
+
+Slot names are mapped in `lib/adsense-config.ts`. Any blank slot renders nothing, so placements can be enabled one at a time.
 
 ## Editorial rule
 

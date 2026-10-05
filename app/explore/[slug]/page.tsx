@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
+import { AdSlot } from "@/components/ad-slot";
+import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
@@ -227,6 +229,10 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           </div>
         </div>
       </section>
+
+      <div className="container">
+          <AdSlot slot={AD_SLOTS.tourAfterIntro} label="Advertisement" />
+        </div>
 
       <section className="section explore-guide-places" id="places">
         <div className="container">

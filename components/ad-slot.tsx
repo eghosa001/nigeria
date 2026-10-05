@@ -6,7 +6,15 @@ declare global {
   interface Window { adsbygoogle?: unknown[]; }
 }
 
-export function AdSlot({ slot, label = "Advertisement" }: { slot?: string; label?: string }) {
+export function AdSlot({
+  slot,
+  label = "Advertisement",
+  format = "auto",
+}: {
+  slot?: string;
+  label?: string;
+  format?: "auto" | "autorelaxed";
+}) {
   const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
   useEffect(() => {
@@ -28,8 +36,8 @@ export function AdSlot({ slot, label = "Advertisement" }: { slot?: string; label
         style={{ display: "block" }}
         data-ad-client={client}
         data-ad-slot={slot}
-        data-ad-format="auto"
-        data-full-width-responsive="true"
+        data-ad-format={format}
+        {...(format === "auto" ? { "data-full-width-responsive": "true" } : {})}
       />
     </aside>
   );
