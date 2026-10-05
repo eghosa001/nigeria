@@ -39,3 +39,16 @@ test("crowded landing-page link groups use progressive disclosure", async ({ pag
   await page.goto("/jobs");
   await expect(page.getByText("Browse by industry, location, profession & career tools")).toBeVisible();
 });
+
+
+test("decluttered landing pages do not overflow on a phone", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  for (const path of ["/explore", "/services", "/jobs", "/entertainment"]) {
+    await page.goto(path);
+    const widths = await page.evaluate(() => ({
+      viewport: document.documentElement.clientWidth,
+      content: document.documentElement.scrollWidth,
+    }));
+    expect(widths.content, path + " should not overflow horizontally").toBeLessThanOrEqual(widths.viewport + 1);
+  }
+});
