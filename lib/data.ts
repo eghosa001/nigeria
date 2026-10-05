@@ -1493,6 +1493,13 @@ export const agencies: Agency[] = [
     "shortName": "Sovereign Trust",
     "description": "Private Nigerian non-life insurer offering online quotes, motor insurance, policy renewal and claims services.",
     "website": "https://www.stiplc.com/"
+  },
+  {
+    "slug": "stanbic-ibtc-pension",
+    "name": "Stanbic IBTC Pension Managers Limited",
+    "shortName": "Stanbic IBTC Pension",
+    "description": "Licensed Nigerian Pension Fund Administrator offering RSA registration, statements, data recapture and pension self-service channels.",
+    "website": "https://www.stanbicibtcpension.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
