@@ -695,6 +695,27 @@ export const agencies: Agency[] = [
     "shortName": "AXA Mansard",
     "description": "Private Nigerian insurer offering motor and other insurance products with online purchase and claims services.",
     "website": "https://www.axamansard.com/"
+  },
+  {
+    "slug": "gig-logistics",
+    "name": "GIG Logistics",
+    "shortName": "GIGL",
+    "description": "Private Nigerian logistics provider offering domestic/international shipping, pickup, tracking and merchant delivery services.",
+    "website": "https://giglogistics.com/"
+  },
+  {
+    "slug": "guo-transport",
+    "name": "GUO Transport",
+    "shortName": "GUO Transport",
+    "description": "Private Nigerian intercity transport provider offering local/international bus booking and passenger services.",
+    "website": "https://www.guotransport.com/"
+  },
+  {
+    "slug": "palmpay",
+    "name": "PalmPay",
+    "shortName": "PalmPay",
+    "description": "Private Nigerian financial-services platform offering accounts, transfers, bills, merchant services and KYC-tiered access.",
+    "website": "https://www.palmpay.com/nigeria/"
   }
 ];
 
