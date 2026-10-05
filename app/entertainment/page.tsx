@@ -68,15 +68,25 @@ export default function EntertainmentPage() {
 
       <section className="section page-top minimal-section-hero">
         <div className="container">
-          <span className="eyebrow">Movies</span>
+          <span className="eyebrow">Movies & Entertainment</span>
           <h1>Find something worth watching.</h1>
-          <p className="page-intro">Browse Nigerian films, see the important details, then continue to the official source.</p>
+          <p className="page-intro">Search Nigerian films, series, actors, cinemas and official places to watch, then continue to the responsible platform.</p>
+          <form className="section-quick-search" action="/entertainment/movies#curated-movies" method="get" role="search">
+            <label>
+              <span>Search movies & entertainment</span>
+              <input type="search" name="q" placeholder="Movie, actor, genre or language…" />
+            </label>
+            <button type="submit">Search movies</button>
+          </form>
           <div className="minimal-inline-links">
             <Link href="/entertainment/movies">All movies</Link>
+            <Link href="/entertainment/trending">Trending now</Link>
             <Link href="/entertainment/series">TV & web series</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
+            <Link href="/entertainment/platforms">Streaming platforms</Link>
+            <Link href="/entertainment/people">Actors & filmmakers</Link>
           </div>
         </div>
       </section>
