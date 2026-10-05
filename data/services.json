@@ -15212,5 +15212,474 @@
       "Jumia seller KYC requirements",
       "Jumia seller center Nigeria"
     ]
+  },
+  {
+    "slug": "gtbank-737-open-account",
+    "title": "How to open a GTBank account with *737*0#",
+    "shortTitle": "GTBank 737 account opening",
+    "summary": "GTBank's USSD account-opening route for creating a basic account without data or a paper form, receiving the NUBAN by SMS and later completing authentication and BVN linking.",
+    "category": "Banking",
+    "agencySlug": "gtbank",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "GTBank does not state a separate charge for creating the account through *737*0#. Normal telecom USSD or banking charges can apply to later services depending on the transaction.",
+    "timeline": "GTBank states that the account number is created automatically and sent by SMS during the *737*0# signup flow; later authentication and BVN linking require a one-time branch visit under the published 737 guidance.",
+    "status": "verified",
+    "officialPortal": "https://737.gtbank.com/features",
+    "requirements": [
+      "A mobile phone and Nigerian phone number from which the customer can dial the GTBank 737 service",
+      "The personal information requested by the *737*0# account-opening prompts",
+      "A later identity-authentication and BVN-linking visit when the customer wants to complete the account setup beyond the initial USSD opening"
+    ],
+    "steps": [
+      "Dial *737*0# on the mobile phone and choose the option to open a new GTBank account.",
+      "Enter the personal information requested on the USSD prompts and confirm the account-opening request.",
+      "Wait for GTBank to send the newly created ten-digit NUBAN account number by SMS.",
+      "Keep the phone number and account information and visit GTBank once for the authentication and BVN-linking stage described by the bank.",
+      "After the account is fully linked, use GTBank's official 737, GTWorld, ATM or branch channels for the banking services available to that account tier."
+    ],
+    "notes": [
+      "GTBank states that no paper account-opening form is required for the initial *737*0# signup.",
+      "The initial 737 account has transaction and balance limits published by GTBank until the account is upgraded or fully authenticated.",
+      "Do not disclose a 737 PIN, OTP or debit-card PIN to anyone claiming to help with account opening."
+    ],
+    "sources": [
+      {
+        "label": "GTBank 737 Features",
+        "agency": "Guaranty Trust Bank Limited",
+        "url": "https://737.gtbank.com/features",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GTBank Help Centre",
+        "agency": "Guaranty Trust Bank Limited",
+        "url": "https://www.gtbank.com/help-centre",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "firstbank-open-account",
+      "uba-open-account",
+      "zenith-online-account-opening",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "GTBank account opening code",
+      "*737*0#",
+      "open GTBank account online",
+      "GTBank 737 account",
+      "GTBank account opening Nigeria"
+    ]
+  },
+  {
+    "slug": "gtbank-block-debit-card",
+    "title": "How to block a GTBank debit card",
+    "shortTitle": "Block GTBank debit card",
+    "summary": "GTBank's official emergency routes for hotlisting a debit card with the *737*51*10# code or blocking the card inside GTWorld when it is lost, stolen or should no longer be used.",
+    "category": "Banking",
+    "agencySlug": "gtbank",
+    "feeLabel": "No card-block fee stated",
+    "feeNote": "GTBank does not state a separate fee for hotlisting or blocking the debit card through the published 737 or GTWorld routes.",
+    "timeline": "The block request is a security action performed through 737 or GTWorld; GTBank does not publish a separate fixed processing delay on the help page.",
+    "status": "verified",
+    "officialPortal": "https://www.gtbank.com/help-centre/complaints-enquiries",
+    "requirements": [
+      "The mobile number registered with the GTBank account when using the *737*51*10# emergency hotlist code",
+      "Access to the GTWorld account when using the in-app card-block route",
+      "The correct card/account selection so the customer does not block a different active card by mistake"
+    ],
+    "steps": [
+      "For the fastest USSD route, dial *737*51*10# from the mobile number registered with GTBank.",
+      "Complete the security prompts shown by GTBank and confirm the debit-card hotlist request.",
+      "Alternatively, sign in to GTWorld, open Account Details and select Cards.",
+      "Choose the debit card that needs to be stopped and select Block Card to submit the in-app request.",
+      "After blocking the card, review recent transactions and contact GTBank immediately through an official support channel if any unauthorised activity is visible."
+    ],
+    "notes": [
+      "Blocking the card is different from closing the underlying bank account.",
+      "If the phone itself is lost, use another official GTBank support route rather than waiting to recover the device before securing the account.",
+      "Never provide an OTP, 737 PIN or full debit-card PIN to a caller claiming to reverse a fraudulent transaction."
+    ],
+    "sources": [
+      {
+        "label": "GTBank Complaints & Enquiries",
+        "agency": "Guaranty Trust Bank Limited",
+        "url": "https://www.gtbank.com/help-centre/complaints-enquiries",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GTBank 737 Features",
+        "agency": "Guaranty Trust Bank Limited",
+        "url": "https://737.gtbank.com/features",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "gtbank-737-open-account",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block GTBank card",
+      "GTBank card hotlist code",
+      "*737*51*10#",
+      "GTWorld block debit card",
+      "lost GTBank ATM card"
+    ]
+  },
+  {
+    "slug": "zenith-online-account-opening",
+    "title": "How to open a Zenith Bank account online",
+    "shortTitle": "Zenith online account opening",
+    "summary": "Zenith Bank's official online account-opening route for savings accounts using BVN or NIN, a fuller BVN-and-NIN route, and the separate diaspora account option.",
+    "category": "Banking",
+    "agencySlug": "zenith-bank",
+    "feeLabel": "₦0 opening balance advertised for the online route",
+    "feeNote": "Zenith's current online account-opening page advertises opening an account with ₦0.00. Product-specific balances or charges can differ after opening, so confirm the selected account terms before funding or ordering services.",
+    "timeline": "Zenith does not publish one universal completion time on the online account-opening landing page; completion depends on the selected route and successful identity/KYC verification.",
+    "status": "verified",
+    "officialPortal": "https://onlineac.zenithbank.com/",
+    "requirements": [
+      "A BVN or NIN for the basic online savings-account route shown by Zenith",
+      "Both BVN and NIN when the applicant chooses the fuller savings-account application that requires both identifiers",
+      "The personal and contact information needed to complete the selected Zenith online application",
+      "Additional identity, address or account-type evidence shown if the customer chooses a product beyond the basic online savings route"
+    ],
+    "steps": [
+      "Open Zenith Bank's official Online Account Opening portal and choose the account-opening category that matches the applicant.",
+      "Select Savings Account with BVN or NIN, Savings Account with BVN & NIN, or the separate Diaspora Account option.",
+      "Enter the identity and personal information requested for that selected application and verify the BVN or NIN details.",
+      "Complete the remaining account-opening fields and submit the application through Zenith's official portal.",
+      "Keep the issued account information and complete any additional KYC step Zenith requests before relying on the account for unrestricted banking."
+    ],
+    "notes": [
+      "Zenith also publishes *966*0# as an account-opening route, but this guide focuses on the official web application.",
+      "The online portal explicitly separates the BVN-or-NIN route from the BVN-and-NIN route.",
+      "Do not use a third-party website that mimics the Zenith account-opening portal."
+    ],
+    "sources": [
+      {
+        "label": "Zenith Bank Online Account Opening",
+        "agency": "Zenith Bank Plc",
+        "url": "https://onlineac.zenithbank.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Zenith Individual Account Opening Form",
+        "agency": "Zenith Bank Plc",
+        "url": "https://www.digital.zenithbank.com/pdfs/Zenith-Individual-Account-FORM.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2025"
+      }
+    ],
+    "related": [
+      "gtbank-737-open-account",
+      "firstbank-open-account",
+      "uba-open-account",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Zenith Bank account online",
+      "Zenith account opening portal",
+      "Zenith savings account BVN NIN",
+      "Zenith *966*0# account",
+      "Zenith online account"
+    ]
+  },
+  {
+    "slug": "stanbic-bizsmart-account",
+    "title": "How to open a Stanbic IBTC Biz Smart business account",
+    "shortTitle": "Stanbic Biz Smart account",
+    "summary": "Stanbic IBTC's business-account route for registered Nigerian enterprises using CAC documents, signatory ID and BVN, recent utility evidence, TIN, photographs and the bank's account-opening form.",
+    "category": "Banking",
+    "agencySlug": "stanbic-ibtc-bank",
+    "feeLabel": "Official page currently shows conflicting opening-deposit figures",
+    "feeNote": "Stanbic IBTC's current Biz Smart page shows ₦20,000 in one account-opening section and ₦10,000 in another cost section. Confirm the actual opening deposit with the bank before funding the application.",
+    "timeline": "Stanbic IBTC does not publish one fixed completion time for Biz Smart account opening on the current product page.",
+    "status": "conflict",
+    "officialPortal": "https://www.stanbicibtcbank.com/nigeriabank/business/products-and-services/bank-with-us/business-bank-accounts/biz-smart-account",
+    "requirements": [
+      "CAC registration documents: certificate and status report for a business name, or certificate, status report and MEMART for a limited-liability company",
+      "A valid driver's licence, INEC voter card, NIN slip/card or international passport for each signatory",
+      "The BVN of the signatories and a recent utility bill not older than three months",
+      "A Tax Identification Number and one passport photograph for each signatory",
+      "The completed Stanbic IBTC business account-opening form"
+    ],
+    "steps": [
+      "Open Stanbic IBTC's official Biz Smart page and review the current business-account terms and the conflicting opening-deposit figures before proceeding.",
+      "Prepare the CAC documents that match the business structure and collect the signatories' identity documents and BVNs.",
+      "Prepare the recent utility bill, TIN and passport photograph for each signatory and complete the bank's account-opening form.",
+      "Submit the Biz Smart application through the official Stanbic IBTC account-opening route or branch process indicated by the bank.",
+      "Confirm the actual opening deposit and account terms with Stanbic IBTC before funding the new business account."
+    ],
+    "notes": [
+      "The current Stanbic IBTC Biz Smart page contains conflicting opening-deposit figures, so this guide deliberately does not pick one as authoritative.",
+      "Business-name and limited-liability-company applicants use different CAC document sets.",
+      "Account-maintenance concessions depend on the operating-balance and transaction conditions published for the product."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC Biz Smart Account",
+        "agency": "Stanbic IBTC Bank",
+        "url": "https://www.stanbicibtcbank.com/nigeriabank/business/products-and-services/bank-with-us/business-bank-accounts/biz-smart-account",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fidelity-business-account-online",
+      "paystack-business-activation-nigeria",
+      "cac-business-name-registration",
+      "cac-company-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Stanbic Biz Smart account",
+      "Stanbic IBTC business account requirements",
+      "open Stanbic business account",
+      "Biz Smart opening balance",
+      "Stanbic SME account Nigeria"
+    ]
+  },
+  {
+    "slug": "fidelity-business-account-online",
+    "title": "How to open a Fidelity business account online",
+    "shortTitle": "Fidelity business account",
+    "summary": "Fidelity Bank's digital FSBA route for Nigerian businesses, using the BN or RC number, signatory NIN and BVN, utility evidence and two business references for account onboarding.",
+    "category": "Banking",
+    "agencySlug": "fidelity-bank",
+    "feeLabel": "Account terms depend on the selected Fidelity business product",
+    "feeNote": "Fidelity's digital business-account page focuses on onboarding requirements rather than one universal fee. Confirm the account charges and any opening balance displayed for the selected product before funding.",
+    "timeline": "Fidelity does not publish one guaranteed universal completion time on the FSBA application page; verification depends on the submitted business and signatory information.",
+    "status": "verified",
+    "officialPortal": "https://businessaccount.fidelitybank.ng/",
+    "requirements": [
+      "The business BN or RC registration number",
+      "The NIN and BVN of each account signatory",
+      "A utility bill for address verification",
+      "Contact information for two business references",
+      "The business and signatory contact information needed to complete the online application"
+    ],
+    "steps": [
+      "Open Fidelity Bank's official FSBA digital business-account portal and begin a new application.",
+      "Enter the business BN or RC registration number and the business contact information.",
+      "Provide the NIN and BVN for each signatory and complete the identity-verification information.",
+      "Upload or provide the utility-bill address evidence and enter the contact information for the two business references.",
+      "Submit the application and keep the application details until Fidelity completes verification and provides the approved business-account information."
+    ],
+    "notes": [
+      "The FSBA portal is specifically presented as a digital business-account onboarding service.",
+      "The requirements can differ from Fidelity's personal or diaspora accounts, so do not reuse this checklist for those products.",
+      "A business should verify the final account tariff and service charges before using the account for regular operations."
+    ],
+    "sources": [
+      {
+        "label": "Fidelity Smart Business Account",
+        "agency": "Fidelity Bank Plc",
+        "url": "https://businessaccount.fidelitybank.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Fidelity Bank FAQs",
+        "agency": "Fidelity Bank Plc",
+        "url": "https://fidelitybank.ng/help-support/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-bizsmart-account",
+      "paystack-business-activation-nigeria",
+      "cac-business-name-registration",
+      "cac-company-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Fidelity business account online",
+      "Fidelity FSBA account",
+      "open Fidelity business account",
+      "Fidelity business account requirements",
+      "Fidelity Bank SME account"
+    ]
+  },
+  {
+    "slug": "flutterwave-business-account-nigeria",
+    "title": "How to open and verify a Flutterwave business account in Nigeria",
+    "shortTitle": "Flutterwave business account",
+    "summary": "Flutterwave's Nigerian merchant-onboarding route for Starter, registered-business and other-entity accounts, with identity, BVN/NIN, address, website and business-registration evidence matched to the account type.",
+    "category": "Business",
+    "agencySlug": "flutterwave",
+    "feeLabel": "Account verification requirements vary by business type",
+    "feeNote": "Flutterwave's onboarding guide focuses on compliance rather than one universal setup fee. Transaction and product charges apply after activation according to the services the merchant uses.",
+    "timeline": "Flutterwave says a merchant cannot process live transactions until the requested verification information is approved; the exact review time can vary by account and any follow-up needed.",
+    "status": "verified",
+    "officialPortal": "https://app.flutterwave.com/",
+    "requirements": [
+      "For a Starter business, the owner's BVN, NIN, valid ID, residential address/electricity meter number, business profile and website or social-media URL",
+      "For a sole proprietorship, CAC business documents plus the proprietor's BVN, NIN, ID, address evidence and applicable operating licence",
+      "For a limited-liability company, Certificate of Incorporation, MEMART, representative BVN/NIN, director/shareholder identity evidence, business website and regulatory licence if applicable",
+      "Estimated monthly sales and a verifiable description of the business activities",
+      "Original valid identity evidence for the live identity-capture stage"
+    ],
+    "steps": [
+      "Create a Flutterwave for Business account and choose the account category that matches the Nigerian enterprise.",
+      "Open the merchant verification or onboarding section and enter the business profile, estimated sales, website or social-media page and address information.",
+      "Provide the owner's or business representative's BVN and NIN and complete the required identity verification.",
+      "Upload the CAC, MEMART, director/shareholder, licence or other compliance documents that apply to the selected Nigerian business type.",
+      "Submit the verification profile and wait until Flutterwave approves the account before attempting to receive live customer payments."
+    ],
+    "notes": [
+      "Flutterwave offers different document sets for Starter businesses, sole proprietorships, limited-liability companies and other entities.",
+      "The contact person's identity should match the BVN/NIN and the registered business information used during verification.",
+      "This guide covers merchant onboarding, not API integration or customer payment-code implementation."
+    ],
+    "sources": [
+      {
+        "label": "Flutterwave Nigeria onboarding requirements",
+        "agency": "Flutterwave",
+        "url": "https://www.flutterwave.com/us/support/onboarding/onboarding-requirements-for-using-flutterwave-in-nigeria",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Flutterwave requirements overview",
+        "agency": "Flutterwave",
+        "url": "https://flutterwave.com/eu/support/general/what-are-the-requirements-for-using-flutterwave",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "paystack-business-activation-nigeria",
+      "cac-business-name-registration",
+      "cac-company-registration",
+      "scuml-certificate-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Flutterwave business account Nigeria",
+      "Flutterwave verification requirements Nigeria",
+      "activate Flutterwave account",
+      "Flutterwave merchant onboarding Nigeria",
+      "Flutterwave KYC Nigeria"
+    ]
+  },
+  {
+    "slug": "opay-account-opening-nigeria",
+    "title": "How to open an OPay account in Nigeria",
+    "shortTitle": "OPay account opening",
+    "summary": "OPay's mobile-app account-registration route using a valid Nigerian phone number and identity/KYC information, with NIN, BVN or other valid identification used as the account verification level increases.",
+    "category": "Banking",
+    "agencySlug": "opay",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "OPay does not state a fee for creating the personal account. Product, transfer or other service charges and promotional free-transfer limits can change and are shown in the app.",
+    "timeline": "OPay describes account opening as instant for eligible users after the signup information is accepted, while additional KYC verification can be requested for higher service access.",
+    "status": "verified",
+    "officialPortal": "https://opayweb.com/ng/",
+    "requirements": [
+      "A valid Nigerian mobile phone number for creation of the OPay account",
+      "Accurate personal information such as name and other identity details requested during app registration",
+      "NIN, BVN or another valid identification route when OPay requests identity verification under its KYC rules",
+      "A private PIN or other security credential created for continued account access"
+    ],
+    "steps": [
+      "Download the official OPay app from the app-store link provided on OPay's website and start account registration.",
+      "Enter a valid mobile phone number and the personal information requested by OPay for the new account.",
+      "Create the private PIN or security credential used to protect the OPay account.",
+      "Complete the NIN, BVN or valid-ID verification requested in the app for the account's required KYC level.",
+      "After the account is active, use only OPay's official app and support routes for transfers, bills, cards or later profile verification."
+    ],
+    "notes": [
+      "OPay's terms require users to provide true and complete information during registration and allow the provider to request additional KYC information.",
+      "The provider says transfer promotions and free-transfer limits can change, so this guide does not hard-code a promotional allowance.",
+      "Never share the account PIN, OTP or verification code with someone claiming to be an OPay support agent."
+    ],
+    "sources": [
+      {
+        "label": "OPay Nigeria",
+        "agency": "OPay",
+        "url": "https://opayweb.com/ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "OPay Terms of Service",
+        "agency": "OPay",
+        "url": "https://static.opayweb.com/terms-and-conditions",
+        "lastChecked": "2026-10-05",
+        "published": "2025-07-26"
+      }
+    ],
+    "related": [
+      "opay-emergency-lock-account-card",
+      "moniepoint-personal-account",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open OPay account Nigeria",
+      "OPay account registration",
+      "OPay NIN BVN account",
+      "create OPay account",
+      "OPay signup Nigeria"
+    ]
+  },
+  {
+    "slug": "opay-emergency-lock-account-card",
+    "title": "How to lock an OPay account or card if your phone is lost",
+    "shortTitle": "OPay emergency lock",
+    "summary": "OPay's emergency security route for quickly locking an account or card with the published *955*131# and *955*132# codes when a phone, card or account access is at risk.",
+    "category": "Banking",
+    "agencySlug": "opay",
+    "feeLabel": "No emergency-lock fee stated",
+    "feeNote": "OPay does not state a separate charge for the emergency lock codes on its security page.",
+    "timeline": "The USSD codes are presented by OPay as an instant account/card locking feature; contact official support immediately if the security action cannot be completed.",
+    "status": "verified",
+    "officialPortal": "https://opayweb.com/security",
+    "requirements": [
+      "Access to a phone capable of dialing the OPay emergency USSD service",
+      "Enough account-identifying information to complete the security prompts without revealing a PIN or OTP to another person",
+      "Official OPay support contact details as a fallback if the USSD emergency route does not secure the account"
+    ],
+    "steps": [
+      "Dial *955*131# or *955*132#, the emergency security codes OPay publishes for locking an account or card.",
+      "Use the on-screen security menu to identify the account or card that needs to be protected.",
+      "Complete the account-owner verification shown by the USSD service and confirm the lock request.",
+      "Check the account through the official OPay app only if the phone and login remain under the customer's control.",
+      "Contact OPay's official app/card support immediately if the USSD request fails or if unauthorised transactions have already occurred."
+    ],
+    "notes": [
+      "OPay publishes the two emergency codes together as quick account/card locking routes but does not map each code to a named action on the public page.",
+      "Do not delay securing the account while trying to recover a lost phone or physical debit card.",
+      "OPay says its in-app customer-service centre can also handle transfer and card disputes with status updates."
+    ],
+    "sources": [
+      {
+        "label": "OPay Security",
+        "agency": "OPay",
+        "url": "https://opayweb.com/security",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "OPay Service Level Agreement",
+        "agency": "OPay",
+        "url": "https://www.opayweb.com/service-level-agreement/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "OPay Contact Us",
+        "agency": "OPay",
+        "url": "https://static.opayweb.com/contact-us",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "opay-account-opening-nigeria",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "lock OPay account",
+      "OPay emergency code",
+      "*955*131#",
+      "*955*132#",
+      "block OPay card lost phone"
+    ]
   }
 ]
