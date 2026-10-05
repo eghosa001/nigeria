@@ -936,7 +936,13 @@ export const growthHubs: GrowthHub[] = [
       { query: "Wakanow hotel booking Nigeria", serviceSlug: "wakanow-book-hotel-nigeria" },
       { query: "cancel Wakanow hotel", serviceSlug: "wakanow-cancel-hotel-reservation" },
       { query: "DStv Stream Nigeria", serviceSlug: "dstv-streaming-subscription-nigeria" },
-      { query: "Showmax to DStv Stream Nigeria", serviceSlug: "showmax-move-to-dstv-stream-nigeria" }
+      { query: "Showmax to DStv Stream Nigeria", serviceSlug: "showmax-move-to-dstv-stream-nigeria" },
+      { query: "create Chowdeck account", serviceSlug: "chowdeck-create-account-order" },
+      { query: "Chowdeck vendor registration", serviceSlug: "chowdeck-vendor-onboarding" },
+      { query: "Chowdeck rider signup", serviceSlug: "chowdeck-rider-signup" },
+      { query: "Chowdeck Ads", serviceSlug: "chowdeck-advertising" },
+      { query: "ICAN professional student registration", serviceSlug: "ican-professional-student-registration" },
+      { query: "ICAN exam registration", serviceSlug: "ican-professional-exam-registration" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1183,7 +1189,13 @@ export const growthHubs: GrowthHub[] = [
       "wakanow-book-hotel-nigeria",
       "wakanow-cancel-hotel-reservation",
       "dstv-streaming-subscription-nigeria",
-      "showmax-move-to-dstv-stream-nigeria"
+      "showmax-move-to-dstv-stream-nigeria",
+      "chowdeck-create-account-order",
+      "chowdeck-vendor-onboarding",
+      "chowdeck-rider-signup",
+      "chowdeck-advertising",
+      "ican-professional-student-registration",
+      "ican-professional-exam-registration"
     ]
   },
 
