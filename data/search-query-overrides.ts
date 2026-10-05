@@ -184,4 +184,14 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     online: "Can I apply for or verify an Ogun eTCC online?",
     start: "How do I get an Ogun State tax clearance certificate?",
   },
+  "neco-purchase-result-token": {
+    requirements: "What do I need to buy a NECO result token?",
+    online: "Can I purchase a NECO result token online?",
+    start: "How do I buy a NECO result token on the official portal?",
+  },
+  "pencom-micro-pension-registration": {
+    requirements: "What do I need for Micro Pension account registration?",
+    online: "Can I register for Micro Pension through a licensed PFA?",
+    start: "How do I register for a Micro Pension account in Nigeria?",
+  },
 };
