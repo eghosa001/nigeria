@@ -119,7 +119,71 @@ export const entertainmentPeople: EntertainmentPerson[] = [
     roles: ["Director", "Actor"],
     knownForSlugs: ["iyalode", "ijakumo", "ori-rebirth"],
     summary: "Yoruba filmmaker represented by epic, thriller and supernatural drama titles in this catalog.",
+  },,
+
+  {
+    slug: "funke-akindele",
+    name: "Funke Akindele",
+    roles: ["Actor", "Producer", "Filmmaker"],
+    knownForSlugs: ["behind-the-scenes", "a-tribe-called-judah", "omo-ghetto-the-saga"],
+    summary: "Actor and filmmaker linked here to Behind the Scenes, A Tribe Called Judah and Omo Ghetto: the Saga.",
   },
+  {
+    slug: "jim-iyke",
+    name: "Jim Iyke",
+    roles: ["Actor"],
+    knownForSlugs: ["no-fury-2024", "the-set-up", "merry-men", "merry-men-2"],
+    summary: "Actor represented across No Fury, The Set Up and the first two Merry Men films in this catalog.",
+  },
+  {
+    slug: "sola-sobowale",
+    name: "Sola Sobowale",
+    roles: ["Actor"],
+    knownForSlugs: ["king-of-boys", "soole"],
+    summary: "Actor represented here by King of Boys and the road comedy-thriller Soólè.",
+  },
+  {
+    slug: "bimbo-ademoye",
+    name: "Bimbo Ademoye",
+    roles: ["Actor"],
+    knownForSlugs: ["anikulapo", "sugar-rush", "nneka-the-pretty-serpent"],
+    summary: "Actor with linked catalog credits including Aníkúlápó, Sugar Rush and Nneka The Pretty Serpent.",
+  },
+  {
+    slug: "adesua-etomi",
+    name: "Adesua Etomi",
+    roles: ["Actor"],
+    knownForSlugs: ["king-of-boys", "up-north", "the-set-up", "sugar-rush"],
+    summary: "Actor represented across King of Boys, Up North, The Set Up and Sugar Rush in this catalog.",
+  },
+  {
+    slug: "stan-nze",
+    name: "Stan Nze",
+    roles: ["Actor"],
+    knownForSlugs: ["rattlesnake-the-ahanna-story", "aki-and-paw-paw"],
+    summary: "Actor linked here to RattleSnake - The Ahanna Story and Aki and Paw Paw.",
+  },
+  {
+    slug: "mercy-aigbe",
+    name: "Mercy Aigbe",
+    roles: ["Actor", "Filmmaker"],
+    knownForSlugs: ["farmers-bride", "thinline"],
+    summary: "Actor and filmmaker represented here by Farmer's Bride and Thinline.",
+  },
+  {
+    slug: "tobi-bakre",
+    name: "Tobi Bakre",
+    roles: ["Actor"],
+    knownForSlugs: ["behind-the-scenes", "farmers-bride"],
+    summary: "Actor linked here to Behind the Scenes and Farmer's Bride.",
+  },
+  {
+    slug: "uche-montana",
+    name: "Uche Montana",
+    roles: ["Actor"],
+    knownForSlugs: ["behind-the-scenes", "thinline"],
+    summary: "Actor linked here to Behind the Scenes and Thinline.",
+  }
 ];
 
 export type PlatformGuide = {
@@ -145,7 +209,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "streaming",
     offlineLabel: "Eligible titles can be downloaded in the Netflix app for offline viewing.",
     offlineHelpUrl: "https://help.netflix.com/en/node/54816",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-05",
   },
   {
     slug: "youtube",
