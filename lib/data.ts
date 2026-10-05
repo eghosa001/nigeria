@@ -779,6 +779,20 @@ export const agencies: Agency[] = [
     "shortName": "Kaduna Electric",
     "description": "Private electricity distribution company serving Kaduna, Kebbi, Sokoto and Zamfara with token, billing and MAP metering services.",
     "website": "https://kadunaelectric.com/"
+  },
+  {
+    "slug": "eedc",
+    "name": "Enugu Electricity Distribution Company Plc",
+    "shortName": "EEDC",
+    "description": "Private electricity distribution company serving the South-East with bill payment, customer self-service, connections and metering services.",
+    "website": "https://enugudisco.com/"
+  },
+  {
+    "slug": "kedco",
+    "name": "Kano Electricity Distribution Company",
+    "shortName": "KEDCO",
+    "description": "Private electricity distribution company serving Kano, Jigawa and Katsina with customer connection, billing and MAP metering services.",
+    "website": "https://kedco.ng/"
   }
 ];
 
