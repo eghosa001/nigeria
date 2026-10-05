@@ -44,11 +44,11 @@ function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuid
     : [];
 
   return [
-    ...geographyQuestion,
     {
       question: "What are the best things to do in " + guide.shortTitle + "?",
       answer: "Start with " + highlights.slice(0, 3).join(", ") + ". The guide below explains how to fit these into a realistic trip.",
     },
+    ...geographyQuestion,
     {
       question: "What places should I visit in " + guide.shortTitle + "?",
       answer: highlights.length ? "Useful starting points include " + highlights.join(", ") + "." : guide.summary,
