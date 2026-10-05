@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-05",
-  "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
+  "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported. New producer/network sources remain optional until the API identity and publisher-context checks pass.",
   "sources": [
     {
       "slug": "ruthkadiri247",
@@ -726,6 +726,28 @@
       ],
       "estimatedMovieCount": 20,
       "knownUrl": "https://www.youtube.com/@AccelerateMovies",
+      "optional": true
+    },
+    {
+      "slug": "sydiwundu-tv",
+      "searchName": "SydIwunduTv",
+      "aliases": [
+        "SydIwunduTv",
+        "Syd Iwundu TV"
+      ],
+      "estimatedMovieCount": 50,
+      "knownUrl": "https://www.youtube.com/@sydiwundu",
+      "optional": true
+    },
+    {
+      "slug": "motolani-tv",
+      "searchName": "MO'TOLANI TV",
+      "aliases": [
+        "MO'TOLANI TV",
+        "MO’TOLANI TV",
+        "MOTOLANI TV"
+      ],
+      "estimatedMovieCount": 60,
       "optional": true
     }
   ]
