@@ -204,3 +204,8 @@ Requirements must be concrete. Name the actual identifier/document when it is kn
 ## Validation
 
 Follow the owner's minimal-test rule. Run only directly relevant service-catalog/content/source checks. Do not manually run the full repository suite.
+
+
+## Private-provider expansion
+
+Private services are now part of this Services workstream. Follow `docs/workstreams/private-services-coverage.md` for provider eligibility, sector coverage and anti-thin-page rules. Private-provider guides must meet the same source, freshness, answer-first, internal-link and conflict-handling standards as government guides.
