@@ -9,6 +9,15 @@ export const POSTHOG_UI_HOST = "https://eu.posthog.com";
 export const POSTHOG_WEB_URL = "https://eu.posthog.com/project/294041/web";
 export const POSTHOG_COLLECTION_START = "2026-10-05";
 
+export function posthogServerApiKey() {
+  return (
+    process.env.POSTHOG_PERSONAL_API_KEY?.trim() ||
+    process.env.POSTHOG_API_KEY?.trim() ||
+    process.env.POSTHOG_KEY?.trim() ||
+    ""
+  );
+}
+
 export function posthogServerReportingConfigured() {
-  return Boolean(process.env.POSTHOG_PERSONAL_API_KEY?.trim());
+  return Boolean(posthogServerApiKey());
 }
