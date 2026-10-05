@@ -19,7 +19,7 @@ const searchMomentumMovieSlugs = [
   "bowale",
   "the-man-i-never-knew",
   "sister-agatha",
-  "all-things-equal",
+  "my-housemate",
 ];
 
 export default function EntertainmentPage() {
