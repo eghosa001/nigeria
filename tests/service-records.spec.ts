@@ -274,7 +274,15 @@ const expectedSlugs = [
   "spectranet-recharge-renew-plan",
   "konga-return-refund",
   "konga-seller-registration",
-  "jumia-seller-registration-nigeria",] as const;
+  "jumia-seller-registration-nigeria",
+  "gtbank-737-open-account",
+  "gtbank-block-debit-card",
+  "zenith-online-account-opening",
+  "stanbic-bizsmart-account",
+  "fidelity-business-account-online",
+  "flutterwave-business-account-nigeria",
+  "opay-account-opening-nigeria",
+  "opay-emergency-lock-account-card",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -390,8 +398,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(269);
-  expect(publicServices).toHaveLength(269);
+  expect(services).toHaveLength(277);
+  expect(publicServices).toHaveLength(277);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
