@@ -18036,5 +18036,406 @@
       "Kaduna Electric MAP eligibility",
       "Kaduna Electric 10 working days meter"
     ]
+  },
+  {
+    "slug": "mtn-sim-swap-replacement",
+    "title": "How to replace or swap an MTN SIM in Nigeria",
+    "shortTitle": "MTN SIM swap",
+    "summary": "MTN Nigeria's SIM swap/replacement route for a lost, stolen, damaged, faulty or obsolete line, using the registered number, NIN/VNIN and ownership/usage verification before the old number is moved to a new SIM.",
+    "category": "Telecommunications",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "New replacement SIM cost applies",
+    "feeNote": "MTN states that the customer purchases a new SIM card for the swap; the current replacement-SIM price is determined by MTN and should be confirmed at the MTN outlet before payment.",
+    "timeline": "MTN does not publish one fixed completion time for every SIM swap; completion depends on identity, NIN and line-ownership verification.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/sim/sim-swap/",
+    "requirements": [
+      "An MTN phone number that is already registered",
+      "The customer's National Identification Number or Virtual NIN",
+      "Correct line-usage information when MTN asks for ownership checks, such as last recharge amount/date, frequently dialled numbers and year of activation",
+      "A new MTN SIM card onto which the existing phone number can be transferred"
+    ],
+    "steps": [
+      "Open MTN Nigeria's SIM Swap page or visit an MTN store and request replacement of the registered line.",
+      "Provide the registered phone number and NIN or Virtual NIN for identity validation.",
+      "Answer the line-ownership questions MTN presents, including usage information when those checks appear.",
+      "Purchase the replacement MTN SIM and allow the MTN agent or approved swap channel to transfer the existing number to it.",
+      "Confirm that the replacement SIM registers on the MTN network and test calls/SMS before discarding the old or damaged SIM."
+    ],
+    "notes": [
+      "MTN lists lost, stolen, damaged, faulty and obsolete SIMs as reasons a customer may need a swap or replacement.",
+      "A SIM swap keeps the existing phone number but replaces the physical SIM profile.",
+      "For a stolen phone or SIM, report the loss promptly and do not disclose OTPs or banking credentials to anyone offering an unofficial swap."
+    ],
+    "sources": [
+      {
+        "label": "MTN Nigeria SIM Swap",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/sim/sim-swap/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN SIM Services",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/sim/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-esim-activation",
+      "mtn-port-number-to-mtn",
+      "nin-sim-linkage",
+      "check-nin-sim-linkage-status"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MTN SIM swap Nigeria",
+      "replace lost MTN SIM",
+      "MTN SIM replacement requirements",
+      "MTN NIN SIM swap",
+      "retrieve MTN line"
+    ]
+  },
+  {
+    "slug": "mtn-port-number-to-mtn",
+    "title": "How to port your phone number to MTN in Nigeria",
+    "shortTitle": "Port number to MTN",
+    "summary": "MTN Nigeria's Mobile Number Portability route for switching from another Nigerian network to MTN while retaining the same number, with online/3232 validation, valid ID and in-person biometric completion.",
+    "category": "Telecommunications",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "Free porting",
+    "feeNote": "MTN states that the online request and PORT/3232 validation are free.",
+    "timeline": "MTN says the porting process normally takes about 15–20 minutes after initiation and can take up to 48 hours.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/mnp/",
+    "requirements": [
+      "An active Nigerian mobile number currently on another network",
+      "A line that has not been ported during the previous 45 days",
+      "A valid regulatory ID such as driver's licence, voter card or National ID",
+      "Personal attendance at an MTN outlet for biometric and SIM-registration completion"
+    ],
+    "steps": [
+      "Open MTN's official Mobile Number Portability page and submit the Port Now request with the mobile-number details.",
+      "Send PORT by SMS to 3232 or dial 3232 and complete the IVR validation from the number being ported.",
+      "Back up SIM contacts and use or withdraw any remaining airtime/mobile-money value that would be lost after porting.",
+      "Visit an MTN outlet with the current phone number and valid ID and complete the required biometric/SIM registration.",
+      "Wait for MTN's status messages and insert/use the new MTN SIM after the port is confirmed complete."
+    ],
+    "notes": [
+      "MTN says the subscriber cannot port again until 45 days after the most recent port.",
+      "Unused airtime, voicemail, SMS settings and subscriptions from the former operator do not transfer to MTN.",
+      "A proxy cannot complete the biometric stage for the subscriber."
+    ],
+    "sources": [
+      {
+        "label": "MTN Mobile Number Portability",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/mnp/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Port",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/personal/port/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-sim-swap-replacement",
+      "glo-port-number-to-glo",
+      "mtn-esim-activation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "port to MTN Nigeria",
+      "keep number switch to MTN",
+      "MTN MNP Nigeria",
+      "PORT to 3232 MTN",
+      "MTN porting requirements"
+    ]
+  },
+  {
+    "slug": "airtel-4g-sim-swap",
+    "title": "How to upgrade or swap an Airtel SIM to 4G",
+    "shortTitle": "Airtel 4G SIM swap",
+    "summary": "Airtel Nigeria's route for moving an existing number to a 4G-compatible USIM through an Airtel shop/partner outlet or the available self-service SIM swap, while retaining the phone number.",
+    "category": "Telecommunications",
+    "agencySlug": "airtel-nigeria",
+    "feeLabel": "Current Airtel SIM cost applies",
+    "feeNote": "Airtel states that the current SIM cost applies to a 4G LTE SIM swap; confirm the amount at the Airtel outlet or self-service route before completing the swap.",
+    "timeline": "Airtel does not publish one universal completion time for every 4G SIM swap; the number is retained after the swap is completed.",
+    "status": "verified",
+    "officialPortal": "https://www.airtel.com.ng/ng/personal/support/airtel-4g",
+    "requirements": [
+      "An existing Airtel line that needs a 4G-compatible SIM/USIM",
+      "A 4G-compatible phone or device if the customer intends to use Airtel LTE service",
+      "The identity/SIM-swap documents requested by Airtel for ownership verification",
+      "A replacement Airtel SIM obtained through an Airtel shop, partner outlet or supported self-service swap"
+    ],
+    "steps": [
+      "Open Airtel Nigeria's 4G support page and confirm that the existing SIM needs an upgrade for 4G/LTE service.",
+      "Visit an Airtel shop or partner outlet, or start Airtel's supported self-service SIM swap route.",
+      "Complete Airtel's ownership and identity verification for the existing mobile number.",
+      "Pay the current replacement-SIM amount and complete the swap from the old SIM to the new 4G-capable Airtel SIM.",
+      "Insert/activate the new SIM, enable LTE/4G in the device network settings and confirm that the existing Airtel number remains active."
+    ],
+    "notes": [
+      "Airtel says the customer's existing phone number is retained after the 4G SIM swap.",
+      "A special 4G data plan is not required; eligible Airtel data plans can work across 2G/3G/4G.",
+      "The 4G SIM upgrade is different from Airtel eSIM activation."
+    ],
+    "sources": [
+      {
+        "label": "Airtel Nigeria 4G Support",
+        "agency": "Airtel Nigeria",
+        "url": "https://www.airtel.com.ng/ng/personal/support/airtel-4g",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Airtel Nigeria FAQ",
+        "agency": "Airtel Nigeria",
+        "url": "https://www.airtel.com.ng/ng/personal/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "airtel-esim-activation",
+      "mtn-sim-swap-replacement",
+      "nin-sim-linkage"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Airtel SIM swap Nigeria",
+      "Airtel 4G SIM upgrade",
+      "replace Airtel SIM 4G",
+      "Airtel self service SIM swap",
+      "Airtel retain number SIM swap"
+    ]
+  },
+  {
+    "slug": "glo-sim-replacement",
+    "title": "How to replace a lost or stolen Glo SIM",
+    "shortTitle": "Glo SIM replacement",
+    "summary": "Globacom's SIM replacement route at a Gloworld shop using valid ID and line-ownership evidence, with separate supporting documents for prepaid and Glo Business customers.",
+    "category": "Telecommunications",
+    "agencySlug": "globacom",
+    "feeLabel": "₦100 SIM replacement fee",
+    "feeNote": "Glo's current Self Care page lists a ₦100 SIM replacement cost.",
+    "timeline": "Glo does not publish one fixed completion time for every physical SIM replacement; processing depends on identity and ownership verification at the Gloworld shop.",
+    "status": "verified",
+    "officialPortal": "https://www.gloworld.com/ng/self-care/",
+    "requirements": [
+      "The original and a photocopy of a valid photo ID such as National ID, driver's licence or international passport",
+      "For a prepaid line, the SIM certificate/cardholder or purchase receipt plus a police report and sworn affidavit",
+      "For a Glo Business line, the SIM certificate, service/application evidence, recent invoices and corporate introduction plus a police report and sworn affidavit",
+      "A visit to a Gloworld shop handling SIM replacement"
+    ],
+    "steps": [
+      "Open Glo's Self Care page and identify the nearest Gloworld shop that handles SIM replacement.",
+      "Prepare the original and photocopy of the valid photo ID and the ownership documents matching prepaid or Glo Business service.",
+      "Prepare the police report and sworn affidavit listed by Glo for the lost/stolen replacement route.",
+      "Visit the Gloworld shop, submit the replacement form and ownership evidence and pay the current ₦100 replacement charge.",
+      "Confirm that the old number is active on the replacement SIM before leaving the service location."
+    ],
+    "notes": [
+      "Glo provides separate replacement forms for prepaid, Glo Business and proxy replacement scenarios.",
+      "The provider's published ID list includes National ID, driver's licence, international passport and other photo-bearing categories.",
+      "A lost/stolen SIM should be secured promptly because control of the mobile number can affect banking and other OTP-based services."
+    ],
+    "sources": [
+      {
+        "label": "Glo Self Care — SIM Replacement",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/self-care/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "glo-esim-activation",
+      "glo-port-number-to-glo",
+      "nin-sim-linkage"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glo SIM replacement",
+      "replace lost Glo SIM",
+      "Glo SIM swap requirements",
+      "Glo SIM replacement fee",
+      "Gloworld lost SIM"
+    ]
+  },
+  {
+    "slug": "glo-port-number-to-glo",
+    "title": "How to port your phone number to Glo",
+    "shortTitle": "Port number to Glo",
+    "summary": "Glo's Mobile Number Portability route for switching an existing prepaid or postpaid Nigerian number to Glo, free of charge, with in-person identity verification and a new Glo SIM.",
+    "category": "Telecommunications",
+    "agencySlug": "globacom",
+    "feeLabel": "Free porting",
+    "feeNote": "Glo states that Mobile Number Portability is free.",
+    "timeline": "Glo states that the porting process takes a maximum of 48 hours.",
+    "status": "verified",
+    "officialPortal": "https://www.gloworld.com/ng/mnp",
+    "requirements": [
+      "An existing prepaid or postpaid Nigerian mobile number on another network",
+      "A valid identity document such as National ID, passport, driver's licence or another officially validated photo ID",
+      "NIN when the subscriber cannot present an accepted identity card",
+      "An in-person visit to a Gloworld shop or authorised Glo dealer because Glo says porting cannot be completed by phone or online"
+    ],
+    "steps": [
+      "Open Glo's official Mobile Number Portability page and review the eligibility and porting conditions.",
+      "Use any remaining airtime or service value on the old network because Glo states that outstanding credit is forfeited on porting.",
+      "Visit a Gloworld shop or authorised Glo dealer with the number and valid ID or NIN.",
+      "Complete the Glo port-in and identity/SIM-registration process and receive the new Glo SIM linked to the existing number.",
+      "Wait for the porting-status SMS messages and begin using the Glo SIM after the port is confirmed."
+    ],
+    "notes": [
+      "Glo says a subscriber must wait 45 days after a port before porting the number again.",
+      "Porting does not transfer the former network's tariff, subscriptions, voicemail or other ancillary services.",
+      "The subscriber can cancel only before the confirmation stage; after confirmation the port proceeds to completion."
+    ],
+    "sources": [
+      {
+        "label": "Glo Mobile Number Portability",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/mnp",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-port-number-to-mtn",
+      "glo-sim-replacement",
+      "glo-esim-activation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "port to Glo Nigeria",
+      "Glo mobile number portability",
+      "keep number switch to Glo",
+      "Glo porting requirements",
+      "Glo MNP free"
+    ]
+  },
+  {
+    "slug": "glo-international-roaming",
+    "title": "How to use Glo international roaming",
+    "shortTitle": "Glo international roaming",
+    "summary": "Glo's international roaming route for prepaid and postpaid customers, including default prepaid roaming, postpaid activation before travel, partner-network selection and balance/recharge handling abroad.",
+    "category": "Telecommunications",
+    "agencySlug": "globacom",
+    "feeLabel": "Prepaid: no activation fee; Postpaid: ₦50,000 subscription fee",
+    "feeNote": "Glo's current roaming page states that prepaid roaming is enabled by default with no extra registration/subscription charge, while postpaid roaming requires a ₦50,000 subscription fee 2–3 days before travel. Roaming usage rates vary by country/network.",
+    "timeline": "Prepaid roaming is already enabled on eligible lines; Glo tells postpaid customers to activate roaming 2–3 days before travel.",
+    "status": "verified",
+    "officialPortal": "https://www.gloworld.com/ng/personal/voice/roaming",
+    "requirements": [
+      "A Glo prepaid or postpaid line and a compatible handset for the destination's mobile-network frequencies",
+      "Enough prepaid airtime before travel, or completed postpaid roaming activation before departure",
+      "A destination with an active Glo roaming-partner network",
+      "Network selection on the handset when automatic registration does not choose the required partner"
+    ],
+    "steps": [
+      "Open Glo's roaming page and check that the destination has a supported roaming partner and that the handset supports the local network frequencies.",
+      "For prepaid service, load enough airtime before travel; for postpaid service, visit a Gloworld outlet and activate roaming/pay the current subscription 2–3 days before departure.",
+      "On arrival, switch on the phone and allow automatic network selection to register the line on a roaming partner.",
+      "If automatic registration fails, open the phone's network-selection settings and manually choose a supported Glo roaming partner.",
+      "Monitor airtime/usage while abroad and use Glo's roaming customer-care route if the line cannot register or make supported calls."
+    ],
+    "notes": [
+      "Glo's prepaid roaming service is enabled by default but is available only in supported partner countries/networks.",
+      "International roaming rates vary with country, partner and exchange-rate changes and should be checked before travel.",
+      "Glo recommends travelling with a 4G-compatible SIM because some partner networks have shut down older 2G/3G services."
+    ],
+    "sources": [
+      {
+        "label": "Glo International Roaming",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/personal/voice/roaming",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glo Roaming FAQ",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/personal/voice/roaming/roaming-faqs",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glo Prepaid Roaming",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/business/corporate/mobile-voice-data/roaming/prepaid-roaming",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "glo-data-roaming-bundle",
+      "glo-sim-replacement",
+      "glo-esim-activation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glo roaming Nigeria",
+      "activate Glo roaming",
+      "Glo international roaming",
+      "Glo postpaid roaming fee",
+      "Glo prepaid roaming"
+    ]
+  },
+  {
+    "slug": "glo-data-roaming-bundle",
+    "title": "How to buy a Glo data roaming bundle",
+    "shortTitle": "Glo data roaming bundle",
+    "summary": "Glo's data-roaming bundle route through *312# option 5, with bundle activation at the roaming destination and a requirement to use supported partner networks to avoid ordinary pay-as-you-go roaming rates.",
+    "category": "Telecommunications",
+    "agencySlug": "globacom",
+    "feeLabel": "Current bundles range from ₦2,500 to ₦50,000",
+    "feeNote": "Glo's current data-roaming page lists bundles from ₦2,500 to ₦50,000 with different data allowances and validity periods. Confirm the *312# menu before purchase because bundle prices and partner networks can change.",
+    "timeline": "Glo states that the data-roaming bundle activates when the subscriber lands at the roaming destination and begins browsing on a supported network.",
+    "status": "verified",
+    "officialPortal": "https://www.gloworld.com/ng/data-roaming",
+    "requirements": [
+      "An active Glo line with international roaming available for the account type",
+      "Enough account balance to purchase the selected data-roaming bundle",
+      "A destination and partner network included in Glo's current supported roaming-bundle list",
+      "For a postpaid customer, international roaming activation before subscribing to the data-roaming bundle"
+    ],
+    "steps": [
+      "Open Glo's current Data Roaming page and check that the destination/partner network supports the roaming bundle.",
+      "Dial *312# from the Glo line and select option 5 for Data Roaming Bundles.",
+      "Choose the bundle with the required allowance, price and validity and confirm the purchase.",
+      "On arrival at the destination, connect the phone to one of Glo's recommended partner networks.",
+      "Begin using mobile data and check the bundle balance/validity so the line does not fall back to ordinary pay-as-you-go roaming unexpectedly."
+    ],
+    "notes": [
+      "Glo says a roaming bundle can also be purchased while the customer is already abroad.",
+      "Using a network outside the supported bundle partner list can cause pay-as-you-go roaming charges.",
+      "Prepaid roaming is enabled by default, but a postpaid customer needs roaming activation before buying the data bundle."
+    ],
+    "sources": [
+      {
+        "label": "Glo Data Roaming",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/data-roaming",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Glo Roaming",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/personal/voice/roaming",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "glo-international-roaming",
+      "glo-esim-activation",
+      "glo-sim-replacement"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glo data roaming bundle",
+      "Glo *312# roaming",
+      "Glo roaming data price",
+      "Glo roaming bundle Nigeria",
+      "Glo data abroad"
+    ]
   }
 ]
