@@ -11396,9 +11396,9 @@
     "status": "verified",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
-      "A passport application started on the official NIS portal",
-      "The application or reference details requested by the NIS appointment flow",
-      "Access to the email/phone details used for the passport application"
+      "A Nigerian passport application already started on the official NIS portal",
+      "The application record shown in your NIS passport dashboard",
+      "Access to the email or phone contact used for the passport application"
     ],
     "steps": [
       "Open the official NIS domestic passport portal.",
