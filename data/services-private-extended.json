@@ -11125,5 +11125,828 @@
       "Belgium visa tracking Nigeria",
       "TLS Belgium courier passport Nigeria"
     ]
+  },
+  {
+    "slug": "hotels-ng-book-hotel",
+    "title": "How to book a hotel on Hotels.ng",
+    "shortTitle": "Hotels.ng booking",
+    "summary": "Hotels.ng's booking flow for searching accommodation, choosing a property and room, entering guest details and selecting pay-on-arrival or prepayment where the property supports it.",
+    "category": "Travel & accommodation",
+    "agencySlug": "hotels-ng",
+    "feeLabel": "Room price shown for the selected hotel and dates",
+    "feeNote": "Hotels.ng displays the accommodation price for the selected property, room and dates. Taxes, hotel rules and availability can change before a reservation is confirmed.",
+    "timeline": "Hotels.ng sends booking updates by email/SMS after the reservation request and may confirm availability by phone when the property requires manual confirmation.",
+    "status": "verified",
+    "officialPortal": "https://hotels.ng/",
+    "requirements": [
+      "The destination or hotel name, intended check-in/check-out dates and number of guests",
+      "A selected hotel and room that still shows availability for the requested stay",
+      "Guest contact information for booking confirmation and follow-up",
+      "A supported payment method when the customer chooses or is required to prepay rather than pay on arrival"
+    ],
+    "steps": [
+      "Open Hotels.ng and search for the destination or hotel needed for the intended travel dates.",
+      "Choose a hotel from the search results and review the room, price, cancellation information and other booking conditions.",
+      "Select Book Now and enter the guest and contact information requested for the reservation.",
+      "Choose the available payment option, such as Pay on Arrival or Pay Now, and complete any required payment through the provider's displayed payment route.",
+      "Keep the booking confirmation and follow the email, SMS or phone updates from Hotels.ng until the reservation is confirmed."
+    ],
+    "notes": [
+      "Hotels.ng says some properties cannot guarantee a room without prepayment, so Pay on Arrival is not available for every property.",
+      "Room availability can change between search and confirmation.",
+      "Cancellation terms depend partly on the accommodation provider, so review the property's terms before paying."
+    ],
+    "sources": [
+      {
+        "label": "Hotels.ng — How It Works",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/how-it-works",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Hotels.ng Terms of Service",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/terms",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hotels-ng-cancel-refund-booking",
+      "wakanow-book-hotel-nigeria",
+      "travelstart-book-flight-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hotels.ng booking",
+      "book hotel Nigeria Hotels.ng",
+      "Hotels.ng pay on arrival",
+      "Hotels.ng reservation",
+      "Hotels.ng hotel booking"
+    ]
+  },
+  {
+    "slug": "hotels-ng-cancel-refund-booking",
+    "title": "How Hotels.ng cancellations and refunds work",
+    "shortTitle": "Hotels.ng cancellation & refund",
+    "summary": "Hotels.ng's cancellation/refund rules for reservations paid through the platform, including full refund when funds have not reached the hotel and provider charges when payment has already been transferred.",
+    "category": "Travel & accommodation",
+    "agencySlug": "hotels-ng",
+    "feeLabel": "Cancellation charge depends on payment status and hotel policy",
+    "feeNote": "Hotels.ng states that a payment not yet transferred to the hotel receives a full refund, while money already paid to the accommodation provider can be reduced by the hotel's cancellation/no-show charge and Hotels.ng's execution costs.",
+    "timeline": "Hotels.ng does not publish one universal refund completion time because the outcome depends on whether payment has already been transferred to the accommodation provider and on that property's cancellation policy.",
+    "status": "verified",
+    "officialPortal": "https://hotels.ng/terms",
+    "requirements": [
+      "The Hotels.ng reservation details for the booking being cancelled",
+      "The payment status showing whether Hotels.ng still holds the money or it has already been transferred to the hotel",
+      "The accommodation provider's cancellation/no-show terms for a booking whose payment has reached the property",
+      "The customer contact/payment information Hotels.ng needs to process an eligible refund"
+    ],
+    "steps": [
+      "Open the Hotels.ng booking confirmation and review the reservation's cancellation/no-show terms before requesting cancellation.",
+      "Contact Hotels.ng through the booking/support route and provide the reservation details and cancellation request.",
+      "Confirm whether the booking payment is still held by Hotels.ng or has already been transferred to the hotel.",
+      "If Hotels.ng still holds the payment, request the full refund described in its terms; if the hotel already received it, review the hotel's applicable cancellation/no-show deduction.",
+      "Keep the cancellation and refund correspondence until the refund or hotel-level resolution is completed."
+    ],
+    "notes": [
+      "Hotels.ng states that it is not responsible for refunding money paid directly to the accommodation provider.",
+      "A no-show can be treated differently from an advance cancellation under the hotel's own terms.",
+      "Refund eligibility should be checked against the actual booking/payment state rather than assuming every cancellation is fully refundable."
+    ],
+    "sources": [
+      {
+        "label": "Hotels.ng Terms of Service",
+        "agency": "Hotels.ng",
+        "url": "https://hotels.ng/terms",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hotels-ng-book-hotel",
+      "wakanow-cancel-hotel-reservation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hotels.ng refund",
+      "cancel Hotels.ng booking",
+      "Hotels.ng cancellation policy",
+      "Hotels.ng refund policy",
+      "Hotels.ng no show"
+    ]
+  },
+  {
+    "slug": "risevest-create-verify-account",
+    "title": "How to create and verify a Risevest account",
+    "shortTitle": "Risevest account setup",
+    "summary": "Risevest's onboarding route for creating an account and completing the identity verification needed before withdrawals and regulated investment activity on the platform.",
+    "category": "Investing",
+    "agencySlug": "risevest",
+    "feeLabel": "No account-creation fee stated",
+    "feeNote": "Risevest does not state a separate fee for creating the account. Investment-specific management, product or transaction costs are governed by the current product documents.",
+    "timeline": "Risevest does not publish one universal onboarding time; account use depends on successful identity verification and any additional compliance checks required for the selected investment product.",
+    "status": "verified",
+    "officialPortal": "https://app.risevest.com/",
+    "requirements": [
+      "A valid email/contact profile for the Risevest account",
+      "Personal identity information that matches the customer's legal identity",
+      "A BVN and the identity-verification evidence requested during onboarding",
+      "Acceptance of the current Risevest terms and any product-specific investment documents"
+    ],
+    "steps": [
+      "Open the official Risevest app or web account page and create the user profile with the required contact information.",
+      "Enter the personal information requested for the account and provide the BVN used for identity matching.",
+      "Complete the identity-verification prompts and submit any valid identification Risevest requests.",
+      "Review the platform terms and the product documents for any investment the customer plans to use.",
+      "Wait for the account verification to complete before relying on withdrawal or investment features that require verified identity."
+    ],
+    "notes": [
+      "Risevest's current terms describe the platform as a client-access channel for regulated investment/fund-management products rather than a bank deposit account.",
+      "Risevest's published beginner guide says a user cannot withdraw without verifying identity.",
+      "Investment returns are not guaranteed, so this service guide covers account/process steps rather than expected returns."
+    ],
+    "sources": [
+      {
+        "label": "Risevest Terms of Use",
+        "agency": "Risevest",
+        "url": "https://www.risevest.com/terms-of-use",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-01"
+      },
+      {
+        "label": "Risevest Beginner's Guide",
+        "agency": "Risevest",
+        "url": "https://www.risevest.com/blog/a-beginners-guide-to-rise-2",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "risevest-fund-wallet",
+      "risevest-withdraw-funds",
+      "cowrywise-create-account",
+      "piggyvest-create-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "create Risevest account",
+      "Risevest verification",
+      "Risevest BVN verification",
+      "open Risevest account Nigeria",
+      "Risevest KYC"
+    ]
+  },
+  {
+    "slug": "risevest-fund-wallet",
+    "title": "How to fund a Risevest wallet",
+    "shortTitle": "Fund Risevest wallet",
+    "summary": "Risevest's wallet-funding route using the funding options shown in the app, including the user's assigned virtual account for naira bank transfers.",
+    "category": "Investing",
+    "agencySlug": "risevest",
+    "feeLabel": "Funding cost depends on the method shown in the app",
+    "feeNote": "Risevest can support different wallet-funding methods. Review the current fee and conversion information displayed for the selected method before transferring money.",
+    "timeline": "Bank-transfer timing depends on the selected funding method and banking rails; Risevest does not publish one universal crediting time for every funding route.",
+    "status": "verified",
+    "officialPortal": "https://app.risevest.com/",
+    "requirements": [
+      "A Risevest account with access to the wallet section",
+      "Enough funds in the bank/card/payment source selected for the funding transaction",
+      "The Risevest virtual account details shown to the user when funding by naira bank transfer"
+    ],
+    "steps": [
+      "Sign in to the Risevest app and open the Wallet section.",
+      "Choose Fund Wallet and select the funding method the customer wants to use.",
+      "For a naira bank transfer, copy the virtual account number assigned to the Risevest user.",
+      "Send the intended amount from the supported bank/payment source and keep the transfer reference.",
+      "Confirm that the wallet balance updates before creating or adding money to an investment plan."
+    ],
+    "notes": [
+      "Risevest says each user can view an assigned virtual account when choosing naira bank-transfer funding.",
+      "Funding the wallet is separate from selecting an investment plan.",
+      "A customer should verify account details in the app each time rather than transferring to an account number copied from an old message."
+    ],
+    "sources": [
+      {
+        "label": "Risevest Beginner's Guide",
+        "agency": "Risevest",
+        "url": "https://www.risevest.com/blog/a-beginners-guide-to-rise-2",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Risevest FAQ",
+        "agency": "Risevest",
+        "url": "https://www.risevest.com/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "risevest-create-verify-account",
+      "risevest-withdraw-funds",
+      "cowrywise-fund-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "fund Risevest wallet",
+      "Risevest virtual account",
+      "deposit Risevest Nigeria",
+      "Risevest wallet bank transfer",
+      "add money Risevest"
+    ]
+  },
+  {
+    "slug": "risevest-withdraw-funds",
+    "title": "How to withdraw money from Risevest",
+    "shortTitle": "Risevest withdrawal",
+    "summary": "Risevest's withdrawal route for moving eligible wallet or investment funds to the user's linked payout destination after identity verification and any required liquidation checks.",
+    "category": "Investing",
+    "agencySlug": "risevest",
+    "feeLabel": "Withdrawal terms depend on the selected product",
+    "feeNote": "Risevest's current FAQ says wallet withdrawals can be made without a penalty, while investment-product lockups, liquidation timing and product-specific rules can differ.",
+    "timeline": "Risevest's FAQ says stock-plan withdrawal requests are processed within 24 hours, while older provider guidance describes some withdrawals as taking about one business day; product-specific timing can differ.",
+    "status": "verified",
+    "officialPortal": "https://app.risevest.com/",
+    "requirements": [
+      "A verified Risevest account; the provider states that identity verification is required before withdrawal",
+      "An eligible wallet balance or investment amount available for redemption under the product's current rules",
+      "A payout bank/account destination accepted by the Risevest withdrawal flow"
+    ],
+    "steps": [
+      "Sign in to Risevest and open the wallet or investment plan from which funds should be withdrawn.",
+      "Choose the withdrawal or redemption option and review the amount currently available for withdrawal.",
+      "Select or confirm the payout destination shown for the verified account.",
+      "Submit the withdrawal request and complete any fraud or identity confirmation shown by Risevest.",
+      "Track the request until the funds arrive and use Risevest support if the withdrawal remains beyond the product's stated processing window."
+    ],
+    "notes": [
+      "Risevest's current FAQ says some products have different liquidity/lockup rules, so the selected investment should be checked before redemption.",
+      "The provider says identity verification is required before funds can be withdrawn.",
+      "This guide explains the withdrawal process and does not recommend whether an investment should be sold."
+    ],
+    "sources": [
+      {
+        "label": "Risevest FAQ",
+        "agency": "Risevest",
+        "url": "https://www.risevest.com/faq",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Risevest Beginner's Guide",
+        "agency": "Risevest",
+        "url": "https://www.risevest.com/blog/a-beginners-guide-to-rise-2",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "risevest-create-verify-account",
+      "risevest-fund-wallet",
+      "piggyvest-withdraw-savings",
+      "cowrywise-withdraw-from-stash"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "withdraw from Risevest",
+      "Risevest withdrawal time",
+      "Risevest cash out",
+      "Risevest wallet withdrawal",
+      "withdraw Risevest investment"
+    ]
+  },
+  {
+    "slug": "grey-create-verify-account",
+    "title": "How to create and verify a Grey account in Nigeria",
+    "shortTitle": "Grey account & KYC",
+    "summary": "Grey's Nigeria-supported signup and KYC route using legal-name details, email/phone verification, address information, a recent bank statement, valid government ID and a video selfie.",
+    "category": "Remittances",
+    "agencySlug": "grey",
+    "feeLabel": "No signup fee stated",
+    "feeNote": "Grey does not state a separate fee for creating or verifying the account. Fees apply to specific foreign-account, card, conversion or transfer services.",
+    "timeline": "Grey says document/KYC review is usually completed within a few minutes and can take up to 24 hours in some cases.",
+    "status": "verified",
+    "officialPortal": "https://grey.co/",
+    "requirements": [
+      "A user who is over 18 and resident in a Grey-supported country such as Nigeria",
+      "Legal name, phone number, email address and country-of-residence information matching the user's documents",
+      "A recent bank statement dated within three months for the address/KYC stage",
+      "A valid original government-issued ID and a clear video selfie for identity verification"
+    ],
+    "steps": [
+      "Open Grey's official site and select Get Started, then choose Nigeria as the country of residence.",
+      "Enter the legal name, phone number, email address and password and verify the email address.",
+      "Open Complete My Account Setup and enter the address, state, city, postal code and date of birth, then upload the recent bank statement.",
+      "Complete the politically exposed person declaration and begin identity verification with a valid original ID and video selfie.",
+      "Wait for Grey's approval notification before creating foreign accounts, virtual cards or making transactions that require completed KYC."
+    ],
+    "notes": [
+      "Grey's August 2026 guidance says users must be over 18.",
+      "The name and date of birth should match the uploaded identification exactly.",
+      "Grey says edited, photocopied, expired or unclear identity documents can fail verification."
+    ],
+    "sources": [
+      {
+        "label": "Grey — How to Sign Up",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/5249188-how-can-i-sign-up-on-grey",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      },
+      {
+        "label": "Grey KYC Verification",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/5249402-kyc-verification",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      },
+      {
+        "label": "Grey Document Verification",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/6488956-document-verification",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      }
+    ],
+    "related": [
+      "grey-us-account-nigeria",
+      "grey-virtual-card-nigeria",
+      "lemfi-open-global-account-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Grey account Nigeria",
+      "Grey KYC Nigeria",
+      "Grey verification",
+      "Grey account requirements Nigeria",
+      "Grey signup"
+    ]
+  },
+  {
+    "slug": "grey-us-account-nigeria",
+    "title": "How to request a Grey US account from Nigeria",
+    "shortTitle": "Grey US account",
+    "summary": "Grey's US-account route for eligible Nigerian users after KYC, with current eligibility limited to supported regions and, for the US account, full-time employees and freelancers.",
+    "category": "Remittances",
+    "agencySlug": "grey",
+    "feeLabel": "Receiving fees depend on the payment rail",
+    "feeNote": "Grey currently publishes different receiving fees for ACH/FedNow, Fedwire and other supported rails. Check the live account details/fee page before asking a sender to pay into the account.",
+    "timeline": "Grey says KYC normally completes within minutes to 24 hours; US account issuance is available after the account is eligible and the required verification is accepted.",
+    "status": "verified",
+    "officialPortal": "https://grey.co/",
+    "requirements": [
+      "A verified Grey account belonging to a user resident in Nigeria, which Grey currently lists as eligible for the US-account service",
+      "Eligibility as a full-time employee or freelancer under Grey's current US-account rule",
+      "The additional tax/identity information requested by Grey or its banking partners when opening the US account",
+      "A TIN when required for users verifying with certain identity-document types, or an accepted alternative document identified by Grey"
+    ],
+    "steps": [
+      "Complete Grey account signup and KYC before attempting to request the US account.",
+      "Open the foreign-account section and select the option to create or request a US account.",
+      "Confirm the employment/freelancer eligibility information and provide any TIN or alternative identity evidence requested by Grey.",
+      "Submit the US-account request and wait until the account/routing details appear in the Grey wallet.",
+      "Before sharing the account details, review Grey's current ACH, FedNow and wire receiving rules and fees for the intended payer."
+    ],
+    "notes": [
+      "Grey's August 2026 support article lists Nigeria as an eligible country but says US accounts are currently issued only to full-time employees and freelancers.",
+      "A Grey US account supports specific US payment rails and has provider-set limits/fees.",
+      "Grey can request extra compliance information even after ordinary KYC is complete."
+    ],
+    "sources": [
+      {
+        "label": "Grey — US Account Eligibility",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/9680610-why-can-t-i-request-a-us-account",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      },
+      {
+        "label": "Grey — Why Do I Need TIN?",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/11096482-why-do-i-need-tin",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      },
+      {
+        "label": "Grey — US Account Receiving Guidelines",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/5772724-guidelines-for-receiving-payments-to-your-us-bank-account",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      }
+    ],
+    "related": [
+      "grey-create-verify-account",
+      "grey-virtual-card-nigeria",
+      "lemfi-open-global-account-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Grey US account Nigeria",
+      "open Grey dollar account",
+      "Grey US bank account Nigeria",
+      "Grey ACH account Nigeria",
+      "Grey TIN US account"
+    ]
+  },
+  {
+    "slug": "grey-virtual-card-nigeria",
+    "title": "How to create a Grey virtual Visa card in Nigeria",
+    "shortTitle": "Grey virtual card",
+    "summary": "Grey's virtual Visa-card route for eligible verified Nigerian users, including the current one-time card fee, Cards menu workflow and PIN setup after creation.",
+    "category": "Remittances",
+    "agencySlug": "grey",
+    "feeLabel": "US$5 one-time creation fee",
+    "feeNote": "Grey's August 2026 Visa-card guide and fee article both state a US$5 one-time creation fee. The provider can change card pricing or country availability, so confirm the live card page before creation.",
+    "timeline": "Grey does not publish one universal issuance time; the virtual card is created through the Cards flow after eligibility, KYC and payment requirements are met.",
+    "status": "verified",
+    "officialPortal": "https://grey.co/",
+    "requirements": [
+      "A Grey account with completed KYC verification",
+      "Residence in a supported Visa-card country; Grey's current list includes Nigeria",
+      "Enough eligible wallet balance to cover the current US$5 card-creation fee",
+      "Acceptance of Grey's virtual-card terms and a four-digit card PIN after issuance"
+    ],
+    "steps": [
+      "Sign in to Grey and open Cards from the app or web menu.",
+      "Choose Add New Card or the virtual-card creation option and select the Visa virtual card.",
+      "Review the current US$5 creation fee and the card terms shown before confirming the request.",
+      "Complete the create-card prompts and accept the card terms.",
+      "When the card is ready, create and confirm the four-digit card PIN before using the virtual card for supported payments."
+    ],
+    "notes": [
+      "Grey's current supported-country list includes Nigeria for the Visa virtual card.",
+      "Grey says its Visa card is linked to supported wallet balances and does not use the same top-up model as the older Mastercard.",
+      "The provider can restrict merchants/countries, so check current card-use restrictions before an important payment."
+    ],
+    "sources": [
+      {
+        "label": "Grey — Create Visa Card",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/13165220-how-can-i-create-my-grey-visa-card",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-22"
+      },
+      {
+        "label": "Grey — Supported Visa Card Countries",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/13128659-supported-countries-for-visa-card",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-22"
+      },
+      {
+        "label": "Grey — Card Spend Limits and Fees",
+        "agency": "Grey",
+        "url": "https://support.grey.co/en/articles/7915648-card-spend-limits-and-fees",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-09"
+      }
+    ],
+    "related": [
+      "grey-create-verify-account",
+      "grey-us-account-nigeria",
+      "lemfi-open-global-account-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Grey virtual card Nigeria",
+      "Grey Visa card",
+      "create Grey card Nigeria",
+      "Grey card fee",
+      "Grey dollar card Nigeria"
+    ]
+  },
+  {
+    "slug": "lemfi-open-global-account-nigeria",
+    "title": "How to open a LemFi Global Account from Nigeria",
+    "shortTitle": "LemFi Global Account",
+    "summary": "LemFi's Nigeria-supported Global Account onboarding route using phone signup, legal personal details, identity verification and activation of available USD/GBP or other supported currency wallets.",
+    "category": "Remittances",
+    "agencySlug": "lemfi",
+    "feeLabel": "No Global Account opening fee stated",
+    "feeNote": "LemFi markets account opening without a separate setup fee, while wallet withdrawals, conversions and transfers can carry current flat or route-specific charges shown in the app.",
+    "timeline": "LemFi says eligible users can open supported global currency accounts in minutes after signup and verification, subject to successful onboarding and any additional compliance checks.",
+    "status": "verified",
+    "officialPortal": "https://www.lemfi.com/en-ng/",
+    "requirements": [
+      "A user over 18 who is eligible under LemFi's Global Account terms and is not resident in an excluded jurisdiction",
+      "A mobile phone number, legal name, email address, date of birth and current home address",
+      "A valid government-issued identification document and successful identity/liveness verification",
+      "The purpose of account use, occupation/income and expected-activity information LemFi requests for compliance"
+    ],
+    "steps": [
+      "Download the LemFi app from the provider's official Nigeria page and start signup with the user's phone number.",
+      "Verify the phone number and enter the legal name, email address, date of birth, current address and password.",
+      "Complete LemFi's identity and liveness verification with the valid identification requested for the Nigerian user.",
+      "Finish the onboarding/compliance questions, including the intended account use and expected activity where requested.",
+      "Open the available Global Account wallets in the app and review the wallet-specific terms before receiving or sending money."
+    ],
+    "notes": [
+      "LemFi's current terms say Global Account subscribers must be over 18 and successfully complete onboarding/verification.",
+      "The provider describes the Global Account as an interface to wallet services, not itself as a bank deposit account.",
+      "Specific currencies and wallet partners can change by region."
+    ],
+    "sources": [
+      {
+        "label": "LemFi Nigeria Global Accounts",
+        "agency": "LemFi",
+        "url": "https://www.lemfi.com/en-ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "LemFi Global Account Terms",
+        "agency": "LemFi",
+        "url": "https://www.lemfi.com/en-ng/legal/terms",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "lemfi-withdraw-global-account-nigeria",
+      "grey-create-verify-account",
+      "grey-us-account-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "LemFi account Nigeria",
+      "open LemFi global account",
+      "LemFi dollar account Nigeria",
+      "LemFi GBP account Nigeria",
+      "LemFi verification"
+    ]
+  },
+  {
+    "slug": "lemfi-withdraw-global-account-nigeria",
+    "title": "How to withdraw from a LemFi Global Account",
+    "shortTitle": "LemFi Global Account withdrawal",
+    "summary": "LemFi's wallet-withdrawal route for sending eligible Global Account funds to the user's nominated account after any required identity confirmation and name matching.",
+    "category": "Remittances",
+    "agencySlug": "lemfi",
+    "feeLabel": "Current withdrawal fee shown for the wallet/route",
+    "feeNote": "LemFi's Nigeria page advertises flat-fee withdrawals for supported global accounts, but the exact charge depends on the currency/route shown in the app. Confirm it before authorising the transfer.",
+    "timeline": "LemFi's current terms say payments out of the USD wallet are typically processed immediately once authorised, although compliance, receiving-bank and route factors can still affect final arrival.",
+    "status": "verified",
+    "officialPortal": "https://www.lemfi.com/en-ng/",
+    "requirements": [
+      "An active LemFi Global Account with an available wallet balance",
+      "A nominated payout account in the user's own name where that withdrawal route requires name matching",
+      "Any identity confirmation LemFi requests before authorising the withdrawal",
+      "Enough balance to cover the withdrawal amount and any current route-specific fee"
+    ],
+    "steps": [
+      "Open the LemFi app and select the wallet from which money should be withdrawn.",
+      "Choose the withdrawal or send-to-account option and enter/select the nominated account in the user's own name.",
+      "Review the amount, exchange rate where applicable and the current withdrawal fee shown for the selected currency/route.",
+      "Complete the identity/security confirmation and authorise the withdrawal.",
+      "Keep the transaction record and contact LemFi support if the payout remains unresolved beyond the status shown in the app."
+    ],
+    "notes": [
+      "LemFi's terms say withdrawals must be authorised by the user and can require additional identity confirmation.",
+      "The nominated account can be subject to name matching.",
+      "Once a processed payment has been sent, LemFi says it generally cannot be stopped."
+    ],
+    "sources": [
+      {
+        "label": "LemFi Global Account Terms",
+        "agency": "LemFi",
+        "url": "https://www.lemfi.com/en-ng/legal/terms",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "LemFi Nigeria Global Accounts",
+        "agency": "LemFi",
+        "url": "https://www.lemfi.com/en-ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "lemfi-open-global-account-nigeria",
+      "grey-us-account-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "withdraw LemFi Nigeria",
+      "LemFi global account withdrawal",
+      "LemFi cash out Nigeria",
+      "LemFi USD withdrawal",
+      "LemFi payout Nigeria"
+    ]
+  },
+  {
+    "slug": "western-union-receive-money-nigeria",
+    "title": "How to receive Western Union money in Nigeria",
+    "shortTitle": "Receive Western Union",
+    "summary": "Western Union Nigeria's receiving routes for cash pickup at an agent or direct payment to a local-currency bank account, using sender details, the MTCN and government ID where cash pickup applies.",
+    "category": "Remittances",
+    "agencySlug": "western-union",
+    "feeLabel": "Receiver fee depends on the transfer route",
+    "feeNote": "Western Union states that transfer fees, exchange rates and taxes vary by channel and location. The sender normally sees the transfer cost when initiating the transaction.",
+    "timeline": "Availability depends on the transfer route. Western Union's Nigeria page lets a receiver use the MTCN to see whether the money is still on the way or already available for pickup.",
+    "status": "verified",
+    "officialPortal": "https://www.westernunion.com/ng/en/receive-money.html",
+    "requirements": [
+      "The sender's name, expected amount and Western Union Money Transfer Control Number (MTCN)",
+      "A valid government-issued ID for a cash-pickup transaction",
+      "For bank-account receipt, the receiver's local-currency bank account number, mobile number and remittance-purpose information requested for the transfer",
+      "A receiver name that matches the transfer and identification/account details"
+    ],
+    "steps": [
+      "Ask the sender for the MTCN and confirm the sender's name and expected transfer amount.",
+      "Use Western Union's Nigeria tracking/receive page to confirm that the transfer is available through the intended payout route.",
+      "For cash pickup, visit a Western Union agent location with the government-issued ID and provide the MTCN, sender name and amount.",
+      "For bank-account receipt, ensure the sender has the correct local-currency account number, mobile number and remittance-purpose information.",
+      "Verify the amount received and keep the transfer record until the transaction is complete."
+    ],
+    "notes": [
+      "Western Union's Nigeria page currently lists cash pickup and bank-account receipt as available methods.",
+      "A receiver should never pay a stranger to 'release' a Western Union transfer.",
+      "The receiver name should match the transfer details and identification used for cash pickup."
+    ],
+    "sources": [
+      {
+        "label": "Western Union Nigeria — Receive Money",
+        "agency": "Western Union",
+        "url": "https://www.westernunion.com/ng/en/receive-money.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Western Union Nigeria Home",
+        "agency": "Western Union",
+        "url": "https://www.westernunion.com/ng/en/home.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "western-union-track-transfer-nigeria",
+      "moneygram-receive-money-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "receive Western Union Nigeria",
+      "Western Union cash pickup Nigeria",
+      "Western Union bank transfer Nigeria",
+      "MTCN Nigeria",
+      "Western Union Nigeria"
+    ]
+  },
+  {
+    "slug": "western-union-track-transfer-nigeria",
+    "title": "How to track a Western Union transfer in Nigeria",
+    "shortTitle": "Track Western Union",
+    "summary": "Western Union's transfer-status route using the MTCN to check whether a Nigeria-bound remittance is still processing, on the way or available for pickup.",
+    "category": "Remittances",
+    "agencySlug": "western-union",
+    "feeLabel": "No transfer-tracking fee stated",
+    "feeNote": "Western Union provides transfer-status checking as part of the remittance service without a separate public tracking fee.",
+    "timeline": "Western Union says the tracking result shows whether the transfer is on the way or already available; actual payout time depends on the transfer method and any restrictions.",
+    "status": "verified",
+    "officialPortal": "https://www.westernunion.com/ng/en/home.html",
+    "requirements": [
+      "The Money Transfer Control Number (MTCN) for the Western Union transaction",
+      "The transfer information needed to identify the correct transaction when the tracking interface requests additional details"
+    ],
+    "steps": [
+      "Open Western Union Nigeria's official site and choose Track Transfer.",
+      "Enter the MTCN supplied on the sender's transaction receipt or confirmation.",
+      "Complete any additional sender/receiver information requested by the tracking interface.",
+      "Review the returned status to see whether the transfer is still moving or is available for the receiver.",
+      "If the status remains unresolved, use Western Union Nigeria's official customer-care route with the MTCN."
+    ],
+    "notes": [
+      "Western Union's Nigeria receive page specifically directs customers to use the MTCN for transfer tracking.",
+      "The MTCN should be shared only with the intended receiver and legitimate support/agent channels.",
+      "Tracking status is not a request for an extra release fee."
+    ],
+    "sources": [
+      {
+        "label": "Western Union Nigeria Home",
+        "agency": "Western Union",
+        "url": "https://www.westernunion.com/ng/en/home.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Western Union Nigeria — Receive Money",
+        "agency": "Western Union",
+        "url": "https://www.westernunion.com/ng/en/receive-money.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "western-union-receive-money-nigeria",
+      "moneygram-track-transfer-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "track Western Union Nigeria",
+      "Western Union MTCN tracking",
+      "check Western Union transfer Nigeria",
+      "Western Union transfer status Nigeria"
+    ]
+  },
+  {
+    "slug": "moneygram-receive-money-nigeria",
+    "title": "How to receive MoneyGram money in Nigeria",
+    "shortTitle": "Receive MoneyGram",
+    "summary": "MoneyGram Nigeria's receiving options for bank account, mobile wallet or cash pickup, with direct-account transfers arriving automatically and cash recipients using a nearby MoneyGram location.",
+    "category": "Remittances",
+    "agencySlug": "moneygram",
+    "feeLabel": "Transfer cost depends on the sender's route",
+    "feeNote": "MoneyGram transfer fees and exchange rates depend on the sending country, amount and payout method. The receiver should not pay an unofficial person to release a transfer.",
+    "timeline": "Direct-to-account or mobile-wallet arrival depends on the sending route, while cash pickup becomes available after the sender's transaction is processed and can be checked through MoneyGram tracking.",
+    "status": "verified",
+    "officialPortal": "https://www.moneygram.com/r/ng/en/how-to-receive-money",
+    "requirements": [
+      "A MoneyGram transfer addressed to the receiver in Nigeria",
+      "For account or wallet receipt, the bank/debit-card/mobile-wallet details provided by the sender during transfer creation",
+      "For cash pickup, the transfer reference and valid identification/details required by the MoneyGram agent location"
+    ],
+    "steps": [
+      "Confirm with the sender whether the MoneyGram transfer is going to a bank account, mobile wallet or cash-pickup location.",
+      "For bank or wallet delivery, verify that the sender used the correct receiver/account details and wait for the automatic payout.",
+      "For cash pickup, use MoneyGram's Nigeria location finder to choose an agent location.",
+      "Take the transfer/reference and the required identification information to the agent and complete the receiving verification.",
+      "Check the transfer status through MoneyGram's official tracker if the payment has not arrived or is not yet available."
+    ],
+    "notes": [
+      "MoneyGram's Nigeria page currently lists bank account, cash pickup and mobile wallet as receiving methods.",
+      "The available method depends on what the sender selected and the supported partner/channel.",
+      "Use only MoneyGram-listed locations or direct account/wallet delivery."
+    ],
+    "sources": [
+      {
+        "label": "MoneyGram Nigeria — Receive Money",
+        "agency": "MoneyGram",
+        "url": "https://www.moneygram.com/r/ng/en/how-to-receive-money",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoneyGram Nigeria",
+        "agency": "MoneyGram",
+        "url": "https://www.moneygram.com/r/ng/en",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "moneygram-track-transfer-nigeria",
+      "western-union-receive-money-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "receive MoneyGram Nigeria",
+      "MoneyGram cash pickup Nigeria",
+      "MoneyGram bank account Nigeria",
+      "MoneyGram mobile wallet Nigeria",
+      "MoneyGram Nigeria receive"
+    ]
+  },
+  {
+    "slug": "moneygram-track-transfer-nigeria",
+    "title": "How to track a MoneyGram transfer in Nigeria",
+    "shortTitle": "Track MoneyGram",
+    "summary": "MoneyGram's transfer-tracking route using the transaction reference number and sender's last name to check the status of a Nigeria-bound or Nigeria-originating transfer.",
+    "category": "Remittances",
+    "agencySlug": "moneygram",
+    "feeLabel": "No tracking fee stated",
+    "feeNote": "MoneyGram provides its Find a Transfer status tool without a separate public tracking fee.",
+    "timeline": "The tracker returns the current transaction status when the correct reference number and sender surname are supplied; payout time still depends on the selected delivery method.",
+    "status": "verified",
+    "officialPortal": "https://www.moneygram.com/r/ng/en",
+    "requirements": [
+      "The MoneyGram reference number from the sender's receipt or confirmation email",
+      "The sender's last name exactly as it appears on the MoneyGram transaction"
+    ],
+    "steps": [
+      "Open MoneyGram Nigeria's official site and select Find a Transfer or Track Transfer.",
+      "Enter the reference number exactly as it appears on the receipt or confirmation.",
+      "Enter the sender's last name exactly as recorded on the transfer.",
+      "Submit the tracking form and review the current transfer status.",
+      "If the transfer cannot be found despite correct details, use MoneyGram's official help/agent route with the transaction information."
+    ],
+    "notes": [
+      "MoneyGram's Nigeria home page exposes Find a Transfer directly for Nigerian users.",
+      "The reference number should be protected from unrelated third parties.",
+      "Tracking a transfer does not require paying an extra release or activation fee."
+    ],
+    "sources": [
+      {
+        "label": "MoneyGram Nigeria",
+        "agency": "MoneyGram",
+        "url": "https://www.moneygram.com/r/ng/en",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoneyGram Track a Transfer",
+        "agency": "MoneyGram",
+        "url": "https://www.moneygram.com/us/en/help-center/track-a-transfer",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "moneygram-receive-money-nigeria",
+      "western-union-track-transfer-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "track MoneyGram Nigeria",
+      "MoneyGram reference number tracking",
+      "MoneyGram transfer status Nigeria",
+      "find MoneyGram transfer Nigeria"
+    ]
   }
 ]
