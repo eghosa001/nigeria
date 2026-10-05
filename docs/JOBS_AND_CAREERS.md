@@ -27,15 +27,15 @@ verifiedAt or reviewedAt shows when evidence was checked. open is reserved for a
 
 A stored open record with a published deadline is treated as closed immediately after that deadline by lib/job-runtime.ts. Jobs pages revalidate hourly so expired opportunities stop appearing in Open Now without waiting for a manual content edit. The focused validation also rejects a stored open record whose deadline has already passed.
 
-Google JobPosting structured data is emitted only for a single vacancy with verified datePosted and location metadata. Broad employer career pages, multi-role recruitment exercises and programmes do not receive JobPosting markup.
+Google JobPosting structured data is emitted only for a single vacancy that also has recorded public evidence of employer authorization, verified datePosted and location metadata. Broad employer career pages, multi-role recruitment exercises and programmes do not receive JobPosting markup.
 
 International and NGO employers use the International sector instead of being mislabeled as private companies.
 
 ## Scale transition
 
-Checked-in TypeScript is acceptable while the catalog is small. The main jobs directory still sends the in-memory catalog to the browser, so the focused jobs check now hard-stops before 500 records. Begin the D1 migration around 300 records instead of waiting for the global 5,000-record content threshold.
+Checked-in TypeScript is acceptable while the catalog remains moderate. The public Jobs directory is already server-paginated through /api/jobs, so the browser receives only the current result page instead of the entire catalog.
 
-The normalized future schema is prepared in cloudflare/d1/jobs-scale-schema.sql: employers, job records, locations and profession facets are separate indexed entities while canonical public URLs remain unchanged. Move reads behind server pagination and indexed search before the hard stop.
+The normalized future schema is prepared in cloudflare/d1/jobs-scale-schema.sql. Bind D1 before the in-memory server catalog approaches the focused 1,000-record hard stop; employer, job, location and profession entities should move without changing canonical public URLs.
 
 Focused validation command: npm run check:jobs.
 
@@ -49,7 +49,7 @@ Clicks from an opportunity page to an official employer application source emit 
 
 ## Daily freshness audit
 
-The `Jobs Freshness` workflow runs the focused Jobs validator every day. It does not crawl or mutate third-party sites. Its job is to catch data that has become stale by the passage of time: an open record older than the verification window, a passed deadline still stored as open, malformed lifecycle metadata, or a broken internal content graph.
+The `Jobs Freshness` workflow runs the focused Jobs validator every day and on Jobs-content pull requests. It also performs a focused external-link audit of Jobs/Careers source URLs. HTTP 404/410 responses and DNS-not-found failures are treated as definitive breakages; access blocks, rate limits and transient server errors are surfaced for human review rather than misclassified as dead links.
 
 The public UI is deadline-aware independently of the scheduled workflow, so a known deadline stops appearing under Open Now after it passes even before an editor changes the stored status.
 
@@ -58,11 +58,13 @@ The public UI is deadline-aware independently of the scheduled workflow, so a kn
 `/jobs/new-this-week` uses the employer's original `datePosted`, not MyNigeriaGuide's verification date. `/jobs/closing-this-week` only includes effectively-open records with a published deadline in the next seven days. If either view has no qualifying inventory, its metadata is set to noindex while links remain usable for visitors.
 
 
-## Scale-to-300 milestone
+## Quality correction after the 300-record wave
 
-The checked-in Jobs catalog now targets 300 verified records. The 191-record expansion that takes the pillar from 109 to 300 is intentionally mixed: new employer/public recruitment pathways plus distinct vacancies that were visibly listed on responsible official job boards on 5 October 2026. A career pathway remains `career-page` unless a current vacancy is explicitly being claimed.
+The site briefly reached 300 Jobs records, but the quality review found that 109 individual role pages had been generated from employer board titles without distinct role-detail URLs or enough role-specific requirements. Those pages violated this document's own quality rule.
 
-This milestone is the upper end of the comfortable checked-in catalog phase. Before another similarly large Jobs expansion, start the prepared D1/server-pagination migration described above so the browser catalog does not keep growing linearly. Do not turn the 20,000-URL capacity target into a page-generation quota.
+They are no longer published as indexable vacancy pages. Their old URLs permanently redirect to the relevant employer career portal so visitors and search engines do not hit dead pages. Employer-wide career pages remain only when there is a responsible official career/recruitment source, and the UI now labels them as employer portals rather than pretending they have one universal set of vacancy qualifications.
+
+The 300 figure remains a future scale target, not a quota. Rebuild toward it only with distinct official role sources, substantive role-specific requirements, concrete application steps and working source links.
 
 
 ## Legal and platform-safety rule
@@ -77,4 +79,4 @@ The `posting` metadata may still be retained for factual features such as New Th
 
 The Jobs directory no longer hydrates the full catalog into the browser. `/api/jobs` performs query, sector, status, location and profession filtering on the server and returns at most 24 directory cards by default. The browser receives only the current result page.
 
-The canonical opportunity pages and sitemap remain unchanged. Checked-in TypeScript remains the current server-side source of truth at the 300-record milestone, while the prepared D1 schema remains the next storage migration. The focused validator now hard-stops before 1,000 in-memory records so D1 storage must be bound before that threshold.
+Canonical high-quality opportunity pages and sitemap coverage remain unchanged. Retired thin vacancy URLs permanently redirect to their employer portal instead of returning 404. Checked-in TypeScript remains the current server-side source of truth while the prepared D1 schema remains the next storage migration. The focused validator hard-stops before 1,000 in-memory records so D1 storage must be bound before that threshold.
