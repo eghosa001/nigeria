@@ -22045,5 +22045,861 @@
       "Reliance HMO staff plan",
       "Reliance small business health insurance"
     ]
+  },
+  {
+    "slug": "t2-buy-airtime-data-online",
+    "title": "How to buy T2 Mobile airtime or data online",
+    "shortTitle": "Buy T2 airtime & data",
+    "summary": "T2 Mobile's official web purchase page lets customers buy airtime or data for a T2 number using the mobile number, amount or selected bundle, contact details and a supported payment route.",
+    "category": "Telecommunications",
+    "agencySlug": "t2-mobile",
+    "feeLabel": "Airtime amount or selected data-bundle price",
+    "feeNote": "The customer pays the airtime amount entered or the current price of the selected T2 data bundle. Check the live purchase page because bundle prices can change.",
+    "timeline": "The airtime or data purchase is applied after the payment transaction is confirmed successfully.",
+    "status": "verified",
+    "officialPortal": "https://t2mobile.com.ng/buyDataAirtime",
+    "requirements": [
+      "The T2 Mobile phone number that should receive the airtime or data",
+      "The airtime amount or selected T2 data bundle",
+      "The purchaser's first name and email address for the online transaction",
+      "A supported debit-card or bank-account payment method"
+    ],
+    "steps": [
+      "Open T2 Mobile's official Buy Airtime & Data page and choose whether to purchase airtime or data.",
+      "Enter the T2 mobile number and either the airtime amount or the data bundle shown by the provider.",
+      "Enter the purchaser's first name and email address and review the recipient details.",
+      "Continue to the supported payment route and authorise the purchase.",
+      "Keep the payment confirmation and check the recipient line if the airtime or data is not immediately reflected."
+    ],
+    "notes": [
+      "T2 Mobile is the current brand of the network previously known as 9mobile.",
+      "The live data-plan page should be used for current bundle prices and validity periods.",
+      "Use T2's official site rather than an unsolicited payment link."
+    ],
+    "sources": [
+      {
+        "label": "T2 Mobile Buy Airtime & Data",
+        "agency": "T2 Mobile Nigeria",
+        "url": "https://t2mobile.com.ng/buyDataAirtime",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "T2 Mobile Home",
+        "agency": "T2 Mobile Nigeria",
+        "url": "https://t2mobile.com.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "t2-data-transfer",
+      "t2-data-gifting",
+      "mtn-data-gifting"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "buy T2 airtime",
+      "T2 data purchase",
+      "9mobile T2 recharge",
+      "T2 airtime online",
+      "T2 buy data"
+    ]
+  },
+  {
+    "slug": "t2-data-transfer",
+    "title": "How to transfer T2 Mobile data to another T2 line",
+    "shortTitle": "T2 data transfer",
+    "summary": "T2 Mobile's data-transfer service lets prepaid and hybrid customers move part of an eligible data balance to another T2 line through the *312*7# menu.",
+    "category": "Telecommunications",
+    "agencySlug": "t2-mobile",
+    "feeLabel": "Transfer uses the sender's existing data balance",
+    "feeNote": "T2's current data page describes transfer from the customer's existing data balance; check the live menu for any provider or telecom-session charge before confirming.",
+    "timeline": "The transferred data is credited after the *312*7# transaction succeeds.",
+    "status": "verified",
+    "officialPortal": "https://t2mobile.com.ng/data",
+    "requirements": [
+      "An eligible T2 prepaid or hybrid line with an active transferable data balance",
+      "At least 50 MB remaining after the proposed transfer",
+      "The recipient's T2 Mobile number",
+      "A transfer amount within T2's current per-transaction and daily limits"
+    ],
+    "steps": [
+      "Dial *312*7# from the T2 Mobile line that owns the data balance.",
+      "Choose the data-transfer option and enter the recipient's T2 number.",
+      "Enter the amount of data to transfer and review the recipient and quantity.",
+      "Confirm the transaction through the security prompts shown by T2.",
+      "Keep the success message and check the remaining data balance after the transfer."
+    ],
+    "notes": [
+      "T2 currently states that data transfers can be from 10 MB to 200 MB per transaction and up to 1 GB per day.",
+      "The sender must retain at least 50 MB after the transfer.",
+      "Data Gifting is different: gifting buys a new bundle for another user instead of moving an existing balance."
+    ],
+    "sources": [
+      {
+        "label": "T2 Mobile Data Transfer",
+        "agency": "T2 Mobile Nigeria",
+        "url": "https://t2mobile.com.ng/data",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "t2-data-gifting",
+      "t2-buy-airtime-data-online",
+      "mtn-data-gifting",
+      "airtel-data-gifting"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "T2 data transfer",
+      "9mobile data transfer code",
+      "*312*7#",
+      "transfer data T2 Mobile",
+      "T2 share data"
+    ]
+  },
+  {
+    "slug": "t2-data-gifting",
+    "title": "How to gift a T2 Mobile data bundle",
+    "shortTitle": "T2 data gifting",
+    "summary": "T2 Mobile Data Gifting lets a customer buy a data bundle for another T2 number through *312*6#, with the sender paying for the new bundle and the recipient receiving it.",
+    "category": "Telecommunications",
+    "agencySlug": "t2-mobile",
+    "feeLabel": "Sender pays the selected data-bundle price",
+    "feeNote": "T2 states that the sender is charged for the data bundle while the recipient gets the gifted bundle. Confirm the current plan price in the live menu.",
+    "timeline": "The recipient is credited after the *312*6# gifting transaction succeeds.",
+    "status": "verified",
+    "officialPortal": "https://t2mobile.com.ng/data",
+    "requirements": [
+      "A T2 Mobile line with enough balance to buy the selected data bundle",
+      "The recipient's T2 Mobile number",
+      "Access to the *312*6# Data Gifting menu",
+      "A selected current T2 data bundle for the recipient"
+    ],
+    "steps": [
+      "Dial *312*6# from the T2 Mobile line paying for the gift.",
+      "Choose the data bundle to purchase for another T2 customer.",
+      "Enter the recipient's T2 Mobile phone number and review the bundle and current price.",
+      "Confirm the transaction through the prompts shown by T2.",
+      "Keep the success message and ask the recipient to check the data balance if the bundle is not immediately visible."
+    ],
+    "notes": [
+      "T2 distinguishes Data Gifting from Data Transfer: gifting buys a new bundle while transfer moves an existing balance.",
+      "T2 also offers Family Share through *312*8# for allocating data to multiple T2 lines.",
+      "Current bundle prices and validity should be checked in the live T2 data menu."
+    ],
+    "sources": [
+      {
+        "label": "T2 Mobile Data Gifting",
+        "agency": "T2 Mobile Nigeria",
+        "url": "https://t2mobile.com.ng/data",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "t2-data-transfer",
+      "t2-buy-airtime-data-online",
+      "mtn-data-gifting",
+      "airtel-data-gifting"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "T2 data gifting",
+      "9mobile data gifting",
+      "*312*6#",
+      "gift T2 data",
+      "buy data for T2 number"
+    ]
+  },
+  {
+    "slug": "startimes-recharge-smartcard",
+    "title": "How to recharge a StarTimes decoder in Nigeria",
+    "shortTitle": "StarTimes recharge",
+    "summary": "StarTimes' online recharge service lets Nigerian subscribers enter an 11-digit SmartCard number, select the available recharge option and pay the decoder subscription through the official self-service page.",
+    "category": "TV & streaming",
+    "agencySlug": "startimes-nigeria",
+    "feeLabel": "Depends on the selected StarTimes bouquet/recharge",
+    "feeNote": "StarTimes subscription pricing depends on the bouquet and current Nigerian offer. Confirm the amount displayed after entering the SmartCard number.",
+    "timeline": "The decoder account is credited after the recharge payment is successfully processed.",
+    "status": "verified",
+    "officialPortal": "https://m.startimestv.com/hybrid/dvb/bind",
+    "requirements": [
+      "The 11-digit StarTimes SmartCard number for the decoder account",
+      "A current StarTimes bouquet or recharge option available to the Nigerian subscriber",
+      "A supported payment method for the amount shown in the recharge flow"
+    ],
+    "steps": [
+      "Open StarTimes' official decoder recharge page and confirm Nigeria as the selected market.",
+      "Enter the 11-digit SmartCard number and allow the service to retrieve the decoder account.",
+      "Select the available recharge or bouquet option and review the amount shown.",
+      "Complete payment through the official StarTimes checkout route.",
+      "Keep the payment confirmation and use StarTimes self-service to check balance or expiry if the decoder does not update."
+    ],
+    "notes": [
+      "The StarTimes ON app also provides decoder recharge and account self-service.",
+      "Bouquet prices vary by market and can change, so use the live Nigerian account amount.",
+      "Verify the SmartCard number carefully before making payment."
+    ],
+    "sources": [
+      {
+        "label": "StarTimes SmartCard Recharge",
+        "agency": "StarTimes",
+        "url": "https://m.startimestv.com/hybrid/dvb/bind",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "StarTimes App Self Service",
+        "agency": "StarTimes",
+        "url": "https://www.startimestv.com/app.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "startimes-change-bouquet",
+      "dstv-pay-reconnect",
+      "gotv-pay-reconnect"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "StarTimes recharge Nigeria",
+      "recharge StarTimes SmartCard",
+      "StarTimes subscription payment",
+      "StarTimes decoder recharge",
+      "StarTimes Nigeria payment"
+    ]
+  },
+  {
+    "slug": "startimes-change-bouquet",
+    "title": "How to change a StarTimes bouquet",
+    "shortTitle": "Change StarTimes bouquet",
+    "summary": "StarTimes subscribers can use the StarTimes ON app self-service to manage a decoder account, change the bouquet, recharge and check the subscription balance and expiry date.",
+    "category": "TV & streaming",
+    "agencySlug": "startimes-nigeria",
+    "feeLabel": "Depends on the selected bouquet",
+    "feeNote": "The cost depends on the bouquet available to the Nigerian SmartCard account. Confirm the current amount inside StarTimes self-service before paying.",
+    "timeline": "StarTimes does not publish one universal bouquet-change processing time on its app page; the subscription account is updated through self-service after the change/payment is accepted.",
+    "status": "verified",
+    "officialPortal": "https://www.startimestv.com/app.html",
+    "requirements": [
+      "An active StarTimes decoder/SmartCard account",
+      "The StarTimes ON app or supported StarTimes self-service access",
+      "A target bouquet available for the subscriber's decoder and market",
+      "Funds for any amount required by the new bouquet"
+    ],
+    "steps": [
+      "Open the StarTimes ON app and sign in or bind the decoder account with the SmartCard information.",
+      "Open decoder self-service and choose the bouquet-change option.",
+      "Review the bouquets available for the Nigerian account and choose the target bouquet.",
+      "Review the subscription amount and complete any required recharge/payment.",
+      "Check the account balance and expiry date after the change and contact StarTimes if the decoder does not reflect the selected bouquet."
+    ],
+    "notes": [
+      "StarTimes ON lists decoder recharge, bouquet changes, balance checks and expiry-date checks among its self-service functions.",
+      "Available bouquets and prices can differ by country and decoder platform.",
+      "A bouquet change is separate from purchasing or replacing decoder hardware."
+    ],
+    "sources": [
+      {
+        "label": "StarTimes App Self Service",
+        "agency": "StarTimes",
+        "url": "https://www.startimestv.com/app.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "startimes-recharge-smartcard",
+      "dstv-change-package",
+      "gotv-change-package"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change StarTimes bouquet",
+      "StarTimes package change",
+      "StarTimes ON self service",
+      "StarTimes bouquet Nigeria",
+      "upgrade StarTimes package"
+    ]
+  },
+  {
+    "slug": "ipnx-renew-subscription",
+    "title": "How to renew an ipNX internet subscription",
+    "shortTitle": "ipNX renewal",
+    "summary": "ipNX customers can renew internet service through the official Self-Service Portal by opening Manage Services, selecting Renew Now, entering the payment amount and completing card payment.",
+    "category": "Internet",
+    "agencySlug": "ipnx",
+    "feeLabel": "Depends on the customer's current ipNX plan",
+    "feeNote": "The Self-Service Portal prepopulates the minimum payable amount for the service. Confirm the current subscription amount before submitting payment.",
+    "timeline": "The subscription renewal is applied after the Self-Service Portal payment is processed successfully.",
+    "status": "verified",
+    "officialPortal": "https://self-service.ipnxnigeria.net/",
+    "requirements": [
+      "An active ipNX customer account with access to the Self-Service Portal",
+      "The customer ID/email/portal credentials used for the ipNX subscription",
+      "A supported payment card for the renewal amount shown by the portal"
+    ],
+    "steps": [
+      "Sign in to the ipNX Self-Service Portal and open Manage Services.",
+      "Choose Renew Now for the internet service that needs renewal.",
+      "Review the prepopulated minimum amount and enter the amount to pay.",
+      "Submit the renewal and enter the payment-card details through the portal.",
+      "Check Payment History or the service status after payment and contact ipNX support if the subscription is not renewed."
+    ],
+    "notes": [
+      "ipNX's FAQ says subscription renewal is available directly from Manage Services in Self-Service.",
+      "The portal also provides payment history, plan changes, usage and fault reporting.",
+      "Billing problems can be sent to ipNX support with the relevant payment evidence."
+    ],
+    "sources": [
+      {
+        "label": "ipNX Self-Service FAQ",
+        "agency": "ipNX Nigeria",
+        "url": "https://self-service.ipnxnigeria.net/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ipnx-change-service-plan",
+      "ipnx-report-fault",
+      "fiberone-renew-subscription"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "renew ipNX subscription",
+      "ipNX self service payment",
+      "pay ipNX internet",
+      "ipNX Renew Now",
+      "ipNX broadband renewal"
+    ]
+  },
+  {
+    "slug": "ipnx-change-service-plan",
+    "title": "How to change an ipNX internet plan",
+    "shortTitle": "Change ipNX plan",
+    "summary": "ipNX Self-Service lets customers change an existing service plan from Manage Service by selecting a new plan and completing any payment requested for the change.",
+    "category": "Internet",
+    "agencySlug": "ipnx",
+    "feeLabel": "Depends on the new ipNX plan",
+    "feeNote": "The new monthly charge depends on the selected plan. The portal shows when payment is required before the plan change can proceed.",
+    "timeline": "The change is submitted through Self-Service after the customer selects the plan and completes any required payment.",
+    "status": "verified",
+    "officialPortal": "https://self-service.ipnxnigeria.net/",
+    "requirements": [
+      "An ipNX customer account with access to the Self-Service Portal",
+      "An existing internet service eligible for a plan change",
+      "A new plan available to the customer's service/location",
+      "A supported payment method if the portal requests payment for the change"
+    ],
+    "steps": [
+      "Sign in to the ipNX Self-Service Portal and open Manage Service.",
+      "Select Change Service Plan for the internet service.",
+      "Choose the new available plan and review the plan details.",
+      "Select Continue and complete the payment step if the portal requests one.",
+      "Confirm the new service plan in the account after the change is processed."
+    ],
+    "notes": [
+      "The Self-Service Portal is the provider's published route for changing an existing ipNX service plan.",
+      "Plan availability and pricing can differ by location and product.",
+      "A change of plan is separate from relocating the physical service to another address."
+    ],
+    "sources": [
+      {
+        "label": "ipNX Self-Service FAQ",
+        "agency": "ipNX Nigeria",
+        "url": "https://self-service.ipnxnigeria.net/faq",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ipNX Residential Sales Portal",
+        "agency": "ipNX Nigeria",
+        "url": "https://salesportal.ipnxnigeria.net/plan/fos-residential",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ipnx-renew-subscription",
+      "ipnx-report-fault",
+      "fiberone-renew-subscription"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change ipNX plan",
+      "upgrade ipNX internet",
+      "ipNX plan change",
+      "ipNX self service plan",
+      "ipNX broadband package change"
+    ]
+  },
+  {
+    "slug": "ipnx-report-fault",
+    "title": "How to report an ipNX internet fault",
+    "shortTitle": "Report ipNX fault",
+    "summary": "ipNX customers can open a fault ticket directly in the Self-Service Portal through Complaints and Report a Fault, then submit the issue for provider support.",
+    "category": "Internet",
+    "agencySlug": "ipnx",
+    "feeLabel": "No fault-reporting fee",
+    "feeNote": "ipNX does not state a separate fee for submitting a service fault through the Self-Service Portal.",
+    "timeline": "The portal creates the support request after submission; resolution time depends on the fault and any network or premises work required.",
+    "status": "verified",
+    "officialPortal": "https://self-service.ipnxnigeria.net/",
+    "requirements": [
+      "An ipNX customer account and Self-Service Portal login",
+      "The affected internet service or customer ID",
+      "A clear description of the connectivity, billing or device fault being reported"
+    ],
+    "steps": [
+      "Sign in to the ipNX Self-Service Portal and open Complaints.",
+      "Choose Report a Fault for the affected service.",
+      "Fill the fault form with the issue details and any information requested by ipNX.",
+      "Submit the ticket and keep the complaint/reference information returned by the portal.",
+      "Follow the ticket through official ipNX support if the service is not restored or the issue needs an onsite visit."
+    ],
+    "notes": [
+      "The portal also offers Wi-Fi device-setting changes, payment history and service-plan management.",
+      "Billing issues can also be sent to ipNX support using the email published in the Self-Service FAQ.",
+      "Keep router status lights and any error details available when reporting a technical fault."
+    ],
+    "sources": [
+      {
+        "label": "ipNX Self-Service FAQ",
+        "agency": "ipNX Nigeria",
+        "url": "https://self-service.ipnxnigeria.net/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ipnx-renew-subscription",
+      "ipnx-change-service-plan",
+      "fiberone-renew-subscription"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "report ipNX fault",
+      "ipNX internet not working",
+      "ipNX complaint portal",
+      "ipNX support ticket",
+      "ipNX Self Service fault"
+    ]
+  },
+  {
+    "slug": "fiberone-new-service-installation",
+    "title": "How to sign up for FiberOne broadband",
+    "shortTitle": "Get FiberOne broadband",
+    "summary": "FiberOne's new-service route begins with the service-availability checker or sales enquiry, followed by plan selection, installation payment and a scheduled connection where the address is serviceable.",
+    "category": "Internet",
+    "agencySlug": "fiberone",
+    "feeLabel": "Plan and installation cost depend on the selected service",
+    "feeNote": "FiberOne publishes plan/install prices through its current sales flow. Check availability and the live quote before paying because plan and installation charges can change.",
+    "timeline": "Installation timing depends on service availability, payment and scheduling at the customer's address; FiberOne does not publish one universal installation time for all locations.",
+    "status": "verified",
+    "officialPortal": "https://fob.ng/",
+    "requirements": [
+      "A home or business address that FiberOne's availability checker confirms can receive service",
+      "A selected residential or business broadband plan",
+      "The customer contact and address information needed for installation scheduling",
+      "A supported payment method for the plan and any one-time installation charge"
+    ],
+    "steps": [
+      "Open FiberOne's official website and enter the address or location in the Service Availability Checker.",
+      "If service is available, choose the residential or business option and review the available broadband plans.",
+      "Submit the customer/contact information and obtain the current plan and installation payment instruction.",
+      "Complete payment through FiberOne's supported banking, app, USSD, card or official payment-link route.",
+      "Agree an installation appointment with the FiberOne team and confirm the connection after the equipment is installed."
+    ],
+    "notes": [
+      "FiberOne says availability varies by location and recommends the checker before a new installation.",
+      "The provider accepts several official payment methods, including MyFOB, bank transfer, USSD and secure payment links.",
+      "Do not pay an installer through an unverified personal account."
+    ],
+    "sources": [
+      {
+        "label": "FiberOne Home and FAQs",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FiberOne Residential Service",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/residential/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FiberOne Contact",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/contact-us/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fiberone-renew-subscription",
+      "fiberone-relocate-service",
+      "ipnx-renew-subscription"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "FiberOne installation",
+      "get FiberOne broadband",
+      "FiberOne availability",
+      "FiberOne signup Nigeria",
+      "FiberOne new connection"
+    ]
+  },
+  {
+    "slug": "fiberone-renew-subscription",
+    "title": "How to renew a FiberOne subscription",
+    "shortTitle": "FiberOne renewal",
+    "summary": "FiberOne customers can renew broadband subscriptions instantly through the MyFOB app and manage account payments, support and optional auto-renewal from the provider's self-service tools.",
+    "category": "Internet",
+    "agencySlug": "fiberone",
+    "feeLabel": "Depends on the active FiberOne plan",
+    "feeNote": "The renewal amount depends on the customer's current plan and renewal period. Use MyFOB or the live invoice amount before payment.",
+    "timeline": "FiberOne describes renewal through MyFOB as instant after successful payment.",
+    "status": "verified",
+    "officialPortal": "https://fob.ng/myfob/",
+    "requirements": [
+      "An existing FiberOne customer account/client ID",
+      "Access to the MyFOB app or FiberOne customer-account payment route",
+      "A selected renewal period and enough funds for the current plan amount"
+    ],
+    "steps": [
+      "Open the MyFOB app or FiberOne customer self-service account.",
+      "Choose subscription renewal for the active broadband service.",
+      "Review the current plan, renewal period and payable amount.",
+      "Complete payment through the supported method shown by FiberOne.",
+      "Confirm that the subscription status is active and keep the invoice or transaction reference."
+    ],
+    "notes": [
+      "MyFOB also provides account management and in-app support.",
+      "FiberOne supports automatic recurring payments for customers who choose an auto-renewal option.",
+      "Plan prices can change, so use the current renewal invoice rather than an old monthly price."
+    ],
+    "sources": [
+      {
+        "label": "MyFOB",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/myfob/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FiberOne Home and Payment FAQs",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FiberOne Auto-Renewal",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/blog/fiberone-broadband-elevating-connectivity-with-auto-renewal-innovation/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fiberone-new-service-installation",
+      "fiberone-relocate-service",
+      "ipnx-renew-subscription"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "renew FiberOne subscription",
+      "MyFOB renewal",
+      "pay FiberOne bill",
+      "FiberOne monthly renewal",
+      "FiberOne auto renewal"
+    ]
+  },
+  {
+    "slug": "fiberone-relocate-service",
+    "title": "How to relocate a FiberOne broadband service",
+    "shortTitle": "Relocate FiberOne service",
+    "summary": "FiberOne customers moving to a new address can submit a relocation request through the customer account or customer service, after which FiberOne checks service availability and schedules the new installation.",
+    "category": "Internet",
+    "agencySlug": "fiberone",
+    "feeLabel": "Relocation/install charge depends on the new address",
+    "feeNote": "FiberOne does not publish one universal relocation fee in its current FAQ. The provider assesses availability and installation requirements for the new address before confirming any charge.",
+    "timeline": "Relocation timing depends on availability and installation scheduling at the new address.",
+    "status": "verified",
+    "officialPortal": "https://fob.ng/",
+    "requirements": [
+      "An existing FiberOne broadband account",
+      "The new address to which the customer wants the service moved",
+      "Access to the customer account or FiberOne customer-service channel",
+      "Availability of FiberOne service and any installation work required at the new address"
+    ],
+    "steps": [
+      "Sign in to the FiberOne customer account and submit a relocation request, or contact FiberOne customer service with the new address.",
+      "Provide the existing customer/service details and the complete new installation address.",
+      "Allow FiberOne's technical team to assess whether service is available and what installation work is required.",
+      "Review any relocation or installation instruction and agree an installation appointment.",
+      "Coordinate equipment pickup from the old address when FiberOne requires it and confirm service after installation at the new location."
+    ],
+    "notes": [
+      "FiberOne explicitly says its technical team assesses availability and installation requirements for relocation.",
+      "Equipment pickup from the old location can be arranged as part of the move.",
+      "A relocation should not be assumed possible until the new address passes the provider's availability check."
+    ],
+    "sources": [
+      {
+        "label": "FiberOne Home and Relocation FAQ",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FiberOne Residential",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/residential/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FiberOne Contact",
+        "agency": "FiberOne Broadband",
+        "url": "https://fob.ng/contact-us/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fiberone-new-service-installation",
+      "fiberone-renew-subscription",
+      "ipnx-change-service-plan"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "relocate FiberOne internet",
+      "move FiberOne service",
+      "FiberOne new address",
+      "FiberOne relocation request",
+      "FiberOne broadband move"
+    ]
+  },
+  {
+    "slug": "moniepoint-business-account",
+    "title": "How to open a Moniepoint business account",
+    "shortTitle": "Moniepoint business account",
+    "summary": "Moniepoint's business onboarding route uses phone verification, passcode/PIN setup, NIN, face verification, residential and business details to create a free business banking account.",
+    "category": "Banking",
+    "agencySlug": "moniepoint",
+    "feeLabel": "Free business account",
+    "feeNote": "Moniepoint describes its business bank account as free, with no hidden account-opening fee. Product transaction charges can apply after the account is active.",
+    "timeline": "Moniepoint says the business account is created in minutes after the required phone, identity and KYC information is successfully verified.",
+    "status": "verified",
+    "officialPortal": "https://www.moniepoint.com/ng/business",
+    "requirements": [
+      "A valid phone number and email address for the Moniepoint Business profile",
+      "The customer's NIN and the identity information used for KYC",
+      "A face-verification step",
+      "The residential address, business name, business address and other business information requested during onboarding"
+    ],
+    "steps": [
+      "Download the Moniepoint Business app or open Moniepoint's official business signup route and choose Sign Up.",
+      "Enter the phone number and verify the one-time password sent to the number.",
+      "Create the account passcode and transaction PIN, select nationality and confirm the NIN.",
+      "Complete face verification and enter the residential and business details requested by Moniepoint.",
+      "Confirm the business-account details, fund the account and open the dashboard for cards, POS and other business services."
+    ],
+    "notes": [
+      "Moniepoint separates its Business app/account from the Personal Banking product.",
+      "Additional KYC information can be required as the business uses more regulated services.",
+      "Use the business account as the prerequisite for requesting a Moniepoint POS terminal."
+    ],
+    "sources": [
+      {
+        "label": "Moniepoint Business",
+        "agency": "Moniepoint Microfinance Bank",
+        "url": "https://www.moniepoint.com/ng/business",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Moniepoint Account Opening and KYC",
+        "agency": "Moniepoint Microfinance Bank",
+        "url": "https://support.moniepoint.com/topics/account-opening-and-kyc-235",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "moniepoint-pos-terminal",
+      "moniepoint-personal-account",
+      "paystack-business-activation-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Moniepoint business account",
+      "open Moniepoint business account",
+      "Moniepoint business KYC",
+      "Moniepoint business signup",
+      "Moniepoint business banking"
+    ]
+  },
+  {
+    "slug": "moniepoint-pos-terminal",
+    "title": "How to get a Moniepoint POS terminal",
+    "shortTitle": "Moniepoint POS",
+    "summary": "Moniepoint businesses can request a POS from the business dashboard, fund the account for the published terminal/caution/logistics/insurance amount and receive delivery through an assigned relationship manager.",
+    "category": "Business",
+    "agencySlug": "moniepoint",
+    "feeLabel": "₦21,500 current POS request amount",
+    "feeNote": "Moniepoint currently says ₦21,500 covers a ₦10,000 caution fee, ₦10,000 logistics fee and ₦1,500 one-year insurance fee. Check the live POS page before funding because charges can change.",
+    "timeline": "Moniepoint currently states that the assigned relationship manager can deliver the POS within 48 hours after a completed request/payment.",
+    "status": "verified",
+    "officialPortal": "https://www.moniepoint.com/ng/business/point-of-sale-terminal",
+    "requirements": [
+      "An active Moniepoint business account and access to its business dashboard",
+      "Enough account balance for the current POS terminal request amount",
+      "The business/contact information needed for terminal delivery",
+      "Selection of an available Moniepoint POS device/service option"
+    ],
+    "steps": [
+      "Create or sign in to the Moniepoint business account and open the business dashboard.",
+      "Open the POS menu and choose Add a new POS.",
+      "Follow the terminal request instructions and confirm the business/delivery details.",
+      "Fund the business account with at least the current POS request amount and complete the request.",
+      "Coordinate with the assigned Moniepoint relationship manager for terminal delivery and onboarding."
+    ],
+    "notes": [
+      "Moniepoint currently states that its POS supports card payments and transfers with instant settlement.",
+      "The published ₦21,500 charge is current as of this verification date and may change.",
+      "The provider assigns a relationship manager after the request to deliver and explain the terminal."
+    ],
+    "sources": [
+      {
+        "label": "Moniepoint POS Terminal",
+        "agency": "Moniepoint Microfinance Bank",
+        "url": "https://www.moniepoint.com/ng/business/point-of-sale-terminal",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "moniepoint-business-account",
+      "paystack-physical-terminal-nigeria",
+      "nomba-pos-terminal"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Moniepoint POS",
+      "get Moniepoint POS machine",
+      "Moniepoint POS price",
+      "Moniepoint POS requirements",
+      "Moniepoint POS delivery"
+    ]
+  },
+  {
+    "slug": "nomba-business-account",
+    "title": "How to open a Nomba business account",
+    "shortTitle": "Nomba business account",
+    "summary": "Nomba's business-account onboarding lets Nigerian businesses create a free account with user/contact details and, for a corporate account, a valid director/signatory BVN and CAC registration number.",
+    "category": "Banking",
+    "agencySlug": "nomba",
+    "feeLabel": "Free business account with no setup fee",
+    "feeNote": "Nomba's current site advertises a free business account with no setup fee; transaction or optional product charges can apply after onboarding.",
+    "timeline": "Nomba advertises account opening in about three minutes and says most business accounts are approved the same day, subject to KYC review.",
+    "status": "verified",
+    "officialPortal": "https://dashboard.nomba.com/create-account/business/user-information",
+    "requirements": [
+      "The business user's first/last name, Nigerian phone number, email address and a secure account password",
+      "A valid BVN matching a director or signatory for the corporate business-account route",
+      "A valid CAC registration number for a registered corporate business",
+      "Any additional business/KYC information requested as the onboarding progresses"
+    ],
+    "steps": [
+      "Open Nomba's official business-account signup and enter the account user's name, phone number, email and password.",
+      "Continue into the business onboarding and provide the valid BVN for the director or signatory.",
+      "Enter the CAC registration number for the registered business and complete the remaining business information.",
+      "Submit the KYC profile and respond to any additional verification requested by Nomba.",
+      "After approval, sign in to the Nomba business account and enable the payment, POS or other tools needed by the business."
+    ],
+    "notes": [
+      "Nomba's signup page explicitly lists valid BVN and CAC registration number as basic corporate-account requirements.",
+      "The provider says the business account can accept payments by POS, payment link, bank transfer or USSD.",
+      "Loans/overdrafts and treasury/yield features have separate eligibility and should not be assumed from account opening alone."
+    ],
+    "sources": [
+      {
+        "label": "Nomba Business Banking",
+        "agency": "Nomba",
+        "url": "https://nomba.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Nomba Business Account Signup",
+        "agency": "Nomba",
+        "url": "https://dashboard.nomba.com/create-account/business/user-information",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Nomba Small Business",
+        "agency": "Nomba",
+        "url": "https://nomba.com/small-business",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nomba-pos-terminal",
+      "moniepoint-business-account",
+      "paystack-business-activation-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Nomba business account",
+      "open Nomba account",
+      "Nomba CAC BVN account",
+      "Nomba business banking",
+      "Nomba signup Nigeria"
+    ]
+  },
+  {
+    "slug": "nomba-pos-terminal",
+    "title": "How to get a Nomba POS terminal",
+    "shortTitle": "Nomba POS",
+    "summary": "Nomba businesses can choose an available POS terminal from the provider's terminal page, then use the Buy or Lease route after opening a Nomba business account.",
+    "category": "Business",
+    "agencySlug": "nomba",
+    "feeLabel": "Current device pricing starts from ₦30,000",
+    "feeNote": "Nomba currently lists Mini at ₦30,000 outright, Lite at ₦30,000 lease purchase, Pro at ₦62,000 outright and Max at ₦150,000 outright. Check the live page before purchase because device prices can change.",
+    "timeline": "Nomba does not publish one universal delivery time for every POS device/order on its current terminal page.",
+    "status": "verified",
+    "officialPortal": "https://nomba.com/pos-terminals",
+    "requirements": [
+      "A Nomba Business account, which the provider says is required to use Nomba POS",
+      "A selected Nomba terminal model and purchase/lease option",
+      "Enough account/payment funds for the current terminal price",
+      "The business and delivery information requested during the POS order"
+    ],
+    "steps": [
+      "Open or sign in to a Nomba Business account before requesting a POS terminal.",
+      "Open Nomba's official POS Terminals page and compare the available Mini, Lite, Pro and Max options.",
+      "Choose Buy Now or Lease Now for the selected device and review the current device price and features.",
+      "Complete the order with the business, payment and delivery information requested by Nomba.",
+      "Keep the order confirmation and follow Nomba's official support/onboarding instructions when the terminal is delivered."
+    ],
+    "notes": [
+      "Nomba states that a Nomba Business account is required to use its POS.",
+      "The available terminals support different combinations of printing, connectivity and payment features.",
+      "Current terminal prices are date-sensitive and should be rechecked before purchase."
+    ],
+    "sources": [
+      {
+        "label": "Nomba POS Terminals",
+        "agency": "Nomba",
+        "url": "https://nomba.com/pos-terminals",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Nomba Business Banking",
+        "agency": "Nomba",
+        "url": "https://nomba.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nomba-business-account",
+      "moniepoint-pos-terminal",
+      "paystack-physical-terminal-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Nomba POS",
+      "Nomba POS price",
+      "get Nomba POS machine",
+      "Nomba terminal Nigeria",
+      "Nomba POS requirements"
+    ]
   }
 ]
