@@ -8487,5 +8487,360 @@
       "join Cars45 dealer",
       "Cars45 dealer onboarding"
     ]
+  },
+  {
+    "slug": "heirs-buy-motor-insurance-online",
+    "title": "How to buy Heirs motor insurance online",
+    "shortTitle": "Heirs motor insurance",
+    "summary": "Heirs Insurance Group's digital motor-insurance route for choosing third-party or other available motor cover, entering customer/vehicle details and completing the policy through its website, app or USSD channels.",
+    "category": "Insurance",
+    "agencySlug": "heirs-insurance",
+    "feeLabel": "Third-party private-car cover currently ₦15,000/year",
+    "feeNote": "Heirs currently lists ₦15,000 annually for its private-car third-party motor plan. Comprehensive and other motor plans use different pricing, so review the selected product before payment.",
+    "timeline": "Heirs presents motor insurance as digitally purchasable through its website, SimpleLife/SimpleProtect channels and *1100#; policy issuance follows successful application and payment.",
+    "status": "verified",
+    "officialPortal": "https://www.heirsinsurancegroup.com/all-insurance-products/personal-fam/third-party-motor/",
+    "requirements": [
+      "A vehicle that fits the selected Heirs motor product and use category",
+      "A valid means of identification such as driver's licence, voter card, NIMC/National ID or international passport",
+      "Proof of residence such as an accepted utility/address document",
+      "The vehicle and policyholder information requested by the digital purchase form"
+    ],
+    "steps": [
+      "Open Heirs Insurance Group's official motor-insurance page and select the third-party or other motor plan that matches the intended cover.",
+      "Review the current premium, benefits, exclusions and vehicle eligibility before starting the application.",
+      "Enter the policyholder and vehicle information and upload the identification/address documents requested by the digital channel.",
+      "Complete payment through the Heirs website, supported app or *1100# route shown by the provider.",
+      "Save the issued policy/certificate and verify that the vehicle and policyholder details are correct before relying on the cover."
+    ],
+    "notes": [
+      "Heirs publishes separate third-party, comprehensive and flexible motor products; one product's premium should not be copied to another.",
+      "The provider also exposes digital insurance access through *1100#, web and its mobile applications.",
+      "This guide explains the purchase process and does not recommend a policy as suitable for a particular customer."
+    ],
+    "sources": [
+      {
+        "label": "Heirs Third Party Motor",
+        "agency": "Heirs Insurance Group",
+        "url": "https://www.heirsinsurancegroup.com/all-insurance-products/personal-fam/third-party-motor/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Heirs Motor Insurance",
+        "agency": "Heirs Insurance Group",
+        "url": "https://www.heirsinsurancegroup.com/all-insurance-products/personal-fam/motor-insurance/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Heirs Digital Channels",
+        "agency": "Heirs Insurance Group",
+        "url": "https://www.heirsinsurancegroup.com/digital_channels/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "heirs-file-general-insurance-claim",
+      "leadway-buy-motor-insurance-online",
+      "cornerstone-buy-motor-insurance-online",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Heirs motor insurance",
+      "buy Heirs insurance online",
+      "Heirs third party insurance",
+      "Heirs *1100# insurance",
+      "Heirs car insurance Nigeria"
+    ]
+  },
+  {
+    "slug": "heirs-file-general-insurance-claim",
+    "title": "How to file a Heirs General insurance claim online",
+    "shortTitle": "Heirs General claim",
+    "summary": "Heirs Insurance Group's online general-claims route for motor, home, fire and other insured losses, using policy details, incident information and supporting documents uploaded through the claim form.",
+    "category": "Insurance",
+    "agencySlug": "heirs-insurance",
+    "feeLabel": "No claim-lodgement fee stated",
+    "feeNote": "Heirs does not state a separate fee for lodging a general-insurance claim through its website or digital channels.",
+    "timeline": "Claim timing depends on the loss and documents. Heirs says direct-business claims can qualify for settlement within 24 hours after a signed discharge voucher is received, but that is not a universal timeline for every claim.",
+    "status": "verified",
+    "officialPortal": "https://www.heirsinsurancegroup.com/general-claims-2/",
+    "requirements": [
+      "The policyholder's name, policy number, contact information and home address",
+      "The insured-event type plus incident date, time, location and description",
+      "For a motor claim, vehicle registration and the applicable accident, theft or third-party details",
+      "Supporting photos/videos and documents such as driver's licence, police report or repair estimate when relevant to the claim"
+    ],
+    "steps": [
+      "Open Heirs Insurance Group's official General Claims page and select the applicable claim type.",
+      "Enter the policyholder and policy information and provide the incident date, location and description.",
+      "For a motor loss, choose the motor-claim type and enter the vehicle registration and other accident information requested.",
+      "Upload the photographs, videos, police report, driver's licence, repair estimate or other documents that apply to the loss.",
+      "Submit the claim, keep the claim evidence and respond to Heirs when the claims team requests additional information or a discharge document."
+    ],
+    "notes": [
+      "Heirs also allows claims through its mobile app and published claims email channels.",
+      "A submitted claim is subject to policy terms and assessment; submission does not guarantee payment.",
+      "False or fraudulent claim information can invalidate a claim and create legal consequences."
+    ],
+    "sources": [
+      {
+        "label": "Heirs General Claims",
+        "agency": "Heirs Insurance Group",
+        "url": "https://www.heirsinsurancegroup.com/general-claims-2/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Heirs Insurance FAQ",
+        "agency": "Heirs Insurance Group",
+        "url": "https://www.heirsinsurancegroup.com/faq/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "heirs-buy-motor-insurance-online",
+      "leadway-file-insurance-claim",
+      "cornerstone-motor-claim",
+      "aiico-motor-insurance-claim"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Heirs insurance claim",
+      "Heirs motor claim",
+      "file Heirs claim online",
+      "Heirs General claim form",
+      "Heirs Insurance claims Nigeria"
+    ]
+  },
+  {
+    "slug": "tangerine-buy-third-party-motor-insurance",
+    "title": "How to buy Tangerine third-party motor insurance",
+    "shortTitle": "Tangerine motor insurance",
+    "summary": "Tangerine General Insurance's digital third-party motor-policy route for entering NIN, policyholder and vehicle details and purchasing the current annual cover online.",
+    "category": "Insurance",
+    "agencySlug": "tangerine-insurance",
+    "feeLabel": "₦15,000 current annual third-party premium",
+    "feeNote": "Tangerine currently publishes a ₦15,000 flat annual premium for its retail third-party motor plan. Confirm the live product page before payment because regulatory pricing or terms can change.",
+    "timeline": "The online policy is generated after the customer completes the purchase information and payment through Tangerine's motor-policy system.",
+    "status": "verified",
+    "officialPortal": "https://general.tangerine.africa/retail-plans/motor-insurance-third-party",
+    "requirements": [
+      "A policyholder aged 18 or older with an insurable interest in the vehicle",
+      "The policyholder's NIN, date of birth, name, email, phone number and residential information",
+      "The vehicle make, colour, engine capacity, year, engine number, chassis number and registration number",
+      "Acceptance of Tangerine's data/privacy and policy terms before completing the purchase"
+    ],
+    "steps": [
+      "Open Tangerine General Insurance's official third-party motor page and choose the purchase option.",
+      "Review the current annual premium, policy term and third-party cover before entering customer information.",
+      "Enter the NIN, date of birth, contact/address details and the vehicle identification information requested by the policy form.",
+      "Review the generated policy amount and complete payment through Tangerine's official motor-policy system.",
+      "Save the issued policy/certificate and verify the vehicle registration, insured name and policy period after purchase."
+    ],
+    "notes": [
+      "Tangerine also offers comprehensive and other motor products with different premiums and cover.",
+      "The provider's current third-party plan page states a maximum 12-month term.",
+      "This guide explains the purchase process and does not recommend one insurance product over another."
+    ],
+    "sources": [
+      {
+        "label": "Tangerine Third Party Motor",
+        "agency": "Tangerine General Insurance",
+        "url": "https://general.tangerine.africa/retail-plans/motor-insurance-third-party",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Tangerine Third Party Policy Form",
+        "agency": "Tangerine General Insurance",
+        "url": "https://motor.tangerine.africa/GeneratePolicyDirectNIIP.aspx",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "tangerine-file-track-insurance-claim",
+      "heirs-buy-motor-insurance-online",
+      "axa-mansard-third-party-motor-insurance",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Tangerine third party insurance",
+      "buy Tangerine motor insurance",
+      "Tangerine car insurance Nigeria",
+      "Tangerine motor policy online",
+      "Tangerine insurance ₦15000"
+    ]
+  },
+  {
+    "slug": "tangerine-file-track-insurance-claim",
+    "title": "How to file and track a Tangerine General insurance claim",
+    "shortTitle": "Tangerine claim portal",
+    "summary": "Tangerine General Insurance's digital claims portal for submitting motor, fire or non-motor claims, uploading supporting documents and tracking claim status online.",
+    "category": "Insurance",
+    "agencySlug": "tangerine-insurance",
+    "feeLabel": "No claim-lodgement fee stated",
+    "feeNote": "Tangerine does not state a separate fee for submitting or tracking a claim through its digital claims portal.",
+    "timeline": "Claim processing depends on the policy, loss and submitted evidence; the portal provides ongoing status tracking rather than one universal settlement deadline.",
+    "status": "verified",
+    "officialPortal": "https://general.tangerine.africa/make-claim",
+    "requirements": [
+      "An active Tangerine policy and the policy/insured details needed to identify the claim",
+      "Selection of the correct claim type such as motor, fire or other non-motor insurance",
+      "Accurate incident/loss information for the online claim form",
+      "Supporting documents, photographs or other evidence requested for the selected claim category"
+    ],
+    "steps": [
+      "Open Tangerine General Insurance's official Make a Claim portal and choose the applicable claim type.",
+      "Complete the online claim form with the policyholder, policy and incident information.",
+      "Upload the supporting documents and evidence requested for the selected loss.",
+      "Submit the claim for review and keep the acknowledgement or claim reference.",
+      "Use Tangerine's Track a Claim feature to monitor progress and respond to any request from the claims team."
+    ],
+    "notes": [
+      "Tangerine also publishes an email/branch submission route for customers using downloadable claim forms.",
+      "The digital portal supports online status tracking after submission.",
+      "Claim approval and settlement remain subject to the policy terms and claims assessment."
+    ],
+    "sources": [
+      {
+        "label": "Tangerine Make a Claim",
+        "agency": "Tangerine General Insurance",
+        "url": "https://general.tangerine.africa/make-claim",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Tangerine Digital Claims Portal Guide",
+        "agency": "Tangerine General Insurance",
+        "url": "https://general.tangerine.africa/blog/make-and-track-your-insurance-claim-online-with-the-tangerine-claims-portal",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "tangerine-buy-third-party-motor-insurance",
+      "heirs-file-general-insurance-claim",
+      "cornerstone-motor-claim",
+      "nem-file-claim"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Tangerine insurance claim",
+      "Tangerine claim portal",
+      "track Tangerine claim",
+      "Tangerine motor claim Nigeria",
+      "file Tangerine claim online"
+    ]
+  },
+  {
+    "slug": "sovereign-trust-buy-motor-insurance-online",
+    "title": "How to get a Sovereign Trust motor insurance quote and buy online",
+    "shortTitle": "Sovereign Trust motor insurance",
+    "summary": "Sovereign Trust Insurance's online motor-insurance route for choosing motor cover, requesting a quote through the provider's digital channel and completing the policy purchase with the required vehicle/customer information.",
+    "category": "Insurance",
+    "agencySlug": "sovereign-trust-insurance",
+    "feeLabel": "Premium depends on vehicle and selected motor cover",
+    "feeNote": "Sovereign Trust offers multiple motor cover types and online quote/buy functionality. Use the premium generated for the selected vehicle and cover rather than a generic fixed price.",
+    "timeline": "The quote is generated from the submitted product/customer information; policy completion depends on acceptance of the quote, payment and any underwriting requirements.",
+    "status": "verified",
+    "officialPortal": "https://stiplc.com/web/products-details.php?a=motor-insurance",
+    "requirements": [
+      "A vehicle that fits the motor policy being requested",
+      "The policyholder's contact and identification information requested by the quote/purchase system",
+      "Vehicle information sufficient for Sovereign Trust to price and issue the selected motor cover",
+      "A supported payment method after the customer accepts the insurer's generated quote"
+    ],
+    "steps": [
+      "Open Sovereign Trust Insurance's official Motor Insurance product page and select the online quote or buy option.",
+      "Choose the motor cover and provide the customer and vehicle information requested by the quotation system.",
+      "Review the generated premium, cover limits and terms before accepting the quote.",
+      "Complete the online payment or purchase steps shown by Sovereign Trust.",
+      "Save the issued insurance documentation and verify the vehicle and policyholder information after the policy is activated."
+    ],
+    "notes": [
+      "Sovereign Trust offers third-party and broader motor cover options, so premiums and benefits differ.",
+      "The insurer also provides online policy validation and mobile/digital service channels.",
+      "This guide explains the purchase process and does not recommend a particular policy."
+    ],
+    "sources": [
+      {
+        "label": "Sovereign Trust Motor Insurance",
+        "agency": "Sovereign Trust Insurance Plc",
+        "url": "https://stiplc.com/web/products-details.php?a=motor-insurance",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Sovereign Trust Home / Quote and Buy",
+        "agency": "Sovereign Trust Insurance Plc",
+        "url": "https://www.stiplc.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sovereign-trust-file-motor-claim",
+      "heirs-buy-motor-insurance-online",
+      "tangerine-buy-third-party-motor-insurance",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Sovereign Trust motor insurance",
+      "STI motor insurance Nigeria",
+      "buy Sovereign Trust insurance online",
+      "Sovereign Trust motor quote",
+      "STI car insurance"
+    ]
+  },
+  {
+    "slug": "sovereign-trust-file-motor-claim",
+    "title": "How to file a Sovereign Trust motor insurance claim",
+    "shortTitle": "Sovereign Trust motor claim",
+    "summary": "Sovereign Trust Insurance's claim-reporting route for submitting motor-loss information online and providing the vehicle, repair, police and third-party documents applicable to the claim.",
+    "category": "Insurance",
+    "agencySlug": "sovereign-trust-insurance",
+    "feeLabel": "No claim-lodgement fee stated",
+    "feeNote": "Sovereign Trust does not state a separate charge for reporting an insurance claim through its published website or claims email route.",
+    "timeline": "Claim timing depends on the loss and supporting documents; Sovereign Trust does not publish one universal motor-claim settlement deadline in its current FAQ.",
+    "status": "verified",
+    "officialPortal": "https://admin.stiplc.com/web/faq.php",
+    "requirements": [
+      "A completed claim report/form identifying the policy and insured vehicle",
+      "A copy of the valid vehicle licence and photographs of the damaged vehicle for a damage claim",
+      "A repair estimate from a garage or vehicle workshop",
+      "Third-party acceptance/liability evidence, insurance certificate or police report when a third party is involved",
+      "For theft claims, the additional police, licence, purchase/ownership and key documents listed by Sovereign Trust"
+    ],
+    "steps": [
+      "Open Sovereign Trust's official website/FAQ and start the online claim-reporting route for the insured loss.",
+      "Complete the claim information and identify the policy, vehicle and incident accurately.",
+      "Attach the vehicle licence, damage photographs and repair estimate required for the motor claim.",
+      "Add the police report, third-party documents or theft-specific ownership/key evidence when those facts apply to the loss.",
+      "Submit the claim online or through the insurer's published claims email and keep the acknowledgement while the claims team assesses it."
+    ],
+    "notes": [
+      "Sovereign Trust's FAQ lists different supporting documents for third-party and theft claims.",
+      "The insurer says customers can use its approved repair/towing support or their own repair shop, subject to claims handling.",
+      "Submitting documents does not guarantee that a claim is payable under the policy."
+    ],
+    "sources": [
+      {
+        "label": "Sovereign Trust FAQ — Claims",
+        "agency": "Sovereign Trust Insurance Plc",
+        "url": "https://admin.stiplc.com/web/faq.php",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sovereign-trust-buy-motor-insurance-online",
+      "heirs-file-general-insurance-claim",
+      "tangerine-file-track-insurance-claim",
+      "cornerstone-motor-claim"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Sovereign Trust claim",
+      "STI motor claim Nigeria",
+      "Sovereign Trust insurance claim form",
+      "Sovereign Trust claims email",
+      "file STI motor claim"
+    ]
   }
 ]
