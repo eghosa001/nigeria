@@ -4,7 +4,10 @@ import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { jobOpportunities } from "@/lib/jobs";
+import { isEffectivelyOpen } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Jobs Open Now in Nigeria October 2026",
@@ -13,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function OpenJobsPage() {
-  const items = jobOpportunities.filter((item) => item.status === "open");
+  const items = jobOpportunities.filter((item) => isEffectivelyOpen(item));
   const base = getSiteUrl();
   const ld = {
     "@context": "https://schema.org",

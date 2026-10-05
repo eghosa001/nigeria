@@ -5,8 +5,14 @@ import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
+import { JobApplyLink } from "@/components/job-apply-link";
 import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
+import { getJobTopicsForOpportunity } from "@/lib/job-topics";
+import { getEmployerOpportunities } from "@/lib/job-employers";
+import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
+
+export const revalidate = 3600;
 
 export function generateStaticParams() {
   return jobOpportunities.map((item) => ({ slug: item.slug }));
@@ -28,29 +34,43 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const item = getJobOpportunity(slug);
   if (!item) notFound();
 
+  const relatedTopics = getJobTopicsForOpportunity(item);
+  const employerOpportunities = getEmployerOpportunities(item.organization, item.slug).slice(0, 4);
+  const effectiveStatus = getEffectiveJobStatus(item);
+  const effectiveStatusLabel = getEffectiveStatusLabel(item);
+  const sectorBrowse =
+    item.sector === "Government"
+      ? { href: "/jobs/government", label: "Browse more government opportunities" }
+      : item.sector === "International"
+        ? { href: "/jobs/categories/ngo-development", label: "Browse NGO & international opportunities" }
+        : { href: "/jobs/private", label: "Browse more private-sector opportunities" };
+
   const base = getSiteUrl();
+  const pageUrl = base + "/jobs/" + item.slug;
   const pageLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     name: item.title,
     description: item.summary,
-    url: base + "/jobs/" + item.slug,
+    url: pageUrl,
     dateModified: item.verifiedAt,
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     about: { "@type": "Organization", name: item.organization }
   };
+  const jobPostingLd = buildJobPostingJsonLd(item, pageUrl);
 
   return (
     <>
       <JsonLd data={pageLd} />
+      {jobPostingLd ? <JsonLd data={jobPostingLd} /> : null}
       <section className="job-detail-hero">
         <div className="container job-detail-hero-grid">
           <div>
             <Link href="/jobs" className="back-link">← Jobs & Careers</Link>
             <div className="job-detail-status-line">
-              <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+              <span className={"job-status job-status-" + effectiveStatus}>{effectiveStatusLabel}</span>
               <span>{item.sector}</span>
-              <span>Checked {new Date(item.verifiedAt + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</span>
+              <span>{getJobFreshnessLabel(item)}</span>
             </div>
             <p className="job-organisation">{item.organization}</p>
             <h1>{item.title}</h1>
@@ -58,11 +78,13 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             {item.nextMilestone ? <div className="job-milestone"><strong>Current next step</strong><p>{item.nextMilestone}</p></div> : null}
           </div>
 
-          <aside className="job-apply-card">
+          <aside className="job-apply-card" id="official-application">
             <span>Official application source</span>
             <strong>{item.organization}</strong>
             <p>MyNigeriaGuide does not receive your application, password, NIN or recruitment payment.</p>
-            <a className="button" href={item.officialUrl} target="_blank" rel="noreferrer">{item.officialUrlLabel} ↗</a>
+            <JobApplyLink className="button" href={item.officialUrl} slug={item.slug} employer={item.organization} status={effectiveStatus}>
+              {effectiveStatus === "open" ? item.officialUrlLabel : "Check current official status"} ↗
+            </JobApplyLink>
             <small>Verify the destination domain before entering personal information.</small>
           </aside>
         </div>
@@ -72,7 +94,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             title={"Should you apply for " + item.title + "?"}
             summary={item.summary}
             facts={[
-              { label: "Status", value: item.statusLabel },
+              { label: "Status", value: effectiveStatusLabel },
               { label: "Location", value: item.location },
               { label: "Deadline / next step", value: item.deadline ? new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : (item.nextMilestone ?? "Check the live official page") },
               { label: "Best fit", value: item.audiences.slice(0, 3).join(", ") },
@@ -80,7 +102,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             links={[
               { href: "#requirements", label: "Check requirements" },
               { href: "#apply", label: "How to apply" },
-              { href: item.officialUrl, label: item.officialUrlLabel, external: true, primary: true },
+              { href: "#official-application", label: effectiveStatus === "open" ? "Open official application" : "Check official status", primary: true },
             ]}
             note={"Verified " + item.verifiedAt + ". Check eligibility first; only then open the official application source."}
           />
@@ -157,9 +179,23 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <p>Requirements can change between recruitment cycles.</p>
               <p>Never send passwords, one-time codes or payment to MyNigeriaGuide.</p>
             </div>
-            <Link href={item.sector === "Government" ? "/jobs/government" : "/jobs/private"} className="job-sidebar-link">
-              Browse more {item.sector.toLowerCase()} opportunities →
-            </Link>
+            <Link href={sectorBrowse.href} className="job-sidebar-link">{sectorBrowse.label} →</Link>
+            {employerOpportunities.length ? (
+              <div className="job-sidebar-card">
+                <strong>More from {item.organization}</strong>
+                {employerOpportunities.map((related) => (
+                  <p key={related.slug}><Link href={"/jobs/" + related.slug}>{related.title} →</Link></p>
+                ))}
+              </div>
+            ) : null}
+            {relatedTopics.length ? (
+              <div className="job-sidebar-card">
+                <strong>Related career areas</strong>
+                {relatedTopics.map((topic) => (
+                  <p key={topic.slug}><Link href={"/jobs/categories/" + topic.slug}>{topic.shortTitle} →</Link></p>
+                ))}
+              </div>
+            ) : null}
           </aside>
         </div>
       </section>

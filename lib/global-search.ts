@@ -1,3 +1,6 @@
+import { getEffectiveJobStatus } from "@/lib/job-runtime";
+import { careerGuides } from "@/lib/career-guides";
+
 function normalise(value: string) {
   return value
     .normalize("NFD")
@@ -45,6 +48,7 @@ export async function searchGlobalCatalog(query: string) {
     return {
       serviceResults: [],
       jobResults: [],
+      careerGuideResults: [],
       exploreResults: [],
       placeResults: [],
       movieResults: [],
@@ -91,6 +95,25 @@ export async function searchGlobalCatalog(query: string) {
     .slice(0, 16)
     .map((entry) => entry.item);
 
+  const careerGuideResults = careerGuides
+    .map((guide) => ({
+      item: guide,
+      score: relevance(
+        query,
+        guide.title,
+        [
+          guide.description,
+          guide.summary,
+          guide.answer,
+          ...guide.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...(section.bullets ?? [])]),
+        ].join(" "),
+      ),
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
+    .slice(0, 6)
+    .map((entry) => entry.item);
+
   const jobResults = jobOpportunities
     .map((item) => ({
       item,
@@ -98,7 +121,7 @@ export async function searchGlobalCatalog(query: string) {
         query,
         item.title,
         [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
-      ),
+      ) + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4),
     }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
@@ -195,6 +218,7 @@ export async function searchGlobalCatalog(query: string) {
   return {
     serviceResults,
     jobResults,
+    careerGuideResults,
     exploreResults,
     placeResults,
     movieResults,
@@ -209,6 +233,7 @@ export async function searchGlobalCatalog(query: string) {
       serviceResults.length +
       exploreResults.length +
       placeResults.length +
-      jobResults.length,
+      jobResults.length +
+      careerGuideResults.length,
   };
 }

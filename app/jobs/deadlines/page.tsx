@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
+import { isEffectivelyOpen } from "@/lib/job-runtime";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Nigeria Job & Recruitment Deadlines",
@@ -10,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function JobDeadlinesPage() {
-  const open = jobOpportunities.filter((item) => item.status === "open");
+  const open = jobOpportunities.filter((item) => isEffectivelyOpen(item));
   const dated = open.filter((item) => item.deadline).sort((a, b) => (a.deadline || "").localeCompare(b.deadline || ""));
   const ongoing = open.filter((item) => !item.deadline);
 
