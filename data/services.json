@@ -15661,5 +15661,586 @@
       "*955*132#",
       "block OPay card lost phone"
     ]
+  },
+  {
+    "slug": "kuda-personal-account-opening",
+    "title": "How to open a Kuda personal account",
+    "shortTitle": "Kuda personal account",
+    "summary": "Kuda's app/web onboarding route for creating a Nigerian personal account with phone/email, BVN, identity and address verification, while exposing a current age-requirement conflict across Kuda's own official pages.",
+    "category": "Banking",
+    "agencySlug": "kuda",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "Kuda does not state a separate fee for opening the personal account. Transfer, card and other service charges are governed by the current account terms and in-app pricing.",
+    "timeline": "Kuda does not publish one universal completion time for every personal-account application; identity and address verification can add time before the highest account tier is available.",
+    "status": "conflict",
+    "officialPortal": "https://app.kuda.com/",
+    "requirements": [
+      "A Nigerian mobile phone number and email address for the Kuda profile",
+      "A Bank Verification Number (BVN) for the standard personal-account onboarding route",
+      "A National Identification Number (NIN) when the account is being upgraded beyond the BVN-only tier",
+      "A valid identity document and facial-identity capture when Kuda requests full identity verification",
+      "A Nigerian residential address and proof of address for the fully verified account tier"
+    ],
+    "steps": [
+      "Open Kuda's official app or web banking page and create the personal profile with the phone number and email address.",
+      "Enter the BVN and the personal information requested by Kuda and make sure the profile details match the customer's legal identity.",
+      "Complete the facial-identity and valid-ID verification shown during onboarding.",
+      "Add the NIN and residential-address evidence when Kuda requests the higher account tier or full address verification.",
+      "Create the account password and six-digit transaction PIN, then confirm the account tier and limits shown in the app before making large transfers."
+    ],
+    "notes": [
+      "Kuda's August 2026 account-opening help article says the applicant must be at least 18, while its current FAQ still says 16; this guide therefore shows a conflict rather than silently choosing one age.",
+      "Kuda's official tier guidance says BVN-only accounts are Tier 1, BVN plus NIN is Tier 2, and BVN plus NIN plus verified address is Tier 3.",
+      "Never send a password, PIN or OTP to someone claiming to be a Kuda support agent."
+    ],
+    "sources": [
+      {
+        "label": "Kuda — How To Open A Kuda Account",
+        "agency": "Kuda Microfinance Bank",
+        "url": "https://help.kuda.com/en/articles/9240186-how-to-open-a-kuda-account",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-05"
+      },
+      {
+        "label": "Kuda FAQ",
+        "agency": "Kuda Microfinance Bank",
+        "url": "https://www.kuda.com/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Kuda Security",
+        "agency": "Kuda Microfinance Bank",
+        "url": "https://www.kuda.com/security/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kuda-account-tier-upgrade",
+      "bvn-enrolment",
+      "bvn-retrieval",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Kuda account",
+      "Kuda account requirements",
+      "Kuda BVN NIN account",
+      "Kuda signup Nigeria",
+      "Kuda account age requirement"
+    ]
+  },
+  {
+    "slug": "kuda-account-tier-upgrade",
+    "title": "How to upgrade a Kuda account tier",
+    "shortTitle": "Kuda tier upgrade",
+    "summary": "Kuda's current tier-upgrade route for moving from BVN-only Tier 1 to BVN+NIN Tier 2 and then to Tier 3 by adding and verifying a residential address.",
+    "category": "Banking",
+    "agencySlug": "kuda",
+    "feeLabel": "No tier-upgrade fee stated",
+    "feeNote": "Kuda does not state a separate fee for adding NIN or completing address verification for an account-tier upgrade.",
+    "timeline": "Kuda says Tier 3 address verification can take a week or less after the customer submits a valid address and proof of address.",
+    "status": "verified",
+    "officialPortal": "https://app.kuda.com/",
+    "requirements": [
+      "A Kuda personal account with a BVN already linked for Tier 1",
+      "A valid National Identification Number for the Tier 1 to Tier 2 upgrade",
+      "A current residential address for the Tier 2 to Tier 3 upgrade",
+      "Proof of the residential address uploaded in the form requested by Kuda for address verification"
+    ],
+    "steps": [
+      "Open the Kuda app and check the current account tier or limits before starting an upgrade.",
+      "For a Tier 1 account, add the customer's NIN to move the account to Tier 2 after Kuda verifies the identifier.",
+      "For a Tier 2 account, enter the current residential address and upload the proof-of-address evidence requested in the app.",
+      "Submit the address verification and keep the account active while Kuda completes the residence check.",
+      "Reopen the account-tier or limits area after verification and confirm that the Tier 3 status and revised limits are displayed."
+    ],
+    "notes": [
+      "Kuda's August 2026 guidance explicitly defines Tier 1 as BVN, Tier 2 as BVN+NIN, and Tier 3 as BVN+NIN+verified address.",
+      "The provider says a valid address plus proof of address is required for the Tier 3 upgrade.",
+      "Account limits should be read from the current Kuda tier page or app because regulatory limits can change."
+    ],
+    "sources": [
+      {
+        "label": "Kuda — New Account Tiers, Rules And Limits",
+        "agency": "Kuda Microfinance Bank",
+        "url": "https://help.kuda.com/en/articles/9424612-new-account-tiers-rules-and-limits",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-13"
+      },
+      {
+        "label": "Kuda Security",
+        "agency": "Kuda Microfinance Bank",
+        "url": "https://www.kuda.com/security/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kuda-personal-account-opening",
+      "bvn-data-update",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "upgrade Kuda account",
+      "Kuda Tier 2",
+      "Kuda Tier 3",
+      "Kuda NIN upgrade",
+      "Kuda address verification"
+    ]
+  },
+  {
+    "slug": "ikeja-electric-pay-bill-buy-token",
+    "title": "How to pay an Ikeja Electric bill or buy a prepaid token",
+    "shortTitle": "Ikeja Electric payment",
+    "summary": "Ikeja Electric's payment routes for prepaid and postpaid customers, using a meter/account number through supported online, banking, voucher or payment-centre channels and retrieving the energy token where applicable.",
+    "category": "Electricity",
+    "agencySlug": "ikeja-electric",
+    "feeLabel": "Electricity amount plus any channel charge",
+    "feeNote": "The electricity amount depends on the customer's meter/account and tariff. Ikeja Electric's FAQ states that its 20052 SMS recharge method costs ₦10 per SMS; other payment-channel charges can differ.",
+    "timeline": "A successful channel can return a payment confirmation or prepaid token immediately, while payment exceptions require the customer to use Ikeja Electric's support or token-management route.",
+    "status": "verified",
+    "officialPortal": "https://www.ikejaelectric.com/",
+    "requirements": [
+      "The Ikeja Electric meter number for a prepaid customer or account number for a postpaid customer",
+      "The electricity amount the customer intends to purchase or pay toward the bill",
+      "A supported payment channel such as Ikeja Electric online payment, internet/mobile banking, an approved payment centre or a valid recharge voucher",
+      "A phone or meter user interface for receiving and entering the 20-digit STS token when the prepaid meter uses token loading"
+    ],
+    "steps": [
+      "Open Ikeja Electric's official website and choose the payment route, or use one of the payment channels listed by Ikeja Electric.",
+      "Enter the prepaid meter number or postpaid account number and confirm that the returned customer details match the intended supply address.",
+      "Enter the amount and complete payment through the selected official channel, keeping the receipt or transaction reference.",
+      "For an STS prepaid meter, retrieve the generated 20-digit token from the payment result or supported token route and enter it on the meter or UIU.",
+      "If payment succeeds but the token is missing or fails to load, use Ikeja Electric's Token Management, Token Retrieval or customer-care route with the transaction evidence."
+    ],
+    "notes": [
+      "Ikeja Electric's current site lists Online Payment, payment centres, Token Retrieval and remote token-loading tools as customer-service options.",
+      "Its FAQ also documents SMS recharge with the 20052 short code and a ₦10 SMS charge.",
+      "Always verify the meter or account number before payment because token purchases are tied to the electricity customer record."
+    ],
+    "sources": [
+      {
+        "label": "Ikeja Electric Home",
+        "agency": "Ikeja Electric Plc",
+        "url": "https://www.ikejaelectric.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ikeja Electric FAQs",
+        "agency": "Ikeja Electric Plc",
+        "url": "https://www.ikejaelectric.com/all-faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ikeja Electric Payment Centers",
+        "agency": "Ikeja Electric Plc",
+        "url": "https://www.ikejaelectric.com/payment-centers/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ikeja-electric-prepaid-meter-application",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Ikeja Electric buy token",
+      "Ikeja Electric pay bill",
+      "Ikeja Electric token retrieval",
+      "IE prepaid meter recharge",
+      "Ikeja Electric online payment"
+    ]
+  },
+  {
+    "slug": "ikeja-electric-prepaid-meter-application",
+    "title": "How to apply for an Ikeja Electric prepaid meter",
+    "shortTitle": "Ikeja Electric meter application",
+    "summary": "Ikeja Electric's current metering route beginning with customer/KYC registration and the Apply for Prepaid Meter tools, followed by the applicable free or MAP metering workflow, site readiness and installation.",
+    "category": "Electricity",
+    "agencySlug": "ikeja-electric",
+    "feeLabel": "Depends on the active metering programme",
+    "feeNote": "Ikeja Electric currently exposes both prepaid-meter application/MAP routes and free-metering programme information. Confirm the programme assigned to the customer before paying any meter vendor or installer.",
+    "timeline": "Ikeja Electric does not publish one universal installation time for all active metering programmes; survey, programme availability, meter readiness and vendor scheduling affect installation.",
+    "status": "verified",
+    "officialPortal": "https://www.ikejaelectric.com/",
+    "requirements": [
+      "An Ikeja Electric customer/account record for the premises that needs metering",
+      "Completed customer or KYC registration through the prepaid-meter application route",
+      "A premises that can pass the technical/site-readiness checks required before installation",
+      "Consent or payment only through the metering programme and accredited route assigned to the application"
+    ],
+    "steps": [
+      "Open Ikeja Electric's official website and use Apply for Prepaid Meter or the current KYC Registration option.",
+      "Complete the customer/KYC information for the electricity account and submit the meter request.",
+      "Follow the metering instruction shown for the account, including Consent to MAP when the paid Meter Asset Provider route is the applicable programme.",
+      "Allow the site survey or readiness check and complete any service-cable or premises preparation Ikeja Electric identifies before installation.",
+      "Keep the application/payment evidence and track the meter status through Ikeja Electric; do not pay an unverified installer or vendor outside the assigned official route."
+    ],
+    "notes": [
+      "Ikeja Electric's current navigation separates paid MAP-related tools from free metering programmes and other metering initiatives.",
+      "Its published guidance says customer/KYC registration is part of the metering process.",
+      "A meter installation and later meter activation/token loading are separate stages."
+    ],
+    "sources": [
+      {
+        "label": "Ikeja Electric Home / Apply for Prepaid Meter",
+        "agency": "Ikeja Electric Plc",
+        "url": "https://www.ikejaelectric.com/home/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ikeja Electric — Get Metered in 3 Easy Steps",
+        "agency": "Ikeja Electric Plc",
+        "url": "https://www.ikejaelectric.com/get-metered-in-3-easy-steps/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ikeja Electric National Mass Metering Programme",
+        "agency": "Ikeja Electric Plc",
+        "url": "https://www.ikejaelectric.com/national-mass-metering/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ikeja-electric-pay-bill-buy-token",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Ikeja Electric prepaid meter application",
+      "apply for Ikeja Electric meter",
+      "Ikeja Electric KYC meter",
+      "Ikeja Electric MAP meter",
+      "get metered Ikeja Electric"
+    ]
+  },
+  {
+    "slug": "toefl-registration-nigeria",
+    "title": "How to register for TOEFL iBT in Nigeria",
+    "shortTitle": "TOEFL Nigeria registration",
+    "summary": "ETS's TOEFL iBT registration route for Nigerian candidates through an ETS account or ETS-listed Nigerian authorised agents, with exact-name ID matching, test-centre/home options and current Nigeria-specific agent pricing.",
+    "category": "Education",
+    "agencySlug": "ets",
+    "feeLabel": "₦220,000 through ETS-listed Nigerian authorised agents",
+    "feeNote": "ETS's Nigeria page currently advertises ₦220,000 through its listed authorised Nigerian agents. Direct ETS-account pricing, taxes and service fees can differ, so confirm the checkout amount for the selected test and channel.",
+    "timeline": "Candidates choose an available test date during registration. ETS recommends choosing a date 2–3 months before the earliest application deadline and registering about four months before the desired date where possible.",
+    "status": "verified",
+    "officialPortal": "https://www.ets.org/toefl/test-takers/ibt/register.html",
+    "requirements": [
+      "An ETS account with the candidate's first and last name and date of birth matching the identification that will be presented on test day",
+      "A valid original government-issued identification document that meets ETS rules for the candidate's citizenship and testing location",
+      "A selected TOEFL iBT test-centre or eligible at-home appointment and an available test date",
+      "A supported payment method, or a valid booking/payment route through an ETS-listed authorised Nigerian agent"
+    ],
+    "steps": [
+      "Open ETS's official TOEFL iBT registration page and create or sign in to the candidate's ETS account.",
+      "Check the identification rules and make sure the account name and date of birth exactly match the test-day ID before scheduling.",
+      "Search for an available Nigerian test centre or eligible at-home appointment and choose the test date.",
+      "Review the fee shown in the ETS checkout or use one of the Nigerian authorised-agent routes listed by ETS and complete payment.",
+      "Save the test confirmation in the ETS account and use the same account later for rescheduling, cancellation, scores and additional score reports."
+    ],
+    "notes": [
+      "ETS's Nigeria page lists authorised agents in Nigerian cities and currently advertises a ₦220,000 agent registration price.",
+      "ETS says a name or date-of-birth mismatch against the accepted ID can prevent the candidate from testing without a refund.",
+      "Late registration, rescheduling and additional score services carry separate ETS fees."
+    ],
+    "sources": [
+      {
+        "label": "ETS — TOEFL in Nigeria",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/toefl/nigeria.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ETS — How to Register for TOEFL iBT",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/toefl/test-takers/ibt/register/how-to-register.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ETS — TOEFL iBT ID Requirements",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/content/ets-org/language-master/in/home/toefl/test-takers/ibt/register/id.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ETS — TOEFL iBT Fees",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/toefl/test-takers/ibt/register/fees.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "gre-registration-nigeria",
+      "pte-registration-nigeria",
+      "gmat-registration-nigeria",
+      "british-council-ielts-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "TOEFL registration Nigeria",
+      "TOEFL fee Nigeria",
+      "register TOEFL Nigeria",
+      "TOEFL test center Nigeria",
+      "ETS TOEFL Nigeria"
+    ]
+  },
+  {
+    "slug": "gre-registration-nigeria",
+    "title": "How to register for the GRE General Test from Nigeria",
+    "shortTitle": "GRE Nigeria registration",
+    "summary": "ETS's GRE General Test registration route for Nigerian candidates through an ETS account, with test-centre or eligible at-home scheduling, matching ID details and the current worldwide fee that applies outside China and India.",
+    "category": "Education",
+    "agencySlug": "ets",
+    "feeLabel": "US$249 current GRE General Test fee",
+    "feeNote": "ETS states that from 1 August 2026 the GRE General Test is US$249 in all areas other than China and India. Payment currency, taxes and bank/card conversion charges can affect the final amount paid from Nigeria.",
+    "timeline": "The appointment date is selected from available test-centre or at-home slots. ETS allows retaking the GRE General Test once every 21 days, up to five times in a rolling 12-month period.",
+    "status": "verified",
+    "officialPortal": "https://www.ets.org/gre/test-takers/general-test/register.html",
+    "requirements": [
+      "An ETS account whose registered name exactly matches the identification document the candidate will present on test day",
+      "A valid identification document that meets ETS rules for the candidate's citizenship and test location",
+      "A selected GRE test-centre or eligible at-home appointment and an available test date",
+      "A supported payment method for the current GRE test and any optional registration services"
+    ],
+    "steps": [
+      "Open ETS's official GRE General Test registration page and create or sign in to the candidate's ETS account.",
+      "Confirm that the ETS account name exactly matches the valid identification document that will be used on test day.",
+      "Choose the test-centre or eligible at-home option and select an available GRE appointment.",
+      "Review the current test and service fees, complete payment and confirm the scheduled appointment.",
+      "Keep the registration in the ETS account, which can later be used to reschedule/cancel, view scores and order additional score reports."
+    ],
+    "notes": [
+      "ETS's current fee page lists US$249 for the GRE General Test in all areas other than China and India.",
+      "Changing the test centre or rescheduling currently carries a separate US$55 fee for locations outside China.",
+      "The same ETS account can be used for registration, approved accommodations, scores and additional score reports."
+    ],
+    "sources": [
+      {
+        "label": "ETS — GRE Registration",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/gre/test-takers/general-test/register.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ETS — GRE Account",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/gre/test-takers/general-test/register/ets-account.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ETS — GRE Fees",
+        "agency": "Educational Testing Service",
+        "url": "https://www.ets.org/gre/test-takers/general-test/register/fees.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "toefl-registration-nigeria",
+      "pte-registration-nigeria",
+      "gmat-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "GRE registration Nigeria",
+      "GRE fee Nigeria",
+      "register GRE Nigeria",
+      "GRE test centre Nigeria",
+      "ETS GRE Nigeria"
+    ]
+  },
+  {
+    "slug": "pte-registration-nigeria",
+    "title": "How to register for PTE in Nigeria",
+    "shortTitle": "PTE Nigeria registration",
+    "summary": "Pearson PTE's Nigeria booking route for selecting the correct PTE test, finding an available Nigerian test centre, creating a myPTE account and paying directly or with a voucher from an approved Nigerian reseller.",
+    "category": "Education",
+    "agencySlug": "pearson-pte",
+    "feeLabel": "Price depends on the selected PTE test and appointment",
+    "feeNote": "Pearson displays current test-centre pricing during availability/booking and also supports approved Nigeria voucher resellers. Confirm the exact PTE test and current price before buying a voucher or paying online.",
+    "timeline": "Test dates depend on available Nigerian centres and sessions. Pearson says PTE Academic results are typically available in about two days, but the booking itself is confirmed after account setup and full payment.",
+    "status": "verified",
+    "officialPortal": "https://www.pearsonpte.com/test-centers-and-fees/",
+    "requirements": [
+      "The PTE test type that matches the study, migration, work or UKVI purpose",
+      "A myPTE account with personal information matching the valid identification document used on test day",
+      "An available Nigerian test centre, date and time for the selected PTE test",
+      "Full payment through Pearson's supported booking methods or a valid voucher bought from a Pearson-approved Nigerian reseller"
+    ],
+    "steps": [
+      "Open Pearson PTE's official test-centres and fees page and select the PTE test that matches the candidate's purpose.",
+      "Search Nigeria for an available test centre and choose an appointment date and time.",
+      "Create or sign in to the myPTE account and enter the candidate details exactly as they appear on the valid test-day identification.",
+      "Pay directly through the booking flow or enter a voucher code purchased from a Pearson-approved Nigerian reseller.",
+      "Save the booking confirmation in myPTE and arrive with the required valid ID at least 30 minutes before a test-centre appointment."
+    ],
+    "notes": [
+      "Pearson lists approved PTE voucher resellers specifically for Nigeria and warns against unofficial low-price or guaranteed-score offers.",
+      "PTE Core is test-centre only; the correct PTE product depends on the candidate's application route.",
+      "Pearson's test-centre rules require the booking profile and identification details to match."
+    ],
+    "sources": [
+      {
+        "label": "Pearson PTE — Nigeria Voucher Resellers",
+        "agency": "Pearson PTE",
+        "url": "https://www.pearsonpte.com/test-centers-and-fees/pte-voucher-nigeria/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Pearson PTE — Test Centers and Fees",
+        "agency": "Pearson PTE",
+        "url": "https://www.pearsonpte.com/test-centers-and-fees/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Pearson PTE — How to Book",
+        "agency": "Pearson PTE",
+        "url": "https://www.pearsonpte.com/articles/how-to-book-your-pte-exam/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Pearson PTE — Booking & Managing Test",
+        "agency": "Pearson PTE",
+        "url": "https://www.pearsonpte.com/help-center/booking-managing-test/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "toefl-registration-nigeria",
+      "gre-registration-nigeria",
+      "gmat-registration-nigeria",
+      "british-council-ielts-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PTE registration Nigeria",
+      "PTE fee Nigeria",
+      "book PTE Nigeria",
+      "PTE test centre Nigeria",
+      "PTE voucher Nigeria"
+    ]
+  },
+  {
+    "slug": "gmat-registration-nigeria",
+    "title": "How to register for the GMAT from Nigeria",
+    "shortTitle": "GMAT Nigeria registration",
+    "summary": "GMAC's official mba.com registration route for Nigerian candidates: create an account, choose test-centre or online delivery, complete the profile, choose an appointment and pay the country-specific exam fee.",
+    "category": "Education",
+    "agencySlug": "gmac",
+    "feeLabel": "Nigeria price shown in mba.com country-specific checkout",
+    "feeNote": "GMAC's current payment page requires the candidate to select the testing location to see location-specific pricing, taxes and regulations. Use the Nigeria price shown during registration rather than an older cached fee table.",
+    "timeline": "The appointment is confirmed after the candidate selects a test centre or online delivery, date/time and successfully submits payment.",
+    "status": "verified",
+    "officialPortal": "https://www.mba.com/exams/gmat-exam/register",
+    "requirements": [
+      "An mba.com account with the candidate's personal information for the GMAT profile",
+      "A test-centre or eligible online-delivery choice and an available appointment date/time",
+      "A valid original identification document that meets GMAT's location-specific test-day rules",
+      "A supported credit or debit card or other payment method accepted for the selected GMAT delivery route"
+    ],
+    "steps": [
+      "Open GMAC's official GMAT Registration page on mba.com and create or sign in to the candidate's mba.com account.",
+      "Select Register from My Account and choose whether to take the GMAT at a test centre or through the online option.",
+      "Complete the candidate profile and review the identification and exam-policy requirements before choosing the appointment.",
+      "Select the test centre when applicable, choose the appointment date/time and review the country-specific fee shown for Nigeria.",
+      "Submit payment and save the appointment confirmation in mba.com My Account for later rescheduling, cancellation or test-day reference."
+    ],
+    "notes": [
+      "GMAC's current registration page describes the process as create account, choose delivery method, complete profile and schedule/pay.",
+      "The GMAT payment page says location-specific prices and taxes should be checked by selecting the country during registration.",
+      "Candidates must review the identification requirements before test day because unacceptable ID can result in forfeiture of the exam fee."
+    ],
+    "sources": [
+      {
+        "label": "GMAT Registration",
+        "agency": "Graduate Management Admission Council",
+        "url": "https://www.mba.com/exams/gmat-exam/register",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GMAT Exam Payment",
+        "agency": "Graduate Management Admission Council",
+        "url": "https://www.mba.com/exams/gmat-exam/register/exam-payment",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GMAT Exam Policies",
+        "agency": "Graduate Management Admission Council",
+        "url": "https://www.mba.com/exams/gmat-exam/register/exam-policies",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "gre-registration-nigeria",
+      "toefl-registration-nigeria",
+      "pte-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "GMAT registration Nigeria",
+      "GMAT fee Nigeria",
+      "book GMAT Nigeria",
+      "GMAT test center Nigeria",
+      "mba.com GMAT registration"
+    ]
+  },
+  {
+    "slug": "axa-mansard-third-party-motor-insurance",
+    "title": "How to buy AXA Mansard third-party motor insurance online",
+    "shortTitle": "AXA Mansard motor insurance",
+    "summary": "AXA Mansard's online AutoGo route for buying third-party motor insurance, entering contact and vehicle details, selecting the policy option, paying and receiving the motor insurance certificate.",
+    "category": "Insurance",
+    "agencySlug": "axa-mansard",
+    "feeLabel": "Current AutoGo premium shown online",
+    "feeNote": "AXA Mansard's current product page and quote flow should be used for the live premium because regulatory pricing and product terms can change. Do not rely on an older promotional price.",
+    "timeline": "AXA Mansard's online purchase flow issues the insurance confirmation/certificate after the customer completes the form and payment successfully.",
+    "status": "verified",
+    "officialPortal": "https://www.axamansard.com/insurance/motor/auto-go",
+    "requirements": [
+      "The policyholder's email address and mobile phone number",
+      "The type of private vehicle being insured; AXA Mansard states that AutoGo does not cover commercial vehicle classes such as trucks, buses and heavy vehicles",
+      "The vehicle and policy information requested in the AutoGo online quote/purchase form",
+      "A supported debit/credit card or other payment method offered by AXA Mansard for the final premium"
+    ],
+    "steps": [
+      "Open AXA Mansard's official AutoGo third-party motor insurance page and start the online purchase form.",
+      "Enter the policyholder's email address and phone number and select the type of car being insured.",
+      "Complete the remaining vehicle and policy information and review the third-party cover shown for the selected vehicle.",
+      "Review the current premium generated by AXA Mansard and complete payment through the official online purchase route.",
+      "Save or download the issued third-party motor insurance certificate after the payment and policy confirmation are complete."
+    ],
+    "notes": [
+      "AXA Mansard states that AutoGo is for private vehicle classes and is not valid for the listed commercial vehicle classes.",
+      "The current product page provides third-party cover, while comprehensive motor cover is a separate AXA Mansard product.",
+      "This guide explains the purchase process and does not recommend a particular insurer or policy as suitable for an individual's financial circumstances."
+    ],
+    "sources": [
+      {
+        "label": "AXA Mansard AutoGo Third Party Motor Insurance",
+        "agency": "AXA Mansard Insurance Plc",
+        "url": "https://www.axamansard.com/insurance/motor/auto-go",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AXA Mansard Motor Insurance",
+        "agency": "AXA Mansard Insurance Plc",
+        "url": "https://www.axamansard.com/insurance/motor",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "leadway-buy-motor-insurance-online",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AXA Mansard third party insurance",
+      "buy AXA motor insurance online",
+      "AXA AutoGo Nigeria",
+      "AXA Mansard car insurance",
+      "third party motor insurance Nigeria AXA"
+    ]
   }
 ]
