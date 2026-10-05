@@ -15,6 +15,9 @@ export const revalidate = 86400;
 const youtubeSeoOverrides: Record<string, { title: string; description: string }> = {
   "KWIpR47N9hc": { title: "Love Always Wins Cast & Full Movie (2026)", description: "Love Always Wins cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
   "X3HaWmJoSRU": { title: "Once Upon a Village 3 Cast & Full Movie (2026)", description: "Once Upon a Village 3 cast, runtime and official full movie on YouTube, published by RuthKadiri247." },
+  "Yu-QxqPDmXM": { title: "Once Upon a Village Cast & Full Movie (2026)", description: "Once Upon a Village cast, 103-minute runtime and official full movie on YouTube, published by RuthKadiri247." },
+  "_86CuSRi6E4": { title: "One More Night Nigerian Movie: Cast & Full Movie", description: "One More Night cast, 129-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard and Cynthia Clarke." },
+  "T1-buA-yAmo": { title: "Holy Matrimony Nigerian Movie: Cast & Full Movie", description: "Holy Matrimony cast, 143-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard, Onyi Alex and Nini Mbonu." },
   "zKQoArfptqA": { title: "The Bride Switch Cast & Full Movie (2026)", description: "The Bride Switch cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
   "2Ficn2BMlI8": { title: "What Tomorrow Holds Cast & Full Movie (2026)", description: "What Tomorrow Holds cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
   "y2RkBwUYSvo": { title: "Forever Isn't Long Enough Cast & Full Movie", description: "Forever Isn't Long Enough cast, runtime and official full Nigerian movie on YouTube, published by Royal Arts TV." },

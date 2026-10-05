@@ -19,7 +19,16 @@ const searchMomentumMovieSlugs = [
   "bowale",
   "the-man-i-never-knew",
   "sister-agatha",
-  "all-things-equal",
+  "my-housemate",
+];
+
+const popularMovieSearchLinks = [
+  { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
+  { label: "The Bride Switch", href: "/entertainment/youtube/zKQoArfptqA" },
+  { label: "Love Always Wins", href: "/entertainment/youtube/KWIpR47N9hc" },
+  { label: "Once Upon a Village", href: "/entertainment/youtube/Yu-QxqPDmXM" },
+  { label: "What Tomorrow Holds", href: "/entertainment/youtube/2Ficn2BMlI8" },
+  { label: "Gingerrr", href: "/entertainment/movies/gingerrr" },
 ];
 
 export default function EntertainmentPage() {
@@ -82,6 +91,9 @@ export default function EntertainmentPage() {
             {fresh.map((movie, index) => (
               <YouTubeMovieCard movie={movie} priority={index < 3} key={movie.videoId} />
             ))}
+          </div>
+          <div className="minimal-inline-links" aria-label="Popular movie guides">
+            {popularMovieSearchLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
           </div>
         </div>
       </section>

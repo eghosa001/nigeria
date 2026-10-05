@@ -22,6 +22,8 @@ const quickServices = [
   { label: "NIN services", href: "/topics/nin-corrections" },
   { label: "BVN services", href: "/topics/bvn" },
   { label: "CAC registration", href: "/topics/cac-business" },
+  { label: "ECOWAS certificate", href: "/services/ecowas-travel-certificate" },
+  { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 
@@ -31,7 +33,7 @@ const searchMomentumMovieSlugs = [
   "bowale",
   "the-man-i-never-knew",
   "sister-agatha",
-  "all-things-equal",
+  "my-housemate",
 ];
 
 export default function HomePage() {
