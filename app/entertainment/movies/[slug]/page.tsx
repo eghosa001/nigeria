@@ -207,6 +207,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const allCheckedDates = [
     ...availabilityLinks.map((link) => link.lastChecked),
     ...(title.trailer ? [title.trailer.lastChecked] : []),
+    ...(title.references ?? []).map((link) => link.lastChecked),
   ];
   const lastChecked = allCheckedDates.reduce((latest, value) => value > latest ? value : latest, "");
   const platforms = [...new Set(availabilityLinks.map((link) => link.platform))];
@@ -226,8 +227,13 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     actor: title.cast.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
     image: image || undefined,
-    sameAs: availabilityLinks.map((link) => link.href),
-    potentialAction: availabilityLinks.map((link) => ({ "@type": "WatchAction", target: link.href })),
+    sameAs: [
+      ...availabilityLinks.map((link) => link.href),
+      ...(title.references ?? []).map((link) => link.href),
+    ],
+    potentialAction: availabilityLinks.length
+      ? availabilityLinks.map((link) => ({ "@type": "WatchAction", target: link.href }))
+      : undefined,
   };
 
   const breadcrumbLd = {
@@ -270,7 +276,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <span>{title.year}</span>
                 {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : null}
                 <span>{title.languages.join(" / ")}</span>
-                <span>{platforms.join(" / ")}</span>
+                <span>{platforms.length ? platforms.join(" / ") : "Availability not currently verified"}</span>
               </div>
               <p className="movie-detail-synopsis">{title.synopsis}</p>
               <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
@@ -292,7 +298,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                   </a>
                 ) : null}
               </div>
-              <small className="movie-freshness-note">Links checked {lastChecked}.</small>
+              <small className="movie-freshness-note">Sources checked {lastChecked || "not yet recorded"}.</small>
             </div>
           </div>
 
@@ -344,8 +350,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 {title.runtimeMinutes ? <article><span>Runtime</span><strong>{title.runtimeMinutes} minutes</strong></article> : null}
                 <article><span>Languages</span><strong>{title.languages.join(", ")}</strong></article>
                 <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
-                <article><span>Official platforms</span><strong>{platforms.join(", ")}</strong></article>
-                <article><span>Link freshness</span><strong>{lastChecked}</strong></article>
+                <article><span>Official platforms</span><strong>{platforms.length ? platforms.join(", ") : "No current official viewing platform verified"}</strong></article>
+                <article><span>Source freshness</span><strong>{lastChecked || "Not recorded"}</strong></article>
               </div>
             </section>
 
@@ -381,6 +387,11 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <section id="watch">
               <span className="eyebrow">Official availability</span>
               <h2>Where to watch {title.title}</h2>
+              {!availabilityLinks.length ? (
+                <p className="movie-long-summary">
+                  No current official streaming, broadcast or cinema link is verified for this title. The references below verify the movie record without implying that it is available to watch there.
+                </p>
+              ) : null}
               {watchHereVideoId && watchHereSource ? (
                 <div id="watch-here" className="movie-watch-here">
                   <LazyYouTubePlayer
@@ -410,6 +421,22 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     </article>
                   );
                 })}
+              {(title.references ?? []).length ? (
+                <div className="movie-reference-sources">
+                  <h3>Verification sources</h3>
+                  {(title.references ?? []).map((reference) => (
+                    <article key={reference.href}>
+                      <div>
+                        <span>Reference</span>
+                        <strong>{reference.label}</strong>
+                      </div>
+                      {reference.note ? <p>{reference.note}</p> : null}
+                      <small>Checked {reference.lastChecked}</small>
+                      <a className="button button-secondary" href={reference.href} target="_blank" rel="noreferrer">Open verification source ↗</a>
+                    </article>
+                  ))}
+                </div>
+              ) : null}
               </div>
             </section>
 
