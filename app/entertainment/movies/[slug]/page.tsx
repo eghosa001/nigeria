@@ -30,6 +30,14 @@ function videoIdFromUrl(href: string) {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "king-of-thieves-2": {
+    title: "King of Thieves 2 Cast & Where to Watch",
+    description: "King of Thieves 2 cast, story and current Netflix availability for the Yoruba fantasy drama starring Femi Adebayo, Yemi Solade and Gabriel Afolayan."
+  },
+  "colours-of-fire": {
+    title: "Colours of Fire Cast & Where to Watch",
+    description: "Colours of Fire cast, director, 125-minute runtime and current Netflix/cinema availability for Niyi Akinmolayan's Nigerian fantasy drama."
+  },
   "black-market-2026": { title: "Black Market 2026 Cast, Runtime & Where to Watch", description: "Black Market 2026 cast, director, 100-minute runtime, story and current Nigerian cinema availability for Fatimah Binta Gimsay's crime drama." },
   "east-west-love-2026": { title: "East West Love 2026 Cast & Cinema Release", description: "East West Love cast, story, director and current 9 October 2026 release information for the Nigeria-Kenya romantic comedy." },
   "onibon-oje-2026": { title: "Onibọn Oje 2026 Cast & Cinema Release", description: "Onibọn Oje cast, directors, story and official 23 October 2026 Nigerian cinema release information for the Yoruba epic." },

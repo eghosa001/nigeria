@@ -35,6 +35,35 @@ export type SeriesTitle = {
 
 export const seriesTitles: SeriesTitle[] = [
   {
+    slug: "ordinary-people-2026",
+    title: "Ordinary People",
+    year: 2026,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
+    genres: ["Crime", "Drama", "Thriller", "Mystery", "Nollywood"],
+    languages: ["English"],
+    synopsis: "After seven years on the run, a criminal and his wife pose as bakers in a quiet gated estate, unaware that neighbours around them include undercover agents hunting them.",
+    cast: ["Ramsey Nouah", "Chidi Mokeme", "Adunni Ade", "Sharon Ooja", "Gbenga Titiloye", "Uche Montana", "Lasisi Elenu", "Jackie Appiah", "Adjetey Anang", "Shawn Faqua"],
+    creators: ["Moses Inwang"],
+    status: "released",
+    premiereLabel: "Premiered 4 September 2026 on Netflix",
+    episodeInfo: "Eight-episode Nigerian thriller series.",
+    watchLinks: [
+      {
+        platform: "Netflix",
+        label: "Check current Netflix availability",
+        href: "https://www.netflix.com/ng/title/82785277",
+        access: "availability-varies",
+        lastChecked: "2026-10-05",
+        note: "Netflix lists Ordinary People in its Nollywood catalogue. Availability can vary by account and territory."
+      }
+    ],
+    sources: [
+      { label: "Netflix title page", url: "https://www.netflix.com/ng/title/82785277", lastChecked: "2026-10-05" },
+      { label: "Premium Times review and release details", url: "https://www.premiumtimesng.com/entertainment/nollywood/909032-movie-review-ordinary-people-has-all-the-ingredients-but-too-much-on-its-plate.html", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
     slug: "to-kill-a-monkey",
     title: "To Kill a Monkey",
     year: 2025,
