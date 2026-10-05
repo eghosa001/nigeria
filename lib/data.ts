@@ -1437,6 +1437,20 @@ export const agencies: Agency[] = [
     "shortName": "MeCure Hospital",
     "description": "Private hospital in Lagos offering specialist consultations, appointments and 24/7 emergency services.",
     "website": "https://www.mecurehospital.com/"
+  },
+  {
+    "slug": "cowrywise",
+    "name": "Cowrywise",
+    "shortName": "Cowrywise",
+    "description": "Private Nigerian savings and investment platform offering account verification, funding and withdrawal services.",
+    "website": "https://cowrywise.com/"
+  },
+  {
+    "slug": "piggyvest",
+    "name": "PiggyVest",
+    "shortName": "PiggyVest",
+    "description": "Private Nigerian savings and investment platform offering savings wallets, withdrawals, statements and account-security services.",
+    "website": "https://www.piggyvest.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
@@ -1476,7 +1490,7 @@ export const categories = [
   },
   {
     "name": "Investing",
-    "description": "Investor records, dividends and Nigerian capital-market services."
+    "description": "Investment accounts, savings platforms, investor records, dividends and Nigerian capital-market services."
   },
   {
     "name": "Insurance",
