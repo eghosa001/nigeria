@@ -999,7 +999,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "Caleb University application 2026", serviceSlug: "caleb-undergraduate-application-2026" },
       { query: "Bowen University admission 2026", serviceSlug: "bowen-undergraduate-application-2026" },
       { query: "Igbinedion University application 2026", serviceSlug: "igbinedion-undergraduate-application-2026" },
-      { query: "Veritas University admission 2026", serviceSlug: "veritas-undergraduate-application-2026" }
+      { query: "Veritas University admission 2026", serviceSlug: "veritas-undergraduate-application-2026" },
+      { query: "Bells University application 2026", serviceSlug: "bells-undergraduate-application-2026" },
+      { query: "Bells University JUPEB 2026", serviceSlug: "bells-jupeb-application-2026" },
+      { query: "Veritas JUPEB 2026", serviceSlug: "veritas-jupeb-application-2026" },
+      { query: "Caleb University transcript", serviceSlug: "caleb-official-transcript-request" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1309,7 +1313,11 @@ export const growthHubs: GrowthHub[] = [
       "caleb-undergraduate-application-2026",
       "bowen-undergraduate-application-2026",
       "igbinedion-undergraduate-application-2026",
-      "veritas-undergraduate-application-2026"
+      "veritas-undergraduate-application-2026",
+      "bells-undergraduate-application-2026",
+      "bells-jupeb-application-2026",
+      "veritas-jupeb-application-2026",
+      "caleb-official-transcript-request"
     ]
   },
 
