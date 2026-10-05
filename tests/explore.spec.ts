@@ -29,6 +29,7 @@ test("Tour Nigeria covers all 36 states and FCT", async ({ page }) => {
   expect(exploreGuides.some((guide) => guide.region === "Federal Capital Territory")).toBeTruthy();
 
   await page.goto("/explore");
+  await page.getByText("States & FCT").click();
   const index = page.getByRole("navigation", { name: "Explore Nigeria by state" });
   await expect(index.getByRole("link")).toHaveCount(37);
   await expect(index.getByRole("link", { name: "FCT Abuja" })).toHaveAttribute("href", "/explore/abuja");
@@ -37,7 +38,8 @@ test("Tour Nigeria covers all 36 states and FCT", async ({ page }) => {
 
 test("Explore Nigeria hub and city guide are navigable", async ({ page }) => {
   await page.goto("/explore");
-  await expect(page.getByRole("heading", { name: /Plan the trip/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Find where to go." })).toBeVisible();
+  await page.getByText("City guides").click();
   await page.locator('a[href="/explore/lagos"]').first().click();
   await expect(page).toHaveURL(/\/explore\/lagos$/);
   await expect(page.getByRole("heading", { name: "Lagos Travel Guide" })).toBeVisible();
@@ -95,4 +97,25 @@ test("national landmarks guide reuses verified place records", async ({ page }) 
     await expect(card).toBeVisible();
     await expect(card.getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
   }
+});
+
+
+test("Tour hub stays compact and keeps deep navigation available", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/explore");
+
+  await expect(page.locator(".explore-place-card")).toHaveCount(6);
+  await expect(page.locator(".tour-browse-stack > details")).toHaveCount(4);
+
+  const widths = await page.evaluate(() => ({
+    viewport: document.documentElement.clientWidth,
+    content: document.documentElement.scrollWidth,
+  }));
+  expect(widths.content).toBeLessThanOrEqual(widths.viewport + 1);
+
+  await page.getByRole("button", { name: "Show 6 more places" }).click();
+  await expect(page.locator(".explore-place-card")).toHaveCount(12);
+
+  await page.getByText("States & FCT").click();
+  await expect(page.getByRole("navigation", { name: "Explore Nigeria by state" }).getByRole("link")).toHaveCount(37);
 });
