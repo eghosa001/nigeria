@@ -1018,7 +1018,20 @@ export const growthHubs: GrowthHub[] = [
       { query: "buy Mutual Benefits motor insurance", serviceSlug: "mutual-benefits-buy-motor-insurance-online" },
       { query: "pay Mutual Benefits policy", serviceSlug: "mutual-benefits-policy-payment" },
       { query: "book Silverbird movie ticket", serviceSlug: "silverbird-book-movie-ticket" },
-      { query: "use Silverbird voucher or gift card", serviceSlug: "silverbird-use-voucher-gift-card" }
+      { query: "use Silverbird voucher or gift card", serviceSlug: "silverbird-use-voucher-gift-card" },
+      { query: "open SmartCash wallet", serviceSlug: "smartcash-wallet-opening" },
+      { query: "upgrade SmartCash wallet", serviceSlug: "smartcash-wallet-upgrade" },
+      { query: "block SmartCash wallet", serviceSlug: "smartcash-emergency-block-wallet" },
+      { query: "become SmartCash agent", serviceSlug: "smartcash-agent-onboarding" },
+      { query: "open Hope PSBank account", serviceSlug: "hope-psbank-account-opening" },
+      { query: "activate Hope Wallet", serviceSlug: "hope-psbank-wallet-activation" },
+      { query: "become Hope PSBank agent", serviceSlug: "hope-psbank-agent-onboarding" },
+      { query: "book Clinix appointment", serviceSlug: "clinix-book-appointment" },
+      { query: "Clinix home sample collection", serviceSlug: "clinix-home-sample-collection" },
+      { query: "request Clinix ambulance", serviceSlug: "clinix-ambulance-request" },
+      { query: "Clinix corporate health screening", serviceSlug: "clinix-corporate-health-screening" },
+      { query: "book Filmhouse ticket", serviceSlug: "filmhouse-book-movie-ticket" },
+      { query: "Filmhouse ticket refund", serviceSlug: "filmhouse-ticket-refund-support" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1347,7 +1360,20 @@ export const growthHubs: GrowthHub[] = [
       "mutual-benefits-buy-motor-insurance-online",
       "mutual-benefits-policy-payment",
       "silverbird-book-movie-ticket",
-      "silverbird-use-voucher-gift-card"
+      "silverbird-use-voucher-gift-card",
+      "smartcash-wallet-opening",
+      "smartcash-wallet-upgrade",
+      "smartcash-emergency-block-wallet",
+      "smartcash-agent-onboarding",
+      "hope-psbank-account-opening",
+      "hope-psbank-wallet-activation",
+      "hope-psbank-agent-onboarding",
+      "clinix-book-appointment",
+      "clinix-home-sample-collection",
+      "clinix-ambulance-request",
+      "clinix-corporate-health-screening",
+      "filmhouse-book-movie-ticket",
+      "filmhouse-ticket-refund-support"
     ]
   },
 
