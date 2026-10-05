@@ -1318,6 +1318,34 @@ export const agencies: Agency[] = [
     "shortName": "LCU",
     "description": "Private university in Ibadan offering undergraduate and other admission applications through online portals.",
     "website": "https://www.lcu.edu.ng/"
+  },
+  {
+    "slug": "caleb-university",
+    "name": "Caleb University",
+    "shortName": "Caleb University",
+    "description": "Private university in Imota, Lagos offering undergraduate, Direct Entry, transfer, postgraduate and distance-learning admissions.",
+    "website": "https://calebuniversity.edu.ng/"
+  },
+  {
+    "slug": "bowen-university",
+    "name": "Bowen University",
+    "shortName": "Bowen University",
+    "description": "Private Nigerian university offering undergraduate and postgraduate admissions through official online application portals.",
+    "website": "https://bowen.edu.ng/"
+  },
+  {
+    "slug": "igbinedion-university",
+    "name": "Igbinedion University Okada",
+    "shortName": "IUO",
+    "description": "Private Nigerian university offering first-year, Direct Entry, transfer and other admission routes.",
+    "website": "https://iuokada.edu.ng/"
+  },
+  {
+    "slug": "veritas-university",
+    "name": "Veritas University Abuja",
+    "shortName": "Veritas University",
+    "description": "Private university in Abuja offering undergraduate, Direct Entry, transfer, postgraduate and JUPEB admission services.",
+    "website": "https://www.veritas.edu.ng/"
   }
 
 ];
