@@ -1044,7 +1044,16 @@ export const growthHubs: GrowthHub[] = [
       { query: "create PiggyVest account", serviceSlug: "piggyvest-create-account" },
       { query: "verify BVN on PiggyVest", serviceSlug: "piggyvest-bvn-verification" },
       { query: "withdraw PiggyVest savings", serviceSlug: "piggyvest-withdraw-savings" },
-      { query: "generate PiggyVest statement", serviceSlug: "piggyvest-generate-statement" }
+      { query: "generate PiggyVest statement", serviceSlug: "piggyvest-generate-statement" },
+      { query: "verify Bamboo account Nigeria", serviceSlug: "bamboo-identity-verification-nigeria" },
+      { query: "fund Bamboo Naira wallet", serviceSlug: "bamboo-fund-naira-wallet" },
+      { query: "withdraw Naira from Bamboo", serviceSlug: "bamboo-withdraw-naira" },
+      { query: "download Bamboo account statement", serviceSlug: "bamboo-download-account-statement" },
+      { query: "sell car with Autochek", serviceSlug: "autochek-sell-car-inspection" },
+      { query: "Autochek car finance prequalification", serviceSlug: "autochek-car-finance-prequalification" },
+      { query: "sell car with Cars45", serviceSlug: "cars45-sell-car-inspection" },
+      { query: "buy inspected car Cars45", serviceSlug: "cars45-buy-inspected-car" },
+      { query: "become Cars45 dealer partner", serviceSlug: "cars45-dealer-partner-onboarding" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1399,7 +1408,16 @@ export const growthHubs: GrowthHub[] = [
       "piggyvest-create-account",
       "piggyvest-bvn-verification",
       "piggyvest-withdraw-savings",
-      "piggyvest-generate-statement"
+      "piggyvest-generate-statement",
+      "bamboo-identity-verification-nigeria",
+      "bamboo-fund-naira-wallet",
+      "bamboo-withdraw-naira",
+      "bamboo-download-account-statement",
+      "autochek-sell-car-inspection",
+      "autochek-car-finance-prequalification",
+      "cars45-sell-car-inspection",
+      "cars45-buy-inspected-car",
+      "cars45-dealer-partner-onboarding"
     ]
   },
 
