@@ -8,7 +8,7 @@ import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { getYouTubeMovieById, youtubeMovieLibrary } from "@/lib/youtube-library";
+import { getYouTubeMovieById, isIndexableYouTubeMovie, youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const revalidate = 86400;
 
@@ -41,12 +41,24 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = movie.featuredCast.slice(0, 4);
-  const override = youtubeSeoOverrides[movie.videoId];
-  const description = compactMetadata(override?.description ?? `${movie.title} is a ${movie.year} Nigerian movie. ${cast.length ? "Cast includes " + cast.join(", ") + ". " : ""}${movie.synopsis}`);
+  const indexable = isIndexableYouTubeMovie(movie);
+  const override = indexable ? youtubeSeoOverrides[movie.videoId] : undefined;
+  const description = compactMetadata(
+    override?.description ??
+      (indexable
+        ? `${movie.title} is a ${movie.year} Nigerian movie. Cast includes ${cast.join(", ")}. ${movie.synopsis}`
+        : `${movie.title} is a ${movie.year} full Nigerian movie from ${movie.channelName}. Cast metadata is still being verified. ${movie.synopsis}`)
+  );
   return {
-    title: override?.title ?? compactMetadata(`${movie.title} Cast & Full Movie (${movie.year})`, 60),
+    title: override?.title ?? compactMetadata(
+      indexable
+        ? `${movie.title} Cast & Full Movie (${movie.year})`
+        : `${movie.title} Full Movie on YouTube (${movie.year})`,
+      60,
+    ),
     description,
     alternates: { canonical },
+    robots: indexable ? undefined : { index: false, follow: true },
     openGraph: {
       title: movie.title + " — Nigerian Movie",
       description,
@@ -75,6 +87,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   if (!movie) notFound();
   if (movie.source === "curated") redirect(movie.internalHref);
 
+  const indexable = isIndexableYouTubeMovie(movie);
   const base = getSiteUrl();
   const related = youtubeMovieLibrary
     .filter((item) => item.videoId !== movie.videoId)
@@ -95,7 +108,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     "@type": "Movie",
     name: movie.title,
     description: movie.synopsis,
-    actor: movie.cast.map((name) => ({ "@type": "Person", name })),
+    actor: indexable ? movie.cast.map((name) => ({ "@type": "Person", name })) : undefined,
     duration: movie.durationMinutes ? "PT" + movie.durationMinutes + "M" : undefined,
     datePublished: movie.publishedAt,
     potentialAction: { "@type": "WatchAction", target: movie.videoUrl },
@@ -141,7 +154,9 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <p className="movie-detail-synopsis">{movie.synopsis}</p>
               {movie.featuredCast.length ? (
                 <p className="movie-hero-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
-              ) : null}
+              ) : (
+                <p className="movie-hero-cast"><strong>Cast:</strong> Verification in progress.</p>
+              )}
 
               <div className="movie-detail-actions">
                 <a className="button" href="#watch-here">Watch here</a>
@@ -161,7 +176,10 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
             facts={[
               { label: "Access", value: "Free full movie on YouTube" },
               { label: "Runtime", value: runtimeLabel(movie.durationMinutes) },
-              { label: "Featured cast", value: movie.featuredCast.slice(0, 3).join(", ") || "See cast details below" },
+              {
+                label: indexable ? "Featured cast" : "Cast status",
+                value: indexable ? movie.featuredCast.slice(0, 3).join(", ") : "Cast details pending verification",
+              },
               { label: "Publisher", value: movie.channelName },
             ]}
             links={[
@@ -170,7 +188,12 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               { href: "#watch-here", label: "Watch here", primary: true },
               { href: movie.videoUrl, label: "Open on YouTube", external: true },
             ]}
-            note={"Official source checked " + movie.lastChecked + ". Continue below for cast, alternate official sources and related movies."}
+            note={
+              "Official source checked " + movie.lastChecked + ". " +
+              (indexable
+                ? "Continue below for cast, alternate official sources and related movies."
+                : "This page is temporarily excluded from search indexing until cast metadata is verified.")
+            }
           />
         </div>
       </section>
@@ -206,9 +229,9 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
             </section>
 
             <section id="cast">
-              <span className="eyebrow">Cast</span>
-              <h2>{movie.title} cast</h2>
-              {movie.cast.length ? (
+              <span className="eyebrow">Cast & crew</span>
+              <h2>{indexable ? movie.title + " cast" : "Cast verification in progress"}</h2>
+              {indexable ? (
                 <div className="movie-person-list">
                   {movie.cast.map((name) => {
                     const href = personHref(name);
@@ -216,7 +239,9 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                   })}
                 </div>
               ) : (
-                <p>Cast details are not available yet.</p>
+                <p className="movie-long-summary">
+                  The publisher and full-movie source are verified, but the cast list has not passed the catalog's metadata review yet. This page remains noindex until that verification is complete.
+                </p>
               )}
             </section>
 
