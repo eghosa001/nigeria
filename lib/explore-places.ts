@@ -3699,6 +3699,207 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "ooni-palace-ile-ife",
     "sultan-palace-sokoto-city"
   ],
+  "nigeria-wildlife-guide": [
+    "yankari-game-reserve-main",
+    "kainji-lake-national-park-main",
+    "cross-river-national-park-main",
+    "okomu-national-park-main",
+    "afi-mountain-wildlife-sanctuary",
+    "dagona-bird-sanctuary"
+  ],
+  "nigeria-birdwatching-guide": [
+    "dagona-bird-sanctuary",
+    "afi-mountain-wildlife-sanctuary",
+    "okomu-national-park-main",
+    "kainji-lake-national-park-main",
+    "yankari-game-reserve-main"
+  ],
+  "nigeria-rainforest-guide": [
+    "cross-river-national-park-main",
+    "afi-mountain-wildlife-sanctuary",
+    "okomu-national-park-main",
+    "akure-forest-reserve",
+    "ngwo-pine-forest"
+  ],
+  "nigeria-savanna-nature-guide": [
+    "yankari-game-reserve-main",
+    "kainji-lake-national-park-main",
+    "dagona-bird-sanctuary",
+    "wase-rock-plateau"
+  ],
+  "nigeria-archaeology-guide": [
+    "dufuna-canoe-heritage-yobe",
+    "alok-ikom-monoliths",
+    "ogbunike-cave",
+    "arochukwu-long-juju",
+    "sukur-cultural-landscape-main"
+  ],
+  "nigeria-war-history-guide": [
+    "national-war-museum-umuahia",
+    "ojukwu-bunker-umuahia",
+    "kiriji-war-museum"
+  ],
+  "nigeria-colonial-history-guide": [
+    "freedom-park-lagos",
+    "tafawa-balewa-square-lagos",
+    "lokoja-colonial-heritage",
+    "mungo-park-house-asaba",
+    "royal-niger-company-akassa"
+  ],
+  "nigeria-industrial-heritage-guide": [
+    "oloibiri-otuabagi-oil-heritage",
+    "kainji-dam-complex",
+    "dadin-kowa-dam"
+  ],
+  "nigeria-religious-heritage-guide": [
+    "abuja-national-mosque",
+    "national-christian-centre-abuja",
+    "gobarau-minaret",
+    "ilorin-central-mosque",
+    "osun-osogbo-sacred-grove",
+    "arochukwu-long-juju"
+  ],
+  "nigeria-sacred-sites-guide": [
+    "osun-osogbo-sacred-grove",
+    "arochukwu-long-juju",
+    "ogbunike-cave",
+    "girmache-shrine-zuru"
+  ],
+  "nigeria-afrobeat-heritage-guide": [
+    "new-afrika-shrine-felabration-2026",
+    "national-theatre-design-week-lagos-2026",
+    "freedom-park-lagos"
+  ],
+  "nigeria-performing-arts-guide": [
+    "national-theatre-design-week-lagos-2026",
+    "freedom-park-lagos",
+    "new-afrika-shrine-felabration-2026",
+    "akwa-ibom-state-centre-arts-culture"
+  ],
+  "nigeria-textile-craft-guide": [
+    "itoku-adire-market",
+    "igun-street",
+    "ladi-kwali-pottery-centre-suleja",
+    "nike-art-centre-osogbo",
+    "nike-art-gallery-lagos",
+    "abuja-arts-crafts-village"
+  ],
+  "nigeria-river-landscapes-guide": [
+    "niger-benue-confluence-lokoja",
+    "makurdi-river-beach",
+    "igbokoda-waterfront-ondo",
+    "river-ethiope-source-umuaja",
+    "ox-bow-lake-yenagoa"
+  ],
+  "nigeria-dams-engineering-guide": [
+    "kainji-dam-complex",
+    "dadin-kowa-dam",
+    "kainji-lake-national-park-main"
+  ],
+  "nigeria-civic-landmarks-guide": [
+    "tafawa-balewa-square-lagos",
+    "centenary-hall-abeokuta",
+    "millennium-park-abuja",
+    "national-theatre-design-week-lagos-2026"
+  ],
+  "nigeria-independence-history-guide": [
+    "tafawa-balewa-square-lagos",
+    "national-museum-lagos",
+    "freedom-park-lagos"
+  ],
+  "nigeria-caliphate-heritage-guide": [
+    "sultan-palace-sokoto-city",
+    "sokoto-state-history-bureau",
+    "hubbare-gwandu",
+    "gobarau-minaret",
+    "emirs-palace-katsina",
+    "gidan-makama-museum"
+  ],
+  "nigeria-yoruba-heritage-guide": [
+    "ooni-palace-ile-ife",
+    "osun-osogbo-sacred-grove",
+    "olumo-rock",
+    "itoku-adire-market",
+    "owo-museum-antiquities",
+    "kiriji-war-museum"
+  ],
+  "nigeria-cultural-landscapes-guide": [
+    "sukur-cultural-landscape-main",
+    "osun-osogbo-sacred-grove",
+    "idanre-hills",
+    "arochukwu-long-juju",
+    "ogbunike-cave"
+  ],
+  "nigeria-forest-walks-guide": [
+    "ngwo-pine-forest",
+    "cross-river-national-park-main",
+    "okomu-national-park-main",
+    "akure-forest-reserve",
+    "afi-mountain-wildlife-sanctuary"
+  ],
+  "nigeria-city-parks-guide": [
+    "millennium-park-abuja",
+    "agodi-gardens-ibadan",
+    "fajuyi-memorial-park",
+    "kwara-flower-garden",
+    "port-harcourt-pleasure-park"
+  ],
+  "southwest-craft-road-trip": [
+    "itoku-adire-market",
+    "nike-art-centre-osogbo",
+    "national-museum-ile-ife",
+    "nike-art-gallery-lagos"
+  ],
+  "southwest-museum-road-trip": [
+    "national-museum-lagos",
+    "national-museum-unity-ibadan",
+    "national-museum-ile-ife",
+    "owo-museum-antiquities"
+  ],
+  "north-central-rocks-waterfalls-road-trip": [
+    "zuma-rock",
+    "gurara-waterfalls",
+    "owu-falls-kwara",
+    "farin-ruwa-waterfalls",
+    "ara-rock-nasarawa"
+  ],
+  "southeast-caves-lakes-road-trip": [
+    "ogbunike-cave",
+    "agulu-lake",
+    "owerre-ezukala-cave-waterfall",
+    "oguta-lake",
+    "amanchor-cave-ebonyi"
+  ],
+  "south-south-waterfront-heritage-route": [
+    "ox-bow-lake-yenagoa",
+    "oloibiri-otuabagi-oil-heritage",
+    "nana-living-history-palace-koko",
+    "mungo-park-house-asaba",
+    "slave-history-museum-calabar",
+    "ibeno-beach"
+  ],
+  "northwest-heritage-road-trip": [
+    "gidan-makama-museum",
+    "gobarau-minaret",
+    "sultan-palace-sokoto-city",
+    "kanta-museum-argungu",
+    "zaria-city-walls"
+  ],
+  "northern-museums-heritage-route": [
+    "gidan-makama-museum",
+    "kanta-museum-argungu",
+    "sokoto-state-history-bureau",
+    "zamfara-state-museum-gusau"
+  ],
+  "nigeria-scenic-viewpoints-guide": [
+    "bowers-tower-ibadan",
+    "dala-hill",
+    "mount-patti-lokoja",
+    "olumo-rock",
+    "riyom-rock-plateau",
+    "mambilla-plateau",
+    "ulanga-mountain-obudu"
+  ],
 };
 
 export function getExplorePlacesForGuide(guideSlug: string) {
