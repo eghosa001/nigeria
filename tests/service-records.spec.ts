@@ -305,7 +305,19 @@ const expectedSlugs = [
   "ibedc-pay-bill-buy-token",
   "ibedc-map-meter-application",
   "ibedc-map-refund",
-  "ibedc-band-a-compensation-token",] as const;
+  "ibedc-band-a-compensation-token",
+  "ecobank-xpress-account",
+  "ecobank-classic-savings-account",
+  "ecobank-xpress-point-agent",
+  "ecobank-dormant-account-reactivation",
+  "fcmb-online-savings-account",
+  "fcmb-business-account-online",
+  "alat-account-opening",
+  "alat-debit-card-request-activation",
+  "sterling-onebank-account-opening",
+  "sterling-onebank-tier-upgrade",
+  "hygeia-health-plan-purchase",
+  "hygeia-provider-directory",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -421,8 +433,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(300);
-  expect(publicServices).toHaveLength(300);
+  expect(services).toHaveLength(312);
+  expect(publicServices).toHaveLength(312);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
