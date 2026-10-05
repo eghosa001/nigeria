@@ -56,9 +56,9 @@ test.describe("live MyNigeriaGuide deployment", () => {
       page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
     ).toHaveCount(1);
     await expect.poll(
-      () => page.evaluate(() => typeof (window as Window & { posthog?: { get_distinct_id?: unknown } }).posthog?.get_distinct_id),
+      () => page.evaluate(() => (window as Window & { __mngPostHogInitialized?: boolean }).__mngPostHogInitialized),
       { timeout: 15_000 },
-    ).toBe("function");
+    ).toBe(true);
     await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
   });
 
