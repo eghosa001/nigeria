@@ -69,7 +69,7 @@ test("four pillars stay ordered and searchable from the homepage", async ({ page
   await page.goto("/");
 
   const order = await page.locator(".minimal-home-section").evaluateAll((nodes) =>
-    nodes.map((node) => node.className).filter((name) =>
+    nodes.map((node) => String(node.className)).filter((name) =>
       /minimal-home-(movies|services|tour|jobs)/.test(name),
     ),
   );
