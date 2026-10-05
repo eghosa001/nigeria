@@ -576,12 +576,20 @@ const representative = [
   "reddington-book-appointment",
   "lagoon-hospital-book-appointment",
   "indrive-driver-signup-nigeria",
-  "axa-mansard-motor-claim"
+  "axa-mansard-motor-claim",
+  "netflix-start-membership-nigeria",
+  "netflix-change-plan",
+  "netflix-cancel-membership",
+  "spotify-premium-nigeria",
+  "spotify-cancel-premium",
+  "acca-book-exam-nigeria",
+  "oet-book-test-nigeria",
+  "healthtracka-home-test-nigeria"
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(457);
-  expect(publicServices).toHaveLength(457);
+  expect(services).toHaveLength(465);
+  expect(publicServices).toHaveLength(465);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
