@@ -16655,5 +16655,433 @@
       "Kuda full business account",
       "Kuda business CAC BVN"
     ]
+  },
+  {
+    "slug": "aedc-pay-bill-buy-token",
+    "title": "How to pay an AEDC bill or buy a prepaid token",
+    "shortTitle": "AEDC bill & token payment",
+    "summary": "AEDC's Pay4Energy and supported payment routes for prepaid and postpaid customers, using an account or meter number to verify the customer, pay electricity and retrieve a token or receipt.",
+    "category": "Electricity",
+    "agencySlug": "aedc",
+    "feeLabel": "Electricity amount plus any payment-channel charge",
+    "feeNote": "The electricity amount depends on the customer's account, meter and tariff. AEDC's official payment platform shows the payable amount and selected payment channel before completion.",
+    "timeline": "The payment result is issued after the selected payment channel confirms the transaction; prepaid customers can retrieve a token from Pay4Energy if it is not displayed immediately.",
+    "status": "verified",
+    "officialPortal": "https://pay4energy.abujaelectricity.com/",
+    "requirements": [
+      "The AEDC account number for a postpaid customer or meter number for a prepaid customer",
+      "The amount the customer intends to pay or use to purchase electricity",
+      "A valid email address and phone number for the Pay4Energy transaction",
+      "A supported payment method offered by AEDC or one of the approved payment channels listed by the company"
+    ],
+    "steps": [
+      "Open AEDC's official Pay4Energy platform or another payment channel listed by AEDC and choose the correct prepaid or postpaid account type.",
+      "Enter the meter or account number, amount, email address and phone number, then verify the returned customer information before payment.",
+      "Choose the available payment channel and complete the transaction using the channel's official checkout.",
+      "Download or save the payment receipt and, for a prepaid meter, copy the issued token from the transaction result.",
+      "If a prepaid token is missing after payment, use Pay4Energy's Retrieve Token feature with the meter details before escalating to AEDC support."
+    ],
+    "notes": [
+      "AEDC's payment platform can also display payment history, bill history, tariff and account/meter details.",
+      "AEDC publishes multiple approved payment options, including bank/app, USSD, POS and partner channels.",
+      "Always verify the customer name/account information before paying because electricity payments are applied to the entered record."
+    ],
+    "sources": [
+      {
+        "label": "AEDC Pay4Energy",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://pay4energy.abujaelectricity.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AEDC Payment Options",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/payment-options/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AEDC Bill Payment",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/bill-payment/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aedc-map-meter-application",
+      "aedc-map-refund",
+      "electricity-prepaid-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AEDC buy token",
+      "AEDC pay bill",
+      "Pay4Energy AEDC",
+      "AEDC token retrieval",
+      "Abuja electricity payment"
+    ]
+  },
+  {
+    "slug": "aedc-map-meter-application",
+    "title": "How to apply for an AEDC prepaid meter under MAP",
+    "shortTitle": "AEDC MAP meter",
+    "summary": "AEDC's MAP application route for existing customers: submit the online meter request, complete site verification, wait for the payment notification, pay the approved meter amount and receive installation.",
+    "category": "Electricity",
+    "agencySlug": "aedc",
+    "feeLabel": "Meter price varies by MAP provider and meter type",
+    "feeNote": "AEDC publishes current provider-specific MAP meter prices. Use the current meter-prices page and the payment notification issued for the application; installation is included in the full meter cost.",
+    "timeline": "AEDC's MAP FAQ states that the meter should be installed within 10 days after payment is received and confirmed.",
+    "status": "verified",
+    "officialPortal": "https://www.abujaelectricity.com/map-faq/",
+    "requirements": [
+      "An existing AEDC customer account for the premises that needs a meter",
+      "A completed MAP request through AEDC's Getting Metered/MAP application route",
+      "A premises that can pass AEDC's site verification for the required meter phase/type",
+      "The payment reference, phone number and contract number contained in the AEDC payment notification"
+    ],
+    "steps": [
+      "Open AEDC's official website, choose Getting Metered and select the MAP application for an existing customer.",
+      "Complete and submit the meter-request form with the customer/account and premises information.",
+      "Allow AEDC to conduct the site verification and determine the required meter phase/type.",
+      "Wait for the official payment notification, then pay the approved amount using the reference, phone and contract information supplied by AEDC.",
+      "Keep the payment evidence and wait for AEDC to contact the customer for installation within the published post-payment window."
+    ],
+    "notes": [
+      "AEDC's current MAP prices vary by Meter Asset Provider and by single-phase or three-phase meter.",
+      "The company says meter installation under MAP is included in the full meter cost and should not attract a separate installation charge.",
+      "New customers without an existing bill follow AEDC's new-connection process before the MAP route."
+    ],
+    "sources": [
+      {
+        "label": "AEDC MAP FAQ",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/map-faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AEDC Meter Prices",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/meter-prices/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AEDC Home",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aedc-pay-bill-buy-token",
+      "aedc-map-refund",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AEDC prepaid meter application",
+      "AEDC MAP meter",
+      "Abuja electricity meter application",
+      "AEDC meter price 2026",
+      "AEDC MAP 10 days"
+    ]
+  },
+  {
+    "slug": "aedc-map-refund",
+    "title": "How the AEDC MAP meter refund works",
+    "shortTitle": "AEDC MAP refund",
+    "summary": "AEDC's electricity-credit refund route for eligible customers who previously bought a prepaid meter under the MAP scheme, with notification, meter-linked refund details and a 20-digit load token.",
+    "category": "Electricity",
+    "agencySlug": "aedc",
+    "feeLabel": "No refund-claim fee stated",
+    "feeNote": "AEDC does not state a fee for receiving an eligible MAP refund. Refund value and timing depend on the NERC-approved refund implementation and the customer's eligible meter record.",
+    "timeline": "AEDC notifies eligible customers directly and issues the refund as electricity credit; the provider does not publish one universal date on which every eligible customer's full refund is completed.",
+    "status": "verified",
+    "officialPortal": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
+    "requirements": [
+      "A prepaid meter purchased through the AEDC Meter Asset Provider scheme",
+      "An eligible AEDC meter/account record under the current NERC-approved MAP refund implementation",
+      "Access to the SMS or email contact details linked to the AEDC customer account",
+      "The meter number and 20-digit load token contained in the refund notification when the credit is issued"
+    ],
+    "steps": [
+      "Check the SMS and email contact linked to the AEDC account for the provider's MAP refund notification.",
+      "Confirm that the notification shows the correct meter number and the electricity-credit amount being refunded.",
+      "Copy the unique 20-digit load token supplied for the refund credit.",
+      "Load the refund token on the prepaid meter using the normal token-entry method for that meter.",
+      "If the notification or token does not match the meter/account, contact AEDC through the official customer-care route before attempting another entry."
+    ],
+    "notes": [
+      "AEDC describes MAP refunds as electricity credits rather than a general cash payout.",
+      "Only customers that meet the refund eligibility rules for a previously purchased MAP meter should expect a refund token.",
+      "Do not pay an agent to 'process' an AEDC refund token."
+    ],
+    "sources": [
+      {
+        "label": "AEDC MAP Refund Guide",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
+        "lastChecked": "2026-10-05",
+        "published": "2026-07-01"
+      },
+      {
+        "label": "AEDC Home — Refund and Compensation",
+        "agency": "Abuja Electricity Distribution Plc",
+        "url": "https://www.abujaelectricity.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aedc-map-meter-application",
+      "aedc-pay-bill-buy-token"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AEDC MAP refund",
+      "Abuja electricity meter refund",
+      "AEDC refund token",
+      "MAP meter refund AEDC",
+      "AEDC meter credit refund"
+    ]
+  },
+  {
+    "slug": "ibedc-pay-bill-buy-token",
+    "title": "How to pay an IBEDC bill or buy electricity units",
+    "shortTitle": "IBEDC payment",
+    "summary": "IBEDC's current e-payment and walk-in routes for prepaid vending and postpaid bill payment, using a meter or account number through web, bank-app, USSD or approved agent channels.",
+    "category": "Electricity",
+    "agencySlug": "ibedc",
+    "feeLabel": "Electricity amount plus any channel charge",
+    "feeNote": "The electricity amount depends on the customer's meter/account and tariff. Use IBEDC's current payment portal or approved channel to see the payable amount and any channel-specific charge.",
+    "timeline": "Payment is credited after the selected electronic or walk-in channel completes the transaction; IBEDC provides a payment-verification page for customers with a transaction reference.",
+    "status": "verified",
+    "officialPortal": "https://www.ibedc.com/payments",
+    "requirements": [
+      "The IBEDC meter number for a prepaid customer or account number for a postpaid customer",
+      "The amount the customer intends to vend or pay toward the electricity bill",
+      "A supported web, bank-app, USSD, walk-in or approved payment-agent channel",
+      "The transaction reference generated after payment when later verification is needed"
+    ],
+    "steps": [
+      "Open IBEDC's official Payments page or payment portal and choose the available online, bank-app, USSD or walk-in payment route.",
+      "Enter the prepaid meter number or postpaid account number and verify that the customer details are correct.",
+      "Enter the payment amount and complete the transaction using the chosen approved channel.",
+      "Keep the receipt or transaction reference and, for prepaid vending, retrieve the token provided after successful payment.",
+      "If the credit or token is disputed, open IBEDC's Verify Payment tool and enter the transaction reference before escalating the complaint."
+    ],
+    "notes": [
+      "IBEDC's current payments page supports electronic and walk-in payment channels.",
+      "The provider's verification portal lets a customer check a recent payment using the transaction reference.",
+      "A prepaid vending token is tied to the entered meter number, so the meter details should be checked before payment."
+    ],
+    "sources": [
+      {
+        "label": "IBEDC Payments",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/payments",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IBEDC E-Payments Channels",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/onlinepay",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IBEDC Verify Payment",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/verify-payment",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibedc-map-meter-application",
+      "ibedc-map-refund",
+      "ibedc-band-a-compensation-token"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "IBEDC pay bill",
+      "IBEDC buy token",
+      "IBEDC online payment",
+      "IBEDC prepaid vending",
+      "IBEDC verify payment"
+    ]
+  },
+  {
+    "slug": "ibedc-map-meter-application",
+    "title": "How to apply for an IBEDC prepaid meter under MAP",
+    "shortTitle": "IBEDC MAP meter",
+    "summary": "IBEDC's MAP route for requesting a prepaid meter, completing premises evaluation, receiving the unique payment ID, paying the approved meter price and receiving installation after payment confirmation.",
+    "category": "Electricity",
+    "agencySlug": "ibedc",
+    "feeLabel": "Current MAP meter price depends on meter type",
+    "feeNote": "IBEDC's September 2026 metering page publishes updated MAP prices and states that there is no application fee or processing fee. Use the current provider price shown before payment.",
+    "timeline": "IBEDC states that the metering process commences within 10 working days after payment confirmation.",
+    "status": "verified",
+    "officialPortal": "https://www.ibedc.com/metering",
+    "requirements": [
+      "An IBEDC customer account and premises within the company's franchise area",
+      "A MAP request submitted through IBEDC's online meter application or nearest Business Hub",
+      "A premises that passes IBEDC's evaluation for the required meter deployment",
+      "The unique ID/payment instruction issued by IBEDC after the premises is cleared for a meter"
+    ],
+    "steps": [
+      "Open IBEDC's official Metering page and start the MAP request through the linked online application or an IBEDC Business Hub.",
+      "Submit the customer and premises information and wait for IBEDC's evaluation of the property for meter deployment.",
+      "Do not pay before IBEDC clears the application and issues the unique ID/payment instruction.",
+      "Pay the approved MAP meter amount into the dedicated route supplied for the cleared request and keep the payment evidence.",
+      "Track the application and allow IBEDC/MAP personnel to complete installation after payment confirmation within the published metering window."
+    ],
+    "notes": [
+      "IBEDC says customers must route meter requests through the company and should not approach a MAP vendor directly.",
+      "The September 2026 metering page says there is no application fee and no processing fee.",
+      "IBEDC's meter prices can be updated, so the latest metering page should be checked instead of an older FAQ price."
+    ],
+    "sources": [
+      {
+        "label": "IBEDC Metering",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/metering",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IBEDC New Meter Pricing",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/new_metering",
+        "lastChecked": "2026-10-05",
+        "published": "2026-09-09"
+      },
+      {
+        "label": "IBEDC MAP FAQ",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/faqs",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibedc-pay-bill-buy-token",
+      "ibedc-map-refund",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "IBEDC prepaid meter application",
+      "IBEDC MAP meter",
+      "IBEDC meter price 2026",
+      "IBEDC meter application online",
+      "IBEDC MAP 10 working days"
+    ]
+  },
+  {
+    "slug": "ibedc-map-refund",
+    "title": "How to check an IBEDC MAP meter refund",
+    "shortTitle": "IBEDC MAP refund",
+    "summary": "IBEDC's MAP Refund Portal for eligible customers who paid for a meter, using the meter number to check refund eligibility and retrieve electricity-credit tokens issued in installments.",
+    "category": "Electricity",
+    "agencySlug": "ibedc",
+    "feeLabel": "No refund-check fee",
+    "feeNote": "IBEDC does not state a fee for checking or receiving an eligible MAP refund through the official portal.",
+    "timeline": "IBEDC says eligible MAP refunds are issued in monthly installments; the portal shows the customer's available refund tokens rather than one universal completion date.",
+    "status": "verified",
+    "officialPortal": "https://www.ibedc.com/map-refund",
+    "requirements": [
+      "A meter obtained through the IBEDC Meter Asset Provider scheme and paid for by the customer",
+      "A meter number that IBEDC recognises as eligible under the current MAP refund implementation",
+      "Access to the prepaid meter so issued refund tokens can be loaded in the required order"
+    ],
+    "steps": [
+      "Open IBEDC's official MAP Refund Portal and enter the meter number.",
+      "Check the eligibility and available refund-token information returned for the meter.",
+      "Copy the earliest outstanding refund token shown by the portal.",
+      "Load refund tokens on the meter in ascending issue-date order as instructed by IBEDC.",
+      "If the portal cannot retrieve an eligible token, contact IBEDC customer care with the meter details for investigation."
+    ],
+    "notes": [
+      "IBEDC says eligible MAP refunds are credited through energy tokens in monthly installments.",
+      "The provider instructs customers to load refund tokens from the earliest issue date to the latest.",
+      "A customer should not pay an agent for access to the official refund-check portal."
+    ],
+    "sources": [
+      {
+        "label": "IBEDC MAP Refund Portal",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/map-refund",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IBEDC MAP Refund Portal Alternative Path",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/map_refund",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibedc-map-meter-application",
+      "ibedc-pay-bill-buy-token"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "IBEDC MAP refund",
+      "IBEDC meter refund token",
+      "IBEDC refund portal",
+      "MAP refund IBEDC",
+      "IBEDC prepaid meter refund"
+    ]
+  },
+  {
+    "slug": "ibedc-band-a-compensation-token",
+    "title": "How to check an IBEDC Band A compensation token",
+    "shortTitle": "IBEDC Band A compensation",
+    "summary": "IBEDC's 2026 compensation portal for eligible Band A customers affected by specified service shortfalls, with prepaid customers retrieving an energy token and postpaid customers receiving bill credits.",
+    "category": "Electricity",
+    "agencySlug": "ibedc",
+    "feeLabel": "No compensation-check fee",
+    "feeNote": "IBEDC does not state a fee for checking eligibility or retrieving an eligible compensation token through its official portal.",
+    "timeline": "This is a specific 2026 compensation exercise tied to qualifying service disruptions. Availability depends on the meter/account being listed as eligible under the approved compensation methodology.",
+    "status": "verified",
+    "officialPortal": "https://ibedc.com/compensationtokens",
+    "requirements": [
+      "An IBEDC prepaid or postpaid account on an eligible Band A feeder covered by the current compensation exercise",
+      "The prepaid meter number or customer account information used by IBEDC to check eligibility",
+      "For prepaid customers, access to the meter so the retrieved compensation token can be loaded"
+    ],
+    "steps": [
+      "Open IBEDC's official Compensation Tokens portal and enter the prepaid meter number or supported account information.",
+      "Submit the eligibility check and review the compensation result returned for the customer.",
+      "For an eligible prepaid meter, copy the compensation token displayed by IBEDC.",
+      "Load the compensation token on the prepaid meter using the normal token-entry method.",
+      "For a postpaid account, review the subsequent bill for the compensation credit instead of expecting a prepaid token."
+    ],
+    "notes": [
+      "IBEDC states that prepaid compensation is issued as energy tokens, while postpaid compensation appears as a bill credit.",
+      "The current portal relates to the provider's specified 2026 Band A service-shortfall compensation exercise and should not be presented as a permanent monthly benefit.",
+      "Use IBEDC's official portal rather than a third-party form asking for payment to release a compensation token."
+    ],
+    "sources": [
+      {
+        "label": "IBEDC Compensation Tokens",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://ibedc.com/compensationtokens",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IBEDC Compensation Announcement",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/readmore?newsid=59",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "ibedc-pay-bill-buy-token",
+      "ibedc-map-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "IBEDC compensation token",
+      "IBEDC Band A compensation",
+      "IBEDC prepaid compensation token",
+      "IBEDC service shortfall compensation",
+      "IBEDC token portal"
+    ]
   }
 ]
