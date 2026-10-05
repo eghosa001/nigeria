@@ -25,10 +25,28 @@ const quickServices = [
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 
+const searchMomentumMovieSlugs = [
+  "oversabi-aunty",
+  "millionaire-until-morning",
+  "bowale",
+  "the-man-i-never-knew",
+  "sister-agatha",
+  "all-things-equal",
+];
+
 export default function HomePage() {
-  const movieHighlights = entertainmentTitles
-    .filter((title) => title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie"))
-    .slice(0, 6);
+  const priorityMovies = searchMomentumMovieSlugs
+    .map((slug) => entertainmentTitles.find((title) => title.slug === slug))
+    .filter((title): title is NonNullable<typeof title> => Boolean(title));
+  const prioritySlugs = new Set(priorityMovies.map((title) => title.slug));
+  const movieHighlights = [
+    ...priorityMovies,
+    ...entertainmentTitles.filter(
+      (title) =>
+        !prioritySlugs.has(title.slug) &&
+        title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie"),
+    ),
+  ].slice(0, 6);
 
   const travelHighlights = exploreGuides
     .filter((guide) => guide.kind === "city" || guide.kind === "destination")

@@ -160,4 +160,28 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     requirements: "What are the requirements for 25 percent pension withdrawal?",
     start: "How do I apply for a 25 percent pension withdrawal after job loss?",
   },
+  "passport-application-tracking": {
+    online: "Can I track my Nigerian passport application online?",
+    start: "How do I check my Nigerian passport application status?",
+  },
+  "inec-replace-lost-damaged-pvc": {
+    requirements: "What do I need to replace a lost or damaged PVC?",
+    online: "Can I replace a lost or damaged PVC online?",
+    start: "How do I replace a lost or damaged PVC with INEC?",
+  },
+  "inec-voter-transfer": {
+    requirements: "What do I need to transfer my INEC voter registration?",
+    online: "Can I transfer my voter registration online?",
+    start: "How do I transfer my INEC voter registration to a new location?",
+  },
+  "ninauth-nin-verification": {
+    requirements: "What do I need to verify my identity with NINAuth?",
+    online: "Can I verify or share my NIN identity with the NINAuth app?",
+    start: "How do I use NINAuth for NIN verification?",
+  },
+  "ogun-tax-clearance-certificate": {
+    requirements: "What do I need for an Ogun State tax clearance certificate?",
+    online: "Can I apply for or verify an Ogun eTCC online?",
+    start: "How do I get an Ogun State tax clearance certificate?",
+  },
 };
