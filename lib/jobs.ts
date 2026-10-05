@@ -35,6 +35,102 @@ export type CareerOpportunity = {
 
 export const jobOpportunities: CareerOpportunity[] = [
   {
+    slug: "snv-energy-advisor-abuja-2026",
+    title: "SNV Energy Advisor — Abuja",
+    organization: "SNV",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "SNV is recruiting a full-time Energy Advisor in Abuja for an energy project, with a two-year national employment contract and an application deadline of 8 October 2026.",
+    location: "Abuja, FCT",
+    employmentType: "Full-time national employment contract (2 years)",
+    audiences: ["Energy professionals", "Engineers", "Development-sector professionals", "Renewable-energy specialists"],
+    fields: ["Renewable energy", "Energy management", "Engineering", "Clean cooking", "Development"],
+    qualifications: [
+      "Master's degree in Renewable Energy, Energy Management, Engineering or another relevant discipline.",
+      "Five to seven years of substantial development-work experience, including solar energy, biodigesters, clean cooking, energy efficiency or related renewable-energy technologies.",
+      "Strong understanding of energy-service delivery and preferably renewable-energy or energy-efficiency market development.",
+      "Experience designing or appraising business cases, working with energy market systems, introducing energy technologies and engaging private-sector stakeholders, especially in Nigeria or West Africa."
+    ],
+    requirements: [
+      "Strong written and oral communication skills.",
+      "Experience with stakeholder convening, capacity building and project interventions.",
+      "Ability to lead and steer initiatives with an entrepreneurial mindset."
+    ],
+    documents: [
+      "CV in English",
+      "Motivation letter in English",
+      "Referee details if requested during SNV's later reference and safeguarding checks"
+    ],
+    applicationSteps: [
+      "Open SNV's official SmartRecruiters vacancy page.",
+      "Review the Energy Advisor qualifications and confirm your energy-sector and development experience.",
+      "Upload your CV and motivation letter in English through the official application control.",
+      "Submit before the 8 October 2026 deadline and monitor the email address used for the application."
+    ],
+    officialUrl: "https://jobs.smartrecruiters.com/snv/744000152591820",
+    officialUrlLabel: "Apply on SNV's official vacancy page",
+    verifiedAt: "2026-10-05",
+    deadline: "2026-10-08",
+    nextMilestone: "Applications close 8 October 2026. SNV lists an expected start date of 1 November 2026, subject to contract award timing.",
+    feeNote: "No application fee is listed. Apply only through SNV's official vacancy system.",
+    sourceNotes: [
+      "SNV lists the duty station as Abuja and the contract as a two-year full-time national employment contract.",
+      "The official vacancy asks applicants to upload a CV and motivation letter in English and states that only shortlisted candidates will be contacted."
+    ],
+    sources: [
+      { label: "SNV Energy Advisor — SmartRecruiters", url: "https://jobs.smartrecruiters.com/snv/744000152591820", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
+    slug: "snv-project-manager-abuja-2026",
+    title: "SNV Project Manager — Energy Project, Abuja",
+    organization: "SNV",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "SNV is recruiting a Project Manager in Abuja to lead an energy project, with a two-year national employment contract and an application deadline of 8 October 2026.",
+    location: "Abuja, FCT",
+    employmentType: "Full-time national employment contract (2 years)",
+    audiences: ["Senior energy professionals", "Project managers", "Development-sector leaders", "Engineers"],
+    fields: ["Energy", "Project management", "Renewable energy", "Development", "Engineering"],
+    qualifications: [
+      "Relevant master's and/or bachelor's degree in energy, engineering, environmental science, energy management, energy systems or a related field.",
+      "At least eight years of experience in energy-sector development, with knowledge of renewable energy, clean cooking, biodigesters and sector stakeholder dynamics.",
+      "Demonstrated programme or project leadership, including complex project delivery, policy advice and strategic energy-sector work.",
+      "Experience with monitoring and evaluation, donor/partner engagement, business development, private-sector engagement and energy financing."
+    ],
+    requirements: [
+      "Excellent written and spoken English.",
+      "Strong team leadership, partnership-building, analytical and problem-solving ability.",
+      "Experience delivering projects within budgets, timelines, donor requirements and quality standards."
+    ],
+    documents: [
+      "CV in English",
+      "Motivation letter in English",
+      "Referee details if requested during SNV's later reference and safeguarding checks"
+    ],
+    applicationSteps: [
+      "Open SNV's official Project Manager vacancy page.",
+      "Compare your energy-sector leadership experience with the published qualifications.",
+      "Upload your CV and motivation letter in English through the official SmartRecruiters application.",
+      "Submit before 8 October 2026 and retain the application confirmation."
+    ],
+    officialUrl: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager",
+    officialUrlLabel: "Apply on SNV's official vacancy page",
+    verifiedAt: "2026-10-05",
+    deadline: "2026-10-08",
+    nextMilestone: "Applications close 8 October 2026. SNV lists an expected start date of 1 November 2026, subject to contract award timing.",
+    feeNote: "No application fee is listed. Apply only through SNV's official vacancy system.",
+    sourceNotes: [
+      "SNV lists Abuja as the duty station and a two-year full-time national employment contract.",
+      "The role covers overall project management, quality assurance, finance/contract management, people leadership and donor/stakeholder delivery."
+    ],
+    sources: [
+      { label: "SNV Project Manager — SmartRecruiters", url: "https://jobs.smartrecruiters.com/SNV/744000152590475-project-manager", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
     slug: "reckitt-nigeria-management-trainee-2026",
     title: "Reckitt Nigeria 2026 Management Trainee Program (Trailblazers 5.0)",
     organization: "Reckitt Nigeria",
@@ -118,7 +214,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://nafrecruitment.airforce.mil.ng/",
     officialUrlLabel: "Apply on the official NAF recruitment portal",
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-05",
     deadline: "2026-10-14",
     nextMilestone: "Applications are open until 14 October 2026 according to the official portal.",
     feeNote: "The Nigerian Air Force states that recruitment/enlistment is FREE and is done through its official recruitment portal.",
@@ -128,7 +224,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The DSSC section on the same portal is currently marked closed."
     ],
     sources: [
-      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-04" }
+      { label: "Nigerian Air Force Recruitment Portal", url: "https://nafrecruitment.airforce.mil.ng/", lastChecked: "2026-10-05" }
     ]
   },
   {
@@ -363,7 +459,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://updates.customs.gov.ng/trn/",
     officialUrlLabel: "Check official NCS recruitment status",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-05",
     nextMilestone: "Successful candidates are instructed to report for basic training on 9 October 2026.",
     feeNote: "Nigeria Customs states that recruitment does not require payment. Treat requests for recruitment fees as suspicious.",
     sourceNotes: [
@@ -371,8 +467,8 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The current official status portal gives selected candidates instructions for basic training."
     ],
     sources: [
-      { label: "Nigeria Customs recruitment status portal", url: "https://updates.customs.gov.ng/trn/", lastChecked: "2026-10-03" },
-      { label: "Nigeria Customs recruitment publications", url: "https://customs.gov.ng/publications/recruitment", lastChecked: "2026-10-03" }
+      { label: "Nigeria Customs recruitment status portal", url: "https://updates.customs.gov.ng/trn/", lastChecked: "2026-10-05" },
+      { label: "Nigeria Customs recruitment publications", url: "https://customs.gov.ng/publications/recruitment", lastChecked: "2026-10-05" }
     ]
   },
   {
@@ -411,14 +507,14 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://recruitment.fedcivilservice.gov.ng/vacancies",
     officialUrlLabel: "Open official FCSC vacancy portal",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-05",
     feeNote: "Use the official Federal Civil Service recruitment portal. MyNigeriaGuide never collects recruitment fees or application credentials.",
     sourceNotes: [
       "The official portal currently shows 70 vacancies in 19 MDAs.",
       "Vacancies visible on the portal at the time of verification are marked closed."
     ],
     sources: [
-      { label: "Federal Civil Service Recruitment Portal", url: "https://recruitment.fedcivilservice.gov.ng/vacancies", lastChecked: "2026-10-03" }
+      { label: "Federal Civil Service Recruitment Portal", url: "https://recruitment.fedcivilservice.gov.ng/vacancies", lastChecked: "2026-10-05" }
     ]
   },
   {
@@ -492,7 +588,7 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://recruitment.cdcfib.gov.ng/",
     officialUrlLabel: "Open official CDCFIB recruitment portal",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-05",
     feeNote: "CDCFIB states that the recruitment process is free. Do not pay agents for applications, shortlisting, screening or final selection.",
     sourceNotes: [
       "The current official recruitment portal is marked Recruitment Exercise Concluded.",
@@ -500,8 +596,8 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The published eligibility structure grouped applicants into Superintendent, Inspectorate and Assistant cadres."
     ],
     sources: [
-      { label: "Official CDCFIB Recruitment Portal", url: "https://recruitment.cdcfib.gov.ng/", lastChecked: "2026-10-03" },
-      { label: "Nigerian Correctional Service recruitment notice", url: "https://www.corrections.gov.ng/news/recruitment-notice!?news_id=137", lastChecked: "2026-10-03" }
+      { label: "Official CDCFIB Recruitment Portal", url: "https://recruitment.cdcfib.gov.ng/", lastChecked: "2026-10-05" },
+      { label: "Nigerian Correctional Service recruitment notice", url: "https://www.corrections.gov.ng/news/recruitment-notice!?news_id=137", lastChecked: "2026-10-05" }
     ]
   },
   {
@@ -679,15 +775,15 @@ export const jobOpportunities: CareerOpportunity[] = [
     ],
     officialUrl: "https://careers.accessbankplc.com/jobs",
     officialUrlLabel: "View Access Bank open positions",
-    verifiedAt: "2026-10-03",
+    verifiedAt: "2026-10-05",
     feeNote: "Use Access Bank's official careers domain for applications and assessment instructions.",
     sourceNotes: [
       "Access Bank's Early Careers platform lists ELTP and internship pathways.",
       "The official hiring-process page describes application, assessment, eligibility verification, interviews, medical fitness and training stages."
     ],
     sources: [
-      { label: "Access Bank Careers", url: "https://careers.accessbankplc.com/", lastChecked: "2026-10-03" },
-      { label: "Access Bank Early Careers", url: "https://careers.accessbankplc.com/careers", lastChecked: "2026-10-03" }
+      { label: "Access Bank Careers", url: "https://careers.accessbankplc.com/", lastChecked: "2026-10-05" },
+      { label: "Access Bank Early Careers", url: "https://careers.accessbankplc.com/careers", lastChecked: "2026-10-05" }
     ]
   },
   {
