@@ -3446,14 +3446,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Femi Adebayo", "Odunlade Adekola", "Gabriel Afolayan", "Femi Branch", "Jide Kosoko", "Tina Mba", "Adeniyi Johnson", "Kola Ajeyemi"],
     featuredCast: ["Femi Adebayo", "Odunlade Adekola", "Gabriel Afolayan"],
     directors: ["Adebayo Tijani"],
-    runtimeMinutes: 133,
     watchLinks: [{
       platform: "Cinema",
       label: "Check current Silverbird showtimes",
       href: "https://silverbirdcinemas.com/genre/nollywood/",
       access: "cinema",
       lastChecked: "2026-10-05",
-      note: "Silverbird's current Nollywood listings include King Kosoko: The Battle for Lagos. Cinema locations, dates and showtimes change, so check the live schedule before travelling."
+      note: "Silverbird currently lists King Kosoko: The Battle for Lagos in Nigerian cinemas. Runtime sources differ by one minute: NFVCB lists 132 minutes while Silverbird lists 133, so MyNigeriaGuide leaves runtime unset until reconciled. Showtimes change by cinema."
     }]
   },
   {
@@ -3488,14 +3487,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Bisola Aiyeola", "Charles Okafor", "Sola Sobowale", "Stan Nze", "William Benson"],
     featuredCast: ["Bisola Aiyeola", "Charles Okafor", "Sola Sobowale"],
     directors: ["Tola Odunsi"],
-    runtimeMinutes: 120,
     watchLinks: [{
       platform: "Cinema",
       label: "Check current Silverbird showtimes",
       href: "https://silverbirdcinemas.com/genre/nollywood/",
       access: "cinema",
       lastChecked: "2026-10-05",
-      note: "Silverbird's current Nollywood listings include 19. Cinema locations, dates and showtimes change, so check the live schedule before travelling."
+      note: "Silverbird currently lists 19 in Nigerian cinemas. Runtime sources conflict: Silverbird lists 120 minutes while Fiesta lists 100 minutes, so MyNigeriaGuide leaves runtime unset until the discrepancy is reconciled. Showtimes change by cinema."
     }]
   },
 
@@ -3506,18 +3504,17 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Nollywood"],
     languages: ["Yoruba"],
-    synopsis: "A Yoruba-language drama built around personal ambition, relationships and the pressures that emerge when private choices begin affecting the people around them.",
+    synopsis: "After leaving his family food business to pursue music in Lagos, Ayotide is pulled into an exploitative taxi operation. A family tragedy sends him home, where old recordings reveal a musical legacy he can use to reclaim his family name."
     cast: ["Odunlade Adekola", "Lateef Adedimeji", "Mike Afolarin", "Lanre Adediwura", "Bukunmi Adeaga-Ilori", "Ibrahim Chatta", "Iyabo Ojo", "Koyin", "Samuel Banks"],
     featuredCast: ["Odunlade Adekola", "Lateef Adedimeji", "Mike Afolarin"],
     directors: ["Kayode Kasum"],
-    runtimeMinutes: 105,
     watchLinks: [{
       platform: "Cinema",
       label: "Check current cinema showtimes",
-      href: "https://fiesta.ng/genre/drama/",
+      href: "https://silverbirdcinemas.com/movie/starlomo/",
       access: "cinema",
       lastChecked: "2026-10-05",
-      note: "Fiesta currently lists Starlomo as a Yoruba-language Nigerian cinema release with English subtitles. Cinema schedules change, so check the live listing before travelling."
+      note: "Silverbird currently lists Starlomo in Nigerian cinemas. Runtime sources conflict: Silverbird lists 120 minutes while Fiesta lists 105 minutes, so MyNigeriaGuide leaves runtime unset until the discrepancy is reconciled. Showtime availability changes by cinema."
     }]
   },
   {
@@ -3559,7 +3556,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       href: "https://www.tntheatrical.com/post/first-look-kalu-ikeagwu-returns-to-the-big-screen-in-thriller-invitation-to-kill-in-cinemas-sep",
       access: "cinema",
       lastChecked: "2026-10-05",
-      note: "Tribe Nation Theatrical Distribution released Invitation to Kill in Nigerian and Ghanaian cinemas on 11 September 2026. Current cinema schedules vary by location."
+      note: "Tribe Nation Theatrical Distribution released Invitation to Kill in Nigerian and Ghanaian cinemas on 11 September 2026. NFVCB lists a 112-minute approved runtime, while current cinema listings vary slightly; the regulatory runtime is used here. Showtimes vary by location."
     }]
   }
 ];
