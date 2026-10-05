@@ -11333,6 +11333,65 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://fmino.gov.ng/culture/tourism/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nigeria-historic-cities-guide",
+    "title": "Historic Cities in Nigeria: Heritage Trip Planning Guide",
+    "shortTitle": "Nigeria Historic Cities",
+    "kind": "destination",
+    "region": "Nigeria",
+    "summary": "Compare Nigeria's major historic-city experiences by the type of heritage they offer—kingdoms, emirates, royal centres, museums, craft districts and civic landmarks.",
+    "intro": [
+      "Nigeria's historic cities cannot be reduced to one national itinerary because their heritage comes from different political, religious and artistic traditions.",
+      "This hub helps travellers choose a city by interest, then move into the detailed museum, palace, craft and landmark guides already available."
+    ],
+    "bestFor": [
+      "Historic cities",
+      "Heritage",
+      "Architecture",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Benin City",
+        "detail": "Strong for kingdom history, museum context and living bronze-casting tradition."
+      },
+      {
+        "name": "Kano",
+        "detail": "Strong for old-city, museum, hill and emirate heritage."
+      },
+      {
+        "name": "Abeokuta and Ile-Ife",
+        "detail": "Offer distinct Egba and Yoruba royal, craft and sacred histories."
+      },
+      {
+        "name": "Sokoto",
+        "detail": "Adds caliphate, palace and documentary-history context."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Choose by heritage theme",
+        "detail": "Do not select a city only because it has the most landmarks."
+      },
+      {
+        "label": "Use museums for context",
+        "detail": "Museum visits can make palace and street heritage more meaningful."
+      },
+      {
+        "label": "Respect living institutions",
+        "detail": "Palaces, religious sites and craft districts are active places."
+      },
+      {
+        "label": "Plan cities as separate trips",
+        "detail": "Distances make a single compressed national heritage circuit unrealistic."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Culture and Heritage",
+      "href": "https://fmino.gov.ng/culture/culture/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
