@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { ServiceCard } from "@/components/service-card";
 import type {
@@ -175,11 +176,18 @@ export function ServiceDirectory({
       )}
 
       {result.totalPages > 1 ? (
-        <nav className="jobs-pagination" aria-label="Service directory pages">
-          <button type="button" disabled={page <= 1 || loading} onClick={() => setPage((value) => Math.max(1, value - 1))}>← Previous</button>
-          <span>Page {result.page} of {result.totalPages}</span>
-          <button type="button" disabled={page >= result.totalPages || loading} onClick={() => setPage((value) => Math.min(result.totalPages, value + 1))}>Next →</button>
-        </nav>
+        filtersActive ? (
+          <nav className="jobs-pagination" aria-label="Filtered service result pages">
+            <button type="button" disabled={page <= 1 || loading} onClick={() => setPage((value) => Math.max(1, value - 1))}>← Previous</button>
+            <span>Page {result.page} of {result.totalPages}</span>
+            <button type="button" disabled={page >= result.totalPages || loading} onClick={() => setPage((value) => Math.min(result.totalPages, value + 1))}>Next →</button>
+          </nav>
+        ) : (
+          <nav className="jobs-pagination" aria-label="Service directory pages">
+            <span>Page 1 of {result.totalPages}</span>
+            <Link prefetch={false} href="/services/page/2">Next →</Link>
+          </nav>
+        )
       ) : null}
     </>
   );
