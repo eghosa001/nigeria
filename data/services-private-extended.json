@@ -7692,7 +7692,7 @@
       "Any 2FA code required when two-factor authentication is enabled"
     ],
     "steps": [
-      "Open Cowrywise and go to Stash.",
+      "Sign in to Cowrywise, open the Stash section and confirm that the balance contains funds currently available for withdrawal.",
       "Tap the three-dot menu and select Withdraw.",
       "Choose an existing BVN-linked bank account or add an eligible Nigerian bank account.",
       "Enter the withdrawal amount and confirm the request with the Cowrywise PIN and any required 2FA code.",
@@ -7924,7 +7924,7 @@
       "Any date range or statement information requested by the statement-generation flow"
     ],
     "steps": [
-      "Sign in to PiggyVest and open Account.",
+      "Sign in to PiggyVest, open the Account menu and select the option for generating an account statement.",
       "Select Generate Account Statement.",
       "Enter or choose the statement information requested by the app.",
       "Follow the prompts to generate the account statement.",
@@ -8284,7 +8284,7 @@
       "The applicant's contact and identity information for the prequalification form",
       "A valid national ID and BVN",
       "Bank statement and proof of income/employment for a salary earner where the lender requests them",
-      "Business registration or business evidence for a business-owner applicant where required",
+      "Business registration or operating-business evidence when the applicant identifies as a business owner in the financing application",
       "Any additional documentation the financing partner requests before final approval"
     ],
     "steps": [
