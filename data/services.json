@@ -12946,5 +12946,1174 @@
       "nafdac-product-verification",
       "nafdac-product-renewal"
     ]
+  },
+  {
+    "slug": "mtn-esim-activation",
+    "title": "How to activate an MTN eSIM in Nigeria",
+    "shortTitle": "MTN eSIM activation",
+    "summary": "MTN Nigeria's store-assisted route for moving a new or existing mobile line to eSIM, including device compatibility, identity checks, the QR profile and phone setup.",
+    "category": "Telecommunications",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "Free activation",
+    "feeNote": "MTN's current eSIM help page states that eSIM activation is free.",
+    "timeline": "MTN does not publish one fixed completion time; activation is handled at an MTN store after device eligibility and identity checks.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/sim/esim/",
+    "requirements": [
+      "An eSIM-compatible phone or device; MTN checks device eligibility before issuing the activation profile",
+      "The mobile number being moved to eSIM, or a new-line request for a customer completing normal SIM registration",
+      "Acceptable proof of identity for the SIM registration or SIM-swap identity checks",
+      "A Wi-Fi connection so the phone can download the eSIM profile from the QR code"
+    ],
+    "steps": [
+      "Check that the phone supports eSIM, then visit an MTN store and ask the customer-care agent to evaluate the device and line for eSIM activation.",
+      "Complete the normal identity and SIM-registration or SIM-swap checks for the number that will be associated with the eSIM.",
+      "Collect the QR-code slip supplied by the MTN agent after eligibility is confirmed.",
+      "Connect the phone to Wi-Fi, open the device's mobile-network settings and scan the MTN QR code to add the eSIM profile.",
+      "Allow the MTN agent to associate the QR profile's SIM serial and PUK with the mobile number, then confirm that the MTN network becomes active on the phone."
+    ],
+    "notes": [
+      "MTN says an existing physical SIM can be moved to eSIM through a SIM swap.",
+      "If an eSIM device is lost, MTN advises calling 300 or visiting an MTN store to block the number and start another SIM swap.",
+      "A QR profile should not be shared with another person because it controls activation of the mobile line."
+    ],
+    "sources": [
+      {
+        "label": "MTN Nigeria eSIM",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/sim/esim/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Nigeria eSIM Help",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/helppersonal/esim/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "airtel-esim-activation",
+      "glo-esim-activation",
+      "nin-sim-linkage",
+      "check-nin-sim-linkage-status"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MTN eSIM Nigeria",
+      "activate MTN eSIM",
+      "MTN eSIM QR code",
+      "MTN physical SIM to eSIM",
+      "MTN eSIM activation fee"
+    ]
+  },
+  {
+    "slug": "airtel-esim-activation",
+    "title": "How to activate an Airtel eSIM in Nigeria",
+    "shortTitle": "Airtel eSIM activation",
+    "summary": "Airtel Nigeria's service-centre route for upgrading a physical line to eSIM, checking EID compatibility, receiving a QR profile and installing it on a supported phone.",
+    "category": "Telecommunications",
+    "agencySlug": "airtel-nigeria",
+    "feeLabel": "Free activation",
+    "feeNote": "Airtel's Nigeria eSIM page states that there is currently no activation cost.",
+    "timeline": "Airtel does not publish one fixed completion time; the service centre completes the SIM upgrade and profile setup after the line and device checks.",
+    "status": "verified",
+    "officialPortal": "https://www.airtel.com.ng/ng/personal/services/sim-services/esim",
+    "requirements": [
+      "An eSIM-compatible phone; dial *#06# and confirm that the device displays an EID number",
+      "An Airtel line to upgrade, or a newly registered physical Airtel SIM that can then be upgraded to eSIM",
+      "The identity evidence needed for Airtel's normal SIM-swap or registration checks",
+      "A Wi-Fi connection to download the Airtel eSIM profile after the QR code is issued"
+    ],
+    "steps": [
+      "Dial *#06# on the phone and confirm that an EID number appears, then visit an Airtel Service Centre for the eSIM upgrade.",
+      "Complete Airtel's SIM-swap or line-registration identity checks with the service-centre agent.",
+      "Receive the Airtel QR code after the agent associates the new eSIM serial and PUK with the mobile number.",
+      "Connect the phone to Wi-Fi and use the mobile-network or SIM-manager settings to scan the Airtel QR code.",
+      "Confirm that the Airtel eSIM becomes active and keep the service-centre details in case a replacement profile is later needed."
+    ],
+    "notes": [
+      "Airtel says an eSIM QR code is single-use for the activation and a lost code requires a visit to a service centre.",
+      "Moving the number to another device can require another eSIM swap and a fresh QR profile.",
+      "If the device is lost, Airtel advises calling 300 or visiting a showroom to block the line."
+    ],
+    "sources": [
+      {
+        "label": "Airtel Nigeria eSIM",
+        "agency": "Airtel Nigeria",
+        "url": "https://www.airtel.com.ng/ng/personal/services/sim-services/esim",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-esim-activation",
+      "glo-esim-activation",
+      "nin-sim-linkage",
+      "check-nin-sim-linkage-status"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Airtel eSIM Nigeria",
+      "activate Airtel eSIM",
+      "Airtel eSIM QR code Nigeria",
+      "Airtel physical SIM to eSIM",
+      "Airtel eSIM fee"
+    ]
+  },
+  {
+    "slug": "glo-esim-activation",
+    "title": "How to activate or migrate to a Glo eSIM",
+    "shortTitle": "Glo eSIM activation",
+    "summary": "Globacom's current eSIM route for new and existing Glo customers, including EID compatibility checks, a Gloworld or dealer visit and the data-plan condition attached to the current promotion.",
+    "category": "Telecommunications",
+    "agencySlug": "globacom",
+    "feeLabel": "Free migration + qualifying data purchase",
+    "feeNote": "Glo states that eSIM migration is free for a limited period, but the customer currently needs to buy a data plan of at least ₦1,500 at activation. Because the promotion is time-limited, confirm the current offer before payment.",
+    "timeline": "Glo does not publish a fixed completion time; activation is handled at a Gloworld shop or Glo dealer outlet after compatibility and line checks.",
+    "status": "verified",
+    "officialPortal": "https://www.gloworld.com/ng/glo-esim",
+    "requirements": [
+      "An eSIM-compatible phone that displays an EID number after dialing *#06#",
+      "A new or existing Glo mobile line that can be registered or migrated to eSIM",
+      "A visit to a Gloworld shop or Glo dealer outlet for the activation or migration",
+      "The current qualifying Glo data-plan purchase attached to the eSIM promotion"
+    ],
+    "steps": [
+      "Dial *#06# on the phone and confirm that the device displays an EID number for eSIM compatibility.",
+      "Visit a Gloworld shop or Glo dealer outlet and request eSIM activation for a new line or migration of an existing Glo line.",
+      "Complete the line-registration or migration checks required at the outlet and confirm the current promotional condition before paying for a data plan.",
+      "Receive and install the eSIM profile on the compatible phone with the assistance of the Glo outlet.",
+      "Confirm that the Glo line is active, then verify the data-plan purchase and any promotional bonus shown on the account."
+    ],
+    "notes": [
+      "Glo's published offer says migration is free only for a limited period, so the promotion can change.",
+      "The current eSIM page says a data plan of ₦1,500 or more is required during activation under the promotion.",
+      "Do not assume the one-time promotional data bonus remains available after the published offer changes."
+    ],
+    "sources": [
+      {
+        "label": "Glo eSIM",
+        "agency": "Globacom Limited",
+        "url": "https://www.gloworld.com/ng/glo-esim",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-esim-activation",
+      "airtel-esim-activation",
+      "nin-sim-linkage",
+      "check-nin-sim-linkage-status"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Glo eSIM Nigeria",
+      "activate Glo eSIM",
+      "migrate Glo SIM to eSIM",
+      "Glo eSIM fee",
+      "Glo eSIM 5GB bonus"
+    ]
+  },
+  {
+    "slug": "moniepoint-personal-account",
+    "title": "How to open a Moniepoint Personal account",
+    "shortTitle": "Moniepoint Personal account",
+    "summary": "The Moniepoint Personal Banking onboarding route for opening an individual account with a Nigerian phone number, email, BVN, KYC details, face/ID verification and an in-app PIN.",
+    "category": "Banking",
+    "agencySlug": "moniepoint",
+    "feeLabel": "No opening fee",
+    "feeNote": "Moniepoint states that opening a Personal account is free and no initial deposit is required.",
+    "timeline": "Moniepoint advertises account opening in about 5 minutes, subject to successful phone, BVN, KYC, face and identity verification.",
+    "status": "verified",
+    "officialPortal": "https://moniepoint.com/ng/personal/personal-account",
+    "requirements": [
+      "A valid Nigerian phone number that can receive the signup OTP",
+      "A functional email address for the personal-banking profile",
+      "A Bank Verification Number (BVN) for the identity and KYC checks",
+      "The face and identification information requested during the in-app verification flow"
+    ],
+    "steps": [
+      "Download the official Moniepoint Personal Banking app from the app store linked on Moniepoint's website and begin the personal-account signup.",
+      "Enter the email address and Nigerian phone number, then verify the phone number with the OTP sent by Moniepoint.",
+      "Create the username and password, provide the BVN and complete the KYC details shown in the app.",
+      "Complete the face and identity verification and create the transaction PIN used to manage the account.",
+      "Open the Add Money area after approval to view the account details, fund the account and begin using transfers, bills and card services."
+    ],
+    "notes": [
+      "Moniepoint says a valid phone number, email and BVN provide access to the initial personal-account onboarding level.",
+      "The provider says there is no minimum initial deposit or monthly maintenance fee for the personal account.",
+      "Use only the official Moniepoint app or website links for onboarding and never send an OTP or PIN to an agent."
+    ],
+    "sources": [
+      {
+        "label": "Moniepoint Personal Account",
+        "agency": "Moniepoint Microfinance Bank",
+        "url": "https://moniepoint.com/ng/personal/personal-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Moniepoint Personal Banking",
+        "agency": "Moniepoint Microfinance Bank",
+        "url": "https://moniepoint.com/ng/personal",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "moniepoint-ussd-banking",
+      "bvn-enrolment",
+      "bvn-retrieval",
+      "bvn-data-update"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Moniepoint account",
+      "Moniepoint personal account",
+      "Moniepoint account requirements",
+      "Moniepoint BVN account",
+      "Moniepoint personal banking signup"
+    ]
+  },
+  {
+    "slug": "moniepoint-ussd-banking",
+    "title": "How to activate Moniepoint USSD banking with *5573#",
+    "shortTitle": "Moniepoint USSD banking",
+    "summary": "How an existing Moniepoint Personal or Business customer enables the *5573# USSD channel, authorises it with a PIN and uses offline banking or the emergency block menu.",
+    "category": "Banking",
+    "agencySlug": "moniepoint",
+    "feeLabel": "₦10 for listed transactional USSD services",
+    "feeNote": "Moniepoint says transfers, airtime/data purchases, balance checks and PIN changes currently carry a ₦10 fee, while OTP, activation and emergency blocking services remain free; the provider says this list can change.",
+    "timeline": "No separate approval timeline is published; the USSD channel is available after it is enabled in the Moniepoint app or web settings with PIN authorisation.",
+    "status": "verified",
+    "officialPortal": "https://www.moniepoint.com/ng/moniepoint-ussd",
+    "requirements": [
+      "An existing Moniepoint Personal or Business account; Moniepoint does not currently open new accounts through USSD",
+      "Access to the Moniepoint mobile or web account settings before first use of the USSD channel",
+      "The user PIN needed to authorise enabling or disabling USSD banking",
+      "The phone number registered to the Moniepoint profile for normal *5573# account access"
+    ],
+    "steps": [
+      "Log in to the Moniepoint Personal or Business app or web account and open the profile settings.",
+      "Locate the USSD Banking feature in Settings or the Security area and switch it on.",
+      "Authorise the change with the Moniepoint user PIN so the registered phone number can use the channel.",
+      "Dial *5573# from the registered phone number and select the required transfer, airtime, data, balance or PIN service.",
+      "Use *5573*911# from any phone if the immediate task is to block or unblock the account or card through Moniepoint's emergency menu."
+    ],
+    "notes": [
+      "Moniepoint publishes a ₦20,000 single-transfer limit and ₦100,000 cumulative daily transfer limit for the USSD channel.",
+      "Sensitive USSD operations still require the user's Moniepoint PIN.",
+      "If *5573# says the channel is not enabled, return to the app or web settings and enable USSD banking before retrying."
+    ],
+    "sources": [
+      {
+        "label": "Moniepoint USSD Banking",
+        "agency": "Moniepoint Microfinance Bank",
+        "url": "https://www.moniepoint.com/ng/moniepoint-ussd",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "moniepoint-personal-account",
+      "bvn-retrieval",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Moniepoint USSD code",
+      "*5573#",
+      "activate Moniepoint USSD",
+      "Moniepoint USSD transfer",
+      "Moniepoint emergency code"
+    ]
+  },
+  {
+    "slug": "firstbank-open-account",
+    "title": "How to open a FirstBank account in Nigeria",
+    "shortTitle": "FirstBank account opening",
+    "summary": "FirstBank's account-opening portal and branch route for personal accounts, with account-specific BVN/NIN, address, signature, referee or travel-document requirements.",
+    "category": "Banking",
+    "agencySlug": "firstbank",
+    "feeLabel": "Depends on the account type",
+    "feeNote": "FirstBank lists different onboarding requirements across First Instant, savings, current, domiciliary, youth and other accounts. Confirm any opening balance or account-specific charge on the selected product before funding.",
+    "timeline": "FirstBank does not publish one fixed account-opening completion time; completion depends on the selected account and successful KYC verification.",
+    "status": "verified",
+    "officialPortal": "https://openaccounts2.firstbanknigeria.com/daolite/",
+    "requirements": [
+      "The BVN or NIN combination shown for the selected FirstBank account; some account types require both while First Instant can use BVN or NIN",
+      "A signature and any identity evidence requested for the selected KYC tier",
+      "Proof of address such as a utility bill less than three months old for account types that require address verification",
+      "Two bank referees for a current account, or a valid international passport or travel document for the domiciliary-account route"
+    ],
+    "steps": [
+      "Open FirstBank's official account-opening portal and compare the listed personal account types before choosing the product that matches the intended use.",
+      "Select the account and review its displayed BVN, NIN, address, referee, student, NYSC or travel-document requirements.",
+      "Complete the account-opening information and provide the identity, signature and supporting evidence for that specific product.",
+      "Submit the onboarding request through the official portal or follow the product's branch instruction if the account must be completed in person.",
+      "Keep the new account details only after FirstBank completes the KYC checks, then activate any required digital-banking or card service through official channels."
+    ],
+    "notes": [
+      "FirstBank's published portal shows materially different document sets for First Instant, savings, NYSC, current, domiciliary and child/youth accounts.",
+      "Do not copy the current-account referee requirement onto a savings account unless the selected product asks for it.",
+      "Use FirstBank's official domain rather than an account-opening link sent through an unsolicited message."
+    ],
+    "sources": [
+      {
+        "label": "FirstBank Account Opening Portal",
+        "agency": "First Bank of Nigeria Limited",
+        "url": "https://openaccounts2.firstbanknigeria.com/daolite/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FirstBank Current Account",
+        "agency": "First Bank of Nigeria Limited",
+        "url": "https://firstbankgroup.com/ng/personal/current/current-account/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uba-open-account",
+      "access-bank-solo-account",
+      "moniepoint-personal-account",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open FirstBank account online",
+      "FirstBank account opening requirements",
+      "FirstBank savings account Nigeria",
+      "FirstBank current account requirements",
+      "FirstBank online account opening"
+    ]
+  },
+  {
+    "slug": "uba-open-account",
+    "title": "How to open a UBA account in Nigeria",
+    "shortTitle": "UBA account opening",
+    "summary": "UBA Nigeria's online and product-specific account-opening routes for savings, current, salary, diaspora and youth accounts, with the identity and address evidence that changes by account type.",
+    "category": "Banking",
+    "agencySlug": "uba",
+    "feeLabel": "Varies by account type",
+    "feeNote": "UBA publishes different opening balances and document requirements by product; for example, some salary/youth products have zero opening balance while other savings/current products list their own opening amounts. Check the selected product before funding.",
+    "timeline": "UBA does not publish one universal completion time for every account type; onboarding depends on the selected product and successful KYC verification.",
+    "status": "verified",
+    "officialPortal": "https://www.ubagroup.com/nigeria/personal-banking/accounts/",
+    "requirements": [
+      "A valid means of identification accepted for the chosen UBA account, such as National ID, passport, driver's licence or voter card",
+      "A recent passport photograph for the applicant and each signatory where the product requires one",
+      "Proof of residential address, commonly a recent utility bill, for products that require full address verification",
+      "Additional product evidence such as two current-account references, employer introduction, student/NYSC evidence or diaspora source-of-funds documents when that account type requires them"
+    ],
+    "steps": [
+      "Open UBA Nigeria's official Accounts page and choose the savings, current, salary, diaspora, youth or other account that matches the intended use.",
+      "Read the product-specific requirements and opening-balance information before selecting the Open Account route.",
+      "Complete the online account-opening form or the provider's indicated application route with the applicant's identity, contact and KYC information.",
+      "Provide the passport photograph, address evidence, references, employer evidence or diaspora documents that apply to the selected product.",
+      "Wait for UBA to complete verification before relying on the new account, then activate the required mobile, internet, USSD or card service through UBA's official channels."
+    ],
+    "notes": [
+      "UBA's current account, savings account, salary account and diaspora routes do not use one identical requirement list.",
+      "A current account can require references that are not necessarily required for every savings product.",
+      "Confirm the current product terms on UBA's site because opening balances and rates can change."
+    ],
+    "sources": [
+      {
+        "label": "UBA Nigeria Accounts",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/accounts/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UBA Current Account",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/accounts/current-account/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UBA Savings Account",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/accounts/savings-account/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "firstbank-open-account",
+      "access-bank-solo-account",
+      "moniepoint-personal-account",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open UBA account online",
+      "UBA account opening Nigeria",
+      "UBA savings account requirements",
+      "UBA current account requirements",
+      "UBA online account"
+    ]
+  },
+  {
+    "slug": "access-bank-solo-account",
+    "title": "How to open an Access Bank Solo Account",
+    "shortTitle": "Access Bank Solo Account",
+    "summary": "Access Bank's Solo Account route for young people and students, including the published opening balance, identity or student evidence, TIN and proof-of-address requirements.",
+    "category": "Banking",
+    "agencySlug": "access-bank",
+    "feeLabel": "₦500 opening balance",
+    "feeNote": "Access Bank's current Solo Account page lists a ₦500 opening balance; confirm the product page before funding because product terms can change.",
+    "timeline": "Access Bank does not publish a fixed completion time for the Solo Account; opening depends on completion of the account form and KYC checks.",
+    "status": "verified",
+    "officialPortal": "https://www.accessbankplc.com/personal/everyday-accounts/solo-account",
+    "requirements": [
+      "A completed Solo Account opening form and signature specimen card",
+      "One recent passport photograph",
+      "A valid identity document for a non-student, or school ID, admission/acceptance letter or bio-data form for a student applicant",
+      "A Tax Identification Number (TIN) and proof of address for the applicant category shown by Access Bank",
+      "A resident permit when the applicant is a foreign national living in Nigeria"
+    ],
+    "steps": [
+      "Open Access Bank's official Solo Account page and confirm that the product fits the applicant's student or young-person banking needs.",
+      "Review the current opening balance and document list before starting the account-opening form.",
+      "Complete the account form and signature specimen and prepare the photograph, identity or student evidence, TIN and address evidence.",
+      "Submit the Solo Account application through Access Bank's official account-opening channel or branch route shown for the product.",
+      "Wait for Access Bank to complete the KYC review before using the account and activate cards or digital channels only through official Access Bank services."
+    ],
+    "notes": [
+      "Access Bank describes Solo as a youth/student-focused hybrid savings product.",
+      "Student and non-student applicants use different identity evidence on the published requirement list.",
+      "Confirm the current interest rate and card terms on the provider page instead of treating promotional figures as permanent."
+    ],
+    "sources": [
+      {
+        "label": "Access Bank Solo Account",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/personal/everyday-accounts/solo-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Access Bank Basic Account Opening Requirements",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/AccessBankGroup/media/AML/Account_Opening_Requirements.pdf",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "firstbank-open-account",
+      "uba-open-account",
+      "moniepoint-personal-account",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Access Bank Solo Account",
+      "open Access Bank student account",
+      "Access Bank Solo requirements",
+      "Access Bank youth account Nigeria",
+      "Solo Account opening balance"
+    ]
+  },
+  {
+    "slug": "dstv-pay-reconnect",
+    "title": "How to pay and reconnect DStv in Nigeria",
+    "shortTitle": "DStv payment & reconnection",
+    "summary": "DStv Nigeria's self-service payment routes for an existing subscription, including account verification, balance payment and reconnection after a successful payment.",
+    "category": "TV & streaming",
+    "agencySlug": "dstv-nigeria",
+    "feeLabel": "Your current DStv account/package amount",
+    "feeNote": "The amount depends on the package and account balance. Verify the Smartcard/customer number and amount shown in DStv Self Service before paying.",
+    "timeline": "DStv says QuickTeller payments can trigger automatic reconnection within about 5 minutes after the successful transaction reaches its billing system.",
+    "status": "verified",
+    "officialPortal": "https://www.dstv.com/en-ng/pay/how-to-pay/",
+    "requirements": [
+      "The DStv Smartcard or customer number for the subscription being paid",
+      "Access to DStv Self Service, MyDStv, a supported bank/USSD channel or another payment method listed by DStv Nigeria",
+      "Enough funds for the verified package balance or top-up amount",
+      "The decoder switched on when reconnecting a service that has already been disconnected"
+    ],
+    "steps": [
+      "Open DStv Nigeria's official payment or Self Service page and enter the Smartcard/customer number for the account.",
+      "Verify the subscriber details and view the outstanding balance before selecting a payment method.",
+      "Choose an official payment option such as MyDStv, internet banking, USSD or another channel listed by DStv and complete the transaction.",
+      "Keep the payment confirmation and leave the decoder switched on while the payment is applied to the DStv account.",
+      "Check that viewing is restored; if payment succeeds but the service remains disconnected, use MyDStv/Self Service error tools or DStv support."
+    ],
+    "notes": [
+      "DStv supports several payment channels, so the exact bank or USSD flow can differ.",
+      "Always verify the Smartcard/customer number before payment because DStv also allows payment for another subscriber.",
+      "Do not pay a private agent who cannot provide a traceable DStv or payment-channel receipt."
+    ],
+    "sources": [
+      {
+        "label": "DStv Nigeria — Ways to Pay",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/pay/how-to-pay/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MyDStv App",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/mydstv-app/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dstv-change-package",
+      "gotv-pay-reconnect"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "pay DStv Nigeria",
+      "reconnect DStv",
+      "DStv subscription payment",
+      "DStv Smartcard payment",
+      "DStv payment not reconnecting"
+    ]
+  },
+  {
+    "slug": "dstv-change-package",
+    "title": "How to change a DStv package in Nigeria",
+    "shortTitle": "Change DStv package",
+    "summary": "How an existing DStv Nigeria subscriber uses MyDStv or Self Service to view the account, change the current package and settle any amount needed for the new subscription.",
+    "category": "TV & streaming",
+    "agencySlug": "dstv-nigeria",
+    "feeLabel": "Depends on the selected package",
+    "feeNote": "DStv package prices and any amount due depend on the subscriber's current account and target package. Confirm the amount in MyDStv or Self Service before payment.",
+    "timeline": "DStv does not publish one fixed package-change completion time; the change is managed through its self-service account and payment system.",
+    "status": "verified",
+    "officialPortal": "https://www.dstv.com/en-ng/mydstv-app/",
+    "requirements": [
+      "An existing DStv subscription linked to the MyDStv app or DStv Self Service",
+      "The customer or Smartcard details needed to access the correct account",
+      "A selected DStv package that is available for the subscriber's market/account",
+      "Funds for any balance or package amount shown before the change is confirmed"
+    ],
+    "steps": [
+      "Open the MyDStv app or DStv Self Service and sign in to the subscription account that needs the package change.",
+      "Use the Change Package feature and review the packages currently offered for that account.",
+      "Select the target package and review any amount or account balance displayed before confirming the change.",
+      "Complete the required payment through an official DStv payment channel if the account needs funding for the selected package.",
+      "Confirm the updated package in MyDStv and use the Fix Errors or support tools if the decoder does not reflect the change."
+    ],
+    "notes": [
+      "The MyDStv app also provides balance/payment and decoder error-clearing tools for the same subscription.",
+      "Package availability and prices can change, so use the amount displayed in the subscriber's account rather than an old price list.",
+      "A package change and a decoder hardware upgrade are separate services."
+    ],
+    "sources": [
+      {
+        "label": "MyDStv App",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/mydstv-app/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DStv Nigeria — New to DStv Self Service",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/manage/new-to-dstv/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dstv-pay-reconnect",
+      "gotv-pay-reconnect"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change DStv package",
+      "upgrade DStv package Nigeria",
+      "downgrade DStv package",
+      "MyDStv change package",
+      "DStv package change"
+    ]
+  },
+  {
+    "slug": "gotv-pay-reconnect",
+    "title": "How to pay and reconnect GOtv in Nigeria",
+    "shortTitle": "GOtv payment & reconnection",
+    "summary": "GOtv Nigeria's payment and self-service route for checking an account, paying a package and restoring viewing after a disconnected subscription.",
+    "category": "TV & streaming",
+    "agencySlug": "gotv-nigeria",
+    "feeLabel": "Your current GOtv account/package amount",
+    "feeNote": "The amount depends on the package and account balance. Verify the IUC and amount in GOtv Self Service before payment.",
+    "timeline": "GOtv says supported integrated payment routes can prompt automatic reconnection within about 5 minutes after a successful payment is applied.",
+    "status": "verified",
+    "officialPortal": "https://www.gotvafrica.com/en-ng/pay/how-to-pay",
+    "requirements": [
+      "The IUC number for the GOtv decoder/account being paid",
+      "Access to MyGOtv, GOtv Self Service, *288# or another payment channel listed by GOtv Nigeria",
+      "Enough funds to cover the verified subscription balance or selected package",
+      "The decoder switched on while reconnecting a subscription that is already disconnected"
+    ],
+    "steps": [
+      "Open GOtv Nigeria's official payment page or MyGOtv and enter the IUC details for the subscription.",
+      "Verify the account, balance and intended package before choosing a payment channel.",
+      "Complete payment through MyGOtv, the GOtv website, *288#, bank/USSD or another official option listed by GOtv.",
+      "Keep the transaction confirmation and leave the decoder switched on while the payment is applied.",
+      "Check that viewing returns; if it does not, use MyGOtv or GOtv Self Service to clear the relevant decoder error or contact support."
+    ],
+    "notes": [
+      "GOtv's *288# self-service channel can also show what is owed, clear error codes and reconnect packages.",
+      "Always confirm the IUC number before paying for your own or another person's GOtv subscription.",
+      "Package pricing changes over time, so verify the current amount in GOtv Self Service."
+    ],
+    "sources": [
+      {
+        "label": "GOtv Nigeria — Ways to Pay",
+        "agency": "GOtv Nigeria",
+        "url": "https://www.gotvafrica.com/en-ng/pay/how-to-pay",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dstv-pay-reconnect",
+      "dstv-change-package"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "pay GOtv Nigeria",
+      "reconnect GOtv",
+      "GOtv subscription payment",
+      "GOtv IUC payment",
+      "GOtv *288#"
+    ]
+  },
+  {
+    "slug": "air-peace-book-flight",
+    "title": "How to book an Air Peace flight",
+    "shortTitle": "Book Air Peace flight",
+    "summary": "Air Peace's official website/app booking route for domestic, regional and international flights, including passenger details, payment, the booking reference and electronic ticket.",
+    "category": "Air travel",
+    "agencySlug": "air-peace",
+    "feeLabel": "Fare varies by route, date and cabin",
+    "feeNote": "Air Peace fares are dynamic. Use the price shown for the selected flight in the official booking flow and review fare conditions before payment.",
+    "timeline": "After successful payment, Air Peace says the booking reference and ticket summary are issued and a confirmation email is sent to the contact address supplied during booking.",
+    "status": "verified",
+    "officialPortal": "https://flyairpeace.com/book-a-flight/",
+    "requirements": [
+      "The departure city, destination, travel date and passenger count needed to search for a flight",
+      "Passenger names entered to match the valid travel identity document that will be used at check-in",
+      "A valid photo ID for domestic travel, or a valid international passport and visa when the regional/international route requires them",
+      "A working email/phone contact and a supported payment method for completing the reservation"
+    ],
+    "steps": [
+      "Open Air Peace's official booking page or mobile app and choose one-way or return travel, route, dates and passenger count.",
+      "Select an available flight and fare, then enter the passenger names and contact information exactly as they should appear on the ticket.",
+      "Review the itinerary and fare conditions before completing payment through the official Air Peace booking flow.",
+      "Confirm that Air Peace issues the six-character booking reference and electronic ticket after successful payment.",
+      "Save the confirmation email, booking reference and 13-digit e-ticket number because they are used for Manage Booking and check-in."
+    ],
+    "notes": [
+      "Air Peace warns against fraudulent Google ads and recommends using its official website or app.",
+      "Name transfers are not permitted; a misspelling or legal name change must be handled with Air Peace under its ticket rules.",
+      "Entry, transit, passport and visa requirements remain the passenger's responsibility on international routes."
+    ],
+    "sources": [
+      {
+        "label": "Air Peace Book a Flight",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/book-a-flight/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Air Peace FAQs",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "air-peace-online-check-in",
+      "air-peace-reschedule-flight",
+      "air-peace-extra-baggage",
+      "air-peace-lost-baggage"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "book Air Peace flight",
+      "Air Peace booking Nigeria",
+      "Air Peace online booking",
+      "Air Peace flight ticket",
+      "Air Peace booking reference"
+    ]
+  },
+  {
+    "slug": "air-peace-online-check-in",
+    "title": "How Air Peace online check-in works",
+    "shortTitle": "Air Peace online check-in",
+    "summary": "The Air Peace online check-in route using surname and booking reference, with the current domestic/regional/international opening windows and an official conflict on the domestic closing time.",
+    "category": "Air travel",
+    "agencySlug": "air-peace",
+    "feeLabel": "No separate online check-in fee stated",
+    "feeNote": "Air Peace does not list a separate online check-in fee. Its official FAQ and Terms currently disagree on the domestic online check-in closing time, so use the earlier cutoff until Air Peace reconciles the pages.",
+    "timeline": "Online check-in opens 24 hours before most flights. Air Peace's FAQ says domestic online check-in closes 2 hours before departure, while its Terms say 1 hour; both say regional/international online check-in closes 3 hours before departure.",
+    "status": "conflict",
+    "officialPortal": "https://flyairpeace.com/",
+    "requirements": [
+      "The passenger surname exactly as recorded on the Air Peace booking",
+      "The Air Peace booking reference for the confirmed ticket",
+      "A valid photo ID for domestic travel or the passport and visa/travel documents needed for a regional or international trip",
+      "Enough time before the applicable check-in cutoff to complete online check-in and any mandatory airport document verification"
+    ],
+    "steps": [
+      "Open Air Peace's official website and choose Check-in, then enter the passenger surname and booking reference.",
+      "Complete the online check-in prompts and download or print the boarding pass if the booking is eligible for online check-in.",
+      "For a domestic flight, treat 2 hours before departure as the safer current online cutoff because Air Peace's FAQ and Terms disagree between 2 hours and 1 hour.",
+      "For regional or international travel, complete online check-in before the published 3-hour cutoff and still report to the airport desk for passport verification.",
+      "Arrive within Air Peace's published airport-arrival guidance and use physical check-in if the booking contains a service request that is not eligible online."
+    ],
+    "notes": [
+      "Air Peace's official pages currently conflict on the domestic online check-in closing time; this guide does not silently choose the later deadline.",
+      "The airline says domestic passengers who check in online should arrive at least one hour before departure.",
+      "Regional/international passengers must still have passports verified at the airport check-in desk."
+    ],
+    "sources": [
+      {
+        "label": "Air Peace FAQs",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Air Peace Terms and Conditions",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/terms-and-conditions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "air-peace-book-flight",
+      "air-peace-reschedule-flight",
+      "air-peace-extra-baggage"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Air Peace online check in",
+      "Air Peace check-in time",
+      "Air Peace booking reference check in",
+      "Air Peace domestic check in",
+      "Air Peace boarding pass"
+    ]
+  },
+  {
+    "slug": "air-peace-reschedule-flight",
+    "title": "How to reschedule an Air Peace flight",
+    "shortTitle": "Reschedule Air Peace flight",
+    "summary": "Air Peace's Manage Booking and assisted routes for changing a future flight, with a separate airport/sales or call-centre route when the flight is already past or missed.",
+    "category": "Air travel",
+    "agencySlug": "air-peace",
+    "feeLabel": "Fare difference or change charge can apply",
+    "feeNote": "Air Peace does not publish one universal rescheduling amount on its FAQ because the applicable charge depends on the ticket, fare and change. Review the amount shown before confirming a modification.",
+    "timeline": "Air Peace does not publish one fixed rescheduling completion time; future bookings can be modified online when eligible, while past or missed flights require assisted handling.",
+    "status": "verified",
+    "officialPortal": "https://flyairpeace.com/",
+    "requirements": [
+      "The surname and booking reference for the Air Peace reservation being changed",
+      "A confirmed ticket that remains eligible for online modification when using Manage Booking",
+      "A new travel date or flight option that is available for the route",
+      "Funds for any fare difference or modification charge displayed before the revised ticket is issued"
+    ],
+    "steps": [
+      "Open Air Peace's official website and use My Bookings or Manage Booking with the surname and booking reference.",
+      "Choose the eligible flight-change or reschedule option and select an available replacement date or flight.",
+      "Review the revised itinerary and any fare difference or modification amount before making payment.",
+      "Complete the change and save the updated itinerary or ticket sent for the revised booking.",
+      "If the original flight is already past or was missed, contact Air Peace's airport/sales outlet or call-centre route because the provider says those modifications cannot be completed online."
+    ],
+    "notes": [
+      "Air Peace says a passenger name cannot simply be transferred to another person.",
+      "A missed or past flight follows an assisted modification route rather than the normal online Manage Booking flow.",
+      "Keep the old and new ticket confirmations until the replacement itinerary has been checked."
+    ],
+    "sources": [
+      {
+        "label": "Air Peace Book a Flight / FAQs",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/book-a-flight/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Air Peace FAQs",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "air-peace-book-flight",
+      "air-peace-online-check-in",
+      "air-peace-extra-baggage"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "reschedule Air Peace flight",
+      "change Air Peace booking",
+      "Air Peace manage booking",
+      "Air Peace missed flight change",
+      "Air Peace flight modification"
+    ]
+  },
+  {
+    "slug": "air-peace-extra-baggage",
+    "title": "How to buy extra baggage on Air Peace",
+    "shortTitle": "Air Peace extra baggage",
+    "summary": "Air Peace's online extra-baggage service for eligible bookings, using surname and booking reference to buy additional allowance before departure and avoid airport-only processing.",
+    "category": "Air travel",
+    "agencySlug": "air-peace",
+    "feeLabel": "Varies by route, cabin and number of bags",
+    "feeNote": "Air Peace publishes route/cabin-specific excess-baggage pricing and progressive pricing for additional bags. Check the exact amount in Manage Booking before payment.",
+    "timeline": "Air Peace recommends buying during booking or before departure; for applicable international routes, the airline says online purchases must be completed at least 6 hours before departure to qualify for online pricing.",
+    "status": "verified",
+    "officialPortal": "https://flyairpeace.com/online-extra-baggage/",
+    "requirements": [
+      "A confirmed Air Peace booking with the passenger surname and booking reference",
+      "An eligible flight for the online extra-baggage option",
+      "The number and weight of additional bags needed, with no single bag exceeding Air Peace's published maximum of 32 kg",
+      "A payment method for the extra-baggage amount shown for the route and cabin"
+    ],
+    "steps": [
+      "Open Air Peace's official Online Extra Baggage page and retrieve the booking using the passenger surname and booking reference.",
+      "Review the free baggage allowance and choose the additional bag or excess allowance needed for the trip.",
+      "Check the route, cabin, bag count and displayed price before completing the extra-baggage payment.",
+      "Complete the purchase early enough to meet any online-pricing cutoff, including the published 6-hour rule for applicable international routes.",
+      "Save the extra-baggage confirmation and present the booking at check-in so the purchased allowance can be matched to the passenger."
+    ],
+    "notes": [
+      "Air Peace says extra-baggage purchases are generally non-refundable and non-transferable except when operational changes apply.",
+      "Baggage pooling is permitted only within the same booking reference under the published guidance.",
+      "Airport excess-baggage charges can differ from online rates."
+    ],
+    "sources": [
+      {
+        "label": "Air Peace Online Extra Baggage",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/online-extra-baggage/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Air Peace Baggage Policy",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/baggage-policy/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "air-peace-book-flight",
+      "air-peace-online-check-in",
+      "air-peace-lost-baggage"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Air Peace extra baggage",
+      "buy excess baggage Air Peace",
+      "Air Peace baggage fee",
+      "Air Peace additional bag",
+      "Air Peace baggage allowance"
+    ]
+  },
+  {
+    "slug": "air-peace-lost-baggage",
+    "title": "What to do if Air Peace loses or damages your baggage",
+    "shortTitle": "Air Peace lost baggage",
+    "summary": "Air Peace's airport reporting route for missing or damaged checked baggage, including the Property Irregularity Report that must be filed before leaving the airport.",
+    "category": "Air travel",
+    "agencySlug": "air-peace",
+    "feeLabel": "No baggage-report fee stated",
+    "feeNote": "Air Peace does not state a fee for filing the Property Irregularity Report; any later compensation or liability follows the airline's baggage and carriage rules.",
+    "timeline": "Report the baggage problem immediately at the airport before leaving; Air Peace then uses the report reference to trace the bag and contact the passenger when it is found.",
+    "status": "verified",
+    "officialPortal": "https://flyairpeace.com/faqs/",
+    "requirements": [
+      "The passenger's flight and booking information for the journey on which the baggage problem occurred",
+      "The baggage tag or claim information issued for the checked bag",
+      "A description of the bag including colour, brand and identifying marks or contents that can assist tracing",
+      "A Property Irregularity Report reference created with Air Peace ground staff before the passenger leaves the airport"
+    ],
+    "steps": [
+      "Go immediately to the Air Peace baggage-services desk or an Air Peace ground staff member when a checked bag is missing or damaged.",
+      "Give the staff the flight details, baggage tag and a clear description of the bag and its identifying features.",
+      "Complete the Property Irregularity Report before leaving the airport and keep the unique report reference number.",
+      "Use the report reference for follow-up while Air Peace traces the bag or reviews the damage report.",
+      "Confirm the delivery or resolution details directly with Air Peace when the airline contacts you about the located baggage or next step."
+    ],
+    "notes": [
+      "Air Peace states that passengers should file the Property Irregularity Report before leaving the airport.",
+      "The provider says it may not accept liability if the passenger leaves without filing the baggage report.",
+      "Keep photographs, baggage tags and receipts for damaged baggage or contents because they can support later review."
+    ],
+    "sources": [
+      {
+        "label": "Air Peace FAQs — Lost or Damaged Baggage",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Air Peace Baggage Policy",
+        "agency": "Air Peace",
+        "url": "https://flyairpeace.com/baggage-policy/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "air-peace-book-flight",
+      "air-peace-extra-baggage",
+      "air-peace-online-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Air Peace lost baggage",
+      "Air Peace missing bag",
+      "Air Peace damaged baggage",
+      "Air Peace baggage complaint",
+      "Property Irregularity Report Air Peace"
+    ]
+  },
+  {
+    "slug": "dhl-send-parcel-nigeria",
+    "title": "How to send a parcel with DHL Express from Nigeria",
+    "shortTitle": "Send parcel with DHL",
+    "summary": "DHL Express Nigeria's shipment-creation route for documents or parcels, including service selection, shipping information, payment, pickup or ServicePoint drop-off and the tracking number.",
+    "category": "Logistics",
+    "agencySlug": "dhl-express-nigeria",
+    "feeLabel": "Quote depends on shipment",
+    "feeNote": "DHL pricing depends on origin, destination, weight, dimensions, contents and service. Use the official quote/shipment flow for the current amount.",
+    "timeline": "Delivery time depends on the route and service; DHL Express describes next-possible-business-day options for eligible international express shipments rather than one universal transit time.",
+    "status": "verified",
+    "officialPortal": "https://www.dhl.com/ng-en/home/express/shipping-and-tracking/shipping.html",
+    "requirements": [
+      "The sender and receiver names, addresses and contact details for the shipment",
+      "The parcel weight, dimensions and a truthful description of the contents",
+      "Any customs invoice, licence or supporting document needed for the destination and shipment contents",
+      "A payment method plus a selected pickup or DHL ServicePoint drop-off option"
+    ],
+    "steps": [
+      "Open DHL Express Nigeria's official shipping page and start a shipment with or without a DHL account.",
+      "Enter the sender, receiver, parcel, destination and contents information so DHL can show the available service and quote.",
+      "Review prohibited/restricted-item and customs-document guidance before confirming the shipment.",
+      "Choose the payment and handling option, then schedule a pickup or select a DHL ServicePoint for drop-off.",
+      "Keep the waybill or 10-digit tracking number after shipment creation and use DHL tracking to follow the parcel."
+    ],
+    "notes": [
+      "DHL can refuse a parcel when the contents are prohibited/restricted or the required paperwork is missing.",
+      "International shipments can require customs documentation in addition to the DHL shipping label.",
+      "Use the DHL location finder or pickup route rather than handing an international parcel to an unverified intermediary."
+    ],
+    "sources": [
+      {
+        "label": "DHL Express Nigeria Shipping",
+        "agency": "DHL Express",
+        "url": "https://www.dhl.com/ng-en/home/express/shipping-and-tracking/shipping.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DHL Express Nigeria FAQs",
+        "agency": "DHL Express",
+        "url": "https://www.dhl.com/ng-en/home/express/help-and-support/frequently-asked-questions.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dhl-track-shipment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "send parcel DHL Nigeria",
+      "DHL shipping Nigeria",
+      "DHL quote Nigeria",
+      "DHL pickup Nigeria",
+      "DHL international shipping Nigeria"
+    ]
+  },
+  {
+    "slug": "dhl-track-shipment-nigeria",
+    "title": "How to track a DHL Express shipment in Nigeria",
+    "shortTitle": "Track DHL shipment",
+    "summary": "DHL Express Nigeria's tracking route using the shipment waybill number, with escalation guidance when tracking asks the receiver or sender to contact DHL.",
+    "category": "Logistics",
+    "agencySlug": "dhl-express-nigeria",
+    "feeLabel": "No tracking fee",
+    "feeNote": "DHL provides online shipment tracking without a separate tracking charge.",
+    "timeline": "Tracking updates appear as the parcel moves through the DHL network; DHL does not publish one fixed interval between every scan or status update.",
+    "status": "verified",
+    "officialPortal": "https://www.dhl.com/ng-en/home.html",
+    "requirements": [
+      "The DHL Express waybill or tracking number for the shipment",
+      "Internet access to the official DHL tracking page, app or supported WhatsApp tracking route",
+      "The shipment details needed if DHL asks for additional information to resolve a tracking exception"
+    ],
+    "steps": [
+      "Open DHL Nigeria's official website and enter the shipment tracking number in Track Your Shipment.",
+      "Review the latest scan, location and delivery-status information shown for the waybill.",
+      "If the status says DHL needs more information, open DHL customer support and submit the tracking number with the requested shipment details.",
+      "Use DHL's official app or WhatsApp tracking option if another supported tracking channel is preferred.",
+      "Keep the tracking history until the parcel is delivered or the exception is resolved."
+    ],
+    "notes": [
+      "DHL states that online tracking is the fastest first step for a shipment already in transit.",
+      "A tracking exception can be caused by an address problem or a request for additional shipment information.",
+      "DHL periodically recycles waybill numbers, so contact support if old tracking data appears to conflict with the current parcel."
+    ],
+    "sources": [
+      {
+        "label": "DHL Nigeria Home / Tracking",
+        "agency": "DHL Express",
+        "url": "https://www.dhl.com/ng-en/home.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DHL Express Nigeria Contact and Tracking",
+        "agency": "DHL Express",
+        "url": "https://www.dhl.com/ng-en/home/express/help-and-support/contact-dhl-express.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DHL Sending and Returns FAQs",
+        "agency": "DHL Express",
+        "url": "https://www.dhl.com/ng-en/home/express/help-and-support/frequently-asked-questions/sending-and-returns.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dhl-send-parcel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "DHL tracking Nigeria",
+      "track DHL parcel Nigeria",
+      "DHL waybill tracking",
+      "DHL Nigeria tracking number",
+      "DHL package status Nigeria"
+    ]
+  },
+  {
+    "slug": "british-council-ielts-registration-nigeria",
+    "title": "How to register for IELTS with the British Council in Nigeria",
+    "shortTitle": "British Council IELTS registration",
+    "summary": "British Council Nigeria's IELTS booking route for choosing a test, location and date, uploading the accepted identity document, paying and receiving the final test and speaking-session details.",
+    "category": "Education",
+    "agencySlug": "british-council-nigeria",
+    "feeLabel": "Official British Council pages currently show different fees",
+    "feeNote": "On 5 October 2026, the British Council Nigeria booking page and its current Academic/General pages showed different IELTS fee figures. Confirm the final test fee in the booking portal before payment rather than relying on one static amount.",
+    "timeline": "After booking, British Council says it sends email confirmation of the test start time, venue, speaking-test date and preparation access; available test dates depend on location.",
+    "status": "conflict",
+    "officialPortal": "https://www.britishcouncil.org.ng/exam/ielts/book-test",
+    "requirements": [
+      "The correct IELTS test type for the institution, employer or immigration route the candidate is applying to",
+      "For a Nigerian candidate, a valid passport or NIN card with an embedded microchip; the temporary NIN slip is not accepted on the published booking page",
+      "For a non-Nigerian candidate, a valid passport",
+      "A bank card or the supported payment method selected in the booking system",
+      "Parent or guardian consent when an under-18 candidate is being registered"
+    ],
+    "steps": [
+      "Open the British Council Nigeria IELTS booking page and choose the IELTS test type that the receiving organisation requires.",
+      "Select the Nigerian test location and an available date in the official booking system.",
+      "Create or complete the booking profile and upload the accepted identification document for the candidate.",
+      "Review the fee shown in the live booking flow and complete payment through the British Council's supported payment route.",
+      "Check the confirmation emails for the test start time, venue, Speaking Test details and access to the included preparation resources."
+    ],
+    "notes": [
+      "British Council Nigeria says IELTS delivery in Nigeria moved to computer-only from 25 May 2025, despite older wording that can remain on some pages.",
+      "The candidate must use the same valid identification document required by the booking rules on test day.",
+      "Because official British Council pages currently disagree on fee figures, this guide intentionally marks the fee as a conflict until the provider pages converge."
+    ],
+    "sources": [
+      {
+        "label": "British Council Nigeria — Book IELTS",
+        "agency": "British Council",
+        "url": "https://www.britishcouncil.org.ng/exam/ielts/book-test",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "British Council Nigeria — IELTS Academic",
+        "agency": "British Council",
+        "url": "https://www.britishcouncil.org.ng/exam/ielts/which-test/academic",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "British Council Nigeria — IELTS General Training",
+        "agency": "British Council",
+        "url": "https://www.britishcouncil.org.ng/exam/ielts/which-test/general-training",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "British Council Nigeria — Test Dates, Fees and Locations",
+        "agency": "British Council",
+        "url": "https://www.britishcouncil.org.ng/exam/ielts/dates-fees-locations",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "idp-ielts-registration-nigeria",
+      "jamb-direct-entry-2026",
+      "waec-result-confirmation-overseas"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "IELTS registration Nigeria British Council",
+      "British Council IELTS fee Nigeria",
+      "book IELTS Nigeria",
+      "IELTS test centres Nigeria",
+      "IELTS Academic Nigeria"
+    ]
+  },
+  {
+    "slug": "idp-ielts-registration-nigeria",
+    "title": "How to register for IELTS with IDP in Nigeria",
+    "shortTitle": "IDP IELTS registration",
+    "summary": "IDP IELTS Nigeria's online or test-centre booking route for selecting the IELTS test and location, uploading identity evidence, paying and receiving the test-session confirmation.",
+    "category": "Education",
+    "agencySlug": "idp-ielts-nigeria",
+    "feeLabel": "Varies by IELTS test type",
+    "feeNote": "IDP's Nigeria test-date page currently lists ₦299,000 for IELTS Academic/General on computer, ₦315,500 for IELTS for UKVI Academic/General and ₦298,500 for Life Skills A1/B1. Confirm the chosen session before payment.",
+    "timeline": "After the application is processed, IDP says the test centre sends confirmation of the exam date/time and any separate Speaking Test schedule.",
+    "status": "verified",
+    "officialPortal": "https://ielts.idp.com/nigeria/test-dates",
+    "requirements": [
+      "The IELTS test type required by the institution, employer or immigration route",
+      "A valid identification document that can be uploaded clearly during booking and presented again on test day",
+      "A selected Nigerian IDP test centre, test format and available session",
+      "A supported payment method for the fee shown for the selected test",
+      "Written parent or guardian consent when the candidate is under 18"
+    ],
+    "steps": [
+      "Open IDP IELTS Nigeria's test-date page and choose the required IELTS test type and a Nigerian test centre.",
+      "Select an available session and begin the official online booking for that test date.",
+      "Upload a clear copy of the valid identity document and enter the candidate details exactly as they should appear on the booking.",
+      "Review the current test fee for the selected type and complete payment through the IDP booking route.",
+      "Keep the confirmation from the test centre showing the test date/time and any separate Speaking Test arrangement."
+    ],
+    "notes": [
+      "IDP says the same passport or national identity card used to book the test must be brought on test day.",
+      "Current fees are published by test type and can change, so use the live test-centre page before paying.",
+      "IDP advises contacting the booked test centre for postponement or cancellation requests."
+    ],
+    "sources": [
+      {
+        "label": "IDP IELTS Nigeria — Test Dates and Fees",
+        "agency": "IDP IELTS",
+        "url": "https://ielts.idp.com/nigeria/test-dates",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IDP IELTS Nigeria — Booking Checklist",
+        "agency": "IDP IELTS",
+        "url": "https://ielts.idp.com/nigeria/about/article-how-to-book-ielts-checklist",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "IDP IELTS Nigeria — FAQ",
+        "agency": "IDP IELTS",
+        "url": "https://ielts.idp.com/nigeria/faq/ielts-faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "british-council-ielts-registration-nigeria",
+      "jamb-direct-entry-2026",
+      "waec-result-confirmation-overseas"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "IDP IELTS Nigeria registration",
+      "IDP IELTS fee Nigeria",
+      "book IELTS IDP Nigeria",
+      "IDP IELTS test centre Nigeria",
+      "IELTS 299000 Nigeria"
+    ]
   }
 ]
