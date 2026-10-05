@@ -24800,5 +24800,307 @@
       "ABC Transport fare",
       "ABC bus ticket Nigeria"
     ]
+  },
+  {
+    "slug": "remita-pay-biller-or-rrr",
+    "title": "How to pay a biller or existing RRR with Remita",
+    "shortTitle": "Remita bill / RRR payment",
+    "summary": "Remita's consumer payment route for paying a listed biller directly or using an existing Remita Retrieval Reference (RRR), with payer details, service/purpose, amount and supported payment channel.",
+    "category": "Banking",
+    "agencySlug": "remita",
+    "feeLabel": "Payment amount plus any Remita/channel charge shown at checkout",
+    "feeNote": "Remita payments can include processing charges and VAT depending on the biller and channel. Confirm the full total displayed before submitting the payment.",
+    "timeline": "The transaction is processed through the selected payment channel; successful Remita payments generate a transaction reference/receipt record and biller notification.",
+    "status": "verified",
+    "officialPortal": "https://login.remita.net/remita/onepage/biller/211178808849/payment.spa",
+    "requirements": [
+      "The correct biller and service/purpose when starting a new biller payment, or an existing RRR when paying an issued invoice",
+      "The payer's name, email address and phone number where the biller/payment form requires them",
+      "The correct amount and currency shown or entered for the service",
+      "A supported Remita payment method for completing the transaction"
+    ],
+    "steps": [
+      "Open Remita's official Pay a Biller page and choose Pay Once, Recurring Payment or Pay e-Invoice based on the payment being made.",
+      "For a new biller payment, search for the organisation, choose the exact service/purpose and enter the payer and amount information.",
+      "For an existing invoice, choose Pay e-Invoice and enter the Remita Retrieval Reference shown on the biller's invoice.",
+      "Review the payer, biller, amount, processing charge and total before continuing to the selected payment channel.",
+      "Complete payment and keep the Remita transaction reference or receipt so the payment can be traced if the biller record does not update."
+    ],
+    "notes": [
+      "An RRR is a Remita Retrieval Reference generated for a specific invoice/payment request and should be checked against the intended biller before payment.",
+      "Remita receipts identify the payer, service description, amount, charge, payment channel and RRR after a successful transaction.",
+      "Do not rely on an RRR sent by an unknown person without confirming the biller/service information displayed by Remita."
+    ],
+    "sources": [
+      {
+        "label": "Remita Pay a Biller / Pay e-Invoice",
+        "agency": "Remita Payment Services Limited",
+        "url": "https://login.remita.net/remita/onepage/biller/211178808849/payment.spa",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Remita APIs — RRR and Payment Status",
+        "agency": "Remita Payment Services Limited",
+        "url": "https://api.remita.net/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "quickteller-pay-bills",
+      "nip-transfer-status"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Remita payment",
+      "pay RRR Remita",
+      "Remita pay biller",
+      "Remita Retrieval Reference payment",
+      "Remita e invoice"
+    ]
+  },
+  {
+    "slug": "red-star-send-parcel-nigeria",
+    "title": "How to send a parcel with Red Star Express in Nigeria",
+    "shortTitle": "Send parcel with Red Star",
+    "summary": "Red Star Express' domestic/international shipping route for documents and parcels using its Ship Now/Express Centre network, pickup options, packaging rules and FedEx-linked international service.",
+    "category": "Logistics",
+    "agencySlug": "red-star-express",
+    "feeLabel": "Shipping charge depends on route, weight, service and insurance",
+    "feeNote": "Red Star pricing depends on the shipment and selected domestic/international service. Obtain the current quote before handing over the parcel; extra insurance can apply when declared value exceeds the provider's standard cover.",
+    "timeline": "Delivery time depends on the selected domestic or international service. Red Star offers time-sensitive, same-day and international priority products rather than one universal transit time.",
+    "status": "verified",
+    "officialPortal": "https://redstarplc.com/",
+    "requirements": [
+      "The sender and recipient names, phone numbers and complete pickup/delivery addresses",
+      "The parcel/document description, weight, dimensions and declared value",
+      "Packaging that meets Red Star/FedEx transport requirements or acceptance for repacking where needed",
+      "Customs or commercial documents when the shipment is international",
+      "A selected pickup, drop-off/Express Centre or other shipping arrangement offered by Red Star"
+    ],
+    "steps": [
+      "Open Red Star Express' official website and choose Ship Now, a nearby Express Centre or the available pickup route.",
+      "Provide the sender, recipient, destination and package description, weight, dimensions and declared value.",
+      "Review the available domestic or international service and any packaging, customs or extra-insurance requirement for the shipment.",
+      "Pay the shipping amount through the official Red Star route and hand over the prepared parcel at the centre or scheduled pickup.",
+      "Keep the airway bill/tracking number issued for the shipment and use Red Star tracking until delivery is confirmed."
+    ],
+    "notes": [
+      "Red Star Express is the FedEx licensee in Nigeria and publishes both domestic and international express services.",
+      "The provider states that it can supply tamper-proof/waterproof packaging for qualifying small packages and can require repacking when customer packaging is unsafe.",
+      "Additional insurance can be required for values above the standard airway-bill insurance cover."
+    ],
+    "sources": [
+      {
+        "label": "Red Star Express",
+        "agency": "Red Star Express Plc",
+        "url": "https://redstarplc.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Red Star Express Services",
+        "agency": "Red Star Express Plc",
+        "url": "https://redstarplc.com/services/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Red Star Value Added Services",
+        "agency": "Red Star Express Plc",
+        "url": "https://redstarplc.com/services/value-added-services/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "red-star-track-shipment",
+      "dhl-send-parcel-nigeria",
+      "gigl-send-parcel-nigeria",
+      "ups-create-shipment-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Red Star Express shipping Nigeria",
+      "send parcel Red Star",
+      "FedEx Nigeria Red Star",
+      "Red Star courier price",
+      "Red Star Ship Now"
+    ]
+  },
+  {
+    "slug": "red-star-track-shipment",
+    "title": "How to track a Red Star Express or FedEx shipment in Nigeria",
+    "shortTitle": "Track Red Star shipment",
+    "summary": "Red Star Express' online tracking route for domestic or international packages, using the shipment tracking number to view status and, when needed, follow a FedEx-linked international shipment.",
+    "category": "Logistics",
+    "agencySlug": "red-star-express",
+    "feeLabel": "No shipment-tracking fee",
+    "feeNote": "Red Star provides online tracking without a separate tracking charge.",
+    "timeline": "Tracking updates appear as the parcel is scanned through the Red Star/FedEx network; the provider does not publish a fixed interval between every status scan.",
+    "status": "verified",
+    "officialPortal": "https://redstarplc.com/tracker/",
+    "requirements": [
+      "The Red Star Express or supported international tracking/airway bill number for the shipment",
+      "Internet access to the official Red Star tracking page or the FedEx tracking route used for the shipment",
+      "The shipment details needed by customer service if a delivery exception requires manual investigation"
+    ],
+    "steps": [
+      "Open Red Star Express' official Tracker page.",
+      "Enter the shipment tracking number; the tracker also accepts multiple numbers separated as instructed on the page.",
+      "Submit the tracking request and review the latest shipment status and movement information.",
+      "For an international FedEx-linked shipment, use the FedEx tracking route referenced by Red Star if that is where the airway bill is tracked.",
+      "Contact Red Star customer service with the tracking number if the shipment remains stalled, shows an exception or needs delivery clarification."
+    ],
+    "notes": [
+      "Red Star lists online tracking as a value-added service for customers to monitor shipment status.",
+      "The provider also offers signature proof of delivery for customers who need confirmation of receipt.",
+      "Keep the tracking number until delivery and any claim or delivery issue has been fully resolved."
+    ],
+    "sources": [
+      {
+        "label": "Red Star Shipment Tracker",
+        "agency": "Red Star Express Plc",
+        "url": "https://redstarplc.com/tracker/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Red Star Express Value Added Services",
+        "agency": "Red Star Express Plc",
+        "url": "https://redstarplc.com/services/value-added-services/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "red-star-send-parcel-nigeria",
+      "dhl-track-shipment-nigeria",
+      "gigl-track-shipment",
+      "ups-track-package-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Red Star tracking",
+      "Red Star Express tracking Nigeria",
+      "FedEx Nigeria tracking Red Star",
+      "track Red Star parcel"
+    ]
+  },
+  {
+    "slug": "aiico-buy-motor-insurance-online",
+    "title": "How to buy AIICO motor insurance online",
+    "shortTitle": "AIICO motor insurance",
+    "summary": "AIICO's online e-Business route for selecting a private motor third-party or comprehensive plan, entering policyholder/vehicle information, paying the premium and receiving the insurance certificate.",
+    "category": "Insurance",
+    "agencySlug": "aiico",
+    "feeLabel": "Premium depends on the selected motor plan and vehicle",
+    "feeNote": "AIICO's third-party and comprehensive motor products use different pricing. Review the live quote before payment; comprehensive pricing depends on the vehicle's insurable value and cover.",
+    "timeline": "AIICO's FAQ says the motor insurance certificate is generated immediately or within 24 hours after premium payment is confirmed.",
+    "status": "verified",
+    "officialPortal": "https://e-business.aiicoplc.com/",
+    "requirements": [
+      "The policyholder's identity, contact and address information required by the online insurance form",
+      "The vehicle registration/details and private/commercial classification needed for the selected policy",
+      "The vehicle value when the chosen comprehensive plan requires an insured-value calculation",
+      "A supported payment method for the premium generated by AIICO"
+    ],
+    "steps": [
+      "Open AIICO's official e-Business portal and choose the motor insurance package needed for the vehicle.",
+      "Select Private Motor Third Party, Private Motor Comprehensive or another eligible motor plan and enter the policyholder information.",
+      "Enter the vehicle information and insured value or other underwriting details requested for the selected plan.",
+      "Review the cover and premium generated by AIICO and complete payment through the official portal.",
+      "Save the motor certificate after issue and verify it through the official Nigerian motor-insurance verification route when needed."
+    ],
+    "notes": [
+      "AIICO's e-Business portal lists both private motor third-party and private motor comprehensive products.",
+      "AIICO says a motor certificate is generated immediately or within 24 hours after premium confirmation.",
+      "This guide explains the provider process and does not recommend a particular insurance policy for an individual's financial needs."
+    ],
+    "sources": [
+      {
+        "label": "AIICO e-Business",
+        "agency": "AIICO Insurance Plc",
+        "url": "https://e-business.aiicoplc.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AIICO Frequently Asked Questions",
+        "agency": "AIICO Insurance Plc",
+        "url": "https://aiicoplc.com/about-us/frequently-asked-questions",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AIICO Private Motor Comprehensive",
+        "agency": "AIICO Insurance Plc",
+        "url": "https://docs.aiicoplc.com/motor-insurance/private-motor-comprehensive",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aiico-motor-insurance-claim",
+      "leadway-buy-motor-insurance-online",
+      "axa-mansard-third-party-motor-insurance",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AIICO motor insurance online",
+      "buy AIICO third party insurance",
+      "AIICO car insurance Nigeria",
+      "AIICO comprehensive motor insurance"
+    ]
+  },
+  {
+    "slug": "aiico-motor-insurance-claim",
+    "title": "How to make a motor insurance claim with AIICO",
+    "shortTitle": "AIICO motor claim",
+    "summary": "AIICO's motor-claim route for notifying the insurer, supplying the requested proof-of-loss documents, completing assessment/discharge requirements and receiving settlement after an approved claim.",
+    "category": "Insurance",
+    "agencySlug": "aiico",
+    "feeLabel": "No claim-notification fee stated",
+    "feeNote": "AIICO does not state a fee for notifying or processing a valid motor claim. The policy terms, excess/deductible and coverage determine the amount payable on an approved claim.",
+    "timeline": "AIICO says non-life claim notifications are acknowledged within 24 hours, and motor claim payment is targeted within 48 hours after receipt of an executed discharge voucher.",
+    "status": "verified",
+    "officialPortal": "https://www.aiicoplc.com/business/claims-payment",
+    "requirements": [
+      "An active AIICO motor policy that covers the incident being reported",
+      "Prompt claim notification with the policy/vehicle and loss or accident details",
+      "The proof-of-loss, police/repair/vehicle or other supporting documents AIICO requests for the particular claim",
+      "An executed discharge voucher after the claim is assessed and approved for settlement"
+    ],
+    "steps": [
+      "Contact AIICO through its official claims/customer-service channel and notify the insurer of the motor loss or accident with the policy details.",
+      "Provide the incident, vehicle and claim information and submit the proof-of-loss documents AIICO requests for assessment.",
+      "Cooperate with the insurer's vehicle inspection, repair estimate or other assessment steps that apply to the claim.",
+      "Review and execute the discharge voucher when AIICO approves the claim and issues the settlement documentation.",
+      "Monitor the settlement and contact AIICO through its official complaint route if the published claim-payment target is missed after complete documentation."
+    ],
+    "notes": [
+      "AIICO publishes separate claim timelines for life and non-life policies; the motor timeline applies after the discharge voucher is executed.",
+      "The exact documents depend on the nature of the motor loss and the policy cover.",
+      "A claim is subject to policy terms and assessment; filing a notification does not guarantee payment."
+    ],
+    "sources": [
+      {
+        "label": "AIICO Claims Payment",
+        "agency": "AIICO Insurance Plc",
+        "url": "https://www.aiicoplc.com/business/claims-payment",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AIICO Contact / Home",
+        "agency": "AIICO Insurance Plc",
+        "url": "https://aiicoplc.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aiico-buy-motor-insurance-online",
+      "leadway-buy-motor-insurance-online",
+      "axa-mansard-third-party-motor-insurance",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AIICO motor claim",
+      "AIICO insurance claim Nigeria",
+      "AIICO car insurance claim",
+      "AIICO motor claims payment"
+    ]
   }
 ]
