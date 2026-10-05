@@ -739,7 +739,14 @@ export const growthHubs: GrowthHub[] = [
       { query: "book GUO Transport online", serviceSlug: "guo-book-bus-online" },
       { query: "change GUO travel date", serviceSlug: "guo-change-travel-date" },
       { query: "open PalmPay account", serviceSlug: "palmpay-account-registration" },
-      { query: "open Kuda Business account", serviceSlug: "kuda-business-account-opening" }
+      { query: "open Kuda Business account", serviceSlug: "kuda-business-account-opening" },
+      { query: "AEDC buy token", serviceSlug: "aedc-pay-bill-buy-token" },
+      { query: "AEDC prepaid meter application", serviceSlug: "aedc-map-meter-application" },
+      { query: "AEDC MAP refund", serviceSlug: "aedc-map-refund" },
+      { query: "IBEDC pay bill", serviceSlug: "ibedc-pay-bill-buy-token" },
+      { query: "IBEDC prepaid meter application", serviceSlug: "ibedc-map-meter-application" },
+      { query: "IBEDC MAP refund", serviceSlug: "ibedc-map-refund" },
+      { query: "IBEDC Band A compensation token", serviceSlug: "ibedc-band-a-compensation-token" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -803,7 +810,14 @@ export const growthHubs: GrowthHub[] = [
       "guo-book-bus-online",
       "guo-change-travel-date",
       "palmpay-account-registration",
-      "kuda-business-account-opening"
+      "kuda-business-account-opening",
+      "aedc-pay-bill-buy-token",
+      "aedc-map-meter-application",
+      "aedc-map-refund",
+      "ibedc-pay-bill-buy-token",
+      "ibedc-map-meter-application",
+      "ibedc-map-refund",
+      "ibedc-band-a-compensation-token"
     ]
   },
 
