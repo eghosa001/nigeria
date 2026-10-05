@@ -1563,6 +1563,20 @@ export const agencies: Agency[] = [
     "shortName": "Shuttlers",
     "description": "Private Nigerian scheduled mass-transit platform for daily commute booking, route search, wallet payments and real-time trip tracking.",
     "website": "https://www.shuttlers.co/"
+  },
+  {
+    "slug": "spleet",
+    "name": "Spleet Africa",
+    "shortName": "Spleet",
+    "description": "Private Nigerian rental platform for verified apartments, flexible rent, shortlets, landlord listings and tenant verification.",
+    "website": "https://spleet.africa/"
+  },
+  {
+    "slug": "propertypro",
+    "name": "PropertyPro Nigeria",
+    "shortName": "PropertyPro",
+    "description": "Private Nigerian property marketplace and verification platform for agents, landlords, buyers and renters.",
+    "website": "https://propertypro.ng/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
@@ -1735,6 +1749,10 @@ export const categories = [
   {
     "name": "E-commerce",
     "description": "Marketplace ordering, returns, refunds and seller-onboarding services."
+  },
+  {
+    "name": "Property services",
+    "description": "Private rental, landlord, tenant-verification, property-listing and document-verification services."
   },
   {
     "name": "Travel & accommodation",
