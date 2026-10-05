@@ -21,6 +21,54 @@ export type ExplorePlace = {
 
 export const explorePlaces: ExplorePlace[] = [
   {
+    slug: "new-afrika-shrine-felabration-2026",
+    guideSlug: "felabration-2026",
+    name: "New Afrika Shrine",
+    kind: "landmark",
+    area: "Agidingbi / Ikeja",
+    address: "Hakeem Balogun Street, Agidingbi, Ikeja, Lagos, Nigeria",
+    summary: "The main Felabration 2026 venue. Use this pin for the concert week and confirm the day's programme before leaving.",
+    cost: "Event access varies by programme — confirm the current Felabration listing",
+    hours: "Event-specific; Felabration 2026 runs 12–18 October.",
+    website: "https://www.felabration.net/",
+    mapQuery: "New Afrika Shrine Hakeem Balogun Street Agidingbi Ikeja Lagos",
+    source: { label: "Felabration 2026 venue listing", href: "https://www.discover-naija.com/event/995a3477-d999-4f12-bd0f-0ffe997d5e20/felabration-2026" },
+    checkedAt: "2026-10-05",
+    tags: ["Felabration", "Afrobeat", "concert", "Ikeja"],
+  },
+  {
+    slug: "national-theatre-design-week-lagos-2026",
+    guideSlug: "design-week-lagos-2026",
+    name: "National Theatre",
+    kind: "landmark",
+    area: "Iganmu",
+    address: "National Theatre, Iganmu, Lagos, Nigeria",
+    summary: "Design Week Lagos identifies the National Theatre as the main 2026 festival hub, while partner activations also run elsewhere in Lagos.",
+    cost: "Programme access varies — check the official Design Week Lagos schedule",
+    hours: "Festival dates: 18–25 October 2026; individual programme times vary.",
+    website: "https://designweeklagos.com/",
+    mapQuery: "National Theatre Iganmu Lagos Nigeria",
+    source: { label: "Design Week Lagos 2026", href: "https://designweeklagos.com/" },
+    checkedAt: "2026-10-05",
+    tags: ["Design Week Lagos", "design", "Iganmu", "festival hub"],
+  },
+  {
+    slug: "federal-palace-lagos-fashion-week-2026",
+    guideSlug: "lagos-fashion-week-2026",
+    name: "Federal Palace",
+    kind: "landmark",
+    area: "Victoria Island",
+    address: "6–8 Ahmadu Bello Way, Victoria Island, Lagos, Nigeria",
+    summary: "A current African fashion calendar lists Federal Palace as the Lagos Fashion Week 2026 venue. Re-check the event owner's final schedule before travelling because the official detailed venue programme is still evolving.",
+    cost: "Event access varies by show and registration — verify before travel",
+    hours: "Current event window is late October 2026; confirm the final daily schedule with Lagos Fashion Week.",
+    mapQuery: "Federal Palace Hotel 6-8 Ahmadu Bello Way Lagos",
+    source: { label: "Fashion Weeks Africa — Lagos Fashion Week 2026", href: "https://www.fashionweeks.africa/event/lagos-fashion-week-2026/" },
+    checkedAt: "2026-10-05",
+    tags: ["Lagos Fashion Week", "fashion", "Victoria Island", "event"],
+  },
+
+  {
     slug: "lekki-conservation-centre",
     guideSlug: "lagos",
     name: "Lekki Conservation Centre",
@@ -1406,9 +1454,29 @@ const nationalLandmarkPlaceSlugs = [
   "kainji-lake-national-park-main",
 ] as const;
 
+const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
+  "nigeria-landmarks-places-to-visit": nationalLandmarkPlaceSlugs,
+  "felabration-2026": [
+    "new-afrika-shrine-felabration-2026",
+    "nike-art-gallery-lagos",
+    "national-museum-lagos",
+  ],
+  "design-week-lagos-2026": [
+    "national-theatre-design-week-lagos-2026",
+    "nike-art-gallery-lagos",
+    "national-museum-lagos",
+  ],
+  "lagos-fashion-week-2026": [
+    "federal-palace-lagos-fashion-week-2026",
+    "nok-by-alara",
+    "nike-art-gallery-lagos",
+  ],
+};
+
 export function getExplorePlacesForGuide(guideSlug: string) {
-  if (guideSlug === "nigeria-landmarks-places-to-visit") {
-    const selected = new Set<string>(nationalLandmarkPlaceSlugs);
+  const shared = sharedGuidePlaceSlugs[guideSlug];
+  if (shared) {
+    const selected = new Set<string>(shared);
     return explorePlaces.filter((place) => selected.has(place.slug));
   }
   return explorePlaces.filter((place) => place.guideSlug === guideSlug);
