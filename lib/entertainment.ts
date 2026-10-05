@@ -56,6 +56,60 @@ export type EntertainmentTitle = {
 
 export const entertainmentTitles: EntertainmentTitle[] = [
   {
+    slug: "king-of-thieves-2",
+    title: "King of Thieves 2",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Fantasy", "Yoruba", "Nollywood"],
+    languages: ["Yoruba"],
+    synopsis: "A king's grip on power begins to collapse when Agesinkole, a powerful spirit sworn to punish broken oaths, is unleashed against corruption and betrayal.",
+    cast: ["Femi Adebayo", "Yemi Solade", "Gabriel Afolayan", "Olusegun Akinremi", "Kunle Afod", "Segun Arinze", "Bimbo Akintola", "Biola Adebayo", "Aliu Gafar", "Olarotimi Michael Fakunle"],
+    featuredCast: ["Femi Adebayo", "Yemi Solade", "Gabriel Afolayan"],
+    featured: true,
+    watchLinks: [
+      {
+        platform: "Netflix",
+        label: "Check current Netflix availability",
+        href: "https://www.netflix.com/ng/title/82748703",
+        access: "subscription",
+        lastChecked: "2026-10-05",
+        note: "Netflix currently lists King of Thieves 2 in its Nollywood catalogue. Availability can vary by account and country."
+      }
+    ]
+  },
+  {
+    slug: "colours-of-fire",
+    title: "Colours of Fire",
+    year: 2025,
+    format: "movie",
+    genres: ["Fantasy", "Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A warrior sent to hunt a beast believed to have been unleashed by a rival clan discovers a darker truth and a forbidden love that could either unite or destroy both worlds.",
+    cast: ["Uzor Arukwe", "Osas Ighodaro", "Ibrahim Chatta", "Gabriel Afolayan", "Mercy Aigbe", "Femi Branch"],
+    featuredCast: ["Uzor Arukwe", "Osas Ighodaro", "Ibrahim Chatta"],
+    directors: ["Niyi Akinmolayan"],
+    runtimeMinutes: 125,
+    featured: true,
+    watchLinks: [
+      {
+        platform: "Netflix",
+        label: "Check current Netflix availability",
+        href: "https://www.netflix.com/ng/title/82752912",
+        access: "subscription",
+        lastChecked: "2026-10-05",
+        note: "Netflix currently lists Colours of Fire in its Nollywood catalogue. Availability can vary by account and country."
+      },
+      {
+        platform: "Cinema",
+        label: "Check official cinema availability",
+        href: "https://www.coloursoffiremovie.com/",
+        access: "cinema",
+        lastChecked: "2026-10-05",
+        note: "The film's official website carries current cinema availability and showtime information."
+      }
+    ]
+  },
+  {
     slug: "black-market-2026",
     title: "Black Market",
     year: 2026,
