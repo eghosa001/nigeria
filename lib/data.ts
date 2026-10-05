@@ -1017,6 +1017,41 @@ export const agencies: Agency[] = [
     "shortName": "AIICO",
     "description": "Private Nigerian composite insurer offering motor, life, health, travel and other insurance purchase and claims services.",
     "website": "https://www.aiicoplc.com/"
+  },
+  {
+    "slug": "polaris-bank",
+    "name": "Polaris Bank Limited",
+    "shortName": "Polaris Bank",
+    "description": "Private Nigerian bank offering VULTe, online banking, identity-linking and account service requests.",
+    "website": "https://www.polarisbanklimited.com/"
+  },
+  {
+    "slug": "providus-bank",
+    "name": "ProvidusBank Plc",
+    "shortName": "ProvidusBank",
+    "description": "Private Nigerian bank offering personal/business accounts and ProvidusPlus digital banking services.",
+    "website": "https://www.providusbank.com/"
+  },
+  {
+    "slug": "overland-airways",
+    "name": "Overland Airways",
+    "shortName": "Overland Airways",
+    "description": "Private Nigerian airline offering scheduled flight booking, baggage, ticket changes and refund services.",
+    "website": "https://www.overlandairways.com/"
+  },
+  {
+    "slug": "chisco-transport",
+    "name": "Chisco Transport",
+    "shortName": "Chisco",
+    "description": "Private Nigerian and West African intercity transport provider offering online booking, rebooking and passenger services.",
+    "website": "https://www.chiscotransport.com.ng/"
+  },
+  {
+    "slug": "rano-air",
+    "name": "Rano Air Limited",
+    "shortName": "Rano Air",
+    "description": "Private Nigerian airline offering scheduled flight booking, booking management and passenger support.",
+    "website": "https://www.ranoair.com/"
   }
 ];
 
