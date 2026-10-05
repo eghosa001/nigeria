@@ -14775,5 +14775,442 @@
       "Leadway auto insurance Nigeria",
       "Leadway motor policy online"
     ]
+  },
+  {
+    "slug": "uber-driver-signup-nigeria",
+    "title": "How to sign up to drive with Uber in Nigeria",
+    "shortTitle": "Uber driver signup",
+    "summary": "Uber Nigeria's driver-partner onboarding route for creating a driver account, uploading personal and vehicle documents, meeting city vehicle rules and gaining Driver app access after approval.",
+    "category": "Ride-hailing",
+    "agencySlug": "uber-nigeria",
+    "feeLabel": "No Uber signup fee stated",
+    "feeNote": "Uber does not state a fee for creating the driver account. The driver remains responsible for the cost of obtaining valid licences, insurance, inspection and other regulatory documents.",
+    "timeline": "Uber does not publish one fixed Nigeria-wide review time; access to the Driver app is granted after the submitted documents are reviewed and approved.",
+    "status": "verified",
+    "officialPortal": "https://www.uber.com/ng/en/drive/",
+    "requirements": [
+      "A valid email address and Nigerian mobile number for the driver account",
+      "A valid driver's licence and current vehicle registration document",
+      "A vehicle inspection report, vehicle insurance, roadworthiness certificate and valid Hackney permit for the Nigeria vehicle route published by Uber",
+      "A qualifying four-door vehicle in good condition; Uber's current Nigeria page lists model year 2000 or newer as the general minimum",
+      "Any additional city-specific driver or vehicle documents shown during onboarding in Lagos, Abuja or another supported Nigerian city"
+    ],
+    "steps": [
+      "Open Uber Nigeria's official Drive page or the Uber Driver app and create the driver-partner account with a valid email address and phone number.",
+      "Enter the personal and city information requested for the driver profile and choose whether the driver already has an eligible vehicle.",
+      "Upload clear copies of the driver's licence, vehicle registration and the additional inspection, insurance, roadworthiness and Hackney documents required for the Nigerian vehicle.",
+      "Confirm that the vehicle meets Uber's current model-year, door, condition and passenger-capacity requirements for the selected ride category.",
+      "Wait for Uber to approve the documents, then sign in to the Driver app and go online only after the account shows that onboarding is complete."
+    ],
+    "notes": [
+      "Uber says requirements can vary by city and can be updated without notice, so the live city onboarding flow remains the final check.",
+      "A person can begin driver signup without currently owning an eligible vehicle, but cannot start taking trips until an eligible vehicle and required documents are approved.",
+      "Promotional earnings figures are not guaranteed income and are intentionally excluded from this service guide."
+    ],
+    "sources": [
+      {
+        "label": "Uber Nigeria — Drive",
+        "agency": "Uber",
+        "url": "https://www.uber.com/ng/en/drive/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Uber Nigeria vehicle requirements",
+        "agency": "Uber",
+        "url": "https://www.uber.com/ng/en/drive/requirements/vehicle-requirements/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Uber Help — Signing up to drive",
+        "agency": "Uber",
+        "url": "https://help.uber.com/driving-and-delivering/article/signing-up-to-drive-with-uber?nodeId=dba142ad-c819-4023-9067-02e94d3cfe2c",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "bolt-driver-signup-nigeria",
+      "new-drivers-licence",
+      "drivers-licence-verification",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Uber driver signup Nigeria",
+      "become Uber driver Nigeria",
+      "Uber driver requirements Nigeria",
+      "Uber vehicle requirements Lagos",
+      "Uber driver registration Abuja"
+    ]
+  },
+  {
+    "slug": "bolt-driver-signup-nigeria",
+    "title": "How to register as a Bolt driver in Nigeria",
+    "shortTitle": "Bolt driver signup",
+    "summary": "Bolt Nigeria's driver-partner signup route for creating a profile, uploading the required driver and vehicle documents, completing inspection and receiving account access after verification.",
+    "category": "Ride-hailing",
+    "agencySlug": "bolt-nigeria",
+    "feeLabel": "Free Bolt driver account",
+    "feeNote": "Bolt states that opening a driver account is free. The driver pays the official cost of obtaining required documents and the current vehicle-inspection charge shown by Bolt.",
+    "timeline": "Bolt says a complete driver application with the required documents is reviewed within 48 hours and the accepted driver receives an SMS or email with account-access instructions.",
+    "status": "verified",
+    "officialPortal": "https://partners.bolt.eu/",
+    "requirements": [
+      "A driver who is at least 18 years old, with a smartphone that has GPS functionality",
+      "A clear driver profile picture, valid driver's licence and government-issued ID or NIN",
+      "Vehicle exterior and interior photographs, a vehicle licence certificate and a valid roadworthiness certificate",
+      "For Lagos residents, the current LASRRA and LASDRI cards listed in Bolt's Nigeria document guide",
+      "A vehicle that meets the model-year, air-conditioning, insurance and roadworthiness rules for the selected Nigerian city and category"
+    ],
+    "steps": [
+      "Open Bolt's Nigeria driver signup page or Driver Portal and create the driver profile with a reliable phone number and email address.",
+      "Prepare clear full-colour images of the driver's licence, government ID, profile photo and the vehicle documents required for the selected city.",
+      "Upload the vehicle photographs, vehicle licence and roadworthiness certificate, plus Lagos-specific LASRRA and LASDRI cards when the applicant is onboarding in Lagos.",
+      "Complete the required vehicle inspection and upload or connect the valid inspection evidence to the Bolt driver application.",
+      "Submit the profile for verification and wait for Bolt's approval message and login instructions before taking trips."
+    ],
+    "notes": [
+      "Bolt's Nigeria guide says complete applications are normally reviewed within 48 hours.",
+      "Vehicle-year rules vary by Nigerian city; the current Bolt category guide should be checked before paying for inspection or acquiring a car for the platform.",
+      "Bolt's published inspection charge and partner locations can change, so verify them on the live Nigeria driver guide."
+    ],
+    "sources": [
+      {
+        "label": "Bolt Driver Sign-Up Requirements Nigeria",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/driver/guide/documents/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bolt — Becoming a driver in Nigeria",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/support/articles/360002711693/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bolt Nigeria ride categories and vehicle requirements",
+        "agency": "Bolt",
+        "url": "https://bolt.eu/en-ng/driver/guide/categories/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uber-driver-signup-nigeria",
+      "new-drivers-licence",
+      "drivers-licence-verification",
+      "vehicle-insurance-validation-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bolt driver signup Nigeria",
+      "register Bolt driver Nigeria",
+      "Bolt driver requirements Lagos",
+      "Bolt vehicle inspection Nigeria",
+      "Bolt driver documents Nigeria"
+    ]
+  },
+  {
+    "slug": "smile-recharge-data-nigeria",
+    "title": "How to recharge Smile data in Nigeria",
+    "shortTitle": "Smile data recharge",
+    "summary": "Smile Nigeria's current recharge routes through XpressRecharge, the Smile Voice & SelfCare app and supported payment partners, using the registered email or SmileNumber and a selected data bundle.",
+    "category": "Internet",
+    "agencySlug": "smile-nigeria",
+    "feeLabel": "Price depends on the selected Smile bundle",
+    "feeNote": "Smile publishes current bundle prices on XpressRecharge and its data-plan pages. Confirm the exact bundle, validity and price shown at checkout because plans and promotions change.",
+    "timeline": "Online recharge is applied after successful payment; Smile does not publish one universal delay for every bank, app or payment-partner channel.",
+    "status": "verified",
+    "officialPortal": "https://smile.com.ng/xpressrecharge.html",
+    "requirements": [
+      "The registered email address or SmileNumber linked to the account being recharged",
+      "A selected Smile data or voice bundle with the intended validity and allowance",
+      "A supported payment method such as Verve, Visa, Mastercard or one of Smile's listed bank and payment-partner channels"
+    ],
+    "steps": [
+      "Open Smile Nigeria's XpressRecharge page or the Smile Voice & SelfCare app and choose the data or voice recharge service.",
+      "Select the bundle to purchase and enter the registered email address or SmileNumber for the account.",
+      "Verify the Smile account and confirm the displayed bundle price, allowance and validity before continuing.",
+      "Choose an available payment method and complete the payment through the official Smile or supported partner channel.",
+      "Check the account balance in the Smile app or SelfCare service and keep the payment confirmation if the bundle does not appear."
+    ],
+    "notes": [
+      "Smile currently states that the MySmile web portal is temporarily unavailable and directs customers to the Smile Voice & SelfCare app for management tasks.",
+      "Smile also supports selected bank, mobile-app and USSD payment partners in addition to XpressRecharge.",
+      "Promotional bonus or streaming data rules can differ from the main bundle and should be checked against the current data terms."
+    ],
+    "sources": [
+      {
+        "label": "Smile Nigeria — Ways to Recharge",
+        "agency": "Smile Communications Nigeria",
+        "url": "https://smile.com.ng/help-support/ways-to-recharge.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Smile XpressRecharge",
+        "agency": "Smile Communications Nigeria",
+        "url": "https://smile.com.ng/xpressrecharge.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Smile Data Pricing and Usage Terms",
+        "agency": "Smile Communications Nigeria",
+        "url": "https://smile.com.ng/data_terms_conditions",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spectranet-recharge-renew-plan",
+      "starlink-reactivate-service-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Smile data recharge Nigeria",
+      "Smile XpressRecharge",
+      "recharge Smile data online",
+      "SmileNumber recharge",
+      "MySmile recharge"
+    ]
+  },
+  {
+    "slug": "spectranet-recharge-renew-plan",
+    "title": "How to recharge or renew a Spectranet plan",
+    "shortTitle": "Spectranet recharge",
+    "summary": "Spectranet Nigeria's self-care and payment routes for renewing an internet plan, loading a recharge voucher, paying through supported channels and restoring service before the account grace period expires.",
+    "category": "Internet",
+    "agencySlug": "spectranet",
+    "feeLabel": "Depends on the selected Spectranet plan",
+    "feeNote": "Spectranet publishes current plan prices on its website. Confirm the active plan, validity and amount in Selfcare or the current plan page before payment.",
+    "timeline": "A successful online or voucher recharge can renew the service immediately once credited; Spectranet's terms say an inactive account can enter a 60-day grace period before permanent termination becomes possible.",
+    "status": "verified",
+    "officialPortal": "https://selfcare.spectranet.com.ng/",
+    "requirements": [
+      "The Spectranet Selfcare user credentials or account information for the broadband service",
+      "A selected current Spectranet data plan or valid recharge voucher for the intended renewal",
+      "A supported payment method, recharge voucher serial/PIN or payment evidence for a bank transfer"
+    ],
+    "steps": [
+      "Open Spectranet Selfcare and sign in with the customer username and password.",
+      "Choose the plan renewal or recharge option and confirm the current plan, price and validity before making payment.",
+      "For a voucher, select Refill account using voucher, enter the voucher serial number and PIN and submit the recharge.",
+      "For another supported payment method, complete the transaction through the listed bank, online or retail channel and keep the evidence.",
+      "Confirm that the account balance or renewed plan is visible in Selfcare; if a bank payment is not credited, send the payment evidence to Spectranet support."
+    ],
+    "notes": [
+      "Spectranet says recharge vouchers, Selfcare payments, approved banks and some direct-debit routes can be used to credit an account.",
+      "Its current unlimited and data-plan pages should be used for current prices rather than an old static tariff.",
+      "The terms state that service can ultimately be terminated when the customer does not seek reconnection within the 60-day grace period after payment becomes due."
+    ],
+    "sources": [
+      {
+        "label": "Spectranet recharge FAQ",
+        "agency": "Spectranet Nigeria",
+        "url": "https://spectranet.com.ng/?p=298",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spectranet broadband terms",
+        "agency": "Spectranet Nigeria",
+        "url": "https://spectranet.com.ng/storage/2024/10/Terms-And-Conditions.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Spectranet current data plans",
+        "agency": "Spectranet Nigeria",
+        "url": "https://spectranet.com.ng/dataplan",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "smile-recharge-data-nigeria",
+      "starlink-reactivate-service-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Spectranet recharge Nigeria",
+      "renew Spectranet plan",
+      "Spectranet Selfcare recharge",
+      "Spectranet voucher recharge",
+      "Spectranet data plan renewal"
+    ]
+  },
+  {
+    "slug": "konga-return-refund",
+    "title": "How to return an eligible Konga order and request a refund",
+    "shortTitle": "Konga returns & refunds",
+    "summary": "Konga Nigeria's return route for eligible items: raise the complaint within the current return window, provide product evidence, wait for authorisation, use the return waybill and receive a replacement, exchange or refund resolution.",
+    "category": "E-commerce",
+    "agencySlug": "konga",
+    "feeLabel": "No Konga return-request fee stated",
+    "feeNote": "Konga does not state a fee for opening an eligible return request. Shipping or repair costs can fall to the buyer for some complaints outside the normal return window or defects not covered by warranty.",
+    "timeline": "Konga currently provides a 7-day return window for eligible items. Resolution happens after the return is authorised and the item is received and reviewed by the seller.",
+    "status": "verified",
+    "officialPortal": "https://backend.konga.com/return-policy",
+    "requirements": [
+      "An order with an item and return reason that qualifies under Konga's current return policy",
+      "A complaint raised within seven days of delivery for the normal eligible-item return route",
+      "Pictures of the delivered item sent as evidence when Konga asks for product-condition proof",
+      "The original packaging, accessories, labels or gifts when the return reason and product category require them",
+      "The return waybill number Konga issues after the claim is validated"
+    ],
+    "steps": [
+      "Contact Konga through its official support route within the published return window and explain the order problem.",
+      "Send pictures of the delivered product to Konga support when evidence is needed to validate the complaint.",
+      "Wait for Konga to authorise the return and provide the approved drop-off, pickup or seller-return instructions.",
+      "Return the item using the approved route and keep the return waybill number supplied for tracking.",
+      "Track the returned item and wait for Konga's replacement, exchange or refund resolution after the seller receives and reviews it."
+    ],
+    "notes": [
+      "Konga excludes several product categories and conditions from the normal returns route, including certain opened, altered, perishable, health/personal-care and other listed items.",
+      "Konga Daily grocery complaints can have a stricter return-at-delivery rule.",
+      "A defective product complaint raised after the normal 7-day window can move to manufacturer warranty or a different seller-support route."
+    ],
+    "sources": [
+      {
+        "label": "Konga Return Policy",
+        "agency": "Konga",
+        "url": "https://backend.konga.com/return-policy",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Konga Buyer Safety Centre",
+        "agency": "Konga",
+        "url": "https://backend.konga.com/buyer-safety-centre",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "konga-seller-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Konga return policy Nigeria",
+      "return Konga order",
+      "Konga refund request",
+      "Konga 7 day return",
+      "track Konga return"
+    ]
+  },
+  {
+    "slug": "konga-seller-registration",
+    "title": "How to register as a seller on Konga",
+    "shortTitle": "Konga seller registration",
+    "summary": "Konga SellerHQ's merchant-onboarding route for creating a store, entering personal and address details, listing products and choosing how orders are fulfilled after the seller account is set up.",
+    "category": "E-commerce",
+    "agencySlug": "konga",
+    "feeLabel": "Seller subscription and commission terms apply",
+    "feeNote": "Konga publishes seller subscription tiers and category-based commissions separately. Review the current SellerHQ subscription and commission pages before choosing a seller plan or pricing products.",
+    "timeline": "Konga does not publish one universal activation time for every new seller account; the SellerHQ registration creates the merchant profile and Konga can review or support the account before full selling activity.",
+    "status": "verified",
+    "officialPortal": "https://shq.konga.com/account/register",
+    "requirements": [
+      "A unique Konga store name and proposed Store URL for the seller profile",
+      "A valid seller email address, password and phone number",
+      "The seller's name and physical address including state, LGA, city and a nearby landmark",
+      "Product information, prices and fulfilment choices needed to list items after the SellerHQ store is created"
+    ],
+    "steps": [
+      "Open Konga SellerHQ's official registration page and enter the proposed store name, unique Store URL, description, email and password.",
+      "Complete the seller's personal contact and location information, including phone number, street address, state, LGA, city and landmark.",
+      "Submit the SellerHQ registration and sign in to the merchant account after Konga makes it available.",
+      "Create product listings with the product information and prices the seller intends to offer on Konga.",
+      "Choose the available order fulfilment or shipping approach and manage incoming orders and seller proceeds through SellerHQ."
+    ],
+    "notes": [
+      "Konga says sellers choose their listing prices and can control aspects such as shipping method and whether Pay on Delivery is accepted where available.",
+      "Seller commissions differ by product category and fulfilment model, so the live commission page should be checked before pricing products.",
+      "Konga prohibits counterfeit or inauthentic merchandise and can suspend sellers that violate its authenticity policy."
+    ],
+    "sources": [
+      {
+        "label": "Konga SellerHQ",
+        "agency": "Konga",
+        "url": "https://shq.konga.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Konga SellerHQ registration",
+        "agency": "Konga",
+        "url": "https://shq.konga.com/account/register",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Konga SellerHQ commissions",
+        "agency": "Konga",
+        "url": "https://shq.konga.com/site/commissions?fulfilment_type=2&web_store_id=1",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "konga-return-refund",
+      "cac-business-name-registration",
+      "paystack-business-activation-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "sell on Konga Nigeria",
+      "Konga seller registration",
+      "Konga SellerHQ signup",
+      "open Konga store",
+      "Konga seller requirements"
+    ]
+  },
+  {
+    "slug": "jumia-seller-registration-nigeria",
+    "title": "How to register to sell on Jumia Nigeria",
+    "shortTitle": "Jumia seller registration",
+    "summary": "Jumia Nigeria's seller-onboarding route for creating a marketplace profile and completing KYC with identity, bank information and CAC/TIN evidence when the seller is a registered business.",
+    "category": "E-commerce",
+    "agencySlug": "jumia-nigeria",
+    "feeLabel": "Marketplace commissions and seller charges apply",
+    "feeNote": "Jumia's merchant charges can vary by category and fulfilment/service choices. Check the current VendorHub/Seller Center commercial terms before listing products.",
+    "timeline": "Jumia does not publish one universal seller-activation time on the KYC guide; the seller must complete the profile and KYC review before normal marketplace operations.",
+    "status": "verified",
+    "officialPortal": "https://vendorhub.jumia.com.ng/",
+    "requirements": [
+      "For an individual seller, a valid national ID plus a bank account name and number",
+      "For a registered business, the business owner's national ID, valid CAC registration evidence and TIN certificate/number",
+      "A bank account whose holder name matches the individual seller or the registered establishment",
+      "A stamped bank reference letter or one-day bank statement showing the NUBAN account number"
+    ],
+    "steps": [
+      "Open Jumia Nigeria's official VendorHub or seller registration route and create the marketplace seller profile.",
+      "Choose the correct seller status as an individual or registered business and enter the profile information.",
+      "Upload the required national ID and bank evidence, adding CAC and TIN documents when the seller is a company or registered business.",
+      "Confirm that the bank account name and NUBAN information match the seller or business identity used in the marketplace profile.",
+      "Submit the KYC profile and wait for Jumia's seller onboarding review before treating the marketplace account as fully ready for listings and payouts."
+    ],
+    "notes": [
+      "Jumia's KYC guide uses different document sets for individuals and registered businesses.",
+      "A bank reference letter must show the account-holder or company name and the account number and should be stamped by the bank.",
+      "Seller policies and commercial charges can change, so this guide avoids hard-coding old commission tables."
+    ],
+    "sources": [
+      {
+        "label": "Jumia VendorHub — KYC documents",
+        "agency": "Jumia Nigeria",
+        "url": "https://vendorhub.jumia.com.ng/kyc-documents-mandatory/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jumia VendorHub",
+        "agency": "Jumia Nigeria",
+        "url": "https://vendorhub.jumia.com.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "konga-seller-registration",
+      "cac-business-name-registration",
+      "cac-company-registration",
+      "paystack-business-activation-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "sell on Jumia Nigeria",
+      "Jumia seller registration Nigeria",
+      "Jumia VendorHub signup",
+      "Jumia seller KYC requirements",
+      "Jumia seller center Nigeria"
+    ]
   }
 ]
