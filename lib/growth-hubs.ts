@@ -1092,7 +1092,9 @@ export const growthHubs: GrowthHub[] = [
       { query: "VFS Canada biometrics Nigeria", serviceSlug: "vfs-canada-biometrics-appointment-nigeria" },
       { query: "VFS Canada passport submission Nigeria", serviceSlug: "vfs-canada-passport-submission-nigeria" },
       { query: "TLScontact France Nigeria appointment", serviceSlug: "tlscontact-france-visa-appointment-nigeria" },
-      { query: "TLScontact France passport collection Nigeria", serviceSlug: "tlscontact-france-track-collect-passport-nigeria" }
+      { query: "TLScontact France passport collection Nigeria", serviceSlug: "tlscontact-france-track-collect-passport-nigeria" },
+      { query: "TLScontact Italy Nigeria appointment", serviceSlug: "tlscontact-italy-visa-appointment-nigeria" },
+      { query: "TLScontact Italy passport collection Nigeria", serviceSlug: "tlscontact-italy-passport-collection-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1495,7 +1497,9 @@ export const growthHubs: GrowthHub[] = [
       "vfs-canada-biometrics-appointment-nigeria",
       "vfs-canada-passport-submission-nigeria",
       "tlscontact-france-visa-appointment-nigeria",
-      "tlscontact-france-track-collect-passport-nigeria"
+      "tlscontact-france-track-collect-passport-nigeria",
+      "tlscontact-italy-visa-appointment-nigeria",
+      "tlscontact-italy-passport-collection-nigeria"
     ]
   },
 
