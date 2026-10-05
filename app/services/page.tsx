@@ -11,12 +11,13 @@ const popularServiceLinks = [
   { label: "NECO result token", href: "/services/neco-purchase-result-token" },
   { label: "NIP transfer status", href: "/services/nip-transfer-status" },
   { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
+  { label: "Private services", href: "/topics/private-services-nigeria" },
 ];
 
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
-  title: "Services in Nigeria 2026: Government, Education, Travel, Banking & Business",
-  description: "Find Nigerian government and everyday service guides, current fees, official portals, requirements and step-by-step application guidance for 2026.",
+  title: "Services in Nigeria 2026: Government & Private Service Guides",
+  description: "Find verified Nigerian government and private service guides with current fees/status, provider portals, requirements and step-by-step guidance for 2026.",
 };
 
 export const dynamic = "force-static";
@@ -28,7 +29,7 @@ export default function ServicesPage() {
         <div className="minimal-directory-heading">
           <span className="eyebrow">Services</span>
           <h1>Service guides for Nigeria</h1>
-          <p className="page-intro">Government processes, education, travel, banking, business and other practical services — search by what you need to do or choose a service area.</p>
+          <p className="page-intro">Government and private-provider services across identity, education, travel, banking, telecoms, utilities and everyday tasks — search by what you need to do or choose a service area.</p>
           <form className="section-quick-search" action="/services#service-directory" method="get" role="search">
             <label>
               <span>Search services</span>

@@ -1,4 +1,5 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
+import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import type { Agency, Service, VerificationStatus } from "@/lib/types";
 import { validateServiceCatalog } from "@/lib/service-records";
 
@@ -429,10 +430,1248 @@ export const agencies: Agency[] = [
     "shortName": "China Visa",
     "description": "Chinese visa guidance and consular services for applicants in Nigeria.",
     "website": "https://ng.china-embassy.gov.cn/eng/"
+  },
+  {
+    "slug": "mtn-nigeria",
+    "name": "MTN Nigeria",
+    "shortName": "MTN",
+    "description": "Private mobile-network services including SIM, eSIM, roaming, data and account support.",
+    "website": "https://www.mtn.ng/"
+  },
+  {
+    "slug": "airtel-nigeria",
+    "name": "Airtel Nigeria",
+    "shortName": "Airtel",
+    "description": "Private mobile-network services including SIM, eSIM, data, account and customer support.",
+    "website": "https://www.airtel.com.ng/"
+  },
+  {
+    "slug": "globacom",
+    "name": "Globacom Limited",
+    "shortName": "Glo",
+    "description": "Private mobile-network services including SIM, eSIM, data and customer support.",
+    "website": "https://www.gloworld.com/ng/"
+  },
+  {
+    "slug": "moniepoint",
+    "name": "Moniepoint Microfinance Bank",
+    "shortName": "Moniepoint",
+    "description": "Private personal and business banking, cards, payments, USSD and account services.",
+    "website": "https://moniepoint.com/ng/"
+  },
+  {
+    "slug": "firstbank",
+    "name": "First Bank of Nigeria Limited",
+    "shortName": "FirstBank",
+    "description": "Private retail and business banking, account, card and digital-banking services.",
+    "website": "https://www.firstbanknigeria.com/"
+  },
+  {
+    "slug": "uba",
+    "name": "United Bank for Africa Nigeria",
+    "shortName": "UBA",
+    "description": "Private retail, business and digital banking services in Nigeria.",
+    "website": "https://www.ubagroup.com/nigeria/"
+  },
+  {
+    "slug": "access-bank",
+    "name": "Access Bank Plc",
+    "shortName": "Access Bank",
+    "description": "Private retail and business banking, cards, account and digital-banking services.",
+    "website": "https://www.accessbankplc.com/"
+  },
+  {
+    "slug": "dstv-nigeria",
+    "name": "DStv Nigeria",
+    "shortName": "DStv",
+    "description": "Private pay-TV subscription, payment, package and decoder self-service.",
+    "website": "https://www.dstv.com/en-ng/"
+  },
+  {
+    "slug": "gotv-nigeria",
+    "name": "GOtv Nigeria",
+    "shortName": "GOtv",
+    "description": "Private pay-TV subscription, payment, package and decoder self-service.",
+    "website": "https://www.gotvafrica.com/en-ng/"
+  },
+  {
+    "slug": "air-peace",
+    "name": "Air Peace",
+    "shortName": "Air Peace",
+    "description": "Private Nigerian airline booking, check-in, baggage and passenger-support services.",
+    "website": "https://flyairpeace.com/"
+  },
+  {
+    "slug": "dhl-express-nigeria",
+    "name": "DHL Express Nigeria",
+    "shortName": "DHL Express",
+    "description": "Private international express shipping, pickup, drop-off and shipment-tracking services.",
+    "website": "https://www.dhl.com/ng-en/home.html"
+  },
+  {
+    "slug": "british-council-nigeria",
+    "name": "British Council Nigeria",
+    "shortName": "British Council",
+    "description": "Private/non-government examination and education services including IELTS testing in Nigeria.",
+    "website": "https://www.britishcouncil.org.ng/"
+  },
+  {
+    "slug": "idp-ielts-nigeria",
+    "name": "IDP IELTS Nigeria",
+    "shortName": "IDP IELTS",
+    "description": "Private IELTS booking, testing and candidate-support services across Nigerian test centres.",
+    "website": "https://ielts.idp.com/nigeria"
+  },
+  {
+    "slug": "gigm",
+    "name": "GIG Mobility",
+    "shortName": "GIGM",
+    "description": "Private intercity transport booking and mobility services across Nigeria and other African markets.",
+    "website": "https://gigm.com/"
+  },
+  {
+    "slug": "ekedp",
+    "name": "Eko Electricity Distribution Plc",
+    "shortName": "EKEDP",
+    "description": "Private electricity distribution, payment, metering and customer self-service for the Eko distribution area.",
+    "website": "https://www.ekedp.com/"
+  },
+  {
+    "slug": "starlink-nigeria",
+    "name": "Starlink Nigeria",
+    "shortName": "Starlink",
+    "description": "Private satellite-internet hardware, activation, subscription and account-support services in Nigeria.",
+    "website": "https://www.starlink.com/ng/"
+  },
+  {
+    "slug": "synlab-nigeria",
+    "name": "SYNLAB Nigeria",
+    "shortName": "SYNLAB",
+    "description": "Private diagnostic laboratory, sample-collection and online result-access services in Nigeria.",
+    "website": "https://www.synlab.com.ng/"
+  },
+  {
+    "slug": "evercare-hospital-lekki",
+    "name": "Evercare Hospital Lekki",
+    "shortName": "Evercare",
+    "description": "Private multispecialty hospital appointment, teleconsultation, homecare and patient-portal services in Lagos.",
+    "website": "https://www.evercare.ng/"
+  },
+  {
+    "slug": "paystack",
+    "name": "Paystack",
+    "shortName": "Paystack",
+    "description": "Private payment-service provider for Nigerian businesses, including merchant activation, terminals and payment acceptance.",
+    "website": "https://paystack.com/"
+  },
+  {
+    "slug": "leadway-assurance",
+    "name": "Leadway Assurance Company Limited",
+    "shortName": "Leadway",
+    "description": "Private insurance provider offering motor and other insurance services in Nigeria.",
+    "website": "https://www.leadway.com/"
+  },
+  {
+    "slug": "uber-nigeria",
+    "name": "Uber Nigeria",
+    "shortName": "Uber",
+    "description": "Private ride-hailing platform with driver-partner onboarding and rider services in Nigerian cities.",
+    "website": "https://www.uber.com/ng/en/"
+  },
+  {
+    "slug": "bolt-nigeria",
+    "name": "Bolt Nigeria",
+    "shortName": "Bolt",
+    "description": "Private ride-hailing and mobility platform with driver-partner onboarding in cities across Nigeria.",
+    "website": "https://bolt.eu/en-ng/"
+  },
+  {
+    "slug": "smile-nigeria",
+    "name": "Smile Communications Nigeria",
+    "shortName": "Smile",
+    "description": "Private broadband and voice provider with data recharge, self-care and device services in Nigeria.",
+    "website": "https://smile.com.ng/"
+  },
+  {
+    "slug": "spectranet",
+    "name": "Spectranet Nigeria",
+    "shortName": "Spectranet",
+    "description": "Private broadband provider offering wireless and fibre data plans, recharge and account self-service in Nigeria.",
+    "website": "https://spectranet.com.ng/"
+  },
+  {
+    "slug": "konga",
+    "name": "Konga",
+    "shortName": "Konga",
+    "description": "Private Nigerian e-commerce marketplace with shopping, returns and SellerHQ merchant services.",
+    "website": "https://www.konga.com/"
+  },
+  {
+    "slug": "jumia-nigeria",
+    "name": "Jumia Nigeria",
+    "shortName": "Jumia",
+    "description": "Private e-commerce marketplace with shopping and seller-onboarding services in Nigeria.",
+    "website": "https://www.jumia.com.ng/"
+  },
+  {
+    "slug": "gtbank",
+    "name": "Guaranty Trust Bank Limited",
+    "shortName": "GTBank",
+    "description": "Private Nigerian bank offering retail, business and digital banking services including 737 USSD.",
+    "website": "https://www.gtbank.com/"
+  },
+  {
+    "slug": "zenith-bank",
+    "name": "Zenith Bank Plc",
+    "shortName": "Zenith Bank",
+    "description": "Private Nigerian bank offering retail, business and digital banking services.",
+    "website": "https://www.zenithbank.com/"
+  },
+  {
+    "slug": "stanbic-ibtc-bank",
+    "name": "Stanbic IBTC Bank",
+    "shortName": "Stanbic IBTC",
+    "description": "Private Nigerian bank offering personal, business and digital banking services.",
+    "website": "https://www.stanbicibtcbank.com/nigeriabank/"
+  },
+  {
+    "slug": "fidelity-bank",
+    "name": "Fidelity Bank Plc",
+    "shortName": "Fidelity Bank",
+    "description": "Private Nigerian bank offering personal and business banking, including digital business-account onboarding.",
+    "website": "https://fidelitybank.ng/"
+  },
+  {
+    "slug": "flutterwave",
+    "name": "Flutterwave",
+    "shortName": "Flutterwave",
+    "description": "Private payment technology provider offering merchant onboarding, payment acceptance and settlement services in Nigeria.",
+    "website": "https://flutterwave.com/"
+  },
+  {
+    "slug": "opay",
+    "name": "OPay",
+    "shortName": "OPay",
+    "description": "Private Nigerian financial-services platform offering accounts, transfers, cards, merchant services and emergency security controls.",
+    "website": "https://opayweb.com/ng/"
+  },
+  {
+    "slug": "kuda",
+    "name": "Kuda Microfinance Bank",
+    "shortName": "Kuda",
+    "description": "Private digital bank offering personal and business accounts, cards, transfers and account-tier services in Nigeria.",
+    "website": "https://www.kuda.com/"
+  },
+  {
+    "slug": "ikeja-electric",
+    "name": "Ikeja Electric Plc",
+    "shortName": "Ikeja Electric",
+    "description": "Private electricity distribution company serving parts of Lagos with metering, token, billing and customer self-service.",
+    "website": "https://www.ikejaelectric.com/"
+  },
+  {
+    "slug": "ets",
+    "name": "Educational Testing Service",
+    "shortName": "ETS",
+    "description": "Private/nonprofit testing provider for TOEFL and GRE registration, test administration and score services available to candidates in Nigeria.",
+    "website": "https://www.ets.org/"
+  },
+  {
+    "slug": "pearson-pte",
+    "name": "Pearson PTE",
+    "shortName": "Pearson PTE",
+    "description": "Private English-language testing provider with PTE test booking and approved test centres in Nigeria.",
+    "website": "https://www.pearsonpte.com/"
+  },
+  {
+    "slug": "gmac",
+    "name": "Graduate Management Admission Council",
+    "shortName": "GMAC",
+    "description": "Private/nonprofit provider of the GMAT exam and official mba.com registration services used by candidates in Nigeria.",
+    "website": "https://www.mba.com/"
+  },
+  {
+    "slug": "axa-mansard",
+    "name": "AXA Mansard Insurance Plc",
+    "shortName": "AXA Mansard",
+    "description": "Private Nigerian insurer offering motor and other insurance products with online purchase and claims services.",
+    "website": "https://www.axamansard.com/"
+  },
+  {
+    "slug": "gig-logistics",
+    "name": "GIG Logistics",
+    "shortName": "GIGL",
+    "description": "Private Nigerian logistics provider offering domestic/international shipping, pickup, tracking and merchant delivery services.",
+    "website": "https://giglogistics.com/"
+  },
+  {
+    "slug": "guo-transport",
+    "name": "GUO Transport",
+    "shortName": "GUO Transport",
+    "description": "Private Nigerian intercity transport provider offering local/international bus booking and passenger services.",
+    "website": "https://www.guotransport.com/"
+  },
+  {
+    "slug": "palmpay",
+    "name": "PalmPay",
+    "shortName": "PalmPay",
+    "description": "Private Nigerian financial-services platform offering accounts, transfers, bills, merchant services and KYC-tiered access.",
+    "website": "https://www.palmpay.com/nigeria/"
+  },
+  {
+    "slug": "aedc",
+    "name": "Abuja Electricity Distribution Plc",
+    "shortName": "AEDC",
+    "description": "Private electricity distribution company serving Abuja and surrounding franchise areas with payment, metering, refund and customer self-service.",
+    "website": "https://www.abujaelectricity.com/"
+  },
+  {
+    "slug": "ibedc",
+    "name": "Ibadan Electricity Distribution Company Plc",
+    "shortName": "IBEDC",
+    "description": "Private electricity distribution company serving Oyo, Ogun, Osun, Kwara and parts of Niger, Ekiti and Kogi with payment, metering and customer self-service.",
+    "website": "https://www.ibedc.com/"
+  },
+  {
+    "slug": "ecobank-nigeria",
+    "name": "Ecobank Nigeria Limited",
+    "shortName": "Ecobank",
+    "description": "Private Nigerian bank offering personal, business, mobile, agency and account self-service across its pan-African network.",
+    "website": "https://www.ecobank.com/ng/"
+  },
+  {
+    "slug": "fcmb",
+    "name": "First City Monument Bank",
+    "shortName": "FCMB",
+    "description": "Private Nigerian bank offering personal and business accounts, digital onboarding and self-service banking.",
+    "website": "https://www.fcmb.com/"
+  },
+  {
+    "slug": "alat-wema",
+    "name": "ALAT by Wema Bank",
+    "shortName": "ALAT",
+    "description": "Wema Bank's private digital-banking platform for account opening, cards, transfers, bills and other app-based services.",
+    "website": "https://alat.ng/"
+  },
+  {
+    "slug": "sterling-bank",
+    "name": "Sterling Bank",
+    "shortName": "Sterling",
+    "description": "Private Nigerian bank offering OneBank digital onboarding, account upgrades, cards and other personal banking services.",
+    "website": "https://sterling.ng/"
+  },
+  {
+    "slug": "hygeia-hmo",
+    "name": "Hygeia HMO",
+    "shortName": "Hygeia HMO",
+    "description": "Private Nigerian health-maintenance organisation offering individual, family and business health plans with a provider network.",
+    "website": "https://hygeiahmo.com/"
+  },
+  {
+    "slug": "phed",
+    "name": "Port Harcourt Electricity Distribution Plc",
+    "shortName": "PHED",
+    "description": "Private electricity distribution company serving Rivers, Bayelsa, Cross River and Akwa Ibom with payment, metering and customer-service routes.",
+    "website": "https://phed.com.ng/"
+  },
+  {
+    "slug": "kaduna-electric",
+    "name": "Kaduna Electricity Distribution Company",
+    "shortName": "Kaduna Electric",
+    "description": "Private electricity distribution company serving Kaduna, Kebbi, Sokoto and Zamfara with token, billing and MAP metering services.",
+    "website": "https://kadunaelectric.com/"
+  },
+  {
+    "slug": "eedc",
+    "name": "Enugu Electricity Distribution Company Plc",
+    "shortName": "EEDC",
+    "description": "Private electricity distribution company serving the South-East with bill payment, customer self-service, connections and metering services.",
+    "website": "https://enugudisco.com/"
+  },
+  {
+    "slug": "kedco",
+    "name": "Kano Electricity Distribution Company",
+    "shortName": "KEDCO",
+    "description": "Private electricity distribution company serving Kano, Jigawa and Katsina with customer connection, billing and MAP metering services.",
+    "website": "https://kedco.ng/"
+  },
+  {
+    "slug": "yedc",
+    "name": "Yola Electricity Distribution Company",
+    "shortName": "YEDC",
+    "description": "Private electricity distribution company serving Adamawa, Borno, Taraba and Yobe with payment, metering, new connection and complaint services.",
+    "website": "https://www.yedc.com.ng/"
+  },
+  {
+    "slug": "jed",
+    "name": "Jos Electricity Distribution Plc",
+    "shortName": "JED",
+    "description": "Private electricity distribution company serving Plateau, Bauchi, Benue and Gombe with payment, metering, connection and customer-care services.",
+    "website": "https://www.jedplc.com/"
+  },
+  {
+    "slug": "union-bank",
+    "name": "Union Bank of Nigeria",
+    "shortName": "Union Bank",
+    "description": "Private Nigerian bank offering account opening, debit-card, USSD and online banking services.",
+    "website": "https://unionbankng.com/"
+  },
+  {
+    "slug": "keystone-bank",
+    "name": "Keystone Bank Limited",
+    "shortName": "Keystone Bank",
+    "description": "Private Nigerian bank offering personal accounts, *7111# USSD, card and digital banking services.",
+    "website": "https://www.keystonebankng.com/"
+  },
+  {
+    "slug": "avon-hmo",
+    "name": "Avon HMO",
+    "shortName": "Avon HMO",
+    "description": "Private health maintenance organisation offering individual health plans and provider-network access in Nigeria.",
+    "website": "https://www.avonhealthcare.com/"
+  },
+  {
+    "slug": "ibom-air",
+    "name": "Ibom Air",
+    "shortName": "Ibom Air",
+    "description": "Private Nigerian airline offering domestic/regional booking, online check-in, ticket changes and baggage services.",
+    "website": "https://www.ibomair.com/"
+  },
+  {
+    "slug": "arik-air",
+    "name": "Arik Air",
+    "shortName": "Arik Air",
+    "description": "Private Nigerian airline offering domestic flight booking, manage-booking and online check-in services.",
+    "website": "https://arikair.com/"
+  },
+  {
+    "slug": "green-africa",
+    "name": "Green Africa Airways",
+    "shortName": "Green Africa",
+    "description": "Private Nigerian airline offering domestic booking, web check-in, fare and baggage services.",
+    "website": "https://www.greenafrica.com/"
+  },
+  {
+    "slug": "bedc",
+    "name": "BEDC Electricity Plc",
+    "shortName": "BEDC",
+    "description": "Private electricity distribution company serving Edo, Delta, Ondo and Ekiti with metering, billing, token and customer-support services.",
+    "website": "https://beninelectric.com/"
+  },
+  {
+    "slug": "college-board",
+    "name": "College Board",
+    "shortName": "College Board",
+    "description": "Private/nonprofit education organisation providing SAT registration, international testing and score services used by candidates in Nigeria.",
+    "website": "https://www.collegeboard.org/"
+  },
+  {
+    "slug": "reliance-hmo",
+    "name": "Reliance HMO",
+    "shortName": "Reliance HMO",
+    "description": "Private Nigerian health maintenance organisation offering individual, family and business health plans and provider-network services.",
+    "website": "https://getreliancehealth.com/nigeria/"
+  },
+  {
+    "slug": "t2-mobile",
+    "name": "T2 Mobile Nigeria",
+    "shortName": "T2 Mobile",
+    "description": "Private Nigerian mobile-network provider, formerly 9mobile, offering voice, data, airtime/data transfer and self-service.",
+    "website": "https://t2mobile.com.ng/"
+  },
+  {
+    "slug": "startimes-nigeria",
+    "name": "StarTimes Nigeria",
+    "shortName": "StarTimes",
+    "description": "Private pay-TV provider offering decoder recharge, bouquet management and app-based self-service in Nigeria.",
+    "website": "https://www.startimestv.com/"
+  },
+  {
+    "slug": "ipnx",
+    "name": "ipNX Nigeria",
+    "shortName": "ipNX",
+    "description": "Private Nigerian fibre and broadband provider offering subscription renewal, plan changes, fault reporting and self-service.",
+    "website": "https://www.ipnxnigeria.net/"
+  },
+  {
+    "slug": "fiberone",
+    "name": "FiberOne Broadband",
+    "shortName": "FiberOne",
+    "description": "Private Nigerian fibre broadband provider offering installation, renewal, relocation and account self-service.",
+    "website": "https://fob.ng/"
+  },
+  {
+    "slug": "nomba",
+    "name": "Nomba",
+    "shortName": "Nomba",
+    "description": "Private Nigerian business-banking and payment provider offering accounts, POS terminals, payment links and merchant services.",
+    "website": "https://nomba.com/"
+  },
+  {
+    "slug": "standard-chartered-nigeria",
+    "name": "Standard Chartered Bank Nigeria",
+    "shortName": "Standard Chartered",
+    "description": "Private bank offering SC Mobile account opening, online/mobile banking, cards and digital service requests in Nigeria.",
+    "website": "https://www.sc.com/ng/"
+  },
+  {
+    "slug": "united-nigeria-airlines",
+    "name": "United Nigeria Airlines",
+    "shortName": "United Nigeria",
+    "description": "Private Nigerian airline offering domestic and regional booking, online check-in, booking management and baggage services.",
+    "website": "https://flyunitednigeria.com/"
+  },
+  {
+    "slug": "valuejet",
+    "name": "ValueJet",
+    "shortName": "ValueJet",
+    "description": "Private Nigerian airline offering booking, online check-in, fare products and baggage services.",
+    "website": "https://www.flyvaluejet.com/"
+  },
+  {
+    "slug": "aero-contractors",
+    "name": "Aero Contractors",
+    "shortName": "Aero",
+    "description": "Private Nigerian airline offering flight booking, manage-booking, online check-in and refund services.",
+    "website": "https://flyaero.com/"
+  },
+  {
+    "slug": "jaiz-bank",
+    "name": "Jaiz Bank Plc",
+    "shortName": "Jaiz Bank",
+    "description": "Private Nigerian non-interest bank offering personal, corporate and digital account services.",
+    "website": "https://jaizbankplc.com/"
+  },
+  {
+    "slug": "unity-bank",
+    "name": "Unity Bank Plc",
+    "shortName": "Unity Bank",
+    "description": "Private Nigerian bank offering retail, business and digital banking services including *7799#.",
+    "website": "https://www.unitybankng.com/"
+  },
+  {
+    "slug": "paga",
+    "name": "Paga",
+    "shortName": "Paga",
+    "description": "Private Nigerian mobile-money and payment platform offering personal wallets, merchant payments and business services.",
+    "website": "https://www.mypaga.com/"
+  },
+  {
+    "slug": "quickteller",
+    "name": "Quickteller by Interswitch",
+    "shortName": "Quickteller",
+    "description": "Private payment platform for transfers, airtime/data, bill payments and merchant payments in Nigeria.",
+    "website": "https://quickteller.com/"
+  },
+  {
+    "slug": "ups-nigeria",
+    "name": "UPS Nigeria",
+    "shortName": "UPS",
+    "description": "Private international parcel shipping, rate, pickup and tracking services available to customers in Nigeria.",
+    "website": "https://www.ups.com/ng/en/Home.page"
+  },
+  {
+    "slug": "max-air",
+    "name": "Max Air",
+    "shortName": "Max Air",
+    "description": "Private Nigerian airline offering domestic/international booking, online check-in, booking management and baggage services.",
+    "website": "https://maxair.com.ng/"
+  },
+  {
+    "slug": "carbon",
+    "name": "Carbon Microfinance Bank",
+    "shortName": "Carbon",
+    "description": "Private CBN-licensed digital bank offering current accounts, payments, KYC-tier services and personal credit in Nigeria.",
+    "website": "https://www.getcarbon.co/"
+  },
+  {
+    "slug": "fairmoney",
+    "name": "FairMoney Microfinance Bank",
+    "shortName": "FairMoney",
+    "description": "Private CBN-licensed digital bank offering personal and business accounts, payments, cards, savings and credit services.",
+    "website": "https://fairmoney.io/"
+  },
+  {
+    "slug": "abc-transport",
+    "name": "ABC Transport Plc",
+    "shortName": "ABC Transport",
+    "description": "Private Nigerian intercity and cross-border transport operator offering route schedules and online bus booking.",
+    "website": "https://www.abctransport.com/"
+  },
+  {
+    "slug": "remita",
+    "name": "Remita Payment Services Limited",
+    "shortName": "Remita",
+    "description": "Private CBN-licensed payment platform for biller payments, RRR invoices and electronic payment services in Nigeria.",
+    "website": "https://www.remita.net/"
+  },
+  {
+    "slug": "red-star-express",
+    "name": "Red Star Express Plc",
+    "shortName": "Red Star Express",
+    "description": "Private Nigerian courier and logistics provider and FedEx licensee offering domestic/international shipping and tracking.",
+    "website": "https://redstarplc.com/"
+  },
+  {
+    "slug": "aiico",
+    "name": "AIICO Insurance Plc",
+    "shortName": "AIICO",
+    "description": "Private Nigerian composite insurer offering motor, life, health, travel and other insurance purchase and claims services.",
+    "website": "https://www.aiicoplc.com/"
+  },
+  {
+    "slug": "polaris-bank",
+    "name": "Polaris Bank Limited",
+    "shortName": "Polaris Bank",
+    "description": "Private Nigerian bank offering VULTe, online banking, identity-linking and account service requests.",
+    "website": "https://www.polarisbanklimited.com/"
+  },
+  {
+    "slug": "providus-bank",
+    "name": "ProvidusBank Plc",
+    "shortName": "ProvidusBank",
+    "description": "Private Nigerian bank offering personal/business accounts and ProvidusPlus digital banking services.",
+    "website": "https://www.providusbank.com/"
+  },
+  {
+    "slug": "overland-airways",
+    "name": "Overland Airways",
+    "shortName": "Overland Airways",
+    "description": "Private Nigerian airline offering scheduled flight booking, baggage, ticket changes and refund services.",
+    "website": "https://www.overlandairways.com/"
+  },
+  {
+    "slug": "chisco-transport",
+    "name": "Chisco Transport",
+    "shortName": "Chisco",
+    "description": "Private Nigerian and West African intercity transport provider offering online booking, rebooking and passenger services.",
+    "website": "https://www.chiscotransport.com.ng/"
+  },
+  {
+    "slug": "rano-air",
+    "name": "Rano Air Limited",
+    "shortName": "Rano Air",
+    "description": "Private Nigerian airline offering scheduled flight booking, booking management and passenger support.",
+    "website": "https://www.ranoair.com/"
+  },
+  {
+    "slug": "indrive-nigeria",
+    "name": "inDrive Nigeria",
+    "shortName": "inDrive",
+    "description": "Private ride-hailing platform offering rider and driver-partner services in Nigerian cities.",
+    "website": "https://indrive.com/"
+  },
+  {
+    "slug": "lagoon-hospitals",
+    "name": "Iwosan Lagoon Hospitals",
+    "shortName": "Lagoon Hospitals",
+    "description": "Private hospital group offering outpatient, specialist and appointment-booking services in Lagos.",
+    "website": "https://www.lagoonhospitals.com/"
+  },
+  {
+    "slug": "reddington-hospital",
+    "name": "Reddington Multi-Specialist Hospital",
+    "shortName": "Reddington",
+    "description": "Private multispecialty hospital offering appointments and specialist care in Lagos.",
+    "website": "https://reddingtonhospital.com/"
+  },
+  {
+    "slug": "aramex-nigeria",
+    "name": "Aramex Nigeria",
+    "shortName": "Aramex",
+    "description": "Private international courier and logistics provider offering shipment creation, pickup, tracking and Shop & Ship services in Nigeria.",
+    "website": "https://www.aramex.com/ng/en"
+  },
+  {
+    "slug": "healthtracka",
+    "name": "Healthtracka",
+    "shortName": "Healthtracka",
+    "description": "Private Nigerian health-testing platform offering home sample collection, laboratory testing and digital results.",
+    "website": "https://healthtracka.com/"
+  },
+  {
+    "slug": "oet",
+    "name": "Occupational English Test",
+    "shortName": "OET",
+    "description": "Private English-language test for healthcare professionals with booking routes available to candidates in Nigeria.",
+    "website": "https://oet.com/"
+  },
+  {
+    "slug": "acca",
+    "name": "Association of Chartered Certified Accountants",
+    "shortName": "ACCA",
+    "description": "Professional accountancy body offering exam registration and student services to candidates in Nigeria.",
+    "website": "https://www.accaglobal.com/"
+  },
+  {
+    "slug": "spotify-nigeria",
+    "name": "Spotify Nigeria",
+    "shortName": "Spotify",
+    "description": "Private music-streaming service offering Free and Premium subscriptions in Nigeria.",
+    "website": "https://www.spotify.com/ng/"
+  },
+  {
+    "slug": "netflix-nigeria",
+    "name": "Netflix Nigeria",
+    "shortName": "Netflix",
+    "description": "Private streaming service offering membership, plan management and account support to customers in Nigeria.",
+    "website": "https://www.netflix.com/ng/"
+  },
+  {
+    "slug": "wakanow",
+    "name": "Wakanow",
+    "shortName": "Wakanow",
+    "description": "Private Nigerian travel platform offering flight, hotel, package and booking-support services.",
+    "website": "https://www.wakanow.com/"
+  },
+  {
+    "slug": "ican",
+    "name": "Institute of Chartered Accountants of Nigeria",
+    "shortName": "ICAN",
+    "description": "Professional accountancy body providing student registration, examinations, membership and training services in Nigeria.",
+    "website": "https://icanig.org/"
+  },
+  {
+    "slug": "chowdeck",
+    "name": "Chowdeck",
+    "shortName": "Chowdeck",
+    "description": "Private on-demand delivery platform for food, groceries, pharmacies, local markets, vendors and riders in Nigerian cities.",
+    "website": "https://www.chowdeck.com/"
+  },
+  {
+    "slug": "medplus-nigeria",
+    "name": "Medplus Nigeria",
+    "shortName": "Medplus",
+    "description": "Private Nigerian pharmacy and health retail platform offering online ordering and nationwide delivery.",
+    "website": "https://medplusnig.com/"
+  },
+  {
+    "slug": "cfa-institute",
+    "name": "CFA Institute",
+    "shortName": "CFA Institute",
+    "description": "Global professional body offering the CFA Program, exam registration, scheduling and credential services to candidates in Nigeria.",
+    "website": "https://www.cfainstitute.org/"
+  },
+  {
+    "slug": "cipm-nigeria",
+    "name": "Chartered Institute of Personnel Management of Nigeria",
+    "shortName": "CIPM",
+    "description": "Professional HR body offering student membership, examinations and professional certification services in Nigeria.",
+    "website": "https://cipmnigeria.org/"
+  },
+  {
+    "slug": "jiji-nigeria",
+    "name": "Jiji Nigeria",
+    "shortName": "Jiji",
+    "description": "Private Nigerian classifieds marketplace with ad posting, Safe Deal buying, delivery and seller services.",
+    "website": "https://jiji.ng/"
+  },
+  {
+    "slug": "citn",
+    "name": "Chartered Institute of Taxation of Nigeria",
+    "shortName": "CITN",
+    "description": "Professional taxation body offering student membership, examinations, induction and subscription services in Nigeria.",
+    "website": "https://portal.citn.org/"
+  },
+  {
+    "slug": "cibn",
+    "name": "Chartered Institute of Bankers of Nigeria",
+    "shortName": "CIBN",
+    "description": "Professional banking body offering membership, professional examinations and certification services in Nigeria.",
+    "website": "https://www.cibng.org/"
+  },
+  {
+    "slug": "kwik-delivery",
+    "name": "Kwik",
+    "shortName": "Kwik",
+    "description": "Private Nigerian on-demand logistics platform for parcel delivery, businesses, riders, drivers and service agents.",
+    "website": "https://kwik.delivery/"
+  },
+  {
+    "slug": "glovo-nigeria",
+    "name": "Glovo Nigeria",
+    "shortName": "Glovo",
+    "description": "Private on-demand delivery platform for restaurant, retail, courier, partner and rider services in Nigeria.",
+    "website": "https://glovoapp.com/ng/en/"
+  },
+  {
+    "slug": "hotels-ng",
+    "name": "Hotels.ng",
+    "shortName": "Hotels.ng",
+    "description": "Private Nigerian hotel-booking platform offering accommodation search, reservations, payment and cancellation support.",
+    "website": "https://hotels.ng/"
+  },
+  {
+    "slug": "travelstart-nigeria",
+    "name": "Travelstart Nigeria",
+    "shortName": "Travelstart",
+    "description": "Private online travel platform offering flight booking, hotel and travel support services to Nigerian customers.",
+    "website": "https://www.travelstart.com.ng/"
+  },
+  {
+    "slug": "sendbox",
+    "name": "Sendbox",
+    "shortName": "Sendbox",
+    "description": "Private Nigerian shipping and commerce platform offering local/international deliveries, tracking and seller tools.",
+    "website": "https://sendbox.co/"
+  },
+  {
+    "slug": "euracare",
+    "name": "Euracare Multispecialist Hospital Lagos",
+    "shortName": "Euracare",
+    "description": "Private multispecialty hospital in Lagos offering specialist appointments, diagnostics and international-patient support.",
+    "website": "https://euracarehealth.com/"
+  },
+  {
+    "slug": "heyfood",
+    "name": "Heyfood",
+    "shortName": "Heyfood",
+    "description": "Private Nigerian food-delivery and restaurant-commerce platform offering customer ordering, rider and merchant services.",
+    "website": "https://heyfood.africa/"
+  },
+  {
+    "slug": "medbury-labs",
+    "name": "Medbury Labs",
+    "shortName": "Medbury Labs",
+    "description": "Private Nigerian diagnostics provider offering laboratory testing, screening packages and sample-collection services.",
+    "website": "https://medburylabs.com/"
+  },
+  {
+    "slug": "healthplus",
+    "name": "HealthPlus Nigeria",
+    "shortName": "HealthPlus",
+    "description": "Private Nigerian pharmacy and e-pharmacy offering online health, wellness and pharmacy-product ordering and delivery.",
+    "website": "https://healthplusnigeria.com/"
+  },
+  {
+    "slug": "custodian-insurance",
+    "name": "Custodian and Allied Insurance Limited",
+    "shortName": "Custodian",
+    "description": "Private Nigerian insurer offering motor and other non-life insurance purchase and claims services.",
+    "website": "https://custodianinsurance.com/"
+  },
+  {
+    "slug": "nem-insurance",
+    "name": "NEM Insurance Plc",
+    "shortName": "NEM Insurance",
+    "description": "Private Nigerian general insurer offering online cover purchase, quote and claims services.",
+    "website": "https://nem-insurance.com/"
+  },
+  {
+    "slug": "lagride",
+    "name": "LagRide Nigeria",
+    "shortName": "LagRide",
+    "description": "Private Lagos e-hailing service offering passenger ride booking and captain onboarding/training.",
+    "website": "https://lagride.org/"
+  },
+  {
+    "slug": "covenant-university",
+    "name": "Covenant University",
+    "shortName": "Covenant University",
+    "description": "Private Nigerian university with undergraduate admissions and online screening/application services.",
+    "website": "https://www.covenantuniversity.edu.ng/"
+  },
+  {
+    "slug": "babcock-university",
+    "name": "Babcock University",
+    "shortName": "Babcock University",
+    "description": "Private Nigerian university offering undergraduate, Direct Entry and other admission applications.",
+    "website": "https://www.babcock.edu.ng/"
+  },
+  {
+    "slug": "abuad",
+    "name": "Afe Babalola University, Ado-Ekiti",
+    "shortName": "ABUAD",
+    "description": "Private Nigerian university offering undergraduate, Direct Entry, transfer and international admission services.",
+    "website": "https://www.abuad.edu.ng/"
+  },
+  {
+    "slug": "pan-atlantic-university",
+    "name": "Pan-Atlantic University",
+    "shortName": "PAU",
+    "description": "Private Nigerian university offering undergraduate and postgraduate application services.",
+    "website": "https://pau.edu.ng/"
+  },
+  {
+    "slug": "nile-university",
+    "name": "Nile University of Nigeria",
+    "shortName": "Nile University",
+    "description": "Private university in Abuja offering undergraduate, Direct Entry, transfer and postgraduate admission services.",
+    "website": "https://nileuniversity.edu.ng/"
+  },
+  {
+    "slug": "american-university-nigeria",
+    "name": "American University of Nigeria",
+    "shortName": "AUN",
+    "description": "Private university in Yola offering undergraduate and graduate admissions for Fall and Spring intakes.",
+    "website": "https://www.aun.edu.ng/"
+  },
+  {
+    "slug": "redeemers-university",
+    "name": "Redeemer's University",
+    "shortName": "RUN",
+    "description": "Private Nigerian university offering undergraduate Post-UTME and online admission application services.",
+    "website": "https://run.edu.ng/"
+  },
+  {
+    "slug": "lead-city-university",
+    "name": "Lead City University",
+    "shortName": "LCU",
+    "description": "Private university in Ibadan offering undergraduate and other admission applications through online portals.",
+    "website": "https://www.lcu.edu.ng/"
+  },
+  {
+    "slug": "caleb-university",
+    "name": "Caleb University",
+    "shortName": "Caleb University",
+    "description": "Private university in Imota, Lagos offering undergraduate, Direct Entry, transfer, postgraduate and distance-learning admissions.",
+    "website": "https://calebuniversity.edu.ng/"
+  },
+  {
+    "slug": "bowen-university",
+    "name": "Bowen University",
+    "shortName": "Bowen University",
+    "description": "Private Nigerian university offering undergraduate and postgraduate admissions through official online application portals.",
+    "website": "https://bowen.edu.ng/"
+  },
+  {
+    "slug": "igbinedion-university",
+    "name": "Igbinedion University Okada",
+    "shortName": "IUO",
+    "description": "Private Nigerian university offering first-year, Direct Entry, transfer and other admission routes.",
+    "website": "https://iuokada.edu.ng/"
+  },
+  {
+    "slug": "veritas-university",
+    "name": "Veritas University Abuja",
+    "shortName": "Veritas University",
+    "description": "Private university in Abuja offering undergraduate, Direct Entry, transfer, postgraduate and JUPEB admission services.",
+    "website": "https://www.veritas.edu.ng/"
+  },
+  {
+    "slug": "bells-university",
+    "name": "Bells University of Technology",
+    "shortName": "Bells University",
+    "description": "Private university of technology in Ota offering undergraduate, JUPEB and postgraduate admission and student-record services.",
+    "website": "https://www.bellsuniversity.edu.ng/"
+  },
+  {
+    "slug": "9psb",
+    "name": "9 Payment Service Bank",
+    "shortName": "9PSB",
+    "description": "Private Nigerian payment service bank offering USSD accounts, KYC upgrades, agent banking and merchant payment services.",
+    "website": "https://9psb.com.ng/"
+  },
+  {
+    "slug": "duchess-hospital",
+    "name": "Duchess International Hospital",
+    "shortName": "Duchess Hospital",
+    "description": "Private multispecialty hospital in Lagos with patient-portal appointment and telemedicine services.",
+    "website": "https://duchesshospital.com/"
+  },
+  {
+    "slug": "cedarcrest-hospitals",
+    "name": "Cedarcrest Hospitals",
+    "shortName": "Cedarcrest",
+    "description": "Private multispecialty hospital group offering physical and virtual appointment booking in Lagos, Abuja and Niger State.",
+    "website": "https://cedarcresthospitals.com/"
+  },
+  {
+    "slug": "cornerstone-insurance",
+    "name": "Cornerstone Insurance Plc",
+    "shortName": "Cornerstone",
+    "description": "Private Nigerian insurer offering online motor insurance purchase, renewal and claims services.",
+    "website": "https://cornerstone.com.ng/"
+  },
+  {
+    "slug": "mutual-benefits",
+    "name": "Mutual Benefits Assurance Plc",
+    "shortName": "Mutual Benefits",
+    "description": "Private Nigerian insurer offering online quotations, policy payments and insurance services.",
+    "website": "https://mutualng.com/"
+  },
+  {
+    "slug": "silverbird-cinemas",
+    "name": "Silverbird Cinemas",
+    "shortName": "Silverbird Cinemas",
+    "description": "Private cinema chain offering online movie-ticket booking, vouchers and gift-card redemption in Nigerian locations.",
+    "website": "https://silverbirdcinemas.com/"
+  },
+  {
+    "slug": "smartcash-psb",
+    "name": "SmartCash Payment Service Bank",
+    "shortName": "SmartCash",
+    "description": "Private Nigerian payment service bank offering mobile/USSD wallets, KYC upgrades, agent banking and emergency account controls.",
+    "website": "https://smartcashpsb.ng/"
+  },
+  {
+    "slug": "hope-psbank",
+    "name": "Hope Payment Service Bank",
+    "shortName": "Hope PSBank",
+    "description": "Private Nigerian digital payment service bank offering free accounts, Hope Wallet, agency banking and mobile services.",
+    "website": "https://hopepsbank.com/"
+  },
+  {
+    "slug": "clinix-healthcare",
+    "name": "Clinix Healthcare",
+    "shortName": "Clinix",
+    "description": "Private Nigerian diagnostic and healthcare provider offering appointments, home sample collection, health packages and ambulance requests.",
+    "website": "https://clinixhealthcare.com.ng/"
+  },
+  {
+    "slug": "filmhouse-cinemas",
+    "name": "Filmhouse Cinemas",
+    "shortName": "Filmhouse",
+    "description": "Private Nigerian cinema chain offering movie-ticket booking, cinema pricing and customer entertainment services.",
+    "website": "https://filmhouseng.com/"
+  },
+  {
+    "slug": "momo-psb",
+    "name": "MoMo Payment Service Bank",
+    "shortName": "MoMo PSB",
+    "description": "MTN Nigeria's licensed payment service bank offering mobile wallets, agent/merchant onboarding, transfers, bill payments and digital financial services.",
+    "website": "https://www.momo.ng/"
+  },
+  {
+    "slug": "mecure-hospital",
+    "name": "MeCure Hospital",
+    "shortName": "MeCure Hospital",
+    "description": "Private hospital in Lagos offering specialist consultations, appointments and 24/7 emergency services.",
+    "website": "https://www.mecurehospital.com/"
+  },
+  {
+    "slug": "cowrywise",
+    "name": "Cowrywise",
+    "shortName": "Cowrywise",
+    "description": "Private Nigerian savings and investment platform offering account verification, funding and withdrawal services.",
+    "website": "https://cowrywise.com/"
+  },
+  {
+    "slug": "piggyvest",
+    "name": "PiggyVest",
+    "shortName": "PiggyVest",
+    "description": "Private Nigerian savings and investment platform offering savings wallets, withdrawals, statements and account-security services.",
+    "website": "https://www.piggyvest.com/"
+  },
+  {
+    "slug": "bamboo",
+    "name": "Bamboo",
+    "shortName": "Bamboo",
+    "description": "Private investment platform serving Nigerian users with identity verification, wallet funding, withdrawals and account statements.",
+    "website": "https://investbamboo.com/"
+  },
+  {
+    "slug": "autochek",
+    "name": "Autochek Africa Nigeria",
+    "shortName": "Autochek",
+    "description": "Private automotive marketplace offering vehicle sales, inspections and vehicle-finance application services in Nigeria.",
+    "website": "https://autochek.africa/ng/"
+  },
+  {
+    "slug": "cars45",
+    "name": "Cars45",
+    "shortName": "Cars45",
+    "description": "Private Nigerian automotive marketplace offering vehicle inspection, sales, purchase support and dealer-partner services.",
+    "website": "https://www.cars45.com/"
+  },
+  {
+    "slug": "heirs-insurance",
+    "name": "Heirs Insurance Group",
+    "shortName": "Heirs Insurance",
+    "description": "Private Nigerian insurance group offering digital motor, life and general insurance purchase, management and claims services.",
+    "website": "https://www.heirsinsurancegroup.com/"
+  },
+  {
+    "slug": "tangerine-insurance",
+    "name": "Tangerine General Insurance",
+    "shortName": "Tangerine",
+    "description": "Private Nigerian insurer offering online motor-policy purchase, renewal, verification and digital claims services.",
+    "website": "https://general.tangerine.africa/"
+  },
+  {
+    "slug": "sovereign-trust-insurance",
+    "name": "Sovereign Trust Insurance Plc",
+    "shortName": "Sovereign Trust",
+    "description": "Private Nigerian non-life insurer offering online quotes, motor insurance, policy renewal and claims services.",
+    "website": "https://www.stiplc.com/"
+  },
+  {
+    "slug": "stanbic-ibtc-pension",
+    "name": "Stanbic IBTC Pension Managers Limited",
+    "shortName": "Stanbic IBTC Pension",
+    "description": "Licensed Nigerian Pension Fund Administrator offering RSA registration, statements, data recapture and pension self-service channels.",
+    "website": "https://www.stanbicibtcpension.com/"
+  },
+  {
+    "slug": "gokada",
+    "name": "Gokada",
+    "shortName": "Gokada",
+    "description": "Private Lagos last-mile delivery platform offering on-demand and scheduled parcel delivery through its mobile app.",
+    "website": "https://www.gokada.ng/"
+  },
+  {
+    "slug": "cips",
+    "name": "Chartered Institute of Procurement & Supply",
+    "shortName": "CIPS",
+    "description": "Professional procurement and supply body offering student membership, qualifications and computer-based exam services to Nigerian learners.",
+    "website": "https://www.cips.org/"
+  },
+  {
+    "slug": "pmi",
+    "name": "Project Management Institute",
+    "shortName": "PMI",
+    "description": "Professional project-management body offering PMP and other globally recognised certification application, exam and renewal services.",
+    "website": "https://www.pmi.org/"
+  },
+  {
+    "slug": "pearson-vue",
+    "name": "Pearson VUE",
+    "shortName": "Pearson VUE",
+    "description": "Private computer-based testing provider used by many professional certification programmes for exam scheduling, test centres and online proctoring.",
+    "website": "https://www.pearsonvue.com/"
+  },
+  {
+    "slug": "flyboku",
+    "name": "FlyBoku",
+    "shortName": "FlyBoku",
+    "description": "Private Nigerian online travel platform offering flight search/booking, hotels, tours and travel-support services.",
+    "website": "https://flyboku.com/"
+  },
+  {
+    "slug": "microsoft-certification",
+    "name": "Microsoft Certification",
+    "shortName": "Microsoft Learn",
+    "description": "Microsoft professional certification service for exam registration, scheduling, online testing and credential management.",
+    "website": "https://learn.microsoft.com/credentials/"
+  },
+  {
+    "slug": "aws-certification",
+    "name": "AWS Training and Certification",
+    "shortName": "AWS Certification",
+    "description": "Amazon Web Services certification programme offering globally delivered cloud and AI certification exams through Pearson VUE.",
+    "website": "https://aws.amazon.com/certification/"
+  },
+  {
+    "slug": "cisco-certification",
+    "name": "Cisco Certification",
+    "shortName": "Cisco",
+    "description": "Cisco professional certification programme offering networking, cybersecurity and technology exams through Pearson VUE.",
+    "website": "https://www.cisco.com/site/us/en/learn/training-certifications/index.html"
+  },
+  {
+    "slug": "shuttlers",
+    "name": "Shuttlers",
+    "shortName": "Shuttlers",
+    "description": "Private Nigerian scheduled mass-transit platform for daily commute booking, route search, wallet payments and real-time trip tracking.",
+    "website": "https://www.shuttlers.co/"
+  },
+  {
+    "slug": "spleet",
+    "name": "Spleet Africa",
+    "shortName": "Spleet",
+    "description": "Private Nigerian rental platform for verified apartments, flexible rent, shortlets, landlord listings and tenant verification.",
+    "website": "https://spleet.africa/"
+  },
+  {
+    "slug": "propertypro",
+    "name": "PropertyPro Nigeria",
+    "shortName": "PropertyPro",
+    "description": "Private Nigerian property marketplace and verification platform for agents, landlords, buyers and renters.",
+    "website": "https://propertypro.ng/"
+  },
+  {
+    "slug": "oracle-certification",
+    "name": "Oracle Certification",
+    "shortName": "Oracle University",
+    "description": "Oracle professional certification programme offering MyLearn exam scheduling, online proctoring and CertView credential management.",
+    "website": "https://www.oracle.com/education/certification/"
+  },
+  {
+    "slug": "seamlesshr",
+    "name": "SeamlessHR",
+    "shortName": "SeamlessHR",
+    "description": "Private African HR and payroll platform with Nigeria employer services including Breeze Payer salary, pension and tax disbursements.",
+    "website": "https://seamlesshr.com/ng/"
+  },
+  {
+    "slug": "aicpa-cima",
+    "name": "AICPA & CIMA",
+    "shortName": "CIMA",
+    "description": "Professional accounting body providing the CGMA Professional Qualification, candidate registration and computer-based examinations.",
+    "website": "https://www.aicpa-cima.com/"
+  },
+  {
+    "slug": "google-cloud-certification",
+    "name": "Google Cloud Certification",
+    "shortName": "Google Cloud",
+    "description": "Google professional cloud-certification programme offering remote and testing-centre certification exams.",
+    "website": "https://cloud.google.com/learn/certification"
+  },
+  {
+    "slug": "vfs-global-canada-nigeria",
+    "name": "VFS Global Canada Visa Application Centre Nigeria",
+    "shortName": "VFS Canada",
+    "description": "Private administrative visa-application centre authorised by the Government of Canada for biometrics, document/passport handling and applicant support in Nigeria.",
+    "website": "https://visa.vfsglobal.com/nga/en/can/"
+  },
+  {
+    "slug": "tlscontact-france-nigeria",
+    "name": "TLScontact France Visa Application Centres Nigeria",
+    "shortName": "TLScontact France",
+    "description": "Private visa-application centre operator handling France visa appointments, submissions and biometrics in Abuja and Lagos.",
+    "website": "https://visas-fr.tlscontact.com/en-us/country/ng"
+  },
+  {
+    "slug": "tlscontact-italy-nigeria",
+    "name": "TLScontact Italy Visa Application Centres Nigeria",
+    "shortName": "TLScontact Italy",
+    "description": "Private visa-application centre operator handling Italian visa appointments, biometrics, submissions and passport return in Abuja and Lagos.",
+    "website": "https://visas-it.tlscontact.com/en-us/country/ng"
+  },
+  {
+    "slug": "tlscontact-belgium-nigeria",
+    "name": "TLScontact Belgium Visa Application Centres Nigeria",
+    "shortName": "TLScontact Belgium",
+    "description": "Private visa-application centre operator handling Belgium visa appointments, biometrics, submissions and passport return in Abuja and Lagos.",
+    "website": "https://visas-be.tlscontact.com/en-us/country/ng"
+  },
+  {
+    "slug": "risevest",
+    "name": "Risevest",
+    "shortName": "Risevest",
+    "description": "Private Nigerian digital wealth platform offering managed dollar and naira investment services through the Rise app.",
+    "website": "https://www.risevest.com/"
+  },
+  {
+    "slug": "grey",
+    "name": "Grey",
+    "shortName": "Grey",
+    "description": "Private multi-currency financial platform offering foreign accounts, virtual cards and cross-border payment services to Nigerian users.",
+    "website": "https://grey.co/"
+  },
+  {
+    "slug": "lemfi",
+    "name": "LemFi",
+    "shortName": "LemFi",
+    "description": "Private cross-border financial platform offering global accounts and international money services to Nigerian users.",
+    "website": "https://www.lemfi.com/en-ng/"
+  },
+  {
+    "slug": "western-union",
+    "name": "Western Union Nigeria",
+    "shortName": "Western Union",
+    "description": "Private international money-transfer provider offering cash and bank-account receipt and transfer tracking in Nigeria.",
+    "website": "https://www.westernunion.com/ng/en/home.html"
+  },
+  {
+    "slug": "moneygram",
+    "name": "MoneyGram Nigeria",
+    "shortName": "MoneyGram",
+    "description": "Private international money-transfer provider offering bank, mobile-wallet and cash-pickup receipt services across Nigeria.",
+    "website": "https://www.moneygram.com/r/ng/en"
   }
 ];
-
-export const services: Service[] = validateServiceCatalog(serviceRecords);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
@@ -455,25 +1694,29 @@ export const publicServiceListings: PublicServiceListing[] = publicServices.map(
 }));
 
 export const categories = [
-  {
+    {
+    "name": "Entertainment services",
+    "description": "Cinema ticketing, vouchers and other private entertainment-service transactions."
+  },
+{
     "name": "Identity",
     "description": "NIN and identity record services."
   },
   {
     "name": "Banking",
-    "description": "BVN and regulated banking-identity services."
+    "description": "Bank accounts, BVN, digital banking, cards, USSD and regulated financial-service guides."
   },
   {
     "name": "Investing",
-    "description": "Investor records, dividends and Nigerian capital-market services."
+    "description": "Investment accounts, savings platforms, investor records, dividends and Nigerian capital-market services."
   },
   {
     "name": "Insurance",
-    "description": "Official policy-validation and insurance verification services."
+    "description": "Insurance purchase, policy validation, claims and verification services."
   },
   {
     "name": "Telecommunications",
-    "description": "SIM registration, NIN linkage and telecom consumer services."
+    "description": "SIM, eSIM, NIN linkage, mobile-network and telecom consumer services."
   },
   {
     "name": "Student finance",
@@ -481,7 +1724,7 @@ export const categories = [
   },
   {
     "name": "Electricity",
-    "description": "Metering, billing, tariffs and electricity complaint services."
+    "description": "DisCo metering, token purchase, bill payment, tariffs and electricity complaint services."
   },
   {
     "name": "Health insurance",
@@ -541,7 +1784,7 @@ export const categories = [
   },
   {
     "name": "Education",
-    "description": "JAMB, WAEC and NECO services."
+    "description": "JAMB, WAEC, NECO and private examination/test-booking services."
   },
   {
     "name": "Youth service",
@@ -558,6 +1801,58 @@ export const categories = [
   {
     "name": "State services",
     "description": "Verified state and FCT digital services."
+  },
+  {
+    "name": "Internet",
+    "description": "Private broadband, satellite internet, recharge and account-management services."
+  },
+  {
+    "name": "TV & streaming",
+    "description": "Pay-TV subscription, payment, package and decoder self-service."
+  },
+  {
+    "name": "Air travel",
+    "description": "Private airline booking, check-in, baggage and passenger-service guides."
+  },
+  {
+    "name": "Intercity transport",
+    "description": "Private bus and mobility booking, rescheduling and passenger-service guides."
+  },
+  {
+    "name": "Logistics",
+    "description": "Courier, parcel shipping, pickup and shipment-tracking services."
+  },
+  {
+    "name": "Healthcare",
+    "description": "Private hospital, diagnostics, appointment and result-access services."
+  },
+  {
+    "name": "Automotive services",
+    "description": "Private vehicle inspection, sale, purchase and marketplace service guides."
+  },
+  {
+    "name": "Ride-hailing",
+    "description": "Driver-partner onboarding and mobility-platform service guides."
+  },
+  {
+    "name": "Urban mobility",
+    "description": "Scheduled commuter shuttles, route booking, wallets and urban transport-platform services."
+  },
+  {
+    "name": "E-commerce",
+    "description": "Marketplace ordering, returns, refunds and seller-onboarding services."
+  },
+  {
+    "name": "Remittances",
+    "description": "Cross-border money receipt, foreign-account, transfer-tracking and remittance services."
+  },
+  {
+    "name": "Property services",
+    "description": "Private rental, landlord, tenant-verification, property-listing and document-verification services."
+  },
+  {
+    "name": "Travel & accommodation",
+    "description": "Private travel-platform, hotel-booking, reservation, cancellation and traveller-support services."
   }
 ];
 
