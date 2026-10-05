@@ -30,7 +30,8 @@
     "check:crawl-resilience": "node scripts/check-crawl-resilience.mjs",
     "postbuild": "node scripts/write-wrangler-deploy-config.mjs",
     "postbuild:vinext": "node scripts/write-wrangler-deploy-config.mjs",
-    "check:jobs": "tsx scripts/check-jobs-content.ts"
+    "check:jobs": "tsx scripts/check-jobs-content.ts",
+    "check:job-links": "node scripts/check-job-links.mjs"
   },
   "dependencies": {
     "next": "16.3.6",

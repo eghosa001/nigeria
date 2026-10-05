@@ -4,6 +4,7 @@ import { jobEmployers } from "../lib/job-employers";
 import { getJobFacetOpportunities, jobLocationFacets, jobProfessionFacets } from "../lib/job-facets";
 import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus } from "../lib/job-runtime";
 import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
+import { retiredJobRedirects } from "../lib/job-scale-wave";
 import { jobOpportunities } from "../lib/jobs";
 
 function assert(condition: unknown, message: string): asserts condition {
@@ -14,7 +15,7 @@ function unique(values: string[], label: string) {
 }
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
-assert(jobOpportunities.length >= 300, "Jobs scale-to-300 wave must keep at least 300 verified opportunity records.");
+assert(jobOpportunities.length >= 180, "Quality-first Jobs catalog must keep at least 180 verified opportunity or employer-pathway records after pruning thin pages.");
 assert(jobOpportunities.length < 1000, "Move Jobs storage to the prepared D1 boundary before the in-memory server catalog reaches 1,000 records.");
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
@@ -25,6 +26,19 @@ unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");
 unique(careerGuides.map((guide) => guide.slug), "Career guide slugs");
 assert(careerGuides.length >= 10, "Jobs pillar should keep at least 10 substantial evergreen career guides.");
 unique(jobEmployers.map((employer) => employer.slug), "Employer slugs");
+assert(retiredJobRedirects.size >= 100, "Retired thin vacancy URLs must keep redirects instead of becoming 404s.");
+const opportunityBySlug = new Map(jobOpportunities.map((item) => [item.slug, item]));
+for (const [retiredSlug, target] of retiredJobRedirects) {
+  assert(!opportunityBySlug.has(retiredSlug), retiredSlug + " is retired and must not remain an indexable opportunity.");
+  if (target.startsWith("categories/")) {
+    const topicSlug = target.slice("categories/".length);
+    assert(jobTopics.some((topic) => topic.slug === topicSlug), retiredSlug + " redirects to an unknown Jobs category.");
+  } else {
+    const replacement = opportunityBySlug.get(target);
+    assert(Boolean(replacement), retiredSlug + " redirects to a missing replacement opportunity.");
+    assert(replacement?.kind === "career-page", retiredSlug + " must redirect to an employer career page.");
+  }
+}
 
 for (const item of jobOpportunities) {
   assert(item.sources.length > 0, item.slug + " needs at least one source.");
@@ -33,6 +47,27 @@ for (const item of jobOpportunities) {
   assert(item.qualifications.length > 0, item.slug + " needs qualification guidance.");
   assert(item.requirements.length > 0, item.slug + " needs requirements.");
   assert(item.applicationSteps.length > 0, item.slug + " needs application steps.");
+  if (item.status === "career-page" || item.kind === "career-page") {
+    assert(item.status === "career-page", item.slug + " employer portal must use career-page status.");
+    assert(item.kind === "career-page", item.slug + " employer portal must be normalized to career-page kind.");
+    assert(!item.deadline, item.slug + " employer portal must not pretend to have one universal application deadline.");
+    assert(item.fields.length >= 4, item.slug + " employer portal needs useful hiring-area coverage.");
+    assert(item.qualifications.length >= 2, item.slug + " employer portal must explain how role-specific eligibility works.");
+    assert(item.requirements.length >= 4, item.slug + " employer portal needs a concrete pre-application checklist.");
+    assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
+    assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
+  }
+  if (item.kind === "vacancy") {
+    const detailText = [...item.qualifications, ...item.requirements, ...item.applicationSteps].join(" ").toLowerCase();
+    const bannedGenericPhrases = [
+      "review the official " + item.organization.toLowerCase() + " vacancy for the exact",
+      "still visible on the official careers board",
+      "locate " + item.title.toLowerCase().replace(item.organization.toLowerCase() + " — ", ""),
+    ];
+    assert(!bannedGenericPhrases.some((phrase) => phrase && detailText.includes(phrase)), item.slug + " looks like a board-only generated vacancy rather than a verified role-detail page.");
+    assert(item.applicationSteps.length >= 3, item.slug + " vacancy needs at least three role-specific application steps.");
+    assert(item.sourceNotes.length >= 2, item.slug + " vacancy needs at least two role-specific verification notes.");
+  }
   assert((item.topicSlugs ?? []).every((slug) => jobTopics.some((topic) => topic.slug === slug)), item.slug + " has an unknown explicit topic slug.");
   assert(item.sources.some((source) => new URL(source.url).hostname === new URL(item.officialUrl).hostname), item.slug + " officialUrl must share a hostname with at least one source.");
   if (item.status === "open") {
@@ -95,3 +130,4 @@ console.log("  employers:", jobEmployers.length);
 console.log("  career guides:", careerGuides.length);
 console.log("  directory page size:", defaultDirectory.items.length);
 console.log("  authorised JobPosting pages:", jobOpportunities.filter((item) => item.jobPostingAuthorization).length);
+console.log("  retired thin vacancy redirects:", retiredJobRedirects.size);

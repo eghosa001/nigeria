@@ -60,7 +60,54 @@ export type CareerOpportunity = {
   sources: JobSource[];
 };
 
-export const jobOpportunities: CareerOpportunity[] = [
+function ensureMinimum(items: string[], fallbacks: string[], minimum: number) {
+  const result = [...items];
+  for (const fallback of fallbacks) {
+    if (result.length >= minimum) break;
+    if (!result.includes(fallback)) result.push(fallback);
+  }
+  return result;
+}
+
+function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
+  if (item.status !== "career-page" && item.kind !== "career-page") return item;
+
+  const fields = item.fields.slice(0, 5).join(", ");
+  const portalLabel = item.organization + " official careers or recruitment source";
+
+  return {
+    ...item,
+    kind: "career-page",
+    qualifications: ensureMinimum(item.qualifications, [
+      "This is an employer-wide careers or recruitment page, so there is no single qualification that applies to every role.",
+      "Use the exact vacancy or programme on " + portalLabel + " as the controlling source for education, experience, licence and location requirements."
+    ], 2),
+    requirements: ensureMinimum(item.requirements, [
+      "Confirm that the exact vacancy or programme is currently visible on " + portalLabel + " before applying.",
+      "Check the selected role's location, contract type, eligibility, experience and closing date rather than assuming the portal uses one rule for every vacancy.",
+      "Use only the employer's stated application route and do not pay MyNigeriaGuide or an unofficial intermediary for access to a shortlist or interview.",
+      "If the role you want is no longer visible on the official source, treat it as unavailable until the employer republishes it."
+    ], 4),
+    documents: ensureMinimum(item.documents, [
+      "An up-to-date CV/resume tailored to the selected role.",
+      "Only the academic, professional, identity or portfolio documents requested by that exact vacancy."
+    ], 2),
+    applicationSteps: ensureMinimum(item.applicationSteps, [
+      "Open " + portalLabel + ".",
+      "Browse or search the employer's current opportunities; relevant hiring areas on this guide include " + fields + ".",
+      "Open the exact vacancy or programme and read its responsibilities, qualifications, location, deadline and application method.",
+      "Prepare only the documents requested for that selected role.",
+      "Submit through the employer's official Apply control, portal or stated application instruction and keep the confirmation."
+    ], 5),
+    sourceNotes: ensureMinimum(item.sourceNotes, [
+      "The linked source belongs to the responsible employer or organisation and is used as the primary reference for current recruitment information.",
+      "This MyNigeriaGuide page is an employer-wide portal guide; it does not claim that every role historically associated with the organisation is currently open.",
+      "Role-specific qualifications and deadlines are intentionally taken from the exact employer vacancy, not invented at portal level."
+    ], 3),
+  };
+}
+
+const rawJobOpportunities: CareerOpportunity[] = [
   {
     slug: "snv-energy-advisor-abuja-2026",
     title: "SNV Energy Advisor — Abuja",
@@ -1481,7 +1528,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The official Paystack careers page currently lists active Nigeria positions across product and engineering-related functions."
     ],
     sources: [
-      { label: "Paystack Careers", url: "https://paystack.com.ng/careers", lastChecked: "2026-10-03" },
+      { label: "Paystack Careers", url: "https://paystack.com/careers", lastChecked: "2026-10-03" },
       { label: "Paystack Current Jobs", url: "https://careers.paystack.com/jobs", lastChecked: "2026-10-03" }
     ]
   },
@@ -2171,23 +2218,56 @@ export const jobOpportunities: CareerOpportunity[] = [
     sector: "Government",
     status: "open",
     statusLabel: "Applications open",
-    summary: "UNILAG is accepting applications for the Senator Douye Diri Professorial Chair in Leadership and Good Governance, with an official closing date of 20 October 2026.",
+    summary: "UNILAG is accepting applications for the Senator Douye Diri Professorial Chair in Leadership and Good Governance. The three-year senior academic appointment closes on 20 October 2026.",
     location: "Akoka, Lagos",
-    employmentType: "Senior academic appointment",
-    audiences: ["Professors", "Senior academics", "Political science scholars", "Governance researchers"],
+    employmentType: "Three-year senior academic appointment",
+    audiences: ["Full Professors", "Senior academics", "Political science scholars", "Leadership and governance researchers"],
     fields: ["Political Science", "Leadership", "Governance", "Research", "Higher Education"],
-    qualifications: ["Applicants must meet the academic and scholarly requirements in UNILAG's official vacancy notice."],
-    requirements: ["Complete the official UNILAG online application.", "Follow the submission instructions in the vacancy notice.", "Submit before the stated closing date."],
-    documents: ["Online application information", "Academic CV and supporting materials required by UNILAG", "Acknowledgement slip where required"],
-    applicationSteps: ["Open the official UNILAG vacancy notice.", "Review the Chair's eligibility and submission requirements.", "Complete the UNILAG job portal application.", "Print or retain the acknowledgement required by the notice.", "Submit by 20 October 2026."],
+    qualifications: [
+      "A good first degree in a relevant field plus a PhD in an area relevant to Leadership and Good Governance.",
+      "Applicants must already be full Professors with an established record of academic excellence and proven integrity.",
+      "A strong record of scholarly publications in reputable national and international peer-reviewed outlets is required.",
+      "Applicants should demonstrate continuing teaching and research in Leadership and Good Governance, academic and administrative leadership, and the ability to supervise Master's and Doctoral students."
+    ],
+    requirements: [
+      "Prepare a detailed application, curriculum vitae and relevant publications.",
+      "Prepare a Personal Statement and a two-year strategic plan for the Chair with objectives, activities, KPIs, annual targets, responsible persons, budget lines, funding sources and a Gantt-style implementation timeline.",
+      "Provide the names and contact details of three referees in the CV.",
+      "Complete the official UNILAG online application and retain the acknowledgement slip.",
+      "Submit all required materials by Tuesday, 20 October 2026."
+    ],
+    documents: [
+      "Detailed application",
+      "Academic CV",
+      "Relevant publications",
+      "Personal Statement",
+      "Two-year Professorial Chair Strategic Plan",
+      "Three referee contact details",
+      "Online application acknowledgement slip"
+    ],
+    applicationSteps: [
+      "Read the full UNILAG Professorial Chair notice and confirm that you meet the minimum eligibility criteria.",
+      "Prepare the CV, publications, Personal Statement and the required two-year strategic plan.",
+      "Complete the application through UNILAG's official career portal at career.unilag.edu.ng/jobportal/jobportal/.",
+      "Print or save the acknowledgement slip produced by the online application.",
+      "Follow the notice's submission instructions to the Office of Advancement or Human Resources Management Directorate.",
+      "Complete submission on or before 20 October 2026."
+    ],
     officialUrl: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/",
     officialUrlLabel: "Open UNILAG vacancy notice",
     verifiedAt: "2026-10-05",
     deadline: "2026-10-20",
     nextMilestone: "Applications close Tuesday, 20 October 2026.",
-    feeNote: "Use the career.unilag.edu.ng route identified in the official university notice.",
-    sourceNotes: ["UNILAG's official notice gives 20 October 2026 as the closing date and links its job portal."],
-    sources: [{ label: "UNILAG Professorial Chair Vacancy", url: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", lastChecked: "2026-10-05" }]
+    feeNote: "Use the UNILAG career portal and submission contacts stated in the university's official notice.",
+    sourceNotes: [
+      "UNILAG published the call on 9 September 2026 and states that applications close on 20 October 2026.",
+      "The official notice specifies full-Professor status, relevant first degree and PhD, scholarly publication and supervision requirements, and a three-year tenure.",
+      "UNILAG directs candidates to its official career portal and requires a Personal Statement plus a detailed two-year strategic plan."
+    ],
+    sources: [
+      { label: "UNILAG Professorial Chair Vacancy", url: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", lastChecked: "2026-10-05" },
+      { label: "UNILAG Career Portal", url: "https://career.unilag.edu.ng/jobportal/jobportal/", lastChecked: "2026-10-05" }
+    ]
   },
   {
     slug: "university-ibadan-careers",
@@ -2712,14 +2792,13 @@ export const jobOpportunities: CareerOpportunity[] = [
     requirements: ["Use Emzor's official vacancies pages.", "Check the exact role's qualification and location.", "Do not pay any recruitment fee."],
     documents: ["CV/resume", "Academic and professional credentials required by the role"],
     applicationSteps: ["Open Emzor's official vacancies area.", "Review current openings.", "Select the role and check its requirements.", "Apply using the route specified by Emzor."],
-    officialUrl: "https://www.emzorpharma.com/other-vacancies/",
+    officialUrl: "https://www.emzorpharma.com/vacancies/",
     officialUrlLabel: "View Emzor current openings",
     verifiedAt: "2026-10-05",
     nextMilestone: "Emzor's site displayed a Current openings section when checked; confirm the individual role before applying.",
     feeNote: "Emzor states that it does not request payment at any stage of recruitment.",
     sourceNotes: ["Emzor's official site contains current-opening functionality and a recruitment-fraud disclaimer."],
     sources: [
-      { label: "Emzor Other Vacancies", url: "https://www.emzorpharma.com/other-vacancies/", lastChecked: "2026-10-05" },
       { label: "Emzor Vacancies and Recruitment Disclaimer", url: "https://www.emzorpharma.com/vacancies/", lastChecked: "2026-10-05" }
     ]
   },
@@ -2889,13 +2968,13 @@ export const jobOpportunities: CareerOpportunity[] = [
     requirements: ["Use CBN's official website for recruitment information.", "Confirm that a recruitment exercise is currently active.", "Check the vacancy-specific education and experience requirements."],
     documents: ["Documents will be specified in an official CBN recruitment notice."],
     applicationSteps: ["Open CBN's official Human Resources or recruitment information.", "Confirm that applications are being accepted.", "Read the exact eligibility criteria.", "Submit only through the official route announced by CBN."],
-    officialUrl: "https://www.cbn.gov.ng/faq/",
+    officialUrl: "https://www.cbn.gov.ng/faqs/",
     officialUrlLabel: "Read CBN employment guidance",
     verifiedAt: "2026-10-05",
     nextMilestone: "CBN says recruitment is carried out as needs arise; its HR FAQ did not present a standing open recruitment exercise when checked.",
     feeNote: "Verify any recruitment instruction directly on the Central Bank of Nigeria's official domain.",
     sourceNotes: ["CBN's HR FAQ explains that recruitment is need-driven and lists professional disciplines relevant to its workforce."],
-    sources: [{ label: "CBN Human Resources FAQ", url: "https://www.cbn.gov.ng/faq/", lastChecked: "2026-10-05" }]
+    sources: [{ label: "CBN Human Resources FAQ", url: "https://www.cbn.gov.ng/faqs/", lastChecked: "2026-10-05" }]
   },
   {
     slug: "lagos-tescom-careers",
@@ -3117,23 +3196,49 @@ export const jobOpportunities: CareerOpportunity[] = [
     sector: "Private",
     status: "open",
     statusLabel: "Applications open",
-    summary: "May & Baker Nigeria published a Consumer Healthcare Executive vacancy on 23 September 2026 with an application deadline of 7 October 2026.",
-    location: "Nigeria",
-    employmentType: "Pharmaceutical sales and consumer healthcare",
-    audiences: ["Sales professionals", "Healthcare professionals", "Pharmaceutical applicants", "Graduates"],
-    fields: ["Pharmaceuticals", "Consumer Healthcare", "Sales", "Marketing"],
-    qualifications: ["Applicants should meet the education and experience requirements in May & Baker's official vacancy notice."],
-    requirements: ["Read the official vacancy notice.", "Confirm your qualification and sales/healthcare experience match the role.", "Submit through the careers route stated by May & Baker before the deadline."],
-    documents: ["CV/resume", "Application information requested by May & Baker"],
-    applicationSteps: ["Open May & Baker's official career notice.", "Review the Consumer Healthcare Executive requirements.", "Follow the careers application route identified in the notice.", "Submit before 7 October 2026."],
-    officialUrl: "https://maybaker.azurewebsites.net/career",
-    officialUrlLabel: "Open May & Baker career notice",
+    summary: "May & Baker Nigeria is recruiting Consumer Healthcare Executives across Lagos and several multi-state territories. The company published the vacancy on 23 September 2026 and set 7 October 2026 as the application deadline.",
+    location: "Lagos; Edo/Delta; Kogi/Benue; Sokoto/Zamfara/Katsina; Osun/Ekiti/Ondo; Calabar/Akwa Ibom/Abia",
+    employmentType: "Full-time pharmaceutical / consumer healthcare sales",
+    audiences: ["Consumer healthcare sales professionals", "Biological and applied science graduates", "Medical field sales professionals", "NYSC-completed applicants"],
+    fields: ["Pharmaceuticals", "Consumer Healthcare", "Medical Sales", "Marketing"],
+    qualifications: [
+      "BSc in Biological or Applied Sciences.",
+      "At least one year of medical field sales experience with a reputable company; May & Baker states that NYSC experience may be included.",
+      "Applicants should be result-oriented and self-motivated, with good oral and written communication.",
+      "Strong persuasion and presentation skills plus in-depth knowledge of Microsoft Office suites are required."
+    ],
+    requirements: [
+      "Choose one of the territories listed in May & Baker's vacancy: Lagos; Edo/Delta; Kogi/Benue; Sokoto/Zamfara/Katsina; Osun/Ekiti/Ondo; or Calabar/Akwa Ibom/Abia.",
+      "Be prepared to promote assigned consumer healthcare products in hospitals and key institutions and support prescription and supply growth.",
+      "Complete May & Baker's online application form and upload the required CV.",
+      "Submit by 7 October 2026."
+    ],
+    documents: [
+      "CV/resume in an accepted upload format",
+      "Contact and education details requested by May & Baker's application form",
+      "Optional supporting document if relevant to the application"
+    ],
+    applicationSteps: [
+      "Open May & Baker Nigeria's official careers page and locate the Consumer Healthcare Executive opening.",
+      "Review the listed territory, BSc requirement and minimum medical field sales experience.",
+      "Select Apply Now for the vacancy so the application form identifies the correct role.",
+      "Complete the online form and upload your CV; add an optional supporting document only if useful.",
+      "Submit before 7 October 2026 and retain the on-screen submission confirmation."
+    ],
+    officialUrl: "https://may-bakerng.com/career",
+    officialUrlLabel: "Open May & Baker official careers page",
     verifiedAt: "2026-10-05",
     deadline: "2026-10-07",
     nextMilestone: "Applications close 7 October 2026.",
-    feeNote: "Use the application route identified by May & Baker's official career notice.",
-    sourceNotes: ["May & Baker's career page published the Consumer Healthcare Executive vacancy on 23 September 2026 and gave 7 October 2026 as the application deadline."],
-    sources: [{ label: "May & Baker Careers", url: "https://maybaker.azurewebsites.net/career", lastChecked: "2026-10-05" }]
+    feeNote: "Apply through May & Baker Nigeria's official careers form; MyNigeriaGuide does not collect or forward applications.",
+    sourceNotes: [
+      "May & Baker's official careers page lists Consumer Healthcare Executive as posted on 23 September 2026 and gives 7 October 2026 as the deadline.",
+      "The employer lists a BSc in Biological or Applied Sciences and at least one year of medical field sales experience, with NYSC inclusive.",
+      "The same official page provides the online application form, CV upload field and the territories covered by the vacancy."
+    ],
+    sources: [
+      { label: "May & Baker Nigeria Careers", url: "https://may-bakerng.com/career", lastChecked: "2026-10-05" }
+    ]
   },
   {
     slug: "promasidor-nigeria-careers",
@@ -3455,6 +3560,8 @@ export const jobOpportunities: CareerOpportunity[] = [
   },
   ...jobScaleWave
 ];
+
+export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities.map(normalizeCareerPortal);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");

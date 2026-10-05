@@ -2,6 +2,22 @@ name: Jobs Freshness
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "lib/jobs.ts"
+      - "lib/job-scale-wave.ts"
+      - "lib/job-runtime.ts"
+      - "lib/job-query.ts"
+      - "lib/job-topics.ts"
+      - "lib/job-facets.ts"
+      - "lib/job-employers.ts"
+      - "lib/career-guides.ts"
+      - "app/jobs/**"
+      - "app/api/jobs/**"
+      - "scripts/check-jobs-content.ts"
+      - "scripts/check-job-links.mjs"
+      - "package.json"
+      - ".github/workflows/jobs-freshness.yml"
   schedule:
     - cron: "15 5 * * *"
 
@@ -9,18 +25,20 @@ permissions:
   contents: read
 
 concurrency:
-  group: jobs-freshness
+  group: jobs-freshness-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
   verify-jobs-freshness:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-      - name: Validate deadline and freshness state
+      - name: Validate Jobs content and lifecycle
         run: npm run check:jobs
+      - name: Audit Jobs official/source links
+        run: npm run check:job-links
