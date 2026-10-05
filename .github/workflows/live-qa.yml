@@ -126,7 +126,8 @@ jobs:
               echo "Expected redirect for $path, got HTTP $status."
               exit 1
             fi
-            if [ "$location" != "$expected_location" ]; then
+            location_path="${location%%\?*}"
+            if [ "$location_path" != "$expected_location" ]; then
               echo "Expected $path to redirect to $expected_location, got $location."
               exit 1
             fi
