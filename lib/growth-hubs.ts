@@ -991,7 +991,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "Covenant University application 2026", serviceSlug: "covenant-undergraduate-application-2026" },
       { query: "Babcock University application 2026", serviceSlug: "babcock-undergraduate-application-2026" },
       { query: "ABUAD application 2026", serviceSlug: "abuad-undergraduate-application-2026" },
-      { query: "Pan Atlantic University application 2026", serviceSlug: "pau-undergraduate-application-2026" }
+      { query: "Pan Atlantic University application 2026", serviceSlug: "pau-undergraduate-application-2026" },
+      { query: "Nile University post UTME 2026", serviceSlug: "nile-university-undergraduate-application-2026" },
+      { query: "AUN Fall 2026 admission", serviceSlug: "aun-undergraduate-application-2026" },
+      { query: "Redeemers University application 2026", serviceSlug: "redeemers-university-undergraduate-application-2026" },
+      { query: "Lead City University application 2026", serviceSlug: "lead-city-undergraduate-application-2026" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1293,7 +1297,11 @@ export const growthHubs: GrowthHub[] = [
       "covenant-undergraduate-application-2026",
       "babcock-undergraduate-application-2026",
       "abuad-undergraduate-application-2026",
-      "pau-undergraduate-application-2026"
+      "pau-undergraduate-application-2026",
+      "nile-university-undergraduate-application-2026",
+      "aun-undergraduate-application-2026",
+      "redeemers-university-undergraduate-application-2026",
+      "lead-city-undergraduate-application-2026"
     ]
   },
 
