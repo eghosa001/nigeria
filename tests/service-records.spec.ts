@@ -457,7 +457,32 @@ const expectedSlugs = [
   "chisco-book-bus-online",
   "chisco-rebook-ticket",
   "chisco-baggage-allowance",
-  "rano-air-book-flight",] as const;
+  "rano-air-book-flight",
+  "aramex-send-shipment-nigeria",
+  "aramex-track-shipment-nigeria",
+  "aramex-shop-and-ship-nigeria",
+  "reddington-book-appointment",
+  "lagoon-hospital-book-appointment",
+  "indrive-driver-signup-nigeria",
+  "axa-mansard-motor-claim",
+  "netflix-start-membership-nigeria",
+  "netflix-change-plan",
+  "netflix-cancel-membership",
+  "spotify-premium-nigeria",
+  "spotify-cancel-premium",
+  "acca-book-exam-nigeria",
+  "oet-book-test-nigeria",
+  "healthtracka-home-test-nigeria",
+  "uber-lost-item-nigeria",
+  "bolt-lost-item-nigeria",
+  "bolt-ride-insurance-claim-nigeria",
+  "bolt-schedule-ride-nigeria",
+  "uber-reserve-ride-nigeria",
+  "uber-request-ride-online-nigeria",
+  "wakanow-book-flight-nigeria",
+  "wakanow-book-hotel-nigeria",
+  "wakanow-cancel-hotel-reservation"
+] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -569,31 +594,7 @@ const representative = [
       "Keep the CVAC receipt/tracking information while the application is assessed and promptly provide any additional material requested by the Embassy or Consulate General.",
       "Collect the passport through the centre after notification and verify the visa category, number of entries, validity and duration of stay before travelling."
     ]
-  },
-  "aramex-send-shipment-nigeria",
-  "aramex-track-shipment-nigeria",
-  "aramex-shop-and-ship-nigeria",
-  "reddington-book-appointment",
-  "lagoon-hospital-book-appointment",
-  "indrive-driver-signup-nigeria",
-  "axa-mansard-motor-claim",
-  "netflix-start-membership-nigeria",
-  "netflix-change-plan",
-  "netflix-cancel-membership",
-  "spotify-premium-nigeria",
-  "spotify-cancel-premium",
-  "acca-book-exam-nigeria",
-  "oet-book-test-nigeria",
-  "healthtracka-home-test-nigeria",
-  "uber-lost-item-nigeria",
-  "bolt-lost-item-nigeria",
-  "bolt-ride-insurance-claim-nigeria",
-  "bolt-schedule-ride-nigeria",
-  "uber-reserve-ride-nigeria",
-  "uber-request-ride-online-nigeria",
-  "wakanow-book-flight-nigeria",
-  "wakanow-book-hotel-nigeria",
-  "wakanow-cancel-hotel-reservation"
+  }
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
