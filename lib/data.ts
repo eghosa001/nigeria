@@ -1353,10 +1353,50 @@ export const agencies: Agency[] = [
     "shortName": "Bells University",
     "description": "Private university of technology in Ota offering undergraduate, JUPEB and postgraduate admission and student-record services.",
     "website": "https://www.bellsuniversity.edu.ng/"
+  },
+  {
+    "slug": "9psb",
+    "name": "9 Payment Service Bank",
+    "shortName": "9PSB",
+    "description": "Private Nigerian payment service bank offering USSD accounts, KYC upgrades, agent banking and merchant payment services.",
+    "website": "https://9psb.com.ng/"
+  },
+  {
+    "slug": "duchess-hospital",
+    "name": "Duchess International Hospital",
+    "shortName": "Duchess Hospital",
+    "description": "Private multispecialty hospital in Lagos with patient-portal appointment and telemedicine services.",
+    "website": "https://duchesshospital.com/"
+  },
+  {
+    "slug": "cedarcrest-hospitals",
+    "name": "Cedarcrest Hospitals",
+    "shortName": "Cedarcrest",
+    "description": "Private multispecialty hospital group offering physical and virtual appointment booking in Lagos, Abuja and Niger State.",
+    "website": "https://cedarcresthospitals.com/"
+  },
+  {
+    "slug": "cornerstone-insurance",
+    "name": "Cornerstone Insurance Plc",
+    "shortName": "Cornerstone",
+    "description": "Private Nigerian insurer offering online motor insurance purchase, renewal and claims services.",
+    "website": "https://cornerstone.com.ng/"
+  },
+  {
+    "slug": "mutual-benefits",
+    "name": "Mutual Benefits Assurance Plc",
+    "shortName": "Mutual Benefits",
+    "description": "Private Nigerian insurer offering online quotations, policy payments and insurance services.",
+    "website": "https://mutualng.com/"
+  },
+  {
+    "slug": "silverbird-cinemas",
+    "name": "Silverbird Cinemas",
+    "shortName": "Silverbird Cinemas",
+    "description": "Private cinema chain offering online movie-ticket booking, vouchers and gift-card redemption in Nigerian locations.",
+    "website": "https://silverbirdcinemas.com/"
   }
-
 ];
-
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
@@ -1380,7 +1420,11 @@ export const publicServiceListings: PublicServiceListing[] = publicServices.map(
 }));
 
 export const categories = [
-  {
+    {
+    "name": "Entertainment services",
+    "description": "Cinema ticketing, vouchers and other private entertainment-service transactions."
+  },
+{
     "name": "Identity",
     "description": "NIN and identity record services."
   },
