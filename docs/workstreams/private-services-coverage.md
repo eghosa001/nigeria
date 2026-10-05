@@ -23,7 +23,7 @@ A private-service page is eligible only when all of the following are true:
 
 ## Current implementation baseline
 
-As of 2026-10-05, the workstream contains **219 private-provider service guides** inside a **450-guide total Services catalog**. This is a growing verified baseline, not the end-state. Continue the sector/provider inventory until each remaining candidate is either published with sufficient first-party evidence or explicitly excluded because it lacks distinct intent, durable evidence or enough useful procedural content.
+As of 2026-10-05, the workstream contains **226 private-provider service guides** inside a **457-guide total Services catalog**. This is a growing verified baseline, not the end-state. Continue the sector/provider inventory until each remaining candidate is either published with sufficient first-party evidence or explicitly excluded because it lacks distinct intent, durable evidence or enough useful procedural content.
 
 ## Initial private-service baseline
 
@@ -305,3 +305,8 @@ Before the Services catalog reaches 5,000 records, follow the existing workstrea
 - No source date newer than the guide's last-verified date.
 - No orphan pages.
 - No broad/full-suite validation for content-only changes; use only the change-scoped service/content/source checks required by the owner policy.
+
+
+## Split catalog scaling
+
+From the 450-guide milestone onward, new private-provider waves may be stored in additional validated JSON catalog files and merged through the shared service data layer. This avoids unsafe blind rewrites of an oversized monolithic file while preserving the same validation, canonical URLs, source rules, internal-link rules and public service model.
