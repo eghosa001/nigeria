@@ -11,6 +11,8 @@ import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 import { jobOpportunities } from "@/lib/jobs";
+import { jobTopics } from "@/lib/job-topics";
+import { careerGuides } from "@/lib/career-guides";
 import { seriesTitles, seriesLastChecked } from "@/lib/series";
 
 export const sitemapSectionNames = ["core", "services", "jobs", "travel", "movies", "youtube"] as const;
@@ -110,6 +112,14 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/jobs/internships", lastModified: jobsModified },
       { url: base + "/jobs/engineering", lastModified: jobsModified },
       { url: base + "/jobs/remote", lastModified: "2026-10-04" },
+      ...jobTopics.map((topic) => ({
+        url: base + "/jobs/categories/" + topic.slug,
+        lastModified: jobsModified,
+      })),
+      ...careerGuides.map((guide) => ({
+        url: base + "/jobs/guides/" + guide.slug,
+        lastModified: guide.reviewedAt,
+      })),
       ...jobOpportunities.map((item) => ({
         url: base + "/jobs/" + item.slug,
         lastModified: item.verifiedAt,

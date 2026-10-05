@@ -44,40 +44,53 @@ jobs:
           )"
 
           if [ -z "$relevant" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=skip" >> "$GITHUB_OUTPUT"
             echo "No product-CI-relevant changes; required CI check can finish immediately."
           else
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            printf 'Product-CI-relevant files:\n%s\n' "$relevant"
+            jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|components/(job-collection|jobs-directory)\.tsx$|lib/(jobs|job-topics|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+            non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/ci\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-collection|jobs-directory)\.tsx$|lib/(jobs|job-topics|career-guides|sitemap-sections|global-search)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+
+            if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+              echo "mode=jobs" >> "$GITHUB_OUTPUT"
+              printf 'Jobs-only product files:\n%s\n' "$changed"
+            else
+              echo "mode=full" >> "$GITHUB_OUTPUT"
+              printf 'Product-CI-relevant files:\n%s\n' "$relevant"
+            fi
           fi
       - uses: actions/setup-node@v4
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode != 'skip'
+      - name: Validate Jobs & Careers changes
+        if: steps.scope.outputs.mode == 'jobs'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:jobs
       - run: node scripts/check-production-audit.mjs
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run typecheck
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run check:service-catalog
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run check:content
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run check:explore
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run check:entertainment-scale
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run check:analytics-safety
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run build:next
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run check:cloudflare
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - run: npm run build
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
       - name: Prevent accidental KV dependency
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
         run: |
           node --input-type=module <<'NODE'
           import fs from "node:fs";
@@ -92,5 +105,5 @@ jobs:
           console.log("KV-free deployment confirmed.");
           NODE
       - name: Package Cloudflare Worker without deploying
-        if: steps.scope.outputs.run == 'true'
+        if: steps.scope.outputs.mode == 'full'
         run: npx wrangler deploy --dry-run
