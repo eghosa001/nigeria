@@ -3549,6 +3549,156 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "national-theatre-design-week-lagos-2026",
     "freedom-park-lagos"
   ],
+  "nigeria-waterfalls-guide": [
+    "erin-ijesha-waterfall-main",
+    "arinta-waterfalls",
+    "gurara-waterfalls",
+    "owu-falls-kwara",
+    "farin-ruwa-waterfalls",
+    "awhum-waterfall",
+    "agbokim-waterfalls",
+    "owerre-ezukala-cave-waterfall"
+  ],
+  "nigeria-national-parks-guide": [
+    "cross-river-national-park-main",
+    "okomu-national-park-main",
+    "gashaka-gumti-national-park-main",
+    "kainji-lake-national-park-main",
+    "chad-basin-national-park-borno",
+    "yankari-game-reserve-main"
+  ],
+  "nigeria-unesco-heritage-guide": [
+    "osun-osogbo-sacred-grove",
+    "sukur-cultural-landscape-main",
+    "idanre-hills",
+    "ogbunike-cave",
+    "arochukwu-long-juju",
+    "alok-ikom-monoliths",
+    "cross-river-national-park-main",
+    "gashaka-gumti-national-park-main"
+  ],
+  "nigeria-caves-guide": [
+    "ogbunike-cave",
+    "eggon-hills-caves",
+    "amanchor-cave-ebonyi",
+    "owerre-ezukala-cave-waterfall",
+    "marshall-caves-yankari"
+  ],
+  "nigeria-lakes-waterfronts-guide": [
+    "jabi-lake-abuja",
+    "ox-bow-lake-yenagoa",
+    "oguta-lake",
+    "agulu-lake",
+    "ebomi-lake-ipesi",
+    "makurdi-river-beach"
+  ],
+  "nigeria-hills-mountains-guide": [
+    "idanre-hills",
+    "shere-hills-plateau",
+    "mambilla-plateau",
+    "kufena-hills-zaria",
+    "mount-patti-lokoja",
+    "ushongo-hills"
+  ],
+  "nigeria-rock-landmarks-guide": [
+    "zuma-rock",
+    "olumo-rock",
+    "wase-rock-plateau",
+    "riyom-rock-plateau",
+    "ara-rock-nasarawa",
+    "kwatakashi-rocks-zamfara"
+  ],
+  "nigeria-museums-guide": [
+    "national-museum-lagos",
+    "national-museum-benin-city",
+    "national-museum-unity-ibadan",
+    "national-museum-ile-ife",
+    "gidan-makama-museum",
+    "national-war-museum-umuahia",
+    "kanta-museum-argungu"
+  ],
+  "nigeria-royal-palaces-guide": [
+    "alake-palace-abeokuta",
+    "ooni-palace-ile-ife",
+    "ataoja-palace-osogbo",
+    "emirs-palace-katsina",
+    "sultan-palace-sokoto-city",
+    "sukur-hidi-palace"
+  ],
+  "nigeria-art-craft-guide": [
+    "nike-art-gallery-lagos",
+    "nike-art-centre-osogbo",
+    "igun-street",
+    "itoku-adire-market",
+    "ladi-kwali-pottery-centre-suleja",
+    "abuja-arts-crafts-village"
+  ],
+  "nigeria-beaches-coast-guide": [
+    "ibeno-beach",
+    "araromi-seaside",
+    "oferekpe-beach-ebonyi",
+    "shagunu-beach",
+    "igbokoda-waterfront-ondo",
+    "ibom-marina-beach"
+  ],
+  "nigeria-warm-springs-guide": [
+    "ikogosi-warm-springs",
+    "wikki-warm-spring",
+    "enemabia-warm-spring"
+  ],
+  "lagos-island-heritage-day": [
+    "national-museum-lagos",
+    "freedom-park-lagos",
+    "tafawa-balewa-square-lagos"
+  ],
+  "lagos-culture-weekend": [
+    "nike-art-gallery-lagos",
+    "national-theatre-design-week-lagos-2026",
+    "new-afrika-shrine-felabration-2026",
+    "freedom-park-lagos"
+  ],
+  "abuja-national-landmarks-day": [
+    "abuja-national-mosque",
+    "national-christian-centre-abuja",
+    "millennium-park-abuja",
+    "abuja-arts-crafts-village"
+  ],
+  "plateau-nature-road-trip": [
+    "jos-wildlife-park",
+    "shere-hills-plateau",
+    "assop-falls-plateau",
+    "riyom-rock-plateau"
+  ],
+  "ogun-heritage-day": [
+    "olumo-rock",
+    "itoku-adire-market",
+    "alake-palace-abeokuta",
+    "centenary-hall-abeokuta"
+  ],
+  "osun-heritage-road-trip": [
+    "osun-osogbo-sacred-grove",
+    "ataoja-palace-osogbo",
+    "nike-art-centre-osogbo",
+    "ooni-palace-ile-ife",
+    "moremi-statue-ile-ife",
+    "national-museum-ile-ife",
+    "kiriji-war-museum"
+  ],
+  "south-south-heritage-road-trip": [
+    "national-museum-benin-city",
+    "igun-street",
+    "nana-living-history-palace-koko",
+    "mungo-park-house-asaba",
+    "slave-history-museum-calabar",
+    "oloibiri-otuabagi-oil-heritage"
+  ],
+  "nigeria-historic-cities-guide": [
+    "national-museum-benin-city",
+    "gidan-makama-museum",
+    "alake-palace-abeokuta",
+    "ooni-palace-ile-ife",
+    "sultan-palace-sokoto-city"
+  ],
 };
 
 export function getExplorePlacesForGuide(guideSlug: string) {
