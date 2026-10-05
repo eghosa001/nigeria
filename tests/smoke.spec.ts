@@ -434,7 +434,7 @@ test("guide anchors do not trap browser Back after starting a process", async ({
 
   await page.goBack();
   await expect(page).toHaveURL(/\/services\?category=Banking$/);
-  await expect(page.getByRole("heading", { name: "Government service guides" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Service guides for Nigeria" })).toBeVisible();
 });
 
 test("brand logo always returns home, including after process activity", async ({ page }) => {
