@@ -17,6 +17,88 @@ export type ExploreGuide = {
 
 export const exploreGuides: ExploreGuide[] = [
   {
+    slug: "felabration-2026",
+    title: "Felabration 2026 Lagos Guide: Dates, Venue & Planning",
+    shortTitle: "Felabration 2026",
+    kind: "itinerary",
+    region: "Lagos State",
+    summary: "Plan Felabration 2026 around the 12–18 October main festival at the New Afrika Shrine, with pre-events, late-night transport and verified event sources.",
+    intro: [
+      "Felabration returns as Lagos' annual celebration of Fela Anikulapo-Kuti and Afrobeat, with the 2026 main festival scheduled for 12–18 October at the New Afrika Shrine.",
+      "The week is only part of the programme: art, dance and fashion pre-events are also scheduled before the main run, so choose the parts you actually want and plan transport before the late-night shows."
+    ],
+    bestFor: ["Live music", "Afrobeat", "Culture", "October events"],
+    highlights: [
+      { name: "12–18 October — main festival", detail: "The 2026 main Felabration week is scheduled from Monday 12 October through Sunday 18 October at the New Afrika Shrine." },
+      { name: "New Afrika Shrine", detail: "The annual flagship programme is centred on the Shrine in Ikeja/Agidingbi, Lagos." },
+      { name: "Pre-events", detail: "The 2026 programme includes art, dance and Dress Fela activities before the main festival week." },
+      { name: "Late-night planning", detail: "Concert nights can run late. Decide the return route, pickup point and traffic buffer before entering the venue." }
+    ],
+    planning: [
+      { label: "Confirm the day's programme", detail: "Line-ups and exact times can change; check Felabration's official channels close to the day you plan to attend." },
+      { label: "Plan Mainland movement", detail: "The New Afrika Shrine is in Ikeja/Agidingbi. Allow extra time for evening traffic and event congestion." },
+      { label: "Arrange your return first", detail: "Do not rely on improvising transport after a late show; pick a safe return option and meeting point in advance." },
+      { label: "Use official event information", detail: "Treat copied posters and resale links cautiously; verify event and ticket information with Felabration/New Afrika Shrine channels." }
+    ],
+    source: { label: "Voice of Nigeria / NAN — Felabration 2026 dates", href: "https://von.gov.ng/felabration-promotes-nigerian-culture-yeni-kuti/" },
+    lastReviewed: "2026-10-05"
+  },
+  {
+    slug: "design-week-lagos-2026",
+    title: "Design Week Lagos 2026 Guide: Dates, Venue & Events",
+    shortTitle: "Design Week Lagos 2026",
+    kind: "itinerary",
+    region: "Lagos State",
+    summary: "Plan Design Week Lagos 2026 from 18–25 October, with the National Theatre as the main festival hub and partner events across Lagos.",
+    intro: [
+      "Design Week Lagos 2026 runs from 18 to 25 October. The official festival site identifies the National Theatre in Iganmu as the main hub while describing a wider citywide programme.",
+      "Expect exhibitions, trade showcases, talks, competitions, training programmes and partner-led activations. Check the live schedule before building travel around one session."
+    ],
+    bestFor: ["Design", "Architecture", "Creative industry", "October events"],
+    highlights: [
+      { name: "18–25 October 2026", detail: "The official Design Week Lagos site publishes these dates for the 2026 edition." },
+      { name: "National Theatre, Iganmu", detail: "The National Theatre is the main festival hub, with additional partner venues across Lagos." },
+      { name: "Exhibitions & talks", detail: "The programme spans exhibitions, installations, talks, workshops, training and industry showcases." },
+      { name: "Citywide activations", detail: "Not every event is at the main hub; check the address for each programme item before setting out." }
+    ],
+    planning: [
+      { label: "Build around confirmed sessions", detail: "Choose the talks, exhibitions or showcases you actually want before planning transport." },
+      { label: "Check each venue", detail: "The festival is citywide even though the National Theatre is the main hub." },
+      { label: "Allow Lagos traffic time", detail: "Do not book events in distant districts back-to-back without a realistic travel buffer." },
+      { label: "Re-check admission", detail: "Some programmes may have separate registration or access rules; use the official festival site for current details." }
+    ],
+    source: { label: "Design Week Lagos official website", href: "https://designweeklagos.com/" },
+    lastReviewed: "2026-10-05"
+  },
+  {
+    slug: "lagos-fashion-week-2026",
+    title: "Lagos Fashion Week 2026 Guide: Dates & Planning",
+    shortTitle: "Lagos Fashion Week 2026",
+    kind: "itinerary",
+    region: "Lagos State",
+    summary: "Plan around the announced Lagos Fashion Week 2026 dates of 28 October to 1 November, then verify the live runway, venue and access schedule before attending.",
+    intro: [
+      "Lagos Fashion Week has announced 28 October to 1 November for its 2026 edition.",
+      "The detailed runway, off-site, exhibition and access schedule can change as the event approaches, so use this page as a planning hub and confirm each final venue and entry condition with Lagos Fashion Week."
+    ],
+    bestFor: ["Fashion", "Runway", "Creative industry", "October events"],
+    highlights: [
+      { name: "28 October–1 November 2026", detail: "Lagos Fashion Week has published these dates for the 2026 edition." },
+      { name: "Runway & designer showcases", detail: "The event traditionally combines runway presentations with wider fashion-industry programming." },
+      { name: "Off-site events", detail: "Some Fashion Week activity may happen away from the main venue, so check every listing rather than assuming one address." },
+      { name: "Access varies", detail: "Registration, invitations or tickets can differ by event; verify the current rule before travelling." }
+    ],
+    planning: [
+      { label: "Wait for the detailed schedule", detail: "Use the announced dates now for travel planning, but confirm the individual programme before committing to a venue." },
+      { label: "Group nearby events", detail: "If the final calendar includes off-site shows, cluster them by area to reduce cross-city travel." },
+      { label: "Confirm access", detail: "Do not assume every runway or industry event is open entry; check registration and invitation requirements." },
+      { label: "Use official channels", detail: "Follow Lagos Fashion Week's website and official accounts for the final timetable and venue information." }
+    ],
+    source: { label: "Lagos Fashion Week official website", href: "https://lagosfashionweek.ng/" },
+    lastReviewed: "2026-10-05"
+  },
+
+  {
     slug: "lagos",
     title: "Lagos Travel Guide",
     shortTitle: "Lagos",

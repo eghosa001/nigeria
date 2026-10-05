@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const agency = getAgency(slug);
   if (!agency) return {};
   return {
-    title: agency.shortName + " services",
-    description: agency.description,
+    title: agency.slug === "npc" ? "NPC Birth Registration & Attestation Services 2026" : agency.shortName + " services",
+    description: agency.slug === "npc" ? "NPC Nigeria services for birth registration, birth attestation and status checks, with verified requirements, official links and current guidance." : agency.description,
     alternates: { canonical: "/agencies/" + agency.slug },
   };
 }
@@ -54,6 +54,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
       "@type": "Organization",
       name: agency.name,
       sameAs: agency.website,
+      logo: base + "/icon.svg",
     },
     mainEntity: {
       "@type": "ItemList",

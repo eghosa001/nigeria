@@ -28,6 +28,12 @@ function videoIdFromUrl(href: string) {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "black-market-2026": { title: "Black Market 2026 Cast, Runtime & Where to Watch", description: "Black Market 2026 cast, director, 100-minute runtime, story and current Nigerian cinema availability for Fatimah Binta Gimsay's crime drama." },
+  "east-west-love-2026": { title: "East West Love 2026 Cast & Cinema Release", description: "East West Love cast, story, director and current 9 October 2026 release information for the Nigeria-Kenya romantic comedy." },
+  "onibon-oje-2026": { title: "Onibọn Oje 2026 Cast & Cinema Release", description: "Onibọn Oje cast, directors, story and official 23 October 2026 Nigerian cinema release information for the Yoruba epic." },
+  "wire-transfer-2026": { title: "Wire Transfer 2026 Cast & Cinema Release", description: "Wire Transfer cast, story, director and current 30 October 2026 Nigerian cinema release information for the crime thriller." },
+  "mko-documentary-2026": { title: "MKO Documentary 2026: Cinema Release & Story", description: "MKO documentary story, director, 108-minute runtime and current Nigerian cinema release information for Ose Oyamendan's film." },
+  "no-fury-2024": { title: "No Fury Cast, Story & Movie Details", description: "No Fury cast, story and director details for Akay Mason's 2024 Nigerian drama, romance and thriller starring Nse Ikpe-Etim and Jim Iyke." },
   "agbara-nla-the-return": {
     title: "Agbara Nla: The Return Cast, Cinema Release & Where to Watch",
     description: "Agbara Nla: The Return cast, story, runtime, directors and current Nigerian cinema availability for the 2026 Mount Zion film."
@@ -53,7 +59,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pushing 30 story and current Africa Magic Showcase premiere information for the Nigerian friendship and adulthood dramedy."
   },
   "millionaire-until-morning": {
-    title: "Millionaire Until Morning: Cast & Full Movie on YouTube",
+    title: "Millionaire Until Morning Cast & Full Movie",
     description: "Millionaire Until Morning cast, story, runtime and the official Omoni Oboli TV full-movie link. Starring Chris Attoh, Sophia Chisom and Chimsom Chuka.",
   },
   "the-man-i-never-knew": {

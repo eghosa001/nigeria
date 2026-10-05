@@ -56,6 +56,10 @@
       }
     ],
     "related": [
+      "passport-appointment",
+      "passport-centre-availability",
+      "passport-photo-compliance",
+      "passport-application-tracking",
       "first-nigerian-passport",
       "passport-change-of-data"
     ],
@@ -167,6 +171,9 @@
       }
     ],
     "related": [
+      "passport-appointment",
+      "passport-photo-compliance",
+      "passport-application-tracking",
       "passport-renewal",
       "passport-name-change"
     ],
@@ -517,9 +524,15 @@
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "CAC Revised Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-05"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-05",
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
@@ -529,7 +542,13 @@
       "CAC business registration",
       "register business name online Nigeria"
     ],
-    "related": []
+    "related": [
+      "cac-company-registration",
+      "cac-name-reservation",
+      "cac-public-search",
+      "cac-status-report"
+    ],
+    "timeline": "CAC publishes a 24-working-hour service timeline for business-name registration once the application is complete and any query is resolved."
   },
   {
     "slug": "cac-company-registration",
@@ -568,10 +587,10 @@
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-05"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-05",
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
@@ -580,7 +599,12 @@
       "CAC company registration portal",
       "register company online Nigeria"
     ],
-    "related": [],
+    "related": [
+      "cac-business-name-registration",
+      "cac-name-reservation",
+      "cac-public-search",
+      "cac-status-report"
+    ],
     "feeNote": "Company-registration charges are not one fixed amount across every incorporation because the filing depends on the company and share structure. Confirm the calculated amount in CAC's official registration portal before payment."
   },
   {
@@ -3074,7 +3098,10 @@
     "searchTerms": [
       "Anambra ASIN registration",
       "How to get an Anambra State Identity Number (ASIN)",
-      "State services"
+      "State services",
+      "ASIN registration cost",
+      "Anambra ASIN portal",
+      "check ASIN Anambra"
     ],
     "related": []
   },
@@ -3791,7 +3818,10 @@
       "565",
       "*565*0#",
       "BVN code",
-      "bank verification number"
+      "bank verification number",
+      "code to check BVN",
+      "forgot BVN number",
+      "check BVN by phone"
     ],
     "related": [
       "bvn-enrolment",
@@ -3919,7 +3949,10 @@
       "ECOWAS travel certificate price",
       "ECOWAS travel certificate fee",
       "ECOWAS travel certificate form",
-      "ECOWAS travel certificate requirements"
+      "ECOWAS travel certificate requirements",
+      "ECOWAS travel certificate renewal",
+      "ECOWAS travel certificate countries",
+      "ECOWAS travel certificate validity"
     ],
     "related": [
       "first-nigerian-passport",
@@ -4034,7 +4067,10 @@
       "leave Nigeria",
       "arrival card",
       "departure card",
-      "international travel"
+      "international travel",
+      "Nigeria arrival card online",
+      "Nigeria departure card online",
+      "who needs Nigeria landing card"
     ],
     "related": [
       "yellow-card",
@@ -11346,5 +11382,206 @@
       "jamb-caps"
     ],
     "lastVerified": "2026-10-04"
+  },
+  {
+    "slug": "passport-appointment",
+    "title": "How to book a Nigerian passport appointment",
+    "shortTitle": "Passport appointment",
+    "summary": "Use the official NIS passport portal to book the processing appointment attached to a Nigerian passport application.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "No separate booking fee listed",
+    "feeNote": "The appointment tool is part of the official NIS passport application flow. Passport application or reissue fees are separate.",
+    "timeline": "Appointment availability depends on the selected processing centre; use the live NIS portal for the date currently offered.",
+    "status": "verified",
+    "officialPortal": "https://passport.immigration.gov.ng/",
+    "requirements": [
+      "A Nigerian passport application already started on the official NIS portal",
+      "The application record shown in your NIS passport dashboard",
+      "Access to the email or phone contact used for the passport application"
+    ],
+    "steps": [
+      "Open the official NIS domestic passport portal and sign in to the account used for the passport application.",
+      "Choose Book Appointment from the Passport Application Services options.",
+      "Open the passport application shown in your NIS account and continue to its appointment-booking action.",
+      "Choose from the processing-centre and date options the live portal makes available for that application.",
+      "Save or print the appointment confirmation and take the required application and payment slips to the passport office."
+    ],
+    "notes": [
+      "Do not pay an unofficial agent to obtain an appointment slot.",
+      "Use Check Centre Availability before choosing a processing centre if you are still planning where to enrol."
+    ],
+    "sources": [
+      {
+        "label": "NIS Domestic Passport Application Portal",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "passport-centre-availability",
+      "passport-photo-compliance",
+      "passport-application-tracking",
+      "passport-renewal"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Nigerian passport appointment",
+      "book passport appointment Nigeria",
+      "NIS passport appointment",
+      "passport appointment booking",
+      "passport appointment 2026"
+    ]
+  },
+  {
+    "slug": "passport-centre-availability",
+    "title": "How to check Nigerian passport centre availability",
+    "shortTitle": "Passport centre availability",
+    "summary": "Check the earliest available appointment date for Nigerian passport processing centres before choosing where to complete enrolment.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "FREE to check",
+    "timeline": "The official portal displays the earliest available appointment date for each processing centre.",
+    "status": "verified",
+    "officialPortal": "https://passport.immigration.gov.ng/",
+    "requirements": [
+      "Internet access to the official NIS domestic passport portal",
+      "The state or processing-centre options you want to compare"
+    ],
+    "steps": [
+      "Open the official NIS domestic passport portal.",
+      "Choose Check Centre Availability under Before you Proceed.",
+      "Review the centres and earliest appointment dates currently displayed.",
+      "Use the availability result to choose a realistic processing centre before completing the booking flow.",
+      "Re-check the live portal close to booking because availability can change."
+    ],
+    "notes": [
+      "Availability is live operational information and can change after this guide is published.",
+      "Checking availability does not itself reserve an appointment."
+    ],
+    "sources": [
+      {
+        "label": "NIS Domestic Passport Application Portal",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "passport-appointment",
+      "passport-renewal",
+      "first-nigerian-passport"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "passport centre availability Nigeria",
+      "earliest passport appointment Nigeria",
+      "NIS passport centre appointment date",
+      "passport office availability Nigeria"
+    ]
+  },
+  {
+    "slug": "passport-photo-compliance",
+    "title": "How to test a Nigerian passport photo online",
+    "shortTitle": "Passport photo compliance",
+    "summary": "Use the NIS Test Photo Upload tool to check passport-size photo compliance before continuing a Nigerian passport application.",
+    "category": "Immigration",
+    "agencySlug": "nis",
+    "feeLabel": "FREE photo check",
+    "timeline": "The tool is intended as a pre-application compliance check; no separate service timeline is published on the portal.",
+    "status": "verified",
+    "officialPortal": "https://passport.immigration.gov.ng/",
+    "requirements": [
+      "A recent passport-size photograph you plan to use for the application",
+      "A phone or computer that can upload the image to the NIS portal"
+    ],
+    "steps": [
+      "Open the official NIS domestic passport portal.",
+      "Choose Test Photo Upload under Before you Proceed.",
+      "Upload the passport-size photograph you intend to use.",
+      "Read the compliance result and correct the photo if the portal rejects it.",
+      "Only continue with the passport application after the photo meets the portal's check."
+    ],
+    "notes": [
+      "The NIS tool checks the uploaded photo before the application; passing the tool does not replace biometric enrolment where NIS requires it."
+    ],
+    "sources": [
+      {
+        "label": "NIS Domestic Passport Application Portal",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "passport-appointment",
+      "passport-centre-availability",
+      "passport-renewal"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Nigerian passport photo requirements",
+      "passport photo compliance Nigeria",
+      "NIS test photo upload",
+      "Nigerian passport photo checker",
+      "passport photo 2026 Nigeria"
+    ]
+  },
+  {
+    "slug": "emergency-travel-certificate",
+    "title": "How Nigeria's Emergency Travel Certificate works",
+    "shortTitle": "Emergency Travel Certificate",
+    "summary": "NIS currently describes an Emergency Travel Certificate route for Nigerians dealing with a lost or stolen passport, while also announcing a forthcoming Single Travel Emergency Passport (STEP) replacement.",
+    "category": "International travel",
+    "agencySlug": "nis",
+    "feeLabel": "Confirm current fee with NIS or the Nigerian mission",
+    "timeline": "The NIS public website says the Emergency Travel Certificate can be obtained in less than 72 hours, subject to the current official process.",
+    "status": "verified",
+    "officialPortal": "https://immigration.gov.ng/",
+    "requirements": [
+      "Evidence of Nigerian identity or citizenship requested by the issuing authority",
+      "Details/evidence relating to the lost, stolen or expired passport where applicable",
+      "Any supporting documents required by the Nigerian embassy, consulate or NIS handling the case"
+    ],
+    "steps": [
+      "Check the current Nigeria Immigration Service guidance for Emergency Travel Certificate/STEP before applying because the emergency-document system is changing.",
+      "If you are abroad, contact the Nigerian embassy or consulate responsible for your location and ask which emergency travel document is currently being issued.",
+      "Prepare the identity, citizenship and passport-loss/expiry evidence the mission or NIS asks for.",
+      "Follow only the payment and capture instructions given by the official mission or NIS channel.",
+      "Confirm the document's permitted journey and validity before booking travel around it."
+    ],
+    "notes": [
+      "NIS announced that a Single Travel Emergency Passport (STEP) is intended to replace the existing Emergency Travel Certificate for Nigerians abroad with expired, lost or stolen passports.",
+      "Because rollout can change the name, fee and application channel, confirm the current document with the issuing Nigerian mission before payment."
+    ],
+    "sources": [
+      {
+        "label": "Nigeria Immigration Service — Emergency Travel Certificate",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NIS announcement on Single Travel Emergency Passport (STEP)",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/nis-partners-with-stakeholders-to-combat-smuggling-of-migrants-announces-biometric-emergency-passport/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "lost-nigerian-passport",
+      "passport-application-abroad",
+      "passport-renewal",
+      "ecowas-travel-certificate"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Emergency Travel Certificate Nigeria",
+      "Nigeria emergency passport",
+      "lost passport emergency travel Nigeria",
+      "STEP Nigeria travel document",
+      "Nigerian emergency travel document"
+    ]
   }
 ]

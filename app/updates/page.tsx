@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
+import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
 import { myNigeriaGuideUpdates, updateTypeLabel } from "@/data/updates";
 import { getPublicService } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Nigeria government service updates",
+  title: "Nigeria Government Service Updates 2026",
   description: "Dated, source-linked updates to Nigerian government service fees, registration processes and official guidance.",
   alternates: { canonical: "/updates" },
 };
@@ -48,9 +49,21 @@ export default function UpdatesPage() {
             Important fee, process and official-guidance changes that affect MyNigeriaGuide services.
             Every entry is dated and links to the government source used to verify it.
           </p>
+          <AnswerFirst
+            title="What changed in Nigerian services?"
+            summary={myNigeriaGuideUpdates[0]?.summary ?? "Track verified fee, process and official-guidance changes from Nigerian government sources."}
+            facts={[
+              { label: "Updates tracked", value: String(myNigeriaGuideUpdates.length) },
+              { label: "Latest date", value: myNigeriaGuideUpdates[0]?.date ?? "See the dated updates below" },
+              { label: "Source standard", value: "Official government sources" },
+              { label: "Best action", value: "Open the affected service guide" },
+            ]}
+            links={[{ href: "#verified-updates", label: "See latest updates", primary: true }]}
+            note="Each entry links to the official source and the MyNigeriaGuide pages affected by the change."
+          />
           <a className="text-link rss-link" href="/updates.xml">Subscribe to verified updates via RSS →</a>
 
-          <div className="updates-stack">
+          <div className="updates-stack" id="verified-updates">
             {myNigeriaGuideUpdates.map((update) => {
               const services = update.affectedServices.map(getPublicService).filter(Boolean);
               return (

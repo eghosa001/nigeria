@@ -1,5 +1,9 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
   "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Form & Requirements",
+  "passport-appointment": "Nigerian Passport Appointment {year}: Book Online",
+  "passport-centre-availability": "Passport Centre Availability {year}: Check Dates",
+  "passport-photo-compliance": "Nigerian Passport Photo Check {year}: Test Online",
+  "emergency-travel-certificate": "Emergency Travel Certificate Nigeria {year}: Current Guide",
   "check-nin-number": "How to Check NIN {year}: *346# Retrieval Guide",
   "nin-phone-modification": "Change NIN Phone Number {year}: Fee, Police Report & Steps",
   "passport-change-of-data": "Nigerian Passport Change of Data {year}: Cost & Requirements",
@@ -46,6 +50,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "scuml-certificate-registration": "SCUML Registration {year}: Login, Certificate & Status",
   "pencom-job-loss-25-percent-withdrawal": "25% Pension Withdrawal Nigeria {year}: Eligibility & Steps",
   "ogun-tax-clearance-certificate": "Ogun Tax Clearance Certificate {year}: eTCC, Fee & Verify",
+  "verify-vehicle-number-plate": "Verify Nigerian Number Plate {year}: FRSC Check & Steps",
 };
 
 export function getServiceSeoTitleOverride(slug: string, year: string) {
@@ -55,6 +60,12 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "passport-appointment": "Book a Nigerian passport appointment in {year} through the official NIS portal, check centre availability and keep the correct appointment confirmation.",
+  "passport-centre-availability": "Check the earliest Nigerian passport appointment dates by processing centre in {year} using the official NIS availability tool.",
+  "passport-photo-compliance": "Check Nigerian passport photo compliance in {year} with the official NIS Test Photo Upload tool before continuing your application.",
+  "emergency-travel-certificate": "Nigeria Emergency Travel Certificate {year}: current NIS guidance for lost or stolen passports, the under-72-hour target and the transition to STEP.",
+  "cac-company-registration": "CAC company registration {year}: official portal, company requirements, 24-working-hour service timeline, fees and step-by-step filing process.",
+  "bvn-retrieval": "Check or retrieve your BVN in {year}: official *565*0# route, fee guidance, requirements and what to do if you no longer use the linked phone.",
   "nin-phone-modification": "Change the phone number on your NIN in {year}: ₦2,000 NIMC fee, police-report rule, requirements, steps and official self-service portal.",
   "nigeria-landing-exit-card": "Nigeria Landing & Exit Card {year}: who must complete it, what details you need, when to submit, and the official NIS online form. Free.",
   "anambra-asin-registration": "ASIN registration online {year}: Anambra AIRS portal, applicant types, requirements and step-by-step enumeration for individuals and businesses.",
