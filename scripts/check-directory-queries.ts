@@ -21,12 +21,14 @@ assert(movies.total === entertainmentTitles.length, "Movie directory total must 
 assert(movies.items.length <= ENTERTAINMENT_DIRECTORY_PAGE_SIZE, "Movie directory must stay page-bounded.");
 const blackMarket = queryEntertainmentDirectory({ q: "Black Market" });
 assert(blackMarket.items[0]?.slug === "black-market-2026", "Exact movie-title search should rank first.");
-assert(
-  queryEntertainmentDirectory({ platform: "Netflix" }).items.every((item) =>
-    item.watchLinks.some((link) => link.platform === "Netflix")
-  ),
-  "Movie platform filtering must be exact.",
-);
+for (const platform of ["Netflix", "Cinema", "Africa Magic"] as const) {
+  const filtered = queryEntertainmentDirectory({ platform });
+  assert(filtered.total > 0, platform + " must remain discoverable in the movie directory.");
+  assert(
+    filtered.items.every((item) => item.watchLinks.some((link) => link.platform === platform)),
+    platform + " filtering must be exact.",
+  );
+}
 if (movies.totalPages > 1) {
   assert(queryEntertainmentDirectory({ page: 2 }).page === 2, "Movie directory must support server page 2.");
 }
