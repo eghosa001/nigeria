@@ -214,6 +214,7 @@ export const growthHubs: GrowthHub[] = [
       { query: "NECO result checker", serviceSlug: "neco-check-result" },
       { query: "check NECO result", serviceSlug: "neco-check-result" },
       { query: "NECO result token", serviceSlug: "neco-purchase-result-token" },
+      { query: "NECO token purchase", serviceSlug: "neco-purchase-result-token" },
       { query: "NECO e Verify", serviceSlug: "neco-e-verify" },
       { query: "NECO certificate", serviceSlug: "neco-certificate-service" },
       { query: "NECO institutional verification", serviceSlug: "neco-institution-verification" },
@@ -369,12 +370,17 @@ export const growthHubs: GrowthHub[] = [
     searches: [
       { query: "open RSA Nigeria", serviceSlug: "pencom-open-rsa" },
       { query: "open RSA online", serviceSlug: "pencom-open-rsa" },
+      { query: "pension registration Nigeria", serviceSlug: "pencom-open-rsa" },
+      { query: "open pension account Nigeria", serviceSlug: "pencom-open-rsa" },
+      { query: "register for RSA online", serviceSlug: "pencom-open-rsa" },
       { query: "NIN for RSA registration", serviceSlug: "pencom-open-rsa" },
       { query: "change PFA Nigeria", serviceSlug: "pencom-transfer-rsa" },
       { query: "how to transfer pension PFA", serviceSlug: "pencom-transfer-rsa" },
+      { query: "RSA transfer process", serviceSlug: "pencom-transfer-rsa" },
       { query: "employer not paying pension", serviceSlug: "pencom-unremitted-contributions" },
       { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
-      { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" }
+      { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" },
+      { query: "micro pension account registration", serviceSlug: "pencom-micro-pension-registration" }
     ],
     serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration"]
   },
