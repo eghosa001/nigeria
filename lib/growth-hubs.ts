@@ -861,7 +861,20 @@ export const growthHubs: GrowthHub[] = [
       { query: "open Moniepoint business account", serviceSlug: "moniepoint-business-account" },
       { query: "get Moniepoint POS", serviceSlug: "moniepoint-pos-terminal" },
       { query: "open Nomba business account", serviceSlug: "nomba-business-account" },
-      { query: "get Nomba POS", serviceSlug: "nomba-pos-terminal" }
+      { query: "get Nomba POS", serviceSlug: "nomba-pos-terminal" },
+      { query: "open Standard Chartered account with SC Mobile", serviceSlug: "standard-chartered-sc-mobile-account-opening" },
+      { query: "register Standard Chartered online banking", serviceSlug: "standard-chartered-online-banking-registration" },
+      { query: "activate Standard Chartered Mobile Key", serviceSlug: "standard-chartered-mobile-key" },
+      { query: "book United Nigeria Airlines", serviceSlug: "united-nigeria-book-flight" },
+      { query: "United Nigeria online check in", serviceSlug: "united-nigeria-online-check-in" },
+      { query: "change United Nigeria booking", serviceSlug: "united-nigeria-change-booking" },
+      { query: "United Nigeria refund", serviceSlug: "united-nigeria-refund" },
+      { query: "book ValueJet flight", serviceSlug: "valuejet-book-flight" },
+      { query: "ValueJet online check in", serviceSlug: "valuejet-online-check-in" },
+      { query: "ValueJet baggage allowance", serviceSlug: "valuejet-baggage-allowance" },
+      { query: "book Aero Contractors flight", serviceSlug: "aero-contractors-book-flight" },
+      { query: "Aero Contractors manage booking check in", serviceSlug: "aero-contractors-manage-check-in" },
+      { query: "Aero Contractors refund", serviceSlug: "aero-contractors-refund" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1033,7 +1046,20 @@ export const growthHubs: GrowthHub[] = [
       "moniepoint-business-account",
       "moniepoint-pos-terminal",
       "nomba-business-account",
-      "nomba-pos-terminal"
+      "nomba-pos-terminal",
+      "standard-chartered-sc-mobile-account-opening",
+      "standard-chartered-online-banking-registration",
+      "standard-chartered-mobile-key",
+      "united-nigeria-book-flight",
+      "united-nigeria-online-check-in",
+      "united-nigeria-change-booking",
+      "united-nigeria-refund",
+      "valuejet-book-flight",
+      "valuejet-online-check-in",
+      "valuejet-baggage-allowance",
+      "aero-contractors-book-flight",
+      "aero-contractors-manage-check-in",
+      "aero-contractors-refund"
     ]
   },
 
