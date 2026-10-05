@@ -7504,5 +7504,456 @@
       "MeCure Hospital booking",
       "MeCure consultation"
     ]
+  },
+  {
+    "slug": "cowrywise-create-account",
+    "title": "How to create a Cowrywise account",
+    "shortTitle": "Cowrywise account signup",
+    "summary": "Cowrywise's account-registration route through its website or mobile app, using name, email, password, email verification and profile completion before savings or investment features are used.",
+    "category": "Investing",
+    "agencySlug": "cowrywise",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "Cowrywise does not state a separate fee for creating an account.",
+    "timeline": "The account can be created after the signup and email-verification steps are completed; further features can require profile and BVN verification.",
+    "status": "verified",
+    "officialPortal": "https://cowrywise.com/",
+    "requirements": [
+      "The user's full name and a valid email address",
+      "A secure password for the Cowrywise account",
+      "Access to the email inbox used for verification",
+      "The phone number, date of birth and other profile information requested after signup"
+    ],
+    "steps": [
+      "Open Cowrywise's official website or mobile app and choose Sign Up or Create an Account.",
+      "Enter the full name, email address and a strong password.",
+      "Open the verification email sent by Cowrywise and confirm the email address.",
+      "Return to the account and complete the requested profile information such as phone number and date of birth.",
+      "Add the customer's BVN later when Cowrywise requests identity verification for financial features."
+    ],
+    "notes": [
+      "Cowrywise says the account can be created from its website or mobile apps.",
+      "The user's own BVN should be added; a third-party BVN can create withdrawal and verification problems.",
+      "This guide covers account setup only and does not recommend any savings or investment product."
+    ],
+    "sources": [
+      {
+        "label": "Cowrywise — Create an Account",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/3711631-how-to-create-an-account-on-cowrywise",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cowrywise BVN Help",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/3711418-got-concerns-about-your-bvn",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cowrywise-bvn-verification",
+      "cowrywise-fund-account",
+      "cowrywise-withdraw-from-stash",
+      "piggyvest-create-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "create Cowrywise account",
+      "Cowrywise signup Nigeria",
+      "open Cowrywise account",
+      "Cowrywise registration",
+      "Cowrywise BVN"
+    ]
+  },
+  {
+    "slug": "cowrywise-bvn-verification",
+    "title": "How to verify your BVN on Cowrywise",
+    "shortTitle": "Cowrywise BVN verification",
+    "summary": "Cowrywise's BVN verification process for matching the account holder's identity and ensuring later withdrawals go only to a Nigerian bank account linked to the same BVN.",
+    "category": "Investing",
+    "agencySlug": "cowrywise",
+    "feeLabel": "No Cowrywise BVN-verification fee stated",
+    "feeNote": "Cowrywise does not state a fee for adding a BVN to the account. A separate NIBSS validation portal can charge its own validation fee when troubleshooting BVN data.",
+    "timeline": "Verification depends on the BVN and date-of-birth information matching the banking record; mismatches require correction or support review.",
+    "status": "verified",
+    "officialPortal": "https://help.cowrywise.com/en/articles/3711418-got-concerns-about-your-bvn",
+    "requirements": [
+      "The account holder's own BVN",
+      "The date of birth that matches the BVN record",
+      "Accurate Cowrywise profile information that matches the verified identity",
+      "A government-issued ID and selfie evidence if support requests enhanced identity verification for a mismatch"
+    ],
+    "steps": [
+      "Sign in to Cowrywise and open the profile or identity-verification area where the BVN is requested.",
+      "Enter the account holder's BVN and the matching date of birth.",
+      "Submit the BVN for verification and review any mismatch message returned by the platform.",
+      "If the details do not match, validate the banking record through the approved BVN route or contact Cowrywise support with the requested ID/selfie evidence.",
+      "Confirm that the verified BVN is linked before adding a withdrawal bank account."
+    ],
+    "notes": [
+      "Cowrywise says BVN is used to identify and verify the customer and does not give the platform automatic access to bank accounts.",
+      "Withdrawals are restricted to a bank account linked to the same BVN.",
+      "Do not add another person's BVN to the Cowrywise profile."
+    ],
+    "sources": [
+      {
+        "label": "Cowrywise BVN Help",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/3711418-got-concerns-about-your-bvn",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cowrywise Invalid BVN Help",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/7915377-unable-to-verify-bvn-invalid-bvn-added",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cowrywise-create-account",
+      "cowrywise-withdraw-from-stash",
+      "bvn-retrieval"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cowrywise BVN verification",
+      "verify BVN Cowrywise",
+      "Cowrywise invalid BVN",
+      "Cowrywise BVN mismatch",
+      "Cowrywise KYC"
+    ]
+  },
+  {
+    "slug": "cowrywise-fund-account",
+    "title": "How to fund savings or investments on Cowrywise",
+    "shortTitle": "Fund Cowrywise",
+    "summary": "Cowrywise's funding routes through bank transfer or direct bank debit, including adding a bank account, authorising direct debit or generating a one-time virtual account for a transfer.",
+    "category": "Investing",
+    "agencySlug": "cowrywise",
+    "feeLabel": "Funding method charges can apply",
+    "feeNote": "Cowrywise's help centre currently says direct bank-debit linking can require a small authorisation transfer, while ordinary bank-transfer costs depend on the customer's bank/channel.",
+    "timeline": "Direct-bank-debit linking typically takes 24–48 hours after authorisation according to Cowrywise; one-time bank-transfer funding is credited after the transfer is received and matched.",
+    "status": "verified",
+    "officialPortal": "https://help.cowrywise.com/en/articles/6651674-payment-methods-on-cowrywise",
+    "requirements": [
+      "An active Cowrywise account",
+      "A Nigerian bank account or mobile-banking channel for bank-transfer funding",
+      "For direct debit, a bank account supported by Cowrywise's linking process",
+      "The savings or investment plan the customer intends to fund"
+    ],
+    "steps": [
+      "Sign in to Cowrywise and choose the savings or investment plan to fund.",
+      "For bank transfer, choose the transfer option and generate the one-time virtual bank account shown for the transaction.",
+      "Transfer the chosen amount from the customer's bank and confirm payment in Cowrywise where the flow asks for confirmation.",
+      "For direct debit, open Profile, choose Payment, add the supported bank account and complete the provider's authorisation steps.",
+      "Check the plan balance after the payment is credited before initiating another duplicate funding transaction."
+    ],
+    "notes": [
+      "Cowrywise says bank transfer and direct bank debit are supported funding methods.",
+      "Not every bank account can be linked for direct debit.",
+      "This guide explains the payment mechanics and does not recommend how much a user should save or invest."
+    ],
+    "sources": [
+      {
+        "label": "Cowrywise Payment Methods",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/6651674-payment-methods-on-cowrywise",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cowrywise-create-account",
+      "cowrywise-withdraw-from-stash"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "fund Cowrywise",
+      "Cowrywise bank transfer",
+      "Cowrywise direct debit",
+      "add money Cowrywise",
+      "Cowrywise payment method"
+    ]
+  },
+  {
+    "slug": "cowrywise-withdraw-from-stash",
+    "title": "How to withdraw money from Cowrywise Stash",
+    "shortTitle": "Cowrywise withdrawal",
+    "summary": "Cowrywise's Stash withdrawal route for moving available funds to a personal Nigerian bank account linked to the same BVN, with the current processing window and withdrawal charges shown by the provider.",
+    "category": "Investing",
+    "agencySlug": "cowrywise",
+    "feeLabel": "Withdrawal charge depends on amount/frequency",
+    "feeNote": "Cowrywise currently states that Stash withdrawals can attract a fee based on amount and usage frequency. Check the live withdrawal summary before confirming because charges can change.",
+    "timeline": "Cowrywise says a normal Stash withdrawal is processed 24 hours after it is initiated; failed withdrawals can be retried after the failure is shown.",
+    "status": "verified",
+    "officialPortal": "https://help.cowrywise.com/en/articles/5744582-how-to-withdraw-from-stash",
+    "requirements": [
+      "Available funds in Cowrywise Stash",
+      "A personal Nigerian bank account linked to the same BVN as the Cowrywise account",
+      "The Cowrywise PIN used to confirm the withdrawal",
+      "Any 2FA code required when two-factor authentication is enabled"
+    ],
+    "steps": [
+      "Open Cowrywise and go to Stash.",
+      "Tap the three-dot menu and select Withdraw.",
+      "Choose an existing BVN-linked bank account or add an eligible Nigerian bank account.",
+      "Enter the withdrawal amount and confirm the request with the Cowrywise PIN and any required 2FA code.",
+      "Keep the withdrawal summary/session details and contact support if the request remains unresolved after the published processing window."
+    ],
+    "notes": [
+      "Cowrywise does not allow Stash withdrawals to arbitrary wallet or virtual-account numbers.",
+      "The receiving bank account must belong to the same BVN-linked customer.",
+      "A failed withdrawal can be retried through the action shown on the Stash page."
+    ],
+    "sources": [
+      {
+        "label": "Cowrywise — Withdraw from Stash",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/5744582-how-to-withdraw-from-stash",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cowrywise Withdrawal Guidance",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/8253691-withdrawals-on-cowrywise-what-you-need-to-know",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cowrywise Receiving Bank Rules",
+        "agency": "Cowrywise",
+        "url": "https://help.cowrywise.com/en/articles/9148093-what-bank-can-i-use-to-receive-my-funds-on-cowrywise",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cowrywise-bvn-verification",
+      "cowrywise-fund-account",
+      "piggyvest-withdraw-savings"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "withdraw Cowrywise",
+      "Cowrywise Stash withdrawal",
+      "Cowrywise withdrawal time",
+      "Cowrywise withdrawal fee",
+      "Cowrywise bank withdrawal"
+    ]
+  },
+  {
+    "slug": "piggyvest-create-account",
+    "title": "How to create a PiggyVest account",
+    "shortTitle": "PiggyVest account signup",
+    "summary": "PiggyVest's free account-registration route using the customer's legal name, valid email, phone number and password before adding withdrawal-bank and identity-verification details.",
+    "category": "Investing",
+    "agencySlug": "piggyvest",
+    "feeLabel": "Free account creation",
+    "feeNote": "PiggyVest's official registration page describes the account as free to create.",
+    "timeline": "The initial account is created after the signup form is completed; later banking and withdrawal features require the customer's bank/identity information.",
+    "status": "verified",
+    "officialPortal": "https://app.piggyvest.com/onboarding/register",
+    "requirements": [
+      "The customer's first and last name matching the bank identity",
+      "A valid email address",
+      "A mobile phone number",
+      "A secure password"
+    ],
+    "steps": [
+      "Open PiggyVest's official registration page and choose Create a Free Account.",
+      "Enter the first and last name exactly as it should match the customer's bank details.",
+      "Enter the valid email address and phone number and create a secure password.",
+      "Submit the account-registration form and complete any contact verification prompts.",
+      "Add the withdrawal bank and BVN/identity information requested before using features that require verified account ownership."
+    ],
+    "notes": [
+      "PiggyVest explicitly asks that the signup name match the customer's bank name.",
+      "BVN is used for identity validation and to unlock additional account features.",
+      "This guide explains account creation only and does not recommend a savings or investment product."
+    ],
+    "sources": [
+      {
+        "label": "PiggyVest Account Registration",
+        "agency": "PiggyVest",
+        "url": "https://app.piggyvest.com/onboarding/register",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PiggyVest FAQ",
+        "agency": "PiggyVest",
+        "url": "https://www.piggyvest.com/faq?newref=1",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "piggyvest-bvn-verification",
+      "piggyvest-withdraw-savings",
+      "piggyvest-generate-statement",
+      "cowrywise-create-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "create PiggyVest account",
+      "PiggyVest signup",
+      "open PiggyVest account",
+      "PiggyVest registration Nigeria",
+      "PiggyVest BVN"
+    ]
+  },
+  {
+    "slug": "piggyvest-bvn-verification",
+    "title": "How PiggyVest BVN verification works",
+    "shortTitle": "PiggyVest BVN verification",
+    "summary": "PiggyVest's BVN identity-verification step used to validate account ownership and unlock features such as a personalised Flex account number for bank transfers.",
+    "category": "Investing",
+    "agencySlug": "piggyvest",
+    "feeLabel": "No BVN-verification fee stated",
+    "feeNote": "PiggyVest does not state a separate fee for adding BVN to the account.",
+    "timeline": "Verification depends on the BVN data matching the customer's PiggyVest identity information.",
+    "status": "verified",
+    "officialPortal": "https://www.piggyvest.com/faq?newref=1",
+    "requirements": [
+      "An existing PiggyVest account",
+      "The account holder's own BVN",
+      "Profile information that matches the BVN identity",
+      "Access to the bank if the phone number or identity data linked to the BVN needs to be updated"
+    ],
+    "steps": [
+      "Sign in to PiggyVest and open the account/identity area where BVN verification is requested.",
+      "Enter the account holder's BVN and submit it for validation.",
+      "Confirm that the PiggyVest account name and identity information match the BVN record.",
+      "If the phone number linked to the BVN is outdated, contact the customer's bank to update the BVN record before retrying.",
+      "Confirm the account is verified before relying on BVN-dependent features such as the personalised transfer account."
+    ],
+    "notes": [
+      "PiggyVest says BVN is used for identity validation and protection against identity theft.",
+      "The provider says the BVN enables additional features including a Flex account number in the customer's name.",
+      "Do not use another person's BVN."
+    ],
+    "sources": [
+      {
+        "label": "PiggyVest FAQ — BVN",
+        "agency": "PiggyVest",
+        "url": "https://www.piggyvest.com/faq?newref=1",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "piggyvest-create-account",
+      "piggyvest-withdraw-savings",
+      "bvn-data-update"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PiggyVest BVN verification",
+      "add BVN PiggyVest",
+      "PiggyVest KYC",
+      "PiggyVest BVN phone number",
+      "PiggyVest verify identity"
+    ]
+  },
+  {
+    "slug": "piggyvest-withdraw-savings",
+    "title": "How to withdraw savings from PiggyVest",
+    "shortTitle": "PiggyVest withdrawal",
+    "summary": "PiggyVest's withdrawal process for Piggybank or Flex balances, including the customer's selected bank/Pocket destination, free-withdrawal dates and the current breaking-fee rules for early Piggybank withdrawals.",
+    "category": "Investing",
+    "agencySlug": "piggyvest",
+    "feeLabel": "Depends on wallet and withdrawal timing",
+    "feeNote": "PiggyVest currently says Piggybank withdrawals are free on designated withdrawal dates and can attract a breaking fee outside those dates, while Flex withdrawal rules differ. Check the live wallet before confirming.",
+    "timeline": "PiggyVest says most eligible withdrawals are sent to the selected account quickly, while very large withdrawals can take additional processing time under its current FAQ.",
+    "status": "verified",
+    "officialPortal": "https://app.piggyvest.com/withdrawals",
+    "requirements": [
+      "Available withdrawable funds in the Piggybank or Flex wallet",
+      "A withdrawal destination allowed by PiggyVest, such as the customer's matching bank account or supported PiggyVest/Pocket destination",
+      "The PiggyVest password plus any OTP/security-question or 2FA verification required",
+      "Awareness of the selected wallet's free-withdrawal or breaking-fee rules"
+    ],
+    "steps": [
+      "Sign in to PiggyVest and open the Piggybank or Flex wallet containing the funds.",
+      "Select Withdraw and enter the requested amount.",
+      "Choose the eligible withdrawal destination linked to the customer.",
+      "Review the displayed fee/timing information and confirm the request using the password and required security verification.",
+      "Check the destination account and keep the withdrawal record if the transfer needs support follow-up."
+    ],
+    "notes": [
+      "Piggybank and Flex Naira have different withdrawal rules.",
+      "PiggyVest says the customer's bank account used for withdrawal should match the PiggyVest account name.",
+      "This guide explains the process and does not advise whether a user should break a savings plan early."
+    ],
+    "sources": [
+      {
+        "label": "PiggyVest Withdrawals",
+        "agency": "PiggyVest",
+        "url": "https://app.piggyvest.com/withdrawals",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PiggyVest FAQ — Withdrawals",
+        "agency": "PiggyVest",
+        "url": "https://www.piggyvest.com/faq?newref=1",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "piggyvest-create-account",
+      "piggyvest-bvn-verification",
+      "cowrywise-withdraw-from-stash"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "withdraw PiggyVest",
+      "PiggyVest withdrawal",
+      "Piggybank withdrawal date",
+      "PiggyVest breaking fee",
+      "PiggyVest Flex withdrawal"
+    ]
+  },
+  {
+    "slug": "piggyvest-generate-statement",
+    "title": "How to generate a PiggyVest statement of account",
+    "shortTitle": "PiggyVest account statement",
+    "summary": "PiggyVest's in-app route for generating an account statement that the provider says can be used as proof of funds.",
+    "category": "Investing",
+    "agencySlug": "piggyvest",
+    "feeLabel": "No statement-generation fee stated",
+    "feeNote": "PiggyVest does not state a separate fee for generating the account statement from the app.",
+    "timeline": "The statement is generated through the account menu after the customer completes the in-app prompts.",
+    "status": "verified",
+    "officialPortal": "https://app.piggyvest.com/faq",
+    "requirements": [
+      "An active PiggyVest account",
+      "Access to the PiggyVest app/account menu",
+      "Any date range or statement information requested by the statement-generation flow"
+    ],
+    "steps": [
+      "Sign in to PiggyVest and open Account.",
+      "Select Generate Account Statement.",
+      "Enter or choose the statement information requested by the app.",
+      "Follow the prompts to generate the account statement.",
+      "Save the generated statement securely and verify that the account details and period are correct before using it."
+    ],
+    "notes": [
+      "PiggyVest's FAQ says its generated account statement can be used as proof of funds.",
+      "A receiving institution can still decide whether the statement meets its own documentary requirements.",
+      "Protect the statement because it can contain sensitive financial information."
+    ],
+    "sources": [
+      {
+        "label": "PiggyVest FAQ — Statement of Account",
+        "agency": "PiggyVest",
+        "url": "https://app.piggyvest.com/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "piggyvest-create-account",
+      "piggyvest-withdraw-savings"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PiggyVest statement of account",
+      "PiggyVest proof of funds",
+      "generate PiggyVest statement",
+      "PiggyVest account statement",
+      "PiggyVest statement download"
+    ]
   }
 ]
