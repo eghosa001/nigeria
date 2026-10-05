@@ -1227,6 +1227,41 @@ export const agencies: Agency[] = [
     "shortName": "Heyfood",
     "description": "Private Nigerian food-delivery and restaurant-commerce platform offering customer ordering, rider and merchant services.",
     "website": "https://heyfood.africa/"
+  },
+  {
+    "slug": "medbury-labs",
+    "name": "Medbury Labs",
+    "shortName": "Medbury Labs",
+    "description": "Private Nigerian diagnostics provider offering laboratory testing, screening packages and sample-collection services.",
+    "website": "https://medburylabs.com/"
+  },
+  {
+    "slug": "healthplus",
+    "name": "HealthPlus Nigeria",
+    "shortName": "HealthPlus",
+    "description": "Private Nigerian pharmacy and e-pharmacy offering online health, wellness and pharmacy-product ordering and delivery.",
+    "website": "https://healthplusnigeria.com/"
+  },
+  {
+    "slug": "custodian-insurance",
+    "name": "Custodian and Allied Insurance Limited",
+    "shortName": "Custodian",
+    "description": "Private Nigerian insurer offering motor and other non-life insurance purchase and claims services.",
+    "website": "https://custodianinsurance.com/"
+  },
+  {
+    "slug": "nem-insurance",
+    "name": "NEM Insurance Plc",
+    "shortName": "NEM Insurance",
+    "description": "Private Nigerian general insurer offering online cover purchase, quote and claims services.",
+    "website": "https://nem-insurance.com/"
+  },
+  {
+    "slug": "lagride",
+    "name": "LagRide Nigeria",
+    "shortName": "LagRide",
+    "description": "Private Lagos e-hailing service offering passenger ride booking and captain onboarding/training.",
+    "website": "https://lagride.org/"
   }
 
 ];
