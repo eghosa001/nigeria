@@ -84,6 +84,40 @@ export function EntertainmentArtwork({
     );
   }
 
+  if (title.sourcePreview) {
+    const preview = title.sourcePreview;
+    return (
+      <figure
+        className={"entertainment-artwork entertainment-artwork-source entertainment-artwork-" + variant}
+        data-artwork-source={preview.sourceKind}
+        data-rights-status="source-linked-editorial-preview"
+        data-poster-guaranteed="true"
+      >
+        <div className="entertainment-source-preview-frame">
+          <img
+            className="entertainment-source-preview-backdrop"
+            src={preview.url}
+            alt=""
+            aria-hidden="true"
+            loading={variant === "card" ? "lazy" : "eager"}
+            decoding="async"
+          />
+          <img
+            className="entertainment-source-preview-image"
+            src={preview.url}
+            alt={title.title + " promotional artwork"}
+            loading={variant === "card" ? "lazy" : "eager"}
+            decoding="async"
+          />
+        </div>
+        <figcaption>
+          <span>Source: {preview.credit}</span>
+          {showSourceLink ? <a href={preview.sourceUrl} target="_blank" rel="noreferrer">Open source ↗</a> : null}
+        </figcaption>
+      </figure>
+    );
+  }
+
   const youtubePreview = getYouTubePreview(title);
   if (youtubePreview) {
     const thumbnail = "https://i.ytimg.com/vi/" + youtubePreview.videoId + "/hqdefault.jpg";

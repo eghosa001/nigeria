@@ -78,6 +78,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
 
 function movieImageUrl(title: EntertainmentTitle, base: string) {
   if (canDisplayEntertainmentArtwork(title) && title.artwork) return title.artwork.url;
+  if (title.sourcePreview?.url) return title.sourcePreview.url;
 
   const fullMovie = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const source = title.trailer ?? fullMovie;

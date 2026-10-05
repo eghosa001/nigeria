@@ -26,6 +26,22 @@ export type EntertainmentImageUsageBasis =
   | "licensed"
   | "creative-commons";
 
+export type EntertainmentSourcePreviewKind =
+  | "official-film-site"
+  | "official-distributor"
+  | "official-exhibitor"
+  | "press-supplied"
+  | "editorial-database";
+
+export type EntertainmentSourcePreview = {
+  url: string;
+  sourceUrl: string;
+  credit: string;
+  sourceKind: EntertainmentSourcePreviewKind;
+  note: string;
+  lastChecked: string;
+};
+
 export type EntertainmentArtwork = {
   url: string;
   sourceUrl: string;
@@ -50,6 +66,7 @@ export type EntertainmentTitle = {
   runtimeMinutes?: number;
   trailer?: TrailerLink;
   artwork?: EntertainmentArtwork;
+  sourcePreview?: EntertainmentSourcePreview;
   featured?: boolean;
   watchLinks: WatchLink[];
 };
@@ -68,6 +85,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     directors: ["Fatimah Binta Gimsay"],
     runtimeMinutes: 100,
     featured: true,
+    sourcePreview: {
+      url: "https://grandcinemas.com.ng/wp-content/uploads/2026/09/BLACK-MARKET.jpg",
+      sourceUrl: "https://grandcinemas.com.ng/movies/black-market/",
+      credit: "Grand Cinemas",
+      sourceKind: "official-exhibitor",
+      note: "Cinema listing uses the film's promotional poster. Source-linked editorial preview; image rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [{ platform: "Cinema", label: "See current Grand Cinemas showtimes", href: "https://grandcinemas.com.ng/movies/black-market/", access: "cinema", lastChecked: "2026-10-05", note: "Grand Cinemas lists Black Market as released on 2 October 2026. Cinema schedules and ticket prices can change." }]
   },
   {
@@ -82,6 +107,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Sunshine Rosman", "Efa Iwara", "Elma Mbadiwe"],
     directors: ["Seko Shamte"],
     featured: true,
+    sourcePreview: {
+      url: "https://whatkeptmeup.com/wp-content/uploads/2026/04/EWL-1-684x1024.webp",
+      sourceUrl: "https://whatkeptmeup.com/nigerian-movie-reviews/nollywoodweek-2026-seko-shamtes-east-west-love-opening-film/",
+      credit: "Suss Productions / What Kept Me Up",
+      sourceKind: "press-supplied",
+      note: "Press coverage identifies this promotional poster as supplied via Suss Productions. Source-linked editorial preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [{ platform: "Cinema", label: "Check current release details", href: "https://www.imdb.com/title/tt42450012/", access: "cinema", lastChecked: "2026-10-05", note: "The current release listing gives 9 October 2026. Check local cinema schedules before travelling." }]
   },
   {
@@ -96,6 +129,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Odunlade Adekola", "Fathia Balogun", "Kolawole Ajeyemi"],
     directors: ["Mustapha Jayeola", "Olawale Samson Adebayo"],
     featured: true,
+    sourcePreview: {
+      url: "https://static.wixstatic.com/media/fe9157_8c8dadcc865540f8b1046a6fc76eb837~mv2.jpg/v1/fill/w_300%2Ch_424%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fe9157_8c8dadcc865540f8b1046a6fc76eb837~mv2.jpg",
+      sourceUrl: "https://www.tntheatrical.com/all-titles/onibon-oje",
+      credit: "Tribe Nation Theatrical Distribution",
+      sourceKind: "official-distributor",
+      note: "Promotional artwork shown on the film's official distributor page. Source-linked editorial preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [{ platform: "Cinema", label: "Check the official distributor release page", href: "https://www.tntheatrical.com/post/odunlade-adekola-fathia-balogun-and-kolawole-ajeyemi-lead-new-yoruba-epic-onib%E1%BB%8Dn-oje-in-cinemas-oc", access: "cinema", lastChecked: "2026-10-05", note: "Tribe Nation Theatrical Distribution lists the Nigerian cinema release for 23 October 2026." }]
   },
   {
@@ -110,6 +151,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Hanks Anuku", "Gideon Okeke", "Deyemi Okanlawon"],
     directors: ["Femi Odugemi"],
     featured: true,
+    sourcePreview: {
+      url: "https://africanmoviedb.com/image/title/y4XOF007BDWe_amp0l4dT.webp",
+      sourceUrl: "https://africanmoviedb.com/title/wire-transfer-2026",
+      credit: "Kuros Studios / African Movies Database",
+      sourceKind: "editorial-database",
+      note: "Promotional poster mirrored by an editorial movie database and visibly branded for Kuros Studios. Source-linked preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [{ platform: "Cinema", label: "Check the current cinema release report", href: "https://www.nollywoodtimes.com/2026/09/wire-transfer-hanks-anuku-gideon-okeke.html", access: "cinema", lastChecked: "2026-10-05", note: "Current release coverage lists a nationwide Nigerian cinema opening for 30 October 2026. Confirm local showtimes before travelling." }]
   },
   {
@@ -124,6 +173,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     directors: ["Ose Oyamendan"],
     runtimeMinutes: 108,
     featured: true,
+    sourcePreview: {
+      url: "https://grandcinemas.com.ng/wp-content/uploads/2026/09/MKO.jpg",
+      sourceUrl: "https://grandcinemas.com.ng/movies/mko/",
+      credit: "Grand Cinemas",
+      sourceKind: "official-exhibitor",
+      note: "Cinema listing uses the film's promotional poster. Source-linked editorial preview; image rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [{ platform: "Cinema", label: "Check the current cinema release report", href: "https://www.premiumtimesng.com/entertainment/nollywood/912554-ose-oyamendans-mko-documentary-set-for-october-premiere.html", access: "cinema", lastChecked: "2026-10-05", note: "The documentary opened in Nigerian cinemas on 2 October 2026. Confirm local showtimes before travelling." }]
   },
   {
@@ -151,6 +208,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     directors: ["Damilola Mike-Bamiloye", "Joshua Bamiloye"],
     runtimeMinutes: 157,
     featured: true,
+    sourcePreview: {
+      url: "https://grandcinemas.com.ng/wp-content/uploads/2026/09/AGBARA-NLA.jpg",
+      sourceUrl: "https://grandcinemas.com.ng/movies/agbara-nla-the-return/",
+      credit: "Grand Cinemas",
+      sourceKind: "official-exhibitor",
+      note: "Cinema listing uses the film's promotional poster. Source-linked editorial preview; image rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [
       {
         platform: "Cinema",
@@ -172,6 +237,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Adunola, the First Lady of Lagos State, appears to have status and influence but is privately consumed by her desire for a child, and a long-awaited pregnancy threatens her marriage, reputation and carefully controlled public life.",
     cast: ["Fehintola Olulana", "Desmond Elliot", "Ibrahim Suleiman", "Ngozi Nwosu", "Jaiye Kuti", "Abiola Segun-Williams", "Oluwakemi Iyanda"],
     directors: ["Yinka Akanbi"],
+    sourcePreview: {
+      url: "https://static.wixstatic.com/media/fe9157_e307cef2c88b4c27b9a799c16780c8f9~mv2.jpeg/v1/fill/w_300%2Ch_424%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fe9157_e307cef2c88b4c27b9a799c16780c8f9~mv2.jpeg",
+      sourceUrl: "https://www.tntheatrical.com/all-titles/first-lady",
+      credit: "Tribe Nation Theatrical Distribution",
+      sourceKind: "official-distributor",
+      note: "Promotional artwork shown on the film's official distributor page. Source-linked editorial preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [
       {
         platform: "Cinema",
@@ -193,6 +266,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A revenge drama about two women from different worlds whose lives collide after trauma, pushing them through grief, power and the consequences of choosing retaliation.",
     cast: ["Uzoamaka Power", "Onyinye Odokoro", "Ama K. Abebrese", "Ijeoma Grace Agu", "Adjetey Anang", "Tina Mba", "Richard Mofe-Damijo"],
     directors: ["Ifeoma Nkiruka Chukwuogo"],
+    sourcePreview: {
+      url: "https://africanmoviedb.com/image/title/ikc4xyBxDZwVlgMg5QgZK.webp",
+      sourceUrl: "https://africanmoviedb.com/title/phoenix-fury-2026",
+      credit: "Fizzy K Pictures / African Movies Database",
+      sourceKind: "editorial-database",
+      note: "Promotional poster mirrored by an editorial movie database and visibly branded for Fizzy K Pictures. Source-linked preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [
       {
         platform: "Cinema",
@@ -215,6 +296,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Richard Mofe-Damijo", "Princess Mufeedah", "Daniel Etim Effiong", "Adam Garba", "Sam Dede", "Onyeka Onwenu"],
     directors: ["Pever Bem"],
     runtimeMinutes: 118,
+    sourcePreview: {
+      url: "https://africanmoviedb.com/image/title/O-1HQ9d2zjTmvm-pPdgUZ.webp",
+      sourceUrl: "https://africanmoviedb.com/title/a-land-apart-2026",
+      credit: "Take 7 Media / African Movies Database",
+      sourceKind: "editorial-database",
+      note: "Promotional poster mirrored by an editorial movie database and visibly branded for Take 7 Media. Source-linked preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [
       {
         platform: "Cinema",
@@ -236,6 +325,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Two very different students at a fictional Lagos university collide as ambition, identity, friendship and romance reshape the lives they expected to have.",
     cast: ["Mike Afolarin", "Genoveva Umeh"],
     directors: ["Adenike Adebayo-Esho"],
+    sourcePreview: {
+      url: "https://www.oyamag.com/wp-content/uploads/2026/09/A-new-young-adult-campus-movie-is-coming-to-Nigerian-cinemasTele-x-Zikora-%40telexzikora-is-Wr-1200x1500.jpg",
+      sourceUrl: "https://www.oyamag.com/tele-x-zikora-teaser-first-look/",
+      credit: "Tele x Zikora / OYA Magazine",
+      sourceKind: "press-supplied",
+      note: "Promotional key art published with press coverage of the film. Source-linked editorial preview; rights remain with the film/rightsholders.",
+      lastChecked: "2026-10-05",
+    },
     watchLinks: [
       {
         platform: "Cinema",
