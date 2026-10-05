@@ -604,13 +604,20 @@
       "Business",
       "CAC registration",
       "CAC company registration portal",
-      "register company online Nigeria"
+      "register company online Nigeria",
+      "CAC approval",
+      "CAC pre incorporation",
+      "CAC registration form",
+      "CAC payment",
+      "Corporate Affairs Commission registration portal"
     ],
     "related": [
       "cac-business-name-registration",
       "cac-name-reservation",
-      "cac-public-search",
-      "cac-status-report"
+      "cac-change-company-name",
+      "cac-increase-issued-share-capital",
+      "cac-letter-good-standing",
+      "cac-company-secretary-change"
     ],
     "feeNote": "Company-registration charges are not one fixed amount across every incorporation because the filing depends on the company and share structure. Confirm the calculated amount in CAC's official registration portal before payment."
   },
@@ -6712,7 +6719,13 @@
       "open RSA Nigeria",
       "pension account Nigeria",
       "choose PFA",
-      "Retirement Savings Account Nigeria"
+      "Retirement Savings Account Nigeria",
+      "how to open a pension account in Nigeria",
+      "NIN for RSA registration",
+      "open pension account Nigeria",
+      "open RSA online",
+      "pension registration Nigeria",
+      "register for RSA online"
     ]
   },
   {
@@ -6924,26 +6937,32 @@
         "label": "NAFDAC Automated Product Administration and Monitoring System",
         "agency": "National Agency for Food and Drug Administration and Control",
         "url": "https://registration.nafdac.gov.ng/Home/",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-05"
       },
       {
         "label": "NAFDAC Services Portal",
         "agency": "National Agency for Food and Drug Administration and Control",
         "url": "https://services.nafdac.gov.ng/",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-05"
       }
     ],
     "related": [
+      "nafdac-food-product-registration",
+      "nafdac-cosmetics-registration",
+      "nafdac-medical-device-registration",
+      "nafdac-drug-product-registration",
       "nafdac-product-verification",
-      "nafdac-product-renewal",
-      "cac-business-name-registration"
+      "nafdac-product-renewal"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-05",
     "searchTerms": [
       "NAFDAC registration",
       "register food NAFDAC",
       "NAFDAC cosmetics registration",
-      "NAFDAC product registration requirements"
+      "NAFDAC product registration requirements",
+      "NAFDAC registration requirements for medical devices",
+      "NAFDAC food registration",
+      "NAFDAC drug registration"
     ]
   },
   {
@@ -8611,7 +8630,10 @@
       "withdraw 25 percent pension Nigeria",
       "job loss pension withdrawal",
       "RSA 25% withdrawal",
-      "PenCom unemployment withdrawal"
+      "PenCom unemployment withdrawal",
+      "25 percent pension withdrawal",
+      "apply for 25 percent pension benefit",
+      "25% pension withdrawal Nigeria"
     ],
     "related": [
       "pencom-open-rsa",
@@ -11612,6 +11634,619 @@
       "lost passport emergency travel Nigeria",
       "STEP Nigeria travel document",
       "Nigerian emergency travel document"
+    ]
+  },
+  {
+    "slug": "nafdac-food-product-registration",
+    "title": "How to register a food product with NAFDAC",
+    "shortTitle": "NAFDAC food registration",
+    "summary": "The NAFDAC route for registering locally made or imported food products, with the correct guideline, NAPAMS application, supporting documents, payment, inspection or testing and application tracking.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Varies by food product and application",
+    "feeNote": "NAFDAC publishes tariffs and now provides a cost estimator in its regulatory portal. Confirm the generated amount for the exact product and route before payment.",
+    "timeline": "Depends on whether the food is locally manufactured or imported, dossier completeness, facility inspection, laboratory work and regulatory review.",
+    "status": "verified",
+    "officialPortal": "https://registration.nafdac.gov.ng/Home/",
+    "requirements": [
+      "A NAFDAC applicant/company account and the company or business registration details requested for the application",
+      "The correct NAFDAC guideline for locally manufactured food or imported food; the two routes do not use an identical document set",
+      "Product identity, formulation/category information and labels or artwork",
+      "Evidence of payment and product-specific technical documents required by the applicable guideline",
+      "For locally made food, manufacturing/facility and inspection evidence where required; for imported food, importer/foreign-manufacturer authorisation and supporting foreign documents where required"
+    ],
+    "steps": [
+      "Decide first whether the product is locally manufactured in Nigeria or imported, then open the matching published NAFDAC food-registration guideline.",
+      "Create or sign in to the official NAPAMS applicant account and start a New Product Registration under the correct food category.",
+      "Complete the product, applicant, manufacturer and facility information and upload the documents required by the applicable food guideline.",
+      "Pay only through the official NAFDAC-generated route and keep the payment reference.",
+      "Complete any required facility inspection, sampling, laboratory or regulatory follow-up and answer compliance queries in the portal.",
+      "Track the submitted application until NAFDAC issues its decision; do not market the product as registered before approval."
+    ],
+    "notes": [
+      "NAFDAC requires a separate application for each product.",
+      "Imported-food requirements include documents that do not apply to a locally manufactured product, so use the correct route rather than a generic checklist.",
+      "A submitted application or payment receipt is not a NAFDAC registration certificate."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC Application Forms and Guidelines",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/regulatory-resources/application-forms/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Automated Product Administration and Monitoring System",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/Home/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC iRIMS Stakeholder Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Food Products and Packaged Water Made in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/FOOD_GUIDELINES/Guidelines-for-Registration-of-Food-Products-and-Packaged-Water-Made-in-Nigeria.pdf",
+        "published": "2026",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Imported Food Products in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/FOOD_GUIDELINES/Guidelines-for-Registration-of-Imported-Food-Products-in-Nigeria.pdf",
+        "published": "2026",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nafdac-product-registration",
+      "nafdac-product-verification",
+      "nafdac-product-renewal",
+      "cac-business-name-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "NAFDAC food registration",
+      "register food product NAFDAC",
+      "NAFDAC food registration requirements",
+      "NAFDAC food registration portal",
+      "NAFDAC registration for food products Nigeria",
+      "register imported food NAFDAC",
+      "register locally made food NAFDAC"
+    ]
+  },
+  {
+    "slug": "nafdac-cosmetics-registration",
+    "title": "How to register cosmetics with NAFDAC",
+    "shortTitle": "NAFDAC cosmetics registration",
+    "summary": "The official NAFDAC process for registering locally made or imported cosmetics, including the product-specific guideline, NAPAMS submission, documents, payment and regulatory follow-up.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Varies by cosmetic product and route",
+    "feeNote": "Use the current NAFDAC tariff or portal cost estimator for the exact locally made or imported cosmetics application before payment.",
+    "timeline": "Varies with the product route, dossier completeness, inspection/testing needs and NAFDAC review.",
+    "status": "verified",
+    "officialPortal": "https://registration.nafdac.gov.ng/Home/",
+    "requirements": [
+      "A NAFDAC applicant/company account and business/company details",
+      "The published NAFDAC guideline matching locally made or imported cosmetics",
+      "Product and manufacturer details, labels/artwork and the supporting technical documents required by the applicable guideline",
+      "For imported cosmetics, the foreign-manufacturer authorisation and import-route documents specified by NAFDAC",
+      "Evidence of official payment and any inspection or testing documents required for the application"
+    ],
+    "steps": [
+      "Identify whether the cosmetic is locally manufactured or imported and read the corresponding published NAFDAC cosmetics guideline.",
+      "Sign in to NAPAMS and start a New Product Registration under the cosmetics category.",
+      "Complete the applicant, manufacturer and product information and upload the category-specific supporting documents.",
+      "Make the application payment only through NAFDAC's official workflow.",
+      "Respond to any inspection, laboratory, document or compliance request issued during processing.",
+      "Track the application to a final decision before presenting the cosmetic as NAFDAC-registered."
+    ],
+    "notes": [
+      "NAFDAC treats local and imported cosmetics as different registration routes with different supporting evidence.",
+      "The NAPAMS signup flow includes Cosmetics and Household Products as a company category.",
+      "Do not reuse a registration number belonging to another product."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC Application Forms and Guidelines",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/regulatory-resources/application-forms/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Automated Product Administration and Monitoring System",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/Home/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC iRIMS Stakeholder Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Cosmetics Made in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/DR_And_R_Guidelines/Guidelines-for-Registration-of-Cosmetics-Made-in-Nigeria.pdf",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Imported Cosmetics in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/DR_And_R_Guidelines/Guidelines-for-Registration-of-Imported-Cosmetics-in-Nigeria.pdf",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nafdac-product-registration",
+      "nafdac-product-verification",
+      "nafdac-product-renewal",
+      "nafdac-food-product-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "NAFDAC cosmetics registration",
+      "register cosmetics NAFDAC",
+      "NAFDAC cosmetic registration requirements",
+      "NAFDAC cosmetics registration portal",
+      "register imported cosmetics Nigeria",
+      "register locally made cosmetics NAFDAC"
+    ]
+  },
+  {
+    "slug": "nafdac-medical-device-registration",
+    "title": "How to register a medical device with NAFDAC",
+    "shortTitle": "NAFDAC medical device registration",
+    "summary": "The current NAFDAC route for registering medical devices and IVDs in Nigeria, including product classification/grouping, application documents, NAPAMS submission and regulatory review.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Varies by device and application",
+    "feeNote": "Medical-device charges depend on the application and device route. Confirm the current amount using NAFDAC's official tariff or cost estimator.",
+    "timeline": "Depends on device classification/grouping, dossier completeness, inspection or technical review and the processing route.",
+    "status": "verified",
+    "officialPortal": "https://registration.nafdac.gov.ng/Home/",
+    "requirements": [
+      "A NAFDAC applicant/company account and the applicant/manufacturer details required by the portal",
+      "The current NAFDAC medical-device registration guideline and the correct classification/grouping for the device or IVD",
+      "Administrative and technical information sufficient to identify the device, intended use and manufacturer",
+      "Quality-management, conformity, labelling and other technical evidence required for the device class and route",
+      "Imported-device authorisation documents where the manufacturer is outside Nigeria"
+    ],
+    "steps": [
+      "Confirm that the product falls under NAFDAC's medical-device/IVD route and determine the appropriate classification and grouping before filing.",
+      "Read the current medical-device registration and grouping guidance, then create or sign in to the NAPAMS applicant account.",
+      "Start a New Product Registration for Medical and Sanitary Devices and complete the device, applicant and manufacturer information.",
+      "Upload the administrative, technical, quality and labelling documents required for the device and route, then pay through the official workflow.",
+      "Respond to any technical-review, inspection, laboratory or compliance request from NAFDAC.",
+      "Track the application to approval and verify the registration record after a certificate is issued."
+    ],
+    "notes": [
+      "Medical devices and IVDs are not a single-risk category; classification and grouping affect what must be submitted.",
+      "NAFDAC's current guidance covers imported and locally manufactured devices and should be checked before preparing a dossier.",
+      "A pending application does not authorise marketing the device as registered."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC Application Forms and Guidelines",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/regulatory-resources/application-forms/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Automated Product Administration and Monitoring System",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/Home/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC iRIMS Stakeholder Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Medical Devices in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/DR_And_R_Guidelines/Guidelines-for-Registration-of-Medical-Devices-in-Nigeria.pdf",
+        "published": "2024-05-03",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for General Grouping of Medical Devices Including IVDs",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/VBM_R%26R/2025-2030/Guidelines-for-General-Grouping-of-Medical-Devices-Including-In-Vitro-Diagnostics.pdf",
+        "published": "2025-03-21",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nafdac-product-registration",
+      "nafdac-product-verification",
+      "nafdac-product-renewal",
+      "nafdac-drug-product-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "NAFDAC medical device registration",
+      "medical device registration Nigeria",
+      "NAFDAC registration requirements for medical devices",
+      "register medical device NAFDAC",
+      "NAFDAC IVD registration",
+      "medical device NAFDAC portal"
+    ]
+  },
+  {
+    "slug": "nafdac-drug-product-registration",
+    "title": "How to register a drug product with NAFDAC",
+    "shortTitle": "NAFDAC drug registration",
+    "summary": "The NAFDAC registration route for human and veterinary drug products, separating locally made and imported applications and linking the current product-registration guidance.",
+    "category": "Product regulation",
+    "agencySlug": "nafdac",
+    "feeLabel": "Varies by drug and application route",
+    "feeNote": "Use NAFDAC's current tariff or portal cost estimator for the exact drug-product application and any related regulatory charges.",
+    "timeline": "Varies by local/import route, dossier completeness, GMP or inspection requirements, laboratory/technical review and regulatory processing.",
+    "status": "verified",
+    "officialPortal": "https://registration.nafdac.gov.ng/Home/",
+    "requirements": [
+      "A NAFDAC applicant/company account and applicant/manufacturer information",
+      "The current NAFDAC guideline for a locally manufactured or imported drug product",
+      "Product dossier and technical information required for the relevant human or veterinary drug route",
+      "Manufacturing/GMP, labelling and product-quality documents required by the guideline",
+      "For imported drugs, local-representative and foreign-manufacturer documentation required by NAFDAC"
+    ],
+    "steps": [
+      "Determine whether the drug is locally manufactured or imported and open the matching current NAFDAC drug-registration guideline.",
+      "Create or sign in to NAPAMS and start a New Product Registration under the appropriate human-medicine or veterinary-product category.",
+      "Complete the application and upload the dossier, manufacturer, GMP, labelling and other documents required for the route.",
+      "Pay through NAFDAC's official application workflow and retain the payment reference.",
+      "Respond to dossier, GMP, inspection, laboratory or compliance requests during regulatory review.",
+      "Track the application until a marketing-authorisation decision is issued and do not present the drug as registered before approval."
+    ],
+    "notes": [
+      "Locally manufactured and imported drug products have separate published NAFDAC guidelines.",
+      "Drug registration can require substantial technical dossier and manufacturing evidence beyond ordinary company documents.",
+      "Renewal is a separate lifecycle process from a new product registration."
+    ],
+    "sources": [
+      {
+        "label": "NAFDAC Application Forms and Guidelines",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/regulatory-resources/application-forms/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Automated Product Administration and Monitoring System",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/Home/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC iRIMS Stakeholder Portal",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://services.nafdac.gov.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Drug Products Made in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://www.nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/DR%26R_2025/Guidelines-for-Registration-of-Drug-Products-Made-in-Nigeria-Human-and-Veterinary-Drug.pdf",
+        "published": "2025-03-20",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "NAFDAC Guidelines for Registration of Imported Drug Products in Nigeria",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/wp-content/uploads/Files/Resources/Guidelines/DR%26R_2025/Guidelines-for-Registration-of-Imported-Drug-Products-in-Nigeria-Human-and-Veterinary-Drugs.pdf",
+        "published": "2025-03-20",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "nafdac-product-registration",
+      "nafdac-product-verification",
+      "nafdac-product-renewal",
+      "nafdac-medical-device-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "NAFDAC drug registration",
+      "register drug product NAFDAC",
+      "NAFDAC drug registration requirements",
+      "NAFDAC medicine registration Nigeria",
+      "NAFDAC pharmaceutical product registration",
+      "imported drug registration NAFDAC"
+    ]
+  },
+  {
+    "slug": "cac-change-company-name",
+    "title": "How to change a company name with CAC",
+    "shortTitle": "CAC company name change",
+    "summary": "The CAC post-incorporation process for changing a registered company's name, including the special resolution, updated memorandum and articles, official filing route and published processing timeline.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "Varies by company type",
+    "feeNote": "CAC's current fee schedule charges different company categories differently for a change of name. Confirm the applicable amount in the official filing workflow before payment.",
+    "timeline": "CAC publishes a 12-working-hour timeline for company change-of-name applications after receipt of a complete application or compliance with any query.",
+    "status": "verified",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "A special resolution approving the change of company name",
+      "Stamped memorandum and articles of association reflecting the new company name",
+      "An active CAC/CRP entity record and the information required for the post-incorporation filing",
+      "Payment of the filing amount generated for the company type"
+    ],
+    "steps": [
+      "Sign in to CAC's official Company Registration Portal and open the registered company's post-incorporation services.",
+      "Start the company change-of-name filing and enter the proposed new name and required entity information.",
+      "Upload the special resolution and stamped memorandum and articles showing the new name.",
+      "Review the application, pay the official filing charge and submit it through the CAC route.",
+      "Monitor the application for approval or a query; resolve any query in the portal and download the updated registration record after approval."
+    ],
+    "notes": [
+      "Changing a company name is a post-incorporation filing and is different from registering a new company or changing only a business-name record.",
+      "CAC's Operations Checklist cites sections 30, 31 and 50 of CAMA for the company change-of-name filing.",
+      "The published 12-working-hour timeline assumes a complete application or resolution of a raised query."
+    ],
+    "sources": [
+      {
+        "label": "CAC Revised Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Operations Checklists 2022",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2022/05/Corporate-Affairs-Commission-Operations-Checklists-2022.pdf",
+        "published": "2022",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Current Schedule of Fees",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://news.cac.gov.ng/wp-content/uploads/2025/06/New-Schedule-of-Fees-29th-May-2025.pdf",
+        "published": "2025-05-29",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-name-reservation",
+      "cac-public-search",
+      "cac-certified-true-copy"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CAC change company name",
+      "how to change company name CAC",
+      "CAC company name change requirements",
+      "CAC change of name portal",
+      "change registered company name Nigeria",
+      "CAC post incorporation change of name"
+    ]
+  },
+  {
+    "slug": "cac-increase-issued-share-capital",
+    "title": "How to increase a company's issued share capital with CAC",
+    "shortTitle": "CAC share capital increase",
+    "summary": "The CAC filing for an increase in issued share capital, including the online application, stamp duty, company resolution and memorandum/articles update required by the Commission's checklist.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "Calculated from the increase and company type",
+    "feeNote": "CAC's fee schedule bases this filing on the share-capital increase and company category, and statutory stamp duty also applies. Use the official calculation shown during filing.",
+    "timeline": "CAC publishes a 12-working-hour timeline for increase/reduction of share-capital filings after receipt of a complete application or compliance with any query.",
+    "status": "verified",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "A resolution approving the increase in issued share capital",
+      "A duly completed online CAC application",
+      "Payment of the applicable CAC filing charge and statutory stamp duty",
+      "Updated memorandum and articles of association reflecting the new issued share capital"
+    ],
+    "steps": [
+      "Confirm the new issued share-capital figure and prepare the company resolution authorising the increase.",
+      "Sign in to the official CAC portal and start the post-incorporation filing for increase in issued share capital/return of allotment.",
+      "Complete the online application and upload the resolution and any other documents requested for the filing.",
+      "Pay the CAC filing charge and the required stamp duty through the official routes shown for the transaction.",
+      "Update the company's memorandum and articles to reflect the new issued share capital and complete any related allotment information required by CAC.",
+      "Monitor the filing for approval or queries and keep the approved record with the company's statutory documents."
+    ],
+    "notes": [
+      "CAC's checklist states that a company increasing its share capital should amend its memorandum and articles to reflect the new issued share capital.",
+      "This guide is for an increase in issued share capital; a reduction in share capital has additional court/document requirements.",
+      "The amount is not a single flat fee for every company."
+    ],
+    "sources": [
+      {
+        "label": "CAC Revised Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Operations Checklists 2022",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2022/05/Corporate-Affairs-Commission-Operations-Checklists-2022.pdf",
+        "published": "2022",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Current Schedule of Fees",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://news.cac.gov.ng/wp-content/uploads/2025/06/New-Schedule-of-Fees-29th-May-2025.pdf",
+        "published": "2025-05-29",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-beneficial-ownership-psc",
+      "cac-change-director",
+      "cac-certified-true-copy"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CAC increase share capital",
+      "increase issued share capital CAC",
+      "CAC share capital increase fee",
+      "how to increase share capital in Nigeria",
+      "CAC 5 share capital",
+      "CAC post incorporation share capital"
+    ]
+  },
+  {
+    "slug": "cac-letter-good-standing",
+    "title": "How to get a CAC Letter of Good Standing",
+    "shortTitle": "CAC Letter of Good Standing",
+    "summary": "How to request a CAC Letter of Good Standing for a compliant registered entity, including the current form/payment route and CAC's published 3–5 working-day service timeline.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "Depends on entity/company type",
+    "feeNote": "CAC's current fee schedule lists the Letter of Good Standing charge by entity or company category. Confirm the applicable current amount before payment.",
+    "timeline": "CAC publishes a 3–5 working-day timeline for a Letter of Good Standing.",
+    "status": "verified",
+    "officialPortal": "https://www.cac.gov.ng/resources",
+    "requirements": [
+      "The registered entity name and registration number",
+      "A completed CAC Letter of Good Standing application with the addressee and applicant/delivery details requested by the form",
+      "Evidence of the applicable CAC payment",
+      "For a company, up-to-date annual returns and a company secretary, as stated on CAC's Letter of Good Standing form"
+    ],
+    "steps": [
+      "Confirm that the entity's CAC filings are up to date before requesting the letter.",
+      "Open CAC's official resources and obtain the current Letter of Good Standing request route or form.",
+      "Complete the entity, addressee, applicant and delivery information requested by CAC.",
+      "Pay the applicable official charge and attach the payment evidence required by CAC.",
+      "Submit through the official CAC route and keep the acknowledgement while the request is processed.",
+      "Check the issued letter carefully against the entity name, registration number and intended addressee."
+    ],
+    "notes": [
+      "CAC publishes a 3–5 working-day service timeline for this request.",
+      "CAC's Letter of Good Standing form states that a company must have updated its annual returns and have a company secretary before issuance.",
+      "A Letter of Good Standing is not the same document as a Status Report or Certified True Copy."
+    ],
+    "sources": [
+      {
+        "label": "CAC Revised Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Operations Checklists 2022",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2022/05/Corporate-Affairs-Commission-Operations-Checklists-2022.pdf",
+        "published": "2022",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Current Schedule of Fees",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://news.cac.gov.ng/wp-content/uploads/2025/06/New-Schedule-of-Fees-29th-May-2025.pdf",
+        "published": "2025-05-29",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Letter of Good Standing Form",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2020/08/CAC-LGS-005.pdf",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Procedures for Letter of Good Standing",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2020/08/procedures.pdf",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cac-status-report",
+      "cac-certified-true-copy",
+      "cac-public-search",
+      "cac-annual-returns"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CAC letter of good standing",
+      "letter of good standing CAC Nigeria",
+      "CAC good standing certificate",
+      "how to get CAC letter of good standing",
+      "CAC letter of good standing fee",
+      "CAC good standing requirements"
+    ]
+  },
+  {
+    "slug": "cac-company-secretary-change",
+    "title": "How to appoint or change a company secretary with CAC",
+    "shortTitle": "CAC company secretary change",
+    "summary": "The CAC post-incorporation filing for appointing a company secretary or changing secretary details, including consent, identification or corporate-secretary particulars and the official filing timeline.",
+    "category": "Business",
+    "agencySlug": "cac",
+    "feeLabel": "Post-incorporation filing fee applies",
+    "feeNote": "The applicable CAC charge depends on the company category and filing. Confirm the amount generated in the official post-incorporation workflow.",
+    "timeline": "CAC publishes a 12-working-hour timeline for the company secretary post-registration filing after a complete application or compliance with any query.",
+    "status": "verified",
+    "officialPortal": "https://icrp.cac.gov.ng/",
+    "requirements": [
+      "Consent of the company secretary",
+      "For an individual secretary, a copy of a recognised valid photo-identification document",
+      "For a corporate secretary, the registration particulars requested by CAC",
+      "The registered company's entity details and access to the official post-incorporation filing route"
+    ],
+    "steps": [
+      "Sign in to CAC's official portal and open the registered company's post-incorporation services.",
+      "Choose the filing for appointment of a secretary or change in secretary particulars, as applicable.",
+      "Enter the new or corrected secretary information and upload the consent plus identification or corporate-registration particulars required by CAC.",
+      "Review the submission and pay the official post-incorporation charge generated for the filing.",
+      "Submit the application, respond to any CAC query and retain the approved filing with the company's corporate records."
+    ],
+    "notes": [
+      "CAC's Operations Checklist lists consent of the secretary as a requirement.",
+      "Identification is required when the secretary is an individual; a corporate secretary uses its registration particulars.",
+      "This filing is separate from changing directors or the registered office address."
+    ],
+    "sources": [
+      {
+        "label": "CAC Revised Service Timelines",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/services/service-timelines",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Operations Checklists 2022",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://www.cac.gov.ng/wp-content/uploads/2022/05/Corporate-Affairs-Commission-Operations-Checklists-2022.pdf",
+        "published": "2022",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC Current Schedule of Fees",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://news.cac.gov.ng/wp-content/uploads/2025/06/New-Schedule-of-Fees-29th-May-2025.pdf",
+        "published": "2025-05-29",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cac-company-registration",
+      "cac-change-director",
+      "cac-change-registered-address",
+      "cac-letter-good-standing"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CAC company secretary change",
+      "appoint company secretary CAC",
+      "change company secretary Nigeria",
+      "CAC secretary appointment",
+      "CAC post incorporation secretary",
+      "CAC secretary change requirements"
     ]
   }
 ]
