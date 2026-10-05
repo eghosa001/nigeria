@@ -2216,7 +2216,6 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Official Netflix title page. Availability can vary by territory even when the title appears in regional charts.",
     }],
   },
-,
   {
     slug: "the-herd",
     title: "The Herd",
