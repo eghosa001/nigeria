@@ -670,9 +670,9 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "private-services-nigeria",
-    title: "Private Services in Nigeria: Banking, Telecoms, TV, Flights, Logistics & Tests",
+    title: "Private Services in Nigeria: Banking, Telecoms, Travel, Logistics, Health & More",
     shortTitle: "Private services",
-    description: "Verified private-provider service guides for telecoms, banking, pay-TV, airlines, logistics and private examination booking in Nigeria.",
+    description: "Verified private-provider service guides across banking, telecoms, travel, accommodation, logistics, health, insurance, marketplaces, utilities and professional services in Nigeria.",
     intro: [
       "Private-service pages on MyNigeriaGuide follow the same evidence rule as government guides: a provider task is published only when the provider exposes a stable official route or help source with enough detail to verify what the customer should do.",
       "Use the exact provider task below rather than a generic third-party tutorial. Fees, eligibility and timing can change, so each guide keeps its own last-verified date, provider links and visible conflict state when official pages disagree."
@@ -960,7 +960,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "CITN induction application", serviceSlug: "citn-induction-application" },
       { query: "MTN 5G router Nigeria", serviceSlug: "mtn-5g-router-purchase-activation" },
       { query: "MTN broadband resubscription", serviceSlug: "mtn-broadband-router-resubscribe" },
-      { query: "MTN FibreX Nigeria", serviceSlug: "mtn-fibrex-order-installation" }
+      { query: "MTN FibreX Nigeria", serviceSlug: "mtn-fibrex-order-installation" },
+      { query: "book hotel on Hotels.ng", serviceSlug: "hotelsng-book-hotel" },
+      { query: "Hotels.ng refund", serviceSlug: "hotelsng-cancel-refund" },
+      { query: "order with Glovo Nigeria", serviceSlug: "glovo-order-nigeria" },
+      { query: "Glovo refund Nigeria", serviceSlug: "glovo-cancel-refund-order" },
+      { query: "book Kwik delivery", serviceSlug: "kwik-book-delivery-nigeria" },
+      { query: "track Kwik delivery", serviceSlug: "kwik-track-delivery-nigeria" },
+      { query: "Kwik corporate account", serviceSlug: "kwik-corporate-account" },
+      { query: "Travelstart Nigeria existing booking support", serviceSlug: "travelstart-existing-booking-support-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1231,7 +1239,15 @@ export const growthHubs: GrowthHub[] = [
       "citn-induction-application",
       "mtn-5g-router-purchase-activation",
       "mtn-broadband-router-resubscribe",
-      "mtn-fibrex-order-installation"
+      "mtn-fibrex-order-installation",
+      "hotelsng-book-hotel",
+      "hotelsng-cancel-refund",
+      "glovo-order-nigeria",
+      "glovo-cancel-refund-order",
+      "kwik-book-delivery-nigeria",
+      "kwik-track-delivery-nigeria",
+      "kwik-corporate-account",
+      "travelstart-existing-booking-support-nigeria"
     ]
   },
 
