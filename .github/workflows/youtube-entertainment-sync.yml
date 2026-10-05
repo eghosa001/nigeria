@@ -2,6 +2,11 @@ name: YouTube Entertainment Sync
 
 # Production refresh runs manually or on schedule; catalog updates land through a PR.
 on:
+  push:
+    branches:
+      - scale-movies-entertainment
+    paths:
+      - data/youtube-sync-trigger-2.txt
   workflow_dispatch:
     inputs:
       full_sync:
@@ -33,6 +38,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Validate fast-path policy
+        run: python3 scripts/fast_path_guard.py
 
       - id: api-key
         name: Check YouTube API credential
