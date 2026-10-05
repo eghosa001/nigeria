@@ -1,12 +1,12 @@
 import type { CareerOpportunity, JobRecordKind, JobSector } from "@/lib/jobs";
 
-// This module is the verified 191-record wave that brings the Jobs catalog to the 300-record milestone.
-// Production live QA probes representative records from this module after each Jobs-only deploy.
+// Quality-first employer/recruitment wave.
+// Board-only role names are retained only as redirects; they are not published as thin vacancy pages.
 
 const VERIFIED_AT = "2026-10-05";
 
 type CareerSeed = [organization: string, slug: string, sector: JobSector, category: string, url: string, location: string];
-type VacancySeed = [title: string, location: string, category: string];
+type RetiredVacancySeed = [title: string, location: string, category: string];
 
 const careerSeeds = [
   [
@@ -46,7 +46,7 @@ const careerSeeds = [
     "premiumtrust-bank-careers",
     "Private",
     "Banking",
-    "https://mail.premiumtrustbank.com/careers/",
+    "https://premiumtrustbank.com/careers/",
     "Nigeria"
   ],
   [
@@ -54,7 +54,7 @@ const careerSeeds = [
     "keystone-bank-careers",
     "Private",
     "Banking",
-    "https://www.keystonebankng.com/about-us/",
+    "https://www.keystonebankng.com/about-us/careers/",
     "Nigeria"
   ],
   [
@@ -318,7 +318,7 @@ const careerSeeds = [
     "google-nigeria-careers",
     "Private",
     "Technology",
-    "https://careers.google.com/locations/lagos/?embed=true",
+    "https://careers.google.com/jobs/",
     "Lagos, Nigeria"
   ],
   [
@@ -334,7 +334,7 @@ const careerSeeds = [
     "meta-nigeria-careers",
     "Private",
     "Technology",
-    "https://www.meta.com/about/company-info/",
+    "https://www.metacareers.com/jobs/",
     "Nigeria / global"
   ],
   [
@@ -390,7 +390,7 @@ const careerSeeds = [
     "chowdeck-careers",
     "Private",
     "Technology",
-    "https://www.chowdeck.com/",
+    "https://chowdeck.com/earlytalent",
     "Nigeria"
   ],
   [
@@ -542,7 +542,7 @@ const careerSeeds = [
     "gsk-nigeria-careers",
     "Private",
     "Healthcare",
-    "https://jobs.gsk.com/en-ng/",
+    "https://jobs.gsk.com/",
     "Nigeria"
   ],
   [
@@ -592,14 +592,6 @@ const careerSeeds = [
     "Education",
     "https://aun.edu.ng/index.php/about/careers",
     "Yola, Adamawa State"
-  ],
-  [
-    "Elizade University",
-    "elizade-university-careers",
-    "Private",
-    "Education",
-    "https://www.elizadeuniversity.edu.ng/",
-    "Ilara-Mokin, Ondo State"
   ],
   [
     "Caleb University",
@@ -707,29 +699,51 @@ const audienceByCategory: Record<string, string[]> = {
 function careerPage([organization, slug, sector, category, url, location]: CareerSeed): CareerOpportunity {
   const fields = fieldsByCategory[category] ?? ["Operations", "Administration", "Technology"];
   const audiences = audienceByCategory[category] ?? ["Graduates", "Experienced hires"];
+  const fieldSummary = fields.slice(0, 5).join(", ");
   return {
     slug,
-    title: organization + " Careers",
+    title: organization + " Careers & Official Recruitment Portal",
     organization,
     kind: "career-page",
     topicSlugs: topicByCategory[category] ?? [],
     sector,
     status: "career-page",
-    statusLabel: "Official careers / recruitment route",
-    summary: organization + " maintains an official recruitment or careers route for applicants interested in " + fields.slice(0, 4).join(", ").toLowerCase() + ". MyNigeriaGuide treats this as a verified employer pathway rather than claiming every role on the portal is currently open.",
+    statusLabel: "Official employer career portal",
+    summary: "Use " + organization + "'s verified official careers or recruitment source to find current openings, programmes and application instructions. This is an employer portal guide, not a claim that a particular vacancy is open today.",
     location,
-    employmentType: category + " careers",
+    employmentType: category + " careers / employer recruitment portal",
     audiences,
     fields,
-    qualifications: ["Qualifications depend on the specific " + organization + " vacancy, programme or recruitment exercise selected on the official source."],
-    requirements: ["Start from the official " + organization + " recruitment source.", "Open the exact role or programme and confirm its current status, location, experience and eligibility requirements.", "Do not rely on copied vacancy posts when the responsible organisation provides an official route."],
-    documents: ["CV/resume", "Academic, professional or identity documents requested by the exact official vacancy"],
-    applicationSteps: ["Open the verified official recruitment source.", "Search or browse for a role that matches your experience.", "Read the exact requirements and deadline.", "Apply only through the route identified by " + organization + "."],
+    qualifications: [
+      "This is an employer career portal rather than a single vacancy, so there is no one qualification that applies to every role.",
+      "Open the exact vacancy or programme on " + organization + "'s official source and use its published education, experience, licence and location criteria as the controlling requirements."
+    ],
+    requirements: [
+      "Choose a specific vacancy or programme that the official source currently shows as available.",
+      "Confirm the role title, location, employment type, deadline and eligibility on the exact employer page before submitting.",
+      "Use only the application route identified by " + organization + "; MyNigeriaGuide does not collect applications or recruitment payments.",
+      "If the official source no longer shows the role you wanted, treat that role as unavailable until the employer republishes it."
+    ],
+    documents: [
+      "An up-to-date CV/resume suitable for the exact role.",
+      "Only the academic, professional, identity or portfolio documents requested by the selected " + organization + " vacancy."
+    ],
+    applicationSteps: [
+      "Open " + organization + "'s verified official careers or recruitment source.",
+      "Browse or search the employer's current opportunities. Common hiring areas covered by this guide include " + fieldSummary + ".",
+      "Open the exact vacancy or programme before applying; read its responsibilities, qualifications, location, deadline and application method.",
+      "Prepare the documents requested by that exact vacancy instead of sending unrelated credentials.",
+      "Submit through the employer's stated Apply control, recruitment portal or application instruction and keep the confirmation for your records."
+    ],
     officialUrl: url,
-    officialUrlLabel: "Open " + organization + " careers",
+    officialUrlLabel: "Open " + organization + " official careers source",
     verifiedAt: VERIFIED_AT,
-    feeNote: "Verify any payment, assessment or document request against " + organization + "'s official recruitment instructions before proceeding.",
-    sourceNotes: ["The official " + organization + " source provides a recruitment, careers, vacancy or talent route for applicants.", "This pathway was checked on 5 October 2026 and is not presented as a specific live vacancy unless a separate vacancy record exists."],
+    feeNote: "Verify any payment, assessment or document request against " + organization + "'s official recruitment instructions. MyNigeriaGuide does not sell access to jobs, shortlists or interviews.",
+    sourceNotes: [
+      "The linked source is the employer or responsible organisation's own careers, recruitment or talent route.",
+      "This page intentionally does not invent vacancy-specific qualifications where the source is an employer-wide career portal.",
+      "A separate MyNigeriaGuide vacancy page should exist only when a distinct official role source and substantive role details have been verified."
+    ],
     sources: [{ label: organization + " official careers / recruitment source", url, lastChecked: VERIFIED_AT }],
   };
 }
@@ -744,48 +758,7 @@ function slugify(value: string) {
     .replace(/^-|-$/g, "");
 }
 
-function topicsForVacancy(category: string, organization: string) {
-  const text = (category + " " + organization).toLowerCase();
-  const topics = new Set<string>();
-  if (/medical|health|clinic|pharmac|laboratory|nurs/.test(text)) topics.add("healthcare-pharma");
-  if (/software|data|technology|product|it |e-commerce/.test(text)) topics.add("tech-fintech");
-  if (/finance|risk|credit|treasury|audit/.test(text)) topics.add("banking-finance");
-  if (/aviation|airline/.test(text)) topics.add("aviation-logistics");
-  if (/logistics|fleet|supply chain|gateway|transport/.test(text)) topics.add("aviation-logistics");
-  if (/manufactur|engineering|procurement|machine/.test(text)) topics.add("fmcg-manufacturing");
-  if (/education|university|academic/.test(text)) topics.add("universities-research");
-  return Array.from(topics);
-}
-
-function openVacancy(organization: string, sector: JobSector, url: string, [title, location, category]: VacancySeed): CareerOpportunity {
-  return {
-    slug: slugify(organization + " " + title + " 2026"),
-    title: organization + " — " + title,
-    organization,
-    kind: "vacancy",
-    topicSlugs: topicsForVacancy(category, organization),
-    sector,
-    status: "open",
-    statusLabel: "Listed on official careers board",
-    summary: organization + " lists " + title + " for " + location + " on its official careers board. The vacancy was checked on 5 October 2026; applicants should confirm the live role card for the latest requirements and closing status.",
-    location,
-    employmentType: category + " role",
-    audiences: [category + " applicants", "Qualified professionals", "Job seekers in Nigeria"],
-    fields: [category, organization],
-    qualifications: ["Review the official " + organization + " vacancy for the exact education, professional qualification, experience and skill requirements attached to " + title + "."],
-    requirements: ["Confirm that " + title + " is still visible on the official careers board before submitting.", "Meet the role-specific location, experience and eligibility requirements published by " + organization + "."],
-    documents: ["CV/resume", "Credentials or supporting information requested by the official vacancy"],
-    applicationSteps: ["Open " + organization + "'s official careers board.", "Locate " + title + ".", "Review the complete role description, eligibility and any deadline.", "Apply using the official application control or instructions."],
-    officialUrl: url,
-    officialUrlLabel: "Open " + organization + " careers board",
-    verifiedAt: VERIFIED_AT,
-    feeNote: "Use the responsible employer's official recruitment instructions and do not pay an unofficial intermediary for access to this vacancy.",
-    sourceNotes: ["The official " + organization + " careers board listed " + title + " for " + location + " when checked on 5 October 2026."],
-    sources: [{ label: organization + " official careers board", url, lastChecked: VERIFIED_AT }],
-  };
-}
-
-const vacancyGroups: Array<[string, JobSector, string, VacancySeed[]]> = [
+const retiredVacancyGroups: Array<[string, JobSector, string, RetiredVacancySeed[]]> = [
   [
     "Reliance Health",
     "Private",
@@ -1417,12 +1390,21 @@ const federalUniversityLafia: CareerOpportunity = {
   sources: [{ label: "Federal Character Commission Recruitment Directory", url: "https://fcc.gov.ng/recruitment/", lastChecked: VERIFIED_AT }],
 };
 
+const careerSlugByOrganization = new Map(careerSeeds.map(([organization, slug]) => [organization, slug]));
+
+export const retiredJobRedirects = new Map<string, string>(
+  retiredVacancyGroups.flatMap(([organization, , , roles]) => {
+    const target = careerSlugByOrganization.get(organization);
+    if (!target) return [];
+    return roles.map(([title]) => [slugify(organization + " " + title + " 2026"), target] as [string, string]);
+  })
+);
+
 export const jobScaleWave: CareerOpportunity[] = [
   ...careerSeeds.map(careerPage),
-  ...vacancyGroups.flatMap(([organization, sector, url, roles]) => roles.map((role) => openVacancy(organization, sector, url, role))),
   federalUniversityLafia,
 ];
 
-if (jobScaleWave.length !== 191) {
-  throw new Error("Jobs scale wave must contain exactly 191 records; found " + jobScaleWave.length);
+if (jobScaleWave.length !== 81) {
+  throw new Error("Quality-first Jobs scale wave must contain exactly 81 records; found " + jobScaleWave.length);
 }
