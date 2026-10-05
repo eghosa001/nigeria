@@ -1096,7 +1096,21 @@ export const growthHubs: GrowthHub[] = [
       { query: "TLScontact Italy Nigeria appointment", serviceSlug: "tlscontact-italy-visa-appointment-nigeria" },
       { query: "TLScontact Italy passport collection Nigeria", serviceSlug: "tlscontact-italy-passport-collection-nigeria" },
       { query: "TLScontact Belgium Nigeria appointment", serviceSlug: "tlscontact-belgium-visa-appointment-nigeria" },
-      { query: "TLScontact Belgium passport collection Nigeria", serviceSlug: "tlscontact-belgium-track-collect-passport-nigeria" }
+      { query: "TLScontact Belgium passport collection Nigeria", serviceSlug: "tlscontact-belgium-track-collect-passport-nigeria" },
+      { query: "book hotel on Hotels.ng", serviceSlug: "hotels-ng-book-hotel" },
+      { query: "cancel Hotels.ng booking", serviceSlug: "hotels-ng-cancel-refund-booking" },
+      { query: "create Risevest account", serviceSlug: "risevest-create-verify-account" },
+      { query: "fund Risevest wallet", serviceSlug: "risevest-fund-wallet" },
+      { query: "withdraw from Risevest", serviceSlug: "risevest-withdraw-funds" },
+      { query: "open Grey account Nigeria", serviceSlug: "grey-create-verify-account" },
+      { query: "Grey US account Nigeria", serviceSlug: "grey-us-account-nigeria" },
+      { query: "Grey virtual card Nigeria", serviceSlug: "grey-virtual-card-nigeria" },
+      { query: "open LemFi global account Nigeria", serviceSlug: "lemfi-open-global-account-nigeria" },
+      { query: "withdraw from LemFi Nigeria", serviceSlug: "lemfi-withdraw-global-account-nigeria" },
+      { query: "receive Western Union Nigeria", serviceSlug: "western-union-receive-money-nigeria" },
+      { query: "track Western Union Nigeria", serviceSlug: "western-union-track-transfer-nigeria" },
+      { query: "receive MoneyGram Nigeria", serviceSlug: "moneygram-receive-money-nigeria" },
+      { query: "track MoneyGram Nigeria", serviceSlug: "moneygram-track-transfer-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1503,7 +1517,21 @@ export const growthHubs: GrowthHub[] = [
       "tlscontact-italy-visa-appointment-nigeria",
       "tlscontact-italy-passport-collection-nigeria",
       "tlscontact-belgium-visa-appointment-nigeria",
-      "tlscontact-belgium-track-collect-passport-nigeria"
+      "tlscontact-belgium-track-collect-passport-nigeria",
+      "hotels-ng-book-hotel",
+      "hotels-ng-cancel-refund-booking",
+      "risevest-create-verify-account",
+      "risevest-fund-wallet",
+      "risevest-withdraw-funds",
+      "grey-create-verify-account",
+      "grey-us-account-nigeria",
+      "grey-virtual-card-nigeria",
+      "lemfi-open-global-account-nigeria",
+      "lemfi-withdraw-global-account-nigeria",
+      "western-union-receive-money-nigeria",
+      "western-union-track-transfer-nigeria",
+      "moneygram-receive-money-nigeria",
+      "moneygram-track-transfer-nigeria"
     ]
   },
 
