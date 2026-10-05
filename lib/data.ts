@@ -429,6 +429,97 @@ export const agencies: Agency[] = [
     "shortName": "China Visa",
     "description": "Chinese visa guidance and consular services for applicants in Nigeria.",
     "website": "https://ng.china-embassy.gov.cn/eng/"
+  },
+  {
+    "slug": "mtn-nigeria",
+    "name": "MTN Nigeria",
+    "shortName": "MTN",
+    "description": "Private mobile-network services including SIM, eSIM, roaming, data and account support.",
+    "website": "https://www.mtn.ng/"
+  },
+  {
+    "slug": "airtel-nigeria",
+    "name": "Airtel Nigeria",
+    "shortName": "Airtel",
+    "description": "Private mobile-network services including SIM, eSIM, data, account and customer support.",
+    "website": "https://www.airtel.com.ng/"
+  },
+  {
+    "slug": "globacom",
+    "name": "Globacom Limited",
+    "shortName": "Glo",
+    "description": "Private mobile-network services including SIM, eSIM, data and customer support.",
+    "website": "https://www.gloworld.com/ng/"
+  },
+  {
+    "slug": "moniepoint",
+    "name": "Moniepoint Microfinance Bank",
+    "shortName": "Moniepoint",
+    "description": "Private personal and business banking, cards, payments, USSD and account services.",
+    "website": "https://moniepoint.com/ng/"
+  },
+  {
+    "slug": "firstbank",
+    "name": "First Bank of Nigeria Limited",
+    "shortName": "FirstBank",
+    "description": "Private retail and business banking, account, card and digital-banking services.",
+    "website": "https://www.firstbanknigeria.com/"
+  },
+  {
+    "slug": "uba",
+    "name": "United Bank for Africa Nigeria",
+    "shortName": "UBA",
+    "description": "Private retail, business and digital banking services in Nigeria.",
+    "website": "https://www.ubagroup.com/nigeria/"
+  },
+  {
+    "slug": "access-bank",
+    "name": "Access Bank Plc",
+    "shortName": "Access Bank",
+    "description": "Private retail and business banking, cards, account and digital-banking services.",
+    "website": "https://www.accessbankplc.com/"
+  },
+  {
+    "slug": "dstv-nigeria",
+    "name": "DStv Nigeria",
+    "shortName": "DStv",
+    "description": "Private pay-TV subscription, payment, package and decoder self-service.",
+    "website": "https://www.dstv.com/en-ng/"
+  },
+  {
+    "slug": "gotv-nigeria",
+    "name": "GOtv Nigeria",
+    "shortName": "GOtv",
+    "description": "Private pay-TV subscription, payment, package and decoder self-service.",
+    "website": "https://www.gotvafrica.com/en-ng/"
+  },
+  {
+    "slug": "air-peace",
+    "name": "Air Peace",
+    "shortName": "Air Peace",
+    "description": "Private Nigerian airline booking, check-in, baggage and passenger-support services.",
+    "website": "https://flyairpeace.com/"
+  },
+  {
+    "slug": "dhl-express-nigeria",
+    "name": "DHL Express Nigeria",
+    "shortName": "DHL Express",
+    "description": "Private international express shipping, pickup, drop-off and shipment-tracking services.",
+    "website": "https://www.dhl.com/ng-en/home.html"
+  },
+  {
+    "slug": "british-council-nigeria",
+    "name": "British Council Nigeria",
+    "shortName": "British Council",
+    "description": "Private/non-government examination and education services including IELTS testing in Nigeria.",
+    "website": "https://www.britishcouncil.org.ng/"
+  },
+  {
+    "slug": "idp-ielts-nigeria",
+    "name": "IDP IELTS Nigeria",
+    "shortName": "IDP IELTS",
+    "description": "Private IELTS booking, testing and candidate-support services across Nigerian test centres.",
+    "website": "https://ielts.idp.com/nigeria"
   }
 ];
 
