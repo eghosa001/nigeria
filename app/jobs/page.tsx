@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { JobsDirectory } from "@/components/jobs-directory";
-import { governmentOpportunities, jobOpportunities, privateOpportunities } from "@/lib/jobs";
+import { governmentOpportunities, internationalOpportunities, jobOpportunities, privateOpportunities } from "@/lib/jobs";
+import { jobTopics } from "@/lib/job-topics";
+import { careerGuides } from "@/lib/career-guides";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -47,7 +49,7 @@ export default function JobsPage() {
           <div>
             <span className="eyebrow">Jobs & Careers</span>
             <h1>Know what is open. Know what you need. Apply at the source.</h1>
-            <p className="page-intro">Government recruitment, graduate opportunities, internships and reputable employer career routes — checked against the organisation responsible for the application.</p>
+            <p className="page-intro">Government recruitment, graduate opportunities, internships, NGO/UN pathways and reputable employer career routes — checked against the organisation responsible for the application.</p>
             <form className="section-quick-search" action="/jobs#opportunities" method="get" role="search">
               <label>
                 <span>Search jobs & careers</span>
@@ -67,7 +69,7 @@ export default function JobsPage() {
             <strong>No copied “apply now” forms.</strong>
             <p>MyNigeriaGuide explains the requirements and sends you to the responsible organisation to apply.</p>
             <div><b>{activeGovernment}</b><small>government recruitments currently open or in an active later stage</small></div>
-            <div><b>{careerPages}</b><small>official employer career pathways checked</small></div>
+            <div><b>{careerPages}</b><small>official employer and organisation career pathways checked</small></div>
             <div><b>₦0</b><small>fees collected by MyNigeriaGuide</small></div>
           </aside>
         </div>
@@ -145,6 +147,36 @@ export default function JobsPage() {
             <Link href="/jobs/remote">Remote & hybrid jobs</Link>
             <a href="#opportunities">Search the full directory</a>
           </div>
+
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Browse by industry</span>
+              <h2>Go deeper without creating thin keyword pages.</h2>
+              <p>Each sector hub groups verified employer routes that share a real job-search intent.</p>
+            </div>
+          </div>
+          <div className="jobs-topic-links" aria-label="Browse jobs by industry">
+            {jobTopics.map((topic) => (
+              <Link href={"/jobs/categories/" + topic.slug} key={topic.slug}>{topic.shortTitle}</Link>
+            ))}
+          </div>
+
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Career tools</span>
+              <h2>Prepare before you press Apply.</h2>
+              <p>Practical, source-aware guides for the parts of a job search that repeat across employers.</p>
+            </div>
+          </div>
+          <div className="jobs-topic-links" aria-label="Career application guides">
+            {careerGuides.map((guide) => (
+              <Link href={"/jobs/guides/" + guide.slug} key={guide.slug}>{guide.title}</Link>
+            ))}
+          </div>
+
+          {internationalOpportunities.length ? (
+            <p className="job-muted">{internationalOpportunities.length} verified international, NGO or UN-system pathways are included in the directory and sector filters.</p>
+          ) : null}
         </div>
       </section>
 

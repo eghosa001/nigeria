@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
+import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getSiteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -27,6 +28,14 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const { slug } = await params;
   const item = getJobOpportunity(slug);
   if (!item) notFound();
+
+  const relatedTopics = getJobTopicsForOpportunity(item);
+  const sectorBrowse =
+    item.sector === "Government"
+      ? { href: "/jobs/government", label: "Browse more government opportunities" }
+      : item.sector === "International"
+        ? { href: "/jobs/categories/ngo-development", label: "Browse NGO & international opportunities" }
+        : { href: "/jobs/private", label: "Browse more private-sector opportunities" };
 
   const base = getSiteUrl();
   const pageLd = {
@@ -157,9 +166,15 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <p>Requirements can change between recruitment cycles.</p>
               <p>Never send passwords, one-time codes or payment to MyNigeriaGuide.</p>
             </div>
-            <Link href={item.sector === "Government" ? "/jobs/government" : "/jobs/private"} className="job-sidebar-link">
-              Browse more {item.sector.toLowerCase()} opportunities →
-            </Link>
+            <Link href={sectorBrowse.href} className="job-sidebar-link">{sectorBrowse.label} →</Link>
+            {relatedTopics.length ? (
+              <div className="job-sidebar-card">
+                <strong>Related career areas</strong>
+                {relatedTopics.map((topic) => (
+                  <p key={topic.slug}><Link href={"/jobs/categories/" + topic.slug}>{topic.shortTitle} →</Link></p>
+                ))}
+              </div>
+            ) : null}
           </aside>
         </div>
       </section>

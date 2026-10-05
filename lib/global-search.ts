@@ -1,3 +1,5 @@
+import { careerGuides } from "@/lib/career-guides";
+
 function normalise(value: string) {
   return value
     .normalize("NFD")
@@ -45,6 +47,7 @@ export async function searchGlobalCatalog(query: string) {
     return {
       serviceResults: [],
       jobResults: [],
+      careerGuideResults: [],
       exploreResults: [],
       placeResults: [],
       movieResults: [],
@@ -89,6 +92,25 @@ export async function searchGlobalCatalog(query: string) {
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
     .slice(0, 16)
+    .map((entry) => entry.item);
+
+  const careerGuideResults = careerGuides
+    .map((guide) => ({
+      item: guide,
+      score: relevance(
+        query,
+        guide.title,
+        [
+          guide.description,
+          guide.summary,
+          guide.answer,
+          ...guide.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...(section.bullets ?? [])]),
+        ].join(" "),
+      ),
+    }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
+    .slice(0, 6)
     .map((entry) => entry.item);
 
   const jobResults = jobOpportunities
@@ -195,6 +217,7 @@ export async function searchGlobalCatalog(query: string) {
   return {
     serviceResults,
     jobResults,
+    careerGuideResults,
     exploreResults,
     placeResults,
     movieResults,
@@ -209,6 +232,7 @@ export async function searchGlobalCatalog(query: string) {
       serviceResults.length +
       exploreResults.length +
       placeResults.length +
-      jobResults.length,
+      jobResults.length +
+      careerGuideResults.length,
   };
 }

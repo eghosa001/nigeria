@@ -84,9 +84,10 @@ export function JobsDirectory({ opportunities }: Props) {
         <label>
           <span>Sector</span>
           <select value={sector} onChange={(event) => setSector(event.target.value as JobSector | "All")}>
-            <option value="All">Government & private</option>
+            <option value="All">All sectors</option>
             <option value="Government">Government</option>
-            <option value="Private">Private institutions</option>
+            <option value="Private">Private employers</option>
+            <option value="International">International / NGO</option>
           </select>
         </label>
 

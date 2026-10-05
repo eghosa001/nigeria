@@ -24,6 +24,7 @@ export default async function SearchPage({
   const {
     serviceResults,
     jobResults,
+    careerGuideResults,
     exploreResults,
     placeResults,
     movieResults,
@@ -251,6 +252,26 @@ export default async function SearchPage({
                         <strong>{item.name}</strong>
                         <p>{item.summary}</p>
                         <small>{item.area} · checked {item.checkedAt}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {careerGuideResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Career guides</span><strong>{careerGuideResults.length} shown</strong></div>
+                    <Link href="/jobs">Jobs & Careers →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {careerGuideResults.map((guide) => (
+                      <Link href={"/jobs/guides/" + guide.slug} key={guide.slug}>
+                        <span className="search-result-type">Career guide</span>
+                        <strong>{guide.title}</strong>
+                        <p>{guide.summary}</p>
+                        <small>Reviewed {guide.reviewedAt}</small>
                         <b aria-hidden="true">→</b>
                       </Link>
                     ))}
