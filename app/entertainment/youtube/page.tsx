@@ -3,7 +3,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
-import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-pagination";
 
@@ -37,6 +36,9 @@ export default async function YouTubeMoviesPage({
     redirect("/entertainment/youtube/page/" + requestedPage);
   }
 
+  const publisherOptions = [...new Set(youtubeMovieLibrary.map((movie) => movie.channelName))]
+    .sort((a, b) => a.localeCompare(b));
+
   const filtered = youtubeMovieLibrary
     .filter((movie) => {
       const searchable = [movie.title, movie.synopsis, ...movie.cast, movie.channelName].join(" ").toLowerCase();
@@ -67,7 +69,7 @@ export default async function YouTubeMoviesPage({
             <div>
               <span className="eyebrow">Free on YouTube</span>
               <h1>Full Nigerian movies on YouTube.</h1>
-              <p className="page-intro">Search by movie, actor or publisher, open the details page, then use the verified YouTube watch link.</p>
+              <p className="page-intro">Browse {youtubeMovieLibrary.length.toLocaleString()} complete full-length Nigerian movie guides. Search by movie, actor or publisher, open the details page, then use the verified YouTube watch link.</p>
             </div>
           </div>
           <div className="movie-browse-tabs">
@@ -90,8 +92,8 @@ export default async function YouTubeMoviesPage({
               <span>Publisher</span>
               <select name="channel" defaultValue={channel}>
                 <option value="">All publishers</option>
-                {verifiedYouTubeMovieChannels.map((source) => (
-                  <option key={source.slug} value={source.name}>{source.name}</option>
+                {publisherOptions.map((publisher) => (
+                  <option key={publisher} value={publisher}>{publisher}</option>
                 ))}
               </select>
             </label>
