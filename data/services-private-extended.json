@@ -7955,5 +7955,537 @@
       "PiggyVest account statement",
       "PiggyVest statement download"
     ]
+  },
+  {
+    "slug": "bamboo-identity-verification-nigeria",
+    "title": "How to verify a Bamboo account in Nigeria",
+    "shortTitle": "Bamboo identity verification",
+    "summary": "Bamboo's Nigerian identity-verification route using the account holder's BVN and accepted identification so the platform can complete regulatory KYC before enabling the full account.",
+    "category": "Investing",
+    "agencySlug": "bamboo",
+    "feeLabel": "No identity-verification fee stated",
+    "feeNote": "Bamboo does not state a separate fee for completing its account identity-verification process.",
+    "timeline": "Standard verification depends on the submitted data matching Bamboo's records. When an account is partially restricted because profile and ID data do not match, Bamboo says compliance review can take 24–48 business hours after the requested ID is submitted.",
+    "status": "verified",
+    "officialPortal": "https://faq.investbamboo.com/en/articles/6884568-i-m-having-issues-verifying-my-identity",
+    "requirements": [
+      "A Bamboo account with the customer's own identity information",
+      "The customer's BVN for the Nigerian verification route",
+      "An accepted Nigerian identification document such as passport, driver's licence or National Identity Card/NIN evidence when the platform requests document verification",
+      "Profile information such as name and date of birth that matches the submitted identity record"
+    ],
+    "steps": [
+      "Sign in to Bamboo and open the account identity or KYC verification step.",
+      "Enter the customer's own BVN and complete the personal information requested by the platform.",
+      "Upload the accepted identification document and selfie or other document images when Bamboo requests enhanced verification.",
+      "Review any mismatch message and correct profile information or submit the requested ID to Bamboo support when the account is partially restricted.",
+      "Confirm that the account verification status has cleared before using features that require a fully verified profile."
+    ],
+    "notes": [
+      "Bamboo says Nigerian users are verified for regulatory purposes before account opening or full service access.",
+      "The provider's current help centre lists Nigerian passport, driver's licence and National Identity Card/NIN evidence among accepted identity documents.",
+      "Do not use another person's BVN or identity document."
+    ],
+    "sources": [
+      {
+        "label": "Bamboo Identity Verification Help",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6884568-i-m-having-issues-verifying-my-identity",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Bamboo Accepted IDs",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/10067841-what-ids-are-required-to-sign-up",
+        "lastChecked": "2026-10-05",
+        "published": "2026-04-24"
+      },
+      {
+        "label": "Bamboo Partially Restricted Account Help",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/12267269-why-is-my-account-partially-restricted",
+        "lastChecked": "2026-10-05",
+        "published": "2026-06-19"
+      }
+    ],
+    "related": [
+      "bamboo-fund-naira-wallet",
+      "bamboo-withdraw-naira",
+      "bamboo-download-account-statement",
+      "bvn-retrieval",
+      "cowrywise-bvn-verification"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bamboo verification Nigeria",
+      "Bamboo BVN verification",
+      "verify Bamboo account",
+      "Bamboo KYC Nigeria",
+      "Bamboo accepted ID Nigeria"
+    ]
+  },
+  {
+    "slug": "bamboo-fund-naira-wallet",
+    "title": "How to fund a Bamboo Naira wallet",
+    "shortTitle": "Fund Bamboo Naira wallet",
+    "summary": "Bamboo's Nigerian funding routes for adding money to the Naira wallet by direct bank transfer or supported card methods, with the live deposit charges shown by the provider.",
+    "category": "Investing",
+    "agencySlug": "bamboo",
+    "feeLabel": "Funding charge depends on payment method",
+    "feeNote": "Bamboo currently lists flat Naira bank-transfer charges by deposit amount and percentage/capped fees for Naira cards. Confirm the live charge in the app before funding because fees can change.",
+    "timeline": "Bamboo says a Naira direct-bank-transfer deposit can reflect instantly but may take up to one hour.",
+    "status": "verified",
+    "officialPortal": "https://faq.investbamboo.com/en/articles/6888767-how-do-i-make-a-naira-bank-transfer",
+    "requirements": [
+      "An active Bamboo account and Naira wallet",
+      "A Nigerian bank account or supported debit/credit card used in the account holder's name",
+      "The amount the customer intends to deposit",
+      "Enough funds for the deposit plus the current processing charge shown for the selected payment method"
+    ],
+    "steps": [
+      "Open Bamboo and tap Add Money below the total wealth area.",
+      "Select the NGN Wallet and enter the amount to be deposited.",
+      "Choose Direct Bank Transfer or another supported Nigerian funding method.",
+      "For bank transfer, copy the deposit account details generated by Bamboo and complete the transfer from the customer's own bank account.",
+      "Return to the Bamboo wallet and confirm that the deposit is credited, keeping the emailed receipt if support follow-up is needed."
+    ],
+    "notes": [
+      "Bamboo says Nigerian users can fund with Naira bank transfer, Naira card and other supported options.",
+      "Funds sent from an account that does not belong to the Bamboo customer can be rejected under the provider's funding rules.",
+      "This guide explains funding mechanics and does not recommend any investment."
+    ],
+    "sources": [
+      {
+        "label": "Bamboo Naira Bank Transfer",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6888767-how-do-i-make-a-naira-bank-transfer",
+        "lastChecked": "2026-10-05",
+        "published": "2026-06-16"
+      },
+      {
+        "label": "Bamboo Payment Options",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6888706-what-payment-options-are-available",
+        "lastChecked": "2026-10-05",
+        "published": "2026-06-16"
+      },
+      {
+        "label": "Bamboo Deposit Fees",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6888725-what-are-the-deposit-fees",
+        "lastChecked": "2026-10-05",
+        "published": "2026-06-16"
+      }
+    ],
+    "related": [
+      "bamboo-identity-verification-nigeria",
+      "bamboo-withdraw-naira",
+      "cowrywise-fund-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "fund Bamboo Nigeria",
+      "Bamboo Naira wallet deposit",
+      "Bamboo bank transfer",
+      "add money Bamboo",
+      "Bamboo deposit fee Nigeria"
+    ]
+  },
+  {
+    "slug": "bamboo-withdraw-naira",
+    "title": "How to withdraw Naira from Bamboo",
+    "shortTitle": "Bamboo Naira withdrawal",
+    "summary": "Bamboo's Naira-wallet withdrawal route for transferring available cash to a saved personal Nigerian bank account linked to the customer, with current processing and withdrawal-fee guidance.",
+    "category": "Investing",
+    "agencySlug": "bamboo",
+    "feeLabel": "₦45 current Naira withdrawal fee",
+    "feeNote": "Bamboo's June 2026 help pages list a ₦45 fee for Naira withdrawals. Confirm the amount in the app before submitting because provider charges can change.",
+    "timeline": "Bamboo says eligible withdrawals below ₦1,000,000 can reflect instantly; otherwise Naira withdrawals are generally processed within one business day.",
+    "status": "verified",
+    "officialPortal": "https://faq.investbamboo.com/en/articles/6888775-can-i-withdraw-in-naira",
+    "requirements": [
+      "Withdrawable cash available in the Bamboo Naira wallet",
+      "A saved Nigerian bank account belonging to the Bamboo customer",
+      "The transaction PIN used to authorise the withdrawal",
+      "Enough wallet balance to cover the requested amount plus the current withdrawal fee"
+    ],
+    "steps": [
+      "Open Bamboo and select the NGN Wallet under Cash.",
+      "Tap Transfer and choose Transfer to a Naira bank account.",
+      "Enter the withdrawal amount and select the already saved personal bank account.",
+      "Review the withdrawal details and confirm the transaction with the Bamboo transaction PIN.",
+      "Check the receiving bank account after the published processing period and contact Bamboo support if the withdrawal remains unresolved."
+    ],
+    "notes": [
+      "Bamboo does not honour third-party withdrawal destinations under its published withdrawal guidance.",
+      "A newly added bank account can require compliance verification before it becomes usable for withdrawal.",
+      "This guide explains the withdrawal process and does not advise when a customer should sell or withdraw an investment."
+    ],
+    "sources": [
+      {
+        "label": "Bamboo Naira Withdrawals",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6888775-can-i-withdraw-in-naira",
+        "lastChecked": "2026-10-05",
+        "published": "2026-07-17"
+      },
+      {
+        "label": "Bamboo Withdrawal Timing",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6888773-how-long-do-withdrawals-take",
+        "lastChecked": "2026-10-05",
+        "published": "2026-06-16"
+      },
+      {
+        "label": "Bamboo Charges and Fees",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/10068070-charges-fees",
+        "lastChecked": "2026-10-05",
+        "published": "2026-04-24"
+      }
+    ],
+    "related": [
+      "bamboo-identity-verification-nigeria",
+      "bamboo-fund-naira-wallet",
+      "bamboo-download-account-statement",
+      "cowrywise-withdraw-from-stash"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "withdraw Bamboo Nigeria",
+      "Bamboo Naira withdrawal",
+      "Bamboo withdrawal fee",
+      "Bamboo withdrawal time",
+      "Bamboo transfer to bank"
+    ]
+  },
+  {
+    "slug": "bamboo-download-account-statement",
+    "title": "How to download a Bamboo account statement or trade confirmation",
+    "shortTitle": "Bamboo account statement",
+    "summary": "Bamboo's in-app routes for downloading brokerage account statements, individual trade confirmations and wallet or Fixed Returns account statements.",
+    "category": "Investing",
+    "agencySlug": "bamboo",
+    "feeLabel": "No statement-download fee stated",
+    "feeNote": "Bamboo does not state a separate charge for downloading account statements or trade confirmations from the app.",
+    "timeline": "Trade confirmations are available after the trade settles; Bamboo says brokerage monthly statements are usually available in the first week of the new month.",
+    "status": "verified",
+    "officialPortal": "https://faq.investbamboo.com/en/articles/6889357-account-statements-and-trade-confirmations",
+    "requirements": [
+      "An active Bamboo account with a settled trade, brokerage history or wallet history",
+      "Access to the Bamboo app and the registered email address for statement delivery where applicable",
+      "A selected trade, month or statement period"
+    ],
+    "steps": [
+      "Sign in to Bamboo and tap the customer's name to open account documents.",
+      "Choose Trade Confirmations and select a settled trade when evidence for a particular transaction is needed.",
+      "Choose Account Statements and select the required month when a brokerage statement is needed.",
+      "For a wallet statement, open the relevant Bamboo Wallet and choose Request account statement with the required period.",
+      "Save or print the generated document, or check the registered email when Bamboo sends the requested wallet statement there."
+    ],
+    "notes": [
+      "Bamboo describes its brokerage account statements as official brokerage documentation.",
+      "Wallet statement requests can be limited to a six-month range per request under the provider's current help guidance.",
+      "Protect downloaded statements because they contain sensitive financial information."
+    ],
+    "sources": [
+      {
+        "label": "Bamboo Account Statements and Trade Confirmations",
+        "agency": "Bamboo",
+        "url": "https://faq.investbamboo.com/en/articles/6889357-account-statements-and-trade-confirmations",
+        "lastChecked": "2026-10-05",
+        "published": "2024-02-07"
+      }
+    ],
+    "related": [
+      "bamboo-identity-verification-nigeria",
+      "bamboo-withdraw-naira",
+      "piggyvest-generate-statement"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bamboo account statement",
+      "Bamboo trade confirmation",
+      "download Bamboo statement",
+      "Bamboo proof of investment",
+      "Bamboo statement Nigeria"
+    ]
+  },
+  {
+    "slug": "autochek-sell-car-inspection",
+    "title": "How to sell a car through Autochek Nigeria",
+    "shortTitle": "Sell car with Autochek",
+    "summary": "Autochek Nigeria's seller route for listing a vehicle and booking an inspection with the owner's contact, vehicle and pickup information before offers and sale completion.",
+    "category": "Automotive services",
+    "agencySlug": "autochek",
+    "feeLabel": "Any applicable selling fee is shown before finalisation",
+    "feeNote": "Autochek says fees, if any, are displayed before a seller finalises the listing. Confirm the live selling terms before accepting an offer.",
+    "timeline": "Autochek says listings can receive offers within hours or days depending on the vehicle and demand; no universal sale-completion time is guaranteed.",
+    "status": "verified",
+    "officialPortal": "https://autochek.africa/ng/sell-a-car",
+    "requirements": [
+      "The seller's name, phone number and email address",
+      "The vehicle make, model and year",
+      "A pickup/inspection address, state, city and preferred inspection time",
+      "Accurate vehicle details and clear photographs for the listing/sale process"
+    ],
+    "steps": [
+      "Open Autochek Nigeria's official Sell a Car page and enter the seller's contact information.",
+      "Enter the vehicle make, model and year and provide the pickup or inspection address.",
+      "Choose the preferred inspection date/time and submit the inspection booking.",
+      "Provide accurate vehicle details and photographs and allow Autochek to complete the inspection/valuation stage.",
+      "Review buyer offers and the final transaction terms before agreeing to the sale and completing the provider's paperwork/payment process."
+    ],
+    "notes": [
+      "Autochek says inspected cars can sell faster than uninspected listings.",
+      "The platform connects sellers with buyers/dealers but the seller should still review the final offer and transaction terms.",
+      "Do not transfer ownership documents or accept payment through an unverified personal account outside the official process."
+    ],
+    "sources": [
+      {
+        "label": "Autochek Nigeria Sell a Car",
+        "agency": "Autochek Africa",
+        "url": "https://autochek.africa/ng/sell-a-car",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Autochek Nigeria FAQ",
+        "agency": "Autochek Africa",
+        "url": "https://autochek.africa/ng/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "autochek-car-finance-prequalification",
+      "cars45-sell-car-inspection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "sell car Autochek Nigeria",
+      "Autochek car inspection",
+      "Autochek sell my car",
+      "book Autochek inspection",
+      "sell used car Nigeria Autochek"
+    ]
+  },
+  {
+    "slug": "autochek-car-finance-prequalification",
+    "title": "How Autochek car-finance prequalification works",
+    "shortTitle": "Autochek car finance",
+    "summary": "Autochek Nigeria's online vehicle-finance prequalification route for submitting applicant information and lender-required identity, income/employment or business evidence before a financing offer is considered.",
+    "category": "Automotive services",
+    "agencySlug": "autochek",
+    "feeLabel": "Financing terms depend on vehicle and lender",
+    "feeNote": "Autochek works with financing partners, so down payment, interest, fees and repayment terms depend on the selected vehicle, applicant and lender. Review the final lender offer rather than relying on a generic advertised example.",
+    "timeline": "Autochek's platform provides online prequalification and conditional offers; final approval timing depends on document verification, lender review and the selected vehicle.",
+    "status": "verified",
+    "officialPortal": "https://autochek.africa/ng/get-prequalified",
+    "requirements": [
+      "The applicant's contact and identity information for the prequalification form",
+      "A valid national ID and BVN",
+      "Bank statement and proof of income/employment for a salary earner where the lender requests them",
+      "Business registration or business evidence for a business-owner applicant where required",
+      "Any additional documentation the financing partner requests before final approval"
+    ],
+    "steps": [
+      "Open Autochek Nigeria's official car-finance prequalification page and begin the online eligibility form.",
+      "Enter the applicant's identity, contact and employment or business information accurately.",
+      "Submit the BVN, bank statement, valid ID and other documents requested for the selected financing route.",
+      "Review the conditional eligibility or financing offer and the exact down payment, repayment and lender terms before proceeding.",
+      "Complete any vehicle selection, inspection and lender-verification steps required before a final finance agreement is signed."
+    ],
+    "notes": [
+      "Prequalification is not the same as final credit approval.",
+      "Autochek's FAQ says vehicle-finance documentation can include BVN, bank statements, national ID, employment records and business-registration evidence.",
+      "This guide explains the application process and does not recommend borrowing or a particular lender."
+    ],
+    "sources": [
+      {
+        "label": "Autochek Nigeria Car Finance Prequalification",
+        "agency": "Autochek Africa",
+        "url": "https://autochek.africa/ng/get-prequalified",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Autochek Nigeria FAQ",
+        "agency": "Autochek Africa",
+        "url": "https://autochek.africa/ng/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "autochek-sell-car-inspection",
+      "cars45-buy-inspected-car"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Autochek car loan Nigeria",
+      "Autochek prequalification",
+      "Autochek vehicle finance requirements",
+      "Autochek car financing",
+      "Autochek BVN bank statement"
+    ]
+  },
+  {
+    "slug": "cars45-sell-car-inspection",
+    "title": "How to sell a car through Cars45",
+    "shortTitle": "Sell car with Cars45",
+    "summary": "Cars45's seller process for booking a free inspection at a nearby centre, bringing the vehicle and documents, receiving buyer offers and getting paid after an accepted deal closes.",
+    "category": "Automotive services",
+    "agencySlug": "cars45",
+    "feeLabel": "Free inspection; final transaction terms apply",
+    "feeNote": "Cars45 currently advertises the vehicle inspection used for its selling process as free. Review any final transaction terms before accepting an offer.",
+    "timeline": "Cars45 advertises same-day payment once a deal with a buyer closes; actual time to find an acceptable buyer can vary.",
+    "status": "verified",
+    "officialPortal": "https://www.cars45.com/sell",
+    "requirements": [
+      "The vehicle the customer wants to sell",
+      "The vehicle documents needed for Cars45 to inspect and verify ownership/transaction details",
+      "A selected Cars45 inspection centre and appointment",
+      "The seller's willingness to review and accept or reject the offer produced after inspection"
+    ],
+    "steps": [
+      "Open Cars45's official Sell My Car page and book a free inspection at the preferred inspection centre.",
+      "Take the car and its relevant documents to the selected centre for the professional inspection.",
+      "Review the inspection/valuation information while Cars45 presents the vehicle to potential buyers.",
+      "Compare the offer produced through the platform and accept it only if the transaction terms are satisfactory.",
+      "Complete the transfer paperwork through Cars45 and verify that the agreed payment has been received before releasing the vehicle."
+    ],
+    "notes": [
+      "Cars45 says the seller can reject an offer if the price is not satisfactory.",
+      "The platform says the vehicle can remain with the seller while Cars45 searches for a buyer, depending on the sale route.",
+      "Verify cleared payment before handing over keys and final ownership documents."
+    ],
+    "sources": [
+      {
+        "label": "Cars45 Sell My Car",
+        "agency": "Cars45",
+        "url": "https://www.cars45.com/sell",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cars45-dealer-partner-onboarding",
+      "cars45-buy-inspected-car",
+      "autochek-sell-car-inspection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "sell car Cars45",
+      "Cars45 inspection",
+      "Cars45 sell my car Nigeria",
+      "Cars45 car valuation",
+      "Cars45 free inspection"
+    ]
+  },
+  {
+    "slug": "cars45-buy-inspected-car",
+    "title": "How to buy an inspected car through Cars45",
+    "shortTitle": "Buy car with Cars45",
+    "summary": "Cars45's purchase route for browsing inspected vehicles, reviewing the detailed inspection report, meeting the provider's manager to inspect the car physically and completing the deal if satisfied.",
+    "category": "Automotive services",
+    "agencySlug": "cars45",
+    "feeLabel": "Vehicle price and any financing terms depend on the listing",
+    "feeNote": "Cars45 vehicle prices vary by listing. If financing is used, review the lender's exact down payment, interest, fees and repayment terms before committing.",
+    "timeline": "Purchase timing depends on vehicle availability, inspection/meeting and payment or finance approval; Cars45 does not guarantee one universal completion time.",
+    "status": "verified",
+    "officialPortal": "https://www.cars45.com/",
+    "requirements": [
+      "A selected Cars45 vehicle listing",
+      "Review of the provider's inspection report for the vehicle",
+      "A physical meeting/inspection with the Cars45 manager when the buyer wants to proceed",
+      "Funds for the agreed purchase price or separately approved financing if the buyer chooses a finance route"
+    ],
+    "steps": [
+      "Open Cars45's official website and browse the inspected vehicles available in the required location and price range.",
+      "Open the selected vehicle and review its detailed inspection report before arranging a physical viewing.",
+      "Meet the Cars45 manager and inspect the vehicle in person, bringing an independent mechanic if desired.",
+      "Review the negotiated purchase terms, ownership documents and any optional financing before paying.",
+      "Complete payment only through the verified transaction route and collect the final ownership/transaction documentation."
+    ],
+    "notes": [
+      "Cars45 says its vehicles have professional inspection reports covering more than 200 parameters.",
+      "A buyer can inspect the vehicle personally before completing the deal.",
+      "This guide explains the transaction process and does not recommend a particular car or financing product."
+    ],
+    "sources": [
+      {
+        "label": "Cars45 Nigeria",
+        "agency": "Cars45",
+        "url": "https://www.cars45.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cars45 Vehicle Listings",
+        "agency": "Cars45",
+        "url": "https://www.cars45.com/listing",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cars45-sell-car-inspection",
+      "cars45-dealer-partner-onboarding",
+      "autochek-car-finance-prequalification"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "buy car Cars45 Nigeria",
+      "Cars45 inspected cars",
+      "Cars45 inspection report",
+      "Cars45 used cars Nigeria",
+      "Cars45 buy car"
+    ]
+  },
+  {
+    "slug": "cars45-dealer-partner-onboarding",
+    "title": "How to become a Cars45 Dealer Partner",
+    "shortTitle": "Cars45 Dealer Partner",
+    "summary": "Cars45's dealer-partner onboarding route for used-car dealers to join the waitlist, complete prequalification and training, then access the platform's verified-car auctions.",
+    "category": "Automotive services",
+    "agencySlug": "cars45",
+    "feeLabel": "Dealer commercial terms confirmed during onboarding",
+    "feeNote": "Cars45 does not publish one universal dealer-onboarding fee on the public partner page. Review the commercial and financing terms during prequalification.",
+    "timeline": "Cars45 says applicants join a waitlist and are contacted by a manager; timing can vary because the provider limits the number of dealers accepted monthly.",
+    "status": "verified",
+    "officialPortal": "https://www.cars45.com/dealer",
+    "requirements": [
+      "A used-car dealer/business interested in purchasing through Cars45 auctions",
+      "Contact and business information for the short dealer application",
+      "Availability for a manager prequalification review and onboarding training",
+      "Acceptance of the platform's dealer commercial and auction rules after approval"
+    ],
+    "steps": [
+      "Open Cars45's official Dealer Partner page and submit the short application form to join the waitlist.",
+      "Wait for a Cars45 manager to contact the applicant for the next onboarding stage.",
+      "Complete the dealer prequalification and provide the business information requested by the manager.",
+      "Attend the onboarding training session and review the auction, payment and financing rules.",
+      "Use the approved dealer account to access Cars45 online auctions after activation."
+    ],
+    "notes": [
+      "Cars45 states that only a limited number of dealers can be accepted each month, so waitlist timing can vary.",
+      "Dealer financing is a separate commercial facility and should be reviewed under its own eligibility/repayment terms.",
+      "The dealer programme is distinct from the ordinary consumer car-purchase process."
+    ],
+    "sources": [
+      {
+        "label": "Cars45 Dealer Partner",
+        "agency": "Cars45",
+        "url": "https://www.cars45.com/dealer",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cars45-sell-car-inspection",
+      "cars45-buy-inspected-car",
+      "autochek-sell-car-inspection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cars45 dealer partner",
+      "Cars45 dealer registration",
+      "Cars45 dealer auction",
+      "join Cars45 dealer",
+      "Cars45 dealer onboarding"
+    ]
   }
 ]
