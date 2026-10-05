@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { publicServiceListings } from "@/lib/data";
 import { exploreGuides } from "@/lib/explore";
+import { explorePlaces } from "@/lib/explore-places";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { jobOpportunities } from "@/lib/jobs";
 import generatedYouTubeData from "@/data/youtube-movies.generated.json";
@@ -116,6 +117,22 @@ export default async function SearchPage({
         .map((entry) => entry.item)
     : [];
 
+  const placeResults = query
+    ? explorePlaces
+        .map((item) => ({
+          item,
+          score: relevance(
+            query,
+            item.name,
+            [item.kind, item.area, item.address, item.summary, item.cost, item.tags.join(" "), item.guideSlug].join(" "),
+          ),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
+        .slice(0, 12)
+        .map((entry) => entry.item)
+    : [];
+
   const movieResults = query
     ? entertainmentTitles
         .map((item) => ({
@@ -148,14 +165,14 @@ export default async function SearchPage({
         .map((entry) => entry.item)
     : [];
 
-  const totalShown = serviceResults.length + jobResults.length + exploreResults.length + movieResults.length + youtubeResults.length;
+  const totalShown = serviceResults.length + jobResults.length + exploreResults.length + placeResults.length + movieResults.length + youtubeResults.length;
 
   return (
     <>
       <section className="global-search-hero">
         <div className="container global-search-hero-inner">
           <span className="eyebrow">Search MyNigeriaGuide</span>
-          <h1>One search for services, jobs, places and movies.</h1>
+          <h1>One search across all four MyNigeriaGuide pillars.</h1>
           <p>
             You do not need to know which section something belongs in first. Search a task, employer, career path, city, attraction, actor, movie or publisher.
           </p>
@@ -192,25 +209,25 @@ export default async function SearchPage({
         <div className="container">
           {!query ? (
             <div className="search-start-grid">
+              <Link href="/entertainment/movies">
+                <span>01</span><strong>Movies & Entertainment</strong>
+                <p>Nigerian movies, series, actors, cinemas, official streaming routes and free YouTube titles.</p>
+                <b>Browse entertainment →</b>
+              </Link>
               <Link href="/services">
-                <span>01</span><strong>Services</strong>
+                <span>02</span><strong>Services Guide</strong>
                 <p>Processes, requirements, fees, official portals and what happens next.</p>
                 <b>Browse services →</b>
               </Link>
-              <Link href="/jobs">
-                <span>02</span><strong>Jobs & Careers</strong>
-                <p>Government recruitment, graduate pathways, internships and reputable employer careers.</p>
-                <b>Browse careers →</b>
-              </Link>
               <Link href="/explore">
-                <span>03</span><strong>Explore Nigeria</strong>
-                <p>Cities, destinations, places, addresses, maps and practical trip planning.</p>
-                <b>Explore places →</b>
+                <span>03</span><strong>Tour Nigeria</strong>
+                <p>Cities, destinations, hotels, restaurants, attractions, events, addresses and practical trip planning.</p>
+                <b>Explore Nigeria →</b>
               </Link>
-              <Link href="/entertainment/movies">
-                <span>04</span><strong>Entertainment</strong>
-                <p>Nigerian movies, actors, official streaming routes and free YouTube titles.</p>
-                <b>Browse movies →</b>
+              <Link href="/jobs">
+                <span>04</span><strong>Jobs & Careers</strong>
+                <p>Government recruitment, graduate pathways, internships, NYSC opportunities and reputable employer careers.</p>
+                <b>Browse careers →</b>
               </Link>
             </div>
           ) : (
@@ -289,6 +306,26 @@ export default async function SearchPage({
                         <strong>{item.title}</strong>
                         <p>{item.summary}</p>
                         <small>{item.region} · reviewed {item.lastReviewed}</small>
+                        <b aria-hidden="true">→</b>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              ) : null}
+
+              {placeResults.length ? (
+                <section className="global-search-group">
+                  <div className="global-search-group-heading">
+                    <div><span>Tour places</span><strong>{placeResults.length} shown</strong></div>
+                    <Link href={"/explore?q=" + encodeURIComponent(query) + "#places"}>Search Tour Nigeria →</Link>
+                  </div>
+                  <div className="global-search-list">
+                    {placeResults.map((item) => (
+                      <Link href={"/explore/" + item.guideSlug + "#place-" + item.slug} key={item.slug}>
+                        <span className="search-result-type">Tour Nigeria · {item.kind}</span>
+                        <strong>{item.name}</strong>
+                        <p>{item.summary}</p>
+                        <small>{item.area} · checked {item.checkedAt}</small>
                         <b aria-hidden="true">→</b>
                       </Link>
                     ))}
