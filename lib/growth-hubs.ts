@@ -262,8 +262,25 @@ export const growthHubs: GrowthHub[] = [
       "This hub groups the CAC tasks most business owners need from choosing a name through registration and later compliance documents.",
       "Use the exact guide for your task because business-name registration, company incorporation, annual returns and certified documents have different requirements and fees."
     ],
-    searches: [{ query: "CAC registration", serviceSlug: "cac-business-name-registration" }, { query: "CAC registration cost", serviceSlug: "cac-business-name-registration" }, { query: "CAC official website", serviceSlug: "cac-public-search" }, { query: "CAC registration portal", serviceSlug: "cac-business-name-registration" }, { query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC public search", serviceSlug: "cac-public-search" }, { query: "CAC company search", serviceSlug: "cac-public-search" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
-    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report"]
+    searches: [
+      { query: "CAC registration", serviceSlug: "cac-business-name-registration" },
+      { query: "CAC registration cost", serviceSlug: "cac-business-name-registration" },
+      { query: "CAC official website", serviceSlug: "cac-public-search" },
+      { query: "CAC registration portal", serviceSlug: "cac-business-name-registration" },
+      { query: "register business name CAC", serviceSlug: "cac-business-name-registration" },
+      { query: "register company CAC", serviceSlug: "cac-company-registration" },
+      { query: "CAC public search", serviceSlug: "cac-public-search" },
+      { query: "CAC company search", serviceSlug: "cac-public-search" },
+      { query: "CAC name reservation", serviceSlug: "cac-name-reservation" },
+      { query: "CAC annual returns", serviceSlug: "cac-annual-returns" },
+      { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" },
+      { query: "CAC status report", serviceSlug: "cac-status-report" },
+      { query: "CAC change company name", serviceSlug: "cac-change-company-name" },
+      { query: "increase share capital CAC", serviceSlug: "cac-increase-issued-share-capital" },
+      { query: "CAC letter of good standing", serviceSlug: "cac-letter-good-standing" },
+      { query: "change company secretary CAC", serviceSlug: "cac-company-secretary-change" }
+    ],
+    serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report", "cac-change-company-name", "cac-increase-issued-share-capital", "cac-letter-good-standing", "cac-company-secretary-change"]
   },
   {
     slug: "drivers-licence",
@@ -330,12 +347,16 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "NAFDAC product registration", serviceSlug: "nafdac-product-registration" },
+      { query: "NAFDAC food registration", serviceSlug: "nafdac-food-product-registration" },
+      { query: "NAFDAC cosmetics registration", serviceSlug: "nafdac-cosmetics-registration" },
+      { query: "NAFDAC medical device registration", serviceSlug: "nafdac-medical-device-registration" },
+      { query: "NAFDAC drug registration", serviceSlug: "nafdac-drug-product-registration" },
       { query: "verify NAFDAC number", serviceSlug: "nafdac-product-verification" },
       { query: "SONCAP certificate Nigeria", serviceSlug: "soncap-import-certification" },
       { query: "MANCAP certification", serviceSlug: "son-mancap-certification" },
       { query: "SON product registration", serviceSlug: "son-product-registration" }
     ],
-    serviceSlugs: ["nafdac-product-registration", "nafdac-product-verification", "nafdac-product-renewal", "soncap-import-certification", "son-mancap-certification", "son-product-registration"]
+    serviceSlugs: ["nafdac-product-registration", "nafdac-food-product-registration", "nafdac-cosmetics-registration", "nafdac-medical-device-registration", "nafdac-drug-product-registration", "nafdac-product-verification", "nafdac-product-renewal", "soncap-import-certification", "son-mancap-certification", "son-product-registration"]
   },
   {
     slug: "business-compliance-nigeria",
