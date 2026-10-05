@@ -19698,5 +19698,780 @@
       "Avon HMO hospitals near me",
       "Avon provider network Nigeria"
     ]
+  },
+  {
+    "slug": "union-bank-basic-current-account",
+    "title": "How to open a Union Bank Basic Current Account",
+    "shortTitle": "Union Bank current account",
+    "summary": "Union Bank Nigeria's Basic Current Account opening route with BVN, NIN, valid ID, recent utility bill, two references, photographs and the bank's account-opening/mandate forms.",
+    "category": "Banking",
+    "agencySlug": "union-bank",
+    "feeLabel": "₦2,500 opening balance",
+    "feeNote": "Union Bank's current Basic Current Account page lists a ₦2,500 opening balance. Confirm live product terms before funding because balances and charges can change.",
+    "timeline": "Union Bank does not publish one fixed completion time for every current-account application; completion depends on document and reference verification.",
+    "status": "verified",
+    "officialPortal": "https://unionbankng.com/services/personal-banking/account/current-account/",
+    "requirements": [
+      "A completed Union Bank Account Opening Form and signature/mandate card",
+      "Two recent passport photographs",
+      "Bank Verification Number and National Identification Number",
+      "A utility bill not more than three months old and a valid means of identification",
+      "Two valid references for the current-account application"
+    ],
+    "steps": [
+      "Open Union Bank's official Current Account page and choose the Basic Current Account route.",
+      "Complete the account-opening form and signature/mandate card with the applicant's current personal details.",
+      "Prepare the passport photographs, BVN, NIN, recent utility bill, valid ID and two references.",
+      "Submit the online account-opening request or follow the bank's indicated branch/document-completion route.",
+      "Wait for Union Bank to complete KYC and reference checks before using cheque, card or other current-account services."
+    ],
+    "notes": [
+      "Union Bank publishes several current-account products with different balances and benefits; this guide is for the Basic Current Account.",
+      "Two references are part of the published current-account requirement list.",
+      "A Payroll Plus Current account has a different requirement set including employer introduction."
+    ],
+    "sources": [
+      {
+        "label": "Union Bank Current Accounts",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://unionbankng.com/services/personal-banking/account/current-account/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "union-bank-basic-savings-account",
+      "union-bank-domiciliary-account",
+      "union-bank-debit-card-management"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Union Bank current account",
+      "open Union Bank current account",
+      "Union Bank current account requirements",
+      "Union Bank references current account",
+      "Union Bank account opening"
+    ]
+  },
+  {
+    "slug": "union-bank-domiciliary-account",
+    "title": "How to open a Union Bank domiciliary account",
+    "shortTitle": "Union Bank domiciliary account",
+    "summary": "Union Bank Nigeria's foreign-currency account opening route using BVN/NIN, ID, recent utility or tenancy evidence, passport photographs and two references for eligible domiciliary products.",
+    "category": "Banking",
+    "agencySlug": "union-bank",
+    "feeLabel": "Opening balance depends on the domiciliary product",
+    "feeNote": "Union Bank's current Domiciliary Current page lists an opening balance equivalent to US$100 in GBP/EUR, while other domiciliary products have their own terms. Confirm the selected product before funding.",
+    "timeline": "Union Bank does not publish one universal completion time for every domiciliary-account application.",
+    "status": "verified",
+    "officialPortal": "https://www.unionbankng.com/services/personal-banking/account/domiciliary-account/",
+    "requirements": [
+      "Bank Verification Number and National Identification Number",
+      "Two passport photographs and a valid identity document such as an international passport, driver's licence or National ID",
+      "A recent utility bill not more than three months old or a signed tenancy agreement",
+      "Two valid references",
+      "The Union Bank account-opening documentation and any CIU/internal KYC form required when an existing customer's KYC details have changed"
+    ],
+    "steps": [
+      "Open Union Bank's official Domiciliary Account page and select the foreign-currency account product that matches the intended use.",
+      "Review the supported currencies, current opening balance and transaction charges for that specific product.",
+      "Prepare the BVN/NIN, photographs, valid ID, address evidence and two references.",
+      "Complete the online account-opening route or submit the bank's account-opening documents through the indicated channel.",
+      "Confirm the account currency and final tariff before receiving or sending foreign-currency transfers."
+    ],
+    "notes": [
+      "Union Bank publishes multiple foreign-currency products, including Domiciliary Current and UnionAce, with different product terms.",
+      "Swift, transfer and withdrawal charges can differ by product and currency.",
+      "This page explains account opening, not foreign-exchange or investment suitability."
+    ],
+    "sources": [
+      {
+        "label": "Union Bank Domiciliary Account",
+        "agency": "Union Bank of Nigeria",
+        "url": "https://www.unionbankng.com/services/personal-banking/account/domiciliary-account/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "union-bank-basic-current-account",
+      "union-bank-basic-savings-account",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Union Bank domiciliary account",
+      "open domiciliary account Union Bank",
+      "Union Bank dollar account requirements",
+      "Union Bank foreign currency account",
+      "Union Bank domiciliary account opening balance"
+    ]
+  },
+  {
+    "slug": "keystone-debit-card-activation",
+    "title": "How to activate a Keystone Bank debit card with *7111#",
+    "shortTitle": "Activate Keystone debit card",
+    "summary": "Keystone Bank's *7111*9*123# self-service route for activating an eligible debit card by selecting the card PAN, creating the card PIN and authorising the request with the USSD transaction PIN.",
+    "category": "Banking",
+    "agencySlug": "keystone-bank",
+    "feeLabel": "No card-activation fee stated",
+    "feeNote": "Keystone does not state a separate activation fee on its *7111# guide.",
+    "timeline": "Card activation is completed during the active *7111# session when the correct card and transaction-PIN verification succeed.",
+    "status": "verified",
+    "officialPortal": "https://www.keystonebankng.com/ussd-banking/",
+    "requirements": [
+      "An eligible Keystone Bank debit card linked to the customer's retail account",
+      "The mobile number registered with Keystone Bank",
+      "A registered *7111# USSD profile and transaction PIN",
+      "Access to the card details presented in the USSD card-selection prompt"
+    ],
+    "steps": [
+      "Dial *7111*9*123# from the mobile number registered with Keystone Bank.",
+      "Choose the Activate Card option when the card-service menu appears.",
+      "Select the PAN/card entry corresponding to the debit card that needs activation.",
+      "Create the card PIN and enter the Keystone *7111# transaction PIN when prompted to authorise the request.",
+      "Wait for the success notification before attempting a card transaction."
+    ],
+    "notes": [
+      "Keystone's published USSD guide uses the same *7111# channel for other card and banking services.",
+      "The transaction PIN and debit-card PIN are separate credentials and should not be disclosed to another person.",
+      "If activation fails repeatedly, contact Keystone through its official contact centre or branch."
+    ],
+    "sources": [
+      {
+        "label": "Keystone Bank USSD Banking",
+        "agency": "Keystone Bank Limited",
+        "url": "https://www.keystonebankng.com/ussd-banking/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "keystone-7111-ussd",
+      "keystone-emergency-account-block",
+      "union-bank-debit-card-management"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "activate Keystone card",
+      "Keystone debit card activation",
+      "*7111*9*123#",
+      "Keystone ATM card activation",
+      "Keystone card PIN"
+    ]
+  },
+  {
+    "slug": "avon-business-health-plan",
+    "title": "How to get an Avon HMO business health plan quote",
+    "shortTitle": "Avon business health plan",
+    "summary": "Avon HMO's business-plan route for companies, associations and large groups, using the official quote form to provide organisation/contact details and discuss a plan or customised cover.",
+    "category": "Health insurance",
+    "agencySlug": "avon-hmo",
+    "feeLabel": "Quote depends on group size and selected benefits",
+    "feeNote": "Avon does not publish one universal business-plan price. The provider asks organisations to request a quote and can customise plan benefits for the group.",
+    "timeline": "Avon does not publish one universal quote turnaround time on the business-plan page.",
+    "status": "verified",
+    "officialPortal": "https://avonhealthcare.com/quote/",
+    "requirements": [
+      "A company, association or large-group health-cover need; Avon states its published business plans are designed for groups of 30 or more people",
+      "The organisation or contact person's name, email address and phone number",
+      "The company or organisation name and the intended business health-plan type",
+      "Enough workforce/group information to discuss the required benefits and obtain a provider quote"
+    ],
+    "steps": [
+      "Open Avon's official Business Plan page and review the health-plan scope for companies, associations and large groups.",
+      "Open the Get a Quote form and enter the contact person's name, email address, phone number and company details.",
+      "Choose the relevant plan type and submit the quote request to Avon.",
+      "Discuss the workforce size, required benefits, waiting periods and any customised coverage needs with the provider.",
+      "Review Avon's final quote and plan documentation before the organisation accepts and enrols members."
+    ],
+    "notes": [
+      "Avon says its business plans are intended for groups of 30 or more people.",
+      "The provider can customise a plan when a standard business option does not match the organisation's needs.",
+      "This guide explains the quote/enrolment process and does not recommend a plan design for a specific employer."
+    ],
+    "sources": [
+      {
+        "label": "Avon HMO Business Plan",
+        "agency": "Avon HMO",
+        "url": "https://www.avonhealthcare.com/business-plan/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Avon HMO Quote Form",
+        "agency": "Avon HMO",
+        "url": "https://avonhealthcare.com/quote/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "avon-individual-health-plan",
+      "avon-provider-directory",
+      "hygeia-health-plan-purchase"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Avon HMO business plan",
+      "Avon corporate health insurance",
+      "Avon HMO company plan",
+      "Avon business health quote",
+      "Avon HMO corporate plan"
+    ]
+  },
+  {
+    "slug": "yedc-check-tariff-band",
+    "title": "How to check your YEDC tariff band and rate",
+    "shortTitle": "Check YEDC band",
+    "summary": "YEDC's online band/tariff lookup for entering a meter or account number and viewing the customer's name, address, tariff, service band, service centre and account information.",
+    "category": "Electricity",
+    "agencySlug": "yedc",
+    "feeLabel": "No band-check fee",
+    "feeNote": "YEDC provides the online band/tariff lookup without a separate lookup fee.",
+    "timeline": "The account information is displayed after the customer submits a recognised meter or account number.",
+    "status": "verified",
+    "officialPortal": "https://www.yedc.com.ng/pages/check-band",
+    "requirements": [
+      "The YEDC meter or account number for the electricity customer being checked",
+      "Internet access to YEDC's official Check Your Band / Tariff page"
+    ],
+    "steps": [
+      "Open YEDC's official Check Your Band / Tariff page.",
+      "Enter the customer's meter or account number in the lookup field.",
+      "Submit the lookup and review the customer name and address to confirm the correct electricity record.",
+      "Read the displayed tariff rate, customer band and service centre information.",
+      "Use YEDC customer care if the returned band/account information appears to be incorrect."
+    ],
+    "notes": [
+      "YEDC says tariff rates are subject to review and can change.",
+      "The lookup also shows the service centre associated with the customer record.",
+      "A tariff-band lookup is different from buying units or submitting a billing complaint."
+    ],
+    "sources": [
+      {
+        "label": "YEDC Check Your Band / Tariff",
+        "agency": "Yola Electricity Distribution Company",
+        "url": "https://www.yedc.com.ng/pages/check-band",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "yedc-pay-bill-buy-units",
+      "yedc-online-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "check YEDC band",
+      "YEDC tariff checker",
+      "YEDC Band A",
+      "YEDC meter tariff",
+      "Yola electricity band check"
+    ]
+  },
+  {
+    "slug": "jed-transfer-old-meter-units",
+    "title": "How to transfer unused JED units from an old prepaid meter",
+    "shortTitle": "Transfer JED meter units",
+    "summary": "JED's complaint route for moving unused prepaid units from an old meter to a replacement meter, using a written complaint, purchase evidence, old-meter evidence and the new-meter installation form.",
+    "category": "Electricity",
+    "agencySlug": "jed",
+    "feeLabel": "No unit-transfer fee stated",
+    "feeNote": "JED's FAQ explains the supporting documents for the transfer complaint but does not state a separate fee.",
+    "timeline": "JED does not publish one universal completion time for the unit-transfer complaint.",
+    "status": "verified",
+    "officialPortal": "https://www.jedplc.com/faqs.php",
+    "requirements": [
+      "A written complaint to JED customer care stating the amount/value of the unused token or units",
+      "The old prepaid meter serial number",
+      "Evidence of purchase for the affected electricity token",
+      "Pictorial evidence of the remaining units on the old meter",
+      "The installation form for the new replacement meter"
+    ],
+    "steps": [
+      "Prepare a written complaint explaining that unused units from the old JED prepaid meter need to be moved to the replacement meter.",
+      "Include the old meter serial number and the amount/value of the affected prepaid token or remaining units.",
+      "Attach the token purchase evidence and a clear photograph showing the units remaining on the old meter.",
+      "Attach the installation form for the new meter and submit the complaint to JED customer care.",
+      "Keep copies of the complaint and supporting evidence while JED reviews and processes the unit-transfer request."
+    ],
+    "notes": [
+      "JED's FAQ specifically lists the evidence required for transferring units from an old prepaid meter to a new one.",
+      "The provider's process is a complaint/review route rather than a customer-entered self-service token conversion.",
+      "Do not discard the old meter evidence or token receipt before the request is resolved."
+    ],
+    "sources": [
+      {
+        "label": "JED FAQs",
+        "agency": "Jos Electricity Distribution Plc",
+        "url": "https://www.jedplc.com/faqs.php",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jed-prepaid-meter-recharge",
+      "jed-map-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "transfer JED meter units",
+      "old meter units to new meter JED",
+      "Jos Disco transfer token",
+      "JED meter replacement units",
+      "JED unused units"
+    ]
+  },
+  {
+    "slug": "ibom-air-book-flight",
+    "title": "How to book an Ibom Air flight",
+    "shortTitle": "Book Ibom Air flight",
+    "summary": "Ibom Air's official website/app booking route for domestic and regional flights, with route/date selection, passenger details, payment and a booking reference used later for check-in or ticket changes.",
+    "category": "Air travel",
+    "agencySlug": "ibom-air",
+    "feeLabel": "Fare varies by route, date and cabin",
+    "feeNote": "Ibom Air fares are dynamic. Use the amount displayed during the official booking flow and review the fare conditions before payment.",
+    "timeline": "The booking is confirmed after successful payment and the reservation/booking reference is issued through the official website or app.",
+    "status": "verified",
+    "officialPortal": "https://www.ibomair.com/",
+    "requirements": [
+      "The departure city, destination and intended travel date",
+      "Passenger names and contact information matching the travel identity documents",
+      "A valid government-issued photo ID for travel and any passport/entry document required on a regional route",
+      "A supported payment method for the fare shown by Ibom Air"
+    ],
+    "steps": [
+      "Open Ibom Air's official website or mobile app and choose the flight-booking option.",
+      "Select the origin, destination, travel date and passenger count and search available flights.",
+      "Choose the preferred flight/fare and enter the passenger and contact information accurately.",
+      "Review the itinerary and fare conditions and complete payment through the official booking flow.",
+      "Save the booking reference and e-ticket/confirmation for online check-in, Manage Booking and airport travel."
+    ],
+    "notes": [
+      "Ibom Air's official app also supports booking, trip management and online check-in.",
+      "All passengers must present valid government-issued photo identification under the airline's published terms.",
+      "Fare prices change by flight and date and should not be hard-coded as a permanent service price."
+    ],
+    "sources": [
+      {
+        "label": "Ibom Air Home",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ibom Air Terms and Conditions",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/terms-and-conditions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibom-air-online-check-in",
+      "ibom-air-change-flight",
+      "ibom-air-baggage-allowance",
+      "air-peace-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "book Ibom Air flight",
+      "Ibom Air booking",
+      "Ibom Air ticket online",
+      "Ibom Air reservation",
+      "Ibom Air flight Nigeria"
+    ]
+  },
+  {
+    "slug": "ibom-air-online-check-in",
+    "title": "How Ibom Air online check-in works",
+    "shortTitle": "Ibom Air online check-in",
+    "summary": "Ibom Air's online check-in route using the passenger reservation, with a current official-source conflict over the domestic closing time that should be treated conservatively.",
+    "category": "Air travel",
+    "agencySlug": "ibom-air",
+    "feeLabel": "No separate online check-in fee stated",
+    "feeNote": "Ibom Air does not publish a separate fee for online check-in.",
+    "timeline": "Ibom Air agrees that online check-in opens 24 hours before departure, but its official pages disagree on the domestic closing time: one page says 2 hours before departure while the current FAQ says 1 hour. Use the earlier 2-hour cutoff until the provider reconciles the pages.",
+    "status": "conflict",
+    "officialPortal": "https://www.ibomair.com/travel-information/online-check-in-process/",
+    "requirements": [
+      "A confirmed Ibom Air booking and the passenger information/reference used to retrieve the reservation",
+      "A valid travel identification document matching the passenger booking",
+      "Enough time before the conservative online check-in cutoff and before airport check-in closes",
+      "An airport check-in visit for domestic travel because Ibom Air says domestic passengers must still have the boarding pass printed at the counter"
+    ],
+    "steps": [
+      "Open Ibom Air's official Online Check-In page or the official mobile app and retrieve the confirmed reservation.",
+      "Complete the passenger check-in and seat-selection steps and download the virtual boarding pass where available.",
+      "For domestic travel, complete online check-in at least two hours before departure because Ibom Air's official pages conflict between a 2-hour and 1-hour cutoff.",
+      "Go to the airport check-in counter to have the boarding pass printed for a domestic flight and to drop any checked baggage.",
+      "Arrive before the airline's airport check-in/baggage acceptance deadline even if online check-in was completed successfully."
+    ],
+    "notes": [
+      "Ibom Air's Online Check-In page and current FAQ conflict on the domestic online closing time.",
+      "Domestic passengers are still required to obtain/print the boarding pass at the airport counter.",
+      "Passengers with checked baggage or special-service requests must report to the airport counter."
+    ],
+    "sources": [
+      {
+        "label": "Ibom Air Online Check-In Process",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/travel-information/online-check-in-process/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ibom Air FAQs",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ibom Air Home",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibom-air-book-flight",
+      "ibom-air-change-flight",
+      "ibom-air-baggage-allowance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Ibom Air online check in",
+      "Ibom Air check in time",
+      "Ibom Air boarding pass",
+      "Ibom Air check-in closes",
+      "Ibom Air web check in"
+    ]
+  },
+  {
+    "slug": "ibom-air-change-flight",
+    "title": "How to change an Ibom Air flight",
+    "shortTitle": "Change Ibom Air flight",
+    "summary": "Ibom Air's website/app Manage Booking route for changing eligible flights up to the provider's published cutoff, with any non-refundable change fee and fare difference shown for the new itinerary.",
+    "category": "Air travel",
+    "agencySlug": "ibom-air",
+    "feeLabel": "Change fee and fare difference can apply",
+    "feeNote": "Ibom Air says a non-refundable change fee and any difference between the old and new fare can apply. The exact amount depends on the ticket and replacement flight.",
+    "timeline": "Ibom Air's current ticket-change policy says customers can change a flight up to 4 hours before scheduled departure.",
+    "status": "verified",
+    "officialPortal": "https://www.ibomair.com/travel-information/ibom-air-ticket-change-policy/",
+    "requirements": [
+      "The passenger name and Ibom Air booking reference for the reservation being changed",
+      "An eligible ticket with the change requested before the published four-hour deadline",
+      "An available replacement flight/date",
+      "Funds for any applicable non-refundable change fee and fare difference"
+    ],
+    "steps": [
+      "Open Ibom Air's official website/mobile app and enter Manage My Booking with the passenger name and booking reference.",
+      "Choose the eligible flight-change option and select the new available date or flight.",
+      "Review the new itinerary, change fee and any fare difference before confirming the modification.",
+      "Complete any required payment and save the updated ticket/booking confirmation.",
+      "If the online route cannot complete the change, contact Ibom Air reservations through the official contact details before the published cutoff."
+    ],
+    "notes": [
+      "Ibom Air says ticket changes can be made through the website, mobile app, phone or reservations email.",
+      "The current policy sets a four-hour-before-departure deadline for ticket changes.",
+      "A change to the ticket does not by itself reduce the remaining validity of the ticket under the provider's policy."
+    ],
+    "sources": [
+      {
+        "label": "Ibom Air Ticket Change Policy",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/travel-information/ibom-air-ticket-change-policy/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibom-air-book-flight",
+      "ibom-air-online-check-in",
+      "ibom-air-baggage-allowance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change Ibom Air flight",
+      "Ibom Air reschedule",
+      "Ibom Air manage booking",
+      "Ibom Air ticket change fee",
+      "Ibom Air change flight date"
+    ]
+  },
+  {
+    "slug": "ibom-air-baggage-allowance",
+    "title": "How Ibom Air baggage allowance and extra baggage work",
+    "shortTitle": "Ibom Air baggage",
+    "summary": "Ibom Air's published baggage rules for cabin, checked and extra baggage, with an official-source conflict over the Economy free checked allowance that travellers should verify before departure.",
+    "category": "Air travel",
+    "agencySlug": "ibom-air",
+    "feeLabel": "Extra-baggage fee depends on route and baggage amount",
+    "feeNote": "Ibom Air says extra baggage charges apply when allowance is exceeded. Verify the live fare/route rule before paying because the official pages currently disagree on the Economy free checked allowance.",
+    "timeline": "Extra baggage is handled during booking/online options where available or at the airport before baggage acceptance closes.",
+    "status": "conflict",
+    "officialPortal": "https://www.ibomair.com/travel-information/baggage/",
+    "requirements": [
+      "A confirmed Ibom Air booking and the fare/cabin class for the passenger",
+      "The number and weight of checked and cabin bags intended for the trip",
+      "Payment for any extra baggage that exceeds the allowance shown for the current booking",
+      "Arrival before Ibom Air's baggage-acceptance/check-in deadline when bags must be checked"
+    ],
+    "steps": [
+      "Open Ibom Air's official Baggage and fare information and compare the allowance against the passenger's ticket/cabin.",
+      "Weigh the checked and cabin baggage before travel and identify any amount above the current allowance.",
+      "Purchase extra baggage through the provider's available pre-flight route or prepare to pay the excess charge at the airport counter.",
+      "Present checked baggage before the published baggage-acceptance deadline and keep the baggage receipt/tag.",
+      "If the booking confirmation shows a different allowance from a general Ibom Air webpage, use the ticketed/fare-specific allowance and confirm with the airline."
+    ],
+    "notes": [
+      "Ibom Air's homepage historically states 20 kg Economy and 30 kg Premium Economy, while its current terms state 23 kg Economy and 30 kg Premium Cabin.",
+      "Because the official sources conflict, this guide does not silently select one Economy allowance.",
+      "The airline says all passengers are allowed cabin baggage subject to its current size/weight/security rules."
+    ],
+    "sources": [
+      {
+        "label": "Ibom Air Baggage",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/travel-information/baggage/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ibom Air Terms and Conditions",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/terms-and-conditions/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ibom Air Home",
+        "agency": "Ibom Air",
+        "url": "https://www.ibomair.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ibom-air-book-flight",
+      "ibom-air-online-check-in",
+      "ibom-air-change-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Ibom Air baggage allowance",
+      "Ibom Air extra baggage",
+      "Ibom Air 20kg 23kg",
+      "Ibom Air baggage fee",
+      "Ibom Air cabin baggage"
+    ]
+  },
+  {
+    "slug": "arik-air-book-flight",
+    "title": "How to book an Arik Air flight online",
+    "shortTitle": "Book Arik Air flight",
+    "summary": "Arik Air's official booking route for one-way, round-trip or multi-city domestic travel, including route/date selection, passenger details, payment and the booking reference used later for Manage Booking.",
+    "category": "Air travel",
+    "agencySlug": "arik-air",
+    "feeLabel": "Fare varies by route and travel date",
+    "feeNote": "Arik Air fares are dynamic. Use the amount shown in the official booking flow rather than an old route-price list.",
+    "timeline": "Arik Air currently says the e-ticket should arrive within one hour after booking; customers who do not receive it should contact the official call centre/email.",
+    "status": "verified",
+    "officialPortal": "https://arikair.com/",
+    "requirements": [
+      "The origin, destination, travel date and passenger count for the intended journey",
+      "Passenger names and contact information required for the reservation",
+      "A valid travel identification document for airport check-in",
+      "A supported payment method for the fare shown in Arik Air's official booking flow"
+    ],
+    "steps": [
+      "Open Arik Air's official website and choose One Way, Round Trip or Multi-City.",
+      "Enter the origin, destination, departure/return dates and passenger count and search available flights.",
+      "Choose the preferred flight and enter the passenger/contact details.",
+      "Review the itinerary and fare and complete payment through the official booking flow.",
+      "Save the booking reference and e-ticket; contact Arik Air if the e-ticket is not received within the period stated on its website."
+    ],
+    "notes": [
+      "Arik Air's website provides separate Manage Booking and Online Check-In tools using booking reference and last name.",
+      "The provider currently warns customers about ticket scams and publishes official call-centre details.",
+      "Dynamic fare prices should not be treated as fixed service fees."
+    ],
+    "sources": [
+      {
+        "label": "Arik Air Official Booking Site",
+        "agency": "Arik Air",
+        "url": "https://arikair.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "arik-air-online-check-in",
+      "air-peace-book-flight",
+      "ibom-air-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "book Arik Air flight",
+      "Arik Air booking",
+      "Arik Air ticket online",
+      "Arik Air e-ticket",
+      "Arik Air Nigeria flights"
+    ]
+  },
+  {
+    "slug": "arik-air-online-check-in",
+    "title": "How to check in online for an Arik Air flight",
+    "shortTitle": "Arik Air online check-in",
+    "summary": "Arik Air's official online check-in tool for retrieving a booking with the reservation reference and passenger last name before completing the available check-in steps.",
+    "category": "Air travel",
+    "agencySlug": "arik-air",
+    "feeLabel": "No separate online check-in fee stated",
+    "feeNote": "Arik Air does not state a separate fee for using the online check-in tool on its official homepage.",
+    "timeline": "Arik Air's current homepage exposes the online check-in tool but does not publish a universal opening/closing window on that page; follow the booking confirmation and airport deadline shown for the flight.",
+    "status": "verified",
+    "officialPortal": "https://arikair.com/",
+    "requirements": [
+      "A confirmed Arik Air reservation",
+      "The booking/reference number issued for the ticket",
+      "The passenger last name exactly as it appears on the booking",
+      "Valid travel identification and enough time to complete any airport baggage or document checks"
+    ],
+    "steps": [
+      "Open Arik Air's official website and locate the Online Check-In section.",
+      "Enter the booking reference and passenger last name exactly as shown on the ticket.",
+      "Retrieve the reservation and complete the available online check-in steps.",
+      "Save the boarding/check-in confirmation returned by the airline.",
+      "Report to the correct airport terminal early enough for baggage drop, document verification and the flight's airport check-in deadline."
+    ],
+    "notes": [
+      "Arik Air also exposes Manage Booking on the same official site for reservation changes.",
+      "Terminal usage can differ by route, so review the current terminal information on the airline site before departure.",
+      "Online check-in does not remove the need to present required travel identification."
+    ],
+    "sources": [
+      {
+        "label": "Arik Air Official Site / Online Check-In",
+        "agency": "Arik Air",
+        "url": "https://arikair.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "arik-air-book-flight",
+      "ibom-air-online-check-in",
+      "air-peace-online-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Arik Air online check in",
+      "Arik Air check in",
+      "Arik booking reference check in",
+      "Arik Air boarding pass",
+      "Arik Air web check in"
+    ]
+  },
+  {
+    "slug": "green-africa-book-flight",
+    "title": "How to book a Green Africa flight",
+    "shortTitle": "Book Green Africa flight",
+    "summary": "Green Africa's official booking route for one-way or round-trip domestic travel, using route/date selection, passenger details, fare choice and the provider's checkout payment flow.",
+    "category": "Air travel",
+    "agencySlug": "green-africa",
+    "feeLabel": "Fare varies by route, date and fare category",
+    "feeNote": "Green Africa fares are dynamic and its fare categories have different included services. Use the live booking amount and fare rules before payment.",
+    "timeline": "The reservation is created after successful checkout. Green Africa does not publish one universal ticket-delivery time on its current booking page.",
+    "status": "verified",
+    "officialPortal": "https://www.greenafrica.com/",
+    "requirements": [
+      "The departure city, destination and intended travel date",
+      "The passenger count and passenger identity/contact details requested during booking",
+      "A selected Green Africa fare category after reviewing its included baggage/check-in/change benefits",
+      "A supported payment method for the final checkout amount"
+    ],
+    "steps": [
+      "Open Green Africa's official website and choose one-way or round-trip travel.",
+      "Enter the origin, destination, travel dates and passenger count and search available flights.",
+      "Choose the flight and fare category and review the benefits/conditions that apply to that fare.",
+      "Enter the passenger information and complete payment through the official checkout route.",
+      "Save the booking confirmation and use My Bookings or Check In on Green Africa's site for later trip management."
+    ],
+    "notes": [
+      "Green Africa publishes multiple fare categories whose baggage and web-check-in rules differ.",
+      "The provider's booking page currently warns of a known bank-transfer payment-processor issue and suggests an alternative payment method if needed.",
+      "Route-specific fares should not be presented as permanent prices."
+    ],
+    "sources": [
+      {
+        "label": "Green Africa Official Site",
+        "agency": "Green Africa Airways",
+        "url": "https://www.greenafrica.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Green Africa Fare Categories",
+        "agency": "Green Africa Airways",
+        "url": "https://web.greenafrica.com/fare-categories",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "green-africa-online-check-in",
+      "arik-air-book-flight",
+      "ibom-air-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "book Green Africa flight",
+      "Green Africa booking",
+      "Green Africa ticket Nigeria",
+      "Green Africa fare categories",
+      "Green Africa Airways booking"
+    ]
+  },
+  {
+    "slug": "green-africa-online-check-in",
+    "title": "How Green Africa web check-in works",
+    "shortTitle": "Green Africa web check-in",
+    "summary": "Green Africa's web check-in process with fare-category-specific opening windows and a common three-hour closing deadline before scheduled departure.",
+    "category": "Air travel",
+    "agencySlug": "green-africa",
+    "feeLabel": "Web check-in included according to fare rules",
+    "feeNote": "Green Africa's current fare page shows web check-in availability by fare category. Airport transactional fees can apply separately for airport check-in/boarding-pass issuance depending on the fare.",
+    "timeline": "Green Africa currently states that gSaver web check-in opens 24 hours before departure, while gClassic and gFlex open 48 hours before departure; all three close 3 hours before departure.",
+    "status": "verified",
+    "officialPortal": "https://www.greenafrica.com/",
+    "requirements": [
+      "A confirmed Green Africa reservation and the booking information needed to open the check-in tool",
+      "A fare category that supports web check-in within its published opening window",
+      "Valid travel identification and enough time to complete any required airport baggage/document process"
+    ],
+    "steps": [
+      "Open Green Africa's official website and choose Check-in.",
+      "Retrieve the confirmed reservation using the booking information requested by the provider.",
+      "Complete web check-in only after the opening window for the passenger's fare category begins.",
+      "Finish the process before the common three-hour-before-departure web check-in deadline.",
+      "Save the boarding/check-in confirmation and arrive in time for airport baggage drop or other required formalities."
+    ],
+    "notes": [
+      "Green Africa's current fare rules say gSaver opens 24 hours before departure while gClassic and gFlex open 48 hours before departure.",
+      "All three published fare categories currently close web check-in 3 hours before departure.",
+      "The provider says an airport transactional fee can apply for airport check-in and boarding-pass issuance under its fare rules."
+    ],
+    "sources": [
+      {
+        "label": "Green Africa Fare Categories",
+        "agency": "Green Africa Airways",
+        "url": "https://web.greenafrica.com/fare-categories",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Green Africa Conditions of Carriage",
+        "agency": "Green Africa Airways",
+        "url": "https://app.greenafrica.com/support/terms-and-conditions",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "green-africa-book-flight",
+      "arik-air-online-check-in",
+      "ibom-air-online-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Green Africa check in",
+      "Green Africa web check in",
+      "Green Africa check-in time",
+      "gSaver check in",
+      "Green Africa boarding pass"
+    ]
   }
 ]
