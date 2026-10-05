@@ -1262,6 +1262,34 @@ export const agencies: Agency[] = [
     "shortName": "LagRide",
     "description": "Private Lagos e-hailing service offering passenger ride booking and captain onboarding/training.",
     "website": "https://lagride.org/"
+  },
+  {
+    "slug": "covenant-university",
+    "name": "Covenant University",
+    "shortName": "Covenant University",
+    "description": "Private Nigerian university with undergraduate admissions and online screening/application services.",
+    "website": "https://www.covenantuniversity.edu.ng/"
+  },
+  {
+    "slug": "babcock-university",
+    "name": "Babcock University",
+    "shortName": "Babcock University",
+    "description": "Private Nigerian university offering undergraduate, Direct Entry and other admission applications.",
+    "website": "https://www.babcock.edu.ng/"
+  },
+  {
+    "slug": "abuad",
+    "name": "Afe Babalola University, Ado-Ekiti",
+    "shortName": "ABUAD",
+    "description": "Private Nigerian university offering undergraduate, Direct Entry, transfer and international admission services.",
+    "website": "https://www.abuad.edu.ng/"
+  },
+  {
+    "slug": "pan-atlantic-university",
+    "name": "Pan-Atlantic University",
+    "shortName": "PAU",
+    "description": "Private Nigerian university offering undergraduate and postgraduate application services.",
+    "website": "https://pau.edu.ng/"
   }
 
 ];
