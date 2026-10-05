@@ -584,12 +584,18 @@ const representative = [
   "spotify-cancel-premium",
   "acca-book-exam-nigeria",
   "oet-book-test-nigeria",
-  "healthtracka-home-test-nigeria"
+  "healthtracka-home-test-nigeria",
+  "uber-lost-item-nigeria",
+  "bolt-lost-item-nigeria",
+  "bolt-ride-insurance-claim-nigeria",
+  "bolt-schedule-ride-nigeria",
+  "uber-reserve-ride-nigeria",
+  "uber-request-ride-online-nigeria"
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(465);
-  expect(publicServices).toHaveLength(465);
+  expect(services).toHaveLength(471);
+  expect(publicServices).toHaveLength(471);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
