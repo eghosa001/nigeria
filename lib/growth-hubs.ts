@@ -715,7 +715,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "Spectranet recharge Nigeria", serviceSlug: "spectranet-recharge-renew-plan" },
       { query: "Konga return and refund", serviceSlug: "konga-return-refund" },
       { query: "sell on Konga Nigeria", serviceSlug: "konga-seller-registration" },
-      { query: "sell on Jumia Nigeria", serviceSlug: "jumia-seller-registration-nigeria" }
+      { query: "sell on Jumia Nigeria", serviceSlug: "jumia-seller-registration-nigeria" },
+      { query: "open GTBank account with 737", serviceSlug: "gtbank-737-open-account" },
+      { query: "block GTBank debit card", serviceSlug: "gtbank-block-debit-card" },
+      { query: "open Zenith Bank account online", serviceSlug: "zenith-online-account-opening" },
+      { query: "open Stanbic Biz Smart account", serviceSlug: "stanbic-bizsmart-account" },
+      { query: "open Fidelity business account online", serviceSlug: "fidelity-business-account-online" },
+      { query: "Flutterwave business account Nigeria", serviceSlug: "flutterwave-business-account-nigeria" },
+      { query: "open OPay account Nigeria", serviceSlug: "opay-account-opening-nigeria" },
+      { query: "lock OPay account or card", serviceSlug: "opay-emergency-lock-account-card" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -755,7 +763,15 @@ export const growthHubs: GrowthHub[] = [
       "spectranet-recharge-renew-plan",
       "konga-return-refund",
       "konga-seller-registration",
-      "jumia-seller-registration-nigeria"
+      "jumia-seller-registration-nigeria",
+      "gtbank-737-open-account",
+      "gtbank-block-debit-card",
+      "zenith-online-account-opening",
+      "stanbic-bizsmart-account",
+      "fidelity-business-account-online",
+      "flutterwave-business-account-nigeria",
+      "opay-account-opening-nigeria",
+      "opay-emergency-lock-account-card"
     ]
   },
 
