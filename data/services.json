@@ -24410,5 +24410,395 @@
       "Max Air cabin baggage",
       "Max Air excess baggage"
     ]
+  },
+  {
+    "slug": "carbon-personal-account-opening",
+    "title": "How to open a Carbon account in Nigeria",
+    "shortTitle": "Carbon account opening",
+    "summary": "Carbon's mobile-app account-opening route for Nigerian adults using a valid phone number, email, BVN and identity information, with additional KYC documents used for higher account limits.",
+    "category": "Banking",
+    "agencySlug": "carbon",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "Carbon does not state a separate fee for creating the current account. Transaction, card, loan and other product charges are governed by the current app and product terms.",
+    "timeline": "Carbon describes registration as taking minutes, while higher KYC levels can require additional identity and address verification before their higher transaction limits become available.",
+    "status": "verified",
+    "officialPortal": "https://www.getcarbon.co/download-page",
+    "requirements": [
+      "A customer who is at least 18 years old and is a Nigerian citizen or legal Nigerian resident",
+      "A valid mobile number and functioning email address",
+      "A Bank Verification Number and, when requested for higher KYC, a National Identification Number",
+      "A valid government-issued photo ID and a recent proof of Nigerian residential address when Carbon requests full identity/address verification"
+    ],
+    "steps": [
+      "Download the official Carbon app from the app-store links provided on Carbon's website and start a new account registration.",
+      "Enter the customer's correct legal name, date of birth, mobile number and email address so the profile matches the identity records.",
+      "Provide the BVN and any NIN or additional identity information requested by Carbon for the account's KYC level.",
+      "Upload or capture the government-issued ID, selfie and recent address evidence when the app requests the higher verification level.",
+      "After Carbon approves the registration, review the account tier and limits in the app before using transfers, payments or credit products."
+    ],
+    "notes": [
+      "Carbon's terms say account holders must be at least 18 years old and must provide truthful, current customer information.",
+      "Carbon's FAQ says BVN is used to confirm that the person registering is the account owner.",
+      "Higher transaction limits require higher KYC verification; do not assume a newly opened basic account has the maximum limits."
+    ],
+    "sources": [
+      {
+        "label": "Carbon Personal Banking",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://www.getcarbon.co/personal",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon Download / Getting Started",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://www.getcarbon.co/download-page",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon Terms and Conditions",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://www.getcarbon.co/terms-and-conditions",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon FAQs",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://www.getcarbon.co/faqs",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "carbon-loan-application",
+      "carbon-loan-repayment",
+      "kuda-personal-account-opening",
+      "opay-account-opening-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Carbon account Nigeria",
+      "Carbon account registration",
+      "Carbon BVN account",
+      "Carbon app signup",
+      "Carbon bank account"
+    ]
+  },
+  {
+    "slug": "carbon-loan-application",
+    "title": "How to apply for a Carbon loan",
+    "shortTitle": "Carbon loan application",
+    "summary": "Carbon's in-app personal-loan application route for eligible KYC Level 2 customers, including profile completion, offer review and acceptance after Carbon returns its automated lending decision.",
+    "category": "Banking",
+    "agencySlug": "carbon",
+    "feeLabel": "Interest and total repayment are shown in the individual offer",
+    "feeNote": "Carbon currently states loan amounts of ₦10,000–₦2,000,000, 61-day to 12-month terms, monthly interest rates of 4.5%–30% and maximum APR of 195%. These are provider ranges, not a recommendation or guaranteed offer; review the exact total repayment before accepting.",
+    "timeline": "Carbon's help centre says applicants are notified within minutes of the loan decision after submitting valid information, and an approved loan offer expires after 72 hours if it is not accepted.",
+    "status": "verified",
+    "officialPortal": "https://www.getcarbon.co/loans",
+    "requirements": [
+      "An existing Carbon account upgraded to at least KYC Level 2",
+      "Accurate personal and financial information completed on the Carbon profile",
+      "An in-app loan offer or eligibility result generated by Carbon's credit assessment",
+      "Acceptance of the exact principal, interest, repayment date, fees and total repayment displayed before disbursement"
+    ],
+    "steps": [
+      "Sign in to the Carbon app and complete the personal and financial profile information needed to reach at least KYC Level 2.",
+      "Open the Loans area and select Apply for Loan when the account is eligible for a credit application.",
+      "Enter the requested loan information accurately and submit the application for Carbon's lending decision.",
+      "If Carbon presents an offer, review the amount, repayment period, interest, total repayment and any late-payment terms before accepting it.",
+      "Accept only an offer the customer chooses to take; Carbon then credits an approved loan to the Carbon account according to the accepted terms."
+    ],
+    "notes": [
+      "Carbon says it does not require collateral or a guarantor for its published personal-loan product.",
+      "Loan approval, amount and pricing depend on Carbon's assessment and are not guaranteed because a user completes the application.",
+      "Late or missed repayment can affect the customer's credit record and can trigger charges under the loan terms."
+    ],
+    "sources": [
+      {
+        "label": "Carbon Loans",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://www.getcarbon.co/loans",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon — How Do I Apply for a Loan?",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://customersuccess.getcarbon.co/portal/en/kb/articles/how-do-i-apply",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon Terms and Conditions",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://ng.getcarbon.co/terms-and-conditions",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "carbon-personal-account-opening",
+      "carbon-loan-repayment",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Carbon loan application",
+      "apply for Carbon loan",
+      "Carbon loan requirements Nigeria",
+      "Carbon loan interest rate",
+      "Carbon loan KYC level 2"
+    ]
+  },
+  {
+    "slug": "carbon-loan-repayment",
+    "title": "How to repay a Carbon loan",
+    "shortTitle": "Carbon loan repayment",
+    "summary": "Carbon's loan-repayment route using a funded Carbon account or debit card from the Make a Repayment screen, with automatic due-date debit and alternative repayment channels documented by Carbon.",
+    "category": "Banking",
+    "agencySlug": "carbon",
+    "feeLabel": "Free from Carbon account; debit-card repayment fee can apply",
+    "feeNote": "Carbon's help centre currently states that debit-card repayment carries a 1% fee capped at ₦2,000, while repayment from a funded Carbon account is free.",
+    "timeline": "Carbon says the account is updated immediately after a successful repayment; due-date repayment can also be automatically deducted from the Carbon account or the linked debit card.",
+    "status": "verified",
+    "officialPortal": "https://customersuccess.getcarbon.co/portal/en/kb/articles/how-do-i-make-a-loan-repayment",
+    "requirements": [
+      "An active Carbon loan with an outstanding repayment amount",
+      "A funded Carbon account or a valid debit card/payment channel accepted by Carbon",
+      "Enough funds to cover the repayment amount plus any debit-card processing charge when that route is used"
+    ],
+    "steps": [
+      "Fund the Carbon account or prepare the debit card/payment method that will be used for the loan repayment.",
+      "Open the Carbon app, select Loans and choose Make a Repayment for the active loan.",
+      "Select the funded Carbon account for the free repayment route or enter the debit-card information for card repayment.",
+      "Review the repayment amount and any card-processing charge before confirming the payment.",
+      "Keep the confirmation email or in-app notification and verify that the outstanding loan balance updates after the payment succeeds."
+    ],
+    "notes": [
+      "Carbon says scheduled repayment may be deducted automatically on the due date from the Carbon account or linked debit card.",
+      "Its help centre also documents funding the Carbon account by bank transfer, USSD or POS before using the account-balance repayment route.",
+      "If a repayment is made but the balance does not update, preserve the amount, date and transaction/session reference before contacting Carbon support."
+    ],
+    "sources": [
+      {
+        "label": "Carbon — How Do I Make a Loan Repayment?",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://customersuccess.getcarbon.co/portal/en/kb/articles/how-do-i-make-a-loan-repayment",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon Loan Repayment Knowledge Base",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://customersuccess.getcarbon.co/portal/en/kb/carbon-nigeria/carbon-collections/loan-repayment",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Carbon — How Can I Make a Payment?",
+        "agency": "Carbon Microfinance Bank",
+        "url": "https://customersuccess.getcarbon.co/portal/en/kb/articles/how-can-i-make-a-payment",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "carbon-loan-application",
+      "carbon-personal-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "repay Carbon loan",
+      "Carbon loan repayment",
+      "Carbon debit card repayment fee",
+      "Carbon Make a Repayment",
+      "Carbon loan payment Nigeria"
+    ]
+  },
+  {
+    "slug": "fairmoney-personal-account-opening",
+    "title": "How to open a FairMoney personal account",
+    "shortTitle": "FairMoney account opening",
+    "summary": "FairMoney's app-based bank-account registration route for Nigerian adults using personal information such as name, BVN, email and mobile number, followed by the identity/KYC checks required for account use.",
+    "category": "Banking",
+    "agencySlug": "fairmoney",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "FairMoney does not state a separate fee for opening the personal bank account. Transfer, card, loan, savings and other product charges are governed by the current app and product terms.",
+    "timeline": "FairMoney promotes app onboarding as a digital process; the terms do not guarantee one fixed completion time when additional identity verification is required.",
+    "status": "verified",
+    "officialPortal": "https://fairmoney.io/",
+    "requirements": [
+      "A Nigerian citizen who is at least 18 years old under FairMoney's current personal-account terms",
+      "A mobile device number and email address for the app profile",
+      "A Bank Verification Number and any additional customer information FairMoney requests during signup",
+      "Additional identification or KYC evidence when FairMoney requests it for account approval or a higher service level"
+    ],
+    "steps": [
+      "Download the official FairMoney app from the provider's website or supported app store and choose the account-registration option.",
+      "Enter the customer's legal name, mobile number, email address and other personal details requested by FairMoney.",
+      "Provide the BVN and complete the identity-verification information requested during onboarding.",
+      "Review and accept FairMoney's account terms and privacy terms before submitting the registration.",
+      "After FairMoney approves the profile, check the available account functions and limits in the app before using transfers, cards, savings or credit services."
+    ],
+    "notes": [
+      "FairMoney's current terms say individual users must be Nigerian citizens aged 18 or older.",
+      "The provider can request additional identity information after initial signup as part of KYC and AML compliance.",
+      "Personal and commercial use are treated separately in FairMoney's terms; a user intending to operate commercially should use the appropriate business route."
+    ],
+    "sources": [
+      {
+        "label": "FairMoney",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://fairmoney.io/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FairMoney Terms and Conditions",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://fairmoney.io/help/terms-and-conditions",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FairMoney Contact",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://fairmoney.io/contact",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fairmoney-business-account-opening",
+      "kuda-personal-account-opening",
+      "carbon-personal-account-opening",
+      "opay-account-opening-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open FairMoney account",
+      "FairMoney account registration Nigeria",
+      "FairMoney BVN account",
+      "FairMoney app signup",
+      "FairMoney bank account"
+    ]
+  },
+  {
+    "slug": "fairmoney-business-account-opening",
+    "title": "How to open a FairMoney Business account",
+    "shortTitle": "FairMoney Business account",
+    "summary": "FairMoney Business's app onboarding route for entrepreneurs: download the business app, sign up with personal/business information, complete KYC and verification, then use the approved business current account and dashboard.",
+    "category": "Business",
+    "agencySlug": "fairmoney",
+    "feeLabel": "Free business-account registration",
+    "feeNote": "FairMoney Business states that registering a business account is free. POS, lending, payment, savings and other commercial services can have separate product terms and charges.",
+    "timeline": "FairMoney Business says account registration can be completed in minutes; if a business-account upgrade is pending, its FAQ says the information is reviewed and a decision is communicated within 72 hours.",
+    "status": "verified",
+    "officialPortal": "https://fairmoney.io/business",
+    "requirements": [
+      "The FairMoney Business app installed from the official provider route",
+      "The business owner's personal information and the business information requested during signup",
+      "KYC information that can include full name, date of birth, BVN, NIN, residential/company address, bank details and valid government-issued ID",
+      "Recent address evidence or other compliance documents when FairMoney requests them for business verification"
+    ],
+    "steps": [
+      "Download the official FairMoney Business app from the provider's Business page.",
+      "Select Sign Up and enter the owner's personal information plus the business details shown by the onboarding form.",
+      "Complete the KYC verification with the BVN, NIN, valid identity document, address and other compliance evidence requested for the business profile.",
+      "Submit the business account or upgrade information and monitor the app for the verification decision.",
+      "After approval, use the FairMoney Business account and dashboard for supported deposits, transfers, bills, payments and other business services."
+    ],
+    "notes": [
+      "FairMoney Business says registration is free and the business account is separate from a personal FairMoney account.",
+      "The provider's FAQ says a pending business-account upgrade is reviewed with an approval/rejection update within the next 72 hours.",
+      "Business POS and credit applications are separate services with their own eligibility and commercial terms."
+    ],
+    "sources": [
+      {
+        "label": "FairMoney Business",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://fairmoney.io/business",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FairMoney Business Home",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://business.fairmoney.io/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FairMoney Business Terms & Privacy",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://business.fairmoney.io/terms-privacy",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FairMoney Business FAQs",
+        "agency": "FairMoney Microfinance Bank",
+        "url": "https://fairmoney.io/business/faqs",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fairmoney-personal-account-opening",
+      "paystack-business-activation-nigeria",
+      "flutterwave-business-account-nigeria",
+      "kuda-business-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "FairMoney Business account",
+      "open FairMoney business account",
+      "FairMoney business KYC",
+      "FairMoney business registration free",
+      "FairMoney Business app"
+    ]
+  },
+  {
+    "slug": "abc-transport-book-bus-online",
+    "title": "How to book an ABC Transport bus online",
+    "shortTitle": "Book ABC Transport",
+    "summary": "ABC Transport's online schedule-and-booking route for choosing a Nigerian or cross-border service, reviewing the current fare/departure/journey time and using Book Now to reserve the selected trip.",
+    "category": "Intercity transport",
+    "agencySlug": "abc-transport",
+    "feeLabel": "Fare varies by route, coach and travel date",
+    "feeNote": "ABC Transport publishes live schedules with route-specific adult/child fares. Use the current schedule/booking amount rather than an older fare list.",
+    "timeline": "The selected schedule displays its planned departure and journey time; the booking is completed after the passenger follows Book Now and successfully pays for the chosen service.",
+    "status": "verified",
+    "officialPortal": "https://www.abctransport.com/schedules",
+    "requirements": [
+      "The intended origin, destination and travel date or current schedule needed for the trip",
+      "An available ABC Transport service/coach on that route",
+      "Passenger and contact information required by the booking flow",
+      "A supported payment method for the fare shown for the selected trip"
+    ],
+    "steps": [
+      "Open ABC Transport's official Schedules page and identify the route or service that matches the passenger's trip.",
+      "Review the coach type, adult/child fare, departure time and published journey time for the available service.",
+      "Select Book Now for the exact schedule the passenger wants to reserve.",
+      "Enter the passenger/contact details and complete the payment steps shown by ABC Transport.",
+      "Save the booking/ticket confirmation and arrive at the listed terminal before the scheduled departure time."
+    ],
+    "notes": [
+      "ABC Transport's live schedule includes Nigerian intercity services and some cross-border West African routes.",
+      "Fares can change and the schedule can list different coach classes or child fares, so the live trip row should be checked before payment.",
+      "Do not create separate indexable SEO pages for every city pair unless the route has unique, substantial operational information beyond the live schedule."
+    ],
+    "sources": [
+      {
+        "label": "ABC Transport Schedules",
+        "agency": "ABC Transport Plc",
+        "url": "https://www.abctransport.com/schedules",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ABC Transport Booking",
+        "agency": "ABC Transport Plc",
+        "url": "https://www.abctransport.com/bus-booking",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "guo-book-bus-online",
+      "gigm-book-bus-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ABC Transport booking",
+      "book ABC bus online",
+      "ABC Transport schedule Nigeria",
+      "ABC Transport fare",
+      "ABC bus ticket Nigeria"
+    ]
   }
 ]
