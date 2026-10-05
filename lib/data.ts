@@ -1116,6 +1116,13 @@ export const agencies: Agency[] = [
     "description": "Private streaming service offering membership, plan management and account support to customers in Nigeria.",
     "website": "https://www.netflix.com/ng/"
   },
+  {
+    "slug": "wakanow",
+    "name": "Wakanow",
+    "shortName": "Wakanow",
+    "description": "Private Nigerian travel platform offering flight, hotel, package and booking-support services.",
+    "website": "https://www.wakanow.com/"
+  },
 
 ];
 
