@@ -1,12 +1,24 @@
 import { Buffer } from "node:buffer";
 import { ANALYTICS_CLEAN_START, analyticsStartDate } from "@/lib/analytics-safety";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
+import {
+  POSTHOG_COLLECTION_START,
+  POSTHOG_PROJECT_ID,
+  POSTHOG_WEB_URL,
+  posthogServerReportingConfigured,
+} from "@/lib/posthog-config";
+import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
+import {
+  SEARCH_CONSOLE_HISTORY_THROUGH,
+  historicalSearchConsoleSummary,
+} from "@/data/search-console-history";
 
 export type AnalyticsRange = "7d" | "30d" | "90d";
 export type AnalyticsTrafficMode = "all" | "clean";
 
 export type SearchPerformanceSummary = {
   available: boolean;
+  source: "live" | "historical-snapshot" | "unavailable";
   siteUrl: string;
   startDate: string;
   endDate: string;
@@ -52,6 +64,14 @@ export type AnalyticsDashboardData = {
   interactions: Array<{ event: string; count: number }>;
   searchPerformance: SearchPerformanceSummary;
   connection: AnalyticsConnectionStatus;
+  posthog: {
+    trackingConfigured: boolean;
+    reportingConfigured: boolean;
+    projectId: number;
+    webUrl: string;
+    collectionStartDate: string;
+    overview: PostHogOverview;
+  };
 };
 
 type ReportRow = {
@@ -419,6 +439,7 @@ async function getSearchPerformance(startDate: string): Promise<SearchPerformanc
 
     return {
       available: true,
+      source: "live",
       siteUrl: settings.siteUrl,
       startDate,
       endDate,
@@ -430,8 +451,27 @@ async function getSearchPerformance(startDate: string): Promise<SearchPerformanc
       position: total?.position ?? 0,
     };
   } catch (error) {
+    const historical = historicalSearchConsoleSummary(startDate, endDate);
+    if (historical.rows.length) {
+      return {
+        available: true,
+        source: "historical-snapshot",
+        siteUrl: settings.siteUrl,
+        startDate,
+        endDate,
+        latestDate: historical.latestDate,
+        firstIncompleteDate: null,
+        impressions: historical.impressions,
+        clicks: historical.clicks,
+        ctr: historical.ctr,
+        position: historical.position,
+        error: "Live Search Console API is unavailable to the server; showing preserved historical data through " + SEARCH_CONSOLE_HISTORY_THROUGH + ".",
+      };
+    }
+
     return {
       available: false,
+      source: "unavailable",
       siteUrl: settings.siteUrl,
       startDate,
       endDate,
@@ -578,12 +618,13 @@ export async function getAnalyticsDashboard(
     limit: 20,
   };
 
-  const [batch, interactionReport, realtime, searchPerformance, connection] = await Promise.all([
+  const [batch, interactionReport, realtime, searchPerformance, connection, posthogOverview] = await Promise.all([
     batchRunReports(coreRequests),
     runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
     runRealtime().catch(() => null),
     getSearchPerformance(dataStartDate),
     verifyAnalyticsConnection(),
+    getPostHogOverview(dataStartDate, today, forceFresh),
   ]);
 
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
@@ -637,6 +678,14 @@ export async function getAnalyticsDashboard(
     })),
     searchPerformance,
     connection,
+    posthog: {
+      trackingConfigured: true,
+      reportingConfigured: posthogServerReportingConfigured(),
+      projectId: POSTHOG_PROJECT_ID,
+      webUrl: POSTHOG_WEB_URL,
+      collectionStartDate: POSTHOG_COLLECTION_START,
+      overview: posthogOverview,
+    },
   };
 
   reportCache.set(cacheKey, { data, expiresAt: Date.now() + 5 * 60 * 1000 });

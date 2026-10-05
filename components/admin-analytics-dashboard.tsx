@@ -17,6 +17,14 @@ function number(value: number) {
   return new Intl.NumberFormat("en-NG").format(value);
 }
 
+function duration(value: number | null) {
+  if (value == null || !Number.isFinite(value)) return "—";
+  if (value < 60) return Math.round(value) + "s";
+  const minutes = Math.floor(value / 60);
+  const seconds = Math.round(value % 60);
+  return minutes + "m " + seconds + "s";
+}
+
 function readableDate(value: string) {
   if (!/^\d{8}$/.test(value)) return value;
   const date = new Date(Number(value.slice(0, 4)), Number(value.slice(4, 6)) - 1, Number(value.slice(6, 8)));
@@ -106,7 +114,7 @@ export function AdminAnalyticsDashboard() {
   const maxDailyViews = useMemo(() => Math.max(1, ...(data?.daily.map((row) => row.pageViews) ?? [1])), [data]);
 
   if (state === "loading") {
-    return <div className="admin-analytics-state"><strong>Loading visit analytics…</strong><p>Reading the latest aggregate GA4 reports.</p></div>;
+    return <div className="admin-analytics-state"><strong>Loading visit analytics…</strong><p>Reading PostHog, GA4 and Search Console sources.</p></div>;
   }
 
   if (state === "setup") {
@@ -176,7 +184,61 @@ export function AdminAnalyticsDashboard() {
       <section className="admin-panel">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">Analytics connection</span>
+            <span className="eyebrow">Primary live analytics</span>
+            <h2>PostHog · MyNigeriaGuide</h2>
+          </div>
+          <a href={data.posthog.webUrl} target="_blank" rel="noreferrer">Open live analytics ↗</a>
+        </div>
+        <div className="analytics-ranking">
+          <div>
+            <span>1</span>
+            <strong>Public tracking</strong>
+            <small>mynigeriaguide.com</small>
+            <b>{data.posthog.trackingConfigured ? "Active" : "Not configured"}</b>
+          </div>
+          <div>
+            <span>2</span>
+            <strong>Collection start</strong>
+            <small>{data.posthog.collectionStartDate}</small>
+            <b>New traffic</b>
+          </div>
+          <div>
+            <span>3</span>
+            <strong>Admin API reporting</strong>
+            <small>Protected server-side PostHog read access</small>
+            <b>{data.posthog.reportingConfigured ? "Connected" : "Needs private read key"}</b>
+          </div>
+        </div>
+        <p className="analytics-clean-note">
+          PostHog is the primary fast/live analytics source going forward. It does not rewrite old visitor history.
+          Google Search Console history remains preserved separately below, while GA4 stays enabled as a secondary reference.
+          Admin paths, API paths, Next.js assets and automated QA traffic are excluded from PostHog collection.
+        </p>
+        {data.posthog.overview.available ? (
+          <>
+            <div className="analytics-metric-grid">
+              <div><span>PostHog visitors</span><strong>{number(data.posthog.overview.visitors ?? 0)}</strong><small>Unique visitors · fast web analytics</small></div>
+              <div><span>PostHog sessions</span><strong>{number(data.posthog.overview.sessions ?? 0)}</strong><small>Visits in the selected period</small></div>
+              <div><span>PostHog page views</span><strong>{number(data.posthog.overview.views ?? 0)}</strong><small>Repeated views included</small></div>
+              <div><span>Avg session</span><strong>{duration(data.posthog.overview.averageSessionDurationSeconds)}</strong><small>Average session duration</small></div>
+              <div><span>Bounce rate</span><strong>{data.posthog.overview.bounceRate == null ? "—" : (data.posthog.overview.bounceRate * 100).toFixed(1) + "%"}</strong><small>Sessions that ended without meaningful continuation</small></div>
+            </div>
+            <p className="analytics-clean-note">
+              PostHog range: {data.posthog.overview.startDate} through {data.posthog.overview.endDate}. Refresh now asks PostHog and GA4 for fresh server-side reports.
+            </p>
+          </>
+        ) : (
+          <div className="admin-empty">
+            <strong>PostHog is collecting traffic, but this custom admin page cannot query PostHog totals yet.</strong>
+            <p>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with Query: Read access. Never use that key in browser code. Until then, use the live PostHog dashboard link above for immediate totals.</p>
+          </div>
+        )}
+      </section>
+
+      <section className="admin-panel">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Secondary analytics reference</span>
             <h2>{
               data.connection?.status === "verified"
                 ? "GA4 property verified"
@@ -239,7 +301,7 @@ export function AdminAnalyticsDashboard() {
       </section>
 
       <div className="analytics-metric-grid">
-        <div><span>Processed GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
+        <div><span>GA4 processed visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
         <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
         <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
         <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
@@ -256,7 +318,7 @@ export function AdminAnalyticsDashboard() {
             <span className="eyebrow">Google Search visibility</span>
             <h2>Impressions and search clicks</h2>
           </div>
-          <small>Search Console · freshest available data</small>
+          <small>{data.searchPerformance?.source === "historical-snapshot" ? "Search Console · preserved historical snapshot" : "Search Console · freshest available data"}</small>
         </div>
         {data.searchPerformance?.available ? (
           <>
@@ -267,7 +329,11 @@ export function AdminAnalyticsDashboard() {
               <div><span>Average position</span><strong>{(data.searchPerformance?.position ?? 0).toFixed(1)}</strong><small>Average top result position</small></div>
             </div>
             <p className="analytics-clean-note">
-              Comparison range starts {data.searchPerformance?.startDate}, matching the GA4 clean-data window. Search Console requested through {data.searchPerformance?.endDate}; latest date actually returned: {data.searchPerformance?.latestDate ?? "none yet"}.
+              {data.searchPerformance?.source === "historical-snapshot" ? (
+                <>Previous Search Console data is preserved even though the server's live Search Console credential is unavailable. Snapshot currently runs through {data.searchPerformance?.latestDate ?? "the last saved date"}.</>
+              ) : (
+                <>Comparison range starts {data.searchPerformance?.startDate}. Search Console requested through {data.searchPerformance?.endDate}; latest date actually returned: {data.searchPerformance?.latestDate ?? "none yet"}.</>
+              )}
               {data.searchPerformance?.firstIncompleteDate ? <> Data from {data.searchPerformance?.firstIncompleteDate} onward is preliminary and can still change.</> : null}
             </p>
           </>
