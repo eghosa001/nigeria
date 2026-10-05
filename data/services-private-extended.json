@@ -9553,5 +9553,253 @@
       "Travelstart one way flight",
       "Travelstart multi city Nigeria"
     ]
+  },
+  {
+    "slug": "microsoft-certification-exam-scheduling",
+    "title": "How to schedule a Microsoft certification exam from Nigeria",
+    "shortTitle": "Microsoft exam scheduling",
+    "summary": "Microsoft Learn's certification exam route for choosing an exam, completing the candidate profile, handing off to Pearson VUE, then selecting a local test centre or eligible online-proctored appointment.",
+    "category": "Education",
+    "agencySlug": "microsoft-certification",
+    "feeLabel": "Exam-specific price shown before checkout",
+    "feeNote": "Microsoft certification exam prices vary by exam and market. The live certification/exam page and Pearson VUE checkout show the amount that applies to the candidate.",
+    "timeline": "Microsoft currently allows Pearson VUE exams to be scheduled no more than 90 days in advance, with a maximum of two Microsoft certification exams scheduled at one time.",
+    "status": "verified",
+    "officialPortal": "https://learn.microsoft.com/en-gb/credentials/certifications/register-schedule-exam",
+    "requirements": [
+      "A personal Microsoft account and Microsoft Learn profile for the certification candidate",
+      "A legal name on the Learn profile that matches the government-issued ID that will be used for testing",
+      "The exact Microsoft certification exam the candidate intends to take",
+      "An available Pearson VUE test-centre or online-proctored appointment for that exam",
+      "A supported payment method or valid exam voucher when one applies"
+    ],
+    "steps": [
+      "Open the Microsoft certification or exam details page and choose Schedule exam for the credential being pursued.",
+      "Sign in with the candidate's personal Microsoft account and complete or update the Microsoft Learn profile.",
+      "Confirm that the legal name matches the test-day ID and provide the address, phone number and contact email requested for exam delivery.",
+      "Choose Schedule with Pearson VUE for the standard professional-certification route and continue to the provider's scheduling page.",
+      "Select an available test centre or eligible online appointment, review the price and policies, pay or apply a voucher, and save the confirmation."
+    ],
+    "notes": [
+      "Microsoft says most certification exams use Pearson VUE, while some academic/Microsoft Office routes use Certiport instead.",
+      "Candidates can normally reschedule, cancel or launch an eligible online exam from the Microsoft Learn profile.",
+      "For online testing, Microsoft recommends running the system pre-check before booking."
+    ],
+    "sources": [
+      {
+        "label": "Microsoft Learn — Register and schedule an exam",
+        "agency": "Microsoft",
+        "url": "https://learn.microsoft.com/en-gb/credentials/certifications/register-schedule-exam",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Microsoft Certification process overview",
+        "agency": "Microsoft",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/certification-process-overview",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "pearson-vue-schedule-exam",
+      "pmp-exam-scheduling",
+      "aws-certification-exam-scheduling",
+      "cisco-certification-exam-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Microsoft certification exam Nigeria",
+      "schedule Microsoft exam Nigeria",
+      "Microsoft Pearson VUE Nigeria",
+      "Microsoft Learn exam booking",
+      "Microsoft online proctored exam Nigeria"
+    ]
+  },
+  {
+    "slug": "aws-certification-exam-scheduling",
+    "title": "How to schedule an AWS Certification exam from Nigeria",
+    "shortTitle": "AWS exam scheduling",
+    "summary": "AWS Training and Certification's exam-booking route for choosing a certification, opening the AWS Certification Account, then scheduling through Pearson VUE at a test centre or with online proctoring.",
+    "category": "Education",
+    "agencySlug": "aws-certification",
+    "feeLabel": "US$100, US$150 or US$300 depending on exam level",
+    "feeNote": "AWS currently lists Business/Foundational exams at US$100, Associate exams at US$150, and Professional/Specialty exams at US$300, with taxes potentially added.",
+    "timeline": "Appointment availability varies by test centre and online-proctoring slot. AWS says most online-proctored appointments are available 24/7 in English.",
+    "status": "verified",
+    "officialPortal": "https://aws.amazon.com/certification/certification-prep/testing/",
+    "requirements": [
+      "An AWS Training and Certification account with access to the AWS Certification Account",
+      "Selection of the exact AWS certification exam the candidate intends to take",
+      "A valid test-day identity document that meets Pearson VUE and AWS exam rules",
+      "A suitable computer and private testing space when choosing online proctoring",
+      "A supported payment method or valid AWS exam voucher"
+    ],
+    "steps": [
+      "Open the AWS Certification site and sign in to the candidate's AWS Training and Certification account.",
+      "Open the AWS Certification Account, choose Exam Registration and select Schedule an exam.",
+      "Find the intended certification exam and choose the Pearson VUE scheduling option.",
+      "Select either an available testing centre or online-proctored appointment and review the current exam price.",
+      "Complete payment or apply an eligible voucher, then save the confirmation email and review the test-day requirements."
+    ],
+    "notes": [
+      "AWS says all certification exams are delivered globally through Pearson VUE.",
+      "Online proctoring is available for all AWS certification exams, subject to language and technical requirements.",
+      "AWS currently requires a 14-day wait before retaking a failed certification exam."
+    ],
+    "sources": [
+      {
+        "label": "AWS — Schedule an AWS Certification Exam",
+        "agency": "Amazon Web Services",
+        "url": "https://aws.amazon.com/certification/certification-prep/testing/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AWS Certification FAQs",
+        "agency": "Amazon Web Services",
+        "url": "https://aws.amazon.com/certification/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AWS Certification",
+        "agency": "Amazon Web Services",
+        "url": "https://aws.amazon.com/certification/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "pearson-vue-schedule-exam",
+      "microsoft-certification-exam-scheduling",
+      "cisco-certification-exam-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "AWS certification Nigeria",
+      "AWS exam Nigeria",
+      "schedule AWS exam Pearson VUE",
+      "AWS Cloud Practitioner exam Nigeria",
+      "AWS online proctored exam Nigeria"
+    ]
+  },
+  {
+    "slug": "cisco-certification-exam-registration",
+    "title": "How to register for a Cisco certification exam from Nigeria",
+    "shortTitle": "Cisco exam registration",
+    "summary": "Cisco's certification exam-registration route for selecting the exam, confirming candidate identity/profile details and scheduling with authorised test-delivery partner Pearson VUE.",
+    "category": "Education",
+    "agencySlug": "cisco-certification",
+    "feeLabel": "Exam-specific Cisco fee applies",
+    "feeNote": "Cisco certification exam prices vary by exam. Confirm the amount on the current exam page or Pearson VUE checkout before payment.",
+    "timeline": "Appointment availability depends on the exam and Pearson VUE test-centre or online options available to the candidate.",
+    "status": "verified",
+    "officialPortal": "https://www.cisco.com/site/us/en/learn/training-certifications/exams/registration.html",
+    "requirements": [
+      "The exact Cisco certification exam name and exam number",
+      "The candidate's legal name exactly as shown on government-issued ID",
+      "A valid email address and current contact information",
+      "The existing Cisco Certification ID or Test ID when the candidate has tested before",
+      "A supported payment method or legitimate Cisco/Pearson VUE voucher"
+    ],
+    "steps": [
+      "Open Cisco's official Exam Registration page and identify the certification exam and exam number to be taken.",
+      "Review the current exam details and prepare the candidate's legal name, email and any existing Cisco Certification ID.",
+      "Open the Cisco certification profile or Pearson VUE registration route provided by Cisco.",
+      "Choose an available exam appointment and verify the candidate profile before checkout.",
+      "Pay the exam fee or apply a valid authorised voucher and keep the Pearson VUE/Cisco confirmation for test day."
+    ],
+    "notes": [
+      "Cisco identifies Pearson VUE as its authorised test-delivery partner.",
+      "Candidates who have tested before should use their existing Cisco Certification ID to avoid duplicate records.",
+      "Cisco warns that fraudulent or unauthorised vouchers can result in serious certification-program sanctions."
+    ],
+    "sources": [
+      {
+        "label": "Cisco Exam Registration",
+        "agency": "Cisco",
+        "url": "https://www.cisco.com/site/us/en/learn/training-certifications/exams/registration.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "pearson-vue-schedule-exam",
+      "microsoft-certification-exam-scheduling",
+      "aws-certification-exam-scheduling"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Cisco certification exam Nigeria",
+      "Cisco Pearson VUE Nigeria",
+      "book CCNA exam Nigeria",
+      "Cisco exam registration Nigeria",
+      "Cisco certification test centre Nigeria"
+    ]
+  },
+  {
+    "slug": "shuttlers-book-daily-commute",
+    "title": "How to book a Shuttlers daily commute",
+    "shortTitle": "Book Shuttlers commute",
+    "summary": "Shuttlers' scheduled-mass-transit booking route for registering on web/app, finding an available route, choosing one-way or return travel, selecting a date/trip and paying by supported wallet or payment methods.",
+    "category": "Urban mobility",
+    "agencySlug": "shuttlers",
+    "feeLabel": "Trip price depends on route and booking",
+    "feeNote": "Shuttlers displays the current trip price for the selected route and itinerary. Payment-channel charges can apply to some methods and should be reviewed before payment.",
+    "timeline": "Trips operate according to the selected scheduled route and departure time. Availability depends on route capacity and the date selected in the app.",
+    "status": "verified",
+    "officialPortal": "https://www.shuttlers.co/",
+    "requirements": [
+      "A Shuttlers web or mobile account for the passenger",
+      "An available Shuttlers route with a pickup point and destination that fit the passenger's commute",
+      "A selected one-way or return trip and intended departure date",
+      "A supported payment method such as transfer, card, bank payment, wallet, company credit or available offline payment option"
+    ],
+    "steps": [
+      "Open Shuttlers on web or mobile and register or sign in to the passenger account.",
+      "Enter the destination or search the live route list and choose a route with suitable pickup and drop-off stops.",
+      "Choose one-way or return travel, select the departure date and review the available trips, departure times, prices and stops.",
+      "Select the preferred trip and complete payment directly or through a funded Shuttlers wallet or another supported payment route.",
+      "Open Upcoming Trips for the ticket, arrive before the shuttle reaches the pickup point, and use the live tracking/vehicle details for boarding."
+    ],
+    "notes": [
+      "Shuttlers' current route directory shows the live routes available for booking rather than relying on a fixed static route list.",
+      "The provider says passengers can fund a wallet or pay with transfer, card, bank, company credit and supported offline options.",
+      "After booking, the passenger can track the shuttle in real time and confirm the vehicle details before boarding."
+    ],
+    "sources": [
+      {
+        "label": "Shuttlers Home",
+        "agency": "Shuttlers",
+        "url": "https://www.shuttlers.co/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Shuttlers Routes",
+        "agency": "Shuttlers",
+        "url": "https://www.shuttlers.co/routes",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "How Shuttlers Daily Works",
+        "agency": "Shuttlers",
+        "url": "https://www.shuttlers.co/resources/how-shuttlers-daily-works",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Shuttlers Getting Started",
+        "agency": "Shuttlers",
+        "url": "https://www.shuttlers.co/blog/getting-started",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "lagride-book-ride",
+      "gigm-book-bus-nigeria",
+      "guo-book-bus-online"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Shuttlers booking Nigeria",
+      "book Shuttlers bus",
+      "Shuttlers routes Lagos",
+      "Shuttlers daily commute",
+      "Shuttlers app booking"
+    ]
   }
 ]
