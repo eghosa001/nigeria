@@ -2717,6 +2717,134 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "ibom-waterfall-arochukwu",
     "national-war-museum-umuahia"
   ],
+  "lagos-3-day-itinerary": [
+    "national-museum-lagos",
+    "lekki-conservation-centre",
+    "nike-art-gallery-lagos",
+    "nok-by-alara",
+    "cactus-restaurant-lagos",
+    "radisson-blu-anchorage-lagos"
+  ],
+  "abuja-weekend-itinerary": [
+    "abuja-national-mosque",
+    "national-christian-centre-abuja",
+    "millennium-park-abuja",
+    "blucabana-abuja",
+    "abuja-continental-hotel"
+  ],
+  "benin-city-weekend-itinerary": [
+    "national-museum-benin-city",
+    "igun-street",
+    "naira-grill-benin",
+    "seven-restaurant-benin"
+  ],
+  "calabar-weekend-itinerary": [
+    "slave-history-museum-calabar",
+    "marina-resort-calabar",
+    "e3-restaurant-calabar"
+  ],
+  "port-harcourt-weekend-itinerary": [
+    "port-harcourt-pleasure-park",
+    "bole-king-port-harcourt",
+    "landmark-port-harcourt-resort"
+  ],
+  "kano-2-day-itinerary": [
+    "gidan-makama-museum",
+    "dala-hill",
+    "jalsa-kano"
+  ],
+  "jos-weekend-itinerary": [
+    "jos-museum-and-zoo",
+    "jos-wildlife-park",
+    "ask-me-restaurant-jos",
+    "barcardi-restaurant-jos"
+  ],
+  "enugu-weekend-itinerary": [
+    "ngwo-pine-forest",
+    "awhum-waterfall",
+    "landmark-nike-lake-resort",
+    "ntachi-osa-new-haven"
+  ],
+  "ibadan-weekend-itinerary": [
+    "agodi-gardens-ibadan",
+    "bowers-tower-ibadan",
+    "national-museum-unity-ibadan"
+  ],
+  "abeokuta-day-trip-itinerary": [
+    "olumo-rock",
+    "itoku-adire-market",
+    "alake-palace-abeokuta",
+    "centenary-hall-abeokuta"
+  ],
+  "osogbo-ile-ife-weekend-itinerary": [
+    "osun-osogbo-sacred-grove",
+    "nike-art-centre-osogbo",
+    "ataoja-palace-osogbo",
+    "ooni-palace-ile-ife",
+    "moremi-statue-ile-ife",
+    "national-museum-ile-ife"
+  ],
+  "uyo-weekend-itinerary": [
+    "ibom-unity-museum",
+    "akwa-ibom-state-centre-arts-culture",
+    "ibom-tropicana"
+  ],
+  "ondo-nature-weekend-itinerary": [
+    "idanre-hills",
+    "owo-museum-antiquities",
+    "akure-forest-reserve",
+    "araromi-seaside",
+    "ebomi-lake-ipesi",
+    "igbokoda-waterfront-ondo"
+  ],
+  "ekiti-nature-weekend-itinerary": [
+    "ikogosi-warm-springs",
+    "arinta-waterfalls",
+    "fajuyi-memorial-park"
+  ],
+  "kwara-weekend-itinerary": [
+    "ilorin-central-mosque",
+    "kwara-flower-garden",
+    "owu-falls-kwara"
+  ],
+  "anambra-nature-weekend-itinerary": [
+    "ogbunike-cave",
+    "agulu-lake",
+    "owerre-ezukala-cave-waterfall"
+  ],
+  "umuahia-history-weekend-itinerary": [
+    "national-war-museum-umuahia",
+    "ojukwu-bunker-umuahia",
+    "ibom-waterfall-arochukwu"
+  ],
+  "lokoja-weekend-itinerary": [
+    "niger-benue-confluence-lokoja",
+    "mount-patti-lokoja",
+    "lokoja-colonial-heritage"
+  ],
+  "katsina-heritage-weekend-itinerary": [
+    "gobarau-minaret",
+    "emirs-palace-katsina",
+    "kusugu-well-daura"
+  ],
+  "kebbi-heritage-weekend-itinerary": [
+    "kanta-museum-argungu",
+    "hubbare-gwandu",
+    "girmache-shrine-zuru"
+  ],
+  "cross-river-rainforest-road-trip": [
+    "agbokim-waterfalls",
+    "alok-ikom-monoliths",
+    "afi-mountain-wildlife-sanctuary",
+    "cross-river-national-park-main",
+    "oban-division-cross-river-national-park",
+    "okwangwo-division-cross-river-national-park"
+  ],
+  "edo-heritage-nature-itinerary": [
+    "national-museum-benin-city",
+    "igun-street",
+    "okomu-national-park-main"
+  ],
 };
 
 export function getExplorePlacesForGuide(guideSlug: string) {
