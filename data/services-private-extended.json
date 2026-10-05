@@ -8842,5 +8842,241 @@
       "Sovereign Trust claims email",
       "file STI motor claim"
     ]
+  },
+  {
+    "slug": "stanbic-pension-rsa-registration",
+    "title": "How to open an RSA with Stanbic IBTC Pension Managers",
+    "shortTitle": "Stanbic IBTC RSA registration",
+    "summary": "Stanbic IBTC Pension Managers' online Retirement Savings Account registration route for eligible employees, using NIN, identification, address evidence, photograph and employment documentation.",
+    "category": "Pensions",
+    "agencySlug": "stanbic-ibtc-pension",
+    "feeLabel": "No RSA-opening fee stated",
+    "feeNote": "Stanbic IBTC Pension Managers does not state a separate fee for opening the Retirement Savings Account.",
+    "timeline": "The RSA PIN is issued after the registration information and documents are processed; Stanbic says the PIN is sent to the registered phone number and email address.",
+    "status": "verified",
+    "officialPortal": "https://eazireg.stanbicibtcpension.com/public/home/index.sap",
+    "requirements": [
+      "A recent coloured passport photograph against a white background",
+      "The applicant's National Identification Number (NIN)",
+      "A valid means of identification and accepted proof of residential address",
+      "A completed RSA registration application and employment information/documentation for the mandatory pension route"
+    ],
+    "steps": [
+      "Open Stanbic IBTC Pension Managers' official online RSA registration portal and choose the applicable pension-account route.",
+      "Enter the applicant's personal, contact, employment and NIN information exactly as shown on the supporting records.",
+      "Upload the passport photograph, identity document and accepted proof of address requested by the registration portal.",
+      "Review the completed pension registration information and submit the RSA application for processing.",
+      "Keep the registration acknowledgement and confirm the RSA PIN when Stanbic sends it to the registered phone number and email address."
+    ],
+    "notes": [
+      "An employee who already has an RSA with another PFA should not open a duplicate RSA; transfers follow the regulated transfer-window process.",
+      "Stanbic's registration page lists employment categories that fall under the mandatory Contributory Pension Scheme.",
+      "General RSA contribution rules remain governed by PenCom and are covered separately on MyNigeriaGuide."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC RSA Registration",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/services/retirement-savings-accounts/rsa-registration/rsa-registration",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Stanbic IBTC EaziReg",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://eazireg.stanbicibtcpension.com/public/home/index.sap",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-pension-rsa-statement",
+      "stanbic-pension-update-biodata",
+      "stanbic-pension-recover-pin-passcode",
+      "pencom-open-rsa",
+      "pencom-transfer-rsa"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Stanbic IBTC pension RSA registration",
+      "open Stanbic pension account",
+      "Stanbic IBTC RSA online",
+      "Stanbic pension registration requirements",
+      "Stanbic EaziReg"
+    ]
+  },
+  {
+    "slug": "stanbic-pension-rsa-statement",
+    "title": "How to get a Stanbic IBTC Pension RSA statement",
+    "shortTitle": "Stanbic pension statement",
+    "summary": "Stanbic IBTC Pension Managers' statement routes through My Pension Portal, the mobile app, SMS short code or IVR for customers who need their Retirement Savings Account statement.",
+    "category": "Pensions",
+    "agencySlug": "stanbic-ibtc-pension",
+    "feeLabel": "E-statement is free; SMS short code costs ₦10",
+    "feeNote": "Stanbic says e-statements are provided at no cost, while its published short-code SMS requests currently cost ₦10 per message.",
+    "timeline": "Portal/app statements are generated through self-service; the SMS statement request is sent to the registered email address after the short-code request is processed.",
+    "status": "verified",
+    "officialPortal": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/self-service/channels/self-service-channels",
+    "requirements": [
+      "An active Stanbic IBTC Pension RSA",
+      "The RSA PIN, registered phone number or email address plus the pension-portal passcode for portal access",
+      "Access to the registered mobile number when using the 30388 SMS short-code route",
+      "A selected statement date range when generating a statement through My Pension Portal"
+    ],
+    "steps": [
+      "Open Stanbic IBTC Pension Managers' website and choose Sign into your account, then select My Pension Portal.",
+      "Sign in with the RSA PIN, registered phone number or email address and the confidential passcode.",
+      "Choose Generate Statement on the pension dashboard and enter the required start and end dates.",
+      "Select View Statement to generate the RSA statement for the chosen period and save the document securely.",
+      "Alternatively, send STATEMENT to 30388 from the registered phone number to have the statement sent to the registered email address."
+    ],
+    "notes": [
+      "Stanbic's mobile app also supports viewing balances, statements and recent contribution history.",
+      "The provider says RSA PIN retrieval is available by texting PIN to 30388 from the registered mobile number.",
+      "Pension statements contain sensitive financial and identity information and should be stored securely."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC Self Service Channels",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/self-service/channels/self-service-channels",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Stanbic IBTC Pension FAQs",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/help-desk/frequently-asked-questions/general-faqs/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-pension-rsa-registration",
+      "stanbic-pension-update-biodata",
+      "stanbic-pension-recover-pin-passcode",
+      "pencom-unremitted-contributions"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Stanbic pension statement",
+      "Stanbic IBTC RSA statement",
+      "text STATEMENT 30388",
+      "Stanbic pension portal statement",
+      "download RSA statement Stanbic"
+    ]
+  },
+  {
+    "slug": "stanbic-pension-update-biodata",
+    "title": "How to update Stanbic IBTC Pension biodata or complete data recapture",
+    "shortTitle": "Stanbic pension biodata update",
+    "summary": "Stanbic IBTC Pension Managers' self-service routes for updating eligible profile information and completing pension data recapture through My Pension Portal or the mobile app.",
+    "category": "Pensions",
+    "agencySlug": "stanbic-ibtc-pension",
+    "feeLabel": "No self-service update fee stated",
+    "feeNote": "Stanbic IBTC Pension Managers does not state a separate charge for eligible biodata updates or data recapture through its self-service channels.",
+    "timeline": "Simple eligible profile changes are handled through self-service; data recapture completion depends on validation of the submitted identity information.",
+    "status": "verified",
+    "officialPortal": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/self-service/channels/self-service-channels",
+    "requirements": [
+      "An existing Stanbic IBTC Pension RSA and access to My Pension Portal or the pension module in the mobile app",
+      "The RSA PIN or registered contact/login information and pension passcode",
+      "The corrected personal/contact information and any identity evidence requested for data recapture",
+      "Use of an assisted route for fields that the provider does not permit the customer to change directly in the app"
+    ],
+    "steps": [
+      "Sign in to My Pension Portal or open the Pension module in the Stanbic IBTC mobile app.",
+      "For eligible app changes, open More and then Client Profile to review the personal information that can be updated directly.",
+      "For data recapture, use My Pension Portal's Data Recapture service and complete the requested identity and profile information.",
+      "Upload or provide the supporting identity information requested by the selected update or recapture route.",
+      "Confirm the revised profile after processing and contact Stanbic Pension support when a restricted field such as name, date of birth or employer information needs an assisted correction."
+    ],
+    "notes": [
+      "Stanbic states that some fields can be updated from the mobile app, while name, date of birth and employer details require other processing routes.",
+      "My Pension Portal supports both biodata updates and data recapture.",
+      "This provider-specific guide does not change PenCom's underlying identity and pension-record rules."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC Self Service Channels",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/self-service/channels/self-service-channels",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Stanbic IBTC Pension FAQs",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/help-desk/frequently-asked-questions/general-faqs/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-pension-rsa-registration",
+      "stanbic-pension-rsa-statement",
+      "stanbic-pension-recover-pin-passcode",
+      "pencom-open-rsa"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "update Stanbic pension details",
+      "Stanbic IBTC data recapture",
+      "Stanbic pension biodata update",
+      "change pension phone number Stanbic",
+      "Stanbic pension client profile"
+    ]
+  },
+  {
+    "slug": "stanbic-pension-recover-pin-passcode",
+    "title": "How to recover a Stanbic IBTC Pension RSA PIN or reset the passcode",
+    "shortTitle": "Recover Stanbic pension login",
+    "summary": "Stanbic IBTC Pension Managers' SMS, portal and contact-centre routes for retrieving an RSA PIN or resetting the pension account passcode when login details are missing.",
+    "category": "Pensions",
+    "agencySlug": "stanbic-ibtc-pension",
+    "feeLabel": "Portal/contact routes free; short-code SMS costs ₦10",
+    "feeNote": "Stanbic currently states that requests sent to the 30388 short code cost ₦10 per SMS; other published self-service recovery routes do not list a separate recovery fee.",
+    "timeline": "SMS and portal recovery are designed as self-service routes; contact-centre recovery timing depends on customer verification and support handling.",
+    "status": "verified",
+    "officialPortal": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/help-desk/frequently-asked-questions/general-faqs/faq",
+    "requirements": [
+      "An existing Stanbic IBTC Pension RSA",
+      "Access to the mobile number or email address registered on the pension account for automated recovery",
+      "The registered phone number when sending PIN or RESET to the 30388 short code",
+      "Identity/account verification information if the customer needs assisted recovery through the contact centre"
+    ],
+    "steps": [
+      "To retrieve the RSA PIN, send PIN to 30388 from the mobile number registered on the Stanbic pension account.",
+      "To reset the pension passcode by SMS, send RESET to 30388 from the same registered mobile number.",
+      "Alternatively, open My Pension Portal and choose the Don't know your passcode recovery option.",
+      "Check the registered email address and mobile number for the newly generated login information and replace the temporary passcode after signing in.",
+      "If the registered contact details are no longer accessible, call the Stanbic IBTC Pension contact centre and complete the customer-verification process for assisted recovery."
+    ],
+    "notes": [
+      "Stanbic says the RSA PIN also appears on the Pension Registration Certificate and pension statements.",
+      "The pension passcode is confidential and should not be disclosed to another person.",
+      "The short-code service also supports balance, contribution, application-status and PRC requests."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC Pension FAQs",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/help-desk/frequently-asked-questions/general-faqs/faq",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Stanbic IBTC Self Service Channels",
+        "agency": "Stanbic IBTC Pension Managers",
+        "url": "https://www.stanbicibtcpension.com/nigeriapensionmanagers/pension-managers/self-service/channels/self-service-channels",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-pension-rsa-registration",
+      "stanbic-pension-rsa-statement",
+      "stanbic-pension-update-biodata"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Stanbic pension PIN retrieval",
+      "Stanbic RSA PIN 30388",
+      "reset Stanbic pension passcode",
+      "Stanbic pension login recovery",
+      "text RESET 30388"
+    ]
   }
 ]
