@@ -29,6 +29,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "nigeria-landmarks-places-to-visit") return "Landmarks & Places to Visit in Nigeria " + year;
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide " + year + ": Things to Do & Places to Visit", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
+  if (guide.kind === "event") return truncateSeo(guide.shortTitle + " " + year + ": Festival Guide & Planning", 60);
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
 }
 
@@ -121,15 +122,25 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         description: guide.summary,
         url: pageUrl,
       }
-    : {
-        "@context": "https://schema.org",
-        "@type": "TouristDestination",
-        name: guide.shortTitle,
-        description: guide.summary,
-        url: pageUrl,
-        address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
-        touristType: guide.bestFor,
-      };
+    : guide.kind === "event"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: guide.title,
+          description: guide.summary,
+          url: pageUrl,
+          dateModified: guide.lastReviewed,
+          about: { "@type": "Thing", name: guide.shortTitle },
+        }
+      : {
+          "@context": "https://schema.org",
+          "@type": "TouristDestination",
+          name: guide.shortTitle,
+          description: guide.summary,
+          url: pageUrl,
+          address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" },
+          touristType: guide.bestFor,
+        };
 
   const webpageLd = {
     "@context": "https://schema.org",
@@ -140,7 +151,9 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     dateModified: guide.lastReviewed,
     about: guide.kind === "itinerary"
       ? { "@type": "Trip", name: guide.title }
-      : { "@type": "TouristDestination", name: guide.shortTitle },
+      : guide.kind === "event"
+        ? { "@type": "Thing", name: guide.shortTitle }
+        : { "@type": "TouristDestination", name: guide.shortTitle },
   };
 
   const faqLd = {
@@ -319,7 +332,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           </div>
           <div>
             <span className="eyebrow">Keep exploring</span>
-            <h2>Related {guide.kind === "city" ? "cities" : "trip guides"}</h2>
+            <h2>Related {guide.kind === "city" ? "cities" : guide.kind === "event" ? "events & trip guides" : "trip guides"}</h2>
             <div className="related-links">
               {related.map((item) => <Link href={"/explore/" + item.slug} key={item.slug}>{item.shortTitle} →</Link>)}
               <Link href="/explore">All Explore Nigeria guides →</Link>
