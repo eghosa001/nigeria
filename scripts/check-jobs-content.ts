@@ -66,7 +66,7 @@ for (const item of jobOpportunities) {
     ];
     assert(!bannedGenericPhrases.some((phrase) => phrase && detailText.includes(phrase)), item.slug + " looks like a board-only generated vacancy rather than a verified role-detail page.");
     assert(item.applicationSteps.length >= 3, item.slug + " vacancy needs at least three role-specific application steps.");
-    assert(item.sourceNotes.length >= 1, item.slug + " vacancy needs at least one role-specific verification note.");
+    assert(item.sourceNotes.length >= 2, item.slug + " vacancy needs at least two role-specific verification notes.");
   }
   assert((item.topicSlugs ?? []).every((slug) => jobTopics.some((topic) => topic.slug === slug)), item.slug + " has an unknown explicit topic slug.");
   assert(item.sources.some((source) => new URL(source.url).hostname === new URL(item.officialUrl).hostname), item.slug + " officialUrl must share a hostname with at least one source.");
