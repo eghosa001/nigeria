@@ -30,13 +30,32 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(0);
   });
 
-  test("normal-browser public analytics emits a GA4 collection request", async ({ page }) => {
+  test("normal-browser public analytics emits GA4 and PostHog collection requests", async ({ page }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 
     await page.addInitScript(() => {
+      const chromeUserAgent =
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36";
+
       Object.defineProperty(Navigator.prototype, "webdriver", {
         configurable: true,
         get: () => false,
+      });
+      Object.defineProperty(Navigator.prototype, "userAgent", {
+        configurable: true,
+        get: () => chromeUserAgent,
+      });
+      Object.defineProperty(Navigator.prototype, "userAgentData", {
+        configurable: true,
+        get: () => ({
+          brands: [
+            { brand: "Chromium", version: "154" },
+            { brand: "Google Chrome", version: "154" },
+            { brand: "Not_A Brand", version: "99" },
+          ],
+          mobile: false,
+          platform: "Windows",
+        }),
       });
     });
 
