@@ -257,9 +257,9 @@ jobs:
  || true)"
           if [ -z "$qa_workflow_only" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=true" >> "$GITHUB_OUTPUT"
             echo "tour_live=false" >> "$GITHUB_OUTPUT"
-            echo "QA-workflow-only maintenance; skip product live tests."
+            echo "QA-workflow-only maintenance; run the focused Jobs live probe and skip broad live tests."
             exit 0
           fi
           jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
