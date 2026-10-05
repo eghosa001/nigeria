@@ -934,7 +934,9 @@ export const growthHubs: GrowthHub[] = [
       { query: "request Uber online Nigeria", serviceSlug: "uber-request-ride-online-nigeria" },
       { query: "Wakanow flight booking Nigeria", serviceSlug: "wakanow-book-flight-nigeria" },
       { query: "Wakanow hotel booking Nigeria", serviceSlug: "wakanow-book-hotel-nigeria" },
-      { query: "cancel Wakanow hotel", serviceSlug: "wakanow-cancel-hotel-reservation" }
+      { query: "cancel Wakanow hotel", serviceSlug: "wakanow-cancel-hotel-reservation" },
+      { query: "DStv Stream Nigeria", serviceSlug: "dstv-streaming-subscription-nigeria" },
+      { query: "Showmax to DStv Stream Nigeria", serviceSlug: "showmax-move-to-dstv-stream-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1179,7 +1181,9 @@ export const growthHubs: GrowthHub[] = [
       "uber-request-ride-online-nigeria",
       "wakanow-book-flight-nigeria",
       "wakanow-book-hotel-nigeria",
-      "wakanow-cancel-hotel-reservation"
+      "wakanow-cancel-hotel-reservation",
+      "dstv-streaming-subscription-nigeria",
+      "showmax-move-to-dstv-stream-nigeria"
     ]
   },
 
