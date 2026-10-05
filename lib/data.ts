@@ -1290,6 +1290,34 @@ export const agencies: Agency[] = [
     "shortName": "PAU",
     "description": "Private Nigerian university offering undergraduate and postgraduate application services.",
     "website": "https://pau.edu.ng/"
+  },
+  {
+    "slug": "nile-university",
+    "name": "Nile University of Nigeria",
+    "shortName": "Nile University",
+    "description": "Private university in Abuja offering undergraduate, Direct Entry, transfer and postgraduate admission services.",
+    "website": "https://nileuniversity.edu.ng/"
+  },
+  {
+    "slug": "american-university-nigeria",
+    "name": "American University of Nigeria",
+    "shortName": "AUN",
+    "description": "Private university in Yola offering undergraduate and graduate admissions for Fall and Spring intakes.",
+    "website": "https://www.aun.edu.ng/"
+  },
+  {
+    "slug": "redeemers-university",
+    "name": "Redeemer's University",
+    "shortName": "RUN",
+    "description": "Private Nigerian university offering undergraduate Post-UTME and online admission application services.",
+    "website": "https://run.edu.ng/"
+  },
+  {
+    "slug": "lead-city-university",
+    "name": "Lead City University",
+    "shortName": "LCU",
+    "description": "Private university in Ibadan offering undergraduate and other admission applications through online portals.",
+    "website": "https://www.lcu.edu.ng/"
   }
 
 ];
