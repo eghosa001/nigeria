@@ -1472,6 +1472,27 @@ export const agencies: Agency[] = [
     "shortName": "Cars45",
     "description": "Private Nigerian automotive marketplace offering vehicle inspection, sales, purchase support and dealer-partner services.",
     "website": "https://www.cars45.com/"
+  },
+  {
+    "slug": "heirs-insurance",
+    "name": "Heirs Insurance Group",
+    "shortName": "Heirs Insurance",
+    "description": "Private Nigerian insurance group offering digital motor, life and general insurance purchase, management and claims services.",
+    "website": "https://www.heirsinsurancegroup.com/"
+  },
+  {
+    "slug": "tangerine-insurance",
+    "name": "Tangerine General Insurance",
+    "shortName": "Tangerine",
+    "description": "Private Nigerian insurer offering online motor-policy purchase, renewal, verification and digital claims services.",
+    "website": "https://general.tangerine.africa/"
+  },
+  {
+    "slug": "sovereign-trust-insurance",
+    "name": "Sovereign Trust Insurance Plc",
+    "shortName": "Sovereign Trust",
+    "description": "Private Nigerian non-life insurer offering online quotes, motor insurance, policy renewal and claims services.",
+    "website": "https://www.stiplc.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
