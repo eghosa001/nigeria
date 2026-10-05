@@ -35,6 +35,52 @@ export type CareerOpportunity = {
 
 export const jobOpportunities: CareerOpportunity[] = [
   {
+    slug: "reckitt-nigeria-management-trainee-2026",
+    title: "Reckitt Nigeria 2026 Management Trainee Program (Trailblazers 5.0)",
+    organization: "Reckitt Nigeria",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open",
+    summary: "Reckitt's official careers site is accepting applications for its 2026 Trailblazers 5.0 Management Trainee Program in Lagos Island, with rotations across Commercial and Supply.",
+    location: "Lagos Island, Lagos",
+    employmentType: "Management trainee / graduate programme",
+    audiences: ["Recent graduates", "2022–2025 graduates", "NYSC completers by December 2026", "Entry-level applicants"],
+    fields: ["Commercial", "Supply", "FMCG", "Management", "Graduate trainee"],
+    qualifications: [
+      "Recent graduate from 2022 to 2025; Reckitt states that applicants from any degree are welcome.",
+      "Minimum Upper Second Class Honours (2:1).",
+      "NYSC must be completed by December 2026."
+    ],
+    requirements: [
+      "Reckitt describes the ideal candidate as curious, driven and ambitious.",
+      "The role highlights ownership, self-awareness, mental agility, proactiveness, communication, attention to detail, analytical ability and problem solving."
+    ],
+    documents: [
+      "CV/resume and personal details requested by the official Reckitt application system",
+      "Degree/academic information that demonstrates the stated 2:1 requirement",
+      "NYSC information showing completion, or expected completion, by December 2026"
+    ],
+    applicationSteps: [
+      "Open the official Reckitt Trailblazers 5.0 job page.",
+      "Read the current eligibility requirements and confirm your graduation year, degree class and NYSC timeline.",
+      "Use Reckitt's official application control to create/sign in to the recruitment profile.",
+      "Complete the application and upload only the documents requested by Reckitt.",
+      "Keep the application confirmation and monitor the email/profile used for the recruitment process."
+    ],
+    officialUrl: "https://careers.reckitt.com/job/Lagos-Island-Reckitt-Nigeria-2026-Management-Trainee-Program-%28Trailblazers-5_0%29-Lago-NA/1439208533/",
+    officialUrlLabel: "Apply on Reckitt's official careers site",
+    verifiedAt: "2026-10-05",
+    nextMilestone: "The official Reckitt posting is live. No closing date is displayed on the page, so apply while the vacancy remains open.",
+    feeNote: "MyNigeriaGuide does not collect an application fee. Apply only through Reckitt's official careers domain.",
+    sourceNotes: [
+      "Reckitt's official job page lists Lagos-Island as the location and describes rotations across Commercial and Supply.",
+      "The official criteria are graduation in 2022–2025, minimum Upper Second Class Honours and NYSC completion by December 2026."
+    ],
+    sources: [
+      { label: "Reckitt Nigeria Trailblazers 5.0", url: "https://careers.reckitt.com/job/Lagos-Island-Reckitt-Nigeria-2026-Management-Trainee-Program-%28Trailblazers-5_0%29-Lago-NA/1439208533/", lastChecked: "2026-10-05" }
+    ]
+  },
+  {
     slug: "nigerian-air-force-airmen-airwomen-recruitment-2026",
     title: "Nigerian Air Force Airmen/Airwomen Recruitment 2026",
     organization: "Nigerian Air Force",

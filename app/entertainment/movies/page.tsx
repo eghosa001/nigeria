@@ -51,6 +51,7 @@ export default async function MoviesPage({
             </div>
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">
+            <Link href="/entertainment/trending">Trending now</Link>
             <a href="#free-movies">Free on YouTube</a>
             <a href="#curated-movies">Netflix · Prime · YouTube · Kava</a>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>

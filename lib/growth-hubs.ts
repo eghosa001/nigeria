@@ -18,8 +18,8 @@ export const growthHubs: GrowthHub[] = [
       "Use this hub when you need a Nigerian passport and are not sure which process applies to your situation. It separates fresh applications, renewals, applications from abroad, lost passports and data changes so you can start with the right NIS route.",
       "Each linked guide shows the current fee or status, what to prepare, the official application portal and what happens after submission or biometric enrolment."
     ],
-    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "track Nigerian passport application", serviceSlug: "passport-application-tracking" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "change data on Nigerian passport", serviceSlug: "passport-change-of-data" }, { query: "correct name on Nigerian passport", serviceSlug: "passport-name-change" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }],
-    serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-tracking", "passport-application-abroad", "diaspora-contactless-passport-renewal", "lost-nigerian-passport", "passport-name-change", "passport-change-of-data"]
+    searches: [{ query: "renew Nigerian passport", serviceSlug: "passport-renewal" }, { query: "Nigerian passport requirements", serviceSlug: "first-nigerian-passport" }, { query: "passport renewal fee", serviceSlug: "passport-renewal" }, { query: "track Nigerian passport application", serviceSlug: "passport-application-tracking" }, { query: "lost Nigerian passport", serviceSlug: "lost-nigerian-passport" }, { query: "change data on Nigerian passport", serviceSlug: "passport-change-of-data" }, { query: "correct name on Nigerian passport", serviceSlug: "passport-name-change" }, { query: "renew Nigerian passport abroad", serviceSlug: "passport-application-abroad" }, { query: "contactless Nigerian passport renewal", serviceSlug: "diaspora-contactless-passport-renewal" }, { query: "book Nigerian passport appointment", serviceSlug: "passport-appointment" }, { query: "passport centre availability", serviceSlug: "passport-centre-availability" }, { query: "Nigerian passport photo requirements", serviceSlug: "passport-photo-compliance" }, { query: "Nigeria emergency travel certificate", serviceSlug: "emergency-travel-certificate" }],
+    serviceSlugs: ["passport-renewal", "first-nigerian-passport", "passport-application-tracking", "passport-appointment", "passport-centre-availability", "passport-photo-compliance", "passport-application-abroad", "diaspora-contactless-passport-renewal", "lost-nigerian-passport", "emergency-travel-certificate", "passport-name-change", "passport-change-of-data"]
   },
   {
     slug: "nin-corrections",
@@ -587,9 +587,10 @@ export const growthHubs: GrowthHub[] = [
       { query: "ECOWAS passport Nigeria", serviceSlug: "ecowas-travel-certificate" },
       { query: "Yellow Card Nigeria", serviceSlug: "yellow-card" },
       { query: "Nigeria landing card", serviceSlug: "nigeria-landing-exit-card" },
-      { query: "Nigeria exit card", serviceSlug: "nigeria-landing-exit-card" }
+      { query: "Nigeria exit card", serviceSlug: "nigeria-landing-exit-card" },
+      { query: "Nigeria emergency travel certificate", serviceSlug: "emergency-travel-certificate" }
     ],
-    serviceSlugs: ["ecowas-travel-certificate", "yellow-card", "nigeria-landing-exit-card"]
+    serviceSlugs: ["ecowas-travel-certificate", "emergency-travel-certificate", "yellow-card", "nigeria-landing-exit-card"]
   },
   {
     slug: "nelfund-student-loan",

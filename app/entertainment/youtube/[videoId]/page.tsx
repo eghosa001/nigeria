@@ -12,6 +12,20 @@ import { getYouTubeMovieById, youtubeMovieLibrary } from "@/lib/youtube-library"
 
 export const revalidate = 86400;
 
+const youtubeSeoOverrides: Record<string, { title: string; description: string }> = {
+  "KWIpR47N9hc": { title: "Love Always Wins Cast & Full Movie (2026)", description: "Love Always Wins cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
+  "zKQoArfptqA": { title: "The Bride Switch Cast & Full Movie (2026)", description: "The Bride Switch cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
+  "2Ficn2BMlI8": { title: "What Tomorrow Holds Cast & Full Movie (2026)", description: "What Tomorrow Holds cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." }
+};
+
+function compactMetadata(value: string, maxLength = 155) {
+  const clean = value.replace(/\s+/g, " ").trim();
+  if (clean.length <= maxLength) return clean;
+  const cut = clean.slice(0, maxLength - 1);
+  const lastSpace = cut.lastIndexOf(" ");
+  return (lastSpace > 105 ? cut.slice(0, lastSpace) : cut).trimEnd() + "…";
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ videoId: string }> }): Promise<Metadata> {
   const { videoId } = await params;
   const movie = getYouTubeMovieById(videoId);
@@ -19,9 +33,10 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = movie.featuredCast.slice(0, 4);
-  const description = `${movie.title} is a ${movie.year} Nigerian movie. ${cast.length ? "Cast includes " + cast.join(", ") + ". " : ""}${movie.synopsis}`;
+  const override = youtubeSeoOverrides[movie.videoId];
+  const description = compactMetadata(override?.description ?? `${movie.title} is a ${movie.year} Nigerian movie. ${cast.length ? "Cast includes " + cast.join(", ") + ". " : ""}${movie.synopsis}`);
   return {
-    title: movie.title + " Nigerian Movie: Cast & Watch Free on YouTube",
+    title: override?.title ?? compactMetadata(`${movie.title} Cast & Full Movie (${movie.year})`, 60),
     description,
     alternates: { canonical },
     openGraph: {

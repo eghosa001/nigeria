@@ -57,6 +57,7 @@ export default function JobsPage() {
             </form>
             <div className="jobs-hero-actions">
               <a href="#opportunities" className="button inline-button">Browse verified opportunities</a>
+              <Link href="/jobs/open-now" className="jobs-text-action">Open now →</Link>
               <Link href="/jobs/government" className="jobs-text-action">Government tracker →</Link>
             </div>
           </div>
@@ -136,7 +137,9 @@ export default function JobsPage() {
           </div>
 
           <div className="jobs-topic-links" aria-label="Browse careers by applicant type">
+            <Link href="/jobs/open-now">Jobs open now</Link>
             <Link href="/jobs/graduate">Graduate jobs & trainee programmes</Link>
+            <Link href="/jobs/nysc">NYSC jobs & PPA opportunities</Link>
             <Link href="/jobs/internships">Internships & SIWES</Link>
             <Link href="/jobs/engineering">Engineering & technical careers</Link>
             <Link href="/jobs/remote">Remote & hybrid jobs</Link>

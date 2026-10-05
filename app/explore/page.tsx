@@ -54,6 +54,7 @@ export default function ExplorePage() {
             <button type="submit">Search places</button>
           </form>
           <div className="minimal-inline-links">
+            <Link href="/explore/events">Events & festivals</Link>
             <a href="#cities">City guides</a>
             <a href="#places">Places</a>
             <a href="#destinations">Destinations</a>

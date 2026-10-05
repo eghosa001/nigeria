@@ -90,6 +90,8 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "jobs") {
     return [
       { url: base + "/jobs", lastModified: jobsModified },
+      { url: base + "/jobs/open-now", lastModified: jobsModified },
+      { url: base + "/jobs/nysc", lastModified: jobsModified },
       { url: base + "/jobs/government", lastModified: jobsModified },
       { url: base + "/jobs/private", lastModified: jobsModified },
       { url: base + "/jobs/deadlines", lastModified: jobsModified },
@@ -107,6 +109,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "travel") {
     return [
       { url: base + "/explore", lastModified: exploreModified },
+      { url: base + "/explore/events", lastModified: exploreModified },
       { url: base + "/explore/things-to-do-lagos", lastModified: "2026-10-04" },
       { url: base + "/explore/things-to-do-abuja", lastModified: "2026-10-04" },
       ...exploreGuides.map((guide) => ({
@@ -120,6 +123,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     return [
       { url: base + "/entertainment", lastModified: movieCatalogModified },
       { url: base + "/entertainment/movies", lastModified: movieCatalogModified },
+      { url: base + "/entertainment/trending", lastModified: movieCatalogModified },
       { url: base + "/entertainment/movies/october-2026", lastModified: "2026-10-04" },
       { url: base + "/entertainment/releases", lastModified: movieCatalogModified },
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
