@@ -1053,7 +1053,8 @@ export const agencies: Agency[] = [
     "shortName": "Rano Air",
     "description": "Private Nigerian airline offering scheduled flight booking, booking management and passenger support.",
     "website": "https://www.ranoair.com/"
-  }  {
+  },
+  {
     "slug": "indrive-nigeria",
     "name": "inDrive Nigeria",
     "shortName": "inDrive",
