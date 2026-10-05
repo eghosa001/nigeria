@@ -130,6 +130,7 @@ export function getJobTopicOpportunities(slug: string) {
   const topic = getJobTopic(slug);
   if (!topic) return [];
   return jobOpportunities.filter((item) =>
+    item.topicSlugs?.includes(topic.slug) ||
     topic.organizations.some((organization) =>
       item.organization.toLowerCase().includes(organization.toLowerCase())
     )
@@ -138,6 +139,7 @@ export function getJobTopicOpportunities(slug: string) {
 
 export function getJobTopicsForOpportunity(item: CareerOpportunity) {
   return jobTopics.filter((topic) =>
+    item.topicSlugs?.includes(topic.slug) ||
     topic.organizations.some((organization) =>
       item.organization.toLowerCase().includes(organization.toLowerCase())
     )
