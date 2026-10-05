@@ -2847,6 +2847,656 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-10-05",
       note: "Netflix Nigeria's current Nollywood catalog lists this title. Netflix can show different title-page availability by account, visitor location or territory, so confirm availability inside your signed-in Nigeria account."
     }]
+  },
+
+  {
+    slug: "everybody-loves-jenifa",
+    title: "Everybody Loves Jenifa",
+    year: 2024,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Action", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Jenifa's public image and community work are tested by rivalry at home and a dangerous trip to Ghana that pulls her friends into a drug-related crisis.",
+    cast: ["Funke Akindele", "Folarin Falana", "Bisola Aiyeola", "Nancy Isime", "Lateef Adedimeji", "Patience Ozokwor", "Layi Wasabi", "Jackie Appiah", "Omowunmi Dada", "Stan Nze"],
+    featuredCast: ["Funke Akindele", "Folarin Falana", "Bisola Aiyeola"],
+    directors: ["Funke Akindele", "Tunde Olaoye"],
+    runtimeMinutes: 135,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0G4DEZL3GDUGGLRPTKG19ZFEEE",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "christmas-in-lagos",
+    title: "Christmas in Lagos",
+    year: 2024,
+    format: "movie",
+    genres: ["Romance", "Comedy", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "During Lagos Detty December, overlapping friendships and romances collide as old feelings return, new relationships form and several couples reconsider what they want.",
+    cast: ["Teniola Aladese", "Shalom C. Obiago", "Rayxia Ojo", "Wale Ojo", "Richard Mofe-Damijo", "Ladipoe", "Ayra Starr", "Adekunle Gold"],
+    featuredCast: ["Teniola Aladese", "Shalom C. Obiago", "Rayxia Ojo"],
+    directors: ["Jade Osiberu"],
+    runtimeMinutes: 120,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0TXKJT4E5XODVHUJY2P1F22YWH",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "family-gbese",
+    title: "Family Gbese",
+    year: 2024,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A family is pushed into conflict by money, expectations and old obligations, forcing its members to decide how much they owe one another when pressure rises.",
+    cast: ["Uzor Arukwe", "Mike Ezuruonye", "Teniola Aladese", "Sandra Okunzuwa", "Ireti Doyle"],
+    featuredCast: ["Uzor Arukwe", "Mike Ezuruonye", "Teniola Aladese"],
+    directors: ["Michelle Bello"],
+    runtimeMinutes: 88,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0J11EVHF479SDW1V9Y6JMT2MRA",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "finding-me",
+    title: "Finding Me",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Romance", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A wealthy but insecure woman builds a life with a man who first makes her feel seen, then faces a painful reckoning as marriage, identity and buried tensions reshape her confidence.",
+    cast: ["Funke Akindele", "Joseph Benjamin", "Femi Adebayo", "Dele Odule", "Shaffy Bello", "Omoni Oboli", "Tina Mba", "Omowunmi Dada", "Efa Iwara", "Dakore Egbuson-Akande"],
+    featuredCast: ["Funke Akindele", "Joseph Benjamin", "Femi Adebayo"],
+    directors: ["Funke Akindele", "Isioma Osaje"],
+    runtimeMinutes: 154,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0IIGH2C75P78GNRTK89KKQLO7E",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "after-30",
+    title: "After 30",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Comedy", "Friendship", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Four Nigerian women over 30 navigate friendship, careers, relationships and the pressure to settle down while defining adulthood on their own terms.",
+    cast: ["Damilola Adegbite", "Beverly Naya", "Meg Otanwa", "Anee Icha", "OC Ukeje", "Patrick Diabuah", "Tunbosun Aiyedehin", "Patrick Doyle"],
+    featuredCast: ["Damilola Adegbite", "Beverly Naya", "Meg Otanwa"],
+    directors: ["Omorinsojo Spaine"],
+    runtimeMinutes: 110,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0L0E1JWMAOOK3DU3LVOHZXDBKG",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "the-lost-days",
+    title: "The Lost Days",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "After surviving cancer, a woman searches for the man she once loved and the child she left behind, only to uncover a past more dangerous and complicated than she expected.",
+    cast: ["Ifeoma Fafunwa", "Bimbo Manuel", "Durotimi Okutagidi", "Baaj Adebule", "Cynthia Clarke", "Aderonke Onuoha"],
+    featuredCast: ["Ifeoma Fafunwa", "Bimbo Manuel", "Durotimi Okutagidi"],
+    directors: ["Wingonia Ikpi"],
+    runtimeMinutes: 128,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0KLFVQL0BFZVAA728GB8IUD3AM",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "osoronga",
+    title: "Òsòròngà",
+    year: 2023,
+    format: "movie",
+    genres: ["Drama", "Epic", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A community faces a spiritual and political struggle in an epic story shaped by power, tradition, rivalry and the consequences of competing loyalties.",
+    cast: ["Ibrahim Chatta", "Joke Muyiwa", "Odunlade Adekola", "Bimbo Akintola", "Funmi Amosu", "Fathia Balogun", "Ibrahim Yekini"],
+    featuredCast: ["Ibrahim Chatta", "Joke Muyiwa", "Odunlade Adekola"],
+    directors: ["Ibrahim Chatta", "Adebayo Tijani", "Ayuba Sodunke"],
+    runtimeMinutes: 131,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0TOCBGJH283FXC6P6R4ZJ1GODQ",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "ms-kanyin",
+    title: "Ms. Kanyin",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A teacher's carefully controlled life begins to fracture as buried tensions, difficult choices and the people around her force private conflicts into the open.",
+    cast: ["Temi Otedola", "Michelle Dede", "Toluwani George", "Kanaga Eme", "Natse Jemide"],
+    featuredCast: ["Temi Otedola", "Michelle Dede", "Toluwani George"],
+    directors: ["Jerry Ossai"],
+    runtimeMinutes: 111,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0FTO4LXNQQGD3ZG8QG7AG6GASC",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "finding-nina",
+    title: "Finding Nina",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A search for Nina pulls several people into a story of family, difficult choices and the consequences of trying to repair what has been lost.",
+    cast: ["Abdulazeem Ibrahim", "Ijapari Ben-Hirki", "Ahmed Isa", "Tomi Ojo", "Paul Sambo"],
+    featuredCast: ["Abdulazeem Ibrahim", "Ijapari Ben-Hirki", "Ahmed Isa"],
+    directors: ["Famous Odion Iraoya"],
+    runtimeMinutes: 94,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0LVTZ0Y2VEGT0AWSDUFLCZS4QE",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "the-kujus-again",
+    title: "The Kujus Again",
+    year: 2023,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "The Kuju family reunites and quickly falls back into the affection, rivalry and comic conflict that define them when another family matter demands everyone's attention.",
+    cast: ["Bisola Aiyeola", "Femi Jacobs", "Bimbo Ademoye", "MC Lively", "Kunle Remi", "Timini Egbuson"],
+    featuredCast: ["Bisola Aiyeola", "Femi Jacobs", "Bimbo Ademoye"],
+    directors: ["Biodun Stephen"],
+    runtimeMinutes: 117,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0G4472RWM1AKOE9T8M5TNT78VK",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "when-love-strikes",
+    title: "When Love Strikes",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Romance", "Sports", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A young footballer's ambitions collide with family expectations and romance, forcing him to choose how far he will go for the future he wants.",
+    cast: ["Natse Jemide", "Bimbo Akintola", "Osas Ighodaro", "Zubby Michael", "Sunshine Rosman"],
+    featuredCast: ["Natse Jemide", "Bimbo Akintola", "Osas Ighodaro"],
+    directors: ["Adeoluwa Owu"],
+    runtimeMinutes: 104,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0GTXE0HHMYILHDCWQ3A555JXA8",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "different-strokes",
+    title: "Different Strokes",
+    year: 2023,
+    format: "movie",
+    genres: ["Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Several lives intersect around love, ambition and personal expectations as people with very different priorities try to make relationships work.",
+    cast: ["Lateef Adedimeji", "Daniel Etim Effiong", "Lilian Esoro"],
+    featuredCast: ["Lateef Adedimeji", "Daniel Etim Effiong", "Lilian Esoro"],
+    directors: ["Biodun Stephen"],
+    runtimeMinutes: 111,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0PLLDSW9PWH3IR3CP1UIFX986B",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "funmilayo-ransome-kuti",
+    title: "Funmilayo Ransome-Kuti",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Biography", "Historical", "Nollywood"],
+    languages: ["English"],
+    synopsis: "The biographical drama follows Funmilayo Ransome-Kuti's activism, family life and political organizing as she challenges colonial and traditional systems of power.",
+    cast: ["Kehinde Bankole", "Joke Silva", "Adebayo Salami"],
+    featuredCast: ["Kehinde Bankole", "Joke Silva", "Adebayo Salami"],
+    runtimeMinutes: 89,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0NKKT939WT1J51PQVFU1EUQ2OA",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "muri-and-ko",
+    title: "Muri & Ko",
+    year: 2024,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A petty thief accidentally steals a car with a child inside, turning a simple crime into a tense and comic journey as he tries to escape the consequences.",
+    cast: ["Kunle Remi", "Bukunmi Adeaga-Ilori", "Femi Jacobs", "Bisola Aiyeola", "Bucci Franklin"],
+    featuredCast: ["Kunle Remi", "Bukunmi Adeaga-Ilori", "Femi Jacobs"],
+    directors: ["Biodun Stephen"],
+    runtimeMinutes: 103,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0S8Y6XUEMYGAWFVAJ9JZU9OOP0",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "battle-on-buka-street",
+    title: "Battle on Buka Street",
+    year: 2022,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Two rival sisters take their long-running competition into the food business, escalating a family feud as each tries to dominate the same street.",
+    cast: ["Bimbo Ademoye", "Funke Akindele", "Sani Danja"],
+    featuredCast: ["Bimbo Ademoye", "Funke Akindele", "Sani Danja"],
+    directors: ["Funke Akindele", "Tobi Makinde"],
+    runtimeMinutes: 142,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0M814B8MZKEME3XKU0WPMLFJ5D",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "move-like-a-boss",
+    title: "Move Like a Boss",
+    year: 2024,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A young woman is forced to step into a demanding business world and prove she can lead, even as family pressure and workplace politics challenge her confidence.",
+    cast: ["Nancy Isime", "Yemi Solade", "Jaiye Kuti", "IK Ogbonna", "Yinka Quadri"],
+    featuredCast: ["Nancy Isime", "Yemi Solade", "Jaiye Kuti"],
+    directors: ["Ekene Mekwunye"],
+    runtimeMinutes: 92,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0H1EVD73D1SXPV5UNQM2OMNN71",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "a-fathers-love",
+    title: "A Father's Love",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A father confronting difficult family circumstances is pushed to reconsider sacrifice, responsibility and what protecting the people he loves truly requires.",
+    cast: ["Yvonne Jegede", "David Jones David", "Chibunna Stanley", "Uche Jombo"],
+    featuredCast: ["Yvonne Jegede", "David Jones David", "Chibunna Stanley"],
+    directors: ["Sebastian Ukwa"],
+    runtimeMinutes: 137,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0PBMYDRBMP02UYMRA0MEKKJ0HR",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "the-betrayed",
+    title: "The Betrayed",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A relationship is thrown into crisis by deception and suspicion, setting off a chain of revelations that changes how the people involved understand one another.",
+    cast: ["Uche Montana", "Gabriel Afolayan", "Ibrahim Suleiman", "Jemima Osunde", "Adunni Ade"],
+    featuredCast: ["Uche Montana", "Gabriel Afolayan", "Ibrahim Suleiman"],
+    directors: ["Zulumoke Oyibo"],
+    runtimeMinutes: 109,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0R1DCY6ZLSRVB5PW8M711YLXNZ",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "orisa",
+    title: "Orisa",
+    year: 2023,
+    format: "movie",
+    genres: ["Drama", "Epic", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A ruler's authority is threatened by betrayal and rebellion, drawing a kingdom into a violent struggle over loyalty, justice and the limits of power.",
+    cast: ["Femi Adebayo", "Odunlade Adekola", "Kemi Afolabi"],
+    featuredCast: ["Femi Adebayo", "Odunlade Adekola", "Kemi Afolabi"],
+    directors: ["Odunlade Adekola"],
+    runtimeMinutes: 109,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0FQNT48UWKSDWH5YMH5KHXQROS",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "the-beads",
+    title: "The Beads",
+    year: 2023,
+    format: "movie",
+    genres: ["Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Family histories and long-held secrets surface around a symbolic set of beads, forcing several generations to confront loyalty, identity and unresolved choices.",
+    cast: ["Zainab Balogun", "Idowu Philips", "Efa Iwara", "Shaffy Bello", "Segun Arinze", "Lateef Adedimeji", "Tina Mba", "Bimbo Manuel", "Chioma Omeruah", "Ronke Ojo"],
+    featuredCast: ["Zainab Balogun", "Idowu Philips", "Efa Iwara"],
+    directors: ["Moyinoluwa Ezekiel"],
+    runtimeMinutes: 100,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0FX5NGQR9BF7HCEIUA7B2VPBA6",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "water-and-garri",
+    title: "Water & Garri",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A successful fashion designer returns home after years away and reconnects with family, memory and an old love while confronting the changes that took place in her absence.",
+    cast: ["Tiwa Savage", "Andrew Yaw Bunting", "Mike Afolarin", "Jemima Osunde"],
+    featuredCast: ["Tiwa Savage", "Andrew Yaw Bunting", "Mike Afolarin"],
+    directors: ["Meji Alabi"],
+    runtimeMinutes: 80,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0R0WQ7VK6AVONX2VCC0CEH9FI5",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "lakatabu",
+    title: "Lakatabu",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Action", "Crime", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A feared criminal exerts control through intimidation and violence until opposing forces begin closing in, turning his reputation into a battle for survival.",
+    cast: ["Odunlade Adekola", "Femi Adebayo", "Adunni Ade", "Lateef Adedimeji", "Bolanle Ninalowo"],
+    featuredCast: ["Odunlade Adekola", "Femi Adebayo", "Adunni Ade"],
+    directors: ["Odunlade Adekola"],
+    runtimeMinutes: 111,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0KP8NGSUTICVPBFF8GDE2H44UQ",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "hotel-labamba",
+    title: "Hotel Labamba",
+    year: 2023,
+    format: "movie",
+    genres: ["Comedy", "Mystery", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A lively hotel becomes the center of a mystery when guests and staff are pulled into secrets, suspicion and comic chaos surrounding an unexpected crime.",
+    cast: ["Bimbo Ademoye", "Dimeji Lateef", "Lilian Afegbai", "Blessing Obasi", "Etinosa Idemudia"],
+    featuredCast: ["Bimbo Ademoye", "Dimeji Lateef", "Lilian Afegbai"],
+    directors: ["Biodun Stephen"],
+    runtimeMinutes: 96,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0G7H9Q4F5L9W2YE9V4FFAV46T3",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "the-set-up-2",
+    title: "The Set Up 2",
+    year: 2022,
+    format: "movie",
+    genres: ["Crime", "Thriller", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A former con artist is pulled back into a dangerous world of deception as old enemies, new alliances and unfinished business threaten the life she tried to rebuild.",
+    cast: ["Adesua Etomi", "Kehinde Bankole", "Kate Henshaw"],
+    featuredCast: ["Adesua Etomi", "Kehinde Bankole", "Kate Henshaw"],
+    runtimeMinutes: 110,
+    watchLinks: [{
+      platform: "Prime Video",
+      label: "Open the Prime Video title page",
+      href: "https://www.primevideo.com/detail/0PGDRPYU371D029Q6CLKOYAGQK",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Prime Video has an official title page for this film. Playback and subscription availability can vary by account and territory, so confirm in your signed-in Nigeria account."
+    }]
+  },
+  {
+    slug: "queen-lateefah",
+    title: "Queen Lateefah",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Comedy", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A woman determined to project success and social status finds that the image she has built becomes harder to sustain as relationships and reality challenge her choices.",
+    cast: ["Wumi Toriola", "Kunle Remi", "Femi Adebayo", "Nancy Isime", "Lateef Adedimeji", "Elvina Ibru", "Broda Shaggi", "Enioluwa Adeoluwa", "Gbugbemi Ejeye", "Bimbo Manuel"],
+    featuredCast: ["Wumi Toriola", "Kunle Remi", "Femi Adebayo"],
+    directors: ["Adeoluwa Owu"],
+    runtimeMinutes: 129,
+    watchLinks: [{
+      platform: "Kava",
+      label: "Watch on Kava",
+      href: "https://watch.kava.tv/queen-lateefah",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Kava currently lists Queen Lateefah in its catalog. Availability can vary by territory and subscription status; confirm inside Kava before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "sanitation-day",
+    title: "Sanitation Day",
+    year: 2021,
+    format: "movie",
+    genres: ["Crime", "Thriller", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Two police officers investigating a murder in a crowded Lagos tenement must solve the case before the building's residents disperse at the end of environmental sanitation day.",
+    cast: ["Blossom Chukwujekwu", "Elozonam Ogbolu", "Charles Inojie", "Nse Ikpe-Etim", "Baaj Adebule", "Tobi Bakre", "Maryam Booth", "Chris Okagbue", "Belinda Effah", "Adebayo Salami"],
+    featuredCast: ["Blossom Chukwujekwu", "Elozonam Ogbolu", "Charles Inojie"],
+    directors: ["Seyi Babatope"],
+    runtimeMinutes: 105,
+    watchLinks: [{
+      platform: "Kava",
+      label: "Watch on Kava",
+      href: "https://watch.kava.tv/sanitation-day",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Kava currently lists Sanitation Day in its catalog. Availability can vary by territory and subscription status; confirm inside Kava before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "madam-dearest",
+    title: "Madam Dearest",
+    year: 2005,
+    format: "movie",
+    genres: ["Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A marriage is tested by family pressure, mistrust and outside influence as a couple struggles to protect its relationship from conflicts that keep growing around them.",
+    cast: ["Opeyemi Aiyeola", "Yemi Solade", "Sola Sobowale", "Deji Adenuga", "Akin Lewis", "Gabriel Afolayan", "Bukky Ajayi", "Lere Paimo", "Kareem Adepoju"],
+    featuredCast: ["Opeyemi Aiyeola", "Yemi Solade", "Sola Sobowale"],
+    directors: ["Tade Ogidan"],
+    runtimeMinutes: 152,
+    watchLinks: [{
+      platform: "Kava",
+      label: "Watch on Kava",
+      href: "https://watch.kava.tv/madam-dearest",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Kava currently lists Madam Dearest in its catalog. Availability can vary by territory and subscription status; confirm inside Kava before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "madam-dearest-2",
+    title: "Madam Dearest 2",
+    year: 2007,
+    format: "movie",
+    genres: ["Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "The family conflict continues as the marriage at the center of the story faces new pressure, forcing old loyalties and unresolved tensions back into the open.",
+    cast: ["Opeyemi Aiyeola", "Yemi Solade", "Sola Sobowale", "Deji Adenuga", "Akin Lewis", "Gabriel Afolayan", "Bukky Ajayi", "Lere Paimo", "Kareem Adepoju"],
+    featuredCast: ["Opeyemi Aiyeola", "Yemi Solade", "Sola Sobowale"],
+    directors: ["Tade Ogidan"],
+    runtimeMinutes: 171,
+    watchLinks: [{
+      platform: "Kava",
+      label: "Watch on Kava",
+      href: "https://watch.kava.tv/madam-dearest-2",
+      access: "subscription",
+      lastChecked: "2026-10-05",
+      note: "Kava currently lists Madam Dearest 2 in its catalog. Availability can vary by territory and subscription status; confirm inside Kava before subscribing solely for this film."
+    }]
+  },
+  {
+    slug: "king-kosoko-the-battle-for-lagos",
+    title: "King Kosoko: The Battle for Lagos",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Historical", "Epic", "Nollywood"],
+    languages: ["Yoruba"],
+    synopsis: "The historical drama follows the struggle around King Kosoko and the battle for political control of Lagos, bringing royal rivalry, warfare and competing claims to power into focus.",
+    cast: ["Femi Adebayo", "Odunlade Adekola", "Gabriel Afolayan", "Femi Branch", "Jide Kosoko", "Tina Mba", "Adeniyi Johnson", "Kola Ajeyemi"],
+    featuredCast: ["Femi Adebayo", "Odunlade Adekola", "Gabriel Afolayan"],
+    directors: ["Adebayo Tijani"],
+    runtimeMinutes: 133,
+    watchLinks: [{
+      platform: "Cinema",
+      label: "Check current Silverbird showtimes",
+      href: "https://silverbirdcinemas.com/genre/nollywood/",
+      access: "cinema",
+      lastChecked: "2026-10-05",
+      note: "Silverbird's current Nollywood listings include King Kosoko: The Battle for Lagos. Cinema locations, dates and showtimes change, so check the live schedule before travelling."
+    }]
+  },
+  {
+    slug: "one-gidi-night",
+    title: "One Gidi Night",
+    year: 2026,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "One chaotic night in Lagos throws a group of people into intersecting trouble, turning ordinary plans into a fast-moving mix of comedy, pressure and unexpected consequences.",
+    cast: ["Femi Adebayo", "Gabriel Afolayan", "Idia Aisien", "Kevin Ikeduba", "Uzor Arukwe", "Wumi Toriola"],
+    featuredCast: ["Femi Adebayo", "Gabriel Afolayan", "Idia Aisien"],
+    directors: ["James Abinibi"],
+    runtimeMinutes: 95,
+    watchLinks: [{
+      platform: "Cinema",
+      label: "Check current Silverbird showtimes",
+      href: "https://silverbirdcinemas.com/genre/nollywood/",
+      access: "cinema",
+      lastChecked: "2026-10-05",
+      note: "Silverbird's current Nollywood listings include One Gidi Night. Cinema locations, dates and showtimes change, so check the live schedule before travelling."
+    }]
+  },
+  {
+    slug: "19-movie-2026",
+    title: "19",
+    year: 2026,
+    format: "movie",
+    genres: ["Crime", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A crime drama brings several lives together around a case whose pressure exposes secrets, conflicting loyalties and the personal cost of what happened.",
+    cast: ["Bisola Aiyeola", "Charles Okafor", "Sola Sobowale", "Stan Nze", "William Benson"],
+    featuredCast: ["Bisola Aiyeola", "Charles Okafor", "Sola Sobowale"],
+    directors: ["Tola Odunsi"],
+    runtimeMinutes: 120,
+    watchLinks: [{
+      platform: "Cinema",
+      label: "Check current Silverbird showtimes",
+      href: "https://silverbirdcinemas.com/genre/nollywood/",
+      access: "cinema",
+      lastChecked: "2026-10-05",
+      note: "Silverbird's current Nollywood listings include 19. Cinema locations, dates and showtimes change, so check the live schedule before travelling."
+    }]
   }
 ];
 
