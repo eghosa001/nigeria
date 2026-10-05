@@ -1,11 +1,14 @@
 import { expect, test } from "@playwright/test";
 import { categoryFaqs } from "@/data/category-faqs";
 import { publicServices } from "@/lib/data";
+import { entertainmentTitles } from "@/lib/entertainment";
+import { exploreGuides } from "@/lib/explore";
+import { jobOpportunities } from "@/lib/jobs";
 import { growthHubs } from "@/lib/growth-hubs";
 import { seriesTitles } from "@/lib/series";
 
 test("search-demand growth data stays internally consistent", () => {
-  expect(publicServices).toHaveLength(208);
+  expect(publicServices).toHaveLength(212);
 
   for (const slug of ["check-nin-number", "unclaimed-dividends-nigeria", "jamb-examination-slip-2026", "neco-certificate-service"]) {
     expect(publicServices.some((service) => service.slug === slug), slug).toBeTruthy();
@@ -24,6 +27,14 @@ test("search-demand growth data stays internally consistent", () => {
 
   expect(seriesTitles).toHaveLength(6);
   expect(new Set(seriesTitles.map((item) => item.slug)).size).toBe(seriesTitles.length);
+
+  for (const slug of ["colours-of-fire", "king-of-thieves-2", "the-herd"]) {
+    expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
+  }
+  for (const slug of ["snv-energy-advisor-abuja-2026", "snv-project-manager-abuja-2026"]) {
+    expect(jobOpportunities.some((item) => item.slug === slug && item.status === "open"), slug).toBeTruthy();
+  }
+  expect(exploreGuides.some((guide) => guide.slug === "beneficial-ownership-asset-recovery-conference-2026")).toBeTruthy();
 });
 
 test("new search-demand routes are crawlable from their public surfaces", async ({ page, request }) => {
