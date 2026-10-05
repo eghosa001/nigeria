@@ -708,7 +708,14 @@ export const growthHubs: GrowthHub[] = [
       { query: "book Evercare Hospital appointment", serviceSlug: "evercare-book-appointment" },
       { query: "activate Paystack business Nigeria", serviceSlug: "paystack-business-activation-nigeria" },
       { query: "request Paystack terminal", serviceSlug: "paystack-physical-terminal-nigeria" },
-      { query: "buy Leadway motor insurance online", serviceSlug: "leadway-buy-motor-insurance-online" }
+      { query: "buy Leadway motor insurance online", serviceSlug: "leadway-buy-motor-insurance-online" },
+      { query: "Uber driver signup Nigeria", serviceSlug: "uber-driver-signup-nigeria" },
+      { query: "Bolt driver signup Nigeria", serviceSlug: "bolt-driver-signup-nigeria" },
+      { query: "Smile data recharge Nigeria", serviceSlug: "smile-recharge-data-nigeria" },
+      { query: "Spectranet recharge Nigeria", serviceSlug: "spectranet-recharge-renew-plan" },
+      { query: "Konga return and refund", serviceSlug: "konga-return-refund" },
+      { query: "sell on Konga Nigeria", serviceSlug: "konga-seller-registration" },
+      { query: "sell on Jumia Nigeria", serviceSlug: "jumia-seller-registration-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -741,7 +748,14 @@ export const growthHubs: GrowthHub[] = [
       "evercare-book-appointment",
       "paystack-business-activation-nigeria",
       "paystack-physical-terminal-nigeria",
-      "leadway-buy-motor-insurance-online"
+      "leadway-buy-motor-insurance-online",
+      "uber-driver-signup-nigeria",
+      "bolt-driver-signup-nigeria",
+      "smile-recharge-data-nigeria",
+      "spectranet-recharge-renew-plan",
+      "konga-return-refund",
+      "konga-seller-registration",
+      "jumia-seller-registration-nigeria"
     ]
   },
 
