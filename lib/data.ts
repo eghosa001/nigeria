@@ -1577,6 +1577,20 @@ export const agencies: Agency[] = [
     "shortName": "PropertyPro",
     "description": "Private Nigerian property marketplace and verification platform for agents, landlords, buyers and renters.",
     "website": "https://propertypro.ng/"
+  },
+  {
+    "slug": "oracle-certification",
+    "name": "Oracle Certification",
+    "shortName": "Oracle University",
+    "description": "Oracle professional certification programme offering MyLearn exam scheduling, online proctoring and CertView credential management.",
+    "website": "https://www.oracle.com/education/certification/"
+  },
+  {
+    "slug": "seamlesshr",
+    "name": "SeamlessHR",
+    "shortName": "SeamlessHR",
+    "description": "Private African HR and payroll platform with Nigeria employer services including Breeze Payer salary, pension and tax disbursements.",
+    "website": "https://seamlesshr.com/ng/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
