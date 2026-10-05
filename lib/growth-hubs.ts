@@ -769,7 +769,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "Glo SIM replacement", serviceSlug: "glo-sim-replacement" },
       { query: "port number to Glo", serviceSlug: "glo-port-number-to-glo" },
       { query: "Glo international roaming", serviceSlug: "glo-international-roaming" },
-      { query: "Glo data roaming bundle", serviceSlug: "glo-data-roaming-bundle" }
+      { query: "Glo data roaming bundle", serviceSlug: "glo-data-roaming-bundle" },
+      { query: "EEDC pay bill online", serviceSlug: "eedc-pay-bill-online" },
+      { query: "EEDC Connect self service", serviceSlug: "eedc-connect-self-service" },
+      { query: "EEDC new electricity connection", serviceSlug: "eedc-new-service-connection" },
+      { query: "KEDCO prepaid meter application", serviceSlug: "kedco-map-meter-application" },
+      { query: "KEDCO new electricity connection", serviceSlug: "kedco-new-electricity-connection" },
+      { query: "KEDCO pay bill or buy token", serviceSlug: "kedco-pay-bill-buy-token" },
+      { query: "file Leadway insurance claim", serviceSlug: "leadway-file-insurance-claim" },
+      { query: "block Sterling account lost phone", serviceSlug: "sterling-emergency-block-account" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -863,7 +871,15 @@ export const growthHubs: GrowthHub[] = [
       "glo-sim-replacement",
       "glo-port-number-to-glo",
       "glo-international-roaming",
-      "glo-data-roaming-bundle"
+      "glo-data-roaming-bundle",
+      "eedc-pay-bill-online",
+      "eedc-connect-self-service",
+      "eedc-new-service-connection",
+      "kedco-map-meter-application",
+      "kedco-new-electricity-connection",
+      "kedco-pay-bill-buy-token",
+      "leadway-file-insurance-claim",
+      "sterling-emergency-block-account"
     ]
   },
 
