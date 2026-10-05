@@ -43,17 +43,16 @@ export const approvedYouTubeSourceCapacity = verifiedYouTubeMovieChannels.reduce
   0,
 );
 
-export function isApprovedYouTubeMoviePublisher(name?: string) {
-  if (!name) return false;
-  const normalized = name.trim().toLowerCase();
-  return sourceRegistry.sources.some((source) =>
-    source.aliases.some((alias) => alias.trim().toLowerCase() === normalized),
-  );
-}
-
-
 function normalizePublisherName(name: string) {
   return name.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+export function isApprovedYouTubeMoviePublisher(name?: string) {
+  if (!name) return false;
+  const normalized = normalizePublisherName(name);
+  return sourceRegistry.sources.some((source) =>
+    source.aliases.some((alias) => normalizePublisherName(alias) === normalized),
+  );
 }
 
 export function getVerifiedYouTubeMovieChannelBySlug(slug: string) {
