@@ -178,7 +178,11 @@ export function AdminAnalyticsDashboard() {
       </div>
 
       <p className="analytics-clean-note">
-        GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.
+        {data.ga4Available ? (
+          <>GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.</>
+        ) : (
+          <>PostHog is loading independently. GA4 Data API reporting is currently unavailable, so GA4 totals below should not be treated as visitor counts until that secondary connection is restored.</>
+        )}
       </p>
 
       <section className="admin-panel">
@@ -230,7 +234,7 @@ export function AdminAnalyticsDashboard() {
         ) : (
           <div className="admin-empty">
             <strong>PostHog is collecting traffic, but this custom admin page cannot query PostHog totals yet.</strong>
-            <p>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with Query: Read access. Never use that key in browser code. Until then, use the live PostHog dashboard link above for immediate totals.</p>
+            <p>{data.posthog.overview.error || <>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with Query Read access. Never use that key in browser code.</>}</p>
           </div>
         )}
       </section>
