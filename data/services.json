@@ -18523,7 +18523,7 @@
     "steps": [
       "Download EEDC Connect from the app-store route published by EEDC and open the application.",
       "Register the customer profile and request the one-time password sent to the supplied mobile number.",
-      "Enter the OTP to complete registration and link the relevant EEDC customer/account information.",
+      "Enter the OTP sent to the registered phone number, then add the EEDC account number shown on the customer's electricity bill so the app can display that service record.",
       "Use the app to pay bills, view payment history or submit a customer-support complaint.",
       "Open the logged complaint or payment history later to check the status and retain the reference until the issue is resolved."
     ],
@@ -18874,7 +18874,7 @@
       "Official Sterling support details for follow-up if the account or OneBank profile must later be restored"
     ],
     "steps": [
-      "Dial *822*911# from any available mobile phone as soon as the Sterling device/account is at risk.",
+      "Open the phone dialler on any available mobile phone and dial *822*911# as soon as the Sterling account is at risk.",
       "Complete the account-identification and security prompts shown by Sterling's emergency USSD menu.",
       "Confirm the request to block the Sterling account from further unauthorised access.",
       "Review recent activity through a safe official channel after the account is secured.",
