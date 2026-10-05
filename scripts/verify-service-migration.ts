@@ -4,11 +4,11 @@ import { validateServiceCatalog } from "../lib/service-records";
 const services = validateServiceCatalog(serviceRecords);
 const publicServices = services.filter((service) => service.status !== "review");
 
-if (services.length !== 312) {
-  throw new Error("Expected 312 total guides, found " + services.length + ".");
+if (services.length !== 323) {
+  throw new Error("Expected 323 total guides, found " + services.length + ".");
 }
-if (publicServices.length !== 312) {
-  throw new Error("Expected 312 public guides, found " + publicServices.length + ".");
+if (publicServices.length !== 323) {
+  throw new Error("Expected 323 public guides, found " + publicServices.length + ".");
 }
 
 console.log("Validated", services.length, "service records with", publicServices.length, "public guides.");
