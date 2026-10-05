@@ -1526,5 +1526,378 @@
       "Showmax replacement Nigeria",
       "DStv Stream Showmax"
     ]
+  },
+  {
+    "slug": "chowdeck-create-account-order",
+    "title": "How to create a Chowdeck account and start ordering",
+    "shortTitle": "Start using Chowdeck",
+    "summary": "Chowdeck's customer onboarding route for creating an account with phone/email verification, then using a delivery address to order food, groceries, pharmacy items and other supported services.",
+    "category": "E-commerce",
+    "agencySlug": "chowdeck",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "Chowdeck does not state a fee for creating a customer account. Order prices, delivery charges, service fees and promotions are shown in the app before checkout.",
+    "timeline": "Account signup is completed after the OTP verification succeeds; order delivery time then depends on merchant preparation, distance, traffic and rider availability.",
+    "status": "verified",
+    "officialPortal": "https://www.chowdeck.com/",
+    "requirements": [
+      "The Chowdeck mobile app from the official app-store link",
+      "The customer's first name, last name, phone number and email address",
+      "Access to the SMS and email inboxes used to receive the account-verification OTP",
+      "A delivery address in a city or area currently served by Chowdeck"
+    ],
+    "steps": [
+      "Download the official Chowdeck app and tap Create one to begin customer registration.",
+      "Enter the customer's first name, last name, phone number, email address and referral code if one is being used.",
+      "Enter the OTP sent by SMS and email to verify the customer profile.",
+      "Set or enter the delivery address and browse the restaurants, groceries, pharmacies, markets or other services available for that location.",
+      "Select the items, review the order charges and delivery details, complete checkout and follow the live order updates in the app."
+    ],
+    "notes": [
+      "Chowdeck's current help centre lists Lagos, Abuja, Port Harcourt, Ilorin, Abeokuta, Enugu, Kaduna, Owerri, Benin, Oyo, Ife and Kano among its Nigerian service cities.",
+      "The platform also offers services beyond prepared food, including groceries, pharmacy orders and local-market items.",
+      "Promotional first-order discounts can change and are intentionally not treated as permanent account terms."
+    ],
+    "sources": [
+      {
+        "label": "Chowdeck — What is Chowdeck?",
+        "agency": "Chowdeck",
+        "url": "https://help.chowdeck.com/en/articles/16876603-what-is-chowdeck",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Chowdeck Home",
+        "agency": "Chowdeck",
+        "url": "https://www.chowdeck.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "chowdeck-vendor-onboarding",
+      "chowdeck-rider-signup",
+      "jumia-track-order",
+      "konga-return-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Chowdeck Nigeria",
+      "create Chowdeck account",
+      "how to order on Chowdeck",
+      "Chowdeck food delivery Nigeria",
+      "Chowdeck signup"
+    ]
+  },
+  {
+    "slug": "chowdeck-vendor-onboarding",
+    "title": "How to register a restaurant or store on Chowdeck",
+    "shortTitle": "Chowdeck vendor signup",
+    "summary": "Chowdeck's Vendor Hub onboarding route for restaurants and eligible stores, covering business/contact details, KYC, settlement bank information, menu setup, operating settings and automatic activation.",
+    "category": "E-commerce",
+    "agencySlug": "chowdeck",
+    "feeLabel": "Vendor commercial terms apply",
+    "feeNote": "Chowdeck's vendor onboarding guide does not state one universal signup fee. Service fees, commissions and optional advertising terms are managed separately in the Vendor Hub.",
+    "timeline": "Chowdeck says the store activates automatically after every onboarding-checklist phase is marked Done and the phone number is verified; there is no separate manual approval wait after completion.",
+    "status": "verified",
+    "officialPortal": "https://www.chowdeck.com/vendors",
+    "requirements": [
+      "A physical restaurant, food business, supermarket, store or pharmacy in a location Chowdeck currently supports",
+      "The business legal name, store address and primary contact information",
+      "KYC/compliance evidence including the business registration certificate when required for full access",
+      "A settlement bank account name and number that can be verified",
+      "A complete menu/catalogue with item names, descriptions, prices, variants/add-ons and clear product images"
+    ],
+    "steps": [
+      "Confirm that Chowdeck currently serves the business's exact location, then download the official Chowdeck Vendor app.",
+      "Create the vendor profile and complete the Business & Contact Details section with the legal name, store address and contacts.",
+      "Upload the KYC/compliance information and complete the bank and settlement-account verification.",
+      "Build the menu/catalogue and complete the opening hours, preparation time, pickup instructions, fulfilment preferences and quality-review checklist.",
+      "Verify the business phone number and confirm that every onboarding phase shows Done; Chowdeck says the store then activates automatically and starts appearing in the customer app."
+    ],
+    "notes": [
+      "Chowdeck currently allows some unregistered businesses to start with restricted access, but its August 2026 policy imposes a ₦100,000 lifetime trading cap until CAC registration is completed.",
+      "Exact city coverage depends on the restaurant's location, not only the city name.",
+      "Menu quality, item categorisation and images are part of the activation checklist rather than optional post-launch work."
+    ],
+    "sources": [
+      {
+        "label": "Chowdeck — Join as a vendor",
+        "agency": "Chowdeck",
+        "url": "https://help.chowdeck.com/en/articles/16777217-how-do-i-join-chowdeck-as-a-vendor",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Chowdeck Vendors",
+        "agency": "Chowdeck",
+        "url": "https://www.chowdeck.com/vendors",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Chowdeck — Limits on unregistered businesses",
+        "agency": "Chowdeck",
+        "url": "https://help.chowdeck.com/en/articles/16527141-why-we-have-limits-on-unregistered-businesses",
+        "lastChecked": "2026-10-05",
+        "published": "2026-08-20"
+      }
+    ],
+    "related": [
+      "chowdeck-create-account-order",
+      "chowdeck-advertising",
+      "chowdeck-rider-signup",
+      "cac-business-name-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Chowdeck vendor registration",
+      "sell on Chowdeck",
+      "join Chowdeck as restaurant",
+      "Chowdeck Vendor Hub Nigeria",
+      "Chowdeck merchant signup"
+    ]
+  },
+  {
+    "slug": "chowdeck-rider-signup",
+    "title": "How to register as a Chowdeck rider",
+    "shortTitle": "Chowdeck rider signup",
+    "summary": "Chowdeck's rider onboarding route through the Rider app, including identity/NIN verification, vehicle details, onboarding orientation, bank information and activation for delivery requests.",
+    "category": "Logistics",
+    "agencySlug": "chowdeck",
+    "feeLabel": "No rider signup fee stated",
+    "feeNote": "Chowdeck's current rider-onboarding article does not state a fee for registering in the Rider app.",
+    "timeline": "After app registration and identity verification, Chowdeck says the onboarding team contacts the applicant for orientation before final activation; no fixed number of days is published.",
+    "status": "verified",
+    "officialPortal": "https://www.chowdeck.com/riders",
+    "requirements": [
+      "A rider who is at least 18 years old",
+      "A vehicle suitable for delivery, such as a bike or bicycle, plus the vehicle information requested in the app",
+      "A valid means of identification and NIN for identity verification",
+      "A phone number, email address and city of operation",
+      "A completed rider profile with photo and bank-account information before activation"
+    ],
+    "steps": [
+      "Download the official Chowdeck Rider app and register with the rider's name, phone number, email, city and vehicle type.",
+      "Upload the valid identification and complete the NIN identity-verification process in the app.",
+      "Wait for Chowdeck's onboarding team to contact the rider with an invitation to the required orientation session.",
+      "Attend orientation to learn the Rider app, delivery process, policies, performance expectations and payout process.",
+      "Complete the profile photo, vehicle and bank-account information and set availability after Chowdeck activates the rider account."
+    ],
+    "notes": [
+      "Chowdeck says signing up in the Rider app is enough to start the onboarding process; a separate emailed application form is not needed.",
+      "The account shows identity verification as Verified, Pending or Failed.",
+      "Activation follows successful verification and onboarding rather than immediate signup alone."
+    ],
+    "sources": [
+      {
+        "label": "Chowdeck — Join as a Rider",
+        "agency": "Chowdeck",
+        "url": "https://help.chowdeck.com/en/articles/16829428-how-can-i-join-chowdeck-as-a-rider",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Chowdeck Riders",
+        "agency": "Chowdeck",
+        "url": "https://www.chowdeck.com/riders",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "chowdeck-create-account-order",
+      "chowdeck-vendor-onboarding",
+      "bolt-driver-signup-nigeria",
+      "indrive-driver-signup-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Chowdeck rider signup",
+      "become Chowdeck rider",
+      "Chowdeck rider requirements Nigeria",
+      "Chowdeck delivery rider registration",
+      "Chowdeck Rider app"
+    ]
+  },
+  {
+    "slug": "chowdeck-advertising",
+    "title": "How to advertise a business on Chowdeck",
+    "shortTitle": "Chowdeck Ads",
+    "summary": "Chowdeck Ads lets vendors and external brands create funded advertising campaigns for customers inside the Chowdeck ecosystem, with vendor self-service and managed brand campaigns.",
+    "category": "Business",
+    "agencySlug": "chowdeck",
+    "feeLabel": "Vendor self-serve funding starts from ₦100,000",
+    "feeNote": "Chowdeck's current Ads page says vendors can start with a ₦100,000 wallet top-up and receive a first-top-up bonus, while placements use CPM or flat-rate pricing. Promotional credits can change.",
+    "timeline": "Chowdeck says advertising campaigns are reviewed within 24 hours before going live.",
+    "status": "verified",
+    "officialPortal": "https://chowdeck.com/ads",
+    "requirements": [
+      "An eligible Chowdeck vendor account for self-serve advertising, or a brand using the managed campaign route",
+      "An advertising objective, creative assets and the intended audience/location targeting",
+      "A funded advertising wallet or approved managed-campaign budget",
+      "Compliance with Chowdeck's campaign-review and creative requirements"
+    ],
+    "steps": [
+      "Open Chowdeck Ads and choose the vendor self-service or external-brand advertising route.",
+      "Create the advertising account or enter the vendor dashboard and fund the advertising wallet with the intended budget.",
+      "Build the campaign by choosing the placement, uploading the creative and selecting the target location, audience and zone.",
+      "Set the budget and review the CPM or flat-rate pricing shown for the selected placement.",
+      "Submit the campaign for review and monitor its performance after Chowdeck approves and launches it."
+    ],
+    "notes": [
+      "Chowdeck says every campaign is reviewed before launch and targets a 24-hour approval window.",
+      "Vendor and external-brand campaign options are not identical; external brands can use managed pop-ups, push notifications and sponsored placements.",
+      "Promotional ad credits are temporary marketing terms and should be rechecked before funding."
+    ],
+    "sources": [
+      {
+        "label": "Chowdeck Ads",
+        "agency": "Chowdeck",
+        "url": "https://chowdeck.com/ads",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Chowdeck Vendor Support",
+        "agency": "Chowdeck",
+        "url": "https://help.chowdeck.com/en/collections/4050421-vendor-support",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "chowdeck-vendor-onboarding",
+      "paystack-business-activation-nigeria",
+      "nomba-business-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Chowdeck Ads",
+      "advertise on Chowdeck",
+      "Chowdeck vendor advertising",
+      "Chowdeck ad account",
+      "Chowdeck sponsored listing"
+    ]
+  },
+  {
+    "slug": "ican-professional-student-registration",
+    "title": "How to register as an ICAN professional student",
+    "shortTitle": "ICAN student registration",
+    "summary": "ICAN's professional-student registration route for qualified applicants using the professional portal, payment reference, online form, certified credentials and endorsement by a Chartered Accountant.",
+    "category": "Education",
+    "agencySlug": "ican",
+    "feeLabel": "ICAN official pages currently show differing registration amounts",
+    "feeNote": "ICAN's current Professional Student page says ₦11,400 including bank charges, while another current ICAN registration-procedure page states ₦10,000 plus transaction charges. Confirm the amount generated by the professional portal before paying.",
+    "timeline": "ICAN does not publish one fixed approval time for every professional-student application; the applicant must complete the online registration and submit the required endorsed/certified documentation.",
+    "status": "conflict",
+    "officialPortal": "https://icanportal.org/professional",
+    "requirements": [
+      "An approved entry qualification, generally a university degree/HND or another professional/technical qualification accepted by ICAN",
+      "A phone number and email address for the professional-student registration portal",
+      "Certified copies of the applicant's educational credentials and supporting NYSC discharge/call-up or academic transcript evidence where applicable",
+      "A completed registration form endorsed by a Chartered Accountant",
+      "The transaction reference/official payment evidence generated for the professional-student registration"
+    ],
+    "steps": [
+      "Open ICAN's official professional-student page and confirm that the applicant's academic or professional qualification appears in the accepted entry routes.",
+      "Open the ICAN professional portal, choose New Student Registration and enter the phone number and email address.",
+      "Generate the transaction reference and pay the amount currently generated by the official portal rather than relying on an older fee figure.",
+      "Complete the online registration form, submit it, print the completed form and sign it.",
+      "Attach the certified credentials, payment evidence and required NYSC/transcript documents, obtain the Chartered Accountant endorsement and submit the application through an ICAN office as instructed."
+    ],
+    "notes": [
+      "ICAN's own current pages contain different registration-fee wording, so this guide intentionally marks the fee as a conflict.",
+      "The registration page lists degrees/HND and several recognised professional/technical qualifications as entry routes.",
+      "Professional-student registration is separate from registering for a specific examination diet."
+    ],
+    "sources": [
+      {
+        "label": "ICAN Professional Students",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/ican/students/professional/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ICAN Professional Student Registration Portal",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/RPlogin.php",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ICAN 2026 Professional Syllabus",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/ican/assets/docs/ICAN_SYLLABUS_2026_Final_Updated_NEW.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "ican-professional-exam-registration",
+      "acca-book-exam-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ICAN professional student registration",
+      "register ICAN student Nigeria",
+      "ICAN student registration fee",
+      "ICAN professional portal registration",
+      "become ICAN student"
+    ]
+  },
+  {
+    "slug": "ican-professional-exam-registration",
+    "title": "How to register for an ICAN professional examination",
+    "shortTitle": "ICAN exam registration",
+    "summary": "ICAN's professional-exam registration route for existing students: check financial/exam status, clear subscriptions, select eligible papers and centre, pay online and complete the exam registration before the diet deadline.",
+    "category": "Education",
+    "agencySlug": "ican",
+    "feeLabel": "Varies by level and number of papers",
+    "feeNote": "ICAN's current fee table varies by Foundation, Skills or Professional level and paper count. Confirm the exact amount from the student's financial/exam status before making the non-refundable payment.",
+    "timeline": "The November 2026 Professional Examination is scheduled for 10–12 November 2026. Registration must be completed before ICAN's published diet deadline; payment alone does not complete exam registration.",
+    "status": "verified",
+    "officialPortal": "https://icanportal.org/professional/newexams",
+    "requirements": [
+      "An active ICAN professional-student registration number",
+      "Cleared annual-subscription arrears before exam registration",
+      "An examination/financial status showing the papers the student is eligible to enter",
+      "Selection of an approved examination centre and the intended papers",
+      "Online payment of the applicable examination fee through the official ICAN portal"
+    ],
+    "steps": [
+      "Open the ICAN professional portal and check the student's Examination and Financial Status before paying.",
+      "Clear any outstanding annual subscription separately because ICAN says students with arrears cannot register for examinations.",
+      "Open the professional exam-registration page, choose the eligible papers and preferred examination centre.",
+      "Pay the examination amount shown for the selected papers through the official online portal and keep the transaction receipt.",
+      "Complete and submit the online examination registration before the published diet deadline, then later download the docket/attendance information from ICAN."
+    ],
+    "notes": [
+      "ICAN warns that examination fees are non-refundable and exams cannot be deferred to another diet after payment.",
+      "ICAN advises students not to use third parties or proxies for examination registration.",
+      "For Nigeria-based candidates, the 2026 exam guidance directs examination-registration payments through the online ICAN portal."
+    ],
+    "sources": [
+      {
+        "label": "ICAN Students Portal",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/ican/students/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ICAN Student FAQs",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/ican/students/faqs.php",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ICAN Professional Exam Portal",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanportal.org/professional/newexams",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ican-professional-student-registration",
+      "acca-book-exam-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ICAN exam registration 2026",
+      "ICAN November 2026 exam",
+      "ICAN professional exam portal",
+      "ICAN exam fees Nigeria",
+      "register ICAN exam"
+    ]
   }
 ]
