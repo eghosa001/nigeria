@@ -15,7 +15,10 @@ function assert(condition, message) {
 }
 
 function normalize(value) {
-  return String(value ?? "").trim().toLowerCase();
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
 }
 
 assert(Array.isArray(sources.sources) && sources.sources.length > 0, "approved YouTube sources are required");
