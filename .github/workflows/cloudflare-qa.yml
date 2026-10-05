@@ -47,57 +47,6 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
-          qa_workflow_only="$(printf '%s\n' "$changed" | grep -Ev '^\.github/workflows/(ui-qa|cloudflare-qa|live-qa)\.yml | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
-          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
-          tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
-          non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
-
-          if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "Jobs-only change; focused validation runs in CI, so Cloudflare browser QA is skipped."
-            exit 0
-          fi
-
-          if [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "mode=tour" >> "$GITHUB_OUTPUT"
-            echo "Tour-only content/data change; focused validation runs in CI, so Cloudflare runtime QA is skipped."
-            exit 0
-          fi
-
-          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|data|tests)/|^(vite\.config\.ts|wrangler\.jsonc|package\.json|next\.config\.ts|playwright\.cloudflare\.config\.ts|\.github/workflows/cloudflare-qa\.yml)$' || true)"
-          if [ -z "$relevant" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "No Cloudflare-runtime changes; required workflow can finish without the full suite."
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          fi
-      - uses: actions/setup-node@v4
-        if: steps.scope.outputs.run == 'true'
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.run == 'true'
-      - run: npm run build
-        if: steps.scope.outputs.run == 'true'
-      - run: npx playwright install --with-deps chromium
-        if: steps.scope.outputs.run == 'true'
-      - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true'
-      - name: Upload Cloudflare Playwright report on failure
-        if: failure() && steps.scope.outputs.run == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-cloudflare
-          path: playwright-report-cloudflare/
-          retention-days: 7
- || true)"
-          if [ -z "$qa_workflow_only" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "QA-workflow-only maintenance; Cloudflare browser QA skipped."
-            exit 0
-          fi
-
           jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
