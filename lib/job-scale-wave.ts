@@ -39,7 +39,7 @@ const careerSeeds = [
     "lotus-bank-careers",
     "Private",
     "Banking",
-    "https://ns2.lotusbank.com/careers",
+    "https://ns1.lotusbank.com/careers",
     "Nigeria"
   ],
   [
@@ -479,7 +479,7 @@ const careerSeeds = [
     "dana-group-careers",
     "Private",
     "Manufacturing",
-    "https://career.danagroup.com/",
+    "https://danagroup.danapharmaceuticals.com/career/",
     "Nigeria"
   ],
   [
@@ -487,7 +487,7 @@ const careerSeeds = [
     "arik-air-careers",
     "Private",
     "Aviation",
-    "https://web.arikair.com/",
+    "https://arikair.com/?lang=en",
     "Nigeria"
   ],
   [
@@ -623,7 +623,7 @@ const careerSeeds = [
     "nigeria-immigration-service-careers",
     "Government",
     "Public",
-    "https://recruitment.cdcfib.org/",
+    "https://recruitment.cdcfib.gov.ng/",
     "Nigeria"
   ],
   [
@@ -631,7 +631,7 @@ const careerSeeds = [
     "nigerian-correctional-service-careers",
     "Government",
     "Public",
-    "https://www.corrections.gov.ng/news/recruitment-notice%21?news_id=137",
+    "https://recruitment.cdcfib.gov.ng/",
     "Nigeria"
   ],
   [
@@ -639,7 +639,7 @@ const careerSeeds = [
     "federal-fire-service-careers",
     "Government",
     "Public",
-    "https://recruitment.cdcfib.org/",
+    "https://recruitment.cdcfib.gov.ng/",
     "Nigeria"
   ],
   [
@@ -1077,7 +1077,7 @@ const retiredVacancyGroups: Array<[string, JobSector, string, RetiredVacancySeed
   [
     "Dana Group",
     "Private",
-    "https://career.danagroup.com/",
+    "https://danagroup.danapharmaceuticals.com/career/",
     [
       [
         "Logistics Officer",

@@ -673,7 +673,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     sources: [
       { label: "Official CDCFIB Recruitment Portal", url: "https://recruitment.cdcfib.gov.ng/", lastChecked: "2026-10-05" },
-      { label: "Nigerian Correctional Service recruitment notice", url: "https://www.corrections.gov.ng/news/recruitment-notice!?news_id=137", lastChecked: "2026-10-05" }
+      { label: "Nigerian Correctional Service recruitment notice", url: "https://recruitment.cdcfib.gov.ng/", lastChecked: "2026-10-05" }
     ]
   },
   {
@@ -1802,13 +1802,13 @@ const rawJobOpportunities: CareerOpportunity[] = [
     requirements: ["Start from Flour Mills of Nigeria's official site or linked recruitment platform.", "Confirm vacancy location, education and experience requirements.", "Do not pay an application fee."],
     documents: ["CV/resume", "Academic and professional details", "Role-specific supporting documents"],
     applicationSteps: ["Open Flour Mills of Nigeria's official website.", "Follow the careers or Join FMN Family route.", "Open the official recruitment system.", "Choose a suitable role and review requirements.", "Submit through that recruitment system."],
-    officialUrl: "https://www.fmnplc.com/",
+    officialUrl: "https://fmnplc.e-recruiter.ng/jobprofile",
     officialUrlLabel: "Open Flour Mills of Nigeria",
     verifiedAt: "2026-10-05",
     feeNote: "Flour Mills recruitment guidance warns applicants against recruitment payments. Use only the company-linked recruitment route.",
     sourceNotes: ["Flour Mills of Nigeria links its careers area to an official e-recruitment platform."],
     sources: [
-      { label: "Flour Mills of Nigeria", url: "https://www.fmnplc.com/", lastChecked: "2026-10-05" },
+      { label: "Flour Mills of Nigeria", url: "https://fmnplc.e-recruiter.ng/jobprofile", lastChecked: "2026-10-05" },
       { label: "FMN Recruitment", url: "https://fmnplc.e-recruiter.ng/", lastChecked: "2026-10-05" }
     ]
   },
@@ -2579,12 +2579,12 @@ const rawJobOpportunities: CareerOpportunity[] = [
     requirements: ["Use Lafarge Africa's official job-opportunities page.", "Open the specific role and confirm its location and criteria.", "Submit through the linked official application route."],
     documents: ["CV/resume", "Role-specific credentials and application information"],
     applicationSteps: ["Open Lafarge Africa Job Opportunities.", "Select available openings.", "Review role requirements.", "Submit through the official application system."],
-    officialUrl: "https://www.lafarge.com.ng/job-opportunities",
+    officialUrl: "https://careers.holcimgroup.com/lafarge_nigeria/",
     officialUrlLabel: "Open Lafarge job opportunities",
     verifiedAt: "2026-10-05",
     feeNote: "Use Lafarge Africa's official careers route.",
     sourceNotes: ["Lafarge Africa's official site provides an openings route and covers internships through management and technical careers."],
-    sources: [{ label: "Lafarge Africa Job Opportunities", url: "https://www.lafarge.com.ng/job-opportunities", lastChecked: "2026-10-05" }]
+    sources: [{ label: "Lafarge Africa Job Opportunities", url: "https://careers.holcimgroup.com/lafarge_nigeria/", lastChecked: "2026-10-05" }]
   },
   {
     slug: "julius-berger-nigeria-careers",
