@@ -1053,7 +1053,13 @@ export const growthHubs: GrowthHub[] = [
       { query: "Autochek car finance prequalification", serviceSlug: "autochek-car-finance-prequalification" },
       { query: "sell car with Cars45", serviceSlug: "cars45-sell-car-inspection" },
       { query: "buy inspected car Cars45", serviceSlug: "cars45-buy-inspected-car" },
-      { query: "become Cars45 dealer partner", serviceSlug: "cars45-dealer-partner-onboarding" }
+      { query: "become Cars45 dealer partner", serviceSlug: "cars45-dealer-partner-onboarding" },
+      { query: "buy Heirs motor insurance", serviceSlug: "heirs-buy-motor-insurance-online" },
+      { query: "file Heirs insurance claim", serviceSlug: "heirs-file-general-insurance-claim" },
+      { query: "buy Tangerine third party motor insurance", serviceSlug: "tangerine-buy-third-party-motor-insurance" },
+      { query: "file Tangerine insurance claim", serviceSlug: "tangerine-file-track-insurance-claim" },
+      { query: "buy Sovereign Trust motor insurance", serviceSlug: "sovereign-trust-buy-motor-insurance-online" },
+      { query: "file Sovereign Trust motor claim", serviceSlug: "sovereign-trust-file-motor-claim" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1417,7 +1423,13 @@ export const growthHubs: GrowthHub[] = [
       "autochek-car-finance-prequalification",
       "cars45-sell-car-inspection",
       "cars45-buy-inspected-car",
-      "cars45-dealer-partner-onboarding"
+      "cars45-dealer-partner-onboarding",
+      "heirs-buy-motor-insurance-online",
+      "heirs-file-general-insurance-claim",
+      "tangerine-buy-third-party-motor-insurance",
+      "tangerine-file-track-insurance-claim",
+      "sovereign-trust-buy-motor-insurance-online",
+      "sovereign-trust-file-motor-claim"
     ]
   },
 
