@@ -7925,9 +7925,9 @@
     ],
     "steps": [
       "Sign in to PiggyVest, open the Account menu and select the option for generating an account statement.",
-      "Select Generate Account Statement.",
-      "Enter or choose the statement information requested by the app.",
-      "Follow the prompts to generate the account statement.",
+      "Choose Generate Account Statement from the available account-document options shown in the app.",
+      "Enter or select the statement period and any other information requested by PiggyVest for the document.",
+      "Submit the statement request and allow PiggyVest to generate the account document for the selected period.",
       "Save the generated statement securely and verify that the account details and period are correct before using it."
     ],
     "notes": [
