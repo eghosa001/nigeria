@@ -411,5 +411,458 @@
       "track AXA motor claim",
       "AXA Mansard accident claim"
     ]
+  },
+  {
+    "slug": "netflix-start-membership-nigeria",
+    "title": "How to start a Netflix membership in Nigeria",
+    "shortTitle": "Start Netflix Nigeria",
+    "summary": "Netflix Nigeria's signup route for creating or restarting a membership with an email address, choosing a current Nigerian plan and completing payment through an available billing method.",
+    "category": "TV & streaming",
+    "agencySlug": "netflix-nigeria",
+    "feeLabel": "Starts at ₦2,500/month on Netflix Nigeria",
+    "feeNote": "Netflix Nigeria currently states that plans range from ₦2,500 to ₦8,500 per month. Prices and payment options can change, so use the amount shown during signup.",
+    "timeline": "Membership becomes available after the account is created or restarted, a plan is selected and the payment method is accepted.",
+    "status": "verified",
+    "officialPortal": "https://www.netflix.com/ng/",
+    "requirements": [
+      "A valid email address for the Netflix account",
+      "A password for the account when creating or restarting membership",
+      "A current Netflix plan selected from the options available in Nigeria",
+      "An accepted payment method shown by Netflix during the Nigerian signup flow"
+    ],
+    "steps": [
+      "Open Netflix Nigeria's official website and enter the email address in the membership signup or restart field.",
+      "Create or confirm the account password and continue to the plan-selection step.",
+      "Review the currently available Nigerian plans and choose the plan that matches the household's intended use.",
+      "Enter one of the payment methods Netflix makes available for the account and confirm the subscription.",
+      "Save the account login details and review the Membership section later for billing date, plan changes or cancellation."
+    ],
+    "notes": [
+      "Netflix Nigeria currently advertises plans beginning at ₦2,500 per month, but plan prices can change.",
+      "A person restarting a previous membership can normally use the same Netflix account rather than creating a second profile.",
+      "Do not pay an unknown reseller for Netflix credentials when the official Nigeria signup route is available."
+    ],
+    "sources": [
+      {
+        "label": "Netflix Nigeria",
+        "agency": "Netflix",
+        "url": "https://www.netflix.com/ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Netflix — How to change your plan",
+        "agency": "Netflix",
+        "url": "https://help.netflix.com/en/node/22",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "netflix-change-plan",
+      "netflix-cancel-membership",
+      "dstv-change-package"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Netflix Nigeria subscription",
+      "how to subscribe Netflix Nigeria",
+      "Netflix price Nigeria",
+      "Netflix plans Nigeria",
+      "start Netflix account Nigeria"
+    ]
+  },
+  {
+    "slug": "netflix-change-plan",
+    "title": "How to change a Netflix plan",
+    "shortTitle": "Change Netflix plan",
+    "summary": "Netflix's account route for moving to a different membership plan, with higher-priced plan changes taking effect immediately and lower-priced changes generally starting on the next billing date.",
+    "category": "TV & streaming",
+    "agencySlug": "netflix-nigeria",
+    "feeLabel": "New plan price applies",
+    "feeNote": "The account shows the current plan choices and price before confirmation. Partner-billed Netflix accounts can have different change rules.",
+    "timeline": "Netflix says an upgrade to a higher-priced plan takes effect immediately, while a move to a lower-priced plan takes effect on the next billing date.",
+    "status": "verified",
+    "officialPortal": "https://help.netflix.com/en/node/22",
+    "requirements": [
+      "Access to the Netflix account that owns the membership",
+      "A membership that allows direct plan changes rather than a partner-billed package with separate rules",
+      "A selected replacement Netflix plan available for the account and country"
+    ],
+    "steps": [
+      "Sign in to Netflix in a browser and open the Change Plan page from the account.",
+      "Review the plans currently available for the Nigerian account and choose the intended replacement plan.",
+      "Select Continue or Update and review the change before confirming it.",
+      "Confirm the plan change and note whether Netflix applies it immediately or from the next billing date.",
+      "Check the Membership area afterward to confirm the new plan and billing date."
+    ],
+    "notes": [
+      "Netflix says upgrades to higher-priced plans normally take effect immediately.",
+      "Downgrades normally take effect on the next billing date.",
+      "A partner-billed Netflix account may need to be changed through the payment partner instead."
+    ],
+    "sources": [
+      {
+        "label": "Netflix — How to change your plan",
+        "agency": "Netflix",
+        "url": "https://help.netflix.com/en/node/22",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Netflix Nigeria",
+        "agency": "Netflix",
+        "url": "https://www.netflix.com/ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "netflix-start-membership-nigeria",
+      "netflix-cancel-membership"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change Netflix plan Nigeria",
+      "upgrade Netflix plan",
+      "downgrade Netflix plan",
+      "Netflix plan change",
+      "Netflix Nigeria plans"
+    ]
+  },
+  {
+    "slug": "netflix-cancel-membership",
+    "title": "How to cancel Netflix",
+    "shortTitle": "Cancel Netflix",
+    "summary": "Netflix's account-cancellation route for ending a membership, with access normally continuing until the end of the current billing period unless the account is already on hold.",
+    "category": "TV & streaming",
+    "agencySlug": "netflix-nigeria",
+    "feeLabel": "No cancellation fee",
+    "feeNote": "Netflix states that there is no cancellation fee. The account normally remains usable until the current paid billing period ends.",
+    "timeline": "Cancellation is confirmed immediately, but streaming access generally continues until the current billing period ends.",
+    "status": "verified",
+    "officialPortal": "https://help.netflix.com/en/node/407",
+    "requirements": [
+      "Access to the Netflix account or the payment partner that controls the membership",
+      "The account owner's login credentials for the direct Netflix cancellation route",
+      "Awareness that partner-billed memberships may need to be cancelled through the partner instead"
+    ],
+    "steps": [
+      "Sign in to Netflix and open the Manage your membership or Cancel Membership page.",
+      "Select Cancel and then choose Finish Cancellation.",
+      "Confirm the cancellation and check for the confirmation email sent to the account address.",
+      "Review the Payment History if the customer needs to know the date on which access will end.",
+      "If the cancellation option is missing, check the Membership section for the payment partner's instructions."
+    ],
+    "notes": [
+      "Deleting the Netflix app or signing out does not cancel the membership.",
+      "Netflix normally keeps account viewing history and recommendations for a period after cancellation so the account can be restarted later.",
+      "If someone else may restart the account, Netflix recommends changing the password and signing out of all devices after cancellation."
+    ],
+    "sources": [
+      {
+        "label": "Netflix — How to cancel Netflix",
+        "agency": "Netflix",
+        "url": "https://help.netflix.com/en/node/407",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Netflix Nigeria",
+        "agency": "Netflix",
+        "url": "https://www.netflix.com/ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "netflix-start-membership-nigeria",
+      "netflix-change-plan"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "cancel Netflix Nigeria",
+      "stop Netflix subscription",
+      "Netflix cancel membership",
+      "Netflix cancellation Nigeria",
+      "Netflix billing cancel"
+    ]
+  },
+  {
+    "slug": "spotify-premium-nigeria",
+    "title": "How to get Spotify Premium in Nigeria",
+    "shortTitle": "Spotify Premium Nigeria",
+    "summary": "Spotify Nigeria's Premium signup route for choosing Individual, Student, Duo or Family, reviewing the current Nigerian price and completing the payment method offered for the selected plan.",
+    "category": "TV & streaming",
+    "agencySlug": "spotify-nigeria",
+    "feeLabel": "From ₦800/month Student; ₦1,600/month Individual",
+    "feeNote": "Spotify Nigeria currently lists Student at ₦800/month, Individual at ₦1,600/month, Duo at ₦2,100/month and Family at ₦2,500/month. Promotions and prices can change.",
+    "timeline": "Premium starts after the selected plan is activated and payment or an eligible trial is accepted.",
+    "status": "verified",
+    "officialPortal": "https://www.spotify.com/ng/premium/",
+    "requirements": [
+      "A Spotify account or the ability to create one",
+      "A selected Premium plan available in Nigeria",
+      "A supported payment method shown for the selected Premium option",
+      "For Student Premium, eligibility at an accredited higher-education institution and successful student verification"
+    ],
+    "steps": [
+      "Open Spotify Nigeria's official Premium page and sign in or create a Spotify account.",
+      "Review the current Individual, Student, Duo and Family options and choose the appropriate plan.",
+      "For a Student plan, complete the eligibility verification requested by Spotify's verification partner.",
+      "Choose one of the available payment options and complete the Premium signup.",
+      "Open the account plan page after activation to confirm the plan, payment method and next billing date."
+    ],
+    "notes": [
+      "Spotify's Nigeria Premium page currently publishes country-specific prices in naira.",
+      "Duo and Family require eligible members to meet Spotify's household rules.",
+      "Trial eligibility can depend on whether the account has used Premium before."
+    ],
+    "sources": [
+      {
+        "label": "Spotify Premium Nigeria",
+        "agency": "Spotify",
+        "url": "https://www.spotify.com/ng/premium/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spotify Premium Student Nigeria",
+        "agency": "Spotify",
+        "url": "https://www.spotify.com/ng/student/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spotify-cancel-premium",
+      "netflix-start-membership-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Spotify Premium Nigeria",
+      "Spotify price Nigeria",
+      "Spotify Student Nigeria",
+      "Spotify Family Nigeria",
+      "subscribe Spotify Nigeria"
+    ]
+  },
+  {
+    "slug": "spotify-cancel-premium",
+    "title": "How to cancel Spotify Premium",
+    "shortTitle": "Cancel Spotify Premium",
+    "summary": "Spotify's account route for ending a directly billed Premium plan, with Premium normally remaining active until the next billing date before the account switches to the free service.",
+    "category": "TV & streaming",
+    "agencySlug": "spotify-nigeria",
+    "feeLabel": "No cancellation fee",
+    "feeNote": "Spotify does not state a fee for cancelling a directly billed Premium subscription.",
+    "timeline": "Cancellation is recorded immediately; paid Premium normally continues until the next billing date, while a zero-priced trial can end immediately.",
+    "status": "verified",
+    "officialPortal": "https://support.spotify.com/ng/article/cancel-premium/",
+    "requirements": [
+      "Access to the Spotify account that currently has the Premium plan",
+      "A directly billed Premium plan or knowledge of the partner company if the subscription is partner-billed",
+      "The plan manager account when cancelling a Duo or Family subscription"
+    ],
+    "steps": [
+      "Sign in to the Spotify account and open Manage your plan.",
+      "Select Cancel subscription for the directly billed Premium plan.",
+      "Continue through the confirmation step until Spotify shows that the plan will switch to Free.",
+      "Check the next billing date to see how long Premium benefits remain active.",
+      "If the plan is billed by a phone or internet partner, use the partner contact shown in the Spotify account instead."
+    ],
+    "notes": [
+      "A plan member leaving Family or Duo does not cancel the whole plan; the plan manager must cancel it.",
+      "Spotify says playlists and saved music remain on the free account after Premium ends.",
+      "A zero-priced trial can switch to Free immediately when cancelled."
+    ],
+    "sources": [
+      {
+        "label": "Spotify Nigeria — Cancel Premium",
+        "agency": "Spotify",
+        "url": "https://support.spotify.com/ng/article/cancel-premium/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spotify Premium Nigeria",
+        "agency": "Spotify",
+        "url": "https://www.spotify.com/ng/premium/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spotify-premium-nigeria",
+      "netflix-cancel-membership"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "cancel Spotify Premium Nigeria",
+      "stop Spotify subscription",
+      "Spotify cancel plan",
+      "Spotify billing cancel Nigeria",
+      "cancel Spotify Family"
+    ]
+  },
+  {
+    "slug": "acca-book-exam-nigeria",
+    "title": "How to book an ACCA exam in Nigeria",
+    "shortTitle": "ACCA exam booking",
+    "summary": "ACCA's exam-entry route for Nigerian students, where Nigeria is listed as a centre-based exam market and eligible session exams can be booked through the student's myACCA account.",
+    "category": "Education",
+    "agencySlug": "acca",
+    "feeLabel": "Exam fee depends on paper and entry period",
+    "feeNote": "ACCA exam fees vary by paper, exam session and whether the booking is made in the standard or later entry period. Use the fee shown in myACCA before payment.",
+    "timeline": "The booking is confirmed after the exam, centre and payment are accepted before the applicable exam-entry deadline.",
+    "status": "verified",
+    "officialPortal": "https://www.accaglobal.com/gb/en/student/exam-entry-and-administration/enter-an-exam/exam-availability-and-booking.html",
+    "requirements": [
+      "An active ACCA student account and access to myACCA",
+      "Eligibility to sit the intended exam under the candidate's ACCA registration and progression status",
+      "A Nigerian exam centre or session made available for the selected paper",
+      "A supported payment method for the exam fee shown at entry"
+    ],
+    "steps": [
+      "Sign in to myACCA and open the exam entry area for the intended ACCA session.",
+      "Select the eligible exam paper and choose a Nigerian exam centre from the available centre-based options.",
+      "Review the exam date, centre and the fee shown for the current entry period.",
+      "Complete payment before the applicable exam-entry deadline.",
+      "Save the exam-entry confirmation and later check the docket or exam attendance information in myACCA."
+    ],
+    "notes": [
+      "ACCA's current exam-availability page lists Nigeria as a centre-based exam market.",
+      "Exam fees differ by paper and entry period, so this guide does not hard-code one amount.",
+      "Some computer-based exams can follow a different booking route through approved centres."
+    ],
+    "sources": [
+      {
+        "label": "ACCA — Exam availability and booking",
+        "agency": "Association of Chartered Certified Accountants",
+        "url": "https://www.accaglobal.com/gb/en/student/exam-entry-and-administration/enter-an-exam/exam-availability-and-booking.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "toefl-registration-nigeria",
+      "gre-registration-nigeria",
+      "gmat-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ACCA exam booking Nigeria",
+      "ACCA exam registration Nigeria",
+      "book ACCA exam Nigeria",
+      "ACCA exam centre Nigeria",
+      "myACCA exam entry"
+    ]
+  },
+  {
+    "slug": "oet-book-test-nigeria",
+    "title": "How to book an OET test from Nigeria",
+    "shortTitle": "OET test booking",
+    "summary": "OET's official booking route for healthcare professionals: search the preferred location, choose paper/computer or eligible at-home delivery, create the appropriate OET account and complete payment within the booking window.",
+    "category": "Education",
+    "agencySlug": "oet",
+    "feeLabel": "OET fee shown during booking",
+    "feeNote": "OET pricing depends on test format and the booking route. Confirm the live amount in the official OET booking platform before payment.",
+    "timeline": "OET says the selected test slot is secured after the booking details and payment are completed; some booking screens give a 15-minute payment window.",
+    "status": "verified",
+    "officialPortal": "https://oet.com/test/book-a-test",
+    "requirements": [
+      "A valid identification document accepted for the chosen OET test format",
+      "A preferred Nigerian or other eligible test location or an available OET@Home route",
+      "An OET account for paper testing or the booking account used for computer/at-home testing",
+      "A Visa or Mastercard or another payment method offered by OET during checkout"
+    ],
+    "steps": [
+      "Open OET's official Book a Test page and search by preferred city and country.",
+      "Choose the available test location and filter by test mode or distance if needed.",
+      "Select Book Now and sign in or create the account required for the chosen paper, computer or at-home format.",
+      "Complete the candidate details and choose the test date shown by the booking platform.",
+      "Enter the payment details within the booking window and keep the confirmation email after the test is successfully booked."
+    ],
+    "notes": [
+      "OET uses different account/booking flows for paper testing and computer or at-home testing.",
+      "Candidates should have the test-day ID ready before starting the booking.",
+      "Availability of locations and delivery modes can change by test date."
+    ],
+    "sources": [
+      {
+        "label": "OET — Book a Test",
+        "agency": "Occupational English Test",
+        "url": "https://oet.com/test/book-a-test",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "OET Support — How do I book OET?",
+        "agency": "Occupational English Test",
+        "url": "https://support.oet.com/articles/Knowledge/How-do-I-book-OET",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "toefl-registration-nigeria",
+      "pte-registration-nigeria",
+      "british-council-ielts-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "OET booking Nigeria",
+      "OET test Nigeria",
+      "book OET Nigeria",
+      "OET exam registration Nigeria",
+      "OET healthcare English test"
+    ]
+  },
+  {
+    "slug": "healthtracka-home-test-nigeria",
+    "title": "How to book an at-home lab test with Healthtracka",
+    "shortTitle": "Healthtracka home test",
+    "summary": "Healthtracka's Nigeria booking route for choosing a lab test or package, paying online, scheduling home sample collection and receiving confidential digital results after laboratory processing.",
+    "category": "Healthcare",
+    "agencySlug": "healthtracka",
+    "feeLabel": "Test price depends on the selected package",
+    "feeNote": "Healthtracka states that home sample collection is free across its service areas and the customer pays for the selected test or package. Confirm the live package price before payment.",
+    "timeline": "Healthtracka says results are commonly delivered digitally within about 24–72 hours depending on the test or package.",
+    "status": "verified",
+    "officialPortal": "https://healthtracka.com/",
+    "requirements": [
+      "A selected Healthtracka laboratory test or package appropriate to the customer's requested service",
+      "The customer's name, phone/email and collection address",
+      "A preferred home or office sample-collection date/time where the service is available",
+      "Payment for the selected test or package"
+    ],
+    "steps": [
+      "Open Healthtracka's official booking site and choose the laboratory test or package the customer intends to purchase.",
+      "Review the package contents and current price before adding the test to the booking or cart.",
+      "Enter the customer contact details and the home or office address for sample collection.",
+      "Complete payment and confirm the preferred sample-collection schedule when contacted or prompted by Healthtracka.",
+      "Receive the sample collection from the provider's trained phlebotomist and check the secure digital result when processing is complete."
+    ],
+    "notes": [
+      "This guide explains the provider's booking process and does not recommend which medical test a person should take.",
+      "Healthtracka says home sample collection is free in its covered service areas.",
+      "Test-specific preparation and turnaround can differ, so follow the instructions attached to the selected test."
+    ],
+    "sources": [
+      {
+        "label": "Healthtracka — Home Sample Collection",
+        "agency": "Healthtracka",
+        "url": "https://blog.healthtracka.com/healthtracka-home-sample-collection/",
+        "lastChecked": "2026-10-05",
+        "published": "2023-02-15"
+      },
+      {
+        "label": "Healthtracka — Book a Test",
+        "agency": "Healthtracka",
+        "url": "https://blog.healthtracka.com/test-kits/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "synlab-home-sample-collection",
+      "synlab-pathprovider-results",
+      "reddington-book-appointment",
+      "lagoon-hospital-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Healthtracka Nigeria",
+      "Healthtracka home test",
+      "home lab test Nigeria",
+      "Healthtracka sample collection",
+      "Healthtracka lab results"
+    ]
   }
 ]
