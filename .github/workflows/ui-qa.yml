@@ -41,8 +41,7 @@ jobs:
           fi
 
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            git fetch origin "${{ github.base_ref }}" --depth=1
-            changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+            changed="$(git diff --name-only HEAD^1 HEAD^2)"
           else
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
@@ -52,6 +51,15 @@ jobs:
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=none" >> "$GITHUB_OUTPUT"
             echo "No browser-relevant changes; required smoke check can finish immediately."
+            exit 0
+          fi
+
+          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/check-jobs-content\.ts$)' || true)"
+          if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=jobs" >> "$GITHUB_OUTPUT"
+            echo "Jobs-only change; focused validation runs in CI, so browser QA is skipped."
             exit 0
           fi
 
