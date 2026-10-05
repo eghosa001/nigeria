@@ -305,7 +305,247 @@ export const careerGuides: CareerGuide[] = [
       { href: "/jobs/guides/cv-format-nigeria", label: "CV format guide" },
       { href: "/jobs/guides/job-interview-questions-nigeria", label: "Interview preparation" }
     ]
+  },
+  {
+    slug: "nysc-cv-job-application",
+    title: "NYSC CV and Job Application Guide",
+    metaTitle: "NYSC CV Nigeria: How to Apply for Jobs During or After Service",
+    description: "Build an NYSC-ready CV and apply for graduate jobs without misrepresenting your service status, experience or availability.",
+    summary: "NYSC can strengthen a graduate application when you present your actual service status, PPA work, projects and measurable responsibilities clearly instead of treating the service year as a blank period.",
+    answer: "State your NYSC status accurately, use your PPA and service projects as evidence where relevant, and check each employer's eligibility rule before applying because some programmes require completed service while others accept serving corps members.",
+    reviewedAt: "2026-10-05",
+    facts: [
+      { label: "State clearly", value: "Serving · completed · exempted" },
+      { label: "Use as evidence", value: "PPA work and service projects" },
+      { label: "Check first", value: "Employer NYSC eligibility rule" },
+      { label: "Never do", value: "Claim completion before it happens" }
+    ],
+    sections: [
+      {
+        heading: "Put your NYSC status where recruiters can understand it",
+        paragraphs: [
+          "If a vacancy has an NYSC requirement, make your status easy to find. Use a factual line such as NYSC completed with month and year, currently serving with expected completion month, or formally exempted where applicable.",
+          "Do not change a serving status to completed because a deadline is close. Graduate programmes can verify documents later in the process."
+        ]
+      },
+      {
+        heading: "Turn your PPA into relevant experience",
+        paragraphs: [
+          "Describe responsibilities, projects and outcomes from your PPA the same way you would describe other work experience. Focus on what you did, the tools or processes you used and the result.",
+          "Community development, technical projects, reporting, training, field work and leadership can also be useful when they demonstrate competencies the vacancy asks for."
+        ],
+        bullets: ["Use truthful outcomes.", "Prioritise experience related to the vacancy.", "Keep employer or patient/client information confidential."]
+      },
+      {
+        heading: "Check programme eligibility before submitting",
+        paragraphs: [
+          "Some graduate employers require NYSC completion before application or resumption, while internships and other early-career opportunities may use different rules.",
+          "Read the current official vacancy rather than relying on eligibility from an older recruitment cycle."
+        ]
+      }
+    ],
+    sources: [
+      { label: "Access Bank Careers", url: "https://careers.accessbankplc.com/careers", lastChecked: "2026-10-05" },
+      { label: "Microsoft Internship Eligibility", url: "https://careers.microsoft.com/v2/global/en/internship_eligibility", lastChecked: "2026-10-05" }
+    ],
+    relatedLinks: [
+      { href: "/jobs/nysc", label: "NYSC opportunities" },
+      { href: "/jobs/guides/cv-format-nigeria", label: "CV format guide" },
+      { href: "/jobs/graduate", label: "Graduate jobs" }
+    ]
+  },
+  {
+    slug: "job-application-email-nigeria",
+    title: "How to Write a Job Application Email in Nigeria",
+    metaTitle: "Job Application Email Nigeria: Subject, Message & Attachment Checklist",
+    description: "Write a concise job application email that identifies the role, proves fit, names the attachments and avoids common submission mistakes.",
+    summary: "A job application email should help the recruiter identify your application quickly. Use the exact role in the subject, a short message linking your strongest evidence to the vacancy, and only the attachments requested by the employer.",
+    answer: "Use the vacancy title or reference in the subject, introduce yourself in one sentence, give two or three relevant proof points, name the attached documents and close professionally. Follow the official vacancy instructions if they specify a different format.",
+    reviewedAt: "2026-10-05",
+    facts: [
+      { label: "Subject", value: "Exact role or vacancy reference" },
+      { label: "Body", value: "Short and role-specific" },
+      { label: "Attachments", value: "Only what was requested" },
+      { label: "Before send", value: "Verify the recipient/domain" }
+    ],
+    sections: [
+      {
+        heading: "Make the subject line sortable",
+        paragraphs: [
+          "Use the role title and vacancy reference when the employer provides one. Recruiters handling many applications should be able to identify your application without opening it.",
+          "Avoid vague subjects such as Application, My CV or Job Request unless the employer explicitly asks for that wording."
+        ]
+      },
+      {
+        heading: "Keep the email body useful",
+        paragraphs: [
+          "State the role, your current professional or graduate status and the strongest evidence that matches the vacancy. Two or three concrete points are enough for most application emails.",
+          "Do not paste your entire cover letter into the email unless the employer asks for the cover letter in the message body."
+        ],
+        bullets: ["Use the organisation's correct name.", "Mention the attachments.", "Use a phone number and email you monitor."]
+      },
+      {
+        heading: "Check security and attachments before sending",
+        paragraphs: [
+          "Verify the recipient address against the official vacancy or employer domain. Recruitment scams frequently copy logos and job titles while changing the destination email.",
+          "Open your attachments once before sending, use professional filenames and remove unrelated documents."
+        ]
+      }
+    ],
+    sources: [
+      { label: "British Council Nigeria Job Opportunities", url: "https://www.britishcouncil.org.ng/about/jobs", lastChecked: "2026-10-05" },
+      { label: "British Council Fake Job Alert", url: "https://www.britishcouncil.org.ng/fake-job-alert", lastChecked: "2026-10-05" }
+    ],
+    relatedLinks: [
+      { href: "/jobs/guides/cover-letter-nigeria", label: "Cover letter guide" },
+      { href: "/jobs/guides/cv-format-nigeria", label: "CV format guide" },
+      { href: "/jobs/open-now", label: "Jobs open now" }
+    ]
+  },
+  {
+    slug: "graduate-aptitude-test-preparation",
+    title: "Graduate Aptitude Test Preparation in Nigeria",
+    metaTitle: "Graduate Aptitude Tests Nigeria: Practical Preparation Guide",
+    description: "Prepare for graduate recruitment tests by understanding the employer stage, practising timed reasoning and verifying every assessment invitation.",
+    summary: "Graduate tests usually reward familiarity with the test format, accurate reasoning under time pressure and careful reading. Preparation should start from the employer's current recruitment process, not a leaked-question promise.",
+    answer: "Confirm the employer's assessment stage, practise timed numerical, verbal and logical reasoning where relevant, review the role's technical fundamentals and verify the assessment link before entering credentials.",
+    reviewedAt: "2026-10-05",
+    facts: [
+      { label: "First step", value: "Confirm the real assessment stage" },
+      { label: "Practise", value: "Timed reasoning under test conditions" },
+      { label: "Technical roles", value: "Review job-specific fundamentals" },
+      { label: "Avoid", value: "Paid 'guaranteed answers'" }
+    ],
+    sections: [
+      {
+        heading: "Work from the employer's process",
+        paragraphs: [
+          "Graduate recruitment can include online tests, coding exercises, case studies, group assessments or interviews. The sequence can change between recruitment cycles.",
+          "Keep the original vacancy and official invitation so you know what the employer is assessing and which platform should host the test."
+        ]
+      },
+      {
+        heading: "Practise accuracy before speed",
+        paragraphs: [
+          "Use timed practice for the reasoning types relevant to the programme. Review mistakes after each session instead of only counting completed questions.",
+          "For technical roles, add role-specific revision such as engineering principles, accounting concepts, software fundamentals or professional knowledge where the vacancy indicates it."
+        ]
+      },
+      {
+        heading: "Verify the invitation before signing in",
+        paragraphs: [
+          "A test invitation can be imitated by scammers. Check the sender, destination domain, recruitment stage and whether the employer actually uses the named platform.",
+          "Do not pay someone for a test invitation, shortlist or guaranteed score."
+        ]
+      }
+    ],
+    sources: [
+      { label: "UNDP Recruitment Process", url: "https://www.undp.org/careers/our-recruitment-process", lastChecked: "2026-10-05" },
+      { label: "British Council Fake Job Alert", url: "https://www.britishcouncil.org.ng/fake-job-alert", lastChecked: "2026-10-05" }
+    ],
+    relatedLinks: [
+      { href: "/jobs/guides/graduate-job-application-checklist", label: "Graduate application checklist" },
+      { href: "/jobs/guides/job-interview-questions-nigeria", label: "Interview preparation" },
+      { href: "/jobs/graduate", label: "Graduate programmes" }
+    ]
+  },
+  {
+    slug: "linkedin-profile-job-search-nigeria",
+    title: "LinkedIn Profile for a Nigerian Job Search",
+    metaTitle: "LinkedIn Profile for Jobs in Nigeria: Recruiter-Ready Checklist",
+    description: "Make your LinkedIn profile easier for recruiters to understand with an accurate headline, experience evidence, relevant skills and current job preferences.",
+    summary: "A useful LinkedIn profile is an accurate professional landing page, not a wall of repeated keywords. Recruiters need to understand your field, experience, evidence and relevant skills quickly.",
+    answer: "Keep your headline, About, experience, education and skills current; use the terms that genuinely describe your work; add evidence to experience entries; and avoid keyword stuffing or inflating qualifications.",
+    reviewedAt: "2026-10-05",
+    facts: [
+      { label: "Headline", value: "Field and genuine expertise" },
+      { label: "Experience", value: "Evidence, not copied duties" },
+      { label: "Skills", value: "Relevant and truthful" },
+      { label: "Avoid", value: "Keyword stuffing" }
+    ],
+    sections: [
+      {
+        heading: "Make the top of the profile explain your professional direction",
+        paragraphs: [
+          "LinkedIn describes the profile as a professional landing page. Your headline can communicate an area of expertise rather than simply repeating your current job title.",
+          "Keep location, education and current position accurate because job recommendations and recruiter searches can use profile information."
+        ]
+      },
+      {
+        heading: "Use experience and skills as evidence",
+        paragraphs: [
+          "Update experience entries with responsibilities and outcomes that reflect what you actually did. Add relevant skills that you can demonstrate.",
+          "LinkedIn's recruiter tools can use explicit skills and skills inferred from profile text, so clear descriptions help more than repeating the same keyword."
+        ],
+        bullets: ["Use relevant projects and certifications.", "Keep dates consistent with your CV.", "Remove skills you no longer want to be hired for when they create noise."]
+      },
+      {
+        heading: "Optimise without trying to game search",
+        paragraphs: [
+          "LinkedIn specifically recommends a rich, accurate and complete profile and warns against repetitive keyword stuffing and inflated experience or education.",
+          "Your profile should still read naturally to a person who opens it after finding you in search."
+        ]
+      }
+    ],
+    sources: [
+      { label: "LinkedIn Help — Create a Good Profile", url: "https://www.linkedin.com/help/linkedin/answer/a554351/edit-your-profile?lang=en", lastChecked: "2026-10-05" },
+      { label: "LinkedIn Help — Profile Search Practices to Avoid", url: "https://www.linkedin.com/help/linkedin/answer/a526134", lastChecked: "2026-10-05" }
+    ],
+    relatedLinks: [
+      { href: "/jobs/guides/cv-format-nigeria", label: "CV format guide" },
+      { href: "/jobs/guides/job-interview-questions-nigeria", label: "Interview preparation" },
+      { href: "/jobs", label: "Verified jobs directory" }
+    ]
+  },
+  {
+    slug: "job-scam-red-flags-nigeria",
+    title: "Job Scam Red Flags in Nigeria",
+    metaTitle: "Job Scam Red Flags Nigeria: Verify a Recruitment Offer Before Paying",
+    description: "Check suspicious job offers for fake domains, upfront payments, unexpected offers, early requests for sensitive information and copied employer branding.",
+    summary: "A professional-looking logo is not proof of a real job. Verify the vacancy through the employer's official website, check the sender and destination domain, and treat payment or urgent requests for financial information as major warning signs.",
+    answer: "Before responding, independently find the employer's official careers page and confirm the vacancy. Do not pay for an application, shortlist, interview, training slot or appointment, and do not send banking details or identity documents to an unverified recruiter.",
+    reviewedAt: "2026-10-05",
+    facts: [
+      { label: "Major red flag", value: "Payment for recruitment access" },
+      { label: "Verify", value: "Employer website and email domain" },
+      { label: "Be cautious", value: "Unexpected offers and urgent pressure" },
+      { label: "Protect", value: "Banking and identity information" }
+    ],
+    sections: [
+      {
+        heading: "Check the vacancy outside the message you received",
+        paragraphs: [
+          "Do not use the link inside a suspicious email as your only verification method. Search for the organisation's official website independently and look for the vacancy or recruitment notice there.",
+          "Check whether the sender uses the organisation's real domain and whether the application destination matches the official careers system."
+        ]
+      },
+      {
+        heading: "Treat payment and sensitive-data requests seriously",
+        paragraphs: [
+          "WFP states that it does not charge fees at any recruitment stage, and British Council Nigeria warns that legitimate recruitment does not require payment or early disclosure of sensitive financial information.",
+          "Requests for bank details, passport or identity documents very early in an unverified process should trigger additional verification."
+        ],
+        bullets: ["Do not buy a shortlist.", "Do not pay for an interview slot.", "Do not share passwords or one-time codes.", "Contact the organisation through a separately verified channel."]
+      },
+      {
+        heading: "Recognise pressure and impersonation tactics",
+        paragraphs: [
+          "Scam messages can copy logos, use job boards or social media and create urgency around a high salary or immediate offer.",
+          "A real-looking document can still be fraudulent. Verify the role, domain, contact and recruitment stage before acting."
+        ]
+      }
+    ],
+    sources: [
+      { label: "World Food Programme — Fraudulent Job Offers", url: "https://www.wfp.org/careers/fraudulent-job-offers", lastChecked: "2026-10-05" },
+      { label: "British Council Nigeria — Fake Job Alert", url: "https://www.britishcouncil.org.ng/fake-job-alert", lastChecked: "2026-10-05" }
+    ],
+    relatedLinks: [
+      { href: "/jobs", label: "Verified jobs directory" },
+      { href: "/jobs/open-now", label: "Jobs open now" },
+      { href: "/jobs/guides/graduate-job-application-checklist", label: "Application checklist" }
+    ]
   }
+
 ];
 
 export function getCareerGuide(slug: string) {

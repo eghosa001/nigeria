@@ -27,6 +27,30 @@ export function daysSinceIsoDate(dateIso: string, todayIso = todayIsoUtc()) {
   return Math.max(0, Math.floor((end - start) / 86_400_000));
 }
 
+export function daysUntilIsoDate(dateIso: string, todayIso = todayIsoUtc()) {
+  const start = Date.parse(todayIso + "T00:00:00Z");
+  const end = Date.parse(dateIso + "T00:00:00Z");
+  if (!Number.isFinite(start) || !Number.isFinite(end)) return Number.POSITIVE_INFINITY;
+  return Math.ceil((end - start) / 86_400_000);
+}
+
+export function getClosingSoonJobs(items: CareerOpportunity[], days = 7, todayIso = todayIsoUtc()) {
+  return items
+    .filter((item) => isEffectivelyOpen(item, todayIso) && item.deadline)
+    .filter((item) => {
+      const remaining = daysUntilIsoDate(item.deadline as string, todayIso);
+      return remaining >= 0 && remaining <= days;
+    })
+    .sort((a, b) => (a.deadline ?? "").localeCompare(b.deadline ?? ""));
+}
+
+export function getRecentlyPostedJobs(items: CareerOpportunity[], days = 7, todayIso = todayIsoUtc()) {
+  return items
+    .filter((item) => item.posting && isEffectivelyOpen(item, todayIso))
+    .filter((item) => daysSinceIsoDate(item.posting?.datePosted ?? "", todayIso) < days)
+    .sort((a, b) => (b.posting?.datePosted ?? "").localeCompare(a.posting?.datePosted ?? ""));
+}
+
 export function getJobFreshnessLabel(item: CareerOpportunity, todayIso = todayIsoUtc()) {
   const age = daysSinceIsoDate(item.verifiedAt, todayIso);
   if (age === 0) return "Checked today";

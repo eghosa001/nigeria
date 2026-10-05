@@ -45,3 +45,14 @@ Do not substitute broad repository builds or unrelated suites when this focused 
 ## Analytics
 
 Clicks from an opportunity page to an official employer application source emit `job_apply_click` through the existing GA4/PostHog client analytics layer with job slug, employer, effective status and destination host. This measures application intent without collecting application contents.
+
+
+## Daily freshness audit
+
+The `Jobs Freshness` workflow runs the focused Jobs validator every day. It does not crawl or mutate third-party sites. Its job is to catch data that has become stale by the passage of time: an open record older than the verification window, a passed deadline still stored as open, malformed lifecycle metadata, or a broken internal content graph.
+
+The public UI is deadline-aware independently of the scheduled workflow, so a known deadline stops appearing under Open Now after it passes even before an editor changes the stored status.
+
+## Time-sensitive discovery
+
+`/jobs/new-this-week` uses the employer's original `datePosted`, not MyNigeriaGuide's verification date. `/jobs/closing-this-week` only includes effectively-open records with a published deadline in the next seven days. If either view has no qualifying inventory, its metadata is set to noindex while links remain usable for visitors.

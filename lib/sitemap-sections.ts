@@ -113,6 +113,8 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/jobs/internships", lastModified: jobsModified },
       { url: base + "/jobs/engineering", lastModified: jobsModified },
       { url: base + "/jobs/remote", lastModified: "2026-10-04" },
+      { url: base + "/jobs/new-this-week", lastModified: jobsModified },
+      { url: base + "/jobs/closing-this-week", lastModified: jobsModified },
       ...jobLocationFacets.map((facet) => ({
         url: base + "/jobs/locations/" + facet.slug,
         lastModified: jobsModified,

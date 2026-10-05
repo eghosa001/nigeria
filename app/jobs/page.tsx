@@ -147,6 +147,8 @@ export default function JobsPage() {
             <Link href="/jobs/internships">Internships & SIWES</Link>
             <Link href="/jobs/engineering">Engineering & technical careers</Link>
             <Link href="/jobs/remote">Remote & hybrid jobs</Link>
+            <Link href="/jobs/new-this-week">New this week</Link>
+            <Link href="/jobs/closing-this-week">Closing this week</Link>
             <a href="#opportunities">Search the full directory</a>
           </div>
 

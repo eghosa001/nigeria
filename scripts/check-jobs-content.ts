@@ -18,6 +18,7 @@ assert(jobOpportunities.length < 500, "Move Jobs reads to the prepared D1/server
 unique(jobOpportunities.map((item) => item.slug), "Job slugs");
 unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");
 unique(careerGuides.map((guide) => guide.slug), "Career guide slugs");
+assert(careerGuides.length >= 10, "Jobs pillar should keep at least 10 substantial evergreen career guides.");
 unique(jobEmployers.map((employer) => employer.slug), "Employer slugs");
 
 for (const item of jobOpportunities) {
@@ -66,6 +67,8 @@ await Promise.all([
   import("../app/jobs/guides/[slug]/page"),
   import("../app/jobs/locations/[slug]/page"),
   import("../app/jobs/professions/[slug]/page"),
+  import("../app/jobs/new-this-week/page"),
+  import("../app/jobs/closing-this-week/page"),
   import("../app/search/page"),
 ]);
 
