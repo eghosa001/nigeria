@@ -1036,7 +1036,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "become MoMo PSB agent", serviceSlug: "momo-psb-agent-onboarding" },
       { query: "MoMo PSB merchant onboarding", serviceSlug: "momo-psb-merchant-onboarding" },
       { query: "reverse wrong MoMo transfer", serviceSlug: "momo-psb-wrong-transfer-reversal" },
-      { query: "book MeCure Hospital appointment", serviceSlug: "mecure-hospital-book-appointment" }
+      { query: "book MeCure Hospital appointment", serviceSlug: "mecure-hospital-book-appointment" },
+      { query: "create Cowrywise account", serviceSlug: "cowrywise-create-account" },
+      { query: "verify BVN on Cowrywise", serviceSlug: "cowrywise-bvn-verification" },
+      { query: "fund Cowrywise account", serviceSlug: "cowrywise-fund-account" },
+      { query: "withdraw from Cowrywise Stash", serviceSlug: "cowrywise-withdraw-from-stash" },
+      { query: "create PiggyVest account", serviceSlug: "piggyvest-create-account" },
+      { query: "verify BVN on PiggyVest", serviceSlug: "piggyvest-bvn-verification" },
+      { query: "withdraw PiggyVest savings", serviceSlug: "piggyvest-withdraw-savings" },
+      { query: "generate PiggyVest statement", serviceSlug: "piggyvest-generate-statement" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1383,7 +1391,15 @@ export const growthHubs: GrowthHub[] = [
       "momo-psb-agent-onboarding",
       "momo-psb-merchant-onboarding",
       "momo-psb-wrong-transfer-reversal",
-      "mecure-hospital-book-appointment"
+      "mecure-hospital-book-appointment",
+      "cowrywise-create-account",
+      "cowrywise-bvn-verification",
+      "cowrywise-fund-account",
+      "cowrywise-withdraw-from-stash",
+      "piggyvest-create-account",
+      "piggyvest-bvn-verification",
+      "piggyvest-withdraw-savings",
+      "piggyvest-generate-statement"
     ]
   },
 
