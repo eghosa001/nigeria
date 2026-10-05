@@ -732,7 +732,14 @@ export const growthHubs: GrowthHub[] = [
       { query: "GRE registration Nigeria", serviceSlug: "gre-registration-nigeria" },
       { query: "PTE registration Nigeria", serviceSlug: "pte-registration-nigeria" },
       { query: "GMAT registration Nigeria", serviceSlug: "gmat-registration-nigeria" },
-      { query: "AXA Mansard third party motor insurance", serviceSlug: "axa-mansard-third-party-motor-insurance" }
+      { query: "AXA Mansard third party motor insurance", serviceSlug: "axa-mansard-third-party-motor-insurance" },
+      { query: "send parcel with GIG Logistics", serviceSlug: "gigl-send-parcel-nigeria" },
+      { query: "track GIGL shipment", serviceSlug: "gigl-track-shipment" },
+      { query: "GIGL international shipping Nigeria", serviceSlug: "gigl-international-export-nigeria" },
+      { query: "book GUO Transport online", serviceSlug: "guo-book-bus-online" },
+      { query: "change GUO travel date", serviceSlug: "guo-change-travel-date" },
+      { query: "open PalmPay account", serviceSlug: "palmpay-account-registration" },
+      { query: "open Kuda Business account", serviceSlug: "kuda-business-account-opening" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -789,7 +796,14 @@ export const growthHubs: GrowthHub[] = [
       "gre-registration-nigeria",
       "pte-registration-nigeria",
       "gmat-registration-nigeria",
-      "axa-mansard-third-party-motor-insurance"
+      "axa-mansard-third-party-motor-insurance",
+      "gigl-send-parcel-nigeria",
+      "gigl-track-shipment",
+      "gigl-international-export-nigeria",
+      "guo-book-bus-online",
+      "guo-change-travel-date",
+      "palmpay-account-registration",
+      "kuda-business-account-opening"
     ]
   },
 
