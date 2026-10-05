@@ -871,6 +871,41 @@ export const agencies: Agency[] = [
     "description": "Private Nigerian health maintenance organisation offering individual, family and business health plans and provider-network services.",
     "website": "https://getreliancehealth.com/nigeria/"
   },
+  {
+    "slug": "t2-mobile",
+    "name": "T2 Mobile Nigeria",
+    "shortName": "T2 Mobile",
+    "description": "Private Nigerian mobile-network provider, formerly 9mobile, offering voice, data, airtime/data transfer and self-service.",
+    "website": "https://t2mobile.com.ng/"
+  },
+  {
+    "slug": "startimes-nigeria",
+    "name": "StarTimes Nigeria",
+    "shortName": "StarTimes",
+    "description": "Private pay-TV provider offering decoder recharge, bouquet management and app-based self-service in Nigeria.",
+    "website": "https://www.startimestv.com/"
+  },
+  {
+    "slug": "ipnx",
+    "name": "ipNX Nigeria",
+    "shortName": "ipNX",
+    "description": "Private Nigerian fibre and broadband provider offering subscription renewal, plan changes, fault reporting and self-service.",
+    "website": "https://www.ipnxnigeria.net/"
+  },
+  {
+    "slug": "fiberone",
+    "name": "FiberOne Broadband",
+    "shortName": "FiberOne",
+    "description": "Private Nigerian fibre broadband provider offering installation, renewal, relocation and account self-service.",
+    "website": "https://fob.ng/"
+  },
+  {
+    "slug": "nomba",
+    "name": "Nomba",
+    "shortName": "Nomba",
+    "description": "Private Nigerian business-banking and payment provider offering accounts, POS terminals, payment links and merchant services.",
+    "website": "https://nomba.com/"
+  },
 ];
 
 export const services: Service[] = validateServiceCatalog(serviceRecords);
