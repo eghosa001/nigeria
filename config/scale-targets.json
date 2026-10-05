@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "strategy": "million-search-expansion",
   "market_goal": {
     "combined_monthly_search_demand": "millions",
@@ -17,7 +17,9 @@
       "services": 20000,
       "tour_nigeria": 30000,
       "jobs_careers": 20000
-    }
+    },
+    "target_semantics": "capacity_and_opportunity_ceiling_not_quota",
+    "quality_override": "publish_fewer_pages_when_distinct_search_intent_or_verified_depth_is_insufficient"
   },
   "guardrails": {
     "sitemap_urls_per_file": 20000,
@@ -25,6 +27,22 @@
     "max_catalog_records_sent_to_browser": 1000,
     "default_server_page_size": 30,
     "no_thin_programmatic_pages": true,
-    "preserve_existing_canonical_urls": true
+    "preserve_existing_canonical_urls": true,
+    "quality_over_url_count": true,
+    "keyword_targets_do_not_require_new_urls": true
+  },
+  "seo_growth": {
+    "primary_unit": "search_intent_cluster",
+    "strategy": "consolidate_same_intent_keywords_into_stronger_canonical_pages",
+    "new_url_requires": [
+      "materially_distinct_search_intent_or_entity",
+      "substantial_original_user_value",
+      "verified_or_primary_source_evidence_where_applicable",
+      "freshness_or_status_context_where_applicable",
+      "natural_parent_and_related_internal_links"
+    ],
+    "prefer_existing_page_improvement": true,
+    "prohibit_orphan_indexable_pages": true,
+    "prohibit_keyword_variant_page_cloning": true
   }
 }
