@@ -1410,5 +1410,121 @@
       "Wakanow hotel cancellation fee",
       "Wakanow hotel refund Nigeria"
     ]
+  },
+  {
+    "slug": "dstv-streaming-subscription-nigeria",
+    "title": "How to subscribe to DStv Stream in Nigeria without a decoder",
+    "shortTitle": "DStv Stream subscription",
+    "summary": "DStv Nigeria's streaming-only subscription route lets customers choose an eligible package, create login details, set up payment and stream on compatible devices without a decoder or satellite dish.",
+    "category": "TV & streaming",
+    "agencySlug": "dstv-nigeria",
+    "feeLabel": "Current streaming package price applies",
+    "feeNote": "DStv publishes current Nigeria streaming-only package prices on its package pages. Prices can change, so use the live amount shown for Premium, Compact Plus, Compact, Confam or Yanga before payment.",
+    "timeline": "Streaming can begin after the package is selected, login details are created and the payment setup is completed successfully.",
+    "status": "verified",
+    "officialPortal": "https://www.dstv.com/en-ng/buy/dstv-streaming/",
+    "requirements": [
+      "A DStv account/login or the ability to create DStv login details",
+      "A selected streaming-only package available in Nigeria",
+      "A compatible smartphone, tablet, smart TV or web browser with an internet connection",
+      "A supported payment method for the selected package"
+    ],
+    "steps": [
+      "Open DStv Nigeria's official Streaming page and compare the streaming-only packages currently offered.",
+      "Select the package that matches the customer's viewing needs and review the current monthly price.",
+      "Create or sign in with the DStv login details requested during the purchase flow.",
+      "Set up the payment method and complete the subscription purchase.",
+      "Download the DStv app or use a compatible web browser, sign in and start streaming the channels and on-demand content included in the package."
+    ],
+    "notes": [
+      "DStv states that streaming-only subscriptions do not require a decoder or satellite dish.",
+      "The current streaming page lists Premium, Compact Plus, Compact, Confam and Yanga as streaming-only options.",
+      "Device registration and simultaneous-stream limits depend on the active DStv rules and package."
+    ],
+    "sources": [
+      {
+        "label": "DStv Streaming Nigeria",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/buy/dstv-streaming/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DStv Stream with DStv",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/watch/stream-with-dstv/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "showmax-move-to-dstv-stream-nigeria",
+      "dstv-pay-reconnect",
+      "dstv-change-package"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "DStv Stream Nigeria",
+      "DStv streaming subscription Nigeria",
+      "DStv without decoder",
+      "DStv online streaming package",
+      "DStv Stream price Nigeria"
+    ]
+  },
+  {
+    "slug": "showmax-move-to-dstv-stream-nigeria",
+    "title": "How former Showmax users can continue streaming in Nigeria",
+    "shortTitle": "Showmax to DStv Stream",
+    "summary": "Showmax Nigeria was discontinued on 30 April 2026. The current official route for continuing with Showmax Originals is to use DStv Stream and an eligible DStv streaming package.",
+    "category": "TV & streaming",
+    "agencySlug": "dstv-nigeria",
+    "feeLabel": "DStv Stream package price applies",
+    "feeNote": "The standalone Showmax service has ended. Continuing access requires an eligible DStv Stream subscription; current package prices are shown on DStv Nigeria's streaming pages.",
+    "timeline": "Showmax stopped operating at 23:59 on 30 April 2026. Former subscribers can move to DStv Stream now, subject to the current package and account options.",
+    "status": "verified",
+    "officialPortal": "https://www.showmax.com/ng",
+    "requirements": [
+      "Awareness that the standalone Showmax app and subscription service has been discontinued in Nigeria",
+      "A DStv Stream account or the ability to create DStv login details",
+      "An eligible DStv Stream package that includes the Showmax Originals section",
+      "A compatible streaming device and internet connection"
+    ],
+    "steps": [
+      "Open Showmax Nigeria's official migration page and confirm that the standalone Showmax service has ended.",
+      "If the former Showmax account received a migration email or offer, review those account-specific instructions before purchasing another package.",
+      "Open DStv Nigeria's streaming page and choose an eligible streaming package such as Compact, Compact Plus or Premium when Showmax Originals access is required.",
+      "Create or sign in to the DStv account, set up payment and activate the selected streaming package.",
+      "Open DStv Stream and use the dedicated Showmax section for the titles that have moved to the platform."
+    ],
+    "notes": [
+      "Showmax states that its standalone app was discontinued on 30 April 2026.",
+      "Showmax profiles and watch history do not move to DStv Stream.",
+      "Not every title that previously appeared on Showmax is guaranteed to move because content licensing differs."
+    ],
+    "sources": [
+      {
+        "label": "Showmax Nigeria — service migration",
+        "agency": "Showmax",
+        "url": "https://www.showmax.com/ng",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DStv Streaming Nigeria",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/buy/dstv-streaming/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dstv-streaming-subscription-nigeria",
+      "dstv-pay-reconnect",
+      "dstv-change-package"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Showmax Nigeria discontinued",
+      "Showmax to DStv Stream Nigeria",
+      "how to watch Showmax Originals Nigeria",
+      "Showmax replacement Nigeria",
+      "DStv Stream Showmax"
+    ]
   }
 ]
