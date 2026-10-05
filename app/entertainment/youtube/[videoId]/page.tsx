@@ -14,8 +14,13 @@ export const revalidate = 86400;
 
 const youtubeSeoOverrides: Record<string, { title: string; description: string }> = {
   "KWIpR47N9hc": { title: "Love Always Wins Cast & Full Movie (2026)", description: "Love Always Wins cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
+  "X3HaWmJoSRU": { title: "Once Upon a Village 3 Cast & Full Movie (2026)", description: "Once Upon a Village 3 cast, runtime and official full movie on YouTube, published by RuthKadiri247." },
   "zKQoArfptqA": { title: "The Bride Switch Cast & Full Movie (2026)", description: "The Bride Switch cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
-  "2Ficn2BMlI8": { title: "What Tomorrow Holds Cast & Full Movie (2026)", description: "What Tomorrow Holds cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." }
+  "2Ficn2BMlI8": { title: "What Tomorrow Holds Cast & Full Movie (2026)", description: "What Tomorrow Holds cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
+  "y2RkBwUYSvo": { title: "Forever Isn't Long Enough Cast & Full Movie", description: "Forever Isn't Long Enough cast, runtime and official full Nigerian movie on YouTube, published by Royal Arts TV." },
+  "TH8oDejHrEo": { title: "In Every Lifetime Cast & Full Movie", description: "In Every Lifetime cast, runtime and official full Nigerian movie on YouTube, with Daniel Etim Effiong, Ego Nwosu and Shaznay Okawa." },
+  "11n6AU3EVUk": { title: "Just Like a Mirror Cast & Full Movie (2026)", description: "Just Like a Mirror cast, runtime and official full Nigerian movie on YouTube, with Ebube Nwagbo, Dera Osadebe and Enock Darko." },
+  "zxvtMba4MYE": { title: "Third Party Risk Cast & Full Movie (2026)", description: "Third Party Risk cast, runtime and official full Nigerian movie on YouTube, with Omeche Oko, Ray Emodi and Symon Oko." }
 };
 
 function compactMetadata(value: string, maxLength = 155) {
