@@ -1395,6 +1395,34 @@ export const agencies: Agency[] = [
     "shortName": "Silverbird Cinemas",
     "description": "Private cinema chain offering online movie-ticket booking, vouchers and gift-card redemption in Nigerian locations.",
     "website": "https://silverbirdcinemas.com/"
+  },
+  {
+    "slug": "smartcash-psb",
+    "name": "SmartCash Payment Service Bank",
+    "shortName": "SmartCash",
+    "description": "Private Nigerian payment service bank offering mobile/USSD wallets, KYC upgrades, agent banking and emergency account controls.",
+    "website": "https://smartcashpsb.ng/"
+  },
+  {
+    "slug": "hope-psbank",
+    "name": "Hope Payment Service Bank",
+    "shortName": "Hope PSBank",
+    "description": "Private Nigerian digital payment service bank offering free accounts, Hope Wallet, agency banking and mobile services.",
+    "website": "https://hopepsbank.com/"
+  },
+  {
+    "slug": "clinix-healthcare",
+    "name": "Clinix Healthcare",
+    "shortName": "Clinix",
+    "description": "Private Nigerian diagnostic and healthcare provider offering appointments, home sample collection, health packages and ambulance requests.",
+    "website": "https://clinixhealthcare.com.ng/"
+  },
+  {
+    "slug": "filmhouse-cinemas",
+    "name": "Filmhouse Cinemas",
+    "shortName": "Filmhouse",
+    "description": "Private Nigerian cinema chain offering movie-ticket booking, cinema pricing and customer entertainment services.",
+    "website": "https://filmhouseng.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
