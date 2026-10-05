@@ -851,9 +851,13 @@ export const exploreGuides: ExploreGuide[] = [
     bestFor: ["Carnival", "Culture", "December travel", "Family trips"],
     highlights: [
       { name: "30 November — Christmas Tree Lighting", detail: "The official programme opens the festive season with the Christmas Tree Lighting at Millennium Park." },
-      { name: "1 December — Festival Village opens", detail: "Festival Village begins the month-long event run with performances and activations." },
+      { name: "18 December — Boat Regatta", detail: "The official schedule lists the Mbuba Ubom boat regatta at Marina Resort from 12:00 PM." },
+      { name: "22 December — Festival of Grills", detail: "Food, music and local grills are scheduled at Marina Resort Waterfront from 6:00 PM." },
+      { name: "26 December — Cultural Carnival", detail: "Use the official calendar for the Boxing Day cultural programme before travelling, because route and timing details matter." },
+      { name: "27 December — Junior Carnival", detail: "The Junior Carnival is scheduled to flag off from Botanic Garden at 10:00 AM." },
       { name: "28 December — Parade of Bands", detail: "Carnival Calabar and the Parade of Bands is scheduled for 10:00 AM on the official Carnival Route." },
       { name: "29 December — Bikers Carnival", detail: "The official schedule places the Bikers Carnival on the Carnival Route at 12:00 PM." },
+      { name: "31 December — New Year fireworks", detail: "The season closes with the midnight fireworks and New Year declaration at Festival Village." },
     ],
     planning: [
       { label: "Book before the peak week", detail: "Hotel and transport demand rises sharply around the Parade of Bands. Secure accommodation before building smaller activities around it." },
@@ -862,7 +866,35 @@ export const exploreGuides: ExploreGuide[] = [
       { label: "Add daytime culture", detail: "The wider programme includes exhibitions, food, waterfront and cultural events, which can make a longer stay more useful than travelling only for parade day." },
     ],
     source: { label: "Carnival Calabar 2026 official schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
-    lastReviewed: "2026-10-04",
+    lastReviewed: "2026-10-05",
+  },
+
+  {
+    slug: "beneficial-ownership-asset-recovery-conference-2026",
+    title: "Lagos Beneficial Ownership & Asset Recovery Conference 2026 Guide",
+    shortTitle: "BO & Asset Recovery Conference 2026",
+    kind: "itinerary",
+    region: "Lagos State",
+    summary: "Plan for the CAC-led Global Conference on Beneficial Ownership & Asset Recovery at Sheraton Hotels, Ikeja, from 8–11 November 2026, including registration, venue, airport and entry details.",
+    intro: [
+      "The Corporate Affairs Commission and partner agencies are hosting the Global Conference on Beneficial Ownership & Asset Recovery in Lagos from 8 to 11 November 2026.",
+      "The official programme uses Sheraton Hotels in Ikeja as the conference venue, with arrival and registration on 8 November, two main conference days on 9–10 November and departures on 11 November."
+    ],
+    bestFor: ["Business travel", "Governance", "Compliance", "International conference"],
+    highlights: [
+      { name: "8–11 November 2026", detail: "The official conference site publishes a four-day Lagos programme covering arrivals, plenaries, technical sessions and departures." },
+      { name: "Sheraton Hotels, Ikeja", detail: "The venue is at 30 Mobolaji Bank Anthony Way, Ikeja, near Murtala Muhammed International Airport." },
+      { name: "Early bird to 15 October", detail: "The official in-person delegate fee is ₦250,000 through 15 October; late registration is ₦300,000 from 16 October to 5 November. Virtual rates are lower." },
+      { name: "International delegate support", detail: "The organiser publishes guidance on e-Visas, invitation letters, airport protocol, yellow-fever documentation and Nigeria's Landing Card." }
+    ],
+    planning: [
+      { label: "Register through the official conference site", detail: "Use the CAC-hosted conference site and its generated invoice rather than third-party payment requests." },
+      { label: "Stay close to Ikeja if possible", detail: "The venue is near Lagos airport, so accommodation on the Ikeja axis reduces cross-city travel for an event with early starts." },
+      { label: "Check entry documents early", detail: "International visitors should confirm passport validity, yellow-fever documentation, visa status where required and the online Landing Card before travel." },
+      { label: "Build around the two main conference days", detail: "The substantive plenaries, panels and workshops are on 9 and 10 November; 8 November is arrival/registration and 11 November is departure." }
+    ],
+    source: { label: "CAC Global Conference on Beneficial Ownership & Asset Recovery", href: "https://boconference.cac.gov.ng/" },
+    lastReviewed: "2026-10-05",
   },
 
 ];
