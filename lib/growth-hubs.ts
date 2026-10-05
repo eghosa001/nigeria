@@ -917,7 +917,15 @@ export const growthHubs: GrowthHub[] = [
       { query: "book Reddington appointment", serviceSlug: "reddington-book-appointment" },
       { query: "book Lagoon Hospital appointment", serviceSlug: "lagoon-hospital-book-appointment" },
       { query: "inDrive driver signup Nigeria", serviceSlug: "indrive-driver-signup-nigeria" },
-      { query: "AXA Mansard motor claim", serviceSlug: "axa-mansard-motor-claim" }
+      { query: "AXA Mansard motor claim", serviceSlug: "axa-mansard-motor-claim" },
+      { query: "Netflix Nigeria subscription", serviceSlug: "netflix-start-membership-nigeria" },
+      { query: "change Netflix plan", serviceSlug: "netflix-change-plan" },
+      { query: "cancel Netflix", serviceSlug: "netflix-cancel-membership" },
+      { query: "Spotify Premium Nigeria", serviceSlug: "spotify-premium-nigeria" },
+      { query: "cancel Spotify Premium", serviceSlug: "spotify-cancel-premium" },
+      { query: "ACCA exam booking Nigeria", serviceSlug: "acca-book-exam-nigeria" },
+      { query: "OET booking Nigeria", serviceSlug: "oet-book-test-nigeria" },
+      { query: "Healthtracka home test Nigeria", serviceSlug: "healthtracka-home-test-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1145,7 +1153,15 @@ export const growthHubs: GrowthHub[] = [
       "reddington-book-appointment",
       "lagoon-hospital-book-appointment",
       "indrive-driver-signup-nigeria",
-      "axa-mansard-motor-claim"
+      "axa-mansard-motor-claim",
+      "netflix-start-membership-nigeria",
+      "netflix-change-plan",
+      "netflix-cancel-membership",
+      "spotify-premium-nigeria",
+      "spotify-cancel-premium",
+      "acca-book-exam-nigeria",
+      "oet-book-test-nigeria",
+      "healthtracka-home-test-nigeria"
     ]
   },
 
