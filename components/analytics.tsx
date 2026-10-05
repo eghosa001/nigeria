@@ -10,6 +10,10 @@ type AnalyticsWindow = Window & typeof globalThis & {
   dataLayer?: unknown[];
   gtag?: (...args: unknown[]) => void;
   __mngLastTrackedPath?: string;
+  __mngPosthogLastTrackedPath?: string;
+  posthog?: {
+    capture?: (event: string, properties?: Record<string, unknown>) => void;
+  };
 };
 
 export function Analytics() {
@@ -38,6 +42,16 @@ export function Analytics() {
         page_title: document.title,
       });
       analyticsWindow.__mngLastTrackedPath = pathname;
+    }
+
+    if (analyticsWindow.__mngPosthogLastTrackedPath !== pathname) {
+      analyticsWindow.posthog?.capture?.("$pageview", {
+        $current_url: window.location.href,
+        $pathname: pathname,
+        $host: window.location.host,
+        page_title: document.title,
+      });
+      analyticsWindow.__mngPosthogLastTrackedPath = pathname;
     }
 
     function onClick(event: MouseEvent) {
