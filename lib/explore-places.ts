@@ -97,7 +97,8 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Current listing: roughly 10:00–18:00 most days; verify before visiting.",
     phone: "+234 803 409 6656",
     mapQuery: "Nike Art Gallery Lekki Lagos",
-    checkedAt: "2026-09-29",
+    source: { label: "ART X Lagos — Nike Art Gallery profile", href: "https://www.artxlagos.com/exhibitors/nike-art-gallery-2026" },
+    checkedAt: "2026-10-05",
     tags: ["art", "culture", "indoor"],
   },
   {
@@ -411,7 +412,8 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Current listing: daytime opening.",
     phone: "+234 816 373 9092",
     mapQuery: "Gidan Makama Museum Kano",
-    checkedAt: "2026-09-29",
+    source: { label: "Kano State Government — museum rehabilitation", href: "https://kanostate.gov.ng/" },
+    checkedAt: "2026-10-05",
     tags: ["museum", "history", "architecture"],
   },
   {
@@ -424,7 +426,8 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "Historic hill closely tied to the early settlement story of Kano.",
     cost: "Generally open-access; use local guidance and confirm conditions",
     mapQuery: "Dala Hill Kano",
-    checkedAt: "2026-09-29",
+    source: { label: "Kano State Government — Kano heritage overview", href: "https://kanostate.gov.ng/history/" },
+    checkedAt: "2026-10-05",
     tags: ["history", "viewpoint", "outdoors"],
   },
   {
@@ -471,7 +474,8 @@ export const explorePlaces: ExplorePlace[] = [
     cost: "Verify current park admission",
     hours: "Current listing: daytime opening; Sunday hours may differ.",
     mapQuery: "Jos Wildlife Park",
-    checkedAt: "2026-09-29",
+    source: { label: "VisitPlateau — Jos Wildlife Park", href: "https://visitplateau.com/destinations/jos-wildlife-park" },
+    checkedAt: "2026-10-05",
     tags: ["wildlife", "park", "family"],
   },
   {
@@ -2547,6 +2551,141 @@ export const explorePlaces: ExplorePlace[] = [
       "heritage",
       "cave"
     ]
+  },
+  {
+    "slug": "jabi-lake-abuja",
+    "guideSlug": "abuja",
+    "name": "Jabi Lake",
+    "kind": "nature",
+    "area": "Jabi",
+    "address": "Jabi Lake, Jabi, Abuja, Federal Capital Territory, Nigeria",
+    "summary": "Urban lake and leisure area in Jabi used for waterfront dining, recreation and, when offered by current operators, water activities.",
+    "cost": "Lakefront access varies by venue; confirm any boat or paid activity price directly before use",
+    "costNote": "Water activities are operator-dependent. Check life jackets, weather and return arrangements before boarding.",
+    "mapQuery": "Jabi Lake Abuja Nigeria",
+    "source": {
+      "label": "Visit Abuja — About Abuja",
+      "href": "https://www.visitabuja.org/about-abuja/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Jabi",
+      "lake",
+      "waterfront",
+      "Abuja"
+    ]
+  },
+  {
+    "slug": "abuja-arts-crafts-village",
+    "guideSlug": "abuja",
+    "name": "Abuja Arts and Crafts Village",
+    "kind": "shopping",
+    "area": "Central Area",
+    "address": "Arts and Crafts Village, Central Area, Abuja, Federal Capital Territory, Nigeria",
+    "summary": "Craft-shopping stop highlighted in current Abuja visitor guidance for carvings, textiles, leather goods, jewellery, paintings and locally made items.",
+    "cost": "Browsing is generally free; purchases are seller-priced — confirm current public access before travelling",
+    "mapQuery": "Arts and Crafts Village Abuja Nigeria",
+    "source": {
+      "label": "Visit Abuja — Things to Do",
+      "href": "https://www.visitabuja.org/see-and-do/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "crafts",
+      "shopping",
+      "art",
+      "Abuja"
+    ]
+  },
+  {
+    "slug": "shere-hills-plateau",
+    "guideSlug": "jos",
+    "name": "Shere Hills",
+    "kind": "nature",
+    "area": "Jos East",
+    "address": "Shere Hills, Jos East, Plateau State, Nigeria",
+    "summary": "High rocky hills east of Jos promoted by Plateau's official tourism platform for hiking and wide views across the highland landscape.",
+    "cost": "Public landscape access may be free; local guide costs vary — confirm route and guide arrangements before hiking",
+    "mapQuery": "Shere Hills Jos Plateau Nigeria",
+    "source": {
+      "label": "VisitPlateau — official tourism platform",
+      "href": "https://visitplateau.com/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Shere Hills",
+      "hiking",
+      "Jos",
+      "Plateau"
+    ]
+  },
+  {
+    "slug": "wase-rock-plateau",
+    "guideSlug": "jos",
+    "name": "Wase Rock",
+    "kind": "nature",
+    "area": "Wase",
+    "address": "Wase Rock, Wase, Plateau State, Nigeria",
+    "summary": "Prominent volcanic rock formation in Wase promoted by Plateau's official tourism platform as a major adventure and landscape destination.",
+    "cost": "Official visitor information lists an entry charge; verify the current fee and local access before the long drive",
+    "mapQuery": "Wase Rock Plateau Nigeria",
+    "source": {
+      "label": "VisitPlateau — official tourism platform",
+      "href": "https://visitplateau.com/"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Wase Rock",
+      "geology",
+      "Plateau",
+      "nature"
+    ]
+  },
+  {
+    "slug": "assop-falls-plateau",
+    "guideSlug": "jos",
+    "name": "Assop Falls",
+    "kind": "nature",
+    "area": "Assop / Jos–Abuja highway",
+    "address": "Assop Falls, Plateau State, Nigeria",
+    "summary": "Accessible waterfall stop near the Jos–Abuja highway, with rocky ledges and a natural pool in a green valley setting.",
+    "cost": "VisitPlateau currently lists a small entry fee; verify the current amount at the site",
+    "costNote": "Do not assume the pool is safe for swimming. Official visitor guidance warns about slippery rocks and advises sturdy footwear.",
+    "mapQuery": "Assop Falls Plateau Nigeria",
+    "source": {
+      "label": "VisitPlateau — Assop Falls",
+      "href": "https://visitplateau.com/destinations/assop-falls"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Assop Falls",
+      "waterfall",
+      "Plateau",
+      "nature"
+    ]
+  },
+  {
+    "slug": "riyom-rock-plateau",
+    "guideSlug": "jos",
+    "name": "Riyom Rock",
+    "kind": "nature",
+    "area": "Riyom",
+    "address": "Riyom Rock Formations, Riyom, Plateau State, Nigeria",
+    "summary": "Naturally balanced rock formations in Riyom promoted by Plateau's official tourism platform as a geological and photography stop.",
+    "cost": "Official visitor information currently lists open access; confirm local conditions before travel",
+    "costNote": "Do not climb unstable formations and watch footing on loose rock.",
+    "mapQuery": "Riyom Rock Plateau Nigeria",
+    "source": {
+      "label": "VisitPlateau — Riyom Rock",
+      "href": "https://visitplateau.com/destinations/riyom-rock"
+    },
+    "checkedAt": "2026-10-05",
+    "tags": [
+      "Riyom Rock",
+      "geology",
+      "Plateau",
+      "photography"
+    ]
   }
 ];
 
@@ -2844,6 +2983,106 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "national-museum-benin-city",
     "igun-street",
     "okomu-national-park-main"
+  ],
+  "lekki-conservation-centre-guide": [
+    "lekki-conservation-centre",
+    "nike-art-gallery-lagos",
+    "cactus-restaurant-lagos"
+  ],
+  "nike-art-gallery-lagos-guide": [
+    "nike-art-gallery-lagos",
+    "lekki-conservation-centre",
+    "nok-by-alara"
+  ],
+  "millennium-park-abuja-guide": [
+    "millennium-park-abuja",
+    "abuja-national-mosque",
+    "national-christian-centre-abuja"
+  ],
+  "jabi-lake-abuja-guide": [
+    "jabi-lake-abuja",
+    "millennium-park-abuja",
+    "blucabana-abuja"
+  ],
+  "abuja-arts-crafts-village-guide": [
+    "abuja-arts-crafts-village",
+    "abuja-national-mosque",
+    "millennium-park-abuja"
+  ],
+  "gidan-makama-museum-guide": [
+    "gidan-makama-museum",
+    "dala-hill",
+    "jalsa-kano"
+  ],
+  "dala-hill-kano-guide": [
+    "dala-hill",
+    "gidan-makama-museum",
+    "jalsa-kano"
+  ],
+  "jos-wildlife-park-guide": [
+    "jos-wildlife-park",
+    "jos-museum-and-zoo",
+    "barcardi-restaurant-jos"
+  ],
+  "shere-hills-guide": [
+    "shere-hills-plateau",
+    "jos-wildlife-park",
+    "jos-museum-and-zoo"
+  ],
+  "wase-rock-guide": [
+    "wase-rock-plateau",
+    "shere-hills-plateau",
+    "jos-wildlife-park"
+  ],
+  "assop-falls-guide": [
+    "assop-falls-plateau",
+    "riyom-rock-plateau",
+    "jos-wildlife-park"
+  ],
+  "riyom-rock-guide": [
+    "riyom-rock-plateau",
+    "shere-hills-plateau",
+    "jos-wildlife-park"
+  ],
+  "owo-museum-guide": [
+    "owo-museum-antiquities",
+    "idanre-hills",
+    "akure-forest-reserve"
+  ],
+  "arinta-waterfalls-guide": [
+    "arinta-waterfalls",
+    "ikogosi-warm-springs",
+    "fajuyi-memorial-park"
+  ],
+  "mount-patti-lokoja-guide": [
+    "mount-patti-lokoja",
+    "niger-benue-confluence-lokoja",
+    "lokoja-colonial-heritage"
+  ],
+  "agulu-lake-guide": [
+    "agulu-lake",
+    "ogbunike-cave",
+    "owerre-ezukala-cave-waterfall"
+  ],
+  "kufena-hills-zaria-guide": [
+    "kufena-hills-zaria",
+    "zaria-city-walls",
+    "matsirga-waterfalls"
+  ],
+  "kusugu-well-daura-guide": [
+    "kusugu-well-daura",
+    "gobarau-minaret",
+    "emirs-palace-katsina"
+  ],
+  "eggon-hills-guide": [
+    "eggon-hills-caves",
+    "farin-ruwa-waterfalls",
+    "ara-rock-nasarawa"
+  ],
+  "dagona-bird-sanctuary-guide": [
+    "dagona-bird-sanctuary",
+    "dufuna-canoe-heritage-yobe",
+    "gorgaram-fishing-festival-yobe"
   ],
 };
 
