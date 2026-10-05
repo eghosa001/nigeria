@@ -50,32 +50,11 @@ jobs:
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-collection|jobs-directory)\.tsx$|lib/(jobs|job-topics|career-guides|sitemap-sections|global-search)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
           if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "mode=jobs" >> "$GITHUB_OUTPUT"
-            echo "Jobs-only change; focused validation runs in CI, so browser QA is skipped."
+            echo "Jobs-only change; focused validation runs in CI, so Cloudflare browser QA is skipped."
             exit 0
           fi
 
-          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|data|tests)/|^(vite\.config\.ts|wrangler\.jsonc|package\.json|next\.config\.ts|playwright\.cloudflare\.config\.ts|\.github/workflows/cloudflare-qa\.yml)
-      - uses: actions/setup-node@v4
-        if: steps.scope.outputs.run == 'true'
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.run == 'true'
-      - run: npm run build
-        if: steps.scope.outputs.run == 'true'
-      - run: npx playwright install --with-deps chromium
-        if: steps.scope.outputs.run == 'true'
-      - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true'
-      - name: Upload Cloudflare Playwright report on failure
-        if: failure() && steps.scope.outputs.run == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report-cloudflare
-          path: playwright-report-cloudflare/
-          retention-days: 7
- || true)"
+          relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|lib|public|data|tests)/|^(vite\.config\.ts|wrangler\.jsonc|package\.json|next\.config\.ts|playwright\.cloudflare\.config\.ts|\.github/workflows/cloudflare-qa\.yml)$' || true)"
           if [ -z "$relevant" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "No Cloudflare-runtime changes; required workflow can finish without the full suite."
