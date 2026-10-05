@@ -1619,6 +1619,13 @@ export const agencies: Agency[] = [
     "shortName": "TLScontact France",
     "description": "Private visa-application centre operator handling France visa appointments, submissions and biometrics in Abuja and Lagos.",
     "website": "https://visas-fr.tlscontact.com/en-us/country/ng"
+  },
+  {
+    "slug": "tlscontact-italy-nigeria",
+    "name": "TLScontact Italy Visa Application Centres Nigeria",
+    "shortName": "TLScontact Italy",
+    "description": "Private visa-application centre operator handling Italian visa appointments, biometrics, submissions and passport return in Abuja and Lagos.",
+    "website": "https://visas-it.tlscontact.com/en-us/country/ng"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
