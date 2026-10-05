@@ -2,12 +2,10 @@
 
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 import { shouldEnableAnalytics } from "@/lib/analytics-safety";
+import { capturePostHogEvent } from "@/lib/posthog-client";
 
 type AnalyticsWindow = Window & typeof globalThis & {
   gtag?: (...args: unknown[]) => void;
-  posthog?: {
-    capture?: (event: string, properties?: Record<string, unknown>) => void;
-  };
 };
 
 export type AnalyticsEventParams = Record<string, string | number | boolean | undefined>;
@@ -23,5 +21,5 @@ export function trackEvent(name: string, params: AnalyticsEventParams = {}) {
     analyticsWindow.gtag?.("event", name, params);
   }
 
-  analyticsWindow.posthog?.capture?.(name, params);
+  capturePostHogEvent(name, params);
 }
