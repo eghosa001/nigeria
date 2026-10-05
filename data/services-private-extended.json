@@ -5322,5 +5322,272 @@
       "Veritas post UTME 2026",
       "Veritas University JAMB cutoff 170"
     ]
+  },
+  {
+    "slug": "bells-undergraduate-application-2026",
+    "title": "How to apply to Bells University of Technology for 2026/2027 admission",
+    "shortTitle": "Bells 2026 application",
+    "summary": "Bells University of Technology's current 2026/2027 undergraduate application route, using the official applicant portal to create an account, pay for the form, complete the application and track admission status.",
+    "category": "Education",
+    "agencySlug": "bells-university",
+    "feeLabel": "Application fee is paid through the official Bells applicant portal",
+    "feeNote": "Bells University says applicants should create an account, make payment and complete the application online. Confirm the current form amount in the official applicant portal before payment.",
+    "timeline": "Applications are currently open for 2026/2027. Bells says applicants who complete the form will be contacted in due course; no single universal decision time is published.",
+    "status": "verified",
+    "officialPortal": "https://student.bellsuniversity.edu.ng/",
+    "requirements": [
+      "A current JAMB UTME result meeting the university's published 160 minimum for the normal undergraduate route",
+      "Five required O'level courses/credits for the intended programme",
+      "A valid email/phone and JAMB registration number for the applicant portal",
+      "Programme-specific O'level or Direct Entry qualifications where the chosen course requires them"
+    ],
+    "steps": [
+      "Open Bells University's official 2026/2027 admissions page and confirm that the intended undergraduate programme is accepting applications.",
+      "Open the official student/applicant portal and create a new applicant account with the requested JAMB and contact information.",
+      "Pay the application fee through the university portal and keep the payment receipt.",
+      "Complete the personal, academic, O'level, JAMB and programme sections and upload the documents requested by the portal.",
+      "Submit the application and use the applicant dashboard to track status and any admission or clearance instruction."
+    ],
+    "notes": [
+      "Bells University's current admission FAQ states a JAMB UTME cutoff of 160.",
+      "The university warns applicants who were migrated from an older portal not to create a second application or buy another form if they already applied.",
+      "Programme-specific entry requirements should be checked before payment because subject combinations differ."
+    ],
+    "sources": [
+      {
+        "label": "Bells University 2026/2027 Admissions",
+        "agency": "Bells University of Technology",
+        "url": "https://www.bellsuniversity.edu.ng/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Bells University Applicant Portal",
+        "agency": "Bells University of Technology",
+        "url": "https://student.bellsuniversity.edu.ng/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Bells University Admission FAQ",
+        "agency": "Bells University of Technology",
+        "url": "https://www.bellsuniversity.edu.ng/admissions/undergraduate-study/admission-frequently-asked-questions/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Bells University Applicant Portal Migration Guide",
+        "agency": "Bells University of Technology",
+        "url": "https://www.bellsuniversity.edu.ng/procedure-for-filling-formsprocedure-for-filling-the-2024-2025-session-admission-form-for-bells-university-of-technologyprocedure-for-filling-forms/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "jamb-2026-utme-registration",
+      "jamb-caps",
+      "bowen-undergraduate-application-2026",
+      "caleb-undergraduate-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bells University application 2026",
+      "Bells University admission 2026",
+      "Bells University post UTME",
+      "Bells University admission portal",
+      "Bells University JAMB cutoff 160"
+    ]
+  },
+  {
+    "slug": "bells-jupeb-application-2026",
+    "title": "How to apply for Bells University JUPEB in 2026/2027",
+    "shortTitle": "Bells JUPEB 2026",
+    "summary": "Bells University of Technology's 2026/2027 residential JUPEB foundation-programme application route for candidates seeking a one-year pathway to Direct Entry at 200 level.",
+    "category": "Education",
+    "agencySlug": "bells-university",
+    "feeLabel": "Foundation application/payment is handled through the official application route",
+    "feeNote": "Bells University's current JUPEB page confirms 2026/2027 admissions are open but does not publish one durable application-form amount on the page. Confirm the live amount before payment.",
+    "timeline": "The university says 2026/2027 JUPEB admission is currently open; the programme runs for one academic year and is fully residential.",
+    "status": "verified",
+    "officialPortal": "https://www.bellsuniversity.edu.ng/foundation-jupeb-programme/",
+    "requirements": [
+      "At least five O'level credits in SSCE/NECO/NABTEB or equivalent, in relevant subjects within one or two sittings",
+      "The candidate's personal/contact and academic information needed for the foundation application",
+      "A willingness to complete the residential one-year JUPEB programme and later process a JAMB Direct Entry application"
+    ],
+    "steps": [
+      "Open Bells University's official Foundation/JUPEB page and confirm that the intended 2026/2027 foundation admission is open.",
+      "Use the official Apply link supplied by Bells University to start the JUPEB application.",
+      "Complete the candidate and O'level information and upload any documents requested by the application portal.",
+      "Review the current application or programme payment instruction before completing any payment.",
+      "Submit the form and monitor the university's admission contact channels for the offer and residential-programme instructions."
+    ],
+    "notes": [
+      "Bells says the JUPEB programme is fully residential.",
+      "Successful JUPEB candidates still need to obtain/process JAMB Direct Entry and meet the university requirements for the intended degree.",
+      "The foundation programme is a distinct route from the regular 100-level UTME application."
+    ],
+    "sources": [
+      {
+        "label": "Bells University Foundation/JUPEB 2026/2027",
+        "agency": "Bells University of Technology",
+        "url": "https://www.bellsuniversity.edu.ng/foundation-jupeb-programme/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Bells University Admissions",
+        "agency": "Bells University of Technology",
+        "url": "https://www.bellsuniversity.edu.ng/admissions/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "jamb-direct-entry-2026",
+      "bells-undergraduate-application-2026",
+      "veritas-jupeb-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Bells University JUPEB 2026",
+      "Bells JUPEB application",
+      "Bells foundation programme 2026",
+      "Bells University Direct Entry foundation",
+      "Bells JUPEB admission"
+    ]
+  },
+  {
+    "slug": "veritas-jupeb-application-2026",
+    "title": "How to apply for Veritas University JUPEB in 2026/2027",
+    "shortTitle": "Veritas JUPEB 2026",
+    "summary": "Veritas University Abuja's current 2026/2027 JUPEB foundation application route, including the online candidate/sponsor form, programme/subject combination, document upload and review outcome.",
+    "category": "Education",
+    "agencySlug": "veritas-university",
+    "feeLabel": "Programme fees depend on science/non-science and accommodation",
+    "feeNote": "Veritas publishes a separate 2026/2027 JUPEB fee schedule covering tuition and accommodation. Use the current schedule linked by the official JUPEB site rather than an old figure.",
+    "timeline": "Veritas says JUPEB applications are reviewed within about 72 hours. The current 2026/2027 screening exercise runs from 13 July to 30 November 2026.",
+    "status": "verified",
+    "officialPortal": "https://jupeb.veritas.edu.ng/apply",
+    "requirements": [
+      "The candidate's personal/contact and residential information",
+      "Sponsor/parent contact information requested by the JUPEB form",
+      "The intended undergraduate course and corresponding JUPEB subject combination",
+      "The academic/supporting documents requested by the online application form"
+    ],
+    "steps": [
+      "Open the Veritas University JUPEB 2026/2027 site and review the current screening period, subject combinations and fee schedule.",
+      "Open the online application and complete the candidate and sponsor information.",
+      "Choose the intended undergraduate programme so the portal can load the required JUPEB subject combination.",
+      "Upload the required documents, review the declaration and submit the completed application.",
+      "Monitor the applicant email for the review outcome; if accepted, follow the university's instruction for payment and admission-letter collection."
+    ],
+    "notes": [
+      "Veritas says it reviews JUPEB applications within 72 hours and emails the outcome.",
+      "The current screening exercise is published for 13 July through 30 November 2026.",
+      "The JUPEB site warns that Veritas does not offer admission or accept programme payments through third parties."
+    ],
+    "sources": [
+      {
+        "label": "Veritas JUPEB 2026/2027",
+        "agency": "Veritas University Abuja",
+        "url": "https://jupeb.veritas.edu.ng/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Veritas JUPEB Application Instructions",
+        "agency": "Veritas University Abuja",
+        "url": "https://jupeb.veritas.edu.ng/apply",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Veritas JUPEB Application Form",
+        "agency": "Veritas University Abuja",
+        "url": "https://jupeb.veritas.edu.ng/apply/form",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Veritas JUPEB Fees",
+        "agency": "Veritas University Abuja",
+        "url": "https://jupeb.veritas.edu.ng/fees",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "jamb-direct-entry-2026",
+      "veritas-undergraduate-application-2026",
+      "bells-jupeb-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Veritas JUPEB 2026",
+      "Veritas University JUPEB application",
+      "Veritas foundation programme 2026",
+      "Veritas JUPEB screening",
+      "Veritas JUPEB fees"
+    ]
+  },
+  {
+    "slug": "caleb-official-transcript-request",
+    "title": "How to request an official transcript from Caleb University",
+    "shortTitle": "Caleb official transcript",
+    "summary": "Caleb University's online alumni transcript route for claiming access with a certificate, viewing an unofficial record and ordering an official transcript or letter for delivery to the graduate or an institution.",
+    "category": "Education",
+    "agencySlug": "caleb-university",
+    "feeLabel": "₦20,000 transcript/letters; ₦25,000 MSc transcript",
+    "feeNote": "Caleb University's current online records page lists ₦20,000 for transcript and letters and ₦25,000 for an MSc transcript; payment can be by transfer or online before Bursary confirmation.",
+    "timeline": "Caleb does not publish one universal issuance time on the transcript page; the Bursary confirms payment before the official document is issued and the request can be followed online.",
+    "status": "verified",
+    "officialPortal": "https://calebuniversity.edu.ng/alumni/transcripts",
+    "requirements": [
+      "A Caleb University graduate/alumni record that can be matched to the transcript service",
+      "The graduate's certificate details to claim online record access when no old student password is available",
+      "The recipient/delivery information for an official transcript or letter",
+      "Payment of the current official transcript/letter fee"
+    ],
+    "steps": [
+      "Open Caleb University's official Transcripts & Academic Records page and choose Claim Access if the graduate has not used the new records service before.",
+      "Verify identity using the certificate information and create the password for the online academic-record profile.",
+      "Open the transcript/letter request option and choose the official document and recipient or institution delivery details.",
+      "Pay the current fee by the official transfer or online route and keep the payment evidence while Bursary confirms it.",
+      "Track the request in the portal and keep the verification code attached to the issued official document."
+    ],
+    "notes": [
+      "Caleb lets alumni view a watermarked unofficial transcript without ordering the official document.",
+      "The online service does not require an old student-portal password after identity is claimed with the certificate.",
+      "Recipients can verify issued Caleb academic documents through the university's verification route."
+    ],
+    "sources": [
+      {
+        "label": "Caleb University Transcripts & Academic Records",
+        "agency": "Caleb University",
+        "url": "https://calebuniversity.edu.ng/alumni/transcripts",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Caleb University Registry",
+        "agency": "Caleb University",
+        "url": "https://calebuniversity.edu.ng/registry",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "caleb-undergraduate-application-2026",
+      "waec-digital-certificate"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Caleb University transcript",
+      "Caleb transcript request",
+      "Caleb official transcript fee",
+      "Caleb University academic records",
+      "Caleb MSc transcript"
+    ]
   }
 ]
