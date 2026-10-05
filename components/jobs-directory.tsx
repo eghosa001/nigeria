@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { CareerOpportunity, JobSector, JobStatus } from "@/lib/jobs";
+import { jobLocationFacets, jobProfessionFacets, matchesJobLocation, matchesJobProfession } from "@/lib/job-facets";
+import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 
 type Props = { opportunities: CareerOpportunity[] };
 
@@ -20,6 +22,8 @@ export function JobsDirectory({ opportunities }: Props) {
   const [query, setQuery] = useState("");
   const [sector, setSector] = useState<JobSector | "All">("All");
   const [status, setStatus] = useState<JobStatus | "all">("all");
+  const [location, setLocation] = useState("all");
+  const [profession, setProfession] = useState("all");
 
   useEffect(() => {
     const syncFromUrl = () => {
@@ -45,7 +49,9 @@ export function JobsDirectory({ opportunities }: Props) {
     return opportunities
       .filter((item) => {
         if (sector !== "All" && item.sector !== sector) return false;
-        if (status !== "all" && item.status !== status) return false;
+        if (status !== "all" && getEffectiveJobStatus(item) !== status) return false;
+        if (location !== "all" && !matchesJobLocation(item, location)) return false;
+        if (profession !== "all" && !matchesJobProfession(item, profession)) return false;
         if (!needle) return true;
         return [
           item.title,
@@ -59,14 +65,14 @@ export function JobsDirectory({ opportunities }: Props) {
         ].join(" ").toLowerCase().includes(needle);
       })
       .sort((a, b) => {
-        const statusOrder = priority[a.status] - priority[b.status];
+        const statusOrder = priority[getEffectiveJobStatus(a)] - priority[getEffectiveJobStatus(b)];
         if (statusOrder !== 0) return statusOrder;
         if (a.deadline && b.deadline) return a.deadline.localeCompare(b.deadline);
         if (a.deadline) return -1;
         if (b.deadline) return 1;
         return a.organization.localeCompare(b.organization);
       });
-  }, [opportunities, query, sector, status]);
+  }, [opportunities, query, sector, status, location, profession]);
 
   return (
     <div className="jobs-directory">
@@ -97,6 +103,22 @@ export function JobsDirectory({ opportunities }: Props) {
             {Object.entries(statusLabels).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
           </select>
         </label>
+
+        <label>
+          <span>Location</span>
+          <select value={location} onChange={(event) => setLocation(event.target.value)}>
+            <option value="all">All locations</option>
+            {jobLocationFacets.map((facet) => <option key={facet.slug} value={facet.slug}>{facet.shortTitle}</option>)}
+          </select>
+        </label>
+
+        <label>
+          <span>Profession</span>
+          <select value={profession} onChange={(event) => setProfession(event.target.value)}>
+            <option value="all">All professions</option>
+            {jobProfessionFacets.map((facet) => <option key={facet.slug} value={facet.slug}>{facet.shortTitle}</option>)}
+          </select>
+        </label>
       </div>
 
       <div className="jobs-results-line" aria-live="polite">
@@ -107,7 +129,7 @@ export function JobsDirectory({ opportunities }: Props) {
         {filtered.map((item) => (
           <article className="job-card" key={item.slug}>
             <div className="job-card-top">
-              <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+              <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
               <span>{item.sector}</span>
             </div>
             <div className="job-card-body">

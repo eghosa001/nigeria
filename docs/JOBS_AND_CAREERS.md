@@ -15,7 +15,9 @@ Publish a job or career page only when it represents a distinct employer, vacanc
 
 ## Content graph
 
-The pillar has four complementary surfaces: the main /jobs discovery hub, /jobs/<slug> opportunity pages, /jobs/categories/<slug> industry hubs, and /jobs/guides/<slug> reusable career-task guides.
+The pillar has complementary canonical surfaces: the main /jobs discovery hub, /jobs/<slug> opportunity pages, /jobs/categories/<slug> industry hubs, /jobs/locations/<slug> inventory-backed location hubs, /jobs/professions/<slug> profession hubs, and /jobs/guides/<slug> reusable career-task guides.
+
+Employer identity is normalized in code through lib/job-employers.ts. Multiple vacancies from one employer remain separate opportunity records while employer grouping drives contextual internal links.
 
 Global search includes individual opportunities and career guides. The jobs sitemap includes all four surfaces.
 
@@ -23,12 +25,23 @@ Global search includes individual opportunities and career guides. The jobs site
 
 verifiedAt or reviewedAt shows when evidence was checked. open is reserved for an official source that currently exposes an application route or live vacancy. Use career-page when an organisation has a legitimate recruitment route but no specific live opening is being claimed.
 
+A stored open record with a published deadline is treated as closed immediately after that deadline by lib/job-runtime.ts. Jobs pages revalidate hourly so expired opportunities stop appearing in Open Now without waiting for a manual content edit. The focused validation also rejects a stored open record whose deadline has already passed.
+
+Google JobPosting structured data is emitted only for a single vacancy with verified datePosted and location metadata. Broad employer career pages, multi-role recruitment exercises and programmes do not receive JobPosting markup.
+
 International and NGO employers use the International sector instead of being mislabeled as private companies.
 
 ## Scale transition
 
-Checked-in TypeScript is acceptable while the catalog is small. The main jobs directory currently sends the in-memory catalog to the browser, so the focused jobs check hard-stops before 1,000 records. Before the pillar approaches the repository's 5,000-record database threshold, move reads behind the prepared D1 content-store boundary with server pagination and indexed search while preserving canonical URLs.
+Checked-in TypeScript is acceptable while the catalog is small. The main jobs directory still sends the in-memory catalog to the browser, so the focused jobs check now hard-stops before 500 records. Begin the D1 migration around 300 records instead of waiting for the global 5,000-record content threshold.
+
+The normalized future schema is prepared in cloudflare/d1/jobs-scale-schema.sql: employers, job records, locations and profession facets are separate indexed entities while canonical public URLs remain unchanged. Move reads behind server pagination and indexed search before the hard stop.
 
 Focused validation command: npm run check:jobs.
 
 Do not substitute broad repository builds or unrelated suites when this focused check is sufficient.
+
+
+## Analytics
+
+Clicks from an opportunity page to an official employer application source emit `job_apply_click` through the existing GA4/PostHog client analytics layer with job slug, employer, effective status and destination host. This measures application intent without collecting application contents.
