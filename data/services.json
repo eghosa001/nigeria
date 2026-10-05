@@ -22901,5 +22901,739 @@
       "Nomba terminal Nigeria",
       "Nomba POS requirements"
     ]
+  },
+  {
+    "slug": "standard-chartered-sc-mobile-account-opening",
+    "title": "How to open a Standard Chartered Nigeria account with SC Mobile",
+    "shortTitle": "SC Mobile account opening",
+    "summary": "Standard Chartered Nigeria's SC Mobile onboarding route for opening an instant account with BVN, OTP verification, contact details, selfie/ID upload and digital acceptance of the account terms.",
+    "category": "Banking",
+    "agencySlug": "standard-chartered-nigeria",
+    "feeLabel": "Zero initial deposit on current/savings products shown online",
+    "feeNote": "Standard Chartered's current Nigeria account pages show zero initial deposit for several current and savings products, but account-specific fees and later service charges remain subject to the current tariff guide.",
+    "timeline": "Standard Chartered says the account is created after the mobile application is submitted; if the account number is not displayed immediately, temporary registration details are sent later by email/SMS and bank staff may contact the applicant.",
+    "status": "verified",
+    "officialPortal": "https://www.sc.com/ng/banking/sc-mobile/",
+    "requirements": [
+      "A smartphone capable of running the SC Mobile Nigeria app",
+      "A Bank Verification Number (BVN) for the mobile account-opening flow",
+      "Access to the mobile number linked to the BVN so the six-digit OTP can be received",
+      "A valid identity document and a selfie for the identity-verification stage",
+      "Accurate contact and personal information for the account profile"
+    ],
+    "steps": [
+      "Download the official SC Mobile Nigeria app and select Open Account.",
+      "Enter the BVN and complete the six-digit OTP verification sent to the registered mobile number.",
+      "Review or update the contact information and enter the additional personal details requested by the app.",
+      "Take the selfie and upload the valid identity document and optional signature requested by Standard Chartered.",
+      "Review the application, accept the terms and submit it; keep the temporary registration details if the account number is not displayed immediately."
+    ],
+    "notes": [
+      "Standard Chartered says eligible customers can open the account entirely through the SC Mobile app.",
+      "After upgrading the account, the bank says customers can request a debit card and have it delivered to an address in Nigeria.",
+      "Use the current tariff guide for ongoing service charges rather than treating a zero opening deposit as meaning every service is free."
+    ],
+    "sources": [
+      {
+        "label": "Standard Chartered Nigeria SC Mobile",
+        "agency": "Standard Chartered Bank Nigeria",
+        "url": "https://www.sc.com/ng/banking/sc-mobile/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Standard Chartered Nigeria Accounts",
+        "agency": "Standard Chartered Bank Nigeria",
+        "url": "https://www.sc.com/ng/save/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "standard-chartered-online-banking-registration",
+      "standard-chartered-mobile-key",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Standard Chartered account opening Nigeria",
+      "SC Mobile open account",
+      "open Standard Chartered account online Nigeria",
+      "Standard Chartered BVN account",
+      "SC Mobile Nigeria"
+    ]
+  },
+  {
+    "slug": "standard-chartered-online-banking-registration",
+    "title": "How to register for Standard Chartered Nigeria Online Banking",
+    "shortTitle": "Standard Chartered online banking",
+    "summary": "Standard Chartered Nigeria's Online Banking/SC Mobile registration route using a debit or credit card, or temporary ID and SMS PIN, followed by OTP verification and creation of login credentials.",
+    "category": "Banking",
+    "agencySlug": "standard-chartered-nigeria",
+    "feeLabel": "No online-banking registration fee",
+    "feeNote": "Standard Chartered's Nigeria help page states that Online Banking is free with no extra charge for registration or use of the service itself.",
+    "timeline": "Registration is completed during the digital flow after the identity/card credentials and OTP are accepted; a temporary ID/SMS PIN expires within the period stated by Standard Chartered.",
+    "status": "verified",
+    "officialPortal": "https://www.sc.com/ng/digital-banking/",
+    "requirements": [
+      "An eligible Standard Chartered Nigeria savings account, current account or credit card",
+      "Either a Standard Chartered debit/credit card or a temporary ID and SMS PIN supplied by the bank",
+      "Access to the mobile number registered with the bank for OTP verification when using a card"
+    ],
+    "steps": [
+      "Open Standard Chartered Nigeria Online Banking or SC Mobile and choose Register or Activate.",
+      "Select registration with a debit/credit card or with the temporary ID and SMS PIN.",
+      "Enter the requested account/card or temporary-login information and continue to verification.",
+      "Enter the OTP sent to the registered mobile number when the card-based route requests it.",
+      "Create the Online Banking user ID and password and confirm that the account dashboard is accessible."
+    ],
+    "notes": [
+      "Standard Chartered says a temporary ID and SMS PIN expires within four working days of registration.",
+      "The same digital-banking ecosystem can show account balances, transaction history and eligible service requests.",
+      "Do not follow a login link from an unsolicited message; start from Standard Chartered Nigeria's official domain or app."
+    ],
+    "sources": [
+      {
+        "label": "Standard Chartered Nigeria Digital Banking",
+        "agency": "Standard Chartered Bank Nigeria",
+        "url": "https://www.sc.com/ng/digital-banking/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Standard Chartered Nigeria Help Centre",
+        "agency": "Standard Chartered Bank Nigeria",
+        "url": "https://www.sc.com/ng/help/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "standard-chartered-sc-mobile-account-opening",
+      "standard-chartered-mobile-key"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Standard Chartered online banking registration Nigeria",
+      "SC Mobile register",
+      "Standard Chartered online banking login Nigeria",
+      "activate Standard Chartered mobile banking"
+    ]
+  },
+  {
+    "slug": "standard-chartered-mobile-key",
+    "title": "How to activate Standard Chartered Mobile Key in Nigeria",
+    "shortTitle": "Standard Chartered Mobile Key",
+    "summary": "Standard Chartered Nigeria's mobile-token activation route for replacing hardware-token/SMS authentication with a six-digit SC Mobile Key used to authorise digital banking transactions.",
+    "category": "Banking",
+    "agencySlug": "standard-chartered-nigeria",
+    "feeLabel": "No Mobile Key activation fee stated",
+    "feeNote": "Standard Chartered does not state a separate fee for registering Mobile Key on the Nigeria product page.",
+    "timeline": "Activation is completed in the SC Mobile app after OTP verification and creation of the six-digit transaction PIN.",
+    "status": "verified",
+    "officialPortal": "https://www.sc.com/ng/banking/standard-chartered-mobile-key/",
+    "requirements": [
+      "An active Standard Chartered Nigeria SC Mobile profile",
+      "Access to the mobile number registered with the bank so the activation OTP can be received",
+      "A private six-digit transaction PIN that the customer can remember and keep confidential"
+    ],
+    "steps": [
+      "Sign in to the Standard Chartered Nigeria SC Mobile app and open the Mobile Key registration prompt.",
+      "Select Register so Standard Chartered sends an OTP to the registered mobile number.",
+      "Enter the OTP and create the preferred six-digit SC Mobile Key transaction PIN.",
+      "Re-enter the same six-digit PIN to confirm the security key.",
+      "Complete registration and use the Mobile Key PIN when SC Mobile or Online Banking asks for transaction authentication."
+    ],
+    "notes": [
+      "Standard Chartered describes Mobile Key as a virtual security token for digital banking authentication.",
+      "After registration, digital transactions can require the six-digit Mobile Key instead of a hardware token or SMS OTP.",
+      "The six-digit Mobile Key should not be shared with bank staff, callers or third parties."
+    ],
+    "sources": [
+      {
+        "label": "Standard Chartered Mobile Key",
+        "agency": "Standard Chartered Bank Nigeria",
+        "url": "https://www.sc.com/ng/banking/standard-chartered-mobile-key/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Standard Chartered Digital Banking How-To",
+        "agency": "Standard Chartered Bank Nigeria",
+        "url": "https://www.sc.com/ng/digital-banking/how-to-videos/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "standard-chartered-online-banking-registration",
+      "standard-chartered-sc-mobile-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Standard Chartered Mobile Key Nigeria",
+      "activate SC Mobile Key",
+      "Standard Chartered transaction PIN",
+      "SC Mobile token Nigeria"
+    ]
+  },
+  {
+    "slug": "united-nigeria-book-flight",
+    "title": "How to book a United Nigeria Airlines flight online",
+    "shortTitle": "Book United Nigeria flight",
+    "summary": "United Nigeria Airlines' official web-booking route for one-way or return travel, route/date selection, passenger counts, currency choice and ticket purchase through the airline's own booking widget.",
+    "category": "Air travel",
+    "agencySlug": "united-nigeria-airlines",
+    "feeLabel": "Fare varies by route, date and fare class",
+    "feeNote": "United Nigeria fares are dynamic and governed by the fare rules shown during ticket selection. Review the live booking amount and fare conditions before payment.",
+    "timeline": "The booking is confirmed after the selected flight is paid and the airline issues the reservation/ticket details.",
+    "status": "verified",
+    "officialPortal": "https://flyunitednigeria.com/booking-widget/",
+    "requirements": [
+      "The departure airport, destination and travel date for the intended flight",
+      "The number of adults, children and infants travelling",
+      "Passenger names and identity details that match the photo ID or passport required for travel",
+      "A supported payment method for the fare shown in the United Nigeria booking flow"
+    ],
+    "steps": [
+      "Open United Nigeria Airlines' official booking page and choose one-way or return travel.",
+      "Select the departure airport, destination, date, currency and passenger count.",
+      "Review the available flights and fare rules before choosing the preferred option.",
+      "Enter the passenger and contact information and complete payment through the airline's booking system.",
+      "Save the booking reference and ticket confirmation for check-in, Manage Booking and any later customer-service request."
+    ],
+    "notes": [
+      "United Nigeria says domestic passengers must present valid photo identification, while regional/international passengers need a valid passport and required visa.",
+      "Fare rules shown during booking determine whether a ticket is refundable or how changes are charged.",
+      "Tickets are non-transferable and name changes are not generally permitted after issue."
+    ],
+    "sources": [
+      {
+        "label": "United Nigeria Airlines Booking Widget",
+        "agency": "United Nigeria Airlines",
+        "url": "https://flyunitednigeria.com/booking-widget/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria Airlines Booking",
+        "agency": "United Nigeria Airlines",
+        "url": "https://new.flyunitednigeria.com/booking/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "united-nigeria-online-check-in",
+      "united-nigeria-change-booking",
+      "united-nigeria-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "United Nigeria Airlines booking",
+      "book United Nigeria flight",
+      "United Nigeria flight ticket online",
+      "fly United Nigeria booking"
+    ]
+  },
+  {
+    "slug": "united-nigeria-online-check-in",
+    "title": "How United Nigeria Airlines online check-in works",
+    "shortTitle": "United Nigeria online check-in",
+    "summary": "United Nigeria Airlines' online check-in route for confirmed passengers, with a published 24-hour opening window and current official disagreement on some physical check-in deadlines.",
+    "category": "Air travel",
+    "agencySlug": "united-nigeria-airlines",
+    "feeLabel": "No online check-in fee stated",
+    "feeNote": "United Nigeria does not state a separate charge for using online check-in.",
+    "timeline": "United Nigeria's current FAQ says online check-in opens 24 hours before departure and closes 1 hour before departure. Its official pages currently disagree on some physical domestic check-in closing times.",
+    "status": "conflict",
+    "officialPortal": "https://new.flyunitednigeria.com/check-in/",
+    "requirements": [
+      "A confirmed United Nigeria Airlines reservation",
+      "The booking details required by the airline's online check-in or Manage Booking interface",
+      "Valid photo identification for domestic travel or passport/visa documentation for regional and international travel",
+      "Enough time before the published online and airport check-in deadlines to complete baggage and boarding formalities"
+    ],
+    "steps": [
+      "Open United Nigeria Airlines' official Check-in page and retrieve the confirmed reservation.",
+      "Complete the online check-in prompts during the window beginning 24 hours before departure.",
+      "Finish online check-in before the airline's published 1-hour-before-departure online cutoff.",
+      "Save or print the boarding/check-in confirmation and still report to the airport in time for baggage acceptance and identity-document checks.",
+      "Use the earlier applicable airport cutoff if different United Nigeria pages show conflicting physical check-in deadlines."
+    ],
+    "notes": [
+      "United Nigeria's FAQ currently says domestic physical check-in closes 45 minutes before departure, while other official terms/pages state 30 minutes.",
+      "Regional physical check-in is published as opening three hours before departure and closing 60 minutes before departure.",
+      "Online check-in does not remove the requirement to present the necessary identity and travel documents."
+    ],
+    "sources": [
+      {
+        "label": "United Nigeria Airlines FAQ",
+        "agency": "United Nigeria Airlines",
+        "url": "https://flyunitednigeria.com/f-a-q/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria Airlines App Terms",
+        "agency": "United Nigeria Airlines",
+        "url": "https://flyunitednigeria.com/terms-and-condition-app/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria Airlines Check-in",
+        "agency": "United Nigeria Airlines",
+        "url": "https://new.flyunitednigeria.com/check-in/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "united-nigeria-book-flight",
+      "united-nigeria-change-booking",
+      "united-nigeria-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "United Nigeria online check in",
+      "United Nigeria check-in time",
+      "United Nigeria boarding pass",
+      "United Nigeria airport check in"
+    ]
+  },
+  {
+    "slug": "united-nigeria-change-booking",
+    "title": "How to change a United Nigeria Airlines booking",
+    "shortTitle": "Change United Nigeria booking",
+    "summary": "United Nigeria Airlines' booking-change route for eligible tickets using Manage My Booking or customer service, with fare differences/change fees and a separate assisted path for missed or third-party bookings.",
+    "category": "Air travel",
+    "agencySlug": "united-nigeria-airlines",
+    "feeLabel": "Modification fee plus any fare difference",
+    "feeNote": "United Nigeria states that eligible flight dates/times can be changed on payment of the applicable modification fee and any fare difference. The exact amount depends on the fare rules and new flight.",
+    "timeline": "United Nigeria's terms say eligible changes can be made up to two hours before scheduled departure; missed flights and some third-party bookings require customer-centre or issuing-agent assistance.",
+    "status": "verified",
+    "officialPortal": "https://new.flyunitednigeria.com/check-in/",
+    "requirements": [
+      "The United Nigeria booking reference and passenger details for the ticket being changed",
+      "A ticket whose fare rules permit the requested modification",
+      "A replacement flight with available seats",
+      "Payment for any applicable change charge and positive fare difference"
+    ],
+    "steps": [
+      "Open United Nigeria Airlines' Manage My Booking route and retrieve the reservation.",
+      "Choose the date, time, class or available booking detail that needs to be changed.",
+      "Select an available replacement flight and review the modification charge plus any fare difference.",
+      "Complete the change and save the updated itinerary after payment succeeds.",
+      "For a missed flight or a booking that cannot be changed online, contact United Nigeria customer service or the original travel agent/issuer."
+    ],
+    "notes": [
+      "United Nigeria says tickets purchased through some third-party travel agencies must be changed through the issuing source.",
+      "The airline does not allow ticket transfer to a different passenger.",
+      "A lower fare on the replacement flight does not automatically create a refund under the published change terms."
+    ],
+    "sources": [
+      {
+        "label": "United Nigeria Airlines FAQ",
+        "agency": "United Nigeria Airlines",
+        "url": "https://flyunitednigeria.com/f-a-q/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria Airlines App Terms",
+        "agency": "United Nigeria Airlines",
+        "url": "https://flyunitednigeria.com/terms-and-condition-app/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria Manage Booking",
+        "agency": "United Nigeria Airlines",
+        "url": "https://new.flyunitednigeria.com/check-in/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "united-nigeria-book-flight",
+      "united-nigeria-online-check-in",
+      "united-nigeria-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change United Nigeria flight",
+      "United Nigeria manage booking",
+      "reschedule United Nigeria Airlines",
+      "United Nigeria modification fee"
+    ]
+  },
+  {
+    "slug": "united-nigeria-refund",
+    "title": "How to request a United Nigeria Airlines ticket refund",
+    "shortTitle": "United Nigeria refund",
+    "summary": "United Nigeria Airlines' refund route for refundable tickets and airline disruption, using the online refund form or issuing travel agent and applying the fare rules, refund penalty and identity/payment evidence.",
+    "category": "Air travel",
+    "agencySlug": "united-nigeria-airlines",
+    "feeLabel": "Voluntary refunds currently attract a 25% deduction where refundable",
+    "feeNote": "United Nigeria's current terms state that voluntary refundable tickets are subject to a 25% deduction; non-flex economy tickets can be non-refundable. Involuntary airline-cancellation refunds follow separate rules.",
+    "timeline": "United Nigeria's published terms state a minimum waiting period of two weeks for ticket refunds, subject to the refund type and verification.",
+    "status": "verified",
+    "officialPortal": "https://new.flyunitednigeria.com/refund-form/",
+    "requirements": [
+      "The passenger name, booking reference, ticket number and ticket-sale information",
+      "A ticket whose fare rules permit a voluntary refund, or evidence that an airline cancellation/disruption makes an involuntary refund applicable",
+      "The passenger or payer's bank-account details needed for the refund form",
+      "Additional authorisation and identity evidence if the bank account does not belong to the named passenger"
+    ],
+    "steps": [
+      "Open United Nigeria Airlines' official Refund Request Form and select the reason for the refund request.",
+      "Enter the passenger, booking reference, ticket-sale and ticket-number information.",
+      "Enter the refund bank details and attach the required passenger/third-party authorisation evidence when the receiving account differs from the passenger.",
+      "Submit the request and keep the confirmation while United Nigeria reviews the fare rules and disruption/refund status.",
+      "If the ticket was issued by a travel-management company or third-party agent, use that issuing source when the airline's conditions require the agent to process the refund."
+    ],
+    "notes": [
+      "United Nigeria's current terms state that some Economy Non-Flexi tickets are non-refundable.",
+      "An airline-cancelled flight can qualify for a full unused-fare refund under the carrier's conditions.",
+      "The provider's refund-form page and broader terms should both be checked because ticket type and disruption reason affect the outcome."
+    ],
+    "sources": [
+      {
+        "label": "United Nigeria Refund Request Form",
+        "agency": "United Nigeria Airlines",
+        "url": "https://new.flyunitednigeria.com/refund-form/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria Conditions of Carriage",
+        "agency": "United Nigeria Airlines",
+        "url": "https://new.flyunitednigeria.com/condition-for-carraige/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "United Nigeria App Terms",
+        "agency": "United Nigeria Airlines",
+        "url": "https://flyunitednigeria.com/terms-and-condition-app/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "united-nigeria-book-flight",
+      "united-nigeria-change-booking",
+      "united-nigeria-online-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "United Nigeria refund",
+      "United Nigeria ticket refund form",
+      "United Nigeria cancellation refund",
+      "United Nigeria 25 percent refund"
+    ]
+  },
+  {
+    "slug": "valuejet-book-flight",
+    "title": "How to book a ValueJet flight",
+    "shortTitle": "Book ValueJet flight",
+    "summary": "ValueJet's official booking route for one-way or round-trip travel, route/date selection, passenger count, fare-product choice and payment through the airline's own website.",
+    "category": "Air travel",
+    "agencySlug": "valuejet",
+    "feeLabel": "Fare varies by route, date and fare product",
+    "feeNote": "ValueJet fares are dynamic. Review the live price and included baggage/benefits for ValueLite, ValuePlus, ValuePremium or ValueBusiness before payment.",
+    "timeline": "The booking is confirmed after an available flight/fare is selected and payment is successfully completed through ValueJet's booking system.",
+    "status": "verified",
+    "officialPortal": "https://www.flyvaluejet.com/",
+    "requirements": [
+      "The departure city, destination and intended travel date",
+      "The number of passengers and any infant included in the reservation",
+      "Passenger and contact details required for ticketing",
+      "A supported payment method for the selected ValueJet fare"
+    ],
+    "steps": [
+      "Open ValueJet's official website and choose one-way or round-trip travel.",
+      "Select the departure, destination, travel date and passenger count and search available flights.",
+      "Choose the preferred flight and compare the baggage/benefits included in the available ValueJet fare products.",
+      "Enter the passenger and contact information and complete payment through ValueJet's official booking flow.",
+      "Save the confirmation and booking details for online check-in, Manage My Booking and customer support."
+    ],
+    "notes": [
+      "ValueJet currently publishes ValueLite, ValuePlus, ValuePremium and ValueBusiness fare products with different baggage and priority benefits.",
+      "The airline's website supports domestic and West African routes and can display route-specific availability.",
+      "Use the fare details shown at booking time because included extras can differ by product."
+    ],
+    "sources": [
+      {
+        "label": "ValueJet",
+        "agency": "ValueJet",
+        "url": "https://www.flyvaluejet.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "valuejet-online-check-in",
+      "valuejet-baggage-allowance",
+      "united-nigeria-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ValueJet booking",
+      "book ValueJet flight",
+      "ValueJet ticket Nigeria",
+      "ValueJet flight booking online"
+    ]
+  },
+  {
+    "slug": "valuejet-online-check-in",
+    "title": "How to check in online with ValueJet",
+    "shortTitle": "ValueJet online check-in",
+    "summary": "ValueJet's website check-in route for an existing reservation, allowing eligible passengers to complete check-in before reaching the airport through the airline's Online Check-In service.",
+    "category": "Air travel",
+    "agencySlug": "valuejet",
+    "feeLabel": "No online check-in fee stated",
+    "feeNote": "ValueJet does not state a separate fee for using the Online Check-In service on its public website.",
+    "timeline": "ValueJet's public homepage exposes Online Check-In but does not publish one durable opening/closing window on the surfaced page; confirm the live check-in window shown for the booking.",
+    "status": "verified",
+    "officialPortal": "https://www.flyvaluejet.com/",
+    "requirements": [
+      "An existing ValueJet reservation eligible for online check-in",
+      "The booking/passenger information requested by ValueJet's Online Check-In form",
+      "Valid photo identification and any travel documents required for the route",
+      "Enough time to complete any airport baggage drop and boarding requirements after online check-in"
+    ],
+    "steps": [
+      "Open ValueJet's official website and select Online Check-In.",
+      "Enter the reservation and passenger information requested by the airline's check-in form.",
+      "Complete the seat/check-in prompts shown for the eligible booking.",
+      "Save the boarding or check-in confirmation generated for the passenger.",
+      "Arrive at the airport within the airline's live reporting/baggage-drop instructions and present the required travel identification."
+    ],
+    "notes": [
+      "ValueJet's public site currently exposes Online Check-In but does not show a stable universal cutoff on the surfaced page.",
+      "Passengers with checked baggage must still complete the required airport baggage handover.",
+      "Use the current reservation/check-in screen for any booking-specific restrictions."
+    ],
+    "sources": [
+      {
+        "label": "ValueJet — Online Check-In",
+        "agency": "ValueJet",
+        "url": "https://www.flyvaluejet.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "valuejet-book-flight",
+      "valuejet-baggage-allowance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ValueJet online check in",
+      "ValueJet check-in Nigeria",
+      "ValueJet boarding pass",
+      "ValueJet web check in"
+    ]
+  },
+  {
+    "slug": "valuejet-baggage-allowance",
+    "title": "How ValueJet baggage allowance works by fare",
+    "shortTitle": "ValueJet baggage allowance",
+    "summary": "ValueJet's current fare-based baggage guide covering the published 7kg cabin allowance and checked-baggage inclusions for ValueLite, ValuePlus, ValuePremium and ValueBusiness.",
+    "category": "Air travel",
+    "agencySlug": "valuejet",
+    "feeLabel": "Included baggage depends on the fare product",
+    "feeNote": "ValueJet's website shows the baggage included with each fare product. Extra baggage pricing is dynamic and should be checked in the live booking or Manage My Booking flow before purchase.",
+    "timeline": "Baggage allowance applies to the booked fare. Any additional baggage should be purchased or confirmed before airport processing where the booking offers that option.",
+    "status": "verified",
+    "officialPortal": "https://www.flyvaluejet.com/",
+    "requirements": [
+      "A confirmed ValueJet fare product so the passenger can identify the baggage included with the ticket",
+      "Cabin baggage that remains within the published 7kg allowance and size rules shown by ValueJet",
+      "Checked baggage within the number/weight allowance included in the selected fare, or a paid extra-baggage option when offered"
+    ],
+    "steps": [
+      "Open the ValueJet booking or reservation and confirm whether the ticket is ValueLite, ValuePlus, ValuePremium or ValueBusiness.",
+      "Check the fare's included cabin and checked-baggage allowance on ValueJet's official site.",
+      "Weigh and size the bags before travel and separate the 7kg cabin bag from checked baggage.",
+      "Purchase an extra bag through the airline's website or booking-management route when the fare allows additional baggage and more capacity is needed.",
+      "Present checked baggage at the airport and retain the baggage tag until the bag is collected at the destination."
+    ],
+    "notes": [
+      "ValueLite and ValuePlus currently include one checked bag up to 23kg; ValuePremium and ValueBusiness show two checked bags up to 30kg on the airline's current site.",
+      "ValueJet publishes a 7kg hand-luggage allowance with a 40cm × 20cm × 55cm size reference on its site.",
+      "Extra baggage and fare inclusions can change, so the live fare page should be checked before travel."
+    ],
+    "sources": [
+      {
+        "label": "ValueJet Fare & Baggage Information",
+        "agency": "ValueJet",
+        "url": "https://www.flyvaluejet.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "valuejet-book-flight",
+      "valuejet-online-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ValueJet baggage allowance",
+      "ValueJet 7kg hand luggage",
+      "ValueJet checked baggage",
+      "ValueLite baggage",
+      "ValuePremium baggage"
+    ]
+  },
+  {
+    "slug": "aero-contractors-book-flight",
+    "title": "How to book an Aero Contractors flight",
+    "shortTitle": "Book Aero Contractors",
+    "summary": "Aero Contractors' official booking route for selecting a domestic itinerary, entering passenger details, paying through the airline's platform and retaining the PNR/e-ticket sent after confirmation.",
+    "category": "Air travel",
+    "agencySlug": "aero-contractors",
+    "feeLabel": "Fare varies by route and date",
+    "feeNote": "Aero fares are calculated from the itinerary and tariff in effect at purchase. Review the live booking amount and fare conditions before payment.",
+    "timeline": "Aero states that an internet booking is confirmed after payment and the reservation confirmation is displayed; the e-ticket is sent to the registered email and can also be retrieved with PNR and surname.",
+    "status": "verified",
+    "officialPortal": "https://flyaero.com/",
+    "requirements": [
+      "The origin, destination and travel date for the intended Aero flight",
+      "Passenger identity/contact details that match the person who will travel",
+      "A valid photo identification document for airport check-in and boarding",
+      "A supported payment method for the fare shown by Aero's official booking platform"
+    ],
+    "steps": [
+      "Open Aero Contractors' official website and use the Booking form to select the travel route and date.",
+      "Choose an available flight and enter the passenger and contact information.",
+      "Review the fare and ticket conditions before completing payment.",
+      "Save the booking confirmation/PNR displayed after the successful transaction and check the registered email for the e-ticket.",
+      "If payment succeeds but the ticket is not confirmed, use Aero's official ticket-helpdesk contact rather than paying again immediately."
+    ],
+    "notes": [
+      "Aero's conditions say a reservation is not made until payment is received and a confirmation number is issued.",
+      "The carrier requires photo identification at check-in and boarding.",
+      "Ticket change/refund eligibility depends on the fare conditions and Aero's current carriage rules."
+    ],
+    "sources": [
+      {
+        "label": "Aero Contractors Booking",
+        "agency": "Aero Contractors",
+        "url": "https://flyaero.com/?redirect=1",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Aero Conditions of Carriage",
+        "agency": "Aero Contractors",
+        "url": "https://flyaero.com/carriage/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aero-contractors-manage-check-in",
+      "aero-contractors-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Aero Contractors booking",
+      "book Aero flight Nigeria",
+      "Aero Contractors ticket online",
+      "flyaero booking"
+    ]
+  },
+  {
+    "slug": "aero-contractors-manage-check-in",
+    "title": "How to manage or check in for an Aero Contractors flight",
+    "shortTitle": "Aero manage & check-in",
+    "summary": "Aero Contractors' Manage/Check-In route for retrieving a booking, updating eligible travel plans and completing the airline's check-in process before its published deadline.",
+    "category": "Air travel",
+    "agencySlug": "aero-contractors",
+    "feeLabel": "Change charges and fare differences can apply",
+    "feeNote": "Aero's conditions state that some fares are changeable only on payment of a change fee plus any fare difference. Check the booked fare before confirming a modification.",
+    "timeline": "Aero's current Conditions of Carriage state a 40-minute check-in deadline unless another deadline is specified by the airline or airport authority.",
+    "status": "verified",
+    "officialPortal": "https://flyaero.com/",
+    "requirements": [
+      "The Aero booking reference/PNR and passenger surname or booking information required by Manage/Check-In",
+      "Valid photo identification for check-in and boarding",
+      "A ticket whose fare rules permit any requested booking change",
+      "Payment for any applicable change fee and fare difference when modifying the itinerary"
+    ],
+    "steps": [
+      "Open Aero Contractors' official website and select Manage / Check-In.",
+      "Retrieve the reservation with the booking information requested by Aero.",
+      "Complete the check-in flow or choose an eligible booking change when the ticket rules permit modification.",
+      "Pay any change fee and fare difference shown for a modified itinerary and save the new confirmation.",
+      "Report to the airport before the applicable check-in/boarding deadline with the required photo identification and baggage."
+    ],
+    "notes": [
+      "Aero's current carriage conditions state that failure to meet the check-in deadline can result in cancellation of the reservation and denial of boarding.",
+      "Some discounted fares can be partly or fully non-changeable.",
+      "The website's Manage/Check-In section also supports retrieval of an existing booking."
+    ],
+    "sources": [
+      {
+        "label": "Aero Contractors Manage / Check-In",
+        "agency": "Aero Contractors",
+        "url": "https://flyaero.com/?redirect=1",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Aero Conditions of Carriage",
+        "agency": "Aero Contractors",
+        "url": "https://flyaero.com/carriage/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aero-contractors-book-flight",
+      "aero-contractors-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Aero Contractors check in",
+      "Aero manage booking",
+      "Aero flight reschedule Nigeria",
+      "Aero check-in deadline"
+    ]
+  },
+  {
+    "slug": "aero-contractors-refund",
+    "title": "How to request an Aero Contractors ticket refund",
+    "shortTitle": "Aero Contractors refund",
+    "summary": "Aero Contractors' refund route using the airline's refund request form, photo identification and passenger/payment evidence, with current deductions, non-refundable promotional fares and a published processing period.",
+    "category": "Air travel",
+    "agencySlug": "aero-contractors",
+    "feeLabel": "Voluntary refund deduction currently 25% of ticket cost",
+    "feeNote": "Aero's refund form states a 25% administrative deduction on voluntary ticket refunds, plus different regional/international and agent-related deductions where applicable. Promotional fares can be non-refundable.",
+    "timeline": "Aero's current refund form states that an eligible cash refund for an unused ticket is ready after 14 days from submission.",
+    "status": "verified",
+    "officialPortal": "https://flyaero.com/form/aero-refund-request.pdf",
+    "requirements": [
+      "The completed Aero Contractors refund request form",
+      "A copy of a valid photo identification document for the passenger named on the ticket",
+      "The passenger's bank/payment information for the refund transfer",
+      "For a third-party refund recipient, the passenger's authorisation letter plus identification for both the passenger and receiving account holder"
+    ],
+    "steps": [
+      "Open Aero Contractors' official refund request form and read the current refund terms before submitting a voluntary cancellation.",
+      "Complete the passenger, ticket, contact and bank/payment information requested on the form.",
+      "Attach the valid photo identification and add the passenger authorisation plus account-holder ID when a third party will receive the refund.",
+      "Send the completed refund package through Aero's official refund route and keep the submission evidence.",
+      "Allow the published processing period for eligible unused-ticket refunds and use Aero's refund contact if the request remains unresolved."
+    ],
+    "notes": [
+      "Aero's current form states a 25% administrative deduction for voluntary refunds and a separate no-show penalty.",
+      "The carrier says promotional fares cannot receive a voluntary refund.",
+      "When the airline cancels the flight, the form states that a full-fare refund is transferred rather than applying the voluntary deduction."
+    ],
+    "sources": [
+      {
+        "label": "Aero Contractors Refund Form",
+        "agency": "Aero Contractors",
+        "url": "https://flyaero.com/form/aero-refund-request.pdf",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Aero Contractors Support",
+        "agency": "Aero Contractors",
+        "url": "https://flyaero.com/support/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aero-contractors-book-flight",
+      "aero-contractors-manage-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Aero Contractors refund",
+      "Aero refund form",
+      "Aero ticket cancellation refund Nigeria",
+      "Aero Contractors 14 days refund"
+    ]
   }
 ]
