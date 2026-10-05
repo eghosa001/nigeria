@@ -2,7 +2,7 @@
 
 This repository is being built for the **Million-Search Expansion**: broad, high-quality coverage of the Nigerian search market across four pillars while keeping the site fast, indexable, maintainable and inexpensive to operate.
 
-The numbers below are architecture targets, not traffic promises.
+The numbers below are **architecture capacity and opportunity targets**, not traffic promises or publishing quotas. The site should be able to support this scale, but each pillar should only grow as far as real search demand and content quality justify.
 
 ## Target operating scale
 
@@ -17,7 +17,35 @@ The source of truth is `config/scale-targets.json`.
 - Tour Nigeria: **30,000** useful indexable URLs.
 - Jobs & Careers: **20,000** useful indexable URLs.
 
-These are long-range coverage targets. They must never be reached by creating thin, duplicate, doorway or unverified pages.
+These are long-range coverage ceilings. They must never be reached by creating thin, duplicate, doorway or unverified pages. If Services, Jobs, Tour or Entertainment runs out of distinct high-value search intent before its nominal number, stop below the number and keep improving the strongest pages instead.
+
+## Quality-first SEO growth model
+
+The unit of growth is a **useful search-intent cluster**, not a keyword and not a URL.
+
+For every prospective page:
+
+1. Identify the real query/task/entity cluster and the likely searcher goal.
+2. Check whether an existing page can satisfy that intent better with an update. If yes, strengthen that page instead of creating another URL.
+3. Consolidate synonyms and near-identical long-tail keywords into one authoritative canonical page.
+4. Create a new page only when the intent or entity is materially distinct and enough verified information exists to make the page genuinely useful.
+5. Build the page answer-first, then add evidence, detail, freshness/status, related questions and next actions.
+6. Link it naturally into the site: parent hub/category, related sibling pages, and relevant downstream detail pages where available.
+7. Keep weak or incomplete records out of the index until they meet the quality bar.
+
+### Interlinking standard
+
+Every indexable page should belong to a topic graph rather than exist alone.
+
+- Detail pages link back to the strongest relevant pillar/category/topic hub.
+- Hub pages surface their most useful child pages and important related clusters.
+- Related-page links must be contextual and genuinely useful, not sitewide keyword stuffing.
+- When a new page is published, update the most relevant existing pages/hubs so discovery works in both directions.
+- Breadcrumbs, related-content modules and in-copy links should reinforce topical relationships without creating repetitive anchor-text spam.
+
+### What success means
+
+Success is not reaching 100,000 URLs. Success is increasing the number of high-quality pages that rank for valuable Nigerian search queries, improving impressions, clicks, CTR, average positions and useful on-site journeys while preserving trust and speed.
 
 ## Scale rules for every new feature
 
@@ -31,6 +59,9 @@ These are long-range coverage targets. They must never be reached by creating th
 8. **Search must use an indexed data source at scale.** D1 FTS5 is the planned first search backend; do not implement full-table substring scans for large catalogs.
 9. **Freshness is a first-class field.** Jobs need expiry, services need verification dates, movies need availability checks, and travel/events need reviewed dates.
 10. **Quality outranks count.** New pages need distinct user intent, a useful answer-first section, real source evidence and meaningful internal links.
+11. **Targets are not quotas.** Never create filler content to hit 20k/30k/100k. Stop at the number of pages the market and evidence can support.
+12. **Keyword clusters, not keyword cloning.** Multiple keywords that mean the same thing should normally strengthen one canonical page.
+13. **Interlink at publication time.** A new indexable page should update relevant hubs/related pages so it enters an intentional topic graph instead of becoming an orphan.
 
 ## Storage roadmap
 
