@@ -256,7 +256,18 @@ const expectedSlugs = [
   "dhl-send-parcel-nigeria",
   "dhl-track-shipment-nigeria",
   "british-council-ielts-registration-nigeria",
-  "idp-ielts-registration-nigeria",] as const;
+  "idp-ielts-registration-nigeria",
+  "gigm-book-bus-nigeria",
+  "ekedp-pay-bill-buy-token",
+  "ekedp-prepaid-meter-application",
+  "starlink-activate-kit-nigeria",
+  "starlink-reactivate-service-nigeria",
+  "synlab-home-sample-collection",
+  "synlab-pathprovider-results",
+  "evercare-book-appointment",
+  "paystack-business-activation-nigeria",
+  "paystack-physical-terminal-nigeria",
+  "leadway-buy-motor-insurance-online",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -372,8 +383,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(251);
-  expect(publicServices).toHaveLength(251);
+  expect(services).toHaveLength(262);
+  expect(publicServices).toHaveLength(262);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
