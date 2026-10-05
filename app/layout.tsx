@@ -54,7 +54,7 @@ const posthogBootstrap = `
     ui_host: "${POSTHOG_UI_HOST}",
     defaults: "2026-05-30",
     autocapture: true,
-    capture_pageview: "history_change",
+    capture_pageview: false,
     capture_pageleave: true,
     disable_session_recording: true,
     before_send: function (event) {
@@ -73,6 +73,14 @@ const posthogBootstrap = `
       return event;
     }
   });
+
+  posthog.capture("$pageview", {
+    $current_url: window.location.href,
+    $pathname: path,
+    $host: window.location.host,
+    page_title: document.title
+  });
+  window.__mngPosthogLastTrackedPath = path;
 })();
 `;
 
