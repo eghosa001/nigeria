@@ -1080,7 +1080,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "Spleet tenant verification", serviceSlug: "spleet-tenant-verification" },
       { query: "Spleet Rent Now Pay Later", serviceSlug: "spleet-rent-now-pay-later" },
       { query: "verify property documents PropertyPro", serviceSlug: "propertypro-property-document-verification" },
-      { query: "PropertyPro agent registration", serviceSlug: "propertypro-agent-registration" }
+      { query: "PropertyPro agent registration", serviceSlug: "propertypro-agent-registration" },
+      { query: "Oracle certification exam Nigeria", serviceSlug: "oracle-certification-exam-scheduling" },
+      { query: "SeamlessHR Breeze Payer signup", serviceSlug: "seamlesshr-breeze-payer-signup" },
+      { query: "fund Shuttlers wallet", serviceSlug: "shuttlers-fund-wallet" },
+      { query: "list apartment on Spleet", serviceSlug: "spleet-list-apartment-host" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1471,7 +1475,11 @@ export const growthHubs: GrowthHub[] = [
       "spleet-tenant-verification",
       "spleet-rent-now-pay-later",
       "propertypro-property-document-verification",
-      "propertypro-agent-registration"
+      "propertypro-agent-registration",
+      "oracle-certification-exam-scheduling",
+      "seamlesshr-breeze-payer-signup",
+      "shuttlers-fund-wallet",
+      "spleet-list-apartment-host"
     ]
   },
 
