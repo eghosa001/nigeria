@@ -4549,5 +4549,263 @@
       "LagRide vehicle programme",
       "LagRide driver Lagos"
     ]
+  },
+  {
+    "slug": "covenant-undergraduate-application-2026",
+    "title": "How to apply to Covenant University for 2026/2027 undergraduate admission",
+    "shortTitle": "Covenant University 2026 application",
+    "summary": "Covenant University's 2026/2027 undergraduate application route, from account creation and email verification through form-fee payment, application completion, screening documentation and status tracking.",
+    "category": "Education",
+    "agencySlug": "covenant-university",
+    "feeLabel": "Application fee is generated in the official portal",
+    "feeNote": "Covenant University's current portal requires online form-fee payment through Paystack but the public process page does not publish one durable amount. Use the amount shown in the official portal.",
+    "timeline": "The 2026 prospectus says the screening window/CUSAS is expected around June–July 2026 with admission offers beginning around August; however, the current application portal also says national and international screening forms are not open, so the live portal status controls.",
+    "status": "conflict",
+    "officialPortal": "https://admissions.covenantuniversity.edu.ng/",
+    "requirements": [
+      "A valid and accessible email address for creating and verifying the Covenant University admission account",
+      "The applicant's current 2026 UTME and relevant O'level/SSCE credentials for the chosen programme",
+      "An applicant who meets the university/JAMB age and programme requirements for the 2026/2027 cycle",
+      "A supported card/payment method for the application fee generated in the portal"
+    ],
+    "steps": [
+      "Open Covenant University's official 2026/2027 admissions site and review the programme prospectus and current application-status notice.",
+      "Create an admission account with an accessible email address and activate it from the verification link sent by the portal.",
+      "Sign in, pay the form fee through the portal's Paystack route and note the application number sent after payment.",
+      "Complete the application sections, upload the required credentials and screening documentation, then preview every entry before submission.",
+      "Submit and print the completed form, then monitor the portal and admission email for screening/CUSAS and application-status updates."
+    ],
+    "notes": [
+      "Covenant University's admissions landing page says 2026/2027 admissions are open, while the current screening portal says the screening form is not open for National (UTME) or International applicants; this guide therefore exposes the conflict.",
+      "The university warns applicants not to pay admission or scholarship money into an individual's bank account.",
+      "Applicants should use the live portal status rather than an old social-media deadline or unofficial admission agent."
+    ],
+    "sources": [
+      {
+        "label": "Covenant University 2026/2027 Undergraduate Admissions",
+        "agency": "Covenant University",
+        "url": "https://admissions.covenantuniversity.edu.ng/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Covenant University Admission Portal — How to Apply",
+        "agency": "Covenant University",
+        "url": "https://admportal.covenantuniversity.edu.ng/howtoapply.php",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Covenant University 2026/2027 Admission Portal",
+        "agency": "Covenant University",
+        "url": "https://admportal.covenantuniversity.edu.ng/login.php",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "jamb-2026-utme-registration",
+      "jamb-caps",
+      "babcock-undergraduate-application-2026",
+      "pau-undergraduate-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Covenant University application 2026",
+      "Covenant University admission portal",
+      "Covenant University post UTME 2026",
+      "CUSAS 2026",
+      "Covenant University undergraduate admission"
+    ]
+  },
+  {
+    "slug": "babcock-undergraduate-application-2026",
+    "title": "How to apply to Babcock University for 2026/2027 undergraduate admission",
+    "shortTitle": "Babcock 2026 application",
+    "summary": "Babcock University's 2026/2027 undergraduate/Post-UTME application route, including JAMB eligibility, account creation, application-fee payment, biodata, credentials, screening centre selection and attestation.",
+    "category": "Education",
+    "agencySlug": "babcock-university",
+    "feeLabel": "Application fee shown in the Babcock admission portal",
+    "feeNote": "Babcock's live undergraduate portal requires online application-fee payment before the form opens fully. Confirm the current amount inside the official portal for the selected application type.",
+    "timeline": "Applications for 2026/2027 are currently open. The university does not publish one universal screening date for every applicant on the main application page.",
+    "status": "verified",
+    "officialPortal": "https://admissions.babcock.edu.ng/",
+    "requirements": [
+      "A current 2026 JAMB UTME or JAMB Direct Entry application for the relevant undergraduate route",
+      "At least five O'level credits in the required subjects within the allowed sittings; Medicine requires the published one-sitting condition",
+      "A 2026/2027 UTME aggregate score of at least 170 for the general first-degree route shown by Babcock",
+      "An applicant aged 16 or above for the current published undergraduate admission route",
+      "Babcock University as first choice by the time the admission process is completed"
+    ],
+    "steps": [
+      "Open Babcock University's official 2026/2027 admission portal and choose the undergraduate application type that matches UTME or Direct Entry.",
+      "Create the applicant account with an email address and verify the account from the activation message.",
+      "Pay the application fee through the official portal to unlock the complete application form.",
+      "Complete biodata, guardian/contact details, academic history and required document uploads, then choose the available screening centre.",
+      "Review the application, complete the attestation and submit it; if Babcock was not initially first choice, complete the required JAMB change of institution before final admission processing."
+    ],
+    "notes": [
+      "Babcock states that undergraduate admission is through JAMB UTME or JAMB Direct Entry.",
+      "The current 2026 guide says candidates who did not initially choose Babcock can apply, but must make Babcock first choice at an accredited JAMB CBT centre before completing admission.",
+      "Programme-specific O'level subjects and Medicine requirements should be checked before paying the non-routine application charge."
+    ],
+    "sources": [
+      {
+        "label": "Babcock University 2026/2027 Admission Portal",
+        "agency": "Babcock University",
+        "url": "https://admissions.babcock.edu.ng/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Babcock University — How to Apply",
+        "agency": "Babcock University",
+        "url": "https://www.babcock.edu.ng/admission/how-to-apply",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Babcock University Admission Requirements",
+        "agency": "Babcock University",
+        "url": "https://babcock.edu.ng/admission/requirements",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "jamb-2026-utme-registration",
+      "jamb-direct-entry-2026",
+      "jamb-caps",
+      "covenant-undergraduate-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Babcock University application 2026",
+      "Babcock post UTME 2026",
+      "Babcock admission portal",
+      "Babcock University requirements 2026",
+      "Babcock undergraduate admission"
+    ]
+  },
+  {
+    "slug": "abuad-undergraduate-application-2026",
+    "title": "How to apply to ABUAD for 2026/2027 undergraduate admission",
+    "shortTitle": "ABUAD 2026 application",
+    "summary": "Afe Babalola University's official 2026/2027 undergraduate application route for UTME candidates, including the admission form, screening fee, first-choice change requirement and programme-specific O'level conditions.",
+    "category": "Education",
+    "agencySlug": "abuad",
+    "feeLabel": "₦2,000 application form + ₦5,000 screening fee for current UTME route",
+    "feeNote": "ABUAD's official 2026/2027 admission notice lists ₦2,000 for the UTME admission application form plus ₦5,000 screening fee; Direct Entry and Inter-University Transfer applications are listed separately at ₦10,500.",
+    "timeline": "ABUAD says screening details will be communicated to applicants and updated on the university website/email; there is no one fixed screening date in the current general notice.",
+    "status": "verified",
+    "officialPortal": "https://admissions.abuad.edu.ng/",
+    "requirements": [
+      "A current UTME result for a standard undergraduate application",
+      "Five O'level credits in the programme's required subjects within the permitted number of sittings",
+      "An applicant who satisfies the current age requirement stated by ABUAD/JAMB",
+      "ABUAD as first-choice institution before taking the Post-UTME/screening route",
+      "Payment of the official application and screening fees through the ABUAD admissions portal"
+    ],
+    "steps": [
+      "Open ABUAD's official 2026/2027 admission notice and confirm the O'level and UTME conditions for the intended programme.",
+      "If ABUAD is not the applicant's first-choice institution, complete the required JAMB change of institution through JAMB or an approved CBT centre.",
+      "Open the official ABUAD admissions portal, complete the online application form and select the correct undergraduate application route.",
+      "Pay the current application and screening fees only through the official portal and keep the payment/application evidence.",
+      "Monitor the university website, portal and applicant email for the Post-UTME/screening schedule and subsequent admission decision."
+    ],
+    "notes": [
+      "ABUAD publishes stricter one-sitting subject requirements for programmes such as Law and MBBS than for many other programmes.",
+      "Awaiting-result candidates may apply under the university's stated conditions but must satisfy the required results before admission is finalised.",
+      "Applicants should not use past UTME or old Direct Entry forms for the current 2026/2027 exercise."
+    ],
+    "sources": [
+      {
+        "label": "ABUAD 2026/2027 Admission Exercise",
+        "agency": "Afe Babalola University",
+        "url": "https://www.abuad.edu.ng/admission-exercise-2026-2027/",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "ABUAD Admissions Portal",
+        "agency": "Afe Babalola University",
+        "url": "https://admissions.abuad.edu.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jamb-2026-utme-registration",
+      "jamb-caps",
+      "babcock-undergraduate-application-2026",
+      "pau-undergraduate-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ABUAD application 2026",
+      "Afe Babalola University post UTME 2026",
+      "ABUAD admission form 2026",
+      "ABUAD screening fee",
+      "ABUAD admission portal"
+    ]
+  },
+  {
+    "slug": "pau-undergraduate-application-2026",
+    "title": "How to apply to Pan-Atlantic University for 2026 undergraduate admission",
+    "shortTitle": "PAU 2026 application",
+    "summary": "Pan-Atlantic University's current undergraduate application route for 2026 JAMB candidates, including the university's 220 minimum score, online application portal and later JAMB change-of-institution step when required.",
+    "category": "Education",
+    "agencySlug": "pan-atlantic-university",
+    "feeLabel": "Application fee is shown in the PAU application portal",
+    "feeNote": "PAU's current programme page confirms the application portal is open but does not publish one durable application-fee amount on the public overview. Use the amount shown by the official portal.",
+    "timeline": "PAU's application portal is currently open and applicants are encouraged to apply early; the exact screening/admission timeline depends on the programme and applicant review.",
+    "status": "verified",
+    "officialPortal": "https://apply.pau.edu.ng/",
+    "requirements": [
+      "A 2026 JAMB UTME result with a minimum score of 220 under PAU's current undergraduate guidance",
+      "The O'level and programme-specific admission credentials required for the selected degree",
+      "An online PAU application submitted through the official university portal",
+      "A later JAMB change of institution to PAU if the applicant did not originally choose PAU and receives an admission letter"
+    ],
+    "steps": [
+      "Open Pan-Atlantic University's current programme/admission page and confirm that the intended undergraduate programme is accepting applicants.",
+      "Check that the applicant meets the published 2026 JAMB minimum and the programme's O'level requirements.",
+      "Open the official PAU application portal, create the applicant profile and complete the undergraduate application.",
+      "Upload or provide the required academic and personal information and pay the portal-generated application charge where required.",
+      "Monitor the application and, after receiving an admission letter, complete the JAMB change-of-institution step if PAU was not already the selected institution."
+    ],
+    "notes": [
+      "PAU states that an applicant does not need to have selected the university as first choice before submitting the PAU application.",
+      "Candidates who originally chose PAU still need to submit the separate PAU online application.",
+      "The current PAU page states a minimum 2026 JAMB score of 220, though programme competitiveness can require stronger results."
+    ],
+    "sources": [
+      {
+        "label": "Pan-Atlantic University Programmes and 2026 Application Guidance",
+        "agency": "Pan-Atlantic University",
+        "url": "https://pau.edu.ng/programmes",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      },
+      {
+        "label": "Pan-Atlantic University Admissions",
+        "agency": "Pan-Atlantic University",
+        "url": "https://pau.edu.ng/admissions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jamb-2026-utme-registration",
+      "jamb-caps",
+      "covenant-undergraduate-application-2026",
+      "abuad-undergraduate-application-2026"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Pan Atlantic University application 2026",
+      "PAU admission 2026",
+      "PAU JAMB cutoff 220",
+      "Pan Atlantic University admission portal",
+      "PAU undergraduate application"
+    ]
   }
 ]
