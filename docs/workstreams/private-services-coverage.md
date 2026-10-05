@@ -23,7 +23,7 @@ A private-service page is eligible only when all of the following are true:
 
 ## Current implementation baseline
 
-As of 2026-10-05, the workstream contains **397 private-provider service guides** inside a **628-guide total Services catalog**. This is a growing verified baseline, not the end-state. Continue the sector/provider inventory until each remaining candidate is either published with sufficient first-party evidence or explicitly excluded because it lacks distinct intent, durable evidence or enough useful procedural content.
+As of 2026-10-05, the workstream contains **401 private-provider service guides** inside a **632-guide total Services catalog**. This is a growing verified baseline, not the end-state. Continue the sector/provider inventory until each remaining candidate is either published with sufficient first-party evidence or explicitly excluded because it lacks distinct intent, durable evidence or enough useful procedural content.
 
 ## Initial private-service baseline
 
