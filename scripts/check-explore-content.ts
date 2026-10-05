@@ -30,7 +30,8 @@ for (const place of explorePlaces) {
   if (place.kind === "restaurant" && !place.cost.includes("₦") && !/price|menu|cost/i.test(place.cost)) {
     errors.push(`${place.slug}: restaurant needs useful price/cost guidance`);
   }
-  if (place.source && !place.source.href.startsWith("https://")) errors.push(`${place.slug}: source must use https`);
+  if (!place.source?.href) errors.push(`${place.slug}: every published place needs a verification source`);
+  else if (!place.source.href.startsWith("https://")) errors.push(`${place.slug}: source must use https`);
 }
 
 if (errors.length) {
