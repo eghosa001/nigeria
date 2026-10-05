@@ -17,6 +17,14 @@ function number(value: number) {
   return new Intl.NumberFormat("en-NG").format(value);
 }
 
+function duration(value: number | null) {
+  if (value == null || !Number.isFinite(value)) return "—";
+  if (value < 60) return Math.round(value) + "s";
+  const minutes = Math.floor(value / 60);
+  const seconds = Math.round(value % 60);
+  return minutes + "m " + seconds + "s";
+}
+
 function readableDate(value: string) {
   if (!/^\d{8}$/.test(value)) return value;
   const date = new Date(Number(value.slice(0, 4)), Number(value.slice(4, 6)) - 1, Number(value.slice(6, 8)));
@@ -206,18 +214,31 @@ export function AdminAnalyticsDashboard() {
           Google Search Console history remains preserved separately below, while GA4 stays enabled as a secondary reference.
           Admin paths, API paths, Next.js assets and automated QA traffic are excluded from PostHog collection.
         </p>
-        {!data.posthog.reportingConfigured ? (
+        {data.posthog.overview.available ? (
+          <>
+            <div className="analytics-metric-grid">
+              <div><span>PostHog visitors</span><strong>{number(data.posthog.overview.visitors ?? 0)}</strong><small>Unique visitors · fast web analytics</small></div>
+              <div><span>PostHog sessions</span><strong>{number(data.posthog.overview.sessions ?? 0)}</strong><small>Visits in the selected period</small></div>
+              <div><span>PostHog page views</span><strong>{number(data.posthog.overview.views ?? 0)}</strong><small>Repeated views included</small></div>
+              <div><span>Avg session</span><strong>{duration(data.posthog.overview.averageSessionDurationSeconds)}</strong><small>Average session duration</small></div>
+              <div><span>Bounce rate</span><strong>{data.posthog.overview.bounceRate == null ? "—" : (data.posthog.overview.bounceRate * 100).toFixed(1) + "%"}</strong><small>Sessions that ended without meaningful continuation</small></div>
+            </div>
+            <p className="analytics-clean-note">
+              PostHog range: {data.posthog.overview.startDate} through {data.posthog.overview.endDate}. Refresh now asks PostHog and GA4 for fresh server-side reports.
+            </p>
+          </>
+        ) : (
           <div className="admin-empty">
             <strong>PostHog is collecting traffic, but this custom admin page cannot query PostHog totals yet.</strong>
-            <p>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with read/query access. Never use that key in browser code. Until then, use the live PostHog dashboard link above for immediate totals.</p>
+            <p>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with Query: Read access. Never use that key in browser code. Until then, use the live PostHog dashboard link above for immediate totals.</p>
           </div>
-        ) : null}
+        )}
       </section>
 
       <section className="admin-panel">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">Analytics connection</span>
+            <span className="eyebrow">Secondary analytics reference</span>
             <h2>{
               data.connection?.status === "verified"
                 ? "GA4 property verified"
@@ -280,7 +301,7 @@ export function AdminAnalyticsDashboard() {
       </section>
 
       <div className="analytics-metric-grid">
-        <div><span>Processed GA4 visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
+        <div><span>GA4 processed visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
         <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
         <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
         <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
