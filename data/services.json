@@ -11653,7 +11653,7 @@
       "The correct NAFDAC guideline for locally manufactured food or imported food; the two routes do not use an identical document set",
       "Product identity, formulation/category information and labels or artwork",
       "Evidence of payment and product-specific technical documents required by the applicable guideline",
-      "For locally made food, manufacturing/facility and inspection evidence where required; for imported food, importer/foreign-manufacturer authorisation and supporting foreign documents where required"
+      "For locally made food, evidence of the manufacturing facility and NAFDAC inspection/GMP status applicable to that product line; for imported food, the Power of Attorney or contract-manufacturing document, Free Sale/Manufacture evidence and Nigerian importer incorporation documents set out in the imported-food guideline."
     ],
     "steps": [
       "Decide first whether the product is locally manufactured in Nigeria or imported, then open the matching published NAFDAC food-registration guideline.",
@@ -11739,7 +11739,7 @@
       "Evidence of official payment and any inspection or testing documents required for the application"
     ],
     "steps": [
-      "Identify whether the cosmetic is locally manufactured or imported and read the corresponding published NAFDAC cosmetics guideline.",
+      "Open NAFDAC's published cosmetics-registration guideline for the product's route—locally manufactured in Nigeria or imported—and use that route's document checklist before creating the application.",
       "Sign in to NAPAMS and start a New Product Registration under the cosmetics category.",
       "Complete the applicant, manufacturer and product information and upload the category-specific supporting documents.",
       "Make the application payment only through NAFDAC's official workflow.",
@@ -12114,7 +12114,7 @@
     "officialPortal": "https://www.cac.gov.ng/resources",
     "requirements": [
       "The registered entity name and registration number",
-      "A completed CAC Letter of Good Standing application with the addressee and applicant/delivery details requested by the form",
+      "A completed CAC-LGS-005 Letter of Good Standing form showing the entity name and registration number, intended addressee, presenter name, phone/email, delivery method and delivery address.",
       "Evidence of the applicable CAC payment",
       "For a company, up-to-date annual returns and a company secretary, as stated on CAC's Letter of Good Standing form"
     ],
