@@ -21501,5 +21501,549 @@
       "Jumia refund timeline",
       "Jumia wrong item return"
     ]
+  },
+  {
+    "slug": "bedc-map-meter-application",
+    "title": "How to apply for a BEDC prepaid meter",
+    "shortTitle": "BEDC meter application",
+    "summary": "BEDC's IMAAPS meter application route for existing active prepaid or postpaid customers, using account details, valid contact information and accepted identity evidence to create and track a MAP application.",
+    "category": "Electricity",
+    "agencySlug": "bedc",
+    "feeLabel": "Meter price depends on the current approved MAP route",
+    "feeNote": "BEDC's application system creates the meter request and MAP ID; use only the current provider-approved payment instruction for any meter amount because MAP pricing can change.",
+    "timeline": "BEDC does not publish one universal end-to-end installation time on IMAAPS; the application can be tracked with the MAP ID and registered phone number.",
+    "status": "verified",
+    "officialPortal": "https://imaap.beninelectric.com/",
+    "requirements": [
+      "An existing active BEDC prepaid or postpaid account number",
+      "A valid phone number and email address for the meter application",
+      "A valid driver's licence, international passport or National ID Card for identification",
+      "Accurate premises and customer information for BEDC's meter application form"
+    ],
+    "steps": [
+      "Open BEDC's official IMAAPS meter application portal and select the prepaid or postpaid account type.",
+      "Enter an active phone number and complete the meter application form with the valid customer and premises information.",
+      "Upload or provide the accepted identification evidence requested by BEDC and submit the application.",
+      "Save the MAP ID displayed on the screen and sent to the registered email address.",
+      "Use the MAP ID and registered phone number to sign in to the customer dashboard and monitor the meter application status."
+    ],
+    "notes": [
+      "BEDC states that applicants must already have active BEDC account numbers before using the meter application system.",
+      "The provider's self-care dashboard also links customers to the meter-ordering route.",
+      "Do not pay a private installer who cannot provide a BEDC-approved meter application/payment reference."
+    ],
+    "sources": [
+      {
+        "label": "BEDC IMAAPS Meter Application",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://imaap.beninelectric.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "BEDC Selfcare Dashboard",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://customerservice.beninelectric.com/selfcare-dashboard/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "BEDC Meter Application Explanation",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://beninelectric.com/bedc-meter-application-form-explanation/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "bedc-customer-complaint",
+      "bedc-token-resolution",
+      "electricity-prepaid-meter-application",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "BEDC meter application",
+      "BEDC prepaid meter",
+      "BEDC MAP meter",
+      "Benin Electric meter application",
+      "IMAAPS BEDC"
+    ]
+  },
+  {
+    "slug": "bedc-customer-complaint",
+    "title": "How to submit a complaint to BEDC online",
+    "shortTitle": "BEDC complaint",
+    "summary": "BEDC's Quick Complaint and customer-care route lets customers log billing, metering, payment, supply and other issues with an account number, category, contact information and supporting attachment.",
+    "category": "Electricity",
+    "agencySlug": "bedc",
+    "feeLabel": "No complaint-submission fee",
+    "feeNote": "BEDC does not state a fee for submitting a complaint through its official CRM portal or customer-care channels.",
+    "timeline": "BEDC's contact page says its team usually responds within 24 hours, while actual resolution time depends on the complaint category and investigation required.",
+    "status": "verified",
+    "officialPortal": "https://crm.beninelectric.com/complaints",
+    "requirements": [
+      "The BEDC account number connected to the complaint",
+      "A complaint category and subject that match the billing, meter, payment, supply or other issue",
+      "A working phone number and optional email address for follow-up",
+      "A clear complaint description and any useful supporting file such as a receipt, bill or meter photograph"
+    ],
+    "steps": [
+      "Open BEDC's official Quick Complaint portal and enter the customer account number.",
+      "Choose the complaint category and subject and enter the customer's phone number and email address.",
+      "Write a specific description of the issue and upload supporting evidence when it will help BEDC investigate.",
+      "Submit the complaint and keep the CRM acknowledgement or ticket details returned by BEDC.",
+      "Use BEDC's 24/7 call centre, WhatsApp or customer-complaint email for follow-up if the issue remains unresolved."
+    ],
+    "notes": [
+      "BEDC's complaint-management policy says complaints from website, phone, email and walk-in channels are logged in the CRM and assigned for resolution.",
+      "BEDC publishes separate channels for urgent safety/fault reporting as well as ordinary customer complaints.",
+      "Keep transaction references and screenshots when the issue concerns payment, vending or billing."
+    ],
+    "sources": [
+      {
+        "label": "BEDC Quick Complaint",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://crm.beninelectric.com/complaints",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "BEDC Customer Care",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://beninelectric.com/customer-care/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "BEDC Contact",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://beninelectric.com/contact/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "BEDC Customer Complaints Management Policy",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://policies.beninelectric.com/BEDCPolicyCCU001-2024_POLICY%20ON%20CUSTOMER%20COMPLAINTS%20MANAGEMENT.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2025"
+      }
+    ],
+    "related": [
+      "bedc-map-meter-application",
+      "bedc-token-resolution",
+      "electricity-meter-paid-not-installed"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "BEDC complaint",
+      "Benin Electric complaint portal",
+      "BEDC customer care",
+      "BEDC billing complaint",
+      "BEDC meter complaint"
+    ]
+  },
+  {
+    "slug": "bedc-token-resolution",
+    "title": "What to do when a BEDC prepaid token is missing or will not load",
+    "shortTitle": "BEDC token resolution",
+    "summary": "BEDC provides a dedicated PPM Token Resolution route for customers who cannot retrieve or load a prepaid recharge token, alongside its complaint and 24/7 customer-care channels.",
+    "category": "Electricity",
+    "agencySlug": "bedc",
+    "feeLabel": "No token-resolution fee stated",
+    "feeNote": "BEDC does not state a separate fee for reporting a prepaid-token problem through its official customer-care route.",
+    "timeline": "BEDC does not publish one universal token-resolution time; the provider investigates the vending/meter issue using the customer's payment and meter details.",
+    "status": "verified",
+    "officialPortal": "https://beninelectric.com/customer-care/",
+    "requirements": [
+      "The BEDC prepaid meter/account number connected to the failed or missing token",
+      "The payment amount, transaction reference and payment channel used for the recharge",
+      "The token itself when a token was issued but the meter refuses to load it",
+      "A working phone/email contact for BEDC follow-up"
+    ],
+    "steps": [
+      "Open BEDC's official Customer Care page and choose the PPM Token Resolution or Report Token Issue route.",
+      "Enter the meter/account and transaction information requested for the failed or missing recharge token.",
+      "Describe whether the token was not issued, was rejected by the meter or produced another meter error.",
+      "Submit the issue and keep the payment receipt and complaint/reference details while BEDC investigates.",
+      "If the token issue remains unresolved, use the 24/7 call centre, WhatsApp or Quick Complaint portal with the same transaction evidence."
+    ],
+    "notes": [
+      "A successful payment and a successful meter token load are separate stages, so keep payment evidence even when the meter rejects a token.",
+      "BEDC's customer-care page explicitly provides a PPM Token Resolution route.",
+      "Do not buy another large token until the original transaction status is understood."
+    ],
+    "sources": [
+      {
+        "label": "BEDC Customer Care — PPM Token Resolution",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://beninelectric.com/customer-care/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "BEDC Quick Complaint",
+        "agency": "BEDC Electricity Plc",
+        "url": "https://crm.beninelectric.com/complaints",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "bedc-customer-complaint",
+      "bedc-map-meter-application"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "BEDC token not loading",
+      "BEDC token retrieval",
+      "BEDC prepaid token problem",
+      "BEDC PPM token resolution",
+      "Benin Electric token error"
+    ]
+  },
+  {
+    "slug": "zenith-emergency-account-block",
+    "title": "How to block a Zenith Bank account with *966*911#",
+    "shortTitle": "Zenith emergency block",
+    "summary": "Zenith Bank publishes *966*911# as its emergency self-service code for automatically blocking an account when a phone is stolen or banking credentials may be compromised.",
+    "category": "Banking",
+    "agencySlug": "zenith-bank",
+    "feeLabel": "No emergency-block fee stated",
+    "feeNote": "Zenith Bank does not state a separate account-blocking fee in the published emergency-code guidance.",
+    "timeline": "Zenith describes *966*911# as an automatic emergency account-blocking service after the security prompts are completed.",
+    "status": "verified",
+    "officialPortal": "https://www.zenithbank.com/",
+    "requirements": [
+      "A Zenith Bank account that needs urgent protection because the customer's phone or banking credentials are compromised",
+      "Access to a phone capable of dialing the Zenith *966# service",
+      "The account/security information requested by the emergency USSD prompts"
+    ],
+    "steps": [
+      "Dial *966*911# as soon as the Zenith Bank account needs to be secured.",
+      "Enter the account or customer information requested by the emergency menu.",
+      "Complete the verification prompts and confirm the instruction to block the account.",
+      "Keep the success message and contact ZenithDirect if the emergency block cannot be completed.",
+      "Review recent transactions with Zenith Bank before requesting restoration of normal account access."
+    ],
+    "notes": [
+      "Zenith's 2025 annual report explicitly identifies *966*911# as the self-service emergency code to block accounts.",
+      "The bank also publishes *966*60# for other card/self-service functions.",
+      "Never disclose a PIN, OTP or banking password to someone offering to help unblock the account."
+    ],
+    "sources": [
+      {
+        "label": "Zenith Bank Annual Report 2025 — Digital Service Codes",
+        "agency": "Zenith Bank Plc",
+        "url": "https://www.digital.zenithbank.com/pdfs/annualreport2025.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2025"
+      }
+    ],
+    "related": [
+      "zenith-online-account-opening",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Zenith Bank block account code",
+      "*966*911#",
+      "Zenith emergency USSD",
+      "block Zenith account lost phone",
+      "Zenith 911 code"
+    ]
+  },
+  {
+    "slug": "fidelity-770-ussd-banking",
+    "title": "How to register and use Fidelity Bank *770# USSD",
+    "shortTitle": "Fidelity *770#",
+    "summary": "Fidelity Bank's *770# instant-banking route for registration, account opening, transfers, airtime/data, bills, balance, card services and other supported transactions.",
+    "category": "Banking",
+    "agencySlug": "fidelity-bank",
+    "feeLabel": "USSD and transaction charges can apply",
+    "feeNote": "Fidelity publishes the available *770# services and limits, while individual banking and telecom-session charges depend on the transaction and current tariff.",
+    "timeline": "USSD registration completes during the active *770# session after the customer enters the account number and creates a PIN.",
+    "status": "verified",
+    "officialPortal": "https://fidelitybank.ng/help-support/faqs/",
+    "requirements": [
+      "An eligible Fidelity Bank account for the normal account-linked registration route",
+      "The phone number linked to the Fidelity account",
+      "The account number and a private USSD PIN created during registration"
+    ],
+    "steps": [
+      "Dial *770# from the phone linked to the Fidelity Bank account and select a transaction from the menu.",
+      "When prompted to register, enter the Fidelity account number.",
+      "Create the private *770# transaction PIN and complete the registration.",
+      "Dial *770*1# or another published *770# short code and choose the transfer, airtime, bill, balance, card or account service needed.",
+      "Authenticate the transaction with the USSD PIN and keep the success or reference message."
+    ],
+    "notes": [
+      "Fidelity currently publishes *770*01# for account opening and *770*1# for the instant-banking menu.",
+      "Its FAQ lists a cumulative daily transfer limit of ₦100,000 for the published USSD transfer service.",
+      "The bank provides separate emergency codes for card blocking and account freezing."
+    ],
+    "sources": [
+      {
+        "label": "Fidelity Bank FAQs — *770#",
+        "agency": "Fidelity Bank Plc",
+        "url": "https://www.fidelitybank.ng/help-support/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fidelity-emergency-block",
+      "fidelity-business-account-online",
+      "firstbank-894-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Fidelity Bank USSD code",
+      "*770# Fidelity",
+      "register Fidelity USSD",
+      "Fidelity transfer code",
+      "Fidelity instant banking"
+    ]
+  },
+  {
+    "slug": "fidelity-emergency-block",
+    "title": "How to block a Fidelity card or freeze an account with *770#",
+    "shortTitle": "Fidelity emergency block",
+    "summary": "Fidelity Bank publishes separate *770# emergency actions for blocking a debit card and freezing an account when a phone, card or banking access is compromised.",
+    "category": "Banking",
+    "agencySlug": "fidelity-bank",
+    "feeLabel": "No emergency-block fee stated",
+    "feeNote": "Fidelity's FAQ lists the emergency short codes but does not state a separate provider fee for the block/freeze request.",
+    "timeline": "Fidelity presents the emergency block/freeze actions as immediate USSD security services after the prompts are completed.",
+    "status": "verified",
+    "officialPortal": "https://fidelitybank.ng/help-support/faqs/",
+    "requirements": [
+      "A Fidelity Bank card or account that needs urgent protection",
+      "Access to a phone capable of dialing the *770# emergency service",
+      "The customer/account information requested by Fidelity during the security prompts"
+    ],
+    "steps": [
+      "Dial *770*911# when the urgent task is to block a Fidelity debit card.",
+      "For an account freeze, use Fidelity's published *770*PhoneNumber# emergency account-freeze route with the phone number tied to the affected account.",
+      "Complete the identity/security prompts shown by the USSD service and confirm the requested block or freeze.",
+      "Keep the success message and contact Fidelity through an official support channel if the security action fails.",
+      "Review recent transactions with the bank before restoring the card or account to normal use."
+    ],
+    "notes": [
+      "Fidelity's current FAQ distinguishes Block Card (*770*911#) from Block/Freeze Account (*770*PhoneNumber#).",
+      "A card block does not necessarily stop every other account channel.",
+      "Never reveal the *770# PIN or OTP to someone claiming to be a Fidelity support agent."
+    ],
+    "sources": [
+      {
+        "label": "Fidelity Bank FAQs — Emergency *770# Codes",
+        "agency": "Fidelity Bank Plc",
+        "url": "https://www.fidelitybank.ng/help-support/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fidelity-770-ussd-banking",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block Fidelity card",
+      "freeze Fidelity account",
+      "*770*911#",
+      "Fidelity lost phone code",
+      "Fidelity emergency USSD"
+    ]
+  },
+  {
+    "slug": "sat-registration-nigeria",
+    "title": "How to register for the SAT from Nigeria",
+    "shortTitle": "SAT Nigeria registration",
+    "summary": "College Board's international SAT registration route lets Nigerian students create or use a College Board account, choose an available test date and centre, upload the required photo and pay the international test fees online.",
+    "category": "Education",
+    "agencySlug": "college-board",
+    "feeLabel": "US$111 base international total before optional fees",
+    "feeNote": "For the 2026–27 cycle, College Board lists a US$68 SAT registration fee plus a US$43 international fee. Selected test centres and optional services can add separate fees.",
+    "timeline": "Registration follows College Board's published test-date deadlines; late registration is available worldwide for an additional fee before the late-registration deadline.",
+    "status": "verified",
+    "officialPortal": "https://satsuite.collegeboard.org/sat/registration",
+    "requirements": [
+      "A College Board account for the student registering for the SAT",
+      "An acceptable registration photo that meets College Board's photo rules",
+      "An available international SAT test date and Nigerian test centre selected during registration",
+      "A supported form of payment for the registration and international fees",
+      "Any approved accommodations or fee-waiver code that applies to the student's registration"
+    ],
+    "steps": [
+      "Open College Board's official SAT Registration page and sign in to or create the student's College Board account.",
+      "Choose an available SAT date and search for an international test centre available to the student in Nigeria.",
+      "Complete the student and school information and upload a photo that meets the SAT registration requirements.",
+      "Review the current international fee, any test-centre or optional service charge and complete payment online.",
+      "Save the My SAT registration confirmation and check the account again before test day for admission-ticket and test-centre information."
+    ],
+    "notes": [
+      "College Board says first-time SAT registration is completed online.",
+      "For the current 2026–27 cycle, the published base fee is US$68 plus a US$43 international fee.",
+      "Late registration and changes/cancellations have separate published fees and deadlines."
+    ],
+    "sources": [
+      {
+        "label": "College Board SAT Registration",
+        "agency": "College Board",
+        "url": "https://satsuite.collegeboard.org/sat/registration",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SAT International Testing",
+        "agency": "College Board",
+        "url": "https://satsuite.collegeboard.org/sat/registration/international-testing",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SAT International Fees",
+        "agency": "College Board",
+        "url": "https://satsuite.collegeboard.org/sat/registration/international-testing/fees",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "SAT Online Registration",
+        "agency": "College Board",
+        "url": "https://satsuite.collegeboard.org/sat/register/online-registration",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "toefl-registration-nigeria",
+      "gre-registration-nigeria",
+      "pte-registration-nigeria",
+      "gmat-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "SAT registration Nigeria",
+      "SAT fee Nigeria",
+      "SAT test center Nigeria",
+      "College Board SAT Nigeria",
+      "register SAT in Nigeria"
+    ]
+  },
+  {
+    "slug": "reliance-provider-directory",
+    "title": "How to find a Reliance HMO hospital or provider",
+    "shortTitle": "Reliance HMO providers",
+    "summary": "Reliance HMO plan members can use the Reliance Care app or provider pages to find eligible hospitals and other network facilities, then present their Reliance HMO ID for verification when accessing care.",
+    "category": "Health insurance",
+    "agencySlug": "reliance-hmo",
+    "feeLabel": "No provider-search fee",
+    "feeNote": "Reliance HMO does not charge a separate fee for checking the provider network.",
+    "timeline": "Provider information is available through the app and official provider resources; confirm availability with the facility before a planned visit.",
+    "status": "verified",
+    "officialPortal": "https://getreliancehealth.com/nigeria/members/",
+    "requirements": [
+      "A Reliance HMO plan or an intention to check the current provider network before enrolment",
+      "The Reliance Care app or access to Reliance HMO's official provider resources",
+      "The member's Reliance HMO ID number or digital ID when accessing care under an active plan"
+    ],
+    "steps": [
+      "Open the Reliance Care app or Reliance HMO's official member/provider resources.",
+      "Use Find a Provider or the hospital list to search by location, hospital or the provider options available for the plan.",
+      "Review the provider address and confirm that the customer's actual plan can access that facility.",
+      "Present the Reliance HMO ID number or digital ID at the eligible facility when seeking covered care.",
+      "Contact Reliance Care Center if the provider cannot verify the membership or if a special consultation requires authorisation."
+    ],
+    "notes": [
+      "Reliance HMO says members can access care immediately after receiving an ID number or ID card.",
+      "The provider network available to a member depends on the health plan.",
+      "This page only explains network/provider access and does not recommend a hospital or medical treatment."
+    ],
+    "sources": [
+      {
+        "label": "Reliance HMO Member FAQ",
+        "agency": "Reliance HMO",
+        "url": "https://getreliancehealth.com/nigeria/members/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Reliance HMO Member Resources",
+        "agency": "Reliance HMO",
+        "url": "https://getreliancehealth.com/nigeria/members/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Reliance HMO Hospitals in Lagos",
+        "agency": "Reliance HMO",
+        "url": "https://getreliancehealth.com/nigeria/providers/hospitals-in-lagos/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "reliance-small-business-plan",
+      "avon-provider-directory",
+      "hygeia-provider-directory"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Reliance HMO hospital list",
+      "Reliance HMO providers",
+      "find Reliance hospital",
+      "Reliance HMO provider network",
+      "Reliance Care find provider"
+    ]
+  },
+  {
+    "slug": "reliance-small-business-plan",
+    "title": "How to buy a Reliance HMO small-business health plan",
+    "shortTitle": "Reliance small-business plan",
+    "summary": "Reliance HMO's online small-business purchase flow lets an employer create a buyer account, receive login credentials, purchase a group health plan and assign employees to the selected cover.",
+    "category": "Health insurance",
+    "agencySlug": "reliance-hmo",
+    "feeLabel": "Plan price depends on the selected cover and payment period",
+    "feeNote": "Reliance publishes current small-business prices by plan and payment schedule. Confirm the live plan price and benefits before purchase because premiums can change.",
+    "timeline": "Reliance says the buyer receives login credentials after account creation and can purchase the plan and assign employees online; member onboarding can be completed in under 24 hours under its current business-plan FAQ.",
+    "status": "verified",
+    "officialPortal": "https://getreliancehealth.com/nigeria/small-business-purchase/",
+    "requirements": [
+      "A small business that wants a group health plan for eligible staff",
+      "The buyer/company contact details needed to create the Reliance purchase account",
+      "A selected Reliance small-business plan and payment period after reviewing the current benefits and price",
+      "Employee information needed to assign the purchased health-plan slots to staff members"
+    ],
+    "steps": [
+      "Open Reliance HMO's official Small Business Purchase page and create an account using the buyer's details.",
+      "Check the email sent by Reliance for the new buyer login credentials.",
+      "Sign in and compare the available small-business plans, benefits and current payment options.",
+      "Purchase the selected plan through Reliance's official online flow.",
+      "Add and assign the employees who should be enrolled on the purchased business health plan."
+    ],
+    "notes": [
+      "Reliance publishes separate small-business and larger employer/group health-plan routes.",
+      "Plan benefits, waiting periods and provider tiers differ, so this guide does not recommend one plan for a particular employer.",
+      "The provider says plan members can use digital IDs through the Reliance Care app after enrolment."
+    ],
+    "sources": [
+      {
+        "label": "Reliance HMO Small Business Purchase",
+        "agency": "Reliance HMO",
+        "url": "https://getreliancehealth.com/nigeria/small-business-purchase/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Reliance HMO Small Business Benefits",
+        "agency": "Reliance HMO",
+        "url": "https://getreliancehealth.com/nigeria/small-business-benefits/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Reliance HMO Business Health Plans",
+        "agency": "Reliance HMO",
+        "url": "https://getreliancehealth.com/nigeria/health-plans/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "reliance-provider-directory",
+      "avon-business-health-plan",
+      "hygeia-health-plan-purchase"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Reliance HMO small business plan",
+      "Reliance health insurance business Nigeria",
+      "buy Reliance HMO company plan",
+      "Reliance HMO staff plan",
+      "Reliance small business health insurance"
+    ]
   }
 ]
