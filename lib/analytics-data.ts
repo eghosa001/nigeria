@@ -47,6 +47,7 @@ export type AnalyticsDashboardData = {
   generatedAt: string;
   dataStartDate: string;
   cleanStartDate: string;
+  ga4Available: boolean;
   summary: {
     totalUsers: number;
     activeUsers: number;
@@ -499,11 +500,11 @@ export async function getAnalyticsDashboard(
   mode: AnalyticsTrafficMode = "clean",
   forceFresh = false,
 ): Promise<AnalyticsDashboardData> {
-  if (!analyticsReadConfigured()) throw new Error("Google Analytics Data API is not configured.");
+  const ga4Available = analyticsReadConfigured();
   const cacheKey = range + ":" + mode;
   const cached = reportCache.get(cacheKey);
   if (!forceFresh && cached && cached.expiresAt > Date.now()) {
-    const realtime = await runRealtime().catch(() => null);
+    const realtime = ga4Available ? await runRealtime().catch(() => null) : null;
     return {
       ...cached.data,
       generatedAt: new Date().toISOString(),
@@ -618,12 +619,21 @@ export async function getAnalyticsDashboard(
     limit: 20,
   };
 
+  const unavailableConnection: AnalyticsConnectionStatus = {
+    status: "unavailable",
+    verified: false,
+    measurementId: GA_MEASUREMENT_ID,
+    propertyId: config().propertyId ?? "",
+    streams: [],
+    error: "GA4 Data API is not configured. PostHog remains available independently.",
+  };
+
   const [batch, interactionReport, realtime, searchPerformance, connection, posthogOverview] = await Promise.all([
-    batchRunReports(coreRequests),
-    runReport(interactionRequest).catch(() => ({} as RunReportResponse)),
-    runRealtime().catch(() => null),
+    ga4Available ? batchRunReports(coreRequests) : Promise.resolve({ reports: [] } as BatchRunReportsResponse),
+    ga4Available ? runReport(interactionRequest).catch(() => ({} as RunReportResponse)) : Promise.resolve({} as RunReportResponse),
+    ga4Available ? runRealtime().catch(() => null) : Promise.resolve(null),
     getSearchPerformance(dataStartDate),
-    verifyAnalyticsConnection(),
+    ga4Available ? verifyAnalyticsConnection() : Promise.resolve(unavailableConnection),
     getPostHogOverview(dataStartDate, today, forceFresh),
   ]);
 
@@ -638,6 +648,7 @@ export async function getAnalyticsDashboard(
     generatedAt: new Date().toISOString(),
     dataStartDate,
     cleanStartDate: ANALYTICS_CLEAN_START,
+    ga4Available,
     summary: {
       totalUsers: Number(totalValues[0]?.value ?? 0),
       activeUsers: Number(totalValues[1]?.value ?? 0),
