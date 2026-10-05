@@ -47,8 +47,9 @@ for (const item of jobOpportunities) {
   assert(item.qualifications.length > 0, item.slug + " needs qualification guidance.");
   assert(item.requirements.length > 0, item.slug + " needs requirements.");
   assert(item.applicationSteps.length > 0, item.slug + " needs application steps.");
-  if (item.kind === "career-page") {
+  if (item.status === "career-page" || item.kind === "career-page") {
     assert(item.status === "career-page", item.slug + " employer portal must use career-page status.");
+    assert(item.kind === "career-page", item.slug + " employer portal must be normalized to career-page kind.");
     assert(!item.deadline, item.slug + " employer portal must not pretend to have one universal application deadline.");
     assert(item.fields.length >= 4, item.slug + " employer portal needs useful hiring-area coverage.");
     assert(item.qualifications.length >= 2, item.slug + " employer portal must explain how role-specific eligibility works.");

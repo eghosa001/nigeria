@@ -60,7 +60,54 @@ export type CareerOpportunity = {
   sources: JobSource[];
 };
 
-export const jobOpportunities: CareerOpportunity[] = [
+function ensureMinimum(items: string[], fallbacks: string[], minimum: number) {
+  const result = [...items];
+  for (const fallback of fallbacks) {
+    if (result.length >= minimum) break;
+    if (!result.includes(fallback)) result.push(fallback);
+  }
+  return result;
+}
+
+function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
+  if (item.status !== "career-page" && item.kind !== "career-page") return item;
+
+  const fields = item.fields.slice(0, 5).join(", ");
+  const portalLabel = item.organization + " official careers or recruitment source";
+
+  return {
+    ...item,
+    kind: "career-page",
+    qualifications: ensureMinimum(item.qualifications, [
+      "This is an employer-wide careers or recruitment page, so there is no single qualification that applies to every role.",
+      "Use the exact vacancy or programme on " + portalLabel + " as the controlling source for education, experience, licence and location requirements."
+    ], 2),
+    requirements: ensureMinimum(item.requirements, [
+      "Confirm that the exact vacancy or programme is currently visible on " + portalLabel + " before applying.",
+      "Check the selected role's location, contract type, eligibility, experience and closing date rather than assuming the portal uses one rule for every vacancy.",
+      "Use only the employer's stated application route and do not pay MyNigeriaGuide or an unofficial intermediary for access to a shortlist or interview.",
+      "If the role you want is no longer visible on the official source, treat it as unavailable until the employer republishes it."
+    ], 4),
+    documents: ensureMinimum(item.documents, [
+      "An up-to-date CV/resume tailored to the selected role.",
+      "Only the academic, professional, identity or portfolio documents requested by that exact vacancy."
+    ], 2),
+    applicationSteps: ensureMinimum(item.applicationSteps, [
+      "Open " + portalLabel + ".",
+      "Browse or search the employer's current opportunities; relevant hiring areas on this guide include " + fields + ".",
+      "Open the exact vacancy or programme and read its responsibilities, qualifications, location, deadline and application method.",
+      "Prepare only the documents requested for that selected role.",
+      "Submit through the employer's official Apply control, portal or stated application instruction and keep the confirmation."
+    ], 5),
+    sourceNotes: ensureMinimum(item.sourceNotes, [
+      "The linked source belongs to the responsible employer or organisation and is used as the primary reference for current recruitment information.",
+      "This MyNigeriaGuide page is an employer-wide portal guide; it does not claim that every role historically associated with the organisation is currently open.",
+      "Role-specific qualifications and deadlines are intentionally taken from the exact employer vacancy, not invented at portal level."
+    ], 3),
+  };
+}
+
+const rawJobOpportunities: CareerOpportunity[] = [
   {
     slug: "snv-energy-advisor-abuja-2026",
     title: "SNV Energy Advisor — Abuja",
@@ -3513,6 +3560,8 @@ export const jobOpportunities: CareerOpportunity[] = [
   },
   ...jobScaleWave
 ];
+
+export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities.map(normalizeCareerPortal);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");
