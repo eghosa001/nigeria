@@ -1403,7 +1403,7 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Event-specific; the official calendar lists multiple dates and times at this venue.",
     mapQuery: "Millennium Park Calabar Cross River Nigeria",
     source: { label: "Carnival Calabar 2026 official schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
-    checkedAt: "2026-10-04",
+    checkedAt: "2026-10-05",
     tags: ["Carnival Calabar", "festival", "Millennium Park", "events"],
   },
   {
@@ -1418,7 +1418,7 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Event-specific; check the official carnival schedule.",
     mapQuery: "U J Esuene Stadium Calabar Nigeria",
     source: { label: "Carnival Calabar 2026 official schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
-    checkedAt: "2026-10-04",
+    checkedAt: "2026-10-05",
     tags: ["Carnival Calabar", "stadium", "concerts", "events"],
   },
   {
@@ -1433,8 +1433,26 @@ export const explorePlaces: ExplorePlace[] = [
     hours: "Event-specific; the official schedule lists waterfront activities on multiple December dates.",
     mapQuery: "Marina Resort Calabar",
     source: { label: "Carnival Calabar 2026 official schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
-    checkedAt: "2026-10-04",
+    checkedAt: "2026-10-05",
     tags: ["Carnival Calabar", "waterfront", "Marina Resort", "festival"],
+  },
+
+  {
+    slug: "sheraton-ikeja-bo-conference-2026",
+    guideSlug: "beneficial-ownership-asset-recovery-conference-2026",
+    name: "Sheraton Hotels, Ikeja",
+    kind: "hotel",
+    area: "Ikeja",
+    address: "30 Mobolaji Bank Anthony Way, Ikeja, Lagos, Nigeria",
+    summary: "Official venue for the 8–11 November 2026 Global Conference on Beneficial Ownership & Asset Recovery, with the main conference programme on 9–10 November.",
+    cost: "Conference registration: ₦250,000 early bird to 15 October; ₦300,000 late registration from 16 October to 5 November. Hotel rooms are separate.",
+    hours: "Conference programme is date-specific; registration begins 8 November and departures run 11 November.",
+    phone: "+234 813 984 4430",
+    website: "https://boconference.cac.gov.ng/",
+    mapQuery: "Sheraton Lagos Hotel 30 Mobolaji Bank Anthony Way Ikeja Lagos Nigeria",
+    source: { label: "CAC Global Conference on Beneficial Ownership & Asset Recovery", href: "https://boconference.cac.gov.ng/" },
+    checkedAt: "2026-10-05",
+    tags: ["conference", "CAC", "Ikeja", "business travel", "hotel", "beneficial ownership"],
   },
 
 ];
