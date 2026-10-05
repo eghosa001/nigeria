@@ -22,9 +22,6 @@ const sectionNavigation = {
     links: [
       { href: "/services", label: "Overview" },
       { href: "/assistant", label: "Find a guide" },
-      { href: "/fees", label: "Fees" },
-      { href: "/offices", label: "Offices" },
-      { href: "/locations", label: "Locations" },
       { href: "/official-portals", label: "Official portals" },
       { href: "/updates", label: "Updates" },
     ],
@@ -33,14 +30,9 @@ const sectionNavigation = {
     label: "Jobs & Careers",
     links: [
       { href: "/jobs", label: "Overview" },
-      { href: "/jobs/deadlines", label: "Open now" },
+      { href: "/jobs/open-now", label: "Open now" },
       { href: "/jobs/government", label: "Government" },
       { href: "/jobs/private", label: "Private sector" },
-      { href: "/jobs/graduate", label: "Graduates" },
-      { href: "/jobs/internships", label: "Internships" },
-      { href: "/jobs/nysc", label: "NYSC" },
-      { href: "/jobs/engineering", label: "Engineering" },
-      { href: "/jobs/remote", label: "Remote" },
     ],
   },
   explore: {
@@ -48,11 +40,8 @@ const sectionNavigation = {
     links: [
       { href: "/explore", label: "Overview" },
       { href: "/explore#places", label: "Places" },
-      { href: "/explore#cities", label: "City guides" },
-      { href: "/explore#destinations", label: "Destinations" },
       { href: "/explore/events", label: "Events" },
-      { href: "/explore/things-to-do-lagos", label: "Lagos" },
-      { href: "/explore/things-to-do-abuja", label: "Abuja" },
+      { href: "/explore#cities", label: "City guides" },
     ],
   },
   entertainment: {
@@ -61,12 +50,7 @@ const sectionNavigation = {
       { href: "/entertainment", label: "Overview" },
       { href: "/entertainment/movies", label: "Movies" },
       { href: "/entertainment/trending", label: "Trending" },
-      { href: "/entertainment/series", label: "Series" },
       { href: "/entertainment/youtube", label: "Free on YouTube" },
-      { href: "/entertainment/releases", label: "New & upcoming" },
-      { href: "/entertainment/cinemas", label: "Cinemas" },
-      { href: "/entertainment/platforms", label: "Platforms" },
-      { href: "/entertainment/people", label: "People" },
     ],
   },
 } as const;
@@ -122,7 +106,6 @@ const mobileNavigation = [
   { href: "/services", label: "Services", icon: "services" as const },
   { href: "/explore", label: "Tour", icon: "explore" as const },
   { href: "/jobs", label: "Jobs", icon: "jobs" as const },
-  { href: "/saved", label: "Saved", icon: "saved" as const },
 ];
 
 export function SiteHeader() {
@@ -144,6 +127,10 @@ export function SiteHeader() {
             <Link className="mobile-header-action" href="/search" aria-label="Search MyNigeriaGuide">
               <NavIcon name="search" />
               <span>Search</span>
+            </Link>
+            <Link className="mobile-header-action mobile-header-action-secondary" href="/saved" aria-label="Open saved items">
+              <NavIcon name="saved" />
+              <span>Saved</span>
             </Link>
           </div>
 

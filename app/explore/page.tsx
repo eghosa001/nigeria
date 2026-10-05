@@ -58,6 +58,12 @@ export default function ExplorePage() {
     .filter((guide) => guide.kind === "destination")
     .sort((a, b) => a.shortTitle.localeCompare(b.shortTitle));
   const itineraries = exploreGuides.filter((guide) => guide.kind === "itinerary");
+  const cityPreview = cities.slice(0, 8);
+  const remainingCities = cities.slice(cityPreview.length);
+  const destinationPreview = destinations.slice(0, 12);
+  const remainingDestinations = destinations.slice(destinationPreview.length);
+  const itineraryPreview = itineraries.slice(0, 8);
+  const remainingItineraries = itineraries.slice(itineraryPreview.length);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -95,19 +101,24 @@ export default function ExplorePage() {
             </label>
             <button type="submit">Search places</button>
           </form>
-          <div className="minimal-inline-links">
+          <div className="minimal-inline-links primary-shortcuts">
             <Link href="/explore/events">Events & festivals</Link>
             <a href="#states">36 states + FCT</a>
-            <a href="#cities">City guides</a>
             <a href="#places">Places</a>
-            <a href="#destinations">Destinations</a>
             <Link href="/explore?q=restaurant#places">Restaurants</Link>
-            <Link href="/explore?q=hotel#places">Hotels & stays</Link>
-            <Link href="/explore?q=attraction#places">Attractions</Link>
-            <Link href="/explore?q=shopping#places">Shopping</Link>
-            <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
-            <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
           </div>
+          <details className="compact-link-menu">
+            <summary>More ways to explore</summary>
+            <div className="disclosure-link-grid">
+              <a href="#cities">City guides</a>
+              <a href="#destinations">Destinations</a>
+              <Link href="/explore?q=hotel#places">Hotels & stays</Link>
+              <Link href="/explore?q=attraction#places">Attractions</Link>
+              <Link href="/explore?q=shopping#places">Shopping</Link>
+              <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
+              <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -120,11 +131,14 @@ export default function ExplorePage() {
               <p>Start with a state, then use its guide to find places, routes and practical planning details.</p>
             </div>
           </div>
-          <nav className="minimal-inline-links state-index-links" aria-label="Explore Nigeria by state">
-            {stateGuideLinks.map(([state, slug]) => (
-              <Link href={"/explore/" + slug} key={state}>{state}</Link>
-            ))}
-          </nav>
+          <details className="browse-disclosure state-browser">
+            <summary>Choose a state or the FCT</summary>
+            <nav className="disclosure-link-grid state-index-links" aria-label="Explore Nigeria by state">
+              {stateGuideLinks.map(([state, slug]) => (
+                <Link href={"/explore/" + slug} key={state}>{state}</Link>
+              ))}
+            </nav>
+          </details>
         </div>
       </section>
 
@@ -134,7 +148,7 @@ export default function ExplorePage() {
             <div><span className="eyebrow">City guides</span><h2>Start with a city.</h2></div>
           </div>
           <div className="home-category-grid compact-category-grid">
-            {cities.map((guide) => (
+            {cityPreview.map((guide) => (
               <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
                 <span>{guide.region}</span>
                 <strong>{guide.shortTitle}</strong>
@@ -143,6 +157,21 @@ export default function ExplorePage() {
               </Link>
             ))}
           </div>
+          {remainingCities.length ? (
+            <details className="browse-disclosure">
+              <summary>Show {remainingCities.length} more city guides</summary>
+              <div className="home-category-grid compact-category-grid disclosure-card-grid">
+                {remainingCities.map((guide) => (
+                  <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
+                    <span>{guide.region}</span>
+                    <strong>{guide.shortTitle}</strong>
+                    <small>{guide.summary}</small>
+                    <i>Open guide →</i>
+                  </Link>
+                ))}
+              </div>
+            </details>
+          ) : null}
         </div>
       </section>
 
@@ -178,7 +207,7 @@ export default function ExplorePage() {
             <div><span className="eyebrow">Destinations</span><h2>Trips worth planning around.</h2></div>
           </div>
           <div className="minimal-travel-grid">
-            {destinations.map((guide) => (
+            {destinationPreview.map((guide) => (
               <Link className="minimal-travel-card" href={"/explore/" + guide.slug} key={guide.slug}>
                 <span>{guide.region}</span>
                 <strong>{guide.shortTitle}</strong>
@@ -186,6 +215,20 @@ export default function ExplorePage() {
               </Link>
             ))}
           </div>
+          {remainingDestinations.length ? (
+            <details className="browse-disclosure">
+              <summary>Show {remainingDestinations.length} more destinations</summary>
+              <div className="minimal-travel-grid disclosure-card-grid">
+                {remainingDestinations.map((guide) => (
+                  <Link className="minimal-travel-card" href={"/explore/" + guide.slug} key={guide.slug}>
+                    <span>{guide.region}</span>
+                    <strong>{guide.shortTitle}</strong>
+                    <small>Plan this trip →</small>
+                  </Link>
+                ))}
+              </div>
+            </details>
+          ) : null}
         </div>
       </section>
 
@@ -196,7 +239,7 @@ export default function ExplorePage() {
               <div><span className="eyebrow">Short trips</span><h2>Ideas for the time you have.</h2></div>
             </div>
             <div className="home-category-grid compact-category-grid">
-              {itineraries.map((guide) => (
+              {itineraryPreview.map((guide) => (
                 <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
                   <span>{guide.region}</span>
                   <strong>{guide.shortTitle}</strong>
@@ -205,6 +248,21 @@ export default function ExplorePage() {
                 </Link>
               ))}
             </div>
+            {remainingItineraries.length ? (
+              <details className="browse-disclosure">
+                <summary>Show {remainingItineraries.length} more trip ideas</summary>
+                <div className="home-category-grid compact-category-grid disclosure-card-grid">
+                  {remainingItineraries.map((guide) => (
+                    <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
+                      <span>{guide.region}</span>
+                      <strong>{guide.shortTitle}</strong>
+                      <small>{guide.summary}</small>
+                      <i>See trip →</i>
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            ) : null}
           </div>
         </section>
       ) : null}

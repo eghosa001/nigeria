@@ -9,11 +9,11 @@ import { queryServiceDirectory, type ServiceDirectorySort, type ServiceDirectory
 const popularServiceLinks = [
   { label: "CAC registration", href: "/topics/cac-business" },
   { label: "ECOWAS Travel Certificate", href: "/services/ecowas-travel-certificate" },
-  { label: "ASIN registration", href: "/services/anambra-asin-registration" },
   { label: "NECO result token", href: "/services/neco-purchase-result-token" },
-  { label: "NIP transfer status", href: "/services/nip-transfer-status" },
   { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
 ];
+
+const featuredServiceCategories = ["Identity", "Education", "Immigration", "Business", "Foreign visas", "State services"];
 
 type ServiceSearchParams = {
   q?: string;
@@ -54,6 +54,11 @@ export default async function ServicesPage({
 }) {
   const params = await searchParams;
   const categoryNames = categories.map((category) => category.name);
+  const primaryCategories = featuredServiceCategories
+    .map((name) => categories.find((category) => category.name === name))
+    .filter((category): category is (typeof categories)[number] => Boolean(category));
+  const primaryCategoryNames = new Set(primaryCategories.map((category) => category.name));
+  const remainingCategories = categories.filter((category) => !primaryCategoryNames.has(category.name));
   const initialCategory = params.category && categoryNames.includes(params.category) ? params.category : "all";
   const initialStatus = ["verified", "conflict"].includes(params.status ?? "")
     ? params.status as ServiceDirectoryStatus
@@ -100,8 +105,8 @@ export default async function ServicesPage({
           </div>
         </div>
 
-        <nav className="service-category-nav minimal-category-nav" aria-label="Browse service categories">
-          {categories.map((category) => (
+        <nav className="service-category-nav minimal-category-nav service-category-featured" aria-label="Popular service categories">
+          {primaryCategories.map((category) => (
             <Link
               key={category.name}
               href={"/categories/" + categorySlug(category.name)}
@@ -111,6 +116,17 @@ export default async function ServicesPage({
             </Link>
           ))}
         </nav>
+
+        <details className="browse-disclosure service-category-disclosure">
+          <summary>Browse all {categories.length} service categories</summary>
+          <nav className="disclosure-link-grid" aria-label="All service categories">
+            {remainingCategories.map((category) => (
+              <Link key={category.name} href={"/categories/" + categorySlug(category.name)}>
+                {category.name}
+              </Link>
+            ))}
+          </nav>
+        </details>
 
         <div id="service-directory" className="section-search-target">
           <ServiceDirectory

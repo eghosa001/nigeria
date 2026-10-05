@@ -78,16 +78,21 @@ export default function EntertainmentPage() {
             </label>
             <button type="submit">Search movies</button>
           </form>
-          <div className="minimal-inline-links">
+          <div className="minimal-inline-links primary-shortcuts">
             <Link href="/entertainment/movies">All movies</Link>
             <Link href="/entertainment/trending">Trending now</Link>
-            <Link href="/entertainment/series">TV & web series</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
-            <Link href="/entertainment/cinemas">Cinemas</Link>
-            <Link href="/entertainment/platforms">Streaming platforms</Link>
-            <Link href="/entertainment/people">Actors & filmmakers</Link>
           </div>
+          <details className="compact-link-menu">
+            <summary>More entertainment</summary>
+            <div className="disclosure-link-grid">
+              <Link href="/entertainment/series">TV & web series</Link>
+              <Link href="/entertainment/cinemas">Cinemas</Link>
+              <Link href="/entertainment/platforms">Streaming platforms</Link>
+              <Link href="/entertainment/people">Actors & filmmakers</Link>
+            </div>
+          </details>
         </div>
       </section>
 
