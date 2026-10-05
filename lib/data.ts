@@ -730,6 +730,41 @@ export const agencies: Agency[] = [
     "shortName": "IBEDC",
     "description": "Private electricity distribution company serving Oyo, Ogun, Osun, Kwara and parts of Niger, Ekiti and Kogi with payment, metering and customer self-service.",
     "website": "https://www.ibedc.com/"
+  },
+  {
+    "slug": "ecobank-nigeria",
+    "name": "Ecobank Nigeria Limited",
+    "shortName": "Ecobank",
+    "description": "Private Nigerian bank offering personal, business, mobile, agency and account self-service across its pan-African network.",
+    "website": "https://www.ecobank.com/ng/"
+  },
+  {
+    "slug": "fcmb",
+    "name": "First City Monument Bank",
+    "shortName": "FCMB",
+    "description": "Private Nigerian bank offering personal and business accounts, digital onboarding and self-service banking.",
+    "website": "https://www.fcmb.com/"
+  },
+  {
+    "slug": "alat-wema",
+    "name": "ALAT by Wema Bank",
+    "shortName": "ALAT",
+    "description": "Wema Bank's private digital-banking platform for account opening, cards, transfers, bills and other app-based services.",
+    "website": "https://alat.ng/"
+  },
+  {
+    "slug": "sterling-bank",
+    "name": "Sterling Bank",
+    "shortName": "Sterling",
+    "description": "Private Nigerian bank offering OneBank digital onboarding, account upgrades, cards and other personal banking services.",
+    "website": "https://sterling.ng/"
+  },
+  {
+    "slug": "hygeia-hmo",
+    "name": "Hygeia HMO",
+    "shortName": "Hygeia HMO",
+    "description": "Private Nigerian health-maintenance organisation offering individual, family and business health plans with a provider network.",
+    "website": "https://hygeiahmo.com/"
   }
 ];
 
