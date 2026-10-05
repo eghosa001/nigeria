@@ -7204,5 +7204,305 @@
       "Filmhouse ticket support",
       "Filmhouse cinema refund Nigeria"
     ]
+  },
+  {
+    "slug": "momo-psb-wallet-opening",
+    "title": "How to open a MoMo PSB wallet in Nigeria",
+    "shortTitle": "MoMo PSB wallet",
+    "summary": "MoMo Payment Service Bank's wallet-opening route through the MoMo PSB app or *671#, using a mobile number, identity verification and a four-digit PIN before funding and transacting.",
+    "category": "Banking",
+    "agencySlug": "momo-psb",
+    "feeLabel": "No wallet-opening fee stated",
+    "feeNote": "MoMo PSB does not state a separate fee for opening the wallet through the app or *671# registration route.",
+    "timeline": "MoMo PSB describes the account as available after the customer completes the required onboarding/verification steps in the app or USSD flow.",
+    "status": "verified",
+    "officialPortal": "https://www.momo.ng/helppersonal/getting-started/",
+    "requirements": [
+      "A mobile phone number for the wallet registration",
+      "A valid means of identification and other KYC information requested by MoMo PSB",
+      "For a foreign applicant, evidence of residence in Nigeria and a properly registered Nigerian phone number",
+      "A four-digit MoMo PIN created for transaction authorisation"
+    ],
+    "steps": [
+      "Download the official MoMo PSB NG app or dial *671# and select the account-opening option.",
+      "Enter the mobile number and personal/KYC information requested during onboarding.",
+      "Complete the required verification checks and create the four-digit MoMo PIN.",
+      "Confirm the wallet is active and note that the phone number without the first zero can be used as the MoMo account number for bank transfers.",
+      "Fund the wallet from another bank, another MoMo wallet, a MoMo agent or an MTN touchpoint before transacting."
+    ],
+    "notes": [
+      "MoMo PSB says the account can be used for transfers, airtime/data, bills, savings and other supported services.",
+      "The provider's terms say USSD wallet operation is within Nigeria, while the app can be accessed from other locations.",
+      "Never share the four-digit MoMo PIN with an agent or caller."
+    ],
+    "sources": [
+      {
+        "label": "MoMo Getting Started",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://www.momo.ng/helppersonal/getting-started/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoMo FAQ",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://www.momo.ng/frequently-asked-questions/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoMo Terms",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://www.momo.ng/terms-and-conditions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "momo-psb-agent-onboarding",
+      "momo-psb-merchant-onboarding",
+      "momo-psb-wrong-transfer-reversal",
+      "smartcash-wallet-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open MoMo PSB account",
+      "MoMo wallet Nigeria",
+      "*671#",
+      "MoMo PSB registration",
+      "MTN MoMo account"
+    ]
+  },
+  {
+    "slug": "momo-psb-agent-onboarding",
+    "title": "How to become a MoMo PSB agent",
+    "shortTitle": "MoMo PSB agent",
+    "summary": "MoMo PSB's agent-onboarding route for businesses that want to provide cash-in/out, bill payment and other mobile-money services through the provider's digital agent onboarding platform.",
+    "category": "Business",
+    "agencySlug": "momo-psb",
+    "feeLabel": "Agent commercial terms confirmed during onboarding",
+    "feeNote": "MoMo PSB does not publish one universal agent fee on the public onboarding pages. Confirm all float, equipment and commercial terms in the official onboarding flow.",
+    "timeline": "MoMo PSB's corporate onboarding platform says applicants can complete digital onboarding in under 10 minutes before approval/status tracking, but actual activation depends on successful KYC review.",
+    "status": "verified",
+    "officialPortal": "https://corporate.momo.ng/agent",
+    "requirements": [
+      "A mobile phone number that can receive the one-time password for the agent profile",
+      "The business/identity information and KYC documents requested by MoMo PSB during onboarding",
+      "A suitable business location and the operational information required for agent services",
+      "Acceptance of the provider's agent/commercial terms before activation"
+    ],
+    "steps": [
+      "Open MoMo PSB's official Agent onboarding page and enter the phone number to start the application.",
+      "Verify the phone number using the one-time password sent by MoMo PSB.",
+      "Complete the agent profile and upload the KYC/business documents requested by the onboarding platform.",
+      "Submit the application and track the approval status through the official onboarding system.",
+      "Begin MoMo agent services such as cash-in/out, airtime/data and bill payment only after the provider activates the agent profile."
+    ],
+    "notes": [
+      "MoMo PSB says agents can earn commission by facilitating customer transactions.",
+      "The provider's corporate onboarding platform supports agent, merchant, corporate and personal account paths.",
+      "Agent credentials and PINs should remain private."
+    ],
+    "sources": [
+      {
+        "label": "MoMo Agent Onboarding",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://corporate.momo.ng/agent",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoMo Agents",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://www.momo.ng/agents/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoMo Corporate Onboarding",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://corporate.momo.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "momo-psb-wallet-opening",
+      "momo-psb-merchant-onboarding",
+      "9psb-agent-onboarding",
+      "smartcash-agent-onboarding"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "become MoMo agent Nigeria",
+      "MoMo PSB agent signup",
+      "MTN MoMo agent",
+      "MoMo agent onboarding",
+      "MoMo POS agent"
+    ]
+  },
+  {
+    "slug": "momo-psb-merchant-onboarding",
+    "title": "How to onboard as a MoMo PSB merchant",
+    "shortTitle": "MoMo merchant onboarding",
+    "summary": "MoMo PSB's digital merchant onboarding route for individuals or businesses that want to accept payments and manage merchant transactions through the provider's corporate platform.",
+    "category": "Business",
+    "agencySlug": "momo-psb",
+    "feeLabel": "Merchant fees depend on MoMo PSB terms",
+    "feeNote": "MoMo PSB's merchant terms govern applicable charges and can change, so merchants should review the live terms during onboarding.",
+    "timeline": "The provider's corporate onboarding page says the KYC application can be completed digitally in under 10 minutes, while final activation depends on successful review.",
+    "status": "verified",
+    "officialPortal": "https://corporate.momo.ng/",
+    "requirements": [
+      "A mobile phone number for OTP verification",
+      "The personal or business KYC information requested by MoMo PSB",
+      "The merchant/business details needed to identify the entity receiving payments",
+      "Acceptance of MoMo PSB's merchant terms and compliance checks"
+    ],
+    "steps": [
+      "Open MoMo PSB's official corporate onboarding platform and choose the Merchant account path.",
+      "Verify the applicant's phone number with the one-time password.",
+      "Complete the merchant profile and upload the identity/business documents requested for KYC.",
+      "Submit the onboarding application and track the approval status through the platform.",
+      "After activation, use the merchant account/app to accept and manage supported MoMo payments."
+    ],
+    "notes": [
+      "MoMo PSB defines a merchant as an individual or business entity engaged in selling goods or services.",
+      "The merchant wallet is subject to KYC and the provider's current terms.",
+      "This guide covers onboarding, not developer/API integration."
+    ],
+    "sources": [
+      {
+        "label": "MoMo Corporate Onboarding",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://corporate.momo.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoMo Merchant Terms",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://www.momo.ng/momo-merchant-terms-and-conditions/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "momo-psb-wallet-opening",
+      "momo-psb-agent-onboarding",
+      "9psb-merchant-collect",
+      "paystack-business-activation-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MoMo merchant account Nigeria",
+      "MoMo PSB merchant onboarding",
+      "MTN MoMo merchant",
+      "MoMo merchant signup",
+      "MoMo payment merchant"
+    ]
+  },
+  {
+    "slug": "momo-psb-wrong-transfer-reversal",
+    "title": "How to report a wrong MoMo PSB transfer for reversal",
+    "shortTitle": "MoMo wrong transfer reversal",
+    "summary": "MoMo PSB's complaint route for a transfer sent to the wrong recipient, including the provider's 30-day complaint window and investigation/reversal timeline where funds can be recovered.",
+    "category": "Banking",
+    "agencySlug": "momo-psb",
+    "feeLabel": "No reversal-request fee stated",
+    "feeNote": "MoMo PSB does not state a separate fee for lodging a wrong-transfer complaint under its published terms.",
+    "timeline": "MoMo PSB says a wrong-transfer complaint should be lodged within 30 days and that an established reversal is targeted within 5 working days, but no later than 15 working days after the wrong transfer is confirmed.",
+    "status": "verified",
+    "officialPortal": "https://momo.mtn.com/ntc/",
+    "requirements": [
+      "The transaction reference and amount for the incorrect MoMo transfer",
+      "The sender's MoMo account/wallet details and the recipient information used in the transfer",
+      "A complaint lodged within 30 days of the incident under the provider's published terms",
+      "Enough evidence for MoMo PSB to investigate whether the wrong-transfer claim is valid"
+    ],
+    "steps": [
+      "Gather the transaction reference, amount, date and recipient details for the wrong transfer.",
+      "Contact MoMo PSB through its official call centre, email, service centre or agent-support route and report the incorrect transfer within 30 days.",
+      "Provide the transaction details and any supporting evidence requested during the investigation.",
+      "Allow MoMo PSB to determine whether the funds remain available and whether the transfer can be reversed.",
+      "Keep the complaint reference and follow up through official support until the provider confirms the reversal outcome."
+    ],
+    "notes": [
+      "MoMo PSB says funds can only be held/recovered where they remain available in the recipient wallet during investigation.",
+      "The provider may be unable to recover money that has already been withdrawn or is no longer available.",
+      "Do not pay a third party who claims they can force a reversal outside MoMo PSB's official process."
+    ],
+    "sources": [
+      {
+        "label": "MoMo PSB Terms / Wrong Transfer Reversal",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://momo.mtn.com/ntc/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MoMo Support",
+        "agency": "MoMo Payment Service Bank",
+        "url": "https://www.momo.ng/home-back/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "momo-psb-wallet-opening",
+      "nip-transfer-status",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "reverse MoMo transfer",
+      "wrong MoMo transfer",
+      "MoMo PSB reversal",
+      "MTN MoMo wrong transfer",
+      "MoMo transfer complaint"
+    ]
+  },
+  {
+    "slug": "mecure-hospital-book-appointment",
+    "title": "How to book an appointment at MeCure Hospital",
+    "shortTitle": "MeCure Hospital appointment",
+    "summary": "MeCure Hospital's appointment route for scheduling a specialist consultation through its official booking/contact channels while keeping emergency cases on the hospital's 24/7 emergency route.",
+    "category": "Healthcare",
+    "agencySlug": "mecure-hospital",
+    "feeLabel": "Consultation fee depends on the selected specialist/service",
+    "feeNote": "MeCure Hospital does not publish one universal consultation fee on its public appointment page. Confirm the amount for the selected service before payment.",
+    "timeline": "Appointment timing depends on specialist availability; the hospital publishes weekday/Saturday working hours and separate 24/7 emergency coverage.",
+    "status": "verified",
+    "officialPortal": "https://www.mecurehospital.com/",
+    "requirements": [
+      "The patient's name and contact information",
+      "The specialist consultation or hospital service being requested",
+      "A preferred appointment date/time where the booking form requests one",
+      "Any referral, previous records or test results relevant to the intended consultation"
+    ],
+    "steps": [
+      "Open MeCure Hospital's official website and choose Book an Appointment.",
+      "Enter the patient/contact information requested by the hospital's booking route.",
+      "Select or describe the specialist consultation or service required and provide preferred appointment information.",
+      "Submit the appointment request and wait for the hospital's confirmation or follow-up.",
+      "Use MeCure's 24/7 emergency response contact rather than waiting for a routine appointment when immediate care is required."
+    ],
+    "notes": [
+      "MeCure Hospital publishes specialist consultation booking and separate 24/7 emergency support.",
+      "Consultation availability and pricing can differ by specialist/service.",
+      "This guide explains booking mechanics and does not recommend a clinician or treatment."
+    ],
+    "sources": [
+      {
+        "label": "MeCure Hospital",
+        "agency": "MeCure Hospital",
+        "url": "https://www.mecurehospital.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "clinix-book-appointment",
+      "duchess-book-appointment",
+      "cedarcrest-physical-appointment",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MeCure Hospital appointment",
+      "book MeCure Hospital Lagos",
+      "MeCure specialist appointment",
+      "MeCure Hospital booking",
+      "MeCure consultation"
+    ]
   }
 ]
