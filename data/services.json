@@ -13384,12 +13384,6 @@
         "agency": "Access Bank Plc",
         "url": "https://www.accessbankplc.com/personal/everyday-accounts/solo-account",
         "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Access Bank Basic Account Opening Requirements",
-        "agency": "Access Bank Plc",
-        "url": "https://www.accessbankplc.com/AccessBankGroup/media/AML/Account_Opening_Requirements.pdf",
-        "lastChecked": "2026-10-05"
       }
     ],
     "related": [
@@ -14819,12 +14813,6 @@
         "agency": "Uber",
         "url": "https://www.uber.com/ng/en/drive/requirements/vehicle-requirements/",
         "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Uber Help — Signing up to drive",
-        "agency": "Uber",
-        "url": "https://help.uber.com/driving-and-delivering/article/signing-up-to-drive-with-uber?nodeId=dba142ad-c819-4023-9067-02e94d3cfe2c",
-        "lastChecked": "2026-10-05"
       }
     ],
     "related": [
@@ -14974,12 +14962,12 @@
     "slug": "spectranet-recharge-renew-plan",
     "title": "How to recharge or renew a Spectranet plan",
     "shortTitle": "Spectranet recharge",
-    "summary": "Spectranet Nigeria's self-care and payment routes for renewing an internet plan, loading a recharge voucher, paying through supported channels and restoring service before the account grace period expires.",
+    "summary": "Spectranet Nigeria's self-care and payment routes for renewing an internet plan, loading a recharge voucher and paying through supported channels while checking the current plan and validity before renewal.",
     "category": "Internet",
     "agencySlug": "spectranet",
     "feeLabel": "Depends on the selected Spectranet plan",
     "feeNote": "Spectranet publishes current plan prices on its website. Confirm the active plan, validity and amount in Selfcare or the current plan page before payment.",
-    "timeline": "A successful online or voucher recharge can renew the service immediately once credited; Spectranet's terms say an inactive account can enter a 60-day grace period before permanent termination becomes possible.",
+    "timeline": "A successful online or voucher recharge can renew the service once the payment is credited; Spectranet does not publish one universal crediting time for every payment channel.",
     "status": "verified",
     "officialPortal": "https://selfcare.spectranet.com.ng/",
     "requirements": [
@@ -14996,8 +14984,7 @@
     ],
     "notes": [
       "Spectranet says recharge vouchers, Selfcare payments, approved banks and some direct-debit routes can be used to credit an account.",
-      "Its current unlimited and data-plan pages should be used for current prices rather than an old static tariff.",
-      "The terms state that service can ultimately be terminated when the customer does not seek reconnection within the 60-day grace period after payment becomes due."
+      "Its current unlimited and data-plan pages should be used for current prices rather than an old static tariff."
     ],
     "sources": [
       {
@@ -15005,13 +14992,6 @@
         "agency": "Spectranet Nigeria",
         "url": "https://spectranet.com.ng/?p=298",
         "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Spectranet broadband terms",
-        "agency": "Spectranet Nigeria",
-        "url": "https://spectranet.com.ng/storage/2024/10/Terms-And-Conditions.pdf",
-        "lastChecked": "2026-10-05",
-        "published": "2026"
       },
       {
         "label": "Spectranet current data plans",
