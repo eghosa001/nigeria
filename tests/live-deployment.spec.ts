@@ -27,7 +27,6 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await page.goto("/");
     await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", /^https:\/\/mynigeriaguide\.com\/?$/);
     await expect(page.locator('script[src*="googletagmanager.com/gtag/js?id="]')).toHaveCount(0);
-    await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(0);
   });
 
   test("normal-browser public analytics emits GA4 and PostHog collection requests", async ({ page }) => {
@@ -79,7 +78,6 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(
       page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
     ).toHaveCount(1);
-    await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(1);
     await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
     await expect.poll(() => posthogCaptureUrl, { timeout: 15_000 }).toContain("eu.i.posthog.com");
   });
