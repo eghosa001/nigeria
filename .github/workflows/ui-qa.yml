@@ -55,6 +55,15 @@ jobs:
             exit 0
           fi
 
+          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|components/(job-collection|jobs-directory)\.tsx$|lib/(jobs|job-topics|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-collection|jobs-directory)\.tsx$|lib/(jobs|job-topics|career-guides|sitemap-sections|global-search)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+          if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=jobs" >> "$GITHUB_OUTPUT"
+            echo "Jobs-only change; focused validation runs in CI, so browser QA is skipped."
+            exit 0
+          fi
+
           non_navigation="$(printf '%s\n' "$changed" | grep -Ev '^(components/site-header\.tsx|components/site-footer\.tsx|tests/smoke\.spec\.ts|tests/live-deployment\.spec\.ts|\.github/workflows/cloudflare-direct-deploy\.yml|\.github/workflows/ui-qa\.yml)$' || true)"
           non_homepage="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/globals\.css|tests/explore\.spec\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
           non_growth="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/jobs/(page\.tsx|graduate/page\.tsx|remote/page\.tsx)|app/entertainment/(page\.tsx|series/(page\.tsx|\[slug\]/page\.tsx)|movies/(\[slug\]/page\.tsx|october-2026/page\.tsx))|app/explore/(page\.tsx|\[slug\]/page\.tsx|things-to-do-(lagos|abuja)/page\.tsx)|data/(category-faqs|service-seo-overrides)\.ts|data/services\.json|lib/(data|growth-hubs|series|entertainment|entertainment-extras|sitemap-sections)\.ts|docs/SEARCH_DEMAND_GROWTH_PLAN\.md|scripts/verify-service-migration\.ts|tests/(explore|service-records|search-demand-growth)\.spec\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
