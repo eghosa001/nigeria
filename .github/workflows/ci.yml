@@ -25,8 +25,7 @@ jobs:
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
-            git fetch origin "${{ github.base_ref }}" --depth=1
-            changed="$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")"
+            changed="$(git diff --name-only HEAD^1 HEAD^2)"
           else
             before="${{ github.event.before }}"
             if [ -n "$before" ] && [ "$before" != "0000000000000000000000000000000000000000" ]; then

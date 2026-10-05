@@ -106,11 +106,19 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
   }];
 });
 
-export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => ({
-  ...movie,
-  source: "youtube-api" as const,
-  internalHref: "/entertainment/youtube/" + movie.videoId,
-}));
+export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[])
+  .filter((movie) =>
+    movie.metadataStatus !== "cast-pending" &&
+    Array.isArray(movie.cast) &&
+    movie.cast.length > 0 &&
+    Array.isArray(movie.featuredCast) &&
+    movie.featuredCast.length > 0,
+  )
+  .map((movie) => ({
+    ...movie,
+    source: "youtube-api" as const,
+    internalHref: "/entertainment/youtube/" + movie.videoId,
+  }));
 
 type ReviewCandidate = {
   videoId: string;
@@ -175,7 +183,6 @@ const reviewYouTubeMovies: BaseYouTubeMovieRecord[] = ((reviewData.candidates ??
   }));
 
 const byVideoIdBase = new Map<string, BaseYouTubeMovieRecord>();
-for (const movie of reviewYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
 for (const movie of generatedYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
 for (const movie of curated) {
   const discovered = byVideoIdBase.get(movie.videoId);
@@ -211,9 +218,16 @@ export const youtubeMovieLibrary: YouTubeMovieRecord[] = baseMovies
   }))
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
 
+const reviewByVideoId = new Map<string, YouTubeMovieRecord>(
+  reviewYouTubeMovies.map((movie) => [movie.videoId, { ...movie, alternateSources: [] }]),
+);
+
 const byVideoId = new Map<string, YouTubeMovieRecord>(
   youtubeMovieLibrary.map((movie) => [movie.videoId, movie]),
 );
+for (const [videoId, movie] of reviewByVideoId) {
+  if (!byVideoId.has(videoId)) byVideoId.set(videoId, movie);
+}
 
 function trendScore(movie: YouTubeMovieRecord) {
   const published = Date.parse(movie.publishedAt);
@@ -230,9 +244,7 @@ export const trendingYouTubeMovies = [...youtubeMovieLibrary].sort(
 
 export const youtubeLibraryGeneratedAt = generatedData.generatedAt as string | null;
 export const youtubePendingQualityCount = generatedData.pendingQualityCount ?? 0;
-export const youtubeReviewVisibleCount = reviewYouTubeMovies.filter(
-  (movie) => !generatedYouTubeMovies.some((generated) => generated.videoId === movie.videoId),
-).length;
+export const youtubeReviewVisibleCount = 0;
 
 export function getYouTubeMovieById(videoId: string) {
   return byVideoId.get(videoId);
