@@ -51,6 +51,8 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "pencom-job-loss-25-percent-withdrawal": "25% Pension Withdrawal Nigeria {year}: Eligibility & Steps",
   "ogun-tax-clearance-certificate": "Ogun Tax Clearance Certificate {year}: eTCC, Fee & Verify",
   "verify-vehicle-number-plate": "Verify Nigerian Number Plate {year}: FRSC Check & Steps",
+  "inec-replace-lost-damaged-pvc": "Replace Lost or Damaged PVC {year}: INEC Steps",
+  "inec-voter-transfer": "INEC Voter Transfer {year}: Change Voting Location",
 };
 
 export function getServiceSeoTitleOverride(slug: string, year: string) {
@@ -73,6 +75,14 @@ export const serviceSeoDescriptionTemplates: Record<string, string> = {
   "cac-business-name-registration": "CAC business name registration {year}: name reservation, proprietor details, registration steps, fees and the official CAC CRP.",
   "passport-renewal": "Nigerian passport renewal {year}: current NIS fees, NIN and passport requirements, online reissue steps and official application portal.",
   "ecowas-travel-certificate": "ECOWAS Travel Certificate {year}: current price, requirements, application steps and the official Nigeria Immigration Service route.",
+  "passport-application-tracking": "Track a Nigerian passport application in {year} on the official NIS status tracker using your application and reference numbers.",
+  "inec-replace-lost-damaged-pvc": "Replace a lost or damaged PVC in {year} through INEC's official voter-service route, with a current service-window check before you start.",
+  "inec-voter-transfer": "Transfer an existing INEC voter registration in {year} when changing voting location, with the current service-window check and official route.",
+  "ninauth-nin-verification": "Use NIMC's official NINAuth app in {year} to verify or share identity securely by QR code or time-limited Sharecode.",
+  "npc-check-attestation-status": "Check NPC birth-attestation status in {year} with the payment reference and download the certificate after approval.",
+  "customs-846-non-standard-vin": "Nigeria Customs 846 guide for {year}: who should use the non-standard VIN route and how an authorised declarant completes the e-Application process.",
+  "lost-nigerian-passport": "Lost Nigerian passport {year}: official NIS replacement process, including the police extract, High Court affidavit and reissue steps.",
+  "ogun-tax-clearance-certificate": "Ogun State eTCC {year}: tax-record requirements, employee or self-employed evidence, application steps and online certificate verification.",
 };
 
 export function getServiceSeoDescriptionOverride(slug: string, year: string) {
