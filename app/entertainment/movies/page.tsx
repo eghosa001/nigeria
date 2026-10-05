@@ -7,8 +7,9 @@ import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import {
   entertainmentPlatforms,
   getEntertainmentGenres,
-  type EntertainmentPlatform,
 } from "@/lib/entertainment";
+
+type BrowsePlatform = (typeof entertainmentPlatforms)[number];
 import {
   queryEntertainmentDirectory,
   type EntertainmentDirectorySort,
@@ -53,8 +54,8 @@ export default async function MoviesPage({
   const params = await searchParams;
   const platforms = [...entertainmentPlatforms];
   const genres = getEntertainmentGenres();
-  const initialPlatform = platforms.includes(params.platform as EntertainmentPlatform)
-    ? params.platform as EntertainmentPlatform
+  const initialPlatform = platforms.includes(params.platform as BrowsePlatform)
+    ? params.platform as BrowsePlatform
     : "all";
   const initialGenre = params.genre && genres.includes(params.genre) ? params.genre : "all";
   const initialSort = ["oldest", "az"].includes(params.sort ?? "")
