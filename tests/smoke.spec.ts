@@ -88,13 +88,31 @@ test("visits unlock displays reports immediately and can be locked again", async
       generatedAt: "2026-10-04T12:00:00Z", dataStartDate: "2026-09-29", cleanStartDate: "2026-09-29",
       summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
       realtimeActiveUsers: 2,
+      realtimePageViews: 3,
+      posthog: {
+        trackingConfigured: true,
+        reportingConfigured: true,
+        projectId: 294041,
+        webUrl: "https://eu.posthog.com/project/294041/web",
+        collectionStartDate: "2026-10-05",
+        overview: {
+          available: true,
+          startDate: "2026-10-05",
+          endDate: "2026-10-05",
+          visitors: 12,
+          sessions: 18,
+          views: 35,
+          averageSessionDurationSeconds: 95,
+          bounceRate: 0.42,
+        },
+      },
       daily: [{ date: "20261004", users: 12, sessions: 18, pageViews: 35 }],
       countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
       pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
       referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
       interactions: [{ event: "official_link_click", count: 9 }, { event: "guide_share", count: 4 }],
       searchPerformance: {
-        available: true, siteUrl: "sc-domain:mynigeriaguide.com",
+        available: true, source: "live", siteUrl: "sc-domain:mynigeriaguide.com",
         startDate: "2026-09-05", endDate: "2026-10-04", latestDate: "2026-10-03",
         firstIncompleteDate: null, impressions: 1460, clicks: 27, ctr: 0.0185, position: 22.5
       },
@@ -113,7 +131,8 @@ test("visits unlock displays reports immediately and can be locked again", async
   await expect(visitorMetrics).toContainText("12");
   await expect(visitorMetrics).toContainText("18");
   await expect(visitorMetrics).toContainText("35");
-  const searchMetrics = page.locator(".analytics-metric-grid").nth(1);
+  const searchPanel = page.locator(".admin-panel").filter({ hasText: "Google Search visibility" });
+  const searchMetrics = searchPanel.locator(".analytics-metric-grid");
   await expect(searchMetrics).toContainText("1,460");
   await expect(searchMetrics).toContainText("27");
   await expect(page.getByLabel("Daily page views").locator("[title]")).toHaveAttribute("title", /35 page views/);
