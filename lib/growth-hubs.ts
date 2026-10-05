@@ -968,7 +968,17 @@ export const growthHubs: GrowthHub[] = [
       { query: "book Kwik delivery", serviceSlug: "kwik-book-delivery-nigeria" },
       { query: "track Kwik delivery", serviceSlug: "kwik-track-delivery-nigeria" },
       { query: "Kwik corporate account", serviceSlug: "kwik-corporate-account" },
-      { query: "Travelstart Nigeria existing booking support", serviceSlug: "travelstart-existing-booking-support-nigeria" }
+      { query: "Travelstart Nigeria existing booking support", serviceSlug: "travelstart-existing-booking-support-nigeria" },
+      { query: "Sendbox shipping Nigeria", serviceSlug: "sendbox-create-shipment-nigeria" },
+      { query: "Sendbox tracking Nigeria", serviceSlug: "sendbox-track-shipment-nigeria" },
+      { query: "Sendbox business account", serviceSlug: "sendbox-business-account" },
+      { query: "book Euracare appointment", serviceSlug: "euracare-book-appointment" },
+      { query: "Glovo rider signup Nigeria", serviceSlug: "glovo-rider-signup-nigeria" },
+      { query: "Glovo partner Nigeria", serviceSlug: "glovo-partner-onboarding-nigeria" },
+      { query: "list hotel on Hotels.ng", serviceSlug: "hotelsng-add-hotel" },
+      { query: "order with Heyfood Nigeria", serviceSlug: "heyfood-order-nigeria" },
+      { query: "Heyfood rider signup", serviceSlug: "heyfood-rider-signup" },
+      { query: "Heyfood merchant signup", serviceSlug: "heyfood-merchant-onboarding" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1247,7 +1257,17 @@ export const growthHubs: GrowthHub[] = [
       "kwik-book-delivery-nigeria",
       "kwik-track-delivery-nigeria",
       "kwik-corporate-account",
-      "travelstart-existing-booking-support-nigeria"
+      "travelstart-existing-booking-support-nigeria",
+      "sendbox-create-shipment-nigeria",
+      "sendbox-track-shipment-nigeria",
+      "sendbox-business-account",
+      "euracare-book-appointment",
+      "glovo-rider-signup-nigeria",
+      "glovo-partner-onboarding-nigeria",
+      "hotelsng-add-hotel",
+      "heyfood-order-nigeria",
+      "heyfood-rider-signup",
+      "heyfood-merchant-onboarding"
     ]
   },
 
