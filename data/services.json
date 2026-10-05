@@ -21018,5 +21018,488 @@
       "FirstBank transfer code",
       "FirstBank *894*0#"
     ]
+  },
+  {
+    "slug": "mtn-share-airtime",
+    "title": "How to transfer MTN airtime with MTN Share",
+    "shortTitle": "MTN airtime transfer",
+    "summary": "MTN Share lets eligible MTN customers transfer airtime to another MTN line using the *321# service or SMS after creating a four-digit transfer PIN.",
+    "category": "Telecommunications",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "Free airtime transfer",
+    "feeNote": "MTN currently states that MTN Share does not charge a transfer fee; only the transferred airtime is deducted from the sender's balance.",
+    "timeline": "A successful airtime transfer is confirmed by MTN during the active USSD or SMS transaction.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/personal/mtn-share/",
+    "requirements": [
+      "An eligible MTN prepaid or postpaid line with enough positive airtime balance for the intended transfer",
+      "A four-digit MTN Share PIN created before the first transfer",
+      "The recipient's active MTN phone number and a whole-naira transfer amount"
+    ],
+    "steps": [
+      "Open MTN Share by dialing *321# and create or change the four-digit transfer PIN if the line has not been set up before.",
+      "Choose the airtime-transfer option and enter the recipient's MTN phone number and the amount to send.",
+      "Enter the MTN Share PIN and review the recipient and amount before confirming the transfer.",
+      "Alternatively, send the transfer instruction by SMS to 321 and reply YES when MTN asks for confirmation.",
+      "Keep the success message and check the airtime balance if the transaction result is unclear."
+    ],
+    "notes": [
+      "MTN currently states that a single transfer can be between ₦50 and ₦10,000 and that the daily transfer total can reach ₦100,000.",
+      "Postpaid customers can transfer only when the airtime account is in positive balance.",
+      "Never share the MTN Share PIN with a third party."
+    ],
+    "sources": [
+      {
+        "label": "MTN Share",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/personal/mtn-share/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Share Help",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/helppersonal/mtn-share/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-data-gifting",
+      "mtn-esim-activation",
+      "mtn-sim-swap-replacement"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MTN airtime transfer",
+      "MTN Share",
+      "MTN transfer code",
+      "*321# MTN airtime",
+      "send airtime MTN"
+    ]
+  },
+  {
+    "slug": "mtn-data-gifting",
+    "title": "How to transfer or gift MTN data",
+    "shortTitle": "MTN data gifting",
+    "summary": "MTN Data Gifting allows customers to transfer data from an active bundle, buy a data bundle for another MTN line or request data through USSD, SMS or the myMTN app.",
+    "category": "Telecommunications",
+    "agencySlug": "mtn-nigeria",
+    "feeLabel": "Depends on the gifting action and selected bundle",
+    "feeNote": "Buying data for another line charges the sender for the selected bundle. MTN's current service also supports transfer from an eligible active data balance; check the live menu for any current transfer rules or charges.",
+    "timeline": "The recipient is credited after a successful transfer or buy-for-a-friend transaction is confirmed by MTN.",
+    "status": "verified",
+    "officialPortal": "https://www.mtn.ng/helppersonal/data-gifting/",
+    "requirements": [
+      "An active MTN line with an eligible data balance for a transfer, or enough airtime/payment balance to buy a bundle for another line",
+      "The recipient's MTN phone number",
+      "Access to the MTN Data Gifting menu through *321*2#, *312*8#, SMS or the myMTN app"
+    ],
+    "steps": [
+      "Dial *321*2# or open the Data Gifting area in the myMTN app.",
+      "Choose whether to transfer from the existing data balance, buy a bundle for a friend or request data from another customer.",
+      "Enter the recipient or donor MTN phone number and choose the data amount or bundle shown by the service.",
+      "Review the phone number and data amount and confirm the transaction.",
+      "Keep the success message and verify the remaining data balance when transferring from an existing bundle."
+    ],
+    "notes": [
+      "MTN says all customers can access Data Gifting.",
+      "A transfer must come from an individual data plan with enough balance; separate balances cannot be combined to make one transfer.",
+      "MTN also supports scheduled/automated transfer options through the Data Gifting menu."
+    ],
+    "sources": [
+      {
+        "label": "MTN Data Gifting Help",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/helppersonal/data-gifting/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "MTN Share Data With Friends & Family",
+        "agency": "MTN Nigeria",
+        "url": "https://www.mtn.ng/share-data-with-friends-family/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-share-airtime",
+      "airtel-data-gifting",
+      "mtn-esim-activation"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "MTN data gifting",
+      "transfer MTN data",
+      "buy data for friend MTN",
+      "*321*2# MTN",
+      "MTN data transfer code"
+    ]
+  },
+  {
+    "slug": "airtel-data-gifting",
+    "title": "How to gift an Airtel data bundle",
+    "shortTitle": "Airtel data gifting",
+    "summary": "Airtel Data Gifting lets an Airtel customer buy a selected data bundle for another Airtel number through the *312# data menu or My Airtel self-care channels.",
+    "category": "Telecommunications",
+    "agencySlug": "airtel-nigeria",
+    "feeLabel": "Sender pays the selected data-bundle price",
+    "feeNote": "Airtel states that the person gifting the bundle pays the normal price of the selected plan while the beneficiary receives the gifted bundle without an additional charge.",
+    "timeline": "The beneficiary is credited after the Buy for Others transaction is completed successfully.",
+    "status": "verified",
+    "officialPortal": "https://www.airtel.com.ng/ng/personal/data/data_services/data_share_and_gifting",
+    "requirements": [
+      "An Airtel line with enough balance or a supported payment method for the selected data bundle",
+      "The beneficiary's Airtel phone number",
+      "Access to the Airtel *312# data menu or the supported Airtel self-care route"
+    ],
+    "steps": [
+      "Dial *312# on the Airtel line and open the data-plan menu.",
+      "Choose the data bundle and select the Buy for Others option.",
+      "Enter the beneficiary's Airtel phone number and review the bundle volume, validity and current price.",
+      "Confirm the purchase through the payment method shown by Airtel.",
+      "Keep the success message and ask the recipient to check the data balance if the bundle is not immediately visible."
+    ],
+    "notes": [
+      "Airtel says the gifted bundle keeps the volume and validity of the selected plan.",
+      "The beneficiary is not separately charged for receiving the gifted bundle.",
+      "Current bundle prices should be checked in the live *312# menu or Airtel app before purchase."
+    ],
+    "sources": [
+      {
+        "label": "Airtel Data Share & Gifting",
+        "agency": "Airtel Nigeria",
+        "url": "https://www.airtel.com.ng/ng/personal/data/data_services/data_share_and_gifting",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Airtel Data Plans FAQ",
+        "agency": "Airtel Nigeria",
+        "url": "https://www.airtel.com.ng/ng/personal/data/data_offers/data_plans",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "mtn-data-gifting",
+      "airtel-esim-activation",
+      "airtel-4g-sim-swap"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Airtel data gifting",
+      "gift Airtel data",
+      "Airtel buy data for others",
+      "*312# Airtel gift data",
+      "Airtel data transfer"
+    ]
+  },
+  {
+    "slug": "dstv-clear-error-code",
+    "title": "How to clear a DStv decoder error code",
+    "shortTitle": "Clear DStv error",
+    "summary": "DStv Nigeria provides error-code self-service through its website, MyDStv app, WhatsApp and *288# for eligible decoder and subscription errors.",
+    "category": "TV & streaming",
+    "agencySlug": "dstv-nigeria",
+    "feeLabel": "No error-clearing fee stated",
+    "feeNote": "DStv does not state a separate fee for using its official self-service error-clearing tools.",
+    "timeline": "Many eligible errors can be cleared through Self Service; DStv says an E17 subscription error can take up to 15 minutes to clear after the account issue is resolved.",
+    "status": "verified",
+    "officialPortal": "https://www.dstv.com/en-ng/help/error-codes/",
+    "requirements": [
+      "The DStv Smartcard/customer details for the decoder showing the error",
+      "An active subscription when the error is caused by an expired or inactive account",
+      "The exact error code displayed on the television or decoder screen"
+    ],
+    "steps": [
+      "Open DStv Nigeria's official Error Codes page and search for the exact code shown on the decoder.",
+      "Read the suggested fix and correct any subscription, Smartcard, signal or connection issue identified by DStv.",
+      "Use the online Fix Error action, MyDStv app, WhatsApp or *288# when DStv offers self-service clearing for that code.",
+      "Keep the decoder switched on while the account refresh or error-clearing instruction is being processed.",
+      "If the code remains after the provider's stated clearing period, contact DStv through an official support channel."
+    ],
+    "notes": [
+      "Different DStv error codes have different causes, so one generic reset should not be used for every error.",
+      "For E17, DStv says the error can indicate that there is no active subscription and may take up to 15 minutes to clear.",
+      "DStv's *288# service should be dialled from the mobile number registered on the account for normal self-service access."
+    ],
+    "sources": [
+      {
+        "label": "DStv Error Codes",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/help/error-codes/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DStv E17 Error",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/help/error-codes/error-code-detail/e17/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "DStv New Subscriber Self Service",
+        "agency": "DStv Nigeria",
+        "url": "https://www.dstv.com/en-ng/manage/new-to-dstv/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "dstv-pay-reconnect",
+      "dstv-change-package",
+      "gotv-clear-error-code"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "clear DStv error",
+      "DStv error code Nigeria",
+      "DStv fix error online",
+      "DStv *288# error",
+      "DStv E17 fix"
+    ]
+  },
+  {
+    "slug": "gotv-change-package",
+    "title": "How to change a GOtv package in Nigeria",
+    "shortTitle": "Change GOtv package",
+    "summary": "GOtv Nigeria subscribers can change packages through MyGOtv and official self-service channels, review the target bouquet and then pay any amount required for the new subscription.",
+    "category": "TV & streaming",
+    "agencySlug": "gotv-nigeria",
+    "feeLabel": "Depends on the selected GOtv package",
+    "feeNote": "GOtv package prices can change. Check the current package and account amount in MyGOtv or GOtv Self Service before confirming the switch.",
+    "timeline": "GOtv does not publish one universal package-change completion time; the account is updated through its self-service and billing system after the requested change and any required payment.",
+    "status": "verified",
+    "officialPortal": "https://www.gotvafrica.com/en-ng/pay/how-to-pay",
+    "requirements": [
+      "An existing GOtv subscription linked to the correct IUC/account",
+      "Access to MyGOtv or another official GOtv self-service channel",
+      "A target GOtv package currently offered to the subscriber",
+      "Funds for any amount displayed for the target package or account balance"
+    ],
+    "steps": [
+      "Open MyGOtv or GOtv Self Service and sign in to the subscription that needs the package change.",
+      "Choose the package-change option and review the packages currently available for the account.",
+      "Select the target package and review the price or account amount displayed before confirming.",
+      "Complete any required payment through an official GOtv payment channel.",
+      "Check the account in MyGOtv and use the error-clearing or support tools if the decoder does not reflect the new package."
+    ],
+    "notes": [
+      "GOtv says MyGOtv can make payments, check balance, change package and fix errors.",
+      "Current packages and prices should be read from the provider's live package page rather than an old tariff list.",
+      "Changing a package is different from replacing or upgrading decoder hardware."
+    ],
+    "sources": [
+      {
+        "label": "GOtv Ways to Pay and MyGOtv",
+        "agency": "GOtv Nigeria",
+        "url": "https://www.gotvafrica.com/en-ng/pay/how-to-pay",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GOtv Packages",
+        "agency": "GOtv Nigeria",
+        "url": "https://www.gotvafrica.com/en-ng/get/packages/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "gotv-pay-reconnect",
+      "gotv-clear-error-code",
+      "dstv-change-package"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "change GOtv package",
+      "upgrade GOtv package",
+      "downgrade GOtv package",
+      "MyGOtv change package",
+      "GOtv package Nigeria"
+    ]
+  },
+  {
+    "slug": "gotv-clear-error-code",
+    "title": "How to clear a GOtv decoder error",
+    "shortTitle": "Clear GOtv error",
+    "summary": "GOtv Nigeria provides decoder error-clearing through MyGOtv, web self-service and *288#, alongside account payment and reconnection tools.",
+    "category": "TV & streaming",
+    "agencySlug": "gotv-nigeria",
+    "feeLabel": "No error-clearing fee stated",
+    "feeNote": "GOtv does not state a separate charge for using its official self-service error-clearing tools.",
+    "timeline": "Eligible errors are processed through GOtv self-service after the relevant account or decoder issue is corrected; GOtv does not publish one universal clearing time for all codes.",
+    "status": "verified",
+    "officialPortal": "https://www.gotvafrica.com/en-ng/pay/how-to-pay",
+    "requirements": [
+      "The GOtv IUC/account details for the decoder showing the error",
+      "The exact decoder error or service problem being displayed",
+      "An active/paid subscription when the error is caused by an expired or disconnected account"
+    ],
+    "steps": [
+      "Open MyGOtv or GOtv Self Service and sign in with the correct subscription details.",
+      "Check the account balance and package status before attempting to clear a decoder error.",
+      "Choose Fix Errors in MyGOtv or use *288# from the mobile number registered with GOtv.",
+      "Follow the prompts to clear the error or reconnect the package and keep the decoder switched on during the refresh.",
+      "Contact GOtv through its official support route if the decoder remains unavailable after the account is active and the error-clearing action has completed."
+    ],
+    "notes": [
+      "GOtv's *288# channel can check what is owed, clear errors, view recent transactions and reconnect packages.",
+      "Payment and error clearing are separate steps when an expired subscription caused the decoder error.",
+      "Use the registered mobile number for the normal GOtv USSD self-service route."
+    ],
+    "sources": [
+      {
+        "label": "GOtv Ways to Pay and Self Service",
+        "agency": "GOtv Nigeria",
+        "url": "https://www.gotvafrica.com/en-ng/pay/how-to-pay",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "GOtv Contact and USSD",
+        "agency": "GOtv Nigeria",
+        "url": "https://www.gotvafrica.com/en-ng/selfservice/contact-us",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "gotv-pay-reconnect",
+      "gotv-change-package",
+      "dstv-clear-error-code"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "clear GOtv error",
+      "GOtv error code",
+      "GOtv fix error",
+      "GOtv *288#",
+      "reconnect GOtv error"
+    ]
+  },
+  {
+    "slug": "jumia-track-order",
+    "title": "How to track a Jumia order in Nigeria",
+    "shortTitle": "Track Jumia order",
+    "summary": "Jumia Nigeria's order-tracking route uses the signed-in account's Orders section to open an order, view item details and follow the delivery status and timeline.",
+    "category": "E-commerce",
+    "agencySlug": "jumia-nigeria",
+    "feeLabel": "No order-tracking fee",
+    "feeNote": "Jumia does not charge a separate fee for viewing order status in the customer account.",
+    "timeline": "Tracking updates appear as the order moves through fulfilment and delivery; the delivery estimate depends on the item, seller, fulfilment type and destination.",
+    "status": "verified",
+    "officialPortal": "https://www.jumia.com.ng/",
+    "requirements": [
+      "The Jumia account used to place the order",
+      "A placed order that is visible in the customer's Orders history",
+      "Internet access to the Jumia website or app"
+    ],
+    "steps": [
+      "Sign in to Jumia Nigeria and open the customer account menu.",
+      "Choose Orders and locate the order or item that needs to be tracked.",
+      "Open See Details for the order and select Track this Item when the tracking option is available.",
+      "Review the displayed order status, progress map or delivery timeline.",
+      "Use Jumia's official Help/Contact route if the order stops progressing beyond the expected delivery window."
+    ],
+    "notes": [
+      "Jumia's official tracking guidance shows the status inside the customer's signed-in Orders area.",
+      "Delivery timing varies by seller, Jumia Express/fulfilment route and customer location.",
+      "Do not share account passwords or payment credentials with someone claiming to provide tracking help."
+    ],
+    "sources": [
+      {
+        "label": "Jumia Nigeria",
+        "agency": "Jumia Nigeria",
+        "url": "https://www.jumia.com.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jumia Insider — How to Track Your Order",
+        "agency": "Jumia Nigeria",
+        "url": "https://blog.jumia.com.ng/how-to-track-your-order/",
+        "lastChecked": "2026-10-05",
+        "published": "2023-05-27"
+      },
+      {
+        "label": "Jumia Insider — Updated Order Tracking Tool",
+        "agency": "Jumia Nigeria",
+        "url": "https://blog.jumia.com.ng/order-tracking-tool-track-order-jumia-com-ng/",
+        "lastChecked": "2026-10-05",
+        "published": "2023-05-27"
+      }
+    ],
+    "related": [
+      "jumia-return-refund",
+      "jumia-seller-registration-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "track Jumia order",
+      "Jumia order tracking Nigeria",
+      "Jumia delivery status",
+      "Jumia track item",
+      "where is my Jumia order"
+    ]
+  },
+  {
+    "slug": "jumia-return-refund",
+    "title": "How to return an eligible Jumia order and get a refund",
+    "shortTitle": "Jumia return & refund",
+    "summary": "Jumia Nigeria's customer-protection and return route for eligible wrong, damaged, counterfeit or otherwise returnable items, with the current shopping site generally showing a 7-day eligible-item return window.",
+    "category": "E-commerce",
+    "agencySlug": "jumia-nigeria",
+    "feeLabel": "Free return for eligible items",
+    "feeNote": "Jumia's current shopping pages advertise free returns for eligible items. Return eligibility depends on product category, condition and the live return policy.",
+    "timeline": "Current Jumia shopping pages generally state a 7-day return period for eligible items, while an older JumiaPay FAQ still mentions 15 days for Jumia Mall items; check the live order/return page for the exact eligibility shown for the purchase.",
+    "status": "conflict",
+    "officialPortal": "https://www.jumia.com.ng/",
+    "requirements": [
+      "A Jumia order with an item that is eligible for return under the current product/category policy",
+      "A return reason such as wrong, damaged, counterfeit or another reason accepted for that item",
+      "The item, accessories and packaging in the condition required by Jumia's live return policy",
+      "Access to the customer's Jumia account or official customer-support route for initiating the return"
+    ],
+    "steps": [
+      "Sign in to Jumia and open the order that contains the item to be returned.",
+      "Use the return/help option shown for the eligible item and choose the return reason that matches the problem.",
+      "Follow Jumia's instructions for the return method, pickup/drop-off and any evidence requested for the item.",
+      "Keep the return confirmation and shipment/drop-off evidence until Jumia completes its review.",
+      "Monitor the customer account and payment method for the refund after Jumia accepts the returned item."
+    ],
+    "notes": [
+      "Jumia's current general shopping pages commonly state a 7-day return window for eligible items, but older official JumiaPay material contains a different Jumia Mall window; the live order eligibility should be treated as authoritative for a specific purchase.",
+      "Some categories or opened/activated products can be non-returnable even when other Jumia items have a free-return option.",
+      "Refund timing can also depend on the original payment method and the customer's bank."
+    ],
+    "sources": [
+      {
+        "label": "Jumia Nigeria Home / Return Policy Links",
+        "agency": "Jumia Nigeria",
+        "url": "https://www.jumia.com.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jumia Official Stores — Free Returns",
+        "agency": "Jumia Nigeria",
+        "url": "https://www.jumia.com.ng/mlp-official-stores/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "JumiaPay Personal FAQ",
+        "agency": "Jumia Nigeria",
+        "url": "https://pay.jumia.com.ng/cms/personal-faq.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jumia Customer Terms and Conditions",
+        "agency": "Jumia Nigeria",
+        "url": "https://pay.jumia.com.ng/cms/customers-terms-and-conditions.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jumia-track-order",
+      "jumia-seller-registration-nigeria",
+      "konga-return-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Jumia return refund Nigeria",
+      "return Jumia order",
+      "Jumia 7 day return",
+      "Jumia refund timeline",
+      "Jumia wrong item return"
+    ]
   }
 ]
