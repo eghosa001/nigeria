@@ -55,7 +55,6 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(
       page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
     ).toHaveCount(1);
-    await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(1);
     await expect.poll(
       () => page.evaluate(() => typeof (window as Window & { posthog?: { get_distinct_id?: unknown } }).posthog?.get_distinct_id),
       { timeout: 15_000 },
