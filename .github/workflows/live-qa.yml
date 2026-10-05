@@ -69,11 +69,7 @@ jobs:
           expected="$GITHUB_SHA"
           for i in {1..60}; do
             body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
-            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys
-try:
-    print(json.load(sys.stdin).get("commit",""))
-except Exception:
-    print("")')"
+            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null || true)"
             if [ "$deployed" = "$expected" ]; then
               echo "Verified production deployment: $expected"
               exit 0
