@@ -61,7 +61,14 @@ export async function getPostHogOverview(
           query: {
             kind: "WebOverviewQuery",
             dateRange: { date_from: startDate, date_to: endDate },
-            properties: [],
+            properties: [
+              {
+                key: "$raw_user_agent",
+                type: "event",
+                operator: "not_icontains",
+                value: ["GoogleAdSenseInfeed"],
+              },
+            ],
             filterTestAccounts: true,
             doPathCleaning: true,
           },

@@ -19,11 +19,13 @@ const gaBootstrap = `
   var id = "${GA_MEASUREMENT_ID}";
   var path = window.location.pathname;
   var automated = navigator.webdriver === true;
+  var userAgent = navigator.userAgent || "";
+  var adsenseCrawler = userAgent.indexOf("GoogleAdSenseInfeed") !== -1;
   var admin = path === "/admin" || path.indexOf("/admin/") === 0;
   var disabledKey = "ga-disable-" + id;
 
-  window[disabledKey] = automated || admin;
-  if (automated || admin) return;
+  window[disabledKey] = automated || adsenseCrawler || admin;
+  if (automated || adsenseCrawler || admin) return;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };

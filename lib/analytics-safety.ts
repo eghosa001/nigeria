@@ -1,5 +1,16 @@
-export function shouldEnableAnalytics(pathname: string, automatedBrowser: boolean) {
-  if (automatedBrowser) return false;
+const EXCLUDED_ANALYTICS_USER_AGENT_MARKERS = ["GoogleAdSenseInfeed"];
+
+export function shouldEnableAnalytics(
+  pathname: string,
+  automatedBrowser: boolean,
+  userAgent = "",
+) {
+  if (
+    automatedBrowser ||
+    EXCLUDED_ANALYTICS_USER_AGENT_MARKERS.some((marker) => userAgent.includes(marker))
+  ) {
+    return false;
+  }
   return pathname !== "/admin" && !pathname.startsWith("/admin/");
 }
 
