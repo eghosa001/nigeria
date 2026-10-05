@@ -4,6 +4,15 @@ import { ServiceDirectory } from "@/components/service-directory";
 import { categorySlug } from "@/lib/category";
 import { categories, publicServiceListings } from "@/lib/data";
 
+const popularServiceLinks = [
+  { label: "CAC registration", href: "/topics/cac-business" },
+  { label: "ECOWAS Travel Certificate", href: "/services/ecowas-travel-certificate" },
+  { label: "ASIN registration", href: "/services/anambra-asin-registration" },
+  { label: "NECO result token", href: "/services/neco-purchase-result-token" },
+  { label: "NIP transfer status", href: "/services/nip-transfer-status" },
+  { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
+];
+
 export const metadata: Metadata = {
   alternates: { canonical: "/services" },
   title: "Nigeria Government Services 2026: Fees, Portals & How to Apply",
@@ -27,6 +36,9 @@ export default function ServicesPage() {
             </label>
             <button type="submit">Search services</button>
           </form>
+          <div className="minimal-inline-links" aria-label="Popular service guides">
+            {popularServiceLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+          </div>
         </div>
 
         <nav className="service-category-nav minimal-category-nav" aria-label="Browse service categories">
