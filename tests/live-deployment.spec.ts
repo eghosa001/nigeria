@@ -43,23 +43,6 @@ test.describe("live MyNigeriaGuide deployment", () => {
         get: () => false,
       });
     });
-      Object.defineProperty(Navigator.prototype, "userAgent", {
-        configurable: true,
-        get: () => chromeUserAgent,
-      });
-      Object.defineProperty(Navigator.prototype, "userAgentData", {
-        configurable: true,
-        get: () => ({
-          brands: [
-            { brand: "Chromium", version: "154" },
-            { brand: "Google Chrome", version: "154" },
-            { brand: "Not_A Brand", version: "99" },
-          ],
-          mobile: false,
-          platform: "Windows",
-        }),
-      });
-    });
 
     let collectUrl = "";
     await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, async (route) => {
