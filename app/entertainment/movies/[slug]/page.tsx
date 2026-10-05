@@ -76,19 +76,23 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
   },
 };
 
-function movieImageUrl(title: EntertainmentTitle) {
+function movieImageUrl(title: EntertainmentTitle, base: string) {
   if (canDisplayEntertainmentArtwork(title) && title.artwork) return title.artwork.url;
+
   const fullMovie = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
-  const source = fullMovie ?? title.trailer;
+  const source = title.trailer ?? fullMovie;
   const videoId = source ? videoIdFromUrl(source.href) : null;
-  return videoId ? "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg" : null;
+  if (videoId) return "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg";
+
+  return base + "/entertainment/poster/" + encodeURIComponent(title.slug);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const title = getEntertainmentTitle(slug);
   if (!title) return {};
-  const image = movieImageUrl(title);
+  const base = getSiteUrl();
+  const image = movieImageUrl(title, base);
   const featuredCast = getFeaturedCast(title).slice(0, 4);
   const override = movieSeoOverrides[title.slug];
   const description = override?.description ?? `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + ". " : ""}${title.synopsis}`;
@@ -182,7 +186,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereSource = availabilityLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const featuredCast = getFeaturedCast(title);
-  const image = movieImageUrl(title);
+  const image = movieImageUrl(title, base);
 
   const movieLd = {
     "@context": "https://schema.org",

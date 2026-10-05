@@ -336,6 +336,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Six people fleeing a community devastated by oil pollution stow away on a mysterious ship and discover new dangers onboard.",
     cast: ["Adaobi Dibor", "David Ezekiel", "Sylvester Ekanem"],
     featured: true,
+    trailer: {
+      label: "Watch the official Netflix preview",
+      href: "https://www.youtube.com/watch?v=Jpo6sORWP-Y",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [
       {
         platform: "Netflix",
@@ -520,6 +528,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A young man joins an elite warrior school to pursue power, only to collide with a ruthless warlord and a dangerous love story.",
     cast: ["Femi Adebayo", "Lateef Adedimeji", "Odunlade Adekola", "Ibrahim Yekini Itele", "Bukunmi Oluwashina", "Adebayo Salami", "Fathia Balogun", "Muyiwa Ademola", "Yinka Quadri", "Debo Adedayo"],
     featuredCast: ["Femi Adebayo", "Lateef Adedimeji", "Odunlade Adekola"],
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=InNrl2-tl58",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Femi Adebayo TV",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81681240", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -624,6 +639,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Following the death of a king, the royal horseman faces a sacred duty whose disruption sets tragedy in motion.",
     cast: ["Odunlade Adekola", "Shaffy Bello", "Deyemi Okanlawon", "Omowunmi Dada", "Jide Kosoko", "Olawale 'Brymo' Olofooro"],
     featuredCast: ["Odunlade Adekola", "Shaffy Bello", "Deyemi Okanlawon"],
+    trailer: {
+      label: "Watch the official Netflix preview",
+      href: "https://www.youtube.com/watch?v=YJJaqHaCYeA",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81332042", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -715,6 +738,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "After a devastating loss, a wealthy group of friends set out for revenge against the people they hold responsible.",
     cast: ["Ramsey Nouah", "Chidi Mokeme", "Iretiola Doyle", "Ayo Makun", "Ufuoma McDermott", "Uchemba Williams", "Nadia Buari", "Segun Arinze"],
     featuredCast: ["Ramsey Nouah", "Chidi Mokeme", "Iretiola Doyle"],
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=k-SGQ507q8c",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "AY Comedian",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81689059", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -767,6 +797,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A successful man questioned after a friend's death looks back on their complicated history inside the Igbo apprenticeship system.",
     cast: ["Stan Nze", "Kanayo O. Kanayo", "Alexx Ekubo", "Atlanta Bridget Johnson", "Segun Arinze", "Chuks Joseph"],
     featuredCast: ["Stan Nze", "Kanayo O. Kanayo", "Alexx Ekubo"],
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=TqbzAm0nFJY",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Black Media Brands Studios",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81730157", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -779,6 +816,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A con artist recruits a young woman into a scheme targeting a wealthy heiress, but personal vendettas quickly complicate the plan.",
     cast: ["Adesua Etomi", "Jim Iyke", "Dakore Egbuson-Akande", "Ayoola Ayolola", "Tina Mba", "Joke Silva", "Kehinde Bankole"],
     featuredCast: ["Adesua Etomi", "Jim Iyke", "Dakore Egbuson-Akande"],
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=MInf4wcBwfk",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Anakle Films",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81270837", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix title page." }],
   },
 
@@ -812,6 +856,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "An ex-car smuggler is given only hours to deliver a government official's daughter to her captor or risk losing his own family.",
     cast: ["Gideon Okeke", "Funlola Aofiyebi-Raimi", "Darasimi Nadi", "Norbert Young", "Ivie Okujaye", "Adunni Ade", "Chidi Mokeme", "Majid Michel"],
     featuredCast: ["Gideon Okeke", "Funlola Aofiyebi-Raimi", "Chidi Mokeme"],
+    trailer: {
+      label: "Watch the official Netflix preview",
+      href: "https://www.youtube.com/watch?v=uZO5tcJmPUA",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "AfricaOnNetflix",
+      publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
+    },
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81729081", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -968,6 +1020,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A woman leaves sex work behind, moves to a small town and starts a lingerie business, drawing the hostility of a powerful preacher's wife.",
     cast: ["Kehinde Bankole", "Funlola Aofiyebi-Raimi", "Femi Branch", "Yvonne Jegede", "Yemi Blaq", "Ibrahim Chatta"],
     featuredCast: ["Kehinde Bankole", "Funlola Aofiyebi-Raimi", "Femi Branch"],
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=ZZUlTW9UNN0",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Black Media Brands Studios",
+    },
     watchLinks: [{
       platform: "Netflix",
       label: "Watch on Netflix",
@@ -1008,6 +1067,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Funke Akindele", "Jidekene Achufusi", "Uzee Usman"],
     directors: ["Funke Akindele", "Adeola Owu", "Oladele Rasheed"],
     runtimeMinutes: 134,
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=pEUZVfeCU94",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FAAN TV",
+    },
     watchLinks: [{
       platform: "Prime Video",
       label: "Open on Prime Video",
@@ -1072,6 +1138,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Bimbo Ademoye", "Shaffy Bello"],
     directors: ["Biodun Stephen"],
     runtimeMinutes: 102,
+    trailer: {
+      label: "Watch the official Prime Video trailer",
+      href: "https://www.youtube.com/watch?v=qfmVC3FPySE",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Prime Video Naija",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1188,6 +1261,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Mike Afolarin", "Mercy Aigbe"],
     directors: ["Kayode Kasum"],
     runtimeMinutes: 129,
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=seHHMphESu4",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Ajosepo official trailer",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1211,6 +1291,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Bolaji Ogunmola", "Toyin Abraham"],
     directors: ["Kayode Kasum"],
     runtimeMinutes: 112,
+    trailer: {
+      label: "Watch the official trailer",
+      href: "https://www.youtube.com/watch?v=DnIJO6C7h3g",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "Kayode Kasum",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1419,6 +1506,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Toyin Abraham", "Sambasa Nzeribe", "Omowunmi Dada"],
     directors: ["Charles Uwagbai"],
     runtimeMinutes: 102,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=z7ScF17apvQ",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1465,6 +1560,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Timini Egbuson", "Sophie Alakija", "Odunlade Adekola"],
     directors: ["Kayode Kasum"],
     runtimeMinutes: 116,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=fILvusx4jso",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1511,6 +1614,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["Toyin Abraham", "Kehinde Bankole", "Muyiwa Ademola"],
     directors: ["Adebayo Tijani"],
     runtimeMinutes: 132,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=GNYqr_1_tAg",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Kava",
       label: "Watch on Kava",
@@ -1961,6 +2072,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     directors: ["Toyin Abraham"],
     runtimeMinutes: 127,
     featured: true,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=PirgbYIPC9M",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Netflix",
       label: "Open on Netflix",
@@ -1983,6 +2102,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     directors: ["Akinola Davies Jr."],
     runtimeMinutes: 94,
     featured: true,
+    trailer: {
+      label: "Watch the official FilmOne trailer",
+      href: "https://www.youtube.com/watch?v=drRLw7-ttp0",
+      platform: "YouTube",
+      lastChecked: "2026-10-05",
+      publisher: "FilmOne NG",
+      publisherUrl: "https://www.youtube.com/@FilmOneNG",
+    },
     watchLinks: [{
       platform: "Netflix",
       label: "Open on Netflix",
