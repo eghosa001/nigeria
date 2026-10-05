@@ -1088,7 +1088,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "CIMA registration Nigeria", serviceSlug: "cima-cgma-candidate-registration" },
       { query: "CIMA exam booking Nigeria", serviceSlug: "cima-cgma-exam-scheduling" },
       { query: "Google Cloud certification Nigeria", serviceSlug: "google-cloud-certification-exam-scheduling" },
-      { query: "CFA exam deferral", serviceSlug: "cfa-exam-deferral" }
+      { query: "CFA exam deferral", serviceSlug: "cfa-exam-deferral" },
+      { query: "VFS Canada biometrics Nigeria", serviceSlug: "vfs-canada-biometrics-appointment-nigeria" },
+      { query: "VFS Canada passport submission Nigeria", serviceSlug: "vfs-canada-passport-submission-nigeria" },
+      { query: "TLScontact France Nigeria appointment", serviceSlug: "tlscontact-france-visa-appointment-nigeria" },
+      { query: "TLScontact France passport collection Nigeria", serviceSlug: "tlscontact-france-track-collect-passport-nigeria" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1487,7 +1491,11 @@ export const growthHubs: GrowthHub[] = [
       "cima-cgma-candidate-registration",
       "cima-cgma-exam-scheduling",
       "google-cloud-certification-exam-scheduling",
-      "cfa-exam-deferral"
+      "cfa-exam-deferral",
+      "vfs-canada-biometrics-appointment-nigeria",
+      "vfs-canada-passport-submission-nigeria",
+      "tlscontact-france-visa-appointment-nigeria",
+      "tlscontact-france-track-collect-passport-nigeria"
     ]
   },
 
