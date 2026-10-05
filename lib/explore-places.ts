@@ -3399,6 +3399,156 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "zamfara-state-museum-gusau",
     "kwatakashi-rocks-zamfara"
   ],
+  "national-museum-lagos-guide": [
+    "national-museum-lagos",
+    "freedom-park-lagos",
+    "tafawa-balewa-square-lagos"
+  ],
+  "abuja-national-mosque-guide": [
+    "abuja-national-mosque",
+    "national-christian-centre-abuja",
+    "millennium-park-abuja"
+  ],
+  "national-christian-centre-abuja-guide": [
+    "national-christian-centre-abuja",
+    "abuja-national-mosque",
+    "millennium-park-abuja"
+  ],
+  "benin-city-national-museum-guide": [
+    "national-museum-benin-city",
+    "igun-street",
+    "okomu-national-park-main"
+  ],
+  "igun-street-guide": [
+    "igun-street",
+    "national-museum-benin-city",
+    "okomu-national-park-main"
+  ],
+  "marina-resort-calabar-guide": [
+    "marina-resort-calabar",
+    "slave-history-museum-calabar",
+    "agbokim-waterfalls"
+  ],
+  "slave-history-museum-calabar-guide": [
+    "slave-history-museum-calabar",
+    "marina-resort-calabar",
+    "alok-ikom-monoliths"
+  ],
+  "port-harcourt-pleasure-park-guide": [
+    "port-harcourt-pleasure-park",
+    "bole-king-port-harcourt",
+    "landmark-port-harcourt-resort"
+  ],
+  "jos-museum-zoo-guide": [
+    "jos-museum-and-zoo",
+    "jos-wildlife-park",
+    "shere-hills-plateau"
+  ],
+  "becheve-nature-reserve-guide": [
+    "becheve-nature-reserve",
+    "obudu-mountain-resort-main",
+    "ulanga-mountain-obudu"
+  ],
+  "ulanga-mountain-obudu-guide": [
+    "ulanga-mountain-obudu",
+    "obudu-mountain-resort-main",
+    "becheve-nature-reserve"
+  ],
+  "wikki-warm-spring-guide": [
+    "wikki-warm-spring",
+    "yankari-game-reserve-main",
+    "marshall-caves-yankari"
+  ],
+  "marshall-caves-yankari-guide": [
+    "marshall-caves-yankari",
+    "yankari-game-reserve-main",
+    "wikki-warm-spring"
+  ],
+  "itoku-adire-market-guide": [
+    "itoku-adire-market",
+    "olumo-rock",
+    "alake-palace-abeokuta"
+  ],
+  "alake-palace-abeokuta-guide": [
+    "alake-palace-abeokuta",
+    "centenary-hall-abeokuta",
+    "itoku-adire-market"
+  ],
+  "centenary-hall-abeokuta-guide": [
+    "centenary-hall-abeokuta",
+    "alake-palace-abeokuta",
+    "itoku-adire-market"
+  ],
+  "ataoja-palace-osogbo-guide": [
+    "ataoja-palace-osogbo",
+    "osun-osogbo-sacred-grove",
+    "nike-art-centre-osogbo"
+  ],
+  "ladi-kwali-pottery-centre-guide": [
+    "ladi-kwali-pottery-centre-suleja",
+    "zuma-rock",
+    "gurara-waterfalls"
+  ],
+  "kainji-dam-guide": [
+    "kainji-dam-complex",
+    "kainji-lake-national-park-main",
+    "shagunu-beach"
+  ],
+  "shagunu-beach-guide": [
+    "shagunu-beach",
+    "kainji-lake-national-park-main",
+    "kainji-dam-complex"
+  ],
+  "sukur-hidi-palace-guide": [
+    "sukur-hidi-palace",
+    "sukur-cultural-landscape-main",
+    "sukur-terraced-fields"
+  ],
+  "sukur-terraces-guide": [
+    "sukur-terraced-fields",
+    "sukur-cultural-landscape-main",
+    "sukur-hidi-palace"
+  ],
+  "kiriji-war-museum-guide": [
+    "kiriji-war-museum",
+    "owa-obokun-statue-ilesa",
+    "erin-ijesha-waterfall-main"
+  ],
+  "owa-obokun-statue-guide": [
+    "owa-obokun-statue-ilesa",
+    "kiriji-war-museum",
+    "erin-ijesha-waterfall-main"
+  ],
+  "gashaka-hill-forts-guide": [
+    "gashaka-hill-historic-forts",
+    "gashaka-gumti-national-park-main",
+    "serti-gashaka-gumti-head-office"
+  ],
+  "gashaka-gumti-serti-guide": [
+    "serti-gashaka-gumti-head-office",
+    "gashaka-gumti-national-park-main",
+    "gashaka-hill-historic-forts"
+  ],
+  "freedom-park-lagos-guide": [
+    "freedom-park-lagos",
+    "national-museum-lagos",
+    "tafawa-balewa-square-lagos"
+  ],
+  "tafawa-balewa-square-guide": [
+    "tafawa-balewa-square-lagos",
+    "national-museum-lagos",
+    "freedom-park-lagos"
+  ],
+  "national-theatre-lagos-guide": [
+    "national-theatre-design-week-lagos-2026",
+    "freedom-park-lagos",
+    "tafawa-balewa-square-lagos"
+  ],
+  "new-afrika-shrine-guide": [
+    "new-afrika-shrine-felabration-2026",
+    "national-theatre-design-week-lagos-2026",
+    "freedom-park-lagos"
+  ],
 };
 
 export function getExplorePlacesForGuide(guideSlug: string) {
