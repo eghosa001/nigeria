@@ -33,6 +33,7 @@ if (movies.totalPages > 1) {
 
 await Promise.all([
   import("../app/services/page"),
+  import("../app/services/page/[page]/page"),
   import("../app/api/services/route"),
   import("../components/service-directory"),
   import("../app/entertainment/movies/page"),
