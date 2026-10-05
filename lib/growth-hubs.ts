@@ -360,7 +360,7 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "pension-services-nigeria",
-    title: "Pension & RSA Services in Nigeria",
+    title: "Pension Registration Nigeria 2026: RSA, PFA Transfer & Micro Pension",
     shortTitle: "Pension services",
     description: "Open or transfer an RSA, resolve missing pension contributions, use Micro Pension and understand the 25% job-loss withdrawal route.",
     intro: [
