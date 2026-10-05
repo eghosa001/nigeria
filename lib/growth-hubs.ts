@@ -1071,7 +1071,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "schedule PMP exam Nigeria", serviceSlug: "pmp-exam-scheduling" },
       { query: "Pearson VUE exam Nigeria", serviceSlug: "pearson-vue-schedule-exam" },
       { query: "book FlyBoku flight", serviceSlug: "flyboku-book-flight" },
-      { query: "book Travelstart flight Nigeria", serviceSlug: "travelstart-book-flight-nigeria" }
+      { query: "book Travelstart flight Nigeria", serviceSlug: "travelstart-book-flight-nigeria" },
+      { query: "Microsoft certification exam Nigeria", serviceSlug: "microsoft-certification-exam-scheduling" },
+      { query: "AWS certification exam Nigeria", serviceSlug: "aws-certification-exam-scheduling" },
+      { query: "Cisco certification exam Nigeria", serviceSlug: "cisco-certification-exam-registration" },
+      { query: "book Shuttlers commute", serviceSlug: "shuttlers-book-daily-commute" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1453,7 +1457,11 @@ export const growthHubs: GrowthHub[] = [
       "pmp-exam-scheduling",
       "pearson-vue-schedule-exam",
       "flyboku-book-flight",
-      "travelstart-book-flight-nigeria"
+      "travelstart-book-flight-nigeria",
+      "microsoft-certification-exam-scheduling",
+      "aws-certification-exam-scheduling",
+      "cisco-certification-exam-registration",
+      "shuttlers-book-daily-commute"
     ]
   },
 
