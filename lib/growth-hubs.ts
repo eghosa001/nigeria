@@ -777,7 +777,21 @@ export const growthHubs: GrowthHub[] = [
       { query: "KEDCO new electricity connection", serviceSlug: "kedco-new-electricity-connection" },
       { query: "KEDCO pay bill or buy token", serviceSlug: "kedco-pay-bill-buy-token" },
       { query: "file Leadway insurance claim", serviceSlug: "leadway-file-insurance-claim" },
-      { query: "block Sterling account lost phone", serviceSlug: "sterling-emergency-block-account" }
+      { query: "block Sterling account lost phone", serviceSlug: "sterling-emergency-block-account" },
+      { query: "YEDC buy units", serviceSlug: "yedc-pay-bill-buy-units" },
+      { query: "YEDC prepaid meter application", serviceSlug: "yedc-map-meter-application" },
+      { query: "YEDC new connection", serviceSlug: "yedc-new-electricity-connection" },
+      { query: "YEDC complaint online", serviceSlug: "yedc-online-complaint" },
+      { query: "JED prepaid meter recharge", serviceSlug: "jed-prepaid-meter-recharge" },
+      { query: "JED prepaid meter application", serviceSlug: "jed-map-meter-application" },
+      { query: "JED new connection", serviceSlug: "jed-new-electricity-connection" },
+      { query: "open Union Bank savings account", serviceSlug: "union-bank-basic-savings-account" },
+      { query: "Union Bank debit card request", serviceSlug: "union-bank-debit-card-management" },
+      { query: "Union Bank USSD code", serviceSlug: "union-bank-826-ussd" },
+      { query: "Keystone Bank USSD code", serviceSlug: "keystone-7111-ussd" },
+      { query: "Keystone emergency account block", serviceSlug: "keystone-emergency-account-block" },
+      { query: "buy Avon HMO plan", serviceSlug: "avon-individual-health-plan" },
+      { query: "Avon HMO hospital list", serviceSlug: "avon-provider-directory" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -879,7 +893,21 @@ export const growthHubs: GrowthHub[] = [
       "kedco-new-electricity-connection",
       "kedco-pay-bill-buy-token",
       "leadway-file-insurance-claim",
-      "sterling-emergency-block-account"
+      "sterling-emergency-block-account",
+      "yedc-pay-bill-buy-units",
+      "yedc-map-meter-application",
+      "yedc-new-electricity-connection",
+      "yedc-online-complaint",
+      "jed-prepaid-meter-recharge",
+      "jed-map-meter-application",
+      "jed-new-electricity-connection",
+      "union-bank-basic-savings-account",
+      "union-bank-debit-card-management",
+      "union-bank-826-ussd",
+      "keystone-7111-ussd",
+      "keystone-emergency-account-block",
+      "avon-individual-health-plan",
+      "avon-provider-directory"
     ]
   },
 
