@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
+import { AdSlot } from "@/components/ad-slot";
+import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { getSiteUrl } from "@/lib/site";
@@ -98,6 +100,8 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
                 {item.deadline ? <div><small>Application deadline</small><strong>{new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</strong></div> : null}
               </div>
             </section>
+
+            <AdSlot slot={AD_SLOTS.jobAfterFacts} label="Advertisement" />
 
             <section>
               <h2>Who this is for</h2>

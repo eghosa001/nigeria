@@ -1463,7 +1463,7 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
   .route-wizard { padding:20px; }
 }
 @media print {
-  .site-header,.site-footer,.guide-sidebar,.guide-quick-nav,.guide-actions,.process-actions,.ad-slot { display:none !important; }
+  .site-header,.site-footer,.guide-sidebar,.guide-quick-nav,.guide-actions,.process-actions,.ad-container { display:none !important; }
   .process-tracker { box-shadow:none; border:1px solid #bbb; }
 }
 

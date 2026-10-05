@@ -30,6 +30,23 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(0);
   });
 
+  test("production serves a live ads.txt and AdSense loader on monetised pages", async ({ page, request }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only AdSense delivery check.");
+
+    const adsTxt = await request.get("/ads.txt");
+    expect(adsTxt.status(), "ads.txt must stay live once AdSense is configured").toBe(200);
+    expect(await adsTxt.text()).toContain("google.com, pub-7517898921176341, DIRECT, f08c47fec0942fa0");
+
+    await page.goto("/services/jamb-direct-entry-2026");
+    await expect(page.locator("script[src*='pagead2.googlesyndication.com/pagead/js/adsbygoogle.js']")).toHaveCount(1);
+
+    const slots = await page.locator(".ad-container ins.adsbygoogle").evaluateAll((nodes) =>
+      nodes.map((node) => (node as HTMLElement).dataset.adSlot ?? ""),
+    );
+    expect(slots).toContain("7134087198");
+    expect(slots).toContain("8499139757");
+  });
+
   test("public analytics initializes GA4 and the PostHog SDK", async ({ page }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 

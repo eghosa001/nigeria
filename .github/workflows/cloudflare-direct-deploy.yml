@@ -19,6 +19,16 @@ jobs:
     env:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      # NEXT_PUBLIC_* values are inlined into dist/ at build time, never read from
+      # Worker bindings at runtime. They must be present for `npm run build` or the
+      # deployed bundle silently loses advertising. Keep these in Actions secrets.
+      NEXT_PUBLIC_ADSENSE_CLIENT: ${{ secrets.NEXT_PUBLIC_ADSENSE_CLIENT }}
+      NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_AFTER_ANSWER: ${{ secrets.NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_AFTER_ANSWER }}
+      NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_MID: ${{ secrets.NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_MID }}
+      NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_CAST: ${{ secrets.NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_CAST }}
+      NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_WATCH: ${{ secrets.NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_WATCH }}
+      NEXT_PUBLIC_ADSENSE_SLOT_JOB_AFTER_FACTS: ${{ secrets.NEXT_PUBLIC_ADSENSE_SLOT_JOB_AFTER_FACTS }}
+      NEXT_PUBLIC_ADSENSE_SLOT_TOUR_AFTER_INTRO: ${{ secrets.NEXT_PUBLIC_ADSENSE_SLOT_TOUR_AFTER_INTRO }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,10 +44,71 @@ jobs:
           else
             echo "available=true" >> "$GITHUB_OUTPUT"
           fi
+      - name: Report AdSense build inputs
+        if: steps.credentials.outputs.available == 'true'
+        shell: bash
+        run: |
+          if [ -z "${NEXT_PUBLIC_ADSENSE_CLIENT:-}" ]; then
+            echo "::warning::NEXT_PUBLIC_ADSENSE_CLIENT is empty; deploying a build with no AdSense loader and /ads.txt returns 404."
+          fi
+          missing=""
+          for slot in SERVICE_AFTER_ANSWER SERVICE_MID MOVIE_AFTER_CAST MOVIE_AFTER_WATCH JOB_AFTER_FACTS TOUR_AFTER_INTRO; do
+            if [ -z "$(printenv "NEXT_PUBLIC_ADSENSE_SLOT_${slot}")" ]; then
+              missing="${missing} NEXT_PUBLIC_ADSENSE_SLOT_${slot}"
+            fi
+          done
+          if [ -n "${missing}" ]; then
+            echo "::warning::Blank AdSense slots (renders no ad):${missing}"
+          fi
       - run: npm install --no-audit --no-fund
         if: steps.credentials.outputs.available == 'true'
       - run: npm run build
         if: steps.credentials.outputs.available == 'true'
+      - name: Verify AdSense values were inlined into the bundle
+        if: steps.credentials.outputs.available == 'true' && env.NEXT_PUBLIC_ADSENSE_CLIENT != ''
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          import path from "node:path";
+
+          const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+          const slotNames = [
+            "NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_AFTER_ANSWER",
+            "NEXT_PUBLIC_ADSENSE_SLOT_SERVICE_MID",
+            "NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_CAST",
+            "NEXT_PUBLIC_ADSENSE_SLOT_MOVIE_AFTER_WATCH",
+            "NEXT_PUBLIC_ADSENSE_SLOT_JOB_AFTER_FACTS",
+            "NEXT_PUBLIC_ADSENSE_SLOT_TOUR_AFTER_INTRO",
+          ];
+          const slots = slotNames.map((name) => process.env[name]).filter(Boolean);
+
+          if (slots.length === 0) {
+            console.error("NEXT_PUBLIC_ADSENSE_CLIENT is set but every AdSense slot secret is blank.");
+            console.error("That would deploy a loader and /ads.txt with zero ad units. Add the slot secrets.");
+            process.exit(1);
+          }
+
+          const files = [];
+          const walk = (dir) => {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const full = path.join(dir, entry.name);
+              if (entry.isDirectory()) walk(full);
+              else if (entry.name.endsWith(".js")) files.push(full);
+            }
+          };
+          walk("dist");
+
+          const corpus = files.map((f) => fs.readFileSync(f, "utf8")).join("\n");
+
+          const missing = [client, ...slots].filter((value) => !corpus.includes(value));
+          if (missing.length > 0) {
+            console.error("AdSense values were not inlined into dist/: " + missing.join(", "));
+            console.error("These NEXT_PUBLIC_* values must be set as Actions secrets before build.");
+            process.exit(1);
+          }
+          console.log(`AdSense inlining verified for ${slots.length + 1} value(s).`);
+          NODE
       - name: Deploy directly with Wrangler
         if: steps.credentials.outputs.available == 'true'
         run: npx wrangler deploy --config dist/server/wrangler.json

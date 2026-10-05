@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
+import { AD_SLOTS } from "@/lib/adsense-config";
 import { AnswerFirst } from "@/components/answer-first";
 import { getServiceSeoDescriptionOverride, getServiceSeoTitleOverride } from "@/data/service-seo-overrides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -220,6 +221,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
+      <div className="container">
+        <AdSlot slot={AD_SLOTS.serviceAfterAnswer} label="Advertisement" />
+      </div>
+
       {service.status === "conflict" ? (
         <div className="container conflict-alert">
           <strong>Confirm current details before payment</strong>
@@ -246,7 +251,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <ServiceSearchAnswers service={service} />
 
-            <AdSlot slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT_GUIDE} />
+            <AdSlot slot={AD_SLOTS.serviceMid} label="Advertisement" />
 
             <section id="notes">
               <span className="section-number" aria-hidden="true">03</span>

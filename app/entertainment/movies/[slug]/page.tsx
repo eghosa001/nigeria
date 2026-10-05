@@ -6,6 +6,8 @@ import { AnswerFirst } from "@/components/answer-first";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
+import { AdSlot } from "@/components/ad-slot";
+import { AD_SLOTS } from "@/lib/adsense-config";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTitle, getFeaturedCast, type EntertainmentTitle, type WatchLink } from "@/lib/entertainment";
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
@@ -374,6 +376,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
             </section>
 
+            <AdSlot slot={AD_SLOTS.movieAfterCast} label="Advertisement" />
+
             <section id="watch">
               <span className="eyebrow">Official availability</span>
               <h2>Where to watch {title.title}</h2>
@@ -408,6 +412,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 })}
               </div>
             </section>
+
+            <AdSlot slot={AD_SLOTS.movieAfterWatch} label="Advertisement" />
 
             {title.trailer ? (
               <section id="trailer">
