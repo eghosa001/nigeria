@@ -32,10 +32,13 @@ function googleMapsUrl(place: ExploreDirectoryPlace) {
   return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
 }
 
+const PAGE_SIZE = 6;
+
 export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirectoryPlace[]; guides: GuideSummary[] }) {
   const [query, setQuery] = useState("");
   const [kind, setKind] = useState<ExplorePlaceKind | "all">("all");
   const [guide, setGuide] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
     const syncFromUrl = () => {
@@ -64,6 +67,13 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
       ].join(" ").toLowerCase().includes(needle);
     });
   }, [places, kind, guide, query, guideNames]);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [query, kind, guide]);
+
+  const visible = filtered.slice(0, visibleCount);
+  const remaining = Math.max(0, filtered.length - visible.length);
 
   return (
     <div className="explore-directory">
@@ -99,7 +109,10 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
       </div>
 
       <div className="directory-summary">
-        <span><strong>{filtered.length}</strong> place{filtered.length === 1 ? "" : "s"} shown</span>
+        <span>
+          <strong>{filtered.length}</strong> place{filtered.length === 1 ? "" : "s"} found
+          {filtered.length ? " · showing " + visible.length : ""}
+        </span>
         {(query || kind !== "all" || guide !== "all") ? (
           <button type="button" onClick={() => { setQuery(""); setKind("all"); setGuide("all"); }}>Clear filters</button>
         ) : null}
@@ -107,7 +120,7 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
 
       {filtered.length ? (
         <div className="explore-place-grid">
-          {filtered.map((place) => (
+          {visible.map((place) => (
             <article className="explore-place-card" key={place.slug}>
               <div className="explore-place-topline">
                 <span>{kindLabel[place.kind]}</span>
@@ -132,6 +145,15 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
           <p>Try a city name, another category or clear the filters.</p>
         </div>
       )}
+
+      {remaining > 0 ? (
+        <div className="explore-directory-more">
+          <button type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>
+            Show {Math.min(PAGE_SIZE, remaining)} more places
+          </button>
+          <small>{remaining} more available</small>
+        </div>
+      ) : null}
     </div>
   );
 }
