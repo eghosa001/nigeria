@@ -910,7 +910,14 @@ export const growthHubs: GrowthHub[] = [
       { query: "book Chisco Transport", serviceSlug: "chisco-book-bus-online" },
       { query: "rebook Chisco ticket", serviceSlug: "chisco-rebook-ticket" },
       { query: "Chisco baggage allowance", serviceSlug: "chisco-baggage-allowance" },
-      { query: "book Rano Air", serviceSlug: "rano-air-book-flight" }
+      { query: "book Rano Air", serviceSlug: "rano-air-book-flight" },
+      { query: "Aramex shipping Nigeria", serviceSlug: "aramex-send-shipment-nigeria" },
+      { query: "Aramex tracking Nigeria", serviceSlug: "aramex-track-shipment-nigeria" },
+      { query: "Aramex Shop and Ship Nigeria", serviceSlug: "aramex-shop-and-ship-nigeria" },
+      { query: "book Reddington appointment", serviceSlug: "reddington-book-appointment" },
+      { query: "book Lagoon Hospital appointment", serviceSlug: "lagoon-hospital-book-appointment" },
+      { query: "inDrive driver signup Nigeria", serviceSlug: "indrive-driver-signup-nigeria" },
+      { query: "AXA Mansard motor claim", serviceSlug: "axa-mansard-motor-claim" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1131,7 +1138,14 @@ export const growthHubs: GrowthHub[] = [
       "chisco-book-bus-online",
       "chisco-rebook-ticket",
       "chisco-baggage-allowance",
-      "rano-air-book-flight"
+      "rano-air-book-flight",
+      "aramex-send-shipment-nigeria",
+      "aramex-track-shipment-nigeria",
+      "aramex-shop-and-ship-nigeria",
+      "reddington-book-appointment",
+      "lagoon-hospital-book-appointment",
+      "indrive-driver-signup-nigeria",
+      "axa-mansard-motor-claim"
     ]
   },
 
