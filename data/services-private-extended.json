@@ -1899,5 +1899,379 @@
       "ICAN exam fees Nigeria",
       "register ICAN exam"
     ]
+  },
+  {
+    "slug": "jiji-post-ad-nigeria",
+    "title": "How to post an item or service for sale on Jiji Nigeria",
+    "shortTitle": "Post an ad on Jiji",
+    "summary": "Jiji Nigeria's seller route for creating an advert with the correct category, original photos, clear description and realistic price, then submitting it for Jiji review before it goes live.",
+    "category": "E-commerce",
+    "agencySlug": "jiji-nigeria",
+    "feeLabel": "Basic ad posting can be free; premium promotion is optional",
+    "feeNote": "Jiji offers optional paid Premium Services to increase visibility. The normal posting flow should show any applicable category limit or paid promotion before the seller chooses it.",
+    "timeline": "Jiji reviews new and edited adverts before they appear publicly; its current help says declined-ad corrections can often be reviewed within about one or two hours after resubmission.",
+    "status": "verified",
+    "officialPortal": "https://jiji.ng/faq/how-to-sell",
+    "requirements": [
+      "A Jiji account/profile for the seller",
+      "One legal item, service, vacancy or other permitted offer per advert",
+      "Original, relevant photos without contact details or watermarks where the category uses photos",
+      "A clear title, truthful description, correct category, realistic price and accurate seller contact information",
+      "The item or service must be located in Nigeria and comply with Jiji's prohibited-item and posting rules"
+    ],
+    "steps": [
+      "Sign in to the Jiji account and select Sell to start a new advert.",
+      "Choose the correct category and enter a precise title, detailed description, location and realistic price.",
+      "Upload clear original photographs that show the item and do not contain contact details, watermarks or prohibited content.",
+      "Review the information and select Post Ad to submit the advert for Jiji moderation.",
+      "Check the email/profile for approval or requested edits, and manage the live advert from My Adverts until it is sold, rented, filled or no longer needed."
+    ],
+    "notes": [
+      "Jiji applies a one-ad-per-item rule and can reject duplicate or misleading adverts.",
+      "Editing a live advert sends it through review again and it can temporarily disappear from search.",
+      "Jiji recommends closing an advert when the item is sold or the service/vacancy is no longer available."
+    ],
+    "sources": [
+      {
+        "label": "Jiji — How can I sell on Jiji?",
+        "agency": "Jiji Nigeria",
+        "url": "https://jiji.ng/faq/how-to-sell",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jiji Posting Rules",
+        "agency": "Jiji Nigeria",
+        "url": "https://jiji.ng/faq/posting-rules",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jiji — What happens after posting?",
+        "agency": "Jiji Nigeria",
+        "url": "https://jiji.ng/faq/what-happens-after-posting",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jiji-safe-deal-buy-nigeria",
+      "jumia-seller-registration-nigeria",
+      "konga-seller-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "sell on Jiji Nigeria",
+      "post ad Jiji",
+      "Jiji seller registration",
+      "Jiji posting rules",
+      "how to post on Jiji"
+    ]
+  },
+  {
+    "slug": "jiji-safe-deal-buy-nigeria",
+    "title": "How to buy with Jiji Safe Deal in Nigeria",
+    "shortTitle": "Jiji Safe Deal",
+    "summary": "Jiji Safe Deal lets eligible buyers pay through Jiji checkout before delivery while the payment is held until the delivery confirmation window ends or a reported problem is reviewed.",
+    "category": "E-commerce",
+    "agencySlug": "jiji-nigeria",
+    "feeLabel": "Item, delivery and any payment fee are shown at checkout",
+    "feeNote": "Jiji shows the item price, delivery fee and any payment fee before Safe Deal checkout. Do not send a separate advance payment directly to the seller.",
+    "timeline": "After an order is marked delivered, Jiji starts a 24-hour confirmation window before payment is released to the seller, unless the buyer reports a problem during that window.",
+    "status": "verified",
+    "officialPortal": "https://jiji.ng/faq/safe-deal-for-buyers",
+    "requirements": [
+      "A Jiji advert that displays the Buy with Safe Deal option",
+      "The buyer's delivery location, complete address, name and reachable phone number",
+      "A payment option offered inside the Jiji Safe Deal checkout",
+      "Time to inspect the delivered item within Jiji's 24-hour confirmation window"
+    ],
+    "steps": [
+      "Open an advert that supports Safe Deal and confirm the item details and availability with the seller in Jiji Chat.",
+      "Select Buy with Safe Deal and enter the delivery location, address, name and phone number.",
+      "Review the item price, delivery fee, any payment fee and total, then pay only through the Jiji checkout.",
+      "Track the order from Safe Deal in the Jiji profile while the seller accepts and arranges delivery.",
+      "Inspect the item after delivery and either confirm receipt or select There is a problem before the 24-hour countdown ends so Jiji Support can review the issue."
+    ],
+    "notes": [
+      "Jiji explicitly warns buyers not to send an advance payment directly to the seller or use a payment link sent in chat.",
+      "Safe Deal is not available on every advert.",
+      "Reporting a problem keeps the payment on hold during review but does not automatically guarantee a full refund."
+    ],
+    "sources": [
+      {
+        "label": "Jiji — Safe Deal for Buyers",
+        "agency": "Jiji Nigeria",
+        "url": "https://jiji.ng/faq/safe-deal-for-buyers",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jiji — Place a Safe Deal Order",
+        "agency": "Jiji Nigeria",
+        "url": "https://jiji.ng/faq/place-safe-deal-order",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jiji — Pay for Safe Deal",
+        "agency": "Jiji Nigeria",
+        "url": "https://jiji.ng/faq/pay-safe-deal-order",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jiji-post-ad-nigeria",
+      "jumia-track-order",
+      "konga-return-refund"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Jiji Safe Deal Nigeria",
+      "buy on Jiji safely",
+      "Jiji payment delivery",
+      "Jiji Safe Deal refund",
+      "Jiji buyer protection"
+    ]
+  },
+  {
+    "slug": "cipm-student-membership-registration",
+    "title": "How to register as a CIPM student member",
+    "shortTitle": "CIPM student registration",
+    "summary": "CIPM Nigeria's examination-route student-membership application starts online with email verification, credential upload and the current application payment before the Institute processes the application.",
+    "category": "Education",
+    "agencySlug": "cipm-nigeria",
+    "feeLabel": "₦10,000 current student-membership application fee",
+    "feeNote": "CIPM's current examination FAQ states an online payment of ₦10,000 for the examination-route student membership application. Confirm the amount displayed by the live application before payment.",
+    "timeline": "CIPM's current FAQ states that student-membership applications through the examination route are processed within 48 hours and the applicant is notified by email.",
+    "status": "verified",
+    "officialPortal": "https://cipmnigeria.org/membership/membership-routes/",
+    "requirements": [
+      "An email address that can receive the CIPM verification message",
+      "The personal and academic/professional information requested in the student-membership application",
+      "Scanned credentials or supporting documents required for the chosen membership-by-examination route",
+      "Online payment of the application amount displayed by CIPM"
+    ],
+    "steps": [
+      "Open CIPM's official Membership Routes page and choose Membership by Examination.",
+      "Select Apply Now and indicate that this is a new membership application when the portal asks.",
+      "Enter the email address, open the verification message and continue the application from the verified link.",
+      "Complete the application form, upload the requested credentials and pay the student-membership application amount online.",
+      "Submit the application and monitor the registered email for CIPM's processing decision and student-membership details."
+    ],
+    "notes": [
+      "CIPM requires student membership before a candidate can register for its professional examinations.",
+      "NYSC corps members can have a separate route/eligibility arrangement under CIPM's current membership guidance.",
+      "Membership application and examination registration are separate transactions."
+    ],
+    "sources": [
+      {
+        "label": "CIPM Examination FAQ",
+        "agency": "Chartered Institute of Personnel Management of Nigeria",
+        "url": "https://cipmnigeria.org/exams/faq/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIPM Membership Routes",
+        "agency": "Chartered Institute of Personnel Management of Nigeria",
+        "url": "https://cipmnigeria.org/membership/membership-routes/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cipm-exam-registration",
+      "ican-professional-student-registration",
+      "acca-book-exam-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIPM student registration",
+      "CIPM student membership",
+      "register CIPM Nigeria",
+      "CIPM membership by examination",
+      "CIPM student fee"
+    ]
+  },
+  {
+    "slug": "cipm-exam-registration",
+    "title": "How to register for a CIPM professional examination",
+    "shortTitle": "CIPM exam registration",
+    "summary": "CIPM's examination portal is for existing student members to confirm the system-loaded exam category/subjects, pay the applicable exam amount and complete online registration within the published diet window.",
+    "category": "Education",
+    "agencySlug": "cipm-nigeria",
+    "feeLabel": "Exam fee depends on the candidate's level and subjects",
+    "feeNote": "CIPM publishes diet-specific examination charges and can add a late-registration fee. Confirm the current fee generated in the examination portal before payment.",
+    "timeline": "CIPM uses diet-specific registration windows. The September 2026 online exam registration ran from 22 July to 31 August 2026, with late registration on 1–2 September; candidates should check the portal for the next active diet.",
+    "status": "verified",
+    "officialPortal": "https://exams.cipmnigeria.org/",
+    "requirements": [
+      "An approved CIPM student membership before examination registration",
+      "The student ID and password for the CIPM examination portal",
+      "A correct exam category and eligible subject/resit list in the candidate profile",
+      "A computer/webcam and reliable internet connection when the current diet is administered online",
+      "Payment of the current examination fee before the published registration deadline"
+    ],
+    "steps": [
+      "Sign in to CIPM's official Examination Portal with the student ID and password.",
+      "Review the exam category, eligible papers and any resit subject loaded by the system before payment.",
+      "Select the intended papers and verify the examination information shown for the current diet.",
+      "Pay the exam amount displayed in the portal and complete the online registration before the normal or late-registration deadline.",
+      "Download or keep the exam photo card and follow CIPM's current technical/exam-day instructions for the registered diet."
+    ],
+    "notes": [
+      "CIPM states that examination fees are non-refundable.",
+      "The examination windows, late-registration dates and delivery format can change from one diet to another.",
+      "Student membership must be completed before examination registration."
+    ],
+    "sources": [
+      {
+        "label": "CIPM Examination Portal",
+        "agency": "Chartered Institute of Personnel Management of Nigeria",
+        "url": "https://exams.cipmnigeria.org/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIPM Examination Guidelines",
+        "agency": "Chartered Institute of Personnel Management of Nigeria",
+        "url": "https://cipmnigeria.org/exams/exam-guidelines/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIPM Examination FAQ",
+        "agency": "Chartered Institute of Personnel Management of Nigeria",
+        "url": "https://cipmnigeria.org/exams/faq/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cipm-student-membership-registration",
+      "ican-professional-exam-registration",
+      "acca-book-exam-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIPM exam registration",
+      "CIPM examination portal",
+      "CIPM professional exam Nigeria",
+      "CIPM exam fee",
+      "CIPM student portal"
+    ]
+  },
+  {
+    "slug": "cfa-exam-registration-nigeria",
+    "title": "How to register and schedule a CFA exam from Nigeria",
+    "shortTitle": "CFA exam registration",
+    "summary": "CFA Institute uses a two-step process: register and pay for the CFA Program exam first, then schedule a specific test-centre appointment through Prometric before the scheduling deadline.",
+    "category": "Education",
+    "agencySlug": "cfa-institute",
+    "feeLabel": "From US$1,140 per exam under 2026 pricing",
+    "feeNote": "CFA Institute states that exam cost varies by level and Early versus Standard registration period. All CFA Program exam fees are paid in US dollars; taxes/card conversion can affect the amount paid from Nigeria.",
+    "timeline": "Registration and appointment scheduling have separate deadlines. CFA Institute says candidates must schedule by the published deadline, typically about 60 days before the exam window, and seats are first-come, first-served.",
+    "status": "verified",
+    "officialPortal": "https://www.cfainstitute.org/programs/cfa-program/candidate-resources/exam-registration-scheduling-guide",
+    "requirements": [
+      "A CFA Institute account and eligibility for the chosen CFA Program level",
+      "A selected exam window and completed CFA Program registration/payment",
+      "A valid international travel passport or other identification accepted under the current CFA exam admission policy",
+      "An available Prometric test-centre appointment that can be scheduled before the deadline"
+    ],
+    "steps": [
+      "Create or sign in to the CFA Institute account and begin registration for the intended CFA Program level and exam window.",
+      "Review the Early or Standard registration price and complete the CFA exam registration/payment.",
+      "Return to the CFA Program tile after payment and select Schedule your exam.",
+      "Use the Prometric scheduling tool to search Nigerian or other suitable test-centre locations and choose an available date and time.",
+      "Save the Prometric appointment confirmation and review the CFA Institute account for location-specific exam-day instructions."
+    ],
+    "notes": [
+      "Paying the CFA registration fee does not by itself mean the test-centre appointment is scheduled; the Prometric step must also be completed.",
+      "CFA Institute currently charges US$250 plus applicable taxes to reschedule an appointment within the same exam window.",
+      "Test-centre capacity is first-come, first-served and availability can change."
+    ],
+    "sources": [
+      {
+        "label": "CFA Exam Registration Guide",
+        "agency": "CFA Institute",
+        "url": "https://www.cfainstitute.org/programs/cfa-program/candidate-resources/exam-registration-scheduling-guide",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CFA Program",
+        "agency": "CFA Institute",
+        "url": "https://www.cfainstitute.org/programs/cfa-program",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CFA Program Test Centers",
+        "agency": "CFA Institute",
+        "url": "https://www.cfainstitute.org/programs/cfa-program/test-center-locations",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "gmat-registration-nigeria",
+      "gre-registration-nigeria",
+      "acca-book-exam-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CFA exam registration Nigeria",
+      "CFA test centre Nigeria",
+      "register CFA Nigeria",
+      "CFA exam fee 2026",
+      "CFA Prometric Nigeria"
+    ]
+  },
+  {
+    "slug": "medplus-order-online-nigeria",
+    "title": "How to order health and pharmacy products from Medplus Nigeria online",
+    "shortTitle": "Medplus online order",
+    "summary": "Medplus Nigeria's online checkout route lets customers add available products to cart, enter shipping/billing details, prepay with an accepted method and receive nationwide delivery according to the order time.",
+    "category": "Healthcare",
+    "agencySlug": "medplus-nigeria",
+    "feeLabel": "Product and shipping total shown at checkout",
+    "feeNote": "Medplus shows the product subtotal, tax, shipping and discounts in the cart before payment. Same-day eligibility requires prepaid checkout before the provider's stated cutoff.",
+    "timeline": "Medplus says prepaid orders checked out before 3 PM from Monday to Sunday are eligible for same-day delivery; orders after 3 PM are delivered on the next working day, subject to location and service conditions.",
+    "status": "conflict",
+    "officialPortal": "https://medplusnig.com/",
+    "requirements": [
+      "The health or pharmacy product selected from Medplus's online store",
+      "Accurate shipping and billing information for the customer",
+      "Prepayment using Paystack, debit card, bank transfer or an accepted voucher for same-day-delivery eligibility",
+      "A valid prescription when Medplus requests one for a product that legally or professionally requires prescription evidence"
+    ],
+    "steps": [
+      "Open Medplus Nigeria's official online store and add the intended available products to the shopping cart.",
+      "Open the cart, review the product quantity, subtotal, shipping and total and select Proceed to Next.",
+      "Enter accurate shipping and billing information and choose an accepted payment method.",
+      "Complete prepayment before the current same-day cutoff when same-day delivery is required and available for the address.",
+      "Keep the payment/order confirmation and make sure the customer or an authorised recipient is available to receive the delivery."
+    ],
+    "notes": [
+      "Medplus's checkout states that orders completed after 3 PM move to the next working day.",
+      "Medplus can request a valid prescription where appropriate; this guide does not recommend medications or substitute for a clinician/pharmacist.",
+      "Medplus pages currently show inconsistent return wording: the cart advertises a 24-hour return policy while the current Terms page says all sales are final. Confirm the applicable return rule before purchasing an item where return eligibility matters."
+    ],
+    "sources": [
+      {
+        "label": "Medplus Shopping Cart and Delivery Terms",
+        "agency": "Medplus Nigeria",
+        "url": "https://medplusnig.com/shop-cart",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Medplus Terms and Conditions",
+        "agency": "Medplus Nigeria",
+        "url": "https://medplusnig.com/terms",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "healthtracka-home-test-nigeria",
+      "synlab-home-sample-collection",
+      "reddington-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Medplus online order Nigeria",
+      "Medplus delivery Nigeria",
+      "buy from Medplus online",
+      "Medplus pharmacy delivery",
+      "Medplus same day delivery"
+    ]
   }
 ]
