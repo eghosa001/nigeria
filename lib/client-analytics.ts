@@ -13,7 +13,11 @@ export type AnalyticsEventParams = Record<string, string | number | boolean | un
 export function trackEvent(name: string, params: AnalyticsEventParams = {}) {
   if (typeof window === "undefined") return;
   const analyticsWindow = window as AnalyticsWindow;
-  const enabled = shouldEnableAnalytics(window.location.pathname, navigator.webdriver);
+  const enabled = shouldEnableAnalytics(
+    window.location.pathname,
+    navigator.webdriver,
+    navigator.userAgent,
+  );
   if (!enabled) return;
 
   const id = GA_MEASUREMENT_ID;
