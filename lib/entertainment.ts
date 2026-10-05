@@ -3504,7 +3504,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Nollywood"],
     languages: ["Yoruba"],
-    synopsis: "After leaving his family food business to pursue music in Lagos, Ayotide is pulled into an exploitative taxi operation. A family tragedy sends him home, where old recordings reveal a musical legacy he can use to reclaim his family name."
+    synopsis: "After leaving his family food business to pursue music in Lagos, Ayotide is pulled into an exploitative taxi operation. A family tragedy sends him home, where old recordings reveal a musical legacy he can use to reclaim his family name.",
     cast: ["Odunlade Adekola", "Lateef Adedimeji", "Mike Afolarin", "Lanre Adediwura", "Bukunmi Adeaga-Ilori", "Ibrahim Chatta", "Iyabo Ojo", "Koyin", "Samuel Banks"],
     featuredCast: ["Odunlade Adekola", "Lateef Adedimeji", "Mike Afolarin"],
     directors: ["Kayode Kasum"],
