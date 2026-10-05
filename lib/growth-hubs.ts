@@ -1003,7 +1003,22 @@ export const growthHubs: GrowthHub[] = [
       { query: "Bells University application 2026", serviceSlug: "bells-undergraduate-application-2026" },
       { query: "Bells University JUPEB 2026", serviceSlug: "bells-jupeb-application-2026" },
       { query: "Veritas JUPEB 2026", serviceSlug: "veritas-jupeb-application-2026" },
-      { query: "Caleb University transcript", serviceSlug: "caleb-official-transcript-request" }
+      { query: "Caleb University transcript", serviceSlug: "caleb-official-transcript-request" },
+      { query: "open 9PSB account with USSD", serviceSlug: "9psb-ussd-account-opening" },
+      { query: "upgrade 9PSB account", serviceSlug: "9psb-account-upgrade" },
+      { query: "become 9PSB agent", serviceSlug: "9psb-agent-onboarding" },
+      { query: "9PSB Merchant Collect", serviceSlug: "9psb-merchant-collect" },
+      { query: "book Duchess Hospital appointment", serviceSlug: "duchess-book-appointment" },
+      { query: "Duchess telemedicine", serviceSlug: "duchess-telemedicine-appointment" },
+      { query: "book Cedarcrest appointment", serviceSlug: "cedarcrest-physical-appointment" },
+      { query: "Cedarcrest virtual consultation", serviceSlug: "cedarcrest-virtual-consultation" },
+      { query: "buy Cornerstone motor insurance", serviceSlug: "cornerstone-buy-motor-insurance-online" },
+      { query: "Cornerstone motor claim", serviceSlug: "cornerstone-motor-claim" },
+      { query: "renew Cornerstone motor policy", serviceSlug: "cornerstone-renew-motor-policy" },
+      { query: "buy Mutual Benefits motor insurance", serviceSlug: "mutual-benefits-buy-motor-insurance-online" },
+      { query: "pay Mutual Benefits policy", serviceSlug: "mutual-benefits-policy-payment" },
+      { query: "book Silverbird movie ticket", serviceSlug: "silverbird-book-movie-ticket" },
+      { query: "use Silverbird voucher or gift card", serviceSlug: "silverbird-use-voucher-gift-card" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1317,7 +1332,22 @@ export const growthHubs: GrowthHub[] = [
       "bells-undergraduate-application-2026",
       "bells-jupeb-application-2026",
       "veritas-jupeb-application-2026",
-      "caleb-official-transcript-request"
+      "caleb-official-transcript-request",
+      "9psb-ussd-account-opening",
+      "9psb-account-upgrade",
+      "9psb-agent-onboarding",
+      "9psb-merchant-collect",
+      "duchess-book-appointment",
+      "duchess-telemedicine-appointment",
+      "cedarcrest-physical-appointment",
+      "cedarcrest-virtual-consultation",
+      "cornerstone-buy-motor-insurance-online",
+      "cornerstone-motor-claim",
+      "cornerstone-renew-motor-policy",
+      "mutual-benefits-buy-motor-insurance-online",
+      "mutual-benefits-policy-payment",
+      "silverbird-book-movie-ticket",
+      "silverbird-use-voucher-gift-card"
     ]
   },
 
