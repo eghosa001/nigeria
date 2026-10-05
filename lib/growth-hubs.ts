@@ -791,7 +791,21 @@ export const growthHubs: GrowthHub[] = [
       { query: "Keystone Bank USSD code", serviceSlug: "keystone-7111-ussd" },
       { query: "Keystone emergency account block", serviceSlug: "keystone-emergency-account-block" },
       { query: "buy Avon HMO plan", serviceSlug: "avon-individual-health-plan" },
-      { query: "Avon HMO hospital list", serviceSlug: "avon-provider-directory" }
+      { query: "Avon HMO hospital list", serviceSlug: "avon-provider-directory" },
+      { query: "Union Bank current account", serviceSlug: "union-bank-basic-current-account" },
+      { query: "Union Bank domiciliary account", serviceSlug: "union-bank-domiciliary-account" },
+      { query: "activate Keystone debit card", serviceSlug: "keystone-debit-card-activation" },
+      { query: "Avon HMO business plan", serviceSlug: "avon-business-health-plan" },
+      { query: "check YEDC tariff band", serviceSlug: "yedc-check-tariff-band" },
+      { query: "transfer JED old meter units", serviceSlug: "jed-transfer-old-meter-units" },
+      { query: "book Ibom Air flight", serviceSlug: "ibom-air-book-flight" },
+      { query: "Ibom Air online check in", serviceSlug: "ibom-air-online-check-in" },
+      { query: "change Ibom Air flight", serviceSlug: "ibom-air-change-flight" },
+      { query: "Ibom Air baggage allowance", serviceSlug: "ibom-air-baggage-allowance" },
+      { query: "book Arik Air flight", serviceSlug: "arik-air-book-flight" },
+      { query: "Arik Air online check in", serviceSlug: "arik-air-online-check-in" },
+      { query: "book Green Africa flight", serviceSlug: "green-africa-book-flight" },
+      { query: "Green Africa web check in", serviceSlug: "green-africa-online-check-in" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -907,7 +921,21 @@ export const growthHubs: GrowthHub[] = [
       "keystone-7111-ussd",
       "keystone-emergency-account-block",
       "avon-individual-health-plan",
-      "avon-provider-directory"
+      "avon-provider-directory",
+      "union-bank-basic-current-account",
+      "union-bank-domiciliary-account",
+      "keystone-debit-card-activation",
+      "avon-business-health-plan",
+      "yedc-check-tariff-band",
+      "jed-transfer-old-meter-units",
+      "ibom-air-book-flight",
+      "ibom-air-online-check-in",
+      "ibom-air-change-flight",
+      "ibom-air-baggage-allowance",
+      "arik-air-book-flight",
+      "arik-air-online-check-in",
+      "green-africa-book-flight",
+      "green-africa-online-check-in"
     ]
   },
 
