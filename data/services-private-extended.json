@@ -9078,5 +9078,480 @@
       "Stanbic pension login recovery",
       "text RESET 30388"
     ]
+  },
+  {
+    "slug": "gokada-book-delivery-lagos",
+    "title": "How to book a Gokada delivery in Lagos",
+    "shortTitle": "Gokada delivery booking",
+    "summary": "Gokada's Lagos delivery route for creating an on-demand or scheduled parcel order in the app, entering pickup/drop-off points, reviewing the live price estimate and tracking the assigned pilot.",
+    "category": "Logistics",
+    "agencySlug": "gokada",
+    "feeLabel": "Live delivery quote based on pickup and drop-off",
+    "feeNote": "Gokada says the app shows an estimated delivery price after the customer enters the pickup and drop-off locations. The amount varies by trip rather than using one fixed public fee.",
+    "timeline": "Gokada currently serves Lagos daily from 6am to 8pm. Delivery time depends on distance, traffic, rider availability and whether the order is scheduled in advance.",
+    "status": "verified",
+    "officialPortal": "https://www.gokada.ng/",
+    "requirements": [
+      "A phone with the Gokada app installed and a customer account registered with a phone number and email address",
+      "A pickup location and destination within Gokada's current Lagos delivery area",
+      "Accurate sender/recipient contact details and parcel information",
+      "A parcel that fits within Gokada's published rider/bag limits and is not a prohibited item"
+    ],
+    "steps": [
+      "Download or open the official Gokada app and register or sign in with the customer's phone number and email address.",
+      "Start a delivery request and enter the pickup point, drop-off point and recipient/contact information.",
+      "Review the estimated price shown by Gokada after the pickup and drop-off locations are entered.",
+      "Choose immediate delivery or set the date and time when the app offers scheduled delivery, then confirm the order.",
+      "Follow the assigned pilot in the app and use Gokada support if the pickup, delivery or tracking status needs intervention."
+    ],
+    "notes": [
+      "Gokada's current website says the delivery service is serving Lagos, Nigeria.",
+      "The provider says a Gokada bag has a 25 kg limit and a carrier has a 35 kg limit; larger or multiple deliveries can require another pilot or support assistance.",
+      "Scheduled orders can be created from the app by selecting the intended date and time."
+    ],
+    "sources": [
+      {
+        "label": "Gokada Home",
+        "agency": "Gokada",
+        "url": "https://www.gokada.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Gokada FAQ",
+        "agency": "Gokada",
+        "url": "https://www.gokada.ng/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "kwik-book-delivery-nigeria",
+      "sendbox-create-shipment-nigeria",
+      "gigl-send-parcel-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Gokada delivery Lagos",
+      "book Gokada delivery",
+      "Gokada app delivery",
+      "Gokada delivery price",
+      "schedule Gokada delivery"
+    ]
+  },
+  {
+    "slug": "cips-student-membership-registration",
+    "title": "How to register for CIPS Student Membership from Nigeria",
+    "shortTitle": "CIPS student membership",
+    "summary": "CIPS's online student-membership route for people beginning procurement and supply qualifications, using the official join form before choosing a study pathway and progressing toward MCIPS.",
+    "category": "Education",
+    "agencySlug": "cips",
+    "feeLabel": "Country-specific CIPS membership fee applies",
+    "feeNote": "CIPS directs applicants to its country membership-fee information before joining. Confirm the Nigeria/current-country amount in the official join flow because fees can change.",
+    "timeline": "CIPS does not publish one universal activation time for every online student-membership application; access depends on successful registration and payment.",
+    "status": "verified",
+    "officialPortal": "https://www.cips.org/membership/grades/student",
+    "requirements": [
+      "A personal email address and contact details for the CIPS membership account",
+      "Selection of Student Membership as the appropriate membership grade for someone starting CIPS qualifications",
+      "A supported payment method for the current country-specific membership fee",
+      "A planned CIPS qualification or approved learning route if the applicant intends to progress toward MCIPS"
+    ],
+    "steps": [
+      "Open the official CIPS Student Membership page and review the student grade and available routes toward CIPS professional qualifications.",
+      "Choose Join online and create or sign in to the applicant's CIPS account.",
+      "Complete the membership form with the personal, contact and country information requested by CIPS.",
+      "Review the current membership fee for the applicant's country and complete payment through the official CIPS checkout.",
+      "After membership is active, use the CIPS account to select the qualification/study route and later book exams or manage membership."
+    ],
+    "notes": [
+      "CIPS describes Student Membership as the membership grade for people starting their professional learning journey.",
+      "Joining CIPS and booking a specific qualification exam are separate actions.",
+      "Applicants should use CIPS's official study-centre and exam-centre tools rather than paying an unverified training agent."
+    ],
+    "sources": [
+      {
+        "label": "CIPS Student Membership",
+        "agency": "Chartered Institute of Procurement & Supply",
+        "url": "https://1prd-dxp.cips.org/membership/grades/student",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIPS Exams for Students",
+        "agency": "Chartered Institute of Procurement & Supply",
+        "url": "https://1prd-dxp.cips.org/students/exams",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cips-exam-booking",
+      "acca-book-exam-nigeria",
+      "ican-professional-student-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIPS student membership Nigeria",
+      "join CIPS Nigeria",
+      "CIPS registration Nigeria",
+      "CIPS student member",
+      "CIPS membership fee Nigeria"
+    ]
+  },
+  {
+    "slug": "cips-exam-booking",
+    "title": "How to book a CIPS exam from Nigeria",
+    "shortTitle": "CIPS exam booking",
+    "summary": "CIPS's exam-booking route for self-study and OnDemand learners, including exam-centre or remote-invigilation choice, the published five annual exam periods and online payment through the CIPS account.",
+    "category": "Education",
+    "agencySlug": "cips",
+    "feeLabel": "Exam fee varies by qualification, module and location",
+    "feeNote": "CIPS tells candidates to check the exam schedule, calculate the cost and choose a centre or remote option before booking. Confirm the exact module/location fee in the official booking flow.",
+    "timeline": "CIPS currently runs exam periods five times a year: March, May, July, September and November, subject to the module and booking windows published for each series.",
+    "status": "verified",
+    "officialPortal": "https://1prd-dxp.cips.org/students/exams",
+    "requirements": [
+      "An active CIPS student/learner account for the qualification being studied",
+      "The CIPS module or exam the candidate is eligible and ready to sit",
+      "A choice between an available CIPS exam centre and remote invigilation where the module permits it",
+      "A supported payment method for the exam fee shown in the CIPS booking flow"
+    ],
+    "steps": [
+      "Sign in to the CIPS account and open the official Exams section for the learner's qualification.",
+      "Check the exam schedule and choose the relevant March, May, July, September or November exam period.",
+      "Select the module and choose either an available exam centre or remote invigilation where CIPS offers that format.",
+      "Choose the available date and time slot and review the exact exam charge before payment.",
+      "Pay through the CIPS online booking flow and keep the confirmation showing the module, date, time and delivery method."
+    ],
+    "notes": [
+      "CIPS says learners registered with some approved study centres can have exam bookings handled by the centre.",
+      "Self-study and CIPS OnDemand learners can book and pay for exams online.",
+      "Objective Response exams can offer multiple time slots within the relevant exam week."
+    ],
+    "sources": [
+      {
+        "label": "CIPS Exams for Students",
+        "agency": "Chartered Institute of Procurement & Supply",
+        "url": "https://1prd-dxp.cips.org/students/exams",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CIPS Student Membership",
+        "agency": "Chartered Institute of Procurement & Supply",
+        "url": "https://1prd-dxp.cips.org/membership/grades/student",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cips-student-membership-registration",
+      "acca-book-exam-nigeria",
+      "ican-professional-exam-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIPS exam booking Nigeria",
+      "book CIPS exam",
+      "CIPS exam dates Nigeria",
+      "CIPS remote exam",
+      "CIPS exam centre Nigeria"
+    ]
+  },
+  {
+    "slug": "pmp-certification-application",
+    "title": "How to apply for PMP certification from Nigeria",
+    "shortTitle": "PMP application",
+    "summary": "PMI's 2026 PMP application route for candidates in Nigeria, covering the updated education/experience pathways, 35 hours of project-professional training, the online application and exam payment after approval.",
+    "category": "Education",
+    "agencySlug": "pmi",
+    "feeLabel": "US$405 PMI member / US$655 non-member exam fee",
+    "feeNote": "PMI's current PMP page lists US$405 for members and US$655 for non-members. The exam fee is required only after the application is accepted; exchange-rate/card charges from Nigeria can affect the naira amount.",
+    "timeline": "PMI gives an approved applicant one year to schedule and pass the PMP exam within the eligibility period, subject to the certification and retake rules.",
+    "status": "verified",
+    "officialPortal": "https://www.pmi.org/certifications/project-management-pmp",
+    "requirements": [
+      "One of PMI's current education-and-experience pathways, such as secondary school plus 5 years leading projects, an associate/vocational route plus 4 years, a bachelor's degree plus 3 years, or an eligible PMI GAC degree plus 2 years",
+      "Project-management experience gained within the 10 years before the application and recorded without double-counting overlapping projects",
+      "35 hours of eligible Project Professional training, unless an active CAPM certification satisfies the training requirement",
+      "A PMI.org account and enough information to document education, professional experience and training"
+    ],
+    "steps": [
+      "Open PMI's official PMP certification page and check the 2026 eligibility pathway that matches the applicant's education and project-leadership experience.",
+      "Create or sign in to the applicant's PMI.org account and start the PMP certification application.",
+      "Enter the education, training and project-experience details requested by PMI, making sure overlapping project time is not double-counted.",
+      "Submit the application and respond with supporting education/experience evidence if PMI selects the application for an audit.",
+      "After the application is accepted, pay the member or non-member exam fee and proceed to schedule the PMP examination."
+    ],
+    "notes": [
+      "PMI launched the refreshed PMP examination in July 2026 with updated domain weighting and content.",
+      "PMI says all qualifying project experience must fall within the 10-year window before application.",
+      "From 1 December 2026, PMI is changing which providers can supply eligible live instructor-led training hours; self-paced training rules differ."
+    ],
+    "sources": [
+      {
+        "label": "PMI PMP Certification",
+        "agency": "Project Management Institute",
+        "url": "https://www.pmi.org/certifications/project-management-pmp",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PMI New PMP Exam 2026",
+        "agency": "Project Management Institute",
+        "url": "https://www.pmi.org/certifications/project-management-pmp/new-exam",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PMP 2026 Exam Content Outline",
+        "agency": "Project Management Institute",
+        "url": "https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/new-pmp-examination-content-outline-2026.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "pmp-exam-scheduling",
+      "pearson-vue-schedule-exam",
+      "cips-exam-booking"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PMP application Nigeria",
+      "PMP certification Nigeria",
+      "PMP requirements 2026",
+      "PMP exam fee Nigeria",
+      "PMI PMP 35 hours"
+    ]
+  },
+  {
+    "slug": "pmp-exam-scheduling",
+    "title": "How to schedule the PMP exam after PMI approval",
+    "shortTitle": "Schedule PMP exam",
+    "summary": "PMI's PMP exam-scheduling stage after application approval and payment, including the choice between a Pearson VUE test centre and online proctored delivery and the candidate's one-year eligibility period.",
+    "category": "Education",
+    "agencySlug": "pmi",
+    "feeLabel": "PMP exam fee must be paid before scheduling",
+    "feeNote": "PMI's current certification page lists US$405 for members and US$655 for non-members. Scheduling becomes available after the application is accepted and the fee is paid.",
+    "timeline": "An approved candidate has a one-year eligibility period and can attempt the PMP exam up to three times during that period under PMI's current rules.",
+    "status": "verified",
+    "officialPortal": "https://www.pmi.org/certifications/project-management-pmp",
+    "requirements": [
+      "An accepted PMP certification application in the candidate's PMI account",
+      "Payment of the current PMP exam fee",
+      "A valid photo ID that meets the exam-delivery rules",
+      "Selection of either an available Pearson VUE test-centre appointment or an eligible online-proctored appointment",
+      "For online testing, a computer and testing environment that pass the required OnVUE system and workspace checks"
+    ],
+    "steps": [
+      "Sign in to the candidate's PMI account after the PMP application has been accepted and the exam fee is paid.",
+      "Open the certification dashboard and choose the option to schedule the PMP examination.",
+      "Select either an in-person Pearson VUE test centre or the available online-proctored delivery option.",
+      "Choose an available date/time and review the appointment, identification and cancellation/rescheduling rules before confirming.",
+      "Save the confirmation email and complete any required system test or test-centre preparation before exam day."
+    ],
+    "notes": [
+      "PMI currently recommends in-person Pearson VUE test-centre delivery while also offering secure online testing.",
+      "The refreshed PMP exam launched in July 2026 and currently has 180 questions with a four-hour exam time.",
+      "A candidate may take the PMP exam up to three times during the one-year eligibility period."
+    ],
+    "sources": [
+      {
+        "label": "PMI PMP Certification",
+        "agency": "Project Management Institute",
+        "url": "https://www.pmi.org/certifications/project-management-pmp",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PMP 2026 Exam Content Outline",
+        "agency": "Project Management Institute",
+        "url": "https://www.pmi.org/-/media/pmi/documents/public/pdf/certifications/new-pmp-examination-content-outline-2026.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2026"
+      }
+    ],
+    "related": [
+      "pmp-certification-application",
+      "pearson-vue-schedule-exam"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "schedule PMP exam Nigeria",
+      "PMP Pearson VUE Nigeria",
+      "PMP online exam Nigeria",
+      "PMP exam appointment",
+      "PMP test centre Nigeria"
+    ]
+  },
+  {
+    "slug": "pearson-vue-schedule-exam",
+    "title": "How to schedule a Pearson VUE exam from Nigeria",
+    "shortTitle": "Pearson VUE exam booking",
+    "summary": "Pearson VUE's general test-taker route for finding the relevant exam programme, creating the programme-linked account, comparing test-centre availability and scheduling, rescheduling or cancelling an appointment.",
+    "category": "Education",
+    "agencySlug": "pearson-vue",
+    "feeLabel": "Exam fee and policies depend on the exam programme",
+    "feeNote": "Pearson VUE administers exams for many separate certification sponsors. The sponsor/programme page controls the exam price, eligibility, vouchers and rescheduling/cancellation fees.",
+    "timeline": "Appointment availability varies by exam programme and test centre. Pearson VUE lets candidates compare up to three test centres when scheduling where the programme supports centre delivery.",
+    "status": "verified",
+    "officialPortal": "https://www.pearsonvue.com/us/en/test-takers.html",
+    "requirements": [
+      "The exact certification or exam programme the candidate intends to take",
+      "Eligibility, candidate ID or authorisation information required by that specific exam sponsor before scheduling",
+      "A Pearson VUE/programme account created with the candidate's real personal information",
+      "A valid test-day identification document that satisfies the selected programme's rules",
+      "Payment or voucher details if the exam sponsor requires payment through Pearson VUE"
+    ],
+    "steps": [
+      "Open Pearson VUE's official Test Takers page and search for the exact certification or exam programme.",
+      "Open that programme's Pearson VUE homepage and create an account or sign in using the candidate information required by the sponsor.",
+      "Choose the exam the candidate is eligible to schedule and compare available test centres or online delivery where the programme offers them.",
+      "Select the date/time, complete any required payment or voucher step and confirm the appointment.",
+      "Use Upcoming Appointments in the programme account to reschedule or cancel when permitted, and keep the confirmation email showing any deadline or fee."
+    ],
+    "notes": [
+      "Pearson VUE says exam-specific rules should be taken from the selected programme's homepage rather than from a generic testing rule.",
+      "Some programmes require an eligibility or Authorization to Test record before the candidate can schedule.",
+      "Rescheduling/cancellation deadlines and fees vary by programme, so the original appointment confirmation should be checked before making changes."
+    ],
+    "sources": [
+      {
+        "label": "Pearson VUE Test Takers",
+        "agency": "Pearson VUE",
+        "url": "https://www.pearsonvue.com/us/en/test-takers.html",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Pearson VUE Test-Taker Customer Service",
+        "agency": "Pearson VUE",
+        "url": "https://www.pearsonvue.com/us/en/test-takers/customer-service.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "pmp-exam-scheduling",
+      "acca-book-exam-nigeria",
+      "cips-exam-booking"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Pearson VUE exam Nigeria",
+      "book Pearson VUE exam",
+      "Pearson VUE test centre Nigeria",
+      "schedule certification exam Nigeria",
+      "reschedule Pearson VUE exam"
+    ]
+  },
+  {
+    "slug": "flyboku-book-flight",
+    "title": "How to book a flight on FlyBoku",
+    "shortTitle": "FlyBoku flight booking",
+    "summary": "FlyBoku's Nigerian online flight-search route for one-way, return or multi-city travel, using departure/arrival airports, dates, passengers and cabin class before completing the available booking.",
+    "category": "Travel & accommodation",
+    "agencySlug": "flyboku",
+    "feeLabel": "Live airfare varies by airline, route, date and cabin",
+    "feeNote": "FlyBoku searches live travel options, so the final fare depends on the itinerary and selected airline. Review the checkout amount and fare rules before payment.",
+    "timeline": "Booking completion depends on flight availability and successful payment; keep the issued booking confirmation before treating the itinerary as ticketed.",
+    "status": "verified",
+    "officialPortal": "https://flyboku.com/flight",
+    "requirements": [
+      "The departure airport, destination airport and travel date for the journey",
+      "Return date for a return booking, or the separate segments for a multi-city booking",
+      "The number of passengers and selected cabin/ticket class",
+      "Passenger identity details that must match the travel documents used for the airline itinerary",
+      "A supported payment method for the live itinerary selected during checkout"
+    ],
+    "steps": [
+      "Open FlyBoku's official flight page and select one-way, round-trip or multi-city travel.",
+      "Enter the departure airport, arrival airport, travel date or dates, passenger count and preferred cabin class.",
+      "Search the available flights and compare the displayed itinerary and live fare before choosing an option.",
+      "Enter the passenger/contact details exactly as required for the airline reservation and review the fare conditions.",
+      "Complete payment through FlyBoku's booking flow and keep the reservation/ticket confirmation and airline booking reference."
+    ],
+    "notes": [
+      "FlyBoku is a private travel platform, not the operating airline, so airline fare and baggage/change rules can still apply to the issued ticket.",
+      "The provider also offers hotels, tours and visa-support services, but those are separate transactions from a flight booking.",
+      "A search result is not a confirmed ticket until the booking/payment flow produces the reservation confirmation."
+    ],
+    "sources": [
+      {
+        "label": "FlyBoku Flights",
+        "agency": "FlyBoku",
+        "url": "https://flyboku.com/flight",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FlyBoku Home",
+        "agency": "FlyBoku",
+        "url": "https://flyboku.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FlyBoku About",
+        "agency": "FlyBoku",
+        "url": "https://www.flyboku.com/about-us",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "travelstart-book-flight-nigeria",
+      "wakanow-book-flight-nigeria",
+      "air-peace-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "FlyBoku flight booking",
+      "book flight FlyBoku Nigeria",
+      "FlyBoku flights",
+      "cheap flights FlyBoku",
+      "FlyBoku Nigeria"
+    ]
+  },
+  {
+    "slug": "travelstart-book-flight-nigeria",
+    "title": "How to book a flight on Travelstart Nigeria",
+    "shortTitle": "Travelstart flight booking",
+    "summary": "Travelstart Nigeria's online flight-search route for return, one-way or multi-city travel, covering route/date selection, passenger ages, cabin class, checkout and later access to the booking through the account/support tools.",
+    "category": "Travel & accommodation",
+    "agencySlug": "travelstart-nigeria",
+    "feeLabel": "Live airfare varies by airline, route, dates and class",
+    "feeNote": "Travelstart compares live airline inventory; the final amount depends on the itinerary, fare family and optional products shown at checkout.",
+    "timeline": "A flight reservation is complete after the selected itinerary is available, payment succeeds and Travelstart issues the booking confirmation.",
+    "status": "verified",
+    "officialPortal": "https://beta.travelstart.com.ng/",
+    "requirements": [
+      "The departure and destination airports and travel date or dates",
+      "Passenger counts split into the age categories required by Travelstart's booking form",
+      "The preferred Economy, Premium, Business or First class where available",
+      "Passenger names and identity/travel-document details that match the airline's requirements",
+      "A supported payment method for the final airfare and optional products selected at checkout"
+    ],
+    "steps": [
+      "Open Travelstart Nigeria's official flight-search page and choose Return, One-way or Multi-city.",
+      "Enter the origin, destination, departure/return dates and passenger counts in the age groups shown by Travelstart.",
+      "Choose the cabin class, search flights and compare the available airline itineraries and displayed fares.",
+      "Select an itinerary, enter the traveller/contact information and review the fare conditions and optional products before checkout.",
+      "Complete payment and save the Travelstart booking confirmation so the trip can later be viewed or handled through Travelstart's existing-booking support."
+    ],
+    "notes": [
+      "Travelstart requires at least one adult on an ordinary online booking; its site directs customers to support for young adults travelling alone.",
+      "Airline change, cancellation and baggage rules still apply to the ticket even when it was booked through Travelstart.",
+      "Creating a Travelstart account is useful for booking history but the live booking flow should be followed for the actual itinerary."
+    ],
+    "sources": [
+      {
+        "label": "Travelstart Nigeria Flight Search",
+        "agency": "Travelstart Nigeria",
+        "url": "https://beta.travelstart.com.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "travelstart-existing-booking-support-nigeria",
+      "wakanow-book-flight-nigeria",
+      "flyboku-book-flight"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Travelstart flight booking Nigeria",
+      "book flight Travelstart Nigeria",
+      "Travelstart cheap flights Nigeria",
+      "Travelstart one way flight",
+      "Travelstart multi city Nigeria"
+    ]
   }
 ]
