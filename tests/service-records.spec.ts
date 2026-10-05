@@ -644,7 +644,20 @@ const expectedSlugs = [
   "tlscontact-italy-passport-collection-nigeria",
   "tlscontact-belgium-visa-appointment-nigeria",
   "tlscontact-belgium-track-collect-passport-nigeria",
-] as const;
+  "hotels-ng-book-hotel",
+  "hotels-ng-cancel-refund-booking",
+  "risevest-create-verify-account",
+  "risevest-fund-wallet",
+  "risevest-withdraw-funds",
+  "grey-create-verify-account",
+  "grey-us-account-nigeria",
+  "grey-virtual-card-nigeria",
+  "lemfi-open-global-account-nigeria",
+  "lemfi-withdraw-global-account-nigeria",
+  "western-union-receive-money-nigeria",
+  "western-union-track-transfer-nigeria",
+  "moneygram-receive-money-nigeria",
+  "moneygram-track-transfer-nigeria",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -768,8 +781,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(636);
-  expect(publicServices).toHaveLength(636);
+  expect(services).toHaveLength(650);
+  expect(publicServices).toHaveLength(650);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
