@@ -10,7 +10,7 @@ type PostHogWindow = Window & typeof globalThis & {
 };
 
 function allowedPath(pathname: string) {
-  return shouldEnableAnalytics(pathname, navigator.webdriver);
+  return shouldEnableAnalytics(pathname, navigator.webdriver, navigator.userAgent);
 }
 
 export function initializePostHog(pathname = window.location.pathname) {
@@ -27,7 +27,7 @@ export function initializePostHog(pathname = window.location.pathname) {
       disable_session_recording: true,
       person_profiles: "identified_only",
       before_send: (event) => {
-        if (!event || navigator.webdriver === true) return null;
+        if (!event) return null;
         const properties = event.properties ?? {};
         const value =
           (properties.$current_url as string | undefined) ??
@@ -39,8 +39,7 @@ export function initializePostHog(pathname = window.location.pathname) {
         } catch {}
 
         if (
-          eventPath === "/admin" ||
-          eventPath.startsWith("/admin/") ||
+          !shouldEnableAnalytics(eventPath, navigator.webdriver, navigator.userAgent) ||
           eventPath === "/api" ||
           eventPath.startsWith("/api/") ||
           eventPath.startsWith("/_next")
