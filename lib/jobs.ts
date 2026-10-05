@@ -18,6 +18,12 @@ export type JobPostingMetadata = {
   locations: JobPostingLocation[];
 };
 
+export type JobPostingAuthorization = {
+  publicEvidenceUrl: string;
+  verifiedAt: string;
+  note: string;
+};
+
 export type JobSource = {
   label: string;
   url: string;
@@ -30,6 +36,7 @@ export type CareerOpportunity = {
   organization: string;
   kind?: JobRecordKind;
   posting?: JobPostingMetadata;
+  jobPostingAuthorization?: JobPostingAuthorization;
   topicSlugs?: string[];
   sector: JobSector;
   status: JobStatus;

@@ -55,8 +55,8 @@ jobs:
             exit 0
           fi
 
-          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
-          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/check-jobs-content\.ts$)' || true)"
+          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
+          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/check-jobs-content\.ts$)' || true)"
           if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=jobs" >> "$GITHUB_OUTPUT"

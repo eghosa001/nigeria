@@ -7,6 +7,7 @@ import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
 import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen } from "@/lib/job-runtime";
+import { queryJobDirectory } from "@/lib/job-query";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -22,6 +23,8 @@ export default function JobsPage() {
   const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
   const openOpportunities = jobOpportunities.filter((item) => isEffectivelyOpen(item));
+  const openPreview = openOpportunities.slice(0, 12);
+  const initialDirectoryResult = queryJobDirectory({ page: 1 });
 
   const collectionLd = {
     "@context": "https://schema.org",
@@ -33,7 +36,7 @@ export default function JobsPage() {
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: jobOpportunities.length,
-      itemListElement: jobOpportunities.map((item, index) => ({
+      itemListElement: jobOpportunities.slice(0, 24).map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: item.title,
@@ -88,7 +91,7 @@ export default function JobsPage() {
               </div>
             </div>
             <div className="jobs-open-grid">
-              {openOpportunities.map((item) => (
+              {openPreview.map((item) => (
                 <article className="job-card job-card-open" key={item.slug}>
                   <div className="job-card-top">
                     <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
@@ -107,6 +110,9 @@ export default function JobsPage() {
                 </article>
               ))}
             </div>
+            {openOpportunities.length > openPreview.length ? (
+              <p className="job-muted"><Link href="/jobs/open-now">View all {openOpportunities.length} currently open opportunities →</Link></p>
+            ) : null}
           </div>
         </section>
       ) : null}
@@ -242,7 +248,7 @@ export default function JobsPage() {
               <p>Search by employer, qualification, discipline or applicant type.</p>
             </div>
           </div>
-          <JobsDirectory opportunities={jobOpportunities} />
+          <JobsDirectory initialResult={initialDirectoryResult} />
         </div>
       </section>
 

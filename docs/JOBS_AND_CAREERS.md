@@ -63,3 +63,18 @@ The public UI is deadline-aware independently of the scheduled workflow, so a kn
 The checked-in Jobs catalog now targets 300 verified records. The 191-record expansion that takes the pillar from 109 to 300 is intentionally mixed: new employer/public recruitment pathways plus distinct vacancies that were visibly listed on responsible official job boards on 5 October 2026. A career pathway remains `career-page` unless a current vacancy is explicitly being claimed.
 
 This milestone is the upper end of the comfortable checked-in catalog phase. Before another similarly large Jobs expansion, start the prepared D1/server-pagination migration described above so the browser catalog does not keep growing linearly. Do not turn the 20,000-URL capacity target into a page-generation quota.
+
+
+## Legal and platform-safety rule
+
+MyNigeriaGuide republishes factual recruitment data in its own words and links applicants back to the responsible organisation. It should not copy full employer job descriptions, proprietary images or logos without permission, bypass access controls, or collect applicant credentials on behalf of employers.
+
+Google JobPosting rich-result markup is stricter than ordinary web publication. Third-party JobPosting markup is opt-in only when the record includes public evidence of employer authorization in `jobPostingAuthorization`. Having an official public vacancy URL is not, by itself, treated as permission to advertise the role with Google JobPosting structured data.
+
+The `posting` metadata may still be retained for factual features such as New This Week. Without `jobPostingAuthorization`, `buildJobPostingJsonLd` returns null.
+
+## Server pagination boundary
+
+The Jobs directory no longer hydrates the full catalog into the browser. `/api/jobs` performs query, sector, status, location and profession filtering on the server and returns at most 24 directory cards by default. The browser receives only the current result page.
+
+The canonical opportunity pages and sitemap remain unchanged. Checked-in TypeScript remains the current server-side source of truth at the 300-record milestone, while the prepared D1 schema remains the next storage migration. The focused validator now hard-stops before 1,000 in-memory records so D1 storage must be bound before that threshold.
