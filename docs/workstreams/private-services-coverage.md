@@ -21,6 +21,10 @@ A private-service page is eligible only when all of the following are true:
 - volatile promotions are labelled as such rather than presented as permanent terms;
 - conflicting provider information is published as `conflict` instead of silently reconciled.
 
+## Current implementation baseline
+
+As of 2026-10-05, the workstream contains **46 private-provider service guides** inside a **277-guide total Services catalog**. This is a growing verified baseline, not the end-state. Continue the sector/provider inventory until each remaining candidate is either published with sufficient first-party evidence or explicitly excluded because it lacks distinct intent, durable evidence or enough useful procedural content.
+
 ## Initial private-service baseline
 
 The first private wave adds provider-backed guides in:
