@@ -1,4 +1,4 @@
-import { getSitemapEntries, sitemapSectionNames, type SitemapSectionName } from "@/lib/sitemap-sections";
+import { getSitemapShardEntries, parseSitemapShardName } from "@/lib/sitemap-sections";
 
 function escapeXml(value: string) {
   return value
@@ -13,13 +13,16 @@ export async function GET(
   _request: Request,
   { params }: { params: Promise<{ section: string }> },
 ) {
-  const raw = (await params).section;
-  const name = raw.endsWith(".xml") ? raw.slice(0, -4) : raw;
-  if (!sitemapSectionNames.includes(name as SitemapSectionName)) {
+  const parsed = parseSitemapShardName((await params).section);
+  if (!parsed) {
     return new Response("Not found", { status: 404 });
   }
 
-  const entries = getSitemapEntries(name as SitemapSectionName);
+  const entries = getSitemapShardEntries(parsed.section, parsed.shard);
+  if (!entries.length) {
+    return new Response("Not found", { status: 404 });
+  }
+
   const body = entries.map((entry) =>
     "<url><loc>" + escapeXml(entry.url) + "</loc><lastmod>" + escapeXml(entry.lastModified) + "</lastmod></url>"
   ).join("");
