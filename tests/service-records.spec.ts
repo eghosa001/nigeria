@@ -282,7 +282,16 @@ const expectedSlugs = [
   "fidelity-business-account-online",
   "flutterwave-business-account-nigeria",
   "opay-account-opening-nigeria",
-  "opay-emergency-lock-account-card",] as const;
+  "opay-emergency-lock-account-card",
+  "kuda-personal-account-opening",
+  "kuda-account-tier-upgrade",
+  "ikeja-electric-pay-bill-buy-token",
+  "ikeja-electric-prepaid-meter-application",
+  "toefl-registration-nigeria",
+  "gre-registration-nigeria",
+  "pte-registration-nigeria",
+  "gmat-registration-nigeria",
+  "axa-mansard-third-party-motor-insurance",] as const;
 const representative = [
   {
     "slug": "passport-renewal",
@@ -398,8 +407,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves every current guide", () => {
-  expect(services).toHaveLength(277);
-  expect(publicServices).toHaveLength(277);
+  expect(services).toHaveLength(286);
+  expect(publicServices).toHaveLength(286);
   expect(services.map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);
