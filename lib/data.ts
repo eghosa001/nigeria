@@ -653,6 +653,48 @@ export const agencies: Agency[] = [
     "shortName": "OPay",
     "description": "Private Nigerian financial-services platform offering accounts, transfers, cards, merchant services and emergency security controls.",
     "website": "https://opayweb.com/ng/"
+  },
+  {
+    "slug": "kuda",
+    "name": "Kuda Microfinance Bank",
+    "shortName": "Kuda",
+    "description": "Private digital bank offering personal and business accounts, cards, transfers and account-tier services in Nigeria.",
+    "website": "https://www.kuda.com/"
+  },
+  {
+    "slug": "ikeja-electric",
+    "name": "Ikeja Electric Plc",
+    "shortName": "Ikeja Electric",
+    "description": "Private electricity distribution company serving parts of Lagos with metering, token, billing and customer self-service.",
+    "website": "https://www.ikejaelectric.com/"
+  },
+  {
+    "slug": "ets",
+    "name": "Educational Testing Service",
+    "shortName": "ETS",
+    "description": "Private/nonprofit testing provider for TOEFL and GRE registration, test administration and score services available to candidates in Nigeria.",
+    "website": "https://www.ets.org/"
+  },
+  {
+    "slug": "pearson-pte",
+    "name": "Pearson PTE",
+    "shortName": "Pearson PTE",
+    "description": "Private English-language testing provider with PTE test booking and approved test centres in Nigeria.",
+    "website": "https://www.pearsonpte.com/"
+  },
+  {
+    "slug": "gmac",
+    "name": "Graduate Management Admission Council",
+    "shortName": "GMAC",
+    "description": "Private/nonprofit provider of the GMAT exam and official mba.com registration services used by candidates in Nigeria.",
+    "website": "https://www.mba.com/"
+  },
+  {
+    "slug": "axa-mansard",
+    "name": "AXA Mansard Insurance Plc",
+    "shortName": "AXA Mansard",
+    "description": "Private Nigerian insurer offering motor and other insurance products with online purchase and claims services.",
+    "website": "https://www.axamansard.com/"
   }
 ];
 
@@ -685,7 +727,7 @@ export const categories = [
   },
   {
     "name": "Banking",
-    "description": "BVN and regulated banking-identity services."
+    "description": "Bank accounts, BVN, digital banking, cards, USSD and regulated financial-service guides."
   },
   {
     "name": "Investing",
@@ -693,11 +735,11 @@ export const categories = [
   },
   {
     "name": "Insurance",
-    "description": "Official policy-validation and insurance verification services."
+    "description": "Insurance purchase, policy validation, claims and verification services."
   },
   {
     "name": "Telecommunications",
-    "description": "SIM registration, NIN linkage and telecom consumer services."
+    "description": "SIM, eSIM, NIN linkage, mobile-network and telecom consumer services."
   },
   {
     "name": "Student finance",
@@ -705,7 +747,7 @@ export const categories = [
   },
   {
     "name": "Electricity",
-    "description": "Metering, billing, tariffs and electricity complaint services."
+    "description": "DisCo metering, token purchase, bill payment, tariffs and electricity complaint services."
   },
   {
     "name": "Health insurance",
@@ -765,7 +807,7 @@ export const categories = [
   },
   {
     "name": "Education",
-    "description": "JAMB, WAEC and NECO services."
+    "description": "JAMB, WAEC, NECO and private examination/test-booking services."
   },
   {
     "name": "Youth service",
@@ -782,6 +824,38 @@ export const categories = [
   {
     "name": "State services",
     "description": "Verified state and FCT digital services."
+  },
+  {
+    "name": "Internet",
+    "description": "Private broadband, satellite internet, recharge and account-management services."
+  },
+  {
+    "name": "TV & streaming",
+    "description": "Pay-TV subscription, payment, package and decoder self-service."
+  },
+  {
+    "name": "Air travel",
+    "description": "Private airline booking, check-in, baggage and passenger-service guides."
+  },
+  {
+    "name": "Intercity transport",
+    "description": "Private bus and mobility booking, rescheduling and passenger-service guides."
+  },
+  {
+    "name": "Logistics",
+    "description": "Courier, parcel shipping, pickup and shipment-tracking services."
+  },
+  {
+    "name": "Healthcare",
+    "description": "Private hospital, diagnostics, appointment and result-access services."
+  },
+  {
+    "name": "Ride-hailing",
+    "description": "Driver-partner onboarding and mobility-platform service guides."
+  },
+  {
+    "name": "E-commerce",
+    "description": "Marketplace ordering, returns, refunds and seller-onboarding services."
   }
 ];
 
