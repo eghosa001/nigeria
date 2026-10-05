@@ -54,8 +54,11 @@ async function check(url) {
   if (!response) {
     const code = errorCode(lastError);
     const message = lastError instanceof Error ? lastError.message : String(lastError);
-    if (code === "ENOTFOUND") definitiveFailures.push(url + " -> DNS name not found");
-    else warnings.push(url + " -> " + (code ? code + " " : "") + message);
+    if (code === "ENOTFOUND" || code === "EAI_AGAIN") {
+      warnings.push(url + " -> DNS lookup failed in runner (" + code + "); verify through an independent public source before changing the URL");
+    } else {
+      warnings.push(url + " -> " + (code ? code + " " : "") + message);
+    }
     return;
   }
 

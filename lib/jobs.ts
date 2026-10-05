@@ -1481,7 +1481,7 @@ export const jobOpportunities: CareerOpportunity[] = [
       "The official Paystack careers page currently lists active Nigeria positions across product and engineering-related functions."
     ],
     sources: [
-      { label: "Paystack Careers", url: "https://paystack.com.ng/careers", lastChecked: "2026-10-03" },
+      { label: "Paystack Careers", url: "https://paystack.com/careers", lastChecked: "2026-10-03" },
       { label: "Paystack Current Jobs", url: "https://careers.paystack.com/jobs", lastChecked: "2026-10-03" }
     ]
   },
@@ -2745,14 +2745,13 @@ export const jobOpportunities: CareerOpportunity[] = [
     requirements: ["Use Emzor's official vacancies pages.", "Check the exact role's qualification and location.", "Do not pay any recruitment fee."],
     documents: ["CV/resume", "Academic and professional credentials required by the role"],
     applicationSteps: ["Open Emzor's official vacancies area.", "Review current openings.", "Select the role and check its requirements.", "Apply using the route specified by Emzor."],
-    officialUrl: "https://www.emzorpharma.com/other-vacancies/",
+    officialUrl: "https://www.emzorpharma.com/vacancies/",
     officialUrlLabel: "View Emzor current openings",
     verifiedAt: "2026-10-05",
     nextMilestone: "Emzor's site displayed a Current openings section when checked; confirm the individual role before applying.",
     feeNote: "Emzor states that it does not request payment at any stage of recruitment.",
     sourceNotes: ["Emzor's official site contains current-opening functionality and a recruitment-fraud disclaimer."],
     sources: [
-      { label: "Emzor Other Vacancies", url: "https://www.emzorpharma.com/other-vacancies/", lastChecked: "2026-10-05" },
       { label: "Emzor Vacancies and Recruitment Disclaimer", url: "https://www.emzorpharma.com/vacancies/", lastChecked: "2026-10-05" }
     ]
   },
@@ -2922,13 +2921,13 @@ export const jobOpportunities: CareerOpportunity[] = [
     requirements: ["Use CBN's official website for recruitment information.", "Confirm that a recruitment exercise is currently active.", "Check the vacancy-specific education and experience requirements."],
     documents: ["Documents will be specified in an official CBN recruitment notice."],
     applicationSteps: ["Open CBN's official Human Resources or recruitment information.", "Confirm that applications are being accepted.", "Read the exact eligibility criteria.", "Submit only through the official route announced by CBN."],
-    officialUrl: "https://www.cbn.gov.ng/faq/",
+    officialUrl: "https://www.cbn.gov.ng/faqs/",
     officialUrlLabel: "Read CBN employment guidance",
     verifiedAt: "2026-10-05",
     nextMilestone: "CBN says recruitment is carried out as needs arise; its HR FAQ did not present a standing open recruitment exercise when checked.",
     feeNote: "Verify any recruitment instruction directly on the Central Bank of Nigeria's official domain.",
     sourceNotes: ["CBN's HR FAQ explains that recruitment is need-driven and lists professional disciplines relevant to its workforce."],
-    sources: [{ label: "CBN Human Resources FAQ", url: "https://www.cbn.gov.ng/faq/", lastChecked: "2026-10-05" }]
+    sources: [{ label: "CBN Human Resources FAQ", url: "https://www.cbn.gov.ng/faqs/", lastChecked: "2026-10-05" }]
   },
   {
     slug: "lagos-tescom-careers",
