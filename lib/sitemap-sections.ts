@@ -6,7 +6,7 @@ import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
-import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
@@ -190,7 +190,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     ...pagination,
-    ...youtubeMovieLibrary
+    ...indexableYouTubeMovies
       .filter((movie) => movie.source !== "curated")
       .map((movie) => ({
         url: base + "/entertainment/youtube/" + movie.videoId,
