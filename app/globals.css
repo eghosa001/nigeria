@@ -4738,11 +4738,16 @@ a.admin-guide-row:hover { background:#f8fcf9; }
 .minimal-movie-card {
   min-width: 0;
 }
-.minimal-movie-card > a {
+.minimal-movie-card > a:not(.movie-card-hitarea) {
   display: block;
   overflow: hidden;
   border-radius: 12px;
   background: #0b241a;
+}
+.minimal-movie-card > .movie-card-hitarea {
+  background: transparent !important;
+  overflow: visible;
+  border-radius: 12px;
 }
 .minimal-movie-card .entertainment-artwork {
   margin: 0;
