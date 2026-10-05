@@ -10,7 +10,7 @@ function unique(values: string[], label: string) {
 }
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
-assert(jobOpportunities.length >= 80, "Jobs scaling wave must keep at least 80 verified opportunity records.");
+assert(jobOpportunities.length >= 100, "Jobs scaling wave must keep at least 100 verified opportunity records.");
 assert(jobOpportunities.length < 1000, "JobsDirectory currently receives the full catalog; move to server pagination before 1,000 records.");
 unique(jobOpportunities.map((item) => item.slug), "Job slugs");
 unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");

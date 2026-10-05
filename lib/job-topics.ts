@@ -36,7 +36,7 @@ export const jobTopics: JobTopic[] = [
     shortTitle: "Tech & fintech",
     description: "Verified technology, telecoms, payments and fintech career routes for Nigerian applicants, including engineering, product, data, operations and commercial roles.",
     answer: "Check the exact work location and role page before applying: the same employer can publish Nigeria-office, hybrid and remote roles with different eligibility.",
-    organizations: ["MTN Nigeria", "Airtel Nigeria", "Flutterwave", "Paystack", "Moniepoint", "Interswitch Group", "IHS Towers"],
+    organizations: ["MTN Nigeria", "Airtel Nigeria", "Flutterwave", "Paystack", "Moniepoint", "Interswitch Group", "IHS Towers", "Microsoft Nigeria", "Ericsson Nigeria", "Huawei Nigeria"],
     relatedSlugs: ["banking-finance", "consulting-professional-services"]
   },
   {
@@ -45,7 +45,7 @@ export const jobTopics: JobTopic[] = [
     shortTitle: "NGO, UN & development",
     description: "Official vacancy and careers routes for development organisations and UN-system employers relevant to applicants in Nigeria.",
     answer: "Confirm duty station, contract type, deadline and nationality or residency conditions on the organisation's own vacancy page; never pay for a shortlist or UN appointment.",
-    organizations: ["SNV", "UNICEF Nigeria", "United Nations Development Programme", "World Health Organization", "British Council Nigeria", "World Food Programme", "Plan International", "FHI 360"],
+    organizations: ["SNV", "UNICEF Nigeria", "United Nations Development Programme", "World Health Organization", "British Council Nigeria", "World Food Programme", "Plan International", "FHI 360", "EHA Clinics", "May & Baker Nigeria Plc"],
     relatedSlugs: ["oil-gas-energy", "consulting-professional-services"]
   },
   {
@@ -54,7 +54,7 @@ export const jobTopics: JobTopic[] = [
     shortTitle: "FMCG & manufacturing",
     description: "Verified career pathways for major Nigerian manufacturing, food, consumer-goods and industrial employers, including engineering, supply chain, sales and graduate opportunities.",
     answer: "Match your application to the exact plant, business unit and function; a general company careers page does not mean every location or programme is currently recruiting.",
-    organizations: ["Reckitt Nigeria", "Unilever Nigeria", "Nestlé", "Dangote Industries Limited", "BUA Group", "Flour Mills of Nigeria", "Nigerian Breweries Plc", "Procter & Gamble Nigeria", "British American Tobacco Nigeria", "Coca-Cola HBC Nigeria"],
+    organizations: ["Reckitt Nigeria", "Unilever Nigeria", "Nestlé", "Dangote Industries Limited", "BUA Group", "Flour Mills of Nigeria", "Nigerian Breweries Plc", "Procter & Gamble Nigeria", "British American Tobacco Nigeria", "Coca-Cola HBC Nigeria", "Seven-Up Bottling Company", "FrieslandCampina WAMCO Nigeria", "Promasidor Nigeria"],
     relatedSlugs: ["oil-gas-energy", "banking-finance"]
   },
   {
@@ -72,7 +72,7 @@ export const jobTopics: JobTopic[] = [
     shortTitle: "Public service",
     description: "Verified federal and state recruitment routes covering civil service, regulators, security agencies, ports and other public institutions.",
     answer: "Check status before applying: a legitimate government recruitment portal may still show zero active vacancies or an older exercise. Use the responsible agency's own notice and never pay for a shortlist.",
-    organizations: ["Federal Civil Service Commission", "Nigeria Customs Service", "Federal Road Safety Corps", "Civil Defence, Correctional, Fire and Immigration Services Board", "National Drug Law Enforcement Agency", "Police Service Commission", "Nigerian Army", "Nigerian Navy", "Nigerian Air Force", "Lagos State Civil Service Commission", "Nigerian Ports Authority", "Standards Organisation of Nigeria", "Nigerian Electricity Regulatory Commission", "Edo State Independent Electoral Commission"],
+    organizations: ["Federal Civil Service Commission", "Nigeria Customs Service", "Federal Road Safety Corps", "Civil Defence, Correctional, Fire and Immigration Services Board", "National Drug Law Enforcement Agency", "Police Service Commission", "Nigerian Army", "Nigerian Navy", "Nigerian Air Force", "Lagos State Civil Service Commission", "Nigerian Ports Authority", "Standards Organisation of Nigeria", "Nigerian Electricity Regulatory Commission", "Edo State Independent Electoral Commission", "Federal Airports Authority of Nigeria", "Nigerian Upstream Petroleum Regulatory Commission", "Central Bank of Nigeria", "Lagos State Teaching Service Commission", "Securities and Exchange Commission Nigeria", "National Information Technology Development Agency"],
     relatedSlugs: ["universities-research", "oil-gas-energy"]
   },
   {
