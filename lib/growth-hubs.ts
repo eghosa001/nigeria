@@ -987,7 +987,11 @@ export const growthHubs: GrowthHub[] = [
       { query: "buy NEM insurance online", serviceSlug: "nem-buy-insurance-online" },
       { query: "file NEM insurance claim", serviceSlug: "nem-file-claim" },
       { query: "book LagRide Lagos", serviceSlug: "lagride-book-ride" },
-      { query: "LagRide captain signup", serviceSlug: "lagride-captain-signup" }
+      { query: "LagRide captain signup", serviceSlug: "lagride-captain-signup" },
+      { query: "Covenant University application 2026", serviceSlug: "covenant-undergraduate-application-2026" },
+      { query: "Babcock University application 2026", serviceSlug: "babcock-undergraduate-application-2026" },
+      { query: "ABUAD application 2026", serviceSlug: "abuad-undergraduate-application-2026" },
+      { query: "Pan Atlantic University application 2026", serviceSlug: "pau-undergraduate-application-2026" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1285,7 +1289,11 @@ export const growthHubs: GrowthHub[] = [
       "nem-buy-insurance-online",
       "nem-file-claim",
       "lagride-book-ride",
-      "lagride-captain-signup"
+      "lagride-captain-signup",
+      "covenant-undergraduate-application-2026",
+      "babcock-undergraduate-application-2026",
+      "abuad-undergraduate-application-2026",
+      "pau-undergraduate-application-2026"
     ]
   },
 
