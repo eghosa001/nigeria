@@ -611,6 +611,48 @@ export const agencies: Agency[] = [
     "shortName": "Jumia",
     "description": "Private e-commerce marketplace with shopping and seller-onboarding services in Nigeria.",
     "website": "https://www.jumia.com.ng/"
+  },
+  {
+    "slug": "gtbank",
+    "name": "Guaranty Trust Bank Limited",
+    "shortName": "GTBank",
+    "description": "Private Nigerian bank offering retail, business and digital banking services including 737 USSD.",
+    "website": "https://www.gtbank.com/"
+  },
+  {
+    "slug": "zenith-bank",
+    "name": "Zenith Bank Plc",
+    "shortName": "Zenith Bank",
+    "description": "Private Nigerian bank offering retail, business and digital banking services.",
+    "website": "https://www.zenithbank.com/"
+  },
+  {
+    "slug": "stanbic-ibtc-bank",
+    "name": "Stanbic IBTC Bank",
+    "shortName": "Stanbic IBTC",
+    "description": "Private Nigerian bank offering personal, business and digital banking services.",
+    "website": "https://www.stanbicibtcbank.com/nigeriabank/"
+  },
+  {
+    "slug": "fidelity-bank",
+    "name": "Fidelity Bank Plc",
+    "shortName": "Fidelity Bank",
+    "description": "Private Nigerian bank offering personal and business banking, including digital business-account onboarding.",
+    "website": "https://fidelitybank.ng/"
+  },
+  {
+    "slug": "flutterwave",
+    "name": "Flutterwave",
+    "shortName": "Flutterwave",
+    "description": "Private payment technology provider offering merchant onboarding, payment acceptance and settlement services in Nigeria.",
+    "website": "https://flutterwave.com/"
+  },
+  {
+    "slug": "opay",
+    "name": "OPay",
+    "shortName": "OPay",
+    "description": "Private Nigerian financial-services platform offering accounts, transfers, cards, merchant services and emergency security controls.",
+    "website": "https://opayweb.com/ng/"
   }
 ];
 
