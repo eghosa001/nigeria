@@ -183,6 +183,21 @@ export const entertainmentPeople: EntertainmentPerson[] = [
     roles: ["Actor"],
     knownForSlugs: ["behind-the-scenes", "thinline"],
     summary: "Actor linked here to Behind the Scenes and Thinline.",
+  },
+
+  {
+    slug: "lateef-adedimeji",
+    name: "Lateef Adedimeji",
+    roles: ["Actor"],
+    knownForSlugs: ["soole", "king-of-thieves", "lisabi-a-legend-is-born"],
+    summary: "Actor represented here across Soólè, King of Thieves and Lísàbí: A Legend Is Born.",
+  },
+  {
+    slug: "chioma-chukwuka-akpotha",
+    name: "Chioma Chukwuka Akpotha",
+    roles: ["Actor"],
+    knownForSlugs: ["omo-ghetto-the-saga", "sisi-london"],
+    summary: "Actor represented here by Omo Ghetto: the Saga and Sisi London.",
   }
 ];
 
