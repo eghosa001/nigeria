@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "strategy": "million-search-expansion",
+  "market_goal": {
+    "combined_monthly_search_demand": "millions",
+    "note": "This is the addressable search-demand universe across many Nigerian queries, not a traffic guarantee."
+  },
+  "traffic_design": {
+    "monthly_pageviews_target": 10000000,
+    "monthly_pageviews_headroom": 50000000,
+    "underlying_content_records_headroom": 1000000
+  },
+  "content_scale": {
+    "indexable_public_urls_target": 100000,
+    "pillar_url_targets": {
+      "movies_entertainment": 30000,
+      "services": 20000,
+      "tour_nigeria": 30000,
+      "jobs_careers": 20000
+    }
+  },
+  "guardrails": {
+    "sitemap_urls_per_file": 20000,
+    "catalog_records_before_database_required": 5000,
+    "max_catalog_records_sent_to_browser": 1000,
+    "default_server_page_size": 30,
+    "no_thin_programmatic_pages": true,
+    "preserve_existing_canonical_urls": true
+  }
+}
