@@ -30,7 +30,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect(page.locator('script[data-mynigeriaguide-posthog]')).toHaveCount(0);
   });
 
-  test("normal-browser public analytics emits a GA4 collection request", async ({ page }) => {
+  test("normal-browser public analytics emits GA4 and PostHog collection requests", async ({ page }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 
     await page.addInitScript(() => {
@@ -46,9 +46,14 @@ test.describe("live MyNigeriaGuide deployment", () => {
       collectUrl = route.request().url();
       await route.abort();
     });
-    await page.route(/https:\/\/eu\.i\.posthog\.com\/(?:i\/v0\/e|e)\/.*/, async (route) => {
-      posthogCaptureUrl = route.request().url();
-      await route.abort();
+    await page.route("https://eu.i.posthog.com/**", async (route) => {
+      const request = route.request();
+      if (request.method() === "POST" && !request.url().includes("/flags")) {
+        posthogCaptureUrl = request.url();
+        await route.abort();
+        return;
+      }
+      await route.continue();
     });
 
     await page.goto("/");
