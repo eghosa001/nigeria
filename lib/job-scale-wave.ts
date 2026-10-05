@@ -1,6 +1,7 @@
 import type { CareerOpportunity, JobRecordKind, JobSector } from "@/lib/jobs";
 
 // This module is the verified 191-record wave that brings the Jobs catalog to the 300-record milestone.
+// Production live QA probes representative records from this module after each Jobs-only deploy.
 
 const VERIFIED_AT = "2026-10-05";
 
