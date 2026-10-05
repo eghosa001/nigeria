@@ -110,7 +110,7 @@ export default async function YouTubeChannelPage({ params }: { params: Promise<{
               This page highlights the latest {recent.length} films. The full {hub.movieCount}-movie set remains discoverable through the main
               YouTube catalog and its server-rendered pagination.
             </p>
-            <Link className="text-link" href={{ pathname: "/entertainment/youtube", query: { channel: hub.channel.name } }}>
+            <Link className="text-link" href={{ pathname: "/entertainment/youtube", query: { channel: hub.movies[0]?.channelName ?? hub.channel.name } }}>
               Filter all {hub.channel.name} movies →
             </Link>
           </div>
