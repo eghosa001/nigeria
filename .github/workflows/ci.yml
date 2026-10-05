@@ -49,10 +49,15 @@ jobs:
           else
             jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/check-jobs-content\.ts$)' || true)"
             non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/check-jobs-content\.ts$)' || true)"
+            tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
+            non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/ci\.yml$|app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
 
             if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
               echo "mode=jobs" >> "$GITHUB_OUTPUT"
               printf 'Jobs-only product files:\n%s\n' "$changed"
+            elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
+              echo "mode=tour" >> "$GITHUB_OUTPUT"
+              printf 'Tour-only product files:\n%s\n' "$changed"
             else
               echo "mode=full" >> "$GITHUB_OUTPUT"
               printf 'Product-CI-relevant files:\n%s\n' "$relevant"
@@ -69,6 +74,11 @@ jobs:
         run: |
           python3 scripts/fast_path_guard.py
           npm run check:jobs
+      - name: Validate Tour Nigeria changes
+        if: steps.scope.outputs.mode == 'tour'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:explore
       - run: node scripts/check-production-audit.mjs
         if: steps.scope.outputs.mode == 'full'
       - run: npm run typecheck
