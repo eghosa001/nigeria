@@ -1206,7 +1206,7 @@ export const agencies: Agency[] = [
     "shortName": "Travelstart",
     "description": "Private online travel platform offering flight booking, hotel and travel support services to Nigerian customers.",
     "website": "https://www.travelstart.com.ng/"
-  },,
+  },
   {
     "slug": "sendbox",
     "name": "Sendbox",
@@ -1500,6 +1500,41 @@ export const agencies: Agency[] = [
     "shortName": "Stanbic IBTC Pension",
     "description": "Licensed Nigerian Pension Fund Administrator offering RSA registration, statements, data recapture and pension self-service channels.",
     "website": "https://www.stanbicibtcpension.com/"
+  },
+  {
+    "slug": "gokada",
+    "name": "Gokada",
+    "shortName": "Gokada",
+    "description": "Private Lagos last-mile delivery platform offering on-demand and scheduled parcel delivery through its mobile app.",
+    "website": "https://www.gokada.ng/"
+  },
+  {
+    "slug": "cips",
+    "name": "Chartered Institute of Procurement & Supply",
+    "shortName": "CIPS",
+    "description": "Professional procurement and supply body offering student membership, qualifications and computer-based exam services to Nigerian learners.",
+    "website": "https://www.cips.org/"
+  },
+  {
+    "slug": "pmi",
+    "name": "Project Management Institute",
+    "shortName": "PMI",
+    "description": "Professional project-management body offering PMP and other globally recognised certification application, exam and renewal services.",
+    "website": "https://www.pmi.org/"
+  },
+  {
+    "slug": "pearson-vue",
+    "name": "Pearson VUE",
+    "shortName": "Pearson VUE",
+    "description": "Private computer-based testing provider used by many professional certification programmes for exam scheduling, test centres and online proctoring.",
+    "website": "https://www.pearsonvue.com/"
+  },
+  {
+    "slug": "flyboku",
+    "name": "FlyBoku",
+    "shortName": "FlyBoku",
+    "description": "Private Nigerian online travel platform offering flight search/booking, hotels, tours and travel-support services.",
+    "website": "https://flyboku.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
