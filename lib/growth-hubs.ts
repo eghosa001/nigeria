@@ -746,7 +746,19 @@ export const growthHubs: GrowthHub[] = [
       { query: "IBEDC pay bill", serviceSlug: "ibedc-pay-bill-buy-token" },
       { query: "IBEDC prepaid meter application", serviceSlug: "ibedc-map-meter-application" },
       { query: "IBEDC MAP refund", serviceSlug: "ibedc-map-refund" },
-      { query: "IBEDC Band A compensation token", serviceSlug: "ibedc-band-a-compensation-token" }
+      { query: "IBEDC Band A compensation token", serviceSlug: "ibedc-band-a-compensation-token" },
+      { query: "Ecobank Xpress account", serviceSlug: "ecobank-xpress-account" },
+      { query: "open Ecobank savings account Nigeria", serviceSlug: "ecobank-classic-savings-account" },
+      { query: "become Ecobank Xpress Point agent", serviceSlug: "ecobank-xpress-point-agent" },
+      { query: "reactivate Ecobank dormant account", serviceSlug: "ecobank-dormant-account-reactivation" },
+      { query: "FCMB online savings account", serviceSlug: "fcmb-online-savings-account" },
+      { query: "FCMB business account online", serviceSlug: "fcmb-business-account-online" },
+      { query: "open ALAT account", serviceSlug: "alat-account-opening" },
+      { query: "request ALAT debit card", serviceSlug: "alat-debit-card-request-activation" },
+      { query: "open Sterling OneBank account", serviceSlug: "sterling-onebank-account-opening" },
+      { query: "upgrade OneBank account", serviceSlug: "sterling-onebank-tier-upgrade" },
+      { query: "buy Hygeia HMO plan", serviceSlug: "hygeia-health-plan-purchase" },
+      { query: "find Hygeia hospital", serviceSlug: "hygeia-provider-directory" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -817,7 +829,19 @@ export const growthHubs: GrowthHub[] = [
       "ibedc-pay-bill-buy-token",
       "ibedc-map-meter-application",
       "ibedc-map-refund",
-      "ibedc-band-a-compensation-token"
+      "ibedc-band-a-compensation-token",
+      "ecobank-xpress-account",
+      "ecobank-classic-savings-account",
+      "ecobank-xpress-point-agent",
+      "ecobank-dormant-account-reactivation",
+      "fcmb-online-savings-account",
+      "fcmb-business-account-online",
+      "alat-account-opening",
+      "alat-debit-card-request-activation",
+      "sterling-onebank-account-opening",
+      "sterling-onebank-tier-upgrade",
+      "hygeia-health-plan-purchase",
+      "hygeia-provider-directory"
     ]
   },
 
