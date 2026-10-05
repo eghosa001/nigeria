@@ -1031,7 +1031,12 @@ export const growthHubs: GrowthHub[] = [
       { query: "request Clinix ambulance", serviceSlug: "clinix-ambulance-request" },
       { query: "Clinix corporate health screening", serviceSlug: "clinix-corporate-health-screening" },
       { query: "book Filmhouse ticket", serviceSlug: "filmhouse-book-movie-ticket" },
-      { query: "Filmhouse ticket refund", serviceSlug: "filmhouse-ticket-refund-support" }
+      { query: "Filmhouse ticket refund", serviceSlug: "filmhouse-ticket-refund-support" },
+      { query: "open MoMo PSB wallet", serviceSlug: "momo-psb-wallet-opening" },
+      { query: "become MoMo PSB agent", serviceSlug: "momo-psb-agent-onboarding" },
+      { query: "MoMo PSB merchant onboarding", serviceSlug: "momo-psb-merchant-onboarding" },
+      { query: "reverse wrong MoMo transfer", serviceSlug: "momo-psb-wrong-transfer-reversal" },
+      { query: "book MeCure Hospital appointment", serviceSlug: "mecure-hospital-book-appointment" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1373,7 +1378,12 @@ export const growthHubs: GrowthHub[] = [
       "clinix-ambulance-request",
       "clinix-corporate-health-screening",
       "filmhouse-book-movie-ticket",
-      "filmhouse-ticket-refund-support"
+      "filmhouse-ticket-refund-support",
+      "momo-psb-wallet-opening",
+      "momo-psb-agent-onboarding",
+      "momo-psb-merchant-onboarding",
+      "momo-psb-wrong-transfer-reversal",
+      "mecure-hospital-book-appointment"
     ]
   },
 
