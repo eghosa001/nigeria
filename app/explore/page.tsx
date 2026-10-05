@@ -48,7 +48,7 @@ const stateGuideLinks = [
 
 export const metadata: Metadata = {
   title: "Explore Nigeria",
-  description: "Explore all 36 Nigerian states and the FCT with city guides, attractions, hotels, restaurants, events and practical trip-planning guidance."
+  description: "Explore all 36 Nigerian states and the FCT with city guides, attractions, hotels, restaurants, events and practical trip-planning guidance.",
   alternates: { canonical: "/explore" },
 };
 
