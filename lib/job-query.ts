@@ -2,6 +2,7 @@ import { jobLocationFacets, jobProfessionFacets, matchesJobLocation, matchesJobP
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import { jobOpportunities, type CareerOpportunity, type JobSector, type JobStatus } from "@/lib/jobs";
 
+// Keep the client payload bounded even as the server-side catalog grows.
 export const JOBS_DIRECTORY_PAGE_SIZE = 24;
 export const JOBS_DIRECTORY_MAX_PAGE_SIZE = 48;
 
