@@ -948,7 +948,19 @@ export const growthHubs: GrowthHub[] = [
       { query: "CIPM student registration", serviceSlug: "cipm-student-membership-registration" },
       { query: "CIPM exam registration", serviceSlug: "cipm-exam-registration" },
       { query: "CFA exam registration Nigeria", serviceSlug: "cfa-exam-registration-nigeria" },
-      { query: "Medplus online order Nigeria", serviceSlug: "medplus-order-online-nigeria" }
+      { query: "Medplus online order Nigeria", serviceSlug: "medplus-order-online-nigeria" },
+      { query: "ICAN professional exemption", serviceSlug: "ican-professional-exemption" },
+      { query: "ICAN professional induction", serviceSlug: "ican-professional-induction" },
+      { query: "CIBN student membership", serviceSlug: "cibn-student-membership-registration" },
+      { query: "CIBN ACIB exam registration", serviceSlug: "cibn-acib-exam-registration" },
+      { query: "CIBN subscription renewal", serviceSlug: "cibn-subscription-renewal" },
+      { query: "CITN student registration", serviceSlug: "citn-student-membership-registration" },
+      { query: "CITN exam registration", serviceSlug: "citn-professional-exam-registration" },
+      { query: "CITN subscription renewal", serviceSlug: "citn-subscription-renewal" },
+      { query: "CITN induction application", serviceSlug: "citn-induction-application" },
+      { query: "MTN 5G router Nigeria", serviceSlug: "mtn-5g-router-purchase-activation" },
+      { query: "MTN broadband resubscription", serviceSlug: "mtn-broadband-router-resubscribe" },
+      { query: "MTN FibreX Nigeria", serviceSlug: "mtn-fibrex-order-installation" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1207,7 +1219,19 @@ export const growthHubs: GrowthHub[] = [
       "cipm-student-membership-registration",
       "cipm-exam-registration",
       "cfa-exam-registration-nigeria",
-      "medplus-order-online-nigeria"
+      "medplus-order-online-nigeria",
+      "ican-professional-exemption",
+      "ican-professional-induction",
+      "cibn-student-membership-registration",
+      "cibn-acib-exam-registration",
+      "cibn-subscription-renewal",
+      "citn-student-membership-registration",
+      "citn-professional-exam-registration",
+      "citn-subscription-renewal",
+      "citn-induction-application",
+      "mtn-5g-router-purchase-activation",
+      "mtn-broadband-router-resubscribe",
+      "mtn-fibrex-order-installation"
     ]
   },
 
