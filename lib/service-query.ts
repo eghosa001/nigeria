@@ -24,6 +24,11 @@ export type ServiceDirectoryResult = {
   totalPages: number;
 };
 
+export function getServiceDirectoryPageCount(pageSize = SERVICE_DIRECTORY_PAGE_SIZE) {
+  const size = Math.min(48, Math.max(1, Math.floor(pageSize)));
+  return Math.max(1, Math.ceil(publicServiceListings.length / size));
+}
+
 function boundedPageSize(value?: number) {
   if (!Number.isFinite(value)) return SERVICE_DIRECTORY_PAGE_SIZE;
   return Math.min(48, Math.max(1, Math.floor(value as number)));
