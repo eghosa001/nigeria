@@ -74,6 +74,30 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "Oversabi Aunty Cast, Netflix & Where to Watch",
     description: "Oversabi Aunty cast: Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa and more. See the story, 127-minute runtime and official Netflix Nigeria link.",
   },
+  "bowale": {
+    title: "Bowale Nigerian Movie: Cast & Full Movie",
+    description: "Bowale cast, story, 121-minute runtime and the official BIODUNSTEPHEN TV full-movie link. Starring BamBam Olawumi, Bobby Ekpe and Jude Chukwuka.",
+  },
+  "sister-agatha": {
+    title: "Sister Agatha Nigerian Movie: Cast & Full Movie",
+    description: "Sister Agatha cast, story, 108-minute runtime and the official full-movie link. Starring Blessing Obasi, Kiekie, Michael Ejoor and Kenzy Udosen.",
+  },
+  "my-housemate": {
+    title: "My Housemate Nigerian Movie: Cast & Full Movie",
+    description: "My Housemate cast, story, 81-minute runtime and the official Bolaji Ogunmola TV full-movie link, starring Bolaji Ogunmola and Nosa Rex.",
+  },
+  "all-things-equal": {
+    title: "All Things Equal Nigerian Movie: Cast & Full Movie",
+    description: "All Things Equal cast, story, 95-minute runtime and the official Sarian Martin TV full-movie link, starring Sarian Martin and Daniel Etim Effiong.",
+  },
+  "gingerrr": {
+    title: "Gingerrr Cast & Where to Watch on Netflix",
+    description: "Gingerrr cast, story and official Netflix link. Starring Bukunmi Adeaga-Ilori, Bisola Aiyeola, Wumi Toriola, Bolaji Ogunmola and Odunlade Adekola.",
+  },
+  "forever-found": {
+    title: "Forever Found Nigerian Movie: Cast & Full Movie",
+    description: "Forever Found cast, story, 108-minute runtime and official full-movie link, with Chinenye Nnebe, John Ekanem, Chioma Nwosu and Amaka Ndukwe.",
+  },
 };
 
 function movieImageUrl(title: EntertainmentTitle, base: string) {
