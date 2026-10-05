@@ -765,6 +765,20 @@ export const agencies: Agency[] = [
     "shortName": "Hygeia HMO",
     "description": "Private Nigerian health-maintenance organisation offering individual, family and business health plans with a provider network.",
     "website": "https://hygeiahmo.com/"
+  },
+  {
+    "slug": "phed",
+    "name": "Port Harcourt Electricity Distribution Plc",
+    "shortName": "PHED",
+    "description": "Private electricity distribution company serving Rivers, Bayelsa, Cross River and Akwa Ibom with payment, metering and customer-service routes.",
+    "website": "https://phed.com.ng/"
+  },
+  {
+    "slug": "kaduna-electric",
+    "name": "Kaduna Electricity Distribution Company",
+    "shortName": "Kaduna Electric",
+    "description": "Private electricity distribution company serving Kaduna, Kebbi, Sokoto and Zamfara with token, billing and MAP metering services.",
+    "website": "https://kadunaelectric.com/"
   }
 ];
 
