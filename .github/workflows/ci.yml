@@ -48,13 +48,14 @@ jobs:
             echo "mode=skip" >> "$GITHUB_OUTPUT"
             echo "No product-CI-relevant changes; required CI check can finish immediately."
           else
-            jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs)$)' || true)"
-            non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs)$)' || true)"
+            jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs)$)' || true)"
+            non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs)$)' || true)"
             tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
             non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
 
             if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
               echo "mode=jobs" >> "$GITHUB_OUTPUT"
+              if printf '%s\n' "$changed" | grep -qx 'next.config.ts'; then echo "jobs_config=true" >> "$GITHUB_OUTPUT"; else echo "jobs_config=false" >> "$GITHUB_OUTPUT"; fi
               printf 'Jobs-only product files:\n%s\n' "$changed"
             elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
               echo "mode=tour" >> "$GITHUB_OUTPUT"
@@ -75,6 +76,9 @@ jobs:
         run: |
           python3 scripts/fast_path_guard.py
           npm run check:jobs
+      - name: Build Next app for Jobs redirect config
+        if: steps.scope.outputs.mode == 'jobs' && steps.scope.outputs.jobs_config == 'true'
+        run: npm run build:next
       - name: Validate Tour Nigeria changes
         if: steps.scope.outputs.mode == 'tour'
         run: |
