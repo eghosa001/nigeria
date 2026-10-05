@@ -10343,5 +10343,260 @@
       "list property Spleet Nigeria",
       "Spleet property management"
     ]
+  },
+  {
+    "slug": "cima-cgma-candidate-registration",
+    "title": "How to register as a CIMA CGMA candidate",
+    "shortTitle": "CIMA CGMA registration",
+    "summary": "AICPA & CIMA's CGMA Professional Qualification registration route for creating an account, entering existing qualifications and work experience, seeing the eligible entry level and completing candidate registration.",
+    "category": "Education",
+    "agencySlug": "aicpa-cima",
+    "feeLabel": "Registration and subscription fees depend on route and region",
+    "feeNote": "AICPA & CIMA applies current candidate registration, subscription and assessment fees according to the candidate's region and chosen pathway. Confirm the amount shown before completing registration.",
+    "timeline": "The online registration route can identify the applicant's entry level after qualification and work-experience information is entered; final candidate access depends on completing the registration and payment steps.",
+    "status": "verified",
+    "officialPortal": "https://www.aicpa-cima.com/resources/landing/becoming-a-cgma",
+    "requirements": [
+      "An AICPA & CIMA account with a working email address and candidate contact details",
+      "Details of the applicant's existing academic or professional qualifications so CIMA can assess the appropriate entry point",
+      "The number of years of relevant work experience requested during the registration assessment",
+      "A chosen CGMA study pathway and payment method for the current registration/subscription amount"
+    ],
+    "steps": [
+      "Open AICPA & CIMA's official CGMA Professional Qualification page and choose the registration option for candidates in Europe, the Middle East, Africa or the applicable region.",
+      "Create or sign in to the applicant's AICPA & CIMA account.",
+      "Enter the qualifications and years of work experience requested so the system can show the candidate's eligible entry level.",
+      "Review the proposed entry point and choose the preferred CGMA study pathway before continuing.",
+      "Complete the remaining candidate-registration and payment steps and keep the membership/candidate confirmation for future exam booking."
+    ],
+    "notes": [
+      "AICPA & CIMA says candidates can enter qualifications and work experience first to see their likely entry level before completing full registration.",
+      "The CGMA qualification can be completed through different learning pathways, so the study route and assessment structure can differ.",
+      "To ultimately obtain the CGMA designation, candidates must also satisfy the applicable practical-experience requirement in addition to passing required assessments."
+    ],
+    "sources": [
+      {
+        "label": "AICPA & CIMA — Becoming a CGMA",
+        "agency": "AICPA & CIMA",
+        "url": "https://www.aicpa-cima.com/resources/landing/becoming-a-cgma",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AICPA & CIMA — CGMA Designation Journey",
+        "agency": "AICPA & CIMA",
+        "url": "https://www.aicpa-cima.com/resources/landing/cgma-designation",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cima-cgma-exam-scheduling",
+      "acca-book-exam-nigeria",
+      "ican-professional-student-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIMA registration Nigeria",
+      "CGMA candidate registration Nigeria",
+      "join CIMA Nigeria",
+      "CIMA student registration",
+      "CIMA entry level Nigeria"
+    ]
+  },
+  {
+    "slug": "cima-cgma-exam-scheduling",
+    "title": "How to schedule a CIMA CGMA exam from Nigeria",
+    "shortTitle": "CIMA exam scheduling",
+    "summary": "AICPA & CIMA's exam-booking route for CGMA candidates, covering on-demand Objective Tests and the February, May, August and November Case Study windows with test-centre or eligible online delivery.",
+    "category": "Education",
+    "agencySlug": "aicpa-cima",
+    "feeLabel": "Exam fee depends on level, assessment and candidate region",
+    "feeNote": "Objective Test and Case Study fees vary by assessment and candidate region. Confirm the exact amount shown in the CIMA candidate account when scheduling.",
+    "timeline": "Objective Tests are available on demand throughout the year. Case Study exams run in four windows each year—February, May, August and November—with separate scheduling deadlines.",
+    "status": "verified",
+    "officialPortal": "https://www.aicpa-cima.com/resources/landing/exam-timetable",
+    "requirements": [
+      "An active CIMA/CGMA candidate account and eligibility for the objective test or case study being booked",
+      "Completion of any prerequisite competency or lower-level assessment required before the selected exam",
+      "An available test-centre or eligible online-proctored appointment",
+      "A computer that passes the required system test when using online OnVUE delivery",
+      "A supported payment method for the assessment fee shown during scheduling"
+    ],
+    "steps": [
+      "Sign in to the CIMA/CGMA candidate account and confirm the exam or case-study level the candidate is eligible to take.",
+      "For an Objective Test, choose an available on-demand appointment; for a Case Study, check the current February, May, August or November scheduling window and deadline.",
+      "Choose a test-centre appointment or online delivery where that option is available for the candidate's location and assessment.",
+      "For an online exam, perform the required system test and review the room/setup requirements before confirming the appointment.",
+      "Pay the displayed assessment fee, save the exam confirmation and review the candidate account for any later scheduling or exam-day instructions."
+    ],
+    "notes": [
+      "AICPA & CIMA says Objective Tests are computer-based and available throughout the year.",
+      "Case Study exams are available only in published exam windows and have separate scheduling deadlines by level.",
+      "The provider's scheduling guide tells online candidates to test their system and install the OnVUE software before exam day."
+    ],
+    "sources": [
+      {
+        "label": "AICPA & CIMA Exam Timetable",
+        "agency": "AICPA & CIMA",
+        "url": "https://www.aicpa-cima.com/resources/landing/exam-timetable",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AICPA & CIMA Guide for Scheduling Your Exam",
+        "agency": "AICPA & CIMA",
+        "url": "https://www.aicpa-cima.com/resources/download/guide-for-scheduling-your-exam",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "AICPA & CIMA CGMA Qualification",
+        "agency": "AICPA & CIMA",
+        "url": "https://www.aicpa-cima.com/resources/landing/cgma-designation",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "cima-cgma-candidate-registration",
+      "pearson-vue-schedule-exam",
+      "acca-book-exam-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CIMA exam booking Nigeria",
+      "CIMA exam dates 2026",
+      "CGMA exam Nigeria",
+      "CIMA Pearson VUE Nigeria",
+      "CIMA case study exam booking"
+    ]
+  },
+  {
+    "slug": "google-cloud-certification-exam-scheduling",
+    "title": "How to book a Google Cloud certification exam from Nigeria",
+    "shortTitle": "Google Cloud exam booking",
+    "summary": "Google Cloud's certification-booking route for selecting the credential, reviewing its current fee and exam guide, then registering for either an online-proctored appointment or an available testing-centre session.",
+    "category": "Education",
+    "agencySlug": "google-cloud-certification",
+    "feeLabel": "Exam-specific fee; current standard examples range from US$99 to US$200",
+    "feeNote": "Google Cloud exam prices vary by certification. Current examples include US$99 for Cloud Digital Leader, US$125 for Associate Cloud Engineer and US$200 for several Professional exams, plus applicable tax.",
+    "timeline": "Appointment availability depends on the selected certification and the remote or testing-centre schedule presented during registration.",
+    "status": "verified",
+    "officialPortal": "https://cloud.google.com/learn/certification",
+    "requirements": [
+      "Selection of the exact Google Cloud certification the candidate intends to take",
+      "Review of the exam's current language, duration, fee and recommended-experience information",
+      "Candidate identity information that matches the approved identification used for the proctored exam",
+      "A suitable computer/testing environment for remote proctoring or an available onsite testing-centre appointment",
+      "A supported payment method for the fee shown during certification registration"
+    ],
+    "steps": [
+      "Open Google Cloud's official Certifications page and select the certification the candidate intends to earn.",
+      "Review that credential's exam guide, registration fee, language and delivery options before choosing Register.",
+      "Choose either the remote online-proctored option or an available onsite testing centre.",
+      "Enter the candidate information required during registration and review the exam terms and data-sharing policies.",
+      "Complete payment, save the appointment confirmation and follow the exam-specific preparation and identification instructions."
+    ],
+    "notes": [
+      "Google Cloud certification fees are not identical across credential levels, so this guide does not apply one flat price to every exam.",
+      "Current Google Cloud certification pages offer both remote online-proctored and testing-centre delivery for major credentials.",
+      "Reschedule, cancellation and retake rules can differ by the exam and exam partner and should be checked during registration."
+    ],
+    "sources": [
+      {
+        "label": "Google Cloud Certifications",
+        "agency": "Google Cloud",
+        "url": "https://cloud.google.com/learn/certification",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Associate Cloud Engineer Certification",
+        "agency": "Google Cloud",
+        "url": "https://cloud.google.com/learn/certification/cloud-engineer",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Cloud Digital Leader Certification",
+        "agency": "Google Cloud",
+        "url": "https://cloud.google.com/learn/certification/cloud-digital-leader",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Professional Cloud Developer Certification",
+        "agency": "Google Cloud",
+        "url": "https://cloud.google.com/learn/certification/cloud-developer/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "aws-certification-exam-scheduling",
+      "microsoft-certification-exam-scheduling",
+      "oracle-certification-exam-scheduling",
+      "cisco-certification-exam-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Google Cloud certification Nigeria",
+      "Google Cloud exam Nigeria",
+      "book Google Cloud exam",
+      "Google Cloud online proctored exam",
+      "Google Cloud test centre Nigeria"
+    ]
+  },
+  {
+    "slug": "cfa-exam-deferral",
+    "title": "How CFA exam deferrals work for 2026 and 2027 exams",
+    "shortTitle": "CFA exam deferral",
+    "summary": "CFA Institute's current deferral route for candidates who cannot sit as planned, distinguishing the remaining paid-deferral option for eligible 2026 exams from the emergency-only policy that applies to February 2027 and later exam cycles.",
+    "category": "Education",
+    "agencySlug": "cfa-institute",
+    "feeLabel": "2026 paid deferral US$449; approved emergency deferral US$100 processing fee in most cases",
+    "feeNote": "CFA Institute says eligible candidates registered for a 2026 exam may purchase a US$449 paid deferral. Paid deferrals are eliminated for February 2027 and later exams. Approved emergency deferrals generally carry a US$100 processing fee, except qualifying Prometric-reschedule cases.",
+    "timeline": "Deferral requests must be submitted by the deadline for the candidate's exam window. A 2026 paid deferral can move the exam by up to 12 months depending on level and available windows.",
+    "status": "verified",
+    "officialPortal": "https://www.cfainstitute.org/about/governance/policies/cfa-program-deferral-policy",
+    "requirements": [
+      "An existing CFA Program registration for an exam window that is eligible for the requested deferral type",
+      "For a 2026 paid deferral, submission before the paid-deferral deadline and payment of the current deferral fee",
+      "For an emergency deferral, a qualifying circumstance under CFA Institute's current policy",
+      "Supporting documentation when CFA Institute requires evidence for the emergency-deferral reason",
+      "A new exam-window selection after the deferral is approved or purchased"
+    ],
+    "steps": [
+      "Sign in to the CFA Institute account and open the registered candidate's exam tile or current deferral-policy route.",
+      "Check whether the exam is a 2026 window that still permits a paid deferral or a February 2027-and-later window where paid deferrals have been removed.",
+      "For an emergency request, confirm that the circumstance matches CFA Institute's listed emergency categories and prepare the required evidence.",
+      "Submit the eligible paid or emergency deferral before the applicable deadline and pay the fee shown when required.",
+      "After approval or purchase, return to the CFA account and follow the instructions to register/schedule the replacement exam window."
+    ],
+    "notes": [
+      "CFA Institute announced that paid deferrals are no longer available beginning with February 2027 exam administrations.",
+      "For eligible 2026 exams, the current paid-deferral amount is US$449.",
+      "Emergency-deferral eligibility is narrow and CFA Institute can require documentary evidence; candidates should not assume being unprepared qualifies."
+    ],
+    "sources": [
+      {
+        "label": "CFA Program Deferral Policy",
+        "agency": "CFA Institute",
+        "url": "https://www.cfainstitute.org/about/governance/policies/cfa-program-deferral-policy",
+        "lastChecked": "2026-10-05",
+        "published": "2026-03-09"
+      },
+      {
+        "label": "CFA Institute 2027 Deferral Policy Update",
+        "agency": "CFA Institute",
+        "url": "https://www.cfainstitute.org/about/press-room/2026/deferral-policies-update",
+        "lastChecked": "2026-10-05",
+        "published": "2026-03-05"
+      }
+    ],
+    "related": [
+      "cfa-exam-registration-nigeria",
+      "pearson-vue-schedule-exam"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "CFA deferral 2026",
+      "CFA deferral 2027",
+      "CFA paid deferral fee",
+      "CFA emergency deferral",
+      "defer CFA exam Nigeria"
+    ]
   }
 ]
