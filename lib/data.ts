@@ -1591,6 +1591,13 @@ export const agencies: Agency[] = [
     "shortName": "SeamlessHR",
     "description": "Private African HR and payroll platform with Nigeria employer services including Breeze Payer salary, pension and tax disbursements.",
     "website": "https://seamlesshr.com/ng/"
+  },
+  {
+    "slug": "aicpa-cima",
+    "name": "AICPA & CIMA",
+    "shortName": "CIMA",
+    "description": "Professional accounting body providing the CGMA Professional Qualification, candidate registration and computer-based examinations.",
+    "website": "https://www.aicpa-cima.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
