@@ -610,7 +610,16 @@ const expectedSlugs = [
   "stanbic-pension-rsa-registration",
   "stanbic-pension-rsa-statement",
   "stanbic-pension-update-biodata",
-  "stanbic-pension-recover-pin-passcode",] as const;
+  "stanbic-pension-recover-pin-passcode",
+  "gokada-book-delivery-lagos",
+  "cips-student-membership-registration",
+  "cips-exam-booking",
+  "pmp-certification-application",
+  "pmp-exam-scheduling",
+  "pearson-vue-schedule-exam",
+  "flyboku-book-flight",
+  "travelstart-book-flight-nigeria",
+] as const;
 const representative = [
   {
     "slug": "passport-renewal",
