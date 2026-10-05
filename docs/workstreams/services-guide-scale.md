@@ -151,6 +151,56 @@ unless a critical shared fix is required.
 
 Keep any unavoidable shared edit small and separate.
 
+## Inherited MyNigeriaGuide requirements
+
+These requirements come from the existing production service-guide standard and must be preserved while scaling.
+
+### Answer-first guide standard
+
+Each high-intent service guide should answer the most important questions before long background text, including where applicable:
+
+- current cost/fee;
+- exact requirements;
+- whether the process is online, physical or hybrid;
+- realistic official timeline/status;
+- where the user should start;
+- what happens next after submission.
+
+Requirements must be concrete. Name the actual identifier/document when it is known; if the authority varies the requirement by applicant type, explain that variability instead of writing vague filler such as “valid documents required.”
+
+### Verification and editorial integrity
+
+- Prefer official government/regulator/agency sources and keep source provenance plus last-checked dates visible.
+- Never guess a fee, deadline, form, portal or requirement.
+- If official sources conflict, show the conflict/review state; do not silently pick one value.
+- Review/unpublished records must never become publicly linked or indexable.
+- Maintain official portal links, online/physical/hybrid routes, fallback routes and office/location context when useful.
+- Source monitoring should continue to cover important fee/process markers, stale information and broken official links.
+- Do not collect sensitive application data; MyNigeriaGuide guides users to the responsible official service.
+
+### SEO and topic architecture
+
+- Keep the established hub → guide → subquestion/related-guide model.
+- Every service should link naturally to its agency, category/topic hub, related tasks, relevant fee/update pages and useful locations/offices; important parent/hub pages should link back to the new guide.
+- Consolidate same-intent keyword variants into the strongest canonical guide.
+- Use Search Console impressions/queries to strengthen pages already showing in Google before creating speculative variants.
+- Use structured data only when it matches visible content; FAQ-style markup must reflect real visible questions/answers.
+- New pages must enter the appropriate sitemap and existing IndexNow/Bing discovery flow.
+
+### UX, mobile and theme
+
+- Phone-first: service cards, quick answers, requirements, tables, trackers, forms, search and navigation must fit small screens without overflow.
+- Preserve complete dark-mode readability across all service surfaces.
+- Keep the current answer-first hierarchy and prominent official-portal action.
+- Preserve strong mobile performance, accessibility and clean server-rendered crawlability; avoid hydration regressions.
+- AdSense stays below useful answer content and must not interrupt the primary task.
+
+### Admin/editorial workflow
+
+- Public admin/editorial routes must remain protected.
+- Service edits should remain reviewable rather than silently writing unreviewed data live.
+- Publication should continue to pass the repository's existing relevant CI/runtime gates, while obeying the owner's minimal-test policy.
+
 ## Validation
 
 Follow the owner's minimal-test rule. Run only directly relevant service-catalog/content/source checks. Do not manually run the full repository suite.
