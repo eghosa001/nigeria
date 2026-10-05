@@ -5,7 +5,7 @@ import { publicServices } from "../lib/data";
 import { entertainmentTitles } from "../lib/entertainment";
 import { entertainmentPeople } from "../lib/entertainment-extras";
 import { seriesTitles } from "../lib/series";
-import { youtubeMovieLibrary } from "../lib/youtube-library";
+import { indexableYouTubeMovies } from "../lib/youtube-library";
 import { exploreGuides } from "../lib/explore";
 import { explorePlaces } from "../lib/explore-places";
 import { jobOpportunities } from "../lib/jobs";
@@ -55,7 +55,7 @@ const counts = {
     entertainmentTitles.length +
     seriesTitles.length +
     entertainmentPeople.length +
-    youtubeMovieLibrary.length,
+    indexableYouTubeMovies.length,
   services: publicServices.length,
   tour_nigeria: exploreGuides.length + explorePlaces.length,
   jobs_careers: jobOpportunities.length,
