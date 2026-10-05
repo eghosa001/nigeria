@@ -20473,5 +20473,550 @@
       "gSaver check in",
       "Green Africa boarding pass"
     ]
+  },
+  {
+    "slug": "uba-919-ussd-banking",
+    "title": "How to register and use UBA *919# USSD banking",
+    "shortTitle": "UBA *919#",
+    "summary": "UBA Nigeria's *919# Magic Banking route for enrolment, transfers, airtime/data, bills, account opening and other supported services from a registered mobile number without internet access.",
+    "category": "Banking",
+    "agencySlug": "uba",
+    "feeLabel": "Enrolment is free; service charges vary by transaction",
+    "feeNote": "UBA publishes transaction-specific *919# charges. Enrolment and account opening are free, while transfers, bill payments, OTP generation and other services can attract published fees plus the applicable telecom USSD session charge.",
+    "timeline": "USSD enrolment completes during the active session after the account/prepaid-card registration and PIN setup succeed.",
+    "status": "verified",
+    "officialPortal": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
+    "requirements": [
+      "A UBA account or eligible UBA prepaid card for normal *919# enrolment",
+      "The mobile number maintained on the UBA account or prepaid card",
+      "The account/card information requested during registration",
+      "A private USSD PIN created during the first registration process"
+    ],
+    "steps": [
+      "Dial *919# from the mobile number maintained on the UBA account or prepaid card.",
+      "Choose the registration option for a UBA Account or UBA Prepaid Card and complete the identity prompts.",
+      "Create the USSD PIN and confirm the new *919# profile.",
+      "Dial *919# again and select the required transfer, airtime, data, bills, balance, card or other supported service.",
+      "Review any displayed charge and authenticate the transaction with the UBA USSD PIN or required security method."
+    ],
+    "notes": [
+      "UBA says the phone number used for *919# must be maintained on the account or prepaid card.",
+      "The bank publishes direct short codes for many functions, including account opening, card blocking, bill payment and BVN retrieval.",
+      "Never disclose the USSD PIN, OTP or Secure Pass code to another person."
+    ],
+    "sources": [
+      {
+        "label": "UBA *919# USSD Banking",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UBA Self Service",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/self-service/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uba-open-account",
+      "uba-block-debit-card",
+      "uba-freeze-account",
+      "firstbank-894-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "UBA USSD code",
+      "*919# UBA",
+      "register UBA USSD",
+      "UBA Magic Banking",
+      "UBA transfer code"
+    ]
+  },
+  {
+    "slug": "uba-block-debit-card",
+    "title": "How to block a UBA debit card",
+    "shortTitle": "Block UBA debit card",
+    "summary": "UBA's official card-block routes through *919*10#, *919*911#, Leo or Mobile Banking for a lost, stolen or compromised debit card.",
+    "category": "Banking",
+    "agencySlug": "uba",
+    "feeLabel": "₦5 via the published *919*10# card-block service",
+    "feeNote": "UBA's current *919# service table lists a ₦5 charge for Block Debit Card. Other support channels such as Leo or Mobile Banking can follow their own service terms.",
+    "timeline": "UBA presents card blocking as an immediate security action after successful authentication.",
+    "status": "verified",
+    "officialPortal": "https://www.ubagroup.com/nigeria/self-service/",
+    "requirements": [
+      "A UBA debit card that needs to be blocked because it is lost, stolen or compromised",
+      "Access to the registered mobile number for *919*10#, or access to another UBA self-service channel",
+      "The account/security information requested by UBA to authenticate the block request"
+    ],
+    "steps": [
+      "Dial *919*10# from the registered UBA phone number, or open Leo/Mobile Banking and choose the card-block option.",
+      "Identify the affected card/account when UBA asks which debit card should be blocked.",
+      "Complete the USSD PIN, app PIN or other authentication shown by the selected channel.",
+      "Confirm the block request and keep the success message or in-app confirmation.",
+      "Review recent transactions and contact UBA's official support immediately if unauthorised activity has already occurred."
+    ],
+    "notes": [
+      "UBA also publishes *919*911# as a security/freeze route that can be used in urgent situations.",
+      "Blocking a debit card does not necessarily freeze every account channel.",
+      "The provider states that loss should be reported immediately to limit fraudulent purchase exposure."
+    ],
+    "sources": [
+      {
+        "label": "UBA Self Service",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/self-service/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UBA Debit Cards",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/cards/debit-cards/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UBA *919# USSD Banking",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uba-919-ussd-banking",
+      "uba-freeze-account",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block UBA card",
+      "UBA debit card block code",
+      "*919*10#",
+      "UBA lost ATM card",
+      "UBA card freeze"
+    ]
+  },
+  {
+    "slug": "uba-freeze-account",
+    "title": "How to freeze a UBA account if your phone or account is compromised",
+    "shortTitle": "Freeze UBA account",
+    "summary": "UBA's emergency account-freeze route through *919*911#, Leo and other official self-service channels when the customer needs to stop access to an account urgently.",
+    "category": "Banking",
+    "agencySlug": "uba",
+    "feeLabel": "No separate freeze-account fee stated",
+    "feeNote": "UBA's self-service page presents account freezing as a security action and does not state a separate freeze-account fee.",
+    "timeline": "UBA presents the freeze-account action as an immediate emergency security request after successful authentication.",
+    "status": "verified",
+    "officialPortal": "https://www.ubagroup.com/nigeria/self-service/",
+    "requirements": [
+      "A UBA account that needs to be secured because the phone, credentials or account access may be compromised",
+      "Access to a phone or official UBA digital channel capable of starting the freeze request",
+      "The account/security information requested by UBA during authentication"
+    ],
+    "steps": [
+      "Dial *919*911# or open an official UBA self-service channel such as Leo when the account needs urgent protection.",
+      "Choose the Freeze Account or equivalent emergency security option presented by UBA.",
+      "Enter the account or registered-phone information requested by the channel.",
+      "Complete the authentication prompts and confirm the freeze request.",
+      "Contact UBA through an official support channel to review unauthorised transactions and follow the bank's process before restoring normal access."
+    ],
+    "notes": [
+      "UBA's Self Service page also distinguishes card blocking from freezing the bank account.",
+      "Do not delay the security action while trying to recover a lost phone.",
+      "Never disclose a UBA PIN, Secure Pass code or OTP to someone claiming to help freeze the account."
+    ],
+    "sources": [
+      {
+        "label": "UBA Self Service",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/self-service/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "uba-block-debit-card",
+      "uba-919-ussd-banking",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "freeze UBA account",
+      "*919*911#",
+      "UBA emergency account block",
+      "UBA lost phone account",
+      "UBA freeze code"
+    ]
+  },
+  {
+    "slug": "stanbic-909-ussd-banking",
+    "title": "How to register and use Stanbic IBTC *909# USSD banking",
+    "shortTitle": "Stanbic *909#",
+    "summary": "Stanbic IBTC's *909# registration route using the customer's debit card or BVN, date of birth and a four-digit PIN, followed by transfers, bills, airtime/data, card and account services.",
+    "category": "Banking",
+    "agencySlug": "stanbic-ibtc-bank",
+    "feeLabel": "Telecom USSD session charge and transaction fees can apply",
+    "feeNote": "Stanbic IBTC's FAQ says the customer should have at least ₦6.98 airtime for a USSD session. Individual banking transactions can also carry the bank's applicable service charges.",
+    "timeline": "USSD registration completes during the *909*11*1# setup after identity verification and PIN confirmation.",
+    "status": "verified",
+    "officialPortal": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+    "requirements": [
+      "A Stanbic IBTC customer mobile number for normal account-linked USSD use",
+      "Either the last six digits of a Stanbic IBTC debit card or the customer's BVN for first-time registration",
+      "The customer's date of birth in DDMMYYYY format",
+      "A new four-digit USSD transaction PIN"
+    ],
+    "steps": [
+      "Dial *909*11*1# on the customer's phone and choose Debit Card or BVN as the registration method.",
+      "Enter the last six debit-card digits or BVN and then enter the date of birth in DDMMYYYY format.",
+      "Create a four-digit USSD PIN and enter it again to complete the setup.",
+      "Dial *909# and choose the required transfer, airtime/data, bill, electricity, card, statement or other service.",
+      "Authenticate the selected transaction with the USSD PIN and keep the success or reference message."
+    ],
+    "notes": [
+      "Stanbic IBTC says *909# works on any type of mobile phone.",
+      "The service can also open an instant account and block an account through dedicated short codes.",
+      "The registered phone number should have enough airtime for the telecom USSD session charge."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC *909# USSD Banking",
+        "agency": "Stanbic IBTC Bank",
+        "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-instant-account-909",
+      "stanbic-emergency-account-block",
+      "stanbic-bizsmart-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Stanbic IBTC USSD code",
+      "*909# Stanbic",
+      "register Stanbic USSD",
+      "Stanbic transfer code",
+      "Stanbic *909*11*1#"
+    ]
+  },
+  {
+    "slug": "stanbic-instant-account-909",
+    "title": "How to open a Stanbic IBTC instant account with *909*37#",
+    "shortTitle": "Stanbic instant account",
+    "summary": "Stanbic IBTC's *909*37# route for opening and immediately using a basic instant account or @ease wallet from a mobile phone.",
+    "category": "Banking",
+    "agencySlug": "stanbic-ibtc-bank",
+    "feeLabel": "No account-opening fee stated",
+    "feeNote": "Stanbic IBTC does not state a separate fee for opening the instant account through the published USSD route.",
+    "timeline": "Stanbic describes the instant account as available for immediate use after the *909*37# opening flow succeeds.",
+    "status": "verified",
+    "officialPortal": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+    "requirements": [
+      "A mobile phone capable of dialing the Stanbic IBTC *909# service",
+      "The personal and phone information requested during the instant-account opening prompts",
+      "A USSD PIN or security credential created during the onboarding process"
+    ],
+    "steps": [
+      "Dial *909*37# from the phone that will be used for the Stanbic IBTC instant account.",
+      "Follow the account-opening prompts and enter the personal information requested by the USSD service.",
+      "Create the security PIN or credential shown during the onboarding flow.",
+      "Confirm the new instant account/wallet details returned by Stanbic IBTC after successful creation.",
+      "Use *909# to fund, transfer, save or pay bills within the limits shown for the new account."
+    ],
+    "notes": [
+      "Stanbic IBTC describes the instant account/@ease wallet as usable even without a traditional bank account.",
+      "Higher services or limits can require additional KYC information after initial opening.",
+      "This route is separate from opening a full Biz Smart business account."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC *909# USSD Banking",
+        "agency": "Stanbic IBTC Bank",
+        "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-909-ussd-banking",
+      "stanbic-emergency-account-block",
+      "stanbic-bizsmart-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Stanbic instant account",
+      "*909*37#",
+      "Stanbic account opening code",
+      "Stanbic @ease wallet",
+      "open Stanbic account USSD"
+    ]
+  },
+  {
+    "slug": "stanbic-emergency-account-block",
+    "title": "How to block a Stanbic IBTC account with *909*1*911#",
+    "shortTitle": "Stanbic emergency block",
+    "summary": "Stanbic IBTC's published instant account-blocking route using *909*1*911# when a customer's phone or banking access is lost or compromised.",
+    "category": "Banking",
+    "agencySlug": "stanbic-ibtc-bank",
+    "feeLabel": "No emergency-block fee stated",
+    "feeNote": "Stanbic IBTC does not state a separate fee for the instant account-blocking code on its USSD guide.",
+    "timeline": "The provider presents *909*1*911# as an instant account-blocking service after the required security prompts succeed.",
+    "status": "verified",
+    "officialPortal": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+    "requirements": [
+      "A Stanbic IBTC account that needs urgent protection",
+      "Access to a phone capable of dialing the *909# security service",
+      "The account/security information requested during the block-account prompts"
+    ],
+    "steps": [
+      "Dial *909*1*911# as soon as the Stanbic IBTC account needs to be secured.",
+      "Enter the account or phone information requested by the emergency USSD menu.",
+      "Complete the security verification and confirm the account-block instruction.",
+      "Keep the success message and contact Stanbic IBTC through an official support channel if the block does not complete.",
+      "Review recent transactions with the bank before requesting restoration of normal access."
+    ],
+    "notes": [
+      "Stanbic IBTC lists *909*1*911# as its instant account-blocking USSD string.",
+      "A card block and an account block are separate actions.",
+      "Never share the USSD PIN or OTP while trying to secure the account."
+    ],
+    "sources": [
+      {
+        "label": "Stanbic IBTC *909# USSD Banking",
+        "agency": "Stanbic IBTC Bank",
+        "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "stanbic-909-ussd-banking",
+      "stanbic-instant-account-909",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block Stanbic account",
+      "*909*1*911#",
+      "Stanbic emergency code",
+      "Stanbic lost phone block account",
+      "Stanbic USSD block"
+    ]
+  },
+  {
+    "slug": "access-bank-901-ussd",
+    "title": "How to register and use Access Bank *901# USSD",
+    "shortTitle": "Access Bank *901#",
+    "summary": "Access Bank's *901# USSD registration route using account number and date of birth, followed by transfers, balances, airtime, bills and other supported banking services.",
+    "category": "Banking",
+    "agencySlug": "access-bank",
+    "feeLabel": "₦6.98 telecom charge for applicable USSD financial sessions",
+    "feeNote": "Access Bank states that a ₦6.98 network-provider charge applies to financial transactions on *901#, excluding airtime and data purchases. Banking transaction fees can also apply depending on the service.",
+    "timeline": "Registration completes during the active *901*0# session after the account/date-of-birth check and four-digit PIN creation.",
+    "status": "verified",
+    "officialPortal": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
+    "requirements": [
+      "An Access Bank account and the mobile number linked to that account",
+      "The Access Bank account number",
+      "The account holder's date of birth in the format requested by the USSD menu",
+      "A four-digit *901# security PIN created during registration"
+    ],
+    "steps": [
+      "Dial *901*0# from the mobile number linked to the Access Bank account.",
+      "Enter the date of birth and account information requested by the registration prompts.",
+      "Create a four-digit USSD PIN and submit the setup.",
+      "Dial *901# and choose the balance, transfer, airtime, bill or other supported service.",
+      "Review any displayed charge and authenticate the financial transaction with the *901# security PIN."
+    ],
+    "notes": [
+      "Access Bank says *901# can be used on feature phones as well as smartphones.",
+      "The service includes account opening, balance enquiry, transfers, bills and emergency account blocking.",
+      "Blocking the account is different from merely opting out of USSD banking."
+    ],
+    "sources": [
+      {
+        "label": "Access Bank USSD Banking FAQ",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Access Bank *901#",
+        "agency": "Access Bank Plc",
+        "url": "https://901.accessbankplc.com/splash.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "access-bank-block-account",
+      "access-money-account",
+      "access-bank-solo-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Access Bank USSD code",
+      "*901# Access Bank",
+      "register Access USSD",
+      "Access Bank transfer code",
+      "Access *901*0#"
+    ]
+  },
+  {
+    "slug": "access-bank-block-account",
+    "title": "How to block an Access Bank account with *901*911#",
+    "shortTitle": "Block Access Bank account",
+    "summary": "Access Bank's emergency account-blocking route through *901*911# from the customer's phone or another phone, with a USSD PIN used to validate the security request.",
+    "category": "Banking",
+    "agencySlug": "access-bank",
+    "feeLabel": "No Access Bank block-account fee; telecom USSD charge can apply",
+    "feeNote": "Access Bank says the block-account service itself is free, while the standard ₦6.98 telecom USSD charge can still apply.",
+    "timeline": "Access Bank states that a correctly completed block-account request is applied instantly.",
+    "status": "verified",
+    "officialPortal": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
+    "requirements": [
+      "The phone number linked to the Access Bank account that needs to be secured",
+      "An existing *901# USSD PIN, or enough account/date-of-birth information to create one if the customer has not previously enrolled",
+      "Access to any phone capable of dialing *901*911# when the registered phone is lost"
+    ],
+    "steps": [
+      "Dial *901*911# from the available phone and select Block Account.",
+      "Choose Self or Third Party depending on whether the customer is using the registered phone or another person's phone.",
+      "Enter the phone number linked to the affected Access Bank account.",
+      "Select the account to block or choose all linked accounts and authenticate with the *901# PIN.",
+      "Keep the success notification and contact Access Bank if unauthorised transactions need to be investigated before the account is unblocked."
+    ],
+    "notes": [
+      "Access Bank says the third-party option can be used from another phone when the customer's phone is lost.",
+      "The bank states that a valid USSD PIN is required before the block request is accepted.",
+      "Unblocking requires an official Access Bank support, email or branch route."
+    ],
+    "sources": [
+      {
+        "label": "Access Bank USSD Banking FAQ",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Access Bank Service Hub",
+        "agency": "Access Bank Plc",
+        "url": "https://theaccessservicehub.accessbankplc.com/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "access-bank-901-ussd",
+      "access-money-account",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "block Access Bank account",
+      "*901*911#",
+      "Access Bank lost phone code",
+      "Access account block",
+      "Access Bank emergency code"
+    ]
+  },
+  {
+    "slug": "access-money-account",
+    "title": "How to open an Access Money Account with *901*10#",
+    "shortTitle": "Access Money Account",
+    "summary": "Access Bank's financial-inclusion account route through *901*10#, allowing a customer to open an Access Money Account with BVN/NIN and then use USSD, branches, agents and Access CLOSA locations.",
+    "category": "Banking",
+    "agencySlug": "access-bank",
+    "feeLabel": "No airtime needed to open the Access Money Account",
+    "feeNote": "Access Bank states that no airtime is required for the account-opening process itself. Normal banking/USSD charges can apply to later transactions.",
+    "timeline": "The account is opened during the *901*10# onboarding flow after the identity prompts are completed.",
+    "status": "verified",
+    "officialPortal": "https://www.accessbankplc.com/personal/savings-investing/access-money-account",
+    "requirements": [
+      "A mobile phone capable of dialing the Access Bank *901# service",
+      "A BVN or NIN for the identity route offered during account opening",
+      "The personal information requested by the Access Money Account prompts"
+    ],
+    "steps": [
+      "Dial *901*10# and choose Open Access Money Account with BVN/NIN.",
+      "Enter the BVN or NIN and the personal information requested by the USSD menu.",
+      "Complete the account-opening prompts and confirm the new Access Money Account details.",
+      "Create or activate the *901# PIN needed for later account transactions.",
+      "Fund or withdraw from the account through bank transfer, Access Bank branches, Access CLOSA locations, agents or supported ATM services."
+    ],
+    "notes": [
+      "Access Bank states that no airtime is needed to open the account.",
+      "Transfer limits depend on the Access Money/KYC tier and can increase as the customer's verification level increases.",
+      "The Access Money Account is distinct from the Access Bank Solo youth/student account."
+    ],
+    "sources": [
+      {
+        "label": "Access Money Account",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/personal/savings-investing/access-money-account",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "access-bank-901-ussd",
+      "access-bank-block-account",
+      "access-bank-solo-account"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Access Money Account",
+      "*901*10#",
+      "open Access Bank account USSD",
+      "Access Money BVN NIN",
+      "Access wallet account"
+    ]
+  },
+  {
+    "slug": "firstbank-894-ussd",
+    "title": "How to register and use FirstBank *894# USSD banking",
+    "shortTitle": "FirstBank *894#",
+    "summary": "FirstBank's *894# Quick Banking route for eligible individual account holders, registered with a linked debit card and five-digit USSD PIN for transfers, balances, airtime, bills and account services.",
+    "category": "Banking",
+    "agencySlug": "firstbank",
+    "feeLabel": "USSD and transaction charges can apply",
+    "feeNote": "FirstBank's FAQ documents the *894# service and enrolment process but charges can vary by transaction and telecom USSD rules.",
+    "timeline": "Registration completes during the *894*0# session after a linked debit card is selected, its PIN is verified and a new five-digit USSD PIN is created.",
+    "status": "verified",
+    "officialPortal": "https://www.firstbanknigeria.com/contact-us/faqs/",
+    "requirements": [
+      "An eligible individual FirstBank account with a phone number enrolled on the bank's SMS alert platform",
+      "A FirstBank debit card linked to the account for the standard registration route",
+      "The four-digit PIN of the selected debit card",
+      "A new five-digit FirstBank *894# transaction PIN"
+    ],
+    "steps": [
+      "Dial *894*0# from the phone number enrolled on the FirstBank account.",
+      "Select the preferred masked debit-card number displayed by FirstBank.",
+      "Enter the four-digit PIN of that debit card for identity verification.",
+      "Create a new five-digit *894# USSD PIN and confirm the registration.",
+      "Dial *894# and choose the required transfer, balance, airtime, bills, account-opening or other supported service."
+    ],
+    "notes": [
+      "FirstBank says *894# is available to eligible individual account holders; joint, corporate and multiple-signatory accounts are not eligible.",
+      "The service works across the major Nigerian mobile networks listed by FirstBank.",
+      "The USSD PIN should never be shared with a caller or agent."
+    ],
+    "sources": [
+      {
+        "label": "FirstBank FAQs — 894 USSD",
+        "agency": "First Bank of Nigeria Limited",
+        "url": "https://www.firstbanknigeria.com/contact-us/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "firstbank-open-account",
+      "uba-919-ussd-banking",
+      "union-bank-826-ussd"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "FirstBank USSD code",
+      "*894# FirstBank",
+      "register FirstBank 894",
+      "FirstBank transfer code",
+      "FirstBank *894*0#"
+    ]
   }
 ]
