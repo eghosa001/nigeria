@@ -9801,5 +9801,294 @@
       "Shuttlers daily commute",
       "Shuttlers app booking"
     ]
+  },
+  {
+    "slug": "spleet-rent-apartment",
+    "title": "How to rent an apartment through Spleet",
+    "shortTitle": "Rent with Spleet",
+    "summary": "Spleet's rental marketplace route for creating a renter account, choosing a verified apartment, sending a booking request, waiting for acceptance and then paying the rent, booking fee and security deposit shown for the property.",
+    "category": "Property services",
+    "agencySlug": "spleet",
+    "feeLabel": "Listing rent plus booking fee and security deposit",
+    "feeNote": "Spleet says no payment is taken until a booking request is accepted. The exact rent, one-off booking fee, security deposit and any processing/VAT amounts depend on the selected property.",
+    "timeline": "Spleet says a booking request is processed within a few hours, although property availability and acceptance can vary.",
+    "status": "verified",
+    "officialPortal": "https://spleet.africa/",
+    "requirements": [
+      "A Spleet renter account with the customer's contact and profile information",
+      "A selected available apartment or shortlet that matches the renter's location, budget and stay duration",
+      "The booking details requested for the selected property",
+      "Funds for the displayed rent and charges after the booking is accepted"
+    ],
+    "steps": [
+      "Open Spleet's official marketplace and create or sign in to a renter account.",
+      "Search the available homes using location, price and duration filters and open a property that fits the renter's needs.",
+      "Create a booking request with the personal and stay details requested for the property.",
+      "Wait for Spleet to process and accept the booking before making payment.",
+      "Review the rent, booking fee, security deposit and any other displayed charges, complete payment and keep the confirmation email and move-in details."
+    ],
+    "notes": [
+      "Spleet states that it does not own the apartments listed on the marketplace; hosts/homeowners list the properties.",
+      "The provider says property inspection/viewing can be arranged before payment and is free of charge.",
+      "Rental periods and payment frequency can differ by listing, including monthly, quarterly and biannual options."
+    ],
+    "sources": [
+      {
+        "label": "Spleet Africa",
+        "agency": "Spleet Africa",
+        "url": "https://spleet.africa/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spleet Account Creation",
+        "agency": "Spleet Africa",
+        "url": "https://dashboard.spleet.africa/create-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spleet Terms and Privacy",
+        "agency": "Spleet Africa",
+        "url": "https://dashboard.spleet.africa/terms-privacy",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spleet-tenant-verification",
+      "spleet-rent-now-pay-later",
+      "propertypro-property-document-verification"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "rent apartment Spleet Nigeria",
+      "Spleet Lagos apartment",
+      "Spleet rent monthly",
+      "Spleet booking fee",
+      "Spleet apartment booking"
+    ]
+  },
+  {
+    "slug": "spleet-tenant-verification",
+    "title": "How to verify a prospective tenant with Spleet Verify",
+    "shortTitle": "Spleet tenant verification",
+    "summary": "Spleet Verify's landlord/property-manager route for screening a prospective tenant by creating a verification account, submitting the tenant's details and receiving due-diligence identity and risk checks before a lease.",
+    "category": "Property services",
+    "agencySlug": "spleet",
+    "feeLabel": "Current Spleet Verify charge applies",
+    "feeNote": "Spleet's public verification page explains the workflow but does not publish one durable universal fee. Confirm the current verification price before submitting the tenant check.",
+    "timeline": "Spleet does not publish one fixed public turnaround for every verification request; completion depends on the submitted tenant information and checks required.",
+    "status": "verified",
+    "officialPortal": "https://dashboard.spleet.africa/verify",
+    "requirements": [
+      "A landlord, property manager or real-estate investor using Spleet Verify",
+      "A Spleet Verify account for the person requesting the screening",
+      "The prospective tenant's identity/contact details required by the verification form",
+      "The tenant's consent and information needed for identity, due-diligence and anti-money-laundering checks"
+    ],
+    "steps": [
+      "Open the official Spleet Verify page and choose Get Started to create or sign in to the verification account.",
+      "Start a new tenant-screening request for the prospective renter.",
+      "Enter the tenant details and supporting information requested by Spleet Verify.",
+      "Review the current verification charge and submit the request through the official dashboard.",
+      "Wait for Spleet to complete the checks and review the returned verification result before signing or finalising the tenancy agreement."
+    ],
+    "notes": [
+      "Spleet describes Verify as a tool for landlords, property managers and real-estate investors.",
+      "The service says it performs identity verification and anti-money-laundering checks on prospective tenants.",
+      "A verification result supports due diligence but does not replace a landlord's legal obligations or a properly drafted tenancy agreement."
+    ],
+    "sources": [
+      {
+        "label": "Spleet Verify",
+        "agency": "Spleet Africa",
+        "url": "https://dashboard.spleet.africa/verify",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spleet Africa",
+        "agency": "Spleet Africa",
+        "url": "https://spleet.africa/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spleet-rent-apartment",
+      "propertypro-property-document-verification"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Spleet Verify tenant",
+      "tenant verification Nigeria",
+      "Spleet landlord verification",
+      "verify tenant Lagos",
+      "tenant background check Nigeria"
+    ]
+  },
+  {
+    "slug": "spleet-rent-now-pay-later",
+    "title": "How to apply for Spleet Rent Now, Pay Later",
+    "shortTitle": "Spleet Rent Now Pay Later",
+    "summary": "Spleet's rental-credit route for eligible renters choosing a Spleet property, selecting Rent Now Pay Later, submitting the required information and accepting the loan terms before the apartment is booked.",
+    "category": "Property services",
+    "agencySlug": "spleet",
+    "feeLabel": "4% interest on reducing balance; 15% equity contribution currently stated",
+    "feeNote": "Spleet's current RNPL page states 4% interest on a reducing-balance basis and a 15% equity contribution. These are lending terms and can change, so confirm the live agreement before accepting credit.",
+    "timeline": "Spleet describes the application as an in-platform verification process; approval time depends on the applicant's documentation and credit checks.",
+    "status": "verified",
+    "officialPortal": "https://spleet.africa/rnpl",
+    "requirements": [
+      "A current or prospective Spleet renter applying for a property on the Spleet Marketplace",
+      "A selected apartment or renewal for which Rent Now Pay Later is available",
+      "The personal, income and verification information requested for the rental-credit assessment",
+      "The current equity contribution required by Spleet and one guarantor under the published terms",
+      "Acceptance of the loan terms after the application is approved"
+    ],
+    "steps": [
+      "Open Spleet's Rent Now Pay Later page and select an eligible apartment from the Spleet Marketplace.",
+      "Choose Pay with RNPL as the payment option for the property.",
+      "Complete the application with the personal, financial and verification details requested by Spleet.",
+      "Review the approved amount, interest, equity contribution, repayment term and all loan conditions before accepting.",
+      "Submit the final loan request and wait for the required checks; the space is booked only after the financing process is completed."
+    ],
+    "notes": [
+      "Spleet currently advertises rental loans of up to ₦5,000,000 without collateral.",
+      "The provider says the current published interest is 4% on a reducing-balance basis and the equity contribution is 15%.",
+      "This guide explains the application process only and does not recommend taking a loan or assess whether the credit is suitable for an individual."
+    ],
+    "sources": [
+      {
+        "label": "Spleet Rent Now Pay Later",
+        "agency": "Spleet Africa",
+        "url": "https://spleet.africa/rnpl",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Spleet Africa",
+        "agency": "Spleet Africa",
+        "url": "https://spleet.africa/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spleet-rent-apartment",
+      "spleet-tenant-verification",
+      "nhf-mortgage-loan"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Spleet Rent Now Pay Later",
+      "Spleet rent loan Nigeria",
+      "Spleet RNPL",
+      "rent loan Lagos Spleet",
+      "Spleet 4 percent rent loan"
+    ]
+  },
+  {
+    "slug": "propertypro-property-document-verification",
+    "title": "How to verify property documents with PropertyPro",
+    "shortTitle": "PropertyPro document verification",
+    "summary": "PropertyPro's document-verification service for submitting property details without an account, having the documents checked against relevant records and receiving a digital verification report by email.",
+    "category": "Property services",
+    "agencySlug": "propertypro",
+    "feeLabel": "Verification charge shown during request",
+    "feeNote": "PropertyPro's verification page does not display one universal public price in the indexed page. Confirm the current service charge in the live request before payment.",
+    "timeline": "PropertyPro states that the certified digital verification report is delivered by email within 24–72 hours.",
+    "status": "verified",
+    "officialPortal": "https://verify.propertypro.ng/",
+    "requirements": [
+      "The property details needed to identify the land or property being checked",
+      "The title/property documents the customer wants PropertyPro to verify",
+      "A working email address for receiving the digital verification report",
+      "Payment of the current verification charge shown for the request"
+    ],
+    "steps": [
+      "Open PropertyPro's official property-document verification page and select Start verification.",
+      "Complete the request form with the property and document details needed for the search.",
+      "Upload or provide the property-document information requested and review the service charge before submitting.",
+      "Complete payment through the official verification flow and keep the request reference.",
+      "Track the application when necessary and review the certified digital report sent to the supplied email address."
+    ],
+    "notes": [
+      "PropertyPro says no account is required to submit the verification request.",
+      "The provider states that it checks the submitted information against relevant government/ministry records and on-ground information.",
+      "A private verification report should still be considered alongside professional legal/survey advice before a high-value property purchase."
+    ],
+    "sources": [
+      {
+        "label": "PropertyPro Property Verification",
+        "agency": "PropertyPro Nigeria",
+        "url": "https://verify.propertypro.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "spleet-rent-apartment",
+      "spleet-tenant-verification"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PropertyPro document verification",
+      "verify property documents Nigeria",
+      "PropertyPro land verification",
+      "verify C of O PropertyPro",
+      "property title verification Nigeria"
+    ]
+  },
+  {
+    "slug": "propertypro-agent-registration",
+    "title": "How to register as an agent or landlord on PropertyPro Nigeria",
+    "shortTitle": "PropertyPro agent registration",
+    "summary": "PropertyPro's account-registration route for agents, developers and landlords, including profile creation, email verification and access to listing/subscription tools for marketing property inventory.",
+    "category": "Property services",
+    "agencySlug": "propertypro",
+    "feeLabel": "Account registration available; paid listing packages are optional",
+    "feeNote": "PropertyPro's registration page creates the account, while its pricing page lists separate paid subscription and sponsored-listing options. Check current package prices before upgrading.",
+    "timeline": "The account can be created after the registration form and email verification are completed; listing visibility depends on the account/package and submitted property inventory.",
+    "status": "verified",
+    "officialPortal": "https://propertypro.ng/register",
+    "requirements": [
+      "The registrant's first and last name",
+      "A valid email address and phone number",
+      "Selection of Agent, Developer, Landlord or User as the account type",
+      "A password meeting PropertyPro's current minimum requirement",
+      "Email access to complete the verification code step"
+    ],
+    "steps": [
+      "Open PropertyPro Nigeria's official registration page and choose the appropriate account type such as Agent, Developer or Landlord.",
+      "Enter the registrant's name, email address, phone number and password.",
+      "Submit the registration form and enter the verification code sent to the email address.",
+      "Sign in to the verified account and complete the profile/business information needed for property listings.",
+      "Review the current free/paid listing tools and subscription packages before paying for additional visibility or sponsored features."
+    ],
+    "notes": [
+      "PropertyPro's registration form supports Agent, Developer, Landlord and ordinary User profiles.",
+      "The provider offers paid packages and sponsored visibility, but an account should not be represented as automatically guaranteeing leads or sales.",
+      "Listings should accurately describe the property and ownership/agency authority to reduce fraud and disputes."
+    ],
+    "sources": [
+      {
+        "label": "PropertyPro Registration",
+        "agency": "PropertyPro Nigeria",
+        "url": "https://propertypro.ng/register",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "PropertyPro Agent Pricing",
+        "agency": "PropertyPro Nigeria",
+        "url": "https://propertypro.ng/pricing",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "propertypro-property-document-verification",
+      "spleet-tenant-verification"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "PropertyPro agent registration",
+      "list property PropertyPro Nigeria",
+      "PropertyPro landlord account",
+      "PropertyPro developer registration",
+      "PropertyPro pricing Nigeria"
+    ]
   }
 ]
