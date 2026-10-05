@@ -6,15 +6,57 @@ import { exploreGuides } from "@/lib/explore";
 import { explorePlaces } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 
+const stateGuideLinks = [
+  ["Abia", "abia-state-travel-guide"],
+  ["Adamawa", "sukur-cultural-landscape"],
+  ["Akwa Ibom", "uyo"],
+  ["Anambra", "anambra-heritage-circuit"],
+  ["Bauchi", "yankari-game-reserve"],
+  ["Bayelsa", "bayelsa-state-travel-guide"],
+  ["Benue", "benue-state-travel-guide"],
+  ["Borno", "borno-state-travel-guide"],
+  ["Cross River", "calabar"],
+  ["Delta", "delta-state-travel-guide"],
+  ["Ebonyi", "ebonyi-state-travel-guide"],
+  ["Edo", "benin-city"],
+  ["Ekiti", "ekiti-nature-circuit"],
+  ["Enugu", "enugu"],
+  ["FCT Abuja", "abuja"],
+  ["Gombe", "gombe-state-travel-guide"],
+  ["Imo", "imo-state-travel-guide"],
+  ["Jigawa", "jigawa-state-travel-guide"],
+  ["Kaduna", "kaduna-state-travel-guide"],
+  ["Kano", "kano"],
+  ["Katsina", "katsina-state-travel-guide"],
+  ["Kebbi", "kebbi-state-travel-guide"],
+  ["Kogi", "kogi-state-travel-guide"],
+  ["Kwara", "kwara-highlights"],
+  ["Lagos", "lagos"],
+  ["Nasarawa", "nasarawa-state-travel-guide"],
+  ["Niger", "zuma-rock-gurara-falls"],
+  ["Ogun", "abeokuta"],
+  ["Ondo", "ondo-state-highlights"],
+  ["Osun", "osogbo"],
+  ["Oyo", "ibadan"],
+  ["Plateau", "jos"],
+  ["Rivers", "port-harcourt"],
+  ["Sokoto", "sokoto-state-travel-guide"],
+  ["Taraba", "gashaka-gumti-national-park"],
+  ["Yobe", "yobe-state-travel-guide"],
+  ["Zamfara", "zamfara-state-travel-guide"],
+] as const;
+
 export const metadata: Metadata = {
   title: "Explore Nigeria",
-  description: "City guides, major Nigerian destinations, weekend ideas and practical trip-planning guidance from MyNigeriaGuide.",
+  description: "Explore all 36 Nigerian states and the FCT with city guides, attractions, hotels, restaurants, events and practical trip-planning guidance."
   alternates: { canonical: "/explore" },
 };
 
 export default function ExplorePage() {
   const cities = exploreGuides.filter((guide) => guide.kind === "city");
-  const destinations = exploreGuides.filter((guide) => guide.kind === "destination");
+  const destinations = exploreGuides
+    .filter((guide) => guide.kind === "destination")
+    .sort((a, b) => a.shortTitle.localeCompare(b.shortTitle));
   const itineraries = exploreGuides.filter((guide) => guide.kind === "itinerary");
   const base = getSiteUrl();
 
@@ -55,6 +97,7 @@ export default function ExplorePage() {
           </form>
           <div className="minimal-inline-links">
             <Link href="/explore/events">Events & festivals</Link>
+            <a href="#states">36 states + FCT</a>
             <a href="#cities">City guides</a>
             <a href="#places">Places</a>
             <a href="#destinations">Destinations</a>
@@ -65,6 +108,23 @@ export default function ExplorePage() {
             <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
             <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section" id="states">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Nationwide coverage</span>
+              <h2>Explore all 36 states + FCT.</h2>
+              <p>Start with a state, then use its guide to find places, routes and practical planning details.</p>
+            </div>
+          </div>
+          <nav className="minimal-inline-links state-index-links" aria-label="Explore Nigeria by state">
+            {stateGuideLinks.map(([state, slug]) => (
+              <Link href={"/explore/" + slug} key={state}>{state}</Link>
+            ))}
+          </nav>
         </div>
       </section>
 
