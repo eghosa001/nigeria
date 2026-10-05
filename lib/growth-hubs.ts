@@ -931,7 +931,10 @@ export const growthHubs: GrowthHub[] = [
       { query: "Bolt ride insurance claim Nigeria", serviceSlug: "bolt-ride-insurance-claim-nigeria" },
       { query: "schedule Bolt ride Nigeria", serviceSlug: "bolt-schedule-ride-nigeria" },
       { query: "Uber Reserve Nigeria", serviceSlug: "uber-reserve-ride-nigeria" },
-      { query: "request Uber online Nigeria", serviceSlug: "uber-request-ride-online-nigeria" }
+      { query: "request Uber online Nigeria", serviceSlug: "uber-request-ride-online-nigeria" },
+      { query: "Wakanow flight booking Nigeria", serviceSlug: "wakanow-book-flight-nigeria" },
+      { query: "Wakanow hotel booking Nigeria", serviceSlug: "wakanow-book-hotel-nigeria" },
+      { query: "cancel Wakanow hotel", serviceSlug: "wakanow-cancel-hotel-reservation" }
     ],
     serviceSlugs: [
       "mtn-esim-activation",
@@ -1173,7 +1176,10 @@ export const growthHubs: GrowthHub[] = [
       "bolt-ride-insurance-claim-nigeria",
       "bolt-schedule-ride-nigeria",
       "uber-reserve-ride-nigeria",
-      "uber-request-ride-online-nigeria"
+      "uber-request-ride-online-nigeria",
+      "wakanow-book-flight-nigeria",
+      "wakanow-book-hotel-nigeria",
+      "wakanow-cancel-hotel-reservation"
     ]
   },
 
