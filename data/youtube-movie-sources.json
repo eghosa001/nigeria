@@ -875,7 +875,8 @@
         "ISEDA TV"
       ],
       "estimatedMovieCount": 25,
-      "optional": true
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/@isedatvv"
     },
     {
       "slug": "debsam-tv",
@@ -892,6 +893,65 @@
       "aliases": [
         "CAPital Dreams Pictures",
         "Capital Dreams Pictures"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/@CAPitalDreamsPictures"
+    },
+    {
+      "slug": "dashing-films",
+      "searchName": "Dashing Films",
+      "aliases": [
+        "Dashing Films"
+      ],
+      "estimatedMovieCount": 20,
+      "knownUrl": "https://www.youtube.com/@dashingfilmTV",
+      "optional": true
+    },
+    {
+      "slug": "mun-media-entertainment",
+      "searchName": "MUN MEDIA ENTERTAINMENT",
+      "aliases": [
+        "MUN MEDIA ENTERTAINMENT",
+        "Mun Media Entertainment"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "tana-adelana-tv",
+      "searchName": "Tana Adelana TV",
+      "aliases": [
+        "Tana Adelana TV"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
+    },
+    {
+      "slug": "selassie-ibrahim-tv",
+      "searchName": "Selassie Ibrahim TV",
+      "aliases": [
+        "Selassie Ibrahim TV"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
+    },
+    {
+      "slug": "nosarexfamtv",
+      "searchName": "Nosarexfamtv",
+      "aliases": [
+        "Nosarexfamtv",
+        "NOSAREXFAMTV"
+      ],
+      "estimatedMovieCount": 30,
+      "knownUrl": "https://www.youtube.com/channel/UCgvYAzU9Xp5N2jEITv0ZRPQ",
+      "optional": true
+    },
+    {
+      "slug": "stephanie-tum-tv",
+      "searchName": "Stephanie Tum TV",
+      "aliases": [
+        "Stephanie Tum TV"
       ],
       "estimatedMovieCount": 20,
       "optional": true
