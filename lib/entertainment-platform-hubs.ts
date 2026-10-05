@@ -20,7 +20,7 @@ export const entertainmentPlatformHubs: EntertainmentPlatformHub[] = [
     platform: "Netflix",
     href: "/entertainment/platforms/netflix",
     summary: "Nigerian films currently linked to Netflix title pages, including recent local releases and established Nollywood hits.",
-    status: "64 verified movie links",
+    status: "Verified Nigerian catalog",
     officialUrl: "https://www.netflix.com/ng-en/browse/genre/1077508",
     lastChecked: "2026-10-05",
     popularTitleSlugs: [
@@ -115,6 +115,9 @@ export const entertainmentPlatformHubs: EntertainmentPlatformHub[] = [
       "king-kosoko-the-battle-for-lagos",
       "one-gidi-night",
       "19-movie-2026",
+      "starlomo",
+      "call-of-my-life",
+      "invitation-to-kill",
       "first-lady-2026",
       "onibon-oje-2026",
     ],
