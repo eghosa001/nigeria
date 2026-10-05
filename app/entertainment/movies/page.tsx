@@ -8,13 +8,13 @@ import {
   entertainmentPlatforms,
   getEntertainmentGenres,
 } from "@/lib/entertainment";
-
-type BrowsePlatform = (typeof entertainmentPlatforms)[number];
 import {
   queryEntertainmentDirectory,
   type EntertainmentDirectorySort,
 } from "@/lib/entertainment-query";
 import { trendingYouTubeMovies } from "@/lib/youtube-library";
+
+type BrowsePlatform = (typeof entertainmentPlatforms)[number];
 
 type MovieSearchParams = {
   q?: string;
