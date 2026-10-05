@@ -933,7 +933,49 @@ export const agencies: Agency[] = [
     "shortName": "Aero",
     "description": "Private Nigerian airline offering flight booking, manage-booking, online check-in and refund services.",
     "website": "https://flyaero.com/"
+  },,
+  {
+    "slug": "jaiz-bank",
+    "name": "Jaiz Bank Plc",
+    "shortName": "Jaiz Bank",
+    "description": "Private Nigerian non-interest bank offering personal, corporate and digital account services.",
+    "website": "https://jaizbankplc.com/"
   },
+  {
+    "slug": "unity-bank",
+    "name": "Unity Bank Plc",
+    "shortName": "Unity Bank",
+    "description": "Private Nigerian bank offering retail, business and digital banking services including *7799#.",
+    "website": "https://www.unitybankng.com/"
+  },
+  {
+    "slug": "paga",
+    "name": "Paga",
+    "shortName": "Paga",
+    "description": "Private Nigerian mobile-money and payment platform offering personal wallets, merchant payments and business services.",
+    "website": "https://www.mypaga.com/"
+  },
+  {
+    "slug": "quickteller",
+    "name": "Quickteller by Interswitch",
+    "shortName": "Quickteller",
+    "description": "Private payment platform for transfers, airtime/data, bill payments and merchant payments in Nigeria.",
+    "website": "https://quickteller.com/"
+  },
+  {
+    "slug": "ups-nigeria",
+    "name": "UPS Nigeria",
+    "shortName": "UPS",
+    "description": "Private international parcel shipping, rate, pickup and tracking services available to customers in Nigeria.",
+    "website": "https://www.ups.com/ng/en/Home.page"
+  },
+  {
+    "slug": "max-air",
+    "name": "Max Air",
+    "shortName": "Max Air",
+    "description": "Private Nigerian airline offering domestic/international booking, online check-in, booking management and baggage services.",
+    "website": "https://maxair.com.ng/"
+  }
 ];
 
 export const services: Service[] = validateServiceCatalog(serviceRecords);
