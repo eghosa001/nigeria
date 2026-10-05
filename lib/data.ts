@@ -1206,7 +1206,28 @@ export const agencies: Agency[] = [
     "shortName": "Travelstart",
     "description": "Private online travel platform offering flight booking, hotel and travel support services to Nigerian customers.",
     "website": "https://www.travelstart.com.ng/"
+  },,
+  {
+    "slug": "sendbox",
+    "name": "Sendbox",
+    "shortName": "Sendbox",
+    "description": "Private Nigerian shipping and commerce platform offering local/international deliveries, tracking and seller tools.",
+    "website": "https://sendbox.co/"
   },
+  {
+    "slug": "euracare",
+    "name": "Euracare Multispecialist Hospital Lagos",
+    "shortName": "Euracare",
+    "description": "Private multispecialty hospital in Lagos offering specialist appointments, diagnostics and international-patient support.",
+    "website": "https://euracarehealth.com/"
+  },
+  {
+    "slug": "heyfood",
+    "name": "Heyfood",
+    "shortName": "Heyfood",
+    "description": "Private Nigerian food-delivery and restaurant-commerce platform offering customer ordering, rider and merchant services.",
+    "website": "https://heyfood.africa/"
+  }
 
 ];
 
