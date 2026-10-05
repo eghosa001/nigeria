@@ -10,6 +10,7 @@ import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-libra
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
+import { getServiceDirectoryPageCount } from "@/lib/service-query";
 import { jobOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
@@ -91,6 +92,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "services") {
     return [
       { url: base + "/services", lastModified: serviceModified },
+      ...Array.from({ length: Math.max(0, getServiceDirectoryPageCount() - 1) }, (_, index) => ({
+        url: base + "/services/page/" + (index + 2),
+        lastModified: serviceModified,
+      })),
       ...publicServices.map((service) => ({
         url: base + "/services/" + service.slug,
         lastModified: service.lastVerified,
