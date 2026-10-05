@@ -119,7 +119,7 @@ export const entertainmentPeople: EntertainmentPerson[] = [
     roles: ["Director", "Actor"],
     knownForSlugs: ["iyalode", "ijakumo", "ori-rebirth"],
     summary: "Yoruba filmmaker represented by epic, thriller and supernatural drama titles in this catalog.",
-  },,
+  },
 
   {
     slug: "funke-akindele",
@@ -198,6 +198,77 @@ export const entertainmentPeople: EntertainmentPerson[] = [
     roles: ["Actor"],
     knownForSlugs: ["omo-ghetto-the-saga", "sisi-london"],
     summary: "Actor represented here by Omo Ghetto: the Saga and Sisi London.",
+  },
+
+  {
+    slug: "bisola-aiyeola",
+    name: "Bisola Aiyeola",
+    roles: ["Actor"],
+    knownForSlugs: ["everybody-loves-jenifa", "the-kujus-again", "muri-and-ko", "19-movie-2026"],
+    summary: "Actor represented here across Everybody Loves Jenifa, The Kujus Again, Muri & Ko and 19.",
+  },
+  {
+    slug: "gabriel-afolayan",
+    name: "Gabriel Afolayan",
+    roles: ["Actor"],
+    knownForSlugs: ["the-betrayed", "king-kosoko-the-battle-for-lagos", "madam-dearest", "madam-dearest-2"],
+    summary: "Actor linked here to The Betrayed, King Kosoko: The Battle for Lagos and the Madam Dearest films.",
+  },
+  {
+    slug: "shaffy-bello",
+    name: "Shaffy Bello",
+    roles: ["Actor"],
+    knownForSlugs: ["nneka-the-pretty-serpent", "finding-me", "the-beads", "the-rise-of-igbinogun"],
+    summary: "Actor represented across Nneka The Pretty Serpent, Finding Me, The Beads and The Rise of Igbinogun.",
+  },
+  {
+    slug: "kehinde-bankole",
+    name: "Kehinde Bankole",
+    roles: ["Actor"],
+    knownForSlugs: ["funmilayo-ransome-kuti", "the-set-up-2"],
+    summary: "Actor represented here by Funmilayo Ransome-Kuti and The Set Up 2.",
+  },
+  {
+    slug: "mike-afolarin",
+    name: "Mike Afolarin",
+    roles: ["Actor"],
+    knownForSlugs: ["wire-transfer-2026", "tele-x-zikora-2026", "water-and-garri"],
+    summary: "Actor represented here across Wire Transfer, Tele x Zikora and Water & Garri.",
+  },
+  {
+    slug: "femi-jacobs",
+    name: "Femi Jacobs",
+    roles: ["Actor"],
+    knownForSlugs: ["soole", "muri-and-ko", "omo-ghetto-the-saga"],
+    summary: "Actor represented here across Soólè, Muri & Ko and Omo Ghetto: the Saga.",
+  },
+  {
+    slug: "wumi-toriola",
+    name: "Wumi Toriola",
+    roles: ["Actor", "Filmmaker"],
+    knownForSlugs: ["queen-lateefah", "one-gidi-night"],
+    summary: "Actor and filmmaker represented here by Queen Lateefah and One Gidi Night.",
+  },
+  {
+    slug: "bimbo-manuel",
+    name: "Bimbo Manuel",
+    roles: ["Actor"],
+    knownForSlugs: ["queen-lateefah", "the-lost-days", "the-beads"],
+    summary: "Veteran actor represented here across Queen Lateefah, The Lost Days and The Beads.",
+  },
+  {
+    slug: "tina-mba",
+    name: "Tina Mba",
+    roles: ["Actor"],
+    knownForSlugs: ["no-fury-2024", "phoenix-fury-2026", "finding-me", "king-kosoko-the-battle-for-lagos", "the-beads"],
+    summary: "Veteran actor linked here to No Fury, Phoenix Fury, Finding Me, King Kosoko and The Beads.",
+  },
+  {
+    slug: "daniel-etim-effiong",
+    name: "Daniel Etim Effiong",
+    roles: ["Actor"],
+    knownForSlugs: ["a-land-apart-2026", "all-things-equal", "different-strokes"],
+    summary: "Actor represented here across A Land Apart, All Things Equal and Different Strokes.",
   }
 ];
 
