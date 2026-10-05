@@ -569,6 +569,48 @@ export const agencies: Agency[] = [
     "shortName": "Leadway",
     "description": "Private insurance provider offering motor and other insurance services in Nigeria.",
     "website": "https://www.leadway.com/"
+  },
+  {
+    "slug": "uber-nigeria",
+    "name": "Uber Nigeria",
+    "shortName": "Uber",
+    "description": "Private ride-hailing platform with driver-partner onboarding and rider services in Nigerian cities.",
+    "website": "https://www.uber.com/ng/en/"
+  },
+  {
+    "slug": "bolt-nigeria",
+    "name": "Bolt Nigeria",
+    "shortName": "Bolt",
+    "description": "Private ride-hailing and mobility platform with driver-partner onboarding in cities across Nigeria.",
+    "website": "https://bolt.eu/en-ng/"
+  },
+  {
+    "slug": "smile-nigeria",
+    "name": "Smile Communications Nigeria",
+    "shortName": "Smile",
+    "description": "Private broadband and voice provider with data recharge, self-care and device services in Nigeria.",
+    "website": "https://smile.com.ng/"
+  },
+  {
+    "slug": "spectranet",
+    "name": "Spectranet Nigeria",
+    "shortName": "Spectranet",
+    "description": "Private broadband provider offering wireless and fibre data plans, recharge and account self-service in Nigeria.",
+    "website": "https://spectranet.com.ng/"
+  },
+  {
+    "slug": "konga",
+    "name": "Konga",
+    "shortName": "Konga",
+    "description": "Private Nigerian e-commerce marketplace with shopping, returns and SellerHQ merchant services.",
+    "website": "https://www.konga.com/"
+  },
+  {
+    "slug": "jumia-nigeria",
+    "name": "Jumia Nigeria",
+    "shortName": "Jumia",
+    "description": "Private e-commerce marketplace with shopping and seller-onboarding services in Nigeria.",
+    "website": "https://www.jumia.com.ng/"
   }
 ];
 
