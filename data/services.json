@@ -17083,5 +17083,700 @@
       "IBEDC service shortfall compensation",
       "IBEDC token portal"
     ]
+  },
+  {
+    "slug": "ecobank-xpress-account",
+    "title": "How to open an Ecobank Xpress Account in Nigeria",
+    "shortTitle": "Ecobank Xpress Account",
+    "summary": "Ecobank's mobile Xpress Account route for opening a basic account from a phone without references or paper documents, using a registered mobile number and electronic KYC.",
+    "category": "Banking",
+    "agencySlug": "ecobank-nigeria",
+    "feeLabel": "Free account opening and no monthly servicing fee",
+    "feeNote": "Ecobank states that opening an Xpress Account is free and that the account has no monthly account-maintenance/service fee; transaction charges can still apply to specific services.",
+    "timeline": "Ecobank describes Xpress Account opening as instant after successful mobile registration and electronic KYC validation.",
+    "status": "verified",
+    "officialPortal": "https://ecobank.com/ng/personal-banking/ways-to-bank/mobile/mobile-banking-via-app/xpress-account",
+    "requirements": [
+      "A registered mobile phone number in Nigeria",
+      "The customer's name, date of birth, gender and residential address",
+      "A phone that can run the Ecobank Mobile App or access an Ecobank Xpress Point/USSD route",
+      "Electronic KYC validation completed by Ecobank during account creation"
+    ],
+    "steps": [
+      "Open the Ecobank Mobile App and select Nigeria and the preferred language.",
+      "Enter the registered mobile number and accept the account terms shown in the app.",
+      "Choose Open an Xpress Account and enter the personal information requested for the mobile account.",
+      "Complete Ecobank's electronic KYC validation and create the account security credentials.",
+      "Save the new account number and use the app, debit-card, transfer or Xpress Point options that become available for the account."
+    ],
+    "notes": [
+      "Ecobank states that no physical documentation or references are required for the Xpress Account.",
+      "Country-specific transaction and balance limits apply to Xpress Accounts and should be checked in the live Ecobank service.",
+      "Cash deposits to an Xpress Account are handled through Xpress Points rather than ordinary Ecobank branch cash deposit under the published FAQ."
+    ],
+    "sources": [
+      {
+        "label": "Ecobank Xpress Account",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://ecobank.com/ng/personal-banking/ways-to-bank/mobile/mobile-banking-via-app/xpress-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ecobank Xpress Point FAQ",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://www.ecobank.com/ng/personal-banking/ways-to-bank/xpress-point",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ecobank-classic-savings-account",
+      "ecobank-dormant-account-reactivation",
+      "fcmb-online-savings-account",
+      "alat-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Ecobank Xpress account",
+      "open Ecobank account on phone",
+      "Ecobank Xpress account Nigeria",
+      "Ecobank mobile account opening",
+      "Ecobank account no references"
+    ]
+  },
+  {
+    "slug": "ecobank-classic-savings-account",
+    "title": "How to open an Ecobank savings account in Nigeria",
+    "shortTitle": "Ecobank savings account",
+    "summary": "Ecobank Nigeria's full savings-account route for residents, using the account form, mandate card, identity, address evidence, photographs, KYC information and Nigeria-specific references.",
+    "category": "Banking",
+    "agencySlug": "ecobank-nigeria",
+    "feeLabel": "Account terms depend on the selected savings product",
+    "feeNote": "Ecobank publishes multiple savings products with different product terms. Confirm any opening balance, interest or service charge on the selected account page before funding.",
+    "timeline": "Ecobank does not publish one universal completion time for a fully documented savings-account application; verification depends on the submitted identity, address and KYC evidence.",
+    "status": "verified",
+    "officialPortal": "https://www.ecobank.com/ng/consumer-banking/open-account",
+    "requirements": [
+      "A completed Ecobank account-opening form and one mandate card",
+      "A valid identity document such as a current driver's licence, National ID or international passport",
+      "Proof of residential address such as recent utility bills, site-visitation evidence, certificate of residence or tenancy agreement",
+      "Two passport photographs for the account applicant",
+      "Two references for a Nigerian resident account under Ecobank's country-specific requirement"
+    ],
+    "steps": [
+      "Open Ecobank Nigeria's official account page and choose the savings-account product that matches the intended use.",
+      "Complete the account-opening form and mandate card with the applicant's legal identity and contact information.",
+      "Prepare the valid ID, address evidence, passport photographs and two Nigeria-specific references.",
+      "Submit the application through Ecobank's account-opening route and complete the KYC questions attached to the selected product.",
+      "Wait for Ecobank to complete verification, then confirm the account number and activate the digital-banking or debit-card services included with the account."
+    ],
+    "notes": [
+      "Ecobank's Xpress Account has a lighter mobile-only onboarding path; this guide is for the fuller savings-account process.",
+      "Non-resident applicants use additional notarisation and source-of-funds evidence described by Ecobank.",
+      "Salary-account applicants can also need an employer introduction under Ecobank's published savings-account requirements."
+    ],
+    "sources": [
+      {
+        "label": "Ecobank Savings Account",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://ecobank.com/ng/personal-banking/everyday-banking/savings-accounts/ecobank",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ecobank Open an Account",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://www.ecobank.com/ng/consumer-banking/open-account",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ecobank-xpress-account",
+      "ecobank-dormant-account-reactivation",
+      "fcmb-online-savings-account",
+      "zenith-online-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Ecobank savings account Nigeria",
+      "Ecobank account requirements Nigeria",
+      "Ecobank references account opening",
+      "Ecobank savings account documents",
+      "Ecobank account opening"
+    ]
+  },
+  {
+    "slug": "ecobank-xpress-point-agent",
+    "title": "How to become an Ecobank Xpress Point agent in Nigeria",
+    "shortTitle": "Ecobank Xpress Point agent",
+    "summary": "Ecobank's agent-banking enrolment route for individuals, businesses or associations operating from a traceable location, with minimum float, identification, address and reference requirements.",
+    "category": "Business",
+    "agencySlug": "ecobank-nigeria",
+    "feeLabel": "Minimum initial float: ₦10,000",
+    "feeNote": "Ecobank's current agent enrolment page lists a minimum initial float of ₦10,000. Equipment, business-registration and operating costs remain the agent's responsibility.",
+    "timeline": "Ecobank does not publish one fixed approval time for every Xpress Point agent application; approval depends on document review, location assessment and onboarding.",
+    "status": "verified",
+    "officialPortal": "https://ecobank.com/ng/personal-banking/ways-to-bank/xpress-point-agent-enrolment-form",
+    "requirements": [
+      "An individual, registered business or association operating from a lock-up location with a traceable address",
+      "A minimum initial float balance of ₦10,000",
+      "A passport photograph, BVN and valid ID such as NIN card, driver's licence, PVC or international passport",
+      "A utility bill for the operating address not older than three months and two current/corporate references or a completed character-reference form",
+      "For a registered corporate/SME applicant, CAC documents plus TIN or tax certificate"
+    ],
+    "steps": [
+      "Open Ecobank Nigeria's official Xpress Point Agent enrolment page and review the agent services and equipment options.",
+      "Enter the applicant and business-location information in the online agent form.",
+      "Prepare the photograph, BVN, ID, recent utility bill and two references, adding CAC/TIN documents for a registered business.",
+      "Confirm the available desktop, Android-device or feature-phone setup and maintain the minimum initial float required for the agency.",
+      "Submit the application and wait for Ecobank's review, training and agent-platform activation before offering Xpress Point services."
+    ],
+    "notes": [
+      "Ecobank lists deposits, withdrawals/token redemption, interbank transfers, bill payments, airtime and some remittance services for approved Xpress Point agents.",
+      "International-transfer agents have additional equipment requirements such as CCTV and printer/copier.",
+      "An applicant should not brand a location as an Ecobank Xpress Point before Ecobank approves the agency."
+    ],
+    "sources": [
+      {
+        "label": "Ecobank Xpress Point Agent Enrolment",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://ecobank.com/ng/personal-banking/ways-to-bank/xpress-point-agent-enrolment-form",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ecobank-xpress-account",
+      "paystack-physical-terminal-nigeria",
+      "moniepoint-personal-account",
+      "cac-business-name-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Ecobank POS agent registration",
+      "Ecobank Xpress Point agent",
+      "become Ecobank agent Nigeria",
+      "Ecobank agent requirements",
+      "Ecobank agent float"
+    ]
+  },
+  {
+    "slug": "ecobank-dormant-account-reactivation",
+    "title": "How to reactivate a dormant Ecobank account in Nigeria",
+    "shortTitle": "Reactivate Ecobank account",
+    "summary": "Ecobank Nigeria's dormant-account reactivation route through its Customer Information Update portal or a branch, followed by a same-day customer transaction after the account is reactivated.",
+    "category": "Banking",
+    "agencySlug": "ecobank-nigeria",
+    "feeLabel": "No reactivation fee",
+    "feeNote": "Ecobank's current dormant-account page states that reactivation carries no fee.",
+    "timeline": "Ecobank does not publish one universal digital reactivation completion time; the customer receives a notification after the account is successfully reactivated.",
+    "status": "verified",
+    "officialPortal": "https://ecobank.com/ng/dormant-account",
+    "requirements": [
+      "An existing Ecobank account that has become inactive or dormant",
+      "Access to the account information needed for the Customer Information Update portal or a visit to an Ecobank branch",
+      "Updated customer identity/contact information needed to bring the bank's KYC record current",
+      "Funds or an available banking transaction for the required deposit, transfer or withdrawal after reactivation"
+    ],
+    "steps": [
+      "Open Ecobank Nigeria's Dormant Account page and select Update Your Account Details to enter the Customer Information Update route.",
+      "Enter and submit the account and updated customer information shown by the reactivation portal, or visit an Ecobank branch for assisted reactivation.",
+      "Wait for Ecobank's successful-reactivation notification before treating the account as active.",
+      "Make a deposit, transfer or withdrawal on the same day the account is reactivated, as stated by Ecobank.",
+      "Confirm that normal account access has returned and contact Ecobank support if the account remains restricted after the reactivation transaction."
+    ],
+    "notes": [
+      "Ecobank defines an inactive account as one without a customer-initiated transaction for 6–12 months and a dormant account as inactive for one year or more.",
+      "The same Customer Information Update portal also supports account-data and NIN updates.",
+      "Reactivation is different from reclaiming a balance that has already moved into the regulatory unclaimed-balances process."
+    ],
+    "sources": [
+      {
+        "label": "Ecobank Dormant Account",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://ecobank.com/ng/dormant-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Ecobank Personal Banking — Customer Information Update",
+        "agency": "Ecobank Nigeria Limited",
+        "url": "https://ecobank.com/ng/personal-banking",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ecobank-xpress-account",
+      "ecobank-classic-savings-account",
+      "bvn-data-update"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "reactivate Ecobank account",
+      "Ecobank dormant account Nigeria",
+      "Ecobank account reactivation online",
+      "Ecobank update account details",
+      "Ecobank dormant account fee"
+    ]
+  },
+  {
+    "slug": "fcmb-online-savings-account",
+    "title": "How to open an FCMB savings account online",
+    "shortTitle": "FCMB online savings account",
+    "summary": "FCMB's online savings-account route for Nigerian residents and Nigerians abroad, using a scanned signature and passport photograph, with BVN needed before the account becomes fully operational.",
+    "category": "Banking",
+    "agencySlug": "fcmb",
+    "feeLabel": "No universal opening fee stated on the online-account FAQ",
+    "feeNote": "FCMB's online-account FAQ explains documents and activation but does not state one universal opening charge. Confirm the live product terms before funding the new account.",
+    "timeline": "FCMB states that an account number can be issued immediately after a completed online application; an account opened without BVN remains restricted until BVN is supplied or registered.",
+    "status": "verified",
+    "officialPortal": "https://onlineaccount.fcmb.com/",
+    "requirements": [
+      "A scanned copy of the applicant's signature",
+      "A passport photograph for the account applicant",
+      "A BVN for the account to become fully operational; the portal can issue an account number before BVN is supplied",
+      "For a minor, the child's passport and birth certificate in addition to the application information"
+    ],
+    "steps": [
+      "Open FCMB's official online account-opening platform and choose the savings-account application.",
+      "Enter the applicant's identity, contact and residence information in the online form.",
+      "Upload the scanned signature and passport photograph, adding the child's passport and birth certificate for a minor account.",
+      "Provide the BVN during the application when available and submit the completed request.",
+      "Save the issued account number and complete BVN registration/linking at FCMB before relying on the account for unrestricted transactions."
+    ],
+    "notes": [
+      "FCMB's FAQ says the online savings-account route is available to residents of Nigeria and Nigerians living abroad.",
+      "The online platform opens one savings account for the applicant and redirects existing FCMB customers to FCMBOnline for additional accounts.",
+      "Joint accounts are not opened through this specific online savings-account platform."
+    ],
+    "sources": [
+      {
+        "label": "FCMB Online Account Opening FAQ",
+        "agency": "First City Monument Bank",
+        "url": "https://diasporaaccount.fcmb.com/faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fcmb-business-account-online",
+      "ecobank-xpress-account",
+      "zenith-online-account-opening",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "FCMB online account opening",
+      "open FCMB savings account",
+      "FCMB savings account online Nigeria",
+      "FCMB account without BVN",
+      "onlineaccount FCMB"
+    ]
+  },
+  {
+    "slug": "fcmb-business-account-online",
+    "title": "How to open an FCMB business account online",
+    "shortTitle": "FCMB business account",
+    "summary": "FCMB's digital business-account route for registered Nigerian businesses, beginning with RC-number validation and business/contact information before the bank completes business onboarding.",
+    "category": "Banking",
+    "agencySlug": "fcmb",
+    "feeLabel": "₦5,000 minimum operating balance on the current business-account page",
+    "feeNote": "FCMB's current business-account page lists a ₦5,000 minimum operating balance and promotional fee concessions. Confirm the live commercial terms before funding because product pricing can change.",
+    "timeline": "FCMB says a business account can be started online and the account number can be obtained quickly, but final onboarding depends on business-document and KYC review.",
+    "status": "verified",
+    "officialPortal": "https://www.fcmb.com/open-a-business-account/index.php",
+    "requirements": [
+      "A registered business with an RC or other CAC registration number that can be validated in the FCMB application",
+      "The applicant's full name, email address and phone number",
+      "The business name, location and LGA information requested in the online business application",
+      "For full business KYC, CAC/registration documents, BVN, valid ID, signature, passport photograph and Tax Identification Number",
+      "For a company account, board resolution, company references and SCUML certificate when the business activity requires SCUML registration"
+    ],
+    "steps": [
+      "Open FCMB's official business-account page and enter the company RC number for validation.",
+      "Enter the applicant's name, email, phone number, business location, LGA and registered business name.",
+      "Submit the initial application so FCMB can continue the business-account onboarding.",
+      "Prepare and provide the CAC, BVN, ID, signature, photograph, TIN and company-specific documents used for full KYC.",
+      "Confirm the approved business-account number and current operating-balance/fee terms before beginning normal business transactions."
+    ],
+    "notes": [
+      "FCMB separates its personal online savings-account portal from the business online account route.",
+      "Company applicants can require additional documents such as board resolution, references and SCUML evidence.",
+      "Promotional free-banking periods and other benefits should be treated as current offers rather than permanent account rules."
+    ],
+    "sources": [
+      {
+        "label": "FCMB Open a Business Account",
+        "agency": "First City Monument Bank",
+        "url": "https://www.fcmb.com/open-a-business-account/index.php",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "FCMB Business Banking",
+        "agency": "First City Monument Bank",
+        "url": "https://fcmb.com/business-banking/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "fcmb-online-savings-account",
+      "fidelity-business-account-online",
+      "kuda-business-account-opening",
+      "cac-company-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "FCMB business account online",
+      "open FCMB business account",
+      "FCMB SME account requirements",
+      "FCMB RC number business account",
+      "FCMB business account Nigeria"
+    ]
+  },
+  {
+    "slug": "alat-account-opening",
+    "title": "How to open an ALAT account by Wema Bank",
+    "shortTitle": "ALAT account opening",
+    "summary": "ALAT by Wema's fully digital account-opening route using the mobile app, phone verification, identity details, selfie and BVN for full features without a branch visit.",
+    "category": "Banking",
+    "agencySlug": "alat-wema",
+    "feeLabel": "Free digital account opening",
+    "feeNote": "ALAT presents account opening as free. Normal transaction, card or other product charges can apply after the account is active.",
+    "timeline": "ALAT states that a digital account can be opened in minutes after the signup and identity checks are completed.",
+    "status": "verified",
+    "officialPortal": "https://alat.ng/",
+    "requirements": [
+      "A smartphone capable of installing the ALAT app",
+      "A Nigerian phone number that can receive the verification code",
+      "A valid identity document for digital onboarding",
+      "A BVN for the full-feature account route, although ALAT's FAQ says some signup access can begin without BVN",
+      "A selfie/facial capture used by ALAT to confirm the customer's identity"
+    ],
+    "steps": [
+      "Download the official ALAT app from the Play Store or App Store link shown on ALAT's website and choose Open an Account.",
+      "Enter the phone number and submit the verification code sent to the device.",
+      "Enter the customer's identity/profile information and BVN for the full-feature account setup.",
+      "Complete the selfie/facial-identity check and create a secure password for the new profile.",
+      "Confirm the new account in the ALAT dashboard and review the account limits before making higher-value transactions."
+    ],
+    "notes": [
+      "ALAT says the account-opening process is fully digital and does not require a branch visit.",
+      "The current FAQ says BVN is optional for initial signup but recommended for full features, while the main onboarding page shows BVN as part of identity confirmation.",
+      "Use only the official ALAT app because credentials, OTPs and passwords should never be shared with an agent."
+    ],
+    "sources": [
+      {
+        "label": "ALAT by Wema Home",
+        "agency": "ALAT by Wema Bank",
+        "url": "https://alat.ng/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ALAT FAQs",
+        "agency": "ALAT by Wema Bank",
+        "url": "https://alat.ng/help/faqs",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "alat-debit-card-request-activation",
+      "sterling-onebank-account-opening",
+      "kuda-personal-account-opening",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open ALAT account",
+      "ALAT account opening Nigeria",
+      "Wema ALAT signup",
+      "ALAT BVN account",
+      "ALAT digital bank account"
+    ]
+  },
+  {
+    "slug": "alat-debit-card-request-activation",
+    "title": "How to request and activate an ALAT debit card",
+    "shortTitle": "ALAT debit card",
+    "summary": "ALAT's in-app debit-card route for choosing a card design, confirming with the ALAT PIN, entering a delivery address and activating the delivered card from the app.",
+    "category": "Banking",
+    "agencySlug": "alat-wema",
+    "feeLabel": "Card charge shown in the ALAT app",
+    "feeNote": "ALAT's public card page describes the request and delivery workflow but does not publish one durable universal card price. Confirm the current card and delivery amount in the app before submitting the request.",
+    "timeline": "ALAT's current card page states that requested cards are delivered within 72 hours, subject to the delivery information and provider operations.",
+    "status": "verified",
+    "officialPortal": "https://alat.ng/features/virtual-cards",
+    "requirements": [
+      "An active ALAT account with access to the mobile app",
+      "The ALAT PIN needed to confirm the debit-card request",
+      "A valid Nigerian delivery address for the physical card",
+      "The delivered card details used by the app during activation"
+    ],
+    "steps": [
+      "Sign in to the ALAT app and open the Cards section.",
+      "Swipe through the available card designs and choose the preferred debit card.",
+      "Confirm the request with the ALAT PIN, enter the delivery address and submit the card order.",
+      "After the card arrives, sign in to ALAT and choose Activate New Card.",
+      "Enter the delivered card information requested by the app and complete activation before using the card at an ATM, online or in stores."
+    ],
+    "notes": [
+      "ALAT states that physical card delivery is available nationwide in Nigeria.",
+      "The app also provides controls to freeze, block or limit card spending.",
+      "A virtual/dollar card is a different ALAT product from the physical debit-card delivery workflow."
+    ],
+    "sources": [
+      {
+        "label": "ALAT Virtual and Debit Cards",
+        "agency": "ALAT by Wema Bank",
+        "url": "https://www.alat.ng/features/virtual-cards",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "ALAT by Wema Home",
+        "agency": "ALAT by Wema Bank",
+        "url": "https://alat.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "alat-account-opening",
+      "gtbank-block-debit-card",
+      "opay-emergency-lock-account-card"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "ALAT debit card request",
+      "order ALAT card",
+      "activate ALAT debit card",
+      "ALAT card delivery Nigeria",
+      "ALAT card 72 hours"
+    ]
+  },
+  {
+    "slug": "sterling-onebank-account-opening",
+    "title": "How to open a Sterling account with OneBank",
+    "shortTitle": "Sterling OneBank account",
+    "summary": "Sterling Bank's OneBank onboarding route for new customers using BVN, name and date of birth to create a Tier 1 account, or for existing Sterling customers validating an existing account.",
+    "category": "Banking",
+    "agencySlug": "sterling-bank",
+    "feeLabel": "OneBank app use is free; transaction charges can apply",
+    "feeNote": "Sterling states that using the OneBank application is free. Charges can apply when the customer performs chargeable banking transactions.",
+    "timeline": "Sterling says customers can open an account in minutes; the initial Tier 1 or wallet account becomes available after successful onboarding and validation.",
+    "status": "verified",
+    "officialPortal": "https://sterling.ng/onebank/faqs/",
+    "requirements": [
+      "For a new Sterling customer, a BVN plus the customer's name and date of birth",
+      "Access to the phone number and email associated with the BVN so the OTP can be received",
+      "For an existing Sterling customer, the account number plus OTP, card or USSD validation",
+      "A username/login credential and transaction PIN created during registration"
+    ],
+    "steps": [
+      "Download the official Sterling OneBank app and start registration as an existing Sterling customer or a new customer.",
+      "For a new customer, enter the BVN, name and date of birth and submit the OTP sent to the BVN-linked phone/email.",
+      "For an existing customer, enter the Sterling account number and complete OTP, card or USSD validation.",
+      "Create the OneBank login credentials and transaction PIN after successful validation.",
+      "Sign in and complete the security-question setup, then check whether the profile shows a wallet/Tier 1 account or a fully upgraded account."
+    ],
+    "notes": [
+      "Sterling's current FAQ says a new non-customer is initially given a Tier 1 account after BVN onboarding.",
+      "The OneBank app can also expose existing Sterling accounts for an already banked customer.",
+      "Higher transaction limits require the account to be upgraded beyond the basic wallet/Tier 1 level."
+    ],
+    "sources": [
+      {
+        "label": "Sterling OneBank FAQs",
+        "agency": "Sterling Bank",
+        "url": "https://sterling.ng/onebank/faqs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Sterling Always On / OneBank",
+        "agency": "Sterling Bank",
+        "url": "https://sterling.ng/alwayson/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sterling-onebank-tier-upgrade",
+      "alat-account-opening",
+      "kuda-personal-account-opening",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "open Sterling account OneBank",
+      "OneBank account opening",
+      "Sterling Bank digital account",
+      "OneBank BVN registration",
+      "Sterling Tier 1 account"
+    ]
+  },
+  {
+    "slug": "sterling-onebank-tier-upgrade",
+    "title": "How to upgrade a Sterling OneBank wallet or Tier 1 account",
+    "shortTitle": "Upgrade OneBank account",
+    "summary": "Sterling OneBank's self-service upgrade route using BVN validation, facial verification, identity documents, e-signature and residential-address verification to convert a wallet/Tier 1 account to a full account.",
+    "category": "Banking",
+    "agencySlug": "sterling-bank",
+    "feeLabel": "No OneBank account-upgrade fee stated",
+    "feeNote": "Sterling's FAQ does not state a separate fee for the self-service KYC upgrade from wallet/Tier 1 to a full account.",
+    "timeline": "Sterling does not publish one fixed completion time for every KYC upgrade; the app submits the identity and address checks during the self-service flow.",
+    "status": "verified",
+    "officialPortal": "https://sterling.ng/onebank/faqs/",
+    "requirements": [
+      "An existing OneBank wallet or Tier 1 account",
+      "A BVN for the full-account upgrade",
+      "A well-lit selfie for facial verification",
+      "A valid ID number and clear ID-card image; Sterling's FAQ also describes NIN/Virtual NIN handling",
+      "A signature specimen and current residential address for address verification"
+    ],
+    "steps": [
+      "Sign in to OneBank and tap the Upgrade option on the wallet or Tier 1 account shown on the dashboard.",
+      "Choose the preferred full account type and enter the employment information shown by OneBank.",
+      "Provide and validate the BVN, then complete the well-lit selfie/facial-verification step.",
+      "Choose the ID type, enter the ID number and upload the ID image plus signature specimen.",
+      "Enter the residential address, submit the verification and confirm that OneBank now displays the upgraded full-account status and limits."
+    ],
+    "notes": [
+      "Sterling's FAQ says a full-KYC OneBank account can have materially higher transaction limits than a wallet account.",
+      "Address verification can use OneBank's location/address-verification service, so the customer should enter a current residential address.",
+      "A failed facial validation does not mean the customer should send identity documents to an unofficial support contact."
+    ],
+    "sources": [
+      {
+        "label": "Sterling OneBank FAQs",
+        "agency": "Sterling Bank",
+        "url": "https://sterling.ng/onebank/faqs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "sterling-onebank-account-opening",
+      "bvn-data-update",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "upgrade OneBank account",
+      "Sterling Tier 1 upgrade",
+      "OneBank full KYC",
+      "Sterling wallet upgrade",
+      "OneBank transaction limit upgrade"
+    ]
+  },
+  {
+    "slug": "hygeia-health-plan-purchase",
+    "title": "How to buy a Hygeia HMO health plan",
+    "shortTitle": "Buy Hygeia HMO plan",
+    "summary": "Hygeia HMO's online purchase route for individuals, families and SMEs: compare current health plans, choose Get Started or Subscribe, enter enrollee details, pay and receive registration confirmation.",
+    "category": "Health insurance",
+    "agencySlug": "hygeia-hmo",
+    "feeLabel": "Price depends on the selected Hygeia plan and payment period",
+    "feeNote": "Hygeia publishes current plan prices and promotional discounts on its live plan pages. Confirm the final plan, payment frequency, waiting period and amount immediately before purchase because pricing can change.",
+    "timeline": "Hygeia says the customer receives an automated response when registration is complete and its team then follows up through the registered email address or phone number.",
+    "status": "verified",
+    "officialPortal": "https://hygeiahmo.com/plan-list/",
+    "requirements": [
+      "A selected Hygeia individual, family or SME health plan that matches the enrolment type",
+      "The enrollee's identity and contact information entered during the subscription",
+      "Dependent information for a family or multi-person plan",
+      "A supported online payment method for the plan price shown during checkout"
+    ],
+    "steps": [
+      "Open Hygeia HMO's official Plan List and compare the plan type, provider category, benefits, limits, waiting periods and current price.",
+      "Choose Get Started or Subscribe on the selected plan and enter the enrollee information.",
+      "Add the required dependent or additional-member information when purchasing a family or multi-person plan.",
+      "Review the selected plan and current payment amount, then complete the online payment.",
+      "Save the automated registration confirmation and monitor the registered email/phone for Hygeia's next enrolment and access information."
+    ],
+    "notes": [
+      "This guide explains the provider's purchase process and does not recommend which health plan is medically or financially suitable for a particular person.",
+      "Hygeia plans differ in hospital categories, benefit limits, waiting periods and covered services; read the selected plan's visible benefits before paying.",
+      "Current website promotional discounts can change and should not be treated as permanent annual prices."
+    ],
+    "sources": [
+      {
+        "label": "Hygeia HMO Plan List",
+        "agency": "Hygeia HMO",
+        "url": "https://hygeiahmo.com/plan-list/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Hygeia HMO FAQs",
+        "agency": "Hygeia HMO",
+        "url": "https://hygeiahmo.com/f-a-qs/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Hygeia Individual Plans",
+        "agency": "Hygeia HMO",
+        "url": "https://hygeiahmo.com/individual-plans-2/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hygeia-provider-directory",
+      "nhia-enrolment",
+      "evercare-book-appointment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "buy Hygeia HMO plan",
+      "Hygeia health insurance Nigeria",
+      "Hygeia HMO individual plan",
+      "Hygeia family health plan",
+      "Hygeia HMO price"
+    ]
+  },
+  {
+    "slug": "hygeia-provider-directory",
+    "title": "How to find a Hygeia HMO hospital or provider",
+    "shortTitle": "Find Hygeia hospital",
+    "summary": "Hygeia HMO's provider-directory route for searching hospitals, clinics, dental providers, pharmacies and other network facilities by name, category, coverage, city or state.",
+    "category": "Health insurance",
+    "agencySlug": "hygeia-hmo",
+    "feeLabel": "No provider-directory search fee",
+    "feeNote": "Hygeia provides the provider-directory search without a separate search charge; access to a specific facility or service still depends on the member's active plan and benefit rules.",
+    "timeline": "The online directory returns matching network providers immediately after the customer searches or filters the provider table.",
+    "status": "verified",
+    "officialPortal": "https://hygeiahmo.com/provider-directory/",
+    "requirements": [
+      "The member's Hygeia plan/provider category when the customer wants to limit results to facilities covered by the plan",
+      "A location such as state, city or town when searching for nearby network facilities",
+      "An optional hospital/provider name or coverage type such as medical, dental or pharmacy"
+    ],
+    "steps": [
+      "Open Hygeia HMO's official Provider Directory.",
+      "Enter a provider name or use the category, coverage, city, address or state filters to narrow the network.",
+      "Review the provider category and coverage type against the member's active Hygeia plan.",
+      "Open or note the selected provider's address and location information before travelling.",
+      "Confirm plan eligibility or pre-authorisation with Hygeia when the intended treatment requires approval beyond simply locating a network provider."
+    ],
+    "notes": [
+      "Hygeia's directory labels providers by network category, and higher-premium provider categories may not be available on every plan.",
+      "A facility appearing in the directory does not mean every treatment at that facility is covered by every Hygeia plan.",
+      "For urgent medical care, use appropriate emergency services rather than delaying treatment to browse a directory."
+    ],
+    "sources": [
+      {
+        "label": "Hygeia HMO Provider Directory",
+        "agency": "Hygeia HMO",
+        "url": "https://hygeiahmo.com/provider-directory/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Hygeia HMO FAQs",
+        "agency": "Hygeia HMO",
+        "url": "https://hygeiahmo.com/f-a-qs/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "hygeia-health-plan-purchase",
+      "evercare-book-appointment",
+      "synlab-home-sample-collection"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Hygeia HMO hospital list",
+      "Hygeia provider directory",
+      "find Hygeia hospital Nigeria",
+      "Hygeia HMO hospitals near me",
+      "Hygeia provider category"
+    ]
   }
 ]
