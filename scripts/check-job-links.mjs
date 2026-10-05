@@ -1,3 +1,4 @@
+// Jobs-only source audit; used by the focused Jobs Freshness workflow.
 import fs from "node:fs/promises";
 
 const files = ["lib/jobs.ts", "lib/job-scale-wave.ts", "lib/career-guides.ts"];
