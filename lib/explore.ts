@@ -4194,6 +4194,1186 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://edostate.gov.ng/your-tourist-destinations-in-edo-state-this-easter-holiday/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "lekki-conservation-centre-guide",
+    "title": "Lekki Conservation Centre Guide: Canopy Walk, Nature & Planning",
+    "shortTitle": "Lekki Conservation Centre",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Plan a Lekki Conservation Centre visit around the forest boardwalk, canopy experience and family park, with current booking, weather and mobility checks before arrival.",
+    "intro": [
+      "Lekki Conservation Centre is one of Lagos's clearest nature-focused visitor intents and deserves a dedicated guide rather than only appearing inside a general Lagos itinerary.",
+      "The Nigerian Conservation Foundation manages the site and currently provides direct booking contacts for LCC. Confirm current admission, canopy access and operating arrangements before setting out."
+    ],
+    "bestFor": [
+      "Urban nature",
+      "Canopy walks",
+      "Families",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Forest boardwalk",
+        "detail": "Use the walk through the conservation landscape as the core experience rather than treating the centre as a quick photo stop."
+      },
+      {
+        "name": "Canopy walkway",
+        "detail": "The elevated canopy experience is a major draw, but access can depend on current site rules, weather and personal comfort with heights."
+      },
+      {
+        "name": "Family park",
+        "detail": "The open recreation area can make the visit work for mixed-age groups after the more active boardwalk section."
+      },
+      {
+        "name": "Lekki cluster",
+        "detail": "Nike Art Gallery and nearby dining can fit the same broad axis without forcing a cross-city journey."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current access",
+        "detail": "Check admission, opening and canopy arrangements directly with NCF before travelling."
+      },
+      {
+        "label": "Prepare for heat and rain",
+        "detail": "Use water, sun protection and weather-appropriate footwear for an outdoor visit."
+      },
+      {
+        "label": "Do not feed wildlife",
+        "detail": "Treat animals as part of a conservation area rather than an attraction to approach."
+      },
+      {
+        "label": "Keep the day on the Lekki axis",
+        "detail": "Pair only nearby stops so traffic does not consume the rest of the outing."
+      }
+    ],
+    "source": {
+      "label": "Nigerian Conservation Foundation — Lekki Conservation Centre",
+      "href": "https://ncfnigeria.org/our-centers/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "nike-art-gallery-lagos-guide",
+    "title": "Nike Art Gallery Lagos Guide: Art, Culture & Lekki Visit Planning",
+    "shortTitle": "Nike Art Gallery Lagos",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Visit Nike Art Gallery as a focused Lagos art stop, with enough time for its multi-floor collection and a compact Lekki route rather than a rushed citywide schedule.",
+    "intro": [
+      "Nike Art Gallery is a major Lagos cultural destination with works by hundreds of African artists and enough depth to justify its own art-focused visitor guide.",
+      "Current cultural listings continue to identify the gallery as an important Lagos destination. Check live visitor hours and any exhibition-specific arrangements before travelling."
+    ],
+    "bestFor": [
+      "Nigerian art",
+      "Culture",
+      "Indoor visits",
+      "Lekki"
+    ],
+    "highlights": [
+      {
+        "name": "Multi-floor collection",
+        "detail": "Allow enough time to move through the gallery slowly rather than treating it as a short lobby stop."
+      },
+      {
+        "name": "Contemporary and traditional work",
+        "detail": "The collection spans multiple forms of Nigerian and African art, making the visit useful for both first-time viewers and collectors."
+      },
+      {
+        "name": "Lekki location",
+        "detail": "The gallery pairs naturally with Lekki Conservation Centre or a nearby meal when traffic and timing allow."
+      },
+      {
+        "name": "Art-shopping context",
+        "detail": "If you intend to buy work, ask about artist information, pricing and handling directly rather than assuming every displayed piece is available."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current hours",
+        "detail": "Verify the gallery's live opening schedule before travelling."
+      },
+      {
+        "label": "Give the collection time",
+        "detail": "A large gallery is more rewarding with an unhurried block than between multiple reservations."
+      },
+      {
+        "label": "Ask before close-up photography",
+        "detail": "Follow current gallery rules around artworks, people and commercial use."
+      },
+      {
+        "label": "Stay on one axis",
+        "detail": "Combine only nearby Lekki or Victoria Island stops to protect the day from traffic."
+      }
+    ],
+    "source": {
+      "label": "ART X Lagos — Nike Art Gallery profile",
+      "href": "https://www.artxlagos.com/exhibitors/nike-art-gallery-2026"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "millennium-park-abuja-guide",
+    "title": "Millennium Park Abuja Guide: Visit, Nearby Landmarks & Planning",
+    "shortTitle": "Millennium Park Abuja",
+    "kind": "destination",
+    "region": "Federal Capital Territory",
+    "summary": "Plan a Millennium Park visit as an easy central Abuja green-space stop, pairing it with nearby national landmarks while keeping heat, rain and formal-area access in mind.",
+    "intro": [
+      "Millennium Park is one of Abuja's best-known public green spaces and works especially well as a lower-pressure stop between the city's more formal landmarks.",
+      "Current Visit Abuja guidance places the park within the central visitor circuit, close enough to major national landmarks to form a compact half-day without crossing the city repeatedly."
+    ],
+    "bestFor": [
+      "Parks",
+      "Relaxed walks",
+      "Families",
+      "Central Abuja"
+    ],
+    "highlights": [
+      {
+        "name": "Open green space",
+        "detail": "Use the park for walking, sitting and a slower break rather than expecting a dense attraction programme."
+      },
+      {
+        "name": "Central location",
+        "detail": "The park can fit naturally with the National Mosque and National Christian Centre in one broad city block."
+      },
+      {
+        "name": "Photography",
+        "detail": "Green space and city views make it useful for casual photography, while nearby government areas may have separate restrictions."
+      },
+      {
+        "name": "Flexible stop",
+        "detail": "It works well when you need a short outdoor activity between meals, meetings or cultural visits."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use cooler hours",
+        "detail": "Morning or later afternoon can be more comfortable than peak midday heat."
+      },
+      {
+        "label": "Watch rain",
+        "detail": "Heavy showers can change an outdoor park plan quickly."
+      },
+      {
+        "label": "Respect nearby controlled areas",
+        "detail": "Do not assume photography or parking rules are the same outside government and diplomatic zones."
+      },
+      {
+        "label": "Keep the route central",
+        "detail": "Pair the park with nearby landmarks instead of using it as the start of a cross-city loop."
+      }
+    ],
+    "source": {
+      "label": "Visit Abuja — Things to Do",
+      "href": "https://www.visitabuja.org/see-and-do/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "jabi-lake-abuja-guide",
+    "title": "Jabi Lake Abuja Guide: Waterfront, Boats & Safety Planning",
+    "shortTitle": "Jabi Lake",
+    "kind": "destination",
+    "region": "Federal Capital Territory",
+    "summary": "Use Jabi Lake for a relaxed Abuja waterfront block, with operator, weather and life-jacket checks before any boat activity.",
+    "intro": [
+      "Jabi Lake adds a waterfront experience to Abuja's city break and is distinct from the capital's formal landmarks and central parks.",
+      "Current Abuja visitor guidance highlights the lake as a leisure area. Any boat or water activity should be treated as operator-dependent rather than automatically included."
+    ],
+    "bestFor": [
+      "Waterfront",
+      "Relaxed afternoons",
+      "Dining",
+      "Short city breaks"
+    ],
+    "highlights": [
+      {
+        "name": "Lakefront time",
+        "detail": "The easiest experience is simply using the waterfront area for a slower afternoon or evening."
+      },
+      {
+        "name": "Water activities",
+        "detail": "Boat outings can be available, but only use an operator after checking equipment, weather and return arrangements."
+      },
+      {
+        "name": "Jabi district",
+        "detail": "Keep dining and shopping in the same area where possible to reduce unnecessary movement."
+      },
+      {
+        "name": "Sunset planning",
+        "detail": "A later visit can be attractive, but decide your return transport before staying into the evening."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check life jackets",
+        "detail": "Do not board a recreational boat without suitable safety equipment."
+      },
+      {
+        "label": "Watch the weather",
+        "detail": "Wind and storms should override a planned water activity."
+      },
+      {
+        "label": "Confirm the operator",
+        "detail": "Agree the route, duration, price and return point before departure."
+      },
+      {
+        "label": "Plan the return first",
+        "detail": "Avoid relying on last-minute transport after a late waterfront stop."
+      }
+    ],
+    "source": {
+      "label": "Visit Abuja — About Abuja",
+      "href": "https://www.visitabuja.org/about-abuja/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "abuja-arts-crafts-village-guide",
+    "title": "Abuja Arts & Crafts Village Guide: What to Buy & Visitor Tips",
+    "shortTitle": "Abuja Arts & Crafts Village",
+    "kind": "destination",
+    "region": "Federal Capital Territory",
+    "summary": "Use Abuja's Arts and Crafts Village as a focused shopping-and-culture stop for textiles, carvings, leather, jewellery and art, with current access checks before travelling.",
+    "intro": [
+      "Abuja's Arts and Crafts Village answers a clear shopping and culture intent that is different from the capital's landmark or park guides.",
+      "Visit Abuja currently includes the village among places to look for locally made craft. Public access can change, so confirm the site is open before building a trip around it."
+    ],
+    "bestFor": [
+      "Craft shopping",
+      "Textiles",
+      "Souvenirs",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Locally made goods",
+        "detail": "Look for textiles, carvings, leatherwork, jewellery and paintings rather than treating the stop like a conventional mall."
+      },
+      {
+        "name": "Compare before buying",
+        "detail": "Walk through multiple sellers before committing when quality, size and finish vary."
+      },
+      {
+        "name": "Ask about provenance",
+        "detail": "For higher-value art or craft, ask who made the piece and what materials were used."
+      },
+      {
+        "name": "Central-area pairing",
+        "detail": "The village can fit with nearby national landmarks when access and route order make sense."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public access",
+        "detail": "Check that the village is open before travelling specifically for shopping."
+      },
+      {
+        "label": "Carry purchases carefully",
+        "detail": "Plan how fragile carvings, art or textiles will be transported."
+      },
+      {
+        "label": "Negotiate respectfully",
+        "detail": "Ask prices clearly and compare without turning bargaining into confrontation."
+      },
+      {
+        "label": "Keep valuables secure",
+        "detail": "Use normal market precautions in busy shopping areas."
+      }
+    ],
+    "source": {
+      "label": "Visit Abuja — Things to Do",
+      "href": "https://www.visitabuja.org/see-and-do/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "gidan-makama-museum-guide",
+    "title": "Gidan Makama Museum Guide: Kano History & Old City Planning",
+    "shortTitle": "Gidan Makama Museum",
+    "kind": "destination",
+    "region": "Kano State",
+    "summary": "Start a Kano heritage visit at Gidan Makama Museum for historical context before exploring Dala Hill and the old city.",
+    "intro": [
+      "Gidan Makama is one of Kano's key museum and heritage stops, and the state has continued to allocate rehabilitation funding to the museum.",
+      "Use the museum as context for Kano's old-city story, then keep nearby heritage stops in the same day rather than jumping across the metropolis."
+    ],
+    "bestFor": [
+      "Kano history",
+      "Museums",
+      "Old city",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Historical context",
+        "detail": "The museum is most useful at the beginning of a Kano heritage route so later landmarks are easier to understand."
+      },
+      {
+        "name": "Old-city setting",
+        "detail": "Its location makes it a natural anchor for a wider historic-district visit."
+      },
+      {
+        "name": "Dala Hill connection",
+        "detail": "The hill can add landscape and settlement context when heat and access allow."
+      },
+      {
+        "name": "Living heritage",
+        "detail": "Kano's traditional institutions and markets remain active, so visitor etiquette matters beyond museum walls."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm museum access",
+        "detail": "Check current opening and any rehabilitation effects before travelling."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use modest, practical clothing for a heritage day that may include traditional or religious areas."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Museum and old-city locations may have different rules."
+      },
+      {
+        "label": "Use local context",
+        "detail": "A knowledgeable guide can add meaning and reduce inaccurate retellings."
+      }
+    ],
+    "source": {
+      "label": "Kano State Government",
+      "href": "https://kanostate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "dala-hill-kano-guide",
+    "title": "Dala Hill Kano Guide: Climb, History & Old City Planning",
+    "shortTitle": "Dala Hill",
+    "kind": "destination",
+    "region": "Kano State",
+    "summary": "Plan a Dala Hill visit around cooler hours, safe footing and Kano's wider old-city heritage rather than treating the climb as an isolated viewpoint.",
+    "intro": [
+      "Dala Hill is a defining natural and historical landmark in Kano's settlement story and supports a focused visitor guide of its own.",
+      "The climb is exposed and should be planned around heat, weather and current local access, with Gidan Makama providing useful historical context before or after."
+    ],
+    "bestFor": [
+      "Views",
+      "History",
+      "Short climbs",
+      "Kano heritage"
+    ],
+    "highlights": [
+      {
+        "name": "City views",
+        "detail": "The elevated position gives a different perspective on Kano's urban landscape."
+      },
+      {
+        "name": "Settlement history",
+        "detail": "The hill is closely tied to Kano's early history and is more meaningful with historical context."
+      },
+      {
+        "name": "Old-city pairing",
+        "detail": "Gidan Makama Museum and nearby heritage can fit the same day without turning the trip into a citywide race."
+      },
+      {
+        "name": "Simple outdoor stop",
+        "detail": "The experience is mainly the climb, views and context rather than extensive built visitor facilities."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Avoid peak heat",
+        "detail": "Climb earlier or later in the day when possible."
+      },
+      {
+        "label": "Wear stable footwear",
+        "detail": "Use shoes suitable for uneven steps or rock surfaces."
+      },
+      {
+        "label": "Check current local access",
+        "detail": "Follow any instructions around the recognised visitor route."
+      },
+      {
+        "label": "Carry water",
+        "detail": "Do not depend on finding refreshments during the climb."
+      }
+    ],
+    "source": {
+      "label": "Kano State Government — History",
+      "href": "https://kanostate.gov.ng/history/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "jos-wildlife-park-guide",
+    "title": "Jos Wildlife Park Guide: Entry, Safety & Visitor Planning",
+    "shortTitle": "Jos Wildlife Park",
+    "kind": "destination",
+    "region": "Plateau State",
+    "summary": "Plan Jos Wildlife Park as a focused nature visit with current entry details, marked-route rules and no assumptions about guaranteed animal sightings.",
+    "intro": [
+      "Jos Wildlife Park is one of Plateau's established city-accessible nature attractions and the official state tourism platform currently publishes visitor and safety information for it.",
+      "Treat the park as a conservation environment: stay on recognised paths, follow staff guidance and never plan the day around a guaranteed sighting."
+    ],
+    "bestFor": [
+      "Wildlife",
+      "Nature walks",
+      "Families",
+      "Jos outings"
+    ],
+    "highlights": [
+      {
+        "name": "Savanna setting",
+        "detail": "The park offers a nature-focused break from city sightseeing within the wider Jos area."
+      },
+      {
+        "name": "Wildlife viewing",
+        "detail": "Animals may be present across the park, but sightings and activity levels vary naturally."
+      },
+      {
+        "name": "Guided experience",
+        "detail": "Use staff or recognised guides where required rather than leaving marked routes."
+      },
+      {
+        "name": "Jos pairing",
+        "detail": "The museum or a city meal can fit the same day if the park visit ends earlier than expected."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current hours and fee",
+        "detail": "Use VisitPlateau's live listing before travelling."
+      },
+      {
+        "label": "Stay on marked paths",
+        "detail": "Do not approach animals or leave recognised visitor areas."
+      },
+      {
+        "label": "Do not feed wildlife",
+        "detail": "Feeding changes animal behaviour and creates risk."
+      },
+      {
+        "label": "Carry sun protection",
+        "detail": "Outdoor wildlife visits can involve long periods in exposed conditions."
+      }
+    ],
+    "source": {
+      "label": "VisitPlateau — Jos Wildlife Park",
+      "href": "https://visitplateau.com/destinations/jos-wildlife-park"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "shere-hills-guide",
+    "title": "Shere Hills Guide: Hiking, Views & Jos Trip Planning",
+    "shortTitle": "Shere Hills",
+    "kind": "destination",
+    "region": "Plateau State",
+    "summary": "Plan a Shere Hills outing from Jos with a local route, enough water and a conservative daylight schedule for the highland terrain.",
+    "intro": [
+      "Shere Hills is promoted by Plateau's official tourism platform as one of the state's major adventure landscapes and supports a distinct hiking search intent.",
+      "Treat it as a real outdoor activity rather than a roadside viewpoint: route choice, fitness, weather and local guidance should shape the day."
+    ],
+    "bestFor": [
+      "Hiking",
+      "Highland views",
+      "Adventure",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Rocky highlands",
+        "detail": "The hills are the main experience, with wide views and uneven terrain rather than built attraction infrastructure."
+      },
+      {
+        "name": "Hiking routes",
+        "detail": "Use a suitable local route and avoid improvising across unfamiliar terrain."
+      },
+      {
+        "name": "Jos proximity",
+        "detail": "The hills work as a dedicated outdoor block from a Jos base."
+      },
+      {
+        "name": "Plateau landscape",
+        "detail": "Cooler highland conditions can still include strong sun, wind or sudden rain."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use a local guide",
+        "detail": "Confirm the route, expected duration and turnaround time before starting."
+      },
+      {
+        "label": "Carry enough water",
+        "detail": "Do not assume supplies are available on the hill."
+      },
+      {
+        "label": "Watch the weather",
+        "detail": "Rain or poor visibility can make exposed rock less suitable."
+      },
+      {
+        "label": "Turn around early",
+        "detail": "Protect enough daylight for the descent and return to Jos."
+      }
+    ],
+    "source": {
+      "label": "VisitPlateau — official tourism platform",
+      "href": "https://visitplateau.com/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "wase-rock-guide",
+    "title": "Wase Rock Guide: Plateau Road Trip, Views & Access Planning",
+    "shortTitle": "Wase Rock",
+    "kind": "destination",
+    "region": "Plateau State",
+    "summary": "Plan Wase Rock as a dedicated Plateau road trip with current access, daylight and local guidance rather than a quick add-on to central Jos sightseeing.",
+    "intro": [
+      "Wase Rock is one of Plateau State's signature geological landmarks and is promoted by the official tourism platform as a major adventure destination.",
+      "The distance from Jos means the journey matters as much as the stop itself. Confirm the current route, local access and return plan before leaving."
+    ],
+    "bestFor": [
+      "Geology",
+      "Rock landscapes",
+      "Road trips",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Volcanic rock landmark",
+        "detail": "The dramatic formation is the central reason to travel to Wase and should be given a full destination block."
+      },
+      {
+        "name": "Birdlife context",
+        "detail": "Official tourism material links the area with notable birdlife; observe without disturbing nesting or wildlife."
+      },
+      {
+        "name": "Rural Plateau route",
+        "detail": "The drive passes beyond the main Jos visitor circuit and needs more conservative timing."
+      },
+      {
+        "name": "Landscape photography",
+        "detail": "Use safe public viewpoints rather than climbing or crossing into uncertain terrain."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current local access",
+        "detail": "Check the recognised visitor area before travelling."
+      },
+      {
+        "label": "Plan fuel and daylight",
+        "detail": "Treat Wase as a road-trip destination, not a short city detour."
+      },
+      {
+        "label": "Do not disturb wildlife",
+        "detail": "Keep distance from birds and nesting areas."
+      },
+      {
+        "label": "Avoid unapproved climbing",
+        "detail": "Do not assume the rock itself is open for unrestricted ascent."
+      }
+    ],
+    "source": {
+      "label": "VisitPlateau — official tourism platform",
+      "href": "https://visitplateau.com/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "assop-falls-guide",
+    "title": "Assop Falls Guide: Jos–Abuja Stop, Safety & Waterfall Planning",
+    "shortTitle": "Assop Falls",
+    "kind": "destination",
+    "region": "Plateau State",
+    "summary": "Use Assop Falls as a focused waterfall stop on the Jos–Abuja corridor, with sturdy footwear, daylight timing and no swimming assumptions.",
+    "intro": [
+      "Assop Falls is one of Plateau's more accessible waterfall stops and the official state tourism platform currently publishes direct safety guidance for visitors.",
+      "The attraction is still a natural site: slippery rock, changing water flow and roadside timing should matter more than a fixed photo schedule."
+    ],
+    "bestFor": [
+      "Waterfalls",
+      "Road-trip stops",
+      "Nature",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Waterfall cascade",
+        "detail": "The falls and rocky setting are the main attraction, especially when seasonal water flow is strong."
+      },
+      {
+        "name": "Highway access",
+        "detail": "Its position near the Jos–Abuja route can make it practical as a planned stop rather than a separate multi-day trip."
+      },
+      {
+        "name": "Natural pool",
+        "detail": "Treat the water as a viewing feature unless current official guidance specifically permits an activity."
+      },
+      {
+        "name": "Plateau nature circuit",
+        "detail": "Riyom or Jos attractions can fit a wider trip, but avoid overpacking the same day."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Wear sturdy footwear",
+        "detail": "Official guidance warns that rocks can be slippery."
+      },
+      {
+        "label": "Do not assume swimming is safe",
+        "detail": "Use the current site safety rule rather than old travel posts."
+      },
+      {
+        "label": "Visit in daylight",
+        "detail": "Natural footing is easier to assess before dark."
+      },
+      {
+        "label": "Check recent rain",
+        "detail": "Water flow and road conditions can change after heavy weather."
+      }
+    ],
+    "source": {
+      "label": "VisitPlateau — Assop Falls",
+      "href": "https://visitplateau.com/destinations/assop-falls"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "riyom-rock-guide",
+    "title": "Riyom Rock Guide: Balanced Formations & Plateau Day Trip",
+    "shortTitle": "Riyom Rock",
+    "kind": "destination",
+    "region": "Plateau State",
+    "summary": "Plan a Riyom Rock visit for the balanced formations and landscape views, using daylight, stable footing and a no-climbing approach around unstable rock.",
+    "intro": [
+      "Riyom's balanced rock formations are a distinct geological attraction and the official Plateau tourism platform provides current access and safety guidance.",
+      "The site is best treated as a landscape stop rather than a climbing challenge. Stay clear of unstable formations and use recognised public access."
+    ],
+    "bestFor": [
+      "Geology",
+      "Photography",
+      "Road trips",
+      "Landscape"
+    ],
+    "highlights": [
+      {
+        "name": "Balanced formations",
+        "detail": "The unusual natural rock shapes are the main visual draw and need no climbing to appreciate."
+      },
+      {
+        "name": "Riyom landscape",
+        "detail": "The surrounding highland scenery adds value beyond the most photographed formation."
+      },
+      {
+        "name": "Easy Plateau pairing",
+        "detail": "The site can fit into a wider Jos-area route when travel time remains realistic."
+      },
+      {
+        "name": "Open-air visit",
+        "detail": "Weather and light can strongly change the experience at an exposed rock site."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Do not climb unstable formations",
+        "detail": "Official guidance specifically warns against climbing the balanced rocks."
+      },
+      {
+        "label": "Watch loose footing",
+        "detail": "Use shoes suitable for uneven ground."
+      },
+      {
+        "label": "Stay in daylight",
+        "detail": "Visit while surfaces and route boundaries are easy to see."
+      },
+      {
+        "label": "Keep weather flexibility",
+        "detail": "Rain can make rock and roadside conditions less comfortable."
+      }
+    ],
+    "source": {
+      "label": "VisitPlateau — Riyom Rock",
+      "href": "https://visitplateau.com/destinations/riyom-rock"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "owo-museum-guide",
+    "title": "Owo Museum of Antiquities Guide: Ondo Heritage Visit Planning",
+    "shortTitle": "Owo Museum of Antiquities",
+    "kind": "destination",
+    "region": "Ondo State",
+    "summary": "Use Owo Museum as a focused Ondo heritage stop, then decide separately whether Idanre or Akure belongs in the same wider trip.",
+    "intro": [
+      "Owo's museum provides a distinct history-and-art destination within Ondo State and should not be reduced to one line inside a broad nature circuit.",
+      "Use the museum as the main cultural anchor, confirm current visitor hours and keep distant state attractions as optional extensions."
+    ],
+    "bestFor": [
+      "Museums",
+      "Yoruba heritage",
+      "History",
+      "Art"
+    ],
+    "highlights": [
+      {
+        "name": "Owo heritage collections",
+        "detail": "The museum is the core place to build context around Owo's artistic and historical traditions."
+      },
+      {
+        "name": "Cultural interpretation",
+        "detail": "Give time to labels, guides or local explanation rather than rushing through exhibits."
+      },
+      {
+        "name": "Ondo contrast",
+        "detail": "The museum creates a useful cultural counterpoint to Idanre Hills and other nature-led state trips."
+      },
+      {
+        "name": "Owo stopover",
+        "detail": "It can work as a dedicated heritage block on a road trip through northern Ondo."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current opening",
+        "detail": "Check museum access before making a dedicated road journey."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing objects or indoor collections."
+      },
+      {
+        "label": "Keep Idanre separate if needed",
+        "detail": "Do not compress two major destinations when road time is tight."
+      },
+      {
+        "label": "Allow interpretation time",
+        "detail": "A museum visit is more useful when you are not rushing to the next city."
+      }
+    ],
+    "source": {
+      "label": "Ondo State tourism information",
+      "href": "https://ondostate.gov.ng/tourism"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "arinta-waterfalls-guide",
+    "title": "Arinta Waterfalls Guide: Ekiti Nature Trip & Safety Planning",
+    "shortTitle": "Arinta Waterfalls",
+    "kind": "destination",
+    "region": "Ekiti State",
+    "summary": "Plan Arinta Waterfalls as a dedicated Ekiti nature stop with weather, footwear and current local-access checks before leaving for Ipole-Iloro.",
+    "intro": [
+      "Arinta is a distinct waterfall destination in Ekiti and deserves its own planning page beyond a general state nature circuit.",
+      "Waterfall conditions change with rainfall, so the useful questions are access, footing, water level and daylight rather than a fixed promise about what the site will look like."
+    ],
+    "bestFor": [
+      "Waterfalls",
+      "Nature",
+      "Photography",
+      "Ekiti road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Waterfall setting",
+        "detail": "The cascade and surrounding green landscape are the central experience."
+      },
+      {
+        "name": "Ipole-Iloro route",
+        "detail": "Use current local directions for the final approach rather than depending on an old map pin alone."
+      },
+      {
+        "name": "Ikogosi pairing",
+        "detail": "The warm springs can fit a wider Ekiti trip when road and timing conditions make sense."
+      },
+      {
+        "name": "Seasonal character",
+        "detail": "Rain can improve water flow while also making surfaces and roads more difficult."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check recent weather",
+        "detail": "Heavy rain can change both the falls and the approach."
+      },
+      {
+        "label": "Wear grip-friendly shoes",
+        "detail": "Expect wet or uneven natural surfaces."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Keep enough time to return before dark."
+      },
+      {
+        "label": "Confirm local access",
+        "detail": "Check the current entry route and any local arrangements before travelling."
+      }
+    ],
+    "source": {
+      "label": "Ekiti State Bureau of Tourism Development",
+      "href": "https://www.ekitistate.gov.ng/bureau-of-tourism-development"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "mount-patti-lokoja-guide",
+    "title": "Mount Patti Lokoja Guide: Views, History & Trip Planning",
+    "shortTitle": "Mount Patti",
+    "kind": "destination",
+    "region": "Kogi State",
+    "summary": "Plan a Mount Patti visit around weather, access and daylight, then connect the views with Lokoja's Niger–Benue confluence and colonial history.",
+    "intro": [
+      "Mount Patti is one of Lokoja's defining landscape landmarks and supports a focused visit separate from a generic Kogi attractions list.",
+      "The best value comes from combining the elevated viewpoint with the city's geographic and historical context, not from treating the hill as an isolated photo stop."
+    ],
+    "bestFor": [
+      "Views",
+      "Hills",
+      "Lokoja history",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Elevated Lokoja views",
+        "detail": "The hill helps show the relationship between the city, surrounding terrain and major rivers."
+      },
+      {
+        "name": "Confluence context",
+        "detail": "Pair the viewpoint with a land-based look at the Niger–Benue confluence for a stronger geography-focused day."
+      },
+      {
+        "name": "Colonial history",
+        "detail": "Lokoja's historical sites add context to why the city became strategically important."
+      },
+      {
+        "name": "Outdoor block",
+        "detail": "Treat the hill as a physical activity that needs its own weather and time allowance."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current access",
+        "detail": "Confirm the recognised route before starting the hill visit."
+      },
+      {
+        "label": "Avoid poor visibility",
+        "detail": "Heavy rain or haze can reduce both safety and the value of the view."
+      },
+      {
+        "label": "Carry water",
+        "detail": "Do not depend on supplies during the hill section."
+      },
+      {
+        "label": "Keep daylight margin",
+        "detail": "Leave enough time for the return and any later city stop."
+      }
+    ],
+    "source": {
+      "label": "Kogi State Government — About Kogi",
+      "href": "https://kogistate.gov.ng/about-us/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "agulu-lake-guide",
+    "title": "Agulu Lake Guide: Anambra Nature Visit & Water Safety Planning",
+    "shortTitle": "Agulu Lake",
+    "kind": "destination",
+    "region": "Anambra State",
+    "summary": "Use Agulu Lake as a calm Anambra nature stop with local-access and water-safety checks, keeping cave and waterfall excursions as separate decisions.",
+    "intro": [
+      "Agulu Lake offers a different, slower nature experience from Anambra's cave and waterfall destinations and supports a focused visitor-planning page.",
+      "Treat the water as a natural environment rather than assuming boating, swimming or other activities are always available or safe."
+    ],
+    "bestFor": [
+      "Lakes",
+      "Nature",
+      "Photography",
+      "Anambra road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Lake landscape",
+        "detail": "The main experience is the water and surrounding scenery rather than a dense list of built attractions."
+      },
+      {
+        "name": "Agulu setting",
+        "detail": "Use local guidance for the current visitor area and any culturally sensitive parts of the shoreline."
+      },
+      {
+        "name": "Ogbunike option",
+        "detail": "The caves can form another day in a longer Anambra nature trip."
+      },
+      {
+        "name": "Flexible pace",
+        "detail": "The lake works well as a slower block between more physically demanding destinations."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm local access",
+        "detail": "Use current directions and follow any community guidance."
+      },
+      {
+        "label": "Do not assume swimming safety",
+        "detail": "Only enter water when a current, responsible local authority or operator says conditions are suitable."
+      },
+      {
+        "label": "Protect electronics",
+        "detail": "Use a water-resistant plan for phones and valuables."
+      },
+      {
+        "label": "Keep distant nature stops separate",
+        "detail": "Avoid rushing from the lake to caves and waterfalls in one short day."
+      }
+    ],
+    "source": {
+      "label": "Anambra State — Agulu Lake",
+      "href": "https://anambrastate.gov.ng/directory/agulu-lake/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kufena-hills-zaria-guide",
+    "title": "Kufena Hills Zaria Guide: Hiking, Heritage & Kaduna Planning",
+    "shortTitle": "Kufena Hills",
+    "kind": "destination",
+    "region": "Kaduna State",
+    "summary": "Plan Kufena Hills as a Zaria landscape and heritage outing with current route, weather and local-security checks before the climb.",
+    "intro": [
+      "Kufena Hills gives Zaria a strong outdoor identity beyond its historic walls and built heritage, making it a distinct trip-planning destination.",
+      "Current road and security conditions should be checked close to the visit, and the hill should be approached through a recognised local route."
+    ],
+    "bestFor": [
+      "Hiking",
+      "Rock landscapes",
+      "Zaria",
+      "Photography"
+    ],
+    "highlights": [
+      {
+        "name": "Hill landscape",
+        "detail": "The rocky terrain and elevated views are the main reason to visit."
+      },
+      {
+        "name": "Zaria heritage connection",
+        "detail": "City walls and historic areas can add cultural context to a wider Zaria trip."
+      },
+      {
+        "name": "Outdoor activity",
+        "detail": "Treat the visit as a real hike or climb rather than a drive-by stop."
+      },
+      {
+        "name": "Southern Kaduna alternative",
+        "detail": "Matsirga and other state nature sites are separate trips, not same-day requirements."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current security",
+        "detail": "Verify the exact route close to departure."
+      },
+      {
+        "label": "Use local guidance",
+        "detail": "Confirm the recognised path and turnaround time."
+      },
+      {
+        "label": "Carry water and sun protection",
+        "detail": "Do not assume services on the hill."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Keep enough daylight for the descent and road journey."
+      }
+    ],
+    "source": {
+      "label": "Kaduna Investment Promotion Agency — tourism publications",
+      "href": "https://kadipa.kdsg.gov.ng/documents.html"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kusugu-well-daura-guide",
+    "title": "Kusugu Well Daura Guide: Bayajidda Heritage & Visitor Planning",
+    "shortTitle": "Kusugu Well",
+    "kind": "destination",
+    "region": "Katsina State",
+    "summary": "Visit Kusugu Well as a focused Daura heritage stop with local interpretation, respectful photography and realistic road time from Katsina.",
+    "intro": [
+      "Kusugu Well is central to one of northern Nigeria's best-known origin traditions and gives Daura a distinct heritage intent beyond a general Katsina State itinerary.",
+      "Use local interpretation and current visitor guidance rather than treating a historic site only as a photo marker."
+    ],
+    "bestFor": [
+      "History",
+      "Daura",
+      "Cultural heritage",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Bayajidda tradition",
+        "detail": "The site is associated with the famous Daura origin narrative and is most meaningful with careful local explanation."
+      },
+      {
+        "name": "Daura heritage",
+        "detail": "The well belongs within the wider cultural landscape of the historic town."
+      },
+      {
+        "name": "Katsina connection",
+        "detail": "Gobarau Minaret and the Emir's Palace form a separate city heritage cluster."
+      },
+      {
+        "name": "Interpretation over spectacle",
+        "detail": "The value of the stop is historical and cultural context rather than a large physical attraction complex."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local interpretation",
+        "detail": "Ask a knowledgeable guide or custodian for current context."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Follow any site-specific cultural rules."
+      },
+      {
+        "label": "Allow road time",
+        "detail": "Daura is a separate travel block from Katsina city."
+      },
+      {
+        "label": "Confirm current access",
+        "detail": "Check the site is open before making the road journey."
+      }
+    ],
+    "source": {
+      "label": "Katsina State Ministry of Commerce, Industry and Tourism",
+      "href": "https://mocit.kt.gov.ng/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "eggon-hills-guide",
+    "title": "Eggon Hills & Caves Guide: Nasarawa Hiking & Access Planning",
+    "shortTitle": "Eggon Hills & Caves",
+    "kind": "destination",
+    "region": "Nasarawa State",
+    "summary": "Plan the Eggon Hills and caves as a serious Nasarawa outdoor trip with local guidance, daylight and current road and security checks.",
+    "intro": [
+      "Eggon Hills is a distinct rock-and-cave landscape within Nasarawa and deserves a dedicated outdoor guide rather than a line inside a state roundup.",
+      "Treat route finding and current conditions as core parts of the trip. Do not enter unfamiliar caves or remote hill sections without appropriate local guidance."
+    ],
+    "bestFor": [
+      "Hiking",
+      "Caves",
+      "Rock landscapes",
+      "Adventure"
+    ],
+    "highlights": [
+      {
+        "name": "Hill terrain",
+        "detail": "The rocky landscape is the main experience and requires suitable footwear and realistic fitness expectations."
+      },
+      {
+        "name": "Cave features",
+        "detail": "Only enter areas recognised as appropriate for visitors and use local guidance."
+      },
+      {
+        "name": "Nasarawa nature circuit",
+        "detail": "Farin Ruwa and Ara Rock are separate strong destinations for a longer state trip."
+      },
+      {
+        "name": "Remote setting",
+        "detail": "The trip requires more route planning than a city attraction."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use a local guide",
+        "detail": "Do not improvise through unfamiliar hill or cave terrain."
+      },
+      {
+        "label": "Check current security and road conditions",
+        "detail": "Verify the exact route close to departure."
+      },
+      {
+        "label": "Carry essentials",
+        "detail": "Bring water, sun protection and basic first-aid."
+      },
+      {
+        "label": "Keep daylight margin",
+        "detail": "Turn around early enough for a safe return."
+      }
+    ],
+    "source": {
+      "label": "Federal Ministry of Information — Nasarawa tourism survey",
+      "href": "https://fmino.gov.ng/report-on-tourism-survey-at-nasarawa-state-from-tuesday-7th-thursday-9th-of-may-2019/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "dagona-bird-sanctuary-guide",
+    "title": "Dagona Bird Sanctuary Guide: Yobe Wetlands & Birding Planning",
+    "shortTitle": "Dagona Bird Sanctuary",
+    "kind": "destination",
+    "region": "Yobe State",
+    "summary": "Plan Dagona as a conservation-first birding trip in the Bade–Nguru wetlands, with current security, protected-area access and local-guide checks before travelling.",
+    "intro": [
+      "Dagona Bird Sanctuary sits within an important wetland landscape associated with migratory waterbirds and supports a distinct birding and conservation search intent.",
+      "Yobe travel conditions and protected-area access can change materially. Confirm the current situation close to departure and do not travel simply because an old tourism page lists the site."
+    ],
+    "bestFor": [
+      "Birding",
+      "Wetlands",
+      "Conservation",
+      "Nature"
+    ],
+    "highlights": [
+      {
+        "name": "Wetland birdlife",
+        "detail": "The sanctuary's value comes from habitat and seasonal bird activity rather than guaranteed species sightings."
+      },
+      {
+        "name": "Bade–Nguru landscape",
+        "detail": "The wider wetland system is ecologically important and should be approached with minimal disturbance."
+      },
+      {
+        "name": "Conservation context",
+        "detail": "Use guides and recognised access rather than leaving tracks or approaching nesting areas."
+      },
+      {
+        "name": "Yobe heritage extension",
+        "detail": "Dufuna canoe heritage and cultural events are separate state interests when current conditions support travel."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check security first",
+        "detail": "Use current official and trusted local advice for the exact route."
+      },
+      {
+        "label": "Confirm protected-area access",
+        "detail": "Ask whether a guide, permit or specific entry arrangement is required."
+      },
+      {
+        "label": "Keep distance from birds",
+        "detail": "Avoid nesting areas, loud disturbance and off-route movement."
+      },
+      {
+        "label": "Travel with daylight",
+        "detail": "Use conservative road and return timing."
+      }
+    ],
+    "source": {
+      "label": "Yobe Investment Promotion Agency — Culture and Tourism",
+      "href": "https://yobeinvest.ng/culture-and-tourism/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
