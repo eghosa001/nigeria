@@ -1451,6 +1451,27 @@ export const agencies: Agency[] = [
     "shortName": "PiggyVest",
     "description": "Private Nigerian savings and investment platform offering savings wallets, withdrawals, statements and account-security services.",
     "website": "https://www.piggyvest.com/"
+  },
+  {
+    "slug": "bamboo",
+    "name": "Bamboo",
+    "shortName": "Bamboo",
+    "description": "Private investment platform serving Nigerian users with identity verification, wallet funding, withdrawals and account statements.",
+    "website": "https://investbamboo.com/"
+  },
+  {
+    "slug": "autochek",
+    "name": "Autochek Africa Nigeria",
+    "shortName": "Autochek",
+    "description": "Private automotive marketplace offering vehicle sales, inspections and vehicle-finance application services in Nigeria.",
+    "website": "https://autochek.africa/ng/"
+  },
+  {
+    "slug": "cars45",
+    "name": "Cars45",
+    "shortName": "Cars45",
+    "description": "Private Nigerian automotive marketplace offering vehicle inspection, sales, purchase support and dealer-partner services.",
+    "website": "https://www.cars45.com/"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
@@ -1607,6 +1628,10 @@ export const categories = [
   {
     "name": "Healthcare",
     "description": "Private hospital, diagnostics, appointment and result-access services."
+  },
+  {
+    "name": "Automotive services",
+    "description": "Private vehicle inspection, sale, purchase and marketplace service guides."
   },
   {
     "name": "Ride-hailing",
