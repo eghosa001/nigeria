@@ -13,8 +13,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "/entertainment" },
 };
 
+const searchMomentumMovieSlugs = [
+  "oversabi-aunty",
+  "millionaire-until-morning",
+  "bowale",
+  "the-man-i-never-knew",
+  "sister-agatha",
+  "all-things-equal",
+];
+
 export default function EntertainmentPage() {
-  const featured = entertainmentTitles.filter((title) => title.featured).slice(0, 6);
+  const priorityMovies = searchMomentumMovieSlugs
+    .map((slug) => entertainmentTitles.find((title) => title.slug === slug))
+    .filter((title): title is NonNullable<typeof title> => Boolean(title));
+  const prioritySlugs = new Set(priorityMovies.map((title) => title.slug));
+  const featured = [
+    ...priorityMovies,
+    ...entertainmentTitles.filter((title) => title.featured && !prioritySlugs.has(title.slug)),
+  ].slice(0, 6);
   const fresh = trendingYouTubeMovies.slice(0, 6);
   const base = getSiteUrl();
 
