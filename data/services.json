@@ -23635,5 +23635,780 @@
       "Aero ticket cancellation refund Nigeria",
       "Aero Contractors 14 days refund"
     ]
+  },
+  {
+    "slug": "jaiz-online-account-opening",
+    "title": "How to open a Jaiz Bank account online",
+    "shortTitle": "Jaiz account opening",
+    "summary": "Jaiz Bank's online new-customer account-opening route using NIN or BVN, OTP verification, personal/address/employment details, live photo/ID evidence and optional digital-banking/card selections.",
+    "category": "Banking",
+    "agencySlug": "jaiz-bank",
+    "feeLabel": "No online account-opening fee stated",
+    "feeNote": "Jaiz Bank does not state a separate fee for submitting the online account-opening application. Product-specific minimum balances or charges depend on the selected account class.",
+    "timeline": "The application proceeds through biometric verification, OTP, customer details, document upload and submission; Jaiz does not publish one fixed completion time for every account class.",
+    "status": "verified",
+    "officialPortal": "https://account.jaizbankplc.com/",
+    "requirements": [
+      "A National Identification Number or Bank Verification Number for identity verification",
+      "Access to the phone number linked to the BVN when the BVN route sends an OTP",
+      "Personal, residential, permanent-address, next-of-kin and employment information",
+      "A valid identity document, live photograph and signature image for the document stage",
+      "Reference information if the selected account class requests references"
+    ],
+    "steps": [
+      "Open Jaiz Bank's official Account Opening portal and choose New Customer.",
+      "Select the account type and account class, then enter the NIN or BVN requested for identity verification.",
+      "Enter the OTP sent to the BVN-linked phone number when the BVN verification route requests it.",
+      "Complete the personal, residential, next-of-kin and employment information and choose any requested internet banking, mobile banking, USSD or card services.",
+      "Capture the live photograph, upload the identity/signature and reference documents shown by the portal, review the summary and submit the application."
+    ],
+    "notes": [
+      "Jaiz Bank states that the BVN name and date of birth should correspond with the identity information used in the application.",
+      "The portal lets the applicant select electronic-banking and card preferences during account opening.",
+      "Account-class requirements can differ, so use the document prompts displayed for the selected Jaiz product."
+    ],
+    "sources": [
+      {
+        "label": "Jaiz Bank Account Opening",
+        "agency": "Jaiz Bank Plc",
+        "url": "https://account.jaizbankplc.com/",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jaiz Bank New Customer Account Opening",
+        "agency": "Jaiz Bank Plc",
+        "url": "https://account.jaizbankplc.com/AccountOpening/NewCustomer",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jaiz-digital-banking-password-reset",
+      "bvn-enrolment",
+      "check-nin-number"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Jaiz Bank account opening",
+      "open Jaiz account online",
+      "Jaiz Bank BVN NIN account",
+      "Jaiz account opening portal"
+    ]
+  },
+  {
+    "slug": "jaiz-digital-banking-password-reset",
+    "title": "How to reset a Jaiz Digital Banking password",
+    "shortTitle": "Reset Jaiz digital banking password",
+    "summary": "Jaiz Bank's self-service password-reset route for an existing digital-banking user using the registered username and account number before continuing through the identity-reset flow.",
+    "category": "Banking",
+    "agencySlug": "jaiz-bank",
+    "feeLabel": "No password-reset fee stated",
+    "feeNote": "Jaiz Bank does not state a separate fee for using the online Forgot Password route.",
+    "timeline": "The reset begins immediately after the user supplies the username and account number; any additional verification is completed in the bank's digital-banking flow.",
+    "status": "verified",
+    "officialPortal": "https://jaizonline.jaizbankplc.com/personal-banking/forgot-password",
+    "requirements": [
+      "An existing Jaiz Digital Banking username",
+      "The Jaiz Bank account number linked to that digital-banking profile",
+      "Access to the bank's follow-up verification channel for completing the credential reset"
+    ],
+    "steps": [
+      "Open Jaiz Bank's official Forgot Password page for Personal Banking.",
+      "Enter the existing digital-banking username in the username field.",
+      "Enter the Jaiz Bank account number linked to the profile and select Continue.",
+      "Complete the identity-verification prompts presented by Jaiz Digital Banking.",
+      "Create the replacement password and sign in only after the reset flow confirms the new credential."
+    ],
+    "notes": [
+      "The reset page is for existing Jaiz Digital Banking users, not for opening a new bank account.",
+      "If the username/account combination cannot be verified, use Jaiz Bank's official contact-centre route instead of repeated guesses.",
+      "Never provide a new password or OTP to a caller claiming to complete the reset on the customer's behalf."
+    ],
+    "sources": [
+      {
+        "label": "Jaiz Digital Banking Forgot Password",
+        "agency": "Jaiz Bank Plc",
+        "url": "https://jaizonline.jaizbankplc.com/personal-banking/forgot-password",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Jaiz Digital Banking",
+        "agency": "Jaiz Bank Plc",
+        "url": "https://jaizonline.jaizbankplc.com/login?tab=PERSONAL_BANKING%2Fsign-up",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "jaiz-online-account-opening"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Jaiz Bank forgot password",
+      "reset Jaiz online banking password",
+      "Jaiz digital banking password reset"
+    ]
+  },
+  {
+    "slug": "unity-business-account-opening",
+    "title": "How to start a Unity Bank business account application online",
+    "shortTitle": "Unity business account",
+    "summary": "Unity Bank's online corporate-account initiation route for registered businesses using company name, RC number, business type, location, company address, email and phone details.",
+    "category": "Banking",
+    "agencySlug": "unity-bank",
+    "feeLabel": "Product terms depend on the business account selected",
+    "feeNote": "Unity Bank's online business-account form does not show one universal opening fee or deposit. Confirm the selected corporate/business account terms before funding.",
+    "timeline": "The online form submits the company details to Unity Bank; the bank does not publish one fixed end-to-end approval time on the form.",
+    "status": "verified",
+    "officialPortal": "https://corporate.unitybankng.com/account/create-account",
+    "requirements": [
+      "The registered company name",
+      "The Corporate Affairs Commission RC number",
+      "The business type and operating location",
+      "The company address, email address and phone number",
+      "Any additional corporate KYC documents Unity Bank requests after the initial online submission"
+    ],
+    "steps": [
+      "Open Unity Bank's official corporate account-creation page.",
+      "Enter the company name and CAC RC number.",
+      "Choose the business type and operating location from the available fields.",
+      "Enter the company address, email and phone number and review them for accuracy.",
+      "Submit the form and follow Unity Bank's official follow-up instructions for the remaining corporate KYC and account-opening steps."
+    ],
+    "notes": [
+      "The public form starts the corporate-account process and does not display every later KYC document on the first screen.",
+      "The account should be opened in the legal business identity that matches the RC information.",
+      "Confirm fees, mandates and signatory requirements directly in Unity Bank's follow-up before funding."
+    ],
+    "sources": [
+      {
+        "label": "Unity Bank Corporate Account Opening",
+        "agency": "Unity Bank Plc",
+        "url": "https://corporate.unitybankng.com/account/create-account",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "unity-7799-ussd-banking",
+      "cac-company-registration",
+      "cac-business-name-registration"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Unity Bank business account",
+      "open Unity Bank corporate account",
+      "Unity Bank RC account opening",
+      "Unity Bank business account online"
+    ]
+  },
+  {
+    "slug": "unity-7799-ussd-banking",
+    "title": "How Unity Bank *7799# USSD banking works",
+    "shortTitle": "Unity Bank *7799#",
+    "summary": "Unity Bank's *7799# mobile-banking channel for account opening, balance enquiry, airtime/data, transfers, bills, BVN verification, PIN change and other supported transactions without mobile data.",
+    "category": "Banking",
+    "agencySlug": "unity-bank",
+    "feeLabel": "Transaction charges depend on the selected service",
+    "feeNote": "Unity Bank's official materials identify the *7799# services but do not publish one universal fee for every transaction in the referenced material.",
+    "timeline": "USSD requests are processed interactively after the customer dials *7799# and completes the service prompts.",
+    "status": "verified",
+    "officialPortal": "https://www.unitybankng.com/",
+    "requirements": [
+      "A mobile phone capable of using USSD",
+      "A Nigerian mobile line for accessing the *7799# menu",
+      "For account-linked transactions, the account/security information Unity Bank requests during USSD registration or authentication"
+    ],
+    "steps": [
+      "Dial *7799# from the mobile phone.",
+      "Choose the required account-opening, balance, airtime/data, transfer, bill-payment, BVN, PIN or other listed service.",
+      "Enter the account, beneficiary or bill details shown by the selected USSD menu.",
+      "Authenticate the transaction with the Unity Bank security prompt used for that service.",
+      "Keep the confirmation message or transaction reference until the banking request is completed."
+    ],
+    "notes": [
+      "Unity Bank's official annual-report materials continue to list *7799# as its convenient-banking USSD code.",
+      "Available menu items can be updated, so the live *7799# menu is the current source for what can be performed.",
+      "Never reveal a USSD PIN or OTP to another person."
+    ],
+    "sources": [
+      {
+        "label": "Unity Bank 2023 Annual Report — *7799# Convenient Banking",
+        "agency": "Unity Bank Plc",
+        "url": "https://www.unitybankng.com/uploads/docs/1742328844UNITY%20ANNREP%202023%20FA-final.pdf",
+        "lastChecked": "2026-10-05",
+        "published": "2024"
+      }
+    ],
+    "related": [
+      "unity-business-account-opening",
+      "bvn-retrieval"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Unity Bank USSD code",
+      "*7799# Unity Bank",
+      "Unity Bank transfer code",
+      "Unity Bank account opening code"
+    ]
+  },
+  {
+    "slug": "paga-personal-account-registration",
+    "title": "How to create a Paga personal account",
+    "shortTitle": "Paga personal account",
+    "summary": "Paga's personal-wallet registration route using an active mobile number, personal details, identification and BVN, followed by account funding through agents, partner banks or supported cards.",
+    "category": "Banking",
+    "agencySlug": "paga",
+    "feeLabel": "No account-registration fee stated",
+    "feeNote": "Paga does not state a separate fee for creating the personal account. Transaction and cash-in/cash-out charges depend on the service and customer level.",
+    "timeline": "The account is assigned during signup after the registration information is accepted; higher transaction access can depend on further identity verification.",
+    "status": "verified",
+    "officialPortal": "https://www.mypaga.com/paga-web/auth/create-account",
+    "requirements": [
+      "An active mobile phone subscription on a supported Nigerian mobile network",
+      "The customer's legal name and phone number",
+      "A means of identification and Bank Verification Number for account setup/KYC",
+      "Any additional address or verification information required for the customer's transaction level"
+    ],
+    "steps": [
+      "Open Paga's official Create Account page and choose Personal.",
+      "Enter the mobile number and personal details requested by Paga.",
+      "Provide the identification and BVN information used for account setup and verification.",
+      "Complete registration and keep the Paga account number assigned to the new wallet.",
+      "Fund the account through a Paga agent, partner bank or supported card before using balance-funded transfers or bill payments."
+    ],
+    "notes": [
+      "Paga limits one wallet/account per phone number, while multiple phone numbers can be linked to the same account under its terms.",
+      "Paga's customer levels use progressively more identity information and different transaction limits.",
+      "A customer can register online, through an agent or through other Paga-supported channels."
+    ],
+    "sources": [
+      {
+        "label": "Paga Create Account",
+        "agency": "Paga",
+        "url": "https://www.mypaga.com/paga-web/auth/create-account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Paga How It Works",
+        "agency": "Paga",
+        "url": "https://www.mypaga.com/paga-web/pc/howpagaworks.paga",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Paga Terms",
+        "agency": "Paga",
+        "url": "https://www.mypaga.com/ngn-terms/index.html",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "paga-transaction-verification",
+      "paga-verified-business",
+      "bvn-enrolment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "create Paga account",
+      "Paga registration Nigeria",
+      "Paga wallet signup",
+      "Paga BVN account"
+    ]
+  },
+  {
+    "slug": "paga-transaction-verification",
+    "title": "How to verify a Paga transaction status",
+    "shortTitle": "Verify Paga transaction",
+    "summary": "Paga Verify lets customers check a transfer/payment using the Paga user ID, transaction ID or reference and, for NIBSS-linked transfers, the session ID and bank used.",
+    "category": "Banking",
+    "agencySlug": "paga",
+    "feeLabel": "No transaction-status check fee stated",
+    "feeNote": "Paga does not state a fee for using its online transaction-verification page.",
+    "timeline": "The verification result is returned from Paga's transaction-status tool after the required identifiers are submitted.",
+    "status": "verified",
+    "officialPortal": "https://www.mypaga.com/paga-web/customer/verify",
+    "requirements": [
+      "The Paga user ID, which can be the phone number, account number, username or email",
+      "The five-digit Paga transaction ID or longer reference number supplied after the transaction",
+      "For a NIBSS-linked check, the NIBSS session ID and the bank used for the transaction"
+    ],
+    "steps": [
+      "Open Paga's official Verify page.",
+      "Enter the Paga user ID associated with the transfer or payment.",
+      "Enter the transaction ID or reference number supplied after the transaction.",
+      "For a bank/NIBSS transaction, enter the NIBSS Session ID and select the bank used.",
+      "Submit the verification request and use the returned status/reference information when contacting Paga support about an unresolved payment."
+    ],
+    "notes": [
+      "Paga says the transaction ID is displayed on-screen and sent by SMS after a completed transaction.",
+      "Merchants can use the longer transaction/reference ID for verification.",
+      "Use the official status tool before making a duplicate payment because a delayed notification does not necessarily mean the transaction failed."
+    ],
+    "sources": [
+      {
+        "label": "Paga Verify",
+        "agency": "Paga",
+        "url": "https://www.mypaga.com/paga-web/customer/verify",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "paga-personal-account-registration",
+      "nip-transfer-status"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Paga transaction status",
+      "Paga Verify",
+      "check Paga transfer",
+      "Paga transaction ID verification",
+      "Paga NIBSS session ID"
+    ]
+  },
+  {
+    "slug": "paga-verified-business",
+    "title": "How to become a verified Paga business",
+    "shortTitle": "Paga verified business",
+    "summary": "Paga's business-verification route for merchants seeking higher receipt limits, using incorporation, tax, identity, address, bank-statement, reference and verification-payment evidence.",
+    "category": "Business",
+    "agencySlug": "paga",
+    "feeLabel": "₦25,000 one-time verification cost on Paga's current business page",
+    "feeNote": "Paga's current business page states a one-time ₦25,000 cost for Verified Business status. Confirm the live business terms before payment because commercial pricing can change.",
+    "timeline": "Paga does not publish one fixed verification turnaround on the current business page; approval depends on review of the submitted incorporation and KYC evidence.",
+    "status": "verified",
+    "officialPortal": "https://www.mypaga.com/paga-web/pc/pagaForBusiness.paga",
+    "requirements": [
+      "Certified true copies of the business incorporation documents",
+      "Memorandum and Articles of Association when applicable to the business type",
+      "VAT certificate and tax-clearance evidence listed by Paga",
+      "Identification and passport photographs for the primary and secondary business contacts",
+      "Proof of address, three months of bank statements, evidence of the verification payment and two references"
+    ],
+    "steps": [
+      "Open Paga's official Business page and review the Verified Business requirements and current verification cost.",
+      "Prepare certified incorporation records, tax/VAT evidence and the identity/passport photographs for the business contacts.",
+      "Prepare proof of address, three months of bank statements and the two business references.",
+      "Pay the verification application cost through the official Paga business route and retain evidence of payment.",
+      "Submit the complete verification package and wait for Paga's decision before advertising the business as a verified Paga merchant."
+    ],
+    "notes": [
+      "Paga states that Verified Business status increases the amount a merchant can receive per transaction.",
+      "Paga reserves the right to deny Verified Business status after reviewing the application.",
+      "Merchant verification is different from merely creating a Paga personal wallet."
+    ],
+    "sources": [
+      {
+        "label": "Paga for Business",
+        "agency": "Paga",
+        "url": "https://www.mypaga.com/paga-web/pc/pagaForBusiness.paga",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "paga-personal-account-registration",
+      "paystack-business-activation-nigeria",
+      "flutterwave-business-account-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Paga verified business",
+      "Paga merchant registration",
+      "Paga business verification Nigeria",
+      "Paga business account requirements"
+    ]
+  },
+  {
+    "slug": "quickteller-pay-bills",
+    "title": "How to pay bills with Quickteller",
+    "shortTitle": "Quickteller bill payment",
+    "summary": "Quickteller's bill-payment route for finding a supported biller, entering the customer/account identifier and amount, choosing a payment method and retaining the transaction record.",
+    "category": "Banking",
+    "agencySlug": "quickteller",
+    "feeLabel": "Biller/payment-channel charge can apply",
+    "feeNote": "Quickteller supports many billers with different fees and amounts. Confirm the final checkout total before authorising a payment.",
+    "timeline": "Quickteller's official FAQ states that supported payments are reflected to the organisation in real time after successful processing.",
+    "status": "verified",
+    "officialPortal": "https://www.quickteller.com/pay",
+    "requirements": [
+      "The correct Quickteller biller or service category",
+      "The customer, smartcard, account, invoice or other identifier required by that biller",
+      "The amount to be paid when the biller does not automatically return a fixed amount",
+      "A supported Quickteller payment method"
+    ],
+    "steps": [
+      "Open Quickteller's official Pay page and search for the biller or service.",
+      "Select the correct biller and enter the customer/account identifier requested on its payment form.",
+      "Enter or confirm the amount and verify the customer details returned for the bill.",
+      "Choose the available payment method and complete the transaction through Quickteller.",
+      "Save the payment confirmation and transaction reference in case the biller account does not update as expected."
+    ],
+    "notes": [
+      "Quickteller lists utilities, pay TV, internet, school/exam fees, government payments and many other bill categories.",
+      "The provider's FAQ states that successful payment information is sent to the organisation in real time.",
+      "Always confirm the biller and customer identifier before payment."
+    ],
+    "sources": [
+      {
+        "label": "Quickteller Pay",
+        "agency": "Quickteller by Interswitch",
+        "url": "https://www.quickteller.com/pay",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Quickteller FAQ",
+        "agency": "Quickteller by Interswitch",
+        "url": "https://api.quickteller.com/Info/Faq",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "quickteller-transfer-money",
+      "dstv-pay-reconnect",
+      "startimes-recharge-smartcard"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Quickteller pay bills",
+      "Quickteller electricity payment",
+      "Quickteller DSTV payment",
+      "Quickteller bill payment Nigeria"
+    ]
+  },
+  {
+    "slug": "quickteller-transfer-money",
+    "title": "How to transfer money to a bank account with Quickteller",
+    "shortTitle": "Quickteller bank transfer",
+    "summary": "Quickteller's bank-account transfer route using the beneficiary account number, bank, validation step, transfer amount and optional beneficiary phone/remark before payment confirmation.",
+    "category": "Banking",
+    "agencySlug": "quickteller",
+    "feeLabel": "Transfer fee shown before confirmation",
+    "feeNote": "Quickteller can apply a transaction charge. Review the amount and final total displayed in the transfer flow before authorising the payment.",
+    "timeline": "The transfer request is submitted after beneficiary validation and successful payment; use Quickteller support/transaction records if the bank credit is delayed.",
+    "status": "verified",
+    "officialPortal": "https://quickteller.com/transfer-money/account",
+    "requirements": [
+      "The beneficiary bank account number",
+      "The beneficiary bank selected from Quickteller's supported bank list",
+      "The transfer amount",
+      "An optional beneficiary phone number or transfer remark when the sender wants those details attached"
+    ],
+    "steps": [
+      "Open Quickteller's official Transfer to Account page.",
+      "Enter the beneficiary account number and select the destination bank.",
+      "Use Validate Account Number and confirm that the returned beneficiary name is correct.",
+      "Enter the transfer amount and optional beneficiary phone number or remark.",
+      "Continue to payment, review the transfer total and keep the Quickteller transaction confirmation after successful submission."
+    ],
+    "notes": [
+      "Do not continue if account validation returns a beneficiary name that does not match the intended recipient.",
+      "Quickteller's platform also provides bill payment and airtime/data services, which are separate flows from bank transfer.",
+      "Keep the transaction reference for support if the beneficiary is not credited."
+    ],
+    "sources": [
+      {
+        "label": "Quickteller Transfer to Account",
+        "agency": "Quickteller by Interswitch",
+        "url": "https://quickteller.com/transfer-money/account",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Quickteller Contact",
+        "agency": "Quickteller by Interswitch",
+        "url": "https://api.quickteller.com/Info/ContactUs",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "quickteller-pay-bills",
+      "nip-transfer-status",
+      "cbn-bank-complaint"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Quickteller transfer money",
+      "Quickteller bank transfer",
+      "send money Quickteller Nigeria",
+      "Quickteller account transfer"
+    ]
+  },
+  {
+    "slug": "ups-create-shipment-nigeria",
+    "title": "How to create a UPS shipment from Nigeria",
+    "shortTitle": "UPS Nigeria shipment",
+    "summary": "UPS's shipping workflow for entering Nigerian sender and destination details, package measurements/weight, service selection, payment and shipment-label creation with rates and surcharges shown before completion.",
+    "category": "Logistics",
+    "agencySlug": "ups-nigeria",
+    "feeLabel": "Quote depends on destination, service, weight, dimensions and surcharges",
+    "feeNote": "UPS publishes Nigeria service/rate guides and applies route/service surcharges such as fuel, extended-area and currency-risk charges. Use the live quote before shipping.",
+    "timeline": "Transit time depends on the selected UPS service and destination; the Create a Shipment flow shows available services rather than one universal delivery period.",
+    "status": "verified",
+    "officialPortal": "https://www.ups.com/ship?isGfp=true",
+    "requirements": [
+      "The Nigerian sender's name/company, contact details and pickup/return address",
+      "The recipient's full destination address and contact information",
+      "The package weight and dimensions for accurate service/rate calculation",
+      "A truthful description and customs information for international goods shipments",
+      "A supported payment method for the selected UPS service"
+    ],
+    "steps": [
+      "Open UPS Create a Shipment and set the shipment origin to Nigeria.",
+      "Enter the sender and recipient names, contact information and complete addresses.",
+      "Enter the package weight and dimensions and provide the goods/customs details requested for the destination.",
+      "Compare the available UPS services and the displayed rate/surcharges, then choose the intended service.",
+      "Complete payment, create the shipping label and keep the UPS tracking number for the shipment."
+    ],
+    "notes": [
+      "UPS Nigeria's rate page states that fuel, remote/extended-area and currency-risk surcharges can affect the final charge.",
+      "Incorrect weight or dimensions can lead to additional charges after UPS processes the parcel.",
+      "International shipments can require customs documents in addition to the shipping label."
+    ],
+    "sources": [
+      {
+        "label": "UPS Create a Shipment",
+        "agency": "UPS",
+        "url": "https://www.ups.com/ship?isGfp=true",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UPS Nigeria Shipping Costs and Rates",
+        "agency": "UPS",
+        "url": "https://es-us.ups.com/ng/en/support/shipping-support/shipping-costs-rates",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ups-track-package-nigeria",
+      "dhl-send-parcel-nigeria",
+      "gigl-international-export-nigeria"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "UPS Nigeria shipping",
+      "send parcel UPS Nigeria",
+      "UPS shipping rate Nigeria",
+      "create UPS shipment Nigeria"
+    ]
+  },
+  {
+    "slug": "ups-track-package-nigeria",
+    "title": "How to track a UPS package from or to Nigeria",
+    "shortTitle": "UPS package tracking",
+    "summary": "UPS's tracking route for entering a UPS tracking number to view the latest scan, estimated delivery status, out-for-delivery information and delivery exceptions.",
+    "category": "Logistics",
+    "agencySlug": "ups-nigeria",
+    "feeLabel": "No package-tracking fee",
+    "feeNote": "UPS provides online package tracking without a separate tracking fee.",
+    "timeline": "Tracking changes as UPS scans the package through its network; UPS does not publish a fixed interval between every scan.",
+    "status": "verified",
+    "officialPortal": "https://www.ups.com/track",
+    "requirements": [
+      "The UPS tracking number assigned to the shipment",
+      "Internet access to the official UPS tracking tool",
+      "The shipment/reference information needed if UPS support has to investigate an exception"
+    ],
+    "steps": [
+      "Open UPS's official Track a Package page.",
+      "Enter the UPS tracking number assigned when the shipment was created.",
+      "Select Track and review the latest scan, estimated delivery information and current shipment status.",
+      "Check any exception or delivery instruction displayed on the tracking result.",
+      "Use UPS support with the tracking number if the shipment remains stalled or an exception needs manual resolution."
+    ],
+    "notes": [
+      "UPS says tracking details update as a package is scanned through the network.",
+      "Tracking can show statuses such as on the way, out for delivery, delivered or an exception.",
+      "A tracking number can be used without exposing payment-card or banking credentials."
+    ],
+    "sources": [
+      {
+        "label": "UPS Tracking",
+        "agency": "UPS",
+        "url": "https://www.ups.com/track",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "UPS — Where Is My Package",
+        "agency": "UPS",
+        "url": "https://www.ups.com/us/en/support/tracking-support/where-is-my-package",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "ups-create-shipment-nigeria",
+      "dhl-track-shipment-nigeria",
+      "gigl-track-shipment"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "UPS tracking Nigeria",
+      "track UPS package Nigeria",
+      "UPS parcel tracking",
+      "UPS Nigeria tracking number"
+    ]
+  },
+  {
+    "slug": "max-air-book-flight",
+    "title": "How to book a Max Air flight",
+    "shortTitle": "Book Max Air flight",
+    "summary": "Max Air's official booking route for selecting a route/date, choosing an available flight, entering passenger details and completing payment through the airline website or mobile app.",
+    "category": "Air travel",
+    "agencySlug": "max-air",
+    "feeLabel": "Fare varies by route, date and fare class",
+    "feeNote": "Max Air fares are dynamic. Review the live amount and fare rules shown during booking before payment.",
+    "timeline": "The reservation is confirmed after payment and ticketing in the Max Air booking system.",
+    "status": "verified",
+    "officialPortal": "https://maxair.com.ng/book-flight",
+    "requirements": [
+      "The departure airport, destination and intended travel date",
+      "Passenger identity/contact information that matches the travel document used at the airport",
+      "A valid photo ID for domestic travel or passport/other required travel documents for international travel",
+      "A supported payment method for the fare shown by Max Air"
+    ],
+    "steps": [
+      "Open Max Air's official Book a Flight page or mobile app.",
+      "Enter the departure, destination, travel date and passenger information and search for available flights.",
+      "Choose the preferred flight/fare and review the conditions attached to that option.",
+      "Enter the passenger/contact details and complete payment through Max Air's official booking flow.",
+      "Save the booking reference and ticket for Manage Booking, online check-in and airport processing."
+    ],
+    "notes": [
+      "Max Air requires passengers to present valid identity documents before boarding.",
+      "Fare-class rules determine penalties and change options after purchase.",
+      "Use only Max Air's official website/app or authorised sales channels for payment."
+    ],
+    "sources": [
+      {
+        "label": "Max Air Book a Flight",
+        "agency": "Max Air",
+        "url": "https://maxair.com.ng/book-flight",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Max Air Home",
+        "agency": "Max Air",
+        "url": "https://maxair.com.ng/",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "max-air-online-check-in",
+      "max-air-baggage-allowance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Max Air booking",
+      "book Max Air flight",
+      "Max Air ticket online",
+      "Max Air Nigeria flights"
+    ]
+  },
+  {
+    "slug": "max-air-online-check-in",
+    "title": "How to check in online with Max Air",
+    "shortTitle": "Max Air online check-in",
+    "summary": "Max Air's online check-in route for confirmed tickets using flight number, departure airport, surname and booking reference, available from 24 hours before departure with airport baggage/document checks still required.",
+    "category": "Air travel",
+    "agencySlug": "max-air",
+    "feeLabel": "No online check-in fee stated",
+    "feeNote": "Max Air does not state a separate fee for online check-in.",
+    "timeline": "Max Air says online check-in becomes available 24 hours before the flight. Airport check-in closes 30 minutes before domestic departure and 60 minutes before regional/international departure.",
+    "status": "verified",
+    "officialPortal": "https://www.maxair.com.ng/manage-booking",
+    "requirements": [
+      "A confirmed Max Air ticket purchased through an agent, Max Air office/airport or the Max Air website",
+      "The flight number, departure airport, passenger surname and booking reference",
+      "The passport/identification and visa documents required for the route",
+      "Enough time to complete baggage drop before the applicable airport check-in closure"
+    ],
+    "steps": [
+      "Open Max Air's Manage Booking page and choose Online Check-in.",
+      "Enter the flight number, departure airport, passenger last name and booking reference.",
+      "Complete the check-in and seat-selection prompts and print or save the online boarding pass.",
+      "For checked baggage, report to the airport desk before baggage acceptance closes.",
+      "Present the required ID/passport/visa at security and boarding even after online check-in is complete."
+    ],
+    "notes": [
+      "Max Air's FAQ states that airport counters open two hours before domestic, three hours before regional and four hours before international departures.",
+      "The airline says domestic check-in closes 30 minutes before departure and regional/international check-in closes 60 minutes before departure.",
+      "Passengers with checked bags should report earlier than the final closure time."
+    ],
+    "sources": [
+      {
+        "label": "Max Air Manage Booking / Online Check-In",
+        "agency": "Max Air",
+        "url": "https://www.maxair.com.ng/manage-booking",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Max Air FAQ",
+        "agency": "Max Air",
+        "url": "https://maxair.com.ng/information/FAQ",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "max-air-book-flight",
+      "max-air-baggage-allowance"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Max Air online check in",
+      "Max Air check-in time",
+      "Max Air boarding pass",
+      "Max Air manage booking"
+    ]
+  },
+  {
+    "slug": "max-air-baggage-allowance",
+    "title": "How Max Air baggage allowance works",
+    "shortTitle": "Max Air baggage allowance",
+    "summary": "Max Air's baggage guidance for checked and cabin bags, excess baggage and airport acceptance, with an official inconsistency between its FAQ and Plan Your Trip page on domestic checked allowance.",
+    "category": "Air travel",
+    "agencySlug": "max-air",
+    "feeLabel": "Excess baggage charge depends on route and published baggage policy",
+    "feeNote": "Max Air says excess baggage is charged at the departure airport and the rate depends on the baggage policy/route.",
+    "timeline": "Baggage is accepted during airport check-in before the applicable closure time.",
+    "status": "conflict",
+    "officialPortal": "https://maxair.com.ng/information/FAQ",
+    "requirements": [
+      "A confirmed Max Air booking so the passenger can identify the applicable route/class baggage rule",
+      "Checked luggage packed in suitable rigid/resistant baggage within the applicable weight allowance",
+      "Cabin baggage within Max Air's published cabin-weight and size limits",
+      "Payment at the airport for accepted excess baggage beyond the free allowance"
+    ],
+    "steps": [
+      "Open Max Air's current FAQ and Plan Your Trip information for the route before packing.",
+      "Confirm the booked class and compare the published checked-baggage allowance for that route.",
+      "Keep cabin baggage within the airline's published maximum and place prohibited/dangerous items outside the baggage.",
+      "Arrive at the airport early enough to weigh/check bags before the check-in closure.",
+      "Pay the applicable excess-baggage amount at departure when Max Air accepts weight above the free allowance."
+    ],
+    "notes": [
+      "Max Air's FAQ currently states one 20kg checked bag for passengers, while its Plan Your Trip page says 15kg Economy and 30kg Business for domestic flights; this guide therefore marks the allowance as a source conflict.",
+      "The FAQ publishes 8kg cabin baggage on domestic flights and 10kg on international flights, with maximum dimensions of 56×45×25cm.",
+      "Infant and excess-baggage rules differ from the standard adult allowance."
+    ],
+    "sources": [
+      {
+        "label": "Max Air FAQ",
+        "agency": "Max Air",
+        "url": "https://maxair.com.ng/information/FAQ",
+        "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "Max Air Plan Your Trip",
+        "agency": "Max Air",
+        "url": "https://www.maxair.com.ng/plan-trip",
+        "lastChecked": "2026-10-05"
+      }
+    ],
+    "related": [
+      "max-air-book-flight",
+      "max-air-online-check-in"
+    ],
+    "lastVerified": "2026-10-05",
+    "searchTerms": [
+      "Max Air baggage allowance",
+      "Max Air 20kg baggage",
+      "Max Air domestic baggage",
+      "Max Air cabin baggage",
+      "Max Air excess baggage"
+    ]
   }
 ]
