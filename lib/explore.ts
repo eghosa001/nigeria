@@ -8442,6 +8442,1776 @@ export const exploreGuides: ExploreGuide[] = [
       "href": "https://mocit.zamfara.gov.ng/tourism/"
     },
     "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "national-museum-lagos-guide",
+    "title": "National Museum Lagos Guide: History, Art & Onikan Planning",
+    "shortTitle": "National Museum Lagos",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Use the National Museum Lagos as a focused history-and-art stop in Onikan, with current opening and photography rules checked before arrival.",
+    "intro": [
+      "The National Museum gives Lagos a dedicated museum intent that is different from Lekki's nature and gallery circuit.",
+      "Use it for historical context, then keep Freedom Park or Tafawa Balewa Square as nearby heritage extensions rather than crossing the city."
+    ],
+    "bestFor": [
+      "Museums",
+      "History",
+      "Art",
+      "Lagos Island"
+    ],
+    "highlights": [
+      {
+        "name": "National collections",
+        "detail": "The museum provides a broad Nigerian historical and cultural frame inside Lagos."
+      },
+      {
+        "name": "Onikan location",
+        "detail": "Its position makes it useful within a Lagos Island heritage day."
+      },
+      {
+        "name": "Heritage pairing",
+        "detail": "Freedom Park and Tafawa Balewa Square can extend the history theme without a long cross-city trip."
+      },
+      {
+        "name": "Indoor cultural stop",
+        "detail": "The museum can anchor a day when heat or rain makes outdoor plans less attractive."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current opening",
+        "detail": "Check public hours before travelling."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing collections or interiors."
+      },
+      {
+        "label": "Allow interpretation time",
+        "detail": "Do not rush through exhibits simply to add another stop."
+      },
+      {
+        "label": "Stay on Lagos Island",
+        "detail": "Cluster nearby heritage sites to reduce traffic exposure."
+      }
+    ],
+    "source": {
+      "label": "Lagos State Ministry of Tourism, Arts & Culture",
+      "href": "https://tourismartandculture.lagosstate.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "abuja-national-mosque-guide",
+    "title": "Abuja National Mosque Guide: Architecture, Worship & Visitor Etiquette",
+    "shortTitle": "Abuja National Mosque",
+    "kind": "destination",
+    "region": "Federal Capital Territory",
+    "summary": "Plan an Abuja National Mosque visit around prayer schedules, respectful dress and current visitor boundaries.",
+    "intro": [
+      "Abuja National Mosque is one of the capital's defining landmarks and supports a distinct architecture-and-religion visitor intent.",
+      "It remains an active place of worship, so prayer and religious etiquette take priority over casual sightseeing."
+    ],
+    "bestFor": [
+      "Islamic architecture",
+      "Landmarks",
+      "Culture",
+      "Central Abuja"
+    ],
+    "highlights": [
+      {
+        "name": "National landmark",
+        "detail": "The mosque is one of Abuja's most recognisable central-city structures."
+      },
+      {
+        "name": "Living worship space",
+        "detail": "Religious activity determines visitor movement and timing."
+      },
+      {
+        "name": "Central cluster",
+        "detail": "Millennium Park and the National Christian Centre sit within the wider central visitor circuit."
+      },
+      {
+        "name": "Architecture",
+        "detail": "Exterior and permitted interior views offer a strong built-environment focus."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Avoid disrupting prayer",
+        "detail": "Choose a respectful visit time and follow mosque instructions."
+      },
+      {
+        "label": "Dress modestly",
+        "detail": "Use clothing appropriate for an active religious site."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume cameras are permitted in all areas."
+      },
+      {
+        "label": "Use designated entrances",
+        "detail": "Follow security and visitor guidance around the complex."
+      }
+    ],
+    "source": {
+      "label": "Visit Abuja — Things to Do",
+      "href": "https://www.visitabuja.org/see-and-do/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "national-christian-centre-abuja-guide",
+    "title": "National Christian Centre Abuja Guide: Architecture & Visitor Planning",
+    "shortTitle": "National Christian Centre Abuja",
+    "kind": "destination",
+    "region": "Federal Capital Territory",
+    "summary": "Visit the National Christian Centre as a focused Abuja landmark and worship-space stop, respecting services and current access rules.",
+    "intro": [
+      "The National Christian Centre is one of Abuja's central religious landmarks and supports its own architecture-and-faith travel intent.",
+      "Because it remains an active worship venue, visitor access should be planned around services and current site instructions."
+    ],
+    "bestFor": [
+      "Christian heritage",
+      "Architecture",
+      "Landmarks",
+      "Central Abuja"
+    ],
+    "highlights": [
+      {
+        "name": "National worship centre",
+        "detail": "The building plays a prominent role in national Christian ceremonies and worship."
+      },
+      {
+        "name": "Central Abuja setting",
+        "detail": "It sits within the wider national landmark district."
+      },
+      {
+        "name": "Architecture",
+        "detail": "The building is a major visual feature of the capital's central area."
+      },
+      {
+        "name": "Landmark pairing",
+        "detail": "The National Mosque and Millennium Park can form a compact central-area route."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check service times",
+        "detail": "Avoid disrupting worship or formal events."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use clothing appropriate for a religious venue."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Interior and event photography may have restrictions."
+      },
+      {
+        "label": "Follow security guidance",
+        "detail": "Use permitted visitor areas and entrances."
+      }
+    ],
+    "source": {
+      "label": "Visit Abuja — Things to Do",
+      "href": "https://www.visitabuja.org/see-and-do/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "benin-city-national-museum-guide",
+    "title": "Benin City National Museum Guide: Kingdom History & Art",
+    "shortTitle": "Benin City National Museum",
+    "kind": "destination",
+    "region": "Edo State",
+    "summary": "Use Benin City National Museum as the main interpretive stop for Benin Kingdom history before visiting Igun Street or other heritage areas.",
+    "intro": [
+      "Benin City National Museum is a natural starting point for visitors who want historical context before engaging with the city's living bronze-casting tradition.",
+      "Use the museum as a slower interpretive block and keep Igun Street as the complementary living-craft experience."
+    ],
+    "bestFor": [
+      "Benin Kingdom history",
+      "Museums",
+      "Art",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Kingdom context",
+        "detail": "The museum helps frame Benin's political, artistic and cultural history."
+      },
+      {
+        "name": "Art heritage",
+        "detail": "Museum interpretation adds context to the city's internationally known artistic traditions."
+      },
+      {
+        "name": "Igun connection",
+        "detail": "The bronze-casting district provides a living craft counterpart to museum collections."
+      },
+      {
+        "name": "Central heritage stop",
+        "detail": "The museum fits naturally into a Ring Road heritage day."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current opening",
+        "detail": "Check public hours before travelling."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing collections."
+      },
+      {
+        "label": "Allow enough time",
+        "detail": "Do not rush museum interpretation before going to Igun Street."
+      },
+      {
+        "label": "Respect sensitive history",
+        "detail": "Use careful, evidence-based context around contested heritage issues."
+      }
+    ],
+    "source": {
+      "label": "Edo State Government tourism overview",
+      "href": "https://edostate.gov.ng/your-tourist-destinations-in-edo-state-this-easter-holiday/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "igun-street-guide",
+    "title": "Igun Street Benin Guide: Bronze Casting & Visitor Etiquette",
+    "shortTitle": "Igun Street",
+    "kind": "destination",
+    "region": "Edo State",
+    "summary": "Visit Igun Street as a living bronze-casting district with time to understand workshops, artists and current photography rules.",
+    "intro": [
+      "Igun Street is one of Benin City's strongest living-craft destinations and deserves a focused guide separate from the museum.",
+      "The value is in meeting a working artistic tradition, so visitor etiquette around workshops and people matters as much as shopping."
+    ],
+    "bestFor": [
+      "Bronze casting",
+      "Craft",
+      "Benin heritage",
+      "Art"
+    ],
+    "highlights": [
+      {
+        "name": "Working craft district",
+        "detail": "Bronze casting remains a living practice rather than a staged attraction."
+      },
+      {
+        "name": "Artist interaction",
+        "detail": "Ask about makers, techniques and materials when viewing or buying work."
+      },
+      {
+        "name": "Museum pairing",
+        "detail": "Benin City National Museum can provide historical context before the street visit."
+      },
+      {
+        "name": "Heritage shopping",
+        "detail": "If buying work, clarify price, maker and handling before payment."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Ask before photography",
+        "detail": "Workshops and artists may restrict cameras."
+      },
+      {
+        "label": "Respect workspaces",
+        "detail": "Do not touch tools, moulds or unfinished pieces without permission."
+      },
+      {
+        "label": "Compare purchases",
+        "detail": "Take time to understand quality and authorship."
+      },
+      {
+        "label": "Visit in daylight",
+        "detail": "Workshops and street activity are easiest to navigate during the day."
+      }
+    ],
+    "source": {
+      "label": "Edo State Government tourism overview",
+      "href": "https://edostate.gov.ng/your-tourist-destinations-in-edo-state-this-easter-holiday/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "marina-resort-calabar-guide",
+    "title": "Marina Resort Calabar Guide: Waterfront & Leisure Planning",
+    "shortTitle": "Marina Resort Calabar",
+    "kind": "destination",
+    "region": "Cross River State",
+    "summary": "Plan a Marina Resort Calabar visit around whichever waterfront and leisure facilities are currently operating.",
+    "intro": [
+      "Marina Resort is one of Calabar's best-known waterfront leisure areas and supports a distinct city-recreation intent.",
+      "Large leisure complexes can change facility-by-facility, so verify the specific activity you want before travelling."
+    ],
+    "bestFor": [
+      "Waterfront",
+      "Leisure",
+      "Calabar",
+      "Families"
+    ],
+    "highlights": [
+      {
+        "name": "Waterfront setting",
+        "detail": "The marina environment is the core attraction even when individual facilities change."
+      },
+      {
+        "name": "Calabar city break",
+        "detail": "It fits naturally after a history-focused museum block."
+      },
+      {
+        "name": "Leisure mix",
+        "detail": "Current entertainment, food or recreation options should be checked live."
+      },
+      {
+        "name": "Evening potential",
+        "detail": "The area can work as a slower end to a city day if return transport is arranged."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current facilities",
+        "detail": "Do not assume every older listing is still operating."
+      },
+      {
+        "label": "Confirm activity pricing",
+        "detail": "Different facilities may have separate fees."
+      },
+      {
+        "label": "Plan the return",
+        "detail": "Arrange transport before staying late."
+      },
+      {
+        "label": "Watch weather",
+        "detail": "Heavy rain can change waterfront plans."
+      }
+    ],
+    "source": {
+      "label": "Cross River State Government tourism update",
+      "href": "https://news.crossriverstate.gov.ng/two-years-of-purposeful-leadership-and-shared-progress-a-state-broadcast-by-his-excellency-the-governor-of-cross-river-state-on-the-occasion-of-his-second-year-in-office-may-29-2025/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "slave-history-museum-calabar-guide",
+    "title": "Slave History Museum Calabar Guide: Heritage & Respectful Visit",
+    "shortTitle": "Slave History Museum Calabar",
+    "kind": "destination",
+    "region": "Cross River State",
+    "summary": "Use Calabar's Slave History Museum as a focused transatlantic-slavery history visit, with enough time for interpretation and respectful engagement.",
+    "intro": [
+      "The Slave History Museum gives Calabar a serious historical destination beyond waterfront leisure and festival tourism.",
+      "The subject requires careful interpretation and should not be reduced to sensational stories or novelty photographs."
+    ],
+    "bestFor": [
+      "History",
+      "Museums",
+      "Calabar heritage",
+      "Education"
+    ],
+    "highlights": [
+      {
+        "name": "Transatlantic-slavery context",
+        "detail": "The museum frames Calabar's role within a wider history of forced migration and trade."
+      },
+      {
+        "name": "Marina location",
+        "detail": "Its waterfront setting connects history with the city's old trading geography."
+      },
+      {
+        "name": "Interpretive visit",
+        "detail": "Labels, guides and exhibits matter more than a quick photo stop."
+      },
+      {
+        "name": "City pairing",
+        "detail": "Marina Resort can form a separate leisure block after the history-focused visit."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Allow enough time",
+        "detail": "Sensitive history benefits from a slower museum visit."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing exhibits or memorial material."
+      },
+      {
+        "label": "Use respectful language",
+        "detail": "Avoid trivialising or sensationalising the subject."
+      },
+      {
+        "label": "Confirm current opening",
+        "detail": "Check museum hours before travelling."
+      }
+    ],
+    "source": {
+      "label": "Calabar Municipal — Tourist Attractions",
+      "href": "https://calabar.municipal.crossriverstate.gov.ng/tourist-attractions"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "port-harcourt-pleasure-park-guide",
+    "title": "Port Harcourt Pleasure Park Guide: Activities & Family Planning",
+    "shortTitle": "Port Harcourt Pleasure Park",
+    "kind": "destination",
+    "region": "Rivers State",
+    "summary": "Use Port Harcourt Pleasure Park as a focused urban recreation stop, checking current activities, tickets and weather before arrival.",
+    "intro": [
+      "Pleasure Park is one of Port Harcourt's strongest city-based recreation destinations and supports a dedicated family-and-leisure intent.",
+      "Current attractions and pricing can change, so plan around what is operating now rather than old feature lists."
+    ],
+    "bestFor": [
+      "Families",
+      "Parks",
+      "Leisure",
+      "Port Harcourt"
+    ],
+    "highlights": [
+      {
+        "name": "Urban recreation",
+        "detail": "The park provides a city-based leisure option without a riverine excursion."
+      },
+      {
+        "name": "Family outing",
+        "detail": "Suitability depends on the activities currently operating."
+      },
+      {
+        "name": "Food pairing",
+        "detail": "A local bole meal can form a separate city experience after the park."
+      },
+      {
+        "name": "Flexible duration",
+        "detail": "The park can fill a short afternoon or a longer recreation block depending on the programme."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check current activities",
+        "detail": "Confirm what is operating before travelling."
+      },
+      {
+        "label": "Confirm ticket prices",
+        "detail": "Individual activities may have separate charges."
+      },
+      {
+        "label": "Watch rain",
+        "detail": "Outdoor recreation can change quickly in heavy weather."
+      },
+      {
+        "label": "Plan transport home",
+        "detail": "Arrange a reliable return option if staying late."
+      }
+    ],
+    "source": {
+      "label": "Rivers State Tourism Development Agency",
+      "href": "https://rstda.rv.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "jos-museum-zoo-guide",
+    "title": "Jos Museum & Zoo Guide: History, Wildlife & Visitor Planning",
+    "shortTitle": "Jos Museum & Zoo",
+    "kind": "destination",
+    "region": "Plateau State",
+    "summary": "Plan the Jos Museum and Zoo area as a combined culture-and-wildlife stop, checking current operating status before arrival.",
+    "intro": [
+      "Jos Museum and Zoo supports a distinct city-based history-and-wildlife intent within Plateau's broader nature offering.",
+      "Because museum and animal facilities can change operations independently, verify the exact areas open before building the day around them."
+    ],
+    "bestFor": [
+      "Museums",
+      "Wildlife",
+      "Families",
+      "Jos"
+    ],
+    "highlights": [
+      {
+        "name": "Museum context",
+        "detail": "The museum component can provide historical and cultural interpretation."
+      },
+      {
+        "name": "Zoo component",
+        "detail": "Treat animals as managed wildlife and follow enclosure rules."
+      },
+      {
+        "name": "City location",
+        "detail": "The site can fit a Jos weekend without the long road time of Wase or other rural destinations."
+      },
+      {
+        "name": "Plateau pairing",
+        "detail": "Jos Wildlife Park provides a separate nature-focused experience."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current operations",
+        "detail": "Check which museum and zoo areas are open."
+      },
+      {
+        "label": "Do not feed animals",
+        "detail": "Follow wildlife-management rules."
+      },
+      {
+        "label": "Allow a mixed pace",
+        "detail": "Museum interpretation and animal viewing require different timing."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Plan the visit before late-day closing or reduced visibility."
+      }
+    ],
+    "source": {
+      "label": "VisitPlateau — official tourism platform",
+      "href": "https://visitplateau.com/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "becheve-nature-reserve-guide",
+    "title": "Becheve Nature Reserve Guide: Obudu Forest & Conservation Planning",
+    "shortTitle": "Becheve Nature Reserve",
+    "kind": "destination",
+    "region": "Cross River State",
+    "summary": "Plan Becheve Nature Reserve as a conservation-focused Obudu Plateau visit with current access, guide and trail checks.",
+    "intro": [
+      "Becheve Nature Reserve provides a distinct forest-and-conservation experience within the Obudu Plateau area.",
+      "Treat it as a managed natural environment rather than an unrestricted hiking zone and confirm current visitor arrangements."
+    ],
+    "bestFor": [
+      "Forest",
+      "Conservation",
+      "Birding",
+      "Obudu"
+    ],
+    "highlights": [
+      {
+        "name": "Montane nature",
+        "detail": "The reserve adds forest and biodiversity value to a highland resort trip."
+      },
+      {
+        "name": "Trail experience",
+        "detail": "Use recognised routes and local guidance rather than improvising through vegetation."
+      },
+      {
+        "name": "Obudu pairing",
+        "detail": "The main resort and Ulanga views can form separate blocks in a longer stay."
+      },
+      {
+        "name": "Wildlife etiquette",
+        "detail": "Observe quietly and do not pursue animals for photographs."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm reserve access",
+        "detail": "Check whether a guide or advance arrangement is required."
+      },
+      {
+        "label": "Prepare for wet trails",
+        "detail": "Use suitable footwear and rain protection."
+      },
+      {
+        "label": "Carry water",
+        "detail": "Do not assume supplies on reserve trails."
+      },
+      {
+        "label": "Leave no trace",
+        "detail": "Carry waste out and avoid disturbing habitat."
+      }
+    ],
+    "source": {
+      "label": "Obudu LGA — Tourism",
+      "href": "https://obudu.crossriverstate.gov.ng/tourism"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ulanga-mountain-obudu-guide",
+    "title": "Ulanga Mountain Obudu Guide: Highland Views & Safety Planning",
+    "shortTitle": "Ulanga Mountain Obudu",
+    "kind": "destination",
+    "region": "Cross River State",
+    "summary": "Use Ulanga Mountain views as a dedicated Obudu highland outing with weather, local-route and daylight checks.",
+    "intro": [
+      "Ulanga Mountain adds a distinct highland-view intent to the wider Obudu Plateau experience.",
+      "Use local guidance and current weather to choose appropriate viewpoints rather than treating every slope as unrestricted hiking terrain."
+    ],
+    "bestFor": [
+      "Highland views",
+      "Photography",
+      "Hiking",
+      "Obudu"
+    ],
+    "highlights": [
+      {
+        "name": "Mountain scenery",
+        "detail": "The landscape and views are the primary attraction."
+      },
+      {
+        "name": "Plateau climate",
+        "detail": "Mist, rain and cooler temperatures can change visibility quickly."
+      },
+      {
+        "name": "Obudu connection",
+        "detail": "The resort and Becheve reserve provide complementary stay and nature experiences."
+      },
+      {
+        "name": "Outdoor activity",
+        "detail": "Plan the stop as a real hill outing rather than a drive-by photo."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check weather",
+        "detail": "Low cloud or rain can reduce visibility and make terrain slippery."
+      },
+      {
+        "label": "Use local guidance",
+        "detail": "Confirm recognised viewpoints and routes."
+      },
+      {
+        "label": "Wear practical footwear",
+        "detail": "Use shoes suitable for uneven highland terrain."
+      },
+      {
+        "label": "Return before dark",
+        "detail": "Protect daylight for the descent and onward movement."
+      }
+    ],
+    "source": {
+      "label": "Obudu LGA — Tourism",
+      "href": "https://obudu.crossriverstate.gov.ng/tourism"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "wikki-warm-spring-guide",
+    "title": "Wikki Warm Spring Guide: Yankari Water Safety & Visitor Planning",
+    "shortTitle": "Wikki Warm Spring",
+    "kind": "destination",
+    "region": "Bauchi State",
+    "summary": "Plan a Wikki Warm Spring visit inside Yankari around current reserve access, water rules and park operating arrangements.",
+    "intro": [
+      "Wikki Warm Spring is one of Yankari's best-known individual attractions and supports a distinct warm-spring search intent beyond the reserve guide.",
+      "Because it lies inside a protected reserve, current park rules and access arrangements govern the experience."
+    ],
+    "bestFor": [
+      "Warm springs",
+      "Yankari",
+      "Nature",
+      "Relaxed swimming"
+    ],
+    "highlights": [
+      {
+        "name": "Warm spring",
+        "detail": "The spring is the central leisure feature within the wider reserve."
+      },
+      {
+        "name": "Protected-area setting",
+        "detail": "Reserve rules remain in force even during a recreational water visit."
+      },
+      {
+        "name": "Yankari pairing",
+        "detail": "Wildlife and Marshall Caves are separate reserve experiences."
+      },
+      {
+        "name": "Evening potential",
+        "detail": "The spring can be a slower activity after a daytime reserve outing when current rules permit."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm reserve access",
+        "detail": "Check current entry and operating arrangements."
+      },
+      {
+        "label": "Follow water rules",
+        "detail": "Use only areas currently permitted for bathing."
+      },
+      {
+        "label": "Respect wildlife",
+        "detail": "Do not feed or approach animals near the spring."
+      },
+      {
+        "label": "Keep valuables secure",
+        "detail": "Use a water-resistant plan for phones and documents."
+      }
+    ],
+    "source": {
+      "label": "Bauchi State Government — Tourism",
+      "href": "https://www.bauchistate.gov.ng/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "marshall-caves-yankari-guide",
+    "title": "Marshall Caves Yankari Guide: Archaeology & Reserve Planning",
+    "shortTitle": "Marshall Caves Yankari",
+    "kind": "destination",
+    "region": "Bauchi State",
+    "summary": "Visit Marshall Caves as a focused Yankari archaeological stop with reserve-approved access and local guidance.",
+    "intro": [
+      "Marshall Caves add a heritage and archaeology dimension to Yankari beyond wildlife and Wikki Warm Spring.",
+      "Because the caves sit inside a protected reserve, use recognised park routes and never enter unfamiliar sections independently."
+    ],
+    "bestFor": [
+      "Archaeology",
+      "Caves",
+      "Yankari",
+      "History"
+    ],
+    "highlights": [
+      {
+        "name": "Cave heritage",
+        "detail": "The caves provide a different historical layer within the reserve landscape."
+      },
+      {
+        "name": "Protected setting",
+        "detail": "Park rules govern access and behaviour."
+      },
+      {
+        "name": "Yankari variety",
+        "detail": "The caves can complement wildlife viewing and the warm spring on a longer stay."
+      },
+      {
+        "name": "Interpretive value",
+        "detail": "Local guidance helps visitors understand the archaeological context."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use reserve guidance",
+        "detail": "Confirm whether the caves are open and how visits are arranged."
+      },
+      {
+        "label": "Do not enter alone",
+        "detail": "Use recognised visitor routes."
+      },
+      {
+        "label": "Wear practical footwear",
+        "detail": "Cave surfaces can be uneven."
+      },
+      {
+        "label": "Respect archaeological features",
+        "detail": "Do not remove, scratch or disturb material."
+      }
+    ],
+    "source": {
+      "label": "Bauchi State Government — Tourism",
+      "href": "https://www.bauchistate.gov.ng/tourism/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "itoku-adire-market-guide",
+    "title": "Itoku Adire Market Guide: Abeokuta Textiles & Shopping Tips",
+    "shortTitle": "Itoku Adire Market",
+    "kind": "destination",
+    "region": "Ogun State",
+    "summary": "Use Itoku Adire Market as a focused Abeokuta textile-and-craft stop, with time to compare makers, quality and prices.",
+    "intro": [
+      "Itoku is one of Abeokuta's strongest craft-shopping destinations and supports a distinct adire and textile intent beyond Olumo Rock.",
+      "The best visit is not only buying fabric: ask about techniques, makers and material quality while respecting active market workspaces."
+    ],
+    "bestFor": [
+      "Adire",
+      "Textiles",
+      "Craft shopping",
+      "Abeokuta"
+    ],
+    "highlights": [
+      {
+        "name": "Adire textiles",
+        "detail": "The market is closely associated with indigo and patterned cloth traditions."
+      },
+      {
+        "name": "Maker context",
+        "detail": "Ask who produced a piece and what technique was used."
+      },
+      {
+        "name": "Olumo pairing",
+        "detail": "The market fits naturally into an Olumo Rock heritage day."
+      },
+      {
+        "name": "Shopping variety",
+        "detail": "Compare multiple stalls before buying when quality and finish vary."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Carry purchases carefully",
+        "detail": "Protect textiles from rain and dirt."
+      },
+      {
+        "label": "Negotiate respectfully",
+        "detail": "Ask prices clearly and compare without confrontation."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Market workers may not want to be photographed."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Shopping and route finding are easier during normal market hours."
+      }
+    ],
+    "source": {
+      "label": "Ogun State investment and tourism information",
+      "href": "https://invest.ogunstate.gov.ng/blogdetails?id=7"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "alake-palace-abeokuta-guide",
+    "title": "Alake's Palace Abeokuta Guide: Egba Royal Heritage & Etiquette",
+    "shortTitle": "Alake's Palace Abeokuta",
+    "kind": "destination",
+    "region": "Ogun State",
+    "summary": "Plan a respectful visit around the Alake's Palace area with current public boundaries, dress and photography rules checked first.",
+    "intro": [
+      "The Alake's Palace is central to Abeokuta's Egba royal heritage and supports a distinct traditional-institution visit.",
+      "It remains an active palace, so public access can change and should never be assumed from old travel reports."
+    ],
+    "bestFor": [
+      "Royal heritage",
+      "Egba history",
+      "Culture",
+      "Abeokuta"
+    ],
+    "highlights": [
+      {
+        "name": "Traditional institution",
+        "detail": "The palace remains part of living Egba authority and culture."
+      },
+      {
+        "name": "Ake heritage area",
+        "detail": "Centenary Hall and nearby historic sites can complement the visit."
+      },
+      {
+        "name": "Olumo connection",
+        "detail": "The palace adds political and cultural context to Abeokuta's better-known rock landmark."
+      },
+      {
+        "name": "Ceremonial activity",
+        "detail": "Events can change access and visitor movement."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public access",
+        "detail": "Check what areas visitors may currently enter."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use appropriate clothing for a royal institution."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume cameras are permitted."
+      },
+      {
+        "label": "Follow palace instructions",
+        "detail": "Respect custodians, security and ceremonial boundaries."
+      }
+    ],
+    "source": {
+      "label": "Ogun State investment and tourism information",
+      "href": "https://invest.ogunstate.gov.ng/blogdetails?id=7"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "centenary-hall-abeokuta-guide",
+    "title": "Centenary Hall Abeokuta Guide: Egba History & Visitor Planning",
+    "shortTitle": "Centenary Hall Abeokuta",
+    "kind": "destination",
+    "region": "Ogun State",
+    "summary": "Use Centenary Hall as a focused Abeokuta civic-heritage stop, paired with nearby Ake and Itoku history rather than a citywide rush.",
+    "intro": [
+      "Centenary Hall is one of Abeokuta's established heritage landmarks and supports a distinct civic-history intent beyond Olumo Rock.",
+      "Its value is strongest when viewed inside the wider Ake heritage area, with current public access checked before travelling."
+    ],
+    "bestFor": [
+      "Egba history",
+      "Architecture",
+      "Abeokuta",
+      "Heritage"
+    ],
+    "highlights": [
+      {
+        "name": "Civic heritage",
+        "detail": "The hall represents an important layer of Abeokuta's institutional and public history."
+      },
+      {
+        "name": "Ake setting",
+        "detail": "Its location connects naturally with the Alake's Palace area."
+      },
+      {
+        "name": "Itoku connection",
+        "detail": "Adire shopping can add a living-craft dimension to the same heritage day."
+      },
+      {
+        "name": "Compact stop",
+        "detail": "It works best as one part of a clustered Abeokuta route."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current access",
+        "detail": "Check whether the hall is open to visitors or hosting an event."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Follow rules around interior or event spaces."
+      },
+      {
+        "label": "Stay in the Ake cluster",
+        "detail": "Avoid unnecessary cross-city movement."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "Historic-area navigation is easier during the day."
+      }
+    ],
+    "source": {
+      "label": "Ogun State investment and tourism information",
+      "href": "https://invest.ogunstate.gov.ng/blogdetails?id=7"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ataoja-palace-osogbo-guide",
+    "title": "Ataoja Palace Osogbo Guide: Royal Heritage & Visitor Etiquette",
+    "shortTitle": "Ataoja Palace Osogbo",
+    "kind": "destination",
+    "region": "Osun State",
+    "summary": "Plan a respectful visit around the Ataoja Palace area in Osogbo with current public boundaries, dress and photography rules checked first.",
+    "intro": [
+      "The Ataoja Palace is central to Osogbo's royal heritage and supports a distinct traditional-institution visit alongside the Sacred Grove.",
+      "Because it remains a living palace, access may change around ceremonies, official activity or local restrictions."
+    ],
+    "bestFor": [
+      "Royal heritage",
+      "Osogbo",
+      "Yoruba culture",
+      "History"
+    ],
+    "highlights": [
+      {
+        "name": "Traditional institution",
+        "detail": "The palace remains part of living Osogbo royal and cultural life."
+      },
+      {
+        "name": "Sacred Grove connection",
+        "detail": "The palace and grove together help explain the city's religious and political heritage."
+      },
+      {
+        "name": "City heritage route",
+        "detail": "Nike Art Centre can add an artistic dimension to the same broader visit."
+      },
+      {
+        "name": "Ceremonial context",
+        "detail": "Festival or palace activity can change visitor movement."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm public access",
+        "detail": "Check what visitors may currently enter."
+      },
+      {
+        "label": "Dress respectfully",
+        "detail": "Use appropriate clothing for a royal institution."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Do not assume cameras are permitted."
+      },
+      {
+        "label": "Follow palace instructions",
+        "detail": "Respect custodians and ceremonial boundaries."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Tourist Centres",
+      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "ladi-kwali-pottery-centre-guide",
+    "title": "Ladi Kwali Pottery Centre Guide: Suleja Craft Heritage",
+    "shortTitle": "Ladi Kwali Pottery Centre",
+    "kind": "destination",
+    "region": "Niger State",
+    "summary": "Use the Ladi Kwali Pottery Centre as a focused Suleja craft-and-heritage stop with current visitor and workshop access checked before arrival.",
+    "intro": [
+      "The Ladi Kwali pottery tradition gives Suleja a distinct Nigerian craft-history intent beyond nearby Zuma Rock and Gurara Falls.",
+      "A meaningful visit should focus on technique, makers and cultural context rather than treating the centre only as a souvenir stop."
+    ],
+    "bestFor": [
+      "Pottery",
+      "Craft heritage",
+      "Suleja",
+      "Culture"
+    ],
+    "highlights": [
+      {
+        "name": "Ladi Kwali legacy",
+        "detail": "The centre connects to one of Nigeria's most celebrated pottery traditions."
+      },
+      {
+        "name": "Craft technique",
+        "detail": "Ask about materials, firing and decorative methods when demonstrations are available."
+      },
+      {
+        "name": "Suleja context",
+        "detail": "The stop can fit a wider Niger/FCT road trip without being folded into a waterfall day."
+      },
+      {
+        "name": "Buying work",
+        "detail": "Clarify maker, price and safe transport for fragile pieces."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current access",
+        "detail": "Check whether workshops or exhibitions are open."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Makers and workspaces may have restrictions."
+      },
+      {
+        "label": "Handle pottery carefully",
+        "detail": "Plan protective transport for purchases."
+      },
+      {
+        "label": "Keep Gurara separate",
+        "detail": "The waterfall needs its own road and weather planning."
+      }
+    ],
+    "source": {
+      "label": "Niger State Government — Suleja Emirate",
+      "href": "https://nigerstate.gov.ng/suleja-emirate/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kainji-dam-guide",
+    "title": "Kainji Dam Guide: Engineering Landmark & Access Planning",
+    "shortTitle": "Kainji Dam",
+    "kind": "destination",
+    "region": "Niger State",
+    "summary": "Plan a Kainji Dam visit as an engineering-and-landscape stop while treating the power complex as working infrastructure with restricted areas.",
+    "intro": [
+      "Kainji Dam is a major Nigerian engineering landmark and supports a distinct infrastructure-and-geography search intent beyond the national park.",
+      "The dam is operational infrastructure, so public viewing must stay within approved areas and current security instructions."
+    ],
+    "bestFor": [
+      "Engineering",
+      "Landscapes",
+      "Kainji",
+      "Road trips"
+    ],
+    "highlights": [
+      {
+        "name": "Major dam complex",
+        "detail": "The scale of the structure and reservoir is the central visitor interest."
+      },
+      {
+        "name": "Working infrastructure",
+        "detail": "Operational areas take priority over tourism access."
+      },
+      {
+        "name": "National park context",
+        "detail": "Kainji Lake National Park provides a separate protected-nature experience."
+      },
+      {
+        "name": "Reservoir landscape",
+        "detail": "Public viewpoints can add geographic context without entering restricted zones."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Respect restricted areas",
+        "detail": "Do not cross barriers or security instructions."
+      },
+      {
+        "label": "Confirm public viewpoints",
+        "detail": "Ask where visitors may stop legally and safely."
+      },
+      {
+        "label": "Travel in daylight",
+        "detail": "Use conservative road timing."
+      },
+      {
+        "label": "Do not assume tours",
+        "detail": "Only enter operational facilities when officially permitted."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — Kainji Lake National Park brochure",
+      "href": "https://nigeriaparkservice.gov.ng/blog/2023/11/17/nigeria-national-parks-service-brochure/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "shagunu-beach-guide",
+    "title": "Shagunu Beach Kainji Guide: Lakeshore & Safety Planning",
+    "shortTitle": "Shagunu Beach",
+    "kind": "destination",
+    "region": "Niger State",
+    "summary": "Use Shagunu Beach as a focused Kainji lakeshore stop with current park access, water-condition and safety checks.",
+    "intro": [
+      "Shagunu Beach adds a distinct lakeshore recreation intent inside the wider Kainji landscape.",
+      "Because it sits within a protected-area context, current park rules and water conditions should shape the visit."
+    ],
+    "bestFor": [
+      "Lakeshore",
+      "Nature",
+      "Photography",
+      "Kainji"
+    ],
+    "highlights": [
+      {
+        "name": "Lakeshore setting",
+        "detail": "The beach provides a slower water-and-landscape experience."
+      },
+      {
+        "name": "Protected-area context",
+        "detail": "Park rules still govern behaviour and access."
+      },
+      {
+        "name": "Kainji pairing",
+        "detail": "The dam and national park are separate engineering and conservation experiences."
+      },
+      {
+        "name": "Waterfront photography",
+        "detail": "The shoreline can be enjoyed without entering the water."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm park access",
+        "detail": "Check current visitor arrangements."
+      },
+      {
+        "label": "Do not assume swimming safety",
+        "detail": "Use current official guidance before entering water."
+      },
+      {
+        "label": "Protect valuables",
+        "detail": "Use a water-resistant plan for electronics."
+      },
+      {
+        "label": "Leave no trace",
+        "detail": "Carry waste out of the protected area."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — Kainji Lake National Park brochure",
+      "href": "https://nigeriaparkservice.gov.ng/blog/2023/11/17/nigeria-national-parks-service-brochure/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "sukur-hidi-palace-guide",
+    "title": "Hidi's Palace Sukur Guide: UNESCO Cultural Landscape Planning",
+    "shortTitle": "Hidi's Palace Sukur",
+    "kind": "destination",
+    "region": "Adamawa State",
+    "summary": "Visit Hidi's Palace as part of the UNESCO-listed Sukur Cultural Landscape with local guidance and respect for living cultural traditions.",
+    "intro": [
+      "Hidi's Palace is a core element of the Sukur Cultural Landscape and supports a focused royal-and-cultural heritage intent within the UNESCO site.",
+      "The palace should be understood as part of a living cultural system rather than an isolated monument."
+    ],
+    "bestFor": [
+      "UNESCO heritage",
+      "Royal history",
+      "Sukur",
+      "Cultural landscapes"
+    ],
+    "highlights": [
+      {
+        "name": "Palace complex",
+        "detail": "The palace is central to the social and political organisation represented in the cultural landscape."
+      },
+      {
+        "name": "Hilltop setting",
+        "detail": "Its location connects architecture with the wider mountain environment."
+      },
+      {
+        "name": "Terraces and pathways",
+        "detail": "The surrounding stone and agricultural systems deepen the heritage story."
+      },
+      {
+        "name": "Living tradition",
+        "detail": "Local customs and current community use should guide visitor behaviour."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Use local guidance",
+        "detail": "Visit through recognised community arrangements."
+      },
+      {
+        "label": "Ask before photography",
+        "detail": "Sacred, royal or private areas may restrict cameras."
+      },
+      {
+        "label": "Wear practical footwear",
+        "detail": "The landscape involves steep and uneven paths."
+      },
+      {
+        "label": "Respect living heritage",
+        "detail": "Do not treat community spaces as abandoned ruins."
+      }
+    ],
+    "source": {
+      "label": "UNESCO World Heritage Centre — Sukur Cultural Landscape",
+      "href": "https://whc.unesco.org/en/list/938"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "sukur-terraces-guide",
+    "title": "Sukur Terraces & Stone Walkways Guide: UNESCO Landscape Visit",
+    "shortTitle": "Sukur Terraces",
+    "kind": "destination",
+    "region": "Adamawa State",
+    "summary": "Explore Sukur's terraced fields and stone walkways as part of a living UNESCO cultural landscape, with local guidance and suitable footwear.",
+    "intro": [
+      "The terraced fields and paved pathways are fundamental to why Sukur is recognised as a cultural landscape, not merely a scenic hill settlement.",
+      "A focused guide helps visitors understand agriculture, settlement and movement as connected heritage features."
+    ],
+    "bestFor": [
+      "UNESCO heritage",
+      "Terraced landscapes",
+      "Walking",
+      "Cultural history"
+    ],
+    "highlights": [
+      {
+        "name": "Agricultural terraces",
+        "detail": "The terraces demonstrate long-term adaptation of farming to mountain terrain."
+      },
+      {
+        "name": "Stone pathways",
+        "detail": "Paved routes connect parts of the landscape and form part of its heritage value."
+      },
+      {
+        "name": "Palace relationship",
+        "detail": "The Hidi's Palace anchors the wider social landscape."
+      },
+      {
+        "name": "Living land use",
+        "detail": "The area remains culturally meaningful rather than a static archaeological site."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Wear sturdy footwear",
+        "detail": "Expect steep and uneven stone surfaces."
+      },
+      {
+        "label": "Use local guidance",
+        "detail": "Stay on appropriate paths and respect community areas."
+      },
+      {
+        "label": "Watch weather",
+        "detail": "Rain can make stone routes slippery."
+      },
+      {
+        "label": "Do not disturb fields",
+        "detail": "Respect active agricultural land."
+      }
+    ],
+    "source": {
+      "label": "UNESCO World Heritage Centre — Sukur Cultural Landscape",
+      "href": "https://whc.unesco.org/en/list/938"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "kiriji-war-museum-guide",
+    "title": "Kiriji War Museum Guide: Ilesa Yoruba History & Visitor Planning",
+    "shortTitle": "Kiriji War Museum",
+    "kind": "destination",
+    "region": "Osun State",
+    "summary": "Use Kiriji War Museum as a focused Ilesa-area history stop for context on the long Yoruba civil wars of the nineteenth century.",
+    "intro": [
+      "Kiriji War Museum gives the Ilesa area a distinct military-history and Yoruba-history intent beyond waterfalls and royal landmarks.",
+      "The subject benefits from careful interpretation, especially where oral tradition and documented history intersect."
+    ],
+    "bestFor": [
+      "Yoruba history",
+      "Museums",
+      "Military history",
+      "Ilesa"
+    ],
+    "highlights": [
+      {
+        "name": "Kiriji War context",
+        "detail": "The museum focuses on a major period of nineteenth-century Yoruba warfare."
+      },
+      {
+        "name": "Regional history",
+        "detail": "The story helps explain political relationships across several Yoruba states."
+      },
+      {
+        "name": "Ilesa pairing",
+        "detail": "The Owa Obokun monument can add a royal-history element to the same area."
+      },
+      {
+        "name": "Erin-Ijesha contrast",
+        "detail": "The waterfall is a separate nature trip rather than part of the museum story."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Confirm current opening",
+        "detail": "Check public access before travelling."
+      },
+      {
+        "label": "Use careful interpretation",
+        "detail": "Distinguish documented history from later legend where needed."
+      },
+      {
+        "label": "Follow photography rules",
+        "detail": "Ask before photographing exhibits."
+      },
+      {
+        "label": "Allow enough time",
+        "detail": "Do not reduce a complex conflict history to a quick stop."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Ilesa fact file",
+      "href": "https://www.osunstate.gov.ng/2017/02/osun-fact-file-ilesha/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "owa-obokun-statue-guide",
+    "title": "Owa Obokun Statue Ilesa Guide: Royal Heritage & City Planning",
+    "shortTitle": "Owa Obokun Statue",
+    "kind": "destination",
+    "region": "Osun State",
+    "summary": "Use the Owa Obokun monument as a focused Ilesa royal-heritage stop, paired with museum context rather than a rushed photo-only visit.",
+    "intro": [
+      "The Owa Obokun monument gives Ilesa a distinct royal-history landmark within Osun State's broader heritage network.",
+      "Pairing it with historical interpretation makes the stop more useful than treating it only as a city marker."
+    ],
+    "bestFor": [
+      "Royal heritage",
+      "Ilesa",
+      "Monuments",
+      "History"
+    ],
+    "highlights": [
+      {
+        "name": "Royal identity",
+        "detail": "The monument connects to Ijesa traditional history and leadership."
+      },
+      {
+        "name": "Ilesa city context",
+        "detail": "Its meaning is strongest within the wider historic city."
+      },
+      {
+        "name": "Museum pairing",
+        "detail": "Kiriji War Museum can add political and military context."
+      },
+      {
+        "name": "Short heritage stop",
+        "detail": "It fits naturally into an Ilesa-focused day."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Visit in daylight",
+        "detail": "The monument and surrounding area are easier to navigate."
+      },
+      {
+        "label": "Use credible context",
+        "detail": "Avoid reducing royal history to unsupported legend."
+      },
+      {
+        "label": "Respect nearby activity",
+        "detail": "The area remains part of a living city."
+      },
+      {
+        "label": "Keep Erin-Ijesha separate",
+        "detail": "The waterfall needs its own nature-trip time."
+      }
+    ],
+    "source": {
+      "label": "Osun State Government — Tourist Centres",
+      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "gashaka-hill-forts-guide",
+    "title": "Gashaka Hill Historic Forts Guide: Park Heritage & Access Planning",
+    "shortTitle": "Gashaka Hill Historic Forts",
+    "kind": "destination",
+    "region": "Taraba State",
+    "summary": "Visit Gashaka Hill's historic fort remains only through current national-park access and guide arrangements.",
+    "intro": [
+      "Gashaka-Gumti contains cultural and historical features as well as exceptional biodiversity, and the hill forts support a distinct heritage intent within the park.",
+      "Because they sit inside a major protected landscape, park-approved access should govern every visit."
+    ],
+    "bestFor": [
+      "Park heritage",
+      "History",
+      "Hiking",
+      "Gashaka-Gumti"
+    ],
+    "highlights": [
+      {
+        "name": "Historic fort remains",
+        "detail": "The sites add a human-history layer to the park's natural landscape."
+      },
+      {
+        "name": "Protected setting",
+        "detail": "The surrounding national park remains the primary management context."
+      },
+      {
+        "name": "Hill terrain",
+        "detail": "Reaching heritage features can involve demanding outdoor conditions."
+      },
+      {
+        "name": "Serti gateway",
+        "detail": "Park administration in Serti is the practical starting point for current information."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Contact the park first",
+        "detail": "Confirm whether the fort route is open and how visits are arranged."
+      },
+      {
+        "label": "Use an authorised guide",
+        "detail": "Do not enter remote park terrain independently."
+      },
+      {
+        "label": "Prepare for hiking",
+        "detail": "Carry water, suitable footwear and weather protection."
+      },
+      {
+        "label": "Respect conservation rules",
+        "detail": "Do not remove natural or heritage material."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — Gashaka-Gumti National Park",
+      "href": "https://nigeriaparkservice.gov.ng/blog/2014/08/12/gashaka-gumti-national-park/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "gashaka-gumti-serti-guide",
+    "title": "Gashaka-Gumti Serti Guide: Park Gateway & Trip Preparation",
+    "shortTitle": "Gashaka-Gumti Serti Gateway",
+    "kind": "destination",
+    "region": "Taraba State",
+    "summary": "Use Serti as the planning gateway for Gashaka-Gumti National Park, confirming current entry, guides, roads and accommodation before heading deeper into the park.",
+    "intro": [
+      "Serti is important less as a sightseeing attraction than as the practical gateway to Nigeria's largest national park.",
+      "A dedicated gateway guide helps visitors make the correct operational decisions before entering a remote protected area."
+    ],
+    "bestFor": [
+      "National park planning",
+      "Gateway towns",
+      "Conservation trips",
+      "Taraba"
+    ],
+    "highlights": [
+      {
+        "name": "Park administration",
+        "detail": "Current entry and guide information should start with park authorities."
+      },
+      {
+        "name": "Logistics base",
+        "detail": "Use Serti to confirm supplies, transport and onward arrangements."
+      },
+      {
+        "name": "Gashaka access",
+        "detail": "Different parts of the park may require different routes and permissions."
+      },
+      {
+        "name": "Conservative planning",
+        "detail": "Remote terrain and road conditions make flexible timing essential."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Contact park staff",
+        "detail": "Confirm entry, guide and route before departure."
+      },
+      {
+        "label": "Fuel and supply early",
+        "detail": "Do not assume services deeper inside the park."
+      },
+      {
+        "label": "Check road conditions",
+        "detail": "Weather can change travel time materially."
+      },
+      {
+        "label": "Do not enter independently",
+        "detail": "Use recognised park arrangements."
+      }
+    ],
+    "source": {
+      "label": "Nigeria Park Service — Overview",
+      "href": "https://nigeriaparkservice.gov.ng/overview/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "freedom-park-lagos-guide",
+    "title": "Freedom Park Lagos Guide: History, Arts & 2026 Events",
+    "shortTitle": "Freedom Park Lagos",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Use Freedom Park as a Lagos Island heritage-and-arts stop, checking its active 2026 event calendar and visit arrangements before arrival.",
+    "intro": [
+      "Freedom Park transforms the former Broad Street Prison site into a heritage, arts and recreation venue, giving Lagos Island a distinct history-and-culture destination.",
+      "Its official site is active in 2026 with events and visit booking, so the experience can vary significantly by date."
+    ],
+    "bestFor": [
+      "Heritage",
+      "Live arts",
+      "Lagos Island",
+      "Events"
+    ],
+    "highlights": [
+      {
+        "name": "Former prison site",
+        "detail": "The park preserves the historical memory of the old colonial prison while repurposing the space for public culture."
+      },
+      {
+        "name": "Arts programme",
+        "detail": "Concerts, performances and cultural events can change the character of a visit."
+      },
+      {
+        "name": "Island heritage cluster",
+        "detail": "National Museum and Tafawa Balewa Square can form a nearby history-focused route."
+      },
+      {
+        "name": "Evening potential",
+        "detail": "Event nights can extend the visit beyond a daytime heritage walk."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check the event calendar",
+        "detail": "The official programme determines whether the day is quiet or event-heavy."
+      },
+      {
+        "label": "Confirm visit booking",
+        "detail": "Use the official site for current visit arrangements."
+      },
+      {
+        "label": "Plan evening transport",
+        "detail": "Arrange a reliable return option for late events."
+      },
+      {
+        "label": "Respect memorial context",
+        "detail": "Remember that the site also carries prison history."
+      }
+    ],
+    "source": {
+      "label": "Freedom Park Lagos — official site",
+      "href": "https://freedomparklagos.com/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "tafawa-balewa-square-guide",
+    "title": "Tafawa Balewa Square Guide: Independence History & Lagos Heritage",
+    "shortTitle": "Tafawa Balewa Square",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Visit Tafawa Balewa Square for Nigeria's independence history and civic heritage, with current event and security access checked before arrival.",
+    "intro": [
+      "Tafawa Balewa Square is a major national civic landmark tied to Nigeria's independence history and supports a distinct history-and-architecture intent.",
+      "Lagos State's renewed Independence Obelisk reinforces the square's heritage significance, while live event or security arrangements can change access."
+    ],
+    "bestFor": [
+      "Independence history",
+      "Civic landmarks",
+      "Lagos Island",
+      "Architecture"
+    ],
+    "highlights": [
+      {
+        "name": "Independence history",
+        "detail": "The square is closely associated with Nigeria's national independence narrative."
+      },
+      {
+        "name": "Independence Obelisk",
+        "detail": "The renewed monument strengthens the site's role as a civic heritage landmark."
+      },
+      {
+        "name": "Lagos Island cluster",
+        "detail": "National Museum and Freedom Park can form a compact history route."
+      },
+      {
+        "name": "Event space",
+        "detail": "Large civic events can change how much of the square is accessible."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check event access",
+        "detail": "Confirm whether the square is open or restricted on your date."
+      },
+      {
+        "label": "Follow security instructions",
+        "detail": "Do not cross controlled areas for photography."
+      },
+      {
+        "label": "Use daylight",
+        "detail": "The architecture and surrounding heritage are easier to navigate."
+      },
+      {
+        "label": "Cluster nearby stops",
+        "detail": "Keep the day on Lagos Island to reduce traffic."
+      }
+    ],
+    "source": {
+      "label": "Lagos State Government — Independence Obelisk at TBS",
+      "href": "https://lagosstate.gov.ng/news/all/view/6920819c88319a643b6df3a8"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "national-theatre-lagos-guide",
+    "title": "National Theatre Lagos Guide: Wole Soyinka Centre & 2026 Events",
+    "shortTitle": "National Theatre Lagos",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Plan a visit to the renovated National Theatre/Wole Soyinka Centre around its active 2026 performance calendar, exhibitions and excursion arrangements.",
+    "intro": [
+      "The National Theatre complex in Iganmu has been restored and the main edifice is now the Wole Soyinka Centre for Culture and the Creative Arts, while the institution continues to operate an active 2026 programme.",
+      "A dedicated guide is justified because the venue now combines architecture, performances, exhibitions and organised excursions rather than functioning only as a static landmark."
+    ],
+    "bestFor": [
+      "Performing arts",
+      "Architecture",
+      "Culture",
+      "Lagos"
+    ],
+    "highlights": [
+      {
+        "name": "Restored cultural landmark",
+        "detail": "The complex remains one of Nigeria's most recognisable national arts institutions."
+      },
+      {
+        "name": "2026 programme",
+        "detail": "The official calendar lists theatre, festival and cultural events through the year."
+      },
+      {
+        "name": "Wole Soyinka Centre",
+        "detail": "The renovated edifice carries the new cultural-centre identity while the National Theatre institution continues its programme."
+      },
+      {
+        "name": "Excursion potential",
+        "detail": "The official site provides dedicated excursion contact information for organised visits."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check what's on",
+        "detail": "Use the official calendar before choosing the date."
+      },
+      {
+        "label": "Book the relevant experience",
+        "detail": "Performance tickets and excursions are different visitor needs."
+      },
+      {
+        "label": "Plan Iganmu transport",
+        "detail": "Allow Lagos traffic margin before a timed show."
+      },
+      {
+        "label": "Confirm venue naming",
+        "detail": "Use current official information for the National Theatre/Wole Soyinka Centre complex."
+      }
+    ],
+    "source": {
+      "label": "National Theatre Nigeria — official site",
+      "href": "https://nationaltheatre.gov.ng/"
+    },
+    "lastReviewed": "2026-10-05"
+  },
+  {
+    "slug": "new-afrika-shrine-guide",
+    "title": "New Afrika Shrine Guide: Afrobeat, Felabration & Lagos Planning",
+    "shortTitle": "New Afrika Shrine",
+    "kind": "destination",
+    "region": "Lagos State",
+    "summary": "Use the New Afrika Shrine as a focused Afrobeat and live-culture destination, with event-night transport and current programme checks before travelling.",
+    "intro": [
+      "The New Afrika Shrine is a major Lagos cultural venue tied to Fela Kuti's legacy and remains central to Felabration, which continues to attract Nigerian and international visitors.",
+      "The venue experience is programme-driven, so a normal night and a major Felabration event require very different transport, crowd and timing plans."
+    ],
+    "bestFor": [
+      "Afrobeat",
+      "Live music",
+      "Fela heritage",
+      "Lagos nightlife"
+    ],
+    "highlights": [
+      {
+        "name": "Afrobeat heritage",
+        "detail": "The venue carries forward a major part of the Kuti family's musical and cultural legacy."
+      },
+      {
+        "name": "Felabration",
+        "detail": "The annual festival uses the Shrine for key competitions and performances."
+      },
+      {
+        "name": "Live cultural venue",
+        "detail": "Music, debate, dance and cultural programming can shape the visitor experience."
+      },
+      {
+        "name": "Mainland location",
+        "detail": "Agidingbi traffic and late-night return planning matter on busy event dates."
+      }
+    ],
+    "planning": [
+      {
+        "label": "Check the programme",
+        "detail": "Confirm the exact event and start time before travelling."
+      },
+      {
+        "label": "Plan late-night transport",
+        "detail": "Arrange a reliable return option before the show."
+      },
+      {
+        "label": "Expect festival crowds",
+        "detail": "Felabration dates require more time and crowd planning than ordinary nights."
+      },
+      {
+        "label": "Protect valuables",
+        "detail": "Use normal busy-event precautions."
+      }
+    ],
+    "source": {
+      "label": "Voice of Nigeria — Felabration 2026 and New Afrika Shrine",
+      "href": "https://von.gov.ng/felabration-promotes-nigerian-culture-yeni-kuti/"
+    },
+    "lastReviewed": "2026-10-05"
   }
 ];
 
