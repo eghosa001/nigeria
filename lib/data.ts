@@ -1605,6 +1605,20 @@ export const agencies: Agency[] = [
     "shortName": "Google Cloud",
     "description": "Google professional cloud-certification programme offering remote and testing-centre certification exams.",
     "website": "https://cloud.google.com/learn/certification"
+  },
+  {
+    "slug": "vfs-global-canada-nigeria",
+    "name": "VFS Global Canada Visa Application Centre Nigeria",
+    "shortName": "VFS Canada",
+    "description": "Private administrative visa-application centre authorised by the Government of Canada for biometrics, document/passport handling and applicant support in Nigeria.",
+    "website": "https://visa.vfsglobal.com/nga/en/can/"
+  },
+  {
+    "slug": "tlscontact-france-nigeria",
+    "name": "TLScontact France Visa Application Centres Nigeria",
+    "shortName": "TLScontact France",
+    "description": "Private visa-application centre operator handling France visa appointments, submissions and biometrics in Abuja and Lagos.",
+    "website": "https://visas-fr.tlscontact.com/en-us/country/ng"
   }
 ];
 export const services: Service[] = validateServiceCatalog([...serviceRecords, ...privateServiceRecords]);
