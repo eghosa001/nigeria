@@ -40,9 +40,11 @@ const movieSourceOnly = count(
 const movieMissingRuntime = count(entertainmentTitles, (title) => !title.runtimeMinutes);
 const movieMissingTrailer = count(entertainmentTitles, (title) => !title.trailer);
 
-const youtubePending = youtubeMovieLibrary.length - indexableYouTubeMovies.length;
-const youtubePendingPercent = youtubeMovieLibrary.length
-  ? ((youtubePending / youtubeMovieLibrary.length) * 100).toFixed(1)
+const youtubeDetailRecords = youtubeMovieLibrary.filter((movie) => movie.source !== "curated");
+const indexableYouTubeDetailRecords = indexableYouTubeMovies.filter((movie) => movie.source !== "curated");
+const youtubePending = youtubeDetailRecords.length - indexableYouTubeDetailRecords.length;
+const youtubePendingPercent = youtubeDetailRecords.length
+  ? ((youtubePending / youtubeDetailRecords.length) * 100).toFixed(1)
   : "0.0";
 
 console.log("MyNigeriaGuide published-content quality status — " + today);
@@ -76,6 +78,7 @@ console.log("  Runtime not verified:", movieMissingRuntime);
 console.log("  Trailer not verified:", movieMissingTrailer);
 console.log("");
 console.log("YouTube movies");
-console.log("  User-visible records:", youtubeMovieLibrary.length);
-console.log("  Indexable records:", indexableYouTubeMovies.length);
+console.log("  User-visible detail records:", youtubeDetailRecords.length);
+console.log("  Indexable detail records:", indexableYouTubeDetailRecords.length);
+console.log("  Curated records redirecting to main movie pages:", youtubeMovieLibrary.length - youtubeDetailRecords.length);
 console.log("  Cast-pending/noindex:", youtubePending, "(" + youtubePendingPercent + "%)");
