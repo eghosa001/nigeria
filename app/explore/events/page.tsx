@@ -8,14 +8,23 @@ import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Nigeria Events & Festivals 2026: Lagos, Calabar & More",
-  description: "Plan major Nigeria events and festivals in 2026, including Felabration, Design Week Lagos, Lagos Fashion Week, the CAC beneficial ownership conference, Detty December and Calabar Carnival.",
+  description: "Plan major Nigerian events and festivals with verified guides for dates, venues, access and travel conditions, including Lagos, Calabar and regional cultural festivals.",
   alternates: { canonical: "/explore/events" },
 };
 
 const eventSlugs = ["felabration-2026", "design-week-lagos-2026", "lagos-fashion-week-2026", "beneficial-ownership-asset-recovery-conference-2026", "detty-december-lagos-2026", "calabar-carnival-2026"];
 
 export default function EventsPage() {
-  const events = eventSlugs.map((slug) => exploreGuides.find((guide) => guide.slug === slug)).filter((guide): guide is NonNullable<typeof guide> => Boolean(guide));
+  const featured = eventSlugs
+    .map((slug) => exploreGuides.find((guide) => guide.slug === slug))
+    .filter((guide): guide is NonNullable<typeof guide> => Boolean(guide));
+  const featuredSlugs = new Set(featured.map((guide) => guide.slug));
+  const events = [
+    ...featured,
+    ...exploreGuides
+      .filter((guide) => guide.kind === "event" && !featuredSlugs.has(guide.slug))
+      .sort((a, b) => a.shortTitle.localeCompare(b.shortTitle)),
+  ];
   const base = getSiteUrl();
   const ld = {
     "@context": "https://schema.org",
@@ -40,7 +49,7 @@ export default function EventsPage() {
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Explore Nigeria", href: "/explore" }, { label: "Events & festivals" }]} />
           <span className="eyebrow">2026 event calendar</span>
           <h1>Nigeria events and festivals worth planning around</h1>
-          <p className="page-intro">Current planning guides for major Lagos and Cross River events, with dates, official sources and practical movement advice.</p>
+          <p className="page-intro">Current planning guides for Nigerian events and festivals, with official sources, practical movement advice and clear warnings where dates or access still need confirmation.</p>
           <AnswerFirst
             title="What is coming up?"
             summary="October starts with Felabration, Design Week Lagos and Lagos Fashion Week; November brings the CAC-led Beneficial Ownership & Asset Recovery conference in Ikeja; December planning is open for Detty December and Calabar Carnival."
