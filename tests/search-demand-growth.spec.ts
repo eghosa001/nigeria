@@ -53,6 +53,9 @@ test("new search-demand routes are crawlable from their public surfaces", async 
     "/services/unclaimed-dividends-nigeria",
     "/services/jamb-examination-slip-2026",
     "/services/neco-certificate-service",
+    "/entertainment/movies/third-party-risk",
+    "/explore/fashion-fables-runway-africa-abuja-2026",
+    "/jobs/unilever-nigeria-careers",
   ];
 
   for (const route of routes) {
