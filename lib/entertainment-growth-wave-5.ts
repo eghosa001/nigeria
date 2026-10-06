@@ -9,8 +9,9 @@ export const entertainmentGrowthWave5: EntertainmentTitle[] = [
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
     synopsis: "With only thirty days before a major career move to Abuja, Zara is focused on the future rather than romance. A chance meeting with Timi changes that plan, but a dangerous secret soon puts their new relationship and everything Zara has worked for under pressure.",
-    cast: ["Toluwani George", "Sydney Ihionu"],
-    featuredCast: ["Toluwani George", "Sydney Ihionu"],
+    cast: ["Toluwani George", "Sydney Ihionu", "Paul Utomi", "Dera Anidiobi", "Charles Lenny", "Anita Anaedevha", "Comfort Alhassan"],
+    featuredCast: ["Toluwani George", "Sydney Ihionu", "Paul Utomi"],
+    directors: ["Mo\' Fakorede"],
     runtimeMinutes: 146,
     featured: true,
     references: [{
@@ -67,8 +68,9 @@ export const entertainmentGrowthWave5: EntertainmentTitle[] = [
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
     synopsis: "Beauty's life takes an unexpected turn after a chance encounter with Uche, a successful businessman. Their meeting opens a relationship shaped by different circumstances, expectations and the choices each must make as the connection develops.",
-    cast: ["Ray Adeka", "Osereme Inegbenebor", "Chidimma Ugwu"],
+    cast: ["Ray Adeka", "Thelma Chukwunwem", "Osereme Inegbenebor", "Donna Ilomba", "Tega Leonard", "Chidimma Ugwu"],
     featuredCast: ["Ray Adeka", "Osereme Inegbenebor", "Chidimma Ugwu"],
+    directors: ["Kingsley Fresh Onyenma"],
     runtimeMinutes: 108,
     references: [{
       label: "Dashing Films — Journey to Love",
@@ -95,8 +97,9 @@ export const entertainmentGrowthWave5: EntertainmentTitle[] = [
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
     synopsis: "After six months apart, Tomi and Demilade are ready to end their marriage. An unexpected visit from Tomi's ailing father forces them to act like a happy couple for one weekend, bringing old tensions and unresolved feelings back into the same home.",
-    cast: ["Omoni Oboli", "Daniel Etim-Effiong", "Akin Lewis"],
+    cast: ["Omoni Oboli", "Daniel Etim-Effiong", "Akin Lewis", "Tomi Adeoye"],
     featuredCast: ["Omoni Oboli", "Daniel Etim-Effiong", "Akin Lewis"],
+    directors: ["Mo\' Fakorede"],
     runtimeMinutes: 98,
     references: [{
       label: "Omoni Oboli TV — Married for the Weekend",
