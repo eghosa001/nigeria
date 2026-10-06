@@ -599,24 +599,6 @@ export const growthHubs: GrowthHub[] = [
     serviceSlugs: ["ecowas-travel-certificate", "emergency-travel-certificate", "yellow-card", "nigeria-landing-exit-card"]
   },
   {
-    slug: "nelfund-student-loan",
-    title: "NELFUND Portal Guide: Student Loan, Status, Upkeep & Repayment",
-    shortTitle: "NELFUND",
-    description: "Use the official NELFUND portal for student-loan applications, status checks, upkeep payments and repayment guidance.",
-    intro: [
-      "This hub separates the main NELFUND tasks so students can move from application to verification, status tracking and upkeep without confusing the different stages.",
-      "Use the linked guide that matches your current stage, and sign in only through the official NELFUND portal rather than third-party loan agents."
-    ],
-    searches: [
-      { query: "NELFUND portal", serviceSlug: "nelfund-student-loan-application" },
-      { query: "NELFUND student loan", serviceSlug: "nelfund-student-loan-application" },
-      { query: "NELFUND loan status", serviceSlug: "nelfund-loan-status-and-upkeep" },
-      { query: "NELFUND upkeep", serviceSlug: "nelfund-loan-status-and-upkeep" },
-      { query: "NELFUND repayment", serviceSlug: "nelfund-loan-repayment" }
-    ],
-    serviceSlugs: ["nelfund-student-loan-application", "nelfund-loan-status-and-upkeep", "nelfund-loan-repayment"]
-  },
-  {
     slug: "federal-tax-services",
     title: "Nigeria Federal Tax Registration, Filing, Payment & Refund Guide",
     shortTitle: "Federal tax services",
@@ -638,36 +620,13 @@ export const growthHubs: GrowthHub[] = [
     serviceSlugs: ["nrs-tax-id-retrieval", "nrs-individual-tax-registration", "nrs-corporate-tax-registration", "nrs-tax-clearance-certificate", "nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
   },
 
-  {
-    slug: "pension-rsa-nigeria",
-    title: "Pension RSA Nigeria 2026: Open Account, Transfer PFA & Withdraw 25%",
-    shortTitle: "Pension & RSA",
-    description: "Open a Retirement Savings Account, register for Micro Pension, transfer your RSA to another PFA or understand the 25% job-loss withdrawal using current PenCom routes.",
-    intro: [
-      "Use this hub if you searched for pension registration, an RSA account, PFA transfer, Micro Pension or the 25% job-loss withdrawal. These are separate pension tasks and should not be treated as one application.",
-      "Start with the task that matches your situation. Each linked guide explains the responsible PFA or PenCom route, eligibility, documents, steps and current source date without collecting pension credentials on MyNigeriaGuide."
-    ],
-    searches: [
-      { query: "open pension account Nigeria", serviceSlug: "pencom-open-rsa" },
-      { query: "open RSA online", serviceSlug: "pencom-open-rsa" },
-      { query: "RSA registration requirements", serviceSlug: "pencom-open-rsa" },
-      { query: "NIN for RSA registration", serviceSlug: "pencom-open-rsa" },
-      { query: "transfer pension PFA", serviceSlug: "pencom-transfer-rsa" },
-      { query: "RSA transfer process", serviceSlug: "pencom-transfer-rsa" },
-      { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
-      { query: "Micro Pension registration", serviceSlug: "pencom-micro-pension-registration" },
-      { query: "pension clearance certificate", serviceSlug: "pencom-pension-clearance-certificate" }
-    ],
-    serviceSlugs: [
-      "pencom-open-rsa",
-      "pencom-transfer-rsa",
-      "pencom-job-loss-25-percent-withdrawal",
-      "pencom-micro-pension-registration",
-      "pencom-pension-clearance-certificate",
-      "pencom-unremitted-contributions"
-    ]
-  },
+
 ];
+
+export const growthHubRedirects: Record<string, string> = {
+  "nelfund-student-loan": "nelfund",
+  "pension-rsa-nigeria": "pension-services-nigeria",
+};
 
 export function getGrowthHub(slug: string) {
   return growthHubs.find((hub) => hub.slug === slug);
