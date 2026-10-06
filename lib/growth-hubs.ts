@@ -360,12 +360,12 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "pension-services-nigeria",
-    title: "Pension Registration Nigeria 2026: RSA, PFA Transfer & Micro Pension",
+    title: "Pension Services Nigeria 2026: RSA, Mortgage, Retirement & Benefits",
     shortTitle: "Pension services",
-    description: "Open or transfer an RSA, resolve missing pension contributions, use Micro Pension and understand the 25% job-loss withdrawal route.",
+    description: "Open or transfer an RSA, resolve contributions, use eligible RSA mortgage equity, understand retirement withdrawals and handle regulated pension benefit claims.",
     intro: [
-      "This hub groups the pension tasks workers and self-employed Nigerians most often need, from opening an RSA through transfers, contribution problems and access to permitted benefits.",
-      "Each guide separates what the PFA handles from what PenCom regulates, so you can use the correct route and avoid unofficial pension-withdrawal offers."
+      "This hub groups the pension tasks workers, retirees, beneficiaries and self-employed Nigerians most often need, from opening an RSA through transfers, contribution problems, mortgage equity and retirement benefits.",
+      "Each guide separates what the PFA handles from what PenCom regulates, so you can use the correct route and avoid unofficial pension-withdrawal or benefit-processing offers."
     ],
     searches: [
       { query: "open RSA Nigeria", serviceSlug: "pencom-open-rsa" },
@@ -380,9 +380,13 @@ export const growthHubs: GrowthHub[] = [
       { query: "employer not paying pension", serviceSlug: "pencom-unremitted-contributions" },
       { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
       { query: "micro pension Nigeria", serviceSlug: "pencom-micro-pension-registration" },
-      { query: "micro pension account registration", serviceSlug: "pencom-micro-pension-registration" }
+      { query: "micro pension account registration", serviceSlug: "pencom-micro-pension-registration" },
+      { query: "use pension for mortgage Nigeria", serviceSlug: "pencom-rsa-mortgage-equity-contribution" },
+      { query: "RSA mortgage equity contribution", serviceSlug: "pencom-rsa-mortgage-equity-contribution" },
+      { query: "programmed withdrawal pension Nigeria", serviceSlug: "pencom-programmed-withdrawal-retirement" },
+      { query: "claim pension death benefits Nigeria", serviceSlug: "pencom-death-benefits-claim" }
     ],
-    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration"]
+    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration", "pencom-rsa-mortgage-equity-contribution", "pencom-programmed-withdrawal-retirement", "pencom-death-benefits-claim"]
   },
   {
     slug: "consumer-complaints-nigeria",
