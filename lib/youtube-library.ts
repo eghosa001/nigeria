@@ -46,6 +46,8 @@ const generatedSynopsisMeaning = /^\s*(?:it|this title|the phrase)\s+(?:signifie
 function normalizeGeneratedTitle(value: string) {
   return String(value ?? "")
     .replace(/\s*\((?:full|complete)\s+movie\)\s*/gi, " ")
+    .replace(/\s*(?:[-–—|/:]\s*)?(?:full|complete)\s+(?:nigerian\s+|nollywood\s+|african\s+)?movie\b.*$/i, " ")
+    .replace(/\s+(?:latest\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movies?\b.*$/i, " ")
     .replace(/\s*[|]\s*(?:latest|new|full|official|nollywood|nigerian)\b.*$/i, " ")
     .replace(/\s*[-–—/]\s*(?:latest|new|full|official)\s+(?:nollywood|nigerian|african)\b.*$/i, " ")
     .replace(/\s*;\s*[A-Z][A-Z .,'’\-]+(?:,\s*[A-Z][A-Z .,'’\-]+)+(?:\s+20\d{2})?.*$/i, " ")
