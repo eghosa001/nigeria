@@ -46,7 +46,7 @@ export type ReleaseLifecycle = "new" | "now-showing" | "upcoming" | "ended";
 
 export type ReleaseLifecycleInput = {
   kind: "streaming" | "cinema" | "event";
-  status: "new" | "now-showing" | "upcoming";
+  status: "new" | "now-showing" | "upcoming" | "ended";
   startDate?: string;
   endDate?: string;
 };
