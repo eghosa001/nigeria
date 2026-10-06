@@ -1,5 +1,6 @@
 import { jobScaleWave } from "@/lib/job-scale-wave";
 import { jobGrowthWave } from "@/lib/job-growth-wave-2026-10-06";
+import { jobGrowthWaveThree } from "@/lib/job-growth-wave-2026-10-06-b";
 
 export type JobSector = "Government" | "Private" | "International";
 export type JobStatus = "open" | "closed" | "screening" | "training" | "career-page" | "upcoming";
@@ -109,6 +110,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...jobGrowthWaveThree,
   ...jobGrowthWave,
   {
     slug: "firstbank-technology-academy-2026",
