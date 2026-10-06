@@ -4,9 +4,11 @@ import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
+import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { exploreGuides } from "@/lib/explore";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
+import { indexableYouTubeChannelHubs } from "@/lib/youtube-channel-hubs";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
@@ -175,6 +177,10 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment/releases", lastModified: movieCatalogModified },
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
+      ...indexableEntertainmentPlatformHubs.map((hub) => ({
+        url: base + "/entertainment/platforms/" + hub.slug,
+        lastModified: hub.lastChecked,
+      })),
       { url: base + "/entertainment/people", lastModified: movieCatalogModified },
       { url: base + "/entertainment/series", lastModified: seriesModified },
       ...seriesTitles.map((item) => ({
@@ -204,6 +210,11 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
+    { url: base + "/entertainment/youtube/channels", lastModified: youtubeModified },
+    ...indexableYouTubeChannelHubs.map((hub) => ({
+      url: base + "/entertainment/youtube/channels/" + hub.channel.slug,
+      lastModified: hub.latestChecked || youtubeModified,
+    })),
     ...pagination,
     ...indexableYouTubeMovies
       .filter((movie) => movie.source !== "curated")
