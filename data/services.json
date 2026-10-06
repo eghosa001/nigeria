@@ -1300,9 +1300,9 @@
   },
   {
     "slug": "neco-check-result",
-    "title": "NECO Result Checker: how to check a NECO result online",
+    "title": "NECO Result Checker 2026: Check Result & Use a Result Token",
     "shortTitle": "Check NECO result",
-    "summary": "Use the official NECO Result Checker with the examination year, exam type, token and registration number; the portal also links to token purchase.",
+    "summary": "Check a NECO result on the official NECO Results Portal using the examination year, exam type, result token and registration number, with the official token-purchase route when needed.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Requires a NECO result token",
@@ -1340,7 +1340,10 @@
       "NECO result checker",
       "NECO result checker 2026",
       "NECO result token",
-      "NECO results portal"
+      "NECO results portal",
+      "NECO result checker 2026 online",
+      "check NECO result 2026",
+      "buy NECO result token"
     ],
     "related": []
   },
@@ -3070,9 +3073,9 @@
   },
   {
     "slug": "anambra-asin-registration",
-    "title": "How to get an Anambra State Identity Number (ASIN)",
+    "title": "ASIN Registration Online: How to Get an Anambra State Identity Number",
     "shortTitle": "Anambra ASIN registration",
-    "summary": "AIRS provides an online enumeration route for individuals, informal enterprises and corporate entities to obtain an ASIN.",
+    "summary": "Use the official Anambra State Internal Revenue Service online enumeration routes for individuals, informal enterprises and corporate entities to register for an Anambra State Identity Number (ASIN).",
     "category": "State services",
     "agencySlug": "airs",
     "feeLabel": "Use the official AIRS enumeration process",
@@ -3113,7 +3116,10 @@
       "ASIN registration online",
       "ASIN registration",
       "Anambra State Identity Number online",
-      "create ASIN online"
+      "create ASIN online",
+      "register ASIN online",
+      "Anambra ASIN registration online",
+      "how to get ASIN number"
     ],
     "related": []
   },
@@ -3913,9 +3919,9 @@
   },
   {
     "slug": "ecowas-travel-certificate",
-    "title": "How to get an ECOWAS Travel Certificate in Nigeria",
+    "title": "ECOWAS Travel Certificate Nigeria: Fee, Requirements & Renewal",
     "shortTitle": "ECOWAS Travel Certificate",
-    "summary": "The Nigeria Immigration Service route for Nigerians who want the ECOWAS Travel Certificate used for travel within the ECOWAS sub-region.",
+    "summary": "Nigeria Immigration Service guidance for getting or renewing an ECOWAS Travel Certificate, including the current ₦2,600 fresh fee, ₦1,300 renewal fee, requirements and official application route.",
     "category": "International travel",
     "agencySlug": "nis",
     "feeLabel": "Fresh ₦2,600 · Renewal ₦1,300",
@@ -3973,7 +3979,10 @@
       "ECOWAS travel certificate validity",
       "ECOWAS certificate",
       "ECOWAS travel certificate application form",
-      "ECOWAS travel certificate fee Nigeria"
+      "ECOWAS travel certificate fee Nigeria",
+      "ECOWAS travel certificate Nigeria fee",
+      "ECOWAS travel certificate renewal Nigeria",
+      "ECOWAS travel certificate requirements Nigeria"
     ],
     "related": [
       "first-nigerian-passport",
@@ -4101,9 +4110,9 @@
   },
   {
     "slug": "police-character-certificate",
-    "title": "How to request a Police Character Certificate through POSSAP",
+    "title": "Police Character Certificate Nigeria: POSSAP Fee, Diaspora & Application",
     "shortTitle": "Police Character Certificate",
-    "summary": "The Nigeria Police Force's POSSAP route for requesting, paying for and later validating a Police Character Certificate used for purposes such as employment, licensing or visa applications.",
+    "summary": "Apply for a Nigeria Police Character Certificate through the official POSSAP portal, including the current application route, the ₦30,000 fee shown on recent official invoices, diaspora use and document validation.",
     "category": "Police & security",
     "agencySlug": "npf",
     "feeLabel": "₦30,000 shown on recent POSSAP invoices",
@@ -4168,7 +4177,11 @@
       "how much is police character certificate in Nigeria for diaspora",
       "diaspora police character certificate Nigeria",
       "POSSAP PCC fee",
-      "police clearance certificate fee Nigeria"
+      "police clearance certificate fee Nigeria",
+      "Police Character Certificate Nigeria fee",
+      "POSSAP police character certificate diaspora",
+      "Nigeria police clearance diaspora",
+      "Police Character Certificate application Nigeria"
     ],
     "lastVerified": "2026-10-05",
     "related": []
@@ -5619,9 +5632,9 @@
   },
   {
     "slug": "nip-transfer-status",
-    "title": "How to check the status of a NIP transfer with *565*5#",
+    "title": "NIP Transfer Status: Check a NIBSS Transfer with *565*5#",
     "shortTitle": "Check NIP transfer status",
-    "summary": "The official NIBSS USSD route for checking whether a recent Nigeria Instant Payment transfer was processed successfully, failed or is still awaiting processing.",
+    "summary": "Use the official NIBSS *565*5# NIP Transaction Tracker to check whether a recent Nigeria Instant Payment transfer succeeded, failed or is still awaiting processing.",
     "category": "Banking",
     "agencySlug": "nibss",
     "feeLabel": "₦20",
@@ -5662,12 +5675,16 @@
       "NIBSS transfer status",
       "instant payment status",
       "failed transfer",
-      "bank transfer reversal"
+      "bank transfer reversal",
+      "NIBSS transfer status check",
+      "check NIP transfer status online",
+      "NIP transaction tracker",
+      "565 5 NIBSS"
     ],
     "related": [
       "bvn-retrieval"
     ],
-    "lastVerified": "2026-09-29"
+    "lastVerified": "2026-10-06"
   },
   {
     "slug": "vehicle-insurance-validation-ussd",

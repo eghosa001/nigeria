@@ -2196,7 +2196,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       label: "Open on Netflix",
       href: "https://www.netflix.com/ng/title/82741545",
       access: "subscription",
-      lastChecked: "2026-10-04",
+      lastChecked: "2026-10-06",
       note: "Official Netflix title page. Regional availability and plan requirements can change.",
     }],
   },
