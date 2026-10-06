@@ -117,5 +117,61 @@ export const entertainmentGrowthWave5: EntertainmentTitle[] = [
       publisher: "Omoni Oboli TV",
       publisherUrl: "https://www.youtube.com/@OmoniOboliTV"
     }]
-  }
+  },
+{
+  "slug": "the-checklist-2026",
+  "title": "The Checklist",
+  "year": 2026,
+  "format": "movie",
+  "genres": [
+    "Drama",
+    "Nollywood"
+  ],
+  "languages": [
+    "English"
+  ],
+  "synopsis": "Three close friends take their ideal-partner checklists into a bachelorette getaway at a luxury resort, where new attractions, concealed relationships and conflicting expectations force them to reconsider whether love can really be reduced to a list of requirements.",
+  "cast": [
+    "Bimbo Ademoye",
+    "Ayoola Ayolola",
+    "Linda Osifo",
+    "Beverly Osu"
+  ],
+  "featuredCast": [
+    "Bimbo Ademoye",
+    "Ayoola Ayolola",
+    "Linda Osifo"
+  ],
+  "directors": [
+    "Yemi Morafa"
+  ],
+  "runtimeMinutes": 92,
+  "featured": true,
+  "references": [
+    {
+      "label": "African Movie Database — The Checklist (2026)",
+      "href": "https://africanmoviedb.com/title/the-checklist-2026",
+      "lastChecked": "2026-10-06",
+      "note": "Independent film reference used to verify the 2 October 2026 release, 92-minute runtime, story, cast and director."
+    },
+    {
+      "label": "ChinneyLoveEze TV — The Checklist",
+      "href": "https://www.youtube.com/watch?v=RRsydYe61tg",
+      "lastChecked": "2026-10-05",
+      "note": "Official full-length upload identified by the site's YouTube API ingestion."
+    }
+  ],
+  "watchLinks": [
+    {
+      "platform": "YouTube",
+      "label": "Watch the full movie on ChinneyLoveEze TV",
+      "href": "https://www.youtube.com/watch?v=RRsydYe61tg",
+      "access": "full-movie",
+      "lastChecked": "2026-10-05",
+      "note": "Official full-length release on ChinneyLoveEze TV.",
+      "publisher": "ChinneyLoveEze TV",
+      "publisherUrl": "https://www.youtube.com/@chinneyloveezetv"
+    }
+  ]
+}
 ];
