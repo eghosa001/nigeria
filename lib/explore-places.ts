@@ -1,3 +1,5 @@
+import { exploreGrowthWaveSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06";
+
 export type ExplorePlaceKind = "attraction" | "nature" | "restaurant" | "hotel" | "shopping" | "landmark";
 
 export type ExplorePlace = {
@@ -3012,6 +3014,7 @@ const nationalLandmarkPlaceSlugs = [
 ] as const;
 
 const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
+  ...exploreGrowthWaveSharedPlaceSlugs,
   "nigeria-landmarks-places-to-visit": nationalLandmarkPlaceSlugs,
   "felabration-2026": [
     "new-afrika-shrine-felabration-2026",
