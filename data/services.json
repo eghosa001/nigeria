@@ -324,7 +324,11 @@
       "NIN date of birth fee",
       "NIN DOB modification fee"
     ],
-    "related": []
+    "related": [
+      "nin-name-modification",
+      "nin-phone-modification",
+      "nin-address-modification"
+    ]
   },
   {
     "slug": "new-drivers-licence",
@@ -1901,7 +1905,11 @@
       "How to apply for NPC birth attestation as an adult",
       "Civil records"
     ],
-    "related": []
+    "related": [
+      "npc-check-attestation-status",
+      "npc-child-birth-registration",
+      "npc-digital-birth-certificate-reissuance"
+    ]
   },
   {
     "slug": "npc-child-birth-registration",
@@ -1947,7 +1955,11 @@
       "How NPC birth registration works for a child",
       "Civil records"
     ],
-    "related": [],
+    "related": [
+      "npc-birth-attestation",
+      "npc-birth-certificate-reprint",
+      "npc-modify-birth-record"
+    ],
     "feeNote": "No single current amount is quoted here unless it is shown by the verified NPC route. Confirm any charge displayed in NPC's official self-service process before payment."
   },
   {
@@ -2093,7 +2105,11 @@
       "How to register as an individual taxpayer with NRS",
       "Tax"
     ],
-    "related": []
+    "related": [
+      "nrs-tax-id-retrieval",
+      "nrs-self-tax-filing",
+      "nrs-tax-payment"
+    ]
   },
   {
     "slug": "nrs-corporate-tax-registration",
@@ -2222,7 +2238,11 @@
       "How to obtain a CAC status report",
       "Business"
     ],
-    "related": []
+    "related": [
+      "cac-certified-true-copy",
+      "cac-public-search",
+      "cac-annual-returns"
+    ]
   },
   {
     "slug": "cac-certified-true-copy",
@@ -2321,7 +2341,11 @@
       "How much is JAMB Direct Entry registration in 2026?",
       "Education"
     ],
-    "related": []
+    "related": [
+      "jamb-profile-code",
+      "jamb-caps",
+      "jamb-admission-letter"
+    ]
   },
   {
     "slug": "jamb-reset-profile-password",
@@ -2679,7 +2703,11 @@
       "How to check NPC birth-attestation status",
       "Civil records"
     ],
-    "related": [],
+    "related": [
+      "npc-birth-attestation",
+      "npc-digital-birth-certificate-reissuance",
+      "npc-birth-certificate-reprint"
+    ],
     "feeNote": "The verified NPC sources do not state an extra fee merely to resume or check an existing attestation with its payment reference. This does not replace any fee that applied to the original attestation request."
   },
   {
@@ -3280,7 +3308,11 @@
       "What to do if your Nigerian passport is lost",
       "Immigration"
     ],
-    "related": []
+    "related": [
+      "passport-renewal",
+      "first-nigerian-passport",
+      "emergency-travel-certificate"
+    ]
   },
   {
     "slug": "nin-slip-reissue",
@@ -3386,7 +3418,11 @@
       "NIN name correction",
       "change name on NIN online"
     ],
-    "related": []
+    "related": [
+      "nin-date-of-birth-modification",
+      "nin-phone-modification",
+      "nin-address-modification"
+    ]
   },
   {
     "slug": "nin-phone-modification",
@@ -3608,7 +3644,11 @@
       "How to print a JAMB admission letter",
       "Education"
     ],
-    "related": []
+    "related": [
+      "jamb-caps",
+      "jamb-matriculation-list",
+      "jamb-print-result"
+    ]
   },
   {
     "slug": "waec-withheld-result-complaint",
@@ -4258,7 +4298,11 @@
       "Police Character Certificate application Nigeria"
     ],
     "lastVerified": "2026-10-05",
-    "related": []
+    "related": [
+      "first-nigerian-passport",
+      "passport-application-abroad",
+      "ecowas-travel-certificate"
+    ]
   },
   {
     "slug": "inec-pvc-status",
