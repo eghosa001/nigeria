@@ -1,4 +1,3 @@
-import { exploreGrowthWave5 } from "@/lib/explore-growth-wave-5";
 import { exploreGrowthWave3 } from "@/lib/explore-growth-wave-3";
 import { exploreGrowthWave2 } from "@/lib/explore-growth-wave-2";
 import { exploreGrowthWave } from "@/lib/explore-growth-wave-2026-10-06";
@@ -21,7 +20,6 @@ export type ExploreGuide = {
 };
 
 export const exploreGuides: ExploreGuide[] = [
-  ...exploreGrowthWave5,
   ...exploreGrowthWave3,
   ...exploreGrowthWave2,
   ...exploreGrowthWave,
