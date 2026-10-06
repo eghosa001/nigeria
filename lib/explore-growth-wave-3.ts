@@ -54,5 +54,32 @@ export const exploreGrowthWave3: ExploreGuide[] = [
     ],
     source: { label: "CEA Nigeria 2026 official website — verify current dates", href: "https://cea-nigeria.com/" },
     lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "african-creators-conference-abuja-2026",
+    title: "African Creators Conference 2.0 Abuja 2026: Date, Venue & Planning",
+    shortTitle: "African Creators Conference 2.0",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "African Creators Conference 2.0 is scheduled for 30 October 2026 from 8:30 AM to 5:00 PM at Abuja Trade and Convention Centre in Lugbe, bringing creators, innovators, investors and policymakers together across creative, digital, fintech and green-innovation sectors.",
+    intro: [
+      "African Creators Conference 2.0 is a one-day Abuja conference scheduled for Friday 30 October 2026 at Abuja Trade and Convention Centre, KM 8 Umaru Musa Yar'Adua Road, Lugbe. Visit Abuja lists doors from 8:00 AM and the programme from 8:30 AM to 5:00 PM.",
+      "The conference is organised by Branddek Limited and brings together creators, innovators, investors and policymakers across Africa's creative, digital, fintech and green-innovation sectors. The official city listing says the 2025 edition drew more than 3,000 attendees."
+    ],
+    bestFor: ["Creators", "Technology", "Fintech", "Networking"],
+    highlights: [
+      { name: "30 October 2026", detail: "The current Visit Abuja listing gives an 8:30 AM–5:00 PM programme, with doors opening at 8:00 AM." },
+      { name: "Abuja Trade and Convention Centre", detail: "The listed venue is KM 8 Umaru Musa Yar'Adua Road in the Lugbe/Airport Road corridor." },
+      { name: "Cross-sector creator economy", detail: "The conference connects creative-industry, digital, fintech and green-innovation participants with investors and policymakers." },
+      { name: "Free parking listed", detail: "The current event listing states that free parking is available on site; reconfirm access arrangements before travelling." }
+    ],
+    planning: [
+      { label: "Confirm registration before travelling", detail: "Use the organiser-linked registration route and verify the live ticket or registration status before setting out." },
+      { label: "Plan Airport Road travel", detail: "The venue is in Lugbe rather than central Abuja, so allow realistic time from Wuse, Maitama or the CBD." },
+      { label: "Arrive before the programme starts", detail: "Doors are listed for 8:00 AM, giving time for registration, security and finding the conference space before the 8:30 AM start." },
+      { label: "Re-check the agenda", detail: "Speaker order, sessions and access details can change; confirm the current organiser programme close to 30 October." }
+    ],
+    source: { label: "Visit Abuja — African Creators Conference 2.0", href: "https://www.visitabuja.org/event/african-creators-conference-2-0/" },
+    lastReviewed: "2026-10-06"
   }
 ];
