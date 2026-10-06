@@ -19,8 +19,8 @@ const searchMomentumMovieSlugs = [
   "the-bride-switch",
   "oversabi-aunty",
   "millionaire-until-morning",
+  "beauty-in-scars-2026",
   "colours-of-fire",
-  "king-of-thieves-2",
 ];
 
 const popularMovieSearchLinks = [
@@ -29,9 +29,9 @@ const popularMovieSearchLinks = [
   { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
   { label: "The Bride Switch", href: "/entertainment/movies/the-bride-switch" },
   { label: "Love Always Wins", href: "/entertainment/movies/love-always-wins-2026" },
-  { label: "Once Upon a Village", href: "/entertainment/youtube/Yu-QxqPDmXM" },
+  { label: "Beauty In Scars", href: "/entertainment/movies/beauty-in-scars-2026" },
   { label: "What Tomorrow Holds", href: "/entertainment/movies/what-tomorrow-holds-2026" },
-  { label: "Gingerrr", href: "/entertainment/movies/gingerrr" },
+  { label: "In Every Lifetime", href: "/entertainment/movies/in-every-lifetime" },
 ];
 
 export default function EntertainmentPage() {
