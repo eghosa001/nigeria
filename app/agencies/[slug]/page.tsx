@@ -31,6 +31,8 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
   if (!agency) notFound();
 
   const agencyServices = getServicesByAgency(slug);
+  const visibleServices = agencyServices.slice(0, 24);
+  const moreServices = agencyServices.slice(24);
   const base = getSiteUrl();
   const pageUrl = base + "/agencies/" + agency.slug;
 
@@ -106,8 +108,18 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
           ) : null}
 
           <div className="service-grid top-gap">
-            {agencyServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
+            {visibleServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
           </div>
+          {moreServices.length ? (
+            <details className="browse-disclosure top-gap">
+              <summary>Browse {moreServices.length} more {agency.shortName} guides</summary>
+              <div className="disclosure-link-grid">
+                {moreServices.map((service) => (
+                  <a href={"/services/" + service.slug} key={service.slug}>{service.shortTitle}</a>
+                ))}
+              </div>
+            </details>
+          ) : null}
         </div>
       </section>
     </>
