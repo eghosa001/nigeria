@@ -79,7 +79,7 @@ const youtubeListingCopy = /\b(full movie|complete movie|latest full movies?|nol
 for (const movie of generatedYouTubeMovies) {
   const prefix = "YouTube " + movie.videoId + ": ";
   assert(movie.title.trim().length > 1, prefix + "clean title is required.");
-  assert(!/[🎬🔥✨💥😍🤩]/u.test(movie.synopsis), prefix + "synopsis must not expose promotional emoji.");
+  assert(!/\p{Extended_Pictographic}/u.test(movie.synopsis), prefix + "synopsis must not expose promotional emoji.");
   assert(!youtubePresentationHype.test(movie.synopsis), prefix + "synopsis must not expose promotional publisher copy.");
   assert(!youtubeListingCopy.test(movie.synopsis), prefix + "synopsis must not expose raw listing metadata.");
   for (const name of movie.cast) {
