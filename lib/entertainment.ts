@@ -1,5 +1,4 @@
 import { entertainmentGrowthWave3 } from "@/lib/entertainment-growth-wave-3";
-import { entertainmentGrowthWave5 } from "@/lib/entertainment-growth-wave-5";
 import { entertainmentGrowthWave2 } from "@/lib/entertainment-growth-wave-2";
 
 export type EntertainmentPlatform = "Netflix" | "YouTube" | "Prime Video" | "Kava" | "Cinema" | "Africa Magic";
@@ -84,7 +83,6 @@ export type EntertainmentTitle = {
 };
 
 export const entertainmentTitles: EntertainmentTitle[] = [
-  ...entertainmentGrowthWave5,
   ...entertainmentGrowthWave3,
   ...entertainmentGrowthWave2,
   {
