@@ -62,7 +62,10 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
     genre:item.genres,
     inLanguage:item.languages,
     actor:item.cast.map((name)=>({"@type":"Person",name})),
-    creator:item.creators?.map((name)=>({"@type":"Person",name}))
+    creator:item.creators?.map((name)=>({"@type":"Person",name})),
+    countryOfOrigin:{ "@type":"Country", name:item.country },
+    dateModified:checked,
+    sameAs:item.watchLinks.map((link)=>link.href)
   };
 
   return (
@@ -74,15 +77,16 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
           <span className="eyebrow">{item.year} Nigerian series</span>
           <h1>{item.title}</h1>
           <p className="page-intro">{item.synopsis}</p>
+          <p className="movie-freshness-note">Applies to {item.country} · {item.year} series · availability and sources checked {checked}.</p>
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Cast, status and where to watch " + item.title}
             summary={item.synopsis}
             facts={[
+              { label: "Country / year", value: item.country + " · " + item.year },
               { label: "Status", value: item.status },
-              { label: "Release", value: item.premiereLabel ?? String(item.year) },
-              { label: "Featured cast", value: item.cast.slice(0, 3).join(", ") || "Cast not listed yet" },
               { label: "Where to watch", value: [...new Set(item.watchLinks.map((link) => link.platform))].join(" / ") || "No current official platform listed" },
+              { label: "Availability checked", value: checked },
             ]}
             links={[
               { href: "#cast", label: "See cast" },
@@ -108,6 +112,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
                 <article><span>Year</span><strong>{item.year}</strong></article>
                 <article><span>Country</span><strong>{item.country}</strong></article>
                 <article><span>Status</span><strong>{item.status}</strong></article>
+                <article><span>Sources checked</span><strong>{checked}</strong></article>
                 {item.premiereLabel?<article><span>Release</span><strong>{item.premiereLabel}</strong></article>:null}
                 {item.episodeInfo?<article><span>Episodes / run</span><strong>{item.episodeInfo}</strong></article>:null}
                 <article><span>Languages</span><strong>{item.languages.join(", ")}</strong></article>
@@ -143,7 +148,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
 
             <section>
               <span className="eyebrow">Artwork & rights</span>
-              <h2>How visuals are handled</h2>
+              <h2>How visuals for {item.title} are handled</h2>
               <p className="movie-long-summary">{item.artworkNote}</p>
             </section>
 
@@ -157,7 +162,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
 
             <section>
               <span className="eyebrow">Sources</span>
-              <h2>How this page was verified</h2>
+              <h2>Sources used to verify {item.title}</h2>
               <div className="source-list">
                 {item.sources.map((source)=><a href={source.url} target="_blank" rel="noreferrer" key={source.url}><strong>{source.label}</strong><span>Checked {source.lastChecked} ↗</span></a>)}
               </div>
