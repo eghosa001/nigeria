@@ -253,7 +253,11 @@ const representative = [
     "slug": "nin-date-of-birth-modification",
     "status": "verified",
     "officialPortal": "https://selfservicemodification.nimc.gov.ng/",
-    "related": [],
+    "related": [
+      "nin-name-modification",
+      "nin-phone-modification",
+      "nin-address-modification"
+    ],
     "sources": [
       "https://nimc.gov.ng/fees",
       "https://nimc.gov.ng/self-service-modifications/",
