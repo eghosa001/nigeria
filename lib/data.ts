@@ -1,6 +1,7 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
+import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
 import type { Agency, Service, VerificationStatus } from "@/lib/types";
 import { validateServiceCatalog } from "@/lib/service-records";
 import { serviceScaleAgencies, serviceScaleCategories } from "@/lib/service-scale-metadata";
@@ -437,7 +438,7 @@ export const agencies: Agency[] = [
 
 agencies.push(...serviceScaleAgencies);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
