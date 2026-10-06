@@ -389,8 +389,19 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
 
 function cleanTitle(raw, cast = []) {
   let title = String(raw ?? "").replace(/\p{Extended_Pictographic}/gu, " ").replace(/\s+/g, " ").trim();
-  const watchInMatch = title.match(/^watch\s+.+?\s+in\s+(.+?)(?:\s*[-|]\s*(?:nigerian|nollywood|african|latest|20\d{2})\b.*)?$/i);
+
+  // Treat "(Full Movie)" / "(New Movie)" as feed metadata when it follows a real title.
+  // Cutting at the marker also removes actor/SEO text that many channels append after it.
+  const feedMovieMarker = title.search(/\s*\((?:full|complete|new)\s+movie\)/i);
+  if (feedMovieMarker > 1) title = title.slice(0, feedMovieMarker).trim();
+
+  // Only use "Watch ... in TITLE" extraction for compact feed labels, not prose
+  // such as "Watch Ruke and Jess begin to fall in love".
+  const watchInMatch = title.length <= 110
+    ? title.match(/^watch\s+(?:[A-Z][\w.'’-]+(?:\s+[A-Z][\w.'’-]+){0,3})\s+in\s+(.+?)(?:\s*[-|]\s*(?:nigerian|nollywood|african|latest|20\d{2})\b.*)?$/i)
+    : null;
   if (watchInMatch?.[1]) title = watchInMatch[1].trim();
+
   title = title.replace(/^(?:nollywood|nigerian)\s+movie(?:\s*\([^)]*\))?\s*:\s*/i, "");
   title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
   title = title.split("|")[0].trim();
@@ -414,6 +425,7 @@ function cleanTitle(raw, cast = []) {
   }
 
   title = title.replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ");
+  title = title.replace(/\s+(?:latest|lastest)\s+20\d{2}\b.*$/i, " ");
   title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, " ");
   title = title.replace(/[.\s-]*\b(?:starring|featuring|feat\.?|ft\.?)\b.*$/i, " ");
   title = title.replace(/\s*-\s*new\s+["'“”]?latest\b.*$/i, " ");
