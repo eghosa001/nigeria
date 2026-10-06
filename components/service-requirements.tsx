@@ -11,9 +11,9 @@ export function ServiceRequirements({ service }: { service: Service }) {
   return (
     <section id="requirements">
       <span className="section-number" aria-hidden="true">01</span>
-      <h2>Documents, details and prerequisites you need</h2>
+      <h2>Requirements for {service.shortTitle}</h2>
       <p className="guide-section-intro">
-        This is the complete pre-start checklist from the verified guide. Each item below explains what it is for,
+        This is the complete pre-start checklist for {service.shortTitle}. Each item below explains what it is for,
         where it enters the process and whether the official source actually specifies an original, copy or upload.
       </p>
 
