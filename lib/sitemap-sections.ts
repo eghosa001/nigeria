@@ -63,6 +63,15 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     ...releaseItems.map((item) => item.lastChecked),
   ]);
   const updateModified = latestDate(myNigeriaGuideUpdates.map((update) => update.date)) || serviceModified;
+  const seriesModified = latestDate(seriesTitles.map(seriesLastChecked)) || movieCatalogModified;
+  const latestHubModified = latestDate([
+    updateModified,
+    serviceModified,
+    exploreModified,
+    jobsModified,
+    movieCatalogModified,
+    seriesModified,
+  ]);
 
   if (section === "core") {
     const staticPaths = [
@@ -72,7 +81,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     return [
       ...staticPaths.map((path) => ({
         url: base + path,
-        lastModified: path === "/updates" || path === "/latest" ? updateModified : serviceModified,
+        lastModified: path === "/latest" ? latestHubModified : path === "/updates" ? updateModified : serviceModified,
       })),
       ...categories.map((category) => ({
         url: base + "/categories/" + categorySlug(category.name),
@@ -167,7 +176,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },
       { url: base + "/entertainment/platforms", lastModified: movieCatalogModified },
       { url: base + "/entertainment/people", lastModified: movieCatalogModified },
-      { url: base + "/entertainment/series", lastModified: latestDate(seriesTitles.map(seriesLastChecked)) || movieCatalogModified },
+      { url: base + "/entertainment/series", lastModified: seriesModified },
       ...seriesTitles.map((item) => ({
         url: base + "/entertainment/series/" + item.slug,
         lastModified: seriesLastChecked(item) || movieCatalogModified,
