@@ -45,6 +45,7 @@ const generatedSynopsisMeaning = /^\s*(?:it|this title|the phrase)\s+(?:signifie
 
 function normalizeGeneratedTitle(value: string) {
   return String(value ?? "")
+    .replace(/\p{Extended_Pictographic}/gu, " ")
     .replace(/\s*\((?:full|complete)\s+movie\)\s*/gi, " ")
     .replace(/\s*(?:[-–—|/:]\s*)?(?:full|complete)\s+(?:nigerian\s+|nollywood\s+|african\s+)?movie\b.*$/i, " ")
     .replace(/\s+(?:latest\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movies?\b.*$/i, " ")
@@ -118,7 +119,7 @@ function normalizeGeneratedSynopsis(movie: GeneratedRecord, title: string, cast:
     generatedSynopsisHype.test(text) ||
     generatedSynopsisListing.test(text) ||
     generatedSynopsisMeaning.test(text) ||
-    /[🎬🔥✨💥😍🤩]/u.test(text)
+    /\p{Extended_Pictographic}/u.test(text)
   ) {
     return neutralGeneratedSynopsis(movie, title, cast);
   }
