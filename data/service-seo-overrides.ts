@@ -56,6 +56,9 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "pencom-rsa-mortgage-equity-contribution": "Use RSA for Mortgage Nigeria {year}: 25% Pension Equity Rules",
   "pencom-programmed-withdrawal-retirement": "Programmed Withdrawal Nigeria {year}: RSA Retirement Pension",
   "pencom-death-benefits-claim": "Pension Death Benefits Nigeria {year}: RSA Claim Steps",
+  "pencom-rsa-data-recapture": "Pension Data Recapture Nigeria {year}: RSA Requirements & Steps",
+  "pencom-uncredited-contributions": "Uncredited Pension Contributions {year}: How to Resolve",
+  "pencom-multiple-rsa-resolution": "Multiple RSA PINs Nigeria {year}: How to Resolve & Merge",
   "inec-replace-lost-damaged-pvc": "Replace Lost or Damaged PVC {year}: INEC Steps",
   "inec-voter-transfer": "INEC Voter Transfer {year}: Change Voting Location",
 };
