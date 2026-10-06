@@ -23,7 +23,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -102,7 +102,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -181,7 +181,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -260,7 +260,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -339,7 +339,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -418,7 +418,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -497,7 +497,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -576,7 +576,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -655,7 +655,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
@@ -734,7 +734,7 @@ export const jobGrowthWave: CareerOpportunity[] = [
       "note": "Kaduna State's official recruitment portal publicly lists this exact PHCB vacancy, closing date, placement grade and Apply control."
     },
     "topicSlugs": [
-      "healthcare"
+      "healthcare-pharma"
     ],
     "sector": "Government",
     "status": "open",
