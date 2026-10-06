@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-01",
-  "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported.",
+  "checkedAt": "2026-10-05",
+  "note": "Discovery estimates are conservative capacity-planning values, not published-movie counts. Every channel is re-resolved and validated against the official YouTube Data API before any video is imported. New producer/network sources remain optional until the API identity and publisher-context checks pass.",
   "sources": [
     {
       "slug": "ruthkadiri247",
@@ -348,7 +348,8 @@
         "Chizzyflix"
       ],
       "estimatedMovieCount": 50,
-      "optional": true
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/@chizzyflix"
     },
     {
       "slug": "orji-tv",
@@ -367,7 +368,8 @@
         "Kiki Bakare TV"
       ],
       "estimatedMovieCount": 35,
-      "optional": true
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/channel/UC5jC8VPJvB8V4NuAKZA3t8g"
     },
     {
       "slug": "efe-irele-tv",
@@ -600,6 +602,358 @@
         "Rachel Edwards"
       ],
       "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "kiekie-tv",
+      "searchName": "KieKieTV",
+      "aliases": [
+        "KieKieTV",
+        "KieKie TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/@kiekietv",
+      "optional": true
+    },
+    {
+      "slug": "itelediconstudio",
+      "searchName": "Itelediconstudio",
+      "aliases": [
+        "Itelediconstudio",
+        "Itele D Icon Studio"
+      ],
+      "estimatedMovieCount": 45,
+      "knownUrl": "https://www.youtube.com/@itelediconstudio",
+      "optional": true
+    },
+    {
+      "slug": "chioma-nwaoha-premium-tv",
+      "searchName": "CHIOMA NWAOHA PREMIUM TV",
+      "aliases": [
+        "CHIOMA NWAOHA PREMIUM TV",
+        "Chioma Nwaoha Premium TV"
+      ],
+      "estimatedMovieCount": 35,
+      "knownUrl": "https://www.youtube.com/channel/UCeCZZilhjHUpE3-EH50qLPQ",
+      "optional": true
+    },
+    {
+      "slug": "georgina-ibeh-tv",
+      "searchName": "GEORGINA IBEH TV",
+      "aliases": [
+        "GEORGINA IBEH TV",
+        "Georgina Ibeh TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/channel/UCt8C0h1RscuQL6P0nGDkXIg",
+      "optional": true
+    },
+    {
+      "slug": "oafp-tv",
+      "searchName": "OAFP TV",
+      "aliases": [
+        "OAFP TV",
+        "O.A.F.P TV",
+        "Odunlade Adekola Films Production"
+      ],
+      "estimatedMovieCount": 40,
+      "knownUrl": "https://www.youtube.com/channel/UCp6EsFAaymeJYY0IlqXwmdw",
+      "optional": true
+    },
+    {
+      "slug": "wumi-toriola-tv",
+      "searchName": "Wumitoriolatv",
+      "aliases": [
+        "Wumitoriolatv",
+        "Wumi Toriola TV",
+        "WumiToriolaTV"
+      ],
+      "estimatedMovieCount": 45,
+      "knownUrl": "https://www.youtube.com/@wumitoriolatv",
+      "optional": true
+    },
+    {
+      "slug": "lizzygold-tv",
+      "searchName": "LizzyGold Tv",
+      "aliases": [
+        "LizzyGold Tv",
+        "Lizzygold Tv",
+        "Lizzy Gold TV"
+      ],
+      "estimatedMovieCount": 80,
+      "knownUrl": "https://www.youtube.com/channel/UCDHPAuCA5JKzq_ujcy4meXg",
+      "optional": true
+    },
+    {
+      "slug": "ik-ogbonna-tv",
+      "searchName": "IK Ogbonna tv",
+      "aliases": [
+        "IK Ogbonna tv",
+        "IK Ogbonna TV",
+        "IK Ogbonnatv"
+      ],
+      "estimatedMovieCount": 15,
+      "knownUrl": "https://www.youtube.com/channel/UC5yRp5BM4B18YozMT_1GxKw",
+      "optional": true
+    },
+    {
+      "slug": "mr-aloy-tv",
+      "searchName": "Mr Aloy TV",
+      "aliases": [
+        "Mr Aloy TV",
+        "MrAloyTV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/channel/UCoPAnHtnoM7f0p7BfApC5-g",
+      "optional": true
+    },
+    {
+      "slug": "kanayo-o-kanayo-tv",
+      "searchName": "Kanayo O Kanayo Tv",
+      "aliases": [
+        "Kanayo O Kanayo Tv",
+        "Kanayo O Kanayo TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/@kanayookanayotv",
+      "optional": true
+    },
+    {
+      "slug": "accelerate-movies",
+      "searchName": "Accelerate Movies",
+      "aliases": [
+        "Accelerate Movies"
+      ],
+      "estimatedMovieCount": 20,
+      "knownUrl": "https://www.youtube.com/@AccelerateMovies",
+      "optional": true
+    },
+    {
+      "slug": "sydiwundu-tv",
+      "searchName": "SydIwunduTv",
+      "aliases": [
+        "SydIwunduTv",
+        "Syd Iwundu TV"
+      ],
+      "estimatedMovieCount": 50,
+      "knownUrl": "https://www.youtube.com/@sydiwundu",
+      "optional": true
+    },
+    {
+      "slug": "motolani-tv",
+      "searchName": "MO'TOLANI TV",
+      "aliases": [
+        "MO'TOLANI TV",
+        "MO’TOLANI TV",
+        "MOTOLANI TV"
+      ],
+      "estimatedMovieCount": 60,
+      "optional": true
+    },
+    {
+      "slug": "ifyeze-nolly-tv",
+      "searchName": "IfyEze Nolly tv",
+      "aliases": [
+        "IfyEze Nolly tv",
+        "IfyEze Nolly TV",
+        "IFY EZE NOLLY TV"
+      ],
+      "estimatedMovieCount": 55,
+      "knownUrl": "https://www.youtube.com/channel/UCFVseBemDz2KhVgh4S0-U1g",
+      "optional": true
+    },
+    {
+      "slug": "wale-rasaq-tv",
+      "searchName": "Wale Rasaq TV",
+      "aliases": [
+        "Wale Rasaq TV"
+      ],
+      "estimatedMovieCount": 70,
+      "knownUrl": "https://www.youtube.com/channel/UCguvNkpwGccivUExfiQyZFA",
+      "optional": true
+    },
+    {
+      "slug": "eso-dike-tv",
+      "searchName": "Eso Dike TV",
+      "aliases": [
+        "Eso Dike TV"
+      ],
+      "estimatedMovieCount": 45,
+      "optional": true
+    },
+    {
+      "slug": "papayaex-tv",
+      "searchName": "PAPAYAEXTV",
+      "aliases": [
+        "PAPAYAEXTV",
+        "PapayaExTV",
+        "Papaya Ex TV"
+      ],
+      "estimatedMovieCount": 25,
+      "knownUrl": "https://www.youtube.com/@papayaextv",
+      "optional": true
+    },
+    {
+      "slug": "kolawole-ajeyemi-channel",
+      "searchName": "KolawoleAjeyemi Channel",
+      "aliases": [
+        "KolawoleAjeyemi Channel",
+        "Kolawole Ajeyemi Channel"
+      ],
+      "estimatedMovieCount": 20,
+      "knownUrl": "https://www.youtube.com/channel/UCT7_EAKyFd6WsL8MirybSCw",
+      "optional": true
+    },
+    {
+      "slug": "macida-tv",
+      "searchName": "MacidaTv",
+      "aliases": [
+        "MacidaTv",
+        "Macida TV"
+      ],
+      "estimatedMovieCount": 55,
+      "knownUrl": "https://www.youtube.com/channel/UCwEhtyYsO35SVr9Cf8PexOA",
+      "optional": true
+    },
+    {
+      "slug": "kamdaz-tv",
+      "searchName": "Kamdaz TV",
+      "aliases": [
+        "Kamdaz TV"
+      ],
+      "estimatedMovieCount": 35,
+      "knownUrl": "https://www.youtube.com/channel/UCIHFWe24QxauUBiELaIDbcA",
+      "optional": true
+    },
+    {
+      "slug": "mrlatin-tv",
+      "searchName": "MRLATINTV",
+      "aliases": [
+        "MRLATINTV",
+        "MR LATIN TV",
+        "Mr Latin TV"
+      ],
+      "estimatedMovieCount": 45,
+      "optional": true
+    },
+    {
+      "slug": "sunyrichytek-movies",
+      "searchName": "SUNYRICHYTEK MOVIES",
+      "aliases": [
+        "SUNYRICHYTEK MOVIES",
+        "Sunyrichytek Movies"
+      ],
+      "estimatedMovieCount": 70,
+      "knownUrl": "https://www.youtube.com/channel/UCbdGgurpSOnKCa2wxuvDVeA",
+      "optional": true
+    },
+    {
+      "slug": "whizzy-films",
+      "searchName": "WHIZZY FILMS",
+      "aliases": [
+        "WHIZZY FILMS",
+        "Whizzy Films"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "sotayo-gaga-tv",
+      "searchName": "Sotayo Gaga Tv",
+      "aliases": [
+        "Sotayo Gaga Tv",
+        "Sotayo Gaga TV"
+      ],
+      "estimatedMovieCount": 25,
+      "optional": true
+    },
+    {
+      "slug": "iseda-tv",
+      "searchName": "ISEDATV",
+      "aliases": [
+        "ISEDATV",
+        "ISEDA TV"
+      ],
+      "estimatedMovieCount": 25,
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/@isedatvv"
+    },
+    {
+      "slug": "debsam-tv",
+      "searchName": "DEBSAM TV",
+      "aliases": [
+        "DEBSAM TV"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
+    },
+    {
+      "slug": "capital-dreams-pictures",
+      "searchName": "CAPital Dreams Pictures",
+      "aliases": [
+        "CAPital Dreams Pictures",
+        "Capital Dreams Pictures"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true,
+      "knownUrl": "https://www.youtube.com/@CAPitalDreamsPictures"
+    },
+    {
+      "slug": "dashing-films",
+      "searchName": "Dashing Films",
+      "aliases": [
+        "Dashing Films"
+      ],
+      "estimatedMovieCount": 20,
+      "knownUrl": "https://www.youtube.com/@dashingfilmTV",
+      "optional": true
+    },
+    {
+      "slug": "mun-media-entertainment",
+      "searchName": "MUN MEDIA ENTERTAINMENT",
+      "aliases": [
+        "MUN MEDIA ENTERTAINMENT",
+        "Mun Media Entertainment"
+      ],
+      "estimatedMovieCount": 30,
+      "optional": true
+    },
+    {
+      "slug": "tana-adelana-tv",
+      "searchName": "Tana Adelana TV",
+      "aliases": [
+        "Tana Adelana TV"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
+    },
+    {
+      "slug": "selassie-ibrahim-tv",
+      "searchName": "Selassie Ibrahim TV",
+      "aliases": [
+        "Selassie Ibrahim TV"
+      ],
+      "estimatedMovieCount": 20,
+      "optional": true
+    },
+    {
+      "slug": "nosarexfamtv",
+      "searchName": "Nosarexfamtv",
+      "aliases": [
+        "Nosarexfamtv",
+        "NOSAREXFAMTV"
+      ],
+      "estimatedMovieCount": 30,
+      "knownUrl": "https://www.youtube.com/channel/UCgvYAzU9Xp5N2jEITv0ZRPQ",
+      "optional": true
+    },
+    {
+      "slug": "stephanie-tum-tv",
+      "searchName": "Stephanie Tum TV",
+      "aliases": [
+        "Stephanie Tum TV"
+      ],
+      "estimatedMovieCount": 20,
       "optional": true
     }
   ]

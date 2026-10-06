@@ -45,6 +45,8 @@ export default async function CategoryPage({
   if (!category) notFound();
 
   const services = publicServices.filter((service) => service.category === category.name);
+  const visibleServices = services.slice(0, 24);
+  const moreServices = services.slice(24);
   const agencies = [...new Set(services.map((service) => service.agencySlug.toUpperCase()))];
   const base = getSiteUrl();
   const faqs = getCategoryFaqs(category.name);
@@ -193,8 +195,21 @@ export default async function CategoryPage({
           </div>
 
           <div className="service-grid">
-            {services.map((service) => <ServiceCard key={service.slug} service={service} />)}
+            {visibleServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
           </div>
+
+          {moreServices.length ? (
+            <details className="browse-disclosure top-gap">
+              <summary>Browse {moreServices.length} more {category.name.toLowerCase()} guides</summary>
+              <div className="disclosure-link-grid">
+                {moreServices.map((service) => (
+                  <Link key={service.slug} href={"/services/" + service.slug}>
+                    {service.shortTitle}
+                  </Link>
+                ))}
+              </div>
+            </details>
+          ) : null}
 
           <CategoryFaqs category={category.name} />
         </div>
