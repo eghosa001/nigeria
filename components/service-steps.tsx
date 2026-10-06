@@ -7,9 +7,9 @@ export function ServiceSteps({ service }: { service: Service }) {
   return (
     <section id="steps">
       <span className="section-number" aria-hidden="true">02</span>
-      <h2>Step-by-step instructions</h2>
+      <h2>How to complete {service.shortTitle} step by step</h2>
       <p className="guide-section-intro">
-        Follow the process in order. Each step also shows what to have ready, what to check before continuing and what evidence to keep.
+        Follow the verified {service.shortTitle} process in order. Each step also shows what to have ready, what to check before continuing and what evidence to keep.
         Where the agency does not publish an extra requirement, this guide does not invent one.
       </p>
 
