@@ -64,6 +64,9 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "nrs-individual-tax-registration": "NRS taxpayer self-service registration {year}: register an individual taxpayer with NIN, use the official NRS portal and resume an existing registration safely.",
+  "nrs-tax-id-retrieval": "Nigeria Tax ID/TIN retrieval {year}: use the official NRS/JRB portal with NIN for individuals or CAC details for businesses, with no public retrieval fee shown.",
+  "jamb-caps": "JAMB CAPS {year}: check admission status, institution and course details, then accept or reject admission only through the candidate's official e-Facility/CAPS account.",
   "passport-appointment": "Book a Nigerian passport appointment in {year} through the official NIS portal, check centre availability and keep the correct appointment confirmation.",
   "passport-centre-availability": "Check the earliest Nigerian passport appointment dates by processing centre in {year} using the official NIS availability tool.",
   "passport-photo-compliance": "Check Nigerian passport photo compliance in {year} with the official NIS Test Photo Upload tool before continuing your application.",
