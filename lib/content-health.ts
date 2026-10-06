@@ -1,4 +1,5 @@
 import youtubeChannelCache from "@/data/youtube-channel-cache.json";
+import youtubeSourceRegistry from "@/data/youtube-movie-sources.json";
 import { publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { cinemaGuides, platformGuides, releaseItems } from "@/lib/entertainment-extras";
@@ -78,9 +79,19 @@ export function getContentHealth(now = new Date()) {
     if (found) issues.push(found);
   }
 
-  for (const [slug, value] of Object.entries(youtubeChannelCache as Record<string, { channelTitle?: string; lastScannedAt?: string }>)) {
-    const checkedAt = value.lastScannedAt?.slice(0, 10) ?? "";
-    const found = issue("System", value.channelTitle ?? slug, "/admin/entertainment", checkedAt, freshnessPolicy.youtube, "Approved YouTube channel scan is due.", now);
+  const youtubeCache = youtubeChannelCache as Record<string, { channelTitle?: string; lastScannedAt?: string }>;
+  for (const source of youtubeSourceRegistry.sources as Array<{ slug: string; searchName: string }>) {
+    const value = youtubeCache[source.slug];
+    const checkedAt = value?.lastScannedAt?.slice(0, 10) ?? "";
+    const found = issue(
+      "System",
+      value?.channelTitle ?? source.searchName,
+      "/admin/entertainment",
+      checkedAt,
+      freshnessPolicy.youtube,
+      value ? "Approved YouTube channel scan is due." : "Approved publisher has no completed channel scan yet.",
+      now,
+    );
     if (found) issues.push(found);
   }
 
