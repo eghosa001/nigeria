@@ -13,7 +13,7 @@ export function ForeignVisaFaqs({ service }: { service: Service }) {
   return (
     <section id="foreign-visa-questions" className="foreign-visa-faqs">
       <span className="section-number" aria-hidden="true">05</span>
-      <h2>Visa questions Nigerians commonly need answered</h2>
+      <h2>Common questions about {service.shortTitle} for Nigerian applicants</h2>
       <p className="guide-section-intro">
         Foreign visa rules are country-specific. These answers explain the issues that commonly cause confusion without inventing a universal bank balance, sponsor rule or appeal process.
       </p>
