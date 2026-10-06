@@ -62,6 +62,10 @@ export default function ExplorePage() {
   const itineraries = exploreGuides
     .filter((guide) => guide.kind === "itinerary")
     .sort((a, b) => a.shortTitle.localeCompare(b.shortTitle));
+  const currentEvents = exploreGuides
+    .filter((guide) => guide.kind === "event")
+    .sort((a, b) => b.lastReviewed.localeCompare(a.lastReviewed) || a.shortTitle.localeCompare(b.shortTitle))
+    .slice(0, 8);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -106,6 +110,31 @@ export default function ExplorePage() {
           </div>
         </div>
       </section>
+
+      {currentEvents.length ? (
+        <section className="section" aria-labelledby="current-events-heading">
+          <div className="container">
+            <div className="minimal-section-heading">
+              <div>
+                <span className="eyebrow">Current events</span>
+                <h2 id="current-events-heading">Fresh event guides to check now.</h2>
+                <p>Direct links to recently reviewed festivals and events help visitors and search engines reach time-sensitive guides without relying on filters.</p>
+              </div>
+              <Link href="/explore/events">All events →</Link>
+            </div>
+            <div className="home-category-grid compact-category-grid">
+              {currentEvents.map((guide) => (
+                <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
+                  <span>{guide.region} · reviewed {guide.lastReviewed}</span>
+                  <strong>{guide.shortTitle}</strong>
+                  <small>{guide.summary}</small>
+                  <i>Open event guide →</i>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
 
       <section className="section explore-place-section tour-place-section" id="places">
         <div className="container">
