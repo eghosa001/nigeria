@@ -39,19 +39,52 @@ export type YouTubeMovieRecord = BaseYouTubeMovieRecord & {
 
 type GeneratedRecord = Omit<BaseYouTubeMovieRecord, "source" | "internalHref">;
 
-const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|latest nigerian movies?|hottest|trending)\b/i;
-const generatedSynopsisSeo = /\b(?:full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
+const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
+const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
 
 function cleanYouTubeDisplayTitle(value: string) {
   return value
+    .replace(/\p{Extended_Pictographic}/gu, " ")
     .replace(/\s*\|\s*(?:nollywood|nigerian|african|latest|full)\b.*$/i, " ")
     .replace(/\s*;\s*[^;]*(?:,|20\d{2}).*$/i, " ")
     .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
     .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
-    .replace(/\s*\((?:full|complete)\s+movie\)\s*$/i, " ")
-    .replace(/\s+(?:full\s+movie|nollywood\s+movies?\s*20\d{2}.*|nigerian\s+movies?\s*20\d{2}.*)$/i, " ")
+    .replace(/\s*\((?:full|complete)\s+movie\)\s*/gi, " ")
+    .replace(/\s*(?:[-–—|/:]\s*)?(?:full|complete)\s+(?:nigerian\s+|nollywood\s+|african\s+)?movie\b.*$/i, " ")
+    .replace(/\s+(?:latest\s+)?(?:nigerian|nollywood|african)\s+(?:full\s+)?movies?\b.*$/i, " ")
     .replace(/\s+/g, " ")
     .trim();
+}
+
+function normalizeGeneratedCastName(value: string) {
+  let name = String(value ?? "")
+    .replace(/^[a-z]\s*[-–—]\s*/i, "")
+    .replace(/\b(?:starring|featuring|feat\.?|ft\.?)\b\s*[:\-]?\s*/gi, "")
+    .replace(/([A-Za-z])\.([A-Za-z])/g, "$1. $2")
+    .replace(/[#|]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/^[,.;:!?\s]+|[,.;:!?\s]+$/g, "");
+
+  if (name.split(/\s+/).length >= 2 && name === name.toUpperCase() && /[A-Z]/.test(name)) {
+    name = name
+      .toLowerCase()
+      .replace(/(^|[\s.'’\-])([a-z])/g, (_, prefix: string, letter: string) => prefix + letter.toUpperCase());
+  }
+
+  return name;
+}
+
+function normalizeGeneratedCast(values: string[]) {
+  return [...new Set(
+    values
+      .map(normalizeGeneratedCastName)
+      .filter((name) =>
+        name.length >= 3 &&
+        name.length <= 60 &&
+        !/\b(movie|film|latest|official|youtube|channel|subscribe|20\d{2})\b/i.test(name),
+      ),
+  )];
 }
 
 function generatedFallbackSynopsis(movie: GeneratedRecord) {
@@ -71,7 +104,14 @@ function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
   const generatedSuffix = text.search(/\s+is a full-length Nigerian film published by /i);
   if (generatedSuffix >= 0) return generatedFallbackSynopsis(movie);
 
-  if (!text || generatedSynopsisHype.test(text) || generatedSynopsisSeo.test(text)) {
+  if (
+    !text ||
+    text.length < 55 ||
+    generatedSynopsisHype.test(text) ||
+    generatedSynopsisSeo.test(text) ||
+    /^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(text) ||
+    /\p{Extended_Pictographic}/u.test(text)
+  ) {
     return generatedFallbackSynopsis(movie);
   }
 
@@ -146,8 +186,16 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
 });
 
 export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => {
-  const title = cleanYouTubeDisplayTitle(movie.title) || movie.title;
-  const normalizedMovie = { ...movie, title };
+  const title = cleanYouTubeDisplayTitle(movie.title || movie.rawTitle) || "Untitled Nigerian movie";
+  const cast = normalizeGeneratedCast(movie.cast ?? []);
+  const featuredCast = normalizeGeneratedCast(movie.featuredCast ?? []).filter((name) => cast.includes(name));
+  const normalizedMovie = {
+    ...movie,
+    title,
+    cast,
+    featuredCast: featuredCast.length ? featuredCast : cast.slice(0, 3),
+    metadataStatus: cast.length ? "complete" as const : "cast-pending" as const,
+  };
   return {
     ...normalizedMovie,
     synopsis: normalizeGeneratedSynopsis(normalizedMovie),
