@@ -81,6 +81,62 @@ export type EntertainmentTitle = {
 
 export const entertainmentTitles: EntertainmentTitle[] = [
   {
+    slug: "my-30th-wedding",
+    title: "My 30th Wedding",
+    year: 2026,
+    format: "movie",
+    genres: ["Romance", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "An ambitious event planner balancing career pressure and family expectations around marriage is forced to rethink work, relationships and the people around her after a demanding client hires her for a high-stakes memorial project.",
+    cast: ["Bimbo Ademoye", "Timini Egbuson"],
+    featuredCast: ["Bimbo Ademoye", "Timini Egbuson"],
+    featured: true,
+    references: [{
+      label: "Nairametrics — My 30th Wedding YouTube milestone",
+      href: "https://nairametrics.com/2026/10/04/bimbo-ademoyes-my-30th-wedding-crosses-10-million-views-on-youtube-in-48hrs/",
+      lastChecked: "2026-10-06",
+      note: "Current release coverage verifies the 1 October 2026 premiere, lead cast and rapid YouTube audience growth."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Bimbo Ademoye TV",
+      href: "https://www.youtube.com/watch?v=0_JzNVzFukE",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length upload on Bimbo Ademoye TV. YouTube availability and view counts can change.",
+      publisher: "Bimbo Ademoye TV",
+      publisherUrl: "https://www.youtube.com/@BimboAdemoyeTv"
+    }]
+  },
+  {
+    slug: "epe-after-dark",
+    title: "Epe After Dark",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Thriller", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A tense Nigerian drama set around Epe, where a seemingly ordinary outing turns into a night of escalating uncertainty and danger after dark.",
+    cast: ["Maurice Sam", "Pearl Wats", "Bibi Sonye", "Atewe Raphael", "Djizzy"],
+    featuredCast: ["Maurice Sam", "Pearl Wats", "Bibi Sonye"],
+    featured: true,
+    references: [{
+      label: "Nollywood Times — Epe After Dark release",
+      href: "https://www.nollywoodtimes.com/2026/10/epe-after-dark-now-streaming-on-maurice.html",
+      lastChecked: "2026-10-06",
+      note: "Release coverage verifies the 30 September 2026 premiere, Maurice Sam TV distribution and lead cast."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Maurice Sam TV",
+      href: "https://www.youtube.com/watch?v=UZDh07FO_VE",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length upload on Maurice Sam TV. YouTube availability and view counts can change.",
+      publisher: "Maurice Sam TV",
+      publisherUrl: "https://www.youtube.com/@MauriceSamTV"
+    }]
+  },
+  {
     slug: "black-market-2026",
     title: "Black Market",
     year: 2026,
