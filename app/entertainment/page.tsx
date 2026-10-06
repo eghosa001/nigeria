@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 const searchMomentumMovieSlugs = [
   "my-30th-wedding",
   "epe-after-dark",
+  "the-bride-switch",
   "oversabi-aunty",
   "millionaire-until-morning",
   "colours-of-fire",
@@ -26,10 +27,10 @@ const popularMovieSearchLinks = [
   { label: "My 30th Wedding", href: "/entertainment/movies/my-30th-wedding" },
   { label: "Epe After Dark", href: "/entertainment/movies/epe-after-dark" },
   { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
-  { label: "The Bride Switch", href: "/entertainment/youtube/zKQoArfptqA" },
-  { label: "Love Always Wins", href: "/entertainment/youtube/KWIpR47N9hc" },
+  { label: "The Bride Switch", href: "/entertainment/movies/the-bride-switch" },
+  { label: "Love Always Wins", href: "/entertainment/movies/love-always-wins-2026" },
   { label: "Once Upon a Village", href: "/entertainment/youtube/Yu-QxqPDmXM" },
-  { label: "What Tomorrow Holds", href: "/entertainment/youtube/2Ficn2BMlI8" },
+  { label: "What Tomorrow Holds", href: "/entertainment/movies/what-tomorrow-holds-2026" },
   { label: "Gingerrr", href: "/entertainment/movies/gingerrr" },
 ];
 
