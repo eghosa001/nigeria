@@ -4,6 +4,8 @@ import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
 import { publicServiceListings } from "@/lib/data";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
+import { releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
 
@@ -12,6 +14,8 @@ export const metadata: Metadata = {
   description: "Discover Nigerian movies, practical service guidance, places to explore across Nigeria, and verified jobs and careers.",
   alternates: { canonical: "/" },
 };
+
+export const revalidate = 3600;
 
 const quickServices = [
   { label: "JAMB portal guide", href: "/topics/jamb-2026" },
@@ -28,14 +32,30 @@ const quickServices = [
 ];
 
 export default function HomePage() {
+  const releaseByTitle = new Map(
+    releaseItems.map((item) => [item.title.trim().toLowerCase(), item] as const),
+  );
+
   const movieHighlights = entertainmentTitles
-    .filter((title) =>
-      canDisplayEntertainmentArtwork(title) ||
-      Boolean(title.sourcePreview) ||
-      Boolean(title.trailer) ||
-      title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie"),
-    )
-    .sort((a, b) => b.year - a.year)
+    .filter((title) => {
+      const hasUsableArtwork =
+        canDisplayEntertainmentArtwork(title) ||
+        Boolean(title.sourcePreview) ||
+        Boolean(title.trailer) ||
+        title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie");
+
+      if (!hasUsableArtwork) return false;
+
+      const release = releaseByTitle.get(title.title.trim().toLowerCase());
+      return !release || getEffectiveReleaseStatus(release) !== "upcoming";
+    })
+    .sort((a, b) => {
+      const aRelease = releaseByTitle.get(a.title.trim().toLowerCase());
+      const bRelease = releaseByTitle.get(b.title.trim().toLowerCase());
+      const aDate = aRelease?.startDate ?? String(a.year).padStart(4, "0") + "-01-01";
+      const bDate = bRelease?.startDate ?? String(b.year).padStart(4, "0") + "-01-01";
+      return bDate.localeCompare(aDate) || b.year - a.year || a.title.localeCompare(b.title);
+    })
     .slice(0, 6);
 
   const travelHighlights = exploreGuides
@@ -120,7 +140,7 @@ export default function HomePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Movies</span>
-              <h2 id="home-movies-title">What to watch.</h2>
+              <h2 id="home-movies-title">What to watch now.</h2>
             </div>
             <Link href="/entertainment/movies">Browse movies →</Link>
           </div>
