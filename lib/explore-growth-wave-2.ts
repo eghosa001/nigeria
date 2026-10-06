@@ -28,32 +28,5 @@ export const exploreGrowthWave2: ExploreGuide[] = [
     ],
     source: { label: "Calabar Municipal — Tourist Attractions", href: "https://calabar.municipal.crossriverstate.gov.ng/tourist-attractions" },
     lastReviewed: "2026-10-06"
-  },
-  {
-    slug: "calabar-weekend-itinerary",
-    title: "Calabar Weekend Itinerary: 2 Days of Heritage, Waterfront & Food",
-    shortTitle: "Calabar weekend itinerary",
-    kind: "itinerary",
-    region: "Cross River State",
-    summary: "A realistic two-day Calabar itinerary that groups Marina waterfront attractions, museums, central-city landmarks and local dining without overloading the weekend with distant Cross River day trips.",
-    intro: [
-      "A Calabar weekend works best when day one stays around the Marina and heritage circuit, while day two leaves room for central-city leisure, food and any attraction you missed. This avoids losing much of a short trip to unnecessary back-and-forth driving.",
-      "The itinerary uses attractions currently listed or supported by Calabar Municipal and Cross River State tourism sources. Prices and hours remain deliberately non-specific where the responsible operator does not publish stable current figures."
-    ],
-    bestFor: ["Weekend breaks", "First-time visitors", "Heritage", "Food"],
-    highlights: [
-      { name: "Day 1 — Marina & history", detail: "Start with Old Residency or the Slave History Museum, then spend the later part of the day around Marina Resort and Tortuga Island." },
-      { name: "Day 2 — city landmarks", detail: "Use Millennium Park and a central-Calabar food stop for a slower second day, leaving room for any museum or waterfront activity missed on day one." },
-      { name: "Do not overpack excursions", detail: "Kwa Falls, Obudu and rainforest destinations belong in separate plans because they require significantly more travel than an ordinary city stop." },
-      { name: "December visitors", detail: "If your weekend overlaps Carnival Calabar, festival road use and programme times should replace this normal-city sequence." }
-    ],
-    planning: [
-      { label: "Book a central base", detail: "A central Calabar stay makes the Marina, heritage circuit and restaurant stops easier to combine." },
-      { label: "Confirm museums first", detail: "Check museum access before setting out, then place flexible waterfront or park time around those fixed opening windows." },
-      { label: "Keep one buffer block", detail: "Leave part of each day unscheduled for traffic, weather, a closed facility or an attraction that takes longer than expected." },
-      { label: "Separate major Cross River trips", detail: "Add national parks, waterfalls or Obudu only when you have extra days and a dedicated transport plan." }
-    ],
-    source: { label: "Cross River State tourism investment update", href: "https://news.crossriverstate.gov.ng/gov-otu-injects-n18bn-into-cross-river-tourism/" },
-    lastReviewed: "2026-10-06"
   }
 ];
