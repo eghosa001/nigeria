@@ -384,9 +384,12 @@ export const growthHubs: GrowthHub[] = [
       { query: "use pension for mortgage Nigeria", serviceSlug: "pencom-rsa-mortgage-equity-contribution" },
       { query: "RSA mortgage equity contribution", serviceSlug: "pencom-rsa-mortgage-equity-contribution" },
       { query: "programmed withdrawal pension Nigeria", serviceSlug: "pencom-programmed-withdrawal-retirement" },
-      { query: "claim pension death benefits Nigeria", serviceSlug: "pencom-death-benefits-claim" }
+      { query: "claim pension death benefits Nigeria", serviceSlug: "pencom-death-benefits-claim" },
+      { query: "pension data recapture Nigeria", serviceSlug: "pencom-rsa-data-recapture" },
+      { query: "uncredited pension contribution", serviceSlug: "pencom-uncredited-contributions" },
+      { query: "multiple RSA PIN", serviceSlug: "pencom-multiple-rsa-resolution" }
     ],
-    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration", "pencom-rsa-mortgage-equity-contribution", "pencom-programmed-withdrawal-retirement", "pencom-death-benefits-claim"]
+    serviceSlugs: ["pencom-open-rsa", "pencom-transfer-rsa", "pencom-unremitted-contributions", "pencom-job-loss-25-percent-withdrawal", "pencom-micro-pension-registration", "pencom-rsa-mortgage-equity-contribution", "pencom-programmed-withdrawal-retirement", "pencom-death-benefits-claim", "pencom-rsa-data-recapture", "pencom-uncredited-contributions", "pencom-multiple-rsa-resolution"]
   },
   {
     slug: "consumer-complaints-nigeria",
