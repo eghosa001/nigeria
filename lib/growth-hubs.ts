@@ -634,6 +634,8 @@ export const growthHubs: GrowthHub[] = [
     ],
     searches: [
       { query: "NRS self service", serviceSlug: "nrs-individual-tax-registration" },
+      { query: "NRS taxpayer self-service registration", serviceSlug: "nrs-individual-tax-registration" },
+      { query: "nrsselfservice", serviceSlug: "nrs-individual-tax-registration" },
       { query: "retrieve Nigerian Tax ID", serviceSlug: "nrs-tax-id-retrieval" },
       { query: "NRS tax registration", serviceSlug: "nrs-individual-tax-registration" },
       { query: "NRS corporate tax registration", serviceSlug: "nrs-corporate-tax-registration" },
