@@ -1,4 +1,5 @@
 import { entertainmentGrowthWave3 } from "@/lib/entertainment-growth-wave-3";
+import { entertainmentGrowthWave2 } from "@/lib/entertainment-growth-wave-2";
 
 export type EntertainmentPlatform = "Netflix" | "YouTube" | "Prime Video" | "Kava" | "Cinema" | "Africa Magic";
 
@@ -83,6 +84,7 @@ export type EntertainmentTitle = {
 
 export const entertainmentTitles: EntertainmentTitle[] = [
   ...entertainmentGrowthWave3,
+  ...entertainmentGrowthWave2,
   {
     slug: "in-every-lifetime",
     title: "In Every Lifetime",
