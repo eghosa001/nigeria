@@ -238,14 +238,14 @@ export const exploreGuides: ExploreGuide[] = [
 
   {
     slug: "lagos",
-    title: "Lagos Travel Guide",
+    title: "Lagos Nigeria Travel Guide",
     shortTitle: "Lagos",
     kind: "city",
     region: "Lagos State",
-    summary: "Plan Lagos by area: culture, nature, beaches, art and food without turning the trip into one long traffic jam.",
+    summary: "Lagos, Nigeria is the country's largest urban area and a major centre for food, art, beaches, nightlife and business. Plan the city by district so traffic does not consume the trip.",
     intro: [
-      "Lagos rewards planning by neighbourhood. Pick one or two areas for each day instead of crossing the city repeatedly, and keep generous time around airport, bridge and rush-hour journeys.",
-      "This starter guide focuses on durable places and planning decisions rather than fragile lists of today's hotel prices or venue opening hours.",
+      "Lagos is in south-west Nigeria on the Atlantic coast. For visitors, the most useful planning decision is geographical: group Mainland, Victoria Island/Ikoyi and Lekki stops instead of crossing the city repeatedly in one day.",
+      "This city guide adds transport, timing and route-planning context to the separate Things to Do in Lagos directory. Use that directory for individual attractions, restaurants and stays; use this page to decide how they fit into a realistic trip.",
     ],
     bestFor: ["Art & culture", "Beaches", "Food", "Short city breaks"],
     highlights: [
@@ -261,7 +261,7 @@ export const exploreGuides: ExploreGuide[] = [
       { label: "Keep a return plan", detail: "For late outings, decide how you are getting back before you leave rather than depending on last-minute availability." },
     ],
     source: { label: "Lagos State Ministry of Tourism, Arts & Culture", href: "https://tourismartandculture.lagosstate.gov.ng/" },
-    lastReviewed: "2026-09-29",
+    lastReviewed: "2026-10-06",
   },
   {
     slug: "abuja",
