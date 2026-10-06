@@ -1,4 +1,5 @@
 import { exploreGrowthWaveSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06";
+import { exploreGrowthPlaces } from "@/lib/explore-growth-places-2026-10-06";
 
 export type ExplorePlaceKind = "attraction" | "nature" | "restaurant" | "hotel" | "shopping" | "landmark";
 
@@ -22,6 +23,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...exploreGrowthPlaces,
   {
     slug: "magicland-smfest-abuja-2026",
     guideSlug: "smfest-abuja-2026",
