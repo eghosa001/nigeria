@@ -112,6 +112,14 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "What Tomorrow Holds Cast & Full Movie on YouTube",
     description: "What Tomorrow Holds cast, story, 107-minute runtime and official Sandra Okunzuwa TV full movie, with Chioma Nwosu, Sandra Okunzuwa and Kalu Ikeagwu.",
   },
+  "in-every-lifetime": {
+    title: "In Every Lifetime Cast & Full Movie on YouTube",
+    description: "In Every Lifetime cast, story, 95-minute runtime and official Ego Nwosu TV full movie, starring Daniel Etim Effiong, Ego Nwosu and Shaznay Okawa.",
+  },
+  "beauty-in-scars-2026": {
+    title: "Beauty In Scars Cast & Full Movie on YouTube",
+    description: "Beauty In Scars cast, story, 142-minute runtime and official Uchenna Mbunabo TV full movie, starring Naya Pratt, Emeka Ike and Ochanya John-Enenche.",
+  },
 };
 
 function movieImageUrl(title: EntertainmentTitle, base: string) {
