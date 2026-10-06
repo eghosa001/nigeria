@@ -73,6 +73,7 @@ for (const title of entertainmentTitles) {
 }
 
 
+// Public YouTube presentation quality gate.
 const youtubePresentationHype = /\b(captivating|blockbuster|ultimate|unmissable|must[- ]watch|will make your day|will blow your mind|edge of your seat|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?)\b/i;
 const youtubeListingCopy = /\b(full movie|complete movie|latest full movies?|nollywood movies? 20\d{2}|nigerian movies? 20\d{2}|official full movie)\b/i;
 
