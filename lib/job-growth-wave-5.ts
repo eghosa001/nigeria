@@ -182,5 +182,154 @@ export const jobGrowthWave5: CareerOpportunity[] = [
       { label: "Renaissance Africa Energy — 2026 Graduate Programme", url: "https://renaissanceafrica.com/", lastChecked: "2026-10-06" },
       { label: "Renaissance Africa Energy Careers", url: "https://renaissanceafrica.com/careers", lastChecked: "2026-10-06" }
     ]
-  }
+  },
+{
+  "slug": "moniepoint-financial-planning-analyst-nigeria-2026",
+  "title": "Moniepoint Financial Planning Analyst — Remote Nigeria 2026",
+  "organization": "Moniepoint Inc.",
+  "kind": "vacancy",
+  "topicSlugs": [
+    "banking-finance",
+    "tech-fintech"
+  ],
+  "sector": "Private",
+  "status": "open",
+  "statusLabel": "Live on Moniepoint careers; no closing date shown",
+  "summary": "Moniepoint is hiring a remote Nigeria Financial Planning Analyst to support group forecasting, budgeting, management reporting, subsidiary FP&A, KPI tracking and variance analysis. The official role requires 4–6 years of relevant finance experience and is live on Moniepoint's careers site.",
+  "location": "Remote, Nigeria",
+  "employmentType": "Financial Planning & Analysis role",
+  "audiences": [
+    "FP&A professionals",
+    "Finance analysts",
+    "Qualified or part-qualified accountants",
+    "Fintech finance professionals"
+  ],
+  "fields": [
+    "Financial Planning & Analysis",
+    "Budgeting",
+    "Forecasting",
+    "Management reporting",
+    "Financial modelling",
+    "Finance"
+  ],
+  "qualifications": [
+    "4–6 years of experience in FP&A, financial analysis or a similar corporate-finance role.",
+    "Advanced Excel and financial-modelling skills plus experience working with multi-entity or multi-currency numbers.",
+    "Part-qualified or qualified ACA, ACCA, CIMA, CPA or an equivalent analytical background.",
+    "Banking, fintech or another regulated-environment background, Board-level reporting exposure and independent stakeholder work are preferred."
+  ],
+  "requirements": [
+    "Be able to maintain and reconcile group consolidation models, analyse variances and support recurring forecasting and budgeting cycles.",
+    "Be comfortable preparing management and Board reporting packs on a fixed cadence and supporting subsidiaries that do not yet have dedicated FP&A resources.",
+    "Confirm that the exact Financial Planning Analyst role is still live on Moniepoint's official careers site before submitting because no public closing date is shown.",
+    "Apply only through Moniepoint's official role page and do not pay an unofficial recruiter for shortlist or interview access."
+  ],
+  "documents": [
+    "Current CV/resume tailored to FP&A and financial-analysis experience",
+    "Any accounting qualification or role-specific information requested by Moniepoint's official application"
+  ],
+  "applicationSteps": [
+    "Open Moniepoint's official Financial Planning Analyst role page.",
+    "Review the Remote, Nigeria location and the published 4–6 year FP&A/financial-analysis requirements.",
+    "Tailor your CV to forecasting, budgeting, management reporting, variance analysis, Excel/modelling and multi-entity finance experience.",
+    "Complete the official Moniepoint application with the information and documents requested for this role.",
+    "Keep the application confirmation and follow Moniepoint's stated hiring stages: recruiter call, hiring-manager interview, panel interview and behavioural/technical executive interview."
+  ],
+  "officialUrl": "https://moniepoint.com/careers/roles/4355709101",
+  "officialUrlLabel": "Open Moniepoint's Financial Planning Analyst role",
+  "verifiedAt": "2026-10-06",
+  "nextMilestone": "No public closing date is shown; treat the role as open only while the official Moniepoint page remains live.",
+  "feeNote": "The official role page does not state an application fee. Apply only through Moniepoint's official careers route.",
+  "sourceNotes": [
+    "Moniepoint's official role page lists this position as Remote, Nigeria under Finance & Accounting (NG).",
+    "The page publishes the 4–6 year experience requirement, Excel/modelling, multi-entity finance and accounting-qualification criteria used in this guide.",
+    "No closing date is shown on the verified role page, so this guide does not invent one."
+  ],
+  "sources": [
+    {
+      "label": "Moniepoint — Financial Planning Analyst",
+      "url": "https://moniepoint.com/careers/roles/4355709101",
+      "lastChecked": "2026-10-06"
+    },
+    {
+      "label": "Moniepoint — Careers",
+      "url": "https://moniepoint.com/careers",
+      "lastChecked": "2026-10-06"
+    }
+  ]
+},
+{
+  "slug": "moniepoint-early-careers-talent-acquisition-specialist-2026",
+  "title": "Moniepoint Early Careers Talent Acquisition Specialist — Lagos 2026",
+  "organization": "Moniepoint Inc.",
+  "kind": "vacancy",
+  "topicSlugs": [
+    "tech-fintech"
+  ],
+  "sector": "Private",
+  "status": "open",
+  "statusLabel": "Live on Moniepoint careers; no closing date shown",
+  "summary": "Moniepoint is hiring an Early Careers Talent Acquisition Specialist for a remote/Lagos role leading university partnerships, campus recruiting, internships, graduate conversions and early-talent programme operations. The official role asks for 5–7 years of relevant talent-acquisition experience.",
+  "location": "Remote / Lagos, Nigeria",
+  "employmentType": "Talent Acquisition / Early Careers role",
+  "audiences": [
+    "Talent acquisition professionals",
+    "Campus recruiters",
+    "Early-career programme managers",
+    "People and HR professionals"
+  ],
+  "fields": [
+    "Talent Acquisition",
+    "Campus recruiting",
+    "University relations",
+    "Internships",
+    "Graduate programmes",
+    "People operations"
+  ],
+  "qualifications": [
+    "5–7 years of talent-acquisition experience with exposure to campus recruiting, university relations, early-career programmes or cohort hiring.",
+    "Experience coordinating complex projects or multi-stakeholder programmes with strong follow-through.",
+    "Practical experience with modern applicant-tracking systems and candidate-evaluation tools.",
+    "Strong written and verbal communication plus a solid understanding of Nigeria's higher-education landscape and emerging-talent communities."
+  ],
+  "requirements": [
+    "Be able to run campus engagement, hackathons, career fairs, university partnerships and an annual early-careers recruiting calendar.",
+    "Be prepared to manage internship and graduate-programme delivery from recruiting and pre-boarding through cohort programming, manager enablement and conversion assessment.",
+    "Confirm that the exact role remains live on Moniepoint's official careers page because the employer does not publish a closing date on the verified role page.",
+    "Submit only through Moniepoint's official application route and do not pay for access to the recruitment process."
+  ],
+  "documents": [
+    "Current CV/resume showing relevant TA, campus or early-career programme experience",
+    "Any role-specific information requested in Moniepoint's official application"
+  ],
+  "applicationSteps": [
+    "Open Moniepoint's official Early Careers Talent Acquisition Specialist role page.",
+    "Review the Remote/Lagos location and the 5–7 year talent-acquisition experience requirement.",
+    "Tailor your CV to university partnerships, campus programmes, internships, graduate conversion, ATS workflows and programme metrics.",
+    "Complete the official Moniepoint application and submit the requested candidate information.",
+    "Keep the application confirmation and verify all follow-up communication against Moniepoint's official recruitment channels."
+  ],
+  "officialUrl": "https://moniepoint.com/careers/roles/4981411101",
+  "officialUrlLabel": "Open Moniepoint's Early Careers TA role",
+  "verifiedAt": "2026-10-06",
+  "nextMilestone": "No public closing date is shown; treat the role as open only while the official Moniepoint role page remains live.",
+  "feeNote": "The official role page does not state an application fee. Do not pay an unofficial recruiter for a shortlist, assessment or interview.",
+  "sourceNotes": [
+    "Moniepoint's official page lists the role as Remote, Lagos, Nigeria under Talent Acquisition.",
+    "The official qualification section requires 5–7 years of talent-acquisition experience and explicitly covers campus recruiting, university relations, early-career programmes and cohort hiring.",
+    "No closing date is shown on the verified role page."
+  ],
+  "sources": [
+    {
+      "label": "Moniepoint — Early Careers Talent Acquisition Specialist",
+      "url": "https://moniepoint.com/careers/roles/4981411101",
+      "lastChecked": "2026-10-06"
+    },
+    {
+      "label": "Moniepoint — Careers",
+      "url": "https://moniepoint.com/careers",
+      "lastChecked": "2026-10-06"
+    }
+  ]
+}
 ];
