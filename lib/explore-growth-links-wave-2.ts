@@ -6,13 +6,5 @@ export const exploreGrowthWave2SharedPlaceSlugs: Record<string, readonly string[
     "tortuga-island-calabar",
     "millennium-park-calabar",
     "e3-restaurant-calabar"
-  ],
-  "calabar-weekend-itinerary": [
-    "old-residency-museum-calabar",
-    "slave-history-museum-calabar",
-    "marina-resort-calabar",
-    "tortuga-island-calabar",
-    "millennium-park-calabar",
-    "e3-restaurant-calabar"
   ]
 };
