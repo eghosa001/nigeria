@@ -30,29 +30,29 @@ export const exploreGrowthWave3: ExploreGuide[] = [
   },
   {
     slug: "cea-nigeria-abuja-2026",
-    title: "CEA Nigeria 2026 Abuja: Smart Farming Expo Dates, Venue & Guide",
+    title: "CEA Nigeria 2026 Abuja: Date Conflict, Venue & Planning Guide",
     shortTitle: "CEA Nigeria 2026",
     kind: "event",
     region: "Federal Capital Territory",
-    summary: "CEA Nigeria 2026 runs 17–19 November at Abuja Trade and Convention Centre in Lugbe, focusing on greenhouse systems, vertical farming, hydroponics, automation and renewable-energy technology for agriculture.",
+    summary: "CEA Nigeria 2026 is planned for Abuja Trade and Convention Centre in Lugbe, but the organiser's current 2026 pages conflict on the dates: its homepage says 17–19 November while its visitor and exhibition manuals still say 25–27 August. Confirm the final dates before booking travel or paying.",
     intro: [
-      "Controlled Environment Agriculture Expo Nigeria 2026 is scheduled for 17 to 19 November at the Abuja Trade and Convention Centre on KM 8 Umaru Musa Yar'Adua Road in Lugbe.",
-      "Visit Abuja describes it as a trade event for agribusiness professionals, technology providers, investors and policymakers rather than a general public festival. Registration is handled through the organiser, so check the current registration terms before travelling."
+      "Controlled Environment Agriculture Expo Nigeria 2026 is planned for Abuja Trade and Convention Centre on the Airport Road corridor in Lugbe, with greenhouse systems, hydroponics, vertical farming, automation and climate-smart agriculture as the core focus.",
+      "The date is not safe to present as settled. The organiser's current homepage shows 17–19 November 2026, while its own visitor and exhibition manuals still show 25–27 August 2026. Visit Abuja also lists 17–19 November. MyNigeriaGuide is therefore keeping the conflict visible until the organiser reconciles its official pages."
     ],
     bestFor: ["Agribusiness", "Smart farming", "Technology", "Business"],
     highlights: [
-      { name: "17–19 November 2026", detail: "The expo runs for three days in Abuja." },
-      { name: "Abuja Trade and Convention Centre", detail: "The venue is on KM 8 Umaru Musa Yar'Adua Road, Airport Road, Lugbe." },
-      { name: "Controlled-environment agriculture", detail: "The exhibition covers greenhouse technology, vertical farming, hydroponics, automation and renewable energy in agriculture." },
-      { name: "Professional trade audience", detail: "The event is aimed primarily at agribusiness, technology, investment and policy participants." }
+      { name: "Dates need reconfirmation", detail: "The organiser currently publishes both 17–19 November and 25–27 August 2026 on different official pages. Do not treat either date as final without a fresh organiser confirmation." },
+      { name: "Abuja Trade and Convention Centre", detail: "The venue is consistently identified as the Abuja Trade and Convention Centre in the Lugbe/Airport Road corridor." },
+      { name: "Controlled-environment agriculture", detail: "The exhibition focuses on greenhouse technology, vertical farming, hydroponics, automation, irrigation, smart-farm systems and renewable energy for agriculture." },
+      { name: "Professional trade audience", detail: "The event is aimed primarily at agribusiness operators, technology providers, investors, researchers and policymakers." }
     ],
     planning: [
-      { label: "Register through the organiser", detail: "Confirm attendee or exhibitor registration on the official CEA Nigeria route before travelling." },
-      { label: "Plan Airport Road travel", detail: "The convention centre is in Lugbe rather than central Abuja; allow realistic travel time from Wuse, Maitama or the CBD." },
-      { label: "Match sessions to your goal", detail: "Review the current programme for greenhouse, hydroponics, automation, energy or investment sessions most relevant to you." },
-      { label: "Use nearby Lugbe services", detail: "Novare Gateway Mall is on the same Airport Road corridor and can be useful for food, shopping or a meeting before or after the expo." }
+      { label: "Confirm the date before any payment", detail: "Check the organiser's homepage and registration contact again before buying travel, accommodation, visitor access or exhibition space because its current official pages disagree." },
+      { label: "Use the organiser for registration", detail: "Register only through CEA Nigeria's official route and keep the confirmation or receipt showing the event date attached to your booking." },
+      { label: "Plan Airport Road travel", detail: "The convention centre is in the Lugbe/Airport Road corridor rather than central Abuja; allow realistic travel time from Wuse, Maitama or the CBD." },
+      { label: "Match sessions to your goal", detail: "Once the final programme is confirmed, prioritise the greenhouse, hydroponics, automation, energy or investment sessions most relevant to your work." }
     ],
-    source: { label: "Visit Abuja — CEA Nigeria 2026", href: "https://www.visitabuja.org/event/cea-nigeria-2026-controlled-environment-agriculture-expo/" },
+    source: { label: "CEA Nigeria 2026 official website — verify current dates", href: "https://cea-nigeria.com/" },
     lastReviewed: "2026-10-06"
   }
 ];
