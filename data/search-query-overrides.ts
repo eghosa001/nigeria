@@ -11,6 +11,27 @@ export type SearchQueryOverride = Partial<{
  * Answers remain derived from verified Service data; this layer changes wording only.
  */
 export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
+  "nrs-tax-id-retrieval": {
+    fee: "Is Nigerian Tax ID or TIN retrieval free?",
+    requirements: "What do I need to retrieve my Nigerian Tax ID with NIN or CAC?",
+    online: "Where is the official Nigerian Tax ID or TIN portal?",
+    timeline: "How long does Tax ID retrieval take in Nigeria?",
+    start: "How do I retrieve my Tax ID or TIN in Nigeria?",
+  },
+  "jamb-caps": {
+    fee: "Is there a fee to check admission status on JAMB CAPS?",
+    requirements: "What do I need to check JAMB CAPS admission status?",
+    online: "Where is the official JAMB CAPS login for 2026/2027?",
+    timeline: "When should I check JAMB CAPS for admission?",
+    start: "How do I check and accept admission on JAMB CAPS?",
+  },
+  "cac-business-name-registration": {
+    fee: "How much is CAC business name registration?",
+    requirements: "What documents do I need for CAC business name registration?",
+    online: "Where is the official CAC registration portal?",
+    timeline: "How long does CAC business name registration take?",
+    start: "How do I register a business name with CAC?",
+  },
   "cac-company-registration": {
     fee: "How much is CAC company registration and payment?",
     requirements: "What CAC registration form and documents do I need?",
