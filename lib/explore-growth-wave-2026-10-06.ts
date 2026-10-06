@@ -54,5 +54,59 @@ export const exploreGrowthWave: ExploreGuide[] = [
     ],
     source: { label: "Visit Abuja — African SDGs Film Festival 2026", href: "https://www.visitabuja.org/event/african-sdgs-film-festival-2026/" },
     lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "all-africa-challenge-trophy-abuja-2026",
+    title: "All Africa Challenge Trophy Abuja 2026: Dates, Venue & Spectator Guide",
+    shortTitle: "All Africa Challenge Trophy",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "The 2026 All Africa Challenge Trophy runs 4–6 November at IBB International Golf & Country Club in Abuja, bringing national women’s amateur golf teams from around 30 African countries together for the continental team championship.",
+    intro: [
+      "The All Africa Challenge Trophy is scheduled for 4 to 6 November 2026 at IBB International Golf & Country Club in Maitama, Abuja. The Ladies Golf Association of Nigeria is hosting the team championship, with national sides from around 30 countries expected.",
+      "The competition sits inside a wider 2–7 November programme. Spectator access and tee times were not yet published when this guide was reviewed, so confirm the live organiser information before travelling to the club."
+    ],
+    bestFor: ["Golf", "Sports", "Women’s sport", "November events"],
+    highlights: [
+      { name: "4–6 November 2026", detail: "The championship competition is scheduled across three days, within a wider 2–7 November programme." },
+      { name: "IBB International Golf & Country Club", detail: "The listed venue is the Maitama golf club in Abuja." },
+      { name: "Pan-African team event", detail: "National women’s amateur teams from around 30 countries are expected to compete." },
+      { name: "Spectator details pending", detail: "Tee times and public-access arrangements had not been announced at the latest review." }
+    ],
+    planning: [
+      { label: "Confirm spectator access", detail: "Check the organiser or club before travelling; do not assume general public entry for every competition session." },
+      { label: "Check tee times", detail: "Golf schedules can start early and change with tournament operations or weather, so verify the day’s order of play." },
+      { label: "Plan Maitama transport", detail: "Allow time for event traffic and any club-entry checks when using ride-hailing or private transport." },
+      { label: "Respect course rules", detail: "Follow spectator zones, silence requirements and photography restrictions communicated by officials at the venue." }
+    ],
+    source: { label: "Visit Abuja — All Africa Challenge Trophy 2026", href: "https://www.visitabuja.org/event/all-africa-challenge-trophy-aact-2026/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "art-meets-fashion-abuja-2026",
+    title: "Art Meets Fashion Abuja 2026: Date, Venue & Visitor Guide",
+    shortTitle: "Art Meets Fashion Abuja",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "Art Meets Fashion Abuja is listed for 23 December 2026 from 3:00 PM to 9:00 PM at the National Gallery of Art in Garki, combining runway shows, visual art displays and pop-up shopping.",
+    intro: [
+      "Art Meets Fashion Abuja is scheduled for 23 December 2026 at the National Gallery of Art, Federal Secretariat Complex, Garki. The programme combines fashion runway presentations with visual-art displays and pop-up retail.",
+      "Visit Abuja describes the event as ticketed and advises confirming the date with the organiser before planning around it. Treat the published time window as a planning guide and re-check access details close to the event."
+    ],
+    bestFor: ["Fashion", "Art", "Shopping", "December events"],
+    highlights: [
+      { name: "23 December 2026", detail: "The published event time is 3:00 PM to 9:00 PM." },
+      { name: "National Gallery of Art", detail: "The listed venue is at the Federal Secretariat Complex on Shehu Shagari Way in Garki." },
+      { name: "Runway and visual art", detail: "The programme pairs designer collections with contemporary art displays and pop-up shops." },
+      { name: "Ticketed event", detail: "Access is listed as ticketed; confirm the current ticket route and event date with the organiser before payment." }
+    ],
+    planning: [
+      { label: "Verify the date and ticket route", detail: "Use the organiser-linked event information before buying, because the listing specifically advises reconfirming the date." },
+      { label: "Plan for December traffic", detail: "23 December is a high-movement period in Abuja; leave extra time for Garki and Federal Secretariat traffic." },
+      { label: "Check entry conditions", detail: "Confirm whether tickets are timed, whether re-entry is allowed and any bag or photography rules before arriving." },
+      { label: "Budget separately for shopping", detail: "Pop-up purchases are separate from event access; confirm seller prices and payment methods directly." }
+    ],
+    source: { label: "Visit Abuja — Arts & Culture events", href: "https://www.visitabuja.org/events/category/arts-and-culture/" },
+    lastReviewed: "2026-10-06"
   }
 ];
