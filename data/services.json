@@ -10305,11 +10305,11 @@
         "lastChecked": "2026-10-02"
       },
       {
-        "label": "INEC 2025–2026 CVR timetable update",
+        "label": "INEC 2025–2026 Continuous Voter Registration timetable",
         "agency": "Independent National Electoral Commission",
-        "url": "https://wp1.inecnigeria.org/remarks-by-the-honourable-chairman-independent-national-electoral-commission-inec-prof-joash-amupitan-san-at-the-first-regular-consultative-meeting-with-media-executives-held-at-the-inec-confer/",
-        "published": "2026-02-04",
-        "lastChecked": "2026-10-02"
+        "url": "https://www.inecnigeria.org/wp-content/uploads/CONTINUOUS-VOTER-REGISTRATION-CVR-2025-2026.pdf",
+        "published": "2025",
+        "lastChecked": "2026-10-06"
       }
     ],
     "searchTerms": [
@@ -10320,7 +10320,7 @@
       "register for PVC",
       "INEC CVR"
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-06",
     "related": [
       "inec-pvc-status",
       "inec-voter-transfer",
@@ -10364,11 +10364,11 @@
         "lastChecked": "2026-10-02"
       },
       {
-        "label": "INEC 2025–2026 CVR timetable update",
+        "label": "INEC 2025–2026 Continuous Voter Registration timetable",
         "agency": "Independent National Electoral Commission",
-        "url": "https://wp1.inecnigeria.org/remarks-by-the-honourable-chairman-independent-national-electoral-commission-inec-prof-joash-amupitan-san-at-the-first-regular-consultative-meeting-with-media-executives-held-at-the-inec-confer/",
-        "published": "2026-02-04",
-        "lastChecked": "2026-10-02"
+        "url": "https://www.inecnigeria.org/wp-content/uploads/CONTINUOUS-VOTER-REGISTRATION-CVR-2025-2026.pdf",
+        "published": "2025",
+        "lastChecked": "2026-10-06"
       }
     ],
     "searchTerms": [
@@ -10378,7 +10378,7 @@
       "change voting location",
       "voter transfer Nigeria"
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-06",
     "related": [
       "inec-new-voter-registration",
       "inec-update-voter-information",
@@ -10417,10 +10417,10 @@
     ],
     "sources": [
       {
-        "label": "INEC archive — Guide for Voter Update",
+        "label": "INEC Guide for Voter Update",
         "agency": "Independent National Electoral Commission",
-        "url": "https://wp1.inecnigeria.org/author/admin/",
-        "lastChecked": "2026-10-02"
+        "url": "https://www.inecnigeria.org/guide-for-voter-update/",
+        "lastChecked": "2026-10-06"
       },
       {
         "label": "INEC Continuous Voter Registration portal — Information Update",
@@ -10436,7 +10436,7 @@
       "correct date of birth PVC",
       "voter record correction"
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-06",
     "related": [
       "inec-voter-transfer",
       "inec-pvc-status",
