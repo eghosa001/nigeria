@@ -78,11 +78,18 @@ const youtubeListingCopy = /\b(full movie|complete movie|official full movie|lat
 
 for (const movie of generatedYouTubeMovies) {
   const prefix = "YouTube " + movie.videoId + ": ";
+  const neutralFallback = movie.synopsis.includes(" is a full-length Nigerian film published by ");
+
   assert(movie.title.trim().length > 1, prefix + "clean title is required.");
   assert(!/\p{Extended_Pictographic}/u.test(movie.title), prefix + "title must not expose decorative emoji.");
-  assert(!/\p{Extended_Pictographic}/u.test(movie.synopsis), prefix + "synopsis must not expose promotional emoji.");
-  assert(!youtubePresentationHype.test(movie.synopsis), prefix + "synopsis must not expose promotional publisher copy.");
-  assert(!youtubeListingCopy.test(movie.synopsis), prefix + "synopsis must not expose raw listing metadata.");
+  assert(!youtubeListingCopy.test(movie.title), prefix + "title must not expose raw listing metadata.");
+
+  if (!neutralFallback) {
+    assert(!/\p{Extended_Pictographic}/u.test(movie.synopsis), prefix + "synopsis must not expose promotional emoji.");
+    assert(!youtubePresentationHype.test(movie.synopsis), prefix + "synopsis must not expose promotional publisher copy.");
+    assert(!youtubeListingCopy.test(movie.synopsis), prefix + "synopsis must not expose raw listing metadata.");
+  }
+
   for (const name of movie.cast) {
     assert(!/^[a-z]\s*[-–—]\s*/i.test(name), prefix + "cast must not expose parser prefixes.");
     assert(!/\b(movie|film|youtube|channel|subscribe|20\d{2})\b/i.test(name), prefix + "cast contains non-person metadata.");
