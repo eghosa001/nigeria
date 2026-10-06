@@ -81,6 +81,64 @@ export type EntertainmentTitle = {
 
 export const entertainmentTitles: EntertainmentTitle[] = [
   {
+    slug: "in-every-lifetime",
+    title: "In Every Lifetime",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Romance", "Royalty", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A royal love story about sacrifice, patience and stewardship as Nyla and Prince Nathaniel navigate duty, expectations and a relationship that feels destined to return across lifetimes.",
+    cast: ["Daniel Etim Effiong", "Ego Nwosu", "Shaznay Okawa"],
+    featuredCast: ["Daniel Etim Effiong", "Ego Nwosu", "Shaznay Okawa"],
+    directors: ["Jide Oyegbile"],
+    runtimeMinutes: 95,
+    references: [{
+      label: "NollyMeter — In Every Lifetime",
+      href: "https://www.nollymeter.com/movies/in-every-lifetime",
+      lastChecked: "2026-10-06",
+      note: "Independent Nollywood catalog reference used to verify release date, runtime, cast and director."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Ego Nwosu TV",
+      href: "https://www.youtube.com/watch?v=TH8oDejHrEo",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length upload on Ego Nwosu TV.",
+      publisher: "Ego Nwosu TV",
+      publisherUrl: "https://www.youtube.com/@EgoNwosuTv"
+    }]
+  },
+  {
+    slug: "beauty-in-scars-2026",
+    title: "Beauty In Scars",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Romance", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Whitney, an Abuja luxury real-estate agent living with the consequences of a preventive mastectomy, struggles with trust and intimacy while a major property deal and a new relationship force her to confront the fear and stigma surrounding her scars.",
+    cast: ["Naya Pratt", "Emeka Ike", "Ochanya John-Enenche", "Tony Goodman", "Elizabeth Popoola Julius"],
+    featuredCast: ["Naya Pratt", "Emeka Ike", "Ochanya John-Enenche"],
+    directors: ["Ben Cassie"],
+    runtimeMinutes: 142,
+    references: [{
+      label: "African Movies Database — Beauty In Scars",
+      href: "https://africanmoviedb.com/title/beauty-in-scars-2026",
+      lastChecked: "2026-10-06",
+      note: "Catalog reference used to verify the 28 September 2026 release, runtime, storyline, director and credited cast."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Uchenna Mbunabo TV",
+      href: "https://www.youtube.com/watch?v=HW69iUPK7j0",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length release from Uchenna Mbunabo TV.",
+      publisher: "Uchenna Mbunabo TV",
+      publisherUrl: "https://www.youtube.com/@UchennaMbunaboTv"
+    }]
+  },
+  {
     slug: "the-bride-switch",
     title: "The Bride Switch",
     year: 2026,
