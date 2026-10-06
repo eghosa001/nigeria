@@ -7800,7 +7800,7 @@
       "The Union Bank USSD PIN or security authentication requested before a financial transaction is completed"
     ],
     "steps": [
-      "Dial *826# or use the published direct short code for the Union Bank service needed.",
+      "Open your phone dialler and dial *826# or the published direct short code for the Union Bank service you need.",
       "Choose the transfer, airtime, bills, card, balance or other service from the USSD menu.",
       "Enter the account, recipient or payment information requested for that service.",
       "Review the transaction details and authenticate the request with the required Union Bank USSD PIN/security step.",
@@ -7909,7 +7909,7 @@
       "An official Keystone Bank support channel as a fallback if the USSD restriction cannot be completed"
     ],
     "steps": [
-      "Dial *7111*911# from any available phone as soon as the Keystone Bank account needs to be secured.",
+      "Open any available phone's dialler and dial *7111*911# as soon as the Keystone Bank account needs to be secured.",
       "Enter the account or phone information requested by the emergency menu.",
       "Complete the verification prompt and confirm the instruction to place a Post No Debit restriction on the accounts.",
       "Contact Keystone Bank immediately through the official contact centre or a branch if the panic-code request fails.",
@@ -8851,7 +8851,7 @@
       "A private USSD PIN created during the first registration process"
     ],
     "steps": [
-      "Dial *919# from the mobile number maintained on the UBA account or prepaid card.",
+      "Open the phone dialler on the mobile number maintained on the UBA account or prepaid card and dial *919#.",
       "Choose the registration option for a UBA Account or UBA Prepaid Card and complete the identity prompts.",
       "Create the USSD PIN and confirm the new *919# profile.",
       "Dial *919# again and select the required transfer, airtime, data, bills, balance, card or other supported service.",
@@ -9024,7 +9024,7 @@
       "A new four-digit USSD transaction PIN"
     ],
     "steps": [
-      "Dial *909*11*1# on the customer's phone and choose Debit Card or BVN as the registration method.",
+      "Open the phone dialler on the Stanbic IBTC customer line and dial *909*11*1# to start USSD registration.",
       "Enter the last six debit-card digits or BVN and then enter the date of birth in DDMMYYYY format.",
       "Create a four-digit USSD PIN and enter it again to complete the setup.",
       "Dial *909# and choose the required transfer, airtime/data, bill, electricity, card, statement or other service.",
@@ -9075,7 +9075,7 @@
       "A USSD PIN or security credential created during the onboarding process"
     ],
     "steps": [
-      "Dial *909*37# from the phone that will be used for the Stanbic IBTC instant account.",
+      "Open the phone dialler on the line that will be used for the Stanbic IBTC instant account and dial *909*37#.",
       "Follow the account-opening prompts and enter the personal information requested by the USSD service.",
       "Create the security PIN or credential shown during the onboarding flow.",
       "Confirm the new instant account/wallet details returned by Stanbic IBTC after successful creation.",
@@ -9126,7 +9126,7 @@
       "The account/security information requested during the block-account prompts"
     ],
     "steps": [
-      "Dial *909*1*911# as soon as the Stanbic IBTC account needs to be secured.",
+      "Open a phone dialler and dial *909*1*911# as soon as the Stanbic IBTC account needs to be secured.",
       "Enter the account or phone information requested by the emergency USSD menu.",
       "Complete the security verification and confirm the account-block instruction.",
       "Keep the success message and contact Stanbic IBTC through an official support channel if the block does not complete.",
@@ -9178,7 +9178,7 @@
       "A four-digit *901# security PIN created during registration"
     ],
     "steps": [
-      "Dial *901*0# from the mobile number linked to the Access Bank account.",
+      "Open the phone dialler on the mobile number linked to the Access Bank account and dial *901*0#.",
       "Enter the date of birth and account information requested by the registration prompts.",
       "Create a four-digit USSD PIN and submit the setup.",
       "Dial *901# and choose the balance, transfer, airtime, bill or other supported service.",
@@ -10071,7 +10071,7 @@
       "The account/security information requested by the emergency USSD prompts"
     ],
     "steps": [
-      "Dial *966*911# as soon as the Zenith Bank account needs to be secured.",
+      "Open a phone dialler and dial *966*911# as soon as the Zenith Bank account needs to be secured.",
       "Enter the account or customer information requested by the emergency menu.",
       "Complete the verification prompts and confirm the instruction to block the account.",
       "Keep the success message and contact ZenithDirect if the emergency block cannot be completed.",
@@ -10173,7 +10173,7 @@
       "The customer/account information requested by Fidelity during the security prompts"
     ],
     "steps": [
-      "Dial *770*911# when the urgent task is to block a Fidelity debit card.",
+      "Open a phone dialler and dial *770*911# when the urgent task is to block a Fidelity debit card.",
       "For an account freeze, use Fidelity's published *770*PhoneNumber# emergency account-freeze route with the phone number tied to the affected account.",
       "Complete the identity/security prompts shown by the USSD service and confirm the requested block or freeze.",
       "Keep the success message and contact Fidelity through an official support channel if the security action fails.",
@@ -10481,7 +10481,7 @@
       "A transfer amount within T2's current per-transaction and daily limits"
     ],
     "steps": [
-      "Dial *312*7# from the T2 Mobile line that owns the data balance.",
+      "Open the phone dialler on the T2 Mobile line that owns the data balance and dial *312*7#.",
       "Choose the data-transfer option and enter the recipient's T2 number.",
       "Enter the amount of data to transfer and review the recipient and quantity.",
       "Confirm the transaction through the security prompts shown by T2.",
@@ -12175,7 +12175,7 @@
       "For account-linked transactions, the account/security information Unity Bank requests during USSD registration or authentication"
     ],
     "steps": [
-      "Dial *7799# from a Nigerian mobile phone and wait for Unity Bank's convenient-banking menu to load.",
+      "Open a phone dialler on a Nigerian mobile line and dial *7799# to load Unity Bank's convenient-banking menu.",
       "Choose the required account-opening, balance, airtime/data, transfer, bill-payment, BVN, PIN or other listed service.",
       "Enter the account, beneficiary or bill details shown by the selected USSD menu.",
       "Authenticate the transaction with the Unity Bank security prompt used for that service.",
@@ -13301,7 +13301,7 @@
     ],
     "steps": [
       "Open Red Star Express' official Tracker page.",
-      "Enter the shipment tracking number; the tracker also accepts multiple numbers separated as instructed on the page.",
+      "Enter the Red Star Express tracking or airway-bill number in the official Tracker field.",
       "Submit the tracking request and review the latest shipment status and movement information.",
       "For an international FedEx-linked shipment, use the FedEx tracking route referenced by Red Star if that is where the airway bill is tracked.",
       "Contact Red Star customer service with the tracking number if the shipment remains stalled, shows an exception or needs delivery clarification."
@@ -13958,7 +13958,7 @@
       "Acceptance/payment under the current trip rules if Chisco agrees to carry baggage above the free allowance"
     ],
     "steps": [
-      "Review Chisco's current baggage terms before packing for the trip.",
+      "Open Chisco's official terms and conditions page and review the current passenger-baggage rules before packing for the trip.",
       "Weigh the passenger luggage and keep it within the published 10kg free allowance where possible.",
       "Present the baggage at the Chisco terminal before boarding and obtain the required luggage sticker.",
       "If the luggage exceeds 10kg, ask Chisco staff whether the excess can be carried and what charge or restriction applies.",
