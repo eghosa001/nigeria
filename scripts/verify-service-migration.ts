@@ -1,14 +1,16 @@
 import serviceRecords from "../data/services.json" with { type: "json" };
+import scaleServiceRecords from "../data/services-scale-verified.json" with { type: "json" };
+import privateServiceRecords from "../data/services-private-extended.json" with { type: "json" };
 import { validateServiceCatalog } from "../lib/service-records";
 
-const services = validateServiceCatalog(serviceRecords);
+const services = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords]);
 const publicServices = services.filter((service) => service.status !== "review");
 
-if (services.length !== 212) {
-  throw new Error("Expected 212 total guides, found " + services.length + ".");
+if (services.length !== 650) {
+  throw new Error("Expected 650 total guides, found " + services.length + ".");
 }
-if (publicServices.length !== 212) {
-  throw new Error("Expected 212 public guides, found " + publicServices.length + ".");
+if (publicServices.length !== 650) {
+  throw new Error("Expected 650 public guides, found " + publicServices.length + ".");
 }
 
 console.log("Validated", services.length, "service records with", publicServices.length, "public guides.");
