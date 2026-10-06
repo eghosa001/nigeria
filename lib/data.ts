@@ -1,6 +1,9 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
+import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
+import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import type { Agency, Service, VerificationStatus } from "@/lib/types";
 import { validateServiceCatalog } from "@/lib/service-records";
+import { serviceScaleAgencies, serviceScaleCategories } from "@/lib/service-scale-metadata";
 
 export const agencies: Agency[] = [
   {
@@ -432,7 +435,9 @@ export const agencies: Agency[] = [
   }
 ];
 
-export const services: Service[] = validateServiceCatalog(serviceRecords);
+agencies.push(...serviceScaleAgencies);
+
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
@@ -560,6 +565,8 @@ export const categories = [
     "description": "Verified state and FCT digital services."
   }
 ];
+categories.push(...serviceScaleCategories);
+
 
 export function getAgency(slug:string) { return agencies.find((agency) => agency.slug === slug); }
 export function getService(slug:string) { return services.find((service) => service.slug === slug); }
