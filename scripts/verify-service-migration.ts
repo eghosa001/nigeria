@@ -2,17 +2,18 @@ import serviceRecords from "../data/services.json" with { type: "json" };
 import scaleServiceRecords from "../data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "../data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "../data/services-growth-wave-3.json" with { type: "json" };
+import wave5ServiceRecords from "../data/services-growth-wave-5.json" with { type: "json" };
 import cacPartnershipServiceRecords from "../data/services-cac-partnerships.json" with { type: "json" };
 import { validateServiceCatalog } from "../lib/service-records";
 
-const services = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...cacPartnershipServiceRecords]);
+const services = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...cacPartnershipServiceRecords]);
 const publicServices = services.filter((service) => service.status !== "review");
 
-if (services.length !== 665) {
-  throw new Error("Expected 665 total guides, found " + services.length + ".");
+if (services.length !== 668) {
+  throw new Error("Expected 668 total guides, found " + services.length + ".");
 }
-if (publicServices.length !== 665) {
-  throw new Error("Expected 665 public guides, found " + publicServices.length + ".");
+if (publicServices.length !== 668) {
+  throw new Error("Expected 668 public guides, found " + publicServices.length + ".");
 }
 
 console.log("Validated", services.length, "service records with", publicServices.length, "public guides.");
