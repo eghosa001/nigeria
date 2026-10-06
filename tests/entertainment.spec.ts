@@ -281,3 +281,16 @@ test("curated movie catalog exposes crawlable internal pagination", async ({ pag
   expect(sitemap.ok()).toBeTruthy();
   expect(await sitemap.text()).toContain("/entertainment/movies/page/2");
 });
+
+
+test("contextual entertainment detail pages expose country and source dates", async ({ page }) => {
+  await page.goto("/entertainment/series/ordinary-people");
+  await expect(page.getByText(/Applies to Nigeria .* availability and sources checked/i)).toBeVisible();
+  await expect(page.locator(".movie-fact-grid")).toContainText("Sources checked");
+
+  await page.goto("/entertainment/youtube/32k-gIzh4aQ");
+  const facts = page.locator(".movie-fact-grid");
+  await expect(facts).toContainText("Country");
+  await expect(facts).toContainText("Nigeria");
+  await expect(facts).toContainText("Source checked");
+});
