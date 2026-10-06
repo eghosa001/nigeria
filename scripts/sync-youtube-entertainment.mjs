@@ -379,7 +379,7 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
     !/\b(full movie|complete movie|latest full movies?|nollywood movies? 20\d{2}|nigerian movies? 20\d{2}|official full movie)\b/i.test(paragraph) &&
     !/^[A-Z0-9 '&’():;,.\-]+(?:20\d{2})?$/i.test(paragraph) &&
     !/^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(paragraph) &&
-    !/[🎬🔥✨💥😍🤩]/u.test(paragraph)
+    !/\p{Extended_Pictographic}/u.test(paragraph)
   );
   if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
 
@@ -390,7 +390,7 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
 }
 
 function cleanTitle(raw, cast = []) {
-  let title = String(raw ?? "").trim();
+  let title = String(raw ?? "").replace(/\p{Extended_Pictographic}/gu, " ").replace(/\s+/g, " ").trim();
   const watchInMatch = title.match(/^watch\s+.+?\s+in\s+(.+?)(?:\s*[-|]\s*(?:nigerian|nollywood|african|latest|20\d{2})\b.*)?$/i);
   if (watchInMatch?.[1]) title = watchInMatch[1].trim();
   title = title.replace(/^(?:nollywood|nigerian)\s+movie(?:\s*\([^)]*\))?\s*:\s*/i, "");
