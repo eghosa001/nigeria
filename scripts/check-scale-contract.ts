@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { publicServices } from "../lib/data";
+import { growthHubs } from "../lib/growth-hubs";
 import { entertainmentTitles } from "../lib/entertainment";
 import { entertainmentPeople } from "../lib/entertainment-extras";
 import { seriesTitles } from "../lib/series";
@@ -49,6 +50,19 @@ assert(
     targets.content_scale.indexable_public_urls_target,
   "Underlying record headroom must be at least as large as the public URL target.",
 );
+
+for (let i = 0; i < growthHubs.length; i += 1) {
+  const a = new Set(growthHubs[i].serviceSlugs);
+  for (let j = i + 1; j < growthHubs.length; j += 1) {
+    const b = new Set(growthHubs[j].serviceSlugs);
+    const overlap = [...a].filter((slug) => b.has(slug)).length;
+    const union = new Set([...a, ...b]).size;
+    assert(
+      !union || overlap / union < 0.8,
+      "Growth hubs are near-duplicates: " + growthHubs[i].slug + " and " + growthHubs[j].slug + ".",
+    );
+  }
+}
 
 const indexableYouTubeDetailMovies = indexableYouTubeMovies.filter((movie) => movie.source !== "curated");
 
