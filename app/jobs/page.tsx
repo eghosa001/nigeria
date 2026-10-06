@@ -22,7 +22,14 @@ export default function JobsPage() {
   const base = getSiteUrl();
   const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
-  const openOpportunities = jobOpportunities.filter((item) => isEffectivelyOpen(item));
+  const openOpportunities = jobOpportunities
+    .filter((item) => isEffectivelyOpen(item))
+    .sort((a, b) => {
+      const deadlineA = a.deadline ?? "9999-12-31";
+      const deadlineB = b.deadline ?? "9999-12-31";
+      const byDeadline = deadlineA.localeCompare(deadlineB);
+      return byDeadline || b.verifiedAt.localeCompare(a.verifiedAt);
+    });
   const openPreview = openOpportunities.slice(0, 6);
   const initialDirectoryResult = queryJobDirectory({ page: 1 });
 
@@ -87,7 +94,7 @@ export default function JobsPage() {
               <div>
                 <span className="eyebrow">Open now</span>
                 <h2>Applications you can act on today.</h2>
-                <p>Only opportunities whose official source currently shows an open application window appear here.</p>
+                <p>Only opportunities whose official source currently shows an open application window appear here. Published deadlines are shown first, with the nearest closing dates prioritised.</p>
               </div>
             </div>
             <div className="jobs-open-grid">

@@ -39,6 +39,28 @@ export type YouTubeMovieRecord = BaseYouTubeMovieRecord & {
 
 type GeneratedRecord = Omit<BaseYouTubeMovieRecord, "source" | "internalHref">;
 
+const generatedSynopsisHype = /\b(amazing masterpiece|masterpiece|will make your day|must[- ]watch|edge of your seat|don['’]?t miss|do not miss|subscribe|like and share|latest nigerian movies?)\b/i;
+
+function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
+  let text = String(movie.synopsis ?? "")
+    .replace(/\s+/g, " ")
+    .replace(/,([A-Za-z])/g, ", $1")
+    .replace(/([.!?])([A-Z])/g, "$1 $2")
+    .replace(/^[A-Z0-9 '&’():-]{4,}:\s*/, "")
+    .trim();
+
+  const generatedSuffix = text.search(/\s+is a full-length Nigerian film published by /i);
+  if (generatedSuffix >= 70) text = text.slice(0, generatedSuffix).trim();
+
+  if (!text || generatedSynopsisHype.test(text)) {
+    const cast = movie.featuredCast.length ? movie.featuredCast : movie.cast;
+    return movie.title + " is a full-length Nigerian film published by " + movie.channelName + "." +
+      (cast.length ? " Featured cast includes " + cast.slice(0, 3).join(", ") + "." : "");
+  }
+
+  return text.slice(0, 360).trim();
+}
+
 function videoIdFromUrl(url: string) {
   try {
     const parsed = new URL(url);
@@ -108,6 +130,7 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
 
 export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => ({
   ...movie,
+  synopsis: normalizeGeneratedSynopsis(movie),
   source: "youtube-api" as const,
   internalHref: "/entertainment/youtube/" + movie.videoId,
 }));

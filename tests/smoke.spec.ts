@@ -332,8 +332,9 @@ test("mobile public layout uses a single-column hierarchy and usable navigation"
   const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
   await expect(mobileNav).toBeVisible();
   await expect(mobileNav.getByRole("link", { name: "Home", exact: true })).toHaveAttribute("aria-current", "page");
-  await expect(page.locator(".mobile-header-action")).toBeVisible();
-  await expect(page.locator(".mobile-header-action")).toHaveAttribute("href", "/search");
+  const mobileSearch = page.getByRole("link", { name: "Search MyNigeriaGuide" });
+  await expect(mobileSearch).toBeVisible();
+  await expect(mobileSearch).toHaveAttribute("href", "/search");
 
   const navBox = await mobileNav.boundingBox();
   expect(navBox?.x ?? -1).toBeGreaterThanOrEqual(0);

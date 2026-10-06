@@ -185,7 +185,7 @@ export const exploreGuides: ExploreGuide[] = [
     shortTitle: "Calabar",
     kind: "city",
     region: "Cross River State",
-    summary: "Plan Calabar around history, waterfront leisure, Efik culture and the wider Cross River tourism circuit.",
+    summary: "Calabar is in Cross River State, Nigeria. Plan the city around history, waterfront leisure, Efik culture and the wider Cross River tourism circuit.",
     intro: [
       "Calabar works both as a city break and as the gateway to wider Cross River trips. History-focused stops, the waterfront and December events attract very different crowds, so timing changes the experience.",
       "If you are travelling around the year-end festival season, book transport and accommodation early and verify event dates rather than relying on old schedules.",

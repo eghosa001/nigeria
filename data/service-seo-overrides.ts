@@ -87,6 +87,10 @@ export const serviceSeoDescriptionTemplates: Record<string, string> = {
   "ogun-tax-clearance-certificate": "Ogun State eTCC {year}: tax-record requirements, employee or self-employed evidence, application steps and online certificate verification.",
   "neco-purchase-result-token": "Buy a NECO result token in {year} through the official NECO Results Portal, then use it with your exam year, type and registration number.",
   "pencom-micro-pension-registration": "Micro Pension registration in Nigeria {year}: who can join, how to choose a licensed PFA and how flexible contributions work for informal-sector earners.",
+  "police-character-certificate": "Police Character Certificate Nigeria {year}: cost guidance for local and diaspora applicants, requirements, POSSAP application steps and the official police route.",
+  "bpp-contractor-registration": "BPP contractor registration {year}: contractor-database requirements, portal steps and the official Bureau of Public Procurement route.",
+  "pencom-job-loss-25-percent-withdrawal": "25% pension withdrawal Nigeria {year}: PenCom eligibility after job loss, the four-month rule, required evidence, PFA steps and official guidance.",
+  "npc-birth-attestation": "NPC birth attestation {year}: eligibility, required details, online application and status steps, plus the official National Population Commission route.",
 };
 
 export function getServiceSeoDescriptionOverride(slug: string, year: string) {
