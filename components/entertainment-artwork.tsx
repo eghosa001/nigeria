@@ -55,7 +55,7 @@ function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; varia
 export function EntertainmentArtwork({
   title,
   variant = "card",
-  showSourceLink = true,
+  showSourceLink = false,
 }: {
   title: EntertainmentTitle;
   variant?: "card" | "hero";

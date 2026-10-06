@@ -3,7 +3,7 @@ import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
 import { publicServiceListings } from "@/lib/data";
-import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { canDisplayEntertainmentArtwork, entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
 
@@ -27,28 +27,16 @@ const quickServices = [
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
 
-const searchMomentumMovieSlugs = [
-  "colours-of-fire",
-  "king-of-thieves-2",
-  "the-herd",
-  "oversabi-aunty",
-  "millionaire-until-morning",
-  "gingerrr",
-];
-
 export default function HomePage() {
-  const priorityMovies = searchMomentumMovieSlugs
-    .map((slug) => entertainmentTitles.find((title) => title.slug === slug))
-    .filter((title): title is NonNullable<typeof title> => Boolean(title));
-  const prioritySlugs = new Set(priorityMovies.map((title) => title.slug));
-  const movieHighlights = [
-    ...priorityMovies,
-    ...entertainmentTitles.filter(
-      (title) =>
-        !prioritySlugs.has(title.slug) &&
-        title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie"),
-    ),
-  ].slice(0, 6);
+  const movieHighlights = entertainmentTitles
+    .filter((title) =>
+      canDisplayEntertainmentArtwork(title) ||
+      Boolean(title.sourcePreview) ||
+      Boolean(title.trailer) ||
+      title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie"),
+    )
+    .sort((a, b) => b.year - a.year)
+    .slice(0, 6);
 
   const travelHighlights = exploreGuides
     .filter((guide) => guide.kind === "city" || guide.kind === "destination")
