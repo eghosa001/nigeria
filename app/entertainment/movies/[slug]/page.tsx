@@ -30,6 +30,26 @@ function videoIdFromUrl(href: string) {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "holy-matrimony": {
+    title: "Holy Matrimony Nigerian Movie: Cast & Full Movie",
+    description: "Holy Matrimony cast, 143-minute runtime and official Frederick Leonard TV full movie, starring Frederick Leonard, Onyi Alex and Nini Mbonu.",
+  },
+  "one-more-night": {
+    title: "One More Night Nigerian Movie: Cast & Full Movie",
+    description: "One More Night cast, 129-minute runtime and official Frederick Leonard TV full movie, starring Frederick Leonard and Cynthia Clarke.",
+  },
+  "once-upon-a-village-3": {
+    title: "Once Upon a Village 3 Cast & Full Movie",
+    description: "Once Upon a Village 3 cast, 99-minute runtime and official RuthKadiri247 full movie, featuring Deza the Great, Prisma James and Fessa Ajoku.",
+  },
+  "one-string-attached": {
+    title: "One String Attached Cast & Full Movie",
+    description: "One String Attached cast, 131-minute runtime and official Uchenna Mbunabo TV full movie, starring Uche Montana, Chike Daniels and Caroline Igbe.",
+  },
+  "our-perfect-match": {
+    title: "Our Perfect Match Nigerian Movie: Cast & Full Movie",
+    description: "Our Perfect Match cast, story, 120-minute runtime and official Blessing Obasi TV full movie, starring Stan Nze and Sona Uche.",
+  },
   "black-market-2026": { title: "Black Market 2026 Cast, Runtime & Where to Watch", description: "Black Market 2026 cast, director, 100-minute runtime, story and current Nigerian cinema availability for Fatimah Binta Gimsay's crime drama." },
   "east-west-love-2026": { title: "East West Love 2026 Cast & Cinema Release", description: "East West Love cast, story, director and current 9 October 2026 release information for the Nigeria-Kenya romantic comedy." },
   "onibon-oje-2026": { title: "Onibọn Oje 2026 Cast & Cinema Release", description: "Onibọn Oje cast, directors, story and official 23 October 2026 Nigerian cinema release information for the Yoruba epic." },
