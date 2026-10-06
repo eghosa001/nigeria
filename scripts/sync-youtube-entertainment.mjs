@@ -251,7 +251,7 @@ function cleanName(value) {
 
 const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
 const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
-const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching)\b/i;
+const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|watch\s+now|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching|amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|must[- ]watch|edge\s+of\s+your\s+seat|will\s+(?:make\s+your\s+day|blow\s+your\s+mind)|hottest|trending|latest\s+nigerian\s+movies?|full\s+movie|latest\s+full\s+movies?|nollywood\s+movies?\s*20\d{2}|nigerian\s+movies?\s*20\d{2})\b/i;
 
 function looksLikePersonName(name) {
   const words = name.split(/\s+/).filter(Boolean);
@@ -389,6 +389,7 @@ function cleanTitle(raw, cast = []) {
   title = title.replace(/^(?:nollywood|nigerian)\s+movie(?:\s*\([^)]*\))?\s*:\s*/i, "");
   title = title.replace(/\((?:\s*(?:full|complete|new)\s+movie|the\s+movie|d\s+movie)\s*\)/gi, " ");
   title = title.split("|")[0].trim();
+  title = title.replace(/\s*;\s*[^;]*(?:,|20\d{2}).*$/i, " ");
   title = title.replace(/\s*(?:\[\s*full\s+movie\s*\]|\(\s*full\s+movie\s*\)|\bfull\s+movie\b).*$/i, " ");
 
   const lowerTitle = title.toLowerCase();
