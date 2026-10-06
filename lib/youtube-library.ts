@@ -42,6 +42,24 @@ type GeneratedRecord = Omit<BaseYouTubeMovieRecord, "source" | "internalHref">;
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
 
+function cleanYouTubeDisplayTitle(value: string) {
+  return value
+    .replace(/\s*\|\s*(?:nollywood|nigerian|african|latest|full)\b.*$/i, " ")
+    .replace(/\s*;\s*[^;]*(?:,|20\d{2}).*$/i, " ")
+    .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
+    .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
+    .replace(/\s*\((?:full|complete)\s+movie\)\s*$/i, " ")
+    .replace(/\s+(?:full\s+movie|nollywood\s+movies?\s*20\d{2}.*|nigerian\s+movies?\s*20\d{2}.*)$/i, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function generatedFallbackSynopsis(movie: GeneratedRecord) {
+  const cast = movie.featuredCast.length ? movie.featuredCast : movie.cast;
+  return movie.title + " is a full-length Nigerian film published by " + movie.channelName + "." +
+    (cast.length ? " Featured cast includes " + cast.slice(0, 3).join(", ") + "." : "");
+}
+
 function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
   let text = String(movie.synopsis ?? "")
     .replace(/\s+/g, " ")
@@ -51,12 +69,10 @@ function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
     .trim();
 
   const generatedSuffix = text.search(/\s+is a full-length Nigerian film published by /i);
-  if (generatedSuffix >= 70) text = text.slice(0, generatedSuffix).trim();
+  if (generatedSuffix >= 0) return generatedFallbackSynopsis(movie);
 
   if (!text || generatedSynopsisHype.test(text) || generatedSynopsisSeo.test(text)) {
-    const cast = movie.featuredCast.length ? movie.featuredCast : movie.cast;
-    return movie.title + " is a full-length Nigerian film published by " + movie.channelName + "." +
-      (cast.length ? " Featured cast includes " + cast.slice(0, 3).join(", ") + "." : "");
+    return generatedFallbackSynopsis(movie);
   }
 
   return text.slice(0, 360).trim();
@@ -129,12 +145,16 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
   }];
 });
 
-export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => ({
-  ...movie,
-  synopsis: normalizeGeneratedSynopsis(movie),
-  source: "youtube-api" as const,
-  internalHref: "/entertainment/youtube/" + movie.videoId,
-}));
+export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => {
+  const title = cleanYouTubeDisplayTitle(movie.title) || movie.title;
+  const normalizedMovie = { ...movie, title };
+  return {
+    ...normalizedMovie,
+    synopsis: normalizeGeneratedSynopsis(normalizedMovie),
+    source: "youtube-api" as const,
+    internalHref: "/entertainment/youtube/" + movie.videoId,
+  };
+});
 
 type ReviewCandidate = {
   videoId: string;
@@ -154,15 +174,7 @@ const reviewNonMovieTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|
 const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget)\b/i;
 
 function cleanReviewTitle(value: string) {
-  return value
-    .replace(/\s*\|\s*(?:nollywood|nigerian|african|latest|full)\b.*$/i, " ")
-    .replace(/\s*;\s*[^;]*(?:,|20\d{2}).*$/i, " ")
-    .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
-    .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
-    .replace(/\s*\((?:full|complete)\s+movie\)\s*$/i, " ")
-    .replace(/\s+(?:full\s+movie|nollywood\s+movies?\s*20\d{2}.*|nigerian\s+movies?\s*20\d{2}.*)$/i, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  return cleanYouTubeDisplayTitle(value);
 }
 
 function reviewSynopsis(candidate: ReviewCandidate) {
