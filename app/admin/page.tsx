@@ -6,6 +6,7 @@ import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { explorePlaces } from "@/lib/explore-places";
 import { isReportBackendConfigured } from "@/lib/report-backend";
+import { getContentHealth } from "@/lib/content-health";
 import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
@@ -22,6 +23,7 @@ export default function AdminPage() {
   const foreignVisas = publicServices.filter((service) => service.category === "Foreign visas");
   const sourceCount = new Set(services.flatMap((service) => service.sources.map((source) => source.url))).size;
   const backendConnected = isReportBackendConfigured();
+  const contentHealth = getContentHealth();
 
   const categoryRows = categories
     .map((category) => ({
@@ -63,6 +65,7 @@ export default function AdminPage() {
           <Link href="/admin/services"><span>Services</span><strong>Content library</strong><small>Search every service guide by category, status or keyword and inspect its full source record.</small><i>→</i></Link>
           <Link href="/admin/explore"><span>Tour Nigeria</span><strong>Travel catalog</strong><small>Review destination coverage, mapped places, costs, addresses and last-reviewed dates.</small><i>→</i></Link>
           <Link href="/admin/visits"><span>Audience</span><strong>Visits & discovery</strong><small>See traffic, countries, page views, referrers and the pages users are reaching.</small><i>→</i></Link>
+          <Link href="/admin/health"><span>Freshness</span><strong>Content health</strong><small>Review stale and due source checks across all four pillars and the YouTube sync.</small><i>→</i></Link>
         </div>
 
         <div className="admin-two-column">
@@ -76,6 +79,7 @@ export default function AdminPage() {
               <Link href="/admin/services"><span>Service guidance</span><strong>{serviceFreshness || "—"}</strong></Link>
               <Link href="/admin/explore"><span>Tour Nigeria</span><strong>{travelFreshness || "—"}</strong></Link>
               <Link href="/admin/updates"><span>Release / update records</span><strong>{releaseItems.length}</strong></Link>
+              <Link href="/admin/health"><span>Freshness issues</span><strong>{contentHealth.issues.length}</strong></Link>
             </div>
           </section>
 
