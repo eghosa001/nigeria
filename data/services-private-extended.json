@@ -7413,7 +7413,7 @@
       "Enough evidence for MoMo PSB to investigate whether the wrong-transfer claim is valid"
     ],
     "steps": [
-      "Gather the transaction reference, amount, date and recipient details for the wrong transfer.",
+      "Open the MoMo transaction receipt or wallet history and gather the transfer reference, amount, date and recipient details for the incorrect transfer.",
       "Contact MoMo PSB through its official call centre, email, service centre or agent-support route and report the incorrect transfer within 30 days.",
       "Provide the transaction details and any supporting evidence requested during the investigation.",
       "Allow MoMo PSB to determine whether the funds remain available and whether the transfer can be reversed.",
@@ -9274,7 +9274,7 @@
     "steps": [
       "Open PMI's official PMP certification page and check the 2026 eligibility pathway that matches the applicant's education and project-leadership experience.",
       "Create or sign in to the applicant's PMI.org account and start the PMP certification application.",
-      "Enter the education, training and project-experience details requested by PMI, making sure overlapping project time is not double-counted.",
+      "Enter the applicant's school or degree information, 35-hour project-management training record, and each qualifying project with its dates, role and project-leadership experience; do not count overlapping project months twice.",
       "Submit the application and respond with supporting education/experience evidence if PMI selects the application for an audit.",
       "After the application is accepted, pay the member or non-member exam fee and proceed to schedule the PMP examination."
     ],
@@ -9945,7 +9945,7 @@
     "steps": [
       "Open Spleet's Rent Now Pay Later page and select an eligible apartment from the Spleet Marketplace.",
       "Choose Pay with RNPL as the payment option for the property.",
-      "Complete the application with the personal, financial and verification details requested by Spleet.",
+      "Enter the applicant's identity and contact information, requested rent amount, income or affordability information, and verification documents shown in the RNPL application form.",
       "Review the approved amount, interest, equity contribution, repayment term and all loan conditions before accepting.",
       "Submit the final loan request and wait for the required checks; the space is booked only after the financing process is completed."
     ],
@@ -10300,7 +10300,7 @@
     ],
     "steps": [
       "Open Spleet's account-creation page and choose Join as a host.",
-      "Create the host account with the landlord/property-manager details requested by Spleet.",
+      "Create the host account using the landlord or property manager's name, email or phone contact and account credentials, then continue to the property-listing form.",
       "Add the apartment or apartments with accurate property, location, rent and availability information.",
       "Complete any property or host verification steps required before the listing is made available.",
       "Use the host/property-management tools to review tenant interest, manage the tenancy and collect rent through the supported platform features."
@@ -10616,7 +10616,8 @@
       "The Biometric Instruction Letter issued by Immigration, Refugees and Citizenship Canada",
       "A VFS appointment login/account used to schedule the Nigeria VAC visit",
       "The valid passport or travel document and appointment documents required by the Canada VAC",
-      "The completed VFS consent form or other visit documents requested for biometric processing"
+      "The completed VFS consent form or other visit documents requested for biometric processing",
+      "The underlying Canadian application must already include the travel purpose, accommodation or host plan, and financial or sponsorship evidence IRCC requires; the VAC biometric visit does not replace those visa-file requirements."
     ],
     "steps": [
       "Wait for IRCC to issue the Biometric Instruction Letter after the Canadian application and required government fees have been submitted.",
@@ -10680,7 +10681,8 @@
       "The applicant's passport and any additional documents listed in the IRCC request",
       "The VFS consent and package-transmission documents required by the Nigeria Canada VAC",
       "Payment of the current package-transmission or courier charge when the applicant is not covered by the included biometric transmission service",
-      "A return/courier arrangement when the applicant chooses passport submission by courier"
+      "A return/courier arrangement when the applicant chooses passport submission by courier",
+      "The underlying Canadian file must still be supported by a valid passport or travel document plus the travel or accommodation/host and financial or sponsorship evidence IRCC required; VFS passport transmission does not replace those visa-file requirements."
     ],
     "steps": [
       "Do not send the passport until IRCC has issued a Passport Request Letter for that applicant.",
@@ -10744,7 +10746,8 @@
       "A TLScontact account whose personal details exactly match the passport and France-Visas application",
       "The personalised supporting-document list generated by France-Visas",
       "An available appointment at the TLScontact Abuja or Lagos Victoria Island centre",
-      "Payment of the TLScontact service fee and applicable visa fee through the official channels"
+      "Payment of the TLScontact service fee and applicable visa fee through the official channels",
+      "A valid passport or travel document plus the France-Visas checklist evidence for trip purpose, travel or accommodation/host arrangements, and bank funds, income or sponsorship for the stay."
     ],
     "steps": [
       "Complete the visa application first on France-Visas and print the application form and receipt.",
@@ -10808,7 +10811,8 @@
       "Access to the applicant's TLScontact personal account for status tracking",
       "The TLScontact collection notification sent after the passport is returned by the consular authority",
       "For personal collection, the original application checklist and applicant photo identification",
-      "For representative collection, the approved TLScontact authorisation letter plus the representative/applicant identification copies required by TLScontact"
+      "For representative collection, the approved TLScontact authorisation letter plus the representative/applicant identification copies required by TLScontact",
+      "The underlying France visa file must already include a valid passport or travel document plus the travel or accommodation/host evidence and bank funds, income or sponsorship evidence required for that visa category; passport collection does not replace those requirements."
     ],
     "steps": [
       "Sign in to the TLScontact account after application submission to check the current file status.",
@@ -10873,7 +10877,8 @@
       "A TLScontact account with applicant details matching the passport",
       "A completed and signed application form for the selected Italian visa type",
       "An available appointment at the TLScontact Abuja or Lagos Victoria Island centre",
-      "The required supporting documents, applicable visa/service fees and biometric attendance unless an exemption applies"
+      "The required supporting documents, applicable visa/service fees and biometric attendance unless an exemption applies",
+      "A valid passport or travel document plus the selected Italy visa checklist evidence for travel purpose, accommodation or host arrangements, and bank funds, income or sponsorship for the trip."
     ],
     "steps": [
       "Open TLScontact Italy Nigeria and choose the applicant's main travel purpose and corresponding document checklist.",
@@ -10943,7 +10948,8 @@
       "The email notification confirming that the passport has returned to the Visa Application Centre",
       "For personal collection, the TLScontact checklist and a copy of the applicant's ID",
       "For representative collection, the signed authorisation plus the applicant/representative ID documents and proof of family relationship when required",
-      "For courier return, prior selection/payment of the Express Courier Return service"
+      "For courier return, prior selection/payment of the Express Courier Return service",
+      "The underlying Italian visa file must already include a valid passport or travel document plus the travel or accommodation/host evidence and bank funds, income or sponsorship evidence required for that visa category; passport return does not replace those requirements."
     ],
     "steps": [
       "Wait for TLScontact's email confirming that the Italian consular authority has returned the passport to the centre.",
@@ -11007,7 +11013,8 @@
       "A completed Visa On Web form printed and signed for the application",
       "A TLScontact appointment at the Abuja or Lagos Victoria Island centre",
       "The required original/supporting documents and applicant identity documents",
-      "Payment of the applicable visa fee and mandatory TLScontact service fee"
+      "Payment of the applicable visa fee and mandatory TLScontact service fee",
+      "A valid passport or travel document plus the selected Belgium visa checklist evidence for travel purpose, accommodation or host arrangements, and bank funds, income or sponsorship for the stay."
     ],
     "steps": [
       "Open the official Belgium Visa On Web service, choose the correct visa type and complete the online application form before booking a TLScontact appointment.",
@@ -11078,7 +11085,8 @@
       "Access to the applicant's TLScontact account for status tracking",
       "The TLScontact SMS notification confirming that the passport has returned to the centre",
       "For personal collection, the application checklist plus original and copy of the applicant's photo ID",
-      "For representative collection, the signed proxy letter plus the applicant and representative identity documents required by TLScontact"
+      "For representative collection, the signed proxy letter plus the applicant and representative identity documents required by TLScontact",
+      "The underlying Belgium or represented-country visa file must already include a valid passport or travel document plus the travel or accommodation/host evidence and bank funds, income or sponsorship evidence required for that visa category; passport return does not replace those requirements."
     ],
     "steps": [
       "Sign in to the TLScontact account after submission to review the current application status.",
