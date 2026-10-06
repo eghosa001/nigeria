@@ -1369,7 +1369,11 @@
       "check NECO result 2026",
       "buy NECO result token"
     ],
-    "related": []
+    "related": [
+      "neco-purchase-result-token",
+      "neco-e-verify",
+      "neco-certificate-service"
+    ]
   },
   {
     "slug": "neco-purchase-result-token",
@@ -1424,7 +1428,11 @@
       "results.neco.gov.ng token",
       "NECO result checker"
     ],
-    "related": [],
+    "related": [
+      "neco-check-result",
+      "neco-e-verify",
+      "neco-payment"
+    ],
     "feeNote": "NECO's published service schedule lists the Result Checker (Token) at ₦1,000. Confirm the amount shown in the live purchase flow before paying in case NECO updates its fee.",
     "timeline": "NECO's published service schedule lists result-checker token issuance as instant after successful payment."
   },
@@ -1467,7 +1475,11 @@
       "How to verify or confirm a NECO result with e-Verify",
       "Education"
     ],
-    "related": []
+    "related": [
+      "neco-check-result",
+      "neco-purchase-result-token",
+      "neco-institution-verification"
+    ]
   },
   {
     "slug": "neco-payment",
@@ -1507,7 +1519,11 @@
       "How to make an official NECO service payment",
       "Education"
     ],
-    "related": [],
+    "related": [
+      "neco-purchase-result-token",
+      "neco-e-verify",
+      "neco-certificate-service"
+    ],
     "feeNote": "The NECO payment portal prices the specific service selected rather than one universal NECO fee. Verify the service description and amount on the official payment page before completing payment."
   },
   {
@@ -3110,7 +3126,11 @@
       "How to register or verify a Tax ID from Edo State",
       "State services"
     ],
-    "related": []
+    "related": [
+      "anambra-asin-registration",
+      "lagos-payer-id",
+      "ogun-taxpayer-registration"
+    ]
   },
   {
     "slug": "anambra-asin-registration",
@@ -3162,7 +3182,11 @@
       "Anambra ASIN registration online",
       "how to get ASIN number"
     ],
-    "related": []
+    "related": [
+      "lagos-payer-id",
+      "ogun-taxpayer-registration",
+      "rivers-rivtin-registration"
+    ]
   },
   {
     "slug": "lagos-payer-id",
@@ -3202,7 +3226,11 @@
       "How to create a Lagos State Payer ID",
       "State services"
     ],
-    "related": []
+    "related": [
+      "anambra-asin-registration",
+      "edo-tax-id-access",
+      "ogun-taxpayer-registration"
+    ]
   },
   {
     "slug": "lost-nigerian-passport",
