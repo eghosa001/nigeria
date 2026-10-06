@@ -104,3 +104,12 @@ test("global search includes individual Tour Nigeria places", async ({ page }) =
   await page.goto("/search?q=restaurant");
   await expect(page.locator(".global-search-group").filter({ hasText: "Tour places" })).toBeVisible();
 });
+
+
+test("fresh crawl hub exposes series and current events directly", async ({ page }) => {
+  await page.goto("/latest");
+  await expect(page.locator('a[href^="/entertainment/series/"]').first()).toBeVisible();
+
+  await page.goto("/explore");
+  await expect(page.locator('a[href^="/explore/"]').filter({ hasText: /SMFest|NIFAFEST|Film Festival|Food Fair|Carnival/i }).first()).toBeVisible();
+});
