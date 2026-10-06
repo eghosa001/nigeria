@@ -14,21 +14,24 @@ export const metadata: Metadata = {
 };
 
 const searchMomentumMovieSlugs = [
-  "colours-of-fire",
-  "king-of-thieves-2",
-  "the-herd",
+  "my-30th-wedding",
+  "epe-after-dark",
+  "the-bride-switch",
   "oversabi-aunty",
   "millionaire-until-morning",
-  "gingerrr",
+  "beauty-in-scars-2026",
+  "colours-of-fire",
 ];
 
 const popularMovieSearchLinks = [
+  { label: "My 30th Wedding", href: "/entertainment/movies/my-30th-wedding" },
+  { label: "Epe After Dark", href: "/entertainment/movies/epe-after-dark" },
   { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
-  { label: "The Bride Switch", href: "/entertainment/youtube/zKQoArfptqA" },
-  { label: "Love Always Wins", href: "/entertainment/youtube/KWIpR47N9hc" },
-  { label: "Once Upon a Village", href: "/entertainment/youtube/Yu-QxqPDmXM" },
-  { label: "What Tomorrow Holds", href: "/entertainment/youtube/2Ficn2BMlI8" },
-  { label: "Gingerrr", href: "/entertainment/movies/gingerrr" },
+  { label: "The Bride Switch", href: "/entertainment/movies/the-bride-switch" },
+  { label: "Love Always Wins", href: "/entertainment/movies/love-always-wins-2026" },
+  { label: "Beauty In Scars", href: "/entertainment/movies/beauty-in-scars-2026" },
+  { label: "What Tomorrow Holds", href: "/entertainment/movies/what-tomorrow-holds-2026" },
+  { label: "In Every Lifetime", href: "/entertainment/movies/in-every-lifetime" },
 ];
 
 export default function EntertainmentPage() {

@@ -109,6 +109,140 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 
 const rawJobOpportunities: CareerOpportunity[] = [
   {
+    slug: "firstbank-technology-academy-2026",
+    title: "FirstBank Technology Academy Graduate Trainee Programme 2026",
+    organization: "FirstBank Nigeria",
+    kind: "programme",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open until 18 October 2026",
+    summary: "FirstBank is recruiting young STEM graduates into its 2026 Technology Academy, a talent-development route for technology careers supporting the bank's digital transformation. The current application deadline is 18 October 2026.",
+    location: "Nigeria",
+    employmentType: "Graduate technology trainee programme",
+    audiences: ["STEM graduates", "Engineering graduates", "Computer science graduates", "IT graduates", "Data and technology applicants"],
+    fields: ["Software engineering", "Application support", "Cybersecurity", "Infrastructure", "Data science", "Analytics", "Banking technology"],
+    qualifications: [
+      "Degree in Computer Science, Engineering, Information Technology, Information Systems, Mathematics, Statistics, Physics or a related STEM discipline.",
+      "Minimum Second Class Upper (2:1) degree or equivalent.",
+      "Completed NYSC or a valid exemption certificate.",
+      "Strong analytical and problem-solving ability plus clear interest in technology and continuous learning."
+    ],
+    requirements: [
+      "Use the official FirstBank Oracle recruitment page linked from the current vacancy notice.",
+      "Confirm that your degree discipline and class meet the published Technology Academy eligibility before applying.",
+      "Submit before 18 October 2026 and do not pay anyone for access to the recruitment process."
+    ],
+    documents: ["CV/resume", "Degree/qualification details", "NYSC discharge or exemption information", "Other identity or application details requested by the official FirstBank recruitment system"],
+    applicationSteps: [
+      "Open the official FirstBank candidate-experience vacancy page.",
+      "Review the Technology Academy eligibility and confirm your STEM degree, grade and NYSC status.",
+      "Complete the candidate profile and upload the information requested by FirstBank's recruitment system.",
+      "Submit before 18 October 2026 and retain the application confirmation."
+    ],
+    officialUrl: "https://hdbc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1829",
+    officialUrlLabel: "Apply on FirstBank's official recruitment system",
+    verifiedAt: "2026-10-06",
+    deadline: "2026-10-18",
+    nextMilestone: "Applications close 18 October 2026.",
+    feeNote: "No application fee is stated. Use only FirstBank's official recruitment system and ignore payment requests from third parties.",
+    sourceNotes: [
+      "The current vacancy is specifically for FirstBank's Technology Academy graduate-trainee pipeline.",
+      "FirstBank has previously described the Technology Academy as a recurring strategic initiative for building its technology talent pool."
+    ],
+    sources: [
+      { label: "FirstBank official Oracle recruitment page", url: "https://hdbc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1829", lastChecked: "2026-10-06" },
+      { label: "FirstBank Technology Academy vacancy summary", url: "https://www.opportunitiesforafricans.com/first-bank-nigeria-technology-academy-graduate-trainee-program-2026/", lastChecked: "2026-10-06" }
+    ]
+  },
+  {
+    slug: "kaduna-phcb-recruitment-2026",
+    title: "Kaduna State PHCB Recruitment 2026 — 10 Health Vacancies",
+    organization: "Kaduna State Primary Health Care Board",
+    kind: "recruitment-exercise",
+    sector: "Government",
+    status: "open",
+    statusLabel: "Applications open until 14 October 2026",
+    summary: "Kaduna State's official recruitment portal is accepting applications for 10 permanent and pensionable Primary Health Care Board vacancy positions from 4 to 14 October 2026.",
+    location: "Kaduna State, Nigeria",
+    employmentType: "Permanent and pensionable health-service appointments",
+    audiences: ["Nurses and midwives", "Community health workers", "Environmental health professionals", "Health educators", "Nutrition professionals", "Health information professionals"],
+    fields: ["Nursing", "Midwifery", "Community health", "Environmental health", "Health education", "Nutrition", "Health information management"],
+    qualifications: [
+      "Qualifications differ by vacancy. Examples on the official portal include Registered Nurse/Registered Midwife for Nursing Officer Grade III, CHEW/Community Health Technician qualifications for community-health roles, and an Environmental Health Science degree for Environmental Health Officer Grade II.",
+      "The relevant professional registration is required for regulated roles and is considered during screening.",
+      "Applicants should open the exact vacancy on the Kaduna recruitment portal and use that role's qualification and CONHESS details as the controlling requirement."
+    ],
+    requirements: [
+      "Create or use the applicant profile required by the official Kaduna State recruitment portal.",
+      "Apply only to roles for which your education and professional registration match the vacancy requirements.",
+      "Treat the official portal's closing date of 14 October 2026 as the deadline rather than dates copied to third-party job sites."
+    ],
+    documents: ["Education credentials relevant to the selected vacancy", "Professional registration evidence where required", "Identity/profile information requested by the official portal"],
+    applicationSteps: [
+      "Open the official Kaduna State Recruitment Portal and review the 10 PHCB vacancies.",
+      "Open the exact role that matches your qualification and confirm the CONHESS placement, appointment type and professional registration requirement.",
+      "Complete or update your applicant profile and attach the credentials requested for that role.",
+      "Submit the application through the official Apply control before 14 October 2026 and retain the confirmation."
+    ],
+    officialUrl: "https://recruitment.kdsg.gov.ng/",
+    officialUrlLabel: "Open the official Kaduna State recruitment portal",
+    verifiedAt: "2026-10-06",
+    deadline: "2026-10-14",
+    nextMilestone: "The official vacancy window closes 14 October 2026.",
+    feeNote: "Use only the Kaduna State Government recruitment portal. No application fee is shown on the public vacancy listing.",
+    sourceNotes: [
+      "The official portal currently lists 10 PHCB vacancy positions for the 4–14 October 2026 window.",
+      "The public listings include permanent and pensionable appointments across nursing, community health, environmental health, nutrition and health-information roles."
+    ],
+    sources: [
+      { label: "Kaduna State Recruitment Portal — PHCB vacancies", url: "https://recruitment.kdsg.gov.ng/", lastChecked: "2026-10-06" }
+    ]
+  },
+  {
+    slug: "federal-university-lafia-recruitment-2026",
+    title: "Federal University of Lafia Recruitment 2026 — Academic & Non-Teaching Staff",
+    organization: "Federal University of Lafia",
+    kind: "recruitment-exercise",
+    sector: "Government",
+    status: "open",
+    statusLabel: "Applications open until 28 October 2026",
+    summary: "Federal University of Lafia is recruiting academic and non-teaching staff. The Federal Character Commission's official listing marks the exercise ongoing, posted 23 September 2026, with an application deadline of 28 October 2026.",
+    location: "Lafia, Nasarawa State",
+    employmentType: "Full-time university appointments",
+    audiences: ["Academic staff applicants", "University professionals", "Health professionals", "ICT applicants", "Administrative applicants"],
+    fields: ["Agriculture", "Arts", "Medical sciences", "Clinical sciences", "Computing", "Education", "Environmental design", "Management sciences", "Pharmacy", "Physical sciences", "Social sciences", "Veterinary medicine", "University administration"],
+    qualifications: [
+      "Academic ranks and qualifications vary by department, from Assistant Lecturer through senior academic positions; applicants must use the requirements stated for the exact rank and discipline.",
+      "The official listing also includes non-teaching/professional positions with role-specific education, experience and registration requirements.",
+      "Applicants should not assume one qualification applies across the entire recruitment exercise."
+    ],
+    requirements: [
+      "Choose only a vacancy and rank for which you meet the published qualification and experience requirements.",
+      "Follow the application and referee instructions in the Federal University of Lafia recruitment notice.",
+      "Use the Federal Character Commission's official listing to verify the exercise and deadline before submitting."
+    ],
+    documents: ["CV and academic/professional credentials required for the selected position", "Supporting experience/publication evidence where the selected academic rank requires it", "Referee information/reports where requested by the official notice"],
+    applicationSteps: [
+      "Open the Federal Character Commission's official Federal University of Lafia vacancy listing.",
+      "Review the advertised academic and non-teaching positions and choose the exact role/rank you qualify for.",
+      "Follow the university application route and referee instructions stated in the notice.",
+      "Submit before 28 October 2026 and keep your application evidence."
+    ],
+    officialUrl: "https://fcc.gov.ng/job-listings/federal-university-of-lafia-p-m-b-146-lafia-nasarawa-state-office-of-the-registrar-www-fulafia-edu-ng/",
+    officialUrlLabel: "Open the official Federal Character Commission vacancy listing",
+    verifiedAt: "2026-10-06",
+    deadline: "2026-10-28",
+    nextMilestone: "Applications close 28 October 2026.",
+    feeNote: "No recruitment fee is stated in the official Federal Character Commission listing. Avoid unofficial payment requests.",
+    sourceNotes: [
+      "The Federal Character Commission lists the recruitment as ongoing and gives 28 October 2026 as the deadline.",
+      "The exercise covers academic staff across multiple faculties as well as non-teaching/professional positions."
+    ],
+    sources: [
+      { label: "Federal Character Commission — Federal University of Lafia vacancies", url: "https://fcc.gov.ng/job-listings/federal-university-of-lafia-p-m-b-146-lafia-nasarawa-state-office-of-the-registrar-www-fulafia-edu-ng/", lastChecked: "2026-10-06" }
+    ]
+  },
+  {
     slug: "snv-energy-advisor-abuja-2026",
     title: "SNV Energy Advisor — Abuja",
     organization: "SNV",
@@ -1322,45 +1456,48 @@ const rawJobOpportunities: CareerOpportunity[] = [
   },
   {
     slug: "deloitte-nigeria-early-careers",
-    title: "Deloitte Nigeria Early Careers & Graduate Opportunities",
+    title: "Deloitte Nigeria 2026 Graduate Recruitment Refresh — Tax & Legal",
     organization: "Deloitte Nigeria",
+    kind: "programme",
     sector: "Private",
-    status: "closed",
-    statusLabel: "2026 early-career applications closed",
-    summary: "Deloitte Nigeria publishes early-career routes across Audit & Assurance, Consulting and Tax/Legal. The 2026 early-career application window displayed on its official site closed on 10 April 2026.",
-    location: "Nigeria",
-    employmentType: "Graduate / early-career professional services",
-    audiences: ["Fresh graduates", "NYSC-completed applicants", "Professional-services applicants"],
-    fields: ["Audit & Assurance", "Consulting", "Tax & Legal", "Risk", "Financial Advisory"],
+    status: "open",
+    statusLabel: "Applications open until 9 October 2026",
+    summary: "Deloitte Nigeria has reopened its 2026 graduate recruitment for the Tax & Legal unit in Lagos. The official advert closes on 9 October 2026 and says candidates who already applied in the cycle that closed on 10 April should not apply again.",
+    location: "Lagos, Nigeria",
+    employmentType: "Full-time graduate recruitment",
+    audiences: ["Fresh graduates", "NYSC-completed applicants", "Tax & legal graduate applicants"],
+    fields: ["Tax", "Legal", "Graduate trainee", "Professional services"],
     qualifications: [
-      "Minimum Second Class Upper degree or HND Upper Credit/equivalent from a recognised university or polytechnic.",
+      "Minimum Second Class Upper degree or HND Upper Credit/equivalent from a recognised university or polytechnic, in any discipline.",
       "At least five O'Level credits including Mathematics and English in one sitting.",
-      "Published maximum age is 26 years at the date of application.",
-      "Applicant must have completed NYSC.",
-      "Deloitte's published early-career criteria say applicants must not have written the Deloitte aptitude test before."
+      "Maximum age of 26 years at the date of application.",
+      "Completed NYSC.",
+      "Applicant must not have written the Deloitte aptitude test before."
     ],
     requirements: [
-      "The specific 2026 early-career window is closed; do not use reposted third-party forms claiming it remains open.",
-      "Use Deloitte Nigeria's official careers page for future graduate or experienced-hire openings."
+      "Do not submit a second application if you already applied to Deloitte's 2026 graduate advert that closed on 10 April 2026; the current official notice says duplicate/multiple applications can disqualify a candidate.",
+      "Apply only through Deloitte's official SmartRecruiters advert.",
+      "Deloitte states that it does not request upfront payment for recruitment, background checks, training or supplies."
     ],
-    documents: ["CV/resume", "University/polytechnic qualification evidence", "O'Level results", "NYSC completion evidence", "Other information requested by the official application"],
+    documents: ["CV/resume and the education/NYSC information requested by the official application form"],
     applicationSteps: [
-      "The 2026 early-career application window has closed.",
-      "Review Deloitte Nigeria's official careers page for a new graduate/early-career cycle or other current vacancies.",
-      "When a new cycle opens, choose the service line that matches your interests and confirm the published eligibility criteria.",
-      "Submit only through Deloitte's official careers system."
+      "Open Deloitte's official SmartRecruiters advert for the 2026 Graduate Recruitment Refresh — Tax & Legal Unit.",
+      "Confirm that you meet the degree/HND, O'Level, age and NYSC requirements and that you have not previously written the Deloitte aptitude test.",
+      "If you applied in the earlier 2026 cycle that closed on 10 April, do not submit another application.",
+      "Complete the official application before 9 October 2026 and keep the confirmation."
     ],
-    officialUrl: "https://www.deloitte.com/ng/en/careers.html",
-    officialUrlLabel: "Open Deloitte Nigeria careers",
-    verifiedAt: "2026-10-03",
-    feeNote: "Use Deloitte's official Nigeria careers pages for application links and current eligibility information.",
+    officialUrl: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-",
+    officialUrlLabel: "Apply on Deloitte's official SmartRecruiters advert",
+    verifiedAt: "2026-10-06",
+    deadline: "2026-10-09",
+    nextMilestone: "Applications close 9 October 2026.",
+    feeNote: "No application fee. Deloitte's official advert warns that it never asks candidates for upfront recruitment payments.",
     sourceNotes: [
-      "Deloitte's 2026 early-career page lists degree/HND, O'Level, age and NYSC criteria.",
-      "The same official page states that 2026 applications closed on Friday, 10 April 2026."
+      "The live Deloitte advert is specifically a 2026 Graduate Recruitment Refresh for the Tax & Legal Unit in Lagos.",
+      "The advert preserves the core early-career eligibility criteria and explicitly tells prior April applicants not to apply again."
     ],
     sources: [
-      { label: "Deloitte Nigeria Careers", url: "https://www.deloitte.com/ng/en/careers.html", lastChecked: "2026-10-03" },
-      { label: "Deloitte Early Career Programmes", url: "https://www.deloitte.com/ng/en/careers/explore-your-fit/experienced/early-careers-programmes.html", lastChecked: "2026-10-03" }
+      { label: "Deloitte — 2026 Graduate Recruitment Refresh, Tax & Legal", url: "https://jobs.smartrecruiters.com/Deloitte6/744000153123709-2026-graduate-recruitment-refresh-tax-and-legal-unit-", lastChecked: "2026-10-06" }
     ]
   },
   {

@@ -8,9 +8,11 @@ import { queryServiceDirectory, type ServiceDirectorySort, type ServiceDirectory
 
 const popularServiceLinks = [
   { label: "CAC registration", href: "/topics/cac-business" },
+  { label: "Nigeria Tax ID / TIN", href: "/services/nrs-tax-id-retrieval" },
+  { label: "Landing & Exit Card", href: "/services/nigeria-landing-exit-card" },
+  { label: "ASIN registration", href: "/services/anambra-asin-registration" },
+  { label: "NIN phone correction", href: "/services/nin-phone-modification" },
   { label: "ECOWAS Travel Certificate", href: "/services/ecowas-travel-certificate" },
-  { label: "NECO result token", href: "/services/neco-purchase-result-token" },
-  { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
 ];
 
 const featuredServiceCategories = ["Identity", "Education", "Immigration", "Business", "Foreign visas", "State services"];

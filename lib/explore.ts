@@ -17,6 +17,141 @@ export type ExploreGuide = {
 
 export const exploreGuides: ExploreGuide[] = [
   {
+    slug: "smfest-abuja-2026",
+    title: "SMFest Abuja 2026 Guide: Dates, Venue, Tickets & Speakers",
+    shortTitle: "SMFest Abuja",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "SMFest Abuja 2026 runs 17–18 October at Family Worship Centre, Wuye, with talks and networking around social media, technology, business and digital growth under the theme AdvantageX.",
+    intro: [
+      "SMFest Abuja returns on 17 and 18 October 2026 at Family Worship Centre in Wuye. The organiser describes the event as a gathering for creators, entrepreneurs, professionals and business owners using social media, technology and innovation to grow.",
+      "The 2026 theme is AdvantageX — The Exponential Advantage. The official event site lists speakers across business, technology, utilities, media and entrepreneurship, while ticket tiers currently run from entry-level to premium networking packages."
+    ],
+    bestFor: ["Technology", "Social media", "Business", "Networking"],
+    highlights: [
+      { name: "17–18 October 2026", detail: "The official SMFest site lists the Abuja event for Saturday and Sunday, with doors from 9:00 AM." },
+      { name: "Family Worship Centre, Wuye", detail: "The listed venue is FWC Wuye in Abuja." },
+      { name: "AdvantageX theme", detail: "Sessions focus on business, technology, social media, real estate and digital opportunity." },
+      { name: "Ticket tiers", detail: "The organiser currently lists ticket options from ₦15,000 to ₦250,000; confirm the live checkout price before purchase." }
+    ],
+    planning: [
+      { label: "Buy only from the organiser", detail: "Use the official SMFest site for tickets and confirm the ticket tier before payment." },
+      { label: "Plan Wuye transport", detail: "Allow time for event traffic and ride-hailing pickup around Family Worship Centre." },
+      { label: "Choose sessions in advance", detail: "Review the final speaker and programme schedule so you do not miss the sessions most relevant to your work." },
+      { label: "Re-check the event page", detail: "Speaker order, programme timing and ticket availability can change close to the event." }
+    ],
+    source: { label: "SMFest Abuja 2026 official website", href: "https://smfest.org/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "nifafest-abuja-2026",
+    title: "NIFAFEST Abuja 2026: Dates, Venues & Fashion Festival Guide",
+    shortTitle: "NIFAFEST 2026",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "Nigeria International Fashion Festival (NIFAFEST) runs 15–17 October 2026 in Abuja with fashion and craft exhibitions, empowerment sessions and a finale across Garki and Maitama venues.",
+    intro: [
+      "NIFAFEST 2026 is scheduled for 15 to 17 October in Abuja. The organiser positions the three-day festival around Nigerian fashion, textiles, craft, youth and women empowerment, sustainable design and the creative economy.",
+      "The programme uses two main venues: Cyprian Ekwensi Centre for Arts and Culture in Area 10, Garki, for the opening and empowerment sessions, and the National Universities Commission Event Auditorium in Maitama for the grand finale."
+    ],
+    bestFor: ["Fashion", "Creative industry", "Culture", "October events"],
+    highlights: [
+      { name: "15 October — opening & exhibition", detail: "The opening ceremony and trade/fashion exhibition is listed for noon at the Cyprian Ekwensi Centre for Arts and Culture, Area 10, Garki." },
+      { name: "16 October — empowerment seminar", detail: "A grant and empowerment seminar for models, designers and fashion stakeholders is listed for noon at the same Garki venue." },
+      { name: "17 October — grand finale", detail: "The awards and finale ceremony is listed for 3:00 PM at the National Universities Commission Event Auditorium in Maitama." },
+      { name: "Three-day creative-economy programme", detail: "The organiser highlights sustainable fashion, indigenous textile preservation, youth and women empowerment, and trade exposure." }
+    ],
+    planning: [
+      { label: "Check which venue applies", detail: "The festival changes venue for the finale, so confirm the programme day before travelling." },
+      { label: "Register through the organiser", detail: "Use NIFAFEST's official registration and contact routes rather than copied social-media payment instructions." },
+      { label: "Allow cross-city travel time", detail: "Garki and Maitama are separate Abuja districts; do not assume the full festival happens in one building." },
+      { label: "Verify the live programme", detail: "Check the official site shortly before attendance for timing, accreditation and access changes." }
+    ],
+    source: { label: "NIFAFEST 2026 official website", href: "https://nifafest.com/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "carnival-calabar-2026",
+    title: "Carnival Calabar 2026 Guide: Dates, Parade & Festival Schedule",
+    shortTitle: "Carnival Calabar",
+    kind: "event",
+    region: "Cross River State",
+    summary: "Plan Carnival Calabar 2026 with the official Cross River schedule: the festival season starts 30 November, the Cultural Carnival is 26 December, Junior Carnival 27 December, main Parade of Bands 28 December and Bikers Carnival 29 December.",
+    intro: [
+      "Cross River State's official 2026 calendar lists 62 festival events from the Christmas Tree Lighting on 30 November through New Year activities on 1 January 2027.",
+      "For visitors focused on the signature carnival days, the main sequence is Cultural Carnival on 26 December, Junior Carnival on 27 December, Carnival Calabar and Parade of Bands on 28 December, and Bikers Carnival on 29 December."
+    ],
+    bestFor: ["Carnival", "Culture", "December travel", "Live entertainment"],
+    highlights: [
+      { name: "26 December — Cultural Carnival", detail: "The Cultural Carnival is scheduled for 9:00 AM, flagging off at Millennium Park and using part of the Carnival Calabar route." },
+      { name: "27 December — Junior Carnival", detail: "The Junior Carnival is scheduled for 10:00 AM, with the official calendar listing Botanic Garden as the flag-off point." },
+      { name: "28 December — Parade of Bands", detail: "Carnival Calabar and the Parade of Bands is scheduled for 10:00 AM on the official carnival route." },
+      { name: "29 December — Bikers Carnival", detail: "The Bikers Carnival is scheduled for noon on the carnival route, followed by evening entertainment at U.J. Esuene Stadium." }
+    ],
+    planning: [
+      { label: "Book the peak dates early", detail: "Accommodation and transport demand rises sharply around 26–29 December. Confirm your stay and return travel well before the main parade." },
+      { label: "Use the live official calendar", detail: "The season contains dozens of events at different venues. Re-check the Cross River schedule for any timing or venue change before travelling." },
+      { label: "Plan around road closures", detail: "Parade days use the carnival route and can change normal traffic movement. Avoid tight airport, hotel or intercity connections around parade times." },
+      { label: "Choose your priority days", detail: "If you cannot attend the full season, the Cultural Carnival, Junior Carnival, Parade of Bands and Bikers Carnival form the strongest four-day core." }
+    ],
+    source: { label: "Cross River State — Carnival Calabar 2026 schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "african-traditional-food-fair-abuja-2026",
+    title: "African Traditional Food Fair Abuja 2026: Date, Venue & Planning",
+    shortTitle: "African Traditional Food Fair",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "The 8th African Traditional Food Fair is scheduled for 17 October 2026 from 10:00 AM to 6:00 PM at the FCT Exhibition Pavilion in Abuja, with indigenous food, tasting, cooking, farmers and food producers.",
+    intro: [
+      "The 2026 African Traditional Food Fair is a one-day Abuja event focused on indigenous African food systems under the theme 'Reviving Indigenous Foods for Healthy People, Climate Resilience and a Food-Secure Nigeria'.",
+      "Visit Abuja lists the fair for Saturday 17 October from 10:00 AM to 6:00 PM at the FCT Exhibition Pavilion beside the International Conference Centre."
+    ],
+    bestFor: ["Food", "Culture", "Family outings", "October events"],
+    highlights: [
+      { name: "17 October 2026", detail: "The fair runs from 10:00 AM to 6:00 PM." },
+      { name: "FCT Exhibition Pavilion", detail: "The listed venue is on Herbert Macaulay Way in Central Area, beside the International Conference Centre." },
+      { name: "Indigenous food & tasting", detail: "The programme brings together farmers, chefs, food producers, policymakers and food innovators with public tasting, cooking and produce stalls." },
+      { name: "One-day event", detail: "Build the visit around the published Saturday programme rather than treating it as a multi-day festival." }
+    ],
+    planning: [
+      { label: "Confirm access before leaving", detail: "Check the organiser's current event page for registration, ticket or entry updates." },
+      { label: "Arrive with a Central Area transport plan", detail: "The venue is close to major Abuja event and conference traffic; allow time for parking or ride-hailing pickup." },
+      { label: "Check food-allergy details directly", detail: "If you have a serious allergy or dietary restriction, ask individual vendors about ingredients rather than relying on assumptions." },
+      { label: "Re-check the programme", detail: "Talks, demonstrations and vendor schedules can change even when the event date stays fixed." }
+    ],
+    source: { label: "Visit Abuja — 8th African Traditional Food Fair", href: "https://www.visitabuja.org/event/8th-african-traditional-food-fair/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "abuja-international-film-festival-2026",
+    title: "Abuja International Film Festival 2026: Dates, Venues & Planning",
+    shortTitle: "Abuja International Film Festival",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "The 23rd Abuja International Film Festival runs 20–24 October 2026, with screenings, premieres, masterclasses, industry discussions and awards across Abuja venues including Silverbird Cinemas.",
+    intro: [
+      "The 23rd Abuja International Film Festival is scheduled from 20 to 24 October 2026. Visit Abuja lists screenings and festival activity across Silverbird Cinemas in Central Area, Transcorp Hilton and the University of Abuja Mini Campus in Gwagwalada.",
+      "Because the programme spans multiple venues, confirm the exact screening or session venue before travelling instead of assuming every event is at Silverbird."
+    ],
+    bestFor: ["Film", "Nollywood", "Creative industry", "October events"],
+    highlights: [
+      { name: "20–24 October 2026", detail: "The festival runs for five days in Abuja." },
+      { name: "Film screenings & premieres", detail: "The programme brings African and international filmmakers together for screenings and premieres." },
+      { name: "Masterclasses & industry sessions", detail: "The festival also includes professional discussions and learning sessions for filmmakers and creative-industry participants." },
+      { name: "Multiple Abuja venues", detail: "Silverbird Cinemas is a listed venue, with additional activity at Transcorp Hilton and the University of Abuja Mini Campus in Gwagwalada." }
+    ],
+    planning: [
+      { label: "Check the session venue", detail: "The venues are not all close together, especially Gwagwalada versus Central Area. Verify each programme item before setting out." },
+      { label: "Allow travel buffers", detail: "Do not book back-to-back sessions in distant Abuja districts without realistic road time." },
+      { label: "Verify ticket or accreditation rules", detail: "Screenings, premieres, awards and industry sessions may use different access arrangements." },
+      { label: "Use the current festival programme", detail: "Check the festival's linked programme close to the date for screening times and late changes." }
+    ],
+    source: { label: "Visit Abuja — 23rd Abuja International Film Festival", href: "https://www.visitabuja.org/event/23rd-abuja-international-film-festival/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
     slug: "felabration-2026",
     title: "Felabration 2026 Lagos Guide: Dates, Venue & Planning",
     shortTitle: "Felabration 2026",

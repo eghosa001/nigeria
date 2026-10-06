@@ -626,6 +626,7 @@ export const growthHubs: GrowthHub[] = [
       "Choose the exact task below so you can prepare the correct taxpayer information and use the official NRS self-service route."
     ],
     searches: [
+      { query: "NRS self service", serviceSlug: "nrs-individual-tax-registration" },
       { query: "retrieve Nigerian Tax ID", serviceSlug: "nrs-tax-id-retrieval" },
       { query: "NRS tax registration", serviceSlug: "nrs-individual-tax-registration" },
       { query: "NRS corporate tax registration", serviceSlug: "nrs-corporate-tax-registration" },
