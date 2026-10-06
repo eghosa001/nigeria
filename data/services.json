@@ -1373,43 +1373,60 @@
   },
   {
     "slug": "neco-purchase-result-token",
-    "title": "How to purchase a NECO result token",
+    "title": "NECO Result Token: Price, Purchase Portal and Steps",
     "shortTitle": "NECO result token",
-    "summary": "The official result portal provides token purchase for candidates who do not already have one.",
+    "summary": "Buy a NECO result-checking token through the official NECO Results Portal. NECO's published service schedule lists the result-checker token at ₦1,000 and the live portal provides the current Purchase Token route.",
     "category": "Education",
     "agencySlug": "neco",
-    "feeLabel": "Current token price shown in NECO purchase flow",
+    "feeLabel": "₦1,000 in NECO's published service schedule",
     "status": "verified",
     "officialPortal": "https://results.neco.gov.ng/",
     "requirements": [
-      "An account on the official NECO Results Portal, or the ability to create one",
-      "A valid payment method inside the official NECO Results Portal and the ability to retain the payment/transaction reference for the token purchase"
+      "A NECO Results Portal account or the account details required by the live purchase flow",
+      "Working email address and phone number for account setup where required",
+      "A supported payment method offered by the official NECO purchase flow"
     ],
     "steps": [
-      "Open the official NECO Results Portal.",
-      "Choose Purchase token; sign in or create an account if the portal requires it.",
-      "Complete the official payment process shown by NECO.",
-      "Keep the purchased token and use it on the same official portal with the examination year, examination type and registration number."
+      "Open the official NECO Results Portal and choose Purchase Token.",
+      "Sign in to an existing account or create the account details requested by NECO.",
+      "Start the token purchase from the official portal and review the amount before payment.",
+      "Complete payment through the official payment route and save the transaction evidence.",
+      "Return to the result checker, select the examination year and type, enter the token and candidate registration number, then check the result."
     ],
     "notes": [
-      "The NECO Results Portal shows both account login or creation and token purchase options.",
-      "Avoid third-party token sellers when the official purchase route is available."
+      "The NECO Results Portal currently exposes a Purchase Token button directly from the result-checking page.",
+      "The token is used together with the examination year, examination type and candidate registration number.",
+      "Use the live NECO portal rather than third-party token sellers."
     ],
     "sources": [
       {
         "label": "NECO Results Portal",
         "agency": "National Examinations Council",
         "url": "https://results.neco.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "NECO published service schedule",
+        "agency": "National Examinations Council",
+        "url": "https://neco.gov.ng/2024%20Annual%20Report%20NECO.pdf",
+        "lastChecked": "2026-10-06"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-06",
     "searchTerms": [
+      "NECO token purchase",
       "NECO result token",
-      "How to purchase a NECO result token",
-      "Education"
+      "NECO result checker token",
+      "buy NECO token online",
+      "NECO token price",
+      "NECO token price 2026",
+      "NECO token purchase portal",
+      "results.neco.gov.ng token",
+      "NECO result checker"
     ],
-    "related": []
+    "related": [],
+    "feeNote": "NECO's published service schedule lists the Result Checker (Token) at ₦1,000. Confirm the amount shown in the live purchase flow before paying in case NECO updates its fee.",
+    "timeline": "NECO's published service schedule lists result-checker token issuance as instant after successful payment."
   },
   {
     "slug": "neco-e-verify",
