@@ -145,7 +145,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "streaming",
     offlineLabel: "Eligible titles can be downloaded in the Netflix app for offline viewing.",
     offlineHelpUrl: "https://help.netflix.com/en/node/54816",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "youtube",
@@ -156,7 +156,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "publisher",
     offlineLabel: "YouTube Premium can download eligible videos for offline playback where the feature is available.",
     offlineHelpUrl: "https://support.google.com/youtube/answer/11977233?hl=en",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "prime-video",
@@ -167,7 +167,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "streaming",
     offlineLabel: "Eligible Prime Video titles can be downloaded in supported Prime Video apps for offline viewing.",
     offlineHelpUrl: "https://www.primevideo.com/help?nodeId=GMF637NHNEF9D8GT",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "kava",
@@ -178,7 +178,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "streaming",
     offlineLabel: "Kava supports downloading eligible titles inside its service for offline viewing.",
     offlineHelpUrl: "https://kava.tv/help",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "nollistream",
@@ -189,7 +189,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "streaming",
     offlineLabel: "The NolliStream service advertises offline downloads inside its app for supported titles.",
     offlineHelpUrl: "https://nollistream.com/",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "dstv-stream-boxoffice",
@@ -201,7 +201,7 @@ export const platformGuides: PlatformGuide[] = [
     sourceKind: "rental",
     offlineLabel: "The DStv app supports up to 25 offline items for eligible content.",
     offlineHelpUrl: "https://www.dstv.com/en-ng/watch/stream-with-dstv/",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "nollywood-com",
@@ -210,7 +210,7 @@ export const platformGuides: PlatformGuide[] = [
     summary: "A Nigerian-film catalog with movie, cast, crew and box-office records. MyNigeriaGuide can use exact title pages as an additional industry reference, but not as proof that a movie is legally playable or downloadable.",
     status: "Industry catalog and app",
     sourceKind: "catalog",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
 ];
 
@@ -242,7 +242,7 @@ export const cinemaGuides: CinemaGuide[] = [
     priceUrl: "https://fh-frontend.filmhouseng.com/ticket-prices",
     locations: ["Lagos", "Ibadan", "Benin City", "Akure", "Port Harcourt"],
     priceNote: "Filmhouse publishes location-specific ticket prices. Standard and premium prices vary by cinema, format and promotion.",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "silverbird",
@@ -251,7 +251,7 @@ export const cinemaGuides: CinemaGuide[] = [
     bookingUrl: "https://silverbirdcinemas.com/book-movie-ticket/",
     locations: ["Victoria Island, Lagos", "Ikeja, Lagos", "Jabi, Abuja", "SEC Abuja", "Kaduna"],
     priceNote: "Use Silverbird's booking flow for the current movie, location, showtime and final ticket price.",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     slug: "viva",
@@ -260,7 +260,7 @@ export const cinemaGuides: CinemaGuide[] = [
     bookingUrl: "https://web.vivacinemas.com/",
     locations: ["Ikeja", "Lekki", "Ibadan", "Ota", "Enugu", "Ilorin"],
     priceNote: "Viva exposes showtimes by cinema and date. Check the final booking screen for the current ticket price.",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
 ];
 
@@ -269,6 +269,8 @@ export type ReleaseItem = {
   title: string;
   kind: "streaming" | "cinema" | "event";
   status: "new" | "now-showing" | "upcoming";
+  startDate?: string;
+  endDate?: string;
   dateLabel: string;
   platform: string;
   summary: string;
@@ -282,6 +284,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Agbara Nla: The Return",
     kind: "cinema",
     status: "now-showing",
+    startDate: "2026-10-02",
     dateLabel: "Advance screenings 1 October · release 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "The latest instalment in the Mount Zion faith-based franchise, with advance screenings ahead of its 2 October cinema release.",
@@ -293,6 +296,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "First Lady",
     kind: "cinema",
     status: "upcoming",
+    startDate: "2026-10-16",
     dateLabel: "In cinemas 16 October 2026",
     platform: "Tribe Nation Theatrical / cinemas",
     summary: "A political drama about the private pressure behind a powerful public marriage, led by Fehintola Olulana, Desmond Elliot and Ibrahim Suleiman.",
@@ -304,6 +308,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Better Half",
     kind: "streaming",
     status: "upcoming",
+    startDate: "2026-10-05",
     dateLabel: "Premieres 5 October 2026",
     platform: "Africa Magic Showcase",
     summary: "A new relationship drama following a successful advice-giver whose own marriage begins exposing the limits of her public formula.",
@@ -315,6 +320,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "The Ten",
     kind: "streaming",
     status: "upcoming",
+    startDate: "2026-10-08",
     dateLabel: "Premieres 8 October 2026",
     platform: "Africa Magic Showcase",
     summary: "Ten survivors are reunited by faith and forced to confront unresolved history, accountability and forgiveness.",
@@ -326,6 +332,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Afobaje",
     kind: "streaming",
     status: "upcoming",
+    startDate: "2026-10-10",
     dateLabel: "Premieres 10 October 2026",
     platform: "Africa Magic Yoruba",
     summary: "A royal heir becomes the main suspect in a supernatural mystery targeting heirs to the throne of Ekinrinade.",
@@ -337,6 +344,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Pushing 30",
     kind: "streaming",
     status: "upcoming",
+    startDate: "2026-10-18",
     dateLabel: "Premieres 18 October 2026 at 8 PM",
     platform: "Africa Magic Showcase",
     summary: "A young-adult ensemble film about a tech founder whose 30th-birthday brunch exposes relationship, friendship and career tensions.",
@@ -348,6 +356,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "A Land Apart",
     kind: "cinema",
     status: "upcoming",
+    startDate: "2026-10-23",
     dateLabel: "In cinemas 23 October 2026",
     platform: "Nigerian cinemas",
     summary: "An alternate-history Nigerian drama-thriller imagining a country whose wealth grew around agriculture instead of oil.",
@@ -359,6 +368,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Tele x Zikora",
     kind: "cinema",
     status: "upcoming",
+    startDate: "2026-10-23",
     dateLabel: "In cinemas 23 October 2026",
     platform: "Nigerian cinemas",
     summary: "A coming-of-age campus drama about two very different students whose lives collide at the fictional Lagos Metropolitan University.",
@@ -370,6 +380,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Phoenix Fury",
     kind: "cinema",
     status: "upcoming",
+    startDate: "2026-10-30",
     dateLabel: "In cinemas 30 October 2026",
     platform: "Nigeria & Ghana cinemas",
     summary: "Ifeoma Nkiruka Chukwuogo's revenge drama follows two women from different worlds through trauma, power and retaliation.",
@@ -381,6 +392,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Wire Transfer",
     kind: "cinema",
     status: "upcoming",
+    startDate: "2026-10-30",
     dateLabel: "In cinemas 30 October 2026",
     platform: "Silverbird Film Distribution",
     summary: "A Nigerian crime thriller scheduled for a nationwide cinema release at the end of October.",
@@ -392,6 +404,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Black Market",
     kind: "cinema",
     status: "upcoming",
+    startDate: "2026-10-02",
     dateLabel: "In cinemas 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "A Nollywood drama listed by Silverbird among its 2 October releases.",
@@ -403,6 +416,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "MKO",
     kind: "cinema",
     status: "now-showing",
+    startDate: "2026-10-02",
     dateLabel: "In cinemas 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "Ose Oyamendan's documentary on M.K.O. Abiola begins its Nigerian theatrical release on 2 October.",
@@ -447,6 +461,7 @@ export const releaseItems: ReleaseItem[] = [
     title: "Starlomo",
     kind: "cinema",
     status: "now-showing",
+    startDate: "2026-09-25",
     dateLabel: "Released 25 September 2026",
     platform: "Silverbird Cinemas",
     summary: "A Yoruba-language Nollywood drama currently listed in Silverbird's now-showing catalog.",
@@ -469,6 +484,8 @@ export const releaseItems: ReleaseItem[] = [
     title: "After Credits Club — First Edition",
     kind: "event",
     status: "upcoming",
+    startDate: "2026-10-02",
+    endDate: "2026-10-04",
     dateLabel: "2–4 October 2026",
     platform: "Lagos",
     summary: "A three-day independent film and cultural experience built around screenings, conversation and community.",
