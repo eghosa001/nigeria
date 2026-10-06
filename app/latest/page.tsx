@@ -4,6 +4,7 @@ import { publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
 import { jobOpportunities } from "@/lib/jobs";
+import { seriesLastChecked, seriesTitles } from "@/lib/series";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
@@ -23,6 +24,9 @@ export default function LatestPage() {
   const movies = [...entertainmentTitles]
     .sort((a, b) => movieChecked(b).localeCompare(movieChecked(a)) || b.year - a.year)
     .slice(0, 8);
+  const series = [...seriesTitles]
+    .sort((a, b) => seriesLastChecked(b).localeCompare(seriesLastChecked(a)) || b.year - a.year)
+    .slice(0, 6);
   const services = [...publicServices]
     .sort((a, b) => b.lastVerified.localeCompare(a.lastVerified) || a.shortTitle.localeCompare(b.shortTitle))
     .slice(0, 8);
@@ -54,6 +58,13 @@ export default function LatestPage() {
             <div className="section-heading"><div><span className="eyebrow">Watch</span><h2>Movies</h2></div><Link href="/entertainment/movies">All movies →</Link></div>
             <div className="admin-category-list">
               {movies.map((movie) => <Link href={"/entertainment/movies/" + movie.slug} key={movie.slug}><span>{movie.title}</span><strong>{movieChecked(movie)}</strong></Link>)}
+            </div>
+          </section>
+
+          <section className="admin-panel">
+            <div className="section-heading"><div><span className="eyebrow">Follow</span><h2>Series</h2></div><Link href="/entertainment/series">All series →</Link></div>
+            <div className="admin-category-list">
+              {series.map((item) => <Link href={"/entertainment/series/" + item.slug} key={item.slug}><span>{item.title}</span><strong>{seriesLastChecked(item)}</strong></Link>)}
             </div>
           </section>
 
