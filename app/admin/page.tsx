@@ -6,6 +6,7 @@ import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { explorePlaces } from "@/lib/explore-places";
 import { isReportBackendConfigured } from "@/lib/report-backend";
+import { jobOpportunities } from "@/lib/jobs";
 import { getContentHealth } from "@/lib/content-health";
 import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
 import { youtubeMovieLibrary } from "@/lib/youtube-library";
@@ -44,7 +45,7 @@ export default function AdminPage() {
           <div>
             <span className="eyebrow">Operations</span>
             <h1>Platform operations dashboard</h1>
-            <p className="page-intro">Manage and review the three public pillars of MyNigeriaGuide: movies, practical services and Tour Nigeria, with analytics and verification tools in one workspace.</p>
+            <p className="page-intro">Manage and review all four public pillars of MyNigeriaGuide: movies, practical services, Tour Nigeria and Jobs & Careers, with analytics and verification tools in one workspace.</p>
           </div>
           <span className={"db-state " + (backendConnected ? "connected" : "offline")}>
             {backendConnected ? "Correction backend connected" : "Read-only operations mode"}
@@ -57,6 +58,7 @@ export default function AdminPage() {
           <div><strong>{publicServices.length}</strong><span>Service guides</span></div>
           <div><strong>{exploreGuides.length}</strong><span>Travel guides</span></div>
           <div><strong>{explorePlaces.length}</strong><span>Travel places</span></div>
+          <div><strong>{jobOpportunities.length}</strong><span>Job pathways</span></div>
           <div><strong>{sourceCount + verifiedYouTubeMovieChannels.length}</strong><span>Tracked sources</span></div>
         </div>
 
