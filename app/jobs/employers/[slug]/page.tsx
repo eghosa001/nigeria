@@ -80,7 +80,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
             title={"What is currently available from " + employer.name + "?"}
             summary={
               openItems.length
-                ? openItems.length + " verified " + employer.name + " opportunity" + (openItems.length === 1 ? " is" : "ies are") + " currently marked open. Check each exact record before applying."
+                ? openItems.length + " verified " + employer.name + " " + (openItems.length === 1 ? "opportunity is" : "opportunities are") + " currently marked open. Check each exact record before applying."
                 : "No record in this employer hub is currently marked open. Use the verified career route or closed records for context and re-check the employer source for new vacancies."
             }
             facts={[
