@@ -39,7 +39,8 @@ export type YouTubeMovieRecord = BaseYouTubeMovieRecord & {
 
 type GeneratedRecord = Omit<BaseYouTubeMovieRecord, "source" | "internalHref">;
 
-const generatedSynopsisHype = /\b(amazing masterpiece|masterpiece|will make your day|must[- ]watch|edge of your seat|don['’]?t miss|do not miss|subscribe|like and share|latest nigerian movies?)\b/i;
+const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|latest nigerian movies?|hottest|trending)\b/i;
+const generatedSynopsisSeo = /\b(?:full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
 
 function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
   let text = String(movie.synopsis ?? "")
@@ -52,7 +53,7 @@ function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
   const generatedSuffix = text.search(/\s+is a full-length Nigerian film published by /i);
   if (generatedSuffix >= 70) text = text.slice(0, generatedSuffix).trim();
 
-  if (!text || generatedSynopsisHype.test(text)) {
+  if (!text || generatedSynopsisHype.test(text) || generatedSynopsisSeo.test(text)) {
     const cast = movie.featuredCast.length ? movie.featuredCast : movie.cast;
     return movie.title + " is a full-length Nigerian film published by " + movie.channelName + "." +
       (cast.length ? " Featured cast includes " + cast.slice(0, 3).join(", ") + "." : "");
@@ -154,8 +155,12 @@ const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more
 
 function cleanReviewTitle(value: string) {
   return value
+    .replace(/\s*\|\s*(?:nollywood|nigerian|african|latest|full)\b.*$/i, " ")
+    .replace(/\s*;\s*[^;]*(?:,|20\d{2}).*$/i, " ")
     .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
     .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
+    .replace(/\s*\((?:full|complete)\s+movie\)\s*$/i, " ")
+    .replace(/\s+(?:full\s+movie|nollywood\s+movies?\s*20\d{2}.*|nigerian\s+movies?\s*20\d{2}.*)$/i, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -164,7 +169,12 @@ function reviewSynopsis(candidate: ReviewCandidate) {
   const text = String(candidate.descriptionExcerpt ?? "").replace(/\s+/g, " ").trim();
   const firstUseful = text
     .split(/(?<=[.!?])\s+/)
-    .find((sentence) => sentence.length >= 70 && !reviewPromoText.test(sentence));
+    .find((sentence) =>
+      sentence.length >= 70 &&
+      !reviewPromoText.test(sentence) &&
+      !generatedSynopsisHype.test(sentence) &&
+      !generatedSynopsisSeo.test(sentence),
+    );
   if (firstUseful) return firstUseful.slice(0, 360);
   return cleanReviewTitle(candidate.title) + " is a full-length Nigerian film published by " + candidate.channelName +
     ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
