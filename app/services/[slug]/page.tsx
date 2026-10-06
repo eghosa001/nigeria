@@ -153,6 +153,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     dateModified: service.lastVerified,
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     about: agency ? { "@type": "Thing", name: agency.name, url: agency.website } : undefined,
+    spatialCoverage: { "@type": "Country", name: "Nigeria" },
   };
 
   const faqLd = {
@@ -183,6 +184,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               </div>
               <h1>{service.title}</h1>
               <p>{service.summary}</p>
+              <p className="hero-note">
+                Applies to Nigeria · Responsible agency: {agency?.name ?? service.agencySlug.toUpperCase()} · Verified {service.lastVerified}
+              </p>
               <div className="guide-badges">
                 <StatusBadge status={service.status} />
                 <span className="checked-date">Checked {service.lastVerified}</span>
@@ -190,7 +194,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <ShareWatch slug={service.slug} title={service.title} feeLabel={service.feeLabel} lastVerified={service.lastVerified} />
             </div>
             <aside className="fee-card">
-              <span>Current fee / status</span>
+              <span>Current fee / status · checked {service.lastVerified}</span>
               <strong>{service.feeLabel}</strong>
               {service.feeNote ? <p>{service.feeNote}</p> : null}
               {primaryOfficialLink ? (
@@ -206,10 +210,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             title={"What you need to know about " + service.shortTitle}
             summary={service.summary}
             facts={[
-              { label: "Cost / status", value: service.feeLabel },
+              { label: "Applies to", value: "Nigeria · " + service.category },
+              { label: "Responsible agency", value: agency?.name ?? service.agencySlug.toUpperCase() },
+              { label: "Current fee / status", value: service.feeLabel + " · checked " + service.lastVerified },
               { label: "Timeline", value: service.timeline ?? "No fixed official timeline published" },
-              { label: "First requirement", value: service.requirements[0] ?? "See the verified requirements below" },
-              { label: "First step", value: service.steps[0] ?? "Use the official agency route below" },
             ]}
             links={[
               { href: "#requirements", label: "See requirements" },
@@ -255,7 +259,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <section id="notes">
               <span className="section-number" aria-hidden="true">03</span>
-              <h2>Important notes</h2>
+              <h2>Important notes about {service.shortTitle}</h2>
               <ul>{service.notes.map((note) => <li key={note}>{note}</li>)}</ul>
             </section>
 
@@ -265,8 +269,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <section id="official-sources">
               <span className="section-number" aria-hidden="true">05</span>
-              <h2>Official sources</h2>
-              <p className="source-intro">These are the government or agency pages used to verify this guide. Open them directly whenever you want to confirm the source.</p>
+              <h2>Official {agency?.shortName ?? service.agencySlug.toUpperCase()} sources for {service.shortTitle}</h2>
+              <p className="source-intro">These government or agency pages were used to verify {service.shortTitle}. This guide was last reviewed on {service.lastVerified}; the official source takes priority if a live detail changes.</p>
               <div className="source-list">
                 {service.sources.map((source) => (
                   <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
