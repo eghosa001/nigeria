@@ -4,8 +4,6 @@ import { exploreGrowthPlacesWave3 } from "@/lib/explore-growth-places-wave-3";
 import { exploreGrowthLinksWave3 } from "@/lib/explore-growth-links-wave-3";
 import { exploreGrowthWave2SharedPlaceSlugs } from "@/lib/explore-growth-links-wave-2";
 import { exploreGrowthPlacesWave2 } from "@/lib/explore-growth-places-wave-2";
-import { exploreGrowthWaveThreeSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06-b";
-import { exploreGrowthPlacesThree } from "@/lib/explore-growth-places-2026-10-06-b";
 
 export type ExplorePlaceKind = "attraction" | "nature" | "restaurant" | "hotel" | "shopping" | "landmark";
 
@@ -31,7 +29,6 @@ export type ExplorePlace = {
 export const explorePlaces: ExplorePlace[] = [
   ...exploreGrowthPlacesWave3,
   ...exploreGrowthPlacesWave2,
-  ...exploreGrowthPlacesThree,
   ...exploreGrowthPlaces,
   {
     slug: "magicland-smfest-abuja-2026",
@@ -3027,7 +3024,6 @@ const nationalLandmarkPlaceSlugs = [
 const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
   ...exploreGrowthLinksWave3,
   ...exploreGrowthWave2SharedPlaceSlugs,
-  ...exploreGrowthWaveThreeSharedPlaceSlugs,
   ...exploreGrowthWaveSharedPlaceSlugs,
   "nigeria-landmarks-places-to-visit": nationalLandmarkPlaceSlugs,
   "felabration-2026": [
