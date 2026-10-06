@@ -1,0 +1,175 @@
+[
+  {
+    "slug": "pencom-rsa-data-recapture",
+    "title": "How to complete PenCom RSA data recapture in Nigeria",
+    "shortTitle": "RSA data recapture",
+    "summary": "How existing RSA holders update pension biodata and identity records through their Pension Fund Administrator under PenCom's Data Recapture Exercise, including current NIN, identity and BVN requirements.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom recapture fee stated",
+    "feeNote": "Use your licensed PFA's official recapture route. Do not pay an unofficial agent to alter pension identity records.",
+    "timeline": "Depends on the PFA's identity verification and PenCom/ECRS processing.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/revised-documentation-from-rsa-holders-for-the-data-recapture-exercise/",
+    "requirements": [
+      "Your existing RSA PIN and the Pension Fund Administrator that manages the account.",
+      "NIMC enrolment slip or NIN card showing the NIN and date of birth.",
+      "A valid identity document accepted under PenCom's current recapture documentation rules.",
+      "BVN information, which PenCom made mandatory for RSA registration and data recapture.",
+      "Any additional record requested by your PFA only where it is needed to reconcile an inconsistency in the pension record."
+    ],
+    "steps": [
+      "Contact the licensed PFA that holds your RSA and ask for its official Data Recapture Exercise route or service centre.",
+      "Provide the RSA PIN and complete the PFA's recapture form with your current biodata and contact information.",
+      "Present or upload the current NIN evidence, accepted identity document and BVN information required for the recapture.",
+      "Complete any biometric or signature capture required by the PFA and review the information before submission.",
+      "Keep the PFA acknowledgement and follow up until the PFA confirms that the recaptured data has been accepted on the pension registration system."
+    ],
+    "notes": [
+      "Data recapture updates an existing RSA record; it is not a reason to open a second RSA.",
+      "PenCom's February 2026 circular simplified the documentation required from RSA holders for the exercise.",
+      "If you have multiple RSA PINs, use the multiple-RSA resolution guide because reconciliation is an additional process."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — Revised Documentation from RSA Holders for the Data Recapture Exercise",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/revised-documentation-from-rsa-holders-for-the-data-recapture-exercise/",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "PenCom — BVN requirement for RSA registration and data recapture",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/circular-on-mandatory-provision-of-the-bank-verification-number-bvn-for-rsa-registration-and-data-recapture/",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-multiple-rsa-resolution",
+      "pencom-uncredited-contributions"
+    ],
+    "lastVerified": "2026-10-06",
+    "searchTerms": [
+      "pension data recapture Nigeria",
+      "RSA data recapture",
+      "PenCom data recapture requirements",
+      "update pension biodata",
+      "BVN RSA recapture"
+    ]
+  },
+  {
+    "slug": "pencom-uncredited-contributions",
+    "title": "How to resolve uncredited pension contributions in Nigeria",
+    "shortTitle": "Resolve uncredited pension",
+    "summary": "What to do when pension money has reached a PFA but cannot yet be credited to the correct employee RSA, including the documents PenCom asks employees with and without RSA PINs to provide.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom resolution fee stated",
+    "feeNote": "Use the responsible PFA and PenCom's official guidance. This is different from an employer that never remitted the contribution.",
+    "timeline": "Resolution depends on identifying the employee, reconciling the remittance and crediting the correct RSA.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/guidance-note-employees-2/",
+    "requirements": [
+      "If you already have an RSA PIN: the valid RSA PIN and a copy of the PFA welcome letter where requested.",
+      "A copy of your employment letter so the affected employment can be matched to the remittance.",
+      "Completion of the Data Recapture Exercise if you have not already completed it.",
+      "If you do not yet have an RSA: open one with a licensed PFA before the uncredited contribution can be matched to your pension account."
+    ],
+    "steps": [
+      "Confirm with the employer or PFA that the issue is an uncredited contribution rather than a contribution that was never remitted.",
+      "If you have an RSA, obtain the RSA PIN or welcome letter and confirm that your Data Recapture Exercise is complete.",
+      "Provide the employment letter and RSA evidence to the PFA where the uncredited contribution is being held, following PenCom's employee guidance.",
+      "If you do not have an RSA, open one with a PFA of your choice, then provide the new welcome letter to the PFA holding the uncredited contribution and to your employer for future remittances.",
+      "Follow up with the PFA until it confirms that the remittance has been identified and credited to the correct RSA."
+    ],
+    "notes": [
+      "Uncredited contributions are different from unremitted contributions: money may already have been paid but lack enough information to reach the correct RSA.",
+      "Where the RSA is already with the PFA holding the uncredited contribution, PenCom says the employee may only need to provide the valid RSA PIN for review or confirmation.",
+      "Use the separate unremitted-contributions guide when the employer did not pay the pension contribution at all."
+    ],
+    "sources": [
+      {
+        "label": "PenCom Guidance Note — Employees with uncredited contributions",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/guidance-note-employees-2/",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "PenCom — Uncredited Contributions section",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "related": [
+      "pencom-rsa-data-recapture",
+      "pencom-open-rsa",
+      "pencom-unremitted-contributions"
+    ],
+    "lastVerified": "2026-10-06",
+    "searchTerms": [
+      "uncredited pension contribution Nigeria",
+      "pension contribution not credited",
+      "PenCom uncredited contributions",
+      "RSA contribution missing after payment"
+    ]
+  },
+  {
+    "slug": "pencom-multiple-rsa-resolution",
+    "title": "How to resolve multiple RSA PINs in Nigeria",
+    "shortTitle": "Resolve multiple RSA PINs",
+    "summary": "How an RSA holder with more than one pension PIN starts reconciliation so duplicate registrations can be resolved and contributions associated with the valid RSA record.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom reconciliation fee stated",
+    "feeNote": "Use your PFA and PenCom's official process. Do not create another RSA to fix duplicate PINs.",
+    "timeline": "Depends on data recapture, PFA records and PenCom reconciliation of the duplicate accounts.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/wp-content/uploads/2023/09/FREQUENTLY-ASKED-QUESTIONS-2023.pdf",
+    "requirements": [
+      "All RSA PINs or evidence of the multiple RSA registrations.",
+      "A valid RSA record that can be used for the reconciliation process.",
+      "A completed Data Recapture Exercise record for the RSA PIN your PFA identifies as the valid account for reconciliation.",
+      "Your full name, NIN, employer history and other identity information needed to match contributions attached to the duplicate RSA PINs."
+    ],
+    "steps": [
+      "Contact the PFA that currently manages one of your RSA PINs, state that you have multiple RSA registrations, and present every RSA PIN or welcome letter you can identify.",
+      "Ask the PFA to identify which RSA PIN should remain active, confirm which other PINs must be reconciled, and check whether the valid RSA has completed Data Recapture.",
+      "Complete Data Recapture for the RSA PIN the PFA confirms should remain valid if that account has not yet been recaptured.",
+      "Submit the duplicate PIN information and supporting evidence through the PFA/PenCom reconciliation route; FGN Treasury-funded MDA employees and retirees follow the specific reconciliation rules issued for that group.",
+      "Wait for the PFA or PenCom confirmation that the duplicate registrations have been reconciled before giving employers the final valid RSA details."
+    ],
+    "notes": [
+      "PenCom warns that multiple RSAs can cause incorrect remittances and delay access to retirement benefits.",
+      "PenCom's FAQ says contributions in multiple RSAs can be merged, subject to the reconciliation rules that apply to the contributor's employment category.",
+      "Changing from one PFA to another is a separate RSA Transfer System process and should not create a second RSA."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — Frequently Asked Questions on the Contributory Pension Scheme",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2023/09/FREQUENTLY-ASKED-QUESTIONS-2023.pdf",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "PenCom — 2026 Guidelines for Verification and Enrolment Exercise of Prospective Retirees",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2026/02/Guidelines-for-Verification-Enrolment-Exercise-of-Prospective-Retirees_Issued-Copy.pdf",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "related": [
+      "pencom-rsa-data-recapture",
+      "pencom-transfer-rsa",
+      "pencom-open-rsa"
+    ],
+    "lastVerified": "2026-10-06",
+    "searchTerms": [
+      "multiple RSA PIN Nigeria",
+      "duplicate pension account",
+      "merge RSA accounts Nigeria",
+      "PenCom multiple RSA resolution"
+    ]
+  }
+]

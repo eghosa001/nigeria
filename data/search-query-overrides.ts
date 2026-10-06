@@ -11,6 +11,13 @@ export type SearchQueryOverride = Partial<{
  * Answers remain derived from verified Service data; this layer changes wording only.
  */
 export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
+  "nin-enrolment": {
+    fee: "Is NIN registration free in Nigeria?",
+    requirements: "What do I need for NIN registration or enrolment?",
+    online: "Where is the official NIMC NIN registration route?",
+    timeline: "How long does NIN registration and NIN slip collection take?",
+    start: "How do I register for a NIN in Nigeria?",
+  },
   "nrs-tax-id-retrieval": {
     fee: "Is Nigerian Tax ID or TIN retrieval free?",
     requirements: "What do I need to retrieve my Nigerian Tax ID with NIN or CAC?",

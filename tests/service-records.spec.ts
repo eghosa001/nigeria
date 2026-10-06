@@ -6,8 +6,9 @@ const coreServices = JSON.parse(fs.readFileSync(new URL("../data/services.json",
 const scaleServices = JSON.parse(fs.readFileSync(new URL("../data/services-scale-verified.json", import.meta.url), "utf8"));
 const privateServices = JSON.parse(fs.readFileSync(new URL("../data/services-private-extended.json", import.meta.url), "utf8"));
 const growthServices = JSON.parse(fs.readFileSync(new URL("../data/services-growth-wave-3.json", import.meta.url), "utf8"));
+const wave5Services = JSON.parse(fs.readFileSync(new URL("../data/services-growth-wave-5.json", import.meta.url), "utf8"));
 const cacPartnershipServices = JSON.parse(fs.readFileSync(new URL("../data/services-cac-partnerships.json", import.meta.url), "utf8"));
-const services = validateServiceCatalog([...coreServices, ...scaleServices, ...privateServices, ...growthServices, ...cacPartnershipServices]);
+const services = validateServiceCatalog([...coreServices, ...scaleServices, ...privateServices, ...growthServices, ...wave5Services, ...cacPartnershipServices]);
 const publicServices = services.filter((service) => service.status !== "review");
 
 const expectedSlugs = [
@@ -339,8 +340,8 @@ const representative = [
 ] as const;
 
 test("structured service catalog preserves the legacy guides inside the expanded catalog", () => {
-  expect(services).toHaveLength(665);
-  expect(publicServices).toHaveLength(665);
+  expect(services).toHaveLength(668);
+  expect(publicServices).toHaveLength(668);
   expect(services.slice(0, expectedSlugs.length).map((service) => service.slug)).toEqual(expectedSlugs);
   for (const expected of representative) {
     const actual = services.find((service) => service.slug === expected.slug);

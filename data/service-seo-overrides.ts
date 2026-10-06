@@ -1,4 +1,5 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
+  "nin-enrolment": "NIN Registration Nigeria {year}: Free Enrolment & Requirements",
   "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Form & Requirements",
   "passport-appointment": "Nigerian Passport Appointment {year}: Book Online",
   "passport-centre-availability": "Passport Centre Availability {year}: Check Dates",
@@ -56,6 +57,9 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "pencom-rsa-mortgage-equity-contribution": "Use RSA for Mortgage Nigeria {year}: 25% Pension Equity Rules",
   "pencom-programmed-withdrawal-retirement": "Programmed Withdrawal Nigeria {year}: RSA Retirement Pension",
   "pencom-death-benefits-claim": "Pension Death Benefits Nigeria {year}: RSA Claim Steps",
+  "pencom-rsa-data-recapture": "Pension Data Recapture Nigeria {year}: RSA Requirements & Steps",
+  "pencom-uncredited-contributions": "Uncredited Pension Contributions {year}: How to Resolve",
+  "pencom-multiple-rsa-resolution": "Multiple RSA PINs Nigeria {year}: How to Resolve & Merge",
   "inec-replace-lost-damaged-pvc": "Replace Lost or Damaged PVC {year}: INEC Steps",
   "inec-voter-transfer": "INEC Voter Transfer {year}: Change Voting Location",
 };
@@ -67,6 +71,7 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "nin-enrolment": "NIN registration in Nigeria {year}: free NIMC enrolment, eligibility, biometric capture, official route and how to collect the NIN slip.",
   "nrs-individual-tax-registration": "NRS taxpayer self-service registration {year}: register an individual taxpayer with NIN, use the official NRS portal and resume an existing registration safely.",
   "nrs-tax-id-retrieval": "Nigeria Tax ID/TIN retrieval {year}: use the official NRS/JRB portal with NIN for individuals or CAC details for businesses, with no public retrieval fee shown.",
   "jamb-caps": "JAMB CAPS {year}: check admission status, institution and course details, then accept or reject admission only through the candidate's official e-Facility/CAPS account.",
