@@ -431,12 +431,12 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <section>
               <span className="eyebrow">Popular questions</span>
               <h2>Quick answers about {title.title}</h2>
-              <div className="search-answer-grid">
+              <div className="compact-faq-list">
                 {movieQuestions.map((item) => (
-                  <article key={item.question}>
-                    <h3>{item.question}</h3>
+                  <details key={item.question}>
+                    <summary>{item.question}</summary>
                     <p>{item.answer}</p>
-                  </article>
+                  </details>
                 ))}
               </div>
             </section>
@@ -460,11 +460,22 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <div className="movie-credit-group">
                 <h3>Full cast</h3>
                 <div className="movie-person-list">
-                  {title.cast.map((name) => {
+                  {title.cast.slice(0, 8).map((name) => {
                     const href = personHref(name);
                     return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
                   })}
                 </div>
+                {title.cast.length > 8 ? (
+                  <details className="compact-disclosure cast-disclosure">
+                    <summary>Show {title.cast.length - 8} more cast member{title.cast.length - 8 === 1 ? "" : "s"}</summary>
+                    <div className="movie-person-list">
+                      {title.cast.slice(8).map((name) => {
+                        const href = personHref(name);
+                        return href ? <Link href={href} key={name}>{name}<span>View profile →</span></Link> : <span key={name}>{name}</span>;
+                      })}
+                    </div>
+                  </details>
+                ) : null}
               </div>
             </section>
 
