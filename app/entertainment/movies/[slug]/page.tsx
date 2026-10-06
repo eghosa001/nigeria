@@ -100,6 +100,18 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "Forever Found Nigerian Movie: Cast & Full Movie",
     description: "Forever Found cast, story, 108-minute runtime and official full-movie link, with Chinenye Nnebe, John Ekanem, Chioma Nwosu and Amaka Ndukwe.",
   },
+  "the-bride-switch": {
+    title: "The Bride Switch Cast & Full Movie on YouTube",
+    description: "The Bride Switch cast, story, 159-minute runtime and official Omoni Oboli TV full movie. Starring Toluwani George, Eddie Watson and Thelma Chukwunwem.",
+  },
+  "love-always-wins-2026": {
+    title: "Love Always Wins Cast & Full Movie on YouTube",
+    description: "Love Always Wins cast, story and official Uduak Isong TV full movie, starring Omeche Oko, Bryan Okoye and Jeffery Nortey.",
+  },
+  "what-tomorrow-holds-2026": {
+    title: "What Tomorrow Holds Cast & Full Movie on YouTube",
+    description: "What Tomorrow Holds cast, story, 107-minute runtime and official Sandra Okunzuwa TV full movie, with Chioma Nwosu, Sandra Okunzuwa and Kalu Ikeagwu.",
+  },
 };
 
 function movieImageUrl(title: EntertainmentTitle, base: string) {
@@ -215,6 +227,24 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const featuredCast = getFeaturedCast(title);
   const image = movieImageUrl(title, base);
+  const movieQuestions = [
+    {
+      question: "Who is in the " + title.title + " cast?",
+      answer: title.cast.length
+        ? title.title + " features " + title.cast.slice(0, 6).join(", ") + (title.cast.length > 6 ? " and other cast members listed below." : ".")
+        : "The verified cast list is still being expanded.",
+    },
+    {
+      question: "Where can I watch " + title.title + "?",
+      answer: platforms.length
+        ? title.title + " is currently linked to " + platforms.join(" and ") + " through the verified official availability section on this page."
+        : "No current official streaming, broadcast or cinema availability has been verified for " + title.title + ".",
+    },
+    ...(title.runtimeMinutes ? [{
+      question: "How long is " + title.title + "?",
+      answer: title.title + " has a verified runtime of " + title.runtimeMinutes + " minutes.",
+    }] : []),
+  ];
 
   const movieLd = {
     "@context": "https://schema.org",
@@ -231,9 +261,20 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
       ...availabilityLinks.map((link) => link.href),
       ...(title.references ?? []).map((link) => link.href),
     ],
+    duration: title.runtimeMinutes ? "PT" + title.runtimeMinutes + "M" : undefined,
     potentialAction: availabilityLinks.length
       ? availabilityLinks.map((link) => ({ "@type": "WatchAction", target: link.href }))
       : undefined,
+  };
+
+  const faqLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: movieQuestions.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
   };
 
   const breadcrumbLd = {
@@ -253,7 +294,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
   return (
     <>
-      <JsonLd data={[movieLd, breadcrumbLd]} />
+      <JsonLd data={[movieLd, breadcrumbLd, faqLd]} />
 
       <section className="movie-detail-hero">
         <div className="container">
@@ -352,6 +393,19 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
                 <article><span>Official platforms</span><strong>{platforms.length ? platforms.join(", ") : "No current official viewing platform verified"}</strong></article>
                 <article><span>Source freshness</span><strong>{lastChecked || "Not recorded"}</strong></article>
+              </div>
+            </section>
+
+            <section>
+              <span className="eyebrow">Popular questions</span>
+              <h2>Quick answers about {title.title}</h2>
+              <div className="search-answer-grid">
+                {movieQuestions.map((item) => (
+                  <article key={item.question}>
+                    <h3>{item.question}</h3>
+                    <p>{item.answer}</p>
+                  </article>
+                ))}
               </div>
             </section>
 
