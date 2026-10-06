@@ -239,10 +239,12 @@ function isMovie(video) {
 function cleanName(value) {
   return value
     .replace(/\([^)]*\)/g, "")
+    .replace(/^[a-z]\s*[-–—]\s*/i, "")
     .replace(/\b(starring|featuring|feat\.?|ft\.?)\b/gi, "")
     .replace(/and\s+many\s+(?:more|others?)\.?$/i, "")
     .replace(/^\s*(?:with|also)\s+/i, "")
     .replace(/\s+as\s+[A-Za-zÀ-ÖØ-öø-ÿ'’.\-\s]+$/i, "")
+    .replace(/([A-Za-z])\.([A-Za-z])/g, "$1. $2")
     .replace(/[#|]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -251,7 +253,7 @@ function cleanName(value) {
 
 const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
 const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
-const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching)\b/i;
+const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching|captivating|blockbuster|ultimate|unmissable|must[- ]watch|watch\s+now|filled\s+with|will\s+blow\s+your\s+mind|will\s+make\s+your\s+day)\b/i;
 
 function looksLikePersonName(name) {
   const words = name.split(/\s+/).filter(Boolean);
@@ -373,7 +375,12 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
       !/\b(?:social media|instagram|tiktok|facebook)\b/i.test(line) &&
       !promoSynopsis.test(line),
     );
-  const chosen = paragraphs[0];
+  const chosen = paragraphs.find((paragraph) =>
+    !/\b(full movie|complete movie|latest full movies?|nollywood movies? 20\d{2}|nigerian movies? 20\d{2}|official full movie)\b/i.test(paragraph) &&
+    !/^[A-Z0-9 '&’():;,.\-]+(?:20\d{2})?$/i.test(paragraph) &&
+    !/^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(paragraph) &&
+    !/[🎬🔥✨💥😍🤩]/u.test(paragraph)
+  );
   if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
 
   const featured = cast.slice(0, 3).join(", ");
@@ -407,6 +414,7 @@ function cleanTitle(raw, cast = []) {
     }
   }
 
+  title = title.replace(/\s*;\s*[A-Z][A-Z .,'’\-]+(?:,\s*[A-Z][A-Z .,'’\-]+)+(?:\s+20\d{2})?.*$/i, " ");
   title = title.replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ");
   title = title.replace(/\s+-\s+(?:starring|feat(?:uring)?\.?|[A-Z][A-Z\s,'.&-]{8,}).*$/i, " ");
   title = title.replace(/[.\s-]*\b(?:starring|featuring|feat\.?|ft\.?)\b.*$/i, " ");
