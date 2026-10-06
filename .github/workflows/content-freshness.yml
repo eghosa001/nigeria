@@ -1,0 +1,40 @@
+name: Content Freshness
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "35 5 * * *"
+  pull_request:
+    paths:
+      - "data/services.json"
+      - "data/youtube-channel-cache.json"
+      - "lib/content-freshness.ts"
+      - "lib/content-health.ts"
+      - "lib/entertainment.ts"
+      - "lib/entertainment-extras.ts"
+      - "lib/explore.ts"
+      - "lib/explore-places.ts"
+      - "lib/jobs.ts"
+      - "lib/job-scale-wave.ts"
+      - "scripts/check-freshness.ts"
+      - ".github/workflows/content-freshness.yml"
+      - "package.json"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-freshness-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - run: npm run check:freshness
