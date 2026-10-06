@@ -330,8 +330,8 @@ export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
 
 export const indexableYouTubeMovies = youtubeMovieLibrary.filter(isIndexableYouTubeMovie);
 
-export const latestYouTubeMovies = youtubeMovieLibrary;
-export const trendingYouTubeMovies = [...youtubeMovieLibrary].sort(
+export const latestYouTubeMovies = indexableYouTubeMovies;
+export const trendingYouTubeMovies = [...indexableYouTubeMovies].sort(
   (a, b) => trendScore(b) - trendScore(a) || b.publishedAt.localeCompare(a.publishedAt),
 );
 

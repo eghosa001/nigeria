@@ -6219,3 +6219,129 @@ a.admin-guide-row:hover { background:#f8fcf9; }
     max-width: 42ch;
   }
 }
+
+
+/* Compact long-form content — 2026-10-06 */
+.explore-guide-hero.page-top {
+  min-height: 0;
+  padding-top: 64px;
+  padding-bottom: 52px;
+}
+.explore-intro-copy { max-width: 900px; }
+.explore-intro-copy > p { margin-bottom: 14px; }
+.compact-disclosure {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.compact-disclosure > summary {
+  cursor: pointer;
+  padding: 12px 14px;
+  color: var(--green-dark);
+  font-size: .82rem;
+  font-weight: 850;
+}
+.compact-disclosure > div {
+  padding: 0 14px 14px;
+  color: var(--muted);
+}
+.compact-disclosure > div > :last-child { margin-bottom: 0; }
+
+.explore-guide-highlights { padding-block: 52px; }
+.explore-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+}
+.explore-highlight-card {
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.explore-highlight-card > span {
+  color: var(--green);
+  font-size: .7rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.explore-highlight-card > strong { display: block; margin-top: 6px; font-size: 1rem; }
+.explore-highlight-card > small { display: block; margin-top: 6px; color: var(--muted); line-height: 1.45; }
+
+.explore-place-card-detail { padding: 18px; }
+.explore-place-card-detail > p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.explore-place-core-facts { margin-top: 10px !important; }
+.explore-place-more { margin-top: 12px; }
+.explore-place-more > div { display: grid; gap: 8px; }
+.explore-place-more p { margin: 0; font-size: .82rem; line-height: 1.5; }
+.explore-place-more a { color: var(--green-dark); font-weight: 800; }
+
+.compact-faq-list {
+  display: grid;
+  gap: 9px;
+  max-width: 960px;
+}
+.compact-faq-list details {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.compact-faq-list summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  color: var(--green-deep);
+  font-weight: 820;
+  line-height: 1.35;
+}
+.compact-faq-list details p {
+  margin: 0;
+  padding: 0 16px 15px;
+  color: #405148;
+  line-height: 1.6;
+}
+
+.compact-planning-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px;
+}
+.compact-planning-list details {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 13px;
+  background: rgba(255,255,255,.06);
+}
+.compact-planning-list summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  color: #f0f7f3;
+  font-weight: 820;
+}
+.compact-planning-list p {
+  margin: 0;
+  padding: 0 16px 15px;
+  color: #c7d9cf;
+  line-height: 1.55;
+}
+
+.cast-disclosure { margin-top: 12px; }
+.cast-disclosure > div.movie-person-list {
+  display: flex;
+  padding: 0 14px 14px;
+}
+
+@media (max-width: 620px) {
+  .explore-guide-hero.page-top { padding-top: 42px; padding-bottom: 38px; }
+  .explore-guide-highlights { padding-block: 38px; }
+  .explore-highlight-grid,
+  .compact-planning-list { grid-template-columns: 1fr; }
+  .explore-place-card-detail { padding: 15px; }
+  .youtube-movie-description { display: none; }
+}

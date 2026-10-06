@@ -119,3 +119,17 @@ test("Tour hub stays compact and keeps deep navigation available", async ({ page
   await page.getByText("States & FCT").click();
   await expect(page.getByRole("navigation", { name: "Explore Nigeria by state" }).getByRole("link")).toHaveCount(37);
 });
+
+
+test("African Creators guide uses event-specific venue data", async ({ page }) => {
+  await page.goto("/explore/african-creators-conference-abuja-2026");
+  const venue = page.locator("#place-abuja-trade-convention-centre-creators-2026");
+  await expect(venue).toContainText("African Creators Conference 2.0");
+  await expect(page.locator("#places")).not.toContainText("CEA Nigeria");
+});
+
+test("Tour guide secondary detail is progressively disclosed", async ({ page }) => {
+  await page.goto("/explore/lagos");
+  expect(await page.locator(".compact-faq-list > details").count()).toBeGreaterThan(0);
+  expect(await page.locator(".explore-place-card details.explore-place-more").count()).toBeGreaterThan(0);
+});

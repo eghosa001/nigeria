@@ -196,7 +196,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
   return (
     <>
       <JsonLd data={[breadcrumbLd, webpageLd, guideLd, placesLd, faqLd]} />
-      <section className="section page-top">
+      <section className="section page-top explore-guide-hero">
         <div className="container">
           <Breadcrumbs items={[
             { label: "Home", href: "/" },
@@ -221,8 +221,14 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             ]}
             note="Use the quick answer to decide whether this trip fits you, then open only the sections you need."
           />
-          <div className="topic-copy">
-            {guide.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <div className="topic-copy explore-intro-copy">
+            {guide.intro.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            {guide.intro.length > 1 ? (
+              <details className="compact-disclosure explore-context-disclosure">
+                <summary>More context</summary>
+                <div>{guide.intro.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+              </details>
+            ) : null}
           </div>
           <p className="hero-note">Reviewed {guide.lastReviewed}. Confirm live opening hours, ticketing, road access, weather, security conditions and event schedules directly before travelling.</p>
           {guide.slug === "lagos" ? <div className="minimal-inline-links"><Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link></div> : null}
@@ -239,17 +245,17 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       <section className="proof-strip" aria-label={"Best reasons to visit " + guide.shortTitle}>
         <div className="container proof-grid">
           {guide.bestFor.slice(0, 4).map((item, index) => (
-            <div key={item}><span aria-hidden="true">0{index + 1}</span><strong>{item}</strong><small>Build it into your trip only if it fits your time and route.</small></div>
+            <div key={item}><span aria-hidden="true">0{index + 1}</span><strong>{item}</strong></div>
           ))}
         </div>
       </section>
 
-      <section className="section">
+      <section className="section explore-guide-highlights">
         <div className="container">
           <div className="section-heading"><div><span className="eyebrow">What to build around</span><h2>{guide.shortTitle} highlights worth planning.</h2></div></div>
-          <div className="home-category-grid">
+          <div className="explore-highlight-grid">
             {guide.highlights.map((highlight) => (
-              <article className="home-category-card" key={highlight.name}>
+              <article className="explore-highlight-card" key={highlight.name}>
                 <span>Highlight</span>
                 <strong>{highlight.name}</strong>
                 <small>{highlight.detail}</small>
@@ -281,14 +287,21 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
                 </div>
                 <h3>{place.name}</h3>
                 <p>{place.summary}</p>
-                <dl>
+                <dl className="explore-place-core-facts">
                   <div><dt>Area</dt><dd>{place.area}</dd></div>
                   <div><dt>Address</dt><dd>{place.address}</dd></div>
                   <div><dt>Cost</dt><dd>{place.cost}</dd></div>
-                  {place.hours ? <div><dt>Hours</dt><dd>{place.hours}</dd></div> : null}
-                  {place.phone ? <div><dt>Phone</dt><dd><a href={"tel:" + place.phone.replace(/[^+\d]/g, "")}>{place.phone}</a></dd></div> : null}
                 </dl>
-                {place.costNote ? <p className="explore-cost-note">{place.costNote}</p> : null}
+                {(place.hours || place.phone || place.costNote) ? (
+                  <details className="compact-disclosure explore-place-more">
+                    <summary>Hours &amp; contact details</summary>
+                    <div>
+                      {place.hours ? <p><strong>Hours:</strong> {place.hours}</p> : null}
+                      {place.phone ? <p><strong>Phone:</strong> <a href={"tel:" + place.phone.replace(/[^+\d]/g, "")}>{place.phone}</a></p> : null}
+                      {place.costNote ? <p>{place.costNote}</p> : null}
+                    </div>
+                  </details>
+                ) : null}
                 <div className="explore-place-actions">
                   <a href={googleMapsUrl(place)} target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
                   {place.website ? <a href={place.website} target="_blank" rel="noreferrer">Official website ↗</a> : null}
@@ -308,12 +321,12 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
               <h2>Planning {guide.shortTitle}</h2>
             </div>
           </div>
-          <div className="search-answer-grid">
+          <div className="compact-faq-list">
             {questions.map((item) => (
-              <article key={item.question}>
-                <h3>{item.question}</h3>
+              <details key={item.question}>
+                <summary>{item.question}</summary>
                 <p>{item.answer}</p>
-              </article>
+              </details>
             ))}
           </div>
         </div>
@@ -322,13 +335,12 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       <section className="section premium-dark-section" id="planning">
         <div className="container">
           <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Plan {guide.shortTitle}: practical decisions before you go.</h2></div></div>
-          <div className="home-updates-grid">
+          <div className="compact-planning-list">
             {guide.planning.map((item) => (
-              <article className="home-update-card" key={item.label}>
-                <div><span>Plan</span></div>
-                <h3>{item.label}</h3>
+              <details key={item.label}>
+                <summary>{item.label}</summary>
                 <p>{item.detail}</p>
-              </article>
+              </details>
             ))}
           </div>
         </div>

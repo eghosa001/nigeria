@@ -294,3 +294,16 @@ test("contextual entertainment detail pages expose country and source dates", as
   await expect(facts).toContainText("Nigeria");
   await expect(facts).toContainText("Source checked");
 });
+
+
+test("incomplete YouTube discoveries stay out of public movie catalogs", async ({ page }) => {
+  for (const path of ["/entertainment/movies", "/entertainment/youtube"]) {
+    await page.goto(path);
+    await expect(page.getByText("Cast details pending verification", { exact: true })).toHaveCount(0);
+  }
+});
+
+test("movie detail keeps long secondary content compact", async ({ page }) => {
+  await page.goto("/entertainment/movies/anikulapo");
+  expect(await page.locator(".compact-faq-list > details").count()).toBeGreaterThan(0);
+});

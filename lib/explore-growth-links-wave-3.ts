@@ -10,7 +10,7 @@ export const exploreGrowthLinksWave3: Record<string, readonly string[]> = {
     "blucabana-abuja"
   ],
   "african-creators-conference-abuja-2026": [
-    "abuja-trade-convention-centre-cea-2026",
+    "abuja-trade-convention-centre-creators-2026",
     "novare-gateway-mall-cea-2026",
     "nova-cinema-gateway-cea-2026"
   ]
