@@ -260,7 +260,11 @@
       "NIMC NIN portal",
       "NIN registration"
     ],
-    "related": []
+    "related": [
+      "check-nin-number",
+      "nin-slip-reissue",
+      "nin-name-modification"
+    ]
   },
   {
     "slug": "nin-date-of-birth-modification",
@@ -515,7 +519,11 @@
       "How to add or remove classes on a Nigerian driver's licence",
       "Driving"
     ],
-    "related": [],
+    "related": [
+      "new-drivers-licence",
+      "renew-drivers-licence",
+      "replace-lost-drivers-licence"
+    ],
     "feeNote": "A class upgrade is handled through the applicable renewal/reissue route, so MyNigeriaGuide does not quote one universal upgrade amount. Confirm the class, validity and amount shown by the official FRSC portal before payment."
   },
   {
@@ -689,7 +697,11 @@
       "How to register an incorporated trustee with CAC",
       "Business"
     ],
-    "related": []
+    "related": [
+      "cac-company-registration",
+      "cac-business-name-registration",
+      "cac-name-reservation"
+    ]
   },
   {
     "slug": "cac-name-reservation",
@@ -743,7 +755,11 @@
       "How CAC name reservation works",
       "Business"
     ],
-    "related": []
+    "related": [
+      "cac-business-name-registration",
+      "cac-company-registration",
+      "cac-public-search"
+    ]
   },
   {
     "slug": "cac-annual-returns",
@@ -982,7 +998,11 @@
       "How to retrieve a lost JAMB UTME e-PIN",
       "Education"
     ],
-    "related": []
+    "related": [
+      "jamb-profile-code",
+      "jamb-2026-utme-registration",
+      "jamb-caps"
+    ]
   },
   {
     "slug": "jamb-caps",
@@ -1104,7 +1124,11 @@
       "WAEC result checker pin",
       "WAEC Direct result checker"
     ],
-    "related": [],
+    "related": [
+      "waec-digital-certificate",
+      "waec-collect-certificate",
+      "waec-withheld-result-complaint"
+    ],
     "feeNote": "This label describes the required result-checker credential rather than quoting a universal e-PIN price. Confirm the current price and purchase route through WAEC Direct or another WAEC-authorised channel before paying."
   },
   {
@@ -1145,7 +1169,11 @@
       "How to access a WAEC digital certificate",
       "Education"
     ],
-    "related": []
+    "related": [
+      "waec-collect-certificate",
+      "waec-check-result",
+      "waec-lost-certificate"
+    ]
   },
   {
     "slug": "waec-collect-certificate",
@@ -1186,7 +1214,11 @@
       "How to collect a WAEC certificate",
       "Education"
     ],
-    "related": [],
+    "related": [
+      "waec-digital-certificate",
+      "waec-lost-certificate",
+      "waec-correct-certificate-error"
+    ],
     "feeNote": "MyNigeriaGuide does not quote one universal collection fee because WAEC's collection route depends on the candidate type. Follow the official WAEC instructions for your record and confirm any payment requested there before paying."
   },
   {
@@ -1235,7 +1267,11 @@
       "How to confirm a WAEC result for an institution in Nigeria",
       "Education"
     ],
-    "related": []
+    "related": [
+      "waec-result-confirmation-overseas",
+      "waec-check-result",
+      "waec-digital-certificate"
+    ]
   },
   {
     "slug": "waec-lost-certificate",
@@ -1273,7 +1309,11 @@
       "What to do if a WAEC certificate is lost or damaged",
       "Education"
     ],
-    "related": [],
+    "related": [
+      "waec-digital-certificate",
+      "waec-collect-certificate",
+      "waec-correct-certificate-error"
+    ],
     "feeNote": "WAEC's guidance does not treat a lost certificate as a simple duplicate-certificate purchase. Confirm the exact confirmation, attestation or other service available for your case and its current fee through WAEC before paying."
   },
   {
@@ -1324,7 +1364,11 @@
       "NECO 2026 SSCE Internal registration fees and deadlines",
       "Education"
     ],
-    "related": []
+    "related": [
+      "neco-2026-timetable",
+      "neco-check-result",
+      "neco-certificate-service"
+    ]
   },
   {
     "slug": "neco-check-result",
@@ -1581,7 +1625,11 @@
       "NYSC registration portal",
       "NYSC online registration"
     ],
-    "related": []
+    "related": [
+      "nysc-senate-list",
+      "nysc-call-up-letter",
+      "nysc-relocation"
+    ]
   },
   {
     "slug": "nysc-foreign-trained-registration",
@@ -1630,7 +1678,11 @@
       "How NYSC registration works for foreign-trained Nigerian graduates",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-senate-list",
+      "nysc-call-up-letter",
+      "nysc-exemption-certificate"
+    ]
   },
   {
     "slug": "nysc-revalidation",
@@ -1677,7 +1729,11 @@
       "When and how to use NYSC revalidation",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-remobilization",
+      "nysc-registration-local",
+      "nysc-call-up-letter"
+    ]
   },
   {
     "slug": "nysc-remobilization",
@@ -1730,7 +1786,11 @@
       "When and how to use NYSC remobilization",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-revalidation",
+      "nysc-relocation",
+      "nysc-call-up-letter"
+    ]
   },
   {
     "slug": "nysc-relocation",
@@ -1771,7 +1831,11 @@
       "How NYSC relocation works",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-call-up-letter",
+      "nysc-registration-local",
+      "nysc-remobilization"
+    ]
   },
   {
     "slug": "nysc-lost-discharge-certificate",
@@ -1813,7 +1877,11 @@
       "What to do if an NYSC discharge certificate is lost",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-exemption-certificate",
+      "nysc-call-up-letter",
+      "nysc-registration-local"
+    ]
   },
   {
     "slug": "nysc-lost-exemption-certificate",
@@ -1856,7 +1924,11 @@
       "What to do if an NYSC exemption certificate is lost",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-exemption-certificate",
+      "nysc-senate-list",
+      "nysc-registration-local"
+    ]
   },
   {
     "slug": "npc-birth-attestation",
@@ -2013,7 +2085,11 @@
       "How to get a digital version of an old NPC birth certificate",
       "Civil records"
     ],
-    "related": [],
+    "related": [
+      "npc-birth-attestation",
+      "npc-birth-certificate-reprint",
+      "npc-modify-birth-record"
+    ],
     "feeNote": "No single current reissuance amount is quoted here unless it is shown by the verified NPC route. Confirm the amount displayed in the official NPC reissuance process before payment."
   },
   {
@@ -2065,7 +2141,11 @@
       "How to reprint an NPC birth certificate",
       "Civil records"
     ],
-    "related": []
+    "related": [
+      "npc-digital-birth-certificate-reissuance",
+      "npc-birth-attestation",
+      "npc-check-attestation-status"
+    ]
   },
   {
     "slug": "nrs-individual-tax-registration",
@@ -2149,7 +2229,11 @@
       "How to register a corporate taxpayer with NRS",
       "Tax"
     ],
-    "related": []
+    "related": [
+      "nrs-individual-tax-registration",
+      "nrs-tax-id-retrieval",
+      "nrs-tax-clearance-certificate"
+    ]
   },
   {
     "slug": "nrs-tax-clearance-certificate",
@@ -2188,7 +2272,11 @@
       "Where to access tax clearance on the NRS portal",
       "Tax"
     ],
-    "related": [],
+    "related": [
+      "nrs-corporate-tax-registration",
+      "nrs-individual-tax-registration",
+      "nrs-self-tax-filing"
+    ],
     "feeNote": "This guide does not treat a taxpayer's liability or assessment as a fixed certificate-processing fee. Check the taxpayer's current position in the official NRS self-service portal and confirm any amount due before payment."
   },
   {
@@ -2287,7 +2375,11 @@
       "How to request a CAC Certified True Copy",
       "Business"
     ],
-    "related": []
+    "related": [
+      "cac-status-report",
+      "cac-public-search",
+      "cac-annual-returns"
+    ]
   },
   {
     "slug": "jamb-direct-entry-2026",
@@ -2385,7 +2477,11 @@
       "How to reset a JAMB profile password",
       "Education"
     ],
-    "related": []
+    "related": [
+      "jamb-profile-code",
+      "jamb-retrieve-profile-code",
+      "jamb-caps"
+    ]
   },
   {
     "slug": "waec-correct-certificate-error",
@@ -2424,7 +2520,11 @@
       "How to request correction of an error on a WAEC certificate",
       "Education"
     ],
-    "related": []
+    "related": [
+      "waec-lost-certificate",
+      "waec-collect-certificate",
+      "waec-digital-certificate"
+    ]
   },
   {
     "slug": "waec-result-confirmation-overseas",
@@ -2474,7 +2574,11 @@
       "How to confirm a WAEC result for an overseas institution",
       "Education"
     ],
-    "related": []
+    "related": [
+      "waec-confirm-result-nigeria",
+      "waec-digital-certificate",
+      "waec-check-result"
+    ]
   },
   {
     "slug": "neco-institution-verification",
@@ -2513,7 +2617,11 @@
       "How institutions verify NECO results with e-Verify",
       "Education"
     ],
-    "related": []
+    "related": [
+      "neco-e-verify",
+      "neco-certificate-service",
+      "neco-check-result"
+    ]
   },
   {
     "slug": "nysc-senate-list",
@@ -2569,7 +2677,11 @@
       "check NYSC senate list",
       "NYSC mobilization list"
     ],
-    "related": [],
+    "related": [
+      "nysc-registration-local",
+      "nysc-call-up-letter",
+      "nysc-exemption-certificate"
+    ],
     "feeNote": "The verified NYSC sources do not state a separate charge simply to check the Senate/Academic Board list. Any later NYSC transaction or optional service is separate and should be confirmed on the official NYSC portal."
   },
   {
@@ -2617,7 +2729,11 @@
       "print NYSC call up letter",
       "NYSC call up letter portal"
     ],
-    "related": []
+    "related": [
+      "nysc-senate-list",
+      "nysc-registration-local",
+      "nysc-relocation"
+    ]
   },
   {
     "slug": "nysc-exemption-certificate",
@@ -2656,7 +2772,11 @@
       "How NYSC exemption certificates are issued and collected",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-senate-list",
+      "nysc-lost-exemption-certificate",
+      "nysc-registration-local"
+    ]
   },
   {
     "slug": "npc-check-attestation-status",
@@ -2748,7 +2868,11 @@
       "Where to file tax through NRS self-service",
       "Tax"
     ],
-    "related": [],
+    "related": [
+      "nrs-tax-payment",
+      "nrs-tax-clearance-certificate",
+      "nrs-individual-tax-registration"
+    ],
     "feeNote": "This is not a fixed service-fee amount: any tax due depends on the taxpayer's return, assessment and obligations. Review the figures in the official NRS self-service portal before filing or paying."
   },
   {
@@ -2789,7 +2913,11 @@
       "Where to make a federal tax payment through NRS",
       "Tax"
     ],
-    "related": [],
+    "related": [
+      "nrs-self-tax-filing",
+      "nrs-tax-clearance-certificate",
+      "nrs-refund-tracking"
+    ],
     "feeNote": "This is not a universal service fee. The amount is the liability or assessment attached to the taxpayer's record, so confirm the taxpayer, assessment and amount in the official NRS self-service portal before paying."
   },
   {
@@ -2830,7 +2958,11 @@
       "How to track a tax refund on the NRS portal",
       "Tax"
     ],
-    "related": []
+    "related": [
+      "nrs-tax-payment",
+      "nrs-self-tax-filing",
+      "nrs-individual-tax-registration"
+    ]
   },
   {
     "slug": "passport-change-marital-status",
@@ -2874,7 +3006,11 @@
       "How to change Nigerian passport data after a change in marital status",
       "Immigration"
     ],
-    "related": []
+    "related": [
+      "passport-name-change",
+      "passport-change-of-data",
+      "passport-renewal"
+    ]
   },
   {
     "slug": "passport-name-change",
@@ -2918,7 +3054,11 @@
       "How to add, delete, replace or rearrange names on a Nigerian passport",
       "Immigration"
     ],
-    "related": []
+    "related": [
+      "passport-change-marital-status",
+      "passport-change-of-data",
+      "passport-renewal"
+    ]
   },
   {
     "slug": "official-nigerian-passport",
@@ -2972,7 +3112,11 @@
       "Who is eligible for a Nigerian official passport?",
       "Immigration"
     ],
-    "related": []
+    "related": [
+      "first-nigerian-passport",
+      "passport-application-abroad",
+      "passport-renewal"
+    ]
   },
   {
     "slug": "passport-application-abroad",
@@ -3012,7 +3156,11 @@
       "How Nigerians abroad apply for or renew a Nigerian passport",
       "Immigration"
     ],
-    "related": []
+    "related": [
+      "passport-renewal",
+      "first-nigerian-passport",
+      "lost-nigerian-passport"
+    ]
   },
   {
     "slug": "fct-file-individual-tax-return",
@@ -3060,7 +3208,11 @@
       "How to file an individual tax return in the FCT",
       "State services"
     ],
-    "related": []
+    "related": [
+      "fct-tax-clearance-application",
+      "fct-verify-tax-clearance",
+      "nrs-self-tax-filing"
+    ]
   },
   {
     "slug": "fct-verify-tax-clearance",
@@ -3107,7 +3259,11 @@
       "How to verify an FCT tax clearance certificate",
       "State services"
     ],
-    "related": []
+    "related": [
+      "fct-tax-clearance-application",
+      "fct-file-individual-tax-return",
+      "nrs-tax-clearance-certificate"
+    ]
   },
   {
     "slug": "edo-tax-id-access",
@@ -3361,7 +3517,11 @@
       "How to reissue a lost, damaged or stolen NIN slip",
       "Identity"
     ],
-    "related": []
+    "related": [
+      "check-nin-number",
+      "nin-enrolment",
+      "nin-name-modification"
+    ]
   },
   {
     "slug": "nin-name-modification",
@@ -3540,7 +3700,11 @@
       "How to change your address on NIN",
       "Identity"
     ],
-    "related": []
+    "related": [
+      "nin-name-modification",
+      "nin-phone-modification",
+      "nin-date-of-birth-modification"
+    ]
   },
   {
     "slug": "jamb-print-result",
@@ -3591,7 +3755,11 @@
       "JAMB result portal",
       "print JAMB result"
     ],
-    "related": []
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list"
+    ]
   },
   {
     "slug": "jamb-admission-letter",
@@ -3687,7 +3855,11 @@
       "How to lodge a complaint about a withheld or held WAEC result",
       "Education"
     ],
-    "related": []
+    "related": [
+      "waec-check-result",
+      "waec-digital-certificate",
+      "waec-collect-certificate"
+    ]
   },
   {
     "slug": "nysc-correct-date-of-birth",
@@ -3734,7 +3906,11 @@
       "How NYSC date-of-birth correction works",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-correct-course-of-study",
+      "nysc-senate-list",
+      "nysc-registration-local"
+    ]
   },
   {
     "slug": "nysc-correct-course-of-study",
@@ -3781,7 +3957,11 @@
       "How to correct your course of study on NYSC",
       "Youth service"
     ],
-    "related": []
+    "related": [
+      "nysc-correct-date-of-birth",
+      "nysc-senate-list",
+      "nysc-registration-local"
+    ]
   },
   {
     "slug": "npc-modify-birth-record",
@@ -3821,7 +4001,11 @@
       "How to modify an NPC birth or attestation record",
       "Civil records"
     ],
-    "related": []
+    "related": [
+      "npc-birth-attestation",
+      "npc-birth-certificate-reprint",
+      "npc-child-birth-registration"
+    ]
   },
   {
     "slug": "bvn-enrolment",
@@ -4349,7 +4533,11 @@
       "voter registration status"
     ],
     "lastVerified": "2026-09-28",
-    "related": []
+    "related": [
+      "inec-find-pvc-pickup-location",
+      "inec-replace-lost-damaged-pvc",
+      "inec-polling-unit-locator"
+    ]
   },
   {
     "slug": "nigeria-evisa-application",
@@ -5846,7 +6034,11 @@
       "NIBSS insurance validation",
       "vehicle policy validity"
     ],
-    "related": [],
+    "related": [
+      "verify-vehicle-number-plate",
+      "vehicle-registration-nvis",
+      "vehicle-proof-of-ownership-verification"
+    ],
     "lastVerified": "2026-09-29"
   },
   {
