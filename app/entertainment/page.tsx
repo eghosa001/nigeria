@@ -14,15 +14,17 @@ export const metadata: Metadata = {
 };
 
 const searchMomentumMovieSlugs = [
-  "colours-of-fire",
-  "king-of-thieves-2",
-  "the-herd",
+  "my-30th-wedding",
+  "epe-after-dark",
   "oversabi-aunty",
   "millionaire-until-morning",
-  "gingerrr",
+  "colours-of-fire",
+  "king-of-thieves-2",
 ];
 
 const popularMovieSearchLinks = [
+  { label: "My 30th Wedding", href: "/entertainment/movies/my-30th-wedding" },
+  { label: "Epe After Dark", href: "/entertainment/movies/epe-after-dark" },
   { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
   { label: "The Bride Switch", href: "/entertainment/youtube/zKQoArfptqA" },
   { label: "Love Always Wins", href: "/entertainment/youtube/KWIpR47N9hc" },
