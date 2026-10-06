@@ -60,6 +60,8 @@ jobs:
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|app/globals\.css$|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$|tests/explore\.spec\.ts$)' || true)"
           non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|app/globals\.css$|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$|tests/explore\.spec\.ts$)' || true)"
+          entertainment_context_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/(series/\[slug\]|youtube/\[videoId\])/page\.tsx|tests/entertainment\.spec\.ts)$' || true)"
+          non_entertainment_context="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/entertainment/(series/\[slug\]|youtube/\[videoId\])/page\.tsx|tests/entertainment\.spec\.ts)$' || true)"
           quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
           non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
@@ -74,6 +76,13 @@ jobs:
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=tour" >> "$GITHUB_OUTPUT"
             echo "Tour-only change; running the focused Tour hub regression."
+            exit 0
+          fi
+
+          if [ -n "$entertainment_context_trigger" ] && [ -z "$non_entertainment_context" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=entertainment-context" >> "$GITHUB_OUTPUT"
+            echo "Entertainment detail-template change; running only the focused contextual entertainment regression."
             exit 0
           fi
 
@@ -124,6 +133,9 @@ jobs:
       - name: Run Tour hub regression
         if: steps.scope.outputs.mode == 'tour'
         run: npx playwright test tests/explore.spec.ts --project=mobile --workers=1 --grep "Tour hub stays compact and keeps deep navigation available"
+      - name: Run contextual entertainment regression
+        if: steps.scope.outputs.mode == 'entertainment-context'
+        run: npx playwright test tests/entertainment.spec.ts --project=desktop --workers=1 --grep "contextual entertainment detail pages expose country and source dates"
       - name: Run directory navigation regression
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --project=desktop --workers=1
