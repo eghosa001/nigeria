@@ -1,4 +1,5 @@
 import { entertainmentTitles } from "../lib/entertainment";
+import { generatedYouTubeMovies } from "../lib/youtube-library";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -68,6 +69,30 @@ for (const title of entertainmentTitles) {
       references.length > 0 || Boolean(title.trailer) || Boolean(title.sourcePreview),
       prefix + "a title without a current watch link needs visible evidence that verifies the record without implying availability.",
     );
+  }
+}
+
+
+const youtubePresentationHype = /\b(captivating|blockbuster|ultimate|unmissable|must[- ]watch|will make your day|will blow your mind|edge of your seat|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?)\b/i;
+const youtubeListingCopy = /\b(full movie|complete movie|official full movie|latest full movies?|nollywood movies? 20\d{2}|nigerian movies? 20\d{2})\b/i;
+
+for (const movie of generatedYouTubeMovies) {
+  const prefix = "YouTube " + movie.videoId + ": ";
+  const neutralFallback = movie.synopsis.includes(" is a full-length Nigerian film published by ");
+
+  assert(movie.title.trim().length > 1, prefix + "clean title is required.");
+  assert(!/\p{Extended_Pictographic}/u.test(movie.title), prefix + "title must not expose decorative emoji.");
+  assert(!youtubeListingCopy.test(movie.title), prefix + "title must not expose raw listing metadata.");
+
+  if (!neutralFallback) {
+    assert(!/\p{Extended_Pictographic}/u.test(movie.synopsis), prefix + "synopsis must not expose promotional emoji.");
+    assert(!youtubePresentationHype.test(movie.synopsis), prefix + "synopsis must not expose promotional publisher copy.");
+    assert(!youtubeListingCopy.test(movie.synopsis), prefix + "synopsis must not expose raw listing metadata.");
+  }
+
+  for (const name of movie.cast) {
+    assert(!/^[a-z]\s*[-–—]\s*/i.test(name), prefix + "cast must not expose parser prefixes.");
+    assert(!/\b(movie|film|youtube|channel|subscribe|20\d{2})\b/i.test(name), prefix + "cast contains non-person metadata.");
   }
 }
 

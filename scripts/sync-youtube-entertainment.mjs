@@ -239,10 +239,12 @@ function isMovie(video) {
 function cleanName(value) {
   return value
     .replace(/\([^)]*\)/g, "")
+    .replace(/^[a-z]\s*[-–—]\s*/i, "")
     .replace(/\b(starring|featuring|feat\.?|ft\.?)\b/gi, "")
     .replace(/and\s+many\s+(?:more|others?)\.?$/i, "")
     .replace(/^\s*(?:with|also)\s+/i, "")
     .replace(/\s+as\s+[A-Za-zÀ-ÖØ-öø-ÿ'’.\-\s]+$/i, "")
+    .replace(/([A-Za-z])\.([A-Za-z])/g, "$1. $2")
     .replace(/[#|]/g, " ")
     .replace(/\s+/g, " ")
     .trim()
@@ -251,7 +253,7 @@ function cleanName(value) {
 
 const castNoiseExact = /^(?:many\s+(?:more|others?)|comment(?:s)?|like|share|subscribe|follow|hottest|trailers?|lastest|latest|produced|more|story|screen\s*play|join\s+the\s+trend|new)$/i;
 const castNoiseContains = /\b(?:don['’]?t\s+forget\s+to|join\s+the\s+trend|screen\s*play|original\s+story|facebook|instagram|youtube|nollywoodpicturestv|movies?\b|films?\b|subscribe|comment|share|entertainment\s+network|world\s+class\s+premieres?)\b/i;
-const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|watch\s+now|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching|amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|must[- ]watch|edge\s+of\s+your\s+seat|will\s+(?:make\s+your\s+day|blow\s+your\s+mind)|hottest|trending|latest\s+nigerian\s+movies?|full\s+movie|latest\s+full\s+movies?|nollywood\s+movies?\s*20\d{2}|nigerian\s+movies?\s*20\d{2})\b/i;
+const promoSynopsis = /\b(?:subscribe(?:\s+to)?|follow\s+us|welcome\s+to\s+(?:our|the)\s+channel|youtube\s+channel|watch\s+more|watch\s+now|like\s*(?:,|and|&)\s*share|don't\s+forget\s+to|do\s+not\s+forget\s+to|thank\s+you\s+for\s+watching|amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|filled\s+with|edge\s+of\s+your\s+seat|will\s+(?:make\s+your\s+day|blow\s+your\s+mind)|hottest|trending|latest\s+nigerian\s+movies?|full\s+movie|complete\s+movie|official\s+full\s+movie|latest\s+full\s+movies?|nollywood\s+movies?\s*20\d{2}|nigerian\s+movies?\s*20\d{2})\b/i;
 
 function looksLikePersonName(name) {
   const words = name.split(/\s+/).filter(Boolean);
@@ -373,7 +375,10 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
       !/\b(?:social media|instagram|tiktok|facebook)\b/i.test(line) &&
       !promoSynopsis.test(line),
     );
-  const chosen = paragraphs[0];
+  const chosen = paragraphs.find((paragraph) =>
+    !/^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(paragraph) &&
+    !/\p{Extended_Pictographic}/u.test(paragraph)
+  );
   if (chosen) return chosen.slice(0, 360).replace(/\s+/g, " ").trim();
 
   const featured = cast.slice(0, 3).join(", ");
@@ -383,7 +388,7 @@ function synopsisFromDescription(video, displayTitle, channelTitle, cast = []) {
 }
 
 function cleanTitle(raw, cast = []) {
-  let title = String(raw ?? "").trim();
+  let title = String(raw ?? "").replace(/\p{Extended_Pictographic}/gu, " ").replace(/\s+/g, " ").trim();
   const watchInMatch = title.match(/^watch\s+.+?\s+in\s+(.+?)(?:\s*[-|]\s*(?:nigerian|nollywood|african|latest|20\d{2})\b.*)?$/i);
   if (watchInMatch?.[1]) title = watchInMatch[1].trim();
   title = title.replace(/^(?:nollywood|nigerian)\s+movie(?:\s*\([^)]*\))?\s*:\s*/i, "");
