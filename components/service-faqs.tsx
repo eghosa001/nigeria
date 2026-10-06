@@ -12,9 +12,9 @@ export function ServiceFaqs({ service }: { service: Service }) {
   return (
     <section id="questions">
       <span className="section-number" aria-hidden="true">04</span>
-      <h2>Common questions</h2>
+      <h2>Common questions about {service.shortTitle}</h2>
       <p className="guide-section-intro">
-        These answers are generated from the verified requirements, route, fee, timeline and official-source notes for this specific service.
+        These answers use the verified requirements, route, fee, timeline and official-source notes for {service.shortTitle}.
       </p>
       <div className="faq-list">
         <details>

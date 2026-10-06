@@ -8,7 +8,7 @@ export function ServiceAftercare({ service }: { service: Service }) {
   return (
     <section className="aftercare-section" id="after-submit">
       <span className="eyebrow">After you submit</span>
-      <h2>What exactly happens next?</h2>
+      <h2>What happens after {service.shortTitle}?</h2>
 
       <div className="aftercare-grid">
         {guidance.aftercare.map((item, index) => (

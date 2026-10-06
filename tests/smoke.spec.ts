@@ -186,7 +186,7 @@ test("service guides expose trust and sharing actions", async ({ page }) => {
   await expect(page.getByText("Verified", { exact: true })).toBeVisible();
   await expect(page.getByRole("button", { name: "Share" })).toBeVisible();
   await expect(page.getByRole("button", { name: "Watch this guide" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Official sources" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Official .* sources for Passport renewal/i })).toBeVisible();
 });
 
 test("correction API rejects malformed and tampered submissions before any backend call", async ({ page }) => {
@@ -418,7 +418,7 @@ test("NIBSS transfer and Nigeria visa guides are discoverable", async ({ page })
 
   await page.goto("/services/nigeria-evisa-application");
   await expect(page.getByRole("heading", { name: "How to apply for a Nigeria e-Visa" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "Step-by-step instructions" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /How to complete .*Nigeria e-Visa.* step by step/i })).toBeVisible();
 
   await page.goto("/services/nip-transfer-status");
   await expect(page.locator("#notes")).toContainText(/previous 48 hours/i);
