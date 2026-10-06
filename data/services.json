@@ -154,7 +154,7 @@
       "Application letter stating the reason for the change",
       "State of origin certificate",
       "Court affidavit",
-      "Newspaper publication where required for the requested change, especially name changes",
+      "Newspaper publication for correction-of-error and name-change routes listed by NIS, including replacement, addition, deletion or rearrangement of names",
       "Additional civil document for the specific change, such as a marriage certificate for change due to marital status"
     ],
     "steps": [
@@ -1383,7 +1383,7 @@
     "officialPortal": "https://results.neco.gov.ng/",
     "requirements": [
       "A NECO Results Portal account or the account details required by the live purchase flow",
-      "Working email address and phone number for account setup where required",
+      "First name, last name, email address, phone number and password to create a NECO Results Portal account if you do not already have one",
       "A supported payment method offered by the official NECO purchase flow"
     ],
     "steps": [
