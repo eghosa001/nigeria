@@ -111,6 +111,8 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     actor: indexable ? movie.cast.map((name) => ({ "@type": "Person", name })) : undefined,
     duration: movie.durationMinutes ? "PT" + movie.durationMinutes + "M" : undefined,
     datePublished: movie.publishedAt,
+    dateModified: movie.lastChecked,
+    countryOfOrigin: { "@type": "Country", name: "Nigeria" },
     potentialAction: { "@type": "WatchAction", target: movie.videoUrl },
     sameAs: [movie.videoUrl, ...movie.alternateSources.map((source) => source.videoUrl)],
     url: base + "/entertainment/youtube/" + movie.videoId,
@@ -147,6 +149,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <span className="eyebrow">{movie.year} · Full movie</span>
               <h1>{movie.title}</h1>
               <div className="movie-detail-factline">
+                <span>Nigeria</span>
                 <span>{movie.year}</span>
                 <span>{runtimeLabel(movie.durationMinutes)}</span>
                 <span>{movie.channelName}</span>
@@ -164,23 +167,20 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 {movie.channelUrl ? <a className="button button-secondary" href={movie.channelUrl} target="_blank" rel="noreferrer">Publisher channel ↗</a> : null}
               </div>
               <small className="movie-freshness-note">
-                Published {movie.publishedAt.slice(0, 10)} · {movie.channelName}
+                Nigeria · published {movie.publishedAt.slice(0, 10)} by {movie.channelName} · source checked {movie.lastChecked}
               </small>
             </div>
           </div>
 
           <AnswerFirst
             eyebrow="Quick answer"
-            title={"Watch, cast and runtime at a glance"}
+            title={"Quick facts about " + movie.title}
             summary={movie.synopsis}
             facts={[
+              { label: "Country / year", value: "Nigeria · " + movie.year },
               { label: "Access", value: "Free full movie on YouTube" },
-              { label: "Runtime", value: runtimeLabel(movie.durationMinutes) },
-              {
-                label: indexable ? "Featured cast" : "Cast status",
-                value: indexable ? movie.featuredCast.slice(0, 3).join(", ") : "Cast details pending verification",
-              },
               { label: "Publisher", value: movie.channelName },
+              { label: "Source checked", value: movie.lastChecked },
             ]}
             links={[
               { href: "#cast", label: "See cast" },
@@ -219,6 +219,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
             <section>
               <span className="eyebrow">At a glance</span>
               <div className="movie-fact-grid">
+                <article><span>Country</span><strong>Nigeria</strong></article>
                 <article><span>Year</span><strong>{movie.year}</strong></article>
                 <article><span>Runtime</span><strong>{runtimeLabel(movie.durationMinutes)}</strong></article>
                 <article><span>Publisher</span><strong>{movie.channelName}</strong></article>
@@ -287,6 +288,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <span>Quick facts</span>
               <strong>{movie.title}</strong>
               <dl>
+                <div><dt>Country</dt><dd>Nigeria</dd></div>
                 <div><dt>Year</dt><dd>{movie.year}</dd></div>
                 <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
                 <div><dt>Publisher</dt><dd>{movie.channelName}</dd></div>
