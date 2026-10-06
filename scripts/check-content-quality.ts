@@ -109,6 +109,10 @@ for (const service of publicServices) {
     seenSources.add(source.url);
   }
 
+  if (service.related.length < 1) {
+    errors.push(prefix + "must link to at least one genuinely related published guide");
+  }
+
   const seenRelated = new Set<string>();
   for (const related of service.related) {
     if (related === service.slug || !knownServiceSlugs.has(related)) errors.push(prefix + "contains an invalid related guide slug: " + related);
