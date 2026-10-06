@@ -268,7 +268,7 @@ export type ReleaseItem = {
   id: string;
   title: string;
   kind: "streaming" | "cinema" | "event";
-  status: "new" | "now-showing" | "upcoming";
+  status: "new" | "now-showing" | "upcoming" | "ended";
   startDate?: string;
   endDate?: string;
   dateLabel: string;
@@ -289,7 +289,7 @@ export const releaseItems: ReleaseItem[] = [
     platform: "Nigerian cinemas",
     summary: "The latest instalment in the Mount Zion faith-based franchise, with advance screenings ahead of its 2 October cinema release.",
     officialUrl: "https://silverbirdcinemas.com/cinema/galleria/",
-    lastChecked: "2026-10-01",
+    lastChecked: "2026-10-06",
   },
   {
     id: "first-lady-2026-cinema",
@@ -307,7 +307,7 @@ export const releaseItems: ReleaseItem[] = [
     id: "better-half-africa-magic-2026",
     title: "Better Half",
     kind: "streaming",
-    status: "upcoming",
+    status: "new",
     startDate: "2026-10-05",
     dateLabel: "Premieres 5 October 2026",
     platform: "Africa Magic Showcase",
@@ -403,13 +403,13 @@ export const releaseItems: ReleaseItem[] = [
     id: "black-market-cinema",
     title: "Black Market",
     kind: "cinema",
-    status: "upcoming",
+    status: "now-showing",
     startDate: "2026-10-02",
     dateLabel: "In cinemas 2 October 2026",
     platform: "Nigerian cinemas",
     summary: "A Nollywood drama listed by Silverbird among its 2 October releases.",
     officialUrl: "https://silverbirdcinemas.com/cinema/galleria/",
-    lastChecked: "2026-10-01",
+    lastChecked: "2026-10-06",
   },
   {
     id: "mko-documentary-cinema",
@@ -421,7 +421,7 @@ export const releaseItems: ReleaseItem[] = [
     platform: "Nigerian cinemas",
     summary: "Ose Oyamendan's documentary on M.K.O. Abiola begins its Nigerian theatrical release on 2 October.",
     officialUrl: "https://silverbirdcinemas.com/cinema/galleria/",
-    lastChecked: "2026-10-01",
+    lastChecked: "2026-10-06",
   },
   {
     id: "ordinary-people-netflix",
@@ -432,7 +432,7 @@ export const releaseItems: ReleaseItem[] = [
     platform: "Netflix",
     summary: "A 2026 Nollywood crime drama about a couple hiding in a gated estate while undercover agents close in.",
     officialUrl: "https://www.netflix.com/ng/title/82785277",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     id: "colours-of-fire-netflix",
@@ -443,7 +443,7 @@ export const releaseItems: ReleaseItem[] = [
     platform: "Netflix",
     summary: "A Nigerian fantasy drama listed by Netflix among its current new Nollywood additions.",
     officialUrl: "https://www.netflix.com/ng/title/82752912",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     id: "king-of-thieves-2-netflix",
@@ -454,7 +454,7 @@ export const releaseItems: ReleaseItem[] = [
     platform: "Netflix",
     summary: "The Yoruba-language sequel is listed by Netflix among its current new Nollywood additions.",
     officialUrl: "https://www.netflix.com/ng/title/82748703",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     id: "starlomo-silverbird",
@@ -466,7 +466,7 @@ export const releaseItems: ReleaseItem[] = [
     platform: "Silverbird Cinemas",
     summary: "A Yoruba-language Nollywood drama currently listed in Silverbird's now-showing catalog.",
     officialUrl: "https://silverbirdcinemas.com/",
-    lastChecked: "2026-09-29",
+    lastChecked: "2026-10-06",
   },
   {
     id: "behind-the-scenes-viva",
@@ -483,7 +483,7 @@ export const releaseItems: ReleaseItem[] = [
     id: "after-credits-club",
     title: "After Credits Club — First Edition",
     kind: "event",
-    status: "upcoming",
+    status: "ended",
     startDate: "2026-10-02",
     endDate: "2026-10-04",
     dateLabel: "2–4 October 2026",
