@@ -39,9 +39,61 @@ export type YouTubeMovieRecord = BaseYouTubeMovieRecord & {
 
 type GeneratedRecord = Omit<BaseYouTubeMovieRecord, "source" | "internalHref">;
 
-const generatedSynopsisHype = /\b(amazing masterpiece|masterpiece|will make your day|must[- ]watch|edge of your seat|don['’]?t miss|do not miss|subscribe|like and share|latest nigerian movies?)\b/i;
+const generatedSynopsisHype = /\b(amazing masterpiece|masterpiece|captivating|blockbuster|ultimate|unmissable|must[- ]watch|will make your day|will blow your mind|edge of your seat|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?)\b/i;
+const generatedSynopsisListing = /\b(full movie|complete movie|latest full movies?|nollywood movies? 20\d{2}|nigerian movies? 20\d{2}|official full movie)\b/i;
+const generatedSynopsisMeaning = /^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i;
 
-function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
+function normalizeGeneratedTitle(value: string) {
+  return String(value ?? "")
+    .replace(/\s*\((?:full|complete)\s+movie\)\s*/gi, " ")
+    .replace(/\s*[|]\s*(?:latest|new|full|official|nollywood|nigerian)\b.*$/i, " ")
+    .replace(/\s*[-–—/]\s*(?:latest|new|full|official)\s+(?:nollywood|nigerian|african)\b.*$/i, " ")
+    .replace(/\s*;\s*[A-Z][A-Z .,'’\-]+(?:,\s*[A-Z][A-Z .,'’\-]+)+(?:\s+20\d{2})?.*$/i, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function normalizeGeneratedCastName(value: string) {
+  let name = String(value ?? "")
+    .replace(/^[a-z]\s*[-–—]\s*/i, "")
+    .replace(/\b(?:starring|featuring|feat\.?|ft\.?)\b\s*[:\-]?\s*/gi, "")
+    .replace(/([A-Za-z])\.([A-Za-z])/g, "$1. $2")
+    .replace(/[#|]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/^[,.;:!?\s]+|[,.;:!?\s]+$/g, "");
+
+  if (
+    name.split(/\s+/).length >= 2 &&
+    name === name.toUpperCase() &&
+    /[A-Z]/.test(name)
+  ) {
+    name = name
+      .toLowerCase()
+      .replace(/(^|[\s.'’\-])([a-z])/g, (_, prefix: string, letter: string) => prefix + letter.toUpperCase());
+  }
+
+  return name;
+}
+
+function normalizeGeneratedCast(values: string[]) {
+  return [...new Set(
+    values
+      .map(normalizeGeneratedCastName)
+      .filter((name) =>
+        name.length >= 3 &&
+        name.length <= 60 &&
+        !/\b(movie|film|latest|official|youtube|channel|subscribe|20\d{2})\b/i.test(name),
+      ),
+  )];
+}
+
+function neutralGeneratedSynopsis(movie: GeneratedRecord, title: string, cast: string[]) {
+  return title + " is a full-length Nigerian film published by " + movie.channelName + "." +
+    (cast.length ? " Featured cast includes " + cast.slice(0, 3).join(", ") + "." : "");
+}
+
+function normalizeGeneratedSynopsis(movie: GeneratedRecord, title: string, cast: string[]) {
   let text = String(movie.synopsis ?? "")
     .replace(/\s+/g, " ")
     .replace(/,([A-Za-z])/g, ", $1")
@@ -52,10 +104,21 @@ function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
   const generatedSuffix = text.search(/\s+is a full-length Nigerian film published by /i);
   if (generatedSuffix >= 70) text = text.slice(0, generatedSuffix).trim();
 
-  if (!text || generatedSynopsisHype.test(text)) {
-    const cast = movie.featuredCast.length ? movie.featuredCast : movie.cast;
-    return movie.title + " is a full-length Nigerian film published by " + movie.channelName + "." +
-      (cast.length ? " Featured cast includes " + cast.slice(0, 3).join(", ") + "." : "");
+  const comparableText = text.toLowerCase().replace(/\s+/g, " ").trim();
+  const comparableRawTitle = String(movie.rawTitle ?? "").toLowerCase().replace(/\s+/g, " ").trim();
+  const comparableTitle = title.toLowerCase().replace(/\s+/g, " ").trim();
+
+  if (
+    !text ||
+    text.length < 55 ||
+    comparableText === comparableRawTitle ||
+    comparableText === comparableTitle ||
+    generatedSynopsisHype.test(text) ||
+    generatedSynopsisListing.test(text) ||
+    generatedSynopsisMeaning.test(text) ||
+    /[🎬🔥✨💥😍🤩]/u.test(text)
+  ) {
+    return neutralGeneratedSynopsis(movie, title, cast);
   }
 
   return text.slice(0, 360).trim();
@@ -128,12 +191,23 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
   }];
 });
 
-export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => ({
-  ...movie,
-  synopsis: normalizeGeneratedSynopsis(movie),
-  source: "youtube-api" as const,
-  internalHref: "/entertainment/youtube/" + movie.videoId,
-}));
+export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => {
+  const title = normalizeGeneratedTitle(movie.title || movie.rawTitle);
+  const cast = normalizeGeneratedCast(movie.cast ?? []);
+  const featuredCast = normalizeGeneratedCast(movie.featuredCast ?? []).filter((name) => cast.includes(name));
+  const displayCast = featuredCast.length ? featuredCast : cast.slice(0, 3);
+
+  return {
+    ...movie,
+    title,
+    cast,
+    featuredCast: displayCast,
+    synopsis: normalizeGeneratedSynopsis(movie, title, displayCast),
+    metadataStatus: cast.length ? movie.metadataStatus ?? "complete" : "cast-pending",
+    source: "youtube-api" as const,
+    internalHref: "/entertainment/youtube/" + movie.videoId,
+  };
+});
 
 type ReviewCandidate = {
   videoId: string;
@@ -150,10 +224,10 @@ type ReviewCandidate = {
 
 const reviewGeneratedAt = String(reviewData.generatedAt ?? "").slice(0, 10) || new Date().toISOString().slice(0, 10);
 const reviewNonMovieTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|watch\s+party|webinar|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|music\s+video|making\s+of)\b/i;
-const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget)\b/i;
+const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget|captivating|blockbuster|ultimate|unmissable|must[- ]watch|watch now|filled with)\b/i;
 
 function cleanReviewTitle(value: string) {
-  return value
+  return normalizeGeneratedTitle(value)
     .replace(/\s*[-–—/]\s*(?:latest|lastest)\b.*$/i, " ")
     .replace(/\s+(?:latest|lastest)\s+(?:nigerian|nollywood|african)\b.*$/i, " ")
     .replace(/\s+/g, " ")
