@@ -11,9 +11,9 @@ export function ServiceContext({ service }: { service: Service }) {
   return (
     <section id="key-guidance" className="service-context">
       <span className="section-number" aria-hidden="true">Key</span>
-      <h2>What you need to know before you continue</h2>
+      <h2>What to know before starting {service.shortTitle}</h2>
       <p className="guide-section-intro">
-        Important service-specific details that affect how you apply, what route to use, or what to avoid.
+        Important details for {service.shortTitle} that affect how you apply, what route to use, or what to avoid.
       </p>
       <div className="service-context-grid">
         {facts.map((fact) => (
