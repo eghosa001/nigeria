@@ -1,0 +1,173 @@
+[
+  {
+    "slug": "pencom-rsa-mortgage-equity-contribution",
+    "title": "How to use your RSA for a residential mortgage equity contribution",
+    "shortTitle": "Use RSA for mortgage equity",
+    "summary": "How eligible Retirement Savings Account holders can apply through their PFA and an approved mortgage lender to use up to 25% of their RSA balance as equity contribution for a first-home residential mortgage.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom application fee stated",
+    "feeNote": "The amount comes from the eligible applicant's RSA. Mortgage lender fees, property costs and any supplementary equity are separate and should be confirmed with the approved lender.",
+    "timeline": "The mortgage lender and PFA verify eligibility and documents before the regulated approval and payment process; timing depends on the application and lender/PFA processing.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/guidelines-on-equity-contribution-from-rsa-for-residential-mortgage/",
+    "requirements": [
+      "An active RSA holder who has made mandatory pension contributions for at least 60 months.",
+      "A residential mortgage for a first home through a mortgage lender that meets PenCom/CBN eligibility requirements.",
+      "Enough RSA balance for the requested equity contribution, subject to the maximum of 25% of the RSA balance; if that is insufficient, the applicant must fund the difference.",
+      "A verified property offer and the mortgage/lender documents required by the approved process."
+    ],
+    "steps": [
+      "Confirm with your PFA that your RSA contribution history and retirement horizon meet PenCom's residential-mortgage equity rules.",
+      "Choose a mortgage lender from the current PenCom/CBN-approved lender list and start the lender's mortgage application.",
+      "Ask your PFA for the endorsed RSA statement required for the mortgage-equity process and give it to the mortgage lender.",
+      "Let the mortgage lender compare the required equity contribution with the amount that can be accessed from the RSA and pay any supplementary equity the lender requires.",
+      "After the mortgage offer and supporting documents are completed, follow the PFA and mortgage lender instructions while the regulated approval and RSA payment process is completed."
+    ],
+    "notes": [
+      "PenCom states that eligible applicants can access a maximum of 25% of the RSA balance, and only the required equity amount is accessed where it is lower than 25%.",
+      "The benefit is generally a once-in-a-lifetime access route for residential mortgage equity under the published guidelines.",
+      "Applicants with less than three years to retirement, existing CPS retirees and persons exempted under the Pension Reform Act are not eligible under the published guidance.",
+      "Always verify that the mortgage lender remains on PenCom's current approved list before committing funds."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — RSA residential mortgage equity guidelines",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/guidelines-on-equity-contribution-from-rsa-for-residential-mortgage/",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "PenCom — Certified mortgage lender list",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/approved-list-of-licensed-primary-mortgage-banks/",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-transfer-rsa",
+      "pencom-job-loss-25-percent-withdrawal"
+    ],
+    "lastVerified": "2026-10-06",
+    "searchTerms": [
+      "use pension for mortgage Nigeria",
+      "RSA mortgage equity contribution",
+      "25 percent RSA mortgage",
+      "PenCom mortgage first home"
+    ]
+  },
+  {
+    "slug": "pencom-programmed-withdrawal-retirement",
+    "title": "How programmed withdrawal works for RSA retirement benefits",
+    "shortTitle": "Programmed withdrawal pension",
+    "summary": "What programmed withdrawal means under Nigeria's Contributory Pension Scheme and how an eligible retiree works with a Pension Fund Administrator to receive periodic pension payments from the RSA.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom application fee stated",
+    "feeNote": "Retirement benefits are processed through the retiree's PFA. Do not pay an unofficial intermediary for access to pension benefits.",
+    "timeline": "Depends on retirement documentation, PFA verification and regulated benefit approval.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/what-is-programmed-withdrawal/",
+    "requirements": [
+      "An RSA holder who has reached the applicable retirement-benefit eligibility point under the Contributory Pension Scheme.",
+      "Retirement and identity records requested by the PFA for the benefit application.",
+      "An RSA balance that will be used to calculate any permitted lump sum and the periodic programmed-withdrawal amount."
+    ],
+    "steps": [
+      "Contact your Pension Fund Administrator and confirm that your retirement status is ready for benefit processing.",
+      "Ask the PFA to explain the available regulated retirement-benefit options, including programmed withdrawal and retiree life annuity where applicable.",
+      "Submit the retirement, identity and RSA records requested by the PFA and keep the acknowledgement.",
+      "Review the programmed-withdrawal calculation, including any permitted initial lump sum and the periodic pension amount, before completing the option documents.",
+      "Keep the approved benefit schedule and continue monitoring PFA statements and pension payments after retirement."
+    ],
+    "notes": [
+      "PenCom defines programmed withdrawal as periodic retirement-benefit payments spread over an estimated life span.",
+      "After any permitted initial lump-sum withdrawal, the remaining RSA balance is used either for programmed withdrawal or to purchase an annuity.",
+      "The exact benefit amount depends on the RSA balance and the regulated calculation used for the retiree."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — What is Programmed Withdrawal?",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/what-is-programmed-withdrawal/",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "PenCom — Retirement Benefits FAQs",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/category/frequently-asked-questions/payment-of-retirement-benefits/",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-job-loss-25-percent-withdrawal",
+      "pencom-rsa-mortgage-equity-contribution"
+    ],
+    "lastVerified": "2026-10-06",
+    "searchTerms": [
+      "programmed withdrawal Nigeria pension",
+      "how to collect pension after retirement Nigeria",
+      "PenCom programmed withdrawal",
+      "RSA retirement monthly pension"
+    ]
+  },
+  {
+    "slug": "pencom-death-benefits-claim",
+    "title": "How to claim RSA death benefits in Nigeria",
+    "shortTitle": "Claim pension death benefits",
+    "summary": "How a deceased RSA holder's next-of-kin, beneficiary or estate representative starts a pension death-benefit claim through the Pension Fund Administrator and the legal estate process.",
+    "category": "Pensions",
+    "agencySlug": "pencom",
+    "feeLabel": "No PenCom claim fee stated",
+    "feeNote": "The claim is processed through the deceased contributor's PFA and the legal estate/beneficiary process. Probate or document-related costs are separate from PenCom.",
+    "timeline": "PenCom's service charter lists death-benefit claims as a regulated process; actual timing depends on complete estate, identity, death and PFA documentation.",
+    "status": "verified",
+    "officialPortal": "https://www.pencom.gov.ng/what-happens-when-an-employee-who-has-been-contributing-under-the-new-scheme-dies-before-his-retirement/",
+    "requirements": [
+      "Notification of the contributor or retiree's death to the Pension Fund Administrator.",
+      "Identity evidence for the next-of-kin, beneficiary or estate representative.",
+      "A Letter of Administration or a Will admitted to Probate, together with the death evidence required by the PFA and applicable regulations.",
+      "RSA, employment or service records requested by the PFA for the deceased contributor's benefit file."
+    ],
+    "steps": [
+      "Identify the deceased contributor's Pension Fund Administrator and notify the PFA of the death.",
+      "Ask the PFA for its current death-benefit claim checklist and confirm who is legally authorised to submit the claim.",
+      "Complete the estate or probate requirement and gather the identity, death and RSA/employment records requested for the claim.",
+      "Submit the claim through the PFA and keep copies of the acknowledgement and every document supplied.",
+      "Follow the PFA's regulated claim process and respond to any PenCom/PFA request for verification or missing documentation before payment."
+    ],
+    "notes": [
+      "PenCom states that death benefits are paid through the lawful beneficiary or estate route rather than simply to anyone listed informally as next-of-kin.",
+      "The published retirement-benefit regulations require the PFA to verify the claimant's identity and the legal evidence supporting the claim.",
+      "Because probate and estate circumstances differ, use the deceased contributor's PFA checklist as the controlling document list for the specific case."
+    ],
+    "sources": [
+      {
+        "label": "PenCom — Death before retirement FAQ",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/what-happens-when-an-employee-who-has-been-contributing-under-the-new-scheme-dies-before-his-retirement/",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "PenCom — Retirement Benefits FAQs",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/category/frequently-asked-questions/payment-of-retirement-benefits/",
+        "lastChecked": "2026-10-06"
+      }
+    ],
+    "related": [
+      "pencom-open-rsa",
+      "pencom-programmed-withdrawal-retirement",
+      "pencom-transfer-rsa"
+    ],
+    "lastVerified": "2026-10-06",
+    "searchTerms": [
+      "pension death benefits Nigeria",
+      "claim deceased RSA Nigeria",
+      "PenCom death benefit claim",
+      "next of kin pension Nigeria"
+    ]
+  }
+]
