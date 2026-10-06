@@ -130,13 +130,13 @@
     "requirements": [
       "All RSA PINs or evidence of the multiple RSA registrations.",
       "A valid RSA record that can be used for the reconciliation process.",
-      "Completed Data Recapture Exercise where required by the applicable PenCom process.",
+      "A completed Data Recapture Exercise record for the RSA PIN your PFA identifies as the valid account for reconciliation.",
       "Identity and employment information requested by the PFA or PenCom to reconcile contributions attached to the duplicate PINs."
     ],
     "steps": [
-      "Gather every RSA PIN and any welcome letters or registration evidence showing the duplicate pension accounts.",
+      "Contact the PFA that currently manages one of your RSA PINs, state that you have multiple RSA registrations, and present every RSA PIN or welcome letter you can identify.",
       "Contact one of the PFAs involved and explain that the issue is multiple RSA registration rather than a PFA transfer.",
-      "Complete Data Recapture with the RSA PIN that will remain valid where the applicable PenCom process requires it.",
+      "Complete Data Recapture for the RSA PIN the PFA confirms should remain valid if that account has not yet been recaptured.",
       "Submit the duplicate PIN information and supporting evidence through the PFA/PenCom reconciliation route; FGN Treasury-funded MDA employees and retirees follow the specific reconciliation rules issued for that group.",
       "Wait for the PFA or PenCom confirmation that the duplicate registrations have been reconciled before giving employers the final valid RSA details."
     ],
