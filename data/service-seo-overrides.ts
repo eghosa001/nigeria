@@ -24,7 +24,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "jamb-direct-entry-2026": "JAMB Direct Entry {year}: Form, Fee & Registration",
   "pencom-open-rsa": "Open Pension RSA in Nigeria {year}: Requirements & Steps",
   "pencom-transfer-rsa": "Transfer Pension PFA {year}: Requirements & Steps",
-  "nrs-individual-tax-registration": "NRS Taxpayer Registration {year}: How to Register",
+  "nrs-individual-tax-registration": "NRS Self-Service Registration {year}: NIN, Portal & Steps",
   "passport-name-change": "Passport Name Change Nigeria {year}: Requirements & Fees",
   "jamb-matriculation-list": "JAMB Matriculation List {year}: Check Your Name Online",
   "jamb-regularization-condonement": "JAMB Regularization {year}: Condonement Fee & Steps",
