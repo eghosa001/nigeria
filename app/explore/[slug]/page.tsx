@@ -139,6 +139,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           url: pageUrl,
           dateModified: guide.lastReviewed,
           about: { "@type": "Thing", name: guide.shortTitle },
+          contentLocation: { "@type": "Place", name: guide.region, address: { "@type": "PostalAddress", addressRegion: guide.region, addressCountry: "NG" } },
         }
       : {
           "@context": "https://schema.org",
@@ -162,6 +163,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       : guide.kind === "event"
         ? { "@type": "Thing", name: guide.shortTitle }
         : { "@type": "TouristDestination", name: guide.shortTitle },
+    spatialCoverage: { "@type": "Place", name: guide.region + ", Nigeria" },
   };
 
   const faqLd = {
@@ -208,10 +210,10 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             title={"Plan " + guide.shortTitle + " without digging through the whole page"}
             summary={questions[0]?.answer ?? guide.summary}
             facts={[
-              { label: "Region", value: guide.region },
+              { label: "Applies to", value: guide.region + ", Nigeria" },
+              { label: "Guide type", value: guide.kind === "event" ? "Event guide" : guide.kind === "city" ? "City guide" : guide.kind === "itinerary" ? "Itinerary" : "Travel guide" },
               { label: "Best for", value: guide.bestFor.slice(0, 3).join(", ") },
-              { label: "Top places", value: guide.highlights.slice(0, 3).map((item) => item.name).join(", ") },
-              { label: "Reviewed", value: guide.lastReviewed },
+              { label: "Information reviewed", value: guide.lastReviewed },
             ]}
             links={[
               { href: "#places", label: "See places" },
@@ -238,7 +240,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">What to build around</span><h2>Highlights worth planning properly.</h2></div></div>
+          <div className="section-heading"><div><span className="eyebrow">What to build around</span><h2>{guide.shortTitle} highlights worth planning.</h2></div></div>
           <div className="home-category-grid">
             {guide.highlights.map((highlight) => (
               <article className="home-category-card" key={highlight.name}>
@@ -260,7 +262,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <div className="section-heading">
             <div>
               <span className="eyebrow">Address, maps & cost</span>
-              <h2>Places to visit, eat & stay.</h2>
+              <h2>{guide.kind === "event" ? "Venues and nearby planning stops for " + guide.shortTitle : guide.shortTitle + ": places to visit, eat & stay"}</h2>
               <p>Prices are marked as current estimates or variable instead of being presented as permanent facts.</p>
             </div>
           </div>
@@ -313,7 +315,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section premium-dark-section" id="planning">
         <div className="container">
-          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Make the practical decisions first.</h2></div></div>
+          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Plan {guide.shortTitle}: practical decisions before you go.</h2></div></div>
           <div className="home-updates-grid">
             {guide.planning.map((item) => (
               <article className="home-update-card" key={item.label}>
@@ -330,8 +332,8 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         <div className="container agency-strip">
           <div>
             <span className="eyebrow">Source &amp; verification</span>
-            <h2>Use this guide to plan. Confirm live details at the source.</h2>
-            <p>MyNigeriaGuide does not treat old prices, social posts or copied travel lists as permanent facts. Dynamic details should be checked close to your travel date.</p>
+            <h2>Sources and live checks for {guide.shortTitle}</h2>
+            <p>This {guide.kind} guide was reviewed on {guide.lastReviewed}. MyNigeriaGuide does not treat old prices, social posts or copied travel lists as permanent facts; confirm dynamic details close to your travel date.</p>
             {guide.source ? (
               <div className="related-links">
                 <a href={guide.source.href} target="_blank" rel="noreferrer">{guide.source.label} ↗</a>

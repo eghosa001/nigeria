@@ -245,8 +245,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     {
       question: "Where can I watch " + title.title + "?",
       answer: platforms.length
-        ? title.title + " is currently linked to " + platforms.join(" and ") + " through the verified official availability section on this page."
-        : "No current official streaming, broadcast or cinema availability has been verified for " + title.title + ".",
+        ? "As checked on " + (lastChecked || "the latest source review") + ", " + title.title + " is linked to " + platforms.join(" and ") + " through the verified official availability section on this page."
+        : "As of " + (lastChecked || "the latest source review") + ", no current official streaming, broadcast or cinema availability has been verified for " + title.title + ".",
     },
     ...(title.runtimeMinutes ? [{
       question: "How long is " + title.title + "?",
@@ -265,6 +265,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     actor: title.cast.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
     image: image || undefined,
+    countryOfOrigin: { "@type": "Country", name: "Nigeria" },
+    dateModified: lastChecked || undefined,
     sameAs: [
       ...availabilityLinks.map((link) => link.href),
       ...(title.references ?? []).map((link) => link.href),
@@ -322,6 +324,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <span className="eyebrow">{title.year} Nigerian movie</span>
               <h1>{title.title}</h1>
               <div className="movie-detail-factline">
+                <span>Nigeria</span>
                 <span>{title.year}</span>
                 {title.runtimeMinutes ? <span>{title.runtimeMinutes} min</span> : null}
                 <span>{title.languages.join(" / ")}</span>
@@ -353,13 +356,13 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
           <AnswerFirst
             eyebrow="Quick answer"
-            title={"What to know before you keep reading"}
+            title={"Quick facts about " + title.title}
             summary={title.synopsis}
             facts={[
+              { label: "Country / year", value: "Nigeria · " + title.year },
               { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
               { label: "Featured cast", value: featuredCast.slice(0, 3).join(", ") || "See the full cast below" },
-              { label: "Runtime", value: title.runtimeMinutes ? title.runtimeMinutes + " minutes" : "Runtime not listed" },
-              { label: "Link freshness", value: lastChecked || "See current source links" },
+              { label: "Availability checked", value: lastChecked || "See current source links" },
             ]}
             links={[
               { href: "#cast", label: "See cast" },
@@ -394,13 +397,14 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <section>
               <span className="eyebrow">At a glance</span>
               <div className="movie-fact-grid">
+                <article><span>Country</span><strong>Nigeria</strong></article>
                 <article><span>Release year</span><strong>{title.year}</strong></article>
                 <article><span>Format</span><strong>Feature film</strong></article>
                 {title.runtimeMinutes ? <article><span>Runtime</span><strong>{title.runtimeMinutes} minutes</strong></article> : null}
                 <article><span>Languages</span><strong>{title.languages.join(", ")}</strong></article>
                 <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
                 <article><span>Official platforms</span><strong>{platforms.length ? platforms.join(", ") : "No current official viewing platform verified"}</strong></article>
-                <article><span>Source freshness</span><strong>{lastChecked || "Not recorded"}</strong></article>
+                <article><span>Availability / sources checked</span><strong>{lastChecked || "Not recorded"}</strong></article>
               </div>
             </section>
 
@@ -486,7 +490,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
               {(title.references ?? []).length ? (
                 <div className="movie-reference-sources">
-                  <h3>Verification sources</h3>
+                  <h3>Verification sources for {title.title}</h3>
                   {(title.references ?? []).map((reference) => (
                     <article key={reference.href}>
                       <div>
@@ -507,7 +511,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             {title.trailer ? (
               <section id="trailer">
                 <span className="eyebrow">Preview</span>
-                <h2>Official trailer</h2>
+                <h2>Official trailer for {title.title}</h2>
                 <div className="movie-trailer-card">
                   <div>
                     <strong>{title.trailer.label}</strong>
@@ -530,6 +534,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <span>Quick facts</span>
               <strong>{title.title}</strong>
               <dl>
+                <div><dt>Country</dt><dd>Nigeria</dd></div>
                 <div><dt>Year</dt><dd>{title.year}</dd></div>
                 <div><dt>Language</dt><dd>{title.languages.join(", ")}</dd></div>
                 {title.runtimeMinutes ? <div><dt>Runtime</dt><dd>{title.runtimeMinutes} min</dd></div> : null}
