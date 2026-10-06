@@ -2,7 +2,11 @@ import { expect, test } from "@playwright/test";
 import fs from "node:fs";
 import { serializeServiceCatalog, validateServiceCatalog } from "@/lib/service-records";
 
-const services = validateServiceCatalog(JSON.parse(fs.readFileSync(new URL("../data/services.json", import.meta.url), "utf8")));
+const coreServices = JSON.parse(fs.readFileSync(new URL("../data/services.json", import.meta.url), "utf8"));
+const scaleServices = JSON.parse(fs.readFileSync(new URL("../data/services-scale-verified.json", import.meta.url), "utf8"));
+const privateServices = JSON.parse(fs.readFileSync(new URL("../data/services-private-extended.json", import.meta.url), "utf8"));
+const cacPartnershipServices = JSON.parse(fs.readFileSync(new URL("../data/services-cac-partnerships.json", import.meta.url), "utf8"));
+const services = validateServiceCatalog([...coreServices, ...scaleServices, ...privateServices, ...cacPartnershipServices]);
 const publicServices = services.filter((service) => service.status !== "review");
 
 const expectedSlugs = [
