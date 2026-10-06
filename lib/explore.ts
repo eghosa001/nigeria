@@ -1,6 +1,5 @@
 import { exploreGrowthWave3 } from "@/lib/explore-growth-wave-3";
 import { exploreGrowthWave2 } from "@/lib/explore-growth-wave-2";
-import { exploreGrowthWaveThree } from "@/lib/explore-growth-wave-2026-10-06-b";
 import { exploreGrowthWave } from "@/lib/explore-growth-wave-2026-10-06";
 
 export type ExploreGuideKind = "city" | "destination" | "itinerary" | "event";
@@ -23,7 +22,6 @@ export type ExploreGuide = {
 export const exploreGuides: ExploreGuide[] = [
   ...exploreGrowthWave3,
   ...exploreGrowthWave2,
-  ...exploreGrowthWaveThree,
   ...exploreGrowthWave,
   {
     slug: "smfest-abuja-2026",
