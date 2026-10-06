@@ -9,7 +9,7 @@ import { JobApplyLink } from "@/components/job-apply-link";
 import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { retiredJobRedirects } from "@/lib/job-scale-wave";
 import { getJobTopicsForOpportunity } from "@/lib/job-topics";
-import { getEmployerOpportunities } from "@/lib/job-employers";
+import { getEmployerOpportunities, getJobEmployer } from "@/lib/job-employers";
 import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
 
@@ -45,6 +45,8 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const isCareerPortal = item.status === "career-page" || item.kind === "career-page";
   const relatedTopics = getJobTopicsForOpportunity(item);
   const employerOpportunities = getEmployerOpportunities(item.organization, item.slug).slice(0, 4);
+  const employer = getJobEmployer(item.organization);
+  const employerHubHref = employer && employer.opportunitySlugs.length >= 2 ? "/jobs/employers/" + employer.slug : null;
   const effectiveStatus = getEffectiveJobStatus(item);
   const effectiveStatusLabel = getEffectiveStatusLabel(item);
   const sectorBrowse =
@@ -197,6 +199,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             {employerOpportunities.length ? (
               <div className="job-sidebar-card">
                 <strong>More from {item.organization}</strong>
+                {employerHubHref ? <p><Link href={employerHubHref}>View {item.organization} employer hub →</Link></p> : null}
                 {employerOpportunities.map((related) => (
                   <p key={related.slug}><Link href={"/jobs/" + related.slug}>{related.title} →</Link></p>
                 ))}

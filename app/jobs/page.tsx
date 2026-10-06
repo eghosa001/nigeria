@@ -6,6 +6,7 @@ import { governmentOpportunities, internationalOpportunities, jobOpportunities, 
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
+import { indexableJobEmployers } from "@/lib/job-employers";
 import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen } from "@/lib/job-runtime";
 import { queryJobDirectory } from "@/lib/job-query";
 import { getSiteUrl } from "@/lib/site";
@@ -160,6 +161,7 @@ export default function JobsPage() {
             <Link href="/jobs/internships">Internships & SIWES</Link>
             <Link href="/jobs/engineering">Engineering & technical careers</Link>
             <Link href="/jobs/remote">Remote & hybrid jobs</Link>
+            <Link href="/jobs/employers">Employers with multiple verified records</Link>
             <Link href="/jobs/new-this-week">New this week</Link>
             <Link href="/jobs/closing-this-week">Closing this week</Link>
             <a href="#opportunities">Search the full directory</a>
@@ -168,6 +170,20 @@ export default function JobsPage() {
           <details className="browse-disclosure jobs-browse-more">
             <summary>Browse by industry, location, profession & career tools</summary>
             <div className="jobs-browse-more-content">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Browse by employer</span>
+              <h2>Employers with enough verified records for a useful hub.</h2>
+              <p>Employer pages are published only when the catalog contains at least two distinct verified records.</p>
+            </div>
+          </div>
+          <div className="jobs-topic-links" aria-label="Browse jobs by employer">
+            {indexableJobEmployers.slice(0, 18).map((employer) => (
+              <Link href={"/jobs/employers/" + employer.slug} key={employer.slug}>{employer.name}</Link>
+            ))}
+            <Link href="/jobs/employers">All employer hubs</Link>
+          </div>
+
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse by industry</span>

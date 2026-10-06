@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
@@ -85,7 +85,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   const { videoId } = await params;
   const movie = getYouTubeMovieById(videoId);
   if (!movie) notFound();
-  if (movie.source === "curated") redirect(movie.internalHref);
+  if (movie.source === "curated") permanentRedirect(movie.internalHref);
 
   const indexable = isIndexableYouTubeMovie(movie);
   const base = getSiteUrl();

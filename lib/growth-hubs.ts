@@ -259,8 +259,8 @@ export const growthHubs: GrowthHub[] = [
     shortTitle: "CAC business",
     description: "CAC registration in Nigeria: use the official portal for business-name or company registration, then find public search, fees and post-registration filings.",
     intro: [
-      "This hub groups the CAC tasks most business owners need from choosing a name through registration and later compliance documents.",
-      "Use the exact guide for your task because business-name registration, company incorporation, annual returns and certified documents have different requirements and fees."
+      "If you searched for CAC registration, first decide whether you are registering a business name or incorporating a company. They are different CAC processes with different legal structures, requirements and fees; this hub routes you to the correct one instead of treating “CAC registration” as one generic form.",
+      "After registration, use the separate guides for name reservation, public search, annual returns, status reports and certified documents. Each process keeps its own official source and current verification date."
     ],
     searches: [{ query: "CAC registration", serviceSlug: "cac-business-name-registration" }, { query: "CAC registration cost", serviceSlug: "cac-business-name-registration" }, { query: "CAC official website", serviceSlug: "cac-public-search" }, { query: "CAC registration portal", serviceSlug: "cac-business-name-registration" }, { query: "register business name CAC", serviceSlug: "cac-business-name-registration" }, { query: "register company CAC", serviceSlug: "cac-company-registration" }, { query: "CAC public search", serviceSlug: "cac-public-search" }, { query: "CAC company search", serviceSlug: "cac-public-search" }, { query: "CAC name reservation", serviceSlug: "cac-name-reservation" }, { query: "CAC annual returns", serviceSlug: "cac-annual-returns" }, { query: "CAC certified true copy", serviceSlug: "cac-certified-true-copy" }, { query: "CAC status report", serviceSlug: "cac-status-report" }],
     serviceSlugs: ["cac-business-name-registration", "cac-company-registration", "cac-public-search", "cac-name-reservation", "cac-annual-returns", "cac-certified-true-copy", "cac-status-report"]
@@ -638,6 +638,35 @@ export const growthHubs: GrowthHub[] = [
     serviceSlugs: ["nrs-tax-id-retrieval", "nrs-individual-tax-registration", "nrs-corporate-tax-registration", "nrs-tax-clearance-certificate", "nrs-self-tax-filing", "nrs-tax-payment", "nrs-refund-tracking"]
   },
 
+  {
+    slug: "pension-rsa-nigeria",
+    title: "Pension RSA Nigeria 2026: Open Account, Transfer PFA & Withdraw 25%",
+    shortTitle: "Pension & RSA",
+    description: "Open a Retirement Savings Account, register for Micro Pension, transfer your RSA to another PFA or understand the 25% job-loss withdrawal using current PenCom routes.",
+    intro: [
+      "Use this hub if you searched for pension registration, an RSA account, PFA transfer, Micro Pension or the 25% job-loss withdrawal. These are separate pension tasks and should not be treated as one application.",
+      "Start with the task that matches your situation. Each linked guide explains the responsible PFA or PenCom route, eligibility, documents, steps and current source date without collecting pension credentials on MyNigeriaGuide."
+    ],
+    searches: [
+      { query: "open pension account Nigeria", serviceSlug: "pencom-open-rsa" },
+      { query: "open RSA online", serviceSlug: "pencom-open-rsa" },
+      { query: "RSA registration requirements", serviceSlug: "pencom-open-rsa" },
+      { query: "NIN for RSA registration", serviceSlug: "pencom-open-rsa" },
+      { query: "transfer pension PFA", serviceSlug: "pencom-transfer-rsa" },
+      { query: "RSA transfer process", serviceSlug: "pencom-transfer-rsa" },
+      { query: "25 percent pension withdrawal", serviceSlug: "pencom-job-loss-25-percent-withdrawal" },
+      { query: "Micro Pension registration", serviceSlug: "pencom-micro-pension-registration" },
+      { query: "pension clearance certificate", serviceSlug: "pencom-pension-clearance-certificate" }
+    ],
+    serviceSlugs: [
+      "pencom-open-rsa",
+      "pencom-transfer-rsa",
+      "pencom-job-loss-25-percent-withdrawal",
+      "pencom-micro-pension-registration",
+      "pencom-pension-clearance-certificate",
+      "pencom-unremitted-contributions"
+    ]
+  },
 ];
 
 export function getGrowthHub(slug: string) {

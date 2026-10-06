@@ -319,20 +319,21 @@ export const exploreGuides: ExploreGuide[] = [
   },
   {
     slug: "calabar",
-    title: "Calabar Travel Guide",
+    title: "Calabar Nigeria Travel Guide",
     shortTitle: "Calabar",
     kind: "city",
     region: "Cross River State",
-    summary: "Calabar is in Cross River State, Nigeria. Plan the city around history, waterfront leisure, Efik culture and the wider Cross River tourism circuit.",
+    summary: "Calabar, Nigeria is the Cross River State capital and a gateway to Efik culture, waterfront history, Carnival Calabar and wider rainforest and mountain trips across the state.",
     intro: [
-      "Calabar works both as a city break and as the gateway to wider Cross River trips. History-focused stops, the waterfront and December events attract very different crowds, so timing changes the experience.",
-      "If you are travelling around the year-end festival season, book transport and accommodation early and verify event dates rather than relying on old schedules.",
+      "Calabar is the capital of Cross River State in southern Nigeria. The city works as both a heritage-focused break and a base for wider Cross River travel, with museum stops, waterfront leisure, Efik food and culture, and the state's best-known December festival season.",
+      "For 2026, Carnival Calabar's official state schedule starts on 30 November, with the signature Cultural Carnival, Junior Carnival, Parade of Bands and Bikers Carnival running from 26 to 29 December. If you are travelling for that period, book transport and accommodation early and use the current official schedule rather than old carnival calendars.",
     ],
     bestFor: ["History", "Culture", "Waterfront", "December travel"],
     highlights: [
       { name: "Marina Resort", detail: "A waterfront leisure area in Calabar with recreation and visitor facilities; individual attractions inside can change, so check what is operating." },
       { name: "Slave History Museum", detail: "A history-focused stop connected to Calabar's role in the transatlantic slave trade." },
       { name: "Old Residency / museum circuit", detail: "Useful for understanding colonial-era and regional history before moving into modern Calabar." },
+      { name: "Carnival Calabar 2026", detail: "The official Cross River calendar places the Cultural Carnival on 26 December, Junior Carnival on 27 December, main Parade of Bands on 28 December and Bikers Carnival on 29 December." },
       { name: "Wider Cross River trips", detail: "Calabar can be a base for planning rainforest, wildlife and mountain destinations elsewhere in the state." },
     ],
     planning: [
@@ -342,7 +343,7 @@ export const exploreGuides: ExploreGuide[] = [
       { label: "Verify individual attractions", detail: "Facilities inside resorts and leisure complexes can open, close or undergo redevelopment independently." },
     ],
     source: { label: "Calabar Municipal tourist attractions", href: "https://calabar.municipal.crossriverstate.gov.ng/tourist-attractions" },
-    lastReviewed: "2026-09-29",
+    lastReviewed: "2026-10-06",
   },
   {
     slug: "port-harcourt",

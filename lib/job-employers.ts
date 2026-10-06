@@ -43,9 +43,14 @@ function buildEmployers() {
 }
 
 export const jobEmployers = buildEmployers();
+export const indexableJobEmployers = jobEmployers.filter((employer) => employer.opportunitySlugs.length >= 2);
 
 export function getJobEmployer(name: string) {
   return jobEmployers.find((employer) => employer.name === name);
+}
+
+export function getJobEmployerBySlug(slug: string) {
+  return indexableJobEmployers.find((employer) => employer.slug === slug);
 }
 
 export function getEmployerOpportunities(name: string, excludeSlug?: string) {
