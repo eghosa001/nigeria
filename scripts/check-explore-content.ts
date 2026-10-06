@@ -1,4 +1,4 @@
-import { exploreGuides } from "../lib/explore";
+import { exploreGuideRedirects, exploreGuides } from "../lib/explore";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
 const errors: string[] = [];
@@ -18,6 +18,11 @@ for (const guide of exploreGuides) {
 
   const places = getExplorePlacesForGuide(guide.slug);
   if (places.length < 3) errors.push(`${guide.slug}: expected at least 3 mapped places, found ${places.length}`);
+}
+
+for (const [alias, canonical] of Object.entries(exploreGuideRedirects)) {
+  if (guideSlugs.has(alias)) errors.push(`redirect alias is still published as a guide: ${alias}`);
+  if (!guideSlugs.has(canonical)) errors.push(`redirect target is not a published guide: ${canonical}`);
 }
 
 for (const place of explorePlaces) {
