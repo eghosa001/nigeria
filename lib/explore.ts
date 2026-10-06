@@ -17,6 +17,87 @@ export type ExploreGuide = {
 
 export const exploreGuides: ExploreGuide[] = [
   {
+    slug: "carnival-calabar-2026",
+    title: "Carnival Calabar 2026 Guide: Dates, Parade & Festival Schedule",
+    shortTitle: "Carnival Calabar",
+    kind: "event",
+    region: "Cross River State",
+    summary: "Plan Carnival Calabar 2026 with the official Cross River schedule: the festival season starts 30 November, the Cultural Carnival is 26 December, Junior Carnival 27 December, main Parade of Bands 28 December and Bikers Carnival 29 December.",
+    intro: [
+      "Cross River State's official 2026 calendar lists 62 festival events from the Christmas Tree Lighting on 30 November through New Year activities on 1 January 2027.",
+      "For visitors focused on the signature carnival days, the main sequence is Cultural Carnival on 26 December, Junior Carnival on 27 December, Carnival Calabar and Parade of Bands on 28 December, and Bikers Carnival on 29 December."
+    ],
+    bestFor: ["Carnival", "Culture", "December travel", "Live entertainment"],
+    highlights: [
+      { name: "26 December — Cultural Carnival", detail: "The Cultural Carnival is scheduled for 9:00 AM, flagging off at Millennium Park and using part of the Carnival Calabar route." },
+      { name: "27 December — Junior Carnival", detail: "The Junior Carnival is scheduled for 10:00 AM, with the official calendar listing Botanic Garden as the flag-off point." },
+      { name: "28 December — Parade of Bands", detail: "Carnival Calabar and the Parade of Bands is scheduled for 10:00 AM on the official carnival route." },
+      { name: "29 December — Bikers Carnival", detail: "The Bikers Carnival is scheduled for noon on the carnival route, followed by evening entertainment at U.J. Esuene Stadium." }
+    ],
+    planning: [
+      { label: "Book the peak dates early", detail: "Accommodation and transport demand rises sharply around 26–29 December. Confirm your stay and return travel well before the main parade." },
+      { label: "Use the live official calendar", detail: "The season contains dozens of events at different venues. Re-check the Cross River schedule for any timing or venue change before travelling." },
+      { label: "Plan around road closures", detail: "Parade days use the carnival route and can change normal traffic movement. Avoid tight airport, hotel or intercity connections around parade times." },
+      { label: "Choose your priority days", detail: "If you cannot attend the full season, the Cultural Carnival, Junior Carnival, Parade of Bands and Bikers Carnival form the strongest four-day core." }
+    ],
+    source: { label: "Cross River State — Carnival Calabar 2026 schedule", href: "https://www.carnival.crossriverstate.gov.ng/schedule" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "african-traditional-food-fair-abuja-2026",
+    title: "African Traditional Food Fair Abuja 2026: Date, Venue & Planning",
+    shortTitle: "African Traditional Food Fair",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "The 8th African Traditional Food Fair is scheduled for 17 October 2026 from 10:00 AM to 6:00 PM at the FCT Exhibition Pavilion in Abuja, with indigenous food, tasting, cooking, farmers and food producers.",
+    intro: [
+      "The 2026 African Traditional Food Fair is a one-day Abuja event focused on indigenous African food systems under the theme 'Reviving Indigenous Foods for Healthy People, Climate Resilience and a Food-Secure Nigeria'.",
+      "Visit Abuja lists the fair for Saturday 17 October from 10:00 AM to 6:00 PM at the FCT Exhibition Pavilion beside the International Conference Centre."
+    ],
+    bestFor: ["Food", "Culture", "Family outings", "October events"],
+    highlights: [
+      { name: "17 October 2026", detail: "The fair runs from 10:00 AM to 6:00 PM." },
+      { name: "FCT Exhibition Pavilion", detail: "The listed venue is on Herbert Macaulay Way in Central Area, beside the International Conference Centre." },
+      { name: "Indigenous food & tasting", detail: "The programme brings together farmers, chefs, food producers, policymakers and food innovators with public tasting, cooking and produce stalls." },
+      { name: "One-day event", detail: "Build the visit around the published Saturday programme rather than treating it as a multi-day festival." }
+    ],
+    planning: [
+      { label: "Confirm access before leaving", detail: "Check the organiser's current event page for registration, ticket or entry updates." },
+      { label: "Arrive with a Central Area transport plan", detail: "The venue is close to major Abuja event and conference traffic; allow time for parking or ride-hailing pickup." },
+      { label: "Check food-allergy details directly", detail: "If you have a serious allergy or dietary restriction, ask individual vendors about ingredients rather than relying on assumptions." },
+      { label: "Re-check the programme", detail: "Talks, demonstrations and vendor schedules can change even when the event date stays fixed." }
+    ],
+    source: { label: "Visit Abuja — 8th African Traditional Food Fair", href: "https://www.visitabuja.org/event/8th-african-traditional-food-fair/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "abuja-international-film-festival-2026",
+    title: "Abuja International Film Festival 2026: Dates, Venues & Planning",
+    shortTitle: "Abuja International Film Festival",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "The 23rd Abuja International Film Festival runs 20–24 October 2026, with screenings, premieres, masterclasses, industry discussions and awards across Abuja venues including Silverbird Cinemas.",
+    intro: [
+      "The 23rd Abuja International Film Festival is scheduled from 20 to 24 October 2026. Visit Abuja lists screenings and festival activity across Silverbird Cinemas in Central Area, Transcorp Hilton and the University of Abuja Mini Campus in Gwagwalada.",
+      "Because the programme spans multiple venues, confirm the exact screening or session venue before travelling instead of assuming every event is at Silverbird."
+    ],
+    bestFor: ["Film", "Nollywood", "Creative industry", "October events"],
+    highlights: [
+      { name: "20–24 October 2026", detail: "The festival runs for five days in Abuja." },
+      { name: "Film screenings & premieres", detail: "The programme brings African and international filmmakers together for screenings and premieres." },
+      { name: "Masterclasses & industry sessions", detail: "The festival also includes professional discussions and learning sessions for filmmakers and creative-industry participants." },
+      { name: "Multiple Abuja venues", detail: "Silverbird Cinemas is a listed venue, with additional activity at Transcorp Hilton and the University of Abuja Mini Campus in Gwagwalada." }
+    ],
+    planning: [
+      { label: "Check the session venue", detail: "The venues are not all close together, especially Gwagwalada versus Central Area. Verify each programme item before setting out." },
+      { label: "Allow travel buffers", detail: "Do not book back-to-back sessions in distant Abuja districts without realistic road time." },
+      { label: "Verify ticket or accreditation rules", detail: "Screenings, premieres, awards and industry sessions may use different access arrangements." },
+      { label: "Use the current festival programme", detail: "Check the festival's linked programme close to the date for screening times and late changes." }
+    ],
+    source: { label: "Visit Abuja — 23rd Abuja International Film Festival", href: "https://www.visitabuja.org/event/23rd-abuja-international-film-festival/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
     slug: "felabration-2026",
     title: "Felabration 2026 Lagos Guide: Dates, Venue & Planning",
     shortTitle: "Felabration 2026",
