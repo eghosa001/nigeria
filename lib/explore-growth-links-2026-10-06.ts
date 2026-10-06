@@ -8,5 +8,15 @@ export const exploreGrowthWaveSharedPlaceSlugs: Record<string, readonly string[]
     "silverbird-cinemas-abuja-film-festival-2026",
     "transcorp-hilton-abuja-film-festival-2026",
     "bat-icc-food-fair-2026"
+  ],
+  "all-africa-challenge-trophy-abuja-2026": [
+    "ibb-golf-club-aact-2026",
+    "transcorp-hilton-abuja-film-festival-2026",
+    "jabi-lake-abuja"
+  ],
+  "art-meets-fashion-abuja-2026": [
+    "national-gallery-art-meets-fashion-2026",
+    "abuja-arts-crafts-village",
+    "bat-icc-food-fair-2026"
   ]
 };
