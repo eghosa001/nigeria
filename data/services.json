@@ -10833,9 +10833,9 @@
   },
   {
     "slug": "nrs-tax-id-retrieval",
-    "title": "How to retrieve your Nigerian Tax ID with NRS",
-    "shortTitle": "Retrieve Nigerian Tax ID",
-    "summary": "Retrieve the harmonised Nigerian Tax ID using the official NRS/JRB portal, with NIN for individuals or CAC registration details for businesses.",
+    "title": "Tax ID Nigeria: How to Retrieve Your TIN with NIN or CAC",
+    "shortTitle": "Nigeria Tax ID / TIN retrieval",
+    "summary": "Retrieve Nigeria's harmonised Tax ID (TIN) on the official NRS/JRB portal using NIN for individuals or CAC registration details for businesses.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "No fee is shown on the official Tax ID retrieval portal",
@@ -10857,6 +10857,7 @@
     ],
     "notes": [
       "NRS/JRB describe the Tax ID as a harmonised national tax identity linked to foundational records such as NIN for individuals and CAC registration for businesses.",
+      "The official portal says a valid Tax ID is required for many public and private services, including banking, employment documentation, government contracts and statutory filings.",
       "If identity records do not match, the portal can require the underlying NIN/CAC record to be corrected first."
     ],
     "sources": [
@@ -10864,29 +10865,37 @@
         "label": "Nigerian Tax ID Retrieval Portal",
         "agency": "Nigeria Revenue Service / Joint Revenue Board",
         "url": "https://taxid.nrs.gov.ng/",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-06"
       },
       {
         "label": "How Tax ID Retrieval Works",
         "agency": "Nigeria Revenue Service / Joint Revenue Board",
         "url": "https://taxid.nrs.gov.ng/how-it-works",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-06"
       }
     ],
     "searchTerms": [
       "Tax ID Nigeria",
+      "Tax ID Nigeria 2026",
+      "Tax Identification Number Nigeria",
+      "TIN Nigeria",
+      "TIN retrieval Nigeria",
       "Tax ID retrieval",
       "retrieve TIN Nigeria",
       "NRS Tax ID",
       "Nigerian Tax ID portal",
-      "get Tax ID with NIN"
+      "get Tax ID with NIN",
+      "get Tax ID with CAC",
+      "taxid.nrs.gov.ng",
+      "how to get TIN in Nigeria",
+      "how to retrieve Tax ID Nigeria"
     ],
     "related": [
       "nrs-individual-tax-registration",
       "nrs-corporate-tax-registration",
       "nrs-tax-clearance-certificate"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-06"
   },
   {
     "slug": "passport-application-tracking",
