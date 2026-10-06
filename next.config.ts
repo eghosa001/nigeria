@@ -59,6 +59,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/services/hotelsng-book-hotel",
+        destination: "/services/hotels-ng-book-hotel",
+        permanent: true,
+      },
+      {
+        source: "/services/hotelsng-cancel-refund",
+        destination: "/services/hotels-ng-cancel-refund-booking",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],
         destination: "https://mynigeriaguide.com/:path*",

@@ -850,51 +850,72 @@
   },
   {
     "slug": "jamb-2026-utme-registration",
-    "title": "How much is JAMB UTME registration in 2026?",
-    "shortTitle": "2026 JAMB registration",
-    "summary": "Official 2026 JAMB e-PIN figures and the registration flow published by JAMB.",
+    "title": "JAMB 2026 UTME Registration: Fees, Dates and Official Process",
+    "shortTitle": "JAMB 2026 UTME registration",
+    "summary": "JAMB's 2026 UTME registration ran from 26 January to 28 February 2026. This verified reference explains the official e-PIN prices, NIN/profile requirements, accredited-CBT registration and biometric process, and points candidates to current post-registration services.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "₦7,200 UTME only / ₦8,700 with mock",
-    "feeNote": "JAMB's 2026 training manual states UTME only ₦7,200, UTME with mock ₦8,700, and Direct Entry e-PIN ₦5,700.",
+    "feeNote": "For the 2026 exercise, JAMB published ₦7,200 for UTME without mock and ₦8,700 with mock. The 2026 UTME registration window closed on 28 February 2026; do not pay anyone claiming to reopen the closed exercise.",
     "status": "verified",
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
-      "NIN",
-      "JAMB profile code",
-      "Active candidate phone number",
-      "e-PIN"
+      "A valid National Identification Number (NIN) with biodata already corrected at NIMC if necessary.",
+      "A JAMB profile code generated for the candidate using the candidate's own active phone number.",
+      "A valid, functional and accessible personal email address.",
+      "The correct 2026 e-PIN purchased through a JAMB-approved payment channel.",
+      "Attendance at a JAMB-accredited CBT centre for registration and biometric capture."
     ],
     "steps": [
-      "Generate the profile code using the official SMS format.",
-      "Purchase the e-PIN through an approved JAMB channel.",
-      "Take the e-PIN to a JAMB-accredited CBT centre for registration."
+      "Confirm that the name, date of birth and other identity data attached to your NIN are correct before starting; JAMB said candidates with biodata issues should resolve them with NIMC first.",
+      "Create the JAMB profile and obtain the profile code using the official candidate route and the candidate's own phone number.",
+      "Choose the correct e-PIN category and pay only through an approved JAMB channel. For 2026, UTME without mock was ₦7,200 and UTME with mock was ₦8,700.",
+      "Take the profile code and e-PIN to an accredited CBT centre. The 2026 UTME registration period ran from 26 January to 28 February 2026.",
+      "Complete the candidate details and biometric capture at the CBT centre. JAMB's 2026 manual required fingerprint authentication, including successful verification before the registration slip could be printed.",
+      "Keep the registration slip and use the current JAMB post-registration services for examination slips, results, CAPS/admission status or corrections rather than attempting to register again after the closed window."
     ],
     "notes": [
-      "JAMB describes its UTME/DE registration as cashless; use approved channels and accredited centres."
+      "The 2026 UTME registration window is closed. This page remains a verified reference for the completed 2026 exercise and should not be read as a currently open application.",
+      "JAMB announced e-PIN vending from 19 January and the actual UTME registration period from 26 January to 28 February 2026.",
+      "The 2026 UTME itself ran from 16 to 25 April 2026; current candidates should use the relevant result, CAPS or admission service now.",
+      "JAMB described the exercise as cashless and warned CBT centres against overcharging or fraudulent registration practices."
     ],
     "sources": [
       {
-        "label": "2026 UTME Training Manual",
+        "label": "JAMB Bulletin — 2026 UTME registration dates and prices",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://www.jamb.gov.ng/Bulletin/2026/JAMBulletin_26-01-2026.pdf",
+        "published": "2026-01-26",
+        "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "Manual for Officials of 2026 UTME",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
         "published": "2026",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-06"
       },
       {
-        "label": "JAMB FAQ",
+        "label": "JAMB Payment & Services",
         "agency": "Joint Admissions and Matriculation Board",
-        "url": "https://www.jamb.gov.ng/FAQ",
-        "lastChecked": "2026-09-28"
+        "url": "https://www.jamb.gov.ng/Payment-Services",
+        "lastChecked": "2026-10-06"
       }
     ],
     "related": [
-      "jamb-profile-code"
+      "jamb-profile-code",
+      "jamb-examination-slip-2026",
+      "jamb-print-result",
+      "jamb-caps",
+      "jamb-admission-letter"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-06",
     "searchTerms": [
-      "2026 JAMB registration",
+      "JAMB 2026 UTME registration",
+      "JAMB 2026 registration fee",
+      "JAMB registration dates 2026",
       "How much is JAMB UTME registration in 2026?",
+      "JAMB 2026 registration closed",
       "Education"
     ]
   },

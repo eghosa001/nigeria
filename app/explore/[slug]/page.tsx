@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
-import { exploreGuides, getExploreGuide } from "@/lib/explore";
+import { exploreGuideRedirects, exploreGuides, getExploreGuide } from "@/lib/explore";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 
@@ -14,7 +14,10 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return exploreGuides.map((guide) => ({ slug: guide.slug }));
+  return [
+    ...exploreGuides.map((guide) => ({ slug: guide.slug })),
+    ...Object.keys(exploreGuideRedirects).map((slug) => ({ slug })),
+  ];
 }
 
 function truncateSeo(value: string, limit: number) {
@@ -66,8 +69,17 @@ function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuid
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const guide = getExploreGuide(slug);
+  const redirectSlug = exploreGuideRedirects[slug];
+  const guide = getExploreGuide(redirectSlug ?? slug);
   if (!guide) return {};
+  if (redirectSlug) {
+    return {
+      title: { absolute: guide.title },
+      description: guide.summary,
+      alternates: { canonical: "/explore/" + redirectSlug },
+      robots: { index: false, follow: true },
+    };
+  }
 
   const title = getExploreSeoTitle(guide);
   const description = truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
@@ -92,6 +104,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function ExploreGuidePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const redirectSlug = exploreGuideRedirects[slug];
+  if (redirectSlug) permanentRedirect("/explore/" + redirectSlug);
   const guide = getExploreGuide(slug);
   if (!guide) notFound();
 
@@ -229,7 +243,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           {guide.slug === "abuja" ? <div className="minimal-inline-links"><Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link></div> : null}
           {guide.slug === "calabar" ? (
             <div className="minimal-inline-links">
-              <Link href="/explore/carnival-calabar-2026">Carnival Calabar 2026 dates & planning</Link>
+              <Link href="/explore/calabar-carnival-2026">Carnival Calabar 2026 dates & planning</Link>
               <Link href="/explore/nigeria-landmarks-places-to-visit">More places to visit in Nigeria</Link>
             </div>
           ) : null}

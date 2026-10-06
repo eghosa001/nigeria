@@ -1,25 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
 import { getPublicService } from "@/lib/data";
-import { getGrowthHub, growthHubs } from "@/lib/growth-hubs";
+import { getGrowthHub, growthHubRedirects, growthHubs } from "@/lib/growth-hubs";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return growthHubs.map((hub) => ({ slug: hub.slug }));
+  return [
+    ...growthHubs.map((hub) => ({ slug: hub.slug })),
+    ...Object.keys(growthHubRedirects).map((slug) => ({ slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const hub = getGrowthHub(slug);
+  const redirectSlug = growthHubRedirects[slug];
+  const hub = getGrowthHub(redirectSlug ?? slug);
   if (!hub) return {};
+  if (redirectSlug) {
+    return {
+      title: hub.title,
+      description: hub.description,
+      alternates: { canonical: "/topics/" + redirectSlug },
+      robots: { index: false, follow: true },
+    };
+  }
 
   return {
     title: { absolute: hub.title },
@@ -41,6 +53,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function TopicPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const redirectSlug = growthHubRedirects[slug];
+  if (redirectSlug) permanentRedirect("/topics/" + redirectSlug);
   const hub = getGrowthHub(slug);
   if (!hub) notFound();
 
