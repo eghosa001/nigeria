@@ -18,7 +18,6 @@ on:
       - "lib/job-scale-wave.ts"
       - "scripts/check-freshness.ts"
       - ".github/workflows/content-freshness.yml"
-      - "package.json"
 
 permissions:
   contents: read
