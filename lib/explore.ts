@@ -17,6 +17,60 @@ export type ExploreGuide = {
 
 export const exploreGuides: ExploreGuide[] = [
   {
+    slug: "smfest-abuja-2026",
+    title: "SMFest Abuja 2026 Guide: Dates, Venue, Tickets & Speakers",
+    shortTitle: "SMFest Abuja",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "SMFest Abuja 2026 runs 17–18 October at Family Worship Centre, Wuye, with talks and networking around social media, technology, business and digital growth under the theme AdvantageX.",
+    intro: [
+      "SMFest Abuja returns on 17 and 18 October 2026 at Family Worship Centre in Wuye. The organiser describes the event as a gathering for creators, entrepreneurs, professionals and business owners using social media, technology and innovation to grow.",
+      "The 2026 theme is AdvantageX — The Exponential Advantage. The official event site lists speakers across business, technology, utilities, media and entrepreneurship, while ticket tiers currently run from entry-level to premium networking packages."
+    ],
+    bestFor: ["Technology", "Social media", "Business", "Networking"],
+    highlights: [
+      { name: "17–18 October 2026", detail: "The official SMFest site lists the Abuja event for Saturday and Sunday, with doors from 9:00 AM." },
+      { name: "Family Worship Centre, Wuye", detail: "The listed venue is FWC Wuye in Abuja." },
+      { name: "AdvantageX theme", detail: "Sessions focus on business, technology, social media, real estate and digital opportunity." },
+      { name: "Ticket tiers", detail: "The organiser currently lists ticket options from ₦15,000 to ₦250,000; confirm the live checkout price before purchase." }
+    ],
+    planning: [
+      { label: "Buy only from the organiser", detail: "Use the official SMFest site for tickets and confirm the ticket tier before payment." },
+      { label: "Plan Wuye transport", detail: "Allow time for event traffic and ride-hailing pickup around Family Worship Centre." },
+      { label: "Choose sessions in advance", detail: "Review the final speaker and programme schedule so you do not miss the sessions most relevant to your work." },
+      { label: "Re-check the event page", detail: "Speaker order, programme timing and ticket availability can change close to the event." }
+    ],
+    source: { label: "SMFest Abuja 2026 official website", href: "https://smfest.org/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
+    slug: "nifafest-abuja-2026",
+    title: "NIFAFEST Abuja 2026: Dates, Venues & Fashion Festival Guide",
+    shortTitle: "NIFAFEST 2026",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "Nigeria International Fashion Festival (NIFAFEST) runs 15–17 October 2026 in Abuja with fashion and craft exhibitions, empowerment sessions and a finale across Garki and Maitama venues.",
+    intro: [
+      "NIFAFEST 2026 is scheduled for 15 to 17 October in Abuja. The organiser positions the three-day festival around Nigerian fashion, textiles, craft, youth and women empowerment, sustainable design and the creative economy.",
+      "The programme uses two main venues: Cyprian Ekwensi Centre for Arts and Culture in Area 10, Garki, for the opening and empowerment sessions, and the National Universities Commission Event Auditorium in Maitama for the grand finale."
+    ],
+    bestFor: ["Fashion", "Creative industry", "Culture", "October events"],
+    highlights: [
+      { name: "15 October — opening & exhibition", detail: "The opening ceremony and trade/fashion exhibition is listed for noon at the Cyprian Ekwensi Centre for Arts and Culture, Area 10, Garki." },
+      { name: "16 October — empowerment seminar", detail: "A grant and empowerment seminar for models, designers and fashion stakeholders is listed for noon at the same Garki venue." },
+      { name: "17 October — grand finale", detail: "The awards and finale ceremony is listed for 3:00 PM at the National Universities Commission Event Auditorium in Maitama." },
+      { name: "Three-day creative-economy programme", detail: "The organiser highlights sustainable fashion, indigenous textile preservation, youth and women empowerment, and trade exposure." }
+    ],
+    planning: [
+      { label: "Check which venue applies", detail: "The festival changes venue for the finale, so confirm the programme day before travelling." },
+      { label: "Register through the organiser", detail: "Use NIFAFEST's official registration and contact routes rather than copied social-media payment instructions." },
+      { label: "Allow cross-city travel time", detail: "Garki and Maitama are separate Abuja districts; do not assume the full festival happens in one building." },
+      { label: "Verify the live programme", detail: "Check the official site shortly before attendance for timing, accreditation and access changes." }
+    ],
+    source: { label: "NIFAFEST 2026 official website", href: "https://nifafest.com/" },
+    lastReviewed: "2026-10-06"
+  },
+  {
     slug: "carnival-calabar-2026",
     title: "Carnival Calabar 2026 Guide: Dates, Parade & Festival Schedule",
     shortTitle: "Carnival Calabar",
