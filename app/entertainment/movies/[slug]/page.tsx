@@ -30,6 +30,10 @@ function videoIdFromUrl(href: string) {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "third-party-risk": {
+    title: "Third Party Risk Nigerian Movie: Cast & Full Movie",
+    description: "Third Party Risk cast, story, 135-minute runtime and official Enyinna Jonas TV full movie, starring Omeche Oko, Ray Emodi and Symon Oko.",
+  },
   "holy-matrimony": {
     title: "Holy Matrimony Nigerian Movie: Cast & Full Movie",
     description: "Holy Matrimony cast, 143-minute runtime and official Frederick Leonard TV full movie, starring Frederick Leonard, Onyi Alex and Nini Mbonu.",
