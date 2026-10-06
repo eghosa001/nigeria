@@ -185,24 +185,26 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
   }];
 });
 
-export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[]).map((movie) => {
-  const title = cleanYouTubeDisplayTitle(movie.title || movie.rawTitle) || "Untitled Nigerian movie";
-  const cast = normalizeGeneratedCast(movie.cast ?? []);
-  const featuredCast = normalizeGeneratedCast(movie.featuredCast ?? []).filter((name) => cast.includes(name));
-  const normalizedMovie = {
-    ...movie,
-    title,
-    cast,
-    featuredCast: featuredCast.length ? featuredCast : cast.slice(0, 3),
-    metadataStatus: cast.length ? "complete" as const : "cast-pending" as const,
-  };
-  return {
-    ...normalizedMovie,
-    synopsis: normalizeGeneratedSynopsis(normalizedMovie),
-    source: "youtube-api" as const,
-    internalHref: "/entertainment/youtube/" + movie.videoId,
-  };
-});
+export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[])
+  .map((movie) => {
+    const title = cleanYouTubeDisplayTitle(movie.title || movie.rawTitle) || "Untitled Nigerian movie";
+    const cast = normalizeGeneratedCast(movie.cast ?? []);
+    const featuredCast = normalizeGeneratedCast(movie.featuredCast ?? []).filter((name) => cast.includes(name));
+    const normalizedMovie = {
+      ...movie,
+      title,
+      cast,
+      featuredCast: featuredCast.length ? featuredCast : cast.slice(0, 3),
+      metadataStatus: cast.length ? "complete" as const : "cast-pending" as const,
+    };
+    return {
+      ...normalizedMovie,
+      synopsis: normalizeGeneratedSynopsis(normalizedMovie),
+      source: "youtube-api" as const,
+      internalHref: "/entertainment/youtube/" + movie.videoId,
+    };
+  })
+  .filter((movie) => movie.metadataStatus !== "cast-pending" && movie.cast.length > 0 && movie.featuredCast.length > 0);
 
 type ReviewCandidate = {
   videoId: string;
@@ -268,7 +270,6 @@ const reviewYouTubeMovies: BaseYouTubeMovieRecord[] = ((reviewData.candidates ??
   }));
 
 const byVideoIdBase = new Map<string, BaseYouTubeMovieRecord>();
-for (const movie of reviewYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
 for (const movie of generatedYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
 for (const movie of curated) {
   const discovered = byVideoIdBase.get(movie.videoId);
@@ -304,9 +305,16 @@ export const youtubeMovieLibrary: YouTubeMovieRecord[] = baseMovies
   }))
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
 
+const reviewByVideoId = new Map<string, YouTubeMovieRecord>(
+  reviewYouTubeMovies.map((movie) => [movie.videoId, { ...movie, alternateSources: [] }]),
+);
+
 const byVideoId = new Map<string, YouTubeMovieRecord>(
   youtubeMovieLibrary.map((movie) => [movie.videoId, movie]),
 );
+for (const [videoId, movie] of reviewByVideoId) {
+  if (!byVideoId.has(videoId)) byVideoId.set(videoId, movie);
+}
 
 function trendScore(movie: YouTubeMovieRecord) {
   const published = Date.parse(movie.publishedAt);
@@ -329,9 +337,7 @@ export const trendingYouTubeMovies = [...youtubeMovieLibrary].sort(
 
 export const youtubeLibraryGeneratedAt = generatedData.generatedAt as string | null;
 export const youtubePendingQualityCount = generatedData.pendingQualityCount ?? 0;
-export const youtubeReviewVisibleCount = reviewYouTubeMovies.filter(
-  (movie) => !generatedYouTubeMovies.some((generated) => generated.videoId === movie.videoId),
-).length;
+export const youtubeReviewVisibleCount = 0;
 
 export function getYouTubeMovieById(videoId: string) {
   return byVideoId.get(videoId);
