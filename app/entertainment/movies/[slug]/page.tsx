@@ -266,7 +266,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 
           <div className="movie-detail-hero-grid">
             <div className="movie-detail-artwork">
-              <EntertainmentArtwork title={title} variant="hero" />
+              <EntertainmentArtwork title={title} variant="hero" showSourceLink />
             </div>
 
             <div className="movie-detail-copy">
