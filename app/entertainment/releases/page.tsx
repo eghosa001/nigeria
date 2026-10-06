@@ -3,7 +3,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
 import { releaseItems } from "@/lib/entertainment-extras";
-import { latestYouTubeMovies } from "@/lib/youtube-library";
+import { indexableYouTubeMovies } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "New & Upcoming Nigerian Entertainment",
@@ -28,7 +28,7 @@ const statusOrder = {
 } as const;
 
 export default function EntertainmentReleasesPage() {
-  const latestMovies = latestYouTubeMovies.slice(0, 12);
+  const latestMovies = indexableYouTubeMovies.slice(0, 12);
   const lifecycleItems = releaseItems
     .map((item) => ({ ...item, effectiveStatus: getEffectiveReleaseStatus(item) }))
     .sort((a, b) =>
