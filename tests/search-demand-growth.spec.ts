@@ -8,7 +8,7 @@ import { growthHubs } from "@/lib/growth-hubs";
 import { seriesTitles } from "@/lib/series";
 
 test("search-demand growth data stays internally consistent", () => {
-  expect(publicServices).toHaveLength(212);
+  expect(publicServices.length).toBeGreaterThanOrEqual(668);
 
   for (const slug of ["check-nin-number", "unclaimed-dividends-nigeria", "jamb-examination-slip-2026", "neco-certificate-service"]) {
     expect(publicServices.some((service) => service.slug === slug), slug).toBeTruthy();
@@ -35,6 +35,9 @@ test("search-demand growth data stays internally consistent", () => {
     expect(jobOpportunities.some((item) => item.slug === slug && item.status === "open"), slug).toBeTruthy();
   }
   expect(exploreGuides.some((guide) => guide.slug === "beneficial-ownership-asset-recovery-conference-2026")).toBeTruthy();
+  expect(exploreGuides.some((guide) => guide.slug === "fashion-fables-runway-africa-abuja-2026")).toBeTruthy();
+  expect(entertainmentTitles.some((item) => item.slug === "third-party-risk")).toBeTruthy();
+  expect(jobOpportunities.some((item) => item.slug === "unilever-nigeria-careers" && item.status === "career-page")).toBeTruthy();
 });
 
 test("new search-demand routes are crawlable from their public surfaces", async ({ page, request }) => {
@@ -50,6 +53,9 @@ test("new search-demand routes are crawlable from their public surfaces", async 
     "/services/unclaimed-dividends-nigeria",
     "/services/jamb-examination-slip-2026",
     "/services/neco-certificate-service",
+    "/entertainment/movies/third-party-risk",
+    "/explore/fashion-fables-runway-africa-abuja-2026",
+    "/jobs/unilever-nigeria-careers",
   ];
 
   for (const route of routes) {

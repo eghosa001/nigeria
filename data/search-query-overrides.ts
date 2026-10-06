@@ -18,6 +18,11 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     timeline: "How long does NIN registration and NIN slip collection take?",
     start: "How do I register for a NIN in Nigeria?",
   },
+  "nrs-individual-tax-registration": {
+    requirements: "What do I need for NRS taxpayer self-service registration?",
+    online: "Where is the official NRS Self-Service registration portal?",
+    start: "How do I complete NRS taxpayer self-service registration?",
+  },
   "nrs-tax-id-retrieval": {
     fee: "Is Nigerian Tax ID or TIN retrieval free?",
     requirements: "What do I need to retrieve my Nigerian Tax ID with NIN or CAC?",
