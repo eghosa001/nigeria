@@ -109,6 +109,52 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 
 const rawJobOpportunities: CareerOpportunity[] = [
   {
+    slug: "firstbank-technology-academy-2026",
+    title: "FirstBank Technology Academy Graduate Trainee Programme 2026",
+    organization: "FirstBank Nigeria",
+    kind: "programme",
+    sector: "Private",
+    status: "open",
+    statusLabel: "Applications open until 18 October 2026",
+    summary: "FirstBank is recruiting young STEM graduates into its 2026 Technology Academy, a talent-development route for technology careers supporting the bank's digital transformation. The current application deadline is 18 October 2026.",
+    location: "Nigeria",
+    employmentType: "Graduate technology trainee programme",
+    audiences: ["STEM graduates", "Engineering graduates", "Computer science graduates", "IT graduates", "Data and technology applicants"],
+    fields: ["Software engineering", "Application support", "Cybersecurity", "Infrastructure", "Data science", "Analytics", "Banking technology"],
+    qualifications: [
+      "Degree in Computer Science, Engineering, Information Technology, Information Systems, Mathematics, Statistics, Physics or a related STEM discipline.",
+      "Minimum Second Class Upper (2:1) degree or equivalent.",
+      "Completed NYSC or a valid exemption certificate.",
+      "Strong analytical and problem-solving ability plus clear interest in technology and continuous learning."
+    ],
+    requirements: [
+      "Use the official FirstBank Oracle recruitment page linked from the current vacancy notice.",
+      "Confirm that your degree discipline and class meet the published Technology Academy eligibility before applying.",
+      "Submit before 18 October 2026 and do not pay anyone for access to the recruitment process."
+    ],
+    documents: ["CV/resume", "Degree/qualification details", "NYSC discharge or exemption information", "Other identity or application details requested by the official FirstBank recruitment system"],
+    applicationSteps: [
+      "Open the official FirstBank candidate-experience vacancy page.",
+      "Review the Technology Academy eligibility and confirm your STEM degree, grade and NYSC status.",
+      "Complete the candidate profile and upload the information requested by FirstBank's recruitment system.",
+      "Submit before 18 October 2026 and retain the application confirmation."
+    ],
+    officialUrl: "https://hdbc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1829",
+    officialUrlLabel: "Apply on FirstBank's official recruitment system",
+    verifiedAt: "2026-10-06",
+    deadline: "2026-10-18",
+    nextMilestone: "Applications close 18 October 2026.",
+    feeNote: "No application fee is stated. Use only FirstBank's official recruitment system and ignore payment requests from third parties.",
+    sourceNotes: [
+      "The current vacancy is specifically for FirstBank's Technology Academy graduate-trainee pipeline.",
+      "FirstBank has previously described the Technology Academy as a recurring strategic initiative for building its technology talent pool."
+    ],
+    sources: [
+      { label: "FirstBank official Oracle recruitment page", url: "https://hdbc.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/1829", lastChecked: "2026-10-06" },
+      { label: "FirstBank Technology Academy vacancy summary", url: "https://www.opportunitiesforafricans.com/first-bank-nigeria-technology-academy-graduate-trainee-program-2026/", lastChecked: "2026-10-06" }
+    ]
+  },
+  {
     slug: "kaduna-phcb-recruitment-2026",
     title: "Kaduna State PHCB Recruitment 2026 — 10 Health Vacancies",
     organization: "Kaduna State Primary Health Care Board",
