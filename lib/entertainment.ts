@@ -81,6 +81,94 @@ export type EntertainmentTitle = {
 
 export const entertainmentTitles: EntertainmentTitle[] = [
   {
+    slug: "the-bride-switch",
+    title: "The Bride Switch",
+    year: 2026,
+    format: "movie",
+    genres: ["Romance", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "To save her family from ruin, Adanna takes her twin sister's place as the bride of a wealthy stranger. The arrangement is meant to be temporary, but the borrowed identity becomes harder to escape when real feelings grow inside the marriage.",
+    cast: ["Eddie Watson", "Toluwani George", "Thelma Chukwunwem", "Symon Oko"],
+    featuredCast: ["Toluwani George", "Eddie Watson", "Thelma Chukwunwem"],
+    directors: ["Mo Fakorede"],
+    runtimeMinutes: 159,
+    featured: true,
+    references: [{
+      label: "Omoni Oboli — The Bride Switch release",
+      href: "https://www.linkedin.com/posts/omoni-oboli-178b8672_thebrideswitch-omoniobolitv-nollywood-activity-7499580019275513856-Y0hD",
+      lastChecked: "2026-10-06",
+      note: "The filmmaker confirms the movie is streaming on Omoni Oboli TV and highlights Toluwani George's dual twin performance."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Omoni Oboli TV",
+      href: "https://www.youtube.com/watch?v=zKQoArfptqA",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length upload on Omoni Oboli TV.",
+      publisher: "Omoni Oboli TV",
+      publisherUrl: "https://www.youtube.com/@OmoniOboliTV"
+    }]
+  },
+  {
+    slug: "love-always-wins-2026",
+    title: "Love Always Wins",
+    year: 2026,
+    format: "movie",
+    genres: ["Romance", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Two young founders lose control of the app they built after a powerful company enters the picture, and a chance encounter pushes ambition, friendship and romance into the same difficult decision.",
+    cast: ["Omeche Oko", "Bryan Okoye", "Jeffery Nortey"],
+    featuredCast: ["Omeche Oko", "Bryan Okoye", "Jeffery Nortey"],
+    directors: ["Ndifreke Mathew"],
+    runtimeMinutes: 106,
+    references: [{
+      label: "African Movies Database — Love Always Wins",
+      href: "https://africanmoviedb.com/titles/genre/romance/country/nigeria?page=17",
+      lastChecked: "2026-10-06",
+      note: "Catalog reference used to verify the 2026 title, story context and cast/director metadata."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Uduak Isong TV",
+      href: "https://www.youtube.com/watch?v=KWIpR47N9hc",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length upload on Uduak Isong TV.",
+      publisher: "Uduak Isong TV",
+      publisherUrl: "https://www.youtube.com/@UduakIsongTV"
+    }]
+  },
+  {
+    slug: "what-tomorrow-holds-2026",
+    title: "What Tomorrow Holds",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "After years of infertility, Gladys and Jude build their family through adoption and later welcome a biological child, but jealousy and painful outside influence fracture the home and force the family toward consequences, forgiveness and repair.",
+    cast: ["Chioma Nwosu", "Sandra Okunzuwa", "Adeoluwa Okusaga", "Kalu Ikeagwu", "Fiyinfoluwa Asenuga"],
+    featuredCast: ["Chioma Nwosu", "Sandra Okunzuwa", "Kalu Ikeagwu"],
+    directors: ["Olowajaiye Michael"],
+    runtimeMinutes: 107,
+    references: [{
+      label: "African Movies Database — What Tomorrow Holds",
+      href: "https://africanmoviedb.com/title/what-tomorrow-holds-2026",
+      lastChecked: "2026-10-06",
+      note: "Catalog reference used to verify release date, runtime, director and cast."
+    }],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Sandra Okunzuwa TV",
+      href: "https://www.youtube.com/watch?v=2Ficn2BMlI8",
+      access: "full-movie",
+      lastChecked: "2026-10-06",
+      note: "Official full-length release on Sandra Okunzuwa TV.",
+      publisher: "Sandra Okunzuwa TV",
+      publisherUrl: "https://www.youtube.com/@SandraOkunzuwaTV"
+    }]
+  },
+  {
     slug: "my-30th-wedding",
     title: "My 30th Wedding",
     year: 2026,
