@@ -30,6 +30,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Start from current main
+        run: |
+          git fetch origin main --depth=1
+          git checkout --detach origin/main
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -94,17 +99,23 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           BRANCH="automation/youtube-entertainment-sync"
+          BASE_SHA="$(git rev-parse HEAD)"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -B "$BRANCH"
+          git checkout -B "$BRANCH" "$BASE_SHA"
           git add data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json
           git commit -m "Refresh approved YouTube movie catalog"
           git push --force origin "$BRANCH"
-          gh pr create \
-            --base main \
-            --head "$BRANCH" \
-            --title "Refresh approved YouTube movie catalog" \
-            --body "Automated metadata refresh from the official YouTube Data API. Daily runs ingest only uploads newer than each channel's saved frontier; the Sunday run performs a complete revalidation. Only approved channels and full-length movies that pass quality filters are included." \
-            || gh pr edit "$BRANCH" \
+
+          existing_pr="$(gh pr list --base main --head "$BRANCH" --state open --json number --jq '.[0].number // empty')"
+          if [ -n "$existing_pr" ]; then
+            gh pr edit "$existing_pr" \
               --title "Refresh approved YouTube movie catalog" \
-              --body "Automated metadata refresh from the official YouTube Data API. Daily runs ingest only uploads newer than each channel's saved frontier; the Sunday run performs a complete revalidation. Only approved channels and full-length movies that pass quality filters are included."
+              --body "Automated metadata refresh from the official YouTube Data API. Every run starts from current main so the sync branch cannot accumulate stale application changes. Daily runs ingest only uploads newer than each channel's saved frontier; the Sunday run performs a complete revalidation."
+          else
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "Refresh approved YouTube movie catalog" \
+              --body "Automated metadata refresh from the official YouTube Data API. Every run starts from current main so the sync branch cannot accumulate stale application changes. Daily runs ingest only uploads newer than each channel's saved frontier; the Sunday run performs a complete revalidation."
+          fi
