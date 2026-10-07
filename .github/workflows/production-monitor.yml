@@ -29,6 +29,10 @@ jobs:
             "/fees"
             "/categories/foreign-visas"
             "/services/passport-renewal"
+            "/assistant"
+            "/entertainment/movies/oversabi-aunty"
+            "/explore/calabar"
+            "/jobs/firstbank-technology-academy-2026"
             "/sitemap.xml"
             "/sitemap-index.xml"
             "/sitemaps/core.xml"
@@ -52,7 +56,7 @@ jobs:
         run: |
           set -euo pipefail
           for round in 1 2 3; do
-            for path in "/" "/services/passport-renewal" "/topics/nigerian-passport"; do
+            for path in "/" "/services/passport-renewal" "/assistant" "/topics/nigerian-passport"; do
               body="$(mktemp)"
               status="$(curl --silent --show-error --max-time 30 --output "$body" --write-out '%{http_code}' "$LIVE_BASE_URL$path")"
               if [ "$status" -ge 500 ] || grep -Eqi 'Worker exceeded resource limits|Error 1102' "$body"; then

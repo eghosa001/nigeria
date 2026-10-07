@@ -1,19 +1,40 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useMemo, useState } from "react";
-import { searchServices } from "@/lib/search";
+import { FormEvent, useState } from "react";
 import type { PublicServiceListing } from "@/lib/data";
 
-export function GuideAssistant({ services }: { services: PublicServiceListing[] }) {
+type ServiceDirectoryResponse = { items?: PublicServiceListing[] };
+
+export function GuideAssistant() {
   const [draft, setDraft] = useState("");
   const [question, setQuestion] = useState("");
+  const [results, setResults] = useState<PublicServiceListing[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  const results = useMemo(() => question ? searchServices(services, question, 4) : [], [question, services]);
-
-  function submit(event: FormEvent) {
+  async function submit(event: FormEvent) {
     event.preventDefault();
-    setQuestion(draft.trim());
+    const clean = draft.trim();
+    if (!clean) return;
+
+    setQuestion(clean);
+    setLoading(true);
+    setFailed(false);
+    setResults([]);
+
+    try {
+      const response = await fetch("/api/services?q=" + encodeURIComponent(clean) + "&pageSize=4", {
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error("Service search failed");
+      const payload = (await response.json()) as ServiceDirectoryResponse;
+      setResults(Array.isArray(payload.items) ? payload.items : []);
+    } catch {
+      setFailed(true);
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -38,16 +59,22 @@ export function GuideAssistant({ services }: { services: PublicServiceListing[] 
             onChange={(event) => setDraft(event.target.value)}
             placeholder="e.g. I changed my surname and need to update my passport"
           />
-          <button type="submit">Find my guide <span aria-hidden="true">→</span></button>
+          <button type="submit" disabled={loading}>
+            {loading ? "Finding…" : "Find my guide"} <span aria-hidden="true">→</span>
+          </button>
         </div>
       </form>
 
       {question ? (
         <div className="assistant-results" aria-live="polite">
-          {results.length ? (
+          {loading ? (
+            <p>Finding the closest verified guides…</p>
+          ) : failed ? (
+            <p>Search is temporarily unavailable. Please try again.</p>
+          ) : results.length ? (
             <>
               <small>Best matches for “{question}”</small>
-              {results.map(({ service }, index) => (
+              {results.map((service, index) => (
                 <Link key={service.slug} href={"/services/" + service.slug}>
                   <span className="assistant-rank">{String(index + 1).padStart(2, "0")}</span>
                   <span>

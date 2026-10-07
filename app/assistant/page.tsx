@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { GuideAssistant } from "@/components/guide-assistant";
-import { publicServiceListings } from "@/lib/data";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/assistant" },
@@ -12,7 +11,7 @@ export default function AssistantPage() {
   return (
     <section className="section page-top">
       <div className="container narrow-wide">
-        <GuideAssistant services={publicServiceListings} />
+        <GuideAssistant />
       </div>
     </section>
   );
