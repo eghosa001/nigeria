@@ -4,6 +4,7 @@ import privateServiceRecords from "@/data/services-private-extended.json" with {
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
 import wave5ServiceRecords from "@/data/services-growth-wave-5.json" with { type: "json" };
 import wave6ServiceRecords from "@/data/services-growth-wave-6.json" with { type: "json" };
+import wave7ServiceRecords from "@/data/services-growth-wave-7.json" with { type: "json" };
 import cacPartnershipServiceRecords from "@/data/services-cac-partnerships.json" with { type: "json" };
 import type { Agency, Service, VerificationStatus } from "@/lib/types";
 import { validateServiceCatalog } from "@/lib/service-records";
@@ -441,7 +442,7 @@ export const agencies: Agency[] = [
 
 agencies.push(...serviceScaleAgencies);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...cacPartnershipServiceRecords]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
