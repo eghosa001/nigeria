@@ -7,7 +7,7 @@ import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { exploreGuides } from "@/lib/explore";
 import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
-import { indexableYouTubeChannelHubs } from "@/lib/youtube-channel-hubs";
+import { indexableYouTubeChannelHubs, isIndexableYouTubeChannelHub } from "@/lib/youtube-channel-hubs";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
@@ -207,7 +207,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     { url: base + "/entertainment/youtube/channels", lastModified: youtubeModified },
-    ...indexableYouTubeChannelHubs.map((hub) => ({
+    ...indexableYouTubeChannelHubs.filter(isIndexableYouTubeChannelHub).map((hub) => ({
       url: base + "/entertainment/youtube/channels/" + hub.channel.slug,
       lastModified: hub.latestChecked || youtubeModified,
     })),
