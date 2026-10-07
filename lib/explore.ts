@@ -327,7 +327,7 @@ export const exploreGuides: ExploreGuide[] = [
   },
   {
     slug: "calabar",
-    title: "Calabar Nigeria Travel Guide",
+    title: "Calabar Nigeria Travel Guide: Places to Visit & Things to Do",
     shortTitle: "Calabar",
     kind: "city",
     region: "Cross River State",
@@ -926,11 +926,11 @@ export const exploreGuides: ExploreGuide[] = [
 
   {
     slug: "nigeria-landmarks-places-to-visit",
-    title: "Landmarks & Places to Visit in Nigeria",
+    title: "Places to Visit in Nigeria: Landmarks, Nature & Heritage",
     shortTitle: "Nigeria",
     kind: "itinerary",
     region: "Nigeria",
-    summary: "A practical national shortlist of Nigerian landmarks, heritage sites, waterfalls, wildlife destinations and city attractions, with links into detailed trip guides.",
+    summary: "A practical shortlist of places to visit in Nigeria, from major landmarks and heritage sites to waterfalls, wildlife destinations, city attractions and region-by-region trip guides.",
     intro: [
       "Nigeria is too large and varied for one generic tourist checklist. Use this guide as a starting map: choose the kind of trip you want, then open the linked city or destination guide for current access, transport and planning details.",
       "The shortlist deliberately mixes cultural heritage, national parks, waterfalls, city landmarks and nature destinations instead of ranking places as if one trip style fits everyone.",
