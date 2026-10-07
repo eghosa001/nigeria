@@ -360,9 +360,9 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "pension-services-nigeria",
-    title: "Pension Services Nigeria 2026: RSA, Mortgage, Retirement & Benefits",
-    shortTitle: "Pension services",
-    description: "Open or transfer an RSA, resolve contributions, use eligible RSA mortgage equity, understand retirement withdrawals and handle regulated pension benefit claims.",
+    title: "Pension Registration Nigeria 2026: RSA, Micro Pension & Transfers",
+    shortTitle: "Pension registration",
+    description: "Choose the right pension registration route in Nigeria: open a regular RSA, join Micro Pension if eligible, transfer a PFA, or handle contributions and benefits.",
     intro: [
       "This hub groups the pension tasks workers, retirees, beneficiaries and self-employed Nigerians most often need, from opening an RSA through transfers, contribution problems, mortgage equity and retirement benefits.",
       "Each guide separates what the PFA handles from what PenCom regulates, so you can use the correct route and avoid unofficial pension-withdrawal or benefit-processing offers."
@@ -370,7 +370,7 @@ export const growthHubs: GrowthHub[] = [
     searches: [
       { query: "open RSA Nigeria", serviceSlug: "pencom-open-rsa" },
       { query: "open RSA online", serviceSlug: "pencom-open-rsa" },
-      { query: "pension registration Nigeria", serviceSlug: "pencom-open-rsa" },
+      { query: "RSA registration Nigeria", serviceSlug: "pencom-open-rsa" },
       { query: "open pension account Nigeria", serviceSlug: "pencom-open-rsa" },
       { query: "register for RSA online", serviceSlug: "pencom-open-rsa" },
       { query: "NIN for RSA registration", serviceSlug: "pencom-open-rsa" },
