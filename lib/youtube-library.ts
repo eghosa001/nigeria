@@ -335,7 +335,7 @@ export function hasSubstantiveYouTubeSynopsis(movie: Pick<YouTubeMovieRecord, "s
   // This stock fallback gives publisher/cast metadata, not a film-specific plot.
   return synopsis.length >= 110 &&
     !/ is a full-length Nigerian film published by /i.test(synopsis) &&
-    !/^(?:watch|stream|subscribe|like and share)\\b/i.test(synopsis);
+    !/^(?:watch|stream|subscribe|like and share)\b/i.test(synopsis);
 }
 
 export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
