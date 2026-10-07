@@ -307,3 +307,28 @@ test("movie detail keeps long secondary content compact", async ({ page }) => {
   await page.goto("/entertainment/movies/anikulapo");
   expect(await page.locator(".compact-faq-list > details").count()).toBeGreaterThan(0);
 });
+
+
+test("GSC movie opportunities get canonical intent-complete detail pages", async ({ page }) => {
+  for (const [slug, title, href] of [
+    ["long-enough-2026", "Long Enough", "https://www.youtube.com/watch?v=y2RkBwUYSvo"],
+    ["terms-of-attraction-2026", "Terms of Attraction", "https://www.youtube.com/watch?v=2XzPBjsVOTk"],
+    ["forever-yours-2026", "Forever Yours", "https://www.youtube.com/watch?v=_KFL0VJYJBc"],
+  ] as const) {
+    await page.goto("/entertainment/movies/" + slug);
+    await expect(page.getByRole("heading", { level: 1, name: title, exact: true })).toBeVisible();
+    await expect(page).toHaveTitle(/Cast & Full Movie/);
+    await expect(page.getByRole("link", { name: /Watch the full movie/i }).first()).toHaveAttribute("href", href);
+    await expect(page.getByText("Can I watch " + title + " full movie on YouTube?", { exact: true })).toBeVisible();
+    await expect(page.getByText("What is " + title + " about?", { exact: true })).toBeVisible();
+  }
+});
+
+test("movie pages expose repeatable high-intent answers across the catalog", async ({ page }) => {
+  await page.goto("/entertainment/movies/oversabi-aunty");
+  await expect(page.getByText("Who is in the Oversabi Aunty cast?", { exact: true })).toBeVisible();
+  await expect(page.getByText("What is Oversabi Aunty about?", { exact: true })).toBeVisible();
+  await expect(page.getByText("Where can I watch Oversabi Aunty?", { exact: true })).toBeVisible();
+  await expect(page.getByText("Is Oversabi Aunty a Nigerian movie?", { exact: true })).toBeVisible();
+  await expect(page.getByText("Is Oversabi Aunty on Netflix?", { exact: true })).toBeVisible();
+});

@@ -1,3 +1,4 @@
+import { entertainmentGrowthWave6 } from "@/lib/entertainment-growth-wave-6";
 import { entertainmentGrowthWave5 } from "@/lib/entertainment-growth-wave-5";
 import { entertainmentGrowthWave3 } from "@/lib/entertainment-growth-wave-3";
 import { entertainmentGrowthWave2 } from "@/lib/entertainment-growth-wave-2";
@@ -84,6 +85,7 @@ export type EntertainmentTitle = {
 };
 
 export const entertainmentTitles: EntertainmentTitle[] = [
+  ...entertainmentGrowthWave6,
   ...entertainmentGrowthWave5,
   ...entertainmentGrowthWave3,
   ...entertainmentGrowthWave2,
