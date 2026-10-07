@@ -64,6 +64,31 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/entertainment/movies/third-party-risk-2026",
+        destination: "/entertainment/movies/third-party-risk",
+        permanent: true,
+      },
+      {
+        source: "/entertainment/movies/our-perfect-match-2026",
+        destination: "/entertainment/movies/our-perfect-match",
+        permanent: true,
+      },
+      {
+        source: "/entertainment/movies/one-string-attached-2023",
+        destination: "/entertainment/movies/one-string-attached",
+        permanent: true,
+      },
+      {
+        source: "/entertainment/movies/holy-matrimony-2024",
+        destination: "/entertainment/movies/holy-matrimony",
+        permanent: true,
+      },
+      {
+        source: "/entertainment/movies/one-more-night-2025",
+        destination: "/entertainment/movies/one-more-night",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],
         destination: "https://mynigeriaguide.com/:path*",
