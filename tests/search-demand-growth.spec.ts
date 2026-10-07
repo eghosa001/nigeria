@@ -27,8 +27,13 @@ test("search-demand growth data stays internally consistent", () => {
   const neco = growthHubs.find((hub) => hub.slug === "neco");
   expect(neco?.serviceSlugs).toContain("neco-certificate-service");
 
-  expect(seriesTitles).toHaveLength(6);
+  const pension = growthHubs.find((hub) => hub.slug === "pension-services-nigeria");
+  expect(pension?.title).toContain("Pension Registration Nigeria");
+  expect(pension?.searches.some((item) => item.query === "RSA registration Nigeria" && item.serviceSlug === "pencom-open-rsa")).toBeTruthy();
+
+  expect(seriesTitles).toHaveLength(7);
   expect(new Set(seriesTitles.map((item) => item.slug)).size).toBe(seriesTitles.length);
+  expect(seriesTitles.some((item) => item.slug === "once-upon-a-village")).toBeTruthy();
 
   for (const slug of ["colours-of-fire", "king-of-thieves-2", "the-herd"]) {
     expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
@@ -134,8 +139,11 @@ test("wave 8 expands verified demand across all four pillars", () => {
 
 
 test("wave 9 deepens all four pillars without creating thin duplicates", () => {
-  for (const slug of ["third-party-risk-2026", "our-perfect-match-2026", "one-string-attached-2023"]) {
+  for (const slug of ["third-party-risk", "our-perfect-match", "one-string-attached"]) {
     expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
+  }
+  for (const duplicateSlug of ["third-party-risk-2026", "our-perfect-match-2026", "one-string-attached-2023"]) {
+    expect(entertainmentTitles.some((item) => item.slug === duplicateSlug), duplicateSlug).toBeFalsy();
   }
 
   for (const slug of ["oracle-careers-nigeria", "sap-careers-nigeria", "ibm-careers-nigeria", "google-careers-nigeria"]) {
@@ -161,8 +169,11 @@ test("wave 9 deepens all four pillars without creating thin duplicates", () => {
 
 
 test("wave 10 converts live GSC demand into stronger four-pillar coverage", () => {
-  for (const slug of ["celebrity-crush-2024", "holy-matrimony-2024", "one-more-night-2025", "a-hold-on-me-2024"]) {
+  for (const slug of ["celebrity-crush-2024", "holy-matrimony", "one-more-night", "a-hold-on-me-2024"]) {
     expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
+  }
+  for (const duplicateSlug of ["holy-matrimony-2024", "one-more-night-2025"]) {
+    expect(entertainmentTitles.some((item) => item.slug === duplicateSlug), duplicateSlug).toBeFalsy();
   }
 
   for (const slug of ["deloitte-nigeria-careers", "microsoft-africa-development-center-careers"]) {
@@ -170,7 +181,7 @@ test("wave 10 converts live GSC demand into stronger four-pillar coverage", () =
   }
 
   expect(serviceSeoTitleTemplates["ninauth-nin-verification"]).toContain("Sharecode");
-  expect(serviceSeoTitleTemplates["passport-application-tracking"]).toContain("Official Status Tracker");
+  expect(serviceSeoTitleTemplates["passport-application-tracking"]).toContain("NIS Tracker");
   expect(searchQueryOverrides["anambra-asin-registration"]?.start).toContain("ASIN number");
   expect(searchQueryOverrides["ninauth-nin-verification"]?.online).toContain("Sharecode");
 

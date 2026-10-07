@@ -807,6 +807,30 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
         "pencom-open-rsa",
         "pencom-transfer-rsa"
       ]
+    },
+    {
+      "question": "Should I open a regular RSA or a Micro Pension account?",
+      "answer": "Use the regular RSA route when you are covered by the Contributory Pension Scheme through employment. PenCom's Micro Pension Plan is designed for self-employed and informal-sector workers who need a pension route built around flexible contributions.",
+      "source": {
+        "label": "PenCom — Micro Pension",
+        "url": "https://www.pencom.gov.ng/micro-pension/"
+      },
+      "relatedSlugs": [
+        "pencom-open-rsa",
+        "pencom-micro-pension-registration"
+      ]
+    },
+    {
+      "question": "Do I need NIN for RSA registration?",
+      "answer": "Yes. Current RSA onboarding requires identity verification that includes NIN information. Complete the registration through a PenCom-licensed Pension Fund Administrator and use the same verified identity details throughout the process.",
+      "source": {
+        "label": "PenCom — Revised RSA Registration Guidelines",
+        "url": "https://www.pencom.gov.ng/revised-guidelines-for-retirement-savings-account-rsa-registration/"
+      },
+      "relatedSlugs": [
+        "pencom-open-rsa",
+        "pencom-micro-pension-registration"
+      ]
     }
   ],
   "Product regulation": [

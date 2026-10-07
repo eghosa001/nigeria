@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import retiredJobRoutes from "./data/job-retired-redirects.json";
+import retiredJobRoutes from "./data/job-retired-redirects.json" with { type: "json" };
 
 const contentSecurityPolicy = [
   "default-src 'self'",
