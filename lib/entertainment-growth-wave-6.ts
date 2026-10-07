@@ -72,4 +72,37 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
       }
     ]
   }
+  {
+    slug: "forever-yours-2026",
+    title: "Forever Yours",
+    year: 2026,
+    format: "movie",
+    genres: ["Drama", "Romance", "Crime", "Nollywood"],
+    languages: ["English"],
+    synopsis: "When Justin's petroleum business collapses under a criminal investigation, he and Ruby lose the security their marriage was built around. As frozen accounts, debt and betrayal strip away their old life, the couple must decide whether loyalty and a new beginning can survive the pressure.",
+    cast: ["Daniel Etim Effiong", "Toni Tones", "Akeem Ogara", "Perpetual Ukadike", "Lina Idoko"],
+    featuredCast: ["Daniel Etim Effiong", "Toni Tones", "Akeem Ogara"],
+    directors: ["Chinneylove Eze Ogunje"],
+    runtimeMinutes: 123,
+    featured: true,
+    references: [
+      {
+        label: "African Movies Database — Forever Yours",
+        href: "https://africanmoviedb.com/title/forever-yours-2026",
+        lastChecked: "2026-10-07",
+        note: "Used to verify the September 2026 release, runtime, director, storyline and credited cast."
+      }
+    ],
+    watchLinks: [
+      {
+        platform: "YouTube",
+        label: "Watch the full movie on YouTube",
+        href: "https://www.youtube.com/watch?v=_KFL0VJYJBc",
+        access: "full-movie",
+        lastChecked: "2026-10-07",
+        note: "Official full-length release already approved in the MyNigeriaGuide YouTube catalog.",
+        publisher: "ChinneyLoveEze TV"
+      }
+    ]
+  },
 ];
