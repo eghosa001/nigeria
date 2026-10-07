@@ -25,9 +25,14 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const {slug}=await params;
   const item=getSeriesTitle(slug);
   if(!item) return {};
-  const description=`${item.title} (${item.year}) Nigerian series: cast, story, release status and official where-to-watch information. ${item.synopsis}`;
+  const description=item.slug==="once-upon-a-village"
+    ? "Once Upon a Village cast, episode status and official RuthKadiri247 links. Follow the 2026 Nigerian series and open verified episodes."
+    : `${item.title} (${item.year}) Nigerian series: cast, story, release status and official where-to-watch information. ${item.synopsis}`;
+  const seoTitle=item.slug==="once-upon-a-village"
+    ? "Once Upon a Village Cast, Episodes & Where to Watch"
+    : item.title+" Nigerian Series: Cast, Episodes & Where to Watch";
   return {
-    title:item.title+" Nigerian Series: Cast, Episodes & Where to Watch",
+    title:seoTitle,
     description,
     alternates:{canonical:"/entertainment/series/"+item.slug},
     openGraph:{title:item.title,description,type:"video.tv_show",url:"/entertainment/series/"+item.slug},
@@ -91,6 +96,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
             links={[
               { href: "#cast", label: "See cast" },
               { href: "#watch", label: "Where to watch" },
+              ...(item.internalLinks ?? []).slice(0, 1).map((link) => ({ href: link.href, label: link.label })),
               ...(item.watchLinks[0] ? [{ href: item.watchLinks[0].href, label: item.watchLinks[0].label, external: true, primary: true }] : []),
             ]}
             note={"Availability and sources checked " + checked + "."}
@@ -151,6 +157,16 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
               <h2>How visuals for {item.title} are handled</h2>
               <p className="movie-long-summary">{item.artworkNote}</p>
             </section>
+
+            {item.internalLinks?.length?(
+              <section>
+                <span className="eyebrow">Episodes on MyNigeriaGuide</span>
+                <h2>Continue with verified episode guides</h2>
+                <div className="related-links">
+                  {item.internalLinks.map((link)=><Link href={link.href} key={link.href}>{link.label} →</Link>)}
+                </div>
+              </section>
+            ):null}
 
             <section>
               <span className="eyebrow">Related series</span>
