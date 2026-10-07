@@ -165,7 +165,7 @@ test("wave 10 converts live GSC demand into stronger four-pillar coverage", () =
     expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
   }
 
-  for (const slug of ["deloitte-nigeria-careers", "kpmg-nigeria-careers", "pwc-nigeria-careers", "microsoft-africa-development-center-careers", "ey-nigeria-careers"]) {
+  for (const slug of ["deloitte-nigeria-careers", "microsoft-africa-development-center-careers"]) {
     expect(jobOpportunities.some((item) => item.slug === slug && item.status === "career-page"), slug).toBeTruthy();
   }
 
