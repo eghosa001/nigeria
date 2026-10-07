@@ -62,6 +62,10 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "pencom-multiple-rsa-resolution": "Multiple RSA PINs Nigeria {year}: How to Resolve & Merge",
   "inec-replace-lost-damaged-pvc": "Replace Lost or Damaged PVC {year}: INEC Steps",
   "inec-voter-transfer": "INEC Voter Transfer {year}: Change Voting Location",
+  "nafdac-medical-device-registration": "NAFDAC Medical Device Registration {year}: Requirements & Portal",
+  "nafdac-cosmetics-registration": "NAFDAC Cosmetics Registration {year}: Requirements & Portal",
+  "nafdac-food-product-registration": "NAFDAC Food Registration {year}: Requirements, Fees & Portal",
+  "nafdac-drug-product-registration": "NAFDAC Drug Registration {year}: Requirements & Portal",
 };
 
 export function getServiceSeoTitleOverride(slug: string, year: string) {
@@ -107,6 +111,11 @@ export const serviceSeoDescriptionTemplates: Record<string, string> = {
   "bpp-contractor-registration": "BPP contractor registration {year}: contractor-database requirements, portal steps and the official Bureau of Public Procurement route.",
   "pencom-job-loss-25-percent-withdrawal": "25% pension withdrawal Nigeria {year}: PenCom eligibility after job loss, the four-month rule, required evidence, PFA steps and official guidance.",
   "npc-birth-attestation": "NPC birth attestation {year}: eligibility, required details, online application and status steps, plus the official National Population Commission route.",
+  "nafdac-medical-device-registration": "NAFDAC medical device registration {year}: verified requirements, product-registration route, official portal steps and what manufacturers or importers should prepare before filing.",
+  "nafdac-cosmetics-registration": "NAFDAC cosmetics registration {year}: requirements, official registration route, product documentation and practical steps for cosmetics manufacturers and importers.",
+  "nafdac-food-product-registration": "NAFDAC food product registration {year}: requirements, fee guidance from the verified service record, official portal and filing steps for locally made or imported food products.",
+  "nafdac-drug-product-registration": "NAFDAC drug product registration {year}: requirements, official product-registration route, documentation and filing steps for eligible pharmaceutical products.",
+  "lagos-lasrra-registration": "LASRRA registration {year}: official Lagos resident-registration route, requirements, cost guidance from the verified service record and step-by-step application process.",
 };
 
 export function getServiceSeoDescriptionOverride(slug: string, year: string) {
