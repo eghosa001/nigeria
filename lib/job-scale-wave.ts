@@ -1396,6 +1396,11 @@ export const retiredJobRedirects = new Map<string, string>(
   retiredJobRoutes.map(({ sourceSlug, destinationPath }) => [sourceSlug, destinationPath])
 );
 
+// These employer links are useful discovery entries, but their shared template does not
+// supply enough employer-specific reporting for an independent indexed SEO article.
+// Keep them browseable while editors add unique, verified detail.
+export const templateCareerPortalSlugs = new Set(careerSeeds.map(([, slug]) => slug));
+
 export const jobScaleWave: CareerOpportunity[] = [
   ...careerSeeds.map(careerPage),
   federalUniversityLafia,
