@@ -155,6 +155,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <span>{movie.channelName}</span>
               </div>
               <p className="movie-detail-synopsis">{movie.synopsis}</p>
+              {!indexable ? <p className="job-muted">A detailed plot has not been independently verified. This listing provides credited cast, publisher and the source video, not a reviewed story guide.</p> : null}
               {movie.featuredCast.length ? (
                 <p className="movie-hero-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
               ) : (
@@ -175,7 +176,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Quick facts about " + movie.title}
-            summary={movie.synopsis}
+            summary={indexable ? movie.synopsis : movie.title + " is available through the publisher " + movie.channelName + ". Check the source for current access."}
             facts={[
               { label: "Country / year", value: "Nigeria · " + movie.year },
               { label: "Access", value: "Free full movie on YouTube" },
@@ -192,7 +193,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               "Official source checked " + movie.lastChecked + ". " +
               (indexable
                 ? "Continue below for cast, alternate official sources and related movies."
-                : "This page is temporarily excluded from search indexing until cast metadata is verified.")
+                : "This source listing remains browseable, but the story is not yet verified well enough for independent search indexing.")
             }
           />
         </div>
@@ -210,12 +211,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
       <section className="section movie-detail-main" id="overview">
         <div className="container movie-detail-layout">
           <article className="movie-detail-primary">
-            <section className="movie-overview-section">
-              <span className="eyebrow">About the movie</span>
-              <h2>{movie.title} Nigerian movie: story and details</h2>
-              <p className="movie-long-summary">{movie.synopsis}</p>
-</section>
-
             <section>
               <span className="eyebrow">At a glance</span>
               <div className="movie-fact-grid">
