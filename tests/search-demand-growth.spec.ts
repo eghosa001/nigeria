@@ -158,3 +158,22 @@ test("wave 9 deepens all four pillars without creating thin duplicates", () => {
   expect(exams?.serviceSlugs).toContain("aws-certification-exam-scheduling");
   expect(exams?.serviceSlugs).toContain("british-council-ielts-registration-nigeria");
 });
+
+
+test("wave 10 converts live GSC demand into stronger four-pillar coverage", () => {
+  for (const slug of ["celebrity-crush-2024", "holy-matrimony-2024", "one-more-night-2025", "a-hold-on-me-2024"]) {
+    expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
+  }
+
+  for (const slug of ["deloitte-nigeria-careers", "microsoft-africa-development-center-careers"]) {
+    expect(jobOpportunities.some((item) => item.slug === slug && item.status === "career-page"), slug).toBeTruthy();
+  }
+
+  expect(serviceSeoTitleTemplates["ninauth-nin-verification"]).toContain("Sharecode");
+  expect(serviceSeoTitleTemplates["passport-application-tracking"]).toContain("Official Status Tracker");
+  expect(searchQueryOverrides["anambra-asin-registration"]?.start).toContain("ASIN number");
+  expect(searchQueryOverrides["ninauth-nin-verification"]?.online).toContain("Sharecode");
+
+  expect(exploreGuides.find((guide) => guide.slug === "calabar")?.title).toContain("Places to Visit");
+  expect(exploreGuides.find((guide) => guide.slug === "nigeria-landmarks-places-to-visit")?.title).toContain("Places to Visit in Nigeria");
+});

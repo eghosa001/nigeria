@@ -375,3 +375,16 @@ test("wave 9 GSC movie URLs consolidate into canonical title pages", async ({ pa
     await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
   }
 });
+
+
+test("wave 10 ranking YouTube URLs resolve to canonical movie guides", async ({ page }) => {
+  for (const [videoId, slug] of [
+    ["Tim_3v5hqHw", "celebrity-crush-2024"],
+    ["T1-buA-yAmo", "holy-matrimony-2024"],
+    ["_86CuSRi6E4", "one-more-night-2025"],
+    ["UKDk_wgQcQc", "a-hold-on-me-2024"],
+  ] as const) {
+    await page.goto("/entertainment/youtube/" + videoId);
+    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+  }
+});

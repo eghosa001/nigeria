@@ -35,7 +35,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "cac-business-name-registration": {
     fee: "How much is CAC business name registration?",
     requirements: "What documents do I need for CAC business name registration?",
-    online: "Where is the official CAC registration portal?",
+    online: "Where is the official CAC business name registration portal?",
     timeline: "How long does CAC business name registration take?",
     start: "How do I register a business name with CAC?",
   },
@@ -44,7 +44,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     requirements: "What CAC registration form and documents do I need?",
     online: "Can I complete the CAC registration process online?",
     timeline: "How long does CAC company registration take?",
-    start: "What is the CAC registration process?",
+    start: "How do I register a limited company with CAC?",
   },
   "cac-status-report": {
     fee: "How much does a CAC status report cost?",
@@ -56,7 +56,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "ecowas-travel-certificate": {
     fee: "How much is the ECOWAS Travel Certificate in Nigeria?",
     requirements: "What are the requirements for an ECOWAS Travel Certificate?",
-    online: "Where is the ECOWAS Travel Certificate application form?",
+    online: "Where can I get the official ECOWAS Travel Certificate application form?",
     timeline: "How long does an ECOWAS Travel Certificate take in Nigeria?",
     start: "How do I apply for an ECOWAS Travel Certificate in Nigeria?",
   },
@@ -168,7 +168,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "anambra-asin-registration": {
     requirements: "What do I need for ASIN registration?",
     online: "Can I complete ASIN registration online?",
-    start: "Where is the ASIN registration online portal?",
+    start: "How do I get an ASIN number in Anambra State online?",
   },
   "nip-transfer-status": {
     online: "Can I check NIP transfer status online?",
@@ -190,7 +190,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   },
   "passport-application-tracking": {
     online: "Can I track my Nigerian passport application online?",
-    start: "How do I check my Nigerian passport application status?",
+    start: "How do I track my Nigerian passport application on the official NIS tracker?",
   },
   "inec-replace-lost-damaged-pvc": {
     requirements: "What do I need to replace a lost or damaged PVC?",
@@ -204,7 +204,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   },
   "ninauth-nin-verification": {
     requirements: "What do I need to verify my identity with NINAuth?",
-    online: "Can I verify or share my NIN identity with the NINAuth app?",
+    online: "How do I get and use a NIN Sharecode with NINAuth?",
     start: "How do I use NINAuth for NIN verification?",
   },
   "ogun-tax-clearance-certificate": {
@@ -215,7 +215,7 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "neco-purchase-result-token": {
     requirements: "What do I need to buy a NECO result token?",
     online: "Can I purchase a NECO result token online?",
-    start: "How do I buy a NECO result token on the official portal?",
+    start: "Where can I buy a NECO result token online?",
   },
   "pencom-micro-pension-registration": {
     requirements: "What do I need for Micro Pension account registration?",
