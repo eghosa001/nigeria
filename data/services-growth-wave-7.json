@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "inec-claims-objections-october-2026",
+    "title": "INEC Voters Register Claims and Objections: 9–15 October 2026 Guide",
+    "shortTitle": "INEC claims & objections October 2026",
+    "summary": "INEC will display the national Register of Voters for public scrutiny from 9 to 15 October 2026. Registered voters can use the display period to check their details and raise claims or objections through INEC's official process before the 2027 general elections.",
+    "category": "Civic services",
+    "agencySlug": "inec",
+    "feeLabel": "No INEC fee stated for claims or objections",
+    "feeNote": "Use INEC's official display, Registration Area or contact routes. Do not pay a third party to submit a claim, objection or correction on your behalf.",
+    "timeline": "Nationwide public display: 9–15 October 2026. INEC says claims and objections arising from the display will be addressed afterwards.",
+    "status": "verified",
+    "officialPortal": "https://cvr.inecnigeria.org/register",
+    "requirements": [
+      "Enough voter-record information to identify the registration entry you want to check, such as the voter details or location shown by INEC's official register tools.",
+      "For a claim about your own record, the correct personal information and any supporting evidence needed to show what should be corrected.",
+      "For an objection to another entry, a genuine reason and supporting information that can be assessed through INEC's prescribed claims-and-objections process."
+    ],
+    "steps": [
+      "Open INEC's official voter-register display page from 9 October 2026 or visit the designated Registration Area where the preliminary register is displayed.",
+      "Find the relevant voter record and check the name, registration details and other information shown by INEC before raising a claim or objection.",
+      "If your own record contains an error, submit the correction through the claim option shown by INEC during the display or present it at the designated Registration Area, together with the voter details and evidence needed to identify the correct entry.",
+      "If you are raising an objection to another record, use INEC's prescribed objection process and provide truthful supporting information rather than posting personal allegations on social media.",
+      "Keep any acknowledgement or reference supplied by INEC and follow the Commission's official updates after the display closes on 15 October 2026."
+    ],
+    "notes": [
+      "The 9–15 October 2026 nationwide display is separate from new voter registration; the Continuous Voter Registration exercise has ended.",
+      "INEC's display page may show no preliminary register before the official window opens. Re-check it from 9 October rather than using an unofficial mirror.",
+      "Claims and objections are an administrative voter-register process. MyNigeriaGuide does not provide political advice or guidance about parties or candidates."
+    ],
+    "sources": [
+      {
+        "label": "INEC official voter-register display portal",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://cvr.inecnigeria.org/register",
+        "lastChecked": "2026-10-07"
+      },
+      {
+        "label": "INEC Electoral Facility Locator — claims and objections route",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://www.efloc.inecnigeria.org/",
+        "lastChecked": "2026-10-07"
+      },
+      {
+        "label": "Voice of Nigeria — INEC announces 9–15 October 2026 display",
+        "agency": "Voice of Nigeria reporting INEC Chairman's announcement",
+        "url": "https://von.gov.ng/inec-records-over-103-million-registered-voters/",
+        "published": "2026-10-05",
+        "lastChecked": "2026-10-07"
+      }
+    ],
+    "searchTerms": [
+      "INEC claims and objections 2026",
+      "INEC voter register display October 2026",
+      "INEC October 9 15 2026",
+      "check voter register 2026",
+      "correct voter register Nigeria",
+      "object to voter register Nigeria",
+      "preliminary register of voters 2026"
+    ],
+    "related": [
+      "inec-pvc-status",
+      "inec-voter-registration-status-october-2026",
+      "inec-update-voter-information",
+      "inec-find-pvc-pickup-location"
+    ],
+    "lastVerified": "2026-10-07"
+  }
+]

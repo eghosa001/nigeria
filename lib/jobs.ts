@@ -3714,7 +3714,56 @@ const rawJobOpportunities: CareerOpportunity[] = [
   ...jobScaleWave
 ];
 
-export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities.map(normalizeCareerPortal);
+function applyCurrentJobCorrections(item: CareerOpportunity): CareerOpportunity {
+  if (item.slug !== "nigeria-revenue-service-careers") return item;
+
+  return {
+    ...item,
+    title: "Nigeria Revenue Service Careers & Recruitment Verification",
+    status: "career-page",
+    statusLabel: "No new public recruitment exercise announced — verify NRS notices",
+    summary: "The Nigeria Revenue Service warned on 5 October 2026 that a viral 'FIRS Job Vacancy — Replacement' advert is fraudulent and that the referenced recruitment exercise was not authorised or commenced by NRS. The visible NRS recruitment portal verifies applicant records already held by the Service; it should not be treated as proof of a fresh public intake.",
+    qualifications: [
+      "There is no current public NRS recruitment exercise with a verified new vacancy specification on this page.",
+      "Do not rely on qualification lists copied from the viral FIRS replacement advert; wait for NRS to publish the requirements for any genuine future exercise."
+    ],
+    requirements: [
+      "Check nrs.gov.ng and NRS's authorised public channels before treating any recruitment message as genuine.",
+      "Disregard the viral 'Federal Inland Revenue Service — FIRS Job Vacancy — Replacement' notice; NRS has publicly described it as fraudulent.",
+      "Do not make a payment, send certificates or identification documents, or disclose personal or financial information to an unofficial recruiter, email address or third party.",
+      "If NRS later announces a genuine recruitment exercise, use only the application route that the Service links from its official channels."
+    ],
+    documents: [
+      "Do not submit documents for the disowned FIRS replacement advert.",
+      "For any future genuine NRS exercise, prepare only the certificates, identity documents and CV specifically requested by the official NRS notice."
+    ],
+    applicationSteps: [
+      "Open the Nigeria Revenue Service official website at nrs.gov.ng and check for a current recruitment announcement.",
+      "If no matching public notice appears on an authorised NRS channel, do not apply through a forwarded advert, email address or third-party link.",
+      "If you already have an applicant record and NRS directs you to continue it, use the official recruitment.nrs.gov.ng verification portal and the phone number already held on your record.",
+      "Read the exact NRS instructions before uploading certificates or identification and keep any official confirmation.",
+      "Re-check NRS's authorised channels for later recruitment updates rather than assuming the existing applicant-verification portal is a new public intake."
+    ],
+    officialUrl: "https://www.nrs.gov.ng/",
+    officialUrlLabel: "Check the Nigeria Revenue Service official website",
+    verifiedAt: "2026-10-07",
+    feeNote: "NRS warned the public not to make payments or share personal or financial information in response to the fraudulent recruitment notice. MyNigeriaGuide never sells access to NRS jobs, shortlists or interviews.",
+    sourceNotes: [
+      "On 5 October 2026, NRS publicly disowned the circulating 'FIRS Job Vacancy — Replacement' notice and said the referenced recruitment exercise had not been authorised or commenced.",
+      "NRS also reminded the public that FIRS has been succeeded by the Nigeria Revenue Service and that genuine recruitment will be communicated through official NRS channels.",
+      "The official recruitment.nrs.gov.ng page currently asks users to verify an applicant record already held by NRS before continuing; this page therefore does not present that portal as evidence of a newly opened public recruitment exercise."
+    ],
+    sources: [
+      { label: "Nigeria Revenue Service official website", url: "https://www.nrs.gov.ng/", lastChecked: "2026-10-07" },
+      { label: "Nigeria Revenue Service official LinkedIn public notice", url: "https://ng.linkedin.com/company/nrsnigeria", lastChecked: "2026-10-07" },
+      { label: "NRS official applicant-verification portal", url: "https://recruitment.nrs.gov.ng/enlist/", lastChecked: "2026-10-07" }
+    ]
+  };
+}
+
+export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
+  .map(normalizeCareerPortal)
+  .map(applyCurrentJobCorrections);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");

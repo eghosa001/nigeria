@@ -12,6 +12,28 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "inec-register-display-october-9-15-2026",
+    date: "2026-10-07",
+    type: "deadline",
+    agency: "INEC",
+    title: "INEC voter-register display runs 9–15 October 2026",
+    summary: "INEC says the national Register of Voters will be displayed for public scrutiny from 9 to 15 October 2026. Voters can check records and raise claims or objections through the Commission's official process.",
+    sourceLabel: "Voice of Nigeria — INEC Chairman's voter-register announcement",
+    sourceUrl: "https://von.gov.ng/inec-records-over-103-million-registered-voters/",
+    affectedServices: ["inec-claims-objections-october-2026", "inec-pvc-status"],
+  },
+  {
+    id: "nrs-fake-firs-recruitment-warning-october-2026",
+    date: "2026-10-05",
+    type: "clarification",
+    agency: "Nigeria Revenue Service",
+    title: "NRS disowns viral FIRS replacement recruitment advert",
+    summary: "NRS says the circulating 'Federal Inland Revenue Service — FIRS Job Vacancy — Replacement' notice is fraudulent and that the referenced recruitment exercise was not authorised or commenced. Genuine NRS hiring notices will be communicated through official NRS channels.",
+    sourceLabel: "Nairametrics — NRS fake recruitment warning",
+    sourceUrl: "https://nairametrics.com/2026/10/05/nigeria-revenue-service-raises-alarm-over-fake-recruitment-exercise/",
+    affectedServices: [],
+  },
+  {
     id: "nis-uk-passport-intervention-october-2026",
     date: "2026-10-07",
     type: "process",
