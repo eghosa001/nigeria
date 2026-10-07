@@ -31,6 +31,7 @@ export type SeriesTitle = {
   episodeInfo?: string;
   watchLinks: SeriesWatchLink[];
   sources: SeriesSource[];
+  internalLinks?: Array<{ label: string; href: string }>;
 };
 
 export const seriesTitles: SeriesTitle[] = [
@@ -70,6 +71,9 @@ export const seriesTitles: SeriesTitle[] = [
       { label: "RuthKadiri247 — Once Upon a Village Episode 1", url: "https://www.youtube.com/watch?v=Yu-QxqPDmXM", lastChecked: "2026-10-07" },
       { label: "FilmFlux — Once Upon a Village series", url: "https://filmflux.app/series/3ef87482-63c6-4b45-a8db-7e8c1347db6d-once-upon-a-village", lastChecked: "2026-10-07" },
       { label: "Nollywire — Once Upon a Village", url: "https://nollywire.com/films/once-upon-a-village", lastChecked: "2026-10-07" }
+    ],
+    internalLinks: [
+      { label: "Once Upon a Village 3 cast & full episode", href: "/entertainment/movies/once-upon-a-village-3" }
     ]
   },
   {
