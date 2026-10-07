@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { JobsDirectory } from "@/components/jobs-directory";
+import { LiveJobsDirectory } from "@/components/live-jobs-directory";
 import { governmentOpportunities, internationalOpportunities, jobOpportunities, privateOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
@@ -122,6 +123,19 @@ export default function JobsPage() {
           <p className="job-muted">
             Market-source links are discovery aids, not MyNigeriaGuide endorsements of every advert on those platforms. Individual jobs only become MyNigeriaGuide records after source, freshness and duplicate checks.
           </p>
+        </div>
+      </section>
+
+      <section className="section jobs-live-market-section" aria-labelledby="live-jobs-heading">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Live Nigeria vacancies</span>
+              <h2 id="live-jobs-heading">Hundreds of current roles without hundreds of thin SEO pages.</h2>
+              <p>Browse lightweight current-month listings sourced from a Nigerian jobs platform, then open the source page to review the full vacancy and application method. The deeply verified MyNigeriaGuide guides remain separate below.</p>
+            </div>
+          </div>
+          <LiveJobsDirectory />
         </div>
       </section>
 
