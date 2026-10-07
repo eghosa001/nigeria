@@ -352,3 +352,14 @@ test("second GSC movie wave promotes ranking YouTube pages to canonical movie gu
     await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
   }
 });
+
+
+test("latest GSC movie promotions consolidate YouTube routes", async ({ page }) => {
+  for (const [videoId, slug] of [
+    ["WG_QjN4DalE", "a-ride-forever-2026"],
+    ["mdRt2wCkJjg", "stuck-with-you-2025"],
+  ] as const) {
+    await page.goto("/entertainment/youtube/" + videoId);
+    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+  }
+});
