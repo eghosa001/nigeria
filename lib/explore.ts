@@ -965,26 +965,26 @@ export const exploreGuides: ExploreGuide[] = [
     shortTitle: "Detty December 2026",
     kind: "itinerary",
     region: "Lagos State",
-    summary: "Plan Detty December 2026 in Lagos around the confirmed 18–30 December festival season, major concerts, transport, accommodation and safe late-night movement.",
+    summary: "Plan Detty December 2026 in Lagos around the confirmed 18–30 December festival season, Wizkid's 18 December opening concert, official ticket routes, transport, accommodation and safe late-night movement.",
     intro: [
-      "Lagos' 2026 Detty December season is already taking shape, with the official Detty December Fest calendar running from 18 to 30 December and a Grand Opening Concert featuring Wizkid on 18 December.",
-      "Treat December as a logistics problem as much as an entertainment calendar: accommodation, airport transfers, traffic, late-night transport and event-to-event movement can matter more than squeezing in one extra show.",
+      "Detty December Fest's official 2026 calendar runs from 18 to 30 December at the Detty December Village in Lagos. The first announced headline concert is Wizkid on Friday 18 December, and the official ticketing partner currently lists opening-night tickets from ₦50,000.",
+      "The organiser is revealing the wider 2026 bill in waves, so do not treat recycled 2025 line-ups or copied social posts as the final 2026 schedule. Build your trip around confirmed dates, then add later announcements only after they appear on the organiser's current calendar."
     ],
     bestFor: ["December travel", "Concerts", "Nightlife", "IJGB planning"],
     highlights: [
-      { name: "18–30 December festival window", detail: "Detty December Fest lists 13 festival days in Lagos, so visitors can plan around a defined run instead of relying on scattered social posts." },
-      { name: "Grand Opening Concert — 18 December", detail: "The official 2026 calendar lists Wizkid for the Grand Opening Concert on the first night." },
-      { name: "Multiple event formats", detail: "The official programme includes concerts, parties, daytime experiences, food, fashion and family-focused activities across the festival period." },
-      { name: "Peak-week planning", detail: "The busiest movement usually clusters around the Christmas week and late-December headline dates; keep large buffers between venues and airport journeys." },
+      { name: "18–30 December — 13 festival days", detail: "The official Detty December Fest calendar currently runs for 13 days in Lagos, with concerts, parties, daytime experiences, food, fashion and family programming." },
+      { name: "Wizkid — 18 December", detail: "Wizkid is the announced headliner for the Grand Opening Concert on Friday 18 December at the Detty Festival Stage." },
+      { name: "Opening-night tickets from ₦50,000", detail: "The official DOT TIX listing currently shows Wizkid opening-night tickets from ₦50,000. Re-check the live checkout before paying because ticket tiers can sell out or change." },
+      { name: "Line-up still being revealed", detail: "The organiser says the 2026 line-up is being announced in waves through the year, so MyNigeriaGuide does not copy unconfirmed Flytime, Rhythm Unplugged or other December bills into this guide." }
     ],
     planning: [
       { label: "Book the fixed parts first", detail: "Lock in flights and accommodation before buying multiple event tickets; changing hotels or crossing Lagos nightly can erase the benefit of a cheaper room." },
-      { label: "Stay near your main event cluster", detail: "Choose accommodation based on the part of Lagos where most of your confirmed events are taking place, not just the lowest nightly rate." },
-      { label: "Pre-plan late-night transport", detail: "Decide the return route before entering an event. Use established transport options and avoid depending on one last-minute pickup after major concerts." },
-      { label: "Use official ticket links", detail: "Confirm dates, venue and ticket status from the organiser or official ticketing partner before paying; popular December events are frequently copied by unofficial sellers." },
+      { label: "Stay near your main event cluster", detail: "The official Detty December Village is at Livespot Entertarium on the Lekki axis. If this festival is your main anchor, staying nearby can reduce repeated cross-city movement." },
+      { label: "Pre-plan late-night transport", detail: "Decide the return route and pickup point before entering an event. December traffic and demand can make late-night improvisation slower and more expensive." },
+      { label: "Use official ticket links and current line-ups", detail: "Confirm the date, artist, venue and ticket status on Detty December Fest or its linked ticketing partner before paying. Do not rely on an old 2025 bill presented as 2026." }
     ],
     source: { label: "Detty December Fest 2026 official calendar", href: "https://dettydecfest.com/events/" },
-    lastReviewed: "2026-10-04",
+    lastReviewed: "2026-10-07",
   },
   {
     slug: "calabar-carnival-2026",
