@@ -35,6 +35,44 @@ export type SeriesTitle = {
 
 export const seriesTitles: SeriesTitle[] = [
   {
+    slug: "once-upon-a-village",
+    title: "Once Upon a Village",
+    year: 2026,
+    country: "Nigeria",
+    artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
+    genres: ["Drama", "Comedy", "Family", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A village-set Nigerian ensemble series following intertwined family, romance and community conflicts as recurring characters face new relationships, rivalries and consequences across an expanding run of feature-length episodes.",
+    cast: ["Deza The Great", "Prisma James", "Fessa Ajoku", "Annabel Apara", "Eronini Osinachi", "Solomon Osagie", "Henrietta Ibekwe", "Amaka Ogbonna"],
+    creators: ["Ruth Kadiri"],
+    status: "ongoing",
+    premiereLabel: "Series began 6 August 2026 on RuthKadiri247",
+    episodeInfo: "FilmFlux lists 8 feature-length episodes in the current run; new instalments continued through September 2026.",
+    watchLinks: [
+      {
+        platform: "YouTube",
+        label: "Watch Once Upon a Village Episode 1 on RuthKadiri247",
+        href: "https://www.youtube.com/watch?v=Yu-QxqPDmXM",
+        access: "free-official",
+        lastChecked: "2026-10-07",
+        note: "Official episode-one upload from the RuthKadiri247 rights-holder channel."
+      },
+      {
+        platform: "YouTube",
+        label: "Watch Once Upon a Village 3 on RuthKadiri247",
+        href: "https://www.youtube.com/watch?v=X3HaWmJoSRU",
+        access: "free-official",
+        lastChecked: "2026-10-07",
+        note: "Official third instalment from RuthKadiri247; MyNigeriaGuide also maintains a dedicated episode detail page."
+      }
+    ],
+    sources: [
+      { label: "RuthKadiri247 — Once Upon a Village Episode 1", url: "https://www.youtube.com/watch?v=Yu-QxqPDmXM", lastChecked: "2026-10-07" },
+      { label: "FilmFlux — Once Upon a Village series", url: "https://filmflux.app/series/3ef87482-63c6-4b45-a8db-7e8c1347db6d-once-upon-a-village", lastChecked: "2026-10-07" },
+      { label: "Nollywire — Once Upon a Village", url: "https://nollywire.com/films/once-upon-a-village", lastChecked: "2026-10-07" }
+    ]
+  },
+  {
     slug: "ordinary-people",
     title: "Ordinary People",
     year: 2026,
