@@ -1,4 +1,5 @@
 import { exploreGrowthWaveSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06";
+import { exploreGrowthLinksWave8 } from "@/lib/explore-growth-links-wave-8";
 import { exploreGrowthPlaces } from "@/lib/explore-growth-places-2026-10-06";
 import { exploreGrowthPlacesWave8 } from "@/lib/explore-growth-places-wave-8";
 import { exploreGrowthPlacesWave7 } from "@/lib/explore-growth-places-wave-7";
@@ -3034,6 +3035,7 @@ const nationalLandmarkPlaceSlugs = [
 ] as const;
 
 const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
+  ...exploreGrowthLinksWave8,
   ...exploreGrowthLinksWave5,
   ...exploreGrowthLinksWave4,
   ...exploreGrowthLinksWave3,
