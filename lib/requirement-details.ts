@@ -56,11 +56,12 @@ function kindFor(item: string): RequirementKind {
 function purposeFor(item: string) {
   if (/\bNIN\b/i.test(item)) return "Used to match the applicant to the National Identity Database or to verify NIN-linked biodata where this service requires identity matching.";
   if (/\bBVN\b/i.test(item)) return "Used to identify the banking identity record connected to this request.";
+  if (/photograph|passport[- ]?(?:size[d]?[- ]?)?photos?|photos?\b|pictures?/i.test(item)) return "A photograph is listed for this service. Check the responsible agency’s instructions for the number, size, background and whether to submit printed copies or digital files.";
   if (/passport/i.test(item)) return "Used to identify the applicant's current passport record or to support the passport transaction described in this guide.";
   if (/birth certificate|birth record|declaration of age/i.test(item)) return "Used as civil evidence of birth or date of birth where the responsible agency lists it for this process.";
   if (/affidavit/i.test(item)) return "Used as sworn evidence for the loss, correction or change described in this service where the agency requires an affidavit.";
   if (/newspaper publication/i.test(item)) return "Used as publication evidence where the agency includes public notice in a name or data-change process.";
-  if (/photograph|passport photo|photo/i.test(item)) return "Used for the applicant image or identity record. Follow the exact size/background/ICAO rule shown by the responsible agency.";
+
   if (/email/i.test(item)) return "Used for account access and/or official communication. Use an address you can open throughout the process.";
   if (/phone|gsm|sim|mobile number/i.test(item)) return "Used for SMS, OTP, recovery or account identification where this service relies on a mobile number. Use a number you control.";
   if (/profile code/i.test(item)) return "Used by JAMB to identify the candidate profile before e-PIN purchase and registration.";
