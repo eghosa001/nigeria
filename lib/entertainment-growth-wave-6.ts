@@ -71,7 +71,7 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
         publisher: "Maurice Sam TV"
       }
     ]
-  }
+  },
   {
     slug: "forever-yours-2026",
     title: "Forever Yours",
