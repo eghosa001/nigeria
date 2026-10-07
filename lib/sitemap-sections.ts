@@ -13,7 +13,7 @@ import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 import { getServiceDirectoryPageCount } from "@/lib/service-query";
-import { jobOpportunities } from "@/lib/jobs";
+import { isIndexableJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
@@ -154,7 +154,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         url: base + "/jobs/guides/" + guide.slug,
         lastModified: guide.reviewedAt,
       })),
-      ...jobOpportunities.map((item) => ({
+      ...jobOpportunities.filter(isIndexableJobOpportunity).map((item) => ({
         url: base + "/jobs/" + item.slug,
         lastModified: item.verifiedAt,
       })),
