@@ -133,3 +133,12 @@ test("Tour guide secondary detail is progressively disclosed", async ({ page }) 
   expect(await page.locator(".compact-faq-list > details").count()).toBeGreaterThan(0);
   expect(await page.locator(".explore-place-card details.explore-place-more").count()).toBeGreaterThan(0);
 });
+
+
+test("new Abuja event guides keep venue-aware planning", async ({ page }) => {
+  await page.goto("/explore/abuja-study-abroad-expo-2026");
+  await expect(page.locator("#place-transcorp-hilton-study-abroad-expo-2026")).toContainText("Transcorp Hilton");
+
+  await page.goto("/explore/legacy-building-conference-abuja-2026");
+  await expect(page.locator("#place-novare-central-legacy-conference-2026")).toContainText("Novare Central");
+});

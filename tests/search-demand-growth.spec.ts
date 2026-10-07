@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 import { categoryFaqs } from "@/data/category-faqs";
+import { searchQueryOverrides } from "@/data/search-query-overrides";
+import { serviceSeoTitleTemplates } from "@/data/service-seo-overrides";
 import { publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
@@ -112,4 +114,20 @@ test("fresh crawl hub exposes series and current events directly", async ({ page
 
   await page.goto("/explore");
   await expect(page.locator('a[href^="/explore/"]').filter({ hasText: /SMFest|NIFAFEST|Film Festival|Food Fair|Carnival/i }).first()).toBeVisible();
+});
+
+
+test("wave 8 expands verified demand across all four pillars", () => {
+  for (const slug of ["a-ride-forever-2026", "stuck-with-you-2025"]) {
+    expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
+  }
+  for (const slug of ["opay-nigeria-careers", "palmpay-careers", "mastercard-careers-nigeria", "visa-careers-africa"]) {
+    expect(jobOpportunities.some((item) => item.slug === slug && item.status === "career-page"), slug).toBeTruthy();
+  }
+  for (const slug of ["abuja-study-abroad-expo-2026", "legacy-building-conference-abuja-2026", "abuja-international-afrojazz-festival-2026"]) {
+    expect(exploreGuides.some((guide) => guide.slug === slug), slug).toBeTruthy();
+  }
+  expect(serviceSeoTitleTemplates["nafdac-medical-device-registration"]).toContain("Medical Device");
+  expect(searchQueryOverrides["nafdac-medical-device-registration"]?.requirements).toContain("medical devices");
+  expect(searchQueryOverrides["lagos-lasrra-registration"]?.fee).toContain("LASRRA");
 });
