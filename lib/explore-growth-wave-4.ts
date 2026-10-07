@@ -2,84 +2,84 @@ import type { ExploreGuide } from "@/lib/explore";
 
 export const exploreGrowthWave4: ExploreGuide[] = [
   {
-    slug: "festmint-abuja-2026",
-    title: "FESTMINT Abuja 2026: Dates, Venue & Visitor Planning",
-    shortTitle: "FESTMINT 2026",
+    slug: "abuja-study-abroad-expo-2026",
+    title: "Abuja Study Abroad Expo 2026: Date, Venue & Visitor Guide",
+    shortTitle: "Abuja Study Abroad Expo",
     kind: "event",
     region: "Federal Capital Territory",
-    summary: "FESTMINT 2026 runs 2–6 November at the FCT Exhibition Pavilion in Abuja, bringing Nigerian textiles, fashion, crafts, exhibition stands, cultural showcases and the Miss MiNT Nigeria pageant together over five days.",
+    summary: "Abuja Study Abroad Expo 2026 is scheduled for 12 October from 10:00 AM to 4:00 PM at Transcorp Hilton, bringing international universities, colleges and licensed education agents together for prospective students and parents.",
     intro: [
-      "FESTMINT 2026 — the Made in Nigeria Textiles Festival — is scheduled for 2 to 6 November at the FCT Exhibition Pavilion on Herbert Macaulay Way in Abuja's Central Area, beside the International Conference Centre.",
-      "The published listing describes a five-day programme of Nigerian textiles, fashion and crafts. Visitor opening hours and entry details have not yet been published, so confirm those details with the organiser before travelling."
+      "The Abuja Study Abroad Expo is listed for 12 October 2026 from 10:00 AM to 4:00 PM at the Transcorp Hilton Congress Hall in Maitama.",
+      "The event is aimed at prospective students and parents who want to compare international courses, tuition, scholarships and visa pathways with admissions representatives. The current listing says entry is by free registration."
     ],
-    bestFor: ["Textiles", "Fashion", "Crafts", "Made-in-Nigeria products"],
+    bestFor: ["Prospective students", "Parents", "International education", "Scholarship research"],
     highlights: [
-      { name: "2–6 November 2026", detail: "The current Abuja event listing gives a five-day festival window." },
-      { name: "FCT Exhibition Pavilion", detail: "The venue is on Herbert Macaulay Way in the Central Area, beside the International Conference Centre." },
-      { name: "Textiles, fashion and crafts", detail: "The programme is built around locally made fabrics, accessories, craft displays and cultural showcases." },
-      { name: "100+ exhibitors in 2025", detail: "The previous edition drew more than 100 exhibitors, giving useful context for the expected scale of the event." }
+      { name: "12 October 2026", detail: "The current event listing gives a one-day programme from 10:00 AM to 4:00 PM." },
+      { name: "Transcorp Hilton Congress Hall", detail: "The venue is at 1 Aguiyi Ironsi Street in Maitama, Abuja." },
+      { name: "International institutions", detail: "Universities, colleges and licensed education agents are expected to meet prospective students face to face." },
+      { name: "Free registration listed", detail: "The event listing currently describes entry as free registration; confirm the live registration route before travelling." }
     ],
     planning: [
-      { label: "Confirm visitor hours first", detail: "Daily opening hours and visitor-entry details are not yet published on the current event listing." },
-      { label: "Use the organiser's route", detail: "Check MiNT's official site or the current event listing for registration or exhibitor information rather than copied payment instructions." },
-      { label: "Plan Central Area transport", detail: "The Exhibition Pavilion sits in Abuja's Central Area, so allow extra time for weekday traffic and event drop-off." },
-      { label: "Re-check close to 2 November", detail: "Programme timing, exhibitor access and entry conditions can change before the festival opens." }
+      { label: "Register before travelling", detail: "Use the current event registration route and keep your confirmation available on arrival." },
+      { label: "Prepare your questions", detail: "Shortlist countries, courses, tuition budgets and scholarship questions so the conversations are useful." },
+      { label: "Carry academic details", detail: "Bring the basic academic information needed for meaningful admission discussions, but do not hand over original documents unnecessarily." },
+      { label: "Re-check the programme", detail: "Confirm participating institutions, registration and session timing close to 12 October." }
     ],
-    source: { label: "Visit Abuja — FESTMINT 2026", href: "https://www.visitabuja.org/event/festmint-2026-made-in-nigeria-textiles-festival/" },
+    source: { label: "Visit Abuja — Abuja Study Abroad Expo 2026", href: "https://www.visitabuja.org/event/abuja-study-abroad-expo-2026/" },
     lastReviewed: "2026-10-07"
   },
   {
-    slug: "african-sdgs-film-festival-abuja-2026",
-    title: "African SDGs Film Festival Abuja 2026: Dates, Venue & Planning",
-    shortTitle: "African SDGs Film Festival",
+    slug: "legacy-building-conference-abuja-2026",
+    title: "Legacy Building Conference Abuja 2026: Date, Venue & Planning",
+    shortTitle: "Legacy Building Conference",
     kind: "event",
     region: "Federal Capital Territory",
-    summary: "African SDGs Film Festival 2026 is scheduled for 4–5 November at Silverbird Cinemas Abuja, using film and storytelling to connect audiences with the UN Sustainable Development Goals.",
+    summary: "The Legacy Building Conference 2026 is scheduled for 6 November from 3:00 PM to 6:00 PM at Novare Central in Wuse Zone 5, with leadership, networking and personal-development sessions for men.",
     intro: [
-      "African SDGs Film Festival 2026 is listed for 4 November from 10:00 AM through 5 November at 6:00 PM at Silverbird Cinemas Abuja, 1161 Memorial Drive in the Central Business District.",
-      "The festival is powered by Chanja Datti and focuses on storytelling linked to the Sustainable Development Goals. The event listing says its inaugural 2025 edition received more than 2,500 film submissions from 50 countries."
+      "The Legacy Building Conference returns on 6 November 2026 at Novare Central in Wuse Zone 5, Abuja. The published programme lists a 1:30 PM red carpet ahead of the 3:00 PM main event.",
+      "Hosted by ManThinks and powered by Vill Arena Concept Solutions, the 2026 theme is Leading Beyond Conventional Norms: Fostering a Healthier and Better Society, with purposeful-leadership and networking sessions."
     ],
-    bestFor: ["Film", "Sustainability", "Creative industry", "Social impact"],
+    bestFor: ["Leadership", "Networking", "Entrepreneurs", "Professional development"],
     highlights: [
-      { name: "4–5 November 2026", detail: "The published schedule starts at 10:00 AM on 4 November and runs through 6:00 PM on 5 November." },
-      { name: "Silverbird Cinemas Abuja", detail: "The listed venue is 1161 Memorial Drive by the Musa Yar'Adua Centre in Abuja's CBD." },
-      { name: "Film meets the SDGs", detail: "The programme uses creative storytelling to engage audiences with social and environmental development goals." },
-      { name: "International submission history", detail: "The event listing says the 2025 inaugural edition drew more than 2,500 submissions from 50 countries." }
+      { name: "6 November 2026", detail: "The listed main programme runs from 3:00 PM to 6:00 PM, with red carpet from 1:30 PM." },
+      { name: "Novare Central, Zone 5", detail: "The venue is listed in Wuse Zone 5, Abuja." },
+      { name: "Leadership theme", detail: "The programme focuses on leadership beyond conventional norms and building a healthier society." },
+      { name: "Professional networking", detail: "The event is designed to connect professionals, entrepreneurs and community leaders alongside the sessions." }
     ],
     planning: [
-      { label: "Check the live registration page", detail: "Use the event's current registration route to confirm access and ticket details before travelling." },
-      { label: "Arrive early for screenings", detail: "Allow time for CBD traffic, venue entry and seating before the first session you plan to attend." },
-      { label: "Choose sessions before arrival", detail: "Re-check the final screening and discussion programme once the organiser publishes or updates it." },
-      { label: "Verify changes near the date", detail: "Festival schedules can change, so reconfirm the venue, start time and access conditions close to 4 November." }
+      { label: "Confirm access before arrival", detail: "Check the current organiser or event listing for registration and any ticket requirements." },
+      { label: "Arrive before the main session", detail: "The red carpet starts before the 3:00 PM programme, so allow time for Zone 5 traffic and entry." },
+      { label: "Plan your networking goals", detail: "Bring concise professional details and decide which kinds of people or organisations you most want to meet." },
+      { label: "Re-check event details", detail: "Verify timing and access conditions close to 6 November in case the programme changes." }
     ],
-    source: { label: "Visit Abuja — African SDGs Film Festival 2026", href: "https://www.visitabuja.org/event/african-sdgs-film-festival-2026/" },
+    source: { label: "Visit Abuja — Legacy Building Conference 2026", href: "https://www.visitabuja.org/event/the-legacy-building-conference-2026-mens-leadership-networking/" },
     lastReviewed: "2026-10-07"
   },
   {
-    slug: "all-africa-challenge-trophy-abuja-2026",
-    title: "All Africa Challenge Trophy Abuja 2026: Dates, Golf Venue & Planning",
-    shortTitle: "AACT Abuja 2026",
+    slug: "abuja-international-afrojazz-festival-2026",
+    title: "Abuja International Afrojazz Festival 2026: Dates, Tickets & Planning",
+    shortTitle: "Abuja Afrojazz Festival",
     kind: "event",
     region: "Federal Capital Territory",
-    summary: "The All Africa Challenge Trophy 2026 brings women's amateur national golf teams from around 30 countries to IBB International Golf & Country Club in Abuja for competition from 4–6 November.",
+    summary: "Abuja International Afrojazz Festival 2026 runs 16–21 November with masterclasses, an artist and promoter market, showcase programming and a main concert on 21 November; the venue and line-up are still to be announced.",
     intro: [
-      "The 2026 All Africa Challenge Trophy is scheduled for 4 to 6 November at IBB International Golf & Country Club in Maitama, Abuja, with the Ladies Golf Association of Nigeria hosting national teams from around 30 African countries.",
-      "The competition sits within a wider programme running 2 to 7 November. Spectator access and tee times have not yet been announced, so visitors should confirm the live event arrangements before travelling to the club."
+      "The Abuja International Afrojazz Festival is scheduled for 16 to 21 November 2026. The published programme includes masterclasses from 16 to 20 November, a professional market on 19 and 20 November, a showcase concert on 20 November and the main concert on 21 November.",
+      "The current event listing says the venue and line-up have not yet been announced. Tickets are listed for the main concert night, so visitors should avoid treating an old venue or copied social post as final."
     ],
-    bestFor: ["Golf", "Sports", "Women's sport", "November events"],
+    bestFor: ["Live music", "Jazz", "African music", "Music industry networking"],
     highlights: [
-      { name: "4–6 November competition", detail: "The championship competition is listed for three days within a wider 2–7 November programme." },
-      { name: "IBB International Golf & Country Club", detail: "The host course is in Maitama, Abuja." },
-      { name: "Around 30 national teams", detail: "The current listing expects women's amateur teams from around 30 African countries." },
-      { name: "LGAN hosts", detail: "The Ladies Golf Association of Nigeria is listed as host for the Abuja championship." }
+      { name: "16–21 November 2026", detail: "The six-day programme combines learning, industry activity and live performances." },
+      { name: "Masterclasses", detail: "Masterclasses are scheduled across 16–20 November." },
+      { name: "Professional market", detail: "Promoters and artists have a dedicated market programme on 19 and 20 November." },
+      { name: "Main concert 21 November", detail: "The main concert closes the programme; current ticket tiers should be checked directly before purchase." }
     ],
     planning: [
-      { label: "Confirm spectator access", detail: "Public access arrangements and tee times have not yet been announced on the current event listing." },
-      { label: "Check the day's programme", detail: "Competition timing can vary by round, so confirm the schedule before heading to the course." },
-      { label: "Plan Maitama transport", detail: "Allow time for security, parking or ride-hailing around the club during championship days." },
-      { label: "Reconfirm before 4 November", detail: "Use the current organiser or event listing to check access, start times and any spectator requirements." }
+      { label: "Do not assume the venue", detail: "The current listing still says the venue is to be announced, so wait for the official location before booking transport around a specific district." },
+      { label: "Match tickets to the right day", detail: "The published ticket information is for the main concert night; other programme elements may use different access rules." },
+      { label: "Check the final line-up", detail: "Revisit the official festival information for performer and masterclass announcements." },
+      { label: "Keep daytime plans flexible", detail: "Until the venue is announced, use central Abuja daytime options that do not lock you into a distant route." }
     ],
-    source: { label: "Visit Abuja — All Africa Challenge Trophy 2026", href: "https://www.visitabuja.org/event/all-africa-challenge-trophy-aact-2026/" },
+    source: { label: "Visit Abuja — Abuja International Afrojazz Festival 2026", href: "https://www.visitabuja.org/event/abuja-international-afrojazz-festival-2026/" },
     lastReviewed: "2026-10-07"
   }
 ];
