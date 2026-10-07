@@ -2,19 +2,19 @@ import type { ExplorePlace } from "@/lib/explore-places";
 
 export const exploreGrowthPlacesWave7: ExplorePlace[] = [
   {
-    slug: "mungo-park-house-asaba",
+    slug: "niger-bridge-asaba",
     guideSlug: "asaba",
-    name: "Mungo Park House",
-    kind: "attraction",
-    area: "Asaba",
-    address: "National Museum grounds, Asaba, Oshimili South, Delta State, Nigeria",
-    summary: "An 1886 Royal Niger Company timber building now forming part of the National Museum, Asaba.",
-    cost: "Current admission is not consistently published — confirm with the museum before travelling",
-    hours: "Opening hours are not consistently published online; verify before visiting.",
-    mapQuery: "Mungo Park House National Museum Asaba",
-    source: { label: "Discover Delta — Mungo Park House", href: "https://www.discoverdeltang.com/visit/asaba/mungo-park-house" },
+    name: "Niger Bridge",
+    kind: "landmark",
+    area: "Asaba–Onitsha crossing",
+    address: "River Niger crossing between Asaba, Delta State and Onitsha, Anambra State, Nigeria",
+    summary: "The landmark bridge crossing the River Niger between Asaba and Onitsha, central to the city's gateway identity.",
+    cost: "No tourist admission; this is active transport infrastructure",
+    hours: "Open as a public road crossing; sightseeing should be done only from safe public viewpoints.",
+    mapQuery: "Niger Bridge Asaba Onitsha",
+    source: { label: "Discover Delta — Asaba visitor guide", href: "https://www.discoverdeltang.com/visit/asaba" },
     checkedAt: "2026-10-07",
-    tags: ["museum", "heritage", "history", "Asaba"]
+    tags: ["River Niger", "bridge", "landmark", "Asaba"]
   },
   {
     slug: "lander-brothers-anchorage-asaba",
@@ -156,19 +156,19 @@ export const exploreGrowthPlacesWave7: ExplorePlace[] = [
     tags: ["garden", "park", "GRA", "Ilorin"]
   },
   {
-    slug: "ilorin-central-mosque",
+    slug: "sobi-hills-ilorin",
     guideSlug: "ilorin",
-    name: "Ilorin Central Mosque",
-    kind: "landmark",
-    area: "Oja-Oba",
-    address: "Oja-Oba area, Ilorin, Kwara State, Nigeria",
-    summary: "Major active mosque and one of Ilorin's defining architectural landmarks.",
-    cost: "No tourist admission expected; worship and visitor access rules take priority",
-    hours: "Active worship site — access varies around prayer and religious events.",
-    mapQuery: "Ilorin Central Mosque Oja Oba",
-    source: { label: "Kwara State Government — Tourism", href: "https://kwarastate.gov.ng/do-business/tourism/" },
+    name: "Sobi Hills",
+    kind: "nature",
+    area: "Ilorin East",
+    address: "Sobi area, Ilorin East, Kwara State, Nigeria",
+    summary: "Hill landscape identified by Kwara State's Ilorin East local-government profile as a visitor attraction.",
+    cost: "No standard official admission fee is published — confirm local access before visiting",
+    hours: "Visit in daylight and confirm current access locally before hiking or climbing.",
+    mapQuery: "Sobi Hills Ilorin Kwara State",
+    source: { label: "Kwara State Government — Ilorin East LGA", href: "https://kwarastate.gov.ng/government/lgas/" },
     checkedAt: "2026-10-07",
-    tags: ["mosque", "architecture", "religion", "Ilorin"]
+    tags: ["hill", "nature", "viewpoint", "Ilorin"]
   },
   {
     slug: "kwara-hotel-ilorin",
