@@ -60,9 +60,9 @@ export default function HomePage() {
     })
     .slice(0, 6);
 
-  const travelHighlights = exploreGuides
-    .filter((guide) => guide.kind === "city" || guide.kind === "destination")
-    .slice(0, 3);
+  // A compact cross-region selection rather than the first three catalog entries.
+  const travelHighlights = ["lagos", "abuja", "kano", "obudu-mountain-resort", "yankari-game-reserve", "anambra-heritage-circuit"]
+    .flatMap((slug) => exploreGuides.filter((guide) => guide.slug === slug));
 
   const openGovernmentHighlights = governmentOpportunities
     .filter((item) => item.status === "open")
