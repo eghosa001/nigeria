@@ -4103,7 +4103,8 @@
     "notes": [
       "A BVN is not a bank account number or a payment credential, but it is sensitive identity information and should still be protected.",
       "NIBSS requires the phone number registered to the BVN for *565*0# retrieval.",
-      "NIBSS currently lists *565*0# for BVN retrieval from the phone number registered to the BVN and publishes a ₦20 service fee."
+      "NIBSS currently lists *565*0# for BVN retrieval from the phone number registered to the BVN and publishes a ₦20 service fee.",
+      "NIBSS publishes the public customer retrieval route as USSD; do not enter BVN identity details into an unofficial website that claims to retrieve the number."
     ],
     "sources": [
       {
