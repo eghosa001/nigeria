@@ -92,3 +92,79 @@ AFTER UPDATE OF title, summary, keywords ON content_items BEGIN
   INSERT INTO content_search(rowid, title, summary, keywords)
   VALUES (new.id, new.title, new.summary, new.keywords);
 END;
+
+
+-- High-churn live job inventory. Curated evergreen employer/programme guides stay
+-- in content_items; individual live vacancies can scale independently here.
+CREATE TABLE IF NOT EXISTS job_listings (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  source_key TEXT NOT NULL,
+  external_id TEXT NOT NULL,
+  slug TEXT NOT NULL,
+  canonical_path TEXT,
+  title TEXT NOT NULL,
+  company TEXT NOT NULL,
+  location TEXT NOT NULL DEFAULT 'Nigeria',
+  profession TEXT,
+  sector TEXT,
+  employment_type TEXT,
+  summary TEXT NOT NULL DEFAULT '',
+  apply_url TEXT NOT NULL,
+  source_url TEXT NOT NULL,
+  source_name TEXT NOT NULL,
+  date_posted TEXT,
+  deadline TEXT,
+  fetched_at TEXT NOT NULL,
+  verified_at TEXT,
+  lifecycle_status TEXT NOT NULL DEFAULT 'discovered'
+    CHECK (lifecycle_status IN ('discovered','verified','published','stale','expired','rejected')),
+  verification_note TEXT,
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE (source_key, external_id),
+  UNIQUE (canonical_path)
+);
+
+CREATE INDEX IF NOT EXISTS job_listings_live_idx
+ON job_listings(lifecycle_status, deadline, date_posted DESC);
+
+CREATE INDEX IF NOT EXISTS job_listings_source_idx
+ON job_listings(source_key, fetched_at DESC);
+
+CREATE INDEX IF NOT EXISTS job_listings_location_idx
+ON job_listings(location, lifecycle_status, date_posted DESC);
+
+CREATE INDEX IF NOT EXISTS job_listings_profession_idx
+ON job_listings(profession, lifecycle_status, date_posted DESC);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS job_listing_search USING fts5(
+  title,
+  company,
+  location,
+  profession,
+  sector,
+  summary,
+  content='job_listings',
+  content_rowid='id',
+  tokenize='unicode61 remove_diacritics 2'
+);
+
+CREATE TRIGGER IF NOT EXISTS job_listings_search_insert
+AFTER INSERT ON job_listings BEGIN
+  INSERT INTO job_listing_search(rowid, title, company, location, profession, sector, summary)
+  VALUES (new.id, new.title, new.company, new.location, new.profession, new.sector, new.summary);
+END;
+
+CREATE TRIGGER IF NOT EXISTS job_listings_search_delete
+AFTER DELETE ON job_listings BEGIN
+  INSERT INTO job_listing_search(job_listing_search, rowid, title, company, location, profession, sector, summary)
+  VALUES ('delete', old.id, old.title, old.company, old.location, old.profession, old.sector, old.summary);
+END;
+
+CREATE TRIGGER IF NOT EXISTS job_listings_search_update
+AFTER UPDATE OF title, company, location, profession, sector, summary ON job_listings BEGIN
+  INSERT INTO job_listing_search(job_listing_search, rowid, title, company, location, profession, sector, summary)
+  VALUES ('delete', old.id, old.title, old.company, old.location, old.profession, old.sector, old.summary);
+  INSERT INTO job_listing_search(rowid, title, company, location, profession, sector, summary)
+  VALUES (new.id, new.title, new.company, new.location, new.profession, new.sector, new.summary);
+END;
