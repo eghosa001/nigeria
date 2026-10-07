@@ -133,3 +133,13 @@ test("Tour guide secondary detail is progressively disclosed", async ({ page }) 
   expect(await page.locator(".compact-faq-list > details").count()).toBeGreaterThan(0);
   expect(await page.locator(".explore-place-card details.explore-place-more").count()).toBeGreaterThan(0);
 });
+
+
+test("new Abuja event guides keep venue-aware planning", async ({ page }) => {
+  await page.goto("/explore/all-africa-challenge-trophy-abuja-2026");
+  await expect(page.getByRole("heading", { name: /All Africa Challenge Trophy Abuja 2026/i })).toBeVisible();
+  await expect(page.locator("#place-ibb-golf-club-aact-2026")).toContainText("IBB International Golf & Country Club");
+
+  await page.goto("/explore/african-sdgs-film-festival-abuja-2026");
+  await expect(page.locator("#places")).toContainText("Silverbird Cinemas Abuja");
+});
