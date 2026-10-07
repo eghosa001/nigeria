@@ -124,7 +124,7 @@ test("wave 8 expands verified demand across all four pillars", () => {
   for (const slug of ["opay-nigeria-careers", "palmpay-careers", "mastercard-careers-nigeria", "visa-careers-africa"]) {
     expect(jobOpportunities.some((item) => item.slug === slug && item.status === "career-page"), slug).toBeTruthy();
   }
-  for (const slug of ["festmint-abuja-2026", "african-sdgs-film-festival-abuja-2026", "all-africa-challenge-trophy-abuja-2026"]) {
+  for (const slug of ["abuja-study-abroad-expo-2026", "legacy-building-conference-abuja-2026", "abuja-international-afrojazz-festival-2026"]) {
     expect(exploreGuides.some((guide) => guide.slug === slug), slug).toBeTruthy();
   }
   expect(serviceSeoTitleTemplates["nafdac-medical-device-registration"]).toContain("Medical Device");
