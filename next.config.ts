@@ -89,6 +89,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/entertainment/youtube/Yu-QxqPDmXM",
+        destination: "/entertainment/series/once-upon-a-village",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "header", key: "x-forwarded-proto", value: "http" }],
         destination: "https://mynigeriaguide.com/:path*",
