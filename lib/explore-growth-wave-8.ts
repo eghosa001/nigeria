@@ -16,7 +16,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Idanre Hills", detail: "Ondo State's flagship heritage landscape with 682 steps, old settlement remains, palace history and hill views." },
       { name: "Owo Museum of Antiquities", detail: "Official state tourism material highlights royal regalia, archaeological finds and Yoruba artworks from the old Owo Kingdom." },
-      { name: "Akure Forest Reserve", detail: "A nature-focused stop for forest walks, bird watching and ecological visits closer to the state capital." }
+      { name: "Akure Forest Reserve", detail: "A nature-focused stop for forest walks, bird watching and ecological visits closer to the state capital." },
+      { name: "Three distinct Ondo landscapes", detail: "The route deliberately combines hill heritage, royal museum history and forest ecology instead of repeating one attraction type." }
     ],
     planning: [
       { label: "Base in Akure", detail: "Akure has the strongest transport and accommodation base for combining Idanre and Owo." },
@@ -42,7 +43,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Ikogosi Warm & Cold Springs", detail: "The state's best-known natural attraction, where warm and cold springs flow separately before meeting." },
       { name: "Ipole-Iloro Waterfall", detail: "A waterfall in Ekiti's tourism corridor roughly ten kilometres beyond the Ikogosi axis in older state tourism material." },
-      { name: "Erio hill country", detail: "Ekiti government tourism material identifies the Erio area with religious tourism hills close to the Ikogosi corridor." }
+      { name: "Erio hill country", detail: "Ekiti government tourism material identifies the Erio area with religious tourism hills close to the Ikogosi corridor." },
+      { name: "Ado-Ekiti civic stop", detail: "Fajuyi Memorial Park gives the route a practical city stop between longer nature drives and is already part of MyNigeriaGuide’s verified Ekiti inventory." }
     ],
     planning: [
       { label: "Confirm road conditions", detail: "Smaller access roads can change seasonally, so check locally before leaving the main Ikogosi route." },
@@ -68,7 +70,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Mount Patti", detail: "The hill above Lokoja gives one of the clearest views over the city and the river system." },
       { name: "Niger-Benue Confluence", detail: "The meeting of two of Nigeria's great rivers is the city's defining natural feature." },
-      { name: "Iron of Liberty", detail: "A Lokoja monument associated with the abolition and release of enslaved people." }
+      { name: "Iron of Liberty", detail: "A Lokoja monument associated with the abolition and release of enslaved people." },
+      { name: "Colonial heritage cluster", detail: "Lokoja’s existing colonial-heritage record adds Lugard-era context to the river and hill landscape without creating another duplicate place page." }
     ],
     planning: [
       { label: "Do Mount Patti early", detail: "Morning or late-afternoon light is better for views and reduces exposure to midday heat." },
@@ -94,7 +97,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "National War Museum Umuahia", detail: "NCMM's museum dedicated to Nigerian Civil War relics, military technology and peace/conflict education." },
       { name: "Ojukwu Bunker / former Biafran State House", detail: "NCMM lists the bunker complex alongside the War Museum as a significant proposed national monument." },
-      { name: "National Museum of Colonial History, Aba", detail: "A colonial-history museum in Aba that extends the itinerary beyond Civil War material." }
+      { name: "National Museum of Colonial History, Aba", detail: "A colonial-history museum in Aba that extends the itinerary beyond Civil War material." },
+      { name: "Umuahia wartime context", detail: "The city’s role during the Nigerian Civil War ties the War Museum and bunker into one coherent educational route rather than isolated stops." }
     ],
     planning: [
       { label: "Start at the War Museum", detail: "It gives the historical context needed to understand the bunker and other Umuahia sites." },
@@ -120,7 +124,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Ogbunike Caves", detail: "A major cave system with strong cultural significance and one of Anambra's best-known visitor sites." },
       { name: "Agulu Lake", detail: "A large natural lake south of Awka with strong local identity and scenic value." },
-      { name: "Igbo-Ukwu archaeological sites", detail: "Internationally significant archaeological heritage associated with sophisticated early Igbo metalwork and culture." }
+      { name: "Igbo-Ukwu archaeological sites", detail: "Internationally significant archaeological heritage associated with sophisticated early Igbo metalwork and culture." },
+      { name: "Owerre-Ezukala cave & waterfall", detail: "The existing verified Anambra place record adds another nature stop while keeping the route on canonical place pages." }
     ],
     planning: [
       { label: "Confirm cave access", detail: "Ogbunike access can be affected by weather, local customs and site rules." },
@@ -146,7 +151,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Kanta Museum, Argungu", detail: "A museum linked to Argungu's emirate history and one of Kebbi's best-known heritage stops." },
       { name: "Hubbare at Gwandu", detail: "The tomb of Sheikh Abdullahi Dan Fodio, associated with the Gwandu Emirate's religious and historical legacy." },
-      { name: "Girmache Shrine, Zuru", detail: "A cultural heritage site highlighted by the Kebbi State Government." }
+      { name: "Girmache Shrine, Zuru", detail: "A cultural heritage site highlighted by the Kebbi State Government." },
+      { name: "Argungu cultural context", detail: "The wider Argungu emirate and fishing-festival tradition gives the museum stop contemporary cultural relevance beyond the building itself." }
     ],
     planning: [
       { label: "Plan by emirate", detail: "Argungu, Gwandu and Zuru are far enough apart that each needs realistic road time." },
@@ -172,7 +178,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Mambilla Plateau", detail: "Cool highland landscapes, tea country and some of Nigeria's most dramatic elevated scenery." },
       { name: "Gashaka-Gumti National Park", detail: "Nigeria's largest national park and a major protected wilderness in Taraba and Adamawa." },
-      { name: "Chappal Waddi", detail: "Nigeria's highest mountain, requiring serious planning, local guidance and appropriate hiking preparation." }
+      { name: "Chappal Waddi", detail: "Nigeria's highest mountain, requiring serious planning, local guidance and appropriate hiking preparation." },
+      { name: "Gembu highland base", detail: "MyNigeriaGuide’s existing Gembu place record gives travellers a practical highland base from which to organise plateau and mountain movement." }
     ],
     planning: [
       { label: "Do not treat this as a casual day trip", detail: "Travel distances and terrain require a multi-day itinerary." },
@@ -198,7 +205,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Gurara Falls", detail: "A major waterfall on the Abuja-Minna corridor and one of Niger State's most promoted nature sites." },
       { name: "Zuma Rock", detail: "The state's iconic monolith on the approach to Abuja/Suleja." },
-      { name: "Baro Empire Hills", detail: "A historic hill landscape listed by Niger State among its tourism assets." }
+      { name: "Baro Empire Hills", detail: "A historic hill landscape listed by Niger State among its tourism assets." },
+      { name: "Abuja-side access", detail: "Zuma Rock and Gurara Falls can be approached from the Abuja/Suleja corridor, making them practical anchors before the longer Baro extension." }
     ],
     planning: [
       { label: "Pair Zuma and Gurara", detail: "They are the easiest attractions to combine from the Abuja/Suleja side of Niger State." },
@@ -224,7 +232,8 @@ export const exploreGrowthWave8: ExploreGuide[] = [
     highlights: [
       { name: "Osun-Osogbo Sacred Grove", detail: "A UNESCO World Heritage cultural landscape and the spiritual centre of the Osun-Osogbo festival." },
       { name: "Erin-Ijesha Waterfall", detail: "The famous multi-level Olumirin waterfall, managed locally with ongoing state tourism upgrades." },
-      { name: "Ayikunnugba Waterfall", detail: "A roughly 30-metre waterfall in Oke-Ila Orangun highlighted by the Osun tourism board." }
+      { name: "Ayikunnugba Waterfall", detail: "A roughly 30-metre waterfall in Oke-Ila Orangun highlighted by the Osun tourism board." },
+      { name: "Culture plus nature, not duplicate pages", detail: "The route reuses the existing Sacred Grove and Erin-Ijesha canonical records while adding Ayikunnugba as a distinct mapped waterfall." }
     ],
     planning: [
       { label: "Respect grove rules", detail: "The Sacred Grove is a living religious landscape, not simply a park." },
