@@ -131,8 +131,8 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Live Nigeria vacancies</span>
-              <h2 id="live-jobs-heading">Hundreds of current roles without hundreds of thin SEO pages.</h2>
-              <p>Browse lightweight current-month listings sourced from a Nigerian jobs platform, then open the source page to review the full vacancy and application method. The deeply verified MyNigeriaGuide guides remain separate below.</p>
+              <h2 id="live-jobs-heading">Thousands of current roles without thousands of thin SEO pages.</h2>
+              <p>Browse roughly 2,460 current-month source listings in fast 100-job batches, then open the source page to review the full vacancy and application method. The deeply verified MyNigeriaGuide guides remain a separate quality-controlled layer below.</p>
             </div>
           </div>
           <LiveJobsDirectory />
