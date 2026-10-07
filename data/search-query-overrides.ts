@@ -222,4 +222,31 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     online: "Can I register for Micro Pension through a licensed PFA?",
     start: "How do I register for a Micro Pension account in Nigeria?",
   },
+  "nafdac-medical-device-registration": {
+    requirements: "What are the NAFDAC registration requirements for medical devices?",
+    online: "Where is the official NAFDAC medical-device registration portal?",
+    start: "How do I register a medical device with NAFDAC?",
+  },
+  "nafdac-cosmetics-registration": {
+    requirements: "What are the NAFDAC registration requirements for cosmetics?",
+    online: "Where is the official NAFDAC cosmetics registration portal?",
+    start: "How do I register a cosmetic product with NAFDAC?",
+  },
+  "nafdac-food-product-registration": {
+    fee: "How much does NAFDAC food product registration cost?",
+    requirements: "What are the NAFDAC requirements for food product registration?",
+    online: "Where is the official NAFDAC food registration portal?",
+    start: "How do I register a food product with NAFDAC?",
+  },
+  "nafdac-drug-product-registration": {
+    requirements: "What are the NAFDAC requirements for drug product registration?",
+    online: "Where is the official NAFDAC drug registration portal?",
+    start: "How do I register a drug product with NAFDAC?",
+  },
+  "lagos-lasrra-registration": {
+    fee: "How much is LASRRA registration in Lagos?",
+    requirements: "What do I need for LASRRA registration?",
+    online: "Can I complete LASRRA registration online?",
+    start: "How do I register with LASRRA in Lagos?",
+  },
 };
