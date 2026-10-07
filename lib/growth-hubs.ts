@@ -646,6 +646,114 @@ export const growthHubs: GrowthHub[] = [
   },
 
   {
+    slug: "nafdac-registration-nigeria",
+    title: "NAFDAC Registration Nigeria 2026: Food, Drugs, Cosmetics & Devices",
+    shortTitle: "NAFDAC registration",
+    description: "Choose the correct NAFDAC route for food, cosmetics, drugs, medical devices, herbal products, pesticides, animal feed, renewals and product verification.",
+    intro: [
+      "NAFDAC registration is not one generic form. Food, cosmetics, drugs, medical devices, herbal products, pesticides and animal feed have different product categories and documentation requirements.",
+      "Use this hub to start with the exact product type, then follow the source-linked guide for requirements, official filing route, verification or renewal. This avoids forcing broad NAFDAC searches onto one overloaded page."
+    ],
+    searches: [
+      { query: "NAFDAC registration", serviceSlug: "nafdac-product-registration" },
+      { query: "NAFDAC food registration", serviceSlug: "nafdac-food-product-registration" },
+      { query: "NAFDAC cosmetics registration", serviceSlug: "nafdac-cosmetics-registration" },
+      { query: "NAFDAC medical device registration", serviceSlug: "nafdac-medical-device-registration" },
+      { query: "NAFDAC drug registration", serviceSlug: "nafdac-drug-product-registration" },
+      { query: "NAFDAC herbal supplement registration", serviceSlug: "nafdac-herbal-supplement-registration" },
+      { query: "NAFDAC pesticide registration", serviceSlug: "nafdac-pesticide-registration" },
+      { query: "NAFDAC animal feed registration", serviceSlug: "nafdac-animal-feed-registration" },
+      { query: "verify NAFDAC product", serviceSlug: "nafdac-product-verification" },
+      { query: "renew NAFDAC registration", serviceSlug: "nafdac-product-renewal" }
+    ],
+    serviceSlugs: [
+      "nafdac-product-registration",
+      "nafdac-food-product-registration",
+      "nafdac-cosmetics-registration",
+      "nafdac-medical-device-registration",
+      "nafdac-drug-product-registration",
+      "nafdac-herbal-supplement-registration",
+      "nafdac-pesticide-registration",
+      "nafdac-animal-feed-registration",
+      "nafdac-product-verification",
+      "nafdac-product-renewal"
+    ]
+  },
+  {
+    slug: "visa-appointments-nigeria",
+    title: "Visa Appointment Nigeria 2026: Biometrics, Submission & Passport Collection",
+    shortTitle: "Visa appointments",
+    description: "Find the correct appointment, biometrics, passport-submission and collection route for Canada, France, Italy and Belgium applications from Nigeria.",
+    intro: [
+      "A visa application and a visa-centre appointment are different steps. After the destination authority accepts or starts the application, applicants may still need biometrics, document submission or passport collection through the responsible service provider.",
+      "Use this hub to choose the destination and task that applies to you. Each guide keeps the provider-specific route separate so Canada VFS processes are not mixed with TLScontact processes for European destinations."
+    ],
+    searches: [
+      { query: "Canada biometrics appointment Nigeria", serviceSlug: "vfs-canada-biometrics-appointment-nigeria" },
+      { query: "Canada passport submission Nigeria", serviceSlug: "vfs-canada-passport-submission-nigeria" },
+      { query: "France visa appointment Nigeria", serviceSlug: "tlscontact-france-visa-appointment-nigeria" },
+      { query: "track France visa passport Nigeria", serviceSlug: "tlscontact-france-track-collect-passport-nigeria" },
+      { query: "Italy visa appointment Nigeria", serviceSlug: "tlscontact-italy-visa-appointment-nigeria" },
+      { query: "collect Italy visa passport Nigeria", serviceSlug: "tlscontact-italy-passport-collection-nigeria" },
+      { query: "Belgium visa appointment Nigeria", serviceSlug: "tlscontact-belgium-visa-appointment-nigeria" },
+      { query: "track Belgium visa passport Nigeria", serviceSlug: "tlscontact-belgium-track-collect-passport-nigeria" }
+    ],
+    serviceSlugs: [
+      "vfs-canada-biometrics-appointment-nigeria",
+      "vfs-canada-passport-submission-nigeria",
+      "tlscontact-france-visa-appointment-nigeria",
+      "tlscontact-france-track-collect-passport-nigeria",
+      "tlscontact-italy-visa-appointment-nigeria",
+      "tlscontact-italy-passport-collection-nigeria",
+      "tlscontact-belgium-visa-appointment-nigeria",
+      "tlscontact-belgium-track-collect-passport-nigeria"
+    ]
+  },
+  {
+    slug: "professional-exams-certifications-nigeria",
+    title: "Professional Exams & Certifications Nigeria: IELTS, TOEFL, PTE, PMP & Tech",
+    shortTitle: "Exams & certifications",
+    description: "Official registration and scheduling routes for IELTS, TOEFL, PTE, GRE, GMAT, SAT, PMP and major Microsoft, AWS, Cisco, Oracle and Google Cloud certification exams.",
+    intro: [
+      "Test registration, professional certification applications and exam scheduling use different official providers. This hub brings the existing source-linked guides together without pretending one portal handles every exam.",
+      "Choose the exact exam or certification below, confirm the current provider and fee on its guide, and use the official booking route rather than an unofficial exam agent."
+    ],
+    searches: [
+      { query: "IELTS registration Nigeria", serviceSlug: "british-council-ielts-registration-nigeria" },
+      { query: "IDP IELTS Nigeria", serviceSlug: "idp-ielts-registration-nigeria" },
+      { query: "TOEFL registration Nigeria", serviceSlug: "toefl-registration-nigeria" },
+      { query: "PTE registration Nigeria", serviceSlug: "pte-registration-nigeria" },
+      { query: "GRE registration Nigeria", serviceSlug: "gre-registration-nigeria" },
+      { query: "GMAT registration Nigeria", serviceSlug: "gmat-registration-nigeria" },
+      { query: "SAT registration Nigeria", serviceSlug: "sat-registration-nigeria" },
+      { query: "PMP certification Nigeria", serviceSlug: "pmp-certification-application" },
+      { query: "schedule PMP exam", serviceSlug: "pmp-exam-scheduling" },
+      { query: "Pearson VUE exam Nigeria", serviceSlug: "pearson-vue-schedule-exam" },
+      { query: "Microsoft certification exam Nigeria", serviceSlug: "microsoft-certification-exam-scheduling" },
+      { query: "AWS certification exam Nigeria", serviceSlug: "aws-certification-exam-scheduling" },
+      { query: "Cisco certification exam Nigeria", serviceSlug: "cisco-certification-exam-registration" },
+      { query: "Oracle certification exam Nigeria", serviceSlug: "oracle-certification-exam-scheduling" },
+      { query: "Google Cloud certification exam Nigeria", serviceSlug: "google-cloud-certification-exam-scheduling" }
+    ],
+    serviceSlugs: [
+      "british-council-ielts-registration-nigeria",
+      "idp-ielts-registration-nigeria",
+      "toefl-registration-nigeria",
+      "pte-registration-nigeria",
+      "gre-registration-nigeria",
+      "gmat-registration-nigeria",
+      "sat-registration-nigeria",
+      "pmp-certification-application",
+      "pmp-exam-scheduling",
+      "pearson-vue-schedule-exam",
+      "microsoft-certification-exam-scheduling",
+      "aws-certification-exam-scheduling",
+      "cisco-certification-exam-registration",
+      "oracle-certification-exam-scheduling",
+      "google-cloud-certification-exam-scheduling"
+    ]
+  },
+  {
     slug: "pension-rsa-nigeria",
     title: "Pension RSA Nigeria 2026: Open Account, Transfer PFA & Withdraw 25%",
     shortTitle: "Pension & RSA",
