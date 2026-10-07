@@ -2,131 +2,148 @@ import type { EntertainmentTitle } from "@/lib/entertainment";
 
 export const entertainmentGrowthWave10: EntertainmentTitle[] = [
   {
-    slug: "the-bride-switch-2026",
-    title: "The Bride Switch",
-    year: 2026,
+    slug: "celebrity-crush-2024",
+    title: "Celebrity Crush",
+    year: 2024,
     format: "movie",
-    genres: ["Drama", "Romance", "Nollywood"],
+    genres: ["Comedy", "Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "To save her family from ruin, Adanna takes her twin sister's place as the bride of a wealthy stranger. What begins as a temporary deception becomes harder to escape when the marriage starts to feel real.",
-    cast: ["Eddie Watson", "Toluwani George", "Thelma Chukwunwem", "Symon Oko"],
-    featuredCast: ["Eddie Watson", "Toluwani George", "Thelma Chukwunwem"],
-    runtimeMinutes: 159,
+    synopsis: "A young woman who has long admired a celebrity wins an unexpected chance to meet him after a frightening encounter changes the course of their lives, turning a fan fantasy into a relationship that can affect both of their futures.",
+    cast: ["Clinton Joshua", "Chioma Nwaoha", "Courtney Ochanya", "Ikechukwu Ohanen"],
+    featuredCast: ["Clinton Joshua", "Chioma Nwaoha", "Courtney Ochanya"],
+    runtimeMinutes: 109,
     featured: true,
     references: [
       {
-        label: "Omoni Oboli TV — The Bride Switch",
-        href: "https://www.youtube.com/watch?v=zKQoArfptqA",
-        lastChecked: "2026-10-07",
-        note: "Official full-length release used to verify the story, principal cast and current YouTube availability."
-      },
-      {
-        label: "FilmFlux — The Bride Switch",
-        href: "https://filmflux.app/article/best-new-uploads-this-week-aug-2228-2026-2026-08-29",
-        lastChecked: "2026-10-07",
-        note: "Used to cross-check the 2026 release, runtime and principal cast."
-      }
-    ],
-    watchLinks: [{
-      platform: "YouTube",
-      label: "Watch the full movie on Omoni Oboli TV",
-      href: "https://www.youtube.com/watch?v=zKQoArfptqA",
-      access: "full-movie",
-      lastChecked: "2026-10-07",
-      note: "Official full-length YouTube release.",
-      publisher: "Omoni Oboli TV"
-    }]
-  },
-  {
-    slug: "what-tomorrow-holds-2026",
-    title: "What Tomorrow Holds",
-    year: 2026,
-    format: "movie",
-    genres: ["Drama", "Family", "Nollywood"],
-    languages: ["English"],
-    synopsis: "After years of infertility, a long-awaited baby brings joy to a family until jealousy and a painful secret begin to tear apart the relationships around them.",
-    cast: ["Chioma Nwosu", "Sandra Okunzuwa", "Adeoluwa Okusaga", "Kalu Ikeagwu", "Fiyinfoluwa Asenuga"],
-    featuredCast: ["Chioma Nwosu", "Sandra Okunzuwa", "Adeoluwa Okusaga"],
-    runtimeMinutes: 106,
-    featured: true,
-    references: [{
-      label: "FilmFlux — What Tomorrow Holds",
-      href: "https://filmflux.app/movie/aa945c49-abfb-4a79-8174-bde188d3f521-what-tomorrow-holds",
-      lastChecked: "2026-10-07",
-      note: "Used to verify the September 2026 release, runtime, plot, principal cast and Sandra Okunzuwa TV source."
-    }],
-    watchLinks: [{
-      platform: "YouTube",
-      label: "Watch the full movie on Sandra Okunzuwa TV",
-      href: "https://www.youtube.com/watch?v=2Ficn2BMlI8",
-      access: "full-movie",
-      lastChecked: "2026-10-07",
-      note: "Official full-length YouTube route already receiving MyNigeriaGuide Search Console impressions.",
-      publisher: "Sandra Okunzuwa TV"
-    }]
-  },
-  {
-    slug: "in-every-lifetime-2025",
-    title: "In Every Lifetime",
-    year: 2025,
-    format: "movie",
-    genres: ["Drama", "Romance", "Royalty", "Nollywood"],
-    languages: ["English"],
-    synopsis: "A royal love story about sacrifice, patience, duty and a connection tested by palace expectations and the responsibilities surrounding two people who believe their bond reaches beyond one lifetime.",
-    cast: ["Daniel Etim Effiong", "Ego Nwosu", "Shaznay Okawa"],
-    featuredCast: ["Daniel Etim Effiong", "Ego Nwosu", "Shaznay Okawa"],
-    directors: ["Jide JBlaze Oyegbile"],
-    runtimeMinutes: 95,
-    featured: true,
-    references: [
-      {
-        label: "Ego Nwosu TV — In Every Lifetime",
-        href: "https://www.youtube.com/watch?v=TH8oDejHrEo",
+        label: "Uchenna Mbunabo TV — Celebrity Crush",
+        href: "https://www.youtube.com/watch?v=Tim_3v5hqHw",
         lastChecked: "2026-10-07",
         note: "Official full-length release used to verify the principal cast and current YouTube availability."
       },
       {
-        label: "NollyMeter — In Every Lifetime",
-        href: "https://www.nollymeter.com/movies/in-every-lifetime",
+        label: "FilmFlux — Nollywood comedy picks",
+        href: "https://filmflux.app/article/best-comedy-nollywood-movies-this-week-sep-1117-2026-2026-09-18",
         lastChecked: "2026-10-07",
-        note: "Used to cross-check the 2025 release, runtime, principal cast and director."
+        note: "Used to cross-check the story, runtime and wider credited cast."
       }
     ],
     watchLinks: [{
       platform: "YouTube",
-      label: "Watch the full movie on Ego Nwosu TV",
-      href: "https://www.youtube.com/watch?v=TH8oDejHrEo",
-      access: "full-movie",
-      lastChecked: "2026-10-07",
-      note: "Official full-length YouTube release.",
-      publisher: "Ego Nwosu TV"
-    }]
-  },
-  {
-    slug: "love-always-wins-2026",
-    title: "Love Always Wins",
-    year: 2026,
-    format: "movie",
-    genres: ["Drama", "Romance", "Nollywood"],
-    languages: ["English"],
-    synopsis: "A romantic drama about the choices, setbacks and emotional tests that determine whether love can survive when circumstances make staying together difficult.",
-    cast: ["Omeche Oko", "Bryan Okoye", "Jeffery Nortey"],
-    featuredCast: ["Omeche Oko", "Bryan Okoye", "Jeffery Nortey"],
-    featured: true,
-    references: [{
-      label: "Uduak Isong TV — Love Always Wins",
-      href: "https://www.youtube.com/watch?v=KWIpR47N9hc",
-      lastChecked: "2026-10-07",
-      note: "Official full-length release used to verify the 2026 availability and principal cast."
-    }],
-    watchLinks: [{
-      platform: "YouTube",
-      label: "Watch the full movie on Uduak Isong TV",
-      href: "https://www.youtube.com/watch?v=KWIpR47N9hc",
+      label: "Watch the full movie on Uchenna Mbunabo TV",
+      href: "https://www.youtube.com/watch?v=Tim_3v5hqHw",
       access: "full-movie",
       lastChecked: "2026-10-07",
       note: "Official full-length YouTube release already receiving MyNigeriaGuide Search Console impressions.",
-      publisher: "Uduak Isong TV"
+      publisher: "Uchenna Mbunabo TV"
+    }]
+  },
+  {
+    slug: "holy-matrimony-2024",
+    title: "Holy Matrimony",
+    year: 2024,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Newlyweds Emeka and Onyinyechi find themselves in a fast-moving comic drama about the pressures, misunderstandings and marital challenges that arrive after the wedding.",
+    cast: ["Frederick Leonard", "Onyii Alex", "Nini Mbonu"],
+    featuredCast: ["Frederick Leonard", "Onyii Alex", "Nini Mbonu"],
+    runtimeMinutes: 142,
+    featured: true,
+    references: [
+      {
+        label: "Frederick Leonard TV — Holy Matrimony",
+        href: "https://www.youtube.com/watch?v=T1-buA-yAmo",
+        lastChecked: "2026-10-07",
+        note: "Official full-length release used to verify the principal cast, story context and YouTube availability."
+      },
+      {
+        label: "NollyMeter — Holy Matrimony",
+        href: "https://www.nollymeter.com/movies/holy-matrimony",
+        lastChecked: "2026-10-07",
+        note: "Used to cross-check the 2024 Nigerian release and runtime."
+      }
+    ],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Frederick Leonard TV",
+      href: "https://www.youtube.com/watch?v=T1-buA-yAmo",
+      access: "full-movie",
+      lastChecked: "2026-10-07",
+      note: "Official full-length YouTube release already receiving MyNigeriaGuide Search Console impressions.",
+      publisher: "Frederick Leonard TV"
+    }]
+  },
+  {
+    slug: "one-more-night-2025",
+    title: "One More Night",
+    year: 2025,
+    format: "movie",
+    genres: ["Comedy", "Drama", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Former sweethearts Annabel and Mason are forced to confront unresolved history when their paths cross again, opening a second-chance love story built around regret, forgiveness and the possibility of starting over.",
+    cast: ["Frederick Leonard", "Cynthia Clarke", "Bryan Okoye", "Vivian Gabriel", "Desmond Anyanwu"],
+    featuredCast: ["Frederick Leonard", "Cynthia Clarke", "Bryan Okoye"],
+    runtimeMinutes: 129,
+    featured: true,
+    references: [
+      {
+        label: "Frederick Leonard TV — One More Night",
+        href: "https://www.youtube.com/watch?v=_86CuSRi6E4",
+        lastChecked: "2026-10-07",
+        note: "Official full-length release used to verify the February 2025 release, story context and principal cast."
+      },
+      {
+        label: "FilmFlux — One More Night",
+        href: "https://filmflux.app/movie/d24e1517-990c-47ac-8d1a-76f712c063ee-one-more-night",
+        lastChecked: "2026-10-07",
+        note: "Used to cross-check runtime, cast and source publisher."
+      }
+    ],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on Frederick Leonard TV",
+      href: "https://www.youtube.com/watch?v=_86CuSRi6E4",
+      access: "full-movie",
+      lastChecked: "2026-10-07",
+      note: "Official full-length YouTube release already receiving MyNigeriaGuide Search Console impressions.",
+      publisher: "Frederick Leonard TV"
+    }]
+  },
+  {
+    slug: "a-hold-on-me-2024",
+    title: "A Hold On Me",
+    year: 2024,
+    format: "movie",
+    genres: ["Drama", "Family", "Romance", "Nollywood"],
+    languages: ["English"],
+    synopsis: "A mother's attempt to secure financial help for her daughter's education creates a painful family bargain, exposing questions of dependence, rejection and the cost of placing a child's future in someone else's hands.",
+    cast: ["Thelma Chukwunwem", "Chinenye Ulaegbu", "Peter Komba", "Enitan Oluwole", "Lydia Lawrence-Nze"],
+    featuredCast: ["Thelma Chukwunwem", "Chinenye Ulaegbu", "Peter Komba"],
+    directors: ["Omoruyi Efosa Emmanuel"],
+    runtimeMinutes: 102,
+    featured: true,
+    references: [
+      {
+        label: "One And Two Films TV — A Hold On Me",
+        href: "https://www.youtube.com/watch?v=UKDk_wgQcQc",
+        lastChecked: "2026-10-07",
+        note: "Official full-length release used to verify the principal cast and current YouTube availability."
+      },
+      {
+        label: "FilmFlux — A Hold On Me",
+        href: "https://filmflux.app/scene45/movie/e9f86ed1-8a36-4dcf-9fca-517da4a9e6b8-a-hold-on-me",
+        lastChecked: "2026-10-07",
+        note: "Used to cross-check the 2024 release, runtime, director, story and credited cast."
+      }
+    ],
+    watchLinks: [{
+      platform: "YouTube",
+      label: "Watch the full movie on One And Two Films TV",
+      href: "https://www.youtube.com/watch?v=UKDk_wgQcQc",
+      access: "full-movie",
+      lastChecked: "2026-10-07",
+      note: "Official full-length YouTube release already receiving MyNigeriaGuide Search Console impressions.",
+      publisher: "One And Two Films TV"
     }]
   }
 ];
