@@ -437,6 +437,13 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             ]}
             note="The essentials are above. The sections below add the full cast, verified source details and related movies."
           />
+          {title.slug === "once-upon-a-village-3" ? (
+            <div className="movie-detail-actions">
+              <Link className="button button-secondary" href="/entertainment/series/once-upon-a-village">
+                View the full Once Upon a Village series guide →
+              </Link>
+            </div>
+          ) : null}
         </div>
       </section>
 
