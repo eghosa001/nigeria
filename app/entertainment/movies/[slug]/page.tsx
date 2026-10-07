@@ -162,10 +162,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const image = movieImageUrl(title, base);
   const featuredCast = getFeaturedCast(title).slice(0, 4);
   const override = movieSeoOverrides[title.slug];
-  const description = override?.description ?? `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + ". " : ""}${title.synopsis}`;
+  const fullMovieLink = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
+  const netflixLink = title.watchLinks.find((link) => link.platform === "Netflix");
+  const cinemaLink = title.watchLinks.find((link) => link.platform === "Cinema");
+  const defaultTitle = fullMovieLink
+    ? title.title + " Nigerian Movie: Cast & Full Movie"
+    : netflixLink
+      ? title.title + " Cast & Where to Watch on Netflix"
+      : cinemaLink
+        ? title.title + " Cast, Story & Cinema Release"
+        : title.title + " Nigerian Movie: Cast & Where to Watch";
+  const runtimeText = title.runtimeMinutes ? " Runtime: " + title.runtimeMinutes + " minutes." : "";
+  const availabilityText = fullMovieLink
+    ? " Watch the verified official full movie on YouTube."
+    : netflixLink
+      ? " See current verified Netflix availability."
+      : cinemaLink
+        ? " See current verified Nigerian cinema availability."
+        : "";
+  const description = override?.description ?? `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + "." : ""}${runtimeText}${availabilityText}`;
 
   return {
-    title: override?.title ?? title.title + " Nigerian Movie: Cast & Where to Watch",
+    title: override?.title ?? defaultTitle,
     description,
     alternates: { canonical: "/entertainment/movies/" + title.slug },
     openGraph: {
@@ -253,6 +271,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const platforms = [...new Set(availabilityLinks.map((link) => link.platform))];
   const watchHereSource = availabilityLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
+  const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
   const featuredCast = getFeaturedCast(title);
   const image = movieImageUrl(title, base);
   const movieQuestions = [
@@ -263,14 +282,30 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
         : "The verified cast list is still being expanded.",
     },
     {
+      question: "What is " + title.title + " about?",
+      answer: title.synopsis,
+    },
+    {
       question: "Where can I watch " + title.title + "?",
       answer: platforms.length
         ? "As checked on " + (lastChecked || "the latest source review") + ", " + title.title + " is linked to " + platforms.join(" and ") + " through the verified official availability section on this page."
         : "As of " + (lastChecked || "the latest source review") + ", no current official streaming, broadcast or cinema availability has been verified for " + title.title + ".",
     },
+    {
+      question: "Is " + title.title + " a Nigerian movie?",
+      answer: "Yes. " + title.title + " is listed here as a " + title.year + " Nigerian feature film, with country, cast and source information checked against the references on this page.",
+    },
     ...(title.runtimeMinutes ? [{
       question: "How long is " + title.title + "?",
       answer: title.title + " has a verified runtime of " + title.runtimeMinutes + " minutes.",
+    }] : []),
+    ...(watchHereSource ? [{
+      question: "Can I watch " + title.title + " full movie on YouTube?",
+      answer: "Yes. The verified availability section links to the official full-length YouTube release" + (watchHereSource.publisher ? " from " + watchHereSource.publisher : "") + ", checked " + watchHereSource.lastChecked + ".",
+    }] : []),
+    ...(netflixSource ? [{
+      question: "Is " + title.title + " on Netflix?",
+      answer: "The official Netflix availability link on this page was last checked " + netflixSource.lastChecked + ". Availability can still vary by account or territory.",
     }] : []),
   ];
 
@@ -318,9 +353,19 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     ],
   };
 
+  const currentPlatformSet = new Set(platforms);
   const related = entertainmentTitles
     .filter((item) => item.slug !== title.slug && item.genres.some((genre) => title.genres.includes(genre)))
-    .slice(0, 4);
+    .map((item) => {
+      const sharedGenres = item.genres.filter((genre) => title.genres.includes(genre)).length;
+      const sharedCast = item.cast.filter((name) => title.cast.includes(name)).length;
+      const sharedPlatforms = item.watchLinks.filter((link) => currentPlatformSet.has(link.platform)).length;
+      const recency = Math.max(0, 3 - Math.abs(item.year - title.year));
+      return { item, score: sharedGenres * 4 + sharedCast * 3 + sharedPlatforms * 2 + recency + (item.featured ? 1 : 0) };
+    })
+    .sort((a, b) => b.score - a.score || b.item.year - a.item.year || a.item.title.localeCompare(b.item.title))
+    .slice(0, 4)
+    .map(({ item }) => item);
 
   return (
     <>
@@ -377,7 +422,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Quick facts about " + title.title}
-            summary={title.synopsis}
+            summary={title.title + " is a " + title.year + " Nigerian movie" + (featuredCast.length ? " starring " + featuredCast.slice(0, 3).join(", ") : "") + "." + (platforms.length ? " Current verified availability: " + platforms.join(" / ") + "." : "")}
             facts={[
               { label: "Country / year", value: "Nigeria · " + title.year },
               { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
