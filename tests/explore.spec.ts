@@ -136,10 +136,9 @@ test("Tour guide secondary detail is progressively disclosed", async ({ page }) 
 
 
 test("new Abuja event guides keep venue-aware planning", async ({ page }) => {
-  await page.goto("/explore/all-africa-challenge-trophy-abuja-2026");
-  await expect(page.getByRole("heading", { name: /All Africa Challenge Trophy Abuja 2026/i })).toBeVisible();
-  await expect(page.locator("#place-ibb-golf-club-aact-2026")).toContainText("IBB International Golf & Country Club");
+  await page.goto("/explore/abuja-study-abroad-expo-2026");
+  await expect(page.locator("#place-transcorp-hilton-study-abroad-expo-2026")).toContainText("Transcorp Hilton");
 
-  await page.goto("/explore/african-sdgs-film-festival-abuja-2026");
-  await expect(page.locator("#places")).toContainText("Silverbird Cinemas Abuja");
+  await page.goto("/explore/legacy-building-conference-abuja-2026");
+  await expect(page.locator("#place-novare-central-legacy-conference-2026")).toContainText("Novare Central");
 });
