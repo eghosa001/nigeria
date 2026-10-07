@@ -12,6 +12,28 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "nis-uk-passport-intervention-october-2026",
+    date: "2026-10-07",
+    type: "process",
+    agency: "Nigeria Immigration Service / Nigeria High Commission London",
+    title: "UK Special Passport Intervention runs 6–30 October in four cities",
+    summary: "Phase 2 of the special passport intervention is running in Manchester, London, Cardiff and Aberdeen from 6–30 October 2026. The High Commission lists a £20 standard administrative charge, specific intervention documents and a prepaid Royal Mail return envelope.",
+    sourceLabel: "Nigeria High Commission London — Special Passport Intervention Phase 2",
+    sourceUrl: "https://www.nigeriahc.org.uk/",
+    affectedServices: ["nis-uk-passport-intervention-october-2026", "passport-renewal", "passport-application-abroad"],
+  },
+  {
+    id: "inec-fake-voter-registration-site-october-2026",
+    date: "2026-10-03",
+    type: "clarification",
+    agency: "INEC",
+    title: "INEC warns against fake voter-registration website",
+    summary: "INEC disowned a circulating Blogspot site claiming a new September–October registration window and said the nationwide voter-registration exercise had ended on 26 July 2026. Use only INEC's official domains and current portal notices.",
+    sourceLabel: "INEC public warning reported by TheCable",
+    sourceUrl: "https://www.thecable.ng/inec-alerts-nigerians-to-fake-voter-registration-website-says-exercise-ended-in-july/",
+    affectedServices: ["inec-voter-registration-status-october-2026", "inec-pvc-status"],
+  },
+  {
     id: "nibss-bvn-retrieval-current-fee",
     date: "2026-10-05",
     type: "clarification",
