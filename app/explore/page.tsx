@@ -62,10 +62,12 @@ export default function ExplorePage() {
   const itineraries = exploreGuides
     .filter((guide) => guide.kind === "itinerary")
     .sort((a, b) => a.shortTitle.localeCompare(b.shortTitle));
+  const featuredDestinations = ["yankari-game-reserve","obudu-mountain-resort","erin-ijesha-waterfall","gashaka-gumti-national-park","anambra-heritage-circuit","zuma-rock-gurara-falls","ekiti-nature-circuit","delta-state-travel-guide"]
+    .flatMap((slug) => destinations.filter((guide) => guide.slug === slug));
   const currentEvents = exploreGuides
     .filter((guide) => guide.kind === "event")
     .sort((a, b) => b.lastReviewed.localeCompare(a.lastReviewed) || a.shortTitle.localeCompare(b.shortTitle))
-    .slice(0, 8);
+    .slice(0, 4);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -104,10 +106,34 @@ export default function ExplorePage() {
             <button type="submit">Search places</button>
           </form>
           <div className="minimal-inline-links primary-shortcuts" aria-label="Tour Nigeria shortcuts">
+            <a href="#featured-destinations">Featured destinations</a>
             <a href="#places">{explorePlaces.length} mapped places</a>
             <Link href="/explore/nigeria-landmarks-places-to-visit">Top places in Nigeria</Link>
             <a href="#browse-guides">Browse Nigeria</a>
             <Link href="/explore/events">Events & festivals</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="section tour-featured-section" id="featured-destinations" aria-labelledby="featured-destinations-heading">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Across Nigeria</span>
+              <h2 id="featured-destinations-heading">Choose a destination, not a long list.</h2>
+              <p>Eight starting points spanning nature, heritage and short trips across Nigeria. Browse all destination guides below.</p>
+            </div>
+            <a href="#destinations">All destinations →</a>
+          </div>
+          <div className="home-category-grid compact-category-grid">
+            {featuredDestinations.map((guide) => (
+              <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
+                <span>{guide.region}</span>
+                <strong>{guide.shortTitle}</strong>
+                <small>{guide.summary}</small>
+                <i>Explore destination →</i>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
