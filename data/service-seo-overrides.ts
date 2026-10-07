@@ -60,7 +60,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "pencom-rsa-data-recapture": "Pension Data Recapture Nigeria {year}: RSA Requirements & Steps",
   "pencom-uncredited-contributions": "Uncredited Pension Contributions {year}: How to Resolve",
   "pencom-multiple-rsa-resolution": "Multiple RSA PINs Nigeria {year}: How to Resolve & Merge",
-  "inec-replace-lost-damaged-pvc": "Replace Lost or Damaged PVC {year}: INEC Steps",
+  "inec-replace-lost-damaged-pvc": "Lost PVC Replacement {year}: INEC Official Website & Steps",
   "inec-voter-transfer": "INEC Voter Card Transfer Online {year}: Change Location",
   "nafdac-medical-device-registration": "NAFDAC Medical Device Registration {year}: Requirements & Portal",
   "nafdac-cosmetics-registration": "NAFDAC Cosmetics Registration {year}: Requirements & Portal",
