@@ -38,7 +38,7 @@ test("Tour Nigeria covers all 36 states and FCT", async ({ page }) => {
 
 test("Explore Nigeria hub and city guide are navigable", async ({ page }) => {
   await page.goto("/explore");
-  await expect(page.getByRole("heading", { name: "Find where to go." })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Places to visit in Nigeria." })).toBeVisible();
   await page.getByText("City guides").click();
   await page.locator('a[href="/explore/lagos"]').first().click();
   await expect(page).toHaveURL(/\/explore\/lagos$/);
@@ -154,4 +154,11 @@ test("wave 9 Abuja events reuse verified venue records", async ({ page }) => {
     await expect(page.locator("#" + placeId)).toBeVisible();
     await expect(page.locator("#" + placeId).getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
   }
+});
+
+
+test("Tour hub exposes the national places-to-visit guide without adding page clutter", async ({ page }) => {
+  await page.goto("/explore");
+  await expect(page.getByRole("link", { name: "Top places in Nigeria" })).toHaveAttribute("href", "/explore/nigeria-landmarks-places-to-visit");
+  await expect(page.locator(".explore-place-card")).toHaveCount(6);
 });
