@@ -28,19 +28,35 @@ export const entertainmentGrowthWave2: EntertainmentTitle[] = [
     title: "One String Attached",
     year: 2023,
     format: "movie",
-    genres: ["Romance", "Nollywood"],
+    genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "One String Attached is a 2023 Nigerian romantic movie released by Uchenna Mbunabo TV, starring Uche Montana, Chike Daniels and Caroline Igbe. The official full-length upload runs about 131 minutes.",
-    cast: ["Uche Montana", "Chike Daniels", "Caroline Igbe"],
+    synopsis: "One String Attached is a 2023 Nigerian romantic drama following Belema, Isio, Olivia and the people around them as relationships, expectations and difficult choices pull their lives together in unexpected ways.",
+    cast: ["Uche Montana", "Chike Daniels", "Caroline Igbe", "Jennifer Sam Odeh", "Emmanuel Mac-Den"],
     featuredCast: ["Uche Montana", "Chike Daniels", "Caroline Igbe"],
+    directors: ["Omoruyi Wallz Efosa"],
     runtimeMinutes: 131,
+    featured: true,
+    references: [
+      {
+        label: "NollyMeter — One String Attached",
+        href: "https://www.nollymeter.com/movies/one-string-attached",
+        lastChecked: "2026-10-07",
+        note: "Used to verify the Nigerian release, runtime and principal cast."
+      },
+      {
+        label: "IMDb — One String Attached full cast and crew",
+        href: "https://www.imdb.com/title/tt29596492/fullcredits/",
+        lastChecked: "2026-10-07",
+        note: "Used as a secondary reference for the director and expanded cast credits."
+      }
+    ],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on Uchenna Mbunabo TV",
       href: "https://www.youtube.com/watch?v=JQ7tmUUg4eI",
       access: "full-movie",
-      lastChecked: "2026-10-06",
-      note: "Official full-length upload on Uchenna Mbunabo TV.",
+      lastChecked: "2026-10-07",
+      note: "Verified full-length upload from Uchenna Mbunabo TV.",
       publisher: "Uchenna Mbunabo TV",
       publisherUrl: "https://www.youtube.com/@uchennambunabotv02"
     }]
@@ -52,17 +68,25 @@ export const entertainmentGrowthWave2: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "Stella believes she knows exactly who is right for her brother Benji, until Rose enters his life and refuses to fit Stella's plan. The 2026 film stars Stan Nze and Sona Uche and is available as a full-length release from Blessing Obasi TV.",
-    cast: ["Stan Nze", "Sona Uche"],
-    featuredCast: ["Stan Nze", "Sona Uche"],
+    synopsis: "A sister who believes she has found the ideal partner for her brother has her plans disrupted when another woman enters the picture, turning family matchmaking into a test of personalities and hidden truths.",
+    cast: ["Sonia Uche", "Stan Nze", "Munachi Itumo", "Sona Uche", "Ifeanyi Emmanuel"],
+    featuredCast: ["Sonia Uche", "Stan Nze", "Munachi Itumo"],
+    directors: ["Tobe Nosike"],
     runtimeMinutes: 120,
+    featured: true,
+    references: [{
+      label: "FilmFlux — Our Perfect Match",
+      href: "https://filmflux.app/movie/72b2ef99-5ffc-4eaf-9582-06729e277eca-our-perfect-match",
+      lastChecked: "2026-10-07",
+      note: "Used to verify the 2026 release, two-hour runtime, cast, director and Blessing Obasi TV as the source publisher."
+    }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on Blessing Obasi TV",
       href: "https://www.youtube.com/watch?v=apRTBP_nkxE",
       access: "full-movie",
-      lastChecked: "2026-10-06",
-      note: "Official full-length upload on Blessing Obasi TV.",
+      lastChecked: "2026-10-07",
+      note: "Official full-length YouTube release from Blessing Obasi TV.",
       publisher: "Blessing Obasi TV",
       publisherUrl: "https://www.youtube.com/@blessingobasitv"
     }]
