@@ -144,12 +144,11 @@ test("new Abuja event guides keep venue-aware planning", async ({ page }) => {
 });
 
 
-test("evergreen destination guides reuse verified mapped place records", async ({ page }) => {
+test("wave 9 Abuja events reuse verified venue records", async ({ page }) => {
   for (const [route, placeId] of [
-    ["/explore/lekki-conservation-centre-guide", "place-lekki-conservation-centre"],
-    ["/explore/olumo-rock-visitor-guide", "place-olumo-rock"],
-    ["/explore/jabi-lake-abuja-guide", "place-jabi-lake-abuja"],
-    ["/explore/osun-osogbo-sacred-grove-guide", "place-osun-osogbo-sacred-grove"],
+    ["/explore/10th-afrigeo-symposium-abuja-2026", "place-nasrda-obasanjo-space-centre-afrigeo-2026"],
+    ["/explore/cocoa-xp-dotti-abuja-2026", "place-cafe-one-cocoa-xp-2026"],
+    ["/explore/fashion-fables-runway-africa-abuja-2026", "place-blanc-grande-fashion-fables-2026"],
   ] as const) {
     await page.goto(route);
     await expect(page.locator("#" + placeId)).toBeVisible();
