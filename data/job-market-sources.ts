@@ -23,6 +23,16 @@ export const jobMarketSources: JobMarketSource[] = [
     integration: "external-live",
   },
   {
+    key: "linkedin",
+    name: "LinkedIn Jobs Nigeria",
+    href: "https://ng.linkedin.com/jobs/search",
+    checkedAt: "2026-10-07",
+    observedCount: 2000,
+    countLabel: "2,000+ Nigeria jobs observed",
+    note: "Broad Nigeria job discovery source with company, location, job-type and experience filters. Some actions may require LinkedIn sign-in.",
+    integration: "external-live",
+  },
+  {
     key: "myjobmag",
     name: "MyJobMag Nigeria",
     href: "https://www.myjobmag.com/",
