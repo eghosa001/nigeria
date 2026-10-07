@@ -95,7 +95,7 @@ export default function ExplorePage() {
         <div className="container">
           <span className="eyebrow">Tour Nigeria</span>
           <h1>Places to visit in Nigeria.</h1>
-          <p className="page-intro">Find things to do, landmarks and places to visit by state, city, destination or short trip.</p>
+          <p className="page-intro">Explore {explorePlaces.length} mapped places across Nigeria, plus state, city, destination, event and short-trip guides.</p>
           <form className="section-quick-search" action="/explore#places" method="get" role="search">
             <label>
               <span>Search Tour Nigeria</span>
@@ -104,7 +104,7 @@ export default function ExplorePage() {
             <button type="submit">Search places</button>
           </form>
           <div className="minimal-inline-links primary-shortcuts" aria-label="Tour Nigeria shortcuts">
-            <a href="#places">Places</a>
+            <a href="#places">{explorePlaces.length} mapped places</a>
             <Link href="/explore/nigeria-landmarks-places-to-visit">Top places in Nigeria</Link>
             <a href="#browse-guides">Browse Nigeria</a>
             <Link href="/explore/events">Events & festivals</Link>
@@ -143,7 +143,7 @@ export default function ExplorePage() {
             <div>
               <span className="eyebrow">Places</span>
               <h2>Visit, eat or stay.</h2>
-              <p>Start with a few verified places. Search or filter to narrow the list, then reveal more only when you need them.</p>
+              <p>Browse {explorePlaces.length} verified mapped places across attractions, nature, landmarks, restaurants, hotels and shopping. Twelve are shown at a time so the directory feels useful without becoming one long page.</p>
             </div>
           </div>
           <ExplorePlaceDirectory
