@@ -170,10 +170,16 @@ test("directory supports deep-linked category filters", async ({ page }) => {
   await expect(page.getByRole("heading", { name: /JAMB|WAEC|NECO/i }).first()).toBeVisible();
 });
 
-test("assistant has one H1 and service metadata is search-ready", async ({ page }) => {
+test("assistant stays lightweight and retired JAMB URL resolves", async ({ page }) => {
   await page.goto("/assistant");
   await expect(page.locator("h1")).toHaveCount(1);
-  await expect(page.locator("h1")).toContainText(/what you need to get done/i);
+  await page.getByLabel("What are you trying to do?").fill("renew passport");
+  await page.getByRole("button", { name: /Find my guide/i }).click();
+  await expect(page.locator(".assistant-results").getByRole("link").first()).toBeVisible();
+
+  await page.goto("/services/jamb-direct-entry");
+  await expect(page).toHaveURL(/\/services\/jamb-direct-entry-2026$/);
+
   await page.goto("/services/jamb-direct-entry-2026");
   const description = await page.locator('meta[name="description"]').getAttribute("content");
   expect(description?.length ?? 0).toBeGreaterThan(80);
