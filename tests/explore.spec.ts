@@ -142,3 +142,16 @@ test("new Abuja event guides keep venue-aware planning", async ({ page }) => {
   await page.goto("/explore/legacy-building-conference-abuja-2026");
   await expect(page.locator("#place-novare-central-legacy-conference-2026")).toContainText("Novare Central");
 });
+
+
+test("wave 9 Abuja events reuse verified venue records", async ({ page }) => {
+  for (const [route, placeId] of [
+    ["/explore/10th-afrigeo-symposium-abuja-2026", "place-nasrda-obasanjo-space-centre-afrigeo-2026"],
+    ["/explore/cocoa-xp-dotti-abuja-2026", "place-cafe-one-cocoa-xp-2026"],
+    ["/explore/fashion-fables-runway-africa-abuja-2026", "place-blanc-grande-fashion-fables-2026"],
+  ] as const) {
+    await page.goto(route);
+    await expect(page.locator("#" + placeId)).toBeVisible();
+    await expect(page.locator("#" + placeId).getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
+  }
+});
