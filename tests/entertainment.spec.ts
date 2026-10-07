@@ -332,3 +332,23 @@ test("movie pages expose repeatable high-intent answers across the catalog", asy
   await expect(page.getByText("Is Oversabi Aunty a Nigerian movie?", { exact: true })).toBeVisible();
   await expect(page.getByText("Is Oversabi Aunty on Netflix?", { exact: true })).toBeVisible();
 });
+
+
+test("second GSC movie wave promotes ranking YouTube pages to canonical movie guides", async ({ page }) => {
+  for (const [slug, title, videoId] of [
+    ["for-richer-for-poorer-2026", "For Richer, For Poorer", "CvNE-FaF4EY"],
+    ["lost-connection-2026", "Lost Connection", "DhTG5hSFUvw"],
+    ["the-kings-matchmaker-2026", "The King's Matchmaker", "cQGpDcqQKso"],
+    ["oil-and-water-2025", "Oil and Water", "5Xcj2t3DzfI"],
+    ["unusual-love-2024", "Unusual Love", "ilb-K3vUXp8"],
+  ] as const) {
+    await page.goto("/entertainment/movies/" + slug);
+    await expect(page.getByRole("heading", { level: 1, name: title, exact: true })).toBeVisible();
+    await expect(page).toHaveTitle(/Cast & Full Movie/);
+    await expect(page.getByText("Who is in the " + title + " cast?", { exact: true })).toBeVisible();
+    await expect(page.getByText("Where can I watch " + title + "?", { exact: true })).toBeVisible();
+
+    await page.goto("/entertainment/youtube/" + videoId);
+    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+  }
+});
