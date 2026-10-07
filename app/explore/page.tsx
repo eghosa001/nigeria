@@ -123,7 +123,7 @@ export default function ExplorePage() {
               <h2 id="featured-destinations-heading">Choose a destination, not a long list.</h2>
               <p>Eight starting points spanning nature, heritage and short trips across Nigeria. Browse all destination guides below.</p>
             </div>
-            <a href="#destinations">All destinations →</a>
+            <a href="#browse-guides">Browse all destinations →</a>
           </div>
           <div className="home-category-grid compact-category-grid">
             {featuredDestinations.map((guide) => (
