@@ -131,3 +131,30 @@ test("wave 8 expands verified demand across all four pillars", () => {
   expect(searchQueryOverrides["nafdac-medical-device-registration"]?.requirements).toContain("medical devices");
   expect(searchQueryOverrides["lagos-lasrra-registration"]?.fee).toContain("LASRRA");
 });
+
+
+test("wave 9 deepens all four pillars without creating thin duplicates", () => {
+  for (const slug of ["third-party-risk-2026", "our-perfect-match-2026", "one-string-attached-2023"]) {
+    expect(entertainmentTitles.some((item) => item.slug === slug), slug).toBeTruthy();
+  }
+
+  for (const slug of ["oracle-careers-nigeria", "sap-careers-nigeria", "ibm-careers-nigeria", "google-careers-nigeria"]) {
+    expect(jobOpportunities.some((item) => item.slug === slug && item.status === "career-page"), slug).toBeTruthy();
+  }
+
+  for (const slug of ["lekki-conservation-centre-guide", "olumo-rock-visitor-guide", "jabi-lake-abuja-guide", "osun-osogbo-sacred-grove-guide"]) {
+    expect(exploreGuides.some((guide) => guide.slug === slug), slug).toBeTruthy();
+  }
+
+  const nafdac = growthHubs.find((hub) => hub.slug === "nafdac-registration-nigeria");
+  expect(nafdac?.serviceSlugs).toContain("nafdac-medical-device-registration");
+  expect(nafdac?.serviceSlugs).toContain("nafdac-cosmetics-registration");
+
+  const visaAppointments = growthHubs.find((hub) => hub.slug === "visa-appointments-nigeria");
+  expect(visaAppointments?.serviceSlugs).toContain("vfs-canada-biometrics-appointment-nigeria");
+  expect(visaAppointments?.serviceSlugs).toContain("tlscontact-france-visa-appointment-nigeria");
+
+  const exams = growthHubs.find((hub) => hub.slug === "professional-exams-certifications-nigeria");
+  expect(exams?.serviceSlugs).toContain("aws-certification-exam-scheduling");
+  expect(exams?.serviceSlugs).toContain("british-council-ielts-registration-nigeria");
+});
