@@ -3,16 +3,11 @@
 import { useEffect, useMemo, useState } from "react";
 import type { LiveJobListing, LiveJobsResult } from "@/lib/live-job-feed";
 
-function mergeJobs(current: LiveJobListing[], next: LiveJobListing[]) {
-  const byUrl = new Map(current.map((job) => [job.sourceUrl, job]));
-  for (const job of next) byUrl.set(job.sourceUrl, job);
-  return [...byUrl.values()];
-}
-
 export function LiveJobsDirectory() {
   const [jobs, setJobs] = useState<LiveJobListing[]>([]);
-  const [batch, setBatch] = useState(0);
-  const [maxBatches, setMaxBatches] = useState(3);
+  const [batch, setBatch] = useState(1);
+  const [maxBatches, setMaxBatches] = useState(25);
+  const [approximateAvailable, setApproximateAvailable] = useState(2460);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
   const [query, setQuery] = useState("");
@@ -25,9 +20,11 @@ export function LiveJobsDirectory() {
       const response = await fetch("/api/jobs/live?batch=" + nextBatch, { headers: { Accept: "application/json" } });
       if (!response.ok) throw new Error("Live jobs request failed");
       const result = await response.json() as LiveJobsResult;
-      setJobs((current) => mergeJobs(current, result.items));
+      setJobs(result.items);
       setBatch(result.batch);
       setMaxBatches(result.batches);
+      setApproximateAvailable(result.approximateAvailable);
+      setLocation("all");
     } catch (error) {
       console.error(error);
       setFailed(true);
@@ -57,7 +54,7 @@ export function LiveJobsDirectory() {
     <div className="jobs-directory">
       <div className="jobs-controls" aria-label="Filter live Nigeria jobs">
         <label className="jobs-search">
-          <span>Search live jobs</span>
+          <span>Search this live batch</span>
           <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Role, company or location…" />
         </label>
         <label>
@@ -70,7 +67,8 @@ export function LiveJobsDirectory() {
       </div>
 
       <div className="jobs-results-line" aria-live="polite">
-        <strong>{filtered.length}</strong> live source listings loaded
+        <strong>{filtered.length}</strong> listings in this batch
+        <span> · about {approximateAvailable.toLocaleString("en-NG")} current-month source listings across {maxBatches} batches</span>
         {loading ? <span> · Updating…</span> : null}
       </div>
 
@@ -103,17 +101,21 @@ export function LiveJobsDirectory() {
         </div>
       ) : null}
 
-      {batch < maxBatches ? (
-        <div className="jobs-pagination">
-          <button type="button" onClick={() => void load(batch + 1)} disabled={loading}>
-            {loading ? "Loading…" : "Load about 100 more live jobs"}
-          </button>
-          <span>Batch {Math.max(batch, 1)} of {maxBatches}</span>
-        </div>
-      ) : null}
+      <nav className="jobs-pagination" aria-label="Live jobs batches">
+        <button type="button" onClick={() => void load(Math.max(1, batch - 1))} disabled={loading || batch <= 1}>← Previous 100</button>
+        <label>
+          <span className="sr-only">Live jobs batch</span>
+          <select value={batch} onChange={(event) => void load(Number(event.target.value))} disabled={loading}>
+            {Array.from({ length: maxBatches }, (_, index) => index + 1).map((value) => (
+              <option value={value} key={value}>Batch {value} of {maxBatches}</option>
+            ))}
+          </select>
+        </label>
+        <button type="button" onClick={() => void load(Math.min(maxBatches, batch + 1))} disabled={loading || batch >= maxBatches}>Next 100 →</button>
+      </nav>
 
       <p className="job-muted">
-        Live-market listings are lightweight discovery records, not standalone MyNigeriaGuide SEO pages. MyNigeriaGuide does not copy full job descriptions and does not accept applications for these roles.
+        Live-market listings are paged in roughly 100-job batches so the browser stays fast. Search and location filters apply to the batch currently loaded. These are lightweight discovery records, not standalone MyNigeriaGuide SEO pages; MyNigeriaGuide does not copy full job descriptions or accept applications for these roles.
       </p>
     </div>
   );
