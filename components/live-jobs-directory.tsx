@@ -3,9 +3,12 @@
 import { useEffect, useMemo, useState } from "react";
 import type { LiveJobListing, LiveJobsResult } from "@/lib/live-job-feed";
 
+const PAGE_SIZE = 12;
+
 export function LiveJobsDirectory() {
   const [jobs, setJobs] = useState<LiveJobListing[]>([]);
   const [batch, setBatch] = useState(1);
+  const [visiblePage, setVisiblePage] = useState(1);
   const [maxBatches, setMaxBatches] = useState(25);
   const [approximateAvailable, setApproximateAvailable] = useState(2460);
   const [loading, setLoading] = useState(true);
@@ -22,6 +25,7 @@ export function LiveJobsDirectory() {
       const result = await response.json() as LiveJobsResult;
       setJobs(result.items);
       setBatch(result.batch);
+      setVisiblePage(1);
       setMaxBatches(result.batches);
       setApproximateAvailable(result.approximateAvailable);
       setLocation("all");
@@ -50,16 +54,19 @@ export function LiveJobsDirectory() {
     });
   }, [jobs, query, location]);
 
+  const pages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const visible = filtered.slice((visiblePage - 1) * PAGE_SIZE, visiblePage * PAGE_SIZE);
+
   return (
     <div className="jobs-directory">
       <div className="jobs-controls" aria-label="Filter live Nigeria jobs">
         <label className="jobs-search">
           <span>Search this live batch</span>
-          <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Role, company or location…" />
+          <input value={query} onChange={(event) => { setQuery(event.target.value); setVisiblePage(1); }} placeholder="Role, company or location…" />
         </label>
         <label>
           <span>Location</span>
-          <select value={location} onChange={(event) => setLocation(event.target.value)}>
+          <select value={location} onChange={(event) => { setLocation(event.target.value); setVisiblePage(1); }}>
             <option value="all">All loaded locations</option>
             {locations.map((value) => <option key={value} value={value}>{value}</option>)}
           </select>
@@ -67,14 +74,14 @@ export function LiveJobsDirectory() {
       </div>
 
       <div className="jobs-results-line" aria-live="polite">
-        <strong>{filtered.length}</strong> listings in this batch
+        <strong>{filtered.length}</strong> listings in this batch · showing {visible.length ? (visiblePage - 1) * PAGE_SIZE + 1 : 0}–{(visiblePage - 1) * PAGE_SIZE + visible.length}
         <span> · about {approximateAvailable.toLocaleString("en-NG")} current-month source listings across {maxBatches} batches</span>
         {loading ? <span> · Updating…</span> : null}
       </div>
 
       {jobs.length ? (
         <div className="jobs-card-grid">
-          {filtered.map((job) => (
+          {visible.map((job) => (
             <article className="job-card" key={job.sourceUrl}>
               <div className="job-card-top">
                 <span className="job-status job-status-open">Source listing</span>
@@ -83,7 +90,7 @@ export function LiveJobsDirectory() {
               <div className="job-card-body">
                 <p className="job-organisation">{job.company}</p>
                 <h3>{job.title}</h3>
-                <p>Current Nigeria vacancy discovered from {job.sourceName}. Open the source listing to review the full role, deadline and application method before submitting anything.</p>
+                <p>Found via {job.sourceName}. Check eligibility, deadline and application instructions at the source.</p>
               </div>
               <div className="job-card-footer">
                 <span>{job.postedAt ? "Posted " + new Date(job.postedAt + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }) : "Current-month listing"}</span>
@@ -101,6 +108,14 @@ export function LiveJobsDirectory() {
         </div>
       ) : null}
 
+      {pages > 1 ? (
+        <nav className="jobs-pagination" aria-label="Page through jobs in this batch">
+          <button type="button" disabled={visiblePage <= 1} onClick={() => setVisiblePage((page) => Math.max(1, page - 1))}>← Previous</button>
+          <span>Page {visiblePage} of {pages}</span>
+          <button type="button" disabled={visiblePage >= pages} onClick={() => setVisiblePage((page) => Math.min(pages, page + 1))}>Next →</button>
+        </nav>
+      ) : null}
+
       <nav className="jobs-pagination" aria-label="Live jobs batches">
         <button type="button" onClick={() => void load(Math.max(1, batch - 1))} disabled={loading || batch <= 1}>← Previous 100</button>
         <label>
@@ -115,7 +130,7 @@ export function LiveJobsDirectory() {
       </nav>
 
       <p className="job-muted">
-        Live-market listings are paged in roughly 100-job batches so the browser stays fast. Search and location filters apply to the batch currently loaded. These are lightweight discovery records, not standalone MyNigeriaGuide SEO pages; MyNigeriaGuide does not copy full job descriptions or accept applications for these roles.
+        Only 12 listings appear per screen; use the page buttons to see the rest of each 100-job source batch. Search and location filters apply to the batch currently loaded. These are lightweight discovery records, not standalone MyNigeriaGuide SEO pages; MyNigeriaGuide does not copy full job descriptions or accept applications for these roles.
       </p>
     </div>
   );

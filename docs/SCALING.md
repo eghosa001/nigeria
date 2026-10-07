@@ -4,6 +4,16 @@ This repository is being built for the **Million-Search Expansion**: broad, high
 
 The numbers below are **architecture capacity and opportunity targets**, not traffic promises or publishing quotas. The site should be able to support this scale, but each pillar should only grow as far as real search demand and content quality justify.
 
+## Site-wide compact page and quality rule
+
+**Show less at once, not less useful information.** Every pillar landing page must remain scannable on a phone: lead with search and the most useful current actions; show roughly 3–8 featured cards and 8–12 directory records per visible page. Older items, long directories, market-source explanations and secondary filters belong behind pagination, focused category links or native expandable sections. Do not load or visibly stack 100 job cards at once. Avoid duplicate search forms, repeated explanation paragraphs and empty spacing.
+
+Destination discovery must show genuinely different parts of Nigeria, not just the same few cities. Use existing canonical state/city/destination guides and mapped place records before creating a new URL. Every added attraction needs a credible primary source, specific place and state, usable maps/access context, honest variable cost and opening information, checked date, and an internal route to the appropriate guide. Do not fabricate visitor counts, prices, opening hours or trip safety. Check current travel/security advice.
+
+Social trends are discovery leads, **not proof**. Verify a trend's factual claims and freshness independently; surface the strongest few useful topics on the homepage using existing canonical pages first. Expire temporary trends and avoid copying unverified social posts into destination pages.
+
+This page-length rule applies to **Jobs, Tour, Movies and Services** including mobile layouts and detail pages. Keep the full useful SEO information available via details/related pages and semantic links rather than truncating source-backed answers.
+
 ## Target operating scale
 
 The source of truth is `config/scale-targets.json`.
