@@ -66,6 +66,19 @@ Keep tests short and behavior-specific. Do not rerun passing unchanged suites.
 
 Agents must not remove or relax these protections. Any owner-approved broad automatic exception must be explicitly allowlisted by the guard; agents may not create new exceptions.
 
+
+## Homepage social-trend rule
+
+This is a standing owner instruction for MyNigeriaGuide discovery and homepage curation.
+
+- Verified social-media trends relevant to Movies & Entertainment, Services, Tour Nigeria, or Jobs & Careers must be considered for the homepage `Trending now` feed while they are genuinely current and useful.
+- Prefer the strongest few trends only. The homepage must stay compact, readable, and high quality rather than becoming a chronological news feed.
+- Reuse the existing canonical MyNigeriaGuide page whenever one already covers the topic or search intent. Never create a duplicate or near-duplicate page merely to feature a trend on the homepage.
+- A trend must have current evidence from public social/trend signals and reliable factual verification before it is featured.
+- Temporary trends must have a freshness/expiry boundary and must be removed or replaced when stale, expired, disproven, or no longer meaningful.
+- Homepage prominence does not relax the publication gate: thin, weak, speculative, unverifiable, expired, or irrelevant content must not be featured.
+- When a trend is already covered by a strong page, update that canonical page and point the homepage trend card to it.
+
 ## Stop rule
 
 Stop when the requested behavior exists and the smallest directly relevant validation passes. Production verification is performed only when deployment is part of the task.
