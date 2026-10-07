@@ -1,3 +1,4 @@
+import { jobGrowthWave7 } from "@/lib/job-growth-wave-7";
 import { jobGrowthWave6 } from "@/lib/job-growth-wave-6";
 import { jobGrowthWave5 } from "@/lib/job-growth-wave-5";
 import { jobScaleWave } from "@/lib/job-scale-wave";
@@ -113,6 +114,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...jobGrowthWave7,
   ...jobGrowthWave6,
   ...jobGrowthWave5,
   ...jobGrowthWave,
