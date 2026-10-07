@@ -21,8 +21,11 @@ export type LiveJobsResult = {
 const SOURCE = "MyJobMag";
 const SOURCE_ROOT = "https://www.myjobmag.com/jobs-by-date/this-month";
 const PAGES_PER_BATCH = 5;
-const MAX_BATCHES = 3;
-const APPROXIMATE_AVAILABLE = PAGES_PER_BATCH * MAX_BATCHES * 20;
+// MyJobMag's October 2026 archive currently reaches URL page /122.
+// Source page 1 is the root URL, so 123 fetchable source pages cover root + /1…/122.
+const SOURCE_PAGE_LIMIT = 123;
+export const LIVE_JOB_APPROXIMATE_CAPACITY = SOURCE_PAGE_LIMIT * 20;
+const MAX_BATCHES = Math.ceil(SOURCE_PAGE_LIMIT / PAGES_PER_BATCH);
 
 const MONTHS: Record<string, string> = {
   january: "01", february: "02", march: "03", april: "04", may: "05", june: "06",
@@ -130,7 +133,8 @@ async function fetchSourcePage(sourcePage: number) {
 export async function getLiveNigeriaJobs(batch = 1): Promise<LiveJobsResult> {
   const safeBatch = Math.min(MAX_BATCHES, Math.max(1, Math.trunc(batch) || 1));
   const start = (safeBatch - 1) * PAGES_PER_BATCH + 1;
-  const pages = Array.from({ length: PAGES_PER_BATCH }, (_, index) => start + index);
+  const pages = Array.from({ length: PAGES_PER_BATCH }, (_, index) => start + index)
+    .filter((sourcePage) => sourcePage <= SOURCE_PAGE_LIMIT);
 
   const settled = await Promise.allSettled(pages.map(fetchSourcePage));
   const combined = settled.flatMap((result) => result.status === "fulfilled" ? result.value : []);
@@ -147,7 +151,7 @@ export async function getLiveNigeriaJobs(batch = 1): Promise<LiveJobsResult> {
     items,
     batch: safeBatch,
     batches: MAX_BATCHES,
-    approximateAvailable: APPROXIMATE_AVAILABLE,
+    approximateAvailable: LIVE_JOB_APPROXIMATE_CAPACITY,
     checkedAt: new Date().toISOString(),
     sourceName: SOURCE,
     sourcePageCount: settled.filter((result) => result.status === "fulfilled").length,
