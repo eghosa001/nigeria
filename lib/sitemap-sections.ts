@@ -6,7 +6,6 @@ import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { exploreGuides } from "@/lib/explore";
-import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
 import { indexableYouTubeChannelHubs } from "@/lib/youtube-channel-hubs";
 import { growthHubs } from "@/lib/growth-hubs";
@@ -38,10 +37,6 @@ export type SitemapShard = {
   lastModified: string;
   count: number;
 };
-
-function getYouTubeSitemapPageCount() {
-  return Math.max(1, Math.ceil(youtubeMovieLibrary.length / YOUTUBE_CATALOG_PAGE_SIZE));
-}
 
 function latestDate(values: string[]) {
   return values.reduce((latest, value) => value > latest ? value : latest, "");
@@ -209,11 +204,6 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   }
 
   const youtubeModified = latestDate(youtubeMovieLibrary.map((movie) => movie.lastChecked)) || movieCatalogModified;
-  const pagination = Array.from({ length: Math.max(0, getYouTubeSitemapPageCount() - 1) }, (_, index) => ({
-    url: base + "/entertainment/youtube/page/" + (index + 2),
-    lastModified: youtubeModified,
-  }));
-
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     { url: base + "/entertainment/youtube/channels", lastModified: youtubeModified },
@@ -221,7 +211,6 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       url: base + "/entertainment/youtube/channels/" + hub.channel.slug,
       lastModified: hub.latestChecked || youtubeModified,
     })),
-    ...pagination,
     ...indexableYouTubeMovies
       .filter((movie) => movie.source !== "curated")
       .map((movie) => ({
