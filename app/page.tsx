@@ -3,6 +3,7 @@ import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
 import { publicServiceListings } from "@/lib/data";
+import { getCurrentHomeSocialTrends } from "@/data/home-social-trends";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
 import { releaseItems } from "@/lib/entertainment-extras";
@@ -32,6 +33,7 @@ const quickServices = [
 ];
 
 export default function HomePage() {
+  const socialTrends = getCurrentHomeSocialTrends();
   const releaseByTitle = new Map(
     releaseItems.map((item) => [item.title.trim().toLowerCase(), item] as const),
   );
@@ -110,27 +112,17 @@ export default function HomePage() {
           <div className="home-trending-heading">
             <div>
               <span className="eyebrow">Trending now</span>
-              <h2 id="home-trending-title">Fresh things people are checking.</h2>
+              <h2 id="home-trending-title">Trending across Nigeria right now.</h2>
             </div>
             <Link href="/latest">See all latest updates →</Link>
           </div>
           <div className="home-trending-links">
-            <Link href="/entertainment/movies/october-2026">
-              <span>Movies</span>
-              <strong>October 2026 Nigerian releases</strong>
-            </Link>
-            <Link href="/services/jamb-caps">
-              <span>Services</span>
-              <strong>JAMB 2026/27 CAPS admissions</strong>
-            </Link>
-            <Link href="/explore/detty-december-lagos-2026">
-              <span>Tour Nigeria</span>
-              <strong>Detty December Lagos 2026</strong>
-            </Link>
-            <Link href="/jobs/deadlines">
-              <span>Jobs & Careers</span>
-              <strong>Applications open now</strong>
-            </Link>
+            {socialTrends.map((trend) => (
+              <Link href={trend.href} key={trend.href}>
+                <span>{trend.pillar}</span>
+                <strong>{trend.title}</strong>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
