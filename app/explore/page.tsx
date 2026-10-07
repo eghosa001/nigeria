@@ -47,8 +47,8 @@ const stateGuideLinks = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "Explore Nigeria",
-  description: "Explore all 36 Nigerian states and the FCT with city guides, attractions, hotels, restaurants, events and practical trip-planning guidance.",
+  title: "Places to Visit in Nigeria: Things to Do, Cities & Attractions",
+  description: "Find places to visit in Nigeria across all 36 states and the FCT, with city guides, attractions, landmarks, hotels, restaurants, events and practical things-to-do planning.",
   alternates: { canonical: "/explore" },
 };
 
@@ -94,8 +94,8 @@ export default function ExplorePage() {
       <section className="section page-top minimal-section-hero tour-compact-hero">
         <div className="container">
           <span className="eyebrow">Tour Nigeria</span>
-          <h1>Find where to go.</h1>
-          <p className="page-intro">Search places directly, or browse Nigeria by state, city, destination or short trip.</p>
+          <h1>Places to visit in Nigeria.</h1>
+          <p className="page-intro">Find things to do, landmarks and places to visit by state, city, destination or short trip.</p>
           <form className="section-quick-search" action="/explore#places" method="get" role="search">
             <label>
               <span>Search Tour Nigeria</span>
@@ -105,6 +105,7 @@ export default function ExplorePage() {
           </form>
           <div className="minimal-inline-links primary-shortcuts" aria-label="Tour Nigeria shortcuts">
             <a href="#places">Places</a>
+            <Link href="/explore/nigeria-landmarks-places-to-visit">Top places in Nigeria</Link>
             <a href="#browse-guides">Browse Nigeria</a>
             <Link href="/explore/events">Events & festivals</Link>
           </div>
