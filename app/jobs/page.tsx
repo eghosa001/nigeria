@@ -34,8 +34,8 @@ export default function JobsPage() {
       const byDeadline = deadlineA.localeCompare(deadlineB);
       return byDeadline || b.verifiedAt.localeCompare(a.verifiedAt);
     });
-  const openPreview = openOpportunities.slice(0, 6);
-  const initialDirectoryResult = queryJobDirectory({ page: 1 });
+  const openPreview = openOpportunities.slice(0, 3);
+  const initialDirectoryResult = queryJobDirectory({ page: 1, pageSize: 12 });
 
   const collectionLd = {
     "@context": "https://schema.org",
@@ -93,6 +93,9 @@ export default function JobsPage() {
 
       <section className="section jobs-market-section" aria-labelledby="jobs-market-heading">
         <div className="container">
+          <details className="browse-disclosure jobs-browse-more">
+            <summary>Explore wider Nigeria job-market sources</summary>
+            <div className="jobs-browse-more-content">
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Nigeria job market</span>
@@ -123,6 +126,8 @@ export default function JobsPage() {
           <p className="job-muted">
             Market-source links are discovery aids, not MyNigeriaGuide endorsements of every advert on those platforms. Individual jobs only become MyNigeriaGuide records after source, freshness and duplicate checks.
           </p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -132,7 +137,7 @@ export default function JobsPage() {
             <div>
               <span className="eyebrow">Live Nigeria vacancies</span>
               <h2 id="live-jobs-heading">Thousands of current roles without thousands of thin SEO pages.</h2>
-              <p>Browse roughly 2,460 current-month source listings in fast 100-job batches, then open the source page to review the full vacancy and application method. The deeply verified MyNigeriaGuide guides remain a separate quality-controlled layer below.</p>
+              <p>Browse roughly 2,460 current-month source listings in short pages within fast-loading batches, then open the source page to review the full vacancy and application method. The deeply verified MyNigeriaGuide guides remain a separate quality-controlled layer below.</p>
             </div>
           </div>
           <LiveJobsDirectory />
@@ -309,7 +314,7 @@ export default function JobsPage() {
           </div>
 
           <div className="jobs-status-row">
-            {governmentOpportunities.slice(0, 8).map((item) => (
+            {governmentOpportunities.slice(0, 3).map((item) => (
               <Link key={item.slug} href={"/jobs/" + item.slug} className="jobs-status-card">
                 <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                 <strong>{item.organization}</strong>
@@ -317,7 +322,7 @@ export default function JobsPage() {
               </Link>
             ))}
           </div>
-          {governmentOpportunities.length > 8 ? (
+          {governmentOpportunities.length > 3 ? (
             <p className="job-muted"><Link href="/jobs/government">View all {governmentOpportunities.length} government recruitment guides →</Link></p>
           ) : null}
         </div>
