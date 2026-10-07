@@ -1,17 +1,17 @@
 export const exploreGrowthLinksWave4: Record<string, readonly string[]> = {
-  "festmint-abuja-2026": [
-    "fct-exhibition-pavilion-food-fair-2026",
-    "abuja-national-mosque",
-    "millennium-park-abuja"
-  ],
-  "african-sdgs-film-festival-abuja-2026": [
-    "silverbird-cinemas-abuja-film-festival-2026",
-    "abuja-national-mosque",
-    "millennium-park-abuja"
-  ],
-  "all-africa-challenge-trophy-abuja-2026": [
-    "ibb-golf-club-aact-2026",
+  "abuja-study-abroad-expo-2026": [
+    "transcorp-hilton-study-abroad-expo-2026",
     "millennium-park-abuja",
-    "blucabana-abuja"
+    "abuja-national-mosque"
+  ],
+  "legacy-building-conference-abuja-2026": [
+    "novare-central-legacy-conference-2026",
+    "abuja-arts-crafts-village",
+    "millennium-park-abuja"
+  ],
+  "abuja-international-afrojazz-festival-2026": [
+    "millennium-park-abuja",
+    "jabi-lake-abuja",
+    "abuja-arts-crafts-village"
   ]
 };
