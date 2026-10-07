@@ -10,6 +10,7 @@ import { indexableJobEmployers } from "@/lib/job-employers";
 import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen } from "@/lib/job-runtime";
 import { queryJobDirectory } from "@/lib/job-query";
 import { getSiteUrl } from "@/lib/site";
+import { JOBS_LIVE_INVENTORY_TARGET, jobMarketSources, largestObservedNigeriaJobMarketCount } from "@/data/job-market-sources";
 
 export const metadata: Metadata = {
   title: "Jobs in Nigeria: Government Recruitment & Verified Career Opportunities",
@@ -21,6 +22,7 @@ export const revalidate = 3600;
 
 export default function JobsPage() {
   const base = getSiteUrl();
+  const largestObservedMarketCount = largestObservedNigeriaJobMarketCount();
   const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
   const openOpportunities = jobOpportunities
@@ -85,6 +87,41 @@ export default function JobsPage() {
             <div><b>{careerPages}</b><small>official employer and organisation career pathways checked</small></div>
             <div><b>₦0</b><small>fees collected by MyNigeriaGuide</small></div>
           </aside>
+        </div>
+      </section>
+
+      <section className="section jobs-market-section" aria-labelledby="jobs-market-heading">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Nigeria job market</span>
+              <h2 id="jobs-market-heading">The market is much larger than our curated guide set.</h2>
+              <p>
+                MyNigeriaGuide currently keeps {jobOpportunities.length} deeply verified employer, recruitment and programme records.
+                External Nigeria job markets are much larger: the biggest currently observed source below showed {largestObservedMarketCount.toLocaleString("en-NG")} live listings.
+                Our next inventory floor is {JOBS_LIVE_INVENTORY_TARGET.toLocaleString("en-NG")} current jobs, ingested through approved feeds or employer sources without turning unverified adverts into SEO pages.
+              </p>
+            </div>
+          </div>
+          <div className="jobs-path-grid">
+            {jobMarketSources.map((source) => (
+              <a className="jobs-path-card" href={source.href} target="_blank" rel="noreferrer" key={source.key}>
+                <span>{source.integration === "feed-eligible" ? "Feed-capable source" : "Live market source"}</span>
+                <strong>{source.name}</strong>
+                <p>{source.note}</p>
+                <b>{source.countLabel} · checked {source.checkedAt} ↗</b>
+              </a>
+            ))}
+            <Link href="#opportunities" className="jobs-path-card jobs-path-card-dark">
+              <span>MyNigeriaGuide verified</span>
+              <strong>{jobOpportunities.length} curated pathways</strong>
+              <p>These are the records already checked deeply enough to explain requirements, status and the official route.</p>
+              <b>Search the verified directory →</b>
+            </Link>
+          </div>
+          <p className="job-muted">
+            Market-source links are discovery aids, not MyNigeriaGuide endorsements of every advert on those platforms. Individual jobs only become MyNigeriaGuide records after source, freshness and duplicate checks.
+          </p>
         </div>
       </section>
 
