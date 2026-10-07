@@ -1,6 +1,7 @@
 import { exploreGrowthWaveSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06";
 import { exploreGrowthPlaces } from "@/lib/explore-growth-places-2026-10-06";
 import { exploreGrowthPlacesWave9 } from "@/lib/explore-growth-places-wave-9";
+import { exploreGrowthPlacesWave8 } from "@/lib/explore-growth-places-wave-8";
 import { exploreGrowthPlacesWave7 } from "@/lib/explore-growth-places-wave-7";
 import { exploreGrowthPlacesWave6 } from "@/lib/explore-growth-places-wave-6";
 import { exploreGrowthPlacesWave5 } from "@/lib/explore-growth-places-wave-5";
@@ -35,6 +36,7 @@ export type ExplorePlace = {
 
 export const explorePlaces: ExplorePlace[] = [
   ...exploreGrowthPlacesWave9,
+  ...exploreGrowthPlacesWave8,
   ...exploreGrowthPlacesWave7,
   ...exploreGrowthPlacesWave6,
   ...exploreGrowthPlacesWave5,
