@@ -350,6 +350,12 @@ export const categoryFaqs: Record<string, CategoryFaq[]> = {
       relatedSlugs: ["bvn-retrieval"]
     },
     {
+      question: "Is there a NIBSS BVN retrieval portal online?",
+      answer: "NIBSS currently publishes *565*0# as its customer BVN retrieval method. Dial it from the phone number registered to the BVN; NIBSS lists a ₦20 service fee. If that registered line is unavailable, use your bank or the institution managing the BVN record instead of entering identity details into an unofficial lookup site.",
+      source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
+      relatedSlugs: ["bvn-retrieval"]
+    },
+    {
       question: "How can I check whether a recent NIP bank transfer succeeded?",
       answer: "NIBSS provides the *565*5# NIP Transaction Tracker for transfers completed within the previous 48 hours. Use the sender's registered phone number, account number and transaction amount to check the status.",
       source: { label: "NIBSS 565 USSD validation services", url: "https://nibss-plc.com.ng/ussd-validation-services/" },
