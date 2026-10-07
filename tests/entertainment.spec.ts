@@ -363,3 +363,15 @@ test("latest GSC movie promotions consolidate YouTube routes", async ({ page }) 
     await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
   }
 });
+
+
+test("wave 9 GSC movie URLs consolidate into canonical title pages", async ({ page }) => {
+  for (const [videoId, slug] of [
+    ["zxvtMba4MYE", "third-party-risk-2026"],
+    ["apRTBP_nkxE", "our-perfect-match-2026"],
+    ["JQ7tmUUg4eI", "one-string-attached-2023"],
+  ] as const) {
+    await page.goto("/entertainment/youtube/" + videoId);
+    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+  }
+});
