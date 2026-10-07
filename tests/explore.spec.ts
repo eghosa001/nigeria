@@ -142,3 +142,17 @@ test("new Abuja event guides keep venue-aware planning", async ({ page }) => {
   await page.goto("/explore/legacy-building-conference-abuja-2026");
   await expect(page.locator("#place-novare-central-legacy-conference-2026")).toContainText("Novare Central");
 });
+
+
+test("evergreen destination guides reuse verified mapped place records", async ({ page }) => {
+  for (const [route, placeId] of [
+    ["/explore/lekki-conservation-centre-guide", "place-lekki-conservation-centre"],
+    ["/explore/olumo-rock-visitor-guide", "place-olumo-rock"],
+    ["/explore/jabi-lake-abuja-guide", "place-jabi-lake-abuja"],
+    ["/explore/osun-osogbo-sacred-grove-guide", "place-osun-osogbo-sacred-grove"],
+  ] as const) {
+    await page.goto(route);
+    await expect(page.locator("#" + placeId)).toBeVisible();
+    await expect(page.locator("#" + placeId).getByRole("link", { name: /Open in Google Maps/ })).toHaveAttribute("href", /google\.com\/maps\/search/);
+  }
+});
