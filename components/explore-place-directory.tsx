@@ -32,7 +32,7 @@ function googleMapsUrl(place: ExploreDirectoryPlace) {
   return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
 }
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 12;
 
 export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirectoryPlace[]; guides: GuideSummary[] }) {
   const [query, setQuery] = useState("");

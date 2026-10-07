@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "purpose": "near-term-market-depth",
+  "current_baseline_checked_2026_10_07": {
+    "tour_mapped_places": 181,
+    "jobs_verified_internal_records": 230
+  },
+  "targets": {
+    "tour_mapped_places_minimum": 1000,
+    "tour_minimum_places_per_state_or_fct": 15,
+    "jobs_live_records_minimum": 2500,
+    "jobs_live_source_diversity_minimum": 3
+  },
+  "rules": {
+    "tour": [
+      "expand all 36 states and the FCT, not only Lagos and Abuja",
+      "keep mapped place records useful: name, location/address, type, cost guidance, freshness and source",
+      "avoid duplicate venues or near-identical attraction pages",
+      "restaurants, hotels, landmarks, nature, attractions and shopping should all be represented where evidence supports them"
+    ],
+    "jobs": [
+      "2500 is a live-inventory floor, not a requirement to create 2500 indexable SEO pages",
+      "use approved feeds, employer sources or public integration routes rather than brittle unauthorized scraping",
+      "deduplicate by source identity plus employer/title/location signals",
+      "expire stale listings automatically",
+      "only publish indexable detail pages after source and freshness checks",
+      "keep curated employer/programme guides separate from high-churn live vacancies"
+    ]
+  }
+}
