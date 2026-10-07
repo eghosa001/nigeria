@@ -2,111 +2,84 @@ import type { ExploreGuide } from "@/lib/explore";
 
 export const exploreGrowthWave5: ExploreGuide[] = [
   {
-    slug: "lekki-conservation-centre-guide",
-    title: "Lekki Conservation Centre Guide: Visit, Cost & Nearby Stops",
-    shortTitle: "Lekki Conservation Centre",
-    kind: "destination",
-    region: "Lagos",
-    summary: "Plan a visit to Lekki Conservation Centre on the Lekki-Epe corridor, with current access checks, practical timing advice and nearby culture and food options already mapped on MyNigeriaGuide.",
-    intro: [
-      "Lekki Conservation Centre is a nature-focused stop on the Lekki-Epe corridor, combining forest walks and elevated walkways with a quieter break from the surrounding city.",
-      "Admission and activity charges can change, so this guide does not freeze an old ticket price. Confirm same-day access and current charges with the Nigerian Conservation Foundation before setting out."
-    ],
-    bestFor: ["Nature", "Family outings", "Outdoor walks", "First-time Lagos visitors"],
-    highlights: [
-      { name: "Urban nature on the Lekki axis", detail: "The centre gives visitors a forest and wetland experience without leaving Lagos's main Lekki corridor." },
-      { name: "Elevated walkways", detail: "Walkway sections are a signature part of the visit, subject to current access and weather conditions." },
-      { name: "Easy pairing with nearby culture", detail: "Nike Art Gallery and other Lekki stops can be combined without turning the day into a cross-city itinerary." },
-      { name: "Source-backed visitor planning", detail: "MyNigeriaGuide keeps the location and visitor guidance tied to the Nigerian Conservation Foundation rather than copying an old ticket listing." }
-    ],
-    planning: [
-      { label: "Confirm admission before travel", detail: "Check the Nigerian Conservation Foundation for current access, opening information and any activity restrictions." },
-      { label: "Go in suitable weather", detail: "Outdoor paths and elevated sections are better planned for daylight and reasonable weather." },
-      { label: "Wear practical footwear", detail: "Choose comfortable shoes for walking and avoid treating the visit like an indoor attraction." },
-      { label: "Keep the day geographically compact", detail: "Pair the centre with Lekki-area stops such as Nike Art Gallery instead of adding distant mainland destinations." }
-    ],
-    source: { label: "Nigerian Conservation Foundation", href: "https://ncfnigeria.org/" },
-    lastReviewed: "2026-10-07"
-  },
-  {
-    slug: "olumo-rock-visitor-guide",
-    title: "Olumo Rock Visitor Guide: Abeokuta Trip, Access & Nearby Places",
-    shortTitle: "Olumo Rock",
-    kind: "destination",
-    region: "Ogun",
-    summary: "Plan an Olumo Rock visit in Abeokuta with current access checks, realistic day-trip planning and nearby heritage stops such as Itoku Adire Market and central Abeokuta landmarks.",
-    intro: [
-      "Olumo Rock is one of Abeokuta's defining landmarks and can anchor either a focused day trip or a wider overnight visit to Ogun State's capital.",
-      "Entrance and guide charges can change, so confirm the current visitor arrangement through the Olumo Rock Tourist Complex before travelling rather than relying on old social-media prices."
-    ],
-    bestFor: ["Heritage", "Viewpoints", "Day trips", "Abeokuta first visits"],
-    highlights: [
-      { name: "Abeokuta landmark", detail: "The rock is closely tied to the city's identity and gives visitors a strong geographic and historical anchor for the rest of the trip." },
-      { name: "City views", detail: "The elevated sections make the site useful for broad views across Abeokuta when access conditions permit." },
-      { name: "Pairs with adire and heritage stops", detail: "Itoku Adire Market and central Abeokuta landmarks can be combined into one practical heritage route." },
-      { name: "Works as a Lagos-side road trip", detail: "Visitors coming from Lagos can plan Olumo Rock as a dedicated day trip, while leaving enough time for road traffic and site access." }
-    ],
-    planning: [
-      { label: "Confirm current admission", detail: "Check the official tourist-complex source before departure for current visitor charges and access arrangements." },
-      { label: "Allow road-trip buffer", detail: "Traffic and road conditions can make a nominal day trip longer than expected, especially when starting from Lagos." },
-      { label: "Wear suitable footwear", detail: "Choose shoes appropriate for uneven surfaces and avoid rushing climbs or exposed sections." },
-      { label: "Add nearby stops selectively", detail: "Itoku, the Alake's Palace area and Centenary Hall fit the same Abeokuta heritage day better than distant detours." }
-    ],
-    source: { label: "Olumo Rock Tourist Complex — official site", href: "https://olumorock.ng/" },
-    lastReviewed: "2026-10-07"
-  },
-  {
-    slug: "jabi-lake-abuja-guide",
-    title: "Jabi Lake Abuja Guide: Waterfront Visit, Activities & Nearby Stops",
-    shortTitle: "Jabi Lake",
-    kind: "destination",
+    slug: "10th-afrigeo-symposium-abuja-2026",
+    title: "10th AfriGEO Symposium Abuja 2026: Dates, Venue & Planning",
+    shortTitle: "10th AfriGEO Symposium",
+    kind: "event",
     region: "Federal Capital Territory",
-    summary: "Plan a Jabi Lake visit in Abuja with waterfront activity cautions, operator-dependent pricing and nearby city options without assuming every boating or leisure service is always available.",
+    summary: "The 10th AfriGEO Symposium runs 5–8 October 2026 at NASRDA's Obasanjo Space Centre in Abuja, bringing government, research, industry and development partners together around Earth observation for climate resilience, disaster risk reduction and sustainable development.",
     intro: [
-      "Jabi Lake is an urban waterfront area in Abuja used for recreation, dining and, when current operators are active, water-based activities.",
-      "There is no single fixed price for the whole lake area. Venue access and paid activities depend on the operator, so confirm pricing, life jackets, weather and return arrangements before boarding any boat or paying for an activity."
+      "The 10th AfriGEO Symposium is scheduled for 5 to 8 October 2026 at the NASRDA Obasanjo Space Centre on Umaru Musa Yar'Adua Expressway in Abuja. Sessions run from 8:00 AM to 5:00 PM each day.",
+      "Hosted by Nigeria's National Space Research and Development Agency with the AfriGEO Secretariat, the symposium uses the theme Earth Observation for a Resilient Africa. It is a professional event and registration is required, so confirm the live registration and programme before travelling."
     ],
-    bestFor: ["Waterfront leisure", "Relaxed Abuja outings", "Couples", "City breaks"],
+    bestFor: ["Earth observation", "Climate resilience", "Research", "Geospatial technology"],
     highlights: [
-      { name: "Central urban waterfront", detail: "Jabi offers a lake setting without requiring a long trip outside Abuja." },
-      { name: "Activity choice varies", detail: "Boat rides and other paid activities are operator-dependent rather than guaranteed every day." },
-      { name: "Easy to combine with city stops", detail: "The Jabi/Wuye axis can be paired with dining or shopping without crossing the entire city." },
-      { name: "Useful sunset-period option", detail: "The waterfront can work well later in the day, while water activity itself should still follow daylight, weather and safety conditions." }
+      { name: "5–8 October 2026", detail: "The published programme runs across four days from 8:00 AM to 5:00 PM." },
+      { name: "NASRDA Obasanjo Space Centre", detail: "The listed venue is on Umaru Musa Yar'Adua Expressway in Abuja." },
+      { name: "Earth Observation for a Resilient Africa", detail: "Sessions focus on satellite data for climate adaptation, disaster risk reduction and sustainable development." },
+      { name: "Professional audience", detail: "The event is aimed at government, researchers, industry and development partners rather than a general public festival." }
     ],
     planning: [
-      { label: "Confirm the exact operator", detail: "Ask who is providing the activity, what the total price covers and how the return trip works before paying." },
-      { label: "Check life jackets", detail: "For any boat activity, confirm that suitable life jackets are provided and used." },
-      { label: "Watch the weather", detail: "Avoid assuming a booked or advertised water activity will run safely in poor conditions." },
-      { label: "Keep valuables secure", detail: "Use a practical bag or waterproof protection around the waterfront and avoid carrying unnecessary valuables onto small boats." }
+      { label: "Register before travelling", detail: "Use the official AfriGEO event route because registration is required for participation." },
+      { label: "Check the day's agenda", detail: "Choose the sessions most relevant to your work and reconfirm any programme changes before leaving." },
+      { label: "Allow Airport Road travel time", detail: "The venue sits on the Umaru Musa Yar'Adua Expressway corridor, so leave a realistic traffic buffer." },
+      { label: "Bring professional identification", detail: "Keep your registration confirmation and any identification requested by the organiser available for venue access." }
     ],
-    source: { label: "Visit Abuja — About Abuja", href: "https://www.visitabuja.org/about-abuja/" },
+    source: { label: "Visit Abuja — 10th AfriGEO Symposium", href: "https://www.visitabuja.org/event/10th-afrigeo-symposium/" },
     lastReviewed: "2026-10-07"
   },
   {
-    slug: "osun-osogbo-sacred-grove-guide",
-    title: "Osun-Osogbo Sacred Grove Guide: Visit, Culture & Nearby Stops",
-    shortTitle: "Osun-Osogbo Sacred Grove",
-    kind: "destination",
-    region: "Osun",
-    summary: "Plan a respectful visit to the Osun-Osogbo Sacred Grove, a UNESCO-listed sacred forest and cultural landscape, with current access checks and nearby Osogbo heritage options.",
+    slug: "cocoa-xp-dotti-abuja-2026",
+    title: "COCOA XP Abuja 2026: DOTTi The Deity Live, Date & Venue",
+    shortTitle: "COCOA XP Abuja",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "COCOA XP brings DOTTi The Deity and The Pantheon to Café One at Sterling Bank Plaza in Abuja's Central Business District on 16 October 2026, with gates listed from 6:00 PM and the event running to 11:59 PM.",
     intro: [
-      "The Osun-Osogbo Sacred Grove is a living sacred forest and cultural landscape associated with the Osun River and the traditions of Osogbo, not simply a conventional park.",
-      "Visitor conditions can change around ceremonies and the annual festival period. Confirm current access, guide arrangements and any admission requirements before travelling, and treat active sacred areas with appropriate respect."
+      "COCOA XP — DOTTi The Deity Live is listed for Friday 16 October 2026 from 6:00 PM to 11:59 PM at Café One, 1st Floor, Sterling Bank Plaza on Mohammadu Buhari Way in Abuja's Central Business District.",
+      "DOTTi The Deity is scheduled to perform music from the album Cocoa Hue alongside The Pantheon. One secondary listing reports Saturday 17 October, while the organiser gives 16 October, so confirm the organiser's live event page before paying or travelling."
     ],
-    bestFor: ["UNESCO heritage", "Culture", "Sacred landscapes", "Osogbo visitors"],
+    bestFor: ["Live music", "Afrofusion", "Nightlife", "October events"],
     highlights: [
-      { name: "UNESCO-listed cultural landscape", detail: "The grove is internationally recognised for the relationship between its forest, river, shrines, art and living traditions." },
-      { name: "Living sacred site", detail: "The area remains culturally and religiously significant, so visitor behaviour matters." },
-      { name: "Strong Osogbo heritage cluster", detail: "Nike Art Centre and the Ataoja Palace area can extend the visit into a broader Osogbo culture itinerary." },
-      { name: "Festival-period planning matters", detail: "Access, crowds and local traffic can differ substantially during major Osun-Osogbo festival activity." }
+      { name: "16 October 2026", detail: "Visit Abuja reports the organiser's date as Friday 16 October, with gates from 6:00 PM." },
+      { name: "Café One, Sterling Bank Plaza", detail: "The listed venue is on Mohammadu Buhari Way in Abuja's Central Business District." },
+      { name: "DOTTi The Deity with The Pantheon", detail: "The Abuja show follows the Lagos run and features music from Cocoa Hue." },
+      { name: "Date conflict disclosed", detail: "A separate listing reports 17 October, so MyNigeriaGuide keeps the discrepancy visible instead of presenting the conflicting date as settled." }
     ],
     planning: [
-      { label: "Confirm current access", detail: "Check official Osun tourism information and local visitor guidance before travel, especially near festival dates." },
-      { label: "Respect sacred areas", detail: "Follow local instructions on photography, movement and behaviour around active shrines or ceremonies." },
-      { label: "Use a local guide when useful", detail: "A knowledgeable guide can add context to the landscape and reduce the risk of treating sacred features as ordinary attractions." },
-      { label: "Build a compact Osogbo day", detail: "Pair the grove with nearby cultural stops rather than trying to combine it with distant cities in the same short visit." }
+      { label: "Verify the organiser date", detail: "Confirm that the organiser still gives 16 October before buying a ticket or arranging transport." },
+      { label: "Use the official ticket route", detail: "Buy only through the organiser-linked ticket page and keep the confirmation." },
+      { label: "Plan a safe late return", detail: "The event is listed to run close to midnight, so arrange reliable transport before the show begins." },
+      { label: "Allow CBD arrival time", detail: "Give yourself enough time for evening traffic, building access and event entry before the performance." }
     ],
-    source: { label: "Osun State Government — Tourist Centres", href: "https://www.osunstate.gov.ng/tourist-centres/" },
+    source: { label: "Visit Abuja — October 2026 events listing", href: "https://www.visitabuja.org/events/" },
+    lastReviewed: "2026-10-07"
+  },
+  {
+    slug: "fashion-fables-runway-africa-abuja-2026",
+    title: "Fashion Fables Runway Africa Abuja 2026: Date, Venue & Tickets",
+    shortTitle: "Fashion Fables Runway Africa",
+    kind: "event",
+    region: "Federal Capital Territory",
+    summary: "Fashion Fables Runway Africa is listed for 18 October 2026 from 2:00 PM to 9:00 PM at The Blanc Grande Abuja, combining African fashion, art and entertainment with designers reworking ancestral identities for modern audiences.",
+    intro: [
+      "Fashion Fables Runway Africa is listed by Visit Abuja for Sunday 18 October 2026 from 2:00 PM to 9:00 PM at The Blanc Grande, 269 Muhammadu Buhari Way, Abuja.",
+      "The runway programme combines fashion, art and entertainment around African stories and heritage. Another listing gives 9 October at the Afreximbank African Trade Centre, so confirm the organiser's current date and venue before buying a ticket or planning transport."
+    ],
+    bestFor: ["Fashion", "African design", "Arts and culture", "Creative industry"],
+    highlights: [
+      { name: "18 October 2026 listing", detail: "Visit Abuja currently lists a 2:00 PM–9:00 PM programme on 18 October." },
+      { name: "The Blanc Grande Abuja", detail: "The current Visit Abuja venue is 269 Muhammadu Buhari Way." },
+      { name: "Fashion as storytelling", detail: "The show centres African stories, ancestral identities and heritage through contemporary runway design." },
+      { name: "Conflicting listing kept visible", detail: "A separate source reports a different date and venue, so visitors should reconfirm directly rather than rely on one copied listing." }
+    ],
+    planning: [
+      { label: "Confirm the organiser's final details", detail: "Re-check both date and venue close to the event because current listings conflict." },
+      { label: "Use the organiser-linked ticket page", detail: "Tickets are sold through Eventbrite; verify the event details displayed at checkout before payment." },
+      { label: "Plan for a long programme", detail: "The current listing runs from afternoon into the evening, so plan transport, meals and return timing accordingly." },
+      { label: "Arrive before the runway programme", detail: "Allow a buffer for traffic, check-in and seating rather than arriving at the listed start time." }
+    ],
+    source: { label: "Visit Abuja — Fashion Fables Runway Africa", href: "https://www.visitabuja.org/event/fashion-fables-runway-africa/" },
     lastReviewed: "2026-10-07"
   }
 ];
