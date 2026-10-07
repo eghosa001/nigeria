@@ -93,8 +93,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty Cast, Runtime & Where to Watch",
-    description: "Oversabi Aunty cast includes Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa, Jemima Osunde, Tana Adelana and Ngozi Ezeonu. See the 127-minute runtime, story and official Netflix Nigeria availability.",
+    title: "Oversabi Aunty Cast & Where to Watch the Nigerian Movie",
+    description: "Oversabi Aunty Nigerian movie cast includes Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa, Jemima Osunde, Tana Adelana and Ngozi Ezeonu. See the story, 127-minute runtime and verified Netflix Nigeria link.",
   },
   "bowale": {
     title: "Bowale Nigerian Movie: Cast & Full Movie",
@@ -107,6 +107,10 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
   "my-housemate": {
     title: "My Housemate Nigerian Movie: Cast & Full Movie",
     description: "My Housemate cast, story, 81-minute runtime and the official Bolaji Ogunmola TV full-movie link, starring Bolaji Ogunmola and Nosa Rex.",
+  },
+  "monica": {
+    title: "Monica Nigerian Movie Cast & Full Movie on YouTube",
+    description: "Monica Nigerian movie cast includes Uche Montana and John Ekanem. See the story, 123-minute runtime and verified Uche Montana TV full-movie link.",
   },
   "all-things-equal": {
     title: "All Things Equal Nigerian Movie: Cast & Full Movie",
@@ -437,6 +441,13 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             ]}
             note="The essentials are above. The sections below add the full cast, verified source details and related movies."
           />
+          {title.slug === "once-upon-a-village-3" ? (
+            <div className="movie-detail-actions">
+              <Link className="button button-secondary" href="/entertainment/series/once-upon-a-village">
+                View the full Once Upon a Village series guide →
+              </Link>
+            </div>
+          ) : null}
         </div>
       </section>
 
