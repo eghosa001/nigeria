@@ -72,6 +72,8 @@ export const growthHubs: GrowthHub[] = [
       { query: "how to check BVN", serviceSlug: "bvn-retrieval" },
       { query: "check my BVN", serviceSlug: "bvn-retrieval" },
       { query: "BVN retrieval", serviceSlug: "bvn-retrieval" },
+      { query: "BVN retrieval code", serviceSlug: "bvn-retrieval" },
+      { query: "NIBSS BVN retrieval", serviceSlug: "bvn-retrieval" },
       { query: "how to retrieve BVN number", serviceSlug: "bvn-retrieval" },
       { query: "forgot my BVN", serviceSlug: "bvn-retrieval" },
       { query: "validate BVN", serviceSlug: "bvn-validation" },

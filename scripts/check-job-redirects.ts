@@ -1,5 +1,5 @@
 import nextConfig from "../next.config";
-import retiredJobRoutes from "../data/job-retired-redirects.json";
+import retiredJobRoutes from "../data/job-retired-redirects.json" with { type: "json" };
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
