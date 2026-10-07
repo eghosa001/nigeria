@@ -324,11 +324,28 @@ function trendScore(movie: YouTubeMovieRecord) {
   return recency * 0.72 + Math.min(1, popularity) * 0.28;
 }
 
-export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
+// Reliable watch links and verified cast make a listing useful in discovery, but
+// that alone does not justify a separate indexable story page.
+export function isDiscoverableYouTubeMovie(movie: YouTubeMovieRecord) {
   return movie.metadataStatus !== "cast-pending" && movie.cast.length > 0 && movie.featuredCast.length > 0;
 }
 
-export const indexableYouTubeMovies = youtubeMovieLibrary.filter(isIndexableYouTubeMovie);
+export function hasSubstantiveYouTubeSynopsis(movie: Pick<YouTubeMovieRecord, "synopsis">) {
+  const synopsis = movie.synopsis.trim();
+  // This stock fallback gives publisher/cast metadata, not a film-specific plot.
+  return synopsis.length >= 110 &&
+    !/ is a full-length Nigerian film published by /i.test(synopsis) &&
+    !/^(?:watch|stream|subscribe|like and share)\\b/i.test(synopsis);
+}
+
+export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
+  return isDiscoverableYouTubeMovie(movie) && hasSubstantiveYouTubeSynopsis(movie);
+}
+
+// Maintain the full verified catalog and internal discovery links. Only the
+// editorially substantive subset belongs in the sitemap and indexed details.
+export const discoverableYouTubeMovies = youtubeMovieLibrary.filter(isDiscoverableYouTubeMovie);
+export const indexableYouTubeMovies = discoverableYouTubeMovies.filter(isIndexableYouTubeMovie);
 
 export const latestYouTubeMovies = indexableYouTubeMovies;
 export const trendingYouTubeMovies = [...indexableYouTubeMovies].sort(
