@@ -49,6 +49,9 @@ for (const service of publicServices) {
   if (detailedRequirements.some((item) => !item.why.trim() || !item.whenUsed.trim() || !item.format.trim())) {
     errors.push(prefix + "contains an incomplete requirement explanation");
   }
+  if (detailedRequirements.some((item) => /photograph|(?:passport[- ]?)?photos?\b/i.test(item.item) && /passport record|passport transaction|ICAO rule/i.test(item.why))) {
+    errors.push(prefix + "explains a photo as a passport document rather than the agency-requested photograph");
+  }
 
   if (service.steps.length < 3) {
     errors.push(prefix + "must contain at least three actionable process steps");
