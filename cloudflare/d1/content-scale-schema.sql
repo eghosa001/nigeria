@@ -168,3 +168,70 @@ AFTER UPDATE OF title, company, location, profession, sector, summary ON job_lis
   INSERT INTO job_listing_search(rowid, title, company, location, profession, sector, summary)
   VALUES (new.id, new.title, new.company, new.location, new.profession, new.sector, new.summary);
 END;
+
+
+-- High-volume mapped Tour Nigeria inventory. Guide/editorial pages can stay in
+-- content_items while individual attractions, hotels, restaurants and landmarks
+-- scale independently with indexed geographic/category search.
+CREATE TABLE IF NOT EXISTS tour_places (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  external_key TEXT,
+  slug TEXT NOT NULL UNIQUE,
+  guide_slug TEXT NOT NULL,
+  name TEXT NOT NULL,
+  kind TEXT NOT NULL CHECK (kind IN ('attraction','nature','restaurant','hotel','shopping','landmark')),
+  state_or_fct TEXT NOT NULL,
+  city_or_area TEXT,
+  address TEXT NOT NULL,
+  summary TEXT NOT NULL DEFAULT '',
+  cost_guidance TEXT NOT NULL DEFAULT '',
+  hours TEXT,
+  phone TEXT,
+  website TEXT,
+  latitude REAL,
+  longitude REAL,
+  source_url TEXT NOT NULL,
+  source_name TEXT NOT NULL,
+  checked_at TEXT NOT NULL,
+  editorial_status TEXT NOT NULL DEFAULT 'verified'
+    CHECK (editorial_status IN ('draft','verified','published','stale','archived')),
+  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS tour_places_state_kind_idx
+ON tour_places(state_or_fct, kind, editorial_status, checked_at DESC);
+
+CREATE INDEX IF NOT EXISTS tour_places_guide_idx
+ON tour_places(guide_slug, editorial_status, checked_at DESC);
+
+CREATE VIRTUAL TABLE IF NOT EXISTS tour_place_search USING fts5(
+  name,
+  state_or_fct,
+  city_or_area,
+  address,
+  summary,
+  content='tour_places',
+  content_rowid='id',
+  tokenize='unicode61 remove_diacritics 2'
+);
+
+CREATE TRIGGER IF NOT EXISTS tour_places_search_insert
+AFTER INSERT ON tour_places BEGIN
+  INSERT INTO tour_place_search(rowid, name, state_or_fct, city_or_area, address, summary)
+  VALUES (new.id, new.name, new.state_or_fct, new.city_or_area, new.address, new.summary);
+END;
+
+CREATE TRIGGER IF NOT EXISTS tour_places_search_delete
+AFTER DELETE ON tour_places BEGIN
+  INSERT INTO tour_place_search(tour_place_search, rowid, name, state_or_fct, city_or_area, address, summary)
+  VALUES ('delete', old.id, old.name, old.state_or_fct, old.city_or_area, old.address, old.summary);
+END;
+
+CREATE TRIGGER IF NOT EXISTS tour_places_search_update
+AFTER UPDATE OF name, state_or_fct, city_or_area, address, summary ON tour_places BEGIN
+  INSERT INTO tour_place_search(tour_place_search, rowid, name, state_or_fct, city_or_area, address, summary)
+  VALUES ('delete', old.id, old.name, old.state_or_fct, old.city_or_area, old.address, old.summary);
+  INSERT INTO tour_place_search(rowid, name, state_or_fct, city_or_area, address, summary)
+  VALUES (new.id, new.name, new.state_or_fct, new.city_or_area, new.address, new.summary);
+END;
