@@ -142,7 +142,7 @@ test("wave 9 deepens all four pillars without creating thin duplicates", () => {
     expect(jobOpportunities.some((item) => item.slug === slug && item.status === "career-page"), slug).toBeTruthy();
   }
 
-  for (const slug of ["lekki-conservation-centre-guide", "olumo-rock-visitor-guide", "jabi-lake-abuja-guide", "osun-osogbo-sacred-grove-guide"]) {
+  for (const slug of ["10th-afrigeo-symposium-abuja-2026", "cocoa-xp-dotti-abuja-2026", "fashion-fables-runway-africa-abuja-2026"]) {
     expect(exploreGuides.some((guide) => guide.slug === slug), slug).toBeTruthy();
   }
 
