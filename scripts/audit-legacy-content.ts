@@ -35,7 +35,7 @@ type Row = {
 const today = new Date().toISOString().slice(0, 10);
 const wordCount = (v: string) => (v.match(/[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*/gu) ?? []).length;
 const canon = (s: string) => s.toLowerCase().replace(/\s+/g," ").replace(/[^a-z0-9 ]/g,"").trim();
-const join = (...p: (string | undefined | null | string[])[]) =>
+const join = (...p: (string | undefined | null | Array<string | undefined | null>)[]) =>
   p.flatMap(v => Array.isArray(v) ? v : [v]).filter((v): v is string => typeof v === "string").join(" ");
 const hasIso = (v: string | null) => Boolean(v && /^\d{4}-\d{2}-\d{2}$/.test(v));
 const daysOld = (d: string | null) => !hasIso(d) ? 99999 :
