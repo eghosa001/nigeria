@@ -58,7 +58,7 @@ type CompactIndex = {
   records: Record<string, CompactRecord>;
 };
 
-const records = (detailIndex as CompactIndex).records;
+const records = (detailIndex as unknown as CompactIndex).records;
 
 function hydrate(videoId: string, row: CompactRecord): YouTubeDetailMovie {
   return {
