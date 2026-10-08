@@ -61,7 +61,7 @@ export function LiveJobsDirectory() {
     <div className="jobs-directory">
       <div className="jobs-controls" aria-label="Filter live Nigeria jobs">
         <label className="jobs-search">
-          <span>Search this live batch</span>
+          <span>Search loaded listings</span>
           <input value={query} onChange={(event) => { setQuery(event.target.value); setVisiblePage(1); }} placeholder="Role, company or location…" />
         </label>
         <label>
@@ -75,7 +75,7 @@ export function LiveJobsDirectory() {
 
       <div className="jobs-results-line" aria-live="polite">
         <strong>{filtered.length}</strong> listings in this batch · showing {visible.length ? (visiblePage - 1) * PAGE_SIZE + 1 : 0}–{(visiblePage - 1) * PAGE_SIZE + visible.length}
-        <span> · about {approximateAvailable.toLocaleString("en-NG")} current-month source listings across {maxBatches} batches</span>
+        <span> · approximately {approximateAvailable.toLocaleString("en-NG")} source listings across {maxBatches} batches</span>
         {loading ? <span> · Updating…</span> : null}
       </div>
 
@@ -130,7 +130,7 @@ export function LiveJobsDirectory() {
       </nav>
 
       <p className="job-muted">
-        Only 12 listings appear per screen; use the page buttons to see the rest of each 100-job source batch. Search and location filters apply to the batch currently loaded. These are lightweight discovery records, not standalone MyNigeriaGuide SEO pages; MyNigeriaGuide does not copy full job descriptions or accept applications for these roles.
+        Search and location filters apply only to the 100 listings currently loaded. Use the batch selector to explore more opportunities. Verify details and deadlines at the employer's website; applications are handled externally.
       </p>
     </div>
   );
