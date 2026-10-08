@@ -187,24 +187,19 @@ const curated: BaseYouTubeMovieRecord[] = entertainmentTitles.flatMap((title) =>
 
 export const generatedYouTubeMovies = (generatedData.movies as GeneratedRecord[])
   .map((movie) => {
-    // The sync/recovery pipeline already normalizes titles, cast and synopsis before
-    // writing the generated catalog. Re-running the full regex cleanup for thousands
-    // of records on every Worker isolate was redundant and could exhaust request CPU
-    // during cold renders of YouTube detail pages.
-    const title = String(movie.title || movie.rawTitle || "").trim() || "Untitled Nigerian movie";
-    const cast = Array.isArray(movie.cast) ? movie.cast : [];
-    const featuredCast = Array.isArray(movie.featuredCast)
-      ? movie.featuredCast.filter((name) => cast.includes(name))
-      : [];
-    const synopsis = String(movie.synopsis ?? "").replace(/\s+/g, " ").trim();
-
-    return {
+    const title = cleanYouTubeDisplayTitle(movie.title || movie.rawTitle) || "Untitled Nigerian movie";
+    const cast = normalizeGeneratedCast(movie.cast ?? []);
+    const featuredCast = normalizeGeneratedCast(movie.featuredCast ?? []).filter((name) => cast.includes(name));
+    const normalizedMovie = {
       ...movie,
       title,
       cast,
       featuredCast: featuredCast.length ? featuredCast : cast.slice(0, 3),
-      synopsis,
       metadataStatus: cast.length ? "complete" as const : "cast-pending" as const,
+    };
+    return {
+      ...normalizedMovie,
+      synopsis: normalizeGeneratedSynopsis(normalizedMovie),
       source: "youtube-api" as const,
       internalHref: "/entertainment/youtube/" + movie.videoId,
     };
