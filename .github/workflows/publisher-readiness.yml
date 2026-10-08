@@ -5,6 +5,7 @@ on:
   pull_request:
     paths:
       - "scripts/audit-publisher-readiness.ts"
+      - "scripts/audit-legacy-content.ts"
       - ".github/workflows/publisher-readiness.yml"
 
 permissions:
@@ -30,10 +31,14 @@ jobs:
       - name: Audit catalog source-content signals only (read-only)
         run: |
           ./node_modules/.bin/tsx scripts/audit-publisher-readiness.ts --json > publisher-audit.json
+          ./node_modules/.bin/tsx scripts/audit-legacy-content.ts --json > legacy-audit.json
+          node -e 'const a=require("./legacy-audit.json"); if(!a.coverage.allCatalogRecords||a.coverage.indexableCatalogRecords<1000) process.exit(1); console.log("Legacy records inspected:",a.coverage.allCatalogRecords,"indexable:",a.coverage.indexableCatalogRecords); for(const x of a.groups) console.log(x.group,JSON.stringify(x)); console.log("Issue counts:",JSON.stringify(a.issueCounts));'
           node -e 'const a=require("./publisher-audit.json"); if(!a.uniqueCatalogUrls||a.byPillar.length!==6) process.exit(1); for(const x of a.byPillar) console.log(x.pillar, JSON.stringify(x)); console.log("Publisher audit generated:",a.uniqueCatalogUrls,"records");'
       - name: Store audit artifact for editorial review
         uses: actions/upload-artifact@v4
         with:
           name: publisher-readiness-audit
-          path: publisher-audit.json
+          path: | 
+            publisher-audit.json
+            legacy-audit.json
           retention-days: 14
