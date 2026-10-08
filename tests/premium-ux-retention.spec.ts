@@ -50,3 +50,15 @@ test("main landing pages use visitor language and avoid long mobile overflow", a
   await expect(page.locator(".tour-photo-card img")).toHaveCount(4);
   await expect(page.locator(".tour-photo-credit a[href*='creativecommons.org']")).toHaveCount(4);
 });
+
+test("travel detail photography is credited and actually loads", async ({ page }) => {
+  await page.goto("/explore/obudu-mountain-resort");
+  const figure = page.locator(".tour-guide-photo");
+  await expect(figure.locator("img")).toHaveAttribute("alt", /Obudu Mountain Resort/);
+  await expect(figure.locator('a[href*="commons.wikimedia.org/wiki/File:"]')).toBeVisible();
+  await expect(figure.locator('a[href*="creativecommons.org/licenses/by-sa/4.0/"]')).toBeVisible();
+  await expect.poll(
+    () => figure.locator("img").evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0),
+    { timeout: 20_000 },
+  ).toBe(true);
+});
