@@ -145,7 +145,7 @@ for (const item of jobOpportunities) {
 // verified 100% remote eligibility uses applicants' countries instead of an
 // invented physical address. Employer-stated gross pay never becomes baseSalary.
 const schemaFixture = jobOpportunities.find((item) => item.slug === "unilag-professorial-chair-2026");
-assert(Boolean(schemaFixture?.posting && schemaFixture.remuneration), "UNILAG employer pay/location fixture must exist.");
+assert(schemaFixture && schemaFixture.posting && schemaFixture.remuneration, "UNILAG employer pay/location fixture must exist.");
 const sourceAuthorisation = { publicEvidenceUrl: schemaFixture.officialUrl, verifiedAt: "2026-10-08", note: "Official employer vacancy evidence" };
 const authorisedFixture = { ...schemaFixture, jobPostingAuthorization: sourceAuthorisation };
 const citySchema = buildJobPostingJsonLd(authorisedFixture, "https://mynigeriaguide.com/jobs/unilag-professorial-chair-2026");
