@@ -86,3 +86,23 @@
   .tour-photo-card { scroll-snap-align: start; }
   .tour-photo-card-link img { height: 180px; }
 }
+
+/* Travel detail hero photos keep credits adjacent to their original imagery. */
+.tour-guide-photo {
+  max-width: 980px; margin: .6rem 0 1.45rem; overflow: hidden;
+  border: 1px solid var(--line); border-radius: 15px;
+  background: var(--theme-raised);
+}
+.tour-guide-photo img {
+  display: block; width: 100%; height: clamp(200px, 30vw, 370px);
+  object-fit: cover; object-position: center; background: var(--theme-soft);
+}
+.tour-guide-photo figcaption {
+  color: var(--muted); padding: .55rem .9rem .75rem; font-size: .74rem; line-height: 1.45;
+}
+.tour-guide-photo figcaption a {
+  color: inherit; text-decoration: underline; text-underline-offset: .15rem;
+}
+@media (max-width: 650px) {
+  .tour-guide-photo img { height: clamp(180px, 58vw, 260px); }
+}
