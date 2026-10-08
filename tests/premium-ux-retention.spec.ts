@@ -16,7 +16,9 @@ test("movie and destination bookmarks survive navigation and reload", async ({ p
   await page.reload();
   await expect(page.locator('.personal-library a[href="/explore/lagos"]')).toBeVisible();
   await page.getByRole("button", { name: /remove oversabi aunty from saved/i }).click();
-  await expect(page.locator('.personal-library a[href="/entertainment/movies/oversabi-aunty"]')).toHaveCount(0);
+  await expect(page.locator('[aria-labelledby="saved-across-pillars"] a[href="/entertainment/movies/oversabi-aunty"]')).toHaveCount(0);
+  // Unsaving does not erase local browsing history.
+  await expect(page.locator('[aria-labelledby="recently-visited"] a[href="/entertainment/movies/oversabi-aunty"]')).toBeVisible();
 });
 
 test("verified jobs appear before optional external batches", async ({ page }) => {
