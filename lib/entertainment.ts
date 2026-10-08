@@ -559,9 +559,24 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Coming of age", "Campus", "Nollywood"],
     languages: ["English"],
-    synopsis: "Two very different students at a fictional Lagos university collide as ambition, identity, friendship and romance reshape the lives they expected to have.",
-    cast: ["Mike Afolarin", "Genoveva Umeh"],
+    synopsis: "At the fictional Lagos Metropolitan University, two young people from different worlds collide on campus, where identity, ambition, social expectations and an unexpected connection force them to reconsider the lives they imagined.",
+    cast: ["Mike Afolarin", "Genoveva Umeh", "Angel Unigwe", "Eronini Osinachim", "Kanaga Eme Jnr."],
     directors: ["Adenike Adebayo-Esho"],
+    trailer: {
+      label: "Watch the official Tele x Zikora movie teaser",
+      href: "https://www.youtube.com/watch?v=KHytYLBb_Zk",
+      platform: "YouTube",
+      lastChecked: "2026-10-08",
+      publisher: "Imagine Media Studios",
+    },
+    references: [
+      {
+        label: "Imagine Media Studios — official Tele x Zikora teaser and release notice",
+        href: "https://www.youtube.com/watch?v=KHytYLBb_Zk",
+        lastChecked: "2026-10-08",
+        note: "The production-studio teaser identifies the core cast, campus setting, writer/director, distributor and announced 23 October 2026 cinema release. A teaser is not a free full-film stream.",
+      }
+    ],
     sourcePreview: {
       url: "https://www.oyamag.com/wp-content/uploads/2026/09/A-new-young-adult-campus-movie-is-coming-to-Nigerian-cinemasTele-x-Zikora-%40telexzikora-is-Wr-1200x1500.jpg",
       sourceUrl: "https://www.oyamag.com/tele-x-zikora-teaser-first-look/",
