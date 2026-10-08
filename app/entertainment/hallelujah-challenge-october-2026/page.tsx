@@ -125,6 +125,7 @@ export default function HallelujahChallengeOctober2026Page() {
               <strong>Explore more Nigerian entertainment</strong>
               <p><Link href="/entertainment">Movies & entertainment hub →</Link></p>
               <p><Link href="/entertainment/trending">Trending Nigerian movies →</Link></p>
+              <p><Link href="/explore/hallelujah-festival-lagos-october-2026">30 October: free in-person Hallelujah Festival in Lagos →</Link></p>
               <p><Link href="/explore/events">In-person Nigerian events and festivals →</Link></p>
             </div>
             <div className="job-sidebar-card">
