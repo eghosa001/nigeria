@@ -4,6 +4,8 @@
 
 The target is **at least 9/10 in every applicable category**, not merely a high average. A rating is an evidence-backed release judgment, **not** a label inferred from successful builds or AI confidence. If an applicable criterion is unverified, record it as **unverified**, never silently award 9+. If a change weakens a previously strong experience, revise it before delivery.
 
+**Editorial policy:** `docs/PUBLISHING_STANDARD.md` is the single canonical originality, word-depth, human review and Ezoic/AdSense content policy. This file sets UX and functional evidence standards; do not duplicate or contradict publishing requirements here.
+
 ## What "9+/10" means
 
 A category earns 9+ only when its critical acceptance conditions are met, no relevant blocker remains, and a reviewer can point to **current evidence**. An unchecked category cannot be averaged away by other high scores. Use the following nine categories.
