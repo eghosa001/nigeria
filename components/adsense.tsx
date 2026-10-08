@@ -2,9 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import { shouldEnableAnalytics } from "@/lib/analytics-safety";
+import { ADSENSE_CLIENT } from "@/lib/adsense-config";
 
 export function AdsenseScript() {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+  const client = ADSENSE_CLIENT;
   const pathname = usePathname();
 
   if (!client) return null;
