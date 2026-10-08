@@ -11,7 +11,7 @@ import { indexableJobEmployers } from "@/lib/job-employers";
 import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen } from "@/lib/job-runtime";
 import { queryJobDirectory } from "@/lib/job-query";
 import { getSiteUrl } from "@/lib/site";
-import { JOBS_LIVE_INVENTORY_TARGET, jobMarketSources, largestObservedNigeriaJobMarketCount } from "@/data/job-market-sources";
+import { jobMarketSources } from "@/data/job-market-sources";
 
 export const metadata: Metadata = {
   title: "Jobs in Nigeria: Verified Openings & Career Portals",
@@ -23,7 +23,6 @@ export const revalidate = 3600;
 
 export default function JobsPage() {
   const base = getSiteUrl();
-  const largestObservedMarketCount = largestObservedNigeriaJobMarketCount();
   const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
   const openOpportunities = jobOpportunities
@@ -99,11 +98,9 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Nigeria job market</span>
-              <h2 id="jobs-market-heading">The market is much larger than our curated guide set.</h2>
+              <h2 id="jobs-market-heading">Compare other reputable job sources.</h2>
               <p>
-                MyNigeriaGuide currently keeps {jobOpportunities.length} deeply verified employer, recruitment and programme records.
-                External Nigeria job markets are much larger: the biggest currently observed source below showed {largestObservedMarketCount.toLocaleString("en-NG")} live listings.
-                Our next inventory floor is {JOBS_LIVE_INVENTORY_TARGET.toLocaleString("en-NG")} current jobs, ingested through approved feeds or employer sources without turning unverified adverts into SEO pages.
+                Compare vacancies on external job boards with the source-checked opportunities below. Always confirm the employer, location and closing date before applying.
               </p>
             </div>
           </div>
@@ -136,8 +133,8 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Live Nigeria vacancies</span>
-              <h2 id="live-jobs-heading">Thousands of current roles without thousands of thin SEO pages.</h2>
-              <p>Browse roughly 2,460 current-month source listings in short pages within fast-loading batches, then open the source page to review the full vacancy and application method. The deeply verified MyNigeriaGuide guides remain a separate quality-controlled layer below.</p>
+              <h2 id="live-jobs-heading">More vacancies from external sources.</h2>
+              <p>Browse recent vacancies from external sources, then confirm the requirements and application method with the employer. These are source listings, not independently verified vacancies.</p>
             </div>
           </div>
           <LiveJobsDirectory />
@@ -229,8 +226,8 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse by employer</span>
-              <h2>Employers with enough verified records for a useful hub.</h2>
-              <p>Employer pages are published only when the catalog contains at least two distinct verified records.</p>
+              <h2>Browse employers</h2>
+              <p>Compare opportunities from employers with multiple source-checked listings.</p>
             </div>
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by employer">
@@ -243,8 +240,8 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse by industry</span>
-              <h2>Go deeper without creating thin keyword pages.</h2>
-              <p>Each sector hub groups verified employer routes that share a real job-search intent.</p>
+              <h2>Browse by industry</h2>
+              <p>Find opportunities by your preferred type of work.</p>
             </div>
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by industry">
@@ -256,8 +253,8 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse by location</span>
-              <h2>Start with cities that already have enough verified inventory.</h2>
-              <p>We only create location hubs where the catalog supports a useful page instead of thin city permutations.</p>
+              <h2>Browse by location</h2>
+              <p>Explore jobs and employers in your preferred location.</p>
             </div>
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by location">
@@ -270,7 +267,7 @@ export default function JobsPage() {
             <div>
               <span className="eyebrow">Browse by profession</span>
               <h2>Find the work you actually do.</h2>
-              <p>Profession hubs group the same verified records without creating duplicate job pages.</p>
+              <p>Choose a profession to see relevant opportunities.</p>
             </div>
           </div>
           <div className="jobs-topic-links" aria-label="Browse jobs by profession">
