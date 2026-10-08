@@ -5,6 +5,7 @@ import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
 import { exploreGuides } from "@/lib/explore";
 import { explorePlaces } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
+import { destinationPhotos, destinationPhotoUrls } from "@/lib/destination-photos";
 
 const stateGuideLinks = [
   ["Abia", "abia-state-travel-guide"],
@@ -45,31 +46,6 @@ const stateGuideLinks = [
   ["Yobe", "yobe-state-travel-guide"],
   ["Zamfara", "zamfara-state-travel-guide"],
 ] as const;
-
-// Photographs from the linked Wikimedia Commons file pages. Each carries an
-// explicit CC BY-SA 4.0 license; keep the visible attribution with the image.
-const destinationPhotos: Record<string, { file: string; credit: string; alt: string }> = {
-  "yankari-game-reserve": {
-    file: "Yankari_Game_Reserve.jpg",
-    credit: "Dotun55",
-    alt: "A road through Yankari Game Reserve in Bauchi State",
-  },
-  "obudu-mountain-resort": {
-    file: "Obudu_Mountain_Resort.jpg",
-    credit: "Hadassah Photostorie group",
-    alt: "The mountain scenery at Obudu Mountain Resort",
-  },
-  "erin-ijesha-waterfall": {
-    file: "Erin_Ijesha_Waterfalls.jpg",
-    credit: "Baaadmus",
-    alt: "Erin-Ijesha Waterfalls in Osun State",
-  },
-  "zuma-rock-gurara-falls": {
-    file: "ZumaRock.jpg",
-    credit: "Akinnaija",
-    alt: "Zuma Rock, the prominent formation near Abuja",
-  },
-};
 
 export const metadata: Metadata = {
   title: "Places to Visit in Nigeria: Things to Do, Cities & Attractions",
@@ -153,12 +129,12 @@ export default function ExplorePage() {
           <div className="tour-photo-grid">
             {featuredDestinations.filter((guide) => destinationPhotos[guide.slug]).map((guide) => {
               const photo = destinationPhotos[guide.slug];
-              const source = "https://commons.wikimedia.org/wiki/File:" + photo.file;
+              const { src, creditUrl, licenseUrl } = destinationPhotoUrls(photo);
               return (
                 <article className="tour-photo-card" key={guide.slug}>
                   <Link href={"/explore/" + guide.slug} className="tour-photo-card-link">
                     <img
-                      src={"https://commons.wikimedia.org/wiki/Special:FilePath/" + photo.file + "?width=720"}
+                      src={src}
                       alt={photo.alt} width={720} height={480} loading="lazy" decoding="async"
                       referrerPolicy="no-referrer"
                     />
@@ -166,8 +142,8 @@ export default function ExplorePage() {
                     <strong>{guide.shortTitle}</strong>
                     <span className="tour-photo-card-action">Explore destination →</span>
                   </Link>
-                  <p className="tour-photo-credit">Photo: <a href={source} target="_blank" rel="noopener noreferrer">{photo.credit}</a>
-                    {" · "}<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+                  <p className="tour-photo-credit">Photo: <a href={creditUrl} target="_blank" rel="noopener noreferrer">{photo.credit}</a>
+                    {" · "}<a href={licenseUrl} target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
                     {" · "}Cropped to fit</p>
                 </article>
               );
