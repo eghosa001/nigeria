@@ -3,6 +3,7 @@ import { exploreGuides } from "@/lib/explore";
 
 test("homepage exposes movies, services, tour and jobs as primary paths", async ({ page }) => {
   await page.goto("/");
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute("content", /^https:\/\/mynigeriaguide\.com\/?$/);
   const paths = page.locator(".home-paths .home-path");
   await expect(paths).toHaveCount(4);
   await expect(paths.nth(0)).toContainText("Movies");
