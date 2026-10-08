@@ -36,7 +36,7 @@ function compactMetadata(value: string, maxLength = 155) {
 
 export async function generateMetadata({ params }: { params: Promise<{ videoId: string }> }): Promise<Metadata> {
   const { videoId } = await params;
-  const movie = getYouTubeDetailMovieById(videoId);
+  const movie = await getYouTubeDetailMovieById(videoId);
   if (!movie) return {};
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
@@ -89,7 +89,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
-  const related = indexable ? getRelatedYouTubeDetailMovies(movie) : [];
+  const related = indexable ? await getRelatedYouTubeDetailMovies(movie) : [];
 
   const ld = {
     "@context": "https://schema.org",
