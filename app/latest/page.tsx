@@ -47,6 +47,7 @@ export default function LatestPage() {
 
         <div className="jobs-topic-links top-gap">
           <Link href="/entertainment/movies/october-2026">October 2026 Nigerian movies</Link>
+          <Link href="/entertainment/hallelujah-challenge-october-2026">Hallelujah Challenge livestream (5–30 Oct)</Link>
           <Link href="/services/jamb-caps">JAMB 2026/27 CAPS admissions</Link>
           <Link href="/explore/detty-december-lagos-2026">Detty December Lagos 2026</Link>
           <Link href="/explore/calabar-carnival-2026">Calabar Carnival 2026</Link>
