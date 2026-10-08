@@ -1371,6 +1371,72 @@
     ]
   },
   {
+    "slug": "neco-2026-ssce-external-registration",
+    "title": "NECO 2026 SSCE External Registration: Dates, Portal & Steps",
+    "shortTitle": "NECO 2026 SSCE External registration",
+    "summary": "NECO's 2026 SSCE External (private-candidate) registration runs through 26 October, with late registration from 27 October to 3 November; the official examination window is 4–21 November 2026.",
+    "category": "Education",
+    "agencySlug": "neco",
+    "feeLabel": "2026 examination fee: confirm on the official portal",
+    "feeNote": "NECO explicitly publishes an additional ₦5,000 late-registration charge after normal registration closes on 26 October. This is a surcharge, not the total examination fee. Review the correct 2026 External fee in NECO's current guidelines and official payment step before paying.",
+    "timeline": "Normal registration ends 26 October 2026 at midnight; late registration is 27 October–3 November. NECO publishes the examination window as 4–21 November 2026.",
+    "status": "verified",
+    "officialPortal": "https://ssceexternal.neco.gov.ng/",
+    "requirements": [
+      "Register for the SSCE External examination—not the separate school-only SSCE Internal route.",
+      "A working email address for creating or signing in to the official NECO SSCE External registration account.",
+      "The reviewed 2026 SSCE External registration guidelines, including the candidate's subject and examination-mode requirements.",
+      "A payment method accepted by the NECO External portal and a copy of the resulting transaction receipt.",
+      "Access to the final photocard or registration confirmation and the latest official External examination timetable."
+    ],
+    "steps": [
+      "Open NECO's official SSCE External portal and read the Reviewed 2026 SSCE External Registration Guidelines and timetable linked there.",
+      "Use New User to create the correct External registration account, or sign in to an existing account; do not use the schools-only Internal registration portal.",
+      "Complete the candidate information and subject/exam-format choices exactly as the portal and current reviewed guidelines require; review for errors before submission.",
+      "Use the official Make Payment route, check the displayed total and any late-registration charge, then keep the receipt and registration evidence.",
+      "Finish all candidate-upload and confirmation steps shown by NECO, and save or print the photocard or candidate evidence made available by the system.",
+      "Download the 2026 SSCE External timetable, confirm subject dates and examination instructions, and re-check the official portal before attending."
+    ],
+    "notes": [
+      "2026 SSCE External supports a dual-mode arrangement (Hybrid Computer-Based Examination and Pen-and-Paper Examination), subject to the reviewed NECO guidelines and examination instructions.",
+      "The normal registration window ran from 7 July to 26 October 2026; late registration is published for 27 October–3 November 2026.",
+      "The additional ₦5,000 late charge should not be mistaken for the total examination registration fee.",
+      "The 2026 SSCE External examination is scheduled for 4–21 November 2026. Confirm subject-specific dates and centres in NECO's latest timetable.",
+      "Do not confuse this private-candidate route with NECO 2026 SSCE Internal: schools use a different registration portal, workflow and fee schedule.",
+      "Use only the official NECO portal for login, registration and payment. The official External portal lists support@neco.gov.ng for help."
+    ],
+    "sources": [
+      {
+        "label": "NECO — 2026 SSCE External registration and reviewed timetable",
+        "agency": "National Examinations Council",
+        "url": "https://neco.gov.ng/?page_id=27",
+        "lastChecked": "2026-10-08"
+      },
+      {
+        "label": "NECO — official SSCE External registration",
+        "agency": "National Examinations Council",
+        "url": "https://ssceexternal.neco.gov.ng/",
+        "lastChecked": "2026-10-08"
+      }
+    ],
+    "related": [
+      "neco-2026-timetable",
+      "neco-2026-ssce-internal-registration",
+      "neco-check-result",
+      "neco-payment"
+    ],
+    "lastVerified": "2026-10-08",
+    "searchTerms": [
+      "NECO 2026 SSCE External registration",
+      "NECO private candidate registration 2026",
+      "NECO GCE 2026",
+      "NECO External registration deadline 2026",
+      "NECO late registration November 2026",
+      "NECO External registration portal",
+      "NECO external timetable 2026"
+    ]
+  },
+  {
     "slug": "neco-check-result",
     "title": "NECO Result Checker 2026: Check Result & Use a Result Token",
     "shortTitle": "Check NECO result",
