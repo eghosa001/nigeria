@@ -29,7 +29,7 @@ jobs:
         run: npm install --ignore-scripts --no-audit --no-fund
       - name: Audit catalog source-content signals only (read-only)
         run: |
-          npm run audit:publisher -- --json > publisher-audit.json
+          ./node_modules/.bin/tsx scripts/audit-publisher-readiness.ts --json > publisher-audit.json
           node -e 'const a=require("./publisher-audit.json"); if(!a.uniqueCatalogUrls||a.byPillar.length!==6) process.exit(1); for(const x of a.byPillar) console.log(x.pillar, JSON.stringify(x)); console.log("Publisher audit generated:",a.uniqueCatalogUrls,"records");'
       - name: Store audit artifact for editorial review
         uses: actions/upload-artifact@v4
