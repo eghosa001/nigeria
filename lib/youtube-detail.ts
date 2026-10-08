@@ -26,6 +26,7 @@ export type YouTubeDetailMovie = {
   internalHref: string;
   alternateSources: YouTubeDetailSource[];
   indexable: boolean;
+  relatedIds: string[];
 };
 
 type CompactAlternate = [
@@ -51,6 +52,7 @@ type CompactRecord = [
   source: "curated" | "youtube-api" | "youtube-review",
   internalHref: string,
   alternateSources: CompactAlternate[],
+  relatedIds: string[],
 ];
 
 type CompactIndex = {
@@ -85,6 +87,7 @@ function hydrate(videoId: string, row: CompactRecord): YouTubeDetailMovie {
       videoUrl: "https://www.youtube.com/watch?v=" + source[0],
       lastChecked: source[4],
     })),
+    relatedIds: row[14],
   };
 }
 
@@ -95,4 +98,14 @@ export function getYouTubeDetailMovieById(videoId: string) {
 
 export function isIndexableYouTubeDetailMovie(movie: YouTubeDetailMovie) {
   return movie.indexable;
+}
+
+export function getRelatedYouTubeDetailMovies(movie: YouTubeDetailMovie, limit = 4) {
+  return movie.relatedIds
+    .slice(0, limit)
+    .map((videoId) => {
+      const row = records[videoId];
+      return row ? hydrate(videoId, row) : undefined;
+    })
+    .filter((item): item is YouTubeDetailMovie => Boolean(item));
 }
