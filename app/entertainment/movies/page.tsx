@@ -14,6 +14,20 @@ import {
 } from "@/lib/entertainment-query";
 import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
+type PreviewMovie = (typeof trendingYouTubeMovies)[number];
+
+// Search discovery may contain approved publisher copy, but the flagship
+// movie shelf should read like a curated publication, not a YouTube feed.
+function hasEditorialMoviePreview(movie: PreviewMovie) {
+  const title = movie.title.trim();
+  const synopsis = movie.synopsis.trim();
+  return title.length > 3 && title.length <= 60 &&
+    synopsis.length >= 110 &&
+    !/[|]/.test(title) &&
+    !/\b(?:full\s*movies?|latest\s+(?:nigerian|nollywood)|yoruba\s+movie)\b/i.test(title) &&
+    !/\b(?:you(?:'|’)ll\s+(?:love|definitely)|stay\s+glued|can(?:'|’)t\s+afford|must[- ]watch|don't\s+miss|do\s+not\s+miss|subscribe|like\s+and\s+share|this\s+weekend|latest\s+(?:nollywood|nigerian)|20\d{2}\s+latest|full\s+movies?)\b/i.test(synopsis);
+}
+
 type BrowsePlatform = (typeof entertainmentPlatforms)[number];
 
 type MovieSearchParams = {
@@ -80,7 +94,7 @@ export default async function MoviesPage({
     sort: initialSort,
     page: requestedPage,
   });
-  const freePreview = trendingYouTubeMovies.slice(0, 10);
+  const freePreview = trendingYouTubeMovies.filter(hasEditorialMoviePreview).slice(0, 10);
 
   return (
     <>
@@ -119,8 +133,8 @@ export default async function MoviesPage({
         <div className="container">
           <div className="movie-section-heading">
             <div>
-              <span className="eyebrow">New &amp; trending</span>
-              <h2>New Nigerian movies on YouTube.</h2>
+              <span className="eyebrow">Free films</span>
+              <h2>Featured Nigerian films on YouTube.</h2>
             </div>
             <Link href="/entertainment/youtube">Browse all free movies →</Link>
           </div>
@@ -136,7 +150,7 @@ export default async function MoviesPage({
         <div className="container">
           <div className="movie-section-heading">
             <div>
-              <span className="eyebrow">Curated across platforms</span>
+              <span className="eyebrow">Browse more</span>
               <h2>Movies across major platforms.</h2>
             </div>
           </div>
