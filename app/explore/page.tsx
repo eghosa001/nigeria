@@ -46,6 +46,31 @@ const stateGuideLinks = [
   ["Zamfara", "zamfara-state-travel-guide"],
 ] as const;
 
+// Photographs from the linked Wikimedia Commons file pages. Each carries an
+// explicit CC BY-SA 4.0 license; keep the visible attribution with the image.
+const destinationPhotos: Record<string, { file: string; credit: string; alt: string }> = {
+  "yankari-game-reserve": {
+    file: "Yankari_Game_Reserve.jpg",
+    credit: "Dotun55",
+    alt: "A road through Yankari Game Reserve in Bauchi State",
+  },
+  "obudu-mountain-resort": {
+    file: "Obudu_Mountain_Resort.jpg",
+    credit: "Hadassah Photostorie group",
+    alt: "The mountain scenery at Obudu Mountain Resort",
+  },
+  "erin-ijesha-waterfall": {
+    file: "Erin_Ijesha_Waterfalls.jpg",
+    credit: "Baaadmus",
+    alt: "Erin-Ijesha Waterfalls in Osun State",
+  },
+  "zuma-rock-gurara-falls": {
+    file: "ZumaRock.jpg",
+    credit: "Akinnaija",
+    alt: "Zuma Rock, the prominent formation near Abuja",
+  },
+};
+
 export const metadata: Metadata = {
   title: "Places to Visit in Nigeria: Things to Do, Cities & Attractions",
   description: "Find places to visit in Nigeria across all 36 states and the FCT, with city guides, attractions, landmarks, hotels, restaurants, events and practical things-to-do planning.",
@@ -125,16 +150,34 @@ export default function ExplorePage() {
             </div>
             <a href="#browse-guides">Browse all destinations →</a>
           </div>
-          <div className="home-category-grid compact-category-grid">
-            {featuredDestinations.map((guide) => (
-              <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
-                <span>{guide.region}</span>
-                <strong>{guide.shortTitle}</strong>
-                <small>{guide.summary}</small>
-                <i>Explore destination →</i>
-              </Link>
-            ))}
+          <div className="tour-photo-grid">
+            {featuredDestinations.filter((guide) => destinationPhotos[guide.slug]).map((guide) => {
+              const photo = destinationPhotos[guide.slug];
+              const source = "https://commons.wikimedia.org/wiki/File:" + photo.file;
+              return (
+                <article className="tour-photo-card" key={guide.slug}>
+                  <Link href={"/explore/" + guide.slug} className="tour-photo-card-link">
+                    <img
+                      src={"https://commons.wikimedia.org/wiki/Special:FilePath/" + photo.file + "?width=720"}
+                      alt={photo.alt} width={720} height={480} loading="lazy" decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                    <span className="tour-photo-card-meta">{guide.region}</span>
+                    <strong>{guide.shortTitle}</strong>
+                    <span className="tour-photo-card-action">Explore destination →</span>
+                  </Link>
+                  <p className="tour-photo-credit">Photo: <a href={source} target="_blank" rel="noopener noreferrer">{photo.credit}</a>
+                    {" · "}<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+                    {" · "}Cropped to fit</p>
+                </article>
+              );
+            })}
           </div>
+          <nav className="minimal-inline-links tour-more-destinations" aria-label="More places to explore">
+            {featuredDestinations.filter((guide) => !destinationPhotos[guide.slug]).map((guide) => (
+              <Link href={"/explore/" + guide.slug} key={guide.slug}>{guide.shortTitle} →</Link>
+            ))}
+          </nav>
         </div>
       </section>
 
