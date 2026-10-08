@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
+import { SavePageButton } from "@/components/personal-library";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -206,8 +207,9 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <span className="eyebrow">{guide.region}</span>
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
+          <div className="guide-save-action"><SavePageButton href={"/explore/" + guide.slug} title={guide.shortTitle} kind="travel" /></div>
           <AnswerFirst
-            title={"Plan " + guide.shortTitle + " without digging through the whole page"}
+            title={"Plan your visit to " + guide.shortTitle}
             summary={questions[0]?.answer ?? guide.summary}
             facts={[
               { label: "Applies to", value: guide.region + ", Nigeria" },
@@ -219,7 +221,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
               { href: "#places", label: "See places" },
               { href: "#planning", label: "Before you go" },
             ]}
-            note="Use the quick answer to decide whether this trip fits you, then open only the sections you need."
+            note="Check current opening hours, access and travel conditions before leaving."
           />
           <div className="topic-copy explore-intro-copy">
             {guide.intro.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
