@@ -1,0 +1,53 @@
+/* Small, accessible enhancements shared by all four sections. Loaded after theme tokens. */
+.guide-save-action { display: flex; align-items: center; margin: 14px 0 18px; }
+.save-page-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  max-width: 100%; min-height: 44px; padding: .65rem 1rem; cursor: pointer;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--theme-raised, #fff); color: var(--ink); font: inherit;
+  font-size: .91rem; font-weight: 700; line-height: 1.2;
+  transition: background .15s ease, border-color .15s ease;
+}
+.save-page-button:hover:not(:disabled) { border-color: var(--green); background: var(--theme-hover); }
+.save-page-button:focus-visible,
+.personal-library button:focus-visible,
+.personal-library a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.save-page-button[aria-pressed="true"] { border-color: var(--green); color: var(--green-dark); background: var(--theme-hover); }
+.save-page-button:disabled { opacity: .6; cursor: wait; }
+.movie-detail-actions .save-page-button { align-self: center; }
+.personal-library { display: grid; gap: 1.6rem; margin-block: 1.6rem 2rem; }
+.personal-library > section { min-width: 0; }
+.personal-library-heading { display: flex; align-items: baseline; gap: 1rem; justify-content: space-between; margin-bottom: .7rem; }
+.personal-library-heading h2, .saved-services-section h2 { margin: 0; font-size: clamp(1.15rem, 2.2vw, 1.5rem); line-height: 1.3; }
+.personal-library-heading p { margin: .25rem 0 0; color: var(--muted); }
+.personal-library-heading button, .personal-library-item button {
+  appearance: none; cursor: pointer; font: inherit; font-size: .85rem;
+  border: 1px solid var(--line); color: var(--muted);
+  border-radius: 7px; background: var(--theme-raised); padding: .55rem .7rem;
+}
+.personal-library-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.personal-library-item {
+  min-width: 0; display: flex; align-items: center; gap: .75rem; justify-content: space-between;
+  padding: .85rem 1rem; background: var(--theme-raised); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 12px;
+}
+.personal-library-item a { display: grid; gap: .22rem; min-width: 0; flex: 1; color: var(--ink); text-decoration: none; }
+.personal-library-item a:hover strong { text-decoration: underline; text-underline-offset: .2rem; }
+.personal-library-item small { color: var(--muted); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; }
+.personal-library-item strong { overflow-wrap: anywhere; line-height: 1.4; font-size: .91rem; }
+.personal-library-empty { padding: 1.1rem; margin: 0; border-radius: 10px; border: 1px dashed var(--line); color: var(--muted); }
+.saved-services-section { padding-block: 1rem 2rem; border-top: 1px solid var(--line); }
+.saved-services-section > p { color: var(--muted); margin-block: .3rem 1rem; }
+.jobs-live-market-section .minimal-section-heading p { max-width: 60ch; }
+.tour-featured-section .home-category-card small {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}
+@media (max-width: 700px) {
+  .personal-library-list { grid-template-columns: 1fr; }
+  .personal-library-heading { flex-wrap: wrap; }
+  .personal-library-item { padding: .8rem; }
+  .save-page-button { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .save-page-button { transition: none; }
+}
