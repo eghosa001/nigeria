@@ -56,22 +56,22 @@ type DetailShard = {
 };
 
 const shardLoaders: Array<() => Promise<DetailShard>> = [
-  async () => (await import("@/data/youtube-detail-shards/0.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/1.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/2.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/3.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/4.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/5.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/6.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/7.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/8.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/9.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/10.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/11.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/12.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/13.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/14.json")).default as DetailShard,
-  async () => (await import("@/data/youtube-detail-shards/15.json")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/0")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/1")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/2")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/3")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/4")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/5")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/6")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/7")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/8")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/9")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/10")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/11")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/12")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/13")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/14")).default as DetailShard,
+  async () => (await import("@/lib/youtube-detail-shard-modules/15")).default as DetailShard,
 ];
 
 function shardFor(videoId: string) {
