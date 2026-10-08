@@ -83,7 +83,7 @@ function personHref(name: string) {
 
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
-  const movie = getYouTubeDetailMovieById(videoId);
+  const movie = await getYouTubeDetailMovieById(videoId);
   if (!movie) notFound();
   if (movie.source === "curated") permanentRedirect(movie.internalHref);
 
