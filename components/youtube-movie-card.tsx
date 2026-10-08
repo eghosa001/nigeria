@@ -1,6 +1,4 @@
 import Link from "next/link";
-import type { YouTubeMovieRecord } from "@/lib/youtube-library";
-
 function runtimeLabel(minutes: number) {
   if (!minutes) return "Full movie";
   const hours = Math.floor(minutes / 60);
@@ -8,11 +6,23 @@ function runtimeLabel(minutes: number) {
   return hours ? hours + "h " + (mins ? mins + "m" : "") : mins + "m";
 }
 
+type YouTubeMovieCardRecord = {
+  videoId: string;
+  title: string;
+  synopsis: string;
+  featuredCast: string[];
+  channelName: string;
+  year: number;
+  durationMinutes: number;
+  internalHref: string;
+  alternateSources: readonly unknown[];
+};
+
 export function YouTubeMovieCard({
   movie,
   priority = false,
 }: {
-  movie: YouTubeMovieRecord;
+  movie: YouTubeMovieCardRecord;
   priority?: boolean;
 }) {
   return (
