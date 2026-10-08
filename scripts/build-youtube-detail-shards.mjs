@@ -27,7 +27,14 @@ for (const candidate of review.candidates ?? []) {
   shards[shardFor(String(candidate.videoId))].reviews.push(candidate);
 }
 
+fs.rmSync(outputDir, { recursive: true, force: true });
 fs.mkdirSync(outputDir, { recursive: true });
+
+const emittedMovieCount = shards.reduce((total, shard) => total + shard.movies.length, 0);
+const emittedReviewCount = shards.reduce((total, shard) => total + shard.reviews.length, 0);
+if (emittedMovieCount !== (generated.movies ?? []).length || emittedReviewCount !== (review.candidates ?? []).length) {
+  throw new Error("YouTube detail sharding lost catalog records.");
+}
 
 for (let index = 0; index < SHARD_COUNT; index++) {
   const payload = {
