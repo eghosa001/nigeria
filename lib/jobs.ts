@@ -42,7 +42,8 @@ export type JobPostingMetadata = {
   jobTitle: string;
   datePosted: string;
   employmentType?: SchemaEmploymentType | SchemaEmploymentType[];
-  locations: JobPostingLocation[];
+  locations: JobPostingLocation[]; // Empty only for genuine fully remote work.
+  remote?: { applicantCountries: string[] }; // Only if employer states 100% remote eligibility.
 };
 
 export type JobPostingAuthorization = {
