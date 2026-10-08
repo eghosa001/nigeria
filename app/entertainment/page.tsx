@@ -86,6 +86,7 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/trending">Trending now</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
+            <Link href="/entertainment/hallelujah-challenge-october-2026">Hallelujah Challenge livestream</Link>
           </div>
           <details className="compact-link-menu">
             <summary>More entertainment</summary>
