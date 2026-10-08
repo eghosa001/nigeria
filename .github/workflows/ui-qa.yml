@@ -65,6 +65,15 @@ jobs:
           quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
           non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
+          editorial_home_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/page\.tsx|app/entertainment/movies/page\.tsx|tests/home-editorial-curation\.spec\.ts)$' || true)"
+          unrelated_editorial_home="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/entertainment/movies/page\.tsx|tests/home-editorial-curation\.spec\.ts|docs/PREMIUM_UX_STANDARD\.md|\.github/workflows/ui-qa\.yml)$' || true)"
+          if [ -n "$editorial_home_trigger" ] && [ -z "$unrelated_editorial_home" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=editorial-home" >> "$GITHUB_OUTPUT"
+            echo "Homepage and featured-film changes; running compact curation check."
+            exit 0
+          fi
+
           premium_quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(tests/premium-quality-gate\.spec\.ts|components/site-header\.tsx|app/(mobile|ux-polish|theme)\.css)$' || true)"
           if [ -n "$premium_quality_trigger" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
@@ -145,6 +154,9 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Run homepage and featured-film editorial curation
+        if: steps.scope.outputs.mode == 'editorial-home'
+        run: npx playwright test tests/home-editorial-curation.spec.ts --project=desktop --workers=1
       - name: Run premium four-pillar quality contract
         if: steps.scope.outputs.mode == 'premium-quality'
         run: npx playwright test tests/premium-quality-gate.spec.ts --project=desktop --workers=1
