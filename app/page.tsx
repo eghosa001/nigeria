@@ -217,6 +217,8 @@ export default function HomePage() {
             <Link href="/explore/events">Events & festivals</Link>
             <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
             <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
+            <Link href="/explore/calabar-carnival-2026">Calabar Carnival 2026</Link>
+            <Link href="/explore/detty-december-lagos-2026">Detty December Lagos</Link>
             <Link href="/explore?q=restaurant#places">Restaurants</Link>
             <Link href="/explore?q=hotel#places">Hotels & stays</Link>
           </div>
@@ -240,6 +242,11 @@ export default function HomePage() {
             </label>
             <button type="submit">Search jobs</button>
           </form>
+
+          <div className="minimal-inline-links" aria-label="Popular recruitment and career guides">
+            <Link href="/jobs/nigerian-army-92rri-2026">Army 92RRI recruitment status</Link>
+            <Link href="/jobs/remote">Remote jobs in Nigeria</Link>
+          </div>
 
           <div className="home-jobs-grid">
             <Link href="/jobs/government" className="home-job-feature">
