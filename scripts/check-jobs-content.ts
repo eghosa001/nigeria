@@ -67,6 +67,12 @@ for (const item of jobOpportunities) {
     assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
   }
   if (item.kind === "vacancy") {
+    // Every newly added or freshly reverified vacancy must document what the
+    // employer actually published about pay and worksite. Unknown is legitimate;
+    // invented salary, postcode or headquarters-as-worksite is not.
+    if (item.verifiedAt > "2026-10-08") {
+      assert(Boolean(item.publicationReview), item.slug + " needs a verified pay/worksite publication review before being added or refreshed.");
+    }
     const detailText = [...item.qualifications, ...item.requirements, ...item.applicationSteps].join(" ").toLowerCase();
     const bannedGenericPhrases = [
       "review the official " + item.organization.toLowerCase() + " vacancy for the exact",
@@ -86,16 +92,47 @@ for (const item of jobOpportunities) {
     assert(daysSinceIsoDate(item.verifiedAt) <= 14, item.slug + " is marked open but has not been verified in the last 14 days.");
     if (item.deadline) assert(item.deadline >= new Date().toISOString().slice(0, 10), item.slug + " is stored open after its deadline.");
   }
+  if (item.publicationReview) {
+    const review = item.publicationReview;
+    assert(review.evidenceUrl.startsWith("https://"), item.slug + " publication review needs the employer's HTTPS source.");
+    assert(item.sources.some((source) => source.url === review.evidenceUrl), item.slug + " publication review evidence must be a listed employer source.");
+    assert(isoDate.test(review.reviewedAt) && review.reviewedAt <= new Date().toISOString().slice(0, 10), item.slug + " publication review date must be valid and not in the future.");
+    assert(review.payStatus === (item.remuneration ? "employer-reported" : "not-published"), item.slug + " review pay status must match documented remuneration.");
+    if (review.worksiteStatus === "full-address") {
+      assert(Boolean(item.posting?.locations.every((location) => location.streetAddress && location.locality && location.postalCode)), item.slug + " full-address claim needs employer-backed physical details.");
+    }
+  }
+  if (item.remuneration) {
+    const pay = item.remuneration;
+    assert(Number.isFinite(pay.amount) && pay.amount > 0, item.slug + " remuneration must be a positive employer-reported amount.");
+    assert(isoDate.test(pay.checkedAt), item.slug + " remuneration needs ISO source-check date.");
+    assert(item.sources.some((source) => source.url === pay.evidenceUrl), item.slug + " remuneration must link to a recorded employer source.");
+    assert(Boolean(item.publicationReview), item.slug + " published remuneration requires a documented publication review.");
+  }
   if (item.posting) {
     assert(item.kind === "vacancy", item.slug + " has JobPosting metadata but is not a vacancy.");
     assert(isoDate.test(item.posting.datePosted), item.slug + " needs an ISO JobPosting datePosted.");
     assert(item.posting.datePosted <= item.verifiedAt, item.slug + " datePosted cannot be after verifiedAt.");
-    assert(item.posting.locations.length > 0, item.slug + " JobPosting needs at least one location.");
+    assert(item.posting.locations.length > 0 || Boolean(item.posting.remote), item.slug + " JobPosting needs a physical location or verified remote eligibility.");
+    assert(item.posting.locations.every((location) => Boolean(location.country.trim())), item.slug + " JobPosting physical locations need a verified country.");
+    if (item.posting.remote) {
+      assert(item.posting.remote.applicantCountries.length > 0, item.slug + " fully remote jobs need explicit eligible countries.");
+    }
+    for (const location of item.posting.locations) {
+      assert(!location.streetAddress || Boolean(location.locality), item.slug + " street address without city is not a trustworthy worksite.");
+      assert(!location.postalCode || Boolean(location.locality), item.slug + " postcode without city is not an eligible worksite.");
+    }
+    const schemaEligible = item.posting.locations.every((location) => Boolean(location.locality?.trim())) &&
+      (item.posting.locations.length > 0 || Boolean(item.posting.remote?.applicantCountries.length));
     const structured = buildJobPostingJsonLd(item, "https://mynigeriaguide.com/jobs/" + item.slug);
+    if (structured) {
+      const structuredSalary = (structured as Record<string, unknown>).baseSalary;
+      assert(Boolean(structuredSalary) === (item.remuneration?.payType === "base"), item.slug + " JobPosting baseSalary must be employer-confirmed base pay, never estimated gross.");
+    }
     if (item.jobPostingAuthorization) {
       assert(item.jobPostingAuthorization.publicEvidenceUrl.startsWith("https://"), item.slug + " JobPosting authorization needs public HTTPS evidence.");
       assert(isoDate.test(item.jobPostingAuthorization.verifiedAt), item.slug + " JobPosting authorization needs an ISO verifiedAt date.");
-      assert(item.status === "open" ? Boolean(structured) : structured === null, item.slug + " JobPosting must appear only for an open, authorised vacancy.");
+      assert(item.status === "open" && schemaEligible ? Boolean(structured) : structured === null, item.slug + " JobPosting must appear only for an open, authorised vacancy with a verified physical locality or remote eligibility.");
     } else {
       assert(structured === null, item.slug + " must not emit third-party JobPosting markup without recorded authorization.");
     }
