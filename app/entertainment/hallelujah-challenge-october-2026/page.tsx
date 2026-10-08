@@ -73,7 +73,7 @@ export default function HallelujahChallengeOctober2026Page() {
               { label: "Current status", value: eventStatus },
             ]}
             links={[
-              { href: youtube, label: "Official YouTube", primary: true },
+              { href: youtube, label: "Official YouTube", primary: true, external: true },
               { href: "#official-channels", label: "Watch options" },
               { href: "#questions", label: "Quick answers" },
             ]}
