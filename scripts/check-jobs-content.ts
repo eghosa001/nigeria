@@ -1,3 +1,4 @@
+import legacyJobs from "../data/job-publication-legacy-slugs.json";
 import { careerGuides } from "../lib/career-guides";
 import { getJobTopicOpportunities, jobTopics } from "../lib/job-topics";
 import { jobEmployers } from "../lib/job-employers";
@@ -14,6 +15,7 @@ function unique(values: string[], label: string) {
   assert(new Set(values).size === values.length, label + " must be unique.");
 }
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+const legacyJobSlugs = new Set(legacyJobs.slugs);
 
 assert(jobOpportunities.length >= 180, "Quality-first Jobs catalog must keep at least 180 verified opportunity or employer-pathway records after pruning thin pages.");
 assert(jobOpportunities.length < 1000, "Move Jobs storage to the prepared D1 boundary before the in-memory server catalog reaches 1,000 records.");
@@ -66,11 +68,14 @@ for (const item of jobOpportunities) {
     assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
     assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
   }
+  if ((item.kind === "programme" || item.kind === "recruitment-exercise") && (!legacyJobSlugs.has(item.slug) || item.verifiedAt > legacyJobs.snapshotDate)) {
+    assert(Boolean(item.publicationReview), item.slug + " new recruitment exercise needs a verified pay/worksite publication review.");
+  }
   if (item.kind === "vacancy") {
     // Every newly added or freshly reverified vacancy must document what the
     // employer actually published about pay and worksite. Unknown is legitimate;
     // invented salary, postcode or headquarters-as-worksite is not.
-    if (item.verifiedAt > "2026-10-08") {
+    if (!legacyJobSlugs.has(item.slug) || item.verifiedAt > legacyJobs.snapshotDate) {
       assert(Boolean(item.publicationReview), item.slug + " needs a verified pay/worksite publication review before being added or refreshed.");
     }
     const detailText = [...item.qualifications, ...item.requirements, ...item.applicationSteps].join(" ").toLowerCase();
