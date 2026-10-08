@@ -48,10 +48,19 @@ test("the four discovery pages lead with user tasks, not AI or SEO production ja
 });
 
 test("representative public paths meet WCAG 2.1 AA automatic accessibility checks", async ({ page }) => {
+  const findings: { path: string; theme: string; rule: string; impact: string; targets: string[] }[] = [];
   for (const path of ["/", "/entertainment/movies", "/services", "/explore", "/jobs"]) {
     await page.goto(path);
-    const audit = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
-    const serious = audit.violations.filter((item) => ["critical", "serious"].includes(item.impact ?? ""));
-    expect(serious.map((item) => ({ id: item.id, impact: item.impact, nodes: item.nodes.length })), path + " serious accessibility findings").toEqual([]);
+    for (const theme of ["light", "dark"]) {
+      await page.evaluate((value) => { document.documentElement.dataset.theme = value; }, theme);
+      const audit = await new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]).analyze();
+      for (const item of audit.violations.filter((issue) => ["critical", "serious"].includes(issue.impact ?? ""))) {
+        findings.push({
+          path, theme, rule: item.id, impact: item.impact ?? "",
+          targets: item.nodes.slice(0, 18).map((node) => node.target.join(" ") + ": " + node.failureSummary?.slice(0, 140)),
+        });
+      }
+    }
   }
+  expect(findings, "Serious or critical WCAG violations and affected selectors").toEqual([]);
 });
