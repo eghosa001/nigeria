@@ -1,4 +1,5 @@
 export const serviceSeoTitleTemplates: Record<string, string> = {
+  "neco-2026-ssce-external-registration": "NECO External Registration {year}: Deadline & Portal",
   "nin-enrolment": "NIN Registration Nigeria {year}: Free Enrolment & Requirements",
   "ecowas-travel-certificate": "ECOWAS Travel Certificate Price {year}: Form & Requirements",
   "passport-appointment": "Nigerian Passport Appointment {year}: Book Online",
@@ -76,6 +77,7 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "neco-2026-ssce-external-registration": "NECO 2026 SSCE External registration: normal deadline 26 October, late registration until 3 November, official portal, steps and exam timetable.",
   "nin-enrolment": "NIN registration in Nigeria {year}: free NIMC enrolment, eligibility, biometric capture, official route and how to collect the NIN slip.",
   "nrs-individual-tax-registration": "Register with NRS as an individual using NIN through the official self-service portal. Save your registration ID and resume an incomplete form.",
   "nrs-tax-id-retrieval": "Nigeria Tax ID/TIN retrieval {year}: use the official NRS/JRB portal with NIN for individuals or CAC details for businesses, with no public retrieval fee shown.",
