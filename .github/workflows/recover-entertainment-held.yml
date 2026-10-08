@@ -31,17 +31,20 @@ jobs:
       - name: Recover held movies from validated actor names
         run: node scripts/recover-youtube-held-movies.mjs
 
+      - name: Rebuild lightweight YouTube detail shards
+        run: node scripts/build-youtube-detail-shards.mjs
+
       - name: Validate recovered entertainment catalog
         run: node scripts/check-entertainment-scale.mjs
 
       - name: Commit recovered metadata
         run: |
-          if git diff --quiet -- data/youtube-movies.generated.json data/youtube-movies-review.generated.json; then
+          if git diff --quiet -- data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards; then
             echo "No held movies qualified for recovery."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/youtube-movies.generated.json data/youtube-movies-review.generated.json
+          git add data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards
           git commit -m "Recover validated held YouTube movies"
           git push origin HEAD:feature/movies-entertainment

@@ -80,6 +80,10 @@ jobs:
           YOUTUBE_FULL_SYNC: ${{ steps.sync-mode.outputs.full }}
         run: node scripts/sync-youtube-entertainment.mjs
 
+      - name: Rebuild lightweight YouTube detail shards
+        if: steps.api-key.outputs.present == 'true'
+        run: node scripts/build-youtube-detail-shards.mjs
+
       - name: Validate generated entertainment catalog
         if: steps.api-key.outputs.present == 'true'
         run: node scripts/check-entertainment-scale.mjs
@@ -87,7 +91,7 @@ jobs:
       - id: changes
         if: steps.api-key.outputs.present == 'true'
         run: |
-          if [ -z "$(git status --porcelain -- data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json)" ]; then
+          if [ -z "$(git status --porcelain -- data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -103,7 +107,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH" "$BASE_SHA"
-          git add data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json
+          git add data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards
           git commit -m "Refresh approved YouTube movie catalog"
           git push --force origin "$BRANCH"
 

@@ -1,5 +1,3 @@
-import generatedData from "@/data/youtube-movies.generated.json";
-import reviewData from "@/data/youtube-movies-review.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
@@ -50,9 +48,44 @@ type ReviewCandidate = {
   descriptionExcerpt?: string;
 };
 
-const generatedMovies = generatedData.movies as GeneratedRecord[];
-const reviewCandidates = (reviewData.candidates ?? []) as ReviewCandidate[];
-const reviewGeneratedAt = String(reviewData.generatedAt ?? "").slice(0, 10) || "2026-10-08";
+type DetailShard = {
+  generatedAt?: string;
+  reviewGeneratedAt?: string;
+  movies: GeneratedRecord[];
+  reviews: ReviewCandidate[];
+};
+
+const shardLoaders: Array<() => Promise<DetailShard>> = [
+  async () => (await import("@/data/youtube-detail-shards/0.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/1.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/2.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/3.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/4.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/5.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/6.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/7.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/8.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/9.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/10.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/11.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/12.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/13.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/14.json")).default as DetailShard,
+  async () => (await import("@/data/youtube-detail-shards/15.json")).default as DetailShard,
+];
+
+function shardFor(videoId: string) {
+  let hash = 2166136261;
+  for (let index = 0; index < videoId.length; index++) {
+    hash ^= videoId.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return (hash >>> 0) % shardLoaders.length;
+}
+
+async function loadDetailShard(videoId: string) {
+  return shardLoaders[shardFor(videoId)]();
+}
 
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
@@ -98,7 +131,6 @@ function normalizeCastName(value: string) {
       .toLowerCase()
       .replace(/(^|[\s.'’\-])([a-z])/g, (_, prefix: string, letter: string) => prefix + letter.toUpperCase());
   }
-
   return name;
 }
 
@@ -128,9 +160,7 @@ function normalizeSynopsis(movie: GeneratedRecord) {
     .replace(/^[A-Z0-9 '&’():-]{4,}:\s*/, "")
     .trim();
 
-  const generatedSuffix = text.search(/\s+is a full-length Nigerian film published by /i);
-  if (generatedSuffix >= 0) return fallbackSynopsis(movie);
-
+  if (text.search(/\s+is a full-length Nigerian film published by /i) >= 0) return fallbackSynopsis(movie);
   if (
     !text ||
     text.length < 55 ||
@@ -138,9 +168,7 @@ function normalizeSynopsis(movie: GeneratedRecord) {
     generatedSynopsisSeo.test(text) ||
     /^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(text) ||
     /\p{Extended_Pictographic}/u.test(text)
-  ) {
-    return fallbackSynopsis(movie);
-  }
+  ) return fallbackSynopsis(movie);
 
   return text.slice(0, 360).trim();
 }
@@ -156,7 +184,6 @@ function normalizeGenerated(movie: GeneratedRecord): YouTubeDetailMovie {
     featuredCast: featuredCast.length ? featuredCast : cast.slice(0, 3),
     metadataStatus: cast.length ? "complete" : "cast-pending",
   };
-
   return {
     ...normalized,
     synopsis: normalizeSynopsis(normalized),
@@ -181,17 +208,16 @@ function sharedCastCount(a: YouTubeDetailMovie, b: YouTubeDetailMovie) {
   return b.cast.filter((name) => names.has(name.trim().toLowerCase())).length;
 }
 
-function addAlternateSources(movie: YouTubeDetailMovie) {
+function addAlternateSources(movie: YouTubeDetailMovie, shardMovies: GeneratedRecord[]) {
   const identity = movieIdentity(movie.title);
   if (!identity || !movie.cast.length) return movie;
-
   const alternateSources: YouTubeDetailSource[] = [];
-  for (const raw of generatedMovies) {
-    if (raw.videoId === movie.videoId) continue;
-    if (movieIdentity(raw.title || raw.rawTitle) !== identity) continue;
+
+  for (const raw of shardMovies) {
+    if (raw.videoId === movie.videoId || movieIdentity(raw.title || raw.rawTitle) !== identity) continue;
     const other = normalizeGenerated(raw);
-    const evidenceThreshold = Math.min(2, movie.cast.length, other.cast.length);
-    if (!evidenceThreshold || sharedCastCount(movie, other) < evidenceThreshold) continue;
+    const threshold = Math.min(2, movie.cast.length, other.cast.length);
+    if (!threshold || sharedCastCount(movie, other) < threshold) continue;
     alternateSources.push({
       videoId: other.videoId,
       channelName: other.channelName,
@@ -217,8 +243,8 @@ function reviewSynopsis(candidate: ReviewCandidate) {
       !generatedSynopsisSeo.test(sentence),
     );
   if (firstUseful) return firstUseful.slice(0, 360);
-  return cleanYouTubeDisplayTitle(candidate.title) + " is a full-length Nigerian film published by " + candidate.channelName +
-    ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
+  return cleanYouTubeDisplayTitle(candidate.title) + " is a full-length Nigerian film published by " +
+    candidate.channelName + ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
 }
 
 function getCuratedMovie(videoId: string): YouTubeDetailMovie | undefined {
@@ -245,11 +271,9 @@ function getCuratedMovie(videoId: string): YouTubeDetailMovie | undefined {
       alternateSources: [],
     };
   }
-  return undefined;
 }
 
-function getReviewMovie(videoId: string): YouTubeDetailMovie | undefined {
-  const candidate = reviewCandidates.find((item) => item.videoId === videoId);
+function getReviewMovie(candidate: ReviewCandidate | undefined, reviewGeneratedAt?: string): YouTubeDetailMovie | undefined {
   if (
     !candidate ||
     candidate.reason !== "missing-cast" ||
@@ -272,7 +296,7 @@ function getReviewMovie(videoId: string): YouTubeDetailMovie | undefined {
     year: Number(candidate.publishedAt.slice(0, 4)),
     durationMinutes: candidate.durationMinutes,
     videoUrl: candidate.videoUrl,
-    lastChecked: reviewGeneratedAt,
+    lastChecked: String(reviewGeneratedAt ?? "").slice(0, 10) || "2026-10-08",
     metadataStatus: "cast-pending",
     source: "youtube-review",
     internalHref: "/entertainment/youtube/" + candidate.videoId,
@@ -294,26 +318,30 @@ export function isIndexableYouTubeDetailMovie(movie: YouTubeDetailMovie) {
     hasSubstantiveYouTubeDetailSynopsis(movie);
 }
 
-export function getYouTubeDetailMovieById(videoId: string) {
+export async function getYouTubeDetailMovieById(videoId: string) {
   const curated = getCuratedMovie(videoId);
   if (curated) return curated;
 
-  const raw = generatedMovies.find((movie) => movie.videoId === videoId);
+  const shard = await loadDetailShard(videoId);
+  const raw = shard.movies.find((movie) => movie.videoId === videoId);
   if (raw) {
     const normalized = normalizeGenerated(raw);
-    if (normalized.metadataStatus !== "cast-pending") return addAlternateSources(normalized);
+    if (normalized.metadataStatus !== "cast-pending") return addAlternateSources(normalized, shard.movies);
   }
 
-  return getReviewMovie(videoId);
+  return getReviewMovie(
+    shard.reviews.find((candidate) => candidate.videoId === videoId),
+    shard.reviewGeneratedAt,
+  );
 }
 
-export function getRelatedYouTubeDetailMovies(movie: YouTubeDetailMovie, limit = 4) {
+export async function getRelatedYouTubeDetailMovies(movie: YouTubeDetailMovie, limit = 4) {
+  const shard = await loadDetailShard(movie.videoId);
   const best: Array<{ item: YouTubeDetailMovie; score: number }> = [];
   const castKeys = new Set(movie.cast.map((name) => name.trim().toLowerCase()));
 
-  for (const raw of generatedMovies) {
+  for (const raw of shard.movies) {
     if (raw.videoId === movie.videoId) continue;
-
     const rawCast = Array.isArray(raw.cast) ? raw.cast : [];
     const shared = rawCast.reduce(
       (count, name) => count + (castKeys.has(String(name).trim().toLowerCase()) ? 1 : 0),
@@ -327,7 +355,6 @@ export function getRelatedYouTubeDetailMovies(movie: YouTubeDetailMovie, limit =
 
     const item = normalizeGenerated(raw);
     if (!isIndexableYouTubeDetailMovie(item)) continue;
-
     best.push({ item, score });
     best.sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt));
     if (best.length > limit) best.pop();
