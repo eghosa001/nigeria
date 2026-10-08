@@ -77,12 +77,20 @@ export function buildJobPostingJsonLd(item: CareerOpportunity, pageUrl: string, 
   if (!item.posting || !item.jobPostingAuthorization || item.kind !== "vacancy" || !isEffectivelyOpen(item, todayIso)) return null;
 
   const posting = item.posting;
+  // Only describe a physical worksite when the employer has identified its locality.
+  // State-wide recruitment without an actual city remains an ordinary indexed guide,
+  // rather than creating Google's "missing addressLocality" JobPosting warnings.
+  if (!posting.locations.length && !posting.remote) return null;
+  if (posting.locations.some((location) => !location.country.trim() || !location.locality?.trim())) return null;
+  if (posting.remote && (!posting.remote.applicantCountries.length || posting.remote.applicantCountries.some((country) => !country.trim()))) return null;
   const jobLocation = posting.locations.map((location) => ({
     "@type": "Place",
     address: {
       "@type": "PostalAddress",
-      ...(location.locality ? { addressLocality: location.locality } : {}),
+      ...(location.streetAddress ? { streetAddress: location.streetAddress } : {}),
+      addressLocality: location.locality,
       ...(location.region ? { addressRegion: location.region } : {}),
+      ...(location.postalCode ? { postalCode: location.postalCode } : {}),
       addressCountry: location.country,
     },
   }));
@@ -105,7 +113,19 @@ export function buildJobPostingJsonLd(item: CareerOpportunity, pageUrl: string, 
       "@type": "Organization",
       name: item.organization,
     },
-    jobLocation: jobLocation.length === 1 ? jobLocation[0] : jobLocation,
+    ...(jobLocation.length ? { jobLocation: jobLocation.length === 1 ? jobLocation[0] : jobLocation } : {}),
+    ...(posting.remote ? {
+      jobLocationType: "TELECOMMUTE",
+      applicantLocationRequirements: posting.remote.applicantCountries.map((name) => ({ "@type": "Country", name })),
+    } : {}),
+    // Google's baseSalary is not a guess, a market average, or an allowance-inclusive gross package.
+    ...(item.remuneration?.payType === "base" ? {
+      baseSalary: {
+        "@type": "MonetaryAmount",
+        currency: item.remuneration.currency,
+        value: { "@type": "QuantitativeValue", value: item.remuneration.amount, unitText: item.remuneration.period },
+      },
+    } : {}),
     identifier: {
       "@type": "PropertyValue",
       name: item.organization,
