@@ -42,9 +42,9 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
   "cac-company-registration": {
     fee: "How much is CAC company registration and payment?",
     requirements: "What CAC registration form and documents do I need?",
-    online: "Can I complete the CAC registration process online?",
+    online: "Where is the official CAC company registration portal?",
     timeline: "How long does CAC company registration take?",
-    start: "How do I register a limited company with CAC?",
+    start: "How do I register a limited company with CAC in Nigeria?",
   },
   "cac-status-report": {
     fee: "How much does a CAC status report cost?",
@@ -131,8 +131,8 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I get a Police Character Certificate in Nigeria?",
   },
   "nigeria-landing-exit-card": {
-    online: "Can I complete the Nigeria landing and exit card online?",
-    start: "How do I complete Nigeria's landing and exit card?",
+    online: "Where is the Nigeria Immigration landing and exit card form?",
+    start: "How do I complete the Nigeria exit or landing card online?",
   },
   "bvn-retrieval": {
     fee: "How much does it cost to retrieve my BVN?",
@@ -145,8 +145,8 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I get the JAMB Direct Entry form for 2026?",
   },
   "pencom-open-rsa": {
-    requirements: "Do I need NIN for RSA registration?",
-    online: "Can I open an RSA online?",
+    requirements: "Is NIN required to register for a pension RSA in Nigeria?",
+    online: "Can I open a pension RSA account online?",
     start: "How do I register for an RSA pension account in Nigeria?",
   },
   "pencom-transfer-rsa": {
@@ -166,9 +166,9 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I renew my Nigerian passport?",
   },
   "anambra-asin-registration": {
-    requirements: "What do I need for ASIN registration?",
-    online: "Can I complete ASIN registration online?",
-    start: "How do I get an ASIN number in Anambra State online?",
+    requirements: "What do I need for ASIN registration in Anambra State?",
+    online: "Where is the official Anambra ASIN registration portal?",
+    start: "How do I create an ASIN number online in Anambra State?",
   },
   "nip-transfer-status": {
     online: "Can I check NIP transfer status online?",
@@ -189,8 +189,9 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I apply for a 25 percent pension withdrawal after job loss?",
   },
   "passport-application-tracking": {
-    online: "Can I track my Nigerian passport application online?",
-    start: "How do I track my Nigerian passport application on the official NIS tracker?",
+    requirements: "What details do I need to check my NIS passport application status?",
+    online: "Where is the official NIS passport tracking portal?",
+    start: "How do I track my Nigerian passport application status online?",
   },
   "inec-replace-lost-damaged-pvc": {
     requirements: "What do I need to replace a lost or damaged PVC?",
@@ -203,9 +204,9 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     start: "How do I transfer my INEC voter registration to a new location?",
   },
   "ninauth-nin-verification": {
-    requirements: "What do I need to verify my identity with NINAuth?",
-    online: "How do I get and use a NIN Sharecode with NINAuth?",
-    start: "How do I use NINAuth for NIN verification?",
+    requirements: "What do I need to use the NINAuth app?",
+    online: "How do I generate a NIN Share Code in NINAuth?",
+    start: "How can I verify my NIN with the NINAuth app?",
   },
   "ogun-tax-clearance-certificate": {
     requirements: "What do I need for an Ogun State tax clearance certificate?",
