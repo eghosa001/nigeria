@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { JobsDirectory } from "@/components/jobs-directory";
-import { LiveJobsDirectory } from "@/components/live-jobs-directory";
+import { OnDemandLiveJobs } from "@/components/on-demand-live-jobs";
 import { governmentOpportunities, internationalOpportunities, jobOpportunities, privateOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
@@ -296,7 +296,7 @@ export default function JobsPage() {
               <p>Browse recent vacancies from external sources, then confirm the requirements and application method with the employer. These are source listings, not independently verified vacancies.</p>
             </div>
           </div>
-          <LiveJobsDirectory />
+          <OnDemandLiveJobs />
         </div>
       </section>
 
