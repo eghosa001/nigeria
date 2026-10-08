@@ -240,6 +240,12 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             ) : null}
           </div>
           <p className="hero-note">Reviewed {guide.lastReviewed}. Confirm live opening hours, ticketing, road access, weather, security conditions and event schedules directly before travelling.</p>
+          {guide.slug === "hallelujah-festival-lagos-october-2026" ? (
+            <div className="minimal-inline-links">
+              <Link href="/entertainment/hallelujah-challenge-october-2026">Join the separate nightly online Hallelujah Challenge →</Link>
+              <Link href="/explore/lagos">Plan your Lagos trip →</Link>
+            </div>
+          ) : null}
           {guide.slug === "lagos" ? <div className="minimal-inline-links"><Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link></div> : null}
           {guide.slug === "abuja" ? <div className="minimal-inline-links"><Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link></div> : null}
           {guide.slug === "calabar" ? (
