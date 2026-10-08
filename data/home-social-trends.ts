@@ -17,31 +17,31 @@ export type HomeSocialTrend = {
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
     pillar: "Movies & Entertainment",
-    title: "Hallelujah Challenge October 2026 — live nightly at 11:59 PM WAT",
-    href: "/entertainment/hallelujah-challenge-october-2026",
+    title: "Tele x Zikora — cast, official teaser & 23 October cinema release",
+    href: "/entertainment/movies/tele-x-zikora-2026",
+    checkedAt: "2026-10-08",
+    expiresAt: "2026-10-24",
+  },
+  {
+    pillar: "Services",
+    title: "NECO External 2026 — register by 26 October",
+    href: "/services/neco-2026-ssce-external-registration",
+    checkedAt: "2026-10-08",
+    expiresAt: "2026-10-26",
+  },
+  {
+    pillar: "Tour Nigeria",
+    title: "Hallelujah Festival Lagos — free event on 30 October",
+    href: "/explore/hallelujah-festival-lagos-october-2026",
     checkedAt: "2026-10-08",
     expiresAt: "2026-10-30",
   },
   {
-    pillar: "Services",
-    title: "INEC voter-register display & claims — 9–15 October",
-    href: "/services/inec-claims-objections-october-2026",
-    checkedAt: "2026-10-08",
-    expiresAt: "2026-10-15",
-  },
-  {
-    pillar: "Tour Nigeria",
-    title: "Felabration 2026 — 12–18 October at the New Afrika Shrine",
-    href: "/explore/felabration-2026",
-    checkedAt: "2026-10-08",
-    expiresAt: "2026-10-18",
-  },
-  {
     pillar: "Jobs & Careers",
-    title: "Oilserv 2027 Graduate Trainee — applications close 10 October",
-    href: "/jobs/oilserv-ingenious-graduate-trainee-2027",
+    title: "Zecathon 6.0 Hackathon — 13 October application deadline",
+    href: "/jobs/zenith-bank-zecathon-6-hackathon-2026",
     checkedAt: "2026-10-08",
-    expiresAt: "2026-10-10",
+    expiresAt: "2026-10-13",
   },
 ];
 
