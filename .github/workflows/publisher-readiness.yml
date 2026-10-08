@@ -1,0 +1,40 @@
+name: Publisher Readiness Audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/audit-publisher-readiness.ts"
+      - ".github/workflows/publisher-readiness.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publisher-audit-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publisher-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify owner minimal-CI guard
+        run: python3 scripts/fast_path_guard.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install audit dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Audit catalog source-content signals only (read-only)
+        run: |
+          npm run audit:publisher -- --json > publisher-audit.json
+          node -e 'const a=require("./publisher-audit.json"); if(!a.uniqueCatalogUrls||a.byPillar.length!==6) process.exit(1); for(const x of a.byPillar) console.log(x.pillar, JSON.stringify(x)); console.log("Publisher audit generated:",a.uniqueCatalogUrls,"records");'
+      - name: Store audit artifact for editorial review
+        uses: actions/upload-artifact@v4
+        with:
+          name: publisher-readiness-audit
+          path: publisher-audit.json
+          retention-days: 14
