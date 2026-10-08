@@ -374,8 +374,7 @@ test("latest GSC movie promotions consolidate YouTube routes", async ({ page }) 
     ["WG_QjN4DalE", "a-ride-forever-2026"],
     ["mdRt2wCkJjg", "stuck-with-you-2025"],
   ] as const) {
-    await page.goto("/entertainment/youtube/" + videoId);
-    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+    await expectCanonicalYouTubeAlias(page, videoId, slug);
   }
 });
 
@@ -386,8 +385,7 @@ test("wave 9 GSC movie URLs consolidate into canonical title pages", async ({ pa
     ["apRTBP_nkxE", "our-perfect-match-2026"],
     ["JQ7tmUUg4eI", "one-string-attached-2023"],
   ] as const) {
-    await page.goto("/entertainment/youtube/" + videoId);
-    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+    await expectCanonicalYouTubeAlias(page, videoId, slug);
   }
 });
 
@@ -399,7 +397,6 @@ test("wave 10 ranking YouTube URLs resolve to canonical movie guides", async ({ 
     ["_86CuSRi6E4", "one-more-night-2025"],
     ["UKDk_wgQcQc", "a-hold-on-me-2024"],
   ] as const) {
-    await page.goto("/entertainment/youtube/" + videoId);
-    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+    await expectCanonicalYouTubeAlias(page, videoId, slug);
   }
 });
