@@ -45,4 +45,6 @@ test("main landing pages use visitor language and avoid long mobile overflow", a
   await expect(page.locator(".mobile-bottom-nav a")).toHaveCount(5);
   await page.goto("/explore");
   await expect(page.getByText(/Eight places appear initially/)).toBeVisible();
+  await expect(page.locator(".tour-photo-card img")).toHaveCount(4);
+  await expect(page.locator(".tour-photo-credit a[href*='creativecommons.org']")).toHaveCount(4);
 });
