@@ -1,3 +1,4 @@
+import { verifiedTrendEventPlaces } from "@/lib/explore-trend-event-places";
 import { exploreGrowthWaveSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06";
 import { exploreGrowthPlaces } from "@/lib/explore-growth-places-2026-10-06";
 import { ncmmMuseumPlaces } from "@/lib/explore-museum-places-2026-10-08";
@@ -36,6 +37,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...verifiedTrendEventPlaces,
   ...ncmmMuseumPlaces,
   ...exploreGrowthPlacesWave9,
   ...exploreGrowthPlacesWave8,
