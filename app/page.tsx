@@ -9,6 +9,7 @@ import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
 import { releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
+import { getEffectiveJobStatus } from "@/lib/job-runtime";
 
 export const metadata: Metadata = {
   title: "Nigerian Movies, Services, Travel & Jobs",
@@ -38,6 +39,18 @@ const quickServices = [
   { label: "Pension & RSA", href: "/topics/pension-services-nigeria" },
   { label: "Foreign visas", href: "/categories/foreign-visas" },
 ];
+
+// Homepage previews feature distinct employers, not three programmes from
+// the same recruiter. The full jobs directory still lists all verified roles.
+function uniqueRecruiters<T extends { organization: string }>(items: T[]) {
+  const seen = new Set<string>();
+  return items.filter((item) => {
+    const name = item.organization.trim().replace(/\s+/g, " ").toLocaleLowerCase("en");
+    if (seen.has(name)) return false;
+    seen.add(name);
+    return true;
+  });
+}
 
 export default function HomePage() {
   const socialTrends = getCurrentHomeSocialTrends();
@@ -71,13 +84,23 @@ export default function HomePage() {
   const travelHighlights = ["lagos", "abuja", "kano", "obudu-mountain-resort", "yankari-game-reserve", "anambra-heritage-circuit"]
     .flatMap((slug) => exploreGuides.filter((guide) => guide.slug === slug));
 
-  const openGovernmentHighlights = governmentOpportunities
-    .filter((item) => item.status === "open")
-    .slice(0, 3);
-
-  const activeGovernmentCount = governmentOpportunities.filter(
-    (item) => item.status === "open" || item.status === "screening" || item.status === "training",
-  ).length;
+  const activeGovernmentOpportunities = governmentOpportunities.filter(
+    (item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item)),
+  );
+  const openGovernmentHighlights = uniqueRecruiters(
+    activeGovernmentOpportunities
+      .filter((item) => getEffectiveJobStatus(item) === "open")
+      .sort((a, b) => (a.deadline ?? "9999-12-31").localeCompare(b.deadline ?? "9999-12-31")),
+  ).slice(0, 3);
+  const featuredOrganizations = new Set(
+    openGovernmentHighlights.map((item) => item.organization.trim().toLocaleLowerCase("en")),
+  );
+  const secondaryGovernmentHighlights = uniqueRecruiters(
+    activeGovernmentOpportunities.filter(
+      (item) => !featuredOrganizations.has(item.organization.trim().toLocaleLowerCase("en")),
+    ),
+  ).slice(0, 2);
+  const activeGovernmentCount = activeGovernmentOpportunities.length;
 
   return (
     <>
@@ -260,11 +283,11 @@ export default function HomePage() {
               <div className="home-job-feature-summary">
                 <span>Government tracker</span>
                 <strong>{governmentOpportunities.length} verified recruitment guides</strong>
-                <small>{activeGovernmentCount} recruitments are currently open or in an active later stage.</small>
+                <small>{activeGovernmentCount} opportunities are currently open or in an active later stage.</small>
               </div>
 
               <div className="home-job-feature-live">
-                <span>Open now</span>
+                <span>{openGovernmentHighlights.length ? "Open now" : "Open opportunities"}</span>
                 {openGovernmentHighlights.map((item) => (
                   <div className="home-job-feature-live-item" key={item.slug}>
                     <b>{item.organization}</b>
@@ -280,7 +303,7 @@ export default function HomePage() {
               <b className="home-job-feature-cta">Open government tracker →</b>
             </Link>
             <div className="home-job-list">
-              {governmentOpportunities.slice(0, 2).map((item) => (
+              {secondaryGovernmentHighlights.map((item) => (
                 <Link href={"/jobs/" + item.slug} key={item.slug}>
                   <span>{item.statusLabel}</span>
                   <strong>{item.organization}</strong>
