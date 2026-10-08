@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import "@/app/mobile.css";
 import "@/app/theme.css";
+import "@/app/ux-polish.css";
 import { AdsenseScript } from "@/components/adsense";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
@@ -11,6 +12,7 @@ import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 import { PostHogAnalytics } from "@/components/posthog-analytics";
+import { RecentPageTracker } from "@/components/personal-library";
 
 const siteUrl = getSiteUrl();
 
@@ -122,6 +124,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <JsonLd data={[websiteLd, organizationLd]} />
         <SiteHeader />
+        <RecentPageTracker />
         <main id="main-content">{children}</main>
         <SiteFooter />
         <ServiceWorkerRegister />

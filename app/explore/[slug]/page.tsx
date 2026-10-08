@@ -9,6 +9,7 @@ import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
+import { SavePageButton } from "@/components/personal-library";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -34,32 +35,22 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 }
 
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
-  const highlights = guide.highlights.slice(0, 4).map((item) => item.name);
-  const firstPlanning = guide.planning[0]?.detail ?? "Group nearby stops together and confirm live access before travelling.";
-  const geographyQuestion = guide.kind === "city"
-    ? [{
-        question: "Where is " + guide.shortTitle + " in Nigeria?",
-        answer: guide.shortTitle + " is in " + guide.region + ", Nigeria. This guide covers what to do there, places to visit and practical trip planning.",
-      }]
-    : [];
-
+  const stops = guide.highlights.slice(0, 3).map((item) => item.name);
+  const advice = guide.planning[0]?.detail;
   return [
     {
-      question: "What are the best things to do in " + guide.shortTitle + "?",
-      answer: "Start with " + highlights.slice(0, 3).join(", ") + ". The guide below explains how to fit these into a realistic trip.",
+      question: "What should I see in " + guide.shortTitle + "?",
+      answer: stops.length
+        ? "Begin with " + stops.join(", ") + ". See the guide for details on each stop."
+        : guide.summary,
     },
-    ...geographyQuestion,
+    ...(guide.kind === "city" ? [{
+      question: "Where is " + guide.shortTitle + "?",
+      answer: guide.shortTitle + " is in " + guide.region + ", Nigeria.",
+    }] : []),
     {
-      question: "What places should I visit in " + guide.shortTitle + "?",
-      answer: highlights.length ? "Useful starting points include " + highlights.join(", ") + "." : guide.summary,
-    },
-    {
-      question: "What is " + guide.shortTitle + " best known for?",
-      answer: guide.shortTitle + " is especially useful for travellers interested in " + guide.bestFor.join(", ") + ".",
-    },
-    {
-      question: "How should I plan a trip to " + guide.shortTitle + "?",
-      answer: firstPlanning,
+      question: "What should I check before visiting " + guide.shortTitle + "?",
+      answer: advice ?? "Confirm access, opening times and local conditions with the responsible operator before travelling.",
     },
   ];
 }
@@ -206,8 +197,9 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <span className="eyebrow">{guide.region}</span>
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
+          <div className="guide-save-action"><SavePageButton href={"/explore/" + guide.slug} title={guide.shortTitle} kind="travel" /></div>
           <AnswerFirst
-            title={"Plan " + guide.shortTitle + " without digging through the whole page"}
+            title={"Plan your visit to " + guide.shortTitle}
             summary={questions[0]?.answer ?? guide.summary}
             facts={[
               { label: "Applies to", value: guide.region + ", Nigeria" },
@@ -219,7 +211,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
               { href: "#places", label: "See places" },
               { href: "#planning", label: "Before you go" },
             ]}
-            note="Use the quick answer to decide whether this trip fits you, then open only the sections you need."
+            note="Check current opening hours, access and travel conditions before leaving."
           />
           <div className="topic-copy explore-intro-copy">
             {guide.intro.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -252,7 +244,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section explore-guide-highlights">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">What to build around</span><h2>{guide.shortTitle} highlights worth planning.</h2></div></div>
+          <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>What to see in {guide.shortTitle}</h2></div></div>
           <div className="explore-highlight-grid">
             {guide.highlights.map((highlight) => (
               <article className="explore-highlight-card" key={highlight.name}>
@@ -334,7 +326,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section premium-dark-section" id="planning">
         <div className="container">
-          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Plan {guide.shortTitle}: practical decisions before you go.</h2></div></div>
+          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Before you visit {guide.shortTitle}</h2></div></div>
           <div className="compact-planning-list">
             {guide.planning.map((item) => (
               <details key={item.label}>

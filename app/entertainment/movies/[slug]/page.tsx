@@ -12,6 +12,7 @@ import { canDisplayEntertainmentArtwork, entertainmentTitles, getEntertainmentTi
 import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extras";
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
+import { SavePageButton } from "@/components/personal-library";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -407,6 +408,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
 
               <div className="movie-detail-actions">
+                <SavePageButton href={"/entertainment/movies/" + title.slug} title={title.title} kind="movie" />
                 {watchHereVideoId ? <a className="button" href="#watch-here">Watch here</a> : null}
                 {availabilityLinks.slice(0, 3).map((link) => (
                   <a className="button" href={link.href} target="_blank" rel="noreferrer" key={link.href}>
@@ -439,7 +441,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               ...(watchHereVideoId ? [{ href: "#watch-here", label: "Watch here", primary: true }] : []),
               ...(!watchHereVideoId && availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
             ]}
-            note="The essentials are above. The sections below add the full cast, verified source details and related movies."
+            note="Continue below for the cast, official links and related films."
           />
           {title.slug === "once-upon-a-village-3" ? (
             <div className="movie-detail-actions">

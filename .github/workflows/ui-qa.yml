@@ -65,6 +65,14 @@ jobs:
           quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
           non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
+          premium_trigger="$(printf '%s\n' "$changed" | grep -E '^(components/(personal-library|on-demand-live-jobs)\.tsx|app/(saved/page\.tsx|ux-polish\.css)|tests/premium-ux-retention\.spec\.ts)$' || true)"
+          if [ -n "$premium_trigger" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=premium" >> "$GITHUB_OUTPUT"
+            echo "Personal library and UX changes; running focused retention checks."
+            exit 0
+          fi
+
           if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=jobs" >> "$GITHUB_OUTPUT"
@@ -121,6 +129,9 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Run premium UX and retention regression
+        if: steps.scope.outputs.mode == 'premium'
+        run: npx playwright test tests/premium-ux-retention.spec.ts --project=desktop --project=mobile --workers=1
       - name: Run navigation regression
         if: steps.scope.outputs.mode == 'navigation'
         run: npx playwright test tests/smoke.spec.ts --project=desktop --workers=1 --grep "phone shell fits and keeps admin out of public navigation without hydration errors|mobile public layout uses a single-column hierarchy and usable navigation"

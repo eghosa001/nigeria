@@ -12,6 +12,7 @@ import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getEmployerOpportunities, getJobEmployer } from "@/lib/job-employers";
 import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
+import { SavePageButton } from "@/components/personal-library";
 
 export const revalidate = 3600;
 
@@ -106,6 +107,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <p className="job-organisation">{item.organization}</p>
             <h1>{item.title}</h1>
             <p className="page-intro">{item.summary}</p>
+            <div className="guide-save-action"><SavePageButton href={"/jobs/" + item.slug} title={item.title} kind="job" /></div>
             {!isIndexableJobOpportunity(item) ? <p className="job-muted">Employer-directory listing: confirm the specific role, requirements and opening dates on the official careers site. This record is not a standalone verified vacancy.</p> : null}
             <p className="job-muted">Applies to {item.location} · Employer: {item.organization} · Verified {item.verifiedAt}</p>
             {item.nextMilestone ? <div className="job-milestone"><strong>Current next step</strong><p>{item.nextMilestone}</p></div> : null}

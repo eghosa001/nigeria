@@ -46,6 +46,31 @@ const stateGuideLinks = [
   ["Zamfara", "zamfara-state-travel-guide"],
 ] as const;
 
+// Photographs from the linked Wikimedia Commons file pages. Each carries an
+// explicit CC BY-SA 4.0 license; keep the visible attribution with the image.
+const destinationPhotos: Record<string, { file: string; credit: string; alt: string }> = {
+  "yankari-game-reserve": {
+    file: "Yankari_Game_Reserve.jpg",
+    credit: "Dotun55",
+    alt: "A road through Yankari Game Reserve in Bauchi State",
+  },
+  "obudu-mountain-resort": {
+    file: "Obudu_Mountain_Resort.jpg",
+    credit: "Hadassah Photostorie group",
+    alt: "The mountain scenery at Obudu Mountain Resort",
+  },
+  "erin-ijesha-waterfall": {
+    file: "Erin_Ijesha_Waterfalls.jpg",
+    credit: "Baaadmus",
+    alt: "Erin-Ijesha Waterfalls in Osun State",
+  },
+  "zuma-rock-gurara-falls": {
+    file: "ZumaRock.jpg",
+    credit: "Akinnaija",
+    alt: "Zuma Rock, the prominent formation near Abuja",
+  },
+};
+
 export const metadata: Metadata = {
   title: "Places to Visit in Nigeria: Things to Do, Cities & Attractions",
   description: "Find places to visit in Nigeria across all 36 states and the FCT, with city guides, attractions, landmarks, hotels, restaurants, events and practical things-to-do planning.",
@@ -97,7 +122,7 @@ export default function ExplorePage() {
         <div className="container">
           <span className="eyebrow">Tour Nigeria</span>
           <h1>Places to visit in Nigeria.</h1>
-          <p className="page-intro">Explore {explorePlaces.length} mapped places across Nigeria, plus state, city, destination, event and short-trip guides.</p>
+          <p className="page-intro">Discover destinations, local experiences and practical travel guides from across Nigeria.</p>
           <form className="section-quick-search" action="/explore#places" method="get" role="search">
             <label>
               <span>Search Tour Nigeria</span>
@@ -120,21 +145,39 @@ export default function ExplorePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Across Nigeria</span>
-              <h2 id="featured-destinations-heading">Choose a destination, not a long list.</h2>
-              <p>Eight starting points spanning nature, heritage and short trips across Nigeria. Browse all destination guides below.</p>
+              <h2 id="featured-destinations-heading">Where will you go next?</h2>
+              <p>From mountains to cultural landmarks, start with one of these destinations.</p>
             </div>
             <a href="#browse-guides">Browse all destinations →</a>
           </div>
-          <div className="home-category-grid compact-category-grid">
-            {featuredDestinations.map((guide) => (
-              <Link className="home-category-card" href={"/explore/" + guide.slug} key={guide.slug}>
-                <span>{guide.region}</span>
-                <strong>{guide.shortTitle}</strong>
-                <small>{guide.summary}</small>
-                <i>Explore destination →</i>
-              </Link>
-            ))}
+          <div className="tour-photo-grid">
+            {featuredDestinations.filter((guide) => destinationPhotos[guide.slug]).map((guide) => {
+              const photo = destinationPhotos[guide.slug];
+              const source = "https://commons.wikimedia.org/wiki/File:" + photo.file;
+              return (
+                <article className="tour-photo-card" key={guide.slug}>
+                  <Link href={"/explore/" + guide.slug} className="tour-photo-card-link">
+                    <img
+                      src={"https://commons.wikimedia.org/wiki/Special:FilePath/" + photo.file + "?width=720"}
+                      alt={photo.alt} width={720} height={480} loading="lazy" decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                    <span className="tour-photo-card-meta">{guide.region}</span>
+                    <strong>{guide.shortTitle}</strong>
+                    <span className="tour-photo-card-action">Explore destination →</span>
+                  </Link>
+                  <p className="tour-photo-credit">Photo: <a href={source} target="_blank" rel="noopener noreferrer">{photo.credit}</a>
+                    {" · "}<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+                    {" · "}Cropped to fit</p>
+                </article>
+              );
+            })}
           </div>
+          <nav className="minimal-inline-links tour-more-destinations" aria-label="More places to explore">
+            {featuredDestinations.filter((guide) => !destinationPhotos[guide.slug]).map((guide) => (
+              <Link href={"/explore/" + guide.slug} key={guide.slug}>{guide.shortTitle} →</Link>
+            ))}
+          </nav>
         </div>
       </section>
 
@@ -145,7 +188,7 @@ export default function ExplorePage() {
               <div>
                 <span className="eyebrow">Current events</span>
                 <h2 id="current-events-heading">Fresh event guides to check now.</h2>
-                <p>Direct links to recently reviewed festivals and events help visitors and search engines reach time-sensitive guides without relying on filters.</p>
+                <p>See dates, venues and what to check before attending.</p>
               </div>
               <Link href="/explore/events">All events →</Link>
             </div>
@@ -169,7 +212,7 @@ export default function ExplorePage() {
             <div>
               <span className="eyebrow">Places</span>
               <h2>Visit, eat or stay.</h2>
-              <p>Browse {explorePlaces.length} verified mapped places across attractions, nature, landmarks, restaurants, hotels and shopping. Twelve are shown at a time so the directory feels useful without becoming one long page.</p>
+              <p>Browse {explorePlaces.length} verified mapped places across attractions, nature, landmarks, restaurants, hotels and shopping. Eight places appear initially. Use filters or show more to explore at your own pace.</p>
             </div>
           </div>
           <ExplorePlaceDirectory
@@ -195,8 +238,8 @@ export default function ExplorePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse Nigeria</span>
-              <h2>Open only the list you need.</h2>
-              <p>All guides remain available without turning the landing page into one long catalogue.</p>
+              <h2>Explore by region, city or trip type.</h2>
+              <p>Find the right starting point, then open a guide for practical details.</p>
             </div>
           </div>
 
