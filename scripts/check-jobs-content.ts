@@ -79,6 +79,9 @@ for (const item of jobOpportunities) {
   }
   assert((item.topicSlugs ?? []).every((slug) => jobTopics.some((topic) => topic.slug === slug)), item.slug + " has an unknown explicit topic slug.");
   assert(item.sources.some((source) => new URL(source.url).hostname === new URL(item.officialUrl).hostname), item.slug + " officialUrl must share a hostname with at least one source.");
+  if (item.deadline && item.deadline < new Date().toISOString().slice(0, 10)) {
+    assert(getEffectiveJobStatus(item) !== "open", item.slug + " expired vacancy must never render as open.");
+  }
   if (item.status === "open") {
     assert(daysSinceIsoDate(item.verifiedAt) <= 14, item.slug + " is marked open but has not been verified in the last 14 days.");
     if (item.deadline) assert(item.deadline >= new Date().toISOString().slice(0, 10), item.slug + " is stored open after its deadline.");
@@ -92,7 +95,7 @@ for (const item of jobOpportunities) {
     if (item.jobPostingAuthorization) {
       assert(item.jobPostingAuthorization.publicEvidenceUrl.startsWith("https://"), item.slug + " JobPosting authorization needs public HTTPS evidence.");
       assert(isoDate.test(item.jobPostingAuthorization.verifiedAt), item.slug + " JobPosting authorization needs an ISO verifiedAt date.");
-      assert(Boolean(structured), item.slug + " authorised JobPosting must build while the vacancy is open.");
+      assert(item.status === "open" ? Boolean(structured) : structured === null, item.slug + " JobPosting must appear only for an open, authorised vacancy.");
     } else {
       assert(structured === null, item.slug + " must not emit third-party JobPosting markup without recorded authorization.");
     }
