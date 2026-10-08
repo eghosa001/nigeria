@@ -14,7 +14,7 @@ export const destinationPhotos: Record<string, DestinationPhoto> = {
     alt: "Erin-Ijesha Waterfalls in Osun State",
   },
   "zuma-rock-gurara-falls": {
-    file: "ZumaRock.jpg", credit: "A view of Zuma Rock by Akinnaija",
+    file: "ZumaRock.jpg", credit: "Akinnaija",
     alt: "Zuma Rock in Niger State near Abuja",
   },
 };
