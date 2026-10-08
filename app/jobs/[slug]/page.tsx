@@ -48,6 +48,11 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const employerOpportunities = getEmployerOpportunities(item.organization, item.slug).slice(0, 4);
   const employer = getJobEmployer(item.organization);
   const employerHubHref = employer && employer.opportunitySlugs.length >= 2 ? "/jobs/employers/" + employer.slug : null;
+  const employerPay = item.remuneration
+    ? new Intl.NumberFormat("en-NG", { style: "currency", currency: item.remuneration.currency, maximumFractionDigits: 2 }).format(item.remuneration.amount)
+      + " / " + (item.remuneration.period === "MONTH" ? "month" : item.remuneration.period === "YEAR" ? "year" : "hour")
+      + " (" + (item.remuneration.payType === "gross" ? "gross remuneration" : "base salary") + ", employer-published)"
+    : null;
   const effectiveStatus = getEffectiveJobStatus(item);
   const effectiveStatusLabel = getEffectiveStatusLabel(item);
   const sectorBrowse =
@@ -111,6 +116,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             facts={[
               { label: "Verified status", value: effectiveStatusLabel + " · checked " + item.verifiedAt },
               { label: "Applies to", value: item.location },
+              ...(employerPay ? [{ label: "Employer-stated pay", value: employerPay }] : []),
               { label: isCareerPortal ? "Current vacancies" : "Deadline / next step", value: isCareerPortal ? "Check the live employer source" : (item.deadline ? new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : (item.nextMilestone ?? "Check the live official page")) },
               { label: "Best fit", value: item.audiences.slice(0, 3).join(", ") },
             ]}
@@ -135,6 +141,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
                 <div><small>Organisation</small><strong>{item.organization}</strong></div>
                 <div><small>Sector</small><strong>{item.sector}</strong></div>
                 <div><small>Location</small><strong>{item.location}</strong></div>
+                {employerPay ? <div><small>Published remuneration</small><strong>{employerPay}</strong><a href={item.remuneration?.evidenceUrl} target="_blank" rel="noreferrer">Employer source ↗</a></div> : null}
                 <div><small>Opportunity type</small><strong>{item.employmentType}</strong></div>
                 {item.deadline ? <div><small>Application deadline</small><strong>{new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</strong></div> : null}
                 <div><small>Information verified</small><strong>{item.verifiedAt}</strong></div>
