@@ -558,3 +558,20 @@ test("official portal reference page exposes direct authorities and guide routes
   await expect(page.getByRole("link", { name: "Open official website ↗" }).first()).toHaveAttribute("href", /^https:\/\//);
   await expect(page.getByRole("link", { name: "View verified guides →" }).first()).toHaveAttribute("href", /^\/agencies\//);
 });
+
+
+test("YouTube detail routes stay healthy in the Cloudflare runtime", async ({ request }) => {
+  const paths = [
+    "/entertainment/youtube/KWIpR47N9hc",
+    "/entertainment/youtube/2Ficn2BMlI8",
+    "/entertainment/youtube/zxvtMba4MYE",
+    "/entertainment/youtube/GrxitJ4fHT8",
+  ];
+
+  for (const path of paths) {
+    const response = await request.get(path, { failOnStatusCode: false });
+    expect(response.status(), path).toBeLessThan(500);
+    const body = await response.text();
+    expect(body, path).not.toMatch(/Worker exceeded resource limits|Error 1102|Internal Server Error/i);
+  }
+});
