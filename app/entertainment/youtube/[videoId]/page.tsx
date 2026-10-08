@@ -5,9 +5,10 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
+import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
+import { getRelatedYouTubeDetailMovies, getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
 
 export const revalidate = 86400;
 
@@ -88,6 +89,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
+  const related = indexable ? getRelatedYouTubeDetailMovies(movie) : [];
 
   const ld = {
     "@context": "https://schema.org",
@@ -190,6 +192,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
           <a href="#overview">Overview</a>
           <a href="#cast">Cast</a>
           <a href="#source">Watch</a>
+          {related.length ? <a href="#related">Related movies</a> : null}
         </div>
       </nav>
 
@@ -287,6 +290,22 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
         </div>
       </section>
 
+      {related.length ? (
+        <section className="section movie-related-section" id="related">
+          <div className="container">
+            <div className="section-heading">
+              <div>
+                <span className="eyebrow">More to watch</span>
+                <h2>Related official YouTube movies.</h2>
+              </div>
+              <Link href="/entertainment/youtube">Browse all YouTube movies →</Link>
+            </div>
+            <div className="youtube-movie-grid movie-preview-grid">
+              {related.map((item) => <YouTubeMovieCard movie={item} key={item.videoId} />)}
+            </div>
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }
