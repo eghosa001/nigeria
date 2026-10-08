@@ -1,5 +1,5 @@
-import generatedData from "@/data/youtube-movies.generated.json" with { type: "json" };
-import reviewData from "@/data/youtube-movies-review.generated.json" with { type: "json" };
+import generatedData from "@/data/youtube-movies.generated.json";
+import reviewData from "@/data/youtube-movies-review.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
