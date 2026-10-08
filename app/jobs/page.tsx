@@ -14,7 +14,7 @@ import { getSiteUrl } from "@/lib/site";
 import { jobMarketSources } from "@/data/job-market-sources";
 
 export const metadata: Metadata = {
-  title: "Jobs in Nigeria: Verified Openings & Career Portals",
+  title: "Jobs in Nigeria: Open Roles & Recruitment",
   description: "Verified Nigerian government recruitment, graduate jobs, SIWES, internships and career portals with requirements, application steps, status and official links.",
   alternates: { canonical: "/jobs" }
 };

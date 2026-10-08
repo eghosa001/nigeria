@@ -106,3 +106,17 @@
 @media (max-width: 650px) {
   .tour-guide-photo img { height: clamp(180px, 58vw, 260px); }
 }
+
+.youtube-movie-card .youtube-movie-card-footer > a,
+html[data-theme="dark"] .youtube-movie-card .youtube-movie-card-footer > a {
+  color: #baf0d0;
+}
+.youtube-movie-card .youtube-movie-card-footer > a:hover,
+.youtube-movie-card .youtube-movie-card-footer > a:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+}
+html[data-theme="dark"] .job-card-open .job-deadline,
+html[data-theme="dark"] .job-card-open .job-deadline strong {
+  color: #f6d792 !important;
+}

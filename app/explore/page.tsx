@@ -48,8 +48,8 @@ const stateGuideLinks = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: "Places to Visit in Nigeria: Things to Do, Cities & Attractions",
-  description: "Find places to visit in Nigeria across all 36 states and the FCT, with city guides, attractions, landmarks, hotels, restaurants, events and practical things-to-do planning.",
+  title: "Places to Visit in Nigeria",
+  description: "Find places to visit across all 36 Nigerian states and the FCT: city guides, attractions, landmarks, hotels, restaurants, events and trip-planning tips.",
   alternates: { canonical: "/explore" },
 };
 

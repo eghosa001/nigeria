@@ -43,7 +43,7 @@ export async function generateMetadata({
 
   return {
     alternates: { canonical: "/services" },
-    title: "Services in Nigeria 2026: Government, Education, Travel, Banking & Business",
+    title: "Nigeria Services: Fees & Official Portals",
     description: "Find Nigerian government and everyday service guides, current fees, official portals, requirements and step-by-step application guidance for 2026.",
     robots: filtered ? { index: false, follow: true } : undefined,
   };
