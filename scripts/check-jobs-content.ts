@@ -68,16 +68,13 @@ for (const item of jobOpportunities) {
     assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
     assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
   }
-  if ((item.kind === "programme" || item.kind === "recruitment-exercise") && (!legacyJobSlugs.has(item.slug) || item.verifiedAt > legacyJobs.snapshotDate)) {
-    assert(Boolean(item.publicationReview), item.slug + " new recruitment exercise needs a verified pay/worksite publication review.");
+  // Applies to every new named job or programme, including records whose kind is
+  // omitted; career-board directories are not individual openings.
+  if (item.kind !== "career-page" && item.status !== "career-page" &&
+      (!legacyJobSlugs.has(item.slug) || item.verifiedAt > legacyJobs.snapshotDate)) {
+    assert(Boolean(item.publicationReview), item.slug + " needs an employer-backed pay and worksite review before publication.");
   }
   if (item.kind === "vacancy") {
-    // Every newly added or freshly reverified vacancy must document what the
-    // employer actually published about pay and worksite. Unknown is legitimate;
-    // invented salary, postcode or headquarters-as-worksite is not.
-    if (!legacyJobSlugs.has(item.slug) || item.verifiedAt > legacyJobs.snapshotDate) {
-      assert(Boolean(item.publicationReview), item.slug + " needs a verified pay/worksite publication review before being added or refreshed.");
-    }
     const detailText = [...item.qualifications, ...item.requirements, ...item.applicationSteps].join(" ").toLowerCase();
     const bannedGenericPhrases = [
       "review the official " + item.organization.toLowerCase() + " vacancy for the exact",
