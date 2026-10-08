@@ -38,7 +38,9 @@
     "check:directory-queries": "tsx scripts/check-directory-queries.ts",
     "generate:youtube-detail-index": "tsx scripts/generate-youtube-detail-index.ts",
     "pretypecheck": "npm run generate:youtube-detail-index",
-    "precheck:cloudflare": "npm run generate:youtube-detail-index"
+    "precheck:cloudflare": "npm run generate:youtube-detail-index",
+    "predev": "npm run generate:youtube-detail-index",
+    "predev:vinext": "npm run generate:youtube-detail-index"
   },
   "dependencies": {
     "next": "16.3.8",
