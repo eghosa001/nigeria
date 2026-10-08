@@ -12,6 +12,8 @@ const popularServiceLinks = [
   { label: "Landing & Exit Card", href: "/services/nigeria-landing-exit-card" },
   { label: "ASIN registration", href: "/services/anambra-asin-registration" },
   { label: "NIN phone correction", href: "/services/nin-phone-modification" },
+  { label: "NIN Share Code / NINAuth", href: "/services/ninauth-nin-verification" },
+  { label: "Track passport application", href: "/services/passport-application-tracking" },
   { label: "ECOWAS Travel Certificate", href: "/services/ecowas-travel-certificate" },
 ];
 
