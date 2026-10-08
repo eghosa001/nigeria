@@ -8,7 +8,7 @@ import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { getRelatedYouTubeDetailMovies, getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
+import { getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
 
 export const revalidate = 86400;
 
@@ -89,7 +89,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
-  const related = indexable ? getRelatedYouTubeDetailMovies(movie) : [];
+  const related = [] as const;
 
   const ld = {
     "@context": "https://schema.org",
