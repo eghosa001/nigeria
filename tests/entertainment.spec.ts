@@ -1,4 +1,12 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+
+async function expectCanonicalYouTubeAlias(page: Page, videoId: string, slug: string) {
+  const response = await page.goto("/entertainment/youtube/" + videoId);
+  expect(response?.status(), videoId).toBe(200);
+  expect(new URL(page.url()).pathname).toBe("/entertainment/youtube/" + videoId);
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", new RegExp("/entertainment/movies/" + slug + "$"));
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/i);
+}
 
 test("entertainment catalog supports multiple official platforms", async ({ page }) => {
   await page.goto("/entertainment/movies");
@@ -254,8 +262,7 @@ test("new curated YouTube movie batch exposes official full-movie sources", asyn
 });
 
 test("curated YouTube records resolve to one canonical movie URL", async ({ page, request }) => {
-  await page.goto("/entertainment/youtube/HAk97psM9h0");
-  await expect(page).toHaveURL(/\/entertainment\/movies\/sibe$/);
+  await expectCanonicalYouTubeAlias(page, "HAk97psM9h0", "sibe");
 
   const youtubeSitemap = await request.get("/sitemaps/youtube.xml");
   expect(youtubeSitemap.ok()).toBeTruthy();
@@ -293,6 +300,15 @@ test("contextual entertainment detail pages expose country and source dates", as
   await expect(facts).toContainText("Country");
   await expect(facts).toContainText("Nigeria");
   await expect(facts).toContainText("Source checked");
+
+  for (const [videoId, slug] of [
+    ["KWIpR47N9hc", "love-always-wins-2026"],
+    ["2Ficn2BMlI8", "what-tomorrow-holds-2026"],
+    ["zxvtMba4MYE", "third-party-risk-2026"],
+    ["GrxitJ4fHT8", "bowale"],
+  ] as const) {
+    await expectCanonicalYouTubeAlias(page, videoId, slug);
+  }
 });
 
 
@@ -348,8 +364,7 @@ test("second GSC movie wave promotes ranking YouTube pages to canonical movie gu
     await expect(page.getByText("Who is in the " + title + " cast?", { exact: true })).toBeVisible();
     await expect(page.getByText("Where can I watch " + title + "?", { exact: true })).toBeVisible();
 
-    await page.goto("/entertainment/youtube/" + videoId);
-    await expect(page).toHaveURL(new RegExp("/entertainment/movies/" + slug + "$"));
+    await expectCanonicalYouTubeAlias(page, videoId, slug);
   }
 });
 
