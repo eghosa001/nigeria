@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { trackEvent } from "@/lib/client-analytics";
 
 type Kind = "movie" | "travel" | "job";
 type Entry = { href: string; title: string; kind: Kind; visitedAt: number };
@@ -88,6 +89,7 @@ export function SavePageButton({ href, title, kind }: { href: string; title: str
       ? entries.filter((item) => item.href !== href)
       : [{ href, title, kind, visitedAt: Date.now() }, ...entries].slice(0, 24);
     write(savedKey, next);
+    trackEvent(present ? "saved_page_remove" : "saved_page_add", { content_type: kind });
   }
 
   return (
@@ -117,6 +119,7 @@ export function PersonalLibrary() {
         {canRemove ? (
           <button type="button" aria-label={"Remove " + entry.title + " from saved"} onClick={() => {
             write(savedKey, read(savedKey).filter((item) => item.href !== entry.href));
+            trackEvent("saved_page_remove", { content_type: entry.kind });
           }}>Remove</button>
         ) : null}
       </li>

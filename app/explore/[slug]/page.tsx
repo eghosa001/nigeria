@@ -10,6 +10,7 @@ import { exploreGuides, getExploreGuide } from "@/lib/explore";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
+import { destinationPhotos, destinationPhotoUrls } from "@/lib/destination-photos";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -102,6 +103,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     .map((entry) => entry.item);
   const places = getExplorePlacesForGuide(guide.slug);
   const questions = getExploreQuestions(guide);
+  const destinationPhoto = destinationPhotos[guide.slug];
 
   const breadcrumbLd = {
     "@context": "https://schema.org",
@@ -198,6 +200,21 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
           <div className="guide-save-action"><SavePageButton href={"/explore/" + guide.slug} title={guide.shortTitle} kind="travel" /></div>
+          {destinationPhoto ? (
+            <figure className="tour-guide-photo">
+              <img
+                src={destinationPhotoUrls(destinationPhoto).src}
+                alt={destinationPhoto.alt}
+                width={720} height={480}
+                loading="eager" decoding="async" referrerPolicy="no-referrer"
+              />
+              <figcaption>
+                Photo: <a href={destinationPhotoUrls(destinationPhoto).creditUrl} target="_blank" rel="noopener noreferrer">{destinationPhoto.credit}</a>
+                {" · "}<a href={destinationPhotoUrls(destinationPhoto).licenseUrl} target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
+                {" · "}Cropped to fit
+              </figcaption>
+            </figure>
+          ) : null}
           <AnswerFirst
             title={"Plan your visit to " + guide.shortTitle}
             summary={questions[0]?.answer ?? guide.summary}
