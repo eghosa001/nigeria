@@ -8,7 +8,7 @@ import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { getYouTubeMovieById, isIndexableYouTubeMovie, youtubeMovieLibrary } from "@/lib/youtube-library";
+import { getYouTubeMovieById, isIndexableYouTubeMovie, youtubeMovieLibrary, type YouTubeMovieRecord } from "@/lib/youtube-library";
 
 export const revalidate = 86400;
 
@@ -81,6 +81,25 @@ function personHref(name: string) {
   return person ? "/entertainment/people/" + person.slug : null;
 }
 
+function getRelatedMovies(movie: YouTubeMovieRecord, limit = 4) {
+  const best: Array<{ item: YouTubeMovieRecord; score: number }> = [];
+
+  for (const item of youtubeMovieLibrary) {
+    if (item.videoId === movie.videoId || !isIndexableYouTubeMovie(item)) continue;
+    const score =
+      (item.channelName === movie.channelName ? 4 : 0) +
+      item.cast.filter((name) => movie.cast.includes(name)).length * 2 +
+      (item.year === movie.year ? 1 : 0);
+    if (score <= 0) continue;
+
+    best.push({ item, score });
+    best.sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt));
+    if (best.length > limit) best.pop();
+  }
+
+  return best.map((entry) => entry.item);
+}
+
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
   const movie = getYouTubeMovieById(videoId);
@@ -89,19 +108,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
   const indexable = isIndexableYouTubeMovie(movie);
   const base = getSiteUrl();
-  const related = youtubeMovieLibrary
-    .filter((item) => item.videoId !== movie.videoId)
-    .map((item) => ({
-      item,
-      score:
-        (item.channelName === movie.channelName ? 4 : 0) +
-        item.cast.filter((name) => movie.cast.includes(name)).length * 2 +
-        (item.year === movie.year ? 1 : 0),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt))
-    .slice(0, 4)
-    .map((entry) => entry.item);
+  const related = indexable ? getRelatedMovies(movie) : [];
 
   const ld = {
     "@context": "https://schema.org",
