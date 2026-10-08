@@ -304,7 +304,7 @@ test("contextual entertainment detail pages expose country and source dates", as
   for (const [videoId, slug] of [
     ["KWIpR47N9hc", "love-always-wins-2026"],
     ["2Ficn2BMlI8", "what-tomorrow-holds-2026"],
-    ["zxvtMba4MYE", "third-party-risk-2026"],
+    ["zxvtMba4MYE", "third-party-risk"],
     ["GrxitJ4fHT8", "bowale"],
   ] as const) {
     await expectCanonicalYouTubeAlias(page, videoId, slug);
