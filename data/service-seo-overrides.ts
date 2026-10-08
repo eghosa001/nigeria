@@ -66,9 +66,9 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "nafdac-cosmetics-registration": "NAFDAC Cosmetics Registration {year}: Requirements & Portal",
   "nafdac-food-product-registration": "NAFDAC Food Registration {year}: Requirements, Fees & Portal",
   "nafdac-drug-product-registration": "NAFDAC Drug Registration {year}: Requirements & Portal",
+  "nin-date-of-birth-modification": "NIN DOB Correction {year}: Fee, NIMC Portal & Steps",
 };
 
-  "nin-date-of-birth-modification": "NIN DOB Correction {year}: Fee, NIMC Portal & Steps",
 export function getServiceSeoTitleOverride(slug: string, year: string) {
   const template = serviceSeoTitleTemplates[slug];
   return template ? template.replaceAll("{year}", year) : null;
@@ -117,10 +117,10 @@ export const serviceSeoDescriptionTemplates: Record<string, string> = {
   "nafdac-food-product-registration": "NAFDAC food product registration {year}: requirements, fee guidance from the verified service record, official portal and filing steps for locally made or imported food products.",
   "nafdac-drug-product-registration": "NAFDAC drug product registration {year}: requirements, official product-registration route, documentation and filing steps for eligible pharmaceutical products.",
   "lagos-lasrra-registration": "LASRRA registration online {year}: current cost guidance, requirements, official Lagos resident-registration portal and step-by-step application process.",
-};
-
   "nin-date-of-birth-modification": "Correct the date of birth on your NIN in {year}. See NIMC fee guidance, required evidence, the official modification portal and the steps.",
   "bvn-data-update": "Update BVN name, date of birth or other details in {year}: bank requirements, supporting documents and official correction process.",
+};
+
 export function getServiceSeoDescriptionOverride(slug: string, year: string) {
   const template = serviceSeoDescriptionTemplates[slug];
   return template ? template.replaceAll("{year}", year) : null;
