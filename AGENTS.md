@@ -32,23 +32,11 @@ All future additions must assume this scale. Do not introduce a design that requ
 
 Do not chase the numeric target with thin, duplicate, doorway, scraped, unverified, or low-value pages. Each indexable page must serve distinct user intent, follow the answer-first rule, keep source/freshness evidence, and add meaningful internal navigation.
 
-### Quality-first SEO publication gate
+### Consolidated content and publisher-readiness rules
 
-Before creating a new indexable URL, prove that the page deserves to exist.
+**Read and follow `docs/PUBLISHING_STANDARD.md` before every new or updated public content page.** It is the single source of truth for originality, non-scraping, source credibility, quality/depth, Ezoic/AdSense publisher preparation, answer-first publishing, topical fit, appropriate index/noindex controls, anti-duplication and trending editorial decisions. No new parallel content rule lists. Scale targets never override its publication gate.
 
-- Start from a real keyword/query cluster or a clearly useful user task, not from a desire to increase page count.
-- Group synonyms, close variants and keywords with the same search intent into one stronger canonical page. Do **not** create one page per keyword variation.
-- Create a separate page only when the intent, answer, entity, location, event, employer, movie, service or decision is meaningfully different.
-- Prefer improving an existing ranking page when it can fully satisfy the new query cluster.
-- A new indexable page should have substantial original value: a clear answer-first section, verified facts, source evidence, freshness/status context, useful supporting detail, and contextual internal links.
-- Every page must sit inside the site's information architecture: link upward to its relevant hub/category and laterally/downward to genuinely related pages where available.
-- Avoid orphan pages. If a page cannot be naturally linked from relevant hub/detail pages, reconsider whether it should exist.
-- Use structured data only when it accurately matches visible page content.
-- If the evidence or content depth is not strong enough, keep the item draft/non-indexed, merge it into a stronger page, or do not publish it.
-- Search demand remains the growth engine: continue targeting valuable keywords and long-tail clusters, but optimize for **coverage, usefulness, topical authority and rankings**, not raw URL count.
-
-Sitemaps must remain sharded at 20,000 URLs per file or fewer. New high-growth directories should use server-side pagination/query boundaries and must not send more than 1,000 catalog records to a browser route.
-
+Sitemaps must remain sharded at 20,000 URLs per file or fewer; new growth directories use server pagination, not 1,000+ items per browser payload.
 
 ## Permanent premium 9+/10 experience requirement
 
@@ -65,14 +53,7 @@ Sitemaps must remain sharded at 20,000 URLs per file or fewer. New high-growth d
 
 ## Answer-first content rule
 
-For high-intent public pages reached from search (service guides, movies, YouTube titles, travel guides, jobs, agency/category/topic hubs, and future equivalents), put the user's likely answer before long-form detail.
-
-- The first content screen must state the main answer or decision clearly.
-- Surface the most important facts (such as cost/status, requirements, availability, cast/runtime, location/deadline, or top places) before background exposition.
-- Provide an obvious next action or internal jump so the visitor can continue immediately.
-- Keep verification/source context visible without forcing the user to read the full article.
-- Do not add long generic introductions above the useful answer.
-- New high-intent templates should reuse the shared `AnswerFirst` pattern or preserve the same hierarchy intentionally.
+The canonical answer-first **content** requirements are in `docs/PUBLISHING_STANDARD.md`. The screen hierarchy and mobile behavior remain in `docs/PREMIUM_UX_STANDARD.md`. Do not add duplicate rule blocks here.
 
 <!-- BEGIN:nextjs-agent-rules -->
 
