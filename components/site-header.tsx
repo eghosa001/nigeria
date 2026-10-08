@@ -119,9 +119,9 @@ export function SiteHeader() {
         <a className="skip-link" href="#main-content">Skip to content</a>
 
         <div className="container header-inner">
-          <a className="brand brand-home-link" href="/" aria-label="MyNigeriaGuide home">
+          <Link className="brand brand-home-link" href="/" aria-label="MyNigeriaGuide home">
             <BrandLogo />
-          </a>
+          </Link>
 
           <div className="mobile-header-actions" aria-label="Quick actions">
             <Link className="mobile-header-action" href="/search" aria-label="Search MyNigeriaGuide">
@@ -176,7 +176,7 @@ export function SiteHeader() {
                     ? pathname === cleanHref
                     : pathname === cleanHref || (cleanHref !== "/services" && pathname.startsWith(cleanHref + "/"));
                   return (
-                    <Link key={item.href + item.label} href={item.href} className={active ? "is-current" : undefined}>
+                    <Link key={item.href + item.label} href={item.href} className={active ? "is-current" : undefined} aria-current={active ? "page" : undefined}>
                       {item.label}
                     </Link>
                   );
