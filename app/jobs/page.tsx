@@ -90,57 +90,6 @@ export default function JobsPage() {
         </div>
       </section>
 
-      <section className="section jobs-market-section" aria-labelledby="jobs-market-heading">
-        <div className="container">
-          <details className="browse-disclosure jobs-browse-more">
-            <summary>Explore wider Nigeria job-market sources</summary>
-            <div className="jobs-browse-more-content">
-          <div className="minimal-section-heading">
-            <div>
-              <span className="eyebrow">Nigeria job market</span>
-              <h2 id="jobs-market-heading">Compare other reputable job sources.</h2>
-              <p>
-                Compare vacancies on external job boards with the source-checked opportunities below. Always confirm the employer, location and closing date before applying.
-              </p>
-            </div>
-          </div>
-          <div className="jobs-path-grid">
-            {jobMarketSources.map((source) => (
-              <a className="jobs-path-card" href={source.href} target="_blank" rel="noreferrer" key={source.key}>
-                <span>{source.integration === "feed-eligible" ? "Feed-capable source" : "Live market source"}</span>
-                <strong>{source.name}</strong>
-                <p>{source.note}</p>
-                <b>{source.countLabel} · checked {source.checkedAt} ↗</b>
-              </a>
-            ))}
-            <Link href="#opportunities" className="jobs-path-card jobs-path-card-dark">
-              <span>MyNigeriaGuide verified</span>
-              <strong>{jobOpportunities.length} curated pathways</strong>
-              <p>These are the records already checked deeply enough to explain requirements, status and the official route.</p>
-              <b>Search the verified directory →</b>
-            </Link>
-          </div>
-          <p className="job-muted">
-            Market-source links are discovery aids, not MyNigeriaGuide endorsements of every advert on those platforms. Individual jobs only become MyNigeriaGuide records after source, freshness and duplicate checks.
-          </p>
-            </div>
-          </details>
-        </div>
-      </section>
-
-      <section className="section jobs-live-market-section" aria-labelledby="live-jobs-heading">
-        <div className="container">
-          <div className="minimal-section-heading">
-            <div>
-              <span className="eyebrow">Live Nigeria vacancies</span>
-              <h2 id="live-jobs-heading">More vacancies from external sources.</h2>
-              <p>Browse recent vacancies from external sources, then confirm the requirements and application method with the employer. These are source listings, not independently verified vacancies.</p>
-            </div>
-          </div>
-          <LiveJobsDirectory />
-        </div>
-      </section>
-
       {openOpportunities.length ? (
         <section className="section jobs-open-section">
           <div className="container">
@@ -177,6 +126,19 @@ export default function JobsPage() {
           </div>
         </section>
       ) : null}
+
+      <section className="section" id="opportunities">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Verified directory</span>
+              <h2>Government and respected private institutions.</h2>
+              <p>Search by employer, qualification, discipline or applicant type.</p>
+            </div>
+          </div>
+          <JobsDirectory initialResult={initialDirectoryResult} />
+        </div>
+      </section>
 
       <section className="section jobs-path-section">
         <div className="container">
@@ -325,16 +287,54 @@ export default function JobsPage() {
         </div>
       </section>
 
-      <section className="section" id="opportunities">
+      <section className="section jobs-live-market-section" aria-labelledby="live-jobs-heading">
         <div className="container">
           <div className="minimal-section-heading">
             <div>
-              <span className="eyebrow">Verified directory</span>
-              <h2>Government and respected private institutions.</h2>
-              <p>Search by employer, qualification, discipline or applicant type.</p>
+              <span className="eyebrow">Live Nigeria vacancies</span>
+              <h2 id="live-jobs-heading">More vacancies from external sources.</h2>
+              <p>Browse recent vacancies from external sources, then confirm the requirements and application method with the employer. These are source listings, not independently verified vacancies.</p>
             </div>
           </div>
-          <JobsDirectory initialResult={initialDirectoryResult} />
+          <LiveJobsDirectory />
+        </div>
+      </section>
+
+      <section className="section jobs-market-section" aria-labelledby="jobs-market-heading">
+        <div className="container">
+          <details className="browse-disclosure jobs-browse-more">
+            <summary>Explore wider Nigeria job-market sources</summary>
+            <div className="jobs-browse-more-content">
+          <div className="minimal-section-heading">
+            <div>
+              <span className="eyebrow">Nigeria job market</span>
+              <h2 id="jobs-market-heading">Compare other reputable job sources.</h2>
+              <p>
+                Compare vacancies on external job boards with the source-checked opportunities below. Always confirm the employer, location and closing date before applying.
+              </p>
+            </div>
+          </div>
+          <div className="jobs-path-grid">
+            {jobMarketSources.map((source) => (
+              <a className="jobs-path-card" href={source.href} target="_blank" rel="noreferrer" key={source.key}>
+                <span>{source.integration === "feed-eligible" ? "Feed-capable source" : "Live market source"}</span>
+                <strong>{source.name}</strong>
+                <p>{source.note}</p>
+                <b>{source.countLabel} · checked {source.checkedAt} ↗</b>
+              </a>
+            ))}
+            <Link href="#opportunities" className="jobs-path-card jobs-path-card-dark">
+              <span>MyNigeriaGuide verified</span>
+              <strong>{jobOpportunities.length} curated pathways</strong>
+              <p>These are the records already checked deeply enough to explain requirements, status and the official route.</p>
+              <b>Search the verified directory →</b>
+            </Link>
+          </div>
+          <p className="job-muted">
+            Market-source links are discovery aids, not MyNigeriaGuide endorsements of every advert on those platforms. Individual jobs only become MyNigeriaGuide records after source, freshness and duplicate checks.
+          </p>
+            </div>
+          </details>
         </div>
       </section>
 
