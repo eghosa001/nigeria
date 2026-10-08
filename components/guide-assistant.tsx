@@ -43,7 +43,7 @@ export function GuideAssistant() {
         <span className="assistant-symbol" aria-hidden="true">✦</span>
         <div>
           <span className="eyebrow">Verified guide finder</span>
-          <h1>Tell us what you need to get done.</h1>
+          <h2>Describe the task you need to complete.</h2>
           <p>
             Describe the task naturally. We match you to source-linked MyNigeriaGuide pages instead of inventing an answer.
           </p>
