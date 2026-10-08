@@ -118,5 +118,5 @@ html[data-theme="dark"] .youtube-movie-card .youtube-movie-card-footer > a {
 }
 html[data-theme="dark"] .job-card-open .job-deadline,
 html[data-theme="dark"] .job-card-open .job-deadline strong {
-  color: #f6d792;
+  color: #f6d792 !important;
 }
