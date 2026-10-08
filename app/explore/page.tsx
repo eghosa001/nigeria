@@ -97,7 +97,7 @@ export default function ExplorePage() {
         <div className="container">
           <span className="eyebrow">Tour Nigeria</span>
           <h1>Places to visit in Nigeria.</h1>
-          <p className="page-intro">Explore {explorePlaces.length} mapped places across Nigeria, plus state, city, destination, event and short-trip guides.</p>
+          <p className="page-intro">Discover destinations, local experiences and practical travel guides from across Nigeria.</p>
           <form className="section-quick-search" action="/explore#places" method="get" role="search">
             <label>
               <span>Search Tour Nigeria</span>
@@ -120,8 +120,8 @@ export default function ExplorePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Across Nigeria</span>
-              <h2 id="featured-destinations-heading">Choose a destination, not a long list.</h2>
-              <p>Eight starting points spanning nature, heritage and short trips across Nigeria. Browse all destination guides below.</p>
+              <h2 id="featured-destinations-heading">Where will you go next?</h2>
+              <p>From mountains to cultural landmarks, start with one of these destinations.</p>
             </div>
             <a href="#browse-guides">Browse all destinations →</a>
           </div>
@@ -145,7 +145,7 @@ export default function ExplorePage() {
               <div>
                 <span className="eyebrow">Current events</span>
                 <h2 id="current-events-heading">Fresh event guides to check now.</h2>
-                <p>Direct links to recently reviewed festivals and events help visitors and search engines reach time-sensitive guides without relying on filters.</p>
+                <p>See dates, venues and what to check before attending.</p>
               </div>
               <Link href="/explore/events">All events →</Link>
             </div>
@@ -169,7 +169,7 @@ export default function ExplorePage() {
             <div>
               <span className="eyebrow">Places</span>
               <h2>Visit, eat or stay.</h2>
-              <p>Browse {explorePlaces.length} verified mapped places across attractions, nature, landmarks, restaurants, hotels and shopping. Twelve are shown at a time so the directory feels useful without becoming one long page.</p>
+              <p>Browse {explorePlaces.length} verified mapped places across attractions, nature, landmarks, restaurants, hotels and shopping. Eight places appear initially. Use filters or show more to explore at your own pace.</p>
             </div>
           </div>
           <ExplorePlaceDirectory
@@ -195,8 +195,8 @@ export default function ExplorePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Browse Nigeria</span>
-              <h2>Open only the list you need.</h2>
-              <p>All guides remain available without turning the landing page into one long catalogue.</p>
+              <h2>Explore by region, city or trip type.</h2>
+              <p>Find the right starting point, then open a guide for practical details.</p>
             </div>
           </div>
 
