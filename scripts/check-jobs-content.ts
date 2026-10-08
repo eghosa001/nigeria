@@ -141,6 +141,28 @@ for (const item of jobOpportunities) {
   }
   assert(getEffectiveJobStatus(item) !== "open" || !item.deadline || item.deadline >= new Date().toISOString().slice(0, 10), item.slug + " effective status cannot stay open after deadline.");
 }
+// Focused regression: a known city is eligible, region-only work is not, and
+// verified 100% remote eligibility uses applicants' countries instead of an
+// invented physical address. Employer-stated gross pay never becomes baseSalary.
+const schemaFixture = jobOpportunities.find((item) => item.slug === "unilag-professorial-chair-2026");
+assert(Boolean(schemaFixture?.posting && schemaFixture.remuneration), "UNILAG employer pay/location fixture must exist.");
+const sourceAuthorisation = { publicEvidenceUrl: schemaFixture.officialUrl, verifiedAt: "2026-10-08", note: "Official employer vacancy evidence" };
+const authorisedFixture = { ...schemaFixture, jobPostingAuthorization: sourceAuthorisation };
+const citySchema = buildJobPostingJsonLd(authorisedFixture, "https://mynigeriaguide.com/jobs/unilag-professorial-chair-2026");
+assert(Boolean(citySchema), "Confirmed city must be eligible for physical JobPosting.");
+assert(!("baseSalary" in (citySchema as Record<string, unknown>)), "Employer gross remuneration must never masquerade as base salary.");
+const regionSchema = buildJobPostingJsonLd({
+  ...authorisedFixture, posting: { ...schemaFixture.posting!, locations: [{ country: "NG", region: "Kaduna State" }] },
+}, "https://mynigeriaguide.com/jobs/region-test");
+assert(regionSchema === null, "A region-only physical vacancy must not emit a misleading JobPosting.");
+const remoteSchema = buildJobPostingJsonLd({
+  ...authorisedFixture,
+  posting: { ...schemaFixture.posting!, locations: [], remote: { applicantCountries: ["Nigeria"] } },
+  remuneration: { ...schemaFixture.remuneration!, payType: "base" },
+}, "https://mynigeriaguide.com/jobs/remote-test");
+assert(Boolean(remoteSchema && "baseSalary" in remoteSchema && !("jobLocation" in remoteSchema) &&
+  remoteSchema.jobLocationType === "TELECOMMUTE"), "Verified fully remote jobs and true base pay must emit correct schema.");
+
 for (const topic of jobTopics) {
   assert(getJobTopicOpportunities(topic.slug).length >= 3, topic.slug + " must group at least three verified opportunities.");
   assert(topic.relatedSlugs.every((slug) => slug !== topic.slug), topic.slug + " cannot link to itself.");
