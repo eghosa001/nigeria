@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { ADSENSE_CLIENT } from "@/lib/adsense-config";
 
 declare global {
   interface Window { adsbygoogle?: unknown[]; }
@@ -15,7 +16,7 @@ export function AdSlot({
   label?: string;
   format?: "auto" | "autorelaxed";
 }) {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+  const client = ADSENSE_CLIENT;
 
   useEffect(() => {
     if (!client || !slot) return;
