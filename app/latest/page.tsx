@@ -5,7 +5,7 @@ import { entertainmentTitles } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
 import { jobOpportunities } from "@/lib/jobs";
 import { seriesLastChecked, seriesTitles } from "@/lib/series";
-import { youtubeMovieLibrary } from "@/lib/youtube-library";
+import { indexableYouTubeMovies } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
   title: "Latest Nigeria Movies, Services, Travel & Job Updates",
@@ -33,7 +33,8 @@ export default function LatestPage() {
   const travel = [...exploreGuides]
     .sort((a, b) => b.lastReviewed.localeCompare(a.lastReviewed) || a.shortTitle.localeCompare(b.shortTitle))
     .slice(0, 8);
-  const youtube = youtubeMovieLibrary.slice(0, 8);
+  // The crawl hub must not prominently surface YouTube detail pages intentionally marked noindex.
+  const youtube = indexableYouTubeMovies.slice(0, 8);
   const jobs = [...jobOpportunities]
     .sort((a, b) => b.verifiedAt.localeCompare(a.verifiedAt) || Number(b.status === "open") - Number(a.status === "open"))
     .slice(0, 8);
@@ -53,6 +54,20 @@ export default function LatestPage() {
           <Link href="/explore/calabar-carnival-2026">Calabar Carnival 2026</Link>
           <Link href="/jobs/deadlines">Jobs open now & deadlines</Link>
         </div>
+
+        <details className="browse-disclosure top-gap">
+          <summary>Find more essential verified guides</summary>
+          <nav className="disclosure-link-grid" aria-label="Essential Nigerian guides">
+            <Link href="/services/nysc-senate-list">Check the NYSC senate list</Link>
+            <Link href="/services/jamb-print-result">Print a JAMB result slip</Link>
+            <Link href="/services/waec-check-result">Check WAEC results</Link>
+            <Link href="/services/cac-name-reservation">Reserve a business name with CAC</Link>
+            <Link href="/services/inec-pvc-status">Check your PVC status</Link>
+            <Link href="/explore/lagos">Explore Lagos</Link>
+            <Link href="/explore/obudu-mountain-resort">Plan a visit to Obudu</Link>
+            <Link href="/entertainment/movies/anikulapo">Anikulapo film guide</Link>
+          </nav>
+        </details>
 
         <div className="admin-two-column top-gap">
           <section className="admin-panel">
