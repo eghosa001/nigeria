@@ -55,8 +55,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          paths=(
+            "/"
+            "/services/passport-renewal"
+            "/assistant"
+            "/topics/nigerian-passport"
+            "/entertainment/youtube/KWIpR47N9hc"
+            "/entertainment/youtube/2Ficn2BMlI8"
+            "/entertainment/youtube/zxvtMba4MYE"
+            "/entertainment/youtube/GrxitJ4fHT8"
+          )
           for round in 1 2 3; do
-            for path in "/" "/services/passport-renewal" "/assistant" "/topics/nigerian-passport"               "/entertainment/youtube/KWIpR47N9hc" "/entertainment/youtube/2Ficn2BMlI8"               "/entertainment/youtube/zxvtMba4MYE" "/entertainment/youtube/GrxitJ4fHT8"; do
+            for path in "${paths[@]}"; do
               body="$(mktemp)"
               status="$(curl --silent --show-error --max-time 30 --output "$body" --write-out '%{http_code}' "$LIVE_BASE_URL$path")"
               if [ "$status" -ge 500 ] || grep -Eqi 'Worker exceeded resource limits|Error 1102' "$body"; then
