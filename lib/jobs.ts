@@ -18,6 +18,24 @@ export type JobPostingLocation = {
   locality?: string;
   region?: string;
   country: string;
+  streetAddress?: string; // Only when the employer identifies the actual worksite.
+  postalCode?: string; // Do not substitute company headquarters or guessed postcodes.
+};
+
+export type JobRemuneration = {
+  amount: number;
+  currency: string;
+  period: "MONTH" | "YEAR" | "HOUR";
+  payType: "base" | "gross";
+  evidenceUrl: string;
+  checkedAt: string;
+};
+
+export type JobPublicationReview = {
+  evidenceUrl: string;
+  reviewedAt: string;
+  payStatus: "employer-reported" | "not-published";
+  worksiteStatus: "full-address" | "locality-only" | "region-only" | "remote";
 };
 
 export type JobPostingMetadata = {
@@ -46,6 +64,8 @@ export type CareerOpportunity = {
   kind?: JobRecordKind;
   posting?: JobPostingMetadata;
   jobPostingAuthorization?: JobPostingAuthorization;
+  remuneration?: JobRemuneration;
+  publicationReview?: JobPublicationReview;
   topicSlugs?: string[];
   sector: JobSector;
   status: JobStatus;
@@ -2375,6 +2395,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "UNILAG is accepting applications for the Senator Douye Diri Professorial Chair in Leadership and Good Governance. The three-year senior academic appointment closes on 20 October 2026.",
     location: "Akoka, Lagos",
+    remuneration: { amount: 16902702.75, currency: "NGN", period: "YEAR", payType: "gross", evidenceUrl: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://unilag.edu.ng/call-for-applications-for-the-senator-douye-diri-professorial-chair-in-leadership-and-good-governance-department-of-political-science/", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Three-year senior academic appointment",
     audiences: ["Full Professors", "Senior academics", "Political science scholars", "Leadership and governance researchers"],
     fields: ["Political Science", "Leadership", "Governance", "Research", "Higher Education"],
@@ -3433,6 +3455,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a Medical Laboratory Scientist in Abuja through its official jobs portal.",
     location: "Abuja, FCT",
+    remuneration: { amount: 181000, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/medical-laboratory-scientist-abuja-649", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/medical-laboratory-scientist-abuja-649", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Clinical laboratory role",
     audiences: ["Medical laboratory scientists", "Healthcare professionals", "NYSC-completed applicants"],
     fields: ["Medical Laboratory Science", "Healthcare", "Diagnostics", "Clinical Services"],
@@ -3468,6 +3492,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a People Operations Coordinator for Abuja or Kano through its official jobs platform.",
     location: "Abuja, FCT / Kano State",
+    remuneration: { amount: 331914.24, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/people-operations-coordinator-1020", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/people-operations-coordinator-1020", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Human resources / people operations",
     audiences: ["HR professionals", "People operations professionals", "NYSC-completed applicants"],
     fields: ["Human Resources", "People Operations", "Administration", "Healthcare"],
@@ -3504,6 +3530,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a Senior Coordinator, Talent Management across Abuja, Kano and Lagos.",
     location: "Abuja / Kano / Lagos",
+    remuneration: { amount: 464679, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/senior-coordinator-talent-management-941", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/senior-coordinator-talent-management-941", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Human resources / talent management",
     audiences: ["HR professionals", "Talent-management professionals", "Experienced hires"],
     fields: ["Human Resources", "Talent Management", "Learning and Development", "People Operations"],
@@ -3568,6 +3596,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a Medical Doctor in Abuja through its official jobs platform.",
     location: "Lifecamp, Abuja, FCT",
+    remuneration: { amount: 355600, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/medical-doctor-abuja-549", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/medical-doctor-abuja-549", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Clinical medical role",
     audiences: ["Medical doctors", "Physicians", "Healthcare professionals"],
     fields: ["Medicine", "Healthcare", "Clinical Services"],
@@ -3600,6 +3630,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a Medical Doctor for its Sangotedo, Lagos location.",
     location: "Sangotedo, Lagos State",
+    remuneration: { amount: 355622, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/medical-doctor-lagos-541", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/medical-doctor-lagos-541", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Clinical medical role",
     audiences: ["Medical doctors", "Physicians", "Healthcare professionals"],
     fields: ["Medicine", "Healthcare", "Clinical Services"],
@@ -3632,6 +3664,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a Dental Assistant in Sangotedo, Lagos through its official careers system.",
     location: "Sangotedo, Lagos State",
+    remuneration: { amount: 151550, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/dental-assistant-lagos-585", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/dental-assistant-lagos-585", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Dental clinical support role",
     audiences: ["Dental assistants", "Dental health technicians", "Dental surgery technicians"],
     fields: ["Dentistry", "Dental Health", "Healthcare", "Clinical Services"],
@@ -3664,6 +3698,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting a Pharmacist for Abuja through its official jobs portal.",
     location: "Lugbe / Asba, Abuja, FCT",
+    remuneration: { amount: 181440, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/pharmacist-546", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/pharmacist-546", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Clinical pharmacy role",
     audiences: ["Pharmacists", "Healthcare professionals"],
     fields: ["Pharmacy", "Healthcare", "Clinical Services"],
@@ -3696,6 +3732,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     statusLabel: "Applications open",
     summary: "EHA Clinics is recruiting an Assistant Manager, Laboratory and Diagnostics in Kano.",
     location: "Kano, Kano State",
+    remuneration: { amount: 604083, currency: "NGN", period: "MONTH", payType: "gross", evidenceUrl: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180", checkedAt: "2026-10-08" },
+    publicationReview: { evidenceUrl: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180", reviewedAt: "2026-10-08", payStatus: "employer-reported", worksiteStatus: "locality-only" },
     employmentType: "Laboratory management role",
     audiences: ["Laboratory managers", "Medical laboratory scientists", "Healthcare managers"],
     fields: ["Medical Laboratory Science", "Diagnostics", "Healthcare", "Management"],
