@@ -3763,9 +3763,23 @@ function applyCurrentJobCorrections(item: CareerOpportunity): CareerOpportunity 
   };
 }
 
+// Persisted listing metadata may outlive its closing date between editorial sweeps.
+// Always normalize known expired application windows before directory, SEO and
+// structured-data consumers read the catalog; the runtime guard remains in place.
+function closeExpiredJob(item: CareerOpportunity): CareerOpportunity {
+  if (item.status !== "open" || !item.deadline || item.deadline >= new Date().toISOString().slice(0, 10)) return item;
+  return {
+    ...item,
+    status: "closed",
+    statusLabel: "Published application deadline passed — verify current status",
+    nextMilestone: "The listed application deadline has passed. Check the official employer source for a new announcement.",
+  };
+}
+
 export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(normalizeCareerPortal)
-  .map(applyCurrentJobCorrections);
+  .map(applyCurrentJobCorrections)
+  .map(closeExpiredJob);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");
