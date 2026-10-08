@@ -35,7 +35,8 @@
     "check:entertainment-content": "tsx scripts/check-entertainment-content.ts",
     "check:freshness": "tsx scripts/check-freshness.ts",
     "quality:status": "tsx scripts/report-content-quality.ts",
-    "check:directory-queries": "tsx scripts/check-directory-queries.ts"
+    "check:directory-queries": "tsx scripts/check-directory-queries.ts",
+    "audit:publisher": "tsx scripts/audit-publisher-readiness.ts"
   },
   "dependencies": {
     "next": "16.3.8",

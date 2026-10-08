@@ -1,38 +1,24 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "How verification works",
-  description: "How MyNigeriaGuide verifies government service information and handles conflicting sources.",
+  title: "About MyNigeriaGuide — Independent Nigerian Information Guides",
+  description: "Learn how MyNigeriaGuide helps readers explore Nigerian movies, services, travel and jobs, and how to report corrections.",
 };
 
 export default function AboutPage() {
   return (
     <section className="section page-top">
       <div className="container narrow">
-        <span className="eyebrow">Trust policy</span>
-        <h1>How MyNigeriaGuide verifies information</h1>
-        <p className="page-intro">
-          MyNigeriaGuide is an independent information service. It is not affiliated with the Federal Government of Nigeria or any government agency.
-        </p>
-
+        <span className="eyebrow">About MyNigeriaGuide</span>
+        <h1>Practical information for life in Nigeria</h1>
+        <p className="page-intro">MyNigeriaGuide is an independent Nigerian information website covering four connected needs: movies and entertainment, everyday services, places to visit, and jobs and careers. We are not a government agency, employer, cinema or ticket seller.</p>
         <div className="policy-stack">
-          <section>
-            <strong>1</strong>
-            <div><h2>Official sources first</h2><p>Fees, requirements and timelines should be tied to the responsible agency's website, portal, gazette, circular or published document wherever possible.</p></div>
-          </section>
-          <section>
-            <strong>2</strong>
-            <div><h2>Every important fact keeps a date</h2><p>Guides display when the underlying source was checked so readers can judge how current the information is.</p></div>
-          </section>
-          <section>
-            <strong>3</strong>
-            <div><h2>Discrepancies are explained</h2><p>When official pages differ, we compare their purpose and currency, follow the clearest current source where justified, and keep older inconsistencies visible in the guide notes.</p></div>
-          </section>
-          <section>
-            <strong>4</strong>
-            <div><h2>Payments stay on official channels</h2><p>MyNigeriaGuide does not collect passport, NIN, licence, CAC or other government application fees.</p></div>
-          </section>
+          <section><strong>1</strong><div><h2>Four useful starting points</h2><p>Explore <Link href="/entertainment">Nigerian movies</Link> and legitimate viewing options; follow <Link href="/services">service procedures</Link> through official portals; use <Link href="/explore">Tour Nigeria</Link> for practical destination planning; or research <Link href="/jobs">career opportunities</Link> and recruitment deadlines.</p></div></section>
+          <section><strong>2</strong><div><h2>Original guidance, not copied listings</h2><p>The editorial standard prioritises plain-language explanations of reader decisions, specific facts, credible sources and updates when information changes. A video link, employer posting or agency notice is a source to assess — not an excuse to publish an unverified or copied article.</p></div></section>
+          <section><strong>3</strong><div><h2>What verification does — and does not — mean</h2><p>Dates and official links help readers assess a page, but they do not guarantee admission, job placement, available cinema tickets, safe travel or unchanged agency rules. The <Link href="/editorial-policy">editorial policy</Link> explains how corrections and conflicting information should be handled.</p></div></section>
+          <section><strong>4</strong><div><h2>Contact and corrections</h2><p>See our <Link href="/corrections">corrections policy</Link> or <Link href="/contact">contact page</Link> to flag an error. Do not send identification numbers, bank cards, passwords or application credentials to MyNigeriaGuide. Government fees and job applications stay on the responsible organisation's channels.</p></div></section>
         </div>
       </div>
     </section>

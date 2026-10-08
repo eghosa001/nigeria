@@ -14,14 +14,9 @@ Social trends are discovery leads, **not proof**. Verify a trend's factual claim
 
 This page-length rule applies to **Jobs, Tour, Movies and Services** including mobile layouts and detail pages. Keep the full useful SEO information available via details/related pages and semantic links rather than truncating source-backed answers.
 
-### Thin-page publication gate (all four pillars)
+### Single publication rule
 
-- **Do not equate a record with an SEO-worthy page.** A verified employer URL, a YouTube watch link, a city name or a service title can appear in searchable directories without receiving its own indexed article.
-- Template-only employer career portals must remain `noindex,follow` and absent from XML sitemaps until employer-specific processes, role types, eligibility and source evidence justify a distinct article. Do not turn a generic role board into a fabricated vacancy.
-- YouTube videos with only a publisher/cast fallback and no substantiated plot remain browseable but `noindex,follow`, absent from detail-page sitemaps. Publisher hubs require multiple editorially substantive film guides before their hub may be indexed.
-- Directory pagination and filter combinations are useful navigation but should not generate thousands of standalone thin SEO pages. Keep their links working while using canonical and indexing controls appropriately.
-- **Editorial promotion requires verified original substance, not longer templated prose.** Reuse and strengthen canonical pages. Consolidate near-duplicates, correct errors, keep source/checked-at evidence and protect inbound links. A passing schema/CI check is not proof that every indexed page satisfies search-engine quality expectations.
-
+For all four pillars, the authoritative publication and monetization-readiness gates now live in **`docs/PUBLISHING_STANDARD.md`**. A verified record, video, job posting, city or topic is not automatically an indexable article. Keep catalog architecture, canonical/noindex policy and real user value aligned with that single standard; do not create competing thin-page checklists here.
 
 ## Target operating scale
 
