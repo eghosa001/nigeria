@@ -14,7 +14,7 @@ import { getSiteUrl } from "@/lib/site";
 import { JOBS_LIVE_INVENTORY_TARGET, jobMarketSources, largestObservedNigeriaJobMarketCount } from "@/data/job-market-sources";
 
 export const metadata: Metadata = {
-  title: "Jobs in Nigeria: Government Recruitment & Verified Career Opportunities",
+  title: "Jobs in Nigeria: Verified Openings & Career Portals",
   description: "Verified Nigerian government recruitment, graduate jobs, SIWES, internships and career portals with requirements, application steps, status and official links.",
   alternates: { canonical: "/jobs" }
 };

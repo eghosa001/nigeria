@@ -19,16 +19,34 @@ export function generateStaticParams() {
   return jobOpportunities.map((item) => ({ slug: item.slug }));
 }
 
+// Keep search snippets tied to the actual employer, role and source evidence.
+function compactJobSnippet(value: string, maxLength: number) {
+  const normalized = value.replace(/\s+/g, " ").trim();
+  if (normalized.length <= maxLength) return normalized;
+  const shortened = normalized.slice(0, maxLength - 1);
+  const lastSpace = shortened.lastIndexOf(" ");
+  return (lastSpace > maxLength * 0.7 ? shortened.slice(0, lastSpace) : shortened).trimEnd() + "…";
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const item = getJobOpportunity(slug);
   if (!item) return {};
   const isCareerPortal = item.status === "career-page" || item.kind === "career-page";
+  const label = isCareerPortal
+    ? item.organization + " Careers: Official Portal"
+    : item.title + ": Status & How to Apply";
+  const summary = item.summary.replace(/\s+/g, " ").trim();
+  const sourceContext = isCareerPortal
+    ? "Check the employer's official careers portal for current roles and requirements."
+    : "Check application status, eligibility and the verified official application source.";
+  const description = summary.length >= 90
+    ? summary
+    : summary.replace(/[.!?]$/, "") + (summary ? ". " : "") + sourceContext;
+
   return {
-    title: isCareerPortal
-      ? item.organization + " Careers: Official Portal & How to Apply"
-      : item.title + ": Requirements, Status & How to Apply",
-    description: item.summary,
+    title: compactJobSnippet(label, 58),
+    description: compactJobSnippet(description, 155),
     alternates: { canonical: "/jobs/" + item.slug },
     robots: isIndexableJobOpportunity(item) ? undefined : { index: false, follow: true }
   };
