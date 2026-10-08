@@ -35,32 +35,22 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 }
 
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
-  const highlights = guide.highlights.slice(0, 4).map((item) => item.name);
-  const firstPlanning = guide.planning[0]?.detail ?? "Group nearby stops together and confirm live access before travelling.";
-  const geographyQuestion = guide.kind === "city"
-    ? [{
-        question: "Where is " + guide.shortTitle + " in Nigeria?",
-        answer: guide.shortTitle + " is in " + guide.region + ", Nigeria. This guide covers what to do there, places to visit and practical trip planning.",
-      }]
-    : [];
-
+  const stops = guide.highlights.slice(0, 3).map((item) => item.name);
+  const advice = guide.planning[0]?.detail;
   return [
     {
-      question: "What are the best things to do in " + guide.shortTitle + "?",
-      answer: "Start with " + highlights.slice(0, 3).join(", ") + ". The guide below explains how to fit these into a realistic trip.",
+      question: "What should I see in " + guide.shortTitle + "?",
+      answer: stops.length
+        ? "Begin with " + stops.join(", ") + ". See the guide for details on each stop."
+        : guide.summary,
     },
-    ...geographyQuestion,
+    ...(guide.kind === "city" ? [{
+      question: "Where is " + guide.shortTitle + "?",
+      answer: guide.shortTitle + " is in " + guide.region + ", Nigeria.",
+    }] : []),
     {
-      question: "What places should I visit in " + guide.shortTitle + "?",
-      answer: highlights.length ? "Useful starting points include " + highlights.join(", ") + "." : guide.summary,
-    },
-    {
-      question: "What is " + guide.shortTitle + " best known for?",
-      answer: guide.shortTitle + " is especially useful for travellers interested in " + guide.bestFor.join(", ") + ".",
-    },
-    {
-      question: "How should I plan a trip to " + guide.shortTitle + "?",
-      answer: firstPlanning,
+      question: "What should I check before visiting " + guide.shortTitle + "?",
+      answer: advice ?? "Confirm access, opening times and local conditions with the responsible operator before travelling.",
     },
   ];
 }
@@ -254,7 +244,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section explore-guide-highlights">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">What to build around</span><h2>{guide.shortTitle} highlights worth planning.</h2></div></div>
+          <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>What to see in {guide.shortTitle}</h2></div></div>
           <div className="explore-highlight-grid">
             {guide.highlights.map((highlight) => (
               <article className="explore-highlight-card" key={highlight.name}>
@@ -336,7 +326,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section premium-dark-section" id="planning">
         <div className="container">
-          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Plan {guide.shortTitle}: practical decisions before you go.</h2></div></div>
+          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Before you visit {guide.shortTitle}</h2></div></div>
           <div className="compact-planning-list">
             {guide.planning.map((item) => (
               <details key={item.label}>
