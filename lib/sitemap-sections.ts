@@ -174,6 +174,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
       { url: base + "/entertainment", lastModified: movieCatalogModified },
       { url: base + "/entertainment/movies", lastModified: movieCatalogModified },
       { url: base + "/entertainment/trending", lastModified: movieCatalogModified },
+      { url: base + "/entertainment/hallelujah-challenge-october-2026", lastModified: "2026-10-08" },
       { url: base + "/entertainment/movies/october-2026", lastModified: "2026-10-04" },
       { url: base + "/entertainment/releases", lastModified: movieCatalogModified },
       { url: base + "/entertainment/cinemas", lastModified: movieCatalogModified },

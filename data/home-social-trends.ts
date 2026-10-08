@@ -1,5 +1,5 @@
 export type HomeSocialTrend = {
-  pillar: "Movies" | "Services" | "Tour Nigeria" | "Jobs & Careers";
+  pillar: "Movies" | "Movies & Entertainment" | "Services" | "Tour Nigeria" | "Jobs & Careers";
   title: string;
   href: string;
   checkedAt: string;
@@ -16,31 +16,31 @@ export type HomeSocialTrend = {
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
-    pillar: "Movies",
-    title: "My 30th Wedding — viral Nollywood release",
-    href: "/entertainment/movies/my-30th-wedding",
-    checkedAt: "2026-10-07",
-    expiresAt: "2026-10-21",
+    pillar: "Movies & Entertainment",
+    title: "Hallelujah Challenge October 2026 — live nightly at 11:59 PM WAT",
+    href: "/entertainment/hallelujah-challenge-october-2026",
+    checkedAt: "2026-10-08",
+    expiresAt: "2026-10-30",
   },
   {
     pillar: "Services",
     title: "INEC voter-register display & claims — 9–15 October",
     href: "/services/inec-claims-objections-october-2026",
-    checkedAt: "2026-10-07",
+    checkedAt: "2026-10-08",
     expiresAt: "2026-10-15",
   },
   {
     pillar: "Tour Nigeria",
-    title: "Detty December 2026 — Wizkid opens 18 December",
-    href: "/explore/detty-december-lagos-2026",
-    checkedAt: "2026-10-07",
-    expiresAt: "2026-12-30",
+    title: "Felabration 2026 — 12–18 October at the New Afrika Shrine",
+    href: "/explore/felabration-2026",
+    checkedAt: "2026-10-08",
+    expiresAt: "2026-10-18",
   },
   {
     pillar: "Jobs & Careers",
-    title: "Oilserv 2027 Graduate Trainee — closes 10 October",
+    title: "Oilserv 2027 Graduate Trainee — applications close 10 October",
     href: "/jobs/oilserv-ingenious-graduate-trainee-2027",
-    checkedAt: "2026-10-07",
+    checkedAt: "2026-10-08",
     expiresAt: "2026-10-10",
   },
 ];
