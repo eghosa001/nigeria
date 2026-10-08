@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = movie.featuredCast.slice(0, 4);
   const indexable = isIndexableYouTubeDetailMovie(movie);
+  const aliasToCuratedMovie = movie.source === "curated";
   const override = indexable ? youtubeSeoOverrides[movie.videoId] : undefined;
   const description = compactMetadata(
     override?.description ??
@@ -58,7 +59,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
     ),
     description,
     alternates: { canonical },
-    robots: indexable ? undefined : { index: false, follow: true },
+    robots: indexable && !aliasToCuratedMovie ? undefined : { index: false, follow: true },
     openGraph: {
       title: movie.title + " — Nigerian Movie",
       description,
@@ -85,8 +86,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   const { videoId } = await params;
   const movie = await getYouTubeDetailMovieById(videoId);
   if (!movie) notFound();
-  if (movie.source === "curated") permanentRedirect(movie.internalHref);
-
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
   const related = indexable ? await getRelatedYouTubeDetailMovies(movie) : [];
