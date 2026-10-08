@@ -3466,9 +3466,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       ]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting a People Operations Coordinator for Abuja or Kano through its official jobs platform.",
+    status: "closed",
+    statusLabel: "Vacancy no longer listed — check official careers board",
+    summary: "The EHA Clinics People Operations Coordinator vacancy advertised for Abuja or Kano is no longer listed on the employer’s official careers board. The original vacancy URL now returns 404; use the live EHA jobs index to check for any new posting before applying.",
     location: "Abuja, FCT / Kano State",
     employmentType: "Human resources / people operations",
     audiences: ["HR professionals", "People operations professionals", "NYSC-completed applicants"],
@@ -3476,15 +3476,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Degree in Human Resources or a related field is part of EHA's eligibility check.", "Relevant people-operations capability is required by the role."],
     requirements: ["NYSC completion.", "Basic computer knowledge.", "Comfort with the listed work locations and employer eligibility checks."],
     documents: ["CV/resume", "Education and NYSC information requested by EHA Clinics"],
-    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the role and locations.", "Complete the eligibility questions.", "Continue to EHA Clinics' application form."],
-    officialUrl: "https://erp.eha.ng/jobs/people-operations-coordinator-1020",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
-    feeNote: "Use EHA Clinics' official jobs platform.",
-    sourceNotes: ["EHA Clinics' jobs index listed this role as posted on 5 October 2026.", "The official detail page shows Abuja and Kano as work locations and an active application flow."],
+    applicationSteps: ["Open the official EHA Clinics careers board.", "Search its current vacancies for People Operations Coordinator rather than assuming the former advertisement is active.", "If EHA republishes the position, open the new employer-owned detail page and verify its requirements, locations and application dates.", "Apply only through the current employer application form; do not use an archived or third-party application link."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Check current vacancies on EHA Clinics",
+    verifiedAt: "2026-10-09",
+    feeNote: "EHA Clinics does not require payments through MyNigeriaGuide. The former role is no longer listed; check the employer board for new vacancies." ,
+    sourceNotes: ["The official EHA Clinics jobs index originally listed People Operations Coordinator on 5 October 2026.", "On 9 October 2026, the old position detail route returned HTTP 404 and the employer’s live index no longer displayed this listing. Historical qualifications and locations are retained for context only; applications are not confirmed open."],
     sources: [
-      { label: "EHA Clinics — People Operations Coordinator", url: "https://erp.eha.ng/jobs/people-operations-coordinator-1020", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics — current vacancies", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" }
     ]
   },
   {
