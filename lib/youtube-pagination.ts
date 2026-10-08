@@ -1,10 +1,10 @@
-import { indexableYouTubeMovies } from "@/lib/youtube-library";
+import { discoverableYouTubeMovies } from "@/lib/youtube-library";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 
 export { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 
 export function getYouTubeCatalogPageCount() {
-  return Math.max(1, Math.ceil(indexableYouTubeMovies.length / YOUTUBE_CATALOG_PAGE_SIZE));
+  return Math.max(1, Math.ceil(discoverableYouTubeMovies.length / YOUTUBE_CATALOG_PAGE_SIZE));
 }
 
 export function getYouTubeCatalogPage(page: number) {
@@ -14,6 +14,6 @@ export function getYouTubeCatalogPage(page: number) {
   return {
     page,
     pageCount,
-    movies: indexableYouTubeMovies.slice(start, start + YOUTUBE_CATALOG_PAGE_SIZE),
+    movies: discoverableYouTubeMovies.slice(start, start + YOUTUBE_CATALOG_PAGE_SIZE),
   };
 }

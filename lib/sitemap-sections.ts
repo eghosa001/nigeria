@@ -6,14 +6,13 @@ import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination
 import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
 import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { exploreGuides } from "@/lib/explore";
-import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
-import { indexableYouTubeChannelHubs } from "@/lib/youtube-channel-hubs";
+import { indexableYouTubeChannelHubs, isIndexableYouTubeChannelHub } from "@/lib/youtube-channel-hubs";
 import { growthHubs } from "@/lib/growth-hubs";
 import { serviceLocationCities } from "@/data/service-locations";
 import { getSiteUrl } from "@/lib/site";
 import { getServiceDirectoryPageCount } from "@/lib/service-query";
-import { jobOpportunities } from "@/lib/jobs";
+import { isIndexableJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
@@ -38,10 +37,6 @@ export type SitemapShard = {
   lastModified: string;
   count: number;
 };
-
-function getYouTubeSitemapPageCount() {
-  return Math.max(1, Math.ceil(youtubeMovieLibrary.length / YOUTUBE_CATALOG_PAGE_SIZE));
-}
 
 function latestDate(values: string[]) {
   return values.reduce((latest, value) => value > latest ? value : latest, "");
@@ -154,7 +149,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         url: base + "/jobs/guides/" + guide.slug,
         lastModified: guide.reviewedAt,
       })),
-      ...jobOpportunities.map((item) => ({
+      ...jobOpportunities.filter(isIndexableJobOpportunity).map((item) => ({
         url: base + "/jobs/" + item.slug,
         lastModified: item.verifiedAt,
       })),
@@ -209,19 +204,13 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   }
 
   const youtubeModified = latestDate(youtubeMovieLibrary.map((movie) => movie.lastChecked)) || movieCatalogModified;
-  const pagination = Array.from({ length: Math.max(0, getYouTubeSitemapPageCount() - 1) }, (_, index) => ({
-    url: base + "/entertainment/youtube/page/" + (index + 2),
-    lastModified: youtubeModified,
-  }));
-
   return [
     { url: base + "/entertainment/youtube", lastModified: youtubeModified },
     { url: base + "/entertainment/youtube/channels", lastModified: youtubeModified },
-    ...indexableYouTubeChannelHubs.map((hub) => ({
+    ...indexableYouTubeChannelHubs.filter(isIndexableYouTubeChannelHub).map((hub) => ({
       url: base + "/entertainment/youtube/channels/" + hub.channel.slug,
       lastModified: hub.latestChecked || youtubeModified,
     })),
-    ...pagination,
     ...indexableYouTubeMovies
       .filter((movie) => movie.source !== "curated")
       .map((movie) => ({

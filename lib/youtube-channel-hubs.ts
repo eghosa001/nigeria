@@ -1,4 +1,4 @@
-import { youtubeMovieLibrary, type YouTubeMovieRecord } from "@/lib/youtube-library";
+import { isIndexableYouTubeMovie, youtubeMovieLibrary, type YouTubeMovieRecord } from "@/lib/youtube-library";
 import {
   getVerifiedYouTubeMovieChannelByName,
   type VerifiedYouTubeMovieChannel,
@@ -10,6 +10,7 @@ export type YouTubeChannelHub = {
   channel: VerifiedYouTubeMovieChannel;
   movies: YouTubeMovieRecord[];
   movieCount: number;
+  substantiveMovieCount: number;
   latestPublishedAt: string;
   latestChecked: string;
   years: number[];
@@ -30,6 +31,7 @@ function buildHub(channel: VerifiedYouTubeMovieChannel, movies: YouTubeMovieReco
     channel,
     movies: sorted,
     movieCount: sorted.length,
+    substantiveMovieCount: sorted.filter(isIndexableYouTubeMovie).length,
     latestPublishedAt: sorted[0]?.publishedAt ?? "",
     latestChecked: sorted.reduce((latest, movie) => movie.lastChecked > latest ? movie.lastChecked : latest, ""),
     years: [...new Set(sorted.map((movie) => movie.year))].sort((a, b) => b - a),
@@ -55,6 +57,12 @@ export const indexableYouTubeChannelHubs: YouTubeChannelHub[] = [...grouped.valu
   .map(({ channel, movies }) => buildHub(channel, movies))
   .filter((hub) => hub.movieCount >= MIN_INDEXABLE_YOUTUBE_CHANNEL_MOVIES)
   .sort((a, b) => b.movieCount - a.movieCount || a.channel.name.localeCompare(b.channel.name));
+
+// Large lists of identical publisher/cast blurbs are valuable for discovery,
+// not enough to justify indexing another publisher SEO landing page.
+export function isIndexableYouTubeChannelHub(hub: YouTubeChannelHub) {
+  return hub.movieCount >= MIN_INDEXABLE_YOUTUBE_CHANNEL_MOVIES && hub.substantiveMovieCount >= 3;
+}
 
 export function getYouTubeChannelHub(slug: string) {
   return indexableYouTubeChannelHubs.find((hub) => hub.channel.slug === slug);

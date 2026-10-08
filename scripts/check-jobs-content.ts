@@ -4,8 +4,8 @@ import { jobEmployers } from "../lib/job-employers";
 import { getJobFacetOpportunities, jobLocationFacets, jobProfessionFacets } from "../lib/job-facets";
 import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus } from "../lib/job-runtime";
 import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
-import { retiredJobRedirects } from "../lib/job-scale-wave";
-import { jobOpportunities } from "../lib/jobs";
+import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale-wave";
+import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -22,6 +22,13 @@ assert(defaultDirectory.total === jobOpportunities.length, "Server directory tot
 assert(defaultDirectory.items.length <= JOBS_DIRECTORY_PAGE_SIZE, "The browser-facing Jobs directory must be paginated.");
 assert(queryJobDirectory({ q: "Reliance Health", page: 1 }).total > 0, "Server directory search must find verified employers.");
 unique(jobOpportunities.map((item) => item.slug), "Job slugs");
+assert(templateCareerPortalSlugs.size > 0, "Generated career portal SEO gate must identify template-only records.");
+for (const item of jobOpportunities) {
+  if (!templateCareerPortalSlugs.has(item.slug)) continue;
+  assert(item.kind === "career-page", item.slug + " expected to remain a directory-level employer listing.");
+  assert(!isIndexableJobOpportunity(item), item.slug + " must not index template-only career content.");
+}
+
 unique(jobTopics.map((topic) => topic.slug), "Job topic slugs");
 unique(careerGuides.map((guide) => guide.slug), "Career guide slugs");
 assert(careerGuides.length >= 10, "Jobs pillar should keep at least 10 substantial evergreen career guides.");
@@ -72,6 +79,9 @@ for (const item of jobOpportunities) {
   }
   assert((item.topicSlugs ?? []).every((slug) => jobTopics.some((topic) => topic.slug === slug)), item.slug + " has an unknown explicit topic slug.");
   assert(item.sources.some((source) => new URL(source.url).hostname === new URL(item.officialUrl).hostname), item.slug + " officialUrl must share a hostname with at least one source.");
+  if (item.deadline && item.deadline < new Date().toISOString().slice(0, 10)) {
+    assert(getEffectiveJobStatus(item) !== "open", item.slug + " expired vacancy must never render as open.");
+  }
   if (item.status === "open") {
     assert(daysSinceIsoDate(item.verifiedAt) <= 14, item.slug + " is marked open but has not been verified in the last 14 days.");
     if (item.deadline) assert(item.deadline >= new Date().toISOString().slice(0, 10), item.slug + " is stored open after its deadline.");
@@ -85,7 +95,7 @@ for (const item of jobOpportunities) {
     if (item.jobPostingAuthorization) {
       assert(item.jobPostingAuthorization.publicEvidenceUrl.startsWith("https://"), item.slug + " JobPosting authorization needs public HTTPS evidence.");
       assert(isoDate.test(item.jobPostingAuthorization.verifiedAt), item.slug + " JobPosting authorization needs an ISO verifiedAt date.");
-      assert(Boolean(structured), item.slug + " authorised JobPosting must build while the vacancy is open.");
+      assert(item.status === "open" ? Boolean(structured) : structured === null, item.slug + " JobPosting must appear only for an open, authorised vacancy.");
     } else {
       assert(structured === null, item.slug + " must not emit third-party JobPosting markup without recorded authorization.");
     }

@@ -6,7 +6,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { JobApplyLink } from "@/components/job-apply-link";
-import { getJobOpportunity, jobOpportunities } from "@/lib/jobs";
+import { getJobOpportunity, isIndexableJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { retiredJobRedirects } from "@/lib/job-scale-wave";
 import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getEmployerOpportunities, getJobEmployer } from "@/lib/job-employers";
@@ -29,7 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       ? item.organization + " Careers: Official Portal & How to Apply"
       : item.title + ": Requirements, Status & How to Apply",
     description: item.summary,
-    alternates: { canonical: "/jobs/" + item.slug }
+    alternates: { canonical: "/jobs/" + item.slug },
+    robots: isIndexableJobOpportunity(item) ? undefined : { index: false, follow: true }
   };
 }
 
@@ -87,6 +88,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <p className="job-organisation">{item.organization}</p>
             <h1>{item.title}</h1>
             <p className="page-intro">{item.summary}</p>
+            {!isIndexableJobOpportunity(item) ? <p className="job-muted">Employer-directory listing: confirm the specific role, requirements and opening dates on the official careers site. This record is not a standalone verified vacancy.</p> : null}
             <p className="job-muted">Applies to {item.location} · Employer: {item.organization} · Verified {item.verifiedAt}</p>
             {item.nextMilestone ? <div className="job-milestone"><strong>Current next step</strong><p>{item.nextMilestone}</p></div> : null}
           </div>

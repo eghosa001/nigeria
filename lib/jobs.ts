@@ -4,7 +4,7 @@ import { jobGrowthWave8 } from "@/lib/job-growth-wave-8";
 import { jobGrowthWave7 } from "@/lib/job-growth-wave-7";
 import { jobGrowthWave6 } from "@/lib/job-growth-wave-6";
 import { jobGrowthWave5 } from "@/lib/job-growth-wave-5";
-import { jobScaleWave } from "@/lib/job-scale-wave";
+import { jobScaleWave, templateCareerPortalSlugs } from "@/lib/job-scale-wave";
 import { jobGrowthWave } from "@/lib/job-growth-wave-2026-10-06";
 import { jobGrowthWave2 } from "@/lib/job-growth-wave-2";
 import { jobGrowthWaveThree } from "@/lib/job-growth-wave-2026-10-06-b";
@@ -3763,13 +3763,33 @@ function applyCurrentJobCorrections(item: CareerOpportunity): CareerOpportunity 
   };
 }
 
+// Persisted listing metadata may outlive its closing date between editorial sweeps.
+// Always normalize known expired application windows before directory, SEO and
+// structured-data consumers read the catalog; the runtime guard remains in place.
+function closeExpiredJob(item: CareerOpportunity): CareerOpportunity {
+  if (item.status !== "open" || !item.deadline || item.deadline >= new Date().toISOString().slice(0, 10)) return item;
+  return {
+    ...item,
+    status: "closed",
+    statusLabel: "Published application deadline passed — verify current status",
+    nextMilestone: "The listed application deadline has passed. Check the official employer source for a new announcement.",
+  };
+}
+
 export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(normalizeCareerPortal)
-  .map(applyCurrentJobCorrections);
+  .map(applyCurrentJobCorrections)
+  .map(closeExpiredJob);
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");
 export const internationalOpportunities = jobOpportunities.filter((item) => item.sector === "International");
+
+// Template-only career portals stay available as discovery links, never as thin SEO pages.
+// Reviewed employer pages and genuinely distinct verified vacancies retain indexability.
+export function isIndexableJobOpportunity(item: CareerOpportunity): boolean {
+  return !templateCareerPortalSlugs.has(item.slug);
+}
 
 export function getJobOpportunity(slug: string) {
   return jobOpportunities.find((item) => item.slug === slug);

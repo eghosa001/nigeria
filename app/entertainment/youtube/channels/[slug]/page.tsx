@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import {
   getYouTubeChannelHub,
+  isIndexableYouTubeChannelHub,
   indexableYouTubeChannelHubs,
 } from "@/lib/youtube-channel-hubs";
 import { getSiteUrl } from "@/lib/site";
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       "Browse " + hub.movieCount + " full Nigerian movie guides from " + hub.channel.name +
       ", with cast, runtime, release year and verified YouTube source links.",
     alternates: { canonical: "/entertainment/youtube/channels/" + hub.channel.slug },
+    robots: isIndexableYouTubeChannelHub(hub) ? undefined : { index: false, follow: true },
   };
 }
 
@@ -91,7 +93,7 @@ export default async function YouTubeChannelPage({ params }: { params: Promise<{
         <div className="section-heading top-gap">
           <div>
             <span className="eyebrow">Recent full movies</span>
-            <h2>Latest indexed titles from {hub.channel.name}.</h2>
+            <h2>Recent full-length movies from {hub.channel.name}.</h2>
           </div>
           {hub.channel.channelUrl ? (
             <a href={hub.channel.channelUrl} target="_blank" rel="noreferrer">Official YouTube channel ↗</a>

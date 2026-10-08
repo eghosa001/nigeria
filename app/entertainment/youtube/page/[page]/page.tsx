@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
     title: "Full Nigerian Movies on YouTube — Page " + value,
     description: "Browse page " + value + " of full Nigerian and Nollywood movies on YouTube.",
     alternates: { canonical: "/entertainment/youtube/page/" + value },
+    robots: { index: false, follow: true },
   };
 }
 
