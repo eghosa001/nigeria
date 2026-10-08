@@ -69,6 +69,11 @@ jobs:
             for path in "${paths[@]}"; do
               body="$(mktemp)"
               status="$(curl --silent --show-error --max-time 30 --output "$body" --write-out '%{http_code}' "$LIVE_BASE_URL$path")"
+              if [[ "$path" == /entertainment/youtube/* ]] && [ "$status" -ne 200 ]; then
+                echo "YouTube detail health regression on $path during round $round (HTTP $status; expected 200)."
+                cat "$body"
+                exit 1
+              fi
               if [ "$status" -ge 500 ] || grep -Eqi 'Worker exceeded resource limits|Error 1102' "$body"; then
                 echo "Worker resource failure detected on $path during round $round (HTTP $status)."
                 cat "$body"
