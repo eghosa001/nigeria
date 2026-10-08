@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-05T15:51:29.487Z",
+  "generatedAt": "2026-10-08T11:28:58.392Z",
   "syncMode": "incremental",
   "sourceCount": 97,
-  "importedCount": 3668,
-  "importedThisRun": 92,
+  "importedCount": 3674,
+  "importedThisRun": 6,
   "pendingQualityCount": 816,
-  "pendingThisRun": 19,
-  "duplicateTitleCount": 2,
+  "pendingThisRun": 0,
+  "duplicateTitleCount": 0,
   "failedSourceCount": 5,
   "requiredFailedSourceCount": 0,
   "sourceErrors": [
@@ -42,6 +42,159 @@
     }
   ],
   "movies": [
+    {
+      "videoId": "-AxfPNSiwZI",
+      "title": "THROUGH THEIR EYES",
+      "rawTitle": "THROUGH THEIR EYES - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "THROUGH THEIR EYES cast: Ekama-Etim Inyang, Osereme Inegbenebor, Charles Born, Femi Jacobs",
+      "cast": [
+        "Ekama-Etim Inyang",
+        "Osereme Inegbenebor",
+        "Charles Born",
+        "Femi Jacobs"
+      ],
+      "featuredCast": [
+        "Ekama-Etim Inyang",
+        "Osereme Inegbenebor",
+        "Charles Born"
+      ],
+      "channelName": "BIODUNSTEPHEN TV",
+      "channelId": "UCLgjn9SPLG7BxyuFB_uNfXQ",
+      "channelUrl": "https://www.youtube.com/@biodunstephentv",
+      "publishedAt": "2026-10-07T17:25:56Z",
+      "year": 2026,
+      "durationMinutes": 94,
+      "viewCount": 427553,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=-AxfPNSiwZI",
+      "lastChecked": "2026-10-08"
+    },
+    {
+      "videoId": "AetM7ssMoKw",
+      "title": "DAMAGED",
+      "rawTitle": "DAMAGED (THE MOVIE) VAN VICKER, GEORGINA IBEH, CHIOMA NWOSU - 2026 LATEST NIGERIAN  NOLLYWOOD MOVIES",
+      "synopsis": "SYNOPSIS : The life of a couple is thrown into turmoil when his mother arrives uninvited, the foundation of the marriage cracks but that is the least of the problem, what started and seemed like the rivalry between a mother and her daughter in-law suddenly brings to birth a secret that the bravest of men will stutter to utter",
+      "cast": [
+        "VAN VICKER",
+        "GEORGINA IBEH",
+        "CHIOMA NWOSU -"
+      ],
+      "featuredCast": [
+        "VAN VICKER",
+        "GEORGINA IBEH",
+        "CHIOMA NWOSU -"
+      ],
+      "channelName": "GEORGINA IBEH TV",
+      "channelId": "UCt8C0h1RscuQL6P0nGDkXIg",
+      "channelUrl": "https://www.youtube.com/@georginaibehtv",
+      "publishedAt": "2026-10-07T16:00:15Z",
+      "year": 2026,
+      "durationMinutes": 137,
+      "viewCount": 323869,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=AetM7ssMoKw",
+      "lastChecked": "2026-10-08"
+    },
+    {
+      "videoId": "bp799arcNvk",
+      "title": "TESTED LOVE",
+      "rawTitle": "TESTED LOVE - Victory Michael, Prisma, Sylvia Madufor - James - 2026 latest Nigerian movies",
+      "synopsis": "husband and wife love life was tested when his uncle came to lave with them",
+      "cast": [
+        "Victory Michael",
+        "Prisma"
+      ],
+      "featuredCast": [
+        "Victory Michael",
+        "Prisma"
+      ],
+      "channelName": "GLOBAL CROWN TV",
+      "channelId": "UCoFEyPFU3Lc-mzDlDLTdPIA",
+      "channelUrl": "https://www.youtube.com/@globalcrowntv5294",
+      "publishedAt": "2026-10-07T15:30:07Z",
+      "year": 2026,
+      "durationMinutes": 150,
+      "viewCount": 504472,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=bp799arcNvk",
+      "lastChecked": "2026-10-08"
+    },
+    {
+      "videoId": "5DdRoYgqCb0",
+      "title": "DARE TO LOVE",
+      "rawTitle": "DARE TO LOVE - SANDRA OKUNZUWA/VICTORY MICHEAL/NIGERIAN MOVIES 2026 LATEST FULL/ LOVE MOVIES",
+      "synopsis": "Please like the video and drop a comment if you find it interesting....... or not.",
+      "cast": [
+        "Sandra Okunzuwa",
+        "Victory Micheal https"
+      ],
+      "featuredCast": [
+        "Sandra Okunzuwa",
+        "Victory Micheal https"
+      ],
+      "channelName": "Divine Touch tv",
+      "channelId": "UCrIiFTecq0FVdtl81dsS2Zg",
+      "channelUrl": "https://www.youtube.com/@divinetouchtvsub_confirmation1",
+      "publishedAt": "2026-10-07T15:00:14Z",
+      "year": 2026,
+      "durationMinutes": 85,
+      "viewCount": 24439,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=5DdRoYgqCb0",
+      "lastChecked": "2026-10-08"
+    },
+    {
+      "videoId": "CgiqNJYg8Hc",
+      "title": "MORE THAN MARRIAGE",
+      "rawTitle": "MORE THAN MARRIAGE - SONIA UCHE, EBUBE OBIO, DAN DAVID, Latest Trending Nollywood 2026 Full Movie",
+      "synopsis": "IFYEZE NOLLY TV @IfyEzenollytv-b7u PRODUCES BEST NOLLYWOOD MOVIES THAT ENTERTAINS AND EDUCATES ABOUT LIFE, MARRIAGE/RELATIONSHIP AND THE REAL AFRICAN CULTURE.",
+      "cast": [
+        "SONIA UCHE",
+        "EBUBE OBIO",
+        "DAN DAVID"
+      ],
+      "featuredCast": [
+        "SONIA UCHE",
+        "EBUBE OBIO",
+        "DAN DAVID"
+      ],
+      "channelName": "IfyEze Nolly tv",
+      "channelId": "UCFVseBemDz2KhVgh4S0-U1g",
+      "channelUrl": "https://www.youtube.com/@ifyezenollytv-b7u",
+      "publishedAt": "2026-10-07T14:32:57Z",
+      "year": 2026,
+      "durationMinutes": 171,
+      "viewCount": 320,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=CgiqNJYg8Hc",
+      "lastChecked": "2026-10-08"
+    },
+    {
+      "videoId": "ZDHYgP0BXtk",
+      "title": "WHEN THE GODS WHISPERS",
+      "rawTitle": "WHEN THE GODS WHISPERS - PAMELA OKOYE, DANIEL ROCKY, RITA EDOCHIE latest 2026 nigerian movies",
+      "synopsis": "WHEN THE GODS WHISPERS is a full-length Nigerian film published by One And Two Films Tv, featuring PAMELA OKOYE, DANIEL ROCKY, RITA EDOCHIE. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "PAMELA OKOYE",
+        "DANIEL ROCKY",
+        "RITA EDOCHIE"
+      ],
+      "featuredCast": [
+        "PAMELA OKOYE",
+        "DANIEL ROCKY",
+        "RITA EDOCHIE"
+      ],
+      "channelName": "One And Two Films Tv",
+      "channelId": "UChKCY9X0CIYtnRgIOH_egFg",
+      "channelUrl": "https://www.youtube.com/@oneandtwofilmstv",
+      "publishedAt": "2026-10-05T16:34:42Z",
+      "year": 2026,
+      "durationMinutes": 120,
+      "viewCount": 345048,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ZDHYgP0BXtk",
+      "lastChecked": "2026-10-08"
+    },
     {
       "videoId": "_zjwKs6GX_I",
       "title": "LOVE AND RUIN",
