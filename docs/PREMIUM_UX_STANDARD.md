@@ -20,6 +20,13 @@ A category earns 9+ only when its critical acceptance conditions are met, no rel
 | Performance & technical resilience | Changed routes load, controls respond without long delays, no hydration/JS/runtime errors, assets and metadata resolve, responsive layouts remain stable, no oversized client-side catalogs or unbounded synchronous work. Check the relevant production path when changed. |
 | Retention & utility | Useful task completion plus natural next-step/related content; saved/recently viewed continuity and user-controlled history where relevant; no deceptive popups, fake countdowns or manipulative loops. **Measured** return-visitor/session depth/conversion data needed before claiming actual 9+ retention. |
 
+## Homepage and featured-content integrity
+
+- **No repeated employer or entity in a compact featured set.** An organization may have many verified jobs in the full directory, but the homepage should normally show at most one featured record per organization and must not repeat it in neighboring teaser cards. Date-sensitive "open" labels must use effective status, not an expired stored status.
+- **Featured movies are editorially curated, not copied video listings.** Never feature raw promotional YouTube titles, keyword-stuffed headings, generic exhortations to watch/subscribe or publisher descriptions without a distinct fact-supported story. Keep the full verified catalog searchable; demote weak entries from homepage/prominent previews until reviewed.
+- **Labels must match content.** Do not call a film "new" merely because it is trending; do not claim all listings are independently verified applications; do not show count or freshness claims inconsistent with their actual sources.
+- When a featured shelf cannot meet the standard, reduce the number of cards rather than fill it with duplicates or low-quality filler.
+
 ## Required workflow for every new page, feature or expansion
 
 1. **Inventory and conflict check:** inspect the current live site, canonical content inventory and latest main branch/other open PRs. Prefer upgrading existing content over a duplicate or near-duplicate. Confirm the search/user task and quality evidence.
