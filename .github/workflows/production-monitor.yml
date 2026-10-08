@@ -55,8 +55,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          paths=(
+            "/"
+            "/services/passport-renewal"
+            "/assistant"
+            "/topics/nigerian-passport"
+            "/entertainment/youtube/KWIpR47N9hc"
+            "/entertainment/youtube/2Ficn2BMlI8"
+            "/entertainment/youtube/zxvtMba4MYE"
+            "/entertainment/youtube/GrxitJ4fHT8"
+          )
           for round in 1 2 3; do
-            for path in "/" "/services/passport-renewal" "/assistant" "/topics/nigerian-passport"; do
+            for path in "${paths[@]}"; do
               body="$(mktemp)"
               status="$(curl --silent --show-error --max-time 30 --output "$body" --write-out '%{http_code}' "$LIVE_BASE_URL$path")"
               if [ "$status" -ge 500 ] || grep -Eqi 'Worker exceeded resource limits|Error 1102' "$body"; then
@@ -96,7 +106,8 @@ jobs:
           printf '%s' "$services" | grep -q "/services/passport-renewal"
 
           youtube="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/youtube.xml")"
-          printf '%s' "$youtube" | grep -q "/entertainment/youtube/page/2"
+          printf '%s' "$youtube" | grep -q "/entertainment/youtube/channels/"
+          printf '%s' "$youtube" | grep -Eq '/entertainment/youtube/[A-Za-z0-9_-]{11}</loc>'
 
           robots="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/robots.txt")"
           printf '%s' "$robots" | grep -qi "sitemap: $LIVE_BASE_URL/sitemap-index.xml"

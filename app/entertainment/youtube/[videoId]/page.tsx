@@ -8,7 +8,7 @@ import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { getYouTubeMovieById, isIndexableYouTubeMovie, youtubeMovieLibrary } from "@/lib/youtube-library";
+import { getRelatedYouTubeDetailMovies, getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
 
 export const revalidate = 86400;
 
@@ -36,12 +36,12 @@ function compactMetadata(value: string, maxLength = 155) {
 
 export async function generateMetadata({ params }: { params: Promise<{ videoId: string }> }): Promise<Metadata> {
   const { videoId } = await params;
-  const movie = getYouTubeMovieById(videoId);
+  const movie = getYouTubeDetailMovieById(videoId);
   if (!movie) return {};
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
   const cast = movie.featuredCast.slice(0, 4);
-  const indexable = isIndexableYouTubeMovie(movie);
+  const indexable = isIndexableYouTubeDetailMovie(movie);
   const override = indexable ? youtubeSeoOverrides[movie.videoId] : undefined;
   const description = compactMetadata(
     override?.description ??
@@ -83,25 +83,13 @@ function personHref(name: string) {
 
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
-  const movie = getYouTubeMovieById(videoId);
+  const movie = getYouTubeDetailMovieById(videoId);
   if (!movie) notFound();
   if (movie.source === "curated") permanentRedirect(movie.internalHref);
 
-  const indexable = isIndexableYouTubeMovie(movie);
+  const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
-  const related = youtubeMovieLibrary
-    .filter((item) => item.videoId !== movie.videoId)
-    .map((item) => ({
-      item,
-      score:
-        (item.channelName === movie.channelName ? 4 : 0) +
-        item.cast.filter((name) => movie.cast.includes(name)).length * 2 +
-        (item.year === movie.year ? 1 : 0),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt))
-    .slice(0, 4)
-    .map((entry) => entry.item);
+  const related = indexable ? getRelatedYouTubeDetailMovies(movie) : [];
 
   const ld = {
     "@context": "https://schema.org",
