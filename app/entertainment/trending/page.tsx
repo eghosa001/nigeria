@@ -24,5 +24,43 @@ export default function TrendingMoviesPage() {
     <p className="page-intro">A current release watchlist built around films people are searching for now and titles arriving later this month.</p>
     <AnswerFirst title="Start with the films that have a current release signal" summary="Black Market and MKO are already in their October release window, while First Lady, Onibọn Oje, Phoenix Fury, Wire Transfer and other titles have upcoming dates to watch." facts={[{label:"Current list",value:String(items.length)+" movie guides"},{label:"Main month",value:"October 2026"},{label:"Each page includes",value:"Cast · story · where to watch"},{label:"Source rule",value:"Verified release/platform links"}]} links={[{href:"/entertainment/movies",label:"Browse all movies"},{href:"/entertainment/releases",label:"Release calendar",primary:true}]} note="Release dates and cinema schedules can change. Each movie page shows the source/link freshness used for that title." />
     <div className="home-category-grid compact-category-grid">{items.map((item)=><Link className="home-category-card" href={"/entertainment/movies/"+item.slug} key={item.slug}><span>{item.year} · {item.genres.slice(0,2).join(" · ")}</span><strong>{item.title}</strong><small>{item.cast.slice(0,3).join(", ")}</small><i>Cast & where to watch →</i></Link>)}</div>
+    <section className="top-gap" aria-labelledby="youtube-trailers">
+      <div className="minimal-section-heading">
+        <div>
+          <span className="eyebrow">YouTube Nigeria · 9 October 2026</span>
+          <h2 id="youtube-trailers">Trailers attracting attention this week</h2>
+          <p>
+            These video previews appeared in a third-party snapshot of Nigeria&apos;s YouTube trending chart.
+            A trending trailer is not proof that a full film is available, and a video title
+            is not evidence of a confirmed release date or full cast.
+          </p>
+        </div>
+      </div>
+      <div className="home-category-grid compact-category-grid">
+        <article className="home-category-card">
+          <span>Trailer · YouTube</span>
+          <h3>OJISE</h3>
+          <p>A trailer titled &ldquo;OJISE Trailer | Showing this Friday&rdquo; appeared near the top of the chart. Check the uploader&apos;s current description for the release and viewing route; do not assume a full film is online.</p>
+          <a href="https://youtu.be/Hmvy2rX49So" target="_blank" rel="noopener noreferrer">Watch the trailer on YouTube ↗</a>
+        </article>
+        <article className="home-category-card">
+          <span>Trailer · YouTube</span>
+          <h3>Trials of Olaide Part 2</h3>
+          <p>The video is promoted as a story involving love, betrayal and survival. The chart confirms attention to the trailer, not a verified release date, distribution platform or availability of the complete film.</p>
+          <a href="https://youtu.be/Q5vqmJywp6Q" target="_blank" rel="noopener noreferrer">Watch the trailer on YouTube ↗</a>
+        </article>
+        <article className="home-category-card">
+          <span>Teaser · YouTube</span>
+          <h3>Akpan &amp; Oduma: Love &amp; Chaos</h3>
+          <p>The teaser centres its promotion on relationship and political humour. Check its publisher for episode or film details before relying on any claimed screening, date or subscription requirement.</p>
+          <a href="https://youtu.be/9ejg-J_-8Us" target="_blank" rel="noopener noreferrer">Watch the teaser on YouTube ↗</a>
+        </article>
+      </div>
+      <p className="job-muted top-gap">
+        Chart observation checked 9 October 2026:{" "}
+        <a href="https://kworb.net/youtube/trending/ng.html" target="_blank" rel="noopener noreferrer">Kworb Nigeria YouTube trend snapshot ↗</a>.
+        Trends can change during the day. These clips are linked to their YouTube uploads and are not hosted by MyNigeriaGuide.
+      </p>
+    </section>
   </div></section></>);
 }
