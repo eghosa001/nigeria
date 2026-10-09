@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { AnswerFirst } from "@/components/answer-first";
 import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
@@ -48,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ videoId: 
     override?.description ??
       (indexable
         ? `${movie.title} is a ${movie.year} Nigerian movie. Cast includes ${cast.join(", ")}. ${movie.synopsis}`
-        : `${movie.title} is a ${movie.year} full Nigerian movie from ${movie.channelName}. Cast metadata is still being verified. ${movie.synopsis}`)
+        : `${movie.title} is a ${movie.year} full Nigerian movie from ${movie.channelName}. Cast details are not yet confirmed. ${movie.synopsis}`)
   );
   return {
     title: override?.title ?? compactMetadata(
@@ -150,11 +149,10 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <span>{movie.channelName}</span>
               </div>
               <p className="movie-detail-synopsis">{movie.synopsis}</p>
-              {!indexable ? <p className="job-muted">A detailed plot has not been independently verified. This listing provides credited cast, publisher and the source video, not a reviewed story guide.</p> : null}
-              {movie.featuredCast.length ? (
+               {movie.featuredCast.length ? (
                 <p className="movie-hero-cast"><strong>Featuring:</strong> {movie.featuredCast.join(" · ")}</p>
               ) : (
-                <p className="movie-hero-cast"><strong>Cast:</strong> Verification in progress.</p>
+                <p className="movie-hero-cast"><strong>Cast:</strong> Not yet confirmed.</p>
               )}
 
               <div className="movie-detail-actions">
@@ -168,29 +166,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
             </div>
           </div>
 
-          <AnswerFirst
-            eyebrow="Quick answer"
-            title={"Quick facts about " + movie.title}
-            summary={indexable ? movie.synopsis : movie.title + " is available through the publisher " + movie.channelName + ". Check the source for current access."}
-            facts={[
-              { label: "Country / year", value: "Nigeria · " + movie.year },
-              { label: "Access", value: "Free full movie on YouTube" },
-              { label: "Publisher", value: movie.channelName },
-              { label: "Source checked", value: movie.lastChecked },
-            ]}
-            links={[
-              { href: "#cast", label: "See cast" },
-              { href: "#source", label: "Source details" },
-              { href: "#watch-here", label: "Watch here", primary: true },
-              { href: movie.videoUrl, label: "Open on YouTube", external: true },
-            ]}
-            note={
-              "Official source checked " + movie.lastChecked + ". " +
-              (indexable
-                ? "Continue below for cast, alternate official sources and related movies."
-                : "This source listing remains browseable, but the story is not yet verified well enough for independent search indexing.")
-            }
-          />
+
         </div>
       </section>
 
@@ -220,7 +196,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
             <section id="cast">
               <span className="eyebrow">Cast & crew</span>
-              <h2>{indexable ? movie.title + " cast" : "Cast verification in progress"}</h2>
+              <h2>{movie.title} cast</h2>
               {indexable ? (
                 <div className="movie-person-list">
                   {movie.cast.map((name) => {
@@ -230,7 +206,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 </div>
               ) : (
                 <p className="movie-long-summary">
-                  The publisher and full-movie source are verified, but the cast list has not passed the catalog's metadata review yet. This page remains noindex until that verification is complete.
+                  We have not confirmed the complete cast for this movie. Check the publisher’s video description for credits.
                 </p>
               )}
             </section>
@@ -272,15 +248,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 </article>
 
           <aside className="movie-detail-sidebar">
-            <div className="sidebar-card movie-sidebar-card">
-              <span>Quick facts</span>
-              <strong>{movie.title}</strong>
-              <dl>
-                <div><dt>Country</dt><dd>Nigeria</dd></div>
-                <div><dt>Year</dt><dd>{movie.year}</dd></div>
-                <div><dt>Publisher</dt><dd>{movie.channelName}</dd></div>
-                              </dl>
-            </div>
             <div className="sidebar-card">
               <span>Keep exploring</span>
               <div className="related-links">
