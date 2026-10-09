@@ -25,7 +25,7 @@ import { categorySlug } from "@/lib/category";
 import { getAgency, getPublicService, publicServices } from "@/lib/data";
 import { getOfficialServiceLinks } from "@/lib/official-links";
 import { getGrowthHubsForService } from "@/lib/growth-hubs";
-import { getRelatedServices } from "@/lib/internal-links";
+import { getRelatedServices, getRelatedServiceReason } from "@/lib/internal-links";
 import { getServiceSearchAnswers } from "@/lib/search-answers";
 import { getSiteUrl } from "@/lib/site";
 
@@ -120,8 +120,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const topicSearches = topicHubs
     .flatMap((hub) => hub.searches)
     .filter((item) => item.serviceSlug !== service.slug)
-    .filter((item, index, items) => items.findIndex((candidate) => candidate.query === item.query) === index)
-    .slice(0, 6);
+    .filter((item) => !related.some((candidate) => candidate.slug === item.serviceSlug))
+    .filter((item, index, items) => items.findIndex((candidate) => candidate.serviceSlug === item.serviceSlug) === index)
+    .slice(0, 3);
   const searchAnswers = getServiceSearchAnswers(service);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
@@ -329,7 +330,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           ) : null}
           {topicSearches.length ? (
             <div className="service-topic-links">
-              <span className="eyebrow">People also search for</span>
+              <span className="eyebrow">Other helpful questions</span>
               <div className="related-links">
                 {topicSearches.map((item) => (
                   <Link key={item.query} href={"/services/" + item.serviceSlug}>
@@ -341,10 +342,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           ) : null}
           {related.length ? (
             <>
-              <span className="eyebrow">Keep going</span>
-              <h2>Related services</h2>
+              <span className="eyebrow">Next steps &amp; alternatives</span>
+              <h2>Services related to {service.shortTitle}</h2>
               <div className="related-links">
-                {related.map((item) => item ? <Link key={item.slug} href={"/services/" + item.slug}>{item.shortTitle} <span aria-hidden="true">→</span></Link> : null)}
+                {related.map((item) => <Link key={item.slug} href={"/services/" + item.slug}><strong>{item.shortTitle}</strong> · {getRelatedServiceReason(service, item)} <span aria-hidden="true">→</span></Link>)}
               </div>
             </>
           ) : null}
