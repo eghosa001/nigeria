@@ -31,3 +31,9 @@ assert.ok(dataSource.includes("reportingConfigured: posthogOverview.available"))
 const dashboardSource = readFileSync(new URL("../components/admin-analytics-dashboard.tsx", import.meta.url), "utf8");
 assert.ok(!dashboardSource.includes("bounceRate * 100"), "PostHog bounce rate is already a percentage");
 assert.ok(dashboardSource.includes("bounceRate.toFixed(1)"));
+
+const posthogSource = readFileSync(new URL("../lib/posthog-data.ts", import.meta.url), "utf8");
+assert.ok(posthogSource.includes('key: "$virt_is_bot"'), "PostHog visitors must exclude known bots");
+assert.ok(posthogSource.includes('value: [false]'), "PostHog visitors must use the human-only bot filter");
+assert.ok(posthogSource.includes('key: "$host"'), "PostHog reporting must stay on the production host");
+assert.ok(!posthogSource.includes('key: "$raw_user_agent"'), "Filtering raw user agent excludes browser SDK events without that property");
