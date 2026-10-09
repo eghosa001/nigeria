@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Contact MyNigeriaGuide", alternates: { canonical: "/contact" } };
+export const metadata: Metadata = { title: "Contact MyNigeriaGuide", description: "Report incorrect guide information, request corrections, send product feedback or find the right official Nigerian service support channel.", alternates: { canonical: "/contact" } };
 
 export default function ContactPage() {
   return (
