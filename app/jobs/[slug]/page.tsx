@@ -12,7 +12,7 @@ import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getEmployerOpportunities, getJobEmployer } from "@/lib/job-employers";
 import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
-import { getSimilarOpenJobs } from "@/lib/related-discovery";
+import { getSimilarOpenJobs } from "@/lib/job-discovery";
 import { SavePageButton } from "@/components/personal-library";
 
 // Deadline-sensitive status must be evaluated on every request, not frozen at build time.
