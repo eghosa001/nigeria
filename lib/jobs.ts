@@ -1,3 +1,4 @@
+import { armySSCC2027 } from "@/lib/job-trend-army-sscc-2027";
 import { jobGrowthWave10 } from "@/lib/job-growth-wave-10";
 import { verifiedTrendProgrammes } from "@/lib/job-trend-programmes-2026-10-08";
 import { jobGrowthWave9 } from "@/lib/job-growth-wave-9";
@@ -118,6 +119,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...armySSCC2027,
   ...verifiedTrendProgrammes,
   ...jobGrowthWave10,
   ...jobGrowthWave9,
