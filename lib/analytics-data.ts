@@ -39,6 +39,24 @@ export type AnalyticsConnectionStatus = {
   error?: string;
 };
 
+export type GA4KeyEventStatus = {
+  available: boolean;
+  events: Array<{ name: string; configured: boolean; countingMethod?: string }>;
+  error?: string;
+};
+
+export const IMPORTANT_GA4_KEY_EVENTS = ["job_apply_click", "official_link_click"] as const;
+
+export function describeGA4KeyEvents(configuredEvents: Array<{ eventName?: string; countingMethod?: string }>): GA4KeyEventStatus {
+  return {
+    available: true,
+    events: IMPORTANT_GA4_KEY_EVENTS.map((name) => {
+      const match = configuredEvents.find((event) => event.eventName === name);
+      return { name, configured: Boolean(match), ...(match?.countingMethod ? { countingMethod: match.countingMethod } : {}) };
+    }),
+  };
+}
+
 export type AnalyticsDashboardData = {
   range: AnalyticsRange;
   mode: AnalyticsTrafficMode;
@@ -64,6 +82,7 @@ export type AnalyticsDashboardData = {
   interactions: Array<{ event: string; count: number }>;
   searchPerformance: SearchPerformanceSummary;
   connection: AnalyticsConnectionStatus;
+  keyEvents: GA4KeyEventStatus;
   posthog: {
     trackingConfigured: boolean;
     reportingConfigured: boolean;
@@ -352,6 +371,35 @@ async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
   }
 }
 
+async function getGA4KeyEventStatus(): Promise<GA4KeyEventStatus> {
+  const { propertyId } = config();
+  if (!propertyId) return { available: false, events: [], error: "GA4 property is not configured." };
+  try {
+    const token = await getAccessToken(); // Read-only OAuth scope; no property changes.
+    const response = await fetch(
+      "https://analyticsadmin.googleapis.com/v1beta/properties/" + encodeURIComponent(propertyId) + "/keyEvents?pageSize=200",
+      { headers: { Authorization: "Bearer " + token }, cache: "no-store" },
+    );
+    if (!response.ok) {
+      const message = await response.text();
+      throw new Error("GA4 key-event verification unavailable (" + response.status + "): " + message.slice(0, 120));
+    }
+    const body = await response.json() as {
+      keyEvents?: Array<{ eventName?: string; countingMethod?: string }>;
+      nextPageToken?: string;
+    };
+    // More than 200 registered key events is exceptionally unlikely; never call a partial listing complete.
+    if (body.nextPageToken) return { available: false, events: [], error: "Key-event listing is incomplete." };
+    return describeGA4KeyEvents(body.keyEvents ?? []);
+  } catch (error) {
+    return {
+      available: false,
+      events: [],
+      error: error instanceof Error ? error.message : "Could not verify key-event configuration.",
+    };
+  }
+}
+
 async function runRealtime() {
   const { propertyId } = config();
   if (!propertyId) return null;
@@ -630,13 +678,14 @@ export async function getAnalyticsDashboard(
     error: "GA4 Data API is not configured. PostHog remains available independently.",
   };
 
-  const [batch, interactionReport, realtime, searchPerformance, connection, posthogOverview] = await Promise.all([
+  const [batch, interactionReport, realtime, searchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
     ga4Available ? batchRunReports(coreRequests) : Promise.resolve({ reports: [] } as BatchRunReportsResponse),
     ga4Available ? runReport(interactionRequest).catch(() => ({} as RunReportResponse)) : Promise.resolve({} as RunReportResponse),
     ga4Available ? runRealtime().catch(() => null) : Promise.resolve(null),
     getSearchPerformance(dataStartDate),
     ga4Available ? verifyAnalyticsConnection() : Promise.resolve(unavailableConnection),
     getPostHogOverview(dataStartDate, today, forceFresh),
+    ga4Available ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "GA4 Data API is not configured." } as GA4KeyEventStatus),
   ]);
 
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
@@ -691,6 +740,7 @@ export async function getAnalyticsDashboard(
     })),
     searchPerformance,
     connection,
+    keyEvents,
     posthog: {
       trackingConfigured: true,
       reportingConfigured: posthogOverview.available,
