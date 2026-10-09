@@ -88,7 +88,13 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
-  const related = indexable ? await getRelatedYouTubeDetailMovies(movie) : [];
+  const related = indexable ? await getRelatedYouTubeDetailMovies(movie, 8) : [];
+  const sameChannel = related.filter((item) => item.channelName.toLowerCase() === movie.channelName.toLowerCase()).slice(0, 4);
+  const sharedCast = new Set(movie.cast.map((name) => name.trim().toLowerCase()));
+  const withCast = related.filter((item) =>
+    item.channelName.toLowerCase() !== movie.channelName.toLowerCase() &&
+    item.cast.some((name) => sharedCast.has(name.trim().toLowerCase()))
+  ).slice(0, 4);
 
   const ld = {
     "@context": "https://schema.org",
@@ -193,7 +199,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
           <a href="#overview">Overview</a>
           <a href="#cast">Cast</a>
           <a href="#source">Watch</a>
-          {related.length ? <a href="#related">Related movies</a> : null}
+          {related.length ? <a href="#related">More to watch</a> : null}
         </div>
       </nav>
 
@@ -205,7 +211,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <div className="movie-fact-grid">
                 <article><span>Country</span><strong>Nigeria</strong></article>
                 <article><span>Year</span><strong>{movie.year}</strong></article>
-                <article><span>Runtime</span><strong>{runtimeLabel(movie.durationMinutes)}</strong></article>
                 <article><span>Publisher</span><strong>{movie.channelName}</strong></article>
                 <article><span>Published</span><strong>{movie.publishedAt.slice(0, 10)}</strong></article>
                 <article><span>Access</span><strong>Free on YouTube</strong></article>
@@ -246,7 +251,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                   <div><span>YouTube</span><strong>{movie.channelName}</strong></div>
                   <dl>
                     <div><dt>Published</dt><dd>{movie.publishedAt.slice(0, 10)}</dd></div>
-                    <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
                     <div><dt>Checked</dt><dd>{movie.lastChecked}</dd></div>
                   </dl>
                   <a className="button" href={movie.videoUrl} target="_blank" rel="noreferrer">Open official YouTube movie ↗</a>
@@ -274,7 +278,6 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <dl>
                 <div><dt>Country</dt><dd>Nigeria</dd></div>
                 <div><dt>Year</dt><dd>{movie.year}</dd></div>
-                <div><dt>Runtime</dt><dd>{runtimeLabel(movie.durationMinutes)}</dd></div>
                 <div><dt>Publisher</dt><dd>{movie.channelName}</dd></div>
                               </dl>
             </div>
@@ -294,16 +297,31 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
       {related.length ? (
         <section className="section movie-related-section" id="related">
           <div className="container">
-            <div className="section-heading">
-              <div>
-                <span className="eyebrow">More to watch</span>
-                <h2>Related official YouTube movies.</h2>
-              </div>
-              <Link href="/entertainment/youtube">Browse all YouTube movies →</Link>
-            </div>
-            <div className="youtube-movie-grid movie-preview-grid">
-              {related.map((item) => <YouTubeMovieCard movie={item} key={item.videoId} />)}
-            </div>
+            {sameChannel.length ? (
+              <>
+                <div className="section-heading">
+                  <div><span className="eyebrow">Same official publisher</span><h2>More movies from {movie.channelName}</h2></div>
+                  {movie.channelUrl ? <a href={movie.channelUrl} target="_blank" rel="noreferrer">Visit publisher ↗</a> : null}
+                </div>
+                <div className="youtube-movie-grid movie-preview-grid">
+                  {sameChannel.map((item) => <YouTubeMovieCard movie={item} key={item.videoId} />)}
+                </div>
+              </>
+            ) : null}
+            {withCast.length ? (
+              <>
+                <div className="section-heading top-gap">
+                  <div><span className="eyebrow">Shared cast</span><h2>Other movies featuring these actors</h2></div>
+                  <Link href="/entertainment/people">Discover actors →</Link>
+                </div>
+                <div className="youtube-movie-grid movie-preview-grid">
+                  {withCast.map((item) => <YouTubeMovieCard movie={item} key={item.videoId} />)}
+                </div>
+              </>
+            ) : null}
+            {!sameChannel.length && !withCast.length ? (
+              <div className="section-heading"><Link href="/entertainment/youtube">Discover other official Nigerian movies →</Link></div>
+            ) : null}
           </div>
         </section>
       ) : null}

@@ -2,51 +2,48 @@ import type { Service } from "@/lib/types";
 import { publicServices } from "@/lib/data";
 import { getGrowthHubsForService } from "@/lib/growth-hubs";
 
-function pushUnique(target: Service[], candidate: Service | undefined, serviceSlug: string) {
-  if (!candidate || candidate.slug === serviceSlug || target.some((item) => item.slug === candidate.slug)) return;
-  target.push(candidate);
+const normalized = (value: string) => value.toLocaleLowerCase("en").trim();
+const bySlug = new Map(publicServices.map((item) => [item.slug, item]));
+
+function appendUnique(target: Service[], candidate: Service | undefined, currentSlug: string) {
+  if (candidate && candidate.slug !== currentSlug && !target.some((item) => item.slug === candidate.slug)) {
+    target.push(candidate);
+  }
 }
 
-/**
- * Builds stable, crawl-friendly related-guide links.
- *
- * Explicit editorial relationships stay first, while category neighbours and
- * topic/agency peers guarantee that guides do not depend on data-file order
- * for their only service-to-service incoming links.
- */
+/** Editorial connections first; agency, category and common search intent next. */
 export function getRelatedServices(service: Service, limit = 6) {
   const related: Service[] = [];
-  const explicit = service.related
-    .map((slug) => publicServices.find((item) => item.slug === slug))
-    .filter((item): item is Service => item !== undefined);
-
-  for (const item of explicit.slice(0, 3)) pushUnique(related, item, service.slug);
-
-  const categoryServices = publicServices.filter((item) => item.category === service.category);
-  const currentIndex = categoryServices.findIndex((item) => item.slug === service.slug);
-
-  if (currentIndex >= 0 && categoryServices.length > 1) {
-    for (const offset of [1, -1, 2, -2]) {
-      const index = (currentIndex + offset + categoryServices.length) % categoryServices.length;
-      pushUnique(related, categoryServices[index], service.slug);
-    }
-  }
-
-  for (const item of explicit.slice(3)) pushUnique(related, item, service.slug);
+  for (const slug of service.related) appendUnique(related, bySlug.get(slug), service.slug);
 
   for (const hub of getGrowthHubsForService(service.slug)) {
-    for (const slug of hub.serviceSlugs) {
-      pushUnique(related, publicServices.find((item) => item.slug === slug), service.slug);
-    }
+    for (const slug of hub.serviceSlugs) appendUnique(related, bySlug.get(slug), service.slug);
   }
 
-  for (const item of publicServices.filter((candidate) =>
-    candidate.agencySlug === service.agencySlug && candidate.slug !== service.slug
-  )) {
-    pushUnique(related, item, service.slug);
-  }
+  const terms = new Set(service.searchTerms.map(normalized).filter((term) => term.length >= 5));
+  const scored = publicServices
+    .filter((candidate) => candidate.slug !== service.slug && !related.some((item) => item.slug === candidate.slug))
+    .map((candidate) => {
+      const sharedTerms = candidate.searchTerms.filter((term) => terms.has(normalized(term))).length;
+      const score = (candidate.agencySlug === service.agencySlug ? 7 : 0) +
+        (candidate.category === service.category ? 3 : 0) +
+        Math.min(3, sharedTerms) * 4;
+      return { candidate, score };
+    })
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => b.score - a.score || a.candidate.shortTitle.localeCompare(b.candidate.shortTitle));
 
-  for (const item of categoryServices) pushUnique(related, item, service.slug);
+  for (const { candidate } of scored) {
+    if (related.length >= limit) break;
+    appendUnique(related, candidate, service.slug);
+  }
 
   return related.slice(0, limit);
+}
+
+export function getRelatedServiceReason(current: Service, suggestion: Service) {
+  if (current.related.includes(suggestion.slug)) return "Connected step";
+  if (current.agencySlug === suggestion.agencySlug) return "Same responsible agency";
+  if (current.category === suggestion.category) return "Same service category";
+  return "Related guidance";
 }

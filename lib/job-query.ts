@@ -1,6 +1,7 @@
 import { jobLocationFacets, jobProfessionFacets, matchesJobLocation, matchesJobProfession } from "@/lib/job-facets";
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import { jobOpportunities, type CareerOpportunity, type JobSector, type JobStatus } from "@/lib/jobs";
+import { getSimilarOpenJobs } from "@/lib/job-discovery";
 
 export const JOBS_DIRECTORY_PAGE_SIZE = 24;
 export const JOBS_DIRECTORY_MAX_PAGE_SIZE = 48;
@@ -29,6 +30,7 @@ export type JobDirectoryResult = {
   page: number;
   pageSize: number;
   totalPages: number;
+  recommendations?: JobDirectoryItem[];
 };
 
 function clampInteger(value: number | undefined, fallback: number, min: number, max: number) {
@@ -109,6 +111,12 @@ export function queryJobDirectory(input: JobDirectoryQuery = {}): JobDirectoryRe
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const page = clampInteger(input.page, 1, 1, totalPages);
   const start = (page - 1) * pageSize;
+  const recommendations = q && total > 0 && total <= 8 && page === 1 &&
+    sector === "All" && status === "all" && location === "all" && profession === "all"
+    ? getSimilarOpenJobs(filtered[0], 4)
+      .filter(({ item }) => !filtered.some((match) => match.slug === item.slug))
+      .map(({ item }) => toDirectoryItem(item))
+    : [];
 
   return {
     items: filtered.slice(start, start + pageSize).map(toDirectoryItem),
@@ -116,5 +124,6 @@ export function queryJobDirectory(input: JobDirectoryQuery = {}): JobDirectoryRe
     page,
     pageSize,
     totalPages,
+    recommendations,
   };
 }

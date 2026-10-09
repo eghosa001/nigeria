@@ -13,6 +13,7 @@ import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extra
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
+import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -284,41 +285,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
   const featuredCast = getFeaturedCast(title);
   const image = movieImageUrl(title, base);
-  const movieQuestions = [
-    {
-      question: "Who is in the " + title.title + " cast?",
-      answer: title.cast.length
-        ? title.title + " features " + title.cast.slice(0, 6).join(", ") + (title.cast.length > 6 ? " and other cast members listed below." : ".")
-        : "The verified cast list is still being expanded.",
-    },
-    {
-      question: "What is " + title.title + " about?",
-      answer: title.synopsis,
-    },
-    {
-      question: "Where can I watch " + title.title + "?",
-      answer: platforms.length
-        ? "As checked on " + (lastChecked || "the latest source review") + ", " + title.title + " is linked to " + platforms.join(" and ") + " through the verified official availability section on this page."
-        : "As of " + (lastChecked || "the latest source review") + ", no current official streaming, broadcast or cinema availability has been verified for " + title.title + ".",
-    },
-    {
-      question: "Is " + title.title + " a Nigerian movie?",
-      answer: "Yes. " + title.title + " is listed here as a " + title.year + " Nigerian feature film, with country, cast and source information checked against the references on this page.",
-    },
-    ...(title.runtimeMinutes ? [{
-      question: "How long is " + title.title + "?",
-      answer: title.title + " has a verified runtime of " + title.runtimeMinutes + " minutes.",
-    }] : []),
-    ...(watchHereSource ? [{
-      question: "Can I watch " + title.title + " full movie on YouTube?",
-      answer: "Yes. The verified availability section links to the official full-length YouTube release" + (watchHereSource.publisher ? " from " + watchHereSource.publisher : "") + ", checked " + watchHereSource.lastChecked + ".",
-    }] : []),
-    ...(netflixSource ? [{
-      question: "Is " + title.title + " on Netflix?",
-      answer: "The official Netflix availability link on this page was last checked " + netflixSource.lastChecked + ". Availability can still vary by account or territory.",
-    }] : []),
-  ];
-
   const movieLd = {
     "@context": "https://schema.org",
     "@type": "Movie",
@@ -342,16 +308,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
       : undefined,
   };
 
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: movieQuestions.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
-
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -363,23 +319,11 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     ],
   };
 
-  const currentPlatformSet = new Set(platforms);
-  const related = entertainmentTitles
-    .filter((item) => item.slug !== title.slug && item.genres.some((genre) => title.genres.includes(genre)))
-    .map((item) => {
-      const sharedGenres = item.genres.filter((genre) => title.genres.includes(genre)).length;
-      const sharedCast = item.cast.filter((name) => title.cast.includes(name)).length;
-      const sharedPlatforms = item.watchLinks.filter((link) => currentPlatformSet.has(link.platform)).length;
-      const recency = Math.max(0, 3 - Math.abs(item.year - title.year));
-      return { item, score: sharedGenres * 4 + sharedCast * 3 + sharedPlatforms * 2 + recency + (item.featured ? 1 : 0) };
-    })
-    .sort((a, b) => b.score - a.score || b.item.year - a.item.year || a.item.title.localeCompare(b.item.title))
-    .slice(0, 4)
-    .map(({ item }) => item);
+  const recommendationShelves = getMovieRecommendationShelves(title);
 
   return (
     <>
-      <JsonLd data={[movieLd, breadcrumbLd, faqLd]} />
+      <JsonLd data={[movieLd, breadcrumbLd]} />
 
       <section className="movie-detail-hero">
         <div className="container">
@@ -464,43 +408,23 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
           <a href="#cast">Cast & crew</a>
           <a href="#watch">Where to watch</a>
           {title.trailer ? <a href="#trailer">Trailer</a> : null}
-          <a href="#related">Related movies</a>
+          <a href="#related">More to watch</a>
         </div>
       </nav>
 
       <section className="section movie-detail-main" id="overview">
         <div className="container movie-detail-layout">
           <article className="movie-detail-primary">
-            <section className="movie-overview-section">
-              <span className="eyebrow">About the movie</span>
-              <h2>{title.title}: story and quick details</h2>
-              <p className="movie-long-summary">{title.synopsis}</p>
-</section>
-
             <section>
               <span className="eyebrow">At a glance</span>
               <div className="movie-fact-grid">
                 <article><span>Country</span><strong>Nigeria</strong></article>
                 <article><span>Release year</span><strong>{title.year}</strong></article>
                 <article><span>Format</span><strong>Feature film</strong></article>
-                {title.runtimeMinutes ? <article><span>Runtime</span><strong>{title.runtimeMinutes} minutes</strong></article> : null}
                 <article><span>Languages</span><strong>{title.languages.join(", ")}</strong></article>
                 <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
                 <article><span>Official platforms</span><strong>{platforms.length ? platforms.join(", ") : "No current official viewing platform verified"}</strong></article>
                 <article><span>Availability / sources checked</span><strong>{lastChecked || "Not recorded"}</strong></article>
-              </div>
-            </section>
-
-            <section>
-              <span className="eyebrow">Popular questions</span>
-              <h2>Quick answers about {title.title}</h2>
-              <div className="compact-faq-list">
-                {movieQuestions.map((item) => (
-                  <details key={item.question}>
-                    <summary>{item.question}</summary>
-                    <p>{item.answer}</p>
-                  </details>
-                ))}
               </div>
             </section>
 
@@ -624,17 +548,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
 </article>
 
           <aside className="movie-detail-sidebar">
-            <div className="sidebar-card movie-sidebar-card">
-              <span>Quick facts</span>
-              <strong>{title.title}</strong>
-              <dl>
-                <div><dt>Country</dt><dd>Nigeria</dd></div>
-                <div><dt>Year</dt><dd>{title.year}</dd></div>
-                <div><dt>Language</dt><dd>{title.languages.join(", ")}</dd></div>
-                {title.runtimeMinutes ? <div><dt>Runtime</dt><dd>{title.runtimeMinutes} min</dd></div> : null}
-                <div><dt>Genre</dt><dd>{title.genres.slice(0, 3).join(", ")}</dd></div>
-              </dl>
-            </div>
             <div className="sidebar-card">
               <span>Keep exploring</span>
               <div className="related-links">
@@ -648,31 +561,39 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
         </div>
       </section>
 
-      <section className="section movie-related-section" id="related">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">More like this</span>
-              <h2>Related Nigerian movies.</h2>
+      <div id="related">
+        {recommendationShelves.length ? recommendationShelves.map((shelf) => (
+          <section className="section movie-related-section" key={shelf.title}>
+            <div className="container">
+              <div className="section-heading">
+                <div>
+                  <span className="eyebrow">Discover more</span>
+                  <h2>{shelf.title}</h2>
+                  <p className="job-muted">{shelf.description}</p>
+                </div>
+                <Link href="/entertainment/movies">Browse all movies →</Link>
+              </div>
+              <div className="movie-grid movie-related-grid">
+                {shelf.items.map((item) => (
+                  <article className="movie-tile movie-card-clickable" key={item.slug}>
+                    <Link className="movie-card-hitarea" href={"/entertainment/movies/" + item.slug} aria-label={"View details for " + item.title} />
+                    <EntertainmentArtwork title={item} />
+                    <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
+                    <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>
+                    <p className="movie-tile-description">{item.synopsis}</p>
+                    <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(item).join(" · ")}</p>
+                    <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + item.slug}>Details →</Link></div>
+                  </article>
+                ))}
+              </div>
             </div>
-            <Link href="/entertainment/movies">Browse the full catalog →</Link>
-          </div>
-
-          <div className="movie-grid movie-related-grid">
-            {related.map((item) => (
-              <article className="movie-tile movie-card-clickable" key={item.slug}>
-                <Link className="movie-card-hitarea" href={"/entertainment/movies/" + item.slug} aria-label={"View details for " + item.title} />
-                <EntertainmentArtwork title={item} />
-                <div className="movie-tile-meta"><span>{item.year}</span><span>{item.languages.slice(0, 1).join("")}</span></div>
-                <h3><Link href={"/entertainment/movies/" + item.slug}>{item.title}</Link></h3>
-                <p className="movie-tile-description">{item.synopsis}</p>
-                <p className="movie-card-cast"><strong>Featuring:</strong> {getFeaturedCast(item).join(" · ")}</p>
-                <div className="movie-tile-footer"><span>{item.genres.slice(0, 2).join(" · ")}</span><Link href={"/entertainment/movies/" + item.slug}>Details →</Link></div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+          </section>
+        )) : (
+          <section className="section movie-related-section">
+            <div className="container"><Link href="/entertainment/movies">Discover more Nigerian movies →</Link></div>
+          </section>
+        )}
+      </div>
     </>
   );
 }

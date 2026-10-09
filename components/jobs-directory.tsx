@@ -153,6 +153,31 @@ export function JobsDirectory({ initialResult }: Props) {
         ))}
       </div>
 
+      {(result.recommendations ?? []).length > 0 ? (
+        <section className="jobs-related-results" aria-label="Related job suggestions">
+          <div className="section-heading top-gap">
+            <div>
+              <span className="eyebrow">You might also consider</span>
+              <h2>Related open opportunities</h2>
+              <p className="job-muted">These are alternatives related to your search, not exact matches. Check each employer's current application status.</p>
+            </div>
+          </div>
+          <div className="jobs-card-grid">
+            {result.recommendations?.map((item) => (
+              <article className="job-card" key={item.slug}>
+                <div className="job-card-top"><span className="job-status job-status-open">Listed open</span><span>{item.sector}</span></div>
+                <div className="job-card-body">
+                  <p className="job-organisation">{item.organization}</p>
+                  <h3><Link href={"/jobs/" + item.slug}>{item.title}</Link></h3>
+                  <p>{item.summary}</p>
+                </div>
+                <div className="job-card-footer"><span>Checked {item.verifiedAt}</span><Link href={"/jobs/" + item.slug}>Check eligibility →</Link></div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       {result.items.length === 0 ? (
         <div className="jobs-empty">
           <strong>No verified pathway matches those filters yet.</strong>

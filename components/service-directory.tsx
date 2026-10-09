@@ -175,6 +175,21 @@ export function ServiceDirectory({
         </div>
       )}
 
+      {(result.recommendations ?? []).length > 0 ? (
+        <section className="related-section" aria-label="Related service suggestions">
+          <div className="section-heading top-gap">
+            <div>
+              <span className="eyebrow">Other helpful guides</span>
+              <h2>Services connected to your search</h2>
+              <p className="job-muted">These are related guides, not exact search results.</p>
+            </div>
+          </div>
+          <div className="service-grid">
+            {result.recommendations?.map((service) => <ServiceCard key={service.slug} service={service} />)}
+          </div>
+        </section>
+      ) : null}
+
       {result.totalPages > 1 ? (
         filtersActive ? (
           <nav className="jobs-pagination" aria-label="Filtered service result pages">

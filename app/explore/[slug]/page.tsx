@@ -7,6 +7,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
+import { getRelatedExploreGuides } from "@/lib/explore-discovery";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
@@ -89,18 +90,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   const base = getSiteUrl();
   const pageUrl = base + "/explore/" + guide.slug;
-  const related = exploreGuides
-    .filter((item) => item.slug !== guide.slug)
-    .map((item) => ({
-      item,
-      score:
-        (item.region === guide.region ? 5 : 0) +
-        (item.kind === guide.kind ? 2 : 0) +
-        item.bestFor.filter((value) => guide.bestFor.includes(value)).length,
-    }))
-    .sort((a, b) => b.score - a.score || a.item.shortTitle.localeCompare(b.item.shortTitle))
-    .slice(0, 4)
-    .map((entry) => entry.item);
+  const related = getRelatedExploreGuides(guide);
   const places = getExplorePlacesForGuide(guide.slug);
   const questions = getExploreQuestions(guide);
   const destinationPhoto = destinationPhotos[guide.slug];
@@ -375,9 +365,9 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           </div>
           <div>
             <span className="eyebrow">Keep exploring</span>
-            <h2>Related {guide.kind === "city" ? "cities" : guide.kind === "event" ? "events & trip guides" : "trip guides"}</h2>
+            <h2>Other places and experiences worth exploring</h2>
             <div className="related-links">
-              {related.map((item) => <Link href={"/explore/" + item.slug} key={item.slug}>{item.shortTitle} →</Link>)}
+              {related.map(({ guide: item, reason }) => <Link href={"/explore/" + item.slug} key={item.slug}><strong>{item.shortTitle}</strong> · {reason} →</Link>)}
               <Link href="/explore">All Explore Nigeria guides →</Link>
             </div>
           </div>
