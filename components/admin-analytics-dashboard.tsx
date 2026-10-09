@@ -415,12 +415,26 @@ export function AdminAnalyticsDashboard() {
           <div><span className="eyebrow">Useful actions</span><h2>What visitors actually do</h2></div>
           <small>Privacy-safe aggregate events only</small>
         </div>
-        <p className="analytics-clean-note">
-          GA4 key-event setup is separate from tracking: in GA4 Admin → Data display → Events, mark
-          <strong> job_apply_click</strong> and <strong>official_link_click</strong> as key events.
-          These count clicks to external application/service sources, not completed applications.
-          Related-content and save events remain engagement metrics, not conversions.
-        </p>
+        <div className="analytics-clean-note" aria-label="GA4 key event setup">
+          <strong>GA4 key-event configuration</strong>
+          {data.keyEvents?.available ? (
+            <div className="analytics-ranking">
+              {data.keyEvents.events.map((event) => (
+                <div key={event.name}>
+                  <strong>{event.name}</strong>
+                  <span>{event.configured ? "✓ Marked as a key event" : "Not configured"}</span>
+                  <small>{event.configured
+                    ? (event.countingMethod === "ONCE_PER_SESSION" ? "Count once per session" : "Check counting method in GA4")
+                    : "GA4 Admin → Data display → Events → mark as key event"}</small>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p>Key-event configuration could not be read from GA4. The site still records event clicks. Check GA4 Admin → Data display → Events to verify which events are marked as key events.</p>
+          )}
+          <p>These two events measure outbound application/service clicks, not completed applications.
+            Related-content and save events measure engagement, not conversions.</p>
+        </div>
         {(data.interactions ?? []).length ? (
           <div className="analytics-ranking">
             {(data.interactions ?? []).map((row, index) => (
