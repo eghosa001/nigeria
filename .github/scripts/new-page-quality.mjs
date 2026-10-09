@@ -148,9 +148,45 @@ function changes(base) {
   const list = execFileSync("git", ["diff", "--name-status", "--diff-filter=AM", base, "HEAD", "--"], { encoding: "utf8" });
   return list.split("\n").filter(Boolean).map((line) => line.split("\t").at(-1)).filter(Boolean);
 }
+function intentKey(kind, path, record) {
+  const title = String(value(record, "title") || value(record, "name") || "").toLowerCase()
+    .normalize("NFKC").replace(/[^a-z0-9]+/g, " ").trim();
+  const context = kind === "job" ? value(record, "organization") :
+    kind === "service" ? value(record, "agencySlug") :
+    kind === "tour" ? value(record, "region") :
+    kind === "movie" ? (path.includes("series") ? "series:" : "movie:") + value(record, "year") :
+    kind === "place" ? value(record, "address") : "";
+  return title.length >= 8 ? kind + "|" + title + "|" + String(context).toLowerCase() : null;
+}
+function catalogPaths() {
+  const paths = [];
+  for (const root of ["data", "lib"]) {
+    if (!existsSync(root)) continue;
+    for (const filename of readdirSync(root)) {
+      const path = join(root, filename).replaceAll("\\\\", "/");
+      if (classify(path) && classify(path) !== "route") paths.push(path);
+    }
+  }
+  return paths;
+}
+function existingIntentMap() {
+  const titles = new Map();
+  for (const path of catalogPaths()) {
+    const kind = classify(path);
+    let records;
+    try { records = recordsFromSource(current(path), kind); }
+    catch { continue; }
+    for (const [slug, record] of records) {
+      const key = intentKey(kind, path, record);
+      if (key) titles.set(key, [...(titles.get(key) || []), { path, slug }]);
+    }
+  }
+  return titles;
+}
 function run(base) {
   const files = changes(base).filter((path) => classify(path) && existsSync(path));
   let discovered = 0;
+  const intentIndex = existingIntentMap();
   for (const path of files) {
     const kind = classify(path);
     const before = fileAt(base, path);
@@ -176,6 +212,13 @@ function run(base) {
       discovered++;
       checked.push(path + ": " + slug);
       errors.push(...checkRecord(path, kind, slug, record));
+      const key = intentKey(kind, path, record);
+      if (key) {
+        const duplicates = (intentIndex.get(key) || []).filter((item) => item.slug !== slug);
+        if (duplicates.length) errors.push(path + " [" + slug + "]: exact same-title/search-intent candidate already exists at " +
+          duplicates.slice(0, 3).map((item) => item.path + " [" + item.slug + "]").join(", ") +
+          "; update the existing canonical page instead of publishing a duplicate.");
+      }
     }
   }
   console.log("New-page publishing gate: " + discovered + " new page records/routes (" + files.length + " relevant changed files).");
