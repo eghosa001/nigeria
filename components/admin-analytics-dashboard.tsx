@@ -198,7 +198,7 @@ export function AdminAnalyticsDashboard() {
             <span>1</span>
             <strong>Public tracking</strong>
             <small>mynigeriaguide.com</small>
-            <b>{data.posthog.trackingConfigured ? "Active" : "Not configured"}</b>
+            <b>{data.posthog.trackingConfigured ? "SDK installed" : "Not configured"}</b>
           </div>
           <div>
             <span>2</span>
@@ -210,11 +210,11 @@ export function AdminAnalyticsDashboard() {
             <span>3</span>
             <strong>Admin API reporting</strong>
             <small>Protected server-side PostHog read access</small>
-            <b>{data.posthog.reportingConfigured ? "Connected" : "Needs private read key"}</b>
+            <b>{data.posthog.reportingConfigured ? "Connected" : "Not connected"}</b>
           </div>
         </div>
         <p className="analytics-clean-note">
-          PostHog is the primary fast/live analytics source going forward. It does not rewrite old visitor history.
+          PostHog reports new traffic from when tracking became operational; an installed SDK alone does not confirm successful event delivery. It does not rewrite old visitor history.
           Google Search Console history remains preserved separately below, while GA4 stays enabled as a secondary reference.
           Admin paths, API paths, Next.js assets and automated QA traffic are excluded from PostHog collection.
         </p>
@@ -225,7 +225,7 @@ export function AdminAnalyticsDashboard() {
               <div><span>PostHog sessions</span><strong>{number(data.posthog.overview.sessions ?? 0)}</strong><small>Visits in the selected period</small></div>
               <div><span>PostHog page views</span><strong>{number(data.posthog.overview.views ?? 0)}</strong><small>Repeated views included</small></div>
               <div><span>Avg session</span><strong>{duration(data.posthog.overview.averageSessionDurationSeconds)}</strong><small>Average session duration</small></div>
-              <div><span>Bounce rate</span><strong>{data.posthog.overview.bounceRate == null ? "—" : (data.posthog.overview.bounceRate * 100).toFixed(1) + "%"}</strong><small>Sessions that ended without meaningful continuation</small></div>
+              <div><span>Bounce rate</span><strong>{data.posthog.overview.bounceRate == null ? "—" : data.posthog.overview.bounceRate.toFixed(1) + "%"}</strong><small>Sessions that ended without meaningful continuation</small></div>
             </div>
             <p className="analytics-clean-note">
               PostHog range: {data.posthog.overview.startDate} through {data.posthog.overview.endDate}. Refresh now asks PostHog and GA4 for fresh server-side reports.
@@ -233,7 +233,7 @@ export function AdminAnalyticsDashboard() {
           </>
         ) : (
           <div className="admin-empty">
-            <strong>PostHog is collecting traffic, but this custom admin page cannot query PostHog totals yet.</strong>
+            <strong>PostHog private reporting is not available on this dashboard yet.</strong>
             <p>{data.posthog.overview.error || <>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with Query Read access. Never use that key in browser code.</>}</p>
           </div>
         )}

@@ -5,7 +5,6 @@ import {
   POSTHOG_COLLECTION_START,
   POSTHOG_PROJECT_ID,
   POSTHOG_WEB_URL,
-  posthogServerReportingConfigured,
 } from "@/lib/posthog-config";
 import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
 import {
@@ -691,7 +690,7 @@ export async function getAnalyticsDashboard(
     connection,
     posthog: {
       trackingConfigured: true,
-      reportingConfigured: posthogServerReportingConfigured(),
+      reportingConfigured: posthogOverview.available,
       projectId: POSTHOG_PROJECT_ID,
       webUrl: POSTHOG_WEB_URL,
       collectionStartDate: POSTHOG_COLLECTION_START,
