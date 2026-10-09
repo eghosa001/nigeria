@@ -80,12 +80,21 @@ export async function getPostHogOverview(
           query: {
             kind: "WebOverviewQuery",
             dateRange: { date_from: startDate, date_to: endDate },
+            // Browser SDK events often lack $raw_user_agent. Filtering on
+            // that field silently excludes real traffic; PostHog's built-in
+            // virtual property classifies either available user-agent field.
             properties: [
               {
-                key: "$raw_user_agent",
+                key: "$virt_is_bot",
                 type: "event",
-                operator: "not_icontains",
-                value: ["GoogleAdSenseInfeed"],
+                operator: "exact",
+                value: [false],
+              },
+              {
+                key: "$host",
+                type: "event",
+                operator: "exact",
+                value: ["mynigeriaguide.com"],
               },
             ],
             filterTestAccounts: true,
