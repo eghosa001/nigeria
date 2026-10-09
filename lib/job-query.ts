@@ -1,7 +1,7 @@
 import { jobLocationFacets, jobProfessionFacets, matchesJobLocation, matchesJobProfession } from "@/lib/job-facets";
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import { jobOpportunities, type CareerOpportunity, type JobSector, type JobStatus } from "@/lib/jobs";
-import { getSimilarOpenJobs } from "@/lib/related-discovery";
+import { getSimilarOpenJobs } from "@/lib/job-discovery";
 
 export const JOBS_DIRECTORY_PAGE_SIZE = 24;
 export const JOBS_DIRECTORY_MAX_PAGE_SIZE = 48;
