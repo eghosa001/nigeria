@@ -177,7 +177,7 @@ export default function JobsPage() {
             <Link href="/jobs/internships">Internships & SIWES</Link>
             <Link href="/jobs/engineering">Engineering & technical careers</Link>
             <Link href="/jobs/remote">Remote & hybrid jobs</Link>
-            <Link href="/jobs/employers">Employers with multiple verified records</Link>
+            <Link href="/jobs/employers">Browse employers</Link>
             <Link href="/jobs/new-this-week">New this week</Link>
             <Link href="/jobs/closing-this-week">Closing this week</Link>
             <a href="#opportunities">Search the full directory</a>
@@ -318,7 +318,7 @@ export default function JobsPage() {
           <div className="jobs-path-grid">
             {jobMarketSources.map((source) => (
               <a className="jobs-path-card" href={source.href} target="_blank" rel="noreferrer" key={source.key}>
-                <span>{source.integration === "feed-eligible" ? "Feed-capable source" : "Live market source"}</span>
+                <span>External job board</span>
                 <strong>{source.name}</strong>
                 <p>{source.note}</p>
                 <b>{source.countLabel} · checked {source.checkedAt} ↗</b>
@@ -326,13 +326,13 @@ export default function JobsPage() {
             ))}
             <Link href="#opportunities" className="jobs-path-card jobs-path-card-dark">
               <span>MyNigeriaGuide verified</span>
-              <strong>{jobOpportunities.length} curated pathways</strong>
-              <p>These are the records already checked deeply enough to explain requirements, status and the official route.</p>
+              <strong>{jobOpportunities.length} jobs and career pathways</strong>
+              <p>Compare application requirements, recruitment status and official employer links.</p>
               <b>Search the verified directory →</b>
             </Link>
           </div>
           <p className="job-muted">
-            Market-source links are discovery aids, not MyNigeriaGuide endorsements of every advert on those platforms. Individual jobs only become MyNigeriaGuide records after source, freshness and duplicate checks.
+            External job boards may contain outdated or unverified adverts. Confirm the employer, vacancy and application deadline before sharing your details.
           </p>
             </div>
           </details>
