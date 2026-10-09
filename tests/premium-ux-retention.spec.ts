@@ -87,3 +87,24 @@ test("poster and thumbnail images reserve intrinsic dimensions", async ({ page }
     Number(node.getAttribute("width")) > 0 && Number(node.getAttribute("height")) > 0
   ))).toBe(true);
 });
+
+
+test("fee directory starts light and finds fees via bounded API", async ({ page, request }) => {
+  await page.goto("/fees");
+  await expect(page.locator(".fee-row")).toHaveCount(24);
+  const response = await request.get("/api/fees?page=2");
+  expect(response.status()).toBe(200);
+  expect((await response.json()).items.length).toBeLessThanOrEqual(24);
+  await page.getByLabel("Search fees").fill("passport");
+  await expect(page.locator(".fee-row").first()).toContainText(/passport/i);
+});
+
+test("crawler metadata remains in head for service and movie detail templates", async ({ request }) => {
+  for (const path of ["/services/passport-renewal", "/entertainment/youtube/2ZiRRu1sFtU"]) {
+    const response = await request.get(path, { headers: { "user-agent": "MyNigeriaGuide-SEOAuditBot/1.0" } });
+    expect(response.status()).toBe(200);
+    const head = (await response.text()).match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] || "";
+    expect(head, path).toMatch(/<title[^>]*>[^<]+<\/title>/i);
+    expect(head, path).toMatch(/<link[^>]+rel="canonical"/i);
+  }
+});

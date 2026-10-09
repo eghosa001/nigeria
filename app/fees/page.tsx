@@ -3,6 +3,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { FeeDirectory } from "@/components/fee-directory";
 import { JsonLd } from "@/components/json-ld";
 import { publicServices } from "@/lib/data";
+import { feeCategories, queryFeeDirectory } from "@/lib/fee-query";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
 
 export default function FeesPage() {
   const base = getSiteUrl();
+  const initialResult = queryFeeDirectory();
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -44,7 +46,7 @@ export default function FeesPage() {
             Where official pages differ, MyNigeriaGuide follows the clearest current purpose-built source and keeps any older discrepancy visible in the guide notes.
           </div>
 
-          <FeeDirectory services={publicServices} />
+          <FeeDirectory initialResult={initialResult} categories={feeCategories} />
         </div>
       </section>
     </>

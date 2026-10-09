@@ -5,7 +5,14 @@ on:
   pull_request:
     paths:
       - 'scripts/audit-all-sitemap-urls.mjs'
-      - '.github/workflows/full-sitemap-seo-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'components/lazy-youtube-player.tsx'
+      - 'app/fees/page.tsx'
+      - 'components/fee-directory.tsx'
+      - 'lib/fee-query.ts'
+      - 'app/api/fees/route.ts'
 
 permissions:
   contents: read
@@ -25,6 +32,19 @@ jobs:
           node-version: '22'
       - name: Validate focused audit script
         run: node --check scripts/audit-all-sitemap-urls.mjs
+      - name: Wait for corrected production HTML after deployment
+        if: github.event_name == 'push'
+        run: |
+          for attempt in {1..24}; do
+            if curl -fsSL --max-time 12 -A 'MyNigeriaGuide-SEOAuditBot/1.0' https://mynigeriaguide.com/fees -o /tmp/mng-fees.html; then
+              size=$(wc -c < /tmp/mng-fees.html)
+              echo "Production fees HTML: ${size} bytes"
+              if [ "$size" -lt 600000 ]; then exit 0; fi
+            fi
+            sleep 15
+          done
+          echo "Updated production fees HTML was not observed; refusing a stale full-site re-audit"
+          exit 1
       - name: Crawl every public sitemap URL
         env:
           SEO_CONCURRENCY: '5'

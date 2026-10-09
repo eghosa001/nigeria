@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!item) return {};
   const isCareerPortal = item.status === "career-page" || item.kind === "career-page";
   const label = isCareerPortal
-    ? item.organization + " Careers: Official Portal"
+    ? item.title + ": Official Careers"
     : item.title + ": Status & How to Apply";
   const summary = item.summary.replace(/\s+/g, " ").trim();
   const sourceContext = isCareerPortal

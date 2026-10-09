@@ -87,6 +87,8 @@ export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Prop
             <img
               src={thumbnail}
               alt={title + " official YouTube thumbnail"}
+              width={480}
+              height={360}
               loading="lazy"
               decoding="async"
               referrerPolicy="no-referrer"
