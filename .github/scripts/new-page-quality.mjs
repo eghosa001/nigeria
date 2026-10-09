@@ -19,6 +19,7 @@ function fileAt(base, path) {
 function current(path) { return readFileSync(path, "utf8"); }
 export function classify(path) {
   if (/^data\/services[^/]*\.json$/.test(path)) return "service";
+  if (/^data\/youtube-detail-shards\/\d+\.json$/.test(path)) return "youtube";
   if (/^lib\/(?:explore-growth-wave|explore-trend-events|explore\.ts)/.test(path)) return "tour";
   if (/^lib\/(?:explore-growth-places|explore-trend-event-places)/.test(path)) return "place";
   if (/^lib\/(?:entertainment-growth-wave|entertainment\.ts|series\.ts)/.test(path)) return "movie";
@@ -47,8 +48,9 @@ function balancedObject(source, opening) {
   return "";
 }
 export function recordsFromSource(source, type) {
-  if (type === "service") {
-    const list = JSON.parse(source || "[]");
+  if (type === "service" || type === "youtube") {
+    const parsed = JSON.parse(source || (type === "service" ? "[]" : "{}"));
+    const list = type === "youtube" ? (parsed.movies || []) : parsed;
     if (!Array.isArray(list)) throw new Error("Service catalog must be an array");
     return new Map(list.filter((r) => r && typeof r.slug === "string").map((r) => [r.slug, r]));
   }
@@ -93,9 +95,9 @@ export function checkRecord(path, kind, slug, record) {
   const warn = (ok, reason) => { if (!ok) local.push(reason); };
   const text = recordText(record);
   const heading = value(record, "title") || value(record, "name");
-  const summary = value(record, kind === "movie" ? "synopsis" : "summary");
+  const summary = value(record, kind === "movie" || kind === "youtube" ? "synopsis" : "summary");
   warn(heading.length >= 8, "specific title/name required");
-  warn(summary.length >= (kind === "movie" ? 60 : 55) || kind === "place", "original reader-oriented summary is too short");
+  warn(summary.length >= (kind === "youtube" ? 80 : kind === "movie" ? 60 : 55) || kind === "place", "original reader-oriented summary is too short");
   warn(!/\b(lorem ipsum|tbd|todo|coming soon: content|insert (?:text|details)|as an ai)\b/i.test(text), "placeholder or unedited filler detected");
   if (kind === "service") {
     warn(checkedDate(record, "lastVerified"), "valid current lastVerified date required");
@@ -120,6 +122,12 @@ export function checkRecord(path, kind, slug, record) {
     warn(hasHttps(record, "watchLinks") || hasHttps(record, "references") || hasHttps(record, "trailer") || hasHttps(record, "sourcePreview") || hasHttps(record, "artwork"), "legal/source-backed watching or verification route required");
     if (/\bartwork\s*:/.test(text)) warn(/usageBasis\s*:/.test(text) && /credit\s*:/.test(text), "artwork usage basis and credit required");
     if (/\bsourcePreview\s*:/.test(text)) warn(/sourceKind\s*:/.test(text) && /credit\s*:/.test(text), "preview source/credit required");
+  } else if (kind === "youtube") {
+    warn(record.metadataStatus === "complete", "only fully verified records should enter the indexable YouTube catalog; hold other candidates for review/noindex");
+    warn(Array.isArray(record.cast) && record.cast.length >= 1, "verified cast required");
+    warn(typeof record.videoUrl === "string" && record.videoUrl.startsWith("https://www.youtube.com/"), "legitimate YouTube watch source required");
+    warn(checkedDate(record, "lastChecked"), "current source-check date required");
+    warn(!/\b(?:subscribe|latest nigerian movies|full movie 2026|watch now|like and share)\b/i.test(summary), "publisher promotional or search-keyword filler is not an original synopsis");
   } else if (kind === "job") {
     warn(checkedDate(record, "verifiedAt"), "valid current verifiedAt required");
     warn(hasHttps(record, "officialUrl"), "official HTTPS application route required");
