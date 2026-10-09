@@ -45,3 +45,33 @@ test("gate scopes to page-producing content, not unrelated modules", () => {
   assert.equal(classify("lib/explore-growth-wave-9.ts"), "tour");
   assert.equal(classify("app/services/new-guide/page.tsx"), "route");
 });
+
+test("real git diff gates only added records and rejects an unsourced publication", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const { mkdtempSync, mkdirSync, writeFileSync, rmSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const { fileURLToPath } = await import("node:url");
+  const root = mkdtempSync(join(tmpdir(), "mng-page-gate-"));
+  const gate = fileURLToPath(new URL("./new-page-quality.mjs", import.meta.url));
+  const git = (...args) => execFileSync("git", args, { cwd: root, encoding: "utf8" });
+  try {
+    mkdirSync(join(root, "data"));
+    writeFileSync(join(root, "data/services.json"), "[]");
+    git("init", "-q");
+    git("config", "user.name", "CI Fixture");
+    git("config", "user.email", "fixture@example.com");
+    git("add", ".");
+    git("commit", "-qm", "base");
+    const base = git("rev-parse", "HEAD").trim();
+    const record = { slug: "new-verified-page", title: "Verified government service explanation",
+      summary: "A source-checked, practical explanation of the full public service application, eligibility and collection process.",
+      lastVerified: "2026-10-08", feeLabel: "Check official source",
+      requirements: ["Identification", "Application receipt"], steps: ["Open official route", "Complete form", "Save receipt"],
+      notes: ["Reconfirm all live fees"], related: ["existing-guide"], sources: [{ url: "https://example.gov.ng", lastChecked: "2026-10-08" }] };
+    writeFileSync(join(root, "data/services.json"), JSON.stringify([record]));
+    execFileSync(process.execPath, [gate, "--base", base], { cwd: root });
+    writeFileSync(join(root, "data/services.json"), JSON.stringify([{ ...record, sources: [] }]));
+    assert.throws(() => execFileSync(process.execPath, [gate, "--base", base], { cwd: root, stdio: "pipe" }), /Command failed/);
+  } finally { rmSync(root, { recursive: true, force: true }); }
+});
