@@ -7,6 +7,22 @@ test("services search uses the paginated server directory", async ({ page }) => 
   await expect(page.locator(".service-grid")).toContainText(/passport/i);
 });
 
+test("failed service search offers retry without stale results", async ({ page }) => {
+  await page.goto("/services");
+  let fail = true;
+  await page.route("**/api/services?**", async (route) => {
+    if (fail) await route.fulfill({ status: 503, body: "Unavailable" });
+    else await route.continue();
+  });
+  await page.getByLabel("Search guides").fill("passport renewal");
+  await expect(page.getByRole("alert")).toContainText("Retry the search");
+  await expect(page.locator(".service-grid")).toHaveCount(0);
+  fail = false;
+  await page.getByRole("button", { name: "Retry search" }).click();
+  await expect(page.locator(".service-grid")).toContainText(/passport/i);
+  await expect(page.getByRole("alert")).toHaveCount(0);
+});
+
 test("movie search uses the paginated server directory", async ({ page }) => {
   await page.goto("/entertainment/movies");
   await page.getByLabel("Search movies").last().fill("Black Market");

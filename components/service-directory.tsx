@@ -34,6 +34,8 @@ export function ServiceDirectory({
   const [page, setPage] = useState(initialResult.page);
   const [ready, setReady] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [retryCount, setRetryCount] = useState(0);
   const skipInitialFetch = useRef(true);
 
   useEffect(() => {
@@ -63,8 +65,9 @@ export function ServiceDirectory({
     }
 
     const controller = new AbortController();
+    setLoading(true);
+    setFailed(false);
     const timer = window.setTimeout(async () => {
-      setLoading(true);
       const params = new URLSearchParams();
       if (query.trim()) params.set("q", query.trim());
       if (category !== "all") params.set("category", category);
@@ -85,10 +88,15 @@ export function ServiceDirectory({
         });
         if (!response.ok) throw new Error("Service query failed with HTTP " + response.status);
         const next = await response.json() as ServiceDirectoryResult;
+        if (controller.signal.aborted) return;
         setResult(next);
+        setFailed(false);
         if (next.page !== page) setPage(next.page);
       } catch (error) {
-        if ((error as { name?: string }).name !== "AbortError") console.error(error);
+        if (!controller.signal.aborted) {
+          setFailed(true);
+          console.error("Service directory search unavailable", error);
+        }
       } finally {
         if (!controller.signal.aborted) setLoading(false);
       }
@@ -98,7 +106,7 @@ export function ServiceDirectory({
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [ready, query, category, status, sort, page, initialResult.pageSize]);
+  }, [ready, query, category, status, sort, page, initialResult.pageSize, retryCount]);
 
   const resetPage = <T,>(setter: (value: T) => void, value: T) => {
     setter(value);
@@ -149,8 +157,7 @@ export function ServiceDirectory({
       </div>
 
       <div className="directory-summary" aria-live="polite">
-        <strong>{result.total}</strong> guide{result.total === 1 ? "" : "s"} found
-        {loading ? <span> · Updating…</span> : null}
+        {failed ? <strong>Search unavailable</strong> : loading ? <strong>Updating results…</strong> : <><strong>{result.total}</strong> guide{result.total === 1 ? "" : "s"} found</>}
         {filtersActive ? (
           <button type="button" onClick={() => {
             setQuery("");
@@ -164,7 +171,16 @@ export function ServiceDirectory({
         ) : null}
       </div>
 
-      {result.items.length ? (
+      {failed ? (
+        <div className="empty-state" role="alert">
+          <strong>We could not update these results.</strong>
+          <p>Your filters are saved. Retry the search or return to the service directory.</p>
+          <button className="button inline-button" type="button" onClick={() => setRetryCount((count) => count + 1)}>Retry search</button>
+          <Link href="/services">Browse all services →</Link>
+        </div>
+      ) : loading ? (
+        <div className="empty-state" role="status">Updating results…</div>
+      ) : result.items.length ? (
         <div className="service-grid">
           {result.items.map((service) => <ServiceCard key={service.slug} service={service} />)}
         </div>
@@ -175,7 +191,7 @@ export function ServiceDirectory({
         </div>
       )}
 
-      {(result.recommendations ?? []).length > 0 ? (
+      {!failed && !loading && (result.recommendations ?? []).length > 0 ? (
         <section className="related-section" aria-label="Related service suggestions">
           <div className="section-heading top-gap">
             <div>
@@ -190,7 +206,7 @@ export function ServiceDirectory({
         </section>
       ) : null}
 
-      {result.totalPages > 1 ? (
+      {!failed && !loading && result.totalPages > 1 ? (
         filtersActive ? (
           <nav className="jobs-pagination" aria-label="Filtered service result pages">
             <button type="button" disabled={page <= 1 || loading} onClick={() => setPage((value) => Math.max(1, value - 1))}>← Previous</button>

@@ -19,13 +19,13 @@ export default function ErrorPage({
       <div className="container narrow error-state">
         <span className="eyebrow">Something went wrong</span>
         <h1>This MyNigeriaGuide page could not load.</h1>
-        <p>
-          Your government application has not been affected—MyNigeriaGuide does not submit or store government applications.
-          You can retry this page or return to the service directory.
-        </p>
+        <p>A temporary problem stopped this page loading. Try again or continue browsing one of the four sections below.</p>
         <div>
           <button type="button" className="button inline-button" onClick={reset}>Try again</button>
-          <Link className="text-link" href="/services">Browse services →</Link>
+          <Link className="text-link" href="/entertainment/movies">Movies →</Link>
+          <Link className="text-link" href="/services">Services →</Link>
+          <Link className="text-link" href="/explore">Tour Nigeria →</Link>
+          <Link className="text-link" href="/jobs">Jobs & Careers →</Link>
         </div>
       </div>
     </section>
