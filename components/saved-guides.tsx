@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { watchEvent } from "@/components/share-watch";
 import { StatusBadge } from "@/components/status-badge";
+import { CategoryIcon } from "@/components/category-icon";
 import type { PublicServiceListing } from "@/lib/data";
 
 const storageKey = "mynigeriaguide:watchlist";
@@ -93,7 +94,7 @@ export function SavedGuides() {
     return <div className="saved-guide-wrap" key={service.slug}>
       {changed ? <div className="saved-change"><strong>Updated since you saved it</strong><span>Fee, verification date or guide details may have changed.</span><button type="button" onClick={() => markReviewed(service)}>Mark reviewed</button></div> : null}
       <Link className="service-card" href={"/services/" + service.slug}>
-        <div className="card-topline"><span className="service-card-category">{service.category}</span><StatusBadge status={service.status} /></div>
+        <div className="card-topline"><span className="service-card-category"><span className="service-card-icon"><CategoryIcon category={service.category} /></span>{service.category}</span><StatusBadge status={service.status} /></div>
         <h3>{service.shortTitle}</h3>
         <p>{service.summary}</p>
         <div className="service-meta">
