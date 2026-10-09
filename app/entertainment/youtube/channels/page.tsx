@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function YouTubeChannelsPage() {
-  const totalMovies = indexableYouTubeChannelHubs.reduce((sum, hub) => sum + hub.movieCount, 0);
 
   return (
     <section className="section page-top">
@@ -23,10 +22,9 @@ export default function YouTubeChannelsPage() {
         ]} />
 
         <span className="eyebrow">YouTube publishers</span>
-        <h1>Nollywood movie channels with substantial full-film catalogs.</h1>
+        <h1>Discover Nollywood movies by YouTube publisher.</h1>
         <p className="page-intro">
-          These publisher pages are created only when MyNigeriaGuide has at least 10 complete full-length movie records from the approved channel.
-          Together they connect {totalMovies.toLocaleString()} movie-to-publisher relationships.
+          Browse full-length Nigerian movies by publisher, explore familiar actors and open the original YouTube uploads.
         </p>
 
         <div className="service-grid top-gap">
@@ -40,7 +38,7 @@ export default function YouTubeChannelsPage() {
                 <Link href={"/entertainment/youtube/channels/" + hub.channel.slug}>{hub.channel.name}</Link>
               </h2>
               <p>
-                Browse verified full-length Nigerian movie records from {hub.channel.name}, including recent releases and recurring cast.
+                Explore full-length Nigerian movies shared by {hub.channel.name}, including recent releases and familiar actors.
               </p>
               <div className="service-meta">
                 <strong>{hub.years.slice(0, 4).join(" · ")}</strong>
