@@ -72,6 +72,24 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
     setVisibleCount(PAGE_SIZE);
   }, [query, kind, guide]);
 
+  const recommended = useMemo(() => {
+    if (!query.trim() || filtered.length === 0 || filtered.length > 8) return [];
+    const first = filtered[0];
+    const tags = new Set(first.tags.map((tag) => tag.toLowerCase()));
+    const shown = new Set(filtered.map((place) => place.slug));
+    return places
+      .filter((place) => !shown.has(place.slug))
+      .map((place) => {
+        const sameDestination = place.guideSlug === first.guideSlug;
+        const commonTags = place.tags.filter((tag) => tags.has(tag.toLowerCase())).length;
+        const score = (sameDestination ? 6 : 0) + (place.kind === first.kind ? 2 : 0) + commonTags * 3;
+        return { place, score, reason: sameDestination ? "Same destination" : "Related interest" };
+      })
+      .filter(({ score }) => score >= 6)
+      .sort((a, b) => b.score - a.score || a.place.name.localeCompare(b.place.name))
+      .slice(0, 4);
+  }, [query, filtered, places]);
+
   const visible = filtered.slice(0, visibleCount);
   const remaining = Math.max(0, filtered.length - visible.length);
 
@@ -145,6 +163,30 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
           <p>Try a city name, another category or clear the filters.</p>
         </div>
       )}
+
+      {recommended.length > 0 ? (
+        <section className="explore-place-suggestions" aria-label="Related places">
+          <div className="section-heading top-gap">
+            <div>
+              <span className="eyebrow">Keep exploring</span>
+              <h2>Other places to consider</h2>
+              <p className="job-muted">These suggestions are connected by destination or interests, not exact search matches.</p>
+            </div>
+          </div>
+          <div className="explore-place-grid">
+            {recommended.map(({ place, reason }) => (
+              <article className="explore-place-card" key={place.guideSlug + "-" + place.slug}>
+                <div className="explore-place-topline"><span>{kindLabel[place.kind]}</span><small>{reason}</small></div>
+                <h3>{place.name}</h3>
+                <p>{place.summary}</p>
+                <div className="explore-place-actions">
+                  <Link href={"/explore/" + place.guideSlug + "#place-" + place.slug}>Explore this place →</Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {remaining > 0 ? (
         <div className="explore-directory-more">
