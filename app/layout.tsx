@@ -11,6 +11,7 @@ import { SiteHeader } from "@/components/site-header";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { getSiteUrl, siteDescription, siteName } from "@/lib/site";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
+import { ANALYTICS_PRODUCTION_HOSTS, EXCLUDED_ANALYTICS_USER_AGENT_MARKERS } from "@/lib/analytics-safety";
 import { PostHogAnalytics } from "@/components/posthog-analytics";
 import { RecentPageTracker } from "@/components/personal-library";
 
@@ -18,16 +19,23 @@ const siteUrl = getSiteUrl();
 
 const gaBootstrap = `
 (function () {
-  var id = "${GA_MEASUREMENT_ID}";
-  var path = window.location.pathname;
-  var automated = navigator.webdriver === true;
-  var userAgent = navigator.userAgent || "";
-  var adsenseCrawler = userAgent.indexOf("GoogleAdSenseInfeed") !== -1;
-  var admin = path === "/admin" || path.indexOf("/admin/") === 0;
+  var id = ${JSON.stringify(GA_MEASUREMENT_ID)};
+  var path = window.location.pathname || "/";
+  var host = (window.location.hostname || "").toLowerCase().replace(/\\.$/, "");
+  var allowedHosts = ${JSON.stringify(ANALYTICS_PRODUCTION_HOSTS)};
+  var blockedAgents = ${JSON.stringify(EXCLUDED_ANALYTICS_USER_AGENT_MARKERS)};
+  var userAgent = (navigator.userAgent || "").toLowerCase();
+  var blockedPath = path === "/admin" || path.indexOf("/admin/") === 0 ||
+    path === "/api" || path.indexOf("/api/") === 0 ||
+    path === "/_next" || path.indexOf("/_next/") === 0;
+  var disabled = allowedHosts.indexOf(host) === -1 ||
+    navigator.webdriver === true ||
+    blockedAgents.some(function (marker) { return userAgent.indexOf(marker) !== -1; }) ||
+    blockedPath;
   var disabledKey = "ga-disable-" + id;
 
-  window[disabledKey] = automated || adsenseCrawler || admin;
-  if (automated || adsenseCrawler || admin) return;
+  window[disabledKey] = disabled;
+  if (disabled) return;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -45,6 +53,8 @@ const gaBootstrap = `
   window.__mngLastTrackedPath = path;
 })();
 `;
+
+// The early guard and client-side guard share their exact host/agent lists.
 
 // Load AdSense before React hydration so slow/mobile navigations do not
 // silently lose the publisher script. Admin paths are excluded by design.

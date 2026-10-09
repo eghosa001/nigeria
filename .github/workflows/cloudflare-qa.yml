@@ -57,6 +57,15 @@ jobs:
           quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
           non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
+          analytics_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
+          non_analytics="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
+          if [ -n "$analytics_trigger" ] && [ -z "$non_analytics" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=analytics" >> "$GITHUB_OUTPUT"
+            echo "Analytics tracking changes are covered by the focused CI regression."
+            exit 0
+          fi
+
           if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "Jobs-only change; focused validation runs in CI, so Cloudflare browser QA is skipped."

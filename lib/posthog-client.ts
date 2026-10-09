@@ -10,7 +10,7 @@ type PostHogWindow = Window & typeof globalThis & {
 };
 
 function allowedPath(pathname: string) {
-  return shouldEnableAnalytics(pathname, navigator.webdriver, navigator.userAgent);
+  return shouldEnableAnalytics(pathname, navigator.webdriver, navigator.userAgent, window.location.hostname);
 }
 
 export function initializePostHog(pathname = window.location.pathname) {
@@ -39,7 +39,7 @@ export function initializePostHog(pathname = window.location.pathname) {
         } catch {}
 
         if (
-          !shouldEnableAnalytics(eventPath, navigator.webdriver, navigator.userAgent) ||
+          !shouldEnableAnalytics(eventPath, navigator.webdriver, navigator.userAgent, window.location.hostname) ||
           eventPath === "/api" ||
           eventPath.startsWith("/api/") ||
           eventPath.startsWith("/_next")
