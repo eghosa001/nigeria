@@ -33,6 +33,10 @@ function readableDate(value: string) {
 
 function interactionLabel(event: string) {
   const labels: Record<string, string> = {
+    job_apply_click: "Official job application clicked",
+    related_content_click: "Related guide opened",
+    saved_page_add: "Page saved",
+    saved_page_remove: "Page unsaved",
     service_search_click: "Search result opened",
     official_link_click: "Official service link opened",
     official_source_click: "Official source opened",
