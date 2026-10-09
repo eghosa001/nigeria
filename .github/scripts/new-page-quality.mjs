@@ -192,7 +192,7 @@ function run(base) {
     const before = fileAt(base, path);
     const after = current(path);
     if (kind === "route") {
-      if (!before && !/\[[^\]]+\]/.test(path)) {
+      if (!before) {
         discovered++;
         checked.push(path);
         errors.push(...checkNewRoute(path, after));
