@@ -123,6 +123,8 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               <img
                 src={"https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg"}
                 alt={movie.title + " official YouTube thumbnail"}
+                width={480}
+                height={360}
                 decoding="async"
                 referrerPolicy="no-referrer"
               />

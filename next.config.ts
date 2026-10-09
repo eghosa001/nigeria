@@ -34,6 +34,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  // Broaden metadata-in-head treatment to generic SEO crawlers without forcing
+  // regular browser traffic onto the slower blocking-metadata path.
+  htmlLimitedBots: /bot|crawl|spider|slurp|SEOAnalyzer|FiveT|HeadlessChrome/i,
   async headers() {
     const privateAdminHeaders = [
       { key: "Cache-Control", value: "private, no-store" },
