@@ -40,7 +40,8 @@ test("new route enforces canonical, metadata, image layout and H1", () => {
 
 test("gate scopes to page-producing content, not unrelated modules", () => {
   assert.equal(classify("lib/analytics.ts"), null);
-  assert.equal(classify("data/youtube-detail-shards/0.json"), null);
+  assert.equal(classify("data/youtube-detail-shards/0.json"), "youtube");
+  assert.equal(classify("data/youtube-movies-review.generated.json"), null);
   assert.equal(classify("lib/explore-growth-wave-9.ts"), "tour");
   assert.equal(classify("app/services/new-guide/page.tsx"), "route");
 });
