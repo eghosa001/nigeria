@@ -13,7 +13,7 @@ import { entertainmentPeople, getPlatformGuide } from "@/lib/entertainment-extra
 import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
-import { getMovieRecommendationShelves } from "@/lib/related-discovery";
+import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
