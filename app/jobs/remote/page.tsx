@@ -108,6 +108,18 @@ export default function RemoteJobsPage() {
         </section>
       ) : null}
 
+      <section className="section" aria-label="Remote work application guidance">
+        <div className="container">
+          <div className="minimal-section-heading"><div><span className="eyebrow">Practical remote-work guide</span><h2>Remote jobs in Nigeria: what applicants need to know.</h2></div></div>
+          <div className="home-updates-grid">
+            <article className="home-update-card"><h3>Can I get a remote job in Nigeria without experience?</h3><p>Some entry-level and training roles accept applicants without prior paid employment, but each employer sets its own requirements. Show specific evidence: project work, support experience, writing samples, code, research or a portfolio. Do not assume a remote job labelled entry level has no interview, equipment requirements or skills assessment. <Link href="/jobs/guides/cv-format-nigeria">Build a truthful beginner CV →</Link></p></article>
+            <article className="home-update-card"><h3>Are remote jobs from Nigeria always paid in dollars?</h3><p>No. Currency and payment location depend on the actual employer, contract and hiring entity. A role advertised internationally may still be restricted to certain countries or need work authorisation. Read its employment type, location eligibility, time zone and verified terms before spending time applying; never invent a promised salary from a social-media screenshot.</p></article>
+            <article className="home-update-card"><h3>Remote jobs for students or part-time workers</h3><p>Check the employer's required weekly hours, time-zone overlap, school-status eligibility and whether the role permits part-time schedules. A student should not apply for a full-time position while assuming it can be done between lectures. Internships and training programmes often have a different eligibility route. <Link href="/jobs/internships">Compare genuine internships →</Link></p></article>
+            <article className="home-update-card"><h3>How do I identify legitimate work-from-home offers?</h3><p>Find the opening on the employer's official domain, confirm the recruiter and inspect the specific vacancy. Beware of onboarding fees, promises of immediate high earnings, equipment deposits and requests for passwords or banking codes. <Link href="/jobs/guides/job-scam-red-flags-nigeria">Use the job-scam verification guide →</Link></p></article>
+          </div>
+        </div>
+      </section>
+
       <section className="section jobs-safety-section">
         <div className="container jobs-safety-grid">
           <div><span className="eyebrow">Before applying</span><h2>Remote does not always mean work from anywhere.</h2></div>

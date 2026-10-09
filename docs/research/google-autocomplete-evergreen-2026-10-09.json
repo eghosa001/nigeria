@@ -351,16 +351,6 @@
     },
     {
       "pillar": "services",
-      "canonical": "/services/inec-replace-lost-damaged-pvc",
-      "probes": [
-        "how to replace lost pvc"
-      ],
-      "googlePredictions": [
-        "how to replace lost pvc"
-      ]
-    },
-    {
-      "pillar": "services",
       "canonical": "/services/jamb-caps",
       "probes": [
         "jamb caps admission"
@@ -599,15 +589,11 @@
         "things to do in lagos requirements"
       ],
       "googlePredictions": [
-        "best beaches in nigeria",
         "best beach in nigeria lagos",
         "beautiful beaches in nigeria",
         "good beaches in nigeria",
         "best beach resorts in nigeria",
-        "top 10 best beaches in nigeria",
-        "top 10 beaches in nigeria",
         "beautiful beaches in lagos nigeria",
-        "most beautiful beaches in nigeria",
         "top beaches in lagos nigeria",
         "nothing to do in lagos"
       ]
@@ -729,5 +715,10 @@
         "fun things to do in lagos mainland"
       ]
     }
+  ],
+  "rejectedFalseFriends": [
+    "The Google suggestion 'how to replace lost pvc' resolved mostly to plumbing parts; it is not evidence of Nigerian INEC voter-card searches.",
+    "'Lagos, Portugal' and 'Calabarzon, Philippines' suggestions are excluded from Nigeria tourism canonicals.",
+    "Generic 'best beaches in Nigeria' suggestions should not be mapped solely to Lagos or used as an unsupported national ranking."
   ]
 }
