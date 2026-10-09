@@ -1,4 +1,5 @@
-import { publicServiceListings, type PublicServiceListing } from "@/lib/data";
+import { getPublicService, publicServiceListings, type PublicServiceListing } from "@/lib/data";
+import { getRelatedServices } from "@/lib/internal-links";
 import { searchServices } from "@/lib/search";
 import type { VerificationStatus } from "@/lib/types";
 
@@ -22,6 +23,7 @@ export type ServiceDirectoryResult = {
   page: number;
   pageSize: number;
   totalPages: number;
+  recommendations?: PublicServiceListing[];
 };
 
 export function getServiceDirectoryPageCount(pageSize = SERVICE_DIRECTORY_PAGE_SIZE) {
@@ -59,6 +61,14 @@ export function queryServiceDirectory(input: ServiceDirectoryQuery = {}): Servic
   const requestedPage = Number.isFinite(input.page) ? Math.max(1, Math.floor(input.page as number)) : 1;
   const page = Math.min(requestedPage, totalPages);
   const start = (page - 1) * pageSize;
+  const primary = q && total > 0 && total <= 8 && page === 1 && category === "all" && status === "all"
+    ? getPublicService(rows[0].slug) : undefined;
+  const recommendations = primary
+    ? getRelatedServices(primary, 4)
+      .filter((candidate) => !rows.some((match) => match.slug === candidate.slug))
+      .map((candidate) => publicServiceListings.find((listing) => listing.slug === candidate.slug))
+      .filter((candidate): candidate is PublicServiceListing => candidate !== undefined)
+    : [];
 
   return {
     items: rows.slice(start, start + pageSize),
@@ -66,5 +76,6 @@ export function queryServiceDirectory(input: ServiceDirectoryQuery = {}): Servic
     page,
     pageSize,
     totalPages,
+    recommendations,
   };
 }
