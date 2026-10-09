@@ -8,3 +8,8 @@ dist
 .env.local
 *.log
 .DS_Store
+
+# Generated build-time public sitemap assets (never hand edit)
+public/sitemap.xml
+public/sitemap-index.xml
+public/sitemaps/

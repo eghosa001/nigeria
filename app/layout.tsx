@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import "@/app/mobile.css";
 import "@/app/theme.css";
 import "@/app/ux-polish.css";
-import { AdsenseScript } from "@/components/adsense";
+import { ADSENSE_CLIENT } from "@/lib/adsense-config";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
@@ -43,6 +43,22 @@ const gaBootstrap = `
   window.gtag("js", new Date());
   window.gtag("config", id, { anonymize_ip: true });
   window.__mngLastTrackedPath = path;
+})();
+`;
+
+// Load AdSense before React hydration so slow/mobile navigations do not
+// silently lose the publisher script. Admin paths are excluded by design.
+const adsenseBootstrap = `
+(function () {
+  var path = window.location.pathname || "/";
+  if (path === "/admin" || path.indexOf("/admin/") === 0) return;
+  if (document.querySelector("script[data-mynigeriaguide-adsense]")) return;
+  var script = document.createElement("script");
+  script.async = true;
+  script.crossOrigin = "anonymous";
+  script.setAttribute("data-mynigeriaguide-adsense", "true");
+  script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}";
+  document.head.appendChild(script);
 })();
 `;
 
@@ -119,6 +135,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="theme-color" content="#f8f5ed" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: gaBootstrap }} />
+        <script dangerouslySetInnerHTML={{ __html: adsenseBootstrap }} />
         <link rel="alternate" type="application/rss+xml" title="MyNigeriaGuide — Verified Updates" href="/updates.xml" />
       </head>
       <body>
@@ -130,7 +147,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <ServiceWorkerRegister />
         <Analytics />
         <PostHogAnalytics />
-        <AdsenseScript />
       </body>
     </html>
   );
