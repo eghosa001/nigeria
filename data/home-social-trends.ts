@@ -17,6 +17,13 @@ export type HomeSocialTrend = {
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
     pillar: "Movies & Entertainment",
+    title: "Lagos Life game — where to play, safety and the $500k funding story",
+    href: "/entertainment/lagos-life-game-2026",
+    checkedAt: "2026-10-09",
+    expiresAt: "2026-10-15",
+  },
+  {
+    pillar: "Movies & Entertainment",
     title: "Tele x Zikora — cast, official teaser & 23 October cinema release",
     href: "/entertainment/movies/tele-x-zikora-2026",
     checkedAt: "2026-10-08",
@@ -35,6 +42,13 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     href: "/explore/hallelujah-festival-lagos-october-2026",
     checkedAt: "2026-10-08",
     expiresAt: "2026-10-30",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "Army SSCC 50/2027 officer applications — 17 October deadline",
+    href: "/jobs/nigerian-army-sscc-50-2027",
+    checkedAt: "2026-10-09",
+    expiresAt: "2026-10-17",
   },
   {
     pillar: "Jobs & Careers",
