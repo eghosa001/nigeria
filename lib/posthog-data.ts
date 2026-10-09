@@ -1,3 +1,4 @@
+import { ANALYTICS_PRODUCTION_HOSTS } from "@/lib/analytics-safety";
 import {
   POSTHOG_COLLECTION_START,
   POSTHOG_PROJECT_ID,
@@ -94,7 +95,7 @@ export async function getPostHogOverview(
                 key: "$host",
                 type: "event",
                 operator: "exact",
-                value: ["mynigeriaguide.com"],
+                value: [...ANALYTICS_PRODUCTION_HOSTS],
               },
             ],
             filterTestAccounts: true,
