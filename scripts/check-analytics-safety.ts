@@ -3,6 +3,7 @@ import assert from "node:assert/strict";
 import { runInNewContext } from "node:vm";
 import { ANALYTICS_PRODUCTION_HOSTS, EXCLUDED_ANALYTICS_USER_AGENT_MARKERS } from "../lib/analytics-safety";
 import { analyticsStartDate, shouldEnableAnalytics } from "../lib/analytics-safety";
+import { describeGA4KeyEvents } from "../lib/analytics-data";
 
 const adsenseInfeedUserAgent =
   "Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/537.36 (KHTML, like Gecko; GoogleAdSenseInfeed) Chrome/153.0.8010.52 Mobile Safari/537.36";
@@ -78,6 +79,16 @@ assert.ok(posthogClientSource.includes("window.location.hostname"));
 const gaReportSource = readFileSync(new URL("../lib/analytics-data.ts", import.meta.url), "utf8");
 assert.ok(gaReportSource.includes('fieldName: "hostName"'));
 assert.ok(gaReportSource.includes("ANALYTICS_PRODUCTION_HOSTS"));
+
+// The admin panel must distinguish registered key events from ordinary tracked clicks.
+const configuration = describeGA4KeyEvents([{ eventName: "job_apply_click", countingMethod: "ONCE_PER_SESSION" }]);
+assert.equal(configuration.available, true);
+assert.deepEqual(configuration.events, [
+  { name: "job_apply_click", configured: true, countingMethod: "ONCE_PER_SESSION" },
+  { name: "official_link_click", configured: false },
+]);
+assert.equal(describeGA4KeyEvents([]).events.every((event) => !event.configured), true);
+assert.ok(readFileSync(new URL("../components/admin-analytics-dashboard.tsx", import.meta.url), "utf8").includes("data.keyEvents.events"));
 
 // Regression: browser collection must be permitted by production CSP.
 const cspSource = readFileSync(new URL("../next.config.ts", import.meta.url), "utf8");
