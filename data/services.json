@@ -4361,11 +4361,11 @@
     "slug": "yellow-card",
     "title": "How to get Nigeria's Yellow Card for international travel",
     "shortTitle": "Yellow Card",
-    "summary": "Federal Ministry of Health guidance for registering, paying and obtaining the Yellow Fever vaccination certificate used for international travel.",
+    "summary": "Official NCDC and Port Health advice on yellow-fever vaccination, Yellow Card certification, and the Ministry of Health's online registration route for international travellers.",
     "category": "International travel",
     "agencySlug": "fmoh",
     "feeLabel": "Pay through the official Yellow Card portal",
-    "feeNote": "The Federal Ministry of Health directs travellers to register and pay online before visiting a designated Port Health Services office; use the amount shown by the official portal.",
+    "feeNote": "Use only the Ministry of Health's official Yellow Card portal when payment is requested, and confirm the amount on the live portal before paying. Avoid third-party card sellers.",
     "status": "verified",
     "officialPortal": "https://yellowcard.health.gov.ng",
     "requirements": [
@@ -4382,20 +4382,21 @@
     ],
     "notes": [
       "The Federal Ministry of Health says Yellow Fever vaccination is mandatory for travellers entering or leaving Nigeria and proof is provided with a valid Yellow Card.",
-      "Use designated Port Health Services offices; do not buy a card from an unofficial travel agent."
+      "Use designated Port Health Services offices; do not buy a card from an unofficial travel agent.",
+      "NCDC advises travellers to arrange yellow-fever vaccination at least 10 days before travel when it is required; the NCDC advisory also explains that certain travellers need medical assessment before vaccination."
     ],
     "sources": [
       {
-        "label": "Federal Ministry of Health Port Health FAQs",
-        "agency": "Federal Ministry of Health and Social Welfare",
-        "url": "https://health.gov.ng/faqs/",
-        "lastChecked": "2026-09-28"
+        "label": "NCDC — Yellow Fever FAQs and vaccination card guidance",
+        "agency": "Nigeria Centre for Disease Control and Prevention",
+        "url": "https://www.ncdc.gov.ng/news/200/yellow-fever-faqs",
+        "lastChecked": "2026-10-09"
       },
       {
-        "label": "Federal Ministry of Health Port Health Division",
-        "agency": "Federal Ministry of Health and Social Welfare",
-        "url": "https://health.gov.ng/port-health/",
-        "lastChecked": "2026-09-28"
+        "label": "NCDC and Port Health — Yellow Fever travel advisory",
+        "agency": "Nigeria Centre for Disease Control and Prevention",
+        "url": "https://www.ncdc.gov.ng/news/201/yellow-fever-public-health-advisory-for-international-travel",
+        "lastChecked": "2026-10-09"
       }
     ],
     "searchTerms": [
@@ -4411,7 +4412,7 @@
       "passport-renewal",
       "nigeria-landing-exit-card"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "nigeria-landing-exit-card",
