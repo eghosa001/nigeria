@@ -1,0 +1,41 @@
+name: Full Sitemap SEO Audit
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/audit-all-sitemap-urls.mjs'
+      - '.github/workflows/full-sitemap-seo-audit.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: full-sitemap-seo-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate focused audit script
+        run: node --check scripts/audit-all-sitemap-urls.mjs
+      - name: Crawl every public sitemap URL
+        env:
+          SEO_CONCURRENCY: '5'
+          SEO_SITEMAP: https://mynigeriaguide.com/sitemap-index.xml
+          SEO_REPORT_DIR: seo-audit-results
+        run: node scripts/audit-all-sitemap-urls.mjs
+      - name: Upload complete URL-by-URL audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-sitemap-seo-audit
+          path: seo-audit-results/
+          if-no-files-found: warn
+          retention-days: 14
