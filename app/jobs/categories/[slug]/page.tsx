@@ -104,7 +104,7 @@ export default async function JobTopicPage({ params }: { params: Promise<{ slug:
       <section className="section">
         <div className="container">
           <div className="minimal-section-heading">
-            <div><span className="eyebrow">Related sectors</span><h2>Continue your search without duplicate keyword pages.</h2></div>
+            <div><span className="eyebrow">Related sectors</span><h2>Explore related career fields.</h2></div>
           </div>
           <div className="jobs-topic-links">
             {topic.relatedSlugs.map((relatedSlug) => {
