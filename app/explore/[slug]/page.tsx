@@ -7,7 +7,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { exploreGuides, getExploreGuide } from "@/lib/explore";
-import { getRelatedExploreGuides } from "@/lib/related-discovery";
+import { getRelatedExploreGuides } from "@/lib/explore-discovery";
 import { explorePlaceKindLabel, getExplorePlacesForGuide, googleMapsUrl } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
