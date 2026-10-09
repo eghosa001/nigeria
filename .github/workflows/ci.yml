@@ -55,7 +55,12 @@ jobs:
             quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
             non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
-            if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+            analytics_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
+            non_analytics="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
+            if [ -n "$analytics_trigger" ] && [ -z "$non_analytics" ]; then
+              echo "mode=analytics" >> "$GITHUB_OUTPUT"
+              echo "Analytics-only change: run focused tracking safety regression."
+            elif [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
               echo "mode=jobs" >> "$GITHUB_OUTPUT"
               printf 'Jobs-only product files:\n%s\n' "$changed"
             elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
@@ -97,6 +102,8 @@ jobs:
           npm run check:scale
           npm run check:directory-queries
           npm run quality:status
+      - run: npm run check:analytics-safety
+        if: steps.scope.outputs.mode == 'analytics'
       - run: node scripts/check-production-audit.mjs
         if: steps.scope.outputs.mode == 'full'
       - run: npm run typecheck
