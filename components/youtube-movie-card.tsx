@@ -27,6 +27,8 @@ export function YouTubeMovieCard({
         <img
           src={"https://i.ytimg.com/vi/" + movie.videoId + "/mqdefault.jpg"}
           alt={movie.title + " YouTube thumbnail"}
+          width={320}
+          height={180}
           loading={priority ? "eager" : "lazy"}
           decoding="async"
           referrerPolicy="no-referrer"

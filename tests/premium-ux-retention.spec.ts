@@ -62,3 +62,28 @@ test("travel detail photography is credited and actually loads", async ({ page }
     { timeout: 20_000 },
   ).toBe(true);
 });
+
+
+test("homepage service autocomplete loads results on demand", async ({ page }) => {
+  await page.goto("/");
+  await page.getByLabel("What do you want to do?").fill("passport renewal");
+  await expect(page.locator(".search-results a[href^='/services/']").first()).toBeVisible();
+});
+
+test("watched service is retrieved without embedding all service records", async ({ page, request }) => {
+  const result = await request.get("/api/services?q=passport&pageSize=1");
+  expect(result.ok()).toBe(true);
+  const slug = (await result.json()).items[0].slug as string;
+  await page.addInitScript((value) => localStorage.setItem("mynigeriaguide:watchlist", JSON.stringify([value])), slug);
+  await page.goto("/saved");
+  await expect(page.locator('.saved-guide-wrap a[href="/services/' + slug + '"]')).toBeVisible();
+});
+
+test("poster and thumbnail images reserve intrinsic dimensions", async ({ page }) => {
+  await page.goto("/entertainment/movies");
+  const images = page.locator(".entertainment-artwork img, .youtube-movie-card img");
+  expect(await images.count()).toBeGreaterThan(0);
+  expect(await images.evaluateAll((nodes) => nodes.every((node) =>
+    Number(node.getAttribute("width")) > 0 && Number(node.getAttribute("height")) > 0
+  ))).toBe(true);
+});

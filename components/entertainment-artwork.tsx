@@ -44,6 +44,8 @@ function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; varia
       <img
         src={generatedPosterHref(title)}
         alt={"Original MyNigeriaGuide artwork for " + title.title}
+        width={640}
+        height={960}
         loading={variant === "card" ? "lazy" : "eager"}
         decoding="async"
       />
@@ -72,6 +74,8 @@ export function EntertainmentArtwork({
         <img
           src={title.artwork.url}
           alt={title.title + " official promotional artwork"}
+          width={640}
+          height={960}
           loading={variant === "card" ? "lazy" : "eager"}
           decoding="async"
           referrerPolicy="no-referrer"
@@ -99,6 +103,8 @@ export function EntertainmentArtwork({
             src={preview.url}
             alt=""
             aria-hidden="true"
+            width={480}
+            height={360}
             loading={variant === "card" ? "lazy" : "eager"}
             decoding="async"
           />
@@ -106,6 +112,8 @@ export function EntertainmentArtwork({
             className="entertainment-source-preview-image"
             src={preview.url}
             alt={title.title + " promotional artwork"}
+            width={480}
+            height={360}
             loading={variant === "card" ? "lazy" : "eager"}
             decoding="async"
           />
@@ -134,6 +142,8 @@ export function EntertainmentArtwork({
             src={thumbnail}
             alt=""
             aria-hidden="true"
+            width={480}
+            height={360}
             loading={variant === "card" ? "lazy" : "eager"}
             decoding="async"
             referrerPolicy="no-referrer"
@@ -142,6 +152,8 @@ export function EntertainmentArtwork({
             className="entertainment-youtube-preview-image"
             src={thumbnail}
             alt={title.title + (youtubePreview.kind === "trailer" ? " official trailer preview" : " official YouTube video preview")}
+            width={480}
+            height={360}
             loading={variant === "card" ? "lazy" : "eager"}
             decoding="async"
             referrerPolicy="no-referrer"

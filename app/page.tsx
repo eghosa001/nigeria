@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
-import { publicServiceListings } from "@/lib/data";
 import { getCurrentHomeSocialTrends } from "@/data/home-social-trends";
 import { canDisplayEntertainmentArtwork, entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
@@ -25,6 +24,7 @@ export const metadata: Metadata = {
 };
 
 // Deadline-sensitive status must be evaluated on every request, not frozen at build time.
+// Recruitment deadlines and trends must change at Nigerian midnight without a redeploy.
 export const dynamic = "force-dynamic";
 
 const quickServices = [
@@ -211,7 +211,7 @@ export default function HomePage() {
           </div>
 
           <div className="minimal-service-search">
-            <ServiceSearch services={publicServiceListings} />
+            <ServiceSearch />
           </div>
         </div>
       </section>
