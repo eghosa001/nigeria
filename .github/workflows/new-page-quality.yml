@@ -1,0 +1,47 @@
+name: New Page Quality Gate
+
+on:
+  pull_request:
+    paths:
+      - "data/services*.json"
+      - "data/youtube-detail-shards/*.json"
+      - "lib/*growth-wave*.ts"
+      - "lib/explore-growth-places*.ts"
+      - "lib/explore-trend-*.ts"
+      - "lib/job-trend-*.ts"
+      - "lib/jobs.ts"
+      - "lib/explore.ts"
+      - "lib/entertainment.ts"
+      - "lib/series.ts"
+      - "lib/job-scale-wave.ts"
+      - "app/**/page.tsx"
+      - ".github/scripts/new-page-quality.mjs"
+      - ".github/scripts/new-page-quality.test.mjs"
+      - ".github/workflows/new-page-quality.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: new-page-quality-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  new-page-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify focused page-quality regression contracts
+        run: node --test .github/scripts/new-page-quality.test.mjs
+      - name: Check only newly added records and routes
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch origin "$BASE_SHA" --depth=1
+          node .github/scripts/new-page-quality.mjs --base "$BASE_SHA"
