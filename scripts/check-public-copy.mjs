@@ -7,9 +7,10 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const forbidden = [
-  [/\bnoindex\b/i, "SEO indexing controls exposed to readers"],
+  [/\b(?:this page remains noindex|marked noindex)\b/i, "SEO indexing controls exposed to readers"],
   [/\bindependent search indexing\b/i, "SEO workflow exposed to readers"],
   [/\bduplicate keyword pages\b/i, "Internal keyword strategy exposed to readers"],
+  [/\bfresh crawl hub\b/i, "Crawler terminology exposed to readers"],
   [/\bYouTube API resolved\b/i, "Third-party API status exposed to readers"],
   [/\bcatalog(?:ue)?[\u2019']?s metadata review\b/i, "Internal metadata review exposed to readers"],
   [/\breport backend\b/i, "Reporting infrastructure exposed to readers"],
