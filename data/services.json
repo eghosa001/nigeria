@@ -25,7 +25,9 @@
       "Appear at the selected Immigration office for biometric data capture."
     ],
     "notes": [
-      "Use the official portal rather than a payment link sent by an unknown agent."
+      "Use the official portal rather than a payment link sent by an unknown agent.",
+      "Can I renew my Nigerian passport completely online? An NIS renewal begins on the official online portal, which handles NIN checks, supporting documents, payment and appointment selection. A physical appointment or biometric enrolment may still be required, so online submission alone should not be described as a completed passport issuance.",
+      "Can I renew a Nigerian passport without my NIN? The official NIS process uses NIN-linked identity verification. Do not invent a NIN or submit conflicting birth details to force a renewal. Correct the underlying identity record or consult NIS's passport data-correction process before choosing the wrong transaction."
     ],
     "sources": [
       {
@@ -63,7 +65,7 @@
       "first-nigerian-passport",
       "passport-change-of-data"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "Passport renewal",
       "How to renew a Nigerian passport",
@@ -551,7 +553,9 @@
     ],
     "notes": [
       "CAC states proprietors can register business names without a lawyer, chartered accountant or chartered secretary.",
-      "CAC's current iCRP guidance says business-name registrations can be AI-approved and processed instantly, while CAC's formal service timeline allows up to 24 working hours for a complete application. Treat instant processing as possible, not guaranteed."
+      "CAC's current iCRP guidance says business-name registrations can be AI-approved and processed instantly, while CAC's formal service timeline allows up to 24 working hours for a complete application. Treat instant processing as possible, not guaranteed.",
+      "Can I register a business name with CAC online myself? Yes. CAC's business-name registration route supports proprietor applications through its Company Registration Portal. CAC says a lawyer, chartered accountant or chartered secretary is not mandatory for this category. Check name availability, enter proprietor details, upload the documents shown and pay the official filing charge through the portal.",
+      "Is CAC business-name registration free in Nigeria? Do not assume so. CAC registration and name-reservation services have official charges, which can change. Use the current iCRP fee displayed for your exact service rather than an old article, unofficial free-registration offer or agent's personal payment link."
     ],
     "sources": [
       {
@@ -573,7 +577,7 @@
         "lastChecked": "2026-10-05"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
@@ -617,7 +621,9 @@
       "Monitor the CRP dashboard for approval or a query. Correct and resubmit anything CAC queries; after approval, download the electronic Certificate and Certified Extract from the portal."
     ],
     "notes": [
-      "CAC publishes a 24-working-hour service timeline for company registration once relevant documents are complete and any query is resolved."
+      "CAC publishes a 24-working-hour service timeline for company registration once relevant documents are complete and any query is resolved.",
+      "Is CAC company registration the same as business-name registration? No. A company and a business name are different registration categories. Select the entity type that fits what you are forming, then follow the company/officer and incorporation requirements for that exact structure. Company filing charges can vary with the company type and share structure.",
+      "What documents do I need to register a company with CAC? Start with proposed names, officer and company particulars, identity details and the company type. The iCRP supplies the attachments required for the selected incorporation category; do not rely on one generic document list for every company. Read and resolve any CAC query before downloading approval documents."
     ],
     "sources": [
       {
@@ -633,7 +639,7 @@
         "lastChecked": "2026-10-05"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
@@ -1028,7 +1034,9 @@
       "JAMB's official CAPS dashboard is currently operating for the 2026/2027 admission year.",
       "The 2026 Policy Meeting set the minimum tolerable admission scores at 150 for universities and colleges of nursing, and 100 for polytechnics, monotechnics, colleges of agriculture, colleges of education and IEIs.",
       "The general minimum age for admission remains 16 years.",
-      "Available CAPS actions differ by candidate profile and admission stage; act only on what JAMB displays for the candidate."
+      "Available CAPS actions differ by candidate profile and admission stage; act only on what JAMB displays for the candidate.",
+      "Where do I check my JAMB CAPS admission status? Use JAMB's official candidate e-Facility and CAPS service with the account for the correct admission year. Review the institution and course information displayed for that candidate. A third-party site cannot reliably display or change your official CAPS admission decision.",
+      "How do I accept or reject admission on JAMB CAPS? Log in to the candidate's official profile, inspect any actual offer and use the accept or reject option that JAMB presents. If no offer or button is available for that profile, do not pay someone who claims they can unlock one."
     ],
     "sources": [
       {
@@ -1056,7 +1064,7 @@
         "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-10-04",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "JAMB CAPS",
       "How JAMB CAPS works for admission",
@@ -1104,7 +1112,9 @@
       "Read the displayed result carefully and save or print a copy if needed; if the card has exhausted its permitted uses, use a new valid WAEC result-checker card."
     ],
     "notes": [
-      "WAEC Direct states that a new result-checker card is required after the allowable uses on a card are exhausted."
+      "WAEC Direct states that a new result-checker card is required after the allowable uses on a card are exhausted.",
+      "Can I check WAEC result using my phone? Yes, you can open the official WAEC Direct site from a phone, but you still need the examination number, year and type and the valid result-checker PIN/e-PIN and serial number where requested. Your phone does not replace those credentials.",
+      "Can I check my WAEC result without a scratch card or PIN? WAEC Direct currently requires its official result-checker details. Claims that a NIN or phone number will bypass a required PIN are not supported by the official result-checking instructions. Obtain valid credentials from a WAEC-authorised route."
     ],
     "sources": [
       {
@@ -1114,7 +1124,7 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "Check WAEC result",
       "How to check a WAEC result online",
@@ -1665,7 +1675,9 @@
       "After successful mobilisation, monitor the dashboard for the call-up number and call-up letter; NYSC says candidates who subscribed for online printing can print the letter online, while others obtain it through their institutions."
     ],
     "notes": [
-      "NYSC says locally trained graduates whose names are not on the approved Senate/Academic Board list cannot register."
+      "NYSC says locally trained graduates whose names are not on the approved Senate/Academic Board list cannot register.",
+      "Can I complete NYSC registration before my name is on the Senate List? No. NYSC says locally trained prospective corps members need their institution's approved Senate or Academic Board result-list record for mobilisation. Resolve missing or incorrect information with your institution's student-affairs or NYSC office.",
+      "What do I need before NYSC online registration? Check your approved institution listing, matriculation number, functional personal email, Nigerian mobile line and identity details. You must be present for the biometric part of registration; NYSC does not allow somebody else to capture fingerprints on your behalf."
     ],
     "sources": [
       {
@@ -1681,7 +1693,7 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "NYSC registration",
       "How NYSC registration works for locally trained graduates",
@@ -3206,7 +3218,9 @@
       "Attend the relevant Nigerian mission or designated processing point for the required in-person submission, photograph and biometric capture, then follow its official collection instructions."
     ],
     "notes": [
-      "Do not assume Nigeria-local passport fees apply to an application processed abroad."
+      "Do not assume Nigeria-local passport fees apply to an application processed abroad.",
+      "How do I renew a Nigerian passport in the UK, USA or Canada? Begin with NIS's passport application process and the Nigerian embassy, high commission or consulate responsible for your location. Follow that mission's own identity, document submission, appointment, biometric and payment requirements. Do not use Nigerian domestic pricing as a guarantee for overseas applications.",
+      "Is the Nigerian passport renewal fee the same abroad as in Nigeria? Not necessarily. NIS sends applicants abroad to the relevant overseas mission and application route; local fees, currency and appointment arrangements can differ. Verify the live mission-specific instructions before paying."
     ],
     "sources": [
       {
@@ -3216,7 +3230,7 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "Passport application abroad",
       "How Nigerians abroad apply for or renew a Nigerian passport",
@@ -4310,7 +4324,9 @@
       "NIS's published service-level schedule lists a 24-hour service target for a complete ETC application through the official route.",
       "The NIS application page offers separate Fresh, Renew and Re-issue forms. For a lost or damaged certificate, consult the replacement requirements rather than assuming an ordinary renewal is sufficient.",
       "NIS's detailed certificate guidance lists an employer introduction for salaried workers and a letter from the institution for students or trainees. Ask your chosen Immigration office which applies to your case.",
-      "Official NIS pages display different passport-photograph counts for this certificate. Use the current application form and confirm with your Immigration office before submitting physical documents."
+      "Official NIS pages display different passport-photograph counts for this certificate. Use the current application form and confirm with your Immigration office before submitting physical documents.",
+      "How long does it take to get an ECOWAS Travel Certificate? NIS's published 2026 service-level schedule lists a 24-hour processing target for a complete certificate application. This is not a promise of instant issuance: the required documents, payment and office submission still determine when the application becomes complete.",
+      "Can an ECOWAS Travel Certificate replace my international passport everywhere? No. NIS describes it as a travel document for the ECOWAS sub-region. Confirm your destination and carrier's current documentary requirements; the certificate should not be represented as a worldwide alternative to a Nigerian passport."
     ],
     "sources": [
       {
@@ -4355,7 +4371,7 @@
       "passport-renewal",
       "yellow-card"
     ],
-    "lastVerified": "2026-10-05"
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "yellow-card",
@@ -4528,7 +4544,9 @@
       "Nigeria Police Force guidance says a PCC can be validated on POSSAP with its unique document number.",
       "Do not pay a third party into a personal account; POSSAP generates the official service request and payment record.",
       "Recent official POSSAP invoices for both standard and diaspora Police Character Certificate requests show ₦30,000; confirm the invoice generated for your own application before payment.",
-      "If requesting a certificate for a visa or an overseas employer, confirm their acceptable certificate age and any extra authentication requirements separately. POSSAP validation proves the document can be checked, not that every recipient must accept it."
+      "If requesting a certificate for a visa or an overseas employer, confirm their acceptable certificate age and any extra authentication requirements separately. POSSAP validation proves the document can be checked, not that every recipient must accept it.",
+      "Can I apply for Nigerian police clearance from abroad? POSSAP offers a diaspora Police Character Certificate route. Follow the actual account and identity-verification requirements shown for your application, use the official invoice and check the overseas recipient's separate acceptance rules.",
+      "Is a Nigerian Police Character Certificate valid for every country for the same period? No single overseas validity period is established by POSSAP for all visa offices and employers. The receiving authority may require a recent certificate or additional authentication. Confirm that requirement before ordering a certificate."
     ],
     "sources": [
       {
@@ -4577,7 +4595,7 @@
       "POSSAP PCC verification document number",
       "Nigeria police clearance diaspora overseas requirements"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-09",
     "related": [
       "first-nigerian-passport",
       "passport-application-abroad",
@@ -11227,7 +11245,9 @@
     "notes": [
       "CBN allows date-of-birth correction once with supporting documents and permits supported name changes and minor corrections.",
       "A BVN itself does not change when the underlying customer record is corrected.",
-      "The CBN framework limits supported date-of-birth corrections to one change. Check your supporting records carefully with the bank before submitting this particular amendment."
+      "The CBN framework limits supported date-of-birth corrections to one change. Check your supporting records carefully with the bank before submitting this particular amendment.",
+      "Can I change my BVN name or date of birth online myself? CBN's rules require amendments through the bank's verification and correction process. Ask the bank for its current BVN data-amendment form and supporting-document requirements rather than using an unofficial instant-BVN website.",
+      "Will my BVN number change after correcting its details? No. The supported name or date-of-birth amendment updates the record tied to your existing BVN. Under the CBN framework, a date-of-birth correction is permitted only once with supporting evidence."
     ],
     "sources": [
       {
@@ -11258,7 +11278,7 @@
       "bvn-retrieval",
       "bvn-enrolment"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "nrs-tax-id-retrieval",
@@ -11697,7 +11717,9 @@
     "notes": [
       "NIMC's current profile-verification guidance explicitly says people who cannot remember their NIN can visit a NIMC office or use the *346# SMS/phone service.",
       "The *346*2*Your NIN# shortcut described on NIMC's Mobile ID page is for obtaining a Mobile ID UserID and OTP when you already know the NIN; it is not the same as retrieving a forgotten NIN.",
-      "MyNigeriaGuide does not ask you to enter your NIN."
+      "MyNigeriaGuide does not ask you to enter your NIN.",
+      "How do I check my NIN number on my phone? NIMC states that its *346# phone service can help retrieve a forgotten NIN. Dial *346# and follow the options shown for your identity record. Read any network or USSD charge before accepting; do not enter your number on a look-alike site.",
+      "Can I check my NIN on MTN or Airtel? The NIN recovery procedure is provided by NIMC, not by a separate operator-specific identification database. Use NIMC's *346# service on an eligible active line. If the record is not found, use NIMC's official office or help route instead of paying an agent."
     ],
     "sources": [
       {
@@ -11729,7 +11751,7 @@
       "nin-slip-reissue",
       "ninauth-nin-verification"
     ],
-    "lastVerified": "2026-10-04"
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "unclaimed-dividends-nigeria",
