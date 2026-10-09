@@ -59,7 +59,7 @@ export const homeSocialTrends: HomeSocialTrend[] = [
   },
 ];
 
-export function getCurrentHomeSocialTrends(today = new Date().toISOString().slice(0, 10)) {
+export function getCurrentHomeSocialTrends(today = new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0, 10)) {
   // A compact cross-pillar shelf: never push another pillar off the homepage
   // with two simultaneous jobs stories or repeat a canonical destination.
   const usedPillars = new Set<string>();

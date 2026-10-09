@@ -1,3 +1,4 @@
+import { isEffectivelyOpen } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -34,7 +35,7 @@ export default async function JobTopicPage({ params }: { params: Promise<{ slug:
 
   const items = getJobTopicOpportunities(topic.slug);
   const checked = latestVerified(items);
-  const openCount = items.filter((item) => item.status === "open").length;
+  const openCount = items.filter((item) => isEffectivelyOpen(item)).length;
   const base = getSiteUrl();
   const ld = {
     "@context": "https://schema.org",
@@ -117,3 +118,6 @@ export default async function JobTopicPage({ params }: { params: Promise<{ slug:
     </>
   );
 }
+
+// Use the live Nigeria-calendar status rather than yesterday\u0027s prerendered snapshot.
+export const dynamic = "force-dynamic";

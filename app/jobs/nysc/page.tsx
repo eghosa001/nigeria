@@ -1,3 +1,4 @@
+import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AnswerFirst } from "@/components/answer-first";
@@ -43,7 +44,7 @@ export default function NyscJobsPage() {
         <div className="home-category-grid compact-category-grid">
           {relevant.map((item) => (
             <Link className="home-category-card" href={"/jobs/" + item.slug} key={item.slug}>
-              <span>{item.location}</span><strong>{item.organization}</strong><small>{item.title}</small><i>{item.statusLabel} →</i>
+              <span>{item.location}</span><strong>{item.organization}</strong><small>{item.title}</small><i>{getEffectiveStatusLabel(item)} →</i>
             </Link>
           ))}
         </div>
@@ -59,3 +60,6 @@ export default function NyscJobsPage() {
     </section>
   );
 }
+
+// Use the live Nigeria-calendar status rather than yesterday\u0027s prerendered snapshot.
+export const dynamic = "force-dynamic";

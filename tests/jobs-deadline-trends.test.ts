@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { getEffectiveJobStatus, getEffectiveStatusLabel, getClosingSoonJobs, isEffectivelyOpen, todayIsoNigeria } from "../lib/job-runtime";
 import { getCurrentHomeSocialTrends } from "../data/home-social-trends";
 import { careerGuides } from "../lib/career-guides";
+import { jobOpportunities } from "../lib/jobs";
 import type { CareerOpportunity } from "../lib/jobs";
 
 const source = (file: string) => readFileSync(new URL("../" + file, import.meta.url), "utf8");
@@ -17,10 +18,11 @@ test("Nigeria midnight changes expired openings without requiring a redeploy", (
   assert.equal(isEffectivelyOpen(sample, "2026-10-09"), false);
   assert.match(getEffectiveStatusLabel(sample, "2026-10-09"), /deadline passed/i);
   assert.deepEqual(getClosingSoonJobs([sample], 7, "2026-10-09"), []);
+  assert.equal(jobOpportunities.filter((item) => isEffectivelyOpen(item) && item.deadline && item.deadline < todayIsoNigeria()).length, 0);
 });
 
 test("all directly time-sensitive entry routes are request-rendered", () => {
-  for (const path of ["app/page.tsx","app/jobs/page.tsx","app/jobs/open-now/page.tsx","app/jobs/deadlines/page.tsx","app/jobs/closing-this-week/page.tsx","app/jobs/[slug]/page.tsx","app/jobs/guides/[slug]/page.tsx"]) {
+  for (const path of ["app/page.tsx","app/jobs/page.tsx","app/jobs/open-now/page.tsx","app/jobs/deadlines/page.tsx","app/jobs/closing-this-week/page.tsx","app/jobs/[slug]/page.tsx","app/jobs/guides/[slug]/page.tsx","app/jobs/categories/[slug]/page.tsx","app/jobs/locations/[slug]/page.tsx","app/jobs/professions/[slug]/page.tsx","app/jobs/employers/[slug]/page.tsx","app/jobs/new-this-week/page.tsx","app/jobs/private/page.tsx","app/jobs/government/page.tsx","app/jobs/remote/page.tsx"]) {
     assert.match(source(path), /export const dynamic = "force-dynamic";/, path);
   }
   assert.match(source("app/api/jobs/route.ts"), /"Cache-Control": "no-store"/);
