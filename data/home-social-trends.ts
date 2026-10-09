@@ -45,13 +45,6 @@ export const homeSocialTrends: HomeSocialTrend[] = [
   },
   {
     pillar: "Jobs & Careers",
-    title: "Army SSCC 50/2027 officer applications — 17 October deadline",
-    href: "/jobs/nigerian-army-sscc-50-2027",
-    checkedAt: "2026-10-09",
-    expiresAt: "2026-10-17",
-  },
-  {
-    pillar: "Jobs & Careers",
     title: "Deloitte Graduate Recruitment — Tax & Legal closes today",
     href: "/jobs/deloitte-nigeria-early-careers",
     checkedAt: "2026-10-09",
@@ -70,6 +63,13 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     href: "/jobs/zenith-bank-zecathon-6-hackathon-2026",
     checkedAt: "2026-10-08",
     expiresAt: "2026-10-13",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "Army SSCC 50/2027 officer applications — 17 October deadline",
+    href: "/jobs/nigerian-army-sscc-50-2027",
+    checkedAt: "2026-10-09",
+    expiresAt: "2026-10-17",
   },
 ];
 
