@@ -10,6 +10,16 @@ const checks = [
   ["/sitemaps/youtube.xml", /entertainment\/youtube\/page\/2/i],
   ["/entertainment/youtube/page/2", /Page 2 of/i],
   ["/latest", /Recently added and updated/i],
+  // Regression canaries: Google previously recorded transient 5xx on these
+  // four URLs. Curated duplicates intentionally remain browseable, noindex,
+  // and canonicalised to their original movie profiles.
+  ["/entertainment/youtube/GrxitJ4fHT8", /Bowale/i],
+  ["/entertainment/youtube/q5Vg0jUMl-s", /Never Let Go/i],
+  ["/entertainment/youtube/ORIBBpN7YMs", /What Love Is/i],
+  ["/entertainment/youtube/negcmBrWxm0", /A Turn of Events/i],
+  // Google also reported a historical soft-404 for the interactive finder.
+  ["/assistant", /Find the right Nigerian government service guide/i],
+  ["/entertainment/movies/pieces-that-fit", /Pieces That Fit/i],
 ];
 
 for (const [path, expected] of checks) {

@@ -6,6 +6,12 @@ import type { PublicServiceListing } from "@/lib/data";
 
 type ServiceDirectoryResponse = { items?: PublicServiceListing[] };
 
+const exampleSearches = [
+  { label: "Renew a passport", query: "passport renewal" },
+  { label: "Correct NIN details", query: "NIN name correction" },
+  { label: "Register a business", query: "CAC business name registration" },
+] as const;
+
 export function GuideAssistant() {
   const [draft, setDraft] = useState("");
   const [question, setQuestion] = useState("");
@@ -13,11 +19,11 @@ export function GuideAssistant() {
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
 
-  async function submit(event: FormEvent) {
-    event.preventDefault();
-    const clean = draft.trim();
+  async function findGuides(value: string) {
+    const clean = value.trim();
     if (!clean) return;
 
+    setDraft(clean);
     setQuestion(clean);
     setLoading(true);
     setFailed(false);
@@ -35,6 +41,11 @@ export function GuideAssistant() {
     } finally {
       setLoading(false);
     }
+  }
+
+  function submit(event: FormEvent) {
+    event.preventDefault();
+    void findGuides(draft);
   }
 
   return (
@@ -65,12 +76,26 @@ export function GuideAssistant() {
         </div>
       </form>
 
+      <div className="related-links" aria-label="Example guide searches">
+        {exampleSearches.map((example) => (
+          <button
+            key={example.query}
+            className="button button-secondary"
+            type="button"
+            disabled={loading}
+            onClick={() => void findGuides(example.query)}
+          >
+            {example.label} →
+          </button>
+        ))}
+      </div>
+
       {question ? (
         <div className="assistant-results" aria-live="polite">
           {loading ? (
             <p>Finding the closest verified guides…</p>
           ) : failed ? (
-            <p>Search is temporarily unavailable. Please try again.</p>
+            <p>Search is temporarily unavailable. <Link href="/services">Browse all verified services →</Link></p>
           ) : results.length ? (
             <>
               <small>Best matches for “{question}”</small>
@@ -86,7 +111,7 @@ export function GuideAssistant() {
               ))}
             </>
           ) : (
-            <p>No verified guide is close enough yet. Try a shorter description or browse all services.</p>
+            <p>No close match yet. Try a shorter description or <Link href="/services">browse all verified services →</Link></p>
           )}
         </div>
       ) : null}

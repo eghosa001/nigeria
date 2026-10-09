@@ -173,6 +173,9 @@ test("directory supports deep-linked category filters", async ({ page }) => {
 test("assistant stays lightweight and retired JAMB URL resolves", async ({ page }) => {
   await page.goto("/assistant");
   await expect(page.locator("h1")).toHaveCount(1);
+  await page.getByRole("button", { name: "Renew a passport" }).click();
+  await expect(page.locator("#assistant-question")).toHaveValue("passport renewal");
+  await expect(page.locator(".assistant-results").getByRole("link").first()).toBeVisible();
   await page.getByLabel("What are you trying to do?").fill("renew passport");
   await page.getByRole("button", { name: /Find my guide/i }).click();
   await expect(page.locator(".assistant-results").getByRole("link").first()).toBeVisible();

@@ -90,13 +90,18 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "The Man I Never Knew cast, story and the official Royal Arts TV full-movie link. Starring TooSweet Annan, Chisom Agoawuike and Mojoyin Fadaka.",
   },
   "pieces-that-fit": {
-    title: "Pieces That Fit: Cast & Full Movie on YouTube",
+    title: "Pieces That Fit: Cast & Full Movie",
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
     title: "Oversabi Aunty Cast (2025): Actors & Netflix Watch Guide",
     description: "Oversabi Aunty (2025) cast includes Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa and Jemima Osunde. Read the story and see the official Netflix link.",
   },
+  // These original movie profiles are the canonical destination for the
+  // corresponding noindex YouTube video URLs previously affected by 5xx.
+  "never-let-go": { title: "Never Let Go: Cast & Full Movie" },
+  "what-love-is": { title: "What Love Is: Cast & Full Movie" },
+  "a-turn-of-events": { title: "A Turn of Events: Cast & Full Movie" },
   "bowale": {
     title: "Bowale Nigerian Movie: Cast & Full Movie",
     description: "Bowale cast, story, 121-minute runtime and the official BIODUNSTEPHEN TV full-movie link. Starring BamBam Olawumi, Bobby Ekpe and Jude Chukwuka.",
