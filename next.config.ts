@@ -57,6 +57,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       })),
       {
+        source: "/services/hotelsng-cancel-refund",
+        destination: "/services/hotels-ng-cancel-refund-booking",
+        permanent: true,
+      },
+      {
+        source: "/jobs/opay-nigeria-careers",
+        destination: "/jobs/opay-careers-nigeria",
+        permanent: true,
+      },
+      {
         source: "/services/bvn-change-details",
         destination: "/topics/bvn",
         permanent: true,
