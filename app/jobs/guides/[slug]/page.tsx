@@ -5,6 +5,9 @@ import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { careerGuides, getCareerGuide } from "@/lib/career-guides";
+import { todayIsoNigeria } from "@/lib/job-runtime";
+
+export const dynamic = "force-dynamic";
 import { getSiteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -27,6 +30,8 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
   const guide = getCareerGuide(slug);
   if (!guide) notFound();
 
+  const isProgramme = guide.slug === "national-ai-innovation-challenge-2026";
+  const deadlinePassed = Boolean(guide.deadline && guide.deadline < todayIsoNigeria());
   const base = getSiteUrl();
   const ld = {
     "@context": "https://schema.org",
@@ -49,9 +54,10 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
             { label: "Jobs & Careers", href: "/jobs" },
             { label: guide.title },
           ]} />
-          <span className="eyebrow">Career guide · reviewed {guide.reviewedAt}</span>
+          <span className="eyebrow">{isProgramme ? "Innovation programme" : "Career guide"} · reviewed {guide.reviewedAt}</span>
           <h1>{guide.title}</h1>
           <p className="page-intro">{guide.summary}</p>
+          {deadlinePassed ? <p role="status" className="job-muted"><strong>Application deadline passed.</strong> Check the official organiser's page for any new dates; this guide remains available for eligibility and submission reference.</p> : null}
           <AnswerFirst
             title="The short answer"
             summary={guide.answer}
@@ -60,7 +66,7 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
               { href: "#guide", label: "Read the full guide", primary: true },
               ...guide.relatedLinks.slice(0, 2),
             ]}
-            note={"Reviewed " + guide.reviewedAt + ". Employer-specific instructions always override general application advice."}
+            note={"Reviewed " + guide.reviewedAt + (isProgramme ? ". The organiser's current terms and application form take precedence." : ". Employer-specific instructions always override general application advice.")}
           />
         </div>
       </section>
@@ -77,7 +83,7 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
             ))}
             <section>
               <h2>Sources and verification context</h2>
-              <p>These sources support the application-process guidance and provide official examples. Always follow the instructions on the exact vacancy you are applying for.</p>
+              <p>{isProgramme ? "These official programme sources provide eligibility, build and submission requirements. Check them for last-minute updates." : "These sources support the application-process guidance and provide official examples. Always follow the instructions on the exact vacancy you are applying for."}</p>
               <div className="job-source-list">
                 {guide.sources.map((source) => (
                   <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>
@@ -89,8 +95,8 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
           </article>
           <aside className="job-detail-sidebar">
             <div className="job-sidebar-card">
-              <strong>Use this guide with a real vacancy</strong>
-              <p>Generic advice becomes useful only after you compare it with the employer's published requirements.</p>
+              <strong>{isProgramme ? "Competition, not a job offer" : "Use this guide with a real vacancy"}</strong>
+              <p>{isProgramme ? "A working N-ATLAS solution, evidence and an official application are required. Participation is not employment." : "Generic advice becomes useful only after you compare it with the employer's published requirements."}</p>
               <p>Do not pay for a shortlist, interview slot or appointment.</p>
             </div>
             {guide.relatedLinks.map((link) => <Link href={link.href} className="job-sidebar-link" key={link.href}>{link.label} →</Link>)}

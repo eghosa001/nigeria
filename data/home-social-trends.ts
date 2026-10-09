@@ -38,6 +38,20 @@ export const homeSocialTrends: HomeSocialTrend[] = [
   },
   {
     pillar: "Jobs & Careers",
+    title: "Deloitte Graduate Recruitment — Tax & Legal closes today",
+    href: "/jobs/deloitte-nigeria-early-careers",
+    checkedAt: "2026-10-09",
+    expiresAt: "2026-10-09",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "National AI Innovation Challenge — N-ATLAS builds due 12 October",
+    href: "/jobs/guides/national-ai-innovation-challenge-2026",
+    checkedAt: "2026-10-09",
+    expiresAt: "2026-10-12",
+  },
+  {
+    pillar: "Jobs & Careers",
     title: "Zecathon 6.0 Hackathon — 13 October application deadline",
     href: "/jobs/zenith-bank-zecathon-6-hackathon-2026",
     checkedAt: "2026-10-08",
@@ -46,7 +60,16 @@ export const homeSocialTrends: HomeSocialTrend[] = [
 ];
 
 export function getCurrentHomeSocialTrends(today = new Date().toISOString().slice(0, 10)) {
-  return homeSocialTrends
-    .filter((item) => item.checkedAt <= today && item.expiresAt >= today)
-    .slice(0, 4);
+  // A compact cross-pillar shelf: never push another pillar off the homepage
+  // with two simultaneous jobs stories or repeat a canonical destination.
+  const usedPillars = new Set<string>();
+  const usedHrefs = new Set<string>();
+  return homeSocialTrends.filter((item) => {
+    if (item.checkedAt > today || item.expiresAt < today) return false;
+    const pillar = item.pillar === "Movies" ? "Movies & Entertainment" : item.pillar;
+    if (usedPillars.has(pillar) || usedHrefs.has(item.href)) return false;
+    usedPillars.add(pillar);
+    usedHrefs.add(item.href);
+    return true;
+  }).slice(0, 4);
 }

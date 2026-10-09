@@ -14,7 +14,8 @@ import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, 
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
 
-export const revalidate = 3600;
+// Deadline-sensitive status must be evaluated on every request, not frozen at build time.
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return jobOpportunities.map((item) => ({ slug: item.slug }));

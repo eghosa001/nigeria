@@ -24,7 +24,8 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 3600;
+// Deadline-sensitive status must be evaluated on every request, not frozen at build time.
+export const dynamic = "force-dynamic";
 
 const quickServices = [
   { label: "JAMB portal guide", href: "/topics/jamb-2026" },
