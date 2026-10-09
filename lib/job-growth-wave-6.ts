@@ -2,51 +2,6 @@ import type { CareerOpportunity } from "@/lib/jobs";
 
 export const jobGrowthWave6: CareerOpportunity[] = [
   {
-    slug: "opay-nigeria-careers",
-    title: "OPay Nigeria Careers & Official Recruitment Portal",
-    organization: "OPay",
-    kind: "career-page",
-    topicSlugs: ["tech-fintech", "banking-finance"],
-    sector: "Private",
-    status: "career-page",
-    statusLabel: "Official OPay recruitment portal",
-    summary: "OPay publishes Nigerian vacancies through its Beyond Hiring recruitment portal. Use the live portal to check current Lagos, nationwide and other roles because individual vacancies and closing dates change.",
-    location: "Nigeria — location varies by vacancy",
-    employmentType: "Employer careers / recruitment portal",
-    audiences: ["Fintech professionals", "Technology professionals", "Operations professionals", "Marketing and communications professionals", "Early-career and experienced applicants"],
-    fields: ["Fintech", "Technology", "Operations", "Marketing and communications", "Financial services"],
-    qualifications: [
-      "There is no single qualification for every OPay role; the live vacancy controls its degree, experience and skill requirements.",
-      "Location and work arrangement vary by role, so confirm whether the vacancy is onsite, hybrid, remote or nationwide before applying."
-    ],
-    requirements: [
-      "Open the official OPay Beyond Hiring portal and confirm the exact role is still listed.",
-      "Read the vacancy's current location, experience, education and skill requirements before applying.",
-      "Prepare a current CV and any role-specific information requested by OPay's recruitment form.",
-      "Submit only through OPay's official recruitment portal."
-    ],
-    documents: ["Current CV/resume", "Role-specific information requested by the official OPay application"],
-    applicationSteps: [
-      "Open OPay's official Beyond Hiring recruitment portal.",
-      "Choose a current vacancy that matches your location and experience.",
-      "Read the full role description and requirements.",
-      "Complete the official application and upload only the requested documents.",
-      "Keep the application confirmation and use official OPay recruitment communications for follow-up."
-    ],
-    officialUrl: "https://careers.opayweb.com/",
-    officialUrlLabel: "Open OPay Beyond Hiring",
-    verifiedAt: "2026-10-07",
-    feeNote: "Use the official OPay recruitment portal and do not pay an unofficial recruiter for application, shortlist or interview access.",
-    sourceNotes: [
-      "OPay operates a dedicated recruitment portal and publishes role-specific applications there.",
-      "Current role pages demonstrate that qualifications, location and work arrangement are vacancy-specific."
-    ],
-    sources: [
-      { label: "OPay Beyond Hiring", url: "https://careers.opayweb.com/", lastChecked: "2026-10-07" },
-      { label: "OPay recruitment privacy policy", url: "https://careers.opayweb.com/privacy-policy", lastChecked: "2026-10-07" }
-    ]
-  },
-  {
     slug: "palmpay-careers",
     title: "PalmPay Careers Nigeria & Official Jobs Route",
     organization: "PalmPay",
