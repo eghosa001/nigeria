@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Terms of use", alternates: { canonical: "/terms" } };
+export const metadata: Metadata = { title: "Terms of use", description: "Read MyNigeriaGuide’s independent information disclaimer, acceptable use conditions and important guidance before relying on service information.", alternates: { canonical: "/terms" } };
 
 export default function TermsPage() {
   return (
