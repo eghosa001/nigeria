@@ -46,6 +46,21 @@ export function Analytics() {
       const anchor = target.closest("a");
       if (!(anchor instanceof HTMLAnchorElement)) return;
 
+      // One lightweight event measures whether related-content discovery creates a next page visit.
+      // It is not a key event: reading more pages should not inflate conversion totals.
+      if (anchor.closest(".movie-related-section, .jobs-related-results, .explore-place-suggestions, .related-section, .agency-strip, #related-jobs")) {
+        try {
+          const targetUrl = new URL(anchor.href);
+          if (targetUrl.origin === window.location.origin && targetUrl.pathname !== pathname) {
+            trackEvent("related_content_click", {
+              source_path: pathname,
+              destination_path: targetUrl.pathname,
+              destination_pillar: targetUrl.pathname.split("/")[1] || "home",
+            });
+          }
+        } catch {}
+      }
+
       if (anchor.classList.contains("official-service-link")) {
         let host = "";
         try { host = new URL(anchor.href).hostname; } catch {}
