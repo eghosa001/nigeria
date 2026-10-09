@@ -12,6 +12,7 @@ import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getEmployerOpportunities, getJobEmployer } from "@/lib/job-employers";
 import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
+import { getSimilarOpenJobs } from "@/lib/related-discovery";
 import { SavePageButton } from "@/components/personal-library";
 
 // Deadline-sensitive status must be evaluated on every request, not frozen at build time.
@@ -70,6 +71,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const employerHubHref = employer && employer.opportunitySlugs.length >= 2 ? "/jobs/employers/" + employer.slug : null;
   const effectiveStatus = getEffectiveJobStatus(item);
   const effectiveStatusLabel = getEffectiveStatusLabel(item);
+  const similarOpenJobs = getSimilarOpenJobs(item);
   const sectorBrowse =
     item.sector === "Government"
       ? { href: "/jobs/government", label: "Browse more government opportunities" }
@@ -190,6 +192,22 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <h2>{isCareerPortal ? "How to use " + item.organization + "'s official careers portal" : "How to apply for " + item.title + " or check your status"}</h2>
               <ol className="job-steps">{item.applicationSteps.map((text, index) => <li key={text}><span>{index + 1}</span><p>{text}</p></li>)}</ol>
             </section>
+
+            {similarOpenJobs.length ? (
+              <section id="related-jobs">
+                <span className="eyebrow">Other relevant opportunities</span>
+                <h2>Jobs related to {item.title}</h2>
+                <p className="job-muted">Similar fields and eligibility across different employers. Confirm that applications remain open at the official source.</p>
+                <div className="related-links">
+                  {similarOpenJobs.map(({ item: suggested, reason }) => (
+                    <Link key={suggested.slug} href={"/jobs/" + suggested.slug}>
+                      <strong>{suggested.title}</strong> — {suggested.organization}
+                      <span className="job-muted"> · {reason} · Listed open, checked {suggested.verifiedAt} →</span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             <section className="job-scam-note">
               <span>Recruitment safety</span>
