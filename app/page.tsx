@@ -59,6 +59,8 @@ export default function HomePage() {
     releaseItems.map((item) => [item.title.trim().toLowerCase(), item] as const),
   );
 
+  // Prioritise durable Nigerian films; week-old releases remain in the separate trends feed.
+  const evergreenHomepageSlugs = ["king-of-boys", "chief-daddy", "citation", "swallow", "jagun-jagun", "a-tribe-called-judah"];
   const movieHighlights = entertainmentTitles
     .filter((title) => {
       const hasUsableArtwork =
@@ -73,11 +75,14 @@ export default function HomePage() {
       return !release || getEffectiveReleaseStatus(release) !== "upcoming";
     })
     .sort((a, b) => {
-      const aRelease = releaseByTitle.get(a.title.trim().toLowerCase());
-      const bRelease = releaseByTitle.get(b.title.trim().toLowerCase());
-      const aDate = aRelease?.startDate ?? String(a.year).padStart(4, "0") + "-01-01";
-      const bDate = bRelease?.startDate ?? String(b.year).padStart(4, "0") + "-01-01";
-      return bDate.localeCompare(aDate) || b.year - a.year || a.title.localeCompare(b.title);
+      const aPick = evergreenHomepageSlugs.indexOf(a.slug);
+      const bPick = evergreenHomepageSlugs.indexOf(b.slug);
+      if (aPick !== -1 || bPick !== -1) {
+        if (aPick === -1) return 1;
+        if (bPick === -1) return -1;
+        return aPick - bPick;
+      }
+      return a.title.localeCompare(b.title);
     })
     .slice(0, 6);
 
@@ -163,7 +168,7 @@ export default function HomePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Movies</span>
-              <h2 id="home-movies-title">What to watch now.</h2>
+              <h2 id="home-movies-title">Explore Nigerian films, beyond this week's trends.</h2>
             </div>
             <Link href="/entertainment/movies">Browse movies →</Link>
           </div>

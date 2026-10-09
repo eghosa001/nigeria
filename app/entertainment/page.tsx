@@ -13,29 +13,27 @@ export const metadata: Metadata = {
   alternates: { canonical: "/entertainment" },
 };
 
-const searchMomentumMovieSlugs = [
-  "my-30th-wedding",
-  "epe-after-dark",
-  "the-bride-switch",
-  "oversabi-aunty",
-  "millionaire-until-morning",
-  "beauty-in-scars-2026",
-  "colours-of-fire",
+// Durable film discovery should lead editorial curation, not yesterday's search spike.
+const evergreenMovieSlugs = [
+  "swallow",
+  "king-of-boys",
+  "chief-daddy",
+  "jagun-jagun",
+  "citation",
+  "a-tribe-called-judah",
 ];
 
 const popularMovieSearchLinks = [
-  { label: "My 30th Wedding", href: "/entertainment/movies/my-30th-wedding" },
-  { label: "Epe After Dark", href: "/entertainment/movies/epe-after-dark" },
-  { label: "Oversabi Aunty", href: "/entertainment/movies/oversabi-aunty" },
-  { label: "The Bride Switch", href: "/entertainment/movies/the-bride-switch" },
-  { label: "Love Always Wins", href: "/entertainment/movies/love-always-wins-2026" },
-  { label: "Beauty In Scars", href: "/entertainment/movies/beauty-in-scars-2026" },
-  { label: "What Tomorrow Holds", href: "/entertainment/movies/what-tomorrow-holds-2026" },
-  { label: "In Every Lifetime", href: "/entertainment/movies/in-every-lifetime" },
+  { label: "Lionheart", href: "/entertainment/movies/lionheart" },
+  { label: "King of Boys", href: "/entertainment/movies/king-of-boys" },
+  { label: "Chief Daddy", href: "/entertainment/movies/chief-daddy" },
+  { label: "Jagun Jagun", href: "/entertainment/movies/jagun-jagun" },
+  { label: "Citation", href: "/entertainment/movies/citation" },
+  { label: "A Tribe Called Judah", href: "/entertainment/movies/a-tribe-called-judah" },
 ];
 
 export default function EntertainmentPage() {
-  const priorityMovies = searchMomentumMovieSlugs
+  const priorityMovies = evergreenMovieSlugs
     .map((slug) => entertainmentTitles.find((title) => title.slug === slug))
     .filter((title): title is NonNullable<typeof title> => Boolean(title));
   const prioritySlugs = new Set(priorityMovies.map((title) => title.slug));
@@ -83,11 +81,11 @@ export default function EntertainmentPage() {
           </form>
           <div className="minimal-inline-links primary-shortcuts">
             <Link href="/entertainment/movies">All movies</Link>
-            <Link href="/entertainment/trending">Trending now</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
-            <Link href="/entertainment/releases">New &amp; upcoming</Link>
-            <Link href="/entertainment/hallelujah-challenge-october-2026">Hallelujah Challenge livestream</Link>
-            <Link href="/entertainment/lagos-life-game-2026">Lagos Life game: official link &amp; funding story</Link>
+            <Link href="/entertainment/people">Actors &amp; filmmakers</Link>
+            <Link href="/entertainment/platforms">Streaming platforms</Link>
+            <Link href="/entertainment/series">Series</Link>
+            <Link href="/entertainment/trending">Currently trending</Link>
           </div>
           <details className="compact-link-menu">
             <summary>More entertainment</summary>
@@ -104,24 +102,7 @@ export default function EntertainmentPage() {
       <section className="section">
         <div className="container">
           <div className="minimal-section-heading">
-            <div><span className="eyebrow">New &amp; trending</span><h2>Fresh Nigerian movies.</h2></div>
-            <Link href="/entertainment/youtube">Browse all free movies →</Link>
-          </div>
-          <div className="youtube-movie-grid movie-preview-grid">
-            {fresh.map((movie, index) => (
-              <YouTubeMovieCard movie={movie} priority={index < 3} key={movie.videoId} />
-            ))}
-          </div>
-          <div className="minimal-inline-links" aria-label="Popular movie guides">
-            {popularMovieSearchLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <div className="minimal-section-heading">
-            <div><span className="eyebrow">Featured</span><h2>Start here.</h2></div>
+            <div><span className="eyebrow">Nigerian cinema</span><h2>Explore established films first.</h2></div>
             <Link href="/entertainment/movies">Browse all movies →</Link>
           </div>
           <div className="minimal-movie-row">
@@ -136,6 +117,24 @@ export default function EntertainmentPage() {
                   <p>{title.year} · {getFeaturedCast(title).slice(0, 2).join(" · ")}</p>
                 </div>
               </article>
+            ))}
+          </div>
+          <p className="job-muted">A starting selection across comedy, drama, crime and Yoruba-language filmmaking. Follow each movie's own credited synopsis, cast and official viewing links; no ranking or current playback is implied.</p>
+          <div className="minimal-inline-links" aria-label="Established film details">
+            {popularMovieSearchLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="minimal-section-heading">
+            <div><span className="eyebrow">Recent films</span><h2>New releases, after the essentials.</h2></div>
+            <Link href="/entertainment/youtube">Browse all free movies →</Link>
+          </div>
+          <div className="youtube-movie-grid movie-preview-grid">
+            {fresh.map((movie, index) => (
+              <YouTubeMovieCard movie={movie} priority={index < 3} key={movie.videoId} />
             ))}
           </div>
         </div>

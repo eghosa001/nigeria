@@ -28,6 +28,14 @@
 - **Automation cannot prove** zero plagiarism, licensing permission, full factual accuracy, true firsthand reporting, a real human review, or Ezoic approval. For these, flag missing evidence and request targeted independent human review where publisher requirements or risk warrant it.
 - **Escalation output stays short:** send the owner a concise exception digest (what is blocked and why), not hundreds of drafts. The owner decides business policy or can arrange a qualified editor; do not assign them the job of line-editing every article.
 
+### Evergreen-first search-demand priority (owner direction, 9 October 2026)
+
+Research lasting questions through Google Autocomplete with Nigeria-localized signals and Search Console, but **never treat predictions as search-volume figures** or evidence that a page should be published. Keep the sampled phrases and mapped existing URLs under `docs/research/`; exclude irrelevant foreign place-name collisions, PVC plumbing queries, year-specific fluctuations and invented claims. Editorial guidance must be based on independently verified facts, not the mere existence of an autocomplete phrase.
+
+Focus Services on enduring official process questions (portal, fees, eligibility, errors and recovery), Tour Nigeria on practical city and attraction decisions across seasons, Jobs & Careers on timeless application and career skills, and Entertainment on genres, Nigerian cinema history, cast and legal where-to-watch choices. Keep viral titles and daily release chatter *secondary* to these evergreen journeys; do not let a passing trend dominate a pillar's homepage or search strategy.
+
+Only enrich an existing canonical page for a matching intent, unless a distinct new page passes the complete publication gate. Answer natural reader questions using source-backed information, clear alternatives and next steps. Do not paste hundreds of Google suggestions into the UI as tags, make fabricated rankings, add doorway pages or pad article word counts. Use settled Search Console performance and reader utility to evaluate the results after publication.
+
 ## 3. Four-pillar fit: what value counts
 
 **Locked site architecture:** retain the four existing pillars—Movies & Entertainment, Services, Tour Nigeria, and Jobs & Careers—with their current navigation and canonical URLs. Do not create Telecom, Finance, Education or any other independent pillar. Topics that genuinely fit should remain inside an existing pillar. Prioritise improving canonical pages with useful search impressions before expanding; preserve the compact homepage.

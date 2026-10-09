@@ -53,8 +53,8 @@ export async function generateMetadata({
   );
 
   return {
-    title: "Nigerian Movies — Where to Watch",
-    description: "Browse Nigerian movies by title, actor, genre and platform, with links to Netflix, YouTube, Prime Video and other supported platforms.",
+    title: "Nollywood Movies: Classics, Genres & Where to Watch",
+    description: "Explore Nollywood by comedy, family drama, Yoruba-language movies, established films and legal Netflix or YouTube links. Browse casts and verify playback.",
     alternates: { canonical: "/entertainment/movies" },
     robots: filtered ? { index: false, follow: true } : undefined,
   };
@@ -120,12 +120,43 @@ export default async function MoviesPage({
             </div>
           </div>
           <nav className="movie-browse-tabs" aria-label="Movie browse shortcuts">
-            <Link href="/entertainment/trending">Trending now</Link>
+            <a href="#evergreen-movies">Browse by genre</a>
             <a href="#free-movies">Free on YouTube</a>
             <a href="#curated-movies">Netflix · Prime · YouTube · Kava</a>
-            <Link href="/entertainment/releases">New &amp; upcoming</Link>
+            <Link href="/entertainment/people">Actors &amp; filmmakers</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
+            <Link href="/entertainment/releases">New &amp; upcoming</Link>
           </nav>
+        </div>
+      </section>
+
+      <section className="movie-shelf-section" id="evergreen-movies">
+        <div className="container">
+          <div className="movie-section-heading"><div><span className="eyebrow">Explore Nollywood</span><h2>Choose a story, not just a release date.</h2></div><Link href="/entertainment/people">Actors and filmmakers →</Link></div>
+          <p className="movie-long-summary">Nigerian cinema covers generations, languages and genres. Rather than calling a film the "best of all time" without a credible ranking method, start with the type of story you want. Each title page separates cast and plot information from legally verified places to watch.</p>
+          <div className="home-updates-grid">
+            <article className="home-update-card">
+              <h3>Established Nigerian films</h3>
+              <p>For a film that lasts beyond release-week trends, compare <Link href="/entertainment/movies/lionheart">Lionheart</Link>, <Link href="/entertainment/movies/king-of-boys">King of Boys</Link> and <Link href="/entertainment/movies/citation">Citation</Link>. These titles approach Nigerian life through different styles and subjects; read the individual synopses before choosing.</p>
+            </article>
+            <article className="home-update-card">
+              <h3>Nollywood comedy and family drama</h3>
+              <p>For comedy or ensemble family stories, begin with <Link href="/entertainment/movies/chief-daddy">Chief Daddy</Link> or <Link href="/entertainment/movies/a-tribe-called-judah">A Tribe Called Judah</Link>. Genre labels do not establish an age rating; check the film's actual classification and content suitability separately before a family screening.</p>
+            </article>
+            <article className="home-update-card">
+              <h3>Yoruba-language and epic films</h3>
+              <p><Link href="/entertainment/movies/jagun-jagun">Jagun Jagun</Link> is an entry point for historical and action-centred Yoruba filmmaking. Use the movie catalog's genre and language filters for related titles, and check each film's official streaming or trailer link instead of assuming an upload is licensed.</p>
+            </article>
+            <article className="home-update-card">
+              <h3>Free Nigerian films and streaming choices</h3>
+              <p><Link href="/entertainment/youtube">Browse credited full-movie releases on YouTube</Link> or compare <Link href="/entertainment/platforms">streaming platforms</Link>. "On Netflix" does not necessarily mean playable in Nigeria today; catalogue rights, subscriptions, viewing region and even individual title pages can change.</p>
+            </article>
+          </div>
+          <div className="compact-faq-list">
+            <details><summary>Where can I find classic or old Nollywood movies?</summary><p>Use verified film detail pages and legal publishers rather than an uncredited download collection. Older films may not have a confirmed current stream; an absence of a watch link is more accurate than inventing an upload. Compare known titles, cast members and available platforms before subscribing.</p></details>
+            <details><summary>What Nigerian movies can I watch on Netflix or YouTube?</summary><p>The catalog lets you filter by platform and open a movie's own official source. Netflix access can vary with your account and region. On YouTube, distinguish the film's original or authorised publisher from unofficial copied uploads and confirm that a full film, not merely a trailer, is linked.</p></details>
+            <details><summary>Which Nollywood films are suitable for children and families?</summary><p>A story about family is not automatically age-appropriate. Read the synopsis, look for a reliable content classification and consider themes before playing it for children. The collection includes comedy and drama starting points without claiming any film is universally suitable for every age.</p></details>
+          </div>
         </div>
       </section>
 

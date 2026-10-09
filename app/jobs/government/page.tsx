@@ -22,6 +22,17 @@ export default function GovernmentJobsPage() {
       </section>
       <section className="section">
         <div className="container">
+          <div className="minimal-section-heading"><div><span className="eyebrow">Apply safely</span><h2>How to apply for government jobs in Nigeria.</h2></div></div>
+          <div className="home-updates-grid">
+            <article className="home-update-card"><h3>Confirm a federal recruitment is really open</h3><p>Find the responsible agency's own announcement and check its vacancy dates, eligibility, job category and exact application link. An old shortlist notice or a social-media post repeating last year's portal address is not proof that applications have reopened.</p></article>
+            <article className="home-update-card"><h3>What happens after an application deadline?</h3><p>Recruitment may progress through shortlist, aptitude test or CBT, document check, medical screening or training, depending on the agency. Those are not interchangeable stages. Keep your application reference and only follow instructions published by the recruiting authority; do not pay an agent for an alleged shortlist spot.</p></article>
+            <article className="home-update-card"><h3>How to check genuine federal career requirements</h3><p>Qualification, age, citizenship, location and certificate requirements vary by scheme. Read the actual entry instead of assuming a universal federal-jobs form. <Link href="/jobs/guides/job-scam-red-flags-nigeria">Check recruitment fraud warnings →</Link> and <Link href="/jobs/guides/graduate-job-application-checklist">prepare your documents →</Link>.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <div className="jobs-tracker-list">
             {governmentOpportunities.map((item) => (
               <article key={item.slug} className="jobs-tracker-row">

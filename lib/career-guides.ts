@@ -161,7 +161,7 @@ export const careerGuides: CareerGuide[] = [
     description: "Build a clear Nigerian job CV for graduate and experienced roles: structure, achievements, NYSC, skills, file format and tailoring checklist.",
     summary: "A strong Nigerian CV should make your fit for one specific role obvious in seconds: clear contact details, a short targeted profile, evidence-led experience, education or NYSC where relevant, and skills that match the vacancy.",
     answer: "Use a clean, role-specific CV rather than one generic document for every application. Put the evidence most relevant to the vacancy near the top and remove details that do not help the employer assess your fit.",
-    reviewedAt: "2026-10-05",
+    reviewedAt: "2026-10-09",
     facts: [
       { label: "Best starting point", value: "Tailor to one vacancy" },
       { label: "Core sections", value: "Profile · experience · education · skills" },
@@ -204,6 +204,22 @@ export const careerGuides: CareerGuide[] = [
           "Use a professional filename such as Firstname-Lastname-CV.pdf when PDF is accepted. If the employer requests another format or an online profile, follow that instruction."
         ],
         bullets: ["Proofread names, dates, phone number and email address.", "Remove hidden comments, tracked changes and irrelevant pages.", "Confirm the application domain before uploading personal information."]
+      },
+      {
+        heading: "How to write a Nigerian CV with no experience",
+        paragraphs: [
+          "Use the strongest evidence you actually have: an industrial attachment, SIWES or NYSC project, volunteer work, a final-year research project, student leadership or a portfolio. Describe the contribution and result, not an invented employer or impressive-sounding job title. Employers still need to know what you can do even if you have not held a salaried position.",
+          "Move education, projects and relevant practical training above unrelated roles when that helps the reader. A project bullet should explain the problem, your personal action, the tools used and a truthful outcome. Add a portfolio link only when the employer can open it without receiving private credentials.",
+        ],
+        bullets: ["Do not fabricate work dates.", "Include NYSC status only when relevant to eligibility.", "Tailor the evidence to one vacancy."]
+      },
+      {
+        heading: "An example CV layout for a fresh graduate in Nigeria",
+        paragraphs: [
+          "Begin with accurate contact details and city, then a brief role-focused profile. Follow with education and relevant project or internship evidence, a clearly labelled NYSC status if applicable, skills you can demonstrate and any credible professional training. A simple reverse-chronological format can work well, but the order should support the position you are pursuing.",
+          "Keep dates consistent across your CV, application form and certificates. One page may be practical when experience is limited, but readability and the employer's own requirements matter more than an arbitrary page count. Export a clear document, test the email and portfolio links and use the file type requested in the advert.",
+        ],
+        bullets: ["No invented percentage achievements.", "Avoid irrelevant sensitive personal details.", "Check the actual attached file before submission."]
       }
     ],
     sources: [
@@ -223,7 +239,7 @@ export const careerGuides: CareerGuide[] = [
     description: "Write a tailored Nigerian job cover letter that connects your evidence to the vacancy without repeating your CV or using generic filler.",
     summary: "A useful cover letter answers three questions quickly: why this role, why this organisation, and what evidence shows you can do the work. It should add context to your CV rather than rewrite it.",
     answer: "Open with the exact role, connect two or three requirements to evidence from your experience, explain the employer-specific reason you are applying, then close with a clear professional next step.",
-    reviewedAt: "2026-10-05",
+    reviewedAt: "2026-10-09",
     facts: [
       { label: "Purpose", value: "Connect your evidence to the vacancy" },
       { label: "Avoid", value: "Generic copy sent to every employer" },
@@ -254,6 +270,22 @@ export const careerGuides: CareerGuide[] = [
           "Some employers collect a cover letter, some ask for a motivation statement, and others do not request one. Follow the official application form."
         ],
         bullets: ["Check the recipient or team name.", "Use the requested file type.", "Proofread the organisation name and role title especially carefully."]
+      },
+      {
+        heading: "Writing a cover letter with no work experience",
+        paragraphs: [
+          "Name the exact vacancy and explain your strongest genuine connection to the role. Your evidence might come from a degree project, vocational work, SIWES placement, volunteer programme or independently built product. Describe one task and result so the recruiter can see a relevant skill rather than an unsupported claim that you are a fast learner.",
+          "Use an employer-specific reason for applying that you can verify from its official website or the job description. Close with a professional invitation to discuss the role and the documents you attached. Do not copy an entire online sample if it misstates your education, employer name or achievements.",
+        ],
+        bullets: ["Opening: role and purpose.", "Middle: a specific evidence example.", "Ending: professional next step."]
+      },
+      {
+        heading: "Cover letter versus application email: which one do you need?",
+        paragraphs: [
+          "The application notice controls the format. A cover letter is a separate explanation of fit; an application email may be only a short delivery message with attachments. Some employers collect a motivation statement through an online form, while others specifically ask for no additional files. Follow that instruction rather than sending every document you have.",
+          "For remote work, evidence of written communication, delivery deadlines and independent task management is useful when you can demonstrate it. Do not promise a time-zone schedule, equipment or connection quality you cannot provide. Verify the email domain or form before uploading personal details.",
+        ],
+        bullets: ["Check the employer name and reference number.", "Send only requested attachments.", "Treat unexpected payment requests as a warning."]
       }
     ],
     sources: [
@@ -274,7 +306,7 @@ export const careerGuides: CareerGuide[] = [
     description: "Prepare for common Nigerian graduate and professional interviews using role evidence, STAR examples, employer research and questions of your own.",
     summary: "Interview preparation is not memorising perfect answers. Build a small bank of truthful examples that show how you solve problems, work with people, learn, deliver results and handle setbacks.",
     answer: "Prepare concise evidence for the role's main competencies, practise a 60–90 second career introduction, research the employer from official sources and rehearse examples using situation, task, action and result.",
-    reviewedAt: "2026-10-05",
+    reviewedAt: "2026-10-09",
     facts: [
       { label: "Prepare first", value: "Role requirements and employer facts" },
       { label: "Evidence method", value: "Situation · task · action · result" },
@@ -311,6 +343,22 @@ export const careerGuides: CareerGuide[] = [
           "Useful candidate questions help you understand how success is measured, what the first months look like, how the team works and what happens next.",
           "Use limited interview time to clarify the role rather than asking only questions already answered on the vacancy page."
         ]
+      },
+      {
+        heading: "How to answer common Nigerian job interview questions",
+        paragraphs: [
+          "For 'Tell me about yourself', connect your current stage to one or two relevant accomplishments and the role you want. For 'Why should we hire you?', choose two requirements from the vacancy and give real evidence that you can meet them. Avoid repeating the CV word for word or inventing responsibilities.",
+          "For 'What is your weakness?', describe a genuine development area and a concrete improvement method. For 'Tell me about a challenge', use the actual situation, your responsibility, what you did and the outcome; explain what changed if the first attempt failed. Practise the facts until they sound natural instead of memorising a generic script.",
+        ],
+        bullets: ["Use real examples, not borrowed stories.", "Keep sensitive personal facts private when unrelated.", "Ask for clarification if a question is unclear."]
+      },
+      {
+        heading: "How to prepare for graduate and remote interviews",
+        paragraphs: [
+          "Graduate processes can include aptitude tests, practical assessments, teamwork exercises or employer interviews. Check the actual recruitment notice; not every organisation follows the same sequence. For technical questions, explain your approach, checks, trade-offs and when you would seek help rather than pretending to know everything.",
+          "For remote interviews, verify the time zone, meeting invitation and recruiter's contact domain; test audio and connection before the appointment and prepare a quiet location. If compensation comes up, discuss the role's duties and complete package before relying on unsupported salary averages. Never pay for shortlisting, an appointment or a promised offer.",
+        ],
+        bullets: ["Review the exact job specification.", "Prepare your own questions about team expectations.", "Keep an alternative verified contact route."]
       }
     ],
     sources: [
@@ -385,7 +433,7 @@ export const careerGuides: CareerGuide[] = [
     description: "A practical checklist for Nigerian graduate jobs: eligibility, NYSC, CV, documents, application portal, assessments, fraud checks and follow-up.",
     summary: "Graduate applications are often rejected before interview because a basic eligibility condition, document or form field is missed. Check the official criteria first, then tailor the application and keep proof of what you submitted.",
     answer: "Before applying, confirm degree, class, NYSC, age or graduation-year rules exactly as published; prepare a tailored CV and requested documents; submit only through the official route; and save the vacancy and confirmation for later stages.",
-    reviewedAt: "2026-10-05",
+    reviewedAt: "2026-10-09",
     facts: [
       { label: "First check", value: "Eligibility before application effort" },
       { label: "Common gate", value: "Degree · NYSC · experience · location" },
@@ -422,6 +470,22 @@ export const careerGuides: CareerGuide[] = [
           "Graduate recruitment can move into aptitude tests, assessment centres, interviews, document checks or medical stages. Keep the original vacancy because it is your best preparation guide.",
           "If you receive an invitation, verify the sender and destination before opening links or submitting more personal data."
         ]
+      },
+      {
+        heading: "Applying for graduate jobs in Nigeria without experience",
+        paragraphs: [
+          "Distinguish a live vacancy from a generic employer careers homepage. A portal can remain online even when no trainee intake is open. Read the individual role posting and check degree discipline, graduation year, NYSC status, eligibility, workplace location and deadline before preparing any documents.",
+          "Build evidence from verified projects, internships, service-year duties and volunteer work without manufacturing previous employment. Track the employer, vacancy identifier, official link, documents required and application status in a simple spreadsheet. That prevents duplicate submissions and makes it easier to prepare for the next hiring stage.",
+        ],
+        bullets: ["Confirm whether NYSC completion is mandatory.", "Read the actual vacancy, not just a careers home page.", "Save the dated advert for later reference."]
+      },
+      {
+        heading: "Graduate trainees, internships and entry-level jobs are not identical",
+        paragraphs: [
+          "A trainee programme may offer a structured intake, while an entry-level job fills a defined role and an internship may require current student status. Do not assume these opportunities accept the same academic qualifications or that every graduate can apply to a student-only internship.",
+          "Choose opportunities by suitability, authentic employer source, responsibilities, location and realistically verifiable conditions. Tailor your application to a manageable number of real openings instead of sending one generic CV to every platform. Stay alert to impostor agents requesting upfront processing fees.",
+        ],
+        bullets: ["Check requirements for the particular intake.", "Avoid paid access to free recruitment.", "Do not describe a pending application as an offer."]
       }
     ],
     sources: [
@@ -633,7 +697,7 @@ export const careerGuides: CareerGuide[] = [
     description: "Check suspicious job offers for fake domains, upfront payments, unexpected offers, early requests for sensitive information and copied employer branding.",
     summary: "A professional-looking logo is not proof of a real job. Verify the vacancy through the employer's official website, check the sender and destination domain, and treat payment or urgent requests for financial information as major warning signs.",
     answer: "Before responding, independently find the employer's official careers page and confirm the vacancy. Do not pay for an application, shortlist, interview, training slot or appointment, and do not send banking details or identity documents to an unverified recruiter.",
-    reviewedAt: "2026-10-05",
+    reviewedAt: "2026-10-09",
     facts: [
       { label: "Major red flag", value: "Payment for recruitment access" },
       { label: "Verify", value: "Employer website and email domain" },
@@ -662,6 +726,14 @@ export const careerGuides: CareerGuide[] = [
           "Scam messages can copy logos, use job boards or social media and create urgency around a high salary or immediate offer.",
           "A real-looking document can still be fraudulent. Verify the role, domain, contact and recruitment stage before acting."
         ]
+      },
+      {
+        heading: "How to verify remote and work-from-home jobs advertised in Nigeria",
+        paragraphs: [
+          "Find the employer's website independently rather than relying only on a shortened link from a social-media advert. Check whether the specific role or authorised recruitment provider appears there. A company logo, official-looking letterhead, mass-shared PDF or screenshot of a salary is not proof of authorisation.",
+          "Be suspicious of demands for an upfront training deposit, onboarding fee, equipment payment, bank PIN, BVN or one-time security code. A promise of instant high earnings with no assessment or genuine employer contact needs independent confirmation. Where a recruiter is involved, verify that the employer actually authorised the opening and that the application destination is legitimate.",
+        ],
+        bullets: ["Check the vacancy against the official employer domain.", "Do not pay to unlock interviews or a shortlist.", "Protect identity documents and passwords."]
       }
     ],
     sources: [
