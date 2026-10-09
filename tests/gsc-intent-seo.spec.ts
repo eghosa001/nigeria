@@ -10,6 +10,17 @@ test("GSC-priority snippets and four-pillar discovery stay useful", async ({ pag
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/services\/cac-business-name-registration$/);
   await expect(page.getByRole("link", { name: /Need a limited company instead/ })).toHaveAttribute("href", "/services/cac-company-registration");
 
+  // Existing service canonicals expand verified long-tail query coverage.
+  for (const [path, title, question] of [
+    ["/services/anambra-asin-registration", /Anambra ASIN Registration: Get Your Number Online/, /Which ASIN registration option should I choose/],
+    ["/services/passport-application-tracking", /Track Nigerian Passport Application: NIS Status/, /track my Nigerian passport application with only my NIN/],
+    ["/services/ninauth-nin-verification", /NIN Sharecode: Generate & Verify with NINAuth/, /What is a NIN Sharecode and how is it different/],
+  ] as const) {
+    await page.goto(path);
+    await expect(page).toHaveTitle(title);
+    await expect(page.getByRole("heading", { name: question })).toBeVisible();
+  }
+
   await page.goto("/jobs/plan-international-nigeria-careers");
   const jobDescription = await page.locator('meta[name="description"]').getAttribute("content");
   expect(jobDescription?.length ?? 0).toBeGreaterThan(75);
