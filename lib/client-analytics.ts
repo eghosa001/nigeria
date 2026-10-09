@@ -17,6 +17,7 @@ export function trackEvent(name: string, params: AnalyticsEventParams = {}) {
     window.location.pathname,
     navigator.webdriver,
     navigator.userAgent,
+    window.location.hostname,
   );
   if (!enabled) return;
 
