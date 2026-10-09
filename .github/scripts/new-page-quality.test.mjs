@@ -70,8 +70,12 @@ test("real git diff gates only added records and rejects an unsourced publicatio
       requirements: ["Identification", "Application receipt"], steps: ["Open official route", "Complete form", "Save receipt"],
       notes: ["Reconfirm all live fees"], related: ["existing-guide"], sources: [{ url: "https://example.gov.ng", lastChecked: "2026-10-08" }] };
     writeFileSync(join(root, "data/services.json"), JSON.stringify([record]));
+    git("add", ".");
+    git("commit", "-qm", "add service");
     execFileSync(process.execPath, [gate, "--base", base], { cwd: root });
     writeFileSync(join(root, "data/services.json"), JSON.stringify([{ ...record, sources: [] }]));
+    git("add", ".");
+    git("commit", "-qm", "remove verification");
     assert.throws(() => execFileSync(process.execPath, [gate, "--base", base], { cwd: root, stdio: "pipe" }), /Command failed/);
   } finally { rmSync(root, { recursive: true, force: true }); }
 });
