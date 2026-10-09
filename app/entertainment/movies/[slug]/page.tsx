@@ -95,8 +95,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty Cast (2025): Actors & Netflix Watch Guide",
-    description: "Oversabi Aunty (2025) cast includes Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa and Jemima Osunde. Read the story and see the official Netflix link.",
+    title: "Oversabi Aunty Cast & Where to Watch on Netflix",
+    description: "Oversabi Aunty (2025): full cast led by Toyin Abraham, story, 127-minute runtime, official FilmOne trailer and Netflix Nigeria viewing link.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.
@@ -377,7 +377,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Quick facts about " + title.title}
-            summary={title.title + " is a " + title.year + " Nigerian movie" + (featuredCast.length ? " starring " + featuredCast.slice(0, 3).join(", ") : "") + "." + (platforms.length ? " Current verified availability: " + platforms.join(" / ") + "." : "")}
+            summary={title.title + " is a " + title.year + " Nigerian movie" + (featuredCast.length ? " starring " + featuredCast.slice(0, 3).join(", ") : "") + "." + (platforms.length ? " Official viewing link" + (platforms.length > 1 ? "s" : "") + ": " + platforms.join(" / ") + "; check access and regional availability before subscribing." : "")}
             facts={[
               { label: "Country / year", value: "Nigeria · " + title.year },
               { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
@@ -471,6 +471,11 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             <section id="watch">
               <span className="eyebrow">Official availability</span>
               <h2>Where to watch {title.title}</h2>
+              {title.slug === "oversabi-aunty" ? (
+                <p className="movie-long-summary">
+                  Netflix Nigeria lists Oversabi Aunty in its Nollywood catalogue. Open the official Netflix title page and sign in to check playback for your account and location. The FilmOne link is an official trailer, not a free full-movie upload.
+                </p>
+              ) : null}
               {!availabilityLinks.length ? (
                 <p className="movie-long-summary">
                   No current official streaming, broadcast or cinema link is verified for this title. The references below verify the movie record without implying that it is available to watch there.
@@ -495,6 +500,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                         <span>{link.platform}</span>
                         <strong>{link.label}</strong>
                       </div>
+                      {link.note ? <p className="movie-long-summary">{link.note}</p> : null}
                       <dl>
                         <div><dt>Access</dt><dd>{accessLabel(link.access)}</dd></div>
                         {link.publisher ? <div><dt>Publisher</dt><dd>{link.publisherUrl ? <a href={link.publisherUrl} target="_blank" rel="noreferrer">{link.publisher} ↗</a> : link.publisher}</dd></div> : null}
