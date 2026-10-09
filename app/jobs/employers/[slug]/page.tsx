@@ -43,7 +43,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: employer.name + " jobs and careers",
-    description: "Verified job and career records for " + employer.name + " in MyNigeriaGuide.",
+    description: "Job opportunities and career information for " + employer.name + " in MyNigeriaGuide.",
     url: pageUrl,
     about: { "@type": "Organization", name: employer.name },
     mainEntity: {
@@ -72,7 +72,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
           <span className="eyebrow">Employer career hub</span>
           <h1>{employer.name} jobs & careers in Nigeria</h1>
           <p className="page-intro">
-            MyNigeriaGuide currently has {items.length} distinct verified records for {employer.name}.
+            Explore {items.length} job listings and career pathways for {employer.name}.
             Open roles, closed exercises and employer-wide career portals remain clearly separated.
           </p>
 
@@ -80,11 +80,11 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
             title={"What is currently available from " + employer.name + "?"}
             summary={
               openItems.length
-                ? openItems.length + " verified " + employer.name + " " + (openItems.length === 1 ? "opportunity is" : "opportunities are") + " currently marked open. Check each exact record before applying."
-                : "No record in this employer hub is currently marked open. Use the verified career route or closed records for context and re-check the employer source for new vacancies."
+                ? openItems.length + " " + employer.name + " " + (openItems.length === 1 ? "opportunity is" : "opportunities are") + " currently marked open. Check the employer source before applying."
+                : "No listed opportunities are currently marked open. Check the employer’s careers website for new vacancies."
             }
             facts={[
-              { label: "Verified records", value: String(items.length) },
+              { label: "Listed opportunities", value: String(items.length) },
               { label: "Open now", value: String(openItems.length) },
               { label: "Sector", value: employer.sector },
               { label: "Latest source check", value: employer.latestVerified },
@@ -94,7 +94,7 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
               { href: "/jobs/open-now", label: "All jobs open now" },
               { href: "/jobs/employers", label: "Browse employers" },
             ]}
-            note="A company careers page is not the same as a live vacancy. MyNigeriaGuide keeps the status of each record separate."
+            note="An employer careers page does not necessarily mean applications are open. Always check the current vacancy and deadline."
           />
         </div>
       </section>
@@ -103,9 +103,9 @@ export default async function JobEmployerPage({ params }: { params: Promise<{ sl
         <div className="container">
           <div className="minimal-section-heading">
             <div>
-              <span className="eyebrow">Verified records</span>
+              <span className="eyebrow">Job opportunities</span>
               <h2>{employer.name} opportunities and career routes.</h2>
-              <p>Apply only through the official source shown on the exact record you choose.</p>
+              <p>Review the details and apply only through the official employer or agency link.</p>
             </div>
           </div>
           <JobCollection opportunities={items} />

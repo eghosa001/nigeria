@@ -10,7 +10,6 @@ export function LiveJobsDirectory() {
   const [batch, setBatch] = useState(1);
   const [visiblePage, setVisiblePage] = useState(1);
   const [maxBatches, setMaxBatches] = useState(25);
-  const [approximateAvailable, setApproximateAvailable] = useState(2460);
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
   const [query, setQuery] = useState("");
@@ -27,7 +26,6 @@ export function LiveJobsDirectory() {
       setBatch(result.batch);
       setVisiblePage(1);
       setMaxBatches(result.batches);
-      setApproximateAvailable(result.approximateAvailable);
       setLocation("all");
     } catch (error) {
       console.error(error);
@@ -61,21 +59,20 @@ export function LiveJobsDirectory() {
     <div className="jobs-directory">
       <div className="jobs-controls" aria-label="Filter live Nigeria jobs">
         <label className="jobs-search">
-          <span>Search loaded listings</span>
+          <span>Search these results</span>
           <input value={query} onChange={(event) => { setQuery(event.target.value); setVisiblePage(1); }} placeholder="Role, company or location…" />
         </label>
         <label>
           <span>Location</span>
           <select value={location} onChange={(event) => { setLocation(event.target.value); setVisiblePage(1); }}>
-            <option value="all">All loaded locations</option>
+            <option value="all">All locations shown</option>
             {locations.map((value) => <option key={value} value={value}>{value}</option>)}
           </select>
         </label>
       </div>
 
       <div className="jobs-results-line" aria-live="polite">
-        <strong>{filtered.length}</strong> listings in this batch · showing {visible.length ? (visiblePage - 1) * PAGE_SIZE + 1 : 0}–{(visiblePage - 1) * PAGE_SIZE + visible.length}
-        <span> · approximately {approximateAvailable.toLocaleString("en-NG")} source listings across {maxBatches} batches</span>
+        <strong>{filtered.length}</strong> matching listings · showing {visible.length ? (visiblePage - 1) * PAGE_SIZE + 1 : 0}–{(visiblePage - 1) * PAGE_SIZE + visible.length}
         {loading ? <span> · Updating…</span> : null}
       </div>
 
@@ -104,33 +101,33 @@ export function LiveJobsDirectory() {
       {failed && !jobs.length ? (
         <div className="jobs-empty">
           <strong>Live market feed is temporarily unavailable.</strong>
-          <p>The curated MyNigeriaGuide directory below remains available and source-verified.</p>
+          <p>You can still browse the MyNigeriaGuide opportunities above.</p>
         </div>
       ) : null}
 
       {pages > 1 ? (
-        <nav className="jobs-pagination" aria-label="Page through jobs in this batch">
+        <nav className="jobs-pagination" aria-label="Page through current job results">
           <button type="button" disabled={visiblePage <= 1} onClick={() => setVisiblePage((page) => Math.max(1, page - 1))}>← Previous</button>
           <span>Page {visiblePage} of {pages}</span>
           <button type="button" disabled={visiblePage >= pages} onClick={() => setVisiblePage((page) => Math.min(pages, page + 1))}>Next →</button>
         </nav>
       ) : null}
 
-      <nav className="jobs-pagination" aria-label="Live jobs batches">
-        <button type="button" onClick={() => void load(Math.max(1, batch - 1))} disabled={loading || batch <= 1}>← Previous 100</button>
+      <nav className="jobs-pagination" aria-label="Browse more external job results">
+        <button type="button" onClick={() => void load(Math.max(1, batch - 1))} disabled={loading || batch <= 1}>← Previous results</button>
         <label>
-          <span className="sr-only">Live jobs batch</span>
+          <span className="sr-only">Choose a results group</span>
           <select value={batch} onChange={(event) => void load(Number(event.target.value))} disabled={loading}>
             {Array.from({ length: maxBatches }, (_, index) => index + 1).map((value) => (
-              <option value={value} key={value}>Batch {value} of {maxBatches}</option>
+              <option value={value} key={value}>Results {value} of {maxBatches}</option>
             ))}
           </select>
         </label>
-        <button type="button" onClick={() => void load(Math.min(maxBatches, batch + 1))} disabled={loading || batch >= maxBatches}>Next 100 →</button>
+        <button type="button" onClick={() => void load(Math.min(maxBatches, batch + 1))} disabled={loading || batch >= maxBatches}>More results →</button>
       </nav>
 
       <p className="job-muted">
-        Search and location filters apply only to the 100 listings currently loaded. Use the batch selector to explore more opportunities. Verify details and deadlines at the employer's website; applications are handled externally.
+        Search and location filters apply to the results currently displayed. Choose another results group to browse more listings. Check each vacancy and deadline on the employer’s website before applying.
       </p>
     </div>
   );

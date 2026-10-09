@@ -69,10 +69,10 @@ export default async function YouTubeChannelPage({ params }: { params: Promise<{
           { label: hub.channel.name },
         ]} />
 
-        <span className="eyebrow">Approved YouTube publisher</span>
+        <span className="eyebrow">YouTube movie publisher</span>
         <h1>{hub.channel.name} movies on YouTube.</h1>
         <p className="page-intro">
-          MyNigeriaGuide currently links {hub.movieCount} complete full-length movie records from {hub.channel.name}.
+          Explore {hub.movieCount} full-length movies from {hub.channel.name}.
           Open a movie guide first for cast, runtime and source details, then continue to the official YouTube upload.
         </p>
 
@@ -80,12 +80,12 @@ export default async function YouTubeChannelPage({ params }: { params: Promise<{
           <div><span>Full movie guides</span><strong>{hub.movieCount}</strong></div>
           <div><span>Latest year covered</span><strong>{hub.years[0] ?? "—"}</strong></div>
           <div><span>Source checked</span><strong>{hub.latestChecked}</strong></div>
-          <div><span>Publisher status</span><strong>{hub.channel.channelId ? "YouTube API resolved" : "Approved source"}</strong></div>
+          
         </div>
 
         {hub.recurringCast.length ? (
           <div className="info-box top-gap">
-            <h2>Recurring cast in this catalog</h2>
+            <h2>Actors appearing in several films</h2>
             <p>{hub.recurringCast.map((item) => item.name + " (" + item.count + ")").join(" · ")}</p>
           </div>
         ) : null}

@@ -111,7 +111,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <h1>{item.title}</h1>
             <p className="page-intro">{item.summary}</p>
             <div className="guide-save-action"><SavePageButton href={"/jobs/" + item.slug} title={item.title} kind="job" /></div>
-            {!isIndexableJobOpportunity(item) ? <p className="job-muted">Employer-directory listing: confirm the specific role, requirements and opening dates on the official careers site. This record is not a standalone verified vacancy.</p> : null}
+            {!isIndexableJobOpportunity(item) ? <p className="job-muted">This is an employer career pathway, not an individual open vacancy. Visit the official careers website to check available roles, requirements and deadlines.</p> : null}
             <p className="job-muted">Applies to {item.location} · Employer: {item.organization} · Verified {item.verifiedAt}</p>
             {item.nextMilestone ? <div className="job-milestone"><strong>Current next step</strong><p>{item.nextMilestone}</p></div> : null}
           </div>

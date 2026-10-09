@@ -1,8 +1,12 @@
+import { execFileSync } from "node:child_process";
 import { publicServices, services } from "../lib/data";
 import { getServiceJourney } from "../lib/journey";
 import { hasExplicitServiceGuidance } from "../lib/service-guidance";
 import { getRequirementDetails } from "../lib/requirement-details";
 import { getStepDetails } from "../lib/step-details";
+
+// Public editorial copy is part of the content-quality contract. Cheap, dependency-free guard.
+execFileSync(process.execPath, ["scripts/check-public-copy.mjs"], { stdio: "inherit", timeout: 10_000 });
 
 const errors: string[] = [];
 const warnings: string[] = [];

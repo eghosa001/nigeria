@@ -144,7 +144,7 @@ export default function ExplorePage() {
                   </Link>
                   <p className="tour-photo-credit">Photo: <a href={creditUrl} target="_blank" rel="noopener noreferrer">{photo.credit}</a>
                     {" · "}<a href={licenseUrl} target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
-                    {" · "}Cropped to fit</p>
+                    </p>
                 </article>
               );
             })}
@@ -188,7 +188,7 @@ export default function ExplorePage() {
             <div>
               <span className="eyebrow">Places</span>
               <h2>Visit, eat or stay.</h2>
-              <p>Browse {explorePlaces.length} verified mapped places across attractions, nature, landmarks, restaurants, hotels and shopping. Eight places appear initially. Use filters or show more to explore at your own pace.</p>
+              <p>Find attractions, nature spots, landmarks, restaurants, hotels and shopping destinations. Filter by location or interest to find your next stop.</p>
             </div>
           </div>
           <ExplorePlaceDirectory
