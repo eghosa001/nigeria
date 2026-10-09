@@ -38,10 +38,40 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
 }
 
+const evergreenTripAnswers: Record<string, Array<{ question: string; answer: string }>> = {
+  "benin-city": [
+    { question: "What places should I visit in Benin City, Edo State?", answer: "For a first heritage visit, start with the Benin City National Museum for context, then consider the Igun Street bronze-casting area and publicly accessible parts of the palace surroundings. The royal and workshop spaces have their own access and photography expectations; ask before entering." },
+    { question: "Is Okomu National Park inside Benin City?", answer: "No. Okomu is an Edo State nature destination outside central Benin City. Arrange it as a separate trip with park guidance, road time and safety checks rather than treating it as another city-centre stop." },
+  ],
+  "abeokuta": [
+    { question: "Where is Olumo Rock located in Nigeria?", answer: "Olumo Rock is in Abeokuta, Ogun State. A heritage day can pair the rock with the Itoku adire textile area and the Ake palace surroundings, but confirm access and photo rules for each stop." },
+    { question: "What is the Olumo Rock entrance fee?", answer: "An official, reliable current universal gate price has not been verified for this guide. Ask the site or the Ogun tourism operator for the live ticket, guiding and facility charges before travel; avoid paying someone who merely forwards an old price screenshot." },
+  ],
+  "obudu-mountain-resort": [
+    { question: "Where is Obudu Mountain Resort in Nigeria?", answer: "Obudu Mountain Resort is in Cross River State's Obanliku highland area. It is not a quick walk or short hop from Calabar; plan road transfers, fuel, daylight and overnight arrangements before committing to a trip." },
+    { question: "How much does Obudu Mountain Resort cost per person?", answer: "There is no safely verified single current price covering accommodation, travel and every activity. Cross River State has announced facility rehabilitation; obtain a current room and attraction quote directly from the responsible operator and confirm which facilities are actually working." },
+  ],
+  "nigeria-landmarks-places-to-visit": [
+    { question: "Which waterfalls can I visit in Nigeria, and where are they?", answer: "Erin-Ijesha Waterfall is in Osun State, while Gurara Falls is in Niger State. They suit different regional routes. Check weather, local access and trail safety before planning a long transfer specifically for waterfall photography." },
+    { question: "Are all Nigeria national parks open for tourism?", answer: "Do not treat a headline list of national parks as a promise that each park accepts visitors. Confirm the exact park's current access, ranger/guide requirements, transport and security conditions directly with its responsible authority before travelling." },
+  ],
+  "calabar": [
+    { question: "What are the main tourist attractions in Calabar, Nigeria?", answer: "The Marina Resort waterfront, Slave History Museum and historic Old Residency circuit offer a mixture of leisure and heritage. Check each operator's opening and exhibit access; Cross River's remote mountain and wildlife destinations need separate travel days." },
+    { question: "Is visiting Calabar the same as attending Carnival Calabar?", answer: "No. Calabar has year-round history, culture and waterfront attractions, while Carnival Calabar is a seasonal programme. If travelling in December, consult the specific official schedule; for another month, focus on the enduring city attractions." },
+  ],
+  "lagos": [
+    { question: "Where can I find things to do in Lagos with kids or as a couple?", answer: "Use the dedicated Lagos things-to-do guide for family suitability, neighbourhood choices and an achievable one- or two-day plan. Pair attractions by area rather than trying to travel from the Mainland to the Island and Lekki repeatedly." },
+  ],
+  "abuja": [
+    { question: "Where can I find family-friendly places to visit in Abuja?", answer: "The dedicated Abuja things-to-do guide separates easy parks, lakeside plans, landmark etiquette and practical options for children or couples. Confirm current activities, access and age restrictions with each operator." },
+  ],
+};
+
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
   const stops = guide.highlights.slice(0, 3).map((item) => item.name);
   const advice = guide.planning[0]?.detail;
   return [
+    ...(evergreenTripAnswers[guide.slug] ?? []),
     {
       question: "What should I see in " + guide.shortTitle + "?",
       answer: stops.length
