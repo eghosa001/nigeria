@@ -19,6 +19,10 @@ test("movie shelves are relevant, unique and never link to the current movie", (
     assert.equal(new Set(slugs).size, slugs.length);
     assert.ok(!slugs.includes(movie.slug));
     assert.ok(shelves.every((shelf) => shelf.items.length > 0 && shelf.items.length <= 3));
+    for (const shelf of shelves.filter((entry) => entry.title.startsWith("More movies featuring "))) {
+      const name = shelf.title.slice("More movies featuring ".length).toLowerCase();
+      assert.ok(shelf.items.every((item) => item.cast.some((actor) => actor.toLowerCase() === name)));
+    }
   }
 });
 

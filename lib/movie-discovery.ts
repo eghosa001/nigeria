@@ -21,7 +21,6 @@ export type MovieRecommendationShelf = {
 export function getMovieRecommendationShelves(current: EntertainmentTitle): MovieRecommendationShelf[] {
   const used = new Set([current.slug]);
   const publishers = new Set(officialPublishers(current));
-  const cast = new Set(current.cast.map(key));
   const genres = new Set(current.genres.filter((genre) => key(genre) !== "nollywood").map(key));
   const shelves: MovieRecommendationShelf[] = [];
 
@@ -41,20 +40,22 @@ export function getMovieRecommendationShelves(current: EntertainmentTitle): Movi
     });
   }
 
-  const sharedCast = entertainmentTitles
-    .filter((item) => !used.has(item.slug))
-    .map((item) => ({ item, shared: overlap(item.cast, cast) }))
-    .filter(({ shared }) => shared > 0)
-    .sort((a, b) => b.shared - a.shared || b.item.year - a.item.year)
-    .slice(0, 3).map(({ item }) => item);
-  if (sharedCast.length) {
-    sharedCast.forEach((item) => used.add(item.slug));
-    const firstShared = current.cast.find((name) => sharedCast.some((item) => item.cast.some((actor) => key(actor) === key(name))));
+  // Every movie in a named actor shelf must actually credit that performer.
+  let actorShelves = 0;
+  for (const actor of current.cast.slice(0, 8)) {
+    if (actorShelves >= 2) break;
+    const withActor = entertainmentTitles
+      .filter((item) => !used.has(item.slug) && item.cast.some((name) => key(name) === key(actor)))
+      .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title))
+      .slice(0, 2);
+    if (!withActor.length) continue;
+    withActor.forEach((item) => used.add(item.slug));
     shelves.push({
-      title: firstShared ? "More movies featuring " + firstShared : "More with this cast",
-      description: "Explore other films with actors from this movie.",
-      items: sharedCast,
+      title: "More movies featuring " + actor,
+      description: "Other films crediting " + actor + " in the cast.",
+      items: withActor,
     });
+    actorShelves += 1;
   }
 
   const sameGenre = entertainmentTitles
