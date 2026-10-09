@@ -183,7 +183,7 @@ export function AdminAnalyticsDashboard() {
 
       <p className="analytics-clean-note">
         {data.ga4Available ? (
-          <>GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.</>
+          <>GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Only mynigeriaguide.com production host events are included; admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.</>
         ) : (
           <>PostHog is loading independently. GA4 Data API reporting is currently unavailable, so GA4 totals below should not be treated as visitor counts until that secondary connection is restored.</>
         )}
@@ -415,6 +415,12 @@ export function AdminAnalyticsDashboard() {
           <div><span className="eyebrow">Useful actions</span><h2>What visitors actually do</h2></div>
           <small>Privacy-safe aggregate events only</small>
         </div>
+        <p className="analytics-clean-note">
+          GA4 key-event setup is separate from tracking: in GA4 Admin → Data display → Events, mark
+          <strong> job_apply_click</strong> and <strong>official_link_click</strong> as key events.
+          These count clicks to external application/service sources, not completed applications.
+          Related-content and save events remain engagement metrics, not conversions.
+        </p>
         {(data.interactions ?? []).length ? (
           <div className="analytics-ranking">
             {(data.interactions ?? []).map((row, index) => (
