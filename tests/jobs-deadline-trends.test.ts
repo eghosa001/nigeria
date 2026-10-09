@@ -37,7 +37,9 @@ test("homepage keeps all pillars distinct and rotates temporary deadline trends"
   assert.equal(new Set(today.map((item) => item.pillar)).size, today.length);
   assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/guides/national-ai-innovation-challenge-2026");
   assert.equal(getCurrentHomeSocialTrends("2026-10-13").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/zenith-bank-zecathon-6-hackathon-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-14").some((item) => item.pillar === "Jobs & Careers"), false);
+  assert.equal(getCurrentHomeSocialTrends("2026-10-14").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nigerian-army-sscc-50-2027");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-17").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nigerian-army-sscc-50-2027");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-18").some((item) => item.pillar === "Jobs & Careers"), false);
 });
 
 test("challenge reuses one canonical verified guide, not a fabricated job vacancy", () => {
