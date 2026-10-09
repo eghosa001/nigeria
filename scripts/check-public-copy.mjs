@@ -39,7 +39,8 @@ function sources(dir) {
 
 const failures = [];
 for (const path of [...sources("app"), ...sources("components")]) {
-  const source = readFileSync(path, "utf8");
+  // Ignore standalone implementation comments; the reader never sees them.
+  const source = readFileSync(path, "utf8").replace(/^\s*\/\/[^\n]*/gm, "");
   for (const [pattern, issue] of forbidden) {
     const match = source.match(pattern);
     if (match?.index !== undefined) {
