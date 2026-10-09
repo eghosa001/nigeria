@@ -466,20 +466,22 @@ const rawJobOpportunities: CareerOpportunity[] = [
     sector: "Government",
     status: "open",
     statusLabel: "Applications ongoing",
-    summary: "The Nigerian Army's official recruitment portal currently states that 92 Regular Recruits Intake (92RRI) online applications are ongoing for trades and non-trades applicants.",
+    summary: "The Nigerian Army's official recruitment portal currently states that 92 Regular Recruits Intake (92RRI) online applications are ongoing for trades/non-trades candidates and a separately labelled Special Skilled category.",
     location: "Nigeria",
     employmentType: "Military recruitment / Regular Recruit Intake",
-    audiences: ["SSCE holders", "Tradesmen/Women", "Non-Tradesmen/Women", "Skilled applicants"],
-    fields: ["Military service", "Technical trades", "Skilled trades", "Non-trade roles"],
+    audiences: ["SSCE holders", "Tradesmen/Women", "Non-Tradesmen/Women", "Special Skilled applicants"],
+    fields: ["Military service", "Technical trades", "Skilled trades", "Non-trade roles", "Marine mechanics", "Electrical and mechanical engineering skills"],
     qualifications: [
       "Applicants must have at least four passes including English Language in not more than two sittings in WASSCE, GCE, NECO, NABTEB or NBAIS.",
-      "Tradesmen/Women must also hold an appropriate Trade Test or City & Guild certificate."
+      "Tradesmen/Women must also hold an appropriate Trade Test or City & Guild certificate.",
+      "The 92RRI portal has a separate Special Skilled category. Read that category\'s specific conditions rather than assuming trades/non-trades rules are identical."
     ],
     requirements: [
       "Applicants must be single Nigerian citizens by birth.",
       "A National Identification Number/National Identity Card and BVN slip are required, and identity details should match across credentials.",
       "Applicants must be medically, physically and psychologically fit and have no criminal conviction.",
       "The official portal states ages 18–22 for non-trades applicants; trades applicants must not be above 26 years by 21 October 2026.",
+      "The Special Skilled route separately advertises ages 18–35 and includes boat operation, marine mechanics and electrical/mechanical engineering skills." ,
       "Minimum height is 1.68 m for male applicants and 1.65 m for female applicants.",
       "Applicants must apply using their state of origin rather than state of residence."
     ],
@@ -494,21 +496,22 @@ const rawJobOpportunities: CareerOpportunity[] = [
     applicationSteps: [
       "Open the official Nigerian Army recruitment portal.",
       "Create or use your recruitment account and complete the online form.",
-      "Submit the application online and print the photo card.",
-      "Complete the guarantor and other required forms before screening.",
+      "After completing the online form, print the photo card and make sure you also finish the online SUBMIT step. The Army warns that printing the photo card without submitting online can lead to disqualification.",
+      "Complete the guarantor, applicant declaration and state/LGA forms requested by the portal, and prepare signed versions for screening.",
       "If shortlisted, report to your state-of-origin screening centre with the signed documents requested by the Army."
     ],
     officialUrl: "https://recruit.army.mil.ng/",
     officialUrlLabel: "Apply on the official Nigerian Army portal",
-    verifiedAt: "2026-10-04",
+    verifiedAt: "2026-10-09",
     nextMilestone: "The official portal says shortlisted candidates are expected to attend state screening from 17 November to 1 December 2026.",
     feeNote: "The Nigerian Army states that recruitment is FREE. Do not pay for application access, shortlisting or screening.",
     sourceNotes: [
       "The Nigerian Army portal currently labels 92RRI online application as ongoing.",
-      "The portal publishes the qualification, age, height, identity and screening-document requirements used in this guide."
+      "The portal publishes the qualification, age, height, identity and screening-document requirements used in this guide.",
+      "On 9 October the official page also describes Special Skilled eligibility and explicitly warns that applicants must submit the online application after printing the photo card."
     ],
     sources: [
-      { label: "Nigerian Army Recruitment Portal", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-04" }
+      { label: "Nigerian Army Recruitment Portal", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-09" }
     ]
   },
   {

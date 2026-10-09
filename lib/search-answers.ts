@@ -19,6 +19,25 @@ function listPreview(items: string[], limit = 3) {
 // Follow-ups match evidenced Search Console intents and official source details.
 // They complement, rather than duplicate, the five standard service questions.
 const specificFollowUps: Record<string, SearchAnswer[]> = {
+  "nigeria-landing-exit-card": [
+    { question: "Do Nigerian passport holders need a Landing or Exit Card?", answer: "No. The NIS LECARD FAQ says travellers using Nigerian passports do not need these cards. It directs foreign travellers entering or leaving Nigeria to the official portal, while transit passengers are excluded." },
+    { question: "When should I fill Nigeria's arrival card, and can I reprint it?", answer: "The official NIS FAQ says Landing Cards can be created 24–48 hours before arrival. If your confirmation is lost, look for the emailed copy or use NIS's Get Your Last Card facility." },
+  ],
+  "pencom-open-rsa": [
+    { question: "Do I need another pension RSA if I change employers?", answer: "No. PenCom says your RSA stays with you. Supply your existing RSA details to the new employer instead of opening a duplicate pension account." },
+  ],
+  "ecowas-travel-certificate": [
+    { question: "Should I renew or re-issue an ECOWAS Travel Certificate?", answer: "NIS offers distinct Fresh, Renew and Re-issue application paths. For an expiring certificate choose renewal; if the document is lost or damaged, check the official replacement conditions before paying." },
+  ],
+  "bvn-data-update": [
+    { question: "Can I change my BVN date of birth twice?", answer: "CBN's BVN framework permits a supported date-of-birth correction only once, with evidence. Ask the bank handling your BVN to review the records before submitting the amendment." },
+  ],
+  "inec-replace-lost-damaged-pvc": [
+    { question: "Is a PVC replacement the same as changing my polling unit?", answer: "No. Replacement addresses a missing or damaged physical voter card; a change of voting location uses INEC's separate voter-transfer service." },
+  ],
+  "police-character-certificate": [
+    { question: "How can someone validate my Nigerian Police Character Certificate?", answer: "Use POSSAP's official Validate Document service with the issued certificate's document number. For use abroad, separately confirm the receiving organisation's document-age and authentication requirements." },
+  ],
   "anambra-asin-registration": [
     {
       question: "Which ASIN registration option should I choose in Anambra State?",
@@ -45,7 +64,6 @@ export function getServiceSearchAnswers(service: Service): SearchAnswer[] {
   const guidance = getDetailedServiceGuidance(service);
   const requirements = listPreview(service.requirements);
   const query = searchQueryOverrides[service.slug] ?? {};
-
 
   return [
     {
