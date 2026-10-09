@@ -54,14 +54,14 @@ export const serviceScaleAgencies: Agency[] = [
     "slug": "dstv-nigeria",
     "name": "DStv Nigeria",
     "shortName": "DStv",
-    "description": "Private pay-TV subscription, payment, package and decoder self-service.",
+    "description": "DStv Nigeria subscription guides for decoder activation, package payments, upgrades and account self-service.",
     "website": "https://www.dstv.com/en-ng/"
   },
   {
     "slug": "gotv-nigeria",
     "name": "GOtv Nigeria",
     "shortName": "GOtv",
-    "description": "Private pay-TV subscription, payment, package and decoder self-service.",
+    "description": "GOtv Nigeria guides for channel packages, payment confirmation, decoder errors and subscription self-service.",
     "website": "https://www.gotvafrica.com/en-ng/"
   },
   {
