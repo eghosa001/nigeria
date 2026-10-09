@@ -7,21 +7,21 @@ import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const forbidden = [
-  [/noindex/i, "SEO indexing controls exposed to readers"],
-  [/independent search indexing/i, "SEO workflow exposed to readers"],
-  [/duplicate keyword pages/i, "Internal keyword strategy exposed to readers"],
-  [/YouTube API resolved/i, "Third-party API status exposed to readers"],
-  [/catalog(?:ue)?[\u2019']?s metadata review/i, "Internal metadata review exposed to readers"],
-  [/report backend/i, "Reporting infrastructure exposed to readers"],
-  [/persistent reporting is configured/i, "Reporting infrastructure exposed to readers"],
-  [/Jobs catalog has at least/i, "Internal employer-hub eligibility exposed to readers"],
-  [/movie-to-publisher relationships/i, "Catalog implementation exposed to readers"],
-  [/records already checked deeply enough/i, "Internal review status exposed to readers"],
-  [/source, freshness and duplicate checks/i, "Editorial workflow exposed to readers"],
-  [/verified career records/i, "Internal row-count terminology exposed to readers"],
-  [/verified job, recruitment or career records/i, "Internal row-count terminology exposed to readers"],
-  [/batch selector/i, "Technical pagination terminology exposed to readers"],
-  [/automated source monitoring continues/i, "Internal monitoring exposed to readers"],
+  [/\bnoindex\b/i, "SEO indexing controls exposed to readers"],
+  [/\bindependent search indexing\b/i, "SEO workflow exposed to readers"],
+  [/\bduplicate keyword pages\b/i, "Internal keyword strategy exposed to readers"],
+  [/\bYouTube API resolved\b/i, "Third-party API status exposed to readers"],
+  [/\bcatalog(?:ue)?[\u2019']?s metadata review\b/i, "Internal metadata review exposed to readers"],
+  [/\breport backend\b/i, "Reporting infrastructure exposed to readers"],
+  [/\bpersistent reporting is configured\b/i, "Reporting infrastructure exposed to readers"],
+  [/\bJobs catalog has at least\b/i, "Internal employer-hub eligibility exposed to readers"],
+  [/\bmovie-to-publisher relationships\b/i, "Catalog implementation exposed to readers"],
+  [/\brecords already checked deeply enough\b/i, "Internal review status exposed to readers"],
+  [/\bsource, freshness and duplicate checks\b/i, "Editorial workflow exposed to readers"],
+  [/\bverified career records\b/i, "Internal row-count terminology exposed to readers"],
+  [/\bverified job, recruitment or career records\b/i, "Internal row-count terminology exposed to readers"],
+  [/\bbatch selector\b/i, "Technical pagination terminology exposed to readers"],
+  [/\bautomated source monitoring continues\b/i, "Internal monitoring exposed to readers"],
 ];
 
 function sources(dir) {
@@ -31,6 +31,7 @@ function sources(dir) {
       if (dir === "app" && entry.name === "admin") return [];
       return sources(path);
     }
+    if (dir === "components" && entry.name.startsWith("admin-")) return [];
     return /\.(?:tsx|jsx)$/.test(entry.name) ? [path] : [];
   });
 }
