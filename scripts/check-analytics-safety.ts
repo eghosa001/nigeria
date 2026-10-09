@@ -1,5 +1,7 @@
 import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
+import { runInNewContext } from "node:vm";
+import { ANALYTICS_PRODUCTION_HOSTS, EXCLUDED_ANALYTICS_USER_AGENT_MARKERS } from "../lib/analytics-safety";
 import { analyticsStartDate, shouldEnableAnalytics } from "../lib/analytics-safety";
 
 const adsenseInfeedUserAgent =
@@ -30,6 +32,45 @@ assert.equal(analyticsStartDate(7, "2026-10-10"), "2026-10-04");
 const layoutSource = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
 assert.ok(layoutSource.includes("JSON.stringify(ANALYTICS_PRODUCTION_HOSTS)"));
 assert.ok(layoutSource.includes("JSON.stringify(EXCLUDED_ANALYTICS_USER_AGENT_MARKERS)"));
+const template = layoutSource.match(/const gaBootstrap = \`([\\s\\S]*?)\`;/)?.[1];
+assert.ok(template, "GA4 inline bootstrap must exist");
+const bootstrap = runInNewContext("\`" + template + "\`", {
+  GA_MEASUREMENT_ID: "G-TEST",
+  ANALYTICS_PRODUCTION_HOSTS,
+  EXCLUDED_ANALYTICS_USER_AGENT_MARKERS,
+  JSON,
+}) as string;
+function simulateBootstrap(hostname: string, pathname = "/", userAgent = "Mozilla/5.0", webdriver = false) {
+  const injected: string[] = [];
+  const fakeWindow: Record<string, unknown> = {
+    location: { hostname, pathname },
+  };
+  const fakeDocument = {
+    querySelector: () => null,
+    head: { appendChild: (element: { src: string }) => injected.push(element.src) },
+    createElement: () => ({
+      set async(value: boolean) { void value; },
+      setAttribute() {},
+      src: "",
+    }),
+  };
+  runInNewContext(bootstrap, {
+    window: fakeWindow,
+    navigator: { webdriver, userAgent },
+    document: fakeDocument,
+    Date,
+    encodeURIComponent,
+  }, { timeout: 1000 });
+  return { disabled: fakeWindow["ga-disable-G-TEST"], injected };
+}
+assert.equal(simulateBootstrap("mynigeriaguide.com").disabled, false);
+assert.equal(simulateBootstrap("mynigeriaguide.com").injected.length, 1);
+for (const host of ["mynigeriaguide.workers.dev", "localhost", "preview.vercel.app"]) {
+  assert.equal(simulateBootstrap(host).injected.length, 0, host);
+}
+assert.equal(simulateBootstrap("mynigeriaguide.com", "/admin/visits").injected.length, 0);
+assert.equal(simulateBootstrap("mynigeriaguide.com", "/", "HeadlessChrome").injected.length, 0);
+
 const clientSource = readFileSync(new URL("../lib/client-analytics.ts", import.meta.url), "utf8");
 assert.ok(clientSource.includes("window.location.hostname"));
 const posthogClientSource = readFileSync(new URL("../lib/posthog-client.ts", import.meta.url), "utf8");
