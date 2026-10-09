@@ -42,7 +42,7 @@ export default function LatestPage() {
   return (
     <section className="section page-top">
       <div className="container">
-        <span className="eyebrow">Fresh crawl hub</span>
+        <span className="eyebrow">Latest across Nigeria</span>
         <h1>What is new and worth checking now.</h1>
         <p className="page-intro">Fresh releases, current service changes, seasonal travel plans and verified recruitment updates across all four MyNigeriaGuide pillars.</p>
 
