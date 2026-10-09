@@ -32,7 +32,7 @@ assert.equal(analyticsStartDate(7, "2026-10-10"), "2026-10-04");
 const layoutSource = readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8");
 assert.ok(layoutSource.includes("JSON.stringify(ANALYTICS_PRODUCTION_HOSTS)"));
 assert.ok(layoutSource.includes("JSON.stringify(EXCLUDED_ANALYTICS_USER_AGENT_MARKERS)"));
-const template = layoutSource.match(/const gaBootstrap = \`([\\s\\S]*?)\`;/)?.[1];
+const template = layoutSource.match(/const gaBootstrap = \`([\s\S]*?)\`;/)?.[1];
 assert.ok(template, "GA4 inline bootstrap must exist");
 const bootstrap = runInNewContext("\`" + template + "\`", {
   GA_MEASUREMENT_ID: "G-TEST",
