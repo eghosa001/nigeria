@@ -1,5 +1,5 @@
 import { Buffer } from "node:buffer";
-import { ANALYTICS_CLEAN_START, analyticsStartDate } from "@/lib/analytics-safety";
+import { ANALYTICS_CLEAN_START, ANALYTICS_PRODUCTION_HOSTS, analyticsStartDate } from "@/lib/analytics-safety";
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 import {
   POSTHOG_COLLECTION_START,
@@ -524,30 +524,29 @@ export async function getAnalyticsDashboard(
   const rollingStartDate = rollingDate.toISOString().slice(0, 10);
   const dataStartDate = mode === "clean" ? analyticsStartDate(days, today) : rollingStartDate;
   const dateRanges = [{ startDate: dataStartDate, endDate: "today" }];
+  // Restrict clean historical reports to actual production-host events.
+  // A reporting filter is intentionally reversible; the raw "all" view remains available.
   const cleanPublicFilter = {
-    notExpression: {
-      orGroup: {
-        expressions: [
-          {
-            filter: {
-              fieldName: "pagePath",
-              stringFilter: { matchType: "BEGINS_WITH", value: "/admin", caseSensitive: false },
+    andGroup: {
+      expressions: [
+        {
+          filter: {
+            fieldName: "hostName",
+            inListFilter: { values: [...ANALYTICS_PRODUCTION_HOSTS], caseSensitive: false },
+          },
+        },
+        {
+          notExpression: {
+            orGroup: {
+              expressions: [
+                { filter: { fieldName: "pagePath", stringFilter: { matchType: "BEGINS_WITH", value: "/admin", caseSensitive: false } } },
+                { filter: { fieldName: "pagePath", stringFilter: { matchType: "BEGINS_WITH", value: "/api", caseSensitive: false } } },
+                { filter: { fieldName: "pagePath", stringFilter: { matchType: "BEGINS_WITH", value: "/_next", caseSensitive: false } } },
+              ],
             },
           },
-          {
-            filter: {
-              fieldName: "pagePath",
-              stringFilter: { matchType: "BEGINS_WITH", value: "/api", caseSensitive: false },
-            },
-          },
-          {
-            filter: {
-              fieldName: "pagePath",
-              stringFilter: { matchType: "BEGINS_WITH", value: "/_next", caseSensitive: false },
-            },
-          },
-        ],
-      },
+        },
+      ],
     },
   };
   const publicFilter = mode === "clean" ? { dimensionFilter: cleanPublicFilter } : {};
