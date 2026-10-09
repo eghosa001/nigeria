@@ -87,6 +87,7 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/youtube">Free on YouTube</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/hallelujah-challenge-october-2026">Hallelujah Challenge livestream</Link>
+            <Link href="/entertainment/lagos-life-game-2026">Lagos Life game: official link &amp; funding story</Link>
           </div>
           <details className="compact-link-menu">
             <summary>More entertainment</summary>

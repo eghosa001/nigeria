@@ -1,3 +1,4 @@
+import { armySSCC2027 } from "@/lib/job-trend-army-sscc-2027";
 import { jobGrowthWave10 } from "@/lib/job-growth-wave-10";
 import { verifiedTrendProgrammes } from "@/lib/job-trend-programmes-2026-10-08";
 import { jobGrowthWave9 } from "@/lib/job-growth-wave-9";
@@ -118,6 +119,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...armySSCC2027,
   ...verifiedTrendProgrammes,
   ...jobGrowthWave10,
   ...jobGrowthWave9,
@@ -3431,9 +3433,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Abuja", region: "FCT", country: "NG" }]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting a Medical Laboratory Scientist in Abuja through its official jobs portal.",
+    status: "closed",
+    statusLabel: "Original vacancy no longer available — check current postings",
+    summary: "EHA Clinics' previously listed Medical Laboratory Scientist vacancy for Abuja is no longer available at its original employer URL. The old job page now returns 404. Check the live EHA Clinics recruitment directory for any newly advertised Abuja laboratory vacancy before applying.",
     location: "Abuja, FCT",
     employmentType: "Clinical laboratory role",
     audiences: ["Medical laboratory scientists", "Healthcare professionals", "NYSC-completed applicants"],
@@ -3441,15 +3443,15 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Bachelor's degree in Medical Laboratory Science.", "Valid and up-to-date professional practice licence.", "NYSC completion is required by the employer's eligibility check."],
     requirements: ["Basic computer knowledge.", "Meet EHA Clinics' professional-licence and NYSC eligibility checks.", "Review the live job page before applying because vacancy status can change."],
     documents: ["CV/resume", "Professional licence details", "Education and NYSC information requested in the application"],
-    applicationSteps: ["Open EHA Clinics' official job page.", "Review the Medical Laboratory Scientist requirements.", "Complete the eligibility check.", "Continue to the official application flow."],
-    officialUrl: "https://erp.eha.ng/jobs/medical-laboratory-scientist-abuja-649",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    applicationSteps: ["Open EHA Clinics’ live careers directory to see which jobs are still advertised.", "Search for Medical Laboratory Scientist or Abuja and open a current result, if one exists.", "Confirm the professional practising licence, NYSC and experience requirements against the new vacancy, not the old saved description.", "Use the live employer form only when an exact active vacancy is available; avoid unofficial agents offering access to the closed job."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Browse current EHA Clinics vacancies",
+    verifiedAt: "2026-10-09",
     feeNote: "Apply only through EHA Clinics' official recruitment system.",
-    sourceNotes: ["EHA Clinics' jobs index listed this Abuja role as posted on 4 October 2026.", "The official detail page includes an active Apply Now eligibility flow."],
+    sourceNotes: ["EHA Clinics' former Abuja Medical Laboratory Scientist advertisement was dated 4 October 2026; on 9 October 2026 the specific detail URL returned 404 and was no longer a verified active application.", "The previous role-specific application page is no longer accessible. A new application is possible only if the employer lists a fresh vacancy on its live careers board."],
     sources: [
-      { label: "EHA Clinics — Medical Laboratory Scientist, Abuja", url: "https://erp.eha.ng/jobs/medical-laboratory-scientist-abuja-649", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics — live vacancies index (original Abuja laboratory link no longer available)", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" }
     ]
   },
   {
@@ -3597,9 +3599,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Sangotedo", region: "Lagos State", country: "NG" }]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting a Medical Doctor for its Sangotedo, Lagos location.",
+    status: "closed",
+    statusLabel: "Original vacancy no longer available — check current postings",
+    summary: "The previously advertised EHA Clinics Medical Doctor role in Sangotedo, Lagos is no longer available at its original employer URL. The vacancy page now returns 404; check the EHA Clinics careers board for currently listed medical positions rather than assuming applications are still open.",
     location: "Sangotedo, Lagos State",
     employmentType: "Clinical medical role",
     audiences: ["Medical doctors", "Physicians", "Healthcare professionals"],
@@ -3607,15 +3609,15 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Medical degree from a recognised institution.", "Completion of compulsory internship and NYSC requirements stated by EHA Clinics.", "Current professional registration and practice licence."],
     requirements: ["Meet EHA Clinics' clinical and location eligibility checks.", "Maintain current professional registration.", "Review the live vacancy before applying."],
     documents: ["CV/resume", "Medical licence and registration details", "Education and NYSC information"],
-    applicationSteps: ["Open the EHA Clinics Lagos Medical Doctor vacancy.", "Review professional requirements.", "Complete the eligibility questions.", "Continue to the official application."],
-    officialUrl: "https://erp.eha.ng/jobs/medical-doctor-lagos-541",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    applicationSteps: ["Open EHA Clinics’ current careers directory, not an old saved vacancy URL.", "Search for Medical Doctor positions and check whether any posting specifically names Sangotedo or another suitable location.", "Compare the currently advertised professional registration, NYSC, location and experience requirements against your credentials.", "If a new role is listed, use the application control on that exact new employer posting. Do not submit documents to third-party recruiters based on this closed advertisement."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Browse current EHA Clinics vacancies",
+    verifiedAt: "2026-10-09",
     feeNote: "Use EHA Clinics' official recruitment system.",
-    sourceNotes: ["EHA Clinics listed the Lagos Medical Doctor role as posted on 18 September 2026.", "The employer's detail page places the role in Sangotedo, Lagos."],
+    sourceNotes: ["The employer's original Sangotedo Medical Doctor advertisement was dated 18 September 2026; on 9 October 2026 its individual job URL returned 404, so this opportunity is marked closed until an official replacement is published.", "The earlier employer advertisement identified Sangotedo, Lagos; its former detail URL no longer serves an active job posting."],
     sources: [
-      { label: "EHA Clinics — Medical Doctor, Lagos", url: "https://erp.eha.ng/jobs/medical-doctor-lagos-541", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics — live vacancies index (original Lagos doctor link no longer available)", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" },
+      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" }
     ]
   },
   {
