@@ -3045,7 +3045,7 @@
       }
     ],
     "related": [
-      "hotelsng-cancel-refund",
+      "hotels-ng-cancel-refund-booking",
       "wakanow-book-hotel-nigeria"
     ],
     "lastVerified": "2026-10-05",
@@ -3055,56 +3055,6 @@
       "Hotels.ng Nigeria hotel reservation",
       "Hotels.ng pay on arrival",
       "Hotels.ng hotel booking Nigeria"
-    ]
-  },
-  {
-    "slug": "hotelsng-cancel-refund",
-    "title": "How Hotels.ng hotel cancellation and refunds work",
-    "shortTitle": "Hotels.ng cancellation & refund",
-    "summary": "Hotels.ng's cancellation route for an existing reservation, with refund treatment depending on whether the money is still with Hotels.ng or has already been transferred to the accommodation provider.",
-    "category": "Travel & accommodation",
-    "agencySlug": "hotels-ng",
-    "feeLabel": "Cancellation deductions depend on hotel/provider terms",
-    "feeNote": "Hotels.ng states that money paid but not yet transferred to the hotel can receive a full refund, while money already paid to the accommodation provider is subject to that provider's cancellation/no-show charges and Hotels.ng operational deductions.",
-    "timeline": "Hotels.ng does not publish one universal refund completion time because the outcome depends on the accommodation provider and where the payment is held when cancellation is requested.",
-    "status": "verified",
-    "officialPortal": "https://hotels.ng/terms",
-    "requirements": [
-      "The Hotels.ng reservation details and guest contact information for the booking being cancelled",
-      "The payment status showing whether Hotels.ng still holds the money or the accommodation provider has already received it",
-      "The selected hotel's cancellation/no-show terms for any payment already transferred to the property"
-    ],
-    "steps": [
-      "Open the Hotels.ng booking correspondence or contact Hotels.ng support with the reservation details and request cancellation.",
-      "Confirm whether the booking payment is still held by Hotels.ng or has already been transferred to the accommodation provider.",
-      "Review the hotel's cancellation or no-show charge when the accommodation provider has already received the payment.",
-      "Confirm the refund amount that Hotels.ng can process under the applicable payment and hotel conditions.",
-      "Keep the cancellation/refund correspondence until the refund is received or the accommodation provider's decision is fully resolved."
-    ],
-    "notes": [
-      "Hotels.ng states that a payment not yet transferred to the hotel can attract a 100% refund.",
-      "If payment was made directly to the hotel, Hotels.ng says it is not responsible for reimbursing that direct payment.",
-      "A no-show can be treated differently from a cancellation made before arrival, depending on the hotel's policy."
-    ],
-    "sources": [
-      {
-        "label": "Hotels.ng Terms of Service — Cancellation and Refund",
-        "agency": "Hotels.ng",
-        "url": "https://hotels.ng/terms",
-        "lastChecked": "2026-10-05"
-      }
-    ],
-    "related": [
-      "hotelsng-book-hotel",
-      "wakanow-cancel-hotel-reservation"
-    ],
-    "lastVerified": "2026-10-05",
-    "searchTerms": [
-      "Hotels.ng refund",
-      "cancel Hotels.ng booking",
-      "Hotels.ng cancellation policy",
-      "Hotels.ng hotel refund Nigeria",
-      "Hotels.ng no show refund"
     ]
   },
   {
@@ -3863,7 +3813,7 @@
     ],
     "related": [
       "hotelsng-book-hotel",
-      "hotelsng-cancel-refund"
+      "hotels-ng-cancel-refund-booking"
     ],
     "lastVerified": "2026-10-05",
     "searchTerms": [
