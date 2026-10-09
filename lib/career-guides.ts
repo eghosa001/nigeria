@@ -18,6 +18,7 @@ export type CareerGuide = {
   summary: string;
   answer: string;
   reviewedAt: string;
+  deadline?: string;
   facts: Array<{ label: string; value: string }>;
   sections: CareerGuideSection[];
   sources: CareerGuideSource[];
@@ -25,6 +26,134 @@ export type CareerGuide = {
 };
 
 export const careerGuides: CareerGuide[] = [
+  {
+    "slug": "national-ai-innovation-challenge-2026",
+    "title": "National AI Innovation Challenge 2026: N-ATLAS Eligibility, Build and Submission Guide",
+    "metaTitle": "National AI Innovation Challenge 2026: Deadline & N-ATLAS Guide",
+    "description": "Official 12 October deadline, N-ATLAS requirements, academic and enterprise eligibility, three build tracks, validation thresholds and a practical submission checklist.",
+    "summary": "Nigeria's National AI Innovation Challenge closes on 12 October 2026 at 11:59 p.m. West Africa Time. It requires a working solution using N-ATLAS and evidence from real-world testing. An idea, slide deck or generic AI chatbot alone does not qualify.",
+    "answer": "Choose one of the three N-ATLAS problem statements and the application track that fits your team. Submit a working, demonstrably N-ATLAS-powered artefact, the required validation results, documentation, a 3–5 minute demo video and your track's identity or institutional evidence before 12 October at 11:59 p.m. WAT. Check the official organiser page for any updated rules.",
+    "reviewedAt": "2026-10-09",
+    "deadline": "2026-10-12",
+    "facts": [
+      {
+        "label": "Deadline",
+        "value": "12 October 2026 · 11:59 p.m. WAT"
+      },
+      {
+        "label": "Who",
+        "value": "Eligible Nigerian builders, research teams and organisations"
+      },
+      {
+        "label": "Required",
+        "value": "Working N-ATLAS integration + real user/data evidence"
+      },
+      {
+        "label": "Category",
+        "value": "Innovation challenge — not a salaried vacancy"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Who can enter, and which applicant track fits?",
+        "paragraphs": [
+          "This is a Nigerian government-backed build challenge, not recruitment by NITDA or a promise of employment. The organiser accepts eligible Nigerian citizens, university and research teams, registered Nigerian organisations and independent developers. Applicants should choose an application track before preparing documents, because the paperwork differs.",
+          "Academic and Research applications are for university-linked teams. The public eligibility page calls for an enrolled student or researcher, a faculty supervisor and an endorsement letter signed by the Head of Department or equivalent. Innovation and Enterprise covers startups, technology companies, independent developers and innovation groups; registered companies need their CAC certificate, while individual applicants need valid identification. Diaspora teams must satisfy the published Nigeria-residency threshold.",
+          "Check team numbers on the actual application form. The official overview shows 2–5 members for both tracks, but the same site's FAQ describes 1–6 for Innovation and Enterprise. Rather than assuming either is definitive, resolve that discrepancy with the programme secretariat before submission."
+        ],
+        "bullets": [
+          "Every submission must be original work that has not previously won another competition.",
+          "Each team may submit to only one problem statement.",
+          "The organiser requires Nigerian citizenship or qualifying Nigerian registration; applications and attachments are in English."
+        ]
+      },
+      {
+        "heading": "Choose one problem statement before building",
+        "paragraphs": [
+          "Developer Infrastructure is for reusable technology that makes N-ATLAS easier to integrate. Suitable submissions include a working SDK, an interactive model playground, reproducible fine-tuning tools or bilingual developer documentation linked to functioning code. A generic tutorial or a wrapper that only calls another foundation model does not meet the stated requirement.",
+          "Voice-First Access is for services that use the official N-ATLAS automatic speech recognition capability to help Nigerians interact in supported languages. The organiser suggests accessible channels such as low-bandwidth apps, interactive voice services and voice-note flows. A useful submission should show the actual user's journey, how spoken input becomes a result, and why that interaction helps its target group.",
+          "Sectoral Fine-Tuning asks builders to specialise N-ATLAS for a well-defined domain such as health, education, agriculture, legal rights or financial literacy. A credible entry explains its lawful dataset, adaptation method, evaluation design and how a developer can call the resulting documented API. Merely changing prompts around an unrelated model is not fine-tuning N-ATLAS."
+        ]
+      },
+      {
+        "heading": "What counts as a working N-ATLAS solution?",
+        "paragraphs": [
+          "The core qualification is a functioning artefact: deployed app, usable software, model, API, dataset or developer tool that demonstrably relies on N-ATLAS. The organisers state that proposals, pitch decks, mock-ups, research papers and concept-only ideas cannot substitute for the build. Your project should let a reviewer reproduce at least one meaningful end-to-end task.",
+          "Keep a simple technical evidence trail: name the N-ATLAS component used, record the integration points, show a successful real input and output, and explain the system's limitations. If using the ASR track, demonstrate speech recognition with the relevant supported language; if using sectoral fine-tuning, show which underlying N-ATLAS checkpoint was adapted and how the model improved. Do not present a third-party AI API as the required integration.",
+          "Treat privacy and safety as part of a believable product. Use consented user sessions or permitted data for tests, remove secrets and personal records from public demonstrations, and explain failure handling. These are practical quality measures, not additional organiser entry requirements."
+        ]
+      },
+      {
+        "heading": "Real-world validation is compulsory, with different evidence by track",
+        "paragraphs": [
+          "The official challenge sets a different minimum for each problem statement. For Developer Infrastructure, demonstrate feedback from at least two external beta testers. For Voice-First Access, document at least 50 genuine user interactions with the working service. For Sectoral Fine-Tuning, report a benchmark of at least 500 examples comparing the adapted model against base N-ATLAS.",
+          "Count genuine usage, not automated replays disguised as participants. A tester log can record tasks, dated feedback, observed defects and fixes without exposing personal identities. For voice applications, explain how interactions were counted and whether users succeeded. For a benchmark, publish task definitions and an interpretable accuracy or error measure, not just a single unsupported percentage.",
+          "If the relevant minimum has not been reached by the application date, say so in your project notes and inspect the official eligibility rules before submitting. The programme says the validation requirement is mandatory; it does not announce an exemption for last-minute applicants."
+        ],
+        "bullets": [
+          "Developer tools: 2 or more external beta testers.",
+          "Voice-first applications: at least 50 real interactions.",
+          "Fine-tuned models: benchmark of 500 or more examples against base N-ATLAS."
+        ]
+      },
+      {
+        "heading": "Prepare all seven submission components",
+        "paragraphs": [
+          "Build your submission around the seven components published by the organiser. First provide a working artefact or access route: a repository with clear setup instructions, deployed service, model, live API or dataset, as appropriate. Second explain the actual N-ATLAS integration with enough technical detail for an evaluator to distinguish it from another model. Third attach real-user or real-data validation evidence matched to your problem statement.",
+          "Fourth, supply architecture, dependencies and usage documentation. Fifth, record a three-to-five-minute video that shows a real task from input to output; narration can explain the design choices but should not replace a running demonstration. Sixth, provide names, roles and affiliations for all team members. Finally, include the institutional endorsement for an academic team, or the appropriate CAC/identity evidence for enterprise or individual applicants.",
+          "Keep the evidence consistent. The project name, claimed integration, demo URL, test results and chosen track should describe the same build. Ask a teammate to follow the published setup instructions from a clean environment. Remove credentials and sensitive data from repositories or recordings before providing links."
+        ]
+      },
+      {
+        "heading": "Submission steps and the dates after the deadline",
+        "paragraphs": [
+          "Start at the official National AI Innovation Challenge page and follow its Apply Now link to the appropriate academic or innovation track. Confirm your team meets the relevant eligibility terms, select one problem statement, complete the official form, attach the seven requested components and retain the submission acknowledgement. The advertised closing time is Monday, 12 October 2026 at 11:59 p.m. WAT; do not assume a last-minute extension.",
+          "The published schedule lists the N-ATLAS integration check for 15–17 October, shortlisting notifications for 16–20 October, a mentorship phase from 25 October to 4 November, and a Digital Nigeria showcase on 8–10 November. Shortlisted participation, compute access and later opportunities are conditional; they are not cash prizes or employment guarantees.",
+          "If the application form contradicts a summary on this site, follow the official form and seek clarification from the NAIC secretariat at naic@nitda.gov.ng. The organiser's own team-size inconsistency is one example of why applicants should recheck requirements instead of relying only on shared social-media posts."
+        ]
+      },
+      {
+        "heading": "Practical final review before you submit",
+        "paragraphs": [
+          "Use the final review to catch preventable issues rather than invent additional features. Confirm that an evaluator can open the link, run the demonstration and see where N-ATLAS is used. Ensure the validation figures match logs or evaluation files, the description names a single problem statement, and any required faculty letter or registration evidence is legible.",
+          "Do not pay an intermediary for admission or send identity records through unofficial social messages. Use the government-linked programme page and its application links, check the domain you are submitting to, and keep an independent copy of the instructions you followed. Because rules and links may change close to the deadline, check the official source again immediately before final submission."
+        ],
+        "bullets": [
+          "One selected problem statement and appropriate applicant track.",
+          "Working artefact and demonstrable N-ATLAS connection.",
+          "Required real-world validation evidence and reproducible instructions.",
+          "Complete technical notes, a 3–5 minute demo and team information.",
+          "Correct institutional endorsement or identification/registration evidence."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "NCAIR / NITDA — National AI Innovation Challenge (full eligibility, dates and rules)",
+        "url": "https://ncair.nitda.gov.ng/naic/",
+        "lastChecked": "2026-10-09"
+      },
+      {
+        "label": "Federal Ministry of Communications, Innovation and Digital Economy — NAIC announcement",
+        "url": "https://fmcide.gov.ng/nationalaiinnovationchallenge/",
+        "lastChecked": "2026-10-09"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "href": "/jobs/open-now",
+        "label": "Current applications and programmes"
+      },
+      {
+        "href": "/jobs/zenith-bank-zecathon-6-hackathon-2026",
+        "label": "Another Nigerian tech innovation competition"
+      },
+      {
+        "href": "/jobs/guides/graduate-job-application-checklist",
+        "label": "Prepare application documents"
+      }
+    ]
+  },
   {
     slug: "cv-format-nigeria",
     title: "CV Format for Jobs in Nigeria",

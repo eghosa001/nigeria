@@ -1,3 +1,4 @@
+import { isEffectivelyOpen, getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { privateOpportunities } from "@/lib/jobs";
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default function PrivateJobsPage() {
-  const live = privateOpportunities.filter((item) => item.status === "open");
-  const pathways = privateOpportunities.filter((item) => item.status !== "open");
+  const live = privateOpportunities.filter((item) => isEffectivelyOpen(item));
+  const pathways = privateOpportunities.filter((item) => !isEffectivelyOpen(item));
 
   return (
     <>
@@ -31,7 +32,7 @@ export default function PrivateJobsPage() {
             <div className="jobs-private-grid">
               {live.map((item) => (
                 <article className="job-card job-card-open" key={item.slug}>
-                  <div className="job-card-top"><span className={"job-status job-status-" + item.status}>{item.statusLabel}</span><span>{item.employmentType}</span></div>
+                  <div className="job-card-top"><span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span><span>{item.employmentType}</span></div>
                   <div className="job-card-body">
                     <p className="job-organisation">{item.organization}</p>
                     <h2><Link href={"/jobs/" + item.slug}>{item.title}</Link></h2>
@@ -54,7 +55,7 @@ export default function PrivateJobsPage() {
           <div className="jobs-private-grid">
             {pathways.map((item) => (
               <article className="job-card" key={item.slug}>
-                <div className="job-card-top"><span className={"job-status job-status-" + item.status}>{item.statusLabel}</span><span>{item.employmentType}</span></div>
+                <div className="job-card-top"><span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span><span>{item.employmentType}</span></div>
                 <div className="job-card-body">
                   <p className="job-organisation">{item.organization}</p>
                   <h2><Link href={"/jobs/" + item.slug}>{item.title}</Link></h2>
@@ -70,3 +71,6 @@ export default function PrivateJobsPage() {
     </>
   );
 }
+
+// Use the live Nigeria-calendar status rather than yesterday\u0027s prerendered snapshot.
+export const dynamic = "force-dynamic";

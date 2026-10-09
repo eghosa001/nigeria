@@ -1,3 +1,4 @@
+import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
@@ -97,7 +98,7 @@ export default function RemoteJobsPage() {
             <div className="jobs-status-row">
               {employers.map((item) => (
                 <Link key={item.slug} href={"/jobs/" + item.slug} className="jobs-status-card">
-                  <span className={"job-status job-status-" + item.status}>{item.statusLabel}</span>
+                  <span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span>
                   <strong>{item.organization}</strong>
                   <small>{item.summary}</small>
                 </Link>
@@ -121,3 +122,6 @@ export default function RemoteJobsPage() {
     </>
   );
 }
+
+// Use the live Nigeria-calendar status rather than yesterday\u0027s prerendered snapshot.
+export const dynamic = "force-dynamic";

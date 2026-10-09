@@ -6,7 +6,8 @@ import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 import { getClosingSoonJobs } from "@/lib/job-runtime";
 
-export const revalidate = 3600;
+// Deadline-sensitive status must be evaluated on every request, not frozen at build time.
+export const dynamic = "force-dynamic";
 
 export function generateMetadata(): Metadata {
   const items = getClosingSoonJobs(jobOpportunities, 7);

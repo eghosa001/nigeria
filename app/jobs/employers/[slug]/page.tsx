@@ -9,7 +9,7 @@ import { getEmployerOpportunities, getJobEmployerBySlug, indexableJobEmployers }
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 export const dynamicParams = false;
 
 export function generateStaticParams() {

@@ -1,3 +1,4 @@
+import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { governmentOpportunities } from "@/lib/jobs";
@@ -24,7 +25,7 @@ export default function GovernmentJobsPage() {
           <div className="jobs-tracker-list">
             {governmentOpportunities.map((item) => (
               <article key={item.slug} className="jobs-tracker-row">
-                <div><span className={"job-status job-status-" + item.status}>{item.statusLabel}</span></div>
+                <div><span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span></div>
                 <div><small>{item.organization}</small><h2><Link href={"/jobs/" + item.slug}>{item.title}</Link></h2><p>{item.summary}</p>{item.nextMilestone ? <strong>{item.nextMilestone}</strong> : null}</div>
                 <div><span>{item.deadline ? "Deadline" : "Last checked"}</span><b>{item.deadline || item.verifiedAt}</b><Link href={"/jobs/" + item.slug}>Requirements →</Link></div>
               </article>
@@ -39,3 +40,6 @@ export default function GovernmentJobsPage() {
     </>
   );
 }
+
+// Use the live Nigeria-calendar status rather than yesterday\u0027s prerendered snapshot.
+export const dynamic = "force-dynamic";

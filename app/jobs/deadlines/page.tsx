@@ -4,7 +4,8 @@ import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 import { isEffectivelyOpen } from "@/lib/job-runtime";
 
-export const revalidate = 3600;
+// Deadline-sensitive status must be evaluated on every request, not frozen at build time.
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Nigeria Job & Recruitment Deadlines",

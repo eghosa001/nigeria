@@ -23,7 +23,7 @@ export function GET(request: Request) {
 
   return Response.json(result, {
     headers: {
-      "Cache-Control": "public, max-age=60, s-maxage=300, stale-while-revalidate=600",
+      "Cache-Control": "no-store",
       "X-Robots-Tag": "noindex",
     },
   });

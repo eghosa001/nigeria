@@ -6,7 +6,7 @@ import { JobCollection } from "@/components/job-collection";
 import { jobOpportunities } from "@/lib/jobs";
 import { getRecentlyPostedJobs } from "@/lib/job-runtime";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export function generateMetadata(): Metadata {
   const items = getRecentlyPostedJobs(jobOpportunities, 7);

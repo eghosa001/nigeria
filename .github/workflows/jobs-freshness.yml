@@ -7,6 +7,9 @@ on:
       - "lib/jobs.ts"
       - "lib/job-scale-wave.ts"
       - "lib/job-runtime.ts"
+      - "lib/career-guides.ts"
+      - "data/home-social-trends.ts"
+      - "tests/jobs-deadline-trends.test.ts"
       - "lib/job-query.ts"
       - "lib/job-topics.ts"
       - "lib/job-facets.ts"
@@ -67,7 +70,7 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
       - name: Validate Jobs content and lifecycle
-        run: npm run check:jobs
+        run: npm run check:jobs && npx tsx --test tests/jobs-deadline-trends.test.ts
       - name: Audit Jobs official/source links
         if: steps.scope.outputs.links == 'true'
         run: npm run check:job-links

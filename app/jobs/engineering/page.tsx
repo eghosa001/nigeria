@@ -31,3 +31,6 @@ export default function EngineeringJobsPage() {
     </>
   );
 }
+
+// Use the live Nigeria-calendar status rather than yesterday\u0027s prerendered snapshot.
+export const dynamic = "force-dynamic";

@@ -54,7 +54,11 @@ test("current homepage trend set spans all four pillars and all canonical pages"
     assert.ok(home.includes(`href: "${href}"`));
   }
   const hrefs = [...home.matchAll(/^    href: "([^"]+)",$/gm)].map((match) => match[1]);
-  assert.equal(new Set(hrefs).size, 4);
+  // The authored schedule can contain future replacements, while the rendered
+  // homepage is still capped at one active canonical per pillar.
+  assert.equal(new Set(hrefs).size, hrefs.length);
+  assert.ok(hrefs.includes("/jobs/deloitte-nigeria-early-careers"));
+  assert.ok(hrefs.includes("/jobs/guides/national-ai-innovation-challenge-2026"));
   assert.match(movies, /slug: "tele-x-zikora-2026"/);
   assert.match(movies, /KHytYLBb_Zk/);
 });

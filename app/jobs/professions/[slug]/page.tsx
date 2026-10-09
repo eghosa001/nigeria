@@ -9,7 +9,7 @@ import { getJobFacetOpportunities, getJobProfessionFacet, jobProfessionFacets } 
 import { isEffectivelyOpen } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export function generateStaticParams() {
   return jobProfessionFacets.map((facet) => ({ slug: facet.slug }));

@@ -3768,7 +3768,7 @@ function applyCurrentJobCorrections(item: CareerOpportunity): CareerOpportunity 
 // Always normalize known expired application windows before directory, SEO and
 // structured-data consumers read the catalog; the runtime guard remains in place.
 function closeExpiredJob(item: CareerOpportunity): CareerOpportunity {
-  if (item.status !== "open" || !item.deadline || item.deadline >= new Date().toISOString().slice(0, 10)) return item;
+  if (item.status !== "open" || !item.deadline || item.deadline >= new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0, 10)) return item;
   return {
     ...item,
     status: "closed",
