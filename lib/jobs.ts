@@ -3448,9 +3448,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrlLabel: "Browse current EHA Clinics vacancies",
     verifiedAt: "2026-10-09",
     feeNote: "Apply only through EHA Clinics' official recruitment system.",
-    sourceNotes: ["EHA Clinics' former Abuja Medical Laboratory Scientist advertisement was dated 4 October 2026; on 9 October 2026 the specific detail URL returned 404 and was no longer a verified active application.", "The official detail page includes an active Apply Now eligibility flow."],
+    sourceNotes: ["EHA Clinics' former Abuja Medical Laboratory Scientist advertisement was dated 4 October 2026; on 9 October 2026 the specific detail URL returned 404 and was no longer a verified active application.", "The previous role-specific application page is no longer accessible. A new application is possible only if the employer lists a fresh vacancy on its live careers board."],
     sources: [
-      { label: "EHA Clinics — Medical Laboratory Scientist, Abuja", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" },
+      { label: "EHA Clinics — live vacancies index (original Abuja laboratory link no longer available)", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" },
       { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" }
     ]
   },
@@ -3614,9 +3614,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrlLabel: "Browse current EHA Clinics vacancies",
     verifiedAt: "2026-10-09",
     feeNote: "Use EHA Clinics' official recruitment system.",
-    sourceNotes: ["The employer's original Sangotedo Medical Doctor advertisement was dated 18 September 2026; on 9 October 2026 its individual job URL returned 404, so this opportunity is marked closed until an official replacement is published.", "The employer's detail page places the role in Sangotedo, Lagos."],
+    sourceNotes: ["The employer's original Sangotedo Medical Doctor advertisement was dated 18 September 2026; on 9 October 2026 its individual job URL returned 404, so this opportunity is marked closed until an official replacement is published.", "The earlier employer advertisement identified Sangotedo, Lagos; its former detail URL no longer serves an active job posting."],
     sources: [
-      { label: "EHA Clinics — Medical Doctor, Lagos", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" },
+      { label: "EHA Clinics — live vacancies index (original Lagos doctor link no longer available)", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" },
       { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-09" }
     ]
   },
