@@ -49,7 +49,14 @@ jobs:
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
           non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$)' || true)"
-          if [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+          analytics_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
+          non_analytics="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
+          if [ -n "$analytics_trigger" ] && [ -z "$non_analytics" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "tour_live=false" >> "$GITHUB_OUTPUT"
+            echo "Analytics-only change; focused regression is covered in CI. Skip unrelated full live browser QA."
+          elif [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "jobs_live=true" >> "$GITHUB_OUTPUT"
             echo "tour_live=false" >> "$GITHUB_OUTPUT"
