@@ -60,14 +60,17 @@ const specificFollowUps: Record<string, SearchAnswer[]> = {
   "police-character-certificate": [
     { question: "Can I apply for Nigerian police clearance from abroad?", answer: "POSSAP offers a diaspora Police Character Certificate route. Follow the actual account and identity-verification requirements shown for your application, use the official invoice and check the overseas recipient's separate acceptance rules." },
     { question: "Is a Nigerian Police Character Certificate valid for every country for the same period?", answer: "No single overseas validity period is established by POSSAP for all visa offices and employers. The receiving authority may require a recent certificate or additional authentication. Confirm that requirement before ordering a certificate." },
+    { question: "How can someone validate my Nigerian Police Character Certificate?", answer: "Use POSSAP's official Validate Document service with the issued certificate's document number. For use abroad, separately confirm the receiving organisation's document-age and authentication requirements." },
   ],
   "bvn-data-update": [
     { question: "Can I change my BVN name or date of birth online myself?", answer: "CBN's rules require amendments through the bank's verification and correction process. Ask the bank for its current BVN data-amendment form and supporting-document requirements rather than using an unofficial instant-BVN website." },
     { question: "Will my BVN number change after correcting its details?", answer: "No. The supported name or date-of-birth amendment updates the record tied to your existing BVN. Under the CBN framework, a date-of-birth correction is permitted only once with supporting evidence." },
+    { question: "Can I change my BVN date of birth twice?", answer: "CBN's BVN framework permits a supported date-of-birth correction only once, with evidence. Ask the bank handling your BVN to review the records before submitting the amendment." },
   ],
   "ecowas-travel-certificate": [
     { question: "How long does it take to get an ECOWAS Travel Certificate?", answer: "NIS's published 2026 service-level schedule lists a 24-hour processing target for a complete certificate application. This is not a promise of instant issuance: the required documents, payment and office submission still determine when the application becomes complete." },
     { question: "Can an ECOWAS Travel Certificate replace my international passport everywhere?", answer: "No. NIS describes it as a travel document for the ECOWAS sub-region. Confirm your destination and carrier's current documentary requirements; the certificate should not be represented as a worldwide alternative to a Nigerian passport." },
+    { question: "Should I renew or re-issue an ECOWAS Travel Certificate?", answer: "NIS offers distinct Fresh, Renew and Re-issue application paths. For an expiring certificate choose renewal; if the document is lost or damaged, check the official replacement conditions before paying." },
   ],
   "nigeria-landing-exit-card": [
     { question: "Do Nigerian passport holders need a Landing or Exit Card?", answer: "No. The NIS LECARD FAQ says travellers using Nigerian passports do not need these cards. It directs foreign travellers entering or leaving Nigeria to the official portal, while transit passengers are excluded." },
@@ -76,17 +79,8 @@ const specificFollowUps: Record<string, SearchAnswer[]> = {
   "pencom-open-rsa": [
     { question: "Do I need another pension RSA if I change employers?", answer: "No. PenCom says your RSA stays with you. Supply your existing RSA details to the new employer instead of opening a duplicate pension account." },
   ],
-  "ecowas-travel-certificate": [
-    { question: "Should I renew or re-issue an ECOWAS Travel Certificate?", answer: "NIS offers distinct Fresh, Renew and Re-issue application paths. For an expiring certificate choose renewal; if the document is lost or damaged, check the official replacement conditions before paying." },
-  ],
-  "bvn-data-update": [
-    { question: "Can I change my BVN date of birth twice?", answer: "CBN's BVN framework permits a supported date-of-birth correction only once, with evidence. Ask the bank handling your BVN to review the records before submitting the amendment." },
-  ],
   "inec-replace-lost-damaged-pvc": [
     { question: "Is a PVC replacement the same as changing my polling unit?", answer: "No. Replacement addresses a missing or damaged physical voter card; a change of voting location uses INEC's separate voter-transfer service." },
-  ],
-  "police-character-certificate": [
-    { question: "How can someone validate my Nigerian Police Character Certificate?", answer: "Use POSSAP's official Validate Document service with the issued certificate's document number. For use abroad, separately confirm the receiving organisation's document-age and authentication requirements." },
   ],
   "anambra-asin-registration": [
     {
