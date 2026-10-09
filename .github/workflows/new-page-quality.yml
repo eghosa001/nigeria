@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "data/services*.json"
+      - "data/youtube-detail-shards/*.json"
       - "lib/*growth-wave*.ts"
       - "lib/explore-growth-places*.ts"
       - "lib/explore-trend-*.ts"
