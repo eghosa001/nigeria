@@ -30,6 +30,8 @@
 
 ## 3. Four-pillar fit: what value counts
 
+**Locked site architecture:** retain the four existing pillars—Movies & Entertainment, Services, Tour Nigeria, and Jobs & Careers—with their current navigation and canonical URLs. Do not create Telecom, Finance, Education or any other independent pillar. Topics that genuinely fit should remain inside an existing pillar. Prioritise improving canonical pages with useful search impressions before expanding; preserve the compact homepage.
+
 | Pillar | Distinct page value; no padding |
 | --- | --- |
 | **Services** | Eligibility, application route, official fee, exact document/step sequence, before/after submission, known errors, timelines or honest uncertainty, verified primary links and notes on conflicting rules. |

@@ -223,6 +223,25 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             ]}
             note={"Verified " + service.lastVerified + ". Read the quick answer first, then use the detailed guide only for the parts you need."}
           />
+          {(service.slug === "cac-business-name-registration" || service.slug === "cac-company-registration") ? (
+            <section className="service-topic-links" aria-label="Choose the correct CAC registration">
+              <h2>Business name or limited company?</h2>
+              <p>
+                {service.slug === "cac-business-name-registration"
+                  ? "This guide covers registering a business name with proprietor details. It does not incorporate a limited company, which has different filing requirements and charges."
+                  : "This guide covers incorporating a company with company and officer details. Registering a business name as a proprietor is a different CAC application."}
+              </p>
+              <div className="related-links">
+                <Link href={service.slug === "cac-business-name-registration"
+                  ? "/services/cac-company-registration"
+                  : "/services/cac-business-name-registration"}>
+                  {service.slug === "cac-business-name-registration"
+                    ? "Need a limited company instead? See company registration →"
+                    : "Only registering a business name? See that process →"}
+                </Link>
+              </div>
+            </section>
+          ) : null}
         </div>
       </section>
 
