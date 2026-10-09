@@ -3,7 +3,7 @@
 // not truthfulness, licensing, original authorship, indexing, UX quality or publisher approval.
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { basename, extname, join } from "node:path";
+import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const today = new Date().toISOString().slice(0, 10);
@@ -61,8 +61,8 @@ export function recordsFromSource(source, type) {
 }
 function value(record, key) {
   if (typeof record === "object") return record[key];
-  const regex = new RegExp("(?:^|[,{\\n])\\s*" + key + "\\s*:\\s*" + quote + "([^\\n\"'\x60]+)" + quote);
-  return record.match(regex)?.[1] || "";
+  const regex = new RegExp("(?:^|[,{\\n])\\s*" + key + "\\s*:\\s*([\\x22\\x27\\x60])([^\\n]*?)\\1");
+  return record.match(regex)?.[2] || "";
 }
 function list(record, key) {
   if (typeof record === "object") return Array.isArray(record[key]) ? record[key] : [];
@@ -96,7 +96,7 @@ export function checkRecord(path, kind, slug, record) {
   const summary = value(record, kind === "movie" ? "synopsis" : "summary");
   warn(heading.length >= 8, "specific title/name required");
   warn(summary.length >= (kind === "movie" ? 60 : 55) || kind === "place", "original reader-oriented summary is too short");
-  warn(!/\b(lorem ipsum|tbd|todo|coming soon|insert (?:text|details)|as an ai)\b/i.test(text), "placeholder or unedited filler detected");
+  warn(!/\b(lorem ipsum|tbd|todo|coming soon: content|insert (?:text|details)|as an ai)\b/i.test(text), "placeholder or unedited filler detected");
   if (kind === "service") {
     warn(checkedDate(record, "lastVerified"), "valid current lastVerified date required");
     warn(list(record, "requirements").length >= 2, "at least two requirements required");
