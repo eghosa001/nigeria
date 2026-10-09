@@ -21,7 +21,7 @@ export function Analytics() {
 
     const analyticsWindow = window as AnalyticsWindow;
     const disabledKey = `ga-disable-${id}`;
-    const enabled = shouldEnableAnalytics(pathname, navigator.webdriver, navigator.userAgent);
+    const enabled = shouldEnableAnalytics(pathname, navigator.webdriver, navigator.userAgent, window.location.hostname);
     Reflect.set(analyticsWindow, disabledKey, !enabled);
     if (!enabled) return;
 
