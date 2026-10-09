@@ -95,8 +95,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty Cast & Where to Watch on Netflix",
-    description: "Oversabi Aunty (2025): full cast led by Toyin Abraham, story, 127-minute runtime, official FilmOne trailer and Netflix Nigeria viewing link.",
+    title: "Oversabi Aunty Cast, Trailer & Netflix Status",
+    description: "Oversabi Aunty (2025) cast, story and 127-minute runtime. Find the official FilmOne trailer and the latest Netflix Nigeria availability notice.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.
@@ -473,12 +473,14 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <h2>Where to watch {title.title}</h2>
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
-                  Netflix Nigeria lists Oversabi Aunty in its Nollywood catalogue. Open the official Netflix title page and sign in to check playback for your account and location. The FilmOne link is an official trailer, not a free full-movie upload.
+                  Netflix Nigeria's official title page currently displays a notice that Oversabi Aunty is unavailable to watch in the viewer's country (checked 9 October 2026). The listing is not proof of playback availability in Nigeria. Check the official Netflix page for changes. The FilmOne link is an official trailer, not a free full-movie upload.
                 </p>
               ) : null}
               {!availabilityLinks.length ? (
                 <p className="movie-long-summary">
-                  No current official streaming, broadcast or cinema link is verified for this title. The references below verify the movie record without implying that it is available to watch there.
+                  {title.slug === "oversabi-aunty"
+                    ? "No currently playable Nigerian streaming option has been independently verified for this title. The Netflix reference below documents its listing and availability notice, not a viewing link."
+                    : "No current official streaming, broadcast or cinema link is verified for this title. The references below verify the movie record without implying that it is available to watch there."}
                 </p>
               ) : null}
               {watchHereVideoId && watchHereSource ? (

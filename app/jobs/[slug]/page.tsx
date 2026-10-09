@@ -176,6 +176,12 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <section id="requirements">
               <h2>{isCareerPortal ? "How eligibility works for " + item.organization + " careers" : item.title + " qualification requirements"}</h2>
               <ul className="checklist">{item.qualifications.map((text) => <li key={text}>{text}</li>)}</ul>
+              {item.slug === "nigerian-army-92rri-2026" ? (
+                <p className="job-muted">
+                  Applying under the separate Special Skilled category? Check its own age and skill requirements in the Army portal.
+                  If the portal requests a NINAuth code, <Link href="/services/ninauth-nin-verification">follow our official NIN Sharecode guide →</Link>
+                </p>
+              ) : null}
             </section>
 
             <section>

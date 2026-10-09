@@ -45,7 +45,7 @@ const exactGuidanceOverrides: Record<string, string> = {
   "nigeria-transit-visa": "https://immigration.gov.ng/info-center/transit-visa-f3b/",
   "nigeria-temporary-work-permit": "https://immigration.gov.ng/info-center/temporary-work-permit-twp-visa-r10a/",
   "ecowas-travel-certificate": "https://immigration.gov.ng/ecowas-travel-certificate/",
-  "yellow-card": "https://health.gov.ng/faqs/",
+  "yellow-card": "https://www.ncdc.gov.ng/news/200/yellow-fever-faqs",
   "nigeria-landing-exit-card": "https://immigration.gov.ng/lecard/",
   "fct-file-individual-tax-return": "https://fctirs.gov.ng/howto/steps-on-filling-return/",
   "fct-verify-tax-clearance": "https://fctirs.gov.ng/howto/tcc-verification/",

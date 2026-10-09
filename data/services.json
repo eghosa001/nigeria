@@ -4293,7 +4293,8 @@
       "Birth certificate or High Court declaration of age",
       "Local Government or indigene certificate",
       "Completed ECOWAS Travel Certificate application form and passport photographs",
-      "Additional introduction or citizenship evidence where NIS requires it for the applicant category"
+      "Additional introduction or citizenship evidence where NIS requires it for the applicant category",
+      "An introduction letter from your employer (salaried workers) or training institution (students/trainees), when required by the chosen NIS office."
     ],
     "steps": [
       "Open the official NIS portal and choose the ECOWAS Travel Certificate service, then select fresh, renewal or re-issue according to the certificate you need.",
@@ -4306,7 +4307,10 @@
       "NIS states that the certificate is valid for travel within the ECOWAS sub-region.",
       "The NIS information page states a two-year validity renewable for a further two years.",
       "Use the official NIS payment route; listed prices exclude bank charges.",
-      "NIS's published service-level schedule lists a 24-hour service target for a complete ETC application through the official route."
+      "NIS's published service-level schedule lists a 24-hour service target for a complete ETC application through the official route.",
+      "The NIS application page offers separate Fresh, Renew and Re-issue forms. For a lost or damaged certificate, consult the replacement requirements rather than assuming an ordinary renewal is sufficient.",
+      "NIS's detailed certificate guidance lists an employer introduction for salaried workers and a letter from the institution for students or trainees. Ask your chosen Immigration office which applies to your case.",
+      "Official NIS pages display different passport-photograph counts for this certificate. Use the current application form and confirm with your Immigration office before submitting physical documents."
     ],
     "sources": [
       {
@@ -4341,7 +4345,10 @@
       "ECOWAS travel certificate fee Nigeria",
       "ECOWAS travel certificate Nigeria fee",
       "ECOWAS travel certificate renewal Nigeria",
-      "ECOWAS travel certificate requirements Nigeria"
+      "ECOWAS travel certificate requirements Nigeria",
+      "ECOWAS travel certificate fresh renew reissue",
+      "ECOWAS travel certificate lost replacement",
+      "ECOWAS certificate employer letter student letter"
     ],
     "related": [
       "first-nigerian-passport",
@@ -4354,11 +4361,11 @@
     "slug": "yellow-card",
     "title": "How to get Nigeria's Yellow Card for international travel",
     "shortTitle": "Yellow Card",
-    "summary": "Federal Ministry of Health guidance for registering, paying and obtaining the Yellow Fever vaccination certificate used for international travel.",
+    "summary": "Official NCDC and Port Health advice on yellow-fever vaccination, Yellow Card certification, and the Ministry of Health's online registration route for international travellers.",
     "category": "International travel",
     "agencySlug": "fmoh",
     "feeLabel": "Pay through the official Yellow Card portal",
-    "feeNote": "The Federal Ministry of Health directs travellers to register and pay online before visiting a designated Port Health Services office; use the amount shown by the official portal.",
+    "feeNote": "Use only the Ministry of Health's official Yellow Card portal when payment is requested, and confirm the amount on the live portal before paying. Avoid third-party card sellers.",
     "status": "verified",
     "officialPortal": "https://yellowcard.health.gov.ng",
     "requirements": [
@@ -4375,20 +4382,21 @@
     ],
     "notes": [
       "The Federal Ministry of Health says Yellow Fever vaccination is mandatory for travellers entering or leaving Nigeria and proof is provided with a valid Yellow Card.",
-      "Use designated Port Health Services offices; do not buy a card from an unofficial travel agent."
+      "Use designated Port Health Services offices; do not buy a card from an unofficial travel agent.",
+      "NCDC advises travellers to arrange yellow-fever vaccination at least 10 days before travel when it is required; the NCDC advisory also explains that certain travellers need medical assessment before vaccination."
     ],
     "sources": [
       {
-        "label": "Federal Ministry of Health Port Health FAQs",
-        "agency": "Federal Ministry of Health and Social Welfare",
-        "url": "https://health.gov.ng/faqs/",
-        "lastChecked": "2026-09-28"
+        "label": "NCDC — Yellow Fever FAQs and vaccination card guidance",
+        "agency": "Nigeria Centre for Disease Control and Prevention",
+        "url": "https://www.ncdc.gov.ng/news/200/yellow-fever-faqs",
+        "lastChecked": "2026-10-09"
       },
       {
-        "label": "Federal Ministry of Health Port Health Division",
-        "agency": "Federal Ministry of Health and Social Welfare",
-        "url": "https://health.gov.ng/port-health/",
-        "lastChecked": "2026-09-28"
+        "label": "NCDC and Port Health — Yellow Fever travel advisory",
+        "agency": "Nigeria Centre for Disease Control and Prevention",
+        "url": "https://www.ncdc.gov.ng/news/201/yellow-fever-public-health-advisory-for-international-travel",
+        "lastChecked": "2026-10-09"
       }
     ],
     "searchTerms": [
@@ -4404,7 +4412,7 @@
       "passport-renewal",
       "nigeria-landing-exit-card"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "nigeria-landing-exit-card",
@@ -4434,7 +4442,10 @@
       "The NIS portal FAQ says foreigners visiting or departing Nigeria must use the portal to pre-process arrival and departure details.",
       "The service is free and the portal says processing is instant once valid details are submitted and the traveller meets the requirements.",
       "Submitted information cannot be edited; if an error is made, a corrected application must be submitted.",
-      "The portal is not intended for transit passengers."
+      "The portal is not intended for transit passengers.",
+      "NIS's official LECARD FAQ says people travelling on Nigerian passports do not need Landing or Exit Cards; this online form is for foreign travellers covered by the portal.",
+      "NIS advises that a Landing Card may be created only 24–48 hours before arrival. If the form is unavailable earlier, check again during that period.",
+      "If you lose the printed confirmation, the NIS portal provides an emailed copy and a separate Get Your Last Card tool for reprinting."
     ],
     "sources": [
       {
@@ -4448,6 +4459,18 @@
         "agency": "Nigeria Immigration Service",
         "url": "https://lecard.immigration.gov.ng/",
         "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "NIS LECARD frequently asked questions",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://lecard.immigration.gov.ng/faq",
+        "lastChecked": "2026-10-09"
+      },
+      {
+        "label": "NIS retrieve a previous Landing or Exit Card",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://lecard.immigration.gov.ng/get-last-card",
+        "lastChecked": "2026-10-09"
       }
     ],
     "searchTerms": [
@@ -4464,13 +4487,17 @@
       "Nigeria departure form",
       "landing card Nigeria free",
       "exit card Nigeria free",
-      "who needs Nigeria landing card"
+      "who needs Nigeria landing card",
+      "Do Nigerians need a landing card",
+      "Nigeria arrival card 24 48 hours",
+      "print lost landing card Nigeria",
+      "reprint exit card Nigeria"
     ],
     "related": [
       "yellow-card",
       "passport-application-abroad"
     ],
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-09"
   },
   {
     "slug": "police-character-certificate",
@@ -4500,7 +4527,8 @@
       "POSSAP describes PCC as a criminal-record check requested by members of the public.",
       "Nigeria Police Force guidance says a PCC can be validated on POSSAP with its unique document number.",
       "Do not pay a third party into a personal account; POSSAP generates the official service request and payment record.",
-      "Recent official POSSAP invoices for both standard and diaspora Police Character Certificate requests show ₦30,000; confirm the invoice generated for your own application before payment."
+      "Recent official POSSAP invoices for both standard and diaspora Police Character Certificate requests show ₦30,000; confirm the invoice generated for your own application before payment.",
+      "If requesting a certificate for a visa or an overseas employer, confirm their acceptable certificate age and any extra authentication requirements separately. POSSAP validation proves the document can be checked, not that every recipient must accept it."
     ],
     "sources": [
       {
@@ -4545,7 +4573,9 @@
       "Police Character Certificate Nigeria fee",
       "POSSAP police character certificate diaspora",
       "Nigeria police clearance diaspora",
-      "Police Character Certificate application Nigeria"
+      "Police Character Certificate application Nigeria",
+      "POSSAP PCC verification document number",
+      "Nigeria police clearance diaspora overseas requirements"
     ],
     "lastVerified": "2026-10-05",
     "related": [
@@ -7080,7 +7110,8 @@
     "notes": [
       "Your RSA stays with you when you change jobs.",
       "You are not required to keep the same employer to keep the same RSA.",
-      "Keep your contact information with the PFA current so you receive contribution statements and alerts."
+      "Keep your contact information with the PFA current so you receive contribution statements and alerts.",
+      "PenCom says an employee who changes jobs should provide the existing RSA details to the new employer. Opening a second RSA can cause incorrect remittances and delays."
     ],
     "sources": [
       {
@@ -7094,13 +7125,19 @@
         "agency": "National Pension Commission",
         "url": "https://www.pencom.gov.ng/what-happens-to-my-rsa-when-i-change-jobs/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "PenCom FAQ: more than one RSA and change of employment",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2018/04/FAQ-CPS-reviewed.-17-Apr.-2018.pdf",
+        "lastChecked": "2026-10-09"
       }
     ],
     "related": [
       "pencom-transfer-rsa",
       "pencom-unremitted-contributions"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-09",
     "searchTerms": [
       "open RSA Nigeria",
       "open RSA online",
@@ -7109,7 +7146,9 @@
       "NIN for RSA registration",
       "register for RSA online",
       "RSA registration requirements",
-      "Retirement Savings Account Nigeria"
+      "Retirement Savings Account Nigeria",
+      "do I open a new pension RSA when I change jobs",
+      "use existing RSA with new employer"
     ]
   },
   {
@@ -10736,7 +10775,8 @@
     "notes": [
       "A replacement keeps the existing voter identity; do not create another voter registration because the physical card is missing.",
       "INEC's portal currently labels a downloadable PVC feature as a limited pilot/coming-soon feature, so do not assume a digital PVC is available to every applicant.",
-      "This page explains only the administrative replacement process."
+      "This page explains only the administrative replacement process.",
+      "Do not confuse a lost or damaged PVC replacement with moving your polling location. INEC handles transfer of voter registration separately, even when the voter has the same existing identity record."
     ],
     "sources": [
       {
@@ -10757,7 +10797,9 @@
       "damaged PVC",
       "replace PVC",
       "PVC replacement Nigeria",
-      "INEC replacement card"
+      "INEC replacement card",
+      "INEC replace PVC versus voter transfer",
+      "lost pvc same voter identification"
     ],
     "lastVerified": "2026-10-02",
     "related": [
@@ -11184,7 +11226,8 @@
     ],
     "notes": [
       "CBN allows date-of-birth correction once with supporting documents and permits supported name changes and minor corrections.",
-      "A BVN itself does not change when the underlying customer record is corrected."
+      "A BVN itself does not change when the underlying customer record is corrected.",
+      "The CBN framework limits supported date-of-birth corrections to one change. Check your supporting records carefully with the bank before submitting this particular amendment."
     ],
     "sources": [
       {
@@ -11206,7 +11249,9 @@
       "BVN date of birth correction",
       "BVN name correction",
       "change phone number on BVN",
-      "update BVN information"
+      "update BVN information",
+      "BVN date of birth correction once",
+      "CBN BVN correction timeframe"
     ],
     "related": [
       "bvn-validation",
