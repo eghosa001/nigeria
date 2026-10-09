@@ -6,7 +6,9 @@ import { getRelatedServiceReason, getRelatedServices } from "@/lib/internal-link
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { jobOpportunities } from "@/lib/jobs";
 import { publicServices } from "@/lib/data";
-import { getMovieRecommendationShelves, getRelatedExploreGuides, getSimilarOpenJobs } from "@/lib/related-discovery";
+import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
+import { getRelatedExploreGuides } from "@/lib/explore-discovery";
+import { getSimilarOpenJobs } from "@/lib/job-discovery";
 import { queryJobDirectory } from "@/lib/job-query";
 import { queryServiceDirectory } from "@/lib/service-query";
 
