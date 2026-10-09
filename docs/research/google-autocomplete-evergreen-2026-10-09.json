@@ -226,14 +226,6 @@
     },
     {
       "pillar": "jobs",
-      "canonical": "/jobs/guides/job-scam-red-flags-nigeria",
-      "probes": [
-        "how to find legitimate jobs in nigeria"
-      ],
-      "googlePredictions": []
-    },
-    {
-      "pillar": "jobs",
       "canonical": "/jobs/internships",
       "probes": [
         "internships in nigeria"
@@ -248,14 +240,6 @@
         "tech internships in nigeria",
         "cybersecurity internships in nigeria"
       ]
-    },
-    {
-      "pillar": "jobs",
-      "canonical": "/jobs/nysc",
-      "probes": [
-        "jobs for nysc corps members"
-      ],
-      "googlePredictions": []
     },
     {
       "pillar": "jobs",
@@ -574,23 +558,6 @@
     },
     {
       "pillar": "tour",
-      "canonical": "/explore/abuja",
-      "probes": [
-        "things to do in abuja"
-      ],
-      "googlePredictions": [
-        "things to do in abuja",
-        "things to do in abuja nigeria",
-        "things to do in abuja for kids",
-        "things to do in abuja with family",
-        "things to do in abuja for adults",
-        "things to do in abuja for couples",
-        "things to do in abuja at night",
-        "things to do in abuja as a tourist"
-      ]
-    },
-    {
-      "pillar": "tour",
       "canonical": "/explore/benin-city",
       "probes": [
         "places to visit in benin city"
@@ -632,11 +599,6 @@
         "things to do in lagos requirements"
       ],
       "googlePredictions": [
-        "things to do in lagos",
-        "things to do in lagos nigeria",
-        "things to do in lagos with kids",
-        "things to do in lagos island",
-        "things to do in lagos mainland",
         "best beaches in nigeria",
         "best beach in nigeria lagos",
         "beautiful beaches in nigeria",
@@ -647,18 +609,7 @@
         "beautiful beaches in lagos nigeria",
         "most beautiful beaches in nigeria",
         "top beaches in lagos nigeria",
-        "things to do in lagos for kids",
-        "things to do in lagos for free",
-        "things to do in lagos for adults",
-        "things to do in lagos for christmas",
-        "things to do in lagos for couples",
-        "things to do in lagos for teens",
-        "things to do in lagos for birthday",
-        "things to do in lagos for fun",
-        "what to do in lagos for a day",
-        "what to do in lagos for 2 days",
-        "nothing to do in lagos",
-        "fun things to do in lagos mainland"
+        "nothing to do in lagos"
       ]
     },
     {
@@ -731,6 +682,51 @@
         "obudu mountain resort cross river state",
         "obudu mountain resort location in nigeria",
         "obudu mountain resort prices per person"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/things-to-do-abuja",
+      "probes": [
+        "things to do in abuja"
+      ],
+      "googlePredictions": [
+        "things to do in abuja",
+        "things to do in abuja nigeria",
+        "things to do in abuja for kids",
+        "things to do in abuja with family",
+        "things to do in abuja for adults",
+        "things to do in abuja for couples",
+        "things to do in abuja at night",
+        "things to do in abuja as a tourist"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/things-to-do-lagos",
+      "probes": [
+        "things to do in lagos",
+        "things to do in lagos for",
+        "things to do in lagos without",
+        "things to do in lagos requirements"
+      ],
+      "googlePredictions": [
+        "things to do in lagos",
+        "things to do in lagos nigeria",
+        "things to do in lagos with kids",
+        "things to do in lagos island",
+        "things to do in lagos mainland",
+        "things to do in lagos for kids",
+        "things to do in lagos for free",
+        "things to do in lagos for adults",
+        "things to do in lagos for christmas",
+        "things to do in lagos for couples",
+        "things to do in lagos for teens",
+        "things to do in lagos for birthday",
+        "things to do in lagos for fun",
+        "what to do in lagos for a day",
+        "what to do in lagos for 2 days",
+        "fun things to do in lagos mainland"
       ]
     }
   ]
