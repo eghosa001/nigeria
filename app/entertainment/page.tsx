@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 // Durable film discovery should lead editorial curation, not yesterday's search spike.
 const evergreenMovieSlugs = [
-  "lionheart",
+  "swallow",
   "king-of-boys",
   "chief-daddy",
   "jagun-jagun",

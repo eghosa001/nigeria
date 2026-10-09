@@ -60,7 +60,7 @@ export default function HomePage() {
   );
 
   // Prioritise durable Nigerian films; week-old releases remain in the separate trends feed.
-  const evergreenHomepageSlugs = ["lionheart", "king-of-boys", "chief-daddy", "jagun-jagun", "citation", "a-tribe-called-judah"];
+  const evergreenHomepageSlugs = ["king-of-boys", "chief-daddy", "citation", "swallow", "jagun-jagun", "a-tribe-called-judah"];
   const movieHighlights = entertainmentTitles
     .filter((title) => {
       const hasUsableArtwork =
