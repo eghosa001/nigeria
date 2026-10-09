@@ -94,6 +94,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
     });
 
     const posthogPageviews: string[] = [];
+    const transportDiagnostics: Array<{ endpoint: string; bytes: number; shape: string; compression: string; parsed: number; error?: string }> = [];
     await page.route(/https:\/\/[^/]*posthog\.com\/.*/, async (route) => {
       const request = route.request();
       const pathname = new URL(request.url()).pathname;
@@ -101,6 +102,14 @@ test.describe("live MyNigeriaGuide deployment", () => {
         return route.continue();
       }
       const body = request.postData() ?? "";
+      const entry: (typeof transportDiagnostics)[number] = {
+        endpoint: pathname,
+        bytes: body.length,
+        shape: body.trimStart().startsWith("{") ? "json" : body.includes("data=") ? "form" : "other",
+        compression: new URLSearchParams(body).get("compression") ?? "",
+        parsed: 0,
+      };
+      transportDiagnostics.push(entry);
       try {
         let payload: unknown;
         try {
@@ -121,11 +130,12 @@ test.describe("live MyNigeriaGuide deployment", () => {
         const events = Array.isArray(payload) ? payload : Array.isArray(record.batch) ? record.batch : [record];
         for (const event of events as Array<{ event?: string; properties?: Record<string, string> }>) {
           if (event.event === "$pageview") {
+            entry.parsed += 1;
             posthogPageviews.push(event.properties?.$pathname ?? new URL(event.properties?.$current_url ?? "https://mynigeriaguide.com/").pathname);
           }
         }
-      } catch {
-        // Network traffic is intercepted even if the SDK changes its encoding.
+      } catch (error) {
+        entry.error = error instanceof Error ? error.name : "unknown";
       }
       return route.fulfill({
         status: 200,
@@ -139,7 +149,11 @@ test.describe("live MyNigeriaGuide deployment", () => {
 
     await page.goto("/");
     await expect.poll(() => page.evaluate(() => (window as Window & { __mngPostHogLastTrackedPath?: string }).__mngPostHogLastTrackedPath), { timeout: 15_000 }).toBe("/");
-    await expect.poll(() => posthogPageviews.filter((path) => path === "/").length, { timeout: 20_000 }).toBe(1);
+    try {
+      await expect.poll(() => posthogPageviews.filter((path) => path === "/").length, { timeout: 20_000 }).toBe(1);
+    } catch {
+      throw new Error("PostHog homepage event transport diagnostics (no payloads exposed): " + JSON.stringify(transportDiagnostics));
+    }
 
     await page.locator('a[href="/services"]:visible').first().click();
     await expect(page).toHaveURL(/\/services\/?$/);
