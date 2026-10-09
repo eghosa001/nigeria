@@ -1,0 +1,737 @@
+{
+  "source": "Live Google Autocomplete (Google Suggest), unofficial endpoint client=firefox",
+  "sampledAt": "2026-10-09T19:29:16Z",
+  "country": "ng",
+  "language": "en",
+  "queriedSeeds": 76,
+  "successfulRequests": 76,
+  "meaning": "Suggestions only, NOT search volumes, keyword rankings, forecasts or evidence of page quality.",
+  "editorialGate": "Only natural supported headings, original useful answers and official sources can be published. No separate keyword-variant pages; no copyright scraping, fabricated rankings, expiring news optimization or unreadable repetition.",
+  "clusters": [
+    {
+      "pillar": "entertainment",
+      "canonical": "/entertainment/movies",
+      "probes": [
+        "best nollywood movies of all time",
+        "classic nollywood movies",
+        "old nollywood movies",
+        "best nigerian comedy movies",
+        "family nollywood movies",
+        "yoruba movies to watch",
+        "award winning nigerian movies"
+      ],
+      "googlePredictions": [
+        "best nollywood movies of all time",
+        "best nollywood movies of all time on youtube",
+        "best nigerian movies of all time",
+        "best nigerian movies of all time on youtube",
+        "best nollywood epic movies of all time",
+        "best nollywood love movies of all time",
+        "best nollywood comedy movies of all time",
+        "10 best nollywood movies of all time",
+        "best nollywood netflix movies of all time",
+        "best nollywood action movies of all time",
+        "classic nollywood movies",
+        "classic nollywood movies on youtube",
+        "nollywood classic movies list",
+        "vintage nollywood movies",
+        "classic nigeria movies",
+        "old classic nollywood movies",
+        "best classic nollywood movies",
+        "old nollywood movies",
+        "old nollywood movies 2000 to 2010",
+        "old nollywood movies on youtube",
+        "old nollywood movies to watch",
+        "old nollywood movies 2000",
+        "old nollywood movies 90s",
+        "old nollywood movies 1990",
+        "old nollywood movies list",
+        "old nollywood movies on netflix",
+        "old nollywood movies 2005",
+        "best nigerian comedy movies",
+        "best nigerian comedy movies on youtube",
+        "best nigerian comedy movies on netflix",
+        "best nigerian comedy movies of all time",
+        "best nigerian comedy movies 2022",
+        "best nollywood comedy movies",
+        "family nollywood movies",
+        "family nollywood movies on netflix",
+        "nollywood family movies on youtube",
+        "family nigeria movies",
+        "family friendly nollywood movies",
+        "best family nollywood movies",
+        "family fire nollywood movies",
+        "holy family nollywood movies",
+        "list of nollywood movies on netflix",
+        "yoruba movies to watch",
+        "yoruba movies to watch on youtube",
+        "yoruba movies to watch on netflix",
+        "yoruba movies to watch on prime video",
+        "interesting yoruba movies to watch",
+        "interesting yoruba movies to watch on youtube",
+        "award winning nigerian movies",
+        "award winning nigerian movies on netflix",
+        "award winning nigerian movies on youtube",
+        "best award winning nigerian movies"
+      ]
+    },
+    {
+      "pillar": "entertainment",
+      "canonical": "/entertainment/people",
+      "probes": [
+        "nigerian movie actors"
+      ],
+      "googlePredictions": [
+        "nigerian movie actors",
+        "nigerian movie actors male",
+        "nigerian movie actors female",
+        "nigerian movie actors and actresses",
+        "nigerian movie actors names",
+        "nigerian movie actors and their names",
+        "nigerian actors in american movies",
+        "famous nigerian movie actors"
+      ]
+    },
+    {
+      "pillar": "entertainment",
+      "canonical": "/entertainment/platforms",
+      "probes": [
+        "nigerian movies on netflix",
+        "nigerian movies on netflix for",
+        "nigerian movies on netflix without",
+        "nigerian movies on netflix requirements"
+      ],
+      "googlePredictions": [
+        "nigerian movies on netflix",
+        "nigerian movies on netflix 2022",
+        "nigerian movies on netflix canada",
+        "nigerian movies on netflix nigeria",
+        "nigerian movies on netflix uk",
+        "nigerian movies on netflix comedy",
+        "nigerian movies on netflix 2021",
+        "nigerian movies on netflix and prime",
+        "nigerian movies on netflix to watch",
+        "nigerian movies on netflix with uche montana",
+        "nollywood movies on netflix to watch",
+        "best nigerian movies on netflix of all time",
+        "code for nigerian movies on netflix",
+        "nigerian movies for kids on netflix"
+      ]
+    },
+    {
+      "pillar": "entertainment",
+      "canonical": "/entertainment/youtube",
+      "probes": [
+        "best nigerian movies on youtube"
+      ],
+      "googlePredictions": [
+        "best nigerian movies on youtube",
+        "best nigerian movies on youtube reddit"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/government",
+      "probes": [
+        "how to apply for federal government jobs"
+      ],
+      "googlePredictions": [
+        "how to apply for federal government jobs",
+        "how to apply for federal government teaching job",
+        "apply for federal government jobs online",
+        "how to apply for federal jobs",
+        "federal government jobs"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/graduate",
+      "probes": [
+        "graduate jobs in nigeria",
+        "graduate jobs in nigeria for",
+        "graduate jobs in nigeria without",
+        "graduate jobs in nigeria requirements"
+      ],
+      "googlePredictions": [
+        "graduate jobs in nigeria",
+        "graduate trainee jobs in nigeria",
+        "graduate assistant jobs in nigeria",
+        "fresh graduate jobs in nigeria",
+        "graduate training jobs in nigeria",
+        "french graduate jobs in nigeria",
+        "graduate engineering jobs in nigeria",
+        "jobs for graduate in nigeria",
+        "graduate salary in nigeria",
+        "graduate jobs in lagos"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/guides/cover-letter-nigeria",
+      "probes": [
+        "how to write a cover letter for a job"
+      ],
+      "googlePredictions": [
+        "how to write a cover letter for a job application",
+        "how to write a cover letter for a job",
+        "how to write a cover letter for a job with no experience",
+        "how to write a cover letter for a job example",
+        "how to write a cover letter for a job you have no experience in",
+        "how to write a cover letter for a job application with no experience",
+        "how to write a cover letter for a job application uk",
+        "how to write a cover letter for a job application sample",
+        "how to write a cover letter for a job application template"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/guides/cv-format-nigeria",
+      "probes": [
+        "how to write cv in nigeria",
+        "how to write cv in nigeria for",
+        "how to write cv in nigeria without",
+        "how to write cv in nigeria requirements"
+      ],
+      "googlePredictions": [
+        "how to write cv in nigeria",
+        "how to write cv in nigeria with examples",
+        "how to write cv in nigeria with no experience",
+        "how to write cv in nigeria for job",
+        "how to write cv in nigeria for fresh graduate",
+        "how to make cv in nigeria",
+        "how to type cv in nigeria",
+        "how to write modern cv in nigeria",
+        "how to write cv letter in nigeria",
+        "how to write a cv in nigeria pdf",
+        "how to write a cv in nigeria for students",
+        "how to write cv for job in nigeria for freshers",
+        "how to write cv for job in nigeria without experience",
+        "how to write cv for job application in nigeria",
+        "how to write cv for nursing job in nigeria",
+        "how to write cv for teaching job in nigeria",
+        "how to write a cv in nigeria",
+        "how to write a cv for job application in nigeria"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/guides/job-interview-questions-nigeria",
+      "probes": [
+        "job interview questions and answers in nigeria"
+      ],
+      "googlePredictions": [
+        "job interview questions and answers in nigeria",
+        "common interview questions and answers in nigeria"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/guides/job-scam-red-flags-nigeria",
+      "probes": [
+        "how to find legitimate jobs in nigeria"
+      ],
+      "googlePredictions": []
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/internships",
+      "probes": [
+        "internships in nigeria"
+      ],
+      "googlePredictions": [
+        "internships in nigeria",
+        "internship in nigeria for undergraduates",
+        "internship in nigeria for graduates",
+        "paid internships in nigeria",
+        "remote internships in nigeria",
+        "available internships in nigeria",
+        "tech internships in nigeria",
+        "cybersecurity internships in nigeria"
+      ]
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/nysc",
+      "probes": [
+        "jobs for nysc corps members"
+      ],
+      "googlePredictions": []
+    },
+    {
+      "pillar": "jobs",
+      "canonical": "/jobs/remote",
+      "probes": [
+        "remote jobs in nigeria",
+        "remote jobs in nigeria for",
+        "remote jobs in nigeria without",
+        "remote jobs in nigeria requirements"
+      ],
+      "googlePredictions": [
+        "remote jobs in nigeria",
+        "remote jobs in nigeria with no experience",
+        "remote jobs in nigeria that pay in dollars",
+        "remote jobs in nigeria for students",
+        "remote jobs in nigeria part time",
+        "remote jobs in nigeria for students without experience",
+        "remote jobs in nigeria in the last 3 days",
+        "remote jobs in nigeria for teens",
+        "remote jobs in nigeria for lawyers",
+        "remote jobs in nigeria for free",
+        "work from home jobs in nigeria for students",
+        "work from home jobs in nigeria for females",
+        "online remote jobs in nigeria for students",
+        "google remote jobs in nigeria for freshers",
+        "remote jobs in nigeria without experience",
+        "work from home jobs in nigeria without experience",
+        "work from home jobs in nigeria without experience for students",
+        "remote jobs in nigeria no degree",
+        "international remote jobs in nigeria without experience",
+        "legit remote jobs in nigeria without experience",
+        "online remote jobs in nigeria without experience",
+        "us remote jobs in nigeria without experience",
+        "remote jobs in usa from nigeria without experience",
+        "remote jobs for students in nigeria without experience"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/bvn-data-update",
+      "probes": [
+        "how to correct bvn"
+      ],
+      "googlePredictions": [
+        "how to correct bvn date of birth",
+        "how to correct bvn name",
+        "how to correct bvn",
+        "how to correct bvn details online",
+        "how to correct bvn name online",
+        "how to correct bvn information",
+        "how to correct bvn date of birth online",
+        "how to correct bvn details",
+        "how to correct bvn phone number",
+        "how to correct bvn error"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/cac-business-name-registration",
+      "probes": [
+        "how to register business name in nigeria"
+      ],
+      "googlePredictions": [
+        "how to register business name in nigeria",
+        "how to register brand name in nigeria",
+        "how to register a trade name in nigeria",
+        "how to register a business name in nigeria with cac",
+        "how to register a business name in nigeria online",
+        "how to register a business name in nigeria for free",
+        "how to register a business name in nigeria with cac online",
+        "how to check registered business names in nigeria",
+        "how to register business name online for free in nigeria"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/check-nin-number",
+      "probes": [
+        "how to check nin"
+      ],
+      "googlePredictions": [
+        "how to check nin number",
+        "how to check nin",
+        "how to check nin number on phone",
+        "how to check nin on mtn",
+        "how to check nin online",
+        "how to check nin on airtel",
+        "how to check nin on opay",
+        "how to check nin on phone",
+        "how to check nin number on mtn",
+        "how to check nin number online"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/ecowas-travel-certificate",
+      "probes": [
+        "how to get ecowas travel certificate"
+      ],
+      "googlePredictions": [
+        "how to get ecowas travel certificate",
+        "how to get ecowas travel certificate in nigeria",
+        "how long does it take to get ecowas travel certificate",
+        "what is ecowas travel certificate",
+        "ecowas travel certificate price",
+        "how much is ecowas travel certificate in nigeria",
+        "how to get ecowas passport"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/inec-replace-lost-damaged-pvc",
+      "probes": [
+        "how to replace lost pvc"
+      ],
+      "googlePredictions": [
+        "how to replace lost pvc"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/jamb-caps",
+      "probes": [
+        "jamb caps admission"
+      ],
+      "googlePredictions": [
+        "jamb caps admission status",
+        "jamb caps admission list",
+        "jamb caps admission status login",
+        "jamb caps admission status login portal login",
+        "jamb caps admission",
+        "jamb caps admission deadline",
+        "jamb caps admission portal",
+        "jamb caps admission login"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/nysc-registration-local",
+      "probes": [
+        "nysc registration",
+        "nysc registration for",
+        "nysc registration without",
+        "nysc registration requirements"
+      ],
+      "googlePredictions": [
+        "nysc registration",
+        "nysc registration date",
+        "nysc registration portal login",
+        "nysc registration requirements",
+        "nysc registration fee",
+        "nysc registration portal",
+        "nysc registration form",
+        "nysc registration for batch c",
+        "nysc registration form sample",
+        "nysc registration for foreign students",
+        "nysc registration for batch b stream 2",
+        "nysc registration for part time students",
+        "nysc registration form pdf",
+        "nysc registration for exemption letter",
+        "can i do nysc registration without nerd",
+        "is nysc registration free",
+        "nysc registration list",
+        "nysc registration amount",
+        "nysc registration requirements for married women",
+        "nysc registration requirements for foreign students",
+        "nysc registration requirements in camp",
+        "nysc registration requirements for married",
+        "nysc registration required documents",
+        "nysc registration guidelines",
+        "nysc registration criteria"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/passport-renewal",
+      "probes": [
+        "how to renew nigerian passport",
+        "how to renew nigerian passport for",
+        "how to renew nigerian passport without",
+        "how to renew nigerian passport requirements"
+      ],
+      "googlePredictions": [
+        "how to renew nigerian passport",
+        "how to renew nigerian passport online",
+        "how to renew nigerian passport in nigeria",
+        "how to renew nigerian passport in uk",
+        "how to renew nigerian passport in canada",
+        "how to renew nigerian passport in usa",
+        "how to renew nigerian passport online in uk",
+        "how to renew nigerian passport online in usa",
+        "how to renew nigerian passport online in canada",
+        "how to renew nigerian passport in ireland",
+        "how to renew nigerian passport in uae online",
+        "how to renew nigerian passport in new york",
+        "how to renew nigerian passport in uk online",
+        "how to renew nigerian passport in south africa",
+        "how to renew nigerian passport in atlanta",
+        "how to renew nigerian passport in germany",
+        "how to renew nigerian passport without nin",
+        "can you renew nigerian passport online",
+        "how to renew expired nigerian passport",
+        "what documents do i need to renew my nigerian passport",
+        "can i renew my nigerian passport before it expires"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/police-character-certificate",
+      "probes": [
+        "nigerian police clearance certificate"
+      ],
+      "googlePredictions": [
+        "nigerian police clearance certificate",
+        "nigerian police clearance certificate online",
+        "nigerian police clearance certificate uk",
+        "nigerian police clearance certificate price",
+        "nigerian police clearance certificate from canada",
+        "nigerian police clearance certificate online application",
+        "nigerian police clearance certificate validity",
+        "nigeria police clearance certificate diaspora",
+        "nigeria police clearance certificate from abroad",
+        "nigeria police clearance certificate sample"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/services/waec-check-result",
+      "probes": [
+        "how to check waec result",
+        "how to check waec result for",
+        "how to check waec result without",
+        "how to check waec result requirements"
+      ],
+      "googlePredictions": [
+        "how to check waec result",
+        "how to check waec result using phone",
+        "how to check waec result online",
+        "how to check waec result without scratch card",
+        "how to check waec result with nin",
+        "how to check waec result on jamb portal",
+        "how to check waec result for free",
+        "how to check waec result for this year",
+        "how to check waec result without pin",
+        "how to check waec result without pin and serial number",
+        "how to check waec result without examination number",
+        "how to check waec result without serial number",
+        "how to check waec result without scratch card and pin",
+        "how to check waec result without scratch card online",
+        "how to check waec result without nin",
+        "how to check waec result without card",
+        "how to check waec result without id card"
+      ]
+    },
+    {
+      "pillar": "services",
+      "canonical": "/topics/cac-business",
+      "probes": [
+        "cac registration",
+        "cac registration for",
+        "cac registration without",
+        "cac registration requirements"
+      ],
+      "googlePredictions": [
+        "cac registration",
+        "cac registration fees",
+        "cac registration form",
+        "cac registration portal login",
+        "cac registration portal",
+        "cac registration price",
+        "cac registration number",
+        "cac registration online",
+        "cac registration free",
+        "cac registration search",
+        "cac registration form online",
+        "cac registration form pdf",
+        "cac registration for free",
+        "cac registration for association",
+        "cac registration for limited company",
+        "cac registration form download",
+        "cac registration for ngo",
+        "cac registration for small business",
+        "cac registration for business name",
+        "cac registration no",
+        "how to register for cac free registration",
+        "cac registration requirements",
+        "cac registration requirements in nigeria",
+        "cac registration requirements for ngo",
+        "cac registration requirements pdf",
+        "cac registration requirements for business name",
+        "cac registration requirements for business",
+        "cac registration guidelines",
+        "cac registration criteria",
+        "cac company registration requirements",
+        "cac agent registration requirements"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/abeokuta",
+      "probes": [
+        "olumo rock"
+      ],
+      "googlePredictions": [
+        "olumo rock",
+        "olumo rock in abeokuta",
+        "olumo rock is located in which state",
+        "olumo rock tourist centre",
+        "olumo rock tourist centre photos",
+        "olumo rock gate fee",
+        "olumo rock entrance fee",
+        "olumo rock photos",
+        "olumo rock is located where",
+        "olumo rock nigeria"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/abuja",
+      "probes": [
+        "things to do in abuja"
+      ],
+      "googlePredictions": [
+        "things to do in abuja",
+        "things to do in abuja nigeria",
+        "things to do in abuja for kids",
+        "things to do in abuja with family",
+        "things to do in abuja for adults",
+        "things to do in abuja for couples",
+        "things to do in abuja at night",
+        "things to do in abuja as a tourist"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/benin-city",
+      "probes": [
+        "places to visit in benin city"
+      ],
+      "googlePredictions": [
+        "places to visit in benin city",
+        "places to visit in benin city edo state",
+        "places to visit in benin city nigeria",
+        "fun places to visit in benin city",
+        "nice places to visit in benin city",
+        "beautiful places to visit in benin city",
+        "best places to visit in benin city",
+        "interesting places to visit in benin city",
+        "unique places to visit in benin city",
+        "top 10 places to visit in benin city"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/calabar",
+      "probes": [
+        "tourist attractions in calabar"
+      ],
+      "googlePredictions": [
+        "tourist attractions in calabar",
+        "tourist attractions in calabar nigeria",
+        "tourist sites in calabar",
+        "tourism sites in calabar"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/lagos",
+      "probes": [
+        "things to do in lagos",
+        "best beaches in nigeria",
+        "things to do in lagos for",
+        "things to do in lagos without",
+        "things to do in lagos requirements"
+      ],
+      "googlePredictions": [
+        "things to do in lagos",
+        "things to do in lagos nigeria",
+        "things to do in lagos with kids",
+        "things to do in lagos island",
+        "things to do in lagos mainland",
+        "best beaches in nigeria",
+        "best beach in nigeria lagos",
+        "beautiful beaches in nigeria",
+        "good beaches in nigeria",
+        "best beach resorts in nigeria",
+        "top 10 best beaches in nigeria",
+        "top 10 beaches in nigeria",
+        "beautiful beaches in lagos nigeria",
+        "most beautiful beaches in nigeria",
+        "top beaches in lagos nigeria",
+        "things to do in lagos for kids",
+        "things to do in lagos for free",
+        "things to do in lagos for adults",
+        "things to do in lagos for christmas",
+        "things to do in lagos for couples",
+        "things to do in lagos for teens",
+        "things to do in lagos for birthday",
+        "things to do in lagos for fun",
+        "what to do in lagos for a day",
+        "what to do in lagos for 2 days",
+        "nothing to do in lagos",
+        "fun things to do in lagos mainland"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/nigeria-landmarks-places-to-visit",
+      "probes": [
+        "places to visit in nigeria",
+        "waterfalls in nigeria",
+        "national parks in nigeria",
+        "places to visit in nigeria for",
+        "places to visit in nigeria without",
+        "places to visit in nigeria requirements",
+        "national parks in nigeria for",
+        "national parks in nigeria without",
+        "national parks in nigeria requirements"
+      ],
+      "googlePredictions": [
+        "places to visit in nigeria",
+        "places to visit in nigeria as a tourist",
+        "places to visit in nigeria for vacation",
+        "places to visit in nigeria lagos",
+        "places to visit in nigeria abuja",
+        "places to visit in nigeria for holiday",
+        "where to visit in nigeria",
+        "places to see in nigeria",
+        "cities to visit in nigeria",
+        "sites to visit in nigeria",
+        "waterfalls in nigeria",
+        "waterfalls in nigeria and their location",
+        "famous waterfalls in nigeria",
+        "best waterfalls in nigeria",
+        "waterfalls in lagos nigeria",
+        "beautiful waterfalls in nigeria",
+        "popular waterfalls in nigeria",
+        "waterfalls located in nigeria",
+        "top 10 waterfalls in nigeria",
+        "list of waterfalls in nigeria",
+        "national parks in nigeria",
+        "national parks in nigeria and their location",
+        "national parks in nigeria pdf",
+        "nature parks in nigeria",
+        "17 national parks in nigeria",
+        "17 national parks in nigeria and their location",
+        "17 national parks in nigeria and their location pdf",
+        "new national parks in nigeria",
+        "17 national parks in nigeria and their location wikipedia",
+        "10 national parks in nigeria",
+        "places to visit in lagos nigeria as a tourist",
+        "places to tour in nigeria",
+        "is nigeria worth visiting",
+        "is nigeria a beautiful place",
+        "which place is the most beautiful place in lagos",
+        "places to visit from nigeria without visa"
+      ]
+    },
+    {
+      "pillar": "tour",
+      "canonical": "/explore/obudu-mountain-resort",
+      "probes": [
+        "obudu mountain resort"
+      ],
+      "googlePredictions": [
+        "obudu mountain resort",
+        "obudu mountain resort prices",
+        "obudu mountain resort location",
+        "obudu mountain resort is located in which state",
+        "obudu mountain resort photos",
+        "obudu mountain resort booking",
+        "obudu mountain resort reviews",
+        "obudu mountain resort cross river state",
+        "obudu mountain resort location in nigeria",
+        "obudu mountain resort prices per person"
+      ]
+    }
+  ]
+}
