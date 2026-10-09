@@ -1,5 +1,5 @@
 import type { CareerOpportunity, JobRecordKind, JobSector } from "@/lib/jobs";
-import retiredJobRoutes from "@/data/job-retired-redirects.json";
+import retiredJobRoutes from "@/data/job-retired-redirects.json" with { type: "json" };
 
 // Quality-first employer/recruitment wave.
 // Board-only role names are retained only as redirects; they are not published as thin vacancy pages.
