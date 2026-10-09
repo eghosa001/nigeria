@@ -18,7 +18,7 @@ export default function Page() {
   const ld={
     "@context":"https://schema.org",
     "@type":"ItemList",
-    name:"Things to Do in Lagos 2026: Attractions, Food & Places to Visit",
+    name:"Things to Do in Lagos, Nigeria: Attractions & Family Plans",
     numberOfItems:places.length,
     itemListElement:places.map((place,index)=>({
       "@type":"ListItem",
