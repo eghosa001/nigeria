@@ -115,6 +115,10 @@ type DataStreamsResponse = {
 };
 
 const interactionEvents = [
+  "job_apply_click",
+  "related_content_click",
+  "saved_page_add",
+  "saved_page_remove",
   "service_search_click",
   "official_link_click",
   "official_source_click",
