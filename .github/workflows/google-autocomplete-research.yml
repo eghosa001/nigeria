@@ -1,0 +1,26 @@
+name: Evergreen Google Autocomplete Research
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/google-autocomplete-research.mjs"
+      - ".github/workflows/google-autocomplete-research.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: google-autocomplete-research-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sample-suggestions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preserve owner-locked shortest CI policy
+        run: python3 scripts/fast_path_guard.py
+      - name: Query Nigeria-localized Google Autocomplete (research only)
+        run: node tools/google-autocomplete-research.mjs
