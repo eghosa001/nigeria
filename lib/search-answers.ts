@@ -16,6 +16,29 @@ function listPreview(items: string[], limit = 3) {
   return selected.slice(0, -1).join(", ") + ", and " + selected[selected.length - 1];
 }
 
+// Follow-ups match evidenced Search Console intents and official source details.
+// They complement, rather than duplicate, the five standard service questions.
+const specificFollowUps: Record<string, SearchAnswer[]> = {
+  "anambra-asin-registration": [
+    {
+      question: "Which ASIN registration option should I choose in Anambra State?",
+      answer: "AIRS provides Individual, Informal/Enterprise and Corporate enumeration options. Select the one matching the person or organisation registering, follow the online form and save the ASIN generated after successful submission.",
+    },
+  ],
+  "passport-application-tracking": [
+    {
+      question: "Can I track my Nigerian passport application with only my NIN?",
+      answer: "The official NIS tracking form requires both an Application Number and a Reference Number. Find these on your NIS application confirmation or payment record, then use the official tracker.",
+    },
+  ],
+  "ninauth-nin-verification": [
+    {
+      question: "What is a NIN Sharecode and how is it different from scanning a QR code?",
+      answer: "NIMC describes a Sharecode as a time-limited identity-verification code generated inside NINAuth. Alternatively, an organisation can display a QR code for you to scan with the same app. Review the requested information before approving either method.",
+    },
+  ],
+};
+
 export function getServiceSearchAnswers(service: Service): SearchAnswer[] {
   const year = service.lastVerified.slice(0, 4);
   const journey = getServiceJourney(service);
@@ -23,28 +46,6 @@ export function getServiceSearchAnswers(service: Service): SearchAnswer[] {
   const requirements = listPreview(service.requirements);
   const query = searchQueryOverrides[service.slug] ?? {};
 
-  // Follow-ups match evidenced Search Console intents and official source details.
-  // They complement, rather than duplicate, the five standard service questions.
-  const specificFollowUps: Record<string, SearchAnswer[]> = {
-    "anambra-asin-registration": [
-      {
-        question: "Which ASIN registration option should I choose in Anambra State?",
-        answer: "AIRS provides Individual, Informal/Enterprise and Corporate enumeration options. Select the one matching the person or organisation registering, follow the online form and save the ASIN generated after successful submission.",
-      },
-    ],
-    "passport-application-tracking": [
-      {
-        question: "Can I track my Nigerian passport application with only my NIN?",
-        answer: "The official NIS tracking form requires both an Application Number and a Reference Number. Find these on your NIS application confirmation or payment record, then use the official tracker.",
-      },
-    ],
-    "ninauth-nin-verification": [
-      {
-        question: "What is a NIN Sharecode and how is it different from scanning a QR code?",
-        answer: "NIMC describes a Sharecode as a time-limited identity-verification code generated inside NINAuth. Alternatively, an organisation can display a QR code for you to scan with the same app. Review the requested information before approving either method.",
-      },
-    ],
-  };
 
   return [
     {
