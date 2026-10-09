@@ -790,7 +790,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "After escaping an abusive marriage and losing everything in a fire, a young woman arrives in Lagos and receives help from a guarded neighbour. A job with an architect coping with grief brings their lives together, testing whether trust and healing can grow after different kinds of loss."
+    synopsis: "After escaping an abusive marriage and losing everything in a fire, a young woman arrives in Lagos and receives help from a guarded neighbour. A job with an architect coping with grief brings their lives together, testing whether trust and healing can grow after different kinds of loss.",
     cast: ["Micheal Dappa", "Ekama Etim-Inyang", "Ehis Perfect", "Floyd Igbo"],
     featuredCast: ["Micheal Dappa", "Ekama Etim-Inyang", "Ehis Perfect"],
     references: [{
