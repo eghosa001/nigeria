@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import assert from "node:assert/strict";
 import { analyticsStartDate, shouldEnableAnalytics } from "../lib/analytics-safety";
 
@@ -16,3 +17,17 @@ console.log("Analytics safety checks passed.");
 
 assert.equal(analyticsStartDate(90, "2026-09-29"), "2026-09-29");
 assert.equal(analyticsStartDate(7, "2026-10-10"), "2026-10-04");
+
+// Regression: browser collection must be permitted by production CSP.
+const cspSource = readFileSync(new URL("../next.config.ts", import.meta.url), "utf8");
+for (const directive of ["script-src", "connect-src"]) {
+  const line = cspSource.split("\n").find((entry) => entry.includes(`"${directive} `));
+  assert.ok(line?.includes("https://*.posthog.com"), directive + " must allow PostHog's assets and ingestion");
+}
+
+// Reporting status must represent a successful query, not merely a nonempty secret.
+const dataSource = readFileSync(new URL("../lib/analytics-data.ts", import.meta.url), "utf8");
+assert.ok(dataSource.includes("reportingConfigured: posthogOverview.available"));
+const dashboardSource = readFileSync(new URL("../components/admin-analytics-dashboard.tsx", import.meta.url), "utf8");
+assert.ok(!dashboardSource.includes("bounceRate * 100"), "PostHog bounce rate is already a percentage");
+assert.ok(dashboardSource.includes("bounceRate.toFixed(1)"));
