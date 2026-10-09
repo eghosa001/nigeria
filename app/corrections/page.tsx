@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Corrections policy", alternates: { canonical: "/corrections" } };
+export const metadata: Metadata = { title: "Corrections policy", description: "How MyNigeriaGuide verifies service changes, updates incorrect information and handles reader reports with links to official sources.", alternates: { canonical: "/corrections" } };
 
 export default function CorrectionsPage() {
   return (
