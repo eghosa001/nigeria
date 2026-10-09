@@ -79,6 +79,77 @@ test.describe("live MyNigeriaGuide deployment", () => {
     await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
   });
 
+
+  test("PostHog tracks initial and client-side pageviews without polluting production analytics", async ({ page }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only tracking transport check.");
+
+    // Simulate an ordinary visitor while intercepting ALL event-ingestion calls,
+    // so this test cannot generate fake PostHog or GA4 visitors.
+    await page.addInitScript(() => {
+      Object.defineProperty(Navigator.prototype, "webdriver", { configurable: true, get: () => false });
+      Object.defineProperty(Navigator.prototype, "userAgent", {
+        configurable: true,
+        get: () => "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+      });
+    });
+
+    const posthogPageviews: string[] = [];
+    await page.route(/https:\/\/[^/]*posthog\.com\/.*/, async (route) => {
+      const request = route.request();
+      const pathname = new URL(request.url()).pathname;
+      if (request.method() !== "POST" || !/^\/(?:e|batch|i\/v0\/e)\/?$/.test(pathname)) {
+        return route.continue();
+      }
+      const body = request.postData() ?? "";
+      try {
+        let payload: unknown;
+        try {
+          payload = JSON.parse(body);
+        } catch {
+          const form = new URLSearchParams(body);
+          const encoded = form.get("data");
+          if (!encoded) throw new Error("No ingestion data");
+          const buffer = Buffer.from(encoded.replace(/ /g, "+"), "base64");
+          try {
+            payload = JSON.parse(buffer.toString("utf8"));
+          } catch {
+            const { gunzipSync } = await import("node:zlib");
+            payload = JSON.parse(gunzipSync(buffer).toString("utf8"));
+          }
+        }
+        const record = payload as { batch?: Array<{ event?: string; properties?: Record<string, string> }>; event?: string; properties?: Record<string, string> };
+        const events = Array.isArray(payload) ? payload : Array.isArray(record.batch) ? record.batch : [record];
+        for (const event of events as Array<{ event?: string; properties?: Record<string, string> }>) {
+          if (event.event === "$pageview") {
+            posthogPageviews.push(event.properties?.$pathname ?? new URL(event.properties?.$current_url ?? "https://mynigeriaguide.com/").pathname);
+          }
+        }
+      } catch {
+        // Network traffic is intercepted even if the SDK changes its encoding.
+      }
+      return route.fulfill({
+        status: 200,
+        headers: { "access-control-allow-origin": "*", "content-type": "application/json" },
+        body: "{}",
+      });
+    });
+    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, async (route) =>
+      route.fulfill({ status: 204, headers: { "access-control-allow-origin": "*" }, body: "" }),
+    );
+
+    await page.goto("/");
+    await expect.poll(() => page.evaluate(() => (window as Window & { __mngPostHogLastTrackedPath?: string }).__mngPostHogLastTrackedPath), { timeout: 15_000 }).toBe("/");
+    await expect.poll(() => posthogPageviews.filter((path) => path === "/").length, { timeout: 20_000 }).toBe(1);
+
+    await page.locator('a[href="/services"]:visible').first().click();
+    await expect(page).toHaveURL(/\/services\/?$/);
+    await expect.poll(() => page.evaluate(() => (window as Window & { __mngPostHogLastTrackedPath?: string }).__mngPostHogLastTrackedPath), { timeout: 15_000 }).toBe("/services");
+    await expect.poll(() => posthogPageviews.filter((path) => path === "/services").length, { timeout: 20_000 }).toBe(1);
+
+    expect(posthogPageviews.filter((path) => path === "/")).toHaveLength(1);
+    expect(posthogPageviews.filter((path) => path === "/services")).toHaveLength(1);
+  });
+
   test("brand, navigation and core service route are live", async ({ page }) => {
     await page.goto("/");
     await expect(page.getByText("MyNigeriaGuide", { exact: true }).first()).toBeVisible();
