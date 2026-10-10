@@ -17,8 +17,8 @@ export type HomeSocialTrend = {
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
     pillar: "Movies & Entertainment",
-    title: "Sirrin Amarya: new Hausa thriller debuts on Africa Magic, 10 October",
-    href: "/entertainment/series/sirrin-amarya-2026",
+    title: "YouTube Nigeria: Blaqbonez, OJISE trailer, Ayra Starr and social trends",
+    href: "/entertainment/social-trends",
     checkedAt: "2026-10-10",
     expiresAt: "2026-10-12",
   },
