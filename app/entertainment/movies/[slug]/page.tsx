@@ -95,8 +95,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty Cast, Trailer & Netflix Status",
-    description: "Oversabi Aunty (2025) cast, story and 127-minute runtime. Find the official FilmOne trailer and the latest Netflix Nigeria availability notice.",
+    title: "Oversabi Aunty Cast (Toyin Abraham) & Where to Watch",
+    description: "Oversabi Aunty cast includes Toyin Abraham, Mike Ezuruonye and Enioluwa. See the 127-minute film story, official trailer and Netflix Nigeria availability status.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.
