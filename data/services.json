@@ -545,13 +545,15 @@
     "steps": [
       "Use CAC's CRP to check whether the proposed business name is available and complete name reservation when the portal requires it.",
       "Open the business-name pre-registration form in the CRP and enter the proprietor and business particulars.",
+      "Use the reservation's AV Code from the official iCRP when prompted, and review every proposed business and proprietor detail before submitting.",
       "Upload the supporting registration documents requested in that CRP application.",
       "Pay the filing fee through the integrated CAC payment route and submit the application for approval.",
       "After CAC approves the filing, download the electronic Certificate of Registration and Certified Extract from the CRP dashboard."
     ],
     "notes": [
       "CAC states proprietors can register business names without a lawyer, chartered accountant or chartered secretary.",
-      "CAC's current iCRP guidance says business-name registrations can be AI-approved and processed instantly, while CAC's formal service timeline allows up to 24 working hours for a complete application. Treat instant processing as possible, not guaranteed."
+      "CAC's current iCRP guidance says business-name registrations can be AI-approved and processed instantly, while CAC's formal service timeline allows up to 24 working hours for a complete application. Treat instant processing as possible, not guaranteed.",
+      "CAC's October 2026 iCRP FAQ distinguishes automatically processed business-name registrations from limited liability companies and other entity types that still undergo manual approval."
     ],
     "sources": [
       {
@@ -564,16 +566,22 @@
         "label": "CAC Company Registration Portal",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-10"
       },
       {
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
         "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC iCRP — Business Name Registration FAQ",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-10",
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
@@ -617,23 +625,30 @@
       "Monitor the CRP dashboard for approval or a query. Correct and resubmit anything CAC queries; after approval, download the electronic Certificate and Certified Extract from the portal."
     ],
     "notes": [
-      "CAC publishes a 24-working-hour service timeline for company registration once relevant documents are complete and any query is resolved."
+      "CAC publishes a 24-working-hour service timeline for company registration once relevant documents are complete and any query is resolved.",
+      "The current CAC iCRP FAQ says limited liability company, incorporated-trustee, LLP and LP filings still follow manual review, unlike the portal's AI-processed business-name registration route. Do not interpret automated name reservation as full company incorporation approval."
     ],
     "sources": [
       {
         "label": "CAC Company Registration",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/company-registration",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-10"
       },
       {
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
         "lastChecked": "2026-10-05"
+      },
+      {
+        "label": "CAC iCRP FAQ — business name versus company approvals",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-10",
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
@@ -723,18 +738,20 @@
       "Create or sign in to the official CAC iCRP account and open Name Reservation.",
       "Choose the business classification and business type.",
       "Enter the proposed name and business nature, then run the availability check.",
-      "If the name is available, continue to the official payment; after successful payment, keep the AV Code for the registration that follows."
+      "If the name is available, continue to the official payment; after successful payment, keep the AV Code for the registration that follows.",
+      "Use the reservation's AV Code only for the matching entity-registration application. If CAC asks for consent to restricted words, follow the additional approval process rather than repeatedly submitting the same name."
     ],
     "notes": [
       "CAC's current iCRP FAQ says standard name reservation is automated after successful payment.",
-      "Restricted names and names requiring consent follow a separate manually reviewed route."
+      "Restricted names and names requiring consent follow a separate manually reviewed route.",
+      "A preliminary availability search is not an approved reservation or certificate. For ordinary reservations the iCRP's FAQ describes an automated process after successful payment; names requiring consent must follow the separate review route."
     ],
     "sources": [
       {
         "label": "CAC iCRP FAQ",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/support/faq/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-10"
       },
       {
         "label": "CAC Revised Service Timelines",
@@ -746,10 +763,10 @@
         "label": "CAC Company Registration Portal",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-10",
     "searchTerms": [
       "CAC name reservation",
       "How CAC name reservation works",
@@ -784,14 +801,15 @@
     "notes": [
       "CAC's current CRP notice says annual-return filing is available for business names registered before July 2025.",
       "CAC says it is upgrading the business-name system with an AI-powered annual-returns process intended to support both older business names and those created after July 2025.",
-      "Company, business-name and incorporated-trustee annual returns use different filing fields and fees, so use the entity-specific form shown in CRP."
+      "Company, business-name and incorporated-trustee annual returns use different filing fields and fees, so use the entity-specific form shown in CRP.",
+      "The official iCRP landing page distinguishes business names registered before July 2025 from those after July 2025 as the new AI-based returns workflow is introduced; if your filing option is not yet active, follow CAC's current portal notices rather than an unofficial payment link."
     ],
     "sources": [
       {
         "label": "CAC Company Registration Portal",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-10"
       },
       {
         "label": "CAC Revised Service Timelines",
@@ -800,7 +818,7 @@
         "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-10-04",
+    "lastVerified": "2026-10-10",
     "searchTerms": [
       "CAC annual returns",
       "How to file CAC annual returns",
