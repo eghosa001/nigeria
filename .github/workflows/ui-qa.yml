@@ -65,6 +65,17 @@ jobs:
           quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
           non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
 
+          # Movie browse text-card regression: exercise only the affected layout
+          # at phone, tablet and desktop widths, in both appearance modes.
+          movie_discovery_trigger="$(printf '%s\\n' "$changed" | grep -E '^(app/entertainment/(movies/page\\.tsx|entertainment\\.css)|tests/movie-discovery-contrast\\.spec\\.ts)$' || true)"
+          non_movie_discovery="$(printf '%s\\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\\.tsx|entertainment\\.css)|tests/movie-discovery-contrast\\.spec\\.ts|\\.github/workflows/(ui-qa|ci)\\.yml)$' || true)"
+          if [ -n "$movie_discovery_trigger" ] && [ -z "$non_movie_discovery" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=movie-discovery" >> "$GITHUB_OUTPUT"
+            echo "Movie discovery-only change: focused light/dark contrast and responsive geometry regression."
+            exit 0
+          fi
+
           editorial_home_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/page\.tsx|app/entertainment/movies/page\.tsx|tests/home-editorial-curation\.spec\.ts)$' || true)"
           unrelated_editorial_home="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/entertainment/movies/page\.tsx|tests/home-editorial-curation\.spec\.ts|docs/PREMIUM_UX_STANDARD\.md|\.github/workflows/ui-qa\.yml)$' || true)"
           if [ -n "$editorial_home_trigger" ] && [ -z "$unrelated_editorial_home" ]; then
@@ -163,6 +174,9 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Check movie discovery contrast and phone / tablet / desktop layout
+        if: steps.scope.outputs.mode == 'movie-discovery'
+        run: npx playwright test tests/movie-discovery-contrast.spec.ts --project=desktop --workers=1
       - name: Run homepage and featured-film editorial curation
         if: steps.scope.outputs.mode == 'editorial-home'
         run: npx playwright test tests/home-editorial-curation.spec.ts --project=desktop --workers=1
