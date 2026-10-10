@@ -113,6 +113,9 @@ jobs:
         if: steps.scope.outputs.mode == 'analytics'
       - run: node scripts/check-production-audit.mjs
         if: steps.scope.outputs.mode == 'full'
+      - name: Verify recent movie selection and release gating
+        if: steps.scope.outputs.mode == 'full'
+        run: npx tsx --test tests/home-movie-highlights.test.ts
       - run: npm run typecheck
         if: steps.scope.outputs.mode == 'full'
       - run: npm run check:service-catalog
