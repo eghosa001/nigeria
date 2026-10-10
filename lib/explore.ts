@@ -1,3 +1,4 @@
+import { kainjiDamGuide } from "@/lib/explore-kainji-dam-2026-10-10";
 import { exploreGrowthWave9 } from "@/lib/explore-growth-wave-9";
 import { verifiedTrendEvents } from "@/lib/explore-trend-events-2026-10-08";
 import { exploreGrowthWave8 } from "@/lib/explore-growth-wave-8";
@@ -27,6 +28,7 @@ export type ExploreGuide = {
 };
 
 export const exploreGuides: ExploreGuide[] = [
+  kainjiDamGuide,
   ...verifiedTrendEvents,
   ...exploreGrowthWave9,
   ...exploreGrowthWave8,

@@ -73,6 +73,39 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
     ]
   },
   {
+    slug: "forever-yours-2025-royal-arts",
+    title: "Forever Yours",
+    year: 2025,
+    format: "movie",
+    genres: ["Romance", "Drama", "Nollywood"],
+    languages: ["English"],
+    synopsis: "Bukola and Oscar promised to marry each other as children. Fifteen years later, Bukola still remembers the promise, but Oscar is engaged to someone else. Reunited as adults, they face the question of whether an old bond can survive the lives they have built apart.",
+    cast: ["Daniel Etim Effiong", "Ekama Etim-Inyang"],
+    featuredCast: ["Daniel Etim Effiong", "Ekama Etim-Inyang"],
+    directors: ["Ndifreke Mathew"],
+    runtimeMinutes: 101,
+    references: [
+      {
+        label: "Nollywire — Forever Yours (2025), cast, filmmaker and story",
+        href: "https://nollywire.com/films/forever-yours",
+        lastChecked: "2026-10-10",
+        note: "This is the 2025 Royal Arts TV romance about Bukola and Oscar; it is not the separate 2026 ChinneyLoveEze TV drama about Ruby and Justin."
+      }
+    ],
+    watchLinks: [
+      {
+        platform: "YouTube",
+        label: "Watch the 2025 full movie on Royal Arts TV",
+        href: "https://www.youtube.com/watch?v=_KFL0VJYJBc",
+        access: "full-movie",
+        lastChecked: "2026-10-10",
+        note: "Full-length upload from the authorised Royal Arts TV publisher, published 20 November 2025. Do not confuse this romance with ChinneyLoveEze's 2026 film of the same title.",
+        publisher: "Royal Arts TV",
+        publisherUrl: "https://www.youtube.com/@royalartstv"
+      }
+    ]
+  },
+  {
     slug: "forever-yours-2026",
     title: "Forever Yours",
     year: 2026,
@@ -97,11 +130,12 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
       {
         platform: "YouTube",
         label: "Watch the full movie on YouTube",
-        href: "https://www.youtube.com/watch?v=_KFL0VJYJBc",
+        href: "https://www.youtube.com/watch?v=XO3_GT1BKPI",
         access: "full-movie",
-        lastChecked: "2026-10-07",
-        note: "Official full-length release already approved in the MyNigeriaGuide YouTube catalog.",
-        publisher: "ChinneyLoveEze TV"
+        lastChecked: "2026-10-10",
+        note: "Official 2026 upload from ChinneyLoveEze Tv featuring Daniel Etim Effiong and Toni Tones, not the separate 2025 Royal Arts film of the same name.",
+        publisher: "ChinneyLoveEze Tv",
+        publisherUrl: "https://www.youtube.com/@chinneyloveezetv"
       }
     ]
   },

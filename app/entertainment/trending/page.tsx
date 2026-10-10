@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/entertainment/trending" },
 };
 
-const prioritySlugs = ["black-market-2026","agbara-nla-the-return","east-west-love-2026","first-lady-2026","pushing-30-2026","tele-x-zikora-2026","a-land-apart-2026","onibon-oje-2026","phoenix-fury-2026","wire-transfer-2026","mko-documentary-2026","oversabi-aunty"];
+const prioritySlugs = ["black-market-2026","agbara-nla-the-return","east-west-love-2026","first-lady-2026","pushing-30-2026","tele-x-zikora-2026","a-land-apart-2026","onibon-oje-2026","phoenix-fury-2026","wire-transfer-2026","mko-documentary-2026","oversabi-aunty","long-enough-2026","forever-yours-2026","once-upon-a-village-3"];
 
 export default function TrendingMoviesPage() {
   const items = prioritySlugs.map((slug) => entertainmentTitles.find((item) => item.slug === slug)).filter((item): item is NonNullable<typeof item> => Boolean(item));

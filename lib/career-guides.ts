@@ -27,6 +27,118 @@ export type CareerGuide = {
 
 export const careerGuides: CareerGuide[] = [
   {
+    "slug": "nysc-ppa-posting-guide",
+    "title": "NYSC PPA Posting in Nigeria: Acceptance, Rejection and Relocation Guide",
+    "metaTitle": "NYSC PPA Posting: Acceptance & Relocation in Nigeria",
+    "description": "Understand NYSC Place of Primary Assignment posting, acceptance letters, employer checks and official relocation rules without paying for a PPA slot.",
+    "summary": "A Place of Primary Assignment (PPA) is where a corps member performs approved service after camp. An employer's informal invitation is not the same as an NYSC posting; confirm all documentation and any change of posting with NYSC.",
+    "answer": "Check your official NYSC posting instructions after orientation, contact the assigned employer and complete its documented acceptance or reporting procedure. If a placement does not work out, notify the NYSC local-government inspector or state office and follow their approved process. Do not pay a broker or assume that an employer invitation alone transfers your PPA.",
+    "reviewedAt": "2026-10-10",
+    "facts": [
+      {
+        "label": "PPA meaning",
+        "value": "Place of Primary Assignment"
+      },
+      {
+        "label": "Who assigns or approves",
+        "value": "NYSC posting authorities"
+      },
+      {
+        "label": "Relocation",
+        "value": "Formal NYSC approval, not a private sale"
+      },
+      {
+        "label": "Safety",
+        "value": "Verify employer and posting instructions"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What does NYSC PPA mean?",
+        "paragraphs": [
+          "Place of Primary Assignment is the organisation or approved location where a corps member serves during the main period after orientation. It can be a school, public institution, healthcare organisation or an eligible private establishment, depending on NYSC posting arrangements.",
+          "NYSC's official Corps Mobilization page describes deployment, posting and relocation as NYSC responsibilities. A private company's willingness to host you does not automatically change the posting recorded by NYSC."
+        ]
+      },
+      {
+        "heading": "What to do when you receive a PPA posting",
+        "paragraphs": [
+          "Use your official NYSC channels to verify where you have been posted and the reporting instructions. Keep the posting letter, relevant identification and other documents the designated NYSC office or assigned employer requires.",
+          "Contact the organisation through a separately verified official channel, confirm where and when to report, and keep copies of any acceptance, reporting, or clearance evidence. If an employer declines placement, follow your inspector's instructions for documenting that and obtaining another approved posting."
+        ],
+        "bullets": [
+          "Confirm the employer's name and address on your NYSC posting documents.",
+          "Ask whether the site accepts corps members in your discipline and can provide appropriate supervision.",
+          "Keep copies of all letters; do not submit altered or forged documents.",
+          "Ask the NYSC local-government inspector or state office before changing your reporting destination."
+        ]
+      },
+      {
+        "heading": "Can you find a PPA yourself in Abuja, Lagos or another state?",
+        "paragraphs": [
+          "You can research prospective employers and ask whether they accept corps members, but a company's expression of interest should not be advertised as official NYSC posting approval. Follow instructions from NYSC on whether and how a proposed placement can be considered.",
+          "Check your eligibility against the employer's requirements. A graduate vacancy marked 'NYSC completed' does not automatically accept current corps members, and an internship may be unrelated to the NYSC scheme. Use employer careers pages and official contacts rather than paying intermediaries."
+        ]
+      },
+      {
+        "heading": "What if your assigned PPA rejects you?",
+        "paragraphs": [
+          "Record the employer's response through the process your NYSC inspector requests. Do not use an unofficial rejection letter template, forge a refusal, or start serving somewhere else without an approved reposting.",
+          "Contact the appropriate NYSC inspector or secretariat promptly so your work and monthly clearance records remain accurate. The exact documents and local process can differ by posting office."
+        ]
+      },
+      {
+        "heading": "Relocation versus changing a PPA",
+        "paragraphs": [
+          "Relocation can mean transfer to another state and is governed by NYSC rules; changing an employer or PPA within a state is a separate posting question. Ask NYSC which procedure fits your case rather than using the terms interchangeably.",
+          "NYSC's published mobilization guidance describes formal relocation processes, including marital and health grounds. Decisions and application opportunities depend on the scheme's current rules; do not assume any agent can guarantee a transfer."
+        ]
+      },
+      {
+        "heading": "Avoid PPA and NYSC recruitment scams",
+        "paragraphs": [
+          "Verify unexpected WhatsApp requests, payment links, forged posting letters and promises of a guaranteed organisation. NYSC documentation and approved employer correspondence should control your actions, not screenshots circulating in a group.",
+          "Before sending your CV, NIN, call-up information or other personal information to an employer, check that the recipient is authorised and the request is appropriate. Never share passwords or OTP codes."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "NYSC — Corps Mobilization, Posting and Relocation",
+        "url": "https://www.nysc.gov.ng/corpmob.html",
+        "lastChecked": "2026-10-10"
+      },
+      {
+        "label": "NYSC — Bye-laws and General Rules",
+        "url": "https://www.nysc.gov.ng/downloads/nysc-bye-laws.php",
+        "lastChecked": "2026-10-10"
+      },
+      {
+        "label": "NYSC — official portal",
+        "url": "https://portal.nysc.org.ng/nysc/",
+        "lastChecked": "2026-10-10"
+      }
+    ],
+    "relatedLinks": [
+      {
+        "href": "/jobs/nysc",
+        "label": "NYSC-friendly employer and graduate routes"
+      },
+      {
+        "href": "/services/nysc-relocation",
+        "label": "Official NYSC relocation guide"
+      },
+      {
+        "href": "/services/nysc-call-up-letter",
+        "label": "Call-up letter and camp instructions"
+      },
+      {
+        "href": "/jobs/guides/job-scam-red-flags-nigeria",
+        "label": "Avoid recruitment scams"
+      }
+    ]
+  },
+  {
     "slug": "national-ai-innovation-challenge-2026",
     "title": "National AI Innovation Challenge 2026: N-ATLAS Eligibility, Build and Submission Guide",
     "metaTitle": "National AI Innovation Challenge 2026: Deadline & N-ATLAS Guide",

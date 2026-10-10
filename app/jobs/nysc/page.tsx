@@ -40,6 +40,7 @@ export default function NyscJobsPage() {
           ]}
           note="A career page is not automatically an NYSC PPA. MyNigeriaGuide only calls an opportunity open when the official source supports that status."
         />
+        <p className="top-gap"><Link href="/jobs/guides/nysc-ppa-posting-guide">Read the official NYSC PPA posting, acceptance and relocation guide →</Link></p>
         <div className="minimal-section-heading"><div><span className="eyebrow">Verified routes</span><h2>Graduate, trainee and engineering opportunities to check.</h2></div></div>
         <div className="home-category-grid compact-category-grid">
           {relevant.map((item) => (

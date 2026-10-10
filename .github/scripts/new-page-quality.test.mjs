@@ -16,6 +16,17 @@ test("new service needs source, action, freshness and related context", () => {
   assert.match(checkRecord("data/services.json", "service", good.slug, { ...good, sources: [] }).join(" "), /HTTPS evidence/);
 });
 
+test("same-name movies from different years are distinct; same-year duplicates remain blocked", async () => {
+  const { intentKey } = await import("./new-page-quality.mjs");
+  const movie2025 = `{ slug: "title-2025", title: "Forever Yours", year: 2025 }`;
+  const movie2026 = `{ slug: "title-2026", title: "Forever Yours", year: 2026 }`;
+  const sameYear = `{ slug: "another-2026", title: "Forever Yours", year: 2026 }`;
+  const olderKey = intentKey("movie", "lib/entertainment-growth-wave-6.ts", movie2025);
+  const newerKey = intentKey("movie", "lib/entertainment-growth-wave-6.ts", movie2026);
+  assert.notEqual(olderKey, newerKey);
+  assert.equal(newerKey, intentKey("movie", "lib/entertainment-growth-wave-6.ts", sameYear));
+});
+
 test("new TS job record is extracted without confusing nested objects", () => {
   const source = `export const items = [{
     slug: "test-role", title: "Example graduate engineer opening", summary: "A detailed vacancy summary covering role eligibility and verified employer application requirements.",
