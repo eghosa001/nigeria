@@ -612,7 +612,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       {
         platform: "Africa Magic",
         label: "Check Africa Magic Showcase",
-        href: "https://www.dstv.com/africamagic/en-ng",
+        href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
         lastChecked: "2026-10-04",
         note: "Current release information lists Pushing 30 for Africa Magic Showcase on 18 October 2026 at 8 PM. Replay and package availability can vary."
