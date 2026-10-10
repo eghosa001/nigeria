@@ -287,8 +287,8 @@ export const releaseItems: ReleaseItem[] = [
     startDate: "2026-11-13",
     dateLabel: "Nigerian cinema release announced for 13 November 2026",
     platform: "Nigerian cinemas — showtimes to be confirmed",
-    summary: "Sam Dede reprises Ebube in a new Issakaba chapter from Lancelot Oduwa Imasuen. The producer's official site announces 13 November; specific theatre listings remain to be confirmed.",
-    officialUrl: "https://issakaba.com/",
+    summary: "Sam Dede reprises Ebube in a new Issakaba chapter from Lancelot Oduwa Imasuen. Film catalog records show 13 November as the announced release; specific theatre listings remain to be confirmed.",
+    officialUrl: "https://nollywood.com/movies/issakaba-the-return",
     lastChecked: "2026-10-10",
   },
   {
@@ -324,7 +324,7 @@ export const releaseItems: ReleaseItem[] = [
     dateLabel: "Premieres 5 October 2026",
     platform: "Africa Magic Showcase",
     summary: "A new relationship drama following a successful advice-giver whose own marriage begins exposing the limits of her public formula.",
-    officialUrl: "https://www.dstv.com/africamagic/en-ng",
+    officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-04",
   },
   {
@@ -336,7 +336,7 @@ export const releaseItems: ReleaseItem[] = [
     dateLabel: "Premieres 8 October 2026",
     platform: "Africa Magic Showcase",
     summary: "Ten survivors are reunited by faith and forced to confront unresolved history, accountability and forgiveness.",
-    officialUrl: "https://www.dstv.com/africamagic/en-ng",
+    officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-04",
   },
   {
@@ -348,7 +348,7 @@ export const releaseItems: ReleaseItem[] = [
     dateLabel: "Premieres 10 October 2026",
     platform: "Africa Magic Yoruba",
     summary: "A royal heir becomes the main suspect in a supernatural mystery targeting heirs to the throne of Ekinrinade.",
-    officialUrl: "https://www.dstv.com/africamagic/en-ng",
+    officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-04",
   },
   {
@@ -360,7 +360,7 @@ export const releaseItems: ReleaseItem[] = [
     dateLabel: "Premieres 18 October 2026 at 8 PM",
     platform: "Africa Magic Showcase",
     summary: "A young-adult ensemble film about a tech founder whose 30th-birthday brunch exposes relationship, friendship and career tensions.",
-    officialUrl: "https://www.dstv.com/africamagic/en-ng",
+    officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-04",
   },
   {
