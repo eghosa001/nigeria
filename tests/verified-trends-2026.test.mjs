@@ -91,7 +91,8 @@ test("new series and movie have unique catalog records and source destinations",
   }
   assert.ok(shows.includes("independent.ng/africa-magic-announces-five-new-originals-for-october"));
   assert.ok(movie.includes('slug: "issakaba-the-return-2026"'));
-  assert.ok(movie.includes("https://issakaba.com/"));
+  assert.ok(movie.includes("https://nollywood.com/movies/issakaba-the-return"));
+  assert.equal(movie.includes("https://issakaba.com/"), false);
   assert.ok(movie.includes("2026-10-10"));
   assert.ok(load("lib/entertainment.ts").includes("...verifiedOctoberFilm"));
   assert.ok(load("lib/entertainment-extras.ts").includes("issakaba-the-return-2026-cinema"));
