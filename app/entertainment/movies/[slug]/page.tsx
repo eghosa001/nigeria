@@ -147,6 +147,14 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "In Every Lifetime Cast & Full Movie on YouTube",
     description: "In Every Lifetime cast, story, 95-minute runtime and official Ego Nwosu TV full movie, starring Daniel Etim Effiong, Ego Nwosu and Shaznay Okawa.",
   },
+  "forever-yours-2026": {
+    title: "Forever Yours 2026 Cast & Full Movie (ChinneyLoveEze)",
+    description: "Forever Yours (2026): Daniel Etim Effiong and Toni Tones star as Justin and Ruby. See the true film story and official ChinneyLoveEze TV full movie.",
+  },
+  "forever-yours-2025-royal-arts": {
+    title: "Forever Yours 2025 Cast & Full Movie (Royal Arts TV)",
+    description: "Forever Yours (2025) stars Daniel Etim Effiong and Ekama Etim-Inyang as Oscar and Bukola. See the romance story and Royal Arts TV full movie.",
+  },
   "beauty-in-scars-2026": {
     title: "Beauty In Scars Cast & Full Movie on YouTube",
     description: "Beauty In Scars cast, story, 142-minute runtime and official Uchenna Mbunabo TV full movie, starring Naya Pratt, Emeka Ike and Ochanya John-Enenche.",
@@ -350,6 +358,15 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <span>{platforms.length ? platforms.join(" / ") : "Availability not currently verified"}</span>
               </div>
               <p className="movie-detail-synopsis">{title.synopsis}</p>
+              {(title.slug === "forever-yours-2026" || title.slug === "forever-yours-2025-royal-arts") ? (
+                <p className="job-muted">
+                  Two different Nigerian films share the title <strong>Forever Yours</strong>.
+                  This is the {title.year} film. See the{" "}
+                  <Link href={title.year === 2026 ? "/entertainment/movies/forever-yours-2025-royal-arts" : "/entertainment/movies/forever-yours-2026"}>
+                    {title.year === 2026 ? "2025 Royal Arts TV romance about Bukola and Oscar" : "2026 ChinneyLoveEze drama about Justin and Ruby"}
+                  </Link> instead.
+                </p>
+              ) : null}
               <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
 
               <div className="movie-detail-genres">
