@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-08T11:28:58.392Z",
+  "generatedAt": "2026-10-10T18:19:44.727Z",
   "syncMode": "incremental",
   "sourceCount": 97,
-  "importedCount": 3674,
-  "importedThisRun": 6,
-  "pendingQualityCount": 816,
-  "pendingThisRun": 0,
+  "importedCount": 3690,
+  "importedThisRun": 38,
+  "pendingQualityCount": 819,
+  "pendingThisRun": 3,
   "duplicateTitleCount": 0,
   "failedSourceCount": 5,
   "requiredFailedSourceCount": 0,
@@ -42,6 +42,388 @@
     }
   ],
   "movies": [
+    {
+      "videoId": "0rakGyBI1EE",
+      "title": "BREAKING POINT",
+      "rawTitle": "BREAKING POINT - TIMINI EGBUSON & SANDRA OKUNZUWA. NIGERIAN MOVIES 2026 LATEST FULL MOVIE ",
+      "synopsis": "After losing his job, a husband’s fragile pride spirals into jealousy when his wife lands a life-changing promotion abroad, forcing her to choose between the marriage she loves and the future she has worked for.",
+      "cast": [
+        "TIMINI EGBUSON",
+        "SANDRA OKUNZUWA"
+      ],
+      "featuredCast": [
+        "TIMINI EGBUSON",
+        "SANDRA OKUNZUWA"
+      ],
+      "channelName": "BOLAJI OGUNMOLA TV",
+      "channelId": "UCqxprLDy_2hMQ7aQp_4NNuA",
+      "channelUrl": "https://www.youtube.com/@bolajiogunmolatv",
+      "publishedAt": "2026-10-10T17:00:30Z",
+      "year": 2026,
+      "durationMinutes": 94,
+      "viewCount": 25006,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=0rakGyBI1EE",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "Ky76LCiqYMo",
+      "title": "THE GHOST OF THE PAST",
+      "rawTitle": "THE GHOST OF THE PAST - OGENE BOYS 3 - Brain Jotter Nigerian movies 2026 Latest Full Movies",
+      "synopsis": "THE GHOST OF THE PAST is a full-length Nigerian film published by Brain Jotter. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Brain Jotter",
+      "channelId": "UCxyb0darxVM-h7I4xYWrb4A",
+      "channelUrl": "https://www.youtube.com/@brainjottercomedian",
+      "publishedAt": "2026-10-10T17:00:10Z",
+      "year": 2026,
+      "durationMinutes": 81,
+      "viewCount": 10998,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=Ky76LCiqYMo",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "DthHkMvor7o",
+      "title": "UNHOLY ANGER // UCHE JOMBO, DANIEL ETIM-IYANG //ERICA NLEWEDIM",
+      "rawTitle": "UNHOLY ANGER // UCHE JOMBO, DANIEL ETIM-IYANG //ERICA NLEWEDIM",
+      "synopsis": "UNHOLY ANGER // UCHE JOMBO, DANIEL ETIM-IYANG //ERICA NLEWEDIM is a full-length Nigerian film published by AWELE HANSEL TV 365, featuring Daniel Etim, Erica nlewedim. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "Daniel Etim",
+        "Erica nlewedim"
+      ],
+      "featuredCast": [
+        "Daniel Etim",
+        "Erica nlewedim"
+      ],
+      "channelName": "AWELE HANSEL TV 365",
+      "channelId": "UC37J3xebDvtq_WtnzYi4wyw",
+      "channelUrl": "https://www.youtube.com/@awelehanseltv365",
+      "publishedAt": "2026-10-10T15:00:36Z",
+      "year": 2026,
+      "durationMinutes": 149,
+      "viewCount": 11444,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=DthHkMvor7o",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "tCa7-acZ9uM",
+      "title": "LOVE LOOKS GOOD ON YOU",
+      "rawTitle": "LOVE LOOKS GOOD ON YOU - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "With a picture-perfect engagement turning into a trap, she seeks refuge under the same roof as Uzor, a charming man with an image to protect and secrets of his own. Their unexpected connection feels like the first honest thing in her life. But escaping the man she was supposed to marry could cost her the one she never saw coming.",
+      "cast": [
+        "Bamike Olawunmi",
+        "Michael Dappa",
+        "FAE Olumide",
+        "Symon Oko"
+      ],
+      "featuredCast": [
+        "Bamike Olawunmi",
+        "Michael Dappa",
+        "FAE Olumide"
+      ],
+      "channelName": "Omoni Oboli TV",
+      "channelId": "UCbvdwZvZgdl-pPyomEmaEfg",
+      "channelUrl": "https://www.youtube.com/@omoniobolitv",
+      "publishedAt": "2026-10-09T16:13:41Z",
+      "year": 2026,
+      "durationMinutes": 172,
+      "viewCount": 1440065,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=tCa7-acZ9uM",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "0ujEzReLcP8",
+      "title": "LOVE SO COLD",
+      "rawTitle": "LOVE SO COLD - DETOLA JONES/IREWOLE OLANIYAN/NIGERIAN MOVIES 2026 LATEST MOVIES",
+      "synopsis": "And if you are a subscriber, please turn on NOTIFICATIONS by clicking the \"bell\" symbol to get updates on our new videos uploaded",
+      "cast": [
+        "Detola Jones"
+      ],
+      "featuredCast": [
+        "Detola Jones"
+      ],
+      "channelName": "OrjiTv",
+      "channelId": "UCiahLsxiMoVkuUM1bbgPg0g",
+      "channelUrl": "https://www.youtube.com/@orjitv",
+      "publishedAt": "2026-10-09T16:00:39Z",
+      "year": 2026,
+      "durationMinutes": 116,
+      "viewCount": 127549,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=0ujEzReLcP8",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "r00W4etXk9I",
+      "title": "MIND GAMES",
+      "rawTitle": "MIND GAMES - TIMINI EGBUSON, OSEREME INEGBENEBOR, BLESSING FABIAN latest 2026 nigerian movies",
+      "synopsis": "MIND GAMES is a full-length Nigerian film published by Uchenna Mbunabo Tv, featuring TIMINI EGBUSON, OSEREME INEGBENEBOR, BLESSING FABIAN. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "TIMINI EGBUSON",
+        "OSEREME INEGBENEBOR",
+        "BLESSING FABIAN"
+      ],
+      "featuredCast": [
+        "TIMINI EGBUSON",
+        "OSEREME INEGBENEBOR",
+        "BLESSING FABIAN"
+      ],
+      "channelName": "Uchenna Mbunabo Tv",
+      "channelId": "UCypAoMCRQuNL2RBwy-x4oQg",
+      "channelUrl": "https://www.youtube.com/@uchennambunabotv02",
+      "publishedAt": "2026-10-09T16:00:28Z",
+      "year": 2026,
+      "durationMinutes": 107,
+      "viewCount": 531558,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=r00W4etXk9I",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "-0i2iEvMtgI",
+      "title": "PREGNANT FOR MY MOTHER IN-LAW",
+      "rawTitle": "PREGNANT FOR MY MOTHER IN-LAW - SONIA UCHE, CHIOMA NWOSU Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "IFYEZE NOLLY TV @IfyEzenollytv-b7u PRODUCES BEST NOLLYWOOD MOVIES THAT ENTERTAINS AND EDUCATES ABOUT LIFE, MARRIAGE/RELATIONSHIP AND THE REAL AFRICAN CULTURE.",
+      "cast": [
+        "SONIA UCHE",
+        "CHIOMA NWOSU"
+      ],
+      "featuredCast": [
+        "SONIA UCHE",
+        "CHIOMA NWOSU"
+      ],
+      "channelName": "IfyEze Nolly tv",
+      "channelId": "UCFVseBemDz2KhVgh4S0-U1g",
+      "channelUrl": "https://www.youtube.com/@ifyezenollytv-b7u",
+      "publishedAt": "2026-10-09T16:00:26Z",
+      "year": 2026,
+      "durationMinutes": 119,
+      "viewCount": 22245,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=-0i2iEvMtgI",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "As6Dm26KtYI",
+      "title": "AMOTAN",
+      "rawTitle": "AMOTAN - Mercy Aigbe, Habeeb Alagbe, Joke Muyiwa Latest 2026 Yoruba Drama Movie #trending",
+      "synopsis": "They called her AMOTAN, the seer who sees what others cannot and knows what others dare not ask. But beneath her gift lies a mystery yet to be unravelled. Who truly is the woman behind the all-knowing eyes? AMOTAN showing now on Mercy Aigbe Tv",
+      "cast": [
+        "Mercy Aigbe",
+        "Habeeb Alagbe",
+        "Joke Muyiwa"
+      ],
+      "featuredCast": [
+        "Mercy Aigbe",
+        "Habeeb Alagbe",
+        "Joke Muyiwa"
+      ],
+      "channelName": "MERCY AIGBE TV",
+      "channelId": "UChkgGXQY9aRSdrNKiDgjssg",
+      "channelUrl": "https://www.youtube.com/@mercyaigbetv",
+      "publishedAt": "2026-10-09T16:00:12Z",
+      "year": 2026,
+      "durationMinutes": 82,
+      "viewCount": 89434,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=As6Dm26KtYI",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "wwhTq0IJWwc",
+      "title": "SWEET SUNDAY",
+      "rawTitle": "SWEET SUNDAY | WUMI TORIOLA | CHIDI DIKE | CHRIS ATTOH | ANGEL UNIGWE",
+      "synopsis": "Sunday is chasing his dreams when he falls for Edna, a girl raised by strict, deeply religious parents. What begins as an innocent connection soon becomes a secret romance that challenges everything Edna has been taught to believe. With jealousy growing, secrets piling up, and Pastor Ita determined to protect his daughter, their love is about to face a test",
+      "cast": [
+        "Wumi Toriola",
+        "ANGEL UNIGWE -"
+      ],
+      "featuredCast": [
+        "Wumi Toriola",
+        "ANGEL UNIGWE -"
+      ],
+      "channelName": "GoldenTide TV",
+      "channelId": "UCNtiT265NUW0E-gahbQKvYw",
+      "channelUrl": "https://www.youtube.com/@goldentidetv",
+      "publishedAt": "2026-10-09T15:00:31Z",
+      "year": 2026,
+      "durationMinutes": 158,
+      "viewCount": 255910,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=wwhTq0IJWwc",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "G6C6kFVQy0Q",
+      "title": "Onile Owo",
+      "rawTitle": "Onile Owo - Latest Yoruba movie 2026 Drama | Iteledicon | Odunlade Adekola | Kemity | Efun",
+      "synopsis": "ONILE OWO - Money has a voice, but not everyone who hears it has a good heart. Behind every fortune lies a story, and behind every smile may be a secret waiting to be exposed.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "Itelediconstudio",
+      "channelId": "UCACI-qnh5ozbLpvgl3ghI9w",
+      "channelUrl": "https://www.youtube.com/@itelediconstudio",
+      "publishedAt": "2026-10-09T15:00:03Z",
+      "year": 2026,
+      "durationMinutes": 81,
+      "viewCount": 710898,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=G6C6kFVQy0Q",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "aCAnUGP5Qjo",
+      "title": "A SISTERS HEART- Tana Adelana",
+      "rawTitle": "A SISTERS HEART- Tana Adelana|Nkechi Blessing| Nasboi|Echelon Mbadiwe| Latest Nigerian Movie 2026",
+      "synopsis": "After losing their parents, two sisters are left with little in the world except each other.",
+      "cast": [
+        "t in Lagos"
+      ],
+      "featuredCast": [
+        "t in Lagos"
+      ],
+      "channelName": "TANA ADELANA TV",
+      "channelId": "UCeJQws1GtCCM-R5ZNNlMkwA",
+      "channelUrl": "https://www.youtube.com/@tanaadelanatv",
+      "publishedAt": "2026-10-08T17:00:10Z",
+      "year": 2026,
+      "durationMinutes": 92,
+      "viewCount": 52283,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=aCAnUGP5Qjo",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "ye0mFiQnDlw",
+      "title": "MAMA’S LIST",
+      "rawTitle": "MAMA’S LIST ; CHIOMA NWOSU, BRIGHT MORGAN, DEOLA JONES, GIFT.A, KRYSTEL, 2026 Latest Nollywood Movie",
+      "synopsis": "MAMA’S LIST is a full-length Nigerian film published by Uche Nancy Update Tv, featuring KRYSTEL. Watch it through the publisher's official YouTube release.",
+      "cast": [
+        "KRYSTEL"
+      ],
+      "featuredCast": [
+        "KRYSTEL"
+      ],
+      "channelName": "Uche Nancy Update Tv",
+      "channelId": "UCllyxqlpQNkJpXf3PHb4aWQ",
+      "channelUrl": "https://www.youtube.com/@uchenancyupdatetv",
+      "publishedAt": "2026-10-08T16:04:46Z",
+      "year": 2026,
+      "durationMinutes": 135,
+      "viewCount": 441878,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=ye0mFiQnDlw",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "Di6QSgFoRoI",
+      "title": "ONCE UPON A VILLAGE 10",
+      "rawTitle": "ONCE UPON A VILLAGE 10 - FINAL EPISODE ",
+      "synopsis": "ONCE UPON A VILLAGE 10 is a full-length Nigerian film published by RuthKadiri247. Watch it through the publisher's official YouTube release.",
+      "cast": [],
+      "featuredCast": [],
+      "channelName": "RuthKadiri247",
+      "channelId": "UCjcFNZE51DmSrGYBqixs0Ug",
+      "channelUrl": "https://www.youtube.com/@ruthkadiri247",
+      "publishedAt": "2026-10-08T16:01:23Z",
+      "year": 2026,
+      "durationMinutes": 135,
+      "viewCount": 2670797,
+      "metadataStatus": "cast-pending",
+      "videoUrl": "https://www.youtube.com/watch?v=Di6QSgFoRoI",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "vNcxN7MyURk",
+      "title": "COLOR ME DESPERATE",
+      "rawTitle": "COLOR ME DESPERATE - Nigerian Movies 2026 Latest Full Movies",
+      "synopsis": "COLOR ME DESPERATE cast: Omeche Oko, Olami Samuel, Obey Etok and Ubi Emmanuel",
+      "cast": [
+        "Omeche Oko",
+        "Olami Samuel",
+        "Obey Etok"
+      ],
+      "featuredCast": [
+        "Omeche Oko",
+        "Olami Samuel",
+        "Obey Etok"
+      ],
+      "channelName": "Royal Arts TV",
+      "channelId": "UCHtfUf-9779RPujVXixJ7Tw",
+      "channelUrl": "https://www.youtube.com/@royalartstv",
+      "publishedAt": "2026-10-08T16:00:28Z",
+      "year": 2026,
+      "durationMinutes": 97,
+      "viewCount": 93202,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=vNcxN7MyURk",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "mBl5wdukWjs",
+      "title": "THE CARETAKER",
+      "rawTitle": "THE CARETAKER - Mercy Johnson, Zubby Michael, Etinosa Idemudia|2026 Latest Nigerian Nollywood Movie",
+      "synopsis": "On this channel, you will enjoy the best of Nollywood movies, emotional African stories, romantic love dramas, and powerful performances from Mercy Johnson Okojie.",
+      "cast": [
+        "Mercy Johnson",
+        "Zubby Michael",
+        "Etinosa Idemudia"
+      ],
+      "featuredCast": [
+        "Mercy Johnson",
+        "Zubby Michael",
+        "Etinosa Idemudia"
+      ],
+      "channelName": "Mercyjohnsonokojie TV",
+      "channelId": "UCeaw5Pjz9B8IHKjeilf807A",
+      "channelUrl": "https://www.youtube.com/@mercyjohnsonokojietv",
+      "publishedAt": "2026-10-08T16:00:04Z",
+      "year": 2026,
+      "durationMinutes": 108,
+      "viewCount": 1130252,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=mBl5wdukWjs",
+      "lastChecked": "2026-10-10"
+    },
+    {
+      "videoId": "LHIWWkJKTiE",
+      "title": "TIME IS AN ENEMY",
+      "rawTitle": "TIME IS AN ENEMY | BAMBAM OLAWUNMI, KUNLE REMI | 2026 Latest Nigerian Full Movies",
+      "synopsis": "TIME IS AN ENEMY | BAMBAM OLAWUNMI, KUNLE REMI | 2026 Latest Nigerian (Nollywood) Full Movies",
+      "cast": [
+        "BAMBAM OLAWUNMI",
+        "KUNLE REMI",
+        "HARRIET AKINOLA",
+        "IHEM JUDITH",
+        "SYMON OKO",
+        "ALEX AYALOGU",
+        "FREDRICK ADUM",
+        "PATRICIA EKE",
+        "BAMBI OLAMILEKAN",
+        "JOAN MAKAFFY",
+        "LUCKY OKOLO",
+        "KENNETH CHINEDU"
+      ],
+      "featuredCast": [
+        "BAMBAM OLAWUNMI",
+        "KUNLE REMI",
+        "HARRIET AKINOLA"
+      ],
+      "channelName": "Chinedu Benjamin TV",
+      "channelId": "UCPbe5URc7tuQw3pfnBTAtNA",
+      "channelUrl": "https://www.youtube.com/@chinedubenjamintv",
+      "publishedAt": "2026-10-08T14:00:22Z",
+      "year": 2026,
+      "durationMinutes": 126,
+      "viewCount": 1422268,
+      "metadataStatus": "complete",
+      "videoUrl": "https://www.youtube.com/watch?v=LHIWWkJKTiE",
+      "lastChecked": "2026-10-10"
+    },
     {
       "videoId": "-AxfPNSiwZI",
       "title": "THROUGH THEIR EYES",
@@ -1936,10 +2318,10 @@
       "publishedAt": "2026-09-10T14:00:21Z",
       "year": 2026,
       "durationMinutes": 129,
-      "viewCount": 3347619,
+      "viewCount": 3511939,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=UY9KD79o6jM",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "geFPwpOZo_A",
@@ -3625,10 +4007,10 @@
       "publishedAt": "2026-08-20T14:00:27Z",
       "year": 2026,
       "durationMinutes": 119,
-      "viewCount": 6401245,
+      "viewCount": 6545069,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=lYnmwdcF7Lg",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "xb3LBmn1ZEE",
@@ -5583,10 +5965,10 @@
       "publishedAt": "2026-07-23T14:00:08Z",
       "year": 2026,
       "durationMinutes": 131,
-      "viewCount": 429743,
+      "viewCount": 432721,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=0iFhqUwipMY",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "gdhwGsWrjT0",
@@ -7084,10 +7466,10 @@
       "publishedAt": "2026-07-02T14:00:19Z",
       "year": 2026,
       "durationMinutes": 100,
-      "viewCount": 1041752,
+      "viewCount": 1044984,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=ieZwkRMvWP8",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "iYq3vefB63E",
@@ -7916,7 +8298,7 @@
       "videoId": "JjvbOTDjR-o",
       "title": "YOUR FATHER OR ME",
       "rawTitle": "YOUR FATHER OR ME | Nigerian Family Drama | NKEM OWOH, PAMELA OKOYE | 2026 Latest Full Movies",
-      "synopsis": "YOUR FATHER OR ME | Nigerian Romantic Comedy | NKEM OWOH, PAMELA OKOYE | 2026 Latest Full Movies | Latest Nigerian (Nollywood) Full Movies 2026",
+      "synopsis": "When an overbearing father moves into his son's home and turns against his daughter-in-law, a young marriage is pushed to breaking point. But when the wife's mother arrives ready for battle, family loyalty, love, and respect collide in a hilarious and emotional Nigerian family drama that forces one man to choose: YOUR FATHER OR ME.",
       "cast": [
         "NKEM OWOH",
         "PAMELA OKOYE",
@@ -7938,10 +8320,10 @@
       "publishedAt": "2026-06-18T14:00:02Z",
       "year": 2026,
       "durationMinutes": 114,
-      "viewCount": 4670170,
+      "viewCount": 4697474,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=JjvbOTDjR-o",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "YLnxrqT2REs",
@@ -8770,7 +9152,7 @@
       "videoId": "KvaIE9QzfMU",
       "title": "LOVE, LIES & BROKEN MINDS",
       "rawTitle": "LOVE, LIES & BROKEN MINDS | Emotional Nigerian Movie 2026 | BIMBO ADEMOYE, IK OGBONNA | Latest Movie",
-      "synopsis": "Love, Lies & Broken Minds is an emotional Nigerian movie 2026 latest Nollywood movie starring Bimbo Ademoye and IK Ogbonna. Watch Love, Lies & Broken Minds on Chinedu Benjamin TV.",
+      "synopsis": "LOVE, LIES & BROKEN MINDS | BIMBO ADEMOYE, IK OGBONNA, CHINONSO ARUBAYI | Latest Nigerian (Nollywood) Full Movies 2026",
       "cast": [
         "BIMBO ADEMOYE",
         "IK OGBONNA",
@@ -8795,10 +9177,10 @@
       "publishedAt": "2026-06-04T14:01:06Z",
       "year": 2026,
       "durationMinutes": 96,
-      "viewCount": 4301373,
+      "viewCount": 4319120,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=KvaIE9QzfMU",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "VYdJ00edWkY",
@@ -9869,10 +10251,10 @@
       "publishedAt": "2026-05-21T14:00:26Z",
       "year": 2026,
       "durationMinutes": 105,
-      "viewCount": 2750329,
+      "viewCount": 2762081,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=N90ULkxmybc",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "3XN6U8u4Mqc",
@@ -12822,10 +13204,10 @@
       "publishedAt": "2026-04-02T14:00:13Z",
       "year": 2026,
       "durationMinutes": 129,
-      "viewCount": 1297850,
+      "viewCount": 1303565,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=AvMDmxjuW6I",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "jDMgCPnxCYw",
@@ -13705,10 +14087,10 @@
       "publishedAt": "2026-03-19T14:01:12Z",
       "year": 2026,
       "durationMinutes": 106,
-      "viewCount": 1202415,
+      "viewCount": 1204511,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=fur7CgMyKGk",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "jvH9xFlYGs8",
@@ -15006,10 +15388,10 @@
       "publishedAt": "2026-02-26T14:00:57Z",
       "year": 2026,
       "durationMinutes": 98,
-      "viewCount": 1232657,
+      "viewCount": 1236629,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=ej1UYYUbIqY",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "ExAM2HJTjKM",
@@ -16755,7 +17137,7 @@
       "videoId": "20GKAUF1iEY",
       "title": "WHAT LOVE LEAVES BEHIND",
       "rawTitle": "WHAT LOVE LEAVES BEHIND | Frederick Leonard, Pamela Okoye, Kenneth Nwadike | Nigerian Full Movies",
-      "synopsis": "WHAT LOVE LEAVES BEHIND | FREDERICK LEONARD, PAMELA OKOYE, KENNETH NWADIKE, GLORIA HANSON | Nigerian (Nollywood ) Full Movie",
+      "synopsis": "A man’s world changes when his best friend claims to be the father of his wife’s baby",
       "cast": [
         "FREDERICK LEONARD",
         "PAMELA OKOYE",
@@ -16781,10 +17163,10 @@
       "publishedAt": "2026-01-29T14:00:07Z",
       "year": 2025,
       "durationMinutes": 108,
-      "viewCount": 2700154,
+      "viewCount": 2703773,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=20GKAUF1iEY",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "YIZXNyV-FzI",
@@ -17572,10 +17954,10 @@
       "publishedAt": "2026-01-15T14:00:58Z",
       "year": 2026,
       "durationMinutes": 97,
-      "viewCount": 1787191,
+      "viewCount": 1789037,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=Qlb8JPm3Gz0",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "Y2pIgZMrsFo",
@@ -19235,10 +19617,10 @@
       "publishedAt": "2025-12-18T14:00:12Z",
       "year": 2026,
       "durationMinutes": 83,
-      "viewCount": 4296681,
+      "viewCount": 4319232,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=6g7XFF-EaRM",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "vCCgDh71-vo",
@@ -20275,10 +20657,10 @@
       "publishedAt": "2025-12-04T14:01:17Z",
       "year": 2025,
       "durationMinutes": 145,
-      "viewCount": 500925,
+      "viewCount": 503910,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=fKKuCGJawmw",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "WzPnw91Gxfc",
@@ -22759,10 +23141,10 @@
       "publishedAt": "2025-10-30T14:01:26Z",
       "year": 2025,
       "durationMinutes": 92,
-      "viewCount": 374034,
+      "viewCount": 374939,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=sR7e7BybNWQ",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "s2i9a9HeLvA",
@@ -23614,10 +23996,10 @@
       "publishedAt": "2025-10-16T14:00:23Z",
       "year": 2025,
       "durationMinutes": 104,
-      "viewCount": 437695,
+      "viewCount": 438172,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=GSEnhtikS1g",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "jP6mri2L5Uo",
@@ -24637,10 +25019,10 @@
       "publishedAt": "2025-10-02T14:00:46Z",
       "year": 2025,
       "durationMinutes": 121,
-      "viewCount": 612601,
+      "viewCount": 614434,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=jfWQg2hurkM",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "HwgqJeVuGHA",
@@ -26342,10 +26724,10 @@
       "publishedAt": "2025-09-04T14:00:42Z",
       "year": 2025,
       "durationMinutes": 123,
-      "viewCount": 604844,
+      "viewCount": 605565,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=oKvkWtHnKoM",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "JjWlDFLtdmI",
@@ -27200,10 +27582,10 @@
       "publishedAt": "2025-08-21T14:00:43Z",
       "year": 2025,
       "durationMinutes": 110,
-      "viewCount": 720117,
+      "viewCount": 724220,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=R3dyNm3MkgA",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "hKI3eursPwE",
@@ -30314,10 +30696,10 @@
       "publishedAt": "2025-07-04T16:01:30Z",
       "year": 2025,
       "durationMinutes": 95,
-      "viewCount": 1234973,
+      "viewCount": 1236568,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=p2rtRalq7y8",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "juMJFZHHq6I",
@@ -35665,10 +36047,10 @@
       "publishedAt": "2025-04-12T10:01:18Z",
       "year": 2025,
       "durationMinutes": 101,
-      "viewCount": 254590,
+      "viewCount": 254867,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=xzLsC3pyZrQ",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "xCDYRwmcVNA",
@@ -37153,10 +37535,10 @@
       "publishedAt": "2025-03-15T10:00:20Z",
       "year": 2025,
       "durationMinutes": 120,
-      "viewCount": 953603,
+      "viewCount": 954596,
       "metadataStatus": "complete",
       "videoUrl": "https://www.youtube.com/watch?v=HCy5VmYqZzM",
-      "lastChecked": "2026-10-05"
+      "lastChecked": "2026-10-10"
     },
     {
       "videoId": "t1j9VMrW19w",

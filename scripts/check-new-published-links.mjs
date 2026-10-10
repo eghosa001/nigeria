@@ -8,7 +8,17 @@ if (!base || !/^[a-f0-9]{7,40}$/.test(base)) {
   console.error("Set BASE_SHA to the PR base commit SHA.");
   process.exit(2);
 }
-const text = execFileSync("git", ["diff", "--unified=0", base, "HEAD", "--", "app", "lib", "data"], {
+// API-generated YouTube snapshots are checked by the scoped catalogue validator.
+// Network-checking the entire generated archive is redundant and can exceed CI
+// timeout; still check every newly published editorial/source link elsewhere.
+const checkedPaths = [
+  "app", "lib", "data",
+  ":(exclude)data/youtube-channel-cache.json",
+  ":(exclude)data/youtube-movies.generated.json",
+  ":(exclude)data/youtube-movies-review.generated.json",
+  ":(exclude)data/youtube-detail-shards",
+];
+const text = execFileSync("git", ["diff", "--unified=0", base, "HEAD", "--", ...checkedPaths], {
   encoding: "utf8",
   maxBuffer: 10 * 1024 * 1024,
 });
