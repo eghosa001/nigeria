@@ -160,7 +160,7 @@ function movieReleaseYear(record) {
   // TS catalogue records use numeric literals (year: 2025), whereas the
   // generic value() helper intentionally reads quoted string fields.
   const raw = typeof record === "string"
-    ? record.match(/(?:^|[,{\\n])\s*year\s*:\s*["']?(\d{4})["']?/m)?.[1]
+    ? record.match(/(?:^|[,{])\s*year\s*:\s*["']?(\d{4})["']?/m)?.[1]
     : record?.year;
   const parsed = Number(raw);
   return Number.isInteger(parsed) && parsed >= 1900 && parsed <= 2100 ? String(parsed) : "unknown";
