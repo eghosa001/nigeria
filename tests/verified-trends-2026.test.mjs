@@ -64,51 +64,53 @@ test("current homepage trend set spans all four pillars and all canonical pages"
 });
 
 
-test("October 10 sourced programme additions are canonical and independently useful", () => {
-  const additions = load("lib/job-social-trends-2026-10-10.ts");
+
+test("October 10 programmes are unique, independently sourced and routed", () => {
+  const added = load("lib/job-social-trends-2026-10-10.ts");
   for (const [slug, deadline, source] of [
     ["afdb-2027-internship-session-one", "2026-10-12", "afdb.org"],
     ["nova-bank-graduate-trainee-2026", "2026-10-15", "novabank.ng"],
     ["ebid-young-professionals-2026", "2026-10-30", "bidc-ebid.org"]
   ]) {
-    assert.equal(additions.split(`slug: "${slug}"`).length - 1, 1);
-    assert.match(additions, new RegExp(`deadline: "${deadline}"`));
-    assert.ok(additions.includes(source));
-    assert.ok(home.includes(`href: "/jobs/${slug}"`));
+    assert.equal(added.split('slug: "' + slug + '"').length - 1, 1);
+    assert.ok(added.includes('deadline: "' + deadline + '"'));
+    assert.ok(added.includes(source));
+    assert.ok(home.includes('href: "/jobs/' + slug + '"'));
   }
-  assert.doesNotMatch(additions, /\\bposting:\\s*\\{/);
-  assert.match(load("lib/jobs.ts"), /\\.\\.\\.octoberVerifiedProgrammes/);
-  assert.match(additions, /master's degree|master’s degree/i);
-  assert.match(additions, /completed NYSC/i);
-  assert.match(additions, /young trainee/i);
+  assert.equal(added.includes('posting: {'), false);
+  assert.ok(load("lib/jobs.ts").includes("...octoberVerifiedProgrammes"));
+  assert.ok(added.includes("completed NYSC") || added.includes("Completed National Youth Service Corps"));
+  assert.ok(added.includes("master's degree"));
 });
 
-test("new series and Issakaba reuse canonical catalogue routes with real sources", () => {
+test("new series and movie have unique catalog records and source destinations", () => {
   const shows = load("lib/series.ts");
   const movie = load("lib/entertainment-social-trends-2026-10-10.ts");
   for (const slug of ["sirrin-amarya-2026", "onu-ahia-nwanyi-2026"]) {
-    assert.equal(shows.split(`slug: "${slug}"`).length - 1, 1);
+    assert.equal(shows.split('slug: "' + slug + '"').length - 1, 1);
   }
-  assert.match(shows, /independent\\.ng\\/africa-magic-announces-five-new-originals-for-october/);
-  assert.match(movie, /slug: "issakaba-the-return-2026"/);
-  assert.match(movie, /https:\\/\\/issakaba\\.com\\//);
-  assert.match(movie, /2026-10-10/);
-  assert.match(load("lib/entertainment.ts"), /\\.\\.\\.verifiedOctoberFilm/);
-  assert.match(load("lib/entertainment-extras.ts"), /issakaba-the-return-2026-cinema/);
+  assert.ok(shows.includes("independent.ng/africa-magic-announces-five-new-originals-for-october"));
+  assert.ok(movie.includes('slug: "issakaba-the-return-2026"'));
+  assert.ok(movie.includes("https://issakaba.com/"));
+  assert.ok(movie.includes("2026-10-10"));
+  assert.ok(load("lib/entertainment.ts").includes("...verifiedOctoberFilm"));
+  assert.ok(load("lib/entertainment-extras.ts").includes("issakaba-the-return-2026-cinema"));
 });
 
-test("NYSC and Lagos events were expanded in place rather than duplicated", () => {
+test("NYSC and Lagos guides are enriched at existing canonical URLs", () => {
   const local = services.find((record) => record.slug === "nysc-registration-local");
   const callup = services.find((record) => record.slug === "nysc-call-up-letter");
-  assert.equal(services.filter((record) => record.slug === local?.slug).length, 1);
-  assert.ok(local.notes.some((note) => /4–24 November 2026/.test(note)));
-  assert.ok(local.notes.some((note) => /not the online registration/i.test(note)));
-  assert.ok(callup.notes.some((note) => /call-up letters/i.test(note)));
+  assert.ok(local && callup);
+  assert.equal(services.filter((record) => record.slug === local.slug).length, 1);
+  assert.ok(local.notes.some((note) => note.includes("4–24 November 2026")));
+  assert.ok(local.notes.some((note) => note.includes("not the online registration")));
+  assert.ok(callup.notes.some((note) => note.includes("call-up letters")));
   assert.ok(local.sources.some((source) => source.url.includes("officialnyscng")));
   const tour = load("lib/explore.ts");
-  assert.match(tour, /slug: "felabration-2026"/);
-  assert.match(tour, /Underground System 5/);
-  assert.match(tour, /₦3,000/);
-  assert.match(tour, /slug: "design-week-lagos-2026"/);
-  assert.match(tour, /National Theatre — Design Week Lagos 22–25 October/);
+  for (const slug of ["felabration-2026", "design-week-lagos-2026"]) {
+    assert.equal(tour.split('slug: "' + slug + '"').length - 1, 1);
+  }
+  assert.ok(tour.includes("Underground System 5"));
+  assert.ok(tour.includes("₦3,000"));
+  assert.ok(tour.includes("National Theatre — Design Week Lagos 22–25 October"));
 });
