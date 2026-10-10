@@ -270,6 +270,73 @@ export const seriesTitles: SeriesTitle[] = [
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" }
     ]
   }
+  {
+    slug: "sirrin-amarya-2026",
+    title: "Sirrin Amarya (The Bride's Secret)",
+    year: 2026,
+    country: "Nigeria",
+    artworkNote: "Series details are verified from the broadcaster's October slate and production coverage; no unlicensed artwork is displayed.",
+    genres: ["Psychological thriller", "Mystery", "Family drama", "Romance", "Kannywood"],
+    languages: ["Hausa"],
+    synopsis: "Zainab vanishes shortly before her wedding to a prominent businessman in northern Nigeria. What begins as an urgent search brings two influential families into conflict; the groom's eldest son investigates and uncovers a decade-old trail of secrets, betrayal and divided loyalties. The Hausa-language thriller asks whether the disappearance conceals a personal decision or a wider family scheme.",
+    cast: ["Norah Ego", "Aysha Usman Adam"],
+    creators: ["Chidozie Christian Ahaiwe"],
+    status: "ongoing",
+    premiereLabel: "Premiered Saturday 10 October 2026 at 8:00 pm on Africa Magic Hausa, DStv channel 156",
+    episodeInfo: "Announced as a 26-episode Hausa series. The broadcaster controls repeat times and DStv Stream availability; check the current programme guide before watching.",
+    watchLinks: [
+      {
+        platform: "Africa Magic Hausa",
+        label: "Check Africa Magic's official schedule and DStv viewing options",
+        href: "https://www.dstv.com/africamagic/en-ng",
+        access: "broadcast",
+        lastChecked: "2026-10-10",
+        note: "The October 10 premiere was announced for DStv channel 156 at 8 pm. Current broadcast times, packages and replay availability must be confirmed with the broadcaster."
+      }
+    ],
+    sources: [
+      { label: "Africa Magic October originals — programme announcement reported by Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
+      { label: "Africa Magic October premieres and episode context — What Kept Me Up", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-10" },
+      { label: "Africa Magic — official television and streaming information", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-10" }
+    ],
+    internalLinks: [
+      { label: "Browse other Nigerian TV series", href: "/entertainment/series" }
+    ]
+  },
+  {
+    slug: "onu-ahia-nwanyi-2026",
+    title: "Onu Ahia Nwanyi",
+    year: 2026,
+    country: "Nigeria",
+    artworkNote: "No unlicensed third-party image is used.",
+    genres: ["Drama", "Romance", "Family", "Igbo-language series", "Nollywood"],
+    languages: ["Igbo"],
+    synopsis: "Nkem enters a traditional bride-selection contest as a possible escape from difficult circumstances at home. The decision places her inside the rival interests of powerful families, where she discovers an unexpected connection with the very man at the centre of the competition. Her feelings complicate a contest driven by family expectations, hidden plans and status.",
+    cast: [],
+    creators: ["Smart Ifeanyi Chukwu Abugu"],
+    status: "ongoing",
+    premiereLabel: "Premiere announced for Saturday 10 October 2026 at 7:30 pm on Africa Magic Igbo, DStv channel 159",
+    episodeInfo: "The October slate confirms a new Igbo-language drama but does not supply an independently verified full cast or episode count. Viewers should check the broadcaster's current programme guide for repeat times.",
+    watchLinks: [
+      {
+        platform: "Africa Magic Igbo",
+        label: "Open the broadcaster's official series and schedule information",
+        href: "https://www.dstv.com/africamagic/en-ng",
+        access: "broadcast",
+        lastChecked: "2026-10-10",
+        note: "Africa Magic Igbo (DStv 159) announced the 7:30 pm premiere. Streaming and catch-up access depend on the broadcaster and package."
+      }
+    ],
+    sources: [
+      { label: "Africa Magic October slate — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
+      { label: "October Nigerian TV premieres — What Kept Me Up", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-10" },
+      { label: "Africa Magic — official broadcaster", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-10" }
+    ],
+    internalLinks: [
+      { label: "Browse other Nigerian TV series", href: "/entertainment/series" }
+    ]
+  },
+
 ];
 
 export function getSeriesTitle(slug: string) {
