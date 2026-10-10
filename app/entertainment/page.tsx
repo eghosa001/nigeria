@@ -4,6 +4,8 @@ import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { JsonLd } from "@/components/json-ld";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { releaseItems } from "@/lib/entertainment-extras";
+import { selectRecentHomeMovies } from "@/lib/home-movie-highlights";
 import { getSiteUrl } from "@/lib/site";
 import { trendingYouTubeMovies } from "@/lib/youtube-library";
 
@@ -12,16 +14,6 @@ export const metadata: Metadata = {
   description: "Discover Nigerian movies, cinemas, filmmakers and verified official links to watch on Netflix, YouTube, Prime Video and supported platforms.",
   alternates: { canonical: "/entertainment" },
 };
-
-// Durable film discovery should lead editorial curation, not yesterday's search spike.
-const evergreenMovieSlugs = [
-  "swallow",
-  "king-of-boys",
-  "chief-daddy",
-  "jagun-jagun",
-  "citation",
-  "a-tribe-called-judah",
-];
 
 const popularMovieSearchLinks = [
   { label: "Lionheart", href: "/entertainment/movies/lionheart" },
@@ -33,14 +25,7 @@ const popularMovieSearchLinks = [
 ];
 
 export default function EntertainmentPage() {
-  const priorityMovies = evergreenMovieSlugs
-    .map((slug) => entertainmentTitles.find((title) => title.slug === slug))
-    .filter((title): title is NonNullable<typeof title> => Boolean(title));
-  const prioritySlugs = new Set(priorityMovies.map((title) => title.slug));
-  const featured = [
-    ...priorityMovies,
-    ...entertainmentTitles.filter((title) => title.featured && !prioritySlugs.has(title.slug)),
-  ].slice(0, 6);
+  const featured = selectRecentHomeMovies(entertainmentTitles, releaseItems);
   const fresh = trendingYouTubeMovies.slice(0, 6);
   const base = getSiteUrl();
 
@@ -103,7 +88,7 @@ export default function EntertainmentPage() {
       <section className="section">
         <div className="container">
           <div className="minimal-section-heading">
-            <div><span className="eyebrow">Nigerian cinema</span><h2>Explore established films first.</h2></div>
+            <div><span className="eyebrow">Nigerian cinema</span><h2>Discover recently released Nigerian films.</h2></div>
             <Link href="/entertainment/movies">Browse all movies →</Link>
           </div>
           <div className="minimal-movie-row">
