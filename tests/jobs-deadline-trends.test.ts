@@ -35,11 +35,15 @@ test("homepage keeps all pillars distinct and rotates temporary deadline trends"
   assert.equal(jobs[0]?.href, "/jobs/deloitte-nigeria-early-careers");
   assert.equal(new Set(today.map((item) => item.href)).size, today.length);
   assert.equal(new Set(today.map((item) => item.pillar)).size, today.length);
-  assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/guides/national-ai-innovation-challenge-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-13").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/zenith-bank-zecathon-6-hackathon-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-14").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nigerian-army-sscc-50-2027");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-17").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nigerian-army-sscc-50-2027");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-18").some((item) => item.pillar === "Jobs & Careers"), false);
+  assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/afdb-2027-internship-session-one");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-12").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/afdb-2027-internship-session-one");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-13").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nova-bank-graduate-trainee-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-15").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/nova-bank-graduate-trainee-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-16").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/ebid-young-professionals-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-30").find((item) => item.pillar === "Jobs & Careers")?.href, "/jobs/ebid-young-professionals-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-31").some((item) => item.pillar === "Jobs & Careers"), false);
+  assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/felabration-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-19").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/hallelujah-festival-lagos-october-2026");
 });
 
 test("challenge reuses one canonical verified guide, not a fabricated job vacancy", () => {

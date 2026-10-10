@@ -197,10 +197,12 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "A relationship expert whose public advice has become a success story discovers that her own marriage is far more complicated than the formula she shares with others.",
-    cast: [],
-    status: "upcoming",
-    premiereLabel: "Premieres 5 October 2026 on Africa Magic Showcase",
+    synopsis: "A relationship influencer turns her claimed formula for successful love into a reality television show. Secrets within her fiancé’s family threaten the certainty that built her public reputation. The drama contrasts advice delivered to an audience with the harder decisions required inside an actual relationship.",
+    cast: ["Treasure Enagbare", "Nnamdi Agbo", "Demi Banwo", "Tolu Asanu"],
+    creators: ["Rogba Arimoro"],
+    status: "ongoing",
+    premiereLabel: "Premiered 5 October 2026 at 8:30 pm on Africa Magic Showcase (DStv 151)",
+    episodeInfo: "Broadcast premiere confirmed for 5 October; confirm repeat times and DStv Stream catch-up access with the broadcaster.",
     watchLinks: [
       {
         platform: "Africa Magic Showcase",
@@ -212,6 +214,7 @@ export const seriesTitles: SeriesTitle[] = [
       }
     ],
     sources: [
+      { label: "Africa Magic 2026 October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" },
       { label: "Africa Magic", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-04" }
     ]
@@ -224,10 +227,12 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Faith", "Nollywood"],
     languages: ["English"],
-    synopsis: "Ten survivors are brought back together by faith, forcing them to confront unresolved history, accountability, forgiveness and the limits of redemption.",
-    cast: [],
-    status: "upcoming",
-    premiereLabel: "Premieres 8 October 2026 on Africa Magic Showcase",
+    synopsis: "Ten survivors of a kidnapping reunite for a vigil led by a pastor haunted by guilt. When someone is killed inside the gathering and a local festival closes off escape, they realise the danger may already be among them. The psychological thriller explores shared trauma, trust and responsibility as the survivors question their former captors and one another.",
+    cast: ["Patrick Dibuah"],
+    creators: ["Lota Chukwu"],
+    status: "ongoing",
+    premiereLabel: "Premiered 8 October 2026 at 8:30 pm on Africa Magic Showcase (DStv 151)",
+    episodeInfo: "The 8 October broadcast launch is confirmed; check the broadcaster for repeat times and current streaming access.",
     watchLinks: [
       {
         platform: "Africa Magic Showcase",
@@ -239,6 +244,7 @@ export const seriesTitles: SeriesTitle[] = [
       }
     ],
     sources: [
+      { label: "Africa Magic October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
       { label: "Africa Magic", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-04" }
     ]
@@ -251,10 +257,11 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Mystery", "Supernatural", "Yoruba"],
     languages: ["Yoruba"],
-    synopsis: "A royal heir becomes the main suspect as a mysterious force targets heirs to the throne of Ekinrinade, drawing succession, tradition and supernatural danger into one investigation.",
-    cast: [],
-    status: "upcoming",
-    premiereLabel: "Premieres 10 October 2026 on Africa Magic Yoruba",
+    synopsis: "Twenty-nine years after a betrayal changed the fictional Ekinrinade monarchy, a rejected spiritual guardian returns alongside a surviving heir. As deaths accumulate, Crown Prince Aderounmu investigates the figures who secured power after the old regime fell. The mystery pits revenge against restraint and forces the prince to question what his lineage means for the kingdom.",
+    cast: ["Antar Laniyan", "Aina Gold", "Murphy Ray", "Abija"],
+    status: "ongoing",
+    premiereLabel: "Premiere announced for 10 October 2026; weekends at 7 pm on Africa Magic Yoruba (DStv 157)",
+    episodeInfo: "Saturday and Sunday broadcasts have been announced. Check the current official guide for individual episode times.",
     watchLinks: [
       {
         platform: "Africa Magic Yoruba",
@@ -266,10 +273,78 @@ export const seriesTitles: SeriesTitle[] = [
       }
     ],
     sources: [
+      { label: "Africa Magic October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" }
     ]
-  }
+  },
+  {
+    slug: "sirrin-amarya-2026",
+    title: "Sirrin Amarya (The Bride's Secret)",
+    year: 2026,
+    country: "Nigeria",
+    artworkNote: "Series details are verified from the broadcaster's October slate and production coverage; no unlicensed artwork is displayed.",
+    genres: ["Psychological thriller", "Mystery", "Family drama", "Romance", "Kannywood"],
+    languages: ["Hausa"],
+    synopsis: "Zainab vanishes shortly before her wedding to a prominent businessman in northern Nigeria. What begins as an urgent search brings two influential families into conflict; the groom's eldest son investigates and uncovers a decade-old trail of secrets, betrayal and divided loyalties. The Hausa-language thriller asks whether the disappearance conceals a personal decision or a wider family scheme.",
+    cast: ["Norah Ego", "Aysha Usman Adam"],
+    creators: ["Chidozie Christian Ahaiwe"],
+    status: "ongoing",
+    premiereLabel: "Premiered Saturday 10 October 2026 at 8:00 pm on Africa Magic Hausa, DStv channel 156",
+    episodeInfo: "Announced as a 26-episode Hausa series. The broadcaster controls repeat times and DStv Stream availability; check the current programme guide before watching.",
+    watchLinks: [
+      {
+        platform: "Africa Magic Hausa",
+        label: "Check Africa Magic's official schedule and DStv viewing options",
+        href: "https://www.dstv.com/africamagic/en-ng",
+        access: "broadcast",
+        lastChecked: "2026-10-10",
+        note: "The October 10 premiere was announced for DStv channel 156 at 8 pm. Current broadcast times, packages and replay availability must be confirmed with the broadcaster."
+      }
+    ],
+    sources: [
+      { label: "Africa Magic October originals — programme announcement reported by Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
+      { label: "Africa Magic October premieres and episode context — What Kept Me Up", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-10" },
+      { label: "Africa Magic — official television and streaming information", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-10" }
+    ],
+    internalLinks: [
+      { label: "Browse other Nigerian TV series", href: "/entertainment/series" }
+    ]
+  },
+  {
+    slug: "onu-ahia-nwanyi-2026",
+    title: "Onu Ahia Nwanyi",
+    year: 2026,
+    country: "Nigeria",
+    artworkNote: "No unlicensed third-party image is used.",
+    genres: ["Drama", "Romance", "Family", "Igbo-language series", "Nollywood"],
+    languages: ["Igbo"],
+    synopsis: "Nkem enters a traditional bride-selection contest as a possible escape from difficult circumstances at home. The decision places her inside the rival interests of powerful families, where she discovers an unexpected connection with the very man at the centre of the competition. Her feelings complicate a contest driven by family expectations, hidden plans and status.",
+    cast: [],
+    creators: ["Smart Ifeanyi Chukwu Abugu"],
+    status: "ongoing",
+    premiereLabel: "Premiere announced for Saturday 10 October 2026 at 7:30 pm on Africa Magic Igbo, DStv channel 159",
+    episodeInfo: "The October slate confirms a new Igbo-language drama but does not supply an independently verified full cast or episode count. Viewers should check the broadcaster's current programme guide for repeat times.",
+    watchLinks: [
+      {
+        platform: "Africa Magic Igbo",
+        label: "Open the broadcaster's official series and schedule information",
+        href: "https://www.dstv.com/africamagic/en-ng",
+        access: "broadcast",
+        lastChecked: "2026-10-10",
+        note: "Africa Magic Igbo (DStv 159) announced the 7:30 pm premiere. Streaming and catch-up access depend on the broadcaster and package."
+      }
+    ],
+    sources: [
+      { label: "Africa Magic October slate — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
+      { label: "October Nigerian TV premieres — What Kept Me Up", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-10" },
+      { label: "Africa Magic — official broadcaster", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-10" }
+    ],
+    internalLinks: [
+      { label: "Browse other Nigerian TV series", href: "/entertainment/series" }
+    ]
+  },
+
 ];
 
 export function getSeriesTitle(slug: string) {

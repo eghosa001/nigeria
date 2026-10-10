@@ -17,6 +17,48 @@ export type HomeSocialTrend = {
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
     pillar: "Movies & Entertainment",
+    title: "Sirrin Amarya: new Hausa thriller debuts on Africa Magic, 10 October",
+    href: "/entertainment/series/sirrin-amarya-2026",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-10-12",
+  },
+  {
+    pillar: "Movies & Entertainment",
+    title: "Issakaba: The Return — cast and 13 November cinema date",
+    href: "/entertainment/movies/issakaba-the-return-2026",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-11-13",
+  },
+  {
+    pillar: "Tour Nigeria",
+    title: "Felabration at Freedom Park — 12–18 October, 6 pm, announced ₦3,000 entry",
+    href: "/explore/felabration-2026",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-10-18",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "African Development Bank 2027 Internship — closes 12 October",
+    href: "/jobs/afdb-2027-internship-session-one",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-10-12",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "NOVA Bank Graduate Trainee Programme — closes 15 October",
+    href: "/jobs/nova-bank-graduate-trainee-2026",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-10-15",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "ECOWAS Bank Young Professionals — closes 30 October",
+    href: "/jobs/ebid-young-professionals-2026",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-10-30",
+  },
+  {
+    pillar: "Movies & Entertainment",
     title: "Lagos Life game — where to play, safety and the $500k funding story",
     href: "/entertainment/lagos-life-game-2026",
     checkedAt: "2026-10-09",
@@ -35,6 +77,14 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     href: "/services/neco-2026-ssce-external-registration",
     checkedAt: "2026-10-08",
     expiresAt: "2026-10-26",
+  },
+
+  {
+    pillar: "Services",
+    title: "NYSC Batch C Stream II — 4 November orientation and camp dates",
+    href: "/services/nysc-registration-local",
+    checkedAt: "2026-10-10",
+    expiresAt: "2026-11-06",
   },
   {
     pillar: "Tour Nigeria",
