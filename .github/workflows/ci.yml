@@ -121,6 +121,9 @@ jobs:
         if: steps.scope.outputs.mode == 'full'
       - run: npm run check:explore
         if: steps.scope.outputs.mode == 'full'
+      - name: Verify source-backed release and YouTube scan regressions
+        if: steps.scope.outputs.mode == 'full'
+        run: node --test tests/source-freshness-2026-10-10.test.mjs
       - run: npm run check:entertainment-scale
         if: steps.scope.outputs.mode == 'full'
       - run: npm run check:analytics-safety

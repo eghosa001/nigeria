@@ -2,6 +2,13 @@ name: YouTube Entertainment Sync
 
 # Production refresh runs manually or on schedule; catalog updates land through a PR.
 on:
+  # A scanner-code fix should receive a genuine API re-check on deployment.
+  # Generated catalog PRs touch only data files and do not retrigger this job.
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync-youtube-entertainment.mjs"
+      - "scripts/youtube-scan-freshness.mjs"
   workflow_dispatch:
     inputs:
       full_sync:

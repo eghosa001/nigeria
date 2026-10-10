@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { recordSuccessfulChannelScan } from "./youtube-scan-freshness.mjs";
 
 const root = process.cwd();
 // Recovery sync trigger: validated title-cast pass after validator repair.
@@ -577,15 +578,9 @@ for (const source of registry.sources) {
       importedThisRun++;
     }
 
-    if (fullSync || scan.items.length > 0 || !cached.latestUploadVideoId) {
-      cache[source.slug] = {
-        ...channel,
-        latestUploadVideoId: scan.latestUploadVideoId ?? cached.latestUploadVideoId,
-        lastScannedAt: now.toISOString(),
-        lastScanMode: fullSync ? "full" : "incremental",
-        reachedPreviousUpload: scan.reachedPreviousUpload,
-      };
-    }
+    // The official uploads API was queried successfully, even if no new videos
+    // were published. Keep this timestamp as evidence of a real completed scan.
+    recordSuccessfulChannelScan(cache, source, channel, scan, now.toISOString(), fullSync);
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     if (/quotaExceeded|exceeded[^\n]*quota/i.test(message)) {
