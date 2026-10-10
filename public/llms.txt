@@ -1,0 +1,28 @@
+# MyNigeriaGuide
+
+> MyNigeriaGuide is an independent Nigerian information website. It helps people find Nigerian movies, understand services, plan trips within Nigeria, and explore jobs and career pathways. It is not a government agency, recruiter, ticket seller, or payment processor.
+
+Website: https://mynigeriaguide.com/
+
+## Four editorial sections
+
+- [Movies & Entertainment](https://mynigeriaguide.com/entertainment): Nigerian film and series information, cast, cinemas, and links to legitimate viewing sources.
+- [Services](https://mynigeriaguide.com/services): Practical Nigerian public and private service guides, requirements, fees where verified, procedures, and links to responsible official providers.
+- [Tour Nigeria](https://mynigeriaguide.com/explore): Nigerian cities, attractions, destinations, events, and travel-planning guides.
+- [Jobs & Careers](https://mynigeriaguide.com/jobs): Nigerian recruitment information, employer career portals, application guidance, and dated opportunity status.
+
+## Source quality and corrections
+
+- [About](https://mynigeriaguide.com/about): What MyNigeriaGuide covers and its independent status.
+- [Editorial policy](https://mynigeriaguide.com/editorial-policy): Source verification, accuracy, and publication practices.
+- [Corrections](https://mynigeriaguide.com/corrections): How to report inaccurate or outdated information.
+- [Contact](https://mynigeriaguide.com/contact): How to reach the publisher.
+
+## Content discovery
+
+- [XML sitemap index](https://mynigeriaguide.com/sitemap-index.xml): Canonical, publicly indexable pages by section.
+- [Verified updates feed](https://mynigeriaguide.com/updates.xml): Published changes to selected services and official guidance.
+
+For fees, deadlines, opening hours, vacancies, and application requirements, read the individual canonical page's verification date and follow its primary-source link before acting. Avoid treating older summaries as live availability.
+
+This optional file is a navigation aid, not an authorization to reuse third-party material, a substitute for robots.txt, or a guarantee of inclusion in any AI search answer.
