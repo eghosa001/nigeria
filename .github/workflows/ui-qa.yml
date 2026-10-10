@@ -67,8 +67,8 @@ jobs:
 
           # Movie browse text-card regression: exercise only the affected layout
           # at phone, tablet and desktop widths, in both appearance modes.
-          movie_discovery_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/(movies/page\\.tsx|entertainment\\.css)|tests/movie-discovery-contrast\\.spec\\.ts)$' || true)"
-          non_movie_discovery="$(printf '%s\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\\.tsx|entertainment\\.css)|tests/movie-discovery-contrast\\.spec\\.ts|\\.github/workflows/(ui-qa|ci)\\.yml)$' || true)"
+          movie_discovery_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts)$' || true)"
+          non_movie_discovery="$(printf '%s\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts|\.github/workflows/(ui-qa|ci)\.yml)$' || true)"
           if [ -n "$movie_discovery_trigger" ] && [ -z "$non_movie_discovery" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=movie-discovery" >> "$GITHUB_OUTPUT"
