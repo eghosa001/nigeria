@@ -105,7 +105,7 @@ export default function EntertainmentPage() {
               </article>
             ))}
           </div>
-          <p className="job-muted">A starting selection across comedy, drama, crime and Yoruba-language filmmaking. Follow each movie's own credited synopsis, cast and official viewing links; no ranking or current playback is implied.</p>
+          <p className="job-muted">Recent films from our verified editorial catalogue. Open each title for its cast and official viewing sources; platform availability can change.</p>
           <div className="minimal-inline-links" aria-label="Established film details">
             {popularMovieSearchLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
           </div>
