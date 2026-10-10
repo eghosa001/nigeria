@@ -1644,7 +1644,7 @@
     "slug": "nysc-registration-local",
     "title": "How NYSC registration works for locally trained graduates",
     "shortTitle": "NYSC registration",
-    "summary": "Core NYSC registration conditions for locally trained prospective corps members.",
+    "summary": "Official NYSC registration for locally trained graduates, including the confirmed 2026 Batch C Stream II camp timetable and what requires an individual call-up letter.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Portal payment applies to optional/portal services as shown by NYSC",
@@ -1665,7 +1665,10 @@
       "After successful mobilisation, monitor the dashboard for the call-up number and call-up letter; NYSC says candidates who subscribed for online printing can print the letter online, while others obtain it through their institutions."
     ],
     "notes": [
-      "NYSC says locally trained graduates whose names are not on the approved Senate/Academic Board list cannot register."
+      "NYSC says locally trained graduates whose names are not on the approved Senate/Academic Board list cannot register.",
+      "NYSC's 2 October 2026 announcement fixes the 2026 Batch C Stream II orientation course for 4–24 November 2026 in the 36 states and FCT. Camp registration is 4–6 November (until midnight 6 November); swearing-in is Friday 6 November.",
+      "The camp timetable is not the online registration or call-up-letter release date. Log in to your personal NYSC dashboard for your actual deployment and camp address; do not pay unofficial agents who promise an early call-up letter.",
+      "Travel safely and use the location printed on your call-up letter, not a copied venue list. Changes or exceptions should be verified through NYSC's official portal and current notices."
     ],
     "sources": [
       {
@@ -1679,9 +1682,15 @@
         "agency": "National Youth Service Corps",
         "url": "https://portal.nysc.org.ng/nysc/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "NYSC national headquarters — official Batch C Stream II announcement (2 October 2026)",
+        "agency": "National Youth Service Corps",
+        "url": "https://www.facebook.com/officialnyscng/posts/2026-batch-c-stream-ii-orientation-commences-november-4the-management-of-nationa/1434109108907117/",
+        "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-10",
     "searchTerms": [
       "NYSC registration",
       "How NYSC registration works for locally trained graduates",
@@ -1689,7 +1698,10 @@
       "NYSC portal",
       "NYSC portal registration",
       "NYSC registration portal",
-      "NYSC online registration"
+      "NYSC online registration",
+      "NYSC 2026 Batch C Stream II",
+      "NYSC Batch C Stream II 4 November 2026",
+      "NYSC Stream 2 camp registration closing 6 November 2026"
     ],
     "related": [
       "nysc-senate-list",
@@ -2770,7 +2782,9 @@
       "Download/print the call-up letter if your registration route provides online printing."
     ],
     "notes": [
-      "NYSC says those who do not subscribe for online call-up-letter printing collect through their institutions where applicable."
+      "NYSC says those who do not subscribe for online call-up-letter printing collect through their institutions where applicable.",
+      "For NYSC 2026 Batch C Stream II, the official orientation period is 4–24 November, with camp registration 4–6 November and swearing-in on 6 November. Do not treat these camp dates as an announced date for printing call-up letters.",
+      "Check the assigned camp, reporting instructions and documents on your individual NYSC call-up letter; a viral schedule image is not proof of your posting."
     ],
     "sources": [
       {
@@ -2784,9 +2798,15 @@
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/corpmob.html",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "NYSC national headquarters — 2026 Batch C Stream II orientation notice",
+        "agency": "National Youth Service Corps",
+        "url": "https://www.facebook.com/officialnyscng/posts/2026-batch-c-stream-ii-orientation-commences-november-4the-management-of-nationa/1434109108907117/",
+        "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-10",
     "searchTerms": [
       "NYSC call-up letter",
       "How to access an NYSC call-up letter",
