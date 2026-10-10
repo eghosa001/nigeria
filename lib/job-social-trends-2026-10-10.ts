@@ -131,21 +131,21 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     ],
     requirements: [
       "This is an ECOWAS regional bank programme rather than a vacancy at a Nigerian commercial bank. Consider whether relocation to Lomé is feasible.",
-      "The Bank describes rotations across departments under senior-professional supervision, not a guaranteed immediate appointment to any specific specialism.",
+      "The 2026 official notice provides a two-year fixed-term appointment with six-month probation; conversion to an open-ended contract depends on satisfactory probation performance, not an unconditional guarantee.",
       "Review the 2026 Young Professionals notice under 'Employment' on the Bank's official site, not an archived 2024 PDF.",
       "Use the email address and subject line that EBID itself published; do not send personal documents to recruiters using unofficial accounts."
     ],
     documents: [
       "Current CV and application/cover letter explaining relevant postgraduate skills.",
-      "Master's degree/equivalent and academic evidence if specified by the 2026 notice.",
-      "Identity and nationality documentation and any references required by the official vacancy notice.",
+      "Copy of master's degree or equivalent qualifications as required by the 2026 vacancy notice.",
+      "A copy of national identity card or passport plus a birth certificate as requested by the 2026 vacancy notice.",
       "Language and professional credentials specifically requested by EBID."
     ],
     applicationSteps: [
       "Open the EBID Employment page and select the current 'JOB ADVERTISEMENT FOR YOUNG PROFESSIONALS' entry.",
       "Read the complete current notice for eligibility, attachments and language requirements before applying.",
       "Prepare your CV, cover letter and other requested documents. Do not rely on requirements copied from older recruitment rounds.",
-      "Send the documents as directed by the employer to recrutbidc@bidc-ebid.org with subject 'Young Professionals Recruitment Programme – 2026', after confirming that instruction on its official announcement.",
+      "Send the documents as directed by the employer to recrutbidc@bidc-ebid.org with subject 'YOUNG PROFESSIONALS RECRUITMENT PROGRAMME – 2026', after confirming that instruction on its official announcement.",
       "Send before the stated 30 October 2026 deadline, retain the sent email and monitor the same inbox for a response."
     ],
     officialUrl: "https://www.bidc-ebid.org/en/employment/",
@@ -157,10 +157,11 @@ export const octoberVerifiedProgrammes: CareerOpportunity[] = [
     sourceNotes: [
       "EBID's official employment listing shows an active Young Professionals advert and EBID's verified organisational LinkedIn announcement supplies the 30 October deadline, programme description and application-email subject.",
       "Do not confuse EBID's older 2024 Young Professionals PDF with the 2026 announcement; conditions may differ.",
-      "A paid trainee appointment is not equivalent to an internship or an automatic permanent job offer."
+      "The 2026 notice describes professional grade P1-1 conditions with allowances, insurance and pension; conversion following the six-month probation is conditional.",
     ],
     sources: [
       { label: "EBID — live employment notices", url: "https://www.bidc-ebid.org/en/employment/", lastChecked: "2026-10-10" },
+      { label: "EBID — official 2026 Young Professionals full notice (PDF)", url: "https://www.bidc-ebid.org/en/wp-content/uploads/Advertise_Young_Professional_03September_en.pdf", lastChecked: "2026-10-10" },
       { label: "EBID — 2026 Young Professionals announcement", url: "https://www.linkedin.com/posts/bidc-ebid_ebid-youngprofessionals-ebidishiring-activity-7512768696118091777-ZWYU", lastChecked: "2026-10-10" },
       { label: "EBID — Young Professional Program overview", url: "https://www.bidc-ebid.org/en/working-with-ebid/young-professional-program/", lastChecked: "2026-10-10" }
     ]
