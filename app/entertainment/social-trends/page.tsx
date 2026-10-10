@@ -152,6 +152,27 @@ export default function SocialTrendsPage() {
             <p><a href="https://datareportal.com/reports/digital-2026-nigeria" target="_blank" rel="noopener noreferrer">Read Nigeria's original digital-audience methodology ↗</a></p>
           </section>
 
+          <section className="top-gap" aria-labelledby="social-example">
+            <span className="eyebrow">Instagram · YouTube · Facebook · October 2026</span>
+            <h2 id="social-example">A verified social conversation: Hallelujah Challenge</h2>
+            <p>
+              The October Hallelujah Challenge runs from 5 to 30 October, with an
+              11:59 pm West Africa Time daily broadcast across social platforms.
+              Organisers also advertise a separate, free festival in Ikeja on
+              30 October. The broadcast and the physical event are different;
+              check the organiser's instructions before travelling.
+            </p>
+            <div className="minimal-inline-links">
+              <Link href="/entertainment/hallelujah-challenge-october-2026">October broadcast schedule and official links</Link>
+              <Link href="/explore/hallelujah-festival-lagos-october-2026">Festival location and visitor information</Link>
+            </div>
+            <p>
+              <a href="https://www.hallelujahchallengelive.com/int" target="_blank" rel="noopener noreferrer">
+                Official organiser information for the 30 October event ↗
+              </a>
+            </p>
+          </section>
+
           <section className="top-gap" aria-labelledby="beyond-trends">
             <span className="eyebrow">Useful beyond the viral moment</span>
             <h2 id="beyond-trends">Turn a trending post into a reliable answer</h2>
