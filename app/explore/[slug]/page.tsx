@@ -31,6 +31,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   const year = guide.lastReviewed.slice(0, 4);
   if (guide.slug === "nigeria-landmarks-places-to-visit") return "Landmarks & Places to Visit in Nigeria " + year;
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
+  if (guide.slug === "kainji-dam") return "Kainji Dam Nigeria: Location, History & Visitor Access";
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide " + year + ": Things to Do & Places to Visit", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
@@ -39,6 +40,11 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 }
 
 const evergreenTripAnswers: Record<string, Array<{ question: string; answer: string }>> = {
+  "kainji-dam": [
+    { question: "Where is Kainji Dam located in Nigeria?", answer: "Kainji Dam is on the River Niger near New Bussa, in Borgu Local Government Area of Niger State. It is different from Jebba Dam and from Kainji Lake National Park." },
+    { question: "When was Kainji Dam built and how much power does it generate?", answer: "The Kainji hydropower plant was commissioned in 1968. Official records give 760 MW installed capacity, which is not a current live electricity-generation figure." },
+    { question: "Can tourists enter Kainji Dam?", answer: "Do not assume public entry. Kainji Dam is active power infrastructure with potentially controlled access; check current permission and visit arrangements with the operator before travelling. No general admission fee or public visiting timetable was verified for this guide." },
+  ],
   "benin-city": [
     { question: "What places should I visit in Benin City, Edo State?", answer: "For a first heritage visit, start with the Benin City National Museum for context, then consider the Igun Street bronze-casting area and publicly accessible parts of the palace surroundings. The royal and workshop spaces have their own access and photography expectations; ask before entering." },
     { question: "Is Okomu National Park inside Benin City?", answer: "No. Okomu is an Edo State nature destination outside central Benin City. Arrange it as a separate trip with park guidance, road time and safety checks rather than treating it as another city-centre stop." },
