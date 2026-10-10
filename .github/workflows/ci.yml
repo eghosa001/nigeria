@@ -57,7 +57,185 @@ jobs:
 
             analytics_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
             non_analytics="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
-            if [ -n "$analytics_trigger" ] && [ -z "$non_analytics" ]; then
+            # Changed only the film discovery cards and their dedicated browser
+            # regression. Browser QA validates layout + contrast; CI must not run
+            # unrelated catalog/type/build checks for this visual-only change.
+            movie_discovery_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts)
+              echo "mode=analytics" >> "$GITHUB_OUTPUT"
+              echo "Analytics-only change: run focused tracking safety regression."
+            elif [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+              echo "mode=jobs" >> "$GITHUB_OUTPUT"
+              printf 'Jobs-only product files:\n%s\n' "$changed"
+            elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
+              echo "mode=tour" >> "$GITHUB_OUTPUT"
+              printf 'Tour-only product files:\n%s\n' "$changed"
+            elif [ -n "$quality_trigger" ] && [ -z "$non_quality" ]; then
+              echo "mode=quality" >> "$GITHUB_OUTPUT"
+              printf 'Published-content quality files:\n%s\n' "$changed"
+            else
+              echo "mode=full" >> "$GITHUB_OUTPUT"
+              printf 'Product-CI-relevant files:\n%s\n' "$relevant"
+            fi
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.scope.outputs.mode != 'skip'
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        if: steps.scope.outputs.mode != 'skip'
+      - name: Validate Jobs & Careers changes
+        if: steps.scope.outputs.mode == 'jobs'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:jobs
+      - name: Validate Tour Nigeria changes
+        if: steps.scope.outputs.mode == 'tour'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:explore
+      - name: Validate published-content quality changes
+        if: steps.scope.outputs.mode == 'quality'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:service-catalog
+          npm run check:content
+          npm run check:explore
+          npm run check:entertainment-scale
+          npm run check:jobs
+          npm run check:scale
+          npm run check:directory-queries
+          npm run quality:status
+      - run: npm run check:analytics-safety
+        if: steps.scope.outputs.mode == 'analytics'
+      - run: node scripts/check-production-audit.mjs
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run typecheck
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:service-catalog
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:content
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:explore
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:entertainment-scale
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:analytics-safety
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run build:next
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:cloudflare
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run build
+        if: steps.scope.outputs.mode == 'full'
+      - name: Prevent accidental KV dependency
+        if: steps.scope.outputs.mode == 'full'
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const files = ["wrangler.jsonc", "dist/server/wrangler.json"];
+          for (const file of files) {
+            const config = JSON.parse(fs.readFileSync(file, "utf8"));
+            if (Array.isArray(config.kv_namespaces) && config.kv_namespaces.length > 0) {
+              console.error("Unexpected KV namespace detected in " + file);
+              process.exit(1);
+            }
+          }
+          console.log("KV-free deployment confirmed.");
+          NODE
+      - name: Package Cloudflare Worker without deploying
+        if: steps.scope.outputs.mode == 'full'
+        run: npx wrangler deploy --dry-run
+ || true)"
+            non_movie_discovery="$(printf '%s\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts|\.github/workflows/(ui-qa|ci)\.yml)
+              echo "mode=analytics" >> "$GITHUB_OUTPUT"
+              echo "Analytics-only change: run focused tracking safety regression."
+            elif [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
+              echo "mode=jobs" >> "$GITHUB_OUTPUT"
+              printf 'Jobs-only product files:\n%s\n' "$changed"
+            elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
+              echo "mode=tour" >> "$GITHUB_OUTPUT"
+              printf 'Tour-only product files:\n%s\n' "$changed"
+            elif [ -n "$quality_trigger" ] && [ -z "$non_quality" ]; then
+              echo "mode=quality" >> "$GITHUB_OUTPUT"
+              printf 'Published-content quality files:\n%s\n' "$changed"
+            else
+              echo "mode=full" >> "$GITHUB_OUTPUT"
+              printf 'Product-CI-relevant files:\n%s\n' "$relevant"
+            fi
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.scope.outputs.mode != 'skip'
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+        if: steps.scope.outputs.mode != 'skip'
+      - name: Validate Jobs & Careers changes
+        if: steps.scope.outputs.mode == 'jobs'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:jobs
+      - name: Validate Tour Nigeria changes
+        if: steps.scope.outputs.mode == 'tour'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:explore
+      - name: Validate published-content quality changes
+        if: steps.scope.outputs.mode == 'quality'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run check:service-catalog
+          npm run check:content
+          npm run check:explore
+          npm run check:entertainment-scale
+          npm run check:jobs
+          npm run check:scale
+          npm run check:directory-queries
+          npm run quality:status
+      - run: npm run check:analytics-safety
+        if: steps.scope.outputs.mode == 'analytics'
+      - run: node scripts/check-production-audit.mjs
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run typecheck
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:service-catalog
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:content
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:explore
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:entertainment-scale
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:analytics-safety
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run build:next
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run check:cloudflare
+        if: steps.scope.outputs.mode == 'full'
+      - run: npm run build
+        if: steps.scope.outputs.mode == 'full'
+      - name: Prevent accidental KV dependency
+        if: steps.scope.outputs.mode == 'full'
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from "node:fs";
+          const files = ["wrangler.jsonc", "dist/server/wrangler.json"];
+          for (const file of files) {
+            const config = JSON.parse(fs.readFileSync(file, "utf8"));
+            if (Array.isArray(config.kv_namespaces) && config.kv_namespaces.length > 0) {
+              console.error("Unexpected KV namespace detected in " + file);
+              process.exit(1);
+            }
+          }
+          console.log("KV-free deployment confirmed.");
+          NODE
+      - name: Package Cloudflare Worker without deploying
+        if: steps.scope.outputs.mode == 'full'
+        run: npx wrangler deploy --dry-run
+ || true)"
+            if [ -n "$movie_discovery_trigger" ] && [ -z "$non_movie_discovery" ]; then
+              echo "mode=skip" >> "$GITHUB_OUTPUT"
+              echo "Movie discovery-only changes are covered by the focused Browser QA contrast and layout check."
+            elif [ -n "$analytics_trigger" ] && [ -z "$non_analytics" ]; then
               echo "mode=analytics" >> "$GITHUB_OUTPUT"
               echo "Analytics-only change: run focused tracking safety regression."
             elif [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
