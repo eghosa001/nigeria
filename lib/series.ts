@@ -206,17 +206,17 @@ export const seriesTitles: SeriesTitle[] = [
     watchLinks: [
       {
         platform: "Africa Magic Showcase",
-        label: "Open Africa Magic",
-        href: "https://www.dstv.com/africamagic/en-ng",
+        label: "Visit the official Africa Magic channel hub",
+        href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
-        lastChecked: "2026-10-04",
-        note: "Premiere information is current for Africa Magic Showcase; package and replay availability can vary."
+        lastChecked: "2026-10-10",
+        note: "This opens the official broadcaster hub, not a direct episode. Check DStv Stream or the current TV guide; access depends on your subscription."
       }
     ],
     sources: [
       { label: "Africa Magic 2026 October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" },
-      { label: "Africa Magic", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-04" }
+      { label: "Africa Magic", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-10" }
     ]
   },
   {
@@ -236,17 +236,17 @@ export const seriesTitles: SeriesTitle[] = [
     watchLinks: [
       {
         platform: "Africa Magic Showcase",
-        label: "Open Africa Magic",
-        href: "https://www.dstv.com/africamagic/en-ng",
+        label: "Visit the official Africa Magic channel hub",
+        href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
-        lastChecked: "2026-10-04",
-        note: "Premiere information is current for Africa Magic Showcase; package and replay availability can vary."
+        lastChecked: "2026-10-10",
+        note: "This opens the official broadcaster hub, not a direct episode. Check DStv Stream or the current TV guide; access depends on your subscription."
       }
     ],
     sources: [
       { label: "Africa Magic October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
-      { label: "Africa Magic", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-04" }
+      { label: "Africa Magic", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-10" }
     ]
   },
   {
@@ -265,11 +265,11 @@ export const seriesTitles: SeriesTitle[] = [
     watchLinks: [
       {
         platform: "Africa Magic Yoruba",
-        label: "Open Africa Magic",
-        href: "https://www.dstv.com/africamagic/en-ng",
+        label: "Visit the official Africa Magic channel hub",
+        href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
-        lastChecked: "2026-10-04",
-        note: "Premiere information is current for Africa Magic Yoruba; package and replay availability can vary."
+        lastChecked: "2026-10-10",
+        note: "This opens the official broadcaster hub, not a direct episode; confirm the show on DStv channel 157 and check subscription and replay access."
       }
     ],
     sources: [
@@ -295,17 +295,17 @@ export const seriesTitles: SeriesTitle[] = [
     watchLinks: [
       {
         platform: "Africa Magic Hausa",
-        label: "Check Africa Magic's official schedule and DStv viewing options",
-        href: "https://www.dstv.com/africamagic/en-ng",
+        label: "Visit Africa Magic's official channel hub",
+        href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
         lastChecked: "2026-10-10",
-        note: "The October 10 premiere was announced for DStv channel 156 at 8 pm. Current broadcast times, packages and replay availability must be confirmed with the broadcaster."
+        note: "This opens the official broadcaster hub, not a direct episode. The show was announced on DStv channel 156; confirm the TV schedule and your package."
       }
     ],
     sources: [
       { label: "Africa Magic October originals — programme announcement reported by Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "Africa Magic October premieres and episode context — What Kept Me Up", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-10" },
-      { label: "Africa Magic — official television and streaming information", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-10" }
+      { label: "Africa Magic — official television and streaming information", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-10" }
     ],
     internalLinks: [
       { label: "Browse other Nigerian TV series", href: "/entertainment/series" }
@@ -328,17 +328,17 @@ export const seriesTitles: SeriesTitle[] = [
     watchLinks: [
       {
         platform: "Africa Magic Igbo",
-        label: "Open the broadcaster's official series and schedule information",
-        href: "https://www.dstv.com/africamagic/en-ng",
+        label: "Visit Africa Magic's official channel hub",
+        href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
         lastChecked: "2026-10-10",
-        note: "Africa Magic Igbo (DStv 159) announced the 7:30 pm premiere. Streaming and catch-up access depend on the broadcaster and package."
+        note: "This opens the official broadcaster hub, not a direct episode. The show was announced on DStv channel 159; confirm the TV schedule and your package."
       }
     ],
     sources: [
       { label: "Africa Magic October slate — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "October Nigerian TV premieres — What Kept Me Up", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-10" },
-      { label: "Africa Magic — official broadcaster", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-10" }
+      { label: "Africa Magic — official broadcaster", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-10" }
     ],
     internalLinks: [
       { label: "Browse other Nigerian TV series", href: "/entertainment/series" }

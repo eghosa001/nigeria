@@ -66,7 +66,7 @@ export default function EntertainmentReleasesPage() {
               <p>{item.summary}</p>
               <div className="service-meta">
                 <strong>{item.dateLabel}</strong>
-                <a href={item.officialUrl} target="_blank" rel="noreferrer">Official source →</a>
+                <a href={item.officialUrl} target="_blank" rel="noreferrer">Release information →</a>
               </div>
               <small className="checked-date">Checked {item.lastChecked}</small>
             </article>
@@ -86,7 +86,7 @@ export default function EntertainmentReleasesPage() {
                   <p>{item.summary}</p>
                   <div className="service-meta">
                     <strong>{item.dateLabel}</strong>
-                    <a href={item.officialUrl} target="_blank" rel="noreferrer">Official source →</a>
+                    <a href={item.officialUrl} target="_blank" rel="noreferrer">Release information →</a>
                   </div>
                   <small className="checked-date">Last checked {item.lastChecked}</small>
                 </article>

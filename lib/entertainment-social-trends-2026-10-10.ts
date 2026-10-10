@@ -1,6 +1,6 @@
 import type { EntertainmentTitle } from "@/lib/entertainment";
 
-// Issakaba Returns has an independent cinema announcement from its own official site.
+// Issakaba Returns has verified third-party release coverage and a film catalog listing.
 // Do not label the film as streaming or available in cinemas before 13 November 2026.
 export const verifiedOctoberFilm: EntertainmentTitle[] = [
   {
@@ -16,10 +16,10 @@ export const verifiedOctoberFilm: EntertainmentTitle[] = [
     directors: ["Lancelot Oduwa Imasuen"],
     references: [
       {
-        label: "Issakaba Returns — official film website",
-        href: "https://issakaba.com/",
+        label: "Nollywood.com — film details and release listing",
+        href: "https://nollywood.com/movies/issakaba-the-return",
         lastChecked: "2026-10-10",
-        note: "The producer's official site advertises a Nigerian cinema release for 13 November 2026. This is an announced date, not proof of showtimes or tickets on sale."
+        note: "The independent film catalog lists 13 November 2026 and Blue Pictures Distribution for Nigeria; no showtimes or ticket availability are confirmed."
       },
       {
         label: "OYA Magazine — trailer, cast and director analysis",
@@ -37,11 +37,11 @@ export const verifiedOctoberFilm: EntertainmentTitle[] = [
     watchLinks: [
       {
         platform: "Cinema",
-        label: "See the film's official 13 November cinema announcement",
-        href: "https://issakaba.com/",
+        label: "See the film listing and announced 13 November release",
+        href: "https://nollywood.com/movies/issakaba-the-return",
         access: "cinema",
         lastChecked: "2026-10-10",
-        note: "Announced to open in Nigerian cinemas 13 November 2026. This link is film information, not a live ticket seller; check an official exhibitor for confirmed listings closer to release."
+        note: "Announced to open in Nigerian cinemas 13 November 2026. This is a film catalog listing, not a cinema ticket seller or streaming link. Verify actual showtimes later with an authorised exhibitor."
       }
     ]
   }

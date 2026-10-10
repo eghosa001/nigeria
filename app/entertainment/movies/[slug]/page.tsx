@@ -509,7 +509,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                         {platformGuide?.offlineLabel ? <div><dt>Offline</dt><dd>{platformGuide.offlineHelpUrl ? <a href={platformGuide.offlineHelpUrl} target="_blank" rel="noreferrer">{platformGuide.offlineLabel} ↗</a> : platformGuide.offlineLabel}</dd></div> : null}
                         <div><dt>Checked</dt><dd>{link.lastChecked}</dd></div>
                       </dl>
-                      <a className="button" href={link.href} target="_blank" rel="noreferrer">Open official source ↗</a>
+                      <a className="button" href={link.href} target="_blank" rel="noreferrer">{link.access === "cinema" ? "View release information ↗" : "Open official source ↗"}</a>
                     </article>
                   );
                 })}

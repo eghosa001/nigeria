@@ -130,7 +130,7 @@ export const entertainmentPlatformHubs: EntertainmentPlatformHub[] = [
     href: "/entertainment/releases",
     summary: "Africa Magic movie premieres are tracked through the release calendar when a current broadcast date is verified.",
     status: "Broadcast premieres",
-    officialUrl: "https://www.dstv.com/africamagic/en-ng",
+    officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-05",
     popularTitleSlugs: ["pushing-30-2026"],
     detailPage: false,

@@ -13,6 +13,10 @@ on:
       - "lib/explore.ts"
       - "lib/entertainment.ts"
       - "lib/series.ts"
+      - "lib/entertainment-extras.ts"
+      - "lib/entertainment-social-trends-*.ts"
+      - "lib/job-social-trends-*.ts"
+      - "scripts/check-new-published-links.mjs"
       - "lib/job-scale-wave.ts"
       - "app/**/page.tsx"
       - ".github/scripts/new-page-quality.mjs"
@@ -45,3 +49,7 @@ jobs:
         run: |
           git fetch origin "$BASE_SHA" --depth=1
           node .github/scripts/new-page-quality.mjs --base "$BASE_SHA"
+      - name: Verify only newly introduced external link destinations
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/check-new-published-links.mjs

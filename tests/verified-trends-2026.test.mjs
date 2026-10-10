@@ -91,7 +91,8 @@ test("new series and movie have unique catalog records and source destinations",
   }
   assert.ok(shows.includes("independent.ng/africa-magic-announces-five-new-originals-for-october"));
   assert.ok(movie.includes('slug: "issakaba-the-return-2026"'));
-  assert.ok(movie.includes("https://issakaba.com/"));
+  assert.ok(movie.includes("https://nollywood.com/movies/issakaba-the-return"));
+  assert.equal(movie.includes("https://issakaba.com/"), false);
   assert.ok(movie.includes("2026-10-10"));
   assert.ok(load("lib/entertainment.ts").includes("...verifiedOctoberFilm"));
   assert.ok(load("lib/entertainment-extras.ts").includes("issakaba-the-return-2026-cinema"));
@@ -113,4 +114,33 @@ test("NYSC and Lagos guides are enriched at existing canonical URLs", () => {
   assert.ok(tour.includes("Underground System 5"));
   assert.ok(tour.includes("₦3,000"));
   assert.ok(tour.includes("National Theatre — Design Week Lagos 22–25 October"));
+});
+
+test("Africa Magic and Issakaba public action links use reachable, accurately labelled destinations", () => {
+  const files = [
+    "lib/series.ts",
+    "lib/entertainment.ts",
+    "lib/entertainment-extras.ts",
+    "lib/entertainment-platform-hubs.ts",
+    "lib/entertainment-social-trends-2026-10-10.ts"
+  ];
+  for (const file of files) {
+    const source = load(file);
+    assert.equal(source.includes("https://www.dstv.com/africamagic/en-ng"), false, file + " still links outdated Africa Magic entry");
+    assert.equal(source.includes("https://issakaba.com/"), false, file + " still links an unverified film website");
+  }
+  const officialAfricaMagic = "https://www.dstv.com/en-ng/africamagic/";
+  assert.ok(load("lib/series.ts").includes(officialAfricaMagic));
+  assert.ok(load("lib/entertainment-extras.ts").includes(officialAfricaMagic));
+  assert.ok(load("lib/entertainment-platform-hubs.ts").includes(officialAfricaMagic));
+  const film = load("lib/entertainment-social-trends-2026-10-10.ts");
+  assert.ok(film.includes("https://nollywood.com/movies/issakaba-the-return"));
+  assert.ok(film.includes("not a cinema ticket seller"));
+  assert.ok(load("app/entertainment/releases/page.tsx").includes("Release information →"));
+  assert.ok(load("app/entertainment/movies/[slug]/page.tsx").includes("View release information ↗"));
+  const guard = load("scripts/check-new-published-links.mjs");
+  assert.ok(guard.includes("git"));
+  assert.ok(guard.includes("HTTP"));
+  assert.ok(guard.includes("404"));
+  assert.ok(guard.includes("410"));
 });
