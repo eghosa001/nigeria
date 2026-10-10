@@ -280,6 +280,18 @@ export type ReleaseItem = {
 
 export const releaseItems: ReleaseItem[] = [
   {
+    id: "issakaba-the-return-2026-cinema",
+    title: "Issakaba: The Return",
+    kind: "cinema",
+    status: "upcoming",
+    startDate: "2026-11-13",
+    dateLabel: "Nigerian cinema release announced for 13 November 2026",
+    platform: "Nigerian cinemas — showtimes to be confirmed",
+    summary: "Sam Dede reprises Ebube in a new Issakaba chapter from Lancelot Oduwa Imasuen. The producer's official site announces 13 November; specific theatre listings remain to be confirmed.",
+    officialUrl: "https://issakaba.com/",
+    lastChecked: "2026-10-10",
+  },
+  {
     id: "agbara-nla-the-return-cinema",
     title: "Agbara Nla: The Return",
     kind: "cinema",
