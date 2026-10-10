@@ -197,10 +197,12 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "A relationship expert whose public advice has become a success story discovers that her own marriage is far more complicated than the formula she shares with others.",
-    cast: [],
-    status: "upcoming",
-    premiereLabel: "Premieres 5 October 2026 on Africa Magic Showcase",
+    synopsis: "A relationship influencer turns her claimed formula for successful love into a reality television show. Secrets within her fiancé’s family threaten the certainty that built her public reputation. The drama contrasts advice delivered to an audience with the harder decisions required inside an actual relationship.",
+    cast: ["Treasure Enagbare", "Nnamdi Agbo", "Demi Banwo", "Tolu Asanu"],
+    creators: ["Rogba Arimoro"],
+    status: "ongoing",
+    premiereLabel: "Premiered 5 October 2026 at 8:30 pm on Africa Magic Showcase (DStv 151)",
+    episodeInfo: "Broadcast premiere confirmed for 5 October; confirm repeat times and DStv Stream catch-up access with the broadcaster.",
     watchLinks: [
       {
         platform: "Africa Magic Showcase",
@@ -212,6 +214,7 @@ export const seriesTitles: SeriesTitle[] = [
       }
     ],
     sources: [
+      { label: "Africa Magic 2026 October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" },
       { label: "Africa Magic", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-04" }
     ]
@@ -224,10 +227,12 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Faith", "Nollywood"],
     languages: ["English"],
-    synopsis: "Ten survivors are brought back together by faith, forcing them to confront unresolved history, accountability, forgiveness and the limits of redemption.",
-    cast: [],
-    status: "upcoming",
-    premiereLabel: "Premieres 8 October 2026 on Africa Magic Showcase",
+    synopsis: "Ten survivors of a kidnapping reunite for a vigil led by a pastor haunted by guilt. When someone is killed inside the gathering and a local festival closes off escape, they realise the danger may already be among them. The psychological thriller explores shared trauma, trust and responsibility as the survivors question their former captors and one another.",
+    cast: ["Patrick Dibuah"],
+    creators: ["Lota Chukwu"],
+    status: "ongoing",
+    premiereLabel: "Premiered 8 October 2026 at 8:30 pm on Africa Magic Showcase (DStv 151)",
+    episodeInfo: "The 8 October broadcast launch is confirmed; check the broadcaster for repeat times and current streaming access.",
     watchLinks: [
       {
         platform: "Africa Magic Showcase",
@@ -239,6 +244,7 @@ export const seriesTitles: SeriesTitle[] = [
       }
     ],
     sources: [
+      { label: "Africa Magic October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
       { label: "Africa Magic", url: "https://www.dstv.com/africamagic/en-ng", lastChecked: "2026-10-04" }
     ]
@@ -251,10 +257,11 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Mystery", "Supernatural", "Yoruba"],
     languages: ["Yoruba"],
-    synopsis: "A royal heir becomes the main suspect as a mysterious force targets heirs to the throne of Ekinrinade, drawing succession, tradition and supernatural danger into one investigation.",
-    cast: [],
-    status: "upcoming",
-    premiereLabel: "Premieres 10 October 2026 on Africa Magic Yoruba",
+    synopsis: "Twenty-nine years after a betrayal changed the fictional Ekinrinade monarchy, a rejected spiritual guardian returns alongside a surviving heir. As deaths accumulate, Crown Prince Aderounmu investigates the figures who secured power after the old regime fell. The mystery pits revenge against restraint and forces the prince to question what his lineage means for the kingdom.",
+    cast: ["Antar Laniyan", "Aina Gold", "Murphy Ray", "Abija"],
+    status: "ongoing",
+    premiereLabel: "Premiere announced for 10 October 2026; weekends at 7 pm on Africa Magic Yoruba (DStv 157)",
+    episodeInfo: "Saturday and Sunday broadcasts have been announced. Check the current official guide for individual episode times.",
     watchLinks: [
       {
         platform: "Africa Magic Yoruba",
@@ -266,6 +273,7 @@ export const seriesTitles: SeriesTitle[] = [
       }
     ],
     sources: [
+      { label: "Africa Magic October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" }
     ]
