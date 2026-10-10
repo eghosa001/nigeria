@@ -134,22 +134,39 @@ export default async function MoviesPage({
         <div className="container">
           <div className="movie-section-heading"><div><span className="eyebrow">Explore Nollywood</span><h2>Choose a story, not just a release date.</h2></div><Link href="/entertainment/people">Actors and filmmakers →</Link></div>
           <p className="movie-long-summary">Nigerian cinema covers generations, languages and genres. Rather than calling a film the "best of all time" without a credible ranking method, start with the type of story you want. Each title page separates cast and plot information from legally verified places to watch.</p>
-          <div className="home-updates-grid">
-            <article className="home-update-card">
-              <h3>Established Nigerian films</h3>
-              <p>For a film that lasts beyond release-week trends, compare <Link href="/entertainment/movies/lionheart">Lionheart</Link>, <Link href="/entertainment/movies/king-of-boys">King of Boys</Link> and <Link href="/entertainment/movies/citation">Citation</Link>. These titles approach Nigerian life through different styles and subjects; read the individual synopses before choosing.</p>
+          <div className="movie-discovery-grid" aria-label="Browse Nigerian films by interest">
+            <article className="movie-discovery-card">
+              <h3>Essential Nigerian films</h3>
+              <p>Start with acclaimed stories about family, power and education.</p>
+              <div className="movie-discovery-links">
+                <Link href="/entertainment/movies/lionheart">Lionheart <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/king-of-boys">King of Boys <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/citation">Citation <span aria-hidden="true">↗</span></Link>
+              </div>
             </article>
-            <article className="home-update-card">
-              <h3>Nollywood comedy and family drama</h3>
-              <p>For comedy or ensemble family stories, begin with <Link href="/entertainment/movies/chief-daddy">Chief Daddy</Link> or <Link href="/entertainment/movies/a-tribe-called-judah">A Tribe Called Judah</Link>. Genre labels do not establish an age rating; check the film's actual classification and content suitability separately before a family screening.</p>
+            <article className="movie-discovery-card">
+              <h3>Comedy &amp; family drama</h3>
+              <p>Explore humour, family expectations and ensemble stories.</p>
+              <div className="movie-discovery-links">
+                <Link href="/entertainment/movies/chief-daddy">Chief Daddy <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/a-tribe-called-judah">A Tribe Called Judah <span aria-hidden="true">↗</span></Link>
+              </div>
             </article>
-            <article className="home-update-card">
-              <h3>Yoruba-language and epic films</h3>
-              <p><Link href="/entertainment/movies/jagun-jagun">Jagun Jagun</Link> is an entry point for historical and action-centred Yoruba filmmaking. Use the movie catalog's genre and language filters for related titles, and check each film's official streaming or trailer link instead of assuming an upload is licensed.</p>
+            <article className="movie-discovery-card">
+              <h3>Yoruba stories &amp; epics</h3>
+              <p>Discover historical action, folklore and Yoruba-language cinema.</p>
+              <div className="movie-discovery-links">
+                <Link href="/entertainment/movies/jagun-jagun">Jagun Jagun <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/anikulapo">Aníkúlápó <span aria-hidden="true">↗</span></Link>
+              </div>
             </article>
-            <article className="home-update-card">
-              <h3>Free Nigerian films and streaming choices</h3>
-              <p><Link href="/entertainment/youtube">Browse credited full-movie releases on YouTube</Link> or compare <Link href="/entertainment/platforms">streaming platforms</Link>. "On Netflix" does not necessarily mean playable in Nigeria today; catalogue rights, subscriptions, viewing region and even individual title pages can change.</p>
+            <article className="movie-discovery-card">
+              <h3>Find a place to watch</h3>
+              <p>Browse credited full films or compare legal streaming platforms.</p>
+              <div className="movie-discovery-links">
+                <Link href="/entertainment/youtube">Free on YouTube <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/platforms">Streaming platforms <span aria-hidden="true">↗</span></Link>
+              </div>
             </article>
           </div>
           <div className="compact-faq-list">
