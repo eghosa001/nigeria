@@ -209,14 +209,14 @@ export const seriesTitles: SeriesTitle[] = [
         label: "Visit the official Africa Magic channel hub",
         href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
-        lastChecked: "2026-10-04",
+        lastChecked: "2026-10-10",
         note: "This opens the official broadcaster hub, not a direct episode. Check DStv Stream or the current TV guide; access depends on your subscription."
       }
     ],
     sources: [
       { label: "Africa Magic 2026 October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" },
-      { label: "Africa Magic", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-04" }
+      { label: "Africa Magic", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-10" }
     ]
   },
   {
@@ -239,14 +239,14 @@ export const seriesTitles: SeriesTitle[] = [
         label: "Visit the official Africa Magic channel hub",
         href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
-        lastChecked: "2026-10-04",
+        lastChecked: "2026-10-10",
         note: "This opens the official broadcaster hub, not a direct episode. Check DStv Stream or the current TV guide; access depends on your subscription."
       }
     ],
     sources: [
       { label: "Africa Magic October originals — Independent", url: "https://independent.ng/africa-magic-announces-five-new-originals-for-october/", lastChecked: "2026-10-10" },
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
-      { label: "Africa Magic", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-04" }
+      { label: "Africa Magic", url: "https://www.dstv.com/en-ng/africamagic/", lastChecked: "2026-10-10" }
     ]
   },
   {
@@ -268,7 +268,7 @@ export const seriesTitles: SeriesTitle[] = [
         label: "Visit the official Africa Magic channel hub",
         href: "https://www.dstv.com/en-ng/africamagic/",
         access: "broadcast",
-        lastChecked: "2026-10-04",
+        lastChecked: "2026-10-10",
         note: "This opens the official broadcaster hub, not a direct episode; confirm the show on DStv channel 157 and check subscription and replay access."
       }
     ],
