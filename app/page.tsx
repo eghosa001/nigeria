@@ -3,8 +3,8 @@ import Link from "next/link";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { ServiceSearch } from "@/components/search";
 import { getCurrentHomeSocialTrends } from "@/data/home-social-trends";
-import { canDisplayEntertainmentArtwork, entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
-import { getEffectiveReleaseStatus } from "@/lib/content-freshness";
+import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { selectRecentHomeMovies } from "@/lib/home-movie-highlights";
 import { releaseItems } from "@/lib/entertainment-extras";
 import { exploreGuides } from "@/lib/explore";
 import { governmentOpportunities, privateOpportunities } from "@/lib/jobs";
@@ -55,36 +55,8 @@ function uniqueRecruiters<T extends { organization: string }>(items: T[]) {
 
 export default function HomePage() {
   const socialTrends = getCurrentHomeSocialTrends();
-  const releaseByTitle = new Map(
-    releaseItems.map((item) => [item.title.trim().toLowerCase(), item] as const),
-  );
-
-  // Prioritise durable Nigerian films; week-old releases remain in the separate trends feed.
-  const evergreenHomepageSlugs = ["king-of-boys", "chief-daddy", "citation", "swallow", "jagun-jagun", "a-tribe-called-judah"];
-  const movieHighlights = entertainmentTitles
-    .filter((title) => {
-      const hasUsableArtwork =
-        canDisplayEntertainmentArtwork(title) ||
-        Boolean(title.sourcePreview) ||
-        Boolean(title.trailer) ||
-        title.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie");
-
-      if (!hasUsableArtwork) return false;
-
-      const release = releaseByTitle.get(title.title.trim().toLowerCase());
-      return !release || getEffectiveReleaseStatus(release) !== "upcoming";
-    })
-    .sort((a, b) => {
-      const aPick = evergreenHomepageSlugs.indexOf(a.slug);
-      const bPick = evergreenHomepageSlugs.indexOf(b.slug);
-      if (aPick !== -1 || bPick !== -1) {
-        if (aPick === -1) return 1;
-        if (bPick === -1) return -1;
-        return aPick - bPick;
-      }
-      return a.title.localeCompare(b.title);
-    })
-    .slice(0, 6);
+  // Recent verified films lead the homepage. Classics remain browsable by year.
+  const movieHighlights = selectRecentHomeMovies(entertainmentTitles, releaseItems);
 
   // A compact cross-region selection rather than the first three catalog entries.
   const travelHighlights = ["lagos", "abuja", "kano", "obudu-mountain-resort", "yankari-game-reserve", "anambra-heritage-circuit"]
@@ -168,7 +140,7 @@ export default function HomePage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Movies</span>
-              <h2 id="home-movies-title">Explore Nigerian films, beyond this week's trends.</h2>
+              <h2 id="home-movies-title">Recent Nigerian movies worth discovering.</h2>
             </div>
             <Link href="/entertainment/movies">Browse movies →</Link>
           </div>
@@ -197,7 +169,7 @@ export default function HomePage() {
           </div>
 
           <div className="minimal-inline-links">
-            <Link href="/entertainment/youtube">Free on YouTube</Link>
+            <Link href="/entertainment/youtube">Latest free YouTube films</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
           </div>
