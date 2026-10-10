@@ -277,7 +277,7 @@ export const seriesTitles: SeriesTitle[] = [
       { label: "ShockNG — Africa Magic October premieres", url: "https://shockng.com/new-africa-magic-tv-nollywood-shows-2026/", lastChecked: "2026-10-04" },
       { label: "October 2026 Nigeria release guide", url: "https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/", lastChecked: "2026-10-04" }
     ]
-  }
+  },
   {
     slug: "sirrin-amarya-2026",
     title: "Sirrin Amarya (The Bride's Secret)",
