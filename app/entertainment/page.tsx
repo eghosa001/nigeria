@@ -85,7 +85,8 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/people">Actors &amp; filmmakers</Link>
             <Link href="/entertainment/platforms">Streaming platforms</Link>
             <Link href="/entertainment/series">Series</Link>
-            <Link href="/entertainment/trending">Currently trending</Link>
+            <Link href="/entertainment/trending">Trending movies</Link>
+            <Link href="/entertainment/social-trends">YouTube &amp; social trends</Link>
           </div>
           <details className="compact-link-menu">
             <summary>More entertainment</summary>
