@@ -103,3 +103,97 @@
   color: var(--muted);
   font-size: .92rem;
 }
+
+
+/* Film discovery uses one explicit dark palette in both appearance modes.
+   Do not reuse general-purpose light .home-update-card components here:
+   the permanent dark movie shelf otherwise gives white headings on white cards. */
+.movie-shelf-section .movie-discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 20px;
+}
+
+.movie-shelf-section .movie-discovery-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(18px, 2vw, 24px);
+  border: 1px solid #376753;
+  border-radius: 18px;
+  background: #15382c;
+  color: #f4fff8;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
+}
+
+.movie-shelf-section .movie-discovery-card h3 {
+  margin: 0 0 10px;
+  color: #f4fff8;
+  font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.movie-shelf-section .movie-discovery-card p {
+  margin: 0 0 20px;
+  color: #cee4d8;
+  font-size: .91rem;
+  line-height: 1.5;
+}
+
+.movie-shelf-section .movie-discovery-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.movie-shelf-section .movie-discovery-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 8px 11px;
+  border: 1px solid #477f62;
+  border-radius: 9px;
+  background: #204b3a;
+  color: #ecfff3;
+  font-size: .84rem;
+  font-weight: 750;
+  line-height: 1.35;
+  text-decoration: underline;
+  text-decoration-color: #96c9ab;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+.movie-shelf-section .movie-discovery-links a:hover {
+  background: #2c624b;
+  border-color: #a5f1c0;
+  color: #ffffff;
+}
+
+.movie-shelf-section .movie-discovery-links a:focus-visible {
+  outline: 3px solid #ffd47c;
+  outline-offset: 3px;
+}
+
+@media (max-width: 1100px) {
+  .movie-shelf-section .movie-discovery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .movie-shelf-section .movie-discovery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  .movie-shelf-section .movie-discovery-card {
+    padding: 18px;
+  }
+}
