@@ -61,6 +61,7 @@ export default function TrendingMoviesPage() {
         <a href="https://kworb.net/youtube/trending/ng.html" target="_blank" rel="noopener noreferrer">Kworb Nigeria YouTube trend snapshot ↗</a>.
         Trends can change during the day. These clips are linked to their YouTube uploads and are not hosted by MyNigeriaGuide.
       </p>
+      <p className="top-gap"><Link href="/entertainment/social-trends">Explore the latest Nigeria YouTube music chart and verified social-media context →</Link></p>
     </section>
   </div></section></>);
 }
