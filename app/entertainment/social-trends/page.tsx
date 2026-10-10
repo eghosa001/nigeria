@@ -173,6 +173,23 @@ export default function SocialTrendsPage() {
             </p>
           </section>
 
+          <section className="top-gap" aria-labelledby="social-creators">
+            <span className="eyebrow">Social media and creator events · 10 October 2026</span>
+            <h2 id="social-creators">SMFest Abuja: verified creator and tech event</h2>
+            <p>
+              SMFest Abuja's organiser lists its main event for 17–18 October 2026
+              at Family Worship Centre, Wuye, Abuja, from 9 am, under the
+              AdvantageX theme. This is a verifiable offline event for social-media
+              creators and digital entrepreneurs, not evidence that a particular
+              hashtag is currently trending on TikTok or Instagram.
+            </p>
+            <div className="minimal-inline-links">
+              <Link href="/explore/smfest-abuja-2026">Dates, venue and visitor planning</Link>
+              <Link href="/jobs/guides/job-scam-red-flags-nigeria">Check suspicious creator and job offers</Link>
+            </div>
+            <p><a href="https://smfest.org/" target="_blank" rel="noopener noreferrer">Confirm the live SMFest programme with the organiser ↗</a></p>
+          </section>
+
           <section className="top-gap" aria-labelledby="beyond-trends">
             <span className="eyebrow">Useful beyond the viral moment</span>
             <h2 id="beyond-trends">Turn a trending post into a reliable answer</h2>
