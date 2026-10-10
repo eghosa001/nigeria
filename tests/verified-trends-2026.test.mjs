@@ -62,3 +62,53 @@ test("current homepage trend set spans all four pillars and all canonical pages"
   assert.match(movies, /slug: "tele-x-zikora-2026"/);
   assert.match(movies, /KHytYLBb_Zk/);
 });
+
+
+test("October 10 sourced programme additions are canonical and independently useful", () => {
+  const additions = load("lib/job-social-trends-2026-10-10.ts");
+  for (const [slug, deadline, source] of [
+    ["afdb-2027-internship-session-one", "2026-10-12", "afdb.org"],
+    ["nova-bank-graduate-trainee-2026", "2026-10-15", "novabank.ng"],
+    ["ebid-young-professionals-2026", "2026-10-30", "bidc-ebid.org"]
+  ]) {
+    assert.equal(additions.split(`slug: "${slug}"`).length - 1, 1);
+    assert.match(additions, new RegExp(`deadline: "${deadline}"`));
+    assert.ok(additions.includes(source));
+    assert.ok(home.includes(`href: "/jobs/${slug}"`));
+  }
+  assert.doesNotMatch(additions, /\\bposting:\\s*\\{/);
+  assert.match(load("lib/jobs.ts"), /\\.\\.\\.octoberVerifiedProgrammes/);
+  assert.match(additions, /master's degree|master’s degree/i);
+  assert.match(additions, /completed NYSC/i);
+  assert.match(additions, /young trainee/i);
+});
+
+test("new series and Issakaba reuse canonical catalogue routes with real sources", () => {
+  const shows = load("lib/series.ts");
+  const movie = load("lib/entertainment-social-trends-2026-10-10.ts");
+  for (const slug of ["sirrin-amarya-2026", "onu-ahia-nwanyi-2026"]) {
+    assert.equal(shows.split(`slug: "${slug}"`).length - 1, 1);
+  }
+  assert.match(shows, /independent\\.ng\\/africa-magic-announces-five-new-originals-for-october/);
+  assert.match(movie, /slug: "issakaba-the-return-2026"/);
+  assert.match(movie, /https:\\/\\/issakaba\\.com\\//);
+  assert.match(movie, /2026-10-10/);
+  assert.match(load("lib/entertainment.ts"), /\\.\\.\\.verifiedOctoberFilm/);
+  assert.match(load("lib/entertainment-extras.ts"), /issakaba-the-return-2026-cinema/);
+});
+
+test("NYSC and Lagos events were expanded in place rather than duplicated", () => {
+  const local = services.find((record) => record.slug === "nysc-registration-local");
+  const callup = services.find((record) => record.slug === "nysc-call-up-letter");
+  assert.equal(services.filter((record) => record.slug === local?.slug).length, 1);
+  assert.ok(local.notes.some((note) => /4–24 November 2026/.test(note)));
+  assert.ok(local.notes.some((note) => /not the online registration/i.test(note)));
+  assert.ok(callup.notes.some((note) => /call-up letters/i.test(note)));
+  assert.ok(local.sources.some((source) => source.url.includes("officialnyscng")));
+  const tour = load("lib/explore.ts");
+  assert.match(tour, /slug: "felabration-2026"/);
+  assert.match(tour, /Underground System 5/);
+  assert.match(tour, /₦3,000/);
+  assert.match(tour, /slug: "design-week-lagos-2026"/);
+  assert.match(tour, /National Theatre — Design Week Lagos 22–25 October/);
+});
