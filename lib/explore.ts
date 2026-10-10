@@ -174,57 +174,64 @@ export const exploreGuides: ExploreGuide[] = [
   },
   {
     slug: "felabration-2026",
-    title: "Felabration 2026 Lagos Guide: Dates, Venue & Planning",
+    title: "Felabration 2026 Lagos: New Afrika Shrine & Freedom Park",
     shortTitle: "Felabration 2026",
     kind: "itinerary",
     region: "Lagos State",
-    summary: "Plan Felabration 2026 around the 12–18 October main festival at the New Afrika Shrine, with pre-events, late-night transport and verified event sources.",
+    summary: "Felabration runs 12–18 October 2026 with a main festival at New Afrika Shrine in Ikeja and a separate seven-night Underground System 5 programme at Freedom Park on Lagos Island. Compare the venues, entry details and routes before you go.",
     intro: [
-      "Felabration returns as Lagos' annual celebration of Fela Anikulapo-Kuti and Afrobeat, with the 2026 main festival scheduled for 12–18 October at the New Afrika Shrine.",
-      "The week is only part of the programme: art, dance and fashion pre-events are also scheduled before the main run, so choose the parts you actually want and plan transport before the late-night shows."
+      "Felabration is not one single venue this year. The New Afrika Shrine in Agidingbi/Ikeja hosts the main Fela celebration from 12 to 18 October, while Freedom Park on Lagos Island is promoting its own seven-night Underground System 5 music and arts programme over the same dates. They are different venues on opposite sides of Lagos: tickets, gates and line-ups should not be assumed interchangeable.",
+      "Freedom Park's publicly circulated October 2026 programme lists daily shows from 6 pm and a ₦3,000 gate fee for Underground System 5, with rotating genres from Highlife and Jazz to Juju/Fuji, Reggae and Afrobeat. These terms are specific to the Freedom Park programme, not a price or admission guarantee for the New Afrika Shrine. Recheck the organiser's latest @freedomparklagos announcement before leaving.",
+      "The free Dress Fela fashion competition at Freedom Park on Saturday 10 October is a separate earlier event; a free pre-event does not make the later 12–18 October Underground System concerts free. Late-night visitors should arrange a safe route home before attending either programme."
     ],
-    bestFor: ["Live music", "Afrobeat", "Culture", "October events"],
+    bestFor: ["Live Afrobeat", "Fela Kuti history", "Lagos music events", "Festival travel"],
     highlights: [
-      { name: "12–18 October — main festival", detail: "The 2026 main Felabration week is scheduled from Monday 12 October through Sunday 18 October at the New Afrika Shrine." },
-      { name: "New Afrika Shrine", detail: "The annual flagship programme is centred on the Shrine in Ikeja/Agidingbi, Lagos." },
-      { name: "Pre-events", detail: "The 2026 programme includes art, dance and Dress Fela activities before the main festival week." },
-      { name: "Late-night planning", detail: "Concert nights can run late. Decide the return route, pickup point and traffic buffer before entering the venue." }
+      { name: "12–18 October — two festival venues", detail: "Main Felabration celebrations are scheduled at New Afrika Shrine in Agidingbi/Ikeja. Underground System 5 is a separate programme at Freedom Park on Lagos Island." },
+      { name: "Freedom Park — 6 pm, ₦3,000 announced", detail: "The park's 2026 event promotions state a 6 pm daily start and ₦3,000 admission for Underground System 5. Confirm current entry rules and ticket handling with Freedom Park before paying." },
+      { name: "Underground System programme", detail: "The advertised week features different musical traditions plus spoken word, open mic and a young-creative Gen Z Zone. Not every act performs on every night; check each day's official announcement." },
+      { name: "New Afrika Shrine main programme", detail: "The Shrine is in Agidingbi/Ikeja, not Lagos Island. The announced main-festival dates are 12–18 October; its detailed daily line-up, entry and door times should be checked with its own organiser." },
+      { name: "10 October Dress Fela", detail: "The fashion contest announced at Freedom Park at 4 pm is a free pre-festival event and should not be confused with the paid Underground System nights." }
     ],
     planning: [
-      { label: "Confirm the day's programme", detail: "Line-ups and exact times can change; check Felabration's official channels close to the day you plan to attend." },
-      { label: "Plan Mainland movement", detail: "The New Afrika Shrine is in Ikeja/Agidingbi. Allow extra time for evening traffic and event congestion." },
-      { label: "Arrange your return first", detail: "Do not rely on improvising transport after a late show; pick a safe return option and meeting point in advance." },
-      { label: "Use official event information", detail: "Treat copied posters and resale links cautiously; verify event and ticket information with Felabration/New Afrika Shrine channels." }
+      { label: "Choose Shrine or Freedom Park first", detail: "A trip across Lagos from Agidingbi to Lagos Island can take substantial time in evening traffic. Decide which programme and artist you actually want instead of treating both as one address." },
+      { label: "Verify entry information by venue", detail: "Follow Freedom Park's official @freedomparklagos posts for the Underground System start, ticket rules and performers; separately verify the New Afrika Shrine programme with Felabration organisers. Do not pay resellers offering a supposedly universal Felabration pass." },
+      { label: "Plan for return transport", detail: "Arrange a pick-up or reliable ride before the show. Agree on a meeting point outside busy venue gates; allow extra travel time after late performances." },
+      { label: "Expect differing daily performances", detail: "Freedom Park's announcements include Highlife, Jazz, Juju/Fuji, Reggae and Afrobeat nights as well as poetry and younger-artist showcases. Confirm the day-specific performers rather than assuming a headline act is present throughout the week." },
+      { label: "Check if a pre-event is free", detail: "The free 10 October Dress Fela listing does not change the separate advertised ₦3,000 Freedom Park concert-night fee. Check date and organiser before travelling." }
     ],
-    source: { label: "Voice of Nigeria / NAN — Felabration 2026 dates", href: "https://von.gov.ng/felabration-promotes-nigerian-culture-yeni-kuti/" },
-    lastReviewed: "2026-10-05"
+    source: { label: "Freedom Park Lagos — official venue event announcements", href: "https://www.instagram.com/freedomparklagos/" },
+    lastReviewed: "2026-10-10"
   },
   {
     slug: "design-week-lagos-2026",
-    title: "Design Week Lagos 2026 Guide: Dates, Venue & Events",
+    title: "Design Week Lagos 2026: 18–25 October Dates, National Theatre Sessions",
     shortTitle: "Design Week Lagos 2026",
     kind: "itinerary",
     region: "Lagos State",
-    summary: "Plan Design Week Lagos 2026 from 18–25 October, with the National Theatre as the main festival hub and partner events across Lagos.",
+    summary: "Design Week Lagos runs 18–25 October across Lagos. The National Theatre's published detailed exhibition-and-talk schedule is concentrated on 22–25 October; distinguish the full festival week from the main hall programme before booking.",
     intro: [
-      "Design Week Lagos 2026 runs from 18 to 25 October. The official festival site identifies the National Theatre in Iganmu as the main hub while describing a wider citywide programme.",
-      "Expect exhibitions, trade showcases, talks, competitions, training programmes and partner-led activations. Check the live schedule before building travel around one session."
+      "Design Week Lagos 2026 is officially scheduled for 18–25 October, with exhibitions, workshops, designer showcases, creative-industry talks and partner activities across the city. The National Theatre in Iganmu is the principal hub, not the only place where festival-related activities can happen.",
+      "The National Theatre's current event listing gives a specific Hall programme from Thursday 22 to Sunday 25 October. It lists a provisional daily window of 10 am–6 pm, but warns that timings can vary. That four-day hall schedule is only one part of the wider eight-day festival; do not assume every Design Week activity starts at the National Theatre on 18 October.",
+      "For anyone choosing between exhibitions and talks, the detailed published agenda is particularly useful: Thursday focuses on industrialisation, SMEs and architecture; Friday explores products, interior design and textile/craft manufacturing; Saturday includes an African design and interiors focus; Sunday adds a student competition. Check the organiser's registration page for the ticket category and final session times."
     ],
-    bestFor: ["Design", "Architecture", "Creative industry", "October events"],
+    bestFor: ["Architecture", "Design & manufacturing", "Creative industry", "Student competitions", "Exhibitions"],
     highlights: [
-      { name: "18–25 October 2026", detail: "The official Design Week Lagos site publishes these dates for the 2026 edition." },
-      { name: "National Theatre, Iganmu", detail: "The National Theatre is the main festival hub, with additional partner venues across Lagos." },
-      { name: "Exhibitions & talks", detail: "The programme spans exhibitions, installations, talks, workshops, training and industry showcases." },
-      { name: "Citywide activations", detail: "Not every event is at the main hub; check the address for each programme item before setting out." }
+      { name: "18–25 October — full festival week", detail: "The organiser's official website publishes this eight-day window across Lagos. Individual partner events can have different venues and attendance rules." },
+      { name: "22 October — industry & architecture talks", detail: "National Theatre programme: Made by Design and Design & Innovation exhibitions alongside Industrialisation Day, SME Day and Architecture Day talks / press activities." },
+      { name: "23 October — product, interiors & textiles", detail: "National Theatre programme: continuing exhibitions, design products and global markets, an interior-design forum and workshops on craft, textiles and industrial production." },
+      { name: "24 October — African design networks", detail: "National Theatre programme: exhibitions plus From Africa to the World and Interior Designers Association Nigeria (IDAN) talks, subject to the final timings." },
+      { name: "25 October — student competition", detail: "National Theatre programme: the Made by Design and Design & Innovation exhibitions with the DWL Student Competition." },
+      { name: "National Theatre, Iganmu", detail: "The hall events are listed at National Theatre. The official page presents a provisional 10 am to 6 pm programme; verify the registration confirmation for your session." }
     ],
     planning: [
-      { label: "Build around confirmed sessions", detail: "Choose the talks, exhibitions or showcases you actually want before planning transport." },
-      { label: "Check each venue", detail: "The festival is citywide even though the National Theatre is the main hub." },
-      { label: "Allow Lagos traffic time", detail: "Do not book events in distant districts back-to-back without a realistic travel buffer." },
-      { label: "Re-check admission", detail: "Some programmes may have separate registration or access rules; use the official festival site for current details." }
+      { label: "Pick a specific date and session", detail: "Thursday is best for industry and architecture; Friday for design products and interiors; Saturday for design networks; Sunday for the student competition. These are programme themes, not promises of admission to all sessions with one ticket." },
+      { label: "Distinguish festival week from hall dates", detail: "Use designweeklagos.com for the full 18–25 October calendar and the National Theatre official listing for the scheduled 22–25 October Hall sessions." },
+      { label: "Register with the official event partner", detail: "The National Theatre page sends attendees to the organiser's registration partner at tix.dot360.co. Check the live prices, tickets, admission requirements and confirmation before payment; no single entry price has been assumed here." },
+      { label: "Check venue for each booking", detail: "Some showcases and partner events happen elsewhere in Lagos. Do not travel to Iganmu for a session unless its organiser confirms National Theatre as that session's venue." },
+      { label: "Build in transit time", detail: "Traffic around the Iganmu arts district and cross-city evening travel may take longer during busy events. Leave time between bookings, especially if moving to another neighbourhood." }
     ],
-    source: { label: "Design Week Lagos official website", href: "https://designweeklagos.com/" },
-    lastReviewed: "2026-10-05"
+    source: { label: "National Theatre — Design Week Lagos 22–25 October Hall programme", href: "https://nationaltheatre.gov.ng/event/register/design-week-lagos-2026/XzBl38MQ" },
+    lastReviewed: "2026-10-10"
   },
   {
     slug: "lagos-fashion-week-2026",
