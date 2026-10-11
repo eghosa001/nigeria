@@ -70,6 +70,7 @@ export default function AdminPage() {
           <Link href="/admin/services"><span>Services</span><strong>Content library</strong><small>Search every service guide by category, status or keyword and inspect its full source record.</small><i>→</i></Link>
           <Link href="/admin/explore"><span>Tour Nigeria</span><strong>Travel catalog</strong><small>Review destination coverage, mapped places, costs, addresses and last-reviewed dates.</small><i>→</i></Link>
           <Link href="/admin/visits"><span>Audience</span><strong>Visits & discovery</strong><small>See traffic, countries, page views, referrers and the pages users are reaching.</small><i>→</i></Link>
+          <Link href="/admin/trends"><span>Intelligence</span><strong>Nigeria trend radar</strong><small>Review free search and news leads, prioritize X conversations and shortlist source-backed opportunities across four pillars.</small><i>→</i></Link>
           <Link href="/admin/health"><span>Freshness</span><strong>Content health</strong><small>Review stale and due source checks across all four pillars and the YouTube sync.</small><i>→</i></Link>
         </div>
 
