@@ -22,6 +22,69 @@ export type SearchConsoleHourlyRow = {
   provisional: boolean;
 };
 
+/**
+ * Turn Google errors into actionable, deliberately non-sensitive diagnostics.
+ * A disabled Cloud API and missing Search Console property permission both
+ * return HTTP 403, but require entirely different fixes.
+ */
+export type SearchConsoleApiIssueCode =
+  | "api-disabled"
+  | "property-permission"
+  | "authorization"
+  | "quota"
+  | "bad-request"
+  | "unknown";
+
+export type SearchConsoleApiIssue = {
+  code: SearchConsoleApiIssueCode;
+  message: string;
+  projectNumber: string | null;
+};
+
+export function classifySearchConsoleApiError(status: number, raw: string): SearchConsoleApiIssue {
+  let parsed: {
+    error?: {
+      message?: string;
+      details?: Array<{ reason?: string; metadata?: { consumer?: string; service?: string } }>;
+    };
+  } = {};
+  try { parsed = JSON.parse(raw) as typeof parsed; } catch { /* Non-JSON errors are possible. */ }
+  const message = parsed.error?.message ?? raw;
+  const details = parsed.error?.details ?? [];
+  const disabled = /Search Console API has not been used in project|searchconsole\.googleapis\.com.*disabled|it is disabled/i.test(message) ||
+    details.some((part) => part.reason === "SERVICE_DISABLED" && part.metadata?.service === "searchconsole.googleapis.com");
+  const projectFromMessage = message.match(/\bproject\s+(\d{5,20})\b/i)?.[1];
+  const projectFromDetails = details.map((part) => part.metadata?.consumer?.match(/^projects\/(\d{5,20})$/)?.[1]).find(Boolean);
+  const projectNumber = projectFromMessage ?? projectFromDetails ?? null;
+
+  if (status === 403 && disabled) {
+    return {
+      code: "api-disabled",
+      projectNumber,
+      message: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account. Enable the API in that project, then retry. No search data has been fetched.",
+    };
+  }
+  if (status === 403) {
+    return {
+      code: "property-permission", projectNumber: null,
+      message: "Google denied access to the Search Console property. Grant the configured service-account email read access to sc-domain:mynigeriaguide.com under Search Console → Settings → Users and permissions.",
+    };
+  }
+  if (status === 401) {
+    return { code: "authorization", projectNumber: null, message: "Google could not authorize the reporting service account. Check its server-only credentials." };
+  }
+  if (status === 429) {
+    return { code: "quota", projectNumber: null, message: "Google Search Console is temporarily rate-limiting requests. Retry later." };
+  }
+  if (status === 400) {
+    return { code: "bad-request", projectNumber: null, message: "Google rejected the Search Console query. Check the request parameters." };
+  }
+  return {
+    code: "unknown", projectNumber: null,
+    message: "Google Search Console reporting failed (HTTP " + status + "). Check the connection in Google Cloud.",
+  };
+}
+
 export type SearchConsoleHourlyReport = {
   available: boolean;
   source: "direct-google-api" | "unavailable";
@@ -40,6 +103,7 @@ export type SearchConsoleHourlyReport = {
   hoursReported24h: number;
   rows: SearchConsoleHourlyRow[];
   error?: string;
+  issue?: SearchConsoleApiIssue;
 };
 
 const validHour = (hour: unknown): hour is string =>
