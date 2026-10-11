@@ -76,7 +76,7 @@ test("sitewide autocomplete selects existing canonical guides with keyboard", as
   await expect(page.getByRole("option", { name: /Nigerian passport/i })).toBeVisible();
   await input.press("ArrowDown");
   await input.press("Enter");
-  await expect(page).toHaveURL(/\\/topics\\/nigerian-passport$/);
+  await expect(page).toHaveURL(new RegExp("/topics/nigerian-passport$"));
 });
 
 test("consolidated Kainji Dam URL redirects to the indexed canonical", async ({ request }) => {
