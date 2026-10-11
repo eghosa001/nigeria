@@ -78,7 +78,12 @@ jobs:
             non_youtube_directory="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
             youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
             non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
-            if [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
+            youtube_d1_trigger="$(printf '%s\n' "$changed" | grep -E '^scripts/export-youtube-d1(\.test)?\.mjs$' || true)"
+            non_youtube_d1="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/ci\.yml$|scripts/export-youtube-d1(\.test)?\.mjs$)' || true)"
+            if [ -n "$youtube_d1_trigger" ] && [ -z "$non_youtube_d1" ]; then
+              echo "mode=youtube-d1" >> "$GITHUB_OUTPUT"
+              echo "Offline YouTube D1 export tooling: schema compatibility and dry-run only."
+            elif [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
               echo "mode=youtube-runtime" >> "$GITHUB_OUTPUT"
               echo "Packed YouTube source-only change: verify lossless round trips and existing listing behavior."
             elif [ -n "$youtube_directory_trigger" ] && [ -z "$non_youtube_directory" ]; then
@@ -119,6 +124,12 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip'
+      - name: Validate offline YouTube D1 import preparation
+        if: steps.scope.outputs.mode == 'youtube-d1'
+        run: |
+          python3 scripts/fast_path_guard.py
+          node --test scripts/export-youtube-d1.test.mjs
+          node scripts/export-youtube-d1.mjs --dry-run
       - name: Verify packed YouTube runtime data
         if: steps.scope.outputs.mode == 'youtube-runtime'
         run: |
