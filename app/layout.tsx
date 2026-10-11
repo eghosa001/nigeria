@@ -49,7 +49,8 @@ const gaBootstrap = `
   }
 
   window.gtag("js", new Date());
-  window.gtag("config", id, { anonymize_ip: true });
+  window.gtag("config", id, { anonymize_ip: true,
+    page_location: path === "/search" ? window.location.origin + path : window.location.href });
   window.__mngLastTrackedPath = path;
 })();
 `;
