@@ -217,7 +217,7 @@ test("admin shows the exact API activation action for Google's disabled Search C
       error: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account.",
       issue: { code: "api-disabled", projectNumber: "987654321011",
         message: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account." },
-    } } } });
+    } } });
   });
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
