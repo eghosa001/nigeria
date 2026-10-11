@@ -145,6 +145,33 @@ const verifiedWebDiscovery = [
   },
 ];
 
+const freeCurrentResearchLinks = [
+  {
+    pillar: "Movies & Entertainment",
+    label: "Nollywood and Afrobeats discussions on X",
+    url: "https://x.com/search?q=Nollywood%20OR%20Afrobeats&f=live",
+    note: "Public posts and conversations; requires X access in some browsers. Not a Nigeria-wide trend chart.",
+  },
+  {
+    pillar: "Services",
+    label: "NYSC, NIMC and government services on X",
+    url: "https://x.com/search?q=NYSC%20OR%20NIMC%20OR%20JAMB%20OR%20CAC&f=live",
+    note: "Posts are leads only. Verify deadlines, fees and eligibility using the official agency's portal.",
+  },
+  {
+    pillar: "Tour Nigeria",
+    label: "Tourism, festivals and Lagos events on X",
+    url: "https://x.com/search?q=Nigeria%20festival%20OR%20tourism%20OR%20Lagos%20events&f=live",
+    note: "Check the organiser's announced dates, venue and tickets before planning a visit.",
+  },
+  {
+    pillar: "Jobs & Careers",
+    label: "Recruitment and graduate opportunities on X",
+    url: "https://x.com/search?q=Nigeria%20recruitment%20OR%20graduate%20jobs&f=live",
+    note: "Never rely on a viral vacancy screenshot. Open the official employer's application link.",
+  },
+];
+
 export default function SocialTrendsPage() {
   const base = getSiteUrl();
   const url = base + "/entertainment/social-trends";
@@ -186,6 +213,32 @@ export default function SocialTrendsPage() {
             change at any time. The audience figures below are advertising-reach estimates from
             late 2025, published in the Digital 2026 Nigeria report, not October 2026 active-user counts.
           </p>
+
+          <section className="top-gap" aria-labelledby="direct-twitter-research">
+            <span className="eyebrow">Free sources · X / Twitter first</span>
+            <h2 id="direct-twitter-research">Check current X discussions across our four pillars</h2>
+            <p>
+              These are direct X searches, not automatically collected or ranked tweets.
+              They may require sign-in, and results vary by search settings and what is public.
+              Nigeria-focused discussions should be cross-checked against the original organiser,
+              agency or employer before MyNigeriaGuide treats an announcement as confirmed.
+            </p>
+            <div className="home-category-grid compact-category-grid">
+              {freeCurrentResearchLinks.map((item) => (
+                <article className="home-category-card" key={item.pillar}>
+                  <span>{item.pillar}</span>
+                  <h3>{item.label}</h3>
+                  <p>{item.note}</p>
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">Search public X conversations ↗</a>
+                </article>
+              ))}
+            </div>
+            <p className="job-muted">
+              For actual search-demand evidence, use the separate
+              {" "}<a href="https://trends.google.com/trending?geo=NG" target="_blank" rel="noopener noreferrer">Google Trends Nigeria feed ↗</a>.
+              Google search demand is not an X trend ranking; no platform impressions are inferred.
+            </p>
+          </section>
 
           <section className="top-gap" aria-labelledby="youtube-video-trends">
             <span className="eyebrow">YouTube Nigeria · 11 October 2026 snapshot</span>
