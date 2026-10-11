@@ -344,7 +344,11 @@ export function AdminAnalyticsDashboard() {
             <span className="eyebrow">Google Search visibility</span>
             <h2>Impressions and search clicks</h2>
           </div>
-          <small>{data.searchPerformance?.source === "historical-snapshot" ? "Search Console · preserved historical snapshot" : "Search Console · freshest available data"}</small>
+          <small>{data.searchPerformance?.source === "historical-snapshot"
+            ? "Search Console · preserved historical snapshot"
+            : data.searchPerformance?.source === "unavailable"
+              ? "Search Console · API connection unavailable"
+              : "Search Console · latest data supplied by Google"}</small>
         </div>
         {data.searchPerformance?.available ? (
           <>
