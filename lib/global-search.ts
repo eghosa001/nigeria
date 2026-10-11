@@ -1,5 +1,6 @@
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { careerGuides } from "@/lib/career-guides";
+import { tourPlaceSearchStore } from "@/lib/tour-place-search-store";
 
 function normalise(value: string) {
   return value
@@ -95,7 +96,6 @@ export async function searchGlobalCatalog(query: string) {
   const [
     { publicServiceListings },
     { exploreGuides },
-    { explorePlaces },
     { entertainmentTitles },
     { entertainmentPeople },
     { seriesTitles },
@@ -104,7 +104,6 @@ export async function searchGlobalCatalog(query: string) {
   ] = await Promise.all([
     import("@/lib/data"),
     import("@/lib/explore"),
-    import("@/lib/explore-places"),
     import("@/lib/entertainment"),
     import("@/lib/entertainment-extras"),
     import("@/lib/series"),
@@ -183,17 +182,17 @@ export async function searchGlobalCatalog(query: string) {
     .slice(0, 8)
     .map((entry) => entry.item);
 
-  const placeResults = explorePlaces
-    .map((item) => ({
-      item,
-      score: relevance(item.name,
-        [item.kind, item.area, item.address, item.summary, item.cost, item.tags.join(" "), item.guideSlug].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
-    .slice(0, 12)
-    .map((entry) => entry.item);
+  const tourSearch = await tourPlaceSearchStore.search(query);
+  // Legacy previews preserve relevance/tie parity until an individually
+  // published and independently validated Tour D1 cutover is authorized.
+  const placeResults = tourSearch.mode === "d1"
+    ? tourSearch.places
+    : selectTopMatches(tourSearch.places,
+      (item) => relevance(item.name,
+        [item.kind, item.area, item.address, item.summary, item.cost, item.tags.join(" "), item.guideSlug].join(" ")),
+      (a, b) => a.name.localeCompare(b.name),
+      12,
+    );
 
   const movieResults = entertainmentTitles
     .map((item) => ({
