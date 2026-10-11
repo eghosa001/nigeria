@@ -238,6 +238,11 @@ export default function SocialTrendsPage() {
               {" "}<a href="https://trends.google.com/trending?geo=NG" target="_blank" rel="noopener noreferrer">Google Trends Nigeria feed ↗</a>.
               Google search demand is not an X trend ranking; no platform impressions are inferred.
             </p>
+            <div className="minimal-inline-links">
+              <a href="https://getdaytrends.com/nigeria/" target="_blank" rel="noopener noreferrer">GetDayTrends: Nigeria X trend history ↗</a>
+              <a href="https://trends24.in/nigeria/" target="_blank" rel="noopener noreferrer">Trends24: Nigeria X timeline ↗</a>
+            </div>
+            <p className="job-muted">These independent websites offer publicly viewable Nigerian X topic rankings; neither is an official X API or a guaranteed live national snapshot. We link to them for human review, not automatic bulk collection, and independently verify claims before publishing.</p>
           </section>
 
           <section className="top-gap" aria-labelledby="youtube-video-trends">
