@@ -6,8 +6,8 @@ import { jobOpportunities } from "@/lib/jobs";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Remote Jobs in Nigeria 2026: Verified Remote & Hybrid Careers",
-  description: "Find remote and hybrid job routes open to Nigerian applicants, with current employer sources, location notes and direct links to official career systems.",
+  title: "Remote Jobs Nigeria 2026: Students & No Experience",
+  description: "Explore remote jobs in Nigeria for students, beginners and experienced workers. Learn location rules, dollar-payment caveats and how to verify genuine openings.",
   alternates: { canonical: "/jobs/remote" }
 };
 
@@ -52,7 +52,7 @@ export default function RemoteJobsPage() {
         <div className="container">
           <Link href="/jobs" className="back-link">← Jobs & Careers</Link>
           <span className="eyebrow">Remote & hybrid work</span>
-          <h1>Remote jobs in Nigeria, without stale vacancy lists.</h1>
+          <h1>Remote jobs in Nigeria for students, beginners and professionals.</h1>
           <p className="page-intro">Start with employers whose official career systems currently identify remote or hybrid work. Always confirm the location on the individual job before applying because a company's work policy can differ by role.</p>
         </div>
       </section>
