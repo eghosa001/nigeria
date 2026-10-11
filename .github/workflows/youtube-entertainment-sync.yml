@@ -91,6 +91,14 @@ jobs:
         if: steps.api-key.outputs.present == 'true'
         run: node scripts/build-youtube-detail-shards.mjs
 
+      - name: Rebuild packed YouTube runtime listing index
+        if: steps.api-key.outputs.present == 'true'
+        run: node scripts/build-youtube-runtime-catalog.mjs
+
+      - name: Verify packed catalog matches raw YouTube records
+        if: steps.api-key.outputs.present == 'true'
+        run: node --test tests/youtube-runtime-catalog.test.mjs
+
       - name: Validate generated entertainment catalog
         if: steps.api-key.outputs.present == 'true'
         run: node scripts/check-entertainment-scale.mjs
@@ -98,7 +106,7 @@ jobs:
       - id: changes
         if: steps.api-key.outputs.present == 'true'
         run: |
-          if [ -z "$(git status --porcelain -- data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards)" ]; then
+          if [ -z "$(git status --porcelain -- data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards data/youtube-runtime-catalog.generated.json)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -114,7 +122,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH" "$BASE_SHA"
-          git add data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards
+          git add data/youtube-channel-cache.json data/youtube-movies.generated.json data/youtube-movies-review.generated.json data/youtube-detail-shards data/youtube-runtime-catalog.generated.json
           git commit -m "Refresh approved YouTube movie catalog"
           git push --force origin "$BRANCH"
 
