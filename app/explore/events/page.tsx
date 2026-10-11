@@ -66,6 +66,25 @@ export default function EventsPage() {
             ]}
             note="Dates may be announced before the final daily programme. Each event guide distinguishes fixed information from details you should re-check."
           />
+          <section className="top-gap" aria-labelledby="lagos-lifestyle-fair-2026">
+            <span className="eyebrow">Lagos SME culture and shopping · 24–25 October 2026</span>
+            <h2 id="lagos-lifestyle-fair-2026">Leadway Lifestyle Fair — verified event behind the social hashtag</h2>
+            <p>
+              Leadway Group announces a Lagos Lifestyle Fair on <strong>24 and 25 October 2026</strong>,
+              bringing Nigerian SMEs, shoppers and families together. Its organiser page places the
+              event in Victoria Island, while an organiser-labelled Eventbrite listing names the
+              venue as <strong>SystemSpecs HQ, Chief Yesufu Abiodun Oniru Road</strong>.
+              Check the organiser's latest details before making travel arrangements.
+              The organiser's SME exhibitor-registration page currently says applications have closed;
+              this does not mean visitor registration is closed.
+            </p>
+            <div className="minimal-inline-links">
+              <a href="https://www.leadway.com/leadway-media-dash/" target="_blank" rel="noopener noreferrer">Leadway official visitor information ↗</a>
+              <a href="https://www.eventbrite.com/e/leadway-lifestyle-fair-tickets-2002921744856" target="_blank" rel="noopener noreferrer">Organiser's venue listing ↗</a>
+              <Link href="/explore/lagos">Plan travel around Lagos →</Link>
+            </div>
+          </section>
+
           <section className="top-gap" aria-labelledby="announced-next-year">
             <span className="eyebrow">Recently announced · 11 October 2026</span>
             <h2 id="announced-next-year">Looking ahead: Lagos International Chess Festival 2027</h2>
