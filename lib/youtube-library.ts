@@ -1,5 +1,6 @@
-import generatedData from "@/data/youtube-movies.generated.json";
-import reviewData from "@/data/youtube-movies-review.generated.json";
+// Only compact, source-preserving listing tuples enter the public Worker graph.
+// Full metadata stays in the source JSON and in per-video dynamic detail shards.
+import packedCatalog from "@/data/youtube-runtime-catalog.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
@@ -38,6 +39,67 @@ export type YouTubeMovieRecord = BaseYouTubeMovieRecord & {
 };
 
 type GeneratedRecord = Omit<BaseYouTubeMovieRecord, "source" | "internalHref">;
+
+type MovieRow = [
+  string, string, string | null, string, string[], number, string, number,
+  number, number | null, 0 | 1 | 2, number, string[] | null, string | null
+];
+type ReviewRow = [
+  string, string, string, string, string | null, string, number, string,
+  string | null, string | null
+];
+type PackedCatalog = {
+  version: number;
+  generatedAt: string | null;
+  pendingQualityCount: number;
+  reviewGeneratedAt: string | null;
+  channels: Array<[string, string | null, string | null]>;
+  checkDates: string[];
+  movies: MovieRow[];
+  reviews: ReviewRow[];
+};
+
+const packed = packedCatalog as unknown as PackedCatalog;
+if (packed.version !== 1) throw new Error("Unsupported YouTube listing catalog format.");
+
+const generatedData = {
+  generatedAt: packed.generatedAt,
+  pendingQualityCount: packed.pendingQualityCount,
+  movies: packed.movies.map((row): GeneratedRecord => {
+    const [videoId, title, rawTitle, synopsis, cast, channelIndex, publishedAt, year,
+      durationMinutes, viewCount, status, checkedIndex, featuredOverride, videoUrlOverride] = row;
+    const channel = packed.channels[channelIndex];
+    const lastChecked = packed.checkDates[checkedIndex];
+    if (!channel || !lastChecked) throw new Error("Invalid packed YouTube listing: " + videoId);
+    return {
+      videoId, title, rawTitle: rawTitle ?? title, synopsis, cast,
+      featuredCast: featuredOverride ?? cast.slice(0, 3),
+      channelName: channel[0],
+      ...(channel[1] == null ? {} : { channelId: channel[1] }),
+      ...(channel[2] == null ? {} : { channelUrl: channel[2] }),
+      publishedAt, year, durationMinutes,
+      ...(viewCount == null ? {} : { viewCount }),
+      ...(status === 0 ? {} : { metadataStatus: status === 1 ? "complete" as const : "cast-pending" as const }),
+      videoUrl: videoUrlOverride ?? "https://www.youtube.com/watch?v=" + videoId,
+      lastChecked,
+    };
+  }),
+};
+
+const reviewData = {
+  generatedAt: packed.reviewGeneratedAt,
+  candidates: packed.reviews.map((row) => {
+    const [videoId, rawTitle, title, channelName, channelUrl, publishedAt,
+      durationMinutes, reason, descriptionExcerpt, videoUrlOverride] = row;
+    return {
+      videoId, rawTitle, title, channelName,
+      ...(channelUrl == null ? {} : { channelUrl }),
+      publishedAt, durationMinutes, reason,
+      ...(descriptionExcerpt == null ? {} : { descriptionExcerpt }),
+      videoUrl: videoUrlOverride ?? "https://www.youtube.com/watch?v=" + videoId,
+    };
+  }),
+};
 
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
