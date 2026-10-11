@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { discoverableYouTubeMovies } from "@/lib/youtube-library";
-import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-pagination";
+import { queryYouTubeDirectory, youtubePublisherOptions } from "@/lib/youtube-directory-query";
 
 export async function generateMetadata({
   searchParams,
@@ -36,25 +36,11 @@ export default async function YouTubeMoviesPage({
     redirect("/entertainment/youtube/page/" + requestedPage);
   }
 
-  const publisherOptions = [...new Set(discoverableYouTubeMovies.map((movie) => movie.channelName))]
-    .sort((a, b) => a.localeCompare(b));
-
-  const filtered = discoverableYouTubeMovies
-    .filter((movie) => {
-      const searchable = [movie.title, movie.synopsis, ...movie.cast, movie.channelName].join(" ").toLowerCase();
-      return (!query || searchable.includes(query)) && (!channel || movie.channelName === channel);
-    })
-    .sort((a, b) => {
-      if (!query) return b.publishedAt.localeCompare(a.publishedAt);
-      const aTitle = a.title.toLowerCase();
-      const bTitle = b.title.toLowerCase();
-      const rank = (title: string) => title === query ? 3 : title.startsWith(query) ? 2 : title.includes(query) ? 1 : 0;
-      return rank(bTitle) - rank(aTitle) || b.publishedAt.localeCompare(a.publishedAt);
-    });
-
-  const pageCount = Math.max(1, Math.ceil(filtered.length / YOUTUBE_CATALOG_PAGE_SIZE));
-  const page = Math.min(requestedPage, pageCount);
-  const visible = filtered.slice((page - 1) * YOUTUBE_CATALOG_PAGE_SIZE, page * YOUTUBE_CATALOG_PAGE_SIZE);
+  const { movies: visible, page, pageCount } = queryYouTubeDirectory({
+    q: params.q,
+    channel: params.channel,
+    page: params.page,
+  });
 
   return (
     <>
@@ -92,7 +78,7 @@ export default async function YouTubeMoviesPage({
               <span>Publisher</span>
               <select name="channel" defaultValue={channel}>
                 <option value="">All publishers</option>
-                {publisherOptions.map((publisher) => (
+                {youtubePublisherOptions.map((publisher) => (
                   <option key={publisher} value={publisher}>{publisher}</option>
                 ))}
               </select>
