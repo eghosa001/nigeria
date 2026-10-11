@@ -15,6 +15,7 @@ const videoSnapshot = [
   { name: "OJISE", type: "Film trailer", detail: "A trailer ranked near the top. A trailer alone does not establish release or streaming availability." },
   { name: "Ayra Starr — Heaven Baby (feat. ZAYN)", type: "Music video", detail: "Appeared among the leading videos in the same Nigeria chart snapshot." },
   { name: "Akpan & Oduma: Love & Chaos", type: "Comedy teaser", detail: "The teaser appeared on the Nigeria video chart; check the publisher for episode or release information." },
+  { name: "RED RULES 2", type: "Nollywood trailer", detail: "Listed fifth in the Nigeria YouTube trending-video chart on 11 October; a trailer is not a verified full-film release." },
   { name: "Kizz Daniel — Owo Oluwa", type: "Music video", detail: "Featured among the listed trending Nigerian videos." },
 ];
 
@@ -57,7 +58,7 @@ export default function SocialTrendsPage() {
     name: "YouTube and social media trends in Nigeria — October 2026",
     description: "Source-checked Nigerian YouTube and social media discovery, with dated chart snapshots.",
     url,
-    dateModified: "2026-10-10",
+    dateModified: "2026-10-11",
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
@@ -77,7 +78,7 @@ export default function SocialTrendsPage() {
             { label: "Entertainment", href: "/entertainment" },
             { label: "YouTube & social trends" },
           ]} />
-          <span className="eyebrow">Nigeria · Sources checked 10 October 2026</span>
+          <span className="eyebrow">Nigeria · Sources checked 11 October 2026</span>
           <h1>YouTube and social media trends in Nigeria</h1>
           <p className="page-intro">
             See what Nigeria-focused video charts showed this week, discover music and film previews,
@@ -91,9 +92,9 @@ export default function SocialTrendsPage() {
           </p>
 
           <section className="top-gap" aria-labelledby="youtube-video-trends">
-            <span className="eyebrow">YouTube Nigeria · 10 October 2026 snapshot</span>
+            <span className="eyebrow">YouTube Nigeria · 11 October 2026 snapshot</span>
             <h2 id="youtube-video-trends">Videos drawing attention</h2>
-            <p>The following appeared in the Nigeria trending-video chart observed on 10 October.
+            <p>The following appeared in the Nigeria trending-video chart observed on 11 October.
               These are chart observations, not claims about all-time popularity or full-film availability.</p>
             <div className="home-category-grid compact-category-grid">
               {videoSnapshot.map((item) => (
