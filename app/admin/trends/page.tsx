@@ -7,6 +7,7 @@ import styles from "@/components/admin-trend-review-board.module.css";
 
 export const metadata: Metadata = {
   title: "Editorial Trend Radar",
+  description: "Private MyNigeriaGuide editorial dashboard for reviewing Nigeria Google Trends, news research, and source-verification leads across movies, services, tourism and jobs.",
   robots: { index: false, follow: false, nocache: true },
 };
 export const dynamic = "force-dynamic";
