@@ -30,8 +30,7 @@ function normalized(value: string) {
   return value.trim().toLowerCase();
 }
 
-function relevance(title: EntertainmentTitle, query: string) {
-  const q = normalized(query);
+function relevance(title: EntertainmentTitle, q: string) {
   if (!q) return 0;
   const name = normalized(title.title);
   const cast = normalized(title.cast.join(" "));
@@ -51,7 +50,7 @@ function relevance(title: EntertainmentTitle, query: string) {
 }
 
 export function queryEntertainmentDirectory(input: EntertainmentDirectoryQuery = {}): EntertainmentDirectoryResult {
-  const q = input.q?.trim() ?? "";
+  const q = normalized(input.q ?? "");
   const platform = input.platform ?? "all";
   const genre = input.genre?.trim() || "all";
   const sort = input.sort ?? "newest";

@@ -10,29 +10,35 @@ function normalise(value: string) {
     .trim();
 }
 
-function relevance(query: string, title: string, text: string) {
+function createRelevance(query: string) {
+  // Search spans several catalogs; compile the query once per request rather
+  // than repeating Unicode normalization and tokenization for every record.
   const q = normalise(query);
-  if (!q) return 0;
-
-  const titleText = normalise(title);
-  const haystack = normalise(title + " " + text);
   const tokens = q.split(/\s+/).filter(Boolean);
 
-  if (!tokens.every((token) => haystack.includes(token))) return 0;
+  return (title: string, text: string) => {
+    if (!q) return 0;
 
-  let score = 10;
-  if (titleText === q) score += 100;
-  else if (titleText.startsWith(q)) score += 55;
-  else if (titleText.includes(q)) score += 35;
-  if (haystack.includes(q)) score += 18;
+    const titleText = normalise(title);
+    const haystack = normalise(title + " " + text);
 
-  for (const token of tokens) {
-    if (titleText.split(" ").includes(token)) score += 10;
-    else if (titleText.includes(token)) score += 6;
-    else score += 2;
-  }
+    if (!tokens.every((token) => haystack.includes(token))) return 0;
 
-  return score;
+    let score = 10;
+    if (titleText === q) score += 100;
+    else if (titleText.startsWith(q)) score += 55;
+    else if (titleText.includes(q)) score += 35;
+    if (haystack.includes(q)) score += 18;
+
+    const titleWords = new Set(titleText.split(" "));
+    for (const token of tokens) {
+      if (titleWords.has(token)) score += 10;
+      else if (titleText.includes(token)) score += 6;
+      else score += 2;
+    }
+
+    return score;
+  };
 }
 
 /**
@@ -81,12 +87,12 @@ export async function searchGlobalCatalog(query: string) {
 
   const generatedYouTubeMovies = generatedYouTubeData.movies;
 
+  const relevance = createRelevance(query);
+
   const serviceResults = publicServiceListings
     .map((item) => ({
       item,
-      score: relevance(
-        query,
-        item.title,
+      score: relevance(item.title,
         [item.shortTitle, item.summary, item.category, item.agencySlug, item.searchTerms.join(" "), item.searchText].join(" "),
       ),
     }))
@@ -98,9 +104,7 @@ export async function searchGlobalCatalog(query: string) {
   const careerGuideResults = careerGuides
     .map((guide) => ({
       item: guide,
-      score: relevance(
-        query,
-        guide.title,
+      score: relevance(guide.title,
         [
           guide.description,
           guide.summary,
@@ -115,14 +119,19 @@ export async function searchGlobalCatalog(query: string) {
     .map((entry) => entry.item);
 
   const jobResults = jobOpportunities
-    .map((item) => ({
-      item,
-      score: relevance(
-        query,
-        item.title,
+    .map((item) => {
+      const matchScore = relevance(item.title,
         [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
-      ) + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4),
-    }))
+      );
+      // Availability boosts only matched results. Previously every open role
+      // scored +24 even for completely unrelated searches.
+      return {
+        item,
+        score: matchScore > 0
+          ? matchScore + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4)
+          : 0,
+      };
+    })
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
     .slice(0, 8)
@@ -131,9 +140,7 @@ export async function searchGlobalCatalog(query: string) {
   const exploreResults = exploreGuides
     .map((item) => ({
       item,
-      score: relevance(
-        query,
-        item.title,
+      score: relevance(item.title,
         [
           item.shortTitle,
           item.region,
@@ -152,9 +159,7 @@ export async function searchGlobalCatalog(query: string) {
   const placeResults = explorePlaces
     .map((item) => ({
       item,
-      score: relevance(
-        query,
-        item.name,
+      score: relevance(item.name,
         [item.kind, item.area, item.address, item.summary, item.cost, item.tags.join(" "), item.guideSlug].join(" "),
       ),
     }))
@@ -166,9 +171,7 @@ export async function searchGlobalCatalog(query: string) {
   const movieResults = entertainmentTitles
     .map((item) => ({
       item,
-      score: relevance(
-        query,
-        item.title,
+      score: relevance(item.title,
         [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.directors?.join(" ") ?? "", String(item.year)].join(" "),
       ),
     }))
@@ -180,9 +183,7 @@ export async function searchGlobalCatalog(query: string) {
   const seriesResults = seriesTitles
     .map((item) => ({
       item,
-      score: relevance(
-        query,
-        item.title,
+      score: relevance(item.title,
         [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.creators?.join(" ") ?? "", String(item.year)].join(" "),
       ),
     }))
@@ -194,7 +195,7 @@ export async function searchGlobalCatalog(query: string) {
   const peopleResults = entertainmentPeople
     .map((item) => ({
       item,
-      score: relevance(query, item.name, [item.roles.join(" "), item.summary].join(" ")),
+      score: relevance(item.name, [item.roles.join(" "), item.summary].join(" ")),
     }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
@@ -204,9 +205,7 @@ export async function searchGlobalCatalog(query: string) {
   const youtubeResults = generatedYouTubeMovies
     .map((item) => ({
       item,
-      score: relevance(
-        query,
-        item.title,
+      score: relevance(item.title,
         [item.synopsis, item.cast.join(" "), item.channelName, String(item.year)].join(" "),
       ),
     }))

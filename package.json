@@ -24,6 +24,7 @@
     "prebuild:next": "node scripts/write-deployment-info.mjs && tsx scripts/generate-static-sitemaps.ts && node --test tests/sitemap-ads-assets.test.mjs",
     "check:service-catalog": "tsx scripts/verify-service-migration.ts",
     "check:analytics-safety": "tsx scripts/check-analytics-safety.ts",
+    "audit:codebase": "node scripts/audit-codebase.mjs",
     "sync:youtube-entertainment": "node scripts/sync-youtube-entertainment.mjs",
     "check:entertainment-scale": "node --check scripts/sync-youtube-entertainment.mjs && node scripts/check-entertainment-scale.mjs && tsx scripts/check-entertainment-content.ts",
     "check:explore": "tsx scripts/check-explore-content.ts",
