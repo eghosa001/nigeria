@@ -43,5 +43,6 @@ test("four editorial discoveries link canonical routes while refusing fake live 
     "/services/ninauth-nin-verification"
   ]) assert.ok(trends.includes('href: "' + link + '"'), link);
   assert.match(trends, /not evidence of a particular post's impressions/);
-  assert.match(load("data/home-social-trends.ts"), /href: "\/jobs\/founder-dojo-imo-cohort-two-2026"/);
+  assert.match(load("app/jobs/page.tsx"), /\/jobs\/founder-dojo-imo-cohort-two-2026/);
+  assert.doesNotMatch(load("data/home-social-trends.ts"), /href: "\/jobs\/founder-dojo-imo-cohort-two-2026"/);
 });
