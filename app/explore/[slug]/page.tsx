@@ -32,6 +32,8 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "nigeria-landmarks-places-to-visit") return "Landmarks & Places to Visit in Nigeria " + year;
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
   if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Visitor Access";
+  if (guide.slug === "mambilla-plateau-guide") return "Mambilla Plateau Nigeria: Location, Gembu & Trip Tips";
+  if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Yobe Discovery, History & Visiting Guide";
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": " + getExplorePlacesForGuide(guide.slug).length + " Places to Visit & Things to Do (" + year + ")", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
@@ -40,6 +42,16 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 }
 
 const evergreenTripAnswers: Record<string, Array<{ question: string; answer: string }>> = {
+  "mambilla-plateau-guide": [
+    { question: "Where is the Mambilla Plateau in Nigeria?", answer: "Mambilla Plateau lies in Sardauna Local Government Area of Taraba State, near the Cameroon border. Gembu is the main highland town and a practical base for planning a visit." },
+    { question: "How do I plan a trip to Mambilla Plateau and Gembu?", answer: "Treat Mambilla as a multi-day highland trip rather than a quick stop. Confirm current access and security, the steep and winding road conditions, local transport, overnight accommodation and weather immediately before departure." },
+    { question: "Can I visit tea estates on Mambilla Plateau?", answer: "Tea-growing landscapes form part of the area's character, but access to farms, processing sites or private viewpoints is not automatically public. Arrange permission directly and avoid assuming opening hours or a universal entry charge." },
+  ],
+  "dufuna-canoe-heritage-guide": [
+    { question: "Where was the Dufuna Canoe discovered?", answer: "The Dufuna Canoe was discovered in Yobe State. It is an archaeological watercraft find, not a boat tour or publicly accessible canoe-launching site." },
+    { question: "How old is the Dufuna Canoe?", answer: "Nigeria's National Commission for Museums and Monuments identifies the Dufuna Canoe as an artefact more than 8,000 years old. Archaeological dating concerns the canoe, not a verified date for any modern public exhibition." },
+    { question: "Can tourists view the original Dufuna Canoe today?", answer: "Exhibition details and safe access must be checked with the relevant museum or heritage authority first. A recorded discovery location does not automatically confirm that the original object is currently on display, bookable or open to visitors." },
+  ],
   "kainji-dam-guide": [
     { question: "Where is Kainji Dam located in Nigeria?", answer: "Kainji Dam is on the River Niger near New Bussa, in Borgu Local Government Area of Niger State. It is different from Jebba Dam and from Kainji Lake National Park." },
     { question: "When was Kainji Dam built and how much power does it generate?", answer: "The Kainji hydropower plant was commissioned in 1968. Official records give 760 MW installed capacity, which is not a current live electricity-generation figure." },
