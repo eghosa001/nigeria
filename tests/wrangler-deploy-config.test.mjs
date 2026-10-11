@@ -42,6 +42,7 @@ test('production-only CI scope rejects unrelated files, config edits and cutover
     fs.writeFileSync(path.join(cwd, 'wrangler.jsonc'), JSON.stringify(source));
     const run = changed => spawnSync(process.execPath, [scope, changed], { cwd }).status;
     assert.equal(run('wrangler.jsonc\nscripts/youtube-d1-staging-runner.mjs'), 0);
+    assert.equal(run('.github/workflows/live-qa.yml\nscripts/youtube-d1-production-scope.mjs\ntests/wrangler-deploy-config.test.mjs'), 0);
     assert.notEqual(run('wrangler.jsonc\napp/layout.tsx'), 0);
     assert.notEqual(run(''), 0);
     fs.writeFileSync(path.join(cwd, 'wrangler.jsonc'), JSON.stringify({ ...source, name: 'other-worker' }));
