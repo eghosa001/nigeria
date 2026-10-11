@@ -9,7 +9,7 @@ import { indexableYouTubeMovies } from "../lib/youtube-library";
 import { exploreGuides } from "../lib/explore";
 import { explorePlaces } from "../lib/explore-places";
 import { jobOpportunities } from "../lib/jobs";
-import { getSitemapSections, SITEMAP_SHARD_SIZE } from "../lib/sitemap-sections";
+import { getSitemapEntries, getSitemapSections, SITEMAP_SHARD_SIZE } from "../lib/sitemap-sections";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const targets = JSON.parse(
@@ -63,10 +63,19 @@ const counts = {
   jobs_careers: jobOpportunities.length,
 };
 
-for (const [pillar, count] of Object.entries(counts)) {
+// A mapped place or imported video is a content record, not automatically an
+// indexable URL. Report the two dimensions separately to prevent SEO inflation.
+const indexedUrlCounts: Record<string, number> = {
+  movies_entertainment: getSitemapEntries("movies").length + getSitemapEntries("youtube").length,
+  services: getSitemapEntries("services").length,
+  tour_nigeria: getSitemapEntries("travel").length,
+  jobs_careers: getSitemapEntries("jobs").length,
+};
+
+for (const [pillar, count] of Object.entries(indexedUrlCounts)) {
   const target = targets.content_scale.pillar_url_targets[pillar];
   assert(typeof target === "number", "Missing scale target for " + pillar + ".");
-  assert(target >= count, "Scale target for " + pillar + " is below the current catalog size.");
+  assert(target >= count, "Scale target for " + pillar + " is below the current indexable URL count.");
 }
 
 const sitemapShards = getSitemapSections();
@@ -83,10 +92,11 @@ console.log("  Public URL target:", targets.content_scale.indexable_public_urls_
 console.log("  Content-record headroom:", targets.traffic_design.underlying_content_records_headroom.toLocaleString());
 console.log("  Database migration threshold:", targets.guardrails.catalog_records_before_database_required.toLocaleString(), "records/pillar");
 console.log("");
-for (const [pillar, count] of Object.entries(counts)) {
+for (const [pillar, count] of Object.entries(indexedUrlCounts)) {
   const target = targets.content_scale.pillar_url_targets[pillar];
   const percent = ((count / target) * 100).toFixed(2);
-  console.log(" ", pillar.padEnd(22), String(count).padStart(7), "/", String(target).padStart(7), "(" + percent + "%)");
+  console.log(" ", pillar.padEnd(22), String(count).padStart(7), "indexable URLs /", String(target).padStart(7), "(" + percent + "%)",
+    "·", counts[pillar as keyof typeof counts], "catalog records");
 }
 console.log("");
 console.log("  Sitemap shards:", sitemapShards.length, "· max", SITEMAP_SHARD_SIZE.toLocaleString(), "URLs/file");

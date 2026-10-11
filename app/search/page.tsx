@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { searchGlobalCatalog } from "@/lib/global-search";
+import { SearchResultsAnalytics } from "@/components/search-results-analytics";
+import { GlobalSearchForm } from "@/components/global-search-form";
 
 export const metadata: Metadata = {
   title: "Search MyNigeriaGuide",
@@ -16,10 +18,13 @@ function resultCountLabel(count: number) {
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string | string[] }>;
 }) {
   const params = await searchParams;
-  const query = (params.q ?? "").trim();
+  // Repeated/oversized query parameters must not crash rendering or cause
+  // unbounded cross-catalog scans on the public Workers route.
+  const raw = Array.isArray(params.q) ? params.q[0] : params.q;
+  const query = (raw ?? "").replace(/\s+/g, " ").trim().slice(0, 120);
 
   const {
     serviceResults,
@@ -36,6 +41,7 @@ export default async function SearchPage({
 
   return (
     <>
+      <SearchResultsAnalytics query={query} resultCount={totalShown} />
       <section className="global-search-hero">
         <div className="container global-search-hero-inner">
           <span className="eyebrow">Search MyNigeriaGuide</span>
@@ -44,20 +50,7 @@ export default async function SearchPage({
             You do not need to know which section something belongs in first. Search a task, employer, career path, city, attraction, actor, movie or publisher.
           </p>
 
-          <form className="global-search-form" method="get" action="/search">
-            <label htmlFor="global-search-input">What are you looking for?</label>
-            <div>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg>
-              <input
-                id="global-search-input"
-                name="q"
-                defaultValue={query}
-                placeholder="Try Customs, engineering, passport, Lagos, Aníkúlápó…"
-                autoComplete="off"
-              />
-              <button type="submit">Search</button>
-            </div>
-          </form>
+          <GlobalSearchForm initialQuery={query} />
 
           <div className="global-search-suggestions" aria-label="Popular searches">
             <span>Try</span>

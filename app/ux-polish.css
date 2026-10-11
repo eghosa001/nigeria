@@ -120,3 +120,52 @@ html[data-theme="dark"] .job-card-open .job-deadline,
 html[data-theme="dark"] .job-card-open .job-deadline strong {
   color: #f6d792 !important;
 }
+
+/* Canonical search shortcuts; restrained overlay, keyboard and touch friendly. */
+.global-search-form .global-search-field { position: relative; }
+.global-search-typeahead {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  display: grid;
+  gap: 1px;
+  max-height: min(55vh, 400px);
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 5px;
+  background: var(--theme-raised, var(--surface));
+  box-shadow: var(--shadow);
+}
+.global-search-form .global-search-suggestion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 650;
+  color: var(--ink);
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  cursor: pointer;
+}
+.global-search-form .global-search-suggestion small {
+  flex-shrink: 0;
+  color: var(--muted);
+  font-size: .75rem;
+}
+.global-search-form .global-search-suggestion:hover,
+.global-search-form .global-search-suggestion[aria-selected="true"] {
+  background: var(--theme-hover, var(--mint));
+  color: var(--ink);
+}
+.global-search-form .global-search-suggestion:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: -2px;
+}

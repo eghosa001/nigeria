@@ -77,40 +77,31 @@ Success is not reaching 100,000 URLs. Success is increasing the number of high-q
 12. **Keyword clusters, not keyword cloning.** Multiple keywords that mean the same thing should normally strengthen one canonical page.
 13. **Interlink at publication time.** A new indexable page should update relevant hubs/related pages so it enters an intentional topic graph instead of becoming an orphan.
 
-## Storage roadmap
+## Storage and publication decisions (trigger-based, not phased)
 
-### Phase A — current / first thousands
+The existing checked-in catalogs remain supported. Do not migrate records simply because a month, release number, or content quota has been reached. Determine the next architectural change from real growth, performance and correctness evidence.
 
-Use the existing checked-in verified datasets while keeping public URLs stable. Sitemaps are sharded automatically and the scale contract is enforced by a focused check.
+**When an existing catalog stresses the Worker bundle, memory or update workflow:** move the appropriate content type to the already-registered Cloudflare `CONTENT_DB`, using the prepared `cloudflare/d1/content-scale-schema.sql` where compatible. Verify current production schema first, then test the adapter with real representative records, preserve canonical paths, and provide rollback. One content type may move independently of another.
 
-### Phase B — 5,000 to 100,000+ records per growing catalog
+**When D1 holds approved indexable pages that are not in generated catalogs:** implement a sitemap publication path based on the authoritative D1 published state before making those pages public. The current build-time sitemap generator does not automatically discover every D1-only record.
 
-Move high-growth catalogs to Cloudflare D1 behind a repository/data-access boundary.
+**When real traffic or query data shows a bottleneck:** cache appropriate public responses, inspect D1 query plans, rows read and error rate, and move owned media to R2 when that actually reduces payload and operational costs. Split databases or add infrastructure only where observed contention justifies it.
 
-The prepared schema is at:
+**When editorial value or verified search demand is absent:** improve a useful canonical page instead of generating a new URL, regardless of how much unused architectural capacity exists.
 
-`cloudflare/d1/content-scale-schema.sql`
+## Scale readiness gates (not satisfied by a configuration target alone)
 
-It supports:
+The existing build generates static, sharded sitemap XML from checked-in or generated catalog adapters. The production D1 binding and YouTube runtime cutover do **not** automatically make newly published D1-only URLs discoverable through these files. Before any pillar publishes indexable content that exists only in D1, implement and verify a canonical sitemap publication path for that pillar (for example, a source-backed scheduled export and atomic static artifact publication). Never add draft, expired, duplicate, blocked or noncanonical records.
 
-- pillar/type/status fields;
-- stable canonical paths;
-- source and verification records;
-- publish/stale/expired lifecycle fields;
-- indexed common filters;
-- FTS5 full-text search.
+A pillar is ready to move its **public indexed corpus** to D1 only when the following checks pass on a small representative dataset:
 
-Do not create the production D1 binding with a guessed ID. Create the database in the owner's Cloudflare account, then bind it as `CONTENT_DB` and migrate one content type at a time.
+1. **Read parity:** public details, server-side HTML/metadata/schema, search, directory pagination and related links resolve the same canonical record and publication status. Existing URLs and redirects remain unchanged.
+2. **Crawl parity:** the sitemap exporter reads approved published records from the same authoritative publication source as the page renderer; generated XML retains accurate `lastmod`, unique canonicals and consistent shard/index membership.
+3. **Lifecycle parity:** edits, removals, expirations and corrections update page content and sitemap membership in an auditable cycle. Record-to-URL mapping must be explicit: **a tour place, employer, film or video record is not automatically an indexable page**.
+4. **Operational parity:** check D1 rows-read/query latency, Worker response size, cache invalidation, Worker error rates and mobile performance against representative realistic traffic before promoting a rollout. Prepare rollback to the last validated adapter without losing editorial state.
+5. **Measurement parity:** distinguish settled Search Console impressions/clicks from real-time GA4/PostHog usage. Never claim hourly Google-indexing updates or guaranteed traffic growth. Evaluate changes against stable 28-day cohorts and genuine user utility.
 
-### Phase C — high traffic
-
-At sustained high traffic:
-
-- cache read-heavy public pages at Cloudflare;
-- use D1 indexes and inspect rows-read/query latency;
-- move media to R2;
-- use scheduled/queued refresh jobs for jobs, releases, events and source verification;
-- split databases by workload only if measured D1 contention requires it.
+**Capacity is not validation:** 100,000 indexable URLs, 10 million monthly pageviews and 1 million underlying records are design ceilings, not current measured capacity. Do not claim these throughput levels are supported until a realistic load test and a D1-backed end-to-end crawl audit pass. Improve existing performing canonicals before allocating new URLs. Keep routine CI change-scoped; reserve representative load tests for migrations and measured scale bottlenecks.
 
 ## Sitemap model
 

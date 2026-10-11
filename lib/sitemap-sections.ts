@@ -79,7 +79,13 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
     return [
       ...staticPaths.map((path) => ({
         url: base + path,
-        lastModified: path === "/latest" ? latestHubModified : path === "/updates" ? updateModified : serviceModified,
+        // A service update does not mean that static legal or editorial pages changed.
+        // Empty means "unknown": the sitemap generator omits <lastmod> instead of
+        // inventing freshness. The homepage reflects updates across all four pillars.
+        lastModified: path === "" || path === "/latest" ? latestHubModified
+          : path === "/updates" ? updateModified
+          : ["/fees", "/assistant", "/official-portals", "/offices", "/locations"].includes(path) ? serviceModified
+          : "",
       })),
       ...categories.map((category) => ({
         url: base + "/categories/" + categorySlug(category.name),

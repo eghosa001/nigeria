@@ -46,6 +46,18 @@ export function initializePostHog(pathname = window.location.pathname) {
         ) {
           return null;
         }
+        // PostHog can attach the page URL to automatic and custom events.
+        // Strip site-search terms from URL-bearing properties before dispatch.
+        for (const key of ["$current_url", "$referrer", "$session_entry_url"]) {
+          const raw = properties[key];
+          if (typeof raw !== "string") continue;
+          try {
+            const url = new URL(raw, window.location.origin);
+            if (url.origin === window.location.origin && url.pathname === "/search") {
+              properties[key] = url.origin + url.pathname;
+            }
+          } catch {}
+        }
         return event;
       },
     });
@@ -61,7 +73,7 @@ export function capturePostHogPageView(pathname: string) {
   if (state.__mngPostHogLastTrackedPath === pathname) return;
 
   posthog.capture("$pageview", {
-    $current_url: window.location.href,
+    $current_url: pathname === "/search" ? window.location.origin + pathname : window.location.href,
     $pathname: pathname,
     $host: window.location.host,
     page_title: document.title,

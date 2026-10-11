@@ -15,6 +15,11 @@ test("canonical static sitemap index and shards are generated before build", () 
   assert.match(a, /https:\/\/mynigeriaguide\.com\/sitemaps\/youtube\.xml/);
   assert.doesNotMatch(a, /workers\.dev|localhost/);
 
+  const core = read("sitemaps/core.xml");
+  assert.ok(core.includes("<url><loc>https://mynigeriaguide.com/privacy</loc></url>"));
+  assert.ok(core.includes("<url><loc>https://mynigeriaguide.com/terms</loc></url>"));
+  assert.ok(core.includes("<url><loc>https://mynigeriaguide.com</loc><lastmod>"));
+
   for (const name of readdirSync(resolve("public/sitemaps")).filter((name) => name.endsWith(".xml"))) {
     const xml = read("sitemaps/" + name);
     assert.match(xml, /<urlset /, name);

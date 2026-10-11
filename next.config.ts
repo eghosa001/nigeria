@@ -77,6 +77,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        // Preserve the established indexed Kainji Dam guide and consolidate
+        // the newer same-intent URL without creating two sitemap canonicals.
+        source: "/explore/kainji-dam",
+        destination: "/explore/kainji-dam-guide",
+        permanent: true,
+      },
+      {
         source: "/entertainment/movies/third-party-risk-2026",
         destination: "/entertainment/movies/third-party-risk",
         permanent: true,

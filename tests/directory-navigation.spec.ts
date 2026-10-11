@@ -68,3 +68,19 @@ test("decluttered landing pages do not overflow on a phone", async ({ page }) =>
     expect(widths.content, path + " should not overflow horizontally").toBeLessThanOrEqual(widths.viewport + 1);
   }
 });
+
+test("sitewide autocomplete selects existing canonical guides with keyboard", async ({ page }) => {
+  await page.goto("/search");
+  const input = page.getByRole("combobox", { name: "What are you looking for?" });
+  await input.fill("passport");
+  await expect(page.getByRole("option", { name: /Nigerian passport/i })).toBeVisible();
+  await input.press("ArrowDown");
+  await input.press("Enter");
+  await expect(page).toHaveURL(new RegExp("/topics/nigerian-passport$"));
+});
+
+test("consolidated Kainji Dam URL redirects to the indexed canonical", async ({ request }) => {
+  const response = await request.get("/explore/kainji-dam", { maxRedirects: 0 });
+  expect([301, 308]).toContain(response.status());
+  expect(response.headers()["location"]).toContain("/explore/kainji-dam-guide");
+});

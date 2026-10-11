@@ -20,6 +20,16 @@ for (const guide of exploreGuides) {
   if (places.length < 3) errors.push(`${guide.slug}: expected at least 3 mapped places, found ${places.length}`);
 }
 
+// Search Console already has impressions for the older URL. Keep one
+// Kainji Dam canonical, with the richer location/history material retained.
+const kainji = exploreGuides.filter((guide) => /^(kainji-dam|kainji-dam-guide)$/.test(guide.slug));
+if (kainji.length !== 1 || kainji[0]?.slug !== "kainji-dam-guide") {
+  errors.push("Kainji Dam must have one canonical at /explore/kainji-dam-guide");
+}
+if (!kainji[0]?.intro.some((paragraph) => paragraph.includes("1968"))) {
+  errors.push("Kainji Dam canonical lost its verified engineering-history details");
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);

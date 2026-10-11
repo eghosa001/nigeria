@@ -9691,65 +9691,6 @@ export const exploreGuides: ExploreGuide[] = [
     "lastReviewed": "2026-10-05"
   },
   {
-    "slug": "kainji-dam-guide",
-    "title": "Kainji Dam Guide: Engineering Landmark & Access Planning",
-    "shortTitle": "Kainji Dam",
-    "kind": "destination",
-    "region": "Niger State",
-    "summary": "Plan a Kainji Dam visit as an engineering-and-landscape stop while treating the power complex as working infrastructure with restricted areas.",
-    "intro": [
-      "Kainji Dam is a major Nigerian engineering landmark and supports a distinct infrastructure-and-geography search intent beyond the national park.",
-      "The dam is operational infrastructure, so public viewing must stay within approved areas and current security instructions."
-    ],
-    "bestFor": [
-      "Engineering",
-      "Landscapes",
-      "Kainji",
-      "Road trips"
-    ],
-    "highlights": [
-      {
-        "name": "Major dam complex",
-        "detail": "The scale of the structure and reservoir is the central visitor interest."
-      },
-      {
-        "name": "Working infrastructure",
-        "detail": "Operational areas take priority over tourism access."
-      },
-      {
-        "name": "National park context",
-        "detail": "Kainji Lake National Park provides a separate protected-nature experience."
-      },
-      {
-        "name": "Reservoir landscape",
-        "detail": "Public viewpoints can add geographic context without entering restricted zones."
-      }
-    ],
-    "planning": [
-      {
-        "label": "Respect restricted areas",
-        "detail": "Do not cross barriers or security instructions."
-      },
-      {
-        "label": "Confirm public viewpoints",
-        "detail": "Ask where visitors may stop legally and safely."
-      },
-      {
-        "label": "Travel in daylight",
-        "detail": "Use conservative road timing."
-      },
-      {
-        "label": "Do not assume tours",
-        "detail": "Only enter operational facilities when officially permitted."
-      }
-    ],
-    "source": {
-      "label": "Nigeria Park Service — Kainji Lake National Park brochure",
-      "href": "https://nigeriaparkservice.gov.ng/blog/2023/11/17/nigeria-national-parks-service-brochure/"
-    },
-    "lastReviewed": "2026-10-05"
-  },
-  {
     "slug": "shagunu-beach-guide",
     "title": "Shagunu Beach Kainji Guide: Lakeshore & Safety Planning",
     "shortTitle": "Shagunu Beach",

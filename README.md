@@ -32,6 +32,10 @@ MyNigeriaGuide turns official government information into clear, source-linked g
 - Privacy, terms, editorial, corrections and contact pages
 - Favicon/social preview assets; the AdSense loader is withheld from `/admin` and automated browsers
 
+## Search and SEO execution
+
+The [SEO execution plan](docs/SEO_GROWTH_EXECUTION.md) uses verified demand, technical findings and editorial readiness rather than scheduled publishing waves or monthly traffic promises. Reuse established canonical pages and review the [scaling safeguards](docs/SCALING.md) before indexing D1-only content.
+
 ## Scale path
 
 MyNigeriaGuide still runs from checked-in verified content at the current catalog size, but the repository is now explicitly designed for the Million-Search Expansion.

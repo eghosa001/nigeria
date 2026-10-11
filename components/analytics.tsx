@@ -34,10 +34,33 @@ export function Analytics() {
     if (analyticsWindow.__mngLastTrackedPath !== pathname) {
       gtag("event", "page_view", {
         page_path: pathname,
-        page_location: window.location.href,
+        page_location: pathname === "/search" ? window.location.origin + pathname : window.location.href,
         page_title: document.title,
       });
       analyticsWindow.__mngLastTrackedPath = pathname;
+    }
+
+    // Search interactions are aggregated without transmitting the typed query,
+    // names, or full result URLs to GA4/PostHog.
+    let searchStarted = false;
+    function onSearchFocus(event: FocusEvent) {
+      if (searchStarted || !(event.target instanceof HTMLInputElement)) return;
+      if (event.target.id !== "global-search-input") return;
+      searchStarted = true;
+      trackEvent("search_started", { search_area: "sitewide" });
+    }
+
+    function onSearchSubmit(event: SubmitEvent) {
+      if (!(event.target instanceof HTMLFormElement)) return;
+      if (!event.target.matches(".global-search-form")) return;
+      const input = event.target.elements.namedItem("q");
+      if (!(input instanceof HTMLInputElement)) return;
+      const queryLength = input.value.trim().length;
+      if (!queryLength) return;
+      trackEvent("search_submitted", {
+        search_area: "sitewide",
+        query_length_band: queryLength <= 4 ? "1-4" : queryLength <= 12 ? "5-12" : "13+",
+      });
     }
 
     function onClick(event: MouseEvent) {
@@ -45,6 +68,22 @@ export function Analytics() {
       if (!(target instanceof Element)) return;
       const anchor = target.closest("a");
       if (!(anchor instanceof HTMLAnchorElement)) return;
+
+      if (pathname === "/search" && anchor.closest(".global-search-suggestions")) {
+        trackEvent("suggestion_selected", { search_area: "sitewide", suggestion_type: "curated" });
+      }
+      if (pathname === "/search" && anchor.closest(".global-search-list")) {
+        const resultType = anchor.closest(".global-search-group")
+          ?.querySelector(".global-search-group-heading span")?.textContent?.trim() || "other";
+        const destination = new URL(anchor.href, window.location.origin);
+        if (destination.origin === window.location.origin) {
+          trackEvent("result_clicked", {
+            search_area: "sitewide",
+            result_type: resultType.slice(0, 48),
+            destination_pillar: destination.pathname.split("/")[1] || "home",
+          });
+        }
+      }
 
       // One lightweight event measures whether related-content discovery creates a next page visit.
       // It is not a key event: reading more pages should not inflate conversion totals.
@@ -83,8 +122,12 @@ export function Analytics() {
     }
 
     document.addEventListener("click", onClick);
+    document.addEventListener("focusin", onSearchFocus);
+    document.addEventListener("submit", onSearchSubmit);
     return () => {
       document.removeEventListener("click", onClick);
+      document.removeEventListener("focusin", onSearchFocus);
+      document.removeEventListener("submit", onSearchSubmit);
     };
   }, [id, pathname]);
 
