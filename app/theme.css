@@ -254,9 +254,7 @@ html[data-theme="dark"] :where(
   .movie-watch-options article,
   .movie-trailer-card,
   .service-context-grid article,
-  .detailed-step-grid > div,
-  .route-wizard,
-  .route-wizard-grid button
+  .detailed-step-grid > div
 ) {
   background: var(--theme-raised) !important;
   border-color: var(--line) !important;
@@ -744,12 +742,6 @@ html[data-theme="dark"] :where(
 ) {
   background: #172c45 !important;
   color: #a9c8f2 !important;
-}
-
-html[data-theme="dark"] .route-wizard-options a:hover {
-  background: var(--theme-hover) !important;
-  border-color: #3d5f50 !important;
-  color: var(--ink) !important;
 }
 
 

@@ -53,7 +53,7 @@ export async function generateMetadata({
   );
 
   return {
-    title: "Nollywood Movies: Classics, Genres & Where to Watch",
+    title: "Nollywood Movies: Genres & Where to Watch",
     description: "Explore Nollywood by comedy, family drama, Yoruba-language movies, established films and legal Netflix or YouTube links. Browse casts and verify playback.",
     alternates: { canonical: "/entertainment/movies" },
     robots: filtered ? { index: false, follow: true } : undefined,
