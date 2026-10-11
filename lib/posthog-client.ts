@@ -61,7 +61,7 @@ export function capturePostHogPageView(pathname: string) {
   if (state.__mngPostHogLastTrackedPath === pathname) return;
 
   posthog.capture("$pageview", {
-    $current_url: window.location.href,
+    $current_url: pathname === "/search" ? window.location.origin + pathname : window.location.href,
     $pathname: pathname,
     $host: window.location.host,
     page_title: document.title,
