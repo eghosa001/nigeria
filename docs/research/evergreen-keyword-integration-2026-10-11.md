@@ -16,3 +16,15 @@ Evidence baseline: `docs/research/google-autocomplete-evergreen-2026-10-09.json`
 
 ## Follow-up evidence needed
 Refresh keyword suggestions from the scheduled Google job; pair candidate terms with settled Search Console query/page data and on-site search-no-result events before promoting more intents. Monitor official travel access and changing legal/fees/status facts. Avoid asserting that any keyword grew impressions or CTR until measured.
+
+## Settled Search Console priorities (additional evidence)
+
+GSC Wizard connected domain property `sc-domain:mynigeriaguide.com`; ClickHouse source; actual query/page pairs for 11 September–8 October 2026, with **settledThrough=2026-10-08**. This is the latest available **settled** observation at this inspection, not real-time metrics and not an attribution of any subsequent improvement.
+
+- `oversabi aunty cast` → existing `/entertainment/movies/oversabi-aunty`: **919 impressions, 6 clicks, 0.65% CTR, position 10.08**. Expanded already-verified featured cast, made location-specific watch unavailability immediately visible, and adjusted title/meta description without adding invented full-movie links. Other observed query intents for the same URL: `oversabi aunty nigerian movie` (369 impressions, 6 clicks) and `oversabi aunty where to watch` (245 impressions, 5 clicks).
+- `kainji dam` → `/explore/kainji-dam-guide`: **96 impressions, zero clicks, position 7.83**. Existing guide already distinguishes power station from park and warns about controlled visitor access; exposed its canonical guide more directly in autocomplete without inventing an admission price.
+- `cac registration` → two pre-existing company/business-name pages: **90 combined impressions, zero clicks**. Keep separate legal-intent canonicals, navigate via `/topics/cac-business`; do not invent a third registration page.
+- `nin share code` → `/services/ninauth-nin-verification`: **25 impressions, one click**. Curated specific NINAuth suggestion leading to existing guide.
+- `how to get asin number anambra state` → `/services/anambra-asin-registration`: **38 impressions, one click**. Curated relevant existing guide.
+
+Search Console numbers are historical observations, **not** Google Autocomplete popularity measurements. New search suggestions are resolved locally against known routes without third-party runtime calls. Evaluate change impact only after indexing and a settled post-merge reporting window; avoid claiming higher rankings/CTR now.

@@ -2440,7 +2440,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     languages: ["English"],
     synopsis: "A self-righteous church usher is determined to solve everyone else's problems, but her interventions begin to destabilise her own family as her daughter's wedding approaches.",
     cast: ["Toyin Abraham", "Mike Ezuruonye", "Enioluwa Adeoluwa", "Jemima Osunde", "Tana Adelana", "Ngozi Ezeonu", "Efe Irele", "Toyin Afolayan", "Bianca Ugowanne"],
-    featuredCast: ["Toyin Abraham", "Mike Ezuruonye", "Enioluwa Adeoluwa"],
+    featuredCast: ["Toyin Abraham", "Mike Ezuruonye", "Enioluwa Adeoluwa", "Jemima Osunde", "Tana Adelana"],
     directors: ["Toyin Abraham"],
     runtimeMinutes: 127,
     featured: true,

@@ -58,9 +58,16 @@ const destinations = [
   { label: "Nigerian movies on Prime Video", href: "/entertainment/platforms/prime-video", pillar: "Movies", aliases: "yoruba movies to watch on prime video nigerian films" },
   { label: "Cinema releases in Nigeria", href: "/entertainment/cinemas", pillar: "Movies", aliases: "nigerian movies in cinema now cinema releases film showtimes" },
   { label: "Nollywood comedy movies", href: "/entertainment/movies?q=comedy", pillar: "Movies", aliases: "best nigerian comedy movies of all time nollywood comedy movies" },
-  { label: "Classic Nollywood movies", href: "/entertainment/movies?q=classic", pillar: "Movies", aliases: "old nollywood movies 1990 2000 to 2010 classic nollywood movies" },
+  { label: "Older Nollywood films", href: "/entertainment/movies?sort=oldest", pillar: "Movies", aliases: "old nollywood movies 1990 2000 to 2010 classic nollywood movies" },
   { label: "Yoruba-language movies", href: "/entertainment/movies?q=yoruba", pillar: "Movies", aliases: "yoruba movies to watch nigeria yoruba film" },
   { label: "Family Nollywood movies", href: "/entertainment/movies?q=family", pillar: "Movies", aliases: "family friendly nollywood movies family nollywood movies on youtube" },
+  // Settled Search Console query/page pairs through 2026-10-08,
+  // distinct from Google Autocomplete suggestions and not live data.
+  { label: "Oversabi Aunty cast and watch status", href: "/entertainment/movies/oversabi-aunty", pillar: "Movies", aliases: "oversabi aunty movie 2025 cast full names where to watch netflix" },
+  { label: "Kainji Dam location and visitor access", href: "/explore/kainji-dam-guide", pillar: "Tour", aliases: "kainji dam niger state new bussa hydropower visitor" },
+  { label: "NIN share code verification", href: "/services/ninauth-nin-verification", pillar: "Services", aliases: "nin share code ninauth nigeria how to get nin share code" },
+  { label: "Anambra ASIN registration", href: "/services/anambra-asin-registration", pillar: "Services", aliases: "asin registration how to get asin number anambra state online" },
+  { label: "Track a Nigerian passport", href: "/services/passport-application-tracking", pillar: "Services", aliases: "nigerian passport status track passport application online" },
 ] as const;
 
 function normalise(value: string) {
