@@ -25,9 +25,17 @@ await mkdir(shardRoot, { recursive: true });
 const sitemapFiles = new Set<string>();
 const index: Array<{ url: string; lastModified: string }> = [];
 let totalURLs = 0;
+const canonicalOwners = new Map<string, string>();
 
 for (const section of sitemapSectionNames) {
   const entries = getSitemapEntries(section);
+  for (const entry of entries) {
+    const previous = canonicalOwners.get(entry.url);
+    if (previous) {
+      throw new Error("Duplicate sitemap canonical URL in " + previous + " and " + section + ": " + entry.url);
+    }
+    canonicalOwners.set(entry.url, section);
+  }
   for (let start = 0; start < entries.length; start += SITEMAP_SHARD_SIZE) {
     const shard = Math.floor(start / SITEMAP_SHARD_SIZE) + 1;
     const name = shard === 1 ? section : section + "-" + shard;
