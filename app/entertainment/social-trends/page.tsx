@@ -63,7 +63,7 @@ const nigeriaSocialSignals = [
   {
     platform: "X · Nigeria timeline · 11 October 2026",
     title: "#LeadwayLifestyleFair appeared on the Nigeria timeline",
-    detail: "The name appeared in the late-morning Nigeria snapshot; the X trend alone does not establish its venue, programme or ticket status. Check organisers directly before travelling.",
+    detail: "A third-party Nigeria X timeline recorded the hashtag. Separately, the organiser confirms Leadway Lifestyle Fair in Victoria Island, Lagos on 24–25 October, with a venue listed at SystemSpecs HQ on the organiser-labelled booking page. That evidence verifies the event, not the hashtag\'s engagement or ranking throughout the day.",
     sourceLabel: "Trends24 Nigeria timeline",
     sourceUrl: "https://trends24.in/nigeria/",
     internalHref: "/explore/events",
@@ -93,6 +93,18 @@ const nigeriaSocialSignals = [
  * These are editorial follow-ups; DO NOT label them nationwide trending hashtags.
  */
 const verifiedWebDiscovery = [
+  {
+    pillar: "Tour Nigeria",
+    label: "Lagos events · published 11 October",
+    pillar: "Tour Nigeria",
+    label: "X lead · organiser verified 11 October",
+    title: "Leadway Lifestyle Fair: Lagos visit on 24–25 October",
+    detail: "The #LeadwayLifestyleFair discussion led to an organiser check: Leadway's own website confirms the dates and Victoria Island area. SME exhibitor registration has closed; visitors should check the official attendance link before travel.",
+    source: "Leadway Group — official event notice",
+    url: "https://www.leadway.com/leadway-media-dash/",
+    href: "/explore/events",
+    linkLabel: "Event and venue guidance",
+  },
   {
     pillar: "Tour Nigeria",
     label: "Lagos events · published 11 October",
