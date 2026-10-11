@@ -63,7 +63,7 @@ const nigeriaSocialSignals = [
   {
     platform: "X · Nigeria timeline · 11 October 2026",
     title: "#LeadwayLifestyleFair appeared on the Nigeria timeline",
-    detail: "The name appeared in the late-morning Nigeria snapshot; the X trend alone does not establish its venue, programme or ticket status. Check organisers directly before travelling.",
+    detail: "A third-party Nigeria X timeline recorded the hashtag. Separately, the organiser confirms Leadway Lifestyle Fair in Victoria Island, Lagos on 24–25 October, with a venue listed at SystemSpecs HQ on the organiser-labelled booking page. That evidence verifies the event, not the hashtag\'s engagement or ranking throughout the day.",
     sourceLabel: "Trends24 Nigeria timeline",
     sourceUrl: "https://trends24.in/nigeria/",
     internalHref: "/explore/events",
@@ -86,6 +86,62 @@ const nigeriaSocialSignals = [
     sourceUrl: "https://ynaija.com/top-10-trending-sounds-from-tiktok-and-instagram/",
     internalHref: "/entertainment",
     internalLabel: "Explore Nigerian entertainment",
+  },
+];
+
+/** A lead must have a dated, reachable underlying report or first-party source.
+ * These are editorial follow-ups; DO NOT label them nationwide trending hashtags.
+ */
+const verifiedWebDiscovery = [
+  {
+    pillar: "Tour Nigeria",
+    label: "X lead · organiser verified 11 October",
+    title: "Leadway Lifestyle Fair: Lagos visit on 24–25 October",
+    detail: "The #LeadwayLifestyleFair discussion led to an organiser check: Leadway's own website confirms the dates and Victoria Island area. SME exhibitor registration has closed; visitors should check the official attendance link before travel.",
+    source: "Leadway Group — official event notice",
+    url: "https://www.leadway.com/leadway-media-dash/",
+    href: "/explore/events",
+    linkLabel: "Event and venue guidance",
+  },
+  {
+    pillar: "Tour Nigeria",
+    label: "Lagos events · published 11 October",
+    title: "International chess festival announced for October 2027",
+    detail: "Tunde Onakoya announced plans for a Lagos chess and culture festival. The exact days, venue and ticketing are not confirmed. This is an early tourism lead, not a bookable 2026 event.",
+    source: "TheCable — launch coverage",
+    url: "https://lifestyle.thecable.ng/tunde-onakoya-launches-lagos-international-chess-festival/",
+    href: "/explore/events",
+    linkLabel: "Festival calendar and planning",
+  },
+  {
+    pillar: "Jobs & Careers",
+    label: "Founder programme · checked 11 October",
+    title: "Free Founder Dojo Imo Cohort 2 is accepting applications",
+    detail: "The official Imo Digital City page lists 19 October for first consideration and Monday 2 November as the final deadline. This is founder training, NOT a salaried job or promised startup funding.",
+    source: "Imo Digital City — official Cohort 2 notice",
+    url: "https://www.imodigitalcity.com/founder-dojo/cohort-2",
+    href: "/jobs/founder-dojo-imo-cohort-two-2026",
+    linkLabel: "Eligibility and application guide",
+  },
+  {
+    pillar: "Movies & Entertainment",
+    label: "Lagos music · published 10 October",
+    title: "Felabration line-up confirmed for the New Afrika Shrine",
+    detail: "The broadcaster names Femi, Made and Seun Kuti, plus other performers, among the advertised main-festival acts. The separate Freedom Park Underground System programme has different entry terms and should not be confused with the Shrine.",
+    source: "Voice of Nigeria — 2026 Felabration coverage",
+    url: "https://von.gov.ng/lagos-hosts-felabration-2026-october-12-18/",
+    href: "/explore/felabration-2026",
+    linkLabel: "Compare both Lagos venues",
+  },
+  {
+    pillar: "Services",
+    label: "Identity guidance · checked 11 October",
+    title: "NINAuth Share Codes are not the same as USSD NIN retrieval",
+    detail: "The official NINAuth service documents identity-verification consent and sharing. Do not mistake a viral instruction to dial *346# for generating a NINAuth Share Code.",
+    source: "NIMC NINAuth — official instructions",
+    url: "https://ninauth.nimc.gov.ng/get-started",
+    href: "/services/ninauth-nin-verification",
+    linkLabel: "Correct NIN verification steps",
   },
 ];
 
@@ -249,6 +305,30 @@ export default function SocialTrendsPage() {
               <Link href="/jobs/guides/job-scam-red-flags-nigeria">Check suspicious creator and job offers</Link>
             </div>
             <p><a href="https://smfest.org/" target="_blank" rel="noopener noreferrer">Confirm the live SMFest programme with the organiser ↗</a></p>
+          </section>
+
+          <section className="top-gap" aria-labelledby="nigeria-trend-editorial">
+            <span className="eyebrow">Free web research · Source-checked 11 October 2026</span>
+            <h2 id="nigeria-trend-editorial">Stories worth checking across all four pillars</h2>
+            <p>
+              We use independent search discovery to find potential Nigerian stories, then verify them
+              against original organisers, public institutions or identified publishers before updating
+              an existing guide. These items are <strong>not</strong> a live X, Facebook or TikTok chart,
+              and appearing in a news search is not evidence of a particular post's impressions.
+            </p>
+            <div className="home-category-grid compact-category-grid">
+              {verifiedWebDiscovery.map((item) => (
+                <article className="home-category-card" key={item.title}>
+                  <span>{item.pillar} · {item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                  <div className="minimal-inline-links">
+                    <Link href={item.href}>{item.linkLabel} →</Link>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">{item.source} ↗</a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </section>
 
           <section className="top-gap" aria-labelledby="beyond-trends">

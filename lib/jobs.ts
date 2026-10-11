@@ -1,3 +1,4 @@
+import { founderDojoImoCohortTwo } from "@/lib/job-founder-dojo-imo-2026-10-11";
 import { octoberVerifiedProgrammes } from "@/lib/job-social-trends-2026-10-10";
 import { armySSCC2027 } from "@/lib/job-trend-army-sscc-2027";
 import { jobGrowthWave10 } from "@/lib/job-growth-wave-10";
@@ -120,6 +121,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...founderDojoImoCohortTwo,
   ...armySSCC2027,
   ...octoberVerifiedProgrammes,
   ...verifiedTrendProgrammes,
