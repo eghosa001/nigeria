@@ -99,8 +99,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty (2025) Cast Names & Streaming Status",
-    description: "Oversabi Aunty cast: Toyin Abraham, Mike Ezuruonye, Enioluwa Adeoluwa and Jemima Osunde. See the story, official trailer and verified watch-status notes.",
+    title: "Oversabi Aunty Cast (2025) & Where to Watch",
+    description: "Oversabi Aunty cast includes Toyin Abraham, Mike Ezuruonye, Jemima Osunde, Enioluwa Adeoluwa and Tana Adelana. Netflix Nigeria availability was not confirmed on 9 October 2026; see the FilmOne trailer and viewing-status update.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.
@@ -372,6 +372,11 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 </p>
               ) : null}
               <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
+              {title.slug === "oversabi-aunty" ? (
+                <p className="movie-long-summary">
+                  <strong>Where to watch:</strong> A Netflix Nigeria title listing exists, but its 9 October 2026 check did not confirm streaming access in Nigeria. The FilmOne link is a trailer, not a full movie. <a href="#watch">See verified viewing notes and sources ↓</a>
+                </p>
+              ) : null}
 
               <div className="movie-detail-genres">
                 {title.genres.map((genre) => <span key={genre}>{genre}</span>)}
