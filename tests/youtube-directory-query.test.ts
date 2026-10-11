@@ -4,8 +4,10 @@ import { discoverableYouTubeMovies } from "@/lib/youtube-library";
 import { YOUTUBE_CATALOG_PAGE_SIZE } from "@/lib/youtube-config";
 import { queryYouTubeDirectory, youtubePublisherOptions } from "@/lib/youtube-directory-query";
 
-function legacyQuery(q = "", channel = "", requestedPage = 1) {
+function legacyQuery(q = "", channelInput = "", requestedPage = 1) {
   const query = q.trim().toLowerCase();
+  // The original page trims publisher query parameters before filtering.
+  const channel = channelInput.trim();
   const filtered = discoverableYouTubeMovies
     .filter((movie) => {
       const searchable = [movie.title, movie.synopsis, ...movie.cast, movie.channelName].join(" ").toLowerCase();
