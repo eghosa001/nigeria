@@ -5,28 +5,6 @@ import type { ExplorePlace } from "@/lib/explore-places";
  */
 export const cityGrowthPlaces20261011: ExplorePlace[] = [
   {
-    "slug": "freedom-park-lagos",
-    "guideSlug": "lagos",
-    "name": "Freedom Park Lagos",
-    "kind": "attraction",
-    "area": "Lagos Island",
-    "address": "Freedom Park, Hospital Road, Lagos Island, Lagos, Nigeria",
-    "summary": "Former colonial prison grounds now used for heritage, gardens, theatre and live performance. Check the event calendar separately from ordinary visiting.",
-    "cost": "Confirm current ticket/entry and any guide charges before visiting",
-    "hours": "Confirm access, opening hours and event changes with the venue before travel.",
-    "mapQuery": "Freedom Park Lagos Lagos Island Nigeria",
-    "source": {
-      "label": "Freedom Park Lagos — official visitor guide",
-      "href": "https://freedomparklagos.com/index.php"
-    },
-    "checkedAt": "2026-10-11",
-    "tags": [
-      "lagos",
-      "attraction",
-      "verified visitor source"
-    ]
-  },
-  {
     "slug": "terra-kulture-victoria-island",
     "guideSlug": "lagos",
     "name": "Terra Kulture Arts Centre",
@@ -177,50 +155,6 @@ export const cityGrowthPlaces20261011: ExplorePlace[] = [
     "tags": [
       "abuja",
       "attraction",
-      "verified visitor source"
-    ]
-  },
-  {
-    "slug": "abuja-arts-crafts-village",
-    "guideSlug": "abuja",
-    "name": "Abuja Arts and Crafts Village",
-    "kind": "shopping",
-    "area": "Central Business District",
-    "address": "Arts and Crafts Village, Central Business District, Abuja, Nigeria",
-    "summary": "Market-style arts and crafts stops offering textiles, carvings, paintings and souvenirs. Compare prices and ask permission before photography.",
-    "cost": "Confirm current ticket/entry and any guide charges before visiting",
-    "hours": "Confirm access, opening hours and event changes with the venue before travel.",
-    "mapQuery": "Abuja Arts and Crafts Village Central Business District Nigeria",
-    "source": {
-      "label": "Visit Abuja — first 48 hours",
-      "href": "https://www.visitabuja.org/first-48-hours-in-abuja/"
-    },
-    "checkedAt": "2026-10-11",
-    "tags": [
-      "abuja",
-      "shopping",
-      "verified visitor source"
-    ]
-  },
-  {
-    "slug": "jabi-lake-abuja",
-    "guideSlug": "abuja",
-    "name": "Jabi Lake",
-    "kind": "nature",
-    "area": "Jabi",
-    "address": "Jabi Lake, Jabi District, Abuja, Nigeria",
-    "summary": "Lakeside walking, dining and independently operated boat activities. Confirm weather, operator safety and life jackets before any water trip.",
-    "cost": "Confirm current ticket/entry and any guide charges before visiting",
-    "hours": "Confirm access, opening hours and event changes with the venue before travel.",
-    "mapQuery": "Jabi Lake Jabi Nigeria",
-    "source": {
-      "label": "Visit Abuja — about the city",
-      "href": "https://www.visitabuja.org/about-abuja/"
-    },
-    "checkedAt": "2026-10-11",
-    "tags": [
-      "abuja",
-      "nature",
       "verified visitor source"
     ]
   },
