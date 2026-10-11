@@ -19,6 +19,19 @@ if (!generatedConfig) {
   throw new Error("No generated Wrangler config found under dist/*/wrangler.json");
 }
 
+// Validate the artifact actually deployed, not just the source configuration.
+// Never silently deploy without the production database or with staging attached.
+const source = JSON.parse(fs.readFileSync(path.resolve("wrangler.jsonc"), "utf8"));
+const generated = JSON.parse(fs.readFileSync(generatedConfig, "utf8"));
+const expectedBindings = source.d1_databases ?? [];
+const actualBindings = generated.d1_databases ?? [];
+if (!Array.isArray(expectedBindings) || !Array.isArray(actualBindings) ||
+    expectedBindings.length !== actualBindings.length ||
+    expectedBindings.some(expected => actualBindings.filter(actual => actual &&
+      ["binding", "database_name", "database_id"].every(key => actual[key] === expected[key])).length !== 1)) {
+  throw new Error("Generated D1 binding does not match source configuration; refusing deployment pointer.");
+}
+
 const deployDir = path.resolve(".wrangler", "deploy");
 fs.mkdirSync(deployDir, { recursive: true });
 

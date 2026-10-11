@@ -13,5 +13,13 @@
   "observability": {
     "enabled": true
   },
-  "previews": {}
+  "previews": {},
+  "d1_databases": [
+    {
+      "binding": "CONTENT_DB",
+      "database_name": "mynigeriaguide-content-production",
+      "database_id": "73b4490a-5242-4c31-be8d-36ba0c327d3c"
+    }
+  ]
 }
+
