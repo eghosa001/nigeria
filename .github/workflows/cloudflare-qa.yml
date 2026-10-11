@@ -48,6 +48,13 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
+          if node scripts/youtube-d1-production-scope.mjs "$changed"; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-d1-production" >> "$GITHUB_OUTPUT"
+            echo "Production binding only; focused guard/config checks run in CI, artifact validation runs in postbuild."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-change-scope.mjs "$changed"; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=youtube-d1-integration" >> "$GITHUB_OUTPUT"

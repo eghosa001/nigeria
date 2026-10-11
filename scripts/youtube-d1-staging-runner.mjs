@@ -34,8 +34,16 @@ export function assertStagingConfiguration(staging, production) {
       throw new Error("Staging D1 " + key + " does not match the owner's supplied database.");
     }
   }
-  if (Array.isArray(production.d1_databases) && production.d1_databases.length) {
-    throw new Error("Production Wrangler configuration unexpectedly contains a D1 binding.");
+  const productionBindings = production.d1_databases ?? [];
+  const registeredProduction = {
+    binding: "CONTENT_DB",
+    database_name: "mynigeriaguide-content-production",
+    database_id: "73b4490a-5242-4c31-be8d-36ba0c327d3c",
+  };
+  if (!Array.isArray(productionBindings) || productionBindings.length > 1 ||
+      productionBindings.some(binding => !binding || Object.entries(registeredProduction)
+        .some(([key, value]) => binding[key] !== value))) {
+    throw new Error("Production D1 binding must match the exact isolated owner database.");
   }
   if (staging.name === production.name) throw new Error("Staging must not use the production Worker name.");
 }

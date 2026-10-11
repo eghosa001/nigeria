@@ -13,13 +13,25 @@ const production = JSON.parse(readFileSync(new URL("../wrangler.jsonc", import.m
 test("staging binding is exactly the owner-provided D1 and never touches production config", () => {
   assert.doesNotThrow(() => assertStagingConfiguration(staging, production));
   assert.equal(staging.d1_databases[0].binding, "DB");
-  assert.equal(production.d1_databases, undefined);
+  assert.equal(production.d1_databases[0].binding, "CONTENT_DB");
+  assert.notEqual(production.d1_databases[0].database_id, staging.d1_databases[0].database_id);
   assert.notEqual(staging.name, production.name);
   assert.throws(() =>
     assertStagingConfiguration({ ...staging, name: production.name }, production), /isolated/);
   assert.throws(() =>
     assertStagingConfiguration(staging, { ...production, d1_databases: [{ database_id: "wrong" }] }),
     /Production/);
+});
+
+test("production registration permits only the exact isolated owner database", () => {
+  for (const key of ["database_id", "database_name", "binding"]) {
+    const binding = { ...production.d1_databases[0], [key]: staging.d1_databases[0][key] };
+    assert.throws(() => assertStagingConfiguration(staging, { ...production, d1_databases: [binding] }), /Production/);
+  }
+  assert.throws(() => assertStagingConfiguration(staging, { ...production,
+    d1_databases: [...production.d1_databases, ...production.d1_databases] }), /Production/);
+  assert.throws(() => assertStagingConfiguration(staging, { ...production, d1_databases: {} }), /Production/);
+  assert.doesNotThrow(() => assertStagingConfiguration(staging, { ...production, d1_databases: undefined }));
 });
 
 test("remote database identity must match exact ID and account-listed name", () => {
