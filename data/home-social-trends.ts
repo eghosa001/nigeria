@@ -30,20 +30,6 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     expiresAt: "2026-10-25",
   },
   {
-    pillar: "Tour Nigeria",
-    title: "Lagos travel guide expanded with museums, art centres and day trips",
-    href: "/explore/lagos",
-    checkedAt: "2026-10-11",
-    expiresAt: "2026-10-25",
-  },
-  {
-    pillar: "Jobs & Careers",
-    title: "Moniepoint recruiting Early Careers Talent Acquisition Specialist — 5–7 years required",
-    href: "/jobs/moniepoint-early-careers-talent-acquisition-specialist",
-    checkedAt: "2026-10-11",
-    expiresAt: "2026-10-18",
-  },
-  {
     pillar: "Movies & Entertainment",
     title: "YouTube Nigeria: Blaqbonez, OJISE trailer, Ayra Starr and social trends",
     href: "/entertainment/social-trends",
@@ -120,6 +106,13 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     href: "/explore/hallelujah-festival-lagos-october-2026",
     checkedAt: "2026-10-08",
     expiresAt: "2026-10-30",
+  },
+  {
+    pillar: "Tour Nigeria",
+    title: "Lagos travel guide expanded with museums, art centres and day trips",
+    href: "/explore/lagos",
+    checkedAt: "2026-10-11",
+    expiresAt: "2026-11-10",
   },
   {
     pillar: "Jobs & Careers",
