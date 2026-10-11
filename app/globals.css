@@ -2805,6 +2805,8 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   background: #092119;
 }
 .movie-shelf-section { padding: 52px 0 58px; }
+/* The movie shelf has a dark surface in both appearance modes. */
+.movie-shelf-section .movie-long-summary { color: #bfd0c7; }
 .movie-catalog-section {
   padding: 58px 0 74px;
   border-top: 1px solid rgba(255,255,255,.07);
