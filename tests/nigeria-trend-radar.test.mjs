@@ -76,4 +76,7 @@ test("public social-trends page links four free X searches and never calls them 
   assert.match(page, /https:\/\/x\.com\/search\?q=/);
   assert.match(page, /not automatically collected or ranked tweets/);
   assert.match(page, /Google search demand is not an X trend ranking/);
+  assert.match(page, /getdaytrends\.com\/nigeria\//);
+  assert.match(page, /trends24\.in\/nigeria\//);
+  assert.match(page, /not automatic bulk collection/);
 });
