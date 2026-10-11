@@ -48,7 +48,7 @@ export async function generateMetadata({
 
   return {
     alternates: { canonical: "/services" },
-    title: "CAC, NYSC, NIN, Passport & WAEC: Nigeria Services",
+    title: "CAC, NYSC, NIN, Passport & WAEC Service Guides",
     description: "Check CAC registration fees and portal, NYSC Batch C status, NIN retrieval, passport renewal, WAEC results and official Nigeria service instructions.",
     robots: filtered ? { index: false, follow: true } : undefined,
   };
