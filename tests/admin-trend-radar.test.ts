@@ -64,7 +64,7 @@ test("admin route has an additional auth gate and no public publishing handler",
   assert.match(page, /hasAdminSession\(\)/);
   assert.match(page, /readAdminTrends\(\)/);
   assert.match(page, /not an import of/);
-  assert.match(page, /not synchronized between devices|private to this browser/i);
+  assert.match(client, /private to this browser/i);
   assert.match(page, /workflows\/free-nigeria-trend-radar\.yml/);
   assert.match(client, /window\.localStorage/);
   assert.match(client, /EDITORIAL_SHORTLIST_NOT_APPROVAL/);
