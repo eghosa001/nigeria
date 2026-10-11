@@ -6,7 +6,7 @@ import type { ExploreGuide } from "@/lib/explore";
  * never daily electricity output or verified visitor availability.
  */
 export const kainjiDamGuide: ExploreGuide = {
-  slug: "kainji-dam",
+  slug: "kainji-dam-guide",
   title: "Kainji Dam, Niger State: Location, History and Visiting Guide",
   shortTitle: "Kainji Dam",
   kind: "destination",
