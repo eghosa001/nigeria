@@ -12,6 +12,18 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "nysc-camp-feeding-2027-and-safe-travel-advice-oct-11",
+    date: "2026-10-11",
+    type: "clarification",
+    agency: "National Youth Service Corps (NYSC)",
+    title: "NYSC DG says enhanced orientation feeding budget is expected in 2027; avoid evening journeys",
+    summary: "Speaking at Cross River's 2026 Batch C Stream I camp, the NYSC Director-General said the Federal Government had approved a higher orientation feeding budget, expected to take effect next year (2027); it is not an October 2026 cash allowance or a current camp fee. He advised corps members to stop long journeys before 6 pm and seek help from recognised security agencies if needed.",
+    sourceLabel: "Voice of Nigeria — NYSC Director-General at Obubra, 11 October 2026",
+    sourceUrl: "https://von.gov.ng/nysc-approves-increased-feeding-budget-for-corps-members/",
+    affectedServices: ["nysc-registration-local"],
+  },
+
+  {
     id: "ninauth-sharecode-vs-nin-retrieval-october-2026",
     date: "2026-10-11",
     type: "clarification",
