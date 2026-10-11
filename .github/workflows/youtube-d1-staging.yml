@@ -1,0 +1,70 @@
+name: YouTube D1 Staging Import (manual only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Inspect the connected staging DB, or explicitly import the movie catalog
+        required: true
+        type: choice
+        default: inspect
+        options:
+          - inspect
+          - import
+      confirmation:
+        description: For import only, type IMPORT_STAGING_ONLY (never production)
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: youtube-d1-staging-only
+  cancel-in-progress: false
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CONFIRM_YOUTUBE_D1_IMPORT: ${{ inputs.confirmation }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Guard staging-only confirmation and credentials
+        env:
+          STAGING_ACTION: ${{ inputs.action }}
+        run: |
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] || [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+            echo "::error::The existing CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID GitHub secrets are required."
+            exit 1
+          fi
+          if [ "$STAGING_ACTION" = "import" ] && [ "$CONFIRM_YOUTUBE_D1_IMPORT" != "IMPORT_STAGING_ONLY" ]; then
+            echo "::error::Type IMPORT_STAGING_ONLY to approve writes to the staging database."
+            exit 1
+          fi
+
+      - name: Install Wrangler from repository lockfile
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Validate staging-only import SQL (no remote writes)
+        if: inputs.action == 'import'
+        run: |
+          node --test scripts/export-youtube-d1.test.mjs tests/youtube-d1-full-parity.test.mjs
+          node --test tests/youtube-d1-staging-runner.test.mjs
+          node scripts/export-youtube-d1.mjs --dry-run
+
+      - name: Inspect Cloudflare staging D1 (read-only)
+        if: inputs.action == 'inspect'
+        run: node scripts/youtube-d1-staging-runner.mjs --inspect
+
+      - name: Import movie catalog into staging D1 only
+        if: inputs.action == 'import'
+        run: node scripts/youtube-d1-staging-runner.mjs --import
