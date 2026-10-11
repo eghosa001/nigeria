@@ -72,6 +72,13 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     expiresAt: "2026-10-30",
   },
   {
+    pillar: "Jobs & Careers",
+    title: "Founder Dojo Imo Cohort 2 — free training, apply by 2 November",
+    href: "/jobs/founder-dojo-imo-cohort-two-2026",
+    checkedAt: "2026-10-11",
+    expiresAt: "2026-11-02",
+  },
+  {
     pillar: "Movies & Entertainment",
     title: "Lagos Life game — where to play, safety and the $500k funding story",
     href: "/entertainment/lagos-life-game-2026",
