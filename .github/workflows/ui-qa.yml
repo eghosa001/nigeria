@@ -65,6 +65,18 @@ jobs:
             exit 0
           fi
 
+          # The large generated source is now decoded from a lossless compact
+          # artifact. CI checks all source records; one Workers browser smoke
+          # tests the server route. Avoid a second browser/build matrix.
+          youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+          non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+          if [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-runtime" >> "$GITHUB_OUTPUT"
+            echo "Lossless catalog parity runs in CI; one Workers directory smoke runs separately."
+            exit 0
+          fi
+
           # Catalog/search maintenance and proven orphan removal cannot change
           # a rendered component. CI has focused tests; skip browser install/build.
           maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
