@@ -584,13 +584,13 @@
   },
   {
     "slug": "spotify-premium-nigeria",
-    "title": "How to get Spotify Premium in Nigeria",
+    "title": "Spotify Premium Nigeria: plan prices and how to subscribe",
     "shortTitle": "Spotify Premium Nigeria",
-    "summary": "Spotify Nigeria's Premium signup route for choosing Individual, Student, Duo or Family, reviewing the current Nigerian price and completing the payment method offered for the selected plan.",
+    "summary": "Spotify Premium Nigeria currently lists Individual at ₦1,600/month, Student at ₦800/month, Duo at ₦2,100/month and Family at ₦2,500/month. Compare eligibility, checkout offers and payment methods.",
     "category": "TV & streaming",
     "agencySlug": "spotify-nigeria",
     "feeLabel": "From ₦800/month Student; ₦1,600/month Individual",
-    "feeNote": "Spotify Nigeria currently lists Student at ₦800/month, Individual at ₦1,600/month, Duo at ₦2,100/month and Family at ₦2,500/month. Promotions and prices can change.",
+    "feeNote": "Official Nigeria plan prices checked 11 October 2026: Individual ₦1,600/month, eligible Student ₦800/month, Duo ₦2,100/month and Family ₦2,500/month. Trials/promotions may change or depend on eligibility; confirm the full price at checkout.",
     "timeline": "Premium starts after the selected plan is activated and payment or an eligible trial is accepted.",
     "status": "verified",
     "officialPortal": "https://www.spotify.com/ng/premium/",
@@ -601,42 +601,47 @@
       "For Student Premium, eligibility at an accredited higher-education institution and successful student verification"
     ],
     "steps": [
-      "Open Spotify Nigeria's official Premium page and sign in or create a Spotify account.",
-      "Review the current Individual, Student, Duo and Family options and choose the appropriate plan.",
-      "For a Student plan, complete the eligibility verification requested by Spotify's verification partner.",
-      "Choose one of the available payment options and complete the Premium signup.",
-      "Open the account plan page after activation to confirm the plan, payment method and next billing date."
+      "Open the official Spotify Premium Nigeria website and compare Individual, Student, Duo and Family.",
+      "Check the live trial, promotional and normal renewal terms shown in your own checkout; offers can vary by eligibility.",
+      "Log in or create an account; Student requires eligible higher-education verification, and Duo/Family require same-address household eligibility.",
+      "Choose a supported payment method displayed by Spotify and confirm the billed amount before submitting.",
+      "Open Spotify account settings after activation to confirm your plan, next billing date and cancellation controls."
     ],
     "notes": [
-      "Spotify's Nigeria Premium page currently publishes country-specific prices in naira.",
-      "Duo and Family require eligible members to meet Spotify's household rules.",
-      "Trial eligibility can depend on whether the account has used Premium before."
+      "The monthly prices were checked against Spotify Nigeria's official Premium page on 11 October 2026 and may later change.",
+      "An introductory offer is not a permanent monthly price; verify renewal timing and eligibility at checkout.",
+      "Duo and Family have household rules; Student requires eligibility verification.",
+      "Spotify supports online cancellation from the account page; special trial terms can end Premium access immediately."
     ],
     "sources": [
       {
-        "label": "Spotify Premium Nigeria",
+        "label": "Spotify Nigeria Premium plans",
         "agency": "Spotify",
         "url": "https://www.spotify.com/ng/premium/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-11"
       },
       {
-        "label": "Spotify Premium Student Nigeria",
+        "label": "Spotify Student Nigeria",
         "agency": "Spotify",
         "url": "https://www.spotify.com/ng/student/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-11"
       }
     ],
     "related": [
       "spotify-cancel-premium",
       "netflix-start-membership-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-11",
     "searchTerms": [
       "Spotify Premium Nigeria",
       "Spotify price Nigeria",
       "Spotify Student Nigeria",
       "Spotify Family Nigeria",
-      "subscribe Spotify Nigeria"
+      "subscribe Spotify Nigeria",
+      "spotify premium price in nigeria",
+      "spotify student 800 naira",
+      "spotify family duo premium price nigeria",
+      "spotify premium payment methods nigeria"
     ]
   },
   {

@@ -605,7 +605,7 @@
     "slug": "cac-company-registration",
     "title": "How to register a company with CAC",
     "shortTitle": "CAC company registration",
-    "summary": "The current CAC process for name search, reservation, digital pre-registration, payment and registration documents.",
+    "summary": "Register a limited company through CAC's official iCRP: name reservation, company and officer details, statutory filing and documents. This differs from registering a business name.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Depends on company/share structure",
@@ -626,14 +626,15 @@
     ],
     "notes": [
       "CAC publishes a 24-working-hour service timeline for company registration once relevant documents are complete and any query is resolved.",
-      "The current CAC iCRP FAQ says limited liability company, incorporated-trustee, LLP and LP filings still follow manual review, unlike the portal's AI-processed business-name registration route. Do not interpret automated name reservation as full company incorporation approval."
+      "The current CAC iCRP FAQ says limited liability company, incorporated-trustee, LLP and LP filings still follow manual review, unlike the portal's AI-processed business-name registration route. Do not interpret automated name reservation as full company incorporation approval.",
+      "A sole proprietor wanting only a business-name registration should use CAC's separate business-name procedure, not this limited-company incorporation route."
     ],
     "sources": [
       {
         "label": "CAC Company Registration",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/company-registration",
-        "lastChecked": "2026-10-10"
+        "lastChecked": "2026-10-11"
       },
       {
         "label": "CAC Revised Service Timelines",
@@ -648,14 +649,17 @@
         "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-11",
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
       "Business",
       "CAC registration",
       "CAC company registration portal",
-      "register company online Nigeria"
+      "register company online Nigeria",
+      "CAC limited company registration Nigeria",
+      "incorporate limited liability company CAC",
+      "CAC registration business name versus company"
     ],
     "related": [
       "cac-business-name-registration",

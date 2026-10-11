@@ -19,6 +19,14 @@ function listPreview(items: string[], limit = 3) {
 // Follow-ups match evidenced Search Console intents and official source details.
 // They complement, rather than duplicate, the five standard service questions.
 const specificFollowUps: Record<string, SearchAnswer[]> = {
+  "aedc-map-refund": [
+    { question: "How do I check my AEDC MAP refund status?", answer: "Visit the official AEDC refund checker at maprefund.abujaelectricity.com and submit your prepaid meter number. AEDC's checker can show a refund record or token if eligible; a lookup is not a guarantee of eligibility." },
+    { question: "Does AEDC pay MAP refunds into a bank account?", answer: "AEDC describes approved MAP refunds as electricity units issued using a 20-digit load token, not ordinary cash transfers. Load a token on the corresponding prepaid meter. If it is missing, email map.refund@abujaelectricity.com with proof of your MAP purchase." },
+  ],
+  "spotify-premium-nigeria": [
+    { question: "How much does Spotify Premium cost per month in Nigeria?", answer: "Spotify Nigeria listed Individual at ₦1,600/month, eligible Student at ₦800/month, Duo at ₦2,100/month and Family at ₦2,500/month when checked on 11 October 2026. Trial eligibility and promotional prices vary; verify the live checkout before paying." },
+    { question: "Can I cancel a Spotify Premium subscription before renewal?", answer: "Spotify provides online cancellation in account settings. Normally a paid plan continues until the next billing date, while some zero-priced trials end Premium access immediately after cancellation. Read the terms on your account." },
+  ],
   "cac-business-name-registration": [
     { question: "Can I register a business name with CAC online myself?", answer: "Yes. CAC's business-name registration route supports proprietor applications through its Company Registration Portal. CAC says a lawyer, chartered accountant or chartered secretary is not mandatory for this category. Check name availability, enter proprietor details, upload the documents shown and pay the official filing charge through the portal." },
     { question: "Is CAC business-name registration free in Nigeria?", answer: "Do not assume so. CAC registration and name-reservation services have official charges, which can change. Use the current iCRP fee displayed for your exact service rather than an old article, unofficial free-registration offer or agent's personal payment link." },

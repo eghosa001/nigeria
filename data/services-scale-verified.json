@@ -5144,60 +5144,64 @@
   },
   {
     "slug": "aedc-map-refund",
-    "title": "How the AEDC MAP meter refund works",
-    "shortTitle": "AEDC MAP refund",
-    "summary": "AEDC's electricity-credit refund route for eligible customers who previously bought a prepaid meter under the MAP scheme, with notification, meter-linked refund details and a 20-digit load token.",
+    "title": "How to check AEDC MAP refund status and load your meter token",
+    "shortTitle": "AEDC MAP refund status",
+    "summary": "Enter your meter number on AEDC's official MAP Refund Portal to check eligibility or retrieve a refund token. Eligible MAP meter buyers receive electricity credit rather than cash.",
     "category": "Electricity",
     "agencySlug": "aedc",
     "feeLabel": "No refund-claim fee stated",
     "feeNote": "AEDC does not state a fee for receiving an eligible MAP refund. Refund value and timing depend on the NERC-approved refund implementation and the customer's eligible meter record.",
     "timeline": "AEDC notifies eligible customers directly and issues the refund as electricity credit; the provider does not publish one universal date on which every eligible customer's full refund is completed.",
     "status": "verified",
-    "officialPortal": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
+    "officialPortal": "https://maprefund.abujaelectricity.com/",
     "requirements": [
-      "A prepaid meter purchased through the AEDC Meter Asset Provider scheme",
-      "An eligible AEDC meter/account record under the current NERC-approved MAP refund implementation",
-      "Access to the SMS or email contact details linked to the AEDC customer account",
-      "The meter number and 20-digit load token contained in the refund notification when the credit is issued"
+      "An AEDC prepaid meter purchased through the Meter Asset Provider (MAP) scheme",
+      "The meter number for the official AEDC refund status checker",
+      "The refund SMS/email and 20-digit load token if AEDC has issued a credit",
+      "Proof of your MAP meter payment if you need customer support"
     ],
     "steps": [
-      "Check the SMS and email contact linked to the AEDC account for the provider's MAP refund notification.",
-      "Confirm that the notification shows the correct meter number and the electricity-credit amount being refunded.",
-      "Copy the unique 20-digit load token supplied for the refund credit.",
-      "Load the refund token on the prepaid meter using the normal token-entry method for that meter.",
-      "If the notification or token does not match the meter/account, contact AEDC through the official customer-care route before attempting another entry."
+      "Open AEDC's official MAP Refund Portal and enter the correct prepaid meter number.",
+      "Submit your meter number to check for an eligible refund record or token. A lookup alone does not guarantee eligibility.",
+      "If a refund is recorded, confirm the meter number and electricity-credit amount, then copy the 20-digit load token.",
+      "Enter the load token on your prepaid meter as you would a normal electricity token. It represents credited units, not money sent to a bank.",
+      "If you expect a refund but have no notification, cannot retrieve the token, or it fails, email map.refund@abujaelectricity.com with evidence of payment or use official AEDC customer care."
     ],
     "notes": [
-      "AEDC describes MAP refunds as electricity credits rather than a general cash payout.",
-      "Only customers that meet the refund eligibility rules for a previously purchased MAP meter should expect a refund token.",
-      "Do not pay an agent to 'process' an AEDC refund token."
+      "The official AEDC MAP refund checker requires your meter number; it does not ask for a banking password or fee.",
+      "AEDC issues eligible MAP refunds as electricity-credit tokens, not cash transfers.",
+      "Eligibility and refund timing depend on the customer's record; do not assume every purchased meter has a token available today."
     ],
     "sources": [
       {
-        "label": "AEDC MAP Refund Guide",
+        "label": "AEDC MAP refund eligibility checker",
         "agency": "Abuja Electricity Distribution Plc",
-        "url": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
-        "lastChecked": "2026-10-05",
-        "published": "2026-07-01"
+        "url": "https://maprefund.abujaelectricity.com/",
+        "lastChecked": "2026-10-11"
       },
       {
-        "label": "AEDC Home — Refund and Compensation",
+        "label": "AEDC official MAP refund instructions",
         "agency": "Abuja Electricity Distribution Plc",
-        "url": "https://www.abujaelectricity.com/",
-        "lastChecked": "2026-10-05"
+        "url": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
+        "lastChecked": "2026-10-11",
+        "published": "2026-07-01"
       }
     ],
     "related": [
       "aedc-map-meter-application",
       "aedc-pay-bill-buy-token"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-11",
     "searchTerms": [
       "AEDC MAP refund",
       "Abuja electricity meter refund",
       "AEDC refund token",
       "MAP meter refund AEDC",
-      "AEDC meter credit refund"
+      "AEDC meter credit refund",
+      "AEDC MAP refund status",
+      "AEDC refund meter number checker",
+      "AEDC refund portal",
+      "20 digit MAP refund token"
     ]
   },
   {
