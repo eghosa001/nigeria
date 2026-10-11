@@ -78,6 +78,17 @@ jobs:
             exit 0
           fi
 
+          # Tour guide/place lookup internals have exact-output parity coverage
+          # in CI; do not rebuild the site or run unrelated browser suites.
+          tour_lookup_trigger="$(printf '%s\n' "$changed" | grep -E '^(tests/tour-lookup-index\.test\.ts$|scripts/bench-tour-lookup\.ts$)' || true)"
+          non_tour_lookup="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|lib/(explore|explore-places)\.ts$|tests/tour-lookup-index\.test\.ts$|scripts/bench-tour-lookup\.ts$)' || true)"
+          if [ -n "$tour_lookup_trigger" ] && [ -z "$non_tour_lookup" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=tour-lookup" >> "$GITHUB_OUTPUT"
+            echo "Focused indexed Tour lookup regression runs in CI."
+            exit 0
+          fi
+
           jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|app/globals\.css$|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$|tests/explore\.spec\.ts$)' || true)"
