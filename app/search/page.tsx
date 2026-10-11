@@ -17,10 +17,13 @@ function resultCountLabel(count: number) {
 export default async function SearchPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string | string[] }>;
 }) {
   const params = await searchParams;
-  const query = (params.q ?? "").trim();
+  // Repeated/oversized query parameters must not crash rendering or cause
+  // unbounded cross-catalog scans on the public Workers route.
+  const raw = Array.isArray(params.q) ? params.q[0] : params.q;
+  const query = (raw ?? "").replace(/\s+/g, " ").trim().slice(0, 120);
 
   const {
     serviceResults,
