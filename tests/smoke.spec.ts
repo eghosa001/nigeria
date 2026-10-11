@@ -147,6 +147,61 @@ test("visits unlock displays reports immediately and can be locked again", async
   expect(errors).toEqual([]);
 });
 
+test("admin dashboard shows independent Search Console health even if visits reporting fails", async ({ page, request }) => {
+  const locked = await request.get("/admin/api/search-console", { failOnStatusCode: false });
+  expect(locked.status()).toBe(401);
+  expect(locked.headers()["cache-control"]).toContain("no-store");
+
+  let checks = 0;
+  await page.route("**/admin/api/search-console?*", async (route) => {
+    checks++;
+    await route.fulfill({ json: {
+      authenticated: true,
+      configured: true,
+      report: {
+        available: true, source: "direct-google-api",
+        siteUrl: "sc-domain:mynigeriaguide.com",
+        startDate: "2026-10-01", endDate: "2026-10-10",
+        fetchedAt: "2026-10-11T05:00:00Z",
+        latestHour: "2026-10-10T23:00:00-07:00", firstIncompleteHour: "2026-10-10T10:00:00-07:00",
+        lagHours: 0, clicks: 24, impressions: 1111,
+        clicks24h: 12, impressions24h: 234, hoursReported24h: 7, rows: [],
+      },
+    } });
+  });
+
+  await page.goto("/admin");
+  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+
+  const card = page.getByTestId("admin-gsc-status");
+  await expect(card.getByRole("heading", { name: "Live data connection & freshness" })).toBeVisible();
+  await expect(card).toContainText("234");
+  await expect(card).toContainText("12");
+  await expect(card).toContainText("7 of 24 hours returned");
+  await card.getByRole("button", { name: "Check Google now" }).click();
+  await expect.poll(() => checks).toBeGreaterThan(1);
+
+  // Health status stays visible on Visits without unlocking its separate GA4 report.
+  await page.goto("/admin/visits");
+  await expect(page.getByTestId("admin-gsc-status")).toBeVisible();
+  await expect(page.getByTestId("admin-gsc-status")).toContainText("234");
+});
+
+test("admin Search Console connectivity failures are explicit, not blank dashboards", async ({ page }) => {
+  await page.route("**/admin/api/search-console?*", (route) => route.fulfill({
+    json: { authenticated: true, configured: false, error: "Search Console authorization has not been configured." },
+  }));
+  await page.goto("/admin");
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  const card = page.getByTestId("admin-gsc-status");
+  await expect(card).toContainText("Google Search Console not reporting");
+  await expect(card).toContainText("authorization has not been configured");
+  await expect(page.getByRole("heading", { name: "Platform operations dashboard" })).toBeVisible();
+});
+
 test("plain-language search finds the right service", async ({ page }) => {
   await page.goto("/");
   await page.getByLabel("What do you want to do?").fill("my passport expired");

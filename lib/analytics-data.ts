@@ -71,6 +71,7 @@ export type AnalyticsDashboardData = {
   dataStartDate: string;
   cleanStartDate: string;
   ga4Available: boolean;
+  ga4Error: string | null;
   summary: {
     totalUsers: number;
     activeUsers: number;
@@ -178,6 +179,12 @@ function searchConsoleConfig() {
     clientEmail: process.env.GSC_SERVICE_ACCOUNT_EMAIL?.trim() || analytics.clientEmail,
     privateKey: process.env.GSC_SERVICE_ACCOUNT_PRIVATE_KEY?.replace(/\\n/g, "\n").trim() || analytics.privateKey,
   };
+}
+
+/** Does the private server have credentials for direct Google Search Console access? */
+export function searchConsoleReadConfigured() {
+  const settings = searchConsoleConfig();
+  return Boolean(settings.clientEmail && settings.privateKey);
 }
 
 export function analyticsReadConfigured() {
@@ -478,7 +485,7 @@ async function searchConsoleQuery(body: Record<string, unknown>) {
  * Freshness is measured using the last hour actually returned by Google,
  * never the requested end date or our fetch timestamp.
  */
-async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyReport> {
+export async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyReport> {
   const settings = searchConsoleConfig();
   const fetchedAt = new Date().toISOString();
   // Search Console reporting days are Pacific Time, not Lagos time.
@@ -737,8 +744,20 @@ export async function getAnalyticsDashboard(
     error: "GA4 Data API is not configured. PostHog remains available independently.",
   };
 
-  const [batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
-    ga4Available ? batchRunReports(coreRequests) : Promise.resolve({ reports: [] } as BatchRunReportsResponse),
+  // Every source is independent: a broken GA4 API must not blank the
+  // PostHog and Search Console panels or prevent the private dashboard loading.
+  const [ga4Batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
+    ga4Available
+      ? batchRunReports(coreRequests)
+          .then((batch) => ({ batch, error: null as string | null }))
+          .catch((error: unknown) => ({
+            batch: { reports: [] } as BatchRunReportsResponse,
+            error: error instanceof Error ? error.message : "Google Analytics reporting failed.",
+          }))
+      : Promise.resolve({
+          batch: { reports: [] } as BatchRunReportsResponse,
+          error: "Google Analytics service account is not configured.",
+        }),
     ga4Available ? runReport(interactionRequest).catch(() => ({} as RunReportResponse)) : Promise.resolve({} as RunReportResponse),
     ga4Available ? runRealtime().catch(() => null) : Promise.resolve(null),
     getSearchPerformance(dataStartDate),
@@ -748,6 +767,7 @@ export async function getAnalyticsDashboard(
     ga4Available ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "GA4 Data API is not configured." } as GA4KeyEventStatus),
   ]);
 
+  const { batch, error: ga4Error } = ga4Batch;
   const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
 
   const totalValues = summaryReport.totals?.[0]?.metricValues ?? summaryReport.rows?.[0]?.metricValues ?? [];
@@ -759,7 +779,8 @@ export async function getAnalyticsDashboard(
     generatedAt: new Date().toISOString(),
     dataStartDate,
     cleanStartDate: ANALYTICS_CLEAN_START,
-    ga4Available,
+    ga4Available: ga4Available && ga4Error === null,
+    ga4Error,
     summary: {
       totalUsers: Number(totalValues[0]?.value ?? 0),
       activeUsers: Number(totalValues[1]?.value ?? 0),
