@@ -34,7 +34,6 @@ export function createYouTubeServerStore(options:
       if (!db) throw new Error('CONTENT_DB binding is unavailable during the production cutover.');
       return db;
     } catch (error) {
-      if (process.env.NODE_ENV === 'test') return null;
       throw error;
     }
   }

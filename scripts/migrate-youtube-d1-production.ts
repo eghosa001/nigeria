@@ -4,6 +4,8 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { discoverableYouTubeMovies } from '../lib/youtube-library';
+// The exporter is intentionally kept as a dependency-free ESM script.
+// @ts-expect-error TypeScript does not load declarations for .mjs scripts here.
 import { exportYouTubeD1Import } from './export-youtube-d1.mjs';
 
 const databaseId = '73b4490a-5242-4c31-be8d-36ba0c327d3c';
