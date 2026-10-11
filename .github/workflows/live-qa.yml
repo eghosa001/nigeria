@@ -45,6 +45,13 @@ jobs:
             exit 0
           fi
           changed="$(git diff --name-only HEAD^1 HEAD)"
+          if node scripts/youtube-d1-production-scope.mjs "$changed"; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "tour_live=false" >> "$GITHUB_OUTPUT"
+            echo "Binding-only registration retains static reads; config guards run in CI and postbuild."
+            exit 0
+          fi
           if node scripts/youtube-d1-change-scope.mjs "$changed"; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "jobs_live=false" >> "$GITHUB_OUTPUT"

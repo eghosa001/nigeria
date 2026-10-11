@@ -6,6 +6,7 @@ const allowed = new Set([
   'scripts/write-wrangler-deploy-config.mjs', 'scripts/youtube-d1-production-scope.mjs',
   'tests/youtube-d1-staging-runner.test.mjs', 'tests/wrangler-deploy-config.test.mjs',
   '.github/workflows/ci.yml', '.github/workflows/ui-qa.yml', '.github/workflows/cloudflare-qa.yml',
+  '.github/workflows/live-qa.yml',
   'docs/YOUTUBE_D1_PRODUCTION.md',
 ]);
 const changed = (process.argv[2] ?? '').trim().split(/\r?\n/).filter(Boolean);
