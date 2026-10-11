@@ -27,6 +27,19 @@ Largest measured hotspots:
 - `lib/jobs.ts`: **269,869 bytes**.
 - `app/globals.css`: **198,076 bytes**.
 
+## Full static dependency-graph scan (focused GitHub CI run)
+
+The new read-only analyzer **ran successfully** in PR #290's focused `verify` job. Its initial branch snapshot returned:
+
+- **480** checked-in files and **386** source-code files.
+- **114** recognized production route/entry files, **338** production-reachable modules, **39** tooling roots, **37** test roots.
+- **0 unresolved internal imports** and **0 computed dynamic imports found by this syntax scan** (a limit of the scanner, not proof that no runtime load exists).
+- **2 review candidates**: `components/adsense.tsx` and `components/route-wizard.tsx`.
+
+Both candidates were inspected against the active route/module graph. The old `AdsenseScript` was never rendered; the active script is installed through `app/layout.tsx` and the site retains its AdSense integration. The old `RouteWizard` component had no consumers; the active `/assistant` page renders `GuideAssistant` instead. **Both unused component files have now been deleted** (6,252 bytes of checked-in source). Their unreachable CSS selectors remain for a separate cascade-controlled cleanup.
+
+The scanner is informational and never modifies or deletes files. The initial branch inventory differs from `main` because this PR adds tooling/tests/docs and removes two confirmed orphan components.
+
 ## Confirmed findings and changes in this execution
 
 | Status | Finding | Action | Guardrail |
@@ -36,7 +49,7 @@ Largest measured hotspots:
 | **Optimized in branch** | Approved YouTube publishers were checked by nested iteration and repeated alias normalization for each candidate. | Precompute approved normalized alias Set and first-match verified channel maps. | Preserve first-match semantics and publisher whitelist. |
 | **Optimized in branch** | Curated movie pagination sorted the whole static catalog for every pagination call. | Compute sort once per module and return defensive copies when public title-list API is called. | Keep sorting and page URLs identical. |
 | **Optimized in branch** | Movie directory scoring renormalized the search query once per matching title. | Normalize once before matching. | Keep existing weights, filtering and ordering. |
-| **Added in branch** | No repeatable way to inventory code import reachability while distinguishing Next.js entrypoints from reusable modules. | Manual `npm run audit:codebase` read-only inventory with candidate lists, source sizes, unresolved and computed imports. | **Never delete from the output automatically.** |
+| **Deleted in branch** | Two unreferenced client components: the legacy AdSense script and old service route wizard. | Removed after static-graph and active-layout/assistant inspection; tracked AdSense integration and guide search remain active. | No route, JSX consumer, or publisher configuration was removed. |\n| **Added in branch** | No repeatable way to inventory code import reachability while distinguishing Next.js entrypoints from reusable modules. | Manual `npm run audit:codebase` read-only inventory with candidate lists, source sizes, unresolved and computed imports. | **Never delete from the output automatically.** |
 | **Done previously** | Admin API request origin/path guard implementations duplicated across five routes. | PR #289 consolidated guards with focused regression checks and was merged before this audit. | Legacy aliases remain closed; Cloudflare Access remains. |
 
 ## Confirmed safe to keep (not dead code)
