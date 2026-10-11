@@ -46,3 +46,14 @@ test("four editorial discoveries link canonical routes while refusing fake live 
   assert.match(load("app/jobs/page.tsx"), /\/jobs\/founder-dojo-imo-cohort-two-2026/);
   assert.doesNotMatch(load("data/home-social-trends.ts"), /href: "\/jobs\/founder-dojo-imo-cohort-two-2026"/);
 });
+
+test("Nigeria X hashtag lead resolves to the organiser's real Lagos fair, not invented engagement", () => {
+  const trends = load("app/entertainment/social-trends/page.tsx");
+  const events = load("app/explore/events/page.tsx");
+  assert.match(trends, /#LeadwayLifestyleFair/);
+  assert.match(trends, /Leadway Lifestyle Fair: Lagos visit on 24–25 October/);
+  assert.match(trends, /not the hashtag/);
+  assert.match(events, /24 and 25 October 2026/);
+  assert.match(events, /SystemSpecs HQ/);
+  assert.match(events, /https:\/\/www\.leadway\.com\/leadway-media-dash\//);
+});
