@@ -3,8 +3,8 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
-  title: "Nigerian Movies Coming in October 2026: Nollywood Release Calendar",
-  description: "Confirmed Nigerian movie releases for October 2026, including Oversabi Aunty, MKO, First Lady, A Land Apart, Tele x Zikora, Phoenix Fury and Wire Transfer.",
+  title: "Nigerian Movies October 2026: Cinema, Netflix & YouTube Releases",
+  description: "Nigerian movie releases for October 2026: My 30th Wedding, Love On Credit, Oversabi Aunty and new cinema titles. Release dates, cast and official viewing links.",
   alternates: { canonical: "/entertainment/movies/october-2026" },
 };
 
@@ -17,6 +17,20 @@ type OctoberRelease = {
 };
 
 const releases: OctoberRelease[] = [
+  {
+    date: "1 October",
+    title: "My 30th Wedding",
+    where: "YouTube — Bimbo Ademoye TV",
+    detail: "Bimbo Ademoye and Timini Egbuson headline this newly released 149-minute romance comedy. Follow our movie profile for the verified official free full-film link, cast and director.",
+    href: "/entertainment/movies/my-30th-wedding",
+  },
+  {
+    date: "4 October",
+    title: "Love On Credit",
+    where: "YouTube — Nollyfamily TV",
+    detail: "Sonia Uche, Omeche Oko and Bright Morgan lead this Nigerian relationship drama. The film profile links directly to the authorised publisher's full-length upload.",
+    href: "/entertainment/movies/love-on-credit-2026",
+  },
   {
     date: "1 October",
     title: "Agbara Nla: The Return",
@@ -99,9 +113,9 @@ export default function OctoberMoviesPage() {
       <section className="section page-top">
         <div className="container">
           <span className="eyebrow">October 2026 release calendar</span>
-          <h1>Nigerian movies coming this October.</h1>
+          <h1>Nigerian movies released and coming in October 2026.</h1>
           <p className="page-intro">
-            A date-by-date guide to confirmed Nollywood and Nigeria-focused releases arriving in cinemas and on streaming platforms this month.
+            Find October 2026 Nollywood cinema releases, Netflix premieres and new films published free on authorised YouTube channels. Browse cast, plot summaries and where to watch without relying on unverified streams.
           </p>
 
           <div className="jobs-topic-links">
@@ -124,9 +138,9 @@ export default function OctoberMoviesPage() {
           </div>
 
           <section className="jobs-editorial-note">
-            <strong>Release information checked 4 October 2026</strong>
+            <strong>Release information checked 11 October 2026</strong>
             <p>
-              Release dates and availability can move. This calendar is based on confirmed Nigeria release information and should be rechecked close to each date.
+              Release dates and availability can move. This calendar combines original publisher and independently verified Nigerian cinema, streaming and official YouTube release information. Recheck cinema schedules close to each date.
             </p>
             <a href="https://whatkeptmeup.com/preview/new-in-nigeria-movies-and-tv-shows-to-watch-this-october-2026/" target="_blank" rel="noreferrer">
               Source release calendar ↗
