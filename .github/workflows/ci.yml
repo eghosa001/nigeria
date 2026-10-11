@@ -76,7 +76,12 @@ jobs:
             non_tour_lookup="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|lib/(explore|explore-places)\.ts$|tests/tour-lookup-index\.test\.ts$|scripts/bench-tour-lookup\.ts$)' || true)"
             youtube_directory_trigger="$(printf '%s\n' "$changed" | grep -E '^(tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
             non_youtube_directory="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
-            if [ -n "$youtube_directory_trigger" ] && [ -z "$non_youtube_directory" ]; then
+            youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+            non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+            if [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
+              echo "mode=youtube-runtime" >> "$GITHUB_OUTPUT"
+              echo "Packed YouTube source-only change: verify lossless round trips and existing listing behavior."
+            elif [ -n "$youtube_directory_trigger" ] && [ -z "$non_youtube_directory" ]; then
               echo "mode=youtube-directory" >> "$GITHUB_OUTPUT"
               echo "YouTube directory-only change: exact result parity and bounded lookup CPU checks."
             elif [ -n "$tour_lookup_trigger" ] && [ -z "$non_tour_lookup" ]; then
@@ -114,6 +119,12 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip'
+      - name: Verify packed YouTube runtime data
+        if: steps.scope.outputs.mode == 'youtube-runtime'
+        run: |
+          python3 scripts/fast_path_guard.py
+          node --test tests/youtube-runtime-catalog.test.mjs
+          npx tsx --test tests/youtube-directory-query.test.ts
       - name: Verify YouTube directory query compatibility
         if: steps.scope.outputs.mode == 'youtube-directory'
         run: |
