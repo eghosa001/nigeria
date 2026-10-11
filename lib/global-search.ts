@@ -42,6 +42,33 @@ function createRelevance(query: string) {
 }
 
 /**
+ * Retain only the strongest matches for a small search preview.
+ * A bounded set avoids allocating and sorting every matching catalog record.
+ * The >=5,000 record threshold still requires a proper CONTENT_DB index.
+ */
+export function selectTopMatches<T>(
+  items: readonly T[],
+  scoreOf: (item: T) => number,
+  tieBreak: (a: T, b: T) => number,
+  limit: number,
+): T[] {
+  const capped = Number.isFinite(limit) ? Math.max(0, Math.floor(limit)) : 0;
+  if (!capped) return [];
+  const best: Array<{ item: T; score: number }> = [];
+  for (const item of items) {
+    const score = scoreOf(item);
+    if (!(score > 0)) continue;
+    const position = best.findIndex((entry) =>
+      score > entry.score || (score === entry.score && tieBreak(item, entry.item) < 0),
+    );
+    if (position >= 0) best.splice(position, 0, { item, score });
+    else if (best.length < capped) best.push({ item, score });
+    if (best.length > capped) best.pop();
+  }
+  return best.map((entry) => entry.item);
+}
+
+/**
  * Checked-in catalog adapter.
  *
  * This is intentionally an async boundary even while the catalogs are small.
@@ -202,17 +229,13 @@ export async function searchGlobalCatalog(query: string) {
     .slice(0, 8)
     .map((entry) => entry.item);
 
-  const youtubeResults = generatedYouTubeMovies
-    .map((item) => ({
-      item,
-      score: relevance(item.title,
-        [item.synopsis, item.cast.join(" "), item.channelName, String(item.year)].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || b.item.publishedAt.localeCompare(a.item.publishedAt))
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  const youtubeResults = selectTopMatches(
+    generatedYouTubeMovies,
+    (item) => relevance(item.title,
+      [item.synopsis, item.cast.join(" "), item.channelName, String(item.year)].join(" ")),
+    (a, b) => b.publishedAt.localeCompare(a.publishedAt),
+    8,
+  );
 
   return {
     serviceResults,

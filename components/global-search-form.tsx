@@ -68,6 +68,9 @@ const destinations = [
   { label: "NIN share code verification", href: "/services/ninauth-nin-verification", pillar: "Services", aliases: "nin share code ninauth nigeria how to get nin share code" },
   { label: "Anambra ASIN registration", href: "/services/anambra-asin-registration", pillar: "Services", aliases: "asin registration how to get asin number anambra state online" },
   { label: "Track a Nigerian passport", href: "/services/passport-application-tracking", pillar: "Services", aliases: "nigerian passport status track passport application online" },
+  // Already-published service guides with observed settled Search Console impressions.
+  { label: "AEDC MAP meter refund checker", href: "/services/aedc-map-refund", pillar: "Services", aliases: "electricity prepaid map refund meter number status eligibility abuja token" },
+  { label: "Spotify Premium Nigeria prices", href: "/services/spotify-premium-nigeria", pillar: "Services", aliases: "spotify individual student family duo monthly subscription price naira payment" },
 ] as const;
 
 function normalise(value: string) {
