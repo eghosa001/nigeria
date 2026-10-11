@@ -5,6 +5,7 @@ import { entertainmentTitles } from "@/lib/entertainment";
 import { exploreGuides } from "@/lib/explore";
 import { jobOpportunities } from "@/lib/jobs";
 import { seriesLastChecked, seriesTitles } from "@/lib/series";
+import { getCurrentNigeriaTrendBrief } from "@/data/nigeria-trend-brief";
 import { indexableYouTubeMovies } from "@/lib/youtube-library";
 
 export const metadata: Metadata = {
@@ -54,6 +55,31 @@ export default function LatestPage() {
           <Link href="/explore/calabar-carnival-2026">Calabar Carnival 2026</Link>
           <Link href="/jobs/deadlines">Jobs open now & deadlines</Link>
         </div>
+
+        <section className="top-gap" aria-labelledby="nigeria-source-trend-brief">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">Nigeria trend intelligence · Reviewed 11 October 2026</span>
+              <h2 id="nigeria-source-trend-brief">X signals and verified updates across four pillars</h2>
+              <p>We use Nigerian social discussions to find questions worth answering, then check the dates, official releases and original application or event pages. These are dated editorial findings, not a live X trend ranking or invented search-volume statistics.</p>
+            </div>
+            <Link href="/entertainment/social-trends">See social-media research →</Link>
+          </div>
+          <div className="home-updates-grid">
+            {getCurrentNigeriaTrendBrief().map((item) => (
+              <article className="home-update-card" key={item.id}>
+                <span className="eyebrow">{item.pillar} · {item.signal}</span>
+                <h3>{item.title}</h3>
+                <p>{item.summary}</p>
+                <p className="job-muted">Verified {item.checkedAt}; editorial relevance through {item.expiresAt}. Check the linked source for any changes.</p>
+                <div className="minimal-inline-links">
+                  <Link href={item.href}>Read MyNigeriaGuide guide →</Link>
+                  <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceName} ↗</a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
 
         <details className="browse-disclosure top-gap">
           <summary>Find more essential verified guides</summary>

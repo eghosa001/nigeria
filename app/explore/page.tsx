@@ -99,6 +99,10 @@ export default function ExplorePage() {
           <span className="eyebrow">Tour Nigeria</span>
           <h1>Places to visit in Nigeria.</h1>
           <p className="page-intro">Discover destinations, local experiences and practical travel guides from across Nigeria.</p>
+          <p className="hero-note">
+            <strong>Seasonal travel, 2026:</strong> Nigeria's Ministry of Tourism has announced the September–December “Ember to Remember” national tourism programme. Our city and event guides can help you plan across the country, but each venue, admission price and event date still needs an individual check.{" "}
+            <a href="https://fmino.gov.ng/tourism-ministry-and-mycityapp-announce-ember-to-remember-2026-nigerias-100-day-tourism-season/" target="_blank" rel="noopener noreferrer">Read the ministry's announcement ↗</a>
+          </p>
           <form className="section-quick-search" action="/explore#places" method="get" role="search">
             <label>
               <span>Search Tour Nigeria</span>
