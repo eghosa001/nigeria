@@ -112,6 +112,9 @@ export async function getPublishedYouTubeD1Movie(db: YouTubeD1Database, videoId:
      LIMIT 1`,
   ).bind(YOUTUBE_D1_PILLAR, YOUTUBE_D1_KIND, videoId, "/entertainment/youtube/" + videoId)
     .first<ContentRow>();
+  // D1's WHERE clause must exclude non-published rows, and this additional
+  // check keeps the boundary fail-closed if a mock or adapter violates it.
+  if (row && row.editorial_status !== "published") return null;
   return parseRow(row, videoId);
 }
 
