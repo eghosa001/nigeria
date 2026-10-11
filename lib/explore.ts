@@ -191,7 +191,7 @@ export const exploreGuides: ExploreGuide[] = [
       { name: "12–18 October — two festival venues", detail: "Main Felabration celebrations are scheduled at New Afrika Shrine in Agidingbi/Ikeja. Underground System 5 is a separate programme at Freedom Park on Lagos Island." },
       { name: "Freedom Park — 6 pm, ₦3,000 announced", detail: "The park's 2026 event promotions state a 6 pm daily start and ₦3,000 admission for Underground System 5. Confirm current entry rules and ticket handling with Freedom Park before paying." },
       { name: "Underground System programme", detail: "The advertised week features different musical traditions plus spoken word, open mic and a young-creative Gen Z Zone. Not every act performs on every night; check each day's official announcement." },
-      { name: "New Afrika Shrine main programme", detail: "The Shrine is in Agidingbi/Ikeja, not Lagos Island. The announced main-festival dates are 12–18 October; its detailed daily line-up, entry and door times should be checked with its own organiser." },
+      { name: "New Afrika Shrine main programme", detail: "The Shrine is in Agidingbi/Ikeja, not Lagos Island. Reporting on 10 October names Femi, Made and Seun Kuti, as well as Terry Apala and Ice Prince, among advertised performers. The presence of a name on the festival line-up does NOT guarantee a given night, admission rule or a Freedom Park performance. Confirm schedules with the organisers." },
       { name: "10 October Dress Fela", detail: "The fashion contest announced at Freedom Park at 4 pm is a free pre-festival event and should not be confused with the paid Underground System nights." }
     ],
     planning: [
@@ -202,7 +202,7 @@ export const exploreGuides: ExploreGuide[] = [
       { label: "Check if a pre-event is free", detail: "The free 10 October Dress Fela listing does not change the separate advertised ₦3,000 Freedom Park concert-night fee. Check date and organiser before travelling." }
     ],
     source: { label: "Freedom Park Lagos — official venue event announcements", href: "https://www.instagram.com/freedomparklagos/" },
-    lastReviewed: "2026-10-10"
+    lastReviewed: "2026-10-11"
   },
   {
     slug: "design-week-lagos-2026",
