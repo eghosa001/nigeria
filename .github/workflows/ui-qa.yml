@@ -48,6 +48,12 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
+          if node scripts/youtube-d1-change-scope.mjs "$changed"; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-d1-integration" >> "$GITHUB_OUTPUT"
+            echo "Unchanged JSX/static default; server result parity is checked in focused CI."
+            exit 0
+          fi
           relevant="$(printf '%s\n' "$changed" | grep -E '^(app|components|data|lib|public|tests)/|^(playwright\.config\.ts|package\.json|next\.config\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
           if [ -z "$relevant" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"

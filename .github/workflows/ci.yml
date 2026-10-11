@@ -38,6 +38,16 @@ jobs:
             fi
           fi
 
+          if node scripts/youtube-d1-change-scope.mjs "$changed"; then
+            if [ "${{ github.event_name }}" = "pull_request" ]; then
+              echo "mode=youtube-d1-integration" >> "$GITHUB_OUTPUT"
+            else
+              echo "mode=skip" >> "$GITHUB_OUTPUT"
+              echo "Integration candidate verified in PR; do not duplicate its staging probe on merge."
+            fi
+            exit 0
+          fi
+
           if printf '%s\n' "$changed" | grep -Eq '^(lib/(search-console-hourly|analytics-data)\.ts|components/admin-analytics-dashboard\.tsx|tests/search-console-hourly\.test\.ts)$'; then
             echo "gsc_hourly_changed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -126,9 +136,28 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.scope.outputs.mode != 'skip'
         with:
-          node-version: 22
+          node-version: ${{ steps.scope.outputs.mode == 'youtube-d1-integration' && '24' || '22' }}
       - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.mode != 'skip'
+        if: steps.scope.outputs.mode != 'skip' && steps.scope.outputs.mode != 'youtube-d1-integration'
+      - name: Validate YouTube server boundary and indexed D1 queries
+        if: steps.scope.outputs.mode == 'youtube-d1-integration'
+        run: |
+          npm install --prefix "$RUNNER_TEMP/youtube-d1-tools" --ignore-scripts --no-audit --no-fund tsx@4.20.6 typescript@5.9.3 @types/node@24.0.0
+          ln -s "$RUNNER_TEMP/youtube-d1-tools/node_modules" node_modules
+          node node_modules/tsx/dist/cli.mjs --test tests/youtube-d1-repository.test.ts tests/youtube-d1-query.test.ts tests/youtube-server-store.test.ts
+          node scripts/check-youtube-d1-types.mjs
+      - name: Verify authorized staging queries and source parity (read-only)
+        if: steps.scope.outputs.mode == 'youtube-d1-integration' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID || vars.CLOUDFLARE_ACCOUNT_ID || '19a03bec57c0277e01e1e70e241576af' }}
+        run: node node_modules/tsx/dist/cli.mjs scripts/verify-youtube-d1-queries.ts
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.scope.outputs.mode == 'youtube-d1-integration'
+        with:
+          name: youtube-d1-query-evidence
+          path: work/youtube-d1-query-report.json
+          if-no-files-found: ignore
       - name: Validate isolated YouTube D1 staging import
         if: steps.scope.outputs.mode == 'youtube-d1-staging'
         run: |
