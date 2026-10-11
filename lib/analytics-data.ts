@@ -7,7 +7,12 @@ import {
   POSTHOG_WEB_URL,
 } from "@/lib/posthog-config";
 import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
-import { summarizeSearchConsoleHours, type SearchConsoleHourlyReport } from "@/lib/search-console-hourly";
+import {
+  summarizeSearchConsoleHours,
+  firstIncompleteHourFromMetadata,
+  firstIncompleteDateFromMetadata,
+  type SearchConsoleHourlyReport,
+} from "@/lib/search-console-hourly";
 import {
   SEARCH_CONSOLE_HISTORY_THROUGH,
   historicalSearchConsoleSummary,
@@ -119,7 +124,12 @@ type SearchAnalyticsRow = {
 
 type SearchAnalyticsResponse = {
   rows?: SearchAnalyticsRow[];
-  metadata?: { first_incomplete_date?: string; first_incomplete_hour?: string };
+  metadata?: {
+    firstIncompleteDate?: string;
+    firstIncompleteHour?: string;
+    first_incomplete_date?: string;
+    first_incomplete_hour?: string;
+  };
 };
 
 type DataStream = {
@@ -473,7 +483,7 @@ async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyReport> 
   const fetchedAt = new Date().toISOString();
   // Search Console reporting days are Pacific Time, not Lagos time.
   const endDate = dateInTimeZone("America/Los_Angeles");
-  const startDate = subtractDays(endDate, 3); // four PT reporting days (max 96 rows)
+  const startDate = subtractDays(endDate, 9); // Google retains up to 10 PT days of hourly data
   const base = { siteUrl: settings.siteUrl, startDate, endDate, fetchedAt };
   try {
     const response = await searchConsoleQuery({
@@ -483,11 +493,11 @@ async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyReport> 
       dataState: "hourly_all",
       dimensions: ["hour"],
       aggregationType: "byProperty",
-      rowLimit: 150,
+      rowLimit: 260,
     });
     const report = summarizeSearchConsoleHours(
       response.rows ?? [],
-      response.metadata?.first_incomplete_hour,
+      firstIncompleteHourFromMetadata(response.metadata),
     );
     return { available: true, source: "direct-google-api", ...base, ...report };
   } catch (error) {
@@ -500,6 +510,9 @@ async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyReport> 
       lagHours: null,
       clicks: null,
       impressions: null,
+      clicks24h: null,
+      impressions24h: null,
+      hoursReported24h: 0,
       rows: [],
       error: error instanceof Error ? error.message : "Hourly Search Console API is unavailable.",
     };
@@ -542,7 +555,7 @@ async function getSearchPerformance(startDate: string): Promise<SearchPerformanc
       startDate,
       endDate,
       latestDate,
-      firstIncompleteDate: byDate.metadata?.first_incomplete_date ?? null,
+      firstIncompleteDate: firstIncompleteDateFromMetadata(byDate.metadata) ?? null,
       impressions: total?.impressions ?? 0,
       clicks: total?.clicks ?? 0,
       ctr: total?.ctr ?? 0,
