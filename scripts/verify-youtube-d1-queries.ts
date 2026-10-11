@@ -113,7 +113,7 @@ try {
   for (const input of [{}, { q: 'love' }]) {
     const plan = youtubeD1QueryPlan(input, true);
     plans.push({ input, plan: (await remote.prepare('EXPLAIN QUERY PLAN ' + plan.pageSql)
-      .bind(...plan.params, 48, 0).all()).results });
+      .bind(...plan.params, ...(plan.orderParams ?? []), 48, 0).all()).results });
   }
   const report = { databaseId, databaseName, sourceParity: seen.size, statusCounts, comparisons, plans, metrics,
     productionEnabled: false,

@@ -14,6 +14,9 @@
     "enabled": true
   },
   "previews": {},
+  "vars": {
+    "YOUTUBE_D1_CUTOVER": "enabled"
+  },
   "d1_databases": [
     {
       "binding": "CONTENT_DB",

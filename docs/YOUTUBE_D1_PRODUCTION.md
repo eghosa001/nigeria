@@ -97,6 +97,25 @@ must be reconciled before using a later snapshot.
    those gates pass. The owner has authorized safe cutover; missing evidence,
    not a need for repeat permission, is the blocker.
 
-The public store remains explicitly `mode: 'static'`. Architecture parity is
-below the release target; production D1 runtime, visual UX and measured retention
-remain unverified. No live D1 cutover or sitewide 9+/10 claim is made.
+## Controlled cutover completed
+
+After the parity gate was fixed, a guarded continuity migration published the
+3,209 records already discoverable in the static catalog. The migration used
+the normalized discoverable snapshot, preserved each record's existing detail
+index/noindex decision, inserted 3,209 publisher sources, and verified 3,209
+FTS rows. It required the explicit operator token
+`PUBLISH_EXISTING_STATIC_CATALOG`, exact production identity checks, and a
+3,209-record count gate; it cannot publish the full 3,690 source snapshot.
+
+The D1 query now uses the static catalog's case-insensitive substring semantics,
+title-first ranking, deterministic published-date/slug ordering, and the same
+48-row page size. The production Worker enables the adapter only when the
+explicit `YOUTUBE_D1_CUTOVER=enabled` variable is present; local and test
+environments remain static. A missing production binding fails closed.
+
+The public cutover is therefore complete for the existing discoverable catalog.
+The 481 source records excluded by the existing discovery gate remain out of
+public D1 results, and the five unresolved publisher identity skips remain held.
+This is a continuity migration, not blanket editorial approval of new pages.
+Visual retention and ad/analytics event delivery still require normal post-cutover
+measurement; no sitewide 9+/10 claim is made from this migration alone.
