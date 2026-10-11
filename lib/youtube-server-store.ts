@@ -25,7 +25,7 @@ export function createYouTubeServerStore(options:
   async function database() {
     if (options.mode === 'd1') return options.db;
     if (options.mode !== 'runtime') return null;
-    if (process.env.NODE_ENV !== 'production') return null;
+    if (process.env.NODE_ENV !== 'production' || process.env.NEXT_PHASE === 'phase-production-build') return null;
     try {
       const workers = await import('cloudflare:workers');
       const runtimeEnv = workers.env as { CONTENT_DB?: YouTubeD1Database; YOUTUBE_D1_CUTOVER?: string };
