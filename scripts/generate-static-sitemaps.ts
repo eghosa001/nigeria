@@ -35,8 +35,9 @@ for (const section of sitemapSectionNames) {
     const file = name + ".xml";
     const xml = xmlHeader + "<urlset " + xmlns + ">" +
       records.map(({ url, lastModified }) =>
-        "<url><loc>" + escapeXml(url) + "</loc><lastmod>" +
-        escapeXml(lastModified) + "</lastmod></url>").join("") +
+        "<url><loc>" + escapeXml(url) + "</loc>" +
+        (lastModified ? "<lastmod>" + escapeXml(lastModified) + "</lastmod>" : "") +
+        "</url>").join("") +
       "</urlset>";
 
     if (records.some((entry) => !entry.url.startsWith(productionSiteUrl + "/") && entry.url !== productionSiteUrl)) {
