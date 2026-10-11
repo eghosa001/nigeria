@@ -28,6 +28,8 @@ function format(value: number | null) {
 export function AdminSearchConsoleStatus() {
   const [status, setStatus] = useState<State>({ kind: "loading" });
   const [refreshing, setRefreshing] = useState(false);
+  const [serviceAccountEmail, setServiceAccountEmail] = useState<string | null>(null);
+  const [emailCopied, setEmailCopied] = useState(false);
 
   const check = useCallback(async () => {
     setRefreshing(true);
@@ -41,7 +43,9 @@ export function AdminSearchConsoleStatus() {
       }
       const result = await response.json() as {
         configured?: boolean; report?: SearchConsoleHourlyReport; error?: string;
+        serviceAccount?: { email?: string | null; origin?: string; siteUrl?: string };
       };
+      setServiceAccountEmail(result.serviceAccount?.email ?? null);
       if (!response.ok) {
         setStatus({ kind: "error", explanation: result.error || "The health check could not be loaded." });
       } else if (!result.configured) {
@@ -78,7 +82,27 @@ export function AdminSearchConsoleStatus() {
         <div className="admin-empty" role="status">
           <strong>{status.kind === "error" ? "Unable to check Google" : "Google Search Console not reporting"}</strong>
           <p>{status.explanation}</p>
-          {status.kind === "unavailable" ? <SearchConsoleConnectionHelp issue={status.issue} /> : null}
+          {status.kind === "unavailable" && status.issue?.code === "property-permission" ? (
+            <div className="gsc-copy-account">
+              <strong>Account to add to Google Search Console</strong>
+              <p>{serviceAccountEmail ?? "No service-account email is configured on this server."}</p>
+              {serviceAccountEmail ? (
+                <button type="button" className="admin-refresh-button" onClick={async () => {
+                  try {
+                    await navigator.clipboard.writeText(serviceAccountEmail);
+                    setEmailCopied(true);
+                  } catch {
+                    setEmailCopied(false);
+                  }
+                }}>
+                  {emailCopied ? "Copied email" : "Copy account email"}
+                </button>
+              ) : null}
+            </div>
+          ) : null}
+          {status.kind === "unavailable"
+            ? <SearchConsoleConnectionHelp issue={status.issue} serviceAccountEmail={serviceAccountEmail} />
+            : null}
           {status.kind === "unavailable" && status.issue?.code === "api-disabled"
             ? <p>Other analytics and historical data are unaffected. This is an API activation error, not yet evidence of a Search Console property-permission problem.</p>
             : <p>Existing website traffic analytics and historical data are unaffected. The Google service account must have permission to read <code>sc-domain:mynigeriaguide.com</code>.</p>}
