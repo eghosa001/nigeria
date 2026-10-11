@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+import { resolve } from "node:path";
 
 /**
  * Free Nigeria editorial signal collector. Source labels mean exactly:
@@ -268,6 +269,6 @@ async function main() {
     process.exitCode = 1;
   }
 }
-if (process.argv[1] && fileURLToPath(import.meta.url) === fileURLToPath(new URL("file://" + process.argv[1]))) {
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   await main();
 }
