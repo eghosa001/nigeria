@@ -2,10 +2,8 @@ name: Evergreen Google Autocomplete Research
 
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - "tools/google-autocomplete-research.mjs"
-      - ".github/workflows/google-autocomplete-research.yml"
+  schedule:
+    - cron: "0 5 * * 2" # weekly on Tuesday, 06:00 Africa/Lagos
 
 permissions:
   contents: read
