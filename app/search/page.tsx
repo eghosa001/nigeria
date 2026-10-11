@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { searchGlobalCatalog } from "@/lib/global-search";
+import { SearchResultsAnalytics } from "@/components/search-results-analytics";
 
 export const metadata: Metadata = {
   title: "Search MyNigeriaGuide",
@@ -36,6 +37,7 @@ export default async function SearchPage({
 
   return (
     <>
+      <SearchResultsAnalytics query={query} resultCount={totalShown} />
       <section className="global-search-hero">
         <div className="container global-search-hero-inner">
           <span className="eyebrow">Search MyNigeriaGuide</span>
