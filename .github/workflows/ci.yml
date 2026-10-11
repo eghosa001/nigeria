@@ -74,7 +74,12 @@ jobs:
             non_maintenance="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|package\.json$|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
             tour_lookup_trigger="$(printf '%s\n' "$changed" | grep -E '^(tests/tour-lookup-index\.test\.ts$|scripts/bench-tour-lookup\.ts$)' || true)"
             non_tour_lookup="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|lib/(explore|explore-places)\.ts$|tests/tour-lookup-index\.test\.ts$|scripts/bench-tour-lookup\.ts$)' || true)"
-            if [ -n "$tour_lookup_trigger" ] && [ -z "$non_tour_lookup" ]; then
+            youtube_directory_trigger="$(printf '%s\n' "$changed" | grep -E '^(tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
+            non_youtube_directory="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
+            if [ -n "$youtube_directory_trigger" ] && [ -z "$non_youtube_directory" ]; then
+              echo "mode=youtube-directory" >> "$GITHUB_OUTPUT"
+              echo "YouTube directory-only change: exact result parity and bounded lookup CPU checks."
+            elif [ -n "$tour_lookup_trigger" ] && [ -z "$non_tour_lookup" ]; then
               echo "mode=tour-lookup" >> "$GITHUB_OUTPUT"
               echo "Tour lookup-only edit: check exact result parity and bounded CPU comparison."
             elif [ -n "$catalog_hotpath_trigger" ] && [ -z "$non_catalog_hotpath" ]; then
@@ -109,6 +114,12 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip'
+      - name: Verify YouTube directory query compatibility
+        if: steps.scope.outputs.mode == 'youtube-directory'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npx tsx --test tests/youtube-directory-query.test.ts
+          npx tsx scripts/bench-youtube-directory.ts
       - name: Validate Tour lookup index
         if: steps.scope.outputs.mode == 'tour-lookup'
         run: |

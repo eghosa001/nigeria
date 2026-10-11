@@ -48,6 +48,17 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
+          # Server-only YouTube directory filtering has exact-output unit parity
+          # plus one browser route regression; avoid a duplicate Workers build.
+          youtube_directory_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
+          non_youtube_directory="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
+          if [ -n "$youtube_directory_trigger" ] && [ -z "$non_youtube_directory" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-directory" >> "$GITHUB_OUTPUT"
+            echo "Focused route checks run in Browser QA and CI; no duplicate Workers runtime job."
+            exit 0
+          fi
+
           # Catalog/search maintenance and proven orphan removal cannot change
           # a rendered component. CI has focused tests; skip browser install/build.
           maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
