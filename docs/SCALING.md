@@ -100,7 +100,7 @@ It supports:
 - indexed common filters;
 - FTS5 full-text search.
 
-Do not create the production D1 binding with a guessed ID. Create the database in the owner's Cloudflare account, then bind it as `CONTENT_DB` and migrate one content type at a time.
+Production `CONTENT_DB` is already registered in `wrangler.jsonc` and `YOUTUBE_D1_CUTOVER` is enabled. **Do not provision a duplicate production database or re-run a migration over live content.** Future pillars must reuse the authorized binding and move one content type at a time after verifying the current deployment configuration and data parity. A configured binding does not mean every pillar is already D1-backed.
 
 ### Phase C — high traffic
 
@@ -111,6 +111,20 @@ At sustained high traffic:
 - move media to R2;
 - use scheduled/queued refresh jobs for jobs, releases, events and source verification;
 - split databases by workload only if measured D1 contention requires it.
+
+## Scale readiness gates (not satisfied by a configuration target alone)
+
+The existing build generates static, sharded sitemap XML from checked-in or generated catalog adapters. The production D1 binding and YouTube runtime cutover do **not** automatically make newly published D1-only URLs discoverable through these files. Before any pillar publishes indexable content that exists only in D1, implement and verify a canonical sitemap publication path for that pillar (for example, a source-backed scheduled export and atomic static artifact publication). Never add draft, expired, duplicate, blocked or noncanonical records.
+
+A pillar is ready to move its **public indexed corpus** to D1 only when the following checks pass on a small representative dataset:
+
+1. **Read parity:** public details, server-side HTML/metadata/schema, search, directory pagination and related links resolve the same canonical record and publication status. Existing URLs and redirects remain unchanged.
+2. **Crawl parity:** the sitemap exporter reads approved published records from the same authoritative publication source as the page renderer; generated XML retains accurate `lastmod`, unique canonicals and consistent shard/index membership.
+3. **Lifecycle parity:** edits, removals, expirations and corrections update page content and sitemap membership in an auditable cycle. Record-to-URL mapping must be explicit: **a tour place, employer, film or video record is not automatically an indexable page**.
+4. **Operational parity:** check D1 rows-read/query latency, Worker response size, cache invalidation, Worker error rates and mobile performance against representative realistic traffic before promoting a rollout. Prepare rollback to the last validated adapter without losing editorial state.
+5. **Measurement parity:** distinguish settled Search Console impressions/clicks from real-time GA4/PostHog usage. Never claim hourly Google-indexing updates or guaranteed traffic growth. Evaluate changes against stable 28-day cohorts and genuine user utility.
+
+**Capacity is not validation:** 100,000 indexable URLs, 10 million monthly pageviews and 1 million underlying records are design ceilings, not current measured capacity. Do not claim these throughput levels are supported until a realistic load test and a D1-backed end-to-end crawl audit pass. Improve existing performing canonicals before allocating new URLs. Keep routine CI change-scoped; reserve representative load tests for migrations and measured scale bottlenecks.
 
 ## Sitemap model
 
