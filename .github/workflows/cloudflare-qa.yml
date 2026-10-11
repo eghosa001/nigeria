@@ -59,6 +59,17 @@ jobs:
             exit 0
           fi
 
+          # Full source JSON is excluded from the Worker entrypoint by this
+          # change. Validate one actual Workers-rendered YouTube listing.
+          youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+          non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+          if [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-runtime" >> "$GITHUB_OUTPUT"
+            echo "One Workers build and YouTube directory browser smoke directly cover the bundle-import change."
+            exit 0
+          fi
+
           # Catalog/search maintenance and proven orphan removal cannot change
           # a rendered component. CI has focused tests; skip browser install/build.
           maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
@@ -155,6 +166,9 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Verify packed YouTube directory on Workers
+        if: steps.scope.outputs.mode == 'youtube-runtime'
+        run: npx playwright test tests/entertainment.spec.ts --config playwright.cloudflare.config.ts --workers=1 --grep "youtube movie directory is populated and searchable by publisher"
       - name: Run Tour hub regression
         if: steps.scope.outputs.mode == 'tour'
         run: npx playwright test tests/explore.spec.ts --config playwright.cloudflare.config.ts --workers=1 --grep "Tour hub stays compact and keeps deep navigation available"
@@ -165,7 +179,7 @@ jobs:
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --config playwright.cloudflare.config.ts --workers=1
       - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context'
+        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime'
       - name: Upload Cloudflare Playwright report on failure
         if: failure() && steps.scope.outputs.run == 'true'
         uses: actions/upload-artifact@v4
