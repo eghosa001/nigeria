@@ -34,7 +34,7 @@ export function Analytics() {
     if (analyticsWindow.__mngLastTrackedPath !== pathname) {
       gtag("event", "page_view", {
         page_path: pathname,
-        page_location: window.location.href,
+        page_location: pathname === "/search" ? window.location.origin + pathname : window.location.href,
         page_title: document.title,
       });
       analyticsWindow.__mngLastTrackedPath = pathname;
