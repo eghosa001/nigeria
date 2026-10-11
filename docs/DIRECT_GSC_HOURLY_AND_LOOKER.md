@@ -9,9 +9,9 @@ Go to **/admin/visits** and unlock the existing admin/analytics protection. Belo
 - endpoint: `POST /webmasters/v3/sites/{encoded site}/searchAnalytics/query`
 - body: `{ "startDate": "...", "endDate": "...", "type":"web", "dataState":"hourly_all", "dimensions":["hour"], "aggregationType":"byProperty", "rowLimit":150 }`
 - reporting day timezone: **America/Los_Angeles**; hourly timestamps contain an offset and are *displayed* in Lagos time
-- query window: current Pacific reporting date and 3 previous dates; API results can omit empty hours
-- the latest returned hour and its age are shown **separately** from the request end date and the fetch timestamp
-- `metadata.first_incomplete_hour` is used only when Google returns it. Never claim an unmarked hour has finalized.
+- query window: current Pacific reporting date and 9 previous dates (up to Google's 10-day hourly retention); API results can omit empty hours
+- the latest returned hour and its age are shown **separately** from the request end date and the fetch timestamp; the dashboard also shows last-24-hour impressions/clicks **only for hours actually returned**, displaying an unavailable dash rather than a false zero if Google has not supplied recent hours
+- `metadata.firstIncompleteHour` (Google API JSON camelCase, legacy snake_case accepted) is used only when Google returns it. Never claim an unmarked hour has finalized.
 - hourly numbers are preliminary and can be corrected by Google; this is not live visitor tracking
 - the 5-minute server report cache helps avoid unnecessary repeat API calls; **Refresh now** bypasses that cache
 - if API authorization fails or rows are missing, hourly metrics show **unavailable**, not fabricated zeros or an old snapshot
@@ -44,7 +44,7 @@ Google's [official dashboard template](https://lookerstudio.google.com/reporting
 4. Select MyNigeriaGuide's existing GA4 property as the second source. Review the preview, then save the report to the owner's Looker Studio account.
 5. If a second property-aggregate view is needed, add a separate **Site Impression** data source; don't sum URL-level rows and call them site-level impressions.
 
-The owner must complete Google's OAuth consent in Looker Studio. **This repository cannot create or authorize a report in someone else's Looker Studio account.** Google provides the native connector for free. Looker Studio's cached/historical dashboard is **not** guaranteed fresher than Google Search Console. For preliminary hourly visibility, use the private Visits view above.
+The owner must complete Google's OAuth consent in Looker Studio. **This repository cannot create or authorize a report in someone else's Looker Studio account.** Google provides the native connector for free. In 2026 Google renamed Looker Studio back to Data Studio; existing template links redirect. Looker Studio's cached/historical dashboard is **not** guaranteed fresher than Google Search Console. For preliminary hourly visibility, use the private Visits view above.
 
 Official documentation:
 
