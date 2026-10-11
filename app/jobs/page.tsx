@@ -66,6 +66,7 @@ export default function JobsPage() {
             <span className="eyebrow">Jobs & Careers</span>
             <h1>Know what is open. Know what you need. Apply at the source.</h1>
             <p className="page-intro">Government recruitment, graduate opportunities, internships, NGO/UN pathways and reputable employer career routes — checked against the organisation responsible for the application.</p>
+            <p className="job-muted">Newly checked 11 October 2026: <Link href="/jobs/moniepoint-early-careers-talent-acquisition-specialist">Moniepoint’s Early Careers Talent Acquisition Specialist vacancy</Link> is an experienced recruiting role requiring 5–7 years, not a graduate-trainee opening. Confirm its current availability on the employer’s official application page.</p>
             <form className="section-quick-search" action="/jobs#opportunities" method="get" role="search">
               <label>
                 <span>Search jobs & careers</span>
