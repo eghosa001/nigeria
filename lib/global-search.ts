@@ -119,12 +119,19 @@ export async function searchGlobalCatalog(query: string) {
     .map((entry) => entry.item);
 
   const jobResults = jobOpportunities
-    .map((item) => ({
-      item,
-      score: relevance(item.title,
+    .map((item) => {
+      const matchScore = relevance(item.title,
         [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
-      ) + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4),
-    }))
+      );
+      // Availability boosts only matched results. Previously every open role
+      // scored +24 even for completely unrelated searches.
+      return {
+        item,
+        score: matchScore > 0
+          ? matchScore + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4)
+          : 0,
+      };
+    })
     .filter((entry) => entry.score > 0)
     .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
     .slice(0, 8)
