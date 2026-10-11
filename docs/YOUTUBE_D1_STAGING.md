@@ -1,6 +1,6 @@
 # YouTube catalog → D1: verified, offline migration preparation
 
-**Status:** SQL export tool ready for staging; **NO database created, bound, migrated, enabled or queried in production**. This is an infrastructure prerequisite for MyNigeriaGuide's existing 5,000-record content-store threshold, not an assertion that pages are already database-backed.
+**Status:** The owner provided a real **staging** D1 database name and UUID. A separate Wrangler CLI-only config now points to this staging database; the existing production `wrangler.jsonc` remains unchanged. The actual database has **not** been inspected, populated or bound to live Worker routes unless the owner explicitly runs the manual staging workflow described below.
 
 ## Why now
 
@@ -25,32 +25,53 @@ node scripts/export-youtube-d1.mjs --dry-run
 
 Output reports the source record count, SQL chunk count and estimated SQL bytes. Nothing is written or deployed.
 
-## Deliberate, later staging import (requires a real owner-approved D1 database)
+## Authorized staging database — guarded import via GitHub Actions
 
-**Never invent or hardcode a Cloudflare D1 database ID or bind the production Worker to an unverified database.** When a real staging D1 database is created and authorized:
+The owner-provided database configuration has been registered **only** in `wrangler.d1-staging.jsonc`:
+
+- Database: `mynigeriaguide-content-staging`
+- Database UUID: `47fdffad-9513-484f-94be-4b176662cc71`
+- Binding: `DB` (matches the configuration supplied by the owner)
+
+The staging-only configuration has a distinct Worker name and is **never included in the production `wrangler.jsonc`**. The public D1 read adapter accepts an injected binding and is not yet connected to production. A future active production binding may be named `CONTENT_DB` only after a separately approved cutover.
+
+A new **manual-only** GitHub Actions workflow named **YouTube D1 Staging Import (manual only)** can inspect or populate this database. Nothing runs automatically when a pull request is merged.
+
+1. Open GitHub → repository `eghosa001/nigeria` → **Actions** → **YouTube D1 Staging Import (manual only)** → **Run workflow**.
+2. First choose `inspect`; leave confirmation blank. This checks the configured Cloudflare account, verifies the exact staging database name and ID, and reads whether the `content_items` schema exists. **This mode never writes to D1.**
+3. Only after the inspection succeeds, run the workflow again choosing `import`, and enter **`IMPORT_STAGING_ONLY`** in the confirmation field. This explicitly approves writes **only to the staging database**, not the public site or production database.
+4. The workflow uses the existing GitHub Actions secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`, which must belong to the correct Cloudflare account and include D1 read/edit permissions. **Never paste the token into a chat or repository file.**
+5. The importer validates the account-listed remote database ID before executing SQL. It exports and verifies original movie records, creates the existing content schema in staging, writes up to 40 records per batch, and verifies the final counts. Re-running is idempotent and does not change manually published statuses.
+6. The existing YouTube source JSON, 16 detail shards, 2.13 MB packed runtime listing, canonical links, index/noindex decisions, AdSense and analytics remain **unchanged** in production.
+
+**D1 compatibility:** The existing offline export has explicit SQLite `BEGIN TRANSACTION`, `COMMIT`, and `PRAGMA foreign_keys = ON` controls; Cloudflare D1 operates using implicit transactions and rejects such controls in imported SQL. The staging runner safely strips only the known control lines from temporary copies, retaining the existing reviewed source export and schema unchanged. It rejects any unexpected export format. See [Cloudflare D1 import documentation](https://developers.cloudflare.com/d1/best-practices/import-export-data/).
+
+If the GitHub workflow says required Cloudflare secrets are missing or lacks D1 permissions, set the secrets in GitHub Settings → Secrets and variables → Actions, granting only required Cloudflare permissions. Do **not** change production Worker bindings as a workaround.
+
+### Command-line alternative for an authorized operator
+
+From a checkout with dependencies installed and authenticated Wrangler environment variables:
 
 ```bash
-node scripts/export-youtube-d1.mjs --output-dir /tmp/mynigeriaguide-youtube-d1
+node scripts/youtube-d1-staging-runner.mjs --inspect
+CONFIRM_YOUTUBE_D1_IMPORT=IMPORT_STAGING_ONLY node scripts/youtube-d1-staging-runner.mjs --import
 ```
 
-The export folder must initially be empty. Review `manifest.json` and import files; apply `cloudflare/d1/content-scale-schema.sql` to the **staging** D1 instance first. Apply `part-*.sql` in numerical order in the same explicitly selected staging database using the current Cloudflare Wrangler D1 CLI. Do not use the site's production database name until staging counts and source parity are verified.
+The commands perform the same explicit DB-ID verification and operate **only against the registered staging D1**. Do not run the second command until `--inspect` succeeds.
 
-Read-only checks after staging import:
+### Read-only status verification after import
 
 ```sql
-SELECT count(*) FROM content_items
+SELECT COUNT(*) FROM content_items
 WHERE pillar='movies_entertainment' AND kind='youtube-movie';
 
-SELECT count(*) FROM content_sources AS s
+SELECT COUNT(*) FROM content_sources AS s
 JOIN content_items AS i ON i.id=s.content_id
 WHERE i.pillar='movies_entertainment' AND i.kind='youtube-movie';
-
-SELECT count(*) FROM content_items
-WHERE pillar='movies_entertainment' AND kind='youtube-movie'
-  AND editorial_status != 'draft';
 ```
 
-Initial import of an empty staging database should yield **3,690** movie records, corresponding publisher sources, and **zero automatically published records**. Existing staging data may change the latter two totals; investigate differences rather than automatically deleting anything.
+An empty staging DB populated from the checked-in snapshot should contain 3,690 movie records and corresponding publisher sources. Never mistake this staging import for publishing: every newly inserted movie remains **draft**.
+
 
 ## Next validation gate: full offline source parity and typed D1 reads
 
@@ -58,13 +79,13 @@ Initial import of an empty staging database should yield **3,690** movie records
 
 `lib/youtube-d1-repository.ts` is a small server-only, **read-only** D1 binding interface. It accepts an explicitly supplied, real D1 binding; it does not import a Cloudflare account, provision a database, or change the public website. The public-safe record read requires `editorial_status = 'published'`; the separately named staging-read function can inspect draft source records for migration verification. Both validate the exact video ID, canonical path and trusted watch URL. A staging health function returns status counts only.
 
-When a real D1 instance is provisioned, vinext on Cloudflare Workers supports accessing its binding using `import { env } from "cloudflare:workers"` in **server-only code**. Bind only the owner's actual staging D1 ID as `CONTENT_DB` after it is explicitly created; do **not** guess an ID or edit this project's production Worker config yet. Staging code can pass `env.CONTENT_DB` into the repository boundary, compare results against checked-in records and observe SQL latency.
+When a real D1 instance is provisioned, vinext on Cloudflare Workers supports accessing its binding using `import { env } from "cloudflare:workers"` in **server-only code**. The owner's staging D1 ID has now been registered separately as `DB` in `wrangler.d1-staging.jsonc`. Do **not** edit the public production Worker config or introduce a real-user route switch yet. Staging code can pass `env.CONTENT_DB` into the repository boundary, compare results against checked-in records and observe SQL latency.
 
 These added checks establish offline SQL/export correctness and a production-safe read API, **not** a successful Cloudflare D1 connection, database migration, runtime cutover or measured real-user loading improvement.
 
 ## Required work before production cutover
 
-1. Provision the actual D1 database and `CONTENT_DB` binding with permission from the owner. No such binding is added here.
+1. Inspect the owner-supplied staging D1 via the manual GitHub Actions workflow, then explicitly import the source records there. No production binding is added here.
 2. Run real D1 staging import, read back metadata/payload/source parity, and measure SQL rows-read and query times with pagination and FTS5. Preserve title-search semantics or explicitly test and document changed behavior.
 3. Introduce a server-side content repository with bounded D1 queries. Switch one public route at a time behind an explicit feature flag, keeping the checked-in catalog as a safe fallback until verified. D1 never feeds arbitrary raw data to visitors.
 4. Keep current canonical URLs, sitemap and index/noindex editorial rules exactly intact; verify the active Workers runtime before a public cutover.
