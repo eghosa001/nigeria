@@ -88,14 +88,25 @@ function queryTokens(query: string) {
   return [...expanded];
 }
 
-function countMatches(text: string, tokens: string[]) {
-  const normalized = normalize(text);
-  return tokens.reduce((score, token) => score + (normalized.includes(token) ? 1 : 0), 0);
+// The expensive query expansion (aliases + fuzzy edit-distance checks) must
+// run once per search, not once per service in the catalog.
+function prepareServiceQuery(query: string) {
+  const normalizedQuery = normalize(query);
+  return {
+    normalizedQuery,
+    tokens: queryTokens(query),
+    originalTokens: normalizedQuery.split(/\s+/).filter((token) => token && !stopWords.has(token)),
+  };
 }
 
-export function scoreService(service: SearchableService, query: string) {
-  const normalizedQuery = normalize(query);
-  const tokens = queryTokens(query);
+type PreparedServiceQuery = ReturnType<typeof prepareServiceQuery>;
+
+function countMatches(normalizedText: string, tokens: string[]) {
+  return tokens.reduce((score, token) => score + (normalizedText.includes(token) ? 1 : 0), 0);
+}
+
+function scorePreparedService(service: SearchableService, prepared: PreparedServiceQuery) {
+  const { normalizedQuery, tokens, originalTokens } = prepared;
   if (!normalizedQuery || !tokens.length) return 0;
 
   let score = 0;
@@ -118,9 +129,9 @@ export function scoreService(service: SearchableService, query: string) {
   score += countMatches(steps, tokens);
   score += countMatches(searchText, tokens);
 
-  const originalTokens = normalize(query).split(/\s+/).filter((token) => token && !stopWords.has(token));
+  const fields = [title, shortTitle, terms, summary, category, requirements, steps, searchText];
   const coverage = originalTokens.filter((token) =>
-    [title, shortTitle, terms, summary, category, requirements, steps, searchText].some((field) => field.includes(token)),
+    fields.some((field) => field.includes(token)),
   ).length;
 
   if (originalTokens.length && coverage === originalTokens.length) score += 15;
@@ -129,12 +140,18 @@ export function scoreService(service: SearchableService, query: string) {
   return score;
 }
 
+// Preserve the public scoring API for callers that evaluate one service.
+export function scoreService(service: SearchableService, query: string) {
+  return scorePreparedService(service, prepareServiceQuery(query));
+}
+
 export function searchServices<T extends SearchableService>(services: T[], query: string, limit = 8) {
   const clean = query.trim();
   if (!clean) return services.slice(0, limit).map((service) => ({ service, score: 0 }));
 
+  const prepared = prepareServiceQuery(clean);
   return services
-    .map((service) => ({ service, score: scoreService(service, clean) }))
+    .map((service) => ({ service, score: scorePreparedService(service, prepared) }))
     .filter((result) => result.score > 0)
     .sort((a, b) => b.score - a.score || a.service.shortTitle.localeCompare(b.service.shortTitle))
     .slice(0, limit);
