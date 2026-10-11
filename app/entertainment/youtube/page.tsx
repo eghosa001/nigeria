@@ -15,8 +15,8 @@ export async function generateMetadata({
   const params = await searchParams;
   const filtered = Boolean((params.q ?? "").trim() || (params.channel ?? "").trim() || Number(params.page ?? "1") > 1);
   return {
-    title: "Full Nigerian Movies on YouTube",
-    description: "Browse full Nigerian and Nollywood movies on YouTube by title, actor and publisher.",
+    title: "Nigerian Movies on YouTube 2026: Full & Free",
+    description: "Find the latest 2026 Nigerian movies on YouTube, Yoruba films and full Nollywood movies. Browse verified original publishers and watch legally for free.",
     alternates: { canonical: "/entertainment/youtube" },
     robots: filtered ? { index: false, follow: true } : undefined,
   };
@@ -55,7 +55,7 @@ export default async function YouTubeMoviesPage({
           <div className="movie-browse-heading">
             <div>
               <span className="eyebrow">Free on YouTube</span>
-              <h1>Full Nigerian movies on YouTube.</h1>
+              <h1>Full Nigerian movies on YouTube: latest 2026 releases.</h1>
               <p className="page-intro">Browse {discoverableYouTubeMovies.length.toLocaleString()} source-verified full-length Nigerian movies. Search by movie, actor or publisher, open the details page, then use the verified YouTube watch link.</p>
             </div>
           </div>
