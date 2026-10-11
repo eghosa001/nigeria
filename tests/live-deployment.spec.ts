@@ -47,36 +47,53 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(slots).toContain("8499139757");
   });
 
-  test("public analytics initializes GA4 and the PostHog SDK", async ({ page }) => {
+  test("production analytics bootstrap configures GA4 and PostHog without QA traffic", async ({ page }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 
     await page.addInitScript(() => {
-      // GA4 is explicitly disabled for webdriver traffic by MyNigeriaGuide, so
-      // override that one signal for the GA4 request assertion. Keep the
-      // HeadlessChrome signals intact so PostHog's own bot filter prevents this
-      // QA run from becoming a counted website visitor.
+      // Exercise the real app bootstrap while keeping QA traffic out of
+      // measurements. Google CDN and collection hosts are external services;
+      // don't conflate an ad-blocker/CDN outage with app configuration state.
       Object.defineProperty(Navigator.prototype, "webdriver", {
         configurable: true,
         get: () => false,
       });
     });
 
-    let collectUrl = "";
-    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, async (route) => {
-      collectUrl = route.request().url();
-      await route.abort();
+    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, (route) => route.abort());
+    // Fail closed: test events must not reach PostHog ingestion.
+    await page.route(/https:\/\/[^/]*posthog\.com\/.*/, (route) => {
+      if (route.request().method() === "POST") return route.abort();
+      return route.continue();
     });
-
 
     await page.goto("/");
     await expect(
       page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
     ).toHaveCount(1);
+
+    // A blocked Google tag download can prevent /g/collect despite correct
+    // site bootstrap. Assert the actual queued GA4 initialization instead of
+    // requiring an external third-party request or fabricating a pageview.
+    await expect.poll(() => page.evaluate(() => {
+      const w = window as Window & typeof globalThis & {
+        dataLayer?: IArguments[];
+      };
+      const layer = w.dataLayer ?? [];
+      return layer.some((row) => {
+        const args = Array.from(row);
+        return args[0] === "config" &&
+          args[1] === "G-J1SBV02XGN" &&
+          typeof args[2] === "object" &&
+          args[2] != null &&
+          (args[2] as { anonymize_ip?: boolean }).anonymize_ip === true;
+      });
+    })).toBe(true);
     await expect.poll(
       () => page.evaluate(() => (window as Window & { __mngPostHogInitialized?: boolean }).__mngPostHogInitialized),
       { timeout: 15_000 },
     ).toBe(true);
-    await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
+    // Outgoing GA4/PostHog events are intercepted rather than counted as visits.
   });
 
 
@@ -186,6 +203,24 @@ test("resolved fee guides no longer show conflict warnings", async ({ page }) =>
     );
 
     await page.goto("/admin/visits");
+    await expect(page).toHaveURL(/\.cloudflareaccess\.com\/cdn-cgi\/access\/login\//);
+    await expect(page).toHaveTitle(/Cloudflare Access/i);
+  });
+
+
+  test("new editorial radar remains protected by Cloudflare Access", async ({ page, request }) => {
+    test.skip(!process.env.LIVE_BASE_URL, "Production-only admin protection check.");
+
+    const response = await request.get("/admin/trends", {
+      failOnStatusCode: false,
+      maxRedirects: 0,
+    });
+    expect(response.status()).toBe(302);
+    expect(response.headers().location).toMatch(
+      /^https:\/\/[^/]+\.cloudflareaccess\.com\/cdn-cgi\/access\/login\//,
+    );
+
+    await page.goto("/admin/trends");
     await expect(page).toHaveURL(/\.cloudflareaccess\.com\/cdn-cgi\/access\/login\//);
     await expect(page).toHaveTitle(/Cloudflare Access/i);
   });
