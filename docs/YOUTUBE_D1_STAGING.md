@@ -1,6 +1,62 @@
 # YouTube catalog → D1: verified, offline migration preparation
 
-**Status:** The owner provided a real **staging** D1 database name and UUID. A separate Wrangler CLI-only config now points to this staging database; the existing production `wrangler.jsonc` remains unchanged. The actual database has **not** been inspected, populated or bound to live Worker routes unless the owner explicitly runs the manual staging workflow described below.
+**Status:** Staging import workflow [38134241304](https://github.com/eghosa001/nigeria/actions/runs/38134241304) completed successfully. The imported snapshot contains 3,690 movies, publisher sources and FTS entries. This is staging data, not publication. Production `wrangler.jsonc` has no D1 binding.
+
+## Server query integration (11 October 2026)
+
+The directory, numbered directory pages and detail/metadata readers now use
+`lib/youtube-server-store.ts`. Its explicit default is **static** and preserves
+the existing results, canonicals, redirects, metadata, noindex decisions and
+cache/static-generation settings. There is no environment-variable switch that
+can accidentally attach staging to visitors.
+
+`createYouTubeServerStore({ mode: 'd1', db })` accepts an injected binding for
+controlled server validation. It uses parameterized FTS5 search, exact publisher
+filtering, 48-row pages, deterministic ordering and the existing detail
+normalizer/curated redirects. Public D1 queries require `published`; empty
+results, missing records and errors never silently fall back to static data
+that could resurrect withdrawn records. Rollback is the explicit static mode.
+The separately named staging reader is internal only and has no public endpoint.
+
+Focused evidence:
+
+- SQLite executes the actual query SQL to cover FTS, injection-like inputs,
+  page boundaries, stable ordering and exclusion of every non-published status.
+- Static server-adapter comparisons preserve existing directory/detail data and
+  indexability inputs; published D1 detail normalization is checked separately.
+- `scripts/check-youtube-d1-types.mjs` checks the affected server dependency graph
+  and syntax of the three changed templates, without building the whole site.
+- The integration-only PR CI invokes `scripts/verify-youtube-d1-queries.ts` with
+  repository Cloudflare credentials. It verifies the exact staging identity,
+  reads all source payloads and publisher evidence in bounded pages, compares
+  sampled query results to SQLite, and records D1 rows-read, SQL/wall timings and
+  query plans in the `youtube-d1-query-evidence` artifact. It sends SELECT and
+  EXPLAIN queries only; no import, schema change, status update or deployment.
+- No broad test suite or duplicate post-merge staging probe is added. The
+  existing owner policy guard remains intact.
+
+### Cutover remains blocked, not implicitly approved
+
+The current FTS search uses literal Unicode words combined with AND and BM25
+ranking. Legacy search uses a contiguous substring of normalized display text
+and title-first ranking. These are **not equivalent** (partial words, phrase
+ordering, title cleanup, normalized synopses and curated overlays differ).
+The remote report exposes comparison results; matching raw-source/SQLite
+results does not establish public search parity.
+
+Before activating D1, resolve or approve those semantics and account for curated
+records missing from the source import, alternate/related sources, publisher
+options, totals, sitemap inventory and static numbered-page generation. Review
+the measured query plans: FTS is indexed, while date sorting and JSON publisher
+filtering may require dedicated indexes before growth. Offset pages are bounded
+to 1,000; larger inventories need a cursor strategy preserving public URLs.
+
+A real production database ID/binding, publication decisions for reviewed
+records, an incremental sync strategy, Workers cache/runtime verification and
+explicit production cutover approval are still required. **Do not copy draft
+statuses to public, bind the staging UUID to production, or claim a production
+speedup from staging SQL timings.** Visual/retention scores and production D1
+performance remain unverified.
 
 ## Why now
 
@@ -93,3 +149,4 @@ These added checks establish offline SQL/export correctness and a production-saf
 6. Record observed Cloudflare cold-start, Worker CPU, rows-read and real-page Web Vitals; do not claim speedups without a paired measurement.
 
 The focused test `node --test scripts/export-youtube-d1.test.mjs` executes the existing D1 schema and generated fixture SQL against ephemeral in-memory SQLite, tests FTS5, stable URLs, full JSON integrity, idempotency and injection-safe escaping. It never contacts a database service.
+

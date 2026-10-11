@@ -4,7 +4,8 @@ import { redirect } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { discoverableYouTubeMovies } from "@/lib/youtube-library";
-import { queryYouTubeDirectory, youtubePublisherOptions } from "@/lib/youtube-directory-query";
+import { youtubePublisherOptions } from "@/lib/youtube-directory-query";
+import { youtubeServerStore } from "@/lib/youtube-server-store";
 
 export async function generateMetadata({
   searchParams,
@@ -36,7 +37,7 @@ export default async function YouTubeMoviesPage({
     redirect("/entertainment/youtube/page/" + requestedPage);
   }
 
-  const { movies: visible, page, pageCount } = queryYouTubeDirectory({
+  const { movies: visible, page, pageCount } = await youtubeServerStore.query({
     q: params.q,
     channel: params.channel,
     page: params.page,
@@ -112,3 +113,4 @@ export default async function YouTubeMoviesPage({
     </>
   );
 }
+

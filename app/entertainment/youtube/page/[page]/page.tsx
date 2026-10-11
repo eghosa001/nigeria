@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { verifiedYouTubeMovieChannels } from "@/lib/youtube-movie-channels";
-import { getYouTubeCatalogPage, getYouTubeCatalogPageCount } from "@/lib/youtube-pagination";
+import { getYouTubeCatalogPageCount } from "@/lib/youtube-pagination";
+import { youtubeServerStore } from "@/lib/youtube-server-store";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -17,7 +18,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ page: string }> }): Promise<Metadata> {
   const value = Number((await params).page);
-  const catalog = getYouTubeCatalogPage(value);
+  const catalog = await youtubeServerStore.catalogPage(value);
   if (!catalog || value === 1) return { robots: { index: false, follow: true } };
 
   return {
@@ -30,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ page: str
 
 export default async function YouTubeMoviesPaginationPage({ params }: { params: Promise<{ page: string }> }) {
   const pageNumber = Number((await params).page);
-  const catalog = getYouTubeCatalogPage(pageNumber);
+  const catalog = await youtubeServerStore.catalogPage(pageNumber);
   if (!catalog || pageNumber === 1) notFound();
 
   const previousHref = pageNumber === 2 ? "/entertainment/youtube" : "/entertainment/youtube/page/" + (pageNumber - 1);
@@ -96,3 +97,4 @@ export default async function YouTubeMoviesPaginationPage({ params }: { params: 
     </>
   );
 }
+

@@ -7,7 +7,8 @@ import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
-import { getRelatedYouTubeDetailMovies, getYouTubeDetailMovieById, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
+import { getRelatedYouTubeDetailMovies, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
+import { youtubeServerStore } from "@/lib/youtube-server-store";
 
 export const revalidate = 86400;
 
@@ -35,7 +36,7 @@ function compactMetadata(value: string, maxLength = 155) {
 
 export async function generateMetadata({ params }: { params: Promise<{ videoId: string }> }): Promise<Metadata> {
   const { videoId } = await params;
-  const movie = await getYouTubeDetailMovieById(videoId);
+  const movie = await youtubeServerStore.detail(videoId);
   if (!movie) return {};
   const canonical = movie.source === "curated" ? movie.internalHref : "/entertainment/youtube/" + movie.videoId;
   const image = "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg";
@@ -83,7 +84,7 @@ function personHref(name: string) {
 
 export default async function YouTubeMovieDetailPage({ params }: { params: Promise<{ videoId: string }> }) {
   const { videoId } = await params;
-  const movie = await getYouTubeDetailMovieById(videoId);
+  const movie = await youtubeServerStore.detail(videoId);
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const base = getSiteUrl();
@@ -295,3 +296,4 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     </>
   );
 }
+

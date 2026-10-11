@@ -173,7 +173,7 @@ function normalizeSynopsis(movie: GeneratedRecord) {
   return text.slice(0, 360).trim();
 }
 
-function normalizeGenerated(movie: GeneratedRecord): YouTubeDetailMovie {
+export function normalizeGenerated(movie: GeneratedRecord): YouTubeDetailMovie {
   const title = cleanYouTubeDisplayTitle(movie.title || movie.rawTitle) || "Untitled Nigerian movie";
   const cast = normalizeCast(movie.cast ?? []);
   const featuredCast = normalizeCast(movie.featuredCast ?? []).filter((name) => cast.includes(name));
@@ -247,7 +247,7 @@ function reviewSynopsis(candidate: ReviewCandidate) {
     candidate.channelName + ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
 }
 
-function getCuratedMovie(videoId: string): YouTubeDetailMovie | undefined {
+export function getCuratedMovie(videoId: string): YouTubeDetailMovie | undefined {
   for (const title of entertainmentTitles) {
     const watch = title.watchLinks.find((link) => link.platform === "YouTube" && link.access === "full-movie");
     if (!watch || videoIdFromUrl(watch.href) !== videoId) continue;
