@@ -54,6 +54,16 @@ jobs:
             exit 0
           fi
 
+          # Tour D1 adapter and its unchanged existing travel canonicals use a
+          # focused FTS/publication regression; browser/runtime checks run separately.
+          tour_d1_changed="$(printf '%s\n' "$changed" | grep -E '^(lib/tour-place-(d1-repository|search-store)\.ts$|tests/tour-place-d1-repository\.test\.ts$)' || true)"
+          tour_d1_other="$(printf '%s\n' "$changed" | grep -Ev '^(lib/(tour-place-(d1-repository|search-store)|global-search)\.ts$|app/explore/\[slug\]/page\.tsx$|tests/tour-place-d1-repository\.test\.ts$|docs/research/tour-d1-indexed-search-2026-10-11\.md$|\.github/workflows/ci\.yml$)' || true)"
+          if [ -n "$tour_d1_changed" ] && [ -z "$tour_d1_other" ]; then
+            echo "mode=tour-indexed" >> "$GITHUB_OUTPUT"
+            echo "Tour D1 FTS and published-only adapter: focused check."
+            exit 0
+          fi
+
           if printf '%s\n' "$changed" | grep -Eq '^(lib/(search-console-hourly|analytics-data)\.ts|components/admin-analytics-dashboard\.tsx|tests/search-console-hourly\.test\.ts)$'; then
             echo "gsc_hourly_changed=true" >> "$GITHUB_OUTPUT"
           fi
@@ -195,6 +205,11 @@ jobs:
           python3 scripts/fast_path_guard.py
           npx tsx --test tests/youtube-directory-query.test.ts
           npx tsx scripts/bench-youtube-directory.ts
+      - name: Verify Tour D1 indexed publication boundary
+        if: steps.scope.outputs.mode == 'tour-indexed'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npx tsx --test tests/tour-place-d1-repository.test.ts
       - name: Validate Tour lookup index
         if: steps.scope.outputs.mode == 'tour-lookup'
         run: |
