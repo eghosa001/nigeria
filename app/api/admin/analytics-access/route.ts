@@ -1,3 +1,4 @@
+import { privateAdminHeaders as privateHeaders, protectedAdminApi, legacyRouteResponse, sameOrigin } from "@/lib/admin-api-guards";
 import { cookies } from "next/headers";
 import { adminCookieOptions } from "@/lib/admin-access";
 import { checkAdminLoginRateLimit, clearAdminLoginFailures, recordAdminLoginFailure } from "@/lib/admin-rate-limit";
@@ -7,39 +8,6 @@ import {
   analyticsAdminCookieValue,
   verifyAnalyticsAdminPassword,
 } from "@/lib/admin-analytics-access";
-
-const privateHeaders = { "Cache-Control": "private, no-store" };
-
-function protectedAdminApi(request: Request) {
-  return new URL(request.url).pathname.startsWith("/admin/api/");
-}
-
-function legacyRouteResponse() {
-  return Response.json({ error: "Not found." }, { status: 404, headers: privateHeaders });
-}
-
-function sameOrigin(request: Request) {
-  const fetchSite = request.headers.get("sec-fetch-site");
-  if (fetchSite) return fetchSite === "same-origin";
-
-  const origin = request.headers.get("origin");
-  if (!origin) return false;
-
-  let source: URL;
-  try {
-    source = new URL(origin);
-  } catch {
-    return false;
-  }
-
-  const target = new URL(request.url);
-  const forwardedHost = request.headers.get("x-forwarded-host")?.split(",")[0]?.trim();
-  const host = forwardedHost || request.headers.get("host") || target.host;
-  const forwardedProto = request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim();
-  const protocol = forwardedProto || target.protocol.replace(":", "");
-
-  return source.host === host && source.protocol === protocol + ":";
-}
 
 export async function POST(request: Request) {
   if (!protectedAdminApi(request)) return legacyRouteResponse();
