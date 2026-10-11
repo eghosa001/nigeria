@@ -809,7 +809,7 @@ export const careerGuides: CareerGuide[] = [
     description: "Check suspicious job offers for fake domains, upfront payments, unexpected offers, early requests for sensitive information and copied employer branding.",
     summary: "A professional-looking logo is not proof of a real job. Verify the vacancy through the employer's official website, check the sender and destination domain, and treat payment or urgent requests for financial information as major warning signs.",
     answer: "Before responding, independently find the employer's official careers page and confirm the vacancy. Do not pay for an application, shortlist, interview, training slot or appointment, and do not send banking details or identity documents to an unverified recruiter.",
-    reviewedAt: "2026-10-09",
+    reviewedAt: "2026-10-11",
     facts: [
       { label: "Major red flag", value: "Payment for recruitment access" },
       { label: "Verify", value: "Employer website and email domain" },
@@ -820,6 +820,7 @@ export const careerGuides: CareerGuide[] = [
       {
         heading: "Check the vacancy outside the message you received",
         paragraphs: [
+          "On 21 August 2026, the Federal Civil Service Commission warned applicants against unauthorised recruitment links shared on social media, WhatsApp and unofficial websites. Trace a federal job advert to an actual announcement through FCSC's authorised channels before submitting personal information or paying anyone.",
           "Do not use the link inside a suspicious email as your only verification method. Search for the organisation's official website independently and look for the vacancy or recruitment notice there.",
           "Check whether the sender uses the organisation's real domain and whether the application destination matches the official careers system."
         ]
@@ -850,7 +851,8 @@ export const careerGuides: CareerGuide[] = [
     ],
     sources: [
       { label: "World Food Programme — Fraudulent Job Offers", url: "https://www.wfp.org/careers/fraudulent-job-offers", lastChecked: "2026-10-05" },
-      { label: "British Council Nigeria — Fake Job Alert", url: "https://www.britishcouncil.org.ng/fake-job-alert", lastChecked: "2026-10-05" }
+      { label: "British Council Nigeria — Fake Job Alert", url: "https://www.britishcouncil.org.ng/fake-job-alert", lastChecked: "2026-10-05" },
+      { label: "FCSC recruitment-link warning, 21 August 2026 — Federal Ministry of Information", url: "https://fmino.gov.ng/fcsc-debunks-unauthorised-recruitment-links-urges-public-to-verify-information-through-official-channels/", lastChecked: "2026-10-11" }
     ],
     relatedLinks: [
       { href: "/jobs", label: "Verified jobs directory" },

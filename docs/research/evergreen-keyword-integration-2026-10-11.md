@@ -1,0 +1,18 @@
+# Nigeria-localized search intent expansion — 11 October 2026
+
+Evidence baseline: `docs/research/google-autocomplete-evergreen-2026-10-09.json` (76 successful requests, en-NG, gl=ng). Suggestions are historical sampled wording, **not** real-time search volume, live ranking, freshness evidence, or a guarantee of demand. The existing scheduled `tools/google-autocomplete-research.mjs` continues collecting new evidence; review its artifact before changing public content. No unverifiable live Google Suggest call was claimed for this pass.
+
+## Canonical intent mapping and decision
+- **Services:** how to renew Nigerian passport online → `/services/passport-renewal`; how to check WAEC results using a phone → `/services/waec-check-result`; JAMB CAPS admission status login → `/services/jamb-caps`; CAC registration → `/services/cac-business-name-registration`; correct BVN details → `/services/bvn-data-update`; check NIN → `/services/check-nin-number`; Nigerian police clearance certificate → `/services/police-character-certificate`; ECOWAS travel certificate → `/services/ecowas-travel-certificate`. All existing canonical pages. No new fee claims or portal promises.
+- **Jobs:** CV without experience → `/jobs/guides/cv-format-nigeria`; cover letter without experience → `/jobs/guides/cover-letter-nigeria`; interview questions → `/jobs/guides/job-interview-questions-nigeria`. Add a source-verified FCSC August 2026 recruitment scam caution to the existing scam guide, not a duplicate article.
+- **Tour:** Abeokuta / Olumo Rock, Benin City, Enugu, Ibadan and Jos queries map to existing city guides. Five primary-source-backed place records add practical destinations to existing city/state guides. They state access uncertainty and do not invent hours, prices, ratings or review claims.
+- **Movies:** classic Nollywood, family, Yoruba and comedy searches link to filtered listings on the original movie directory (filtered views already noindex). Netflix, Prime Video and cinemas link to canonical guides. Platform hub provides original decision guidance and copyright-aware verification steps.
+
+## Quality / publication decisions
+- **Published as additions to canonical pages, not new indexable routes:** curated typeahead suggestions, platform-selection help, recruitment safety evidence and five location records.
+- **Hold / don't turn into pages:** foreign-country suggestions unrelated to Nigeria audience, year-only keyword clones, unknown movie availability, prices, current recruitment claims, and local attractions with no reliable source or access caveat.
+- **Verification:** Enugu State government hospitality and Nike Lake redevelopment statement; Kaduna State government published 2024 budget project listings; Plateau State government tourism listing; Federal Ministry of Information's FCSC 21 August 2026 notice; NFVCB legal/classification guidance. Facts were individually checked. No claim of physical visits or human editorial review.
+- **UX and scale:** the short curated typeahead resolves to stable canonical links, runs locally without per-keystroke Google requests, and never downloads whole site catalogs. The new tour records reuse the existing paginated place directory. Site quality remains subject to representative live/device checks before anyone claims a 9+/10 score.
+
+## Follow-up evidence needed
+Refresh keyword suggestions from the scheduled Google job; pair candidate terms with settled Search Console query/page data and on-site search-no-result events before promoting more intents. Monitor official travel access and changing legal/fees/status facts. Avoid asserting that any keyword grew impressions or CTR until measured.

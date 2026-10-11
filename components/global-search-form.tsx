@@ -33,6 +33,34 @@ const destinations = [
   { label: "Actors and filmmakers", href: "/entertainment/people", pillar: "Movies", aliases: "cast celebrities nollywood actors" },
   { label: "New movie releases", href: "/entertainment/releases", pillar: "Movies", aliases: "cinema upcoming release latest movie" },
   { label: "Nigerian series", href: "/entertainment/series", pillar: "Movies", aliases: "tv shows web series nigeria" },
+
+  // Editorially selected from the Nigeria-localized Google Suggest archive (2026-10-09)
+  // and existing canonical guides. Suggestions signal wording, not demand or volume.
+  { label: "Renew Nigerian passport online", href: "/services/passport-renewal", pillar: "Services", aliases: "how to renew nigerian passport online in nigeria renewal requirements" },
+  { label: "Check WAEC results", href: "/services/waec-check-result", pillar: "Services", aliases: "how to check waec result using phone result checker online" },
+  { label: "Check JAMB CAPS admission", href: "/services/jamb-caps", pillar: "Services", aliases: "jamb caps admission status login portal admission list" },
+  { label: "Register a business name", href: "/services/cac-business-name-registration", pillar: "Services", aliases: "how to register a business name in nigeria online with cac registration fees" },
+  { label: "Correct BVN details", href: "/services/bvn-data-update", pillar: "Services", aliases: "how to correct bvn name date of birth information online" },
+  { label: "Find your NIN", href: "/services/check-nin-number", pillar: "Services", aliases: "how to check nin number using phone airtel mtn" },
+  { label: "Police clearance certificate", href: "/services/police-character-certificate", pillar: "Services", aliases: "nigerian police clearance certificate online application price abroad" },
+  { label: "ECOWAS travel certificate", href: "/services/ecowas-travel-certificate", pillar: "Services", aliases: "how to get ecowas travel certificate in nigeria price requirements" },
+  { label: "CV format for graduates", href: "/jobs/guides/cv-format-nigeria", pillar: "Jobs", aliases: "how to write cv in nigeria with no experience fresh graduate examples" },
+  { label: "Write a cover letter", href: "/jobs/guides/cover-letter-nigeria", pillar: "Jobs", aliases: "how to write a cover letter for a job application without experience" },
+  { label: "Job interview preparation", href: "/jobs/guides/job-interview-questions-nigeria", pillar: "Jobs", aliases: "job interview questions and answers in nigeria common interview" },
+  { label: "Check recruitment scams", href: "/jobs/guides/job-scam-red-flags-nigeria", pillar: "Jobs", aliases: "how to verify legitimate jobs in nigeria remote recruitment fake offer" },
+  { label: "NYSC PPA placement", href: "/jobs/guides/nysc-ppa-posting-guide", pillar: "Jobs", aliases: "jobs for nysc corps members ppa posting acceptance" },
+  { label: "Visit Ibadan", href: "/explore/ibadan", pillar: "Tour", aliases: "places to visit in ibadan nigeria oyo state things to do" },
+  { label: "Things to do in Enugu", href: "/explore/enugu", pillar: "Tour", aliases: "things to do in enugu places to visit tourist attractions" },
+  { label: "Discover Jos", href: "/explore/jos", pillar: "Tour", aliases: "tourist attractions in jos plateau state things to do" },
+  { label: "Tour Kaduna State", href: "/explore/kaduna-state-travel-guide", pillar: "Tour", aliases: "places to visit in kaduna tourism nok kagoro waterfall" },
+  { label: "Visit Abeokuta and Olumo Rock", href: "/explore/abeokuta", pillar: "Tour", aliases: "olumo rock location in abeokuta ogun tourist centre" },
+  { label: "Nigerian movies on Netflix", href: "/entertainment/platforms/netflix", pillar: "Movies", aliases: "nigerian movies on netflix nigeria comedy films to watch" },
+  { label: "Nigerian movies on Prime Video", href: "/entertainment/platforms/prime-video", pillar: "Movies", aliases: "yoruba movies to watch on prime video nigerian films" },
+  { label: "Cinema releases in Nigeria", href: "/entertainment/cinemas", pillar: "Movies", aliases: "nigerian movies in cinema now cinema releases film showtimes" },
+  { label: "Nollywood comedy movies", href: "/entertainment/movies?q=comedy", pillar: "Movies", aliases: "best nigerian comedy movies of all time nollywood comedy movies" },
+  { label: "Classic Nollywood movies", href: "/entertainment/movies?q=classic", pillar: "Movies", aliases: "old nollywood movies 1990 2000 to 2010 classic nollywood movies" },
+  { label: "Yoruba-language movies", href: "/entertainment/movies?q=yoruba", pillar: "Movies", aliases: "yoruba movies to watch nigeria yoruba film" },
+  { label: "Family Nollywood movies", href: "/entertainment/movies?q=family", pillar: "Movies", aliases: "family friendly nollywood movies family nollywood movies on youtube" },
 ] as const;
 
 function normalise(value: string) {
