@@ -79,6 +79,20 @@ The dedicated parity regression also validates service scores/order, job search 
 
 **Not yet measured:** actual production Cloudflare Worker request/CPU durations, build payload differences, Core Web Vitals or visitor-level outcomes. The prior broad module-size assessment and content-store migration recommendation still stand.
 
+## Tour Nigeria guide/place lookup follow-up (PR #293)
+
+The Tour catalog currently has **293 guide records** and **306 place records**. The public Tour detail route called `getExploreGuide(slug)` and `getExplorePlacesForGuide(slug)`; both previously scanned arrays on each lookup. The latter also rebuilt a shared-place selection Set for relevant guide slugs. The new implementation indexes first-match guides and place associations, and lazily indexes shared-guide selections while preserving original catalog order and record identity.
+
+**Directly measured** in the GitHub CI runner (Node.js 22.23.3), with 293 distinct guide slugs, 12 iterations per measurement and median of five warmed samples:
+
+| Workload | Original whole-array scans | Indexed lookups | Relative difference |
+| --- | ---: | ---: | ---: |
+| 3,516 paired guide/place lookups (warm in-process CPU) | 19.970 ms | 0.486 ms | **41.12× faster** |
+
+The dedicated parity test checked all published guide slugs, all shared-place configurations, every mapped place association, original ordering, record references, unknown slugs and independent result arrays. **All three tests passed.** This establishes output equivalence for the checked-in data and faster *lookup CPU* only; it does **not** demonstrate that production pages load 41× faster, that Worker bundle size dropped, or that Google search metrics improved.
+
+The current Tour catalog is below the 5,000-record migration threshold. Indexing is an interim optimization, **not** a replacement for a future indexed content store when the catalog grows.
+
 ## Remaining investigation queue (not falsely reported as fixed)
 
 1. **Large data modules and bundle boundaries (high):** verify runtime Worker output and per-route JS/RSC transfer. `lib/explore.ts` and `lib/jobs.ts` are monolithic; migrate behind indexed content storage *before* the repository's 5,000-record threshold. Keep current canonical URLs.

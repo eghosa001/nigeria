@@ -13350,6 +13350,16 @@ export const exploreGuides: ExploreGuide[] = [
   }
 ];
 
+// The checked-in Tour catalog is immutable for the lifetime of this Worker
+// module. Index once instead of scanning every record for each guide request.
+// Keep the first record for a slug, matching Array.find if duplicates exist.
+const exploreGuidesBySlug = new Map<string, ExploreGuide>();
+for (const guide of exploreGuides) {
+  if (!exploreGuidesBySlug.has(guide.slug)) {
+    exploreGuidesBySlug.set(guide.slug, guide);
+  }
+}
+
 export function getExploreGuide(slug: string) {
-  return exploreGuides.find((guide) => guide.slug === slug);
+  return exploreGuidesBySlug.get(slug);
 }
