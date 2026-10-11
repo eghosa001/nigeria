@@ -1,0 +1,45 @@
+name: Free Nigeria Trend Radar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "13 6,18 * * *" # 07:13 and 19:13 Africa/Lagos
+  pull_request:
+    paths:
+      - "tools/nigeria-trend-radar.mjs"
+      - "tests/nigeria-trend-radar.test.mjs"
+      - ".github/workflows/free-nigeria-trend-radar.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: free-nigeria-trend-radar-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  editorial-research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate source attribution and no-publish safety
+        run: |
+          node --check tools/nigeria-trend-radar.mjs
+          node --test tests/nigeria-trend-radar.test.mjs
+      - name: Sample free official Nigerian trend feeds (no X scraping)
+        if: github.event_name != 'pull_request'
+        run: node tools/nigeria-trend-radar.mjs
+      - name: Upload source evidence for editorial review
+        if: always() && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: free-nigeria-trend-radar
+          path: |
+            artifacts/nigeria-trend-radar.json
+            artifacts/nigeria-trend-radar.md
+          if-no-files-found: warn
+          retention-days: 10
