@@ -33,7 +33,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
   if (guide.slug === "kainji-dam") return "Kainji Dam Nigeria: Location, History & Visitor Access";
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
-  if (guide.kind === "city") return truncateSeo(guide.shortTitle + " Travel Guide " + year + ": Things to Do & Places to Visit", 60);
+  if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": " + getExplorePlacesForGuide(guide.slug).length + " Places to Visit & Things to Do (" + year + ")", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
   if (guide.kind === "event") return truncateSeo(guide.shortTitle + " " + year + ": Festival Guide & Planning", 60);
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
@@ -101,7 +101,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!guide) return {};
 
   const title = getExploreSeoTitle(guide);
-  const description = truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
+  const cityPlaces = guide.kind === "city" ? getExplorePlacesForGuide(guide.slug) : [];
+  const description = guide.kind === "city"
+    ? truncateSeo("Discover " + cityPlaces.length + " places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". Maps, local tips and access guidance.", 155)
+    : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
 
   return {
     title: { absolute: title },
@@ -317,7 +320,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <div className="section-heading">
             <div>
               <span className="eyebrow">Address, maps & cost</span>
-              <h2>{guide.kind === "event" ? "Venues and nearby planning stops for " + guide.shortTitle : guide.shortTitle + ": places to visit, eat & stay"}</h2>
+              <h2>{guide.kind === "event" ? "Venues and nearby planning stops for " + guide.shortTitle : guide.kind === "city" ? places.length + " places to visit in " + guide.shortTitle + " — attractions, food & stays" : guide.shortTitle + ": places to visit, eat & stay"}</h2>
               <p>Prices are marked as current estimates or variable instead of being presented as permanent facts.</p>
             </div>
           </div>
