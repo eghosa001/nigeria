@@ -7,7 +7,7 @@ const read = (path) => readFileSync(new URL("../" + path, import.meta.url), "utf
 test("October city expansion is unique, source-backed and dated", () => {
   const content = read("lib/explore-city-growth-2026-10-11.ts");
   const slugs = [...content.matchAll(/"slug": "([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(slugs.length, 21);
+  assert.equal(slugs.length, 18);
   assert.equal(new Set(slugs).size, slugs.length);
   assert.equal((content.match(/"checkedAt": "2026-10-11"/g) ?? []).length, slugs.length);
   assert.equal((content.match(/"source": \{/g) ?? []).length, slugs.length);
