@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { summarizeSearchConsoleHours } from "../lib/search-console-hourly";
+import {
+  summarizeSearchConsoleHours,
+  firstIncompleteHourFromMetadata,
+  firstIncompleteDateFromMetadata,
+} from "../lib/search-console-hourly";
 
 test("hourly figures are chronological, property-wide and use Google's incomplete-hour boundary", () => {
   const result = summarizeSearchConsoleHours([
@@ -19,6 +23,9 @@ test("hourly figures are chronological, property-wide and use Google's incomplet
   assert.equal(result.lagHours, 5);
   assert.equal(result.clicks, 7);
   assert.equal(result.impressions, 181);
+  assert.equal(result.clicks24h, 7);
+  assert.equal(result.impressions24h, 181);
+  assert.equal(result.hoursReported24h, 3);
 });
 
 test("hourly data is never fabricated when Google has no rows", () => {
@@ -27,6 +34,9 @@ test("hourly data is never fabricated when Google has no rows", () => {
   assert.equal(result.lagHours, null);
   assert.equal(result.rows.length, 0);
   assert.equal(result.impressions, 0);
+  assert.equal(result.impressions24h, null);
+  assert.equal(result.clicks24h, null);
+  assert.equal(result.hoursReported24h, 0);
 });
 
 test("invalid hour data and missing metrics do not create fictitious fresh activity", () => {
@@ -39,4 +49,32 @@ test("invalid hour data and missing metrics do not create fictitious fresh activ
   assert.equal(result.rows[0].clicks, 0);
   assert.equal(result.rows[0].impressions, 23);
   assert.equal(result.rows[0].provisional, false);
+});
+
+test("Google uses camelCase metadata keys in actual API JSON", () => {
+  assert.equal(
+    firstIncompleteHourFromMetadata({ firstIncompleteHour: "2026-10-10T18:00:00-07:00" }),
+    "2026-10-10T18:00:00-07:00",
+  );
+  assert.equal(
+    firstIncompleteDateFromMetadata({ firstIncompleteDate: "2026-10-10" }),
+    "2026-10-10",
+  );
+  // Legacy snake_case can still be accepted from alternative data pipelines.
+  assert.equal(
+    firstIncompleteHourFromMetadata({ first_incomplete_hour: "2026-10-09T18:00:00-07:00" }),
+    "2026-10-09T18:00:00-07:00",
+  );
+});
+
+test("old hours must not be misrepresented as zero recent search traffic", () => {
+  const result = summarizeSearchConsoleHours([
+    { keys: ["2026-10-08T15:00:00-07:00"], clicks: 2, impressions: 55 },
+  ], undefined, new Date("2026-10-11T05:00:00Z"));
+  assert.equal(result.clicks, 2);
+  assert.equal(result.impressions, 55);
+  assert.equal(result.clicks24h, null);
+  assert.equal(result.impressions24h, null);
+  assert.equal(result.hoursReported24h, 0);
+  assert.equal(result.lagHours, 55);
 });
