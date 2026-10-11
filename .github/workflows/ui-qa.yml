@@ -70,6 +70,17 @@ jobs:
           # tests the server route. Avoid a second browser/build matrix.
           # The staged D1 read adapter is not wired into a public route; CI
           # executes precise SQLite and type checks without browser packaging.
+          # Staging-only D1 CLI/import configuration has no public UI or Worker
+          # runtime changes. Its guard tests run in the narrow CI job.
+          d1_staging_trigger="$(printf '%s\n' "$changed" | grep -E '^(wrangler\.d1-staging\.jsonc$|\.github/workflows/youtube-d1-staging\.yml$|scripts/youtube-d1-staging-runner\.mjs$|tests/youtube-d1-staging-runner\.test\.mjs$)' || true)"
+          non_d1_staging="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-d1-staging)\.yml$|wrangler\.d1-staging\.jsonc$|scripts/youtube-d1-staging-runner\.mjs$|tests/youtube-d1-staging-runner\.test\.mjs$)' || true)"
+          if [ -n "$d1_staging_trigger" ] && [ -z "$non_d1_staging" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-d1-staging" >> "$GITHUB_OUTPUT"
+            echo "Staging-only D1 tooling verified through focused unit checks in CI."
+            exit 0
+          fi
+
           youtube_d1_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-d1-repository\.ts$|tests/(youtube-d1-repository\.test\.ts|youtube-d1-full-parity\.test\.mjs)$|scripts/(export-youtube-d1(\.test)?\.mjs|verify-youtube-d1-sqlite\.py)$)' || true)"
           non_youtube_d1="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|lib/youtube-d1-repository\.ts$|tests/(youtube-d1-repository\.test\.ts|youtube-d1-full-parity\.test\.mjs)$|scripts/(export-youtube-d1(\.test)?\.mjs|verify-youtube-d1-sqlite\.py)$)' || true)"
           if [ -n "$youtube_d1_trigger" ] && [ -z "$non_youtube_d1" ]; then
