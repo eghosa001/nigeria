@@ -62,3 +62,18 @@ test("failed feeds return structured errors without inventing results", async ()
   assert.deepEqual(result.items, []);
   assert.match(result.error, /HTTP 429/);
 });
+
+test("public social-trends page links four free X searches and never calls them a live ranking", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { fileURLToPath } = await import("node:url");
+  const { resolve } = await import("node:path");
+  const filename = resolve(fileURLToPath(new URL("../app/entertainment/social-trends/page.tsx", import.meta.url)));
+  const page = readFileSync(filename, "utf8");
+  assert.match(page, /direct-twitter-research/);
+  for (const pillar of ["Movies & Entertainment", "Services", "Tour Nigeria", "Jobs & Careers"]) {
+    assert.ok(page.includes('pillar: "' + pillar + '"'), "Missing X search for " + pillar);
+  }
+  assert.match(page, /https:\/\/x\.com\/search\?q=/);
+  assert.match(page, /not automatically collected or ranked tweets/);
+  assert.match(page, /Google search demand is not an X trend ranking/);
+});
