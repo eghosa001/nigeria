@@ -4233,13 +4233,42 @@ const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
   ],
 };
 
+// Resolve Tour guide places without scanning the entire checked-in catalog
+// for every static page render. Indexes contain references to original records,
+// so no additional place content is cloned into the Worker module.
+const placesByGuide = new Map<string, ExplorePlace[]>();
+const placePositionsBySlug = new Map<string, number[]>();
+
+for (const [index, place] of explorePlaces.entries()) {
+  const group = placesByGuide.get(place.guideSlug) ?? [];
+  group.push(place);
+  placesByGuide.set(place.guideSlug, group);
+
+  const positions = placePositionsBySlug.get(place.slug) ?? [];
+  positions.push(index);
+  placePositionsBySlug.set(place.slug, positions);
+}
+
+// Shared-guide selections are rare and usually small. Build their ordered
+// result lazily; preserve the source catalog's order (not the list's order)
+// and include all positions when a place slug is duplicated.
+const sharedPlacesByGuide = new Map<string, ExplorePlace[]>();
+
 export function getExplorePlacesForGuide(guideSlug: string) {
   const shared = sharedGuidePlaceSlugs[guideSlug];
   if (shared) {
-    const selected = new Set<string>(shared);
-    return explorePlaces.filter((place) => selected.has(place.slug));
+    let places = sharedPlacesByGuide.get(guideSlug);
+    if (!places) {
+      const positions = new Set<number>();
+      for (const slug of shared) {
+        for (const index of placePositionsBySlug.get(slug) ?? []) positions.add(index);
+      }
+      places = [...positions].sort((a, b) => a - b).map((index) => explorePlaces[index]);
+      sharedPlacesByGuide.set(guideSlug, places);
+    }
+    return [...places];
   }
-  return explorePlaces.filter((place) => place.guideSlug === guideSlug);
+  return [...(placesByGuide.get(guideSlug) ?? [])];
 }
 
 export function googleMapsUrl(place: Pick<ExplorePlace, "name" | "address" | "mapQuery">) {
