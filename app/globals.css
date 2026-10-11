@@ -1714,6 +1714,12 @@ button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
   cursor: pointer;
 }
 .admin-refresh-button:hover { background: #f1f9f4; }
+.gsc-copy-account { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface, #f6f8f6); }
+.gsc-copy-account > strong { display: block; font-size: 0.91rem; }
+.gsc-copy-account p, .gsc-account-email { overflow-wrap: anywhere; word-break: break-word; }
+.gsc-copy-account p { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9rem; font-weight: 700; user-select: text; }
+.gsc-copy-account button { margin-top: 6px; }
+
 .admin-refresh-button:disabled { cursor: wait; opacity: .65; }
 [data-testid="admin-gsc-status"] .analytics-metric-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));

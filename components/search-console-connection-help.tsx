@@ -3,7 +3,7 @@ import type { SearchConsoleApiIssue } from "@/lib/search-console-hourly";
 const googleCloudApiLibrary = "https://console.cloud.google.com/apis/library/searchconsole.googleapis.com";
 
 /** Links only to Google's own API library. No credentials or project secrets. */
-export function SearchConsoleConnectionHelp({ issue }: { issue?: SearchConsoleApiIssue }) {
+export function SearchConsoleConnectionHelp({ issue, serviceAccountEmail }: { issue?: SearchConsoleApiIssue; serviceAccountEmail?: string | null }) {
   if (!issue) return null;
 
   if (issue.code === "api-disabled") {
@@ -44,12 +44,16 @@ export function SearchConsoleConnectionHelp({ issue }: { issue?: SearchConsoleAp
         <strong>Action required: Google Search Console property access</strong>
         <p>
           The API responded, but the server service account is not allowed to read
-          <code> sc-domain:mynigeriaguide.com</code>. In
+          <code> sc-domain:mynigeriaguide.com</code>.
+          {serviceAccountEmail ? <>
+            {" "}Add this exact account: <strong className="gsc-account-email">{serviceAccountEmail}</strong>.
+          </> : null} In
           {" "}<a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">
             Google Search Console ↗
           </a>, open Settings → Users and permissions and add the service-account email
           configured in Cloudflare as <code>GSC_SERVICE_ACCOUNT_EMAIL</code> or
-          {" "}<code>GA4_SERVICE_ACCOUNT_EMAIL</code>.
+          {" "}<code>GA4_SERVICE_ACCOUNT_EMAIL</code>. Choose <strong>Full</strong> access,
+          then save. Return to this dashboard and tap <strong>Check Google now</strong>.
         </p>
         <p>No new SEO subscription or data import is necessary.</p>
       </div>

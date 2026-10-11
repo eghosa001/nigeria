@@ -189,6 +189,19 @@ export function searchConsoleReadConfigured() {
   return Boolean(settings.clientEmail && settings.privateKey);
 }
 
+/** Public within the authenticated admin UI only; never exposes any private key. */
+export function searchConsoleServiceAccountIdentity() {
+  const settings = searchConsoleConfig();
+  return {
+    email: settings.clientEmail ?? null,
+    // The override takes precedence over the existing GA4 reporting identity.
+    origin: process.env.GSC_SERVICE_ACCOUNT_EMAIL?.trim()
+      ? "GSC_SERVICE_ACCOUNT_EMAIL"
+      : "GA4_SERVICE_ACCOUNT_EMAIL",
+    siteUrl: settings.siteUrl,
+  };
+}
+
 export function analyticsReadConfigured() {
   const value = config();
   return Boolean(value.propertyId && value.clientEmail && value.privateKey);
