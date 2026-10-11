@@ -21,12 +21,13 @@ export function createTourPlaceSearchStore(option: StoreOption) {
       if (option.mode === "runtime" &&
           process.env.NODE_ENV === "production" &&
           process.env.NEXT_PHASE !== "phase-production-build") {
-        const workers = await import("cloudflare:workers");
-        const env = workers.env as {
+        let workers: { env: { CONTENT_DB?: TourD1Database; TOUR_PLACES_D1_CUTOVER?: string } } | null = null;
+        try { workers = await import("cloudflare:workers"); } catch { /* Node SSR does not provide Worker bindings. */ }
+        const env = workers?.env as {
           CONTENT_DB?: TourD1Database;
           TOUR_PLACES_D1_CUTOVER?: string;
         };
-        if (env.TOUR_PLACES_D1_CUTOVER === "enabled") {
+        if (env?.TOUR_PLACES_D1_CUTOVER === "enabled") {
           if (!env.CONTENT_DB) throw new Error("Tour production D1 cutover requires CONTENT_DB.");
           db = env.CONTENT_DB;
         }
