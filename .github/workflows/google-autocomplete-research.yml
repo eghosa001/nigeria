@@ -2,6 +2,10 @@ name: Evergreen Google Autocomplete Research
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "tools/google-autocomplete-research.mjs"
+      - ".github/workflows/google-autocomplete-research.yml"
 
 permissions:
   contents: read
@@ -20,3 +24,12 @@ jobs:
         run: python3 scripts/fast_path_guard.py
       - name: Query Nigeria-localized Google Autocomplete (research only)
         run: node tools/google-autocomplete-research.mjs
+
+      - name: Upload Nigeria Google Suggest evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-autocomplete-ng
+          path: artifacts/google-autocomplete-ng.json
+          if-no-files-found: warn
+          retention-days: 7
