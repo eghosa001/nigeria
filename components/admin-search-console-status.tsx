@@ -2,12 +2,13 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
-import type { SearchConsoleHourlyReport } from "@/lib/search-console-hourly";
+import type { SearchConsoleApiIssue, SearchConsoleHourlyReport } from "@/lib/search-console-hourly";
+import { SearchConsoleConnectionHelp } from "@/components/search-console-connection-help";
 
 type State =
   | { kind: "loading" }
   | { kind: "ready"; report: SearchConsoleHourlyReport }
-  | { kind: "unavailable"; explanation: string }
+  | { kind: "unavailable"; explanation: string; issue?: SearchConsoleApiIssue }
   | { kind: "error"; explanation: string };
 
 function showHour(value: string | null) {
@@ -46,7 +47,7 @@ export function AdminSearchConsoleStatus() {
       } else if (!result.configured) {
         setStatus({ kind: "unavailable", explanation: result.error || "Google Search Console credentials are missing." });
       } else if (!result.report?.available) {
-        setStatus({ kind: "unavailable", explanation: result.report?.error || "Google did not return hourly results." });
+        setStatus({ kind: "unavailable", explanation: result.report?.error || "Google did not return hourly results.", issue: result.report?.issue });
       } else {
         setStatus({ kind: "ready", report: result.report });
       }
@@ -77,7 +78,10 @@ export function AdminSearchConsoleStatus() {
         <div className="admin-empty" role="status">
           <strong>{status.kind === "error" ? "Unable to check Google" : "Google Search Console not reporting"}</strong>
           <p>{status.explanation}</p>
-          <p>Existing website traffic analytics and historical data are unaffected. The Google service account must have permission to read <code>sc-domain:mynigeriaguide.com</code>.</p>
+          {status.kind === "unavailable" ? <SearchConsoleConnectionHelp issue={status.issue} /> : null}
+          {status.kind === "unavailable" && status.issue?.code === "api-disabled"
+            ? <p>Other analytics and historical data are unaffected. This is an API activation error, not yet evidence of a Search Console property-permission problem.</p>
+            : <p>Existing website traffic analytics and historical data are unaffected. The Google service account must have permission to read <code>sc-domain:mynigeriaguide.com</code>.</p>}
         </div>
       ) : null}
       {status.kind === "ready" ? (

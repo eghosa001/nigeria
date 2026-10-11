@@ -9,6 +9,8 @@ import {
 import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
 import {
   summarizeSearchConsoleHours,
+  classifySearchConsoleApiError,
+  type SearchConsoleApiIssue,
   firstIncompleteHourFromMetadata,
   firstIncompleteDateFromMetadata,
   type SearchConsoleHourlyReport,
@@ -456,6 +458,13 @@ function subtractDays(dateIso: string, days: number) {
   return date.toISOString().slice(0, 10);
 }
 
+class SearchConsoleRequestError extends Error {
+  constructor(readonly issue: SearchConsoleApiIssue) {
+    super(issue.message);
+    this.name = "SearchConsoleRequestError";
+  }
+}
+
 async function searchConsoleQuery(body: Record<string, unknown>) {
   const settings = searchConsoleConfig();
   if (!settings.clientEmail || !settings.privateKey) throw new Error("Search Console credentials are not configured.");
@@ -474,7 +483,7 @@ async function searchConsoleQuery(body: Record<string, unknown>) {
   );
   if (!response.ok) {
     const message = await response.text();
-    throw new Error("Search Console request failed (" + response.status + "): " + message.slice(0, 180));
+    throw new SearchConsoleRequestError(classifySearchConsoleApiError(response.status, message));
   }
   return await response.json() as SearchAnalyticsResponse;
 }
@@ -522,6 +531,7 @@ export async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyR
       hoursReported24h: 0,
       rows: [],
       error: error instanceof Error ? error.message : "Hourly Search Console API is unavailable.",
+      ...(error instanceof SearchConsoleRequestError ? { issue: error.issue } : {}),
     };
   }
 }

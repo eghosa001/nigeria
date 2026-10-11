@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import type { AnalyticsDashboardData, AnalyticsRange } from "@/lib/analytics-data";
+import { SearchConsoleConnectionHelp } from "@/components/search-console-connection-help";
 
 type ApiResponse = {
   configured?: boolean;
@@ -343,7 +344,11 @@ export function AdminAnalyticsDashboard() {
             <span className="eyebrow">Google Search visibility</span>
             <h2>Impressions and search clicks</h2>
           </div>
-          <small>{data.searchPerformance?.source === "historical-snapshot" ? "Search Console · preserved historical snapshot" : "Search Console · freshest available data"}</small>
+          <small>{data.searchPerformance?.source === "historical-snapshot"
+            ? "Search Console · preserved historical snapshot"
+            : data.searchPerformance?.source === "unavailable"
+              ? "Search Console · API connection unavailable"
+              : "Search Console · latest data supplied by Google"}</small>
         </div>
         {data.searchPerformance?.available ? (
           <>
@@ -451,7 +456,10 @@ export function AdminAnalyticsDashboard() {
           <div className="admin-empty">
             <strong>Direct hourly data could not be loaded.</strong>
             <p>{data.hourlySearchPerformance?.error || "Google did not return hourly search information."}</p>
-            <p>This report requires the server-side Search Console service account to have access to the domain property. The historical snapshots and other analytics remain untouched.</p>
+            <SearchConsoleConnectionHelp issue={data.hourlySearchPerformance?.issue} />
+            {data.hourlySearchPerformance?.issue?.code === "api-disabled"
+              ? <p>This is Google's disabled API error. The website cannot retrieve new impressions until it is enabled in the Google Cloud project shown above.</p>
+              : <p>This report requires a service account with access to the Search Console domain property. Historical snapshots and other analytics remain untouched.</p>}
           </div>
         )}
       </section>

@@ -202,6 +202,35 @@ test("admin Search Console connectivity failures are explicit, not blank dashboa
   await expect(page.getByRole("heading", { name: "Platform operations dashboard" })).toBeVisible();
 });
 
+test("admin shows the exact API activation action for Google's disabled Search Console API", async ({ page }) => {
+  await page.route("**/admin/api/search-console?*", async (route) => {
+    await route.fulfill({ json: { authenticated: true, configured: true, report: {
+      available: false,
+      source: "unavailable",
+      siteUrl: "sc-domain:mynigeriaguide.com",
+      startDate: "2026-10-01",
+      endDate: "2026-10-11",
+      fetchedAt: "2026-10-11T06:00:00Z",
+      latestHour: null, firstIncompleteHour: null, lagHours: null,
+      clicks: null, impressions: null, clicks24h: null, impressions24h: null,
+      hoursReported24h: 0, rows: [],
+      error: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account.",
+      issue: { code: "api-disabled", projectNumber: "987654321011",
+        message: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account." },
+    } } });
+  });
+  await page.goto("/admin");
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  const panel = page.getByTestId("admin-gsc-status");
+  await expect(panel).toContainText("Action required in Google Cloud");
+  await expect(panel).toContainText("987654321011");
+  await expect(panel.getByRole("link", { name: /Enable Search Console API/i })).toHaveAttribute(
+    "href", "https://console.cloud.google.com/apis/library/searchconsole.googleapis.com?project=987654321011",
+  );
+  await expect(panel).not.toContainText("Request failed (403)");
+});
+
 test("plain-language search finds the right service", async ({ page }) => {
   await page.goto("/");
   await page.getByLabel("What do you want to do?").fill("my passport expired");
