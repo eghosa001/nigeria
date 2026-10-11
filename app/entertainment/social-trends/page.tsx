@@ -95,8 +95,6 @@ const nigeriaSocialSignals = [
 const verifiedWebDiscovery = [
   {
     pillar: "Tour Nigeria",
-    label: "Lagos events · published 11 October",
-    pillar: "Tour Nigeria",
     label: "X lead · organiser verified 11 October",
     title: "Leadway Lifestyle Fair: Lagos visit on 24–25 October",
     detail: "The #LeadwayLifestyleFair discussion led to an organiser check: Leadway's own website confirms the dates and Victoria Island area. SME exhibitor registration has closed; visitors should check the official attendance link before travel.",
