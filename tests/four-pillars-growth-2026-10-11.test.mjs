@@ -16,9 +16,19 @@ test("October city expansion is unique, source-backed and dated", () => {
   }
 });
 
+test("second wave adds unique under-covered-city destinations", () => {
+  const second = read("lib/explore-city-growth-wave-11.ts");
+  const first = read("lib/explore-city-growth-2026-10-11.ts");
+  const a = [...second.matchAll(/"slug": "([^"]+)"/g)].map((match) => match[1]);
+  const b = [...first.matchAll(/"slug": "([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(a.length, 13);
+  assert.equal(new Set([...a, ...b]).size, a.length + b.length);
+});
+
 test("existing tour records are reused without duplicating the primary catalog", () => {
   const source = read("lib/explore-places.ts");
   assert.match(source, /\.\.\.cityGrowthPlaces20261011/);
+  assert.match(source, /\.\.\.cityGrowthPlacesWave11/);
   assert.match(source, /const citySharedPlaceSlugs:/);
   assert.match(source, /seen\.has\(slug\)/);
   assert.match(source, /return \[\.\.\.direct, \.\.\.additional\]/);
