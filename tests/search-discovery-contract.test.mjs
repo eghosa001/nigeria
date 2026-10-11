@@ -9,5 +9,7 @@ test("site search records aggregate analytics without raw terms", () => {
   assert.match(component, /suggestion_selected/);
   assert.match(component, /result_clicked/);
   assert.match(results, /search_no_results/);
-  assert.doesNotMatch(results, /query:\\s*query/);
+  assert.match(results, /result_count_band/);
+  assert.ok(!results.includes("search_term:"));
+  assert.ok(!results.includes("search_query:"));
 });
