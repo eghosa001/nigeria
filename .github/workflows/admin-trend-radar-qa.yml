@@ -1,0 +1,34 @@
+name: Admin Trend Radar QA
+
+on:
+  pull_request:
+    paths:
+      - "app/admin/trends/**"
+      - "app/admin/page.tsx"
+      - "components/admin-nav.tsx"
+      - "components/admin-trend-review-board.*"
+      - "lib/editorial-trend-reader.ts"
+      - "tests/admin-trend-radar.test.ts"
+      - ".github/workflows/admin-trend-radar-qa.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: admin-trend-radar-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  focused-trend-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies for TS reader tests
+        run: npm ci --no-audit --no-fund
+      - name: Check secure editorial research contracts
+        run: npx tsx --test tests/admin-trend-radar.test.ts
