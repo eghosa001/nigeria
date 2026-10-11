@@ -76,7 +76,7 @@ console.log(JSON.stringify({
   kind: "node-v22-in-process-microbenchmark",
   node: process.version,
   serviceRecords: publicServiceListings.length,
-  jobs: jobOpportunities.length,
+  jobRecords: jobOpportunities.length,
   iterationsPerJobMeasurement: repeat,
   service: {
     legacyMedianMs: Number(serviceLegacyMs.toFixed(3)),
