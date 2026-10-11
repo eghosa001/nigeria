@@ -12,6 +12,28 @@ export type MyNigeriaGuideUpdate = {
 
 export const myNigeriaGuideUpdates: MyNigeriaGuideUpdate[] = [
   {
+    id: "ninauth-sharecode-vs-nin-retrieval-october-2026",
+    date: "2026-10-11",
+    type: "clarification",
+    agency: "National Identity Management Commission (NIMC)",
+    title: "NIN Share Code is different from *346# NIN retrieval",
+    summary: "NIMC's NINAuth app provides identity-verification Share codes and QR consent flows for participating organisations. The *346# USSD service retrieves your NIN number on the registered line; it is not the NINAuth Share-code generator. Only approve requests from organisations you recognise.",
+    sourceLabel: "NIMC NINAuth — Official getting started",
+    sourceUrl: "https://ninauth.nimc.gov.ng/get-started",
+    affectedServices: ["ninauth-nin-verification", "check-nin-number"],
+  },
+  {
+    id: "nysc-part-time-mobilisation-batch-c-2026",
+    date: "2026-10-11",
+    type: "deadline",
+    agency: "NYSC",
+    title: "NYSC portal lists Part-Time Mobilization Batch C until 20 October",
+    summary: "The official NYSC portal lists 'Registration(Part-Time) Mobilization Batch C, 2026' for 7 September–20 October 2026. This is explicitly a part-time mobilisation listing, not confirmation that ordinary Batch C prospective corps-member registration is open for the same dates. Check your eligibility and current portal notice.",
+    sourceLabel: "National Youth Service Corps — Official registration portal",
+    sourceUrl: "https://portal.nysc.org.ng/NYSC1/default.aspx",
+    affectedServices: ["nysc-registration-local", "nysc-exclusion-certificate"],
+  },
+  {
     id: "inec-register-display-october-9-15-2026",
     date: "2026-10-07",
     type: "deadline",
