@@ -1613,7 +1613,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     slug: "kainji-lake-reservoir",
-    guideSlug: "kainji-dam",
+    guideSlug: "kainji-dam-guide",
     name: "Kainji Lake Reservoir",
     kind: "nature",
     area: "Kainji / River Niger",
@@ -1629,7 +1629,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     slug: "new-bussa-kainji-town",
-    guideSlug: "kainji-dam",
+    guideSlug: "kainji-dam-guide",
     name: "New Bussa Town",
     kind: "landmark",
     area: "Borgu",
@@ -1659,7 +1659,7 @@ export const explorePlaces: ExplorePlace[] = [
   },
   {
     slug: "kainji-dam-complex",
-    guideSlug: "kainji-dam",
+    guideSlug: "kainji-dam-guide",
     name: "Kainji Dam Complex",
     kind: "landmark",
     area: "New Bussa area",
