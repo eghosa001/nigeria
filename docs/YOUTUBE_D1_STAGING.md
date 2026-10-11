@@ -52,6 +52,16 @@ WHERE pillar='movies_entertainment' AND kind='youtube-movie'
 
 Initial import of an empty staging database should yield **3,690** movie records, corresponding publisher sources, and **zero automatically published records**. Existing staging data may change the latter two totals; investigate differences rather than automatically deleting anything.
 
+## Next validation gate: full offline source parity and typed D1 reads
+
+`tests/youtube-d1-full-parity.test.mjs` now constructs the complete exported catalog inside **temporary in-memory SQLite** using the existing D1 schema. It checks **every** movie's canonical URL, full JSON payload, source publisher/watch URL, dates, draft status, source count, FTS row count, foreign keys, SQLite integrity, and idempotent re-import preserving an existing editorial publication decision. The temporary files are deleted when the test finishes.
+
+`lib/youtube-d1-repository.ts` is a small server-only, **read-only** D1 binding interface. It accepts an explicitly supplied, real D1 binding; it does not import a Cloudflare account, provision a database, or change the public website. The public-safe record read requires `editorial_status = 'published'`; the separately named staging-read function can inspect draft source records for migration verification. Both validate the exact video ID, canonical path and trusted watch URL. A staging health function returns status counts only.
+
+When a real D1 instance is provisioned, vinext on Cloudflare Workers supports accessing its binding using `import { env } from "cloudflare:workers"` in **server-only code**. Bind only the owner's actual staging D1 ID as `CONTENT_DB` after it is explicitly created; do **not** guess an ID or edit this project's production Worker config yet. Staging code can pass `env.CONTENT_DB` into the repository boundary, compare results against checked-in records and observe SQL latency.
+
+These added checks establish offline SQL/export correctness and a production-safe read API, **not** a successful Cloudflare D1 connection, database migration, runtime cutover or measured real-user loading improvement.
+
 ## Required work before production cutover
 
 1. Provision the actual D1 database and `CONTENT_DB` binding with permission from the owner. No such binding is added here.
