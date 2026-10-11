@@ -13,3 +13,9 @@ test("site search records aggregate analytics without raw terms", () => {
   assert.ok(!results.includes("search_term:"));
   assert.ok(!results.includes("search_query:"));
 });
+
+test("site search bounds repeated and oversized query parameters", () => {
+  const page = readFileSync("app/search/page.tsx", "utf8");
+  assert.match(page, /Array\.isArray\(params\.q\)/);
+  assert.match(page, /slice\(0, 120\)/);
+});
