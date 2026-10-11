@@ -2191,8 +2191,8 @@ a.admin-guide-row:hover { background:#f8fcf9; }
   .process-tracker,
   .correction-box { padding: 18px; border-radius: 16px; }
   .process-tracker-start,
-  .process-tracker-head,
-  .process-tracker-start button,
+  .process-tracker-head { flex-direction: column; align-items: stretch; }
+  .process-tracker-start button { width: 100%; }
   .process-columns { gap: 16px; }
   .requirement-detail-card,
   .detailed-step { padding: 16px; }
