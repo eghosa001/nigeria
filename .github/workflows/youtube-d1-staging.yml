@@ -36,7 +36,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
 
       - name: Guard staging-only confirmation and credentials
         env:
@@ -52,7 +51,7 @@ jobs:
           fi
 
       - name: Install Wrangler from repository lockfile
-        run: npm ci --ignore-scripts --no-audit --no-fund
+        run: npm install --ignore-scripts --no-audit --no-fund
 
       - name: Validate staging-only import SQL (no remote writes)
         if: inputs.action == 'import'
