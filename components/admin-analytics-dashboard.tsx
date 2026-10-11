@@ -399,9 +399,25 @@ export function AdminAnalyticsDashboard() {
                 <strong>{number(data.hourlySearchPerformance.clicks ?? 0)}</strong>
                 <small>Preliminary counts may increase or change after processing.</small>
               </div>
+              <div>
+                <span>Impressions · last 24h (reported hours)</span>
+                <strong>{data.hourlySearchPerformance.impressions24h == null
+                  ? "—"
+                  : number(data.hourlySearchPerformance.impressions24h)}</strong>
+                <small>{data.hourlySearchPerformance.hoursReported24h === 0
+                  ? "No recent hours supplied by Google — not evidence of zero traffic."
+                  : data.hourlySearchPerformance.hoursReported24h + " reported hour(s) · incomplete until Google's processing catches up."}</small>
+              </div>
+              <div>
+                <span>Clicks · last 24h (reported hours)</span>
+                <strong>{data.hourlySearchPerformance.clicks24h == null
+                  ? "—"
+                  : number(data.hourlySearchPerformance.clicks24h)}</strong>
+                <small>Missing hours are excluded, never silently treated as zero.</small>
+              </div>
             </div>
             <p className="analytics-clean-note">
-              Direct Search Console hourly_all request: {data.hourlySearchPerformance.startDate} to {data.hourlySearchPerformance.endDate} in Google's Pacific reporting timezone.
+              Direct Search Console hourly_all request (up to 10 days of retained hourly data): {data.hourlySearchPerformance.startDate} to {data.hourlySearchPerformance.endDate} in Google's Pacific reporting timezone.
               Last fetched: {readableSearchHour(data.hourlySearchPerformance.fetchedAt)}.
               {data.hourlySearchPerformance.firstIncompleteHour
                 ? <> Google marks data from {readableSearchHour(data.hourlySearchPerformance.firstIncompleteHour)} onward as incomplete.</>
@@ -441,7 +457,7 @@ export function AdminAnalyticsDashboard() {
           <a href="https://lookerstudio.google.com/reporting/408e669d-07d1-4353-a1dc-94f06bde27ef/page/Hqrp/preview" target="_blank" rel="noopener noreferrer">Open Google’s template ↗</a>
         </div>
         <p className="analytics-clean-note">
-          Google’s official Search Console + Google Analytics Looker Studio template is free.
+          Google's official Search Console + Google Analytics template is free (Looker Studio is now called Data Studio).
           Choose <strong>Use my own data</strong>, select Search Console property <code>sc-domain:mynigeriaguide.com</code>
           {" "}with <strong>URL Impression</strong>, and connect your MyNigeriaGuide GA4 property.
           Google requires you to authorize these data sources in your browser once.

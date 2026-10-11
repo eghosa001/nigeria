@@ -38,6 +38,10 @@ jobs:
             fi
           fi
 
+          if printf '%s\n' "$changed" | grep -Eq '^(lib/(search-console-hourly|analytics-data)\.ts|components/admin-analytics-dashboard\.tsx|tests/search-console-hourly\.test\.ts)$'; then
+            echo "gsc_hourly_changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
           relevant="$(
             printf '%s\n' "$changed" |
               grep -E '^(app|components|lib|data|tests)/|^cloudflare/d1/jobs-scale-schema\.sql$|^scripts/|^(package(-lock)?\.json|tsconfig\.json|next\.config\.(js|mjs|ts)|vite\.config\.ts|wrangler\.jsonc|playwright.*\.config\.ts)$' |
@@ -87,6 +91,9 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip'
+      - name: Test Google Search Console hourly reporting
+        if: steps.scope.outputs.gsc_hourly_changed == 'true'
+        run: npx tsx --test tests/search-console-hourly.test.ts
       - name: Validate Jobs & Careers changes
         if: steps.scope.outputs.mode == 'jobs'
         run: |
