@@ -11,7 +11,7 @@ Evidence baseline: `docs/research/google-autocomplete-evergreen-2026-10-09.json`
 ## Quality / publication decisions
 - **Published as additions to canonical pages, not new indexable routes:** curated typeahead suggestions, platform-selection help, recruitment safety evidence and five location records.
 - **Hold / don't turn into pages:** foreign-country suggestions unrelated to Nigeria audience, year-only keyword clones, unknown movie availability, prices, current recruitment claims, and local attractions with no reliable source or access caveat.
-- **Verification:** Enugu State government hospitality and Nike Lake redevelopment statement; Kaduna State government published 2024 budget project listings; Plateau State government tourism listing; Federal Ministry of Information's FCSC 21 August 2026 notice; NFVCB legal/classification guidance. Facts were individually checked. No claim of physical visits or human editorial review.
+- **Verification:** Enugu State government hospitality and Nike Lake redevelopment statement; Kaduna State government heritage/budget materials and the National Commission for Museums and Monuments' museum directory; Plateau State government tourism listing; Federal Ministry of Information's FCSC 21 August 2026 notice; NFVCB legal/classification guidance. Facts were individually checked. No claim of physical visits or human editorial review.
 - **UX and scale:** the short curated typeahead resolves to stable canonical links, runs locally without per-keystroke Google requests, and never downloads whole site catalogs. The new tour records reuse the existing paginated place directory. Site quality remains subject to representative live/device checks before anyone claims a 9+/10 score.
 
 ## Follow-up evidence needed

@@ -75,16 +75,16 @@ export const verifiedEvergreenCityStops20261011: ExplorePlace[] = [
     checkedAt: "2026-10-11"
   },
   {
-    slug: "nok-museum-kaduna",
+    slug: "national-museum-nok-kwoi",
     guideSlug: "kaduna-state-travel-guide",
-    name: "Nok Museum",
+    name: "National Museum Nok",
     kind: "landmark",
-    area: "Nok / Jaba",
-    address: "Nok Museum, Nok, Jaba Local Government Area, Kaduna State, Nigeria",
-    summary: "Archaeological heritage destination associated with Nok cultural history. State project records mention access-road investment, not confirmed current visitor opening; arrange access locally before travelling.",
+    area: "Kwoi / Jaba",
+    address: "National Museum Nok, Kwoi, Jaba Local Government Area, Kaduna State, Nigeria",
+    summary: "The National Commission for Museums and Monuments lists National Museum Nok in Kwoi, Jaba LGA. It is relevant to the region’s archaeological history; confirm exhibitions and actual visitor access with the museum before making the trip.",
     source: {
-      label: "Kaduna State Government — Nok Museum access-road project",
-      href: "https://kdsg.gov.ng/download/2945/budgets/22312/kaduna-state-revised-fy-2024-budget-publication"
+      label: "National Commission for Museums and Monuments — museum directory",
+      href: "https://museum.ng/national-museums-list/"
     },
     tags: [
       "Kaduna State",
@@ -94,7 +94,7 @@ export const verifiedEvergreenCityStops20261011: ExplorePlace[] = [
     ],
     cost: "Verify current admission, access and any guiding charges locally",
     hours: "Opening or site access is not independently confirmed; contact the relevant operator or authority before visiting.",
-    mapQuery: "Nok Museum Nok / Jaba Nigeria",
+    mapQuery: "National Museum Nok Kwoi Jaba Kaduna Nigeria",
     checkedAt: "2026-10-11"
   },
   {
