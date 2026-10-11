@@ -27,8 +27,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - name: Install dependencies for TS reader tests
-        run: npm ci --no-audit --no-fund
+        run: npm install --no-audit --no-fund
       - name: Check secure editorial research contracts
         run: npx tsx --test tests/admin-trend-radar.test.ts
