@@ -86,20 +86,6 @@ const generatedData = {
   }),
 };
 
-const reviewData = {
-  generatedAt: packed.reviewGeneratedAt,
-  candidates: packed.reviews.map((row) => {
-    const [videoId, rawTitle, title, channelName, channelUrl, publishedAt,
-      durationMinutes, reason, descriptionExcerpt, videoUrlOverride] = row;
-    return {
-      videoId, rawTitle, title, channelName,
-      ...(channelUrl == null ? {} : { channelUrl }),
-      publishedAt, durationMinutes, reason,
-      ...(descriptionExcerpt == null ? {} : { descriptionExcerpt }),
-      videoUrl: videoUrlOverride ?? "https://www.youtube.com/watch?v=" + videoId,
-    };
-  }),
-};
 
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
@@ -281,7 +267,7 @@ type ReviewCandidate = {
   descriptionExcerpt?: string;
 };
 
-const reviewGeneratedAt = String(reviewData.generatedAt ?? "").slice(0, 10) || new Date().toISOString().slice(0, 10);
+const reviewGeneratedAt = String(packed.reviewGeneratedAt ?? "").slice(0, 10) || new Date().toISOString().slice(0, 10);
 const reviewNonMovieTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|watch\s+party|webinar|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|music\s+video|making\s+of)\b/i;
 const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget)\b/i;
 
@@ -304,14 +290,33 @@ function reviewSynopsis(candidate: ReviewCandidate) {
     ". The cast listing is still being expanded; watch through the publisher's official YouTube release.";
 }
 
-const reviewYouTubeMovies: BaseYouTubeMovieRecord[] = ((reviewData.candidates ?? []) as ReviewCandidate[])
-  .filter((candidate) =>
-    candidate.reason === "missing-cast" &&
-    Number(candidate.durationMinutes) >= 55 &&
-    !reviewNonMovieTitle.test(candidate.rawTitle ?? candidate.title) &&
-    isApprovedYouTubeMoviePublisher(candidate.channelName),
-  )
-  .map((candidate) => ({
+// Pending-review movies do not appear in public listings. Retain the original
+// last-valid-review-by-ID behavior but defer description parsing and full
+// record allocation until a caller explicitly requests an individual ID.
+const pendingReviewRows = new Map<string, ReviewRow>();
+for (const row of packed.reviews) {
+  const [videoId, rawTitle, title, channelName, , , durationMinutes, reason] = row;
+  if (
+    reason === "missing-cast" &&
+    Number(durationMinutes) >= 55 &&
+    !reviewNonMovieTitle.test(rawTitle ?? title) &&
+    isApprovedYouTubeMoviePublisher(channelName)
+  ) {
+    pendingReviewRows.set(videoId, row);
+  }
+}
+
+function hydrateReviewMovie(row: ReviewRow): YouTubeMovieRecord {
+  const [videoId, rawTitle, title, channelName, channelUrl, publishedAt,
+    durationMinutes, reason, descriptionExcerpt, videoUrlOverride] = row;
+  const candidate: ReviewCandidate = {
+    videoId, rawTitle, title, channelName,
+    ...(channelUrl == null ? {} : { channelUrl }),
+    publishedAt, durationMinutes, reason,
+    ...(descriptionExcerpt == null ? {} : { descriptionExcerpt }),
+    videoUrl: videoUrlOverride ?? "https://www.youtube.com/watch?v=" + videoId,
+  };
+  return {
     videoId: candidate.videoId,
     title: cleanReviewTitle(candidate.title),
     rawTitle: candidate.rawTitle,
@@ -327,9 +332,11 @@ const reviewYouTubeMovies: BaseYouTubeMovieRecord[] = ((reviewData.candidates ??
     lastChecked: reviewGeneratedAt,
     viewCount: 0,
     metadataStatus: "cast-pending",
-    source: "youtube-review" as const,
+    source: "youtube-review",
     internalHref: "/entertainment/youtube/" + candidate.videoId,
-  }));
+    alternateSources: [],
+  };
+}
 
 const byVideoIdBase = new Map<string, BaseYouTubeMovieRecord>();
 for (const movie of generatedYouTubeMovies) byVideoIdBase.set(movie.videoId, movie);
@@ -367,16 +374,9 @@ export const youtubeMovieLibrary: YouTubeMovieRecord[] = baseMovies
   }))
   .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.title.localeCompare(b.title));
 
-const reviewByVideoId = new Map<string, YouTubeMovieRecord>(
-  reviewYouTubeMovies.map((movie) => [movie.videoId, { ...movie, alternateSources: [] }]),
-);
-
 const byVideoId = new Map<string, YouTubeMovieRecord>(
   youtubeMovieLibrary.map((movie) => [movie.videoId, movie]),
 );
-for (const [videoId, movie] of reviewByVideoId) {
-  if (!byVideoId.has(videoId)) byVideoId.set(videoId, movie);
-}
 
 function trendScore(movie: YouTubeMovieRecord) {
   const published = Date.parse(movie.publishedAt);
@@ -419,7 +419,15 @@ export const youtubePendingQualityCount = generatedData.pendingQualityCount ?? 0
 export const youtubeReviewVisibleCount = 0;
 
 export function getYouTubeMovieById(videoId: string) {
-  return byVideoId.get(videoId);
+  const published = byVideoId.get(videoId);
+  if (published) return published;
+  const pending = pendingReviewRows.get(videoId);
+  if (!pending) return undefined;
+
+  // Cache on first access to preserve object identity for repeat callers.
+  const hydrated = hydrateReviewMovie(pending);
+  byVideoId.set(videoId, hydrated);
+  return hydrated;
 }
 
 export function getYouTubeVideoId(url: string) {

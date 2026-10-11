@@ -61,8 +61,8 @@ jobs:
 
           # Full source JSON is excluded from the Worker entrypoint by this
           # change. Validate one actual Workers-rendered YouTube listing.
-          youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
-          non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/youtube-runtime-catalog\.test\.mjs$)' || true)"
+          youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/(youtube-runtime-catalog\.test\.mjs|youtube-review-lazy\.test\.ts)$)' || true)"
+          non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/(youtube-runtime-catalog\.test\.mjs|youtube-review-lazy\.test\.ts)$)' || true)"
           if [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=youtube-runtime" >> "$GITHUB_OUTPUT"
