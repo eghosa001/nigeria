@@ -5,8 +5,8 @@ import { JsonLd } from "@/components/json-ld";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "YouTube Trends in Nigeria: Music, Film & Social Media",
-  description: "Nigeria's YouTube trending videos and music in October 2026, plus TikTok, Instagram, Facebook and X context. Dated chart snapshots, sources and verified guides.",
+  title: "Nigeria X (Twitter) Trends & Verified Social Media 2026",
+  description: "Follow Nigeria X trend observations, source-checked social discussions, TikTok and YouTube highlights. Dated evidence, not an unverified live ranking.",
   alternates: { canonical: "/entertainment/social-trends" },
 };
 
@@ -119,7 +119,7 @@ export default function SocialTrendsPage() {
             { label: "YouTube & social trends" },
           ]} />
           <span className="eyebrow">Nigeria · Sources checked 11 October 2026</span>
-          <h1>YouTube and social media trends in Nigeria</h1>
+          <h1>Nigeria X (Twitter), YouTube and social-media trends</h1>
           <p className="page-intro">
             See what Nigeria-focused video charts showed this week, discover music and film previews,
             and learn how to follow entertainment conversations on TikTok, Facebook, Instagram and X
@@ -130,6 +130,27 @@ export default function SocialTrendsPage() {
             change at any time. The audience figures below are advertising-reach estimates from
             late 2025, published in the Digital 2026 Nigeria report, not October 2026 active-user counts.
           </p>
+
+          <section className="top-gap" aria-labelledby="verified-platform-signals">
+            <span className="eyebrow">X · Facebook · TikTok · dated Nigeria signals</span>
+            <h2 id="verified-platform-signals">Nigeria X (Twitter) trends: what is actually verified</h2>
+            <p>These are dated Nigerian observations from public X trend history, publisher posts and Nigerian editorial coverage — not a live national ranking, post counts, or pooled engagement totals. X is a discovery source; official organisers and agencies are the factual authority.</p>
+            <div className="home-category-grid compact-category-grid">
+              {nigeriaSocialSignals.map((signal) => (
+                <article className="home-category-card" key={signal.title}>
+                  <span>{signal.platform}</span>
+                  <h3>{signal.title}</h3>
+                  <p>{signal.detail}</p>
+                  <div className="minimal-inline-links">
+                    <Link href={signal.internalHref}>{signal.internalLabel} →</Link>
+                    <a href={signal.sourceUrl} target="_blank" rel="noopener noreferrer">{signal.sourceLabel} ↗</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p><Link href="/latest">See the latest source-verified Movies, Services, Tour and Jobs brief →</Link></p>
+            <p className="job-muted">TikTok's anonymous public Creative Center rankings do not currently expose a dependable Nigeria-specific national top-hashtag feed. A global chart or a page that ignores the NG filter is not evidence of a Nigerian trend. Facebook does not offer a public national trending ranking here; publisher posts are attributed individually.</p>
+          </section>
 
           <section className="top-gap" aria-labelledby="youtube-video-trends">
             <span className="eyebrow">YouTube Nigeria · 11 October 2026 snapshot</span>
@@ -170,26 +191,6 @@ export default function SocialTrendsPage() {
               ))}
             </div>
             <p><a href="https://soundcharts.com/en/charts/youtube/nigeria" target="_blank" rel="noopener noreferrer">View the chart source and reporting period ↗</a></p>
-          </section>
-
-          <section className="top-gap" aria-labelledby="verified-platform-signals">
-            <span className="eyebrow">X · Facebook · TikTok · dated Nigeria signals</span>
-            <h2 id="verified-platform-signals">What public platform evidence actually shows</h2>
-            <p>These are dated observations from public Nigeria-specific trend histories, publisher posts and Nigerian editorial coverage — not pooled engagement totals. Each card names its evidence and links to a relevant MyNigeriaGuide guide.</p>
-            <div className="home-category-grid compact-category-grid">
-              {nigeriaSocialSignals.map((signal) => (
-                <article className="home-category-card" key={signal.title}>
-                  <span>{signal.platform}</span>
-                  <h3>{signal.title}</h3>
-                  <p>{signal.detail}</p>
-                  <div className="minimal-inline-links">
-                    <Link href={signal.internalHref}>{signal.internalLabel} →</Link>
-                    <a href={signal.sourceUrl} target="_blank" rel="noopener noreferrer">{signal.sourceLabel} ↗</a>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <p className="job-muted">TikTok's anonymous public Creative Center rankings do not currently expose a dependable Nigeria-specific national top-hashtag feed. A global chart or a page that ignores the NG filter is not evidence of a Nigerian trend. Facebook does not offer a public national trending ranking here; publisher posts are attributed individually.</p>
           </section>
 
           <section className="top-gap" aria-labelledby="social-platforms">
