@@ -8,6 +8,11 @@ import { queryServiceDirectory, type ServiceDirectorySort, type ServiceDirectory
 
 const popularServiceLinks = [
   { label: "CAC registration", href: "/topics/cac-business" },
+  { label: "CAC registration portal, fees & requirements", href: "/services/cac-business-name-registration" },
+  { label: "Nigerian passport renewal online", href: "/services/passport-renewal" },
+  { label: "Check NIN number on your phone", href: "/services/check-nin-number" },
+  { label: "NYSC 2026 Batch C registration status", href: "/services/nysc-registration-local" },
+  { label: "WAEC result checker 2026", href: "/services/waec-check-result" },
   { label: "Nigeria Tax ID / TIN", href: "/services/nrs-tax-id-retrieval" },
   { label: "Landing & Exit Card", href: "/services/nigeria-landing-exit-card" },
   { label: "ASIN registration", href: "/services/anambra-asin-registration" },
@@ -43,8 +48,8 @@ export async function generateMetadata({
 
   return {
     alternates: { canonical: "/services" },
-    title: "Nigeria Services: Fees & Official Portals",
-    description: "Find Nigerian government and everyday service guides, current fees, official portals, requirements and step-by-step application guidance for 2026.",
+    title: "CAC, NYSC, NIN, Passport & WAEC: Nigeria Services",
+    description: "Check CAC registration fees and portal, NYSC Batch C status, NIN retrieval, passport renewal, WAEC results and official Nigeria service instructions.",
     robots: filtered ? { index: false, follow: true } : undefined,
   };
 }
