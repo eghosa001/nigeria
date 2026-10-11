@@ -6,12 +6,18 @@ import {
 } from "@/lib/youtube-library";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
+type PendingReviewRow = [
+  string, string, string, string, string | null, string, number, string,
+  string | null, string | null
+];
+
 const excludedTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|watch\s+party|webinar|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|music\s+video|making\s+of)\b/i;
 
 test("on-demand pending YouTube records preserve all prior approved-ID lookup semantics", () => {
   const published = new Map(youtubeMovieLibrary.map((movie) => [movie.videoId, movie]));
-  const eligible = new Map<string, (typeof packedCatalog.reviews)[number]>();
-  for (const row of packedCatalog.reviews) {
+  const eligible = new Map<string, PendingReviewRow>();
+  for (const raw of packedCatalog.reviews) {
+    const row = raw as unknown as PendingReviewRow;
     const [videoId, rawTitle, title, channelName, , , durationMinutes, reason] = row;
     if (reason === "missing-cast" &&
       Number(durationMinutes) >= 55 &&
