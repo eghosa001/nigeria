@@ -272,4 +272,3 @@ jobs:
           exit 1
       - run: npx playwright install --with-deps chromium
       - run: npx playwright test --config playwright.live.config.ts tests/live-deployment.spec.ts
-

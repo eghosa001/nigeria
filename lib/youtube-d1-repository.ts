@@ -1,60 +1,61 @@
-name: Live Deployment QA
+/**
+ * Cloudflare D1 read boundary for the staged YouTube catalog.
+ *
+ * Deliberately independent of cloudflare:workers imports: callers must supply
+ * a real, explicitly configured CONTENT_DB binding. No database is provisioned
+ * here and public pages continue using the existing verified static catalog.
+ *
+ * Draft records can be inspected ONLY through the explicitly named staging
+ * function; the public reader always requires an editor-published row.
+ */
+type SqlParam = string | number | null;
 
-on:
-  workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - "app/**"
-      - "components/**"
-      - "lib/**"
-      - "data/**"
-      - "public/**"
-      - "scripts/**"
-      - "tests/**"
-      - "package.json"
-      - "next.config.ts"
-      - "wrangler.jsonc"
-      - "playwright.live.config.ts"
-      - ".github/workflows/live-qa.yml"
+export type YouTubeD1Statement = {
+  bind(...values: SqlParam[]): YouTubeD1BoundStatement;
+};
 
-concurrency:
-  group: live-deployment-qa
-  cancel-in-progress: true
+export type YouTubeD1BoundStatement = {
+  first<T extends object>(): Promise<T | null>;
+  all<T extends object>(): Promise<{ results: T[] }>;
+};
 
-jobs:
-  scope:
-    runs-on: ubuntu-latest
-    timeout-minutes: 2
-    outputs:
-      run: ${{ steps.scope.outputs.run }}
-      jobs_live: ${{ steps.scope.outputs.jobs_live }}
-      tour_live: ${{ steps.scope.outputs.tour_live }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-      - name: Detect whether live QA is needed
-        id: scope
-        shell: bash
-        run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
-            echo "tour_live=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          changed="$(git diff --name-only HEAD^1 HEAD)"
-          if node scripts/youtube-d1-change-scope.mjs "$changed"; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
-            echo "tour_live=false" >> "$GITHUB_OUTPUT"
-            echo "Static public default retained; focused server parity is covered in CI."
-            exit 0
-          fi
-          jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
-          non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
-          tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|components/explore-place-directory\.tsx$|lib/explore(-places)?\.…19875 tokens truncated…ow(row: ContentRow | null, videoId: string): YouTubeD1Record | null {
+export type YouTubeD1Database = {
+  prepare(sql: string): YouTubeD1Statement;
+};
+
+export type StoredYouTubeMovie = {
+  videoId: string;
+  title: string;
+  channelName: string;
+  videoUrl: string;
+  publishedAt: string;
+  lastChecked: string;
+  cast: string[];
+  featuredCast: string[];
+  // Keep the entire trusted staged payload for later normalization and parity.
+  [field: string]: unknown;
+};
+
+export type YouTubeD1Record = {
+  movie: StoredYouTubeMovie;
+  editorialStatus: string;
+  canonicalPath: string;
+};
+
+type ContentRow = {
+  payload_json: string;
+  editorial_status: string;
+  canonical_path: string;
+};
+
+export const YOUTUBE_D1_PILLAR = "movies_entertainment";
+export const YOUTUBE_D1_KIND = "youtube-movie";
+
+function isValidVideoId(id: string) {
+  return /^[A-Za-z0-9_-]{11}$/.test(id);
+}
+
+function parseRow(row: ContentRow | null, videoId: string): YouTubeD1Record | null {
   if (!row) return null;
   const canonicalPath = "/entertainment/youtube/" + videoId;
   if (row.canonical_path !== canonicalPath) {

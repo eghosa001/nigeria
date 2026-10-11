@@ -149,4 +149,3 @@ These added checks establish offline SQL/export correctness and a production-saf
 6. Record observed Cloudflare cold-start, Worker CPU, rows-read and real-page Web Vitals; do not claim speedups without a paired measurement.
 
 The focused test `node --test scripts/export-youtube-d1.test.mjs` executes the existing D1 schema and generated fixture SQL against ephemeral in-memory SQLite, tests FTS5, stable URLs, full JSON integrity, idempotency and injection-safe escaping. It never contacts a database service.
-
