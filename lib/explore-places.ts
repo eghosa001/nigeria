@@ -4245,11 +4245,14 @@ const citySharedPlaceSlugs: Record<string, readonly string[]> = {
   "lagos": [
     "omu-resort-lagos",
     "la-campagne-tropicana",
-    "lufasi-nature-park"
+    "lufasi-nature-park",
+    "freedom-park-lagos"
   ],
   "abuja": [
     "magicland-smfest-abuja-2026",
-    "jabi-lake-mall-smfest-abuja-2026"
+    "jabi-lake-mall-smfest-abuja-2026",
+    "jabi-lake-abuja",
+    "abuja-arts-crafts-village"
   ],
   "calabar": [
     "old-residency-museum-calabar",
