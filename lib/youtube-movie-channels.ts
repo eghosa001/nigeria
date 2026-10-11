@@ -47,22 +47,31 @@ function normalizePublisherName(name: string) {
   return name.trim().toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
+// Channel names are checked for every catalog candidate. Normalize approved
+// aliases once instead of repeating a nested registry scan for each movie.
+const approvedPublisherNames = new Set(
+  sourceRegistry.sources.flatMap((source) => source.aliases.map(normalizePublisherName)),
+);
+const channelsBySlug = new Map<string, VerifiedYouTubeMovieChannel>();
+const channelsByAlias = new Map<string, VerifiedYouTubeMovieChannel>();
+
+for (const channel of verifiedYouTubeMovieChannels) {
+  // Preserve the first channel for duplicate aliases or slugs, matching find().
+  if (!channelsBySlug.has(channel.slug)) channelsBySlug.set(channel.slug, channel);
+  for (const alias of channel.aliases) {
+    const name = normalizePublisherName(alias);
+    if (!channelsByAlias.has(name)) channelsByAlias.set(name, channel);
+  }
+}
+
 export function isApprovedYouTubeMoviePublisher(name?: string) {
-  if (!name) return false;
-  const normalized = normalizePublisherName(name);
-  return sourceRegistry.sources.some((source) =>
-    source.aliases.some((alias) => normalizePublisherName(alias) === normalized),
-  );
+  return Boolean(name && approvedPublisherNames.has(normalizePublisherName(name)));
 }
 
 export function getVerifiedYouTubeMovieChannelBySlug(slug: string) {
-  return verifiedYouTubeMovieChannels.find((channel) => channel.slug === slug);
+  return channelsBySlug.get(slug);
 }
 
 export function getVerifiedYouTubeMovieChannelByName(name?: string) {
-  if (!name) return undefined;
-  const normalized = normalizePublisherName(name);
-  return verifiedYouTubeMovieChannels.find((channel) =>
-    channel.aliases.some((alias) => normalizePublisherName(alias) === normalized),
-  );
+  return name ? channelsByAlias.get(normalizePublisherName(name)) : undefined;
 }
