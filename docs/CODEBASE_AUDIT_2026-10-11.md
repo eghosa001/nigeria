@@ -51,6 +51,7 @@ The scanner is informational and never modifies or deletes files. The initial br
 | **Optimized in branch** | Movie directory scoring renormalized the search query once per matching title. | Normalize once before matching. | Keep existing weights, filtering and ordering. |
 | **CSS cleanup (follow-up)** | Orphan `.route-wizard` selectors remained in global and theme CSS after the unused component was deleted. | Removed dead standalone and group selectors, preserving adjacent process-tracker responsiveness and active dark-mode cascade. | CSS-only, no rendered RouteWizard component remains. |
 | **Deleted in branch** | Two unreferenced client components: the legacy AdSense script and old service route wizard. | Removed after static-graph and active-layout/assistant inspection; tracked AdSense integration and guide search remain active. | No route, JSX consumer, or publisher configuration was removed. |\n| **Added in branch** | No repeatable way to inventory code import reachability while distinguishing Next.js entrypoints from reusable modules. | Manual `npm run audit:codebase` read-only inventory with candidate lists, source sizes, unresolved and computed imports. | **Never delete from the output automatically.** |
+| **Improved in PR #292** | Service fuzzy token expansion and job text concatenation repeated for each record/request. | Compile each service search query once; reuse lazily cached canonical job search text. | Ranking and facet parity checked against old computations; external job objects remain mutable. |
 | **Done previously** | Admin API request origin/path guard implementations duplicated across five routes. | PR #289 consolidated guards with focused regression checks and was merged before this audit. | Legacy aliases remain closed; Cloudflare Access remains. |
 
 ## Confirmed safe to keep (not dead code)
@@ -60,6 +61,23 @@ The scanner is informational and never modifies or deletes files. The initial br
 - GSC/GA4/PostHog/AdSense modules, service-account permissions, `/admin/api/*` guards, tracking exemptions, historical datasets and verification assets: operational or publisher-critical.
 - Checked-in service/job/movie/travel source records: publishing and indexing assets, not removable without content-level review and redirect/canonical planning.
 - `.agents/skills/fast-production/SKILL.md`, `scripts/fast_path_guard.py`, `.github/CODEOWNERS` and guarded CI policy.
+
+## Targeted performance follow-up: service/job catalog CPU (PR #292)
+
+The existing service search expanded fuzzy aliases and edit-distance candidates **once per service record**. It now expands the query once and applies the same scoring semantics to each record. The Jobs directory and facet filters previously rejoined and lowercased the same immutable published fields on every pass; the canonical catalog now uses lazy, shared WeakMap-backed search text. Standalone caller-created job objects remain uncached.
+
+**Measured on a GitHub Actions Node.js 22.23.3 hosted runner, warm in-process, median of five samples**, using the checked-in catalogs and equivalence assertions:
+
+| CPU microbenchmark | Original approach | Optimized approach | Relative speedup |
+| --- | ---: | ---: | ---: |
+| One ranked service search across **671 public service records** (query "passport renewal") | 94.618 ms | 21.922 ms | **4.32×** |
+| Repeated text extraction across published job records (125 scans, warm cache) | 33.997 ms | 0.453 ms | **75.11×** |
+
+The job test measures the **text-extraction stage only**, not a complete Jobs API request. The first cold cache fill is additional work. Samples are hardware/JIT/cache dependent and should not be extrapolated to percentage improvements in overall page performance, Google rankings, Cloudflare cold starts or browser Web Vitals.
+
+The dedicated parity regression also validates service scores/order, job search text, profession/location filtering and mutable external records. The benchmark command is `npx tsx scripts/bench-catalog-search.ts` and is only run on its changed-surface CI scope.
+
+**Not yet measured:** actual production Cloudflare Worker request/CPU durations, build payload differences, Core Web Vitals or visitor-level outcomes. The prior broad module-size assessment and content-store migration recommendation still stand.
 
 ## Remaining investigation queue (not falsely reported as fixed)
 
