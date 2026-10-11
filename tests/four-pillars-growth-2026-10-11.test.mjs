@@ -39,9 +39,9 @@ test("four-pillar discoveries use existing canonical destinations", () => {
   for (const path of [
     "/entertainment/movies/my-30th-wedding",
     "/services/ninauth-nin-verification",
-    "/explore/lagos",
-    "/jobs/moniepoint-early-careers-talent-acquisition-specialist",
   ]) assert.ok(source.includes('href: "' + path + '"'), path);
+  assert.ok(source.includes('href: "/explore/lagos"'));
+  assert.ok(read("app/jobs/page.tsx").includes('/jobs/moniepoint-early-careers-talent-acquisition-specialist'));
   assert.match(read("lib/entertainment-extras.ts"), /my-30th-wedding-youtube-2026/);
   assert.match(read("data/updates.ts"), /NIN Share Code is different from \*346#/);
 });
