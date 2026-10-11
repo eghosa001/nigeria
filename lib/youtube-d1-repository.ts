@@ -172,6 +172,12 @@ export function youtubeD1QueryPlan(input: YouTubeD1Query, staging = false) {
     : 'content_items i';
   const clauses = ['i.pillar = ?', 'i.kind = ?'];
   const params: SqlParam[] = [YOUTUBE_D1_PILLAR, YOUTUBE_D1_KIND];
+  // Match the existing public directory's discoverability gate. Imported
+  // source rows with missing cast are useful staging evidence but must not
+  // appear in public search or alter totals when D1 is enabled.
+  clauses.push("json_array_length(json_extract(i.payload_json, '$.cast')) > 0");
+  clauses.push("json_array_length(json_extract(i.payload_json, '$.featuredCast')) > 0");
+  clauses.push("COALESCE(json_extract(i.payload_json, '$.metadataStatus'), 'complete') <> 'cast-pending'");
   if (!staging) clauses.push("i.editorial_status = 'published'");
   if (match) { clauses.push('content_search MATCH ?'); params.push(match); }
   else if (query) clauses.push('0 = 1');
@@ -218,3 +224,4 @@ export function queryPublishedYouTubeD1Movies(db: YouTubeD1Database, input: YouT
 export function inspectStagedYouTubeD1Page(db: YouTubeD1Database, input: YouTubeD1Query = {}) {
   return queryYouTubeD1(db, input, true);
 }
+
