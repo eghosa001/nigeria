@@ -1,3 +1,4 @@
+import { mkdir, writeFile } from "node:fs/promises";
 // One-shot, polite Google Autocomplete research for MyNigeriaGuide's existing four pillars.
 // This collects real suggestions; it does not assign search volumes or publish pages.
 const seeds = {
@@ -65,6 +66,14 @@ for (const [i, item] of probes.entries()) {
 const byPillar = Object.fromEntries(Object.keys(seeds).map(pillar => [
   pillar, [...new Set(results.filter(row => row.pillar === pillar).flatMap(row => row.suggestions))]
 ]));
+await mkdir("artifacts", { recursive: true });
+await writeFile("artifacts/google-autocomplete-ng.json", JSON.stringify({
+  researchedAt: new Date().toISOString(), locale: "en-NG",
+  source: "Google Search Suggest — unofficial non-volume API",
+  endpoint: "https://suggestqueries.google.com/complete/search",
+  requests: probes.length, successful: results.length, failed: failures.length,
+  rows: results, failures,
+}, null, 2) + "\n");
 console.log("GOOGLE_SUGGEST_SUMMARY " + JSON.stringify({
   researchedAt: new Date().toISOString(), locale: "en-NG", source: "Google Autocomplete unofficial endpoint",
   requests: probes.length, successful: results.length, failed: failures.length,
