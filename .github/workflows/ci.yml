@@ -38,126 +38,7 @@ jobs:
             fi
           fi
 
-          if printf '%s\n' "$changed" | grep -Eq '^(lib/(search-console-hourly|analytics-data)\.ts|components/admin-analytics-dashboard\.tsx|tests/search-console-hourly\.test\.ts) '%s\n' "$changed" |
-              grep -E '^(app|components|lib|data|tests)/|^cloudflare/d1/jobs-scale-schema\.sql$|^scripts/|^(package(-lock)?\.json|tsconfig\.json|next\.config\.(js|mjs|ts)|vite\.config\.ts|wrangler\.jsonc|playwright.*\.config\.ts)$' |
-              grep -v '^scripts/fast_path_guard\.py$' || true
-          )"
-
-          if [ -z "$relevant" ]; then
-            echo "mode=skip" >> "$GITHUB_OUTPUT"
-            echo "No product-CI-relevant changes; required CI check can finish immediately."
-          else
-            jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
-            non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
-            tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|app/globals\.css$|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$|tests/explore\.spec\.ts$)' || true)"
-            non_tour="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/explore/|app/globals\.css$|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$|tests/explore\.spec\.ts$)' || true)"
-            quality_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
-            non_quality="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|jobs-freshness)\.yml$|package\.json$|app/(services/|api/services/|entertainment/|api/entertainment/|explore/|jobs/|globals\.css$)|components/(site-header|service-directory|entertainment-catalog|youtube-movie-card)\.tsx$|lib/(service-query|explore|explore-places|job-scale-wave|entertainment|entertainment-query|youtube-library|sitemap-sections)\.ts$|scripts/(check-entertainment-content|check-directory-queries|check-explore-content|check-scale-contract|report-content-quality)\.ts$|tests/directory-navigation\.spec\.ts$)' || true)"
-
-            analytics_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
-            non_analytics="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa)\.yml$|app/layout\.tsx$|components/(analytics|posthog-analytics|admin-analytics-dashboard)\.tsx$|lib/(analytics-(config|safety|data)|client-analytics|posthog-(client|data))\.ts$|scripts/check-analytics-safety\.ts$)' || true)"
-            # For this self-contained visual fix, Browser QA runs the focused
-            # contrast/layout regression; avoid broad unrelated CI work.
-            movie_discovery_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts)$' || true)"
-            non_movie_discovery="$(printf '%s\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts|\.github/workflows/(ui-qa|ci)\.yml)$' || true)"
-            if [ -n "$movie_discovery_trigger" ] && [ -z "$non_movie_discovery" ]; then
-              echo "mode=skip" >> "$GITHUB_OUTPUT"
-              echo "Focused Browser QA covers this movie discovery-only design change."
-            elif [ -n "$analytics_trigger" ] && [ -z "$non_analytics" ]; then
-              echo "mode=analytics" >> "$GITHUB_OUTPUT"
-              echo "Analytics-only change: run focused tracking safety regression."
-            elif [ -n "$jobs_trigger" ] && [ -z "$non_jobs" ]; then
-              echo "mode=jobs" >> "$GITHUB_OUTPUT"
-              printf 'Jobs-only product files:\n%s\n' "$changed"
-            elif [ -n "$tour_trigger" ] && [ -z "$non_tour" ]; then
-              echo "mode=tour" >> "$GITHUB_OUTPUT"
-              printf 'Tour-only product files:\n%s\n' "$changed"
-            elif [ -n "$quality_trigger" ] && [ -z "$non_quality" ]; then
-              echo "mode=quality" >> "$GITHUB_OUTPUT"
-              printf 'Published-content quality files:\n%s\n' "$changed"
-            else
-              echo "mode=full" >> "$GITHUB_OUTPUT"
-              printf 'Product-CI-relevant files:\n%s\n' "$relevant"
-            fi
-          fi
-      - uses: actions/setup-node@v4
-        if: steps.scope.outputs.mode != 'skip'
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.mode != 'skip'
-      - name: Test Google Search Console hourly reporting
-        if: steps.scope.outputs.gsc_hourly_changed == 'true'
-        run: npx tsx --test tests/search-console-hourly.test.ts
-      - name: Validate Jobs & Careers changes
-        if: steps.scope.outputs.mode == 'jobs'
-        run: |
-          python3 scripts/fast_path_guard.py
-          npm run check:jobs
-      - name: Validate Tour Nigeria changes
-        if: steps.scope.outputs.mode == 'tour'
-        run: |
-          python3 scripts/fast_path_guard.py
-          npm run check:explore
-      - name: Validate published-content quality changes
-        if: steps.scope.outputs.mode == 'quality'
-        run: |
-          python3 scripts/fast_path_guard.py
-          npm run check:service-catalog
-          npm run check:content
-          npm run check:explore
-          npm run check:entertainment-scale
-          npm run check:jobs
-          npm run check:scale
-          npm run check:directory-queries
-          npm run quality:status
-      - run: npm run check:analytics-safety
-        if: steps.scope.outputs.mode == 'analytics'
-      - run: node scripts/check-production-audit.mjs
-        if: steps.scope.outputs.mode == 'full'
-      - name: Verify recent movie selection and release gating
-        if: steps.scope.outputs.mode == 'full'
-        run: npx tsx --test tests/home-movie-highlights.test.ts
-      - run: npm run typecheck
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:service-catalog
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:content
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:explore
-        if: steps.scope.outputs.mode == 'full'
-      - name: Verify source-backed release and YouTube scan regressions
-        if: steps.scope.outputs.mode == 'full'
-        run: node --test tests/source-freshness-2026-10-10.test.mjs
-      - run: npm run check:entertainment-scale
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:analytics-safety
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run build:next
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:cloudflare
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run build
-        if: steps.scope.outputs.mode == 'full'
-      - name: Prevent accidental KV dependency
-        if: steps.scope.outputs.mode == 'full'
-        run: |
-          node --input-type=module <<'NODE'
-          import fs from "node:fs";
-          const files = ["wrangler.jsonc", "dist/server/wrangler.json"];
-          for (const file of files) {
-            const config = JSON.parse(fs.readFileSync(file, "utf8"));
-            if (Array.isArray(config.kv_namespaces) && config.kv_namespaces.length > 0) {
-              console.error("Unexpected KV namespace detected in " + file);
-              process.exit(1);
-            }
-          }
-          console.log("KV-free deployment confirmed.");
-          NODE
-      - name: Package Cloudflare Worker without deploying
-        if: steps.scope.outputs.mode == 'full'
-        run: npx wrangler deploy --dry-run
-; then
+          if printf '%s\n' "$changed" | grep -Eq '^(lib/(search-console-hourly|analytics-data)\.ts|components/admin-analytics-dashboard\.tsx|tests/search-console-hourly\.test\.ts)$'; then
             echo "gsc_hourly_changed=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -210,6 +91,9 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip'
+      - name: Test Google Search Console hourly reporting
+        if: steps.scope.outputs.gsc_hourly_changed == 'true'
+        run: npx tsx --test tests/search-console-hourly.test.ts
       - name: Validate Jobs & Careers changes
         if: steps.scope.outputs.mode == 'jobs'
         run: |
