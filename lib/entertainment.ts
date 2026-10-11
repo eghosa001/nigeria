@@ -254,25 +254,37 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     title: "My 30th Wedding",
     year: 2026,
     format: "movie",
-    genres: ["Romance", "Drama", "Nollywood"],
+    genres: ["Romance", "Comedy", "Drama", "Nollywood"],
     languages: ["English"],
     synopsis: "An ambitious event planner balancing career pressure and family expectations around marriage is forced to rethink work, relationships and the people around her after a demanding client hires her for a high-stakes memorial project.",
-    cast: ["Bimbo Ademoye", "Timini Egbuson"],
-    featuredCast: ["Bimbo Ademoye", "Timini Egbuson"],
+    cast: ["Bimbo Ademoye", "Femi Ajasa", "Timini Egbuson", "Bryan Okoye", "Chieke Donald", "Olubunmi Sunday"],
+    featuredCast: ["Bimbo Ademoye", "Timini Egbuson", "Bryan Okoye"],
+    directors: ["Great-Valedochie"],
+    runtimeMinutes: 149,
     featured: true,
     references: [{
       label: "Nairametrics — My 30th Wedding YouTube milestone",
       href: "https://nairametrics.com/2026/10/04/bimbo-ademoyes-my-30th-wedding-crosses-10-million-views-on-youtube-in-48hrs/",
       lastChecked: "2026-10-06",
-      note: "Current release coverage verifies the 1 October 2026 premiere, lead cast and rapid YouTube audience growth."
+      note: "Release coverage verifies the 1 October 2026 premiere, main cast and early YouTube audience growth."
+    }, {
+      label: "FilmFlux — original publisher, 149-minute runtime and credits",
+      href: "https://filmflux.app/movie/13d51c4c-4a5c-476a-8d3b-c0fcfaa7cfd4-my-30th-wedding",
+      lastChecked: "2026-10-11",
+      note: "Current verified catalog lists Bimbo Ademoye TV's original full film, 149-minute runtime, director and expanded credited cast."
+    }, {
+      label: "Premium Times — My 30th Wedding review (10 October 2026)",
+      href: "https://www.premiumtimesng.com/entertainment/nollywood/915986-movie-review-beyond-10-million-views-my-30th-wedding-offers-little-surprise.html",
+      lastChecked: "2026-10-11",
+      note: "Independent 10 October review supports the film context and lead actors."
     }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on Bimbo Ademoye TV",
       href: "https://www.youtube.com/watch?v=0_JzNVzFukE",
       access: "full-movie",
-      lastChecked: "2026-10-06",
-      note: "Official full-length upload on Bimbo Ademoye TV. YouTube availability and view counts can change.",
+      lastChecked: "2026-10-11",
+      note: "Official full-length Bimbo Ademoye TV upload cross-checked against the FilmFlux publisher record. YouTube availability and view counts can change.",
       publisher: "Bimbo Ademoye TV",
       publisherUrl: "https://www.youtube.com/@BimboAdemoyeTv"
     }]
