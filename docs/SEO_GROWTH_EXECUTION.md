@@ -2,7 +2,7 @@
 
 **Policy:** implement useful, verified improvements whenever their required data and tooling are available. Do not impose an artificial month-by-month publishing roadmap, recurring page-count quota, or date by which the site must reach an arbitrary URL/traffic figure. The number of source-verified, useful search intents governs the number of pages.
 
-This plan supersedes the uploaded dated 30/60/90-day rollout and horizon-specific traffic predictions. The existing [publishing rules](PUBLISHING_STANDARD.md), [scaling safeguards](SCALING.md), source/rights policy, and change-scoped testing requirement remain authoritative. Source verification dates, real application deadlines, expiry dates and operational monitoring remain required; they are **not scaling deadlines**.
+This plan replaces fixed rollout stages and horizon-specific traffic predictions. The existing [publishing rules](PUBLISHING_STANDARD.md), [scaling safeguards](SCALING.md), source/rights policy, and change-scoped testing requirement remain authoritative. Source verification dates, real application deadlines, expiry dates and operational monitoring remain required; they are **not scaling deadlines**.
 
 ## Already built / reuse instead of rebuilding
 
