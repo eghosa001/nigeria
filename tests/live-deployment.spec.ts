@@ -47,9 +47,17 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(slots).toContain("8499139757");
   });
 
-  test("public analytics initializes GA4 and the PostHog SDK", async ({ page }) => {
+  test("public analytics initializes GA4 and the PostHog SDK", async ({ browser }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 
+    // Use a normal browser user agent for this isolated analytics check. Production
+    // intentionally suppresses GA4 for HeadlessChrome/Playwright, even when
+    // navigator.webdriver is overridden. Network collection is intercepted below
+    // so this synthetic visit never reaches GA4.
+    const context = await browser.newContext({
+      userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    });
+    const page = await context.newPage();
     await page.addInitScript(() => {
       // GA4 is explicitly disabled for webdriver traffic by MyNigeriaGuide, so
       // override that one signal for the GA4 request assertion. Keep the
@@ -77,6 +85,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
       { timeout: 15_000 },
     ).toBe(true);
     await expect.poll(() => collectUrl, { timeout: 15_000 }).toContain("tid=G-J1SBV02XGN");
+    await context.close();
   });
 
 
