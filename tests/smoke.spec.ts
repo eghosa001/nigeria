@@ -231,6 +231,43 @@ test("admin shows the exact API activation action for Google's disabled Search C
   await expect(panel).not.toContainText("Request failed (403)");
 });
 
+test("admin shows the exact service account to grant Search Console access", async ({ page }) => {
+  await page.route("**/admin/api/search-console?*", async (route) => {
+    await route.fulfill({
+      json: {
+        authenticated: true, configured: true,
+        serviceAccount: {
+          email: "reporting@example-project.iam.gserviceaccount.com",
+          origin: "GA4_SERVICE_ACCOUNT_EMAIL",
+          siteUrl: "sc-domain:mynigeriaguide.com",
+        },
+        report: {
+          available: false, source: "unavailable",
+          siteUrl: "sc-domain:mynigeriaguide.com", startDate: "2026-10-01",
+          endDate: "2026-10-11", fetchedAt: "2026-10-11T07:00:00Z",
+          latestHour: null, firstIncompleteHour: null, lagHours: null,
+          clicks: null, impressions: null, clicks24h: null,
+          impressions24h: null, hoursReported24h: 0, rows: [],
+          error: "Google denied access to the Search Console property.",
+          issue: {
+            code: "property-permission", projectNumber: null,
+            message: "Google denied access to the Search Console property.",
+          },
+        },
+      },
+    });
+  });
+  await page.goto("/admin");
+  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
+  await page.getByRole("button", { name: "Unlock admin" }).click();
+  const card = page.getByTestId("admin-gsc-status");
+  await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
+  await expect(card).toContainText("Choose Full access");
+  await expect(card.getByRole("button", { name: "Copy account email" })).toBeVisible();
+  await page.goto("/admin/visits");
+  await expect(page.getByTestId("admin-gsc-status")).toContainText("reporting@example-project.iam.gserviceaccount.com");
+});
+
 test("plain-language search finds the right service", async ({ page }) => {
   await page.goto("/");
   await page.getByLabel("What do you want to do?").fill("my passport expired");
