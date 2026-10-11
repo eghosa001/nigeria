@@ -7,8 +7,8 @@ import { exploreGuides } from "@/lib/explore";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Nigeria Events & Festivals 2026: Lagos, Calabar & More",
-  description: "Plan major Nigerian events and festivals with verified guides for dates, venues, access and travel conditions, including Lagos, Calabar and regional cultural festivals.",
+  title: "Nigeria Festivals 2026 & Announced 2027 Events",
+  description: "Explore Nigerian events for 2026, from Felabration to Lagos culture festivals, plus early 2027 announcements such as the Lagos International Chess Festival. Verified dates and venues only.",
   alternates: { canonical: "/explore/events" },
 };
 
@@ -66,6 +66,24 @@ export default function EventsPage() {
             ]}
             note="Dates may be announced before the final daily programme. Each event guide distinguishes fixed information from details you should re-check."
           />
+          <section className="top-gap" aria-labelledby="announced-next-year">
+            <span className="eyebrow">Recently announced · 11 October 2026</span>
+            <h2 id="announced-next-year">Looking ahead: Lagos International Chess Festival 2027</h2>
+            <p>
+              Nigerian chess advocate Tunde Onakoya unveiled a Lagos International Chess Festival
+              planned for <strong>October 2027</strong>. The proposed programme combines a children's
+              chess tournament, elite matches, exhibitions, fashion and cultural activities.
+              As of 11 October 2026, a precise festival date, confirmed venue, booking
+              instructions and ticket prices have not been established. Do not purchase tickets
+              or book non-refundable travel based on the announcement alone.
+            </p>
+            <div className="minimal-inline-links">
+              <a href="https://lifestyle.thecable.ng/tunde-onakoya-launches-lagos-international-chess-festival/" target="_blank" rel="noopener noreferrer">11 October announcement · TheCable ↗</a>
+              <a href="https://www.arise.tv/tunde-onakoya-unveils-lagos-international-chess-festival-targets-global-chess-community/" target="_blank" rel="noopener noreferrer">Independent coverage · Arise ↗</a>
+              <Link href="/explore/lagos">Explore verified Lagos attractions →</Link>
+            </div>
+            <p className="job-muted">This is a future announcement, not part of the confirmed 2026 festival calendar below.</p>
+          </section>
           <div className="home-category-grid compact-category-grid">
             {events.map((event) => (
               <Link className="home-category-card" href={"/explore/" + event.slug} key={event.slug}>
