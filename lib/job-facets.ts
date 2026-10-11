@@ -21,8 +21,23 @@ function searchable(item: CareerOpportunity) {
   ].join(" ").toLowerCase();
 }
 
+// The published catalog is assembled once at module initialization. Cache its
+// search text lazily across location/profession facets and directory searches.
+// Standalone caller-created records remain uncached and safely mutable.
+const catalogItems = new WeakSet<CareerOpportunity>(jobOpportunities);
+const searchableCache = new WeakMap<CareerOpportunity, string>();
+
+export function jobSearchText(item: CareerOpportunity) {
+  if (!catalogItems.has(item)) return searchable(item);
+  const previous = searchableCache.get(item);
+  if (previous !== undefined) return previous;
+  const value = searchable(item);
+  searchableCache.set(item, value);
+  return value;
+}
+
 function matchesTerms(item: CareerOpportunity, terms: string[]) {
-  const text = searchable(item);
+  const text = jobSearchText(item);
   return terms.some((term) => text.includes(term.toLowerCase()));
 }
 

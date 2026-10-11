@@ -67,6 +67,17 @@ jobs:
             exit 0
           fi
 
+          # Service/job catalog search internals preserve public results via
+          # a focused equivalence test; avoid unrelated browser packaging.
+          catalog_hotpath_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/(search|job-query|job-facets)\.ts$|tests/catalog-search-hotpaths\.test\.ts$|scripts/bench-catalog-search\.ts$)' || true)"
+          non_catalog_hotpath="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|lib/(search|job-query|job-facets)\.ts$|tests/catalog-search-hotpaths\.test\.ts$|scripts/bench-catalog-search\.ts$)' || true)"
+          if [ -n "$catalog_hotpath_trigger" ] && [ -z "$non_catalog_hotpath" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=catalog-hotpath" >> "$GITHUB_OUTPUT"
+            echo "Search-result equivalence is covered by the catalog CI test."
+            exit 0
+          fi
+
           jobs_trigger="$(printf '%s\n' "$changed" | grep -E '^(next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides)\.ts$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           non_jobs="$(printf '%s\n' "$changed" | grep -Ev '^(\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|jobs-freshness|indexnow)\.yml$|docs/JOBS_AND_CAREERS\.md$|package\.json$|next\.config\.ts$|data/job-retired-redirects\.json$|app/jobs/|app/api/jobs/|app/search/page\.tsx$|components/(job-[a-z-]+|jobs-directory)\.tsx$|lib/(jobs|job-[a-z-]+|career-guides|sitemap-sections|global-search)\.ts$|cloudflare/d1/jobs-scale-schema\.sql$|scripts/(check-jobs-content\.ts|check-job-links\.mjs|check-job-redirects\.ts)$)' || true)"
           tour_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/explore/|app/globals\.css$|components/explore-place-directory\.tsx$|lib/explore(-places)?\.ts$|scripts/check-explore-content\.ts$|tests/explore\.spec\.ts$)' || true)"

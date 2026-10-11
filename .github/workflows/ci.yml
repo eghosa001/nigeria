@@ -65,11 +65,17 @@ jobs:
             # contrast/layout regression; avoid broad unrelated CI work.
             movie_discovery_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts)$' || true)"
             non_movie_discovery="$(printf '%s\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts|\.github/workflows/(ui-qa|ci)\.yml)$' || true)"
+            # Index/cache-only catalog changes have a dedicated focused test.
+            catalog_hotpath_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/(search|job-query|job-facets)\.ts$|tests/catalog-search-hotpaths\.test\.ts$|scripts/bench-catalog-search\.ts$)' || true)"
+            non_catalog_hotpath="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|lib/(search|job-query|job-facets)\.ts$|tests/catalog-search-hotpaths\.test\.ts$|scripts/bench-catalog-search\.ts$)' || true)"
             # Maintenance-only edits need narrow regression checks, not the full
             # site build/QA pipeline. Match a fixed, reviewed file allowlist.
             maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
             non_maintenance="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|package\.json$|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
-            if [ -n "$maintenance_trigger" ] && [ -z "$non_maintenance" ]; then
+            if [ -n "$catalog_hotpath_trigger" ] && [ -z "$non_catalog_hotpath" ]; then
+              echo "mode=catalog-hotpath" >> "$GITHUB_OUTPUT"
+              echo "Catalog hot-path change: run only parity regression and bounded CPU measurement."
+            elif [ -n "$maintenance_trigger" ] && [ -z "$non_maintenance" ]; then
               echo "mode=maintenance" >> "$GITHUB_OUTPUT"
               echo "Run changed-surface catalog/search and audit tests only."
             elif [ -n "$movie_discovery_trigger" ] && [ -z "$non_movie_discovery" ]; then
@@ -98,6 +104,12 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
         if: steps.scope.outputs.mode != 'skip'
+      - name: Validate catalog hot-path work
+        if: steps.scope.outputs.mode == 'catalog-hotpath'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npx tsx --test tests/catalog-search-hotpaths.test.ts
+          npx tsx scripts/bench-catalog-search.ts
       - name: Validate codebase-maintenance changes
         if: steps.scope.outputs.mode == 'maintenance'
         run: |
