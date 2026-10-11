@@ -1,4 +1,4 @@
-import { jobLocationFacets, jobProfessionFacets, matchesJobLocation, matchesJobProfession } from "@/lib/job-facets";
+import { jobLocationFacets, jobProfessionFacets, matchesJobLocation, matchesJobProfession, jobSearchText } from "@/lib/job-facets";
 import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtime";
 import { jobOpportunities, type CareerOpportunity, type JobSector, type JobStatus } from "@/lib/jobs";
 import { getSimilarOpenJobs } from "@/lib/job-discovery";
@@ -38,18 +38,6 @@ function clampInteger(value: number | undefined, fallback: number, min: number, 
   return Math.min(max, Math.max(min, Math.floor(value as number)));
 }
 
-function searchableText(item: CareerOpportunity) {
-  return [
-    item.title,
-    item.organization,
-    item.summary,
-    item.location,
-    item.employmentType,
-    ...item.audiences,
-    ...item.fields,
-    ...item.qualifications,
-  ].join(" ").toLowerCase();
-}
 
 function toDirectoryItem(item: CareerOpportunity): JobDirectoryItem {
   return {
@@ -95,7 +83,7 @@ export function queryJobDirectory(input: JobDirectoryQuery = {}): JobDirectoryRe
       if (status !== "all" && getEffectiveJobStatus(item) !== status) return false;
       if (validLocation && location !== "all" && !matchesJobLocation(item, location)) return false;
       if (validProfession && profession !== "all" && !matchesJobProfession(item, profession)) return false;
-      if (q && !searchableText(item).includes(q)) return false;
+      if (q && !jobSearchText(item).includes(q)) return false;
       return true;
     })
     .sort((a, b) => {
