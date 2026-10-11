@@ -79,3 +79,10 @@ test("D1 export validates inputs and refuses duplicates or unsafe watch links", 
   assert.throws(() => prepareYouTubeD1Import([movie], { batchSize: 0 }), /Batch size/);
   assert.throws(() => sqlString("test\0value"), /NUL byte/);
 });
+
+test("continuity export can explicitly mark an existing public catalog published", () => {
+  const movie = record("aBCdefG1234", "Existing public film");
+  const plan = prepareYouTubeD1Import([movie], { editorialStatus: "published" });
+  assert.match(plan.batches[0], /'published'/);
+  assert.throws(() => prepareYouTubeD1Import([movie], { editorialStatus: "archived" }), /Unsupported editorial status/);
+});

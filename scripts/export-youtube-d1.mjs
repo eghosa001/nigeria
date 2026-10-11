@@ -50,14 +50,14 @@ export function validateYouTubeSourceRecord(movie) {
   }
 }
 
-function contentSql(movie) {
+function contentSql(movie, editorialStatus = "draft") {
   const canonical = "/entertainment/youtube/" + movie.videoId;
   const keywords = [...new Set([...movie.cast, movie.channelName].filter(Boolean))].join(" ");
   const fields = [
     sqlString(PILLAR), sqlString(KIND), sqlString(movie.videoId),
     sqlString(canonical), sqlString(movie.title), sqlString(movie.synopsis ?? ""),
     sqlString(keywords), sqlString(JSON.stringify(movie)),
-    sqlString("draft"), sqlString(movie.publishedAt ?? null),
+    sqlString(editorialStatus), sqlString(movie.publishedAt ?? null),
     sqlString(movie.lastChecked),
   ];
   const content = `INSERT INTO content_items
@@ -85,12 +85,14 @@ export function prepareYouTubeD1Import(movies, options = {}) {
     throw new Error("Batch size must be between 1 and 100.");
   }
   const seen = new Set();
+  const editorialStatus = options.editorialStatus ?? "draft";
+  if (!["draft", "published"].includes(editorialStatus)) throw new Error("Unsupported editorial status.");
   const entries = [];
   for (const movie of movies) {
     validateYouTubeSourceRecord(movie);
     if (seen.has(movie.videoId)) throw new Error("Duplicate YouTube video ID: " + movie.videoId);
     seen.add(movie.videoId);
-    entries.push(contentSql(movie));
+    entries.push(contentSql(movie, editorialStatus));
   }
   const batches = [];
   for (let start = 0; start < entries.length; start += batchSize) {
@@ -126,7 +128,7 @@ export function exportYouTubeD1Import(movies, outputDir, options = {}) {
   }
   const manifest = {
     schema: "cloudflare/d1/content-scale-schema.sql",
-    pillar: PILLAR, kind: KIND, editorialStatus: "draft",
+    pillar: PILLAR, kind: KIND, editorialStatus: options.editorialStatus ?? "draft",
     recordCount: prepared.records, batchSize: prepared.batchSize,
     batchCount: files.length, sqlBytes: prepared.byteCount, files,
     deployment: "offline-export-only-no-database-connection",

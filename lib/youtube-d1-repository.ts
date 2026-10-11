@@ -157,8 +157,7 @@ const PAGE_SIZE = 48; // Preserve existing directory pagination URLs.
 
 /** Literal unicode words only: users cannot inject FTS operators or SQL. */
 export function youtubeD1SearchExpression(value: string) {
-  const words = value.trim().slice(0, 200).match(/[\p{L}\p{N}]+/gu) ?? [];
-  return words.slice(0, 20).map(word => '"' + word + '"').join(' AND ');
+  return value.trim().slice(0, 200).toLocaleLowerCase();
 }
 
 /** Shared by the binding reader and the read-only remote parity probe. */
@@ -167,9 +166,7 @@ export function youtubeD1QueryPlan(input: YouTubeD1Query, staging = false) {
   const channel = (input.channel ?? '').trim();
   if (query.length > 200 || channel.length > 200) throw new Error('D1 YouTube query is too long.');
   const match = youtubeD1SearchExpression(query);
-  const from = match
-    ? 'content_search JOIN content_items i ON i.id = content_search.rowid'
-    : 'content_items i';
+  const from = 'content_items i';
   const clauses = ['i.pillar = ?', 'i.kind = ?'];
   const params: SqlParam[] = [YOUTUBE_D1_PILLAR, YOUTUBE_D1_KIND];
   // Match the existing public directory's discoverability gate. Imported
@@ -179,17 +176,25 @@ export function youtubeD1QueryPlan(input: YouTubeD1Query, staging = false) {
   clauses.push("json_array_length(json_extract(i.payload_json, '$.featuredCast')) > 0");
   clauses.push("COALESCE(json_extract(i.payload_json, '$.metadataStatus'), 'complete') <> 'cast-pending'");
   if (!staging) clauses.push("i.editorial_status = 'published'");
-  if (match) { clauses.push('content_search MATCH ?'); params.push(match); }
+  if (match) {
+    clauses.push("lower(i.title || ' ' || i.summary || ' ' || i.keywords) LIKE ?");
+    params.push('%' + match + '%');
+  }
   else if (query) clauses.push('0 = 1');
   if (channel) { clauses.push("json_extract(i.payload_json, '$.channelName') = ?"); params.push(channel); }
   const where = clauses.join(' AND ');
   // Source publish date and unique slug give deterministic page boundaries.
   // A matching order index is a cutover prerequisite if remote metrics demand it.
-  const order = match ? 'bm25(content_search), i.published_at DESC, i.slug ASC' : 'i.published_at DESC, i.slug ASC';
+  const orderParams: SqlParam[] = [];
+  const order = match
+    ? `CASE WHEN lower(i.title) = ? THEN 0 WHEN lower(i.title) LIKE ? THEN 1 WHEN lower(i.title) LIKE ? THEN 2 ELSE 3 END, i.published_at DESC, i.slug ASC`
+    : 'i.published_at DESC, i.slug ASC';
+  if (match) orderParams.push(match, match + '%', '%' + match + '%');
   return {
     countSql: `SELECT COUNT(*) AS total FROM ${from} WHERE ${where}`,
     pageSql: `SELECT i.slug, i.payload_json, i.editorial_status, i.canonical_path FROM ${from} WHERE ${where} ORDER BY ${order} LIMIT ? OFFSET ?`,
     params,
+    orderParams,
     filteredMode: Boolean(query || channel),
   };
 }
@@ -203,7 +208,7 @@ async function queryYouTubeD1(db: YouTubeD1Database, input: YouTubeD1Query, stag
   const page = Math.min(Number.isSafeInteger(requested) && requested > 0 ? requested : 1, pageCount);
   // Avoid arbitrarily deep OFFSET work; capacity beyond this needs cursor pagination.
   if (page > 1000) throw new Error('D1 YouTube page exceeds bounded offset limit.');
-  const rows = await db.prepare(plan.pageSql).bind(...plan.params, PAGE_SIZE, (page - 1) * PAGE_SIZE)
+  const rows = await db.prepare(plan.pageSql).bind(...plan.params, ...plan.orderParams, PAGE_SIZE, (page - 1) * PAGE_SIZE)
     .all<ContentRow & { slug: string }>();
   if (rows.results.length > PAGE_SIZE) throw new Error('D1 YouTube returned an unbounded page.');
   const movies = rows.results.map(row => {

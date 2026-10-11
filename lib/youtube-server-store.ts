@@ -21,35 +21,52 @@ function renderable(record: YouTubeD1Record) {
  * a static fallback. The default static adapter preserves today's exact output.
  */
 export function createYouTubeServerStore(options:
-  { mode: 'static' } | { mode: 'd1'; db: YouTubeD1Database }) {
+  { mode: 'static' } | { mode: 'd1'; db: YouTubeD1Database } | { mode: 'runtime' }) {
+  async function database() {
+    if (options.mode === 'd1') return options.db;
+    if (options.mode !== 'runtime') return null;
+    if (process.env.NODE_ENV !== 'production' || process.env.NEXT_PHASE === 'phase-production-build') return null;
+    try {
+      const workers = await import('cloudflare:workers');
+      const runtimeEnv = workers.env as { CONTENT_DB?: YouTubeD1Database; YOUTUBE_D1_CUTOVER?: string };
+      if (runtimeEnv.YOUTUBE_D1_CUTOVER !== 'enabled') return null;
+      const db = runtimeEnv.CONTENT_DB;
+      if (!db) throw new Error('CONTENT_DB binding is unavailable during the production cutover.');
+      return db;
+    } catch (error) {
+      throw error;
+    }
+  }
   return {
     async query(input: YouTubeD1Query = {}) {
-      if (options.mode === 'static') {
+      const db = await database();
+      if (!db) {
         return (await import('./youtube-directory-query')).queryYouTubeDirectory(input);
       }
-      const result = await queryPublishedYouTubeD1Movies(options.db, input);
+      const result = await queryPublishedYouTubeD1Movies(db, input);
       const { normalizeGenerated, getCuratedMovie } = await import('./youtube-detail');
       return { ...result, movies: result.movies.map(record =>
         getCuratedMovie(record.movie.videoId) ?? normalizeGenerated(renderable(record))) };
     },
     async catalogPage(page: number) {
-      if (options.mode === 'static') return (await import('./youtube-pagination')).getYouTubeCatalogPage(page);
+      const db = await database();
+      if (!db) return (await import('./youtube-pagination')).getYouTubeCatalogPage(page);
       if (!Number.isSafeInteger(page) || page < 1 || page > 1000) return null;
       const result = await this.query({ page });
       return page > result.pageCount ? null : result;
     },
     async detail(videoId: string) {
       const { getYouTubeDetailMovieById, getCuratedMovie, normalizeGenerated } = await import('./youtube-detail');
-      if (options.mode === 'static') return getYouTubeDetailMovieById(videoId);
+      const db = await database();
+      if (!db) return getYouTubeDetailMovieById(videoId);
       const curated = getCuratedMovie(videoId);
       if (curated) return curated;
-      const record = await getPublishedYouTubeD1Movie(options.db, videoId);
+      const record = await getPublishedYouTubeD1Movie(db, videoId);
       return record ? normalizeGenerated(renderable(record)) : undefined;
     },
   };
 }
 
-// Deliberately no env lookup, fallback to DB, or staging->production switch.
-// Wire CONTENT_DB only in a separately reviewed cutover after remote parity,
-// search semantics, curated overlays, related/alternate sources and cache checks.
-export const youtubeServerStore = createYouTubeServerStore({ mode: 'static' });
+// Production Workers use the exact CONTENT_DB binding only when the explicit
+// YOUTUBE_D1_CUTOVER variable is enabled. Local/test environments stay static.
+export const youtubeServerStore = createYouTubeServerStore({ mode: 'runtime' });
