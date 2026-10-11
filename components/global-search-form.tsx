@@ -81,7 +81,7 @@ export function GlobalSearchForm({ initialQuery }: { initialQuery: string }) {
   }
 
   return (
-    <form className="global-search-form" method="get" action="/search" role="search">
+    <form className="global-search-form" method="get" action="/search" role="search" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false); }}>
       <label htmlFor="global-search-input">What are you looking for?</label>
       <div className="global-search-field">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg>
@@ -99,7 +99,6 @@ export function GlobalSearchForm({ initialQuery }: { initialQuery: string }) {
           aria-controls={listId}
           aria-activedescendant={open && activeIndex >= 0 ? listId + "-item-" + activeIndex : undefined}
           onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
           onChange={(event) => {
             setQuery(event.target.value);
             setActiveIndex(-1);
@@ -131,7 +130,6 @@ export function GlobalSearchForm({ initialQuery }: { initialQuery: string }) {
                 id={listId + "-item-" + index}
                 className="global-search-suggestion"
                 key={item.href}
-                onPointerDown={(event) => event.preventDefault()}
                 onClick={() => selectItem(item)}
               >
                 <span>{item.label}</span><small>{item.pillar}</small>
