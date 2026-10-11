@@ -82,6 +82,10 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "Pushing 30 2026: Story & Where to Watch",
     description: "Pushing 30 story and current Africa Magic Showcase premiere information for the Nigerian friendship and adulthood dramedy."
   },
+  "my-30th-wedding": {
+    title: "My 30th Wedding: Cast & Full Movie on YouTube",
+    description: "My 30th Wedding (2026) cast, story, 149-minute runtime, director and official Bimbo Ademoye TV full movie, starring Bimbo Ademoye and Timini Egbuson.",
+  },
   "millionaire-until-morning": {
     title: "Millionaire Until Morning Cast & Full Movie",
     description: "Millionaire Until Morning cast, story, runtime and the official Omoni Oboli TV full-movie link. Starring Chris Attoh, Sophia Chisom and Chimsom Chuka.",
@@ -95,8 +99,8 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pieces That Fit cast, story and the official Omoni Oboli TV full-movie link, with Micheal Dappa, Ekama Etim-Inyang, Ehis Perfect and Floyd Igbo.",
   },
   "oversabi-aunty": {
-    title: "Oversabi Aunty Cast & Where to Watch: Netflix Status",
-    description: "Oversabi Aunty cast: Toyin Abraham, Mike Ezuruonye and Enioluwa. Explore the 127-minute story, official FilmOne trailer and Netflix Nigeria status.",
+    title: "Oversabi Aunty Cast & Where to Watch in Nigeria",
+    description: "Oversabi Aunty Nigerian movie cast includes Toyin Abraham, Mike Ezuruonye and Enioluwa. See the story, official trailer and where to watch on Netflix Nigeria.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.

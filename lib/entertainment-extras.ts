@@ -280,6 +280,30 @@ export type ReleaseItem = {
 
 export const releaseItems: ReleaseItem[] = [
   {
+    id: "my-30th-wedding-youtube-2026",
+    title: "My 30th Wedding",
+    kind: "streaming",
+    status: "new",
+    startDate: "2026-10-01",
+    dateLabel: "Premiered 1 October 2026 on Bimbo Ademoye TV",
+    platform: "YouTube — Bimbo Ademoye TV",
+    summary: "Bimbo Ademoye and Timini Egbuson star in this 149-minute romantic comedy, now available as an official free full-length YouTube film.",
+    officialUrl: "https://www.youtube.com/watch?v=0_JzNVzFukE",
+    lastChecked: "2026-10-11",
+  },
+  {
+    id: "love-on-credit-youtube-2026",
+    title: "Love On Credit",
+    kind: "streaming",
+    status: "new",
+    startDate: "2026-10-04",
+    dateLabel: "Premiered 4 October 2026 on Nollyfamily TV",
+    platform: "YouTube — Nollyfamily TV",
+    summary: "A Nigerian relationship drama led by Sonia Uche, Omeche Oko and Bright Morgan; the official full movie is available free on YouTube.",
+    officialUrl: "https://www.youtube.com/watch?v=yuDQCaeGCwk",
+    lastChecked: "2026-10-11",
+  },
+  {
     id: "issakaba-the-return-2026-cinema",
     title: "Issakaba: The Return",
     kind: "cinema",

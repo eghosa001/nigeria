@@ -1,3 +1,5 @@
+import { cityGrowthPlacesWave11 } from "@/lib/explore-city-growth-wave-11";
+import { cityGrowthPlaces20261011 } from "@/lib/explore-city-growth-2026-10-11";
 import { verifiedTrendEventPlaces } from "@/lib/explore-trend-event-places";
 import { exploreGrowthWaveSharedPlaceSlugs } from "@/lib/explore-growth-links-2026-10-06";
 import { exploreGrowthPlaces } from "@/lib/explore-growth-places-2026-10-06";
@@ -37,6 +39,8 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...cityGrowthPlaces20261011,
+  ...cityGrowthPlacesWave11,
   ...verifiedTrendEventPlaces,
   ...ncmmMuseumPlaces,
   ...exploreGrowthPlacesWave9,
@@ -4233,6 +4237,69 @@ export const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
   ],
 };
 
+/** Reuse existing canonical place records on city pages instead of cloning duplicate
+ * restaurant/museum/attraction data into a second listing. Day-trip locations
+ * retain their real district in the card so they are not sold as city-centre stops.
+ */
+const citySharedPlaceSlugs: Record<string, readonly string[]> = {
+  "lagos": [
+    "omu-resort-lagos",
+    "la-campagne-tropicana",
+    "lufasi-nature-park",
+    "freedom-park-lagos"
+  ],
+  "abuja": [
+    "magicland-smfest-abuja-2026",
+    "jabi-lake-mall-smfest-abuja-2026",
+    "jabi-lake-abuja",
+    "abuja-arts-crafts-village"
+  ],
+  "calabar": [
+    "old-residency-museum-calabar",
+    "tortuga-island-calabar",
+    "millennium-park-calabar"
+  ],
+  "port-harcourt": [
+    "isaac-boro-park-port-harcourt"
+  ],
+  "jos": [
+    "solomon-lar-amusement-park"
+  ],
+  "enugu": [
+    "milliken-hills-enugu",
+    "iva-valley-enugu",
+    "nsude-pyramids-enugu"
+  ],
+  "ibadan": [
+    "cocoa-house-ibadan",
+    "iita-forest-reserve-ibadan",
+    "national-museum-unity-ibadan"
+  ],
+  "abeokuta": [
+    "olumo-rock"
+  ],
+  "asaba": [
+    "mungo-park-house-asaba"
+  ],
+  "yenagoa": [
+    "ox-bow-lake-yenagoa"
+  ],
+  "owerri": [
+    "mbari-centre-owerri"
+  ],
+  "ilorin": [
+    "ilorin-central-mosque"
+  ],
+  "makurdi": [
+    "makurdi-river-beach"
+  ],
+  "lokoja": [
+    "mount-patti-lokoja",
+    "niger-benue-confluence-lokoja",
+    "lokoja-colonial-heritage"
+  ]
+};
+
 // Resolve Tour guide places without scanning the entire checked-in catalog
 // for every static page render. Indexes contain references to original records,
 // so no additional place content is cloned into the Worker module.
@@ -4255,6 +4322,20 @@ for (const [index, place] of explorePlaces.entries()) {
 const sharedPlacesByGuide = new Map<string, ExplorePlace[]>();
 
 export function getExplorePlacesForGuide(guideSlug: string) {
+  const cityShared = citySharedPlaceSlugs[guideSlug];
+  if (cityShared) {
+    const direct = placesByGuide.get(guideSlug) ?? [];
+    const seen = new Set(direct.map((place) => place.slug));
+    const additional: ExplorePlace[] = [];
+    for (const slug of cityShared) {
+      const index = placePositionsBySlug.get(slug)?.[0];
+      if (index !== undefined && !seen.has(slug)) {
+        additional.push(explorePlaces[index]);
+        seen.add(slug);
+      }
+    }
+    return [...direct, ...additional];
+  }
   const shared = sharedGuidePlaceSlugs[guideSlug];
   if (shared) {
     let places = sharedPlacesByGuide.get(guideSlug);

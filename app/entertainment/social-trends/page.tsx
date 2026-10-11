@@ -15,6 +15,7 @@ const videoSnapshot = [
   { name: "OJISE", type: "Film trailer", detail: "A trailer ranked near the top. A trailer alone does not establish release or streaming availability." },
   { name: "Ayra Starr — Heaven Baby (feat. ZAYN)", type: "Music video", detail: "Appeared among the leading videos in the same Nigeria chart snapshot." },
   { name: "Akpan & Oduma: Love & Chaos", type: "Comedy teaser", detail: "The teaser appeared on the Nigeria video chart; check the publisher for episode or release information." },
+  { name: "RED RULES 2", type: "Nollywood trailer", detail: "Listed fifth in the Nigeria YouTube trending-video chart on 11 October; a trailer is not a verified full-film release." },
   { name: "Kizz Daniel — Owo Oluwa", type: "Music video", detail: "Featured among the listed trending Nigerian videos." },
 ];
 
@@ -48,6 +49,46 @@ const platforms = [
   },
 ];
 
+/** Dated, independently traceable observations — do not combine the different platforms into a single ranking. */
+const nigeriaSocialSignals = [
+  {
+    platform: "X · Nigeria timeline · 11 October 2026",
+    title: "#HallelujahChallenge appeared in the early-hours Nigeria trends",
+    detail: "Trends24's archived Nigeria timeline listed the hashtag during the early hours of 11 October. This is an observed X trend at those times, not an official impression count or a claim it stayed ranked all day.",
+    sourceLabel: "Nigeria X trends timeline",
+    sourceUrl: "https://trends24.in/nigeria/",
+    internalHref: "/entertainment/hallelujah-challenge-october-2026",
+    internalLabel: "Verified organiser schedule",
+  },
+  {
+    platform: "X · Nigeria timeline · 11 October 2026",
+    title: "#LeadwayLifestyleFair appeared on the Nigeria timeline",
+    detail: "The name appeared in the late-morning Nigeria snapshot; the X trend alone does not establish its venue, programme or ticket status. Check organisers directly before travelling.",
+    sourceLabel: "Trends24 Nigeria timeline",
+    sourceUrl: "https://trends24.in/nigeria/",
+    internalHref: "/explore/events",
+    internalLabel: "Find source-verified local events",
+  },
+  {
+    platform: "Facebook · local events roundup · 5–11 October 2026",
+    title: "Abuja events and creator meetups discussed on Facebook",
+    detail: "NairaDiaryTV published an Abuja event-discovery roundup for 5–11 October. It is evidence of an actual public Facebook post, not proof of virality, ticket availability or final programme details.",
+    sourceLabel: "NairaDiaryTV public Facebook roundup",
+    sourceUrl: "https://www.facebook.com/nairadiarytv/posts/top-10-events-happening-in-abuja-this-week-5th-11th-october-2026from-business-an/1106586705662923/",
+    internalHref: "/explore/abuja",
+    internalLabel: "Plan an Abuja city visit",
+  },
+  {
+    platform: "TikTok · Nigerian creator reporting · 3 October 2026",
+    title: "Flavour's Genesis and Kay Kay's Bere Mole among reported short-video sounds",
+    detail: "YNaija's 3 October Nigerian TikTok/Instagram sound roundup documents local creators using these audios. Treat them as editorially observed examples, NOT a live Nigeria-wide TikTok ranking or independently measured view count.",
+    sourceLabel: "YNaija — 3 October sounds roundup",
+    sourceUrl: "https://ynaija.com/top-10-trending-sounds-from-tiktok-and-instagram/",
+    internalHref: "/entertainment",
+    internalLabel: "Explore Nigerian entertainment",
+  },
+];
+
 export default function SocialTrendsPage() {
   const base = getSiteUrl();
   const url = base + "/entertainment/social-trends";
@@ -57,7 +98,7 @@ export default function SocialTrendsPage() {
     name: "YouTube and social media trends in Nigeria — October 2026",
     description: "Source-checked Nigerian YouTube and social media discovery, with dated chart snapshots.",
     url,
-    dateModified: "2026-10-10",
+    dateModified: "2026-10-11",
     isPartOf: { "@type": "WebSite", name: "MyNigeriaGuide", url: base },
     mainEntity: {
       "@type": "ItemList",
@@ -77,7 +118,7 @@ export default function SocialTrendsPage() {
             { label: "Entertainment", href: "/entertainment" },
             { label: "YouTube & social trends" },
           ]} />
-          <span className="eyebrow">Nigeria · Sources checked 10 October 2026</span>
+          <span className="eyebrow">Nigeria · Sources checked 11 October 2026</span>
           <h1>YouTube and social media trends in Nigeria</h1>
           <p className="page-intro">
             See what Nigeria-focused video charts showed this week, discover music and film previews,
@@ -91,9 +132,9 @@ export default function SocialTrendsPage() {
           </p>
 
           <section className="top-gap" aria-labelledby="youtube-video-trends">
-            <span className="eyebrow">YouTube Nigeria · 10 October 2026 snapshot</span>
+            <span className="eyebrow">YouTube Nigeria · 11 October 2026 snapshot</span>
             <h2 id="youtube-video-trends">Videos drawing attention</h2>
-            <p>The following appeared in the Nigeria trending-video chart observed on 10 October.
+            <p>The following appeared in the Nigeria trending-video chart observed on 11 October.
               These are chart observations, not claims about all-time popularity or full-film availability.</p>
             <div className="home-category-grid compact-category-grid">
               {videoSnapshot.map((item) => (
@@ -129,6 +170,26 @@ export default function SocialTrendsPage() {
               ))}
             </div>
             <p><a href="https://soundcharts.com/en/charts/youtube/nigeria" target="_blank" rel="noopener noreferrer">View the chart source and reporting period ↗</a></p>
+          </section>
+
+          <section className="top-gap" aria-labelledby="verified-platform-signals">
+            <span className="eyebrow">X · Facebook · TikTok · dated Nigeria signals</span>
+            <h2 id="verified-platform-signals">What public platform evidence actually shows</h2>
+            <p>These are dated observations from public Nigeria-specific trend histories, publisher posts and Nigerian editorial coverage — not pooled engagement totals. Each card names its evidence and links to a relevant MyNigeriaGuide guide.</p>
+            <div className="home-category-grid compact-category-grid">
+              {nigeriaSocialSignals.map((signal) => (
+                <article className="home-category-card" key={signal.title}>
+                  <span>{signal.platform}</span>
+                  <h3>{signal.title}</h3>
+                  <p>{signal.detail}</p>
+                  <div className="minimal-inline-links">
+                    <Link href={signal.internalHref}>{signal.internalLabel} →</Link>
+                    <a href={signal.sourceUrl} target="_blank" rel="noopener noreferrer">{signal.sourceLabel} ↗</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="job-muted">TikTok's anonymous public Creative Center rankings do not currently expose a dependable Nigeria-specific national top-hashtag feed. A global chart or a page that ignores the NG filter is not evidence of a Nigerian trend. Facebook does not offer a public national trending ranking here; publisher posts are attributed individually.</p>
           </section>
 
           <section className="top-gap" aria-labelledby="social-platforms">
@@ -211,14 +272,14 @@ export default function SocialTrendsPage() {
           <section className="top-gap" aria-labelledby="sources">
             <h2 id="sources">Sources and freshness</h2>
             <p>
-              The Nigeria trending-video snapshot was checked 10 October 2026 using Kworb's
+              The Nigeria trending-video snapshot was checked 11 October 2026 using Kworb's
               public YouTube chart. The weekly music examples use Soundcharts' chart for the
               week of 5 October 2026. Digital-audience figures come from DataReportal's
               Digital 2026 Nigeria report, which uses late-2025 observations.
               Rankings and audience estimates are not directly comparable.
             </p>
             <p className="job-muted">
-              Last editorial review: 10 October 2026. The dated rankings should be
+              Last editorial review: 11 October 2026. The dated rankings should be
               replaced or archived when a newer, verified snapshot is published.
               Follow the linked sources for up-to-date platform activity.
             </p>
