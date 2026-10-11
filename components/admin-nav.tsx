@@ -8,6 +8,7 @@ const items = [
   { href: "/admin/services", label: "Guides" },
   { href: "/admin/entertainment", label: "Movies" },
   { href: "/admin/explore", label: "Tour" },
+  { href: "/admin/trends", label: "Trend radar" },
   { href: "/admin/health", label: "Health" },
   { href: "/admin/foreign-visas", label: "Foreign visas" },
   { href: "/admin/visits", label: "Visits" },
