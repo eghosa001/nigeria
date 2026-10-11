@@ -4,6 +4,7 @@ import {
   summarizeSearchConsoleHours,
   firstIncompleteHourFromMetadata,
   firstIncompleteDateFromMetadata,
+  classifySearchConsoleApiError,
 } from "../lib/search-console-hourly";
 
 test("hourly figures are chronological, property-wide and use Google's incomplete-hour boundary", () => {
@@ -77,4 +78,52 @@ test("old hours must not be misrepresented as zero recent search traffic", () =>
   assert.equal(result.impressions24h, null);
   assert.equal(result.hoursReported24h, 0);
   assert.equal(result.lagHours, 55);
+});
+
+test("Google disabled Search Console API 403 identifies the correct project and action", () => {
+  const raw = JSON.stringify({ error: {
+    code: 403,
+    message: "Google Search Console API has not been used in project 987654321011 before or it is disabled. Enable it then retry.",
+    status: "PERMISSION_DENIED",
+    details: [{ reason: "SERVICE_DISABLED", metadata: {
+      consumer: "projects/987654321011",
+      service: "searchconsole.googleapis.com",
+    } }],
+  } });
+  const result = classifySearchConsoleApiError(403, raw);
+  assert.equal(result.code, "api-disabled");
+  assert.equal(result.projectNumber, "987654321011");
+  assert.match(result.message, /Enable the API/);
+  assert.doesNotMatch(result.message, /\\"error\\":|private_key|Bearer/);
+});
+
+test("Search Console property permission 403 must not be mistaken for disabled Cloud API", () => {
+  const raw = JSON.stringify({ error: {
+    code: 403,
+    message: "User does not have sufficient permission for site sc-domain:mynigeriaguide.com.",
+  } });
+  const result = classifySearchConsoleApiError(403, raw);
+  assert.equal(result.code, "property-permission");
+  assert.equal(result.projectNumber, null);
+  assert.match(result.message, /service-account email/);
+});
+
+test("Google project can be extracted from structured SERVICE_DISABLED details", () => {
+  const result = classifySearchConsoleApiError(403, JSON.stringify({ error: {
+    message: "Request is denied.",
+    details: [{ reason: "SERVICE_DISABLED", metadata: {
+      consumer: "projects/123450987600",
+      service: "searchconsole.googleapis.com",
+    } }],
+  } }));
+  assert.equal(result.code, "api-disabled");
+  assert.equal(result.projectNumber, "123450987600");
+});
+
+test("API errors never expose raw diagnostic JSON or unknown links in the admin panel", () => {
+  const raw = JSON.stringify({ error: { message: "Internal token abc_123 failure" } });
+  const issue = classifySearchConsoleApiError(500, raw);
+  assert.equal(issue.code, "unknown");
+  assert.equal(issue.projectNumber, null);
+  assert.doesNotMatch(issue.message, /abc_123/);
 });
