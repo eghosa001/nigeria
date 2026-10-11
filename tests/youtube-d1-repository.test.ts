@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { getPublishedYouTubeD1Movie, inspectStagedYouTubeD1Movie, getStagedYouTubeD1Counts } from "@/lib/youtube-d1-repository";
+import { getPublishedYouTubeD1Movie, inspectStagedYouTubeD1Movie, getStagedYouTubeD1Counts } from "../lib/youtube-d1-repository";
 
 const movie = {
   videoId: "aBCdefG1234",
