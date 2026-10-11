@@ -198,6 +198,14 @@ export function AdminAnalyticsDashboard() {
         )}
       </p>
 
+      {!data.ga4Available && data.ga4Error ? (
+        <div className="admin-analytics-state" role="status">
+          <strong>Google Analytics is unavailable, but other reports can still load.</strong>
+          <p>{data.ga4Error}</p>
+          <p>Use the separate Search Console status above to check Google impressions independently of GA4 and PostHog.</p>
+        </div>
+      ) : null}
+
       <section className="admin-panel">
         <div className="section-heading">
           <div>
@@ -318,13 +326,13 @@ export function AdminAnalyticsDashboard() {
       </section>
 
       <div className="analytics-metric-grid">
-        <div><span>GA4 processed visitors</span><strong>{number(data.summary.totalUsers ?? data.summary.activeUsers)}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
-        <div><span>GA4 active users</span><strong>{number(data.summary.activeUsers)}</strong><small>Users GA4 classifies as active</small></div>
-        <div><span>GA4 sessions</span><strong>{number(data.summary.sessions)}</strong><small>Visits recorded by Analytics</small></div>
+        <div><span>GA4 processed visitors</span><strong>{data.ga4Available ? number(data.summary.totalUsers ?? data.summary.activeUsers) : "—"}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
+        <div><span>GA4 active users</span><strong>{data.ga4Available ? number(data.summary.activeUsers) : "—"}</strong><small>Users GA4 classifies as active</small></div>
+        <div><span>GA4 sessions</span><strong>{data.ga4Available ? number(data.summary.sessions) : "—"}</strong><small>Visits recorded by Analytics</small></div>
         <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
         <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Google Search appearances</small></div>
-        <div><span>Page views</span><strong>{number(data.summary.pageViews)}</strong><small>Processed GA4 views; repeated views included</small></div>
-        <div><span>Engaged sessions</span><strong>{number(data.summary.engagedSessions)}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
+        <div><span>Page views</span><strong>{data.ga4Available ? number(data.summary.pageViews) : "—"}</strong><small>Processed GA4 views; repeated views included</small></div>
+        <div><span>Engaged sessions</span><strong>{data.ga4Available ? number(data.summary.engagedSessions) : "—"}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
         <div><span>Live users · last 30 min</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Received by GA4 now; not added to the processed unique total until Google processes and deduplicates them</small></div>
         <div><span>Views · last 30 min</span><strong>{data.realtimePageViews == null ? "—" : number(data.realtimePageViews)}</strong><small>Realtime page views; recent visits appear here first</small></div>
       </div>
