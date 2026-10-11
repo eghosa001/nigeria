@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AdminSearchConsoleStatus } from "@/components/admin-search-console-status";
 import Link from "next/link";
 import { categories, publicServices, services } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
@@ -51,6 +52,8 @@ export default function AdminPage() {
             {backendConnected ? "Correction backend connected" : "Read-only operations mode"}
           </span>
         </div>
+
+        <AdminSearchConsoleStatus />
 
         <div className="metric-grid">
           <div><strong>{youtubeMovieLibrary.length}</strong><span>YouTube movies</span></div>
