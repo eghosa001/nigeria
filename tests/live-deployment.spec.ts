@@ -60,11 +60,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
       });
     });
 
-    let externalAnalyticsAttempts = 0;
-    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, (route) => {
-      externalAnalyticsAttempts++;
-      return route.abort();
-    });
+    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, (route) => route.abort());
     // Fail closed: test events must not reach PostHog ingestion.
     await page.route(/https:\/\/[^/]*posthog\.com\/.*/, (route) => {
       if (route.request().method() === "POST") return route.abort();
@@ -97,10 +93,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
       () => page.evaluate(() => (window as Window & { __mngPostHogInitialized?: boolean }).__mngPostHogInitialized),
       { timeout: 15_000 },
     ).toBe(true);
-    // All attempted GA4 collection is blocked by route interception and
-    // therefore cannot inflate recorded user traffic; the attempted count
-    // is informational, NOT used as an assertion of real network delivery.
-    expect(externalAnalyticsAttempts).toBeGreaterThanOrEqual(0);
+    // Outgoing GA4/PostHog events are intercepted rather than counted as visits.
   });
 
 
