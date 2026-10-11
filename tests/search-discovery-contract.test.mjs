@@ -28,7 +28,21 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
   const sitemaps = readFileSync("lib/sitemap-sections.ts", "utf8");
   // Sitemap routes come from catalog records at runtime. Literal-string checks
   // alone reject real canonical URLs produced by the sitemap's dynamic .map().
-  const serviceSlugs = new Set(JSON.parse(readFileSync("data/services.json", "utf8")).map((item) => item.slug));
+  // Resolve every verified services catalog imported by lib/data.ts, not just
+  // the original services.json file. Curated links can target scaled catalogs.
+  const serviceCatalogs = [
+    "data/services.json",
+    "data/services-scale-verified.json",
+    "data/services-private-extended.json",
+    "data/services-growth-wave-3.json",
+    "data/services-growth-wave-5.json",
+    "data/services-growth-wave-6.json",
+    "data/services-growth-wave-7.json",
+    "data/services-cac-partnerships.json",
+  ];
+  const serviceSlugs = new Set(serviceCatalogs.flatMap((file) =>
+    JSON.parse(readFileSync(file, "utf8")).map((item) => item.slug),
+  ));
   const careerGuides = readFileSync("lib/career-guides.ts", "utf8");
   const movieCatalog = readFileSync("lib/entertainment.ts", "utf8");
   const platformHubs = readFileSync("lib/entertainment-platform-hubs.ts", "utf8");
