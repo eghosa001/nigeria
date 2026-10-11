@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { searchGlobalCatalog } from "@/lib/global-search";
 import { SearchResultsAnalytics } from "@/components/search-results-analytics";
+import { GlobalSearchForm } from "@/components/global-search-form";
 
 export const metadata: Metadata = {
   title: "Search MyNigeriaGuide",
@@ -49,20 +50,7 @@ export default async function SearchPage({
             You do not need to know which section something belongs in first. Search a task, employer, career path, city, attraction, actor, movie or publisher.
           </p>
 
-          <form className="global-search-form" method="get" action="/search">
-            <label htmlFor="global-search-input">What are you looking for?</label>
-            <div>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4" /><path d="m16 16 4.2 4.2" /></svg>
-              <input
-                id="global-search-input"
-                name="q"
-                defaultValue={query}
-                placeholder="Try Customs, engineering, passport, Lagos, Aníkúlápó…"
-                autoComplete="off"
-              />
-              <button type="submit">Search</button>
-            </div>
-          </form>
+          <GlobalSearchForm initialQuery={query} />
 
           <div className="global-search-suggestions" aria-label="Popular searches">
             <span>Try</span>
