@@ -66,12 +66,12 @@ The scanner is informational and never modifies or deletes files. The initial br
 
 The existing service search expanded fuzzy aliases and edit-distance candidates **once per service record**. It now expands the query once and applies the same scoring semantics to each record. The Jobs directory and facet filters previously rejoined and lowercased the same immutable published fields on every pass; the canonical catalog now uses lazy, shared WeakMap-backed search text. Standalone caller-created job objects remain uncached.
 
-**Measured on a GitHub Actions Node.js 22.23.3 hosted runner, warm in-process, median of five samples**, using the checked-in catalogs and equivalence assertions:
+**Measured on a GitHub Actions Node.js 22.23.3 hosted runner, warm in-process, median of five samples**, using the checked-in catalogs and equivalence assertions (**two independent CI runs; ranges, not paired min/max timings**):
 
 | CPU microbenchmark | Original approach | Optimized approach | Relative speedup |
 | --- | ---: | ---: | ---: |
-| One ranked service search across **671 public service records** (query "passport renewal") | 94.618 ms | 21.922 ms | **4.32×** |
-| Repeated text extraction across published job records (125 scans, warm cache) | 33.997 ms | 0.453 ms | **75.11×** |
+| One ranked service search across **671 public service records** (query "passport renewal") | 55.102–94.618 ms | 14.433–21.922 ms | **3.82–4.32×** |
+| Repeated text extraction across **240 job records** (125 scans, warm cache) | 18.544–33.997 ms | 0.306–0.453 ms | **60.56–75.11×** |
 
 The job test measures the **text-extraction stage only**, not a complete Jobs API request. The first cold cache fill is additional work. Samples are hardware/JIT/cache dependent and should not be extrapolated to percentage improvements in overall page performance, Google rankings, Cloudflare cold starts or browser Web Vitals.
 
