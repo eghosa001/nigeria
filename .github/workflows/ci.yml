@@ -67,8 +67,8 @@ jobs:
             non_movie_discovery="$(printf '%s\n' "$changed" | grep -Ev '^(app/entertainment/(movies/page\.tsx|entertainment\.css)|tests/movie-discovery-contrast\.spec\.ts|\.github/workflows/(ui-qa|ci)\.yml)$' || true)"
             # Maintenance-only edits need narrow regression checks, not the full
             # site build/QA pipeline. Match a fixed, reviewed file allowlist.
-            maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
-            non_maintenance="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|package\.json$|\.github/workflows/ci\.yml$|scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
+            maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
+            non_maintenance="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|package\.json$|\.github/workflows/ci\.yml$|scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
             if [ -n "$maintenance_trigger" ] && [ -z "$non_maintenance" ]; then
               echo "mode=maintenance" >> "$GITHUB_OUTPUT"
               echo "Run changed-surface catalog/search and audit tests only."
