@@ -29,26 +29,22 @@ export const verifiedEvergreenCityStops20261011: ExplorePlace[] = [
     checkedAt: "2026-10-11"
   },
   {
-    slug: "nike-lake-resort-enugu",
+    slug: "palms-polo-park-mall-enugu",
     guideSlug: "enugu",
-    name: "Nike Lake Resort",
-    kind: "landmark",
-    area: "Nike Lake area",
-    address: "Nike Lake Resort, Nike Lake Road, Enugu, Enugu State, Nigeria",
-    summary: "Well-known Enugu lakeside hospitality landmark. The state announced a resort redevelopment partnership in 2025; verify current public access, accommodation and facilities directly rather than assuming all services are operating.",
+    name: "The Palms Polo Park Mall",
+    kind: "shopping",
+    area: "Old GRA",
+    address: "The Palms Polo Park Mall, Old GRA, Abakaliki Expressway, Enugu, Enugu State, Nigeria",
+    summary: "Shopping and dining stop in Enugu's Old GRA. The mall operator lists this Enugu location along Abakaliki Expressway; check individual shops, cinema programmes and current hours directly before travelling.",
     source: {
-      label: "Enugu State Government — Nike Lake redevelopment",
-      href: "https://enugustate.gov.ng/2025/01/16/enugu-govt-landmark-africa-group-seal-deal-to-revamp-reposition-nike-lake-resort/"
+      label: "The Palms — official Enugu mall listing",
+      href: "https://www.thepalmsmall.com/the-palms-enugu"
     },
-    tags: [
-      "Enugu",
-      "lake",
-      "resort",
-      "redevelopment"
-    ],
-    cost: "Verify current admission, access and any guiding charges locally",
-    hours: "Opening or site access is not independently confirmed; contact the relevant operator or authority before visiting.",
-    mapQuery: "Nike Lake Resort Nike Lake area Nigeria",
+    website: "https://www.thepalmsmall.com/the-palms-enugu",
+    tags: ["Enugu", "mall", "shopping", "dining"],
+    cost: "Individual shopping, dining and entertainment prices vary; check with tenants",
+    hours: "Mall and individual tenant hours may differ; check the mall operator before visiting.",
+    mapQuery: "The Palms Polo Park Mall Old GRA Enugu Nigeria",
     checkedAt: "2026-10-11"
   },
   {
@@ -98,26 +94,22 @@ export const verifiedEvergreenCityStops20261011: ExplorePlace[] = [
     checkedAt: "2026-10-11"
   },
   {
-    slug: "wase-rock-plateau",
-    guideSlug: "plateau-state-nature-guide",
-    name: "Wase Rock",
-    kind: "nature",
-    area: "Wase LGA",
-    address: "Wase Rock, Wase, Plateau State, Nigeria",
-    summary: "Large granite rock formation near Wase, listed on Plateau State's visitor site. It is a separate road trip from Jos; check route safety and access conditions with local authorities before travel.",
+    slug: "motna-architecture-museum-jos",
+    guideSlug: "jos",
+    name: "Museum of Traditional Nigerian Architecture (MOTNA)",
+    kind: "attraction",
+    area: "Jos museum district",
+    address: "Museum of Traditional Nigerian Architecture (MOTNA), opposite High Court, Jos, Plateau State, Nigeria",
+    summary: "A specialist National Commission for Museums and Monuments site presenting Nigerian architectural heritage. It is distinct from the adjacent Jos National Museum and zoo; confirm exhibit access with the museum before travelling.",
     source: {
-      label: "Plateau State Government — Tourism & Culture",
-      href: "https://plateaustate.gov.ng/tourism/"
+      label: "National Commission for Museums and Monuments — national museum locations",
+      href: "https://museum.ng/museums/national-museums/"
     },
-    tags: [
-      "Plateau State",
-      "Wase",
-      "rock",
-      "nature"
-    ],
-    cost: "Verify current admission, access and any guiding charges locally",
-    hours: "Opening or site access is not independently confirmed; contact the relevant operator or authority before visiting.",
-    mapQuery: "Wase Rock Wase LGA Nigeria",
+    tags: ["Jos", "architecture", "museum", "heritage"],
+    cost: "Confirm current museum admission, guided visit policy and any student concessions",
+    hours: "NCMM publishes national museum hours, but confirm MOTNA's individual visiting arrangements before travel.",
+    mapQuery: "Museum of Traditional Nigerian Architecture MOTNA Jos Plateau Nigeria",
     checkedAt: "2026-10-11"
   }
+
 ];
