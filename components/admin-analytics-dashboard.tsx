@@ -31,6 +31,15 @@ function readableDate(value: string) {
   return date.toLocaleDateString("en-NG", { month: "short", day: "numeric" });
 }
 
+function readableSearchHour(value: string) {
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return value;
+  return parsed.toLocaleString("en-NG", {
+    timeZone: "Africa/Lagos", day: "numeric", month: "short",
+    hour: "2-digit", minute: "2-digit", hour12: true,
+  }) + " WAT";
+}
+
 function interactionLabel(event: string) {
   const labels: Record<string, string> = {
     job_apply_click: "Official job application clicked",
@@ -351,6 +360,93 @@ export function AdminAnalyticsDashboard() {
             <p>The dashboard will use the Search Console API directly once its service account has read access to {data.searchPerformance?.siteUrl ?? "sc-domain:mynigeriaguide.com"}. Visitor analytics will continue to work independently.</p>
           </div>
         )}
+      </section>
+
+      <section className="admin-panel" aria-labelledby="gsc-hourly-title">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Direct Google Search Console API · preliminary</span>
+            <h2 id="gsc-hourly-title">Latest hourly search impressions</h2>
+          </div>
+          <small>Independent of GSC Wizard, ClickHouse and PostHog imports</small>
+        </div>
+        {data.hourlySearchPerformance?.available ? (
+          <>
+            <div className="analytics-metric-grid">
+              <div>
+                <span>Latest hour Google returned</span>
+                <strong>{data.hourlySearchPerformance.latestHour
+                  ? readableSearchHour(data.hourlySearchPerformance.latestHour)
+                  : "No hourly rows yet"}</strong>
+                <small>This is the actual reported hour, not the refresh time.</small>
+              </div>
+              <div>
+                <span>Age of latest reported hour</span>
+                <strong>{data.hourlySearchPerformance.lagHours == null
+                  ? "—"
+                  : data.hourlySearchPerformance.lagHours + "h"}</strong>
+                <small>{(data.hourlySearchPerformance.lagHours ?? 0) >= 24
+                  ? "Google has not returned a newer hour. Do not assume zero traffic."
+                  : "Hours since the reported time began."}</small>
+              </div>
+              <div>
+                <span>Impressions · hours returned</span>
+                <strong>{number(data.hourlySearchPerformance.impressions ?? 0)}</strong>
+                <small>Only the rows Google supplied within the requested period.</small>
+              </div>
+              <div>
+                <span>Clicks · hours returned</span>
+                <strong>{number(data.hourlySearchPerformance.clicks ?? 0)}</strong>
+                <small>Preliminary counts may increase or change after processing.</small>
+              </div>
+            </div>
+            <p className="analytics-clean-note">
+              Direct Search Console hourly_all request: {data.hourlySearchPerformance.startDate} to {data.hourlySearchPerformance.endDate} in Google's Pacific reporting timezone.
+              Last fetched: {readableSearchHour(data.hourlySearchPerformance.fetchedAt)}.
+              {data.hourlySearchPerformance.firstIncompleteHour
+                ? <> Google marks data from {readableSearchHour(data.hourlySearchPerformance.firstIncompleteHour)} onward as incomplete.</>
+                : <> Google returned no first-incomplete-hour marker; this does not prove the newest data is finalized.</>}
+              {" "}Hours with no data can be omitted. Google Search impressions are not PostHog pageviews or GA4 visitors.
+            </p>
+            {data.hourlySearchPerformance.rows.length > 0 ? (
+              <div className="analytics-ranking" aria-label="Most recent Google Search hourly results">
+                {data.hourlySearchPerformance.rows.slice(-12).reverse().map((row, index) => (
+                  <div key={row.hour}>
+                    <span>{index + 1}</span>
+                    <strong>{readableSearchHour(row.hour)}</strong>
+                    <small>{row.provisional ? "Google marks as preliminary" : "Hourly data · may be revised"}</small>
+                    <b>{number(row.impressions)} impressions · {number(row.clicks)} clicks</b>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="admin-empty">Google returned no hourly rows for this property in the requested window. This does not prove there were no search appearances.</div>
+            )}
+          </>
+        ) : (
+          <div className="admin-empty">
+            <strong>Direct hourly data could not be loaded.</strong>
+            <p>{data.hourlySearchPerformance?.error || "Google did not return hourly search information."}</p>
+            <p>This report requires the server-side Search Console service account to have access to the domain property. The historical snapshots and other analytics remain untouched.</p>
+          </div>
+        )}
+      </section>
+
+      <section className="admin-panel" aria-labelledby="looker-studio-title">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Free reporting · Google Looker Studio</span>
+            <h2 id="looker-studio-title">SEO and visitor dashboard template</h2>
+          </div>
+          <a href="https://lookerstudio.google.com/reporting/408e669d-07d1-4353-a1dc-94f06bde27ef/page/Hqrp/preview" target="_blank" rel="noopener noreferrer">Open Google’s template ↗</a>
+        </div>
+        <p className="analytics-clean-note">
+          Google’s official Search Console + Google Analytics Looker Studio template is free.
+          Choose <strong>Use my own data</strong>, select Search Console property <code>sc-domain:mynigeriaguide.com</code>
+          {" "}with <strong>URL Impression</strong>, and connect your MyNigeriaGuide GA4 property.
+          Google requires you to authorize these data sources in your browser once.
+          Looker Studio is for historical dashboards; use the hourly report above for the newest available preliminary data.
+        </p>
       </section>
 
       <section className="admin-panel analytics-trend">

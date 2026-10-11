@@ -7,6 +7,7 @@ import {
   POSTHOG_WEB_URL,
 } from "@/lib/posthog-config";
 import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
+import { summarizeSearchConsoleHours, type SearchConsoleHourlyReport } from "@/lib/search-console-hourly";
 import {
   SEARCH_CONSOLE_HISTORY_THROUGH,
   historicalSearchConsoleSummary,
@@ -81,6 +82,7 @@ export type AnalyticsDashboardData = {
   referrers: Array<{ source: string; medium: string; sessions: number; users: number }>;
   interactions: Array<{ event: string; count: number }>;
   searchPerformance: SearchPerformanceSummary;
+  hourlySearchPerformance: SearchConsoleHourlyReport;
   connection: AnalyticsConnectionStatus;
   keyEvents: GA4KeyEventStatus;
   posthog: {
@@ -117,7 +119,7 @@ type SearchAnalyticsRow = {
 
 type SearchAnalyticsResponse = {
   rows?: SearchAnalyticsRow[];
-  metadata?: { first_incomplete_date?: string };
+  metadata?: { first_incomplete_date?: string; first_incomplete_hour?: string };
 };
 
 type DataStream = {
@@ -460,6 +462,50 @@ async function searchConsoleQuery(body: Record<string, unknown>) {
   return await response.json() as SearchAnalyticsResponse;
 }
 
+/**
+ * Query Google directly, explicitly requesting preliminary hourly data.
+ * The "hour" dimension REQUIRES dataState "hourly_all".
+ * Freshness is measured using the last hour actually returned by Google,
+ * never the requested end date or our fetch timestamp.
+ */
+async function getHourlySearchPerformance(): Promise<SearchConsoleHourlyReport> {
+  const settings = searchConsoleConfig();
+  const fetchedAt = new Date().toISOString();
+  // Search Console reporting days are Pacific Time, not Lagos time.
+  const endDate = dateInTimeZone("America/Los_Angeles");
+  const startDate = subtractDays(endDate, 3); // four PT reporting days (max 96 rows)
+  const base = { siteUrl: settings.siteUrl, startDate, endDate, fetchedAt };
+  try {
+    const response = await searchConsoleQuery({
+      startDate,
+      endDate,
+      type: "web",
+      dataState: "hourly_all",
+      dimensions: ["hour"],
+      aggregationType: "byProperty",
+      rowLimit: 150,
+    });
+    const report = summarizeSearchConsoleHours(
+      response.rows ?? [],
+      response.metadata?.first_incomplete_hour,
+    );
+    return { available: true, source: "direct-google-api", ...base, ...report };
+  } catch (error) {
+    return {
+      available: false,
+      source: "unavailable",
+      ...base,
+      latestHour: null,
+      firstIncompleteHour: null,
+      lagHours: null,
+      clicks: null,
+      impressions: null,
+      rows: [],
+      error: error instanceof Error ? error.message : "Hourly Search Console API is unavailable.",
+    };
+  }
+}
+
 async function getSearchPerformance(startDate: string): Promise<SearchPerformanceSummary> {
   const settings = searchConsoleConfig();
   const endDate = dateInTimeZone("America/Los_Angeles");
@@ -678,11 +724,12 @@ export async function getAnalyticsDashboard(
     error: "GA4 Data API is not configured. PostHog remains available independently.",
   };
 
-  const [batch, interactionReport, realtime, searchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
+  const [batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
     ga4Available ? batchRunReports(coreRequests) : Promise.resolve({ reports: [] } as BatchRunReportsResponse),
     ga4Available ? runReport(interactionRequest).catch(() => ({} as RunReportResponse)) : Promise.resolve({} as RunReportResponse),
     ga4Available ? runRealtime().catch(() => null) : Promise.resolve(null),
     getSearchPerformance(dataStartDate),
+    getHourlySearchPerformance(),
     ga4Available ? verifyAnalyticsConnection() : Promise.resolve(unavailableConnection),
     getPostHogOverview(dataStartDate, today, forceFresh),
     ga4Available ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "GA4 Data API is not configured." } as GA4KeyEventStatus),
@@ -739,6 +786,7 @@ export async function getAnalyticsDashboard(
       count: metric(row, 0),
     })),
     searchPerformance,
+    hourlySearchPerformance,
     connection,
     keyEvents,
     posthog: {
