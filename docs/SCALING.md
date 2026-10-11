@@ -77,40 +77,17 @@ Success is not reaching 100,000 URLs. Success is increasing the number of high-q
 12. **Keyword clusters, not keyword cloning.** Multiple keywords that mean the same thing should normally strengthen one canonical page.
 13. **Interlink at publication time.** A new indexable page should update relevant hubs/related pages so it enters an intentional topic graph instead of becoming an orphan.
 
-## Storage roadmap
+## Storage and publication decisions (trigger-based, not phased)
 
-### Phase A — current / first thousands
+The existing checked-in catalogs remain supported. Do not migrate records simply because a month, release number, or content quota has been reached. Determine the next architectural change from real growth, performance and correctness evidence.
 
-Use the existing checked-in verified datasets while keeping public URLs stable. Sitemaps are sharded automatically and the scale contract is enforced by a focused check.
+**When an existing catalog stresses the Worker bundle, memory or update workflow:** move the appropriate content type to the already-registered Cloudflare `CONTENT_DB`, using the prepared `cloudflare/d1/content-scale-schema.sql` where compatible. Verify current production schema first, then test the adapter with real representative records, preserve canonical paths, and provide rollback. One content type may move independently of another.
 
-### Phase B — 5,000 to 100,000+ records per growing catalog
+**When D1 holds approved indexable pages that are not in generated catalogs:** implement a sitemap publication path based on the authoritative D1 published state before making those pages public. The current build-time sitemap generator does not automatically discover every D1-only record.
 
-Move high-growth catalogs to Cloudflare D1 behind a repository/data-access boundary.
+**When real traffic or query data shows a bottleneck:** cache appropriate public responses, inspect D1 query plans, rows read and error rate, and move owned media to R2 when that actually reduces payload and operational costs. Split databases or add infrastructure only where observed contention justifies it.
 
-The prepared schema is at:
-
-`cloudflare/d1/content-scale-schema.sql`
-
-It supports:
-
-- pillar/type/status fields;
-- stable canonical paths;
-- source and verification records;
-- publish/stale/expired lifecycle fields;
-- indexed common filters;
-- FTS5 full-text search.
-
-Production `CONTENT_DB` is already registered in `wrangler.jsonc` and `YOUTUBE_D1_CUTOVER` is enabled. **Do not provision a duplicate production database or re-run a migration over live content.** Future pillars must reuse the authorized binding and move one content type at a time after verifying the current deployment configuration and data parity. A configured binding does not mean every pillar is already D1-backed.
-
-### Phase C — high traffic
-
-At sustained high traffic:
-
-- cache read-heavy public pages at Cloudflare;
-- use D1 indexes and inspect rows-read/query latency;
-- move media to R2;
-- use scheduled/queued refresh jobs for jobs, releases, events and source verification;
-- split databases by workload only if measured D1 contention requires it.
+**When editorial value or verified search demand is absent:** improve a useful canonical page instead of generating a new URL, regardless of how much unused architectural capacity exists.
 
 ## Scale readiness gates (not satisfied by a configuration target alone)
 
