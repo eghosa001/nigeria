@@ -3085,7 +3085,7 @@ const nationalLandmarkPlaceSlugs = [
   "kainji-lake-national-park-main",
 ] as const;
 
-const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
+export const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
   ...exploreGrowthLinksWave5,
   ...exploreGrowthLinksWave4,
   ...exploreGrowthLinksWave3,
