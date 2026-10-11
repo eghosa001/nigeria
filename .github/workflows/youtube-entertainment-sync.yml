@@ -95,6 +95,10 @@ jobs:
         if: steps.api-key.outputs.present == 'true'
         run: node scripts/build-youtube-runtime-catalog.mjs
 
+      - name: Verify packed catalog matches raw YouTube records
+        if: steps.api-key.outputs.present == 'true'
+        run: node --test tests/youtube-runtime-catalog.test.mjs
+
       - name: Validate generated entertainment catalog
         if: steps.api-key.outputs.present == 'true'
         run: node scripts/check-entertainment-scale.mjs
