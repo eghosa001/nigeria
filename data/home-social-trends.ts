@@ -17,6 +17,34 @@ export type HomeSocialTrend = {
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
     pillar: "Movies & Entertainment",
+    title: "My 30th Wedding: Bimbo Ademoye, Timini Egbuson and official full movie",
+    href: "/entertainment/movies/my-30th-wedding",
+    checkedAt: "2026-10-11",
+    expiresAt: "2026-10-20",
+  },
+  {
+    pillar: "Services",
+    title: "NIN Share Code explained — NINAuth verification versus *346# retrieval",
+    href: "/services/ninauth-nin-verification",
+    checkedAt: "2026-10-11",
+    expiresAt: "2026-10-25",
+  },
+  {
+    pillar: "Tour Nigeria",
+    title: "Lagos travel guide expanded with museums, art centres and day trips",
+    href: "/explore/lagos",
+    checkedAt: "2026-10-11",
+    expiresAt: "2026-10-25",
+  },
+  {
+    pillar: "Jobs & Careers",
+    title: "Moniepoint recruiting Early Careers Talent Acquisition Specialist — 5–7 years required",
+    href: "/jobs/moniepoint-early-careers-talent-acquisition-specialist",
+    checkedAt: "2026-10-11",
+    expiresAt: "2026-10-18",
+  },
+  {
+    pillar: "Movies & Entertainment",
     title: "YouTube Nigeria: Blaqbonez, OJISE trailer, Ayra Starr and social trends",
     href: "/entertainment/social-trends",
     checkedAt: "2026-10-10",
