@@ -56,6 +56,15 @@ jobs:
             exit 0
           fi
 
+          youtube_directory_trigger="$(printf '%s\n' "$changed" | grep -E '^(app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
+          non_youtube_directory="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$|app/entertainment/youtube/page\.tsx$|lib/youtube-directory-query\.ts$|tests/youtube-directory-query\.test\.ts$|scripts/bench-youtube-directory\.ts$)' || true)"
+          if [ -n "$youtube_directory_trigger" ] && [ -z "$non_youtube_directory" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=youtube-directory" >> "$GITHUB_OUTPUT"
+            echo "Run only the affected YouTube movie directory browser regression."
+            exit 0
+          fi
+
           # Catalog/search maintenance and proven orphan removal cannot change
           # a rendered component. CI has focused tests; skip browser install/build.
           maintenance_trigger="$(printf '%s\n' "$changed" | grep -E '^(scripts/audit-codebase\.mjs$|tests/(codebase-audit\.test\.mjs|catalog-hotpaths\.test\.ts|global-search-matching\.test\.ts)$|components/(adsense|route-wizard)\.tsx$|lib/(global-search|entertainment-query|entertainment-pagination|youtube-movie-channels)\.ts$)' || true)"
@@ -207,6 +216,9 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Check YouTube directory search and publisher filters
+        if: steps.scope.outputs.mode == 'youtube-directory'
+        run: npx playwright test tests/entertainment.spec.ts --project=desktop --workers=1 --grep "youtube movie directory is populated and searchable by publisher"
       - name: Check movie discovery contrast and phone / tablet / desktop layout
         if: steps.scope.outputs.mode == 'movie-discovery'
         run: npx playwright test tests/movie-discovery-contrast.spec.ts --project=desktop --workers=1
