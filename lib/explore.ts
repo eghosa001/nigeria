@@ -773,7 +773,7 @@ export const exploreGuides: ExploreGuide[] = [
       { name: "Flower Garden", detail: "A government-recognised green-space and leisure location in Ilorin's GRA." },
       { name: "Owu Falls", detail: "A major waterfall attraction in the state that needs its own transport and outdoor-access plan." },
       { name: "Esie Museum", detail: "One of Kwara's key heritage attractions, known for its large collection of soapstone figures." },
-      { name: "Beyond Ilorin: Oke-Ero, Jebba and Offa", detail: "Kwara's official LGA directory lists Imoleboja Rock Shelter, Ero-Omola Falls, Jebba Bridge and the Olofa Palace in separate parts of the state; plan by locality rather than assuming a city tour." },
+      { name: "Beyond Ilorin: Oke-Ero, Jebba and Offa", detail: "Kwara's official LGA directory identifies Imole Boja, Ero-Omola Falls, Jebba Bridge and Olofa Palace in different areas. Treat a nearby rock-shelter listing separately until its location is confirmed." },
     ],
     planning: [
       { label: "Separate Ilorin and rural stops", detail: "Owu Falls and Esie need more road time than city attractions." },
