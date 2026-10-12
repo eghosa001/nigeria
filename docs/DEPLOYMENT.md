@@ -267,6 +267,14 @@ The repository now has two scheduled GitHub Actions monitors:
 
 A failed scheduled workflow is the operational alert signal and uses the existing GitHub Actions notification path. These checks add no KV or database reads to normal visitor traffic.
 
+## Manual Cloudflare fallback
+
+Cloudflare Workers Builds is the **only automatic production deployer** for changes pushed to `main`. The GitHub Actions workflow **Cloudflare Direct Deploy Fallback** must not be triggered automatically on every push, because it would race Workers Builds and can overwrite a newer deployment.
+
+Use the fallback only when primary Workers Builds has failed and the commit is approved for release: GitHub → Actions → Cloudflare Direct Deploy Fallback → **Run workflow** on `main`. The fallback requires the existing Cloudflare deployment credentials and embeds the configured `NEXT_PUBLIC_*` AdSense values at build time. Do not add or print new secrets.
+
+A known Cloudflare/Wrangler API incompatibility can report `Received a malformed response from the API` after a **200 OK** response from the Worker deployment-history endpoint. The fallback treats that narrow error as *potentially* a false negative, not as a successful deploy: it only succeeds if the publicly served `/deployment.json` reports the exact workflow commit. Any other Wrangler failure, missing/mismatched deployment marker, or unreachable origin fails the workflow. Re-run manually or inspect Cloudflare builds when needed; do not mark a failed upload successful.
+
 ## Deployment discipline
 
 - test in GitHub Actions first;

@@ -1,9 +1,10 @@
 name: Cloudflare Direct Deploy Fallback
 
+# Emergency/manual fallback only: Cloudflare Workers Builds owns automatic main deployments.
+# Running a second writer on every push races the primary deployment and created
+# avoidable false-negative API failures.
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   contents: read
@@ -109,6 +110,39 @@ jobs:
           }
           console.log(`AdSense inlining verified for ${slots.length + 1} value(s).`);
           NODE
-      - name: Deploy directly with Wrangler
+      - name: Deploy directly with Wrangler and verify the exact commit
         if: steps.credentials.outputs.available == 'true'
-        run: npx wrangler deploy --config dist/server/wrangler.json
+        shell: bash
+        run: |
+          set -euo pipefail
+          log="$(mktemp)"
+          status=0
+          npx wrangler deploy --config dist/server/wrangler.json >"$log" 2>&1 || status=$?
+          cat "$log"
+          if [ "$status" -eq 0 ]; then
+            echo "Wrangler confirmed deployment."
+            exit 0
+          fi
+
+          # Wrangler has sometimes rejected Cloudflare's *200 OK* deployment
+          # history response after submitting a deployment. This is NOT a
+          # successful build/upload signal on its own. Never ignore any other
+          # API error, 403/5xx or unsuccessful deployment.
+          if ! grep -Fq 'Received a malformed response from the API' "$log" ||
+             ! grep -Eq 'GET /accounts/[^ ]+/workers/scripts/mynigeriaguide/deployments -> 200 OK' "$log"; then
+            echo "::error::Wrangler failed (status $status); no benign deploy-history signature. Refusing to mark this deploy successful."
+            exit "$status"
+          fi
+
+          echo "::warning::Wrangler could not parse Cloudflare's successful deploy-history response. Verify the exact commit on the production origin before accepting the result."
+          for attempt in {1..12}; do
+            body="$(curl -fsS --max-time 12 -H 'Cache-Control: no-cache' "https://mynigeriaguide.com/deployment.json?deploy_check=${GITHUB_SHA}-${attempt}" || true)"
+            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null || true)"
+            if [ "$deployed" = "$GITHUB_SHA" ]; then
+              echo "Verified production is serving exact commit $GITHUB_SHA despite the Wrangler response-parsing error."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Production never served the expected commit $GITHUB_SHA. Wrangler deployment remains FAILED."
+          exit "$status"
