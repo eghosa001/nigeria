@@ -31,10 +31,23 @@ function compactJobSnippet(value: string, maxLength: number) {
   return (lastSpace > maxLength * 0.7 ? shortened.slice(0, lastSpace) : shortened).trimEnd() + "…";
 }
 
+// Keep Lagos careers discovery separate from an advertised, open vacancy.
+const jobSeoOverrides: Record<string, { title: string; description: string }> = {
+  "lagos-state-civil-service-careers": {
+    title: "Lagos State Civil Service Jobs: Official Recruitment Guide",
+    description: "Find Lagos State Civil Service roles through the official Job Opportunities directory. Check live vacancies, eligibility and how to apply.",
+  },
+  "nigerian-army-92rri-2026": {
+    title: "Nigerian Army 92RRI 2026: Portal, Ages & How to Apply",
+    description: "Nigerian Army 92RRI 2026: official recruitment portal, age rules for trades, non-trades and Special Skilled applicants. The application is free.",
+  },
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const item = getJobOpportunity(slug);
   if (!item) return {};
+  const seoOverride = jobSeoOverrides[item.slug];
   const isCareerPortal = item.status === "career-page" || item.kind === "career-page";
   const label = isCareerPortal
     ? item.title + ": Official Careers"
@@ -48,8 +61,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     : summary.replace(/[.!?]$/, "") + (summary ? ". " : "") + sourceContext;
 
   return {
-    title: compactJobSnippet(label, 58),
-    description: compactJobSnippet(description, 155),
+    title: seoOverride?.title ?? compactJobSnippet(label, 58),
+    description: seoOverride?.description ?? compactJobSnippet(description, 155),
     alternates: { canonical: "/jobs/" + item.slug },
     robots: isIndexableJobOpportunity(item) ? undefined : { index: false, follow: true }
   };
