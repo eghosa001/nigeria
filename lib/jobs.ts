@@ -1,3 +1,4 @@
+import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
 import { founderDojoImoCohortTwo } from "@/lib/job-founder-dojo-imo-2026-10-11";
@@ -123,6 +124,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...verifiedFmnFinalBoardJobs20261012,
   ...verifiedFmnOperationsJobs20261012,
   ...verifiedFmnRoles20261012,
   ...founderDojoImoCohortTwo,
