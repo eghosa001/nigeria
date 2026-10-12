@@ -696,7 +696,8 @@ export async function getAnalyticsDashboard(
     const realtime = ga4Available ? await runRealtime().catch(() => null) : null;
     return {
       ...cached.data,
-      generatedAt: new Date().toISOString(),
+      // Preserve the actual GA4 report fetch time. Realtime is refreshed below,
+      // but it does not make the cached daily report newly processed by Google.
       realtimeActiveUsers: realtime?.activeUsers ?? null,
       realtimePageViews: realtime?.pageViews ?? null,
     };
