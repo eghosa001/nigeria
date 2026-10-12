@@ -1,3 +1,4 @@
+import { railTravelGuides20261012 } from "@/lib/explore-rail-travel-2026-10-12";
 import { adamawaHeritageMuseums20261012 } from "@/lib/explore-adamawa-museums-2026-10-12";
 import { kainjiDamGuide } from "@/lib/explore-kainji-dam-2026-10-10";
 import { exploreGrowthWave9 } from "@/lib/explore-growth-wave-9";
@@ -29,6 +30,7 @@ export type ExploreGuide = {
 };
 
 export const exploreGuides: ExploreGuide[] = [
+  ...railTravelGuides20261012,
   ...adamawaHeritageMuseums20261012,
   kainjiDamGuide,
   ...verifiedTrendEvents,
