@@ -80,5 +80,14 @@ export const universityProfiles = [
   "state": "Kano State",
   "academicSession": "2026/27 admission (screening windows closed)",
   "focus": "BUK admission and fees"
+},
+{
+  "slug": "wellspring-university-2026-fees-admissions",
+  "name": "Wellspring University",
+  "abbreviation": "Wellspring",
+  "city": "Benin City",
+  "state": "Edo State",
+  "academicSession": "2026/27 applications open and tuition published",
+  "focus": "Tuition by course, official admission and payment"
 }
 ] as const;

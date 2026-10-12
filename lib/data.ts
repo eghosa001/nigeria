@@ -1,6 +1,7 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
 import universityRecords from "@/data/services-universities.json" with { type: "json" };
 import universityWave2 from "@/data/services-universities-wave2.json" with { type: "json" };
+import privateUniversityGuide from "@/data/services-wellspring-2026.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -443,6 +444,7 @@ export const agencies: Agency[] = [
 ];
 
 agencies.push(...serviceScaleAgencies);
+agencies.push({ slug: "wellspring-university", name: "Wellspring University", shortName: "Wellspring", description: "Private university in Benin City, Edo State, with official 2026/27 programme-specific tuition and admission details.", website: "https://wellspringuniversity.edu.ng/" });
 agencies.push(...[
   {
     "slug": "oau",
@@ -511,7 +513,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
