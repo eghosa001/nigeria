@@ -8,7 +8,7 @@ import { jobTopics } from "@/lib/job-topics";
 import { careerGuides } from "@/lib/career-guides";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
 import { indexableJobEmployers } from "@/lib/job-employers";
-import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen } from "@/lib/job-runtime";
+import { getEffectiveJobStatus, getEffectiveStatusLabel, isEffectivelyOpen, pickDistinctEmployerPreview } from "@/lib/job-runtime";
 import { queryJobDirectory } from "@/lib/job-query";
 import { getSiteUrl } from "@/lib/site";
 import { jobMarketSources } from "@/data/job-market-sources";
@@ -34,7 +34,7 @@ export default function JobsPage() {
       const byDeadline = deadlineA.localeCompare(deadlineB);
       return byDeadline || b.verifiedAt.localeCompare(a.verifiedAt);
     });
-  const openPreview = openOpportunities.slice(0, 3);
+  const openPreview = pickDistinctEmployerPreview(openOpportunities, 3);
   const initialDirectoryResult = queryJobDirectory({ page: 1, pageSize: 12 });
 
   const collectionLd = {
