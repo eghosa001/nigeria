@@ -94,7 +94,6 @@ export const serviceSeoDescriptionTemplates: Record<string, string> = {
   "cac-company-registration": "Incorporate a limited company with CAC: official portal, filing fees, officer documents and approval steps. Different from business-name registration.",
   "aedc-map-refund": "Check your AEDC MAP refund status with a meter number on the official portal. Find electricity-credit token steps and help if your refund is missing.",
   "ibedc-map-refund": "Check your IBEDC MAP refund with a meter number on its official portal. See eligibility, generate electricity-credit tokens and load the oldest first.",
-  "ibedc-map-refund": "Check an IBEDC MAP meter refund on the official portal with your meter number. Retrieve eligible energy-credit tokens and load the oldest token first.",
   "western-union-track-transfer-nigeria": "Track a Western Union transfer to Nigeria using your 10-digit MTCN and sender name on the official tracker. Check when money is available for pickup.",
   "spotify-premium-nigeria": "Compare Spotify Premium Nigeria prices: Individual ₦1,600, Student ₦800, Duo ₦2,100 and Family ₦2,500 per month. Check eligibility and offers.",
   "bvn-retrieval": "Check or retrieve your BVN in {year}: official *565*0# route, fee guidance, requirements and what to do if you no longer use the linked phone.",
