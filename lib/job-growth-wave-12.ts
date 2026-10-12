@@ -1,313 +1,353 @@
 import type { CareerOpportunity } from "@/lib/jobs";
 
-/** October 2026 live FMN employer pages; do not infer dates or salaries. */
-export const verifiedFmnOperationsJobs20261012: CareerOpportunity[] = [
+/** Official FMN vacancies checked 12 October 2026; reverify employer Apply state frequently. */
+export const verifiedFmnPlantRoles20261012: CareerOpportunity[] = [
   {
-    "slug": "fmn-honeywell-assistant-maintenance-planning-manager-apapa-2026",
-    "title": "FMN Honeywell Flour Mills — Assistant Maintenance Manager, Planning B2B",
-    "organization": "Flour Mills of Nigeria — Honeywell Flour Mills",
+    "slug": "fmn-assistant-maintenance-planning-honeywell-apapa-2026",
+    "title": "FMN — Assistant Maintenance Manager, Planning (Honeywell Flour Mills)",
+    "organization": "Flour Mills of Nigeria (FMN)",
     "kind": "vacancy",
     "sector": "Private",
     "status": "open",
-    "statusLabel": "Employer vacancy page currently shows Apply",
-    "summary": "A technical maintenance-planning role at Honeywell Flour Mills, Apapa, covering preventive and corrective job packages, asset register updates, technician feedback and work-order scheduling in Microsoft Dynamics 365. The advert specifies a mechanical, electrical or industrial engineering degree/HND plus three years' manufacturing maintenance experience.",
+    "statusLabel": "Apply via FMN official recruitment portal",
+    "summary": "An Apapa plant maintenance-planning opening supporting work orders, technician feedback, spare-parts planning and equipment registers in Microsoft Dynamics 365. FMN specifies an engineering degree/HND, maintenance-planning training and three years' industrial maintenance experience.",
     "location": "Apapa, Lagos State, Nigeria",
-    "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
+    "employmentType": "Role-specific employment vacancy; verify employment conditions on employer portal",
     "audiences": [
+      "Maintenance planners",
       "Mechanical engineers",
       "Electrical engineers",
-      "Industrial engineers",
-      "Maintenance planners"
+      "Industrial maintenance professionals"
     ],
     "fields": [
-      "Engineering Maintenance",
-      "Industrial Asset Management",
-      "Manufacturing",
-      "CMMS and Microsoft Dynamics 365"
+      "Mechanical Engineering",
+      "Electrical Engineering",
+      "Industrial Engineering",
+      "Maintenance Planning",
+      "CMMS / Microsoft Dynamics 365"
     ],
     "qualifications": [
-      "B.Sc., B.Eng. or HND in Mechanical, Electrical, Industrial Engineering or a related discipline.",
-      "Formal maintenance planning, reliability engineering, CMMS administration training or postgraduate qualification is listed in the employer's education criteria.",
-      "At least three years of maintenance experience in a manufacturing environment; COREN or NSE membership is listed as an added advantage."
+      "B.Sc., B.Eng. or HND in Mechanical, Electrical or Industrial Engineering, or a related field.",
+      "Formal training or postgraduate qualification in maintenance planning, reliability engineering or CMMS administration.",
+      "Three years of maintenance work in a manufacturing environment; COREN/NSE membership is an added advantage."
     ],
     "requirements": [
-      "Create preventive and corrective work orders and maintain backlog status in Microsoft Dynamics 365.",
-      "Prepare work packages with work procedures, spare-parts lists and manpower estimates.",
-      "Track plant asset condition, record technician work feedback and flag delayed spare parts.",
-      "Use Excel and maintenance reporting to coordinate the planner and technical team."
+      "Create and track preventive and corrective maintenance orders in Microsoft Dynamics 365.",
+      "Prepare maintenance work packages, technical documents, SOPs and parts/manpower estimates.",
+      "Maintain accurate backlog and asset-register information, validate feedback from technicians and check spare-parts availability.",
+      "Use Microsoft Excel confidently; Power BI skills are an added advantage."
     ],
     "documents": [
-      "Current CV or résumé describing the specific equipment, methods and years of experience listed in this vacancy.",
-      "Relevant academic results or technical certificates matching the qualification in the employer's advert.",
-      "Valid contact details and any additional documents requested during the official FMN candidate application."
+      "Current CV/résumé with relevant work and qualifications",
+      "Education/trade training records and references requested by the employer",
+      "Contact details for the recruitment account and official application"
     ],
     "applicationSteps": [
-      "Open Flour Mills of Nigeria's official vacancy #12752 and confirm the displayed job title and location are still active before entering applicant details.",
-      "Prepare three concrete examples of work-order planning, backlog prioritisation or scheduled maintenance performed with a CMMS/EAM system.",
-      "Check whether you meet the manufacturing-maintenance experience and engineering discipline criteria; align your CV with D365, planning and spare-parts workflows.",
-      "Use the Apply action on the role-specific FMN e-recruiter page, submit accurate information and keep the employer's confirmation message."
+      "Open the official FMN vacancy page linked below and confirm the job title, location and current Apply button.",
+      "Compare the published qualifications and required experience with your actual training and work history before preparing an application.",
+      "Create or sign in to your own FMN recruitment account; complete your personal details, computer-exposure profile, education and referees as requested by the employer.",
+      "Prepare examples of the role's specific plant, maintenance, safety or planning tasks in your CV and complete the role-specific application using the official Apply control.",
+      "Keep the confirmation and check your own recruitment account for employer communications; never pay an agent to secure an interview."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12752",
-    "officialUrlLabel": "Apply via FMN official e-recruiter",
+    "officialUrlLabel": "Apply at FMN's role-specific e-recruiter page",
     "verifiedAt": "2026-10-12",
-    "nextMilestone": "The employer page displayed Apply on 12 October 2026. No individual application deadline was established; check the live vacancy for changes.",
-    "feeNote": "Flour Mills of Nigeria states that its hiring process does not require payment or gifts of monetary value.",
+    "nextMilestone": "Apply button present on 12 October 2026; employer published no deadline on the vacancy detail. Recheck live availability before submitting.",
+    "feeNote": "The employer explicitly prohibits recruitment charges and gifts of monetary value; salary is not published on the checked page.",
     "sourceNotes": [
-      "On 12 October 2026 the official FMN vacancy #12752 displayed an Apply action and named the role as FMN Honeywell Flour Mills — Assistant Maintenance Manager, Planning B2B.",
-      "The employer specifies a mechanical/electrical/industrial engineering degree or HND, three years' maintenance experience and a preference for CMMS/D365 knowledge."
+      "Official FMN listing of 11 October 2026 includes an Apply control for the Apapa planning position.",
+      "Employer specifies engineering B.Sc./B.Eng./HND, three years' industrial maintenance experience and formal CMMS/reliability training.",
+      "The advert names D365 maintenance work orders, technician feedback, asset registers and Excel/reporting."
     ],
     "sources": [
       {
-        "label": "Flour Mills of Nigeria — FMN Honeywell Flour Mills — Assistant Maintenance Manager, Planning B2B",
+        "label": "FMN e-recruiter — FMN — Assistant Maintenance Manager, Planning (Honeywell Flour Mills)",
         "url": "https://fmnplc.e-recruiter.ng/vacancy/details/12752",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FMN e-recruiter — application process",
+        "url": "https://fmnplc.e-recruiter.ng/",
         "lastChecked": "2026-10-12"
       }
     ]
   },
   {
-    "slug": "fmn-premier-feed-mills-senior-plant-operations-calabar-2026",
-    "title": "FMN Premier Feed Mills — Senior Manager, Plant Operations",
-    "organization": "Flour Mills of Nigeria — Premier Feed Mills",
+    "slug": "fmn-premier-feed-senior-plant-operations-calabar-2026",
+    "title": "FMN — Senior Manager, Plant Operations (Premier Feed Mills)",
+    "organization": "Flour Mills of Nigeria (FMN)",
     "kind": "vacancy",
     "sector": "Private",
     "status": "open",
-    "statusLabel": "Employer vacancy page currently shows Apply",
-    "summary": "Senior plant leadership opening for a high-volume Premier Feed Mills operation in Calabar, focused on milling throughput, quality, HSE, corrosion prevention, maintenance reliability and raw-material logistics. FMN asks for at least twelve years' relevant experience and a milling, agricultural engineering or related qualification.",
+    "statusLabel": "Apply via FMN official recruitment portal",
+    "summary": "A senior Premier Feed Mills operations role overseeing a 1,000-tonne-per-day site, throughput, preventive maintenance, environmental controls and plant-cost performance in Calabar. Requires HND/B.Sc. in milling/agricultural engineering or related field and at least twelve years' experience.",
     "location": "Calabar, Cross River State, Nigeria",
-    "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
+    "employmentType": "Role-specific employment vacancy; verify employment conditions on employer portal",
     "audiences": [
-      "Experienced milling plant managers",
+      "Experienced plant managers",
+      "Feed milling professionals",
       "Agricultural engineers",
-      "Industrial operations directors",
-      "Feed manufacturing professionals"
+      "Manufacturing operations leaders"
     ],
     "fields": [
+      "Milling Operations",
+      "Agricultural Engineering",
       "Plant Management",
-      "Food and Feed Milling",
-      "HSE and Reliability",
-      "Operations and Supply Chain"
+      "Manufacturing Leadership",
+      "Operational Safety"
     ],
     "qualifications": [
-      "HND or B.Sc. in Milling Operations, Agricultural Engineering or a related discipline.",
-      "At least twelve years of cognate plant-operations experience.",
-      "FMN lists Feed Industry Practitioners Association (FIPAN) membership and Certified Six Sigma Green Belt as requirements; an MBA in Operations Management is an added advantage."
+      "HND/B.Sc. in Milling Operations, Agricultural Engineering or a related discipline.",
+      "Minimum of twelve years' cognate manufacturing/plant operations experience.",
+      "Membership of FIPAN and Certified Six Sigma Green Belt are listed as requirements; MBA in Operations Management is an advantage."
     ],
     "requirements": [
-      "Lead throughput and operational efficiency for a milling plant with 1,000-tonne-per-day stated capacity.",
-      "Manage preventive/predictive maintenance, spare-parts reliability, energy and coastal-corrosion operating challenges.",
-      "Ensure HSE systems, dust and heat controls and a documented zero-harm culture.",
-      "Coordinate raw materials and site logistics in Calabar, and track OEE, cost per tonne and continuous improvements."
+      "Lead production, maintenance reliability, plant health/safety and cost control at an industrial milling site.",
+      "Manage corrosion and machinery performance in humid coastal conditions and protect critical spare-parts availability.",
+      "Oversee raw-material supply and transport constraints affecting the Calabar plant.",
+      "Use operational measures such as OEE, cost per tonne and efficiency to manage performance."
     ],
     "documents": [
-      "Current CV or résumé describing the specific equipment, methods and years of experience listed in this vacancy.",
-      "Relevant academic results or technical certificates matching the qualification in the employer's advert.",
-      "Valid contact details and any additional documents requested during the official FMN candidate application."
+      "Current CV/résumé with relevant work and qualifications",
+      "Education/trade training records and references requested by the employer",
+      "Contact details for the recruitment account and official application"
     ],
     "applicationSteps": [
-      "Open Flour Mills of Nigeria's official vacancy #12748 and confirm the displayed job title and location are still active before entering applicant details.",
-      "Document executive examples of high-throughput plant delivery, safety outcomes, reliability upgrades and waste/cost reduction.",
-      "Confirm you satisfy the twelve-year requirement and the listed technical/professional credentials before completing the senior-management application.",
-      "Use the Apply action on the role-specific FMN e-recruiter page, submit accurate information and keep the employer's confirmation message."
+      "Open the official FMN vacancy page linked below and confirm the job title, location and current Apply button.",
+      "Compare the published qualifications and required experience with your actual training and work history before preparing an application.",
+      "Create or sign in to your own FMN recruitment account; complete your personal details, computer-exposure profile, education and referees as requested by the employer.",
+      "Prepare examples of the role's specific plant, maintenance, safety or planning tasks in your CV and complete the role-specific application using the official Apply control.",
+      "Keep the confirmation and check your own recruitment account for employer communications; never pay an agent to secure an interview."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12748",
-    "officialUrlLabel": "Apply via FMN official e-recruiter",
+    "officialUrlLabel": "Apply at FMN's role-specific e-recruiter page",
     "verifiedAt": "2026-10-12",
-    "nextMilestone": "The employer page displayed Apply on 12 October 2026. No individual application deadline was established; check the live vacancy for changes.",
-    "feeNote": "Flour Mills of Nigeria states that its hiring process does not require payment or gifts of monetary value.",
+    "nextMilestone": "Apply button present on 12 October 2026; employer published no deadline on the vacancy detail. Recheck live availability before submitting.",
+    "feeNote": "The employer explicitly prohibits recruitment charges and gifts of monetary value; salary is not published on the checked page.",
     "sourceNotes": [
-      "On 12 October 2026 the official FMN vacancy #12748 displayed an Apply action and named the role as FMN Premier Feed Mills — Senior Manager, Plant Operations.",
-      "FMN's job details specify a Calabar plant, 1,000-tonne-per-day throughput, minimum twelve years and the FIPAN/Six Sigma credential requirements."
+      "FMN's official advert places the high-capacity feed mill operations role in the Calabar logistics context.",
+      "Role explicitly requires minimum twelve years' experience, relevant degree and FIPAN/Six Sigma credentials.",
+      "The vacancy page displayed Apply on 12 October 2026 and did not state a salary or closing date."
     ],
     "sources": [
       {
-        "label": "Flour Mills of Nigeria — FMN Premier Feed Mills — Senior Manager, Plant Operations",
+        "label": "FMN e-recruiter — FMN — Senior Manager, Plant Operations (Premier Feed Mills)",
         "url": "https://fmnplc.e-recruiter.ng/vacancy/details/12748",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FMN e-recruiter — application process",
+        "url": "https://fmnplc.e-recruiter.ng/",
         "lastChecked": "2026-10-12"
       }
     ]
   },
   {
     "slug": "fmn-golden-penny-power-diesel-mechanic-apapa-2026",
-    "title": "FMN Golden Penny Power — Diesel Mechanic",
-    "organization": "Flour Mills of Nigeria — Golden Penny Power",
+    "title": "FMN — Diesel Mechanic (Golden Penny Power, Apapa)",
+    "organization": "Flour Mills of Nigeria (FMN)",
     "kind": "vacancy",
     "sector": "Private",
     "status": "open",
-    "statusLabel": "Employer vacancy page currently shows Apply",
-    "summary": "Technical-trades vacancy for a Diesel Mechanic at Golden Penny Power in Apapa. The role covers generator inspection, diesel/gas power-plant operation, distribution-panel changeovers, fault finding and preventive maintenance. The advert accepts qualifying O-level or technical-route credentials and asks for at least two years' experience.",
+    "statusLabel": "Apply via FMN official recruitment portal",
+    "summary": "Golden Penny Power is seeking a diesel mechanic in Apapa to service diesel and gas generators, carry out fault diagnosis and planned maintenance and support factory power-panel changeovers. FMN lists O-level or technical-trade qualification routes and at least two years of relevant experience.",
     "location": "Apapa, Lagos State, Nigeria",
-    "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
+    "employmentType": "Role-specific employment vacancy; verify employment conditions on employer portal",
     "audiences": [
-      "Diesel generator mechanics",
-      "Power plant technicians",
-      "NABTEB and technical certificate holders",
-      "Maintenance tradespersons"
+      "Diesel mechanics",
+      "Generator technicians",
+      "NABTEB trade holders",
+      "Mechanical maintenance professionals"
     ],
     "fields": [
-      "Diesel and Gas Generators",
-      "Mechanical Maintenance",
-      "Power Plant Operations",
-      "Technical Trades"
+      "Generator Maintenance",
+      "Mechanical Trades",
+      "Factory Power Systems",
+      "Diesel Engines",
+      "Industrial Maintenance"
     ],
     "qualifications": [
-      "Five O-level credits including Mathematics and English in no more than two sittings, OR relevant NABTEB, City & Guilds or WAEC Technical certification, per the employer's alternative route.",
-      "Minimum two years of cognate mechanical/power-plant maintenance experience.",
-      "Practical understanding of generator maintenance, fault diagnosis, power changeovers and related plant equipment."
+      "Five O-level credits, including Mathematics and English, in no more than two sittings, or a stated NABTEB/City & Guilds/WAEC Technical alternative.",
+      "At least two years' cognate experience in diesel/generator or related industrial mechanical maintenance.",
+      "Demonstrable maintenance-planning, troubleshooting and corrosion-prevention knowledge."
     ],
     "requirements": [
-      "Inspect, operate, service and repair diesel and gas generators in a manufacturing facility.",
-      "Perform preventive maintenance and repairs to installed generator equipment and auxiliaries.",
-      "Operate distribution panels for plant changeovers safely under authorised procedures.",
-      "Document maintenance parameters and troubleshoot faults across mechanical systems."
+      "Operate, service and repair diesel and gas generators used in the factory.",
+      "Perform preventative repairs on auxiliary generator systems and inspect power equipment for faults.",
+      "Support power changeovers on main distribution panels under plant safety procedures.",
+      "Keep accurate maintenance records and communicate breakdown-prevention needs."
     ],
     "documents": [
-      "Current CV or résumé describing the specific equipment, methods and years of experience listed in this vacancy.",
-      "Relevant academic results or technical certificates matching the qualification in the employer's advert.",
-      "Valid contact details and any additional documents requested during the official FMN candidate application."
+      "Current CV/résumé with relevant work and qualifications",
+      "Education/trade training records and references requested by the employer",
+      "Contact details for the recruitment account and official application"
     ],
     "applicationSteps": [
-      "Open Flour Mills of Nigeria's official vacancy #12739 and confirm the displayed job title and location are still active before entering applicant details.",
-      "List the generator capacities and equipment types you have maintained, including examples of preventive servicing and fault resolution.",
-      "Confirm the exact alternative qualification route accepted by the advert and document at least two years' related technician experience in your CV.",
-      "Use the Apply action on the role-specific FMN e-recruiter page, submit accurate information and keep the employer's confirmation message."
+      "Open the official FMN vacancy page linked below and confirm the job title, location and current Apply button.",
+      "Compare the published qualifications and required experience with your actual training and work history before preparing an application.",
+      "Create or sign in to your own FMN recruitment account; complete your personal details, computer-exposure profile, education and referees as requested by the employer.",
+      "Prepare examples of the role's specific plant, maintenance, safety or planning tasks in your CV and complete the role-specific application using the official Apply control.",
+      "Keep the confirmation and check your own recruitment account for employer communications; never pay an agent to secure an interview."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12739",
-    "officialUrlLabel": "Apply via FMN official e-recruiter",
+    "officialUrlLabel": "Apply at FMN's role-specific e-recruiter page",
     "verifiedAt": "2026-10-12",
-    "nextMilestone": "The employer page displayed Apply on 12 October 2026. No individual application deadline was established; check the live vacancy for changes.",
-    "feeNote": "Flour Mills of Nigeria states that its hiring process does not require payment or gifts of monetary value.",
+    "nextMilestone": "Apply button present on 12 October 2026; employer published no deadline on the vacancy detail. Recheck live availability before submitting.",
+    "feeNote": "The employer explicitly prohibits recruitment charges and gifts of monetary value; salary is not published on the checked page.",
     "sourceNotes": [
-      "On 12 October 2026 the official FMN vacancy #12739 displayed an Apply action and named the role as FMN Golden Penny Power — Diesel Mechanic.",
-      "FMN explicitly accepts an O-level-credit route or technical certifications and sets a minimum of two years' experience for generator/power-plant duties."
+      "FMN currently lists Diesel Mechanic, Golden Penny Power Limited, Apapa, on its official vacancies board.",
+      "The employer specifies two years' cognate experience and two alternative secondary/technical certification routes.",
+      "The role description identifies generator work, power panel operations and preventive maintenance."
     ],
     "sources": [
       {
-        "label": "Flour Mills of Nigeria — FMN Golden Penny Power — Diesel Mechanic",
+        "label": "FMN e-recruiter — FMN — Diesel Mechanic (Golden Penny Power, Apapa)",
         "url": "https://fmnplc.e-recruiter.ng/vacancy/details/12739",
         "lastChecked": "2026-10-12"
-      }
-    ]
-  },
-  {
-    "slug": "fmn-technical-auto-electrician-apapa-2026",
-    "title": "FMN Technical — Auto Electrician",
-    "organization": "Flour Mills of Nigeria — Technical",
-    "kind": "vacancy",
-    "sector": "Private",
-    "status": "open",
-    "statusLabel": "Employer vacancy page currently shows Apply",
-    "summary": "Auto Electrician opening at FMN's Apapa technical unit, maintaining forklifts and mobile equipment. Duties include batteries, starters, alternators, electrical safety systems, preventive inspection, repair reporting and troubleshooting across diesel, gas and electric-powered equipment.",
-    "location": "Apapa, Lagos State, Nigeria",
-    "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
-    "audiences": [
-      "Auto electricians",
-      "Forklift electrical technicians",
-      "NABTEB and trade certificate holders",
-      "Industrial electrical maintenance professionals"
-    ],
-    "fields": [
-      "Forklift Electrical Systems",
-      "Mobile Equipment Maintenance",
-      "Starter and Alternator Repair",
-      "Technical Safety"
-    ],
-    "qualifications": [
-      "Five O-level credits including Mathematics and English in no more than two sittings, OR NABTEB, City & Guilds or WAEC Technical certification as listed by FMN.",
-      "At least two years of relevant electrical maintenance experience.",
-      "Practical troubleshooting and safety knowledge for forklifts, battery systems, alternators and industrial mobile equipment."
-    ],
-    "requirements": [
-      "Carry out daily checks and scheduled electrical maintenance on operational forklifts.",
-      "Diagnose electrical defects and repair starters, alternators and forklift battery circuits.",
-      "Support preventive servicing of PMS, AGO and battery-powered equipment.",
-      "Maintain electrical safety devices and provide accurate service reports."
-    ],
-    "documents": [
-      "Current CV or résumé describing the specific equipment, methods and years of experience listed in this vacancy.",
-      "Relevant academic results or technical certificates matching the qualification in the employer's advert.",
-      "Valid contact details and any additional documents requested during the official FMN candidate application."
-    ],
-    "applicationSteps": [
-      "Open Flour Mills of Nigeria's official vacancy #12736 and confirm the displayed job title and location are still active before entering applicant details.",
-      "Document hands-on experience diagnosing forklift battery, starter, alternator and electrical-safety faults.",
-      "Match your trade certificates and two years' experience to the advert, noting any industrial safety training that the application requests.",
-      "Use the Apply action on the role-specific FMN e-recruiter page, submit accurate information and keep the employer's confirmation message."
-    ],
-    "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12736",
-    "officialUrlLabel": "Apply via FMN official e-recruiter",
-    "verifiedAt": "2026-10-12",
-    "nextMilestone": "The employer page displayed Apply on 12 October 2026. No individual application deadline was established; check the live vacancy for changes.",
-    "feeNote": "Flour Mills of Nigeria states that its hiring process does not require payment or gifts of monetary value.",
-    "sourceNotes": [
-      "On 12 October 2026 the official FMN vacancy #12736 displayed an Apply action and named the role as FMN Technical — Auto Electrician.",
-      "FMN's published role requires at least two years of related electrical maintenance and details forklift, starter, alternator and battery systems."
-    ],
-    "sources": [
+      },
       {
-        "label": "Flour Mills of Nigeria — FMN Technical — Auto Electrician",
-        "url": "https://fmnplc.e-recruiter.ng/vacancy/details/12736",
+        "label": "FMN e-recruiter — application process",
+        "url": "https://fmnplc.e-recruiter.ng/",
         "lastChecked": "2026-10-12"
       }
     ]
   },
   {
-    "slug": "fmn-golden-penny-power-mechanical-maintenance-manager-apapa-2026",
-    "title": "FMN Golden Penny Power — Mechanical Maintenance Manager",
-    "organization": "Flour Mills of Nigeria — Golden Penny Power",
+    "slug": "fmn-maintenance-manager-mechanical-apapa-2026",
+    "title": "FMN — Maintenance Manager, Mechanical (Golden Penny Power, Apapa)",
+    "organization": "Flour Mills of Nigeria (FMN)",
     "kind": "vacancy",
     "sector": "Private",
     "status": "open",
-    "statusLabel": "Employer vacancy page currently shows Apply",
-    "summary": "Experienced mechanical maintenance manager position at Golden Penny Power in Apapa, coordinating preventive maintenance, equipment spare parts, technical staff development and third-party contract specifications to minimise production downtime. FMN lists an HND or B.Sc. in Mechanical Engineering and five years of related work.",
+    "statusLabel": "Apply via FMN official recruitment portal",
+    "summary": "Mechanical maintenance leadership opening for Golden Penny Power in Apapa, focusing on machine reliability, preventive maintenance, spares procurement, fault analysis and technician development. FMN requires B.Sc./HND Mechanical Engineering and five years' cognate experience.",
     "location": "Apapa, Lagos State, Nigeria",
-    "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
+    "employmentType": "Role-specific employment vacancy; verify employment conditions on employer portal",
     "audiences": [
-      "Mechanical engineering graduates",
-      "Plant maintenance managers",
-      "Power plant maintenance supervisors",
-      "Manufacturing equipment engineers"
+      "Mechanical engineers",
+      "Maintenance supervisors",
+      "Plant managers",
+      "Reliability specialists"
     ],
     "fields": [
       "Mechanical Engineering",
-      "Maintenance Management",
-      "Reliability Planning",
-      "Manufacturing Operations"
+      "Plant Reliability",
+      "Preventive Maintenance",
+      "Maintenance Leadership",
+      "Milling Operations"
     ],
     "qualifications": [
-      "HND or B.Sc. in Mechanical Engineering.",
-      "At least five years' cognate maintenance experience.",
-      "Strong knowledge of maintenance management, corrosion prevention, pneumatics, conveyors and mechanical fault diagnosis."
+      "B.Sc. or HND in Mechanical Engineering.",
+      "At least five years of cognate industrial/mechanical maintenance experience.",
+      "Strong analytical, reporting, troubleshooting and maintenance-management capabilities."
     ],
     "requirements": [
-      "Schedule preventive maintenance using the plant work-management system and reduce machine downtime.",
-      "Plan and order spare parts, tools and external maintenance services based on equipment need.",
-      "Document maintenance records and train maintenance staff to improve performance.",
-      "Monitor material usage and assess third-party contractor scope against technical specifications."
+      "Schedule mechanical preventative maintenance and reduce plant breakdowns and downtime.",
+      "Plan procurement and use of spares, tools and maintenance supplies.",
+      "Train maintenance staff and retain accurate records for defect and asset analyses.",
+      "Review third-party maintenance recommendations and assess contractor specifications."
     ],
     "documents": [
-      "Current CV or résumé describing the specific equipment, methods and years of experience listed in this vacancy.",
-      "Relevant academic results or technical certificates matching the qualification in the employer's advert.",
-      "Valid contact details and any additional documents requested during the official FMN candidate application."
+      "Current CV/résumé with relevant work and qualifications",
+      "Education/trade training records and references requested by the employer",
+      "Contact details for the recruitment account and official application"
     ],
     "applicationSteps": [
-      "Open Flour Mills of Nigeria's official vacancy #12738 and confirm the displayed job title and location are still active before entering applicant details.",
-      "Prepare maintenance KPIs, reliability improvements and downtime-reduction examples from past mechanical-equipment responsibilities.",
-      "Check that the Mechanical Engineering degree/HND and minimum five years' practical work requirement match your records before applying.",
-      "Use the Apply action on the role-specific FMN e-recruiter page, submit accurate information and keep the employer's confirmation message."
+      "Open the official FMN vacancy page linked below and confirm the job title, location and current Apply button.",
+      "Compare the published qualifications and required experience with your actual training and work history before preparing an application.",
+      "Create or sign in to your own FMN recruitment account; complete your personal details, computer-exposure profile, education and referees as requested by the employer.",
+      "Prepare examples of the role's specific plant, maintenance, safety or planning tasks in your CV and complete the role-specific application using the official Apply control.",
+      "Keep the confirmation and check your own recruitment account for employer communications; never pay an agent to secure an interview."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12738",
-    "officialUrlLabel": "Apply via FMN official e-recruiter",
+    "officialUrlLabel": "Apply at FMN's role-specific e-recruiter page",
     "verifiedAt": "2026-10-12",
-    "nextMilestone": "The employer page displayed Apply on 12 October 2026. No individual application deadline was established; check the live vacancy for changes.",
-    "feeNote": "Flour Mills of Nigeria states that its hiring process does not require payment or gifts of monetary value.",
+    "nextMilestone": "Apply button present on 12 October 2026; employer published no deadline on the vacancy detail. Recheck live availability before submitting.",
+    "feeNote": "The employer explicitly prohibits recruitment charges and gifts of monetary value; salary is not published on the checked page.",
     "sourceNotes": [
-      "On 12 October 2026 the official FMN vacancy #12738 displayed an Apply action and named the role as FMN Golden Penny Power — Mechanical Maintenance Manager.",
-      "The official advertisement lists Mechanical Engineering HND/B.Sc., at least five years' experience and preventive maintenance, spares and technician leadership duties."
+      "The live Golden Penny Power mechanical maintenance advert is based in Apapa, Lagos.",
+      "Employer requires B.Sc./HND Mechanical Engineering and five years' experience.",
+      "Official job detail identifies proactive maintenance, spare-parts control, training and external maintenance vetting."
     ],
     "sources": [
       {
-        "label": "Flour Mills of Nigeria — FMN Golden Penny Power — Mechanical Maintenance Manager",
+        "label": "FMN e-recruiter — FMN — Maintenance Manager, Mechanical (Golden Penny Power, Apapa)",
         "url": "https://fmnplc.e-recruiter.ng/vacancy/details/12738",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FMN e-recruiter — application process",
+        "url": "https://fmnplc.e-recruiter.ng/",
+        "lastChecked": "2026-10-12"
+      }
+    ]
+  },
+  {
+    "slug": "fmn-auto-electrician-technical-apapa-2026",
+    "title": "FMN — Auto Electrician (Technical, Apapa)",
+    "organization": "Flour Mills of Nigeria (FMN)",
+    "kind": "vacancy",
+    "sector": "Private",
+    "status": "open",
+    "statusLabel": "Apply via FMN official recruitment portal",
+    "summary": "FMN seeks an auto electrician in Apapa to maintain and troubleshoot forklift and industrial-mobile-equipment electrical systems, batteries, starter motors and alternators. Candidates need qualifying O-level or technical certificates and at least two years of electrical-maintenance experience.",
+    "location": "Apapa, Lagos State, Nigeria",
+    "employmentType": "Role-specific employment vacancy; verify employment conditions on employer portal",
+    "audiences": [
+      "Auto electricians",
+      "Electrical maintenance technicians",
+      "NABTEB technical certificate holders",
+      "Forklift equipment technicians"
+    ],
+    "fields": [
+      "Auto Electrical Maintenance",
+      "Forklift Servicing",
+      "Battery Systems",
+      "Mechanical Trades",
+      "Industrial Safety"
+    ],
+    "qualifications": [
+      "Five O-level credits, including Mathematics and English, in no more than two sittings; FMN also lists NABTEB, City & Guilds or WAEC Technical qualifications as alternatives.",
+      "At least two years' relevant experience in electrical maintenance.",
+      "Practical diagnostics of heavy/mobile industrial equipment electrical systems and documentation skills."
+    ],
+    "requirements": [
+      "Check forklift electrical components, batteries and safety systems during planned maintenance.",
+      "Trace and repair starter motor, alternator and electrical control problems.",
+      "Maintain electrical equipment for powered industrial machines in accordance with safety protocols.",
+      "Log completed repairs and preventive service findings."
+    ],
+    "documents": [
+      "Current CV/résumé with relevant work and qualifications",
+      "Education/trade training records and references requested by the employer",
+      "Contact details for the recruitment account and official application"
+    ],
+    "applicationSteps": [
+      "Open the official FMN vacancy page linked below and confirm the job title, location and current Apply button.",
+      "Compare the published qualifications and required experience with your actual training and work history before preparing an application.",
+      "Create or sign in to your own FMN recruitment account; complete your personal details, computer-exposure profile, education and referees as requested by the employer.",
+      "Prepare examples of the role's specific plant, maintenance, safety or planning tasks in your CV and complete the role-specific application using the official Apply control.",
+      "Keep the confirmation and check your own recruitment account for employer communications; never pay an agent to secure an interview."
+    ],
+    "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12736",
+    "officialUrlLabel": "Apply at FMN's role-specific e-recruiter page",
+    "verifiedAt": "2026-10-12",
+    "nextMilestone": "Apply button present on 12 October 2026; employer published no deadline on the vacancy detail. Recheck live availability before submitting.",
+    "feeNote": "The employer explicitly prohibits recruitment charges and gifts of monetary value; salary is not published on the checked page.",
+    "sourceNotes": [
+      "The FMN vacancy identifies Technical, Apapa, and confirms the Apply button remains available.",
+      "The qualifications specify O-level or technical certificates and minimum two years' experience.",
+      "The scope includes forklifts, starter motors, alternators, battery units and maintenance reports."
+    ],
+    "sources": [
+      {
+        "label": "FMN e-recruiter — FMN — Auto Electrician (Technical, Apapa)",
+        "url": "https://fmnplc.e-recruiter.ng/vacancy/details/12736",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FMN e-recruiter — application process",
+        "url": "https://fmnplc.e-recruiter.ng/",
         "lastChecked": "2026-10-12"
       }
     ]
