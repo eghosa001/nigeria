@@ -7,19 +7,19 @@ import type { ExplorePlace } from "@/lib/explore-places";
  */
 export const kwaraOsunRegionalPlaces20261012: ExplorePlace[] = [
   {
-    slug: "imoleboja-rock-shelter-oke-ero",
+    slug: "imole-boja-oke-ero",
     guideSlug: "kwara-highlights",
-    name: "Imoleboja Rock Shelter",
+    name: "Imole Boja Heritage Site",
     kind: "landmark",
-    area: "Odo-Owa / Oke-Ero LGA",
-    address: "Odo-Owa area, Oke-Ero Local Government Area, Kwara State, Nigeria",
-    summary: "Kwara State lists Imole Boja Rock Shelter among Oke-Ero's heritage attractions, away from the usual Ilorin city circuit. It is a rural rock formation rather than a managed city museum: arrange reliable local directions, ask whether the area is accessible and plan daylight for the return journey.",
+    area: "Oke-Ero LGA",
+    address: "Oke-Ero Local Government Area, Kwara State, Nigeria (verify exact site locally)",
+    summary: "Kwara State lists Imole Boja among Oke-Ero's visitor attractions and also mentions a rock shelter and Odo-Owa. The government wording does not confirm these are one site, or give a precise entrance. Ask for the correct local destination and access arrangements rather than relying on an assumed combined map pin.",
     cost: "No verified official entry fee. Agree any guide or access arrangements locally before travelling.",
     hours: "No official visitor timetable verified; local access and permissions must be confirmed.",
-    mapQuery: "Imoleboja Rock Shelter Odo Owa Oke Ero Kwara",
+    mapQuery: "Imole Boja Oke Ero Kwara Nigeria",
     source: { label: "Kwara State Government — Oke-Ero Local Government", href: "https://kwarastate.gov.ng/government/lgas/" },
     checkedAt: "2026-10-12",
-    tags: ["Imole Boja", "Kwara rock shelter", "Oke-Ero", "Odo-Owa", "rural heritage"],
+    tags: ["Imole Boja", "Kwara State", "Oke-Ero", "local heritage", "visitor permissions"],
   },
   {
     slug: "ero-omola-natural-falls-kwara",
