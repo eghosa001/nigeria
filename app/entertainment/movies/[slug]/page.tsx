@@ -82,6 +82,10 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     title: "Pushing 30 2026: Story & Where to Watch",
     description: "Pushing 30 story and current Africa Magic Showcase premiere information for the Nigerian friendship and adulthood dramedy."
   },
+  "sibe": {
+    title: "Sibe (2026) Cast & Full Movie | Bimbo Ademoye",
+    description: "Sibe (2026) cast: Bimbo Ademoye, Uche Montana, Uzor Arukwe and Deyemi Okanlawon. See the comedy story and official Bimbo Ademoye TV full movie.",
+  },
   "my-30th-wedding": {
     title: "My 30th Wedding: Cast & Full Movie on YouTube",
     description: "My 30th Wedding (2026) cast, story, 149-minute runtime, director and official Bimbo Ademoye TV full movie, starring Bimbo Ademoye and Timini Egbuson.",

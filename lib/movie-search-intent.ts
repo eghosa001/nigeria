@@ -10,11 +10,15 @@ const intentSuffixes = [
   /\s+(?:nigerian|nollywood)\s+movies?$/i,
   /\s+(?:full\s+)?movies?$/i,
   /\s+(?:actors?|streaming)$/i,
+  /\s+the\s+movie$/i,
 ];
 
 export function movieSearchCore(query: string): string {
   const original = query.replace(/\s+/g, " ").trim();
-  let current = original.replace(/^where\s+to\s+watch\s+/i, "").trim() || original;
+  const withoutQuestionPrefix = original
+    .replace(/^where\s+to\s+watch\s+/i, "")
+    .replace(/^cast\s+of\s+/i, "");
+  let current = withoutQuestionPrefix.trim() || original;
 
   // A search may end in more than one intent, e.g. "film cast Nigerian movie".
   for (let pass = 0; pass < 3; pass++) {
