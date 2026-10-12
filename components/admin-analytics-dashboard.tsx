@@ -338,6 +338,45 @@ export function AdminAnalyticsDashboard() {
         <div><span>Views · last 30 min</span><strong>{data.realtimePageViews == null ? "—" : number(data.realtimePageViews)}</strong><small>Realtime page views; recent visits appear here first</small></div>
       </div>
 
+      <section className="admin-panel" aria-labelledby="organic-reconciliation-title">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">Same-period measurement check</span>
+            <h2 id="organic-reconciliation-title">Google clicks versus recorded visits</h2>
+          </div>
+        </div>
+        {data.searchTrafficComparison ? (
+          <>
+            <p className="analytics-clean-note">
+              Dates: {data.searchTrafficComparison.startDate} to {data.searchTrafficComparison.endDate}.
+              Only Google Search Console dates before its first incomplete day are included.
+            </p>
+            <div className="analytics-metric-grid">
+              <div><span>Google Search clicks</span><strong>{number(data.searchTrafficComparison.gscClicks)}</strong><small>Clicked a Google Search result</small></div>
+              <div><span>GA4 Google organic sessions</span><strong>{number(data.searchTrafficComparison.ga4OrganicSessions)}</strong><small>Sessions attributed to google / organic</small></div>
+              <div>
+                <span>Click–session difference</span>
+                <strong>{number(data.searchTrafficComparison.gscClicks - data.searchTrafficComparison.ga4OrganicSessions)}</strong>
+                <small>Not a count of lost visitors or missing tracking</small>
+              </div>
+            </div>
+            <p className="analytics-clean-note">
+              These metrics will not necessarily match. Search Console counts clicks, including repeat clicks.
+              GA4 counts browser sessions only when analytics can run and is permitted. Browser privacy controls,
+              script blocking, attribution differences and redirects can affect tracking. Search Console reports
+              by Pacific dates while GA4 uses Africa/Lagos, so boundary hours may fall on different dates.
+              Compare trends and check GA4 tracking, but do not add clicks to visitor totals.
+            </p>
+          </>
+        ) : (
+          <p className="analytics-clean-note">
+            A reliable same-period comparison is not ready. Both GA4 data and fresh daily Search Console
+            rows with an identified preliminary cutoff must be available. Historical snapshots and
+            incomplete dates are not used to calculate an apparent tracking gap.
+          </p>
+        )}
+      </section>
+
       <section className="admin-panel">
         <div className="section-heading">
           <div>
