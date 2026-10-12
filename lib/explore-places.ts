@@ -1,3 +1,4 @@
+import { officialHeritageStops20261012 } from "@/lib/explore-growth-places-wave-12";
 import { verifiedEvergreenCityStops20261011 } from "@/lib/explore-growth-places-wave-10";
 import { cityGrowthPlacesWave11 } from "@/lib/explore-city-growth-wave-11";
 import { cityGrowthPlaces20261011 } from "@/lib/explore-city-growth-2026-10-11";
@@ -40,6 +41,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...officialHeritageStops20261012,
   ...verifiedEvergreenCityStops20261011,
   ...cityGrowthPlaces20261011,
   ...cityGrowthPlacesWave11,
