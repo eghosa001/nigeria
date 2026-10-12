@@ -44,6 +44,8 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
     JSON.parse(readFileSync(file, "utf8")).map((item) => item.slug),
   ));
   const careerGuides = readFileSync("lib/career-guides.ts", "utf8");
+  const jobRecords = readFileSync("lib/jobs.ts", "utf8");
+  const jobTopics = readFileSync("lib/job-topics.ts", "utf8");
   const movieCatalog = readFileSync("lib/entertainment.ts", "utf8");
   const seriesCatalog = readFileSync("lib/series.ts", "utf8");
   const platformHubs = readFileSync("lib/entertainment-platform-hubs.ts", "utf8");
@@ -60,6 +62,9 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
     if (path.startsWith("/topics/")) assert.ok(hasSlug(topics, path.slice(8)), link);
     else if (path.startsWith("/services/")) assert.ok(serviceSlugs.has(path.slice(10)), link);
     else if (path.startsWith("/jobs/guides/")) assert.ok(hasSlug(careerGuides, path.slice(13)), link);
+    else if (path.startsWith("/jobs/categories/")) assert.ok(hasSlug(jobTopics, path.slice("/jobs/categories/".length)), link);
+    else if (["/jobs/nigerian-army-92rri-2026", "/jobs/lagos-state-civil-service-careers"].includes(path))
+      assert.ok(hasSlug(jobRecords, path.slice("/jobs/".length)), link);
     else if (path.startsWith("/entertainment/platforms/")) assert.ok(hasSlug(platformHubs, path.slice(25)), link);
     else if (path.startsWith("/entertainment/movies/")) assert.ok(hasSlug(movieCatalog, path.slice(22)), link);
     else if (path.startsWith("/entertainment/series/")) assert.ok(hasSlug(seriesCatalog, path.slice("/entertainment/series/".length)), link);
@@ -71,4 +76,6 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
   assert.match(form, /aria-autocomplete="list"/);
   assert.match(form, /event.key === "ArrowDown"/);
   assert.match(form, /event.key === "Escape"/);
+  assert.match(form, /matchCuratedSuggestions\(destinations, debounced, 8\)/);
+  assert.ok(links.length <= 120, "The client-side curated list must stay compact");
 });
