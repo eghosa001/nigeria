@@ -39,7 +39,7 @@ test("migration snapshot preserves every shared guide link, metadata and draft-o
 
 test("ambiguous state, duplicate slug and broken evidence block cutover instead of guessing", () => {
   const guides = [guide("national-journey", "South-South Nigeria"), guide("state-guide", "Benin City")];
-  const p = place("national-museum-benin", "national-journey");
+  const p = { ...place("national-museum-benin", "national-journey"), address: "Unspecified regional location, Nigeria" };
   const dup = place("national-museum-benin", "state-guide");
   const invalid = { ...p, slug: "unsafe-entry", source: { label: "", href: "http://example.com" } };
   const result = buildTourMigrationAudit([p, dup, invalid], guides,
