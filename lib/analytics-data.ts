@@ -663,7 +663,7 @@ export function compareSearchClicksToOrganicSessions(
   if (first !== search.startDate || settled.length !== expectedDays) return null;
 
   const sessionsByDay = new Map(ga4Rows.map((row) => [
-    dimension(row, 0).replace(/^(\\d{4})(\\d{2})(\\d{2})$/, "$1-$2-$3"),
+    dimension(row, 0).replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3"),
     metric(row, 0),
   ]));
   return {
