@@ -33,7 +33,7 @@ export const careerGuides: CareerGuide[] = [
     "description": "Understand NYSC Place of Primary Assignment posting, acceptance letters, employer checks and official relocation rules without paying for a PPA slot.",
     "summary": "A Place of Primary Assignment (PPA) is where a corps member performs approved service after camp. An employer's informal invitation is not the same as an NYSC posting; confirm all documentation and any change of posting with NYSC.",
     "answer": "Check your official NYSC posting instructions after orientation, contact the assigned employer and complete its documented acceptance or reporting procedure. If a placement does not work out, notify the NYSC local-government inspector or state office and follow their approved process. Do not pay a broker or assume that an employer invitation alone transfers your PPA.",
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-12",
     "facts": [
       {
         "label": "PPA meaning",
@@ -95,6 +95,20 @@ export const careerGuides: CareerGuide[] = [
         ]
       },
       {
+        "heading": "Five practical checks before accepting a proposed PPA",
+        "paragraphs": [
+          "An employer's offer and an NYSC posting are two different approvals. First match the actual posting instruction with NYSC records; then establish who at the organisation can legitimately receive your letter, supervise your work and sign the relevant documents. NYSC's Mobilization Department says deployment and relocation decisions belong to the scheme, including through state authorities.",
+          "A useful PPA should be feasible to attend regularly, safe for your discipline and realistically located. A verbal promise of free lodging, a stipend or a role title is not the same as a written employer agreement. Confirm those terms directly without assuming every employer must provide them."
+        ],
+        "bullets": [
+          "Match the employer's exact name, site and reporting contact with your official NYSC posting instructions.",
+          "Ask for the address, typical working hours, reporting date, supervision contact and relevant role duties; check commuting feasibility.",
+          "Confirm what the employer actually offers for accommodation, transport or additional allowance, if anything, and avoid unverified salary promises.",
+          "Ask which acceptance or rejection document the employer can issue and where your NYSC inspector expects it to be submitted.",
+          "Keep copies of legitimate correspondence, verify unfamiliar links independently and share personal information only through authorised channels."
+        ]
+      },
+      {
         "heading": "Avoid PPA and NYSC recruitment scams",
         "paragraphs": [
           "Verify unexpected WhatsApp requests, payment links, forged posting letters and promises of a guaranteed organisation. NYSC documentation and approved employer correspondence should control your actions, not screenshots circulating in a group.",
@@ -106,7 +120,7 @@ export const careerGuides: CareerGuide[] = [
       {
         "label": "NYSC — Corps Mobilization, Posting and Relocation",
         "url": "https://www.nysc.gov.ng/corpmob.html",
-        "lastChecked": "2026-10-10"
+        "lastChecked": "2026-10-12"
       },
       {
         "label": "NYSC — Bye-laws and General Rules",
