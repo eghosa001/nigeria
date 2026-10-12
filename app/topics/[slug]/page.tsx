@@ -101,6 +101,14 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
             ]}
           />
 
+          {hub.slug === "cac-business" ? (
+            <nav className="minimal-inline-links" aria-label="Choose a CAC registration type">
+              <Link href="/services/cac-business-name-registration">Register a business name</Link>
+              <Link href="/services/cac-company-registration">Incorporate a company</Link>
+              <Link href="/services/cac-public-search">Search an existing registration</Link>
+            </nav>
+          ) : null}
+
           <div className="topic-copy">
             {hub.intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </div>
