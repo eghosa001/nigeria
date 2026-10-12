@@ -1,0 +1,165 @@
+[
+  {
+    "slug": "futo-2026-admission-school-fees-clearance",
+    "title": "FUTO 2026/27 Admission, Student Portal, O-Level Verification & School Fees",
+    "shortTitle": "FUTO admissions and fees",
+    "summary": "FUTO's official student portal published October 2026 instructions for newly admitted students: check admission status, verify the portal account, and generate separate development levy, school-fee and optional hostel invoices. The 2026/27 O-level verification portal is restricted to newly admitted Year One students.",
+    "category": "Education",
+    "agencySlug": "futo",
+    "feeLabel": "2026/27 fees: official personal invoice",
+    "feeNote": "FUTO's 5 October 2026 admission/payment notice does not supply one valid university-wide 2026/27 tuition, development-levy or hostel amount. Use the student's own authenticated invoice for each category. Some older supplementary admissions adverts quote fees for earlier sessions; do not reuse those prices for a 2026/27 applicant or confuse an application form with school charges.",
+    "timeline": "The current student portal contains notices dated 12 September (O-level verification), 28 September (fraud warning), and 5 October 2026 (freshers' payment instructions). Screening and supplementary dates should be checked separately for the candidate's programme.",
+    "status": "verified",
+    "officialPortal": "https://portal.futo.edu.ng/",
+    "requirements": [
+      "Matching JAMB registration number and valid 2026/27 provisional admission recorded through university and JAMB systems.",
+      "Correct O-level results uploaded to the JAMB CAPS record; the portal's 2026/27 verification exercise is intended for newly admitted Year One students only.",
+      "An active email address and reachable phone number to verify the university portal account, obtain notifications and restore access if needed.",
+      "For clearance, originals and copies of JAMB result and admission letters, FUTO result/offer/acceptance documents, birth and local-government records, and valid school-fee receipt as applicable."
+    ],
+    "steps": [
+      "Open the official FUTO student portal at portal.futo.edu.ng and choose Check Admission Status; verify the offer with the student's JAMB CAPS record before starting payment.",
+      "After a verified university admission, select the portal's Verify Account option or its new-student verification route to activate the student login.",
+      "Use the authorised 2026/27 O-Level Verification function only if the admission is into newly admitted Year One; do not re-run it from another academic level.",
+      "After the account is verified, select Development Levy, School Fees and Hostel (only if applying for accommodation), and generate the relevant separate portal invoices.",
+      "Pay only through the official university invoice reference, then log in again and print matching receipts; never transfer funds to a person claiming to be ICT staff.",
+      "Prepare the FUTO and JAMB admission documents and original O-level records for the clearance venue and deadline announced by the Admissions Unit; verify the list with the current faculty before attending.",
+      "Once the school confirms admission, payment and clearance, use the authenticated student portal for course registration and keep a copy of each confirmation."
+    ],
+    "notes": [
+      "FUTO warns about fraudsters claiming to be ICT staff and asking newly admitted students to pay ₦50,000 to accept admission. This is not the institution's authorised ICT fee.",
+      "The 5 October 2026 notice explicitly separates Development Levy, School Fees and Hostel invoices; hostel payment is relevant only when accommodation is being sought.",
+      "The official 2026/27 O-level verification message is for newly admitted Year One students, not all returning or Direct Entry students.",
+      "The older freshman-registration guidance provides typical documents, but faculty instructions, screening location and current session deadlines take precedence.",
+      "FUTO's 2026/27 merit list is published on its official site, but an applicant should use individual portal/JAMB admission records rather than assuming their status from a copied list."
+    ],
+    "sources": [
+      {
+        "label": "FUTO official student portal — 2026/27 verification, fraud and fee notices",
+        "agency": "Federal University of Technology Owerri",
+        "url": "https://portal.futo.edu.ng/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FUTO official 2026/27 merit admission list",
+        "agency": "Federal University of Technology Owerri",
+        "url": "https://resources.futo.edu.ng/news/futo-2026-2027-merit-admission-list/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FUTO official freshmen clearance and documentation guidance",
+        "agency": "Federal University of Technology Owerri",
+        "url": "https://resources.futo.edu.ng/news/registration-procedure-for-freshmen-new-students/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FUTO official admission/supplementary application portal",
+        "agency": "Federal University of Technology Owerri",
+        "url": "https://portal.futo.edu.ng/Modules/Applications/Supplementary/SupplementaryApplication.aspx",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "FUTO admissions and fees",
+      "FUTO admissions 2026/27",
+      "FUTO university student portal",
+      "FUTO school fees 2026",
+      "FUTO clearance",
+      "FUTO admission list 2026",
+      "FUTO Post UTME",
+      "FUTO screening fees",
+      "FUTO verify account admission",
+      "FUTO new students October 2026",
+      "FUTO development levy invoice",
+      "FUTO school fees e-receipt",
+      "FUTO O level verification 2026",
+      "FUTO 2026 2027 merit admission list",
+      "FUTO avoid 50000 ICT scam"
+    ]
+  },
+  {
+    "slug": "futminna-2026-admission-screening-school-fees",
+    "title": "FUTMINNA 2026/27 UPASE Screening, Admission Portal & School Fees",
+    "shortTitle": "FUTMINNA admission & portal",
+    "summary": "FUTMINNA's 2026/27 pre-admission screening (UPASE) ran from 15 June to 9 August 2026 with a ₦2,000 Remita application fee. The university publishes different minimum UTME scores by programme on its screening portal, and admitted students use the separate ePortal for admissions, registration and payments.",
+    "category": "Education",
+    "agencySlug": "futminna",
+    "feeLabel": "2026/27 UPASE screening ₦2,000 (closed)",
+    "feeNote": "The official 2026/27 notice sets a non-refundable ₦2,000 pre-admission screening payment through Remita. This is not an admission acceptance payment, per-programme tuition, school charges, hostel accommodation or other student registration fee. No universal 2026/27 tuition rate was confirmed by the screening notice.",
+    "timeline": "Registration opened 15 June and closed 9 August 2026. These dates are historical as of 12 October; check separate new admissions and resumption announcements on the official university portal.",
+    "status": "verified",
+    "officialPortal": "https://eportal.futminna.edu.ng/ePortal_V2/",
+    "requirements": [
+      "FUTMINNA as first choice on the 2026 UTME or Direct Entry JAMB record, in line with the published UPASE notice.",
+      "UTME score meeting the specific selected degree programme's 2026/27 portal requirement: the general minimum is 150, but courses such as Medicine, Pharmacy and Software Engineering require higher scores.",
+      "Five relevant O-level credits including English Language and Mathematics within a maximum of two sittings; upload O-level results to JAMB CAPS.",
+      "For Direct Entry, relevant ND/HND at least Lower Credit or NCE at least Merit, alongside any programme-specific requirements listed by the university."
+    ],
+    "steps": [
+      "Open FUTMINNA's published 2026/27 UPASE notice and note that the official registration window ended 9 August 2026; do not pay an unofficial late application agent.",
+      "Open the official Post-UTME admission screening portal and consult the specific course's UTME and O-level subject requirements before attempting a new application.",
+      "During an explicitly reopened or future authorised cycle, enter the JAMB registration number, verify the programme eligibility and generate the ₦2,000 Remita screening payment reference only inside the university's registration workflow.",
+      "Complete the screening form with matching biodata and O-level subjects, submit required records and print the portal acknowledgement for the correct screening session.",
+      "Check JAMB CAPS and the university's authenticated student ePortal separately for formal provisional admission; application completion alone does not constitute an offer.",
+      "Once admitted, sign in to the student's dedicated ePortal with the institution-issued user account and generate the session, programme and level-specific school-fee or registration reference supplied there.",
+      "Follow the current school/faculty clearance checklist and preserve institution-issued payment references, admission documents, examination result copies and verified course-registration records."
+    ],
+    "notes": [
+      "The official 2026/27 screening notice gives a general minimum of 150, but the university's live course table is programme-specific: Medicine and Surgery 250, Doctor of Pharmacy 230, Computer Science and Software Engineering 200, and other programmes vary.",
+      "Direct Entry applicants require their qualifying ND/HND/NCE evidence, not only a UTME score; course-specific eligibility still applies.",
+      "FUTMINNA says false declarations or impersonation in screening can disqualify a candidate; align all names, birth dates and examination results with JAMB.",
+      "Do not confuse the 2025/26 undergraduate admission-status option still shown on the general ePortal with a confirmed 2026/27 admission decision.",
+      "Remita pre-admission payment, acceptance, tuition and hostel fee are distinct and no third-party payment is processed through MyNigeriaGuide."
+    ],
+    "sources": [
+      {
+        "label": "FUTMINNA Registrar — 2026/27 UPASE eligibility, fee and closing date",
+        "agency": "Federal University of Technology Minna",
+        "url": "https://futminna.edu.ng/2026-2027-pre-admission-screening-exercise-2026-utme-de/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FUTMINNA official programme cutoffs and screening portal",
+        "agency": "Federal University of Technology Minna",
+        "url": "https://eportal.futminna.edu.ng/ePortal_V2/utme/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "FUTMINNA official admissions and student registration ePortal",
+        "agency": "Federal University of Technology Minna",
+        "url": "https://eportal.futminna.edu.ng/ePortal_V2/",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "FUTMINNA admission & portal",
+      "FUTMINNA admissions 2026/27",
+      "FUTMINNA university student portal",
+      "FUTMINNA school fees 2026",
+      "FUTMINNA clearance",
+      "FUTMINNA admission list 2026",
+      "FUTMINNA Post UTME",
+      "FUTMINNA screening fees",
+      "futminna upase 2026 2027",
+      "FUT Minna 2000 screening remita",
+      "futminna medicine cutoff 250",
+      "futminna pharmacy cutoff 230",
+      "FUTMINNA school charge invoice",
+      "FUTMINNA 2026 admission first choice"
+    ]
+  }
+]

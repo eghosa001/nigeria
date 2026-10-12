@@ -143,5 +143,23 @@ export const universityProfiles = [
   "state": "Kogi State",
   "academicSession": "2026/27 freshers registration scheduled 26 October",
   "focus": "CAPS, admission, fees and clearance"
+},
+{
+  "slug": "futo-2026-admission-school-fees-clearance",
+  "name": "Federal University of Technology Owerri",
+  "abbreviation": "FUTO",
+  "city": "Owerri",
+  "state": "Imo State",
+  "academicSession": "2026/27 admitted-student portal instructions",
+  "focus": "O-level verification, account activation and current fee invoices"
+},
+{
+  "slug": "futminna-2026-admission-screening-school-fees",
+  "name": "Federal University of Technology Minna",
+  "abbreviation": "FUTMINNA",
+  "city": "Minna",
+  "state": "Niger State",
+  "academicSession": "2026/27 UPASE screening completed",
+  "focus": "Official programme cut-offs, admission and student portal"
 }
 ] as const;

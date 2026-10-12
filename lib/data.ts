@@ -4,6 +4,7 @@ import universityWave2 from "@/data/services-universities-wave2.json" with { typ
 import privateUniversityGuide from "@/data/services-wellspring-2026.json" with { type: "json" };
 import universityWave4 from "@/data/services-universities-wave4.json" with { type: "json" };
 import universityWave5 from "@/data/services-universities-wave5.json" with { type: "json" };
+import universityWave6 from "@/data/services-universities-wave6.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -448,6 +449,22 @@ export const agencies: Agency[] = [
 agencies.push(...serviceScaleAgencies);
 agencies.push(...[
   {
+    "slug": "futo",
+    "name": "Federal University of Technology Owerri",
+    "shortName": "FUTO",
+    "description": "Federal technology university in Owerri, Imo State; undergraduate admissions, student portals, clearance and fees.",
+    "website": "https://futo.edu.ng/"
+  },
+  {
+    "slug": "futminna",
+    "name": "Federal University of Technology Minna",
+    "shortName": "FUTMINNA",
+    "description": "Federal university of technology in Minna, Niger State; UPASE screening, admissions and student portal.",
+    "website": "https://futminna.edu.ng/"
+  }
+]);
+agencies.push(...[
+  {
     "slug": "unical",
     "name": "University of Calabar",
     "shortName": "UNICAL",
@@ -561,7 +578,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
