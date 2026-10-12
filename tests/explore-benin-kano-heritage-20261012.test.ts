@@ -4,7 +4,7 @@ import { beninKanoHeritagePlaces20261012 as places } from "../lib/explore-benin-
 
 test("seven distinct sourced city stops map to existing canonical guides", () => {
   assert.equal(places.length, 7);
-  assert.equal(new Set(places.map(p => p.slug)).size, 8);
+  assert.equal(new Set(places.map(p => p.slug)).size, places.length);
   assert.equal(places.filter(p => p.guideSlug === "benin-city").length, 4);
   assert.equal(places.filter(p => p.guideSlug === "kano").length, 3);
   for (const p of places) {
