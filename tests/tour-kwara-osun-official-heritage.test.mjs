@@ -13,7 +13,7 @@ test("five distinct official Kwara/Osun stops reuse existing canonical guides", 
   assert.equal((places.match(/guideSlug: "kwara-highlights"/g) ?? []).length, 4);
   assert.equal((places.match(/guideSlug: "osogbo"/g) ?? []).length, 1);
   assert.match(catalog, /\.\.\.kwaraOsunRegionalPlaces20261012/);
-  assert.match(guides, /Kwara's official LGA directory lists Imoleboja Rock Shelter/);
+  assert.match(guides, /Kwara's official LGA directory identifies Imole Boja/);
   assert.match(guides, /Kiriji is a separate regional trip/);
 });
 
