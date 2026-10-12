@@ -3,6 +3,7 @@
 import { useEffect, useId, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { trackEvent } from "@/lib/client-analytics";
+import { matchCuratedSuggestions } from "@/lib/autocomplete-matching";
 
 /**
  * Curated links to existing canonical hubs (not new keyword landing pages).
@@ -77,11 +78,36 @@ const destinations = [
   { label: "Track Western Union transfer", href: "/services/western-union-track-transfer-nigeria", pillar: "Services", aliases: "western union tracking nigeria mtcn money transfer status check" },
   { label: "Millionaire Until Morning movie", href: "/entertainment/movies/millionaire-until-morning", pillar: "Movies", aliases: "millionaire until morning nigerian movie cast where to watch" },
   { label: "Once Upon a Village series cast", href: "/entertainment/series/once-upon-a-village", pillar: "Movies", aliases: "once upon a village episode series cast nigeria" },
-] as const;
+  // Additional canonical intent clusters from 9 Oct Nigeria-localized Google
+  // Suggest evidence and settled Search Console query/page pairs through 10 Oct.
+  // Predictions are search wording, not search volume. No live Google API
+  // requests, third-party tracking, or unverified keyword-only pages.
+  { label: "NYSC registration requirements", href: "/services/nysc-registration-local", pillar: "Services", aliases: "nysc online registration portal fee batch c documents 2026" },
+  { label: "JAMB Direct Entry registration", href: "/services/jamb-direct-entry-2026", pillar: "Services", aliases: "jamb direct entry form 2026 portal fee admission entry" },
+  { label: "Retrieve Nigerian Tax ID", href: "/services/nrs-tax-id-retrieval", pillar: "Services", aliases: "nigeria nrs tax id retrieval nin cac find tin number online" },
+  { label: "Lagos LASRRA registration", href: "/services/lagos-lasrra-registration", pillar: "Services", aliases: "lagos state resident lasrra registration identity card official" },
+  { label: "Replace an MTN SIM", href: "/services/mtn-sim-swap-replacement", pillar: "Services", aliases: "mtn sim swap replacement nigeria lost sim requirements" },
+  { label: "CAC company incorporation", href: "/services/cac-company-registration", pillar: "Services", aliases: "cac registration company incorporation nigeria company portal fees corporate affairs commission" },
 
-function normalise(value: string) {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
-}
+  { label: "Dufuna Canoe in Yobe", href: "/explore/dufuna-canoe-heritage-guide", pillar: "Tour", aliases: "dufuna canoe age archaeology yobe location how old museum" },
+  { label: "Mambilla Plateau and Gembu", href: "/explore/mambilla-plateau-guide", pillar: "Tour", aliases: "mambilla plateau taraba gembu tea estates where is mambilla highland" },
+  { label: "Ojukwu Bunker in Umuahia", href: "/explore/ojukwu-bunker-guide", pillar: "Tour", aliases: "ojukwu bunker abia umuahia biafran war museum opening visitor history" },
+  { label: "Places to visit in Sokoto", href: "/explore/sokoto-state-travel-guide", pillar: "Tour", aliases: "sokoto state nigeria tourist attractions caliphate sultan palace durbar" },
+  { label: "Things to do in Bayelsa", href: "/explore/bayelsa-state-travel-guide", pillar: "Tour", aliases: "bayelsa yenagoa places to visit oloibiri akassa delta tourist attractions" },
+  { label: "Kwara State attractions", href: "/explore/kwara-highlights", pillar: "Tour", aliases: "kwara state places to visit owu waterfalls ilorin esie museum" },
+  { label: "Anambra caves and lake", href: "/explore/anambra-heritage-circuit", pillar: "Tour", aliases: "places to visit in anambra ogbunike caves agulu lake owerre ezukala igbo ukwu" },
+
+  { label: "Nigerian Army 92RRI portal", href: "/jobs/nigerian-army-92rri-2026", pillar: "Jobs", aliases: "92rri nigeria army recruitment portal 2026 tradesmen special skilled requirements" },
+  { label: "Lagos State Civil Service careers", href: "/jobs/lagos-state-civil-service-careers", pillar: "Jobs", aliases: "lagos state civil service commission recruitment 2026 official jobs" },
+  { label: "Federal government recruitment", href: "/jobs/government", pillar: "Jobs", aliases: "how to apply federal government jobs nigeria recruitment vacancies" },
+  { label: "Banking and finance careers", href: "/jobs/categories/banking-finance", pillar: "Jobs", aliases: "jobs in the banking sector nigeria careers bank industry finance" },
+
+  { label: "Sibe 2026 movie cast", href: "/entertainment/movies/sibe", pillar: "Movies", aliases: "cast of sibe the movie bimbo ademoye uzor arukwe full movie youtube" },
+  { label: "Once Upon a Village 3 full movie", href: "/entertainment/movies/once-upon-a-village-3", pillar: "Movies", aliases: "once upon a village 3 episode cast deza great full movie" },
+  { label: "Forever Yours Nigerian film", href: "/entertainment/movies/forever-yours-2026", pillar: "Movies", aliases: "forever yours 2026 cast daniel etim effiong nigerian full movie" },
+  { label: "Holy Matrimony cast and movie", href: "/entertainment/movies/holy-matrimony", pillar: "Movies", aliases: "holy matrimony nigerian movie frederick leonard cast full film youtube" },
+  { label: "What Tomorrow Holds film", href: "/entertainment/movies/what-tomorrow-holds-2026", pillar: "Movies", aliases: "what tomorrow holds nigerian movie cast sandra okunzuwa full film" },
+] as const;
 
 export function GlobalSearchForm({ initialQuery }: { initialQuery: string }) {
   const router = useRouter();
@@ -97,20 +123,7 @@ export function GlobalSearchForm({ initialQuery }: { initialQuery: string }) {
     return () => window.clearTimeout(handle);
   }, [query]);
 
-  const matches = useMemo(() => {
-    const q = normalise(debounced);
-    if (q.length < 2) return [];
-    return destinations.map((item) => {
-      const label = normalise(item.label);
-      const haystack = normalise(item.label + " " + item.aliases + " " + item.pillar);
-      const tokens = q.split(/\s+/).filter(Boolean);
-      if (!tokens.every((token) => haystack.includes(token))) return null;
-      const score = label === q ? 100 : label.startsWith(q) ? 60 : label.includes(q) ? 40 : 20;
-      return { ...item, score };
-    }).filter((item): item is NonNullable<typeof item> => item !== null)
-      .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label))
-      .slice(0, 8);
-  }, [debounced]);
+  const matches = useMemo(() => matchCuratedSuggestions(destinations, debounced, 8), [debounced]);
 
   const open = focused && !dismissed && matches.length > 0 && query === debounced;
 
