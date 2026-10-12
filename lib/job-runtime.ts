@@ -119,3 +119,18 @@ export function buildJobPostingJsonLd(item: CareerOpportunity, pageUrl: string, 
     url: pageUrl,
   };
 }
+
+
+/** Select varied employers for a compact preview without hiding any directory records. */
+export function pickDistinctEmployerPreview<T extends { organization: string }>(items: readonly T[], limit = 3): T[] {
+  const selected: T[] = [];
+  const seen = new Set<string>();
+  for (const item of items) {
+    const key = item.organization.trim().toLowerCase().replace(/\s+/g, " ");
+    if (seen.has(key)) continue;
+    seen.add(key);
+    selected.push(item);
+    if (selected.length >= Math.max(1, Math.floor(limit))) break;
+  }
+  return selected;
+}
