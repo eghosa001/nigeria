@@ -98,16 +98,19 @@ export const exploreGrowthWave7: ExploreGuide[] = [
       { name: "Ilorin Central Mosque", detail: "One of the city's defining landmarks and an active worship space; visitor etiquette and prayer schedules take priority." },
       { name: "Flower Garden", detail: "A 2.8-hectare green/recreation asset on Adeloun Road in GRA that works as a lighter stop between heritage visits." },
       { name: "Emirate heritage", detail: "Ilorin's royal and Islamic history shapes the old-city experience around Oja-Oba and the Emir's Palace area." },
+      { name: "Dada Pottery craft quarter", detail: "Traditional ceramics in Alagbado/Ibagun: a 2024 state construction notice is not evidence that the new arts facility is open in 2026." },
       { name: "Gateway to Kwara", detail: "Use Ilorin as the base for longer Kwara trips such as Owu Falls rather than compressing distant attractions into a city afternoon." }
     ],
     planning: [
       { label: "Respect worship times", detail: "The Central Mosque is an active religious site; dress conservatively and avoid treating prayer periods as casual tourist access." },
       { label: "Group old-city stops", detail: "Central Mosque and nearby emirate heritage make more sense together than as separate trips." },
+      { label: "Palace visits are permission-dependent", detail: "The Emir's Palace is an active royal institution, and official government visits do not mean there are daily public tours or unrestricted photography." },
+      { label: "Ask about Dada pottery activity before setting out", detail: "The state documented modern pottery construction in 2024. Confirm whether traditional workshops or any exhibition spaces accept visitors now; do not promise operational studios." },
       { label: "Keep Owu Falls separate", detail: "The waterfall is outside Ilorin and requires its own road plan, daylight and access confirmation." },
       { label: "Confirm live hotel/park status", detail: "Recreation and hospitality assets can change operations; check current access before setting out." }
     ],
     source: { label: "Kwara State Government — Tourism", href: "https://kwarastate.gov.ng/do-business/tourism/" },
-    lastReviewed: "2026-10-07"
+    lastReviewed: "2026-10-12"
   },
   {
     slug: "makurdi",
