@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { getEffectiveJobStatus, getEffectiveStatusLabel, getClosingSoonJobs, isEffectivelyOpen, todayIsoNigeria } from "../lib/job-runtime";
+import { getEffectiveJobStatus, getEffectiveStatusLabel, getClosingSoonJobs, isEffectivelyOpen, pickDistinctEmployerPreview, todayIsoNigeria } from "../lib/job-runtime";
 import { getCurrentHomeSocialTrends } from "../data/home-social-trends";
 import { careerGuides } from "../lib/career-guides";
 import { jobOpportunities } from "../lib/jobs";
@@ -53,4 +53,14 @@ test("challenge reuses one canonical verified guide, not a fabricated job vacanc
   assert.ok(guide[0].sources.every((source) => source.url.startsWith("https://") && source.lastChecked === "2026-10-09"));
   assert.ok(guide[0].sections.length >= 6);
   assert.match(guide[0].answer, /working.*N-ATLAS/i);
+});
+
+test("compact Jobs preview keeps one opportunity per employer", () => {
+  const opportunities = [
+    { organization: "Kaduna PHCB", slug: "role-a" },
+    { organization: " kaduna  phcb ", slug: "role-b" },
+    { organization: "FirstBank", slug: "role-c" },
+    { organization: "Moniepoint", slug: "role-d" },
+  ];
+  assert.deepEqual(pickDistinctEmployerPreview(opportunities, 3).map((item) => item.slug), ["role-a", "role-c", "role-d"]);
 });

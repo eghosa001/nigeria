@@ -3,6 +3,7 @@ import Link from "next/link";
 import { JsonLd } from "@/components/json-ld";
 import { ExplorePlaceDirectory } from "@/components/explore-place-directory";
 import { exploreGuides } from "@/lib/explore";
+import { getUpcomingEventGuides } from "@/lib/explore-event-featured";
 import { explorePlaces } from "@/lib/explore-places";
 import { getSiteUrl } from "@/lib/site";
 import { destinationPhotos, destinationPhotoUrls } from "@/lib/destination-photos";
@@ -53,6 +54,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/explore" },
 };
 
+// Event freshness is calculated in Nigerian local time on each request.
+export const dynamic = "force-dynamic";
+
 export default function ExplorePage() {
   const cities = exploreGuides
     .filter((guide) => guide.kind === "city")
@@ -65,10 +69,7 @@ export default function ExplorePage() {
     .sort((a, b) => a.shortTitle.localeCompare(b.shortTitle));
   const featuredDestinations = ["yankari-game-reserve","obudu-mountain-resort","erin-ijesha-waterfall","gashaka-gumti-national-park","anambra-heritage-circuit","zuma-rock-gurara-falls","ekiti-nature-circuit","delta-state-travel-guide"]
     .flatMap((slug) => destinations.filter((guide) => guide.slug === slug));
-  const currentEvents = exploreGuides
-    .filter((guide) => guide.kind === "event")
-    .sort((a, b) => b.lastReviewed.localeCompare(a.lastReviewed) || a.shortTitle.localeCompare(b.shortTitle))
-    .slice(0, 4);
+  const currentEvents = getUpcomingEventGuides(exploreGuides);
   const base = getSiteUrl();
 
   const collectionLd = {
@@ -162,9 +163,9 @@ export default function ExplorePage() {
           <div className="container">
             <div className="minimal-section-heading">
               <div>
-                <span className="eyebrow">Current events</span>
-                <h2 id="current-events-heading">Fresh event guides to check now.</h2>
-                <p>See dates, venues and what to check before attending.</p>
+                <span className="eyebrow">Upcoming events</span>
+                <h2 id="current-events-heading">Events with confirmed dates still ahead.</h2>
+                <p>See upcoming event dates, venues and what to confirm before attending.</p>
               </div>
               <Link href="/explore/events">All events →</Link>
             </div>
