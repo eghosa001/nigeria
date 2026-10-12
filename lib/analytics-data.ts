@@ -36,6 +36,15 @@ export type SearchPerformanceSummary = {
   ctr: number | null;
   position: number | null;
   error?: string;
+  /** Present only with fresh daily GSC API data; snapshots cannot be reconciled. */
+  dailyClicks?: Array<{ date: string; clicks: number }>;
+};
+
+export type SearchTrafficComparison = {
+  startDate: string;
+  endDate: string;
+  gscClicks: number;
+  ga4OrganicSessions: number;
 };
 
 export type AnalyticsConnectionStatus = {
@@ -90,6 +99,8 @@ export type AnalyticsDashboardData = {
   referrers: Array<{ source: string; medium: string; sessions: number; users: number }>;
   interactions: Array<{ event: string; count: number }>;
   searchPerformance: SearchPerformanceSummary;
+  /** Same reported calendar dates, only before Google's first incomplete GSC day. */
+  searchTrafficComparison: SearchTrafficComparison | null;
   hourlySearchPerformance: SearchConsoleHourlyReport;
   connection: AnalyticsConnectionStatus;
   keyEvents: GA4KeyEventStatus;
@@ -586,6 +597,9 @@ async function getSearchPerformance(startDate: string): Promise<SearchPerformanc
       endDate,
       latestDate,
       firstIncompleteDate: firstIncompleteDateFromMetadata(byDate.metadata) ?? null,
+      dailyClicks: datedRows
+        .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.keys?.[0] ?? ""))
+        .map((row) => ({ date: row.keys![0], clicks: row.clicks ?? 0 })),
       impressions: total?.impressions ?? 0,
       clicks: total?.clicks ?? 0,
       ctr: total?.ctr ?? 0,
@@ -625,6 +639,41 @@ async function getSearchPerformance(startDate: string): Promise<SearchPerformanc
       error: error instanceof Error ? error.message : "Search Console data is unavailable.",
     };
   }
+}
+
+/** GSC clicks and GA4 google/organic sessions are different events, not a capture-rate metric. */
+export function compareSearchClicksToOrganicSessions(
+  search: SearchPerformanceSummary,
+  ga4Rows: ReportRow[],
+): SearchTrafficComparison | null {
+  if (search.source !== "live" || !search.available ||
+      !search.firstIncompleteDate || !search.dailyClicks?.length) return null;
+
+  const settled = search.dailyClicks.filter(({ date }) =>
+    date >= search.startDate && date < search.firstIncompleteDate!
+  );
+  if (!settled.length) return null;
+
+  // Don't claim a complete comparison when Search Console omitted days in the interval.
+  const first = settled[0].date;
+  const last = settled[settled.length - 1].date;
+  const expectedDays = Math.round(
+    (Date.parse(last + "T00:00:00Z") - Date.parse(first + "T00:00:00Z")) / 86400000
+  ) + 1;
+  if (first !== search.startDate || settled.length !== expectedDays) return null;
+
+  const sessionsByDay = new Map(ga4Rows.map((row) => [
+    dimension(row, 0).replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3"),
+    metric(row, 0),
+  ]));
+  return {
+    startDate: first,
+    endDate: last,
+    gscClicks: settled.reduce((total, day) => total + day.clicks, 0),
+    ga4OrganicSessions: settled.reduce(
+      (total, day) => total + (sessionsByDay.get(day.date) ?? 0), 0
+    ),
+  };
 }
 
 function metric(row: ReportRow, index: number) {
@@ -740,6 +789,24 @@ export async function getAnalyticsDashboard(
     },
   ];
 
+  // Optional comparison must never disable the core GA4 dashboard if this request fails.
+  const organicDailyRequest = {
+    dateRanges,
+    dimensions: [{ name: "date" }],
+    metrics: [{ name: "sessions" }],
+    dimensionFilter: {
+      andGroup: {
+        expressions: [
+          ...(mode === "clean" ? [cleanPublicFilter] : []),
+          { filter: { fieldName: "sessionSource", stringFilter: { matchType: "EXACT", value: "google", caseSensitive: false } } },
+          { filter: { fieldName: "sessionMedium", stringFilter: { matchType: "EXACT", value: "organic", caseSensitive: false } } },
+        ],
+      },
+    },
+    orderBys: [{ dimension: { dimensionName: "date" } }],
+    limit: 100,
+  };
+
   const interactionEventFilter = {
     filter: {
       fieldName: "eventName",
@@ -769,7 +836,7 @@ export async function getAnalyticsDashboard(
 
   // Every source is independent: a broken GA4 API must not blank the
   // PostHog and Search Console panels or prevent the private dashboard loading.
-  const [ga4Batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
+  const [ga4Batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents, organicDailyReport] = await Promise.all([
     ga4Available
       ? batchRunReports(coreRequests)
           .then((batch) => ({ batch, error: null as string | null }))
@@ -788,6 +855,7 @@ export async function getAnalyticsDashboard(
     ga4Available ? verifyAnalyticsConnection() : Promise.resolve(unavailableConnection),
     getPostHogOverview(dataStartDate, today, forceFresh),
     ga4Available ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "GA4 Data API is not configured." } as GA4KeyEventStatus),
+    ga4Available ? runReport(organicDailyRequest).catch(() => null) : Promise.resolve(null),
   ]);
 
   const { batch, error: ga4Error } = ga4Batch;
@@ -843,6 +911,9 @@ export async function getAnalyticsDashboard(
       count: metric(row, 0),
     })),
     searchPerformance,
+    searchTrafficComparison: ga4Available && ga4Error === null && organicDailyReport
+      ? compareSearchClicksToOrganicSessions(searchPerformance, organicDailyReport.rows ?? [])
+      : null,
     hourlySearchPerformance,
     connection,
     keyEvents,
