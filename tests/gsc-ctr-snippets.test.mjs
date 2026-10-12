@@ -38,6 +38,7 @@ test("high-impression movie snippet retains verifiable cast and watch intent", (
   assert.ok(snippet);
   assert.ok(snippet[1].length <= 60);
   assert.ok(snippet[2].length <= 155);
-  assert.match(snippet[1], /Oversabi Aunty.*Netflix/);
+  assert.match(snippet[1], /Oversabi Aunty.*Where to Watch/);
   assert.match(snippet[2], /Toyin Abraham/);
+  assert.match(snippet[2], /official trailer and where-to-watch status/i);
 });
