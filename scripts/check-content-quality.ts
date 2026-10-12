@@ -70,7 +70,7 @@ for (const service of publicServices) {
   }
 
   const processText = service.steps.join(" ");
-  const hasStartAction = /open|sign in|register|create|visit|attend|contact|present|enter|complete|check|confirm|obtain|buy|pay|submit|upload|select|request|collect|download|apply|enrol|verify|generate/i.test(service.steps[0] ?? "");
+  const hasStartAction = /open|sign in|register|create|visit|attend|contact|present|enter|complete|check|confirm|obtain|buy|pay|submit|upload|select|request|collect|download|apply|enrol|verify|generate|dial/i.test(service.steps[0] ?? "");
   if (!hasStartAction) {
     errors.push(prefix + "first step must tell the viewer exactly how to start");
   }
