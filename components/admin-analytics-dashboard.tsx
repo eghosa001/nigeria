@@ -126,6 +126,9 @@ export function AdminAnalyticsDashboard() {
   }
 
   const maxDailyViews = useMemo(() => Math.max(1, ...(data?.daily.map((row) => row.pageViews) ?? [1])), [data]);
+  // GA4 standard reports omit dates with no processed traffic. This is the
+  // last day with *recorded activity*, not Google's ingestion/completeness time.
+  const lastReportedActivity = data?.daily.filter((row) => row.sessions > 0 || row.pageViews > 0).at(-1)?.date ?? null;
 
   if (state === "loading") {
     return <div className="admin-analytics-state"><strong>Loading visit analytics…</strong><p>Reading PostHog, GA4 and Search Console sources.</p></div>;
@@ -198,6 +201,19 @@ export function AdminAnalyticsDashboard() {
           <>PostHog is loading independently. GA4 Data API reporting is currently unavailable, so GA4 totals below should not be treated as visitor counts until that secondary connection is restored.</>
         )}
       </p>
+
+      {data.ga4Available ? (
+        <div className="admin-analytics-state" role="status">
+          <strong>Google Analytics is receiving historical traffic data.</strong>
+          <p>
+            Most recent day with recorded activity in the selected GA4 reports:{" "}
+            <strong>{lastReportedActivity ? readableDate(lastReportedActivity) : "none in this selected period"}</strong>.
+            This is not Google's last processing time: missing or incomplete current-day reports do not establish that today's visits are zero.
+            Use the separate last-30-minute realtime counters for recent activity.
+            A zero realtime count means no tracked active users in that window, not automatically a broken tag.
+          </p>
+        </div>
+      ) : null}
 
       {!data.ga4Available && data.ga4Error ? (
         <div className="admin-analytics-state" role="status">
@@ -521,7 +537,7 @@ export function AdminAnalyticsDashboard() {
       </section>
 
       <section className="admin-panel analytics-trend">
-        <div className="section-heading"><div><span className="eyebrow">Traffic trend</span><h2>Page views by day</h2></div><small>Updated {new Date(data.generatedAt).toLocaleString("en-NG")}</small></div>
+        <div className="section-heading"><div><span className="eyebrow">Traffic trend</span><h2>Page views by day</h2></div><small>Report fetched {new Date(data.generatedAt).toLocaleString("en-NG")} · not a GA4 processing timestamp</small></div>
         <div className="analytics-bars" aria-label="Daily page views">
           {data.daily.map((row) => (
             <div key={row.date} title={readableDate(row.date) + ": " + number(row.pageViews) + " page views"}>

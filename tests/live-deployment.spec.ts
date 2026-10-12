@@ -47,53 +47,64 @@ test.describe("live MyNigeriaGuide deployment", () => {
     expect(slots).toContain("8499139757");
   });
 
-  test("production analytics bootstrap configures GA4 and PostHog without QA traffic", async ({ page }) => {
+  test("production analytics bootstrap configures GA4 and PostHog without QA traffic", async ({ browser }) => {
     test.skip(!process.env.LIVE_BASE_URL, "Production-only analytics check.");
 
-    await page.addInitScript(() => {
-      // Exercise the real app bootstrap while keeping QA traffic out of
-      // measurements. Google CDN and collection hosts are external services;
-      // don't conflate an ad-blocker/CDN outage with app configuration state.
-      Object.defineProperty(Navigator.prototype, "webdriver", {
-        configurable: true,
-        get: () => false,
-      });
+    // Production deliberately excludes HeadlessChrome and navigator.webdriver
+    // so default Playwright contexts are NOT valid evidence that real visitors
+    // can initialize GA4. Use an isolated ordinary user agent to exercise the
+    // same branch as a normal reader, while intercepting ALL collection below.
+    const context = await browser.newContext({
+      baseURL: process.env.LIVE_BASE_URL,
+      userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
     });
-
-    await page.route(/https:\/\/[^/]*google-analytics\.com\/g\/collect.*/, (route) => route.abort());
-    // Fail closed: test events must not reach PostHog ingestion.
-    await page.route(/https:\/\/[^/]*posthog\.com\/.*/, (route) => {
-      if (route.request().method() === "POST") return route.abort();
-      return route.continue();
-    });
-
-    await page.goto("/");
-    await expect(
-      page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
-    ).toHaveCount(1);
-
-    // A blocked Google tag download can prevent /g/collect despite correct
-    // site bootstrap. Assert the actual queued GA4 initialization instead of
-    // requiring an external third-party request or fabricating a pageview.
-    await expect.poll(() => page.evaluate(() => {
-      const w = window as Window & typeof globalThis & {
-        dataLayer?: IArguments[];
-      };
-      const layer = w.dataLayer ?? [];
-      return layer.some((row) => {
-        const args = Array.from(row);
-        return args[0] === "config" &&
-          args[1] === "G-J1SBV02XGN" &&
-          typeof args[2] === "object" &&
-          args[2] != null &&
-          (args[2] as { anonymize_ip?: boolean }).anonymize_ip === true;
+    try {
+      const page = await context.newPage();
+      await page.addInitScript(() => {
+        Object.defineProperty(Navigator.prototype, "webdriver", {
+          configurable: true,
+          get: () => false,
+        });
       });
-    })).toBe(true);
-    await expect.poll(
-      () => page.evaluate(() => (window as Window & { __mngPostHogInitialized?: boolean }).__mngPostHogInitialized),
-      { timeout: 15_000 },
-    ).toBe(true);
-    // Outgoing GA4/PostHog events are intercepted rather than counted as visits.
+
+      // Never count our synthetic test as a real GA4 visitor, even if the
+      // remote Google tag loads successfully. Block both GA4 and legacy
+      // collection endpoints and all PostHog event POSTs.
+      await page.route(/https:\/\/[^/]*google-analytics\.com\/(?:g\/collect|collect).*/, (route) =>
+        route.fulfill({ status: 204, body: "" }),
+      );
+      await page.route(/https:\/\/[^/]*posthog\.com\/.*/, (route) => {
+        if (route.request().method() === "POST") return route.abort();
+        return route.continue();
+      });
+
+      await page.goto("/");
+      await expect(
+        page.locator('script[data-mynigeriaguide-ga][src*="googletagmanager.com/gtag/js?id=G-J1SBV02XGN"]'),
+      ).toHaveCount(1);
+      await expect.poll(() => page.evaluate(() => {
+        const w = window as Window & typeof globalThis & {
+          dataLayer?: IArguments[];
+          __mngLastTrackedPath?: string;
+        };
+        return (w.dataLayer ?? []).some((row) => {
+          const args = Array.from(row);
+          return args[0] === "config" &&
+            args[1] === "G-J1SBV02XGN" &&
+            typeof args[2] === "object" &&
+            args[2] != null &&
+            (args[2] as { anonymize_ip?: boolean }).anonymize_ip === true;
+        }) && w.__mngLastTrackedPath === "/";
+      })).toBe(true);
+      await expect.poll(
+        () => page.evaluate(() => (window as Window & { __mngPostHogInitialized?: boolean }).__mngPostHogInitialized),
+        { timeout: 15_000 },
+      ).toBe(true);
+      // This proves on-page configuration and delivery attempt, NOT that
+      // Google processed any new live event: collection is intentionally blocked.
+    } finally {
+      await context.close();
+    }
   });
 
 
