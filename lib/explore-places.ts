@@ -1,3 +1,4 @@
+import { railTravelPlaces20261012 } from "@/lib/explore-rail-stations-2026-10-12";
 import { ncmmRegionalMuseums20261012 } from "@/lib/explore-regional-museums-2026-10-12";
 import { officialHeritageStops20261012 } from "@/lib/explore-growth-places-wave-12";
 import { verifiedEvergreenCityStops20261011 } from "@/lib/explore-growth-places-wave-10";
@@ -42,6 +43,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...railTravelPlaces20261012,
   ...ncmmRegionalMuseums20261012,
   ...officialHeritageStops20261012,
   ...verifiedEvergreenCityStops20261011,

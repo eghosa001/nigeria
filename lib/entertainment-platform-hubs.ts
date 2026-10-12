@@ -19,10 +19,10 @@ export const entertainmentPlatformHubs: EntertainmentPlatformHub[] = [
     name: "Netflix",
     platform: "Netflix",
     href: "/entertainment/platforms/netflix",
-    summary: "Nigerian films currently linked to Netflix title pages, including recent local releases and established Nollywood hits.",
+    summary: "Find Nigerian films with source-linked Netflix pages, then check Netflix Nigeria’s live Nollywood catalogue and New on Netflix shelf for recent arrivals before choosing what to watch.",
     status: "Verified Nigerian catalog",
     officialUrl: "https://www.netflix.com/ng-en/browse/genre/1077508",
-    lastChecked: "2026-10-05",
+    lastChecked: "2026-10-12",
     popularTitleSlugs: [
       "my-fathers-shadow",
       "the-waiter",

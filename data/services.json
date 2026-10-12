@@ -9471,9 +9471,9 @@
     "agencySlug": "cbn",
     "feeLabel": "No CBN complaint fee stated",
     "feeNote": "The CBN complaint process is a consumer-redress channel. Do not pay an intermediary to lodge a complaint.",
-    "timeline": "CBN guidance says customers should first allow the financial institution the applicable resolution period before escalation; some complaint categories have different timelines.",
+    "timeline": "CBN guidance describes two weeks for many unresolved complaints and a 30-day period for some loan or excess-charge complaints; check the current category-specific rule.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-12",
     "officialPortal": "https://complaintsportal.cbn.gov.ng/",
     "requirements": [
       "A complaint already lodged with the bank or other CBN-regulated institution",
@@ -9490,7 +9490,7 @@
     ],
     "notes": [
       "CBN says customers must normally complain to the regulated institution first before escalating to the Consumer Protection function.",
-      "CBN's older published guidance refers to two weeks for many complaints and longer periods for some excess-charge or loan complaints; use the live portal and current rules for the exact category.",
+      "CBN's complaint-lodgement guidance distinguishes a two-week period for many complaints from a 30-day period for some loan and excess-charge issues. Confirm the category and applicable current period before escalating.",
       "Never include a card PIN, internet-banking password or OTP in a complaint submission."
     ],
     "sources": [
@@ -9498,13 +9498,19 @@
         "label": "CBN Complaints Portal",
         "agency": "Central Bank of Nigeria",
         "url": "https://complaintsportal.cbn.gov.ng/",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-12"
       },
       {
         "label": "CBN Complaints Management",
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/supervision/cpdcomgt.html",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "CBN — complaint lodgement and category-specific response periods",
+        "agency": "Central Bank of Nigeria",
+        "url": "https://www.cbn.gov.ng/FinInc/FinLit/LodgeComplaint.html",
+        "lastChecked": "2026-10-12"
       }
     ],
     "searchTerms": [
