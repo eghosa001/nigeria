@@ -61,3 +61,11 @@ test("October zero-click service snippets reflect official routes and fit search
   const tour = readFileSync(new URL("../app/explore/page.tsx", import.meta.url), "utf8");
   assert.match(tour, /href="\/explore\/kainji-dam-guide"/);
 });
+
+test("Sibe search snippet answers observed cast and full-movie intent", () => {
+  const snippet = movie.match(/"sibe": \{\s*title: "([^"]+)",\s*description: "([^"]+)"/);
+  assert.ok(snippet);
+  assert.ok(snippet[1].length <= 60 && snippet[2].length <= 155);
+  assert.match(snippet[1], /Sibe.*Bimbo Ademoye/);
+  assert.match(snippet[2], /Uche Montana.*official Bimbo Ademoye TV full movie/i);
+});
