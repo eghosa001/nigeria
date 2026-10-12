@@ -6,6 +6,7 @@ import universityWave4 from "@/data/services-universities-wave4.json" with { typ
 import universityWave5 from "@/data/services-universities-wave5.json" with { type: "json" };
 import universityWave6 from "@/data/services-universities-wave6.json" with { type: "json" };
 import universityWave7 from "@/data/services-universities-wave7.json" with { type: "json" };
+import universityWave8 from "@/data/services-universities-wave8.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -450,6 +451,29 @@ export const agencies: Agency[] = [
 agencies.push(...serviceScaleAgencies);
 agencies.push(...[
   {
+    "slug": "uniosun",
+    "name": "Osun State University",
+    "shortName": "UNIOSUN",
+    "description": "Osun State university; 2026/27 merit admissions, current acceptance fees, screening and student portal.",
+    "website": "https://uniosun.edu.ng/"
+  },
+  {
+    "slug": "unijos",
+    "name": "University of Jos",
+    "shortName": "UNIJOS",
+    "description": "Federal university in Jos, Plateau State; undergraduate screening, student portal and admission status.",
+    "website": "https://www.unijos.edu.ng/"
+  },
+  {
+    "slug": "unizik",
+    "name": "Nnamdi Azikiwe University",
+    "shortName": "UNIZIK",
+    "description": "Federal university in Awka, Anambra State; undergraduate screening, admission onboarding, student and clearance portals.",
+    "website": "https://unizik.edu.ng/"
+  }
+]);
+agencies.push(...[
+  {
     "slug": "uniuyo",
     "name": "University of Uyo",
     "shortName": "UNIUYO",
@@ -603,7 +627,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7, ...universityWave8]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<

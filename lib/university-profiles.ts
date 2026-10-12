@@ -188,5 +188,32 @@ export const universityProfiles = [
     "state": "Rivers State",
     "academicSession": "2026/27 May–June screening closed",
     "focus": "RSU admission & CBT screening"
+  },
+  {
+    "slug": "uniosun-admission-list-acceptance-school-fees-2026",
+    "name": "Osun State University",
+    "abbreviation": "UNIOSUN",
+    "city": "Osogbo",
+    "state": "Osun State",
+    "academicSession": "2026/27 UTME merit list published; acceptance ₦65,000",
+    "focus": "Merit admission list, acceptance, screening fees and student portal"
+  },
+  {
+    "slug": "unijos-2026-post-utme-de-screening-fees-portal",
+    "name": "University of Jos",
+    "abbreviation": "UNIJOS",
+    "city": "Jos",
+    "state": "Plateau State",
+    "academicSession": "2026/27 screening ended 12 September 2026",
+    "focus": "First-choice 180 UTME, portal, Remita and CAPS admission"
+  },
+  {
+    "slug": "unizik-2026-admission-portal-screening-school-fees",
+    "name": "Nnamdi Azikiwe University",
+    "abbreviation": "UNIZIK",
+    "city": "Awka",
+    "state": "Anambra State",
+    "academicSession": "2026/27 screening application signup closed",
+    "focus": "Applicant status, admission eligibility and student clearance portals"
   }
 ] as const;
