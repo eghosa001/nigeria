@@ -6,7 +6,7 @@ Six **distinct directory-only** stops are attached to existing indexable city gu
 
 - **Opa Oranmiyan:** Osun State's historic Ife register lists Opa Oranmiyan / Oranmiyan Staff: https://www.osunstate.gov.ng/about/major-towns/ile-ife/. Oral traditions are presented as cultural context, not scientific chronology. Admission/fees are unverified and the location is custodial.
 - **Oke Mogun / Ogun shrine:** same city's shrine information in https://www.osunstate.gov.ng/2017/02/osun-fact-file-ile-ife/. An active shrine is not a walk-in museum. Do not invent a gate address.
-- **A. G. Leventis Natural History Museum, OAU:** the university-owned museum describes its biodiversity and archaeology collections/exhibition space at https://museum.oauife.edu.ng/exhibition/; location opposite Computer Building at https://museum.oauife.edu.ng/contact/. Distinct from NCMM's National Museum Ile-Ife. The university source confirms historical exhibitions, not today's opening hours or fee.
+- **A. G. Leventis Natural History Museum, OAU:** OAU's **live HTTPS** main-site institutes directory lists the museum at https://oauife.edu.ng/centres-institutes/; the foundation that supported the museum building separately describes its environment/science education mission at https://www.leventisfoundation.org/museums/natural-history-museum-of-obafemi-awolowo-university-in-ile-ife. OAU's museum subdomain had an expired TLS certificate during PR link validation, so it is not a public click-through source. Distinct from NCMM's National Museum Ile-Ife. No live admission hours or fees claimed; the exact museum building entrance must be checked on campus.
 
 ## Ilorin (two)
 
