@@ -44,5 +44,41 @@ export const universityProfiles = [
     "state": "Lagos State",
     "academicSession": "2026/27 undergraduate admission",
     "focus": "LASU admission & LACACA clearance"
-  }
+  },
+{
+  "slug": "oau-admission-fees-clearance-2026",
+  "name": "Obafemi Awolowo University",
+  "abbreviation": "OAU",
+  "city": "Ile-Ife",
+  "state": "Osun State",
+  "academicSession": "2026/27 admission (screening windows closed)",
+  "focus": "OAU admission and clearance"
+},
+{
+  "slug": "futa-admission-clearance-fees-2026",
+  "name": "Federal University of Technology, Akure",
+  "abbreviation": "FUTA",
+  "city": "Akure",
+  "state": "Ondo State",
+  "academicSession": "2026/27 admission (screening windows closed)",
+  "focus": "FUTA admission and fees"
+},
+{
+  "slug": "uniport-post-utme-clearance-fees-2026",
+  "name": "University of Port Harcourt",
+  "abbreviation": "UNIPORT",
+  "city": "Port Harcourt",
+  "state": "Rivers State",
+  "academicSession": "2026/27 admission (screening windows closed)",
+  "focus": "UNIPORT admission and clearance"
+},
+{
+  "slug": "buk-admission-school-fees-clearance-2026",
+  "name": "Bayero University Kano",
+  "abbreviation": "BUK",
+  "city": "Kano",
+  "state": "Kano State",
+  "academicSession": "2026/27 admission (screening windows closed)",
+  "focus": "BUK admission and fees"
+}
 ] as const;

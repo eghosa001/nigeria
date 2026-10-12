@@ -1,5 +1,6 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
 import universityRecords from "@/data/services-universities.json" with { type: "json" };
+import universityWave2 from "@/data/services-universities-wave2.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -444,6 +445,36 @@ export const agencies: Agency[] = [
 agencies.push(...serviceScaleAgencies);
 agencies.push(...[
   {
+    "slug": "oau",
+    "name": "Obafemi Awolowo University",
+    "shortName": "OAU",
+    "description": "Federal university in Ile-Ife, Osun State; undergraduate admissions, student fees and clearance guidance.",
+    "website": "https://oauife.edu.ng"
+  },
+  {
+    "slug": "futa",
+    "name": "Federal University of Technology, Akure",
+    "shortName": "FUTA",
+    "description": "Federal university in Akure, Ondo State; undergraduate admission and student registration.",
+    "website": "https://www.futa.edu.ng"
+  },
+  {
+    "slug": "uniport",
+    "name": "University of Port Harcourt",
+    "shortName": "UNIPORT",
+    "description": "Federal university in Rivers State; admission screening, registration and school fees.",
+    "website": "https://www.uniport.edu.ng"
+  },
+  {
+    "slug": "buk",
+    "name": "Bayero University Kano",
+    "shortName": "BUK",
+    "description": "Federal university in Kano State; admissions, BUKAT, BUKDES, registration and clearance.",
+    "website": "https://www.buk.edu.ng"
+  }
+]);
+agencies.push(...[
+  {
     "slug": "uniben",
     "name": "University of Benin",
     "shortName": "UNIBEN",
@@ -480,7 +511,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
