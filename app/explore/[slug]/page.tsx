@@ -33,13 +33,25 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
   if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Visitor Access";
   if (guide.slug === "mambilla-plateau-guide") return "Mambilla Plateau Nigeria: Location, Gembu & Trip Tips";
-  if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Yobe Discovery, History & Visiting Guide";
+  if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Age, Yobe Discovery & Visitor Advice";
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
+  if (guide.slug === "ojukwu-bunker-guide") return "Ojukwu Bunker Umuahia: History & Visitor Access";
+  if (guide.slug === "sokoto-state-travel-guide") return "Sokoto State Nigeria: Caliphate, Culture & Places to Visit";
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": " + getExplorePlacesForGuide(guide.slug).length + " Places to Visit & Things to Do (" + year + ")", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
   if (guide.kind === "event") return truncateSeo(guide.shortTitle + " " + year + ": Festival Guide & Planning", 60);
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
 }
+
+// Search Console, 14 September–10 October 2026: these existing canonical
+// guides earned impressions on precise landmark queries but no recorded clicks.
+// Match search intent without suggesting unrestricted access or inventing fees.
+const exploreDescriptionOverrides: Record<string, string> = {
+  "dufuna-canoe-heritage-guide": "Dufuna Canoe, found in Yobe State, is more than 8,000 years old. Read its archaeological history and check exhibition access before planning a visit.",
+  "mambilla-plateau-guide": "Mambilla Plateau is in Sardauna LGA, Taraba State. Plan a Gembu-based highland trip with weather, road and tea-estate access checks before travelling.",
+  "ojukwu-bunker-guide": "Explore the history of Ojukwu Bunker in Umuahia, Abia State. Check the latest restoration and visitor-access status before visiting the Civil War landmark.",
+  "sokoto-state-travel-guide": "Discover Sokoto State's caliphate history, Sultanate traditions and Durbar culture. Find heritage stops and check palace and museum access before a trip.",
+};
 
 const evergreenTripAnswers: Record<string, Array<{ question: string; answer: string }>> = {
   "mambilla-plateau-guide": [
@@ -116,11 +128,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cityPlaces = guide.kind === "city" ? getExplorePlacesForGuide(guide.slug) : [];
   // Dam infrastructure is a history/location query, not a walk-in attraction.
   // Keep its search snippet useful without implying that entry is open.
-  const description = guide.slug === "kainji-dam-guide"
+  const description = exploreDescriptionOverrides[guide.slug] ?? (guide.slug === "kainji-dam-guide"
     ? "Kainji Dam is near New Bussa, Niger State. See its River Niger location, 1968 hydropower history, 760 MW installed capacity and visitor-access advice."
     : guide.kind === "city"
       ? truncateSeo("Discover " + cityPlaces.length + " places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". Maps, local tips and access guidance.", 155)
-      : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
+      : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155));
 
   return {
     title: { absolute: title },
