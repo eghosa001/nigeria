@@ -71,6 +71,12 @@ const destinations = [
   // Already-published service guides with observed settled Search Console impressions.
   { label: "AEDC MAP meter refund checker", href: "/services/aedc-map-refund", pillar: "Services", aliases: "electricity prepaid map refund meter number status eligibility abuja token" },
   { label: "Spotify Premium Nigeria prices", href: "/services/spotify-premium-nigeria", pillar: "Services", aliases: "spotify individual student family duo monthly subscription price naira payment" },
+  // Additional Search Console phrases from the 2026-10-10 settled / preliminary
+  // 2026-10-11 report; direct to already published canonical pages.
+  { label: "IBEDC MAP meter refund", href: "/services/ibedc-map-refund", pillar: "Services", aliases: "ibedc map refund meter number checker prepaid token ibadan electricity" },
+  { label: "Track Western Union transfer", href: "/services/western-union-track-transfer-nigeria", pillar: "Services", aliases: "western union tracking nigeria mtcn money transfer status check" },
+  { label: "Millionaire Until Morning movie", href: "/entertainment/movies/millionaire-until-morning", pillar: "Movies", aliases: "millionaire until morning nigerian movie cast where to watch" },
+  { label: "Once Upon a Village series cast", href: "/entertainment/series/once-upon-a-village", pillar: "Movies", aliases: "once upon a village episode series cast nigeria" },
 ] as const;
 
 function normalise(value: string) {
