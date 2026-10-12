@@ -1,0 +1,7 @@
+# University admissions source review — FUTO and FUTMINNA, 12 October 2026
+
+**FUTO (Imo State)** — 2026/27 portal notice from 5 October directs admitted students to check admission, verify student accounts, and use separate Development Levy, School Fees and Hostel invoices. The 12 September O-level notice applies only to newly admitted Year One students. The September fraud alert warns against a ₦50,000 'ICT admission acceptance' scam. No unsupported 2026/27 universal tuition quote. Primary sources: https://portal.futo.edu.ng/, https://resources.futo.edu.ng/news/futo-2026-2027-merit-admission-list/ and https://resources.futo.edu.ng/news/registration-procedure-for-freshmen-new-students/.
+
+**FUTMINNA (Niger State)** — Official 2026/27 UPASE notice sets ₦2,000 Remita screening (not tuition), registration 15 June–9 August 2026 (already closed), first-choice requirement, five O-level credits, and per-course thresholds higher than the 150 general minimum. Live screening portal shows Medicine and Surgery 250, Doctor of Pharmacy 230, and some computing/engineering options 200. See https://futminna.edu.ng/2026-2027-pre-admission-screening-exercise-2026-utme-de/, https://eportal.futminna.edu.ng/ePortal_V2/utme/ and https://eportal.futminna.edu.ng/ePortal_V2/.
+
+Both add university-specific searchable content without invented admission guarantees or tuition amounts, duplicate pages, personal data collection, payment intermediaries or new D1 storage writes. Candidate status and the student's exact invoice remain on university/JAMB systems.
