@@ -1,0 +1,8 @@
+# University admission guides: UNICAL and FULOKOJA — 12 October 2026
+
+New records for University of Calabar (Cross River) and Federal University Lokoja (Kogi) use only official university primary sources, joined to the site's existing /universities directory, Services search/autosuggestions, source checks and university agency records.
+
+- UNICAL: official 2026/27 ordinary Post-UTME ₦2,000 and UTME minimum 150, with originally announced 31 July deadline. As checked October 12, the ordinary UTME and DE pages show closed, while the screening landing page separately advertises supplementary applications for named underserved programmes. Do not claim a general admissions reopening or quote generic 2026/27 tuition. Sources: https://www.unical.edu.ng/news-item.php?id=7 and https://postutme.unical.edu.ng/ , https://postutme.unical.edu.ng/home.php and https://postutme.unical.edu.ng/de_index.php .
+- FUL: official university 2026/27 ₦2,000 screening, minimum UTME 160 and closed September 13 registration. FUL's published Admissions Committee calendar lists fresh-student registration **starting 26 October 2026** and resumption **2 November**; these are future scheduled dates, not already-open portals. Sources: https://fulokoja.edu.ng/news-flash.php?alias=2026-2027-admission-screening-exercise_1780954427&i=55 and https://fulokoja.edu.ng/news-page.php?a=ful-cac-announces-approved-schedule-of-events-for-2026-2027-admissions-exercise&i=1258 .
+
+Both guides differentiate application, acceptance, school fees, hostel charges and post-offer clearance. No invented actual school-charge amount, live booking or student-data collection. No changes to production D1 or sitemap generation.

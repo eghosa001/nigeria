@@ -3,6 +3,7 @@ import universityRecords from "@/data/services-universities.json" with { type: "
 import universityWave2 from "@/data/services-universities-wave2.json" with { type: "json" };
 import privateUniversityGuide from "@/data/services-wellspring-2026.json" with { type: "json" };
 import universityWave4 from "@/data/services-universities-wave4.json" with { type: "json" };
+import universityWave5 from "@/data/services-universities-wave5.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -447,6 +448,22 @@ export const agencies: Agency[] = [
 agencies.push(...serviceScaleAgencies);
 agencies.push(...[
   {
+    "slug": "unical",
+    "name": "University of Calabar",
+    "shortName": "UNICAL",
+    "description": "Federal university in Cross River State with official undergraduate screening and student services.",
+    "website": "https://www.unical.edu.ng/"
+  },
+  {
+    "slug": "fulokoja",
+    "name": "Federal University Lokoja",
+    "shortName": "FULOKOJA",
+    "description": "Federal university in Kogi State with undergraduate admission, CAPS and student registration.",
+    "website": "https://fulokoja.edu.ng/"
+  }
+]);
+agencies.push(...[
+  {
     "slug": "abu-zaria",
     "name": "Ahmadu Bello University",
     "shortName": "ABU",
@@ -544,7 +561,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<

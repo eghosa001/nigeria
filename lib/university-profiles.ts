@@ -125,5 +125,23 @@ export const universityProfiles = [
     "state": "Ekiti State",
     "academicSession": "2026/27 institution-specific",
     "focus": "EKSU 2026 UTME/DE and JUPEB"
-  }
+  },
+{
+  "slug": "unical-admissions-school-fees-clearance-2026",
+  "name": "University of Calabar",
+  "abbreviation": "UNICAL",
+  "city": "Calabar",
+  "state": "Cross River State",
+  "academicSession": "2026/27 admission and limited supplementary screening",
+  "focus": "Official admission, school charges and clearance"
+},
+{
+  "slug": "fulokoja-admission-clearance-school-fees-2026",
+  "name": "Federal University Lokoja",
+  "abbreviation": "FULOKOJA",
+  "city": "Lokoja",
+  "state": "Kogi State",
+  "academicSession": "2026/27 freshers registration scheduled 26 October",
+  "focus": "CAPS, admission, fees and clearance"
+}
 ] as const;
