@@ -1,3 +1,4 @@
+import { professionalQualificationGuides20261012 } from "@/lib/career-professional-qualifications-2026-10-12";
 export type CareerGuideSource = {
   label: string;
   url: string;
@@ -26,6 +27,7 @@ export type CareerGuide = {
 };
 
 export const careerGuides: CareerGuide[] = [
+  ...professionalQualificationGuides20261012,
   {
     "slug": "nysc-ppa-posting-guide",
     "title": "NYSC PPA Posting in Nigeria: Acceptance, Rejection and Relocation Guide",
