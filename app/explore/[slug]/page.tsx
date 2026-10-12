@@ -69,6 +69,14 @@ const evergreenTripAnswers: Record<string, Array<{ question: string; answer: str
     { question: "When was Kainji Dam built and how much power does it generate?", answer: "The Kainji hydropower plant was commissioned in 1968. Official records give 760 MW installed capacity, which is not a current live electricity-generation figure." },
     { question: "Can tourists enter Kainji Dam?", answer: "Do not assume public entry. Kainji Dam is active power infrastructure with potentially controlled access; check current permission and visit arrangements with the operator before travelling. No general admission fee or public visiting timetable was verified for this guide." },
   ],
+  "ojukwu-bunker-guide": [
+    { question: "Where is Ojukwu Bunker located?", answer: "Ojukwu Bunker is a Nigerian Civil War heritage site in Umuahia, Abia State. It is distinct from the National War Museum; both help visitors understand the period from different perspectives." },
+    { question: "Is Ojukwu Bunker open for visitors during restoration?", answer: "A Federal Ministry of Information report dated 15 September 2026 described rehabilitation work at Ojukwu Bunker and the National War Museum. That report does not establish today's public opening hours or admission rules. Confirm current access with the responsible heritage authority before travelling." },
+  ],
+  "sokoto-state-travel-guide": [
+    { question: "What is Sokoto State known for?", answer: "Sokoto State is associated with the historic Sokoto Caliphate, the Sultanate and Islamic scholarship. Sokoto city is a practical starting point for understanding its cultural institutions and old-city heritage." },
+    { question: "Can visitors enter the Sultan's Palace or attend a Durbar in Sokoto?", answer: "Neither palace access nor Durbar performances should be assumed to be daily public attractions. Seek current permission and schedules from local organisers, respect prayer times and local dress expectations, and ask before taking photographs." },
+  ],
   "benin-city": [
     { question: "What places should I visit in Benin City, Edo State?", answer: "For a first heritage visit, start with the Benin City National Museum for context, then consider the Igun Street bronze-casting area and publicly accessible parts of the palace surroundings. The royal and workshop spaces have their own access and photography expectations; ask before entering." },
     { question: "Is Okomu National Park inside Benin City?", answer: "No. Okomu is an Edo State nature destination outside central Benin City. Arrange it as a separate trip with park guidance, road time and safety checks rather than treating it as another city-centre stop." },
