@@ -23,6 +23,15 @@ const specificFollowUps: Record<string, SearchAnswer[]> = {
     { question: "How do I check my AEDC MAP refund status?", answer: "Visit the official AEDC refund checker at maprefund.abujaelectricity.com and submit your prepaid meter number. AEDC's checker can show a refund record or token if eligible; a lookup is not a guarantee of eligibility." },
     { question: "Does AEDC pay MAP refunds into a bank account?", answer: "AEDC describes approved MAP refunds as electricity units issued using a 20-digit load token, not ordinary cash transfers. Load a token on the corresponding prepaid meter. If it is missing, email map.refund@abujaelectricity.com with proof of your MAP purchase." },
   ],
+  "ibedc-map-refund": [
+    { question: "Where is the official IBEDC MAP refund checker?", answer: "IBEDC provides its MAP refund checker at ibedc.com/map_refund. Enter the meter or account number in the official form to check eligibility and retrieve any available electricity-credit refund tokens. A meter lookup does not guarantee a refund." },
+    { question: "How should I load multiple IBEDC MAP refund tokens?", answer: "IBEDC says to load refund tokens in ascending order, from the earliest issue date to the latest. Keep the meter number and token records, and contact IBEDC customer care if a token is missing or fails." },
+    { question: "Will IBEDC send my MAP refund to my bank account?", answer: "IBEDC's public MAP refund route describes eligible refunds in monthly instalments through electricity-credit tokens. Do not assume a cash bank transfer is available; check the official meter-specific result and ask IBEDC about unresolved cases." },
+  ],
+  "western-union-track-transfer-nigeria": [
+    { question: "What is the MTCN for tracking a Western Union transfer?", answer: "The Money Transfer Control Number (MTCN) is the 10-digit tracking number on the sender's Western Union receipt or confirmation. Use it on Western Union's official tracking page with the requested sender details. Do not publish the number or give it to a stranger." },
+    { question: "Does a Western Union tracking result mean the money is ready for collection?", answer: "Not necessarily. Western Union distinguishes transfers still on the way from those available for pickup. Check the actual status before visiting an agent; cash pickup in Nigeria may require the sender's details, the MTCN and a government-issued ID." },
+  ],
   "spotify-premium-nigeria": [
     { question: "How much does Spotify Premium cost per month in Nigeria?", answer: "Spotify Nigeria listed Individual at ₦1,600/month, eligible Student at ₦800/month, Duo at ₦2,100/month and Family at ₦2,500/month when checked on 11 October 2026. Trial eligibility and promotional prices vary; verify the live checkout before paying." },
     { question: "Can I cancel a Spotify Premium subscription before renewal?", answer: "Spotify provides online cancellation in account settings. Normally a paid plan continues until the next billing date, while some zero-priced trials end Premium access immediately after cancellation. Read the terms on your account." },
