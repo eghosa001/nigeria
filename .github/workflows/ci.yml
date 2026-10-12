@@ -54,6 +54,16 @@ jobs:
             exit 0
           fi
 
+          # Snapshot-only Tour continuity analysis and existing NIN guide copy.
+          # Keep it isolated from expensive product builds and unrelated audits.
+          tour_audit_changed="$(printf '%s\n' "$changed" | grep -E '^(scripts/(tour-migration-audit|check-tour-migration-readiness)\.ts$|tests/tour-migration-audit\.test\.ts$)' || true)"
+          tour_audit_other="$(printf '%s\n' "$changed" | grep -Ev '^((scripts/(tour-migration-audit|check-tour-migration-readiness)\.ts$)|(tests/tour-migration-audit\.test\.ts$)|(cloudflare/d1/tour-place-continuity-schema\.sql$)|(docs/research/tour-migration-readiness-2026-10-12\.md$)|(data/(services\.json|service-seo-overrides\.ts)$)|(lib/search-answers\.ts$)|(\.github/workflows/ci\.yml$))' || true)"
+          if [ -n "$tour_audit_changed" ] && [ -z "$tour_audit_other" ]; then
+            echo "mode=tour-migration-audit" >> "$GITHUB_OUTPUT"
+            echo "Read-only Tour continuity audit and one existing NIN guide."
+            exit 0
+          fi
+
           # Tour D1 adapter and its unchanged existing travel canonicals use a
           # focused FTS/publication regression; browser/runtime checks run separately.
           tour_d1_changed="$(printf '%s\n' "$changed" | grep -E '^(lib/tour-place-(d1-repository|search-store)\.ts$|tests/tour-place-d1-repository\.test\.ts$)' || true)"
@@ -205,6 +215,13 @@ jobs:
           python3 scripts/fast_path_guard.py
           npx tsx --test tests/youtube-directory-query.test.ts
           npx tsx scripts/bench-youtube-directory.ts
+      - name: Verify read-only Tour continuity and NIN service change
+        if: steps.scope.outputs.mode == 'tour-migration-audit'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npx tsx --test tests/tour-migration-audit.test.ts
+          npx tsx scripts/check-tour-migration-readiness.ts
+          npm run check:service-catalog
       - name: Verify Tour D1 indexed publication boundary
         if: steps.scope.outputs.mode == 'tour-indexed'
         run: |
