@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import type { ExploreGuide } from "../lib/explore";
 import type { ExplorePlace } from "../lib/explore-places";
-import { buildTourMigrationAudit, exactTourState } from "../scripts/tour-migration-audit";
+import { buildTourMigrationAudit, exactTourState, exactStateFromTourAddress } from "../scripts/tour-migration-audit";
 
 const guide = (slug: string, region: string): ExploreGuide => ({
   slug, title: slug, shortTitle: slug, kind: "destination", region,
@@ -39,7 +39,7 @@ test("migration snapshot preserves every shared guide link, metadata and draft-o
 
 test("ambiguous state, duplicate slug and broken evidence block cutover instead of guessing", () => {
   const guides = [guide("national-journey", "South-South Nigeria"), guide("state-guide", "Benin City")];
-  const p = place("national-museum-benin", "national-journey");
+  const p = { ...place("national-museum-benin", "national-journey"), address: "Unspecified regional location, Nigeria" };
   const dup = place("national-museum-benin", "state-guide");
   const invalid = { ...p, slug: "unsafe-entry", source: { label: "", href: "http://example.com" } };
   const result = buildTourMigrationAudit([p, dup, invalid], guides,
@@ -60,4 +60,35 @@ test("state names only resolve with unambiguous administrative evidence", () => 
   assert.equal(exactTourState("Lagos"), "Lagos");
   assert.equal(exactTourState("Southwest Nigeria"), null);
   assert.equal(exactTourState("Abuja and Nasarawa"), null);
+});
+
+test("administrative address resolves mixed-region guide without guessing a state", () => {
+  const guides = [guide("weekend-trips", "South West Nigeria")];
+  const lagos = { ...place("badagry-heritage-district", "weekend-trips"), address: "Badagry, Lagos State" };
+  const ogun = { ...place("olumo-rock", "weekend-trips"), address: "Ikija, Abeokuta, Ogun State" };
+  const multi = { ...place("two-state-park", "weekend-trips"), address: "Park, Niger and Kwara States, Nigeria" };
+  const report = buildTourMigrationAudit([lagos, ogun, multi], guides, () => [lagos, ogun, multi]);
+  assert.deepEqual(report.candidates.map(item => item.stateOrFct), ["Lagos", "Ogun", null]);
+  assert.equal(report.problemsByReason.unmapped_state, 1);
+  assert.equal(report.resolvedFromAddressCount, 2);
+  assert.equal(report.productionCutoverApproved, false);
+});
+
+test("an explicit conflicting state stays a blocker", () => {
+  const guides = [guide("ibadan", "Oyo State")];
+  const entry = { ...place("conflicting-venue", "ibadan"), address: "Victoria Island, Lagos State" };
+  const report = buildTourMigrationAudit([entry], guides, () => [entry]);
+  assert.equal(report.problemsByReason.conflicting_state, 1);
+  assert.equal(report.resolvedFromAddressCount, 0);
+  assert.equal(report.candidates[0].editorialStatus, "draft");
+  assert.equal(report.productionCutoverApproved, false);
+});
+
+test("administrative address evidence is exact; broad/multiple regions are not normalized", () => {
+  assert.equal(exactStateFromTourAddress("Zuma Rock, Niger State, Nigeria"), "Niger");
+  assert.equal(exactStateFromTourAddress("Serti, Taraba State, Nigeria"), "Taraba");
+  assert.equal(exactStateFromTourAddress("Gashaka, Taraba and Adamawa States"), null);
+  assert.equal(exactStateFromTourAddress("Nigeria"), null);
+  assert.equal(exactStateFromTourAddress("Niger and Kwara States, Nigeria"), null);
+  assert.equal(exactStateFromTourAddress("Badagry, Lagos State; Abeokuta, Ogun State"), null);
 });

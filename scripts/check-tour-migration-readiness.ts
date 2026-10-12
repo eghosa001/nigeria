@@ -14,8 +14,9 @@ console.log(JSON.stringify({
   uniqueCount: result.uniqueCount,
   guideCount: result.guideCount,
   membershipCount: result.membershipCount,
+  resolvedFromAddressCount: result.resolvedFromAddressCount,
   problemsByReason: result.problemsByReason,
-  problemExamples: result.problems.slice(0, 8),
+  problemExamples: result.problems.slice(0, 30),
   productionCutoverApproved: result.productionCutoverApproved,
 }, null, 2));
 if (result.candidates.some((candidate) => candidate.editorialStatus !== "draft")) {

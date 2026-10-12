@@ -9,7 +9,7 @@ import type { ExplorePlace } from "../lib/explore-places";
 export type TourMigrationProblem = {
   slug: string;
   reason: "duplicate_slug_conflict" | "missing_identity" | "missing_source" |
-    "missing_checked_date" | "unmapped_state" | "orphan_guide" | "unresolved_shared_place";
+    "missing_checked_date" | "unmapped_state" | "conflicting_state" | "orphan_guide" | "unresolved_shared_place";
   detail?: string;
 };
 
@@ -63,6 +63,24 @@ export function exactTourState(region: string): string | null {
   return namedStates.has(plain) ? plain : null;
 }
 
+/**
+ * Use explicit administrative evidence from a place's postal/visitor address.
+ * Broad guide regions like "South West Nigeria" are not single states. Equally,
+ * "Taraba and Adamawa States" is multi-state and MUST remain unresolved.
+ * Never infer from city nickname, brand name, or free-form search tags.
+ */
+export function exactStateFromTourAddress(address: string): string | null {
+  const matches: string[] = [];
+  for (const state of namedStates) {
+    // Only an exact State suffix, not "Niger" inside Nigeria nor a
+    // speculative district/road/area name.
+    const pattern = new RegExp("\\b" + state + " State\\b", "i");
+    if (pattern.test(address)) matches.push(state);
+  }
+  if (/\\bFederal Capital Territory\\b/i.test(address)) matches.push("Federal Capital Territory");
+  return matches.length === 1 ? matches[0] : null;
+}
+
 export function buildTourMigrationAudit(
   places: readonly ExplorePlace[],
   guides: readonly ExploreGuide[],
@@ -72,6 +90,7 @@ export function buildTourMigrationAudit(
   const memberships: TourMigrationMembership[] = [];
   const problems: TourMigrationProblem[] = [];
   const unique = new Map<string, ExplorePlace>();
+  let resolvedFromAddressCount = 0;
   const allGuides = new Map(guides.map((guide) => [guide.slug, guide]));
 
   for (const place of places) {
@@ -90,7 +109,16 @@ export function buildTourMigrationAudit(
       problems.push({ slug: place.slug, reason: "missing_identity" });
     }
     if (!guide) problems.push({ slug: place.slug, reason: "orphan_guide", detail: place.guideSlug });
-    const state = guide ? exactTourState(guide.region) : null;
+    const guideState = guide ? exactTourState(guide.region) : null;
+    const addressState = exactStateFromTourAddress(place.address);
+    // In case of contradictory facts, stop instead of silently publishing the
+    // guide's or the address's asserted location into the D1 index.
+    if (guideState && addressState && guideState !== addressState) {
+      problems.push({ slug: place.slug, reason: "conflicting_state",
+        detail: guideState + " vs address " + addressState });
+    }
+    const state = guideState ?? addressState;
+    if (!guideState && addressState) resolvedFromAddressCount++;
     if (!state) problems.push({ slug: place.slug, reason: "unmapped_state", detail: guide?.region });
     if (!validDate.test(place.checkedAt)) {
       problems.push({ slug: place.slug, reason: "missing_checked_date" });
@@ -124,14 +152,12 @@ export function buildTourMigrationAudit(
   // Reproduce what every existing public /explore guide shows, in order.
   // This is required to preserve cross-guide memberships on a future cutover.
   for (const guide of guides) {
-    const seen = new Set<string>();
     guidePlaces(guide.slug).forEach((place, position) => {
       if (!unique.has(place.slug)) {
         problems.push({ slug: place.slug, reason: "unresolved_shared_place", detail: guide.slug });
       }
       // Do not erase a repeated appearance: it is current-public parity data.
       memberships.push({ placeSlug: place.slug, guideSlug: guide.slug, position });
-      seen.add(place.slug);
     });
   }
 
@@ -144,6 +170,7 @@ export function buildTourMigrationAudit(
     uniqueCount: unique.size,
     guideCount: guides.length,
     membershipCount: memberships.length,
+    resolvedFromAddressCount,
     candidates, memberships, problems,
     problemsByReason: reasons,
     // No import, no publication review, and no parity cutover have happened.

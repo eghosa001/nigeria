@@ -3428,7 +3428,7 @@
     "slug": "anambra-asin-registration",
     "title": "ASIN Registration Online: How to Get an Anambra State Identity Number",
     "shortTitle": "Anambra ASIN registration",
-    "summary": "Use the official Anambra State Internal Revenue Service online enumeration routes for individuals, informal enterprises and corporate entities to register for an Anambra State Identity Number (ASIN).",
+    "summary": "Register an Anambra State Identity Number (ASIN) through the official AIRS portal. Choose Individual, Informal/Enterprise or Corporate enumeration; an existing ASIN has a separate lookup, and receipts or certificates have their own verification service.",
     "category": "State services",
     "agencySlug": "airs",
     "feeLabel": "Use the official AIRS enumeration process",
@@ -3440,25 +3440,53 @@
       "Access to the generated ASIN after successful enumeration for later Anambra State services"
     ],
     "steps": [
-      "Open the official Anambra State IRS ASIN registration page and choose the applicant category that matches the record: Individual, Informal or Enterprise, or Corporate.",
-      "Start the enumeration form for that category and enter the identity, contact, address or organisation information requested by AIRS for the person or entity being enumerated.",
-      "Review the completed enumeration details before submission because the ASIN is intended to be a unique one-time identifier used across Anambra State government services.",
-      "Submit the enumeration through the official AIRS page and note or save the ASIN returned when the registration is successfully completed.",
-      "Keep the generated ASIN for later Anambra revenue or government transactions and use AIRS support if a duplicate or incorrect record appears instead of creating another identity."
+      "Open the official Anambra State Internal Revenue Service ASIN enumeration form at tax.services.an.gov.ng/create-asin/index.html and select Individual, Informal/Enterprise, or Corporate.",
+      "Complete the AIRS enumeration form with the personal, contact, address or organisation information required for your applicant category. Review before submitting.",
+      "Submit the enumeration and securely record the ASIN when it has been generated. ASIN is a unique, one-time identifier—do not register again merely because you misplaced the old number.",
+      "If you already have an ASIN and need to find it, use the official ASIN lookup at tax.services.an.gov.ng/asin/search. The state portal says this lookup supports phone number, NIN, email or ASIN.",
+      "If you need to verify a payment receipt or certificate instead, use the separate AIRS verification page. For a missing, duplicate or incorrect record, contact AIRS through its official portal."
     ],
     "notes": [
-      "AIRS describes ASIN as a unique one-time identifier issued to individuals and corporate entities/residents by the Anambra State Government.",
-      "AIRS currently describes ASIN as a unique one-time identifier used to access Anambra State Government services and provides separate Individual, Informal/Enterprise and Corporate enumeration routes."
+      "AIRS describes ASIN as a one-time unique identifier issued for Anambra State services.",
+      "The AIRS registration form offers separate Individual, Informal/Enterprise and Corporate enumeration routes.",
+      "Anambra State's official services directory links to a dedicated ASIN lookup page, separate from registration. Do not share identity details outside official government domains.",
+      "The AIRS verification page verifies receipts and certificates; it should not be confused with retrieving an existing ASIN.",
+      "An existing taxpayer can log in using Email / ASIN. The tax login and payment screens are distinct from ASIN enumeration.",
+      "No reliable universal ASIN registration fee is established by the cited pages; verify actual requirements only through AIRS."
     ],
     "sources": [
       {
-        "label": "AIRS ASIN registration",
+        "label": "AIRS — ASIN registration and applicant types",
         "agency": "Anambra State Internal Revenue Service",
-        "url": "https://tax.services.an.gov.ng/create-asin",
-        "lastChecked": "2026-10-05"
+        "url": "https://tax.services.an.gov.ng/create-asin/index.html",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "Anambra State Government — ASIN lookup and payments directory",
+        "agency": "Anambra State Government",
+        "url": "https://smart.anambrastate.gov.ng/pay",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "AIRS — Find an existing ASIN",
+        "agency": "Anambra State Internal Revenue Service",
+        "url": "https://tax.services.an.gov.ng/asin/search",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "AIRS — Verify receipt or certificate",
+        "agency": "Anambra State Internal Revenue Service",
+        "url": "https://tax.services.an.gov.ng/verification-landing",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "AIRS — Existing taxpayer login",
+        "agency": "Anambra State Internal Revenue Service",
+        "url": "https://tax.services.an.gov.ng/auth/login",
+        "lastChecked": "2026-10-12"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-12",
     "searchTerms": [
       "Anambra ASIN registration",
       "How to get an Anambra State Identity Number (ASIN)",
@@ -3472,7 +3500,13 @@
       "create ASIN online",
       "register ASIN online",
       "Anambra ASIN registration online",
-      "how to get ASIN number"
+      "how to get ASIN number",
+      "ASIN verification portal",
+      "verify Anambra ASIN",
+      "how to create ASIN Anambra",
+      "Anambra ASIN login",
+      "individual ASIN",
+      "corporate ASIN"
     ],
     "related": [
       "lagos-payer-id",

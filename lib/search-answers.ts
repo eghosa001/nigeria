@@ -93,6 +93,19 @@ const specificFollowUps: Record<string, SearchAnswer[]> = {
   ],
   "anambra-asin-registration": [
     {
+      question: "How do I find or check an existing Anambra ASIN?",
+      answer: "The Anambra State Government links to AIRS’s existing-ASIN search at tax.services.an.gov.ng/asin/search. It supports lookup by phone number, NIN, email or ASIN. This is different from the receipt/certificate verification page and from creating a new ASIN.",
+    },
+    {
+      question: "Do I need to register a new ASIN if I already have one?",
+      answer: "No. AIRS describes ASIN as a one-time unique identifier. Look up your existing ASIN through the official AIRS ASIN search or contact the agency if the record cannot be found; do not open a duplicate enumeration.",
+    },
+    {
+      question: "Can I sign in to Anambra tax services with my ASIN?",
+      answer: "The official Anambra AIRS taxpayer login offers an Email / ASIN field. This is separate from the Individual, Informal/Enterprise and Corporate registration choices on the enumeration page.",
+    },
+
+    {
       question: "Which ASIN registration option should I choose in Anambra State?",
       answer: "AIRS provides Individual, Informal/Enterprise and Corporate enumeration options. Select the one matching the person or organisation registering, follow the online form and save the ASIN generated after successful submission.",
     },
