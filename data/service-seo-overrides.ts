@@ -79,6 +79,7 @@ export function getServiceSeoTitleOverride(slug: string, year: string) {
 
 
 export const serviceSeoDescriptionTemplates: Record<string, string> = {
+  "check-nin-number": "Forgot your NIN? Dial *346# to use NIMC’s phone retrieval service, or visit a NIMC office. Check network charges and keep your NIN private.",
   "neco-2026-ssce-external-registration": "NECO 2026 SSCE External registration: normal deadline 26 October, late registration until 3 November, official portal, steps and exam timetable.",
   "nin-enrolment": "NIN registration in Nigeria {year}: free NIMC enrolment, eligibility, biometric capture, official route and how to collect the NIN slip.",
   "nrs-individual-tax-registration": "Register with NRS as an individual using NIN through the official self-service portal. Save your registration ID and resume an incomplete form.",

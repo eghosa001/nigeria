@@ -11719,7 +11719,7 @@
     "slug": "check-nin-number",
     "title": "How to check or retrieve your NIN with *346#",
     "shortTitle": "Check or retrieve NIN",
-    "summary": "NIMC says people who cannot remember their National Identification Number can use its *346# phone service or visit a NIMC office for assistance.",
+    "summary": "Forgot your NIN? Dial *346# on a Nigerian mobile line and follow NIMC's prompts, or visit a NIMC office if the phone service cannot retrieve the number. Check any USSD charge shown before confirming.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "Network/USSD charge may apply",
@@ -11731,28 +11731,29 @@
       "If the phone route cannot recover the record, access to a NIMC office for assistance"
     ],
     "steps": [
-      "Open your phone dialler, dial *346#, and follow the NIMC phone-service prompts for NIN retrieval or the relevant identity option shown on your line.",
-      "Read each prompt before confirming because NIMC also uses the *346# service for other identity functions.",
-      "Keep the NIN private once it is returned; do not post the number publicly or give it to an unverified agent.",
-      "If you cannot remember the NIN and the phone service does not resolve it, use NIMC's official office/contact route for assistance rather than paying an unofficial recovery service."
+      "Dial *346# on an active Nigerian mobile line and choose the option provided for retrieving a forgotten NIN.",
+      "Follow the displayed prompts to check whether NIMC can retrieve your existing NIN record; review any USSD or network charge before accepting.",
+      "Keep the retrieved NIN private. Do not type the number into a look-alike third-party checker or send it to unofficial agents.",
+      "If the phone service cannot recover the NIN, contact or visit an official NIMC office; the agency lists this as the alternative for someone who cannot remember the number."
     ],
     "notes": [
-      "NIMC's current profile-verification guidance explicitly says people who cannot remember their NIN can visit a NIMC office or use the *346# SMS/phone service.",
-      "The *346*2*Your NIN# shortcut described on NIMC's Mobile ID page is for obtaining a Mobile ID UserID and OTP when you already know the NIN; it is not the same as retrieving a forgotten NIN.",
-      "MyNigeriaGuide does not ask you to enter your NIN."
+      "NIMC explicitly says people who cannot remember a NIN may use the *346# SMS/phone service or seek help at a NIMC office.",
+      "*346*2*Your NIN# is a different Mobile ID shortcut that starts with a number you already know. Do not confuse it with forgotten-NIN recovery.",
+      "NIMC's cited retrieval guidance does not publish a fixed charge; use the network prompt before confirming, not an unverified old fee.",
+      "MyNigeriaGuide never asks users to provide their NIN."
     ],
     "sources": [
       {
         "label": "NIMC — Verifying a Profile",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/verify-profile",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-12"
       },
       {
         "label": "NIMC — Mobile Digital ID / SMS Services",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/mobile-digital-id",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-12"
       }
     ],
     "searchTerms": [
@@ -11764,14 +11765,18 @@
       "NIN code",
       "code to check NIN",
       "*346#",
-      "NIMC NIN retrieval"
+      "NIMC NIN retrieval",
+      "*346 code check NIN Nigeria",
+      "how do i retrieve lost NIN",
+      "NIN retrieve with phone code",
+      "forgot NIN what code"
     ],
     "related": [
       "nin-enrolment",
       "nin-slip-reissue",
       "ninauth-nin-verification"
     ],
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "unclaimed-dividends-nigeria",
