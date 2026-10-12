@@ -1,4 +1,5 @@
 import { railTravelPlaces20261012 } from "@/lib/explore-rail-stations-2026-10-12";
+import { kwaraOsunRegionalPlaces20261012 } from "@/lib/explore-kwara-osun-regional-2026-10-12";
 import { ifeIlorinOsogboDepth20261012 } from "@/lib/explore-ife-ilorin-osogbo-2026-10-12";
 import { beninKanoHeritagePlaces20261012 } from "@/lib/explore-benin-kano-heritage-2026-10-12";
 import { ncmmRegionalMuseums20261012 } from "@/lib/explore-regional-museums-2026-10-12";
@@ -45,6 +46,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...kwaraOsunRegionalPlaces20261012,
   ...railTravelPlaces20261012,
   ...ifeIlorinOsogboDepth20261012,
   ...beninKanoHeritagePlaces20261012,
