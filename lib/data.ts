@@ -2,6 +2,7 @@ import serviceRecords from "@/data/services.json" with { type: "json" };
 import universityRecords from "@/data/services-universities.json" with { type: "json" };
 import universityWave2 from "@/data/services-universities-wave2.json" with { type: "json" };
 import privateUniversityGuide from "@/data/services-wellspring-2026.json" with { type: "json" };
+import universityWave4 from "@/data/services-universities-wave4.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -444,6 +445,36 @@ export const agencies: Agency[] = [
 ];
 
 agencies.push(...serviceScaleAgencies);
+agencies.push(...[
+  {
+    "slug": "abu-zaria",
+    "name": "Ahmadu Bello University",
+    "shortName": "ABU",
+    "website": "https://abu.edu.ng/",
+    "description": "Federal university in Zaria, Kaduna State; admission screening, student portal, and revised student charges."
+  },
+  {
+    "slug": "unilorin",
+    "name": "University of Ilorin",
+    "shortName": "UNILORIN",
+    "website": "https://www.unilorin.edu.ng/",
+    "description": "Federal university in Ilorin, Kwara State; undergraduate Post-UTME/Direct Entry and student registration."
+  },
+  {
+    "slug": "fuoye",
+    "name": "Federal University Oye-Ekiti",
+    "shortName": "FUOYE",
+    "website": "https://fuoye.edu.ng/",
+    "description": "Federal university in Ekiti State; central admissions and payment portal, clearance and student registration."
+  },
+  {
+    "slug": "eksu",
+    "name": "Ekiti State University",
+    "shortName": "EKSU",
+    "website": "https://eksu.edu.ng/",
+    "description": "Public university in Ado-Ekiti, Ekiti State; UTME/Direct Entry, JUPEB and university student services."
+  }
+]);
 agencies.push({ slug: "wellspring-university", name: "Wellspring University", shortName: "Wellspring", description: "Private university in Benin City, Edo State, with official 2026/27 programme-specific tuition and admission details.", website: "https://wellspringuniversity.edu.ng/" });
 agencies.push(...[
   {
@@ -513,7 +544,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
