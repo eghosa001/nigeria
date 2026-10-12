@@ -117,72 +117,55 @@ export async function searchGlobalCatalog(query: string) {
   const relevance = createRelevance(query);
   const movieRelevance = createRelevance(movieSearchCore(query));
 
-  const serviceResults = publicServiceListings
-    .map((item) => ({
-      item,
-      score: relevance(item.title,
-        [item.shortTitle, item.summary, item.category, item.agencySlug, item.searchTerms.join(" "), item.searchText].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-    .slice(0, 16)
-    .map((entry) => entry.item);
+  const serviceResults = selectTopMatches(
+    publicServiceListings,
+    (item) => relevance(item.title,
+      [item.shortTitle, item.summary, item.category, item.agencySlug, item.searchTerms.join(" "), item.searchText].join(" ")),
+    (a, b) => a.title.localeCompare(b.title),
+    16,
+  );
 
-  const careerGuideResults = careerGuides
-    .map((guide) => ({
-      item: guide,
-      score: relevance(guide.title,
-        [
-          guide.description,
-          guide.summary,
-          guide.answer,
-          ...guide.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...(section.bullets ?? [])]),
-        ].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-    .slice(0, 6)
-    .map((entry) => entry.item);
+  const careerGuideResults = selectTopMatches(
+    careerGuides,
+    (guide) => relevance(guide.title,
+      [
+        guide.description,
+        guide.summary,
+        guide.answer,
+        ...guide.sections.flatMap((section) => [section.heading, ...section.paragraphs, ...(section.bullets ?? [])]),
+      ].join(" ")),
+    (a, b) => a.title.localeCompare(b.title),
+    6,
+  );
 
-  const jobResults = jobOpportunities
-    .map((item) => {
-      const matchScore = relevance(item.title,
-        [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "),
-      );
-      // Availability boosts only matched results. Previously every open role
-      // scored +24 even for completely unrelated searches.
-      return {
-        item,
-        score: matchScore > 0
-          ? matchScore + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4)
-          : 0,
-      };
-    })
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  const jobResults = selectTopMatches(
+    jobOpportunities,
+    (item) => {
+      const score = relevance(item.title,
+        [item.organization, item.summary, item.sector, item.location, item.employmentType, item.audiences.join(" "), item.fields.join(" "), item.qualifications.join(" ")].join(" "));
+      // Never boost an irrelevant job to a match, even when it is open.
+      return score > 0
+        ? score + (getEffectiveJobStatus(item) === "open" ? 24 : item.status === "career-page" ? 0 : -4)
+        : 0;
+    },
+    (a, b) => a.title.localeCompare(b.title),
+    8,
+  );
 
-  const exploreResults = exploreGuides
-    .map((item) => ({
-      item,
-      score: relevance(item.title,
-        [
-          item.shortTitle,
-          item.region,
-          item.kind,
-          item.summary,
-          item.bestFor.join(" "),
-          item.highlights.map((highlight) => highlight.name + " " + highlight.detail).join(" "),
-        ].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title))
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  const exploreResults = selectTopMatches(
+    exploreGuides,
+    (item) => relevance(item.title,
+      [
+        item.shortTitle,
+        item.region,
+        item.kind,
+        item.summary,
+        item.bestFor.join(" "),
+        item.highlights.map((highlight) => highlight.name + " " + highlight.detail).join(" "),
+      ].join(" ")),
+    (a, b) => a.title.localeCompare(b.title),
+    8,
+  );
 
   const tourSearch = await tourPlaceSearchStore.search(query);
   // Legacy previews preserve relevance/tie parity until an individually
@@ -196,39 +179,28 @@ export async function searchGlobalCatalog(query: string) {
       12,
     );
 
-  const movieResults = entertainmentTitles
-    .map((item) => ({
-      item,
-      score: movieRelevance(item.title,
-        [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.directors?.join(" ") ?? "", String(item.year)].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || b.item.year - a.item.year)
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  const movieResults = selectTopMatches(
+    entertainmentTitles,
+    (item) => movieRelevance(item.title,
+      [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.directors?.join(" ") ?? "", String(item.year)].join(" ")),
+    (a, b) => b.year - a.year,
+    8,
+  );
 
-  const seriesResults = seriesTitles
-    .map((item) => ({
-      item,
-      score: movieRelevance(item.title,
-        [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.creators?.join(" ") ?? "", String(item.year)].join(" "),
-      ),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || b.item.year - a.item.year)
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  const seriesResults = selectTopMatches(
+    seriesTitles,
+    (item) => movieRelevance(item.title,
+      [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.creators?.join(" ") ?? "", String(item.year)].join(" ")),
+    (a, b) => b.year - a.year,
+    8,
+  );
 
-  const peopleResults = entertainmentPeople
-    .map((item) => ({
-      item,
-      score: relevance(item.name, [item.roles.join(" "), item.summary].join(" ")),
-    }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.name.localeCompare(b.item.name))
-    .slice(0, 8)
-    .map((entry) => entry.item);
+  const peopleResults = selectTopMatches(
+    entertainmentPeople,
+    (item) => relevance(item.name, [item.roles.join(" "), item.summary].join(" ")),
+    (a, b) => a.name.localeCompare(b.name),
+    8,
+  );
 
   const youtubeResults = selectTopMatches(
     generatedYouTubeMovies,
