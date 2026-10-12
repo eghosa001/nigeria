@@ -169,29 +169,5 @@ export const beninKanoHeritagePlaces20261012: ExplorePlace[] = [
       "palace etiquette",
       "Kano culture"
     ]
-  },
-  {
-    "slug": "kofar-mata-dye-pits-kano",
-    "guideSlug": "kano",
-    "name": "Kofar Mata Indigo Dye Pits",
-    "kind": "attraction",
-    "area": "Kofar Mata / Old Kano",
-    "address": "Kofar Mata dyeing quarter, Kano City, Kano State, Nigeria",
-    "summary": "A traditional indigo-dyeing area identified in the Nigerian Tourism Development Authority's visitor coverage. It is a working craft environment, not a guaranteed daily demonstration. Enquire locally whether dyers are active and whether visits are welcome; agree on any craft purchases or demonstration charge beforehand.",
-    "cost": "No reliable admission or demonstration price confirmed; ask participants directly before paying.",
-    "hours": "Working schedules and access are variable. Confirm a visit with the craft community, avoid working pits and request photo permission.",
-    "mapQuery": "Kofar Mata Dye Pits Kano Nigeria",
-    "source": {
-      "label": "Tour Nigeria (NTDA) — Kofar Mata traditional dyeing",
-      "href": "https://tournigeria.gov.ng/home-to-africas-oldest-dye-pit/"
-    },
-    "checkedAt": "2026-10-12",
-    "tags": [
-      "Kofar Mata dye pits",
-      "Kano indigo",
-      "traditional dyeing",
-      "Hausa textiles",
-      "Kano craft heritage"
-    ]
   }
 ];
