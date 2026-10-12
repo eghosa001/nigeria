@@ -33,13 +33,25 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
   if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Visitor Access";
   if (guide.slug === "mambilla-plateau-guide") return "Mambilla Plateau Nigeria: Location, Gembu & Trip Tips";
-  if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Yobe Discovery, History & Visiting Guide";
+  if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Age, Yobe Discovery & Visitor Advice";
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
+  if (guide.slug === "ojukwu-bunker-guide") return "Ojukwu Bunker Umuahia: History & Visitor Access";
+  if (guide.slug === "sokoto-state-travel-guide") return "Sokoto State Nigeria: Caliphate, Culture & Places to Visit";
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": " + getExplorePlacesForGuide(guide.slug).length + " Places to Visit & Things to Do (" + year + ")", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
   if (guide.kind === "event") return truncateSeo(guide.shortTitle + " " + year + ": Festival Guide & Planning", 60);
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
 }
+
+// Search Console, 14 September–10 October 2026: these existing canonical
+// guides earned impressions on precise landmark queries but no recorded clicks.
+// Match search intent without suggesting unrestricted access or inventing fees.
+const exploreDescriptionOverrides: Record<string, string> = {
+  "dufuna-canoe-heritage-guide": "Dufuna Canoe, found in Yobe State, is more than 8,000 years old. Read its archaeological history and check exhibition access before planning a visit.",
+  "mambilla-plateau-guide": "Mambilla Plateau is in Sardauna LGA, Taraba State. Plan a Gembu-based highland trip with weather, road and tea-estate access checks before travelling.",
+  "ojukwu-bunker-guide": "Explore the history of Ojukwu Bunker in Umuahia, Abia State. Check the latest restoration and visitor-access status before visiting the Civil War landmark.",
+  "sokoto-state-travel-guide": "Discover Sokoto State's caliphate history, Sultanate traditions and Durbar culture. Find heritage stops and check palace and museum access before a trip.",
+};
 
 const evergreenTripAnswers: Record<string, Array<{ question: string; answer: string }>> = {
   "mambilla-plateau-guide": [
@@ -56,6 +68,14 @@ const evergreenTripAnswers: Record<string, Array<{ question: string; answer: str
     { question: "Where is Kainji Dam located in Nigeria?", answer: "Kainji Dam is on the River Niger near New Bussa, in Borgu Local Government Area of Niger State. It is different from Jebba Dam and from Kainji Lake National Park." },
     { question: "When was Kainji Dam built and how much power does it generate?", answer: "The Kainji hydropower plant was commissioned in 1968. Official records give 760 MW installed capacity, which is not a current live electricity-generation figure." },
     { question: "Can tourists enter Kainji Dam?", answer: "Do not assume public entry. Kainji Dam is active power infrastructure with potentially controlled access; check current permission and visit arrangements with the operator before travelling. No general admission fee or public visiting timetable was verified for this guide." },
+  ],
+  "ojukwu-bunker-guide": [
+    { question: "Where is Ojukwu Bunker located?", answer: "Ojukwu Bunker is a Nigerian Civil War heritage site in Umuahia, Abia State. It is distinct from the National War Museum; both help visitors understand the period from different perspectives." },
+    { question: "Is Ojukwu Bunker open for visitors during restoration?", answer: "A Federal Ministry of Information report dated 15 September 2026 described rehabilitation work at Ojukwu Bunker and the National War Museum. That report does not establish today's public opening hours or admission rules. Confirm current access with the responsible heritage authority before travelling." },
+  ],
+  "sokoto-state-travel-guide": [
+    { question: "What is Sokoto State known for?", answer: "Sokoto State is associated with the historic Sokoto Caliphate, the Sultanate and Islamic scholarship. Sokoto city is a practical starting point for understanding its cultural institutions and old-city heritage." },
+    { question: "Can visitors enter the Sultan's Palace or attend a Durbar in Sokoto?", answer: "Neither palace access nor Durbar performances should be assumed to be daily public attractions. Seek current permission and schedules from local organisers, respect prayer times and local dress expectations, and ask before taking photographs." },
   ],
   "benin-city": [
     { question: "What places should I visit in Benin City, Edo State?", answer: "For a first heritage visit, start with the Benin City National Museum for context, then consider the Igun Street bronze-casting area and publicly accessible parts of the palace surroundings. The royal and workshop spaces have their own access and photography expectations; ask before entering." },
@@ -116,11 +136,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const cityPlaces = guide.kind === "city" ? getExplorePlacesForGuide(guide.slug) : [];
   // Dam infrastructure is a history/location query, not a walk-in attraction.
   // Keep its search snippet useful without implying that entry is open.
-  const description = guide.slug === "kainji-dam-guide"
+  const description = exploreDescriptionOverrides[guide.slug] ?? (guide.slug === "kainji-dam-guide"
     ? "Kainji Dam is near New Bussa, Niger State. See its River Niger location, 1968 hydropower history, 760 MW installed capacity and visitor-access advice."
     : guide.kind === "city"
       ? truncateSeo("Discover " + cityPlaces.length + " places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". Maps, local tips and access guidance.", 155)
-      : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
+      : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155));
 
   return {
     title: { absolute: title },
