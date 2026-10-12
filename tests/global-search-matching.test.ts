@@ -31,6 +31,10 @@ test("Search Console film intents keep the actual title", () => {
   assert.equal(movieSearchCore("Cast Away"), "Cast Away");
   assert.equal(movieSearchCore("cast"), "cast");
   assert.equal(movieSearchCore("where to watch"), "where to watch");
+  assert.equal(movieSearchCore("cast of Oversabi Aunty"), "Oversabi Aunty");
+  assert.equal(movieSearchCore("cast of sibe the movie"), "sibe");
+  assert.equal(movieSearchCore("Sibe Nigerian movie cast"), "Sibe");
+  assert.equal(movieSearchCore("Cast of"), "Cast of");
 });
 
 test("high-impression cast query finds the existing movie instead of a false empty result", async () => {
@@ -38,4 +42,6 @@ test("high-impression cast query finds the existing movie instead of a false emp
   assert.ok(global.movieResults.some((movie) => movie.slug === "oversabi-aunty"));
   const directory = queryEntertainmentDirectory({ q: "Oversabi Aunty where to watch" });
   assert.ok(directory.items.some((movie) => movie.slug === "oversabi-aunty"));
+  assert.ok((await searchGlobalCatalog("cast of Sibe")).movieResults.some((movie) => movie.slug === "sibe"));
+  assert.ok(queryEntertainmentDirectory({ q: "Sibe the movie cast" }).items.some((movie) => movie.slug === "sibe"));
 });
