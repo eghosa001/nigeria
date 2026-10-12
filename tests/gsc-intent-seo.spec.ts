@@ -2,8 +2,8 @@ import { expect, test } from "@playwright/test";
 
 test("GSC-priority snippets and four-pillar discovery stay useful", async ({ page }) => {
   await page.goto("/entertainment/movies/oversabi-aunty");
-  await expect(page).toHaveTitle(/Oversabi Aunty Cast, Trailer & Netflix Status/);
-  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /FilmOne trailer.*Netflix Nigeria/);
+  await expect(page).toHaveTitle(/Oversabi Aunty Cast.*Where to Watch/);
+  await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /Toyin Abraham.*Official trailer and where-to-watch status/);
   await expect(page.getByText(/FilmOne link is an official trailer, not a free full-movie/)).toBeVisible();
   await expect(page.getByText(/No currently playable Nigerian streaming option has been independently verified/)).toBeVisible();
   await page.goto("/services/cac-business-name-registration");
