@@ -1,6 +1,7 @@
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { careerGuides } from "@/lib/career-guides";
 import { tourPlaceSearchStore } from "@/lib/tour-place-search-store";
+import { movieSearchCore } from "@/lib/movie-search-intent";
 
 function normalise(value: string) {
   return value
@@ -114,6 +115,7 @@ export async function searchGlobalCatalog(query: string) {
   const generatedYouTubeMovies = generatedYouTubeData.movies;
 
   const relevance = createRelevance(query);
+  const movieRelevance = createRelevance(movieSearchCore(query));
 
   const serviceResults = publicServiceListings
     .map((item) => ({
@@ -197,7 +199,7 @@ export async function searchGlobalCatalog(query: string) {
   const movieResults = entertainmentTitles
     .map((item) => ({
       item,
-      score: relevance(item.title,
+      score: movieRelevance(item.title,
         [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.directors?.join(" ") ?? "", String(item.year)].join(" "),
       ),
     }))
@@ -209,7 +211,7 @@ export async function searchGlobalCatalog(query: string) {
   const seriesResults = seriesTitles
     .map((item) => ({
       item,
-      score: relevance(item.title,
+      score: movieRelevance(item.title,
         [item.synopsis, item.genres.join(" "), item.languages.join(" "), item.cast.join(" "), item.creators?.join(" ") ?? "", String(item.year)].join(" "),
       ),
     }))
@@ -230,7 +232,7 @@ export async function searchGlobalCatalog(query: string) {
 
   const youtubeResults = selectTopMatches(
     generatedYouTubeMovies,
-    (item) => relevance(item.title,
+    (item) => movieRelevance(item.title,
       [item.synopsis, item.cast.join(" "), item.channelName, String(item.year)].join(" ")),
     (a, b) => b.publishedAt.localeCompare(a.publishedAt),
     8,
