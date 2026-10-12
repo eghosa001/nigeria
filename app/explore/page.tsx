@@ -154,6 +154,7 @@ export default function ExplorePage() {
             {featuredDestinations.filter((guide) => !destinationPhotos[guide.slug]).map((guide) => (
               <Link href={"/explore/" + guide.slug} key={guide.slug}>{guide.shortTitle} →</Link>
             ))}
+            <Link href="/explore/kainji-dam-guide">Kainji Dam · history &amp; access →</Link>
           </nav>
         </div>
       </section>
