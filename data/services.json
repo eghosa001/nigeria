@@ -7162,58 +7162,67 @@
     "slug": "pencom-open-rsa",
     "title": "How to open a Retirement Savings Account (RSA) in Nigeria",
     "shortTitle": "Open a pension RSA",
-    "summary": "What an RSA is, how to choose a Pension Fund Administrator and the information needed to start pension contributions.",
+    "summary": "To open a pension RSA in Nigeria, choose a PenCom-licensed Pension Fund Administrator (PFA), present the required employment and identity documents, and obtain your RSA PIN. Give that existing PIN to your employer for contributions; do not open a second RSA when you change jobs.",
     "category": "Pensions",
     "agencySlug": "pencom",
     "feeLabel": "No account-opening fee stated",
-    "feeNote": "Open the RSA through a PenCom-licensed Pension Fund Administrator.",
-    "timeline": "Depends on identity/data verification by the selected PFA.",
+    "feeNote": "PenCom's public guidance does not list a universal RSA-opening fee. Register with a licensed PFA and verify any requested charge or document directly; do not pay an unofficial recruitment or pension agent.",
+    "timeline": "Your chosen PFA confirms the processing stages. PenCom's registration rules describe a welcome letter after an RSA is opened, not a guaranteed instant PIN or same-day registration.",
     "status": "verified",
-    "officialPortal": "https://www.pencom.gov.ng/what-is-a-retirement-savings-account-rsa/",
+    "officialPortal": "https://www.pencom.gov.ng/pension-fund-administrators/",
     "requirements": [
-      "Identity information requested by the chosen PFA",
-      "NIN/identity verification information required under the current pension onboarding process",
-      "Employment information if you are opening the RSA as an employee",
-      "Contact details"
+      "An employment or attestation letter where applicable to your category, following PenCom's RSA-registration guidance",
+      "A valid identity document such as staff ID, national driver's licence, permanent voter's card, national ID or passport data page",
+      "The NIMC enrolment slip showing your National Identification Number (NIN), as listed in PenCom's registration FAQ",
+      "Reliable contact and employer details requested by the chosen licensed PFA"
     ],
     "steps": [
-      "Select a Pension Fund Administrator from PenCom's licensed PFA list before starting the RSA registration.",
-      "Complete the PFA's RSA registration form and identity verification requirements.",
-      "Receive and keep the RSA PIN/account information issued after successful registration.",
-      "Give the RSA details to your employer so pension contributions can be remitted to the correct account.",
-      "Check your PFA statements/alerts to confirm that contributions are being credited."
+      "Open PenCom's current list of licensed Pension Fund Administrators and choose the PFA you want to manage your RSA; your employer should not force a specific provider.",
+      "Ask that PFA for its RSA registration form and the precise onboarding process, then gather your employment letter, accepted identity document, NIN enrolment slip and contact details.",
+      "Complete the PFA's registration and required identity or biometric verification; use its official office or authorised channel rather than a recruiter or broker.",
+      "Obtain the PFA's registration or welcome letter and unique RSA PIN after the account is opened. Check that your name, employer and contact details are recorded accurately.",
+      "Give your existing RSA PIN and relevant registration details to your employer's payroll or pensions unit for contribution remittance; keep a private copy of the welcome letter.",
+      "Check PFA statements and employer payslips for remittances. If contributions have not been credited, contact the PFA and employer and use PenCom's published guidance for uncredited contributions."
     ],
     "notes": [
-      "Your RSA stays with you when you change jobs.",
-      "You are not required to keep the same employer to keep the same RSA.",
-      "Keep your contact information with the PFA current so you receive contribution statements and alerts.",
-      "PenCom says an employee who changes jobs should provide the existing RSA details to the new employer. Opening a second RSA can cause incorrect remittances and delays."
+      "PenCom says a worker should maintain one RSA across changes of employment. Give the new employer your existing PIN instead of registering a new account.",
+      "RSA registration happens with a licensed Pension Fund Administrator, not through a generic MyNigeriaGuide application form.",
+      "PenCom's June 2025 circular warns employers and affiliated financial institutions not to coerce employees into a particular PFA or an RSA transfer; PFA choice belongs to the employee.",
+      "An RSA is a retirement account, not a normal savings account for immediate withdrawals; special permitted benefits follow separate statutory rules.",
+      "Save the PFA's official welcome letter, PIN and confirmation. Never publish your RSA PIN with identity documents or share account passwords or OTPs.",
+      "If you have an old RSA but cannot remember the PFA or PIN, resolve the existing record through PenCom or your PFA rather than creating another account."
     ],
     "sources": [
       {
-        "label": "PenCom — What is a Retirement Savings Account?",
+        "label": "PenCom — licensed Pension Fund Administrators",
         "agency": "National Pension Commission",
-        "url": "https://www.pencom.gov.ng/what-is-a-retirement-savings-account-rsa/",
-        "lastChecked": "2026-10-01"
+        "url": "https://www.pencom.gov.ng/pension-fund-administrators/",
+        "lastChecked": "2026-10-12"
       },
       {
-        "label": "PenCom — What happens to my RSA when I change jobs?",
+        "label": "PenCom — RSA registration FAQ and required documents",
         "agency": "National Pension Commission",
-        "url": "https://www.pencom.gov.ng/what-happens-to-my-rsa-when-i-change-jobs/",
-        "lastChecked": "2026-10-01"
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2020/06/FREQUENTLY-ASK-QUESTION-2020-ENGLISH-MAIN-VISUAL.pdf",
+        "lastChecked": "2026-10-12"
       },
       {
-        "label": "PenCom FAQ: more than one RSA and change of employment",
+        "label": "PenCom — employees with and without an RSA PIN",
         "agency": "National Pension Commission",
-        "url": "https://www.pencom.gov.ng/wp-content/uploads/2018/04/FAQ-CPS-reviewed.-17-Apr.-2018.pdf",
-        "lastChecked": "2026-10-09"
+        "url": "https://www.pencom.gov.ng/guidance-note-employees-2/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "PenCom — June 2025 circular on unlawful RSA/PFA coercion",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2025/06/CIRCULAR-ON-UNETHICAL-PRACTICE-FINAL.pdf",
+        "lastChecked": "2026-10-12"
       }
     ],
     "related": [
       "pencom-transfer-rsa",
       "pencom-unremitted-contributions"
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-12",
     "searchTerms": [
       "open RSA Nigeria",
       "open RSA online",
@@ -7224,7 +7233,12 @@
       "RSA registration requirements",
       "Retirement Savings Account Nigeria",
       "do I open a new pension RSA when I change jobs",
-      "use existing RSA with new employer"
+      "use existing RSA with new employer",
+      "how to get RSA PIN in Nigeria",
+      "PenCom registered PFA list",
+      "documents needed for retirement savings account",
+      "can my employer choose my PFA",
+      "open one RSA when changing jobs"
     ]
   },
   {
@@ -11406,41 +11420,51 @@
     "slug": "passport-application-tracking",
     "title": "How to track a Nigerian passport application",
     "shortTitle": "Track passport application",
-    "summary": "Check the status of a Nigerian passport application on the official Nigeria Immigration Service tracker using the application and reference numbers.",
+    "summary": "Track a Nigerian passport application on the official Nigeria Immigration Service site by entering both your Application Number and Reference Number. The checker reports the current status available to NIS; it does not guarantee that your passport is ready for collection.",
     "category": "Immigration",
     "agencySlug": "nis",
     "feeLabel": "No fee is shown for the online status check",
     "feeNote": "The NIS tracking page provides the application-status lookup. Any passport application or issuance fee is separate from checking status.",
-    "timeline": "The tracker returns the available application status online after valid application details are submitted.",
+    "timeline": "A successful lookup displays the status currently published by NIS; the tracker does not establish a fixed processing or passport-collection deadline.",
     "status": "verified",
     "officialPortal": "https://track.immigration.gov.ng/",
     "requirements": [
-      "The passport application number shown on your NIS application confirmation",
-      "The reference number shown on the same NIS application or payment record"
+      "Your exact Application Number from the official NIS passport submission confirmation",
+      "Your corresponding Reference Number from the same application or acknowledgement",
+      "Access to the original confirmation email or saved receipt to re-check the numbers if a lookup fails"
     ],
     "steps": [
-      "Open the official Nigeria Immigration Service passport tracker at track.immigration.gov.ng.",
-      "Enter the full passport Application Number from your NIS application confirmation in the Application Number field.",
-      "Enter the corresponding Reference Number from the NIS application or payment record in the Reference Number field.",
-      "Submit the tracking form to display the latest application status recorded by NIS.",
-      "Read the returned status together with any NIS email or appointment notice and follow the next action shown for biometrics, production or collection."
+      "Open the official Nigeria Immigration Service tracking website at https://track.immigration.gov.ng/ and use its passport application status form.",
+      "Find the Application Number on the NIS acknowledgement or confirmation message and enter it exactly as issued.",
+      "Enter the Reference Number for that same application; do not substitute a payment receipt number or another person's application details.",
+      "Choose View Application Status and read the status displayed by NIS. A valid number pair is needed; MyNigeriaGuide does not store your passport numbers.",
+      "If the status is missing or the application is not found, compare both identifiers with the original NIS confirmation and retry through the official site; do not create a new passport application just to recheck.",
+      "Follow any separate official NIS appointment, biometrics or collection instruction shown in your account or communication. Do not treat payment completion alone as proof that a passport has been printed."
     ],
     "notes": [
-      "The NIS passport portal also provides an Application Status/Print Receipt function in the domestic passport application flow.",
-      "Use only the official NIS tracking or passport portal for status checks."
+      "The passport status tracker asks for both an Application Number and a Reference Number; these are different fields and both are required.",
+      "The domestic passport portal has separate payment or receipt functions. Payment confirmation, an appointment and passport production are not the same stage.",
+      "If the online checker cannot find an application, first verify that both numbers belong to the same submission. Use NIS's published help/contact channels for unresolved cases.",
+      "Only follow an NIS confirmation to visit a passport office; do not rely on a WhatsApp agent promising immediate printing, collection or a guaranteed delivery day."
     ],
     "sources": [
       {
-        "label": "NIS Passport Application Tracking",
+        "label": "Nigeria Immigration Service — official passport application tracker",
         "agency": "Nigeria Immigration Service",
         "url": "https://track.immigration.gov.ng/",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-12"
       },
       {
-        "label": "NIS Passports information",
+        "label": "Nigeria Immigration Service — domestic passport portal",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "Nigeria Immigration Service — passport information",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-12"
       }
     ],
     "searchTerms": [
@@ -11448,14 +11472,20 @@
       "passport application status Nigeria",
       "track Nigerian passport",
       "NIS passport status",
-      "passport tracking Nigeria"
+      "passport tracking Nigeria",
+      "NIS reference number and application number",
+      "Nigerian passport application number check",
+      "NIS passport application not found",
+      "Nigeria immigration tracking status",
+      "passport production status check Nigeria",
+      "check Nigerian passport collection status"
     ],
     "related": [
       "passport-renewal",
       "first-nigerian-passport",
       "lost-nigerian-passport"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-12"
   },
   {
     "slug": "drivers-licence-verification",
