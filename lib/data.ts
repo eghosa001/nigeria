@@ -1,4 +1,5 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
+import universityRecords from "@/data/services-universities.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -441,8 +442,45 @@ export const agencies: Agency[] = [
 ];
 
 agencies.push(...serviceScaleAgencies);
+agencies.push(...[
+  {
+    "slug": "uniben",
+    "name": "University of Benin",
+    "shortName": "UNIBEN",
+    "website": "https://www.uniben.edu",
+    "description": "Federal university in Benin City, Edo State; official admissions, student and clearance processes."
+  },
+  {
+    "slug": "ui-university",
+    "name": "University of Ibadan",
+    "shortName": "UI",
+    "website": "https://ui.edu.ng",
+    "description": "Federal university in Ibadan, Oyo State; undergraduate screening and student registration services."
+  },
+  {
+    "slug": "unn",
+    "name": "University of Nigeria, Nsukka",
+    "shortName": "UNN",
+    "website": "https://www.unn.edu.ng",
+    "description": "Federal university in Enugu State; university admission, registration and clearance."
+  },
+  {
+    "slug": "unilag",
+    "name": "University of Lagos",
+    "shortName": "UNILAG",
+    "website": "https://unilag.edu.ng",
+    "description": "Federal university in Lagos State; undergraduate admissions, screening and student services."
+  },
+  {
+    "slug": "lasu",
+    "name": "Lagos State University",
+    "shortName": "LASU",
+    "website": "https://lasu.edu.ng",
+    "description": "Lagos State public university; admission screening, LACACA clearance and student services."
+  }
+]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
