@@ -42,3 +42,22 @@ test("high-impression movie snippet retains verifiable cast and watch intent", (
   assert.match(snippet[2], /Toyin Abraham/);
   assert.match(snippet[2], /official trailer and where-to-watch status/i);
 });
+
+test("October zero-click service snippets reflect official routes and fit search results", () => {
+  const titles = templates("serviceSeoTitleTemplates");
+  const descriptions = templates("serviceSeoDescriptionTemplates");
+  for (const slug of ["ibedc-map-refund", "western-union-track-transfer-nigeria", "spotify-premium-nigeria"]) {
+    assert.ok(titles[slug] && descriptions[slug], slug);
+    assert.ok(titles[slug].length <= 60, slug + " title");
+    assert.ok(descriptions[slug].length <= 155, slug + " description");
+  }
+  assert.match(descriptions["ibedc-map-refund"], /meter number.*electricity-credit tokens/i);
+  assert.match(descriptions["western-union-track-transfer-nigeria"], /10-digit MTCN/);
+  assert.match(titles["spotify-premium-nigeria"], /Individual ₦1,600.*Student ₦800/);
+  const questions = readFileSync(new URL("../lib/search-answers.ts", import.meta.url), "utf8");
+  assert.match(questions, /"ibedc-map-refund": \[/);
+  assert.match(questions, /"western-union-track-transfer-nigeria": \[/);
+  assert.match(questions, /ascending order, from the earliest issue date to the latest/);
+  const tour = readFileSync(new URL("../app/explore/page.tsx", import.meta.url), "utf8");
+  assert.match(tour, /href="\/explore\/kainji-dam-guide"/);
+});
