@@ -114,9 +114,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const title = getExploreSeoTitle(guide);
   const cityPlaces = guide.kind === "city" ? getExplorePlacesForGuide(guide.slug) : [];
-  const description = guide.kind === "city"
-    ? truncateSeo("Discover " + cityPlaces.length + " places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". Maps, local tips and access guidance.", 155)
-    : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
+  // Dam infrastructure is a history/location query, not a walk-in attraction.
+  // Keep its search snippet useful without implying that entry is open.
+  const description = guide.slug === "kainji-dam-guide"
+    ? "Kainji Dam is near New Bussa in Niger State. See its location on the River Niger, 1968 hydropower history, 760 MW capacity and access advice."
+    : guide.kind === "city"
+      ? truncateSeo("Discover " + cityPlaces.length + " places to visit in " + guide.shortTitle + ", including " + cityPlaces.slice(0, 3).map((place) => place.name).join(", ") + ". Maps, local tips and access guidance.", 155)
+      : truncateSeo(guide.summary + " Things to do, places to visit and practical planning guidance reviewed " + guide.lastReviewed + ".", 155);
 
   return {
     title: { absolute: title },
