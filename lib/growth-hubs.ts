@@ -255,9 +255,9 @@ export const growthHubs: GrowthHub[] = [
   },
   {
     slug: "cac-business",
-    title: "CAC Registration Nigeria 2026: Cost, Portal, Business Name & Company",
+    title: "CAC Registration Nigeria: Business Name or Company?",
     shortTitle: "CAC business",
-    description: "CAC registration in Nigeria: use the official portal for business-name or company registration, then find public search, fees and post-registration filings.",
+    description: "CAC registration Nigeria: choose business name or company incorporation, compare the official processes and find the correct portal, fees and documents.",
     intro: [
       "If you searched for CAC registration, first decide whether you are registering a business name or incorporating a company. They are different CAC processes with different legal structures, requirements and fees; this hub routes you to the correct one instead of treating “CAC registration” as one generic form.",
       "After registration, use the separate guides for name reservation, public search, annual returns, status reports and certified documents. Each process keeps its own official source and current verification date."
