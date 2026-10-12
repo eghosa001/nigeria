@@ -56,14 +56,14 @@ export const ifeIlorinOsogboDepth20261012: ExplorePlace[] = [
     "name": "A. G. Leventis Natural History Museum, OAU",
     "kind": "attraction",
     "area": "Obafemi Awolowo University campus",
-    "address": "Opposite the Computer Building, Obafemi Awolowo University, Ile-Ife, Osun State, Nigeria",
+    "address": "Obafemi Awolowo University campus, Ile-Ife, Osun State, Nigeria (confirm museum building entrance)",
     "summary": "OAU's Natural History Museum hosts exhibitions spanning Nigerian biodiversity, archaeology, plants, insects and cultural history. It is separate from the federal National Museum Ile-Ife. Confirm entry and campus-access arrangements with the museum team, particularly for school or group visits, before relying on the exhibitions described online.",
     "cost": "Current museum admission, group fees and campus access arrangements are not published in the checked source; contact the museum.",
     "hours": "No reliable live visitor timetable confirmed; contact the museum before travelling to the campus.",
     "mapQuery": "A G Leventis Natural History Museum Obafemi Awolowo University Ile-Ife",
     "source": {
-      "label": "Obafemi Awolowo University — Natural History Museum exhibitions",
-      "href": "https://museum.oauife.edu.ng/exhibition/"
+      "label": "Obafemi Awolowo University — Centres and Institutes (A.G. Leventis Museum)",
+      "href": "https://oauife.edu.ng/centres-institutes/"
     },
     "checkedAt": "2026-10-12",
     "tags": [
