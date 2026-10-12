@@ -1,4 +1,5 @@
 import { entertainmentTitles, type EntertainmentPlatform, type EntertainmentTitle } from "@/lib/entertainment";
+import { movieSearchCore } from "@/lib/movie-search-intent";
 
 export const ENTERTAINMENT_DIRECTORY_PAGE_SIZE = 30;
 
@@ -50,7 +51,7 @@ function relevance(title: EntertainmentTitle, q: string) {
 }
 
 export function queryEntertainmentDirectory(input: EntertainmentDirectoryQuery = {}): EntertainmentDirectoryResult {
-  const q = normalized(input.q ?? "");
+  const q = normalized(movieSearchCore(input.q ?? ""));
   const platform = input.platform ?? "all";
   const genre = input.genre?.trim() || "all";
   const sort = input.sort ?? "newest";

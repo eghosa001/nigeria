@@ -100,7 +100,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
   },
   "oversabi-aunty": {
     title: "Oversabi Aunty Cast (2025) & Where to Watch",
-    description: "Oversabi Aunty cast includes Toyin Abraham, Mike Ezuruonye, Jemima Osunde, Enioluwa Adeoluwa and Tana Adelana. Netflix Nigeria availability was not confirmed on 9 October 2026; see the FilmOne trailer and viewing-status update.",
+    description: "Oversabi Aunty (2025) cast: Toyin Abraham, Mike Ezuruonye, Jemima Osunde and Enioluwa Adeoluwa. Official trailer and where-to-watch status.",
   },
   // These original movie profiles are the canonical destination for the
   // corresponding noindex YouTube video URLs previously affected by 5xx.

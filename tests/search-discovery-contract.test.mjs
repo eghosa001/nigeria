@@ -45,6 +45,7 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
   ));
   const careerGuides = readFileSync("lib/career-guides.ts", "utf8");
   const movieCatalog = readFileSync("lib/entertainment.ts", "utf8");
+  const seriesCatalog = readFileSync("lib/series.ts", "utf8");
   const platformHubs = readFileSync("lib/entertainment-platform-hubs.ts", "utf8");
   const tourSources = readdirSync("lib")
     .filter((name) => /^explore(?:-growth-wave|-trend-events|-kainji|\.ts)/.test(name) && name.endsWith(".ts"))
@@ -61,6 +62,7 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
     else if (path.startsWith("/jobs/guides/")) assert.ok(hasSlug(careerGuides, path.slice(13)), link);
     else if (path.startsWith("/entertainment/platforms/")) assert.ok(hasSlug(platformHubs, path.slice(25)), link);
     else if (path.startsWith("/entertainment/movies/")) assert.ok(hasSlug(movieCatalog, path.slice(22)), link);
+    else if (path.startsWith("/entertainment/series/")) assert.ok(hasSlug(seriesCatalog, path.slice("/entertainment/series/".length)), link);
     else if (path.startsWith("/explore/") && path !== "/explore/events")
       assert.ok(hasSlug(tourSources, path.slice(9)) || sitemaps.includes('"' + path + '"'), link);
     else assert.ok(sitemaps.includes('"' + path + '"'), link);
