@@ -155,6 +155,10 @@ export default function ExplorePage() {
               <Link href={"/explore/" + guide.slug} key={guide.slug}>{guide.shortTitle} →</Link>
             ))}
             <Link href="/explore/kainji-dam-guide">Kainji Dam · history &amp; access →</Link>
+            <Link href="/explore/dufuna-canoe-heritage-guide">Dufuna Canoe · Yobe archaeology →</Link>
+            <Link href="/explore/mambilla-plateau-guide">Mambilla Plateau · Gembu &amp; highlands →</Link>
+            <Link href="/explore/ojukwu-bunker-guide">Ojukwu Bunker · Umuahia history →</Link>
+            <Link href="/explore/sokoto-state-travel-guide">Sokoto State · Caliphate heritage →</Link>
           </nav>
         </div>
       </section>
