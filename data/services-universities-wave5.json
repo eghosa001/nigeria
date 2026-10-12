@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "unical-admissions-school-fees-clearance-2026",
+    "title": "UNICAL 2026/27 Admission, Post-UTME, Supplementary Screening and Student Fees",
+    "shortTitle": "UNICAL admission and screening",
+    "summary": "The University of Calabar's 2026/27 ordinary Post-UTME and Direct Entry registration has closed, although its official portal currently advertises supplementary applications for specified undersubscribed programmes. The advertised ₦2,000 UTME screening fee is distinct from school tuition, acceptance fees and clearance.",
+    "category": "Education",
+    "agencySlug": "unical",
+    "feeLabel": "2026/27 Post-UTME ₦2,000; ordinary window closed",
+    "feeNote": "The 2026/27 University of Calabar notice specifies a ₦2,000 non-refundable Post-UTME fee, which does not cover admission acceptance, tuition, accommodation or clearance. The DE page separately mentions a ₦3,500 receipt but currently reports applications closed. No current university-wide programme-level tuition sum was established by the checked official notices.",
+    "timeline": "The original UTME window ran from 1 June to the published 31 July deadline. On 12 October 2026, separate ordinary UTME and DE entry pages say closed; a limited supplementary invitation is shown on the official landing page without a universal closing date.",
+    "status": "verified",
+    "lastVerified": "2026-10-12",
+    "officialPortal": "https://postutme.unical.edu.ng/",
+    "requirements": [
+      "2026 JAMB registration number and UTME score of at least 150 for the route specified in the university's screening announcement; individual programme rules still apply.",
+      "WAEC, NECO or NABTEB O-level credit subjects that match the course, correctly recorded on JAMB and the university's system.",
+      "An active personal email address and phone number, and a recent passport photograph when requested in the application.",
+      "For supplementary applications, eligibility for one of the specifically advertised undersubscribed programmes; Medicine and Surgery requires O-level credits at one sitting for the referenced exercise."
+    ],
+    "steps": [
+      "Open the university's 2026/27 official Post-UTME portal and check whether the particular ordinary UTME, DE or supplementary route is accepting applications.",
+      "If the listed supplementary programme is eligible for your JAMB result and choice-of-institution record, select the correct advertised course and confirm the university's stated admission conditions.",
+      "Enter your genuine JAMB registration number on the official portal's verification form and check the returned biodata and O-level requirements.",
+      "During an authorised open registration window, supply accurate grades and contact details, pay the university-generated screening charge, then print the acknowledgement or registration slip.",
+      "Check an actual admission outcome on the University of Calabar and JAMB CAPS platforms; registration and screening receipts alone are not admission offers.",
+      "After a university admission offer, follow newly issued student clearance instructions and pay acceptance, university fees and housing charges separately only on an official university invoice."
+    ],
+    "notes": [
+      "The 2026/27 portal's supplementary invitation is limited to advertised courses; the ordinary Post-UTME and DE application pages currently show closed.",
+      "UNICAL's general 2026 admission notice allows candidates seeking change to the university who meet the stated minimum, subject to JAMB processing and university programme eligibility.",
+      "Medicine and Surgery candidates are required to meet the university's one-sitting O-level rule in its 2026/27 announcement.",
+      "Do not interpret the screening amount as annual tuition or an admission guarantee.",
+      "The university's fee and clearance requirements must be checked for the specific 2026/27 faculty and admitted-student cohort before payment."
+    ],
+    "sources": [
+      {
+        "agency": "University of Calabar",
+        "label": "UNICAL 2026/27 official screening announcement",
+        "url": "https://www.unical.edu.ng/news-item.php?id=7",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "agency": "University of Calabar",
+        "label": "UNICAL official live screening and supplementary portal",
+        "url": "https://postutme.unical.edu.ng/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "agency": "University of Calabar",
+        "label": "UNICAL ordinary UTME application status",
+        "url": "https://postutme.unical.edu.ng/home.php",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "agency": "University of Calabar",
+        "label": "UNICAL separate Direct Entry application status",
+        "url": "https://postutme.unical.edu.ng/de_index.php",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "searchTerms": [
+      "University of Calabar school fees 2026 2027",
+      "UNICAL admission portal",
+      "UNICAL post utme 2026 2000",
+      "UNICAL supplementary 2026",
+      "UNICAL screening deadline 2026",
+      "University of Calabar clearance process",
+      "UNICAL UTME DE 2026 application status",
+      "unical.edu.ng fees",
+      "UNICAL school fees"
+    ]
+  },
+  {
+    "slug": "fulokoja-admission-clearance-school-fees-2026",
+    "title": "Federal University Lokoja 2026/27 Admissions, CAPS, Fees and Freshers' Registration",
+    "shortTitle": "FULOKOJA admission and clearance",
+    "summary": "Federal University Lokoja's 2026/27 Post-UTME screening closed on 13 September after a ₦2,000 Remita screening charge. Its official university calendar schedules new-student registration to start 26 October 2026 and resumption for 2 November; students must still obtain a valid CAPS offer and university-specific payment instructions.",
+    "category": "Education",
+    "agencySlug": "fulokoja",
+    "feeLabel": "2026/27 screening ₦2,000; deadline passed",
+    "feeNote": "The university's ₦2,000 Remita fee is a screening charge, not the school fee, acceptance fee, accommodation payment or clearance invoice. A current uniform 2026/27 undergraduate tuition rate was not verified. Pay only what the official student registration portal invoices for the particular programme and session.",
+    "timeline": "Screening deadline: 13 September 2026. Official admissions calendar lists forwarding of recommendations to JAMB CAPS 5 October, new-student registration from 26 October and first-year resumption 2 November 2026, subject to revision.",
+    "status": "verified",
+    "lastVerified": "2026-10-12",
+    "officialPortal": "https://putme.fulokoja.edu.ng/",
+    "requirements": [
+      "A 2026 UTME score of at least 160 and first-choice Federal University Lokoja selection on JAMB, or valid JAMB Direct Entry status where applicable.",
+      "Candidate aged 16 or older by 30 September 2026 under the university's screening circular.",
+      "At least five qualifying O-level credits including English, with one-sitting requirements for Nursing, Medical Laboratory Science, Law and Pharmaceutical Science.",
+      "O-level results uploaded to JAMB e-Facility at a JAMB office or accredited CBT centre and corresponding original certificates for later admission verification."
+    ],
+    "steps": [
+      "Visit FUL's published 2026/27 Post-UTME notice and check the university's latest calendar; the screening deadline of 13 September has already passed.",
+      "Open the official FUL Post-UTME portal with the genuine JAMB registration number to inspect any previously submitted screening and candidate information.",
+      "During a future university-authorised screening period, generate an official Remita Retrieval Reference inside the FUL admission portal, pay the stated screening charge and upload the programme's required O-level subjects.",
+      "Check the admission offer through JAMB CAPS and the university; accept the actual JAMB offer and print your JAMB admission letter only if admitted.",
+      "From the university's scheduled 26 October new-student portal opening, follow updated FUL instructions for acceptance, biodata, clearance documentation and an official student fee invoice.",
+      "Save university invoices and receipts, complete the faculty verification and course-registration instructions, and monitor any official revision to the planned 2 November resumption date."
+    ],
+    "notes": [
+      "The university states explicitly that a successful Post-UTME screening exercise does not guarantee admission.",
+      "The university's 26 October registration-opening and 2 November resumption dates were still future scheduled dates on 12 October; portal availability does not prove registration has begun.",
+      "Some listed professional programmes require O-level credits in a single sitting rather than the standard two-sitting rule.",
+      "JAMB e-Facility O-level uploads should use an accredited JAMB CBT centre or a JAMB office, not an unapproved cybercafé.",
+      "Do not infer the university's actual acceptance, school or hostel charges from the ₦2,000 admission screening fee."
+    ],
+    "sources": [
+      {
+        "agency": "Federal University Lokoja",
+        "label": "FUL official detailed screening eligibility and Remita fee notice",
+        "url": "https://fulokoja.edu.ng/news-flash.php?alias=2026-2027-admission-screening-exercise_1780954427&i=55",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "agency": "Federal University Lokoja",
+        "label": "FUL university 2026/27 admissions calendar",
+        "url": "https://fulokoja.edu.ng/news-page.php?a=ful-cac-announces-approved-schedule-of-events-for-2026-2027-admissions-exercise&i=1258",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "agency": "Federal University Lokoja",
+        "label": "FUL official applicant Post-UTME portal",
+        "url": "https://putme.fulokoja.edu.ng/",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "searchTerms": [
+      "Federal University Lokoja school fees 2026",
+      "FULOKOJA admission portal",
+      "FUL Lokoja 26 October registration",
+      "FUL Lokoja resumption 2 November 2026",
+      "FUL Lokoja post utme 2026 2000",
+      "fulokoja.edu.ng freshers clearance",
+      "JAMB CAPS FUL Lokoja 2026",
+      "FUL screening requirements 160",
+      "FUL Lokoja school fees"
+    ]
+  }
+]
