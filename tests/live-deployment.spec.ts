@@ -55,6 +55,7 @@ test.describe("live MyNigeriaGuide deployment", () => {
     // can initialize GA4. Use an isolated ordinary user agent to exercise the
     // same branch as a normal reader, while intercepting ALL collection below.
     const context = await browser.newContext({
+      baseURL: process.env.LIVE_BASE_URL,
       userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
     });
     try {
