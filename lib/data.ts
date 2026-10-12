@@ -5,6 +5,7 @@ import privateUniversityGuide from "@/data/services-wellspring-2026.json" with {
 import universityWave4 from "@/data/services-universities-wave4.json" with { type: "json" };
 import universityWave5 from "@/data/services-universities-wave5.json" with { type: "json" };
 import universityWave6 from "@/data/services-universities-wave6.json" with { type: "json" };
+import universityWave7 from "@/data/services-universities-wave7.json" with { type: "json" };
 import scaleServiceRecords from "@/data/services-scale-verified.json" with { type: "json" };
 import privateServiceRecords from "@/data/services-private-extended.json" with { type: "json" };
 import growthServiceRecords from "@/data/services-growth-wave-3.json" with { type: "json" };
@@ -449,6 +450,30 @@ export const agencies: Agency[] = [
 agencies.push(...serviceScaleAgencies);
 agencies.push(...[
   {
+    "slug": "uniuyo",
+    "name": "University of Uyo",
+    "shortName": "UNIUYO",
+    "description": "Federal university in Akwa Ibom State; 2026/27 UTME/Direct Entry admissions and student services.",
+    "website": "https://uniuyo.edu.ng/"
+  },
+  {
+    "slug": "aau-ekpoma",
+    "name": "Ambrose Alli University Ekpoma",
+    "shortName": "AAU Ekpoma",
+    "description": "Edo State university with 2026/27 undergraduate admissions, programme cut-offs and student portal.",
+    "website": "https://aauekpoma.edu.ng/"
+  },
+  {
+    "slug": "rsu",
+    "name": "Rivers State University",
+    "shortName": "RSU",
+    "description": "State university in Port Harcourt with 2026/27 admissions, CBT screening and student services.",
+    "website": "https://www.rsu.edu.ng/"
+  }
+]);
+
+agencies.push(...[
+  {
     "slug": "futo",
     "name": "Federal University of Technology Owerri",
     "shortName": "FUTO",
@@ -578,7 +603,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7]);
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<

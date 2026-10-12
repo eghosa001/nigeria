@@ -161,5 +161,32 @@ export const universityProfiles = [
   "state": "Niger State",
   "academicSession": "2026/27 UPASE screening completed",
   "focus": "Official programme cut-offs, admission and student portal"
-}
+},
+{
+    "slug": "uniuyo-2026-post-utme-admission-portal-fees",
+    "name": "University of Uyo",
+    "abbreviation": "UNIUYO",
+    "city": "Uyo",
+    "state": "Akwa Ibom State",
+    "academicSession": "2026/27 screening — confirm current application status",
+    "focus": "UNIUYO admission, fees & portal"
+  },
+  {
+    "slug": "aau-ekpoma-2026-admission-cutoff-portal-school-fees",
+    "name": "Ambrose Alli University",
+    "abbreviation": "AAU Ekpoma",
+    "city": "Ekpoma",
+    "state": "Edo State",
+    "academicSession": "2026/27 June window closed; published course cut-offs",
+    "focus": "AAU Ekpoma cut-offs & portal"
+  },
+  {
+    "slug": "rsu-2026-post-utme-cbt-admission-school-fees",
+    "name": "Rivers State University",
+    "abbreviation": "RSU",
+    "city": "Port Harcourt",
+    "state": "Rivers State",
+    "academicSession": "2026/27 May–June screening closed",
+    "focus": "RSU admission & CBT screening"
+  }
 ] as const;
