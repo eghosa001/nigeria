@@ -1,3 +1,4 @@
+import { ncmmRegionalMuseums20261012 } from "@/lib/explore-regional-museums-2026-10-12";
 import { officialHeritageStops20261012 } from "@/lib/explore-growth-places-wave-12";
 import { verifiedEvergreenCityStops20261011 } from "@/lib/explore-growth-places-wave-10";
 import { cityGrowthPlacesWave11 } from "@/lib/explore-city-growth-wave-11";
@@ -41,6 +42,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...ncmmRegionalMuseums20261012,
   ...officialHeritageStops20261012,
   ...verifiedEvergreenCityStops20261011,
   ...cityGrowthPlaces20261011,
@@ -1175,14 +1177,14 @@ export const explorePlaces: ExplorePlace[] = [
     guideSlug: "ondo-state-highlights",
     name: "Owo Museum of Antiquities",
     kind: "attraction",
-    area: "Owo",
-    address: "Owo, Ondo State",
-    summary: "Museum of royal regalia, archaeological material and historic artworks connected to the old Owo Kingdom.",
+    area: "Olowo Palace precinct, Owo",
+    address: "Olowo's Palace, Owo, Ondo State, Nigeria",
+    summary: "The National Commission for Museums and Monuments lists National Museum Owo at Olowo's Palace. The existing Owo Museum of Antiquities record already covers this royal heritage collection; keep one venue listing, and confirm palace-gallery access with the museum before visiting.",
     cost: "Verify current admission and opening arrangements before visiting",
     mapQuery: "Owo Museum of Antiquities",
-    source: { label: "Ondo State Government tourism", href: "https://ondostate.gov.ng/tourism" },
-    checkedAt: "2026-09-29",
-    tags: ["museum", "royal history", "culture"],
+    source: { label: "NCMM — National Museum Owo", href: "https://museum.ng/museums/national-museums/" },
+    checkedAt: "2026-10-12",
+    tags: ["museum", "royal history", "culture", "Olowo Palace", "Owo museum"],
   },
   {
     slug: "akure-forest-reserve",
@@ -1865,13 +1867,13 @@ export const explorePlaces: ExplorePlace[] = [
     name: "Nana Living History Palace",
     kind: "landmark",
     area: "Koko",
-    address: "Nana Living History Palace, Koko, Delta State, Nigeria",
-    summary: "Historic palace associated with Chief Nana Olomu and Delta’s 19th-century trading history.",
+    address: "Nana Living History Palace and Museum, Koko, Delta State, Nigeria",
+    summary: "Historic palace associated with Chief Nana Olomu and Delta's 19th-century trading history. NCMM lists National Museum Koko as the Nana Living History Museum in this area: this existing venue entry represents both rather than duplicating the palace and national museum as separate travel stops.",
     cost: "Confirm current museum/palace opening hours before the road trip",
     mapQuery: "Nana Living History Palace, Koko, Delta State, Nigeria",
-    source: { label: "Federal Presidency South-South Community Engagement — Delta", href: "https://communityengagementss.presidency.gov.ng/portfolio/delta/" },
-    checkedAt: "2026-10-05",
-    tags: ["history","Koko","Nana Olomu","palace"],
+    source: { label: "NCMM — National Museum Koko / Nana Living History Museum", href: "https://museum.ng/museums/national-museums/" },
+    checkedAt: "2026-10-12",
+    tags: ["history","Koko","Nana Olomu","palace","National Museum Koko"],
   },
   {
     slug: "okposi-salt-lakes",
