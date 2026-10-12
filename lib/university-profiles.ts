@@ -44,7 +44,7 @@ export const universityProfiles = [
     "state": "Lagos State",
     "academicSession": "2026/27 undergraduate admission",
     "focus": "LASU admission & LACACA clearance"
-  }
+  },
 {
   "slug": "oau-admission-fees-clearance-2026",
   "name": "Obafemi Awolowo University",
