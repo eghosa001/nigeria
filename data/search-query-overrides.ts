@@ -165,6 +165,16 @@ export const searchQueryOverrides: Record<string, SearchQueryOverride> = {
     timeline: "How long does Nigerian passport renewal take?",
     start: "How do I renew my Nigerian passport?",
   },
+  "ibedc-map-refund": {
+    online: "Where is the official IBEDC MAP refund portal?",
+    start: "How do I check my IBEDC MAP refund with my meter number?",
+    timeline: "When will my IBEDC MAP refund token be available?",
+  },
+  "western-union-track-transfer-nigeria": {
+    requirements: "What is the MTCN required for Western Union tracking?",
+    online: "Where can I track my Western Union transfer online?",
+    start: "How do I track a Western Union transfer to Nigeria with an MTCN?",
+  },
   "anambra-asin-registration": {
     requirements: "What do I need for ASIN registration in Anambra State?",
     online: "Where is the official Anambra ASIN registration portal?",
