@@ -787,23 +787,25 @@ export async function getAnalyticsDashboard(
       limit: 15,
       ...publicFilter,
     },
-    {
-      dateRanges,
-      dimensions: [{ name: "date" }],
-      metrics: [{ name: "sessions" }],
-      dimensionFilter: {
-        andGroup: {
-          expressions: [
-            ...(mode === "clean" ? [cleanPublicFilter] : []),
-            { filter: { fieldName: "sessionSource", stringFilter: { matchType: "EXACT", value: "google", caseSensitive: false } } },
-            { filter: { fieldName: "sessionMedium", stringFilter: { matchType: "EXACT", value: "organic", caseSensitive: false } } },
-          ],
-        },
-      },
-      orderBys: [{ dimension: { dimensionName: "date" } }],
-      limit: 100,
-    },
   ];
+
+  // Optional comparison must never disable the core GA4 dashboard if this request fails.
+  const organicDailyRequest = {
+    dateRanges,
+    dimensions: [{ name: "date" }],
+    metrics: [{ name: "sessions" }],
+    dimensionFilter: {
+      andGroup: {
+        expressions: [
+          ...(mode === "clean" ? [cleanPublicFilter] : []),
+          { filter: { fieldName: "sessionSource", stringFilter: { matchType: "EXACT", value: "google", caseSensitive: false } } },
+          { filter: { fieldName: "sessionMedium", stringFilter: { matchType: "EXACT", value: "organic", caseSensitive: false } } },
+        ],
+      },
+    },
+    orderBys: [{ dimension: { dimensionName: "date" } }],
+    limit: 100,
+  };
 
   const interactionEventFilter = {
     filter: {
@@ -834,7 +836,7 @@ export async function getAnalyticsDashboard(
 
   // Every source is independent: a broken GA4 API must not blank the
   // PostHog and Search Console panels or prevent the private dashboard loading.
-  const [ga4Batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents] = await Promise.all([
+  const [ga4Batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents, organicDailyReport] = await Promise.all([
     ga4Available
       ? batchRunReports(coreRequests)
           .then((batch) => ({ batch, error: null as string | null }))
@@ -853,10 +855,11 @@ export async function getAnalyticsDashboard(
     ga4Available ? verifyAnalyticsConnection() : Promise.resolve(unavailableConnection),
     getPostHogOverview(dataStartDate, today, forceFresh),
     ga4Available ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "GA4 Data API is not configured." } as GA4KeyEventStatus),
+    ga4Available ? runReport(organicDailyRequest).catch(() => null) : Promise.resolve(null),
   ]);
 
   const { batch, error: ga4Error } = ga4Batch;
-  const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}, organicDayReport = {}] = batch.reports ?? [];
+  const [summaryReport = {}, dailyReport = {}, countryReport = {}, pageReport = {}, referrerReport = {}] = batch.reports ?? [];
 
   const totalValues = summaryReport.totals?.[0]?.metricValues ?? summaryReport.rows?.[0]?.metricValues ?? [];
   const { propertyId = "" } = config();
@@ -908,8 +911,8 @@ export async function getAnalyticsDashboard(
       count: metric(row, 0),
     })),
     searchPerformance,
-    searchTrafficComparison: ga4Available && ga4Error === null
-      ? compareSearchClicksToOrganicSessions(searchPerformance, organicDayReport.rows ?? [])
+    searchTrafficComparison: ga4Available && ga4Error === null && organicDailyReport
+      ? compareSearchClicksToOrganicSessions(searchPerformance, organicDailyReport.rows ?? [])
       : null,
     hourlySearchPerformance,
     connection,
