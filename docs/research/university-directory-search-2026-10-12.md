@@ -1,0 +1,3 @@
+# University directory search — 12 October 2026
+
+Scoped search filters only verified existing university profiles by official names, abbreviation, city/state, session, admissions, clearance and programme keywords already contained in the institution-specific service guides. A browser-native datalist surfaces names, abbreviations and cities/states. Filtered `/universities?q=...` results have `noindex,follow` and a canonical URL of `/universities`, preventing thin indexed search permutations. Missing schools are identified as absent rather than invented. The unfiltered directory and existing individual service canonicals remain unchanged. Focused search regression added; no backend D1 changes.
