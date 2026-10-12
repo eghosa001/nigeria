@@ -27,3 +27,17 @@ This is a bounded migration-readiness milestone, not an announcement that the To
 ## Search Console prioritization of existing pages
 
 On the last settled 11 September–8 October query/page window, the existing `/services/check-nin-number` guide showed **32 impressions and zero clicks** for the exact search term `*346#`. That existing URL was retained, the answer-first summary now leads with dialling `*346#`, and the page has a clear NIMC-office alternative and accurate USSD fee caution. No duplicate indexed page. NIMC official `https://nimc.gov.ng/verify-profile` and `https://nimc.gov.ng/mobile-digital-id` were checked 12 October 2026. These historic impressions are **not** evidence that today's rewrite increased CTR.
+
+## Follow-up: explicit-address reconciliation and impression demand (12 October)
+
+The first live-repository read-only audit completed successfully with **342 unique places**, **292 guides**, **1,118 ordered place-to-guide memberships**, and **12 `unmapped_state` findings** (zero duplicate slugs, missing evidence or missing guide relationships), with no writes. Most came from broad/multi-state guide regions rather than intrinsically missing location metadata.
+
+The follow-up parser uses an explicit `<State> State` suffix in each **place address** only when the guide region is broad. For example, `Badagry, Lagos State`, `Abeokuta, Ogun State` and `Serti, Taraba State` can identify the individual place; a park spanning `Taraba and Adamawa States` cannot truthfully be squeezed into one state. Conflicting explicit guide/address states now produce a separate manual-review blocker instead of silently choosing either. The script reports the actual number resolved on each checked-in catalog run. This preserves correctness before any D1 import.
+
+The existing `/services/anambra-asin-registration` canonical showed several impression-producing GSC query/page pairs through 2026-10-08, including `how to get asin number anambra state` (38 impressions, one click) and `asin registration` (22 impressions, zero clicks). Instead of creating competing indexable pages, expand the one ASIN guide with **official AIRS verification**, saved-record and taxpayer-login instructions. Primary sources checked 2026-10-12:
+- `https://tax.services.an.gov.ng/create-asin/index.html`: the Individual, Informal/Enterprise and Corporate enumeration paths.
+- `https://tax.services.an.gov.ng/verification-landing`: separate document/identifier verification type selector.
+- `https://tax.services.an.gov.ng/auth/login`: existing-taxpayer sign-in with Email / ASIN.
+- `https://tax.services.an.gov.ng/`: official help and contact information.
+
+No current price is invented, and no claim is made that old ANSSID fee instructions prove a present ASIN fee. No indexable page or URL changes, no new production D1 records, no change to cutover flag, and no asserted CTR gain until subsequent settled GSC data becomes available.
