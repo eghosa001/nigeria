@@ -41,6 +41,10 @@ type TourPlaceRow = {
   source_name: string;
   checked_at: string;
   editorial_status: string;
+  // Filled by the unapplied continuity extension during an approved cutover.
+  tags_json?: string | null;
+  map_query?: string | null;
+  cost_note?: string | null;
 };
 
 const kinds = new Set<string>(["attraction", "nature", "restaurant", "hotel", "shopping", "landmark"]);
@@ -72,8 +76,12 @@ export function tourPlaceQueryPlan(input: TourPlaceD1Query = {}) {
   }
   if (input.guideSlug) {
     if (!validSlug.test(input.guideSlug)) throw new Error("Invalid Tour guide slug.");
-    clause.push("p.guide_slug = ?");
-    params.push(input.guideSlug);
+    // One place can appear on many canonical guides. The continuity table
+    // preserves membership without cloning the place into conflicting rows.
+    clause.push("(p.guide_slug = ? OR EXISTS (" +
+      "SELECT 1 FROM tour_place_guide_memberships gm " +
+      "WHERE gm.place_slug = p.slug AND gm.guide_slug = ?))");
+    params.push(input.guideSlug, input.guideSlug);
   }
   if (input.state) {
     const state = input.state.trim();
@@ -83,17 +91,41 @@ export function tourPlaceQueryPlan(input: TourPlaceD1Query = {}) {
   }
   const from = "tour_places p" + join;
   const where = clause.join(" AND ");
-  const order = usesFts
-    ? "bm25(tour_place_search), p.checked_at DESC, p.slug ASC"
-    : "p.checked_at DESC, p.slug ASC";
+  // Guide page ordering comes from its original catalog position; search
+  // results keep relevance order. A record without a membership is placed
+  // after those with reviewed mappings, never guessed into another position.
+  const order = input.guideSlug && !usesFts
+    ? "CASE WHEN gm.position IS NULL THEN 1 ELSE 0 END, gm.position, p.slug"
+    : usesFts
+      ? "bm25(tour_place_search), p.checked_at DESC, p.slug ASC"
+      : "p.checked_at DESC, p.slug ASC";
+  const guideJoin = input.guideSlug
+    ? " LEFT JOIN tour_place_guide_memberships gm ON gm.place_slug = p.slug AND gm.guide_slug = ?"
+    : "";
   return {
     countSql: "SELECT COUNT(*) AS total FROM " + from + " WHERE " + where,
     pageSql: `SELECT p.slug, p.guide_slug, p.name, p.kind, p.state_or_fct,
       p.city_or_area, p.address, p.summary, p.cost_guidance, p.hours,
-      p.phone, p.website, p.source_url, p.source_name, p.checked_at, p.editorial_status
-      FROM ${from} WHERE ${where} ORDER BY ${order} LIMIT ? OFFSET ?`,
+      p.phone, p.website, p.source_url, p.source_name, p.checked_at, p.editorial_status,
+      d.tags_json, d.map_query, d.cost_note
+      FROM ${from} LEFT JOIN tour_place_display d ON d.place_slug = p.slug
+      ${guideJoin} WHERE ${where} ORDER BY ${order} LIMIT ? OFFSET ?`,
+    // Count and page differ only when a guide join is requested. Keep their
+    // bindings distinct so parameters never shift into the wrong SQL clause.
     params,
+    pageParams: input.guideSlug ? [input.guideSlug, ...params] : params,
   };
+}
+
+function parseTourTags(raw: string | null | undefined): string[] {
+  if (raw == null) return [];
+  let parsed: unknown;
+  try { parsed = JSON.parse(raw); } catch { throw new Error("Invalid Tour D1 tags JSON."); }
+  if (!Array.isArray(parsed) || parsed.length > 30 ||
+      parsed.some((tag) => typeof tag !== "string" || !tag.trim() || tag.length > 80)) {
+    throw new Error("Invalid Tour D1 tag metadata.");
+  }
+  return parsed;
 }
 
 function toPlace(row: TourPlaceRow): ExplorePlace {
@@ -116,12 +148,14 @@ function toPlace(row: TourPlaceRow): ExplorePlace {
     address: row.address,
     summary: row.summary,
     cost: row.cost_guidance || "Confirm current prices with the venue",
+    costNote: row.cost_note ?? undefined,
     hours: row.hours ?? undefined,
     phone: row.phone ?? undefined,
     website: row.website ?? undefined,
     source: { label: row.source_name || "Original source", href: row.source_url },
     checkedAt: row.checked_at,
-    tags: [],
+    tags: parseTourTags(row.tags_json),
+    mapQuery: row.map_query || undefined,
   };
 }
 
@@ -142,7 +176,7 @@ export async function queryPublishedTourPlaces(db: TourD1Database, input: TourPl
   const page = Math.min(requested, pageCount);
   if (page > MAX_PAGE) throw new Error("Tour D1 deep pagination requires a cursor.");
   const rows = await db.prepare(plan.pageSql)
-    .bind(...plan.params, pageSize, (page - 1) * pageSize)
+    .bind(...plan.pageParams, pageSize, (page - 1) * pageSize)
     .all<TourPlaceRow>();
   if (rows.results.length > pageSize) throw new Error("Tour D1 exceeded page bound.");
   return { places: rows.results.map(toPlace), total: count.total, page, pageSize, pageCount };
