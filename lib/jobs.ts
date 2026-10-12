@@ -1,3 +1,4 @@
+import { verifiedDangoteOlamJobs20261012 } from "@/lib/job-growth-wave-14";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -124,6 +125,7 @@ function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
 }
 
 const rawJobOpportunities: CareerOpportunity[] = [
+  ...verifiedDangoteOlamJobs20261012,
   ...verifiedFmnFinalBoardJobs20261012,
   ...verifiedFmnOperationsJobs20261012,
   ...verifiedFmnRoles20261012,
