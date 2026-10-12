@@ -105,6 +105,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "services") {
     return [
       { url: base + "/services", lastModified: serviceModified },
+      { url: base + "/universities", lastModified: latestDate(publicServices.filter((service) => service.slug.startsWith("uniben-") || service.slug.startsWith("ui-admission-") || service.slug.startsWith("unn-") || service.slug.startsWith("unilag-") || service.slug.startsWith("lasu-")).map((service) => service.lastVerified)) },
       ...Array.from({ length: Math.max(0, getServiceDirectoryPageCount() - 1) }, (_, index) => ({
         url: base + "/services/page/" + (index + 2),
         lastModified: serviceModified,

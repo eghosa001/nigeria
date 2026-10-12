@@ -7,6 +7,7 @@ import { categories } from "@/lib/data";
 import { queryServiceDirectory, type ServiceDirectorySort, type ServiceDirectoryStatus } from "@/lib/service-query";
 
 const popularServiceLinks = [
+  { label: "University admissions, fees & portals", href: "/universities" },
   { label: "CAC registration", href: "/topics/cac-business" },
   { label: "CAC registration portal, fees & requirements", href: "/services/cac-business-name-registration" },
   { label: "Nigerian passport renewal online", href: "/services/passport-renewal" },

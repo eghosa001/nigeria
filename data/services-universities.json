@@ -1,0 +1,407 @@
+[
+  {
+    "slug": "uniben-admission-clearance-school-fees",
+    "title": "UNIBEN Admission, Clearance, School Charges & Official Student Portal",
+    "shortTitle": "UNIBEN fees, portal & clearance",
+    "summary": "For UNIBEN students, confirm the admission on JAMB CAPS, use the university's student portal to process acceptance and clearance, and pay the school-charge invoice generated for your own course and session.",
+    "category": "Education",
+    "agencySlug": "uniben",
+    "feeLabel": "School charges: use official student invoice",
+    "feeNote": "The university's 23 November 2025 notice says 2025/26 fees were unchanged from the preceding session, but does not establish a universal 2026/27 undergraduate amount. The university's general fee tables are not a substitute for a current session and faculty-specific invoice.",
+    "timeline": "The October and November 2025 instructions apply to 2025/26 entrants. No 2026/27 clearance or school-charge deadline is inferred from them.",
+    "status": "verified",
+    "officialPortal": "https://portal.uniben.edu",
+    "requirements": [
+      "JAMB registration number and a matching provisional admission record on JAMB CAPS",
+      "Access to the personal email used to receive a UNIBEN Student ID and password during acceptance processing",
+      "JAMB result slip, institution-copy admission letter, O-level certificate or result, and matching result-verification scratch card details",
+      "Birth record or age declaration, certificate of local-government origin and university-requested affidavits for clearance"
+    ],
+    "steps": [
+      "Open the University of Benin's official student portal and verify that your provisional offer matches the admission recorded on JAMB CAPS.",
+      "For the documented 2025/26 acceptance route, sign in with your JAMB registration number; supply a personal email to obtain a Student ID and new password, then sign in as a student.",
+      "Open ACADEMICS then CLEARANCE to begin the acceptance/clearance workflow; pay the acceptance invoice through the official payment route and refresh your payment status by signing out and signing back in.",
+      "Upload the required birth, identity and examination records, preview your clearance form and submit it for university approval; keep the acceptance receipt and request confirmation.",
+      "After your student account is enabled for the relevant session, select PAYMENT then SCHOOL CHARGES, generate the exact fee invoice for your programme, and pay through the university's Remita instructions.",
+      "After the school has approved clearance and credited your school-charge payment, download the confirmed receipt, select your semester courses on the student portal and show the registered course list to the departmental course adviser for validation."
+    ],
+    "notes": [
+      "Do not reuse a 2025/26 fee or deadline as the 2026/27 amount; admission and payment stages can change each session.",
+      "The university's older general school-charge table and acceptance-fee table may not reflect your college, level, new charges or current invoice.",
+      "University of Benin's official 5 October 2026 JUPEB announcement separately lists a ₦23,000 foundation-programme application fee, excluding bank charges. That is NOT undergraduate tuition, clearance or the Post-UTME fee.",
+      "Only the university's own portal and published instructions should control payment; MyNigeriaGuide does not collect school fees or student passwords."
+    ],
+    "sources": [
+      {
+        "label": "UNIBEN — October 2025 acceptance and clearance procedure",
+        "agency": "University of Benin",
+        "url": "https://news.uniben.edu/university-of-benin-opens-portal-for-commencement-of-acceptance-processing-in-the-2025-2026-admission-cycle/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNIBEN — November 2025 school-charge portal instructions",
+        "agency": "University of Benin",
+        "url": "https://news.uniben.edu/opening-of-portal-for-payment-of-school-charges-by-newly-admitted-students-for-2025-2026-academic-session/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNIBEN — admission clearance document requirements",
+        "agency": "University of Benin",
+        "url": "https://www.uniben.edu/admissionrequirements.html",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNIBEN — October 2026 JUPEB notice",
+        "agency": "University of Benin",
+        "url": "https://news.uniben.edu/uniben-opens-admission-into-2026-2027-foundation-programmes-in-collaboration-with-jupeb/",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "UNIBEN acceptance fee",
+      "unibenportal",
+      "portal.uniben.edu",
+      "uniben clearance steps",
+      "UNIBEN student portal",
+      "UNIBEN school charges",
+      "UNIBEN JUPEB application",
+      "University of Benin admission",
+      "UNIBEN admission portal",
+      "UNIBEN school fees",
+      "UNIBEN clearance",
+      "UNIBEN post utme 2026",
+      "University of Benin fees 2026/2027"
+    ]
+  },
+  {
+    "slug": "ui-admission-screening-school-fees",
+    "title": "University of Ibadan Admission, School Fees, Screening & Clearance",
+    "shortTitle": "UI fees, admissions & clearance",
+    "summary": "The University of Ibadan's 2026/27 admission screening required a ₦3,000 portal-access payment and ₦2,000 screening fee. Those registration windows have ended; accepted students must check the official portal for their own session's acceptance, physical-clearance and school-levy instructions.",
+    "category": "Education",
+    "agencySlug": "ui-university",
+    "feeLabel": "2026/27 screening: ₦5,000 (past window)",
+    "feeNote": "₦3,000 admission portal access plus ₦2,000 screening was published for the 2026/27 screening cycle; this is not tuition, hostel or acceptance. UI's ₦50,000 acceptance notice was for 2025/26 and should not be reused as a 2026/27 fee.",
+    "timeline": "The 2026/27 UTME screening registration ran 22 June–19 July; Direct Entry registration ran 3–16 August 2026. Both periods are past as of 12 October 2026.",
+    "status": "verified",
+    "officialPortal": "https://admissions.ui.edu.ng/",
+    "requirements": [
+      "JAMB registration number and the university's published first-choice/eligibility screening conditions for the relevant academic session",
+      "Valid O-level results, uploaded and matched to JAMB records, plus any Direct Entry qualification in the candidate's admission category",
+      "Active email address and admission portal access for payment confirmation and university announcements",
+      "For admitted candidates attending physical clearance, original and photocopied admission letter, result slip, birth record and supporting documents listed for their own session"
+    ],
+    "steps": [
+      "Check University of Ibadan's admissions announcement for the correct UTME or Direct Entry session before attempting registration; the 2026/27 public registration windows have ended.",
+      "Open the UI admission portal with your JAMB registration number and follow its sign-in/recovery procedure for the relevant exercise.",
+      "When an official application window is active, generate payment through the portal and pay the session-specific portal-access and screening amounts shown on its university notice; save the successful payment receipt.",
+      "Check your JAMB CAPS admission status and the university's admission portal separately; an application payment alone is not an admission offer.",
+      "After a formal offer, read the university's current acceptance and clearance notices, pay only the documented session fee and assemble the required originals, photocopies and university forms.",
+      "Use the student portal for school levies or course registration when the university opens it; distinguish technology, utility, faculty and medical-professional levies where stated."
+    ],
+    "notes": [
+      "University of Ibadan's 2025/26 notice gave ₦50,000 acceptance and a March 2026 physical clearance exercise; those are historical, not live 2026/27 instructions.",
+      "The 2025/26 university payment guide distinguishes bundled/school fees from separate technology and utility levies and special fees for some programmes.",
+      "Do not treat the screening fee, acceptance fee, hostel charge and eventual student invoice as the same payment.",
+      "Admissions records, school charges and clearance requirements must be checked through the university and JAMB, not unofficial WhatsApp payment links."
+    ],
+    "sources": [
+      {
+        "label": "UI — 2026/27 UTME/DE screening and payment notice",
+        "agency": "University of Ibadan",
+        "url": "https://ui.edu.ng/news/post-utmedirect-entry-screening-prospective-candidates-20262027-admission-exercise",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UI — 2026/27 Direct Entry registration notice",
+        "agency": "University of Ibadan",
+        "url": "https://ui.edu.ng/news/20262027-admission-exercise-direct-entry-registration",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UI — 2025/26 acceptance-fee notice",
+        "agency": "University of Ibadan",
+        "url": "https://ui.edu.ng/news/utme-direct-entry-acceptance-fee-payment-prospective-candidates-20252026-admission-exercise",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UI — 2025/26 physical clearance notice",
+        "agency": "University of Ibadan",
+        "url": "https://ui.edu.ng/news/notice-new-students-2025-2026-physical-admission-clearance-exercise",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "admissions.ui.edu.ng",
+      "UI acceptance fee 2026",
+      "UI post UTME",
+      "University of Ibadan school levies",
+      "UI admission status",
+      "UI physical clearance",
+      "UI undergraduate portal",
+      "University of Ibadan admission",
+      "UI admission portal",
+      "UI school fees",
+      "UI clearance",
+      "UI post utme 2026",
+      "University of Ibadan fees 2026/2027"
+    ]
+  },
+  {
+    "slug": "unn-admission-fees-clearance",
+    "title": "UNN 2026/27 Admission Screening, Acceptance Fee & Clearance Guide",
+    "shortTitle": "UNN screening, fees & clearance",
+    "summary": "University of Nigeria Nsukka's 2026/27 screening notice specified ₦2,000 application and ₦3,300 processing charges; the August 5 registration deadline has passed. New entrants should use the UNN portal, accept a confirmed JAMB CAPS offer, then obtain the correct session and list-specific acceptance invoice before clearance.",
+    "category": "Education",
+    "agencySlug": "unn",
+    "feeLabel": "2026/27 screening: ₦5,300 (past deadline)",
+    "feeNote": "The 2026/27 ₦2,000 application + ₦3,300 processing charges are distinct from school and acceptance fees. For 2025/26 UNN published different acceptance amounts across primary and certain supplementary lists; do not extrapolate a single amount to every admission batch.",
+    "timeline": "The 2026/27 published screening period ran 15 July–5 August 2026 and has passed. Further admissions and resumption/clearance notices must be checked separately.",
+    "status": "verified",
+    "officialPortal": "https://unnportal.unn.edu.ng/",
+    "requirements": [
+      "2026 JAMB UTME registration with UNN as first choice and the screening eligibility announced for the candidate's category",
+      "O-level results uploaded to JAMB CAPS and UNN portal, with consistency between JAMB and exam records",
+      "Direct Entry result or qualification verification where the candidate is applying through JAMB Direct Entry",
+      "JAMB admission letter, UNN admission notice, evidence of age, verified examination records and payment receipts for eventual faculty clearance"
+    ],
+    "steps": [
+      "Open UNN's official 2026/27 screening announcement and confirm your entry category and whether any newly published application window exists; the original 5 August deadline is past.",
+      "During an authorised window, enter the JAMB registration number through UNN's portal, generate an official invoice and pay the stated application and processing charges through Remita.",
+      "Complete the requested biodata, subject grades and supporting document uploads; review all names, grades and birth dates before submitting and print the acknowledgement slip.",
+      "Check admission through JAMB CAPS and the official UNN admission-status channel; a screening result or recommendation is not the same as an accepted CAPS offer.",
+      "If admitted, generate an acceptance invoice from the UNN portal for the specific admission list and session; use its official receipt and acceptance form, not an amount copied from a different batch.",
+      "Arrange the faculty clearance package, verification of O-level results, school-fee invoice and course registration according to the current student instructions."
+    ],
+    "notes": [
+      "UNN's 2025/26 primary notice listed ₦30,000 acceptance, while a later supplementary notice described ₦50,000 for a different cohort; fee amount must be tied to the candidate's actual letter and invoice.",
+      "UNN's earlier freshman instructions describe supporting documents, signed acceptance, result verification and course registration. The current faculty may modify this list.",
+      "Do not submit altered examination results or share result scratch-card details with unauthorised agents.",
+      "Verify the correct current portal and whether any deadline has been extended via www.unn.edu.ng before paying."
+    ],
+    "sources": [
+      {
+        "label": "UNN — 2026/27 admission screening notice",
+        "agency": "University of Nigeria Nsukka",
+        "url": "https://www.unn.edu.ng/2026-2027-screening-exercise-for-admission/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNN — 2025/26 primary admission/acceptance instructions",
+        "agency": "University of Nigeria Nsukka",
+        "url": "https://www.unn.edu.ng/breaking-news-2025-2026-primary-admission-list/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNN — 2025/26 supplementary notice with different acceptance amount",
+        "agency": "University of Nigeria Nsukka",
+        "url": "https://www.unn.edu.ng/2025-2026-supplementary-admission-list/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNN — official instructions for new students",
+        "agency": "University of Nigeria Nsukka",
+        "url": "https://www.unn.edu.ng/urgent-information-to-all-new-students-freshmen/",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "UNN portal",
+      "UNN acceptance fee 2026",
+      "UNN screening 2026/2027",
+      "UNN school fees portal",
+      "UNN admission list",
+      "UNN document clearance",
+      "UNN first year course registration",
+      "University of Nigeria Nsukka admission",
+      "UNN admission portal",
+      "UNN school fees",
+      "UNN clearance",
+      "UNN post utme 2026",
+      "University of Nigeria Nsukka fees 2026/2027"
+    ]
+  },
+  {
+    "slug": "unilag-admission-screening-fees",
+    "title": "UNILAG 2026/27 Post-UTME, Direct Entry, Student Fees & Clearance",
+    "shortTitle": "UNILAG fees, portals & screening",
+    "summary": "For the 2026/27 University of Lagos screening, the university set ₦5,500 in combined application/administrative charges for Post-UTME and ₦3,500 for Direct Entry. The published application windows are over; verify admission and freshers' fee notices using UNILAG's official portals.",
+    "category": "Education",
+    "agencySlug": "unilag",
+    "feeLabel": "2026/27 Post-UTME: ₦5,500 (closed)",
+    "feeNote": "UNILAG identifies ₦2,000 application plus ₦3,500 administrative for the 2026/27 Post-UTME, and ₦3,500 for its separate Direct Entry registration. Neither figure is undergraduate school fees. Its older 2023 obligatory-fee schedule should not be represented as the 2026/27 amount.",
+    "timeline": "2026/27 Post-UTME registration ended 8 July, online test took place 27–31 July, and Direct Entry registration ran 9–22 September 2026; verify any later official new notice.",
+    "status": "verified",
+    "officialPortal": "https://applications.unilag.edu.ng/home",
+    "requirements": [
+      "University of Lagos first-choice JAMB record and the 2026/27 eligibility criteria for Post-UTME or Direct Entry",
+      "Five qualifying O-level credits in the required subjects including English and Mathematics as specified in UNILAG's announcement",
+      "An active personal email address for university examination, admission and application communications",
+      "JAMB result or Direct Entry acknowledgement and the relevant academic qualification documents for the chosen route"
+    ],
+    "steps": [
+      "Open UNILAG's official Admissions announcements and identify the published entry route for your session: Post-UTME, Direct Entry or a separately announced degree programme.",
+      "Use the university applications portal to start an Undergraduate application and sign in using the admission-cycle JAMB details and surname format specified by UNILAG.",
+      "For a future authorised screening window, generate the official payment advice, pay the published charge and return to complete the form; save your payment and exam-pass receipts.",
+      "Upload examination or Direct Entry qualification results, check that O-level data also appears on JAMB CAPS, and preview every application field before submitting.",
+      "Check university and JAMB announcements for the offer outcome; do not assume a passed screening or cut-off mark guarantees admission.",
+      "After admission, use UNILAG's current student-registration notice and personal invoice to determine obligatory charges, medical or faculty requirements and physical or online screening appointments."
+    ],
+    "notes": [
+      "UNILAG says its 2026/27 Post-UTME exercise was online and it authorised no outside CBT centre or agent to conduct it.",
+      "UNILAG's publicly published 2023 obligatory-charge schedule separates courses with laboratories from courses without; it cannot safely be labelled a 2026/27 fee table.",
+      "A UNILAG postgraduate, distance-learning or foundation application has separate fees and eligibility from the full-time undergraduate Post-UTME.",
+      "Do not pay third-party bank accounts for guaranteed admission, exam access, an appointment or clearance."
+    ],
+    "sources": [
+      {
+        "label": "UNILAG — 2026/27 undergraduate Post-UTME screening",
+        "agency": "University of Lagos",
+        "url": "https://unilag.edu.ng/important-notice-on-2026-2027-post-utme-screening-exercise/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNILAG — 2026/27 online test and approved fee",
+        "agency": "University of Lagos",
+        "url": "https://unilag.edu.ng/examination-instructions-for-2026-2027-post-utme-aptitude-test/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNILAG — 2026/27 Direct Entry application and fee",
+        "agency": "University of Lagos",
+        "url": "https://unilag.edu.ng/online-registration-procedure-for-2026-2027-direct-entry-candidates/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "UNILAG — older obligatory fees (historical only)",
+        "agency": "University of Lagos",
+        "url": "https://unilag.edu.ng/adjusted-obligatory-fees-for-new-and-returning-undergraduate-students/",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "applications.unilag.edu.ng",
+      "unilag post utme fee",
+      "UNILAG cut off marks 2026",
+      "UNILAG 2026/27 direct entry",
+      "UNILAG school fees 2026",
+      "University of Lagos freshmen screening",
+      "UNILAG obligatory fees",
+      "University of Lagos admission",
+      "UNILAG admission portal",
+      "UNILAG school fees",
+      "UNILAG clearance",
+      "UNILAG post utme 2026",
+      "University of Lagos fees 2026/2027"
+    ]
+  },
+  {
+    "slug": "lasu-admission-screening-lacaca",
+    "title": "LASU 2026/27 Admission Screening, LACACA Clearance & Student Fees",
+    "shortTitle": "LASU admission & LACACA clearance",
+    "summary": "Lagos State University has separate official portals for its 2026/27 undergraduate admission screening and Central Admissions Clearance (LACACA). Screening eligibility and student-clearance payments depend on the student's route and verified admission record.",
+    "category": "Education",
+    "agencySlug": "lasu",
+    "feeLabel": "Screening and clearance: check LASU invoice",
+    "feeNote": "The LASU screening platform refers applicants to its dedicated payment link after login; it does not provide a universal school-fee or LACACA amount on that landing page. The university requires separate acceptance, medical and clearance payments as applicable; pay only a current official invoice.",
+    "timeline": "The 2026/27 LASU admission-screening and LACACA portals are listed. Portal accessibility does not prove any applicant can still submit screening, nor does it establish an individual clearance deadline.",
+    "status": "verified",
+    "officialPortal": "https://services.lidc.lasu.edu.ng/admissionscreening/",
+    "requirements": [
+      "2026 JAMB registration number and LASU first-choice institution status in JAMB CAPS",
+      "Relevant O-level credits uploaded to JAMB CAPS at an accredited CBT centre",
+      "Appropriate Direct Entry, JUPEB or UTME qualification under LASU's documented candidate categories",
+      "For admitted students, JAMB registration number, matching surname, acceptance and medical payment proof and documents requested in LACACA"
+    ],
+    "steps": [
+      "Open the official LASU 2026/27 admissions-screening portal and choose the UTME, Direct Entry or JUPEB applicant category that matches your record.",
+      "Confirm the university's current eligibility and that your O-level results and choice of institution appear correctly on JAMB CAPS before entering a JAMB number and surname.",
+      "If your application window is authorised, sign in, use the LASU-listed payment link, return with its transaction reference and enter your biodata and qualifications for screening.",
+      "Check the school's official admissions notices and JAMB CAPS for a provisional admission decision; do not pay a clearance fee on an unverified offer.",
+      "Once admitted, open LASU's official Central Admissions Clearance portal and sign in with the JAMB number and surname, then use the school's payment and document-upload instructions for LACACA.",
+      "Keep official acceptance, medical, clearance and school-fee receipts separate; confirm matriculation-number assignment and any faculty follow-up using university notifications."
+    ],
+    "notes": [
+      "LASU's current admissions platform specifies 195 as the 2026/27 minimum UTME score for its listed route; admission still depends on course criteria, JAMB and university processing.",
+      "The 2026/27 LACACA site is separate from the admission-screening site, so a screening payment does not complete admitted-student clearance.",
+      "LASU's official 2025/26 LACACA notice described acceptance, medical and clearance payments before clearance. Use current 2026/27 instructions for any fee amount or timing.",
+      "Applicants of Lagos State origin may face a separate indigeneship verification procedure; it is not proof of admission."
+    ],
+    "sources": [
+      {
+        "label": "LASU — 2026/27 official admission-screening portal",
+        "agency": "Lagos State University",
+        "url": "https://services.lidc.lasu.edu.ng/admissionscreening/",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "LASU — 2026/27 student clearance portal",
+        "agency": "Lagos State University",
+        "url": "https://www.lasu.edu.ng/central_admission_clearance/student/index.php",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "LASU — 2025/26 LACACA notice and payment sequencing",
+        "agency": "Lagos State University",
+        "url": "https://lasu.edu.ng/home/news/read.php?id=573",
+        "lastChecked": "2026-10-12"
+      },
+      {
+        "label": "LASU — 2026/27 indigeneship verification information",
+        "agency": "Lagos State University",
+        "url": "https://www.lasu.edu.ng/iive/",
+        "lastChecked": "2026-10-12"
+      }
+    ],
+    "related": [
+      "jamb-caps",
+      "jamb-admission-letter",
+      "jamb-matriculation-list",
+      "nelfund-student-loan-application"
+    ],
+    "lastVerified": "2026-10-12",
+    "searchTerms": [
+      "LASU LACACA clearance",
+      "lasu.edu.ng admission portal",
+      "LASU screening 2026/2027",
+      "LASU admission clearance 2026",
+      "LASU school fee portal",
+      "Lagos State University acceptance fee",
+      "LASU indigeneship verification",
+      "Lagos State University admission",
+      "LASU admission portal",
+      "LASU school fees",
+      "LASU clearance",
+      "LASU post utme 2026",
+      "Lagos State University fees 2026/2027"
+    ]
+  }
+]
