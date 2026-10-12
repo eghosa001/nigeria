@@ -87,6 +87,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   const movie = await youtubeServerStore.detail(videoId);
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
+  const onceUponAVillageEpisode = movie.videoId === "X3HaWmJoSRU" || movie.videoId === "Yu-QxqPDmXM";
   const base = getSiteUrl();
   const related = indexable ? await getRelatedYouTubeDetailMovies(movie, 8) : [];
   const sameChannel = related.filter((item) => item.channelName.toLowerCase() === movie.channelName.toLowerCase()).slice(0, 4);
@@ -155,6 +156,15 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
               ) : (
                 <p className="movie-hero-cast"><strong>Cast:</strong> Not yet confirmed.</p>
               )}
+
+              {onceUponAVillageEpisode ? (
+                <p className="movie-long-summary">
+                  <strong>Looking for the full series cast?</strong>{" "}
+                  <Link href="/entertainment/series/once-upon-a-village#cast">
+                    See the Once Upon a Village cast and episode guide →
+                  </Link>
+                </p>
+              ) : null}
 
               <div className="movie-detail-actions">
                 <a className="button" href="#watch-here">Watch here</a>
