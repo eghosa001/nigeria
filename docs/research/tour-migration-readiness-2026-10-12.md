@@ -41,3 +41,5 @@ The existing `/services/anambra-asin-registration` canonical showed several impr
 - `https://tax.services.an.gov.ng/`: official help and contact information.
 
 No current price is invented, and no claim is made that old ANSSID fee instructions prove a present ASIN fee. No indexable page or URL changes, no new production D1 records, no change to cutover flag, and no asserted CTR gain until subsequent settled GSC data becomes available.
+
+**Correction confirmed against the official Anambra State payments directory (12 October 2026):** `https://smart.anambrastate.gov.ng/pay` links to `https://tax.services.an.gov.ng/asin/search` for finding an existing ASIN by phone, NIN, email or ASIN. The separately listed `/verification-landing` checks receipts and certificates. The existing ASIN page now distinguishes those two tasks. No new public canonical was created.
