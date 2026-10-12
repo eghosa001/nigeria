@@ -8,9 +8,11 @@ const intentSuffixes = [
   /\s+(?:full\s+)?cast(?:\s+and\s+crew)?$/i,
   /\s+where\s+to\s+watch$/i,
   /\s+(?:nigerian|nollywood)\s+movies?$/i,
+  // Strip "the movie" before the generic "movie" suffix; otherwise
+  // "Sibe the movie cast" wrongly normalizes to "Sibe the".
+  /\s+the\s+movie$/i,
   /\s+(?:full\s+)?movies?$/i,
   /\s+(?:actors?|streaming)$/i,
-  /\s+the\s+movie$/i,
 ];
 
 export function movieSearchCore(query: string): string {
