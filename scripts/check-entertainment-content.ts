@@ -18,7 +18,12 @@ for (const title of entertainmentTitles) {
 
   assert(title.title.trim().length > 1, prefix + "title is required.");
   assert(title.synopsis.trim().length >= 60, prefix + "synopsis must provide substantial original context.");
-  assert(title.cast.length > 0, prefix + "cast evidence is required for curated movie pages.");
+  // Documentaries can be sourced through identified real-world subjects;
+  // demanding actors would encourage mislabelled historical figures.
+  assert(
+    title.cast.length > 0 || (title.genres.includes("Documentary") && Boolean(title.subjects?.length)),
+    prefix + "cast evidence or documentary subject evidence is required for curated movie pages.",
+  );
   assert(title.genres.length > 0, prefix + "at least one genre is required.");
   assert(title.languages.length > 0, prefix + "at least one language is required.");
 
