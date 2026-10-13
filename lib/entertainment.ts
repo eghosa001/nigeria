@@ -1304,9 +1304,17 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "Two people from very different worlds meet unexpectedly and must decide whether love can survive ambition, cultural differences and personal fears.",
-    cast: ["Uzor Arukwe", "Bambam", "Osereme Inegbenebor", "Daniel Rocky", "Thelma Nwosu", "Amanda Iriekpen", "Susan Jimah"],
-    featuredCast: ["Uzor Arukwe", "Bambam", "Osereme Inegbenebor"],
+    synopsis: "Wealthy Obiora falls for Chioma and pursues a relationship despite her reservations, as their contrasting expectations and personal loyalties complicate the romance.",
+    cast: ["Uzor Arukwe", "Bamike Olawunmi", "Osereme Inegbenebor", "Thelma Chukwunwem", "Amanda Iriekpen", "Tinuade Jemiseye"],
+    featuredCast: ["Uzor Arukwe", "Bamike Olawunmi", "Osereme Inegbenebor"],
+    directors: ["Stanley Obi"],
+    runtimeMinutes: 116,
+    references: [{
+      label: "IMDb — Love in Every Word original 2025 credited cast, roles and filmmakers",
+      href: "https://www.imdb.com/title/tt36865844/fullcredits/",
+      lastChecked: "2026-10-13",
+      note: "Verifies Obiora and Chioma character roles, Stanley Obi's directing credit and separate screenplay credits; distinguishes the original from The Wedding sequel."
+    }],
     watchLinks: [{ platform: "YouTube", label: "Watch the full movie on YouTube", href: "https://www.youtube.com/watch?v=bslcx4LRFL0", access: "full-movie", lastChecked: "2026-09-29", note: "Full movie published by Omoni Oboli TV.", publisher: "Omoni Oboli TV", publisherUrl: "https://www.youtube.com/@OmoniOboliTV" }],
   },
   {
@@ -2158,6 +2166,12 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     featuredCast: ["BamBam Olawumi", "Bobby Ekpe", "Jude Chukwuka"],
     directors: ["Biodun Stephen"],
     runtimeMinutes: 121,
+    references: [{
+      label: "Biodun Stephen TV — Bowale official full movie and plot",
+      href: "https://www.youtube.com/watch?v=GrxitJ4fHT8",
+      lastChecked: "2026-10-13",
+      note: "Original publisher confirms the 30-year wrongful-imprisonment premise, cast, director and 16 September 2026 release."
+    }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
@@ -2197,10 +2211,17 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Romance", "Comedy", "Nollywood"],
     languages: ["English"],
-    synopsis: "A relationship-driven romantic comedy about love, commitment and the choices that determine whether two people can build a lasting life together.",
+    synopsis: "Demilade and Ekene navigate romance, family expectations and competing relationships as the choices around them test whether their connection can survive beyond first impressions.",
     cast: ["Uzor Arukwe", "Bimbo Ademoye", "Chioma Nwosu", "Osas Ighodaro"],
     featuredCast: ["Uzor Arukwe", "Bimbo Ademoye", "Osas Ighodaro"],
+    directors: ["Great Valentine Edochie"],
     runtimeMinutes: 146,
+    references: [{
+      label: "IMDb — Where Love Lives principal actor roles, director and screenwriter",
+      href: "https://www.imdb.com/title/tt39297072/fullcredits/",
+      lastChecked: "2026-10-13",
+      note: "Confirms Bimbo Ademoye as Demilade, Uzor Arukwe as Ekene, Osas Ighodaro as Imade and named film credits."
+    }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
