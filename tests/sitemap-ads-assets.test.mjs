@@ -36,3 +36,12 @@ test("AdSense has early head bootstrap and is excluded on admin paths", () => {
   assert.match(layout, /path === "\/admin"/);
   assert.ok(!layout.includes("<AdsenseScript />"), "do not double-load");
 });
+
+test("recently changed canonical page feed is emitted alongside sitemap", () => {
+  const rss = read("recent-pages.xml");
+  assert.match(rss, /<rss version="2\.0">/);
+  assert.match(rss, /<item><title>/);
+  assert.match(rss, /https:\/\/mynigeriaguide\.com\//);
+  assert.doesNotMatch(rss, /workers\.dev|localhost|<loc>/);
+  assert.ok((rss.match(/<item>/g) ?? []).length <= 200);
+});

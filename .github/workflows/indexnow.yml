@@ -1,38 +1,29 @@
-name: IndexNow
+name: IndexNow - Incremental Discovery
 
 on:
   workflow_dispatch:
+    inputs:
+      full_resubmit:
+        description: "Explicitly re-notify all canonical URLs (normally unnecessary)"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths:
-      - "data/services.json"
-      - "data/updates.ts"
-      - "data/search-query-overrides.ts"
-      - "data/service-locations.ts"
-      - "lib/growth-hubs.ts"
-      # Jobs sitemap URLs are derived from these content files.
-      - "lib/jobs.ts"
-      - "lib/job-scale-wave.ts"
-      - "lib/job-topics.ts"
-      - "lib/job-facets.ts"
-      - "lib/job-employers.ts"
-      - "lib/job-runtime.ts"
-      - "lib/job-query.ts"
-      - "lib/career-guides.ts"
-      - "lib/sitemap-sections.ts"
-      - "app/**/page.tsx"
-      - "app/api/jobs/route.ts"
-      - "app/page.tsx"
-      - "app/sitemap.ts"
-      - "app/robots.ts"
-      - "public/6ce5a25890f63884432abbd2a7223bd6.txt"
+      - "app/**"
+      - "data/**"
+      - "lib/**"
+      - "public/**"
+      - "scripts/indexnow-*.mjs"
       - "scripts/submit-indexnow.mjs"
-      - "scripts/indexnow-sitemap.mjs"
-      - "scripts/indexnow-sitemap.test.mjs"
+      - "scripts/generate-static-sitemaps.ts"
       - ".github/workflows/indexnow.yml"
 
+permissions:
+  contents: read
+
 concurrency:
-  group: indexnow
+  group: indexnow-production
   cancel-in-progress: true
 
 jobs:
@@ -41,19 +32,36 @@ jobs:
     timeout-minutes: 15
     env:
       LIVE_BASE_URL: https://mynigeriaguide.com
+      INDEXNOW_FORCE_ALL: ${{ inputs.full_resubmit || 'false' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Verify sitemap index resolves to page URLs
+      - name: Verify focused IndexNow tests
         run: node --test scripts/indexnow-sitemap.test.mjs
+      - name: Restore last successful published URL snapshot
+        uses: actions/cache/restore@v4
+        with:
+          path: .indexnow-state.json
+          key: indexnow-prod-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            indexnow-prod-
+      - name: Find directly changed static routes
+        shell: bash
+        run: |
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            changed="$(git diff --name-only HEAD^ HEAD | paste -sd ',' -)"
+            echo "INDEXNOW_CHANGED_PATHS=$changed" >> "$GITHUB_ENV"
+          fi
       - name: Wait for this exact commit to reach production
         shell: bash
         run: |
           expected="$GITHUB_SHA"
           for i in {1..60}; do
-            body="$(curl -fsS --max-time 15 "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
+            body="$(curl -fsS --max-time 15 -H 'Cache-Control: no-cache' "$LIVE_BASE_URL/deployment.json?expected=$expected&attempt=$i" || true)"
             deployed="$(printf '%s' "$body" | node -e '
               let data="";
               process.stdin.on("data", c => data += c);
@@ -67,7 +75,12 @@ jobs:
             fi
             sleep 10
           done
-          echo "Production did not reach commit $expected within 10 minutes."
+          echo "::error::Production did not reach commit $expected within 10 minutes; no URL notifications sent."
           exit 1
-      - name: Submit live sitemap URLs to IndexNow
+      - name: Notify IndexNow of changed production URLs only
         run: node scripts/submit-indexnow.mjs
+      - name: Save accepted URL snapshot
+        uses: actions/cache/save@v4
+        with:
+          path: .indexnow-state.json
+          key: indexnow-prod-${{ github.run_id }}-${{ github.run_attempt }}
