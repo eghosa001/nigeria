@@ -2541,6 +2541,11 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisherUrl: "https://www.youtube.com/@FilmOneNG",
     },
     references: [{
+      label: "Netflix — Nigeria Top 10 movie chart (28 September–4 October 2026)",
+      href: "https://www.netflix.com/tudum/top10/nigeria/films",
+      lastChecked: "2026-10-13",
+      note: "Netflix's own country chart placed Oversabi Aunty at #1 in Nigeria for the week. Rankings demonstrate historical viewing demand, not continued streaming rights."
+    }, {
       label: "Kava — official Oversabi Aunty listing and synopsis",
       href: "https://watch.kava.tv/oversabi-aunty",
       lastChecked: "2026-10-13",
@@ -2559,9 +2564,16 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       label: "Netflix Nigeria — Oversabi Aunty title listing",
       href: "https://www.netflix.com/ng/title/82741545",
       lastChecked: "2026-10-09",
-      note: "On 9 October the official title page displayed an unavailability notice for the viewer's country. This confirms the listing, not that the film is playable in Nigeria.",
+      note: "The title-page notice observed in an unauthenticated viewing region on 9 October does not establish Nigeria-specific access. Netflix's own Nigeria Top 10 ranked the film #1 for 28 September–4 October 2026; confirm current account playback."
     }],
     watchLinks: [{
+      platform: "Netflix",
+      label: "Check Oversabi Aunty on Netflix Nigeria",
+      href: "https://www.netflix.com/ng/title/82741545",
+      access: "subscription",
+      lastChecked: "2026-10-13",
+      note: "Netflix's official Nigeria Top 10 ranked this film #1 for 28 September–4 October 2026. That historical ranking does not guarantee playback today. Confirm your region, plan and play button in Netflix."
+    }, {
       platform: "Kava",
       label: "Check Oversabi Aunty on Kava",
       href: "https://watch.kava.tv/oversabi-aunty",
