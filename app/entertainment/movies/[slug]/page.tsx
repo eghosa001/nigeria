@@ -420,6 +420,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             ]}
             links={[
               { href: "#cast", label: "See cast" },
+              ...(editorial ? [{ href: "#movie-questions", label: "Characters & story" }] : []),
               { href: "#watch", label: "Where to watch" },
               ...(watchHereVideoId ? [{ href: "#watch-here", label: "Watch here", primary: true }] : []),
               ...(!watchHereVideoId && availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
@@ -440,6 +441,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
         <div className="container">
           <a href="#overview">Overview</a>
           <a href="#cast">Cast & crew</a>
+          {editorial ? <a href="#movie-questions">Film guide</a> : null}
           <a href="#watch">Where to watch</a>
           {title.trailer ? <a href="#trailer">Trailer</a> : null}
           <a href="#related">More to watch</a>
