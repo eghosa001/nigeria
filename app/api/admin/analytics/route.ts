@@ -32,9 +32,10 @@ export async function GET(request: Request) {
   const requestedMode = url.searchParams.get("mode") as AnalyticsTrafficMode | null;
   const mode: AnalyticsTrafficMode = requestedMode && modes.has(requestedMode) ? requestedMode : "clean";
   const forceFresh = url.searchParams.get("fresh") === "1";
+  const includeDiagnostics = url.searchParams.get("details") !== "0";
 
   try {
-    const data = await getAnalyticsDashboard(range, mode, forceFresh);
+    const data = await getAnalyticsDashboard(range, mode, forceFresh, includeDiagnostics);
     return Response.json({ configured: true, authenticated: true, data }, { headers: { "Cache-Control": "private, no-store" } });
   } catch (error) {
     return Response.json({
