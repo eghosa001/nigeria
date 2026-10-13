@@ -2,6 +2,7 @@ import { getEffectiveJobStatus, getEffectiveStatusLabel } from "@/lib/job-runtim
 import type { Metadata } from "next";
 import Link from "next/link";
 import { governmentOpportunities } from "@/lib/jobs";
+import { JobCollection } from "@/components/job-collection";
 
 export const metadata: Metadata = {
   title: "Nigeria Government Jobs & Recruitment Tracker",
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 };
 
 export default function GovernmentJobsPage() {
+  const recruitments = governmentOpportunities.filter((item) => item.kind !== "programme");
+  const developmentProgrammes = governmentOpportunities.filter((item) => item.kind === "programme");
   return (
     <>
       <section className="section page-top jobs-section-top">
@@ -34,7 +37,7 @@ export default function GovernmentJobsPage() {
       <section className="section">
         <div className="container">
           <div className="jobs-tracker-list">
-            {governmentOpportunities.map((item) => (
+            {recruitments.map((item) => (
               <article key={item.slug} className="jobs-tracker-row">
                 <div><span className={"job-status job-status-" + getEffectiveJobStatus(item)}>{getEffectiveStatusLabel(item)}</span></div>
                 <div><small>{item.organization}</small><h2><Link href={"/jobs/" + item.slug}>{item.title}</Link></h2><p>{item.summary}</p>{item.nextMilestone ? <strong>{item.nextMilestone}</strong> : null}</div>
@@ -42,6 +45,13 @@ export default function GovernmentJobsPage() {
               </article>
             ))}
           </div>
+          {developmentProgrammes.length ? (
+            <section aria-labelledby="government-programmes-title">
+              <h2 id="government-programmes-title">Government-backed training and development programmes</h2>
+              <p>These are learning, entrepreneurship or development opportunities, not salaried government vacancies. Check each programme's terms before applying.</p>
+              <JobCollection opportunities={developmentProgrammes} />
+            </section>
+          ) : null}
           <div className="jobs-editorial-note">
             <strong>Why closed recruitments stay here</strong>
             <p>People continue searching for shortlists, screening dates and next steps after applications close. Keeping one verified page prevents stale “apply now” information from replacing the real current stage.</p>
