@@ -28,9 +28,9 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 const quickServices = [
-  { label: "JAMB portal guide", href: "/topics/jamb-2026" },
-  { label: "NYSC portal guide", href: "/topics/nysc" },
-  { label: "WAEC results", href: "/topics/waec" },
+  { label: "JAMB profile code and recovery", href: "/services/jamb-profile-code" },
+  { label: "NYSC senate list checker", href: "/services/nysc-senate-list" },
+  { label: "WAEC result checker", href: "/services/waec-check-result" },
   { label: "NECO results", href: "/topics/neco" },
   { label: "NELFUND", href: "/topics/nelfund" },
   { label: "NIN services", href: "/topics/nin-corrections" },
@@ -172,6 +172,7 @@ export default function HomePage() {
             <Link href="/entertainment/youtube">Latest free YouTube films</Link>
             <Link href="/entertainment/releases">New &amp; upcoming</Link>
             <Link href="/entertainment/cinemas">Cinemas</Link>
+            <Link href="/entertainment/people">Nollywood actors &amp; filmmakers</Link>
           </div>
         </div>
       </section>
@@ -225,8 +226,8 @@ export default function HomePage() {
             <Link href="/explore/events">Events & festivals</Link>
             <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
             <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
-            <Link href="/explore/calabar-carnival-2026">Calabar Carnival 2026</Link>
-            <Link href="/explore/detty-december-lagos-2026">Detty December Lagos</Link>
+            <Link href="/explore/lagos-abeokuta-ibadan-train-guide">Lagos–Abeokuta–Ibadan rail guide</Link>
+            <Link href="/explore/enugu-state-tourism-route">Explore Enugu State</Link>
             <Link href="/explore?q=restaurant#places">Restaurants</Link>
             <Link href="/explore?q=hotel#places">Hotels & stays</Link>
           </div>
@@ -254,6 +255,7 @@ export default function HomePage() {
           <div className="minimal-inline-links" aria-label="Popular recruitment and career guides">
             <Link href="/jobs/nigerian-army-92rri-2026">Army 92RRI recruitment status</Link>
             <Link href="/jobs/remote">Remote jobs in Nigeria</Link>
+            <Link href="/jobs/graduate">Graduate jobs &amp; trainee programmes</Link>
           </div>
 
           <div className="home-jobs-grid">
