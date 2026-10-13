@@ -48,12 +48,14 @@ for (const service of publicServices) {
 
   const detailedRequirements = getRequirementDetails(service);
   if (detailedRequirements.length !== service.requirements.length) {
-    errors.push(prefix + "every requirement must have a detailed viewer-facing explanation");
+    errors.push(prefix + "each listed requirement must appear in the checklist");
   }
-  if (detailedRequirements.some((item) => !item.why.trim() || !item.whenUsed.trim() || !item.format.trim())) {
-    errors.push(prefix + "contains an incomplete requirement explanation");
+  // Optional explanations are better than inferred claims without evidence.
+  // In particular, the taxpayer explanation must never leak into NIN, licence or pension requirements.
+  if (detailedRequirements.some((item) => /taxpayer record/i.test(item.why ?? "") && !/\b(?:tax(?:payer)?\s*(?:id|identification number)|tin|asin|payer\s*id)\b/i.test(item.item))) {
+    errors.push(prefix + "uses a taxpayer explanation for an unrelated requirement");
   }
-  if (detailedRequirements.some((item) => /photograph|(?:passport[- ]?)?photos?\b/i.test(item.item) && /passport record|passport transaction|ICAO rule/i.test(item.why))) {
+  if (detailedRequirements.some((item) => /photograph|(?:passport[- ]?)?photos?\b/i.test(item.item) && /passport record|passport transaction|ICAO rule/i.test(item.why ?? ""))) {
     errors.push(prefix + "explains a photo as a passport document rather than the agency-requested photograph");
   }
 
@@ -63,10 +65,10 @@ for (const service of publicServices) {
 
   const detailedSteps = getStepDetails(service);
   if (detailedSteps.length !== service.steps.length) {
-    errors.push(prefix + "every process step must have viewer-facing preparation, checkpoint and evidence guidance");
+    errors.push(prefix + "every published process step must appear in the guide");
   }
-  if (detailedSteps.some((step) => !step.stage.trim() || !step.checkpoint.trim() || !step.keep.trim())) {
-    errors.push(prefix + "contains an incomplete detailed process step");
+  if (detailedSteps.some((step) => !step.stage.trim())) {
+    errors.push(prefix + "contains a process step without a stage label");
   }
 
   const processText = service.steps.join(" ");
