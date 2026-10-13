@@ -43,7 +43,11 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
   const serviceSlugs = new Set(serviceCatalogs.flatMap((file) =>
     JSON.parse(readFileSync(file, "utf8")).map((item) => item.slug),
   ));
-  const careerGuides = readFileSync("lib/career-guides.ts", "utf8");
+  // Follow the career guide modules actually imported by the canonical index.
+  const careerIndex = readFileSync("lib/career-guides.ts", "utf8");
+  const careerModules = [...careerIndex.matchAll(/from "@\/lib\/(career-[a-z0-9-]+)"/g)]
+    .map((match) => readFileSync("lib/" + match[1] + ".ts", "utf8"));
+  const careerGuides = [careerIndex, ...careerModules].join("\n");
   const jobRecords = readFileSync("lib/jobs.ts", "utf8");
   const jobTopics = readFileSync("lib/job-topics.ts", "utf8");
   const movieCatalog = ["entertainment.ts", ...readdirSync("lib")
@@ -52,7 +56,7 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
   const seriesCatalog = readFileSync("lib/series.ts", "utf8");
   const platformHubs = readFileSync("lib/entertainment-platform-hubs.ts", "utf8");
   const tourSources = readdirSync("lib")
-    .filter((name) => /^explore(?:-growth-wave|-trend-events|-kainji|\.ts)/.test(name) && name.endsWith(".ts"))
+    .filter((name) => /^explore(?:-growth-wave|-trend-events|-kainji|-museum-collections|\.ts)/.test(name) && name.endsWith(".ts"))
     .map((name) => readFileSync("lib/" + name, "utf8"))
     .join("\n");
   const hasSlug = (source, slug) => source.includes('slug: "' + slug + '"') || source.includes('"slug": "' + slug + '"');

@@ -1,3 +1,4 @@
+import { engineeringRegistrationGuide20261013 } from "@/lib/career-nse-coren-2026-10-13";
 import { professionalQualificationGuides20261012 } from "@/lib/career-professional-qualifications-2026-10-12";
 export type CareerGuideSource = {
   label: string;
@@ -27,6 +28,7 @@ export type CareerGuide = {
 };
 
 export const careerGuides: CareerGuide[] = [
+  ...engineeringRegistrationGuide20261013,
   ...professionalQualificationGuides20261012,
   {
     "slug": "nysc-ppa-posting-guide",
