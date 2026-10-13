@@ -112,7 +112,7 @@ export default async function ServicesPage({
             </label>
             <button type="submit">Search services</button>
           </form>
-          <div className="minimal-inline-links" aria-label="Popular service guides">
+          <div className="minimal-inline-links" aria-label="Guides for common service tasks">
             {popularServiceLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
           </div>
         </div>
