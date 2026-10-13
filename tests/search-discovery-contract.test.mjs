@@ -45,7 +45,7 @@ test("curated autocomplete destinations match existing canonical catalogs", () =
   ));
   // Follow the career guide modules actually imported by the canonical index.
   const careerIndex = readFileSync("lib/career-guides.ts", "utf8");
-  const careerModules = [...careerIndex.matchAll(/from "@\\/lib\\/(career-[a-z0-9-]+)"/g)]
+  const careerModules = [...careerIndex.matchAll(/from "@\/lib\/(career-[a-z0-9-]+)"/g)]
     .map((match) => readFileSync("lib/" + match[1] + ".ts", "utf8"));
   const careerGuides = [careerIndex, ...careerModules].join("\n");
   const jobRecords = readFileSync("lib/jobs.ts", "utf8");
