@@ -62,6 +62,7 @@ export function JobsDirectory({ initialResult }: Props) {
       try {
         const response = await fetch("/api/jobs?" + params.toString(), {
           signal: controller.signal,
+          cache: "no-store",
           headers: { Accept: "application/json" },
         });
         if (!response.ok) throw new Error("Jobs query failed with HTTP " + response.status);
@@ -165,7 +166,7 @@ export function JobsDirectory({ initialResult }: Props) {
           <div className="jobs-card-grid">
             {result.recommendations?.map((item) => (
               <article className="job-card" key={item.slug}>
-                <div className="job-card-top"><span className="job-status job-status-open">Listed open</span><span>{item.sector}</span></div>
+                <div className="job-card-top"><span className={"job-status job-status-" + item.effectiveStatus}>{item.effectiveStatusLabel}</span><span>{item.sector}</span></div>
                 <div className="job-card-body">
                   <p className="job-organisation">{item.organization}</p>
                   <h3><Link href={"/jobs/" + item.slug}>{item.title}</Link></h3>
