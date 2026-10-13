@@ -100,6 +100,14 @@ export function Analytics() {
         } catch {}
       }
 
+      if (anchor.closest(".feature-quickstart, .feature-guide")) {
+        const destination = new URL(anchor.href, window.location.origin);
+        if (destination.origin === window.location.origin) trackEvent("feature_discovery_click", {
+          destination_pillar: destination.pathname.split("/")[1] || "home",
+          source_path: pathname,
+        });
+      }
+
       if (anchor.classList.contains("official-service-link")) {
         let host = "";
         try { host = new URL(anchor.href).hostname; } catch {}

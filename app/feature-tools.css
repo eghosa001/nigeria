@@ -1,0 +1,65 @@
+/* Shared discovery and low-overhead visitor tools. Use existing theme tokens. */
+.feature-quickstart { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); padding: 18px 0; }
+.feature-quickstart-inner { display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.feature-quickstart-inner > strong { font-size: .96rem; }
+.feature-quickstart-links { display: flex; flex-wrap: wrap; gap: 9px; }
+.feature-quickstart-links a, .feature-guide-jump a { color: var(--green-dark); border: 1px solid var(--line); background: var(--mint); padding: 8px 13px; border-radius: 999px; font-size: .87rem; font-weight: 700; }
+.feature-quickstart-links a:hover, .feature-guide-jump a:hover { border-color: var(--green); }
+.feature-guide-hero { padding-bottom: 20px; }
+.feature-guide-hero h1 { max-width: 860px; font-size: clamp(2.15rem, 5vw, 3.75rem); }
+.feature-guide-jump { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; }
+.feature-guide-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.feature-guide-card { min-width: 0; scroll-margin-top: 150px; padding: clamp(20px, 3vw, 30px); border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.feature-guide-topline { display: flex; justify-content: space-between; align-items: start; gap: 12px; flex-wrap: wrap; }
+.feature-guide-topline a { color: var(--green-dark); font-size: .9rem; font-weight: 750; }
+.feature-guide-card h2 { font-size: clamp(1.45rem, 2.4vw, 2rem); margin: 18px 0 12px; }
+.feature-guide-card p, .feature-guide-share p { color: var(--muted); max-width: 62ch; }
+.feature-guide-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 20px; }
+.feature-guide-actions a { display: inline-flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 14px; color: var(--ink); background: var(--cream); border: 1px solid var(--line); border-radius: 12px; font-weight: 700; font-size: .9rem; }
+.feature-guide-actions a:hover { border-color: var(--green); color: var(--green-dark); }
+.feature-guide-share-shell { display: grid; grid-template-columns: 1fr minmax(300px,.75fr); gap: 30px; align-items: center; padding: clamp(20px,4vw,36px); border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.feature-share-controls { display: grid; gap: 12px; }
+.feature-share-controls label { font-weight: 750; }
+.feature-share-controls select, .trip-budget-form :is(input,select) { min-height: 46px; width: 100%; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 9px 12px; }
+.feature-share-actions, .trip-budget-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.feature-share-actions :is(button,a), .trip-budget-actions :is(button,a), .trip-budget-reset { min-height: 44px; padding: 10px 15px; border: 1px solid var(--line); background: var(--mint); color: var(--green-dark); border-radius: 10px; font-weight: 750; cursor: pointer; }
+.feature-share-status { font-size: .87rem; margin: 0; }
+.feature-guide-note { color: var(--muted); font-size: .88rem; line-height: 1.55; margin: 14px 0; }
+.trip-planner-hero { padding-bottom: 26px; }
+.trip-planner-hero h1 { font-size: clamp(2.15rem,5vw,3.5rem); }
+.trip-budget-layout { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(300px,.9fr); gap: 22px; align-items: start; }
+.trip-budget-form, .trip-budget-results { min-width: 0; display: grid; gap: 14px; padding: clamp(19px,3vw,30px); border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
+.trip-budget-form h2 { font-size: 1.55rem; }
+.trip-budget-form label { display: grid; gap: 5px; font-weight: 720; font-size: .95rem; }
+.trip-budget-help { font-weight: 400; color: var(--muted); font-size: .83rem; }
+.trip-budget-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.trip-budget-results { position: sticky; top: 132px; }
+.trip-budget-results h2 { color: var(--green-dark); font-size: clamp(2rem,4vw,3rem); overflow-wrap: anywhere; }
+.trip-budget-results dl { margin: 0; display: grid; gap: 0; }
+.trip-budget-results dl > div { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.trip-budget-results dd { margin: 0; text-align: right; font-weight: 700; }
+.trip-budget-total { font-weight: 800; }
+.trip-budget-routes { margin-top: 32px; }
+.trip-planner-routes { margin-top: 36px; }
+.job-watch-panel { margin: 20px 0; padding: 19px; border-radius: 16px; border: 1px solid var(--line); background: var(--surface); }
+.job-watch-panel h3 { margin: 0 0 8px; font-size: 1.2rem; }
+.job-watch-panel p { color: var(--muted); margin-bottom: 10px; }
+.job-watch-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0; }
+.job-watch-actions button { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--mint); color: var(--green-dark); font-weight: 700; padding: 8px 14px; cursor: pointer; }
+.job-watch-actions button:disabled { opacity: .5; cursor: not-allowed; }
+.job-watch-list { display: grid; gap: 10px; padding-left: 18px; margin: 14px 0; }
+.job-watch-list li { padding: 10px; border: 1px solid var(--line); border-radius: 10px; }
+.job-watch-list li > button { margin-left: 12px; cursor: pointer; }
+.job-watch-results { margin-top: 12px; padding: 13px; border-radius: 12px; background: var(--cream); }
+.job-watch-results a { text-decoration: underline; text-underline-offset: 2px; }
+.feature-guide a:focus-visible, .feature-quickstart a:focus-visible, .trip-budget-layout :is(a,button,input,select):focus-visible, .job-watch-panel :is(a,button):focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+@media (max-width: 720px) {
+  .feature-guide-list, .feature-guide-share-shell, .trip-budget-layout { grid-template-columns: minmax(0,1fr); }
+  .feature-quickstart-inner { align-items: stretch; }
+  .feature-quickstart-links { gap: 7px; }
+  .feature-quickstart-links a { font-size: .82rem; padding: 8px 10px; }
+  .trip-budget-results { position: static; }
+  .trip-budget-pair { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .feature-guide-card { scroll-margin-top: 98px; }
+}
+@media (max-width: 360px) { .trip-budget-pair { grid-template-columns: minmax(0,1fr); } }

@@ -160,6 +160,12 @@ type DataStreamsResponse = {
 };
 
 const interactionEvents = [
+  "feature_discovery_click",
+  "feature_share",
+  "trip_plan_share",
+  "job_watch_add",
+  "job_watch_remove",
+  "job_watch_check",
   "job_apply_click",
   "related_content_click",
   "saved_page_add",

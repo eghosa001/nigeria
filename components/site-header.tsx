@@ -152,6 +152,9 @@ export function SiteHeader() {
             </div>
 
             <div className="primary-nav-utilities" aria-label="Utilities">
+              <Link href="/features" className={pathname === "/features" ? "nav-active" : undefined}>
+                What you can do
+              </Link>
               <Link href="/search" className={pathname.startsWith("/search") ? "nav-active" : undefined}>
                 Search
               </Link>

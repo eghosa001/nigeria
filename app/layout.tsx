@@ -3,6 +3,7 @@ import "@/app/globals.css";
 import "@/app/mobile.css";
 import "@/app/theme.css";
 import "@/app/ux-polish.css";
+import "@/app/feature-tools.css";
 import { ADSENSE_CLIENT } from "@/lib/adsense-config";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/json-ld";

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SavedGuides } from "@/components/saved-guides";
 import { PersonalLibrary } from "@/components/personal-library";
+import { JobSearchWatch } from "@/components/job-search-watch";
 
 export const metadata: Metadata = {
   title: "Saved guides and recent pages",
@@ -18,6 +19,7 @@ export default function SavedPage() {
           Pick up where you left off. Your bookmarks and recently viewed pages stay in this browser—no account required.
         </p>
         <PersonalLibrary />
+        <JobSearchWatch />
         <section className="saved-services-section" aria-labelledby="watched-service-guides">
           <h2 id="watched-service-guides">Watched service guides</h2>
           <p>Save official-service guides to see when their fees or verification details change.</p>

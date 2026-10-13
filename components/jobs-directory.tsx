@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { JobDirectoryResult } from "@/lib/job-query";
 import type { JobSector, JobStatus } from "@/lib/jobs";
 import { jobLocationFacets, jobProfessionFacets } from "@/lib/job-facets";
+import { JobSearchWatch } from "@/components/job-search-watch";
 
 type Props = { initialResult: JobDirectoryResult };
 
@@ -124,6 +125,8 @@ export function JobsDirectory({ initialResult }: Props) {
           </select>
         </label>
       </div>
+
+      <JobSearchWatch filters={{ q: query, sector, status, location, profession }} />
 
       <div className="jobs-results-line" aria-live="polite">
         <strong>{result.total}</strong> verified {result.total === 1 ? "pathway" : "pathways"}
