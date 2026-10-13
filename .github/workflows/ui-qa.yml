@@ -48,6 +48,16 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
+          # ads.txt is a public static asset: guard only this publication path.
+          ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
+          ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
+          if [ -n "$ads_changed" ] && [ -z "$ads_other" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "mode=ads-txt" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare Runtime QA checks the served static asset; skip duplicate browser build."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-production-scope.mjs "$changed"; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=youtube-d1-production" >> "$GITHUB_OUTPUT"
