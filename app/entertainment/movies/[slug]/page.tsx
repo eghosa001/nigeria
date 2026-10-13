@@ -313,6 +313,12 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     inLanguage: title.languages,
     actor: title.cast.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
+    author: editorial?.crew
+      .filter((credit) => /writer|screenplay/i.test(credit.role))
+      .map((credit) => ({ "@type": "Person", name: credit.name })) || undefined,
+    producer: editorial?.crew
+      .filter((credit) => /producer/i.test(credit.role))
+      .map((credit) => ({ "@type": "Person", name: credit.name })) || undefined,
     image: image || undefined,
     countryOfOrigin: { "@type": "Country", name: "Nigeria" },
     dateModified: lastChecked || undefined,
