@@ -17,6 +17,7 @@ import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
 import { movieEditorialProfiles } from "@/lib/movie-editorial-profiles";
 import { movieEditorialProfilesWave2 } from "@/lib/movie-editorial-profiles-wave2";
 import { movieEditorialProfilesWave3 } from "@/lib/movie-editorial-profiles-wave3";
+import { featuredEditorialProfiles } from "@/lib/movie-editorial-profiles-featured";
 import { netflixEditorialProfilesClassic } from "@/lib/movie-editorial-profiles-netflix-classic";
 import { netflixEditorialProfilesEstablished } from "@/lib/movie-editorial-profiles-netflix-established";
 import { netflixEditorialProfilesRecent } from "@/lib/movie-editorial-profiles-netflix-recent";
@@ -311,7 +312,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     ?? movieEditorialProfilesWave3[title.slug]
     ?? netflixEditorialProfilesClassic[title.slug]
     ?? netflixEditorialProfilesEstablished[title.slug]
-    ?? netflixEditorialProfilesRecent[title.slug];
+    ?? netflixEditorialProfilesRecent[title.slug]
+    ?? featuredEditorialProfiles[title.slug];
   const image = movieImageUrl(title, base);
   const movieLd = {
     "@context": "https://schema.org",
