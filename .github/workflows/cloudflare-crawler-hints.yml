@@ -1,6 +1,11 @@
 name: Cloudflare Crawler Hints - Explicit Activation
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/cloudflare-crawler-hints.mjs"
+      - ".github/workflows/cloudflare-crawler-hints.yml"
 permissions:
   contents: read
 jobs:
