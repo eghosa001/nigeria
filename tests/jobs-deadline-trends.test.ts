@@ -45,7 +45,9 @@ test("homepage keeps all pillars distinct and rotates temporary deadline trends"
   assert.equal(getCurrentHomeSocialTrends("2026-10-10").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/felabration-2026");
   assert.equal(getCurrentHomeSocialTrends("2026-10-13").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ofala-onitsha-2026");
   assert.equal(getCurrentHomeSocialTrends("2026-10-17").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ofala-onitsha-2026");
-  assert.equal(getCurrentHomeSocialTrends("2026-10-18").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/benin-royal-coronation-anniversary-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-18").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ecowas-food-cultural-festival-benin-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-10-31").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/ecowas-food-cultural-festival-benin-2026");
+  assert.equal(getCurrentHomeSocialTrends("2026-11-01").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/benin-royal-coronation-anniversary-2026");
   assert.equal(getCurrentHomeSocialTrends("2026-11-21").find((item) => item.pillar === "Tour Nigeria")?.href, "/explore/benin-royal-coronation-anniversary-2026");
   assert.equal(getCurrentHomeSocialTrends("2026-11-22").some((item) => item.pillar === "Tour Nigeria"), false);
 });

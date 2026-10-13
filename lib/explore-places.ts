@@ -1,3 +1,4 @@
+import { efcfBeninVisitorWaypoints20261013 } from "@/lib/explore-efcf-benin-places-2026-10-13";
 import { verifiedOctoberHeritageEventPlaces20261013 } from "@/lib/explore-heritage-event-places-2026-10-13";
 import { railTravelPlaces20261012 } from "@/lib/explore-rail-stations-2026-10-12";
 import { kwaraOsunRegionalPlaces20261012 } from "@/lib/explore-kwara-osun-regional-2026-10-12";
@@ -47,6 +48,7 @@ export type ExplorePlace = {
 };
 
 export const explorePlaces: ExplorePlace[] = [
+  ...efcfBeninVisitorWaypoints20261013,
   ...verifiedOctoberHeritageEventPlaces20261013,
   ...kwaraOsunRegionalPlaces20261012,
   ...railTravelPlaces20261012,
