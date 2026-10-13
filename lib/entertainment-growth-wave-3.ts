@@ -8,12 +8,19 @@ export const entertainmentGrowthWave3: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Comedy", "Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "Emeka and Onyinyechi face a fast-moving set of marital challenges as newlyweds, turning their early married life into a high-tempo romantic comedy-drama.",
-    cast: ["Frederick Leonard", "Onyi Alex", "Nini Mbonu"],
-    featuredCast: ["Frederick Leonard", "Onyi Alex", "Nini Mbonu"],
+    synopsis: "Newlyweds Emeka and Sharon confront misunderstandings, work pressure and questions of trust when their early married life becomes far more complicated than they expected.",
+    cast: ["Frederick Leonard", "Onyii Alex", "Nini Mbonu", "Cassandra Odita", "Vich Vitalis", "Ifeanyi Nwasa"],
+    featuredCast: ["Frederick Leonard", "Onyii Alex", "Nini Mbonu"],
+    directors: ["Frederick Leonard", "Desmond Anyanwu"],
     runtimeMinutes: 143,
     featured: true,
     references: [
+      {
+        label: "Nollywire — Holy Matrimony film credits and release",
+        href: "https://nollywire.com/titles/holy-matrimony/",
+        lastChecked: "2026-10-13",
+        note: "Confirms Emeka, Sharon and Cynthia actor roles, writer, co-directors and 4 October 2024 release."
+      },
       {
         label: "Frederick Leonard TV — Holy Matrimony",
         href: "https://www.youtube.com/watch?v=T1-buA-yAmo",
