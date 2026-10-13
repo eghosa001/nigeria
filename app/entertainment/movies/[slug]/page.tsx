@@ -496,6 +496,37 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
             </section>
 
+            <section id="movie-questions" aria-labelledby="movie-questions-heading">
+              <span className="eyebrow">Movie questions answered</span>
+              <h2 id="movie-questions-heading">{title.title}: cast, release and viewing questions</h2>
+              <div className="movie-credit-group">
+                <h3>Who stars in {title.title}?</h3>
+                <p className="movie-long-summary">
+                  {title.cast.length
+                    ? `The currently documented cast includes ${title.cast.join(", ")}. Credits are updated when reliable production or publisher information becomes available; this list should not be mistaken for a complete credited cast unless independently confirmed.`
+                    : "A reliably verified cast list is not yet available. Names will be added when confirmed by the production or official publisher."}
+                </p>
+              </div>
+              {title.directors?.length ? (
+                <div className="movie-credit-group">
+                  <h3>Who directed {title.title}?</h3>
+                  <p className="movie-long-summary">{title.directors.join(" and ")} {title.directors.length === 1 ? "is" : "are"} credited as {title.directors.length === 1 ? "director" : "directors"}.</p>
+                </div>
+              ) : null}
+              <div className="movie-credit-group">
+                <h3>When was {title.title} released?</h3>
+                <p className="movie-long-summary">The documented release year is {title.year}. An exact premiere date is not stated here unless independently verified in the film details.</p>
+              </div>
+              <div className="movie-credit-group">
+                <h3>Where can I watch {title.title} legally?</h3>
+                <p className="movie-long-summary">
+                  {availabilityLinks.length
+                    ? `The official links verified for this title are listed in the viewing section below: ${platforms.join(", ")}. Availability can change by country and date; use the linked provider to confirm current access.`
+                    : "A current official viewing option has not been verified. Check this page for updates rather than relying on unofficial uploads."}
+                </p>
+              </div>
+            </section>
+
             <AdSlot slot={AD_SLOTS.movieAfterCast} label="Advertisement" />
 
             <section id="watch">
