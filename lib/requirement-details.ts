@@ -10,9 +10,9 @@ export type RequirementKind =
 export type RequirementDetail = {
   item: string;
   kind: RequirementKind;
-  why: string;
-  whenUsed: string;
-  format: string;
+  why?: string;
+  whenUsed?: string;
+  format?: string;
 };
 
 const stopWords = new Set([
@@ -71,14 +71,14 @@ function purposeFor(item: string) {
   if (/matric/i.test(item)) return "Used to match the graduate or student to the institution record submitted for this process.";
   if (/driving school|driving-school/i.test(item)) return "Used to prove completion of the prerequisite driving-school stage for the fresh licence process.";
   if (/registration number|entity number|company number|business number/i.test(item)) return "Used to locate the exact registered entity or application record.";
-  if (/tax id|tin|asin|payer id/i.test(item)) return "Used to locate the taxpayer record connected to the transaction.";
+  if (/\b(?:tax(?:payer)?\s*(?:id|identification number)|tin|asin|payer\s*id)\b/i.test(item)) return "Used to locate the taxpayer record connected to the transaction.";
   if (/receipt|payment reference|transaction reference|rrr/i.test(item)) return "Used to prove or trace the official payment if the transaction needs confirmation or support.";
   if (/certificate/i.test(item)) return "Used as documentary evidence for the qualification, status or civil fact relevant to this service.";
   if (/letter/i.test(item)) return "Used as formal written evidence or request where the responsible agency lists a letter among the requirements.";
   if (/result/i.test(item)) return "Used as evidence of the examination or qualification record relevant to this service.";
   if (/account|username|password/i.test(item)) return "Used to access the official portal or the applicant's existing record.";
   if (/reference|number|code|pin/i.test(item)) return "Used to identify or trace the correct application, record or transaction.";
-  return "This item is explicitly listed in the verified pre-start requirements for this service. Have it ready before beginning so the application is not interrupted.";
+  return undefined;
 }
 
 function formatFor(item: string, step?: string, stepNumber?: number) {
@@ -88,7 +88,7 @@ function formatFor(item: string, step?: string, stepNumber?: number) {
   if (/upload/.test(combined) && stepNumber) return "A digital upload is explicitly part of step " + stepNumber + ". Prepare a clear file that follows the portal's size/format rules.";
   if (/print|printed/.test(combined) && stepNumber) return "A printed item is explicitly referenced in step " + stepNumber + ". Keep the printout legible and complete.";
   if (/bring|take|present|attend|visit/.test(step ?? "") && stepNumber) return "This is used during the physical stage described in step " + stepNumber + ".";
-  return "The official sources used for this guide do not specify original vs copy here. Follow the exact portal or office prompt instead of assuming.";
+  return undefined;
 }
 
 export function getRequirementDetails(service: Service): RequirementDetail[] {
@@ -96,7 +96,7 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
     const match = matchingStep(service, item);
     const whenUsed = match
       ? "Most directly connected to step " + (match.index + 1) + ": " + match.step
-      : "Keep this ready before starting. The verified guide lists it as a prerequisite even though the official source does not tie it to one numbered step.";
+      : undefined;
 
     return {
       item,
