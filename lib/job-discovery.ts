@@ -16,6 +16,7 @@ export function getSimilarOpenJobs(current: CareerOpportunity, limit = 4, today 
       item.slug !== current.slug &&
       key(item.organization) !== key(current.organization) &&
       item.kind !== "career-page" &&
+      item.kind !== "programme" &&
       item.status !== "career-page" &&
       getEffectiveJobStatus(item, today) === "open"
     )
