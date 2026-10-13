@@ -1,0 +1,29 @@
+name: Search Discovery Scoped Safety
+on:
+  pull_request:
+    paths:
+      - "scripts/google-job-indexing-*.mjs"
+      - "scripts/google-indexing-*.mjs"
+      - "scripts/google-indexing-eligible-jobs.ts"
+      - "scripts/search-discovery-bing.mjs"
+      - "scripts/cloudflare-crawler-hints.mjs"
+      - ".github/workflows/*indexing*.yml"
+      - ".github/workflows/bing-sitemap-registration.yml"
+      - ".github/workflows/cloudflare-crawler-hints.yml"
+permissions:
+  contents: read
+jobs:
+  scoped-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check new discovery scripts only
+        run: |
+          node --test scripts/google-job-indexing-plan.test.mjs
+          node --check scripts/google-indexing-notify.mjs
+          node --check scripts/search-discovery-bing.mjs
+          node --check scripts/cloudflare-crawler-hints.mjs

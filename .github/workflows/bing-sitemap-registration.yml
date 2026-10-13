@@ -1,0 +1,35 @@
+name: Bing Webmaster Sitemap Registration
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/search-discovery-bing.mjs"
+      - ".github/workflows/bing-sitemap-registration.yml"
+permissions:
+  contents: read
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BING_WEBMASTER_API_KEY: ${{ secrets.BING_WEBMASTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check optional credentials
+        id: credentials
+        shell: bash
+        run: |
+          if [ -n "$BING_WEBMASTER_API_KEY" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Bing Webmaster API key is missing; feed registration not run."
+            echo "Bing registration pending: BING_WEBMASTER_API_KEY required." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Register three published discovery feeds
+        if: steps.credentials.outputs.available == 'true'
+        run: node scripts/search-discovery-bing.mjs

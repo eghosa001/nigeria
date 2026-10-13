@@ -1,0 +1,24 @@
+name: Cloudflare Crawler Hints - Explicit Activation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/cloudflare-crawler-hints.mjs"
+      - ".github/workflows/cloudflare-crawler-hints.yml"
+permissions:
+  contents: read
+jobs:
+  enable:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Confirm exact Cloudflare zone and enable Crawler Hints
+        run: node scripts/cloudflare-crawler-hints.mjs
