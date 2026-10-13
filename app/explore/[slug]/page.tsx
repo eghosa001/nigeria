@@ -39,7 +39,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   if (guide.slug === "sokoto-state-travel-guide") return "Sokoto State Nigeria: Caliphate, Culture & Places to Visit";
   if (guide.kind === "city") return truncateSeo(guide.shortTitle + ": " + getExplorePlacesForGuide(guide.slug).length + " Places to Visit & Things to Do (" + year + ")", 60);
   if (guide.kind === "itinerary") return truncateSeo(guide.title + " " + year + ": Itinerary & Things to Do", 60);
-  if (guide.kind === "event") return truncateSeo(guide.shortTitle + " " + year + ": Festival Guide & Planning", 60);
+  if (guide.kind === "event") return truncateSeo(guide.shortTitle + (guide.shortTitle.includes(year) ? "" : " " + year) + ": Festival Guide & Planning", 60);
   return truncateSeo(guide.title + " " + year + ": Things to Do & Trip Planning", 60);
 }
 
