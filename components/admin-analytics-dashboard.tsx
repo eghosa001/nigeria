@@ -247,7 +247,7 @@ export function AdminAnalyticsDashboard() {
       </section>
 
       {data.ga4Available && data.daily.length ? (
-        <section className="admin-panel analytics-trend" aria-label="Daily page views">
+        <section className="admin-panel analytics-trend">
           <div className="section-heading"><div><span className="eyebrow">GA4 trend</span><h2>Page views by day</h2></div></div>
           <div className="analytics-bars" aria-label="Daily page views">
             {data.daily.map((row) => (
