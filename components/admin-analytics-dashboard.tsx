@@ -69,7 +69,7 @@ export function AdminAnalyticsDashboard() {
   const [showDiagnostics, setShowDiagnostics] = useState(false);
   const activeRequest = useRef<AbortController | null>(null);
 
-  async function load(nextRange = range, forceFresh = false) {
+  async function load(nextRange = range, forceFresh = false, includeDiagnostics = showDiagnostics) {
     activeRequest.current?.abort();
     const controller = new AbortController();
     activeRequest.current = controller;
@@ -78,7 +78,7 @@ export function AdminAnalyticsDashboard() {
     setMessage("");
     try {
       const response = await fetch(
-        "/admin/api/analytics?range=" + nextRange + "&mode=clean" + (forceFresh ? "&fresh=1" : ""),
+        "/admin/api/analytics?range=" + nextRange + "&mode=clean&details=" + (includeDiagnostics ? "1" : "0") + (forceFresh ? "&fresh=1" : ""),
         { cache: "no-store", signal: controller.signal },
       );
       const body = await response.json().catch(() => ({ error: "Analytics server returned an invalid response." })) as ApiResponse;
@@ -285,12 +285,16 @@ export function AdminAnalyticsDashboard() {
 
       <div className="admin-analytics-expand">
         <button type="button" className="admin-refresh-button" aria-expanded={showDiagnostics}
-          aria-controls="admin-analytics-diagnostics" onClick={() => setShowDiagnostics((open) => !open)}>
+          aria-controls="admin-analytics-diagnostics" onClick={() => {
+            if (showDiagnostics) setShowDiagnostics(false);
+            else { setShowDiagnostics(true); void load(range, false, true); }
+          }}>
           {showDiagnostics ? "Hide detailed reports" : "Detailed reports & connection checks"}
         </button>
       </div>
       {showDiagnostics ? (
         <div id="admin-analytics-diagnostics">
+          {refreshing ? <p className="analytics-clean-note" role="status">Loading detailed source reports…</p> : null}
           <section className="admin-panel">
             <div className="section-heading"><div><span className="eyebrow">Connections</span><h2>Analytics health</h2></div>
               <a href={data.posthog.webUrl} target="_blank" rel="noreferrer">Open PostHog ↗</a></div>
