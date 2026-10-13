@@ -45,3 +45,15 @@ test("recently changed canonical page feed is emitted alongside sitemap", () => 
   assert.doesNotMatch(rss, /workers\.dev|localhost|<loc>/);
   assert.ok((rss.match(/<item>/g) ?? []).length <= 200);
 });
+
+test("video sitemap only advertises verified YouTube movie detail pages", () => {
+  const xml = read("video-sitemap.xml");
+  assert.match(xml, /xmlns:video="http:\/\/www\.google\.com\/schemas\/sitemap-video\/1\.1"/);
+  const count = (xml.match(/<video:video>/g) ?? []).length;
+  assert.ok(count > 0 && count <= 20_000, "expected bounded validated videos");
+  assert.equal(count, (xml.match(/<video:player_loc>/g) ?? []).length);
+  assert.equal(count, (xml.match(/<video:thumbnail_loc>/g) ?? []).length);
+  assert.equal(count, (xml.match(/<video:description>/g) ?? []).length);
+  assert.match(xml, /https:\/\/mynigeriaguide\.com\/entertainment\/youtube\//);
+  assert.doesNotMatch(xml, /workers\.dev|localhost|<\/?video:content_loc>/);
+});

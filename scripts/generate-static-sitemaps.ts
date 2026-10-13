@@ -88,7 +88,35 @@ const feedXml = xmlHeader +
       escapeXml(pubDate) + "</pubDate></item>";
   }).join("") + "</channel></rss>";
 
+
+const { indexableYouTubeMovies } = await import("../lib/youtube-library");
+const videoRows = indexableYouTubeMovies
+  // Curated titles point at their separate movie canonical, not this video route.
+  .filter((movie) => movie.source !== "curated" &&
+    /^[A-Za-z0-9_-]{11}$/.test(movie.videoId) &&
+    movie.title.trim().length > 0 &&
+    movie.synopsis.trim().length >= 30 &&
+    /^\d{4}-\d{2}-\d{2}/.test(movie.publishedAt));
+const videoXml = xmlHeader +
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ' +
+  'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">' +
+  videoRows.map((movie) => {
+    const id = movie.videoId;
+    const url = productionSiteUrl + "/entertainment/youtube/" + id;
+    const seconds = Math.round(movie.durationMinutes * 60);
+    return "<url><loc>" + escapeXml(url) + "</loc><video:video>" +
+      "<video:thumbnail_loc>" + escapeXml("https://i.ytimg.com/vi/" + id + "/hqdefault.jpg") + "</video:thumbnail_loc>" +
+      "<video:title>" + escapeXml(movie.title.slice(0, 100)) + "</video:title>" +
+      "<video:description>" + escapeXml(movie.synopsis.slice(0, 2048)) + "</video:description>" +
+      "<video:player_loc>" + escapeXml("https://www.youtube.com/embed/" + id) + "</video:player_loc>" +
+      (seconds >= 1 && seconds <= 28800 ? "<video:duration>" + seconds + "</video:duration>" : "") +
+      "<video:publication_date>" + escapeXml(movie.publishedAt.slice(0, 10)) + "</video:publication_date>" +
+      "</video:video></url>";
+  }).join("") + "</urlset>";
+if (!videoRows.length) throw new Error("No verified, indexable YouTube detail movies for video discovery.");
+
 await Promise.all([
+  writeFile(resolve(root, "video-sitemap.xml"), videoXml, "utf8"),
   writeFile(resolve(root, "recent-pages.xml"), feedXml, "utf8"),
   writeFile(resolve(root, "sitemap.xml"), indexXml, "utf8"),
   writeFile(resolve(root, "sitemap-index.xml"), indexXml, "utf8"),
