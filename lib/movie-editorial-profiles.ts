@@ -96,7 +96,8 @@ export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
         answer: "FilmFlux credits Great-Valedochie as director. The film premiered on Bimbo Ademoye TV on 1 October 2026. Published reporting separately identifies Bimbo Ademoye as its writer and producer.",
       },
     ],
-  },  "once-upon-a-village-3": {
+  },
+  "once-upon-a-village-3": {
     releaseDate: "2026-08-20",
     roles: [
       { actor: "Deza The Great", character: "Chairman Jeffery" },
@@ -181,5 +182,4 @@ export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
       },
     ],
   },
-
 };
