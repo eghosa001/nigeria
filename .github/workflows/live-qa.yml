@@ -30,6 +30,7 @@ jobs:
       run: ${{ steps.scope.outputs.run }}
       jobs_live: ${{ steps.scope.outputs.jobs_live }}
       tour_live: ${{ steps.scope.outputs.tour_live }}
+      ads_live: ${{ steps.scope.outputs.ads_live }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -45,6 +46,17 @@ jobs:
             exit 0
           fi
           changed="$(git diff --name-only HEAD^1 HEAD)"
+          ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
+          ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
+          if [ -n "$ads_changed" ] && [ -z "$ads_other" ]; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "jobs_live=false" >> "$GITHUB_OUTPUT"
+            echo "tour_live=false" >> "$GITHUB_OUTPUT"
+            echo "ads_live=true" >> "$GITHUB_OUTPUT"
+            echo "Only ads.txt changed; verify exact published asset after deployment."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-production-scope.mjs "$changed"; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "jobs_live=false" >> "$GITHUB_OUTPUT"
@@ -85,6 +97,51 @@ jobs:
             echo "jobs_live=false" >> "$GITHUB_OUTPUT"
             echo "tour_live=false" >> "$GITHUB_OUTPUT"
           fi
+
+  ads-live-smoke:
+    needs: scope
+    if: needs.scope.outputs.ads_live == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - name: Wait until the exact commit is deployed
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in {1..60}; do
+            body="$(curl -fsS --max-time 15 "https://mynigeriaguide.com/deployment.json?adscheck=$GITHUB_SHA-$i" || true)"
+            deployed="$(printf '%s' "$body" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("commit",""))' 2>/dev/null || true)"
+            if [ "$deployed" = "$GITHUB_SHA" ]; then
+              echo "Production deployment confirmed: $GITHUB_SHA"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Production never reported expected SHA $GITHUB_SHA"
+          exit 1
+      - name: Assert AdSense authorization is publicly readable on all canonical hosts
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="google.com, pub-7517898921176341, DIRECT, f08c47fec0942fa0"
+          for url in "https://mynigeriaguide.com/ads.txt" "https://www.mynigeriaguide.com/ads.txt" "http://mynigeriaguide.com/ads.txt"; do
+            body="$(mktemp)"
+            headers="$(mktemp)"
+            result="$(curl -sSL --retry 2 --retry-delay 2 --max-time 30 \
+              -D "$headers" -o "$body" \
+              -w '%{http_code} %{url_effective}' "$url?adscheck=$GITHUB_SHA")"
+            status="$(printf '%s' "$result" | cut -d' ' -f1)"
+            final_url="$(printf '%s' "$result" | cut -d' ' -f2)"
+            if [ "$status" != "200" ] || [ "$final_url" != "https://mynigeriaguide.com/ads.txt?adscheck=$GITHUB_SHA" ]; then
+              echo "::error::ads.txt failed redirect/status: $url -> $result"
+              exit 1
+            fi
+            if [ "$(cat "$body")" != "$expected" ] || ! grep -qi '^content-type: text/plain' "$headers"; then
+              echo "::error::ads.txt content or MIME type mismatch on $url"
+              exit 1
+            fi
+            echo "ads.txt authorization verified: $url"
+          done
 
   jobs-live-smoke:
     needs: scope

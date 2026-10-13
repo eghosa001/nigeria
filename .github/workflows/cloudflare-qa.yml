@@ -48,6 +48,16 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
+          # ads.txt is a public static asset: guard only this publication path.
+          ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
+          ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
+          if [ -n "$ads_changed" ] && [ -z "$ads_other" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=ads-txt" >> "$GITHUB_OUTPUT"
+            echo "Test only the live Worker static-asset path, not unrelated app routes."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-production-scope.mjs "$changed"; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=youtube-d1-production" >> "$GITHUB_OUTPUT"
@@ -201,6 +211,9 @@ jobs:
         if: steps.scope.outputs.run == 'true'
       - run: npx playwright install --with-deps chromium
         if: steps.scope.outputs.run == 'true'
+      - name: Verify ads.txt on the built Cloudflare runtime
+        if: steps.scope.outputs.mode == 'ads-txt'
+        run: npx playwright test tests/ads-txt-static.spec.ts --config playwright.cloudflare.config.ts --project=cloudflare-desktop --workers=1
       - name: Verify packed YouTube directory on Workers
         if: steps.scope.outputs.mode == 'youtube-runtime'
         run: npx playwright test tests/entertainment.spec.ts --config playwright.cloudflare.config.ts --workers=1 --grep "youtube movie directory is populated and searchable by publisher"
@@ -214,7 +227,7 @@ jobs:
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --config playwright.cloudflare.config.ts --workers=1
       - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime'
+        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime'
       - name: Upload Cloudflare Playwright report on failure
         if: failure() && steps.scope.outputs.run == 'true'
         uses: actions/upload-artifact@v4
