@@ -33,7 +33,8 @@ export const netflixEditorialProfilesClassic: Record<string, MovieEditorialProfi
     roles: [],
     crew: [
       { role: "Director", name: "Kenneth Gyang" },
-      { role: "Screenwriters", name: "Yinka Ogun and Craig Freimond" },
+      { role: "Screenwriter", name: "Yinka Ogun" },
+      { role: "Screenwriter", name: "Craig Freimond" },
     ],
     sections: [
       { heading: "A dangerous undercover investigation into trafficking", paragraphs: [
