@@ -8,8 +8,9 @@ export function selectIndexNowChanges(records, site, previous = null, changedPat
   const origin = new URL(site).origin;
   const allowed = new Set(canonicalPageUrls(records.map((item) => item.url), origin));
   const current = Object.fromEntries(
-    records.filter((item) => allowed.has(item.url))
-      .map((item) => [item.url, item.lastModified || ""]),
+    records.filter((item) => {
+      try { return allowed.has(new URL(item.url).href); } catch { return false; }
+    }).map((item) => [new URL(item.url).href, item.lastModified || ""]),
   );
   // A damaged or foreign state must not be trusted to suppress submissions.
   const old = previous?.version === 1 && previous?.origin === origin &&
