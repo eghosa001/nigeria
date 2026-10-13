@@ -105,7 +105,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     "@type": "VideoObject",
     name: movie.title,
     description: movie.synopsis,
-    thumbnailUrl: "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg",
+    thumbnailUrl: "https:" + "//i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg",
     uploadDate: movie.publishedAt,
     embedUrl: "https://www.youtube.com/embed/" + movie.videoId,
     url: base + "/entertainment/youtube/" + movie.videoId,
