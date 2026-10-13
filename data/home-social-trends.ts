@@ -51,6 +51,13 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     "expiresAt": "2026-10-24"
   },
   {
+    pillar: "Tour Nigeria",
+    title: "ECOWAS Food & Cultural Festival 2026 — Benin City, 27–31 October; verify exact venue",
+    href: "/explore/ecowas-food-cultural-festival-benin-2026",
+    checkedAt: "2026-10-13",
+    expiresAt: "2026-10-31",
+  },
+  {
     "pillar": "Tour Nigeria",
     "title": "Benin royal anniversary 2026: October ceremonies and November museum exhibition",
     "href": "/explore/benin-royal-coronation-anniversary-2026",
