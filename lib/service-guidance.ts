@@ -276,7 +276,10 @@ const agencyFallback: Record<string, string> = {
 };
 
 function findPhysicalStep(service: Service) {
-  return service.steps.find((step) => /attend|visit|centre|center|office|biometric|fingerprint|capture|collect|school|institution|VIO|BIR/i.test(step));
+  // Require an actual in-person action; merely choosing an office in an
+  // online form is not proof that the applicant must go there.
+  return service.steps.find((step) =>
+    /\battend\b|\bin.person\b|\bbiometric\b|\bfingerprint\b|\b(?:visit|go to|report to|appear at|present at)\s+(?:the |an? )?(?:[a-z -]{0,45})?(?:office|centre|center|branch|embassy|consulate)\b/i.test(step));
 }
 
 function evidenceFor(service: Service) {
@@ -290,7 +293,7 @@ function evidenceFor(service: Service) {
   return "Keep the application/reference number, payment receipt, acknowledgement or downloadable record produced by this service.";
 }
 
- function defaultGuidance(service: Service): DetailedServiceGuidance {
+function defaultGuidance(service: Service): DetailedServiceGuidance {
   const journey = getServiceJourney(service);
   const agency = getAgency(service.agencySlug);
   const agencyName = agency?.shortName ?? agency?.name ?? "the responsible agency";
@@ -307,8 +310,10 @@ function evidenceFor(service: Service) {
       startDetail: second ? first + " Then " + second.charAt(0).toLowerCase() + second.slice(1) : first,
       physicalTitle: journey.physicalLabel,
       physicalDetail: physical
-        ? "The in-person or assisted stage stated in this guide is: " + physical
-        : "The current sources for " + service.shortTitle + " do not state a compulsory walk-in stage for the standard route.",
+        ? "The guide describes this in-person stage: " + physical
+        : journey.physicalStatus === "required"
+          ? "The responsible agency's process may include document collection or biometric capture. Confirm the exact location and appointment details in the official instructions."
+          : "No compulsory walk-in step has been verified for the standard process. Ask the responsible agency if your case needs assistance.",
       fallbackTitle: "If this specific process gets stuck",
       fallbackDetail: followUp,
     },
