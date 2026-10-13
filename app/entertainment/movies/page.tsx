@@ -161,6 +161,15 @@ export default async function MoviesPage({
               </div>
             </article>
             <article className="movie-discovery-card">
+              <h3>More Nigerian film guides</h3>
+              <p>Explore individual films with their cast, story and confirmed viewing information.</p>
+              <div className="movie-discovery-links">
+                <Link href="/entertainment/movies/the-man-i-never-knew">The Man I Never Knew <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/monica">Monica <span aria-hidden="true">↗</span></Link>
+                <Link href="/entertainment/movies/what-love-is">What Love Is <span aria-hidden="true">↗</span></Link>
+              </div>
+            </article>
+            <article className="movie-discovery-card">
               <h3>Find a place to watch</h3>
               <p>Browse credited full films or compare legal streaming platforms.</p>
               <div className="movie-discovery-links">

@@ -277,10 +277,13 @@ export default function ExplorePage() {
             ) : null}
           </div>
 
-          <div className="minimal-inline-links tour-city-shortcuts" aria-label="Popular city shortcuts">
+          <nav className="minimal-inline-links tour-city-shortcuts" aria-label="Plan by city and route">
+            <Link href="/explore/lagos">Lagos city guide</Link>
             <Link href="/explore/things-to-do-lagos">Things to do in Lagos</Link>
             <Link href="/explore/things-to-do-abuja">Things to do in Abuja</Link>
-          </div>
+            <Link href="/explore/lagos-abeokuta-ibadan-train-guide">Lagos–Abeokuta–Ibadan by train</Link>
+            <Link href="/explore/enugu-state-tourism-route">Explore Enugu State</Link>
+          </nav>
         </div>
       </section>
     </>
