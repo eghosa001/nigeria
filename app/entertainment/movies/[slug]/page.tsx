@@ -388,7 +388,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
-                  <strong>Where to watch:</strong> Kava has an official film page with a subscription option. Netflix also lists the film, but the availability notice on that listing does not confirm access in Nigeria. The FilmOne link is only a trailer. <a href="#watch">See verified viewing options ↓</a>
+                  <strong>Where to watch:</strong> Netflix's official Nigeria Top 10 ranked Oversabi Aunty #1 for 28 September–4 October 2026. A current play button still depends on your Netflix account and region. Kava also has a subscription listing; the FilmOne video is only a trailer. <a href="#watch">See verified viewing options ↓</a>
                 </p>
               ) : null}
 
@@ -558,7 +558,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <h2>Where to watch {title.title}</h2>
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
-                  Kava's official Oversabi Aunty page currently advertises a subscription route and lists the film (checked 13 October 2026). Confirm your country's access and account requirements on Kava before subscribing. Netflix's title page displays a regional availability notice; that listing alone does not prove playback access in Nigeria. FilmOne publishes a trailer, not a free full-movie link.
+                  Netflix's own Nigeria Top 10 chart ranked Oversabi Aunty first for the week of 28 September–4 October 2026. This shows the film was popular on Netflix in Nigeria that week, but does not guarantee it remains playable through your account today. Check Netflix's official title page for a current play button. Kava also maintains a subscription listing, while FilmOne publishes the trailer only—not a free full film.
                 </p>
               ) : null}
               {!availabilityLinks.length ? (
