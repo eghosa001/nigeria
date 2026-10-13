@@ -41,7 +41,7 @@ export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
         heading: "Release, director and legal viewing status",
         paragraphs: [
           "Oversabi Aunty opened in Nigerian cinemas on 19 December 2025. Toyin Abraham both stars in and directs the film. Its theatrical history should not be confused with current streaming availability: an old cinema release or a platform listing does not guarantee an active play button in every country.",
-          "Kava currently publishes an official Oversabi Aunty film page with a Subscribe option and a full-film listing. Visit that provider to confirm account access, payment and territorial restrictions. Netflix also has a title listing, but the regional availability notice observed on its page does not establish that it can be played in Nigeria. The FilmOne YouTube link on this guide is a trailer, not a free full-movie release.",
+          "Kava currently publishes an official Oversabi Aunty film page with a Subscribe option and a full-film listing. Visit that provider to confirm account access, payment and territorial restrictions. Netflix's own weekly Nigeria chart ranked Oversabi Aunty first for 28 September–4 October 2026. That historical ranking is evidence of popularity and availability during the chart period; viewers should still confirm today's playback inside their Nigerian Netflix account. The FilmOne YouTube link on this guide is a trailer, not a free full-movie release.",
         ],
       },
     ],
