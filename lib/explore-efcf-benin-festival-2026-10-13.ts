@@ -5,7 +5,7 @@ export const efcfBeninFestivalGuide20261013: ExploreGuide[] = [
   {
     "slug": "ecowas-food-cultural-festival-benin-2026",
     "title": "ECOWAS Food and Cultural Festival 2026 in Benin City: Dates, Programme, Contacts and Venue",
-    "shortTitle": "Food & Cultural Festival 2026",
+    "shortTitle": "ECOWAS Food Festival Benin 2026",
     "kind": "event",
     "region": "Edo State",
     "summary": "The ECOWAS Food and Cultural Festival organiser announces 27–31 October 2026 in Benin City, featuring regional food, arts, craft, performance and business activities. The precise event entrance is not yet confirmed in its public listing.",
