@@ -50,7 +50,7 @@ export default function PrivateJobsPage() {
       <section className="section">
         <div className="container">
           <div className="minimal-section-heading">
-            <div><span className="eyebrow">Career programmes</span><h2>Graduate, internship and professional pathways.</h2></div>
+            <div><span className="eyebrow">More career information</span><h2>Other pathways and previous opportunities.</h2><p>Expired applications are marked closed; employer career portals remain useful for finding new roles.</p></div>
           </div>
           <div className="jobs-private-grid">
             {pathways.map((item) => (
