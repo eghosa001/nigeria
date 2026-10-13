@@ -7,20 +7,22 @@ import { categories } from "@/lib/data";
 import { queryServiceDirectory, type ServiceDirectorySort, type ServiceDirectoryStatus } from "@/lib/service-query";
 
 const popularServiceLinks = [
-  { label: "University admissions, fees & portals", href: "/universities" },
-  { label: "CAC registration", href: "/topics/cac-business" },
-  { label: "CAC registration portal, fees & requirements", href: "/services/cac-business-name-registration" },
-  { label: "Nigerian passport renewal online", href: "/services/passport-renewal" },
-  { label: "Check NIN number on your phone", href: "/services/check-nin-number" },
-  { label: "NYSC registration requirements and portal", href: "/services/nysc-registration-local" },
-  { label: "Check WAEC results online or on your phone", href: "/services/waec-check-result" },
-  { label: "Nigeria Tax ID / TIN", href: "/services/nrs-tax-id-retrieval" },
-  { label: "Landing & Exit Card", href: "/services/nigeria-landing-exit-card" },
-  { label: "ASIN registration", href: "/services/anambra-asin-registration" },
-  { label: "NIN phone correction", href: "/services/nin-phone-modification" },
-  { label: "NIN Share Code / NINAuth", href: "/services/ninauth-nin-verification" },
-  { label: "Track passport application", href: "/services/passport-application-tracking" },
-  { label: "ECOWAS Travel Certificate", href: "/services/ecowas-travel-certificate" },
+  // Prioritize distinct, useful tasks whose existing canonical pages are under-discovered.
+  // Keep this compact; the full directory and category navigation remain below.
+  { label: "JAMB profile code and recovery", href: "/services/jamb-profile-code" },
+  { label: "JAMB CAPS admission status", href: "/services/jamb-caps" },
+  { label: "WAEC result checker", href: "/services/waec-check-result" },
+  { label: "NECO result checker", href: "/services/neco-check-result" },
+  { label: "NYSC senate list", href: "/services/nysc-senate-list" },
+  { label: "NYSC call-up letter", href: "/services/nysc-call-up-letter" },
+  { label: "University admission, fees and portals", href: "/universities" },
+  { label: "NELFUND student loan guidance", href: "/topics/nelfund" },
+  { label: "Correct NIN date of birth", href: "/services/nin-date-of-birth-modification" },
+  { label: "Nigeria individual tax registration", href: "/services/nrs-individual-tax-registration" },
+  { label: "Money transfer reversal", href: "/services/momo-psb-wrong-transfer-reversal" },
+  { label: "Air Peace online check-in", href: "/services/air-peace-online-check-in" },
+  { label: "Pension and RSA processes", href: "/topics/pension-services-nigeria" },
+  { label: "Find official Nigerian portals", href: "/official-portals" },
 ];
 
 const featuredServiceCategories = ["Identity", "Education", "Immigration", "Business", "Foreign visas", "State services"];
@@ -110,7 +112,7 @@ export default async function ServicesPage({
             </label>
             <button type="submit">Search services</button>
           </form>
-          <div className="minimal-inline-links" aria-label="Popular service guides">
+          <div className="minimal-inline-links" aria-label="Guides for common service tasks">
             {popularServiceLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
           </div>
         </div>
