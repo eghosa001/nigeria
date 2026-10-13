@@ -97,6 +97,26 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     item.cast.some((name) => sharedCast.has(name.trim().toLowerCase()))
   ).slice(0, 4);
 
+
+  // Mark up an actually watchable, canonical, verified video. Its YouTube
+  // embed and thumbnail are provided by the rights-holder platform.
+  const videoLd = indexable && movie.source !== "curated" && /^\\d{4}-\\d{2}-\\d{2}/.test(movie.publishedAt) ? {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: movie.title,
+    description: movie.synopsis,
+    thumbnailUrl: "https://i.ytimg.com/vi/" + movie.videoId + "/hqdefault.jpg",
+    uploadDate: movie.publishedAt,
+    embedUrl: "https://www.youtube.com/embed/" + movie.videoId,
+    url: base + "/entertainment/youtube/" + movie.videoId,
+    ...(movie.durationMinutes > 0 ? { duration: "PT" + movie.durationMinutes + "M" } : {}),
+    creator: {
+      "@type": "Organization",
+      name: movie.channelName,
+      ...(movie.channelUrl ? { url: movie.channelUrl } : {}),
+    },
+  } : null;
+
   const ld = {
     "@context": "https://schema.org",
     "@type": "Movie",
@@ -115,6 +135,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   return (
     <>
       <JsonLd data={ld} />
+      {videoLd ? <JsonLd data={videoLd} /> : null}
 
       <section className="movie-detail-hero youtube-detail-hero">
         <div className="container">
