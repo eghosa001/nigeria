@@ -6,6 +6,8 @@ import { todayIsoNigeria } from "@/lib/job-runtime";
 // may be promoted to the "Upcoming events" shelf. Unknown dates are excluded.
 // Review this small registry when a canonical event schedule is corrected.
 export const featuredEventEndDates: Readonly<Record<string, string>> = {
+  "ofala-onitsha-2026": "2026-10-25",
+  "benin-royal-coronation-anniversary-2026": "2026-11-21",
   "10th-afrigeo-symposium-abuja-2026": "2026-10-08",
   "abuja-festival-literature-ideas-2026": "2026-10-10",
   "abuja-study-abroad-expo-2026": "2026-10-12",
