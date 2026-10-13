@@ -79,10 +79,10 @@ export function CorrectionReport({ serviceSlug }: { serviceSlug: string }) {
   }
   return (
     <section className="correction-box">
-      <div><span className="eyebrow">Help keep this accurate</span><h2>See something outdated?</h2><p>Report a fee, requirement or official-link problem. Reports are reviewed against official sources before a guide changes.</p></div>
+      <div><span className="eyebrow">Help keep this accurate</span><h2>See something outdated?</h2><p>Report a fee, requirement, official link or a recent office experience. Your report is reviewed before any guide changes; visitor experiences are not treated as official facts.</p></div>
       <form onSubmit={submit}>
-        <label>What is wrong?<select name="report_type" defaultValue="incorrect_fee"><option value="incorrect_fee">Fee or price</option><option value="outdated_requirement">Requirement or process</option><option value="broken_link">Official link</option><option value="other">Something else</option></select></label>
-        <label>Details<textarea name="message" minLength={10} maxLength={4000} required placeholder="Tell us what changed and, if possible, where you saw the official update." /></label>
+        <label>What is wrong?<select name="report_type" defaultValue="incorrect_fee"><option value="incorrect_fee">Fee or price</option><option value="outdated_requirement">Requirement or process</option><option value="broken_link">Official link</option><option value="other">Office delays or another issue</option></select></label>
+        <label>Details<textarea name="message" minLength={10} maxLength={4000} required placeholder="Describe the change or office visit, approximate date and location. Add an official source if available. Do not include ID numbers or private records." /></label>
         <label>Email <small>(optional, only if we need clarification)</small><input name="contact_email" type="email" maxLength={254} /></label>
         <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
         <button className="report-button" type="submit" disabled={state === "sending"}>{state === "sending" ? "Submitting…" : "Submit correction"}</button>
