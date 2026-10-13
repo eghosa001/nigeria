@@ -21,6 +21,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: restrictedPaths,
       },
     ],
-    sitemap: [base + "/sitemap-index.xml", base + "/recent-pages.xml"],
+    sitemap: [base + "/sitemap-index.xml", base + "/recent-pages.xml", base + "/video-sitemap.xml"],
   };
 }
