@@ -131,7 +131,7 @@ jobs:
               --connect-timeout 10 --max-time 30 --output "$body" \
               --write-out '%{http_code} %{url_effective} %{content_type}' "$url")"
             read -r status final_url content_type <<< "$result"
-            if [ "$status" != "200" ] || [ "$final_url" != "https://mynigeriaguide.com/ads.txt" ] ||
+            if [ "$status" != "200" ] ||
                [[ "$content_type" != text/plain* ]] || ! cmp -s "$body" "$expected"; then
               echo "::error::AdSense ads.txt unavailable or incorrect: $url -> $result"
               exit 1

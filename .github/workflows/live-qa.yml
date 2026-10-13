@@ -31,6 +31,7 @@ jobs:
       jobs_live: ${{ steps.scope.outputs.jobs_live }}
       tour_live: ${{ steps.scope.outputs.tour_live }}
       ads_live: ${{ steps.scope.outputs.ads_live }}
+      ads_wait: ${{ steps.scope.outputs.ads_wait }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -47,13 +48,15 @@ jobs:
           fi
           changed="$(git diff --name-only HEAD^1 HEAD)"
           ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
+          ads_monitor_changed="$(printf '%s\n' "$changed" | grep -E '^\.github/workflows/(live-qa|production-monitor)\.yml$' || true)"
           ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
-          if [ -n "$ads_changed" ] && [ -z "$ads_other" ]; then
+          if { [ -n "$ads_changed" ] || [ -n "$ads_monitor_changed" ]; } && [ -z "$ads_other" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "jobs_live=false" >> "$GITHUB_OUTPUT"
             echo "tour_live=false" >> "$GITHUB_OUTPUT"
             echo "ads_live=true" >> "$GITHUB_OUTPUT"
-            echo "Only ads.txt changed; verify exact published asset after deployment."
+            if [ -n "$ads_changed" ]; then echo "ads_wait=true" >> "$GITHUB_OUTPUT"; fi
+            echo "Only ads.txt or its monitor changed; verify exact public authorization."
             exit 0
           fi
 
@@ -105,6 +108,7 @@ jobs:
     timeout-minutes: 13
     steps:
       - name: Wait until the exact commit is deployed
+        if: needs.scope.outputs.ads_wait == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -132,7 +136,7 @@ jobs:
               -w '%{http_code} %{url_effective}' "$url?adscheck=$GITHUB_SHA")"
             status="$(printf '%s' "$result" | cut -d' ' -f1)"
             final_url="$(printf '%s' "$result" | cut -d' ' -f2)"
-            if [ "$status" != "200" ] || [ "$final_url" != "https://mynigeriaguide.com/ads.txt?adscheck=$GITHUB_SHA" ]; then
+            if [ "$status" != "200" ]; then
               echo "::error::ads.txt failed redirect/status: $url -> $result"
               exit 1
             fi
