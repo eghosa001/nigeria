@@ -43,6 +43,12 @@ function readableSearchHour(value: string) {
 
 function interactionLabel(event: string) {
   const labels: Record<string, string> = {
+    feature_discovery_click: "Feature explored",
+    feature_share: "Pillar information shared",
+    trip_plan_share: "Travel budget shared",
+    job_watch_add: "Job search saved",
+    job_watch_remove: "Job search removed",
+    job_watch_check: "Saved job searches checked",
     job_apply_click: "Official job application clicked",
     related_content_click: "Related guide opened",
     saved_page_add: "Page saved",

@@ -112,6 +112,7 @@ export default function ExplorePage() {
             <a href="#places">{explorePlaces.length} mapped places</a>
             <Link href="/explore/nigeria-landmarks-places-to-visit">Top places in Nigeria</Link>
             <a href="#browse-guides">Browse Nigeria</a>
+            <Link href="/explore/trip-planner">Plan a trip budget</Link>
             <Link href="/explore/events">Events & festivals</Link>
           </div>
         </div>

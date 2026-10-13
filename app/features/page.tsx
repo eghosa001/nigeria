@@ -57,7 +57,7 @@ const pillars = [
 
 export default function FeaturesPage() {
   return (
-    <main className="feature-guide">
+    <div className="feature-guide">
       <section className="section page-top feature-guide-hero">
         <div className="container">
           <span className="eyebrow">Make the most of MyNigeriaGuide</span>
@@ -100,6 +100,6 @@ export default function FeaturesPage() {
           <p className="feature-guide-note">Saved pages, watched service guides and job searches are kept on this device. Checks happen when you return; email or push notifications are not active. Always confirm fees, availability and deadlines with the official source.</p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

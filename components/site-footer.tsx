@@ -20,6 +20,8 @@ export function SiteFooter() {
           </div>
           <div>
             <strong>Useful</strong>
+            <Link href="/features">What you can do</Link>
+            <Link href="/explore/trip-planner">Plan a trip budget</Link>
             <Link href="/search">Search the whole site</Link>
             <Link href="/assistant">Find a service guide</Link>
             <Link href="/saved">Saved</Link>

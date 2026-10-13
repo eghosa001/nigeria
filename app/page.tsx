@@ -135,6 +135,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="feature-quickstart" aria-label="Useful things you can do">
+        <div className="container feature-quickstart-inner">
+          <strong>Discover what you can do here</strong>
+          <div className="feature-quickstart-links">
+            <Link href="/entertainment/people">Browse movie casts</Link>
+            <Link href="/saved">Watch &amp; save guides</Link>
+            <Link href="/jobs#opportunities">Follow job searches</Link>
+            <Link href="/explore/trip-planner">Plan a trip budget</Link>
+            <Link href="/features">See all features →</Link>
+          </div>
+        </div>
+      </section>
+
       <section className="minimal-home-section minimal-home-movies" aria-labelledby="home-movies-title">
         <div className="container">
           <div className="minimal-section-heading">
