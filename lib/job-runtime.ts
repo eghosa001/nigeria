@@ -16,7 +16,7 @@ export function getEffectiveJobStatus(item: CareerOpportunity, todayIso = todayI
 
 export function getEffectiveStatusLabel(item: CareerOpportunity, todayIso = todayIsoNigeria()) {
   if (item.status === "open" && item.deadline && item.deadline < todayIso) {
-    return "Deadline passed — verify current status";
+    return "Application deadline passed — closed unless officially extended";
   }
   return item.statusLabel;
 }
