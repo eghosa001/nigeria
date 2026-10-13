@@ -1,3 +1,4 @@
+import { verifiedOctoberMovieReleases20261013 } from "@/lib/entertainment-october-releases-2026-10-13";
 import { verifiedOctoberFilm } from "@/lib/entertainment-social-trends-2026-10-10";
 import { entertainmentGrowthWave12 } from "@/lib/entertainment-growth-wave-12";
 import { entertainmentGrowthWave11 } from "@/lib/entertainment-growth-wave-11";
@@ -92,6 +93,7 @@ export type EntertainmentTitle = {
 };
 
 export const entertainmentTitles: EntertainmentTitle[] = [
+  ...verifiedOctoberMovieReleases20261013,
   ...verifiedOctoberFilm,
   ...entertainmentGrowthWave12,
   ...entertainmentGrowthWave11,

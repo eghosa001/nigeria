@@ -1,3 +1,4 @@
+import { verifiedOctoberHeritageEvents20261013 } from "@/lib/explore-heritage-events-2026-10-13";
 import { museumCollectionsGuide20261013 } from "@/lib/explore-museum-collections-2026-10-13";
 import { railTravelGuides20261012 } from "@/lib/explore-rail-travel-2026-10-12";
 import { adamawaHeritageMuseums20261012 } from "@/lib/explore-adamawa-museums-2026-10-12";
@@ -31,6 +32,7 @@ export type ExploreGuide = {
 };
 
 export const exploreGuides: ExploreGuide[] = [
+  ...verifiedOctoberHeritageEvents20261013,
   ...museumCollectionsGuide20261013,
   ...railTravelGuides20261012,
   ...adamawaHeritageMuseums20261012,
