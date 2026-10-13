@@ -688,12 +688,13 @@ export async function getAnalyticsDashboard(
   range: AnalyticsRange,
   mode: AnalyticsTrafficMode = "clean",
   forceFresh = false,
+  includeDiagnostics = true,
 ): Promise<AnalyticsDashboardData> {
   const ga4Available = analyticsReadConfigured();
-  const cacheKey = range + ":" + mode;
+  const cacheKey = range + ":" + mode + ":" + (includeDiagnostics ? "detail" : "overview");
   const cached = reportCache.get(cacheKey);
   if (!forceFresh && cached && cached.expiresAt > Date.now()) {
-    const realtime = ga4Available ? await runRealtime().catch(() => null) : null;
+    const realtime = ga4Available && includeDiagnostics ? await runRealtime().catch(() => null) : null;
     return {
       ...cached.data,
       // Preserve the actual GA4 report fetch time. Realtime is refreshed below,
@@ -835,6 +836,25 @@ export async function getAnalyticsDashboard(
     error: "GA4 Data API is not configured. PostHog remains available independently.",
   };
 
+  const deferredHourly: SearchConsoleHourlyReport = {
+    available: false,
+    source: "unavailable",
+    siteUrl: searchConsoleConfig().siteUrl,
+    startDate: "",
+    endDate: "",
+    fetchedAt: "",
+    latestHour: null,
+    firstIncompleteHour: null,
+    lagHours: null,
+    clicks: null,
+    impressions: null,
+    impressions24h: null,
+    clicks24h: null,
+    hoursReported24h: 0,
+    rows: [],
+    error: "Open detailed reports to fetch hourly Google Search Console data.",
+  };
+
   // Every source is independent: a broken GA4 API must not blank the
   // PostHog and Search Console panels or prevent the private dashboard loading.
   const [ga4Batch, interactionReport, realtime, searchPerformance, hourlySearchPerformance, connection, posthogOverview, keyEvents, organicDailyReport] = await Promise.all([
@@ -849,14 +869,14 @@ export async function getAnalyticsDashboard(
           batch: { reports: [] } as BatchRunReportsResponse,
           error: "Google Analytics service account is not configured.",
         }),
-    ga4Available ? runReport(interactionRequest).catch(() => ({} as RunReportResponse)) : Promise.resolve({} as RunReportResponse),
-    ga4Available ? runRealtime().catch(() => null) : Promise.resolve(null),
+    ga4Available && includeDiagnostics ? runReport(interactionRequest).catch(() => ({} as RunReportResponse)) : Promise.resolve({} as RunReportResponse),
+    ga4Available && includeDiagnostics ? runRealtime().catch(() => null) : Promise.resolve(null),
     getSearchPerformance(dataStartDate),
-    getHourlySearchPerformance(),
-    ga4Available ? verifyAnalyticsConnection() : Promise.resolve(unavailableConnection),
+    includeDiagnostics ? getHourlySearchPerformance() : Promise.resolve(deferredHourly),
+    ga4Available && includeDiagnostics ? verifyAnalyticsConnection() : Promise.resolve({ ...unavailableConnection, error: "Open detailed reports to verify GA4 configuration." }),
     getPostHogOverview(dataStartDate, today, forceFresh),
-    ga4Available ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "GA4 Data API is not configured." } as GA4KeyEventStatus),
-    ga4Available ? runReport(organicDailyRequest).catch(() => null) : Promise.resolve(null),
+    ga4Available && includeDiagnostics ? getGA4KeyEventStatus() : Promise.resolve({ available: false, events: [], error: "Open detailed reports to check configured key events." } as GA4KeyEventStatus),
+    ga4Available && includeDiagnostics ? runReport(organicDailyRequest).catch(() => null) : Promise.resolve(null),
   ]);
 
   const { batch, error: ga4Error } = ga4Batch;
