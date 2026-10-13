@@ -16,6 +16,48 @@ export type HomeSocialTrend = {
  */
 export const homeSocialTrends: HomeSocialTrend[] = [
   {
+    "pillar": "Movies & Entertainment",
+    "title": "Matters of the Heart (2026): Sarian Martin, Timini Egbuson, cast and official viewing",
+    "href": "/entertainment/movies/matters-of-the-heart-2026",
+    "checkedAt": "2026-10-13",
+    "expiresAt": "2026-10-20"
+  },
+  {
+    "pillar": "Tour Nigeria",
+    "title": "Ofala Onitsha 2026: Iru & Azu Ofala on 16–17 October, venue and visitor guide",
+    "href": "/explore/ofala-onitsha-2026",
+    "checkedAt": "2026-10-13",
+    "expiresAt": "2026-10-17"
+  },
+  {
+    "pillar": "Services",
+    "title": "NECO External 2026 registration: normal deadline 26 October and official portal",
+    "href": "/services/neco-2026-ssce-external-registration",
+    "checkedAt": "2026-10-13",
+    "expiresAt": "2026-10-26"
+  },
+  {
+    "pillar": "Jobs & Careers",
+    "title": "NOVA Bank Graduate Trainee: official eligibility and 15 October deadline",
+    "href": "/jobs/nova-bank-graduate-trainee-2026",
+    "checkedAt": "2026-10-13",
+    "expiresAt": "2026-10-15"
+  },
+  {
+    "pillar": "Movies & Entertainment",
+    "title": "Breaking Point (2026): Sandra Okunzuwa, Bolaji Ogunmola and Timini Egbuson",
+    "href": "/entertainment/movies/breaking-point-2026",
+    "checkedAt": "2026-10-13",
+    "expiresAt": "2026-10-24"
+  },
+  {
+    "pillar": "Tour Nigeria",
+    "title": "Benin royal anniversary 2026: October ceremonies and November museum exhibition",
+    "href": "/explore/benin-royal-coronation-anniversary-2026",
+    "checkedAt": "2026-10-13",
+    "expiresAt": "2026-11-21"
+  },
+  {
     pillar: "Movies & Entertainment",
     title: "My 30th Wedding: Bimbo Ademoye, Timini Egbuson and official full movie",
     href: "/entertainment/movies/my-30th-wedding",
