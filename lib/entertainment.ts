@@ -263,6 +263,11 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     runtimeMinutes: 149,
     featured: true,
     references: [{
+      label: "BellaNaija — My 30th Wedding plot, character names and promotion",
+      href: "https://www.bellanaija.com/2026/10/bimbo-ademoye-timini-egbuson-my-30th-wedding-photos-explained/",
+      lastChecked: "2026-10-13",
+      note: "Documents the Aeta and Leon Wellington roles and clarifies that promotional wedding photographs were not a real wedding announcement."
+    }, {
       label: "Nairametrics — My 30th Wedding YouTube milestone",
       href: "https://nairametrics.com/2026/10/04/bimbo-ademoyes-my-30th-wedding-crosses-10-million-views-on-youtube-in-48hrs/",
       lastChecked: "2026-10-06",
@@ -2453,7 +2458,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Comedy", "Drama", "Family", "Nollywood"],
     languages: ["English"],
     synopsis: "A self-righteous church usher is determined to solve everyone else's problems, but her interventions begin to destabilise her own family as her daughter's wedding approaches.",
-    cast: ["Toyin Abraham", "Mike Ezuruonye", "Enioluwa Adeoluwa", "Jemima Osunde", "Tana Adelana", "Ngozi Ezeonu", "Efe Irele", "Toyin Afolayan", "Bianca Ugowanne"],
+    cast: ["Toyin Abraham", "Mike Ezuruonye", "Enioluwa Adeoluwa", "Jemima Osunde", "Tana Adelana", "Ngozi Ezeonu", "Efe Irele", "Toyin Afolayan", "Bianca Ugowanne", "Queen Nwokoye"],
     featuredCast: ["Toyin Abraham", "Mike Ezuruonye", "Enioluwa Adeoluwa", "Jemima Osunde", "Tana Adelana"],
     directors: ["Toyin Abraham"],
     runtimeMinutes: 127,
@@ -2467,12 +2472,34 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisherUrl: "https://www.youtube.com/@FilmOneNG",
     },
     references: [{
+      label: "Kava — official Oversabi Aunty listing and synopsis",
+      href: "https://watch.kava.tv/oversabi-aunty",
+      lastChecked: "2026-10-13",
+      note: "Primary distributor source for synopsis, cast and current subscription listing."
+    }, {
+      label: "IMDb — Oversabi Aunty full credits",
+      href: "https://www.imdb.com/title/tt38999905/fullcredits/",
+      lastChecked: "2026-10-13",
+      note: "Cross-reference for specific actor-to-character roles, production credits and release history."
+    }, {
+      label: "Fandango — Oversabi Aunty cast and crew",
+      href: "https://www.fandango.com/oversabi-aunty-2025-244306/cast-and-crew",
+      lastChecked: "2026-10-13",
+      note: "Additional independent corroboration of film credits and character assignments."
+    }, {
       label: "Netflix Nigeria — Oversabi Aunty title listing",
       href: "https://www.netflix.com/ng/title/82741545",
       lastChecked: "2026-10-09",
       note: "On 9 October the official title page displayed an unavailability notice for the viewer's country. This confirms the listing, not that the film is playable in Nigeria.",
     }],
-    watchLinks: [],
+    watchLinks: [{
+      platform: "Kava",
+      label: "Check Oversabi Aunty on Kava",
+      href: "https://watch.kava.tv/oversabi-aunty",
+      access: "subscription",
+      lastChecked: "2026-10-13",
+      note: "Kava's official film page lists Oversabi Aunty and offers a Subscribe option. Territorial playback, pricing and access must be confirmed with Kava; this is not a free YouTube upload."
+    }],
   },
   {
     slug: "my-fathers-shadow",
