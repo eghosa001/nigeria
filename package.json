@@ -33,12 +33,13 @@
     "postbuild:vinext": "node scripts/write-wrangler-deploy-config.mjs",
     "check:jobs": "tsx scripts/check-jobs-content.ts && tsx scripts/check-job-redirects.ts",
     "check:job-links": "node scripts/check-job-links.mjs",
-    "check:entertainment-content": "tsx scripts/check-entertainment-content.ts",
+    "check:entertainment-content": "tsx scripts/check-entertainment-content.ts && tsx scripts/check-premium-film-guides.ts",
     "check:freshness": "tsx scripts/check-freshness.ts",
     "quality:status": "tsx scripts/report-content-quality.ts",
     "check:directory-queries": "tsx scripts/check-directory-queries.ts",
     "audit:publisher": "tsx scripts/audit-publisher-readiness.ts",
-    "check:crawl-assets": "node --test tests/sitemap-ads-assets.test.mjs"
+    "check:crawl-assets": "node --test tests/sitemap-ads-assets.test.mjs",
+    "check:premium-film-guides": "tsx scripts/check-premium-film-guides.ts"
   },
   "dependencies": {
     "next": "16.3.8",

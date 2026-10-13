@@ -14,9 +14,7 @@ import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
 import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
-import { movieEditorialProfiles } from "@/lib/movie-editorial-profiles";
-import { movieEditorialProfilesWave2 } from "@/lib/movie-editorial-profiles-wave2";
-import { movieEditorialProfilesWave3 } from "@/lib/movie-editorial-profiles-wave3";
+import { getMovieEditorialProfile } from "@/lib/movie-editorial-profile-registry";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -303,7 +301,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
   const featuredCast = getFeaturedCast(title);
-  const editorial = movieEditorialProfiles[title.slug] ?? movieEditorialProfilesWave2[title.slug] ?? movieEditorialProfilesWave3[title.slug];
+  const editorial = getMovieEditorialProfile(title.slug);
   const image = movieImageUrl(title, base);
   const movieLd = {
     "@context": "https://schema.org",
@@ -315,6 +313,12 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     inLanguage: title.languages,
     actor: title.cast.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
+    author: editorial?.crew
+      .filter((credit) => /writer|screenplay/i.test(credit.role))
+      .map((credit) => ({ "@type": "Person", name: credit.name })) || undefined,
+    producer: editorial?.crew
+      .filter((credit) => /producer/i.test(credit.role))
+      .map((credit) => ({ "@type": "Person", name: credit.name })) || undefined,
     image: image || undefined,
     countryOfOrigin: { "@type": "Country", name: "Nigeria" },
     dateModified: lastChecked || undefined,
