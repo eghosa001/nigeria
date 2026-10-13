@@ -73,7 +73,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
 
   if (section === "core") {
     const staticPaths = [
-      "", "/latest", "/fees", "/updates", "/assistant", "/offices", "/locations", "/official-portals",
+      "", "/features", "/latest", "/fees", "/updates", "/assistant", "/offices", "/locations", "/official-portals",
       "/about", "/editorial-policy", "/corrections", "/privacy", "/terms", "/contact",
     ];
     return [
@@ -166,6 +166,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
   if (section === "travel") {
     return [
       { url: base + "/explore", lastModified: exploreModified },
+      { url: base + "/explore/trip-planner", lastModified: "" },
       { url: base + "/explore/events", lastModified: exploreModified },
       { url: base + "/explore/things-to-do-lagos", lastModified: "2026-10-04" },
       { url: base + "/explore/things-to-do-abuja", lastModified: "2026-10-04" },
