@@ -119,6 +119,26 @@ jobs:
           printf '%s' "$robots" | grep -qi "disallow: /admin"
           echo "Sitemap index, section sitemaps and robots discovery checks passed."
 
+      - name: Verify Google AdSense ads.txt is continuously crawlable
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$(mktemp)"
+          printf '%s\n' 'google.com, pub-7517898921176341, DIRECT, f08c47fec0942fa0' > "$expected"
+          for url in "https://mynigeriaguide.com/ads.txt" "https://www.mynigeriaguide.com/ads.txt" "http://mynigeriaguide.com/ads.txt"; do
+            body="$(mktemp)"
+            result="$(curl --silent --show-error --location --retry 2 --retry-delay 2 \
+              --connect-timeout 10 --max-time 30 --output "$body" \
+              --write-out '%{http_code} %{url_effective} %{content_type}' "$url")"
+            read -r status final_url content_type <<< "$result"
+            if [ "$status" != "200" ] || [ "$final_url" != "https://mynigeriaguide.com/ads.txt" ] ||
+               [[ "$content_type" != text/plain* ]] || ! cmp -s "$body" "$expected"; then
+              echo "::error::AdSense ads.txt unavailable or incorrect: $url -> $result"
+              exit 1
+            fi
+            echo "AdSense ads.txt present, correctly authorized and publicly reachable: $url"
+          done
+
       - name: Verify Cloudflare Access protects admin surfaces
         shell: bash
         run: |
