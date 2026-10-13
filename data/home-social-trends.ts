@@ -30,12 +30,6 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     expiresAt: "2026-10-25",
   },
   {
-    pillar: "Movies & Entertainment",
-    title: "YouTube Nigeria: Blaqbonez, OJISE trailer, Ayra Starr and social trends",
-    href: "/entertainment/social-trends",
-    checkedAt: "2026-10-10",
-    expiresAt: "2026-10-12",
-  },
   {
     pillar: "Movies & Entertainment",
     title: "Issakaba: The Return — cast and 13 November cinema date",
@@ -51,12 +45,6 @@ export const homeSocialTrends: HomeSocialTrend[] = [
     expiresAt: "2026-10-18",
   },
   {
-    pillar: "Jobs & Careers",
-    title: "African Development Bank 2027 Internship — closes 12 October",
-    href: "/jobs/afdb-2027-internship-session-one",
-    checkedAt: "2026-10-10",
-    expiresAt: "2026-10-12",
-  },
   {
     pillar: "Jobs & Careers",
     title: "NOVA Bank Graduate Trainee Programme — closes 15 October",
