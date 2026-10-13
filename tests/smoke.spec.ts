@@ -598,10 +598,17 @@ test("brand logo always returns home, including after process activity", async (
 test("service FAQ answers are contextual and complete enough to guide the next action", async ({ page }) => {
   await page.goto("/services/passport-renewal");
   const questions = page.locator("#questions details");
-  await expect(questions).toHaveCount(9);
-  await expect(page.locator("#questions")).toContainText("Online + physical visit");
+  // The essential route, fees and steps already have their own complete
+  // sections. The supplementary FAQ should not duplicate all those answers.
+  await expect(questions).toHaveCount(3);
+  await expect(questions.nth(0)).toContainText(/application or official service does not work/i);
+  await expect(questions.nth(1)).toContainText(/careful about/i);
+  await expect(questions.nth(2)).toContainText(/instructions are current/i);
   await expect(page.locator("#questions")).toContainText(/official|agency/i);
   await expect(page.locator("#questions")).toContainText(/last checked|checked on/i);
+  await expect(page.locator("#journey")).toContainText("Online + physical visit");
+  await expect(page.locator("#requirements")).toBeVisible();
+  await expect(page.locator("#steps")).toBeVisible();
 });
 
 test("service links distinguish exact guidance from transaction portal", async ({ page }) => {
