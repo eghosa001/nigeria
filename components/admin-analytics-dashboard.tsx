@@ -298,6 +298,7 @@ export function AdminAnalyticsDashboard() {
               <div><strong>GA4 reporting</strong><small>{data.propertyId || "No property ID"} · {data.connection?.measurementId || "No measurement ID"}</small><b>{data.ga4Available ? "Receiving processed reports" : "Unavailable"}</b></div>
               <div><strong>GA4 configuration</strong><small>{data.connection?.error || "Web-stream comparison"}</small><b>{data.connection?.status ?? "Unavailable"}</b></div>
               <div><strong>PostHog reporting</strong><small>{data.posthog.overview.error || data.posthog.collectionStartDate}</small><b>{posthog.available ? "Available" : "Unavailable"}</b></div>
+              <div><strong>PostHog bounce rate</strong><small>Percent of sessions without meaningful continuation</small><b>{posthog.bounceRate == null ? "—" : posthog.bounceRate.toFixed(1) + "%"}</b></div>
               <div><strong>Google Search Console</strong><small>{data.searchPerformance?.source || "Unavailable"} · latest {data.searchPerformance?.latestDate || "unreported"}</small><b>{data.searchPerformance?.available ? "Available" : "Unavailable"}</b></div>
             </div>
           </section>
