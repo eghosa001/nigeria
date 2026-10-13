@@ -36,9 +36,15 @@ export function jobSearchText(item: CareerOpportunity) {
   return value;
 }
 
-function matchesTerms(item: CareerOpportunity, terms: string[]) {
-  const text = jobSearchText(item);
+function matchesTerms(value: string, terms: string[]) {
+  const text = value.toLowerCase();
   return terms.some((term) => text.includes(term.toLowerCase()));
+}
+
+function matchesProfessionTerms(item: CareerOpportunity, terms: string[]) {
+  // Experience or an education requirement mentioning a field does not make
+  // the opportunity a vacancy in that profession.
+  return matchesTerms([item.title, item.employmentType, ...item.fields].join(" "), terms);
 }
 
 export const jobLocationFacets: JobFacet[] = [
@@ -94,15 +100,18 @@ export function getJobProfessionFacet(slug: string) {
 }
 
 export function getJobFacetOpportunities(facet: JobFacet) {
-  return jobOpportunities.filter((item) => matchesTerms(item, facet.terms));
+  const locationFacet = jobLocationFacets.some((location) => location.slug === facet.slug);
+  return jobOpportunities.filter((item) => locationFacet
+    ? matchesTerms(item.location, facet.terms)
+    : matchesProfessionTerms(item, facet.terms));
 }
 
 export function matchesJobLocation(item: CareerOpportunity, slug: string) {
   const facet = getJobLocationFacet(slug);
-  return facet ? matchesTerms(item, facet.terms) : false;
+  return facet ? matchesTerms(item.location, facet.terms) : false;
 }
 
 export function matchesJobProfession(item: CareerOpportunity, slug: string) {
   const facet = getJobProfessionFacet(slug);
-  return facet ? matchesTerms(item, facet.terms) : false;
+  return facet ? matchesProfessionTerms(item, facet.terms) : false;
 }
