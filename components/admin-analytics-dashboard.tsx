@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { AnalyticsDashboardData, AnalyticsRange } from "@/lib/analytics-data";
 import { SearchConsoleConnectionHelp } from "@/components/search-console-connection-help";
 
@@ -65,40 +65,57 @@ export function AdminAnalyticsDashboard() {
   const [data, setData] = useState<AnalyticsDashboardData | null>(null);
   const [setup, setSetup] = useState<ApiResponse>({});
   const [message, setMessage] = useState("");
+  const [refreshing, setRefreshing] = useState(false);
+  const [showDiagnostics, setShowDiagnostics] = useState(false);
+  const activeRequest = useRef<AbortController | null>(null);
 
-  async function load(nextRange = range, forceFresh = false) {
-    setState("loading");
+  async function load(nextRange = range, forceFresh = false, includeDiagnostics = showDiagnostics) {
+    activeRequest.current?.abort();
+    const controller = new AbortController();
+    activeRequest.current = controller;
+    if (!data) setState("loading");
+    setRefreshing(true);
     setMessage("");
     try {
       const response = await fetch(
-        "/admin/api/analytics?range=" + nextRange + "&mode=clean" + (forceFresh ? "&fresh=1" : ""),
-        { cache: "no-store" },
+        "/admin/api/analytics?range=" + nextRange + "&mode=clean&details=" + (includeDiagnostics ? "1" : "0") + (forceFresh ? "&fresh=1" : ""),
+        { cache: "no-store", signal: controller.signal },
       );
       const body = await response.json().catch(() => ({ error: "Analytics server returned an invalid response." })) as ApiResponse;
-
+      if (controller.signal.aborted) return;
       if (response.status === 503 && body.configured === false) {
         setSetup(body);
+        setData(null);
         setState("setup");
-        return;
-      }
-      if (response.status === 401) {
+      } else if (response.status === 401) {
+        setData(null);
         setState("locked");
-        return;
-      }
-      if (!response.ok || !body.data) {
+      } else if (!response.ok || !body.data) {
         setMessage(body.error ?? "Unable to load visit analytics.");
-        setState("error");
-        return;
+        if (!data) setState("error");
+      } else {
+        setData(body.data);
+        setState("ready");
       }
-      setData(body.data);
-      setState("ready");
     } catch (error) {
+      if (controller.signal.aborted) return;
       setMessage(error instanceof Error ? error.message : "Unable to reach the analytics server.");
-      setState("error");
+      if (!data) setState("error");
+    } finally {
+      if (activeRequest.current === controller) {
+        activeRequest.current = null;
+        setRefreshing(false);
+      }
     }
   }
 
-  useEffect(() => { void load(range); }, [range]);
+  useEffect(() => {
+    void load(range);
+    return () => activeRequest.current?.abort();
+    // Data updates only when the requested range changes. The latest request
+    // wins; Strict Mode navigation and fast range toggles cancel old requests.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [range]);
 
   async function login(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -120,6 +137,7 @@ export function AdminAnalyticsDashboard() {
   }
 
   async function logout() {
+    activeRequest.current?.abort();
     await fetch("/admin/api/analytics-access", { method: "DELETE" });
     setData(null);
     setState("locked");
@@ -180,462 +198,160 @@ export function AdminAnalyticsDashboard() {
     );
   }
 
+  const posthog = data.posthog.overview;
+  const primary = data.ga4Available ? "GA4" : posthog.available ? "PostHog" : "No source";
+  const visitors = data.ga4Available ? data.summary.totalUsers ?? data.summary.activeUsers : posthog.visitors;
+  const sessions = data.ga4Available ? data.summary.sessions : posthog.sessions;
+  const views = data.ga4Available ? data.summary.pageViews : posthog.views;
+
   return (
-    <>
+    <div className="admin-visits-compact">
       <div className="analytics-toolbar">
-        <div>
-          <button type="button" className={range === "7d" ? "active" : undefined} onClick={() => setRange("7d")}>7 days</button>
-          <button type="button" className={range === "30d" ? "active" : undefined} onClick={() => setRange("30d")}>30 days</button>
-          <button type="button" className={range === "90d" ? "active" : undefined} onClick={() => setRange("90d")}>90 days</button>
+        <div aria-label="Reporting period">
+          {(["7d", "30d", "90d"] as const).map((option) => (
+            <button key={option} type="button" className={range === option ? "active" : undefined}
+              aria-pressed={range === option} onClick={() => setRange(option)}>
+              {option === "7d" ? "7 days" : option === "30d" ? "30 days" : "90 days"}
+            </button>
+          ))}
         </div>
         <div>
-          <button type="button" onClick={() => void load(range, true)}>Refresh now</button>
+          <button type="button" disabled={refreshing} onClick={() => void load(range, true)}>{refreshing ? "Updating…" : "Refresh"}</button>
           <button type="button" onClick={logout}>Lock analytics</button>
         </div>
       </div>
 
-      <p className="analytics-clean-note">
-        {data.ga4Available ? (
-          <>GA4 public-site data only, from {new Date(data.dataStartDate + "T12:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" })}. Earlier GA4 data is excluded because it contains known QA traffic. Only mynigeriaguide.com production host events are included; admin, API and Next.js asset paths are excluded. The 7/30/90-day totals are processed GA4 reports and may lag behind new visits; the last-30-minute counters above are realtime. GA4 property: {data.propertyId || "unknown"}.</>
-        ) : (
-          <>PostHog is loading independently. GA4 Data API reporting is currently unavailable, so GA4 totals below should not be treated as visitor counts until that secondary connection is restored.</>
-        )}
-      </p>
+      {refreshing ? <p role="status" className="analytics-clean-note">Updating the report. The previous figures remain visible.</p> : null}
+      {message ? <p role="alert" className="form-message error">{message}</p> : null}
+      {data.range !== range ? <p role="status" className="analytics-clean-note">Showing the previous period while {range === "7d" ? "7" : range === "30d" ? "30" : "90"}-day figures load.</p> : null}
 
-      {data.ga4Available ? (
-        <div className="admin-analytics-state" role="status">
-          <strong>Google Analytics is receiving historical traffic data.</strong>
-          <p>
-            Most recent day with recorded activity in the selected GA4 reports:{" "}
-            <strong>{lastReportedActivity ? readableDate(lastReportedActivity) : "none in this selected period"}</strong>.
-            This is not Google's last processing time: missing or incomplete current-day reports do not establish that today's visits are zero.
-            Use the separate last-30-minute realtime counters for recent activity.
-            A zero realtime count means no tracked active users in that window, not automatically a broken tag.
-          </p>
-        </div>
-      ) : null}
-
-      {!data.ga4Available && data.ga4Error ? (
-        <div className="admin-analytics-state" role="status">
-          <strong>Google Analytics is unavailable, but other reports can still load.</strong>
-          <p>{data.ga4Error}</p>
-          <p>Use the separate Search Console status above to check Google impressions independently of GA4 and PostHog.</p>
-        </div>
-      ) : null}
-
-      <section className="admin-panel">
+      <section className="admin-panel" aria-labelledby="admin-traffic-overview">
         <div className="section-heading">
-          <div>
-            <span className="eyebrow">Primary live analytics</span>
-            <h2>PostHog · MyNigeriaGuide</h2>
-          </div>
-          <a href={data.posthog.webUrl} target="_blank" rel="noreferrer">Open live analytics ↗</a>
+          <div><span className="eyebrow">Audience · {data.range}</span><h2 id="admin-traffic-overview">Traffic overview</h2></div>
+          <small>Visitors, sessions and views: {primary} · Search: Google Search Console</small>
         </div>
-        <div className="analytics-ranking">
-          <div>
-            <span>1</span>
-            <strong>Public tracking</strong>
-            <small>mynigeriaguide.com</small>
-            <b>{data.posthog.trackingConfigured ? "SDK installed" : "Not configured"}</b>
-          </div>
-          <div>
-            <span>2</span>
-            <strong>Collection start</strong>
-            <small>{data.posthog.collectionStartDate}</small>
-            <b>New traffic</b>
-          </div>
-          <div>
-            <span>3</span>
-            <strong>Admin API reporting</strong>
-            <small>Protected server-side PostHog read access</small>
-            <b>{data.posthog.reportingConfigured ? "Connected" : "Not connected"}</b>
-          </div>
+        <div className="analytics-metric-grid">
+          <div><span>Visitors</span><strong>{visitors == null ? "—" : number(visitors)}</strong><small>{primary} · unique visitors</small></div>
+          <div><span>Sessions</span><strong>{sessions == null ? "—" : number(sessions)}</strong><small>{primary} · visits</small></div>
+          <div><span>Page views</span><strong>{views == null ? "—" : number(views)}</strong><small>{primary} · includes repeated views</small></div>
+          <div><span>Google clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>Search results, not site sessions</small></div>
+          <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Search appearances</small></div>
         </div>
-        <p className="analytics-clean-note">
-          PostHog reports new traffic from when tracking became operational; an installed SDK alone does not confirm successful event delivery. It does not rewrite old visitor history.
-          Google Search Console history remains preserved separately below, while GA4 stays enabled as a secondary reference.
-          Admin paths, API paths, Next.js assets and automated QA traffic are excluded from PostHog collection.
-        </p>
-        {data.posthog.overview.available ? (
-          <>
-            <div className="analytics-metric-grid">
-              <div><span>PostHog visitors</span><strong>{number(data.posthog.overview.visitors ?? 0)}</strong><small>Unique visitors · fast web analytics</small></div>
-              <div><span>PostHog sessions</span><strong>{number(data.posthog.overview.sessions ?? 0)}</strong><small>Visits in the selected period</small></div>
-              <div><span>PostHog page views</span><strong>{number(data.posthog.overview.views ?? 0)}</strong><small>Repeated views included</small></div>
-              <div><span>Avg session</span><strong>{duration(data.posthog.overview.averageSessionDurationSeconds)}</strong><small>Average session duration</small></div>
-              <div><span>Bounce rate</span><strong>{data.posthog.overview.bounceRate == null ? "—" : data.posthog.overview.bounceRate.toFixed(1) + "%"}</strong><small>Sessions that ended without meaningful continuation</small></div>
-            </div>
-            <p className="analytics-clean-note">
-              PostHog range: {data.posthog.overview.startDate} through {data.posthog.overview.endDate}. Refresh now asks PostHog and GA4 for fresh server-side reports.
-            </p>
-          </>
-        ) : (
-          <div className="admin-empty">
-            <strong>PostHog private reporting is not available on this dashboard yet.</strong>
-            <p>{data.posthog.overview.error || <>Add a server-only <code>POSTHOG_PERSONAL_API_KEY</code> with Query Read access. Never use that key in browser code.</>}</p>
-          </div>
-        )}
-      </section>
-
-      <section className="admin-panel">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">Secondary analytics reference</span>
-            <h2>{
-              data.connection?.status === "verified"
-                ? "GA4 property verified"
-                : data.connection?.status === "mismatch"
-                  ? "GA4 property mismatch"
-                  : "GA4 verification unavailable"
-            }</h2>
-          </div>
-          <small>{
-            data.connection?.status === "verified"
-              ? "Tracking and reporting point to the same property"
-              : data.connection?.status === "mismatch"
-                ? "Tracking and reporting point to different GA4 configuration"
-                : "Google could not run the stream/property verification"
-          }</small>
-        </div>
-        <div className="analytics-ranking">
-          <div>
-            <span>1</span>
-            <strong>Measurement ID</strong>
-            <small>{data.connection?.measurementId || "Not configured"}</small>
-            <b>{
-              data.connection?.status === "verified"
-                ? "Matched"
-                : data.connection?.status === "mismatch"
-                  ? "Mismatch"
-                  : "Unverified"
-            }</b>
-          </div>
-          <div>
-            <span>2</span>
-            <strong>Property ID</strong>
-            <small>{data.connection?.propertyId || "Not configured"}</small>
-            <b>{
-              data.connection?.status === "unavailable"
-                ? "Not checked"
-                : `${data.connection?.streams?.length ?? 0} web stream${(data.connection?.streams?.length ?? 0) === 1 ? "" : "s"}`
-            }</b>
-          </div>
-          {(data.connection?.streams ?? []).map((stream, index) => (
-            <div key={stream.measurementId + stream.defaultUri}>
-              <span>{index + 3}</span>
-              <strong>{stream.displayName || "Web stream"}</strong>
-              <small>{stream.defaultUri || stream.measurementId}</small>
-              <b>{stream.measurementId}</b>
-            </div>
-          ))}
-        </div>
-        {data.connection?.status === "unavailable" ? (
-          <div className="admin-empty">
-            <strong>Verification could not run; this does not mean the IDs are mismatched.</strong>
-            <p>{data.connection?.error || "Google did not allow the web-stream verification request."}</p>
-          </div>
-        ) : data.connection?.status === "mismatch" ? (
-          <div className="admin-empty">
-            <strong>The configured public measurement ID was not found in this GA4 property's web streams.</strong>
-            <p>Do not rely on the visitor totals until the tracking and reporting configuration is corrected.</p>
-          </div>
+        {!data.ga4Available && data.ga4Error ? (
+          <p className="analytics-clean-note" role="status">GA4 reports unavailable: {data.ga4Error} {posthog.available ? "Showing PostHog traffic instead." : "Visitor totals cannot be confirmed."}</p>
         ) : null}
+        {data.connection?.status === "mismatch" ? (
+          <p className="analytics-clean-note" role="alert">GA4 property and public measurement ID do not match. Check connection details before trusting GA4 totals.</p>
+        ) : null}
+        <p className="analytics-clean-note">Last report request: {new Date(data.generatedAt).toLocaleString("en-NG")}. Search Console may be delayed; a missing recent day is not zero traffic.</p>
       </section>
 
-      <div className="analytics-metric-grid">
-        <div><span>GA4 processed visitors</span><strong>{data.ga4Available ? number(data.summary.totalUsers ?? data.summary.activeUsers) : "—"}</strong><small>Deduplicated unique users from GA4 standard reporting</small></div>
-        <div><span>GA4 active users</span><strong>{data.ga4Available ? number(data.summary.activeUsers) : "—"}</strong><small>Users GA4 classifies as active</small></div>
-        <div><span>GA4 sessions</span><strong>{data.ga4Available ? number(data.summary.sessions) : "—"}</strong><small>Visits recorded by Analytics</small></div>
-        <div><span>Google Search clicks</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.clicks ?? 0) : "—"}</strong><small>{data.searchPerformance?.available ? "Search Console clicks — not GA4 sessions" : "Search Console data unavailable"}</small></div>
-        <div><span>Google impressions</span><strong>{data.searchPerformance?.available ? number(data.searchPerformance.impressions ?? 0) : "—"}</strong><small>Google Search appearances</small></div>
-        <div><span>Page views</span><strong>{data.ga4Available ? number(data.summary.pageViews) : "—"}</strong><small>Processed GA4 views; repeated views included</small></div>
-        <div><span>Engaged sessions</span><strong>{data.ga4Available ? number(data.summary.engagedSessions) : "—"}</strong><small>{(data.summary.engagementRate * 100).toFixed(1)}% engagement rate</small></div>
-        <div><span>Live users · last 30 min</span><strong>{data.realtimeActiveUsers == null ? "—" : number(data.realtimeActiveUsers)}</strong><small>Received by GA4 now; not added to the processed unique total until Google processes and deduplicates them</small></div>
-        <div><span>Views · last 30 min</span><strong>{data.realtimePageViews == null ? "—" : number(data.realtimePageViews)}</strong><small>Realtime page views; recent visits appear here first</small></div>
-      </div>
-
-      <section className="admin-panel" aria-labelledby="organic-reconciliation-title">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">Same-period measurement check</span>
-            <h2 id="organic-reconciliation-title">Google clicks versus recorded visits</h2>
+      {data.ga4Available && data.daily.length ? (
+        <section className="admin-panel analytics-trend">
+          <div className="section-heading"><div><span className="eyebrow">GA4 trend</span><h2>Page views by day</h2></div></div>
+          <div className="analytics-bars" aria-label="Daily page views">
+            {data.daily.map((row) => (
+              <div key={row.date} title={readableDate(row.date) + ": " + number(row.pageViews) + " page views"}>
+                <span style={{ height: Math.max(3, (row.pageViews / maxDailyViews) * 100) + "%" }} />
+                <small>{data.daily.length <= 14 ? readableDate(row.date) : ""}</small>
+              </div>
+            ))}
           </div>
-        </div>
-        {data.searchTrafficComparison ? (
-          <>
-            <p className="analytics-clean-note">
-              Dates: {data.searchTrafficComparison.startDate} to {data.searchTrafficComparison.endDate}.
-              Only Google Search Console dates before its first incomplete day are included.
-            </p>
-            <div className="analytics-metric-grid">
-              <div><span>Google Search clicks</span><strong>{number(data.searchTrafficComparison.gscClicks)}</strong><small>Clicked a Google Search result</small></div>
-              <div><span>GA4 Google organic sessions</span><strong>{number(data.searchTrafficComparison.ga4OrganicSessions)}</strong><small>Sessions attributed to google / organic</small></div>
-              <div>
-                <span>Click–session difference</span>
-                <strong>{number(data.searchTrafficComparison.gscClicks - data.searchTrafficComparison.ga4OrganicSessions)}</strong>
-                <small>Not a count of lost visitors or missing tracking</small>
-              </div>
-            </div>
-            <p className="analytics-clean-note">
-              These metrics will not necessarily match. Search Console counts clicks, including repeat clicks.
-              GA4 counts browser sessions only when analytics can run and is permitted. Browser privacy controls,
-              script blocking, attribution differences and redirects can affect tracking. Search Console reports
-              by Pacific dates while GA4 uses Africa/Lagos, so boundary hours may fall on different dates.
-              Compare trends and check GA4 tracking, but do not add clicks to visitor totals.
-            </p>
-          </>
-        ) : (
-          <p className="analytics-clean-note">
-            A reliable same-period comparison is not ready. Both GA4 data and fresh daily Search Console
-            rows with an identified preliminary cutoff must be available. Historical snapshots and
-            incomplete dates are not used to calculate an apparent tracking gap.
-          </p>
-        )}
-      </section>
-
-      <section className="admin-panel">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">Google Search visibility</span>
-            <h2>Impressions and search clicks</h2>
-          </div>
-          <small>{data.searchPerformance?.source === "historical-snapshot"
-            ? "Search Console · preserved historical snapshot"
-            : data.searchPerformance?.source === "unavailable"
-              ? "Search Console · API connection unavailable"
-              : "Search Console · latest data supplied by Google"}</small>
-        </div>
-        {data.searchPerformance?.available ? (
-          <>
-            <div className="analytics-metric-grid">
-              <div><span>Impressions</span><strong>{number(data.searchPerformance?.impressions ?? 0)}</strong><small>Times MyNigeriaGuide appeared in Google Search</small></div>
-              <div><span>Search clicks</span><strong>{number(data.searchPerformance?.clicks ?? 0)}</strong><small>Clicks from Google Search results</small></div>
-              <div><span>Search CTR</span><strong>{((data.searchPerformance?.ctr ?? 0) * 100).toFixed(2)}%</strong><small>Clicks divided by impressions</small></div>
-              <div><span>Average position</span><strong>{(data.searchPerformance?.position ?? 0).toFixed(1)}</strong><small>Average top result position</small></div>
-            </div>
-            <p className="analytics-clean-note">
-              {data.searchPerformance?.source === "historical-snapshot" ? (
-                <>Previous Search Console data is preserved even though the server's live Search Console credential is unavailable. Snapshot currently runs through {data.searchPerformance?.latestDate ?? "the last saved date"}.</>
-              ) : (
-                <>Comparison range starts {data.searchPerformance?.startDate}. Search Console requested through {data.searchPerformance?.endDate}; latest date actually returned: {data.searchPerformance?.latestDate ?? "none yet"}.</>
-              )}
-              {data.searchPerformance?.firstIncompleteDate ? <> Data from {data.searchPerformance?.firstIncompleteDate} onward is preliminary and can still change.</> : null}
-            </p>
-          </>
-        ) : (
-          <div className="admin-empty">
-            <strong>Search impressions are not available to this server connection yet.</strong>
-            <p>The dashboard will use the Search Console API directly once its service account has read access to {data.searchPerformance?.siteUrl ?? "sc-domain:mynigeriaguide.com"}. Visitor analytics will continue to work independently.</p>
-          </div>
-        )}
-      </section>
-
-      <section className="admin-panel" aria-labelledby="gsc-hourly-title">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">Direct Google Search Console API · preliminary</span>
-            <h2 id="gsc-hourly-title">Latest hourly search impressions</h2>
-          </div>
-          <small>Independent of GSC Wizard, ClickHouse and PostHog imports</small>
-        </div>
-        {data.hourlySearchPerformance?.available ? (
-          <>
-            <div className="analytics-metric-grid">
-              <div>
-                <span>Latest hour Google returned</span>
-                <strong>{data.hourlySearchPerformance.latestHour
-                  ? readableSearchHour(data.hourlySearchPerformance.latestHour)
-                  : "No hourly rows yet"}</strong>
-                <small>This is the actual reported hour, not the refresh time.</small>
-              </div>
-              <div>
-                <span>Age of latest reported hour</span>
-                <strong>{data.hourlySearchPerformance.lagHours == null
-                  ? "—"
-                  : data.hourlySearchPerformance.lagHours + "h"}</strong>
-                <small>{(data.hourlySearchPerformance.lagHours ?? 0) >= 24
-                  ? "Google has not returned a newer hour. Do not assume zero traffic."
-                  : "Hours since the reported time began."}</small>
-              </div>
-              <div>
-                <span>Impressions · hours returned</span>
-                <strong>{number(data.hourlySearchPerformance.impressions ?? 0)}</strong>
-                <small>Only the rows Google supplied within the requested period.</small>
-              </div>
-              <div>
-                <span>Clicks · hours returned</span>
-                <strong>{number(data.hourlySearchPerformance.clicks ?? 0)}</strong>
-                <small>Preliminary counts may increase or change after processing.</small>
-              </div>
-              <div>
-                <span>Impressions · last 24h (reported hours)</span>
-                <strong>{data.hourlySearchPerformance.impressions24h == null
-                  ? "—"
-                  : number(data.hourlySearchPerformance.impressions24h)}</strong>
-                <small>{data.hourlySearchPerformance.hoursReported24h === 0
-                  ? "No recent hours supplied by Google — not evidence of zero traffic."
-                  : data.hourlySearchPerformance.hoursReported24h + " reported hour(s) · incomplete until Google's processing catches up."}</small>
-              </div>
-              <div>
-                <span>Clicks · last 24h (reported hours)</span>
-                <strong>{data.hourlySearchPerformance.clicks24h == null
-                  ? "—"
-                  : number(data.hourlySearchPerformance.clicks24h)}</strong>
-                <small>Missing hours are excluded, never silently treated as zero.</small>
-              </div>
-            </div>
-            <p className="analytics-clean-note">
-              Direct Search Console hourly_all request (up to 10 days of retained hourly data): {data.hourlySearchPerformance.startDate} to {data.hourlySearchPerformance.endDate} in Google's Pacific reporting timezone.
-              Last fetched: {readableSearchHour(data.hourlySearchPerformance.fetchedAt)}.
-              {data.hourlySearchPerformance.firstIncompleteHour
-                ? <> Google marks data from {readableSearchHour(data.hourlySearchPerformance.firstIncompleteHour)} onward as incomplete.</>
-                : <> Google returned no first-incomplete-hour marker; this does not prove the newest data is finalized.</>}
-              {" "}Hours with no data can be omitted. Google Search impressions are not PostHog pageviews or GA4 visitors.
-            </p>
-            {data.hourlySearchPerformance.rows.length > 0 ? (
-              <div className="analytics-ranking" aria-label="Most recent Google Search hourly results">
-                {data.hourlySearchPerformance.rows.slice(-12).reverse().map((row, index) => (
-                  <div key={row.hour}>
-                    <span>{index + 1}</span>
-                    <strong>{readableSearchHour(row.hour)}</strong>
-                    <small>{row.provisional ? "Google marks as preliminary" : "Hourly data · may be revised"}</small>
-                    <b>{number(row.impressions)} impressions · {number(row.clicks)} clicks</b>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="admin-empty">Google returned no hourly rows for this property in the requested window. This does not prove there were no search appearances.</div>
-            )}
-          </>
-        ) : (
-          <div className="admin-empty">
-            <strong>Direct hourly data could not be loaded.</strong>
-            <p>{data.hourlySearchPerformance?.error || "Google did not return hourly search information."}</p>
-            <SearchConsoleConnectionHelp issue={data.hourlySearchPerformance?.issue} />
-            {data.hourlySearchPerformance?.issue?.code === "api-disabled"
-              ? <p>This is Google's disabled API error. The website cannot retrieve new impressions until it is enabled in the Google Cloud project shown above.</p>
-              : <p>This report requires a service account with access to the Search Console domain property. Historical snapshots and other analytics remain untouched.</p>}
-          </div>
-        )}
-      </section>
-
-      <section className="admin-panel" aria-labelledby="looker-studio-title">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">Free reporting · Google Looker Studio</span>
-            <h2 id="looker-studio-title">SEO and visitor dashboard template</h2>
-          </div>
-          <a href="https://lookerstudio.google.com/reporting/408e669d-07d1-4353-a1dc-94f06bde27ef/page/Hqrp/preview" target="_blank" rel="noopener noreferrer">Open Google’s template ↗</a>
-        </div>
-        <p className="analytics-clean-note">
-          Google's official Search Console + Google Analytics template is free (Looker Studio is now called Data Studio).
-          Choose <strong>Use my own data</strong>, select Search Console property <code>sc-domain:mynigeriaguide.com</code>
-          {" "}with <strong>URL Impression</strong>, and connect your MyNigeriaGuide GA4 property.
-          Google requires you to authorize these data sources in your browser once.
-          Looker Studio is for historical dashboards; use the hourly report above for the newest available preliminary data.
-        </p>
-      </section>
-
-      <section className="admin-panel analytics-trend">
-        <div className="section-heading"><div><span className="eyebrow">Traffic trend</span><h2>Page views by day</h2></div><small>Report fetched {new Date(data.generatedAt).toLocaleString("en-NG")} · not a GA4 processing timestamp</small></div>
-        <div className="analytics-bars" aria-label="Daily page views">
-          {data.daily.map((row) => (
-            <div key={row.date} title={readableDate(row.date) + ": " + number(row.pageViews) + " page views"}>
-              <span style={{ height: Math.max(3, (row.pageViews / maxDailyViews) * 100) + "%" }} />
-              <small>{data.daily.length <= 14 ? readableDate(row.date) : ""}</small>
-            </div>
-          ))}
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <div className="admin-analytics-two-column">
         <section className="admin-panel">
-          <div className="section-heading"><div><span className="eyebrow">Geography</span><h2>Where visitors are from</h2></div></div>
-          <div className="analytics-ranking">
-            {data.countries.map((row, index) => (
-              <div key={row.country}>
-                <span>{index + 1}</span>
-                <strong>{row.country}</strong>
-                <small>{number(row.users)} users</small>
-                <b>{number(row.pageViews)} views</b>
-              </div>
-            ))}
-          </div>
+          <div className="section-heading"><div><span className="eyebrow">Top content</span><h2>Pages people visit</h2></div></div>
+          {data.pages.length ? (
+            <div className="analytics-ranking">
+              {data.pages.slice(0, 5).map((row) => (
+                <div key={row.path}><strong>{row.title || row.path}</strong><small>{row.path}</small><b>{number(row.pageViews)} views</b></div>
+              ))}
+            </div>
+          ) : <p className="analytics-clean-note">No processed page records in this period.</p>}
         </section>
-
         <section className="admin-panel">
-          <div className="section-heading"><div><span className="eyebrow">Acquisition</span><h2>How people find the site</h2></div></div>
-          <div className="analytics-ranking">
-            {data.referrers.map((row, index) => (
-              <div key={row.source + row.medium}>
-                <span>{index + 1}</span>
-                <strong>{row.source}</strong>
-                <small>{row.medium}</small>
-                <b>{number(row.sessions)} visits</b>
-              </div>
-            ))}
-          </div>
+          <div className="section-heading"><div><span className="eyebrow">Acquisition</span><h2>Traffic sources</h2></div></div>
+          {data.referrers.length ? (
+            <div className="analytics-ranking">
+              {data.referrers.slice(0, 5).map((row) => (
+                <div key={row.source + row.medium}><strong>{row.source}</strong><small>{row.medium}</small><b>{number(row.sessions)} sessions</b></div>
+              ))}
+            </div>
+          ) : <p className="analytics-clean-note">No processed acquisition data in this period.</p>}
         </section>
       </div>
 
-      <section className="admin-panel">
-        <div className="section-heading"><div><span className="eyebrow">Content performance</span><h2>Most viewed pages</h2></div></div>
-        <div className="analytics-page-table">
-          <div><span>#</span><span>Page</span><span>Users</span><span>Views</span></div>
-          {data.pages.map((row, index) => (
-            <div key={row.path + row.title}>
-              <span>{index + 1}</span>
-              <span><strong>{row.title}</strong><small>{row.path}</small></span>
-              <span>{number(row.users)}</span>
-              <span>{number(row.pageViews)}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="admin-panel analytics-interactions">
-        <div className="section-heading">
-          <div><span className="eyebrow">Useful actions</span><h2>What visitors actually do</h2></div>
-          <small>Privacy-safe aggregate events only</small>
-        </div>
-        <div className="analytics-clean-note" aria-label="GA4 key event setup">
-          <strong>GA4 key-event configuration</strong>
-          {data.keyEvents?.available ? (
+      <div className="admin-analytics-expand">
+        <button type="button" className="admin-refresh-button" aria-expanded={showDiagnostics}
+          aria-controls="admin-analytics-diagnostics" onClick={() => {
+            if (showDiagnostics) setShowDiagnostics(false);
+            else { setShowDiagnostics(true); void load(range, false, true); }
+          }}>
+          {showDiagnostics ? "Hide detailed reports" : "Detailed reports & connection checks"}
+        </button>
+      </div>
+      {showDiagnostics ? (
+        <div id="admin-analytics-diagnostics">
+          {refreshing ? <p className="analytics-clean-note" role="status">Loading detailed source reports…</p> : null}
+          <section className="admin-panel">
+            <div className="section-heading"><div><span className="eyebrow">Connections</span><h2>Analytics health</h2></div>
+              <a href={data.posthog.webUrl} target="_blank" rel="noreferrer">Open PostHog ↗</a></div>
             <div className="analytics-ranking">
-              {data.keyEvents.events.map((event) => (
-                <div key={event.name}>
-                  <strong>{event.name}</strong>
-                  <span>{event.configured ? "✓ Marked as a key event" : "Not configured"}</span>
-                  <small>{event.configured
-                    ? (event.countingMethod === "ONCE_PER_SESSION" ? "Count once per session" : "Check counting method in GA4")
-                    : "GA4 Admin → Data display → Events → mark as key event"}</small>
-                </div>
-              ))}
+              <div><strong>GA4 reporting</strong><small>{data.propertyId || "No property ID"} · {data.connection?.measurementId || "No measurement ID"}</small><b>{data.ga4Available ? "Receiving processed reports" : "Unavailable"}</b></div>
+              <div><strong>GA4 configuration</strong><small>{data.connection?.error || "Web-stream comparison"}</small><b>{data.connection?.status ?? "Unavailable"}</b></div>
+              <div><strong>PostHog reporting</strong><small>{data.posthog.overview.error || data.posthog.collectionStartDate}</small><b>{posthog.available ? "Available" : "Unavailable"}</b></div>
+              <div><strong>PostHog bounce rate</strong><small>Percent of sessions without meaningful continuation</small><b>{posthog.bounceRate == null ? "—" : posthog.bounceRate.toFixed(1) + "%"}</b></div>
+              <div><strong>Google Search Console</strong><small>{data.searchPerformance?.source || "Unavailable"} · latest {data.searchPerformance?.latestDate || "unreported"}</small><b>{data.searchPerformance?.available ? "Available" : "Unavailable"}</b></div>
             </div>
-          ) : (
-            <p>Key-event configuration could not be read from GA4. The site still records event clicks. Check GA4 Admin → Data display → Events to verify which events are marked as key events.</p>
-          )}
-          <p>These two events measure outbound application/service clicks, not completed applications.
-            Related-content and save events measure engagement, not conversions.</p>
-        </div>
-        {(data.interactions ?? []).length ? (
-          <div className="analytics-ranking">
-            {(data.interactions ?? []).map((row, index) => (
-              <div key={row.event}>
-                <span>{index + 1}</span>
-                <strong>{interactionLabel(row.event)}</strong>
-                <small>{row.event}</small>
-                <b>{number(row.count)} events</b>
+          </section>
+
+          <section className="admin-panel">
+            <div className="section-heading"><div><span className="eyebrow">Search details</span><h2>Visibility & recent hours</h2></div></div>
+            <div className="analytics-metric-grid">
+              <div><span>Search CTR</span><strong>{data.searchPerformance?.available ? ((data.searchPerformance.ctr ?? 0) * 100).toFixed(2) + "%" : "—"}</strong></div>
+              <div><span>Average position</span><strong>{data.searchPerformance?.available ? (data.searchPerformance.position ?? 0).toFixed(1) : "—"}</strong></div>
+              <div><span>Latest reported hour</span><strong>{data.hourlySearchPerformance?.latestHour ? readableSearchHour(data.hourlySearchPerformance.latestHour) : "—"}</strong></div>
+              <div><span>24h reported impressions</span><strong>{data.hourlySearchPerformance?.impressions24h == null ? "—" : number(data.hourlySearchPerformance.impressions24h)}</strong></div>
+            </div>
+            <p className="analytics-clean-note">
+              Hourly data is preliminary. {data.hourlySearchPerformance?.available
+                ? "Missing hours are not zero; Google may revise incomplete reports."
+                : data.hourlySearchPerformance?.error || "The Google hourly report is unavailable."}
+            </p>
+            {!data.hourlySearchPerformance?.available && data.hourlySearchPerformance?.issue ? (
+              <SearchConsoleConnectionHelp issue={data.hourlySearchPerformance.issue} />
+            ) : null}
+            {data.searchTrafficComparison ? (
+              <p className="analytics-clean-note">Comparable settled dates {data.searchTrafficComparison.startDate}–{data.searchTrafficComparison.endDate}: {number(data.searchTrafficComparison.gscClicks)} Google clicks vs {number(data.searchTrafficComparison.ga4OrganicSessions)} GA4 organic sessions. Different collection methods mean these figures need not match.</p>
+            ) : null}
+          </section>
+
+          <div className="admin-analytics-two-column">
+            <section className="admin-panel">
+              <div className="section-heading"><div><h2>Visitor locations</h2></div></div>
+              <div className="analytics-ranking">
+                {data.countries.slice(0, 8).map((row) => (
+                  <div key={row.country}><strong>{row.country}</strong><b>{number(row.users)} users</b></div>
+                ))}
               </div>
-            ))}
+            </section>
+            <section className="admin-panel">
+              <div className="section-heading"><div><h2>Visitor actions</h2></div></div>
+              {data.interactions.length ? <div className="analytics-ranking">
+                {data.interactions.slice(0, 10).map((row) => (
+                  <div key={row.event}><strong>{interactionLabel(row.event)}</strong><b>{number(row.count)}</b></div>
+                ))}
+              </div> : <p className="analytics-clean-note">No recorded actions in this period.</p>}
+              <p className="analytics-clean-note">Key events: {data.keyEvents?.available
+                ? data.keyEvents.events.map((event) => event.name + (event.configured ? " configured" : " not configured")).join(" · ")
+                : "Configuration not available from GA4."}</p>
+            </section>
           </div>
-        ) : (
-          <div className="admin-empty">
-            <strong>No interaction events yet.</strong>
-            <p>Search clicks, official-link clicks, shares, saved guides and checklist activity will appear here after visitors use them.</p>
-          </div>
-        )}
-      </section>
-    </>
+          <p className="analytics-clean-note"><a href="https://lookerstudio.google.com/" target="_blank" rel="noopener noreferrer">Open Looker Studio ↗</a> for detailed external reports.</p>
+        </div>
+      ) : null}
+    </div>
   );
 }

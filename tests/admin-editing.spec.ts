@@ -248,7 +248,8 @@ test("admin dashboard reflects movies, services and Tour Nigeria", async ({ page
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
 
-  await expect(page.getByRole("heading", { name: "Platform operations dashboard" })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Entertainment catalog/ })).toBeVisible();
-  await expect(page.getByRole("link", { name: /Travel catalog/ })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Entertainment/ })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Destinations/ })).toBeVisible();
+  await expect(page.getByRole("link", { name: /Visits & discovery/ })).toBeVisible();
 });

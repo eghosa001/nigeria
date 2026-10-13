@@ -86,6 +86,7 @@ test("visits unlock displays reports immediately and can be locked again", async
     await route.fulfill({ json: { configured: true, authenticated: true, data: {
       range: "30d", mode: "clean", propertyId: "556260033",
       generatedAt: "2026-10-04T12:00:00Z", dataStartDate: "2026-09-29", cleanStartDate: "2026-09-29",
+      ga4Available: true, ga4Error: null,
       summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
       realtimeActiveUsers: 2,
       realtimePageViews: 3,
@@ -131,17 +132,14 @@ test("visits unlock displays reports immediately and can be locked again", async
   await expect(visitorMetrics).toContainText("12");
   await expect(visitorMetrics).toContainText("18");
   await expect(visitorMetrics).toContainText("35");
-  const searchPanel = page.locator(".admin-panel").filter({ hasText: "Google Search visibility" });
-  const searchMetrics = searchPanel.locator(".analytics-metric-grid");
-  await expect(searchMetrics).toContainText("1,460");
-  await expect(searchMetrics).toContainText("27");
+  await expect(visitorMetrics).toContainText("1,460");
+  await expect(visitorMetrics).toContainText("27");
   await expect(page.getByLabel("Daily page views").locator("[title]")).toHaveAttribute("title", /35 page views/);
-  await expect(page.locator(".analytics-ranking").getByText("Nigeria", { exact: true })).toBeVisible();
-  await expect(page.locator(".analytics-ranking").getByText("google", { exact: true })).toBeVisible();
-  await expect(page.locator(".analytics-page-table")).toContainText("Passport renewal");
-  const interactionPanel = page.locator(".analytics-interactions");
-  await expect(interactionPanel).toBeVisible();
-  await expect(interactionPanel).toContainText("Official service link opened");
+  await expect(page.getByText("Passport renewal", { exact: true })).toBeVisible();
+  await expect(page.getByText("google", { exact: true })).toBeVisible();
+  await page.getByRole("button", { name: "Detailed reports & connection checks" }).click();
+  await expect(page.getByText("Nigeria", { exact: true })).toBeVisible();
+  await expect(page.getByText("Official service link opened")).toBeVisible();
   await page.getByRole("button", { name: "Lock analytics" }).click();
   await expect(page.getByLabel("Analytics passphrase")).toBeEmpty();
   expect(errors).toEqual([]);
@@ -175,6 +173,14 @@ test("admin dashboard shows independent Search Console health even if visits rep
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
 
+  // The admin home is deliberately light; no Google API call occurs here.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
+  await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
+  expect(checks).toBe(0);
+
+  await page.goto("/admin/visits");
+  await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card.getByRole("heading", { name: "Live data connection & freshness" })).toBeVisible();
   await expect(card).toContainText("234");
@@ -183,10 +189,8 @@ test("admin dashboard shows independent Search Console health even if visits rep
   await card.getByRole("button", { name: "Check Google now" }).click();
   await expect.poll(() => checks).toBeGreaterThan(1);
 
-  // Health status stays visible on Visits without unlocking its separate GA4 report.
-  await page.goto("/admin/visits");
-  await expect(page.getByTestId("admin-gsc-status")).toBeVisible();
-  await expect(page.getByTestId("admin-gsc-status")).toContainText("234");
+  // The separate analytics passphrase is not needed for this on-demand health check.
+  await expect(card).toContainText("234");
 });
 
 test("admin Search Console connectivity failures are explicit, not blank dashboards", async ({ page }) => {
@@ -196,10 +200,15 @@ test("admin Search Console connectivity failures are explicit, not blank dashboa
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  // The Worker completes the auth redirect asynchronously; do not cancel it
+  // by navigating before its Set-Cookie response is committed.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
+  await page.goto("/admin/visits");
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("Google Search Console not reporting");
   await expect(card).toContainText("authorization has not been configured");
-  await expect(page.getByRole("heading", { name: "Platform operations dashboard" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
 });
 
 test("admin shows the exact API activation action for Google's disabled Search Console API", async ({ page }) => {
@@ -222,6 +231,11 @@ test("admin shows the exact API activation action for Google's disabled Search C
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  // The Worker completes the auth redirect asynchronously; do not cancel it
+  // by navigating before its Set-Cookie response is committed.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
+  await page.goto("/admin/visits");
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const panel = page.getByTestId("admin-gsc-status");
   await expect(panel).toContainText("Action required in Google Cloud");
   await expect(panel).toContainText("987654321011");
@@ -260,12 +274,16 @@ test("admin shows the exact service account to grant Search Console access", asy
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  // The Worker completes the auth redirect asynchronously; do not cancel it
+  // by navigating before its Set-Cookie response is committed.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
+  await page.goto("/admin/visits");
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
   await expect(card).toContainText("Choose Full access");
   await expect(card.getByRole("button", { name: "Copy account email" })).toBeVisible();
-  await page.goto("/admin/visits");
-  await expect(page.getByTestId("admin-gsc-status")).toContainText("reporting@example-project.iam.gserviceaccount.com");
+  await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
 });
 
 test("plain-language search finds the right service", async ({ page }) => {
