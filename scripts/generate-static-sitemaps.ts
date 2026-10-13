@@ -81,7 +81,7 @@ const feedXml = xmlHeader +
   '<language>en-ng</language>' +
   recentPages.map(({ url, lastModified }) => {
     const segment = new URL(url).pathname.split("/").filter(Boolean).pop() || "MyNigeriaGuide";
-    const title = segment.replaceAll("-", " ").replace(/\\b\\w/g, (letter) => letter.toUpperCase());
+    const title = segment.replaceAll("-", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
     const pubDate = new Date(lastModified.length === 10 ? lastModified + "T12:00:00Z" : lastModified).toUTCString();
     return "<item><title>" + escapeXml(title) + "</title><link>" + escapeXml(url) +
       "</link><guid isPermaLink=\"true\">" + escapeXml(url) + "</guid><pubDate>" +
