@@ -48,7 +48,7 @@ for (const title of required) {
   if (new Set(profile.questions.map((q) => q.question.trim().toLowerCase())).size !== profile.questions.length)
     failures.push(prefix + "repeated film questions.");
   if (profile.questions.some((q) => words(q.answer) < 7)) failures.push(prefix + "answer requires a meaningful, factual response.");
-  if (profile.releaseDate && (!/^\d{4}-\d{2}-\d{2}$/.test(profile.releaseDate) || profile.releaseDate > "2026-10-13"))
+  if (profile.releaseDate && (!/^\d{4}-\d{2}-\d{2}$/.test(profile.releaseDate) || profile.releaseDate > new Date().toISOString().slice(0, 10)))
     failures.push(prefix + "publication date is malformed or later than source check date.");
   for (const role of profile.roles) {
     const norm = (name: string) => name.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]/g, "");
