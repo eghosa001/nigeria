@@ -78,6 +78,11 @@ test("documentary people are subjects, not actor schema credits", () => {
 });
 
 test("career and tour directories use intent-specific grouping", () => {
+  const openJobs = source("app/jobs/open-now/page.tsx");
+  assert.match(openJobs, /const vacancies = open\.filter/);
+  assert.match(openJobs, /const programmes = open\.filter/);
+  assert.match(openJobs, /JobCollection opportunities=\{vacancies\}/);
+  assert.match(openJobs, /JobCollection opportunities=\{programmes\}/);
   const jobs = source("app/jobs/government/page.tsx");
   assert.match(jobs, /kind !== "programme"/);
   assert.match(jobs, /Government-backed training and development programmes/);
