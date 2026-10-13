@@ -16,6 +16,7 @@ import { SavePageButton } from "@/components/personal-library";
 import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
 import { movieEditorialProfiles } from "@/lib/movie-editorial-profiles";
 import { movieEditorialProfilesWave2 } from "@/lib/movie-editorial-profiles-wave2";
+import { movieEditorialProfilesWave3 } from "@/lib/movie-editorial-profiles-wave3";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -302,7 +303,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
   const featuredCast = getFeaturedCast(title);
-  const editorial = movieEditorialProfiles[title.slug] ?? movieEditorialProfilesWave2[title.slug];
+  const editorial = movieEditorialProfiles[title.slug] ?? movieEditorialProfilesWave2[title.slug] ?? movieEditorialProfilesWave3[title.slug];
   const image = movieImageUrl(title, base);
   const movieLd = {
     "@context": "https://schema.org",
