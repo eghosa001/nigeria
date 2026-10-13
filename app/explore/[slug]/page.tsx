@@ -108,12 +108,18 @@ const evergreenTripAnswers: Record<string, Array<{ question: string; answer: str
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
   const stops = guide.highlights.slice(0, 3).map((item) => item.name);
   const advice = guide.planning[0]?.detail;
+  // A multi-stop itinerary is not a single attraction and an event is not
+  // somewhere tourists can visit every day. Write questions to match intent.
+  const isRoute = guide.kind === "itinerary";
+  const isEvent = guide.kind === "event";
   return [
     ...(evergreenTripAnswers[guide.slug] ?? []),
     {
-      question: "What should I see in " + guide.shortTitle + "?",
+      question: isRoute ? "Which stops are covered by " + guide.shortTitle + "?"
+        : isEvent ? "What are the main activities at " + guide.shortTitle + "?"
+          : "What should I see in " + guide.shortTitle + "?",
       answer: stops.length
-        ? "Begin with " + stops.join(", ") + ". See the guide for details on each stop."
+        ? (isRoute ? "The route highlights " : isEvent ? "The event highlights " : "Begin with ") + stops.join(", ") + ". Find the details under highlights below."
         : guide.summary,
     },
     ...(guide.kind === "city" ? [{
@@ -121,8 +127,13 @@ function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuid
       answer: guide.shortTitle + " is in " + guide.region + ", Nigeria.",
     }] : []),
     {
-      question: "What should I check before visiting " + guide.shortTitle + "?",
-      answer: advice ?? "Confirm access, opening times and local conditions with the responsible operator before travelling.",
+      question: isRoute ? "What should I prepare before following " + guide.shortTitle + "?"
+        : isEvent ? "What should I confirm before attending " + guide.shortTitle + "?"
+          : "What should I check before visiting " + guide.shortTitle + "?",
+      answer: advice ?? (isRoute
+        ? "Confirm transport between stops, access and local conditions before starting the route."
+        : isEvent ? "Check the organiser's current venue, timing, tickets and admission requirements."
+          : "Confirm access, opening times and local conditions with the responsible operator before travelling."),
     },
   ];
 }
@@ -283,7 +294,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             </figure>
           ) : null}
           <AnswerFirst
-            title={"Plan your visit to " + guide.shortTitle}
+            title={guide.kind === "itinerary" ? "Plan the " + guide.shortTitle + " route" : guide.kind === "event" ? "Plan for " + guide.shortTitle : "Plan your visit to " + guide.shortTitle}
             summary={questions[0]?.answer ?? guide.summary}
             facts={[
               { label: "Applies to", value: guide.region + ", Nigeria" },
@@ -416,7 +427,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section premium-dark-section" id="planning">
         <div className="container">
-          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>Before you visit {guide.shortTitle}</h2></div></div>
+          <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>{guide.kind === "itinerary" ? "Before following this route" : guide.kind === "event" ? "Before attending " + guide.shortTitle : "Before visiting " + guide.shortTitle}</h2></div></div>
           <div className="compact-planning-list">
             {guide.planning.map((item) => (
               <details key={item.label}>
