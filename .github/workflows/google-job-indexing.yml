@@ -1,0 +1,71 @@
+name: Google Indexing API - Verified JobPosting Only
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "lib/jobs.ts"
+      - "lib/job-*.ts"
+      - "lib/job-scale-wave.ts"
+      - "scripts/google-indexing-*.mjs"
+      - "scripts/google-job-indexing-*.mjs"
+      - "scripts/google-indexing-eligible-jobs.ts"
+      - ".github/workflows/google-job-indexing.yml"
+  schedule:
+    - cron: "18 5 * * *"
+permissions:
+  contents: read
+concurrency:
+  group: google-jobs-indexing
+  cancel-in-progress: false
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run focused safety-policy tests
+        run: node --test scripts/google-job-indexing-plan.test.mjs
+      - name: Install TypeScript runtime if configured
+        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        run: npm install --no-audit --no-fund
+      - name: Export live qualifying job postings only
+        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        run: npx tsx scripts/google-indexing-eligible-jobs.ts
+      - name: Restore accepted notification checkpoint
+        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        uses: actions/cache/restore@v4
+        with:
+          path: .discovery/google-indexing-state.json
+          key: google-jobs-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            google-jobs-
+      - name: Confirm exact commit is in production
+        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          for n in {1..48}; do
+            response="$(curl -fsS --max-time 15 -H 'Cache-Control: no-cache' "https://mynigeriaguide.com/deployment.json?check=${GITHUB_SHA}-$n" || true)"
+            deployed="$(printf '%s' "$response" | node -e 'let a="";process.stdin.on("data",x=>a+=x);process.stdin.on("end",()=>{try{process.stdout.write(JSON.parse(a).commit||"")}catch{}})')"
+            if [ "$deployed" = "$GITHUB_SHA" ]; then
+              echo "Verified production deployment: $GITHUB_SHA"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "::error::Production does not serve this exact commit, no notifications sent."
+          exit 1
+      - name: Submit changed verified JobPosting pages only
+        run: node scripts/google-indexing-notify.mjs
+      - name: Save accepted notification checkpoint
+        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != '' && success()
+        uses: actions/cache/save@v4
+        with:
+          path: .discovery/google-indexing-state.json
+          key: google-jobs-${{ github.run_id }}-${{ github.run_attempt }}
