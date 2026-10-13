@@ -2088,9 +2088,20 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
     synopsis: "Facing a marriage she does not want, Ndidi is unexpectedly offered another path by Harrison, a wealthy man whose intervention forces both of them to confront what being chosen and loved really means.",
-    cast: ["Chris Attoh", "Sophia Chisom", "Chimsom Chuka", "Thelma Chukwunwem"],
+    cast: ["Chris Attoh", "Sophia Chisom", "Chimsom Chuka", "Thelma Chukwunwem", "Desmond Bryce", "Taiwo Familoni"],
     featuredCast: ["Chris Attoh", "Sophia Chisom", "Chimsom Chuka"],
     runtimeMinutes: 144,
+    references: [{
+      label: "Eelive — Millionaire Until Morning film review and character credits",
+      href: "https://www.eelive.ng/movie-review-millionaire-until-morning-trades-nollywood-melodrama-for-something-warmer/",
+      lastChecked: "2026-10-13",
+      note: "Independent review verifies the characters and the film's central premise."
+    }, {
+      label: "African Movie Database — Millionaire Until Morning film credits",
+      href: "https://africanmoviedb.com/title/millionaire-until-morning-2026",
+      lastChecked: "2026-10-13",
+      note: "Secondary credit source for principal actors and production information."
+    }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
