@@ -24,7 +24,7 @@ export const dynamic = "force-dynamic";
 
 export default function JobsPage() {
   const base = getSiteUrl();
-  const activeGovernment = governmentOpportunities.filter((item) => ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
+  const activeGovernment = governmentOpportunities.filter((item) => item.kind !== "programme" && ["open", "screening", "training"].includes(getEffectiveJobStatus(item))).length;
   const careerPages = jobOpportunities.filter((item) => item.status === "career-page").length;
   const openOpportunities = jobOpportunities
     .filter((item) => isEffectivelyOpen(item))
