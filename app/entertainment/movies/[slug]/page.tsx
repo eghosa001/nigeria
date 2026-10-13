@@ -14,6 +14,9 @@ import { getYouTubeMovieById, getYouTubeVideoId } from "@/lib/youtube-library";
 import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
 import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
+import { movieEditorialProfiles } from "@/lib/movie-editorial-profiles";
+import { movieEditorialProfilesWave2 } from "@/lib/movie-editorial-profiles-wave2";
+import { movieEditorialProfilesWave3 } from "@/lib/movie-editorial-profiles-wave3";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -300,6 +303,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const watchHereVideoId = watchHereSource ? getYouTubeVideoId(watchHereSource.href) : null;
   const netflixSource = availabilityLinks.find((link) => link.platform === "Netflix");
   const featuredCast = getFeaturedCast(title);
+  const editorial = movieEditorialProfiles[title.slug] ?? movieEditorialProfilesWave2[title.slug] ?? movieEditorialProfilesWave3[title.slug];
   const image = movieImageUrl(title, base);
   const movieLd = {
     "@context": "https://schema.org",
@@ -314,6 +318,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     image: image || undefined,
     countryOfOrigin: { "@type": "Country", name: "Nigeria" },
     dateModified: lastChecked || undefined,
+    datePublished: editorial?.releaseDate,
     sameAs: [
       ...availabilityLinks.map((link) => link.href),
       ...(title.references ?? []).map((link) => link.href),
@@ -378,7 +383,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
-                  <strong>Where to watch:</strong> A Netflix Nigeria title listing exists, but its 9 October 2026 check did not confirm streaming access in Nigeria. The FilmOne link is a trailer, not a full movie. <a href="#watch">See verified viewing notes and sources ↓</a>
+                  <strong>Where to watch:</strong> Kava has an official film page with a subscription option. Netflix also lists the film, but the availability notice on that listing does not confirm access in Nigeria. The FilmOne link is only a trailer. <a href="#watch">See verified viewing options ↓</a>
                 </p>
               ) : null}
 
@@ -416,6 +421,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             ]}
             links={[
               { href: "#cast", label: "See cast" },
+              ...(editorial ? [{ href: "#movie-questions", label: "Characters & story" }] : []),
               { href: "#watch", label: "Where to watch" },
               ...(watchHereVideoId ? [{ href: "#watch-here", label: "Watch here", primary: true }] : []),
               ...(!watchHereVideoId && availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
@@ -436,6 +442,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
         <div className="container">
           <a href="#overview">Overview</a>
           <a href="#cast">Cast & crew</a>
+          {editorial ? <a href="#movie-questions">Film guide</a> : null}
           <a href="#watch">Where to watch</a>
           {title.trailer ? <a href="#trailer">Trailer</a> : null}
           <a href="#related">More to watch</a>
@@ -475,7 +482,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               ) : null}
 
               <div className="movie-credit-group">
-                <h3>Full cast</h3>
+                <h3>Documented cast</h3>
                 <div className="movie-person-list">
                   {title.cast.slice(0, 8).map((name) => {
                     const href = personHref(name);
@@ -496,6 +503,49 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               </div>
             </section>
 
+            {editorial ? (
+              <section id="movie-questions" aria-labelledby="movie-questions-heading">
+                <span className="eyebrow">Verified film guide</span>
+                <h2 id="movie-questions-heading">Characters, credits and story of {title.title}</h2>
+                {editorial.roles.length ? (
+                  <div className="movie-credit-group">
+                    <h3>Which actor plays which character?</h3>
+                    <div className="movie-fact-grid">
+                      {editorial.roles.map(({ actor, character }) => (
+                        <article key={actor}><span>{character}</span><strong>{actor}</strong></article>
+                      ))}
+                    </div>
+                    <p className="movie-long-summary">Only character assignments independently confirmed by credited sources are included. Other documented performers appear in the cast list above without guessed roles.</p>
+                  </div>
+                ) : null}
+                {editorial.crew.length ? (
+                  <div className="movie-credit-group">
+                    <h3>Additional production credits</h3>
+                    <div className="movie-fact-grid">
+                      {editorial.crew.map(({ name, role }) => (
+                        <article key={role}><span>{role}</span><strong>{name}</strong></article>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
+                {editorial.sections.map((section) => (
+                  <div className="movie-credit-group" key={section.heading}>
+                    <h3>{section.heading}</h3>
+                    {section.paragraphs.map((paragraph) => (
+                      <p className="movie-long-summary" key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                ))}
+                {editorial.questions.map(({ question, answer }) => (
+                  <div className="movie-credit-group" key={question}>
+                    <h3>{question}</h3>
+                    <p className="movie-long-summary">{answer}</p>
+                  </div>
+                ))}
+                <p className="movie-freshness-note">See the source links below for independently checkable credits, premiere and distribution details.</p>
+              </section>
+            ) : null}
+
             <AdSlot slot={AD_SLOTS.movieAfterCast} label="Advertisement" />
 
             <section id="watch">
@@ -503,7 +553,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <h2>Where to watch {title.title}</h2>
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
-                  Netflix Nigeria's official title page currently displays a notice that Oversabi Aunty is unavailable to watch in the viewer's country (checked 9 October 2026). The listing is not proof of playback availability in Nigeria. Check the official Netflix page for changes. The FilmOne link is an official trailer, not a free full-movie upload.
+                  Kava's official Oversabi Aunty page currently advertises a subscription route and lists the film (checked 13 October 2026). Confirm your country's access and account requirements on Kava before subscribing. Netflix's title page displays a regional availability notice; that listing alone does not prove playback access in Nigeria. FilmOne publishes a trailer, not a free full-movie link.
                 </p>
               ) : null}
               {!availabilityLinks.length ? (
