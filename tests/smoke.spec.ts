@@ -200,6 +200,9 @@ test("admin Search Console connectivity failures are explicit, not blank dashboa
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  // The Worker completes the auth redirect asynchronously; do not cancel it
+  // by navigating before its Set-Cookie response is committed.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
@@ -228,6 +231,9 @@ test("admin shows the exact API activation action for Google's disabled Search C
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  // The Worker completes the auth redirect asynchronously; do not cancel it
+  // by navigating before its Set-Cookie response is committed.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const panel = page.getByTestId("admin-gsc-status");
@@ -268,6 +274,9 @@ test("admin shows the exact service account to grant Search Console access", asy
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  // The Worker completes the auth redirect asynchronously; do not cancel it
+  // by navigating before its Set-Cookie response is committed.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
