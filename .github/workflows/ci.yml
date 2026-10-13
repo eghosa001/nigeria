@@ -38,6 +38,15 @@ jobs:
             fi
           fi
 
+          # ads.txt is a public static asset: guard only this publication path.
+          ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
+          ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
+          if [ -n "$ads_changed" ] && [ -z "$ads_other" ]; then
+            echo "mode=ads-txt" >> "$GITHUB_OUTPUT"
+            echo "Static ads.txt-only changes: focused source integrity test."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-production-scope.mjs "$changed"; then
             echo "mode=youtube-d1-production" >> "$GITHUB_OUTPUT"
             echo "Production binding only; focused guard/config checks run in CI, artifact validation runs in postbuild."
@@ -164,7 +173,10 @@ jobs:
         with:
           node-version: ${{ steps.scope.outputs.mode == 'youtube-d1-integration' && '24' || '22' }}
       - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.mode != 'skip' && steps.scope.outputs.mode != 'youtube-d1-integration' && steps.scope.outputs.mode != 'youtube-d1-production'
+        if: steps.scope.outputs.mode != 'skip' && steps.scope.outputs.mode != 'youtube-d1-integration' && steps.scope.outputs.mode != 'youtube-d1-production' && steps.scope.outputs.mode != 'ads-txt'
+      - name: Verify static ads.txt cannot disappear or change publisher
+        if: steps.scope.outputs.mode == 'ads-txt'
+        run: node --test tests/ads-txt-guard.test.mjs
       - name: Validate production D1 registration and deploy artifact guard
         if: steps.scope.outputs.mode == 'youtube-d1-production'
         run: |
