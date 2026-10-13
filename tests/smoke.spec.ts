@@ -175,6 +175,14 @@ test("admin dashboard shows independent Search Console health even if visits rep
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
 
+  // The admin home is deliberately light; no Google API call occurs here.
+  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
+  await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
+  expect(checks).toBe(0);
+
+  await page.goto("/admin/visits");
+  await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card.getByRole("heading", { name: "Live data connection & freshness" })).toBeVisible();
   await expect(card).toContainText("234");
@@ -183,10 +191,8 @@ test("admin dashboard shows independent Search Console health even if visits rep
   await card.getByRole("button", { name: "Check Google now" }).click();
   await expect.poll(() => checks).toBeGreaterThan(1);
 
-  // Health status stays visible on Visits without unlocking its separate GA4 report.
-  await page.goto("/admin/visits");
-  await expect(page.getByTestId("admin-gsc-status")).toBeVisible();
-  await expect(page.getByTestId("admin-gsc-status")).toContainText("234");
+  // The separate analytics passphrase is not needed for this on-demand health check.
+  await expect(card).toContainText("234");
 });
 
 test("admin Search Console connectivity failures are explicit, not blank dashboards", async ({ page }) => {
@@ -196,10 +202,12 @@ test("admin Search Console connectivity failures are explicit, not blank dashboa
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  await page.goto("/admin/visits");
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("Google Search Console not reporting");
   await expect(card).toContainText("authorization has not been configured");
-  await expect(page.getByRole("heading", { name: "Platform operations dashboard" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
 });
 
 test("admin shows the exact API activation action for Google's disabled Search Console API", async ({ page }) => {
@@ -222,6 +230,8 @@ test("admin shows the exact API activation action for Google's disabled Search C
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  await page.goto("/admin/visits");
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const panel = page.getByTestId("admin-gsc-status");
   await expect(panel).toContainText("Action required in Google Cloud");
   await expect(panel).toContainText("987654321011");
@@ -260,12 +270,13 @@ test("admin shows the exact service account to grant Search Console access", asy
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
+  await page.goto("/admin/visits");
+  await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
   await expect(card).toContainText("Choose Full access");
   await expect(card.getByRole("button", { name: "Copy account email" })).toBeVisible();
-  await page.goto("/admin/visits");
-  await expect(page.getByTestId("admin-gsc-status")).toContainText("reporting@example-project.iam.gserviceaccount.com");
+  await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
 });
 
 test("plain-language search finds the right service", async ({ page }) => {
