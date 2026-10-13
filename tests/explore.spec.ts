@@ -105,7 +105,7 @@ test("Tour hub stays compact and keeps deep navigation available", async ({ page
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto("/explore");
 
-  await expect(page.locator(".explore-place-card")).toHaveCount(6);
+  await expect(page.locator(".explore-place-card")).toHaveCount(8);
   await expect(page.locator(".tour-browse-stack > details")).toHaveCount(4);
 
   const widths = await page.evaluate(() => ({
@@ -114,8 +114,8 @@ test("Tour hub stays compact and keeps deep navigation available", async ({ page
   }));
   expect(widths.content).toBeLessThanOrEqual(widths.viewport + 1);
 
-  await page.getByRole("button", { name: "Show 6 more places" }).click();
-  await expect(page.locator(".explore-place-card")).toHaveCount(12);
+  await page.getByRole("button", { name: "Show 8 more places" }).click();
+  await expect(page.locator(".explore-place-card")).toHaveCount(16);
 
   await page.getByText("States & FCT").click();
   await expect(page.getByRole("navigation", { name: "Explore Nigeria by state" }).getByRole("link")).toHaveCount(37);
