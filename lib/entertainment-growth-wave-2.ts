@@ -6,12 +6,19 @@ export const entertainmentGrowthWave2: EntertainmentTitle[] = [
     title: "Once Upon a Village 3",
     year: 2026,
     format: "movie",
-    genres: ["Nollywood"],
+    genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
     synopsis: "Once Upon a Village 3 is a 2026 full-length Nigerian movie published by RuthKadiri247, featuring Deza the Great, Prisma James, Fessa Ajoku and Annabel Apara. The official release runs about 99 minutes.",
-    cast: ["Deza The Great", "Prisma James", "Fessa Ajoku", "Annabel Apara"],
+    cast: ["Deza The Great", "Prisma James", "Fessa Ajoku", "Annabel Apara", "Eronini Osinachi", "Henrietta Ibekwe", "Karo Benedict", "Solomon Osagie", "Lydian John", "Miracle Echeji"],
     featuredCast: ["Deza The Great", "Prisma James", "Fessa Ajoku"],
+    directors: ["Nelly Gilson"],
     runtimeMinutes: 99,
+    references: [{
+      label: "African Movie Database — Once Upon a Village 3 cast, director and roles",
+      href: "https://africanmoviedb.com/title/once-upon-a-village-3-2026",
+      lastChecked: "2026-10-13",
+      note: "Cross-reference for documented Part 3 actor-to-character credits, director and release date."
+    }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on RuthKadiri247",
