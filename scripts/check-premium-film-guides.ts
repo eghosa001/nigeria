@@ -1,5 +1,5 @@
-// Change-scoped SEO quality gate: featured and provider-listed Nigerian movies
-// must retain source-backed, film-specific editorial profiles as the catalog grows.
+// Change-scoped SEO quality gate: every curated Nigerian movie needs its own
+// fact-based, film-specific editorial profile. Enforce this for future additions.
 import { entertainmentTitles } from "../lib/entertainment";
 import { allMovieEditorialProfiles, movieEditorialCollections } from "../lib/movie-editorial-profile-registry";
 
@@ -18,9 +18,9 @@ function words(input: string) {
 }
 
 const premiumPlatforms = new Set(["Netflix", "Prime Video", "Kava", "Africa Magic", "Cinema"]);
-const required = entertainmentTitles.filter(
-  (title) => title.featured || title.watchLinks.some((link) => premiumPlatforms.has(link.platform)),
-);
+// Every curated movie is required. Unresearched generated YouTube listings are
+// not in entertainmentTitles; their separate indexability rules remain unchanged.
+const required = entertainmentTitles;
 const failures: string[] = [];
 let netflixCount = 0;
 let providerCount = 0;
@@ -34,11 +34,13 @@ for (const title of required) {
   const prefix = title.slug + ": ";
   const profile = allMovieEditorialProfiles[title.slug];
   if (!profile) {
-    failures.push(prefix + "popular titles require a researched editorial profile.");
+    failures.push(prefix + "curated movies require a verified, individually written editorial profile.");
     continue;
   }
 
   if (profile.sections.length < 2) failures.push(prefix + "needs at least two distinct editorial sections.");
+  if (profile.sections.some((section) => section.heading.trim().length < 8))
+    failures.push(prefix + "editorial headings must identify useful topics.");
   const headings = profile.sections.map((section) => section.heading.trim().toLowerCase());
   if (new Set(headings).size !== headings.length) failures.push(prefix + "repeated editorial section headings.");
   if (profile.sections.some((section) => section.paragraphs.length < 2)) failures.push(prefix + "editorial sections must contain at least two substantive paragraphs.");
@@ -48,6 +50,8 @@ for (const title of required) {
   );
   if (editorialWords < 125) failures.push(prefix + "editorial guide is too thin: " + editorialWords + " words.");
   if (profile.questions.length < 2) failures.push(prefix + "needs two distinct film-specific answers.");
+  if (profile.questions.some((q) => q.question.trim().length < 18))
+    failures.push(prefix + "film questions need specific user-search intent.");
   if (new Set(profile.questions.map((q) => q.question.trim().toLowerCase())).size !== profile.questions.length)
     failures.push(prefix + "repeated film questions.");
   if (profile.questions.some((q) => words(q.answer) < 7)) failures.push(prefix + "answer requires a meaningful, factual response.");
@@ -65,7 +69,7 @@ for (const title of required) {
 if (failures.length) throw new Error("Premium movie editorial quality:\n" + failures.join("\n"));
 console.log(
   "Premium movie guides OK:",
-  required.length + " distinct priority movies",
+  required.length + " curated films",
   "(" + netflixCount + " Netflix-listed, " + providerCount + " provider-listed, " + featuredCount + " featured)",
   "have original editorial coverage.",
 );

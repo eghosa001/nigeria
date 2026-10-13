@@ -35,7 +35,7 @@ function videoIdFromUrl(href: string) {
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
   "holy-matrimony": {
     title: "Holy Matrimony Nigerian Movie: Cast & Full Movie",
-    description: "Holy Matrimony cast, 143-minute runtime and official Frederick Leonard TV full movie, starring Frederick Leonard, Onyi Alex and Nini Mbonu.",
+    description: "Holy Matrimony cast, 143-minute runtime and official Frederick Leonard TV full movie, starring Frederick Leonard, Onyii Alex and Nini Mbonu.",
   },
   "one-more-night": {
     title: "One More Night Nigerian Movie: Cast & Full Movie",
@@ -47,7 +47,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
   },
   "one-string-attached": {
     title: "One String Attached Cast & Full Movie",
-    description: "One String Attached cast, 131-minute runtime and official Uchenna Mbunabo TV full movie, starring Uche Montana, Chike Daniels and Caroline Igbe.",
+    description: "One String Attached cast, 131-minute runtime and official Uchenna Mbunabo TV full movie, starring Uche Montana, Chike Daniels and Caroline Igben.",
   },
   "our-perfect-match": {
     title: "Our Perfect Match Nigerian Movie: Cast & Full Movie",
@@ -162,7 +162,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
   },
   "forever-yours-2025-royal-arts": {
     title: "Forever Yours 2025 Cast & Full Movie (Royal Arts TV)",
-    description: "Forever Yours (2025) stars Daniel Etim Effiong and Ekama Etim-Inyang as Oscar and Bukola. See the romance story and Royal Arts TV full movie.",
+    description: "Forever Yours (2025) stars Daniel Etim Effiong and Ekama Etim-Inyang in the Oscar-and-Bukola romance. See the official Royal Arts TV film.",
   },
   "beauty-in-scars-2026": {
     title: "Beauty In Scars Cast & Full Movie on YouTube",
@@ -200,15 +200,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       : cinemaLink
         ? title.title + " Cast, Story & Cinema Release"
         : title.title + " Nigerian Movie: Cast & Where to Watch";
-  const runtimeText = title.runtimeMinutes ? " Runtime: " + title.runtimeMinutes + " minutes." : "";
-  const availabilityText = fullMovieLink
-    ? " Watch the verified official full movie on YouTube."
-    : netflixLink
-      ? " See current verified Netflix availability."
-      : cinemaLink
-        ? " See current verified Nigerian cinema availability."
-        : "";
-  const description = override?.description ?? `${title.title} is a ${title.year} Nigerian movie. ${featuredCast.length ? "Cast includes " + featuredCast.join(", ") + "." : ""}${runtimeText}${availabilityText}`;
+  // Unique, fact-first snippets for titles without an individual override.
+  // Never imply a streaming title listing guarantees Nigerian playback.
+  const leadCast = featuredCast.slice(0, 2).join(", ");
+  const synopsis = title.synopsis.trim().replace(/\s+/g, " ");
+  const defaultDescription = `${title.title} (${title.year}): ${leadCast ? "Cast: " + leadCast + ". " : ""}${synopsis}`;
+  const description = override?.description ?? (
+    defaultDescription.length <= 165
+      ? defaultDescription
+      : defaultDescription.slice(0, 165).replace(/\s+\S*$/, "").trimEnd() + "…"
+  );
 
   return {
     title: override?.title ?? defaultTitle,

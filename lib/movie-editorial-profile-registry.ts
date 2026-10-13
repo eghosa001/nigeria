@@ -7,6 +7,8 @@ import { netflixEditorialProfilesRecent } from "@/lib/movie-editorial-profiles-n
 import { featuredEditorialProfiles } from "@/lib/movie-editorial-profiles-featured";
 import { movieEditorialProfilesStreamingA } from "@/lib/movie-editorial-profiles-streaming-a";
 import { movieEditorialProfilesStreamingB } from "@/lib/movie-editorial-profiles-streaming-b";
+import { movieEditorialProfilesRemainingA } from "@/lib/movie-editorial-profiles-remaining-a";
+import { movieEditorialProfilesRemainingB } from "@/lib/movie-editorial-profiles-remaining-b";
 
 // Explicitly authored, per-film profiles. Do not fill missing fields with
 // fabricated roles, fake premiere dates, or generic SEO paragraphs.
@@ -21,6 +23,8 @@ export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] 
   featuredEditorialProfiles,
   movieEditorialProfilesStreamingA,
   movieEditorialProfilesStreamingB,
+  movieEditorialProfilesRemainingA,
+  movieEditorialProfilesRemainingB,
 ];
 
 export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> =

@@ -96,12 +96,17 @@ export const entertainmentGrowthWave5: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "After six months apart, Tomi and Demilade are ready to end their marriage. An unexpected visit from Tomi's ailing father forces them to act like a happy couple for one weekend, bringing old tensions and unresolved feelings back into the same home.",
+    synopsis: "After six months apart, Tomi and Damilare are ready to end their marriage. An unexpected visit from Tomi's ailing father forces them to act like a happy couple for one weekend, bringing old tensions and unresolved feelings back into the same home.",
     cast: ["Omoni Oboli", "Daniel Etim-Effiong", "Akin Lewis", "Tomi Adeoye"],
     featuredCast: ["Omoni Oboli", "Daniel Etim-Effiong", "Akin Lewis"],
     directors: ["Mo\' Fakorede"],
     runtimeMinutes: 98,
     references: [{
+      label: "Nollywood.com — Married for the Weekend cast-to-character credits",
+      href: "https://www.nollywood.com/movies/married-for-the-weekend",
+      lastChecked: "2026-10-13",
+      note: "Documents Tomi, Damilare, Segun and the doctor's cast roles, director and streaming release."
+    }, {
       label: "Omoni Oboli TV — Married for the Weekend",
       href: "https://www.youtube.com/watch?v=7CQXWZ76YUQ",
       lastChecked: "2026-10-06",
