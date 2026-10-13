@@ -1,5 +1,5 @@
-// Change-scoped SEO quality gate: Netflix-listed and featured movies must
-// retain source-backed, non-generic editorial profiles as the catalog grows.
+// Change-scoped SEO quality gate: featured and provider-listed Nigerian movies
+// must retain source-backed, film-specific editorial profiles as the catalog grows.
 import { entertainmentTitles } from "../lib/entertainment";
 import { allMovieEditorialProfiles, movieEditorialCollections } from "../lib/movie-editorial-profile-registry";
 
@@ -17,15 +17,18 @@ function words(input: string) {
   return input.trim().split(/\s+/).filter(Boolean).length;
 }
 
+const premiumPlatforms = new Set(["Netflix", "Prime Video", "Kava", "Africa Magic", "Cinema"]);
 const required = entertainmentTitles.filter(
-  (title) => title.featured || title.watchLinks.some((link) => link.platform === "Netflix"),
+  (title) => title.featured || title.watchLinks.some((link) => premiumPlatforms.has(link.platform)),
 );
 const failures: string[] = [];
 let netflixCount = 0;
+let providerCount = 0;
 let featuredCount = 0;
 for (const title of required) {
   const netflix = title.watchLinks.some((link) => link.platform === "Netflix");
   if (netflix) netflixCount++;
+  if (title.watchLinks.some((link) => premiumPlatforms.has(link.platform))) providerCount++;
   if (title.featured) featuredCount++;
 
   const prefix = title.slug + ": ";
@@ -63,6 +66,6 @@ if (failures.length) throw new Error("Premium movie editorial quality:\n" + fail
 console.log(
   "Premium movie guides OK:",
   required.length + " distinct priority movies",
-  "(" + netflixCount + " Netflix-listed, " + featuredCount + " featured)",
+  "(" + netflixCount + " Netflix-listed, " + providerCount + " provider-listed, " + featuredCount + " featured)",
   "have original editorial coverage.",
 );
