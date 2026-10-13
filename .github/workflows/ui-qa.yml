@@ -58,6 +58,17 @@ jobs:
             exit 0
           fi
 
+          # Protected admin UI/API work is checked with the relevant admin tests,
+          # not the full public site browser matrix.
+          admin_ui_changed="$(printf '%s\n' "$changed" | grep -E '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand)\.tsx$|lib/analytics-data\.ts$|tests/admin-editing\.spec\.ts$)' || true)"
+          admin_ui_other="$(printf '%s\n' "$changed" | grep -Ev '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand)\.tsx$|lib/analytics-data\.ts$|tests/(smoke|admin-editing)\.spec\.ts$|app/globals\.css$|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$)' || true)"
+          if [ -n "$admin_ui_changed" ] && [ -z "$admin_ui_other" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=admin-ui" >> "$GITHUB_OUTPUT"
+            echo "Run only admin Visits, dashboard and Search Console behavior checks."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-production-scope.mjs "$changed"; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=youtube-d1-production" >> "$GITHUB_OUTPUT"
@@ -309,6 +320,9 @@ jobs:
       - name: Run directory navigation regression
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --project=desktop --workers=1
+      - name: Validate the compact admin screens
+        if: steps.scope.outputs.mode == 'admin-ui'
+        run: npx playwright test tests/smoke.spec.ts tests/admin-editing.spec.ts --project=desktop --workers=1 --grep "visits unlock|admin dashboard shows independent|admin Search Console connectivity|admin shows the exact|admin dashboard reflects movies"
       - name: Run browser smoke regression
         if: steps.scope.outputs.mode == 'smoke'
         run: npx playwright test tests/smoke.spec.ts --project=desktop --workers=1
