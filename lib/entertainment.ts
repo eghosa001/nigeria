@@ -663,7 +663,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Drama", "Period", "Nollywood"],
     languages: ["Yoruba", "English"],
     synopsis: "After an affair with a queen leads to his death, a traveller encounters a mystical bird with the power to give him another life.",
-    cast: ["Kunle Remi", "Bimbo Ademoye", "Hakeem Kae-Kazim"],
+    cast: ["Kunle Remi", "Bimbo Ademoye", "Hakeem Kae-Kazim", "Sola Sobowale", "Taiwo Hassan", "Gabriel Afolayan", "Eyiyemi Afolayan", "Saidi Balogun"],
     directors: ["Kunle Afolayan"],
     trailer: {
       label: "Watch the official trailer",
@@ -672,6 +672,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-09-29",
     },
     featured: true,
+    references: [{ label: "IMDb — Aníkúlápó film director, writer and cast credits", href: "https://www.imdb.com/title/tt21432050/fullcredits/", lastChecked: "2026-10-13", note: "Confirms writer Shola Dada and named characters in the 2022 film." }],
     watchLinks: [
       {
         platform: "Netflix",
@@ -691,7 +692,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Drama", "Social issues", "Nollywood"],
     languages: ["English"],
     synopsis: "A journalist goes undercover in Lagos while investigating human trafficking and encounters a dangerous world of exploitation.",
-    cast: ["Sharon Ooja", "Omoni Oboli", "Blossom Chukwujekwu"],
+    cast: ["Sharon Ooja", "Omoni Oboli", "Blossom Chukwujekwu", "Omowunmi Dada", "Kemi Lala Akindoju", "Wofai Samuel", "Adebukola Oladipupo", "Beverly Osu", "Pearl Okorie", "Ikechukwu Onunaku"],
     directors: ["Kenneth Gyang"],
     featured: true,
     trailer: {
@@ -702,6 +703,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
+    references: [{ label: "Netflix Nigeria — Òlòtūré official cast and viewing details", href: "https://www.netflix.com/ng/title/81300126", lastChecked: "2026-10-13", note: "Netflix lists expanded credited performers and the film's underlying social-issue premise." }],
     watchLinks: [
       {
         platform: "Netflix",
@@ -750,7 +752,8 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Thriller", "Action", "Crime"],
     languages: ["English"],
     synopsis: "After his son is framed for kidnapping, a grieving deacon confronts a corrupt police gang while trying to clear his son's name.",
-    cast: ["Richard Mofe-Damijo", "Ade Laoye", "Sam Dede"],
+    directors: ["Editi Effiong"],
+    cast: ["Richard Mofe-Damijo", "Ade Laoye", "Sam Dede", "Alex Usifo", "Olumide Oworu", "Kelechi Udegbe", "Shaffy Bello", "Ireti Doyle", "Taiwo Ajai-Lycett"],
     featured: true,
     trailer: {
       label: "Watch the official Netflix trailer",
@@ -760,6 +763,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
+    references: [{ label: "Netflix Nigeria — The Black Book original film and full named cast", href: "https://www.netflix.com/ng/title/81698992", lastChecked: "2026-10-13", note: "Official Netflix listing confirms lead and supporting cast for the 2023 title." }],
     watchLinks: [
       {
         platform: "Netflix",
@@ -922,6 +926,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Action", "Drama", "Period", "Nollywood"],
     languages: ["Yoruba", "English"],
     synopsis: "A young man joins an elite warrior school to pursue power, only to collide with a ruthless warlord and a dangerous love story.",
+    directors: ["Tope Adebayo","Adebayo Tijani"],
     cast: ["Femi Adebayo", "Lateef Adedimeji", "Odunlade Adekola", "Ibrahim Yekini Itele", "Bukunmi Oluwashina", "Adebayo Salami", "Fathia Balogun", "Muyiwa Ademola", "Yinka Quadri", "Debo Adedayo"],
     featuredCast: ["Femi Adebayo", "Lateef Adedimeji", "Odunlade Adekola"],
     trailer: {
@@ -931,6 +936,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-10-05",
       publisher: "Femi Adebayo TV",
     },
+    references: [{ label: "IMDb — Jagun Jagun full cast, screenplay and character roles", href: "https://www.imdb.com/title/tt28546464/fullcredits/", lastChecked: "2026-10-13", note: "Lists two credited directors and confirmed Gbotija, Ogundiji and supporting character roles." }],
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81681240", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -941,8 +947,10 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Drama", "Comedy", "Nollywood"],
     languages: ["English"],
     synopsis: "When her father falls ill, Adaeze takes on the family transport business and must prove herself in a male-dominated environment.",
+    directors: ["Genevieve Nnaji"],
     cast: ["Genevieve Nnaji", "Nkem Owoh", "Pete Edochie", "Onyeka Onwenu", "Kanayo O. Kanayo"],
     featuredCast: ["Genevieve Nnaji", "Nkem Owoh", "Pete Edochie"],
+    references: [{ label: "Netflix newsroom — acquisition and feature production credits for Lionheart", href: "https://about.netflix.com/en/news/netflix-acquires-worldwide-rights-to-lionheart", lastChecked: "2026-10-13", note: "Primary corporate release confirms director, cast, film story and TIFF debut." }],
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81030789", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -993,6 +1001,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Drama", "Social issues", "Nollywood"],
     languages: ["English"],
     synopsis: "A university student challenges the academic establishment after reporting sexual misconduct by a respected professor.",
+    directors: ["Kunle Afolayan"],
     cast: ["Temi Otedola", "Jimmy Jean-Louis", "Joke Silva", "Gabriel Afolayan", "Adjetey Anang", "Ini Edo", "Sadiq Daba", "Yomi Fash-Lanso", "Bukunmi Oluwashina"],
     featuredCast: ["Temi Otedola", "Joke Silva", "Ini Edo"],
     trailer: {
@@ -1003,6 +1012,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
+    references: [{ label: "IMDb — Citation full film credits and characters", href: "https://www.imdb.com/title/tt11481312/fullcredits/", lastChecked: "2026-10-13", note: "Credited roles for Moremi, Professor Lucien N'Dyare and other cast, with writer/director." }],
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81294345", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -1113,6 +1123,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Crime", "Drama", "Nollywood"],
     languages: ["English"],
     synopsis: "A powerful businesswoman's political ambitions collide with her underworld connections, triggering a brutal struggle for power.",
+    directors: ["Kemi Adetiba"],
     cast: ["Sola Sobowale", "Adesua Etomi", "Remilekun 'Reminisce' Safaru", "Tobechukwu 'iLLbliss' Ejiofor", "Toni Tones", "Jide Kosoko", "Sharon Ooja"],
     featuredCast: ["Sola Sobowale", "Adesua Etomi", "Remilekun 'Reminisce' Safaru"],
     trailer: {
@@ -1122,6 +1133,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       lastChecked: "2026-09-29",
       publisher: "Kemi Adetiba Visuals",
     },
+    references: [{ label: "Netflix Nigeria — King of Boys cast and film description", href: "https://www.netflix.com/ng/title/81172721", lastChecked: "2026-10-13", note: "Official listing for the 2018 feature and original credited cast." }],
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81172721", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
@@ -1151,6 +1163,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Action", "Drama", "Period", "Nollywood"],
     languages: ["Yoruba", "English"],
     synopsis: "At the height of the Oyo Empire, Bashorun Ga'a rises above the kings he helps install until power and family turn against him.",
+    directors: ["Bolanle Austen-Peters"],
     cast: ["Femi Branch", "Mike Afolarin", "Funke Akindele", "Femi Adebayo", "Ibrahim Chatta", "Toyin Abraham", "Bimbo Manuel", "Lateef Adedimeji"],
     featuredCast: ["Femi Branch", "Mike Afolarin", "Funke Akindele"],
     trailer: {
@@ -1161,6 +1174,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
+    references: [{ label: "BAP Productions — House of Ga'a cast and creative credits", href: "https://app.bapproduction.com/films/house-of-gaa", lastChecked: "2026-10-13", note: "Primary production source for named roles, director, screenwriter and technical crew." }],
     watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81681233", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
   },
   {
