@@ -96,5 +96,88 @@ export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
         answer: "FilmFlux credits Great-Valedochie as director. The film premiered on Bimbo Ademoye TV on 1 October 2026. Published reporting separately identifies Bimbo Ademoye as its writer and producer.",
       },
     ],
+  },  "once-upon-a-village-3": {
+    releaseDate: "2026-08-20",
+    roles: [
+      { actor: "Deza The Great", character: "Chairman Jeffery" },
+      { actor: "Prisma James", character: "Lilian" },
+      { actor: "Annabel Apara", character: "Enoh" },
+      { actor: "Eronini Osinachi", character: "Mina" },
+      { actor: "Henrietta Ibekwe", character: "Mama" },
+      { actor: "Karo Benedict", character: "Mascot" },
+    ],
+    crew: [
+      { role: "Executive producer", name: "Ruth Kadiri" },
+      { role: "Producer", name: "Precious Ehis Kadiri" },
+      { role: "Director", name: "Nelly Gilson" },
+    ],
+    sections: [
+      {
+        heading: "What is Once Upon a Village 3 about?",
+        paragraphs: [
+          "Once Upon a Village 3 continues the story of a rural community divided by wealth, loyalty and decisions made by its influential families. Chairman Jeffery remains a central figure, while Lilian, Enoh, Mina and other returning characters have their own interests in how the village's opportunities are distributed.",
+          "The wider Once Upon a Village story involves educational opportunity, family authority and a community struggling to decide whose voices carry weight. This third instalment builds on characters introduced earlier, so viewers who begin with Part 3 may miss why tensions between particular families already exist.",
+          "The cast should be identified by instalment rather than assuming that every actor appears in every episode. The role table above is limited to individually documented Part 3 credits. This guide avoids claiming that its cast list includes every performer in the larger Once Upon a Village series.",
+        ],
+      },
+      {
+        heading: "How does Part 3 fit into the RuthKadiri247 series?",
+        paragraphs: [
+          "RuthKadiri247 published Once Upon a Village 3 on YouTube on 20 August 2026. The publisher's title prominently names Deza The Great, Prisma James, Fessa Ajoku and Annabel Apara. The verified upload is roughly 99 minutes, and its title distinguishes it from the original instalment and later entries.",
+          "You can watch Part 3 from the original RuthKadiri247 source linked below, or use MyNigeriaGuide's separate series guide to follow the story in sequence. This distinction matters because people searching for 'Once Upon a Village cast' may want credits for the whole series, while others want the specific actors in the third film.",
+        ],
+      },
+    ],
+    questions: [
+      {
+        question: "Who plays Chairman Jeffery and Lilian in Once Upon a Village 3?",
+        answer: "Deza The Great is credited as Chairman Jeffery and Prisma James as Lilian. Annabel Apara plays Enoh, with additional independently documented part-specific roles listed above.",
+      },
+      {
+        question: "Where can I watch Once Upon a Village 3?",
+        answer: "The full Part 3 upload is published by RuthKadiri247 on YouTube. Follow the official video link in the viewing section and see the linked series guide if you want to start with the first instalment.",
+      },
+    ],
   },
+  "millionaire-until-morning": {
+    roles: [
+      { actor: "Sophia Chisom", character: "Ndidi" },
+      { actor: "Chris Attoh", character: "Harrison" },
+      { actor: "Thelma Chukwunwem", character: "Matilda" },
+      { actor: "Desmond Bryce", character: "Desmond" },
+      { actor: "Taiwo Familoni", character: "Mr Sam" },
+    ],
+    crew: [
+      { role: "Executive producer", name: "Omoni Oboli" },
+      { role: "Producer", name: "Susan Ogutuga" },
+    ],
+    sections: [
+      {
+        heading: "Story and characters in Millionaire Until Morning",
+        paragraphs: [
+          "Ndidi is a young woman struggling to find security after her father's death. Living with her harsh stepmother Matilda, she faces pressure to marry an older suitor rather than make her own future. Sophia Chisom plays Ndidi and Thelma Chukwunwem plays Matilda in this romance and family drama.",
+          "Chris Attoh plays Harrison, a man who offers a way out of the proposed marriage and seems to provide the financial certainty Ndidi has been denied. Their relationship raises a more difficult question about the difference between a convincing appearance of wealth and a person's real ability to care for someone else.",
+          "The early conflict includes Desmond, Ndidi's boyfriend, and Mr Sam, the older suitor favoured by her family. Rather than presenting a conventional rescue story, the film places trust, honesty and family power at the centre of the romantic decision. The details that change Ndidi's view of Harrison are best experienced in the original movie.",
+        ],
+      },
+      {
+        heading: "Official release and why the title matters",
+        paragraphs: [
+          "Millionaire Until Morning is a 2026 Nigerian drama available as a complete film on the official Omoni Oboli TV YouTube channel. The published feature runs about 144 minutes. A direct link to that approved publisher appears in the viewing section, so readers do not need to search among unauthorised reposts.",
+          "The title hints that a promise of sudden prosperity may not survive until daylight. Its story is about the consequences of that gap between claims and reality, not merely a wealthy man offering financial rescue. Reviews have discussed the film as a variation on familiar Nollywood themes of arranged marriage, hardship and romance.",
+        ],
+      },
+    ],
+    questions: [
+      {
+        question: "Who plays Ndidi and Harrison in Millionaire Until Morning?",
+        answer: "Sophia Chisom plays Ndidi, and Chris Attoh plays Harrison. The supporting character credits listed above have also been checked against published film reviews and cast records.",
+      },
+      {
+        question: "Is Millionaire Until Morning available on YouTube?",
+        answer: "Yes. The film is linked here through Omoni Oboli TV, its original full-movie publisher. Check the video for current regional access and do not confuse the official upload with copied versions.",
+      },
+    ],
+  },
+
 };
