@@ -1,3 +1,4 @@
+import { psychologicalThrillerEditorialOctober20261013 } from "@/lib/movie-editorial-profiles-thriller-2026-10-13";
 import { movieEditorialProfilesOctober20261013 } from "@/lib/movie-editorial-profiles-october-2026-10-13";
 import { movieEditorialProfiles, type MovieEditorialProfile } from "@/lib/movie-editorial-profiles";
 import { movieEditorialProfilesWave2 } from "@/lib/movie-editorial-profiles-wave2";
@@ -15,6 +16,7 @@ import { movieEditorialProfilesRemainingB } from "@/lib/movie-editorial-profiles
 // fabricated roles, fake premiere dates, or generic SEO paragraphs.
 // Duplicate IDs are checked by the change-scoped premium-guide quality gate.
 export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] = [
+  psychologicalThrillerEditorialOctober20261013,
   movieEditorialProfilesOctober20261013,
   movieEditorialProfiles,
   movieEditorialProfilesWave2,
