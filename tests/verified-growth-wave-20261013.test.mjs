@@ -14,7 +14,7 @@ test("source-backed guides have distinct slugs, recent checks, and primary-sourc
   assert.match(engineer, /https:\/\/nse\.org\.ng\/membership/);
   assert.match(museum, /2026-10-13/);
   assert.match(engineer, /2026-10-13/);
-  for (const page of [museum, engineer]) assert.ok(page.split(/\\s+/).length > 850);
+  for (const page of [museum, engineer]) assert.ok(page.split(/\s+/).length > 850);
 });
 
 test("both guides are included in their canonical pillar catalog and search suggestions", () => {
