@@ -47,6 +47,16 @@ jobs:
             exit 0
           fi
 
+          # Compact admin dashboards and list pagination require types and the
+          # directly affected analytics safety checks, not every public catalog.
+          admin_ui_changed="$(printf '%s\n' "$changed" | grep -E '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand)\.tsx$|lib/analytics-data\.ts$|tests/admin-editing\.spec\.ts$)' || true)"
+          admin_ui_other="$(printf '%s\n' "$changed" | grep -Ev '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand)\.tsx$|lib/analytics-data\.ts$|tests/admin-editing\.spec\.ts$|app/globals\.css$|\.github/workflows/ci\.yml$)' || true)"
+          if [ -n "$admin_ui_changed" ] && [ -z "$admin_ui_other" ]; then
+            echo "mode=admin-ui" >> "$GITHUB_OUTPUT"
+            echo "Admin list/dashboard surfaces only: typecheck plus analytics safety."
+            exit 0
+          fi
+
           if node scripts/youtube-d1-production-scope.mjs "$changed"; then
             echo "mode=youtube-d1-production" >> "$GITHUB_OUTPUT"
             echo "Production binding only; focused guard/config checks run in CI, artifact validation runs in postbuild."
@@ -277,6 +287,12 @@ jobs:
       - name: Test Google Search Console hourly reporting
         if: steps.scope.outputs.gsc_hourly_changed == 'true'
         run: npx tsx --test tests/search-console-hourly.test.ts
+      - name: Validate admin dashboard and analytics changes
+        if: steps.scope.outputs.mode == 'admin-ui'
+        run: |
+          python3 scripts/fast_path_guard.py
+          npm run typecheck
+          npm run check:analytics-safety
       - name: Validate Jobs & Careers changes
         if: steps.scope.outputs.mode == 'jobs'
         run: |
