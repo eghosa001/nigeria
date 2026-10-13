@@ -203,12 +203,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // Unique, fact-first snippets for titles without an individual override.
   // Never imply a streaming title listing guarantees Nigerian playback.
   const leadCast = featuredCast.slice(0, 2).join(", ");
-  const synopsis = title.synopsis.trim().replace(/\\s+/g, " ");
+  const synopsis = title.synopsis.trim().replace(/\s+/g, " ");
   const defaultDescription = `${title.title} (${title.year}): ${leadCast ? "Cast: " + leadCast + ". " : ""}${synopsis}`;
   const description = override?.description ?? (
     defaultDescription.length <= 165
       ? defaultDescription
-      : defaultDescription.slice(0, 165).replace(/\\s+\\S*$/, "").trimEnd() + "…"
+      : defaultDescription.slice(0, 165).replace(/\s+\S*$/, "").trimEnd() + "…"
   );
 
   return {
