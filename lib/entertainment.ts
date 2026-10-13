@@ -330,7 +330,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Action", "Crime", "Drama", "Nollywood"],
     languages: ["English"],
     synopsis: "When a ruthless smuggler kidnaps a young girl to settle an old score, four women are forced into a dangerous struggle involving deception, betrayal, family and survival.",
-    cast: ["Lateef Adedimeji", "Linda Ejiofor", "Omowunmi Dada", "Scarlett Gomez", "Teniola Aladese", "Susan Pwajok"],
+    cast: ["Lateef Adedimeji", "Linda Ejiofor-Suleiman", "Omowunmi Dada", "Scarlet Gomez", "Teniola Aladese", "Susan Ganchung Pwajok", "Uzor Arukwe", "Ibrahim Yekini"],
     featuredCast: ["Lateef Adedimeji", "Linda Ejiofor", "Omowunmi Dada"],
     directors: ["Fatimah Binta Gimsay"],
     runtimeMinutes: 100,
@@ -343,6 +343,10 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Cinema listing uses the film's promotional poster. Source-linked editorial preview; image rights remain with the film/rightsholders.",
       lastChecked: "2026-10-05",
     },
+    references: [
+      { label: "Black Market — official cast, characters and production credits", href: "https://blackmarketmovie.com/", lastChecked: "2026-10-13", note: "Primary production site names character assignments, filmmakers and the 26 September event." },
+      { label: "Grand Cinemas — Black Market release and current screenings", href: "https://grandcinemas.com.ng/movies/black-market/", lastChecked: "2026-10-13", note: "Exhibitor lists general 2 October cinema opening, director and approximate runtime." }
+    ],
     watchLinks: [{ platform: "Cinema", label: "See current Grand Cinemas showtimes", href: "https://grandcinemas.com.ng/movies/black-market/", access: "cinema", lastChecked: "2026-10-05", note: "Grand Cinemas lists Black Market as released on 2 October 2026. Cinema schedules and ticket prices can change." }]
   },
   {
@@ -365,6 +369,11 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Press coverage identifies this promotional poster as supplied via Suss Productions. Source-linked editorial preview; rights remain with the film/rightsholders.",
       lastChecked: "2026-10-05",
     },
+    references: [
+      { label: "IMDb — East West Love film cast and character credits", href: "https://www.imdb.com/title/tt42450012/", lastChecked: "2026-10-13", note: "Actor-to-character roles, writing team and 9 October opening." },
+      { label: "Nollywood Reporter — East West Love filmmakers and production", href: "https://thenollywoodreporter.com/film/seko-shamtes-east-west-love-explores-cultural-clash-romance/", lastChecked: "2026-10-13", note: "Independent details on Nigerian-Kenyan storyline and writing team." },
+      { label: "Fiesta Cinemas — East West Love listings", href: "https://fiesta.ng/now-playing/", lastChecked: "2026-10-13", note: "Current exhibitor confirmation of Nigerian cinema screenings and release." }
+    ],
     watchLinks: [{ platform: "Cinema", label: "Check current release details", href: "https://www.imdb.com/title/tt42450012/", access: "cinema", lastChecked: "2026-10-05", note: "The current release listing gives 9 October 2026. Check local cinema schedules before travelling." }]
   },
   {
@@ -387,6 +396,9 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Promotional artwork shown on the film's official distributor page. Source-linked editorial preview; rights remain with the film/rightsholders.",
       lastChecked: "2026-10-05",
     },
+    references: [
+      { label: "Tribe Nation Theatrical — Onibọn Oje filmmaker announcement", href: "https://www.tntheatrical.com/post/odunlade-adekola-fathia-balogun-and-kolawole-ajeyemi-lead-new-yoruba-epic-onib%E1%BB%8Dn-oje-in-cinemas-oc", lastChecked: "2026-10-13", note: "Official film launch announcement verifies cast, Ibadan filming location, directors and scheduled 23 October release." }
+    ],
     watchLinks: [{ platform: "Cinema", label: "Check the official distributor release page", href: "https://www.tntheatrical.com/post/odunlade-adekola-fathia-balogun-and-kolawole-ajeyemi-lead-new-yoruba-epic-onib%E1%BB%8Dn-oje-in-cinemas-oc", access: "cinema", lastChecked: "2026-10-05", note: "Tribe Nation Theatrical Distribution lists the Nigerian cinema release for 23 October 2026." }]
   },
   {
@@ -472,6 +484,10 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Cinema listing uses the film's promotional poster. Source-linked editorial preview; image rights remain with the film/rightsholders.",
       lastChecked: "2026-10-05",
     },
+    references: [
+      { label: "Agbara Nla: The Return — official film and cast", href: "https://www.agbaranla.com/", lastChecked: "2026-10-13", note: "Original production site confirms Isawuru's actor, reimagining, directors, filmmakers and 1 October premiere." },
+      { label: "Silverbird Cinemas — Agbara Nla showtimes", href: "https://silverbirdcinemas.com/movie/agbara-nla-the-return/", lastChecked: "2026-10-13", note: "Cinema schedule and 157-minute runtime, with exhibitor-specific date." }
+    ],
     watchLinks: [
       {
         platform: "Cinema",
@@ -501,6 +517,9 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       note: "Promotional artwork shown on the film's official distributor page. Source-linked editorial preview; rights remain with the film/rightsholders.",
       lastChecked: "2026-10-05",
     },
+    references: [
+      { label: "Tribe Nation Theatrical — First Lady film announcement", href: "https://www.tntheatrical.com/post/desmond-elliot-ibrahim-suleiman-and-fehintola-olulana-lead-new-political-drama-first-lady-in-cinem", lastChecked: "2026-10-13", note: "Official announcement details Adunola's story, Olulana's writing and production credits, and the scheduled 16 October release." }
+    ],
     watchLinks: [
       {
         platform: "Cinema",
@@ -2187,7 +2206,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Comedy", "Nollywood"],
     languages: ["English"],
     synopsis: "Bimbo Ademoye brings her established Sibe comic character from the YouTube sketch series into a feature-length Nigerian comedy, following Sibe through a series of jobs and everyday personal mishaps. The movie features Uche Montana, Uzor Arukwe and Deyemi Okanlawon alongside Ademoye.",
-    cast: ["Bimbo Ademoye", "Uche Montana", "Uzor Arukwe", "Deyemi Okanlawon"],
+    cast: ["Bimbo Ademoye", "Uche Montana", "Uzor Arukwe", "Deyemi Okanlawon", "Afeez Oyetoro"],
     featuredCast: ["Bimbo Ademoye", "Uche Montana", "Uzor Arukwe"],
     runtimeMinutes: 145,
     references: [
@@ -2448,10 +2467,14 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Crime", "Drama", "Comedy", "Thriller", "Nollywood"],
     languages: ["English"],
     synopsis: "Four old friends form an uneasy alliance for a daring heist, but buried secrets and betrayals put both the plan and their chance at a new life at risk.",
-    cast: ["Bukunmi Adeaga-Ilori", "Bisola Aiyeola", "Wumi Toriola", "Bolaji Ogunmola", "Odunlade Adekola", "Timini Egbuson"],
+    cast: ["Bukunmi Adeaga-Ilori", "Bisola Aiyeola", "Wumi Toriola", "Bolaji Ogunmola", "Odunlade Adekola", "Timini Egbuson", "Lateef Adedimeji", "Shaffy Bello", "Blossom Chukwujekwu"],
     featuredCast: ["Bukunmi Adeaga-Ilori", "Bisola Aiyeola", "Wumi Toriola"],
     directors: ["Yemi Morafa"],
     featured: true,
+    references: [
+      { label: "IMDb — Gingerrr full cast, character names and production credits", href: "https://www.imdb.com/title/tt38061242/fullcredits/", lastChecked: "2026-10-13", note: "Individually credited roles for Lala, Sylvia, Alabokun, Bugari and supporting cast." },
+      { label: "Netflix — Gingerrr streaming title listing", href: "https://www.netflix.com/ng/title/82724198", lastChecked: "2026-10-13", note: "Official listing of cast and synopsis; regional playback must be confirmed by the viewer." }
+    ],
     watchLinks: [{
       platform: "Netflix",
       label: "Open on Netflix",
@@ -2550,9 +2573,13 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Thriller","Crime","Drama","Nollywood"],
     languages: ["English"],
     synopsis: "A joyous wedding turns deadly when a kidnapping forces a newly married couple and their guests into a tense fight for survival.",
-    cast: ["Daniel Etim Effiong","Linda Ejiofor-Suleiman","Genoveva Umeh","Kunle Remi","Mercy Aigbe","Adam Garba","Abba Ali Zaky","Norbert Young","Tina Mba","Patrick Doyle"],
+    cast: ["Daniel Etim Effiong","Linda Ejiofor-Suleiman","Genoveva Umeh","Kunle Remi","Mercy Aigbe","Adam Garba","Abba Ali Zaky","Norbert Young","Tina Mba","Patrick Doyle","Deyemi Okanlawon","Jaiye Kuti"],
     featuredCast: ["Daniel Etim Effiong","Linda Ejiofor-Suleiman","Genoveva Umeh"],
     featured: true,
+    references: [
+      { label: "IMDb — The Herd directing, writing and cast credits", href: "https://www.imdb.com/title/tt37157364/fullcredits/", lastChecked: "2026-10-13", note: "Names director Daniel Etim Effiong, screenwriter Lani Aisida and billed performers." },
+      { label: "Nollywood.com — The Herd film roles and crew", href: "https://nollywood.com/movies/the-herd/crew", lastChecked: "2026-10-13", note: "Confirms principal cast-to-character names and production credits for 2025 release." }
+    ],
     watchLinks: [{
       platform: "Netflix",
       label: "Check current Netflix Nigeria availability",
