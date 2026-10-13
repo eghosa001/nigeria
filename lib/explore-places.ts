@@ -3110,6 +3110,16 @@ export const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
   ...exploreGrowthWave2SharedPlaceSlugs,
   ...exploreGrowthWaveSharedPlaceSlugs,
   "nigeria-landmarks-places-to-visit": nationalLandmarkPlaceSlugs,
+  // Collection history spans several states; these are independently verified museums,
+  // not five stops in one practical day-trip route.
+  "nigerian-museum-collections-guide": [
+    "national-museum-lagos",
+    "national-museum-ile-ife",
+    "national-museum-benin-city",
+    "national-museum-esie",
+    "national-museum-igbo-ukwu",
+  ],
+
   "felabration-2026": [
     "new-afrika-shrine-felabration-2026",
     "nike-art-gallery-lagos",
