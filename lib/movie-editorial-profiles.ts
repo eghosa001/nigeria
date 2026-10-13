@@ -105,6 +105,8 @@ export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
       { actor: "Eronini Osinachi", character: "Mina" },
       { actor: "Henrietta Ibekwe", character: "Mama" },
       { actor: "Karo Benedict", character: "Mascot" },
+      { actor: "Solomon Osagie", character: "Sammy" },
+      { actor: "Lydian John", character: "Aunty Anita" },
     ],
     crew: [
       { role: "Executive producer", name: "Ruth Kadiri" },
@@ -115,8 +117,8 @@ export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
       {
         heading: "What is Once Upon a Village 3 about?",
         paragraphs: [
-          "Once Upon a Village 3 continues the story of a rural community divided by wealth, loyalty and decisions made by its influential families. Chairman Jeffery remains a central figure, while Lilian, Enoh, Mina and other returning characters have their own interests in how the village's opportunities are distributed.",
-          "The wider Once Upon a Village story involves educational opportunity, family authority and a community struggling to decide whose voices carry weight. This third instalment builds on characters introduced earlier, so viewers who begin with Part 3 may miss why tensions between particular families already exist.",
+          "Once Upon a Village 3 follows Chairman Jeffery's decision to shelter three women while repairs are made to their home. Enoh and her grandmother are among the women offered work in his household. The help initially seems generous, but his wife Hilda objects to the arrangement and the family's son Mina is hostile, turning the house into an uncomfortable place for its new residents.",
+          "A separate dispute surrounds Lilian and Sammy when questions about the past re-emerge in the village. These connected domestic conflicts give Part 3 a different immediate focus from the earliest instalment's concerns over promised scholarships. The film explores what happens when people with financial power offer help while refusing their guests equal dignity. Viewers who begin here may also miss why certain family relationships were strained before the housekeeper arrangement.",
           "The cast should be identified by instalment rather than assuming that every actor appears in every episode. The role table above is limited to individually documented Part 3 credits. This guide avoids claiming that its cast list includes every performer in the larger Once Upon a Village series.",
         ],
       },
