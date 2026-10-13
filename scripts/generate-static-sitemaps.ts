@@ -26,9 +26,11 @@ const sitemapFiles = new Set<string>();
 const index: Array<{ url: string; lastModified: string }> = [];
 let totalURLs = 0;
 const canonicalOwners = new Map<string, string>();
+const changedPageRecords: Array<{ url: string; lastModified: string }> = [];
 
 for (const section of sitemapSectionNames) {
   const entries = getSitemapEntries(section);
+  changedPageRecords.push(...entries.filter((entry) => entry.lastModified));
   for (const entry of entries) {
     const previous = canonicalOwners.get(entry.url);
     if (previous) {
@@ -65,7 +67,29 @@ const indexXml = xmlHeader + "<sitemapindex " + xmlns + ">" +
     escapeXml(lastModified) + "</lastmod></sitemap>").join("") +
   "</sitemapindex>";
 
+
+const recentPages = changedPageRecords
+  .filter((entry) => !Number.isNaN(Date.parse(entry.lastModified)) &&
+    Date.parse(entry.lastModified) <= Date.now())
+  .sort((a, b) => b.lastModified.localeCompare(a.lastModified) || a.url.localeCompare(b.url))
+  .slice(0, 200);
+const feedXml = xmlHeader +
+  '<rss version="2.0"><channel>' +
+  '<title>MyNigeriaGuide — Recently Updated Pages</title>' +
+  '<link>' + escapeXml(productionSiteUrl) + '</link>' +
+  '<description>Updated Nigerian services, entertainment, travel and careers guides.</description>' +
+  '<language>en-ng</language>' +
+  recentPages.map(({ url, lastModified }) => {
+    const segment = new URL(url).pathname.split("/").filter(Boolean).pop() || "MyNigeriaGuide";
+    const title = segment.replaceAll("-", " ").replace(/\\b\\w/g, (letter) => letter.toUpperCase());
+    const pubDate = new Date(lastModified.length === 10 ? lastModified + "T12:00:00Z" : lastModified).toUTCString();
+    return "<item><title>" + escapeXml(title) + "</title><link>" + escapeXml(url) +
+      "</link><guid isPermaLink=\"true\">" + escapeXml(url) + "</guid><pubDate>" +
+      escapeXml(pubDate) + "</pubDate></item>";
+  }).join("") + "</channel></rss>";
+
 await Promise.all([
+  writeFile(resolve(root, "recent-pages.xml"), feedXml, "utf8"),
   writeFile(resolve(root, "sitemap.xml"), indexXml, "utf8"),
   writeFile(resolve(root, "sitemap-index.xml"), indexXml, "utf8"),
 ]);

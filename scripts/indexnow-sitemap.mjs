@@ -35,3 +35,18 @@ export function canonicalPageUrls(urls, base) {
   }
   return [...selected];
 }
+
+/** Return per-URL meaningful-update timestamps without changing the legacy parser. */
+export function parseSitemapRecords(xml) {
+  const parsed = parseSitemap(xml);
+  if (parsed.kind === "index") return parsed;
+  const blocks = [...xml.matchAll(/<url(?:\s[^>]*)?>([\s\S]*?)<\/url>/gi)];
+  if (blocks.length !== parsed.entries.length) throw new Error("Sitemap record count mismatch.");
+  return {
+    kind: "urls",
+    entries: parsed.entries.map((url, i) => {
+      const match = blocks[i][1].match(/<lastmod>\s*([^<]+?)\s*<\/lastmod>/i);
+      return { url, lastModified: match ? decodeXml(match[1].trim()) : "" };
+    }),
+  };
+}
