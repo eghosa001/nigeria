@@ -15,6 +15,7 @@ on:
     - cron: "18 5 * * *"
 permissions:
   contents: read
+  id-token: write
 concurrency:
   group: google-jobs-indexing
   cancel-in-progress: false
@@ -24,6 +25,8 @@ jobs:
     timeout-minutes: 14
     env:
       GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON }}
+      GCP_WORKLOAD_IDENTITY_PROVIDER: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+      GCP_INDEXING_SERVICE_ACCOUNT: ${{ vars.GCP_INDEXING_SERVICE_ACCOUNT }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,14 +34,28 @@ jobs:
           node-version: 22
       - name: Run focused safety-policy tests
         run: node --test scripts/google-job-indexing-plan.test.mjs
+      - name: Choose supported Google authentication
+        id: identity
+        shell: bash
+        run: |
+          if [ -n "$GCP_WORKLOAD_IDENTITY_PROVIDER" ] && [ -n "$GCP_INDEXING_SERVICE_ACCOUNT" ]; then
+            echo "method=oidc" >> "$GITHUB_OUTPUT"
+            echo "Google Indexing API using keyless GitHub OIDC Workload Identity Federation."
+          elif [ -n "$GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON" ]; then
+            echo "method=json" >> "$GITHUB_OUTPUT"
+            echo "::notice::Legacy service account key is set; prefer keyless GitHub OIDC."
+          else
+            echo "method=none" >> "$GITHUB_OUTPUT"
+            echo "Google indexing not configured; see docs/SEARCH_DISCOVERY_ACTIVATION.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Install TypeScript runtime if configured
-        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        if: steps.identity.outputs.method != 'none'
         run: npm install --no-audit --no-fund
       - name: Export live qualifying job postings only
-        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        if: steps.identity.outputs.method != 'none'
         run: npx tsx scripts/google-indexing-eligible-jobs.ts
       - name: Restore accepted notification checkpoint
-        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        if: steps.identity.outputs.method != 'none'
         uses: actions/cache/restore@v4
         with:
           path: .discovery/google-indexing-state.json
@@ -46,7 +63,7 @@ jobs:
           restore-keys: |
             google-jobs-
       - name: Confirm exact commit is in production
-        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != ''
+        if: steps.identity.outputs.method != 'none'
         shell: bash
         run: |
           set -euo pipefail
@@ -61,10 +78,23 @@ jobs:
           done
           echo "::error::Production does not serve this exact commit, no notifications sent."
           exit 1
+      - name: Authenticate through short-lived GitHub OIDC token
+        id: oidc
+        if: steps.identity.outputs.method == 'oidc'
+        uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: ${{ env.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.GCP_INDEXING_SERVICE_ACCOUNT }}
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/indexing
+          create_credentials_file: false
       - name: Submit changed verified JobPosting pages only
+        if: steps.identity.outputs.method != 'none'
+        env:
+          GOOGLE_INDEXING_ACCESS_TOKEN: ${{ steps.oidc.outputs.access_token }}
         run: node scripts/google-indexing-notify.mjs
       - name: Save accepted notification checkpoint
-        if: env.GOOGLE_INDEXING_SERVICE_ACCOUNT_JSON != '' && success()
+        if: steps.identity.outputs.method != 'none' && success()
         uses: actions/cache/save@v4
         with:
           path: .discovery/google-indexing-state.json
