@@ -27,6 +27,8 @@ on:
       - "app/robots.ts"
       - "public/6ce5a25890f63884432abbd2a7223bd6.txt"
       - "scripts/submit-indexnow.mjs"
+      - "scripts/indexnow-sitemap.mjs"
+      - "scripts/indexnow-sitemap.test.mjs"
       - ".github/workflows/indexnow.yml"
 
 concurrency:
@@ -44,6 +46,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Verify sitemap index resolves to page URLs
+        run: node --test scripts/indexnow-sitemap.test.mjs
       - name: Wait for this exact commit to reach production
         shell: bash
         run: |

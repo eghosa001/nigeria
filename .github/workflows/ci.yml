@@ -63,6 +63,16 @@ jobs:
             exit 0
           fi
 
+          # IndexNow XML parser/submission changes must not trigger the full
+          # Next.js build and catalog suites. The 3 focused parser tests suffice.
+          indexnow_changed="$(printf '%s\n' "$changed" | grep -E '^(scripts/(submit-indexnow\.mjs|indexnow-sitemap(\.test)?\.mjs)$|\.github/workflows/indexnow\.yml$)' || true)"
+          indexnow_other="$(printf '%s\n' "$changed" | grep -Ev '^(scripts/(submit-indexnow\.mjs|indexnow-sitemap(\.test)?\.mjs)$|\.github/workflows/(indexnow|ci)\.yml$)' || true)"
+          if [ -n "$indexnow_changed" ] && [ -z "$indexnow_other" ]; then
+            echo "mode=indexnow" >> "$GITHUB_OUTPUT"
+            echo "IndexNow-only changes: focused XML sitemap regression."
+            exit 0
+          fi
+
           # Snapshot-only Tour continuity analysis and existing NIN guide copy.
           # Keep it isolated from expensive product builds and unrelated audits.
           tour_audit_changed="$(printf '%s\n' "$changed" | grep -E '^(scripts/(tour-migration-audit|check-tour-migration-readiness)\.ts$|tests/tour-migration-audit\.test\.ts$)' || true)"
@@ -173,7 +183,12 @@ jobs:
         with:
           node-version: ${{ steps.scope.outputs.mode == 'youtube-d1-integration' && '24' || '22' }}
       - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.mode != 'skip' && steps.scope.outputs.mode != 'youtube-d1-integration' && steps.scope.outputs.mode != 'youtube-d1-production' && steps.scope.outputs.mode != 'ads-txt'
+        if: steps.scope.outputs.mode != 'skip' && steps.scope.outputs.mode != 'youtube-d1-integration' && steps.scope.outputs.mode != 'youtube-d1-production' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'indexnow'
+      - name: Verify IndexNow canonical sitemap parsing
+        if: steps.scope.outputs.mode == 'indexnow'
+        run: |
+          python3 scripts/fast_path_guard.py
+          node --test scripts/indexnow-sitemap.test.mjs
       - name: Verify static ads.txt cannot disappear or change publisher
         if: steps.scope.outputs.mode == 'ads-txt'
         run: node --test tests/ads-txt-guard.test.mjs
