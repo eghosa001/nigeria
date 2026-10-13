@@ -86,6 +86,7 @@ test("visits unlock displays reports immediately and can be locked again", async
     await route.fulfill({ json: { configured: true, authenticated: true, data: {
       range: "30d", mode: "clean", propertyId: "556260033",
       generatedAt: "2026-10-04T12:00:00Z", dataStartDate: "2026-09-29", cleanStartDate: "2026-09-29",
+      ga4Available: true, ga4Error: null,
       summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
       realtimeActiveUsers: 2,
       realtimePageViews: 3,
