@@ -16,5 +16,5 @@ test("static ads.txt matches the production AdSense publisher identifier", () =>
   const layout = readFileSync("app/layout.tsx", "utf8");
   assert.match(config, new RegExp("ca-" + PUBLISHER_ID));
   assert.match(layout, /import \{ ADSENSE_CLIENT \} from "@\/lib\/adsense-config"/);
-  assert.match(layout, /adsbygoogle\\.js\\?client=\$\{ADSENSE_CLIENT\}/);
+  assert.ok(layout.includes("adsbygoogle.js?client=${ADSENSE_CLIENT}"));
 });
