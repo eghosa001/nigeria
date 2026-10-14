@@ -789,7 +789,7 @@
     "slug": "cac-annual-returns",
     "title": "How to file CAC annual returns",
     "shortTitle": "CAC annual returns",
-    "summary": "CAC annual returns guidance for 2026, including the current business-name filing notice, the official CRP route and CAC's published processing timeline.",
+    "summary": "File a CAC annual return through the official iCRP account for your registered entity. CAC currently offers the business-name annual-return option for registrations before July 2025; newer business names should follow the portal's notice as the newer process is introduced.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Fee varies by entity and filing",
@@ -801,31 +801,33 @@
       "Return-year information and the entity-specific annual-return fields shown by CRP; the fields differ for companies, business names and incorporated trustees"
     ],
     "steps": [
-      "Sign in to the official CAC registration portal.",
-      "Open the applicable annual-return filing.",
-      "Complete the filing and pay the official fee shown in the portal."
+      "Open the official iCRP at icrp.cac.gov.ng and sign in with the entity's registered portal account; create an account or recover access using the portal's official links if necessary.",
+      "Open the Annual Returns or post-registration area and choose the return for your particular company, business name or incorporated trustee; confirm that this entity and registration year are eligible for the option currently displayed.",
+      "Enter the required entity and return-period details, review the particulars shown in the portal and submit the applicable filing. Use the official portal payment route if a filing fee is requested.",
+      "Save the payment or application acknowledgement and follow the portal for approval, query or any correction. If the annual-return option is unavailable for a newer business name, follow CAC's published rollout notice instead of paying an outside agent."
     ],
     "notes": [
       "CAC's current CRP notice says annual-return filing is available for business names registered before July 2025.",
       "CAC says it is upgrading the business-name system with an AI-powered annual-returns process intended to support both older business names and those created after July 2025.",
       "Company, business-name and incorporated-trustee annual returns use different filing fields and fees, so use the entity-specific form shown in CRP.",
-      "The official iCRP landing page distinguishes business names registered before July 2025 from those after July 2025 as the new AI-based returns workflow is introduced; if your filing option is not yet active, follow CAC's current portal notices rather than an unofficial payment link."
+      "The official iCRP landing page distinguishes business names registered before July 2025 from those after July 2025 as the new AI-based returns workflow is introduced; if your filing option is not yet active, follow CAC's current portal notices rather than an unofficial payment link.",
+      "CAC's live iCRP notice states that business-name annual returns are currently available for businesses registered before July 2025; an updated automated route for later registrations is planned, not yet universally available."
     ],
     "sources": [
       {
         "label": "CAC Company Registration Portal",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
-        "lastChecked": "2026-10-10"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "CAC annual returns",
       "How to file CAC annual returns",
@@ -1313,7 +1315,7 @@
     "slug": "waec-lost-certificate",
     "title": "What to do if a WAEC certificate is lost or damaged",
     "shortTitle": "Lost WAEC certificate",
-    "summary": "WAEC does not simply reprint lost certificates; it provides other official routes such as statement/confirmation or attestation.",
+    "summary": "WAEC does not issue an ordinary duplicate of a lost certificate. It offers a statement of result, paid result confirmation or an attestation of result for lost or damaged certificates; use WAEC's official support route and confirm the requirements for your examination type.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Fee depends on requested service",
@@ -1324,22 +1326,25 @@
       "Supporting evidence for the exact WAEC route chosen (statement, confirmation or attestation); WAEC does not use one identical document list across those routes"
     ],
     "steps": [
-      "Contact WAEC through the appropriate official channel.",
-      "Choose the applicable statement, confirmation or attestation process.",
-      "Provide the documents and fee WAEC requests."
+      "Confirm the examination year, examination number and school or private-candidate category from the available result details before requesting any supporting document.",
+      "Read WAEC Nigeria's official FAQ on lost or damaged certificates to choose the correct outcome: statement of result, paid confirmation of results or attestation of result rather than a reprinted certificate.",
+      "School candidates should ask their former school for help identifying the appropriate WAEC office or submission route; private candidates can contact WAEC directly through its official channels.",
+      "Ask the responsible WAEC office for the current supporting documents, identity requirements and fee for the chosen service before submitting an application or paying.",
+      "Keep the official acknowledgement and follow up through the same WAEC route. The original lost certificate is not reissued as an ordinary duplicate."
     ],
     "notes": [
-      "WAEC's FAQ states that lost certificates are not replaced with a duplicate certificate in the ordinary way."
+      "WAEC's FAQ states that lost certificates are not replaced with a duplicate certificate in the ordinary way.",
+      "WAEC explicitly states that lost certificates are not replaced in the usual manner; statements, confirmation and attestation are different official options."
     ],
     "sources": [
       {
         "label": "WAEC Nigeria FAQ",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/faq",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Lost WAEC certificate",
       "What to do if a WAEC certificate is lost or damaged",
@@ -1751,7 +1756,7 @@
     "slug": "nysc-foreign-trained-registration",
     "title": "How NYSC registration works for foreign-trained Nigerian graduates",
     "shortTitle": "NYSC foreign-trained registration",
-    "summary": "Official academic-document and physical-verification requirements for foreign-trained graduates.",
+    "summary": "Foreign-trained Nigerian graduates register at the NYSC portal, upload the required educational and travel credentials and undergo physical verification at a location and date shown in their NYSC dashboard. Do not travel on the assumption that a prior batch's venue applies.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Use official NYSC portal for any applicable payment",
@@ -1766,20 +1771,22 @@
       "Travel evidence showing first departure/entry for study and return to Nigeria; where more than one passport was used, upload the relevant data pages"
     ],
     "steps": [
-      "Register on the official NYSC portal.",
-      "Upload the credentials required by NYSC.",
-      "Attend physical verification at the venue/date shown in the dashboard.",
-      "Keep original credentials available until verification is complete."
+      "Open portal.nysc.org.ng during an active registration window and register as a foreign-trained prospective corps member using your personal details and applicable qualifications.",
+      "Upload the academic and international-passport evidence required for your particular foreign institution and qualification. NYSC states that downloaded certificates, statements of results and attestation letters are not accepted as substitutes where original credentials are required.",
+      "Check the NYSC dashboard for the assigned physical-verification venue, dates and duration. Carry the original academic credentials and original travel documents specified by NYSC, not only scanned copies.",
+      "Attend the designated pre-camp physical verification on the assigned date; if NYSC instead assigns a call-up number without pre-camp verification, follow the official instruction to be verified at orientation camp.",
+      "Keep your original documents available until NYSC officials have physically verified them and review the dashboard for the next verified mobilisation decision."
     ],
     "notes": [
-      "NYSC states that downloaded certificates/transcripts, statements of result and attestation letters are not accepted for this route."
+      "NYSC states that downloaded certificates/transcripts, statements of result and attestation letters are not accepted for this route.",
+      "NYSC says foreign-trained graduates who do not complete pre-camp physical verification may be verified at orientation camp where assigned; do not assume online upload alone ends the check."
     ],
     "sources": [
       {
         "label": "NYSC Foreign-Trained Requirements",
         "agency": "National Youth Service Corps",
         "url": "https://nysc.gov.ng/foreignmobreg.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "Official NYSC Portal",
@@ -1788,7 +1795,7 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "NYSC foreign-trained registration",
       "How NYSC registration works for foreign-trained Nigerian graduates",
@@ -2105,7 +2112,7 @@
     "slug": "npc-child-birth-registration",
     "title": "How NPC birth registration works for a child",
     "shortTitle": "NPC child birth registration",
-    "summary": "NPC's current age range and stated requirements for child birth registration.",
+    "summary": "NPC birth registration applies to children aged 0–17. An adult parent or guardian creates the self-service account with their own NIN; NPC says a child without a NIN can still be registered if a parent or guardian has a valid NIN.",
     "category": "Civil records",
     "agencySlug": "npc",
     "feeLabel": "Check current NPC self-service portal",
@@ -2117,29 +2124,31 @@
       "Parent's attestation number as stated by NPC"
     ],
     "steps": [
-      "Create/sign in to the NPC self-service account.",
-      "Choose the birth-registration service.",
-      "Provide the child/parent details required by NPC.",
-      "Complete the official workflow shown in the portal."
+      "Visit nationalpopulation.gov.ng, open Services and select Birth Registration. The self-service account is created by a parent or guardian aged at least 18, not by a child.",
+      "Sign in or create an account with the adult's name, email and NIN, following NPC's facial-verification and account-matching instructions.",
+      "Select Birth Registration for the child and supply the child's details and the parent/guardian identity information required by the service. NPC allows registration of a child without a NIN when the parent/guardian has a valid NIN.",
+      "Review the names, date and place of birth, relationships and required supporting information before completing any confirmation or official payment displayed in the current portal.",
+      "Keep the application reference and check the NPC dashboard for the certificate or status. If the child's record is already linked to one parent's NIN, do not create a second registration solely because the other parent cannot see it."
     ],
     "notes": [
-      "NPC states birth registration is for ages 0–17, while birth attestation is for people aged 18 and above."
+      "NPC states birth registration is for ages 0–17, while birth attestation is for people aged 18 and above.",
+      "NPC's current FAQ expressly allows a child without a NIN to be registered using a parent/guardian's valid NIN, despite the general requirements list also mentioning a child's NIN."
     ],
     "sources": [
       {
         "label": "NPC Self-Service FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/FAQs",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "NPC Vital Registration FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/faq-vitalreg",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "NPC child birth registration",
       "How NPC birth registration works for a child",
@@ -2454,7 +2463,7 @@
     "slug": "cac-certified-true-copy",
     "title": "How to request a CAC Certified True Copy",
     "shortTitle": "CAC Certified True Copy",
-    "summary": "CAC publishes Certified True Copy services among its post-registration processes.",
+    "summary": "Request a Certified True Copy (CTC) of an existing CAC certificate through the commission's post-registration route. Identify the correct entity and document, submit the required request and fee, and check for any CAC query. CAC's published company CTC target is 12 working hours after a complete submission or cleared query.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
@@ -2466,28 +2475,30 @@
       "The exact filed document or certificate for which the Certified True Copy is requested"
     ],
     "steps": [
-      "Sign in to the CAC registration portal.",
-      "Choose the applicable post-registration Certified True Copy service.",
-      "Complete the request and official payment."
+      "Sign in to the official CAC iCRP portal using the account authorised to handle the registered company or other entity.",
+      "Open the relevant post-registration services and select Certified True Copy for the required certificate or document, then confirm the registration details and exactly what is being certified.",
+      "Review the requested document, number of copies and any supporting evidence shown in the portal. Pay the fee displayed by the official CAC payment route and keep the transaction acknowledgement.",
+      "Monitor the request for a query or completed document. CAC publishes a 12-working-hour target for company certificate CTCs after complete documents or compliance with a query; other entity types and incomplete applications may differ."
     ],
     "notes": [
-      "Timelines assume a complete application and resolution of any CAC query."
+      "Timelines assume a complete application and resolution of any CAC query.",
+      "CAC's 12-working-hour target for company certificate CTCs is conditional on a complete application or resolved query, not a universal guarantee for every entity."
     ],
     "sources": [
       {
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "CAC Company Registration Portal",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "CAC Certified True Copy",
       "How to request a CAC Certified True Copy",
@@ -2806,7 +2817,7 @@
     "slug": "nysc-call-up-letter",
     "title": "How to access an NYSC call-up letter",
     "shortTitle": "NYSC call-up letter",
-    "summary": "NYSC explains that successful mobilisation produces a call-up number and subsequently a call-up letter.",
+    "summary": "After successful NYSC mobilisation, sign in to your prospective corps member dashboard to see the call-up number and, when released, the call-up letter. Candidates who subscribed to online printing can print it online; others follow their institution's collection route.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Portal printing/subscription rules apply",
@@ -2817,14 +2828,16 @@
       "Access to the candidate NYSC dashboard"
     ],
     "steps": [
-      "Complete NYSC registration and mobilisation.",
-      "Sign in to the official NYSC portal when deployment documents are released.",
-      "Download/print the call-up letter if your registration route provides online printing."
+      "Complete NYSC registration and confirm that your personal mobilisation details and any required biometric or credential checks have been accepted.",
+      "Monitor your official NYSC dashboard for the call-up number and the call-up-letter release notice. A published orientation camp timetable does not by itself mean your letter is already available.",
+      "When your call-up letter is issued, sign in and use the official print or download option if you subscribed to online call-up-letter printing. Otherwise contact your institution for the collection route NYSC specifies.",
+      "Read the assigned state, camp address, reporting date and required documents from your own letter. Follow official NYSC notices for changes rather than a copied camp list."
     ],
     "notes": [
       "NYSC says those who do not subscribe for online call-up-letter printing collect through their institutions where applicable.",
       "For NYSC 2026 Batch C Stream II, the official orientation period is 4–24 November, with camp registration 4–6 November and swearing-in on 6 November. Do not treat these camp dates as an announced date for printing call-up letters.",
-      "Check the assigned camp, reporting instructions and documents on your individual NYSC call-up letter; a viral schedule image is not proof of your posting."
+      "Check the assigned camp, reporting instructions and documents on your individual NYSC call-up letter; a viral schedule image is not proof of your posting.",
+      "The letter is released after mobilisation and not automatically on the date of any orientation timetable announcement."
     ],
     "sources": [
       {
@@ -2837,7 +2850,7 @@
         "label": "NYSC Corps Mobilization",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/corpmob.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "NYSC national headquarters — 2026 Batch C Stream II orientation notice",
@@ -2846,7 +2859,7 @@
         "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "NYSC call-up letter",
       "How to access an NYSC call-up letter",
@@ -3094,39 +3107,41 @@
     "slug": "passport-change-marital-status",
     "title": "How to change Nigerian passport data after a change in marital status",
     "shortTitle": "Passport marital-status change",
-    "summary": "NIS publishes a specific change-of-data route for marital-status-related passport updates.",
+    "summary": "To update a Nigerian passport following marriage or another marital-status change, use NIS's Change of Data route, upload the prescribed birth/age, marriage, affidavit, newspaper, origin, application-letter and existing passport data-page evidence, then attend the selected immigration office for biometrics.",
     "category": "Immigration",
     "agencySlug": "nis",
     "feeLabel": "Official application/administrative charges apply",
     "status": "verified",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
-      "Birth certificate from NPC or High Court declaration of age",
+      "Existing passport booklet and photocopy or image of its data page",
+      "NPC birth certificate or high-court declaration of age",
       "State-of-origin certificate",
-      "Application letter",
+      "Application letter explaining the marital-status change",
       "Marriage certificate",
-      "Court affidavit",
+      "Court affidavit for the supporting change of status/name",
       "Newspaper publication",
-      "Current passport data page"
+      "Payment and appointment slips generated by the official NIS portal"
     ],
     "steps": [
-      "Complete the passport application online.",
-      "Upload the documents NIS lists for marital-status change.",
-      "Submit payment and appointment slips at the selected passport office on the appointment date.",
-      "Attend in person with the current passport booklet for biometrics."
+      "Open the NIS passport portal, choose the Change of Data application for change in marital status, and complete the application using the existing passport details.",
+      "Upload the required NPC birth certificate or high-court age declaration, state-of-origin certificate, application letter, marriage certificate, court affidavit, newspaper publication and current passport data page.",
+      "Review the personal details and exact name changes requested; submit through the official NIS payment flow and obtain the appointment and payment slips.",
+      "On the booked date, attend the chosen Nigerian immigration office in person with the current passport booklet and requested originals for photograph and biometric capture. Nigerians applying abroad follow the nearest embassy, high commission or consulate route."
     ],
     "notes": [
-      "Nigerians in the diaspora are directed to the nearest Nigerian Embassy, High Commission or Consulate."
+      "Nigerians in the diaspora are directed to the nearest Nigerian Embassy, High Commission or Consulate.",
+      "This is not an ordinary expiry renewal; use the NIS Change of Data route and the NIS marital-status document list."
     ],
     "sources": [
       {
         "label": "NIS Passports",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Passport marital-status change",
       "How to change Nigerian passport data after a change in marital status",
@@ -3292,7 +3307,7 @@
     "slug": "fct-file-individual-tax-return",
     "title": "How to file an individual tax return in the FCT",
     "shortTitle": "FCT individual tax return",
-    "summary": "FCT-IRS publishes an electronic filing route through its taxpayer self-service portal.",
+    "summary": "FCT-IRS's published return-filing sequence uses a taxpayer self-service login: sign in with TIN, open Tax Returns → File Returns → File a New Return, choose assessment date and year, generate a Returns Reference Number and complete Parts A–D before submitting.",
     "category": "State services",
     "agencySlug": "fctirs",
     "feeLabel": "Filing service is provided through FCT-IRS",
@@ -3304,31 +3319,32 @@
       "Accurate information needed to complete Parts A, B, C and D of the electronic assessment/return form"
     ],
     "steps": [
-      "Open the FCT-IRS self-service portal.",
-      "Sign in or register for self-service access.",
-      "Open Tax Returns and choose File Returns.",
-      "Create a new return for the relevant assessment year.",
-      "Complete the required return sections and submit through the portal."
+      "Start from the official FCT-IRS website and follow its self-service login link; the agency's filing tutorial refers to a specific self-service address, while the site's current taxpayer portal may redirect to an updated sign-in page.",
+      "Use your Tax Identification Number (TIN) and password to sign in. If no self-service account exists, use the official registration option before trying to file a return.",
+      "Open the Menu, select Tax Returns and then File Returns. Choose File a New Return for the assessment period to be reported.",
+      "Enter the assessment date and assessment year and select Generate Returns Reference Number as shown in FCT-IRS's filing instructions.",
+      "Complete the required Assessment Page sections A, B, C and D with accurate information, review the figures and submit for approval. Retain the generated return reference and monitor the filing status."
     ],
     "notes": [
       "FCT-IRS states that electronic filing is the approved method for individual annual returns.",
-      "Use the live portal for the current filing window and any current deadline notice."
+      "Use the live portal for the current filing window and any current deadline notice.",
+      "FCT-IRS's official tutorial names a legacy-looking self-service URL while its current portal is also accessible at taxporta.fctirs.gov.ng/login; use links reached from the FCT-IRS website and never enter tax credentials on unofficial lookalike pages."
     ],
     "sources": [
       {
         "label": "FCT-IRS filing tax return guide",
         "agency": "Federal Capital Territory Internal Revenue Service",
         "url": "https://fctirs.gov.ng/howto/steps-on-filling-return/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "FCT-IRS official website",
         "agency": "Federal Capital Territory Internal Revenue Service",
         "url": "https://fctirs.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "FCT individual tax return",
       "How to file an individual tax return in the FCT",
@@ -3870,7 +3886,7 @@
     "slug": "jamb-print-result",
     "title": "How to print a JAMB result slip",
     "shortTitle": "JAMB result slip",
-    "summary": "JAMB's current service schedule lists the result-slip service and its fee, while e-Facility provides the candidate transaction route.",
+    "summary": "Print a JAMB result slip from the official e-Facility account. JAMB's published payment schedule lists ₦1,000 for the result slip plus a ₦100 CBT service charge; confirm the transaction shown for your candidate before paying.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "₦1,000 + ₦100 CBT service charge",
@@ -3881,29 +3897,30 @@
       "Payment through the official JAMB transaction flow"
     ],
     "steps": [
-      "Sign in to the official JAMB e-Facility.",
-      "Choose the available result-slip service for your candidate profile.",
-      "Complete the official payment/transaction steps.",
-      "Print or download the result slip made available in the portal."
+      "Go to efacility.jamb.gov.ng/account, select the official sign-in control and enter the candidate's registered email address and password.",
+      "From the candidate's dashboard choose the available result or examination service for printing a result slip; confirm the exam year and candidate record shown by JAMB.",
+      "Review the displayed result-slip price before making the official portal payment. JAMB's payment schedule lists ₦1,000 plus a ₦100 CBT service charge, though the live transaction details control.",
+      "After the transaction succeeds, use the portal's print or download control to obtain the result slip. Retain the payment receipt and seek JAMB support if the service is unavailable or payment is not reflected."
     ],
     "notes": [
-      "JAMB's current payment schedule lists the result slip at ₦1,000 with a ₦100 CBT service charge."
+      "JAMB's current payment schedule lists the result slip at ₦1,000 with a ₦100 CBT service charge.",
+      "A result-slip payment does not mean a previously withheld examination result has been released; check JAMB's official candidate record."
     ],
     "sources": [
       {
         "label": "JAMB payment and services schedule",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/payment-Services",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "JAMB e-Facility",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://efacility.jamb.gov.ng/account/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "JAMB result slip",
       "How to print a JAMB result slip",
@@ -4127,7 +4144,7 @@
     "slug": "npc-modify-birth-record",
     "title": "How to modify an NPC birth or attestation record",
     "shortTitle": "NPC record modification",
-    "summary": "NPC's current self-service FAQ provides a dashboard Modify Record option for existing birth/attestation records.",
+    "summary": "To change an existing NPC birth or attestation record, sign in to your NPC self-service dashboard, select the record's plus (+) control and choose the third action labelled Modify Record. Review the changes and pay only the fee shown by the official portal.",
     "category": "Civil records",
     "agencySlug": "npc",
     "feeLabel": "Current modification charge is shown in the NPC self-service flow",
@@ -4139,23 +4156,24 @@
       "Documentary evidence supporting the exact birth/attestation field being changed; the evidence depends on whether the correction concerns name, date, parent details or another recorded field"
     ],
     "steps": [
-      "Sign in to the NPC self-service dashboard.",
-      "Open the record controls using the plus (+) button.",
-      "Choose the third option labelled Modify Record.",
-      "Complete the requested correction and official payment/verification steps shown by NPC."
+      "Log in to the NPC self-service account linked to the applicable person and locate the existing birth or attestation record in the dashboard.",
+      "Use the plus (+) button for the correct record and choose the third action labelled Modify Record; avoid the neighbouring download or certificate-reprint actions.",
+      "Enter the requested correction and upload or provide only the supporting identity or civil-registration evidence asked for in the NPC modification flow.",
+      "Review the exact old and new details and the official fee displayed, then submit and keep the acknowledgement. Check the portal for approval or further requests before downloading the revised record."
     ],
     "notes": [
-      "Check all information carefully before submitting a modification request."
+      "Check all information carefully before submitting a modification request.",
+      "NPC's own FAQ identifies Modify Record as the third action under the dashboard's plus (+) menu."
     ],
     "sources": [
       {
         "label": "NPC Self-Service FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/FAQs",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "NPC record modification",
       "How to modify an NPC birth or attestation record",
@@ -6910,7 +6928,7 @@
     "slug": "verify-vehicle-number-plate",
     "title": "How to verify a Nigerian vehicle number plate",
     "shortTitle": "Verify number plate",
-    "summary": "Use FRSC's NVIS plate verification service to check a plate record before relying on a printed document or third-party claim.",
+    "summary": "Check a vehicle's registration number using the FRSC NVIS Verify Number Plate page. Enter the exact number plate, submit it and compare the returned information with the vehicle documentation; a matching result does not independently prove ownership or insurance.",
     "category": "Driving",
     "agencySlug": "frsc",
     "feeLabel": "No verification fee stated",
@@ -6923,21 +6941,22 @@
       "The vehicle make/model or ownership document you will compare with the NVIS result"
     ],
     "steps": [
-      "Open the FRSC NVIS Verify Plate Number page.",
-      "Enter the plate number in the format requested by the portal.",
-      "Submit the lookup and compare the returned record with the vehicle and documents presented to you.",
-      "If the result is missing or materially inconsistent, do not assume a paper document proves the plate is genuine; confirm through FRSC or the relevant registration authority."
+      "Open the official FRSC National Vehicle Identification System (NVIS) Verify Number Plate form at nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo.",
+      "Type the plate number exactly as it appears on the vehicle and use the page's Submit control to request the record lookup.",
+      "Check the verification response and compare the returned vehicle details with the physical vehicle and its registration documents, rather than relying only on a printed certificate.",
+      "If no match is returned or details disagree, ask FRSC or the responsible vehicle licensing authority to resolve it before buying or transferring the vehicle. Verify ownership and insurance separately."
     ],
     "notes": [
       "Plate verification is useful when buying a used vehicle or checking a registration record.",
-      "A valid-looking plate does not replace separate checks of ownership, insurance and customs status where those checks are relevant."
+      "A valid-looking plate does not replace separate checks of ownership, insurance and customs status where those checks are relevant.",
+      "The official NVIS form asks for a Number Plate and provides a Submit action; its validation is one check, not a title or insurance guarantee."
     ],
     "sources": [
       {
         "label": "FRSC NVIS Verify Plate Number",
         "agency": "Federal Road Safety Corps",
         "url": "https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -6945,7 +6964,7 @@
       "vehicle-proof-of-ownership-verification",
       "vehicle-insurance-validation-ussd"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "verify number plate Nigeria",
       "FRSC plate verification",
@@ -7496,7 +7515,7 @@
     "slug": "nafdac-product-verification",
     "title": "How to verify a NAFDAC product registration",
     "shortTitle": "Verify NAFDAC product",
-    "summary": "How to check a NAFDAC registration claim instead of relying only on the number printed on a product label.",
+    "summary": "Use the NAFDAC iRIMS Stakeholder Portal's Verify Product control to check a product's registration number against official records. Compare the registered product and responsible company with the packaging; do not treat a printed number alone as proof of authenticity.",
     "category": "Product regulation",
     "agencySlug": "nafdac",
     "feeLabel": "Official verification service",
@@ -7509,30 +7528,30 @@
       "The product name, brand/manufacturer or pack information needed to confirm that the returned registration belongs to the same product"
     ],
     "steps": [
-      "Open the official NAFDAC services portal.",
-      "Choose the product verification/search service.",
-      "Enter the NAFDAC registration number and the product-identifying information shown by the official verification search.",
-      "Compare the returned product, company and registration information with the item you are checking.",
-      "If the number does not resolve correctly or appears to belong to a different product, treat the claim as unresolved and contact/report it through NAFDAC's official channels."
+      "Open the official NAFDAC iRIMS Stakeholder Portal at services.nafdac.gov.ng and choose Verify Product or the Verify NAFDAC Documents section.",
+      "Enter the complete product registration number in the official verification field as shown on the packaging or registration document, then choose Verify Now.",
+      "Read the result and compare the name, product category, manufacturer or registered holder and status with the item you intend to use or sell.",
+      "If the number is missing, unrecognised or attached to a different product, do not infer that the product is approved. Report or clarify it through NAFDAC's official support contacts."
     ],
     "notes": [
       "A NAFDAC number printed on packaging can be copied or misused, so verify the record rather than relying on appearance alone.",
       "Check the product name and holder/manufacturer information, not just whether a number exists.",
-      "For a business preparing to sell a regulated product, verification does not replace the need to obtain its own required approval."
+      "For a business preparing to sell a regulated product, verification does not replace the need to obtain its own required approval.",
+      "The NAFDAC iRIMS page currently includes a dedicated Verify Product control and a registration-number verification field; it also hosts other regulatory applications, so choose verification rather than a new-registration process."
     ],
     "sources": [
       {
         "label": "NAFDAC Services Portal",
         "agency": "National Agency for Food and Drug Administration and Control",
         "url": "https://services.nafdac.gov.ng/",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
       "nafdac-product-registration",
       "nafdac-product-renewal"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "verify NAFDAC number",
       "check NAFDAC product",
