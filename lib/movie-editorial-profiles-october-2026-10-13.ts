@@ -4,7 +4,13 @@ import type { MovieEditorialProfile } from "@/lib/movie-editorial-profiles";
 export const movieEditorialProfilesOctober20261013: Record<string, MovieEditorialProfile> = {
   "matters-of-the-heart-2026": {
     "releaseDate": "2026-10-11",
-    "roles": [],
+    "roles": [
+      { "actor": "Timini Egbuson", "character": "Hakeem" },
+      { "actor": "Sarian Martin", "character": "Carissa / Charissa (catalogues differ)" },
+      { "actor": "Audrey Harrison", "character": "Sophia" },
+      { "actor": "Amanda Neo", "character": "Joy" },
+      { "actor": "Chioma Ejimofor", "character": "Carissa's / Charissa's mother" }
+    ],
     "crew": [
       {
         "role": "Director",
@@ -23,8 +29,8 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
       {
         "heading": "A story about incompatible expectations",
         "paragraphs": [
-          "Matters of the Heart approaches romance through the uncomfortable possibility that two people can care deeply for each other and still disagree about what their shared future should look like. The release description foregrounds trust, sacrifice and competing expectations rather than presenting a straightforward courtship story. This makes the central question about compatibility, not simply whether the leads are attracted to each other.",
-          "Sarian Martin and Timini Egbuson lead the film, with Chioma Ejimofor, Segun G. Respect and Audrey Harrison also credited. Their inclusion in the cast is verifiable; the specific character assignments of every supporting performer are not sufficiently established to present a definitive role table. Avoid confusing this October release with other Nigerian dramas bearing similar titles."
+          "Matters of the Heart follows childhood sweethearts separated for years who encounter each other again when the man has already committed to another woman. Timini Egbuson plays Hakeem; Sarian Martin plays his childhood love, named Carissa in one film catalogue and Charissa in another. Instead of an uncomplicated reunion, the premise asks how they can deal with unfinished feelings without ignoring Hakeem's existing relationship.",
+          "The two film catalogues agree on Hakeem and on Audrey Harrison as Sophia and Amanda Neo as Joy. Nollywood.com also identifies Chioma Ejimofor as the heroine's mother, while FilmFlux independently lists these performers in the cast. The principal character's spelling remains inconsistent across catalogues, so the cast table preserves both versions rather than treating one as confirmed. Other roles remain unassigned unless supported by a named source."
         ]
       },
       {
@@ -37,8 +43,8 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
     ],
     "questions": [
       {
-        "question": "Who is in the October 2026 Matters of the Heart movie?",
-        "answer": "Sarian Martin and Timini Egbuson lead the film; Chioma Ejimofor, Segun G. Respect and Audrey Harrison are also credited."
+        "question": "Who plays Hakeem, Sophia and Joy in Matters of the Heart?",
+        "answer": "Timini Egbuson plays Hakeem, Audrey Harrison plays Sophia and Amanda Neo plays Joy. Sarian Martin is the heroine, whose name appears as Carissa or Charissa in different film catalogues; Chioma Ejimofor is credited as her mother."
       },
       {
         "question": "When and where did Matters of the Heart premiere?",
