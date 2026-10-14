@@ -3520,9 +3520,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       ]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting a Senior Coordinator, Talent Management across Abuja, Kano and Lagos.",
+    status: "closed",
+    statusLabel: "Original application listing unavailable — check employer",
+    summary: "EHA Clinics previously advertised the Senior Coordinator, Talent Management role. Its original application link now returns HTTP 404, and the vacancy was not listed on the employer's current jobs board on 15 October 2026. A live application cannot be verified.",
     location: "Abuja / Kano / Lagos",
     employmentType: "Human resources / talent management",
     audiences: ["HR professionals", "Talent-management professionals", "Experienced hires"],
@@ -3530,15 +3530,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Bachelor's degree in Human Resources, Business Administration or a related field.", "Two to four years of HR coordination experience with exposure to talent, performance management or learning and development."],
     requirements: ["NYSC completion.", "Talent-management knowledge.", "Basic computer skills and role-specific eligibility checks."],
     documents: ["CV/resume", "Education and experience details requested by EHA Clinics"],
-    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the multi-city work arrangement and requirements.", "Complete the employer's eligibility check.", "Continue to the official application."],
-    officialUrl: "https://erp.eha.ng/jobs/senior-coordinator-talent-management-941",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    applicationSteps: ["The original vacancy application link is unavailable; do not assume the role is open.", "Check the current official EHA Clinics vacancies.", "Apply only if the employer publishes an active role that matches your qualifications."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Check current EHA Clinics vacancies",
+    verifiedAt: "2026-10-15",
     feeNote: "Apply through EHA Clinics' official recruitment system.",
-    sourceNotes: ["EHA Clinics listed this vacancy as posted on 24 September 2026.", "The official role page identifies Abuja, Kano and Lagos as locations."],
+    sourceNotes: ["The original vacancy URL returned HTTP 404 on 15 October 2026; the role was absent from the current official employer jobs list. The exact closure date and reason are unconfirmed."],
     sources: [
-      { label: "EHA Clinics — Senior Coordinator, Talent Management", url: "https://erp.eha.ng/jobs/senior-coordinator-talent-management-941", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics official jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-15" }
     ]
   },
   {
@@ -3712,9 +3711,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Kano", region: "Kano State", country: "NG" }]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
-    summary: "EHA Clinics is recruiting an Assistant Manager, Laboratory and Diagnostics in Kano.",
+    status: "closed",
+    statusLabel: "Original application listing unavailable — check employer",
+    summary: "EHA Clinics previously advertised the Assistant Manager, Laboratory and Diagnostics role. Its original application link now returns HTTP 404, and the vacancy was not listed on the employer's current jobs board on 15 October 2026. A live application cannot be verified.",
     location: "Kano, Kano State",
     employmentType: "Laboratory management role",
     audiences: ["Laboratory managers", "Medical laboratory scientists", "Healthcare managers"],
@@ -3722,15 +3721,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Applicants should meet the laboratory-management and professional requirements in EHA Clinics' official vacancy."],
     requirements: ["Valid professional licence.", "Relevant laboratory-management capability.", "Complete EHA Clinics' eligibility check."],
     documents: ["CV/resume", "Professional licence and qualification details requested by EHA Clinics"],
-    applicationSteps: ["Open the official EHA Clinics vacancy.", "Review the laboratory-management requirements.", "Complete the eligibility questions.", "Continue to the official application."],
-    officialUrl: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    applicationSteps: ["The original vacancy application link is unavailable; do not assume the role is open.", "Check the current official EHA Clinics vacancies.", "Apply only if the employer publishes an active role that matches your qualifications."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Check current EHA Clinics vacancies",
+    verifiedAt: "2026-10-15",
     feeNote: "Use EHA Clinics' official jobs portal.",
-    sourceNotes: ["EHA Clinics listed this Kano laboratory-management vacancy as posted on 29 September 2026.", "The official detail page includes an active Apply Now eligibility flow."],
+    sourceNotes: ["The original vacancy URL returned HTTP 404 on 15 October 2026; the role was absent from the current official employer jobs list. The exact closure date and reason are unconfirmed."],
     sources: [
-      { label: "EHA Clinics — Assistant Manager, Laboratory and Diagnostics", url: "https://erp.eha.ng/jobs/assistant-manager-laboratory-and-diagnotics-180", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics official jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-15" }
     ]
   },
   ...jobScaleWave
