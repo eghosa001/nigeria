@@ -53,7 +53,7 @@ function kindFor(item: string): RequirementKind {
   return "Other requirement";
 }
 
-function purposeFor(item: string) {
+function purposeFor(item: string, service: Service) {
   if (/\bNIN\b/i.test(item)) return "Used to match the applicant to the National Identity Database or to verify NIN-linked biodata where this service requires identity matching.";
   if (/\bBVN\b/i.test(item)) return "Used to identify the banking identity record connected to this request.";
   if (/photograph|passport[- ]?(?:size[d]?[- ]?)?photos?|photos?\b|pictures?/i.test(item)) return "A photograph is listed for this service. Check the responsible agency’s instructions for the number, size, background and whether to submit printed copies or digital files.";
@@ -71,7 +71,7 @@ function purposeFor(item: string) {
   if (/matric/i.test(item)) return "Used to match the graduate or student to the institution record submitted for this process.";
   if (/driving school|driving-school/i.test(item)) return "Used to prove completion of the prerequisite driving-school stage for the fresh licence process.";
   if (/registration number|entity number|company number|business number/i.test(item)) return "Used to locate the exact registered entity or application record.";
-  if (/\b(?:tax(?:payer)?\s*(?:id|identification number)|tin|asin|payer\s*id)\b/i.test(item)) return "Used to locate the taxpayer record connected to the transaction.";
+  if (/\b(?:tax(?:payer)?\s*(?:id|identification number)|tin|asin|payer\s*id)\b/i.test(item) && /^(?:nrs|fctirs|eirs|airs|lagos-revenue|.*(?:tax|revenue|irs))$/i.test(service.agencySlug)) return "Used to locate the taxpayer record connected to the transaction.";
   if (/receipt|payment reference|transaction reference|rrr/i.test(item)) return "Used to prove or trace the official payment if the transaction needs confirmation or support.";
   if (/certificate/i.test(item)) return "Used as documentary evidence for the qualification, status or civil fact relevant to this service.";
   if (/letter/i.test(item)) return "Used as formal written evidence or request where the responsible agency lists a letter among the requirements.";
@@ -101,7 +101,7 @@ export function getRequirementDetails(service: Service): RequirementDetail[] {
     return {
       item,
       kind: kindFor(item),
-      why: purposeFor(item),
+      why: purposeFor(item, service),
       whenUsed,
       format: formatFor(item, match?.step, match ? match.index + 1 : undefined),
     };
