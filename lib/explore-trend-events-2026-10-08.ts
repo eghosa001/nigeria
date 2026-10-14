@@ -1,8 +1,10 @@
 import type { ExploreGuide } from "@/lib/explore";
+import { moonshotTechCabalGuide20261014 } from "@/lib/explore-moonshot-techcabal-2026-10-14";
 
 // Event details are tied to the organiser's official public notice.
 // Venue address and door-opening time were NOT published at review time.
 export const verifiedTrendEvents: ExploreGuide[] = [
+  moonshotTechCabalGuide20261014,
   {
     slug: "hallelujah-festival-lagos-october-2026",
     title: "Hallelujah Festival Lagos 2026: Date, Free Entry & Travel Planning",
