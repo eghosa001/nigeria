@@ -65,7 +65,7 @@
       "first-nigerian-passport",
       "passport-change-of-data"
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Passport renewal",
       "How to renew a Nigerian passport",
@@ -422,7 +422,7 @@
       "new-drivers-licence",
       "replace-lost-drivers-licence"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Driver's licence renewal",
       "How to renew a Nigerian driver's licence",
@@ -887,7 +887,7 @@
       "jamb-2026-utme-registration",
       "jamb-retrieve-profile-code"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "JAMB profile code",
       "How to generate a JAMB profile code",
@@ -1019,9 +1019,15 @@
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/FAQ",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "JAMB CBT Centres Handbook — retrieving purchased UTME and DE e-PINs",
+        "agency": "Joint Admissions and Matriculation Board",
+        "url": "https://jamb.gov.ng/PDFs/2024/Centres_Handbook.pdf",
+        "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Retrieve lost JAMB e-PIN",
       "How to retrieve a lost JAMB UTME e-PIN",
@@ -1238,7 +1244,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Collect WAEC certificate",
       "How to collect a WAEC certificate",
@@ -1502,7 +1508,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Check NECO result",
       "How to check a NECO result online",
@@ -2030,7 +2036,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Lost NYSC exemption certificate",
       "What to do if an NYSC exemption certificate is lost",
