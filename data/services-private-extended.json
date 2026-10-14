@@ -11775,56 +11775,84 @@
   },
   {
     "slug": "western-union-track-transfer-nigeria",
-    "title": "How to track a Western Union transfer in Nigeria",
-    "shortTitle": "Track Western Union",
-    "summary": "Western Union's transfer-status route using the MTCN to check whether a Nigeria-bound remittance is still processing, on the way or available for pickup.",
+    "title": "Western Union Tracking in Nigeria: Check a 10-Digit MTCN and Payment Status",
+    "shortTitle": "Track Western Union MTCN",
+    "summary": "Western Union Nigeria offers free transfer-status checking with the sender's 10-digit Money Transfer Control Number (MTCN). Start from the official Western Union Nigeria Receive Money page and choose Track Transfer. The status helps distinguish a remittance still being processed from money available for cash pickup; it does not guarantee that the receiver has passed identification checks or that a bank deposit has arrived.",
     "category": "Remittances",
     "agencySlug": "western-union",
-    "feeLabel": "No transfer-tracking fee stated",
-    "feeNote": "Western Union provides transfer-status checking as part of the remittance service without a separate public tracking fee.",
-    "timeline": "Western Union says the tracking result shows whether the transfer is on the way or already available; actual payout time depends on the transfer method and any restrictions.",
+    "feeLabel": "Transfer tracking: no separate fee",
+    "feeNote": "Western Union's Nigeria receive/track page does not advertise a separate MTCN tracking charge. Sending fees, the exchange rate or an approved payout method may affect the transaction, but never pay a stranger an extra 'release', 'clearance' or 'MTCN activation' fee to view a tracking status.",
+    "timeline": "Tracking can show a transfer on the way or available for pickup; a status lookup is not a promise that cash is ready at every agent, that the bank has credited a deposit, or that a delayed compliance/identity review is complete. The exact payout time depends on the funding method, destination, receiver details, agent hours and applicable checks.",
     "status": "verified",
-    "officialPortal": "https://www.westernunion.com/ng/en/home.html",
+    "officialPortal": "https://www.westernunion.com/ng/en/receive-money.html",
     "requirements": [
-      "The Money Transfer Control Number (MTCN) for the Western Union transaction",
-      "The transfer information needed to identify the correct transaction when the tracking interface requests additional details"
+      "The 10-digit MTCN printed on the sender's official Western Union receipt or shown in the sender's verified confirmation message.",
+      "The sender's full name as given on the transfer; the web tracking screen may ask whether you are the sender or the receiver and request matching details.",
+      "A secure browser connected to the official westernunion.com domain; do not type the MTCN in a social-media tracking bot or privately run website claiming to be Western Union.",
+      "For cash pickup after the transfer becomes available, the intended receiver's own valid government-issued identity document, the sender's name and the approximate transfer amount.",
+      "For bank-account payout, a valid local-currency bank account entered accurately by the sender and the receiver's correct contact information; the transfer destination cannot be safely corrected through random MTCN links.",
+      "If the transaction is on hold, cancelled or unrecognised, use the official transfer receipt and sender/receiver details for customer-care investigation rather than attempting a duplicate payout."
     ],
     "steps": [
-      "Open Western Union Nigeria's official site and choose Track Transfer.",
-      "Enter the MTCN supplied on the sender's transaction receipt or confirmation.",
-      "Complete any additional sender/receiver information requested by the tracking interface.",
-      "Review the returned status to see whether the transfer is still moving or is available for the receiver.",
-      "If the status remains unresolved, use Western Union Nigeria's official customer-care route with the MTCN."
+      "Ask the sender to share only the real Western Union transaction receipt's 10-digit Money Transfer Control Number (MTCN) and the sender name. Do not ask for the sender's banking password, OTP or unrelated payment card details.",
+      "Open https://www.westernunion.com/ng/en/receive-money.html and select the Track Transfer link shown below the Cash Pickup and Bank Account instructions. This takes you to Western Union's own tracking interface; check that the resulting browser address remains under westernunion.com.",
+      "On the tracking form select whether you are the sender or receiver as applicable, and enter all ten MTCN digits exactly. The official tracking interface may also ask for the sender's first name or other matching details; supply only what it requests.",
+      "Read the result before making travel plans. If the status says on the way or still processing, the receiver should wait for the pickup-ready or deposit-complete result. If it says available for pickup, the named receiver can prepare to visit an authorised Western Union cash agent subject to identification and opening hours.",
+      "For cash pickup in Nigeria, Western Union's official Receive Money instructions specify the sender's name, the expected transfer amount, the MTCN and a valid government-issued ID. Bring the original identity document accepted by the agent; the printed receipt by itself is not sufficient if identification cannot be confirmed.",
+      "For a bank-account transfer, ask the sender to confirm that the intended account is a local-currency payout account and that the account number and other required details were entered accurately. Western Union's terms caution that the account number determines where funds are credited. Do not assume a pickup-ready status means a bank transfer can be collected as cash.",
+      "If the tracker cannot find the MTCN, check for typing mistakes or confusion between a sender's internal bank reference and Western Union's 10-digit control number. Verify that the sender has actually completed the remittance and that you are using the correct Western Union transfer, then retry the official site.",
+      "If the status remains on hold or pending, contact Western Union through the Nigeria Receive Money page, which lists the toll-free 0700-34778-2668228 and the email moneytransferenquiries@firstbanknigeria.com. Have the MTCN and transaction information ready, but do not email PINs, OTPs or a photograph of your payment card.",
+      "If an agent says the transfer was already paid out or refuses payment over an identity mismatch, request a formal explanation and ask the sender to check the same transfer through Western Union's official support. Do not initiate another transfer or send a paid 'unlock fee' based only on a WhatsApp claim.",
+      "If you have a bank credit notification, compare the credited amount and reference with the actual receiving account statement. The tracker can help identify status, but your bank's cleared balance and provider confirmation determine whether a bank payout is complete."
     ],
     "notes": [
-      "Western Union's Nigeria receive page specifically directs customers to use the MTCN for transfer tracking.",
-      "The MTCN should be shared only with the intended receiver and legitimate support/agent channels.",
-      "Tracking status is not a request for an extra release fee."
+      "MTCN stands for Money Transfer Control Number and is the key transfer reference. Western Union's global tracking page describes it as 10 digits. A random 10-digit number is not proof that a remittance was sent; use the provider's live status and sender's confirmation.",
+      "Western Union Nigeria's official Receive Money page links to its own tracking screen. Typing the westernunion.com Nigeria Receive Money URL first is safer than using an unverified sponsored result or a link forwarded by someone demanding a release fee.",
+      "The official Nigeria page says the tracker can tell whether funds are on their way or available for pickup. 'Available for pickup' means the cash collection route may proceed, subject to the named receiver's identity checks and an operating agent location; it does not authorise a different receiver to collect it.",
+      "A bank payout is not the same as a cash pickup. Western Union Nigeria says bank funds are paid into a local-currency account number provided by the sender. An incorrectly typed account number can cause significant difficulties and should be taken up through the sender/provider rather than an unknown agent.",
+      "Western Union Nigeria's public receiving instructions list the MTCN, sender name, expected amount and valid government-issued ID for cash pickup. It does not promise that a screenshot alone can replace government ID.",
+      "Older references to more than 4,500 locations on the Nigeria page are explicitly based on network data from June 2019. Do not present that figure as the current verified number of open agents in October 2026.",
+      "The official site lists a Nigeria customer-care phone number 0700-34778-2668228 and moneytransferenquiries@firstbanknigeria.com. Because partner support arrangements can change, read the current Nigeria Receive Money page before contacting or disclosing personal transaction details.",
+      "If an individual asks for a security or customs fee to release a transfer, do not send money to an unrelated account. Western Union's own pages warn consumers about scams and the tracking feature does not require a separate fee.",
+      "Some international Western Union tracking interfaces allow a sender to log in and view transactions, or identify a transfer with additional verification. The Nigeria guide does not promise that an anonymous receiver can view every transaction without the MTCN.",
+      "Never share the MTCN publicly on X, TikTok, Facebook, Instagram or a comment thread. Supply it only to the intended receiver and legitimate Western Union or agent staff handling that remittance.",
+      "Track status, cash release and settlement at a bank are three distinct checkpoints. A tracking screen cannot replace the identity check, sender corrections or an account statement needed for the selected payment channel."
     ],
     "sources": [
       {
-        "label": "Western Union Nigeria Home",
-        "agency": "Western Union",
-        "url": "https://www.westernunion.com/ng/en/home.html",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Western Union Nigeria — Receive Money",
+        "label": "Western Union Nigeria — Receive Money and official Track Transfer link",
         "agency": "Western Union",
         "url": "https://www.westernunion.com/ng/en/receive-money.html",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Western Union Nigeria — homepage and fraud-avoidance information",
+        "agency": "Western Union",
+        "url": "https://www.westernunion.com/ng/en/home.html",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Western Union Nigeria — published remittance terms and bank-account routing rules",
+        "agency": "Western Union",
+        "url": "https://www.westernunion.com/ng/en/legal/terms-conditions.html",
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
       "western-union-receive-money-nigeria",
       "moneygram-track-transfer-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "track Western Union Nigeria",
       "Western Union MTCN tracking",
       "check Western Union transfer Nigeria",
-      "Western Union transfer status Nigeria"
+      "Western Union transfer status Nigeria",
+      "Western Union Nigeria MTCN check",
+      "Western Union transfer 10 digit tracking",
+      "Western Union available for pickup Nigeria",
+      "Western Union bank payout status",
+      "Western Union transfer pending on hold"
     ]
   },
   {
