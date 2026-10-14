@@ -289,7 +289,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <section id="official-sources">
               <span className="section-number" aria-hidden="true">05</span>
               <h2>Official {agency?.shortName ?? service.agencySlug.toUpperCase()} sources for {service.shortTitle}</h2>
-              <p className="source-intro">These government or agency pages were used to verify {service.shortTitle}. This guide was last reviewed on {service.lastVerified}; the official source takes priority if a live detail changes.</p>
+              <p className="source-intro">These cited sources support the details about {service.shortTitle}. Last reviewed on {service.lastVerified}; check the responsible organisation's latest information before acting because prices, deadlines and processes may change.</p>
               <div className="source-list">
                 {service.sources.map((source) => (
                   <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
