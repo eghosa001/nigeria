@@ -161,6 +161,8 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 alt={movie.title + " official YouTube thumbnail"}
                 width={480}
                 height={360}
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
                 referrerPolicy="no-referrer"
               />
