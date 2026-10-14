@@ -1386,7 +1386,7 @@
     ],
     "steps": [
       "Check whether the phone supports eSIM. Dial *#06# in the phone app: a supported device should display an EID in addition to identifiers such as IMEI. Airtel explicitly says EID and IMEI are different. A phone model name alone is not enough: region variants can differ.",
-      "Find a current Airtel Service Centre using the service-centre locator linked from https://www.airtel.com.ng/ng/personal/services/sim-services/esim. Airtel says the physical SIM to eSIM upgrade is completed through the usual SIM-swap/identity-verification process with the agent.",
+      "On https://www.airtel.com.ng/ng/personal/services/sim-services/esim, select the Airtel Centre link shown immediately under 'How to Activate an eSIM'. Check the address and service availability of the centre you plan to visit. Bring your already-registered Airtel line and identity details, and tell the service-centre representative that you want the number moved from physical SIM to eSIM using an authorised SIM swap.",
       "If you already have an Airtel line, ask Airtel to upgrade that number; if you are a new customer, first buy and register an Airtel physical SIM, then request an eSIM upgrade. Do not pay a social-media seller for a remotely generated QR code.",
       "At the service centre, complete line-ownership checks. The Airtel agent associates the SIM serial and PUK details on a new QR code with your existing or newly registered mobile number. Keep a secure record of the service-centre transaction.",
       "Connect the phone to Wi-Fi before trying to download the eSIM profile. Airtel's FAQ says a wireless data connection is required for the profile; avoid relying only on mobile data from a physical SIM that may already have been replaced.",
