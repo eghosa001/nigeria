@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function InternshipJobsPage() {
   const items = jobOpportunities.filter((item) =>
-    [...item.audiences, item.employmentType, ...item.sourceNotes]
+    [item.title, item.employmentType, ...item.audiences, ...item.fields]
       .join(" ")
       .toLowerCase()
       .match(/intern|siwes|student|industrial training|pre-nysc/)

@@ -13,8 +13,7 @@ export function ServiceRequirements({ service }: { service: Service }) {
       <span className="section-number" aria-hidden="true">01</span>
       <h2>Requirements for {service.shortTitle}</h2>
       <p className="guide-section-intro">
-        This is the complete pre-start checklist for {service.shortTitle}. Each item below explains what it is for,
-        where it enters the process and whether the official source actually specifies an original, copy or upload.
+        Prepare these items before starting. Only confirmed purposes, relevant process stages and document formats are explained below.
       </p>
 
       <div className="requirement-summary" aria-label="Requirement categories">
@@ -33,20 +32,13 @@ export function ServiceRequirements({ service }: { service: Service }) {
                 <h3>{requirement.item}</h3>
               </div>
             </div>
-            <dl>
-              <div>
-                <dt>Why you need it</dt>
-                <dd>{requirement.why}</dd>
-              </div>
-              <div>
-                <dt>Where it is used</dt>
-                <dd>{requirement.whenUsed}</dd>
-              </div>
-              <div>
-                <dt>Original, copy or upload?</dt>
-                <dd>{requirement.format}</dd>
-              </div>
-            </dl>
+            {requirement.why || requirement.whenUsed || requirement.format ? (
+              <dl>
+                {requirement.why ? <div><dt>Why you need it</dt><dd>{requirement.why}</dd></div> : null}
+                {requirement.whenUsed ? <div><dt>Where it is used</dt><dd>{requirement.whenUsed}</dd></div> : null}
+                {requirement.format ? <div><dt>Original, copy or upload?</dt><dd>{requirement.format}</dd></div> : null}
+              </dl>
+            ) : null}
           </article>
         ))}
       </div>

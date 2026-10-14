@@ -312,7 +312,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
     url: pageUrl,
     genre: title.genres,
     inLanguage: title.languages,
-    actor: title.cast.map((name) => ({ "@type": "Person", name })),
+    actor: title.cast.length ? title.cast.map((name) => ({ "@type": "Person", name })) : undefined,
+    about: title.subjects?.map((name) => ({ "@type": "Person", name })),
     director: title.directors?.map((name) => ({ "@type": "Person", name })),
     author: editorial?.crew
       .filter((credit) => /writer|screenplay/i.test(credit.role))
@@ -366,7 +367,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             </div>
 
             <div className="movie-detail-copy">
-              <span className="eyebrow">{title.year} Nigerian movie</span>
+              <span className="eyebrow">{title.year} Nigerian {title.genres.includes("Documentary") ? "documentary" : "movie"}</span>
               <h1>{title.title}</h1>
               <div className="movie-detail-factline">
                 <span>Nigeria</span>
@@ -385,7 +386,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                   </Link> instead.
                 </p>
               ) : null}
-              <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p>
+              {featuredCast.length ? <p className="movie-hero-cast"><strong>Featuring:</strong> {featuredCast.join(" · ")}</p> : null}
+              {title.subjects?.length ? <p className="movie-hero-cast"><strong>Historical subjects:</strong> {title.subjects.join(" · ")}</p> : null}
               {title.slug === "oversabi-aunty" ? (
                 <p className="movie-long-summary">
                   <strong>Where to watch:</strong> Kava has an official film page with a subscription option. Netflix also lists the film, but the availability notice on that listing does not confirm access in Nigeria. The FilmOne link is only a trailer. <a href="#watch">See verified viewing options ↓</a>
@@ -417,15 +419,15 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Quick facts about " + title.title}
-            summary={title.title + " is a " + title.year + " Nigerian movie" + (featuredCast.length ? " starring " + featuredCast.slice(0, 3).join(", ") : "") + "." + (platforms.length ? " Official viewing link" + (platforms.length > 1 ? "s" : "") + ": " + platforms.join(" / ") + "; check access and regional availability before subscribing." : "")}
+            summary={title.title + " is a " + title.year + (title.genres.includes("Documentary") ? " Nigerian documentary" : " Nigerian movie") + (title.subjects?.length ? " about " + title.subjects.slice(0, 2).join(" and ") : featuredCast.length ? " starring " + featuredCast.slice(0, 3).join(", ") : "") + "." + (platforms.length ? " Official viewing sources: " + platforms.join(" / ") + "; check current access with the provider." : "")}
             facts={[
               { label: "Country / year", value: "Nigeria · " + title.year },
               { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
-              { label: "Featured cast", value: featuredCast.slice(0, 3).join(", ") || "See the full cast below" },
+              { label: title.subjects?.length ? "Historical subjects" : "Featured cast", value: title.subjects?.slice(0, 3).join(", ") || featuredCast.slice(0, 3).join(", ") || "Credited cast not yet verified" },
               { label: "Availability checked", value: lastChecked || "See current source links" },
             ]}
             links={[
-              { href: "#cast", label: "See cast" },
+              { href: "#cast", label: title.subjects?.length ? "People and crew" : "See cast" },
               ...(editorial ? [{ href: "#movie-questions", label: "Characters & story" }] : []),
               { href: "#watch", label: "Where to watch" },
               ...(watchHereVideoId ? [{ href: "#watch-here", label: "Watch here", primary: true }] : []),
@@ -462,7 +464,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
               <div className="movie-fact-grid">
                 <article><span>Country</span><strong>Nigeria</strong></article>
                 <article><span>Release year</span><strong>{title.year}</strong></article>
-                <article><span>Format</span><strong>Feature film</strong></article>
+                <article><span>Format</span><strong>{title.genres.includes("Documentary") ? "Documentary film" : "Feature film"}</strong></article>
                 <article><span>Languages</span><strong>{title.languages.join(", ")}</strong></article>
                 <article><span>Genres</span><strong>{title.genres.join(", ")}</strong></article>
                 <article><span>Official platforms</span><strong>{platforms.length ? platforms.join(", ") : "No current official viewing platform verified"}</strong></article>
@@ -471,8 +473,8 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             </section>
 
             <section id="cast">
-              <span className="eyebrow">Cast & crew</span>
-              <h2>{title.title} cast and crew</h2>
+              <span className="eyebrow">People & production</span>
+              <h2>{title.title} {title.subjects?.length ? "subjects and crew" : "cast and crew"}</h2>
 
               {title.directors?.length ? (
                 <div className="movie-credit-group">
@@ -486,7 +488,15 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 </div>
               ) : null}
 
-              <div className="movie-credit-group">
+              {title.subjects?.length ? (
+                <div className="movie-credit-group">
+                  <h3>Historical figures discussed</h3>
+                  <div className="movie-person-list">{title.subjects.map((name) => <span key={name}>{name}</span>)}</div>
+                  <p>This identifies people discussed in the documentary, not an acting or interview credit.</p>
+                </div>
+              ) : null}
+
+              {title.cast.length ? <div className="movie-credit-group">
                 <h3>Documented cast</h3>
                 <div className="movie-person-list">
                   {title.cast.slice(0, 8).map((name) => {
@@ -505,7 +515,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                     </div>
                   </details>
                 ) : null}
-              </div>
+              </div> : null}
             </section>
 
             {editorial ? (

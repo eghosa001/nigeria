@@ -3656,15 +3656,15 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Diploma in Dental Health Technician or Dental Surgery Technician.", "Current registration with the Dental Therapists Registration Board of Nigeria as required by EHA Clinics."],
     requirements: ["Current professional registration.", "Comfort with the Sangotedo work location.", "Complete the employer's eligibility check."],
     documents: ["CV/resume", "Professional registration and qualification details"],
-    applicationSteps: ["Open the official EHA Clinics Dental Assistant vacancy.", "Review the professional registration requirements.", "Complete the eligibility check.", "Continue to the official application."],
-    officialUrl: "https://erp.eha.ng/jobs/dental-assistant-lagos-585",
-    officialUrlLabel: "Apply on EHA Clinics",
-    verifiedAt: "2026-10-05",
+    applicationSteps: ["Open EHA Clinics' official jobs directory and select Dental Assistant — Lagos.", "Review the professional registration requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    officialUrl: "https://erp.eha.ng/jobs",
+    officialUrlLabel: "Find Dental Assistant — Lagos on EHA Clinics Jobs",
+    verifiedAt: "2026-10-14",
     feeNote: "Apply through EHA Clinics' official jobs system.",
-    sourceNotes: ["EHA Clinics listed the Dental Assistant — Lagos role as posted on 29 September 2026.", "The detail page places the role in Sangotedo, Lagos."],
+    sourceNotes: ["EHA Clinics listed the Dental Assistant — Lagos role as posted on 29 September 2026.", "The employer's live jobs directory shows Dental Assistant — Lagos in Sangotedo. Individual detail URLs may be unstable; select the role from the directory."],
     sources: [
-      { label: "EHA Clinics — Dental Assistant, Lagos", url: "https://erp.eha.ng/jobs/dental-assistant-lagos-585", lastChecked: "2026-10-05" },
-      { label: "EHA Clinics Jobs", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-05" }
+      { label: "EHA Clinics — current Dental Assistant, Lagos listing", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-14" },
+      { label: "EHA Clinics careers overview", url: "https://www.eha.ng/careers", lastChecked: "2026-10-14" }
     ]
   },
   {

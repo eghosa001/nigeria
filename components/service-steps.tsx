@@ -9,8 +9,7 @@ export function ServiceSteps({ service }: { service: Service }) {
       <span className="section-number" aria-hidden="true">02</span>
       <h2>How to complete {service.shortTitle} step by step</h2>
       <p className="guide-section-intro">
-        Follow the verified {service.shortTitle} process in order. Each step also shows what to have ready, what to check before continuing and what evidence to keep.
-        Where the agency does not publish an extra requirement, this guide does not invent one.
+        Follow these steps in order. Relevant preparation, checks and records appear only when they apply.
       </p>
 
       <div className="detailed-steps">
@@ -25,22 +24,9 @@ export function ServiceSteps({ service }: { service: Service }) {
             </div>
 
             <div className="detailed-step-grid">
-              <div>
-                <strong>Have ready for this step</strong>
-                {step.prepare.length ? (
-                  <ul>{step.prepare.map((item) => <li key={item}>{item}</li>)}</ul>
-                ) : (
-                  <p>No additional document is specifically tied to this step in the verified guide. Use the full checklist above and follow the official prompt.</p>
-                )}
-              </div>
-              <div>
-                <strong>Check before moving on</strong>
-                <p>{step.checkpoint}</p>
-              </div>
-              <div>
-                <strong>Keep as evidence</strong>
-                <p>{step.keep}</p>
-              </div>
+              {step.prepare.length ? <div><strong>Have ready for this step</strong><ul>{step.prepare.map((item) => <li key={item}>{item}</li>)}</ul></div> : null}
+              {step.checkpoint ? <div><strong>Check before moving on</strong><p>{step.checkpoint}</p></div> : null}
+              {step.keep ? <div><strong>Keep as evidence</strong><p>{step.keep}</p></div> : null}
             </div>
           </article>
         ))}

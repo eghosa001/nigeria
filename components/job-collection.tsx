@@ -15,9 +15,16 @@ export function JobCollection({
   emptyText?: string;
 }) {
   const [page, setPage] = useState(1);
-  const totalPages = Math.max(1, Math.ceil(opportunities.length / PAGE_SIZE));
+  // Expired records may remain discoverable for follow-up, but never outrank
+  // applications visitors can still act on.
+  const priority: Record<string, number> = { open: 0, screening: 1, training: 2, upcoming: 3, "career-page": 4, closed: 5 };
+  const ordered = [...opportunities].sort((a, b) =>
+    priority[getEffectiveJobStatus(a)] - priority[getEffectiveJobStatus(b)] ||
+    (a.deadline ?? "9999-12-31").localeCompare(b.deadline ?? "9999-12-31") ||
+    a.title.localeCompare(b.title));
+  const totalPages = Math.max(1, Math.ceil(ordered.length / PAGE_SIZE));
   const start = (page - 1) * PAGE_SIZE;
-  const visible = opportunities.slice(start, start + PAGE_SIZE);
+  const visible = ordered.slice(start, start + PAGE_SIZE);
 
   if (!opportunities.length) {
     return <div className="jobs-empty"><strong>{emptyText}</strong></div>;

@@ -203,13 +203,13 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   {primaryOfficialLink.label}
                 </a>
               ) : null}
-              <small>MyNigeriaGuide does not collect this payment.</small>
+              <small>{service.feeLabel.trim().toUpperCase() === "FREE" ? "Basic application is free; do not pay unofficial agents." : "MyNigeriaGuide does not collect service fees."}</small>
             </aside>
           </div>
           <ServiceStatusStrip service={service} />
           <AnswerFirst
             title={"What you need to know about " + service.shortTitle}
-            summary={service.summary}
+            summary={service.steps[0] ?? service.summary}
             facts={[
               { label: "Applies to", value: "Nigeria · " + service.category },
               { label: "Responsible agency", value: agency?.name ?? service.agencySlug.toUpperCase() },
@@ -221,7 +221,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               { href: "#steps", label: "See the steps" },
               ...(primaryOfficialLink ? [{ href: primaryOfficialLink.url, label: primaryOfficialLink.label, external: true, primary: true }] : []),
             ]}
-            note={"Verified " + service.lastVerified + ". Read the quick answer first, then use the detailed guide only for the parts you need."}
           />
           {(service.slug === "cac-business-name-registration" || service.slug === "cac-company-registration") ? (
             <section className="service-topic-links" aria-label="Choose the correct CAC registration">

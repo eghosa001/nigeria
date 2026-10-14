@@ -82,6 +82,8 @@ export type EntertainmentTitle = {
   languages: string[];
   synopsis: string;
   cast: string[];
+  // Documentary subjects are not actors; keep them separate from cast credits.
+  subjects?: string[];
   featuredCast?: string[];
   directors?: string[];
   runtimeMinutes?: number;
@@ -435,7 +437,8 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     genres: ["Documentary", "History", "Politics", "Nigerian cinema"],
     languages: ["English"],
     synopsis: "Ose Oyamendan's documentary examines Moshood Kashimawo Olawale Abiola, the annulled 12 June 1993 presidential election, the pro-democracy struggle that followed and Abiola's legacy.",
-    cast: ["Moshood Abiola", "Ibrahim Babangida", "Abdulsalami Abubakar"],
+    cast: [],
+    subjects: ["Moshood Abiola", "Ibrahim Babangida", "Abdulsalami Abubakar"],
     directors: ["Ose Oyamendan"],
     runtimeMinutes: 108,
     featured: true,

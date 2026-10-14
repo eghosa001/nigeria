@@ -15,16 +15,14 @@ export type ServiceJourney = {
 };
 
 const physicalRequiredPatterns = [
-  /attend/i,
-  /in person/i,
-  /biometric/i,
-  /fingerprint/i,
-  /capture/i,
-  /passport office/i,
-  /driving school/i,
-  /collection/i,
-  /collect .*certificate/i,
-  /present .*original/i,
+  /\battend\b/i,
+  /\bin.person\b/i,
+  /\bbiometric\b/i,
+  /\bfingerprint\b/i,
+  /\b(?:capture|submit)\s+(?:your\s+)?biometric/i,
+  /\b(?:visit|go to|report to|appear at|present at)\s+(?:the |an? )?(?:[a-z -]{0,45})?(?:office|centre|center|branch|embassy|consulate)\b/i,
+  /\bcollect (?:your |the )?(?:issued )?(?:certificate|passport|licence|license|card)\s+(?:at|from)\s+(?:the |an? )?(?:office|centre|center|branch)\b/i,
+  /\bpresent (?:your |the )?original\s+(?:documents?|records?)\s+(?:at|to)\b/i,
 ];
 
 const assistedPatterns = [
@@ -89,8 +87,11 @@ export function getServiceJourney(service: Service): ServiceJourney {
   }
 
   const body = text(service);
+  const process = service.steps.join(" ");
   const hasPortal = Boolean(service.officialPortal);
-  const physicalRequired = physicalRequiredPatterns.some((pattern) => pattern.test(body));
+  // A reference to a collection, driving school or office in supporting
+  // documents does not establish that an actual visit is compulsory.
+  const physicalRequired = physicalRequiredPatterns.some((pattern) => pattern.test(process));
   const assisted = assistedPatterns.some((pattern) => pattern.test(body));
   const explicitlyOnline = explicitlyOnlinePatterns.some((pattern) => pattern.test(body));
 

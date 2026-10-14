@@ -20,7 +20,7 @@ test("prepared service search preserves individual scores, ranking and limits", 
   }
 });
 
-test("published jobs reuse exact search text without changing facet membership", () => {
+test("published jobs reuse exact search text while location facets match actual locations", () => {
   for (const item of jobOpportunities) {
     const expected = [
       item.title, item.organization, item.summary, item.location, item.employmentType,
@@ -31,7 +31,7 @@ test("published jobs reuse exact search text without changing facet membership",
   }
   const facet = jobLocationFacets[0];
   const matchingSlugs = jobOpportunities
-    .filter((item) => facet.terms.some((term) => jobSearchText(item).includes(term.toLowerCase())))
+    .filter((item) => facet.terms.some((term) => item.location.toLowerCase().includes(term.toLowerCase())))
     .map((item) => item.slug);
   assert.deepEqual(getJobFacetOpportunities(facet).map((item) => item.slug), matchingSlugs);
 });
