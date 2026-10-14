@@ -38,7 +38,7 @@ const jobSeoOverrides: Record<string, { title: string; description: string }> = 
     description: "Find Lagos State Civil Service roles through the official Job Opportunities directory. Check live vacancies, eligibility and how to apply.",
   },
   "nigerian-army-92rri-2026": {
-    title: "Nigerian Army 92RRI 2026: Portal, Ages & How to Apply",
+    title: "Nigerian Army 92RRI 2026: Apply & Ages",
     description: "Nigerian Army 92RRI 2026: official recruitment portal, age rules for trades, non-trades and Special Skilled applicants. The application is free.",
   },
 };
