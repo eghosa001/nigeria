@@ -10802,7 +10802,7 @@
     "slug": "inec-voter-transfer",
     "title": "How to transfer your INEC voter registration",
     "shortTitle": "Transfer voter registration",
-    "summary": "How an already registered voter starts an INEC transfer request when changing voting location, with a current-window check before submission.",
+    "summary": "INEC's voter-transfer route changes a registered person's polling location without creating a new voter record. As of 14 October 2026, INEC's main CVR portal says the exercise is not currently active, even though the services directory continues to show Transfers; check its live status before attempting to submit a transfer.",
     "category": "Civic services",
     "agencySlug": "inec",
     "feeLabel": "No portal fee stated",
@@ -10816,30 +10816,38 @@
       "Any photograph, identity or supporting step requested by the live portal"
     ],
     "steps": [
-      "Open the official INEC CVR portal and first check whether transfer requests are currently being accepted; the published 2025–2026 nationwide CVR timetable ended on 30 August 2026.",
-      "Choose Transfers from the services list and sign in or create the portal account if INEC prompts you to do so.",
-      "Retrieve the existing voter record, review it carefully and enter the new voting-location information requested by INEC.",
-      "Complete any identity, photograph or supporting-document step shown by the live portal, submit the transfer request and save the generated acknowledgement or slip.",
-      "Use official INEC status, PVC and polling-unit tools to confirm the updated record before relying on the new location."
+      "Open https://cvr.inecnigeria.org/ and read the official current status message. On 14 October 2026 the main CVR portal says registration is closed; a visible Transfers entry on its separate /Public/getStarted directory does not guarantee a new request will be processed.",
+      "When the Commission announces that voter transfers are being accepted again, use the Transfers option on https://cvr.inecnigeria.org/Public/getStarted and sign in to your existing CVR portal account or follow the account-verification instructions.",
+      "Retrieve your existing voter registration, check your name and registered polling information, then select the appropriate new destination using INEC's own ward and polling-unit options rather than a third-party map.",
+      "Complete only the current identity/photograph and evidence prompts provided by the live INEC transfer process, submit the completed request and securely save the acknowledgement.",
+      "Check your record later using INEC's official voter verification/status services. A transfer request slip is not confirmation that the updated voter roll or polling-unit assignment has taken effect; confirm the actual status before travelling.",
+      "If you are simply looking for an uncollected PVC or your existing polling unit, use INEC's still-visible existing-voter or polling-unit locator instead of trying to submit a transfer while the CVR exercise is closed."
     ],
     "notes": [
-      "A transfer changes the location attached to an existing voter record; it is not a reason to register a second time.",
-      "Availability can depend on the active CVR/electoral timetable, so the live INEC portal takes precedence over old screenshots or blog instructions.",
-      "This page explains the administrative process only and does not influence any political choice."
+      "CURRENT STATUS: INEC's homepage states the CVR exercise has ended as of 14 October 2026. The separate services page still shows Transfers, but it is not evidence of an active nationwide application window.",
+      "A transfer changes the voting location on an existing registration. Never register again merely because you have moved home; duplicate voter enrolment is a separate problem.",
+      "INEC is the authority for reopening notices, any election-related cutoff, verification of a successful transfer and the exact updated polling unit. Older nationwide 2025–2026 registration schedules should not be reused as dates for future intake windows.",
+      "The original INEC portal remains useful for existing-voter PVC status and collection-centre lookup while new CVR activities are marked closed.",
+      "This page explains the neutral administrative procedure only; it makes no voting or party recommendation."
     ],
     "sources": [
       {
-        "label": "INEC Continuous Voter Registration portal — Transfers",
+        "label": "INEC — current CVR availability notice",
         "agency": "Independent National Electoral Commission",
-        "url": "https://cvr.inecnigeria.org/Public/getStarted",
-        "lastChecked": "2026-10-02"
+        "url": "https://cvr.inecnigeria.org/",
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "INEC 2025–2026 Continuous Voter Registration timetable",
+        "label": "INEC — official Transfers service category",
         "agency": "Independent National Electoral Commission",
-        "url": "https://wp1.inecnigeria.org/23248-2/continuous-voter-registration-cvr-2025-2026_w-new-offices-4/",
-        "published": "2025",
-        "lastChecked": "2026-10-06"
+        "url": "https://cvr.inecnigeria.org/Public/getStarted",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "INEC — registered-voter verification",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://cvr.inecnigeria.org/vvs",
+        "lastChecked": "2026-10-14"
       }
     ],
     "searchTerms": [
@@ -10849,7 +10857,7 @@
       "change voting location",
       "voter transfer Nigeria"
     ],
-    "lastVerified": "2026-10-06",
+    "lastVerified": "2026-10-14",
     "related": [
       "inec-new-voter-registration",
       "inec-update-voter-information",
@@ -10861,7 +10869,7 @@
     "slug": "inec-update-voter-information",
     "title": "How to update information on your INEC voter record",
     "shortTitle": "Update INEC voter information",
-    "summary": "INEC's official route for an existing voter to request corrections or updates to voter-card information without creating a duplicate registration.",
+    "summary": "INEC's Information Update service lets already registered voters request correction of an existing voter record, not a second enrolment. The main CVR portal currently says the nationwide registration exercise is closed; the separate directory still lists updates, so confirm availability before assuming you can submit corrections online.",
     "category": "Civic services",
     "agencySlug": "inec",
     "feeLabel": "No portal fee stated",
@@ -10875,29 +10883,40 @@
       "A current photograph/revalidation step if the portal requires it"
     ],
     "steps": [
-      "Open the official INEC CVR portal and check whether information-update requests are currently active.",
-      "Choose Information Update, sign in, then search for the existing voter record with the applicant's surname or the last six digits of the VIN, as specified in INEC's voter-update guide.",
-      "Review the record and change only the fields that need correction or updating; INEC's guide identifies examples such as misspelled names, name changes, gender and date of birth.",
-      "Capture or upload any supporting document requested by the portal, complete any photograph/revalidation step and submit the request.",
-      "Save or print the updated registration slip generated by INEC and use official tools for subsequent status checks."
+      "Visit https://cvr.inecnigeria.org/ and read the main INEC CVR status notice first. As of 14 October 2026 the exercise has ended; availability of the Information Update menu on /Public/getStarted does not mean new submissions are being accepted.",
+      "If INEC reopens voter-information updates, choose Information Update at https://cvr.inecnigeria.org/Public/getStarted, then sign in or complete the portal account verification as requested.",
+      "Retrieve the original voter record using the identification requested by the live portal. INEC's existing guide describes searching by surname or the last six digits of the Voter Identification Number (VIN); do not create a new registration record.",
+      "Verify the record belongs to you, then correct only the affected fields: the documented examples include misspelled names, a legally changed name, gender or date of birth.",
+      "Upload any supporting identification or change-of-name evidence requested by INEC for the particular correction, complete the live photograph/identity check and submit the request when available.",
+      "Keep INEC's acknowledgement and later confirm through its voter-status/verification system that the correction has actually been reflected. An acknowledgement slip is not confirmation the printed PVC has already changed.",
+      "If no online submissions are allowed during closure, use INEC's current status lookup for the existing record and consult INEC iccc@inec.gov.ng or 0700-2255-4632 for the next correction window rather than paying a third party for purported instant editing."
     ],
     "notes": [
-      "Use the update service for an existing record rather than registering again.",
-      "The exact evidence depends on what is being corrected, so follow the document prompt shown for your request.",
-      "This guide is limited to the administrative voter-record process."
+      "CURRENT STATUS: The main INEC CVR portal says the exercise is closed. The separate service-directory page lists Information Update, but the presence of the menu item is not verification that its form is presently accepting applicants.",
+      "Voter-record corrections, polling-unit transfers, lost-PVC replacements and new voter enrolment are four separate administrative services. Do not make a duplicate registration to correct an error.",
+      "The documentation required depends on the error. A typo and a legal name change may require different supporting evidence; follow the official form and INEC advice.",
+      "If you need to confirm your existing identity record rather than edit it, INEC's separate voter verification service at https://cvr.inecnigeria.org/vvs supports name/birth-date and VIN-based lookups.",
+      "A successful submission acknowledgement is different from INEC's eventual processing, voter-roll update or reissued physical card.",
+      "This neutral guide is limited to the official administrative record process."
     ],
     "sources": [
       {
-        "label": "INEC Guide for Voter Update",
+        "label": "INEC — current national CVR availability",
         "agency": "Independent National Electoral Commission",
-        "url": "https://wp1.inecnigeria.org/guide-for-voter-update/",
-        "lastChecked": "2026-10-06"
+        "url": "https://cvr.inecnigeria.org/",
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "INEC Continuous Voter Registration portal — Information Update",
+        "label": "INEC — Information Update service category",
         "agency": "Independent National Electoral Commission",
         "url": "https://cvr.inecnigeria.org/Public/getStarted",
-        "lastChecked": "2026-10-02"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "INEC — voter-record verification service",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://cvr.inecnigeria.org/vvs",
+        "lastChecked": "2026-10-14"
       }
     ],
     "searchTerms": [
@@ -10907,7 +10926,7 @@
       "correct date of birth PVC",
       "voter record correction"
     ],
-    "lastVerified": "2026-10-06",
+    "lastVerified": "2026-10-14",
     "related": [
       "inec-voter-transfer",
       "inec-pvc-status",
@@ -10916,9 +10935,9 @@
   },
   {
     "slug": "inec-replace-lost-damaged-pvc",
-    "title": "How to replace a lost or damaged PVC",
+    "title": "INEC Lost or Damaged PVC: Replacement Steps and Current CVR Status",
     "shortTitle": "Replace lost or damaged PVC",
-    "summary": "The official INEC replacement route for a registered voter whose PVC is missing, defaced or broken.",
+    "summary": "Already registered but lost, broke or defaced your Permanent Voter's Card? INEC's replacement guide explains how an existing voter requests a duplicate card through the CVR portal, with different evidence for lost versus physically damaged cards. As of 14 October 2026, however, INEC's CVR homepage says the exercise has ended; check whether the reissue service is accepting submissions before creating an account or paying anyone.",
     "category": "Civic services",
     "agencySlug": "inec",
     "feeLabel": "No portal fee stated",
@@ -10926,36 +10945,60 @@
     "status": "verified",
     "officialPortal": "https://cvr.inecnigeria.org/Public/getStarted",
     "requirements": [
-      "An existing INEC voter registration record",
-      "Portal account/sign-in details when requested",
-      "For a damaged card, an image of the damaged/defaced card when the portal requests supporting evidence",
-      "Ability to complete the identity photograph step used by INEC for a replacement request"
+      "An existing voter record: this process replaces a lost, missing, broken or defaced PVC and is not a new voter registration.",
+      "Access to the official INEC CVR portal account or email address for account creation, verification and subsequent notices if the replacement service is open.",
+      "Correct details to retrieve your original voter registration record; confirm the returned name and registration information before proceeding.",
+      "If the physical card is damaged or defaced, a legible image of the damaged card when the portal requests it. INEC's instructions say a lost-card applicant skips that damaged-card upload.",
+      "Ability to capture the two self photographs INEC uses to compare the applicant against the existing registration record, when an online replacement is possible.",
+      "An email address for the official acknowledgement and a way to check the PVC status/collection centre later through INEC."
     ],
     "steps": [
-      "Open the official INEC CVR portal, check the current service notice and choose Lost or Damaged PVC.",
-      "Sign in, retrieve the existing voter record and confirm that the record displayed belongs to you.",
-      "Choose the reason for replacement. INEC's replacement guide says a damaged/defaced card request may require an image of the damaged card, while a lost-card request does not use that damaged-card upload.",
-      "Complete the identity-photo step required by INEC, submit the request and keep the replacement request slip sent or displayed by the portal.",
-      "Follow INEC's official pickup or status information for collection rather than paying an unofficial intermediary."
+      "Open https://cvr.inecnigeria.org/ first. On 14 October 2026 its public homepage says the Continuous Voter Registration exercise has ended and offers an existing-voter PVC/status lookup. Do not mistake an older government how-to article for proof that new replacement requests are being accepted today.",
+      "If INEC reopens the relevant service, follow the official Lost or Damaged PVC entry at https://cvr.inecnigeria.org/Public/getStarted. The services page still lists it, but an entry in a menu does not override the current closure notice on the main CVR portal.",
+      "Create a CVR portal account and verify the email or sign in to an existing account. INEC's published replacement guide describes creating an account with name, phone and email, then confirming the verification link before logging in.",
+      "Choose Lost/Damaged PVC, then Request New Card. Fill in Retrieve Your Voter Registration Record and indicate that you are applying for yourself. Search and check that the voter record returned is yours before continuing.",
+      "Select the correct reason. For a broken/defaced PVC choose the damaged option and upload a photo of the card when prompted; for a physically lost/missing PVC the official instructions say to skip the damaged-card supporting-document upload.",
+      "Complete the identity-confirmation stage. INEC's published guide says the applicant takes two self photographs so the system can match the request against the existing photograph on the voter register.",
+      "Review and submit the application, then keep the emailed or displayed replacement-request slip. A successful online request acknowledgement is not proof the replacement PVC has already been printed or released for collection.",
+      "For a record status check while CVR is closed, open INEC's official main portal, select Yes under existing registered voter, and use Find My PVC. Alternatively check the voter verification service at https://cvr.inecnigeria.org/vvs using your VIN or registered personal details where supported.",
+      "If you cannot submit a replacement while the exercise is closed, wait for the next relevant INEC notice or ask its contact centre iccc@inec.gov.ng / 0700-2255-4632 about the applicable administrative procedure. Do not start a duplicate voter registration or use unofficial PVC agents."
     ],
     "notes": [
-      "A replacement keeps the existing voter identity; do not create another voter registration because the physical card is missing.",
-      "INEC's portal currently labels a downloadable PVC feature as a limited pilot/coming-soon feature, so do not assume a digital PVC is available to every applicant.",
-      "This page explains only the administrative replacement process.",
-      "Do not confuse a lost or damaged PVC replacement with moving your polling location. INEC handles transfer of voter registration separately, even when the voter has the same existing identity record."
+      "IMPORTANT CURRENT STATUS: On 14 October 2026 INEC's public CVR homepage states the exercise has ended and is not presently active. The separate Public/getStarted page continues to display replacement, transfer and correction menu entries; the appearance of those options does not prove an application can be submitted today.",
+      "INEC's official instructions distinguish lost or missing PVCs from defaced or broken cards. The damaged-card route requests a photo of the damaged item as supporting evidence, whereas the lost-card route does not require that upload.",
+      "INEC's documented online replacement flow includes retrieving the existing voter record, choosing the reason and submitting two new photos to verify identity against the register. It is not the same process as new voter enrolment, polling-unit transfer or name/date correction.",
+      "The CVR page labels a downloadable digital PVC a pilot for eligible Osun State voters / coming soon, so this page does not claim that every registered voter can download an official PVC immediately.",
+      "If your voter card is merely uncollected, use the existing-voter status and collection-centre service; you may not need to request a replacement. Registered voters can still check status after the present CVR window has ended.",
+      "INEC's service notice does not publish a guaranteed turnaround for a replacement or universal current reissue fee. Avoid agents promising instant card printing or paid fast-tracking; ask INEC directly if a charge or appointment is claimed.",
+      "INEC's published CVR guide from 2013 discussed electoral-cycle restrictions on late replacement applications, but that historical timetable cannot be used to derive the current 2026 opening/closing date. Follow the live INEC notice.",
+      "A request slip is proof you submitted a request, not confirmation that the new physical card can be collected. Confirm the eventual collection centre and timetable from INEC before travelling.",
+      "INEC supports a voter verification form at https://cvr.inecnigeria.org/vvs that allows name/date-of-birth or Voter Identification Number (VIN) lookup. Use only the official INEC domain when typing personal voter details.",
+      "The availability of an electronic application cannot be assumed when the CVR homepage says registration is closed. This guide explains what to do when INEC reopens the route, not an invitation to circumvent a closure."
     ],
     "sources": [
       {
-        "label": "INEC Voter Card Replacement — Lost/Damaged Cards",
+        "label": "INEC CVR — live homepage current window status",
         "agency": "Independent National Electoral Commission",
-        "url": "https://wp1.inecnigeria.org/voter-card-replacement/",
-        "lastChecked": "2026-10-02"
+        "url": "https://cvr.inecnigeria.org/",
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "INEC Continuous Voter Registration portal — Lost or Damaged PVC",
+        "label": "INEC CVR — service categories incl. lost/damaged PVC",
         "agency": "Independent National Electoral Commission",
         "url": "https://cvr.inecnigeria.org/Public/getStarted",
-        "lastChecked": "2026-10-02"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "INEC — official lost/damaged PVC request instructions",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://wp1.inecnigeria.org/voter-card-replacement/",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "INEC — official existing-voter verification service",
+        "agency": "Independent National Electoral Commission",
+        "url": "https://cvr.inecnigeria.org/vvs",
+        "lastChecked": "2026-10-14"
       }
     ],
     "searchTerms": [
@@ -10967,12 +11010,13 @@
       "INEC replace PVC versus voter transfer",
       "lost pvc same voter identification"
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-14",
     "related": [
       "inec-pvc-status",
       "inec-find-pvc-pickup-location",
       "inec-update-voter-information"
-    ]
+    ],
+    "timeline": "No current INEC public processing or collection date is guaranteed. Its CVR homepage currently says the exercise has ended, while a separate services landing page still displays a Lost or Damaged PVC link. Confirm when replacements are actually being accepted and follow INEC's status/collection notices; a visible menu is not proof that new requests are open."
   },
   {
     "slug": "inec-find-pvc-pickup-location",
