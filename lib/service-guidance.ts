@@ -22,6 +22,66 @@ export type DetailedServiceGuidance = {
 };
 
 const explicit: Record<string, DetailedServiceGuidance> = {
+  "nigeria-landing-exit-card": {
+    route: {
+      startTitle: "Use the free NIS LECARD portal for your arrival or departure",
+      startDetail: "Create or sign in to a dedicated account on lecard.immigration.gov.ng, select Landing Card for entry or Exit Card for departure, and check passport and travel details before submitting. NIS says eligible visitors can prepare an Arrival card 24–48 hours before entering Nigeria.",
+      physicalTitle: "Show your card at the immigration checkpoint, not a passport office",
+      physicalDetail: "Save or print the actual LECARD confirmation and follow the immigration officer's check at your authorised port of entry or departure. This service does not require a general passport-enrolment visit or a card application payment.",
+      fallbackTitle: "Recover a card or ask LECARD support about an error",
+      fallbackDetail: "Use the official Get Your Last Card page if an approved confirmation is missing. For pending, declined or unscanned cards, consult the official LECARD FAQ and email lecard@immigration.gov.ng with the relevant passport details and status, without sharing passwords or one-time codes.",
+    },
+    aftercare: [
+      { title: "Save the actual Landing or Exit Card", detail: "Keep your emailed/downloadable NIS card and the associated account details. The application is free, so the standard evidence is the issued card rather than a passport-payment or biometric appointment receipt." },
+      { title: "Confirm the card was processed and scanned", detail: "A pending or declined application is not an approved card. If a previously issued card shows expired because the entry/exit scan is missing, follow NIS LECARD's support instructions and provide the entry/exit evidence it requests." },
+      { title: "Retrieve instead of generating a duplicate", detail: "Use lecard.immigration.gov.ng/get-last-card with passport number, issuing country and date of birth to recover an existing card. Correct submitted information through NIS's current instructions rather than assuming the form remains editable." },
+    ],
+  },
+  "ninauth-nin-verification": {
+    route: {
+      startTitle: "Install NIMC's NINAuth app and link your existing NIN",
+      startDetail: "Use the official ninauth.nimc.gov.ng/download links to install NINAuth and complete onboarding for an existing NIN. An app account is for verification and secure identity sharing, not new NIN enrolment.",
+      physicalTitle: "No general office appointment for standard in-app sharing",
+      physicalDetail: "An accepting organisation can request verification using its QR code or a time-limited Sharecode generated in your NINAuth app. Approve only the requested data; first-time NIN registration and exceptional record corrections have separate official NIMC routes.",
+      fallbackTitle: "Recover through the current app or the requesting organisation",
+      fallbackDetail: "If a code expires, generate a new Sharecode for a compatible verification partner. For a missing NIN Slip option, update NINAuth and check Do More with NINAuth → NIN Slip. The June 2026 in-app slip download is free.",
+    },
+    aftercare: [
+      { title: "Share only the intended verification", detail: "Confirm the organisation received its requested result. Keep Sharecodes temporary and private; a verification request is not permission to publish all your NIN biodata." },
+      { title: "Download the free official NIN slip when needed", detail: "Open Do More with NINAuth → NIN Slip in the up-to-date app. Save the official document securely and use only when an institution requires the slip." },
+      { title: "Separate identity errors from app errors", detail: "If an existing NIN does not match the official record, use NIMC's own correction/support route. Reinstalling an app or buying an unofficial Sharecode does not amend national identity records." },
+    ],
+  },
+  "airtel-esim-activation": {
+    route: {
+      startTitle: "Check the phone's EID, then use the Airtel Centre locator",
+      startDetail: "Dial *#06# and confirm an EID is displayed; then open Airtel Nigeria's official eSIM page and follow its Airtel Centre locator to arrange an authorised physical-SIM-to-eSIM swap. The published activation charge is currently zero.",
+      physicalTitle: "Airtel Service Centre verification and QR issuance are required",
+      physicalDetail: "Take your registered Airtel line and identity details to the selected Airtel Centre. The agent verifies ownership, assigns a new profile and issues a single-use QR; install it on the compatible phone while connected to Wi-Fi.",
+      fallbackTitle: "Request a fresh profile if the QR fails or the phone changes",
+      fallbackDetail: "An already-used QR is not a reliable self-service transfer to another device. Airtel says a fresh SIM swap and QR may be needed. For a lost phone, contact Airtel at 300 or visit its showroom to block the number first.",
+    },
+    aftercare: [
+      { title: "Confirm the number actually works", detail: "After scanning the QR in iPhone, Samsung or Pixel mobile-network settings, test a call, SMS and mobile data before treating the replacement as complete." },
+      { title: "Keep the activation QR secure", detail: "Do not publish or forward a one-use QR or PUK to a third party. If the profile cannot be downloaded, follow up with the Airtel Centre rather than buying an unofficial QR." },
+      { title: "Arrange another verified swap for future device changes", detail: "Deleting the profile from one handset does not automatically reinstate the old plastic SIM or make the original QR reusable on another phone." },
+    ],
+  },
+  "inec-replace-lost-damaged-pvc": {
+    route: {
+      startTitle: "Check INEC's CVR window and your existing voter record first",
+      startDetail: "INEC's main CVR site currently marks the nationwide registration exercise closed. Use the existing-voter status service to confirm your record rather than starting a second registration or assuming an old online PVC-replacement menu is active.",
+      physicalTitle: "The Electoral Act 2026 requires applying in person",
+      physicalDetail: "Section 18 directs the owner of a lost or damaged PVC to apply in person to an Electoral Officer or other authorised INEC official, explain the circumstances and observe the 90-day pre-election limitation. Confirm the responsible office and current intake with INEC before travelling.",
+      fallbackTitle: "Ask INEC about authorised replacement intake and collection",
+      fallbackDetail: "Contact iccc@inec.gov.ng or the current INEC Citizens Contact Centre. The legacy self-service instructions are not proof of an open replacement window or an exception to the 2026 statutory process.",
+    },
+    aftercare: [
+      { title: "Keep the original registration identity", detail: "An absent or damaged physical PVC does not require registering as a new voter. Bring the existing VIN or voter identity evidence INEC asks for and the damaged card when available." },
+      { title: "Separate request acknowledgement from actual card release", detail: "A submission slip does not establish that a replacement PVC is printed, marked REPLACEMENT or ready for collection. Confirm collection through INEC's current office and voter-record channels." },
+      { title: "Check the applicable legal window", detail: "Section 18 restricts issuance within 90 days of polling day and contemplates a downloadable-copy option, but the online pilot is not established as available to every voter." },
+    ],
+  },
   "jamb-direct-entry-2026": {
     route: {
       startTitle: "Get the profile code and Direct Entry e-PIN first",
