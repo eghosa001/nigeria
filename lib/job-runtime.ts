@@ -91,8 +91,20 @@ function listHtml(items: string[]) {
     : "";
 }
 
+function evidenceDateIsValid(value: string, todayIso: string) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || value > todayIso) return false;
+  const parsed = Date.parse(value + "T00:00:00Z");
+  return Number.isFinite(parsed) && new Date(parsed).toISOString().slice(0, 10) === value;
+}
+
 export function buildJobPostingJsonLd(item: CareerOpportunity, pageUrl: string, todayIso = todayIsoNigeria()) {
   if (!item.posting || !item.jobPostingAuthorization || item.kind !== "vacancy" || !isEffectivelyOpen(item, todayIso)) return null;
+
+  // Never claim a future employer publication or future completed verification
+  // to search engines, even when stored status happens to say "open".
+  if (!evidenceDateIsValid(item.posting.datePosted, todayIso) ||
+      !evidenceDateIsValid(item.jobPostingAuthorization.verifiedAt, todayIso) ||
+      !item.jobPostingAuthorization.publicEvidenceUrl.startsWith("https://")) return null;
 
   const posting = item.posting;
   const jobLocation = posting.locations.map((location) => ({
