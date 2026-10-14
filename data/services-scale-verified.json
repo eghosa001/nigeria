@@ -5146,7 +5146,7 @@
     "slug": "aedc-map-refund",
     "title": "How to check AEDC MAP refund status and load your meter token",
     "shortTitle": "AEDC MAP refund status",
-    "summary": "Enter your meter number on AEDC's official MAP Refund Portal to check eligibility or retrieve a refund token. Eligible MAP meter buyers receive electricity credit rather than cash.",
+    "summary": "Use AEDC's official MAP Refund Portal to enter your meter number and check for an eligible refund token. Eligible MAP customers are notified by SMS/email and receive electricity units through a 20-digit token—not cash. If no token is available, AEDC publishes a dedicated support email and customer-care number.",
     "category": "Electricity",
     "agencySlug": "aedc",
     "feeLabel": "No refund-claim fee stated",
@@ -5165,11 +5165,11 @@
       "Submit your meter number to check for an eligible refund record or token. A lookup alone does not guarantee eligibility.",
       "If a refund is recorded, confirm the meter number and electricity-credit amount, then copy the 20-digit load token.",
       "Enter the load token on your prepaid meter as you would a normal electricity token. It represents credited units, not money sent to a bank.",
-      "If you expect a refund but have no notification, cannot retrieve the token, or it fails, email map.refund@abujaelectricity.com with evidence of payment or use official AEDC customer care."
+      "If an eligible refund notification is missing, your meter number returns no record, or the token fails, email map.refund@abujaelectricity.com with proof of MAP meter payment. AEDC also lists 08039070070 and its Customer Experience Centres for support; you do not have to visit a centre just to check the online portal."
     ],
     "notes": [
       "The official AEDC MAP refund checker requires your meter number; it does not ask for a banking password or fee.",
-      "AEDC issues eligible MAP refunds as electricity-credit tokens, not cash transfers.",
+      "AEDC sends eligible MAP customers an SMS and email showing the meter number, credit amount and unique 20-digit token. Entering an accepted token adds electricity units to that meter; it does not deposit money into a bank account.",
       "Eligibility and refund timing depend on the customer's record; do not assume every purchased meter has a token available today."
     ],
     "sources": [
@@ -5177,13 +5177,13 @@
         "label": "AEDC MAP refund eligibility checker",
         "agency": "Abuja Electricity Distribution Plc",
         "url": "https://maprefund.abujaelectricity.com/",
-        "lastChecked": "2026-10-11"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "AEDC official MAP refund instructions",
         "agency": "Abuja Electricity Distribution Plc",
         "url": "https://www.abujaelectricity.com/your-investment-returned-a-simple-guide-to-your-map-refund/",
-        "lastChecked": "2026-10-11",
+        "lastChecked": "2026-10-14",
         "published": "2026-07-01"
       }
     ],
@@ -5191,7 +5191,7 @@
       "aedc-map-meter-application",
       "aedc-pay-bill-buy-token"
     ],
-    "lastVerified": "2026-10-11",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "AEDC MAP refund",
       "Abuja electricity meter refund",
