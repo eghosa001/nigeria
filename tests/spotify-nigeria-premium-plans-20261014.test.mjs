@@ -19,3 +19,14 @@ test("Spotify guide distinguishes Nigerian renewal prices from temporary offers"
   const words=[guide.summary,guide.feeNote,...guide.requirements,...guide.steps,...guide.notes].join(" ").split(/\s+/).length;
   assert.ok(words>=800);
 });
+
+test("Spotify guidance avoids government-application and imaginary reference instructions",()=>{
+  const guidance=readFileSync("lib/service-guidance.ts","utf8");
+  const match=guidance.match(/"spotify-premium-nigeria": \{[\s\S]*?\n  \},\n\};\n\nconst agencyFallback:/);
+  assert.ok(match,"Spotify must have explicit provider-specific guidance");
+  assert.match(match[0],/Manage your plan/);
+  assert.match(match[0],/partner-billed/);
+  assert.doesNotMatch(match[0],/government application slip or reference number required/);
+  const page=readFileSync("app/services/[slug]/page.tsx","utf8");
+  assert.doesNotMatch(page,/These government or agency pages were used/);
+});

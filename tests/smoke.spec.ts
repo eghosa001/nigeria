@@ -601,7 +601,7 @@ test("service FAQ answers are contextual and complete enough to guide the next a
   // The essential route, fees and steps already have their own complete
   // sections. The supplementary FAQ should not duplicate all those answers.
   await expect(questions).toHaveCount(3);
-  await expect(questions.nth(0)).toContainText(/application or official service does not work/i);
+  await expect(questions.nth(0)).toContainText(/service or its website does not work/i);
   await expect(questions.nth(1)).toContainText(/careful about/i);
   await expect(questions.nth(2)).toContainText(/instructions are current/i);
   await expect(page.locator("#questions")).toContainText(/official|agency/i);

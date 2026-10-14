@@ -289,7 +289,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <section id="official-sources">
               <span className="section-number" aria-hidden="true">05</span>
               <h2>Official {agency?.shortName ?? service.agencySlug.toUpperCase()} sources for {service.shortTitle}</h2>
-              <p className="source-intro">These government or agency pages were used to verify {service.shortTitle}. This guide was last reviewed on {service.lastVerified}; the official source takes priority if a live detail changes.</p>
+              <p className="source-intro">These cited sources support the details about {service.shortTitle}. Last reviewed on {service.lastVerified}; check the responsible organisation's latest information before acting because prices, deadlines and processes may change.</p>
               <div className="source-list">
                 {service.sources.map((source) => (
                   <a key={source.url} href={source.url} target="_blank" rel="noreferrer">
@@ -305,14 +305,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           <aside className="guide-sidebar">
             <div className="sidebar-card sidebar-agency">
-              <span>Responsible agency</span>
+              <span>Responsible organisation</span>
               <strong>{agency?.name}</strong>
               {agency ? <Link href={"/agencies/" + agency.slug}>View agency guides →</Link> : null}
             </div>
             <div className="sidebar-card">
               <span>Compare fees</span>
               <strong>Check the verified fee directory.</strong>
-              <Link href="/fees">View government fees →</Link>
+              <Link href="/fees">Browse service fee guides →</Link>
             </div>
             <div className="sidebar-card">
               <span>Need an office?</span>
@@ -321,8 +321,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
             <div className="sidebar-card safety-card">
               <span>Payment safety</span>
-              <strong>Pay only through the responsible agency.</strong>
-              <p>MyNigeriaGuide never collects government application fees or asks for your password, card PIN or NIN.</p>
+              <strong>Pay only through the responsible provider’s verified route.</strong>
+              <p>MyNigeriaGuide does not collect payment for the services listed here. Never share passwords, payment PINs or one-time codes with an unofficial intermediary.</p>
             </div>
           </aside>
         </div>
