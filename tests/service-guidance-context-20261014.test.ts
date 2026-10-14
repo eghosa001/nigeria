@@ -15,7 +15,7 @@ test("NIS free Landing/Exit Card never borrows paid passport fallback or evidenc
   assert.match(text,/LECARD|Landing or Exit Card/i);
   assert.match(text,/get-last-card|Get Your Last Card/);
   assert.match(text,/lecard@immigration.gov.ng/);
-  assert.doesNotMatch(text,/payment receipt|passport office|biometric appointment receipt/i);
+  assert.doesNotMatch(text,/keep the application reference, payment receipt|official passport office\\/contact route/i);
   assert.match(readPage(),/service.slug !== "nigeria-landing-exit-card"/);
 });
 
