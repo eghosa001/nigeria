@@ -403,7 +403,7 @@
       "Enter the existing driver's-licence number. Complete Personal Details, Contact Details, Processing Centre & Licence Type, and Review & Pay, checking the class and three- or five-year option before payment.",
       "Choose one of the payment methods shown on the official portal and keep the acknowledgement or transaction number; channel fees and multiple licence classes can change the amount payable.",
       "Follow the testing and biometric-capture instructions shown for your application at the selected FRSC Driver's Licence Centre; attend in person when instructed.",
-      "Use Track DL Application Status with the application or licence number and date of birth; follow the official collection instructions once the licence is ready."
+      "On the FRSC portal select Track DL Application Status, enter the application ID or licence number and date of birth, and check the displayed stage. When the licence is ready, contact the chosen Driver's Licence Centre for pickup instructions and bring its stated collection evidence."
     ],
     "notes": [
       "FRSC says to use Renewal when the existing licence has expired. For a still-valid licence that needs a class change, follow the official Reissue or Upgrade guidance.",
@@ -914,7 +914,7 @@
     "steps": [
       "From the candidate's own SIM, create the JAMB profile code by texting NIN, a space and the 11-digit NIN to 55019 or 66019, then keep the reply.",
       "Check the active UTME registration window and purchase the correct 2026 e-PIN package through a JAMB-approved payment or vending channel; do not pay an unofficial agent.",
-      "Visit a JAMB-accredited CBT centre with the profile code and e-PIN to complete the registration steps required by the centre.",
+      "At a JAMB-accredited CBT centre, provide the profile code and e-PIN, submit the candidate's biodata and exam selections and undergo biometric capture as directed by the registration officer.",
       "Review the captured personal and examination details before confirming the submission, and keep the official registration slip and phone number securely."
     ],
     "notes": [
