@@ -16,13 +16,17 @@ for(const slug of ["inec-replace-lost-damaged-pvc","inec-voter-transfer","inec-u
     assert.ok(g.steps.some(x=>/voter.*(status|verification)|verify|lookup|record/i.test(x)));
   });
 }
-test("lost versus damaged card use different evidence and a request slip is not collection",()=>{
+test("replacement respects 2026 Electoral Act, rejects stale online-only advice",()=>{
   const g=services.find(x=>x.slug==="inec-replace-lost-damaged-pvc");
   const t=[...g.requirements,...g.steps,...g.notes].join(" ");
-  assert.match(t,/damaged.*photo|photo.*damaged/i);
-  assert.match(t,/lost.*(skip|does not require)/i);
+  assert.match(t,/section 18/i);
+  assert.match(t,/90 days before polling day/i);
+  assert.match(t,/in person/i);
   assert.match(t,/two self photographs/i);
-  assert.match(t,/request slip.*not (proof|confirmation)/i);
+  assert.match(t,/lost.*damaged/i);
+  assert.match(t,/request receipt|application receipt|application slip/i);
+  assert.match(t,/REPLACEMENT/);
   assert.match(t,/iccc@inec.gov.ng/);
-  assert.ok(g.sources.some(s=>s.url==="https://wp1.inecnigeria.org/voter-card-replacement/"));
+  assert.ok(g.sources.some(s=>s.url==="https://nass.gov.ng/documents/download/11248"));
+  assert.ok(g.sources.every(s=>!s.url.includes("wp1.inecnigeria.org")));
 });
