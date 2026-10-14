@@ -57,7 +57,13 @@ export function getRecentlyPostedJobs(items: CareerOpportunity[], days = 7, toda
 }
 
 export function getJobFreshnessLabel(item: CareerOpportunity, todayIso = todayIsoNigeria()) {
-  const age = daysSinceIsoDate(item.verifiedAt, todayIso);
+  const checked = item.verifiedAt;
+  const parsed = /^\d{4}-\d{2}-\d{2}$/.test(checked) ? Date.parse(checked + "T00:00:00Z") : Number.NaN;
+  if (!Number.isFinite(parsed) || new Date(parsed).toISOString().slice(0, 10) !== checked || checked > todayIso) {
+    return "Check current status on the employer's site";
+  }
+  const age = daysSinceIsoDate(checked, todayIso);
+  if (!Number.isFinite(age)) return "Check current status on the employer's site";
   if (age === 0) return "Checked today";
   if (age === 1) return "Checked yesterday";
   return "Checked " + age + " days ago";
