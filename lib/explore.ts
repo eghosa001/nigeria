@@ -29,6 +29,8 @@ export type ExploreGuide = {
   highlights: Array<{ name: string; detail: string }>;
   planning: Array<{ label: string; detail: string }>;
   source?: { label: string; href: string };
+  // Extra independently checked references when one guide compares several places.
+  sources?: Array<{ label: string; href: string }>;
   lastReviewed: string;
 };
 
@@ -11678,10 +11680,13 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Nigeria Rainforests",
     "kind": "destination",
     "region": "Nigeria",
-    "summary": "Compare Nigeria's major rainforest destinations by access, conservation focus and the level of trekking involved.",
+    "summary": "Compare Cross River's Oban and Okwangwo rainforest divisions, Edo's Okomu National Park and Afi Mountain's conservation landscape by genuine access routes, visitor permissions and activities—not assumed wildlife sightings or outdated attraction lists.",
     "intro": [
-      "Nigeria's remaining major rainforest destinations are concentrated in a few important conservation landscapes, especially in Cross River and Edo.",
-      "Forest visits demand realistic weather, trail and guide planning; they are not ordinary city-park walks."
+      "Start by deciding which kind of forest visit you can realistically arrange. Cross River National Park is split between Oban, approached through Akamkpa from the Calabar side, and the separate Okwangwo division approached via Ikom and Butatong. Okomu National Park is in Edo State and is approached through Udo, while Afi Mountain Wildlife Sanctuary is a different protected landscape managed by Cross River State authorities. One 'Nigeria rainforest' ticket or map pin cannot cover all four.",
+      "The National Park Service brochure describes Cross River's Oban and Okwangwo divisions as non-contiguous rainforest sectors, each with a different base and road approach. Oban works better for someone already planning around Calabar and Akamkpa; Okwangwo belongs in a separate northern Cross River itinerary. Do not book accommodation in Calabar and assume both entrances are nearby. Ask park staff about the correct entrance, routes they currently authorise and whether an escorted forest walk is operating.",
+      "Okomu is an Edo rainforest conservation destination reached through the Udo area, not a facility inside Benin City. The National Park Service's published brochure lists birdwatching, forest walks and visitor infrastructure such as a treehouse, walkway and chalets. Those descriptions are historical park information, not live availability. Before committing to a day trip or overnight stay, confirm which facilities actually operate, whether visitors need advance arrangements and the current access/guide charges.",
+      "Afi Mountain Wildlife Sanctuary protects rare species including Cross River gorillas, Nigeria-Cameroon chimpanzees and drills. WCS Nigeria describes conservation patrols and threats from hunting and habitat loss; it does not establish unrestricted recreational trekking or guaranteed gorilla-viewing tours. Treat Afi as a conservation-first destination and obtain confirmation from the responsible forestry or authorised conservation team before planning entry. It is not interchangeable with the federally managed Cross River National Park.",
+      "Weather, security arrangements, guide availability and forest-road conditions can change the trip more than a promotional photograph suggests. None of the references checked establishes one current entry fee, reliable opening timetable, live lodging inventory or permission to enter sensitive wildlife areas. Use the official park and conservation links below for the latest visitor guidance before paying anyone."
     ],
     "bestFor": [
       "Rainforest",
@@ -11691,45 +11696,71 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Cross River National Park",
-        "detail": "One of Nigeria's most important rainforest conservation landscapes."
+        "name": "Cross River National Park — Oban Division",
+        "detail": "The park service identifies Oban as the larger rainforest division, approached through Akamkpa from the Calabar side. Ask the park office which visitor trails or ranger-led activities are available. Its brochure describes forest walks and birdwatching; that does not guarantee every trail, camp or facility operates on your chosen date."
       },
       {
-        "name": "Afi Mountain",
-        "detail": "Combines mountain forest and wildlife-conservation interest."
+        "name": "Cross River National Park — Okwangwo Division",
+        "detail": "Okwangwo is a separate northern Cross River rainforest sector approached by the Ikom–Butatong axis, not the same entrance as Oban. Conservation work here includes habitat for endangered primates. Verify local authorisation, access roads and a suitable overnight base; do not assume an independent wildlife-tracking excursion is permitted."
       },
       {
-        "name": "Okomu",
-        "detail": "Provides an Edo rainforest option closer to Benin City."
+        "name": "Okomu National Park — Edo State",
+        "detail": "For travellers starting around Benin, Okomu provides a distinct protected rainforest option via Udo. The National Park Service has described birdlife, canopy facilities and a treehouse, but its older brochure cannot prove these are currently accessible. Confirm operating facilities, guide arrangements, road state and tickets with park management before travelling."
       },
       {
-        "name": "Forest alternatives",
-        "detail": "Akure and Ngwo offer different forest experiences outside national parks."
+        "name": "Afi Mountain Wildlife Sanctuary — Cross River",
+        "detail": "WCS describes Afi as a state-managed wildlife sanctuary with difficult mountainous forest and critically endangered species. Conservation work is not a standing offer of tourist access. Obtain permission from the responsible managers and plan around no wildlife sighting; sensitive gorilla locations should not be sought, disclosed or visited independently."
+      },
+      {
+        "name": "Different forest outings",
+        "detail": "Akure-area woodland trips or Ngwo's pine forest are different landscapes and should not be marketed as equivalents to the protected tropical rainforests listed here. Choose a shorter local walk only if its access arrangements are separately verified; otherwise favour a confirmed ranger-assisted national-park itinerary."
       }
     ],
     "planning": [
       {
-        "label": "Prepare for rain",
-        "detail": "Waterproofing and grip matter even outside peak wet season."
+        "label": "Choose the right entry point",
+        "detail": "For Oban, verify the Akamkpa approach from Calabar. For Okwangwo, check the Ikom/Butatong route and appropriate base. For Okomu, confirm the Udo park entrance and conditions from your starting city. These are not interchangeable pickup locations. Ask park staff for current directions before arranging a driver."
       },
       {
-        "label": "Use recognised trails",
-        "detail": "Do not enter dense forest independently."
+        "label": "Get permission, not just a map pin",
+        "detail": "Ask the National Park Service or relevant state/conservation manager whether casual visitors are being accepted, which trails are open and whether rangers or guides must accompany you. Ask about photography, camping, vehicle requirements, group limits and areas closed for conservation. Never enter a sanctuary without an authorised route."
       },
       {
-        "label": "Carry insect protection",
-        "detail": "Forest conditions differ from city tourism."
+        "label": "Pick a season but check the week's weather",
+        "detail": "The National Park Service's brochure names roughly November–April as a more favourable period for Cross River and October–April for Okomu, when rain tends to ease. These are historical planning ranges, not guarantees of dry tracks or safe driving. Confirm recent rainfall, road access, transport reliability and local safety advice near the visit."
       },
       {
-        "label": "Respect conservation rules",
-        "detail": "Do not remove plants or disturb animals."
+        "label": "Separate admission, activities and accommodation",
+        "detail": "Ask whether any stated charge is for park entrance, escort/ranger, vehicle, camera, camping, boat activity, or overnight lodging. A park brochure's listed chalets or aerial walkway are not proof of current operation or bookable rooms. Get an itemised current quote and cancellation arrangement from an authorised channel before transferring funds."
+      },
+      {
+        "label": "Bring forest-ready essentials",
+        "detail": "Wear grippy covered footwear and breathable clothing, and pack rain protection, drinking water, charged phone/power, personal medicines and insect protection. Arrange your return transport and tell a trusted person your approved route. In remote areas, daylight and communication coverage matter more than fitting multiple sites into one day."
+      },
+      {
+        "label": "Respect wildlife and conservation restrictions",
+        "detail": "Gorillas, chimpanzees, forest elephants and other animals are wild and sightings are never promised. Stay with authorised staff, keep your distance, do not feed wildlife, remove plants, leave litter or reveal sensitive nesting and gorilla locations. Do not treat a camera-trap image as evidence that the public can visit the same spot."
+      },
+      {
+        "label": "Check help if access is uncertain",
+        "detail": "Use the linked official National Park Service brochure and contact channels for Oban, Okwangwo and Okomu; for Afi consult WCS Nigeria's sanctuary account and the responsible Cross River State forestry/conservation officials. If access, fees or guiding cannot be confirmed, choose a different verified activity rather than relying on an informal guide's assurances."
       }
     ],
     "source": {
-      "label": "Nigeria Park Service — National Parks Overview",
-      "href": "https://nigeriaparkservice.gov.ng/overview/"
+      "label": "Nigeria National Park Service — Cross River and Okomu access and visitor brochure",
+      "href": "https://nigeriaparkservice.gov.ng/blog/2023/11/17/nigeria-national-parks-service-brochure/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-14",
+    "sources": [
+      {
+        "label": "WCS Nigeria — Afi Mountain Wildlife Sanctuary and conservation access context",
+        "href": "https://nigeria.wcs.org/Wild-Places/Afi-Mountain-Wildlife-Sanctuary.aspx"
+      },
+      {
+        "label": "Nigeria National Park Service — contact directory for park-specific enquiries",
+        "href": "https://nigeriaparkservice.gov.ng/contact-us/"
+      }
+    ]
   },
   {
     "slug": "nigeria-savanna-nature-guide",
