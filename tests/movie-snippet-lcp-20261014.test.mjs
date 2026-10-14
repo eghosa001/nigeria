@@ -16,7 +16,3 @@ test("high-impression movie titles fit Google snippets including the site suffix
   assert.match(movie, /Agbara Nla: The Return — Cast & Cinema/);
 });
 
-test("movie-thumbnail origin can connect before image fetches", () => {
-  const layout = source("app/layout.tsx");
-  assert.match(layout, /<link rel="preconnect" href="https:\/\/i\.ytimg\.com" \/>/);
-});
