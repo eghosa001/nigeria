@@ -29,16 +29,7 @@ function explicitlyAgencyAssisted(step: string) {
 }
 
 function explicitlyOnlineStep(step: string) {
-  return /\b(?:open|sign in|log in|register|create|submit|download|pay|upload|use|check|track|apply|start)\b.{0,100}\b(?:online|portal|dashboard|self-service|e-facility|website)\b/i.test(step);
-}
-
-function text(service: Service) {
-  return [
-    service.summary,
-    service.requirements.join(" "),
-    service.steps.join(" "),
-    service.notes.join(" "),
-  ].join(" ");
+  return /\b(?:sign in|log in|register|create|submit|download|pay|upload|apply)\b.{0,100}\b(?:online|portal|dashboard|self-service|e-facility|website)\b/i.test(step);
 }
 
 export function getServiceJourney(service: Service): ServiceJourney {
