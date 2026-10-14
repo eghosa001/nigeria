@@ -60,7 +60,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
   "mko-documentary-2026": { title: "MKO Documentary 2026: Cinema Release & Story", description: "MKO documentary story, director, 108-minute runtime and current Nigerian cinema release information for Ose Oyamendan's film." },
   "no-fury-2024": { title: "No Fury Cast, Story & Movie Details", description: "No Fury cast, story and director details for Akay Mason's 2024 Nigerian drama, romance and thriller starring Nse Ikpe-Etim and Jim Iyke." },
   "agbara-nla-the-return": {
-    title: "Agbara Nla: The Return Cast, Cinema Release & Where to Watch",
+    title: "Agbara Nla: The Return — Cast & Cinema",
     description: "Agbara Nla: The Return cast, story, runtime, directors and current Nigerian cinema availability for the 2026 Mount Zion film."
   },
   "first-lady-2026": {
@@ -84,7 +84,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Pushing 30 story and current Africa Magic Showcase premiere information for the Nigerian friendship and adulthood dramedy."
   },
   "sibe": {
-    title: "Sibe (2026) Cast & Full Movie | Bimbo Ademoye",
+    title: "Sibe: Bimbo Ademoye Cast & Full Movie",
     description: "Sibe (2026) cast: Bimbo Ademoye, Uche Montana, Uzor Arukwe and Deyemi Okanlawon. See the comedy story and official Bimbo Ademoye TV full movie.",
   },
   "my-30th-wedding": {
