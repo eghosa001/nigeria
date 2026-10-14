@@ -6,6 +6,13 @@ import { todayIsoNigeria } from "@/lib/job-runtime";
 // may be promoted to the "Upcoming events" shelf. Unknown dates are excluded.
 // Review this small registry when a canonical event schedule is corrected.
 export const featuredEventEndDates: Readonly<Record<string, string>> = {
+  // Established, individually dated event and itinerary guides. End-date
+  // metadata is for display ordering, not a live admission guarantee.
+  "felabration-2026": "2026-10-18",
+  "design-week-lagos-2026": "2026-10-25",
+  "lagos-fashion-week-2026": "2026-11-01",
+  "beneficial-ownership-asset-recovery-conference-2026": "2026-11-11",
+  "detty-december-lagos-2026": "2026-12-30",
   "ecowas-food-cultural-festival-benin-2026": "2026-10-31",
   "ofala-onitsha-2026": "2026-10-25",
   "benin-royal-coronation-anniversary-2026": "2026-11-21",
