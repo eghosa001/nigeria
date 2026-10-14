@@ -14,39 +14,23 @@ export type ServiceJourney = {
   alternativeDetail: string;
 };
 
+// Detect a required physical action in the actual process steps, not from
+// choosing an office, booking biometrics or mentioning "institution" online.
 const physicalRequiredPatterns = [
-  /\battend\b/i,
+  /\b(?:attend|visit|report to|appear at|go to|present at)\b.{0,90}\b(?:office|centre|center|branch|embassy|consulate|school|camp|institution)\b/i,
+  /\b(?:attend|undergo|give|capture|submit|provide)\b.{0,70}\b(?:biometrics?|fingerprints?)\b/i,
   /\bin.person\b/i,
-  /\bbiometric\b/i,
-  /\bfingerprint\b/i,
-  /\b(?:capture|submit)\s+(?:your\s+)?biometric/i,
-  /\b(?:visit|go to|report to|appear at|present at)\s+(?:the |an? )?(?:[a-z -]{0,45})?(?:office|centre|center|branch|embassy|consulate)\b/i,
   /\bcollect (?:your |the )?(?:issued )?(?:certificate|passport|licence|license|card)\s+(?:at|from)\s+(?:the |an? )?(?:office|centre|center|branch)\b/i,
   /\bpresent (?:your |the )?original\s+(?:documents?|records?)\s+(?:at|to)\b/i,
 ];
 
-const assistedPatterns = [
-  /school principal/i,
-  /student affairs/i,
-  /institution/i,
-  /accredited/i,
-  /centre/i,
-  /center/i,
-  /office/i,
-  /embassy/i,
-  /consulate/i,
-  /high commission/i,
-];
+function explicitlyAgencyAssisted(step: string) {
+  return /\b(?:take|bring|submit|collect|obtain|present|register|report|apply)\b.{0,100}\b(?:at|from|through|with|to)\s+(?:(?:the|your|an?|selected|responsible|accredited)\s+){0,3}(?:school|institution|centre|center|office|branch|embassy|consulate)\b/i.test(step);
+}
 
-const explicitlyOnlinePatterns = [
-  /online/i,
-  /portal/i,
-  /dashboard/i,
-  /self-service/i,
-  /e-facility/i,
-  /website/i,
-  /download/i,
-];
+function explicitlyOnlineStep(step: string) {
+  return /\b(?:open|sign in|log in|register|create|submit|download|pay|upload|use|check|track|apply|start)\b.{0,100}\b(?:online|portal|dashboard|self-service|e-facility|website)\b/i.test(step);
+}
 
 function text(service: Service) {
   return [
@@ -86,14 +70,13 @@ export function getServiceJourney(service: Service): ServiceJourney {
     };
   }
 
-  const body = text(service);
   const process = service.steps.join(" ");
   const hasPortal = Boolean(service.officialPortal);
-  // A reference to a collection, driving school or office in supporting
-  // documents does not establish that an actual visit is compulsory.
+  // Body, notes and document lists can mention a school, office or website
+  // without establishing a physical appointment or online application.
   const physicalRequired = physicalRequiredPatterns.some((pattern) => pattern.test(process));
-  const assisted = assistedPatterns.some((pattern) => pattern.test(body));
-  const explicitlyOnline = explicitlyOnlinePatterns.some((pattern) => pattern.test(body));
+  const assisted = service.steps.some(explicitlyAgencyAssisted);
+  const explicitlyOnline = service.steps.some(explicitlyOnlineStep);
 
   if (hasPortal && physicalRequired) {
     return {
@@ -118,10 +101,8 @@ export function getServiceJourney(service: Service): ServiceJourney {
       startLabel: "Use the official online route",
       startDetail: "The current official guidance supports starting this service online using the portal linked on this page.",
       onlineAvailable: true,
-      physicalStatus: assisted ? "may-be-required" : "not-stated",
-      physicalLabel: assisted
-        ? "A physical/assisted step may still apply"
-        : "No mandatory physical visit is stated in the sources we currently use",
+      physicalStatus: "not-stated",
+      physicalLabel: "No mandatory physical visit is established by the documented steps",
       alternativeLabel: "If the online route does not work",
       alternativeDetail: "Use the responsible agency's official contact or office directory. Do not pay an unofficial agent just because the portal is temporarily unavailable.",
     };
@@ -134,8 +115,10 @@ export function getServiceJourney(service: Service): ServiceJourney {
       startLabel: "Use the responsible office or institution",
       startDetail: "The current official guidance relies on an office, institution, accredited centre or in-person process rather than a complete self-service portal.",
       onlineAvailable: false,
-      physicalStatus: "required",
-      physicalLabel: "Plan for a physical or institution-assisted step",
+      physicalStatus: physicalRequired ? "required" : "may-be-required",
+      physicalLabel: physicalRequired
+        ? "A physical stage is described in the application steps"
+        : "Institution assistance is described; confirm whether a visit is needed",
       alternativeLabel: "Online alternative",
       alternativeDetail: "MyNigeriaGuide does not currently have enough official evidence to claim this service can be completed fully online.",
     };
