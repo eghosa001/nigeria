@@ -47,6 +47,7 @@ function GeneratedArtwork({ title, variant }: { title: EntertainmentTitle; varia
         width={640}
         height={960}
         loading={variant === "card" ? "lazy" : "eager"}
+        fetchPriority={variant === "hero" ? "high" : "auto"}
         decoding="async"
       />
       <figcaption><span>Original MyNigeriaGuide poster</span></figcaption>
@@ -77,6 +78,7 @@ export function EntertainmentArtwork({
           width={640}
           height={960}
           loading={variant === "card" ? "lazy" : "eager"}
+          fetchPriority={variant === "hero" ? "high" : "auto"}
           decoding="async"
           referrerPolicy="no-referrer"
         />
@@ -115,6 +117,7 @@ export function EntertainmentArtwork({
             width={480}
             height={360}
             loading={variant === "card" ? "lazy" : "eager"}
+            fetchPriority={variant === "hero" ? "high" : "auto"}
             decoding="async"
           />
         </div>
@@ -155,6 +158,7 @@ export function EntertainmentArtwork({
             width={480}
             height={360}
             loading={variant === "card" ? "lazy" : "eager"}
+            fetchPriority={variant === "hero" ? "high" : "auto"}
             decoding="async"
             referrerPolicy="no-referrer"
           />

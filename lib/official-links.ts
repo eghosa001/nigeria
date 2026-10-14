@@ -105,6 +105,8 @@ const actionOverrides: Record<string, string | null> = {
 
 const transactionHosts = new Set([
   "passport.immigration.gov.ng",
+  // The NIS passport status lookup uses its own official two-number form.
+  "track.immigration.gov.ng",
   "passportintl.immigration.gov.ng",
   "selfservicemodification.nimc.gov.ng",
   "nigeriadriverslicence.frsc.gov.ng",
