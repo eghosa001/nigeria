@@ -4551,61 +4551,71 @@
   },
   {
     "slug": "nigeria-landing-exit-card",
-    "title": "Nigeria Landing & Exit Card: Free Online Form and Requirements",
+    "title": "Nigeria Landing & Exit Card: Free NIS Portal, Eligibility and Card Recovery",
     "shortTitle": "Landing / Exit Card",
-    "summary": "Use the official Nigeria Immigration Service Landing and Exit Card portal to pre-process arrival or departure details online. The NIS portal says the service is free and processing is instant after valid details are submitted.",
+    "summary": "Foreign travellers entering or departing Nigeria can create separate Landing and Exit Cards through the official free NIS LECARD portal. Travellers using Nigerian passports do not need them, and the portal excludes transit passengers. Create a portal account first, apply close to your travel date, retrieve a previous card if necessary, and use official immigration support for pending, declined or unscanned cards.",
     "category": "International travel",
     "agencySlug": "nis",
     "feeLabel": "FREE",
-    "timeline": "The official portal says processing is instant after valid details are submitted and the traveller meets the requirements.",
+    "timeline": "The NIS portal says valid Landing/Exit Card submissions are normally processed instantly, but an individual application can still show pending or declined. Landing Cards may be created only 24–48 hours before arrival according to the official FAQ. Check the actual status and email confirmation instead of assuming instant approval.",
     "status": "verified",
     "officialPortal": "https://lecard.immigration.gov.ng/",
     "requirements": [
-      "A foreign traveller entering or departing Nigeria who is covered by the NIS portal",
-      "A valid visa or passport number accepted by the portal",
-      "Personal details that match the traveller's official identification",
-      "Working email or phone contact for confirmation"
+      "A foreign traveller entering or leaving Nigeria for a visit, business or a temporary stay; people travelling on Nigerian passports are exempt from the online Landing/Exit Card process, and transit passengers are excluded.",
+      "A valid visa or passport number appropriate to the category chosen in the portal, with nationality, date of birth and legal name matching the travel document.",
+      "A separate NIS LECARD user account. An account previously created on the Nigerian e-visa platform is not automatically a LECARD account.",
+      "Working email access for login, a downloadable confirmation and recovery. Prepare an accurate phone number when requested.",
+      "For a departure/Exit Card, arrival and travel details matching the actual immigration record; if the portal asks for an arrival stamp, locate the passport entry stamp or follow NIS instructions if none is available."
     ],
     "steps": [
-      "Open the official NIS Landing and Exit Card portal and choose Arrival for a Landing Card or Departure for an Exit Card.",
-      "Enter the traveller's valid visa or passport number and complete the personal and contact information exactly as it appears on the travel documents.",
-      "Review every field before submission because the portal says submitted information cannot be edited; if an error is made, a corrected application has to be submitted.",
-      "Submit the card application and wait for the instant processing result, then download the Landing Card or Exit confirmation sent by the official portal.",
-      "Print or securely save the confirmation for presentation at the immigration checkpoint; each traveller must submit an individual application."
+      "Check eligibility before you start: the NIS FAQ says foreigners visiting or departing Nigeria should use LECARD, Nigerian-passport travellers do not need it, and transit passengers should not use this portal. It is not an application for a visa or an entry permit.",
+      "Open https://lecard.immigration.gov.ng/ and create a dedicated LECARD account or sign in. The visa portal login is separate; if a record already exists for your passport, use its registered email address rather than creating a duplicate account.",
+      "Choose Arrival for a Landing Card or Departure for an Exit Card. For an arrival, NIS says you can create the Landing Card only in the 24–48 hours before reaching Nigeria; an earlier unavailable option does not necessarily mean your passport has been rejected.",
+      "Select the correct passport/eligibility category displayed by the portal, enter the visa or passport number exactly and supply matching personal and contact details. Check name order, passport country, birth date and email before submission.",
+      "Review and submit the form only after checking every field. NIS says a submitted form cannot be edited: correcting a genuine mistake generally means making a new application with corrected details, with support involvement if required.",
+      "Watch for the email confirmation and downloadable Landing or Exit Card. Save a copy securely and print it if needed for the immigration checkpoint. Do not assume a pending or declined form is approved just because the general FAQ says valid applications are normally processed instantly.",
+      "For a return trip, create the separate Exit Card when the departure stage is available; the FAQ says an approved Landing Card should have a corresponding Exit Card. Creating a Landing Card does not automatically complete the exit process.",
+      "Lost the card or email? Open https://lecard.immigration.gov.ng/get-last-card and enter the passport number, country of issuance and date of birth exactly. This official retrieval service is different from starting a new Arrival application.",
+      "If the card shows expired despite travel, NIS says this can mean it was not scanned at the airport or port: contact LECARD support with the relevant entry or exit stamp. If there is no arrival stamp, NIS asks for a signed explanatory letter, and for a missing card option it may request a screenshot of the relevant stamp.",
+      "If the status remains pending or was declined, check the status message, correct the affected detail where permitted and contact official support with a screenshot. If an Exit Card generates an overstay invoice, verify the reason and obtain official guidance instead of assuming the free card itself has a fee."
     ],
     "notes": [
-      "The NIS portal FAQ says foreigners visiting or departing Nigeria must use the portal to pre-process arrival and departure details.",
-      "The service is free and the portal says processing is instant once valid details are submitted and the traveller meets the requirements.",
-      "Submitted information cannot be edited; if an error is made, a corrected application must be submitted.",
-      "The portal is not intended for transit passengers.",
-      "NIS's official LECARD FAQ says people travelling on Nigerian passports do not need Landing or Exit Cards; this online form is for foreign travellers covered by the portal.",
-      "NIS advises that a Landing Card may be created only 24–48 hours before arrival. If the form is unavailable earlier, check again during that period.",
-      "If you lose the printed confirmation, the NIS portal provides an emailed copy and a separate Get Your Last Card tool for reprinting."
+      "The LECARD application itself is free according to the NIS portal. A travel visa, airline fare, overstay assessment or another immigration transaction can carry separate charges; do not interpret the free-form policy as a waiver of all travel-related fees.",
+      "NIS says Nigerian-passport travellers are exempt, but the exemption is expressly framed for someone travelling on a Nigerian passport. Travellers using another country's passport should check the correct category with the airline and NIS instead of inferring that Nigerian ancestry grants an exemption.",
+      "NIS excludes transit passengers who are not entering or exiting for a qualifying visit, business or temporary stay. Verify whether you are actually entering Nigeria through passport control rather than treating every airport connection as a landing-card obligation.",
+      "The FAQ says you can prepare a Landing Card only 24–48 hours before your arrival; this restriction relates to the arrival application and is not a fixed visa issuance timetable or an appointment for passenger screening.",
+      "The portal normally processes valid cards instantly but lists pending and declined scenarios. Pending means a review may still be in progress; declined requires reading the reason and correcting the affected data. Neither status should be ignored at travel time.",
+      "NIS states that forms cannot be edited after submission. Check travel-document spelling and names carefully before submitting. Where the LECARD account name itself differs from the visa, its FAQ says to contact support for correction.",
+      "A card marked expired can reflect an immigration officer not scanning it at entry or exit. NIS instructs travellers to supply the relevant entry/exit stamp for support; it does not say that everyone with an expired status must automatically buy a new ticket or pay a fine.",
+      "If an Exit Card generates an overstay invoice, it is separate from the free Landing/Exit Card service. Follow the official portal and NIS support to understand the stay dates and any assessment rather than sending money to agents.",
+      "Use the official Get Your Last Card function for a previously issued card. It requires passport number, country of issuance and date of birth; do not submit passport biodata through third-party recovery sites.",
+      "NIS publishes support at lecard@immigration.gov.ng and +234 912-1556-359 / +234 912-1900-655, with a stated phone support window of 07:00–20:00 WAT. These contact details may change, so confirm them on the official portal FAQ.",
+      "The LECARD portal is intended for individual applications, not a single form covering a family or tour group. Each eligible traveller must supply their own identity and application details."
     ],
     "sources": [
       {
-        "label": "NIS Landing and Exit Card",
-        "agency": "Nigeria Immigration Service",
-        "url": "https://immigration.gov.ng/lecard/",
-        "lastChecked": "2026-10-06"
-      },
-      {
-        "label": "NIS Landing and Exit Card Portal",
+        "label": "NIS — Landing/Exit Card official application and eligibility options",
         "agency": "Nigeria Immigration Service",
         "url": "https://lecard.immigration.gov.ng/",
-        "lastChecked": "2026-10-06"
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "NIS LECARD frequently asked questions",
+        "label": "NIS — LECARD FAQ, deadlines, exemptions, support and error recovery",
         "agency": "Nigeria Immigration Service",
         "url": "https://lecard.immigration.gov.ng/faq",
-        "lastChecked": "2026-10-09"
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "NIS retrieve a previous Landing or Exit Card",
+        "label": "NIS — retrieve a previously issued Landing or Exit Card",
         "agency": "Nigeria Immigration Service",
         "url": "https://lecard.immigration.gov.ng/get-last-card",
-        "lastChecked": "2026-10-09"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NIS — official Landing and Exit Card service notice",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/lecard/",
+        "lastChecked": "2026-10-14"
       }
     ],
     "searchTerms": [
@@ -4632,7 +4642,7 @@
       "yellow-card",
       "passport-application-abroad"
     ],
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "police-character-certificate",
@@ -11723,52 +11733,77 @@
   },
   {
     "slug": "ninauth-nin-verification",
-    "title": "How to verify your identity with NINAuth",
+    "title": "NINAuth App: Generate a NIN Sharecode, Scan QR and Download Your NIN Slip",
     "shortTitle": "NIN verification with NINAuth",
-    "summary": "Use NIMC's official NINAuth app to verify and share your identity securely with participating organisations by QR code or time-limited Sharecode.",
+    "summary": "Use NIMC's official NINAuth app to consent to identity verification with a participating organisation using a short-lived Sharecode or organisation QR code. NIMC also added free official NIN-slip downloads via Do More with NINAuth in June 2026. This service uses an existing NIN; it does not enrol you for a new number.",
     "category": "Identity",
     "agencySlug": "nimc",
-    "feeLabel": "No individual app fee stated on the official NINAuth guide",
-    "feeNote": "NINAuth's public individual guidance does not state a charge simply to install the app or use its individual identity-sharing features. Verification partners and aggregators have separate commercial arrangements.",
-    "timeline": "Identity sharing or verification is designed to happen during the app interaction once your NINAuth profile is active and the requesting organisation supports NINAuth.",
+    "feeLabel": "NINAuth app / NIN slip download: free",
+    "feeNote": "NIMC's June 2026 NINAuth announcement expressly says downloading an official NIN slip within the app is free. The general individuals page does not advertise a charge for app download or Sharecode generation; businesses and verification service providers may have different charges. Avoid agents charging to provide the already-free slip.",
+    "timeline": "A Sharecode is designed to be time-limited, and an eligible verification can take place during the app session once your profile is active and the partner supports NINAuth. The published public instructions do not guarantee a fixed number of minutes for every code or resolve a failed verification without the participating organisation.",
     "status": "verified",
     "officialPortal": "https://ninauth.nimc.gov.ng/download",
     "requirements": [
-      "An existing National Identification Number (NIN)",
-      "An Android or iOS smartphone that meets NINAuth requirements",
-      "An active NINAuth profile on the device",
-      "A participating organisation's NINAuth QR code or a request that accepts a NINAuth Sharecode"
+      "An existing National Identification Number: NINAuth is a verification and digital-identity service, not a substitute for first-time NIMC enrolment.",
+      "A compatible Android or iOS smartphone and access to the official NINAuth app from NIMC's download page; meet any NIMC age/guardian-consent requirements.",
+      "An activated NINAuth profile linked to your existing NIN and any onboarding identity checks the app requests.",
+      "For a Sharecode verification, an organisation that explicitly accepts NINAuth Sharecodes; for QR verification, an organisation-provided QR code.",
+      "For free NIN slip download, a current version of NINAuth showing the Do More with NINAuth feature and its NIN Slip option.",
+      "Read the organisation's request before granting permission to share any name, date of birth, photograph or other identity attributes."
     ],
     "steps": [
-      "Open NIMC's official NINAuth website and use its download route to install the app from the official app store listing.",
-      "Register or activate NINAuth with your NIN and complete the identity checks required by the app.",
-      "When an organisation asks for NINAuth verification, review exactly what information it is requesting before you approve anything.",
-      "Scan the organisation's NINAuth QR code or generate a time-limited Sharecode in your NINAuth profile, depending on the verification method offered.",
-      "Approve only the requested data you intend to share, then confirm the verification result in the app or with the requesting organisation."
+      "Open https://ninauth.nimc.gov.ng/download rather than a third-party APK or a website advertising paid NINAuth Sharecodes. Use NIMC's official Android or iOS store link, install the app and follow its current onboarding instructions with your existing NIN.",
+      "Activate and secure the account using the identity and device checks the app requires. Do not supply your app password, verification code or biometrics to an agent. If you do not yet have a NIN, use the separate NIMC enrolment service before attempting NINAuth verification.",
+      "If a bank, telecom operator, recruitment portal or government service asks for a NINAuth Sharecode, open the Sharecode function in your NINAuth profile and generate a fresh time-limited code. Give it only to the named organisation as part of a verification you initiated.",
+      "If the organisation presents a NINAuth QR code instead, use the app's Scan QR / Scan Code feature to read that organisation's code. A random QR code from a social-media poster is not proof it belongs to an authorised identity-verification partner.",
+      "Review which identity details the requesting service wants. Approve only the verification or data-sharing request you recognise. A NINAuth Sharecode is for consent-based verification; it is not a replacement for all KYC requirements or permission to share your raw NIN publicly.",
+      "Confirm that the requesting organisation received the verification result; if it fails or the code expires, begin a fresh request rather than repeatedly forwarding an old Sharecode. Ask the organisation whether its own integration and accepted verification method are operational.",
+      "To download your official NIN slip for free, update NINAuth to the latest version, open Do More with NINAuth, tap NIN Slip, then download and securely save the document. NIMC's 18 June 2026 update says this is the same valid slip previously obtained through NIMC channels.",
+      "Keep a slip private and share only when required. A downloaded document is useful for presenting a printable identity record; it does not grant another organisation permission to silently access all data in your app.",
+      "If the Sharecode, QR scanner or NIN Slip option is missing, confirm the app is updated and that you are signed in to the official NIMC product. The public site lists the supported features, but real deployment, minimum age and identity-match issues may vary; use official NINAuth support instead of an unofficial agent."
     ],
     "notes": [
-      "NIMC describes NINAuth as a consent-based digital identity verification service for online and in-person use.",
-      "A NINAuth Sharecode is intended to let you share verified identity information without handing over more data than the supported verification requires.",
-      "NINAuth cannot enrol a person for a new NIN; people without a NIN must complete NIMC enrolment first."
+      "NIMC's official Get Started guide supports two organisation-facing workflows: scanning the organisation's NINAuth QR code or producing a unique time-limited Sharecode for a compatible verifier. Which option appears depends on the service you are using, and not every business has integrated NINAuth.",
+      "NINAuth uses existing NIN data for consent-based identification and verification; it does not register a first-time NIN. A failed identity match needs correction through recognised NIMC routes, not the purchase of another NIN.",
+      "NIMC officially launched NINAuth in May 2025 and published its Do More with NINAuth/NIN Slip download feature on 18 June 2026. Guides that only describe identity verification miss this later free document service.",
+      "To download the free official slip, the published NIMC instructions say: Do More with NINAuth → NIN Slip → Download. This is a NIMC-published feature, not a third-party PDF generation website. Keep the latest app version.",
+      "NINAuth says the slip can be presented in settings such as banks and government offices that require a physical or printable NIN slip. Acceptance of any other identity document, QR code or partner workflow still depends on the requesting organisation.",
+      "NIMC's download page says users must have a NIN, meet minimum-age conditions and agree to its terms; users under 18 may require parent or guardian consent. Do not claim every minor can use every app feature without restriction.",
+      "Protect your NIN and any verification Sharecode. Sharecodes are temporary by design, but should still be given only for an intended application. If you receive an unexpected request or an unfamiliar QR code, do not approve it.",
+      "The public NINAuth individual pages do not set a universal individual Sharecode fee, expiry minute count or promised success rate. Avoid paying agents based on invented OTP-like charges or assuming every NINAuth integration accepts one code format.",
+      "The free NIN slip download within NINAuth should not be confused with having to order a plastic national identity card. It is the official printable slip rather than a new NIN assignment.",
+      "Some older guides use the labels 'NIN validation', 'NIN verification', 'Sharecode' and 'NIN Slip' interchangeably. Validation/identity sharing is an in-app consent interaction; the slip is a document to save or print; first-time NIN enrolment is a separate service."
     ],
     "sources": [
       {
-        "label": "NINAuth for Individuals",
-        "agency": "National Identity Management Commission",
-        "url": "https://ninauth.nimc.gov.ng/individuals",
-        "lastChecked": "2026-10-03"
-      },
-      {
-        "label": "NINAuth Get Started",
-        "agency": "National Identity Management Commission",
-        "url": "https://ninauth.nimc.gov.ng/get-started",
-        "lastChecked": "2026-10-03"
-      },
-      {
-        "label": "Download NINAuth",
+        "label": "NIMC NINAuth — official app download and eligibility",
         "agency": "National Identity Management Commission",
         "url": "https://ninauth.nimc.gov.ng/download",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NIMC NINAuth — Sharecode and QR verification instructions",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/get-started",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NIMC NINAuth — free official NIN slip download, 18 June 2026",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/news-room/download-your-nin-slip",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NIMC NINAuth — Do More service expansion, 18 June 2026",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/news-room/do-more-with-ninauth",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NIMC NINAuth — individuals and consent-based verification",
+        "agency": "National Identity Management Commission",
+        "url": "https://ninauth.nimc.gov.ng/individuals",
+        "lastChecked": "2026-10-14"
       }
     ],
     "searchTerms": [
@@ -11777,14 +11812,20 @@
       "NINAuth",
       "NIMC verification",
       "NIN verification app",
-      "NINAuth share code"
+      "NINAuth share code",
+      "NINAuth sharecode",
+      "how to generate NIN share code",
+      "how to get NIN slip free",
+      "NINAuth download NIN slip",
+      "NIMC NINAuth app",
+      "NINAuth QR verification"
     ],
     "related": [
       "nin-enrolment",
       "nin-slip-reissue",
       "nin-name-modification"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "nabteb-result-checker",
