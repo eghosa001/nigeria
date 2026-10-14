@@ -2944,14 +2944,20 @@ export const exploreGuides: ExploreGuide[] = [
   },
   {
     "slug": "mambilla-plateau-guide",
-    "title": "Mambilla Plateau Guide: Gembu, Highland Weather & Road Trip Planning",
+    "title": "Mambilla Plateau, Taraba: Gembu, Kakara Tea, Waterfalls and Road Trip Guide",
     "shortTitle": "Mambilla Plateau",
     "kind": "destination",
     "region": "Taraba State",
-    "summary": "Plan the Mambilla Plateau as a multi-day highland road trip based around Gembu, with current road, weather, local-access and security checks before travelling.",
+    "summary": "Mambilla Plateau is the highland landscape around Gembu in Sardauna LGA, Taraba State—not a single ticketed resort. Compare viewpoints, Kakara tea country, the Barup waterfall area and conservation landscapes; plan for steep access roads, cooler wet weather, local permissions and uncertain visitor facilities.",
     "intro": [
-      "The Mambilla Plateau is one of Nigeria's major highland landscapes and has a distinct destination intent that cannot be served well by a generic Taraba list.",
-      "Distance and road variability make this a trip to plan conservatively. Use Gembu as a practical highland base and confirm current travel conditions before setting out."
+      "Where exactly is Mambilla Plateau? It is a high, undulating landscape in Sardauna Local Government Area of southeastern Taraba State, toward the Cameroon border. Gembu serves as the most practical base for ordinary travellers arranging a driver, local guidance and lodging, but the plateau is not one fenced attraction with a universal entrance fee. Choose a particular stop before asking for directions; Kakara tea country, a waterfall and a forest reserve are distinct destinations.",
+      "The Federal Ministry of Information's tourism directory places the plateau around Gembu and describes a temperate, high-altitude landscape with several waterfalls including Barup, Manchewa, Rufi, Tiba and Bambika. A Taraba destination listing describes highland tea fields, rolling slopes and cool conditions. Their published elevation figures vary by area and source, so avoid pretending that one measurement describes every viewpoint; changing altitude also changes temperature, clouds and exposure.",
+      "The best first-day experience is the highland itself: grass-covered ridges, farming settlements, grazing lands and the views that open along the plateau's winding roads. Mist and rain can hide a panorama entirely, so plan viewpoints around daylight and an available local guide rather than a guaranteed sunrise photograph. The mountains are living community and agricultural spaces, not empty scenery; request permission before walking onto private farms or photographing residents.",
+      "Tea-growing is part of the area’s economic identity. The Taraba destination directory identifies Kakara tea fields as a characteristic Mambilla experience, and local reporting describes a historic tea factory and estates. Seeing plantations from a public approach is not the same as being permitted to enter the factory or walk among tea bushes. Ask estate management or a recognised local guide about visits, transport, working hours and photography. No current visitor fee, factory-tour ticket or free-access promise was established by the checked sources.",
+      "Barup Waterfall and other named falls are natural attractions in the wider highland region, not a single waterfall circuit managed through one desk. Some roads may be earth tracks, require additional local transport or become difficult after rainfall. A destination listing locates Barup in the Kakara area but does not establish a live ticket booth, lifeguard, bridge condition or swimming permission. Treat any water-edge visit as conditional on safe current access; viewing from a dry vantage point is different from entering a pool beneath a cascade.",
+      "Ngel Nyaki Forest Reserve is a conservation site associated with the plateau and montane biodiversity. It is not interchangeable with nearby Gashaka-Gumti National Park. Nor is climbing Chappal Waddi, Nigeria’s tallest mountain, an informal day trip from Gembu: the mountain lies in difficult protected highlands, and an expedition needs the relevant park authority, access permissions, capable guides and realistic multi-day logistics. Do not promise rare-animal sightings or disclose sensitive wildlife locations.",
+      "The Nigerian tourism ministry's 2024 report discussed the possibility of an Mambilla airstrip, but an announcement about a possible project does not demonstrate a functioning scheduled passenger service. For now, verify actual air and ground connections independently rather than writing an itinerary that depends on a proposed airstrip. The same caution applies to accommodation directories: a motel mentioned in an older guide may no longer have rooms, power, water or card-payment facilities.",
+      "This page is designed to help a traveller decide whether the plateau fits a two-to-four-day trip, not to pretend it is always open, safe or affordable. Before departure, verify the route and local security situation, the final destination with your driver, the exact accommodation address, reliable return transport, any guide requirement and weather conditions. If those cannot be established with a trusted local provider, postpone a remote excursion rather than relying on old travel videos or unverified ticket sellers."
     ],
     "bestFor": [
       "Highlands",
@@ -2961,45 +2967,91 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Mambilla highlands",
-        "detail": "Rolling highland scenery and cooler conditions are the main draw, best appreciated over more than a rushed day."
+        "name": "Gembu — planning base in Sardauna LGA",
+        "detail": "Gembu is the area’s main highland town and a practical meeting point for food, transport and locally verified accommodation. Confirm where your driver will meet you and whether your intended village or viewpoint is another journey beyond town; do not label the whole plateau 'Gembu' on a map."
       },
       {
-        "name": "Gembu",
-        "detail": "The town is the practical centre for arranging local transport, supplies and overnight logistics."
+        "name": "Kakara tea fields",
+        "detail": "Tea cultivation is a notable feature of the cool highlands. The Taraba destination directory identifies Kakara tea country; farm/factory gates and private property remain subject to operator permission. Check if any tours actually exist, rather than repeating older guesthouse or golf-course claims."
       },
       {
-        "name": "Tea-growing landscape",
-        "detail": "Tea is part of the plateau's identity; any estate or factory access should be arranged directly rather than assumed."
+        "name": "Barup and the waterfall country",
+        "detail": "The federal tourism source names Barup, Manchewa, Rufi, Tiba and Bambika falls in the plateau region. Use one confirmed waterfall with a local guide rather than attempting all five; conditions of access tracks and safe viewing points are not established by the historic source."
       },
       {
-        "name": "Weather changes",
-        "detail": "Highland rain, mist and visibility can alter driving and sightseeing plans quickly."
+        "name": "Mambilla grassland viewpoints",
+        "detail": "Rolling ridges and pastoral and farm landscapes provide highland scenery that can be appreciated without a difficult summit trek. Keep to public/authorised routes and adjust timing for cloud, rain or community land-use restrictions."
+      },
+      {
+        "name": "Ngel Nyaki Forest Reserve",
+        "detail": "A distinct high-altitude forest conservation landscape. Protected forest access, scientific areas, wildlife and photography may require permissions; contact authorised managers before planning an excursion, and do not expect a guaranteed chimpanzee sighting."
+      },
+      {
+        "name": "Chappal Waddi and Gashaka-Gumti",
+        "detail": "These are regional highland conservation landmarks, not casual visitor facilities attached to a tea-estate ticket. A summit expedition requires specialist logistics, an approved route and official park guidance; it should not be marketed as a quick Gembu afternoon stop."
       }
     ],
     "planning": [
       {
-        "label": "Plan multiple days",
-        "detail": "Do not treat the plateau as a quick detour from distant Nigerian cities."
+        "label": "How many days should I allow?",
+        "detail": "Allow at least a full day to arrive and settle, a separate daylight day for one or two confirmed highland experiences and contingency time to return. Add days for distant access roads, rain or authorised protected-area work. A long interstate drive followed by a rushed waterfall stop is a poor plan."
       },
       {
-        "label": "Check the road",
-        "detail": "Verify current route and travel-time conditions close to departure."
+        "label": "What is the best time to visit?",
+        "detail": "The plateau stays comparatively cool but can be wet, foggy and exposed. There is no verified universally best week or exact daily temperature for every sector. Ask residents, guides and your driver about the current rains, road condition and visibility in the days immediately before travel, not just a monthly average."
       },
       {
-        "label": "Pack for cooler weather",
-        "detail": "Even in Nigeria, highland temperatures and rain can require warmer or waterproof layers."
+        "label": "How do I reach Gembu safely?",
+        "detail": "Gembu is in southeastern Taraba, not next to Jalingo. Get a current mapped route, realistic travel duration, fuel stops, vehicle suitability, daylight arrival and contingency accommodation from a trusted driver who knows the escarpment. Do not assume an announced future Mambilla airstrip offers passenger flights."
       },
       {
-        "label": "Use local guidance",
-        "detail": "Confirm which viewpoints, farms or natural areas are open and appropriate to visit."
+        "label": "Where can I stay?",
+        "detail": "Ask accommodation providers directly for a dated room confirmation, actual location, water, electricity, meals, accessible facilities, network coverage, cancellation policy and method of payment. Historic online hotel lists and phone numbers are not live booking evidence; secure overnight options before committing to remote travel."
+      },
+      {
+        "label": "How do I arrange the tea-estate visit?",
+        "detail": "State whether you want to view tea-growing scenery, buy local tea, learn about production or tour a working facility. Obtain permission from the estate/operator or an authorised local contact for anything beyond public vantage points. Do not enter machinery areas or farms uninvited, and confirm fees and opening windows if visits are possible."
+      },
+      {
+        "label": "Can I swim at waterfalls?",
+        "detail": "Do not assume a waterfall is a supervised swimming destination. Check water flow, current, depth, rocks, weather, local restrictions and return access; when uncertain, stay at a confirmed safe viewpoint. Arrange guides and transport in advance and do not follow unverified 'secret falls' coordinates into private or protected land."
+      },
+      {
+        "label": "Can I climb Chappal Waddi or see rare wildlife?",
+        "detail": "Those experiences require separate national-park/conservation permissions and trained guidance. A mountain climb can involve difficult trails and overnight logistics, while wildlife sightings are unpredictable. Never promise access to chimpanzees, forest nesting areas or a peak from casual street transport."
+      },
+      {
+        "label": "What should I carry?",
+        "detail": "Pack grippy covered shoes, light warm layer for highland evenings, rain shell, drinking water, cash for confirmed local purchases, charged phone/power, medication and essential identification. Tell a trusted person your route and emergency contact; choose a reliable offline map and daytime return when signal is weak."
+      },
+      {
+        "label": "What is actually confirmed about prices?",
+        "detail": "None of the checked public sources establishes a universal plateau entry fee, confirmed tea-factory ticket, waterfall admission, hotel rate or transport fare. Get written itemised current quotes and avoid deposits to unverified sellers. A tourism ministry describing an attraction does not automatically grant public access."
       }
     ],
     "source": {
-      "label": "Taraba State Government",
-      "href": "https://www.tarabastate.gov.ng/"
+      "label": "Federal Ministry of Information — Mambilla Plateau and named waterfalls",
+      "href": "https://fmino.gov.ng/culture/tourism/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-14",
+    "sources": [
+      {
+        "label": "Taraba State Ministry of Heritage & Ecotourism — state destination context",
+        "href": "https://tarabatourism.org.ng/"
+      },
+      {
+        "label": "Taraba destination guide — Gembu, Kakara and local highlands",
+        "href": "https://www.discovertaraba.org/destinations"
+      },
+      {
+        "label": "Nigerian Investment Promotion Commission — Taraba conservation and transport context",
+        "href": "https://nipc.gov.ng/nigeria/taraba"
+      },
+      {
+        "label": "Federal Ministry of Information — 2024 Mambilla airstrip planning announcement",
+        "href": "https://fmino.gov.ng/taraba-state-a-symbol-of-historic-relevance-in-tourism-development-according-to-minister-of-tourism/"
+      }
+    ]
   },
   {
     "slug": "cross-river-national-park-guide",
