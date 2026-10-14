@@ -17,3 +17,9 @@ test("GA4 events and PostHog pageviews remain implemented", () => {
   assert.match(read("lib/client-analytics.ts"), /capturePostHogEvent\(name, params\)/);
   assert.match(read("components/posthog-analytics.tsx"), /capturePostHogPageView\(pathname\)/);
 });
+
+test("indexable YouTube detail hero prioritizes the real video thumbnail", () => {
+  const detail = read("app/entertainment/youtube/[videoId]/page.tsx");
+  assert.match(detail, /className="youtube-detail-artwork"[\\s\\S]*fetchPriority="high"/);
+  assert.match(detail, /className="youtube-detail-artwork"[\\s\\S]*loading="eager"/);
+});
