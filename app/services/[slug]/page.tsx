@@ -305,14 +305,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
           <aside className="guide-sidebar">
             <div className="sidebar-card sidebar-agency">
-              <span>Responsible agency</span>
+              <span>Responsible organisation</span>
               <strong>{agency?.name}</strong>
               {agency ? <Link href={"/agencies/" + agency.slug}>View agency guides →</Link> : null}
             </div>
             <div className="sidebar-card">
               <span>Compare fees</span>
               <strong>Check the verified fee directory.</strong>
-              <Link href="/fees">View government fees →</Link>
+              <Link href="/fees">Browse service fee guides →</Link>
             </div>
             <div className="sidebar-card">
               <span>Need an office?</span>
@@ -321,8 +321,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
             <div className="sidebar-card safety-card">
               <span>Payment safety</span>
-              <strong>Pay only through the responsible agency.</strong>
-              <p>MyNigeriaGuide never collects government application fees or asks for your password, card PIN or NIN.</p>
+              <strong>Pay only through the responsible provider’s verified route.</strong>
+              <p>MyNigeriaGuide does not collect payment for the services listed here. Never share passwords, payment PINs or one-time codes with an unofficial intermediary.</p>
             </div>
           </aside>
         </div>
