@@ -477,8 +477,9 @@ const rawJobOpportunities: CareerOpportunity[] = [
     organization: "Nigerian Army",
     sector: "Government",
     status: "open",
-    statusLabel: "Applications ongoing",
-    summary: "The Nigerian Army's official recruitment portal currently states that 92 Regular Recruits Intake (92RRI) online applications are ongoing for trades/non-trades candidates and a separately labelled Special Skilled category.",
+    statusLabel: "Applications open until 21 October 2026",
+    deadline: "2026-10-21",
+    summary: "The Nigerian Army's 92 Regular Recruits Intake (92RRI) online applications are ongoing for trades/non-trades and the Special Skilled category. An Army recruitment-team briefing identifies 21 October 2026 as the closing date; confirm updates on the official free application portal.",
     location: "Nigeria",
     employmentType: "Military recruitment / Regular Recruit Intake",
     audiences: ["SSCE holders", "Tradesmen/Women", "Non-Tradesmen/Women", "Special Skilled applicants"],
@@ -507,23 +508,24 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     applicationSteps: [
       "Open the official Nigerian Army recruitment portal.",
-      "Create or use your recruitment account and complete the online form.",
+      "Create or use your recruitment account. Verify your NIN through the official portal's direct-number, NINAuth six-character share-code or QR route, and complete the online form for your chosen category.",
       "After completing the online form, print the photo card and make sure you also finish the online SUBMIT step. The Army warns that printing the photo card without submitting online can lead to disqualification.",
       "Complete the guarantor, applicant declaration and state/LGA forms requested by the portal, and prepare signed versions for screening.",
-      "If shortlisted, report to your state-of-origin screening centre with the signed documents requested by the Army."
+      "Submit the application by 21 October 2026 unless the Army announces an extension. If shortlisted, report to the state-of-origin screening centre with the signed documents requested by the Army in the 17 November–1 December screening window."
     ],
     officialUrl: "https://recruit.army.mil.ng/",
     officialUrlLabel: "Apply on the official Nigerian Army portal",
-    verifiedAt: "2026-10-09",
-    nextMilestone: "The official portal says shortlisted candidates are expected to attend state screening from 17 November to 1 December 2026.",
+    verifiedAt: "2026-10-14",
+    nextMilestone: "Online applications are announced to close on 21 October 2026. Shortlisted applicants are expected at their state-of-origin screening centres between 17 November and 1 December 2026 according to the Army portal.",
     feeNote: "The Nigerian Army states that recruitment is FREE. Do not pay for application access, shortlisting or screening.",
     sourceNotes: [
-      "The Nigerian Army portal currently labels 92RRI online application as ongoing.",
+      "The Army recruitment team announced 9 September–21 October 2026 for this intake at the Oyo State sensitisation event; the original Army portal still says applications are ongoing as of 14 October.",
       "The portal publishes the qualification, age, height, identity and screening-document requirements used in this guide.",
-      "On 9 October the official page also describes Special Skilled eligibility and explicitly warns that applicants must submit the online application after printing the photo card."
+      "On 14 October the official page still distinguished Special Skilled eligibility, documented NINAuth verification routes, said there would be no pre-selection CBT, and warned that printing without online submission can cause disqualification."
     ],
     sources: [
-      { label: "Nigerian Army Recruitment Portal", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-09" }
+      { label: "Nigerian Army — official 92RRI portal and instructions", url: "https://recruit.army.mil.ng/", lastChecked: "2026-10-14" },
+      { label: "Voice of Nigeria — recruitment-team confirmation of 21 October deadline", url: "https://von.gov.ng/oyo-governor-lauds-army-for-approving-new-formations/", lastChecked: "2026-10-14" }
     ]
   },
   {
