@@ -32,10 +32,17 @@ function relevantRequirements(service: Service, step: string) {
     .map((row) => row.item);
 }
 
+// Mentioning an office or booking biometrics online is not itself a physical visit.
+function isPhysicalAction(step: string) {
+  return /\b(?:attend|visit|report to|appear at|go to|present at)\b.{0,90}\b(?:office|centre|center|branch|embassy|consulate|camp|school|institution)\b/i.test(step)
+    || /\b(?:undergo|give|capture|submit)\b.{0,60}\b(?:biometrics?|fingerprints?)\b/i.test(step)
+    || /\b(?:collect|pick up|submit|deliver|present)\b.{0,80}\b(?:at|from|to)\s+(?:(?:the|an?|selected|designated|local|nearest)\s+){0,3}(?:office|centre|center|branch|embassy|consulate|school|institution)\b/i.test(step);
+}
+
 function stageFor(step: string, index: number) {
   if (/\b(?:download|print|receive|issued)\b|\bcollect (?:the |your )?(?:slip|certificate|card|document|result)\b/i.test(step)) return "Collect / finish";
   if (/track|status|monitor|follow up|follow-up|wait for|approval|decision/i.test(step)) return "Follow up";
-  if (/attend|visit|centre|center|office|biometric|fingerprint|capture|school|institution|branch/i.test(step)) return "Physical / assisted stage";
+  if (isPhysicalAction(step)) return "Physical / assisted stage";
   if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Payment";
   if (/upload|attach|document|evidence|certificate|affidavit|passport photograph|photo/i.test(step)) return "Documents / upload";
   if (/verify|confirm|review|check|match/i.test(step)) return "Verify details";
@@ -47,7 +54,7 @@ function stageFor(step: string, index: number) {
 function checkpointFor(step: string) {
   if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Confirm the service, applicant/entity details and amount on the official payment screen before paying. Do not continue from an unsolicited payment link.";
   if (/upload|attach|document|evidence|certificate|affidavit|photo/i.test(step)) return "Check that every file belongs to the correct applicant/record, is readable and matches the portal prompt before upload.";
-  if (/attend|visit|centre|center|office|biometric|fingerprint|capture/i.test(step)) return "Confirm the correct office/centre, date or appointment instruction before travelling, and take the originals where the guide or agency explicitly requires them.";
+  if (isPhysicalAction(step)) return "Confirm the correct office/centre, date or appointment instruction before travelling, and take the originals where the guide or agency explicitly requires them.";
   if (/submit|send|apply|request|register|file|enrol/i.test(step)) return "Review names, numbers, dates, contact details and selections before final submission because corrections may require a separate official process.";
   if (/collect|download|print|receive|issued/i.test(step)) return "Check the finished document/result for spelling, identity details, reference numbers and status before relying on it.";
   if (/verify|confirm|review|check|match/i.test(step)) return "Make sure the displayed record is the correct person/entity and that the information matches the evidence you are using.";
@@ -65,11 +72,22 @@ function keepFor(step: string) {
 }
 
 export function getStepDetails(service: Service): StepDetail[] {
-  return service.steps.map((instruction, index) => ({
-    stage: stageFor(instruction, index),
-    instruction,
-    prepare: relevantRequirements(service, instruction),
-    checkpoint: checkpointFor(instruction),
-    keep: keepFor(instruction),
-  }));
+  const checkpoints = new Set<string>();
+  const keeps = new Set<string>();
+  return service.steps.map((instruction, index) => {
+    const checkpoint = checkpointFor(instruction);
+    const keep = keepFor(instruction);
+    // A generic reminder should not occupy a full paragraph at every step.
+    const uniqueCheckpoint = checkpoint && !checkpoints.has(checkpoint) ? checkpoint : undefined;
+    const uniqueKeep = keep && !keeps.has(keep) ? keep : undefined;
+    if (checkpoint) checkpoints.add(checkpoint);
+    if (keep) keeps.add(keep);
+    return {
+      stage: stageFor(instruction, index),
+      instruction,
+      prepare: relevantRequirements(service, instruction),
+      checkpoint: uniqueCheckpoint,
+      keep: uniqueKeep,
+    };
+  });
 }
