@@ -145,8 +145,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         <meta name="color-scheme" content="light dark" />
         <meta name="theme-color" content="#f8f5ed" />
-        {/* Movie and trailer artwork frequently uses official YouTube thumbnail URLs. */}
-        <link rel="preconnect" href="https://i.ytimg.com" />
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: gaBootstrap }} />
         <script dangerouslySetInnerHTML={{ __html: adsenseBootstrap }} />
