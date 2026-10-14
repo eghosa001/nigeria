@@ -27,7 +27,7 @@ test("all 21 checked records have concise actionable answers and a useful step s
     assert.ok(item.steps.length >= 4, slug + " lacks a complete task sequence");
     assert.ok(item.steps.every((step) => step.length >= 45), slug + " has an unclear process step");
     assert.ok(item.sources.length, slug + " lacks a provider/agency source");
-    assert.match(item.lastVerified, /^2026-10-(?:1[4-9]|2\\d|3[01])$/, slug + " review date");
+    assert.ok(item.lastVerified >= "2026-10-14", slug + " has an older review date");
   }
 });
 
