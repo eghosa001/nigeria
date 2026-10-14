@@ -151,7 +151,9 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
       "Fadekemi Olumide",
       "Symon Oko",
       "Paul Worduma",
-      "Chioma Edak"
+      "Chioma Edak",
+      "Paul Utomi",
+      "Margaret Echeghe"
     ],
     "featuredCast": [
       "Bamike Olawunmi-Adenibuyan",
@@ -167,8 +169,8 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
       {
         "label": "Nollywood.com — official release information and cast",
         "href": "https://www.nollywood.com/movies/love-looks-good-on-you",
-        "lastChecked": "2026-10-13",
-        "note": "Lists October 9, 2026 streaming release, relationship plot and leading cast."
+        "lastChecked": "2026-10-14",
+        "note": "Film-specific casting credits include Darling, Uzor, Remi, Remi's mother, Adam, Benedict, Olivia and Edith; the full video URL is not individually verified."
       },
       {
         "label": "Nollywood Spotlight — writer, director and Omoni Oboli TV release",

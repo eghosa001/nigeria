@@ -98,7 +98,16 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
   },
   "love-looks-good-on-you-2026": {
     "releaseDate": "2026-10-09",
-    "roles": [],
+    "roles": [
+      { "actor": "Bamike Olawunmi-Adenibuyan", "character": "Darling" },
+      { "actor": "Michael Dappa", "character": "Uzor" },
+      { "actor": "Fadekemi Olumide", "character": "Remi's mother" },
+      { "actor": "Symon Oko", "character": "Remi" },
+      { "actor": "Paul Worduma", "character": "Adam" },
+      { "actor": "Paul Utomi", "character": "Benedict" },
+      { "actor": "Margaret Echeghe", "character": "Olivia" },
+      { "actor": "Chioma Edak", "character": "Edith" }
+    ],
     "crew": [
       {
         "role": "Director",
@@ -118,21 +127,21 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
         "heading": "Darling leaves a controlling engagement",
         "paragraphs": [
           "The story begins with Darling recognising that her engagement, once presented as a promise of security, has become controlling. Rather than treating escape as the end of the story, Love Looks Good on You follows the new uncertainty that comes with trying to trust someone again. She crosses paths with Uzor, whose own private history complicates the relationship that develops.",
-          "The film's central appeal is its distinction between outward appearances and emotional safety. The available release synopsis establishes Darling's decision to leave and her subsequent connection with Uzor; it does not justify promising a specific ending or adding scenes that have not been checked. The principal credited performers include Bamike Olawunmi-Adenibuyan, Michael Dappa and Fadekemi Olumide."
+          "The October release's character credits make the relationship story more specific: Bamike Olawunmi-Adenibuyan plays Darling, Michael Dappa plays Uzor, and Symon Oko plays Remi. The film contrasts the outward promise of a stable engagement with the difficulty of trusting a new relationship after control and insecurity. The available synopsis does not establish the ending, so this guide does not invent any later twist or reunion."
         ]
       },
       {
         "heading": "Omoni Oboli TV, release date and confirmed credits",
         "paragraphs": [
           "Love Looks Good on You premiered on 9 October 2026 through Omoni Oboli TV as a long-form relationship drama. The available catalogue gives a runtime of roughly two hours and 51 minutes. That is longer than a conventional short-form web drama, which matters for viewers planning to finish it in one sitting.",
-          "The filmmaker and independent film profiles identify Paul Utomi as director and Blessing Ire as writer. Additional performers credited in coverage include Symon Oko, Paul Worduma and Chioma Edak. The exact original video address has not been independently resolved here; readers should use the named distributor's official channel rather than trust reposts, download mirrors or impersonating accounts."
+          "Nollywood.com's film-specific credit table identifies Fadekemi Olumide as Remi's mother, Paul Worduma (spelled Paul Word Uma in that catalogue) as Adam, Paul Utomi as Benedict, Margaret Echeghe as Olivia and Chioma Edak as Edith. These are credited roles, not a claim that every performer shares equal screen time. Independent film reporting identifies Paul Utomi as director and Blessing Ire as writer. The original Omoni Oboli TV video address has not been individually validated here; use the distributor's official channel rather than an unlicensed copy."
         ]
       }
     ],
     "questions": [
       {
-        "question": "Who stars in Love Looks Good on You from October 2026?",
-        "answer": "Bamike Olawunmi-Adenibuyan, Michael Dappa and Fadekemi Olumide are among the credited cast, alongside Symon Oko and others."
+        "question": "Who plays Darling, Uzor and Remi in Love Looks Good on You?",
+        "answer": "Bamike Olawunmi-Adenibuyan plays Darling, Michael Dappa plays Uzor and Symon Oko plays Remi. The film's named supporting roles also include Remi's mother, Adam, Benedict, Olivia and Edith."
       },
       {
         "question": "Where can I check the official Love Looks Good on You release?",
