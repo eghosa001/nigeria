@@ -2,7 +2,7 @@
 
 import { GA_MEASUREMENT_ID } from "@/lib/analytics-config";
 import { shouldEnableAnalytics } from "@/lib/analytics-safety";
-import { capturePostHogEvent } from "@/lib/posthog-client";
+// Load PostHog only when an analytics event is actually needed.
 
 type AnalyticsWindow = Window & typeof globalThis & {
   gtag?: (...args: unknown[]) => void;
@@ -26,5 +26,7 @@ export function trackEvent(name: string, params: AnalyticsEventParams = {}) {
     analyticsWindow.gtag?.("event", name, params);
   }
 
-  capturePostHogEvent(name, params);
+  void import("@/lib/posthog-client")
+    .then(({ capturePostHogEvent }) => capturePostHogEvent(name, params))
+    .catch(() => undefined); // Tracking failures must never block navigation.
 }
