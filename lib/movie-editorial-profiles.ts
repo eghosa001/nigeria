@@ -9,6 +9,49 @@ export type MovieEditorialProfile = {
 };
 
 export const movieEditorialProfiles: Record<string, MovieEditorialProfile> = {
+  "sibe": {
+    releaseDate: "2026-07-25",
+    roles: [
+      { actor: "Bimbo Ademoye", character: "Sibe" },
+      { actor: "Uche Montana", character: "Natasha" },
+      { actor: "Afeez Oyetoro", character: "The Oracle" },
+    ],
+    crew: [
+      { role: "Producer", name: "Bimbo Ademoye" },
+    ],
+    sections: [
+      {
+        heading: "What happens in Sibe: The Movie?",
+        paragraphs: [
+          "Sibe is a Nigerian comedy built around the ambitious but frequently unlucky character played by Bimbo Ademoye. At the beginning of the film, Sibe imagines receiving public recognition as a police officer. That imagined achievement establishes a central tension: she dreams of importance and a better life while her day-to-day choices keep creating trouble. The feature lets those ambitions shape a longer story rather than simply repeating a series of isolated comedy sketches.",
+          "The conflict with Natasha, played by Uche Montana, supplies much of the film's continuing drama. Sibe's confidence and repeated mistakes collide with another strong personality, leaving viewers to see what happens when dreams of advancement meet responsibility and consequences. The verified reporting describes the relationship as an important part of the plot; this guide does not invent unreported character histories or reveal the film's ending.",
+          "Afeez Oyetoro, also known as Saka, appears as the Oracle. That role has been specifically identified in NTA's coverage, but the available checked sources do not reliably assign film-character names to Uzor Arukwe and Deyemi Okanlawon. Both are confirmed performers on the publisher's upload, so they remain in the cast list without guessed roles.",
+        ],
+      },
+      {
+        heading: "Is this the same Sibe from Bimbo Ademoye's web series?",
+        paragraphs: [
+          "Yes. The character appeared before this feature in Bimbo Ademoye's online Sibe sketches and web series, which NTA dates to December 2022. The earlier series featured Adewale Elesho as Baba Sibe and Uzor Arukwe as Bobo. Those are credits for the earlier format, not automatic proof that the same characters have identical roles or screen time in the 2026 movie. A viewer can follow the new film as a feature-length story while recognising the personality established in the sketches.",
+          "This distinction is important for cast searches. Searching for Sibe may turn up the earlier short-format instalments, a different production featuring the same performers, or fan-uploaded extracts. For the 2026 feature, use the complete original film posted on Bimbo Ademoye TV on 25 July 2026. It runs for approximately two hours and 25 minutes according to the film catalogue and is presented as a comedy, not an episodic short.",
+          "The publisher's credited feature cast includes Bimbo Ademoye, Uche Montana, Uzor Arukwe and Deyemi Okanlawon. NTA also confirms Afeez Oyetoro's Oracle appearance. Separate the full-film credits from the earlier web-series roster when looking up a specific performer. We have not independently established a theatrical screening, subscription release or sequel announcement, and a review's speculation about future instalments is not confirmation that one has been commissioned.",
+        ],
+      },
+    ],
+    questions: [
+      {
+        question: "Who plays Sibe, Natasha and the Oracle in the 2026 movie?",
+        answer: "Bimbo Ademoye plays Sibe, Uche Montana plays Natasha, and Afeez Oyetoro (Saka) plays the Oracle. Uzor Arukwe and Deyemi Okanlawon also appear, but this guide does not assign unverified film-character names to them.",
+      },
+      {
+        question: "When was Sibe released and where is the full movie?",
+        answer: "The original complete Sibe film was published on 25 July 2026 by Bimbo Ademoye TV on YouTube. Use the publisher link on this page; lookalike uploads and excerpts are not proof of authorised distribution.",
+      },
+      {
+        question: "Do I need to watch the old Sibe series first?",
+        answer: "Not necessarily. The earlier web sketches introduce Sibe's familiar comic personality, while the 2026 feature develops a longer story around her ambitions and conflicts. Do not confuse recurring web-series characters with verified feature-film credits.",
+      },
+    ],
+  },
   "oversabi-aunty": {
     releaseDate: "2025-12-19",
     roles: [
