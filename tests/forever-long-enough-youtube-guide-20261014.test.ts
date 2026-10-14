@@ -10,7 +10,7 @@ test("Forever Isn't Long Enough guide preserves original publisher and 2025 date
   assert.ok(d.paragraphs.join(" ").includes("19 December 2025"));
   assert.ok(d.paragraphs.join(" ").includes("estranged aunt"));
   assert.ok(d.castNotes.includes("Michael Dappa") && d.castNotes.includes("Inem King"));
-  assert.ok(d.castNotes.includes("do not"));
+  assert.ok(d.castNotes.includes("deliberately not inferred"));
   assert.ok(d.sources.some(x=>x.href==="https://www.youtube.com/watch?v=y2RkBwUYSvo"));
   assert.ok(d.sources.some(x=>x.href.includes("watch.plex.tv")));
   assert.ok(d.questions.length>=3);
