@@ -26,6 +26,7 @@ export const featuredEventEndDates: Readonly<Record<string, string>> = {
   "fashion-fables-runway-africa-abuja-2026": "2026-10-18",
   "abuja-international-film-festival-2026": "2026-10-24",
   "hallelujah-festival-lagos-october-2026": "2026-10-30",
+  "moonshot-techcabal-lagos-2026": "2026-10-29",
   "festmint-abuja-2026": "2026-11-06",
   "abuja-international-afrojazz-festival-2026": "2026-11-21",
   "carnival-calabar-2026": "2027-01-01",
