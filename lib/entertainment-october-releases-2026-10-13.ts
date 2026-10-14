@@ -15,13 +15,14 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
     "languages": [
       "English"
     ],
-    "synopsis": "Two people who care for each other confront different expectations about their future, forcing difficult conversations about marriage, sacrifice and trust. Sarian Martin and Timini Egbuson anchor this October 2026 relationship drama. The distributor's release and independent film credits identify Aniedi Awah Noba as director; the broader supporting cast includes Chioma Ejimofor and Audrey Harrison.",
+    "synopsis": "Childhood sweethearts Hakeem and Carissa reunite years after being separated, but Hakeem is already committed to another partner. Their revived bond raises questions about loyalty, family expectations and how to handle unfinished relationships. This 11 October 2026 Sarian Martin TV release stars Sarian Martin and Timini Egbuson, with supporting performances by Audrey Harrison, Chioma Ejimofor and Amanda Neo. FilmFlux credits Aniedi Awah Noba as director.",
     "cast": [
       "Sarian Martin",
       "Timini Egbuson",
       "Chioma Ejimofor",
       "Segun G. Respect",
-      "Audrey Harrison"
+      "Audrey Harrison",
+      "Amanda Neo"
     ],
     "featuredCast": [
       "Sarian Martin",
@@ -34,6 +35,18 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
     "runtimeMinutes": 103,
     "featured": true,
     "references": [
+      {
+        "label": "Nollywood.com — character credits and childhood-reunion synopsis",
+        "href": "https://www.nollywood.com/movies/matters-of-the-heart",
+        "lastChecked": "2026-10-14",
+        "note": "Credits Timini Egbuson as Hakeem, Sarian Martin as Charissa, Audrey Harrison as Sophia, Amanda Neo as Joy and Chioma Ejimofor as the lead character's mother; other catalogues spell the lead character Carissa."
+      },
+      {
+        "label": "African Movie Database — independent role cross-check",
+        "href": "https://africanmoviedb.com/title/matters-of-the-heart-2026",
+        "lastChecked": "2026-10-14",
+        "note": "Also assigns Hakeem, Sophia and Joy to the same performers; uses Carissa as the heroine's name. Avoid asserting a settled single spelling."
+      },
       {
         "label": "FilmFlux — verified release, cast and credits",
         "href": "https://filmflux.app/movie/d16e8953-49b0-4d44-bf32-9662c5a709e5-matters-of-the-heart",
