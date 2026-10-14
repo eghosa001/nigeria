@@ -316,6 +316,26 @@ const explicit: Record<string, DetailedServiceGuidance> = {
       { title: "Resolve browser/device access through NIMC", detail: "If the original self-service account is inaccessible because of the browser/device restriction, use NIMC's official unlink/support route rather than registering conflicting modification accounts.", linkHref: "/offices", linkLabel: "Find NIMC support routes →" },
     ],
   },
+  "spotify-premium-nigeria": {
+    route: {
+      startTitle: "Compare Spotify's official Nigeria plans before subscribing",
+      startDetail: "Open Spotify's Nigeria Premium page and compare the regular renewal price with any introductory offer shown for your own account. Choose Individual, Student, Duo or Family based on eligibility and check the first charge, accepted payment option and next billing date before confirming.",
+      physicalTitle: "Subscription and account management are online",
+      physicalDetail: "Spotify's documented subscription, Student verification, plan-management and cancellation routes are online. There is no mandatory visit to a Nigerian government office, agent or physical registration centre.",
+      fallbackTitle: "If the plan, student verification or payment fails",
+      fallbackDetail: "Open Spotify's account billing and support pages. Check the account region, plan eligibility, any SheerID verification requirement and who actually bills the subscription. For a partner-billed plan, contact that provider through its official support channel; never share a password or one-time code with a seller.",
+    },
+    aftercare: [
+      {
+        title: "Check your plan and next billing date",
+        detail: "After subscribing, open Spotify's Manage your plan screen and confirm the plan tier, payment method, promotional period if any and the recurring amount. Keep your own payment receipt or account confirmation; there is no government application slip or reference number.",
+      },
+      {
+        title: "Cancel or resolve billing through the right provider",
+        detail: "Use Spotify's account cancellation steps for a directly billed subscription, or follow the partner's instructions for partner billing. Paid Premium ordinarily lasts until the next billing date, while a zero-priced trial may end immediately when cancelled. Check the terms shown in your account.",
+      },
+    ],
+  },
 };
 
 const agencyFallback: Record<string, string> = {
