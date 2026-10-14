@@ -1366,40 +1366,57 @@
   },
   {
     "slug": "airtel-esim-activation",
-    "title": "How to activate an Airtel eSIM in Nigeria",
+    "title": "Airtel eSIM Nigeria: Free Activation, EID Check, QR Setup and SIM Swap",
     "shortTitle": "Airtel eSIM activation",
-    "summary": "Airtel Nigeria's service-centre route for upgrading a physical line to eSIM, checking EID compatibility, receiving a QR profile and installing it on a supported phone.",
+    "summary": "Airtel Nigeria says eSIM activation currently costs nothing, but first-time upgrades still require an Airtel Service Centre. Dial *#06# to confirm an EID (different from IMEI), complete line/SIM-swap checks with Airtel, then scan the issued single-use QR code over Wi-Fi in your iPhone, Pixel or Samsung settings. You cannot assume a downloadable QR code or full eSIM upgrade is available entirely online.",
     "category": "Telecommunications",
     "agencySlug": "airtel-nigeria",
-    "feeLabel": "Free activation",
-    "feeNote": "Airtel's Nigeria eSIM page states that there is currently no activation cost.",
-    "timeline": "Airtel does not publish one fixed completion time; the service centre completes the SIM upgrade and profile setup after the line and device checks.",
+    "feeLabel": "Free eSIM activation (Airtel official FAQ)",
+    "feeNote": "Airtel's published Nigeria eSIM FAQ explicitly states that eSIM activation currently has no cost. This is separate from purchasing/maintaining a mobile line, buying airtime/data, travel expenses or any future SIM replacement terms. No independent online QR purchase payment route is published on the current official activation page.",
+    "timeline": "Airtel does not publish a universal activation time. A service-centre agent must complete the SIM-upgrade verification and assign the new eSIM profile, after which a compatible device downloads it over Wi-Fi. Troubleshooting, network availability or another SIM swap may take longer.",
     "status": "verified",
     "officialPortal": "https://www.airtel.com.ng/ng/personal/services/sim-services/esim",
     "requirements": [
-      "An eSIM-compatible phone; dial *#06# and confirm that the device displays an EID number",
-      "An Airtel line to upgrade, or a newly registered physical Airtel SIM that can then be upgraded to eSIM",
-      "The identity evidence needed for Airtel's normal SIM-swap or registration checks",
-      "A Wi-Fi connection to download the Airtel eSIM profile after the QR code is issued"
+      "A compatible eSIM-capable mobile device. Dial *#06# and look for an EID; the EID is not the same as your IMEI, and an IMEI alone does not establish that the phone can accept an eSIM.",
+      "An existing registered Airtel Nigeria physical SIM to upgrade, or a newly purchased and registered physical Airtel SIM. Airtel's FAQ says customers who do not yet have an Airtel line should register a physical SIM before upgrading it.",
+      "Valid identity details needed for the usual Airtel SIM-swap/line registration process; the agent will verify line ownership and associate a SIM serial/PUK with the mobile number.",
+      "Access to an Airtel Service Centre or showroom for the upgrade and QR issuance; there is currently no verified nationwide do-it-yourself activation process without a service-centre visit.",
+      "A stable Wi-Fi/internet connection on the device while adding the mobile plan, plus the unique Airtel QR activation code given by the customer-care agent.",
+      "For a replacement because of device loss or a device change, a fresh authorised Airtel SIM swap and new QR code may be required. Do not expose the QR image or PUK to strangers."
     ],
     "steps": [
-      "Dial *#06# on the phone and confirm that an EID number appears, then visit an Airtel Service Centre for the eSIM upgrade.",
-      "Complete Airtel's SIM-swap or line-registration identity checks with the service-centre agent.",
-      "Receive the Airtel QR code after the agent associates the new eSIM serial and PUK with the mobile number.",
-      "Connect the phone to Wi-Fi and use the mobile-network or SIM-manager settings to scan the Airtel QR code.",
-      "Confirm that the Airtel eSIM becomes active and keep the service-centre details in case a replacement profile is later needed."
+      "Check whether the phone supports eSIM. Dial *#06# in the phone app: a supported device should display an EID in addition to identifiers such as IMEI. Airtel explicitly says EID and IMEI are different. A phone model name alone is not enough: region variants can differ.",
+      "On https://www.airtel.com.ng/ng/personal/services/sim-services/esim, select the Airtel Centre link shown immediately under 'How to Activate an eSIM'. Check the address and service availability of the centre you plan to visit. Bring your already-registered Airtel line and identity details, and tell the service-centre representative that you want the number moved from physical SIM to eSIM using an authorised SIM swap.",
+      "If you already have an Airtel line, ask Airtel to upgrade that number; if you are a new customer, first buy and register an Airtel physical SIM, then request an eSIM upgrade. Do not pay a social-media seller for a remotely generated QR code.",
+      "At the service centre, complete line-ownership checks. The Airtel agent associates the SIM serial and PUK details on a new QR code with your existing or newly registered mobile number. Keep a secure record of the service-centre transaction.",
+      "Connect the phone to Wi-Fi before trying to download the eSIM profile. Airtel's FAQ says a wireless data connection is required for the profile; avoid relying only on mobile data from a physical SIM that may already have been replaced.",
+      "On iPhone, go to Settings → Cellular or Mobile Data → Add Plan / Add eSIM, then scan the Airtel QR code. Airtel's official instructions note that the menu wording can vary across iPhone versions. Follow the current iOS prompts and label the plan so you can tell it from other SIMs.",
+      "On Samsung, go to Settings → Connections → SIM Manager → Add Mobile Plan or Add eSIM, then scan the QR provided by Airtel. On Google Pixel, use Settings → Network & Internet → Mobile Network → Add Carrier / Add SIM, and scan the QR while connected to Wi-Fi. Phone manufacturers occasionally change menu labels between OS versions.",
+      "After the profile installs, check in SIM settings that Airtel appears and becomes active. Test making a call, receiving an SMS and using an eligible data plan; the same mobile number should work once the carrier has successfully moved it to eSIM.",
+      "If you lose your QR image or the profile refuses to download, do not endlessly rescan or publish the QR online. Airtel says a QR is single-use and directs customers who misplace it to visit the nearest service centre for a new profile.",
+      "When moving to another phone, use Airtel's documented fresh SIM-swap/QR process rather than assuming an already-used QR is transferable. The company's page also includes a generic 'remove old plan and scan' answer, but its dedicated profile FAQ explicitly states that a new QR and swap are needed for another device.",
+      "If your phone is lost or stolen, immediately call 300 from an Airtel line or visit an Airtel showroom to block the number and arrange a replacement after verifying identity. Removing a profile from a stolen device does not by itself complete carrier-side fraud protection.",
+      "A postpaid Airtel line can also use eSIM according to Airtel's FAQ. A device changing back to a physical SIM requires a new SIM-swap request at an Airtel showroom; simply deleting the eSIM profile does not restore the old physical SIM."
     ],
     "notes": [
-      "Airtel says an eSIM QR code is single-use for the activation and a lost code requires a visit to a service centre.",
-      "Moving the number to another device can require another eSIM swap and a fresh QR profile.",
-      "If the device is lost, Airtel advises calling 300 or visiting a showroom to block the line."
+      "The official Nigerian Airtel page says activation is currently free. It does not advertise an online checkout where a user can simply pay to download an eSIM profile without line identity verification, so be wary of third-party 'instant activation code' websites.",
+      "The *#06# EID test is Airtel's advertised compatibility check. EID identifies the embedded SIM hardware; IMEI identifies the device. Seeing only an IMEI is not conclusive evidence of eSIM support.",
+      "For existing Airtel users, the upgrade is a SIM swap: Airtel associates a new QR-profile serial and PUK with the number. For new customers Airtel says to purchase/register a physical SIM first, then upgrade. Porting into Airtel is separate from converting the line to eSIM.",
+      "AirTel's FAQ includes both a 'fresh SIM swap and new QR code' answer for moving eSIM to another device and a generic answer that describes removing the old plan and scanning the QR. Because the QR is separately described as single-use, do not promise self-service reuse or issue instructions that could strand the number; confirm the replacement at Airtel service centre.",
+      "A QR code is not an ordinary reusable password. Airtel's FAQ says it can be used only once; do not email it publicly, post screenshots of it on social media or pay an unofficial third party to 'reactivate' it.",
+      "Profile download needs an internet connection, typically Wi-Fi. If the physical SIM was disabled during the carrier swap and you lack Wi-Fi, finish setup where network service is available rather than deleting all plans and guessing.",
+      "For an iPhone, Airtel's source labels menus Cellular/Mobile Data and Add Plan; for Samsung, Connections and SIM Manager; for Pixel, Network & Internet and Mobile Network. These are examples from Airtel's instructions, and device settings can differ after manufacturer updates.",
+      "If a lost phone contains the eSIM, Airtel's published recommendation is to call 300 or go to a showroom to block the number; be prepared for identity verification before reissuing a profile.",
+      "Airtel explicitly says postpaid subscribers can switch to eSIM and continue regular activities, including roaming and data purchases. This is not proof that every particular handset, roaming country or data plan supports all features.",
+      "The status 'active' in your settings should be checked with a real call, SMS or data connection after setup; a downloaded profile is not by itself evidence that the carrier has finished provisioning it.",
+      "If you want to return to a physical SIM or swap to a different eSIM phone, treat this as a new carrier SIM swap. Airtel does not guarantee that deleting the old eSIM will automatically reactivate the original plastic card."
     ],
     "sources": [
       {
-        "label": "Airtel Nigeria eSIM",
+        "label": "Airtel Nigeria — official eSIM eligibility, EID, fees and QR instructions",
         "agency": "Airtel Nigeria",
         "url": "https://www.airtel.com.ng/ng/personal/services/sim-services/esim",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -1408,13 +1425,19 @@
       "nin-sim-linkage",
       "check-nin-sim-linkage-status"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Airtel eSIM Nigeria",
       "activate Airtel eSIM",
       "Airtel eSIM QR code Nigeria",
       "Airtel physical SIM to eSIM",
-      "Airtel eSIM fee"
+      "Airtel eSIM fee",
+      "Airtel eSIM online activation Nigeria",
+      "Airtel eSIM free",
+      "Airtel eSIM EID check",
+      "iPhone Airtel eSIM setup",
+      "Samsung Airtel eSIM QR",
+      "Airtel eSIM transfer phone"
     ]
   },
   {
