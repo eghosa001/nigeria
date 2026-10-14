@@ -10961,14 +10961,23 @@ export const exploreGuides: ExploreGuide[] = [
   },
   {
     "slug": "nigeria-art-craft-guide",
-    "title": "Art & Craft Destinations in Nigeria: Galleries, Bronze, Adire & Pottery",
+    "title": "Nigerian Art and Craft Destinations: Igun Bronze, Itoku Adire, Nike Gallery, Osogbo & Suleja",
     "shortTitle": "Nigeria Art & Craft",
     "kind": "destination",
     "region": "Nigeria",
-    "summary": "Build an art-and-craft trip around galleries, working craft districts and markets where technique and maker context matter as much as shopping.",
+    "summary": "A source-backed guide to Nigeria's different art experiences: visit Nike Art Gallery in Lagos for collection viewing, Igun Street in Benin City for the bronze-casting guild, Itoku Market in Abeokuta for adire, Osogbo for sacred modern sculpture and artisan studios, or Suleja to explore Ladi Kwali's pottery heritage. Choose a maker visit, exhibition or shopping trip—not all sites offer the same public access.",
     "intro": [
-      "Nigeria's strongest art-and-craft destinations range from formal galleries to living workshop districts and markets.",
-      "A useful guide separates viewing, learning and buying so travellers can choose Nike Art Gallery, Igun Street, Itoku, Osogbo or Suleja for the right reason."
+      "Nigeria's art-and-craft destinations are not one interchangeable 'arts market'. Lagos galleries introduce contemporary painters and textile artists; Benin City's bronze-casting guild still connects to the kingdom's historical production traditions; Abeokuta is a working centre for indigo and resist-dyed adire; and Osogbo's artistic heritage includes spiritual sculpture in an active sacred landscape. A craft-focused trip works best when you decide whether you want to view works, learn techniques or buy directly from a living maker before choosing your route.",
+      "Start with geography. Nike Art Gallery in Lagos is a different city break from Benin City, Abeokuta or Osogbo. Igun Street is in Benin City, Edo State; Itoku adire traders are in Abeokuta, Ogun State; the UNESCO-inscribed Osun-Osogbo Sacred Grove is beside Osogbo, Osun State; and Suleja's historic Ladi Kwali pottery centre is in Niger State near the Federal Capital Territory. These are separate journeys, not practical walking stops on a single day-tour ticket.",
+      "Looking at an object and watching it made are different experiences. A gallery may exhibit finished works without offering public workshops, a street of active casters may have private or industrial working areas, and a textile stall may sell printed designs that were not made using handmade resist-dye methods. Rather than assuming the seller is the original artist, ask who made the work, what materials were used, whether a demonstration is actually available, and whether photographs or touching are allowed.",
+      "In Lagos, Nike Davies-Okundaye's gallery is well documented by Google Arts & Culture, including its African art collections and adire textiles. Nike's work spans indigo-resist cloth and batik, so the gallery is a useful introduction to how textile traditions have moved into contemporary visual art. It is a gallery destination first: collection access, guided explanation, workshops, demonstrations, entry conditions and the availability of the founder herself should be confirmed with the gallery instead of presumed.",
+      "Benin City's Igun Street is identified by the Edo State Government as a centre of bronze casters and craft makers. The value of visiting is seeing a working artistic tradition rather than treating every metal-looking souvenir as an antiquity. A visit may combine conversations with artisans, inspection of current cast pieces and learning how mould-making, wax modelling, casting and finishing differ. Active foundry work involves heat, tools and safety risks, so ask before entering a workshop, standing near equipment or photographing anyone at work.",
+      "In Abeokuta, Itoku is a recognised centre for adire textiles. A 2020 federal culture ministry statement discussed Ogun's Adire marketplace and Abeokuta's artisan economy, while 2023 Channels reporting from Itoku documented concerns about mass-produced imports presented alongside locally made cloth. Handmade adire may involve techniques such as oniko (tied or stitched resist) or eleko (starch resist), rather than being simply a generic printed blue fabric. Ask for technique, origin, cloth quality and care instructions; buy from a maker when the history matters to you.",
+      "Osogbo's arts scene cannot be understood through ordinary shopping alone. UNESCO describes the Osun-Osogbo Sacred Grove as an active Yoruba sacred site whose shrines, sculptures and artwork connect religious practice, the natural landscape and the New Sacred Artists movement. It is not a sculpture theme park: some places and ceremonies have religious rules and protected status, and the quality or maintenance of individual works can change. For workshops and art markets elsewhere in Osogbo, arrange contact with artists separately rather than assuming access to studios inside the UNESCO property.",
+      "Suleja adds a different material tradition. The Smithsonian's National Museum of African Art holds pottery by Ladi Kwali and explains her connection to the pottery training centre formerly known as Abuja Pottery Training Centre, later named for her in Suleja. Study vessel form, incised motifs, hand-building and glazed surfaces, but do not assume a museum archive proves that the present centre gives daily public factory tours. Check directly whether there is a functioning exhibition, active potter, workshop booking or retail purchase opportunity.",
+      "Abuja's Arts and Crafts Village is another possible browsing stop for people already in the FCT, but it should not be presented as a substitute for Igun's bronze guild, Abeokuta's adire community or a protected religious site. Vendor opening arrangements and site management can change. Use it as a potential marketplace only after confirming the venue is open and lawful; an unverified stall cannot certify an object's maker, age or provenance. A carefully documented purchase directly from a named artisan is more valuable than a vague 'museum-quality' sales pitch.",
+      "Buying responsibly is an important part of a craft trip. Ask the maker's name, origin of the work, materials, technique and after-care; request a receipt or written description for costly or fragile items. Newly made decorative bronze should not be confused with historically significant Benin objects subject to provenance and restitution questions. Similarly, do not assume all 'adire' is handmade or that an antique label establishes age. If a seller will not answer questions about origins, compare alternatives rather than relying on artificial scarcity.",
+      "Practical planning also changes by trip type. Galleries may have staffed hours; markets are usually busiest during normal trading periods; foundries need workshop permission; and the Osun grove requires respect for local community and conservation restrictions. Confirm current transport and security conditions, any entrance/tour charges, accessibility, photography permissions and return transport directly. Do not promise universal free entry or guaranteed artist encounters when no reviewed official source publishes them for a particular date."
     ],
     "bestFor": [
       "Art",
@@ -10978,45 +10987,103 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Gallery experiences",
-        "detail": "Nike Art Gallery and Osogbo art spaces support slower collection-focused visits."
+        "name": "Nike Art Gallery — Lagos",
+        "detail": "Best for looking at a wide gallery collection and understanding artists such as Nike Davies-Okundaye, with batik, indigo/adire and contemporary African works. Google Arts & Culture documents the Lagos gallery; confirm its current exhibition and workshop policies directly."
       },
       {
-        "name": "Living craft",
-        "detail": "Igun Street and Itoku connect visitors with active bronze and textile traditions."
+        "name": "Igun Street bronze-casting guild — Benin City",
+        "detail": "A working tradition of casting and selling metal sculpture identified by the Edo State Government. Best for conversations with makers, the casting process and current artisan works; workshops are not automatically open to visitors or safe for unescorted photography."
       },
       {
-        "name": "Pottery heritage",
-        "detail": "Suleja's Ladi Kwali tradition offers a different material and craft history."
+        "name": "Itoku Adire Market — Abeokuta",
+        "detail": "An established place to compare dyed Yoruba textile traditions and to ask what is genuinely handmade. Ogun's adire industry is officially documented, while reporting from Itoku shows why buyers should distinguish authentic resist-dyed work from mass-produced prints."
       },
       {
-        "name": "Abuja craft shopping",
-        "detail": "The Arts and Crafts Village provides a central-city browsing option."
+        "name": "Osun-Osogbo Sacred Grove — Osogbo",
+        "detail": "UNESCO inscribed this active religious and artistic landscape in 2005. The sculptures and shrine spaces connect New Sacred Artists with Osun worship and the natural environment. Respect worship, restricted areas and conservation guidance; this is not an ordinary sculpture gallery."
+      },
+      {
+        "name": "Ladi Kwali pottery heritage — Suleja",
+        "detail": "The Smithsonian documents Ladi Kwali's work and the historic Abuja Pottery Training Centre, now associated with her name in Suleja. Best for learning about Gbagyi hand-built forms and studio ceramics; present-day centre visitor access or a demonstration must be confirmed."
+      },
+      {
+        "name": "Arts and Crafts Village — Abuja",
+        "detail": "A possible additional place to browse locally sold handicrafts if the market is operating when you visit. Shopping access, authenticity, vendor availability and opening hours need direct checking; it should not be treated as a single ticketed national craft museum."
       }
     ],
     "planning": [
       {
-        "label": "Ask about the maker",
-        "detail": "Understand who produced a work before buying."
+        "label": "Which city should I choose?",
+        "detail": "Choose Lagos for galleries, Benin City for the bronze-casting guild, Abeokuta for adire buying and technique, Osogbo for sacred sculpture and studios, or Suleja for pottery heritage. These destinations cross multiple states and cannot realistically be combined in one walking route."
       },
       {
-        "label": "Ask before photography",
-        "detail": "Artists and workshops may have restrictions."
+        "label": "Can I watch bronze being cast?",
+        "detail": "Only if a local guild member or workshop explicitly welcomes you at a safe time. Casting involves furnaces, heat and metal handling; use the designated visitor area, never touch equipment and do not photograph works, people or moulds without permission."
       },
       {
-        "label": "Plan safe transport",
-        "detail": "Fragile art and pottery require packaging."
+        "label": "How can I identify handmade adire?",
+        "detail": "Ask which resist-dye method was used, who made the fabric, and whether the patterns were applied manually or produced by printing. Compare several pieces for fabric quality, dye fastness and finish; a high or low price alone cannot establish provenance."
       },
       {
-        "label": "Compare quality",
-        "detail": "Do not treat all market items as equivalent."
+        "label": "Is Osun Grove just an open-air art museum?",
+        "detail": "No. UNESCO identifies a living Yoruba sacred and conservation landscape. Do not remove natural material, touch altars or sculptures, disrupt ceremonies or presume all shrines are accessible. Follow site guardians and authorised heritage management instructions."
+      },
+      {
+        "label": "Where does Ladi Kwali pottery come from?",
+        "detail": "The Smithsonian identifies the historic training centre established in the Abuja/Suleja pottery tradition and documents Kwali's mastery of hand-built pottery and the wheel. Its historical record supports cultural background; verify present visitor hours, sales and workshops independently."
+      },
+      {
+        "label": "Can I book a textile or pottery workshop?",
+        "detail": "Some working artists or galleries may teach, but none of the checked archival or heritage sources guarantees a current public schedule. Contact the actual studio/gallery before travel, ask about skill level, duration, materials and fees, and avoid deposits to unverified agents."
+      },
+      {
+        "label": "How should I budget?",
+        "detail": "Plan separately for travel, a guide if appropriate, permitted workshop tuition, entry fees if confirmed, purchases, packing and freight. No source checked establishes a nationwide 'Nigeria crafts tour' ticket or fixed 2026 prices for every destination; obtain current official/local quotes."
+      },
+      {
+        "label": "What if I want to export artwork?",
+        "detail": "Keep maker invoices and provenance documents. Modern decorative craft purchases differ from potentially protected historic objects. Verify any customs, cultural-property or airline restrictions relevant to your material and destination before paying for shipping."
+      },
+      {
+        "label": "How do I photograph artisans respectfully?",
+        "detail": "Always ask the individual artist before filming a production process, nearby workers or works in progress. In sacred places follow religious/community restrictions, and in private galleries follow display-label rules. Paying for a purchase does not automatically grant image rights."
+      },
+      {
+        "label": "How do I protect a fragile piece?",
+        "detail": "Ask the artisan how to store and handle fabric, lacquer, pottery or bronze. Wrap ceramics securely and plan a safe journey; protect textiles from prolonged moisture and colour transfer. Obtain a receipt identifying material and maker for higher-value purchases."
       }
     ],
     "source": {
-      "label": "Federal Ministry of Information — Culture and Heritage",
-      "href": "https://fmino.gov.ng/culture/culture/"
+      "label": "Edo State Government — Igun Street bronze-casting heritage",
+      "href": "https://edostate.gov.ng/visit-edo-explore-our-tourist-sites-treat-yourself-to-our-culture-hospitality/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-14",
+    "sources": [
+      {
+        "label": "Google Arts & Culture — Nike Davies-Okundaye and adire",
+        "href": "https://artsandculture.google.com/story/nike-davies-okundaye-39-s-39-cycle-of-life-39-yemisi-shyllon-museum-of-art/jQXR5hEUwiic_Q?hl=en"
+      },
+      {
+        "label": "Federal Ministry of Information — Abeokuta adire craft trade",
+        "href": "https://fmino.gov.ng/minister-hails-launch-of-digital-platform-to-market-tie-and-dye-fabrics/"
+      },
+      {
+        "label": "Channels Television — Itoku producers and machine-print concerns",
+        "href": "https://www.channelstv.com/2023/03/17/inside-itoku-adire-market-culture-fashion-and-a-modern-challenge-community-report/"
+      },
+      {
+        "label": "UNESCO — Osun-Osogbo Sacred Grove and New Sacred Artists",
+        "href": "https://whc.unesco.org/en/list/1118/"
+      },
+      {
+        "label": "Smithsonian — Ladi Kwali bowl and pottery-training heritage",
+        "href": "https://www.si.edu/object/bowl%3Anmafa_2008-5-21"
+      },
+      {
+        "label": "Smithsonian — Suleja pottery centre provenance",
+        "href": "https://africa.si.edu/collection/object/nmafa_2002-14-12"
+      }
+    ]
   },
   {
     "slug": "nigeria-beaches-coast-guide",
