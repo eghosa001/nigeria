@@ -13,17 +13,22 @@ export const freshnessPolicy = {
 const DAY_MS = 86_400_000;
 
 function dateOnly(value: string) {
-  return /^\d{4}-\d{2}-\d{2}$/.test(value) ? value : value.slice(0, 10);
+  return value.slice(0, 10);
 }
 
+// The site's time-sensitive editorial state follows the same Nigerian
+// calendar day as Jobs deadlines (WAT, UTC+01:00; no daylight saving).
 export function isoToday(now = new Date()) {
-  return now.toISOString().slice(0, 10);
+  return new Date(now.getTime() + 60 * 60 * 1000).toISOString().slice(0, 10);
 }
 
 export function daysSinceIsoDate(value: string, now = new Date()) {
   const normalized = dateOnly(value);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(normalized)) return Number.POSITIVE_INFINITY;
   const parsed = Date.parse(normalized + "T00:00:00.000Z");
-  if (!Number.isFinite(parsed)) return Number.POSITIVE_INFINITY;
+  if (!Number.isFinite(parsed) || new Date(parsed).toISOString().slice(0, 10) !== normalized) {
+    return Number.POSITIVE_INFINITY;
+  }
   const today = Date.parse(isoToday(now) + "T00:00:00.000Z");
   return Math.floor((today - parsed) / DAY_MS);
 }
