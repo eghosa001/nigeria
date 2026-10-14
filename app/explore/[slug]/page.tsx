@@ -445,9 +445,12 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             <span className="eyebrow">Source &amp; verification</span>
             <h2>Sources and live checks for {guide.shortTitle}</h2>
             <p>This {guide.kind} guide was reviewed on {guide.lastReviewed}. MyNigeriaGuide does not treat old prices, social posts or copied travel lists as permanent facts; confirm dynamic details close to your travel date.</p>
-            {guide.source ? (
+            {(guide.source || guide.sources?.length) ? (
               <div className="related-links">
-                <a href={guide.source.href} target="_blank" rel="noreferrer">{guide.source.label} ↗</a>
+                {guide.source ? <a href={guide.source.href} target="_blank" rel="noreferrer">{guide.source.label} ↗</a> : null}
+                {(guide.sources ?? []).filter((source) => source.href !== guide.source?.href).map((source) => (
+                  <a key={source.href} href={source.href} target="_blank" rel="noreferrer">{source.label} ↗</a>
+                ))}
               </div>
             ) : null}
           </div>
