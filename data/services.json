@@ -804,7 +804,7 @@
       "Open the official iCRP at icrp.cac.gov.ng and sign in with the entity's registered portal account; create an account or recover access using the portal's official links if necessary.",
       "Open the Annual Returns or post-registration area and choose the return for your particular company, business name or incorporated trustee; confirm that this entity and registration year are eligible for the option currently displayed.",
       "Enter the required entity and return-period details, review the particulars shown in the portal and submit the applicable filing. Use the official portal payment route if a filing fee is requested.",
-      "Save the payment or application acknowledgement and follow the portal for approval, query or any correction. If the annual-return option is unavailable for a newer business name, follow CAC's published rollout notice instead of paying an outside agent."
+      "Save the payment or application acknowledgement and check the iCRP record for an approval, a query requiring action or a correction. If the annual-return option is unavailable for a newer business name, follow CAC's published rollout notice instead of paying an outside agent."
     ],
     "notes": [
       "CAC's current CRP notice says annual-return filing is available for business names registered before July 2025.",
@@ -1774,7 +1774,7 @@
       "Open portal.nysc.org.ng during an active registration window and register as a foreign-trained prospective corps member using your personal details and applicable qualifications.",
       "Upload the academic and international-passport evidence required for your particular foreign institution and qualification. NYSC states that downloaded certificates, statements of results and attestation letters are not accepted as substitutes where original credentials are required.",
       "Check the NYSC dashboard for the assigned physical-verification venue, dates and duration. Carry the original academic credentials and original travel documents specified by NYSC, not only scanned copies.",
-      "Attend the designated pre-camp physical verification on the assigned date; if NYSC instead assigns a call-up number without pre-camp verification, follow the official instruction to be verified at orientation camp.",
+      "Attend the designated pre-camp physical verification on the assigned date; if NYSC instead assigns a call-up number without pre-camp verification, report for credential verification at the camp printed in the NYSC call-up letter.",
       "Keep your original documents available until NYSC officials have physically verified them and review the dashboard for the next verified mobilisation decision."
     ],
     "notes": [
@@ -2120,8 +2120,9 @@
     "officialPortal": "https://www.nationalpopulation.gov.ng",
     "requirements": [
       "Child aged 0 to 17",
-      "Child's NIN where applicable to the current process",
-      "Parent's attestation number as stated by NPC"
+      "Valid parent/guardian NIN for the adult self-service account and identity verification",
+      "Child's NIN if one has already been issued; NPC says the child may still be registered without one when the parent/guardian has a valid NIN",
+      "Parent's attestation number or other information requested by NPC for the relevant case"
     ],
     "steps": [
       "Visit nationalpopulation.gov.ng, open Services and select Birth Registration. The self-service account is created by a parent or guardian aged at least 18, not by a child.",
@@ -2132,7 +2133,8 @@
     ],
     "notes": [
       "NPC states birth registration is for ages 0–17, while birth attestation is for people aged 18 and above.",
-      "NPC's current FAQ expressly allows a child without a NIN to be registered using a parent/guardian's valid NIN, despite the general requirements list also mentioning a child's NIN."
+      "NPC's current FAQ expressly allows a child without a NIN to be registered using a parent/guardian's valid NIN, despite the general requirements list also mentioning a child's NIN.",
+      "One adult parent can register a child; both parents do not need to create duplicate records for the same child."
     ],
     "sources": [
       {
@@ -2831,7 +2833,7 @@
       "Complete NYSC registration and confirm that your personal mobilisation details and any required biometric or credential checks have been accepted.",
       "Monitor your official NYSC dashboard for the call-up number and the call-up-letter release notice. A published orientation camp timetable does not by itself mean your letter is already available.",
       "When your call-up letter is issued, sign in and use the official print or download option if you subscribed to online call-up-letter printing. Otherwise contact your institution for the collection route NYSC specifies.",
-      "Read the assigned state, camp address, reporting date and required documents from your own letter. Follow official NYSC notices for changes rather than a copied camp list."
+      "Read the assigned state, camp address, reporting date and required documents from your own letter. Check the NYSC portal's latest camp and deployment notices for changes rather than a copied camp list."
     ],
     "notes": [
       "NYSC says those who do not subscribe for online call-up-letter printing collect through their institutions where applicable.",
