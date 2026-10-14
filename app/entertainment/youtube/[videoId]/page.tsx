@@ -9,6 +9,7 @@ import { getSiteUrl } from "@/lib/site";
 import { entertainmentPeople } from "@/lib/entertainment-extras";
 import { getRelatedYouTubeDetailMovies, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
 import { youtubeServerStore } from "@/lib/youtube-server-store";
+import { hasValidVideoPublishDate } from "@/lib/youtube-video-publication-date";
 
 export const revalidate = 86400;
 
@@ -100,7 +101,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
 
   // Mark up an actually watchable, canonical, verified video. Its YouTube
   // embed and thumbnail are provided by the rights-holder platform.
-  const videoLd = indexable && movie.source !== "curated" && /^\\d{4}-\\d{2}-\\d{2}/.test(movie.publishedAt) ? {
+  const videoLd = indexable && movie.source !== "curated" && hasValidVideoPublishDate(movie.publishedAt) ? {
     "@context": "https://schema.org",
     "@type": "VideoObject",
     name: movie.title,
