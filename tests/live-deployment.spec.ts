@@ -185,18 +185,23 @@ test("phone layout fits and public pages do not hydrate with React mismatches", 
   expect(hydrationErrors).toEqual([]);
 });
 
-test("resolved fee guides no longer show conflict warnings", async ({ page }) => {
-    const cases = [
-      ["/services/nin-date-of-birth-modification", "₦28,574"],
+test("fee pages distinguish official conflicts from verified amounts", async ({ page }) => {
+    await page.goto("/services/nin-date-of-birth-modification");
+    // NIMC publishes two different figures: it is misleading to assert that
+    // this page is verified until the agency reconciles the contradiction.
+    await expect(page.locator(".status-badge.status-conflict")).toContainText("Confirm current details");
+    await expect(page.getByText("₦28,574", { exact: false }).first()).toBeVisible();
+    await expect(page.locator(".conflict-alert")).toContainText("Confirm current details before payment");
+
+    const verified = [
       ["/services/nin-slip-reissue", "₦600"],
       ["/services/waec-result-confirmation-overseas", "₦39,000"],
     ] as const;
-
-    for (const [path, fee] of cases) {
+    for (const [path, fee] of verified) {
       await page.goto(path);
-      await expect(page.getByText("Verified", { exact: true }).first()).toBeVisible();
+      await expect(page.locator(".status-badge.status-verified")).toContainText("Verified");
       await expect(page.getByText(fee, { exact: false }).first()).toBeVisible();
-      await expect(page.getByText(/Official sources conflict|Official sources currently disagree/i)).toHaveCount(0);
+      await expect(page.locator(".conflict-alert")).toHaveCount(0);
     }
   });
 
