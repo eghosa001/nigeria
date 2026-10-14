@@ -15,7 +15,7 @@ export const revalidate = 86400;
 
 const youtubeSeoOverrides: Record<string, { title: string; description: string }> = {
   "KWIpR47N9hc": { title: "Love Always Wins Cast & Full Movie (2026)", description: "Love Always Wins cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
-  "X3HaWmJoSRU": { title: "Once Upon a Village 3 Cast & Full Movie (2026)", description: "Once Upon a Village 3 cast, runtime and official full movie on YouTube, published by RuthKadiri247." },
+  "X3HaWmJoSRU": { title: "Once Upon a Village 3 Cast, Roles & Full Movie (2026)", description: "Once Upon a Village 3 cast: Deza The Great (Chairman Jeffery), Prisma James (Lilian), Annabel Apara (Enoh). Original RuthKadiri247 movie." },
   "Yu-QxqPDmXM": { title: "Once Upon a Village Cast & Full Movie (2026)", description: "Once Upon a Village cast, 103-minute runtime and official full movie on YouTube, published by RuthKadiri247." },
   "_86CuSRi6E4": { title: "One More Night Nigerian Movie: Cast & Full Movie", description: "One More Night cast, 129-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard and Cynthia Clarke." },
   "T1-buA-yAmo": { title: "Holy Matrimony Nigerian Movie: Cast & Full Movie", description: "Holy Matrimony cast, 143-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard, Onyi Alex and Nini Mbonu." },
@@ -89,6 +89,11 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
   const onceUponAVillageEpisode = movie.videoId === "X3HaWmJoSRU" || movie.videoId === "Yu-QxqPDmXM";
+  // Reuse the individually reviewed Part 3 profile instead of generating role
+  // assignments from an unverified YouTube description.
+  const partThreeRoles = movie.videoId === "X3HaWmJoSRU"
+    ? (await import("@/lib/movie-editorial-profiles")).movieEditorialProfiles["once-upon-a-village-3"]?.roles ?? []
+    : [];
   const base = getSiteUrl();
   const related = indexable ? await getRelatedYouTubeDetailMovies(movie, 8) : [];
   const sameChannel = related.filter((item) => item.channelName.toLowerCase() === movie.channelName.toLowerCase()).slice(0, 4);
@@ -242,6 +247,17 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                   We have not confirmed the complete cast for this movie. Check the publisher’s video description for credits.
                 </p>
               )}
+              {partThreeRoles.length ? (
+                <div className="movie-long-summary">
+                  <h3>Verified character roles in Part 3</h3>
+                  <ul>
+                    {partThreeRoles.map(({ actor, character }) => (
+                      <li key={actor}><strong>{actor}</strong> — {character}</li>
+                    ))}
+                  </ul>
+                  <p>These names describe Part 3 only. <Link href="/entertainment/series/once-upon-a-village#cast">See the full-series cast and episode order →</Link></p>
+                </div>
+              ) : null}
             </section>
 
             <section id="source">
