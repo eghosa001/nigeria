@@ -8014,7 +8014,7 @@
     "slug": "avon-provider-directory",
     "title": "How to find an Avon HMO hospital or provider",
     "shortTitle": "Avon provider directory",
-    "summary": "Avon HMO's provider-search route for finding hospitals, optical providers and other network facilities by location or provider name before seeking care under an Avon plan.",
+    "summary": "Search Avon HMO's official Find My Provider directory by hospital or address and available location filters. Confirm the facility is included in your specific plan and can provide the service before travelling; directory membership does not guarantee treatment authorisation.",
     "category": "Health insurance",
     "agencySlug": "avon-hmo",
     "feeLabel": "No provider-search fee",
@@ -8028,23 +8028,23 @@
       "The plan details needed to confirm that a listed provider offers the intended service under the customer's actual coverage"
     ],
     "steps": [
-      "Open Avon's official Find My Provider page.",
-      "Choose the relevant state, area, provider type or other available filters, or search directly by hospital name or address.",
-      "Review the matching provider records and note the hospital/facility name and address.",
-      "Check the customer's actual Avon plan benefits before assuming every service at the listed provider is covered.",
-      "Contact the provider or Avon HMO before a planned visit when confirmation of service availability or authorisation is needed."
+      "Open the official Avon HMO Find My Provider page and let its hospital directory finish loading before interpreting the results.",
+      "Choose the location or provider-category filters available on the page, or enter the hospital name or address into its search field and submit the search.",
+      "Review the matching provider names and addresses; if the page temporarily shows zero hospitals while still loading, do not treat that as a definitive network exclusion.",
+      "Check the benefits and restrictions of your own Avon HMO plan, then call the facility or Avon on its official contact number to confirm present network status, appointment availability and any prior authorisation.",
+      "If a hospital is missing or your planned treatment is not covered, ask Avon for an eligible alternative rather than travelling on the assumption that every listed clinic accepts every plan."
     ],
     "notes": [
-      "Avon's live directory contains thousands of provider records across Nigeria.",
-      "A provider appearing in the network directory does not mean every procedure or service is covered by every Avon plan.",
-      "For urgent medical needs, use the appropriate emergency route rather than relying only on a directory search."
+      "The directory contains a hospital-name/address search and location/provider filters; results depend on the current published network.",
+      "A provider appearing in the directory does not prove that every treatment is covered by each Avon policy.",
+      "For urgent medical needs use the appropriate emergency service rather than relying on a directory search."
     ],
     "sources": [
       {
         "label": "Avon HMO Find My Provider",
         "agency": "Avon HMO",
         "url": "https://app.avonhealthcare.com/find-my-provider",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -8052,7 +8052,7 @@
       "hygeia-provider-directory",
       "hygeia-health-plan-purchase"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Avon HMO hospital list",
       "Avon HMO provider directory",
@@ -11094,7 +11094,7 @@
     "slug": "moniepoint-pos-terminal",
     "title": "How to get a Moniepoint POS terminal",
     "shortTitle": "Moniepoint POS",
-    "summary": "Moniepoint businesses can request a POS from the business dashboard, fund the account for the published terminal/caution/logistics/insurance amount and receive delivery through an assigned relationship manager.",
+    "summary": "To request a Moniepoint POS, open a business account, select POS → Add a new POS, then fund the account for the published ₦21,500 request amount. Moniepoint describes ₦10,000 caution, ₦10,000 logistics and ₦1,500 first-year insurance components.",
     "category": "Business",
     "agencySlug": "moniepoint",
     "feeLabel": "₦21,500 current POS request amount",
@@ -11109,23 +11109,23 @@
       "Selection of an available Moniepoint POS device/service option"
     ],
     "steps": [
-      "Create or sign in to the Moniepoint business account and open the business dashboard.",
-      "Open the POS menu and choose Add a new POS.",
-      "Follow the terminal request instructions and confirm the business/delivery details.",
-      "Fund the business account with at least the current POS request amount and complete the request.",
-      "Coordinate with the assigned Moniepoint relationship manager for terminal delivery and onboarding."
+      "Register for a Moniepoint business account and sign in to the official business dashboard with the account created for your business.",
+      "Open the POS section, select Add a new POS and complete the request with the delivery and business details requested by Moniepoint.",
+      "Review the current terminal package and fees shown before funding. Moniepoint's public page currently lists ₦21,500: ₦10,000 caution fee, ₦10,000 logistics and ₦1,500 insurance for the first year.",
+      "Fund your business account using the provider's official instructions and confirm the POS request; keep the confirmation rather than sending money to a personal account.",
+      "Moniepoint says it assigns a relationship manager to arrange delivery and training, and advertises a 48-hour delivery target. Confirm the actual delivery commitment with your assigned manager."
     ],
     "notes": [
-      "Moniepoint currently states that its POS supports card payments and transfers with instant settlement.",
-      "The published ₦21,500 charge is current as of this verification date and may change.",
-      "The provider assigns a relationship manager after the request to deliver and explain the terminal."
+      "The ₦21,500 figure and its component fees are those published on Moniepoint's official terminal page; check the live dashboard before payment.",
+      "Moniepoint advertises delivery within 48 hours and onboarding support; the actual fulfilment depends on confirmed order and location.",
+      "The terminal supports card and POS transfer payments according to Moniepoint."
     ],
     "sources": [
       {
         "label": "Moniepoint POS Terminal",
         "agency": "Moniepoint Microfinance Bank",
         "url": "https://www.moniepoint.com/ng/business/point-of-sale-terminal",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -11133,7 +11133,7 @@
       "paystack-physical-terminal-nigeria",
       "nomba-pos-terminal"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Moniepoint POS",
       "get Moniepoint POS machine",
@@ -12113,7 +12113,7 @@
     "slug": "unity-business-account-opening",
     "title": "How to start a Unity Bank business account application online",
     "shortTitle": "Unity business account",
-    "summary": "Unity Bank's online corporate-account initiation route for registered businesses using company name, RC number, business type, location, company address, email and phone details.",
+    "summary": "Start a Unity Bank corporate account through its official business-account form by entering the registered company name and CAC registration (RC) number, business type, location, contacts and address. Submitting the form begins the bank's process; it does not itself confirm an account is active.",
     "category": "Banking",
     "agencySlug": "unity-bank",
     "feeLabel": "Product terms depend on the business account selected",
@@ -12129,23 +12129,23 @@
       "Any additional corporate KYC documents Unity Bank requests after the initial online submission"
     ],
     "steps": [
-      "Open Unity Bank's official corporate account-creation page.",
-      "Enter the company name and CAC RC number.",
-      "Choose the business type and operating location from the available fields.",
-      "Enter the company address, email and phone number and review them for accuracy.",
-      "Submit the form and follow Unity Bank's official follow-up instructions for the remaining corporate KYC and account-opening steps."
+      "Open corporate.unitybankng.com/account/create-account from a trusted connection; check the Unity Bank domain before entering business identification data.",
+      "Enter the registered legal company name and matching CAC RC number, using the business details exactly as shown on the relevant registration document.",
+      "Complete the business-type and location fields, then add the official business address, contact email and reachable phone number as the form requests.",
+      "Review the submission and send it using the bank's online control. Save the acknowledgement or any official reference provided.",
+      "Follow Unity Bank's direct communication for corporate KYC, authorised signatories, account mandates, supporting documents and final activation. Do not assume the public form is a completed account opening."
     ],
     "notes": [
-      "The public form starts the corporate-account process and does not display every later KYC document on the first screen.",
-      "The account should be opened in the legal business identity that matches the RC information.",
-      "Confirm fees, mandates and signatory requirements directly in Unity Bank's follow-up before funding."
+      "The public form initiates, rather than completes, a corporate account application.",
+      "Business identity and CAC RC details should match the registered entity.",
+      "Confirm any final KYC, signatory rules, product pricing or funding requirement directly with Unity Bank before paying or depositing."
     ],
     "sources": [
       {
         "label": "Unity Bank Corporate Account Opening",
         "agency": "Unity Bank Plc",
         "url": "https://corporate.unitybankng.com/account/create-account",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -12153,7 +12153,7 @@
       "cac-company-registration",
       "cac-business-name-registration"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Unity Bank business account",
       "open Unity Bank corporate account",
@@ -12552,7 +12552,7 @@
     "slug": "ups-track-package-nigeria",
     "title": "How to track a UPS package from or to Nigeria",
     "shortTitle": "UPS package tracking",
-    "summary": "UPS's tracking route for entering a UPS tracking number to view the latest scan, estimated delivery status, out-for-delivery information and delivery exceptions.",
+    "summary": "Track a UPS shipment travelling to or from Nigeria using the official UPS Track page and the shipment's UPS tracking number. Read the latest scan and delivery exception there; customs or last-mile events may update after the shipper's first notification.",
     "category": "Logistics",
     "agencySlug": "ups-nigeria",
     "feeLabel": "No package-tracking fee",
@@ -12566,29 +12566,29 @@
       "The shipment/reference information needed if UPS support has to investigate an exception"
     ],
     "steps": [
-      "Open UPS's official Track a Package page.",
-      "Enter the UPS tracking number assigned when the shipment was created.",
-      "Select Track and review the latest scan, estimated delivery information and current shipment status.",
-      "Check any exception or delivery instruction displayed on the tracking result.",
-      "Use UPS support with the tracking number if the shipment remains stalled or an exception needs manual resolution."
+      "Open ups.com/track through the official UPS website; use the tracking number provided by the shipper, retailer or UPS receipt.",
+      "Enter the complete tracking number in UPS's tracking field and select the Track or Search control.",
+      "Review the latest shipment movement, delivery estimate and any customs, address or exception notices. A shipping label alone does not prove the parcel has been collected by UPS.",
+      "If the package is shown as out for delivery, review any genuine delivery instructions displayed by UPS; if delivery is delayed, follow the status rather than a message claiming an urgent unofficial clearance payment.",
+      "Contact UPS's official support with the tracking number when a status or customs exception remains unresolved; do not disclose card or banking credentials to unsolicited tracking messages."
     ],
     "notes": [
-      "UPS says tracking details update as a package is scanned through the network.",
-      "Tracking can show statuses such as on the way, out for delivery, delivered or an exception.",
-      "A tracking number can be used without exposing payment-card or banking credentials."
+      "UPS tracking scans can update at different times along the delivery network.",
+      "An estimated delivery date is not a guaranteed arrival time, especially where clearance or address issues intervene.",
+      "Use UPS's official tracking or support links for delivery exceptions, not links sent by an unknown third party."
     ],
     "sources": [
       {
         "label": "UPS Tracking",
         "agency": "UPS",
         "url": "https://www.ups.com/track",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "UPS — Where Is My Package",
         "agency": "UPS",
         "url": "https://www.ups.com/us/en/support/tracking-support/where-is-my-package",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -12596,7 +12596,7 @@
       "dhl-track-shipment-nigeria",
       "gigl-track-shipment"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "UPS tracking Nigeria",
       "track UPS package Nigeria",
