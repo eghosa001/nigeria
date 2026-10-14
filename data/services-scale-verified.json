@@ -5337,50 +5337,65 @@
     "slug": "ibedc-map-refund",
     "title": "How to check an IBEDC MAP meter refund",
     "shortTitle": "IBEDC MAP refund",
-    "summary": "IBEDC's MAP Refund Portal for eligible customers who paid for a meter, using the meter number to check refund eligibility and retrieve electricity-credit tokens issued in installments.",
+    "summary": "If you bought an IBEDC electricity meter under the Meter Asset Provider (MAP) scheme, use IBEDC's official refund portal to enter your meter number, check eligibility and retrieve available electricity-credit tokens. Any eligible refund is applied to energy purchases, not paid as cash to your bank.",
     "category": "Electricity",
     "agencySlug": "ibedc",
     "feeLabel": "No refund-check fee",
-    "feeNote": "IBEDC does not state a fee for checking or receiving an eligible MAP refund through the official portal.",
+    "feeNote": "IBEDC's official MAP Refund Portal does not advertise a fee for checking eligibility or retrieving an issued credit token. MAP meter purchase charges and electricity top-ups are separate.",
     "timeline": "IBEDC says eligible MAP refunds are issued in monthly installments; the portal shows the customer's available refund tokens rather than one universal completion date.",
     "status": "verified",
     "officialPortal": "https://www.ibedc.com/map-refund",
     "requirements": [
-      "A meter obtained through the IBEDC Meter Asset Provider scheme and paid for by the customer",
-      "A meter number that IBEDC recognises as eligible under the current MAP refund implementation",
-      "Access to the prepaid meter so issued refund tokens can be loaded in the required order"
+      "An IBEDC meter for which the customer paid under the MAP scheme; a free or other-scheme meter does not establish refund eligibility",
+      "The meter/account number used to identify the MAP purchase in IBEDC's records",
+      "Proof of the original MAP payment and installation details if IBEDC must investigate a missing record",
+      "Access to the prepaid meter to enter outstanding electricity-credit refund tokens in the order issued"
     ],
     "steps": [
-      "Open IBEDC's official MAP Refund Portal and enter the meter number.",
-      "Check the eligibility and available refund-token information returned for the meter.",
-      "Copy the earliest outstanding refund token shown by the portal.",
-      "Load the refund tokens from the earliest issue date to the latest issue date, because IBEDC requires older refund tokens to be entered before newer ones.",
-      "If the portal cannot retrieve an eligible token, contact IBEDC customer care with the meter details for investigation."
+      "Open https://www.ibedc.com/map-refund, the official IBEDC MAP refund page. Do not confuse it with the separate meter-application or regular electricity-payment portals.",
+      "Enter the correct meter number in the 'Check Your Refund' / 'Get Token' form. The portal checks eligibility and displays any refund-token record currently available for that meter; an unsuccessful lookup does not by itself settle a disputed payment.",
+      "If the portal lists multiple credits, note the issue date on each token and load the oldest outstanding token first, working forward to the newest. IBEDC explicitly warns that refund tokens must be entered in ascending issue-date order.",
+      "Load the issued energy-credit token on the correct prepaid meter. The credit provides electricity units; it is not a cash refund, a recharge service fee or confirmation that all future refund instalments have been issued.",
+      "If the number is unrecognised, the token does not load or an expected refund is missing, call IBEDC's published customer-care number 07001239999 and provide the meter number and original MAP payment evidence. Ask the company to confirm whether the meter is eligible, the current token record and any backlog rather than paying an unofficial agent."
     ],
     "notes": [
-      "IBEDC says eligible MAP refunds are credited through energy tokens in monthly installments.",
-      "The provider instructs customers to load refund tokens from the earliest issue date to the latest.",
-      "A customer should not pay an agent for access to the official refund-check portal."
+      "IBEDC's own MAP Refund Portal says eligible prepaid-meter buyers may receive energy-credit refunds in monthly instalments. The company does not promise every customer's full refund will be visible in one lookup.",
+      "IBEDC's live portal explicitly says tokens must be loaded in ascending order (earliest issue date first). A later token may fail until an earlier one is entered.",
+      "IBEDC's general MAP and FAQ pages discuss a 36-month refund period, while individual eligibility, historical schemes and credit records may differ. Do not calculate a guaranteed personal repayment date or claim every MAP customer qualifies; rely on the meter-specific portal and written IBEDC confirmation.",
+      "The published MAP refund checker does not require a bank PIN, OTP or separate agent processing fee. Use only the official IBEDC portal and customer care; avoid sharing payment credentials.",
+      "The regular IBEDC meter application is for acquiring a meter; the MAP refund portal is for checking refunds on eligible existing meter purchases. These are different services."
     ],
     "sources": [
       {
-        "label": "IBEDC MAP Refund Portal",
+        "label": "IBEDC — MAP refund checker, instalments and token order",
         "agency": "Ibadan Electricity Distribution Company Plc",
         "url": "https://www.ibedc.com/map-refund",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "IBEDC MAP Refund Portal Alternative Path",
+        "label": "IBEDC — alternate official refund path",
         "agency": "Ibadan Electricity Distribution Company Plc",
         "url": "https://www.ibedc.com/map_refund",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "IBEDC — MAP programme and refund terms",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/map",
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "IBEDC — FAQ and published customer contacts",
+        "agency": "Ibadan Electricity Distribution Company Plc",
+        "url": "https://www.ibedc.com/faqs",
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
       "ibedc-map-meter-application",
       "ibedc-pay-bill-buy-token"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "IBEDC MAP refund",
       "IBEDC meter refund token",
