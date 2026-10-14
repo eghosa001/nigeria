@@ -584,54 +584,69 @@
   },
   {
     "slug": "spotify-premium-nigeria",
-    "title": "Spotify Premium Nigeria: plan prices and how to subscribe",
-    "shortTitle": "Spotify Premium Nigeria",
-    "summary": "Spotify Premium Nigeria currently lists Individual at ₦1,600/month, Student at ₦800/month, Duo at ₦2,100/month and Family at ₦2,500/month. Compare eligibility, checkout offers and payment methods.",
+    "title": "Spotify Premium Nigeria Prices 2026: Individual, Student, Duo and Family",
+    "shortTitle": "Spotify Premium plans and prices",
+    "summary": "Spotify Nigeria currently lists the regular Premium monthly prices as Individual ₦1,600, Student ₦800, Duo ₦2,100 and Family ₦2,500. Student needs verified higher-education eligibility; Duo is for a couple at one address and Family covers up to six people living together. An introductory offer may cost less temporarily; check the actual checkout, renewal date and payment method before you subscribe.",
     "category": "TV & streaming",
     "agencySlug": "spotify-nigeria",
-    "feeLabel": "From ₦800/month Student; ₦1,600/month Individual",
-    "feeNote": "Official Nigeria plan prices checked 11 October 2026: Individual ₦1,600/month, eligible Student ₦800/month, Duo ₦2,100/month and Family ₦2,500/month. Trials/promotions may change or depend on eligibility; confirm the full price at checkout.",
-    "timeline": "Premium starts after the selected plan is activated and payment or an eligible trial is accepted.",
+    "feeLabel": "Individual ₦1,600; Student ₦800; Duo ₦2,100; Family ₦2,500 per month",
+    "feeNote": "Regular recurring plan prices checked directly against Spotify Nigeria on 14 October 2026: Individual ₦1,600/month, Student ₦800/month, Duo ₦2,100/month, Family ₦2,500/month. Spotify advertises a limited Individual introductory offer of ₦800/month for six months for eligible people who have not tried Premium; the page states an end date of 31 October 2026. Eligibility and checkout/payment options may vary and may change; do not confuse the promotion with the full renewal price.",
+    "timeline": "Direct subscriptions are generally activated through Spotify's checkout once billing or an eligible trial is confirmed. Introductory offers, payment-method availability, the next charge and account verification depend on what the user's own checkout displays; do not promise a universal free trial or processing time.",
     "status": "verified",
     "officialPortal": "https://www.spotify.com/ng/premium/",
     "requirements": [
-      "A Spotify account or the ability to create one",
-      "A selected Premium plan available in Nigeria",
-      "A supported payment method shown for the selected Premium option",
-      "For Student Premium, eligibility at an accredited higher-education institution and successful student verification"
+      "A Spotify account and access to the Nigeria plan page; the amount shown depends on the country/region attached to your payment profile and the live offer for your account.",
+      "For Individual: one personal Premium account; choose this for a standalone subscription that does not depend on a school or household eligibility rule.",
+      "For Student: an eligible accredited higher-education institution, student status confirmed through Spotify's verification partner SheerID, and an account holder over 18. Spotify says Student may remain available for up to four years while eligible.",
+      "For Duo: exactly two Premium accounts for a couple living at the same address; both people retain independent playlists and listening histories.",
+      "For Family: up to six family members living together at the same address; the plan manager handles payment and parental controls. Do not subscribe for unrelated users at different addresses.",
+      "A payment method accepted in your Spotify checkout; the payment-method choices can differ for direct card subscriptions, e-wallet offers and subscriptions billed by a third party."
     ],
     "steps": [
-      "Open the official Spotify Premium Nigeria website and compare Individual, Student, Duo and Family.",
-      "Check the live trial, promotional and normal renewal terms shown in your own checkout; offers can vary by eligibility.",
-      "Log in or create an account; Student requires eligible higher-education verification, and Duo/Family require same-address household eligibility.",
-      "Choose a supported payment method displayed by Spotify and confirm the billed amount before submitting.",
-      "Open Spotify account settings after activation to confirm your plan, next billing date and cancellation controls."
+      "Open https://www.spotify.com/ng/premium/ and review all four plans together. Read the regular renewal price instead of comparing only promotional first-month or multi-month offers.",
+      "Choose the appropriate plan. Individual covers one account; Duo is for a cohabiting couple; Family is for up to six cohabiting family members. Student is only for an eligible verified higher-education student over 18, not all people with a student ID.",
+      "If choosing Student, open Spotify's Nigeria student page and complete SheerID verification for your accredited institution. The plan can require periodic re-verification, and Spotify says it switches to full-price Individual if you are no longer eligible after the applicable period.",
+      "If choosing Duo or Family, check the same-address eligibility and invite the other account holders through the official plan-manager account. Spotify describes separate accounts and private saved music for each user; sharing the manager's login is not how the household plan is intended to work.",
+      "In Spotify checkout, compare the available Nigerian payment options and read the exact first charge, renewal price, any introductory promotion, its eligibility and its stated expiry. Spotify's site displayed an Individual six-month promotional discount for certain eligible subscribers ending 31 October 2026 when reviewed, but not every account or payment route necessarily receives that offer.",
+      "Complete the payment or trial enrolment only on Spotify's own secure pages, then open your Spotify account's Manage your plan screen to verify the active tier, the next billing date and whether a partner rather than Spotify is charging you.",
+      "To cancel a directly billed plan, open Manage your plan and finish the Cancel subscription flow. Spotify says ordinary paid Premium generally continues to the next billing date before moving to Free, while cancellation during a zero-priced free trial can end Premium immediately. Plans billed by a mobile or internet partner may need cancellation through that provider.",
+      "If payment fails or the displayed price differs, confirm your account region, valid payment details and any existing or past-trial eligibility, then follow Spotify's own support guidance. Do not pay an unofficial seller for a 'lifetime Premium' account or share your login, payment card details or one-time codes."
     ],
     "notes": [
-      "The monthly prices were checked against Spotify Nigeria's official Premium page on 11 October 2026 and may later change.",
-      "An introductory offer is not a permanent monthly price; verify renewal timing and eligibility at checkout.",
-      "Duo and Family have household rules; Student requires eligibility verification.",
-      "Spotify supports online cancellation from the account page; special trial terms can end Premium access immediately."
+      "The four normal Nigerian recurring prices are Individual ₦1,600, Student ₦800, Duo ₦2,100 and Family ₦2,500 a month. These are Spotify Nigeria's own posted rates as of 14 October 2026, not imported USD conversions or guaranteed unchanged future prices.",
+      "Spotify's October 2026 Individual promotion advertises ₦800/month for six months, followed by ₦1,600/month, for eligible new Premium customers, ending on 31 October 2026. The offer text and available card/e-wallet options can differ at checkout. If it no longer appears, the ordinary plan price remains the reference.",
+      "Spotify Student requires an eligible accredited tertiary institution and account holder over age 18. Verification runs through SheerID. Spotify says discounts can last up to four years subject to eligibility; when verification expires without renewal, the student discount can revert to the Individual rate.",
+      "Premium Duo allows two accounts for a couple living at the same address. Family allows up to six family members at the same address and includes parental controls for the plan manager. Spotify can check household address eligibility; group plans are not generally designed for unrelated users living apart.",
+      "Spotify Premium includes ad-free music, offline listening, control of what plays next and higher audio quality, but it does not make cellular data free. Downloading music can use your phone's storage and an internet connection for initial downloads and account checks.",
+      "A trial is not a permanent free subscription. Spotify says a valid payment method can be required even for a trial and eligible users may be reminded before it ends. On ordinary paid plans cancellation is normally effective after the current paid period, while a zero-price trial cancelled early may lose Premium immediately.",
+      "If your subscription was purchased through a telecom partner or another billed bundle, Spotify's account page may show the partner managing payments. Do not assume Spotify's direct Cancel subscription option works for every partner bill; follow the linked partner contact route instead.",
+      "A student verification, group-plan invitation or payment failure is not a reason to start multiple Spotify accounts. First use the official account's eligibility, plan and billing screens to diagnose the cause."
     ],
     "sources": [
       {
-        "label": "Spotify Nigeria Premium plans",
+        "label": "Spotify Nigeria — four Premium plans, regular prices and October introductory offer",
         "agency": "Spotify",
         "url": "https://www.spotify.com/ng/premium/",
-        "lastChecked": "2026-10-11"
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "Spotify Student Nigeria",
+        "label": "Spotify Nigeria — Student eligibility, SheerID and four-year limit",
         "agency": "Spotify",
         "url": "https://www.spotify.com/ng/student/",
-        "lastChecked": "2026-10-11"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Spotify Support Nigeria — cancel Premium and partner billing",
+        "agency": "Spotify",
+        "url": "https://support.spotify.com/ng/article/cancel-premium/",
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
       "spotify-cancel-premium",
       "netflix-start-membership-nigeria"
     ],
-    "lastVerified": "2026-10-11",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Spotify Premium Nigeria",
       "Spotify price Nigeria",
