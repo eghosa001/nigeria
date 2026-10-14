@@ -11,14 +11,14 @@ export const railTravelGuides20261012: ExploreGuide[] = [
     summary: "Use the official Nigerian Railway Corporation timetable to compare Lagos, Abeokuta and Ibadan stops, check the right day's departure and plan onward transport before booking.",
     intro: [
       "The Nigerian Railway Corporation lists the Lagos–Ibadan Train Service (LITS) with a stop at Abeokuta. A useful rail trip starts by choosing your departure day and station, then checking the official timetable and booking instructions again before you leave. Fridays and Saturdays have a different timetable from Sundays through Thursdays.",
-      "For a city break, decide whether you want to spend your time in Abeokuta or continue to Ibadan. The train does not deliver you to every attraction: arrange a safe onward journey from the station, and avoid scheduling a tight connection that assumes there can never be a delay.",
+      "For a city break, choose Abeokuta or Ibadan before booking. The published Lagos departures are 08:00 and 16:00 on Sundays–Thursdays, and 07:15, 13:40 and 16:00 on Fridays–Saturdays. Abeokuta is an intermediate stop; leave time for onward transport and possible delays rather than assuming the railway station is your final destination.",
       "This is a planning guide, not a real-time departure board or ticket seller. NRC can adjust journeys, seat inventory and operations; the operator's live notice and ticket confirmation take precedence."
     ],
     bestFor: ["Rail journeys", "City breaks", "Abeokuta", "Ibadan", "Transport"],
     highlights: [
       { name: "Lagos departure", detail: "NRC's published Sundays–Thursdays timetable shows Lagos departures at 08:00 and 16:00; its Fridays–Saturdays table shows 07:15, 13:40 and 16:00. These are published schedule times, not live operational guarantees." },
       { name: "Abeokuta stop", detail: "Abeokuta is an intermediate station, so check the correct direction and expected stop time. For an Ogun heritage day, plan separate transport for Olumo Rock and the Itoku adire area." },
-      { name: "Ibadan arrival and return", detail: "NRC publishes separate Ibadan-to-Lagos services. Do not plan a same-day return from a Lagos departure without checking the exact reverse timetable for that day." },
+      { name: "Ibadan-to-Lagos returns", detail: "NRC's published Sunday–Thursday timetable lists Ibadan departures at 08:00 and 16:00. On Fridays and Saturdays the published departures are 08:00, 10:50 and 16:30. Confirm the timetable again before buying a return ticket." },
       { name: "Ticket and station checks", detail: "Use NRC's official booking menu and verify the actual boarding station, ticket date, name and departure time. Do not rely on a social-media screenshot or unsolicited payment account." }
     ],
     planning: [
@@ -30,6 +30,6 @@ export const railTravelGuides20261012: ExploreGuide[] = [
       { label: "Do not invent a fare", detail: "No universal current ticket price is listed here; classes, travel date and purchase conditions may change the amount. Confirm the actual checkout price with NRC." }
     ],
     source: { label: "Nigerian Railway Corporation — official Lagos–Ibadan schedules", href: "https://nrc.gov.ng/schedules/" },
-    lastReviewed: "2026-10-12"
+    lastReviewed: "2026-10-14"
   }
 ];
