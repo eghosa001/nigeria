@@ -1845,58 +1845,68 @@
     "slug": "ican-professional-exam-registration",
     "title": "How to register for an ICAN professional examination",
     "shortTitle": "ICAN exam registration",
-    "summary": "ICAN's professional-exam registration route for existing students: check financial/exam status, clear subscriptions, select eligible papers and centre, pay online and complete the exam registration before the diet deadline.",
+    "summary": "To enter an ICAN professional examination diet as an existing financial student, check your current exam and subscription status, resolve any exemption or arrears issue, select the eligible papers and centre, pay through the official portal, then submit the actual examination registration. Paying alone is not the same as registering. ICAN lists 10–12 November 2026 for its November diet; confirm the separate registration deadline directly before paying.",
     "category": "Education",
     "agencySlug": "ican",
     "feeLabel": "Varies by level and number of papers",
-    "feeNote": "ICAN's current fee table varies by Foundation, Skills or Professional level and paper count. Confirm the exact amount from the student's financial/exam status before making the non-refundable payment.",
-    "timeline": "The November 2026 Professional Examination is scheduled for 10–12 November 2026. Registration must be completed before ICAN's published diet deadline; payment alone does not complete exam registration.",
+    "feeNote": "ICAN charges by Foundation, Skills or Professional level and the number of papers selected; subscription arrears and approved exemptions affect eligibility. Consult your own ICAN portal financial statement and the current diet notice. The historical May 2026 official advert is not a reliable November 2026 payment quote.",
+    "timeline": "ICAN's official student site lists 10–12 November 2026 for the November professional examination. The exam dates are not the registration cutoff: check the diet-specific registration deadline and finish both payment and online registration before that separate date. Do not reuse the May diet deadline.",
     "status": "verified",
     "officialPortal": "https://icanportal.org/professional/newexams",
     "requirements": [
-      "An active ICAN professional-student registration number",
-      "Cleared annual-subscription arrears before exam registration",
-      "An examination/financial status showing the papers the student is eligible to enter",
-      "Selection of an approved examination centre and the intended papers",
-      "Online payment of the applicable examination fee through the official ICAN portal"
+      "An existing ICAN professional student registration number; student registration and examination enrolment are separate processes",
+      "Your current Examination/Financial Status on the professional portal, with any subscription arrears cleared",
+      "Approved exemption status if you intend to skip subjects or combine subjects across levels; a pending exemption request is not approval",
+      "The exam papers and examination centre permitted for your level under the diet's timetable",
+      "A reliable online payment method, email/phone contact and receipt details for the completed application"
     ],
     "steps": [
-      "Open the ICAN professional portal and check the student's Examination and Financial Status before paying.",
-      "Clear any outstanding annual subscription separately because ICAN says students with arrears cannot register for examinations.",
-      "Open the professional exam-registration page, choose the eligible papers and preferred examination centre.",
-      "Pay the examination amount shown for the selected papers through the official online portal and keep the transaction receipt.",
-      "Complete and submit the online examination registration before the published diet deadline, then later download the docket/attendance information from ICAN."
+      "Begin at https://icanportal.org/professional, sign into the professional-student area and confirm both Examination Status and Financial Status. Do not treat a generic student registration page as the examination entry form.",
+      "Check any subscription arrears, eligibility for the intended papers and whether claimed exemptions have been approved. Resolve these before paying for an exam entry; a pending exemption should not be assumed valid.",
+      "Open the diet's official timetable or notice from https://icanig.org/ican/students/ and verify the currently applicable registration closing date, exam dates, available centres and paper combination rules. The published November 2026 examination dates are 10–12 November, but this does not establish a single registration deadline.",
+      "Visit the official professional examination registration route at https://icanportal.org/professional/newexams, select the eligible papers and preferred centre, and compare the amount shown with your financial status. Pay using the diet's permitted online method; ICAN's older FAQ may still mention bank/PayDirect, while its May 2026 exam notice explicitly prohibited those methods for that diet.",
+      "After the payment result is confirmed, return to the exam-registration workflow, complete and submit the actual entry before the published cutoff, and keep the submission acknowledgement and payment record. ICAN specifically warns that payment alone is not enrolment.",
+      "When ICAN releases dockets or attendance details, retrieve them from the professional-student portal and check the centre, papers, identification and prohibited-item requirements. Contact the official ICAN helpdesk for unresolved payment or eligibility errors; do not pay a proxy for guaranteed admission."
     ],
     "notes": [
-      "ICAN warns that examination fees are non-refundable and exams cannot be deferred to another diet after payment.",
-      "ICAN advises students not to use third parties or proxies for examination registration.",
-      "For Nigeria-based candidates, the 2026 exam guidance directs examination-registration payments through the online ICAN portal."
+      "ICAN currently displays November 10–12, 2026 as examination dates. No November 2026 registration deadline was independently established from the current checked public notices; confirm it on the official diet advert rather than using the exam date as the payment deadline.",
+      "ICAN's May 2026 official exam circular said Nigeria-based candidates had to register and pay online, with no payments through commercial banks, while older ICAN FAQ text still lists PayDirect and bank channels. Treat the latest diet-specific circular and your live portal instructions as authoritative if the pages differ.",
+      "The May 2026 circular was for a different exam diet: its 14 May closing date and fee table must not be advertised as the November diet's dates or prices.",
+      "The professional examination fee is non-refundable and diet deferment may be disallowed. Check the current diet rules carefully before paying, particularly after submitting a request for exemption or centre change.",
+      "ICAN warns that mobile devices, smart devices and watches may be prohibited at examination centres; check the current docket/instructions and arrive with only approved materials.",
+      "Do not use an unofficial exam agent or proxy, share portal passwords or pay a third-party bank account. Official professional-student login and registration routes are on ICAN-controlled domains."
     ],
     "sources": [
       {
-        "label": "ICAN Students Portal",
+        "label": "ICAN — students and November 2026 timetable",
         "agency": "Institute of Chartered Accountants of Nigeria",
         "url": "https://icanig.org/ican/students/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "ICAN Student FAQs",
+        "label": "ICAN — student FAQ (contains historical payment methods)",
         "agency": "Institute of Chartered Accountants of Nigeria",
         "url": "https://icanig.org/ican/students/faqs.php",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
-        "label": "ICAN Professional Exam Portal",
+        "label": "ICAN — official professional exam registration portal",
         "agency": "Institute of Chartered Accountants of Nigeria",
         "url": "https://icanportal.org/professional/newexams",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "ICAN — May 2026 professional exam notice (historical diet, not November cutoff)",
+        "agency": "Institute of Chartered Accountants of Nigeria",
+        "url": "https://icanig.org/documents/PE_MAY_2026_ADVERT.pdf",
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
       "ican-professional-student-registration",
       "acca-book-exam-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "ICAN exam registration 2026",
       "ICAN November 2026 exam",
