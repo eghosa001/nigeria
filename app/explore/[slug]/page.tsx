@@ -31,6 +31,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
   const year = guide.lastReviewed.slice(0, 4);
   if (guide.slug === "nigeria-landmarks-places-to-visit") return "Landmarks & Places to Visit in Nigeria " + year;
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
+  if (guide.slug === "moonshot-techcabal-lagos-2026") return "Moonshot by TechCabal 2026: Dates & Venue";
   if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Visitor Access";
   if (guide.slug === "mambilla-plateau-guide") return "Mambilla Plateau Nigeria: Location, Gembu & Trip Tips";
   if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Age, Yobe Discovery & Visitor Advice";
@@ -47,6 +48,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 // guides earned impressions on precise landmark queries but no recorded clicks.
 // Match search intent without suggesting unrestricted access or inventing fees.
 const exploreDescriptionOverrides: Record<string, string> = {
+  "moonshot-techcabal-lagos-2026": "Moonshot by TechCabal is 28–29 October 2026 at National Theatre, Lagos. Compare official tickets, the programme, transport and side-event access.",
   "dufuna-canoe-heritage-guide": "Dufuna Canoe, found in Yobe State, is more than 8,000 years old. Read its archaeological history and check exhibition access before planning a visit.",
   "mambilla-plateau-guide": "Mambilla Plateau is in Sardauna LGA, Taraba State. Plan a Gembu-based highland trip with weather, road and tea-estate access checks before travelling.",
   "ojukwu-bunker-guide": "Explore the history of Ojukwu Bunker in Umuahia, Abia State. Check the latest restoration and visitor-access status before visiting the Civil War landmark.",
