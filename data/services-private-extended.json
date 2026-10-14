@@ -1118,7 +1118,7 @@
     "slug": "uber-reserve-ride-nigeria",
     "title": "How to reserve an Uber ride in advance",
     "shortTitle": "Uber Reserve",
-    "summary": "Uber Reserve lets eligible riders schedule a future trip by choosing Reserve, entering pickup and destination details, selecting the date/time and confirming an available ride type.",
+    "summary": "Uber Reserve allows eligible riders to schedule pickup up to 30 days ahead in the Uber app. Select Reserve, enter pickup and destination, set the time, review available ride types and cancellation terms, and confirm only after the fare is shown.",
     "category": "Ride-hailing",
     "agencySlug": "uber-nigeria",
     "feeLabel": "Reservation price shown before confirmation",
@@ -1133,29 +1133,29 @@
       "A valid payment method accepted for the reservation"
     ],
     "steps": [
-      "Open Uber and select the Reserve tab for a future trip.",
-      "Enter the pickup location and destination.",
-      "Choose the future pickup date and time, staying within the reservation window shown by Uber.",
-      "Select an available ride type and review the reservation price and cancellation conditions.",
-      "Confirm the reservation and monitor it in the Uber account before the scheduled pickup."
+      "Open the Uber app and choose Reserve. If Reserve is unavailable in your city or account, do not assume advance bookings are supported for your trip.",
+      "Enter the exact pickup point and destination and select the intended future date and pickup time within the reservation window shown in the app; Uber's help currently says up to 30 days ahead.",
+      "Choose from the ride categories shown and review the projected price, pickup requirements, cancellation conditions and whether any special reservation protections require booking at least two hours ahead.",
+      "Confirm the reservation through Uber and monitor the trip details and driver assignment in the account before your scheduled pickup.",
+      "Be ready at the agreed place. Uber describes a shorter included waiting period for Economy Reserve than for Premium Reserve, after which waiting charges or cancellation fees may apply."
     ],
     "notes": [
-      "Uber's current help says Reservations can be made up to 30 days ahead.",
-      "Economy and Premium Reserve products have different early-arrival and waiting rules.",
-      "Cancellation fees can apply when the rider cancels late or is not ready within the applicable waiting period."
+      "Uber's help states that a Reservation can be made up to 30 days in advance, and some reservation features require booking at least two hours before pickup.",
+      "Uber says Economy Reserve drivers arrive five minutes early and offer five additional minutes of included waiting from scheduled pickup; Premium Reserve offers fifteen minutes each, where those products exist.",
+      "Availability, ride categories and cancellation charges vary by location and the specific booking."
     ],
     "sources": [
       {
         "label": "Uber Help — Reservations",
         "agency": "Uber",
         "url": "https://help.uber.com/en/riders/article/i-need-help-with-a-reservation?nodeId=cabcfe4f-fa54-4f97-a687-5584d3e87f51",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "Uber Nigeria — Request a ride online",
         "agency": "Uber",
         "url": "https://www.uber.com/ng/en/ride/how-it-works/request-an-uber-ride-without-the-app/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -1163,7 +1163,7 @@
       "bolt-schedule-ride-nigeria",
       "uber-lost-item-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Uber Reserve Nigeria",
       "schedule Uber ride Nigeria",
@@ -1176,7 +1176,7 @@
     "slug": "uber-request-ride-online-nigeria",
     "title": "How to request an Uber ride online without the app in Nigeria",
     "shortTitle": "Request Uber online",
-    "summary": "Uber Nigeria's web ride-request route lets a customer sign in from a browser, enter pickup and destination details, select an available ride option and request the trip without installing the app.",
+    "summary": "Request an Uber ride in a browser at Uber's official online ride service without installing the app. Sign in with your phone number, enter pickup and destination, choose an available ride and confirm the fare shown for your location.",
     "category": "Ride-hailing",
     "agencySlug": "uber-nigeria",
     "feeLabel": "Ride price shown before confirmation",
@@ -1191,23 +1191,23 @@
       "A contact/payment method required by the account and selected ride"
     ],
     "steps": [
-      "Open Uber's online ride request page from a browser and sign in with the phone number or create an account.",
-      "Allow location access or manually enter the pickup point.",
-      "Enter the destination address for the trip.",
-      "Choose an available ride option and review the price estimate.",
-      "Confirm the ride request and use the web interface to monitor the driver's arrival and trip details."
+      "Open Uber's official online ride page, follow Request a ride or uber.com/go, and sign in with a personal phone number or create the required account.",
+      "Confirm or manually enter a precise pickup location; grant browser location permission only if you want the site to detect your position.",
+      "Enter the destination address, check the pickup point and review the available car or service categories and price estimate.",
+      "Select the ride you want and confirm the request in the official Uber interface. Use the account and trip updates to identify the assigned vehicle and driver.",
+      "For a ride booked for another person, choose Order ride for someone else if the interface offers it, then enter that rider's name and phone number; Uber says the passenger should receive the applicable trip information."
     ],
     "notes": [
-      "Uber says online ride requests can be made from tablets, laptops and other internet-connected devices.",
-      "The online route can also be used to request a ride for someone else by entering that rider's name and phone number.",
-      "Feature and ride-type availability still depends on the user's location."
+      "Uber's Nigeria site explicitly supports browser-based ride requests from desktops, laptops, tablets and phones.",
+      "Uber's web service can request rides for someone else, but requires the selected rider's details.",
+      "The availability and fare of ride options are specific to the pickup location and request time."
     ],
     "sources": [
       {
         "label": "Uber Nigeria — Request a ride without the app",
         "agency": "Uber",
         "url": "https://www.uber.com/ng/en/ride/how-it-works/request-an-uber-ride-without-the-app/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -1215,7 +1215,7 @@
       "uber-lost-item-nigeria",
       "bolt-schedule-ride-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "request Uber online Nigeria",
       "Uber without app Nigeria",
@@ -3484,7 +3484,7 @@
     "slug": "sendbox-track-shipment-nigeria",
     "title": "How to track a Sendbox shipment",
     "shortTitle": "Track Sendbox shipment",
-    "summary": "Sendbox's shipment-tracking route using the tracking code to view states such as pending, pickup started, in transit and delivered as the parcel moves through the selected courier network.",
+    "summary": "Track an existing Sendbox shipment using its issued tracking code and the current status shown in your Sendbox account or the sender's shipment details. The public Sendbox API documentation describes status codes, but that developer API is not a consumer-facing tracking form.",
     "category": "Logistics",
     "agencySlug": "sendbox",
     "feeLabel": "No separate tracking fee",
@@ -3497,29 +3497,29 @@
       "Access to the Sendbox account or tracking interface"
     ],
     "steps": [
-      "Open Sendbox and locate the tracking option for the created shipment.",
-      "Enter or select the shipment tracking code.",
-      "Review the current status and tracking events returned for the parcel.",
-      "Keep the tracking code while the shipment remains pending, in pickup or in transit.",
-      "Use Sendbox support if tracking remains stalled or the parcel reaches an exception without resolution."
+      "Sign in using Sendbox's official website or app and open the relevant shipment, or ask the seller/shipper for the Sendbox tracking code and a genuine tracking link.",
+      "Locate the shipment's tracking or delivery-status section and confirm that its code matches the exact parcel you are following.",
+      "Check the latest pickup, in-transit, in-delivery or delivered status. Sendbox's documentation distinguishes draft/on-hold requests from shipments actually accepted for pickup.",
+      "If the status has not advanced or a delivery exception appears, follow up with the sender or Sendbox through the official account/support route using the same tracking code.",
+      "Do not paste personal API credentials into an unknown public checker. Sendbox's developer documentation describes an authenticated API endpoint and is not itself a browser tracking page."
     ],
     "notes": [
-      "Sendbox documents tracking statuses including pending, pickup started/completed, in delivery, in transit and delivered.",
-      "A drafted or on-hold shipment may indicate that the shipping request has not yet been fully paid or activated.",
-      "Tracking information comes from the shipment/courier workflow and should be checked against the exact tracking code."
+      "Sendbox documents tracking codes and statuses including drafted, pending, pickup started/completed, in delivery, in transit and delivered.",
+      "The developer tracking endpoint requires an authorisation key; ordinary users should use their shipment account, sender or an official consumer tracking link.",
+      "A drafted/on-hold shipment may not have been paid or released for collection and should not be described as already in transit."
     ],
     "sources": [
       {
         "label": "Sendbox Home",
         "agency": "Sendbox",
         "url": "https://sendbox.co/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "Sendbox Shipping API — Tracking Shipment",
         "agency": "Sendbox",
         "url": "https://docs.sendbox.co/shipping/track-shipment",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -3527,7 +3527,7 @@
       "gigl-track-shipment",
       "dhl-track-shipment-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "Sendbox tracking Nigeria",
       "track Sendbox parcel",
@@ -3782,7 +3782,7 @@
     "slug": "hotelsng-add-hotel",
     "title": "How to list a hotel on Hotels.ng",
     "shortTitle": "List hotel on Hotels.ng",
-    "summary": "Hotels.ng's hotel-owner listing route for adding a property with hotel/contact/location details, agreeing to the platform terms and receiving follow-up from the Hotels.ng support team.",
+    "summary": "Hotels.ng lets hotel owners or authorised representatives submit property details for free through its Add Your Hotel form. Supply the hotel name, contact, state, city and address, identify the submitter and accept the listing terms; Hotels.ng follows up if more information is needed.",
     "category": "Business",
     "agencySlug": "hotels-ng",
     "feeLabel": "Free hotel listing",
@@ -3797,30 +3797,30 @@
       "Additional hotel information such as website/details when available"
     ],
     "steps": [
-      "Open Hotels.ng's Add Your Hotel page.",
-      "Enter the hotel's name, email/phone, location, city and full address.",
-      "Enter the submitter's personal/contact information and add the hotel website or extra details when available.",
-      "Confirm permission to list the property and accept the Hotels.ng terms of use.",
-      "Submit the listing and wait for the Hotels.ng support team to contact the submitter for any remaining property information."
+      "Open Hotels.ng's official Add Your Hotel form at hotels.ng/hotel/add and ensure you have permission to submit the property.",
+      "Enter the hotel name, contact email and telephone number. Add its website address if available, then choose the state, city/town and full location address.",
+      "Provide the submitting person's full name and email address. Check that the contact details are genuine and can receive questions about the property.",
+      "Read and accept the Hotels.ng terms of use, complete any human-verification step and submit using Add your hotel.",
+      "Wait for Hotels.ng's follow-up if it needs more room details, photos or verification. Hotels.ng states basic hotel details may be added first; listing does not guarantee bookings or an immediate public page."
     ],
     "notes": [
-      "Hotels.ng states that hotel listing is free.",
-      "A person can submit a hotel they do not own only when they have permission and provide valid information.",
-      "Hotels.ng says basic hotel information can be submitted first and additional information can be supplied later."
+      "Hotels.ng explicitly states that listing a hotel is free.",
+      "You may submit a hotel you do not own only if you have permission and provide valid information.",
+      "Hotels.ng allows initial basic information and later follow-up through its support team."
     ],
     "sources": [
       {
         "label": "Hotels.ng Add Your Hotel",
         "agency": "Hotels.ng",
         "url": "https://hotels.ng/hotel/add",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
       "hotelsng-book-hotel",
       "hotels-ng-cancel-refund-booking"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "list hotel on Hotels.ng",
       "add hotel Hotels.ng",
@@ -7632,7 +7632,7 @@
     "slug": "cowrywise-withdraw-from-stash",
     "title": "How to withdraw money from Cowrywise Stash",
     "shortTitle": "Cowrywise withdrawal",
-    "summary": "Cowrywise's Stash withdrawal route for moving available funds to a personal Nigerian bank account linked to the same BVN, with the current processing window and withdrawal charges shown by the provider.",
+    "summary": "Withdraw an available Cowrywise Stash balance to a Nigerian bank account linked to your own BVN: open Stash, select the three-dot menu → Withdraw, choose an eligible bank account, enter the amount and confirm with your Cowrywise PIN. Processing is generally described as taking 24 hours.",
     "category": "Investing",
     "agencySlug": "cowrywise",
     "feeLabel": "Withdrawal charge depends on amount/frequency",
@@ -7647,35 +7647,35 @@
       "Any 2FA code required when two-factor authentication is enabled"
     ],
     "steps": [
-      "Sign in to Cowrywise, open the Stash section and confirm that the balance contains funds currently available for withdrawal.",
-      "Tap the three-dot menu and select Withdraw.",
-      "Choose an existing BVN-linked bank account or add an eligible Nigerian bank account.",
-      "Enter the withdrawal amount and confirm the request with the Cowrywise PIN and any required 2FA code.",
-      "Keep the withdrawal summary/session details and contact support if the request remains unresolved after the published processing window."
+      "Sign in to Cowrywise and open Stash. Confirm the funds are already available there; money in a locked savings plan may need to reach maturity or be moved to Stash first.",
+      "Tap the three-dot menu on the Stash page and choose Withdraw, then read and dismiss the information prompt if it appears.",
+      "Select an existing personal Nigerian bank account associated with your BVN, or add one through the supported bank-account flow; third-party accounts and arbitrary wallet numbers are not eligible.",
+      "Enter the withdrawal amount, review any fee shown and confirm using your Cowrywise PIN and any additional account-security prompt required by your device.",
+      "Monitor the Stash transaction and receiving bank. Cowrywise's help says withdrawal processing takes around 24 hours, and you should use official support if it remains unresolved after the stated window."
     ],
     "notes": [
-      "Cowrywise does not allow Stash withdrawals to arbitrary wallet or virtual-account numbers.",
-      "The receiving bank account must belong to the same BVN-linked customer.",
-      "A failed withdrawal can be retried through the action shown on the Stash page."
+      "Cowrywise limits Stash withdrawals to personal bank accounts linked to the same BVN.",
+      "The provider says Stash withdrawals are processed around 24 hours after submission, not always instantly.",
+      "Fees vary with withdrawal amount and frequency; the live confirmation is the controlling charge."
     ],
     "sources": [
       {
         "label": "Cowrywise — Withdraw from Stash",
         "agency": "Cowrywise",
         "url": "https://help.cowrywise.com/en/articles/5744582-how-to-withdraw-from-stash",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "Cowrywise Withdrawal Guidance",
         "agency": "Cowrywise",
         "url": "https://help.cowrywise.com/en/articles/8253691-withdrawals-on-cowrywise-what-you-need-to-know",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       },
       {
         "label": "Cowrywise Receiving Bank Rules",
         "agency": "Cowrywise",
         "url": "https://help.cowrywise.com/en/articles/9148093-what-bank-can-i-use-to-receive-my-funds-on-cowrywise",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-14"
       }
     ],
     "related": [
@@ -7683,7 +7683,7 @@
       "cowrywise-fund-account",
       "piggyvest-withdraw-savings"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-14",
     "searchTerms": [
       "withdraw Cowrywise",
       "Cowrywise Stash withdrawal",
