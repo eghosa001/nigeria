@@ -13,7 +13,7 @@ export function ServiceFaqs({ service }: { service: Service }) {
       <h2>Extra help with {service.shortTitle}</h2>
       <div className="faq-list">
         <details>
-          <summary>What if the application or official service does not work?</summary>
+          <summary>What if this service or its website does not work?</summary>
           <div className="faq-answer">
             <p>{guidance.route.fallbackDetail}</p>
           </div>
@@ -28,7 +28,7 @@ export function ServiceFaqs({ service }: { service: Service }) {
           <summary>How do I check that these instructions are current?</summary>
           <div className="faq-answer">
             <p>Last checked {service.lastVerified}. Review the official agency links below before submitting sensitive information or paying a fee.</p>
-            <p>MyNigeriaGuide is independent of the responsible agency. Only the agency can approve, issue or correct your application.</p>
+            <p>MyNigeriaGuide is an independent information guide. The responsible organisation controls eligibility, processing, billing and support.</p>
           </div>
         </details>
       </div>
