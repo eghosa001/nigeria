@@ -62,5 +62,5 @@ test("Two EHA jobs publish specific official advert details without assuming uni
   assert.match(dental, /jobs directory/i);
   assert.match(pharmacy, /₦181,440/);
   assert.match(pharmacy, /at least two years of post-NYSC/i);
-  assert.match(pharmacy, /valid.*practice licence/);
+  assert.match(pharmacy, /current PCN practice licence/i);
 });
