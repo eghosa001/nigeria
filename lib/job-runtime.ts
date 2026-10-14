@@ -52,7 +52,14 @@ export function getClosingSoonJobs(items: CareerOpportunity[], days = 7, todayIs
 export function getRecentlyPostedJobs(items: CareerOpportunity[], days = 7, todayIso = todayIsoNigeria()) {
   return items
     .filter((item) => item.posting && isEffectivelyOpen(item, todayIso))
-    .filter((item) => daysSinceIsoDate(item.posting?.datePosted ?? "", todayIso) < days)
+    .filter((item) => {
+      const posted = item.posting?.datePosted ?? "";
+      // Missing, malformed or future-dated metadata must not appear as "recent".
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(posted) || posted > todayIso) return false;
+      const timestamp = Date.parse(posted + "T00:00:00Z");
+      if (!Number.isFinite(timestamp) || new Date(timestamp).toISOString().slice(0, 10) !== posted) return false;
+      return daysSinceIsoDate(posted, todayIso) < days;
+    })
     .sort((a, b) => (b.posting?.datePosted ?? "").localeCompare(a.posting?.datePosted ?? ""));
 }
 
