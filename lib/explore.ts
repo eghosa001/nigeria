@@ -58,7 +58,8 @@ export const exploreGuides: ExploreGuide[] = [
     summary: "SMFest Abuja 2026 runs 17–18 October at Family Worship Centre, Wuye, with talks and networking around social media, technology, business and digital growth under the theme AdvantageX.",
     intro: [
       "SMFest Abuja returns on 17 and 18 October 2026 at Family Worship Centre in Wuye. The organiser describes the event as a gathering for creators, entrepreneurs, professionals and business owners using social media, technology and innovation to grow.",
-      "The 2026 theme is AdvantageX — The Exponential Advantage. The official event site lists speakers across business, technology, utilities, media and entrepreneurship, while ticket tiers currently run from entry-level to premium networking packages."
+      "The 2026 theme is AdvantageX — The Exponential Advantage. The official event site lists speakers across business, technology, utilities, media and entrepreneurship, while ticket tiers currently run from entry-level to premium networking packages.",
+      "Date conflict to check before travelling: SMFest's official homepage advertises Saturday 17 and Sunday 18 October as the main Abuja event, but the official contact FAQ says 16–18 October. The organiser has not reconciled those public dates. Ask whether Friday 16 October includes any attendee programme before paying for an extra night's stay."
     ],
     bestFor: ["Technology", "Social media", "Business", "Networking"],
     highlights: [
@@ -71,10 +72,10 @@ export const exploreGuides: ExploreGuide[] = [
       { label: "Buy only from the organiser", detail: "Use the official SMFest site for tickets and confirm the ticket tier before payment." },
       { label: "Plan Wuye transport", detail: "Allow time for event traffic and ride-hailing pickup around Family Worship Centre." },
       { label: "Choose sessions in advance", detail: "Review the final speaker and programme schedule so you do not miss the sessions most relevant to your work." },
-      { label: "Re-check the event page", detail: "Speaker order, programme timing and ticket availability can change close to the event." }
+      { label: "Confirm Friday versus main event dates", detail: "The SMFest homepage says 17–18 October, while its official contact FAQ says 16–18 October. Contact the organiser to verify whether Friday has public sessions, and check the final speaker order and ticket terms before making non-refundable travel arrangements." }
     ],
     source: { label: "SMFest Abuja 2026 official website", href: "https://smfest.org/" },
-    lastReviewed: "2026-10-06"
+    lastReviewed: "2026-10-14"
   },
   {
     slug: "nifafest-abuja-2026",
