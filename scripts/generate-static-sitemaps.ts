@@ -6,6 +6,7 @@
 import { mkdir, readdir, unlink, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { productionSiteUrl } from "../lib/site";
+import { escapeSitemapXml } from "../lib/sitemap-xml";
 
 // Staging and local builds must still advertise only the canonical production host.
 process.env.NEXT_PUBLIC_SITE_URL = productionSiteUrl;
@@ -16,9 +17,7 @@ const root = resolve("public");
 const shardRoot = resolve(root, "sitemaps");
 const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
 const xmlns = 'xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"';
-const escapeXml = (value: string) =>
-  value.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
+const escapeXml = escapeSitemapXml;
 const latest = (dates: string[]) => dates.reduce((max, date) => date > max ? date : max, "");
 
 await mkdir(shardRoot, { recursive: true });
