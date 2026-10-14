@@ -11465,7 +11465,7 @@
     "slug": "passport-application-tracking",
     "title": "How to track a Nigerian passport application",
     "shortTitle": "Track passport application",
-    "summary": "Track a Nigerian passport application on the official Nigeria Immigration Service site by entering both your Application Number and Reference Number. The checker reports the current status available to NIS; it does not guarantee that your passport is ready for collection.",
+    "summary": "Track your Nigerian passport at track.immigration.gov.ng with the Application Number and Reference Number from the same NIS submission. If you need to find a payment receipt instead, use the domestic passport portal's separate status/receipt lookup; payment confirmation does not mean your passport is ready.",
     "category": "Immigration",
     "agencySlug": "nis",
     "feeLabel": "No fee is shown for the online status check",
@@ -11483,12 +11483,12 @@
       "Find the Application Number on the NIS acknowledgement or confirmation message and enter it exactly as issued.",
       "Enter the Reference Number for that same application; do not substitute a payment receipt number or another person's application details.",
       "Choose View Application Status and read the status displayed by NIS. A valid number pair is needed; MyNigeriaGuide does not store your passport numbers.",
-      "If the status is missing or the application is not found, compare both identifiers with the original NIS confirmation and retry through the official site; do not create a new passport application just to recheck.",
+      "If no matching application appears, check both numbers against the original NIS confirmation email. If you still have the Reference Number, the domestic NIS passport portal's separate Payment Status/Print Receipt search accepts it plus your Application Number, date of birth or email to look up receipt details. That is not a substitute for the two-number tracking checker.",
       "Follow any separate official NIS appointment, biometrics or collection instruction shown in your account or communication. Do not treat payment completion alone as proof that a passport has been printed."
     ],
     "notes": [
       "The passport status tracker asks for both an Application Number and a Reference Number; these are different fields and both are required.",
-      "The domestic passport portal has separate payment or receipt functions. Payment confirmation, an appointment and passport production are not the same stage.",
+      "The domestic NIS portal's Payment Status/Print Receipt search accepts a Reference Number with an Application Number, date of birth or email. It checks application/payment records; the dedicated passport tracker still requires both Application and Reference Numbers. Payment confirmation, appointment booking, production and collection are different stages.",
       "If the online checker cannot find an application, first verify that both numbers belong to the same submission. Use NIS's published help/contact channels for unresolved cases.",
       "Only follow an NIS confirmation to visit a passport office; do not rely on a WhatsApp agent promising immediate printing, collection or a guaranteed delivery day."
     ],
@@ -11503,9 +11503,15 @@
         "label": "Nigeria Immigration Service — domestic passport portal",
         "agency": "Nigeria Immigration Service",
         "url": "https://passport.immigration.gov.ng/",
-        "lastChecked": "2026-10-12"
+        "lastChecked": "2026-10-14"
       },
       {
+      "label": "NIS — Payment Status/Print Receipt lookup",
+      "agency": "Nigeria Immigration Service",
+      "url": "https://passport.immigration.gov.ng/search/VTJGc2RHVmtYMSt2N3NCNmZBOXBpMWx1dGFHUm15TEExMzdIbUFCZWhjOD0",
+      "lastChecked": "2026-10-14"
+    },
+    {
         "label": "Nigeria Immigration Service — passport information",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
@@ -11530,7 +11536,7 @@
       "first-nigerian-passport",
       "lost-nigerian-passport"
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-14"
   },
   {
     "slug": "drivers-licence-verification",
