@@ -44,7 +44,9 @@ export function ServiceJourney({ service }: { service: Service }) {
           <span className="journey-label">Physical / assisted stage</span>
           <h3>{guidance.route.physicalTitle}</h3>
           <p>{guidance.route.physicalDetail}</p>
-          <Link className="text-link" href="/offices">Find official offices/centres →</Link>
+{journey.physicalStatus !== "not-stated" && service.slug !== "nigeria-landing-exit-card" ? (
+            <Link className="text-link" href="/offices">Find official offices/centres →</Link>
+          ) : null}
         </article>
 
         <article className="journey-card">
