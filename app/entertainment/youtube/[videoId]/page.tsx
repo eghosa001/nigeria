@@ -10,6 +10,7 @@ import { entertainmentPeople } from "@/lib/entertainment-extras";
 import { getRelatedYouTubeDetailMovies, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
 import { youtubeServerStore } from "@/lib/youtube-server-store";
 import { hasValidVideoPublishDate } from "@/lib/youtube-video-publication-date";
+import { youtubeEditorialDossiers } from "@/lib/youtube-editorial-dossiers";
 
 export const revalidate = 86400;
 
@@ -21,7 +22,7 @@ const youtubeSeoOverrides: Record<string, { title: string; description: string }
   "T1-buA-yAmo": { title: "Holy Matrimony Nigerian Movie: Cast & Full Movie", description: "Holy Matrimony cast, 143-minute runtime and official full Nigerian movie on YouTube, starring Frederick Leonard, Onyi Alex and Nini Mbonu." },
   "zKQoArfptqA": { title: "The Bride Switch Cast & Full Movie (2026)", description: "The Bride Switch cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
   "2Ficn2BMlI8": { title: "What Tomorrow Holds Cast & Full Movie (2026)", description: "What Tomorrow Holds cast, story and official full movie on YouTube. See the verified publisher, runtime and where to watch the Nigerian movie." },
-  "y2RkBwUYSvo": { title: "Forever Isn't Long Enough Cast & Full Movie", description: "Forever Isn't Long Enough cast, runtime and official full Nigerian movie on YouTube, published by Royal Arts TV." },
+  "y2RkBwUYSvo": { title: "Forever Isn't Long Enough (2025): Cast, Plot & Full Film", description: "Forever Isn't Long Enough follows Grace, a pastor's daughter challenged by judgment and a crisis of faith. Full 2025 film on Royal Arts TV, with credits." },
   "TH8oDejHrEo": { title: "In Every Lifetime Cast & Full Movie", description: "In Every Lifetime cast, runtime and official full Nigerian movie on YouTube, with Daniel Etim Effiong, Ego Nwosu and Shaznay Okawa." },
   "11n6AU3EVUk": { title: "Just Like a Mirror Cast & Full Movie (2026)", description: "Just Like a Mirror cast, runtime and official full Nigerian movie on YouTube, with Ebube Nwagbo, Dera Osadebe and Enock Darko." },
   "zxvtMba4MYE": { title: "Third Party Risk Cast & Full Movie (2026)", description: "Third Party Risk cast, runtime and official full Nigerian movie on YouTube, with Omeche Oko, Ray Emodi and Symon Oko." }
@@ -88,6 +89,7 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
   const movie = await youtubeServerStore.detail(videoId);
   if (!movie) notFound();
   const indexable = isIndexableYouTubeDetailMovie(movie);
+  const editorialDossier = youtubeEditorialDossiers[movie.videoId];
   const onceUponAVillageEpisode = movie.videoId === "X3HaWmJoSRU" || movie.videoId === "Yu-QxqPDmXM";
   // Reuse the individually reviewed Part 3 profile instead of generating role
   // assignments from an unverified YouTube description.
@@ -231,6 +233,31 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
                 <article><span>Source checked</span><strong>{movie.lastChecked}</strong></article>
               </div>
             </section>
+
+            {editorialDossier && indexable ? (
+              <section className="youtube-movie-editorial" aria-labelledby="video-editorial-heading">
+                <span className="eyebrow">Verified film guide</span>
+                <h2 id="video-editorial-heading">{editorialDossier.heading}</h2>
+                {editorialDossier.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                <h3>Who is in the film?</h3>
+                <p>{editorialDossier.castNotes}</p>
+                <h3>Common questions</h3>
+                <div className="compact-faq-list">
+                  {editorialDossier.questions.map((item) => (
+                    <details key={item.question}>
+                      <summary>{item.question}</summary>
+                      <p>{item.answer}</p>
+                    </details>
+                  ))}
+                </div>
+                <h3>Source and verification links</h3>
+                <div className="related-links">
+                  {editorialDossier.sources.map((source) => (
+                    <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             <section id="cast">
               <span className="eyebrow">Cast & crew</span>
