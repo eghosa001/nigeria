@@ -114,7 +114,7 @@ test("visits unlock displays multi-window report and can be locked again", async
   await expect(page.getByRole("heading", { name: "Pages shown in Google and pages clicked" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Pages actually viewed on the website" })).toBeVisible();
   await expect(page.getByText("1,460").first()).toBeVisible();
-  await expect(page.getByText("Passport renewal", { exact: true })).toBeVisible();
+  await expect(page.getByRole("link", { name: "Passport renewal", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "By week" }).click();
   await expect(page.locator(".visits-data-table").nth(1)).toContainText("2026-10-12");
   // Narrow phones show period tabs, real page cards and compact statistics
