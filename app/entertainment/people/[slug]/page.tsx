@@ -25,9 +25,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     // A name alone is not a useful searchable filmography. Keep incomplete
     // profiles navigable internally but out of search until a credit exists.
     robots: entertainmentTitles.some((title) =>
-      person.knownForSlugs.includes(title.slug) ||
-      title.cast.includes(person.name) ||
-      title.directors?.includes(person.name),
+      (person.knownForSlugs.includes(title.slug) ||
+        title.cast.includes(person.name) ||
+        title.directors?.includes(person.name)) &&
+      (title.references ?? []).some((reference) => reference.href.startsWith("https://")),
     ) ? undefined : { index: false, follow: true },
   };
 }
