@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound, redirect } from "next/navigation";
-import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
@@ -149,30 +148,6 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
           </aside>
         </div>
 
-        <div className="container">
-          <AnswerFirst
-            title={isCareerPortal ? "How should you use " + item.organization + "'s careers page?" : "Should you apply for " + item.title + "?"}
-            summary={isCareerPortal
-              ? "This is an employer-wide career route, not a confirmed vacancy. Choose a live role on the employer's website, then check that role's requirements before applying."
-              : effectiveStatus === "open"
-                ? "Review the qualifications and documents, confirm the application window on the organisation's website, and apply through the official route."
-                : "The application is not confirmed open at this stage. Check the employer's current notice and recruitment timeline before submitting any information."}
-            facts={[
-              { label: "Verified status", value: effectiveStatusLabel + " · checked " + item.verifiedAt },
-              { label: "Applies to", value: item.location },
-              { label: isCareerPortal ? "Current vacancies" : "Deadline / next step", value: isCareerPortal ? "Check the live employer source" : (item.deadline ? new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) : (item.nextMilestone ?? "Check the live official page")) },
-              { label: "Best fit", value: item.audiences.slice(0, 3).join(", ") },
-            ]}
-            links={[
-              { href: "#requirements", label: isCareerPortal ? "How eligibility works" : "Check requirements" },
-              { href: "#apply", label: isCareerPortal ? "How to use the portal" : "How to apply" },
-              { href: "#official-application", label: isCareerPortal ? "Open official careers source" : (effectiveStatus === "open" ? "Open official application" : "Check official status"), primary: true },
-            ]}
-            note={isCareerPortal
-              ? "Verified " + item.verifiedAt + ". This is an employer-wide career source, so role-specific eligibility must come from the exact vacancy you choose."
-              : "Verified " + item.verifiedAt + ". Check eligibility first; only then open the official application source."}
-          />
-        </div>
       </section>
 
       <div className="container page-outline-wrap">
