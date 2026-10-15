@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { auditSharedStructure, validateLanding, validateTemplate, contracts, landingContracts } from "./shared-page-structure.mjs";
+import { auditSharedStructure, validateLanding, validateTemplate, validateDistinctCopy, contracts, landingContracts } from "./shared-page-structure.mjs";
 
 test("every existing shared detail template and pillar landing has the required information order and anchor targets", () => {
   assert.deepEqual(auditSharedStructure(), []);
@@ -22,4 +22,10 @@ test("contracts cover every primary pillar and supporting catalogue type", () =>
   for (const name of ["Services", "Jobs", "Tour", "Movies", "TV series", "Career guides", "People profiles", "YouTube movies"])
     assert.ok(names.includes(name), name);
   assert.equal(landingContracts.length, 4);
+});
+
+test("generic fact repetition is rejected without limiting detailed original reporting", () => {
+  const contract = { forbidden: ["<AnswerFirst", "The route highlights "] };
+  assert.deepEqual(validateDistinctCopy(contract, '<h1>Clear article</h1><section>Unique details</section>'), []);
+  assert.deepEqual(validateDistinctCopy(contract, '<AnswerFirst/><p>The route highlights </p>').length, 2);
 });
