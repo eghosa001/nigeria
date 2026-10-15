@@ -262,8 +262,7 @@ const records: Record<string,Entry> = {
     ],
     "context": [
       "The original publisher identifies Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi as the principal cast. The same film is listed in the producing company's portfolio and on FilmFlux, which also records its release and credits. The authorised full-length upload is linked above.",
-      "There is a genuine source discrepancy: the original BIODUNSTEPHEN TV video describes the mother-daughter plot, while the producer's Shutterspeed Projects website portfolio describes Ibukun and Esosa renting a house beside a hostile landlady. Because these are different premises attached to the same film title and cast, this guide follows the original video rather than mixing the two stories or inventing a resolution.",
-      "Crew attribution also needs care. The production-company portfolio credits Olubunmi Akingbola as director, whereas the official video's generic description says 'Produced & Directed by Biodun Stephen'. Without a matching on-screen credit confirming which description applies, this guide does not claim an undisputed director."
+      "There is a genuine source discrepancy: the original BIODUNSTEPHEN TV video describes the mother-daughter plot, while the Shutterspeed Projects producer portfolio instead describes Ibukun and Esosa renting beside a hostile landlady. Its director credit is Olubunmi Akingbola, while the official video description says 'Produced & Directed by Biodun Stephen'. This guide follows the original video's plot but neither conflates those stories nor asserts an undisputed director without matching on-screen credits."
     ],
     "questions": [
       [
@@ -273,10 +272,6 @@ const records: Record<string,Entry> = {
       [
         "Why are there different descriptions of Oil and Water?",
         "The original publisher's video and another production-company page give different plots. This guide uses the synopsis accompanying the original release and identifies the discrepancy."
-      ],
-      [
-        "Who appears in Oil and Water?",
-        "Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi appear in the publisher-confirmed cast; their characters are not assigned without film-specific credits."
       ]
     ]
   },
