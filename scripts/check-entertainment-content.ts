@@ -1,4 +1,5 @@
 import { entertainmentTitles } from "../lib/entertainment";
+import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registry";
 import { entertainmentPeople, personEditorialProfiles, hasIndexablePersonEditorial } from "../lib/entertainment-extras";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { discoverableYouTubeMovies, hasSubstantiveYouTubeSynopsis, indexableYouTubeMovies, isIndexableYouTubeMovie, generatedYouTubeMovies, getYouTubeMovieById } from "../lib/youtube-library";
@@ -214,3 +215,29 @@ for (const [slug, director, sourceFragment] of verifiedOctoberDirectorCredits) {
 const restricted2025Film = entertainmentTitles.find((item) => item.slug === "colours-of-fire");
 assert(restricted2025Film?.watchLinks.length === 0,
   "Kava explicitly excludes Africa: no Colours of Fire Nigeria streaming link may be advertised.");
+
+
+// Film-specific story regressions: never substitute generic romance summaries for documented plots.
+for (const [slug, premise, source, expectedDirector] of [
+  ["what-love-is", "photographer", "africanmoviedb.com/title/what-love-is-2026", null],
+  ["monica-2", "firstborn", "premiumtimesng.com/entertainment/nollywood/877356", "Chidi Chijioke"],
+  ["never-let-go", "inspector", "africanmoviedb.com/title/never-let-go-2026", "Omoruyi Efosa Emmanuel"],
+  ["love-and-legacy-2026", "Obasi family company", "africanmoviedb.com/title/love-and-legacy-2026", "Esther Akapo"],
+] as const) {
+  const film = entertainmentTitles.find((item) => item.slug === slug);
+  assert(film, slug + ": researched film record missing.");
+  const profile = getMovieEditorialProfile(slug);
+  assert(profile, slug + ": film-specific editorial dossier missing.");
+  assert(
+    (film.synopsis + " " + profile.sections.flatMap((section) => section.paragraphs).join(" "))
+      .toLowerCase().includes(premise.toLowerCase()),
+    slug + ": source-supported central conflict has regressed to generic copy.",
+  );
+  assert(film.references?.some((ref) => ref.href.includes(source)),
+    slug + ": independently checkable story reference missing.");
+  if (expectedDirector) {
+    assert(film.directors?.includes(expectedDirector), slug + ": exact film director credit missing.");
+  } else {
+    assert(!film.directors?.length, slug + ": director has not been independently confirmed.");
+  }
+}
