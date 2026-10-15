@@ -15,6 +15,8 @@ export type PeriodRow = {
   key: "1d" | "7d" | "30d" | "90d" | "all";
   startDate: string;
   endDate: string;
+  gscStartDate: string;
+  gscEndDate: string;
   pageViews: number | null;
   sessions: number | null;
   clicks: number | null;
@@ -50,6 +52,7 @@ export function buildPeriodRows(
   gscDays: TrafficDay[],
   todayLagos: string,
   all: { ga4StartDate: string; gscStartDate: string; pageViews: number | null; sessions: number | null; clicks: number | null; impressions: number | null },
+  todayPacific = todayLagos,
 ): PeriodRow[] {
   const periods: Array<{ key: PeriodRow["key"]; days: number }> = [
     { key: "1d", days: 1 },
@@ -61,18 +64,23 @@ export function buildPeriodRows(
     const startDate = shiftIsoDay(todayLagos, 1 - days);
     const previousEnd = shiftIsoDay(startDate, -1);
     const previousStart = shiftIsoDay(startDate, -days);
+    const gscStartDate = shiftIsoDay(todayPacific, 1 - days);
+    const gscPreviousEnd = shiftIsoDay(gscStartDate, -1);
+    const gscPreviousStart = shiftIsoDay(gscStartDate, -days);
     return {
       key,
       startDate,
       endDate: todayLagos,
+      gscStartDate,
+      gscEndDate: todayPacific,
       pageViews: aggregateMetric(ga4Days, startDate, todayLagos, "pageViews"),
       sessions: aggregateMetric(ga4Days, startDate, todayLagos, "sessions"),
-      impressions: aggregateMetric(gscDays, startDate, todayLagos, "impressions"),
-      clicks: aggregateMetric(gscDays, startDate, todayLagos, "clicks"),
+      impressions: aggregateMetric(gscDays, gscStartDate, todayPacific, "impressions"),
+      clicks: aggregateMetric(gscDays, gscStartDate, todayPacific, "clicks"),
       previousPageViews: aggregateMetric(ga4Days, previousStart, previousEnd, "pageViews"),
       previousSessions: aggregateMetric(ga4Days, previousStart, previousEnd, "sessions"),
-      previousClicks: aggregateMetric(gscDays, previousStart, previousEnd, "clicks"),
-      previousImpressions: aggregateMetric(gscDays, previousStart, previousEnd, "impressions"),
+      previousClicks: aggregateMetric(gscDays, gscPreviousStart, gscPreviousEnd, "clicks"),
+      previousImpressions: aggregateMetric(gscDays, gscPreviousStart, gscPreviousEnd, "impressions"),
     };
   });
   rows.push({
@@ -80,6 +88,8 @@ export function buildPeriodRows(
     // Google and GA4 can have different valid retention/clean-traffic starts.
     startDate: all.ga4StartDate < all.gscStartDate ? all.ga4StartDate : all.gscStartDate,
     endDate: todayLagos,
+    gscStartDate: all.gscStartDate,
+    gscEndDate: todayPacific,
     pageViews: all.pageViews,
     sessions: all.sessions,
     clicks: all.clicks,
