@@ -262,7 +262,7 @@ const records: Record<string,Entry> = {
     ],
     "context": [
       "The original publisher identifies Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi as the principal cast. The same film is listed in the producing company's portfolio and on FilmFlux, which also records its release and credits. The authorised full-length upload is linked above.",
-      "There is a genuine source discrepancy: the original BIODUNSTEPHEN TV video and its publisher's 2025 brochure describe the mother-daughter plot, while the Shutterspeed Projects website's portfolio describes Ibukun and Esosa renting a house beside a hostile landlady. Because these are different premises attached to the same film title and cast, this guide follows the original video rather than mixing the two stories or inventing a resolution.",
+      "There is a genuine source discrepancy: the original BIODUNSTEPHEN TV video describes the mother-daughter plot, while the producer's Shutterspeed Projects website portfolio describes Ibukun and Esosa renting a house beside a hostile landlady. Because these are different premises attached to the same film title and cast, this guide follows the original video rather than mixing the two stories or inventing a resolution.",
       "Crew attribution also needs care. The production-company portfolio credits Olubunmi Akingbola as director, whereas the official video's generic description says 'Produced & Directed by Biodun Stephen'. Without a matching on-screen credit confirming which description applies, this guide does not claim an undisputed director."
     ],
     "questions": [
