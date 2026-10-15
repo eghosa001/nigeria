@@ -4,11 +4,11 @@ import { readFileSync } from "node:fs";
 import { getEffectiveJobStatus, getEffectiveStatusLabel, getClosingSoonJobs, isEffectivelyOpen, pickDistinctEmployerPreview, todayIsoNigeria } from "../lib/job-runtime";
 import { getCurrentHomeSocialTrends } from "../data/home-social-trends";
 import { careerGuides } from "../lib/career-guides";
-import { jobOpportunities } from "../lib/jobs";
+import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
 import type { CareerOpportunity } from "../lib/jobs";
 
 const source = (file: string) => readFileSync(new URL("../" + file, import.meta.url), "utf8");
-const sample = { slug: "october-deadline", status: "open", statusLabel: "Applications open", deadline: "2026-10-08" } as CareerOpportunity;
+const sample = { slug: "october-deadline", kind: "vacancy", status: "open", statusLabel: "Applications open", verifiedAt: "2026-10-08", deadline: "2026-10-08" } as CareerOpportunity;
 
 test("Nigeria midnight changes expired openings without requiring a redeploy", () => {
   assert.equal(todayIsoNigeria(new Date("2026-10-08T22:59:59Z")), "2026-10-08");
@@ -19,6 +19,26 @@ test("Nigeria midnight changes expired openings without requiring a redeploy", (
   assert.match(getEffectiveStatusLabel(sample, "2026-10-09"), /deadline passed/i);
   assert.deepEqual(getClosingSoonJobs([sample], 7, "2026-10-09"), []);
   assert.equal(jobOpportunities.filter((item) => isEffectivelyOpen(item) && item.deadline && item.deadline < todayIsoNigeria()).length, 0);
+});
+
+test("a one-off role with no deadline is automatically unverified after 14 days without a fresh official source check", () => {
+  const vacancy = { ...sample, slug: "rolling-open-vacancy", deadline: undefined, verifiedAt: "2026-10-01" };
+  assert.equal(getEffectiveJobStatus(vacancy, "2026-10-15"), "open");
+  assert.equal(getEffectiveJobStatus(vacancy, "2026-10-16"), "unverified");
+  assert.equal(isEffectivelyOpen(vacancy, "2026-10-16"), false);
+  assert.match(getEffectiveStatusLabel(vacancy, "2026-10-16"), /not reverified/i);
+  assert.equal(getEffectiveJobStatus({ ...vacancy, verifiedAt: "" }, "2026-10-15"), "unverified");
+  assert.equal(getEffectiveJobStatus({ ...vacancy, verifiedAt: "2026-11-01" }, "2026-10-15"), "unverified");
+  assert.equal(getEffectiveJobStatus({ ...vacancy, verifiedAt: "2026-10-14" }, "2026-10-15"), "open");
+  assert.equal(getEffectiveJobStatus({ ...vacancy, status: "closed" }, "2026-10-16"), "closed");
+  assert.equal(getEffectiveJobStatus({ ...vacancy, kind: "programme" }, "2026-10-16"), "open");
+});
+
+test("stale individual vacancies lose index eligibility when the current Nigerian day advances", () => {
+  const old = { ...sample, slug: "stale-rolling-job", deadline: undefined, verifiedAt: "2020-01-01" };
+  assert.equal(isIndexableJobOpportunity(old), false);
+  assert.equal(isIndexableJobOpportunity({ ...old, status: "unverified" }), false);
+  assert.equal(isIndexableJobOpportunity({ ...old, status: "closed" }), false);
 });
 
 test("all directly time-sensitive entry routes are request-rendered", () => {
