@@ -212,7 +212,7 @@ export default function ExplorePage() {
               mapQuery: place.mapQuery,
               tags: place.tags,
             }))}
-            guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle }))}
+            guides={exploreGuides.map((guide) => ({ slug: guide.slug, shortTitle: guide.shortTitle, kind: guide.kind }))}
           />
         </div>
       </section>
