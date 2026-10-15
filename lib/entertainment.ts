@@ -935,6 +935,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Plus One uses a pretend relationship to explore what happens when a convenient arrangement begins to feel genuine. After an awkward meeting, Chris persuades a woman he has only recently met to accompany him as his girlfriend to a family gathering. The family welcomes her, making it harder for the pair to maintain clear boundaries between the story they are telling and what they actually feel. The film's central appeal is the combination of romantic comedy and the pressure of a Nigerian family event, where small deceptions can become difficult to undo.",
     cast: ["Saga Adeolu", "Sophia Chisom", "Ayo Adesanya", "Symon Oko"],
     featured: true,
+    references: [{ label: "NollyMeter — Plus One cast, film summary and release", href: "https://www.nollymeter.com/movies/plus-one", lastChecked: "2026-10-15", note: "Independent film catalog identifies the film's cast, relationship setup and 20 March 2026 release." }],
     watchLinks: [
       {
         platform: "YouTube",
@@ -1368,6 +1369,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "The Long Way Home is a family-centred romantic drama whose tensions begin long before the main couple's relationship. Beatrice's earlier pregnancy and decisions create an inheritance of secrets that resurfaces while a younger generation is making plans for the future. Thelma's approaching marriage brings love and family loyalties into conflict as long-concealed history threatens to destabilise trusted relationships. With Uche Montana, Maurice Sam and Nadia Buari in the cast, this is less a travel or homecoming story than a film about how unresolved family choices shape someone else's life years later.",
     cast: ["Uche Montana", "Maurice Sam", "Nadia Buari"],
     featuredCast: ["Uche Montana", "Maurice Sam", "Nadia Buari"],
+    references: [{ label: "eElive film review — The Long Way Home", href: "https://www.eelive.ng/movie-review-the-long-way-home-thrives-on-the-uncomfortable-truths-of-family-dysfunction/", lastChecked: "2026-10-15", note: "An individually authored review confirms the family-secret premise and relationships among Beatrice, Thelma and Kayode." }],
     watchLinks: [{ platform: "YouTube", label: "Watch the full movie on YouTube", href: "https://www.youtube.com/watch?v=tYp-UskX0cM", access: "full-movie", lastChecked: "2026-09-29", note: "Full movie published by verified Uche Montana TV.", publisher: "Uche Montana TV", publisherUrl: "https://www.youtube.com/@UchemontanaTV" }],
   },
   {
@@ -1380,6 +1382,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Monica 2 follows a young woman trying to rebuild after sacrificing her education and opportunities to support relatives who failed to value those efforts. In this sequel, Monica tries to regain independence through work and further training while continuing to manage the emotional damage from her family relationships. A possible new romance becomes part of that recovery, rather than the only problem she has to solve. The film is especially concerned with obligations placed on a firstborn daughter, the limits of self-sacrifice and what choosing her own future might require. Watching the first Monica helps explain the conflicts.",
     cast: ["Uche Montana", "Blessing Onwukwe", "Joseph Momodu"],
     featuredCast: ["Uche Montana", "Blessing Onwukwe", "Joseph Momodu"],
+    references: [{ label: "Premium Times — Monica 2 review and story", href: "https://www.premiumtimesng.com/entertainment/nollywood/877356-movie-review-monica-2-breaks-internet-with-a-story-many-nigerians-know-too-well.html", lastChecked: "2026-10-15", note: "Independent review explains Monica's firstborn responsibilities, family conflict and later efforts to regain autonomy." }],
     watchLinks: [{ platform: "YouTube", label: "Watch the full movie on YouTube", href: "https://www.youtube.com/watch?v=7jteLIoNDaQ", access: "full-movie", lastChecked: "2026-09-29", note: "Full movie published by verified Uche Montana TV.", publisher: "Uche Montana TV", publisherUrl: "https://www.youtube.com/@UchemontanaTV" }],
   },
   {
@@ -1416,6 +1419,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     synopsis: "Just Before Forever is a Nigerian romance released through Maurice Sam TV, starring Maurice Sam, Uche Montana and Pamela Okoye. Its publicly available publisher description emphasises love, difficult decisions and unexpected emotional turns, but does not reliably identify the principal characters or explain the full chain of events. Rather than assigning roles or revealing an invented ending, this guide treats those plot details as unverified. Viewers looking for a recent, full-length relationship drama can use the official upload; those seeking a detailed character-by-character synopsis should know that the source credits and narrative details still need independent confirmation.",
     cast: ["Maurice Sam", "Uche Montana", "Pamela Okoye"],
     featuredCast: ["Maurice Sam", "Uche Montana", "Pamela Okoye"],
+    references: [{ label: "Nollywire — Just Before Forever listing", href: "https://nollywire.com/films/just-before-forever", lastChecked: "2026-10-15", note: "Independent film listing corroborates the cast and genre but provides only a general premise; character-specific plot remains unverified." }],
     watchLinks: [{ platform: "YouTube", label: "Watch the full movie on YouTube", href: "https://www.youtube.com/watch?v=WIQUH0YSZAs", access: "full-movie", lastChecked: "2026-09-29", note: "Full movie published by verified Maurice Sam TV.", publisher: "Maurice Sam TV", publisherUrl: "https://www.youtube.com/@mauricesamtv" }],
   },
   {
@@ -2374,6 +2378,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Uche Montana", "Chidi Dike"],
     featuredCast: ["Uche Montana", "Chidi Dike"],
     runtimeMinutes: 115,
+    references: [{ label: "eElive — A Place With You analysis", href: "https://www.eelive.ng/a-place-with-you-challenges-societys-rules-on-love-widowhood-and-class/", lastChecked: "2026-10-15", note: "Individual review supports the widowhood, return-to-school and class-expectations narrative in this film." }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
