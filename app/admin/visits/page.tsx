@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "@/components/admin-visits-mobile.css";
 import { AdminVisitsInsights } from "@/components/admin-visits-insights";
 import { AdminVisitsMore } from "@/components/admin-visits-more";
 
