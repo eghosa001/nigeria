@@ -3,7 +3,6 @@ import Link from "next/link";
 import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
@@ -110,36 +109,9 @@ const evergreenTripAnswers: Record<string, Array<{ question: string; answer: str
 };
 
 function getExploreQuestions(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
-  const stops = guide.highlights.slice(0, 3).map((item) => item.name);
-  const advice = guide.planning[0]?.detail;
-  // A multi-stop itinerary is not a single attraction and an event is not
-  // somewhere tourists can visit every day. Write questions to match intent.
-  const isRoute = guide.kind === "itinerary";
-  const isEvent = guide.kind === "event";
-  return [
-    ...(evergreenTripAnswers[guide.slug] ?? []),
-    {
-      question: isRoute ? "Which stops are covered by " + guide.shortTitle + "?"
-        : isEvent ? "What are the main activities at " + guide.shortTitle + "?"
-          : "What should I see in " + guide.shortTitle + "?",
-      answer: stops.length
-        ? (isRoute ? "The route highlights " : isEvent ? "The event highlights " : "Begin with ") + stops.join(", ") + ". Find the details under highlights below."
-        : guide.summary,
-    },
-    ...(guide.kind === "city" ? [{
-      question: "Where is " + guide.shortTitle + "?",
-      answer: guide.shortTitle + " is in " + guide.region + ", Nigeria.",
-    }] : []),
-    {
-      question: isRoute ? "What should I prepare before following " + guide.shortTitle + "?"
-        : isEvent ? "What should I confirm before attending " + guide.shortTitle + "?"
-          : "What should I check before visiting " + guide.shortTitle + "?",
-      answer: advice ?? (isRoute
-        ? "Confirm transport between stops, access and local conditions before starting the route."
-        : isEvent ? "Check the organiser's current venue, timing, tickets and admission requirements."
-          : "Confirm access, opening times and local conditions with the responsible operator before travelling."),
-    },
-  ];
+  // Only independently researched, destination-specific Q&A belongs here.
+  // Never manufacture generic questions by copying highlights or the planning list.
+  return evergreenTripAnswers[guide.slug] ?? [];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
@@ -241,7 +213,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
     spatialCoverage: { "@type": "Place", name: guide.region + ", Nigeria" },
   };
 
-  const faqLd = {
+  const faqLd = questions.length ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: questions.map((item) => ({
@@ -249,7 +221,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       name: item.question,
       acceptedAnswer: { "@type": "Answer", text: item.answer },
     })),
-  };
+  } : null;
 
   const placesLd = {
     "@context": "https://schema.org",
@@ -270,7 +242,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd, webpageLd, guideLd, placesLd, faqLd]} />
+      <JsonLd data={[breadcrumbLd, webpageLd, guideLd, placesLd, ...(faqLd ? [faqLd] : [])]} />
       <section className="section page-top explore-guide-hero">
         <div className="container">
           <Breadcrumbs items={[
@@ -297,21 +269,6 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
               </figcaption>
             </figure>
           ) : null}
-          <AnswerFirst
-            title={guide.kind === "itinerary" ? "Plan the " + guide.shortTitle + " route" : guide.kind === "event" ? "Plan for " + guide.shortTitle : "Plan your visit to " + guide.shortTitle}
-            summary={questions[0]?.answer ?? guide.summary}
-            facts={[
-              { label: "Applies to", value: guide.region + ", Nigeria" },
-              { label: "Guide type", value: guide.kind === "event" ? "Event guide" : guide.kind === "city" ? "City guide" : guide.kind === "itinerary" ? "Itinerary" : "Travel guide" },
-              { label: "Best for", value: guide.bestFor.slice(0, 3).join(", ") },
-              { label: "Information reviewed", value: guide.lastReviewed },
-            ]}
-            links={[
-              { href: "#places", label: "See places" },
-              { href: "#planning", label: "Before you go" },
-            ]}
-            note="Check current opening hours, access and travel conditions before leaving."
-          />
           <div className="topic-copy explore-intro-copy">
             {guide.intro.slice(0, 1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             {guide.intro.length > 1 ? (
@@ -321,7 +278,6 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
               </details>
             ) : null}
           </div>
-          <p className="hero-note">Reviewed {guide.lastReviewed}. Confirm live opening hours, ticketing, road access, weather, security conditions and event schedules directly before travelling.</p>
           {guide.slug === "hallelujah-festival-lagos-october-2026" ? (
             <div className="minimal-inline-links">
               <Link href="/entertainment/hallelujah-challenge-october-2026">Join the separate nightly online Hallelujah Challenge →</Link>
@@ -343,7 +299,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         <PageOutline label="Plan this visit" items={[
           { href: "#trip-highlights", label: "Highlights" },
           ...(places.length ? [{ href: "#places" as const, label: "Places, maps & costs" }] : []),
-          { href: "#trip-questions", label: "Trip questions" },
+          ...(questions.length ? [{ href: "#trip-questions" as const, label: "Trip questions" }] : []),
           { href: "#planning", label: "Before you go" },
           { href: "#trip-sources", label: "Sources" },
         ]} />
@@ -420,7 +376,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         </div>
       </section>
 
-      <section className="section">
+      {questions.length ? <section className="section">
         <div className="container">
           <div className="section-heading">
             <div>
@@ -437,7 +393,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             ))}
           </div>
         </div>
-      </section>
+      </section> : null}
 
       <section className="section premium-dark-section" id="planning">
         <div className="container">
