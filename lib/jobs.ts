@@ -3683,9 +3683,14 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Diploma in Dental Health Technician or Dental Surgery Technician.", "Current registration with the Dental Therapists Registration Board of Nigeria as required by EHA Clinics."],
     requirements: ["Hold current professional registration and a valid practice licence.", "Be able to work in or around Sangotedo, Lagos, as the official eligibility check asks.", "Have basic computer knowledge, including Microsoft Office and email.", "Confirm that the listed gross salary and work conditions suit you before applying."],
     documents: ["CV/resume", "Professional registration and qualification details"],
-    applicationSteps: ["Open EHA Clinics' official jobs directory and select Dental Assistant — Lagos.", "Review the professional registration requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    applicationSteps: [
+      "This record does not have a verified current application form. Do not assume its old posting or current jobs homepage proves this role is recruiting.",
+      "Open the employer's official active-vacancies board and search for the exact role title and location, not a broad employer name.",
+      "Only proceed when a specific employer listing has a working Apply form and currently published eligibility details. Requirements may have changed since this historical entry.",
+      "If the role is absent, monitor the employer's official jobs board for an independently announced reopening; avoid submitting personal documents to unofficial links."
+    ],
     officialUrl: "https://erp.eha.ng/jobs",
-    officialUrlLabel: "Find Dental Assistant — Lagos on EHA Clinics Jobs",
+    officialUrlLabel: "Check official employer board — application unverified",
     verifiedAt: "2026-10-15",
     nextMilestone: "The previously stored exact role route did not show a live application for this job on 15 October 2026. This is an unverified listing, not a formal employer closure notice. Check the current employer board for a newly published role.",
     feeNote: "Apply through EHA Clinics' official jobs system.",
