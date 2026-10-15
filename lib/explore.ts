@@ -1,5 +1,6 @@
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
+import { independentVisitorEvidence20261015 } from "@/lib/explore-independent-evidence-2026-10-15";
 import { verifiedOctoberHeritageEvents20261013 } from "@/lib/explore-heritage-events-2026-10-13";
 import { museumCollectionsGuide20261013 } from "@/lib/explore-museum-collections-2026-10-13";
 import { railTravelGuides20261012 } from "@/lib/explore-rail-travel-2026-10-12";
@@ -13683,7 +13684,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
 // Authoritative access updates are additive: do not erase the original
 // guide's researched details, first source, or earlier review dates.
 export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide) => {
-  const update = verifiedVisitAdditions20261015[guide.slug];
+  const update = independentVisitorEvidence20261015[guide.slug] ?? verifiedVisitAdditions20261015[guide.slug];
   if (!update) return guide;
   const sources = [...(guide.sources ?? [])];
   const known = new Set([guide.source?.href, ...sources.map((source) => source.href)]);
