@@ -107,7 +107,7 @@ test("complete AI exports contain every returned page, all five periods, hourly 
 
   const csv = completeVisitsCsv(report);
   const lines = csv.trim().split("\r\n");
-  assert.equal(lines.length, 1 + 16 + 5 + 1 + 151 + 123 + 2 + 16 + 1 + 7 + 4);
+  assert.equal(lines.length, 1 + 18 + 5 + 1 + 151 + 123 + 2 + 14 + 1 + 8 + 4);
   assert.equal((csv.match(/"search_page","GSC"/g) ?? []).length, 151);
   assert.equal((csv.match(/"visited_page","GA4"/g) ?? []).length, 123);
   assert.equal((csv.match(/"period_summary"/g) ?? []).length, 5);
