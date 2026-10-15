@@ -42,4 +42,24 @@ export const verifiedVisitAdditions20261015: Record<string, VerifiedVisitAdditio
     intro: "The Nigerian Supreme Council for Islamic Affairs locates its headquarters at the National Mosque Complex in Abuja's Central Business District. The council's administrative contact hours are not verified public mosque-tour hours.",
     planning: { label: "Check worship access separately from office hours", detail: "The Abuja National Mosque is in the Central Business District. Contact the mosque or responsible authority before arranging an architectural visit, especially if not attending prayers. Respect worship activity and dress requirements; do not mistake NSCIA administrative office hours for a public visitor schedule or assume photography is permitted." },
   },
+  "osogbo": {
+    source: {"label":"UNESCO World Heritage Centre — Osun-Osogbo Sacred Grove","href":"https://whc.unesco.org/en/list/1118/"},
+    intro: "UNESCO identifies the Osun-Osogbo Sacred Grove outside Osogbo as a living Yoruba religious landscape, not simply a city park. Active shrines and sanctuaries share the forest with sculpture and the Osun River; the setting is part of its cultural significance.",
+    planning: {"label":"Plan the grove visit around worship and conservation","detail":"The UNESCO-listed grove is on the outskirts of Osogbo, and religious rites occur throughout the year. Seek the current access route and visiting conditions from the National Commission for Museums and Monuments or authorised custodians, allow time for travel from central Osogbo, respect active worship and restrictions on photography, and do not assume festival-day arrangements or admission charges apply on ordinary days."},
+  },
+  "kano": {
+    source: {"label":"UNESCO tentative listing — Ancient Kano City Walls and Associated Sites","href":"https://whc.unesco.org/en/tentativelists/5171/L"},
+    intro: "UNESCO's tentative heritage listing connects ancient Kano's surviving city-wall sections with Dala Hill, Kurmi Market and the Emir's Palace. They are separate parts of a large historic urban landscape, not rooms within a single museum or one ticketed attraction. The nomination remains a tentative listing, not a UNESCO World Heritage inscription.",
+    planning: {"label":"Check access separately for the walls, market and palace","detail":"Plan Dala Hill, the remaining gates/walls and Kurmi Market as distinct stops, allowing for urban travel between them. UNESCO's historic inventory confirms their identities but not current guided-tour access, vendor-market visiting rules, entrance fees or safe travel routes. Confirm these locally with responsible site custodians and respect restricted palace areas."},
+  },
+  "sukur-cultural-landscape": {
+    source: {"label":"NCMM — Sukur Cultural Landscape and Hidi Palace","href":"https://museum.ng/sukur-cultural-landscape/"},
+    intro: "Nigeria's National Commission for Museums and Monuments describes Sukur as a living hilltop cultural landscape in Madagali, Adamawa State, with stone-paved paths, farming terraces, iron-smelting heritage and the Hidi Palace. It is not a conventional museum compound where published office hours guarantee unrestricted entry.",
+    planning: {"label":"Seek NCMM and community permission before planning hilltop access","detail":"NCMM places Sukur on the Mandara Mountains near the Cameroon border. Stone paths lead uphill and the Hidi Palace and surrounding shrines remain community heritage spaces. Confirm travel security, weather, physical access, site management and community permission before departing; heritage designation alone does not establish that visitor routes are currently safe or open."},
+  },
+  "abia-state-travel-guide": {
+    source: {"label":"NCMM — Nigeria's national museum and monument directory","href":"https://museum.ng/museums/"},
+    intro: "The National Commission for Museums and Monuments lists the National War Museum in Umuahia as a managed museum at Ugunchara Road, Amafor-Isinawu. This official listing provides a specific contactable heritage stop rather than assuming all Abia State historic sites are freely open.",
+    planning: {"label":"Verify the Umuahia War Museum visit with NCMM","detail":"Use the museum's official NCMM directory listing to confirm the current Umuahia premises and visitor contact before setting out; the national museum directory is evidence of a registered site, not of today's ticket price or opening schedule. Plan Arochukwu and Umuahia as separate visits instead of assuming their heritage attractions are next door or covered by one admission."},
+  },
 };
