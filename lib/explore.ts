@@ -6754,62 +6754,117 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
   },
   {
     "slug": "dufuna-canoe-heritage-guide",
-    "title": "Dufuna Canoe Heritage Guide: Yobe Archaeology & Trip Planning",
-    "shortTitle": "Dufuna Canoe Heritage",
+    "title": "Dufuna Canoe, Yobe: Discovery, Age, Damaturu Preservation and Visitor Safety",
+    "shortTitle": "Dufuna Canoe",
     "kind": "destination",
     "region": "Yobe State",
-    "summary": "Use Dufuna canoe heritage as a focused archaeology-and-history trip only after confirming current exhibition, access and security conditions.",
+    "summary": "The Dufuna canoe is an ancient dugout discovered near Dufuna village in Yobe State in May 1987 and excavated by archaeologists in 1994. Yobe's official investment guide says the 8.4-metre wooden canoe is preserved in a dedicated Canoe House by Maiduguri Road, Damaturu, but that publication does not establish today's museum hours, visitor access or conservation state. Government travel advice currently says do not travel to Yobe State; this guide prioritises understanding the artefact remotely over suggesting an unsafe excursion.",
     "intro": [
-      "The Dufuna canoe is one of Africa's most important archaeological discoveries and gives Yobe a distinct ancient-technology and heritage search intent.",
-      "Because the original find, exhibition arrangements and current travel conditions are separate issues, confirm what visitors can actually see before making the journey."
+      "The Dufuna canoe is one of the most remarkable pieces of physical evidence for ancient life around Lake Chad. The National Commission for Museums and Monuments (NCMM) identifies it as one of Nigeria's oldest known artefacts, more than 8,000 years old. It is a dugout — a boat formed by hollowing a log — and shows that people in the region had the woodworking knowledge to create substantial watercraft long before recorded modern states. That evidence matters more than whether an online headline calls it the second or third oldest boat on Earth.",
+      "The discovery occurred in May 1987 near Dufuna village in the Fune Local Government Area of what is now Yobe State. Accounts recorded in archaeological scholarship describe a herdsman, Mallam Ya'u, striking buried timber while digging a well or watering point. Smithsonian Libraries catalogue a 1998 account by archaeologist Abubakar Garba of the excavation and its methods. A joint University of Maiduguri and German research project subsequently excavated the canoe in 1994, rather than removing it as a conventional museum find on the day of discovery.",
+      "Yobe's state investment-promotion publication gives dimensions of about 8.4 metres long, 0.5 metres wide and 5 centimetres thick, and identifies the timber as African mahogany in the genus Khaya. Its detailed dating figures refer to work by German laboratories, with varying reported calendar-age estimates. An African Archaeological Review paper by Breunig, Neumann and Van Neer describes a dugout dated to around 6000 BC, so a sensible introduction is 'roughly eight millennia old' rather than an unsupported precise birthday.",
+      "The original findspot and the location of preservation are not identical. Yobe's official publication says a dedicated Canoe House on Maiduguri Road in Damaturu was built to preserve the find; it describes the original findspot as roughly two kilometres north of Dufuna village beside a seasonally flooded river course. Reports about archaeological significance, a museum collection listing and a state investment document do not together prove that the canoe is available for walk-in viewing at any hour.",
+      "Preservation is itself a current issue. A 2024 investigation with an NCMM curator described deteriorating conditions and difficulties obtaining preservation chemicals, and a 2025 News Agency of Nigeria report discussed a proposed international conservation collaboration. Such reports indicate risks and intentions; they do not certify that restoration or a public gallery has since been completed. Check any new claim of an opening, ticket or display directly with NCMM before accepting it.",
+      "The wider Chad Basin context is also important. The canoe was found in an area where channels and seasonal flooding shaped movement and settlement. Researchers treat it as evidence of early boatbuilding and water use, not proof of a single named ancient kingdom, a modern boating route or a precise migration story. Some sources disagree on global 'second oldest' versus 'third oldest' rankings; reporting the broad archaeological importance and dates with attribution is more responsible than claiming a definitive worldwide position.",
+      "**Travel status:** The Australian Government's current Nigeria advice explicitly lists Yobe among states under a 'Do not travel' warning because of kidnapping, terrorism, violent crime and instability. This is a reason to postpone a leisure visit, not a recommendation to find a private driver and take greater risks. Use NCMM's online collections, accredited publications and the Smithsonian archival record for educational research while on-site visits are not advisable."
     ],
     "bestFor": [
-      "Archaeology",
-      "African history",
-      "Ancient technology",
-      "Yobe heritage"
+      "Archaeological research",
+      "Ancient African technology",
+      "Museum collections",
+      "Lake Chad prehistory"
     ],
     "highlights": [
       {
-        "name": "Ancient canoe heritage",
-        "detail": "The find is significant for understanding early watercraft technology and settlement in the region."
+        "name": "1987 discovery in Fune LGA",
+        "detail": "The canoe was discovered in May 1987 near Dufuna village, now in Yobe State, while a herdsman was digging. Its archaeological setting is a former seasonal-watercourse landscape, not the tourist exhibit address. Separate the findspot from its preservation location."
       },
       {
-        "name": "Archaeological context",
-        "detail": "The story is more meaningful with careful interpretation rather than a simple 'oldest canoe' headline."
+        "name": "1994 archaeological excavation",
+        "detail": "Yobe's state investment guide and Smithsonian cataloguing identify later organised archaeological work, including a joint University of Maiduguri and German project in 1994. Excavation conditions and sediment context matter for interpreting the age; the canoe was not simply 'found in a museum'."
       },
       {
-        "name": "Yobe cultural landscape",
-        "detail": "The heritage belongs within the broader historic and Sahel setting of the state."
+        "name": "Why the wood matters",
+        "detail": "State preservation literature identifies the dugout as made from Khaya, a type of African mahogany, and describes dimensions around 8.4 by 0.5 metres. The ability to shape a long log into a vessel is the meaningful evidence of early woodworking technology."
       },
       {
-        "name": "Separate from birding",
-        "detail": "Dagona is a different conservation trip with its own current access requirements."
+        "name": "Age and disputed rankings",
+        "detail": "NCMM says more than 8,000 years old; published scholarly dating describes around 6000 BC and historic state sources provide differing older estimates. References variously call it the world's second- or third-oldest boat, so no unqualified global ranking should be treated as settled."
+      },
+      {
+        "name": "Damaturu preservation, not guaranteed public entry",
+        "detail": "Yobe's publication locates a purpose-built Canoe House along Maiduguri Road in the state capital. That does not establish a currently operating, accessible gallery, a posted admission price, an exhibition timeslot or safe public transport."
+      },
+      {
+        "name": "Current conservation questions",
+        "detail": "Curator-sourced reports have raised preservation concerns, while official news has discussed investment in conservation. An announcement or historic display photo should never be interpreted as confirmation that repair work is complete or access currently permitted."
       }
     ],
     "planning": [
       {
-        "label": "Confirm what is viewable",
-        "detail": "Check the current exhibition or heritage arrangement before travelling."
+        "label": "Should I plan a trip to see it now?",
+        "detail": "No leisure visit should be planned on the strength of this article. Australian official advice currently says do not travel to Yobe State due to serious security risks. Check relevant current Nigerian and international advisories before considering any essential or authorised professional field activity."
       },
       {
-        "label": "Check security first",
-        "detail": "Use current official and trusted local advice for the route."
+        "label": "Where was it found, and where is it kept?",
+        "detail": "The state source places the findspot near Dufuna village in Fune LGA and says the artefact was preserved in a specially built Canoe House along Maiduguri Road, Damaturu. Do not mistake the historical findspot for an open museum entrance."
       },
       {
-        "label": "Use credible interpretation",
-        "detail": "Prefer museum, archaeological or official context over exaggerated claims."
+        "label": "Are tickets and opening hours confirmed?",
+        "detail": "No. The official publications checked do not establish a live museum website, current entrance price, opening schedule, gallery condition or authorised booking desk. Avoid sites that present 'free admission' or an opening hour without dated operator evidence."
       },
       {
-        "label": "Travel in daylight",
-        "detail": "Use conservative road timing."
+        "label": "How can I research it without travelling?",
+        "detail": "Begin with the NCMM FAQ and collection catalogue, then read the Smithsonian Libraries entry for Abubakar Garba's retrospective excavation article and the 1996 African Archaeological Review study. The Yobe state PDF adds dimensions, location and preservation context."
+      },
+      {
+        "label": "What about claims it is the world's second-oldest canoe?",
+        "detail": "Treat absolute world rankings cautiously: some government and news accounts say second-oldest, while Yobe's own investment guide says third-oldest. Scholarly publications support its exceptional age and importance as one of Africa's earliest known watercraft; that is the defensible central claim."
+      },
+      {
+        "label": "Is there a current restoration or exhibition?",
+        "detail": "A planned conservation partnership reported in 2025 is not confirmation that a public project opened. Independent reporting has raised condition concerns. Ask NCMM or the responsible Yobe heritage authority for dated written confirmation of the canoe's viewing status before describing a display as accessible."
+      },
+      {
+        "label": "Can I visit the original riverbank?",
+        "detail": "The historic excavation location is not a verified maintained tourist attraction. It may involve private, seasonal or ecologically sensitive land, and travel advice warns against visiting the state. Do not seek improvised directions to an unprotected findspot or attempt any excavation or artefact collection."
+      },
+      {
+        "label": "How should students cite the history?",
+        "detail": "Attribute date and archaeological claims to the state preservation publication, Smithsonian archival record, NCMM and academic research; distinguish 'discovered in 1987' from 'excavated in 1994', and do not turn an approximate radiocarbon interpretation into a precise historical calendar date."
       }
     ],
     "source": {
-      "label": "Yobe Investment Promotion Agency — Culture and Tourism",
-      "href": "https://yobeinvest.ng/culture-and-tourism/"
+      "label": "Yobe State investment-promotion agency — Invest in Yobe, Dufuna Canoe entry (PDF)",
+      "href": "https://yobeinvest.ng/wp-content/uploads/2025/09/Invest-in-Yobe.pdf"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "National Commission for Museums and Monuments — FAQ: Dufuna canoe age",
+        "href": "https://museum.ng/faq/"
+      },
+      {
+        "label": "Smithsonian Libraries — Garba's 1998 excavation retrospective",
+        "href": "https://www.si.edu/object/siris_sil_689781"
+      },
+      {
+        "label": "African Archaeological Review — Holocene settlement and Dufuna dating (1996)",
+        "href": "https://doi.org/10.1007/BF01956304"
+      },
+      {
+        "label": "Australia Smartraveller — Nigeria: Yobe do-not-travel advice",
+        "href": "https://www.smartraveller.gov.au/destinations/africa/nigeria"
+      },
+      {
+        "label": "News Agency of Nigeria — proposed Dufuna conservation collaboration (2025)",
+        "href": "https://nannews.ng/tourism-morocco-to-invest-in-conservation-of-yobes-8000-year-old-canoe/"
+      },
+      {
+        "label": "Independent journalism citing heritage curator — Dufuna conservation conditions",
+        "href": "https://collaborativemedia.wscij.org/special-report-vanishing-traditions-how-climate-change-and-security-challenges-are-threatening-lake-chads-cultural-heritage/"
+      }
+    ]
   },
   {
     "slug": "kaltungo-hills-guide",

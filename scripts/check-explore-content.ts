@@ -30,6 +30,7 @@ const independentlyCheckedDestinations = [
   { slug: "nigeria-archaeology-guide", hosts: ["museum.ng", "whc.unesco.org"], words: 360 },
   { slug: "abeokuta-day-trip-itinerary", hosts: ["abeokutasouthlga.og.gov.ng", "invest.ogunstate.gov.ng", "egbamuseum.org"], words: 370 },
   { slug: "okigwe-hills-guide", hosts: ["isipa.im.gov.ng", "smartraveller.gov.au"], words: 360 },
+  { slug: "dufuna-canoe-heritage-guide", hosts: ["yobeinvest.ng", "museum.ng", "si.edu", "smartraveller.gov.au"], words: 700 },
 ];
 for (const { slug, hosts, words } of independentlyCheckedDestinations) {
   const guide = exploreGuides.find((item) => item.slug === slug);
@@ -72,6 +73,16 @@ const abeokuta = exploreGuides.find(x => x.slug === "abeokuta-day-trip-itinerary
 if (!abeokuta || /olumorock\\.ng/.test([abeokuta.source?.href,...(abeokuta.sources??[]).map(x=>x.href)].join(" ")) ||
     !abeokuta.planning.some(x => /verify|confirm/i.test(x.detail) && /access|entry|hours|price/i.test(x.detail))) {
   errors.push("Abeokuta itinerary must use independently reachable sources and clarify real access/fees.");
+}
+
+// Dufuna's old, generic 'ancient heritage trip' text hid the original
+// location-versus-conservation question and current Yobe travel risks.
+const dufuna = exploreGuides.find(x => x.slug === "dufuna-canoe-heritage-guide");
+if (!dufuna || !/do not travel/i.test([dufuna.summary, ...dufuna.intro].join(" ")) ||
+    !dufuna.intro.some(x => /1987/.test(x) && /1994/.test(x)) ||
+    !dufuna.planning.some(x => /hours|ticket|admission/i.test(x.detail) && /not|no|unknown|unverified/i.test(x.detail)) ||
+    !dufuna.planning.some(x => /second.oldest|third.oldest|rank/i.test(x.detail) && /different|cautious|sources|claim/i.test(x.detail))) {
+  errors.push("Dufuna Canoe must retain date-specific excavation history, Yobe safety warning and honest unknown exhibit access.");
 }
 
 // Search Console already has impressions for the older URL. Keep one
