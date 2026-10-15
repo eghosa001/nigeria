@@ -1869,7 +1869,7 @@ export const explorePlaces: ExplorePlace[] = [
     summary: "A nationally important Sahel protected landscape. Do not plan a visit from an old tourism listing: current security, park access and route suitability must be confirmed directly first.",
     cost: "Only visit when current official park and security guidance confirms access is appropriate",
     mapQuery: "Chad Basin National Park, Borno State, Nigeria",
-    source: { label: "Borno State Government — About Borno", href: "https://bornostate.gov.ng/about" },
+    source: { label: "Nigeria National Park Service — Chad Basin National Park", href: "https://nigeriaparkservice.gov.ng/blog/2014/08/12/chad-basin-national-park/" },
     checkedAt: "2026-10-05",
     tags: ["national park","Sahel","wildlife","security check"],
   },
@@ -2901,7 +2901,7 @@ export const explorePlaces: ExplorePlace[] = [
     "mapQuery": "Arochukwu Long Juju Abia Nigeria",
     "source": {
       "label": "UNESCO World Heritage Centre — Arochukwu Long Juju Slave Route",
-      "href": "https://whc.unesco.org/en/tentativelists/5172/"
+      "href": "https://whc.unesco.org/en/tentativelists/5170/"
     },
     "checkedAt": "2026-10-05",
     "tags": [
