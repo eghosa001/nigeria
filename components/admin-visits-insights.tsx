@@ -226,7 +226,7 @@ export function AdminVisitsInsights() {
             ...report.searchPages.map((p) => [p.page, p.impressions, p.clicks, p.ctr, p.position])];
           download("nigeria-guide-search-pages-" + range + ".csv", rows.map((row) => row.map(csvCell).join(",")).join("\r\n"), "text/csv");
         }}>Export search CSV</button>
-        <button type="button" onClick={() => void lock()}>Lock</button>
+        <button type="button" onClick={() => void lock()}>Lock insights</button>
       </div>
       {error ? <p role="alert" className="form-message error">{error}</p> : null}
       {report.selectedRange !== range ? <p role="status">Loading {labels[range]} — figures below are from the previous selection.</p> : null}
