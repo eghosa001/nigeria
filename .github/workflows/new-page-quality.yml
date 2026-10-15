@@ -32,6 +32,38 @@ on:
       - "components/service-*.tsx"
       - ".github/workflows/new-page-quality.yml"
 
+  push:
+    branches: [main]
+    paths:
+      - "data/services*.json"
+      - "data/youtube-detail-shards/*.json"
+      - "lib/*growth-wave*.ts"
+      - "lib/explore-growth-places*.ts"
+      - "lib/explore-trend-*.ts"
+      - "lib/job-trend-*.ts"
+      - "lib/jobs.ts"
+      - "lib/explore.ts"
+      - "lib/explore-*.ts"
+      - "lib/entertainment.ts"
+      - "lib/entertainment-*.ts"
+      - "lib/job-*.ts"
+      - "lib/career-*.ts"
+      - "lib/series.ts"
+      - "lib/entertainment-extras.ts"
+      - "lib/entertainment-social-trends-*.ts"
+      - "lib/job-social-trends-*.ts"
+      - "scripts/check-new-published-links.mjs"
+      - "lib/job-scale-wave.ts"
+      - "app/**/page.tsx"
+      - ".github/scripts/new-page-quality.mjs"
+      - ".github/scripts/new-page-quality.test.mjs"
+      - ".github/scripts/shared-page-structure.mjs"
+      - ".github/scripts/shared-page-structure.test.mjs"
+      - "components/page-outline.tsx"
+      - "components/guide-quick-nav.tsx"
+      - "components/service-*.tsx"
+      - ".github/workflows/new-page-quality.yml"
+
 permissions:
   contents: read
 
@@ -56,11 +88,11 @@ jobs:
         run: node --test .github/scripts/shared-page-structure.test.mjs
       - name: Check only newly added records and routes
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: |
           git fetch origin "$BASE_SHA" --depth=1
           node .github/scripts/new-page-quality.mjs --base "$BASE_SHA"
       - name: Verify only newly introduced external link destinations
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
         run: node scripts/check-new-published-links.mjs
