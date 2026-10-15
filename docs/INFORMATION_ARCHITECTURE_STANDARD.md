@@ -38,3 +38,14 @@ A general employer portal or founder-training programme is not an active salarie
 - `New Page Quality Gate` runs these checks for relevant page, content or shared-layout PRs, as well as the existing new-record source/metadata checks.
 - Full legacy factual review is distinct from structural consistency. Existing content still requires editorial verification where its individual sources or detail are weak. Passing this structural check **does not** imply that every published fact, link or rights claim has been independently reverified.
 - Check live deployment separately; successful PR checks alone do not prove that Cloudflare has published the revision.
+
+## Duplicate-content prevention and editorial depth
+
+- Keep **one canonical visible explanation** of fees, deadlines, eligibility, detailed steps, verified film credits, and travel logistics. A short fact in a hero is acceptable; do not repeat whole explanations in automatically generated FAQs or second summary panels.
+- Service guides display the authoritative checklist, route, numbered steps, aftercare and cautions. Only **additional, service-specific researched questions** appear in the follow-up answer area. If none exist, the Q&A section and its structured data are omitted.
+- Movies have one opening premise and one verified cast/watch section, supported by a direct sub-navigation; don't reproduce the hero facts in a second answer card.
+- Tour pages show highlights and planning context once. Only independently written destination-specific questions are published; no generic Q&A cards copying the first three highlights.
+- Jobs show status, employer and official application prominently, then eligibility and steps; remove repeated status/fact cards.
+- An unusually long guide must gain detail by adding distinct useful evidence, actionable route guidance, experiences from attributed sources where available, current access conditions, uncertainties, or expert examples—not by repeating paragraphs to reach a word-count target.
+- Editorial corrections should improve inaccurate source records and add verifiable citations. Never invent firsthand visits, verified fees, current openings or viewing availability.
+- Current production must be validated separately with deployment SHA, live page structure, canonical, robots.txt, ads.txt and mobile viewport tests. Failed remote checks are unresolved until retested on the actual deployed SHA.
