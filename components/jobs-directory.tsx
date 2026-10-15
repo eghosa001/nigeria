@@ -13,6 +13,7 @@ const statusLabels: Record<JobStatus | "all", string> = {
   all: "All statuses",
   open: "Open",
   closed: "Closed",
+  unverified: "Availability unverified",
   screening: "Screening",
   training: "Training",
   "career-page": "Career pages",
