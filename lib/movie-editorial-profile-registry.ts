@@ -1,5 +1,6 @@
 import { distinctLongEnoughEditorialProfiles } from "@/lib/movie-editorial-profiles-long-enough-2026-10-15";
 import { reviewedFilmDossiers20261015 } from "@/lib/movie-editorial-profiles-reviewed-2026-10-15";
+import { individuallyResearchedFilmDossiers20261015B } from "@/lib/movie-editorial-profiles-reviewed-2026-10-15-b";
 import { individualMovieEditorialOctober20261014 } from "@/lib/movie-editorial-profiles-individual-2026-10-14";
 import { psychologicalThrillerEditorialOctober20261013 } from "@/lib/movie-editorial-profiles-thriller-2026-10-13";
 import { movieEditorialProfilesOctober20261013 } from "@/lib/movie-editorial-profiles-october-2026-10-13";
@@ -19,6 +20,7 @@ import { movieEditorialProfilesRemainingB } from "@/lib/movie-editorial-profiles
 // fabricated roles, fake premiere dates, or generic SEO paragraphs.
 // Duplicate IDs are checked by the change-scoped premium-guide quality gate.
 export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] = [
+  individuallyResearchedFilmDossiers20261015B,
   reviewedFilmDossiers20261015,
   distinctLongEnoughEditorialProfiles,
   individualMovieEditorialOctober20261014,

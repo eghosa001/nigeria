@@ -644,3 +644,27 @@ test("verified editorial fixes explain the source and leave unverified facts unk
   await page.goto("/entertainment/series/koleoso");
   await expect(page.locator(".page-intro")).toContainText("Osogbemi");
 });
+
+
+test("independently sourced Tour and Movie corrections render without replacing verified sections", async ({ page }) => {
+  await page.goto("/explore/ofala-onitsha-2026");
+  await expect(page.getByText("Differentiate public ceremonies from restricted media and palace spaces")).toBeVisible();
+  await expect(page.locator('#trip-sources a[href*="vanguardngr.com/2026/10/onitsha-announces-programme"]')).toHaveCount(1);
+  await expect(page.locator("#trip-highlights")).toBeVisible();
+
+  await page.goto("/explore/benin-city");
+  await expect(page.getByText("Treat ceremonial routes as temporary, not everyday walking trails")).toBeVisible();
+  await expect(page.locator('#trip-sources a[href*="nigerianobservernews.com/2026/10/benin-kingdom-dazzles"]')).toHaveCount(1);
+
+  await page.goto("/entertainment/movies/issakaba-the-return-2026");
+  await expect(page.getByRole("heading", { name: "Why the new Issakaba is a sequel rather than an old upload" })).toBeVisible();
+  await expect(page.locator("#watch")).toBeVisible();
+
+  await page.goto("/entertainment/movies/stuck-with-you-2025");
+  await expect(page.getByRole("heading", { name: "Stuck With You (2025): the mistaken-identity trap in the title" })).toBeVisible();
+  await expect(page.locator('a[href="https://africanmoviedb.com/title/stuck-with-you-2025"]')).toBeVisible();
+
+  await page.goto("/entertainment/movies/lisabi-the-uprising");
+  await expect(page.getByText("Niyi Akinmolayan", { exact: true }).first()).toBeVisible();
+  await expect(page.locator('a[href="https://www.imdb.com/title/tt33255000/fullcredits/"]')).toBeVisible();
+});
