@@ -15,12 +15,12 @@ test("failed service search offers retry without stale results", async ({ page }
     else await route.continue();
   });
   await page.getByLabel("Search guides").fill("passport renewal");
-  await expect(page.getByRole("alert")).toContainText("Retry the search");
+  await expect(page.locator(".empty-state[role='alert']")).toContainText("Retry the search");
   await expect(page.locator(".service-grid")).toHaveCount(0);
   fail = false;
   await page.getByRole("button", { name: "Retry search" }).click();
   await expect(page.locator(".service-grid")).toContainText(/passport/i);
-  await expect(page.getByRole("alert")).toHaveCount(0);
+  await expect(page.locator(".empty-state[role='alert']")).toHaveCount(0);
 });
 
 test("movie search uses the paginated server directory", async ({ page }) => {
@@ -46,8 +46,11 @@ test("mobile primary navigation stays focused and keeps Saved in the header", as
 
 test("crowded landing-page link groups use progressive disclosure", async ({ page }) => {
   await page.goto("/explore");
-  await expect(page.getByText("More ways to explore")).toBeVisible();
-  await expect(page.getByText("Choose a state or the FCT")).toBeVisible();
+  const stateDisclosure = page.locator("#states summary");
+  await expect(stateDisclosure).toContainText("States & FCT");
+  await expect(stateDisclosure).toContainText("37 entry points");
+  await stateDisclosure.click();
+  await expect(page.locator("#states a[href='/explore/abia-state-travel-guide']")).toBeVisible();
 
   await page.goto("/services");
   await expect(page.getByText(/Browse all \d+ service categories/)).toBeVisible();
@@ -73,7 +76,7 @@ test("sitewide autocomplete selects existing canonical guides with keyboard", as
   await page.goto("/search");
   const input = page.getByRole("combobox", { name: "What are you looking for?" });
   await input.fill("passport");
-  await expect(page.getByRole("option", { name: /Nigerian passport/i })).toBeVisible();
+  await expect(page.getByRole("option", { name: "Nigerian passport Services", exact: true })).toBeVisible();
   await input.press("ArrowDown");
   await input.press("Enter");
   await expect(page).toHaveURL(new RegExp("/topics/nigerian-passport$"));
