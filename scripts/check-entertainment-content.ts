@@ -12,7 +12,7 @@ const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 // not rely on templated metadata or repeated video directory descriptions.
 for (const slug of ["oloture", "citation", "king-of-boys"]) {
   const title = entertainmentTitles.find((movie) => movie.slug === slug);
-  assert(title && title.synopsis.trim().split(/\\s+/).length >= 35,
+  assert(title && title.synopsis.trim().split(/\s+/).length >= 35,
     slug + " must provide a substantive spoiler-light original film overview.");
 }
 
