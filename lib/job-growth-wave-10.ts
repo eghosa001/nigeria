@@ -112,13 +112,13 @@ export const jobGrowthWave10: CareerOpportunity[] = [
     ],
     documents: ["CV/resume", "Cover letter if used", "LinkedIn profile", "Website/portfolio if relevant"],
     applicationSteps: [
-      "Open Moniepoint's official Customer Experience Researcher vacancy.",
-      "Compare your experience with the four-year research requirement and listed qualitative methods.",
-      "Prepare a CV or portfolio that shows research planning, synthesis and recommendations that influenced products or customer outcomes.",
-      "Submit through the official Greenhouse application."
+      "This record does not have a verified current application form. Do not assume its old posting or current jobs homepage proves this role is recruiting.",
+      "Open the employer's official active-vacancies board and search for the exact role title and location, not a broad employer name.",
+      "Only proceed when a specific employer listing has a working Apply form and currently published eligibility details. Requirements may have changed since this historical entry.",
+      "If the role is absent, monitor the employer's official jobs board for an independently announced reopening; avoid submitting personal documents to unofficial links."
     ],
     officialUrl: "https://job-boards.greenhouse.io/moniepoint/jobs/4880701101",
-    officialUrlLabel: "Apply on Moniepoint's official Greenhouse page",
+    officialUrlLabel: "Check official employer board — application unverified",
     verifiedAt: "2026-10-15",
     nextMilestone: "The previously stored exact role route did not show a live application for this job on 15 October 2026. This is an unverified listing, not a formal employer closure notice. Check the current employer board for a newly published role.",
     feeNote: "Use only the official Moniepoint application form.",
