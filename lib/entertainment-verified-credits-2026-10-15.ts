@@ -196,4 +196,16 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     source: { label: "African Movies Database — Never Let Go (2026) production credits", href: "https://africanmoviedb.com/title/never-let-go-2026", lastChecked: "2026-10-15", note: "The 2026 Nigerian Maurice Sam and Nadia Buari drama lists Omoruyi Efosa Emmanuel as director; not the unrelated American Never Let Go from 2024." },
   },
 
+  "terms-of-attraction-2026": {
+    directors: ["Omoruyi Efosa Emmanuel"],
+    source: { label: "FilmFlux — Terms of Attraction (2026) exact-film crew credits", href: "https://filmflux.app/movie/478d5541-db8b-4d69-839f-959b14304f60-terms-of-attraction", lastChecked: "2026-10-15", note: "The Maurice Sam TV film's crew listing names Omoruyi Efosa Emmanuel (also shortened to Omoruyi Efosa) as director; the two spellings must not be treated as separate people." },
+  },
+  "celebrity-crush-2024": {
+    directors: ["Chidi Chijioke"],
+    source: { label: "IMDb — Celebrity Crush (2024) full cast and crew", href: "https://www.imdb.com/title/tt40994525/fullcredits/", lastChecked: "2026-10-15", note: "The 2024 Uchenna Mbunabo TV film credits Chidi Chijioke as director, matching Clinton Joshua, Chioma Nwaoha and Courtney Ochanya in this exact production." },
+  },
+  "a-ride-forever-2026": {
+    directors: ["Okey Ifeanyi"],
+    source: { label: "NollyMeter — A Ride Forever (2026) cast and crew", href: "https://www.nollymeter.com/movies/a-ride-forever", lastChecked: "2026-10-15", note: "The film-specific entry lists Okey Ifeanyi as director and Sarian Martin and Deza the Great as leads. Do not confuse film titles or use this credit to claim new streaming rights." },
+  },
 };
