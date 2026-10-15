@@ -36,7 +36,7 @@ export const entertainmentGrowthWave8: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "A relationship is tested by difficult choices, unresolved feelings and the pressure of deciding whether two people should keep fighting for a future together.",
+    synopsis: "In Uche Alexmoore’s 2025 Nigerian drama, financially struggling Jerry and Sullyat enter an unlikely pretend-marriage arrangement after her wealthy former partner Oscar abandons her. An unexpected windfall and a dispute over trust turn their arrangement into a test of whose loyalties are genuine.",
     cast: ["Clinton Joshua", "Sarian Martin", "Alex Cross", "Ada Uli"],
     featuredCast: ["Clinton Joshua", "Sarian Martin", "Alex Cross"],
     directors: ["Uche Alexmoore"],
@@ -47,6 +47,11 @@ export const entertainmentGrowthWave8: EntertainmentTitle[] = [
       href: "https://www.nollymeter.com/movies/stuck-with-you",
       lastChecked: "2026-10-07",
       note: "Used to verify the Nigerian release date, runtime, cast and director."
+    }, {
+      label: "African Movie Database — Nigerian Stuck With You (2025), cast and storyline",
+      href: "https://africanmoviedb.com/title/stuck-with-you-2025",
+      lastChecked: "2026-10-15",
+      note: "Corroborates director, 14 November 2025 date, Jerry and Sullyat character credits; its 125-minute runtime differs slightly from NollyMeter's 126-minute listing."
     }],
     watchLinks: [{
       platform: "YouTube",
