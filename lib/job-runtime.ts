@@ -9,14 +9,35 @@ export function todayIsoNigeria(now = new Date()) {
 // Keep the historical export for existing callers; prefer todayIsoNigeria.
 export const todayIsoUtc = todayIsoNigeria;
 
+// Source freshness is independent of a published application deadline.
+// One-off vacancy adverts with no employer-confirmed closing date should not
+// continue saying "open" forever when the last actual source check gets old.
+export const MAX_OPEN_VACANCY_SOURCE_AGE_DAYS = 14;
+
+function hasStaleVacancyEvidence(item: CareerOpportunity, todayIso: string): boolean {
+  if (item.status !== "open" || item.kind !== "vacancy") return false;
+  // Invalid/future dates cannot be treated as confirmation of availability.
+  if (!item.verifiedAt || !/^\\d{4}-\\d{2}-\\d{2}$/.test(item.verifiedAt) ||
+      item.verifiedAt > todayIso) return true;
+  const sourceDate = Date.parse(item.verifiedAt + "T00:00:00Z");
+  const reviewDate = Date.parse(todayIso + "T00:00:00Z");
+  return !Number.isFinite(sourceDate) || !Number.isFinite(reviewDate) ||
+    Math.floor((reviewDate - sourceDate) / 86_400_000) > MAX_OPEN_VACANCY_SOURCE_AGE_DAYS;
+}
+
 export function getEffectiveJobStatus(item: CareerOpportunity, todayIso = todayIsoNigeria()): JobStatus {
   if (item.status === "open" && item.deadline && item.deadline < todayIso) return "closed";
+  if (hasStaleVacancyEvidence(item, todayIso)) return "unverified";
   return item.status;
 }
 
 export function getEffectiveStatusLabel(item: CareerOpportunity, todayIso = todayIsoNigeria()) {
-  if (item.status === "open" && item.deadline && item.deadline < todayIso) {
+  const state = getEffectiveJobStatus(item, todayIso);
+  if (state === "closed" && item.status === "open") {
     return "Application deadline passed — closed unless officially extended";
+  }
+  if (state === "unverified" && item.status === "open") {
+    return "Opening not reverified within 14 days — availability unverified";
   }
   return item.statusLabel;
 }
