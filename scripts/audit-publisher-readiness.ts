@@ -55,8 +55,9 @@ for (const g of exploreGuides) {
   add("Tour", "/explore/" + g.slug, g.title,
     fragments(g.summary, g.intro, g.highlights.map((h) => h.detail),
       g.planning.map((p) => p.detail)),
-    g.source ? 1 : 0, "editorial-guide",
-    g.source ? ["single-primary-source-review"] : ["no-source"]);
+    (g.source ? 1 : 0) + (g.sources?.length ?? 0), "editorial-guide",
+    !g.source && !g.sources?.length ? ["no-source"] :
+      (g.source ? 1 : 0) + (g.sources?.length ?? 0) === 1 ? ["single-primary-source-review"] : []);
 }
 for (const m of entertainmentTitles) {
   const citations = (m.references?.length ?? 0) + m.watchLinks.length + (m.trailer ? 1 : 0) +
