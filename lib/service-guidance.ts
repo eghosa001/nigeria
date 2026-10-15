@@ -1,6 +1,6 @@
 import type { Service } from "@/lib/types";
 import { getAgency } from "@/lib/data";
-import { getServiceJourney } from "@/lib/journey";
+import { getServiceJourney, isMandatoryPhysicalStep } from "@/lib/journey";
 
 export type GuidanceCard = {
   title: string;
@@ -22,6 +22,20 @@ export type DetailedServiceGuidance = {
 };
 
 const explicit: Record<string, DetailedServiceGuidance> = {
+  "aedc-map-refund": {
+    route: {
+      startTitle: "Check your MAP refund online with your AEDC meter number",
+      startDetail: "Use https://maprefund.abujaelectricity.com/ and enter your own meter number. Only an eligible record shows refund status or a 20-digit electricity-unit token; a search is not proof that a refund is due.",
+      physicalTitle: "No office visit is required for the normal refund check",
+      physicalDetail: "AEDC says eligible customers can check the online portal, receive a refund notification by SMS/email and load their 20-digit token on the associated prepaid meter. Visiting a Customer Experience Centre is an optional support route only when the online lookup or token needs help.",
+      fallbackTitle: "Contact AEDC if the token is missing or fails",
+      fallbackDetail: "Email map.refund@abujaelectricity.com with the relevant meter number and proof of the original MAP meter payment, or call AEDC on 08039070070. Do not pay an agent or share passwords for a refund check.",
+    },
+    aftercare: [
+      { title: "Keep the refund notification and token private", detail: "Save the AEDC SMS or email, the refund amount and the 20-digit token securely. Load it only on the associated meter; the refund is supplied as energy units rather than a bank deposit." },
+      { title: "Follow up through AEDC if there is no usable refund", detail: "Keep your MAP meter payment evidence, meter number and any failed-token details. Contact map.refund@abujaelectricity.com or 08039070070 instead of starting a new paid meter application or paying a third-party intermediary." },
+    ],
+  },
   "nigeria-landing-exit-card": {
     route: {
       startTitle: "Use the free NIS LECARD portal for your arrival or departure",
@@ -356,10 +370,7 @@ const agencyFallback: Record<string, string> = {
 };
 
 function findPhysicalStep(service: Service) {
-  // Require an actual in-person action; merely choosing an office in an
-  // online form is not proof that the applicant must go there.
-  return service.steps.find((step) =>
-    /\battend\b|\bin.person\b|\bbiometric\b|\bfingerprint\b|\b(?:visit|go to|report to|appear at|present at)\s+(?:the |an? )?(?:[a-z -]{0,45})?(?:office|centre|center|branch|embassy|consulate)\b/i.test(step));
+  return service.steps.find(isMandatoryPhysicalStep);
 }
 
 function evidenceFor(service: Service) {
