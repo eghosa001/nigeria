@@ -1,4 +1,5 @@
 import { entertainmentTitles } from "../lib/entertainment";
+import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { discoverableYouTubeMovies, hasSubstantiveYouTubeSynopsis, indexableYouTubeMovies, isIndexableYouTubeMovie, generatedYouTubeMovies, getYouTubeMovieById } from "../lib/youtube-library";
 
 function assert(condition: unknown, message: string): asserts condition {
@@ -111,6 +112,8 @@ assert(getYouTubeMovieById("tCa7-acZ9uM")?.source === "curated",
 assert(!hasSubstantiveYouTubeSynopsis({ synopsis: "Sample is a full-length Nigerian film published by Sample TV. Featured cast includes One Two." }), "Publisher/cast boilerplate must never qualify as substantive plot.");
 assert(hasSubstantiveYouTubeSynopsis({ synopsis: "A young designer returns to her hometown after her father's sudden disappearance and discovers conflicting family histories. The confrontation forces a difficult choice between protecting her siblings and telling the truth." }), "Substantive story context should remain SEO-eligible.");
 assert(indexableYouTubeMovies.every((movie) => hasSubstantiveYouTubeSynopsis(movie)), "Only substantive YouTube profiles may be indexed.");
+assert(indexableYouTubeMovies.every((movie) => movie.source === "curated" || Boolean(youtubeEditorialDossiers[movie.videoId])), "Standalone indexable YouTube pages must have an individually authored editorial dossier.");
+assert(discoverableYouTubeMovies.some((movie) => movie.source === "youtube-api" && !isIndexableYouTubeMovie(movie)), "Unreviewed YouTube films must remain discoverable but not indexable.");
 assert(discoverableYouTubeMovies.every((movie) => hasSubstantiveYouTubeSynopsis(movie) || !isIndexableYouTubeMovie(movie)), "Thin movie listings must remain discoverable but noindexed.");
 
 console.log(
