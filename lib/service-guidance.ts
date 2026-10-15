@@ -22,21 +22,6 @@ export type DetailedServiceGuidance = {
 };
 
 const explicit: Record<string, DetailedServiceGuidance> = {
-  "spotify-premium-nigeria": {
-    route: {
-      startTitle: "Compare Nigerian Premium plans in Spotify's own checkout",
-      startDetail: "Open https://www.spotify.com/ng/premium/ while signed in to the Spotify account you intend to upgrade. Compare the normal monthly prices (Individual ₦1,600, Student ₦800, Duo ₦2,100, Family ₦2,500), then read the offer-specific first charge, renewal date, eligibility rules and available payment methods in your checkout. An advertised introductory discount is not the permanent renewal price.",
-      physicalTitle: "Subscription, billing and cancellation take place online",
-      physicalDetail: "Spotify does not require an office visit to start or cancel an ordinary Premium subscription. Student requires eligibility verification, while Duo and Family members must live at the same address; the plan manager handles the group subscription.",
-      fallbackTitle: "Diagnose payment and account issues through Spotify",
-      fallbackDetail: "In your Spotify account, inspect Manage your plan and Payment to identify the current plan, billing provider, renewal date and payment route. If a partner bills you, follow that partner's cancellation link; if no Premium plan appears, check whether a different Spotify account was charged. Use https://support.spotify.com/ rather than a reseller or a purported lifetime Premium seller.",
-    },
-    aftercare: [
-      { title: "Verify the actual subscription and renewal charge", detail: "Check Manage your plan after checkout. Save the Spotify receipt and note whether your plan is direct-billed or partner-billed, the next billing date, the recurring amount and when any introductory discount expires." },
-      { title: "Cancel from the correct billing provider if needed", detail: "Spotify says directly billed paid Premium normally remains active until the next billing date after cancellation; cancelling during a zero-priced free trial can end Premium immediately. A plan billed by a telecom or other partner must be managed through the partner details shown in Spotify Payment." },
-      { title: "Fix Student and shared-plan eligibility using official account settings", detail: "If Student verification fails, check the supported institution and SheerID process; if a Duo/Family invitation fails, confirm both accounts' actual household address requirements. Never share passwords, verification codes or payment details with an unofficial agent." },
-    ],
-  },
   "aedc-map-refund": {
     route: {
       startTitle: "Check your MAP refund online with your AEDC meter number",
@@ -347,24 +332,20 @@ const explicit: Record<string, DetailedServiceGuidance> = {
   },
   "spotify-premium-nigeria": {
     route: {
-      startTitle: "Compare Spotify's official Nigeria plans before subscribing",
-      startDetail: "Open Spotify's Nigeria Premium page and compare the regular renewal price with any introductory offer shown for your own account. Choose Individual, Student, Duo or Family based on eligibility and check the first charge, accepted payment option and next billing date before confirming.",
-      physicalTitle: "Subscription and account management are online",
-      physicalDetail: "Spotify's documented subscription, Student verification, plan-management and cancellation routes are online. There is no mandatory visit to a Nigerian government office, agent or physical registration centre.",
-      fallbackTitle: "If the plan, student verification or payment fails",
-      fallbackDetail: "Open Spotify's account billing and support pages. Check the account region, plan eligibility, any SheerID verification requirement and who actually bills the subscription. For a partner-billed plan, contact that provider through its official support channel; never share a password or one-time code with a seller.",
+      startTitle: "Compare Nigerian Premium plans in Spotify's own checkout",
+      startDetail: "Open https://www.spotify.com/ng/premium/ while signed in to the Spotify account you intend to upgrade. Compare the normal monthly prices (Individual ₦1,600, Student ₦800, Duo ₦2,100, Family ₦2,500), then read the offer-specific first charge, renewal date, eligibility rules and available payment methods in your checkout. An advertised introductory discount is not the permanent renewal price.",
+      physicalTitle: "Subscription, billing and cancellation take place online",
+      physicalDetail: "Spotify does not require an office visit to start or cancel an ordinary Premium subscription. Student requires eligibility verification, while Duo and Family members must live at the same address; the plan manager handles the group subscription.",
+      fallbackTitle: "Diagnose payment and account issues through Spotify",
+      fallbackDetail: "In your Spotify account, inspect Manage your plan and Payment to identify the current plan, billing provider, renewal date and payment route. If a partner bills you, follow that partner's cancellation link; if no Premium plan appears, check whether a different Spotify account was charged. Use https://support.spotify.com/ rather than a reseller or a purported lifetime Premium seller.",
     },
     aftercare: [
-      {
-        title: "Check your plan and next billing date",
-        detail: "After subscribing, open Spotify's Manage your plan screen and confirm the plan tier, payment method, promotional period if any and the recurring amount. Keep your own payment receipt or account confirmation; there is no government application slip or reference number.",
-      },
-      {
-        title: "Cancel or resolve billing through the right provider",
-        detail: "Use Spotify's account cancellation steps for a directly billed subscription, or follow the partner's instructions for partner billing. Paid Premium ordinarily lasts until the next billing date, while a zero-priced trial may end immediately when cancelled. Check the terms shown in your account.",
-      },
+      { title: "Verify the actual subscription and renewal charge", detail: "Check Manage your plan after checkout. Save the Spotify receipt and note whether your plan is direct-billed or partner-billed, the next billing date, the recurring amount and when any introductory discount expires." },
+      { title: "Cancel from the correct billing provider if needed", detail: "Spotify says directly billed paid Premium normally remains active until the next billing date after cancellation; cancelling during a zero-priced free trial can end Premium immediately. A plan billed by a telecom or other partner must be managed through the partner details shown in Spotify Payment." },
+      { title: "Fix Student and shared-plan eligibility using official account settings", detail: "If Student verification fails, check the supported institution and SheerID process; if a Duo/Family invitation fails, confirm both accounts' actual household address requirements. Never share passwords, verification codes or payment details with an unofficial agent." },
     ],
   },
+
 };
 
 const agencyFallback: Record<string, string> = {
