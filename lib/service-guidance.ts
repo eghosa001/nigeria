@@ -346,6 +346,22 @@ const explicit: Record<string, DetailedServiceGuidance> = {
     ],
   },
 
+  "western-union-track-transfer-nigeria": {
+    route: {
+      startTitle: "Check a Western Union transfer using the official 10-digit MTCN tracker",
+      startDetail: "Open https://www.westernunion.com/global-service/track-transfer from Western Union's Nigeria Receive Money instructions. Select sender or receiver, enter the actual ten-digit Money Transfer Control Number (MTCN) from the sender's confirmation, and follow the provider's verification prompts. Tracking is not a new remittance application, and no third-party 'activation' or release payment is needed.",
+      physicalTitle: "The MTCN status check is online; cash pickup is a separate step",
+      physicalDetail: "No agent visit is needed just to view transfer status. If the provider says cash is available for pickup, the named receiver may visit an authorised open Western Union agent with the sender's name, expected amount, MTCN and acceptable original government-issued ID. For a bank-account payout, check the receiving bank account instead of assuming the transfer can be collected as cash.",
+      fallbackTitle: "If the MTCN is missing, pending or not recognised",
+      fallbackDetail: "Recheck all ten digits against the sender's official receipt, then confirm with the sender that the Western Union transfer was completed. If the tracker still fails or the payout is on hold, use https://www.westernunion.com/ng/en/contact-us.html or call the Nigeria Customer Care number 0700-34778-2668228 listed on that page. Refer to the actual MTCN privately; Western Union tracking does not generate a new application reference. Never share OTPs, account passwords or payment-card numbers.",
+    },
+    aftercare: [
+      { title: "Keep the MTCN and sender details private", detail: "Save the transfer receipt and tracking status securely, and share the MTCN only with the intended receiver or legitimate Western Union staff assisting with this transaction. A status of 'on the way' is not proof that the money is ready for payout." },
+      { title: "Confirm cash collection or the bank credit separately", detail: "For cash pickup, confirm that the agent has verified the receiver's ID and released the amount. For a bank transfer, check the receiving bank's posted balance and statement; a tracker result alone cannot guarantee bank settlement." },
+      { title: "Use the provider's support route for holds or disputed payouts", detail: "If a transfer remains pending, cannot be found or is marked paid despite no collection, contact Western Union through its official Nigeria Customer Care page with the MTCN and relevant transaction details. Do not pay a stranger's 'unlock' fee or create a duplicate transfer on advice from social media." },
+    ],
+  },
+
 };
 
 const agencyFallback: Record<string, string> = {
