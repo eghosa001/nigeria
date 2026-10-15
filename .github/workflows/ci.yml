@@ -53,8 +53,8 @@ jobs:
 
           # Compact admin dashboards and list pagination require types and the
           # directly affected analytics safety checks, not every public catalog.
-          admin_ui_changed="$(printf '%s\n' "$changed" | grep -E '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand)\.tsx$|lib/analytics-data\.ts$|tests/admin-editing\.spec\.ts$)' || true)"
-          admin_ui_other="$(printf '%s\n' "$changed" | grep -Ev '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand)\.tsx$|lib/analytics-data\.ts$|tests/(admin-editing|smoke)\.spec\.ts$|app/globals\.css$|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$)' || true)"
+          admin_ui_changed="$(printf '%s\n' "$changed" | grep -E '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|app/admin/api/visits-insights/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand|visits-insights|visits-more)\.tsx$|lib/(analytics-data|admin-visits-insights|analytics-period-rollups)\.ts$|tests/admin-editing\.spec\.ts$|tests/analytics-period-rollups\.test\.ts$)' || true)"
+          admin_ui_other="$(printf '%s\n' "$changed" | grep -Ev '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|app/admin/api/visits-insights/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand|visits-insights|visits-more)\.tsx$|lib/(analytics-data|admin-visits-insights|analytics-period-rollups)\.ts$|tests/(admin-editing|smoke)\.spec\.ts$|tests/analytics-period-rollups\.test\.ts$|app/globals\.css$|\.github/workflows/(ci|ui-qa|cloudflare-qa)\.yml$)' || true)"
           if [ -n "$admin_ui_changed" ] && [ -z "$admin_ui_other" ]; then
             echo "mode=admin-ui" >> "$GITHUB_OUTPUT"
             echo "Admin list/dashboard surfaces only: typecheck plus analytics safety."
@@ -303,6 +303,7 @@ jobs:
           python3 scripts/fast_path_guard.py
           npm run typecheck
           npm run check:analytics-safety
+          npx tsx --test tests/analytics-period-rollups.test.ts
       - name: Validate Jobs & Careers changes
         if: steps.scope.outputs.mode == 'jobs'
         run: |
