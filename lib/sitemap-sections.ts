@@ -1,4 +1,5 @@
 import { categorySlug } from "@/lib/category";
+import { shouldIndexAgencyHub } from "@/lib/agency-indexing";
 import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
@@ -114,7 +115,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         url: base + "/services/" + service.slug,
         lastModified: service.lastVerified,
       })),
-      ...agencies.filter((agency) => publicServices.filter((service) => service.agencySlug === agency.slug).length >= 2).map((agency) => ({
+      ...agencies.filter((agency) => shouldIndexAgencyHub(publicServices.filter((service) => service.agencySlug === agency.slug).length)).map((agency) => ({
         url: base + "/agencies/" + agency.slug,
         lastModified: latestDate(publicServices.filter((service) => service.agencySlug === agency.slug).map((service) => service.lastVerified)) || serviceModified,
       })),

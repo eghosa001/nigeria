@@ -6,7 +6,9 @@
  * Run: npm run audit:publisher
  *      npm run audit:publisher -- --json
  */
-import { publicServices } from "../lib/data";
+import { agencies, publicServices } from "../lib/data";
+import { shouldIndexAgencyHub, MIN_INDEXABLE_AGENCY_GUIDES } from "../lib/agency-indexing";
+import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { entertainmentTitles } from "../lib/entertainment";
 import { seriesTitles } from "../lib/series";
 import { indexableYouTubeMovies, youtubeMovieLibrary } from "../lib/youtube-library";
@@ -170,11 +172,37 @@ const staleSourceReviewCandidates = rows
   .sort((a, b) => b.ageDays - a.ageDays)
   .slice(0, 100);
 
+// A short agency directory often repeats its linked guides; only sufficiently
+// diverse hubs are eligible to compete with their service detail pages.
+const agencyHubInventory = agencies.map((agency) => {
+  const guideCount = publicServices.filter((service) => service.agencySlug === agency.slug).length;
+  return { url: "/agencies/" + agency.slug, guideCount, indexable: shouldIndexAgencyHub(guideCount) };
+});
+const videoProfileEditorialQueue = indexableYouTubeMovies
+  .filter((movie) => movie.source !== "curated" && !youtubeEditorialDossiers[movie.videoId])
+  .map((movie) => ({
+    url: "/entertainment/youtube/" + movie.videoId,
+    title: movie.title,
+    castCount: movie.cast.length,
+    synopsisWords: words(movie.synopsis),
+    sourceChecked: movie.lastChecked,
+    issue: "indexable-video-profile-without-individual-editorial-dossier",
+  }));
+
 const audit = {
   date: new Date().toISOString().slice(0, 10),
   methodology: "Approximate authored record-field words; NOT actual rendered article length or human editorial review",
   uniqueCatalogUrls: rows.length,
   byPillar,
+  agencyHubIndexability: {
+    minimumPublishedGuides: MIN_INDEXABLE_AGENCY_GUIDES,
+    total: agencyHubInventory.length,
+    indexable: agencyHubInventory.filter((hub) => hub.indexable).length,
+    noindex: agencyHubInventory.filter((hub) => !hub.indexable).length,
+    noindexSamples: agencyHubInventory.filter((hub) => !hub.indexable).slice(0, 30),
+  },
+  videoProfilesWithoutIndividualDossier: videoProfileEditorialQueue.length,
+  videoProfileEditorialQueue: videoProfileEditorialQueue.slice(0, 50),
   reviewQueueByPillar,
   staleSourceReviewCandidates,
   staleSourceReviewCandidateCount: rows.filter((r) => {
@@ -216,6 +244,8 @@ if (process.argv.includes("--json")) {
     console.log(`${s.pillar} | ${s.records} | ${s.below150} | ${s.below300} | ${s.atLeast500} | ${s.atLeast800} | ${s.medianSourceWords} | ${s.singleSource} | ${s.sourceMissing}`);
   console.log("Exact same-title groups in one pillar:", duplicateTitles.length);
   console.log("Trust-page files missing:", missingTrustPages.join(", ") || "none");
+  console.log("Agency hubs indexable/noindex:", agencyHubInventory.filter((x) => x.indexable).length, "/", agencyHubInventory.filter((x) => !x.indexable).length);
+  console.log("Indexable YouTube profiles lacking individual editorial dossier:", videoProfileEditorialQueue.length);
   console.log("Shortest authored guide records:", JSON.stringify(audit.catalogShortestCandidates));
   console.log("Priority named editorial queues:", JSON.stringify(reviewQueueByPillar));
   console.log("Priority named Tour place queue:", JSON.stringify(tourPlaceReviewQueue));

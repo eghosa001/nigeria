@@ -170,16 +170,27 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
         "label": "Nollywood.com — official release information and cast",
         "href": "https://www.nollywood.com/movies/love-looks-good-on-you",
         "lastChecked": "2026-10-14",
-        "note": "Film-specific casting credits include Darling, Uzor, Remi, Remi's mother, Adam, Benedict, Olivia and Edith; the full video URL is not individually verified."
+        "note": "Film-specific casting credits include Darling, Uzor, Remi, Remi's mother, Adam, Benedict, Olivia and Edith; release listing confirms YouTube distribution."
       },
       {
         "label": "Nollywood Spotlight — writer, director and Omoni Oboli TV release",
         "href": "https://www.nollywoodspotlight.org/2026/10/love-looks-good-on-you-movie-review.html",
         "lastChecked": "2026-10-13",
-        "note": "Identifies Paul Utomi and Blessing Ire and the official distributor; individual video URL not yet independently validated."
+        "note": "Identifies Paul Utomi and Blessing Ire and the official distributor; see the directly linked full upload for current playback."
       }
     ],
-    "watchLinks": []
+    "watchLinks": [
+      {
+        "platform": "YouTube",
+        "label": "Watch Love Looks Good on You on Omoni Oboli TV",
+        "href": "https://www.youtube.com/watch?v=tCa7-acZ9uM",
+        "access": "full-movie",
+        "lastChecked": "2026-10-15",
+        "note": "The publisher's complete 9 October 2026 upload on Omoni Oboli TV; availability or playback restrictions can change.",
+        "publisher": "Omoni Oboli TV",
+        "publisherUrl": "https://www.youtube.com/@omoniobolitv"
+      }
+    ]
   },
   {
     "slug": "in-our-paradise-2026",

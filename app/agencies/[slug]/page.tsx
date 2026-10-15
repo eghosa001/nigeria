@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
 import { agencies, getAgency, getServicesByAgency } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
+import { shouldIndexAgencyHub } from "@/lib/agency-indexing";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -23,9 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: agency.slug === "npc" ? "NPC Birth Registration & Attestation Services 2026" : agency.shortName + " services",
     description: agency.slug === "npc" ? "NPC Nigeria services for birth registration, birth attestation and status checks, with verified requirements, official links and current guidance." : agency.description,
     alternates: { canonical: "/agencies/" + agency.slug },
-    // Single-guide agency hubs repeat the underlying guide without enough
-    // distinct navigation value to warrant their own search result.
-    robots: guideCount >= 2 ? undefined : { index: false, follow: true },
+    // Small agency hubs are navigation aids, not standalone editorial articles.
+    robots: shouldIndexAgencyHub(guideCount) ? undefined : { index: false, follow: true },
   };
 }
 
