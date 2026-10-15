@@ -141,7 +141,7 @@ export const seriesTitles: SeriesTitle[] = [
     artworkNote: "No third-party poster is displayed unless an approved usage basis is recorded.",
     genres: ["Drama", "Supernatural", "Yoruba", "Nollywood"],
     languages: ["Yoruba"],
-    synopsis: "A continuing Yoruba supernatural family saga built around power, loyalty, betrayal and spiritual conflict.",
+    synopsis: "A Yoruba supernatural family saga beginning with Osogbemi, a harsh father who raises three children — Koleoso, Oshobola and Efun — to use spiritual powers as instruments of family supremacy. His ambitions bring conflict with equally formidable rivals, including Jaweshoro. Later instalments extend that contest over power, loyalty and survival; their release order and character developments should be checked against the original Itelediconstudio uploads rather than presumed from unrelated fan clips.",
     cast: ["Ibrahim Yekini", "Kemi Apesin", "Akinfolarin Olamide", "Kevin Ikeduba", "Jumai Sanni"],
     creators: ["Ibrahim Yekini"],
     status: "ongoing",
@@ -159,7 +159,8 @@ export const seriesTitles: SeriesTitle[] = [
     ],
     sources: [
       { label: "Itelediconstudio — Koleoso Part 13", url: "https://www.youtube.com/watch?v=3dre5pN4gXs", lastChecked: "2026-10-04" },
-      { label: "Voice of Nigeria — Koleoso audience milestone", url: "https://von.gov.ng/koleoso-becomes-youtubes-most-watched-african-film-title/", lastChecked: "2026-10-04" }
+      { label: "Voice of Nigeria — Koleoso audience milestone", url: "https://von.gov.ng/koleoso-becomes-youtubes-most-watched-african-film-title/", lastChecked: "2026-10-04" },
+      { label: "Premium Times — Koleoso 1–3 story and character review (June 2025)", url: "https://www.premiumtimesng.com/entertainment/nollywood/801051-movie-review-koleoso-trilogy-feels-like-spiritual-warfare-with-no-winner.html", lastChecked: "2026-10-15" }
     ]
   },
   {

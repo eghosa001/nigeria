@@ -123,10 +123,19 @@ for (const series of seriesTitles) {
 }
 for (const person of entertainmentPeople) {
   const issues: Finding[] = [];
-  if (wordCount(person.summary) < 25) issues.push(review("thin-person-profile", "Biography needs properly sourced original context and verified credits."));
-  issues.push(review("person-source-review", "Verify biographical details and credit provenance before standalone indexing."));
+  // Match what the real profile template actually renders and indexes.
+  // An unrelated film citation is NOT evidence of this person's role.
+  const credited = entertainmentTitles.filter(movie =>
+    movie.cast.includes(person.name) || movie.directors?.includes(person.name));
+  const creditedWithEvidence = credited.filter(movie =>
+    (movie.references ?? []).some(ref => urlGood(ref.href)));
+  const indexable = creditedWithEvidence.length > 0;
+  if (indexable && wordCount(person.summary) < 25)
+    issues.push(manual("short-biography-context", "A sourced filmography exists, but personal biographical claims still need individual verification; do not fabricate history."));
+  if (!indexable)
+    issues.push(review("person-source-review", "Keep the profile noindex until a named cast/director credit is corroborated by an attributable source."));
   issues.push(paragraphsManual);
-  adds("Movies & Entertainment", "actor", person.slug, "/entertainment/people/" + person.slug, person.name, true, issues);
+  adds("Movies & Entertainment", "actor", person.slug, "/entertainment/people/" + person.slug, person.name, indexable, issues);
 }
 const currentlyIndexableVideoIds = new Set(indexableYouTubeMovies.map(x => x.videoId));
 for (const movie of youtubeMovieLibrary) {

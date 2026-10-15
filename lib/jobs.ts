@@ -1,5 +1,6 @@
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { verifiedDangoteOlamJobs20261012 } from "@/lib/job-growth-wave-14";
+import { officialJobPostingEvidence20261015 } from "@/lib/job-official-posting-evidence-2026-10-15";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -3830,7 +3831,15 @@ function closeExpiredJob(item: CareerOpportunity): CareerOpportunity {
 export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(normalizeCareerPortal)
   .map(applyCurrentJobCorrections)
-  .map(closeExpiredJob);
+  .map(closeExpiredJob)
+  .map((item) => {
+    const evidence = officialJobPostingEvidence20261015[item.slug];
+    if (!evidence || item.posting || item.kind !== "vacancy" ||
+        item.officialUrl !== evidence.sourceUrl) return item;
+    // Keep the original employer URL as the factual provenance and never
+    // invent jobPostingAuthorization from a metadata-only confirmation.
+    return { ...item, posting: evidence.posting };
+  });
 
 export const governmentOpportunities = jobOpportunities.filter((item) => item.sector === "Government");
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");

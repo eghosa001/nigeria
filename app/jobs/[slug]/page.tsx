@@ -180,7 +180,9 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
                 <div><small>Sector</small><strong>{item.sector}</strong></div>
                 <div><small>Location</small><strong>{item.location}</strong></div>
                 <div><small>Opportunity type</small><strong>{item.employmentType}</strong></div>
-                {item.deadline ? <div><small>Application deadline</small><strong>{new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</strong></div> : null}
+                {item.deadline ? <div><small>Application deadline</small><strong>{new Date(item.deadline + "T00:00:00Z").toLocaleDateString("en-NG", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</strong></div>
+                  : item.kind === "vacancy" ? <div><small>Employer closing date</small><strong>Not published in verified evidence — check the current advert</strong></div> : null}
+                {item.kind === "vacancy" && item.posting?.datePosted ? <div><small>Original publication date</small><strong>{item.posting.datePosted}</strong></div> : null}
                 <div><small>Information verified</small><strong>{item.verifiedAt}</strong></div>
               </div>
             </section>
