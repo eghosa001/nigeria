@@ -9,7 +9,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const contracts = [
   {
     name: "Services", path: "app/services/[slug]/page.tsx", collection: "publicServices.map",
-    required: ["AnswerFirst", "GuideQuickNav", "ServiceRequirements", "ServiceSteps", "ServiceAftercare", "ServiceSearchAnswers", "service.sources", "service.lastVerified", "official-sources"],
+    required: ["GuideQuickNav", "ServiceJourney", "ServiceRequirements", "ServiceSteps", "ServiceAftercare", "ServiceSearchAnswers", "service.sources", "service.lastVerified", "official-sources"],
     linked: [
       "components/guide-quick-nav.tsx",
       "components/service-journey.tsx", "components/service-requirements.tsx",
@@ -20,17 +20,17 @@ export const contracts = [
   },
   {
     name: "Jobs", path: "app/jobs/[slug]/page.tsx", collection: "jobOpportunities.map",
-    required: ["AnswerFirst", "PageOutline", "effectiveStatus", "item.qualifications", "item.documents", "item.applicationSteps", "item.sources", "item.verifiedAt"],
+    required: ["PageOutline", "effectiveStatus", "item.qualifications", "item.documents", "item.applicationSteps", "item.sources", "item.verifiedAt"],
     targets: ["job-overview", "requirements", "documents", "apply", "job-sources", "official-application"],
   },
   {
     name: "Tour", path: "app/explore/[slug]/page.tsx", collection: "exploreGuides.map",
-    required: ["AnswerFirst", "PageOutline", "guide.highlights", "guide.planning", "guide.lastReviewed", "guide.source", "getExplorePlacesForGuide"],
+    required: ["PageOutline", "guide.highlights", "guide.planning", "guide.lastReviewed", "guide.source", "getExplorePlacesForGuide"],
     targets: ["trip-highlights", "places", "trip-questions", "planning", "trip-sources"],
   },
   {
     name: "Movies", path: "app/entertainment/movies/[slug]/page.tsx", collection: "entertainmentTitles.map",
-    required: ["AnswerFirst", "movie-detail-subnav", "featuredCast", "availabilityLinks", "title.references", "lastChecked"],
+    required: ["movie-detail-subnav", "featuredCast", "availabilityLinks", "title.references", "lastChecked"],
     targets: ["overview", "cast", "watch", "related"],
   },
   {
