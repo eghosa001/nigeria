@@ -189,6 +189,16 @@ if (!badagry?.intro.some(item =>
   errors.push("Badagry: Faye Sayer's two original study sites must not be misidentified");
 }
 
+// Correct source identity applies to rendered map cards, not only guide citations.
+for (const [slug, expected] of [
+  ["arochukwu-long-juju", "https://whc.unesco.org/en/tentativelists/5170/"],
+  ["chad-basin-national-park-borno", "https://nigeriaparkservice.gov.ng/blog/2014/08/12/chad-basin-national-park/"],
+] as const) {
+  if (explorePlaces.find(place => place.slug === slug)?.source.href !== expected) {
+    errors.push(`${slug}: mapped visitor source must open the exact named landmark`);
+  }
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);
