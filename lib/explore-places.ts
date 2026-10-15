@@ -2506,15 +2506,15 @@ export const explorePlaces: ExplorePlace[] = [
   {
     slug: "dufuna-canoe-heritage-yobe",
     guideSlug: "yobe-state-travel-guide",
-    name: "Dufuna Canoe Heritage",
+    name: "Dufuna Canoe preservation — not a confirmed public exhibit",
     kind: "landmark",
-    area: "Damaturu / Dufuna heritage",
-    address: "Dufuna, Yobe State, Nigeria",
-    summary: "Archaeological heritage associated with the ancient Dufuna canoe, one of the state’s most important cultural assets.",
-    cost: "Confirm where the artefact or current public interpretation is displayed before travelling specifically to see it",
-    mapQuery: "Dufuna, Yobe State, Nigeria",
-    source: { label: "Yobe Investment Promotion Agency — Culture and Tourism", href: "https://yobeinvest.ng/culture-and-tourism/" },
-    checkedAt: "2026-10-05",
+    area: "Damaturu preservation; archaeological find in Fune LGA",
+    address: "Reported Canoe House along Maiduguri Road, Damaturu, Yobe State; public entrance unverified",
+    summary: "Yobe State's investment-promotion publication distinguishes the canoe's original discovery near Dufuna village in Fune LGA from the Canoe House later built to preserve it along Maiduguri Road, Damaturu. A preservation address is not a verified open museum or safe tourist route.",
+    cost: "No verified public ticket, opening hours or accessible exhibition. Current Yobe travel advice says do not travel; study the artefact through museum and academic sources instead.",
+    mapQuery: "Damaturu, Yobe State, Nigeria",
+    source: { label: "Yobe State investment-promotion agency — Dufuna Canoe preservation (PDF)", href: "https://yobeinvest.ng/wp-content/uploads/2025/09/Invest-in-Yobe.pdf" },
+    checkedAt: "2026-10-15",
     tags: ["Dufuna canoe","archaeology","Yobe","heritage"],
   },
   {
@@ -3592,10 +3592,10 @@ export const sharedGuidePlaceSlugs: Record<string, readonly string[]> = {
     "sokoto-state-history-bureau",
     "sultans-palace-sokoto"
   ],
+  // Dufuna's archaeology dossier is not a Yobe sightseeing itinerary.
+  // One source-matched heritage reference beats two unsafe, unrelated cards.
   "dufuna-canoe-heritage-guide": [
-    "dufuna-canoe-heritage-yobe",
-    "dagona-bird-sanctuary",
-    "gorgaram-fishing-festival-yobe"
+    "dufuna-canoe-heritage-yobe"
   ],
   "kaltungo-hills-guide": [
     "kaltungo-hills",
