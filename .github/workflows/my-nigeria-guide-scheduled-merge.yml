@@ -1,0 +1,86 @@
+name: MyNigeriaGuide Scheduled Fix Merge
+
+# Run only trusted default-branch workflow code: never check out PR code with write credentials.
+on:
+  workflow_run:
+    workflows:
+      - CI
+      - Fast Policy Guard
+      - New Page Quality Gate
+      - Browser QA
+      - Cloudflare Runtime QA
+      - Jobs Freshness
+      - Content Freshness
+    types: [completed]
+  schedule:
+    - cron: "17 1,7,13,19 * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: mng-verified-scheduled-pr-merger
+  cancel-in-progress: false
+
+jobs:
+  merge-verified-scheduled-prs:
+    if: github.repository == 'eghosa001/nigeria'
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Merge only explicitly designated, fully green scheduled fixes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Two independent, owner-controlled qualifiers prevent merging arbitrary PRs.
+          # Branch protection and GitHub review rules are still enforced server-side.
+          mapfile -t prs < <(gh pr list --repo "$GH_REPO" --state open --limit 100 \
+            --json number,title,headRefName,baseRefName,isDraft,headRepositoryOwner \
+            --jq '.[] | select(.headRepositoryOwner.login == "eghosa001" and .baseRefName == "main" and .isDraft == false and (.headRefName | startswith("automation/mng-six-hour/")) and (.title | startswith("[MNG 6H VERIFIED]"))) | .number')
+
+          for pr in "${prs[@]}"; do
+            details="$(gh pr view "$pr" --repo "$GH_REPO" --json headRefOid,mergeable,reviewDecision,isDraft)"
+            head="$(jq -r '.headRefOid' <<<"$details")"
+            mergeable="$(jq -r '.mergeable' <<<"$details")"
+            review="$(jq -r '.reviewDecision // ""' <<<"$details")"
+            if [[ "$mergeable" != "MERGEABLE" || "$review" == "REVIEW_REQUIRED" || "$review" == "CHANGES_REQUESTED" ]]; then
+              echo "PR #$pr: not mergeable or requires review ($mergeable/$review)."
+              continue
+            fi
+
+            # All PR-triggered workflows must be terminal and successful.
+            # Keep only the newest run per workflow, avoiding superseded cancellations.
+            runs="$(gh api --method GET "repos/$GH_REPO/actions/runs" -f "head_sha=$head" \
+              -f event=pull_request -f per_page=100 \
+              --jq '[.workflow_runs | sort_by(.workflow_id, .run_number) | group_by(.workflow_id)[] | last | {name, status, conclusion}]')"
+            count="$(jq 'length' <<<"$runs")"
+            if (( count == 0 )); then
+              echo "PR #$pr: missing PR CI runs; refusing to merge."
+              continue
+            fi
+            # These three gates are mandatory for scheduled publication changes.
+            if ! jq -e '([.[].name] | index("CI") != null and index("Browser QA") != null and index("Cloudflare Runtime QA") != null)' <<<"$runs" >/dev/null; then
+              echo "PR #$pr: mandatory CI, browser, or Cloudflare run missing."
+              continue
+            fi
+            if ! jq -e 'all(.[]; .status == "completed" and (.conclusion == "success" or .conclusion == "skipped" or .conclusion == "neutral"))' <<<"$runs" >/dev/null; then
+              echo "PR #$pr: pending/failed checks; keeping branch unmerged."
+              continue
+            fi
+
+            # GitHub itself enforces protected-branch requirements. An exact-SHA
+            # lease rejects a merge if another agent changed the PR after testing.
+            if gh api --method PUT "repos/$GH_REPO/pulls/$pr/merge" \
+              -f "sha=$head" -f merge_method=squash \
+              -f "commit_title=[MNG 6H VERIFIED] Merge scheduled corrections (#$pr)"; then
+              echo "PR #$pr: merged tested head $head."
+            else
+              echo "PR #$pr: merge refused by GitHub; preserve PR for next scheduled fix cycle."
+            fi
+          done
