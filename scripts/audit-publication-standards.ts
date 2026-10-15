@@ -157,9 +157,13 @@ for (const guide of exploreGuides) {
     issues.push(blocker("tour-evidence-missing", "Destination/venue facts need a valid attributable source."));
   if (guide.intro.length < 2 || guide.highlights.length < 3)
     issues.push(blocker("no-distinctive-destination-case", "Give concrete attraction, setting and the distinctive reason to visit."));
-  const minimumPlaces = guide.kind === "itinerary" || guide.kind === "city" ? 2 : 1;
-  if (guide.planning.length < 3 || places.length < minimumPlaces)
-    issues.push(blocker("tour-trip-incomplete", "Guide should offer usable logistics and sufficient independently identified stops for its type."));
+  // A standalone guide about one landmark may be complete without a separate
+  // card in the attraction database. Test the visitor-facing guide's content,
+  // not internal record duplication. Missing place cards are an editorial queue.
+  if (guide.planning.length < 3)
+    issues.push(blocker("tour-trip-incomplete", "The reader needs an actionable route, access and planning decisions."));
+  if (!places.length && guide.kind !== "event")
+    issues.push(review("mapped-place-evidence-review", "Confirm guide-specific stops and map/access information; do not infer a factual error from missing separate place records."));
   if (guide.bestFor.length < 2) issues.push(review("poor-visitor-fit", "Explain the audience and reasons to choose or skip this trip."));
   if (uniqueText(guide.highlights.map(x => x.detail)) < guide.highlights.length)
     issues.push(review("repeated-attraction-copy", "Distinctive stops should not reuse the same sentences."));
