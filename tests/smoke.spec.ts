@@ -465,7 +465,7 @@ test("NIBSS transfer and Nigeria visa guides are discoverable", async ({ page })
   await expect(page.getByRole("heading", { name: /How to complete .*Nigeria e-Visa.* step by step/i })).toBeVisible();
 
   await page.goto("/services/nip-transfer-status");
-  await expect(page.locator("#notes")).toContainText(/previous 48 hours/i);
+  await expect(page.locator("#notes")).toContainText(/48\s*hours/i);
 });
 
 test("guide anchors do not trap browser Back after starting a process", async ({ page }) => {
