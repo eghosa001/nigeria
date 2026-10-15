@@ -6,10 +6,6 @@ type VerifiedCredit = {
   source: { label: string; href: string; lastChecked: string; note: string };
 };
 export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit> = {
-  "lisabi-the-uprising": {
-    directors: ["Niyi Akinmolayan"],
-    source: { label: "IMDb — Lísàbí: The Uprising full film credits", href: "https://www.imdb.com/title/tt33255000/fullcredits/", lastChecked: "2026-10-15", note: "Full production credits name Niyi Akinmolayan as director. The 2024 Uprising film is distinct from the later sequel, A Legend Is Born." },
-  },
   "chief-daddy": {
     directors: ["Niyi Akinmolayan"],
     source: { label: "EbonyLife Films — Chief Daddy production announcement", href: "https://ebonylifetv.com/filming-wraps-up-for-ebonylife-production-chief-daddy/", lastChecked: "2026-10-15", note: "Producer's production announcement explicitly names Niyi Akinmolayan as director." },
