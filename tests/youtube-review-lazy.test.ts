@@ -3,6 +3,8 @@ import { test } from "node:test";
 import packedCatalog from "@/data/youtube-runtime-catalog.generated.json";
 import {
   getYouTubeMovieById, youtubeMovieLibrary, youtubeReviewVisibleCount,
+  generatedYouTubeMovies, indexableYouTubeMovies,
+  hasSubstantiveYouTubeSynopsis, isPublisherPromoSynopsis,
 } from "@/lib/youtube-library";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
@@ -68,4 +70,30 @@ test("absent video IDs stay absent and published records keep their original obj
   assert.ok(first);
   assert.equal(getYouTubeMovieById(first.videoId), first);
   assert.equal(getYouTubeMovieById(first.videoId), first);
+});
+
+test("publisher promotion and notification requests cannot become indexable movie plots", () => {
+  const invalid = [
+    "And if you are a subscriber, please turn on NOTIFICATIONS by clicking the bell symbol to get updates on our new videos uploaded.",
+    "On this channel, you will enjoy the best of Nollywood movies, emotional African stories and powerful performances from our cast.",
+    "IFYEZE NOLLY TV PRODUCES BEST NOLLYWOOD MOVIES THAT ENTERTAINS AND EDUCATES ABOUT LIFE, MARRIAGE AND THE REAL AFRICAN CULTURE.",
+  ];
+  for (const copy of invalid) {
+    assert.equal(isPublisherPromoSynopsis(copy), true, copy);
+    assert.equal(hasSubstantiveYouTubeSynopsis({ synopsis: copy }), false, copy);
+  }
+  const realPlot = "Hannah enters a wealthy family with a concealed plan for revenge and begins to fracture the relationships between three brothers as the past returns to haunt them.";
+  assert.equal(isPublisherPromoSynopsis(realPlot), false);
+  assert.equal(hasSubstantiveYouTubeSynopsis({ synopsis: realPlot }), true);
+
+  // Keep discovered video records available, but use neutral publisher/cast
+  // metadata rather than asserting a plot or publishing promotion as a story.
+  for (const id of ["0ujEzReLcP8", "-0i2iEvMtgI", "mBl5wdukWjs"]) {
+    const movie = generatedYouTubeMovies.find((item) => item.videoId === id);
+    if (!movie) continue; // A later publisher sync may legitimately retire it.
+    assert.equal(isPublisherPromoSynopsis(movie.synopsis), false, id);
+    assert.equal(hasSubstantiveYouTubeSynopsis(movie), false, id);
+    assert.equal(indexableYouTubeMovies.some((item) => item.videoId === id), false, id);
+    assert.match(movie.synopsis, /published by/i);
+  }
 });
