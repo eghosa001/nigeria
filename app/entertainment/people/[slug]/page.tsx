@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { entertainmentTitles } from "@/lib/entertainment";
-import { entertainmentPeople, getEntertainmentPerson } from "@/lib/entertainment-extras";
+import { entertainmentPeople, getEntertainmentPerson, getPersonEditorialProfile, hasIndexablePersonEditorial } from "@/lib/entertainment-extras";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -22,13 +22,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: person.name + " Movies, Cast Credits & Nigerian Film Profile",
     description: person.summary + " See Nigerian movies featuring " + person.name + " and linked film credits.",
     alternates: { canonical: "/entertainment/people/" + person.slug },
-    // A name alone is not a useful searchable filmography. Keep incomplete
-    // profiles navigable internally but out of search until a credit exists.
-    robots: entertainmentTitles.some((title) =>
-      (title.cast.includes(person.name) ||
-        title.directors?.includes(person.name)) &&
-      (title.references ?? []).some((reference) => reference.href.startsWith("https://")),
-    ) ? undefined : { index: false, follow: true },
+    // A title's film reference proves neither this person's biography nor
+    // the identity of the performer credited. Research-backed authored
+    // biographies only; unreviewed person cards remain internal discovery.
+    robots: hasIndexablePersonEditorial(person.slug) ? undefined : { index: false, follow: true },
   };
 }
 
@@ -37,6 +34,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
   const person = getEntertainmentPerson(slug);
   if (!person) notFound();
 
+  const editorial = hasIndexablePersonEditorial(person.slug) ? getPersonEditorialProfile(person.slug) : undefined;
   const seeded = new Set(person.knownForSlugs);
   const credits = entertainmentTitles
     .filter((title) =>
@@ -98,8 +96,46 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
             { href: "#credits", label: "See all linked credits" },
             ...(credits.length ? [{ href: "#credit-sources", label: "Credit sources" }] : []),
           ]}
-          note="Use the profile summary first, then open individual movie pages for cast, story and official watch links."
+          note="Start with the evidence-linked biography when available; linked movie cards are a partial film directory, not independent proof of biographical claims."
         />
+        {editorial ? (
+          <article className="person-editorial-article" aria-label={"Researched film career of " + person.name}>
+            <div className="section-heading top-gap">
+              <div>
+                <span className="eyebrow">Source-checked career</span>
+                <h2>{person.name}: documented work and credits</h2>
+                <p>Last reviewed {editorial.lastReviewed}. This original guide attributes material facts to named publishers and film distributors; it is not a first-person interview or a complete filmography.</p>
+              </div>
+            </div>
+            {editorial.intro.map((paragraph, index) => <p key={"introduction-" + index}>{paragraph}</p>)}
+            {editorial.sections.map((section, index) => (
+              <section key={section.heading} className="person-editorial-section" id={"career-context-" + (index + 1)}>
+                <h3>{section.heading}</h3>
+                {section.paragraphs.map((paragraph, item) => <p key={item}>{paragraph}</p>)}
+                <div className="person-editorial-sources">
+                  <strong>Supporting evidence: </strong>
+                  {section.sources.map((id) => editorial.sources[id]).map((source, ref) => (
+                    <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">
+                      {source.label}{ref < section.sources.length - 1 ? " · " : ""}
+                    </a>
+                  ))}
+                </div>
+              </section>
+            ))}
+            <div className="source-list">
+              {editorial.sources.map((source) => (
+                <a href={source.href} key={source.href} target="_blank" rel="noopener noreferrer">
+                  <span><strong>{source.label}</strong><small>Independent publication / official title source</small></span>
+                  <span>Checked {source.lastChecked} ↗</span>
+                </a>
+              ))}
+            </div>
+          </article>
+        ) : (
+          <div className="info-box top-gap">
+            <p>This is an internal film-credit directory entry, not a fully verified biography. Independent career research, credit confirmation and a sourced editorial profile are still being prepared; it is intentionally excluded from search indexing.</p>
+          </div>
+        )}
 
 <div className="section-heading top-gap" id="credits"><div><span className="eyebrow">Movies</span><h2>Titles featuring {person.name}.</h2></div></div>
         {credits.length ? (
