@@ -600,7 +600,7 @@ test("service guides expose verified search-intent quick answers", async ({ page
   await page.goto("/services/passport-renewal");
   const quick = page.locator("#quick-answers");
   await expect(quick.getByRole("heading", { name: /Quick answers about Passport renewal/i })).toBeVisible();
-  await expect(quick.getByRole("heading", { name: /Can I renew a Nigerian passport completely online\?/i })).toBeVisible();
+  await expect(quick.getByRole("heading", { name: /Can I renew my Nigerian passport completely online\?/i })).toBeVisible();
   await expect(quick).not.toContainText("How much is Nigerian passport renewal?");
   const hasFaqSchema = await page.locator('#main-content script[type="application/ld+json"]').evaluateAll(
     (scripts) => scripts.some((script) => script.innerHTML.includes("FAQPage")),
