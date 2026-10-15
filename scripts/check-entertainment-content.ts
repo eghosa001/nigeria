@@ -193,3 +193,24 @@ for (const [slug, director, sourceFragment] of verifiedDirectorEvidence) {
   assert(film.references?.some((ref) => ref.href.includes(sourceFragment)),
     slug + ": exact film-credit reference missing.");
 }
+
+// Publisher and film-specific credits must remain attached to the correct 2026
+// film editions, not transferred from earlier web series or similarly titled films.
+const verifiedOctoberDirectorCredits = [
+  ["plus-one", "Uduak-Obong Patrick", "/title/plus-one-2026"],
+  ["the-long-way-home", "Reuben Reng", "/movies/the-long-way-home"],
+  ["a-turn-of-events", "Chidi Chijioke", "/title/a-turn-of-events-2026"],
+  ["sibe", "Great Valentine Edochie", "10-best-movies-on-bimbo-ademoye-tv"],
+  ["colours-of-fire", "Niyi Akinmolayan", "/colours-of-fire"],
+  ["millionaire-until-morning", "Mo Fakorede", "millionaire-until-morning"],
+] as const;
+for (const [slug, director, sourceFragment] of verifiedOctoberDirectorCredits) {
+  const film = entertainmentTitles.find((item) => item.slug === slug);
+  assert(film !== undefined, slug + ": missing catalog film for verified credit.");
+  assert(film.directors?.includes(director), slug + ": missing film-specific director credit.");
+  assert(film.references?.some((ref) => ref.href.includes(sourceFragment)),
+    slug + ": missing same-production director evidence reference.");
+}
+const restricted2025Film = entertainmentTitles.find((item) => item.slug === "colours-of-fire");
+assert(restricted2025Film?.watchLinks.length === 0,
+  "Kava explicitly excludes Africa: no Colours of Fire Nigeria streaming link may be advertised.");
