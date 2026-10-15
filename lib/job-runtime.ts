@@ -17,7 +17,7 @@ export const MAX_OPEN_VACANCY_SOURCE_AGE_DAYS = 14;
 function hasStaleVacancyEvidence(item: CareerOpportunity, todayIso: string): boolean {
   if (item.status !== "open" || item.kind !== "vacancy") return false;
   // Invalid/future dates cannot be treated as confirmation of availability.
-  if (!item.verifiedAt || !/^\\d{4}-\\d{2}-\\d{2}$/.test(item.verifiedAt) ||
+  if (!item.verifiedAt || !/^\d{4}-\d{2}-\d{2}$/.test(item.verifiedAt) ||
       item.verifiedAt > todayIso) return true;
   const sourceDate = Date.parse(item.verifiedAt + "T00:00:00Z");
   const reviewDate = Date.parse(todayIso + "T00:00:00Z");
