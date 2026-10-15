@@ -32,8 +32,30 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+      - name: Scope freshness audit to changed source collections
+        id: scope
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        shell: bash
+        run: |
+          if [ "$EVENT_NAME" != "pull_request" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch origin "$BASE_SHA" --depth=1
+          changed="$(git diff --name-only "$BASE_SHA" HEAD)"
+          if printf '%s\\n' "$changed" | grep -Eq '^(data/(services|youtube-channel-cache)\\.json|lib/(content-freshness|content-health|entertainment|entertainment-extras|explore|explore-places)\\.ts|scripts/check-freshness\\.ts); then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Jobs and unrelated changes use their own change-scoped checks; full freshness audit remains scheduled."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/setup-node@v4
+        if: steps.scope.outputs.run == 'true'
         with:
           node-version: 22
       - run: npm install --no-audit --no-fund
+        if: steps.scope.outputs.run == 'true'
       - run: npm run check:freshness
+        if: steps.scope.outputs.run == 'true'
