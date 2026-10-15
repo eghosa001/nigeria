@@ -17,6 +17,20 @@ const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
 assert(jobOpportunities.length >= 180, "Quality-first Jobs catalog must keep at least 180 verified opportunity or employer-pathway records after pruning thin pages.");
 assert(jobOpportunities.length < 1000, "Move Jobs storage to the prepared D1 boundary before the in-memory server catalog reaches 1,000 records.");
+// An employer-wide jobs board is not itself an actively open vacancy.
+for (const slug of [
+  "dangote-group-careers", "flutterwave-nigeria-careers", "paystack-nigeria-careers",
+  "moniepoint-nigeria-careers", "sterling-bank-careers", "bat-nigeria-careers",
+  "halliburton-nigeria-careers", "oau-careers", "axa-mansard-careers",
+  "aiico-insurance-careers", "emzor-careers", "eha-clinics-careers",
+]) {
+  const record = jobOpportunities.find((job) => job.slug === slug);
+  assert(record?.kind === "career-page" && record.status === "career-page",
+    slug + " must be an employer portal, never a currently open vacancy.");
+  assert(getEffectiveJobStatus(record) === "career-page",
+    slug + " must not enter the open-now vacancy list.");
+}
+
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
 assert(defaultDirectory.items.length <= JOBS_DIRECTORY_PAGE_SIZE, "The browser-facing Jobs directory must be paginated.");
