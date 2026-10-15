@@ -173,3 +173,23 @@ console.log(
   "Entertainment content OK:",
   entertainmentTitles.length + " curated titles meet the publication evidence gate.",
 );
+
+
+// Film-specific 2026 director corrections must not drift onto similarly titled releases.
+const verifiedDirectorEvidence = [
+  ["irreplaceable", "Modupe Fakorede", "tt33341685"],
+  ["pieces-that-fit", "Magnifique Ecrivaine", "/movies/pieces-that-fit"],
+  ["lisabi-the-uprising", "Niyi Akinmolayan", "tt33255000"],
+  ["all-things-equal", "Omoruyi Efosa Emmanuel", "/movies/all-things-equal"],
+  ["monica", "Omoruyi Efosa Emmanuel", "tt40923799"],
+  ["my-housemate", "Great Valentine Edochie", "/movies/my-housemate"],
+  ["forever-found", "Uche Alexmoore", "/movies/forever-found"],
+  ["sister-agatha", "Tobe Nosike", "/movies/sister-agatha"],
+] as const;
+for (const [slug, director, sourceFragment] of verifiedDirectorEvidence) {
+  const film = entertainmentTitles.find((item) => item.slug === slug);
+  assert(film !== undefined, slug + ": verified film record missing.");
+  assert(film.directors?.includes(director), slug + ": expected source-backed director missing.");
+  assert(film.references?.some((ref) => ref.href.includes(sourceFragment)),
+    slug + ": exact film-credit reference missing.");
+}
