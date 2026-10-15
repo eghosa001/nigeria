@@ -18,7 +18,7 @@ import { jobGrowthWave2 } from "@/lib/job-growth-wave-2";
 import { jobGrowthWaveThree } from "@/lib/job-growth-wave-2026-10-06-b";
 
 export type JobSector = "Government" | "Private" | "International";
-export type JobStatus = "open" | "closed" | "screening" | "training" | "career-page" | "upcoming";
+export type JobStatus = "open" | "closed" | "unverified" | "screening" | "training" | "career-page" | "upcoming";
 export type JobRecordKind = "vacancy" | "programme" | "recruitment-exercise" | "career-page";
 export type SchemaEmploymentType = "FULL_TIME" | "PART_TIME" | "CONTRACTOR" | "TEMPORARY" | "INTERN" | "VOLUNTEER" | "PER_DIEM" | "OTHER";
 
@@ -3837,7 +3837,7 @@ export const internationalOpportunities = jobOpportunities.filter((item) => item
 export function isIndexableJobOpportunity(item: CareerOpportunity): boolean {
   if (templateCareerPortalSlugs.has(item.slug)) return false;
   const deadlinePassed = Boolean(item.deadline && item.deadline < new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0, 10));
-  if (item.kind === "vacancy" && (item.status === "closed" || (item.status === "open" && deadlinePassed))) return false;
+  if (item.kind === "vacancy" && (item.status === "closed" || item.status === "unverified" || (item.status === "open" && deadlinePassed))) return false;
   return true;
 }
 
