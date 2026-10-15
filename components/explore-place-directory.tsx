@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { ExplorePlaceKind } from "@/lib/explore-places";
 
-type GuideSummary = { slug: string; shortTitle: string };
+type GuideSummary = { slug: string; shortTitle: string; kind: "city" | "destination" | "itinerary" | "event" };
 export type ExploreDirectoryPlace = {
   slug: string;
   guideSlug: string;
@@ -51,9 +51,10 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
   }, []);
 
   const guideNames = useMemo(() => new Map(guides.map((item) => [item.slug, item.shortTitle])), [guides]);
+  const guideKinds = useMemo(() => new Map(guides.map((item) => [item.slug, item.kind])), [guides]);
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return places.filter((place) => {
+    const results = places.filter((place) => {
       if (kind !== "all" && place.kind !== kind) return false;
       if (guide !== "all" && place.guideSlug !== guide) return false;
       if (!needle) return true;
@@ -66,7 +67,19 @@ export function ExplorePlaceDirectory({ places, guides }: { places: ExploreDirec
         guideNames.get(place.guideSlug) || "",
       ].join(" ").toLowerCase().includes(needle);
     });
-  }, [places, kind, guide, query, guideNames]);
+
+    // General discovery should start with travel destinations, not logistics
+    // entries imported for a specific event. Search and selected destinations
+    // retain the original source order.
+    if (!needle && guide === "all") {
+      const priority = { destination: 0, city: 1, itinerary: 2, event: 3 };
+      return results.sort((first, second) =>
+        (priority[guideKinds.get(first.guideSlug) ?? "event"] -
+          priority[guideKinds.get(second.guideSlug) ?? "event"])
+      );
+    }
+    return results;
+  }, [places, kind, guide, query, guideNames, guideKinds]);
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
