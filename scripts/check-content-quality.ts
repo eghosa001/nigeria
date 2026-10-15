@@ -181,6 +181,23 @@ if (!overseasWaec ||
   errors.push("waec-result-confirmation-overseas: show both live fee categories and link the actual WAEC request portal.");
 }
 
+// These three service guides were independently corroborated against NIBSS,
+// NIA/NIID, CBN, NIMC and NCC on 2026-10-15. Prevent stale cost claims and
+// disappearing official alternatives from returning during batch imports.
+const verifiedServiceRegressions = [
+  { slug: "check-nin-number", amount: "₦50", requiredHosts: ["ncc.gov.ng", "nimc.gov.ng", "nimc-cms.idvault.co"], minSteps: 5 },
+  { slug: "nip-transfer-status", amount: "₦20", requiredHosts: ["nibss-plc.com.ng", "cbn.gov.ng"], minSteps: 5 },
+  { slug: "vehicle-insurance-validation-ussd", amount: "₦20", requiredHosts: ["nibss-plc.com.ng", "askniid.org"], minSteps: 5 },
+];
+for (const { slug, amount, requiredHosts, minSteps } of verifiedServiceRegressions) {
+  const record = publicServices.find((service) => service.slug === slug);
+  if (!record || record.steps.length < minSteps ||
+      !record.feeLabel.includes(amount) ||
+      requiredHosts.some((host) => !record.sources.some((source) => new URL(source.url).hostname.endsWith(host)))) {
+    errors.push(slug + ": preserve current cost, detailed recovery instructions, and independently corroborating official URLs.");
+  }
+}
+
 console.log(
   "Checked " + publicServices.length + " public MyNigeriaGuide service guides for minimum usefulness.",
 );
