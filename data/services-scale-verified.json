@@ -1442,40 +1442,46 @@
   },
   {
     "slug": "glo-esim-activation",
-    "title": "How to activate or migrate to a Glo eSIM",
-    "shortTitle": "Glo eSIM activation",
-    "summary": "Globacom's current eSIM route for new and existing Glo customers, including EID compatibility checks, a Gloworld or dealer visit and the data-plan condition attached to the current promotion.",
+    "title": "Glo eSIM Nigeria: EID Check, ₦1,500 Plan and 5GB Bonus",
+    "shortTitle": "Glo eSIM activation and swap",
+    "summary": "To activate or convert a Glo number to eSIM in Nigeria, dial *#06# and check that the phone shows an EID, then visit a Gloworld shop or authorised Glo dealer for NIN verification and an eSIM QR profile. Glo currently advertises a free eSIM swap or activation for a limited period, provided you buy a data plan costing at least ₦1,500 at the outlet. A qualifying plan comes with a one-time 5GB bonus valid for seven days; check that the offer still applies before payment.",
     "category": "Telecommunications",
     "agencySlug": "globacom",
-    "feeLabel": "Free migration + qualifying data purchase",
-    "feeNote": "Glo states that eSIM migration is free for a limited period, but the customer currently needs to buy a data plan of at least ₦1,500 at activation. Because the promotion is time-limited, confirm the current offer before payment.",
-    "timeline": "Glo does not publish a fixed completion time; activation is handled at a Gloworld shop or Glo dealer outlet after compatibility and line checks.",
+    "feeLabel": "Limited offer: free eSIM swap + data plan of ₦1,500 or more",
+    "feeNote": "Glo's official eSIM FAQ, checked 15 October 2026, says both new customers and existing Glo customers currently receive free activation/migration for a limited period, conditional on buying a data plan of at least ₦1,500 at the participating Gloworld/dealer outlet. This is not a promise of a permanently free eSIM or free data purchase. Confirm the qualifying plan and all charges at the outlet before authorising the change.",
+    "timeline": "Glo says the assisted switch typically takes a few minutes when the NIN verification and internet connection are ready; this is an indication, not an appointment or guaranteed service time. An outlet may need longer to verify ownership or troubleshoot profile download.",
     "status": "verified",
     "officialPortal": "https://www.gloworld.com/ng/glo-esim",
     "requirements": [
-      "An eSIM-compatible phone that displays an EID number after dialing *#06#",
-      "A new or existing Glo mobile line that can be registered or migrated to eSIM",
-      "A visit to a Gloworld shop or Glo dealer outlet for the activation or migration",
-      "The current qualifying Glo data-plan purchase attached to the eSIM promotion"
+      "An eSIM-capable handset: dial *#06# and check for an EID number; an IMEI alone does not demonstrate that the device has an eSIM.",
+      "A new or existing Glo number and identity/NIN details required for registration or SIM swap; Glo's eSIM FAQ describes an NIN check before the outlet issues the QR profile.",
+      "Access to a Gloworld shop or authorised Glo dealer outlet. Glo's current instructions do not promise nationwide self-service activation entirely online.",
+      "During the limited offer, a Glo data plan costing at least ₦1,500, purchased at the participating outlet at the time of eSIM activation or swap.",
+      "Mobile-device access and working internet/Wi-Fi for eSIM profile installation, plus an opportunity to test calls, SMS and mobile data before leaving."
     ],
     "steps": [
-      "Dial *#06# on the phone and confirm that the device displays an EID number for eSIM compatibility.",
-      "Visit a Gloworld shop or Glo dealer outlet and request eSIM activation for a new line or migration of an existing Glo line.",
-      "Complete the line-registration or migration checks required at the outlet and confirm the current promotional condition before paying for a data plan.",
-      "Receive and install the eSIM profile on the compatible phone with the assistance of the Glo outlet.",
-      "Confirm that the Glo line is active, then verify the data-plan purchase and any promotional bonus shown on the account."
+      "On the phone you want to activate, dial *#06# and look for an EID. If only an IMEI is shown or your phone is carrier-locked, ask the manufacturer or Glo outlet to confirm that this exact device variant supports eSIM before you pay anything.",
+      "Open Glo's official eSIM information page and find the nearest Gloworld shop or authorised Glo dealer. Ask whether the eSIM offer is still active and whether your number can be issued or converted there; an ordinary Glo data reseller may not complete SIM swaps.",
+      "At the outlet, request a new eSIM line or migration of your existing Glo number. Present the ownership/NIN information the outlet requests. Glo says an existing number is retained when moved from physical SIM to eSIM; a new line has its own registration requirements.",
+      "Confirm the current promotion before buying a plan: Glo's public FAQ states that the swap is free for a limited time when a plan of ₦1,500 or above is purchased on-site. A qualifying purchase currently includes a one-off 5GB bonus lasting seven days, not recurring free data.",
+      "Ask the authorised representative to complete NIN checks and supply or scan the eSIM QR code on your handset. Follow the on-screen installation prompts with internet access; do not share the QR image with a third-party seller or public account.",
+      "For a Samsung/Android phone, open Connections or Network & Internet → SIM Manager or Mobile network → Add eSIM/Add Mobile Plan, then follow the QR prompt. For iPhone, open Settings → Cellular/Mobile Data → Add eSIM/Add Cellular Plan. Exact menu labels vary by phone version.",
+      "After activation, check that your Glo number is present and make a test call, receive a text and try mobile data. Check the qualifying bundle and one-time bonus in your account; report any mismatch to the outlet before leaving.",
+      "If switching an existing eSIM to another phone, arrange the dealer-issued QR and line migration before deleting a working old profile. Glo describes deleting the old eSIM and scanning a dealer-provided code on the new handset, but removing the profile early can leave you unable to receive calls or verification codes."
     ],
     "notes": [
-      "Glo's published offer says migration is free only for a limited period, so the promotion can change.",
-      "The current eSIM page says a data plan of ₦1,500 or more is required during activation under the promotion.",
-      "Do not assume the one-time promotional data bonus remains available after the published offer changes."
+      "Glo's eSIM page explicitly requires a Gloworld/dealer visit for the assisted QR setup; there is no verified nationwide 'download your Glo eSIM at home' procedure from the published provider instructions.",
+      "The ₦1,500 figure is the minimum accompanying data-plan purchase in the time-limited promotion, not a separate ₦1,500 activation charge. Confirm any changed terms before paying.",
+      "Glo currently describes a single 5GB bonus valid for seven days after a qualifying purchase; it is not a regular renewal benefit and does not mean the underlying data plan is free.",
+      "Keep the existing Glo phone number when moving a physical SIM to eSIM, but check calls, SMS and data after the outlet has completed the swap. If NIN matching or network provisioning is unsuccessful, ask Glo staff to resolve it rather than repeatedly deleting profiles.",
+      "Changing to a different handset is a separate process. Arrange official QR availability before removing a working eSIM profile from the old phone; the phone-setting names in Glo's instructions vary by model and software version."
     ],
     "sources": [
       {
-        "label": "Glo eSIM",
+        "label": "Globacom — Glo eSIM eligibility, NIN verification, outlet process and limited 5GB offer",
         "agency": "Globacom Limited",
         "url": "https://www.gloworld.com/ng/glo-esim",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-15"
       }
     ],
     "related": [
@@ -1484,13 +1490,18 @@
       "nin-sim-linkage",
       "check-nin-sim-linkage-status"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "Glo eSIM Nigeria",
       "activate Glo eSIM",
       "migrate Glo SIM to eSIM",
       "Glo eSIM fee",
-      "Glo eSIM 5GB bonus"
+      "Glo eSIM 5GB bonus",
+      "Glo esim EID",
+      "Glo eSIM QR Gloworld",
+      "Glo esim free activation 1500",
+      "Glo esim 5gb bonus 7 days",
+      "Glo esim transfer another phone"
     ]
   },
   {
@@ -1730,41 +1741,57 @@
   },
   {
     "slug": "access-bank-solo-account",
-    "title": "How to open an Access Bank Solo Account",
-    "shortTitle": "Access Bank Solo Account",
-    "summary": "Access Bank's Solo Account route for young people and students, including the published opening balance, identity or student evidence, TIN and proof-of-address requirements.",
+    "title": "Access Bank Solo Account Nigeria: Ages 16–30, ₦500 Opening and Documents",
+    "shortTitle": "Open Access Solo Account",
+    "summary": "Access Bank's Solo Account is intended for people aged 16–30 in Nigeria, including students. Its product page lists a ₦500 opening deposit and no minimum daily balance. Applicants complete the account-opening and signature forms and supply one passport photo, identification or student evidence, plus other documents appropriate to their status. Check branch/online submission instructions directly with Access Bank; card maintenance and SMS charges may still apply even though the minimum balance is zero.",
     "category": "Banking",
     "agencySlug": "access-bank",
-    "feeLabel": "₦500 opening balance",
-    "feeNote": "Access Bank's current Solo Account page lists a ₦500 opening balance; confirm the product page before funding because product terms can change.",
-    "timeline": "Access Bank does not publish a fixed completion time for the Solo Account; opening depends on completion of the account form and KYC checks.",
+    "feeLabel": "₦500 opening deposit; other optional banking charges apply",
+    "feeNote": "Access Bank's published Solo product page states a ₦500 opening balance and no minimum daily balance. The bank's separate Rates Guide lists Solo debit-card maintenance at ₦53.75 quarterly (VAT included), SMS alerts at ₦6.80 per alert and an FGN electronic transfer levy where applicable. These are bank-published figures checked 15 October 2026, not a guarantee that every charge applies to every account. Confirm card options, notification preferences and up-to-date terms at the bank.",
+    "timeline": "The bank does not publish a guaranteed Solo-account activation time. Application processing and account access depend on accepted documents, KYC/identity checks and the channel used for submission; 'Open an account' does not mean instant approval.",
     "status": "verified",
     "officialPortal": "https://www.accessbankplc.com/personal/everyday-accounts/solo-account",
     "requirements": [
-      "A completed Solo Account opening form and signature specimen card",
-      "One recent passport photograph",
-      "A valid identity document for a non-student, or school ID, admission/acceptance letter or bio-data form for a student applicant",
-      "A Tax Identification Number (TIN) and proof of address for the applicant category shown by Access Bank",
-      "A resident permit when the applicant is a foreign national living in Nigeria"
+      "Be within the account's advertised 16–30 age range. Applicants who are 16 or 17 should check any guardian/consent or signing requirements directly with Access Bank before applying; the public product page does not explain these cases.",
+      "Completed account-opening form and specimen signature card, plus one recent passport photograph; the official individual account-opening PDF includes a Solo selection.",
+      "For non-students, Access Bank lists valid government identification such as passport, national ID/NIMC slip, driver's licence or voter card. For students it lists school ID, admission/acceptance letter or bio-data form as student evidence.",
+      "Tax Identification Number (TIN) as specified on the product page and account-opening form; ask the bank about any documentation exception relevant to a minor or student instead of entering a made-up TIN.",
+      "Proof of address (such as a recent utility or pay-TV bill) for non-students; a residence permit is required for relevant foreign nationals in Nigeria. The bank may request additional current KYC/BVN details from its official form."
     ],
     "steps": [
-      "Open Access Bank's official Solo Account page and confirm that the product fits the applicant's student or young-person banking needs.",
-      "Review the current opening balance and document list before starting the account-opening form.",
-      "Complete the account form and signature specimen and prepare the photograph, identity or student evidence, TIN and address evidence.",
-      "Submit the Solo Account application through Access Bank's official account-opening channel or branch route shown for the product.",
-      "Wait for Access Bank to complete the KYC review before using the account and activate cards or digital channels only through official Access Bank services."
+      "Read the Solo Account page on Access Bank's Nigerian domain and confirm you qualify for the 16–30 age range. If you are a minor, ask the bank about any additional guardian consent or form-signing process before beginning.",
+      "Check the published financial conditions: a ₦500 opening deposit with no minimum daily balance. This does not mean there are no card, SMS, transfer or government levy charges; inspect the bank's Rates Guide before choosing add-on services.",
+      "Prepare one recent passport photograph, personal and contact details, and the applicable identification. A current student should ask whether the bank accepts a school ID/admission letter or bio-data form for the exact applicant category; non-students should prepare an accepted government ID.",
+      "Complete Access Bank's current individual-account application and specimen signature section. Its downloadable official form includes a Solo option and fields for BVN and TIN; do not guess an identifier or share it through a third-party form.",
+      "Use the official bank product page's 'Open an account' link or ask a branch which document-submission method currently supports Solo. Submitting an online form may start, rather than finish, bank verification.",
+      "Provide any further proof of address for a non-student or residence permit if required for a foreign national, and follow the bank's legitimate identity/KYC instructions. Confirm the accepted opening deposit and the selected card/alert options before funding.",
+      "Once Access Bank confirms the account is active, check your account details and chosen transfer/card services through its own official banking channels. If an advertised discount or rate is not offered, request the current written tariff rather than relying on an older promotion."
     ],
     "notes": [
-      "Access Bank describes Solo as a youth/student-focused hybrid savings product.",
-      "Student and non-student applicants use different identity evidence on the published requirement list.",
-      "Confirm the current interest rate and card terms on the provider page instead of treating promotional figures as permanent."
+      "Access Bank's Solo product page advertises an annual interest rate of 7.95%, while its separate bank Rates Guide currently shows 5.55% for Solo savings. Because these first-party pages disagree, this guide intentionally does not promise either rate. Ask the bank which current effective rate applies.",
+      "Access Bank says Solo has no minimum daily balance; the ₦500 amount is the published opening deposit, not a monthly fee or ongoing minimum to keep the account.",
+      "The product page advertises a 50% discount on first debit-card issuance, but the Rates Guide separately lists debit-card maintenance charges. A discounted first card does not mean free maintenance for every card.",
+      "The bank lists different proof documents for students versus non-students. A 16- or 17-year-old should confirm any current additional consent and BVN/ID requirements with Access Bank rather than infer adult-only instructions apply unchanged.",
+      "The Nigerian Access Bank product page is the relevant source for naira pricing. Avoid confusing it with similarly named Solo Account pages on Access Bank's websites for other countries using other currencies."
     ],
     "sources": [
       {
-        "label": "Access Bank Solo Account",
+        "label": "Access Bank Nigeria — Solo product, age, opening deposit and documents",
         "agency": "Access Bank Plc",
         "url": "https://www.accessbankplc.com/personal/everyday-accounts/solo-account",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Access Bank Nigeria — current Rates Guide for Solo charges and interest",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/Rates-Guide/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Access Bank Nigeria — individual account-opening form including Solo account",
+        "agency": "Access Bank Plc",
+        "url": "https://www.accessbankplc.com/access/media/Media-PDF-Attachment/Individual-Account-Opening-Form.pdf?ext=.pdf",
+        "lastChecked": "2026-10-15"
       }
     ],
     "related": [
@@ -1773,13 +1800,18 @@
       "moniepoint-personal-account",
       "bvn-enrolment"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "Access Bank Solo Account",
       "open Access Bank student account",
       "Access Bank Solo requirements",
       "Access Bank youth account Nigeria",
-      "Solo Account opening balance"
+      "Solo Account opening balance",
+      "Access bank solo account age 16 30",
+      "Access bank solo opening balance 500",
+      "Access solo account charges",
+      "Access Bank Solo account student ID",
+      "Access Solo interest rate bank rates guide"
     ]
   },
   {
