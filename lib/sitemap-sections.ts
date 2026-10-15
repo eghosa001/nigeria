@@ -4,7 +4,7 @@ import { myNigeriaGuideUpdates } from "@/data/updates";
 import { agencies, categories, publicServices } from "@/lib/data";
 import { entertainmentTitles } from "@/lib/entertainment";
 import { getEntertainmentCatalogPageCount } from "@/lib/entertainment-pagination";
-import { entertainmentPeople, releaseItems } from "@/lib/entertainment-extras";
+import { entertainmentPeople, releaseItems, hasIndexablePersonEditorial, getPersonEditorialProfile } from "@/lib/entertainment-extras";
 import { indexableEntertainmentPlatformHubs } from "@/lib/entertainment-platform-hubs";
 import { exploreGuides } from "@/lib/explore";
 import { indexableYouTubeMovies, youtubeMovieLibrary } from "@/lib/youtube-library";
@@ -208,9 +208,9 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         url: base + "/entertainment/movies/" + title.slug,
         lastModified: movieModified(title) || movieCatalogModified,
       })),
-      ...entertainmentPeople.map((person) => ({
+      ...entertainmentPeople.filter((person) => hasIndexablePersonEditorial(person.slug)).map((person) => ({
         url: base + "/entertainment/people/" + person.slug,
-        lastModified: movieCatalogModified,
+        lastModified: getPersonEditorialProfile(person.slug)?.lastReviewed || movieCatalogModified,
       })),
     ];
   }

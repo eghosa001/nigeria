@@ -1,4 +1,5 @@
 import { entertainmentTitles } from "../lib/entertainment";
+import { entertainmentPeople, personEditorialProfiles, hasIndexablePersonEditorial } from "../lib/entertainment-extras";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { discoverableYouTubeMovies, hasSubstantiveYouTubeSynopsis, indexableYouTubeMovies, isIndexableYouTubeMovie, generatedYouTubeMovies, getYouTubeMovieById } from "../lib/youtube-library";
 
@@ -7,6 +8,28 @@ function assert(condition: unknown, message: string): asserts condition {
 }
 
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+
+// A linked movie article is not, by itself, evidence for an individual's
+// biography. The three dossiers below were researched against individually
+// identified interviews, cultural institutions and distributors.
+const independentlyResearchedPeople = ["femi-adebayo", "kunle-afolayan", "timini-egbuson"];
+for (const slug of independentlyResearchedPeople) {
+  const dossier = personEditorialProfiles[slug];
+  assert(Boolean(dossier) && hasIndexablePersonEditorial(slug),
+    slug + " requires substantial original author commentary, per-section source references and three independent domains.");
+  assert(dossier.sections.every(section => section.sources.length > 0),
+    slug + " missing citation mapping for a biography section.");
+  const citations = new Set(dossier.sections.flatMap(section => section.sources));
+  assert(citations.size >= 2, slug + " needs independently verifiable career history.");
+  const phrases = dossier.sections.flatMap(section => section.paragraphs);
+  assert(new Set(phrases).size === phrases.length, slug + " contains repeated biography paragraphs.");
+}
+// Profiles beyond the researched set remain in the people directory for
+// navigation, but are deliberately noindex and absent from XML sitemaps.
+for (const person of entertainmentPeople) {
+  assert(hasIndexablePersonEditorial(person.slug) === independentlyResearchedPeople.includes(person.slug),
+    person.slug + " must not become indexable merely by inheriting a linked movie's source.");
+}
 
 assert(entertainmentTitles.length > 0, "Entertainment catalog cannot be empty.");
 assert(

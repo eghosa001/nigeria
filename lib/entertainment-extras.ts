@@ -557,3 +557,255 @@ export const releaseItems: ReleaseItem[] = [
 export function getEntertainmentPerson(slug: string) {
   return entertainmentPeople.find((person) => person.slug === slug);
 }
+
+
+/** Film-card references are not person-biography evidence. Only these reviewed
+ * author-written dossiers can make a people page indexable. */
+export type PersonEditorialSection = { heading: string; paragraphs: string[]; sources: number[] };
+export type PersonEditorialReference = { label: string; href: string; lastChecked: string };
+export type PersonEditorialProfile = { intro: string[]; sections: PersonEditorialSection[]; sources: PersonEditorialReference[]; lastReviewed: string };
+export const personEditorialProfiles: Record<string, PersonEditorialProfile> = {
+  "femi-adebayo": {
+    "intro": [
+      "Femi Adebayo is a Nigerian actor and filmmaker whose Yoruba-language films include action, drama and cultural storytelling. His role in Jagun Jagun is documented by Netflix, while direct interviews provide better evidence for the production decisions than unsourced biography compilations. This profile distinguishes credited appearances from what he says about creating the work.",
+      "Adebayo's film career is also a question of how films reach viewers. Interviews about King of Thieves, Jagun Jagun and Seven Doors show that theatrical and streaming releases can involve different economic choices. A claim about an old premiere is not proof that a film can be watched on a specific service today."
+    ],
+    "sections": [
+      {
+        "heading": "Jagun Jagun: an official credited performance",
+        "paragraphs": [
+          "Netflix lists Jagun Jagun as a 2023 Yoruba-language action film and identifies Femi Adebayo among the starring performers, alongside Lateef Adedimeji and Odunlade Adekola. Its central story follows a warrior recruit entering an elite army dominated by a ruthless leader. That distributor evidence supports the title, the broad plot and Adebayo's listed cast status, not every circulating anecdote about its creation.",
+          "The film draws on a period-action setting, but a fictional warlord and the characters' experiences should not be passed off as a documentary record of Yoruba history. To answer a specific cast question, use Netflix's performer list or a film's end credits rather than assigning character names from a plot description. The film's official page should also be checked before claiming any particular region still offers it."
+        ],
+        "sources": [
+          0
+        ]
+      },
+      {
+        "heading": "What the producer said about developing stories",
+        "paragraphs": [
+          "In an interview published by BusinessDay, Adebayo said he had conceived Jagun Jagun before King of Thieves, then chose to test his ability to handle a large production with the earlier project. This is an attributed description of his decision-making; it does not independently establish the budget, wages or earnings of either film.",
+          "Speaking to Independent about Seven Doors, he explained that he wanted a culturally grounded story with wider appeal. He contrasted the two productions' genres and discussed how an initial script idea was developed with collaborators rather than by one person working alone. The distinction matters: a star's participation does not mean that every creative department, script and directorial credit belongs to the same person."
+        ],
+        "sources": [
+          1,
+          2
+        ]
+      },
+      {
+        "heading": "Why cinema and streaming releases differ",
+        "paragraphs": [
+          "A PUNCH interview records Adebayo discussing cinema distribution and deals with streaming platforms. He linked those choices to recouping investments, the structure of theatrical distribution and the potential international reach of Netflix. He named films including King of Thieves and Jagun Jagun as examples from his own experience, which is stronger evidence than an anonymous box-office ranking.",
+          "It is not accurate to turn his explanations into a universal prediction that cinema is inferior or that Netflix is permanently the home of all his future work. Each release has its own distribution contract and marketing timetable. Readers should check a specific movie's current official source before following a watch link or relying on an old planned-release announcement."
+        ],
+        "sources": [
+          0,
+          3
+        ]
+      },
+      {
+        "heading": "How to read the credits and the evidence",
+        "paragraphs": [
+          "The useful questions for someone following Adebayo are whether he acted, produced, directed or collaborated on a film; what its release year and format are; and where current legal viewing information can be confirmed. Jagun Jagun has a directly verifiable on-screen listing, while the interviews help explain the development and distribution context. These are different kinds of sources with different evidentiary value.",
+          "The linked titles below are a selection from MyNigeriaGuide's own film directory, not a complete filmography or an independently verified awards archive. We do not assign roles from film synopses, infer personal earnings from theatrical grosses or publish unverified family and relationship speculation. This approach makes the page useful to someone researching the films rather than filling it with claims that cannot be checked."
+        ],
+        "sources": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Netflix — Jagun Jagun film, year and credited cast",
+        "href": "https://www.netflix.com/title/81681240",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "BusinessDay — Femi Adebayo on developing Jagun Jagun",
+        "href": "https://businessday.ng/bd-weekender/article/jagun-jagun-is-only-a-fiction-it-is-not-tied-to-any-activity-producer/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Independent Nigeria — Femi Adebayo discusses Seven Doors",
+        "href": "https://independent.ng/my-team-initially-rejected-seven-doors-femi-adebayo/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "PUNCH — interview on film distribution and family collaboration",
+        "href": "https://punchng.com/my-father-helped-me-beat-his-records-femi-adebayo/",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "lastReviewed": "2026-10-15"
+  },
+  "kunle-afolayan": {
+    "intro": [
+      "Kunle Afolayan is a Nigerian film director, producer and actor known for work that crosses cinema, festivals and streaming. His career and Golden Effects Pictures are documented by the Nigerian Copyright Commission and the African Film Festival, while Netflix's own announcements clarify some of his later distribution relationships.",
+      "This profile focuses on verifiable career developments instead of assuming a selected cast-list represents all of his projects. Afolayan's name can appear as a director, producer or actor: those are not interchangeable credits. Official title pages and historical festival records are useful for different questions."
+    ],
+    "sections": [
+      {
+        "heading": "From a film family to directing",
+        "paragraphs": [
+          "The African Film Festival's profile records that Afolayan is a son of the filmmaker Ade Love. It describes studying economics, working in a bank, doing occasional acting and pursuing filmmaking training at the New York Film Academy before moving more fully into film. Nigeria's Copyright Commission independently identifies him as an actor, producer and director and links his work to productions dating back to the 1990s.",
+          "Those details explain a professional shift rather than a mythical overnight rise to fame. Acting experience was one part of the path, while producing and directing required additional skills and collaborations. Neither source should be stretched into a claim that he personally wrote every screenplay or that the film company created every title he appeared in."
+        ],
+        "sources": [
+          0,
+          1
+        ]
+      },
+      {
+        "heading": "A selective filmography worth examining",
+        "paragraphs": [
+          "The African Film Festival lists Irapada, The Figurine, Phone Swap, October 1, The CEO, Citation and Swallow among productions connected with Afolayan. These films are useful milestones across supernatural drama, contemporary comedy, historical storytelling and other genres. A festival filmography records an artistic career; it does not verify today's screening times, regional streaming licences or actor roles for every performer.",
+          "The festival's profile notes that Phone Swap was screened in France at NollywoodWeek Paris and recognised by an audience-choice award, while The Figurine received honours at the African Movie Academy Awards. Historical award information should be attributed to the relevant organisers rather than expanded into made-up totals. To research a single title, compare its festival description with its original credits and distributor information."
+        ],
+        "sources": [
+          1
+        ]
+      },
+      {
+        "heading": "Netflix's documented collaboration",
+        "paragraphs": [
+          "Netflix's newsroom announced a three-film partnership with Afolayan in March 2021. The announcement identified an adaptation of Sefi Atta's Swallow and referred to established films including The CEO, October 1, The Figurine and Citation. This gives readers primary-source evidence of a particular production-and-distribution relationship, rather than a vague claim that Netflix bought his entire film library.",
+          "Netflix's own Aníkúlápó page lists a 2022 fantasy film with a Yoruba original-audio track and credited performers including Kunle Remi and Bimbo Ademoye. Its synopsis centres on a traveller, royal intrigue and a mystical return to life. Those facts help classify the film, but the cast listing does not establish that Afolayan played the lead character or that related future productions are automatically available."
+        ],
+        "sources": [
+          2,
+          3
+        ]
+      },
+      {
+        "heading": "Golden Effects and checking production roles",
+        "paragraphs": [
+          "The Nigerian Copyright Commission calls Afolayan the chief executive of Golden Effects Pictures. The African Film Festival dates the company's founding to 2005. Corporate activity helps explain why his professional profile includes production as well as directing. A company's portfolio, however, should not be presented as a verified list of films that one individual personally directed.",
+          "For each film, look for the explicit director, writer, cast, producer and distributor fields, rather than assuming that one well-known filmmaker performed all five functions. Use our title-specific film guides to see the released story, source-backed credits and current legal viewing routes. This page intentionally avoids invented reviews, private wealth estimates and unsupported claims about awards or family members."
+        ],
+        "sources": [
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nigerian Copyright Commission — Kunle Afolayan",
+        "href": "https://copyright.gov.ng/kunle-afolayan-2/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "African Film Festival — Afolayan biography and filmography",
+        "href": "https://africanfilmny.org/directors/kunle-afolayan/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Netflix Newsroom — Kunle Afolayan three-film agreement (2021)",
+        "href": "https://about.netflix.com/en/news/more-naija-stories-from-kunle-afolayan-coming-to-netflix",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Netflix — Aníkúlápó title and credited cast",
+        "href": "https://www.netflix.com/ng/title/81392197",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "lastReviewed": "2026-10-15"
+  },
+  "timini-egbuson": {
+    "intro": [
+      "Timini Egbuson is a Nigerian actor with credits across film romance, drama and ensemble productions. Independent reporting on Reel Love provides confirmed examples of his acting and executive-producing work, while a published interview explains how he approached a specific production. That is firmer evidence than repeating gossip or disconnected film titles.",
+      "His film-career profile illustrates why a cast credit, producing credit and news interview should be treated separately. Reel Love has documented collaborators and an identifiable production period; this page does not assume every film listed in a database is current, still streaming or directed by him."
+    ],
+    "sections": [
+      {
+        "heading": "Reel Love and the move into executive production",
+        "paragraphs": [
+          "Premium Times reported on the February 2025 premiere of Reel Love, describing it as Egbuson's first film as an executive producer. The paper named Kayode Kasum as director and listed an ensemble that included Egbuson, Funke Akindele, Bimbo Ademoye and Dakore Egbuson-Akande. This report establishes separate performance, directing and producing roles for a specific film.",
+          "An executive-producing credit is not proof that a performer wrote the screenplay, financed all of production or directed the scenes. Distinguishing those duties is essential when a viewer wants to know what the person actually contributed. A public premiere report documents the participants and occasion, not a full verified ledger of every crew member's contract."
+        ],
+        "sources": [
+          0
+        ]
+      },
+      {
+        "heading": "The working relationship with Kayode Kasum",
+        "paragraphs": [
+          "Black Film Wire published an interview in which Egbuson discussed working with director Kayode Kasum over several projects. He described their working familiarity as part of why they collaborated on Reel Love. The article attributes those statements to the actor himself rather than claiming that an outside writer attended the production meetings.",
+          "In the same interview, he identified practical difficulties involving weather, locations, finances and artists' schedules during production. They are concrete examples of the logistics behind a film and make the profile more useful than a list of flattering adjectives. They should not be expanded into invented filming dates, exact production budgets or stories about unnamed crew members."
+        ],
+        "sources": [
+          1
+        ]
+      },
+      {
+        "heading": "Acting choices rather than repeated character labels",
+        "paragraphs": [
+          "In the Black Film Wire interview, Egbuson discussed repeatedly being offered recognisable kinds of roles, and the challenge of making each performance feel different. This is a useful insight into how he discusses his craft, but it does not prove that every performance has the same genre, award status or critical reception.",
+          "Entertainment databases can combine television, short films, cinema releases and video-platform productions in one long list. Unless each credit has a dependable individual source, it is misleading to present that list as a complete filmography. The titles below are only entries already catalogued by MyNigeriaGuide and should be inspected individually to confirm cast, director, year and legal distribution."
+        ],
+        "sources": [
+          1,
+          2
+        ]
+      },
+      {
+        "heading": "Reliable ways to confirm a title or claim",
+        "paragraphs": [
+          "A reader looking for Reel Love can start with Premium Times for the premiere and named collaborators, and then read Black Film Wire for Egbuson's attributed account of why the team worked together. The first is outside reporting; the second is an interview. Neither automatically verifies where the film streams today or whether every later project has been released.",
+          "Opening-weekend rankings require a defined date, market and source, and film grosses are not an actor's private income. We therefore omit guessed net-worth figures, relationship speculation, uncorroborated box-office totals and imaginary personal encounters. A narrower page with transparent evidence and clear credit boundaries answers more questions than an inflated biography of unsupported claims."
+        ],
+        "sources": [
+          0,
+          1,
+          2
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Premium Times — Reel Love premiere and first executive-producer credit",
+        "href": "https://www.premiumtimesng.com/entertainment/nollywood/773648-ebuka-funke-akindele-veekee-james-grace-timinis-reel-love-premiere.html",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Black Film Wire — Timini Egbuson interview about Reel Love",
+        "href": "https://www.blackfilmwire.com/post/from-lover-boy-to-game-changer-timini-egbuson-on-reel-love-and-redefining-nollywood",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "IMDb — supplementary, non-authoritative credit cross-check",
+        "href": "https://www.imdb.com/name/nm6170424/",
+        "lastChecked": "2026-10-15"
+      }
+    ],
+    "lastReviewed": "2026-10-15"
+  }
+};
+
+export function getPersonEditorialProfile(slug: string): PersonEditorialProfile | undefined {
+  return personEditorialProfiles[slug];
+}
+
+export function hasIndexablePersonEditorial(slug: string): boolean {
+  const dossier = getPersonEditorialProfile(slug);
+  if (!dossier || dossier.intro.length < 2 || dossier.sections.length < 4 || dossier.sources.length < 3) return false;
+  const hosts = new Set<string>();
+  for (const source of dossier.sources) {
+    try {
+      const address = new URL(source.href);
+      if (address.protocol !== "https:" || !/^\d{4}-\d{2}-\d{2}$/.test(source.lastChecked)) return false;
+      hosts.add(address.hostname.replace(/^www\./,""));
+    } catch { return false; }
+  }
+  if (hosts.size < 3 || !/^\d{4}-\d{2}-\d{2}$/.test(dossier.lastReviewed)) return false;
+  if (dossier.sections.some(section => !section.heading || section.paragraphs.length < 2 ||
+    !section.sources.length || section.sources.some(idx => idx < 0 || idx >= dossier.sources.length))) return false;
+  const text = [...dossier.intro, ...dossier.sections.flatMap(x => x.paragraphs)].join(" ");
+  return text.trim().split(/\s+/).length >= 450;
+}
