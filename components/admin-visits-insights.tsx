@@ -248,7 +248,7 @@ export function AdminVisitsInsights() {
       <div className="visits-table-scroll"><table className="visits-data-table">
         <thead><tr><th scope="col">Period</th><th scope="col">Impressions (GSC)</th><th scope="col">Clicks (GSC)</th><th scope="col">CTR (GSC)</th><th scope="col">Page views (GA4)</th><th scope="col">Visits (GA4)</th></tr></thead>
         <tbody>{report.periods.map((row) => <tr key={row.key} className={row.key === range ? "selected" : ""}>
-          <th scope="row"><button className="visits-range-link" type="button" onClick={() => { setRange(row.key); setShowSearch(20); setShowTrend(14); }}>{labels[row.key]}</button><small>{row.key === "all" ? "Available history" : row.startDate + " – " + row.endDate}</small></th>
+          <th scope="row"><button className="visits-range-link" type="button" onClick={() => { setRange(row.key); setShowSearch(20); setShowTrend(14); }}>{labels[row.key]}</button><small>{row.key === "all" ? "Available history" : "GA4: " + row.startDate + " – " + row.endDate}</small><small>{"GSC: " + row.gscStartDate + " – " + row.gscEndDate}</small></th>
           <td><strong>{count(row.impressions)}</strong><Delta current={row.impressions} previous={row.previousImpressions} /></td>
           <td><strong>{count(row.clicks)}</strong><Delta current={row.clicks} previous={row.previousClicks} /></td>
           <td>{row.impressions == null || row.clicks == null || row.impressions === 0 ? "—" : percent(row.clicks / row.impressions)}</td>
@@ -256,7 +256,7 @@ export function AdminVisitsInsights() {
           <td><strong>{count(row.sessions)}</strong><Delta current={row.sessions} previous={row.previousSessions} /></td>
         </tr>)}</tbody>
       </table></div>
-      <p className="visits-footnote">Percentage changes compare each window with the immediately preceding window of equal length. Today may be incomplete; “—” means unavailable, not zero. Google Search Console daily dates use Pacific time.</p>
+      <p className="visits-footnote">Percentage changes compare each window with the immediately preceding window of equal length. Today may be incomplete; “—” means unavailable, not zero. The source-specific date ranges are listed in each row because GA4 uses Lagos dates while Google Search Console uses Pacific dates.</p>
       <p className="visits-footnote">Latest reported days: GA4 <strong>{report.latestGA4Date ?? "unavailable"}</strong>; Google Search Console <strong>{report.latestGSCDate ?? "unavailable"}</strong>.</p>
       {report.errors.ga4 || report.errors.gsc ? <p className="visits-source-warning">{report.errors.ga4 ? "GA4: " + report.errors.ga4 + ". " : ""}{report.errors.gsc ? "GSC: " + report.errors.gsc : ""}</p> : null}
     </section>
