@@ -8,6 +8,7 @@ import {
   hasSubstantiveYouTubeSynopsis, isPublisherPromoSynopsis,
 } from "@/lib/youtube-library";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
+import { normalizeGenerated, isIndexableYouTubeDetailMovie } from "@/lib/youtube-detail";
 
 type PendingReviewRow = [
   string, string, string, string, string | null, string, number, string,
@@ -106,4 +107,28 @@ test("local Cloudflare smoke uses the static YouTube adapter without mutating pr
   // local Playwright webServer's Wrangler arguments override it.
   const workerConfig = readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8");
   assert.match(workerConfig, /"YOUTUBE_D1_CUTOVER": "enabled"/);
+});
+
+test("D1-backed YouTube cards and detail pages reject uploader promotions", () => {
+  const record = {
+    videoId: "0ujEzReLcP8",
+    title: "LOVE SO COLD",
+    rawTitle: "LOVE SO COLD",
+    synopsis: "And if you are a subscriber, please turn on NOTIFICATIONS by clicking the bell symbol to get updates on our new videos uploaded.",
+    cast: ["Detola Jones"],
+    featuredCast: ["Detola Jones"],
+    channelName: "OrjiTv",
+    publishedAt: "2026-10-12T08:00:00.000Z",
+    year: 2026,
+    durationMinutes: 116,
+    videoUrl: "https://www.youtube.com/watch?v=0ujEzReLcP8",
+    lastChecked: "2026-10-15",
+  };
+  const normalized = normalizeGenerated(record);
+  assert.match(normalized.synopsis, /published by OrjiTv/);
+  assert.doesNotMatch(normalized.synopsis, /notifications|bell symbol/i);
+  assert.equal(isIndexableYouTubeDetailMovie(normalized), false);
+  const plot = normalizeGenerated({ ...record,
+    synopsis: "A woman tries to mend a broken relationship after a family secret unravels, but the truth puts her choices and those closest to her in jeopardy as tensions rise." });
+  assert.equal(isIndexableYouTubeDetailMovie(plot), true);
 });
