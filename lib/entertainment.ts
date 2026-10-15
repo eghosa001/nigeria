@@ -648,9 +648,23 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Comedy", "Friendship", "Nollywood"],
     languages: ["English"],
-    synopsis: "A tech founder's 30th-birthday brunch turns into a pressure test for friendship, romance, adulthood and the career expectations surrounding her circle.",
+    synopsis: "Osaze Imafidon has founded a successful tech company, maintains a relationship and surrounds himself with friends who seem to have adulthood figured out. His 30th-birthday brunch in Lagos, however, exposes how differently the group is coping with financial pressure, uncertain careers, emotional commitments and the expectation to appear successful. As tensions surface between friends, the carefully managed picture of an ideal life starts to unravel. Pushing 30 is an ensemble dramedy about friendship and the anxiety of becoming an adult, rather than a story about a woman entering her thirties. Producer Mayowa Mula developed the concept while facing similar conversations among young Nigerians; Mannie Oiseomaye wrote the screenplay and Orobosa Ikponmwen directed the film. Africa Magic Showcase announced its television premiere for 18 October 2026 at 8 PM, but an announcement alone does not verify later repeat or streaming access.",
     cast: ["Deji Osikoya", "Darasimi Ogbetah", "Mayowa Mula", "Kanaga Emmanuel Eme", "Kanyin Eros", "Uzor Daniel", "Sharon Rotimi", "Doris Okorie", "Floyd Igbo"],
     directors: ["Orobosa Ikponmwen"],
+    references: [
+      {
+        label: "OYA Magazine — interview with producer Mayowa Mula",
+        href: "https://www.oyamag.com/pushing-30-producer-mayowa-mula-on-building-a-home-for-young-nigerian-stories/",
+        lastChecked: "2026-10-15",
+        note: "The producer explains the development of Osaze's story, ensemble focus and social pressures. Credits Mannie Oiseomaye and Orobosa Ikponmwen; confirms Africa Magic Showcase premiere on 18 October."
+      },
+      {
+        label: "THISDAY — Osaze character, cast and Africa Magic premiere",
+        href: "https://www.thisdaylive.com/2026/10/06/mayowa-mulas-pushing-30-to-premiere-on-africa-magic-showcase-exploring-the-uncertainty-of-turning-30/",
+        lastChecked: "2026-10-15",
+        note: "Identifies Osaze Imafidon as a male tech founder and confirms the ensemble cast, Lagos birthday brunch and announced 18 October 2026 8 PM television premiere on DStv channel 151."
+      },
+    ],
     watchLinks: [
       {
         platform: "Africa Magic",

@@ -260,6 +260,16 @@ jobs:
             exit 0
           fi
 
+          # A curated-film data-only change must not run unrelated directory UX checks.
+          movie_data_trigger="$(printf '%s\n' "$changed" | grep -E '^lib/entertainment\.ts$' || true)"
+          non_movie_data="$(printf '%s\n' "$changed" | grep -Ev '^(lib/entertainment\.ts$|tests/movie-source-content\.spec\.ts$|\.github/workflows/(ui-qa|cloudflare-qa)\.yml$)' || true)"
+          if [ -n "$movie_data_trigger" ] && [ -z "$non_movie_data" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=movie-data" >> "$GITHUB_OUTPUT"
+            echo "Curated film-source edit: check only its public movie detail."
+            exit 0
+          fi
+
           if [ -n "$quality_trigger" ] && [ -z "$non_quality" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=quality" >> "$GITHUB_OUTPUT"
@@ -331,6 +341,9 @@ jobs:
       - name: Run contextual entertainment regression
         if: steps.scope.outputs.mode == 'entertainment-context'
         run: npx playwright test tests/entertainment.spec.ts --project=desktop --workers=1 --grep "contextual entertainment detail pages expose country and source dates"
+      - name: Verify source-backed canonical film details
+        if: steps.scope.outputs.mode == 'movie-data'
+        run: npx playwright test tests/movie-source-content.spec.ts --project=desktop --workers=1
       - name: Run directory navigation regression
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --project=desktop --workers=1
