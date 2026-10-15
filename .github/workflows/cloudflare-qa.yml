@@ -197,6 +197,15 @@ jobs:
             exit 0
           fi
 
+          service_route_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$)' || true)"
+          service_route_other="$(printf '%s\n' "$changed" | grep -Ev '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$|[.]github/workflows/(ci|ui-qa|cloudflare-qa)[.]yml$|scripts/browser-qa-specialized-scopes[.]sh$)' || true)"
+          if [ -n "$service_route_trigger" ] && [ -z "$service_route_other" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "mode=service-route" >> "$GITHUB_OUTPUT"
+            echo "Service MTCN journey only: run direct page and CTA smoke."
+            exit 0
+          fi
+
           # A curated-film data-only change must not run unrelated directory UX checks.
           movie_data_trigger="$(printf '%s\n' "$changed" | grep -E '^lib/entertainment\.ts$' || true)"
           non_movie_data="$(printf '%s\n' "$changed" | grep -Ev '^(lib/entertainment\.ts$|tests/movie-source-content\.spec\.ts$|\.github/workflows/(ui-qa|cloudflare-qa)\.yml$)' || true)"
@@ -247,6 +256,9 @@ jobs:
       - name: Verify source-backed canonical film details
         if: steps.scope.outputs.mode == 'movie-data'
         run: npx playwright test tests/movie-source-content.spec.ts --config playwright.cloudflare.config.ts --project=cloudflare-desktop --workers=1
+      - name: Verify Western Union tracking route on Cloudflare
+        if: steps.scope.outputs.mode == 'service-route'
+        run: npx playwright test tests/western-union-tracking.spec.ts --config playwright.cloudflare.config.ts --project=cloudflare-desktop --workers=1
       - name: Run directory navigation regression
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --config playwright.cloudflare.config.ts --workers=1
@@ -254,7 +266,7 @@ jobs:
         if: steps.scope.outputs.mode == 'admin-ui'
         run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --project=cloudflare-desktop --project=cloudflare-mobile --workers=1 --grep "visits unlock|admin dashboard shows independent|admin Search Console connectivity|admin shows the exact|admin dashboard reflects movies"
       - run: npx playwright test tests/smoke.spec.ts --config playwright.cloudflare.config.ts --workers=1
-        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime' && steps.scope.outputs.mode != 'movie-data' && steps.scope.outputs.mode != 'admin-ui'
+        if: steps.scope.outputs.run == 'true' && steps.scope.outputs.mode != 'ads-txt' && steps.scope.outputs.mode != 'quality' && steps.scope.outputs.mode != 'tour' && steps.scope.outputs.mode != 'entertainment-context' && steps.scope.outputs.mode != 'youtube-runtime' && steps.scope.outputs.mode != 'movie-data' && steps.scope.outputs.mode != 'service-route' && steps.scope.outputs.mode != 'admin-ui'
       - name: Upload Cloudflare Playwright report on failure
         if: failure() && steps.scope.outputs.run == 'true'
         uses: actions/upload-artifact@v4

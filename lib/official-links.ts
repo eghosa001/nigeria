@@ -8,6 +8,7 @@ export type OfficialServiceLinks = {
 };
 
 const exactGuidanceOverrides: Record<string, string> = {
+  "western-union-track-transfer-nigeria": "https://www.westernunion.com/ng/en/receive-money.html",
   "passport-renewal": "https://immigration.gov.ng/info-center/renewal-of-passport/",
   "first-nigerian-passport": "https://immigration.gov.ng/info-center/how-to-apply-for-standard-passport/",
   "passport-change-of-data": "https://immigration.gov.ng/passports/",
@@ -66,6 +67,7 @@ const exactGuidanceOverrides: Record<string, string> = {
 };
 
 const actionOverrides: Record<string, string | null> = {
+  "western-union-track-transfer-nigeria": "https://www.westernunion.com/global-service/track-transfer",
   "passport-renewal": "https://passport.immigration.gov.ng/",
   "first-nigerian-passport": "https://passport.immigration.gov.ng/",
   "passport-change-of-data": "https://passport.immigration.gov.ng/",
