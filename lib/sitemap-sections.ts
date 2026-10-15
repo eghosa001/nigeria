@@ -114,7 +114,7 @@ export function getSitemapEntries(section: SitemapSectionName): SitemapEntry[] {
         url: base + "/services/" + service.slug,
         lastModified: service.lastVerified,
       })),
-      ...agencies.map((agency) => ({
+      ...agencies.filter((agency) => publicServices.filter((service) => service.agencySlug === agency.slug).length >= 2).map((agency) => ({
         url: base + "/agencies/" + agency.slug,
         lastModified: latestDate(publicServices.filter((service) => service.agencySlug === agency.slug).map((service) => service.lastVerified)) || serviceModified,
       })),
