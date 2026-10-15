@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { InsightRange, InsightsReport, SearchPage } from "@/lib/admin-visits-insights";
 import { metricDelta, type TrafficDay } from "@/lib/analytics-period-rollups";
+import { completeVisitsReport, completeVisitsCsv } from "@/lib/visits-export";
 
 const mobileLabels: Record<InsightRange, string> = { "1d": "1D", "7d": "7D", "30d": "30D", "90d": "90D", all: "All" };
 const ranges: InsightRange[] = ["1d", "7d", "30d", "90d", "all"];
@@ -65,11 +66,6 @@ function download(filename: string, text: string, mime = "application/json") {
   link.href = url; link.download = filename; link.click();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
-function csvCell(value: string | number) {
-  const text = String(value);
-  return '"' + text.replace(/"/g, '""') + '"';
-}
-
 export function AdminVisitsInsights() {
   const [range, setRange] = useState<InsightRange>("30d");
   const [report, setReport] = useState<InsightsReport | null>(null);
@@ -86,6 +82,7 @@ export function AdminVisitsInsights() {
   const [mobileShowVisited, setMobileShowVisited] = useState(6);
   const [mobileShowTrend, setMobileShowTrend] = useState(7);
   const [copied, setCopied] = useState(false);
+  const [exporting, setExporting] = useState<"csv" | "json" | null>(null);
   const active = useRef<AbortController | null>(null);
 
   function changeRange(nextRange: InsightRange) {
@@ -212,6 +209,43 @@ export function AdminVisitsInsights() {
     };
   }
 
+  async function downloadComplete(format: "csv" | "json") {
+    if (exporting) return;
+    setExporting(format);
+    setError("");
+    try {
+      // The selected 1/7/30/90-day page table is not the entire history.
+      // Always download the all-available report and preserve every
+      // returned GSC/GA4/PostHog row (including nulls and source status).
+      let source: InsightsReport = report!;
+      if (source.selectedRange !== "all") {
+        const response = await fetch("/admin/api/visits-insights?range=all", { cache: "no-store" });
+        if (response.status === 401) {
+          setReport(null);
+          setState("locked");
+          return;
+        }
+        const body = await response.json() as { data?: InsightsReport; error?: string };
+        if (!response.ok || !body.data || body.data.selectedRange !== "all") {
+          throw new Error(body.error ?? "The complete analytics report could not be loaded.");
+        }
+        source = body.data;
+      }
+      const date = source.generatedAt.slice(0, 10);
+      if (format === "csv") {
+        download("mynigeriaguide-complete-analytics-" + date + ".csv",
+          completeVisitsCsv(source), "text/csv");
+      } else {
+        download("mynigeriaguide-complete-analytics-" + date + ".json",
+          JSON.stringify(completeVisitsReport(source), null, 2), "application/json");
+      }
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "Unable to export analytics right now.");
+    } finally {
+      setExporting(null);
+    }
+  }
+
   async function copyForAI() {
     const payload = sharePayload();
     if (!payload) return;
@@ -268,19 +302,30 @@ export function AdminVisitsInsights() {
         <span>Avg. position <strong>{current.position == null ? "—" : current.position.toFixed(1)}</strong></span>
         <span>GA4 last day <strong>{report.latestGA4Date ?? "—"}</strong></span>
       </div>
+      <div className="visits-complete-export" aria-label="Export complete analytics data">
+        <div className="visits-complete-export-heading">
+          <strong>Download all analytics</strong>
+          <small>All 5 periods, available daily trends, all returned Google search pages, all visited pages, live signals, PostHog and reporting limits.</small>
+        </div>
+        <div className="visits-full-download-actions">
+          <button type="button" disabled={exporting !== null}
+            onClick={() => void downloadComplete("csv")}>
+            {exporting === "csv" ? "Preparing CSV…" : "↓ Complete CSV"}
+          </button>
+          <button type="button" disabled={exporting !== null}
+            onClick={() => void downloadComplete("json")}>
+            {exporting === "json" ? "Preparing JSON…" : "↓ Complete JSON"}
+          </button>
+        </div>
+        <small className="visits-export-footnote">Both files are AI-readable and include every record the providers returned, not just the first rows shown on your phone. Full historical coverage remains limited by Google retention and API row caps.</small>
+      </div>
       <div className="visits-actions visits-primary-actions">
         <button type="button" disabled={refreshing} onClick={() => void fetchReport(range, true)}>{refreshing ? "Refreshing…" : "↻ Refresh"}</button>
-        <button type="button" onClick={() => void copyForAI()}>{copied ? "✓ Copied" : "Copy for AI"}</button>
+        <button type="button" onClick={() => void copyForAI()}>{copied ? "✓ Copied" : "Copy AI summary"}</button>
       </div>
       <details className="visits-export-tools">
-        <summary>Exports & privacy</summary>
+        <summary>Privacy & access</summary>
         <div className="visits-actions">
-          <button type="button" onClick={() => download("nigeria-guide-analytics-" + range + ".json", JSON.stringify(sharePayload(), null, 2))}>Export JSON</button>
-          <button type="button" onClick={() => {
-            const rows = [["page","impressions","google_clicks","search_ctr","avg_position"],
-              ...report.searchPages.map((p) => [p.page, p.impressions, p.clicks, p.ctr, p.position])];
-            download("nigeria-guide-search-pages-" + range + ".csv", rows.map((row) => row.map(csvCell).join(",")).join("\r\n"), "text/csv");
-          }}>Export search CSV</button>
           <button type="button" onClick={() => void lock()}>Lock insights</button>
         </div>
       </details>
@@ -468,7 +513,7 @@ export function AdminVisitsInsights() {
 
     <section className="admin-panel visits-share-panel">
       <div className="section-heading"><div><span className="eyebrow">Use these data for SEO improvements</span><h2>Share an evidence-based report</h2></div></div>
-      <p><strong>Copy report for AI</strong> creates a structured JSON snapshot with all five reporting periods, prior-period changes, 90-day daily trends, source freshness, top pages, low-CTR opportunities, GA4 views and live signals. Paste it into ChatGPT or another analysis tool to identify and prioritize improvements.</p>
+      <p><strong>Complete CSV</strong> and <strong>Complete JSON</strong> include all API-returned reporting rows across the five periods, source coverage, page-level details, daily trends and hourly signals. <strong>Copy AI summary</strong> is a shorter clipboard overview. Upload the downloaded file to ChatGPT to review trends and identify opportunities.</p>
       <p className="visits-footnote">No API keys or admin passwords are included. The information covers only what the connected providers returned when refreshed; Google can revise recent data.</p>
     </section>
   </div>;
