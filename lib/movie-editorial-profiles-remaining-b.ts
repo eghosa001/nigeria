@@ -9,21 +9,21 @@ type Entry = {
 const records: Record<string,Entry> = {
   "love-and-legacy-2026": {
     "story": [
-      "Love and Legacy follows Ene as she attempts to build a relationship with Obinna despite an awkward introduction to his family. Chinwe, Obinna's sister, is unconvinced that Ene will be a suitable partner and makes their meetings difficult. Winning approval becomes a challenge that affects the couple's own understanding of commitment.",
-      "The drama explores what happens when a relative's first impression starts to determine the course of a romance. Ene must decide how far to change herself to be accepted, while the family members need to confront whether their standards reflect concern or a desire for control."
+      "Love and Legacy begins after the death of the Obasi family patriarch. Obinna takes charge of the family business, even though his older sister Chinwe has spent years helping to manage it. The decision sharpens a longstanding dispute about competence and entitlement. Obinna then borrows heavily against company shares to fund a new venture, increasing the stakes of the siblings' disagreement when the expansion struggles.",
+      "Alongside that corporate conflict, Obinna's relationship with Ene introduces tensions about class and family acceptance. Chinwe's doubts about her brother's choices extend beyond his partner to his management of the business. What makes the film more than a routine romance is the way one set of decisions threatens family wealth, personal loyalty and the possibility of reconciliation. The synopsis does not disclose how the business crisis is resolved."
     ],
     "context": [
-      "This 2026 Nigerian film lists Uche Jombo, Omeche Oko and Victory Michael among its cast. The original full-length video is published through Uche Jombo TV, an authorised destination distinct from unrelated films with similar family-and-romance titles.",
-      "The available cast record confirms the credited performers and the synopsis names Ene, Chinwe and Obinna, but does not firmly map every actor to those characters. The guide avoids guessing those links; users can still identify the correct title through its publisher, year and central conflict."
+      "The 2026 Uche Jombo TV film lists Uche Jombo, Omeche Oko and Victory Michael among its cast. African Movies Database credits Uche Jombo as Chinwe, Victory Michael as Obinna, and Esther Akapo as director. Its production record also names Uche Jombo as producer and story contributor. These are attributed film-specific credits, not guessed from actor publicity images.",
+      "The original YouTube publisher remains the starting point for the full film, and the independent production record establishes the story's family-company conflict. This title should not be confused with wedding-film businesses or unrelated productions called Love and Legacy. The indexed guide should explain both the succession dispute and the romance rather than presenting the film solely as a battle for Chinwe's approval."
     ],
     "questions": [
       [
-        "Who are Ene and Chinwe in Love and Legacy?",
-        "Ene is seeking acceptance as Obinna's partner, while his sister Chinwe challenges the relationship."
+        "What is the central conflict in Love and Legacy (2026)?",
+        "After Obinna inherits leadership of the Obasi family company, his sister Chinwe questions his decisions as an ambitious financed venture puts the business at risk."
       ],
       [
-        "Where can I watch Love and Legacy (2026)?",
-        "A full-length upload is listed through the official Uche Jombo TV YouTube publisher."
+        "Who directed Love and Legacy starring Uche Jombo?",
+        "African Movies Database credits Esther Akapo as the director of this 2026 Uche Jombo TV drama."
       ]
     ]
   },
