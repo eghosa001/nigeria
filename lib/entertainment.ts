@@ -2683,14 +2683,13 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     cast: ["Uzor Arukwe","Osas Ighodaro","Ibrahim Chatta","Gabriel Afolayan","Mercy Aigbe","Femi Branch"],
     featuredCast: ["Uzor Arukwe","Osas Ighodaro","Ibrahim Chatta"],
     featured: true,
-    watchLinks: [{
-      platform: "Netflix",
-      label: "Check current Netflix Nigeria availability",
+    references: [{
+      label: "Netflix Nigeria — Colours of Fire territorial availability",
       href: "https://www.netflix.com/ng/title/82752912",
-      access: "subscription",
-      lastChecked: "2026-10-05",
-      note: "Netflix Nigeria's current local catalog lists this title. Direct title-page availability can vary by account or territory, so confirm inside Netflix before subscribing solely for this film."
-    }]
+      lastChecked: "2026-10-15",
+      note: "On 15 October 2026, Netflix's Nigerian title page showed this title as unavailable to watch in the country. A public catalogue page is not proof that playback is enabled."
+    }],
+    watchLinks: []
   },
   {
     slug: "king-of-thieves-2",
