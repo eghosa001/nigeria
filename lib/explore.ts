@@ -7012,58 +7012,78 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Ojukwu Bunker",
     "kind": "destination",
     "region": "Abia State",
-    "summary": "Plan an Ojukwu Bunker visit as a focused Umuahia modern-history stop, with current rehabilitation and access status checked before travelling.",
+    "summary": "Ojukwu Bunker is a Nigerian Civil War-era underground command and refuge site in Umuahia, distinct from the nearby National War Museum. State preservation authorities reported that retrofitting was around 80% complete in September 2026; visitors must confirm the actual public opening, guide access and underground safety before travelling.",
     "intro": [
-      "Ojukwu Bunker is one of Umuahia's most important Biafran-war heritage sites and supports a distinct history search intent separate from the National War Museum.",
-      "Federal preservation work has been active in 2026, so the first planning step is confirming what is open and how the site is currently interpreted."
+      "Visit the Ojukwu Bunker to understand how the Nigerian Civil War shaped Umuahia's wartime role. The historical value is the site itself: a preserved underground refuge associated with the Biafran administration, rather than a reconstructed battle scene or a collection of unrelated tourist activities.",
+      "Abia State's 2025 development plan describes the bunker as a three-bedroom underground wartime refuge with facilities including a kitchen. These are official descriptions of the historic site, not a promise that every room is currently accessible or furnished exactly as described after ongoing restoration. A local heritage guide can explain what has survived and what was altered.",
+      "During September 2026, Abia authorities reported that rehabilitation of the bunker and the National War Museum was approximately 80% complete and expected completion before year-end. An estimated completion date is not proof of a reopened public entrance. The right first step is to contact the responsible heritage office or museum and ask specifically whether public escorted bunker entry is permitted on your proposed day.",
+      "This is a sensitive Nigerian Civil War location. Visitors interested in military history, heritage conservation and social memory may find it meaningful, but it is not a casual amusement park. A balanced itinerary treats surviving physical evidence, official interpretation and the human cost of the war respectfully, including the perspectives of civilians and multiple communities."
     ],
     "bestFor": [
-      "Modern history",
-      "Biafran history",
-      "Umuahia",
-      "Heritage"
+      "Nigeria/Biafra Civil War history",
+      "Umuahia heritage",
+      "Museum and archive learning",
+      "Heritage conservation"
     ],
     "highlights": [
       {
-        "name": "Historic bunker",
-        "detail": "The site provides direct physical context for the Biafran period and wartime administration."
+        "name": "Underground command-era site",
+        "detail": "The state development plan identifies a surviving wartime underground complex with domestic and command-related spaces. Ask the guide which original structures remain and which sections have been rehabilitated rather than assuming all historical rooms are accessible."
       },
       {
-        "name": "War Museum connection",
-        "detail": "The National War Museum is the natural companion stop for a fuller history day."
+        "name": "National War Museum comparison",
+        "detail": "The War Museum's wider military exhibits and the bunker provide different historical viewpoints: the museum preserves collections while the underground site makes the constraints of wartime administration tangible. Confirm separate access before planning to visit both."
       },
       {
-        "name": "Preservation work",
-        "detail": "Current rehabilitation can improve interpretation while also changing access."
+        "name": "2026 conservation work",
+        "detail": "The state reported approximately 80% rehabilitation completion in September, with work expected before the end of 2026. Check for safe access, ongoing construction barriers and available interpretation; do not rely on completion projections as visitor opening times."
       },
       {
-        "name": "Sensitive history",
-        "detail": "Use careful, evidence-based interpretation rather than sensational storytelling."
+        "name": "Understanding wartime Umuahia",
+        "detail": "Use the visit to ask why wartime administrative locations were concentrated around Umuahia and how regional history is represented today. Separate documented historic facts from legends and promotional tour stories."
       }
     ],
     "planning": [
       {
-        "label": "Confirm access first",
-        "detail": "Check the current rehabilitation and opening status before travelling."
+        "label": "Call before paying for transport",
+        "detail": "Check with the National War Museum or Abia State cultural/heritage authorities whether the bunker is open to the public, whether an escorted tour is required, what entrance or meeting point to use and whether there are restricted rooms. No universal ticket price or reliable fixed opening time has been verified."
       },
       {
-        "label": "Use credible interpretation",
-        "detail": "Prefer museum, federal or scholarly context for contested historical details."
+        "label": "Umuahia history half-day",
+        "detail": "If both sites confirm opening, start with the National War Museum's broader context, then visit the bunker with a guide to connect displays to the original wartime environment. If only one is open, concentrate on the confirmed site rather than trespassing into a construction area."
       },
       {
-        "label": "Allow time to read",
-        "detail": "This is a history-heavy visit and benefits from a slower pace."
+        "label": "Underground access and comfort",
+        "detail": "Ask about stair access, lighting, ventilation, handrails, footwear and suitability for mobility-limited visitors before travelling. The published historical descriptions do not establish the current accessibility of rooms under repair."
       },
       {
-        "label": "Keep distant Abia sites separate",
-        "detail": "Arochukwu deserves its own road-trip day."
+        "label": "Respect sensitive interpretation",
+        "detail": "Treat the visit as civil-war learning. Ask for sources behind disputed dates or stories, respect memorial rules, and ask permission before photographing inside or recording visitors or staff."
+      },
+      {
+        "label": "Plan a realistic backup",
+        "detail": "If renovation blocks entry, use available museum exhibitions or other confirmed Umuahia heritage stops and consider a later return. Arochukwu's heritage attractions require their own travel planning rather than a rushed add-on."
+      },
+      {
+        "label": "Use the official state update",
+        "detail": "Abia's 2026 heritage announcement and the state development plan describe the sites and restoration, but neither provides a live ticket counter. Recheck the state or museum source shortly before travel rather than relying on old social-media listings."
       }
     ],
     "source": {
       "label": "Federal Ministry of Information — Abia heritage restoration",
       "href": "https://fmino.gov.ng/federal-governments-war-museum-and-ojukwu-bunker-get-major-historical-preservation-boost-in-abia/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "Abia State Development Plan — tourism and heritage inventory (2025)",
+        "href": "https://abiastate.gov.ng/wp-content/uploads/2025/12/Abia-State-Development-Plan_Abridged-Version_29Sep2025.pdf"
+      },
+      {
+        "label": "News Agency of Nigeria — announced museum and bunker rehabilitation",
+        "href": "https://nannews.ng/abia-govt-to-retrofit-ojukwu-bunker-national-war-museum-commissioner/"
+      }
+    ]
   },
   {
     "slug": "national-museum-unity-ibadan-guide",
