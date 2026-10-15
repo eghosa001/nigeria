@@ -45,7 +45,7 @@ jobs:
           fi
           git fetch origin "$BASE_SHA" --depth=1
           changed="$(git diff --name-only "$BASE_SHA" HEAD)"
-          if printf '%s\\n' "$changed" | grep -Eq '^(data/(services|youtube-channel-cache)\\.json|lib/(content-freshness|content-health|entertainment|entertainment-extras|explore|explore-places)\\.ts|scripts/check-freshness\\.ts); then
+          if echo "$changed" | grep -Eq '^(data/(services|youtube-channel-cache)[.]json|lib/(content-freshness|content-health|entertainment|entertainment-extras|explore|explore-places)[.]ts|scripts/check-freshness[.]ts)$'; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "Jobs and unrelated changes use their own change-scoped checks; full freshness audit remains scheduled."
