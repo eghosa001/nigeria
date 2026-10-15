@@ -89,6 +89,8 @@ async function loadDetailShard(videoId: string) {
 
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
+// Match the packed-catalog rejection rule for D1-backed and detail records.
+const publisherPromoSynopsis = /\b(?:if you are a subscriber|turn on (?:post )?notifications|click(?:ing)? (?:on )?the [\"'“”]?bell|on (?:this|our) (?:youtube )?channel|welcome to (?:this|our) (?:youtube )?channel|you will enjoy the best of|(?:we|our channel) (?:bring|brings|provide|provides|present|presents) (?:you )?(?:the )?best|produces (?:the )?(?:best|latest) (?:nollywood|nigerian|african) movies?)\b/i;
 const reviewNonMovieTitle = /\b(trailer|teaser|concert|live\s*stream|livestream|watch\s+party|webinar|episode\s*\d+|\bep\.?\s*\d+|season\s*\d+|interview|reaction|music\s+video|making\s+of)\b/i;
 const reviewPromoText = /\b(subscribe|follow\s+us|youtube\s+channel|watch\s+more|like\s*(?:,|and|&)\s*share|don['’]?t\s+forget|do\s+not\s+forget)\b/i;
 
@@ -166,6 +168,7 @@ function normalizeSynopsis(movie: GeneratedRecord) {
     text.length < 55 ||
     generatedSynopsisHype.test(text) ||
     generatedSynopsisSeo.test(text) ||
+    publisherPromoSynopsis.test(text) ||
     /^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(text) ||
     /\p{Extended_Pictographic}/u.test(text)
   ) return fallbackSynopsis(movie);
@@ -308,6 +311,7 @@ export function hasSubstantiveYouTubeDetailSynopsis(movie: Pick<YouTubeDetailMov
   const synopsis = movie.synopsis.trim();
   return synopsis.length >= 110 &&
     !/ is a full-length Nigerian film published by /i.test(synopsis) &&
+    !publisherPromoSynopsis.test(synopsis) &&
     !/^(?:watch|stream|subscribe|like and share)\b/i.test(synopsis);
 }
 
