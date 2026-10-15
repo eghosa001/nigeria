@@ -31,4 +31,12 @@ export const officialJobPostingEvidence20261015: Record<string, {
     },
     sourceUrl: "https://careers.dangote.com/job/Head-Office-Lagos-Audit-Analyst-Head/1374485457/",
   },
+  "olam-caraway-planning-manager-nigeria-2026": {
+    posting: {
+      jobTitle: "Planning Manager",
+      datePosted: "2026-10-04",
+      locations: [{ country: "NG" }],
+    },
+    sourceUrl: "https://careers.olamgroup.com/job/OKFOOD-1/1056677366/",
+  },
 };
