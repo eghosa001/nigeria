@@ -81,7 +81,7 @@ export default function EntertainmentReleasesPage() {
             <div className="service-grid">
               {endedItems.map((item) => (
                 <article className="service-card" key={item.id}>
-                  <div className="card-topline"><span>{labels[item.effectiveStatus]}</span><span>{item.platform}</span></div>
+                  <div className="card-topline"><span>{item.kind === "cinema" ? "Past showtimes" : labels[item.effectiveStatus]}</span><span>{item.platform}</span></div>
                   <h3>{item.title}</h3>
                   <p>{item.summary}</p>
                   <div className="service-meta">
