@@ -11,7 +11,7 @@ import { publicServices } from "../lib/data";
 import { exploreGuides } from "../lib/explore";
 import { explorePlaces } from "../lib/explore-places";
 import { entertainmentTitles } from "../lib/entertainment";
-import { entertainmentPeople } from "../lib/entertainment-extras";
+import { entertainmentPeople, hasIndexablePersonEditorial, getPersonEditorialProfile } from "../lib/entertainment-extras";
 import { seriesTitles } from "../lib/series";
 import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
 import { careerGuides } from "../lib/career-guides";
@@ -96,17 +96,14 @@ for(const s of seriesTitles){
     sourceCount:s.sources.length,dateChecked:s.sources.map(x=>x.lastChecked).sort().at(-1) ?? null});
 }
 for(const p of entertainmentPeople){
-  // Person pages dynamically render linked film credits and their cited
-  // movie sources. Audit the same material that actually appears in the page,
-  // rather than treating every profile as an unsourced 11-word biography.
-  const linked = entertainmentTitles.filter(t =>
-    p.knownForSlugs.includes(t.slug) || t.cast.includes(p.name) || t.directors?.includes(p.name));
-  const cited = linked.flatMap(t => t.references ?? []).filter(ref => ref.href.startsWith("https://"));
-  const dates = cited.map(ref => ref.lastChecked).filter(Boolean).sort();
+  // Movie synopses and title citations do not constitute a sourced biography.
+  // Only the independently authored person-specific dossier is indexable.
+  const dossier = getPersonEditorialProfile(p.slug);
+  const published = hasIndexablePersonEditorial(p.slug);
   add({pillar:"Entertainment",group:"person",id:p.slug,title:p.name,
-    url:cited.length ? "/entertainment/people/"+p.slug : null,indexable:cited.length > 0,
-    body:join(p.summary,linked.map(t => t.title+" "+t.year+" "+(t.cast.includes(p.name) ? "cast" : t.directors?.includes(p.name) ? "director" : "linked film") + " "+t.synopsis)),
-    sourceCount:cited.length,dateChecked:dates.at(-1) ?? null});
+    url:published ? "/entertainment/people/"+p.slug : null,indexable:published,
+    body:dossier ? join(p.summary,dossier.intro,dossier.sections.flatMap(x => x.paragraphs)) : p.summary,
+    sourceCount:dossier?.sources.length ?? 0,dateChecked:dossier?.lastReviewed ?? null});
 }
 for(const j of jobOpportunities){
   add({pillar:"Jobs",group:"job-listing",id:j.slug,title:j.title,url:isIndexableJobOpportunity(j)?"/jobs/"+j.slug:null,
