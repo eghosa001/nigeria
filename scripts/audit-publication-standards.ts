@@ -11,7 +11,7 @@
 import { execFileSync } from "node:child_process";
 import { publicServices, agencies } from "../lib/data";
 import { exploreGuides } from "../lib/explore";
-import { explorePlaces } from "../lib/explore-places";
+import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 import { entertainmentTitles } from "../lib/entertainment";
 import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registry";
 import { seriesTitles } from "../lib/series";
@@ -149,14 +149,13 @@ for (const movie of youtubeMovieLibrary) {
     "/entertainment/youtube/" + movie.videoId, movie.title, indexed, issues);
 }
 
-const placesByGuide = new Map<string, typeof explorePlaces>();
-for (const place of explorePlaces) {
-  const existing = placesByGuide.get(place.guideSlug) ?? [];
-  placesByGuide.set(place.guideSlug, [...existing, place]);
-}
+// Match the Tour page renderer's real card selection. Many destination and
+// itinerary guides reuse canonical place records via sharedGuidePlaceSlugs.
+// Counting only place.guideSlug here misreported hundreds of genuine on-page
+// maps as absent; do not create duplicate place records to satisfy this audit.
 for (const guide of exploreGuides) {
   const issues: Finding[] = [];
-  const places = placesByGuide.get(guide.slug) ?? [];
+  const places = getExplorePlacesForGuide(guide.slug).filter(place => Boolean(place.area.trim() && place.address.trim() && urlGood(place.source?.href)));
   const allSources = [guide.source, ...(guide.sources || [])].filter(Boolean);
   const raw = [...guide.intro, ...guide.planning.map(x => x.detail), ...guide.highlights.map(x => x.detail)].join(" ");
   if (!allSources.length || allSources.some(x => !urlGood(x?.href)))
@@ -169,7 +168,7 @@ for (const guide of exploreGuides) {
   if (guide.planning.length < 3)
     issues.push(blocker("tour-trip-incomplete", "The reader needs an actionable route, access and planning decisions."));
   if (!places.length && guide.kind !== "event")
-    issues.push(review("mapped-place-evidence-review", "Confirm guide-specific stops and map/access information; do not infer a factual error from missing separate place records."));
+    issues.push(review("mapped-place-evidence-review", "No source-attributed map card is rendered for this guide. Verify a genuinely relevant public stop and access first; never pad with unrelated nearby venues."));
   if (guide.bestFor.length < 2) issues.push(review("poor-visitor-fit", "Explain the audience and reasons to choose or skip this trip."));
   if (uniqueText(guide.highlights.map(x => x.detail)) < guide.highlights.length)
     issues.push(review("repeated-attraction-copy", "Distinctive stops should not reuse the same sentences."));
