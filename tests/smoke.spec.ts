@@ -627,11 +627,11 @@ test("official portal reference page exposes direct authorities and guide routes
 test("verified editorial fixes explain the source and leave unverified facts unknown", async ({ page }) => {
   await page.goto("/explore/agulu-lake-guide");
   await expect(page.getByText("Do not assume planned lake facilities are operating")).toBeVisible();
-  await expect(page.getByRole("link", { name: /August 2026 Agulu Lake development announcement/ })).toBeVisible();
+  await expect(page.locator("#trip-sources a[href*=\"mocet.anambrastate.gov.ng\"]").first()).toBeVisible();
 
   await page.goto("/explore/igun-street-guide");
   await expect(page.getByText("Arrange workshop access respectfully")).toBeVisible();
-  await expect(page.getByRole("link", { name: /Edo State Government.*bronze-casting guild/ })).toBeVisible();
+  await expect(page.locator("#trip-sources a[href*=\"edostate.gov.ng\"]").first()).toBeVisible();
 
   await page.goto("/jobs/dangote-ibese-mechanical-technician-l12-2026");
   await expect(page.getByText("Employer closing date")).toBeVisible();
