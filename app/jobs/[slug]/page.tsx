@@ -33,6 +33,14 @@ function compactJobSnippet(value: string, maxLength: number) {
 
 // Keep Lagos careers discovery separate from an advertised, open vacancy.
 const jobSeoOverrides: Record<string, { title: string; description: string }> = {
+  "who-careers-nigeria": {
+    title: "WHO Careers Nigeria: Official Recruitment Portal",
+    description: "Use the official WHO careers portal to search health, programme and operations jobs in Nigeria. Check live vacancies, eligibility and application steps.",
+  },
+  "capitalsage-sageforge-graduate-programme-2026": {
+    title: "CapitalSage SageForge Graduate Programme 2026",
+    description: "CapitalSage SageForge 2026 graduate programme: verify the employer notice, eligibility, current application status and official application route before applying.",
+  },
   "lagos-state-civil-service-careers": {
     title: "Lagos State Civil Service Jobs: Official Recruitment Guide",
     description: "Find Lagos State Civil Service roles through the official Job Opportunities directory. Check live vacancies, eligibility and how to apply.",
