@@ -157,6 +157,13 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
   const related = getRelatedExploreGuides(guide);
   const places = getExplorePlacesForGuide(guide.slug);
   const questions = getExploreQuestions(guide);
+  // Source fields, not invented admission prices or directions, determine
+  // whether this destination's access information is actually established.
+  const visitorEvidence = [...guide.intro, ...guide.planning.map((x) => x.detail),
+    ...guide.highlights.map((x) => x.detail)].join(" ");
+  const hasArrivalGuidance = /transport|taxi|road|travel|bus|drive|route|walk|access|journey|getting|arriv|train|flight/i.test(visitorEvidence);
+  const hasOperatingGuidance = /hour|ticket|fee|admission|cost|price|book|open|season|date|entry|timing/i.test(visitorEvidence);
+  const hasIndependentSource = Boolean(guide.sources?.some((source) => source.href !== guide.source?.href));
   const destinationPhoto = destinationPhotos[guide.slug];
 
   const breadcrumbLd = {
@@ -337,10 +344,30 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <div className="section-heading">
             <div>
               <span className="eyebrow">Address, maps & cost</span>
-              <h2>{guide.kind === "event" ? "Venues and nearby planning stops for " + guide.shortTitle : guide.kind === "city" ? places.length + " places to visit in " + guide.shortTitle + " — attractions, food & stays" : guide.shortTitle + ": places to visit, eat & stay"}</h2>
-              <p>Prices are marked as current estimates or variable instead of being presented as permanent facts.</p>
+              <h2>{places.length
+                ? guide.kind === "event" ? "Venues and nearby planning stops for " + guide.shortTitle
+                  : guide.kind === "city" ? places.length + " places to visit in " + guide.shortTitle + " — attractions, food & stays"
+                    : guide.shortTitle + ": places to visit, eat & stay"
+                : guide.shortTitle + ": location and access information"}</h2>
+              <p>{places.length
+                ? "Prices and opening details come from the linked place records and may change; verify with each operator."
+                : "No separate address, ticket price or opening-hours record is independently verified for this guide. These details are not invented."}</p>
             </div>
           </div>
+          {!places.length ? (
+            <div className="info-box">
+              <h3>How to verify the correct location before travelling</h3>
+              <p>This guide identifies {guide.shortTitle} in {guide.region}, Nigeria, but we do not have a verified, guide-specific entrance address or public admission timetable. A location search is not a confirmed booking, open gate or safe route.</p>
+              <div className="related-links">
+                {guide.kind !== "event" ? (
+                  <a href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(guide.shortTitle + ", " + guide.region + ", Nigeria")}
+                    target="_blank" rel="noopener noreferrer">Search for the site on Google Maps (confirm listing with operator) ↗</a>
+                ) : null}
+                {guide.source ? <a href={guide.source.href} target="_blank" rel="noopener noreferrer">Check source: {guide.source.label} ↗</a> : null}
+              </div>
+              <p>Before departure, confirm the actual entrance, who grants access, recent conditions and any tickets with the local operator or responsible authority. Do not pay someone using an unverified map pin or forwarded screenshot.</p>
+            </div>
+          ) : null}
           <div className="explore-place-grid">
             {places.map((place) => (
               <article className="explore-place-card explore-place-card-detail" id={"place-" + place.slug} key={place.slug}>
@@ -398,6 +425,14 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       <section className="section premium-dark-section" id="planning">
         <div className="container">
           <div className="section-heading section-heading-light"><div><span className="eyebrow">Before you go</span><h2>{guide.kind === "itinerary" ? "Before following this route" : guide.kind === "event" ? "Before attending " + guide.shortTitle : "Before visiting " + guide.shortTitle}</h2></div></div>
+          {(!hasArrivalGuidance || !hasOperatingGuidance) ? (
+            <div className="info-box">
+              <h3>Information not yet verified for this visit</h3>
+              {!hasArrivalGuidance ? <p><strong>Getting there:</strong> The cited guidance does not establish a specific, current arrival route. Confirm the entrance and local road or transport conditions with the responsible operator before leaving.</p> : null}
+              {!hasOperatingGuidance ? <p><strong>Admission and timing:</strong> A reliable current price, operating schedule or season has not been established here. Ask for the official current rules; do not assume it is free, open daily or bookable.</p> : null}
+              <p>These unknowns are shown explicitly rather than replaced by generic guesses. Reviewed information: {guide.lastReviewed}.</p>
+            </div>
+          ) : null}
           <div className="compact-planning-list">
             {guide.planning.map((item) => (
               <details key={item.label}>
@@ -415,6 +450,9 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
             <span className="eyebrow">Source &amp; verification</span>
             <h2>Sources and live checks for {guide.shortTitle}</h2>
             <p>This {guide.kind} guide was reviewed on {guide.lastReviewed}. MyNigeriaGuide does not treat old prices, social posts or copied travel lists as permanent facts; confirm dynamic details close to your travel date.</p>
+            {!hasIndependentSource ? (
+              <p className="job-muted">Source coverage: this guide does not yet cite a second independent visitor or reporting source. The named primary reference supports the published facts, but does not by itself confirm current visitor experiences, opening hours or road access.</p>
+            ) : null}
             {(guide.source || guide.sources?.length) ? (
               <div className="related-links">
                 {guide.source ? <a href={guide.source.href} target="_blank" rel="noreferrer">{guide.source.label} ↗</a> : null}
