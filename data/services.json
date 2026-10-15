@@ -218,7 +218,7 @@
     "slug": "nin-enrolment",
     "title": "How to enrol for a NIN",
     "shortTitle": "NIN enrolment",
-    "summary": "NIMC states that NIN enrolment is free and is open to Nigerian citizens and legal residents from birth onward.",
+    "summary": "NIN enrolment is free for eligible Nigerian citizens and legal residents, including children. NIMC records demographic and biometric information, checks for an existing identity record, then issues a unique NIN. Use the official NIMC instructions and confirm the required applicant-category documents before visiting a centre.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "FREE",
@@ -230,30 +230,31 @@
       "Applicant demographic and contact details collected during enrolment; NIMC does not publish one universal supporting-document list for every applicant category, so follow the exact centre/self-service prompt for the identity record it requests"
     ],
     "steps": [
-      "Use a NIMC enrolment centre or the official enrolment route made available by NIMC.",
-      "Provide the required demographic information.",
+      "Read NIMC's official NIN enrolment instructions, choose the assisted or available self-service route, and confirm where your applicant category must complete identity verification or biometric capture.",
+      "At the enrolment route selected, provide the personal and demographic details requested by NIMC and carefully review names, dates and contact details before the record is submitted for biometric processing.",
       "Complete biometric capture, including fingerprints, facial image and signature where applicable.",
       "Collect the transaction/NIN slip after successful processing."
     ],
     "notes": [
       "NIMC states that a NIN is unique and is not reassigned to another person.",
-      "NIN collection requires biometric verification and cannot be collected by proxy."
+      "NIN collection requires biometric verification and cannot be collected by proxy.",
+      "NIMC describes a transaction slip and a separate NIN slip after the data is checked; enrolment itself is free, but later data changes or lost-slip reissuance may carry separate charges."
     ],
     "sources": [
       {
         "label": "NIMC National Identification Number",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/NIN",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-15"
       },
       {
         "label": "NIMC Fees",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/fees",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-15"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "NIN enrolment",
       "How to enrol for a NIN",
@@ -1597,7 +1598,7 @@
     "slug": "neco-e-verify",
     "title": "How to verify or confirm a NECO result with e-Verify",
     "shortTitle": "NECO e-Verify",
-    "summary": "NECO's official e-Verify workflow for individual result verification/confirmation.",
+    "summary": "NECO's official e-Verify portal lets an individual, employer or institution request secure confirmation of a NECO examination result. Choose the appropriate verifier account, enter the candidate's examination details, follow the displayed payment/token instructions and collect the verification report when it is ready.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Payment token required",
@@ -1616,17 +1617,19 @@
       "Monitor the e-Verify account for completion, then download the generated report when available and check the recipient email if email delivery was selected."
     ],
     "notes": [
-      "NECO says the report can also be sent to the provided recipient email."
+      "NECO says the report can also be sent to the provided recipient email.",
+      "The live NECO portal separates individual verification from institutional verification, with different account registration and login links. Do not start under the wrong applicant category.",
+      "If the account or report fails to load, use the NECO e-Verify support contact displayed on the portal rather than paying an unofficial verification agent."
     ],
     "sources": [
       {
         "label": "NECO e-Verify",
         "agency": "National Examinations Council",
         "url": "https://everify.neco.gov.ng/index.php",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-15"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "NECO e-Verify",
       "How to verify or confirm a NECO result with e-Verify",
@@ -1919,7 +1922,7 @@
     "slug": "nysc-relocation",
     "title": "How NYSC relocation works",
     "shortTitle": "NYSC relocation",
-    "summary": "NYSC's official description of online relocation and concessional grounds.",
+    "summary": "NYSC manages requests for relocation through its official electronic process during or after the orientation course. Serving corps members should use their own NYSC portal records, select an eligible ground such as a qualifying marital or health circumstance where applicable, provide the documents required for that ground and await an official NYSC decision.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Use the official NYSC portal process",
@@ -1938,17 +1941,18 @@
       "If approved, follow the new posting or relocation instruction shown by NYSC; if unresolved, use the official NYSC channel rather than paying a third party to change the posting."
     ],
     "notes": [
-      "NYSC states relocation is processed electronically and describes marital and health grounds among concessional cases."
+      "NYSC states relocation is processed electronically and describes marital and health grounds among concessional cases.",
+      "NYSC states that relocations and cancellations are vetted by its responsible offices. Submitting supporting documents is not itself approval to report to another state or employer."
     ],
     "sources": [
       {
         "label": "NYSC Corps Mobilization",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/corpmob.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-15"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "NYSC relocation",
       "How NYSC relocation works",
@@ -2661,13 +2665,13 @@
     "slug": "waec-result-confirmation-overseas",
     "title": "How to confirm a WAEC result for an overseas institution",
     "shortTitle": "WAEC overseas result confirmation",
-    "summary": "WAEC's current FAQ and confirmation help page list ₦39,000 per result for overseas institutions, plus the required documents and courier arrangements.",
+    "summary": "WAEC's result-confirmation request is delivered directly to the institution, not handed back to the candidate. Its live Request Management System lists ₦52,000 for the International category and ₦39,000 for Embassy/African Countries, with courier charges separate. An older WAEC FAQ describes ₦39,000 for overseas institutions generally; confirm the recipient category and final amount on WAEC's live request portal before paying.",
     "category": "Education",
     "agencySlug": "waec",
-    "feeLabel": "₦39,000 per result/recipient",
-    "feeNote": "WAEC's FAQ/help page lists ₦39,000 for overseas institutions. Courier charges are separate and depend on destination and courier.",
-    "status": "verified",
-    "officialPortal": "https://www.waecnigeria.org/faq",
+    "feeLabel": "₦39,000 or ₦52,000 by destination category",
+    "feeNote": "WAEC Request Management System: Embassy and African Countries ₦39,000; International ₦52,000; local ₦19,500. Courier and any separately required service/token charges must be confirmed on the official checkout. WAEC's separate FAQ still lists ₦39,000 for overseas institutions, so follow the exact current request category shown on the payment portal.",
+    "status": "conflict",
+    "officialPortal": "https://request.waec.ng/Home",
     "requirements": [
       "Copy of certificate or online result printout",
       "Sworn affidavit containing the candidate's full name, examination and examination year",
@@ -2676,30 +2680,37 @@
       "WAEC scratch card as specified by WAEC"
     ],
     "steps": [
-      "Prepare WAEC's listed confirmation documents.",
-      "Use WAEC's official confirmation process and pay the ₦39,000 overseas administrative charge shown in the current FAQ/help guidance.",
-      "Arrange the required courier service and pay the separate courier charge.",
-      "Keep the submission evidence and recipient/institution details for follow-up."
+      "Check WAEC's official result-confirmation requirements and prepare a copy of the certificate/result, sworn court affidavit with exam details, two candidate passport photographs, two 9×4 envelopes and any required scratch-card details.",
+      "Open WAEC's official Request Management System, select the correct Confirmation of Result destination class (Embassy/African Countries or International), and check the displayed service-token and administrative charges before paying.",
+      "Specify the receiving institution and destination accurately, arrange delivery using WAEC's stated courier process, and confirm the separate courier amount before authorising any payment.",
+      "Keep the official service request reference, payment and courier receipt for follow-up; WAEC sends the confirmed result to the designated institution instead of handing the document to the applicant."
     ],
     "notes": [
       "WAEC sends confirmed results directly to the institution or establishment rather than handing them to the candidate.",
-      "One separate WAEC requirements article displays ₦39,000,000, which is inconsistent with WAEC's FAQ/help pages and appears to be a typographical error; this guide follows the repeated ₦39,000 figure."
+      "WAEC's older FAQ quotes ₦39,000 for overseas institutions while its current request portal separates ₦39,000 Embassy/African Countries from ₦52,000 International. Another WAEC article displays ₦39,000,000 for international confirmation, inconsistent with both routes; do not rely on that apparent typographical error or pay from a third-party link.",
+      "WAEC's request portal distinguishes a token for information from a token to make a service request. Check the purpose before buying because an information-only token does not itself submit a result-confirmation application."
     ],
     "sources": [
       {
-        "label": "WAEC Nigeria FAQ",
+        "label": "WAEC Request Management System — current service categories",
         "agency": "West African Examinations Council Nigeria",
-        "url": "https://www.waecnigeria.org/faq",
-        "lastChecked": "2026-09-28"
+        "url": "https://request.waec.ng/Home",
+        "lastChecked": "2026-10-15"
       },
       {
-        "label": "WAEC Confirmation of Result Requirements",
+        "label": "WAEC Nigeria confirmation FAQ",
+        "agency": "West African Examinations Council Nigeria",
+        "url": "https://www.waecnigeria.org/faq?page=1",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "WAEC confirmation documentary requirements",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/article/requirements-confirmation-result-school-candidates",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-15"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "WAEC overseas result confirmation",
       "How to confirm a WAEC result for an overseas institution",
