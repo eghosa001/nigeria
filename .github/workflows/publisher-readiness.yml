@@ -4,16 +4,31 @@ on:
   workflow_dispatch:
   pull_request:
     paths:
+      # Every changed publication source, not only one file naming convention.
+      - "data/**/*.json"
+      - "data/*.json"
+      - "lib/data.ts"
+      - "lib/service*.ts"
+      - "lib/agency*.ts"
+      - "lib/entertainment*.ts"
+      - "lib/movie-*.ts"
+      - "lib/series*.ts"
+      - "lib/youtube*.ts"
+      - "lib/explore*.ts"
+      - "lib/destination*.ts"
+      - "lib/jobs*.ts"
+      - "lib/job*.ts"
+      - "lib/career*.ts"
+      # Changed user-visible page structure can affect publisher eligibility.
+      - "app/services/**"
+      - "app/agencies/**"
+      - "app/entertainment/**"
+      - "app/explore/**"
+      - "app/jobs/**"
       - "scripts/audit-publisher-readiness.ts"
       - "scripts/audit-legacy-content.ts"
       - "scripts/audit-publication-standards.ts"
       - "docs/FOUR_PILLAR_PUBLICATION_STANDARD.md"
-      - "lib/agency-indexing.ts"
-      - "lib/youtube-editorial-dossiers.ts"
-      - "data/services*.json"
-      - "lib/entertainment-*.ts"
-      - "lib/explore*.ts"
-      - "lib/jobs*.ts"
       - ".github/workflows/publisher-readiness.yml"
 
 permissions:
