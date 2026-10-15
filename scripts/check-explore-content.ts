@@ -16,8 +16,14 @@ for (const guide of exploreGuides) {
   if (!guide.source?.href.startsWith("https://")) errors.push(`${guide.slug}: needs an https verification source`);
   if (!/^2026-\d{2}-\d{2}$/.test(guide.lastReviewed)) errors.push(`${guide.slug}: invalid lastReviewed`);
 
+  // Do not incentivise filler: a researched destination can have one real
+  // landmark or no independently established public venue. Relevance and
+  // source truth matter more than a quota of three unrelated attractions.
   const places = getExplorePlacesForGuide(guide.slug);
-  if (places.length < 3) errors.push(`${guide.slug}: expected at least 3 mapped places, found ${places.length}`);
+  const seenGuidePlaces = new Set(places.map(place => place.slug));
+  if (seenGuidePlaces.size !== places.length) {
+    errors.push(`${guide.slug}: duplicate location cards add no independent reader value`);
+  }
 }
 
 // Four pages were verified individually against current primary heritage,
@@ -83,6 +89,20 @@ if (!dufuna || !/do not travel/i.test([dufuna.summary, ...dufuna.intro].join(" "
     !dufuna.planning.some(x => /hours|ticket|admission/i.test(x.detail) && /not|no|unknown|unverified/i.test(x.detail)) ||
     !dufuna.planning.some(x => /second.oldest|third.oldest|rank/i.test(x.detail) && /different|cautious|sources|claim/i.test(x.detail))) {
   errors.push("Dufuna Canoe must retain date-specific excavation history, Yobe safety warning and honest unknown exhibit access.");
+}
+
+// A prehistoric findspot cannot be represented as the museum entrance.
+// Dufuna was previously padded with unrelated wildlife and fishing festivals
+// to satisfy a three-card quota. Its only mapped reference is now the
+// historically documented Damaturu preservation area, explicitly unbookable.
+const dufunaCards = getExplorePlacesForGuide("dufuna-canoe-heritage-guide");
+if (dufunaCards.length !== 1 || dufunaCards[0]?.slug !== "dufuna-canoe-heritage-yobe" ||
+    !/Damaturu/.test(dufunaCards[0]?.address ?? "") ||
+    /Dufuna, Yobe State, Nigeria/.test(dufunaCards[0]?.address ?? "") ||
+    !/unverified|not verified|no verified|not a verified/i.test(
+      [dufunaCards[0]?.summary, dufunaCards[0]?.cost].join(" ")) ||
+    dufunaCards[0]?.source.href !== "https://yobeinvest.ng/wp-content/uploads/2025/09/Invest-in-Yobe.pdf") {
+  errors.push("Dufuna mapped card must cite actual Damaturu preservation, not imply public exhibition or add unrelated Yobe attractions.");
 }
 
 // Search Console already has impressions for the older URL. Keep one

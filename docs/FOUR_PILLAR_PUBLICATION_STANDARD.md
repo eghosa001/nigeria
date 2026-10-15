@@ -101,6 +101,15 @@ specific word count, score or schema. Google's review decision is independent.
 - **Validation:** verify individual place identity and map/official source;
   distinguish active attractions from nearby landmarks and closed facilities.
   Avoid duplicating near-identical state/city pages solely for more URLs.
+- **No place-card quotas or misleading proximity:** an archaeological artefact,
+  sacred location or heritage site may have one properly sourced reference or
+  none, not three unrelated state attractions added to fill a layout. State
+  clearly whether a map refers to the historical findspot, preservation site,
+  visitor entrance or an approximate area; do not imply any is the same place.
+  Map links and a historic tourism directory are not evidence that a venue is
+  open, safe, priced or conveniently reachable. For regions under current
+  do-not-travel warnings, label mapping as research-only and avoid presenting
+  suggested local excursions or bookable itineraries.
 
 ## Jobs and Careers: verified application pathways
 - **Strict types:** individual live vacancy; recruitment programme; employer
