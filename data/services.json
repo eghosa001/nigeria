@@ -2086,7 +2086,7 @@
       "Use the portal's Check Status or payment-reference option after processing. NPC says certificates can be downloaded once after a successful application; use its reprint route if you need another copy rather than starting a duplicate attestation."
     ],
     "notes": [
-      "On 15 October 2026, the formerly published direct birth-attestation service hostname did not resolve from the site's link-validation environment. Use NPC's main website and its Services directory or official contact channels. Do not treat an old direct portal link as proof that the application is currently accepting submissions.",
+      "On 15 October 2026, the earlier direct birth-attestation service address did not resolve during website link validation. Use NPC's main website and its Services directory or official contact channels. Do not treat an old direct portal link as proof that the application is currently accepting submissions.",
       "The two services cover different ages: NPC attestation is for people aged 18 and above, whereas child birth registration covers ages 0–17. An online convenience charge for one route must not be presented as the price of all NPC birth services.",
       "The temporary Birth ID issued to applicants without a NIN is not a replacement for an NIN. NPC says it is used during subsequent NIMC enrolment and cannot be validated as an NIN on NIMC's modification portal.",
       "If Check Status says “No Record Found”, NPC says that function works after the attestation process has been successfully completed. Use your original payment reference or the portal's resume option before considering another payment.",
@@ -2094,10 +2094,10 @@
     ],
     "sources": [
       {
-        "label": "NPC Birth Attestation Self-Service",
+        "label": "NPC — official services and entry point",
         "agency": "National Population Commission",
-        "url": "https://attestation.nationalpopulation.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "url": "https://www.nationalpopulation.gov.ng/",
+        "lastChecked": "2026-10-15"
       },
       {
         "label": "NPC — account, age range, approval and reprint guidance",
