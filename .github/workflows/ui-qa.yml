@@ -48,17 +48,6 @@ jobs:
             changed="$(git diff --name-only HEAD^1 HEAD)"
           fi
 
-          # Existing Services JSON edits are data, not navigation changes.
-          # Focused record/source checks protect content without unrelated growth E2E.
-          service_records="$(printf '%s\n' "$changed" | grep -E '^data/services[^/]*[.]json$' || true)"
-          non_service_records="$(printf '%s\n' "$changed" | grep -Ev '^(data/services[^/]*[.]json|[.]github/workflows/ui-qa[.]yml)$' || true)"
-          if [ -n "$service_records" ] && [ -z "$non_service_records" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "mode=service-records" >> "$GITHUB_OUTPUT"
-            echo "Services data-only: publisher/source/schema gates cover edited records, skipping unrelated browser search-demand suites."
-            exit 0
-          fi
-
           # ads.txt is a public static asset: guard only this publication path.
           ads_changed="$(printf '%s\n' "$changed" | grep -E '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$)' || true)"
           ads_other="$(printf '%s\n' "$changed" | grep -Ev '^(public/ads\.txt$|app/ads\.txt/route\.ts$|tests/ads-txt-(guard\.test\.mjs|static\.spec\.ts)$|\.github/workflows/(ci|ui-qa|cloudflare-qa|live-qa|production-monitor)\.yml$)' || true)"
