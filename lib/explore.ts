@@ -1,4 +1,5 @@
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
+import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
 import { verifiedOctoberHeritageEvents20261013 } from "@/lib/explore-heritage-events-2026-10-13";
 import { museumCollectionsGuide20261013 } from "@/lib/explore-museum-collections-2026-10-13";
 import { railTravelGuides20261012 } from "@/lib/explore-rail-travel-2026-10-12";
@@ -34,7 +35,7 @@ export type ExploreGuide = {
   lastReviewed: string;
 };
 
-export const exploreGuides: ExploreGuide[] = [
+const uncorrectedExploreGuides: ExploreGuide[] = [
   ...efcfBeninFestivalGuide20261013,
   ...verifiedOctoberHeritageEvents20261013,
   ...museumCollectionsGuide20261013,
@@ -13495,6 +13496,24 @@ export const exploreGuides: ExploreGuide[] = [
     "lastReviewed": "2026-10-05"
   }
 ];
+
+// Authoritative access updates are additive: do not erase the original
+// guide's researched details, first source, or earlier review dates.
+export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide) => {
+  const update = verifiedVisitAdditions20261015[guide.slug];
+  if (!update) return guide;
+  const sources = [...(guide.sources ?? [])];
+  const known = new Set([guide.source?.href, ...sources.map((source) => source.href)]);
+  if (!known.has(update.source.href)) sources.push(update.source);
+  return {
+    ...guide,
+    intro: update.intro && !guide.intro.includes(update.intro) ? [...guide.intro, update.intro] : guide.intro,
+    planning: guide.planning.some((item) => item.label === update.planning.label)
+      ? guide.planning : [...guide.planning, update.planning],
+    sources,
+    lastReviewed: "2026-10-15",
+  };
+});
 
 // The checked-in Tour catalog is immutable for the lifetime of this Worker
 // module. Index once instead of scanning every record for each guide request.
