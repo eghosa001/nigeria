@@ -11,7 +11,11 @@ on:
       - "lib/job-trend-*.ts"
       - "lib/jobs.ts"
       - "lib/explore.ts"
+      - "lib/explore-*.ts"
       - "lib/entertainment.ts"
+      - "lib/entertainment-*.ts"
+      - "lib/job-*.ts"
+      - "lib/career-*.ts"
       - "lib/series.ts"
       - "lib/entertainment-extras.ts"
       - "lib/entertainment-social-trends-*.ts"
@@ -21,6 +25,11 @@ on:
       - "app/**/page.tsx"
       - ".github/scripts/new-page-quality.mjs"
       - ".github/scripts/new-page-quality.test.mjs"
+      - ".github/scripts/shared-page-structure.mjs"
+      - ".github/scripts/shared-page-structure.test.mjs"
+      - "components/page-outline.tsx"
+      - "components/guide-quick-nav.tsx"
+      - "components/service-*.tsx"
       - ".github/workflows/new-page-quality.yml"
 
 permissions:
@@ -43,6 +52,8 @@ jobs:
           node-version: 22
       - name: Verify focused page-quality regression contracts
         run: node --test .github/scripts/new-page-quality.test.mjs
+      - name: Guard shared page structure for old and future entries
+        run: node --test .github/scripts/shared-page-structure.test.mjs
       - name: Check only newly added records and routes
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

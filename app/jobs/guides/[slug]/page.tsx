@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -71,6 +72,14 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
         </div>
       </section>
 
+
+      <div className="container page-outline-wrap">
+        <PageOutline label="Career guide sections" items={[
+          { href: "#guide", label: "Full guidance" },
+          { href: "#career-sources", label: "Evidence & sources" },
+        ]} />
+      </div>
+
       <section className="section" id="guide">
         <div className="container job-detail-layout">
           <article className="job-detail-content">
@@ -81,7 +90,7 @@ export default async function CareerGuidePage({ params }: { params: Promise<{ sl
                 {section.bullets?.length ? <ul className="checklist">{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul> : null}
               </section>
             ))}
-            <section>
+            <section id="career-sources">
               <h2>Sources and verification context</h2>
               <p>{isProgramme ? "These official programme sources provide eligibility, build and submission requirements. Check them for last-minute updates." : "These sources support the application-process guidance and provide official examples. Always follow the instructions on the exact vacancy you are applying for."}</p>
               <div className="job-source-list">

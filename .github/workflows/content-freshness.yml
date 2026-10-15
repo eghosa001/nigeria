@@ -2,8 +2,6 @@ name: Content Freshness
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "35 5 * * *"
   pull_request:
     paths:
       - "data/services.json"
@@ -32,6 +30,8 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: Scope freshness audit to changed sources
         id: scope
         env:
@@ -45,18 +45,15 @@ jobs:
           fi
           git fetch origin "$BASE_SHA" --depth=1
           changed="$(git diff --name-only "$BASE_SHA" HEAD)"
-          if echo "$changed" | grep -Eq '^(data/(services|youtube-channel-cache)[.]json|lib/(content-freshness|content-health|explore|explore-places)[.]ts|scripts/check-freshness[.]ts); then
+          if echo "$changed" | grep -Eq '^(data/(services|youtube-channel-cache)[.]json|lib/(content-freshness|content-health|explore|explore-places)[.]ts|scripts/check-freshness[.]ts)$'; then
             echo "mode=full" >> "$GITHUB_OUTPUT"
           elif echo "$changed" | grep -qx 'lib/entertainment-extras.ts'; then
-            # PR changes to release sources get a targeted freshness check.
-            # The daily scheduled check above remains full and still reports
-            # every overdue source across the entire site.
             echo "mode=releases" >> "$GITHUB_OUTPUT"
           elif echo "$changed" | grep -qx 'lib/entertainment.ts'; then
             echo "mode=movies" >> "$GITHUB_OUTPUT"
           else
             echo "mode=skip" >> "$GITHUB_OUTPUT"
-            echo "Unrelated changes have separate focused gates; the full-site freshness audit remains scheduled."
+            echo "Unrelated changes have dedicated tests; the consolidated six-hour site task handles periodic freshness."
           fi
       - uses: actions/setup-node@v4
         if: steps.scope.outputs.mode != 'skip'
@@ -66,33 +63,12 @@ jobs:
         if: steps.scope.outputs.mode == 'full'
       - run: npm run check:freshness
         if: steps.scope.outputs.mode == 'full'
-      - name: Validate genuinely changed release-source records
+      - name: Check changed release-source records
         if: steps.scope.outputs.mode == 'releases'
         env:
           PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/check-changed-release-freshness.mjs
-      - name: Validate updated movie-source check dates
-        if: steps.scope.outputs.mode == 'movies'
-        env:
-          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: node scripts/check-changed-movie-freshness.mjs
-; then
-            echo "mode=full" >> "$GITHUB_OUTPUT"
-          elif echo "$changed" | grep -qx 'lib/entertainment.ts'; then
-            echo "mode=movies" >> "$GITHUB_OUTPUT"
-          else
-            echo "mode=skip" >> "$GITHUB_OUTPUT"
-            echo "Unrelated changes have separate focused gates; the full-site freshness audit remains scheduled."
-          fi
-      - uses: actions/setup-node@v4
-        if: steps.scope.outputs.mode != 'skip'
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.mode == 'full'
-      - run: npm run check:freshness
-        if: steps.scope.outputs.mode == 'full'
-      - name: Validate updated movie-source check dates
+      - name: Check changed movie-source dates
         if: steps.scope.outputs.mode == 'movies'
         env:
           PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}

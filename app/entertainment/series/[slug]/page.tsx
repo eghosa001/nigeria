@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -86,7 +87,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Cast, status and where to watch " + item.title}
-            summary={item.synopsis}
+            summary="Use the verified cast, episode details and source links below to decide where you can legally watch this series."
             facts={[
               { label: "Country / year", value: item.country + " · " + item.year },
               { label: "Status", value: item.status },
@@ -109,10 +110,20 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
         </div>
       </section>
 
+
+      <div className="container page-outline-wrap">
+        <PageOutline label="Series guide sections" items={[
+          { href: "#series-overview", label: "Series facts" },
+          ...(item.cast.length ? [{ href: "#cast" as const, label: "Cast" }] : []),
+          { href: "#watch", label: "Where to watch" },
+          { href: "#series-sources", label: "Verified sources" },
+        ]} />
+      </div>
+
       <section className="section movie-detail-main">
         <div className="container movie-detail-layout">
           <article className="movie-detail-primary">
-            <section>
+            <section id="series-overview">
               <span className="eyebrow">At a glance</span>
               <div className="movie-fact-grid">
                 <article><span>Year</span><strong>{item.year}</strong></article>
@@ -178,7 +189,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
 
             <section>
               <span className="eyebrow">Sources</span>
-              <h2>Sources used to verify {item.title}</h2>
+              <h2 id="series-sources">Sources used to verify {item.title}</h2>
               <div className="source-list">
                 {item.sources.map((source)=><a href={source.url} target="_blank" rel="noreferrer" key={source.url}><strong>{source.label}</strong><span>Checked {source.lastChecked} ↗</span></a>)}
               </div>

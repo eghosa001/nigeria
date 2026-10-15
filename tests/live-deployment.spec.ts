@@ -193,16 +193,18 @@ test("fee pages distinguish official conflicts from verified amounts", async ({ 
     await expect(page.getByText("₦28,574", { exact: false }).first()).toBeVisible();
     await expect(page.locator(".conflict-alert")).toContainText("Confirm current details before payment");
 
-    const verified = [
-      ["/services/nin-slip-reissue", "₦600"],
-      ["/services/waec-result-confirmation-overseas", "₦39,000"],
-    ] as const;
-    for (const [path, fee] of verified) {
-      await page.goto(path);
-      await expect(page.locator(".status-badge.status-verified")).toContainText("Verified");
-      await expect(page.getByText(fee, { exact: false }).first()).toBeVisible();
-      await expect(page.locator(".conflict-alert")).toHaveCount(0);
-    }
+    await page.goto("/services/nin-slip-reissue");
+    await expect(page.locator(".status-badge.status-verified")).toContainText("Verified");
+    await expect(page.getByText("₦600", { exact: false }).first()).toBeVisible();
+    await expect(page.locator(".conflict-alert")).toHaveCount(0);
+
+    // WAEC's current category pricing and its older overseas FAQ disagree:
+    // a conflict is the correct public status, not an obsolete "Verified".
+    await page.goto("/services/waec-result-confirmation-overseas");
+    await expect(page.locator(".status-badge.status-conflict")).toContainText("Confirm current details");
+    await expect(page.getByText("₦39,000", { exact: false }).first()).toBeVisible();
+    await expect(page.getByText("₦52,000", { exact: false }).first()).toBeVisible();
+    await expect(page.locator(".conflict-alert")).toContainText("Confirm current details before payment");
   });
 
 
