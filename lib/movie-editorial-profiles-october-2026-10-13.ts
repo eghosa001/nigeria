@@ -134,7 +134,7 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
         "heading": "Omoni Oboli TV, release date and confirmed credits",
         "paragraphs": [
           "Love Looks Good on You premiered on 9 October 2026 through Omoni Oboli TV as a long-form relationship drama. The available catalogue gives a runtime of roughly two hours and 51 minutes. That is longer than a conventional short-form web drama, which matters for viewers planning to finish it in one sitting.",
-          "Nollywood.com's film-specific credit table identifies Fadekemi Olumide as Remi's mother, Paul Worduma (spelled Paul Word Uma in that catalogue) as Adam, Paul Utomi as Benedict, Margaret Echeghe as Olivia and Chioma Edak as Edith. These are credited roles, not a claim that every performer shares equal screen time. Independent film reporting identifies Paul Utomi as director and Blessing Ire as writer. The original Omoni Oboli TV video address has not been individually validated here; use the distributor's official channel rather than an unlicensed copy."
+          "Nollywood.com's film-specific credit table identifies Fadekemi Olumide as Remi's mother, Paul Worduma (spelled Paul Word Uma in that catalogue) as Adam, Paul Utomi as Benedict, Margaret Echeghe as Olivia and Chioma Edak as Edith. These are credited roles, not a claim that every performer shares equal screen time. Independent film reporting identifies Paul Utomi as director and Blessing Ire as writer. The full release is linked directly to Omoni Oboli TV's identified 9 October upload. The publisher's video remains the best place to check live playback and any restrictions."
         ]
       }
     ],
@@ -145,7 +145,7 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
       },
       {
         "question": "Where can I check the official Love Looks Good on You release?",
-        "answer": "The film was released through Omoni Oboli TV on 9 October 2026; locate it through the distributor's official YouTube channel."
+        "answer": "The film premiered on Omoni Oboli TV on 9 October 2026. Use the linked full upload on this page to watch from the identified publisher rather than relying on unofficial copies."
       }
     ]
   },
