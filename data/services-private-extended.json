@@ -661,58 +661,73 @@
   },
   {
     "slug": "spotify-cancel-premium",
-    "title": "How to cancel Spotify Premium",
+    "title": "Cancel Spotify Premium Nigeria: Billing, Free Trials, Family and Duo",
     "shortTitle": "Cancel Spotify Premium",
-    "summary": "Spotify's account route for ending a directly billed Premium plan, with Premium normally remaining active until the next billing date before the account switches to the free service.",
+    "summary": "To stop a directly billed Spotify Premium subscription in Nigeria, sign in to the correct Spotify account, open Manage your plan and select Cancel subscription. Continue until the page confirms when your account will switch to Spotify Free. A paid plan normally stays active until the next billing date, but cancelling during a zero-priced trial ends Premium immediately. If the cancellation option is missing, check whether a mobile/internet partner manages the billing.",
     "category": "TV & streaming",
     "agencySlug": "spotify-nigeria",
-    "feeLabel": "No cancellation fee",
-    "feeNote": "Spotify does not state a fee for cancelling a directly billed Premium subscription.",
-    "timeline": "Cancellation is recorded immediately; paid Premium normally continues until the next billing date, while a zero-priced trial can end immediately.",
+    "feeLabel": "No separate cancellation charge stated; paid periods are not automatically refunded",
+    "feeNote": "Spotify's Nigeria cancellation guide does not specify a separate fee for cancelling direct Premium billing. Stopping renewal normally lets you use an already-paid period until the next billing date and does not itself mean you receive a refund. Partner billing and refund eligibility must be handled under their own terms; check Spotify's current refund policy before making a claim.",
+    "timeline": "For a directly billed plan, the cancellation confirmation should show the date your account will become Free. Premium generally continues to that date when the period is paid; cancelling during a zero-priced free trial switches to Free immediately. For a partner-billed plan, cancellation is managed by the partner, and timing depends on its rules.",
     "status": "verified",
     "officialPortal": "https://support.spotify.com/ng/article/cancel-premium/",
     "requirements": [
-      "Access to the Spotify account that currently has the Premium plan",
-      "A directly billed Premium plan or knowledge of the partner company if the subscription is partner-billed",
-      "The plan manager account when cancelling a Duo or Family subscription"
+      "Sign-in access to the Spotify account that is actually being billed for Premium; users with more than one account should check each account if charges seem unexplained.",
+      "Access to Manage your plan and the Payment section to identify whether Spotify bills you directly or a mobile/internet provider bills the subscription.",
+      "If you are cancelling Family or Duo for everyone, use the plan manager's account. A member can leave a shared plan but cannot terminate the manager's subscription.",
+      "Know whether the plan is a paid subscription or a zero-priced trial, because the date Premium stops differs."
     ],
     "steps": [
-      "Sign in to the Spotify account and open Manage your plan.",
-      "Select Cancel subscription for the directly billed Premium plan.",
-      "Continue through the confirmation step until Spotify shows that the plan will switch to Free.",
-      "Check the next billing date to see how long Premium benefits remain active.",
-      "If the plan is billed by a phone or internet partner, use the partner contact shown in the Spotify account instead."
+      "Sign in to the Spotify account at https://www.spotify.com/account/. Open Manage your plan and read the plan name, billing provider and next payment date. If the account already shows Spotify Free while you are still being charged, check another login before assuming cancellation failed.",
+      "For a plan paid directly to Spotify, select Cancel subscription under Manage your plan and follow the prompts to the final confirmation. Merely opening the page, deleting the app or removing a saved payment card is not evidence that renewal was cancelled.",
+      "Check the confirmation or the Payment section: a displayed date when your account will switch to Spotify Free means cancellation was recorded. If Spotify still displays a future next-payment date, complete the cancellation again to the confirmation screen.",
+      "On an already-paid plan, continue using Premium until the end date shown by Spotify; playlists and saved music remain when the account moves to Free. If you cancel a zero-priced trial, Spotify says Premium stops immediately and that trial cannot be reactivated.",
+      "If you manage Family or Duo, cancelling the manager's plan ends the group's Premium benefits at the relevant end date. If you are only a member, leaving the plan affects your own access but does not stop the manager's billing.",
+      "If there is no direct Cancel subscription option, use Manage your plan → Payment to identify the partner company and follow its cancellation route. Do not assume Spotify can cancel a mobile-provider bundle that the partner bills.",
+      "If your bank reports a charge after cancellation, check Spotify's Canceled but still charged help page. Compare the displayed next-payment/switch-to-Free date, search other Spotify accounts, and contact the partner where applicable; cancellation alone is not proof of an automatic refund.",
+      "Keep the cancellation confirmation and bank transaction information for legitimate support. For a refund request, use Spotify's current refund policy and official support; never give a stranger your account password, banking PIN or one-time code."
     ],
     "notes": [
-      "A plan member leaving Family or Duo does not cancel the whole plan; the plan manager must cancel it.",
-      "Spotify says playlists and saved music remain on the free account after Premium ends.",
-      "A zero-priced trial can switch to Free immediately when cancelled."
+      "A Premium plan manager and a member have different permissions. Family/Duo members cannot cancel the billing subscription just by leaving; the manager must cancel it.",
+      "A paid Premium period normally stays active until its next billing date, whereas Spotify says zero-priced trials end immediately on cancellation. Do not assume either situation always results in a refund.",
+      "Spotify Free retains playlists and saved music after Premium ends, although features such as ad-free playback and offline Premium access no longer apply.",
+      "A recurring charge with an account labelled Spotify Free can mean another Spotify account or a partner is responsible. Check Manage your plan → Payment and Spotify's official charge-help guidance before disputing an unrelated transaction.",
+      "If a partner (mobile operator or other service) bills Premium, the company's own cancellation and refund instructions control that billing relationship; Spotify's direct Cancel subscription option may not appear."
     ],
     "sources": [
       {
-        "label": "Spotify Nigeria — Cancel Premium",
+        "label": "Spotify Nigeria — cancel Premium directly, trial effects and Family/Duo/partner rules",
         "agency": "Spotify",
         "url": "https://support.spotify.com/ng/article/cancel-premium/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-15"
       },
       {
-        "label": "Spotify Premium Nigeria",
+        "label": "Spotify Nigeria — cancellation recorded but a charge still appears",
         "agency": "Spotify",
-        "url": "https://www.spotify.com/ng/premium/",
-        "lastChecked": "2026-10-05"
+        "url": "https://support.spotify.com/ng/article/canceled-but-still-charged/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Spotify Nigeria — refund policy and eligibility",
+        "agency": "Spotify",
+        "url": "https://support.spotify.com/ng/article/refund-policy/",
+        "lastChecked": "2026-10-15"
       }
     ],
     "related": [
       "spotify-premium-nigeria",
       "netflix-cancel-membership"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "cancel Spotify Premium Nigeria",
-      "stop Spotify subscription",
-      "Spotify cancel plan",
-      "Spotify billing cancel Nigeria",
-      "cancel Spotify Family"
+      "Spotify cancellation steps Nigeria",
+      "Spotify canceled but still charged",
+      "Spotify Family plan manager cancel",
+      "Spotify Duo leave plan",
+      "Spotify partner billed cancellation",
+      "cancel Spotify free trial Nigeria",
+      "Spotify canceled Premium when free"
     ]
   },
   {
@@ -3180,52 +3195,60 @@
   },
   {
     "slug": "glovo-cancel-refund-order",
-    "title": "How Glovo cancellation and refunds work in Nigeria",
-    "shortTitle": "Glovo cancellation & refund",
-    "summary": "Glovo Nigeria's order-cancellation and dispute route, including when cancellation can still be free, when merchant/courier costs can be charged and how Glovo may process an eligible refund.",
+    "title": "Glovo Nigeria: Cancel an Order, Understand Charges and Request Help",
+    "shortTitle": "Glovo cancellation and refund help",
+    "summary": "To cancel an active Glovo order, open the order in Glovo and check its stage before confirming cancellation. Glovo says a scheduled order can be cancelled before activation without a charge, and an active order without an assigned courier can generally be cancelled free. Once a restaurant prepares food or a courier accepts the delivery, you may owe product or delivery charges. For missing, wrong or damaged items, use Profile → Help and choose the affected order rather than treating a delivered order as a simple cancellation.",
     "category": "E-commerce",
     "agencySlug": "glovo-nigeria",
-    "feeLabel": "Cancellation charge depends on order stage",
-    "feeNote": "Glovo's Nigeria terms say cancellation can be free before a courier accepts the order, while cancellation after acceptance/preparation can result in product and/or delivery charges.",
-    "timeline": "Refund timing is not given as one fixed period in Glovo's Nigeria terms; dispute/refund handling depends on the payment method, merchant issue and Glovo's support review.",
+    "feeLabel": "Free early cancellation; later charges depend on preparation and courier stage",
+    "feeNote": "Glovo's public customer FAQ distinguishes food from non-food orders. For food, the item price may be payable after preparation begins, a courier cancellation fee may apply after courier assignment, and both may apply. For non-food, Glovo says cancellation is free until a courier accepts the request; once the courier accepts, delivery or return costs can apply. Check the amount shown for the actual order before confirming. No universal Nigeria-specific naira fee was independently verified.",
+    "timeline": "An unassigned courier order can usually be cancelled from the active order screen. For order-quality disputes or refund requests, Glovo's public FAQ directs customers to Profile → Help but does not promise one universal refund amount, payment method or completion time. Follow the case in the app.",
     "status": "verified",
-    "officialPortal": "https://glovoapp.com/docs/en/legal/terms/?country=ng",
+    "officialPortal": "https://glovoapp.com/docs/en/faq/",
     "requirements": [
-      "The active or completed Glovo order shown in the user's app/account",
-      "The order stage at the time cancellation is requested, including whether the merchant or courier has accepted it",
-      "Evidence of the order problem when the request relates to missing, incorrect or defective products"
+      "Access to the Glovo account showing the affected active, scheduled or completed order, with its order details.",
+      "The current order stage: whether the store accepted/prepared the items and whether a courier was assigned, accepted or picked up the order.",
+      "For a missing, incorrect or damaged delivery, the actual affected item, order details and any available photos or screenshots showing the issue.",
+      "The cancellation cost or return terms displayed for the particular order. Do not assume an unassigned-courier cancellation and an already-prepared food order cost the same."
     ],
     "steps": [
-      "Open the affected Glovo order in the app and use the Help/support route before cancelling or requesting a refund.",
-      "Check the order stage because cancellation consequences change after the merchant or courier has accepted and started processing the order.",
-      "Submit the cancellation or dispute reason and provide order evidence when Glovo requests it.",
-      "Review any cancellation amount shown before confirming a cancellation that is no longer free.",
-      "Monitor the app/support conversation for the refund or dispute outcome and keep the order/payment record until it is resolved."
+      "Open Glovo and choose the affected order. For an upcoming scheduled order, open its details and use Cancel order before activation if you no longer need it. Glovo's public FAQ says a scheduled order cancelled at this stage has no cancellation charge.",
+      "For an active order, first check whether a courier has been assigned. Glovo says you can cancel a current order yourself without charge when no courier has been assigned. Before confirming, check whether the restaurant has already begun preparation and whether the app shows any specific fee.",
+      "If food preparation has begun or a courier has accepted the delivery, read the amount shown before confirming cancellation. Glovo's FAQ says prepared food may be charged, assigned-courier cancellations may carry a charge, and both may apply together.",
+      "For non-food orders after courier acceptance, check the return option and charges instead of assuming cancellation is free. Glovo says delivery fees and possibly an additional return-service fee may apply; a product refund depends on whether it can be returned and the merchant's policy.",
+      "If the delivery is complete but items are missing, incorrect or damaged, open Profile → Help in Glovo and select the affected order. Describe the specific problem and add photos or other order evidence if requested; do not mark a quality dispute as an ordinary change-of-mind cancellation.",
+      "Read the resolution offered inside the Glovo support conversation. A merchant may handle a non-perishable product return under its own policy, while Glovo assists with certain order incidents. Avoid paying a courier or social-media intermediary for a supposed refund release.",
+      "If a card payment or refund remains disputed, retain the order receipt and support case details, and use Glovo's official in-app contact route for follow-up. Do not promise a bank refund, wallet credit or processing deadline until the company confirms it for this case."
     ],
     "notes": [
-      "Glovo's Nigeria terms say users can cancel free of charge until a courier has accepted the order, but later cancellation can attract substantial charges.",
-      "For cash-payment refunds, Glovo's terms say the refund may be issued as a promo code in the user's Glovo account.",
-      "Some product-return/refund issues are handled directly under the merchant's return policy rather than solely by Glovo."
+      "The official customer FAQ covers Glovo's general cancellation rules, not a fixed Nigerian cancellation tariff. Current app pricing, available support options and merchant policies take precedence for the individual order.",
+      "Food and non-food cancellations differ. Food already being prepared can remain chargeable; a non-food return after collection can add delivery and return fees. Review the order's actual conditions before approving cancellation.",
+      "A delivered order with missing or damaged goods should be reported through Profile → Help. Whether an item is returned, replaced, credited or refunded depends on the case and applicable merchant policy.",
+      "The older terms page linked with country=ng currently displays another country's company information in its body, so it is not reliable evidence of Nigeria-specific cash-refund or fee promises. This guide uses Glovo's directly accessible customer FAQ and does not claim an automatic promo-code refund for cash orders.",
+      "Do not share card details, app passwords or verification codes with anyone claiming to accelerate an order refund. Use the order-linked support route."
     ],
     "sources": [
       {
-        "label": "Glovo Nigeria Terms — Refunds and Cancellations",
-        "agency": "Glovoapp Nigeria Limited",
-        "url": "https://glovoapp.com/docs/en/legal/terms/?country=ng",
-        "lastChecked": "2026-10-05"
+        "label": "Glovo official customer FAQ — scheduled and unassigned-courier cancellation, food/non-food charges",
+        "agency": "Glovo",
+        "url": "https://glovoapp.com/docs/en/faq/",
+        "lastChecked": "2026-10-15"
       }
     ],
     "related": [
       "glovo-order-nigeria",
       "chowdeck-create-account-order"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
+      "cancel Glovo order Nigeria",
       "Glovo refund Nigeria",
-      "cancel Glovo order",
-      "Glovo cancellation fee Nigeria",
-      "Glovo order complaint",
-      "Glovo refund cash order"
+      "Glovo cancellation fee food",
+      "Glovo cancelled order before courier assigned",
+      "Glovo missing item complaint",
+      "Glovo order wrong damaged Profile Help",
+      "Glovo non food return",
+      "Glovo Nigeria customer service refund"
     ]
   },
   {
