@@ -80,8 +80,8 @@ for (const item of jobOpportunities) {
     assert(item.applicationSteps.length >= 5, item.slug + " employer portal needs a concrete portal workflow.");
     assert(item.sourceNotes.length >= 3, item.slug + " employer portal must explain exactly what was verified.");
   }
-  if (item.kind === "vacancy" && getEffectiveJobStatus(item) === "closed") {
-    assert(!isIndexableJobOpportunity(item), item.slug + " closed one-off vacancy must stay out of search sitemaps.");
+  if (item.kind === "vacancy" && ["closed", "unverified"].includes(getEffectiveJobStatus(item))) {
+    assert(!isIndexableJobOpportunity(item), item.slug + " unavailable individual vacancy must stay out of search sitemaps.");
   }
   if (item.kind === "vacancy") {
     const detailText = [...item.qualifications, ...item.requirements, ...item.applicationSteps].join(" ").toLowerCase();
