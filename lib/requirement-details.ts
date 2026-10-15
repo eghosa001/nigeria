@@ -54,6 +54,14 @@ function kindFor(item: string): RequirementKind {
 }
 
 function purposeFor(item: string, service: Service) {
+  // Device compatibility, line ownership, store attendance and data purchases
+  // are different tasks. Do not label every Glo requirement as an SMS/OTP item.
+  if (service.slug === "glo-esim-activation") {
+    if (/\bEID\b/i.test(item)) return "Glo uses the EID to check embedded-SIM compatibility before issuing an eSIM profile; it is not the mobile number or an OTP.";
+    if (/\b(?:Gloworld|dealer outlet)\b/i.test(item)) return "An authorised outlet carries out the NIN verification and scans the eSIM activation QR; the published route is not a complete online swap.";
+    if (/data.plan|₦1,500/i.test(item)) return "Under Glo's current time-limited offer, buying a qualifying data plan at the outlet is required for the free migration promotion.";
+    if (/\bGlo\b.{0,24}\b(?:mobile line|number)\b/i.test(item)) return "This is the line Glo will register or move from a physical SIM to eSIM; an existing number can be retained.";
+  }
   if (/\bNIN\b/i.test(item)) return "Used to match the applicant to the National Identity Database or to verify NIN-linked biodata where this service requires identity matching.";
   if (/\bBVN\b/i.test(item)) return "Used to identify the banking identity record connected to this request.";
   if (/photograph|passport[- ]?(?:size[d]?[- ]?)?photos?|photos?\b|pictures?/i.test(item)) return "A photograph is listed for this service. Check the responsible agency’s instructions for the number, size, background and whether to submit printed copies or digital files.";
