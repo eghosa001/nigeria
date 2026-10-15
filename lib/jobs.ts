@@ -3521,8 +3521,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     },
     sector: "Private",
     status: "closed",
-    statusLabel: "Original application listing unavailable — check employer",
-    summary: "EHA Clinics previously advertised the Senior Coordinator, Talent Management role. Its original application link now returns HTTP 404, and the vacancy was not listed on the employer's current jobs board on 15 October 2026. A live application cannot be verified.",
+    statusLabel: "Application link unverified — check employer",
+    summary: "EHA Clinics previously advertised the Senior Coordinator, Talent Management role. The previously recorded application link returned HTTP 404 during checks on 15 October 2026. The role may still be shown in the employer's jobs directory, so neither closure nor a working application can be confirmed from the broken detail URL.",
     location: "Abuja / Kano / Lagos",
     employmentType: "Human resources / talent management",
     audiences: ["HR professionals", "Talent-management professionals", "Experienced hires"],
@@ -3535,7 +3535,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrlLabel: "Check current EHA Clinics vacancies",
     verifiedAt: "2026-10-15",
     feeNote: "Apply through EHA Clinics' official recruitment system.",
-    sourceNotes: ["The original vacancy URL returned HTTP 404 on 15 October 2026; the role was absent from the current official employer jobs list. The exact closure date and reason are unconfirmed."],
+    sourceNotes: ["The original detail URL returned HTTP 404 during verification on 15 October 2026, while public views of the employer jobs directory also showed the role. Treat application availability as unverified, not an employer-confirmed closure; recheck the official board for a functioning vacancy link."],
     sources: [
       { label: "EHA Clinics official jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-15" }
     ]
@@ -3712,8 +3712,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
     },
     sector: "Private",
     status: "closed",
-    statusLabel: "Original application listing unavailable — check employer",
-    summary: "EHA Clinics previously advertised the Assistant Manager, Laboratory and Diagnostics role. Its original application link now returns HTTP 404, and the vacancy was not listed on the employer's current jobs board on 15 October 2026. A live application cannot be verified.",
+    statusLabel: "Application link unverified — check employer",
+    summary: "EHA Clinics previously advertised the Assistant Manager, Laboratory and Diagnostics role. The previously recorded application link returned HTTP 404 during checks on 15 October 2026. The role may still be shown in the employer's jobs directory, so neither closure nor a working application can be confirmed from the broken detail URL.",
     location: "Kano, Kano State",
     employmentType: "Laboratory management role",
     audiences: ["Laboratory managers", "Medical laboratory scientists", "Healthcare managers"],
@@ -3726,7 +3726,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrlLabel: "Check current EHA Clinics vacancies",
     verifiedAt: "2026-10-15",
     feeNote: "Use EHA Clinics' official jobs portal.",
-    sourceNotes: ["The original vacancy URL returned HTTP 404 on 15 October 2026; the role was absent from the current official employer jobs list. The exact closure date and reason are unconfirmed."],
+    sourceNotes: ["The original detail URL returned HTTP 404 during verification on 15 October 2026, while public views of the employer jobs directory also showed the role. Treat application availability as unverified, not an employer-confirmed closure; recheck the official board for a functioning vacancy link."],
     sources: [
       { label: "EHA Clinics official jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-15" }
     ]
