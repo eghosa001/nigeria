@@ -135,8 +135,8 @@ jobs:
             exit 0
           fi
 
-          youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/(youtube-runtime-catalog\.test\.mjs|youtube-review-lazy\.test\.ts)$)' || true)"
-          non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|playwright\.cloudflare\.config\.ts$|lib/youtube-library\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/(youtube-runtime-catalog\.test\.mjs|youtube-review-lazy\.test\.ts)$)' || true)"
+          youtube_runtime_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/(youtube-library|youtube-detail|youtube-synopsis-quality)\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/(youtube-runtime-catalog\.test\.mjs|youtube-review-lazy\.test\.ts|youtube-server-store\.test\.ts)$)' || true)"
+          non_youtube_runtime="$(printf '%s\n' "$changed" | grep -Ev '^(docs/|\.github/workflows/(ci|ui-qa|cloudflare-qa|youtube-entertainment-sync)\.yml$|playwright\.cloudflare\.config\.ts$|lib/(youtube-library|youtube-detail|youtube-synopsis-quality)\.ts$|data/youtube-runtime-catalog\.generated\.json$|scripts/build-youtube-runtime-catalog\.mjs$|tests/(youtube-runtime-catalog\.test\.mjs|youtube-review-lazy\.test\.ts|youtube-server-store\.test\.ts)$)' || true)"
           if [ -n "$youtube_runtime_trigger" ] && [ -z "$non_youtube_runtime" ]; then
             echo "run=false" >> "$GITHUB_OUTPUT"
             echo "mode=youtube-runtime" >> "$GITHUB_OUTPUT"
