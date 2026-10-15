@@ -304,7 +304,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       </section>
 
       <div className="container page-outline-wrap">
-        <PageOutline label="Plan this visit" items={[
+        <PageOutline label={hasDoNotTravelAdvisory ? "Research this place" : "Plan this visit"} items={[
           { href: "#trip-highlights", label: "Highlights" },
           ...(places.length ? [{ href: "#places" as const, label: "Places, maps & costs" }] : []),
           ...(questions.length ? [{ href: "#trip-questions" as const, label: "Trip questions" }] : []),
@@ -313,7 +313,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         ]} />
       </div>
 
-      <section className="proof-strip" aria-label={"Best reasons to visit " + guide.shortTitle}>
+      <section className="proof-strip" aria-label={"What makes " + guide.shortTitle + " significant"}>
         <div className="container proof-grid">
           {guide.bestFor.slice(0, 4).map((item, index) => (
             <div key={item}><span aria-hidden="true">0{index + 1}</span><strong>{item}</strong></div>
@@ -323,7 +323,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
 
       <section className="section explore-guide-highlights" id="trip-highlights">
         <div className="container">
-          <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>What to see in {guide.shortTitle}</h2></div></div>
+          <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>{hasDoNotTravelAdvisory ? "What to know about " : "What to see in "}{guide.shortTitle}</h2></div></div>
           <div className="explore-highlight-grid">
             {guide.highlights.map((highlight) => (
               <article className="explore-highlight-card" key={highlight.name}>
@@ -455,7 +455,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         <div className="container agency-strip" id="trip-sources">
           <div>
             <span className="eyebrow">Source &amp; verification</span>
-            <h2>Sources and live checks for {guide.shortTitle}</h2>
+            <h2>Sources and last verification for {guide.shortTitle}</h2>
             <p>This {guide.kind} guide was reviewed on {guide.lastReviewed}. MyNigeriaGuide does not treat old prices, social posts or copied travel lists as permanent facts; confirm dynamic details close to your travel date.</p>
             {!hasIndependentSource ? (
               <p className="job-muted">Source coverage: this guide does not yet cite a second independent visitor or reporting source. The named primary reference supports the published facts, but does not by itself confirm current visitor experiences, opening hours or road access.</p>
