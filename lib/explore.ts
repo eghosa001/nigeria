@@ -5360,10 +5360,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Agulu Lake",
     "kind": "destination",
     "region": "Anambra State",
-    "summary": "Use Agulu Lake as a calm Anambra nature stop with local-access and water-safety checks, keeping cave and waterfall excursions as separate decisions.",
+    "summary": "Agulu Lake in Anaocha, Anambra, is both a landscape and a culturally significant site associated with crocodiles regarded as sacred in local tradition. The state tourism ministry has discussed planned improvements, not verified operating resort facilities. Plan a respectful shoreline visit only if local access is confirmed; do not swim, boat or approach wildlife.",
     "intro": [
-      "Agulu Lake offers a different, slower nature experience from Anambra's cave and waterfall destinations and supports a focused visitor-planning page.",
-      "Treat the water as a natural environment rather than assuming boating, swimming or other activities are always available or safe."
+      "The airport's official Anambra visitor guide identifies Agulu Lake in Agulu town, Anaocha Local Government Area, and describes crocodiles revered in local belief. Treat that cultural significance seriously, but do not take stories about sacred animals as a promise of tame behaviour or a guaranteed sighting.",
+      "The same airport tourism guide places the lake approximately 30 kilometres from Chinua Achebe International Cargo Airport. That is a location estimate, not a checked drive time, fare or confirmation that every shoreline track is public.",
+      "Anambra's Ministry of Culture, Entertainment and Tourism has announced plans for tourism development at Agulu Lake and Ogbunike Caves. A development intention does not establish today's availability of hotels, boats, guides or recreation centres.",
+      "For a practical visit, arrange transport to the correct Agulu Lake, verify a safe public viewpoint with a recognised local source and plan to enjoy the landscape on land without entering the water or feeding animals."
     ],
     "bestFor": [
       "Lakes",
@@ -5373,45 +5375,59 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Lake landscape",
-        "detail": "The main experience is the water and surrounding scenery rather than a dense list of built attractions."
+        "name": "Crocodiles and cultural beliefs",
+        "detail": "The state airport's visitor page calls Agulu Lake a home of sacred crocodiles, a tradition valued by local residents. Visitors must keep distance from wild animals and should not attempt to lure them for photographs."
       },
       {
-        "name": "Agulu setting",
-        "detail": "Use local guidance for the current visitor area and any culturally sensitive parts of the shoreline."
+        "name": "Quiet landscape rather than an amusement park",
+        "detail": "The lake and vegetation provide a nature-focused pause. The checked public sources do not verify lifeguards, boat rental or managed swimming zones, so a safe permitted viewpoint is a better expectation."
       },
       {
-        "name": "Ogbunike option",
-        "detail": "The caves can form another day in a longer Anambra nature trip."
+        "name": "Distinct from Ogbunike Caves",
+        "detail": "Ogbunike Caves is a separate Anambra site with different physical demands, custodians and access restrictions. Grouping them under a state nature theme does not make them adjacent stops."
       },
       {
-        "name": "Flexible pace",
-        "detail": "The lake works well as a slower block between more physically demanding destinations."
+        "name": "Development status matters",
+        "detail": "Tourism ministry announcements describe proposed visitor upgrades. Do not book non-confirmed 'new facilities' based on a projected scheme or treat construction as an opening notice."
       }
     ],
     "planning": [
       {
-        "label": "Confirm local access",
-        "detail": "Use current directions and follow any community guidance."
+        "label": "Verify the exact destination",
+        "detail": "Ask for Agulu Lake in Anaocha LGA. Check a safe approach road and permitted shoreline viewpoint with a local authority or identified guide before arranging return transport; published airport distance is not a journey duration."
       },
       {
-        "label": "Do not assume swimming safety",
-        "detail": "Only enter water when a current, responsible local authority or operator says conditions are suitable."
+        "label": "Do not enter the water",
+        "detail": "Stay clear of the lake's edge where crocodiles may be present; do not swim, feed animals, or use an unverified boat operator. Supervise children and keep a safe distance from any observed wildlife."
       },
       {
-        "label": "Protect electronics",
-        "detail": "Use a water-resistant plan for phones and valuables."
+        "label": "Check local custodian rules",
+        "detail": "Respect the site's community significance. Confirm whether an entrance fee, photography restriction or guide requirement exists for the actual place visited; no definitive current price was established."
       },
       {
-        "label": "Keep distant nature stops separate",
-        "detail": "Avoid rushing from the lake to caves and waterfalls in one short day."
+        "label": "Do not assume new resorts are open",
+        "detail": "State plans to develop Agulu Lake do not prove that planned recreational facilities have opened. Check current verified operators directly rather than copying promotional claims."
+      },
+      {
+        "label": "Keep a transport contingency",
+        "detail": "Arrange a dependable return journey and avoid improvising after dark. Weather and undeveloped shore tracks can change the feasibility of a relaxed lake visit."
+      },
+      {
+        "label": "Plan other Anambra attractions separately",
+        "detail": "Ogbunike Caves and other natural sites require their own route, timing and access checks. A short lake stop should not be advertised as including multiple far-apart attractions."
       }
     ],
     "source": {
-      "label": "Anambra State — Agulu Lake",
-      "href": "https://anambrastate.gov.ng/directory/agulu-lake/"
+      "label": "Chinua Achebe International Cargo Airport: Experience Anambra — Agulu Lake",
+      "href": "https://caica.anambrastate.gov.ng/experience-anambra/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "Anambra Ministry of Culture and Tourism: Agulu Lake development plans",
+        "href": "https://mocet.anambrastate.gov.ng/news/anambra-unveils-plan-to-transform-ogbunike-cave-agulu-lake-into-world-"
+      }
+    ]
   },
   {
     "slug": "kufena-hills-zaria-guide",
@@ -9864,10 +9880,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Hidi's Palace Sukur",
     "kind": "destination",
     "region": "Adamawa State",
-    "summary": "Visit Hidi's Palace as part of the UNESCO-listed Sukur Cultural Landscape with local guidance and respect for living cultural traditions.",
+    "summary": "Hidi's Palace is an important living royal and ritual site within the UNESCO-listed Sukur Cultural Landscape, Madagali, Adamawa. It is not a verified bookable tourist attraction: current foreign-government travel advice says do not travel to Adamawa, while UNESCO documents ongoing security and conservation concerns.",
     "intro": [
-      "Hidi's Palace is a core element of the Sukur Cultural Landscape and supports a focused royal-and-cultural heritage intent within the UNESCO site.",
-      "The palace should be understood as part of a living cultural system rather than an isolated monument."
+      "Sukur is a Mandara Mountains community near Nigeria's Cameroon border. UNESCO lists its dry-stone buildings, paved walkways, agricultural terraces and historic iron-working culture as a linked living landscape. The Hidi's Palace is a central ceremonial and governing feature, not an abandoned museum building.",
+      "The National Commission for Museums and Monuments explains that Sukur community members and heritage staff maintain the Hidi palace, shrines, gates and paths. Any visit must respect custodians, existing use of royal spaces and individual permission to record.",
+      "UNESCO's 2025 World Heritage Committee decision acknowledges security-stabilisation initiatives but makes a requested monitoring mission conditional on necessary security arrangements. Australia's October 2026 travel advice explicitly says 'Do not travel' to Adamawa because of insecurity, terrorism and kidnapping. Neither UNESCO listing nor conservation funding proves public visitor access.",
+      "The UNESCO committee recorded that September 2024 heavy rain caused erosion to sections of the stone-paved path toward Hidi's Palace and damage to terraced farms; the community undertook remedial work and restoration documentation was planned. A traveller must not infer current trail safety from old photographs."
     ],
     "bestFor": [
       "UNESCO heritage",
@@ -9877,45 +9895,67 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Palace complex",
-        "detail": "The palace is central to the social and political organisation represented in the cultural landscape."
+        "name": "The living Hidi's Palace",
+        "detail": "The traditional palace remains part of Sukur's political and religious world. Its historical significance lies in community governance and ritual as much as its architecture; it is not an unrestricted public building."
       },
       {
-        "name": "Hilltop setting",
-        "detail": "Its location connects architecture with the wider mountain environment."
+        "name": "Ancient paths and conservation",
+        "detail": "Stone paving is a defining feature, but UNESCO documents erosion damage from September 2024 and subsequent remedial work. The state of the palace approach requires present-day verification."
       },
       {
-        "name": "Terraces and pathways",
-        "detail": "The surrounding stone and agricultural systems deepen the heritage story."
+        "name": "Terraces and buildings",
+        "detail": "Dry-stone agricultural terraces connect local farming and settlement to the Mandara hill landscape, illustrating how built structures and living traditions interact."
       },
       {
-        "name": "Living tradition",
-        "detail": "Local customs and current community use should guide visitor behaviour."
+        "name": "Iron production and trade",
+        "detail": "UNESCO traces Sukur's tradition of iron smelting, trade and political institutions to around the sixteenth century. Its heritage value is the system of settlement and craft rather than a single monument."
       }
     ],
     "planning": [
       {
-        "label": "Use local guidance",
-        "detail": "Visit through recognised community arrangements."
+        "label": "Travel warning comes first",
+        "detail": "As checked in October 2026, the Australian Government advises do not travel to Adamawa State. Defer recreational travel and review current advice from appropriate local, national and foreign security authorities; this article is mainly for cultural learning."
       },
       {
-        "label": "Ask before photography",
-        "detail": "Sacred, royal or private areas may restrict cameras."
+        "label": "No confirmed operator, opening or ticket",
+        "detail": "The checked heritage documents do not verify a current public palace entrance, guide, transport service or admission fee. Do not transfer money to unverified operators advertising unrestricted entry."
       },
       {
-        "label": "Wear practical footwear",
-        "detail": "The landscape involves steep and uneven paths."
+        "label": "Do not assume the trail is repaired",
+        "detail": "The UNESCO committee documented flood-related erosion along a palace approach. Shoes and daylight are not a substitute for a formal access and security assessment."
       },
       {
-        "label": "Respect living heritage",
-        "detail": "Do not treat community spaces as abandoned ruins."
+        "label": "Respect community authority",
+        "detail": "The Hidi Palace and religious sites are still in use. Seek explicit permission before entry, photography, drone flights or recording a ceremony; distinguish living homes from preserved exhibit areas."
+      },
+      {
+        "label": "Learn remotely instead",
+        "detail": "Use UNESCO's Sukur site profile, the 2025 conservation decision and the Nigerian museums commission's Sukur page to study the historic landscape while travel restrictions remain."
+      },
+      {
+        "label": "Specialist visit needs genuine clearances",
+        "detail": "Only a responsible heritage or academic team with independently confirmed security, access authority, weather, transport and site-condition clearance should evaluate fieldwork; no leisure itinerary can safely be promised from existing sources."
       }
     ],
     "source": {
       "label": "UNESCO World Heritage Centre — Sukur Cultural Landscape",
       "href": "https://whc.unesco.org/en/list/938"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Committee, 2025 conservation decision 47 COM 7B.160",
+        "href": "https://whc.unesco.org/en/decisions/8885"
+      },
+      {
+        "label": "National Commission for Museums and Monuments: Sukur",
+        "href": "https://museum.ng/sukur-cultural-landscape/"
+      },
+      {
+        "label": "Australia Smartraveller: Nigeria safety and Adamawa do-not-travel advice",
+        "href": "https://www.smartraveller.gov.au/destinations/africa/nigeria"
+      }
+    ]
   },
   {
     "slug": "sukur-terraces-guide",
