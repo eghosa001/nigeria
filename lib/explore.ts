@@ -3708,10 +3708,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Abeokuta Day Trip",
     "kind": "itinerary",
     "region": "Ogun State",
-    "summary": "Use one day in Abeokuta for Olumo Rock, Itoku adire and the Ake heritage area, keeping the route compact enough for a same-day return.",
+    "summary": "Abeokuta's best one-day route combines Olumo Rock, nearby Itoku Adire Market and a separate Ake Palace/Egba heritage stop if current access allows. Olumo's official venue website places the complex at Ikija near Itoku, while OgunInvest documents a Nike Art Gallery partnership. Check Olumo's actual admission, guided route and the palace/museum's visitor arrangements before travelling.",
     "intro": [
-      "Abeokuta is one of the strongest day-trip destinations in southwest Nigeria because major heritage stops can be grouped around a clear city story.",
-      "This route starts with the physically demanding rock visit, then shifts to craft and heritage stops so the day becomes easier rather than harder."
+      "Abeokuta means 'under the rock' and Olumo Rock is central to the Egba history of the city. Abeokuta South Local Government describes the rock as a nineteenth-century refuge and cultural symbol. A good visit connects the landscape to that heritage rather than reducing the trip to a summit photo.",
+      "The Olumo Rock Tourist Complex's own website identifies its entrance in Ikija near Itoku Adire Market. That makes Olumo and the textile market a logical first cluster; do not cross the city several times unnecessarily. The rock visit can require stairs and uneven surfaces, so ask about current usable routes and accessibility before assuming everyone can climb.",
+      "Ogun State's investment agency announced a collaboration with Nike Art Gallery to develop Olumo's cultural offering. That is evidence of an institutional partnership, not proof that every exhibition, craft class or event is operating on the day you visit. Contact the current operator for programmes or reservations.",
+      "Keep Ake Palace and the nearby Egba Museum heritage context for a later block if access is confirmed. Egba Museum's official site describes its cultural library within the working palace complex; this is not the same as a general, freely accessible city park. Avoid adding distant Ijebu or Sagamu attractions to a short Abeokuta day trip."
     ],
     "bestFor": [
       "Day trips",
@@ -3721,45 +3723,67 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Morning — Olumo Rock",
-        "detail": "Start early with the climb before the hottest part of the day and while energy is highest."
+        "name": "Morning: Olumo Rock heritage and views",
+        "detail": "Arrive in Abeokuta and begin at the managed Olumo Rock complex in Ikija. Ask staff which guided pathways, museum spaces and climb options are available before paying; the rock's sheltering role in Egba history is integral to interpreting the visit."
       },
       {
-        "name": "Midday — Itoku Adire Market",
-        "detail": "Move into the nearby textile and craft district for shopping and cultural context."
+        "name": "Late morning: Itoku Adire Market",
+        "detail": "The Olumo operator identifies Itoku as close to the rock. Explore the area's hand-dyed textile tradition, compare fabric types and workmanship and ask makers' permission before photographing active stalls; do not assume every machine print is hand-dyed adire."
       },
       {
-        "name": "Afternoon — Ake heritage",
-        "detail": "Use the palace and Centenary Hall area as the final historical block if current access permits."
+        "name": "Afternoon: Ake heritage, if open",
+        "detail": "Use the Egba Museum and Palace sources to check whether a museum visit or guided palace heritage area is available. Palace protocol and hours may differ from the Olumo tourist complex, so don't count on walk-in entry."
       },
       {
-        "name": "Return buffer",
-        "detail": "Leave Abeokuta with enough daylight and road margin instead of adding one more distant stop."
+        "name": "Return without rushing",
+        "detail": "Preserve time for meals, local transport and a daylight departure. A three-stop city heritage itinerary is more realistic than trying to append separate natural attractions far outside Abeokuta."
       }
     ],
     "planning": [
       {
-        "label": "Start early",
-        "detail": "The rock climb is easier before peak heat."
+        "label": "Confirm Olumo access and exact costs",
+        "detail": "Olumo's venue site gives Ikija near Itoku as the location but should be checked for current admissions, climb accessibility, tour requirements, weather closure and any events. Do not use an unsourced static ticket price."
       },
       {
-        "label": "Wear practical shoes",
-        "detail": "Steps and rock surfaces need better footwear than a casual city stroll."
+        "label": "Start with the physically demanding stop",
+        "detail": "Do the rock walk while the group is rested, but assess heat, rain, stairs and footwear first. Visitors with mobility restrictions can ask what ground-level cultural interpretation is accessible instead of assuming the summit is required."
       },
       {
-        "label": "Ask before photos",
-        "detail": "Markets and palace-related spaces may have their own rules."
+        "label": "Treat Itoku as a working market",
+        "detail": "The market is a place of commerce and artisanship. Ask prices in advance, negotiate respectfully, keep purchases protected and do not photograph or disrupt workers without consent."
       },
       {
-        "label": "Protect the return time",
-        "detail": "Do not turn a day trip into a late-night road journey for one extra stop."
+        "label": "Palace and museum require separate confirmation",
+        "detail": "Egba Museum describes its collection and history centre in the Ake palace environment. A working royal complex may require permission; confirm before planning an interior visit."
+      },
+      {
+        "label": "Be precise about gallery availability",
+        "detail": "OgunInvest's 2025 announcement documents a partnership with Nike Art Gallery at Olumo. Check independently that exhibitions or workshops are available on your visit date rather than treating a development announcement as a confirmed schedule."
+      },
+      {
+        "label": "Choose a realistic return plan",
+        "detail": "Leave a buffer for traffic and breaks, especially when coming from outside Abeokuta. A road-distance estimate is not a guaranteed trip time; arrange return transport in advance and avoid unnecessary night travel."
       }
     ],
     "source": {
-      "label": "Ogun State investment and tourism information",
-      "href": "https://invest.ogunstate.gov.ng/blogdetails?id=7"
+      "label": "Olumo Rock Tourist Complex — official location and visitor features",
+      "href": "https://olumorock.ng/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "OgunInvest — state collaboration with Nike Art Gallery at Olumo",
+        "href": "https://invest.ogunstate.gov.ng/blogdetails?id=7"
+      },
+      {
+        "label": "Abeokuta South Local Government — Olumo and Egba history",
+        "href": "https://www.abeokutasouthlga.og.gov.ng/"
+      },
+      {
+        "label": "Egba Museum Library — Ake Palace cultural collections",
+        "href": "https://egbamuseum.org/"
+      }
+    ]
   },
   {
     "slug": "osogbo-ile-ife-weekend-itinerary",
@@ -8244,10 +8268,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Okigwe Hills",
     "kind": "destination",
     "region": "Imo State",
-    "summary": "Plan Okigwe Hills as a dedicated Imo outdoor trip with current road, local-route and daylight checks.",
+    "summary": "Okigwe's rolling hills, described by the Imo State Investment Promotion Agency, are a regional landscape rather than a single ticketed tourist viewpoint. The state tourism description is not a current opening notice. Australia's October 2026 Nigeria advisory says do not travel to Imo State; treat this page as geographic and cultural research, not a recommendation for an unsupervised hiking trip.",
     "intro": [
-      "Okigwe Hills adds a distinct highland and landscape intent to Imo beyond Oguta Lake and Owerri's cultural stops.",
-      "Use recognised viewpoints and local guidance rather than treating unfamiliar slopes as unrestricted hiking terrain."
+      "Okigwe's upland scenery is one of Imo State's documented natural features. Imo State's investment promotion agency describes rolling hills of different heights and ruggedness; an NCDMB publication on Nigerian landscapes places them between the Ihube area and Okigwe town.",
+      "The source descriptions do not identify one staffed public entrance, mapped maintained hiking path, transport timetable, certified guide or ticket office. A place appearing in a tourism investment overview is not itself confirmation that an independently safe recreation site is operating today.",
+      "Security must be acknowledged. The Australian government's Nigeria travel advice, current in October 2026, lists Imo among states marked 'Do not travel' owing to violent crime, terrorism and kidnapping risks. That is an official advisory for Australian travellers rather than a substitute for Nigerian local security updates, but it is strong reason not to advertise casual unsupervised hill walks.",
+      "Okigwe Hills is also not the same outing as Oguta Lake or Owerri's cultural sites: they are geographically distinct parts of Imo. A responsible guide should describe why the rolling landscapes matter without promising a scenic road trip that an editor has not actually conducted."
     ],
     "bestFor": [
       "Hills",
@@ -8257,45 +8283,63 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Hill scenery",
-        "detail": "The terrain and views are the main reason to visit."
+        "name": "Rolling highland landscape",
+        "detail": "ISIPA describes hills of varying heights and ruggedness; the geographical appeal is the sequence of ridges and changing terrain rather than a named theme park or one official summit."
       },
       {
-        "name": "Okigwe setting",
-        "detail": "The trip offers a different landscape experience from Owerri or Oguta."
+        "name": "Ihube to Okigwe geography",
+        "detail": "A Nigerian Content Development and Monitoring Board publication describes the rolling-hill landscape extending from Ihube toward Okigwe town. Treat this as general geographic context, not coordinates for an approved hiking route."
       },
       {
-        "name": "Outdoor block",
-        "detail": "Plan water, footwear and weather around the visit."
+        "name": "Different Imo landscapes",
+        "detail": "Okigwe's hills offer a different regional environment from Oguta's lake setting and Owerri's urban attractions, which require distinct travel and accommodation plans."
       },
       {
-        "name": "Imo variety",
-        "detail": "Oguta Lake and Mbari Cultural Centre are separate nature and culture clusters."
+        "name": "Conservation over thrill-seeking",
+        "detail": "Remote slopes may include community lands, farms and unmarked approaches. Access, erosion, rainfall exposure and private property rights matter more than social-media promises about any 'secret' viewpoint."
       }
     ],
     "planning": [
       {
-        "label": "Confirm local access",
-        "detail": "Use current local directions and recognised viewpoints."
+        "label": "Do not promote a casual hike while warnings apply",
+        "detail": "The Australian Government's October 2026 advice says do not travel to Imo State. Check current official Nigerian security information and relevant travel advice; defer leisure travel rather than treating this page as a confirmed safe walking itinerary."
       },
       {
-        "label": "Avoid unapproved climbing",
-        "detail": "Do not improvise across unstable or private terrain."
+        "label": "No verified ticketed attraction",
+        "detail": "Neither the checked ISIPA nor NCDMB material establishes a current admission fee, staffed trailhead, public toilet, official guide or managed climbing operation. Do not book 'Okigwe Hills tickets' from unverified social-media sellers."
       },
       {
-        "label": "Carry water",
-        "detail": "Do not assume visitor facilities on the hills."
+        "label": "Avoid improvised off-road access",
+        "detail": "Do not enter farms, restricted areas or unstable slopes without the relevant landholder and local authority's permission. Do not assume a named hill is open to hikers because a photo appears online."
       },
       {
-        "label": "Use daylight",
-        "detail": "Finish the outdoor section before visibility drops."
+        "label": "Weather and terrain are material",
+        "detail": "Hill paths can be steep, slippery and exposed in rain. Even after security and access are independently cleared, ask an authorised local route expert about trail maintenance, flood conditions and emergency communication."
+      },
+      {
+        "label": "Separate Imo trips",
+        "detail": "An Owerri base, Oguta Lake and an Okigwe geographic study are different journeys. Avoid combining them into an implausible afternoon or guaranteeing a return time without reliable live transport information."
+      },
+      {
+        "label": "Research remotely first",
+        "detail": "Use Imo State investment agency's industry profile and NCDMB's documented regional landscape description to understand the terrain. An aerial image or travel blog does not replace current operator, access and security verification."
       }
     ],
     "source": {
-      "label": "Imo State Investment Promotion Agency — About Imo",
-      "href": "https://www.isipa.im.gov.ng/about-imo.html"
+      "label": "ISIPA — Imo State Industry Profile (rolling Okigwe hills)",
+      "href": "https://isipa.im.gov.ng/industryprofile.html"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "NCDMB — Local Content Digest H2 2023, Rolling Hills of Okigwe",
+        "href": "https://ncdmb.gov.ng/lcdm/localcontentdigestH223.pdf"
+      },
+      {
+        "label": "Australian Government — Nigeria travel advice (Imo warning)",
+        "href": "https://www.smartraveller.gov.au/destinations/africa/nigeria"
+      }
+    ]
   },
   {
     "slug": "birnin-kudu-heritage-guide",
