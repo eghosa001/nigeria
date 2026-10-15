@@ -251,7 +251,8 @@ for (const [slug, director, source] of [
   ["a-ride-forever-2026", "Okey Ifeanyi", "nollymeter.com/movies/a-ride-forever"],
 ] as const) {
   const movie = entertainmentTitles.find(item => item.slug === slug);
-  assert(movie?.directors?.includes(director), slug + ": researched director credit missing.");
+  assert(movie !== undefined, slug + ": missing verified movie record.");
+  assert(movie.directors?.includes(director), slug + ": researched director credit missing.");
   assert(movie.references?.some(ref => ref.href.includes(source)),
     slug + ": exact-film credit source missing.");
 }
