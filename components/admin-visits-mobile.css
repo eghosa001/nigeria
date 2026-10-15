@@ -165,3 +165,49 @@
   .visits-current-kpis strong { font-size: 1.36rem; }
   .visits-mobile-trend-row .visits-mini-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
+
+/* One-tap AI-ready complete exports. Keep controls usable on narrow phones. */
+.visits-complete-export {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--mint);
+  min-width: 0;
+}
+.visits-complete-export-heading { display: grid; gap: 4px; }
+.visits-complete-export-heading > strong { font-size: 1rem; color: var(--green-dark); }
+.visits-complete-export-heading > small,
+.visits-export-footnote { font-size: .74rem; line-height: 1.45; color: var(--muted); }
+.visits-full-download-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.visits-full-download-actions button {
+  min-width: 0;
+  min-height: 46px;
+  padding: 10px;
+  border: 1px solid var(--green-dark);
+  border-radius: 10px;
+  background: var(--green-dark);
+  color: white;
+  font: inherit;
+  font-weight: 800;
+  font-size: .84rem;
+  cursor: pointer;
+}
+.visits-full-download-actions button:nth-child(2) {
+  background: var(--surface);
+  color: var(--green-dark);
+}
+.visits-full-download-actions button:disabled { opacity: .6; cursor: wait; }
+.visits-full-download-actions button:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+@media (max-width: 720px) {
+  .visits-complete-export { padding: 12px; border-radius: 12px; gap: 9px; }
+  .visits-complete-export-heading > strong { font-size: .91rem; }
+  .visits-complete-export-heading > small, .visits-export-footnote { font-size: .67rem; }
+  .visits-full-download-actions { gap: 7px; }
+  .visits-full-download-actions button { min-height: 46px; font-size: .77rem; padding: 8px 4px; }
+}

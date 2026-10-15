@@ -136,155 +136,50 @@ test("visits unlock displays multi-window report and can be locked again", async
     await page.setViewportSize({ width, height: 780 });
     expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), "phone " + width).toBeLessThanOrEqual(1);
   }
-  await page.locator(".visits-export-tools summary").click();
+  const csvDownloadWait = page.waitForEvent("download");
+  await page.getByRole("button", { name: /Complete CSV/ }).click();
+  const csvDownload = await csvDownloadWait;
+  expect(csvDownload.suggestedFilename()).toBe("mynigeriaguide-complete-analytics-2026-10-15.csv");
+  const csvStream = await csvDownload.createReadStream();
+  let csvBody = "";
+  for await (const chunk of csvStream) csvBody += chunk.toString();
+  expect(csvBody).toContain('"search_page"');
+  expect(csvBody).toContain('"visited_page"');
+  expect(csvBody).toContain('"period_summary"');
+  expect(csvBody).toContain('"hourly.latestHour"');
+
+  const jsonDownloadWait = page.waitForEvent("download");
+  await page.getByRole("button", { name: /Complete JSON/ }).click();
+  const jsonDownload = await jsonDownloadWait;
+  expect(jsonDownload.suggestedFilename()).toBe("mynigeriaguide-complete-analytics-2026-10-15.json");
+  const jsonStream = await jsonDownload.createReadStream();
+  let jsonBody = "";
+  for await (const chunk of jsonStream) jsonBody += chunk.toString();
+  const json = JSON.parse(jsonBody);
+  expect(json.schemaVersion).toBe(1);
+  expect(json.report.selectedRange).toBe("all");
+  expect(json.report.searchPages).toHaveLength(1);
+  expect(json.report.pageViewsByPage).toHaveLength(1);
+  expect(json.report.periods).toHaveLength(5);
+  await expect(page.getByRole("button", { name: /Open detailed source diagnostics/ })).toHaveCount(0);
+    await page.locator(".visits-export-tools summary").click();
   await page.getByRole("button", { name: "Lock insights" }).click();
   await expect(page.getByRole("heading", { name: "Unlock private traffic analytics" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
-test("admin dashboard shows independent Search Console health even if visits reporting fails", async ({ page, request }) => {
+test("Visits does not show obsolete diagnostics and Search Console still requires authentication", async ({ page, request }) => {
   const locked = await request.get("/admin/api/search-console", { failOnStatusCode: false });
   expect(locked.status()).toBe(401);
   expect(locked.headers()["cache-control"]).toContain("no-store");
-
-  let checks = 0;
-  await page.route("**/admin/api/search-console?*", async (route) => {
-    checks++;
-    await route.fulfill({ json: {
-      authenticated: true,
-      configured: true,
-      report: {
-        available: true, source: "direct-google-api",
-        siteUrl: "sc-domain:mynigeriaguide.com",
-        startDate: "2026-10-01", endDate: "2026-10-10",
-        fetchedAt: "2026-10-11T05:00:00Z",
-        latestHour: "2026-10-10T23:00:00-07:00", firstIncompleteHour: "2026-10-10T10:00:00-07:00",
-        lagHours: 0, clicks: 24, impressions: 1111,
-        clicks24h: 12, impressions24h: 234, hoursReported24h: 7, rows: [],
-      },
-    } });
-  });
-
-  await page.goto("/admin");
-  await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock admin" }).click();
-
-  // The admin home is deliberately light; no Google API call occurs here.
-  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
-  await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
-  expect(checks).toBe(0);
-
-  await page.goto("/admin/visits");
-  await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
-  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
-  await page.getByRole("button", { name: "Check Google connection" }).click();
-  const card = page.getByTestId("admin-gsc-status");
-  await expect(card.getByRole("heading", { name: "Live data connection & freshness" })).toBeVisible();
-  await expect(card).toContainText("234");
-  await expect(card).toContainText("12");
-  await expect(card).toContainText("7 of 24 hours returned");
-  await card.getByRole("button", { name: "Check Google now" }).click();
-  await expect.poll(() => checks).toBeGreaterThan(1);
-
-  // The separate analytics passphrase is not needed for this on-demand health check.
-  await expect(card).toContainText("234");
-});
-
-test("admin Search Console connectivity failures are explicit, not blank dashboards", async ({ page }) => {
-  await page.route("**/admin/api/search-console?*", (route) => route.fulfill({
-    json: { authenticated: true, configured: false, error: "Search Console authorization has not been configured." },
-  }));
   await page.goto("/admin");
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
-  // The Worker completes the auth redirect asynchronously; do not cancel it
-  // by navigating before its Set-Cookie response is committed.
   await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
-  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
-  await page.getByRole("button", { name: "Check Google connection" }).click();
-  const card = page.getByTestId("admin-gsc-status");
-  await expect(card).toContainText("Google Search Console not reporting");
-  await expect(card).toContainText("authorization has not been configured");
   await expect(page.getByRole("heading", { name: "Visits, impressions & growth" })).toBeVisible();
-});
-
-test("admin shows the exact API activation action for Google's disabled Search Console API", async ({ page }) => {
-  await page.route("**/admin/api/search-console?*", async (route) => {
-    await route.fulfill({ json: { authenticated: true, configured: true, report: {
-      available: false,
-      source: "unavailable",
-      siteUrl: "sc-domain:mynigeriaguide.com",
-      startDate: "2026-10-01",
-      endDate: "2026-10-11",
-      fetchedAt: "2026-10-11T06:00:00Z",
-      latestHour: null, firstIncompleteHour: null, lagHours: null,
-      clicks: null, impressions: null, clicks24h: null, impressions24h: null,
-      hoursReported24h: 0, rows: [],
-      error: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account.",
-      issue: { code: "api-disabled", projectNumber: "987654321011",
-        message: "The Google Search Console API is disabled in the Google Cloud project used by this website's service account." },
-    } } });
-  });
-  await page.goto("/admin");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock admin" }).click();
-  // The Worker completes the auth redirect asynchronously; do not cancel it
-  // by navigating before its Set-Cookie response is committed.
-  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
-  await page.goto("/admin/visits");
-  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
-  await page.getByRole("button", { name: "Check Google connection" }).click();
-  const panel = page.getByTestId("admin-gsc-status");
-  await expect(panel).toContainText("Action required in Google Cloud");
-  await expect(panel).toContainText("987654321011");
-  await expect(panel.getByRole("link", { name: /Enable Search Console API/i })).toHaveAttribute(
-    "href", "https://console.cloud.google.com/apis/library/searchconsole.googleapis.com?project=987654321011",
-  );
-  await expect(panel).not.toContainText("Request failed (403)");
-});
-
-test("admin shows the exact service account to grant Search Console access", async ({ page }) => {
-  await page.route("**/admin/api/search-console?*", async (route) => {
-    await route.fulfill({
-      json: {
-        authenticated: true, configured: true,
-        serviceAccount: {
-          email: "reporting@example-project.iam.gserviceaccount.com",
-          origin: "GA4_SERVICE_ACCOUNT_EMAIL",
-          siteUrl: "sc-domain:mynigeriaguide.com",
-        },
-        report: {
-          available: false, source: "unavailable",
-          siteUrl: "sc-domain:mynigeriaguide.com", startDate: "2026-10-01",
-          endDate: "2026-10-11", fetchedAt: "2026-10-11T07:00:00Z",
-          latestHour: null, firstIncompleteHour: null, lagHours: null,
-          clicks: null, impressions: null, clicks24h: null,
-          impressions24h: null, hoursReported24h: 0, rows: [],
-          error: "Google denied access to the Search Console property.",
-          issue: {
-            code: "property-permission", projectNumber: null,
-            message: "Google denied access to the Search Console property.",
-          },
-        },
-      },
-    });
-  });
-  await page.goto("/admin");
-  await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock admin" }).click();
-  // The Worker completes the auth redirect asynchronously; do not cancel it
-  // by navigating before its Set-Cookie response is committed.
-  await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
-  await page.goto("/admin/visits");
-  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
-  await page.getByRole("button", { name: "Check Google connection" }).click();
-  const card = page.getByTestId("admin-gsc-status");
-  await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
-  await expect(card).toContainText("Choose Full access");
-  await expect(card.getByRole("button", { name: "Copy account email" })).toBeVisible();
-  await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
+  await expect(page.getByRole("button", { name: /Open detailed source diagnostics/ })).toHaveCount(0);
+  await expect(page.getByText("acquisition", { exact: true })).toHaveCount(0);
 });
 
 test("plain-language search finds the right service", async ({ page }) => {
