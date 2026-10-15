@@ -206,7 +206,8 @@ const verifiedOctoberDirectorCredits = [
 ] as const;
 for (const [slug, director, sourceFragment] of verifiedOctoberDirectorCredits) {
   const film = entertainmentTitles.find((item) => item.slug === slug);
-  assert(film?.directors?.includes(director), slug + ": missing film-specific director credit.");
+  assert(film !== undefined, slug + ": missing catalog film for verified credit.");
+  assert(film.directors?.includes(director), slug + ": missing film-specific director credit.");
   assert(film.references?.some((ref) => ref.href.includes(sourceFragment)),
     slug + ": missing same-production director evidence reference.");
 }
