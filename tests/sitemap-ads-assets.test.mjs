@@ -59,6 +59,7 @@ test("video sitemap only advertises verified YouTube movie detail pages", () => 
   assert.equal(count, (xml.match(/<video:player_loc>/g) ?? []).length);
   assert.equal(count, (xml.match(/<video:thumbnail_loc>/g) ?? []).length);
   assert.equal(count, (xml.match(/<video:description>/g) ?? []).length);
-  assert.match(xml, /https:\/\/mynigeriaguide\.com\/entertainment\/youtube\//);
+  assert.match(xml, /https:\/\/mynigeriaguide\.com\/entertainment\/movies\//);
+  assert.ok(xml.includes("<loc>https://mynigeriaguide.com/entertainment/movies/love-looks-good-on-you-2026</loc>"), "Verified complete movie should use the researched film canonical.");
   assert.doesNotMatch(xml, /workers\.dev|localhost|<\/?video:content_loc>/);
 });
