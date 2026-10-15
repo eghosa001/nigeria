@@ -29,10 +29,10 @@ function truncateSeo(value: string, limit: number) {
 
 function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide>>) {
   const year = guide.lastReviewed.slice(0, 4);
-  if (guide.slug === "nigeria-landmarks-places-to-visit") return "Landmarks & Places to Visit in Nigeria " + year;
+  if (guide.slug === "nigeria-landmarks-places-to-visit") return "Famous Nigerian Landmarks: Locations & Visitor Guide";
   if (guide.slug === "calabar-carnival-2026") return "Calabar Carnival 2026: Parade Dates & Trip Guide";
   if (guide.slug === "moonshot-techcabal-lagos-2026") return "Moonshot by TechCabal 2026: Dates & Venue";
-  if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Visitor Access";
+  if (guide.slug === "kainji-dam-guide") return "Kainji Dam Nigeria: Location, History & Power Facts";
   if (guide.slug === "mambilla-plateau-guide") return "Mambilla Plateau Nigeria: Location, Gembu & Trip Tips";
   if (guide.slug === "dufuna-canoe-heritage-guide") return "Dufuna Canoe: Age, Yobe Discovery & Visitor Advice";
   if (guide.slug === "gashaka-gumti-national-park") return "Gashaka-Gumti National Park: Access & Trip Planning";
@@ -48,6 +48,7 @@ function getExploreSeoTitle(guide: NonNullable<ReturnType<typeof getExploreGuide
 // guides earned impressions on precise landmark queries but no recorded clicks.
 // Match search intent without suggesting unrestricted access or inventing fees.
 const exploreDescriptionOverrides: Record<string, string> = {
+  "nigeria-landmarks-places-to-visit": "Explore famous landmarks in Nigeria, their locations and historical significance. Compare heritage sites, waterfalls and parks with practical access advice.",
   "moonshot-techcabal-lagos-2026": "Moonshot by TechCabal is 28–29 October 2026 at National Theatre, Lagos. Compare official tickets, the programme, transport and side-event access.",
   "dufuna-canoe-heritage-guide": "Dufuna Canoe, found in Yobe State, is more than 8,000 years old. Read its archaeological history and check exhibition access before planning a visit.",
   "mambilla-plateau-guide": "Mambilla Plateau is in Sardauna LGA, Taraba State. Plan a Gembu-based highland trip with weather, road and tea-estate access checks before travelling.",
