@@ -170,7 +170,7 @@ for (const [slug, sourceFragment, evidencePhrase, planningPhrase] of [
 
 // Focused heritage source matching and independently sourced travel safeguards.
 for (const [slug, officialUrl, additionalSource, distinctiveFact, action] of [
-  ["arochukwu-long-juju-guide", "whc.unesco.org/en/tentativelists/5170/", "new.aronewsonline.com/encounter-with-ibini-ukpabi", "tentative-list entry 5170", "Arochukwu custodians"],
+  ["arochukwu-long-juju-guide", "whc.unesco.org/en/tentativelists/5170/", "people.wku.edu/johnston.njoku/arochukwu/history", "tentative-list entry 5170", "Arochukwu custodians"],
   ["chad-basin-national-park-borno-guide", "nigeriaparkservice.gov.ng/blog/2014/08/12/chad-basin", "chathamhouse.org/events/all/standard-event/lake-chad-basin", "Chingurmi-Duguma", "Do not treat the Borno park sector"],
   ["anambra-heritage-circuit", "anambrastate.gov.ng/ministry-of-culture", "ajernet.net/ojs/index.php/ajernet/article/view/1078", "120 participants", "Separate Ogbunike conservation concerns"],
 ] as const) {
