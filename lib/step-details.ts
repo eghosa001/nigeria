@@ -55,18 +55,12 @@ function checkpointFor(step: string) {
   if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Confirm the service, applicant/entity details and amount on the official payment screen before paying. Do not continue from an unsolicited payment link.";
   if (/upload|attach|document|evidence|certificate|affidavit|photo/i.test(step)) return "Check that every file belongs to the correct applicant/record, is readable and matches the portal prompt before upload.";
   if (isPhysicalAction(step)) return "Confirm the correct office/centre, date or appointment instruction before travelling, and take the originals where the guide or agency explicitly requires them.";
-  if (/submit|send|apply|request|register|file|enrol/i.test(step)) return "Review names, numbers, dates, contact details and selections before final submission because corrections may require a separate official process.";
-  if (/collect|download|print|receive|issued/i.test(step)) return "Check the finished document/result for spelling, identity details, reference numbers and status before relying on it.";
-  if (/verify|confirm|review|check|match/i.test(step)) return "Make sure the displayed record is the correct person/entity and that the information matches the evidence you are using.";
-  if (/sign in|login|log in|create account|open|start/i.test(step)) return "Use the official route linked on this guide and make sure you are working in the correct applicant/entity account before entering data.";
   return undefined;
 }
 
 function keepFor(step: string) {
   if (/pay|payment|fee|checkout|remita|rrr/i.test(step)) return "Keep the official receipt, payment reference or transaction ID.";
-  if (/submit|send|apply|request|register|file|enrol/i.test(step)) return "Keep the application/reference number, acknowledgement or confirmation generated after submission.";
   if (/appointment|attend|visit|centre|center|office|biometric|capture/i.test(step)) return "Keep the appointment, acknowledgement or reference you may need at the physical stage.";
-  if (/collect|download|print|receive|issued/i.test(step)) return "Keep the final document/result plus any receipt or reference used to obtain it.";
   if (/sms|phone|sim|code|pin/i.test(step)) return "Keep the linked phone/SIM and any official code or confirmation message private and accessible.";
   return undefined;
 }

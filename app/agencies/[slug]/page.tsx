@@ -18,10 +18,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const agency = getAgency(slug);
   if (!agency) return {};
+  const guideCount = getServicesByAgency(slug).length;
   return {
     title: agency.slug === "npc" ? "NPC Birth Registration & Attestation Services 2026" : agency.shortName + " services",
     description: agency.slug === "npc" ? "NPC Nigeria services for birth registration, birth attestation and status checks, with verified requirements, official links and current guidance." : agency.description,
     alternates: { canonical: "/agencies/" + agency.slug },
+    // Single-guide agency hubs repeat the underlying guide without enough
+    // distinct navigation value to warrant their own search result.
+    robots: guideCount >= 2 ? undefined : { index: false, follow: true },
   };
 }
 

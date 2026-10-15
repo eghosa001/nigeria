@@ -56,7 +56,7 @@ export default async function YouTubeMoviesPage({
             <div>
               <span className="eyebrow">Free on YouTube</span>
               <h1>Full Nigerian movies on YouTube: latest 2026 releases.</h1>
-              <p className="page-intro">Browse {discoverableYouTubeMovies.length.toLocaleString()} source-verified full-length Nigerian movies. Search by movie, actor or publisher, open the details page, then use the verified YouTube watch link.</p>
+              <p className="page-intro">Browse {discoverableYouTubeMovies.length.toLocaleString()} Nigerian film listings linked to identified YouTube publishers. Search by movie, actor or publisher and open the source to watch. Some listings have limited independently confirmed cast or plot information; for researched credits and story guides, use <Link href="/entertainment/movies">our editorial movie profiles</Link>.</p>
             </div>
           </div>
           <div className="movie-browse-tabs">

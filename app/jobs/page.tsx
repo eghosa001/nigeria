@@ -99,8 +99,8 @@ export default function JobsPage() {
             <div className="minimal-section-heading">
               <div>
                 <span className="eyebrow">Open now</span>
-                <h2>Applications you can act on today.</h2>
-                <p>Only opportunities whose official source currently shows an open application window appear here. Published deadlines are shown first, with the nearest closing dates prioritised.</p>
+                <h2>Recently verified application windows.</h2>
+                <p>These opportunities were marked open at their last recorded source check and have not passed a published closing date. Their availability can change: confirm the vacancy on the employer's official website before applying. Published deadlines are shown first.</p>
               </div>
             </div>
             <div className="jobs-open-grid">

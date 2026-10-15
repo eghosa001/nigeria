@@ -152,12 +152,36 @@ const tourPlaceReviewQueue = sortEditorialCandidates(placeCandidates.filter((r) 
   .slice(0, 20).map(({ url, title, words, sourceCount, checkedAt, priority, reviewFlags, score }) =>
     ({ url, title, words, sourceCount, checkedAt, priority, reviewFlags, score }));
 
+
+// Review freshness across all source-backed catalogs instead of relying on
+// word count as a proxy for trust. These are candidates for a new source check,
+// not an automatic claim that an otherwise evergreen article is inaccurate.
+const auditDate = new Date().toISOString().slice(0, 10);
+const staleSourceReviewCandidates = rows
+  .flatMap((row) => {
+    const checkedAt = reviewDates.get(row.url);
+    if (!checkedAt || !/^\d{4}-\d{2}-\d{2}$/.test(checkedAt)) return [];
+    const checkedMillis = Date.parse(checkedAt + "T00:00:00Z");
+    const ageDays = Math.floor((Date.parse(auditDate + "T00:00:00Z") - checkedMillis) / 86_400_000);
+    return Number.isFinite(ageDays) && ageDays > 30
+      ? [{ pillar: row.pillar, url: row.url, checkedAt, ageDays }]
+      : [];
+  })
+  .sort((a, b) => b.ageDays - a.ageDays)
+  .slice(0, 100);
+
 const audit = {
   date: new Date().toISOString().slice(0, 10),
   methodology: "Approximate authored record-field words; NOT actual rendered article length or human editorial review",
   uniqueCatalogUrls: rows.length,
   byPillar,
   reviewQueueByPillar,
+  staleSourceReviewCandidates,
+  staleSourceReviewCandidateCount: rows.filter((r) => {
+    const checkedAt = reviewDates.get(r.url);
+    return checkedAt && /^\d{4}-\d{2}-\d{2}$/.test(checkedAt) &&
+      Date.parse(auditDate + "T00:00:00Z") - Date.parse(checkedAt + "T00:00:00Z") > 30 * 86_400_000;
+  }).length,
   tourPlaceReviewQueue,
   triageCaveat: "Flags are automated screening candidates, not proof of factual inaccuracy, plagiarism, thin rendered pages, or failed human review.",
   duplicateSameTitleWithinPillar: duplicateTitles.slice(0, 25),
