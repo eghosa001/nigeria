@@ -743,7 +743,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Thriller", "Drama", "Nollywood"],
     languages: ["Ijaw", "English"],
-    synopsis: "Six people fleeing a community devastated by oil pollution stow away on a mysterious ship and discover new dangers onboard.",
+    synopsis: "Six people trying to escape a Niger Delta community damaged by oil pollution hide aboard a ship, hoping the journey will take them somewhere safer. The vessel instead becomes a confined setting where their freedom depends on people they do not control. The 2023 thriller draws tension from the gap between the group's desperate decision to leave and the danger of travelling unseen. Its Ijaw-language dialogue, also supported by Ijaw subtitles on Netflix, gives the survival story a distinct regional identity. Expect an intense ensemble drama about displacement and risk, not a carefree sea adventure.",
     cast: ["Adaobi Dibor", "David Ezekiel", "Sylvester Ekanem"],
     featured: true,
     trailer: {
@@ -758,9 +758,9 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       {
         platform: "Netflix",
         label: "Watch on Netflix",
-        href: "https://www.netflix.com/title/81676887",
+        href: "https://www.netflix.com/ng/title/81676887",
         access: "subscription",
-        lastChecked: "2026-09-29",
+        lastChecked: "2026-10-15",
         note: "Official Netflix title page. Regional availability can change.",
       },
     ],
@@ -976,12 +976,12 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Comedy", "Nollywood"],
     languages: ["English"],
-    synopsis: "When her father falls ill, Adaeze takes on the family transport business and must prove herself in a male-dominated environment.",
+    synopsis: "When her father falls ill, Adaeze expects to help protect the family transport business, but he asks his brother Godswill to lead alongside her. With the company facing financial trouble, Adaeze and her uncle approach the crisis differently while she tries to earn authority in a workplace that underestimates her. Their disagreement makes the question of succession more complicated than a simple contest for a title. Genevieve Nnaji's 2018 comedy-drama is about practical cooperation, family loyalty and women's leadership, with a warmer tone than a conventional corporate thriller.",
     directors: ["Genevieve Nnaji"],
     cast: ["Genevieve Nnaji", "Nkem Owoh", "Pete Edochie", "Onyeka Onwenu", "Kanayo O. Kanayo"],
     featuredCast: ["Genevieve Nnaji", "Nkem Owoh", "Pete Edochie"],
     references: [{ label: "Netflix newsroom — acquisition and feature production credits for Lionheart", href: "https://about.netflix.com/en/news/netflix-acquires-worldwide-rights-to-lionheart", lastChecked: "2026-10-13", note: "Primary corporate release confirms director, cast, film story and TIFF debut." }],
-    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81030789", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81030789", access: "subscription", lastChecked: "2026-10-15", note: "Official Netflix Nigeria title page." }],
   },
   {
     slug: "swallow",
@@ -1010,7 +1010,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "A man who rejected a strict religious upbringing struggles to reconcile the life he chose with the faith he left behind.",
+    synopsis: "Samuel turns away from the strict religious upbringing that shaped his childhood and tries to make a life on his own terms. Leaving the rules behind does not erase the pull of family, belief and the identity he once had. The 2022 drama follows that tension as a personal struggle rather than offering an easy answer about faith. Akah Nnani plays Samuel, with Osas Ighodaro and Atlanta Bridget Johnson among the credited performers. Viewers seeking a reflective Nollywood drama about conviction, belonging and the consequences of independence will find a different tone here from a light romantic comedy.",
     cast: ["Akah Nnani", "Osas Ighodaro", "Atlanta Bridget Johnson", "Dorcas Shola Fapson", "Jude Chukwuka", "Ayo Mogaji", "Olumide Oworu", "Patrick Doyle", "Eucharia Anunobi", "Mawuli Gavor"],
     featuredCast: ["Akah Nnani", "Osas Ighodaro", "Olumide Oworu"],
     trailer: {
@@ -1021,7 +1021,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
-    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81572291", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81572291", access: "subscription", lastChecked: "2026-10-15", note: "Official Netflix Nigeria title page." }],
   },
   {
     slug: "citation",
@@ -1092,7 +1092,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Comedy", "Romance", "Family", "Nollywood"],
     languages: ["English"],
-    synopsis: "Three brothers compete to fulfil their mother's Christmas wish, turning the festive season into a chaotic race for love and approval.",
+    synopsis: "A mother wants her three sons to settle down, and her Christmas wish turns family pressure into a contest with a prize attached. Each brother faces romantic choices of his own, but the competition makes it harder to tell genuine commitment from a bid to please their mother. The festive setting brings different relationships and generations into the same family celebration. Rachel Oniga leads the ensemble alongside Kunle Remi and Segilola Ogidan. This 2021 comedy is a fit for viewers looking for Nigerian holiday humour and competing love stories rather than a romance centred on just one couple.",
     cast: ["Rachel Oniga", "Kunle Remi", "Segilola Ogidan", "Efa Iwara", "Linda Osifo", "Mercy Johnson Okojie", "Lateef Adedimeji"],
     featuredCast: ["Rachel Oniga", "Kunle Remi", "Mercy Johnson Okojie"],
     trailer: {
@@ -1103,7 +1103,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
-    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81434660", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81434660", access: "subscription", lastChecked: "2026-10-15", note: "Official Netflix Nigeria title page." }],
   },
   {
     slug: "chief-daddy",
