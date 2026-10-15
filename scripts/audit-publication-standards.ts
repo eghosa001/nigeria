@@ -15,7 +15,7 @@ import { explorePlaces } from "../lib/explore-places";
 import { entertainmentTitles } from "../lib/entertainment";
 import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registry";
 import { seriesTitles } from "../lib/series";
-import { entertainmentPeople } from "../lib/entertainment-extras";
+import { entertainmentPeople, getPersonEditorialProfile, hasIndexablePersonEditorial } from "../lib/entertainment-extras";
 import { youtubeMovieLibrary, indexableYouTubeMovies } from "../lib/youtube-library";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
@@ -123,10 +123,16 @@ for (const series of seriesTitles) {
 }
 for (const person of entertainmentPeople) {
   const issues: Finding[] = [];
-  if (wordCount(person.summary) < 25) issues.push(review("thin-person-profile", "Biography needs properly sourced original context and verified credits."));
-  issues.push(review("person-source-review", "Verify biographical details and credit provenance before standalone indexing."));
+  const eligible = hasIndexablePersonEditorial(person.slug);
+  const editorial = getPersonEditorialProfile(person.slug);
+  if (eligible && (!editorial || editorial.sources.length < 3)) {
+    issues.push(blocker("indexable-person-without-person-sources", "Movie references are not biography evidence."));
+  }
+  if (!eligible) issues.push(review("person-discovery-only",
+    "Internal catalog profile is deliberately noindex until independently sourced authored biography is verified."));
+  else issues.push(review("person-career-fact-review", "Manually compare each career claim and credit to the cited original institution/interview."));
   issues.push(paragraphsManual);
-  adds("Movies & Entertainment", "actor", person.slug, "/entertainment/people/" + person.slug, person.name, true, issues);
+  adds("Movies & Entertainment", "actor", person.slug, "/entertainment/people/" + person.slug, person.name, eligible, issues);
 }
 const currentlyIndexableVideoIds = new Set(indexableYouTubeMovies.map(x => x.videoId));
 for (const movie of youtubeMovieLibrary) {
