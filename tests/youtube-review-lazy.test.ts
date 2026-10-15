@@ -101,7 +101,9 @@ test("publisher promotion and notification requests cannot become indexable movi
 
 test("local Cloudflare smoke uses the static YouTube adapter without mutating production D1 cutover", () => {
   const config = readFileSync(new URL("../playwright.cloudflare.config.ts", import.meta.url), "utf8");
-  assert.match(config, /--var YOUTUBE_D1_CUTOVER:disabled/);
+  assert.match(config, /YOUTUBE_D1_CUTOVER:'disabled'/);
+  assert.match(config, /dist\\/server\\/wrangler\\.qa\\.json/);
+  assert.match(config, /fs\\.writeFileSync/);
   // Production continues to use the explicit D1 setting; only the
   // local Playwright webServer's Wrangler arguments override it.
   const workerConfig = readFileSync(new URL("../wrangler.jsonc", import.meta.url), "utf8");
