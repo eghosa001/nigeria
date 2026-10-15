@@ -31,6 +31,32 @@ for (const slug of [
     slug + " must not enter the open-now vacancy list.");
 }
 
+// Verify that an HTTP 200 page containing 'expired' or an employer-board redirect
+// does not masquerade as a live Apply form in the Jobs pillar.
+const sourceUnavailableJobs = [
+  { slug: "fmn-golden-transport-data-tracking-assistant-2026", status: "closed" },
+  { slug: "fmn-golden-transport-data-tracking-officer-2026", status: "closed" },
+  { slug: "fmn-premier-feed-mills-senior-plant-operations-calabar-2026", status: "closed" },
+  { slug: "moniepoint-customer-experience-researcher", status: "unverified" },
+  { slug: "eha-dental-assistant-lagos-2026", status: "unverified" },
+] as const;
+for (const { slug, status } of sourceUnavailableJobs) {
+  const record = jobOpportunities.find((item) => item.slug === slug);
+  assert(record?.status === status, slug + " must remain separated from verified open applications.");
+  assert(record.kind === "vacancy" && !isIndexableJobOpportunity(record),
+    slug + " is not currently a standalone indexable job advert.");
+  assert(!buildJobPostingJsonLd(record, "https://mynigeriaguide.com/jobs/" + slug),
+    slug + " must not expose live JobPosting structured data.");
+  const openJobs = queryJobDirectory({ status: "open", q: record.organization, page: 1, pageSize: 48 });
+  assert(!openJobs.items.some((item) => item.slug === slug),
+    slug + " must not appear in open jobs.");
+  if (status === "unverified") {
+    const closedJobs = queryJobDirectory({ status: "closed", q: record.organization, page: 1, pageSize: 48 });
+    assert(!closedJobs.items.some((item) => item.slug === slug),
+      slug + " has no employer-confirmed closure and must not appear in closed jobs.");
+  }
+}
+
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
 assert(defaultDirectory.items.length <= JOBS_DIRECTORY_PAGE_SIZE, "The browser-facing Jobs directory must be paginated.");
