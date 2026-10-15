@@ -38,6 +38,7 @@
     "quality:status": "tsx scripts/report-content-quality.ts",
     "check:directory-queries": "tsx scripts/check-directory-queries.ts",
     "audit:publisher": "tsx scripts/audit-publisher-readiness.ts",
+    "audit:publication": "tsx scripts/audit-publication-standards.ts",
     "check:crawl-assets": "node --test tests/sitemap-ads-assets.test.mjs",
     "check:premium-film-guides": "tsx scripts/check-premium-film-guides.ts"
   },

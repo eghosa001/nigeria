@@ -6,6 +6,14 @@ on:
     paths:
       - "scripts/audit-publisher-readiness.ts"
       - "scripts/audit-legacy-content.ts"
+      - "scripts/audit-publication-standards.ts"
+      - "docs/FOUR_PILLAR_PUBLICATION_STANDARD.md"
+      - "lib/agency-indexing.ts"
+      - "lib/youtube-editorial-dossiers.ts"
+      - "data/services*.json"
+      - "lib/entertainment-*.ts"
+      - "lib/explore*.ts"
+      - "lib/jobs*.ts"
       - ".github/workflows/publisher-readiness.yml"
 
 permissions:
@@ -21,6 +29,8 @@ jobs:
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: Verify owner minimal-CI guard
         run: python3 scripts/fast_path_guard.py
       - uses: actions/setup-node@v4
@@ -32,8 +42,19 @@ jobs:
         run: |
           ./node_modules/.bin/tsx scripts/audit-publisher-readiness.ts --json > publisher-audit.json
           ./node_modules/.bin/tsx scripts/audit-legacy-content.ts --json > legacy-audit.json
+          ./node_modules/.bin/tsx scripts/audit-publication-standards.ts --json > publication-standards.json
           node -e 'const a=require("./legacy-audit.json"); if(!a.coverage.allCatalogRecords||a.coverage.indexableCatalogRecords<1000) process.exit(1); console.log("Legacy records inspected:",a.coverage.allCatalogRecords,"indexable:",a.coverage.indexableCatalogRecords); for(const x of a.groups) console.log(x.group,JSON.stringify(x)); console.log("Issue counts:",JSON.stringify(a.issueCounts));'
           node -e 'const a=require("./publisher-audit.json"); if(!a.uniqueCatalogUrls||a.byPillar.length!==6) process.exit(1); for(const x of a.byPillar) console.log(x.pillar, JSON.stringify(x)); console.log("Publisher audit generated:",a.uniqueCatalogUrls,"records");'
+      - name: Strict new-page publication gate
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git fetch origin "$BASE_SHA" --depth=1
+          ./node_modules/.bin/tsx scripts/audit-publication-standards.ts --gate-new --base="$BASE_SHA"
+      - name: Summarize all four-pillar publication checks
+        run: |
+          node -e 'const a=require("./publication-standards.json"); for (const p of a.byPillar) console.log(p.pillar + ": " + p.records + " records / " + p.blockers + " indexable with automatic blockers / " + p.editorialReview + " needing review"); console.log("Full catalog records checked:",a.coverage.sourceCatalogRecords); if(a.byPillar.length!==4 || a.coverage.sourceCatalogRecords<1000) process.exit(1);'
       - name: Store audit artifact for editorial review
         uses: actions/upload-artifact@v4
         with:
@@ -41,4 +62,5 @@ jobs:
           path: | 
             publisher-audit.json
             legacy-audit.json
+            publication-standards.json
           retention-days: 14
