@@ -1,3 +1,4 @@
+import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { verifiedDangoteOlamJobs20261012 } from "@/lib/job-growth-wave-14";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
@@ -3842,8 +3843,11 @@ export const internationalOpportunities = jobOpportunities.filter((item) => item
 // eligible as long as their own publication evidence supports indexing.
 export function isIndexableJobOpportunity(item: CareerOpportunity): boolean {
   if (templateCareerPortalSlugs.has(item.slug)) return false;
-  const deadlinePassed = Boolean(item.deadline && item.deadline < new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0, 10));
-  if (item.kind === "vacancy" && (item.status === "closed" || item.status === "unverified" || (item.status === "open" && deadlinePassed))) return false;
+  // Follow the same deadline and source-verification lifecycle as the
+  // visitor-facing open list and JobPosting schema. Never index a stale
+  // one-off vacancy as if the last "Apply" check were still current.
+  if (item.kind === "vacancy" &&
+      ["closed", "unverified"].includes(getEffectiveJobStatus(item))) return false;
   return true;
 }
 
