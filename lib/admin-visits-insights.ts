@@ -111,7 +111,7 @@ async function queryOverview() {
     sessions: ga4Totals ? value(ga4Totals, 1) : null,
     clicks: gscLifetime.status === "fulfilled" ? (gscTotals?.clicks ?? 0) : null,
     impressions: gscLifetime.status === "fulfilled" ? (gscTotals?.impressions ?? 0) : null,
-  });
+  }, pacificDay);
   const daily = new Map<string, TrafficDay>();
   for (const row of ga4Days) daily.set(row.date, row);
   for (const row of gscDays) daily.set(row.date, { ...(daily.get(row.date) ?? { date: row.date }), ...row });
