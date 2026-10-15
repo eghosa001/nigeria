@@ -106,4 +106,24 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     directors: ["Yemi Morafa","Dimeji Ajibola"],
     source: { label: "Prime Video — Sin: First Blood official credits", href: "https://www.primevideo.com/detail/0KXCFQNLM0K54DL96DZ76BWDCK", lastChecked: "2026-10-15", note: "Prime Video's credits list Yemi Filmboy Morafa and the late Dimeji Ajibola as directors; the platform labels the latter credit posthumous." },
   },
+  "epe-after-dark": {
+    directors: ["Omoruyi Efosa Emmanuel"],
+    source: {"label":"FilmFlux — Epe After Dark screen-credit dossier","href":"https://filmflux.app/movie/59a3f65e-1e96-42e1-a5b9-1954716dec66-epe-after-dark","lastChecked":"2026-10-15","note":"The 2026 Maurice Sam TV film's production credits name Omoruyi Efosa Emmanuel as a credited director. Avoid confusing the producer and other staff with director credits."},
+  },
+  "the-merger": {
+    directors: ["Best Okoduwa"],
+    source: {"label":"Zikoko — September 2026 Nollywood YouTube film roundup","href":"https://www.zikoko.com/pop/the-10-best-nollywood-movies-to-watch-on-youtube-september-2026/","lastChecked":"2026-10-15","note":"Film-specific coverage credits Best Okoduwa as director of the 2026 Uche Montana and Timini Egbuson film, not other works titled The Merger."},
+  },
+  "a-place-with-you": {
+    directors: ["Chidi Chijioke"],
+    source: {"label":"IMDbPro — A Place with You (2026) film credits","href":"https://pro.imdb.com/title/tt39952678/","lastChecked":"2026-10-15","note":"Film-specific crew record identifies Chidi Chijioke as director of the 2026 Uche Montana film."},
+  },
+  "after-a-night-in-july": {
+    directors: ["Great Valentine Edochie"],
+    source: {"label":"Nollywire — After a Night in July (2025) credits","href":"https://nollywire.com/films/after-a-night-in-july","lastChecked":"2026-10-15","note":"Nollywire film record independently credits Great Valentine Edochie and documents the correct 2025 sequel identity."},
+  },
+  "just-before-forever": {
+    directors: ["Omoruyi Efosa Emmanuel"],
+    source: {"label":"FilmFlux — Just Before Forever (2026) full film credits","href":"https://filmflux.app/movie/8332726c-c968-4555-9402-51f027ba3fb5-just-before-forever","lastChecked":"2026-10-15","note":"Film-specific publisher-linked credit record identifies Omoruyi Efosa Emmanuel as director; source is not a general availability guarantee."},
+  },
 };
