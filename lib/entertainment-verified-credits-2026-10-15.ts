@@ -126,4 +126,37 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     directors: ["Omoruyi Efosa Emmanuel"],
     source: {"label":"FilmFlux — Just Before Forever (2026) full film credits","href":"https://filmflux.app/movie/8332726c-c968-4555-9402-51f027ba3fb5-just-before-forever","lastChecked":"2026-10-15","note":"Film-specific publisher-linked credit record identifies Omoruyi Efosa Emmanuel as director; source is not a general availability guarantee."},
   },
+  "irreplaceable": {
+    directors: ["Modupe Fakorede"],
+    source: { label: "IMDb — Irreplaceable (2024) full film credits", href: "https://www.imdb.com/title/tt33341685/fullcredits/", lastChecked: "2026-10-15", note: "Exact 2024 Omoni Oboli TV film record credits Modupe Fakorede as director and matches the publisher cast John Ekanem, Emmanuel Nse and Angel Unigwe." },
+  },
+  "pieces-that-fit": {
+    directors: ["Magnifique Ecrivaine"],
+    source: { label: "Nollywood.com — Pieces That Fit (2026) film record", href: "https://www.nollywood.com/movies/pieces-that-fit", lastChecked: "2026-10-15", note: "The 2026 two-hour film record names Magnifique Ecrivaine as director and Michael Dappa and Ekama Etim-Inyang as leads, matching this film, not another similarly titled title." },
+  },
+  "lisabi-the-uprising": {
+    directors: ["Niyi Akinmolayan"],
+    source: { label: "IMDb — Lisabi: The Uprising (2024) full production credits", href: "https://www.imdb.com/title/tt33255000/fullcredits/", lastChecked: "2026-10-15", note: "Film-specific 2024 full credits name Niyi Akinmolayan as director, distinct from other Lisabi productions and sequels." },
+  },
+  "all-things-equal": {
+    directors: ["Omoruyi Efosa Emmanuel"],
+    source: { label: "Nollywood.com — All Things Equal (2026) production credits", href: "https://www.nollywood.com/movies/all-things-equal", lastChecked: "2026-10-15", note: "The 2026 Sarian Martin and Daniel Etim Effiong film record specifically identifies Omoruyi Efosa Emmanuel as director." },
+  },
+  "monica": {
+    directors: ["Omoruyi Efosa Emmanuel"],
+    source: { label: "IMDb — Monica (2026) full production credits", href: "https://www.imdb.com/title/tt40923799/fullcredits/", lastChecked: "2026-10-15", note: "The original 2026 Uche Montana film credits Omoruyi Wallz Efosa (also credited as Omoruyi Efosa Emmanuel) as director; do not transfer this evidence to Monica 2." },
+  },
+  "my-housemate": {
+    directors: ["Great Valentine Edochie"],
+    source: { label: "Nollywood.com — My Housemate (2026) film credits", href: "https://www.nollywood.com/movies/my-housemate", lastChecked: "2026-10-15", note: "The 2026 Bolaji Ogunmola and Nosa Okunzuwa romantic comedy identifies Great Valentine Edochie as director." },
+  },
+  "forever-found": {
+    directors: ["Uche Alexmoore"],
+    source: { label: "Nollywood.com — Forever Found (2026) film credits", href: "https://www.nollywood.com/movies/forever-found", lastChecked: "2026-10-15", note: "The 2026 Enyinna Jonas TV film with Chinenye Nnebe and John Ekanem identifies Uche Alexmoore as director; do not confuse with similarly named titles." },
+  },
+  "sister-agatha": {
+    directors: ["Tobe Nosike"],
+    source: { label: "Nollywood.com — Sister Agatha (2026) film credits", href: "https://www.nollywood.com/movies/sister-agatha", lastChecked: "2026-10-15", note: "The 2026 Blessing Obasi and Bukunmi Adeaga-Ilori comedy-drama credits Tobe Nosike as director; not the distinct older Sisters film." },
+  },
+
 };
