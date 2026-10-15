@@ -6,7 +6,7 @@ import type { InsightsReport } from "./admin-visits-insights";
  * restricted to whichever time tab happens to be selected.
  *
  * "All" is subject to Google retention, API row limits and the website's
- * clean GA4 tracking start. The report's daily array is a 90-day window.
+ * clean GA4 tracking start. The report's daily array contains all returned source dates.
  */
 export function completeVisitsReport(report: InsightsReport) {
   return {
@@ -19,7 +19,7 @@ export function completeVisitsReport(report: InsightsReport) {
       gscTimezone: "America/Los_Angeles",
       ga4Timezone: "Africa/Lagos",
       sourceDifferences: "Search impressions/clicks, GA4 sessions/page views and PostHog visitors are distinct measures; do not sum them.",
-      availableHistory: "GSC limited to up to 16 months of Google history, GA4 to clean production tracking. Daily trend is the latest 90 days; lifetime metrics are separately included in periods.",
+      availableHistory: "GSC limited to up to 16 months of Google history, GA4 to clean production tracking. Daily trend includes all returned dates; lifetime metrics are separately included in periods.",
       searchPageRowsReturned: report.searchPages.length,
       websitePageRowsReturned: report.pageViewsByPage.length,
       gscRowsTruncated: report.pageListsTruncated.gsc,
@@ -69,7 +69,7 @@ export function completeVisitsCsv(report: InsightsReport): string {
   addMeta("ga4ViewedPagesTruncated", report.pageListsTruncated.ga4, "GA4", "Provider rows may be capped at 2,500");
   addMeta("gscSearchPageRowsReturned", report.searchPages.length, "GSC");
   addMeta("ga4ViewedPageRowsReturned", report.pageViewsByPage.length, "GA4");
-  addMeta("dailyTrendCoverage", "Latest 90 reported days", "dashboard", "Lifetime totals are independently available below");
+  addMeta("dailyTrendCoverage", "All returned daily source dates", "dashboard", "Lifetime totals are independently available below");
   addMeta("measurementWarning",
     "Never add GA4 views/sessions, GSC impressions/clicks, or PostHog visitors: different measures.");
   addMeta("unavailableWarning", "Blank metric cells are unavailable and must not be interpreted as zero.");
@@ -92,7 +92,7 @@ export function completeVisitsCsv(report: InsightsReport): string {
   }
   for (const day of report.daily) {
     records.push({
-      section: "daily_trend", source: "GSC + GA4", period: "latest_90_days",
+      section: "daily_trend", source: "GSC + GA4", period: "all_returned_days",
       date_or_hour: day.date, impressions: day.impressions, clicks: day.clicks,
       ctr_ratio: day.impressions && day.clicks !== undefined ? day.clicks / day.impressions : null,
       average_position: day.position, page_views: day.pageViews, sessions: day.sessions,
