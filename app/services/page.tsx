@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { redirect } from "next/navigation";
 import { ServiceDirectory } from "@/components/service-directory";
 import { categorySlug } from "@/lib/category";
@@ -112,12 +113,25 @@ export default async function ServicesPage({
             </label>
             <button type="submit">Search services</button>
           </form>
-          <div className="minimal-inline-links" aria-label="Guides for common service tasks">
-            {popularServiceLinks.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+          <PageOutline label="Browse services" items={[
+            { href: "#popular-service-tasks", label: "Popular tasks" },
+            { href: "#service-categories", label: "Service categories" },
+            { href: "#service-directory", label: "All guides" },
+          ]} />
+          <div id="popular-service-tasks" className="minimal-inline-links" aria-label="Guides for common service tasks">
+            {popularServiceLinks.slice(0, 6).map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
           </div>
+          {popularServiceLinks.length > 6 ? (
+            <details className="compact-link-menu service-more-tasks">
+              <summary>More common tasks</summary>
+              <div className="disclosure-link-grid">
+                {popularServiceLinks.slice(6).map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}
+              </div>
+            </details>
+          ) : null}
         </div>
 
-        <nav className="service-category-nav minimal-category-nav service-category-featured" aria-label="Popular service categories">
+        <nav id="service-categories" className="service-category-nav minimal-category-nav service-category-featured" aria-label="Popular service categories">
           {primaryCategories.map((category) => (
             <Link
               key={category.name}

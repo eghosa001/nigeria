@@ -169,3 +169,27 @@ html[data-theme="dark"] .job-card-open .job-deadline strong {
   outline: 2px solid var(--green);
   outline-offset: -2px;
 }
+
+/* Reusable guide outline: quick, accessible route into long articles and directories. */
+.page-outline-wrap { margin-block: 1.25rem .25rem; }
+.page-outline { display: flex; align-items: flex-start; gap: .75rem 1rem; flex-wrap: wrap; padding: .75rem 0; border-block: 1px solid var(--line); min-width: 0; }
+.page-outline-label { color: var(--muted); font-size: .78rem; font-weight: 800; letter-spacing: .035em; padding: .57rem 0; white-space: nowrap; }
+.page-outline ul { display: flex; flex: 1; flex-wrap: wrap; align-items: center; gap: .45rem; padding: 0; margin: 0; list-style: none; }
+.page-outline a { display: inline-flex; min-height: 42px; align-items: center; padding: .48rem .85rem; border-radius: 999px; border: 1px solid var(--line); background: var(--theme-raised, var(--surface)); color: var(--ink); font-size: .86rem; line-height: 1.35; font-weight: 650; }
+.page-outline a:hover { border-color: var(--green); color: var(--green-dark); }
+.page-outline a:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+:where(.section, .guide-content section, .job-detail-content section, .movie-detail-primary section)[id],
+:where(h2, h3)[id], #service-directory, #popular-service-tasks, #service-categories, #trip-sources { scroll-margin-top: 142px; }
+.jobs-editorial-updates { margin-top: 1rem; }
+.jobs-editorial-updates-content { padding: .25rem .9rem .7rem; }
+.jobs-editorial-updates-content p { margin: .6rem 0; max-width: 76ch; }
+.service-more-tasks { margin-block: .5rem 1rem; }
+@media (max-width: 700px) {
+  .page-outline { gap: .25rem; padding: .65rem 0; }
+  .page-outline-label { width: 100%; padding: .1rem 0 .35rem; }
+  .page-outline ul { gap: .4rem; }
+  .page-outline a { min-height: 44px; padding: .48rem .7rem; font-size: .82rem; }
+  :where(.section, .guide-content section, .job-detail-content section, .movie-detail-primary section)[id],
+  :where(h2, h3)[id], #service-directory, #popular-service-tasks, #service-categories, #trip-sources { scroll-margin-top: 115px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

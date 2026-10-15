@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { AnswerFirst } from "@/components/answer-first";
@@ -338,6 +339,16 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         </div>
       </section>
 
+      <div className="container page-outline-wrap">
+        <PageOutline label="Plan this visit" items={[
+          { href: "#trip-highlights", label: "Highlights" },
+          ...(places.length ? [{ href: "#places" as const, label: "Places, maps & costs" }] : []),
+          { href: "#trip-questions", label: "Trip questions" },
+          { href: "#planning", label: "Before you go" },
+          { href: "#trip-sources", label: "Sources" },
+        ]} />
+      </div>
+
       <section className="proof-strip" aria-label={"Best reasons to visit " + guide.shortTitle}>
         <div className="container proof-grid">
           {guide.bestFor.slice(0, 4).map((item, index) => (
@@ -346,7 +357,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
         </div>
       </section>
 
-      <section className="section explore-guide-highlights">
+      <section className="section explore-guide-highlights" id="trip-highlights">
         <div className="container">
           <div className="section-heading"><div><span className="eyebrow">Highlights</span><h2>What to see in {guide.shortTitle}</h2></div></div>
           <div className="explore-highlight-grid">
@@ -414,7 +425,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
           <div className="section-heading">
             <div>
               <span className="eyebrow">Common trip questions</span>
-              <h2>Planning {guide.shortTitle}</h2>
+              <h2 id="trip-questions">Planning {guide.shortTitle}</h2>
             </div>
           </div>
           <div className="compact-faq-list">
@@ -443,7 +454,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
       </section>
 
       <section className="section">
-        <div className="container agency-strip">
+        <div className="container agency-strip" id="trip-sources">
           <div>
             <span className="eyebrow">Source &amp; verification</span>
             <h2>Sources and live checks for {guide.shortTitle}</h2>

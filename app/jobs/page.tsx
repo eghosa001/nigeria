@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { JsonLd } from "@/components/json-ld";
 import { JobsDirectory } from "@/components/jobs-directory";
 import { OnDemandLiveJobs } from "@/components/on-demand-live-jobs";
@@ -66,8 +67,6 @@ export default function JobsPage() {
             <span className="eyebrow">Jobs & Careers</span>
             <h1>Know what is open. Know what you need. Apply at the source.</h1>
             <p className="page-intro">Government recruitment, graduate opportunities, internships, NGO/UN pathways and reputable employer career routes — checked against the organisation responsible for the application.</p>
-            <p className="job-muted">Newly checked 11 October 2026: <Link href="/jobs/moniepoint-early-careers-talent-acquisition-specialist">Moniepoint’s Early Careers Talent Acquisition Specialist vacancy</Link> is an experienced recruiting role requiring 5–7 years, not a graduate-trainee opening. Confirm its current availability on the employer’s official application page.</p>
-            <p className="job-muted">New official opportunity: <Link href="/jobs/founder-dojo-imo-cohort-two-2026">Founder Dojo Imo Cohort 2</Link> offers free founder-development training and mentorship. Apply by 19 October for first consideration; the operator confirms 2 November as the final deadline. It is <strong>not</strong> a salaried vacancy.</p>
             <form className="section-quick-search" action="/jobs#opportunities" method="get" role="search">
               <label>
                 <span>Search jobs & careers</span>
@@ -80,6 +79,19 @@ export default function JobsPage() {
               <Link href="/jobs/open-now" className="jobs-text-action">Open now →</Link>
               <Link href="/jobs/government" className="jobs-text-action">Government tracker →</Link>
             </div>
+            <PageOutline label="Browse Jobs & Careers" items={[
+              ...(openOpportunities.length ? [{ href: "#open-jobs" as const, label: "Open applications" }] : []),
+              { href: "#opportunities", label: "Verified directory" },
+              { href: "#job-paths", label: "Choose a path" },
+              { href: "#career-tools", label: "Career tools" },
+            ]} />
+            <details className="browse-disclosure jobs-editorial-updates">
+              <summary>Latest recruitment verification notes</summary>
+              <div className="jobs-editorial-updates-content">
+            <p className="job-muted">Newly checked 11 October 2026: <Link href="/jobs/moniepoint-early-careers-talent-acquisition-specialist">Moniepoint’s Early Careers Talent Acquisition Specialist vacancy</Link> is an experienced recruiting role requiring 5–7 years, not a graduate-trainee opening. Confirm its current availability on the employer’s official application page.</p>
+            <p className="job-muted">New official opportunity: <Link href="/jobs/founder-dojo-imo-cohort-two-2026">Founder Dojo Imo Cohort 2</Link> offers free founder-development training and mentorship. Apply by 19 October for first consideration; the operator confirms 2 November as the final deadline. It is <strong>not</strong> a salaried vacancy.</p>
+              </div>
+            </details>
           </div>
 
           <aside className="jobs-trust-panel" aria-label="Jobs verification promise">
@@ -94,7 +106,7 @@ export default function JobsPage() {
       </section>
 
       {openOpportunities.length ? (
-        <section className="section jobs-open-section">
+        <section className="section jobs-open-section" id="open-jobs">
           <div className="container">
             <div className="minimal-section-heading">
               <div>
@@ -143,7 +155,7 @@ export default function JobsPage() {
         </div>
       </section>
 
-      <section className="section jobs-path-section">
+      <section className="section jobs-path-section" id="job-paths">
         <div className="container">
           <div className="minimal-section-heading">
             <div>
@@ -244,7 +256,7 @@ export default function JobsPage() {
           <div className="minimal-section-heading">
             <div>
               <span className="eyebrow">Career tools</span>
-              <h2>Prepare before you press Apply.</h2>
+              <h2 id="career-tools">Prepare before you press Apply.</h2>
               <p>Practical, source-aware guides for the parts of a job search that repeat across employers.</p>
             </div>
           </div>

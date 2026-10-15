@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { YouTubeMovieCard } from "@/components/youtube-movie-card";
 import { JsonLd } from "@/components/json-ld";
@@ -64,6 +65,11 @@ export default function EntertainmentPage() {
             </label>
             <button type="submit">Search movies</button>
           </form>
+          <PageOutline label="Browse entertainment" items={[
+            { href: "#featured-films", label: "Featured films" },
+            { href: "#free-films", label: "Free full movies" },
+            { href: "#browse-entertainment", label: "Ways to watch" },
+          ]} />
           <div className="minimal-inline-links primary-shortcuts">
             <Link href="/entertainment/movies">All movies</Link>
             <Link href="/entertainment/youtube">Free on YouTube</Link>
@@ -74,18 +80,16 @@ export default function EntertainmentPage() {
             <Link href="/entertainment/social-trends">YouTube &amp; social trends</Link>
           </div>
           <details className="compact-link-menu">
-            <summary>More entertainment</summary>
+            <summary>More ways to discover films</summary>
             <div className="disclosure-link-grid">
-              <Link href="/entertainment/series">TV & web series</Link>
-              <Link href="/entertainment/cinemas">Cinemas</Link>
-              <Link href="/entertainment/platforms">Streaming platforms</Link>
-              <Link href="/entertainment/people">Actors & filmmakers</Link>
+              <Link href="/entertainment/releases">New and upcoming releases</Link>
+              <Link href="/entertainment/cinemas">Cinema guides</Link>
             </div>
           </details>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="featured-films">
         <div className="container">
           <div className="minimal-section-heading">
             <div><span className="eyebrow">Nigerian cinema</span><h2>Discover recently released Nigerian films.</h2></div>
@@ -112,7 +116,7 @@ export default function EntertainmentPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="free-films">
         <div className="container">
           <div className="minimal-section-heading">
             <div><span className="eyebrow">Recent films</span><h2>New releases, after the essentials.</h2></div>
@@ -126,7 +130,7 @@ export default function EntertainmentPage() {
         </div>
       </section>
 
-      <section className="section minimal-entertainment-choices">
+      <section className="section minimal-entertainment-choices" id="browse-entertainment">
         <div className="container">
           <div className="home-paths entertainment-paths">
             <Link href="/entertainment/youtube" className="home-path">

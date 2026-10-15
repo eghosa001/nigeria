@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageOutline } from "@/components/page-outline";
 import { notFound, redirect } from "next/navigation";
 import { AnswerFirst } from "@/components/answer-first";
 import { AdSlot } from "@/components/ad-slot";
@@ -151,7 +152,11 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
         <div className="container">
           <AnswerFirst
             title={isCareerPortal ? "How should you use " + item.organization + "'s careers page?" : "Should you apply for " + item.title + "?"}
-            summary={item.summary}
+            summary={isCareerPortal
+              ? "This is an employer-wide career route, not a confirmed vacancy. Choose a live role on the employer's website, then check that role's requirements before applying."
+              : effectiveStatus === "open"
+                ? "Review the qualifications and documents, confirm the application window on the organisation's website, and apply through the official route."
+                : "The application is not confirmed open at this stage. Check the employer's current notice and recruitment timeline before submitting any information."}
             facts={[
               { label: "Verified status", value: effectiveStatusLabel + " · checked " + item.verifiedAt },
               { label: "Applies to", value: item.location },
@@ -170,10 +175,20 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
         </div>
       </section>
 
+      <div className="container page-outline-wrap">
+        <PageOutline label="In this job guide" items={[
+          { href: "#job-overview", label: "At a glance" },
+          { href: "#requirements", label: "Eligibility" },
+          { href: "#documents", label: "Documents" },
+          { href: "#apply", label: isCareerPortal ? "Use the careers portal" : "How to apply" },
+          { href: "#job-sources", label: "Verification sources" },
+        ]} />
+      </div>
+
       <section className="section">
         <div className="container job-detail-layout">
           <article className="job-detail-content">
-            <section>
+            <section id="job-overview">
               <span className="eyebrow">At a glance</span>
               <div className="job-facts">
                 <div><small>Organisation</small><strong>{item.organization}</strong></div>
@@ -242,7 +257,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <p>{item.feeNote}</p>
             </section>
 
-            <section>
+            <section id="job-sources">
               <h2>Sources used to verify {item.title}</h2>
               <ul>{item.sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul>
               <div className="job-source-list">
