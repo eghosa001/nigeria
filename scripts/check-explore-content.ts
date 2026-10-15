@@ -167,6 +167,28 @@ for (const [slug, sourceFragment, evidencePhrase, planningPhrase] of [
   }
 }
 
+
+// Focused heritage source matching and independently sourced travel safeguards.
+for (const [slug, officialUrl, additionalSource, distinctiveFact, action] of [
+  ["arochukwu-long-juju-guide", "whc.unesco.org/en/tentativelists/5170/", "people.wku.edu/johnston.njoku/arochukwu/history", "tentative-list entry 5170", "Arochukwu custodians"],
+  ["chad-basin-national-park-borno-guide", "nigeriaparkservice.gov.ng/blog/2014/08/12/chad-basin", "chathamhouse.org/events/all/standard-event/lake-chad-basin", "Chingurmi-Duguma", "Do not treat the Borno park sector"],
+  ["anambra-heritage-circuit", "anambrastate.gov.ng/ministry-of-culture", "ajernet.net/ojs/index.php/ajernet/article/view/1078", "120 participants", "Separate Ogbunike conservation concerns"],
+] as const) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  if (!guide ||
+      !guide.source?.href.includes(officialUrl) ||
+      !guide.sources?.some(source => source.href.includes(additionalSource)) ||
+      !guide.intro.some(text => text.includes(distinctiveFact)) ||
+      !guide.planning.some(item => item.label.includes(action))) {
+    errors.push(`${slug}: exact-source identification or source-backed visitor decision regressed`);
+  }
+}
+const badagry = exploreGuides.find(item => item.slug === "badagry-heritage-guide");
+if (!badagry?.intro.some(item =>
+  item.includes("Slave History Museum in Calabar") && item.includes("Seriki Williams Abass museum in Badagry"))) {
+  errors.push("Badagry: Faye Sayer's two original study sites must not be misidentified");
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);
