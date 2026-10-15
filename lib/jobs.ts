@@ -3535,7 +3535,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrlLabel: "Check current EHA Clinics vacancies",
     verifiedAt: "2026-10-15",
     feeNote: "Apply through EHA Clinics' official recruitment system.",
-    sourceNotes: ["The original detail URL returned HTTP 404 during verification on 15 October 2026, while public views of the employer jobs directory also showed the role. Treat application availability as unverified, not an employer-confirmed closure; recheck the official board for a functioning vacancy link."],
+    sourceNotes: ["The original detail URL returned HTTP 404 during verification on 15 October 2026, while public views of the employer jobs directory also showed the role. Treat application availability as unverified, not an employer-confirmed closure; recheck the official board for a functioning vacancy link.", "The official directory showed a Senior Coordinator, Talent Management listing based in Abuja; earlier role details also mentioned Kano and Lagos. Verify the current location and application flow on the employer site."],
     sources: [
       { label: "EHA Clinics official jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-15" }
     ]
@@ -3726,7 +3726,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     officialUrlLabel: "Check current EHA Clinics vacancies",
     verifiedAt: "2026-10-15",
     feeNote: "Use EHA Clinics' official jobs portal.",
-    sourceNotes: ["The original detail URL returned HTTP 404 during verification on 15 October 2026, while public views of the employer jobs directory also showed the role. Treat application availability as unverified, not an employer-confirmed closure; recheck the official board for a functioning vacancy link."],
+    sourceNotes: ["The original detail URL returned HTTP 404 during verification on 15 October 2026, while public views of the employer jobs directory also showed the role. Treat application availability as unverified, not an employer-confirmed closure; recheck the official board for a functioning vacancy link.", "The employer directory showed Assistant Manager, Laboratory and Diagnotics in Kano; candidates should confirm its current requirements and a working Apply flow before proceeding."],
     sources: [
       { label: "EHA Clinics official jobs board", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-15" }
     ]
