@@ -224,21 +224,21 @@ const records: Record<string,Entry> = {
   },
   "monica-2": {
     "story": [
-      "Monica 2 continues a romantic storyline established in the original Monica film. Family complications and growing pressures force the returning characters into new choices, building on relationships that earlier viewers will already recognise.",
-      "As a sequel, its dramatic effects partly depend on what happened before. This guide avoids presenting speculation about an ending or treating returning cast members as proof that every character's circumstances remain unchanged from the first film."
+      "Monica 2 continues the story of a firstborn daughter who has carried much of her family's financial and emotional responsibilities. After years of sacrificing education and opportunities to support her relatives, Monica attempts to reclaim independence through her tailoring business and additional fashion training. Her plans are tested when renewed family demands threaten to push her back into the same role that exhausted her in the first film.",
+      "The conflict is not primarily a conventional romance. A developing relationship is part of Monica's recovery, but the more distinctive theme is how family obligation can become an expectation of endless self-denial. The sequel asks whether she can care about her relatives without surrendering the future she is trying to build. This description avoids disclosing the film's final decision."
     ],
     "context": [
-      "This 2026 follow-up lists Uche Montana, Blessing Onwukwe and Joseph Momodu in the cast. The authorised full-length YouTube source identifies it as Monica 2, distinct from the first film's separate video.",
-      "To understand the sequence, viewers should start with Monica before watching the second part. It would be misleading to merge the two into one indexable page or reuse an identical synopsis for both; the sequel's relationship and family challenges deserve their own record."
+      "Uche Montana portrays Monica, and Blessing Onwukwe plays her mother; Joseph Momodu also features. Premium Times' 6 May 2026 review discusses the sequel's focus on firstborn sacrifice, vocational training and renewed family pressure, while the film-specific African Movies Database lists Chidi Chijioke as director. These are separate types of evidence: the news review supports the thematic summary, and the production database supplies the director credit.",
+      "The sequel premiered on Uche Montana TV on 2 May 2026, following the first Monica film in March. They are separate full-length releases and should keep separate cast, plot and watch links. Viewer counts reported immediately after launch are historical milestones, not guaranteed current totals. The official video remains the appropriate place to check playback."
     ],
     "questions": [
       [
-        "Is Monica 2 a follow-up to Monica?",
-        "Yes. It continues the earlier romance with additional family and relationship complications."
+        "What is Monica 2 about beyond the romance?",
+        "Monica tries to rebuild her fashion career and protect her independence after years of sacrifices for relatives whose demands continue."
       ],
       [
-        "Who stars in Monica 2?",
-        "The listed cast includes Uche Montana, Blessing Onwukwe and Joseph Momodu."
+        "Who directed Monica 2, and when did it premiere?",
+        "African Movies Database credits Chidi Chijioke as director. The sequel premiered on Uche Montana TV on 2 May 2026."
       ]
     ]
   },
@@ -264,21 +264,21 @@ const records: Record<string,Entry> = {
   },
   "never-let-go": {
     "story": [
-      "Never Let Go explores two people trying to respond to a relationship that has begun to fall apart. Painful experiences and fear of losing one another complicate attempts at reconciliation, while the possibility of a second chance raises questions about what needs to change.",
-      "The film's focus is emotional rather than action-driven. Its title can suggest persistence, but the narrative asks whether holding on is meaningful unless both partners are prepared to address the circumstances that damaged their connection."
+      "Never Let Go follows Adebanjo Williams, a former police inspector who has spent years in prison for crimes he says he did not commit. After his release, he moves into a new neighbourhood under another identity and gets close to Nene, a singer mourning a previous relationship. Their growing connection is complicated by his effort to expose the officials and powerful people behind his conviction.",
+      "The story combines romantic attachment with an investigation and a question of personal accountability. Nene's family has links to the case that destroyed Adebanjo's career, so the relationship cannot be separated from his search for evidence. The central tension is whether a man pursuing vindication can build an honest relationship while concealing his name and motives. The page does not reveal the investigation's resolution."
     ],
     "context": [
-      "Maurice Sam and Nadia Buari star in the documented 2026 film. An authorised full-length YouTube upload is linked from the existing record, helping distinguish it from older American films, unrelated music and clips with the same common title.",
-      "The catalog's public data does not provide reliably verified character names or a director. The page therefore uses the two supported cast credits and relationship synopsis only, without attributing scenes or motives that might belong to other movies."
+      "This 2026 Nigerian drama stars Maurice Sam and Nadia Buari. African Movies Database identifies their characters as Victor, the identity used by the former inspector, and Nene, and credits Omoruyi Efosa Emmanuel as director. The source also identifies Maurice Sam as producer. These credits are specific to the 25 August 2026 Nigerian YouTube release, not the unrelated 2024 Halle Berry thriller with the same title.",
+      "The full-length movie is linked through the original Maurice Sam TV YouTube publication. The source-backed synopsis involves false imprisonment, corruption and revenge; describing it only as a light romance misses the actual premise. Because online availability and publisher controls can change, the link should be checked on the original platform rather than treated as permanent offline access."
     ],
     "questions": [
       [
-        "Who stars in Never Let Go (2026)?",
-        "Maurice Sam and Nadia Buari are the named stars of this Nigerian romance."
+        "Is Never Let Go (2026) a romance or a thriller?",
+        "It is a Nigerian drama combining a developing relationship with a former inspector's attempt to challenge a wrongful conviction and uncover corruption."
       ],
       [
-        "Where can I find the correct Never Let Go movie?",
-        "Use the original publisher's 2026 YouTube film link and confirm its cast, as other works share the title."
+        "Who directed Never Let Go starring Maurice Sam and Nadia Buari?",
+        "The 2026 film-specific African Movies Database record credits Omoruyi Efosa Emmanuel as director."
       ]
     ]
   },

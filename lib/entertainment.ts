@@ -883,10 +883,11 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Romance", "Drama", "Nollywood"],
     languages: ["English"],
-    synopsis: "Maurice Sam and Erica Nlewedim lead this September 2026 Nollywood romance about love, trust, doubt and relationship choices. The original publisher identifies those two leads, but does not provide a fully verified supporting cast or character-role list.",
-    cast: ["Maurice Sam", "Erica Nlewedim"],
+    synopsis: "Paul, a Lagos photographer, accepts a month-long assignment from wealthy fashion entrepreneur Gabriella (Gabby). While her friends turn his professional boundaries into a private wager, his relationship with Lola is already under strain. The 2026 Maurice Sam romance follows attraction and trust across those unequal expectations without revealing the outcome.",
+    cast: ["Maurice Sam", "Erica Nlewedim", "Okeh Faith Ihotu", "Chidinma Nwoko"],
     featured: true,
-    references: [{
+    references: [
+      { label: "African Movies Database — What Love Is (2026) cast and character credits", href: "https://africanmoviedb.com/title/what-love-is-2026", lastChecked: "2026-10-15", note: "Film-specific record confirms photographer Paul, fashion entrepreneur Gabby, and cast assignments including supporting characters Carina and Nikki; it does not identify a director." }, {
       label: "Maurice Sam TV — original What Love Is (2026) upload and credited leads",
       href: "https://www.youtube.com/watch?v=ORIBBpN7YMs",
       lastChecked: "2026-10-14",
@@ -1403,11 +1404,12 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     title: "Never Let Go",
     year: 2026,
     format: "movie",
-    genres: ["Romance", "Drama", "Nollywood"],
+    genres: ["Romance", "Drama", "Thriller", "Nollywood"],
     languages: ["English"],
-    synopsis: "An emotional romance about heartbreak, second chances and the effort required to hold on when a relationship starts falling apart.",
+    synopsis: "After six years in prison for crimes he says he did not commit, former inspector Adebanjo Williams returns under another identity to pursue evidence of corruption. He develops a bond with singer Nene, whose family is entangled in his wrongful-conviction case. The Nigerian drama combines romance and revenge as concealed motives threaten their trust.",
     cast: ["Maurice Sam", "Nadia Buari"],
     featuredCast: ["Maurice Sam", "Nadia Buari"],
+    references: [{ label: "African Movies Database — Never Let Go (2026) verified production and plot", href: "https://africanmoviedb.com/title/never-let-go-2026", lastChecked: "2026-10-15", note: "Film-specific 25 August 2026 Maurice Sam and Nadia Buari production: former inspector's wrongful conviction, Nene story, and director Omoruyi Efosa Emmanuel; not the 2024 US thriller." }],
     watchLinks: [{ platform: "YouTube", label: "Watch the full movie on YouTube", href: "https://www.youtube.com/watch?v=q5Vg0jUMl-s", access: "full-movie", lastChecked: "2026-09-29", note: "Full movie published by verified Maurice Sam TV.", publisher: "Maurice Sam TV", publisherUrl: "https://www.youtube.com/@mauricesamtv" }],
   },
   {
@@ -2224,10 +2226,11 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "After a disastrous first impression, Ene must prove to Chinwe that she is the right woman for Chinwe's brother Obinna, turning family expectations into a test of love and character.",
+    synopsis: "After their father's death, Obinna takes leadership of the Obasi family company ahead of his older sister Chinwe, who has helped run it for years. His plan to finance an ambitious new venture puts the business at risk, while tensions over his relationship with Ene deepen the family's disagreements. The 2026 drama explores succession, debt, loyalty and class expectations.",
     cast: ["Uche Jombo", "Omeche Oko", "Victory Michael"],
     featuredCast: ["Uche Jombo", "Omeche Oko", "Victory Michael"],
     runtimeMinutes: 138,
+    references: [{ label: "African Movies Database — Love and Legacy (2026) director, roles and story", href: "https://africanmoviedb.com/title/love-and-legacy-2026", lastChecked: "2026-10-15", note: "Film-specific Uche Jombo TV title lists company succession plot, Uche Jombo as Chinwe, Victory Michael as Obinna, and Esther Akapo as director." }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
