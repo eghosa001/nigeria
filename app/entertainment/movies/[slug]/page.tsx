@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { AnswerFirst } from "@/components/answer-first";
 import { EntertainmentArtwork } from "@/components/entertainment-artwork";
 import { JsonLd } from "@/components/json-ld";
 import { LazyYouTubePlayer } from "@/components/lazy-youtube-player";
@@ -426,25 +425,6 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
             </div>
           </div>
 
-          <AnswerFirst
-            eyebrow="Quick answer"
-            title={"Quick facts about " + title.title}
-            summary={title.title + " is a " + title.year + (title.genres.includes("Documentary") ? " Nigerian documentary" : " Nigerian movie") + (title.subjects?.length ? " about " + title.subjects.slice(0, 2).join(" and ") : featuredCast.length ? " starring " + featuredCast.slice(0, 3).join(", ") : "") + "." + (platforms.length ? " Official viewing sources: " + platforms.join(" / ") + "; check current access with the provider." : "")}
-            facts={[
-              { label: "Country / year", value: "Nigeria · " + title.year },
-              { label: "Where to watch", value: platforms.length ? platforms.join(" / ") : "No current official platform listed" },
-              { label: title.subjects?.length ? "Historical subjects" : "Featured cast", value: title.subjects?.slice(0, 3).join(", ") || featuredCast.slice(0, 3).join(", ") || "Credited cast not yet verified" },
-              { label: "Availability checked", value: lastChecked || "See current source links" },
-            ]}
-            links={[
-              { href: "#cast", label: title.subjects?.length ? "People and crew" : "See cast" },
-              ...(editorial ? [{ href: "#movie-questions", label: "Characters & story" }] : []),
-              { href: "#watch", label: "Where to watch" },
-              ...(watchHereVideoId ? [{ href: "#watch-here", label: "Watch here", primary: true }] : []),
-              ...(!watchHereVideoId && availabilityLinks[0] ? [{ href: availabilityLinks[0].href, label: availabilityLinks[0].label, external: true, primary: true }] : []),
-            ]}
-            note="Continue below for the cast, official links and related films."
-          />
           {title.slug === "once-upon-a-village-3" ? (
             <div className="movie-detail-actions">
               <Link className="button button-secondary" href="/entertainment/series/once-upon-a-village">
