@@ -170,6 +170,17 @@ for (const service of publicServices) {
   }
 }
 
+// WAEC publishes different International and Embassy/African confirmation fees.
+// Prevent a return to the former blanket ₦39,000 price and FAQ-only route.
+const overseasWaec = publicServices.find((item) => item.slug === "waec-result-confirmation-overseas");
+if (!overseasWaec ||
+    overseasWaec.status !== "conflict" ||
+    !overseasWaec.feeNote?.includes("₦52,000") ||
+    !overseasWaec.feeNote.includes("₦39,000") ||
+    overseasWaec.officialPortal !== "https://request.waec.ng/Home") {
+  errors.push("waec-result-confirmation-overseas: show both live fee categories and link the actual WAEC request portal.");
+}
+
 console.log(
   "Checked " + publicServices.length + " public MyNigeriaGuide service guides for minimum usefulness.",
 );
