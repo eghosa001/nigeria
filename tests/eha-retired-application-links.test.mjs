@@ -14,7 +14,8 @@ for (const slug of [
     assert.ok(end > start, "missing record boundary");
     const record = source.slice(start, end);
     assert.match(record, /status: "closed"/);
-    assert.match(record, /statusLabel: "Original application listing unavailable/);
+    assert.match(record, /statusLabel: "Application link unverified/);
+    assert.match(record, /Treat application availability as unverified/);
     assert.match(record, /officialUrl: "https:\/\/erp\.eha\.ng\/jobs"/);
     assert.doesNotMatch(record, /officialUrl: "https:\/\/erp\.eha\.ng\/jobs\//);
     assert.match(record, /verifiedAt: "2026-10-15"/);
