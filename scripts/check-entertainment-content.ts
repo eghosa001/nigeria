@@ -188,7 +188,8 @@ const verifiedDirectorEvidence = [
 ] as const;
 for (const [slug, director, sourceFragment] of verifiedDirectorEvidence) {
   const film = entertainmentTitles.find((item) => item.slug === slug);
-  assert(film?.directors?.includes(director), slug + ": expected source-backed director missing.");
+  assert(film !== undefined, slug + ": verified film record missing.");
+  assert(film.directors?.includes(director), slug + ": expected source-backed director missing.");
   assert(film.references?.some((ref) => ref.href.includes(sourceFragment)),
     slug + ": exact film-credit reference missing.");
 }
