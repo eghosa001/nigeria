@@ -9,6 +9,7 @@ export type TrafficDay = {
   sessions?: number;
   impressions?: number;
   clicks?: number;
+  position?: number;
 };
 
 export type PeriodRow = {
@@ -21,10 +22,12 @@ export type PeriodRow = {
   sessions: number | null;
   clicks: number | null;
   impressions: number | null;
+  position: number | null;
   previousPageViews: number | null;
   previousSessions: number | null;
   previousClicks: number | null;
   previousImpressions: number | null;
+  previousPosition: number | null;
 };
 
 export function shiftIsoDay(day: string, offset: number): string {
@@ -47,11 +50,19 @@ export function aggregateMetric(
   return reported.reduce((total, row) => total + (row[metric] ?? 0), 0);
 }
 
+/** Search Console average position is impression-weighted, not a simple mean. */
+export function averagePosition(rows: TrafficDay[], from: string, through: string): number | null {
+  const valid = rows.filter((row) => row.date >= from && row.date <= through
+    && typeof row.position === "number" && typeof row.impressions === "number" && row.impressions > 0);
+  const impressions = valid.reduce((sum, row) => sum + (row.impressions ?? 0), 0);
+  return impressions ? valid.reduce((sum, row) => sum + row.position! * row.impressions!, 0) / impressions : null;
+}
+
 export function buildPeriodRows(
   ga4Days: TrafficDay[],
   gscDays: TrafficDay[],
   todayLagos: string,
-  all: { ga4StartDate: string; gscStartDate: string; pageViews: number | null; sessions: number | null; clicks: number | null; impressions: number | null },
+  all: { ga4StartDate: string; gscStartDate: string; pageViews: number | null; sessions: number | null; clicks: number | null; impressions: number | null; position?: number | null },
   todayPacific = todayLagos,
 ): PeriodRow[] {
   const periods: Array<{ key: PeriodRow["key"]; days: number }> = [
@@ -77,10 +88,12 @@ export function buildPeriodRows(
       sessions: aggregateMetric(ga4Days, startDate, todayLagos, "sessions"),
       impressions: aggregateMetric(gscDays, gscStartDate, todayPacific, "impressions"),
       clicks: aggregateMetric(gscDays, gscStartDate, todayPacific, "clicks"),
+      position: averagePosition(gscDays, gscStartDate, todayPacific),
       previousPageViews: aggregateMetric(ga4Days, previousStart, previousEnd, "pageViews"),
       previousSessions: aggregateMetric(ga4Days, previousStart, previousEnd, "sessions"),
       previousClicks: aggregateMetric(gscDays, gscPreviousStart, gscPreviousEnd, "clicks"),
       previousImpressions: aggregateMetric(gscDays, gscPreviousStart, gscPreviousEnd, "impressions"),
+      previousPosition: averagePosition(gscDays, gscPreviousStart, gscPreviousEnd),
     };
   });
   rows.push({
@@ -94,10 +107,12 @@ export function buildPeriodRows(
     sessions: all.sessions,
     clicks: all.clicks,
     impressions: all.impressions,
+    position: all.position ?? null,
     previousPageViews: null,
     previousSessions: null,
     previousClicks: null,
     previousImpressions: null,
+    previousPosition: null,
   });
   return rows;
 }
