@@ -117,7 +117,7 @@ test("visits unlock displays multi-window report and can be locked again", async
   await expect(page.getByText("Passport renewal", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "By week" }).click();
   await expect(page.locator(".visits-data-table").nth(1)).toContainText("2026-10-12");
-  await page.getByRole("button", { name: "Lock", exact: true }).click();
+  await page.getByRole("button", { name: "Lock insights" }).click();
   await expect(page.getByRole("heading", { name: "Unlock private traffic analytics" })).toBeVisible();
   expect(errors).toEqual([]);
 });
