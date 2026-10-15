@@ -99,13 +99,13 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
       "Contact details entered in the employer's official application portal"
     ],
     "applicationSteps": [
-      "Open the role-specific official FMN e-recruiter vacancy page and confirm that the Apply action is active.",
-      "Compare your academic qualification and years of experience against the published role criteria.",
-      "Update your CV with specific examples of the equipment, software and operational tasks from the advertisement.",
-      "Submit the employer form through the official role's Apply action and retain the recruitment confirmation."
+      "Do not submit a new application through this record: the employer states the specific vacancy has expired or no longer exists.",
+      "Use the employer's official vacancies board to search for a separately published new position. Match the exact role title, reference number and site before preparing an application.",
+      "Review this archived record only for historical duties and qualifications; requirements may change in a replacement advert.",
+      "If the employer posts a genuinely new opening, use only that new job's verified Apply form and record the official confirmation. Do not pay a recruiter or intermediary."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12750",
-    "officialUrlLabel": "View the official FMN job and apply",
+    "officialUrlLabel": "View employer's expired role notice",
     "verifiedAt": "2026-10-15",
     "nextMilestone": "The employer's exact vacancy page currently says 'The specified vacancy does not exist or has expired.' Applications are closed for this posting; seek a new reference number on FMN's official current-vacancy board.",
     "feeNote": "FMN says it never asks applicants to pay money or hand over valuables for recruitment.",
@@ -160,13 +160,13 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
       "Contact details entered in the employer's official application portal"
     ],
     "applicationSteps": [
-      "Open the role-specific official FMN e-recruiter vacancy page and confirm that the Apply action is active.",
-      "Compare your academic qualification and years of experience against the published role criteria.",
-      "Update your CV with specific examples of the equipment, software and operational tasks from the advertisement.",
-      "Submit the employer form through the official role's Apply action and retain the recruitment confirmation."
+      "Do not submit a new application through this record: the employer states the specific vacancy has expired or no longer exists.",
+      "Use the employer's official vacancies board to search for a separately published new position. Match the exact role title, reference number and site before preparing an application.",
+      "Review this archived record only for historical duties and qualifications; requirements may change in a replacement advert.",
+      "If the employer posts a genuinely new opening, use only that new job's verified Apply form and record the official confirmation. Do not pay a recruiter or intermediary."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12749",
-    "officialUrlLabel": "View the official FMN job and apply",
+    "officialUrlLabel": "View employer's expired role notice",
     "verifiedAt": "2026-10-15",
     "nextMilestone": "The employer's exact vacancy page currently says 'The specified vacancy does not exist or has expired.' Applications are closed for this posting; seek a new reference number on FMN's official current-vacancy board.",
     "feeNote": "FMN says it never asks applicants to pay money or hand over valuables for recruitment.",
