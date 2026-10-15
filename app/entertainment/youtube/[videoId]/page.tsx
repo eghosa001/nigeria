@@ -97,7 +97,8 @@ export default async function YouTubeMovieDetailPage({ params }: { params: Promi
     ? (await import("@/lib/movie-editorial-profiles")).movieEditorialProfiles["once-upon-a-village-3"]?.roles ?? []
     : [];
   const base = getSiteUrl();
-  const related = indexable ? await getRelatedYouTubeDetailMovies(movie, 8) : [];
+  // Keep useful source discovery on noindexed detail routes.
+  const related = movie.cast.length ? await getRelatedYouTubeDetailMovies(movie, 8) : [];
   const sameChannel = related.filter((item) => item.channelName.toLowerCase() === movie.channelName.toLowerCase()).slice(0, 4);
   const sharedCast = new Set(movie.cast.map((name) => name.trim().toLowerCase()));
   const withCast = related.filter((item) =>
