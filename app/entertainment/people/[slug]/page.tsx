@@ -47,14 +47,14 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
     .sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
 
   const genres = [...new Set(credits.flatMap((title) => title.genres.filter((genre) => genre !== "Nollywood")))].slice(0, 6);
-  const sourceLinks = [...new Map(
+  const sourceLinks = [...new Map<string, { href: string; label: string; film: string; lastChecked: string }>(
     credits.flatMap((title) => (title.references ?? []).map((source) => ({
       href: source.href,
       label: source.label,
       film: title.title,
       lastChecked: source.lastChecked,
     }))).filter((entry) => entry.href.startsWith("https://"))
-      .map((entry) => [entry.href, entry]),
+      .map((entry) => [entry.href, entry] as const),
   ).values()].slice(0, 12);
   const base = getSiteUrl();
   const pageUrl = base + "/entertainment/people/" + person.slug;
@@ -96,6 +96,7 @@ export default async function EntertainmentPersonPage({ params }: { params: Prom
           links={[
             ...(credits[0] ? [{ href: "/entertainment/movies/" + credits[0].slug, label: "Open latest linked title", primary: true }] : []),
             { href: "#credits", label: "See all linked credits" },
+            ...(credits.length ? [{ href: "#credit-sources", label: "Credit sources" }] : []),
           ]}
           note="Use the profile summary first, then open individual movie pages for cast, story and official watch links."
         />
