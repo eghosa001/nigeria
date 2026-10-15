@@ -2063,7 +2063,7 @@
     "slug": "npc-birth-attestation",
     "title": "NPC Birth Attestation Nigeria: Eligibility, USD 80 Fee and Download",
     "shortTitle": "NPC adult birth attestation",
-    "summary": "Nigerians aged 18 or older can request a birth attestation through the National Population Commission (NPC) self-service portal. The online route lists a non-refundable USD 80 convenience fee, requires a court-sworn affidavit and identity checks, and allows a certificate download after a successful application. Applicants without a NIN can receive a temporary Birth ID for NIMC enrolment; children aged 0–17 use birth registration instead.",
+    "summary": "Adults aged 18 or older can request a birth attestation through the National Population Commission (NPC) self-service portal. The online route lists a non-refundable USD 80 convenience fee, requires a court-sworn affidavit and identity checks, and allows a certificate download after a successful application. Applicants without a NIN can receive a temporary Birth ID for NIMC enrolment; children aged 0–17 use birth registration instead.",
     "category": "Civil records",
     "agencySlug": "npc",
     "feeLabel": "USD 80 non-refundable self-service convenience fee",
@@ -2089,8 +2089,7 @@
       "The two services cover different ages: NPC attestation is for people aged 18 and above, whereas child birth registration covers ages 0–17. An online convenience charge for one route must not be presented as the price of all NPC birth services.",
       "The temporary Birth ID issued to applicants without a NIN is not a replacement for an NIN. NPC says it is used during subsequent NIMC enrolment and cannot be validated as an NIN on NIMC's modification portal.",
       "If Check Status says “No Record Found”, NPC says that function works after the attestation process has been successfully completed. Use your original payment reference or the portal's resume option before considering another payment.",
-      "NPC allows a single certificate download after success, with a separate reprint option for additional copies. Keep the payment reference private and use official NPC support if approval or retrieval does not work.",
-      "An attestation application is allowed only once. Check names, birth details and affidavit information before submission; the non-refundable convenience fee is not a fee for guaranteed approval."
+      "NPC allows a single certificate download after success, with a separate reprint option for additional copies. Keep the payment reference private and use official NPC support if approval or retrieval does not work."
     ],
     "sources": [
       {
