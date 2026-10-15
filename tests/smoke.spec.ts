@@ -117,6 +117,26 @@ test("visits unlock displays multi-window report and can be locked again", async
   await expect(page.getByText("Passport renewal", { exact: true })).toBeVisible();
   await page.getByRole("button", { name: "By week" }).click();
   await expect(page.locator(".visits-data-table").nth(1)).toContainText("2026-10-12");
+  // Narrow phones show period tabs, real page cards and compact statistics
+  // without requiring sideways scrolling through seven-column tables.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await expect(page.getByRole("group", { name: "Analytics reporting period" })).toBeVisible();
+  await expect(page.locator(".visits-current-kpis > div")).toHaveCount(4);
+  await expect(page.locator(".visits-mobile-results").first().locator(".visits-result-card").first()).toBeVisible();
+  await expect(page.locator(".visits-desktop-only").first()).toBeHidden();
+  await expect(page.getByRole("button", { name: "7D" })).toBeVisible();
+  await page.getByRole("button", { name: "7D" }).click();
+  await expect(page.getByRole("button", { name: "7D" })).toHaveAttribute("aria-pressed", "true");
+  await page.locator(".visits-mobile-only .visits-compact-disclosure").first().locator("summary").click();
+  await expect(page.locator(".visits-mobile-period-list .visits-period-card")).toHaveCount(5);
+  await page.getByRole("combobox", { name: "Analyze by" }).selectOption("unclicked");
+  await expect(page.getByText("No matching search pages in this period.")).toBeVisible();
+  await page.getByRole("combobox", { name: "Analyze by" }).selectOption("impressions");
+  for (const width of [320, 360, 430]) {
+    await page.setViewportSize({ width, height: 780 });
+    expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth), "phone " + width).toBeLessThanOrEqual(1);
+  }
+  await page.locator(".visits-export-tools summary").click();
   await page.getByRole("button", { name: "Lock insights" }).click();
   await expect(page.getByRole("heading", { name: "Unlock private traffic analytics" })).toBeVisible();
   expect(errors).toEqual([]);
