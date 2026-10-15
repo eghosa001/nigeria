@@ -3,6 +3,7 @@
 import packedCatalog from "@/data/youtube-runtime-catalog.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
+import { isPublisherPromoSynopsis } from "@/lib/youtube-synopsis-quality";
 
 export type YouTubeMovieSource = {
   videoId: string;
@@ -90,14 +91,7 @@ const generatedData = {
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
 
-/** Uploader calls to action and channel descriptions are not film-specific plots.
- * Preserve movie discovery, but do not promote this copy into indexable detail
- * pages or the editorially curated releases shelf.
- */
-export function isPublisherPromoSynopsis(value: string) {
-  return /\b(?:if you are a subscriber|turn on (?:post )?notifications|click(?:ing)? (?:on )?the [\"'“”]?bell|on (?:this|our) (?:youtube )?channel|welcome to (?:this|our) (?:youtube )?channel|you will enjoy the best of|(?:we|our channel) (?:bring|brings|provide|provides|present|presents) (?:you )?(?:the )?best|produces (?:the )?(?:best|latest) (?:nollywood|nigerian|african) movies?)\b/i.test(value);
-}
-
+export { isPublisherPromoSynopsis } from "@/lib/youtube-synopsis-quality";
 
 function cleanYouTubeDisplayTitle(value: string) {
   return value
