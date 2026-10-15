@@ -3829,10 +3829,16 @@ export const governmentOpportunities = jobOpportunities.filter((item) => item.se
 export const privateOpportunities = jobOpportunities.filter((item) => item.sector === "Private");
 export const internationalOpportunities = jobOpportunities.filter((item) => item.sector === "International");
 
-// Template-only career portals stay available as discovery links, never as thin SEO pages.
-// Reviewed employer pages and genuinely distinct verified vacancies retain indexability.
+// Keep template-only portals and closed one-off vacancies accessible to visitors,
+// but out of search results and XML sitemaps. A concluded vacancy cannot be
+// applied to; its archive should not compete with an actual current opening.
+// Active screening/training guides and substantive recruitment updates remain
+// eligible as long as their own publication evidence supports indexing.
 export function isIndexableJobOpportunity(item: CareerOpportunity): boolean {
-  return !templateCareerPortalSlugs.has(item.slug);
+  if (templateCareerPortalSlugs.has(item.slug)) return false;
+  const deadlinePassed = Boolean(item.deadline && item.deadline < new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0, 10));
+  if (item.kind === "vacancy" && (item.status === "closed" || (item.status === "open" && deadlinePassed))) return false;
+  return true;
 }
 
 export function getJobOpportunity(slug: string) {
