@@ -1,4 +1,5 @@
 import { verifiedPsychologicalThrillerOctober20261013 } from "@/lib/entertainment-thriller-2026-10-13";
+import { verifiedFilmDirectorCredits20261015 } from "@/lib/entertainment-verified-credits-2026-10-15";
 import { verifiedOctoberMovieReleases20261013 } from "@/lib/entertainment-october-releases-2026-10-13";
 import { verifiedOctoberFilm } from "@/lib/entertainment-social-trends-2026-10-10";
 import { entertainmentGrowthWave12 } from "@/lib/entertainment-growth-wave-12";
@@ -95,7 +96,7 @@ export type EntertainmentTitle = {
   watchLinks: WatchLink[];
 };
 
-export const entertainmentTitles: EntertainmentTitle[] = [
+const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
   ...verifiedPsychologicalThrillerOctober20261013,
   ...verifiedOctoberMovieReleases20261013,
   ...verifiedOctoberFilm,
@@ -2807,6 +2808,18 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     }]
   }
 ];
+
+// Apply reviewed credit evidence to both old and newly imported records, without
+// overriding existing documented director fields or inventing availability.
+export const entertainmentTitles: EntertainmentTitle[] = uncorrectedEntertainmentTitles.map((title) => {
+  const correction = verifiedFilmDirectorCredits20261015[title.slug];
+  if (!correction || title.directors?.length) return title;
+  return {
+    ...title,
+    directors: correction.directors,
+    references: [...(title.references ?? []).filter((ref) => ref.href !== correction.source.href), correction.source],
+  };
+});
 
 export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava", "Cinema", "Africa Magic"] as const;
 
