@@ -115,7 +115,7 @@ export const entertainmentGrowthWave7: EntertainmentTitle[] = [
         label: "Shutterspeed Projects — Oil and Water",
         href: "https://shutterspeedprojects.com/our-portfolio/",
         lastChecked: "2026-10-07",
-        note: "Production-company portfolio used to verify the story, principal cast and Biodun Stephen TV production."
+        note: "The producer confirms the cast and production but gives a different story premise from the original film upload; the discrepancy is explained on this page. Do not treat this portfolio text as proof of the mother-daughter synopsis."
       },
       {
         label: "FilmFlux — Oil and Water",

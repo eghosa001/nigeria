@@ -241,3 +241,30 @@ for (const [slug, premise, source, expectedDirector] of [
     assert(!film.directors?.length, slug + ": director has not been independently confirmed.");
   }
 }
+
+
+// Changed-surface regression: exact-film director citations and a genuine
+// disagreement between two official Oil and Water descriptions.
+for (const [slug, director, source] of [
+  ["terms-of-attraction-2026", "Omoruyi Efosa Emmanuel", "filmflux.app/movie/478d5541"],
+  ["celebrity-crush-2024", "Chidi Chijioke", "imdb.com/title/tt40994525"],
+  ["a-ride-forever-2026", "Okey Ifeanyi", "nollymeter.com/movies/a-ride-forever"],
+] as const) {
+  const movie = entertainmentTitles.find(item => item.slug === slug);
+  assert(movie !== undefined, slug + ": missing verified movie record.");
+  assert(movie.directors?.includes(director), slug + ": researched director credit missing.");
+  assert(movie.references?.some(ref => ref.href.includes(source)),
+    slug + ": exact-film credit source missing.");
+}
+const oilAndWater = entertainmentTitles.find(movie => movie.slug === "oil-and-water-2025");
+const oilAndWaterProfile = getMovieEditorialProfile("oil-and-water-2025");
+assert(oilAndWater && oilAndWaterProfile, "Oil and Water needs its original film and reader-facing dossier.");
+assert(!oilAndWater.directors?.length, "Oil and Water's conflicting director claims must not be silently resolved.");
+assert(oilAndWater.synopsis.includes("mother-daughter"),
+  "Oil and Water should follow the original full-length publisher synopsis.");
+assert(oilAndWater.references?.some(ref => ref.href.includes("shutterspeedprojects.com/our-portfolio")),
+  "Oil and Water must show the producer's conflicting alternate description.");
+assert(oilAndWater.watchLinks.some(link => link.href.includes("youtube.com/watch?v=5Xcj2t3DzfI")),
+  "Oil and Water must retain the authorised full-length original.");
+assert(oilAndWaterProfile.sections.flatMap(section => section.paragraphs).join(" ").includes("source discrepancy"),
+  "Oil and Water must explain the conflicting descriptions, not conflate both plots.");
