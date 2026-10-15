@@ -211,3 +211,16 @@
   .visits-full-download-actions { gap: 7px; }
   .visits-full-download-actions button { min-height: 46px; font-size: .77rem; padding: 8px 4px; }
 }
+
+/* SEO opportunity review is visible and usable on both desktop and mobile. */
+.visits-opportunity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 275px), 1fr)); gap: 12px; margin: 14px 0; }
+.visits-opportunity-grid .visits-result-card, .visits-query-breakdown { min-width: 0; border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: var(--surface); }
+.visits-opportunity-grid h3, .visits-query-breakdown h3 { font-size: .93rem; margin: 0 0 12px; line-height: 1.45; overflow-wrap: anywhere; }
+.visits-opportunity-grid .visits-mini-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.visits-opportunity-grid .visits-mini-stats > span { min-width: 0; display: grid; gap: 3px; }
+.visits-opportunity-grid .visits-mini-stats small { font-size: .73rem; color: var(--muted); }
+.visits-opportunity-grid .visits-mini-stats strong { font-size: 1.08rem; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.visits-opportunity-grid .visits-show-more { width: 100%; margin-top: 12px; min-height: 44px; white-space: normal; }
+.visits-query-breakdown { margin: 12px 0 18px; overflow: hidden; }
+.visits-query-breakdown .visits-table-scroll { max-width: 100%; }
+@media (max-width: 720px) { .visits-opportunity-grid { grid-template-columns: minmax(0, 1fr); gap: 9px; } }
