@@ -90,8 +90,9 @@ const feedXml = xmlHeader +
 
 const { indexableYouTubeMovies } = await import("../lib/youtube-library");
 const videoRows = indexableYouTubeMovies
-  // Curated titles point at their separate movie canonical, not this video route.
-  .filter((movie) => movie.source !== "curated" &&
+  // Only individually researched videos (and film-specific curated canonicals)
+  // belong in the video sitemap; catalog-only entries remain discoverable.
+  .filter((movie) =>
     /^[A-Za-z0-9_-]{11}$/.test(movie.videoId) &&
     movie.title.trim().length > 0 &&
     movie.synopsis.trim().length >= 30 &&
@@ -101,7 +102,8 @@ const videoXml = xmlHeader +
   'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">' +
   videoRows.map((movie) => {
     const id = movie.videoId;
-    const url = productionSiteUrl + "/entertainment/youtube/" + id;
+    const url = productionSiteUrl + (movie.source === "curated"
+      ? movie.internalHref : "/entertainment/youtube/" + id);
     const seconds = Math.round(movie.durationMinutes * 60);
     return "<url><loc>" + escapeXml(url) + "</loc><video:video>" +
       "<video:thumbnail_loc>" + escapeXml("https://i.ytimg.com/vi/" + id + "/hqdefault.jpg") + "</video:thumbnail_loc>" +
@@ -109,10 +111,13 @@ const videoXml = xmlHeader +
       "<video:description>" + escapeXml(movie.synopsis.slice(0, 2048)) + "</video:description>" +
       "<video:player_loc>" + escapeXml("https://www.youtube.com/embed/" + id) + "</video:player_loc>" +
       (seconds >= 1 && seconds <= 28800 ? "<video:duration>" + seconds + "</video:duration>" : "") +
-      "<video:publication_date>" + escapeXml(movie.publishedAt.slice(0, 10)) + "</video:publication_date>" +
+      // Curated fallback dates of 1 January identify only the calendar year;
+      // do not invent a precise release day in structured video metadata.
+      (movie.source === "curated" && movie.publishedAt.slice(5, 10) === "01-01" ? "" :
+        "<video:publication_date>" + escapeXml(movie.publishedAt.slice(0, 10)) + "</video:publication_date>") +
       "</video:video></url>";
   }).join("") + "</urlset>";
-if (!videoRows.length) throw new Error("No verified, indexable YouTube detail movies for video discovery.");
+if (!videoRows.length) throw new Error("No verified canonical movies with video playback for video discovery.");
 
 await Promise.all([
   writeFile(resolve(root, "video-sitemap.xml"), videoXml, "utf8"),

@@ -1,4 +1,5 @@
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { youtubeEditorialDossiers } from "@/lib/youtube-editorial-dossiers";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
 export type YouTubeDetailSource = {
@@ -319,7 +320,8 @@ export function isIndexableYouTubeDetailMovie(movie: YouTubeDetailMovie) {
   return movie.metadataStatus !== "cast-pending" &&
     movie.cast.length > 0 &&
     movie.featuredCast.length > 0 &&
-    hasSubstantiveYouTubeDetailSynopsis(movie);
+    hasSubstantiveYouTubeDetailSynopsis(movie) &&
+    (movie.source === "curated" || Boolean(youtubeEditorialDossiers[movie.videoId]));
 }
 
 export async function getYouTubeDetailMovieById(videoId: string) {

@@ -2,6 +2,7 @@
 // Full metadata stays in the source JSON and in per-video dynamic detail shards.
 import packedCatalog from "@/data/youtube-runtime-catalog.generated.json";
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
+import { youtubeEditorialDossiers } from "@/lib/youtube-editorial-dossiers";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
 
 export type YouTubeMovieSource = {
@@ -412,7 +413,8 @@ export function hasSubstantiveYouTubeSynopsis(movie: Pick<YouTubeMovieRecord, "s
 }
 
 export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
-  return isDiscoverableYouTubeMovie(movie) && hasSubstantiveYouTubeSynopsis(movie);
+  return isDiscoverableYouTubeMovie(movie) && hasSubstantiveYouTubeSynopsis(movie) &&
+    (movie.source === "curated" || Boolean(youtubeEditorialDossiers[movie.videoId]));
 }
 
 // Maintain the full verified catalog and internal discovery links. Only the
@@ -420,8 +422,10 @@ export function isIndexableYouTubeMovie(movie: YouTubeMovieRecord) {
 export const discoverableYouTubeMovies = youtubeMovieLibrary.filter(isDiscoverableYouTubeMovie);
 export const indexableYouTubeMovies = discoverableYouTubeMovies.filter(isIndexableYouTubeMovie);
 
-export const latestYouTubeMovies = indexableYouTubeMovies;
-export const trendingYouTubeMovies = [...indexableYouTubeMovies].sort(
+// Discovery is independent of search index eligibility: users can still find
+// source-linked films while incomplete standalone pages are kept out of Google.
+export const latestYouTubeMovies = discoverableYouTubeMovies.filter(hasSubstantiveYouTubeSynopsis);
+export const trendingYouTubeMovies = [...latestYouTubeMovies].sort(
   (a, b) => trendScore(b) - trendScore(a) || b.publishedAt.localeCompare(a.publishedAt),
 );
 
