@@ -197,8 +197,8 @@ jobs:
             exit 0
           fi
 
-          service_route_trigger="$(printf '%s\\n' "$changed" | grep -E '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$)' || true)"
-          service_route_other="$(printf '%s\\n' "$changed" | grep -Ev '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$|[.]github/workflows/(ci|ui-qa|cloudflare-qa)[.]yml$)' || true)"
+          service_route_trigger="$(printf '%s\n' "$changed" | grep -E '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$)' || true)"
+          service_route_other="$(printf '%s\n' "$changed" | grep -Ev '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$|[.]github/workflows/(ci|ui-qa|cloudflare-qa)[.]yml$)' || true)"
           if [ -n "$service_route_trigger" ] && [ -z "$service_route_other" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=service-route" >> "$GITHUB_OUTPUT"
