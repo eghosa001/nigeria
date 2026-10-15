@@ -6,7 +6,7 @@ const base = process.env.PR_BASE_SHA;
 if (!/^[a-f0-9]{40}$/.test(base ?? "")) throw new Error("Expected verified PR base SHA.");
 const diff = execFileSync("git", ["diff", "--unified=0", base, "HEAD", "--", "lib/entertainment.ts"], { encoding: "utf8" });
 const source = readFileSync("lib/entertainment.ts", "utf8");
-const marker = source.indexOf("export const entertainmentTitles:");
+const marker = source.indexOf("const uncorrectedEntertainmentTitles:");
 if (marker < 0) throw new Error("Missing entertainment catalog.");
 const lineStart = (index) => source.slice(0, index).split("\n").length;
 const starts = [...source.matchAll(/\n  \{\n\s*slug: "([^"]+)"/g)]

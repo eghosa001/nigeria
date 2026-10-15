@@ -86,4 +86,24 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     directors: ["Akay Mason","Adebayo Tijani"],
     source: { label: "IMDb — Ada Omo Daddy (2023) credits", href: "https://www.imdb.com/title/tt30454010/", lastChecked: "2026-10-15", note: "The film credits both Akay Mason and Adebayo Tijani as co-directors." },
   },
+  "the-waiter": {
+    directors: ["Toka McBaror"],
+    source: { label: "IMDb — The Waiter (2024) full credits", href: "https://www.imdb.com/title/tt34983230/fullcredits/", lastChecked: "2026-10-15", note: "The full production credits explicitly identify Toka McBaror as director." },
+  },
+  "the-herd": {
+    directors: ["Daniel Etim Effiong"],
+    source: { label: "IMDb — The Herd (2025) full credits", href: "https://www.imdb.com/title/tt37157364/fullcredits/", lastChecked: "2026-10-15", note: "Full film-specific production credits identify Daniel Etim Effiong as director." },
+  },
+  "son-of-the-soil": {
+    directors: ["Chee Keong Cheung"],
+    source: { label: "IMDb — Son of the Soil (2025) full credits", href: "https://www.imdb.com/title/tt32362662/fullcredits/", lastChecked: "2026-10-15", note: "Full credits identify Chee Keong Cheung as director; film festival premiere and digital release are distinct." },
+  },
+  "king-of-thieves-2": {
+    directors: ["Adebayo Tijani"],
+    source: { label: "Nollywood.com — Agesinkole 2 production credits", href: "https://www.nollywood.com/movies/king-of-thieves-2", lastChecked: "2026-10-15", note: "The film-specific crew listing identifies Adebayo Tijani as director of the sequel." },
+  },
+  "sin-first-blood": {
+    directors: ["Yemi Morafa","Dimeji Ajibola"],
+    source: { label: "Prime Video — Sin: First Blood official credits", href: "https://www.primevideo.com/detail/0KXCFQNLM0K54DL96DZ76BWDCK", lastChecked: "2026-10-15", note: "Prime Video's credits list Yemi Filmboy Morafa and the late Dimeji Ajibola as directors; the platform labels the latter credit posthumous." },
+  },
 };
