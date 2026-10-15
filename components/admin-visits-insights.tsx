@@ -288,28 +288,6 @@ export function AdminVisitsInsights() {
       {report.selectedRange !== range ? <p role="status">Loading {labels[range]} — figures below are from the previous selection.</p> : null}
     </section>
 
-    <section className="admin-panel visits-lifetime-panel">
-      <div className="section-heading"><div><span className="eyebrow">Cumulative · available history</span><h2>Website totals so far</h2></div></div>
-      <div className="visits-mobile-only">
-        <details className="visits-compact-disclosure">
-          <summary>See lifetime impressions, clicks, views and visits</summary>
-          <div className="visits-total-grid visits-mobile-totals">
-            <div><span>Search impressions</span><strong>{count(lifetime.impressions)}</strong></div>
-            <div><span>Search clicks</span><strong>{count(lifetime.clicks)}</strong></div>
-            <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong></div>
-            <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong></div>
-          </div>
-        </details>
-      </div>
-      <div className="visits-total-grid visits-desktop-only">
-        <div><span>Google impressions</span><strong>{count(lifetime.impressions)}</strong><small>Search Console · since {report.gscStartDate} (max. 16 months)</small></div>
-        <div><span>Google search clicks</span><strong>{count(lifetime.clicks)}</strong><small>Search Console · same available history</small></div>
-        <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong><small>GA4 clean production traffic · since {report.ga4StartDate}</small></div>
-        <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong><small>GA4 sessions · since {report.ga4StartDate}</small></div>
-      </div>
-      <p className="visits-footnote">These are separately sourced measurements, not additive totals. “All available” is limited by API retention and the clean-tracking start; it is not a claim of unlimited historical coverage.</p>
-    </section>
-
     <section className="admin-panel visits-period-panel">
       <div className="section-heading"><div><span className="eyebrow">1 day · 1 week · 1 month · 90 days · history</span><h2>Performance by period</h2></div></div>
       <div className="visits-mobile-only">
@@ -343,23 +321,6 @@ export function AdminVisitsInsights() {
       <p className="visits-footnote">Percentage changes compare each window with the immediately preceding window of equal length. Today may be incomplete; “—” means unavailable, not zero. The source-specific date ranges are listed in each row because GA4 uses Lagos dates while Google Search Console uses Pacific dates.</p>
       <p className="visits-footnote">Latest reported days: GA4 <strong>{report.latestGA4Date ?? "unavailable"}</strong>; Google Search Console <strong>{report.latestGSCDate ?? "unavailable"}</strong>.</p>
       {report.errors.ga4 || report.errors.gsc ? <p className="visits-source-warning">{report.errors.ga4 ? "GA4: " + report.errors.ga4 + ". " : ""}{report.errors.gsc ? "GSC: " + report.errors.gsc : ""}</p> : null}
-    </section>
-
-    <section className="admin-panel visits-live-panel">
-      <div className="section-heading"><div><span className="eyebrow">Near realtime signals</span><h2>Latest available activity</h2></div></div>
-      <div className="visits-live-grid">
-        <div><span>GA4 active visitors · last 30 minutes</span><strong>{count(report.realtime?.activeUsers)}</strong></div>
-        <div><span>GA4 page views · last 30 minutes</span><strong>{count(report.realtime?.pageViews)}</strong></div>
-        <div><span>Google clicks · reported last 24h</span><strong>{count(report.hourly.clicks24h)}</strong></div>
-        <div><span>Google impressions · reported last 24h</span><strong>{count(report.hourly.impressions24h)}</strong></div>
-        <div><span>PostHog page views · {labels[range]}</span><strong>{report.posthog.available ? count(report.posthog.views) : "—"}</strong></div>
-        <div><span>PostHog visitors · {labels[range]}</span><strong>{report.posthog.available ? count(report.posthog.visitors) : "—"}</strong></div>
-      </div>
-      <p className="visits-footnote">Latest Search Console hour: <strong>{reportedHour(report.hourly.latestHour)}</strong>{report.hourly.lagHours != null ? " · " + report.hourly.lagHours + "h behind" : ""}. {report.hourly.hoursReported24h}/24 hours returned; hourly counts are preliminary and partial. GA4 realtime covers the previous 30 minutes, not the complete day.</p>
-      {!report.hourly.available || !report.posthog.available ? <p className="visits-source-warning">
-        {!report.hourly.available ? "Google hourly API: " + (report.hourly.error ?? "unavailable") + ". " : ""}
-        {!report.posthog.available ? "PostHog: " + (report.posthog.error ?? "unavailable") : ""}
-      </p> : null}
     </section>
 
     <section className="admin-panel visits-trend-panel">
@@ -464,6 +425,45 @@ export function AdminVisitsInsights() {
       </table></div>
       {showVisited < sampledViews.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowVisited((v) => v + 30)}>Show more viewed pages ({sampledViews.length - showVisited} remaining)</button> : null}
       <p className="visits-footnote">{count(sampledViews.length)} GA4 page-title/path rows returned. {report.pageListsTruncated.ga4 ? "Reporting is limited to the top 2,500 rows. " : ""}Views count repeat visits; active users are not additive across different pages.</p>
+    </section>
+
+    <section className="admin-panel visits-live-panel">
+      <div className="section-heading"><div><span className="eyebrow">Near realtime signals</span><h2>Latest available activity</h2></div></div>
+      <div className="visits-live-grid">
+        <div><span>GA4 active visitors · last 30 minutes</span><strong>{count(report.realtime?.activeUsers)}</strong></div>
+        <div><span>GA4 page views · last 30 minutes</span><strong>{count(report.realtime?.pageViews)}</strong></div>
+        <div><span>Google clicks · reported last 24h</span><strong>{count(report.hourly.clicks24h)}</strong></div>
+        <div><span>Google impressions · reported last 24h</span><strong>{count(report.hourly.impressions24h)}</strong></div>
+        <div><span>PostHog page views · {labels[range]}</span><strong>{report.posthog.available ? count(report.posthog.views) : "—"}</strong></div>
+        <div><span>PostHog visitors · {labels[range]}</span><strong>{report.posthog.available ? count(report.posthog.visitors) : "—"}</strong></div>
+      </div>
+      <p className="visits-footnote">Latest Search Console hour: <strong>{reportedHour(report.hourly.latestHour)}</strong>{report.hourly.lagHours != null ? " · " + report.hourly.lagHours + "h behind" : ""}. {report.hourly.hoursReported24h}/24 hours returned; hourly counts are preliminary and partial. GA4 realtime covers the previous 30 minutes, not the complete day.</p>
+      {!report.hourly.available || !report.posthog.available ? <p className="visits-source-warning">
+        {!report.hourly.available ? "Google hourly API: " + (report.hourly.error ?? "unavailable") + ". " : ""}
+        {!report.posthog.available ? "PostHog: " + (report.posthog.error ?? "unavailable") : ""}
+      </p> : null}
+    </section>
+
+    <section className="admin-panel visits-lifetime-panel">
+      <div className="section-heading"><div><span className="eyebrow">Cumulative · available history</span><h2>Website totals so far</h2></div></div>
+      <div className="visits-mobile-only">
+        <details className="visits-compact-disclosure">
+          <summary>See lifetime impressions, clicks, views and visits</summary>
+          <div className="visits-total-grid visits-mobile-totals">
+            <div><span>Search impressions</span><strong>{count(lifetime.impressions)}</strong></div>
+            <div><span>Search clicks</span><strong>{count(lifetime.clicks)}</strong></div>
+            <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong></div>
+            <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong></div>
+          </div>
+        </details>
+      </div>
+      <div className="visits-total-grid visits-desktop-only">
+        <div><span>Google impressions</span><strong>{count(lifetime.impressions)}</strong><small>Search Console · since {report.gscStartDate} (max. 16 months)</small></div>
+        <div><span>Google search clicks</span><strong>{count(lifetime.clicks)}</strong><small>Search Console · same available history</small></div>
+        <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong><small>GA4 clean production traffic · since {report.ga4StartDate}</small></div>
+        <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong><small>GA4 sessions · since {report.ga4StartDate}</small></div>
+      </div>
+      <p className="visits-footnote">These are separately sourced measurements, not additive totals. “All available” is limited by API retention and the clean-tracking start; it is not a claim of unlimited historical coverage.</p>
     </section>
 
     <section className="admin-panel visits-share-panel">
