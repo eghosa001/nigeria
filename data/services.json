@@ -6192,7 +6192,7 @@
     "slug": "nip-transfer-status",
     "title": "NIP Transfer Status: Check a NIBSS Transfer with *565*5#",
     "shortTitle": "Check NIP transfer status",
-    "summary": "Use the official NIBSS *565*5# NIP Transaction Tracker to check whether a recent Nigeria Instant Payment transfer succeeded, failed or is still awaiting processing.",
+    "summary": "NIBSS's NIP Transaction Tracker lets the sender check an instant bank transfer made within the past 48 hours. Dial *565*5# from the mobile number registered to the sending bank account, provide the sender's account number and transaction amount, and interpret the reply before taking a dispute to the bank. NIBSS publishes a ₦20 USSD charge.",
     "category": "Banking",
     "agencySlug": "nibss",
     "feeLabel": "₦20",
@@ -6206,23 +6206,38 @@
       "Enough airtime for the ₦20 NIBSS USSD service charge"
     ],
     "steps": [
-      "Use the phone number linked to the sender's bank account and dial *565*5# to open the NIBSS NIP Transaction Tracker.",
-      "Enter the sender's account number when the USSD session requests it, then provide the exact amount of the transfer you want to check.",
-      "Review the result returned by NIBSS: a successful transfer is shown as successful, an unsuccessful transfer is shown as failed, and a missing transaction can mean the sending bank has not yet processed it.",
-      "If the tracker shows that the transfer succeeded but the beneficiary has not received value, ask the beneficiary to contact their bank with the transfer details.",
-      "If the transfer failed and the expected reversal does not arrive, contact the sending bank with the transaction details instead of repeatedly paying for new USSD lookups."
+      "Before dialling, confirm the debit alert or receipt shows the correct sending account, amount and approximate transaction time; the USSD tracker covers only the previous 48 hours and only works with the mobile line registered to that sender's bank account.",
+      "Dial *565*5# from the registered sending line. Enter the sender's bank account number and the precise transaction amount when prompted; NIBSS says the service may also display the last five NIP transfers.",
+      "Read the transaction outcome carefully: a transaction marked 'Yes' succeeded in NIBSS's record; 'No' means the transfer was unsuccessful; 'ACCOUNT NOT FOUND' means the phone line is not associated with the entered sending account.",
+      "If the tracker reports no matching transaction within 48 hours, NIBSS says it may not yet have been processed by the sending bank. Contact your sending bank and quote the receipt or transaction reference; a missing tracker result is not proof that money was received.",
+      "If NIBSS says successful but the recipient has not received the money, ask the recipient to contact the receiving bank with transfer details while you retain proof of debit. For failed transfers with no reversal, lodge a documented complaint with the sending bank.",
+      "Keep the bank's complaint reference and follow its resolution process. If the regulated bank fails to resolve the complaint within the applicable timeline, check CBN's official Consumer Protection Department guidance for escalation; do not send your PIN, OTP or passwords to a purported reversal agent."
     ],
     "notes": [
-      "NIBSS says the tracker only checks NIP transactions completed within the previous 48 hours.",
-      "The service must be used from the phone number linked to the sender's bank account.",
-      "A result of 'account not found' can mean the supplied phone number is not linked to the account number entered."
+      "The NIBSS USSD service itself is chargeable at ₦20 per lookup according to its current public information; network and carrier costs should be confirmed on the phone prompt, and repeated lookups are unnecessary once the result is known.",
+      "Use the number linked to the sending bank account, not the beneficiary's line; do not enter a beneficiary account number in the sender-account field.",
+      "NIBSS notes that 'NO TRANSACTIONS FOUND WITHIN THE LAST 48HOURS' can mean the transfer was not processed by the sending bank; it is not confirmation of payment.",
+      "NIBSS's own troubleshooting examples distinguish 'No' (failed, reversal expected) from 'Yes' (successful, beneficiary should contact receiving bank if no credit).",
+      "The CBN says customers should first report problems to their bank and retain proof and a complaint reference before escalating. Its general complaint guidance discusses two weeks, but particular electronic-transfer disputes can have different binding resolution rules; ask the bank for the applicable timeline."
     ],
     "sources": [
       {
-        "label": "NIBSS 565 USSD validation services",
+        "label": "NIBSS — *565 NIP Transaction Tracker and outcome explanations",
         "agency": "Nigeria Inter-Bank Settlement System",
         "url": "https://nibss-plc.com.ng/ussd-validation-services/",
-        "lastChecked": "2026-09-29"
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "NIBSS Helpdesk — Transaction Status Query in NIP",
+        "agency": "Nigeria Inter-Bank Settlement System",
+        "url": "https://contactcentre.nibss-plc.com.ng/support/solutions/articles/47001265115-what-are-the-services-under-nip-that-customers-can-utilize-",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "CBN — How to lodge a complaint with a bank",
+        "agency": "Central Bank of Nigeria",
+        "url": "https://www.cbn.gov.ng/supervision/cpdcomgt.html",
+        "lastChecked": "2026-10-15"
       }
     ],
     "searchTerms": [
@@ -6242,13 +6257,13 @@
     "related": [
       "bvn-retrieval"
     ],
-    "lastVerified": "2026-10-06"
+    "lastVerified": "2026-10-15"
   },
   {
     "slug": "vehicle-insurance-validation-ussd",
     "title": "How to validate a vehicle insurance policy with *565*11#",
     "shortTitle": "Validate vehicle insurance",
-    "summary": "The official NIBSS USSD method for checking whether a vehicle registration number is linked to a valid motor insurance policy in Nigeria.",
+    "summary": "Check whether a motor vehicle's insurance is recorded as active on the Nigerian Insurance Industry Database (NIID). NIBSS publishes the *565*11# USSD route at ₦20 per check. The Nigerian Insurers Association also offers a web-based 'Check Policy' route on askniid.org; if either check returns no match, contact the issuing insurer instead of assuming the vehicle is definitely uninsured.",
     "category": "Insurance",
     "agencySlug": "nibss",
     "feeLabel": "₦20",
@@ -6260,22 +6275,37 @@
       "Enough airtime for the ₦20 NIBSS USSD service charge"
     ],
     "steps": [
-      "Dial *565*11# from your mobile phone to open the NIBSS vehicle-insurance validation service.",
-      "Enter the vehicle registration number exactly as it appears on the vehicle record and submit the USSD request.",
-      "Read the response returned by NIBSS; where the vehicle has a current policy, the session shows the policy-validity information.",
-      "If the service reports that the registration number was not found, check the registration number for typing errors and confirm the insurance record with the insurer.",
-      "If a policy should be active but NIBSS still does not return a valid record, contact the insurer that issued the policy and ask them to verify or correct the record before relying on the cover."
+      "Have the exact registration number shown on the vehicle documents and the issuing insurer's policy details available. Double-check letters and digits before submitting; verification reports depend on matching the registered record.",
+      "For the NIBSS USSD route, dial *565*11# on a mobile phone and enter the vehicle registration number when prompted. NIBSS publishes a ₦20 charge for each validation.",
+      "Read the response: 'Policy Valid till ...' gives a stated expiry date. 'Vehicle Registration Number not found' can reflect an invalid number, no insurance record or a policy that expired over a year ago; it does not by itself prove which situation applies.",
+      "Alternatively, open the Nigerian Insurers Association's official NIID verification website at askniid.org. Choose 'Check Policy' and follow the site's own form and verification instructions; do not give personal details to lookalike insurance-checking pages.",
+      "If a current policy is missing, or the response appears to have the wrong expiry date, compare the policy document and registration plate then contact the insurer to correct or upload its NIID entry. Keep your receipt and policy number.",
+      "Do not treat a successful insurance-database response as a substitute for reading your policy's exclusions, the insurer's genuine licence or claims procedure. If there is a dispute, contact the insurer or the insurance regulator through their official channels."
     ],
     "notes": [
-      "NIBSS says a 'vehicle registration number not found' response can mean the registration number is invalid, the vehicle has never had valid insurance cover, or the cover expired more than one year ago.",
-      "Validation confirms what the NIBSS service returns for the registration number; it does not replace the policy document or insurer's own claims process."
+      "NIBSS publishes *565*11# and ₦20 per lookup; NIID's current homepage separately advertises a 'Check Policy' website option.",
+      "The Nigerian Insurers Association operates NIID as a database of compulsory insurance certificates, including motor insurance. Its official site independently confirms the *565*11# verification channel.",
+      "NIBSS's 'not found' outcomes do not uniquely identify the cause. A new valid policy may not appear immediately; ask the insurer directly rather than buying another policy from an unsolicited agent.",
+      "An online verification is not a purchase portal, and the existence of a record is not a guarantee that all claimed losses will be covered."
     ],
     "sources": [
       {
-        "label": "NIBSS 565 USSD validation services",
+        "label": "NIBSS — *565*11# motor insurance validation and outcome meanings",
         "agency": "Nigeria Inter-Bank Settlement System",
         "url": "https://nibss-plc.com.ng/ussd-validation-services/",
-        "lastChecked": "2026-09-29"
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Nigerian Insurers Association — official NIID policy verification",
+        "agency": "Nigerian Insurers Association",
+        "url": "https://askniid.org/",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "NIID — direct policy verification form",
+        "agency": "Nigerian Insurers Association",
+        "url": "https://askniid.org/VerifyPolicy.aspx",
+        "lastChecked": "2026-10-15"
       }
     ],
     "searchTerms": [
@@ -6291,7 +6321,7 @@
       "vehicle-registration-nvis",
       "vehicle-proof-of-ownership-verification"
     ],
-    "lastVerified": "2026-09-29"
+    "lastVerified": "2026-10-15"
   },
   {
     "slug": "nin-sim-linkage",
@@ -11958,41 +11988,50 @@
     "slug": "check-nin-number",
     "title": "How to check or retrieve your NIN with *346#",
     "shortTitle": "Check or retrieve NIN",
-    "summary": "Forgot your NIN? Dial *346# on a Nigerian mobile line and follow NIMC's prompts, or visit a NIMC office if the phone service cannot retrieve the number. Check any USSD charge shown before confirming.",
+    "summary": "To retrieve an existing 11-digit NIN, dial *346# on the telephone line you registered with NIMC and follow the retrieval prompt (the NCC describes option 1). NIMC's February 2026 Service Charter lists ₦50 for *346# retrieval. You can instead check an existing official NIMC ID record or contact NIMC if the registered SIM has been lost.",
     "category": "Identity",
     "agencySlug": "nimc",
-    "feeLabel": "Network/USSD charge may apply",
-    "feeNote": "The current NIMC guidance confirms the *346# phone service but does not state a retrieval price on the cited page. Confirm any charge shown by your network before completing the USSD session.",
+    "feeLabel": "₦50 published USSD retrieval fee",
+    "feeNote": "NIMC's February 2026 Service Charter, section 16.6, lists ₦50 for 'NIN Retrieval (via 346#)'. This supersedes the older ₦20 charge/temporary fee waiver described in some historical NCC FAQs. Check your actual network USSD prompt before accepting a deduction.",
     "status": "verified",
     "requirements": [
-      "An existing NIN record",
-      "A mobile phone and active Nigerian line for the *346# phone service",
-      "If the phone route cannot recover the record, access to a NIMC office for assistance"
+      "An NIN must already have been issued; *346# does not enrol a first-time applicant.",
+      "An active Nigerian mobile line that matches the phone number provided during NIMC registration, as NCC specifies.",
+      "At least the published ₦50 retrieval fee available as airtime if the network charges as listed in NIMC's current service charter.",
+      "If the registered SIM is lost or no retrieval result appears, enough identity evidence to seek assistance through a genuine NIMC office or operator."
     ],
     "steps": [
-      "Dial *346# on an active Nigerian mobile line and choose the option provided for retrieving a forgotten NIN.",
-      "Follow the displayed prompts to check whether NIMC can retrieve your existing NIN record; review any USSD or network charge before accepting.",
-      "Keep the retrieved NIN private. Do not type the number into a look-alike third-party checker or send it to unofficial agents.",
-      "If the phone service cannot recover the NIN, contact or visit an official NIMC office; the agency lists this as the alternative for someone who cannot remember the number."
+      "Confirm whether your NIN is already printed on the NIMC slip issued during enrolment; it is normally the 11-digit number on that document. Do not pay for a fresh retrieval if you already have it.",
+      "From the mobile number previously registered with NIMC, dial *346#. Choose the NIN retrieval option shown on the menu; NCC's published guidance describes pressing 1.",
+      "Read the fee prompt before proceeding. NIMC's February 2026 Service Charter states ₦50 for *346# retrieval; old pages mentioning a temporary ₦20 waiver should not be used as the current fee.",
+      "Complete the USSD prompts and keep the returned 11-digit NIN private. Never share a screenshot of your full NIN or OTP publicly or with an unofficial agent.",
+      "If the lookup says the phone number is not linked to a NIN, check that you are using the originally registered SIM. NCC advises calling your telecom provider if USSD returns an error; NIMC can assist at an official centre with forgotten records.",
+      "If you are attempting to link a SIM rather than retrieve the number, use your network operator's own NIN-linking channel; *346# is the retrieval step, not the complete mobile-line linkage process."
     ],
     "notes": [
-      "NIMC explicitly says people who cannot remember a NIN may use the *346# SMS/phone service or seek help at a NIMC office.",
-      "*346*2*Your NIN# is a different Mobile ID shortcut that starts with a number you already know. Do not confuse it with forgotten-NIN recovery.",
-      "NIMC's cited retrieval guidance does not publish a fixed charge; use the network prompt before confirming, not an unverified old fee.",
-      "MyNigeriaGuide never asks users to provide their NIN."
+      "The NCC explicitly distinguishes retrieval via *346# from NIN–SIM linking. The line used for retrieval must match the NIMC enrolment record.",
+      "NIMC's February 2026 published schedule lists ₦50 for the *346# lookup; an older NCC FAQ mentioned a time-limited ₦20 fee waiver during the original SIM-link campaign.",
+      "The 11-digit NIN is not the same as a virtual NIN, share code or the separate *346*2*Your NIN# Mobile ID function, which needs the NIN you already know.",
+      "NIMC provides an in-person fallback when the registered phone cannot retrieve an existing NIN. Do not use fake 'instant retrieval' sites or give strangers your identity number."
     ],
     "sources": [
       {
-        "label": "NIMC — Verifying a Profile",
+        "label": "NIMC February 2026 Service Charter — section 16.6 official USSD fee",
         "agency": "National Identity Management Commission",
-        "url": "https://nimc.gov.ng/verify-profile",
-        "lastChecked": "2026-10-12"
+        "url": "https://nimc-cms.idvault.co/storage/Uploads/nimc-service-charter-february-2026.pdf",
+        "lastChecked": "2026-10-15"
       },
       {
-        "label": "NIMC — Mobile Digital ID / SMS Services",
+        "label": "Nigerian Communications Commission — official NIN retrieval and SIM FAQ",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://www.ncc.gov.ng/frequently-asked-questions/about-nin",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "NIMC — verification profile and forgotten-NIN fallback",
         "agency": "National Identity Management Commission",
-        "url": "https://nimc.gov.ng/mobile-digital-id",
-        "lastChecked": "2026-10-12"
+        "url": "https://nimc.gov.ng/verify-profile",
+        "lastChecked": "2026-10-15"
       }
     ],
     "searchTerms": [
@@ -12015,7 +12054,7 @@
       "nin-slip-reissue",
       "ninauth-nin-verification"
     ],
-    "lastVerified": "2026-10-12"
+    "lastVerified": "2026-10-15"
   },
   {
     "slug": "unclaimed-dividends-nigeria",
