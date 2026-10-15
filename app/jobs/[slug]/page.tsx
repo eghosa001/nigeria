@@ -132,7 +132,17 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             <h1>{item.title}</h1>
             <p className="page-intro">{item.summary}</p>
             <div className="guide-save-action"><SavePageButton href={"/jobs/" + item.slug} title={item.title} kind="job" /></div>
-            {!isIndexableJobOpportunity(item) ? <p className="job-muted">This is an employer career pathway, not an individual open vacancy. Visit the official careers website to check available roles, requirements and deadlines.</p> : null}
+            {!isIndexableJobOpportunity(item) ? (
+              <p className="job-muted">
+                {isCareerPortal
+                  ? "This is an employer careers directory, not a single open vacancy. Check individual current listings on the official board."
+                  : effectiveStatus === "closed"
+                    ? "This individual vacancy is closed or its published deadline has passed. The record is preserved for reference and is not an open application."
+                    : effectiveStatus === "unverified"
+                      ? "We could not confirm an active role-specific application. This is not an open vacancy; use the employer's current jobs board to verify if a new listing appears."
+                      : "This listing is retained for reference. Verify a fresh employer announcement before applying."}
+              </p>
+            ) : null}
             <p className="job-muted">Applies to {item.location} · Employer: {item.organization} · Verified {item.verifiedAt}</p>
             {item.nextMilestone ? <div className="job-milestone"><strong>Current next step</strong><p>{item.nextMilestone}</p></div> : null}
           </div>
