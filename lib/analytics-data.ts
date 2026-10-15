@@ -309,7 +309,7 @@ function daysForRange(range: AnalyticsRange) {
   return range === "7d" ? 7 : range === "90d" ? 90 : 30;
 }
 
-async function runReport(body: Record<string, unknown>) {
+export async function runReport(body: Record<string, unknown>) {
   const { propertyId } = config();
   if (!propertyId) throw new Error("GA4 property ID is not configured.");
   const token = await getAccessToken();
@@ -451,7 +451,7 @@ async function getGA4KeyEventStatus(): Promise<GA4KeyEventStatus> {
   }
 }
 
-async function runRealtime() {
+export async function runRealtime() {
   const { propertyId } = config();
   if (!propertyId) return null;
   const token = await getAccessToken();
@@ -473,7 +473,7 @@ async function runRealtime() {
   };
 }
 
-function dateInTimeZone(timeZone: string) {
+export function dateInTimeZone(timeZone: string) {
   return new Intl.DateTimeFormat("en-CA", {
     timeZone,
     year: "numeric",
@@ -495,7 +495,7 @@ class SearchConsoleRequestError extends Error {
   }
 }
 
-async function searchConsoleQuery(body: Record<string, unknown>) {
+export async function searchConsoleQuery(body: Record<string, unknown>) {
   const settings = searchConsoleConfig();
   if (!settings.clientEmail || !settings.privateKey) throw new Error("Search Console credentials are not configured.");
   const token = await getAccessToken(
