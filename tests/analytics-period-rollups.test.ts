@@ -46,3 +46,16 @@ test("Search Console comparison follows Pacific day while GA4 uses Lagos day", (
   assert.equal(rows[0].gscStartDate, "2026-10-14");
   assert.equal(rows[0].startDate, "2026-10-15");
 });
+
+test("average ranking position is weighted by Google impressions", () => {
+  const rows = buildPeriodRows([], [
+    { date: "2026-10-14", impressions: 100, clicks: 2, position: 3 },
+    { date: "2026-10-13", impressions: 300, clicks: 7, position: 9 },
+  ], "2026-10-15", {
+    ga4StartDate: "2026-09-29", gscStartDate: "2025-06-15",
+    pageViews: null, sessions: null, impressions: 400, clicks: 9, position: 7.5,
+  }, "2026-10-14");
+  assert.equal(rows[1].position, 7.5);
+  assert.equal(rows[4].position, 7.5);
+  assert.equal(rows[0].position, 3);
+});
