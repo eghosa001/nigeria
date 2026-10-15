@@ -100,6 +100,7 @@ async function queryOverview() {
   const gscDays: TrafficDay[] = gscDaily.status === "fulfilled"
     ? (gscDaily.value.rows ?? []).map((row) => ({
         date: row.keys?.[0] ?? "", impressions: row.impressions ?? 0, clicks: row.clicks ?? 0,
+        position: row.position ?? 0,
       })).filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date)) : [];
   const ga4Totals = ga4Lifetime.status === "fulfilled"
     ? (ga4Lifetime.value.totals?.[0] ?? ga4Lifetime.value.rows?.[0] ?? {}) : null;
@@ -111,6 +112,7 @@ async function queryOverview() {
     sessions: ga4Totals ? value(ga4Totals, 1) : null,
     clicks: gscLifetime.status === "fulfilled" ? (gscTotals?.clicks ?? 0) : null,
     impressions: gscLifetime.status === "fulfilled" ? (gscTotals?.impressions ?? 0) : null,
+    position: gscLifetime.status === "fulfilled" ? (gscTotals?.position ?? null) : null,
   }, pacificDay);
   const daily = new Map<string, TrafficDay>();
   for (const row of ga4Days) daily.set(row.date, row);
