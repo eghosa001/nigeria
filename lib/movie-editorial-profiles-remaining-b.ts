@@ -257,21 +257,26 @@ const records: Record<string,Entry> = {
   },
   "oil-and-water-2025": {
     "story": [
-      "Oil and Water follows a mother and daughter whose relationship is already difficult before they discover that their romantic lives are connected to the same man. The revelation intensifies mistrust and makes it harder for either woman to separate personal feelings from family loyalty.",
-      "The story explores why close relatives may struggle to understand one another even before a crisis. Its central complication is not just romantic rivalry: it forces both characters to reconsider what honesty and support should look like between generations."
+      "Oil and Water follows an estranged mother and daughter whose relationship becomes even more strained when they suspect they are dating the same man. That is the premise supplied with the film's original 1 May 2025 full-length release on the verified BIODUNSTEPHEN TV channel.",
+      "The family's existing distance matters before the romantic revelation: the conflict tests what each woman is willing to admit, how they understand loyalty, and whether trust can survive another shock. The official synopsis does not provide enough evidence to assign specific cast members to the mother or daughter."
     ],
     "context": [
-      "Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi are listed with Biodun Stephen and Biola Kareem in the film's 2025 credited cast. The existing source record points to Biodun Stephen's production company and an official full-length YouTube upload.",
-      "Because the plot is unusually specific, a synopsis should distinguish this Nigerian movie from generic relationship discussions that use the phrase oil and water. Verified actor-to-character assignments have not been supplied, so the mother and daughter are not assigned cast names here."
+      "The original publisher identifies Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi as the principal cast. The same film is listed in the producing company's portfolio and on FilmFlux, which also records its release and credits. The authorised full-length upload is linked above.",
+      "There is a genuine source discrepancy: the original BIODUNSTEPHEN TV video and its publisher's 2025 brochure describe the mother-daughter plot, while the Shutterspeed Projects website's portfolio describes Ibukun and Esosa renting a house beside a hostile landlady. Because these are different premises attached to the same film title and cast, this guide follows the original video rather than mixing the two stories or inventing a resolution.",
+      "Crew attribution also needs care. The production-company portfolio credits Olubunmi Akingbola as director, whereas the official video's generic description says 'Produced & Directed by Biodun Stephen'. Without a matching on-screen credit confirming which description applies, this guide does not claim an undisputed director."
     ],
     "questions": [
       [
         "What is the conflict in Oil and Water (2025)?",
-        "A mother and daughter discover their romantic lives have become entangled with the same man."
+        "According to the original full-length release, an estranged mother and daughter suspect they are dating the same man."
       ],
       [
-        "Who is in Oil and Water?",
-        "Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi appear in the documented cast."
+        "Why are there different descriptions of Oil and Water?",
+        "The original publisher's video and another production-company page give different plots. This guide uses the synopsis accompanying the original release and identifies the discrepancy."
+      ],
+      [
+        "Who appears in Oil and Water?",
+        "Bimbo Ademoye, Bobby Ekpe and Constance Owoyomi appear in the publisher-confirmed cast; their characters are not assigned without film-specific credits."
       ]
     ]
   },
