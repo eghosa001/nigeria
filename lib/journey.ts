@@ -24,6 +24,19 @@ const physicalRequiredPatterns = [
   /\bpresent (?:your |the )?original\s+(?:documents?|records?)\s+(?:at|to)\b/i,
 ];
 
+// Negated or optional office mentions do not establish a mandatory visit.
+export function isMandatoryPhysicalStep(step: string) {
+  for (const pattern of physicalRequiredPatterns) {
+    const match = pattern.exec(step);
+    if (!match) continue;
+    const clause = step.slice(Math.max(0, match.index - 100), match.index).split(/[.;!?]/).pop() ?? "";
+    if (/\b(?:do not have to|don't have to|no need to|not required to|without needing to|without having to)\s*$/i.test(clause)) continue;
+    if (/^\s*if\b/i.test(clause)) continue;
+    return true;
+  }
+  return false;
+}
+
 function explicitlyAgencyAssisted(step: string) {
   return /\b(?:take|bring|submit|collect|obtain|present|register|report|apply)\b.{0,100}\b(?:at|from|through|with|to)\s+(?:(?:the|your|an?|selected|responsible|accredited)\s+){0,3}(?:school|institution|centre|center|office|branch|embassy|consulate)\b/i.test(step);
 }
@@ -61,11 +74,10 @@ export function getServiceJourney(service: Service): ServiceJourney {
     };
   }
 
-  const process = service.steps.join(" ");
   const hasPortal = Boolean(service.officialPortal);
   // Body, notes and document lists can mention a school, office or website
   // without establishing a physical appointment or online application.
-  const physicalRequired = physicalRequiredPatterns.some((pattern) => pattern.test(process));
+  const physicalRequired = service.steps.some(isMandatoryPhysicalStep);
   const assisted = service.steps.some(explicitlyAgencyAssisted);
   const explicitlyOnline = service.steps.some(explicitlyOnlineStep);
 
