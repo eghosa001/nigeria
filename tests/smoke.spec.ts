@@ -491,20 +491,39 @@ test("brand logo always returns home, including after process activity", async (
   await expect(page.getByRole("heading", { name: /Nigeria, easier to explore/i })).toBeVisible();
 });
 
-test("service FAQ answers are contextual and complete enough to guide the next action", async ({ page }) => {
+test("service guidance does not repeat the same route, notes and fees in generic FAQ blocks", async ({ page }) => {
   await page.goto("/services/passport-renewal");
-  const questions = page.locator("#questions details");
-  // The essential route, fees and steps already have their own complete
-  // sections. The supplementary FAQ should not duplicate all those answers.
-  await expect(questions).toHaveCount(3);
-  await expect(questions.nth(0)).toContainText(/service or its website does not work/i);
-  await expect(questions.nth(1)).toContainText(/careful about/i);
-  await expect(questions.nth(2)).toContainText(/instructions are current/i);
-  await expect(page.locator("#questions")).toContainText(/official|agency/i);
-  await expect(page.locator("#questions")).toContainText(/last checked|checked on/i);
   await expect(page.locator("#journey")).toContainText("Online + physical visit");
   await expect(page.locator("#requirements")).toBeVisible();
   await expect(page.locator("#steps")).toBeVisible();
+  await expect(page.locator("#notes")).toBeVisible();
+  await expect(page.locator("#questions")).toHaveCount(0);
+  await expect(page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Cautions" })).toBeVisible();
+});
+
+
+test("four pillar article templates keep one source of truth for each key fact", async ({ page }) => {
+  await page.goto("/services/nin-date-of-birth-modification");
+  await expect(page.locator("#requirements")).toBeVisible();
+  await expect(page.locator("#steps")).toBeVisible();
+  await expect(page.locator("#questions")).toHaveCount(0);
+  await expect(page.locator("#quick-answers")).toHaveCount(0);
+  await expect(page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Quick answers" })).toHaveCount(0);
+
+  await page.goto("/entertainment/movies/oversabi-aunty");
+  await expect(page.getByRole("heading", { name: "Oversabi Aunty", exact: true })).toBeVisible();
+  await expect(page.locator(".movie-detail-subnav").getByRole("link", { name: "Cast & crew" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Quick facts about Oversabi Aunty/i })).toHaveCount(0);
+
+  await page.goto("/explore/lagos");
+  await expect(page.locator("#trip-highlights")).toBeVisible();
+  await expect(page.locator("#planning")).toBeVisible();
+  await expect(page.locator("#trip-questions")).not.toContainText("Begin with");
+
+  await page.goto("/jobs/reliance-health-careers");
+  await expect(page.locator("#requirements")).toBeVisible();
+  await expect(page.locator("#job-sources")).toBeVisible();
+  await expect(page.locator(".answer-first")).toHaveCount(0);
 });
 
 test("service links distinguish exact guidance from transaction portal", async ({ page }) => {
@@ -581,8 +600,8 @@ test("service guides expose verified search-intent quick answers", async ({ page
   await page.goto("/services/passport-renewal");
   const quick = page.locator("#quick-answers");
   await expect(quick.getByRole("heading", { name: /Quick answers about Passport renewal/i })).toBeVisible();
-  await expect(quick.getByRole("heading", { name: /How much is Nigerian passport renewal\?/i })).toBeVisible();
-  await expect(quick).toContainText("₦100,000 / ₦200,000");
+  await expect(quick.getByRole("heading", { name: /Can I renew my Nigerian passport completely online\?/i })).toBeVisible();
+  await expect(quick).not.toContainText("How much is Nigerian passport renewal?");
   const hasFaqSchema = await page.locator('#main-content script[type="application/ld+json"]').evaluateAll(
     (scripts) => scripts.some((script) => script.innerHTML.includes("FAQPage")),
   );

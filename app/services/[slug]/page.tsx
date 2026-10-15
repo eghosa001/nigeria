@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
-import { AnswerFirst } from "@/components/answer-first";
 import { getServiceSeoDescriptionOverride, getServiceSeoTitleOverride } from "@/data/service-seo-overrides";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CorrectionReport } from "@/components/correction-report";
@@ -16,7 +15,6 @@ import { ServiceSteps } from "@/components/service-steps";
 import { ProcessTracker } from "@/components/process-tracker";
 import { ServiceStatusStrip } from "@/components/service-status-strip";
 import { ServiceSearchAnswers } from "@/components/service-search-answers";
-import { ServiceFaqs } from "@/components/service-faqs";
 import { ForeignVisaFaqs } from "@/components/foreign-visa-faqs";
 import { ServiceAftercare } from "@/components/service-aftercare";
 import { GuideQuickNav } from "@/components/guide-quick-nav";
@@ -123,7 +121,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     .filter((item) => !related.some((candidate) => candidate.slug === item.serviceSlug))
     .filter((item, index, items) => items.findIndex((candidate) => candidate.serviceSlug === item.serviceSlug) === index)
     .slice(0, 3);
-  const searchAnswers = getServiceSearchAnswers(service);
+  // Only bespoke, evidenced follow-up answers are published as FAQs; the
+  // generic fee/steps/requirements already have complete sections above.
+  const searchAnswers = getServiceSearchAnswers(service).slice(5);
   const base = getSiteUrl();
   const pageUrl = base + "/services/" + service.slug;
   const categoryHref = "/categories/" + categorySlug(service.category);
@@ -157,7 +157,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     spatialCoverage: { "@type": "Country", name: "Nigeria" },
   };
 
-  const faqLd = {
+  const faqLd = searchAnswers.length ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: searchAnswers.map((item) => ({
@@ -168,11 +168,11 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         text: item.answer,
       },
     })),
-  };
+  } : null;
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd, webpageLd, faqLd]} />
+      <JsonLd data={[breadcrumbLd, webpageLd, ...(faqLd ? [faqLd] : [])]} />
       <section className="guide-hero">
         <div className="container">
           <Breadcrumbs items={breadcrumbs} />
@@ -186,7 +186,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <h1>{service.title}</h1>
               <p>{service.summary}</p>
               <p className="hero-note">
-                Applies to Nigeria · Responsible agency: {agency?.name ?? service.agencySlug.toUpperCase()} · Verified {service.lastVerified}
+                For applicants in Nigeria · Responsible organisation: {agency?.name ?? service.agencySlug.toUpperCase()}
               </p>
               <div className="guide-badges">
                 <StatusBadge status={service.status} />
@@ -207,21 +207,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </aside>
           </div>
           <ServiceStatusStrip service={service} />
-          <AnswerFirst
-            title={"What you need to know about " + service.shortTitle}
-            summary={service.steps[0] ?? service.summary}
-            facts={[
-              { label: "Applies to", value: "Nigeria · " + service.category },
-              { label: "Responsible agency", value: agency?.name ?? service.agencySlug.toUpperCase() },
-              { label: "Current fee / status", value: service.feeLabel + " · checked " + service.lastVerified },
-              { label: "Timeline", value: service.timeline ?? "No fixed official timeline published" },
-            ]}
-            links={[
-              { href: "#requirements", label: "See requirements" },
-              { href: "#steps", label: "See the steps" },
-              ...(primaryOfficialLink ? [{ href: primaryOfficialLink.url, label: primaryOfficialLink.label, external: true, primary: true }] : []),
-            ]}
-          />
           {(service.slug === "cac-business-name-registration" || service.slug === "cac-company-registration") ? (
             <section className="service-topic-links" aria-label="Choose the correct CAC registration">
               <h2>Business name or limited company?</h2>
@@ -258,9 +243,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="section guide-main-section">
         <div className="container guide-layout">
           <article className="guide-content">
-            <GuideQuickNav />
-
-            <ProcessTracker service={service} />
+            <GuideQuickNav showQuickAnswers={searchAnswers.length > 0} />
 
             <ServiceJourney service={service} />
 
@@ -272,22 +255,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             <ServiceAftercare service={service} />
 
-            <ServiceSearchAnswers service={service} />
+            <ProcessTracker service={service} />
+
+            {searchAnswers.length ? <ServiceSearchAnswers service={service} /> : null}
 
             <AdSlot slot={AD_SLOTS.serviceMid} label="Advertisement" />
 
             <section id="notes">
-              <span className="section-number" aria-hidden="true">03</span>
+              <span className="section-number" aria-hidden="true">Safety</span>
               <h2>Important notes about {service.shortTitle}</h2>
               <ul>{service.notes.map((note) => <li key={note}>{note}</li>)}</ul>
             </section>
 
-            <ServiceFaqs service={service} />
-
             <ForeignVisaFaqs service={service} />
 
             <section id="official-sources">
-              <span className="section-number" aria-hidden="true">05</span>
+              <span className="section-number" aria-hidden="true">Sources</span>
               <h2>Official {agency?.shortName ?? service.agencySlug.toUpperCase()} sources for {service.shortTitle}</h2>
               <p className="source-intro">These cited sources support the details about {service.shortTitle}. Last reviewed on {service.lastVerified}; check the responsible organisation's latest information before acting because prices, deadlines and processes may change.</p>
               <div className="source-list">

@@ -9,7 +9,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const contracts = [
   {
     name: "Services", path: "app/services/[slug]/page.tsx", collection: "publicServices.map",
-    required: ["AnswerFirst", "GuideQuickNav", "ServiceRequirements", "ServiceSteps", "ServiceAftercare", "ServiceSearchAnswers", "service.sources", "service.lastVerified", "official-sources"],
+    required: ["GuideQuickNav", "ServiceJourney", "ServiceRequirements", "ServiceSteps", "ServiceAftercare", "ServiceSearchAnswers", "service.sources", "service.lastVerified", "official-sources"],
     linked: [
       "components/guide-quick-nav.tsx",
       "components/service-journey.tsx", "components/service-requirements.tsx",
@@ -20,17 +20,17 @@ export const contracts = [
   },
   {
     name: "Jobs", path: "app/jobs/[slug]/page.tsx", collection: "jobOpportunities.map",
-    required: ["AnswerFirst", "PageOutline", "effectiveStatus", "item.qualifications", "item.documents", "item.applicationSteps", "item.sources", "item.verifiedAt"],
+    required: ["PageOutline", "effectiveStatus", "item.qualifications", "item.documents", "item.applicationSteps", "item.sources", "item.verifiedAt"],
     targets: ["job-overview", "requirements", "documents", "apply", "job-sources", "official-application"],
   },
   {
     name: "Tour", path: "app/explore/[slug]/page.tsx", collection: "exploreGuides.map",
-    required: ["AnswerFirst", "PageOutline", "guide.highlights", "guide.planning", "guide.lastReviewed", "guide.source", "getExplorePlacesForGuide"],
+    required: ["PageOutline", "guide.highlights", "guide.planning", "guide.lastReviewed", "guide.source", "getExplorePlacesForGuide"],
     targets: ["trip-highlights", "places", "trip-questions", "planning", "trip-sources"],
   },
   {
     name: "Movies", path: "app/entertainment/movies/[slug]/page.tsx", collection: "entertainmentTitles.map",
-    required: ["AnswerFirst", "movie-detail-subnav", "featuredCast", "availabilityLinks", "title.references", "lastChecked"],
+    required: ["movie-detail-subnav", "featuredCast", "availabilityLinks", "title.references", "lastChecked"],
     targets: ["overview", "cast", "watch", "related"],
   },
   {
@@ -92,6 +92,20 @@ export function validateLanding(contract, source) {
   return issues;
 }
 
+export const noRepeatedPresentation = [
+  // A concise hero and distinct evidence sections are preferable to
+  // auto-generated copies of the same fee, timeline, cast or highlights.
+  { path: "app/services/[slug]/page.tsx", forbidden: ["<AnswerFirst", "<ServiceFaqs"] },
+  { path: "app/jobs/[slug]/page.tsx", forbidden: ["<AnswerFirst"] },
+  { path: "app/explore/[slug]/page.tsx", forbidden: ["<AnswerFirst", "The route highlights "] },
+  { path: "app/entertainment/movies/[slug]/page.tsx", forbidden: ["<AnswerFirst"] },
+];
+
+export function validateDistinctCopy(contract, source) {
+  return contract.forbidden.filter((fragment) => source.includes(fragment))
+    .map((fragment) => "repeated auto-generated content: " + fragment);
+}
+
 export function auditSharedStructure(read = (path) => readFileSync(resolve(root, path), "utf8")) {
   const issues = [];
   for (const contract of contracts) {
@@ -100,6 +114,13 @@ export function auditSharedStructure(read = (path) => readFileSync(resolve(root,
     for (const issue of validateTemplate(contract, source, other))
       issues.push(contract.name + ": " + issue);
   }
+  for (const contract of noRepeatedPresentation) {
+    for (const issue of validateDistinctCopy(contract, read(contract.path)))
+      issues.push(contract.path + ": " + issue);
+  }
+  const answerSource = read("components/service-search-answers.tsx");
+  if (!answerSource.includes("getServiceSearchAnswers(service).slice(5)"))
+    issues.push("Services: generic repeated Q&As must not be rendered in service articles");
   for (const contract of landingContracts) {
     for (const issue of validateLanding(contract, read(contract.path)))
       issues.push(contract.name + ": " + issue);
