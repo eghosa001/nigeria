@@ -769,46 +769,77 @@
   },
   {
     "slug": "oet-book-test-nigeria",
-    "title": "How to book an OET test from Nigeria",
-    "shortTitle": "OET test booking",
-    "summary": "OET's official booking route for healthcare professionals: search the preferred location, choose paper/computer or eligible at-home delivery, create the appropriate OET account and complete payment within the booking window.",
+    "title": "OET Test Booking Nigeria: AU$587 Fee, Accepted ID and Official Steps",
+    "shortTitle": "Book OET test in Nigeria",
+    "summary": "Healthcare professionals in Nigeria can book the Occupational English Test (OET) through its official test finder. Search for an available venue and mode, then use the booking portal for OET on Paper or OET on Computer; OET@Home is an option only where offered. OET lists AU$587 for the full four-part test. Use a valid passport or accepted national ID that matches your booking, and complete checkout within the 15-minute booking window.",
     "category": "Education",
     "agencySlug": "oet",
-    "feeLabel": "OET fee shown during booking",
-    "feeNote": "OET pricing depends on test format and the booking route. Confirm the live amount in the official OET booking platform before payment.",
-    "timeline": "OET says the selected test slot is secured after the booking details and payment are completed; some booking screens give a 15-minute payment window.",
+    "feeLabel": "Full four-part OET test: AU$587",
+    "feeNote": "OET's official fee FAQ lists AU$587 for the full Listening, Reading, Writing and Speaking test. Eligible repeat candidates may book one, two or three sub-tests on paper at certain venues for AU$315, AU$415 or AU$515 respectively (including the AU$7 online booking fee). Partial bookings require a previous full test and acceptance by the institution receiving the result. Confirm available mode, payment currency and card charges in OET checkout; no fixed Nigerian-naira price is promised.",
+    "timeline": "OET's booking guidance allows 15 minutes to finish the booking after selecting a test date. A successful booking generates an email confirmation. Paper venue timetables are usually emailed within the week before the test; computer or at-home details appear in the confirmation and OET account. Actual slots depend on the live venue search.",
     "status": "verified",
     "officialPortal": "https://oet.com/test/book-a-test",
     "requirements": [
-      "A valid identification document accepted for the chosen OET test format",
-      "A preferred Nigerian or other eligible test location or an available OET@Home route",
-      "An OET account for paper testing or the booking account used for computer/at-home testing",
-      "A Visa or Mastercard or another payment method offered by OET during checkout"
+      "A healthcare occupation and intended receiving body for which OET is an appropriate English test; verify the regulator or employer's required score and accepted test format before paying.",
+      "An accepted, unexpired test-day ID: passport, or an eligible national government-issued ID bearing full name, photograph and birth date on one document. OET does not accept a Nigerian driver's licence as national ID for this purpose.",
+      "A name and date of birth entered exactly as shown on the ID you will take to the test; OET warns the account and test-day identification must match.",
+      "An available exam date and test mode confirmed in OET's live test finder. Do not assume a particular Nigerian venue or OET@Home seat is available.",
+      "An email address, access to the booking account for the chosen mode, and a payment method accepted by the official OET checkout; OET recommends having Visa or Mastercard ready."
     ],
     "steps": [
-      "Open OET's official Book a Test page and search by preferred city and country.",
-      "Choose the available test location and filter by test mode or distance if needed.",
-      "Select Book Now and sign in or create the account required for the chosen paper, computer or at-home format.",
-      "Complete the candidate details and choose the test date shown by the booking platform.",
-      "Enter the payment details within the booking window and keep the confirmation email after the test is successfully booked."
+      "Start at https://oet.com/test/book-a-test. Enter your preferred Nigerian city and country, then use the test mode and distance filters to compare the venues and dates OET currently offers. Do not rely on third-party fixed venue lists.",
+      "Before choosing a slot, check the English-language requirements of the healthcare regulator or employer receiving your results. Confirm that your chosen OET mode and any single-sub-test booking will be accepted.",
+      "Have a valid passport or OET-accepted national government ID ready. Enter the same legal name and date of birth that appear on the document; an ordinary driver's licence does not meet OET's national-ID rule for Nigerian candidates.",
+      "Select Book Now. For OET on Paper, OET directs you to the myOET registration/login portal at registration.myoet.com and then Apply for the test. For OET on Computer or an offered OET@Home slot, OET uses booking.oet-global.com.",
+      "Complete the healthcare profession, candidate and test-date fields for the available slot, checking the test centre or at-home conditions. Do not assume that seeing a mode described online guarantees a Nigerian seat.",
+      "Review the official checkout amount. OET lists AU$587 for the complete four-part test; selected paper retake options have different charges and eligibility. OET says you have about 15 minutes from slot selection to finish payment and secure the booking.",
+      "After payment, check for OET's confirmation email, including your spam folder. For paper tests, watch for the venue timetable near test day; for computer or at-home testing, check the Bookings tab and confirmation for dates and Speaking details.",
+      "If you need to change or cancel the booking, open OET's own rescheduling or cancellation guidance before acting: deadlines and fees differ for paper versus computer/at-home tests, and cancellation may be irreversible. Contact OET support rather than a paid intermediary if checkout or ID details are wrong."
     ],
     "notes": [
-      "OET uses different account/booking flows for paper testing and computer or at-home testing.",
-      "Candidates should have the test-day ID ready before starting the booking.",
-      "Availability of locations and delivery modes can change by test date."
+      "OET is an English-language test for healthcare professions; it is not professional registration or an automatic visa/healthcare-job qualification. Check the specific regulator's rules first.",
+      "OET lists a full-test price in Australian dollars. Exchange rates and payment charges can change, so avoid a fixed naira conversion. Paper partial retakes are not a first-time substitute for booking all four components.",
+      "Paper and computer/at-home bookings use different accounts. OET's help centre identifies myOET for paper and booking.oet-global.com for computer and OET@Home.",
+      "The accepted ID has to match the booking and be presented on test day. OET lists passports and qualifying national identity documents and specifically excludes ordinary driver's licences outside the US exception.",
+      "Booking confirmation and the test-day timetable are not the same thing. OET says paper candidates normally receive the venue timetable within one week before the test, while computer and at-home candidates can view booking details in their OET account.",
+      "Rescheduling and cancellation conditions vary by format and timing; do not book an expensive new date or assume a refund without checking OET's published policy for the original booking."
     ],
     "sources": [
       {
-        "label": "OET — Book a Test",
+        "label": "OET — live Book a Test venue and mode finder",
         "agency": "Occupational English Test",
         "url": "https://oet.com/test/book-a-test",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-15"
       },
       {
-        "label": "OET Support — How do I book OET?",
+        "label": "OET — official booking steps, accounts and 15-minute checkout",
         "agency": "Occupational English Test",
         "url": "https://support.oet.com/articles/Knowledge/How-do-I-book-OET",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "OET — full and partial exam fees",
+        "agency": "Occupational English Test",
+        "url": "https://support.oet.com/articles/Knowledge/How-much-does-OET-cost",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "OET — accepted identification for booking and test day",
+        "agency": "Occupational English Test",
+        "url": "https://support.oet.com/articles/Knowledge/What-ID-can-I-use-to-book-and-sit-OET",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "OET — how to find the test timetable",
+        "agency": "Occupational English Test",
+        "url": "https://support.oet.com/articles/Knowledge/When-will-I-receive-my-OET-timetable",
+        "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "OET — rescheduling conditions by mode",
+        "agency": "Occupational English Test",
+        "url": "https://support.oet.com/articles/Knowledge/Can-I-defer-reschedule-my-OET-booking-to-a-different-date",
+        "lastChecked": "2026-10-15"
       }
     ],
     "related": [
@@ -816,13 +847,16 @@
       "pte-registration-nigeria",
       "british-council-ielts-registration-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-15",
     "searchTerms": [
       "OET booking Nigeria",
-      "OET test Nigeria",
-      "book OET Nigeria",
-      "OET exam registration Nigeria",
-      "OET healthcare English test"
+      "OET exam fee Nigeria 2026",
+      "OET AU$587 test fee",
+      "OET test centre Nigeria",
+      "OET accepted ID Nigeria",
+      "OET on paper versus computer Nigeria",
+      "book OET test Nigeria",
+      "OET official registration"
     ]
   },
   {
