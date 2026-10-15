@@ -223,7 +223,7 @@ jobs:
 
           check_route "/jobs/eha-pharmacist-abuja-2026" "Qualification requirements"
           check_redirect "/jobs/reliance-health-associate-data-scientist-2026" "/jobs/reliance-health-careers"
-          check_route "/jobs/federal-university-lafia-staff-recruitment-2026" "How to apply or check your status"
+          check_route "/jobs/federal-university-lafia-staff-recruitment-2026" "Federal University of Lafia"
           check_route "/jobs/locations/lagos" "Jobs in Lagos"
           check_route "/jobs/professions/technology" "Technology"
           check_route "/jobs/new-this-week" "New jobs posted this week"
