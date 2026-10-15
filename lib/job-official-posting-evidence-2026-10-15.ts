@@ -39,4 +39,68 @@ export const officialJobPostingEvidence20261015: Record<string, {
     },
     sourceUrl: "https://careers.olamgroup.com/job/OKFOOD-1/1056677366/",
   },
+  "fmn-honeywell-assistant-maintenance-planning-manager-apapa-2026": {
+    posting: {
+      jobTitle: "ASSISTANT MAINTENANCE MANAGER - PLANNING B2B - HONEYWELL FLOUR MILLS, APAPA",
+      datePosted: "2026-10-11",
+      locations: [{ locality: "Apapa", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12752",
+  },
+  "fmn-desktop-support-officer-sunti-oct-2026": {
+    posting: {
+      jobTitle: "DESKTOP SUPPORT - FMN HOLDINGS, SUNTI",
+      datePosted: "2026-10-09",
+      locations: [{ locality: "Sunti", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12751",
+  },
+  "fmn-golden-penny-power-diesel-mechanic-apapa-2026": {
+    posting: {
+      jobTitle: "DIESEL MECHANIC - FMN HOLDINGS - GOLDEN PENNY POWER LIMITED, APAPA",
+      datePosted: "2026-09-30",
+      locations: [{ locality: "Apapa", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12739",
+  },
+  "fmn-golden-penny-power-mechanical-maintenance-manager-apapa-2026": {
+    posting: {
+      jobTitle: "MAINTENANCE MANAGER - MECHANICAL - FMN HOLDINGS - GOLDEN PENNY POWER LIMITED, APAPA",
+      datePosted: "2026-09-30",
+      locations: [{ locality: "Apapa", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12738",
+  },
+  "fmn-golden-penny-power-electrical-maintenance-manager-apapa-2026": {
+    posting: {
+      jobTitle: "PLANT MAINTENANCE MANAGER - ELECTRICAL - FMN HOLDINGS - GOLDEN PENNY POWER LIMITED, APAPA",
+      datePosted: "2026-09-30",
+      locations: [{ locality: "Apapa", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12737",
+  },
+  "fmn-technical-auto-electrician-apapa-2026": {
+    posting: {
+      jobTitle: "AUTO ELECTRICIAN - FMN HOLDINGS LIMITED - TECHNICAL, APAPA",
+      datePosted: "2026-09-30",
+      locations: [{ locality: "Apapa", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12736",
+  },
+  "fmn-logistics-b2b-despatch-manager-lagos-2026": {
+    posting: {
+      jobTitle: "DESPATCH MANAGER - LOGISTICS B2B, LAGOS",
+      datePosted: "2026-08-13",
+      locations: [{ locality: "Lagos", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12692",
+  },
+  "fmn-logistics-b2b-assistant-despatch-manager-lagos-2026": {
+    posting: {
+      jobTitle: "ASSISTANT DESPATCH MANAGER - LOGISTICS B2B, LAGOS",
+      datePosted: "2026-08-13",
+      locations: [{ locality: "Lagos", region: "Lagos State", country: "NG" }],
+    },
+    sourceUrl: "https://fmnplc.e-recruiter.ng/vacancy/details/12691",
+  },
 };
