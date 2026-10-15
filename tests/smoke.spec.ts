@@ -622,3 +622,25 @@ test("official portal reference page exposes direct authorities and guide routes
   await expect(page.getByRole("link", { name: "Open official website ↗" }).first()).toHaveAttribute("href", /^https:\/\//);
   await expect(page.getByRole("link", { name: "View verified guides →" }).first()).toHaveAttribute("href", /^\/agencies\//);
 });
+
+
+test("verified editorial fixes explain the source and leave unverified facts unknown", async ({ page }) => {
+  await page.goto("/explore/agulu-lake-guide");
+  await expect(page.getByText("Do not assume planned lake facilities are operating")).toBeVisible();
+  await expect(page.getByRole("link", { name: /August 2026 Agulu Lake development announcement/ })).toBeVisible();
+
+  await page.goto("/explore/igun-street-guide");
+  await expect(page.getByText("Arrange workshop access respectfully")).toBeVisible();
+  await expect(page.getByRole("link", { name: /Edo State Government.*bronze-casting guild/ })).toBeVisible();
+
+  await page.goto("/jobs/dangote-ibese-mechanical-technician-l12-2026");
+  await expect(page.getByText("Employer closing date")).toBeVisible();
+  await expect(page.getByText(/Not published in verified evidence/)).toBeVisible();
+
+  await page.goto("/entertainment/movies/up-north");
+  await expect(page.getByText("The NYSC journey behind Up North")).toBeVisible();
+  await expect(page.getByText("Tope Oshin", { exact: true }).first()).toBeVisible();
+
+  await page.goto("/entertainment/series/koleoso");
+  await expect(page.locator(".page-intro")).toContainText("Osogbemi");
+});
