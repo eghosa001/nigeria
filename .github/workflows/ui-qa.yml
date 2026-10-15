@@ -260,110 +260,13 @@ jobs:
             exit 0
           fi
 
-          # A curated-film data-only edit must test its movie detail, not
-          # unrelated Services/Tour/Jobs directory-navigation interactions.
-          movie_data_trigger="$(printf '%s\n' "$changed" | grep -E '^lib/entertainment\.ts
-            echo "run=true" >> "$GITHUB_OUTPUT"
-            echo "mode=quality" >> "$GITHUB_OUTPUT"
-            echo "Published-content quality change; running only the directory navigation regression."
-            exit 0
-          fi
-
-          non_navigation="$(printf '%s\n' "$changed" | grep -Ev '^(components/site-header\.tsx|components/site-footer\.tsx|tests/smoke\.spec\.ts|tests/live-deployment\.spec\.ts|\.github/workflows/cloudflare-direct-deploy\.yml|\.github/workflows/ui-qa\.yml)$' || true)"
-          non_homepage="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/globals\.css|tests/explore\.spec\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
-          non_growth="$(printf '%s\n' "$changed" | grep -Ev '^(app/page\.tsx|app/jobs/(page\.tsx|graduate/page\.tsx|remote/page\.tsx)|app/entertainment/(page\.tsx|series/(page\.tsx|\[slug\]/page\.tsx)|movies/(\[slug\]/page\.tsx|october-2026/page\.tsx))|app/explore/(page\.tsx|\[slug\]/page\.tsx|things-to-do-(lagos|abuja)/page\.tsx)|data/(category-faqs|service-seo-overrides)\.ts|data/services\.json|lib/(data|growth-hubs|series|entertainment|entertainment-extras|sitemap-sections)\.ts|docs/SEARCH_DEMAND_GROWTH_PLAN\.md|scripts/verify-service-migration\.ts|tests/(explore|service-records|search-demand-growth)\.spec\.ts|\.github/workflows/ui-qa\.yml)$' || true)"
-
-          echo "run=true" >> "$GITHUB_OUTPUT"
-          if [ -z "$non_navigation" ]; then
-            echo "mode=navigation" >> "$GITHUB_OUTPUT"
-            echo "Navigation-only change; running focused navigation regression."
-          elif [ -z "$non_homepage" ]; then
-            echo "mode=homepage" >> "$GITHUB_OUTPUT"
-            echo "Homepage-only change; running focused homepage regression."
-          elif [ -z "$non_growth" ]; then
-            echo "mode=growth" >> "$GITHUB_OUTPUT"
-            echo "Search-demand growth change; running focused growth regression."
-          else
-            echo "mode=smoke" >> "$GITHUB_OUTPUT"
-            echo "Browser-relevant change; running focused smoke regression only."
-          fi
-      - uses: actions/setup-node@v4
-        if: steps.scope.outputs.run == 'true'
-        with:
-          node-version: 22
-      - run: npm install --no-audit --no-fund
-        if: steps.scope.outputs.run == 'true'
-      - run: npm run build:next
-        if: steps.scope.outputs.run == 'true'
-      - run: npx playwright install --with-deps chromium
-        if: steps.scope.outputs.run == 'true'
-      - name: Check YouTube directory search and publisher filters
-        if: steps.scope.outputs.mode == 'youtube-directory'
-        run: npx playwright test tests/entertainment.spec.ts --project=desktop --workers=1 --grep "youtube movie directory is populated and searchable by publisher"
-      - name: Check movie discovery contrast and phone / tablet / desktop layout
-        if: steps.scope.outputs.mode == 'movie-discovery'
-        run: npx playwright test tests/movie-discovery-contrast.spec.ts --project=desktop --workers=1
-      - name: Run homepage and featured-film editorial curation
-        if: steps.scope.outputs.mode == 'editorial-home'
-        run: npx playwright test tests/home-editorial-curation.spec.ts --project=desktop --workers=1
-      - name: Run premium four-pillar quality contract
-        if: steps.scope.outputs.mode == 'premium-quality'
-        run: npx playwright test tests/premium-quality-gate.spec.ts --project=desktop --workers=1
-      - name: Run AdSense deployment-parity regression
-        if: steps.scope.outputs.mode == 'adsense'
-        run: npx playwright test tests/adsense-build-parity.spec.ts --project=desktop --workers=1
-      - name: Run premium UX and retention regression
-        if: steps.scope.outputs.mode == 'premium'
-        run: npx playwright test tests/premium-ux-retention.spec.ts --project=desktop --project=mobile --workers=1
-      - name: Run navigation regression
-        if: steps.scope.outputs.mode == 'navigation'
-        run: npx playwright test tests/smoke.spec.ts --project=desktop --workers=1 --grep "phone shell fits and keeps admin out of public navigation without hydration errors|mobile public layout uses a single-column hierarchy and usable navigation"
-      - name: Run homepage regression
-        if: steps.scope.outputs.mode == 'homepage'
-        run: npx playwright test tests/explore.spec.ts --project=desktop --project=mobile --workers=1 --grep "homepage exposes movies, services, tour and jobs as primary paths"
-      - name: Verify recent cinema and Africa Magic release information
-        if: steps.scope.outputs.mode == 'release-shelf'
-        run: npx playwright test tests/release-shelf.spec.ts --project=desktop --workers=1
-      - name: Run search-demand growth regression
-        if: steps.scope.outputs.mode == 'growth'
-        run: npx playwright test tests/search-demand-growth.spec.ts --project=desktop --workers=1
-      - name: Run Tour hub regression
-        if: steps.scope.outputs.mode == 'tour'
-        run: npx playwright test tests/explore.spec.ts --project=mobile --workers=1 --grep "Tour hub stays compact and keeps deep navigation available"
-      - name: Run contextual entertainment regression
-        if: steps.scope.outputs.mode == 'entertainment-context'
-        run: npx playwright test tests/entertainment.spec.ts --project=desktop --workers=1 --grep "contextual entertainment detail pages expose country and source dates"
-      - name: Verify source-backed canonical film details
-        if: steps.scope.outputs.mode == 'movie-data'
-        run: npx playwright test tests/movie-source-content.spec.ts --project=desktop --workers=1
-      - name: Run directory navigation regression
-        if: steps.scope.outputs.mode == 'quality'
-        run: npx playwright test tests/directory-navigation.spec.ts --project=desktop --workers=1
-      - name: Validate the compact admin screens
-        if: steps.scope.outputs.mode == 'admin-ui'
-        run: npx playwright test tests/smoke.spec.ts tests/admin-editing.spec.ts --project=desktop --workers=1 --grep "visits unlock|admin dashboard shows independent|admin Search Console connectivity|admin shows the exact|admin dashboard reflects movies"
-      - name: Run browser smoke regression
-        if: steps.scope.outputs.mode == 'smoke'
-        run: npx playwright test tests/smoke.spec.ts --project=desktop --workers=1
-      - name: Run admin editing regression first
-        if: steps.scope.outputs.mode == 'full'
-        run: npx playwright test tests/admin-editing.spec.ts tests/admin-github.spec.ts --project=desktop --workers=1
-      - name: Run full browser suite
-        if: steps.scope.outputs.mode == 'full'
-        run: npm run test:e2e
-      - name: Upload Playwright report on failure
-        if: failure() && steps.scope.outputs.run == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright-report/
-          retention-days: 7
- || true)"
+          # A curated-film data-only change must not run unrelated directory UX checks.
+          movie_data_trigger="$(printf '%s\n' "$changed" | grep -E '^lib/entertainment\.ts$' || true)"
           non_movie_data="$(printf '%s\n' "$changed" | grep -Ev '^(lib/entertainment\.ts$|tests/movie-source-content\.spec\.ts$|\.github/workflows/(ui-qa|cloudflare-qa)\.yml$)' || true)"
           if [ -n "$movie_data_trigger" ] && [ -z "$non_movie_data" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
             echo "mode=movie-data" >> "$GITHUB_OUTPUT"
-            echo "Curated film-source edit: verify only the relevant source-backed movie detail."
+            echo "Curated film-source edit: check only its public movie detail."
             exit 0
           fi
 
@@ -438,6 +341,9 @@ jobs:
       - name: Run contextual entertainment regression
         if: steps.scope.outputs.mode == 'entertainment-context'
         run: npx playwright test tests/entertainment.spec.ts --project=desktop --workers=1 --grep "contextual entertainment detail pages expose country and source dates"
+      - name: Verify source-backed canonical film details
+        if: steps.scope.outputs.mode == 'movie-data'
+        run: npx playwright test tests/movie-source-content.spec.ts --project=desktop --workers=1
       - name: Run directory navigation regression
         if: steps.scope.outputs.mode == 'quality'
         run: npx playwright test tests/directory-navigation.spec.ts --project=desktop --workers=1
