@@ -28,6 +28,8 @@ const independentlyCheckedDestinations = [
   { slug: "sukur-hidi-palace-guide", hosts: ["whc.unesco.org", "museum.ng", "smartraveller.gov.au"], words: 380 },
   { slug: "moremi-statue-ile-ife-guide", hosts: ["oonirisa.org", "osunstate.gov.ng"], words: 330 },
   { slug: "nigeria-archaeology-guide", hosts: ["museum.ng", "whc.unesco.org"], words: 360 },
+  { slug: "abeokuta-day-trip-itinerary", hosts: ["abeokutasouthlga.og.gov.ng", "invest.ogunstate.gov.ng", "egbamuseum.org"], words: 370 },
+  { slug: "okigwe-hills-guide", hosts: ["isipa.im.gov.ng", "smartraveller.gov.au"], words: 360 },
 ];
 for (const { slug, hosts, words } of independentlyCheckedDestinations) {
   const guide = exploreGuides.find((item) => item.slug === slug);
@@ -57,6 +59,19 @@ const archaeology = exploreGuides.find(x => x.slug === "nigeria-archaeology-guid
 if (!archaeology || !/tentative/i.test(archaeology.summary) ||
     !archaeology.planning.some(x => /not the same|different|tentative/i.test(x.detail) && /inscri/i.test(x.detail))) {
   errors.push("Nigerian archaeology guide must distinguish UNESCO tentative-listed sites from World Heritage inscriptions.");
+}
+
+// No sourced current operator/fee/route has been established for Okigwe;
+// a tourism investment description must not become an unsafe climbing plan.
+const okigwe = exploreGuides.find(x => x.slug === "okigwe-hills-guide");
+if (!okigwe || !/do not travel/i.test([okigwe.summary, ...okigwe.intro, ...okigwe.planning.map(x => x.detail)].join(" ")) ||
+    !okigwe.planning.some(x => /no verified|neither|not.*verify/i.test(x.detail) && /ticket|trail|fee|operator/i.test(x.detail))) {
+  errors.push("Okigwe guide must retain Imo travel warning and avoid inventing a bookable hiking facility.");
+}
+const abeokuta = exploreGuides.find(x => x.slug === "abeokuta-day-trip-itinerary");
+if (!abeokuta || /olumorock\\.ng/.test([abeokuta.source?.href,...(abeokuta.sources??[]).map(x=>x.href)].join(" ")) ||
+    !abeokuta.planning.some(x => /verify|confirm/i.test(x.detail) && /access|entry|hours|price/i.test(x.detail))) {
+  errors.push("Abeokuta itinerary must use independently reachable sources and clarify real access/fees.");
 }
 
 // Search Console already has impressions for the older URL. Keep one
