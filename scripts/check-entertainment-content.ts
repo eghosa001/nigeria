@@ -102,6 +102,27 @@ for (const movie of generatedYouTubeMovies) {
   }
 }
 
+// Previously reported short story summaries have individually sourced,
+// film-specific context now. Guard against replacing them with generic blurbs.
+const reviewedStorySlugs = [
+  "oloture", "plus-one", "swallow", "citation", "elesin-oba",
+  "chief-daddy", "chief-daddy-2", "king-of-boys", "merry-men-3",
+  "hijack-93", "afamefuna", "amina", "the-long-way-home", "monica-2",
+  "just-before-forever", "benevolence", "ajosepo-the-gathering",
+  "love-in-a-pandemic", "ijakumo", "a-place-with-you",
+];
+for (const slug of reviewedStorySlugs) {
+  const film = entertainmentTitles.find((item) => item.slug === slug);
+  assert(Boolean(film), slug + ": editorial film profile must remain available.");
+  const storyWords = film!.synopsis.trim().split(/\\s+/).length;
+  assert(storyWords >= 70, slug + ": a verified film-specific story guide must not regress to one-sentence boilerplate.");
+}
+for (const slug of ["plus-one", "the-long-way-home", "monica-2", "just-before-forever", "a-place-with-you"]) {
+  const film = entertainmentTitles.find((item) => item.slug === slug);
+  assert((film?.references?.length ?? 0) > 0,
+    slug + ": preserve independent film-specific evidence for published story context.");
+}
+
 const officialLoveRelease = entertainmentTitles.find((movie) => movie.slug === "love-looks-good-on-you-2026");
 assert(officialLoveRelease?.watchLinks.some((link) => link.platform === "YouTube" &&
   link.access === "full-movie" && link.href === "https://www.youtube.com/watch?v=tCa7-acZ9uM"),
