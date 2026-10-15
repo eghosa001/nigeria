@@ -183,4 +183,17 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     directors: ["Mo Fakorede"],
     source: { label: "FilmFlux — Millionaire Until Morning (2026) original-credit listing", href: "https://filmflux.app/movie/fe1259e9-713e-4906-83df-f7c27969cdb0-millionaire-until-morning", lastChecked: "2026-10-15", note: "Film-specific Omoni Oboli TV credits identify Mo Fakorede as director (another publication writes Imo Fakorede). Use source's displayed credit; do not treat the credited assistant director as the primary director." },
   },
+  "monica-2": {
+    directors: ["Chidi Chijioke"],
+    source: { label: "African Movies Database — Monica 2 (2026) production credits", href: "https://africanmoviedb.com/title/monica-2-2026", lastChecked: "2026-10-15", note: "Film-specific May 2026 sequel credits Chidi Chijioke as director, supported separately by PartyJollof TV's director portfolio. This credit is for Monica 2, not the original Monica." },
+  },
+  "love-and-legacy-2026": {
+    directors: ["Esther Akapo"],
+    source: { label: "African Movies Database — Love and Legacy (2026) production credits", href: "https://africanmoviedb.com/title/love-and-legacy-2026", lastChecked: "2026-10-15", note: "Film-specific Obasi family-business drama from Uche Jombo TV lists Esther Akapo as director and Uche Jombo as a producer." },
+  },
+  "never-let-go": {
+    directors: ["Omoruyi Efosa Emmanuel"],
+    source: { label: "African Movies Database — Never Let Go (2026) production credits", href: "https://africanmoviedb.com/title/never-let-go-2026", lastChecked: "2026-10-15", note: "The 2026 Nigerian Maurice Sam and Nadia Buari drama lists Omoruyi Efosa Emmanuel as director; not the unrelated American Never Let Go from 2024." },
+  },
+
 };
