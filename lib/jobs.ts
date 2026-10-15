@@ -18,7 +18,7 @@ import { jobGrowthWave2 } from "@/lib/job-growth-wave-2";
 import { jobGrowthWaveThree } from "@/lib/job-growth-wave-2026-10-06-b";
 
 export type JobSector = "Government" | "Private" | "International";
-export type JobStatus = "open" | "closed" | "screening" | "training" | "career-page" | "upcoming";
+export type JobStatus = "open" | "closed" | "unverified" | "screening" | "training" | "career-page" | "upcoming";
 export type JobRecordKind = "vacancy" | "programme" | "recruitment-exercise" | "career-page";
 export type SchemaEmploymentType = "FULL_TIME" | "PART_TIME" | "CONTRACTOR" | "TEMPORARY" | "INTERN" | "VOLUNTEER" | "PER_DIEM" | "OTHER";
 
@@ -3673,8 +3673,8 @@ const rawJobOpportunities: CareerOpportunity[] = [
       locations: [{ locality: "Sangotedo", region: "Lagos State", country: "NG" }]
     },
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
+    status: "unverified",
+    statusLabel: "Application status unverified — employer did not show this specific opening on 15 October 2026",
     summary: "EHA Clinics lists a Dental Assistant opening at Sangotedo, Lagos. Its published advert states a gross monthly salary of ₦151,550 and requires a Dental Health/Dental Surgery Technician diploma and current professional registration. Open the employer's jobs directory and choose Dental Assistant — Lagos.",
     location: "Sangotedo, Lagos State",
     employmentType: "Dental clinical support role",
@@ -3683,12 +3683,18 @@ const rawJobOpportunities: CareerOpportunity[] = [
     qualifications: ["Diploma in Dental Health Technician or Dental Surgery Technician.", "Current registration with the Dental Therapists Registration Board of Nigeria as required by EHA Clinics."],
     requirements: ["Hold current professional registration and a valid practice licence.", "Be able to work in or around Sangotedo, Lagos, as the official eligibility check asks.", "Have basic computer knowledge, including Microsoft Office and email.", "Confirm that the listed gross salary and work conditions suit you before applying."],
     documents: ["CV/resume", "Professional registration and qualification details"],
-    applicationSteps: ["Open EHA Clinics' official jobs directory and select Dental Assistant — Lagos.", "Review the professional registration requirements.", "Complete the eligibility check.", "Continue to the official application."],
+    applicationSteps: [
+      "This record does not have a verified current application form. Do not assume its old posting or current jobs homepage proves this role is recruiting.",
+      "Open the employer's official active-vacancies board and search for the exact role title and location, not a broad employer name.",
+      "Only proceed when a specific employer listing has a working Apply form and currently published eligibility details. Requirements may have changed since this historical entry.",
+      "If the role is absent, monitor the employer's official jobs board for an independently announced reopening; avoid submitting personal documents to unofficial links."
+    ],
     officialUrl: "https://erp.eha.ng/jobs",
-    officialUrlLabel: "Find Dental Assistant — Lagos on EHA Clinics Jobs",
-    verifiedAt: "2026-10-14",
+    officialUrlLabel: "Check official employer board — application unverified",
+    verifiedAt: "2026-10-15",
+    nextMilestone: "The previously stored exact role route did not show a live application for this job on 15 October 2026. This is an unverified listing, not a formal employer closure notice. Check the current employer board for a newly published role.",
     feeNote: "Apply through EHA Clinics' official jobs system.",
-    sourceNotes: ["EHA Clinics listed the Dental Assistant — Lagos role as posted on 29 September 2026.", "The official jobs directory lists Dental Assistant — Lagos in Sangotedo; the individual detail URL has returned intermittent 404 responses, so select the post from the jobs directory.", "The employer's indexed advert lists a gross monthly salary of ₦151,550, health coverage, performance bonus and a 13th-month benefit; confirm the current offer during application."],
+    sourceNotes: ["Checked the current EHA Clinics jobs board on 15 October 2026: the Dental Assistant posting was not visible; there is no verified job-specific Apply form. This is an availability hold, not a formal closure claim.", "EHA Clinics listed the Dental Assistant — Lagos role as posted on 29 September 2026.", "The official jobs directory lists Dental Assistant — Lagos in Sangotedo; the individual detail URL has returned intermittent 404 responses, so select the post from the jobs directory.", "The employer's indexed advert lists a gross monthly salary of ₦151,550, health coverage, performance bonus and a 13th-month benefit; confirm the current offer during application."],
     sources: [
       { label: "EHA Clinics — current Dental Assistant, Lagos listing", url: "https://erp.eha.ng/jobs", lastChecked: "2026-10-14" },
       { label: "EHA Clinics careers overview", url: "https://www.eha.ng/careers", lastChecked: "2026-10-14" }
@@ -3837,7 +3843,7 @@ export const internationalOpportunities = jobOpportunities.filter((item) => item
 export function isIndexableJobOpportunity(item: CareerOpportunity): boolean {
   if (templateCareerPortalSlugs.has(item.slug)) return false;
   const deadlinePassed = Boolean(item.deadline && item.deadline < new Date(Date.now() + 60 * 60 * 1000).toISOString().slice(0, 10));
-  if (item.kind === "vacancy" && (item.status === "closed" || (item.status === "open" && deadlinePassed))) return false;
+  if (item.kind === "vacancy" && (item.status === "closed" || item.status === "unverified" || (item.status === "open" && deadlinePassed))) return false;
   return true;
 }
 

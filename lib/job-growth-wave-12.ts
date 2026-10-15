@@ -70,8 +70,8 @@ export const verifiedFmnOperationsJobs20261012: CareerOpportunity[] = [
     "organization": "Flour Mills of Nigeria — Premier Feed Mills",
     "kind": "vacancy",
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Employer vacancy page currently shows Apply",
+    "status": "closed",
+    "statusLabel": "Employer's specific advert has expired — 15 October 2026",
     "summary": "Senior plant leadership opening for a high-volume Premier Feed Mills operation in Calabar, focused on milling throughput, quality, HSE, corrosion prevention, maintenance reliability and raw-material logistics. FMN asks for at least twelve years' relevant experience and a milling, agricultural engineering or related qualification.",
     "location": "Calabar, Cross River State, Nigeria",
     "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
@@ -104,17 +104,17 @@ export const verifiedFmnOperationsJobs20261012: CareerOpportunity[] = [
       "Valid contact details and any additional documents requested during the official FMN candidate application."
     ],
     "applicationSteps": [
-      "Open Flour Mills of Nigeria's official vacancy #12748 and confirm the displayed job title and location are still active before entering applicant details.",
-      "Document executive examples of high-throughput plant delivery, safety outcomes, reliability upgrades and waste/cost reduction.",
-      "Confirm you satisfy the twelve-year requirement and the listed technical/professional credentials before completing the senior-management application.",
-      "Use the Apply action on the role-specific FMN e-recruiter page, submit accurate information and keep the employer's confirmation message."
+      "Do not submit a new application through this record: the employer states the specific vacancy has expired or no longer exists.",
+      "Use the employer's official vacancies board to search for a separately published new position. Match the exact role title, reference number and site before preparing an application.",
+      "Review this archived record only for historical duties and qualifications; requirements may change in a replacement advert.",
+      "If the employer posts a genuinely new opening, use only that new job's verified Apply form and record the official confirmation. Do not pay a recruiter or intermediary."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12748",
-    "officialUrlLabel": "Apply via FMN official e-recruiter",
-    "verifiedAt": "2026-10-12",
-    "nextMilestone": "The employer page displayed Apply on 12 October 2026. No individual application deadline was established; check the live vacancy for changes.",
+    "officialUrlLabel": "View employer's expired role notice",
+    "verifiedAt": "2026-10-15",
+    "nextMilestone": "The employer's exact vacancy page currently says 'The specified vacancy does not exist or has expired.' Applications are closed for this posting; seek a new reference number on FMN's official current-vacancy board.",
     "feeNote": "Flour Mills of Nigeria states that its hiring process does not require payment or gifts of monetary value.",
-    "sourceNotes": [
+    "sourceNotes": ["Employer's specific vacancy page fetched 15 October 2026: 'The specified vacancy does not exist or has expired.' The earlier Apply instruction in our archival guide should not be treated as an active application route.", 
       "On 12 October 2026 the official FMN vacancy #12748 displayed an Apply action and named the role as FMN Premier Feed Mills — Senior Manager, Plant Operations.",
       "FMN's job details specify a Calabar plant, 1,000-tonne-per-day throughput, minimum twelve years and the FIPAN/Six Sigma credential requirements."
     ],

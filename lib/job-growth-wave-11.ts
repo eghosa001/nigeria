@@ -67,8 +67,8 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
     "organization": "Flour Mills of Nigeria (FMN)",
     "kind": "vacancy",
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Applications available through FMN recruitment portal",
+    "status": "closed",
+    "statusLabel": "Employer's specific advert has expired — 15 October 2026",
     "summary": "FMN's Golden Transport Company seeks a Data Tracking Assistant to monitor trucks, drivers, GPS equipment and turnaround times, escalating delays and conduct issues while reporting fleet performance. A diploma or OND and two years of related experience are specified.",
     "location": "Nigeria (specific Golden Transport depot not stated)",
     "employmentType": "Employer vacancy — consult the official role for contract terms",
@@ -99,17 +99,17 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
       "Contact details entered in the employer's official application portal"
     ],
     "applicationSteps": [
-      "Open the role-specific official FMN e-recruiter vacancy page and confirm that the Apply action is active.",
-      "Compare your academic qualification and years of experience against the published role criteria.",
-      "Update your CV with specific examples of the equipment, software and operational tasks from the advertisement.",
-      "Submit the employer form through the official role's Apply action and retain the recruitment confirmation."
+      "Do not submit a new application through this record: the employer states the specific vacancy has expired or no longer exists.",
+      "Use the employer's official vacancies board to search for a separately published new position. Match the exact role title, reference number and site before preparing an application.",
+      "Review this archived record only for historical duties and qualifications; requirements may change in a replacement advert.",
+      "If the employer posts a genuinely new opening, use only that new job's verified Apply form and record the official confirmation. Do not pay a recruiter or intermediary."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12750",
-    "officialUrlLabel": "View the official FMN job and apply",
-    "verifiedAt": "2026-10-12",
-    "nextMilestone": "The role page displayed an application action when checked on 12 October; it does not state a closing date. Recheck before submitting.",
+    "officialUrlLabel": "View employer's expired role notice",
+    "verifiedAt": "2026-10-15",
+    "nextMilestone": "The employer's exact vacancy page currently says 'The specified vacancy does not exist or has expired.' Applications are closed for this posting; seek a new reference number on FMN's official current-vacancy board.",
     "feeNote": "FMN says it never asks applicants to pay money or hand over valuables for recruitment.",
-    "sourceNotes": [
+    "sourceNotes": ["Employer's specific vacancy page fetched 15 October 2026: 'The specified vacancy does not exist or has expired.' The earlier Apply instruction in our archival guide should not be treated as an active application route.", 
       "The FMN role page names the position and lists Diploma/OND with 2 years of experience.",
       "FMN's public description specifies track truck movement, idle time and loading delays using fleet-monitoring tools.",
       "The official job page displayed an Apply control during the 12 October 2026 source check."
@@ -128,8 +128,8 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
     "organization": "Flour Mills of Nigeria (FMN)",
     "kind": "vacancy",
     "sector": "Private",
-    "status": "open",
-    "statusLabel": "Applications available through FMN recruitment portal",
+    "status": "closed",
+    "statusLabel": "Employer's specific advert has expired — 15 October 2026",
     "summary": "FMN's Golden Transport Company seeks a Data Tracking Officer to coordinate truck and driver tracking, oversee GPS equipment, prepare data reports and monitor operational and compliance performance. Its advert requires an HND/bachelor's degree and three years of related experience.",
     "location": "Nigeria (specific Golden Transport depot not stated)",
     "employmentType": "Employer vacancy — consult the official role for contract terms",
@@ -160,17 +160,17 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
       "Contact details entered in the employer's official application portal"
     ],
     "applicationSteps": [
-      "Open the role-specific official FMN e-recruiter vacancy page and confirm that the Apply action is active.",
-      "Compare your academic qualification and years of experience against the published role criteria.",
-      "Update your CV with specific examples of the equipment, software and operational tasks from the advertisement.",
-      "Submit the employer form through the official role's Apply action and retain the recruitment confirmation."
+      "Do not submit a new application through this record: the employer states the specific vacancy has expired or no longer exists.",
+      "Use the employer's official vacancies board to search for a separately published new position. Match the exact role title, reference number and site before preparing an application.",
+      "Review this archived record only for historical duties and qualifications; requirements may change in a replacement advert.",
+      "If the employer posts a genuinely new opening, use only that new job's verified Apply form and record the official confirmation. Do not pay a recruiter or intermediary."
     ],
     "officialUrl": "https://fmnplc.e-recruiter.ng/vacancy/details/12749",
-    "officialUrlLabel": "View the official FMN job and apply",
-    "verifiedAt": "2026-10-12",
-    "nextMilestone": "The role page displayed an application action when checked on 12 October; it does not state a closing date. Recheck before submitting.",
+    "officialUrlLabel": "View employer's expired role notice",
+    "verifiedAt": "2026-10-15",
+    "nextMilestone": "The employer's exact vacancy page currently says 'The specified vacancy does not exist or has expired.' Applications are closed for this posting; seek a new reference number on FMN's official current-vacancy board.",
     "feeNote": "FMN says it never asks applicants to pay money or hand over valuables for recruitment.",
-    "sourceNotes": [
+    "sourceNotes": ["Employer's specific vacancy page fetched 15 October 2026: 'The specified vacancy does not exist or has expired.' The earlier Apply instruction in our archival guide should not be treated as an active application route.", 
       "The FMN role page names the position and lists HND/Bachelor's degree with 3 years of experience.",
       "FMN's public description specifies coordinate transport data tracking staff and monitor driver and fleet performance.",
       "The official job page displayed an Apply control during the 12 October 2026 source check."

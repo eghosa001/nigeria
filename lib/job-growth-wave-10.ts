@@ -93,8 +93,8 @@ export const jobGrowthWave10: CareerOpportunity[] = [
     organization: "Moniepoint",
     kind: "vacancy",
     sector: "Private",
-    status: "open",
-    statusLabel: "Applications open",
+    status: "unverified",
+    statusLabel: "Application status unverified — employer did not show this specific opening on 15 October 2026",
     summary: "Moniepoint is hiring a Customer Experience Researcher in Lagos to lead qualitative and mixed-method research across customer journeys and product teams.",
     location: "Lagos, Nigeria",
     employmentType: "Full-time customer/UX research role",
@@ -112,17 +112,17 @@ export const jobGrowthWave10: CareerOpportunity[] = [
     ],
     documents: ["CV/resume", "Cover letter if used", "LinkedIn profile", "Website/portfolio if relevant"],
     applicationSteps: [
-      "Open Moniepoint's official Customer Experience Researcher vacancy.",
-      "Compare your experience with the four-year research requirement and listed qualitative methods.",
-      "Prepare a CV or portfolio that shows research planning, synthesis and recommendations that influenced products or customer outcomes.",
-      "Submit through the official Greenhouse application."
+      "This record does not have a verified current application form. Do not assume its old posting or current jobs homepage proves this role is recruiting.",
+      "Open the employer's official active-vacancies board and search for the exact role title and location, not a broad employer name.",
+      "Only proceed when a specific employer listing has a working Apply form and currently published eligibility details. Requirements may have changed since this historical entry.",
+      "If the role is absent, monitor the employer's official jobs board for an independently announced reopening; avoid submitting personal documents to unofficial links."
     ],
     officialUrl: "https://job-boards.greenhouse.io/moniepoint/jobs/4880701101",
-    officialUrlLabel: "Apply on Moniepoint's official Greenhouse page",
-    verifiedAt: "2026-10-07",
-    nextMilestone: "The live vacancy currently accepts applications; Moniepoint does not display a closing date.",
+    officialUrlLabel: "Check official employer board — application unverified",
+    verifiedAt: "2026-10-15",
+    nextMilestone: "The previously stored exact role route did not show a live application for this job on 15 October 2026. This is an unverified listing, not a formal employer closure notice. Check the current employer board for a newly published role.",
     feeNote: "Use only the official Moniepoint application form.",
-    sourceNotes: [
+    sourceNotes: ["Checked the old Moniepoint researcher vacancy URL on 15 October 2026; it leads to a generic current-openings board without the original researcher job/application form. Treat this listing as unverified, not currently open.", 
       "The official role is Lagos-based and asks for 4+ years in customer/UX or related qualitative research.",
       "The posting explicitly lists interviews, usability testing, ethnographic work, diary studies, focus groups and ongoing customer discovery among the expected methods."
     ],
