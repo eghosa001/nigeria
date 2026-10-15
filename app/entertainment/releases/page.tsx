@@ -76,12 +76,12 @@ export default function EntertainmentReleasesPage() {
         {endedItems.length ? (
           <section className="top-gap">
             <div className="section-heading">
-              <div><span className="eyebrow">Recent archive</span><h2>Events that have ended.</h2></div>
+              <div><span className="eyebrow">Recent archive</span><h2>Past listings and events.</h2></div>
             </div>
             <div className="service-grid">
               {endedItems.map((item) => (
                 <article className="service-card" key={item.id}>
-                  <div className="card-topline"><span>{labels[item.effectiveStatus]}</span><span>{item.platform}</span></div>
+                  <div className="card-topline"><span>{item.kind === "cinema" ? "Past showtimes" : labels[item.effectiveStatus]}</span><span>{item.platform}</span></div>
                   <h3>{item.title}</h3>
                   <p>{item.summary}</p>
                   <div className="service-meta">

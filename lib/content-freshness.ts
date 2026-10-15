@@ -62,8 +62,11 @@ export function getEffectiveReleaseStatus(item: ReleaseLifecycleInput, now = new
   const today = isoToday(now);
   if (item.startDate > today) return "upcoming";
 
+  // Published showtime/event windows expire; an old booking listing is not
+  // evidence that the film or event is still showing today.
+  if (item.endDate && item.endDate < today) return "ended";
+
   if (item.kind === "event") {
-    if (item.endDate && item.endDate < today) return "ended";
     return "now-showing";
   }
 

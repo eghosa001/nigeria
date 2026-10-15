@@ -41,8 +41,10 @@ test("release snapshots have genuinely checked sources and precise lifecycle", (
   assert.match(club, /completion.*not independently confirmed/);
   const cinema = sections["behind-the-scenes-viva"];
   assert.match(cinema, /web\.vivacinemas\.com\/movies/);
-  assert.match(cinema, /lastChecked: "2026-10-10"/);
-  for (const item of [aaiff, club, cinema]) assert.match(item, /lastChecked: "2026-10-10"/);
+  assert.match(cinema, /startDate: "2026-10-08"/);
+  assert.match(cinema, /endDate: "2026-10-14"/);
+  assert.match(cinema, /lastChecked: "2026-10-15"/);
+  for (const item of [aaiff, club]) assert.match(item, /lastChecked: "2026-10-10"/);
 });
 
 test("the sync workflow reruns on changes to its verification logic", () => {
