@@ -8,6 +8,14 @@ function assert(condition: unknown, message: string): asserts condition {
 
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 
+// Distinctive canonical classics must answer story intent in their own lead,
+// not rely on templated metadata or repeated video directory descriptions.
+for (const slug of ["oloture", "citation", "king-of-boys"]) {
+  const title = entertainmentTitles.find((movie) => movie.slug === slug);
+  assert(title && title.synopsis.trim().split(/\\s+/).length >= 35,
+    slug + " must provide a substantive spoiler-light original film overview.");
+}
+
 assert(entertainmentTitles.length > 0, "Entertainment catalog cannot be empty.");
 assert(
   new Set(entertainmentTitles.map((title) => title.slug)).size === entertainmentTitles.length,
