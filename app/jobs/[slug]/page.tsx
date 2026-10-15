@@ -152,7 +152,11 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
         <div className="container">
           <AnswerFirst
             title={isCareerPortal ? "How should you use " + item.organization + "'s careers page?" : "Should you apply for " + item.title + "?"}
-            summary={item.summary}
+            summary={isCareerPortal
+              ? "This is an employer-wide career route, not a confirmed vacancy. Choose a live role on the employer's website, then check that role's requirements before applying."
+              : effectiveStatus === "open"
+                ? "Review the qualifications and documents, confirm the application window on the organisation's website, and apply through the official route."
+                : "The application is not confirmed open at this stage. Check the employer's current notice and recruitment timeline before submitting any information."}
             facts={[
               { label: "Verified status", value: effectiveStatusLabel + " · checked " + item.verifiedAt },
               { label: "Applies to", value: item.location },
