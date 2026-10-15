@@ -90,6 +90,15 @@ const generatedData = {
 const generatedSynopsisHype = /\b(amazing(?:\s+masterpiece)?|captivating|masterpiece|blockbuster|ultimate|unmissable|must[- ]watch|edge of your seat|will (?:make your day|blow your mind)|don['’]?t miss|do not miss|watch now|subscribe|like and share|filled with|latest nigerian movies?|hottest|trending)\b/i;
 const generatedSynopsisSeo = /\b(?:full movie|complete movie|official full movie|latest full movies?|nollywood movies?\s*20\d{2}|nigerian movies?\s*20\d{2})\b/i;
 
+/** Uploader calls to action and channel descriptions are not film-specific plots.
+ * Preserve movie discovery, but do not promote this copy into indexable detail
+ * pages or the editorially curated releases shelf.
+ */
+export function isPublisherPromoSynopsis(value: string) {
+  return /\b(?:if you are a subscriber|turn on (?:post )?notifications|click(?:ing)? (?:on )?the [\"'“”]?bell|on (?:this|our) (?:youtube )?channel|welcome to (?:this|our) (?:youtube )?channel|you will enjoy the best of|(?:we|our channel) (?:bring|brings|provide|provides|present|presents) (?:you )?(?:the )?best|produces (?:the )?(?:best|latest) (?:nollywood|nigerian|african) movies?)\b/i.test(value);
+}
+
+
 function cleanYouTubeDisplayTitle(value: string) {
   return value
     .replace(/\p{Extended_Pictographic}/gu, " ")
@@ -157,6 +166,7 @@ function normalizeGeneratedSynopsis(movie: GeneratedRecord) {
     text.length < 55 ||
     generatedSynopsisHype.test(text) ||
     generatedSynopsisSeo.test(text) ||
+    isPublisherPromoSynopsis(text) ||
     /^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(text) ||
     /\p{Extended_Pictographic}/u.test(text)
   ) {
@@ -397,6 +407,7 @@ export function hasSubstantiveYouTubeSynopsis(movie: Pick<YouTubeMovieRecord, "s
   // This stock fallback gives publisher/cast metadata, not a film-specific plot.
   return synopsis.length >= 110 &&
     !/ is a full-length Nigerian film published by /i.test(synopsis) &&
+    !isPublisherPromoSynopsis(synopsis) &&
     !/^(?:watch|stream|subscribe|like and share)\b/i.test(synopsis);
 }
 
