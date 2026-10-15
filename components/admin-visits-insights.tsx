@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { InsightRange, InsightsReport, SearchPage } from "@/lib/admin-visits-insights";
 import { metricDelta, type TrafficDay } from "@/lib/analytics-period-rollups";
 import { completeVisitsReport, completeVisitsCsv } from "@/lib/visits-export";
+import { findSearchOpportunities } from "@/lib/visits-search-opportunities";
 
 const mobileLabels: Record<InsightRange, string> = { "1d": "1D", "7d": "7D", "30d": "30D", "90d": "90D", all: "All" };
 const ranges: InsightRange[] = ["1d", "7d", "30d", "90d", "all"];
@@ -29,6 +30,8 @@ function Delta({ current, previous }: { current: number | null; previous: number
 }
 
 type Granularity = "day" | "week" | "month";
+type SearchQueryRow = { query: string; impressions: number; clicks: number; ctr: number; position: number };
+type SearchQueryBreakdown = { page: string; startDate: string; endDate: string; queries: SearchQueryRow[]; note: string };
 function groupDays(rows: TrafficDay[], granularity: Granularity) {
   const groups = new Map<string, { label: string; views: number | null; impressions: number | null; clicks: number | null }>();
   for (const row of rows) {
@@ -75,6 +78,10 @@ export function AdminVisitsInsights() {
   const [granularity, setGranularity] = useState<Granularity>("day");
   const [sort, setSort] = useState<"impressions" | "clicks" | "opportunity" | "unclicked">("impressions");
   const [filter, setFilter] = useState("");
+  const [queryPage, setQueryPage] = useState<string | null>(null);
+  const [queryBreakdown, setQueryBreakdown] = useState<SearchQueryBreakdown | null>(null);
+  const [queryError, setQueryError] = useState("");
+  const [queryLoading, setQueryLoading] = useState(false);
   const [showSearch, setShowSearch] = useState(20);
   const [showVisited, setShowVisited] = useState(15);
   const [showTrend, setShowTrend] = useState(14);
@@ -88,6 +95,7 @@ export function AdminVisitsInsights() {
   function changeRange(nextRange: InsightRange) {
     if (nextRange === range) return;
     setRange(nextRange);
+    setQueryPage(null);
     setShowSearch(20);
     setShowVisited(15);
     setShowTrend(14);
@@ -132,6 +140,24 @@ export function AdminVisitsInsights() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [range]);
 
+  useEffect(() => {
+    if (!queryPage) { setQueryBreakdown(null); setQueryError(""); setQueryLoading(false); return; }
+    const controller = new AbortController();
+    setQueryLoading(true);
+    setQueryError("");
+    setQueryBreakdown(null);
+    void fetch("/admin/api/visits-search-queries?page=" + encodeURIComponent(queryPage) + "&range=" + range, {
+      cache: "no-store", signal: controller.signal,
+    }).then(async (response) => {
+      const body = await response.json() as SearchQueryBreakdown & { error?: string };
+      if (!response.ok) throw new Error(body.error ?? "Search queries unavailable.");
+      if (!controller.signal.aborted) setQueryBreakdown(body);
+    }).catch((cause: unknown) => {
+      if (!controller.signal.aborted) setQueryError(cause instanceof Error ? cause.message : "Unable to load search queries.");
+    }).finally(() => { if (!controller.signal.aborted) setQueryLoading(false); });
+    return () => controller.abort();
+  }, [queryPage, range]);
+
   async function unlock(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -173,8 +199,8 @@ export function AdminVisitsInsights() {
     }];
   }) ?? [];
   const trends = useMemo(() => groupDays(selectedDays, granularity), [selectedDays, granularity]);
-  const opportunities = useMemo(() => (report?.searchPages ?? []).filter((row) => row.impressions >= 100 && row.position <= 15 && row.ctr < 0.01).sort((a, b) => b.impressions - a.impressions).slice(0, 12), [report]);
-  const missingGa4Dates = useMemo(() => (report?.daily ?? []).filter((day) => day.impressions != null && day.pageViews == null).map((day) => day.date), [report]);
+  const opportunities = useMemo(() => findSearchOpportunities(report?.searchPages ?? []), [report]);
+  const missingGa4Dates = useMemo(() => (report?.daily ?? []).filter((day) => day.impressions != null && day.pageViews == null && day.date >= report!.ga4StartDate && day.date <= (report!.latestGSCDate ?? "") && day.date >= (report!.latestGSCDate ? new Date(Date.parse(report!.latestGSCDate + "T12:00:00Z") - 13 * 86400000).toISOString().slice(0, 10) : "9999")).map((day) => day.date), [report]);
   const searchRows = useMemo(() => {
     let rows = report?.searchPages ?? [];
     const query = filter.trim().toLowerCase();
@@ -397,14 +423,15 @@ export function AdminVisitsInsights() {
       </table></div>
       {!trends.length ? <p>No processed trend dates are available in this period.</p> : null}
       {showTrend < trends.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowTrend((v) => v + 28)}>Show more reporting periods ({trends.length - showTrend} remaining)</button> : null}
-      {range === "all" ? <p className="visits-footnote">The trend lists the latest 90 reported days; cumulative totals above use the entire available history.</p> : null}
+      {range === "all" ? <p className="visits-footnote">The trend lists all returned reporting dates; cumulative totals above use independently retrieved lifetime totals.</p> : null}
     </section>
 
     <section className="admin-panel visits-search-panel">
       <div className="section-heading"><div><span className="eyebrow">Evidence-based SEO priorities</span><h2>High-impression, low-CTR opportunities</h2></div></div>
       <p className="visits-footnote">Pages with at least 100 impressions, under 1% CTR and average position 15 or better. Review search queries and snippet relevance before editing. This is not an estimate of recoverable clicks.</p>
-      {opportunities.length ? <div className="visits-mobile-results">{opportunities.map((row) => <article key={row.page} className="visits-result-card"><h3>{pageLink(row.page) ? <a href={pageLink(row.page)!} target="_blank" rel="noopener noreferrer">{shortPage(row.page)}</a> : shortPage(row.page)}</h3><div className="visits-mini-stats"><span><small>Impressions</small><strong>{count(row.impressions)}</strong></span><span><small>Clicks</small><strong>{count(row.clicks)}</strong></span><span><small>CTR</small><strong>{percent(row.ctr)}</strong></span><span><small>Position</small><strong>{row.position.toFixed(1)}</strong></span></div></article>)}</div> : <p>No pages currently meet these thresholds.</p>}
-      {missingGa4Dates.length ? <p role="status" className="visits-source-warning">GA4 has no daily rows for {missingGa4Dates.length} dates where GSC has data. Latest examples: {missingGa4Dates.slice(-5).join(", ")}. Missing data is not zero; check provider configuration and collection before interpreting traffic.</p> : null}
+      {opportunities.length ? <div className="visits-mobile-results">{opportunities.map((row) => <article key={row.page} className="visits-result-card"><h3>{pageLink(row.page) ? <a href={pageLink(row.page)!} target="_blank" rel="noopener noreferrer">{shortPage(row.page)}</a> : shortPage(row.page)}</h3><div className="visits-mini-stats"><span><small>Impressions</small><strong>{count(row.impressions)}</strong></span><span><small>Clicks</small><strong>{count(row.clicks)}</strong></span><span><small>CTR</small><strong>{percent(row.ctr)}</strong></span><span><small>Position</small><strong>{row.position.toFixed(1)}</strong></span></div><button type="button" className="visits-show-more" aria-expanded={queryPage === row.page} onClick={() => setQueryPage(queryPage === row.page ? null : row.page)}>{queryPage === row.page ? "Close search queries" : "Inspect Google search queries"}</button></article>)}</div> : <p>No pages currently meet these thresholds.</p>}
+      {queryPage ? <div className="visits-result-card" role="region" aria-label="Search queries for selected page"><h3>Google searches for {shortPage(queryPage)}</h3>{queryLoading ? <p role="status">Loading search queries…</p> : null}{queryError ? <p role="alert">{queryError}</p> : null}{queryBreakdown ? <><p className="visits-footnote">{queryBreakdown.startDate} to {queryBreakdown.endDate} (Pacific). {queryBreakdown.note}</p>{queryBreakdown.queries.length ? <div className="visits-table-scroll"><table className="visits-data-table"><thead><tr><th scope="col">Search query</th><th scope="col">Impressions</th><th scope="col">Clicks</th><th scope="col">CTR</th><th scope="col">Position</th></tr></thead><tbody>{queryBreakdown.queries.map((entry) => <tr key={entry.query}><th scope="row">{entry.query}</th><td>{count(entry.impressions)}</td><td>{count(entry.clicks)}</td><td>{percent(entry.ctr)}</td><td>{entry.position.toFixed(1)}</td></tr>)}</tbody></table></div> : <p>Google returned no reportable search queries for this page and period.</p>}</> : null}</div> : null}
+      {missingGa4Dates.length ? <p role="status" className="visits-source-warning">GA4 has no daily rows for {missingGa4Dates.length} recent dates where GSC reports search activity. This may reflect reporting delay, filtering, or missing collection. Dates: {missingGa4Dates.slice(-5).join(", ")}. Missing data is not zero; check provider configuration and collection before interpreting traffic.</p> : null}
     </section>
 
     <section className="admin-panel visits-search-panel">
