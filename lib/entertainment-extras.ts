@@ -353,7 +353,7 @@ export const releaseItems: ReleaseItem[] = [
     officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-15",
   },
-  // Source review 2026-10-15: Africa Magic press announcement https://businesspost.ng/showbiz/africa-magic-announces-five-new-originals-for-october/ ; official DStv EPG first episode https://dkkzkegfj4bkf.cloudfront.net/africamagic/en-ng/channel/africa-magic-showcase .
+  // Source review 2026-10-15: Africa Magic press announcement https://businesspost.ng/showbiz/africa-magic-announces-five-new-originals-for-october/ ; official DStv EPG first episode https://www.dstv.com/en-ng/africamagic/ .
   {
     id: "the-ten-africa-magic-2026",
     title: "The Ten",
@@ -379,7 +379,7 @@ export const releaseItems: ReleaseItem[] = [
     officialUrl: "https://www.dstv.com/en-ng/africamagic/",
     lastChecked: "2026-10-15",
   },
-  // Source review 2026-10-15: Director interview and announced date https://thenollywoodreporter.com/tv/why-pushing-30-is-debuting-on-tv-orobosa-ikponmwen-explains/ ; Africa Magic 18 Oct EPG corroboration https://pulzz.stream/guide?country=NG&date=2026-10-18&time_block=prime&type=ALL .
+  // Source review 2026-10-15: Director interview and announced date https://thenollywoodreporter.com/tv/why-pushing-30-is-debuting-on-tv-orobosa-ikponmwen/ ; Africa Magic 18 Oct EPG corroboration https://pulzz.stream/guide?country=NG&date=2026-10-18&time_block=prime&type=ALL .
   {
     id: "pushing-30-africa-magic-2026",
     title: "Pushing 30",
