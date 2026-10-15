@@ -33,6 +33,8 @@ function videoIdFromUrl(href: string) {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "forever-isnt-long-enough-2025": { title: "Forever Isn\u2019t Long Enough (2025): Cast & Film", description: "Forever Isn\u2019t Long Enough (2025): Grace\u2019s story, confirmed Michael Dappa and Inem King cast, Uche Alexmoore director, and official Royal Arts TV film." },
+  "long-enough-2026": { title: "Long Enough (2026) Cast, Plot & Film Details", description: "Long Enough (2026) cast includes Victory Michael, Prisma James and Jennifer Obodo. Story, director Austin Onyema and verified release sources." },
   "holy-matrimony": {
     title: "Holy Matrimony Nigerian Movie: Cast & Full Movie",
     description: "Holy Matrimony cast, 143-minute runtime and official Frederick Leonard TV full movie, starring Frederick Leonard, Onyii Alex and Nini Mbonu.",
@@ -377,6 +379,14 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <span>{platforms.length ? platforms.join(" / ") : "Availability not currently verified"}</span>
               </div>
               <p className="movie-detail-synopsis">{title.synopsis}</p>
+              {(title.slug === "long-enough-2026" || title.slug === "forever-isnt-long-enough-2025") ? (
+                <p className="job-muted">
+                  These are <strong>two different Nigerian films</strong>. This page covers {title.year === 2025 ? "Forever Isn\u2019t Long Enough (2025), about Grace and her church" : "Long Enough (2026), starring Victory Michael and Prisma James"}.{" "}
+                  <Link href={title.year === 2025 ? "/entertainment/movies/long-enough-2026" : "/entertainment/movies/forever-isnt-long-enough-2025"}>
+                    {title.year === 2025 ? "See the separate 2026 Long Enough film" : "See Forever Isn\u2019t Long Enough (2025) on Royal Arts TV"} →
+                  </Link>
+                </p>
+              ) : null}
               {(title.slug === "forever-yours-2026" || title.slug === "forever-yours-2025-royal-arts") ? (
                 <p className="job-muted">
                   Two different Nigerian films share the title <strong>Forever Yours</strong>.

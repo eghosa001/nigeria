@@ -16,10 +16,10 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
     featured: true,
     references: [
       {
-        label: "FilmFlux — Long Enough",
-        href: "https://filmflux.app/movie/15b2ecd8-a91a-4e80-87e8-e8674992edb4-long-enough",
-        lastChecked: "2026-10-07",
-        note: "Used to verify the 2026 release, runtime, director and credited cast."
+        label: "Uche Nancy Update TV — publisher channel",
+        href: "https://www.youtube.com/channel/UCllyxqlpQNkJpXf3PHb4aWQ",
+        lastChecked: "2026-10-15",
+        note: "Verified publisher channel for the separate 2026 Long Enough film. The exact full-film video URL has not yet been independently validated."
       },
       {
         label: "Nollywood Times — Long Enough YouTube debut",
@@ -28,15 +28,44 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
         note: "Independent release coverage used to verify the digital release and principal cast."
       }
     ],
+    // Do not point viewers at the unrelated Royal Arts TV film from 2025.
+    // The correct 2026 Uche Nancy upload must be individually verified before linking.
+    watchLinks: []
+  },
+  {
+    slug: "forever-isnt-long-enough-2025",
+    title: "Forever Isn't Long Enough",
+    year: 2025,
+    format: "movie",
+    genres: ["Drama", "Faith", "Family"],
+    languages: ["English"],
+    synopsis: "Grace, a pastor's daughter, struggles with judgment and isolation after becoming pregnant by a man outside her church. A reconnection with her estranged aunt changes how she considers faith, belonging and compassion.",
+    cast: ["Michael Dappa", "Inem King", "Chioma Nwosu", "Oby Titus"],
+    featuredCast: ["Michael Dappa", "Inem King"],
+    directors: ["Uche Alexmoore"],
+    references: [
+      {
+        label: "Royal Arts TV — official complete film",
+        href: "https://www.youtube.com/watch?v=y2RkBwUYSvo",
+        lastChecked: "2026-10-15",
+        note: "Original 2025 publisher upload. This is a different production from Long Enough (2026)."
+      },
+      {
+        label: "Plex — plot, cast and director",
+        href: "https://watch.plex.tv/en-GB/movie/forever-isnt-long-enough",
+        lastChecked: "2026-10-15",
+        note: "Independent film listing, including Grace's story and director Uche Alexmoore."
+      }
+    ],
     watchLinks: [
       {
         platform: "YouTube",
-        label: "Watch the full movie on YouTube",
+        label: "Watch Forever Isn't Long Enough on Royal Arts TV",
         href: "https://www.youtube.com/watch?v=y2RkBwUYSvo",
         access: "full-movie",
-        lastChecked: "2026-10-07",
-        note: "Official full-length YouTube release surfaced through the approved MyNigeriaGuide YouTube catalog.",
-        publisher: "Uche Nancy Update TV"
+        lastChecked: "2026-10-15",
+        note: "The 2025 Royal Arts TV release, not Uche Nancy's separate film Long Enough.",
+        publisher: "Royal Arts TV"
       }
     ]
   },

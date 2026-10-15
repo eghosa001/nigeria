@@ -72,9 +72,9 @@ async function queryOverview() {
   const gscStartDate = earliestSearchDay(pacificDay);
   const [ga4Daily, ga4Lifetime, gscDaily, gscLifetime] = await Promise.allSettled([
     analyticsReadConfigured() ? runReport({
-      dateRanges: [{ startDate: shiftIsoDay(lagosDay, -179), endDate: "today" }],
+      dateRanges: [{ startDate: ga4StartDate, endDate: "today" }],
       dimensions: [{ name: "date" }], metrics: [{ name: "screenPageViews" }, { name: "sessions" }],
-      orderBys: [{ dimension: { dimensionName: "date" } }], limit: 200, ...cleanFilter,
+      orderBys: [{ dimension: { dimensionName: "date" } }], limit: 2000, ...cleanFilter,
     }) : Promise.reject(new Error("GA4 Data API not configured.")),
     analyticsReadConfigured() ? runReport({
       dateRanges: [{ startDate: ga4StartDate, endDate: "today" }],
@@ -82,9 +82,9 @@ async function queryOverview() {
       metricAggregations: ["TOTAL"], ...cleanFilter,
     }) : Promise.reject(new Error("GA4 Data API not configured.")),
     searchConsoleQuery({
-      startDate: shiftIsoDay(pacificDay, -179), endDate: pacificDay,
+      startDate: gscStartDate, endDate: pacificDay,
       type: "web", dataState: "all", dimensions: ["date"],
-      aggregationType: "byProperty", rowLimit: 200,
+      aggregationType: "byProperty", rowLimit: 1000,
     }),
     searchConsoleQuery({
       startDate: gscStartDate, endDate: pacificDay,
@@ -120,7 +120,7 @@ async function queryOverview() {
 
   return {
     ga4StartDate, gscStartDate, periods,
-    daily: [...daily.values()].sort((a, b) => a.date.localeCompare(b.date)).filter((row) => row.date >= shiftIsoDay(lagosDay, -89)),
+    daily: [...daily.values()].sort((a, b) => a.date.localeCompare(b.date)).filter((row) => row.date >= ga4StartDate || row.date >= gscStartDate),
     latestGA4Date: ga4Days.at(-1)?.date ?? null,
     latestGSCDate: gscDays.at(-1)?.date ?? null,
     ga4Error: resultError(ga4Daily) || resultError(ga4Lifetime),
