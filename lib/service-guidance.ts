@@ -66,6 +66,21 @@ const explicit: Record<string, DetailedServiceGuidance> = {
       { title: "Separate identity errors from app errors", detail: "If an existing NIN does not match the official record, use NIMC's own correction/support route. Reinstalling an app or buying an unofficial Sharecode does not amend national identity records." },
     ],
   },
+  "glo-esim-activation": {
+    route: {
+      startTitle: "Check the EID, then visit a Gloworld shop or Glo dealer",
+      startDetail: "Dial *#06# on the intended handset. If it shows an EID, take that phone to an authorised Glo outlet for NIN verification and QR-based eSIM activation. Glo's website gives instructions but does not itself perform the SIM swap.",
+      physicalTitle: "Glo verifies the NIN and installs the profile in-store",
+      physicalDetail: "Glo's published process requires a Gloworld/dealer visit. The agent verifies your NIN and phone, then helps scan the outlet-issued eSIM QR. Under Glo's current limited promotion, migration is free only when a data plan costing at least ₦1,500 is bought there.",
+      fallbackTitle: "Keep your active number until a replacement QR is arranged",
+      fallbackDetail: "When moving a Glo eSIM to another phone, ask an authorised outlet to prepare a new QR/transfer before deleting the working profile. Resolve EID or NIN mismatches through Glo, not a third-party QR seller.",
+    },
+    aftercare: [
+      { title: "Test calls, messages and mobile data", detail: "Before leaving the Glo outlet, verify that your original number works after conversion and that the data plan you purchased is visible." },
+      { title: "Check the one-time bonus separately", detail: "Glo currently advertises a one-time 5GB bonus valid seven days with qualifying ₦1,500-or-more activation plans. The bonus is not a recurring allowance." },
+      { title: "Arrange official help for a phone transfer", detail: "Do not delete an active profile until Glo has confirmed how to install the replacement on the destination phone. Keep the issued QR/private registration details secure." },
+    ],
+  },
   "airtel-esim-activation": {
     route: {
       startTitle: "Check the phone's EID, then use the Airtel Centre locator",

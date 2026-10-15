@@ -46,6 +46,22 @@ function explicitlyOnlineStep(step: string) {
 }
 
 export function getServiceJourney(service: Service): ServiceJourney {
+  // The Glo webpage explains eSIM but does not accept a complete online swap.
+  // Its official FAQ requires NIN checks and QR installation at a Gloworld/dealer outlet.
+  if (service.slug === "glo-esim-activation") {
+    return {
+      mode: "physical",
+      modeLabel: "Gloworld / dealer visit",
+      startLabel: "Check your EID, then visit an authorised Glo outlet",
+      startDetail: "Dial *#06# to look for an EID, then take the compatible phone and NIN details to a Gloworld shop or Glo dealer for eSIM setup. The Glo webpage is information, not a remote activation form.",
+      onlineAvailable: false,
+      physicalStatus: "required",
+      physicalLabel: "Glo outlet verification and QR activation are required",
+      alternativeLabel: "If the outlet cannot activate your number",
+      alternativeDetail: "Ask Glo to check the NIN/line details and obtain a valid outlet-issued QR. The official published route does not establish a fully online fallback.",
+    };
+  }
+
   if (service.slug === "bvn-validation") {
     return {
       mode: "agency-guided",
