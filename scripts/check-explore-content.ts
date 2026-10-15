@@ -32,7 +32,8 @@ const independentlyCheckedDestinations = [
 for (const { slug, hosts, words } of independentlyCheckedDestinations) {
   const guide = exploreGuides.find((item) => item.slug === slug);
   if (!guide) { errors.push(slug + ": missing researched destination guide."); continue; }
-  const sourceUrls = [guide.source.href, ...(guide.sources ?? []).map(source => source.href)];
+  const sourceUrls = [guide.source?.href, ...(guide.sources ?? []).map(source => source.href)]
+    .filter((url): url is string => Boolean(url));
   if (hosts.some(host => !sourceUrls.some(url => new URL(url).hostname.endsWith(host)))) {
     errors.push(slug + ": an original, independently corroborating source is missing.");
   }
@@ -48,7 +49,7 @@ if (!sukur || !/do not travel/i.test([sukur.summary, ...sukur.intro, ...sukur.pl
   errors.push("Sukur guide must explicitly disclose Adamawa travel warning and UNESCO's documented walkway erosion.");
 }
 const agulu = exploreGuides.find(x => x.slug === "agulu-lake-guide");
-if (!agulu || /\/directory\/agulu-lake\//.test(agulu.source.href) ||
+if (!agulu || /\/directory\/agulu-lake\//.test(agulu.source?.href ?? "") ||
     !agulu.planning.some(x => /crocodile|wildlife/i.test(x.detail) && /do not|distance|stay clear/i.test(x.detail))) {
   errors.push("Agulu guide must not use the broken government-directory source or omit wildlife-safety advice.");
 }
