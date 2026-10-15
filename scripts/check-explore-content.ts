@@ -149,6 +149,24 @@ if (!kainji[0]?.intro.some((paragraph) => paragraph.includes("1968"))) {
   errors.push("Kainji Dam canonical lost its verified engineering-history details");
 }
 
+
+// Targeted editorial regression: three flagged heritage routes must retain
+// distinct independently attributable facts without claiming unverified access.
+for (const [slug, sourceFragment, evidencePhrase, planningPhrase] of [
+  ["badagry-heritage-guide", "research.birmingham.ac.uk/en/publications/localizing-the-narrative", "Seriki Williams Abass", "different museum narratives"],
+  ["abia-war-history", "fmino.gov.ng/federal-governments-war-museum", "80 per cent", "during restoration"],
+  ["anambra-heritage", "whc.unesco.org/en/tentativelists/5174", "317 steps", "Ogbunike descent"],
+] as const) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  if (!guide ||
+      !guide.sources?.some(item => item.href.includes(sourceFragment)) ||
+      !guide.intro.some(item => item.includes(evidencePhrase)) ||
+      !guide.planning.some(item => item.label.includes(planningPhrase)) ||
+      guide.lastReviewed !== "2026-10-15") {
+    errors.push(`${slug}: independently verified heritage research or visitor safeguards missing`);
+  }
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);
