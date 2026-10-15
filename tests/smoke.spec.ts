@@ -65,58 +65,41 @@ test("analytics dashboard code avoids unsupported GA4 regexp constructs", async 
   expect(source.status()).toBeLessThan(500);
 });
 
-test("visits unlock displays reports immediately and can be locked again", async ({ page }) => {
-  // Keep the real form and rendering; only replace the external analytics boundary.
+test("visits unlock displays multi-window report and can be locked again", async ({ page }) => {
   let authenticated = false;
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.route("**/admin/api/analytics-access", async (route) => {
-    if (route.request().method() === "DELETE") {
-      authenticated = false;
-    } else {
-      authenticated = route.request().postDataJSON().password === "qa-only-passphrase";
-    }
+    if (route.request().method() === "DELETE") authenticated = false;
+    else authenticated = route.request().postDataJSON().password === "qa-only-passphrase";
     await route.fulfill({ json: { authenticated } });
   });
-  await page.route("**/admin/api/analytics?*", async (route) => {
+  await page.route("**/admin/api/visits-insights?*", async (route) => {
     if (!authenticated) {
-      await route.fulfill({ status: 401, json: { configured: true, authenticated: false } });
+      await route.fulfill({ status: 401, json: { error: "Unlock analytics." } });
       return;
     }
-    await route.fulfill({ json: { configured: true, authenticated: true, data: {
-      range: "30d", mode: "clean", propertyId: "556260033",
-      generatedAt: "2026-10-04T12:00:00Z", dataStartDate: "2026-09-29", cleanStartDate: "2026-09-29",
-      ga4Available: true, ga4Error: null,
-      summary: { activeUsers: 12, sessions: 18, pageViews: 35, engagedSessions: 9, engagementRate: 0.5 },
-      realtimeActiveUsers: 2,
-      realtimePageViews: 3,
-      posthog: {
-        trackingConfigured: true,
-        reportingConfigured: true,
-        projectId: 294041,
-        webUrl: "https://eu.posthog.com/project/294041/web",
-        collectionStartDate: "2026-10-05",
-        overview: {
-          available: true,
-          startDate: "2026-10-05",
-          endDate: "2026-10-05",
-          visitors: 12,
-          sessions: 18,
-          views: 35,
-          averageSessionDurationSeconds: 95,
-          bounceRate: 0.42,
-        },
-      },
-      daily: [{ date: "20261004", users: 12, sessions: 18, pageViews: 35 }],
-      countries: [{ country: "Nigeria", users: 12, sessions: 18, pageViews: 35 }],
-      pages: [{ path: "/services/passport-renewal", title: "Passport renewal", users: 12, pageViews: 35 }],
-      referrers: [{ source: "google", medium: "organic", sessions: 18, users: 12 }],
-      interactions: [{ event: "official_link_click", count: 9 }, { event: "guide_share", count: 4 }],
-      searchPerformance: {
-        available: true, source: "live", siteUrl: "sc-domain:mynigeriaguide.com",
-        startDate: "2026-09-05", endDate: "2026-10-04", latestDate: "2026-10-03",
-        firstIncompleteDate: null, impressions: 1460, clicks: 27, ctr: 0.0185, position: 22.5
-      },
+    const keys = ["1d", "7d", "30d", "90d", "all"];
+    await route.fulfill({ json: { data: {
+      generatedAt: "2026-10-15T01:00:00Z",
+      selectedRange: new URL(route.request().url()).searchParams.get("range") ?? "30d",
+      ga4StartDate: "2026-09-29", gscStartDate: "2025-06-15",
+      detailStartDate: "2026-09-16", detailGscStartDate: "2026-09-16",
+      latestGA4Date: "2026-10-14", latestGSCDate: "2026-10-13",
+      periods: keys.map((key) => ({ key, startDate: "2026-09-16", endDate: "2026-10-15",
+        impressions: 1460, clicks: 27, pageViews: 35, sessions: 18,
+        previousImpressions: 1000, previousClicks: 20, previousPageViews: 25, previousSessions: 14,
+      })),
+      daily: [{ date: "2026-10-14", pageViews: 35, sessions: 18, impressions: 1460, clicks: 27 }],
+      pageViewsByPage: [{ path: "/services/passport-renewal", title: "Passport renewal", views: 35, users: 12 }],
+      searchPages: [{ page: "https://mynigeriaguide.com/services/passport-renewal", impressions: 1460,
+        clicks: 27, ctr: 27 / 1460, position: 8 }],
+      pageListsTruncated: { ga4: false, gsc: false },
+      errors: { ga4: null, gsc: null, ga4Pages: null, gscPages: null },
+      realtime: { activeUsers: 2, pageViews: 3 },
+      hourly: { available: true, latestHour: "2026-10-14T12:00:00-07:00", lagHours: 6,
+        clicks24h: 5, impressions24h: 200, hoursReported24h: 12 },
+      posthog: { available: true, visitors: 12, views: 35, sessions: 18 },
     } } });
   });
 
@@ -124,24 +107,18 @@ test("visits unlock displays reports immediately and can be locked again", async
   await expect(page.getByRole("heading", { name: "Admin access required" })).toBeVisible();
   await page.getByLabel("Admin passphrase").fill("qa-only-passphrase");
   await page.getByRole("button", { name: "Unlock admin" }).click();
-  await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Visits, impressions & growth" })).toBeVisible();
   await page.getByLabel("Analytics passphrase").fill("qa-only-passphrase");
-  await page.getByRole("button", { name: "Unlock visits" }).click();
-  await expect(page.getByRole("button", { name: "Lock analytics" })).toBeVisible();
-  const visitorMetrics = page.locator(".analytics-metric-grid").first();
-  await expect(visitorMetrics).toContainText("12");
-  await expect(visitorMetrics).toContainText("18");
-  await expect(visitorMetrics).toContainText("35");
-  await expect(visitorMetrics).toContainText("1,460");
-  await expect(visitorMetrics).toContainText("27");
-  await expect(page.getByLabel("Daily page views").locator("[title]")).toHaveAttribute("title", /35 page views/);
+  await page.getByRole("button", { name: "Unlock insights" }).click();
+  await expect(page.getByRole("heading", { name: "Website totals so far" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Pages shown in Google and pages clicked" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Pages actually viewed on the website" })).toBeVisible();
+  await expect(page.getByText("1,460").first()).toBeVisible();
   await expect(page.getByText("Passport renewal", { exact: true })).toBeVisible();
-  await expect(page.getByText("google", { exact: true })).toBeVisible();
-  await page.getByRole("button", { name: "Detailed reports & connection checks" }).click();
-  await expect(page.getByText("Nigeria", { exact: true })).toBeVisible();
-  await expect(page.getByText("Official service link opened")).toBeVisible();
-  await page.getByRole("button", { name: "Lock analytics" }).click();
-  await expect(page.getByLabel("Analytics passphrase")).toBeEmpty();
+  await page.getByRole("button", { name: "By week" }).click();
+  await expect(page.locator(".visits-data-table").nth(1)).toContainText("2026-10-12");
+  await page.getByRole("button", { name: "Lock", exact: true }).click();
+  await expect(page.getByRole("heading", { name: "Unlock private traffic analytics" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
@@ -208,7 +185,7 @@ test("admin Search Console connectivity failures are explicit, not blank dashboa
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("Google Search Console not reporting");
   await expect(card).toContainText("authorization has not been configured");
-  await expect(page.getByRole("heading", { name: "Visits & page views" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Visits, impressions & growth" })).toBeVisible();
 });
 
 test("admin shows the exact API activation action for Google's disabled Search Console API", async ({ page }) => {
