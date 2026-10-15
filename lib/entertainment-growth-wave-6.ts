@@ -16,10 +16,10 @@ export const entertainmentGrowthWave6: EntertainmentTitle[] = [
     featured: true,
     references: [
       {
-        label: "FilmFlux — Long Enough",
-        href: "https://filmflux.app/movie/15b2ecd8-a91a-4e80-87e8-e8674992edb4-long-enough",
-        lastChecked: "2026-10-07",
-        note: "Used to verify the 2026 release, runtime, director and credited cast."
+        label: "Uche Nancy Update TV — publisher channel",
+        href: "https://www.youtube.com/channel/UCllyxqlpQNkJpXf3PHb4aWQ",
+        lastChecked: "2026-10-15",
+        note: "Verified publisher channel for the separate 2026 Long Enough film. The exact full-film video URL has not yet been independently validated."
       },
       {
         label: "Nollywood Times — Long Enough YouTube debut",
