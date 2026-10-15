@@ -74,7 +74,8 @@ export function queryJobDirectory(input: JobDirectoryQuery = {}): JobDirectoryRe
     training: 2,
     upcoming: 3,
     "career-page": 4,
-    closed: 5,
+    unverified: 5,
+    closed: 6,
   };
 
   const filtered = jobOpportunities
