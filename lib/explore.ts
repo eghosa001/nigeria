@@ -7225,10 +7225,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Moremi Statue Ile-Ife",
     "kind": "destination",
     "region": "Osun State",
-    "summary": "Visit the Moremi monument as part of a focused Ile-Ife heritage route, with royal and cultural context rather than as an isolated photo stop.",
+    "summary": "The Moremi Ajasoro Statue in Ile-Ife honours a legendary Yoruba heroine and offers a focused introduction to the city's royal heritage. The Ooni's official visitor guide and Osun State tourist information identify the monument. Confirm on-site entry rules and charges through an official custodian: online ticket prices and historic visitor accounts may not reflect current practice.",
     "intro": [
-      "The Moremi monument is a major visual landmark in Ile-Ife and supports a distinct heritage search intent tied to one of Yoruba history's best-known figures.",
-      "Pair it with museum or palace context so the visit is more than a monument photograph."
+      "Ile-Ife's Moremi monument remembers Moremi Ajasoro, an important figure in Yoruba oral tradition associated with courage and protecting her community. The Ooni's official visitor information describes the commemorative statue as a symbol of bravery and legacy, while the specific stories told about Moremi belong to cultural tradition rather than precisely dated records.",
+      "The monument is a modern work of commemoration, not an artefact made during Moremi's lifetime. Its value to visitors lies in seeing how Ile-Ife presents a legendary heroine today, and connecting that story to the city's broader palace and museum heritage.",
+      "One practical uncertainty is access: the Ooni's official page says palace visits require appointments, but that statement does not independently establish the statue's current operating hours or whether every part of its setting is included in a palace tour. Confirm the particular entry point and access conditions locally.",
+      "Independent visitor accounts sometimes describe a custodian-led explanation and specific footwear or photography rules. These are individual experiences, not proven universal conditions; verify with the actual site staff before entering protected sections or paying a guide."
     ],
     "bestFor": [
       "Yoruba heritage",
@@ -7238,45 +7240,59 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Moremi legacy",
-        "detail": "The monument represents a major figure in Ile-Ife's historical tradition."
+        "name": "Moremi and Yoruba oral history",
+        "detail": "The Ooni's visitor material describes Moremi as a legendary heroine remembered for sacrifice and courage. A good visit distinguishes the cultural meaning of the story from claims that every event can be assigned a documented date."
       },
       {
-        "name": "City heritage setting",
-        "detail": "The surrounding city contains palace and museum sites that deepen the story."
+        "name": "Modern public commemoration",
+        "detail": "The statue demonstrates how contemporary Ile-Ife commemorates women and its royal past. It is not an ancient archaeological object or an exact portrait of an independently documented sitter."
       },
       {
-        "name": "Public landmark",
-        "detail": "The monument can work as a compact stop within a larger heritage day."
+        "name": "Royal setting and custodians",
+        "detail": "The statue is linked with the city's royal heritage environment. Nearby courtyards and sacred spaces may operate under separate protocol; ask before photography, filming or moving through private areas."
       },
       {
-        "name": "Interpretive value",
-        "detail": "Use careful historical and cultural context rather than repeating unverified legends as fact."
+        "name": "Useful nearby heritage comparison",
+        "detail": "If access is confirmed separately, the National Museum Ile-Ife can add context about earlier Yoruba art and archaeology; royal monuments and museum collections tell different parts of the same city story."
       }
     ],
     "planning": [
       {
-        "label": "Visit in daylight",
-        "detail": "The monument and surrounding area are easier to navigate and photograph during the day."
+        "label": "Identify the exact Moremi statue",
+        "detail": "Use the Ooni's Visit Ile-Ife monument list and confirm the local drop-off or gate before travelling. Do not confuse the royal monument with other landmarks or university locations carrying similar names."
       },
       {
-        "label": "Respect nearby cultural spaces",
-        "detail": "Follow local instructions around royal or sacred areas."
+        "label": "Check current entry before arrival",
+        "detail": "The Ooni's official visitor page requires appointments for palace visits. Whether access to the statue is included, separate or walk-in must be confirmed with the relevant custodian; no verified current fixed ticket was found."
       },
       {
-        "label": "Use credible context",
-        "detail": "Distinguish tradition, oral history and documented history where relevant."
+        "label": "Respect cultural etiquette",
+        "detail": "Ask staff whether any sections require footwear removal, a guide or restrictions on photographs. Community and palace rules apply even when a monument looks publicly accessible."
       },
       {
-        "label": "Cluster Ile-Ife stops",
-        "detail": "Keep the museum and palace within the same city block where practical."
+        "label": "Use a modest Ile-Ife route",
+        "detail": "Visit the monument if it is accessible, then add the National Museum or another official heritage site only after verifying its opening and separate admission. Leave time for local movement instead of guaranteeing a full-city itinerary."
+      },
+      {
+        "label": "Avoid unverifiable souvenir and guide claims",
+        "detail": "Do not pay an unsolicited person promising private palace access. Check who is authorised to guide, whether a fee is official and whether photographs are allowed."
+      },
+      {
+        "label": "Learn the story without overstating it",
+        "detail": "Ask how present-day local interpretation differs from recorded historical evidence. A guide's oral history can be valuable cultural context without being a source for invented dates or official royal genealogies."
       }
     ],
     "source": {
-      "label": "Osun State Government — Tourist Centres",
-      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+      "label": "Ooni of Ife — official Visit Ile-Ife heritage and palace protocol",
+      "href": "https://www.oonirisa.org/visit-ile-ife"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "Osun State Government — Tourist Centres",
+        "href": "https://www.osunstate.gov.ng/tourist-centres/"
+      }
+    ]
   },
   {
     "slug": "national-museum-ile-ife-guide",
@@ -12006,10 +12022,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Nigeria Archaeology",
     "kind": "destination",
     "region": "Nigeria",
-    "summary": "Explore Nigeria's archaeology and ancient cultural landscapes through stone monoliths, caves, early watercraft heritage and UNESCO-listed sites.",
+    "summary": "Understand Nigeria's archaeological heritage through documented ancient objects and settlements: the Dufuna canoe, Cross River's carved Alok Ikom monoliths, Sukur's living cultural landscape and the tentative-listed Ogbunike Caves. These places are spread over multiple states, not a single convenient visitor circuit. UNESCO tentative-list entries are not World Heritage inscriptions.",
     "intro": [
-      "Nigeria's archaeological heritage ranges from the Dufuna canoe story to Alok Ikom monoliths, cave landscapes and the ancient settlement systems preserved at Sukur.",
-      "A good archaeology trip distinguishes physical evidence, oral tradition and later historical interpretation."
+      "An archaeological object and the place where it was found are different kinds of destinations. Nigeria's National Commission for Museums and Monuments identifies the more-than-8,000-year-old Dufuna canoe among the country's oldest known artefacts. That historic importance does not establish a bookable exhibit or visitor centre at the excavation area today.",
+      "The Alok Ikom stone monoliths in Cross River are a different form of cultural evidence. UNESCO's Nigerian tentative-list submission describes carved stone figures found in more than thirty local communities, some in traditional meeting areas and some near forests. The monument group's listing is tentative, not an award of World Heritage status or permission to enter community sites.",
+      "Sukur, in Adamawa's Mandara Mountains, is actually inscribed on UNESCO's World Heritage List. Its royal landscape, stone paving, cultivated terraces and history of iron working belong to a living community. Conservation and security concerns documented by UNESCO and official travel warnings mean an educational research visit should not be marketed as an ordinary leisure booking.",
+      "A good itinerary cannot combine Yobe's Dufuna history, Cross River's Ikom stones, Adamawa's Sukur and Anambra's cave landscapes in a single weekend. Start with an accessible museum or choose one state and check which interpretation, artefacts and sites can actually be visited."
     ],
     "bestFor": [
       "Archaeology",
@@ -12019,45 +12037,71 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Dufuna canoe heritage",
-        "detail": "One of the country's most important ancient-technology stories."
+        "name": "Dufuna canoe: ancient watercraft",
+        "detail": "The Nigerian museums authority says the canoe is more than eight millennia old and one of Nigeria's oldest known objects. This is evidence about ancient watercraft and technology, not confirmation that the original object is currently exhibited at a specific museum."
       },
       {
-        "name": "Alok Ikom monoliths",
-        "detail": "Carved stone heritage with strong archaeological significance."
+        "name": "Alok Ikom: carved monoliths",
+        "detail": "UNESCO describes stone monoliths, locally associated with Ejagham-speaking communities, arranged in groups in different locations. Community permissions and conservation rules matter, and tentative-list status must be distinguished from inscription."
       },
       {
-        "name": "Cave landscapes",
-        "detail": "Ogbunike and Arochukwu combine physical sites with long cultural histories."
+        "name": "Sukur: genuinely inscribed cultural landscape",
+        "detail": "Sukur's agricultural terraces and sacred palace landscape were inscribed as World Heritage. Research the site's history and conservation remotely while current Adamawa travel-security advice warns against journeys."
       },
       {
-        "name": "Sukur",
-        "detail": "A UNESCO cultural landscape preserving settlement, palace and terrace systems."
+        "name": "Other tentative candidates",
+        "detail": "UNESCO's Nigeria tentative list includes Ogbunike Caves and other heritage proposals. Being proposed for nomination does not confirm an operating tourism facility, current guided access or UNESCO World Heritage designation."
       }
     ],
     "planning": [
       {
-        "label": "Use credible interpretation",
-        "detail": "Separate evidence from legend where necessary."
+        "label": "Choose one realistic theme",
+        "detail": "Pick museum-based study or one confirmed locally accessible monument rather than combining Cross River, Adamawa, Anambra and Yobe in an implausible short route. Confirm official opening and staff availability before paying for transport."
       },
       {
-        "label": "Do not touch artefacts",
-        "detail": "Protect fragile heritage material."
+        "label": "Separate inscribed from tentative",
+        "detail": "NCMM identifies two inscribed World Heritage properties in Nigeria: Sukur Cultural Landscape and Osun-Osogbo Sacred Grove. Ikom monoliths and Ogbunike Caves appear on UNESCO's tentative list, which is not the same status."
       },
       {
-        "label": "Use local guides",
-        "detail": "Community context is essential at living sites."
+        "label": "Ask where artefacts are displayed",
+        "detail": "A commission collection entry or excavation report does not prove that a visitor can see the original Dufuna canoe or other objects in a particular gallery. Contact the museum holding the collection directly."
       },
       {
-        "label": "Check access",
-        "detail": "Archaeological sites may not operate like conventional museums."
+        "label": "Treat living sites as occupied spaces",
+        "detail": "Respect residents and custodians at monolith locations, shrines and palace sites; never collect artefacts, touch fragile surfaces, enter restricted areas or photograph ceremonies without permission."
+      },
+      {
+        "label": "Avoid dangerous routes",
+        "detail": "Current travel advice warns against trips to parts of northeastern Nigeria, including Adamawa. Safety and legal access take priority over any heritage itinerary; historical significance never guarantees a safe tourist visit."
+      },
+      {
+        "label": "Keep interpretation honest",
+        "detail": "Separate archaeological dating, documentary evidence and traditional oral accounts. Do not present a folklore narrative or invented visitor experience as independently verified historical fact."
       }
     ],
     "source": {
-      "label": "UNESCO World Heritage Centre — Nigeria",
-      "href": "https://whc.unesco.org/en/statesparties/ng/"
+      "label": "National Commission for Museums and Monuments — collection",
+      "href": "https://collection.museum.ng/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "NCMM FAQ — Dufuna canoe and two inscribed Nigerian World Heritage sites",
+        "href": "https://museum.ng/faq/"
+      },
+      {
+        "label": "UNESCO — Alok Ikom stone monoliths tentative-list submission",
+        "href": "https://whc.unesco.org/en/tentativelists/5173/"
+      },
+      {
+        "label": "UNESCO — Nigeria tentative lists",
+        "href": "https://whc.unesco.org/en/tentativelists/action=listtentative&order=states&state=ng"
+      },
+      {
+        "label": "UNESCO — Sukur Cultural Landscape",
+        "href": "https://whc.unesco.org/en/list/938"
+      }
+    ]
   },
   {
     "slug": "nigeria-war-history-guide",
