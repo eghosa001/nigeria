@@ -86,14 +86,40 @@ function ensureMinimum(items: string[], fallbacks: string[], minimum: number) {
   return result;
 }
 
-function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
-  if (item.status !== "career-page" && item.kind !== "career-page") return item;
+// These are employer-wide career *directories*, not independently verified
+// individual vacancies. Historical 'open' metadata must not make them count
+// as jobs open today, even if the employer once listed specific roles.
+const employerDirectorySlugs = new Set([
+  "dangote-group-careers",
+  "flutterwave-nigeria-careers",
+  "paystack-nigeria-careers",
+  "moniepoint-nigeria-careers",
+  "sterling-bank-careers",
+  "bat-nigeria-careers",
+  "halliburton-nigeria-careers",
+  "oau-careers",
+  "axa-mansard-careers",
+  "aiico-insurance-careers",
+  "emzor-careers",
+  "eha-clinics-careers",
+]);
 
-  const fields = item.fields.slice(0, 5).join(", ");
+function normalizeCareerPortal(item: CareerOpportunity): CareerOpportunity {
+  const isDirectory = employerDirectorySlugs.has(item.slug);
+  if (!isDirectory && item.status !== "career-page" && item.kind !== "career-page") return item;
+  const portalItem: CareerOpportunity = isDirectory ? {
+    ...item,
+    status: "career-page",
+    kind: "career-page",
+    statusLabel: "Official employer careers portal — verify individual openings",
+    deadline: undefined,
+  } : item;
+
+  const fields = portalItem.fields.slice(0, 5).join(", ");
   const portalLabel = item.organization + " official careers or recruitment source";
 
   return {
-    ...item,
+    ...portalItem,
     kind: "career-page",
     qualifications: ensureMinimum(item.qualifications, [
       "This is an employer-wide careers or recruitment page, so there is no single qualification that applies to every role.",
