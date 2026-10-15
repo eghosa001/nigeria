@@ -22,6 +22,16 @@ for (const guide of exploreGuides) {
 
 // Search Console already has impressions for the older URL. Keep one
 // Kainji Dam canonical, with the richer location/history material retained.
+// Avoid publishing a generic bunker tourist blurb or claiming a 2026
+// restoration-completion estimate is confirmed public access.
+const ojukwu = exploreGuides.find((g) => g.slug === "ojukwu-bunker-guide");
+if (!ojukwu || ojukwu.intro.length < 4 || ojukwu.planning.length < 5 ||
+    (ojukwu.sources?.length ?? 0) < 2 ||
+    !ojukwu.planning.some((x) => /stair|ventilation|mobility|accessibility/i.test(x.detail)) ||
+    !ojukwu.planning.some((x) => /confirm|contact|check/i.test(x.detail) && /open|entry|access/i.test(x.detail))) {
+  errors.push("Ojukwu Bunker needs unique cited history, independently actionable access planning, and restoration caveats.");
+}
+
 const kainji = exploreGuides.filter((guide) => /^(kainji-dam|kainji-dam-guide)$/.test(guide.slug));
 if (kainji.length !== 1 || kainji[0]?.slug !== "kainji-dam-guide") {
   errors.push("Kainji Dam must have one canonical at /explore/kainji-dam-guide");
