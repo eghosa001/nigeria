@@ -502,6 +502,30 @@ test("service guidance does not repeat the same route, notes and fees in generic
 });
 
 
+test("four pillar article templates keep one source of truth for each key fact", async ({ page }) => {
+  await page.goto("/services/nin-date-of-birth-modification");
+  await expect(page.locator("#requirements")).toBeVisible();
+  await expect(page.locator("#steps")).toBeVisible();
+  await expect(page.locator("#questions")).toHaveCount(0);
+  await expect(page.locator("#quick-answers")).toHaveCount(0);
+  await expect(page.getByRole("navigation", { name: "On this page" }).getByRole("link", { name: "Quick answers" })).toHaveCount(0);
+
+  await page.goto("/entertainment/movies/oversabi-aunty");
+  await expect(page.getByRole("heading", { name: "Oversabi Aunty", exact: true })).toBeVisible();
+  await expect(page.locator(".movie-detail-subnav").getByRole("link", { name: "Cast & crew" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: /Quick facts about Oversabi Aunty/i })).toHaveCount(0);
+
+  await page.goto("/explore/lagos");
+  await expect(page.locator("#trip-highlights")).toBeVisible();
+  await expect(page.locator("#planning")).toBeVisible();
+  await expect(page.locator("#trip-questions")).not.toContainText("Begin with");
+
+  await page.goto("/jobs/reliance-health-careers");
+  await expect(page.locator("#requirements")).toBeVisible();
+  await expect(page.locator("#job-sources")).toBeVisible();
+  await expect(page.locator(".answer-first")).toHaveCount(0);
+});
+
 test("service links distinguish exact guidance from transaction portal", async ({ page }) => {
   await page.goto("/services/nin-name-modification");
   await expect(page.locator('a[data-official-purpose="guidance"]')).toHaveAttribute("href", /nimc\.gov\.ng\/self-service-modifications/);
