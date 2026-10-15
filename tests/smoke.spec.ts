@@ -157,6 +157,7 @@ test("admin dashboard shows independent Search Console health even if visits rep
 
   await page.goto("/admin/visits");
   await expect(page.getByTestId("admin-gsc-status")).toHaveCount(0);
+  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card.getByRole("heading", { name: "Live data connection & freshness" })).toBeVisible();
@@ -181,6 +182,7 @@ test("admin Search Console connectivity failures are explicit, not blank dashboa
   // by navigating before its Set-Cookie response is committed.
   await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
+  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("Google Search Console not reporting");
@@ -212,6 +214,7 @@ test("admin shows the exact API activation action for Google's disabled Search C
   // by navigating before its Set-Cookie response is committed.
   await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
+  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const panel = page.getByTestId("admin-gsc-status");
   await expect(panel).toContainText("Action required in Google Cloud");
@@ -255,6 +258,7 @@ test("admin shows the exact service account to grant Search Console access", asy
   // by navigating before its Set-Cookie response is committed.
   await expect(page.getByRole("heading", { name: "Overview", exact: true })).toBeVisible();
   await page.goto("/admin/visits");
+  await page.getByRole("button", { name: /Open detailed source diagnostics/ }).click();
   await page.getByRole("button", { name: "Check Google connection" }).click();
   const card = page.getByTestId("admin-gsc-status");
   await expect(card).toContainText("reporting@example-project.iam.gserviceaccount.com");
