@@ -159,4 +159,28 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     source: { label: "Nollywood.com — Sister Agatha (2026) film credits", href: "https://www.nollywood.com/movies/sister-agatha", lastChecked: "2026-10-15", note: "The 2026 Blessing Obasi and Bukunmi Adeaga-Ilori comedy-drama credits Tobe Nosike as director; not the distinct older Sisters film." },
   },
 
+  "plus-one": {
+    directors: ["Uduak-Obong Patrick"],
+    source: { label: "African Movie Database — Plus One (2026) film-specific cast and crew", href: "https://africanmoviedb.com/title/plus-one-2026", lastChecked: "2026-10-15", note: "The 20 March 2026 Omoni Oboli TV film with Saga Adeolu and Sophia Chisom explicitly credits Uduak-Obong Patrick as Director; Susan Ogutuga as producer, not director." },
+  },
+  "the-long-way-home": {
+    directors: ["Reuben Reng","Uche Montana"],
+    source: { label: "Nollywood.com — The Long Way Home (2026) directors and release credits", href: "https://www.nollywood.com/movies/the-long-way-home", lastChecked: "2026-10-15", note: "Film-specific entry for the 4 July 2026 Uche Montana TV picture, starring Uche Montana, Maurice Sam and Nadia Buari, names Reuben Reng and Uche Montana as directors; not another film with the same name." },
+  },
+  "a-turn-of-events": {
+    directors: ["Chidi Chijioke"],
+    source: { label: "African Movie Database — A Turn of Events (2026) full credited crew", href: "https://africanmoviedb.com/title/a-turn-of-events-2026", lastChecked: "2026-10-15", note: "The 22 September 2026 Maurice Sam/Sarian Martin film specifically credits Chidi Chijioke as Director. Maurice Sam is credited separately as a producer." },
+  },
+  "sibe": {
+    directors: ["Great Valentine Edochie"],
+    source: { label: "Zikoko — 28 September 2026 Bimbo Ademoye TV film ranking and director credits", href: "https://www.zikoko.com/pop/10-best-movies-on-bimbo-ademoye-tv/", lastChecked: "2026-10-15", note: "Item 4 names Great Valentine Edochie as director of the 2026 feature film with Bimbo Ademoye, Uche Montana, Uzor Arukwe and Deyemi Okanlawon; do not copy the director of the distinct older Sibe web-series." },
+  },
+  "colours-of-fire": {
+    directors: ["Niyi Akinmolayan"],
+    source: { label: "Kava TV — Colours of Fire (2025) distributor's verified film credits", href: "https://kavatv.vhx.tv/colours-of-fire", lastChecked: "2026-10-15", note: "The distributor credits Niyi Akinmolayan as director and explicitly marks the Kava streaming film NOT AVAILABLE IN AFRICA. This is a director-credit source, not a watch link for Nigeria; Netflix Nigeria also reports unavailability." },
+  },
+  "millionaire-until-morning": {
+    directors: ["Mo Fakorede"],
+    source: { label: "FilmFlux — Millionaire Until Morning (2026) original-credit listing", href: "https://filmflux.app/movie/fe1259e9-713e-4906-83df-f7c27969cdb0-millionaire-until-morning", lastChecked: "2026-10-15", note: "Film-specific Omoni Oboli TV credits identify Mo Fakorede as director (another publication writes Imo Fakorede). Use source's displayed credit; do not treat the credited assistant director as the primary director." },
+  },
 };
