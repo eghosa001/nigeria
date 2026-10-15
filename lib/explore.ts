@@ -3168,8 +3168,8 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
       }
     ],
     "source": {
-      "label": "UNESCO World Heritage Centre — Arochukwu Long Juju Slave Route Tentative List",
-      "href": "https://whc.unesco.org/en/tentativelists/5172/"
+      "label": "UNESCO World Heritage Centre — Arochukwu Long Juju Cave Temple Tentative List (5170)",
+      "href": "https://whc.unesco.org/en/tentativelists/5170/"
     },
     "lastReviewed": "2026-10-05"
   },
@@ -8019,8 +8019,8 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
       }
     ],
     "source": {
-      "label": "Borno State Government — About Borno",
-      "href": "https://bornostate.gov.ng/about"
+      "label": "Nigeria National Park Service — Chad Basin National Park (Borno and Yobe sectors)",
+      "href": "https://nigeriaparkservice.gov.ng/blog/2014/08/12/chad-basin-national-park/"
     },
     "lastReviewed": "2026-10-05"
   },
