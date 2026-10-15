@@ -164,6 +164,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
   const hasArrivalGuidance = /transport|taxi|road|travel|bus|drive|route|walk|access|journey|getting|arriv|train|flight/i.test(visitorEvidence);
   const hasOperatingGuidance = /hour|ticket|fee|admission|cost|price|book|open|season|date|entry|timing/i.test(visitorEvidence);
   const hasIndependentSource = Boolean(guide.sources?.some((source) => source.href !== guide.source?.href));
+  const hasDoNotTravelAdvisory = /\bdo not travel\b/i.test([guide.summary, ...guide.intro].join(" "));
   const destinationPhoto = destinationPhotos[guide.slug];
 
   const breadcrumbLd = {
@@ -347,13 +348,19 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
               <h2>{places.length
                 ? guide.kind === "event" ? "Venues and nearby planning stops for " + guide.shortTitle
                   : guide.kind === "city" ? places.length + " places to visit in " + guide.shortTitle + " — attractions, food & stays"
-                    : guide.shortTitle + ": places to visit, eat & stay"
+                    : "Related sites and location references for " + guide.shortTitle
                 : guide.shortTitle + ": location and access information"}</h2>
               <p>{places.length
-                ? "Prices and opening details come from the linked place records and may change; verify with each operator."
+                ? "These are independently referenced locations, not automatically nearby stops or bookable attractions. Verify any public opening, transport, cost and access directly."
                 : "No separate address, ticket price or opening-hours record is independently verified for this guide. These details are not invented."}</p>
             </div>
           </div>
+          {hasDoNotTravelAdvisory ? (
+            <div className="info-box" role="note" aria-label="Travel safety warning">
+              <h3>Travel advisory: do not treat these references as a visit recommendation</h3>
+              <p>This guide cites a do-not-travel warning for the region as of its last review. Any location or map pin below is for geographical or historical context, not evidence of a safe journey, an operating tourist facility or permission to enter.</p>
+            </div>
+          ) : null}
           {!places.length ? (
             <div className="info-box">
               <h3>How to verify the correct location before travelling</h3>
@@ -393,7 +400,7 @@ export default async function ExploreGuidePage({ params }: { params: Promise<{ s
                   </details>
                 ) : null}
                 <div className="explore-place-actions">
-                  <a href={googleMapsUrl(place)} target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
+                  <a href={googleMapsUrl(place)} target="_blank" rel="noreferrer">{hasDoNotTravelAdvisory ? "View approximate map reference — not a travel recommendation" : "Open in Google Maps"} ↗</a>
                   {place.website ? <a href={place.website} target="_blank" rel="noreferrer">Official website ↗</a> : null}
                   {place.source ? <a href={place.source.href} target="_blank" rel="noreferrer">{place.source.label} ↗</a> : null}
                 </div>
