@@ -1,5 +1,6 @@
 import { entertainmentTitles, getFeaturedCast } from "@/lib/entertainment";
 import { isApprovedYouTubeMoviePublisher } from "@/lib/youtube-movie-channels";
+import { isPublisherPromoSynopsis } from "@/lib/youtube-synopsis-quality";
 
 export type YouTubeDetailSource = {
   videoId: string;
@@ -166,6 +167,7 @@ function normalizeSynopsis(movie: GeneratedRecord) {
     text.length < 55 ||
     generatedSynopsisHype.test(text) ||
     generatedSynopsisSeo.test(text) ||
+    isPublisherPromoSynopsis(text) ||
     /^\s*(?:it|this title|the phrase)\s+(?:signifies|means|refers to)\b/i.test(text) ||
     /\p{Extended_Pictographic}/u.test(text)
   ) return fallbackSynopsis(movie);
@@ -308,6 +310,7 @@ export function hasSubstantiveYouTubeDetailSynopsis(movie: Pick<YouTubeDetailMov
   const synopsis = movie.synopsis.trim();
   return synopsis.length >= 110 &&
     !/ is a full-length Nigerian film published by /i.test(synopsis) &&
+    !isPublisherPromoSynopsis(synopsis) &&
     !/^(?:watch|stream|subscribe|like and share)\b/i.test(synopsis);
 }
 
