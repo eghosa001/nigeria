@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { InsightRange, InsightsReport, SearchPage } from "@/lib/admin-visits-insights";
-import { metricDelta, shiftIsoDay, type TrafficDay } from "@/lib/analytics-period-rollups";
+import { metricDelta, type TrafficDay } from "@/lib/analytics-period-rollups";
 
 const labels: Record<InsightRange, string> = {
   "1d": "1 day", "7d": "7 days", "30d": "30 days", "90d": "90 days", all: "All available",
@@ -143,9 +143,22 @@ export function AdminVisitsInsights() {
   }
 
   const current = report?.periods.find((row) => row.key === range);
-  const selectedDays = report?.daily.filter((row) => range === "all" || row.date >= shiftIsoDay(
-    report.periods.find((item) => item.key === range)?.startDate ?? "2026-01-01", 0,
-  )) ?? [];
+  // GA4 days use Lagos time; GSC days use Pacific time. Do not lose
+  // today's available Google reporting hour/day at the WAT midnight boundary.
+  const selectedDays: TrafficDay[] = report?.daily.flatMap((row) => {
+    if (range === "all") return [row];
+    if (!current) return [];
+    const ga4Included = row.date >= current.startDate && row.date <= current.endDate;
+    const gscIncluded = row.date >= current.gscStartDate && row.date <= current.gscEndDate;
+    if (!ga4Included && !gscIncluded) return [];
+    return [{
+      date: row.date,
+      pageViews: ga4Included ? row.pageViews : undefined,
+      sessions: ga4Included ? row.sessions : undefined,
+      impressions: gscIncluded ? row.impressions : undefined,
+      clicks: gscIncluded ? row.clicks : undefined,
+    }];
+  }) ?? [];
   const trends = useMemo(() => groupDays(selectedDays, granularity), [selectedDays, granularity]);
   const searchRows = useMemo(() => {
     let rows = report?.searchPages ?? [];
