@@ -2063,29 +2063,30 @@
     "slug": "npc-birth-attestation",
     "title": "NPC Birth Attestation Nigeria: Eligibility, USD 80 Fee and Download",
     "shortTitle": "NPC adult birth attestation",
-    "summary": "Adults aged 18 or older can request a birth attestation through the National Population Commission (NPC) self-service portal. The online route lists a non-refundable USD 80 convenience fee, requires a court-sworn affidavit and identity checks, and allows a certificate download after a successful application. Applicants without a NIN can receive a temporary Birth ID for NIMC enrolment; children aged 0–17 use birth registration instead.",
+    "summary": "Adults aged 18 or older can request a birth attestation through the National Population Commission (NPC) self-service portal. The earlier NPC self-service fee notice listed a non-refundable USD 80 convenience fee, requires a court-sworn affidavit and identity checks, and allows a certificate download after a successful application. Applicants without a NIN can receive a temporary Birth ID for NIMC enrolment; children aged 0–17 use birth registration instead.",
     "category": "Civil records",
     "agencySlug": "npc",
-    "feeLabel": "USD 80 non-refundable self-service convenience fee",
+    "feeLabel": "Previously listed USD 80 online fee; reconfirm with NPC",
     "status": "verified",
-    "officialPortal": "https://attestation.nationalpopulation.gov.ng/",
+    "officialPortal": "https://www.nationalpopulation.gov.ng/",
     "requirements": [
       "Applicant must be aged 18 or above; children aged 0–17 belong in NPC birth registration, not adult birth attestation.",
       "A court-sworn affidavit, a valid email address and an active mobile phone number.",
       "An NIN for mandatory verification if one is available. NPC offers a temporary attestation/Birth ID route for an applicant without an NIN, followed by a visit to NIMC for enrolment.",
       "Registration state, current local government area and a preferred registration centre, as requested by the portal.",
-      "A reliable internet connection, good lighting and a plain background for face capture, plus a means of paying the portal's non-refundable USD 80 self-service charge."
+      "A stable internet connection and good lighting for portal face capture when available. NPC's earlier online flow listed a USD 80 non-refundable convenience charge, but its availability and current price must be reconfirmed on the official service."
     ],
     "steps": [
-      "Open https://attestation.nationalpopulation.gov.ng/ and read NPC's eligibility and privacy notices. Confirm this is adult birth attestation, not the separate birth-registration route for children.",
+      "Open the National Population Commission's official website and choose Services → Birth Attestation. The formerly published direct attestation subdomain failed the current link check; if the service is unavailable, use NPC's official FAQs/contact details or ask an authorised office how to proceed. Adults aged 18+ use attestation rather than children's birth registration.",
       "Prepare your court-sworn affidavit, contact details and accurate birth information. Make sure your name and date of birth are consistent with the identity records you intend to use.",
       "If you have an NIN, complete the portal's mandatory NIN verification before proceeding. If you do not have one, follow NPC's temporary attestation/Birth ID option and its instruction to enrol with NIMC; do not enter another person's NIN.",
       "Supply the registration state, current LGA and nearest available registration centre requested in the form. Complete the face capture with stable internet, clear lighting and a plain background.",
       "Review every field before submitting: NPC warns that an applicant can make only one attestation application. If the portal asks you to amend a date of birth after NIN validation, follow its stated restrictions rather than guessing or repeatedly submitting.",
-      "Pay the USD 80 non-refundable online convenience fee only through the official application flow. Save the payment reference sent to your email so you can resume or check the application.",
+      "Only after the official NPC application service is available, verify the payment amount displayed inside its legitimate flow. The earlier fee notice listed a USD 80 non-refundable convenience charge; save the payment reference emailed by NPC and do not pay an unofficial intermediary.",
       "Use the portal's Check Status or payment-reference option after processing. NPC says certificates can be downloaded once after a successful application; use its reprint route if you need another copy rather than starting a duplicate attestation."
     ],
     "notes": [
+      "On 15 October 2026, the formerly published direct birth-attestation service hostname did not resolve from the site's link-validation environment. Use NPC's main website and its Services directory or official contact channels. Do not treat an old direct portal link as proof that the application is currently accepting submissions.",
       "The two services cover different ages: NPC attestation is for people aged 18 and above, whereas child birth registration covers ages 0–17. An online convenience charge for one route must not be presented as the price of all NPC birth services.",
       "The temporary Birth ID issued to applicants without a NIN is not a replacement for an NIN. NPC says it is used during subsequent NIMC enrolment and cannot be validated as an NIN on NIMC's modification portal.",
       "If Check Status says “No Record Found”, NPC says that function works after the attestation process has been successfully completed. Use your original payment reference or the portal's resume option before considering another payment.",
@@ -2093,10 +2094,10 @@
     ],
     "sources": [
       {
-        "label": "NPC — adult birth-attestation self-service requirements and fee",
+        "label": "NPC Birth Attestation Self-Service",
         "agency": "National Population Commission",
         "url": "https://attestation.nationalpopulation.gov.ng/",
-        "lastChecked": "2026-10-15"
+        "lastChecked": "2026-09-28"
       },
       {
         "label": "NPC — account, age range, approval and reprint guidance",
@@ -2125,7 +2126,7 @@
       "npc-child-birth-registration",
       "npc-digital-birth-certificate-reissuance"
     ],
-    "feeNote": "NPC's adult attestation self-service portal lists USD 80 as a non-refundable convenience fee. This is the fee for this online application route, not a claim about every NPC in-person registration service. Confirm the displayed amount and payment reference on the official NPC portal before paying.",
+    "feeNote": "NPC's earlier adult attestation self-service notice listed a USD 80 non-refundable convenience fee. The former direct application subdomain did not resolve in the current link check on 15 October 2026, so this amount and online checkout cannot be confirmed live today. Begin at NPC's official main website under Services → Birth Attestation and confirm current charges with NPC before paying. Do not send payment to an intermediary.",
     "timeline": "NPC does not give a guaranteed approval time on the reviewed attestation page. Use your payment reference to check application status; the download is available after successful processing."
   },
   {
