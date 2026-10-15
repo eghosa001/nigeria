@@ -96,8 +96,17 @@ for(const s of seriesTitles){
     sourceCount:s.sources.length,dateChecked:s.sources.map(x=>x.lastChecked).sort().at(-1) ?? null});
 }
 for(const p of entertainmentPeople){
-  add({pillar:"Entertainment",group:"person",id:p.slug,title:p.name,url:"/entertainment/people/"+p.slug,indexable:true,
-    body:join(p.summary),sourceCount:0,dateChecked:null});
+  // Person pages dynamically render linked film credits and their cited
+  // movie sources. Audit the same material that actually appears in the page,
+  // rather than treating every profile as an unsourced 11-word biography.
+  const linked = entertainmentTitles.filter(t =>
+    p.knownForSlugs.includes(t.slug) || t.cast.includes(p.name) || t.directors?.includes(p.name));
+  const cited = linked.flatMap(t => t.references ?? []).filter(ref => ref.href.startsWith("https://"));
+  const dates = cited.map(ref => ref.lastChecked).filter(Boolean).sort();
+  add({pillar:"Entertainment",group:"person",id:p.slug,title:p.name,
+    url:linked.length ? "/entertainment/people/"+p.slug : null,indexable:linked.length > 0,
+    body:join(p.summary,linked.map(t => t.title+" "+t.year+" "+(t.cast.includes(p.name) ? "cast" : t.directors?.includes(p.name) ? "director" : "linked film") + " "+t.synopsis)),
+    sourceCount:cited.length,dateChecked:dates.at(-1) ?? null});
 }
 for(const j of jobOpportunities){
   add({pillar:"Jobs",group:"job-listing",id:j.slug,title:j.title,url:isIndexableJobOpportunity(j)?"/jobs/"+j.slug:null,
