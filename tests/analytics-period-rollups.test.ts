@@ -31,3 +31,18 @@ test("unreported traffic and zero denominators cannot produce fake percentage gr
   assert.equal(metricDelta(8, 0), null);
   assert.equal(metricDelta(12, 10), 20);
 });
+
+test("Search Console comparison follows Pacific day while GA4 uses Lagos day", () => {
+  const rows = buildPeriodRows(
+    [{ date: "2026-10-15", pageViews: 9 }],
+    [{ date: "2026-10-14", impressions: 110, clicks: 4 }],
+    "2026-10-15",
+    { ga4StartDate: "2026-09-29", gscStartDate: "2025-06-14",
+      pageViews: 500, sessions: 300, impressions: 9000, clicks: 120 },
+    "2026-10-14",
+  );
+  assert.equal(rows[0].pageViews, 9);
+  assert.equal(rows[0].impressions, 110);
+  assert.equal(rows[0].gscStartDate, "2026-10-14");
+  assert.equal(rows[0].startDate, "2026-10-15");
+});
