@@ -157,8 +157,9 @@ for (const guide of exploreGuides) {
     issues.push(blocker("tour-evidence-missing", "Destination/venue facts need a valid attributable source."));
   if (guide.intro.length < 2 || guide.highlights.length < 3)
     issues.push(blocker("no-distinctive-destination-case", "Give concrete attraction, setting and the distinctive reason to visit."));
-  if (guide.planning.length < 3 || places.length < 2)
-    issues.push(blocker("tour-trip-incomplete", "Guide should offer usable visitor logistics and more than a location snippet."));
+  const minimumPlaces = guide.kind === "itinerary" || guide.kind === "city" ? 2 : 1;
+  if (guide.planning.length < 3 || places.length < minimumPlaces)
+    issues.push(blocker("tour-trip-incomplete", "Guide should offer usable logistics and sufficient independently identified stops for its type."));
   if (guide.bestFor.length < 2) issues.push(review("poor-visitor-fit", "Explain the audience and reasons to choose or skip this trip."));
   if (uniqueText(guide.highlights.map(x => x.detail)) < guide.highlights.length)
     issues.push(review("repeated-attraction-copy", "Distinctive stops should not reuse the same sentences."));
