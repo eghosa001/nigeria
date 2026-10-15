@@ -72,7 +72,7 @@ export const verifiedFmnOperationsJobs20261012: CareerOpportunity[] = [
     "sector": "Private",
     "status": "closed",
     "statusLabel": "Employer's specific advert has expired — 15 October 2026",
-    "summary": "Senior plant leadership opening for a high-volume Premier Feed Mills operation in Calabar, focused on milling throughput, quality, HSE, corrosion prevention, maintenance reliability and raw-material logistics. FMN asks for at least twelve years' relevant experience and a milling, agricultural engineering or related qualification.",
+    "summary": "Archived FMN Calabar vacancy: Premier Feed Mills previously advertised a senior plant operations position covering milling throughput, quality, HSE, plant reliability and raw-material logistics. The old requirements cited at least twelve years of relevant experience and a related qualification. The original FMN job URL explicitly displayed 'does not exist or has expired' when checked on 15 October 2026; this is no longer an open role.",
     "location": "Calabar, Cross River State, Nigeria",
     "employmentType": "Employer-advertised vacancy (verify contract type and schedule)",
     "audiences": [
