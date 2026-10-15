@@ -5360,10 +5360,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Agulu Lake",
     "kind": "destination",
     "region": "Anambra State",
-    "summary": "Use Agulu Lake as a calm Anambra nature stop with local-access and water-safety checks, keeping cave and waterfall excursions as separate decisions.",
+    "summary": "Agulu Lake in Anaocha, Anambra, is both a landscape and a culturally significant site associated with crocodiles regarded as sacred in local tradition. The state tourism ministry has discussed planned improvements, not verified operating resort facilities. Plan a respectful shoreline visit only if local access is confirmed; do not swim, boat or approach wildlife.",
     "intro": [
-      "Agulu Lake offers a different, slower nature experience from Anambra's cave and waterfall destinations and supports a focused visitor-planning page.",
-      "Treat the water as a natural environment rather than assuming boating, swimming or other activities are always available or safe."
+      "The airport's official Anambra visitor guide identifies Agulu Lake in Agulu town, Anaocha Local Government Area, and describes crocodiles revered in local belief. Treat that cultural significance seriously, but do not take stories about sacred animals as a promise of tame behaviour or a guaranteed sighting.",
+      "The same airport tourism guide places the lake approximately 30 kilometres from Chinua Achebe International Cargo Airport. That is a location estimate, not a checked drive time, fare or confirmation that every shoreline track is public.",
+      "Anambra's Ministry of Culture, Entertainment and Tourism has announced plans for tourism development at Agulu Lake and Ogbunike Caves. A development intention does not establish today's availability of hotels, boats, guides or recreation centres.",
+      "For a practical visit, arrange transport to the correct Agulu Lake, verify a safe public viewpoint with a recognised local source and plan to enjoy the landscape on land without entering the water or feeding animals."
     ],
     "bestFor": [
       "Lakes",
@@ -5373,45 +5375,59 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Lake landscape",
-        "detail": "The main experience is the water and surrounding scenery rather than a dense list of built attractions."
+        "name": "Crocodiles and cultural beliefs",
+        "detail": "The state airport's visitor page calls Agulu Lake a home of sacred crocodiles, a tradition valued by local residents. Visitors must keep distance from wild animals and should not attempt to lure them for photographs."
       },
       {
-        "name": "Agulu setting",
-        "detail": "Use local guidance for the current visitor area and any culturally sensitive parts of the shoreline."
+        "name": "Quiet landscape rather than an amusement park",
+        "detail": "The lake and vegetation provide a nature-focused pause. The checked public sources do not verify lifeguards, boat rental or managed swimming zones, so a safe permitted viewpoint is a better expectation."
       },
       {
-        "name": "Ogbunike option",
-        "detail": "The caves can form another day in a longer Anambra nature trip."
+        "name": "Distinct from Ogbunike Caves",
+        "detail": "Ogbunike Caves is a separate Anambra site with different physical demands, custodians and access restrictions. Grouping them under a state nature theme does not make them adjacent stops."
       },
       {
-        "name": "Flexible pace",
-        "detail": "The lake works well as a slower block between more physically demanding destinations."
+        "name": "Development status matters",
+        "detail": "Tourism ministry announcements describe proposed visitor upgrades. Do not book non-confirmed 'new facilities' based on a projected scheme or treat construction as an opening notice."
       }
     ],
     "planning": [
       {
-        "label": "Confirm local access",
-        "detail": "Use current directions and follow any community guidance."
+        "label": "Verify the exact destination",
+        "detail": "Ask for Agulu Lake in Anaocha LGA. Check a safe approach road and permitted shoreline viewpoint with a local authority or identified guide before arranging return transport; published airport distance is not a journey duration."
       },
       {
-        "label": "Do not assume swimming safety",
-        "detail": "Only enter water when a current, responsible local authority or operator says conditions are suitable."
+        "label": "Do not enter the water",
+        "detail": "Stay clear of the lake's edge where crocodiles may be present; do not swim, feed animals, or use an unverified boat operator. Supervise children and keep a safe distance from any observed wildlife."
       },
       {
-        "label": "Protect electronics",
-        "detail": "Use a water-resistant plan for phones and valuables."
+        "label": "Check local custodian rules",
+        "detail": "Respect the site's community significance. Confirm whether an entrance fee, photography restriction or guide requirement exists for the actual place visited; no definitive current price was established."
       },
       {
-        "label": "Keep distant nature stops separate",
-        "detail": "Avoid rushing from the lake to caves and waterfalls in one short day."
+        "label": "Do not assume new resorts are open",
+        "detail": "State plans to develop Agulu Lake do not prove that planned recreational facilities have opened. Check current verified operators directly rather than copying promotional claims."
+      },
+      {
+        "label": "Keep a transport contingency",
+        "detail": "Arrange a dependable return journey and avoid improvising after dark. Weather and undeveloped shore tracks can change the feasibility of a relaxed lake visit."
+      },
+      {
+        "label": "Plan other Anambra attractions separately",
+        "detail": "Ogbunike Caves and other natural sites require their own route, timing and access checks. A short lake stop should not be advertised as including multiple far-apart attractions."
       }
     ],
     "source": {
-      "label": "Anambra State — Agulu Lake",
-      "href": "https://anambrastate.gov.ng/directory/agulu-lake/"
+      "label": "Chinua Achebe International Cargo Airport: Experience Anambra — Agulu Lake",
+      "href": "https://caica.anambrastate.gov.ng/experience-anambra/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "Anambra Ministry of Culture and Tourism: Agulu Lake development plans",
+        "href": "https://mocet.anambrastate.gov.ng/news/anambra-unveils-plan-to-transform-ogbunike-cave-agulu-lake-into-world-"
+      }
+    ]
   },
   {
     "slug": "kufena-hills-zaria-guide",
@@ -7209,10 +7225,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Moremi Statue Ile-Ife",
     "kind": "destination",
     "region": "Osun State",
-    "summary": "Visit the Moremi monument as part of a focused Ile-Ife heritage route, with royal and cultural context rather than as an isolated photo stop.",
+    "summary": "The Moremi Ajasoro Statue in Ile-Ife honours a legendary Yoruba heroine and offers a focused introduction to the city's royal heritage. The Ooni's official visitor guide and Osun State tourist information identify the monument. Confirm on-site entry rules and charges through an official custodian: online ticket prices and historic visitor accounts may not reflect current practice.",
     "intro": [
-      "The Moremi monument is a major visual landmark in Ile-Ife and supports a distinct heritage search intent tied to one of Yoruba history's best-known figures.",
-      "Pair it with museum or palace context so the visit is more than a monument photograph."
+      "Ile-Ife's Moremi monument remembers Moremi Ajasoro, an important figure in Yoruba oral tradition associated with courage and protecting her community. The Ooni's official visitor information describes the commemorative statue as a symbol of bravery and legacy, while the specific stories told about Moremi belong to cultural tradition rather than precisely dated records.",
+      "The monument is a modern work of commemoration, not an artefact made during Moremi's lifetime. Its value to visitors lies in seeing how Ile-Ife presents a legendary heroine today, and connecting that story to the city's broader palace and museum heritage.",
+      "One practical uncertainty is access: the Ooni's official page says palace visits require appointments, but that statement does not independently establish the statue's current operating hours or whether every part of its setting is included in a palace tour. Confirm the particular entry point and access conditions locally.",
+      "Independent visitor accounts sometimes describe a custodian-led explanation and specific footwear or photography rules. These are individual experiences, not proven universal conditions; verify with the actual site staff before entering protected sections or paying a guide."
     ],
     "bestFor": [
       "Yoruba heritage",
@@ -7222,45 +7240,59 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Moremi legacy",
-        "detail": "The monument represents a major figure in Ile-Ife's historical tradition."
+        "name": "Moremi and Yoruba oral history",
+        "detail": "The Ooni's visitor material describes Moremi as a legendary heroine remembered for sacrifice and courage. A good visit distinguishes the cultural meaning of the story from claims that every event can be assigned a documented date."
       },
       {
-        "name": "City heritage setting",
-        "detail": "The surrounding city contains palace and museum sites that deepen the story."
+        "name": "Modern public commemoration",
+        "detail": "The statue demonstrates how contemporary Ile-Ife commemorates women and its royal past. It is not an ancient archaeological object or an exact portrait of an independently documented sitter."
       },
       {
-        "name": "Public landmark",
-        "detail": "The monument can work as a compact stop within a larger heritage day."
+        "name": "Royal setting and custodians",
+        "detail": "The statue is linked with the city's royal heritage environment. Nearby courtyards and sacred spaces may operate under separate protocol; ask before photography, filming or moving through private areas."
       },
       {
-        "name": "Interpretive value",
-        "detail": "Use careful historical and cultural context rather than repeating unverified legends as fact."
+        "name": "Useful nearby heritage comparison",
+        "detail": "If access is confirmed separately, the National Museum Ile-Ife can add context about earlier Yoruba art and archaeology; royal monuments and museum collections tell different parts of the same city story."
       }
     ],
     "planning": [
       {
-        "label": "Visit in daylight",
-        "detail": "The monument and surrounding area are easier to navigate and photograph during the day."
+        "label": "Identify the exact Moremi statue",
+        "detail": "Use the Ooni's Visit Ile-Ife monument list and confirm the local drop-off or gate before travelling. Do not confuse the royal monument with other landmarks or university locations carrying similar names."
       },
       {
-        "label": "Respect nearby cultural spaces",
-        "detail": "Follow local instructions around royal or sacred areas."
+        "label": "Check current entry before arrival",
+        "detail": "The Ooni's official visitor page requires appointments for palace visits. Whether access to the statue is included, separate or walk-in must be confirmed with the relevant custodian; no verified current fixed ticket was found."
       },
       {
-        "label": "Use credible context",
-        "detail": "Distinguish tradition, oral history and documented history where relevant."
+        "label": "Respect cultural etiquette",
+        "detail": "Ask staff whether any sections require footwear removal, a guide or restrictions on photographs. Community and palace rules apply even when a monument looks publicly accessible."
       },
       {
-        "label": "Cluster Ile-Ife stops",
-        "detail": "Keep the museum and palace within the same city block where practical."
+        "label": "Use a modest Ile-Ife route",
+        "detail": "Visit the monument if it is accessible, then add the National Museum or another official heritage site only after verifying its opening and separate admission. Leave time for local movement instead of guaranteeing a full-city itinerary."
+      },
+      {
+        "label": "Avoid unverifiable souvenir and guide claims",
+        "detail": "Do not pay an unsolicited person promising private palace access. Check who is authorised to guide, whether a fee is official and whether photographs are allowed."
+      },
+      {
+        "label": "Learn the story without overstating it",
+        "detail": "Ask how present-day local interpretation differs from recorded historical evidence. A guide's oral history can be valuable cultural context without being a source for invented dates or official royal genealogies."
       }
     ],
     "source": {
-      "label": "Osun State Government — Tourist Centres",
-      "href": "https://www.osunstate.gov.ng/tourist-centres/"
+      "label": "Ooni of Ife — official Visit Ile-Ife heritage and palace protocol",
+      "href": "https://www.oonirisa.org/visit-ile-ife"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "Osun State Government — Tourist Centres",
+        "href": "https://www.osunstate.gov.ng/tourist-centres/"
+      }
+    ]
   },
   {
     "slug": "national-museum-ile-ife-guide",
@@ -9864,10 +9896,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Hidi's Palace Sukur",
     "kind": "destination",
     "region": "Adamawa State",
-    "summary": "Visit Hidi's Palace as part of the UNESCO-listed Sukur Cultural Landscape with local guidance and respect for living cultural traditions.",
+    "summary": "Hidi's Palace is an important living royal and ritual site within the UNESCO-listed Sukur Cultural Landscape, Madagali, Adamawa. It is not a verified bookable tourist attraction: current foreign-government travel advice says do not travel to Adamawa, while UNESCO documents ongoing security and conservation concerns.",
     "intro": [
-      "Hidi's Palace is a core element of the Sukur Cultural Landscape and supports a focused royal-and-cultural heritage intent within the UNESCO site.",
-      "The palace should be understood as part of a living cultural system rather than an isolated monument."
+      "Sukur is a Mandara Mountains community near Nigeria's Cameroon border. UNESCO lists its dry-stone buildings, paved walkways, agricultural terraces and historic iron-working culture as a linked living landscape. The Hidi's Palace is a central ceremonial and governing feature, not an abandoned museum building.",
+      "The National Commission for Museums and Monuments explains that Sukur community members and heritage staff maintain the Hidi palace, shrines, gates and paths. Any visit must respect custodians, existing use of royal spaces and individual permission to record.",
+      "UNESCO's 2025 World Heritage Committee decision acknowledges security-stabilisation initiatives but makes a requested monitoring mission conditional on necessary security arrangements. Australia's October 2026 travel advice explicitly says 'Do not travel' to Adamawa because of insecurity, terrorism and kidnapping. Neither UNESCO listing nor conservation funding proves public visitor access.",
+      "The UNESCO committee recorded that September 2024 heavy rain caused erosion to sections of the stone-paved path toward Hidi's Palace and damage to terraced farms; the community undertook remedial work and restoration documentation was planned. A traveller must not infer current trail safety from old photographs."
     ],
     "bestFor": [
       "UNESCO heritage",
@@ -9877,45 +9911,67 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Palace complex",
-        "detail": "The palace is central to the social and political organisation represented in the cultural landscape."
+        "name": "The living Hidi's Palace",
+        "detail": "The traditional palace remains part of Sukur's political and religious world. Its historical significance lies in community governance and ritual as much as its architecture; it is not an unrestricted public building."
       },
       {
-        "name": "Hilltop setting",
-        "detail": "Its location connects architecture with the wider mountain environment."
+        "name": "Ancient paths and conservation",
+        "detail": "Stone paving is a defining feature, but UNESCO documents erosion damage from September 2024 and subsequent remedial work. The state of the palace approach requires present-day verification."
       },
       {
-        "name": "Terraces and pathways",
-        "detail": "The surrounding stone and agricultural systems deepen the heritage story."
+        "name": "Terraces and buildings",
+        "detail": "Dry-stone agricultural terraces connect local farming and settlement to the Mandara hill landscape, illustrating how built structures and living traditions interact."
       },
       {
-        "name": "Living tradition",
-        "detail": "Local customs and current community use should guide visitor behaviour."
+        "name": "Iron production and trade",
+        "detail": "UNESCO traces Sukur's tradition of iron smelting, trade and political institutions to around the sixteenth century. Its heritage value is the system of settlement and craft rather than a single monument."
       }
     ],
     "planning": [
       {
-        "label": "Use local guidance",
-        "detail": "Visit through recognised community arrangements."
+        "label": "Travel warning comes first",
+        "detail": "As checked in October 2026, the Australian Government advises do not travel to Adamawa State. Defer recreational travel and review current advice from appropriate local, national and foreign security authorities; this article is mainly for cultural learning."
       },
       {
-        "label": "Ask before photography",
-        "detail": "Sacred, royal or private areas may restrict cameras."
+        "label": "No confirmed operator, opening or ticket",
+        "detail": "The checked heritage documents do not verify a current public palace entrance, guide, transport service or admission fee. Do not transfer money to unverified operators advertising unrestricted entry."
       },
       {
-        "label": "Wear practical footwear",
-        "detail": "The landscape involves steep and uneven paths."
+        "label": "Do not assume the trail is repaired",
+        "detail": "The UNESCO committee documented flood-related erosion along a palace approach. Shoes and daylight are not a substitute for a formal access and security assessment."
       },
       {
-        "label": "Respect living heritage",
-        "detail": "Do not treat community spaces as abandoned ruins."
+        "label": "Respect community authority",
+        "detail": "The Hidi Palace and religious sites are still in use. Seek explicit permission before entry, photography, drone flights or recording a ceremony; distinguish living homes from preserved exhibit areas."
+      },
+      {
+        "label": "Learn remotely instead",
+        "detail": "Use UNESCO's Sukur site profile, the 2025 conservation decision and the Nigerian museums commission's Sukur page to study the historic landscape while travel restrictions remain."
+      },
+      {
+        "label": "Specialist visit needs genuine clearances",
+        "detail": "Only a responsible heritage or academic team with independently confirmed security, access authority, weather, transport and site-condition clearance should evaluate fieldwork; no leisure itinerary can safely be promised from existing sources."
       }
     ],
     "source": {
       "label": "UNESCO World Heritage Centre — Sukur Cultural Landscape",
       "href": "https://whc.unesco.org/en/list/938"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "UNESCO World Heritage Committee, 2025 conservation decision 47 COM 7B.160",
+        "href": "https://whc.unesco.org/en/decisions/8885"
+      },
+      {
+        "label": "National Commission for Museums and Monuments: Sukur",
+        "href": "https://museum.ng/sukur-cultural-landscape/"
+      },
+      {
+        "label": "Australia Smartraveller: Nigeria safety and Adamawa do-not-travel advice",
+        "href": "https://www.smartraveller.gov.au/destinations/africa/nigeria"
+      }
+    ]
   },
   {
     "slug": "sukur-terraces-guide",
@@ -11966,10 +12022,12 @@ export const exploreGuides: ExploreGuide[] = [
     "shortTitle": "Nigeria Archaeology",
     "kind": "destination",
     "region": "Nigeria",
-    "summary": "Explore Nigeria's archaeology and ancient cultural landscapes through stone monoliths, caves, early watercraft heritage and UNESCO-listed sites.",
+    "summary": "Understand Nigeria's archaeological heritage through documented ancient objects and settlements: the Dufuna canoe, Cross River's carved Alok Ikom monoliths, Sukur's living cultural landscape and the tentative-listed Ogbunike Caves. These places are spread over multiple states, not a single convenient visitor circuit. UNESCO tentative-list entries are not World Heritage inscriptions.",
     "intro": [
-      "Nigeria's archaeological heritage ranges from the Dufuna canoe story to Alok Ikom monoliths, cave landscapes and the ancient settlement systems preserved at Sukur.",
-      "A good archaeology trip distinguishes physical evidence, oral tradition and later historical interpretation."
+      "An archaeological object and the place where it was found are different kinds of destinations. Nigeria's National Commission for Museums and Monuments identifies the more-than-8,000-year-old Dufuna canoe among the country's oldest known artefacts. That historic importance does not establish a bookable exhibit or visitor centre at the excavation area today.",
+      "The Alok Ikom stone monoliths in Cross River are a different form of cultural evidence. UNESCO's Nigerian tentative-list submission describes carved stone figures found in more than thirty local communities, some in traditional meeting areas and some near forests. The monument group's listing is tentative, not an award of World Heritage status or permission to enter community sites.",
+      "Sukur, in Adamawa's Mandara Mountains, is actually inscribed on UNESCO's World Heritage List. Its royal landscape, stone paving, cultivated terraces and history of iron working belong to a living community. Conservation and security concerns documented by UNESCO and official travel warnings mean an educational research visit should not be marketed as an ordinary leisure booking.",
+      "A good itinerary cannot combine Yobe's Dufuna history, Cross River's Ikom stones, Adamawa's Sukur and Anambra's cave landscapes in a single weekend. Start with an accessible museum or choose one state and check which interpretation, artefacts and sites can actually be visited."
     ],
     "bestFor": [
       "Archaeology",
@@ -11979,45 +12037,71 @@ export const exploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Dufuna canoe heritage",
-        "detail": "One of the country's most important ancient-technology stories."
+        "name": "Dufuna canoe: ancient watercraft",
+        "detail": "The Nigerian museums authority says the canoe is more than eight millennia old and one of Nigeria's oldest known objects. This is evidence about ancient watercraft and technology, not confirmation that the original object is currently exhibited at a specific museum."
       },
       {
-        "name": "Alok Ikom monoliths",
-        "detail": "Carved stone heritage with strong archaeological significance."
+        "name": "Alok Ikom: carved monoliths",
+        "detail": "UNESCO describes stone monoliths, locally associated with Ejagham-speaking communities, arranged in groups in different locations. Community permissions and conservation rules matter, and tentative-list status must be distinguished from inscription."
       },
       {
-        "name": "Cave landscapes",
-        "detail": "Ogbunike and Arochukwu combine physical sites with long cultural histories."
+        "name": "Sukur: genuinely inscribed cultural landscape",
+        "detail": "Sukur's agricultural terraces and sacred palace landscape were inscribed as World Heritage. Research the site's history and conservation remotely while current Adamawa travel-security advice warns against journeys."
       },
       {
-        "name": "Sukur",
-        "detail": "A UNESCO cultural landscape preserving settlement, palace and terrace systems."
+        "name": "Other tentative candidates",
+        "detail": "UNESCO's Nigeria tentative list includes Ogbunike Caves and other heritage proposals. Being proposed for nomination does not confirm an operating tourism facility, current guided access or UNESCO World Heritage designation."
       }
     ],
     "planning": [
       {
-        "label": "Use credible interpretation",
-        "detail": "Separate evidence from legend where necessary."
+        "label": "Choose one realistic theme",
+        "detail": "Pick museum-based study or one confirmed locally accessible monument rather than combining Cross River, Adamawa, Anambra and Yobe in an implausible short route. Confirm official opening and staff availability before paying for transport."
       },
       {
-        "label": "Do not touch artefacts",
-        "detail": "Protect fragile heritage material."
+        "label": "Separate inscribed from tentative",
+        "detail": "NCMM identifies two inscribed World Heritage properties in Nigeria: Sukur Cultural Landscape and Osun-Osogbo Sacred Grove. Ikom monoliths and Ogbunike Caves appear on UNESCO's tentative list, which is not the same status."
       },
       {
-        "label": "Use local guides",
-        "detail": "Community context is essential at living sites."
+        "label": "Ask where artefacts are displayed",
+        "detail": "A commission collection entry or excavation report does not prove that a visitor can see the original Dufuna canoe or other objects in a particular gallery. Contact the museum holding the collection directly."
       },
       {
-        "label": "Check access",
-        "detail": "Archaeological sites may not operate like conventional museums."
+        "label": "Treat living sites as occupied spaces",
+        "detail": "Respect residents and custodians at monolith locations, shrines and palace sites; never collect artefacts, touch fragile surfaces, enter restricted areas or photograph ceremonies without permission."
+      },
+      {
+        "label": "Avoid dangerous routes",
+        "detail": "Current travel advice warns against trips to parts of northeastern Nigeria, including Adamawa. Safety and legal access take priority over any heritage itinerary; historical significance never guarantees a safe tourist visit."
+      },
+      {
+        "label": "Keep interpretation honest",
+        "detail": "Separate archaeological dating, documentary evidence and traditional oral accounts. Do not present a folklore narrative or invented visitor experience as independently verified historical fact."
       }
     ],
     "source": {
-      "label": "UNESCO World Heritage Centre — Nigeria",
-      "href": "https://whc.unesco.org/en/statesparties/ng/"
+      "label": "National Commission for Museums and Monuments — collection",
+      "href": "https://collection.museum.ng/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-15",
+    "sources": [
+      {
+        "label": "NCMM FAQ — Dufuna canoe and two inscribed Nigerian World Heritage sites",
+        "href": "https://museum.ng/faq/"
+      },
+      {
+        "label": "UNESCO — Alok Ikom stone monoliths tentative-list submission",
+        "href": "https://whc.unesco.org/en/tentativelists/5173/"
+      },
+      {
+        "label": "UNESCO — Nigeria tentative lists",
+        "href": "https://whc.unesco.org/en/tentativelists/action=listtentative&order=states&state=ng"
+      },
+      {
+        "label": "UNESCO — Sukur Cultural Landscape",
+        "href": "https://whc.unesco.org/en/list/938"
+      }
+    ]
   },
   {
     "slug": "nigeria-war-history-guide",

@@ -73,7 +73,7 @@ for(const s of publicServices){
 for(const g of exploreGuides){
   add({pillar:"Tour",group:"tour-guide",id:g.slug,title:g.title,url:"/explore/"+g.slug,indexable:true,
     body:join(g.summary,g.intro,g.highlights.map(x=>x.detail),g.planning.map(x=>x.detail)),
-    sourceCount:g.source?1:0,dateChecked:g.lastReviewed});
+    sourceCount:(g.source?1:0)+(g.sources?.length??0),dateChecked:g.lastReviewed});
 }
 // Place records supplement Tour landing/guide pages; these do not automatically
 // represent separately indexable articles.
