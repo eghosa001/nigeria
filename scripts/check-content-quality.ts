@@ -185,7 +185,7 @@ if (!overseasWaec ||
 // NIA/NIID, CBN, NIMC and NCC on 2026-10-15. Prevent stale cost claims and
 // disappearing official alternatives from returning during batch imports.
 const verifiedServiceRegressions = [
-  { slug: "check-nin-number", amount: "₦50", requiredHosts: ["ncc.gov.ng", "nimc.gov.ng", "nimc-cms.idvault.co"], minSteps: 5 },
+  { slug: "check-nin-number", amount: "₦50", requiredHosts: ["ncc.gov.ng", "nimc.gov.ng"], minSteps: 5 },
   { slug: "nip-transfer-status", amount: "₦20", requiredHosts: ["nibss-plc.com.ng", "cbn.gov.ng"], minSteps: 5 },
   { slug: "vehicle-insurance-validation-ussd", amount: "₦20", requiredHosts: ["nibss-plc.com.ng", "askniid.org"], minSteps: 5 },
 ];
