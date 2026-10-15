@@ -4,6 +4,8 @@ import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import type { InsightRange, InsightsReport, SearchPage } from "@/lib/admin-visits-insights";
 import { metricDelta, type TrafficDay } from "@/lib/analytics-period-rollups";
 
+const mobileLabels: Record<InsightRange, string> = { "1d": "1D", "7d": "7D", "30d": "30D", "90d": "90D", all: "All" };
+const ranges: InsightRange[] = ["1d", "7d", "30d", "90d", "all"];
 const labels: Record<InsightRange, string> = {
   "1d": "1 day", "7d": "7 days", "30d": "30 days", "90d": "90 days", all: "All available",
 };
@@ -80,8 +82,22 @@ export function AdminVisitsInsights() {
   const [showSearch, setShowSearch] = useState(20);
   const [showVisited, setShowVisited] = useState(15);
   const [showTrend, setShowTrend] = useState(14);
+  const [mobileShowSearch, setMobileShowSearch] = useState(6);
+  const [mobileShowVisited, setMobileShowVisited] = useState(6);
+  const [mobileShowTrend, setMobileShowTrend] = useState(7);
   const [copied, setCopied] = useState(false);
   const active = useRef<AbortController | null>(null);
+
+  function changeRange(nextRange: InsightRange) {
+    if (nextRange === range) return;
+    setRange(nextRange);
+    setShowSearch(20);
+    setShowVisited(15);
+    setShowTrend(14);
+    setMobileShowSearch(6);
+    setMobileShowVisited(6);
+    setMobileShowTrend(7);
+  }
 
   async function fetchReport(selected: InsightRange, force = false) {
     active.current?.abort();
@@ -229,39 +245,71 @@ export function AdminVisitsInsights() {
         <div><span className="eyebrow">Private reporting · Africa/Lagos</span><h2>Traffic intelligence</h2></div>
         <span className="visits-freshness">Report fetched {new Date(report.generatedAt).toLocaleString("en-NG", { timeZone: "Africa/Lagos" })} WAT</span>
       </div>
-      <p>Search visibility, website page views, changes over time and page-level opportunities. Each data source is identified to avoid misleading totals.</p>
-      <div className="visits-actions">
-        <button type="button" disabled={refreshing} onClick={() => void fetchReport(range, true)}>{refreshing ? "Refreshing…" : "↻ Refresh live data"}</button>
-        <button type="button" onClick={() => void copyForAI()}>{copied ? "✓ Copied" : "Copy report for AI"}</button>
-        <button type="button" onClick={() => download("nigeria-guide-analytics-" + range + ".json", JSON.stringify(sharePayload(), null, 2))}>Export JSON</button>
-        <button type="button" onClick={() => {
-          const rows = [["page","impressions","google_clicks","search_ctr","avg_position"],
-            ...report.searchPages.map((p) => [p.page, p.impressions, p.clicks, p.ctr, p.position])];
-          download("nigeria-guide-search-pages-" + range + ".csv", rows.map((row) => row.map(csvCell).join(",")).join("\r\n"), "text/csv");
-        }}>Export search CSV</button>
-        <button type="button" onClick={() => void lock()}>Lock insights</button>
+      <p className="visits-hero-intro">Search visibility and website traffic, organized to reveal what is growing and what needs attention.</p>
+      <div className="visits-period-picker" role="group" aria-label="Analytics reporting period">
+        {ranges.map((option) => <button key={option} type="button" className={option === range ? "active" : ""}
+          aria-pressed={option === range} onClick={() => changeRange(option)}>
+          <span className="visits-period-short">{mobileLabels[option]}</span>
+          <span className="visits-period-full">{labels[option]}</span>
+        </button>)}
       </div>
+      <div className="visits-current-period-head">
+        <strong>{labels[range]} performance</strong>
+        <small>{range === "all" ? "All available reporting history" : "Compared with the preceding equal-length period"}</small>
+      </div>
+      <div className="visits-current-kpis" aria-label="Selected period key statistics">
+        <div><span>Google impressions</span><strong>{count(current.impressions)}</strong><Delta current={current.impressions} previous={current.previousImpressions} /></div>
+        <div><span>Google clicks</span><strong>{count(current.clicks)}</strong><Delta current={current.clicks} previous={current.previousClicks} /></div>
+        <div><span>Website page views</span><strong>{count(current.pageViews)}</strong><Delta current={current.pageViews} previous={current.previousPageViews} /></div>
+        <div><span>Website visits</span><strong>{count(current.sessions)}</strong><Delta current={current.sessions} previous={current.previousSessions} /></div>
+      </div>
+      <div className="visits-current-secondary">
+        <span>CTR <strong>{current.impressions && current.clicks != null ? percent(current.clicks / current.impressions) : "—"}</strong></span>
+        <span>Avg. position <strong>{current.position == null ? "—" : current.position.toFixed(1)}</strong></span>
+        <span>GA4 last day <strong>{report.latestGA4Date ?? "—"}</strong></span>
+      </div>
+      <div className="visits-actions visits-primary-actions">
+        <button type="button" disabled={refreshing} onClick={() => void fetchReport(range, true)}>{refreshing ? "Refreshing…" : "↻ Refresh"}</button>
+        <button type="button" onClick={() => void copyForAI()}>{copied ? "✓ Copied" : "Copy for AI"}</button>
+      </div>
+      <details className="visits-export-tools">
+        <summary>Exports & privacy</summary>
+        <div className="visits-actions">
+          <button type="button" onClick={() => download("nigeria-guide-analytics-" + range + ".json", JSON.stringify(sharePayload(), null, 2))}>Export JSON</button>
+          <button type="button" onClick={() => {
+            const rows = [["page","impressions","google_clicks","search_ctr","avg_position"],
+              ...report.searchPages.map((p) => [p.page, p.impressions, p.clicks, p.ctr, p.position])];
+            download("nigeria-guide-search-pages-" + range + ".csv", rows.map((row) => row.map(csvCell).join(",")).join("\r\n"), "text/csv");
+          }}>Export search CSV</button>
+          <button type="button" onClick={() => void lock()}>Lock insights</button>
+        </div>
+      </details>
       {error ? <p role="alert" className="form-message error">{error}</p> : null}
       {report.selectedRange !== range ? <p role="status">Loading {labels[range]} — figures below are from the previous selection.</p> : null}
     </section>
 
-    <section className="admin-panel">
-      <div className="section-heading"><div><span className="eyebrow">Cumulative · available history</span><h2>Website totals so far</h2></div></div>
-      <div className="visits-total-grid">
-        <div><span>Google impressions</span><strong>{count(lifetime.impressions)}</strong><small>Search Console · since {report.gscStartDate} (max. 16 months)</small></div>
-        <div><span>Google search clicks</span><strong>{count(lifetime.clicks)}</strong><small>Search Console · same available history</small></div>
-        <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong><small>GA4 clean production traffic · since {report.ga4StartDate}</small></div>
-        <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong><small>GA4 sessions · since {report.ga4StartDate}</small></div>
-      </div>
-      <p className="visits-footnote">These are separately sourced measurements, not additive totals. “All available” is limited by API retention and the clean-tracking start; it is not a claim of unlimited historical coverage.</p>
-    </section>
-
-    <section className="admin-panel">
+    <section className="admin-panel visits-period-panel">
       <div className="section-heading"><div><span className="eyebrow">1 day · 1 week · 1 month · 90 days · history</span><h2>Performance by period</h2></div></div>
-      <div className="visits-table-scroll"><table className="visits-data-table">
+      <div className="visits-mobile-only">
+        <details className="visits-compact-disclosure">
+          <summary>View side-by-side period comparisons</summary>
+          <div className="visits-mobile-period-list">
+            {report.periods.map((row) => <button key={row.key} type="button"
+              className={"visits-period-card " + (row.key === range ? "selected" : "")}
+              onClick={() => changeRange(row.key)}>
+              <strong>{labels[row.key]} <span>{row.key === range ? "• Selected" : "↗"}</span></strong>
+              <span>Impressions <b>{count(row.impressions)}</b></span>
+              <span>Clicks <b>{count(row.clicks)}</b></span>
+              <span>Page views <b>{count(row.pageViews)}</b></span>
+              <span>CTR <b>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</b></span>
+            </button>)}
+          </div>
+        </details>
+      </div>
+      <div className="visits-table-scroll visits-desktop-only"><table className="visits-data-table">
         <thead><tr><th scope="col">Period</th><th scope="col">Impressions (GSC)</th><th scope="col">Clicks (GSC)</th><th scope="col">CTR (GSC)</th><th scope="col">Avg. Google position</th><th scope="col">Page views (GA4)</th><th scope="col">Visits (GA4)</th></tr></thead>
         <tbody>{report.periods.map((row) => <tr key={row.key} className={row.key === range ? "selected" : ""}>
-          <th scope="row"><button className="visits-range-link" type="button" onClick={() => { setRange(row.key); setShowSearch(20); setShowTrend(14); }}>{labels[row.key]}</button><small>{row.key === "all" ? "Available history" : "GA4: " + row.startDate + " – " + row.endDate}</small><small>{"GSC: " + row.gscStartDate + " – " + row.gscEndDate}</small></th>
+          <th scope="row"><button className="visits-range-link" type="button" onClick={() => changeRange(row.key)}>{labels[row.key]}</button><small>{row.key === "all" ? "Available history" : "GA4: " + row.startDate + " – " + row.endDate}</small><small>{"GSC: " + row.gscStartDate + " – " + row.gscEndDate}</small></th>
           <td><strong>{count(row.impressions)}</strong><Delta current={row.impressions} previous={row.previousImpressions} /></td>
           <td><strong>{count(row.clicks)}</strong><Delta current={row.clicks} previous={row.previousClicks} /></td>
           <td>{row.impressions == null || row.clicks == null || row.impressions === 0 ? "—" : percent(row.clicks / row.impressions)}</td>
@@ -275,7 +323,111 @@ export function AdminVisitsInsights() {
       {report.errors.ga4 || report.errors.gsc ? <p className="visits-source-warning">{report.errors.ga4 ? "GA4: " + report.errors.ga4 + ". " : ""}{report.errors.gsc ? "GSC: " + report.errors.gsc : ""}</p> : null}
     </section>
 
-    <section className="admin-panel">
+    <section className="admin-panel visits-trend-panel">
+      <div className="section-heading"><div><span className="eyebrow">Detailed trend · {labels[range]}</span><h2>Daily, weekly and monthly progress</h2></div></div>
+      <div className="visits-actions">{(["day", "week", "month"] as const).map((option) =>
+        <button type="button" key={option} aria-pressed={granularity === option} className={granularity === option ? "active" : ""} onClick={() => { setGranularity(option); setShowTrend(14); setMobileShowTrend(7); }}>
+          By {option}
+        </button>)}</div>
+      <div className="visits-mobile-only visits-mobile-trend">
+        {trends.slice(0, mobileShowTrend).map((row) => <article className="visits-mobile-trend-row" key={row.label}>
+          <h3>{row.label}</h3>
+          <div className="visits-mini-stats">
+            <span><small>Impressions</small><strong>{count(row.impressions)}</strong></span>
+            <span><small>Clicks</small><strong>{count(row.clicks)}</strong></span>
+            <span><small>Page views</small><strong>{count(row.views)}</strong></span>
+            <span><small>CTR</small><strong>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</strong></span>
+          </div>
+        </article>)}
+        {mobileShowTrend < trends.length ? <button type="button" className="visits-show-more"
+          onClick={() => setMobileShowTrend((shown) => shown + 14)}>
+          See more {granularity === "day" ? "days" : granularity === "week" ? "weeks" : "months"} ({trends.length - mobileShowTrend} remaining)
+        </button> : null}
+      </div>
+      <div className="visits-table-scroll visits-desktop-only"><table className="visits-data-table">
+        <thead><tr><th>Reporting {granularity}</th><th>Google impressions</th><th>Google clicks</th><th>Search CTR</th><th>Website page views</th></tr></thead>
+        <tbody>{trends.slice(0, showTrend).map((row) => <tr key={row.label}><th>{row.label}</th><td>{count(row.impressions)}</td><td>{count(row.clicks)}</td><td>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</td><td>{count(row.views)}</td></tr>)}</tbody>
+      </table></div>
+      {!trends.length ? <p>No processed trend dates are available in this period.</p> : null}
+      {showTrend < trends.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowTrend((v) => v + 28)}>Show more reporting periods ({trends.length - showTrend} remaining)</button> : null}
+      {range === "all" ? <p className="visits-footnote">The trend lists the latest 90 reported days; cumulative totals above use the entire available history.</p> : null}
+    </section>
+
+    <section className="admin-panel visits-search-panel">
+      <div className="section-heading"><div><span className="eyebrow">Search Console · {labels[range]}</span><h2>Pages shown in Google and pages clicked</h2></div></div>
+      <div className="visits-search-tools">
+        <label>Find a page<input type="search" value={filter} placeholder="Filter page URL or topic…" onChange={(event) => { setFilter(event.target.value); setShowSearch(20); setMobileShowSearch(6); }} /></label>
+        <label>Analyze by<select value={sort} onChange={(event) => { setSort(event.target.value as typeof sort); setShowSearch(20); setMobileShowSearch(6); }}>
+          <option value="impressions">Most impressions</option>
+          <option value="clicks">Most clicks</option>
+          <option value="opportunity">Potential missed clicks</option>
+          <option value="unclicked">Impressions but zero clicks</option>
+        </select></label>
+      </div>
+      {report.errors.gscPages ? <p className="visits-source-warning">{report.errors.gscPages}</p> : null}
+      <div className="visits-mobile-only visits-mobile-results" aria-label="Google search pages">
+        {searchRows.slice(0, mobileShowSearch).map((row) => <article key={row.page} className="visits-result-card">
+          <div className="visits-result-card-top">
+            <span className="visits-card-kicker">Search page</span>
+            {row.impressions > 0 && row.clicks === 0 ? <span className="visits-zero-click">0 clicks</span> : null}
+          </div>
+          <h3>{pageLink(row.page) ? <a href={pageLink(row.page)!} target="_blank" rel="noopener noreferrer">
+            {shortPage(row.page)}</a> : shortPage(row.page)}</h3>
+          <div className="visits-mini-stats">
+            <span><small>Impressions</small><strong>{count(row.impressions)}</strong></span>
+            <span><small>Clicks</small><strong>{count(row.clicks)}</strong></span>
+            <span><small>CTR</small><strong>{percent(row.ctr)}</strong></span>
+            <span><small>Position</small><strong>{row.position.toFixed(1)}</strong></span>
+          </div>
+        </article>)}
+        {mobileShowSearch < searchRows.length ? <button type="button" className="visits-show-more"
+          onClick={() => setMobileShowSearch((shown) => shown + 10)}>
+          Show 10 more search pages ({searchRows.length - mobileShowSearch} remaining)
+        </button> : null}
+      </div>
+      <div className="visits-table-scroll visits-desktop-only"><table className="visits-data-table">
+        <thead><tr><th>Page</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>Avg. position</th></tr></thead>
+        <tbody>{searchRows.slice(0, showSearch).map((row: SearchPage) => <tr key={row.page}>
+          <th className="visits-page-title">{pageLink(row.page) ? <a href={pageLink(row.page)!} target="_blank" rel="noopener noreferrer">{shortPage(row.page)}</a> : shortPage(row.page)}<small>{row.page}</small></th>
+          <td>{count(row.impressions)}</td><td>{count(row.clicks)}</td><td>{percent(row.ctr)}</td><td>{row.position.toFixed(1)}</td>
+        </tr>)}</tbody>
+      </table></div>
+      {!searchRows.length ? <p>{report.errors.gscPages ? "Search page details are unavailable." : "No matching search pages in this period."}</p> : null}
+      {showSearch < searchRows.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowSearch((v) => v + 30)}>Show more search pages ({searchRows.length - showSearch} remaining)</button> : null}
+      <p className="visits-footnote">{count(report.searchPages.length)} search pages returned. {report.pageListsTruncated.gsc ? "Google returned the 25,000-row limit: this list may be incomplete. " : ""}Page-specific Google impressions are not necessarily additive to property-wide totals. The missed-click ranking is an opportunity heuristic, not a prediction.</p>
+    </section>
+
+    <section className="admin-panel visits-viewed-panel">
+      <div className="section-heading"><div><span className="eyebrow">GA4 · {labels[range]}</span><h2>Pages actually viewed on the website</h2></div></div>
+      {report.errors.ga4Pages ? <p className="visits-source-warning">{report.errors.ga4Pages}</p> : null}
+      <div className="visits-mobile-only visits-mobile-results" aria-label="Website pages visited">
+        {sampledViews.slice(0, mobileShowVisited).map((row, index) => <article key={row.path + index} className="visits-result-card visits-view-card">
+          <span className="visits-card-kicker">Visited page</span>
+          <h3><a href={row.path.startsWith("/") && !row.path.startsWith("//") ? row.path : "/"}
+            target="_blank" rel="noopener noreferrer">{row.title}</a></h3>
+          <small className="visits-path-label">{row.path}</small>
+          <div className="visits-mini-stats">
+            <span><small>Page views</small><strong>{count(row.views)}</strong></span>
+            <span><small>Active users</small><strong>{count(row.users)}</strong></span>
+          </div>
+        </article>)}
+        {mobileShowVisited < sampledViews.length ? <button type="button" className="visits-show-more"
+          onClick={() => setMobileShowVisited((shown) => shown + 10)}>
+          Show 10 more viewed pages ({sampledViews.length - mobileShowVisited} remaining)
+        </button> : null}
+      </div>
+      <div className="visits-table-scroll visits-desktop-only"><table className="visits-data-table">
+        <thead><tr><th>Visited page</th><th>Page views</th><th>Active users</th></tr></thead>
+        <tbody>{sampledViews.slice(0, showVisited).map((row, index) => <tr key={row.path + index}>
+          <th className="visits-page-title"><a href={row.path.startsWith("/") && !row.path.startsWith("//") ? row.path : "/"} target="_blank" rel="noopener noreferrer">{row.title}</a><small>{row.path}</small></th>
+          <td>{count(row.views)}</td><td>{count(row.users)}</td>
+        </tr>)}</tbody>
+      </table></div>
+      {showVisited < sampledViews.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowVisited((v) => v + 30)}>Show more viewed pages ({sampledViews.length - showVisited} remaining)</button> : null}
+      <p className="visits-footnote">{count(sampledViews.length)} GA4 page-title/path rows returned. {report.pageListsTruncated.ga4 ? "Reporting is limited to the top 2,500 rows. " : ""}Views count repeat visits; active users are not additive across different pages.</p>
+    </section>
+
+    <section className="admin-panel visits-live-panel">
       <div className="section-heading"><div><span className="eyebrow">Near realtime signals</span><h2>Latest available activity</h2></div></div>
       <div className="visits-live-grid">
         <div><span>GA4 active visitors · last 30 minutes</span><strong>{count(report.realtime?.activeUsers)}</strong></div>
@@ -292,60 +444,29 @@ export function AdminVisitsInsights() {
       </p> : null}
     </section>
 
-    <section className="admin-panel">
-      <div className="section-heading"><div><span className="eyebrow">Detailed trend · {labels[range]}</span><h2>Daily, weekly and monthly progress</h2></div></div>
-      <div className="visits-actions">{(["day", "week", "month"] as const).map((option) =>
-        <button type="button" key={option} aria-pressed={granularity === option} className={granularity === option ? "active" : ""} onClick={() => { setGranularity(option); setShowTrend(14); }}>
-          By {option}
-        </button>)}</div>
-      <div className="visits-table-scroll"><table className="visits-data-table">
-        <thead><tr><th>Reporting {granularity}</th><th>Google impressions</th><th>Google clicks</th><th>Search CTR</th><th>Website page views</th></tr></thead>
-        <tbody>{trends.slice(0, showTrend).map((row) => <tr key={row.label}><th>{row.label}</th><td>{count(row.impressions)}</td><td>{count(row.clicks)}</td><td>{row.impressions && row.clicks != null ? percent(row.clicks / row.impressions) : "—"}</td><td>{count(row.views)}</td></tr>)}</tbody>
-      </table></div>
-      {!trends.length ? <p>No processed trend dates are available in this period.</p> : null}
-      {showTrend < trends.length ? <button type="button" className="visits-show-more" onClick={() => setShowTrend((v) => v + 28)}>Show more reporting periods ({trends.length - showTrend} remaining)</button> : null}
-      {range === "all" ? <p className="visits-footnote">The trend lists the latest 90 reported days; cumulative totals above use the entire available history.</p> : null}
-    </section>
-
-    <section className="admin-panel">
-      <div className="section-heading"><div><span className="eyebrow">Search Console · {labels[range]}</span><h2>Pages shown in Google and pages clicked</h2></div></div>
-      <div className="visits-search-tools">
-        <label>Find a page<input type="search" value={filter} placeholder="Filter page URL or topic…" onChange={(event) => { setFilter(event.target.value); setShowSearch(20); }} /></label>
-        <label>Analyze by<select value={sort} onChange={(event) => { setSort(event.target.value as typeof sort); setShowSearch(20); }}>
-          <option value="impressions">Most impressions</option>
-          <option value="clicks">Most clicks</option>
-          <option value="opportunity">Potential missed clicks</option>
-          <option value="unclicked">Impressions but zero clicks</option>
-        </select></label>
+    <section className="admin-panel visits-lifetime-panel">
+      <div className="section-heading"><div><span className="eyebrow">Cumulative · available history</span><h2>Website totals so far</h2></div></div>
+      <div className="visits-mobile-only">
+        <details className="visits-compact-disclosure">
+          <summary>See lifetime impressions, clicks, views and visits</summary>
+          <div className="visits-total-grid visits-mobile-totals">
+            <div><span>Search impressions</span><strong>{count(lifetime.impressions)}</strong></div>
+            <div><span>Search clicks</span><strong>{count(lifetime.clicks)}</strong></div>
+            <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong></div>
+            <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong></div>
+          </div>
+        </details>
       </div>
-      {report.errors.gscPages ? <p className="visits-source-warning">{report.errors.gscPages}</p> : null}
-      <div className="visits-table-scroll"><table className="visits-data-table">
-        <thead><tr><th>Page</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>Avg. position</th></tr></thead>
-        <tbody>{searchRows.slice(0, showSearch).map((row: SearchPage) => <tr key={row.page}>
-          <th className="visits-page-title">{pageLink(row.page) ? <a href={pageLink(row.page)!} target="_blank" rel="noopener noreferrer">{shortPage(row.page)}</a> : shortPage(row.page)}<small>{row.page}</small></th>
-          <td>{count(row.impressions)}</td><td>{count(row.clicks)}</td><td>{percent(row.ctr)}</td><td>{row.position.toFixed(1)}</td>
-        </tr>)}</tbody>
-      </table></div>
-      {!searchRows.length ? <p>{report.errors.gscPages ? "Search page details are unavailable." : "No matching search pages in this period."}</p> : null}
-      {showSearch < searchRows.length ? <button type="button" className="visits-show-more" onClick={() => setShowSearch((v) => v + 30)}>Show more search pages ({searchRows.length - showSearch} remaining)</button> : null}
-      <p className="visits-footnote">{count(report.searchPages.length)} search pages returned. {report.pageListsTruncated.gsc ? "Google returned the 25,000-row limit: this list may be incomplete. " : ""}Page-specific Google impressions are not necessarily additive to property-wide totals. The missed-click ranking is an opportunity heuristic, not a prediction.</p>
+      <div className="visits-total-grid visits-desktop-only">
+        <div><span>Google impressions</span><strong>{count(lifetime.impressions)}</strong><small>Search Console · since {report.gscStartDate} (max. 16 months)</small></div>
+        <div><span>Google search clicks</span><strong>{count(lifetime.clicks)}</strong><small>Search Console · same available history</small></div>
+        <div><span>Website page views</span><strong>{count(lifetime.pageViews)}</strong><small>GA4 clean production traffic · since {report.ga4StartDate}</small></div>
+        <div><span>Website visits</span><strong>{count(lifetime.sessions)}</strong><small>GA4 sessions · since {report.ga4StartDate}</small></div>
+      </div>
+      <p className="visits-footnote">These are separately sourced measurements, not additive totals. “All available” is limited by API retention and the clean-tracking start; it is not a claim of unlimited historical coverage.</p>
     </section>
 
-    <section className="admin-panel">
-      <div className="section-heading"><div><span className="eyebrow">GA4 · {labels[range]}</span><h2>Pages actually viewed on the website</h2></div></div>
-      {report.errors.ga4Pages ? <p className="visits-source-warning">{report.errors.ga4Pages}</p> : null}
-      <div className="visits-table-scroll"><table className="visits-data-table">
-        <thead><tr><th>Visited page</th><th>Page views</th><th>Active users</th></tr></thead>
-        <tbody>{sampledViews.slice(0, showVisited).map((row, index) => <tr key={row.path + index}>
-          <th className="visits-page-title"><a href={row.path.startsWith("/") && !row.path.startsWith("//") ? row.path : "/"} target="_blank" rel="noopener noreferrer">{row.title}</a><small>{row.path}</small></th>
-          <td>{count(row.views)}</td><td>{count(row.users)}</td>
-        </tr>)}</tbody>
-      </table></div>
-      {showVisited < sampledViews.length ? <button type="button" className="visits-show-more" onClick={() => setShowVisited((v) => v + 30)}>Show more viewed pages ({sampledViews.length - showVisited} remaining)</button> : null}
-      <p className="visits-footnote">{count(sampledViews.length)} GA4 page-title/path rows returned. {report.pageListsTruncated.ga4 ? "Reporting is limited to the top 2,500 rows. " : ""}Views count repeat visits; active users are not additive across different pages.</p>
-    </section>
-
-    <section className="admin-panel">
+    <section className="admin-panel visits-share-panel">
       <div className="section-heading"><div><span className="eyebrow">Use these data for SEO improvements</span><h2>Share an evidence-based report</h2></div></div>
       <p><strong>Copy report for AI</strong> creates a structured JSON snapshot with all five reporting periods, prior-period changes, 90-day daily trends, source freshness, top pages, low-CTR opportunities, GA4 views and live signals. Paste it into ChatGPT or another analysis tool to identify and prioritize improvements.</p>
       <p className="visits-footnote">No API keys or admin passwords are included. The information covers only what the connected providers returned when refreshed; Google can revise recent data.</p>

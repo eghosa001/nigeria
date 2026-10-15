@@ -1,0 +1,167 @@
+/* Protected Visits / Admin mobile information architecture. */
+.visits-mobile-only { display: none; }
+.visits-period-picker {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+  margin: 17px 0 18px;
+}
+.visits-period-picker button {
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 800;
+  font-size: .83rem;
+  cursor: pointer;
+}
+.visits-period-picker button.active,
+.visits-period-picker button[aria-pressed="true"] {
+  background: var(--green-dark);
+  color: white;
+  border-color: var(--green-dark);
+}
+.visits-period-short { display: none; }
+.visits-hero-intro { max-width: 62ch; line-height: 1.5; }
+.visits-current-period-head { display: flex; flex-wrap: wrap; gap: 5px 12px; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.visits-current-period-head strong { font-size: 1.02rem; }
+.visits-current-period-head small { font-size: .75rem; color: var(--muted); }
+.visits-current-kpis { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.visits-current-kpis > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+  padding: 17px 14px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface);
+}
+.visits-current-kpis span { font-size: .73rem; line-height: 1.45; font-weight: 800; color: var(--muted); }
+.visits-current-kpis strong { font-size: clamp(1.3rem, 2vw, 1.9rem); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; line-height: 1.1; }
+.visits-current-kpis small { font-size: .66rem; line-height: 1.4; }
+.visits-current-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.visits-current-secondary > span {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: .76rem;
+  color: var(--muted);
+}
+.visits-current-secondary strong { color: var(--ink); font-variant-numeric: tabular-nums; }
+.visits-primary-actions { margin-bottom: 0; }
+.visits-export-tools { margin-top: 9px; font-size: .8rem; }
+.visits-export-tools summary { cursor: pointer; font-weight: 750; padding: 8px 0; width: fit-content; }
+.visits-export-tools[open] { padding: 0 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.visits-export-tools .visits-actions { margin: 6px 0 10px; }
+.visits-current-kpis .visits-delta { display: block; white-space: normal; }
+.visits-result-card a:focus-visible, .visits-period-card:focus-visible,
+.visits-period-picker button:focus-visible, .visits-compact-disclosure summary:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+@media (max-width: 980px) {
+  .visits-current-kpis { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 720px) {
+  .admin-page:has(.visits-insights) .container { min-width: 0; }
+  .admin-page:has(.visits-insights) h1 { font-size: clamp(1.65rem, 6vw, 2.05rem); line-height: 1.14; letter-spacing: -.035em; }
+  .admin-page:has(.visits-insights) .page-intro { font-size: .86rem; line-height: 1.5; margin-bottom: 12px; }
+  .visits-insights { gap: 12px; margin: 12px 0; }
+  .visits-insights .admin-panel { padding: 14px; border-radius: 15px; }
+  .visits-insights .section-heading { margin-bottom: 10px; gap: 4px; }
+  .visits-insights .section-heading h2 { font-size: 1.17rem; line-height: 1.3; margin-top: 2px; }
+  .visits-hero .section-heading { margin-bottom: 6px; }
+  .visits-freshness { font-size: .68rem; }
+  .visits-hero-intro { font-size: .78rem; line-height: 1.45; margin: 6px 0 0; }
+  .visits-period-picker { margin: 14px 0; gap: 5px; }
+  .visits-period-picker button { min-height: 44px; padding: 7px 0; font-size: .81rem; border-radius: 9px; }
+  .visits-period-short { display: inline; }
+  .visits-period-full { display: none; }
+  .visits-current-period-head { display: block; margin: 0 0 8px; }
+  .visits-current-period-head strong { display: block; font-size: .94rem; }
+  .visits-current-period-head small { display: block; margin-top: 2px; font-size: .67rem; line-height: 1.4; }
+  .visits-current-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .visits-current-kpis > div { min-height: 103px; padding: 12px; border-radius: 12px; gap: 4px; }
+  .visits-current-kpis span { font-size: .67rem; line-height: 1.35; }
+  .visits-current-kpis strong { font-size: clamp(1.3rem, 5vw, 1.75rem); line-height: 1.2; }
+  .visits-current-kpis small { font-size: .61rem; line-height: 1.3; }
+  .visits-current-secondary { gap: 6px; margin-top: 9px; }
+  .visits-current-secondary > span { padding: 6px 9px; font-size: .67rem; gap: 5px; }
+  .visits-current-secondary > span:last-child { display: none; }
+  .visits-primary-actions { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; margin: 12px 0 0; }
+  .visits-primary-actions > button { min-width: 0; min-height: 44px; white-space: normal; }
+  .visits-export-tools { margin-top: 2px; }
+  .visits-export-tools summary { min-height: 42px; display: flex; align-items: center; font-size: .76rem; }
+  .visits-mobile-only { display: block; }
+  .visits-desktop-only, .visits-insights .visits-desktop-only { display: none !important; }
+  .visits-lifetime-panel > .visits-footnote { font-size: .71rem; margin-top: 8px; }
+  .visits-compact-disclosure { border: 1px solid var(--line); border-radius: 11px; background: var(--surface); }
+  .visits-compact-disclosure > summary { padding: 12px; min-height: 45px; display: list-item; cursor: pointer; font-size: .8rem; font-weight: 750; color: var(--green-dark); }
+  .visits-compact-disclosure[open] > summary { border-bottom: 1px solid var(--line); }
+  .visits-mobile-totals { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); padding: 9px; margin: 0; gap: 8px; }
+  .visits-mobile-totals > div { padding: 10px; }
+  .visits-mobile-totals strong { font-size: 1.18rem; }
+  .visits-mobile-period-list { display: grid; gap: 8px; padding: 9px; }
+  .visits-period-card { display: grid; gap: 7px; text-align: left; width: 100%; border: 1px solid var(--line); border-radius: 11px; background: var(--surface); padding: 12px; color: var(--ink); font: inherit; font-size: .77rem; cursor: pointer; }
+  .visits-period-card.selected { background: var(--mint); border-color: var(--green); }
+  .visits-period-card > strong { display: flex; justify-content: space-between; font-size: .89rem; }
+  .visits-period-card > strong span { font-size: .7rem; color: var(--green); }
+  .visits-period-card > span { display: flex; justify-content: space-between; }
+  .visits-period-card > span b { font-variant-numeric: tabular-nums; }
+  .visits-insights .visits-actions { gap: 7px; }
+  .visits-trend-panel .visits-actions { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .visits-trend-panel .visits-actions button { min-width: 0; min-height: 44px; padding: 9px 5px; }
+  .visits-mobile-trend, .visits-mobile-results { display: grid; gap: 9px; margin: 12px 0; }
+  .visits-mobile-trend-row, .visits-result-card { min-width: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 12px; }
+  .visits-mobile-trend-row h3 { font-size: .84rem; margin: 0 0 9px; }
+  .visits-mini-stats { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px 12px; }
+  .visits-mini-stats > span { min-width: 0; display: grid; gap: 2px; }
+  .visits-mini-stats small { color: var(--muted); font-size: .66rem; line-height: 1.35; }
+  .visits-mini-stats strong { color: var(--ink); font-variant-numeric: tabular-nums; font-size: 1.04rem; overflow-wrap: anywhere; }
+  .visits-mobile-trend-row .visits-mini-stats, .visits-result-card .visits-mini-stats {
+    padding: 9px; background: var(--mint); border-radius: 8px;
+  }
+  .visits-mobile-trend-row .visits-mini-stats { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 6px; }
+  .visits-mobile-trend-row .visits-mini-stats strong { font-size: .89rem; }
+  .visits-mobile-trend-row .visits-mini-stats small { font-size: .58rem; }
+  .visits-search-tools { display: grid; grid-template-columns: 1fr; margin: 8px 0; gap: 9px; }
+  .visits-search-tools label { min-width: 0; width: 100%; }
+  .visits-search-tools input, .visits-search-tools select { min-height: 44px; }
+  .visits-result-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .visits-card-kicker { display: inline-block; text-transform: uppercase; color: var(--muted); letter-spacing: .045em; font-size: .64rem; font-weight: 800; }
+  .visits-zero-click { padding: 4px 6px; background: #fff0df; color: #7c410e; border-radius: 6px; font-size: .64rem; font-weight: 850; }
+  .visits-result-card h3 { font-size: .87rem; line-height: 1.36; margin: 7px 0 11px; overflow-wrap: anywhere; }
+  .visits-result-card h3 a { color: var(--green-dark); text-decoration: none; overflow-wrap: anywhere; }
+  .visits-result-card h3 a:hover { text-decoration: underline; }
+  .visits-path-label { color: var(--muted); font-size: .7rem; display: block; overflow-wrap: anywhere; margin: -5px 0 12px; }
+  .visits-view-card .visits-mini-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .visits-live-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px; }
+  .visits-live-grid > div { min-height: 86px; padding: 10px; gap: 4px; }
+  .visits-live-grid span { font-size: .67rem; line-height: 1.35; }
+  .visits-live-grid strong { font-size: 1.2rem; }
+  .visits-insights .visits-footnote { font-size: .71rem; line-height: 1.45; margin-top: 9px; }
+  .visits-show-more { display: block; width: 100%; min-height: 44px; font-size: .78rem; margin: 8px 0; }
+  .visits-share-panel { display: none; }
+  .visits-more { margin-top: 14px; }
+  .visits-more-toggle { font-size: .78rem; }
+  .visits-source-warning { font-size: .75rem; line-height: 1.45; }
+}
+@media (max-width: 375px) {
+  .visits-insights .admin-panel { padding: 12px; }
+  .visits-current-kpis strong { font-size: 1.36rem; }
+  .visits-mobile-trend-row .visits-mini-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
