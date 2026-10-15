@@ -201,6 +201,9 @@ jobs:
       - name: Verify AEDC refund online route and optional office handling
         if: steps.scope.outputs.service_journey_changed == 'true'
         run: npx tsx --test tests/aedc-map-refund-journey.test.ts
+      - name: Verify Spotify Premium subscription and aftercare guidance
+        if: steps.scope.outputs.service_journey_changed == 'true'
+        run: npx tsx --test tests/spotify-premium-guidance.test.ts
       - name: Verify IndexNow canonical sitemap parsing
         if: steps.scope.outputs.mode == 'indexnow'
         run: |
