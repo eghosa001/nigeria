@@ -10,12 +10,13 @@ export const exploreGrowthWave9: ExploreGuide[] = [
     summary: "Go beyond central Ibadan with a statewide Oyo route covering Ado-Awaye Suspended Lake, IITA forest, Cocoa House, Asejire Reservoir and Old Oyo National Park.",
     intro: [
       "Oyo State's own tourism and investment material highlights a much broader visitor inventory than Ibadan alone. The strongest mix combines the rare Ado-Awaye suspended lake, city heritage, forest recreation and longer road trips into Oke-Ogun and Old Oyo National Park.",
-      "Use Ibadan as the easiest arrival and accommodation base, but do not try to compress the entire state into one day. Ado-Awaye and Old Oyo require separate road planning."
+      "Use Ibadan as the simplest accommodation base if you need reliable city transport and several activities close together. The outlying Ado-Awaye and Old Oyo routes are separate trips, not a plausible single afternoon with central Ibadan.",
+      "Choose the kind of experience before choosing stops: an Ibadan heritage-and-forest day suits travellers who want flexible activity and transport, while an Ado-Awaye ridge visit is more physically demanding and should be planned around safe daylight and locally confirmed access. The state describes these sites as tourism assets, not a guarantee of same-day opening."
     ],
     bestFor: ["Nature and hiking", "Heritage", "Road trips", "Family travel"],
     highlights: [
-      { name: "Ado-Awaye Suspended Lake", detail: "Oyo State identifies Iyake Lake at Ado-Awaye as one of its signature natural attractions and a major tourism-development priority." },
-      { name: "IITA Forest Reserve", detail: "A mature lowland forest and birding environment within the Ibadan research campus." },
+      { name: "Ado-Awaye Suspended Lake", detail: "Iyake Lake sits within Ado-Awaye's remarkable hilltop landscape. For visitors, the distinctive experience is the climb and open ridge setting as much as the lake itself; confirm local access and guiding, wear appropriate footwear and do not plan the outing as an effortless roadside stop." },
+      { name: "IITA Forest Reserve", detail: "This forest and birding environment lies within the IITA research campus in Ibadan. It is a quieter, wildlife-focused contrast to busy central-city landmarks, but visitors should check the campus's current public access policy rather than assuming the research grounds operate as an unrestricted park." },
       { name: "Cocoa House", detail: "The historic Ibadan high-rise remains one of the state's most recognisable urban landmarks." },
       { name: "Old Oyo National Park corridor", detail: "Northern Oyo offers a different landscape and historical context from metropolitan Ibadan." }
     ],
@@ -23,10 +24,13 @@ export const exploreGrowthWave9: ExploreGuide[] = [
       { label: "Split city and countryside", detail: "Keep Ibadan stops together, then give Ado-Awaye or Old Oyo a separate day." },
       { label: "Start Ado-Awaye early", detail: "The climb and ridge environment are better handled with daylight and cooler morning temperatures." },
       { label: "Confirm protected-area access", detail: "Check current Old Oyo National Park entry and ranger arrangements before the drive." },
-      { label: "Verify attraction charges", detail: "Admission, guides and activity charges can change, so use the official/local operator before payment." }
+      { label: "Verify attraction charges", detail: "Admission, guides and activity charges can change, so use the official/local operator before payment; neither a state attraction list nor an old social-media post is a current price list." },
+      { label: "Practical first-time Ibadan day", detail: "Group the central Ibadan heritage stops by neighbourhood; check whether Cocoa House interior access or organised interpretation is offered before travelling, and treat a visit to IITA as conditional on campus permission." },
+      { label: "Separate nature itinerary", detail: "Keep a full daylight window for Ado-Awaye with locally verified approach transport and guide details. Check the terrain and weather on arrival and use a shorter city route if the ridge conditions are unsafe." },
+      { label: "Visitor comfort and alternatives", detail: "Travellers who cannot manage uneven rocky climbs can still enjoy Ibadan cultural sites; do not represent ridge hiking or remote park access as universally accessible." }
     ],
     source: { label: "Oyo State Government — About Oyo State", href: "https://oyostate.gov.ng/about-oyo-state/" },
-    lastReviewed: "2026-10-07"
+    lastReviewed: "2026-10-15"
   },
   {
     slug: "ogun-state-nature-heritage-guide",
@@ -37,23 +41,27 @@ export const exploreGrowthWave9: ExploreGuide[] = [
     summary: "Expand an Ogun trip beyond Abeokuta with Sungbo Eredo, Bilikisu Sungbo heritage, Omo Forest Reserve, springs and the coastal Tongeji Islands.",
     intro: [
       "Ogun State's investment authority identifies a wide tourism-development corridor beyond Olumo Rock, including Sungbo Eredo, Bilikisu Sungbo Queen's Forest, Yemoji Pool, Osuuru Springs, Omo Forest Reserve and Tongeji Islands.",
-      "These sites span very different parts of the state. Treat Abeokuta, Ijebu heritage, forest reserves and the coastal/island corridor as separate clusters rather than one rushed itinerary."
+      "These sites span very different parts of the state. Treat Abeokuta, Ijebu heritage, forest reserves and the coastal/island corridor as separate clusters rather than one rushed itinerary.",
+      "The government source is an investment-opportunity inventory, not an opening-hours directory. For a general visitor, begin with an independently confirmed operating attraction around Abeokuta; Sungbo Eredo is a specialist heritage visit and forest/coastal ventures may need permission or local arrangements. Do not book long-distance transport merely because a place appears on a tourism-development list."
     ],
     bestFor: ["Ancient heritage", "Forest travel", "Eco-tourism", "Road trips"],
     highlights: [
       { name: "Sungbo Eredo", detail: "A vast system of ancient earthworks associated with Ijebu history and one of Ogun's strongest heritage-development assets." },
       { name: "Bilikisu Sungbo Queen's Forest", detail: "A heritage-and-conservation landscape that Ogun State has identified for revitalisation." },
       { name: "Omo Forest Reserve", detail: "A major forest and conservation landscape in eastern Ogun State." },
-      { name: "Tongeji Islands", detail: "The coastal island corridor shows a very different side of Ogun from Abeokuta and the inland heritage route." }
+      { name: "Tongeji Islands", detail: "The Tongeji coastal island corridor is geographically and logistically different from Abeokuta's urban heritage attractions. Treat it as a specialist trip until a local operator has independently confirmed safe boat transport, permission, landing arrangements and accommodation for your dates." }
     ],
     planning: [
       { label: "Choose one corridor per day", detail: "Ijebu heritage, forest reserves and coastal islands require different roads and travel times." },
       { label: "Use local guides for heritage earthworks", detail: "Sungbo Eredo is easier to understand and navigate with local interpretation." },
       { label: "Confirm forest access", detail: "Protected forests may require permission, guides or specific entry arrangements." },
-      { label: "Treat island travel separately", detail: "Do not assume road transport alone reaches every coastal destination; confirm current boat and access arrangements." }
+      { label: "Treat island travel separately", detail: "Do not assume road transport alone reaches every coastal destination; confirm licensed boat arrangements, weather, entry conditions and a reliable return plan before travelling." },
+      { label: "Start with an easy heritage base", detail: "For a first Ogun visit, stay in or return to Abeokuta and choose a confirmed accessible heritage route. Do not add the Ijebu earthworks and remote nature reserves to the same day's urban itinerary." },
+      { label: "Distinguish listed assets from visitor sites", detail: "Ogun's investment portal names Bilikisu Sungbo, Omo Forest Reserve and other tourism prospects. Inclusion there does not prove staffed public opening, bookable guides or working facilities; contact responsible operators before announcing a visit." },
+      { label: "Visitor safety and interpretation", detail: "Bring locally arranged interpretation for Sungbo Eredo, respect community heritage spaces, and use daytime travel for unfamiliar forest or coastal approaches. If access cannot be confirmed, switch to an established public attraction rather than exploring protected or private areas without permission." }
     ],
     source: { label: "OgunInvest — Tourism & Creative Economy", href: "https://invest.ogunstate.gov.ng/tourism-creative-economy" },
-    lastReviewed: "2026-10-07"
+    lastReviewed: "2026-10-15"
   },
   {
     slug: "enugu-state-tourism-route",
