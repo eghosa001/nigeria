@@ -173,6 +173,8 @@ export function AdminVisitsInsights() {
     }];
   }) ?? [];
   const trends = useMemo(() => groupDays(selectedDays, granularity), [selectedDays, granularity]);
+  const opportunities = useMemo(() => (report?.searchPages ?? []).filter((row) => row.impressions >= 100 && row.position <= 15 && row.ctr < 0.01).sort((a, b) => b.impressions - a.impressions).slice(0, 12), [report]);
+  const missingGa4Dates = useMemo(() => (report?.daily ?? []).filter((day) => day.impressions != null && day.pageViews == null).map((day) => day.date), [report]);
   const searchRows = useMemo(() => {
     let rows = report?.searchPages ?? [];
     const query = filter.trim().toLowerCase();
@@ -396,6 +398,13 @@ export function AdminVisitsInsights() {
       {!trends.length ? <p>No processed trend dates are available in this period.</p> : null}
       {showTrend < trends.length ? <button type="button" className="visits-show-more visits-desktop-only" onClick={() => setShowTrend((v) => v + 28)}>Show more reporting periods ({trends.length - showTrend} remaining)</button> : null}
       {range === "all" ? <p className="visits-footnote">The trend lists the latest 90 reported days; cumulative totals above use the entire available history.</p> : null}
+    </section>
+
+    <section className="admin-panel visits-search-panel">
+      <div className="section-heading"><div><span className="eyebrow">Evidence-based SEO priorities</span><h2>High-impression, low-CTR opportunities</h2></div></div>
+      <p className="visits-footnote">Pages with at least 100 impressions, under 1% CTR and average position 15 or better. Review search queries and snippet relevance before editing. This is not an estimate of recoverable clicks.</p>
+      {opportunities.length ? <div className="visits-mobile-results">{opportunities.map((row) => <article key={row.page} className="visits-result-card"><h3>{pageLink(row.page) ? <a href={pageLink(row.page)!} target="_blank" rel="noopener noreferrer">{shortPage(row.page)}</a> : shortPage(row.page)}</h3><div className="visits-mini-stats"><span><small>Impressions</small><strong>{count(row.impressions)}</strong></span><span><small>Clicks</small><strong>{count(row.clicks)}</strong></span><span><small>CTR</small><strong>{percent(row.ctr)}</strong></span><span><small>Position</small><strong>{row.position.toFixed(1)}</strong></span></div></article>)}</div> : <p>No pages currently meet these thresholds.</p>}
+      {missingGa4Dates.length ? <p role="status" className="visits-source-warning">GA4 has no daily rows for {missingGa4Dates.length} dates where GSC has data. Latest examples: {missingGa4Dates.slice(-5).join(", ")}. Missing data is not zero; check provider configuration and collection before interpreting traffic.</p> : null}
     </section>
 
     <section className="admin-panel visits-search-panel">
