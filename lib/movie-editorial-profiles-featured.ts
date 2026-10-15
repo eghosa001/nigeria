@@ -38,10 +38,25 @@ const drafts: Record<string, FeaturedDraft> = {
   },
 
   "what-love-is": {
-    plot: ["What Love Is follows a contemporary romance shaped by uncertainty, expectations and difficult decisions about trust. The central relationship becomes a test of whether affection can survive disagreements about commitment and what each partner owes the other.","The drama is grounded in personal conversations rather than a fantasy setting. Its search identity is the combination of the two leading actors and an original online release, not a generic statement about what love means."],
-    context: ["The film features Maurice Sam and Erica Nlewedim. The original publisher's YouTube video is the viewing reference in the catalog; the title should not be confused with interviews or advice videos that share the same question-like wording.","Specific actor-to-character assignments are deliberately omitted until a credited source provides them. The movie guide separates available cast facts from interpretation of the relationship story."],
-    questions: [{"question":"Who are the stars of What Love Is?","answer":"Maurice Sam and Erica Nlewedim are the documented leads."},{"question":"Is What Love Is available as a film on YouTube?","answer":"The catalog links the authorised full-length publisher upload; check the original video for current playback."}],
-    crew: [],
+    "plot": [
+      "What Love Is is a September 2026 romance about Paul, a Lagos photographer, and Gabriella (Gabby), a fashion entrepreneur who hires him for a month-long assignment. Her wealthy social circle turns his professional restraint into a wager, while he is still involved with Lola, a university student. The competing expectations make the central question more specific than whether two strangers will fall in love: it is whether a working relationship can survive unequal power, private bets and broken trust.",
+      "The drama is built around the difference between attraction and informed consent. Paul does not know about the wager, and Gabby must decide whether to challenge the influence of her friends. This is a spoiler-light description of the documented setup, not a first-hand review or an invented ending. People searching for relationship advice rather than this Maurice Sam film need a different resource."
+    ],
+    "context": [
+      "The original Maurice Sam TV video identifies Maurice Sam and Erica Nlewedim as the leading performers. The film-specific African Movies Database record associates Maurice Sam with photographer Paul and Erica Nlewedim with Gabby, and also lists Okeh Faith Ihotu as Carina and Chidinma Nwoko as Nikki. These assignments are credited to that secondary film record, not inferred from the performers' promotional photographs.",
+      "The original full-length release is dated 8 September 2026. The viewing link points to Maurice Sam TV on YouTube, not a cinema or Netflix announcement. Neither the publisher's upload description nor the checked independent catalogue identifies a director for this production, so no director is attributed until a production credit can be confirmed."
+    ],
+    "questions": [
+      {
+        "question": "Who plays Paul and Gabby in What Love Is (2026)?",
+        "answer": "The film-specific African Movies Database credits Maurice Sam as photographer Paul and Erica Nlewedim as fashion entrepreneur Gabby."
+      },
+      {
+        "question": "Where is the original What Love Is film available?",
+        "answer": "The original September 2026 full-length release is linked on Maurice Sam TV's YouTube channel; check the publisher video for current playback."
+      }
+    ],
+    "crew": []
   },
 
   "irreplaceable": {
