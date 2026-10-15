@@ -94,13 +94,13 @@ async function queryOverview() {
 
   const ga4Days: TrafficDay[] = ga4Daily.status === "fulfilled"
     ? (ga4Daily.value.rows ?? []).map((row) => ({
-        date: textValue(row, 0).replace(/^(\\d{4})(\\d{2})(\\d{2})$/, "$1-$2-$3"),
+        date: textValue(row, 0).replace(/^(\d{4})(\d{2})(\d{2})$/, "$1-$2-$3"),
         pageViews: value(row, 0), sessions: value(row, 1),
-      })).filter((row) => /^\\d{4}-\\d{2}-\\d{2}$/.test(row.date)) : [];
+      })).filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date)) : [];
   const gscDays: TrafficDay[] = gscDaily.status === "fulfilled"
     ? (gscDaily.value.rows ?? []).map((row) => ({
         date: row.keys?.[0] ?? "", impressions: row.impressions ?? 0, clicks: row.clicks ?? 0,
-      })).filter((row) => /^\\d{4}-\\d{2}-\\d{2}$/.test(row.date)) : [];
+      })).filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date)) : [];
   const ga4Totals = ga4Lifetime.status === "fulfilled"
     ? (ga4Lifetime.value.totals?.[0] ?? ga4Lifetime.value.rows?.[0] ?? {}) : null;
   const gscTotals = gscLifetime.status === "fulfilled" ? gscLifetime.value.rows?.[0] : null;
