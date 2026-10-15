@@ -69,7 +69,7 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
     "sector": "Private",
     "status": "closed",
     "statusLabel": "Employer's specific advert has expired — 15 October 2026",
-    "summary": "FMN's Golden Transport Company seeks a Data Tracking Assistant to monitor trucks, drivers, GPS equipment and turnaround times, escalating delays and conduct issues while reporting fleet performance. A diploma or OND and two years of related experience are specified.",
+    "summary": "Archived vacancy: FMN's Golden Transport Company previously advertised a Data Tracking Assistant position covering trucks, drivers, GPS equipment, turnaround times and fleet reporting. The original advert listed a diploma/OND and two years of experience. On 15 October 2026, FMN's exact job URL said this vacancy did not exist or had expired; it is not an open application.",
     "location": "Nigeria (specific Golden Transport depot not stated)",
     "employmentType": "Employer vacancy — consult the official role for contract terms",
     "audiences": [
@@ -130,7 +130,7 @@ export const verifiedFmnRoles20261012: CareerOpportunity[] = [
     "sector": "Private",
     "status": "closed",
     "statusLabel": "Employer's specific advert has expired — 15 October 2026",
-    "summary": "FMN's Golden Transport Company seeks a Data Tracking Officer to coordinate truck and driver tracking, oversee GPS equipment, prepare data reports and monitor operational and compliance performance. Its advert requires an HND/bachelor's degree and three years of related experience.",
+    "summary": "Archived vacancy: FMN's Golden Transport Company previously advertised a Data Tracking Officer role involving truck and driver monitoring, GPS equipment, reporting and compliance. The old advert listed an HND/bachelor's degree and three years of related experience. On 15 October 2026, FMN's exact job URL said the vacancy did not exist or had expired; it is no longer open for applications.",
     "location": "Nigeria (specific Golden Transport depot not stated)",
     "employmentType": "Employer vacancy — consult the official role for contract terms",
     "audiences": [

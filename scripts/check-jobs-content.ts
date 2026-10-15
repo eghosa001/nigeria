@@ -57,6 +57,24 @@ for (const { slug, status } of sourceUnavailableJobs) {
   }
 }
 
+// A change to status alone is insufficient: the article summary and source
+// notes must not continue claiming that an expired/missing role is recruiting.
+for (const slug of [
+  "fmn-golden-transport-data-tracking-assistant-2026",
+  "fmn-golden-transport-data-tracking-officer-2026",
+  "fmn-premier-feed-mills-senior-plant-operations-calabar-2026",
+  "moniepoint-customer-experience-researcher",
+  "eha-dental-assistant-lagos-2026",
+]) {
+  const item = jobOpportunities.find((job) => job.slug === slug);
+  assert(item && ["closed", "unverified"].includes(item.status),
+    slug + " must be historically closed or currently unverifiable.");
+  assert(/archived|former|previously|unverified/i.test(item.summary),
+    slug + " summary must explicitly disclose historical/unverified recruitment status.");
+  assert(!/\b(is hiring|is recruiting|seeks|currently accepting|applications open)\b/i.test(item.summary),
+    slug + " summary must not present the employer's withdrawn role as a current vacancy.");
+}
+
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
 assert(defaultDirectory.items.length <= JOBS_DIRECTORY_PAGE_SIZE, "The browser-facing Jobs directory must be paginated.");

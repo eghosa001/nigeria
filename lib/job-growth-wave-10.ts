@@ -95,7 +95,7 @@ export const jobGrowthWave10: CareerOpportunity[] = [
     sector: "Private",
     status: "unverified",
     statusLabel: "Application status unverified — employer did not show this specific opening on 15 October 2026",
-    summary: "Moniepoint is hiring a Customer Experience Researcher in Lagos to lead qualitative and mixed-method research across customer journeys and product teams.",
+    summary: "Unverified former listing: Moniepoint previously described a Lagos Customer Experience Researcher role focused on qualitative and mixed-method studies across customer journeys. On 15 October 2026, the original Greenhouse link led to the employer's general job board without this role-specific form. No current opening for this exact position has been independently confirmed; check for a new individual advert before applying.",
     location: "Lagos, Nigeria",
     employmentType: "Full-time customer/UX research role",
     audiences: ["UX researchers", "Customer researchers", "Product researchers", "HCI and behavioural-science professionals"],
@@ -123,7 +123,7 @@ export const jobGrowthWave10: CareerOpportunity[] = [
     nextMilestone: "The previously stored exact role route did not show a live application for this job on 15 October 2026. This is an unverified listing, not a formal employer closure notice. Check the current employer board for a newly published role.",
     feeNote: "Use only the official Moniepoint application form.",
     sourceNotes: ["Checked the old Moniepoint researcher vacancy URL on 15 October 2026; it leads to a generic current-openings board without the original researcher job/application form. Treat this listing as unverified, not currently open.", 
-      "The official role is Lagos-based and asks for 4+ years in customer/UX or related qualitative research.",
+      "The previous role description identified Lagos and four or more years of customer/UX or related qualitative research; this is historical criteria, not proof that applications are currently open.",
       "The posting explicitly lists interviews, usability testing, ethnographic work, diary studies, focus groups and ongoing customer discovery among the expected methods."
     ],
     sources: [
