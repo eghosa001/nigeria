@@ -259,12 +259,13 @@ export function AdminVisitsInsights() {
     <section className="admin-panel">
       <div className="section-heading"><div><span className="eyebrow">1 day · 1 week · 1 month · 90 days · history</span><h2>Performance by period</h2></div></div>
       <div className="visits-table-scroll"><table className="visits-data-table">
-        <thead><tr><th scope="col">Period</th><th scope="col">Impressions (GSC)</th><th scope="col">Clicks (GSC)</th><th scope="col">CTR (GSC)</th><th scope="col">Page views (GA4)</th><th scope="col">Visits (GA4)</th></tr></thead>
+        <thead><tr><th scope="col">Period</th><th scope="col">Impressions (GSC)</th><th scope="col">Clicks (GSC)</th><th scope="col">CTR (GSC)</th><th scope="col">Avg. Google position</th><th scope="col">Page views (GA4)</th><th scope="col">Visits (GA4)</th></tr></thead>
         <tbody>{report.periods.map((row) => <tr key={row.key} className={row.key === range ? "selected" : ""}>
           <th scope="row"><button className="visits-range-link" type="button" onClick={() => { setRange(row.key); setShowSearch(20); setShowTrend(14); }}>{labels[row.key]}</button><small>{row.key === "all" ? "Available history" : "GA4: " + row.startDate + " – " + row.endDate}</small><small>{"GSC: " + row.gscStartDate + " – " + row.gscEndDate}</small></th>
           <td><strong>{count(row.impressions)}</strong><Delta current={row.impressions} previous={row.previousImpressions} /></td>
           <td><strong>{count(row.clicks)}</strong><Delta current={row.clicks} previous={row.previousClicks} /></td>
           <td>{row.impressions == null || row.clicks == null || row.impressions === 0 ? "—" : percent(row.clicks / row.impressions)}</td>
+          <td><strong>{row.position == null ? "—" : row.position.toFixed(1)}</strong></td>
           <td><strong>{count(row.pageViews)}</strong><Delta current={row.pageViews} previous={row.previousPageViews} /></td>
           <td><strong>{count(row.sessions)}</strong><Delta current={row.sessions} previous={row.previousSessions} /></td>
         </tr>)}</tbody>
