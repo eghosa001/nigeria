@@ -758,9 +758,9 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       {
         platform: "Netflix",
         label: "Watch on Netflix",
-        href: "https://www.netflix.com/title/81676887",
+        href: "https://www.netflix.com/ng/title/81676887",
         access: "subscription",
-        lastChecked: "2026-09-29",
+        lastChecked: "2026-10-15",
         note: "Official Netflix title page. Regional availability can change.",
       },
     ],
@@ -981,7 +981,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
     cast: ["Genevieve Nnaji", "Nkem Owoh", "Pete Edochie", "Onyeka Onwenu", "Kanayo O. Kanayo"],
     featuredCast: ["Genevieve Nnaji", "Nkem Owoh", "Pete Edochie"],
     references: [{ label: "Netflix newsroom — acquisition and feature production credits for Lionheart", href: "https://about.netflix.com/en/news/netflix-acquires-worldwide-rights-to-lionheart", lastChecked: "2026-10-13", note: "Primary corporate release confirms director, cast, film story and TIFF debut." }],
-    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81030789", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81030789", access: "subscription", lastChecked: "2026-10-15", note: "Official Netflix Nigeria title page." }],
   },
   {
     slug: "swallow",
@@ -1021,7 +1021,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
-    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81572291", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81572291", access: "subscription", lastChecked: "2026-10-15", note: "Official Netflix Nigeria title page." }],
   },
   {
     slug: "citation",
@@ -1103,7 +1103,7 @@ export const entertainmentTitles: EntertainmentTitle[] = [
       publisher: "AfricaOnNetflix",
       publisherUrl: "https://www.youtube.com/@AfricaOnNetflix",
     },
-    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81434660", access: "subscription", lastChecked: "2026-09-29", note: "Official Netflix Nigeria title page." }],
+    watchLinks: [{ platform: "Netflix", label: "Watch on Netflix", href: "https://www.netflix.com/ng/title/81434660", access: "subscription", lastChecked: "2026-10-15", note: "Official Netflix Nigeria title page." }],
   },
   {
     slug: "chief-daddy",
