@@ -114,7 +114,7 @@ const reviewedStorySlugs = [
 for (const slug of reviewedStorySlugs) {
   const film = entertainmentTitles.find((item) => item.slug === slug);
   assert(Boolean(film), slug + ": editorial film profile must remain available.");
-  const storyWords = film!.synopsis.trim().split(/\\s+/).length;
+  const storyWords = film!.synopsis.trim().split(/\s+/).length;
   assert(storyWords >= 70, slug + ": a verified film-specific story guide must not regress to one-sentence boilerplate.");
 }
 for (const slug of ["plus-one", "the-long-way-home", "monica-2", "just-before-forever", "a-place-with-you"]) {
