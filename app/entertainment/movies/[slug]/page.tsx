@@ -127,7 +127,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "My Housemate cast, story, 81-minute runtime and the official Bolaji Ogunmola TV full-movie link, starring Bolaji Ogunmola and Nosa Rex.",
   },
   "monica": {
-    title: "Monica Nigerian Movie Cast & Full Movie on YouTube",
+    title: "Monica Nigerian Movie: Cast & Full Film",
     description: "Monica Nigerian movie cast includes Uche Montana and John Ekanem. See the story, 123-minute runtime and verified Uche Montana TV full-movie link.",
   },
   "all-things-equal": {
