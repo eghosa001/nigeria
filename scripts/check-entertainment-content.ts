@@ -146,6 +146,15 @@ for (const slug of ["plus-one", "the-long-way-home", "monica-2", "just-before-fo
     slug + ": preserve independent film-specific evidence for published story context.");
 }
 
+// The Netflix Nigeria title page explicitly reports regional unavailability.
+// Preserve the film record and its evidence, but do not advertise playback.
+const unavailableColoursOfFire = entertainmentTitles.find((movie) => movie.slug === "colours-of-fire");
+assert(unavailableColoursOfFire?.watchLinks.length === 0 &&
+  unavailableColoursOfFire.references?.some((reference) =>
+    reference.href === "https://www.netflix.com/ng/title/82752912" &&
+    /unavailable/i.test(reference.note ?? "")),
+  "Colours of Fire must not advertise Netflix Nigeria playback while the official page says unavailable.");
+
 const officialLoveRelease = entertainmentTitles.find((movie) => movie.slug === "love-looks-good-on-you-2026");
 assert(officialLoveRelease?.watchLinks.some((link) => link.platform === "YouTube" &&
   link.access === "full-movie" && link.href === "https://www.youtube.com/watch?v=tCa7-acZ9uM"),
