@@ -51,6 +51,14 @@ jobs:
             exit 0
           fi
 
+          service_route_trigger="$(printf '%s\\n' "$changed" | grep -E '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$)' || true)"
+          service_route_other="$(printf '%s\\n' "$changed" | grep -Ev '^(lib/(official-links|service-guidance)[.]ts$|tests/western-union-tracking[.](test[.]ts|spec[.]ts)$|[.]github/workflows/(ci|ui-qa|cloudflare-qa)[.]yml$)' || true)"
+          if [ -n "$service_route_trigger" ] && [ -z "$service_route_other" ]; then
+            echo "mode=service-route" >> "$GITHUB_OUTPUT"
+            echo "Only service journey/action links changed; run focused source, type and route checks."
+            exit 0
+          fi
+
           # Compact admin dashboards and list pagination require types and the
           # directly affected analytics safety checks, not every public catalog.
           admin_ui_changed="$(printf '%s\n' "$changed" | grep -E '^(app/admin/(page|visits/page|services/page|entertainment/page|explore/page|health/page)\.tsx$|app/api/admin/analytics/route\.ts$|app/admin/api/visits-insights/route\.ts$|components/admin-(analytics-dashboard|service-directory|search-console-on-demand|visits-insights|visits-more)\.tsx$|components/admin-visits-mobile\.css$|lib/(analytics-data|admin-visits-insights|analytics-period-rollups|visits-export)\.ts$|tests/admin-editing\.spec\.ts$|tests/analytics-period-rollups\.test\.ts$)' || true)"
@@ -204,6 +212,11 @@ jobs:
       - name: Verify Spotify Premium subscription and aftercare guidance
         if: steps.scope.outputs.service_journey_changed == 'true'
         run: npx tsx --test tests/spotify-premium-guidance.test.ts
+      - name: Verify direct Western Union MTCN journey and provider links
+        if: steps.scope.outputs.mode == 'service-route'
+        run: |
+          npx tsx --test tests/western-union-tracking.test.ts
+          npm run typecheck
       - name: Verify IndexNow canonical sitemap parsing
         if: steps.scope.outputs.mode == 'indexnow'
         run: |
