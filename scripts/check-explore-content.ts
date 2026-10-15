@@ -26,6 +26,30 @@ for (const guide of exploreGuides) {
   }
 }
 
+// Regression: publication screening and the actual Tour guide page must agree
+// about already sourced, shared, canonical place cards. A guide should not be
+// marked 'unmapped' solely because a card's primary owner is another guide.
+const establishedSharedGuideMaps: Record<string, string[]> = {
+  "nigeria-lakes-waterfronts-guide": ["jabi-lake-abuja", "oguta-lake", "agulu-lake"],
+  "nigeria-textile-craft-guide": ["itoku-adire-market", "igun-street"],
+  "abuja-national-landmarks-day": ["abuja-national-mosque", "national-christian-centre-abuja"],
+  "agodi-gardens-guide": ["agodi-gardens-ibadan"],
+  "alake-palace-abeokuta-guide": ["alake-palace-abeokuta"],
+  "ara-rock-guide": ["ara-rock-nasarawa"],
+  "ataoja-palace-osogbo-guide": ["ataoja-palace-osogbo", "osun-osogbo-sacred-grove"],
+};
+for (const [guideSlug, placeSlugs] of Object.entries(establishedSharedGuideMaps)) {
+  const rendered = getExplorePlacesForGuide(guideSlug);
+  const bySlug = new Map(rendered.map(place => [place.slug, place]));
+  for (const slug of placeSlugs) {
+    const place = bySlug.get(slug);
+    if (!place || !place.area.trim() || !place.address.trim() ||
+        !place.source?.href.startsWith("https://")) {
+      errors.push(`${guideSlug}: canonical mapped stop ${slug} needs a real on-page card with address and cited source`);
+    }
+  }
+}
+
 // Four pages were verified individually against current primary heritage,
 // state tourism and official travel-security material. Preserve those source
 // routes and materially useful advice rather than accepting empty padding.
