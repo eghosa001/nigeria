@@ -76,7 +76,7 @@ export default function EntertainmentReleasesPage() {
         {endedItems.length ? (
           <section className="top-gap">
             <div className="section-heading">
-              <div><span className="eyebrow">Recent archive</span><h2>Events that have ended.</h2></div>
+              <div><span className="eyebrow">Recent archive</span><h2>Past listings and events.</h2></div>
             </div>
             <div className="service-grid">
               {endedItems.map((item) => (
