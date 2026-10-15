@@ -10,10 +10,6 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     directors: ["Niyi Akinmolayan"],
     source: { label: "IMDb — Lísàbí: The Uprising full film credits", href: "https://www.imdb.com/title/tt33255000/fullcredits/", lastChecked: "2026-10-15", note: "Full production credits name Niyi Akinmolayan as director. The 2024 Uprising film is distinct from the later sequel, A Legend Is Born." },
   },
-  "issakaba-the-return-2026": {
-    directors: ["Lancelot Oduwa Imasuen"],
-    source: { label: "What Kept Me Up, 3 October 2026 — Issakaba: The Return film announcement", href: "https://whatkeptmeup.com/nigerian-film-news/nollywood-distilled-october-3-2026/", lastChecked: "2026-10-15", note: "Independent film reporting identifies director Lancelot Oduwa Imasuen and a planned Nigerian cinema premiere on 13 November 2026; this is not evidence of current streaming availability." },
-  },
   "chief-daddy": {
     directors: ["Niyi Akinmolayan"],
     source: { label: "EbonyLife Films — Chief Daddy production announcement", href: "https://ebonylifetv.com/filming-wraps-up-for-ebonylife-production-chief-daddy/", lastChecked: "2026-10-15", note: "Producer's production announcement explicitly names Niyi Akinmolayan as director." },
