@@ -5,11 +5,10 @@ const items = [
   ["requirements", "Requirements"],
   ["steps", "Steps"],
   ["after-submit", "After submission"],
-  ["quick-answers", "Quick answers"],
   ["official-sources", "Sources"],
 ] as const;
 
-export function GuideQuickNav() {
+export function GuideQuickNav({ showQuickAnswers = false }: { showQuickAnswers?: boolean }) {
   function jump(id: string) {
     const target = document.getElementById(id);
     if (!target) return;
@@ -21,7 +20,7 @@ export function GuideQuickNav() {
   return (
     <nav className="guide-quick-nav" aria-label="On this page">
       <span>On this page</span>
-      {items.map(([id, label]) => (
+      {[...items.slice(0, 4), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(4)].map(([id, label]) => (
         <a
           key={id}
           href={"#" + id}
