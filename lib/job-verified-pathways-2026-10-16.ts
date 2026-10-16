@@ -93,8 +93,7 @@ export function applyVerifiedJobPaths20261016(item: CareerOpportunity): CareerOp
     `Before applying, ${checked.criteria}.`,
     `Prepare concrete examples of ${checked.prepare}; use accurate dates and responsibilities from your own work, not copied vacancy language.`,
     ...(fmn ? [
-      "FMN requires an applicant registration and login ID/password. Use the registration route linked by its official e-recruiter, rather than sending a CV to an informal recruiter.",
-      "Complete the required FMN CV sections — Personal Details, Computer Exposure, Tertiary Education and Referee — in your candidate account before attempting the role-specific application."
+      `For ${item.title}, FMN requires registration with an applicant ID and password; complete its CV profile fields (Personal Details, Computer Exposure, Tertiary Education and Referee) before using the vacancy's own Apply button. Registration alone is not a submitted job application.`
     ] : []),
     fmn
       ? "Return to this exact vacancy and use its View / Apply control with your own login. Retain the application acknowledgement; a public vacancy page alone cannot prove your submission was accepted."
