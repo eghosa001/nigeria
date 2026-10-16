@@ -156,8 +156,68 @@ const verifiedSecurityJourney: Record<string, ServiceJourney> = {
   },
 };
 
+// Editorially verified exception routes: a provider information URL does not
+// establish a fully online transaction, nor does it make a school request an app.
+const verifiedEditorialJourneys: Record<string, ServiceJourney> = {
+  "waec-confirm-result-nigeria": {
+    mode: "agency-guided", modeLabel: "WAEC confirmation and courier",
+    startLabel: "Prepare WAEC's school-candidate confirmation package",
+    startDetail: "WAEC lists the affidavit, result copy, two passport photographs, two 9x4 envelopes and scratch card. Confirm the WAEC submission/payment route and recipient delivery before dispatch.",
+    onlineAvailable: false, physicalStatus: "may-be-required",
+    physicalLabel: "Document handover and/or approved courier service",
+    alternativeLabel: "Is an instant online confirmation available?",
+    alternativeDetail: "WAEC's requirements page is information, not an online instant verification form. Confirm the actual submission arrangement with WAEC.",
+  },
+  "waec-correct-certificate-error": {
+    mode: "agency-guided", modeLabel: "WAEC / school principal",
+    startLabel: "Use the correct school or private-candidate route",
+    startDetail: "School candidates must contact the principal; private candidates apply to WAEC directly. WAEC requires the original certificate with the amendment request.",
+    onlineAvailable: false, physicalStatus: "may-be-required",
+    physicalLabel: "Original certificate must be submitted by the WAEC-approved route",
+    alternativeLabel: "If you cannot send the original safely",
+    alternativeDetail: "Ask the principal or WAEC to confirm its current original-document handover and acknowledgement process.",
+  },
+  "waec-withheld-result-complaint": {
+    mode: "online", modeLabel: "Official WAEC complaint portal",
+    startLabel: "Follow WAEC Nigeria's complaints/defence notice",
+    startDetail: "Start with WAEC's official withheld/held-result announcement and follow its waecinternational.org complaints link; entering a defence does not guarantee release.",
+    onlineAvailable: true, physicalStatus: "not-stated",
+    physicalLabel: "No mandatory visit stated in the complaint notice",
+    alternativeLabel: "If the complaints portal is unavailable",
+    alternativeDetail: "Recheck the notice on waecnigeria.org for the genuine complaints link rather than using an unofficial form.",
+  },
+  "neco-institution-verification": {
+    mode: "online", modeLabel: "NECO institutional e-Verify",
+    startLabel: "Choose Institutional Verifier",
+    startDetail: "Start at everify.neco.gov.ng, register or sign in as an institution and wait for NECO's registration verification when applicable. Use verified candidate token/RRR or reference-code workflows.",
+    onlineAvailable: true, physicalStatus: "not-stated",
+    physicalLabel: "No compulsory office visit published for the online verification request",
+    alternativeLabel: "If registration or token validation fails",
+    alternativeDetail: "Contact the official NECO e-Verify support team rather than paying an unapproved intermediary.",
+  },
+  "nin-name-modification": {
+    mode: "hybrid", modeLabel: "NIMC self-service or assisted centre",
+    startLabel: "Use the official NIMC modification route",
+    startDetail: "Start at NIMC Self-Service Modifications with the existing NIN. Prepare affidavit/newspaper extract and, for marriage cases, the relevant marriage certificate.",
+    onlineAvailable: true, physicalStatus: "may-be-required",
+    physicalLabel: "A NIMC centre-assisted path is published for applicants who need it",
+    alternativeLabel: "If online modification is unavailable",
+    alternativeDetail: "Use an authorised NIMC enrolment centre and verify the official fee/invoice before payment.",
+  },
+  "nin-address-modification": {
+    mode: "hybrid", modeLabel: "NIMC self-service or assisted centre",
+    startLabel: "Update the existing NIN address field",
+    startDetail: "Use the official NIMC modification service with accepted proof of address, such as a utility bill, tenancy agreement, bank statement or community-leader attestation.",
+    onlineAvailable: true, physicalStatus: "may-be-required",
+    physicalLabel: "NIMC also documents an assisted centre procedure",
+    alternativeLabel: "If the self-service request is rejected",
+    alternativeDetail: "Confirm which official address proof is acceptable and ask NIMC about the centre-assisted option.",
+  },
+};
+
 export function getServiceJourney(service: Service): ServiceJourney {
   if (verifiedSecurityJourney[service.slug]) return verifiedSecurityJourney[service.slug];
+  if (verifiedEditorialJourneys[service.slug]) return verifiedEditorialJourneys[service.slug];
   // The Glo webpage explains eSIM but does not accept a complete online swap.
   // Its official FAQ requires NIN checks and QR installation at a Gloworld/dealer outlet.
   if (service.slug === "glo-esim-activation") {

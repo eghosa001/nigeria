@@ -1317,43 +1317,48 @@
     "slug": "waec-confirm-result-nigeria",
     "title": "How to confirm a WAEC result for an institution in Nigeria",
     "shortTitle": "WAEC result confirmation in Nigeria",
-    "summary": "WAEC's published requirements and current administrative fee for local result confirmation.",
+    "summary": "WAEC result confirmation for a school candidate is a formal dispatch to a named recipient, not an instant online result checker. Prepare the result copy, court affidavit, two passport photographs, two 9x4 envelopes and the specified scratch card, then confirm payment and courier arrangements with WAEC. WAEC currently lists a ₦19,500 local administrative charge per result/recipient and ₦13,000 for the scratch card; courier charges are additional.",
     "category": "Education",
     "agencySlug": "waec",
-    "feeLabel": "₦19,500 administrative charge",
-    "feeNote": "WAEC's current FAQ/requirements page lists ₦19,500 per result/recipient for institutions within Nigeria, plus other required items/courier costs.",
+    "feeLabel": "Published local fee: ₦19,500 per result/recipient + ₦13,000 scratch card; courier extra",
+    "feeNote": "WAEC's published school-candidate confirmation requirements list ₦19,500 administration per result/recipient for delivery within Nigeria, a ₦13,000 scratch card and separate courier charges. These are distinct amounts, not an all-inclusive ₦19,500 service. Confirm the current bill and approved courier with WAEC before paying; international/embassy charges follow a different route.",
     "status": "verified",
     "officialPortal": "https://www.waecnigeria.org/article/requirements-confirmation-result-school-candidates",
     "requirements": [
-      "Copy of certificate or online result printout",
-      "Sworn affidavit",
-      "Two recent passport photographs",
-      "Two 9x4 envelopes",
-      "WAEC scratch card as specified by WAEC"
+      "Photocopy of the WAEC certificate or online result printout identifying the examination record.",
+      "A sworn court affidavit specifically requesting confirmation of result.",
+      "Two recent passport-size photographs of the candidate.",
+      "Two 9x4 envelopes, as listed in WAEC's school-candidate requirements.",
+      "The specified WAEC scratch card, the recipient institution's accurate name and delivery address, and funds for published charges/courier."
     ],
     "steps": [
-      "Prepare the documents WAEC lists for confirmation.",
-      "Pay the applicable WAEC administrative charge and other required costs.",
-      "WAEC sends confirmed results directly to the requesting institution/establishment."
+      "Read the official WAEC 'Requirements for Confirmation of Result for School Candidates' page; this is for a confirmation sent to a recipient, not online checking or a replacement certificate.",
+      "Prepare the result printout/certificate copy, court affidavit, two passport photos, two 9x4 envelopes and the WAEC scratch card the requirements page specifies.",
+      "Identify the Nigerian institution/establishment that must receive the confirmation and check its delivery details before asking WAEC to dispatch.",
+      "Confirm with WAEC how to submit the package and settle the local administrative fee, scratch-card cost and courier cost through approved channels. Do not treat any one component as the total charge.",
+      "WAEC dispatches the confirmation to the named institution using the approved courier arrangement. Retain the courier reference and ask the receiving institution to acknowledge delivery of the specific result confirmation."
     ],
     "notes": [
-      "Confirmed results are not handed to candidates."
+      "WAEC publishes separate charges for local and international/embassy recipients. This guide covers a Nigerian recipient; use the overseas guide for the other category.",
+      "WAEC's requirement page lists approved courier agents at its office but says it is not liable for courier-company misconduct. Confirm the delivery address and retain the official dispatch receipt.",
+      "A scanned result or ordinary website check is not the same as a result-confirmation letter dispatched to a third party.",
+      "Prices are published amounts, not a guarantee of the current cashier total; verify charges with WAEC."
     ],
     "sources": [
       {
         "label": "WAEC Confirmation of Result Requirements",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/article/requirements-confirmation-result-school-candidates",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "WAEC Nigeria FAQ",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/faq",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "WAEC result confirmation in Nigeria",
       "How to confirm a WAEC result for an institution in Nigeria",
@@ -1651,38 +1656,41 @@
     "slug": "neco-e-verify",
     "title": "How to verify or confirm a NECO result with e-Verify",
     "shortTitle": "NECO e-Verify",
-    "summary": "NECO's official e-Verify portal lets an individual, employer or institution request secure confirmation of a NECO examination result. Choose the appropriate verifier account, enter the candidate's examination details, follow the displayed payment/token instructions and collect the verification report when it is ready.",
+    "summary": "NECO e-Verify is the official result confirmation service for individuals and authorised organisations. An individual chooses the Individual Verifier account, purchases a payment token, validates the payment before submitting candidate details and can download a verification PDF. Institutional verifiers use a separate login; NECO also supports candidate token/RRR transfer and reference-code requests.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Payment token required",
     "status": "verified",
     "officialPortal": "https://everify.neco.gov.ng/index.php",
     "requirements": [
-      "NECO e-Verify account",
-      "Candidate full name, NECO examination number, examination year and examination type used to locate the result record",
-      "Payment token/RRR"
+      "The correct individual or institutional NECO e-Verify account for the intended verifier.",
+      "Candidate examination number, type and year, and the other identity fields requested by the NECO application.",
+      "A paid and validated verification token or applicable authorised institution reference.",
+      "A usable email address for portal notices and any report delivery."
     ],
     "steps": [
-      "Create an account on, or sign in to, the official NECO e-Verify platform and select the result verification or confirmation service required.",
-      "Enter the candidate and examination details requested for the verification, checking the examination year, type and registration information before proceeding.",
-      "Generate the payment token or RRR through the e-Verify workflow, complete the authorised payment and return to the platform to validate it against the request.",
-      "Submit the verification application only after payment is validated and the candidate details shown on screen match the record you intend to verify.",
-      "Monitor the e-Verify account for completion, then download the generated report when available and check the recipient email if email delivery was selected."
+      "Open https://everify.neco.gov.ng/ and choose Individual Verifier for a personal check, or Institutional Verifier for an authorised institution.",
+      "Register or sign in to the matching account. Check the examination record, particularly the number, year and examination type, before paying.",
+      "Select 'Purchase Token' and make the payment through the NECO-linked RevOp/Remita checkout shown by the dashboard; do not pay an unrelated website.",
+      "Return to the e-Verify account and use 'Validate Token Payment' before submitting any result-verification application.",
+      "Choose 'Submit Application', enter and validate the candidate examination details, and submit the request.",
+      "When processed, use 'View Report' to obtain the PDF; check the recipient email if you provided one. If an institution needs a paid token or reference code, use NECO's published transfer/reference process."
     ],
     "notes": [
-      "NECO says the report can also be sent to the provided recipient email.",
-      "The live NECO portal separates individual verification from institutional verification, with different account registration and login links. Do not start under the wrong applicant category.",
-      "If the account or report fails to load, use the NECO e-Verify support contact displayed on the portal rather than paying an unofficial verification agent."
+      "The live NECO portal has distinct Institutional Verifier and Individual Verifier registration links; selecting the wrong route can block the intended application.",
+      "NECO warns institutions to verify candidate tokens/RRR through the official dashboard and supports a reference-code alternative where applicable.",
+      "NECO's published historic coverage starts at 2000 for SSCE Internal and 2002 for SSCE External. Photograph/date-of-birth availability differs by examination year; missing photos alone do not invalidate a report.",
+      "For login, payment validation or report problems, contact everifysupport@neco.gov.ng using the contact details listed on the official site."
     ],
     "sources": [
       {
         "label": "NECO e-Verify",
         "agency": "National Examinations Council",
         "url": "https://everify.neco.gov.ng/index.php",
-        "lastChecked": "2026-10-15"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-15",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NECO e-Verify",
       "How to verify or confirm a NECO result with e-Verify",
@@ -2370,35 +2378,39 @@
     "slug": "nrs-individual-tax-registration",
     "title": "How to register as an individual taxpayer with NRS",
     "shortTitle": "NRS individual taxpayer registration",
-    "summary": "The official NRS self-service registration route includes an Individuals category for people with NIN and non-resident persons.",
+    "summary": "NRS's taxpayer registration page separates Corporate, Individuals, Non-Resident and Free Trade Zone accounts. The Individuals option explicitly covers people with a NIN; applicants with a separate non-resident or business/FTZ registration need to follow the category appropriate to their actual tax status. An unfinished application can be continued with its Registration ID.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "No registration fee stated on NRS self-service page",
     "status": "verified",
     "officialPortal": "https://selfservice.nrs.gov.ng/registration",
     "requirements": [
-      "NIN for the Individuals registration category",
-      "Access to the NRS self-service registration page",
-      "Registration ID if resuming an already-started NRS registration"
+      "Correct registration category: Individuals for a qualifying person with NIN, or the separately listed Non-Resident category where applicable.",
+      "Personal taxpayer identity and contact data requested on the NRS form.",
+      "The Registration ID if continuing a previously started registration.",
+      "Access to the official NRS login/SSO route after registration."
     ],
     "steps": [
-      "Open the NRS taxpayer self-service registration page.",
-      "Choose Individuals — the NRS page identifies this route for individuals with NIN and non-resident persons.",
-      "Complete the identity/contact fields presented by the NRS registration form and save the Registration ID generated for any later continuation.",
-      "Use Continue Registration with that Registration ID if the registration was started but not completed in one session."
+      "Visit https://selfservice.nrs.gov.ng/registration and review the four categories before selecting the appropriate account type.",
+      "Choose Individuals if registering as a NIN-holding individual; verify whether the separate Non-Resident option is appropriate instead if you are registering as a non-resident applicant.",
+      "Enter only the identity and contact fields required on the NRS registration form, ensuring they match the taxpayer's genuine records.",
+      "Retain the Registration ID that the portal provides for continuation, rather than opening duplicate registrations after an interrupted session.",
+      "Return to the registration page and use 'Continue Registration' with the ID if needed. After completion, access the NRS taxpayer dashboard through its official account/SSO login."
     ],
     "notes": [
-      "Use the federal NRS route only for taxes/services under NRS jurisdiction; state tax obligations can involve the relevant state authority."
+      "NRS shows a distinct Non-Resident category even though its Individuals description mentions non-resident persons: choose based on the specific registration instructions, not the short category label alone.",
+      "The NRS portal's 'Tax Clearance', 'Refunds', 'Payments' and 'Self Tax Filing' options are account services after registration; they are not separate steps to obtain a taxpayer registration ID.",
+      "Federal NRS registration does not automatically settle state-specific tax registration obligations."
     ],
     "sources": [
       {
         "label": "NRS Taxpayer Registration",
         "agency": "Nigeria Revenue Service",
         "url": "https://selfservice.nrs.gov.ng/registration",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NRS individual taxpayer registration",
       "How to register as an individual taxpayer with NRS",
@@ -2414,35 +2426,39 @@
     "slug": "nrs-corporate-tax-registration",
     "title": "How to register a corporate taxpayer with NRS",
     "shortTitle": "NRS corporate taxpayer registration",
-    "summary": "NRS provides a Corporate registration category for entities incorporated with CAC under CAMA.",
+    "summary": "For a business incorporated with CAC under CAMA, select Corporate on the official NRS taxpayer registration page. This is not the Individuals, Non-Resident or Free Trade Zone route. Enter the genuine company details, preserve the Registration ID if the form is interrupted and use the official NRS login to manage the resulting taxpayer account.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "No registration fee stated on NRS self-service page",
     "status": "verified",
     "officialPortal": "https://selfservice.nrs.gov.ng/registration",
     "requirements": [
-      "A business/entity incorporated with CAC under CAMA",
-      "The CAC/entity details used to identify the corporate taxpayer",
-      "Registration ID if resuming an already-started NRS registration"
+      "A CAC-incorporated business or entity that matches the portal's Corporate definition.",
+      "Correct company registration and taxpayer contact details requested during registration.",
+      "An authorised person managing the corporate application and any NRS account/SSO information required.",
+      "Registration ID if continuing an unfinished registration."
     ],
     "steps": [
-      "Open the NRS taxpayer self-service registration page.",
-      "Choose Corporate — NRS labels this category for business entities incorporated with CAC under CAMA.",
-      "Enter the corporate/entity information presented by the NRS registration form and save the Registration ID generated for continuation.",
-      "If the session is interrupted, return to the registration page and use Continue Registration with the saved Registration ID."
+      "Open https://selfservice.nrs.gov.ng/registration and check the registration category list.",
+      "Select Corporate only for the incorporated company/entity under CAMA; NRS displays separate options for individuals, non-residents and free-trade-zone entities.",
+      "Enter the company's CAC/entity details and the authorised contacts requested by the online form; compare them with the CAC record rather than using unrelated personal information.",
+      "Keep the Registration ID used by 'Continue Registration' if the form cannot be finished in one session.",
+      "Complete the official registration route and use the provider's genuine NRS SSO/taxpayer dashboard for subsequent filing, payment or tax-clearance tasks."
     ],
     "notes": [
-      "The NRS portal separately lists Corporate, Individuals, Non-Resident and Free Trade Zone registration categories."
+      "Corporate registration identifies a legal entity: it should not be substituted for an owner's personal NIN registration.",
+      "Where the entity falls under NRS's separate Non-Resident or Free Trade Zone category, verify the correct registration route rather than forcing a corporate form.",
+      "The NRS registration landing page establishes the category and continuation mechanism; it does not publish a universal processing deadline."
     ],
     "sources": [
       {
         "label": "NRS Taxpayer Registration",
         "agency": "Nigeria Revenue Service",
         "url": "https://selfservice.nrs.gov.ng/registration",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NRS corporate taxpayer registration",
       "How to register a corporate taxpayer with NRS",
@@ -2458,7 +2474,7 @@
     "slug": "nrs-tax-clearance-certificate",
     "title": "Where to access tax clearance on the NRS portal",
     "shortTitle": "NRS tax clearance",
-    "summary": "NRS lists Tax Clearance among the services available from its taxpayer self-service portal.",
+    "summary": "NRS lists 'Tax Clearance' as a service inside its authenticated taxpayer self-service portal. Sign in using the official NRS SSO or the account route presented, open Tax Clearance and check the taxpayer's compliance/assessment record before requesting or downloading a certificate. The public landing page does not guarantee immediate TCC issuance.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "Depends on tax position/obligations",
@@ -2469,23 +2485,26 @@
       "The taxpayer's current compliance/assessment position shown in the NRS account, including any outstanding action that must be cleared before the Tax Clearance Certificate becomes available"
     ],
     "steps": [
-      "Sign in to the official NRS taxpayer self-service portal using the account/SSO route available to the taxpayer.",
-      "Open the Tax Clearance service from the self-service dashboard.",
-      "Review the taxpayer's compliance/assessment position and complete any outstanding action the NRS account shows before requesting or downloading the Tax Clearance Certificate.",
-      "Download the TCC from the Tax Clearance service when the portal makes it available for the compliant taxpayer record."
+      "Open https://selfservice.nrs.gov.ng/ and use 'Continue with NRS SSO' or the existing TaxPro Max/Rev360 credential option currently shown to that taxpayer.",
+      "Confirm you are in the account for the right taxpayer; do not use an unrelated individual record for a corporate clearance request.",
+      "Open 'Tax Clearance' in the taxpayer dashboard and check the available certificate or outstanding compliance/assessment action.",
+      "Resolve only the verified tax obligations shown inside the genuine portal and use NRS's authorised payment method if the account indicates a balance.",
+      "Download the Tax Clearance Certificate when the account shows it is available. If the function is unavailable or records conflict, contact official NRS support before claiming you hold a valid TCC."
     ],
     "notes": [
-      "The portal also provides self tax filing, payments, refunds, assessments and tax-wallet functions."
+      "NRS's public portal lists Tax Clearance, Payments, Assessments and Self Tax Filing as distinct account functions, not a single automatic certificate issuance flow.",
+      "The landing page supports SSO and existing TaxPro Max/Rev360 sign-in choices; an old login route may not match every taxpayer's current account.",
+      "The portal does not publish one guaranteed TCC issuance time or a flat TCC processing fee on its public home page."
     ],
     "sources": [
       {
         "label": "NRS Taxpayer Self-Service Portal",
         "agency": "Nigeria Revenue Service",
         "url": "https://selfservice.nrs.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NRS tax clearance",
       "Where to access tax clearance on the NRS portal",
@@ -2708,34 +2727,46 @@
     "slug": "waec-correct-certificate-error",
     "title": "How to request correction of an error on a WAEC certificate",
     "shortTitle": "Correct WAEC certificate error",
-    "summary": "WAEC explains different submission routes for school and private candidates requesting certificate amendments.",
+    "summary": "WAEC's official certificate-amendment FAQ distinguishes school candidates, whose principal submits the request, from private candidates, who apply directly to WAEC. In either case WAEC requires the original certificate with the amendment application. WAEC says the correction is chargeable if the error came from the candidate; otherwise it is free. Confirm the approved handover method before releasing an original document.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "A fee may apply if the error came from the candidate",
     "status": "verified",
     "officialPortal": "https://www.waecnigeria.org",
     "requirements": [
-      "Original certificate",
-      "Evidence supporting the requested correction",
-      "School-principal route for school candidates or direct WAEC request for private candidates"
+      "The original WAEC certificate containing the disputed error.",
+      "A clear explanation of the exact incorrect field and the requested correction, with relevant supporting evidence.",
+      "For a school candidate, the school principal's submission channel; for a private candidate, direct contact with WAEC.",
+      "A safe WAEC-confirmed method for handing over the original certificate, plus a receipt or acknowledgement of submission."
     ],
     "steps": [
-      "School candidates should route the request through the school principal.",
-      "Private candidates should submit the amendment request directly to WAEC.",
-      "Include the original certificate and supporting documents requested by WAEC."
+      "Compare the certificate against the authoritative document supporting the requested correction, and identify the specific wrong entry.",
+      "If you sat as a school candidate, contact your former school principal to prepare and send the amendment request to WAEC; do not bypass the principal on the assumption that all candidates use the same route.",
+      "If you were a private candidate, contact the relevant WAEC office directly and ask about its certificate-amendment intake instructions.",
+      "Include the original certificate with the amendment application as WAEC requires, but first verify the official submission/handover route and obtain acknowledgement when handing over the original.",
+      "Ask WAEC to confirm whether the error originated with the candidate and whether a fee applies. Do not pay an unverified fixed amount or rely on an unofficial amendment agent.",
+      "Follow up through the same school/WAEC route until the amended certificate or formal decision is provided."
     ],
     "notes": [
-      "WAEC says amendments are charged where the error originated from the candidate; otherwise the correction is free."
+      "WAEC's FAQ expressly assigns school-candidate applications to principals and private-candidate applications to WAEC directly.",
+      "The published policy makes the cause of error material to the fee: candidate-originated errors may attract a charge; otherwise WAEC says the correction is free.",
+      "Do not confuse correcting a certificate with checking a result, result confirmation for an institution or replacing a lost certificate."
     ],
     "sources": [
       {
         "label": "WAEC Nigeria FAQ",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/faq",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "WAEC Nigeria — original certificate amendment FAQ",
+        "agency": "West African Examinations Council Nigeria",
+        "url": "https://waecnigeria.org/node/17",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Correct WAEC certificate error",
       "How to request correction of an error on a WAEC certificate",
@@ -2812,34 +2843,47 @@
     "slug": "neco-institution-verification",
     "title": "How institutions verify NECO results with e-Verify",
     "shortTitle": "NECO institution verification",
-    "summary": "NECO e-Verify supports institutional single/bulk verification and API integration.",
+    "summary": "An institution or employer verifying NECO results should use NECO e-Verify's institutional account, not the individual verifier login. NECO permits single/bulk checks, candidate-paid tokens or references, and API integration for approved institutional workflows. The institutional registration page says account details are checked by NECO before use.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Verification payment/token required",
     "status": "verified",
-    "officialPortal": "https://everify.neco.gov.ng/index.php",
+    "officialPortal": "https://everify.neco.gov.ng/",
     "requirements": [
-      "Institution e-Verify account",
-      "Candidate full name, NECO examination number, examination year and examination type used to locate the result record",
-      "Payment token/RRR as applicable"
+      "Official institution/organisation identity and an authorised administrator's name and contact details for institutional registration.",
+      "The candidate's correct examination number, year and examination type for each result being checked.",
+      "A valid NECO e-Verify payment token/RRR, candidate reference code or institutional payment workflow, as applicable.",
+      "Authorised access to the candidate result and a recipient email/account for the NECO verification report."
     ],
     "steps": [
-      "Create or sign in to the institution e-Verify account.",
-      "Generate/validate the required payment token.",
-      "Submit the candidate verification request or use the supported institutional/API route."
+      "Open everify.neco.gov.ng and choose Institutional Verifier; do not create an Individual Verifier account for the institution's bulk or API workflow.",
+      "Use 'Register Institution' if the institution does not have an approved account, providing its official institutional and administrator details. NECO says registration information is verified before the bulk route can be used.",
+      "Sign in to the institutional dashboard after approval and select single verification, bulk verification or the documented API integration option appropriate to your organisation.",
+      "If the candidate has paid for verification, open 'Verify Candidate Token' in the institutional dashboard and validate their NECO token or RRR. For a reference-code request, enter the issued reference code using the application field shown by NECO.",
+      "Check examination number/type/year and validate payment through the official dashboard before submitting the institutional verification request.",
+      "Retrieve the official report through the dashboard or the recipient email used for the request; contact NECO e-Verify support when a token or account is rejected."
     ],
     "notes": [
-      "NECO states that institutions can carry out single or bulk verification and can integrate through its e-Verify API."
+      "NECO states that institutions can use bulk verification and an API, but institutional registration may require Council verification before use.",
+      "NECO's live portal distinguishes institutional and individual accounts and publishes candidate token/RRR and reference-code workflows; the fee is generated inside the official payment flow.",
+      "NECO says e-Verify reports may lack passport photographs for some examination years; the absence of a photograph alone does not invalidate the verification report.",
+      "NECO publishes e-Verify support at everifysupport@neco.gov.ng. Never disclose an account password or payment token to unofficial agents."
     ],
     "sources": [
       {
         "label": "NECO e-Verify",
         "agency": "National Examinations Council",
         "url": "https://everify.neco.gov.ng/index.php",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NECO e-Verify — institutional registration and approval requirement",
+        "agency": "National Examinations Council",
+        "url": "https://everify.neco.gov.ng/institution_register",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NECO institution verification",
       "How institutions verify NECO results with e-Verify",
@@ -3162,7 +3206,7 @@
     "slug": "nrs-refund-tracking",
     "title": "How to track a tax refund on the NRS portal",
     "shortTitle": "NRS refund tracking",
-    "summary": "NRS lists Refunds among the functions in its taxpayer self-service portal.",
+    "summary": "Taxpayers with an existing NRS refund request can sign in through the official taxpayer self-service portal, choose Refunds and check the request associated with their account. The public site confirms a Refunds service but does not publish a universal payment date, tracking code format or approval timeline.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "No tracking fee stated on the portal overview",
@@ -3173,24 +3217,26 @@
       "Existing refund request/reference and the taxpayer details shown in the NRS account for that refund"
     ],
     "steps": [
-      "Sign in to the official NRS Taxpayer Self-Service Portal with the taxpayer account connected to the refund request.",
-      "Open Refunds and identify the existing refund request by its tax period, amount or reference rather than creating another request just to check status.",
-      "Review the status and any action or supporting-document request shown by NRS for that refund, and provide additional information only through the official taxpayer account.",
-      "Keep the refund reference and monitor the portal for status changes or a final decision; refund eligibility and timing depend on the underlying tax record and NRS review.",
-      "If a submitted refund is missing or stalled, contact NRS through its official support route with the taxpayer and refund reference so the existing request can be traced."
+      "Open https://selfservice.nrs.gov.ng/ and sign in through the currently offered NRS SSO/TaxPro Max/Rev360 account route.",
+      "Check that the login corresponds to the taxpayer for whom the refund was submitted, then open 'Refunds' on the dashboard.",
+      "Locate the existing application using the available on-screen request or reference details. If no matching request is shown, confirm the account and filing before creating a duplicate.",
+      "Read any status, response or document request displayed for that refund; provide evidence only through verified NRS channels.",
+      "Keep the official request reference and check for changes in the same dashboard. For a missing or unresolved item, contact NRS through its official service channel with the relevant reference."
     ],
     "notes": [
-      "Refund eligibility and processing depend on the underlying tax record."
+      "The public NRS landing page establishes that Refunds is a taxpayer-account feature, not the exact internal fields or status labels for every case.",
+      "The site also separately lists Tax Wallet, Payments and Assessments; those pages should not be presented as a confirmed refund-tracking reference generator.",
+      "Refund eligibility and timing depend on the underlying tax/account position and the responsible tax review. Avoid promised approval dates or unofficial recovery fees."
     ],
     "sources": [
       {
         "label": "NRS Taxpayer Self-Service Portal",
         "agency": "Nigeria Revenue Service",
         "url": "https://selfservice.nrs.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NRS refund tracking",
       "How to track a tax refund on the NRS portal",
@@ -3836,49 +3882,54 @@
     "slug": "nin-name-modification",
     "title": "How to change your name on NIN",
     "shortTitle": "NIN name modification",
-    "summary": "NIMC allows approved name changes and publishes both supporting-document requirements and a current per-field modification fee.",
+    "summary": "To correct an eligible name field on an existing NIN, use NIMC's official Self-Service Modifications portal or its published centre-assisted route, not a new NIN enrolment. NIMC lists a sworn affidavit and newspaper extract for a name change, plus a marriage certificate when the change is due to marriage. Confirm the fee on the actual modification invoice before payment.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
-    "feeNote": "NIMC's current Fees page lists ₦2,000 per ordinary updatable field; date of birth is separately priced.",
+    "feeNote": "NIMC's published fees table lists ₦2,000 per ordinary updatable field and separately prices date-of-birth corrections. Provider instructions can differ across NIMC pages and payment routes, so the live official invoice and the precise requested name fields determine what is payable. Do not infer a DOB charge for a name-only modification.",
     "status": "verified",
     "officialPortal": "https://nimc.gov.ng/self-service-modifications/",
     "requirements": [
-      "Court affidavit",
-      "Newspaper extract",
-      "Marriage certificate where the change is due to marital status",
-      "Another government-issued ID"
+      "Your existing valid NIN and access to the NIMC self-service account or the authorised NIMC centre process.",
+      "Sworn affidavit and newspaper extract supporting the requested name change.",
+      "Marriage certificate where the change is due to marriage.",
+      "Other identity or civil records requested by NIMC to reconcile the name with the existing identity record."
     ],
     "steps": [
-      "Open NIMC's official self-service modification route.",
-      "Sign in using the device/browser requirements stated by NIMC.",
-      "Choose the name field to modify and upload the required evidence.",
-      "Review, pay through the official channel and submit the request."
+      "Start from nimc.gov.ng/self-service-modifications/ and follow NIMC's genuine self-service modification link. Do not submit a fresh NIN enrolment.",
+      "Sign in and choose the specific name field(s) to modify; check the present NIN entry and the spelling on your supporting documents.",
+      "Prepare the affidavit and newspaper extract, and add marriage evidence where applicable. Upload only the documents required for the selected request.",
+      "Check NIMC's current fee table and the official invoice for the selected fields, then complete payment only inside the provider-authorised route.",
+      "Review the corrected spelling and submit; retain the official transaction acknowledgement.",
+      "Check the official application status. If self-service is unsuitable, ask a NIMC enrolment centre for its assisted document-verification process; an informational NIMC page is not itself a completed application."
     ],
     "notes": [
-      "NIMC's self-service account can be tied to the browser/device used to register it."
+      "An existing NIN remains the starting point: a name change does not justify creating a second identity record.",
+      "NIMC distinguishes its self-service portal from centre-assisted modification; do not label all name changes exclusively online or exclusively walk-in.",
+      "Affidavit, newspaper extract and marriage certificate requirements are conditional on the reason for the change. Ensure submitted documents genuinely support the requested spelling.",
+      "NIMC's ₦2,000 listing relates to ordinary updatable fields; date of birth has a separate tariff and should not be bundled into a name-only fee."
     ],
     "sources": [
       {
         "label": "NIMC self-service modifications",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/self-service-modifications/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NIMC Fees",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/fees",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NIMC adult NIN modifications",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/nin/nin-modifications-adults/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NIN name modification",
       "How to change your name on NIN",
@@ -3962,48 +4013,53 @@
     "slug": "nin-address-modification",
     "title": "How to change your address on NIN",
     "shortTitle": "NIN address modification",
-    "summary": "NIMC lists address as an updatable NIN field and publishes the supporting documents accepted for self-service modification.",
+    "summary": "NIMC lists address as an updatable NIN detail. To change it, start with NIMC's official Self-Service Modifications route and provide current evidence such as a utility bill, tenancy agreement, bank statement or community-leader attestation. An assisted NIMC enrolment-centre route is also published; confirm the actual payment invoice and do not create a second NIN.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
     "status": "verified",
     "officialPortal": "https://nimc.gov.ng/self-service-modifications/",
     "requirements": [
-      "Existing NIN and access to the NIMC self-service modification account",
-      "One accepted proof of address: utility bill, tenancy agreement or community leader's attestation letter"
+      "Existing NIN and access to the official NIMC self-service modification account or an authorised NIMC centre.",
+      "The complete new address as it should appear on the identity record.",
+      "Supporting proof of address accepted by NIMC: utility bill, tenancy agreement, bank statement or community-leader attestation.",
+      "An official invoice or application acknowledgement for the selected address field."
     ],
     "steps": [
-      "Open NIMC's official self-service modification route and sign in with the NIN or account details.",
-      "Choose address modification from the available fields.",
-      "Enter the new address and upload one of NIMC's accepted supporting documents.",
-      "Review the requested change, complete the official payment and submit the modification request.",
-      "Keep the modification transaction slip or confirmation and wait for NIMC's approval notification."
+      "Open the self-service modifications section on nimc.gov.ng and follow NIMC's official link to its modification system.",
+      "Sign in with the existing NIN and select Address as the specific field to change.",
+      "Enter the new address exactly as supported by the available evidence, then upload the relevant utility bill, tenancy agreement, bank statement or attestation accepted by NIMC.",
+      "Review the requested field and charge against the official NIMC fee schedule and live invoice before paying.",
+      "Submit the modification and keep the official reference or receipt to check the result.",
+      "If self-service cannot handle the case, contact a NIMC enrolment centre for the published assisted procedure and identity-document checks."
     ],
     "notes": [
-      "Use current address evidence that matches the change being requested.",
-      "NIMC also publishes an assisted enrolment-centre modification process for applicants who cannot use self-service."
+      "NIMC's adult modifications page lists four types of address evidence, including bank statements; the earlier guide omitted that option.",
+      "An address correction does not change the NIN itself; do not apply for a replacement number.",
+      "NIMC's public fee table lists ₦2,000 for an ordinary updatable field, while the actual charge should be confirmed on the official invoice.",
+      "Do not assume the document will be accepted if the new address and supporting record are inconsistent."
     ],
     "sources": [
       {
         "label": "NIMC self-service modifications",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/self-service-modifications/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NIMC Fees",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/fees",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NIMC adult NIN modifications",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/nin/nin-modifications-adults/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NIN address modification",
       "How to change your address on NIN",
@@ -4013,7 +4069,8 @@
       "nin-name-modification",
       "nin-phone-modification",
       "nin-date-of-birth-modification"
-    ]
+    ],
+    "feeNote": "NIMC's official Fees table lists ₦2,000 per ordinary updatable field. Confirm the current address-modification invoice on the NIMC-authorised route; date-of-birth modifications are separately priced."
   },
   {
     "slug": "jamb-print-result",
@@ -4132,34 +4189,38 @@
     "slug": "waec-withheld-result-complaint",
     "title": "How to lodge a complaint about a withheld or held WAEC result",
     "shortTitle": "WAEC withheld-result complaint",
-    "summary": "WAEC Nigeria says its complaint portal remains available for affected candidates to register a complaint or defence.",
+    "summary": "Candidates whose WAEC results are marked withheld or held can use the complaints/defence portal linked from WAEC Nigeria's official announcement. Start at WAEC's notice, follow its waecinternational.org complaints link, identify the correct examination and submit a factual account. This is a complaint channel, not a guarantee that WAEC will release a withheld result.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "No complaint fee stated on WAEC's notice",
     "status": "verified",
     "officialPortal": "https://waecinternational.org/complaints",
     "requirements": [
-      "The candidate and examination information needed to identify the specific held/withheld result",
-      "The facts/documents the candidate relies on for the complaint or defence",
-      "Access to the WAEC complaint portal linked by WAEC Nigeria"
+      "The candidate's examination year, type and examination/candidate number needed to identify the held or withheld record.",
+      "The wording/status shown on the affected result and an accurate account of the complaint or defence.",
+      "The result notice showing the held or withheld status, plus any examination-day incident report, correction letter or WAEC correspondence that supports the candidate's account. Supply contact information in the current complaints form."
     ],
     "steps": [
-      "Open the withheld/held-result complaint portal from WAEC Nigeria's official notice.",
-      "Identify the affected candidate/result in the complaint form and enter the complaint/defence information requested by the portal.",
-      "Submit the complaint or defence and save any acknowledgement/reference produced by the complaint system for follow-up."
+      "Open the official WAEC Nigeria notice headed 'Complaint Portal for Candidates Whose Results Were Withheld/Held' and follow its link to waecinternational.org/complaints.",
+      "Check that you are entering the WAEC complaints domain linked by the official notice rather than a lookalike form or a social-media message.",
+      "Select or identify the affected examination/candidate according to the current form and provide the explanation or defence requested.",
+      "Submit only facts and relevant supporting documents. Save the official acknowledgement or reference if one is issued.",
+      "Use the portal's available follow-up instructions and check WAEC's official result status. Do not interpret complaint submission as approval or automatic result release."
     ],
     "notes": [
-      "Use the complaint portal linked from WAEC Nigeria rather than an unofficial social-media form."
+      "WAEC itself describes this as a complaints/defence route for both held and withheld results; it is separate from a request to review an examination score.",
+      "Do not pay a person who promises to 'unhold' the result. No release outcome or response deadline is guaranteed by the official notice.",
+      "If the link changes, reopen the notice on the WAEC Nigeria website to locate the official complaints route."
     ],
     "sources": [
       {
         "label": "WAEC withheld/held result complaint portal guidance",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/article/complaint-portal-candidates-whose-results-were-withheldheld",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "WAEC withheld-result complaint",
       "How to lodge a complaint about a withheld or held WAEC result",

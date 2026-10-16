@@ -103,23 +103,32 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # Avoid 'printf | grep -q' under pipefail: grep can close a pipe
+          # before printf finishes a large sitemap, causing SIGPIPE/exit 141.
+          # Match via here-strings and report which assertion failed.
+          assert_has() {
+            local body="$1" needle="$2" label="$3"
+            if ! grep -Fq -- "$needle" <<< "$body"; then
+              echo "::error::$label is missing expected discovery content: $needle"
+              exit 1
+            fi
+          }
           index="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemap-index.xml")"
-          printf '%s' "$index" | grep -q "/sitemaps/services.xml"
-          printf '%s' "$index" | grep -q "/sitemaps/youtube.xml"
+          assert_has "$index" "/sitemaps/services.xml" "Sitemap index"
+          assert_has "$index" "/sitemaps/youtube.xml" "Sitemap index"
 
           services="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/services.xml")"
-          printf '%s' "$services" | grep -q "/services/passport-renewal"
+          assert_has "$services" "/services/passport-renewal" "Services sitemap"
 
           youtube="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/youtube.xml")"
-          printf '%s' "$youtube" | grep -q "/entertainment/youtube/channels/"
-          # Standalone directory-only video records are deliberately noindex and
-          # omitted from sitemaps until each has a verified editorial dossier.
-          # A channel discovery URL and valid URL set are the expected contract.
-          printf '%s' "$youtube" | grep -q '<urlset'
+          assert_has "$youtube" "/entertainment/youtube/channels/" "YouTube sitemap"
+          # Standalone directory-only video records are deliberately noindex
+          # require the channel hub and valid XML instead of an arbitrary video URL.
+          assert_has "$youtube" "<urlset" "YouTube sitemap"
 
           robots="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/robots.txt")"
-          printf '%s' "$robots" | grep -qi "sitemap: $LIVE_BASE_URL/sitemap-index.xml"
-          printf '%s' "$robots" | grep -qi "disallow: /admin"
+          assert_has "${robots,,}" "sitemap: ${LIVE_BASE_URL,,}/sitemap-index.xml" "robots.txt"
+          assert_has "${robots,,}" "disallow: /admin" "robots.txt"
           echo "Sitemap index, section sitemaps and robots discovery checks passed."
 
       - name: Verify Google AdSense ads.txt is continuously crawlable
