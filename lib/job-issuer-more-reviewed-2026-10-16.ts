@@ -35,7 +35,7 @@ export const checkedIssuerCareers20261016: Record<string, IssuerReview> = {
   },
   "lotus-bank-careers": {
     "url": "https://lotusbank.com/careers",
-    "extra": "https://ns2.lotusbank.com/careers",
+    "extra": null,
     "lead": "LOTUS Bank's published career pathway is split into three distinct application forms: Information Technology (entry or middle level), non-IT entry level, and non-IT middle level. These categories matter because selecting a generic bank careers link without the correct form can route applicants to the wrong screening stream.",
     "steps": [
       "Open the bank's career page and choose IT versus non-IT before choosing your experience level.",
