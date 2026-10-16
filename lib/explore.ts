@@ -1,4 +1,5 @@
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
+import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
 import { remainingTourResearch20261016 } from "@/lib/explore-priority-review-decisions-2026-10-16";
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
@@ -13762,7 +13763,7 @@ const secondPassExploreGuides: ExploreGuide[] = firstPassExploreGuides.map((guid
 
 // Third pass is explicitly additive: preserve earlier publisher facts and
 // corrections from other agents. Distinct sources are linked on the page.
-export const exploreGuides: ExploreGuide[] = secondPassExploreGuides.map((guide) => {
+const priorReviewedExploreGuides: ExploreGuide[] = secondPassExploreGuides.map((guide) => {
   const update = remainingTourResearch20261016[guide.slug];
   if (!update) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13777,6 +13778,28 @@ export const exploreGuides: ExploreGuide[] = secondPassExploreGuides.map((guide)
     intro: update.intro && !guide.intro.includes(update.intro) ? [...guide.intro, update.intro] : guide.intro,
     planning: guide.planning.some(item => item.label === update.planning.label)
       ? guide.planning : [...guide.planning, update.planning],
+    sources,
+    lastReviewed: "2026-10-16",
+  };
+});
+
+// Fourth review pass is additive and source-specific. Preserve every earlier
+// correction and deduplicate citations across overlapping agent batches.
+export const exploreGuides: ExploreGuide[] = priorReviewedExploreGuides.map((guide) => {
+  const review = museumAndVisitorReviews20261016[guide.slug];
+  if (!review) return guide;
+  const sources = [...(guide.sources ?? [])];
+  for (const source of [review.source, ...(review.additionalSources ?? [])]) {
+    if (source.href !== guide.source?.href && !sources.some(item => item.href === source.href)) {
+      sources.push(source);
+    }
+  }
+  return {
+    ...guide,
+    summary: review.summary ?? guide.summary,
+    intro: review.intro && !guide.intro.includes(review.intro) ? [...guide.intro, review.intro] : guide.intro,
+    planning: guide.planning.some(item => item.label === review.planning.label)
+      ? guide.planning : [...guide.planning, review.planning],
     sources,
     lastReviewed: "2026-10-16",
   };
