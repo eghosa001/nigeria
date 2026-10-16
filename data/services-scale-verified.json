@@ -6646,40 +6646,53 @@
   },
   {
     "slug": "glo-sim-replacement",
-    "title": "How to replace a lost or stolen Glo SIM",
-    "shortTitle": "Glo SIM replacement",
-    "summary": "Globacom's SIM replacement route at a Gloworld shop using valid ID and line-ownership evidence, with separate supporting documents for prepaid and Glo Business customers.",
+    "title": "Replace a Lost Glo SIM in Nigeria: ₦100 Fee, Documents and Forms",
+    "shortTitle": "Replace a lost Glo SIM",
+    "summary": "Glo says a lost or stolen physical SIM can be replaced at a Gloworld shop after the registered customer presents the original and a copy of an accepted photo ID and proof of ownership. Its published Self Care page lists a ₦100 replacement charge. For prepaid customers, it asks for the old SIM cardholder/certificate or purchase receipt, a police report and a sworn affidavit. Glo Business has a separate corporate-document checklist. Forms can be downloaded before the visit, but the stated SIM replacement process is not completed entirely online.",
     "category": "Telecommunications",
     "agencySlug": "globacom",
-    "feeLabel": "₦100 SIM replacement fee",
-    "feeNote": "Glo's current Self Care page lists a ₦100 SIM replacement cost.",
-    "timeline": "Glo does not publish one fixed completion time for every physical SIM replacement; processing depends on identity and ownership verification at the Gloworld shop.",
+    "feeLabel": "Glo lists ₦100 for a SIM replacement; reconfirm at the outlet",
+    "feeNote": "Glo's published Self Care page lists ₦100 as the cost of SIM replacement. This is a provider-published charge, not independent proof of every outlet's real-time price or of incidental costs for acquiring a police report or affidavit. Confirm current charges with an authorised Gloworld office and obtain a receipt where offered; do not transfer money to an unofficial SIM-swap agent.",
+    "timeline": "Glo does not publish a guaranteed processing time for a replacement SIM. Preparation of ownership documents and outlet identity checks can affect the process. Ask the Gloworld shop when the original number will become active on the replacement and test it before leaving where possible.",
     "status": "verified",
     "officialPortal": "https://www.gloworld.com/ng/self-care/",
     "requirements": [
-      "The original and a photocopy of a valid photo ID such as National ID, driver's licence or international passport",
-      "For a prepaid line, the SIM certificate/cardholder or purchase receipt plus a police report and sworn affidavit",
-      "For a Glo Business line, the SIM certificate, service/application evidence, recent invoices and corporate introduction plus a police report and sworn affidavit",
-      "A visit to a Gloworld shop handling SIM replacement"
+      "Visit a Gloworld shop in person to process the replacement; the provider says forms can be downloaded and prepared online before visiting, not that a replacement SIM can be remotely issued.",
+      "The original and a photocopy of a valid photo ID with a clearly legible picture. Glo lists National ID, driver's licence, international passport and additional supported employee/trade union/school IDs; check whether the specific outlet accepts your ID category.",
+      "For a prepaid line, Glo lists the SIM certificate/cardholder or purchase receipt as proof of ownership, plus a police report and sworn affidavit for lost/stolen replacement.",
+      "For a Glo Business line, the published checklist includes the SIM cardholder, service/application form, invoices for the last three months before suspension, a written corporate request/introduction, police report and sworn affidavit.",
+      "The number and subscriber/NIN registration details required for identity and ownership verification; do not supply another person's identity details or trust a third-party 'remote SIM swap'.",
+      "Obtain the appropriate downloadable prepaid, Glo Business or proxy form from Glo's official Self Care page. The availability of a proxy form is not proof that any representative can bypass identification rules."
     ],
     "steps": [
-      "Open Glo's Self Care page and identify the nearest Gloworld shop that handles SIM replacement.",
-      "Prepare the original and photocopy of the valid photo ID and the ownership documents matching prepaid or Glo Business service.",
-      "Prepare the police report and sworn affidavit listed by Glo for the lost/stolen replacement route.",
-      "Visit the Gloworld shop, submit the replacement form and ownership evidence and pay the current ₦100 replacement charge.",
-      "Confirm that the old number is active on the replacement SIM before leaving the service location."
+      "If a lost SIM may give someone access to calls or OTPs, contact Glo using its official support/Gloworld channels promptly about securing the line. Independently secure affected bank and online accounts using those providers' official channels; a SIM replacement alone is not a banking-security remedy.",
+      "Open Glo's Self Care page and check the SIM Replacement section. Select the correct form: Prepaid SIM Replacement, Glo Business SIM Replacement or the specific proxy document where a representative is authorised and accepted by the provider.",
+      "For prepaid replacement, prepare the original and photocopy of an accepted photo ID, old SIM cardholder or purchase receipt if available, plus the police report and sworn affidavit the provider lists. If ownership paperwork is missing, ask the Gloworld shop what verification alternative is officially accepted before paying for documents.",
+      "For a Glo Business account, prepare the business SIM cardholder and account/service evidence, the three months of invoices, a corporate introduction/request and lost-SIM police/affidavit records instead of assuming the prepaid form covers a corporate line.",
+      "Find an authorised Gloworld shop through Glo's official outlet directory, take the completed form and supporting originals/copies, and request replacement of the existing number. Have staff verify line registration, confirm the current charge (the published page says ₦100) and explain any additional required documents.",
+      "Complete Glo's authorised identification and SIM issuance process. Confirm the replacement is for the correct phone number; never share the new SIM details or account codes with an unrelated third party.",
+      "Before leaving, check whether the old number receives calls/SMS and can use mobile data on the replacement SIM. If activation is pending, request the outlet's legitimate next-step guidance and retain any official transaction evidence.",
+      "If you intend to move to another network shortly afterwards, check the NCC's current mobile-number-portability rules: its regulatory FAQ lists a seven-day port restriction following SIM replacement. This is separate from the replacement itself."
     ],
     "notes": [
-      "Glo provides separate replacement forms for prepaid, Glo Business and proxy replacement scenarios.",
-      "The provider's published ID list includes National ID, driver's licence, international passport and other photo-bearing categories.",
-      "A lost/stolen SIM should be secured promptly because control of the mobile number can affect banking and other OTP-based services."
+      "Glo lists original and photocopy ID for both prepaid and corporate replacements. A photo-bearing staff/school/trade-union ID appears in its provider checklist, but individual outlets may request additional current registration verification.",
+      "Provider-published replacement price: ₦100. The Self Care source does not promise a particular completion hour; do not advertise immediate guaranteed service.",
+      "Glo provides separate prepaid, business and proxy downloadable forms. A downloadable form is preparation, not remote issuance of a replacement SIM; confirm any proxy arrangement is actually authorised and accepted.",
+      "Reportedly lost or stolen numbers can expose account-recovery SMS and phone-linked banking services. Independently lock down those services with their official support, without forwarding OTPs or SIM serial numbers to strangers.",
+      "The NCC's legal/regulatory FAQ states there is a seven-day waiting period before porting a mobile number after a SIM replacement. Do not conflate this with the process or price of Glo replacing the SIM."
     ],
     "sources": [
       {
-        "label": "Glo Self Care — SIM Replacement",
+        "label": "Glo Self Care — original/copy identity documents, SIM replacement forms and ₦100",
         "agency": "Globacom Limited",
         "url": "https://www.gloworld.com/ng/self-care/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NCC legal/regulatory FAQ — seven-day porting restriction after SIM replacement",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/35-legal-and-regulatory-services",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -6687,51 +6700,72 @@
       "glo-port-number-to-glo",
       "nin-sim-linkage"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
-      "Glo SIM replacement",
-      "replace lost Glo SIM",
-      "Glo SIM swap requirements",
-      "Glo SIM replacement fee",
-      "Gloworld lost SIM"
+      "Glo SIM replacement Nigeria 2026",
+      "Glo lost SIM ₦100 replacement cost",
+      "Gloworld prepaid SIM replacement form",
+      "Glo business SIM replacement required documents",
+      "Glo SIM replacement police report affidavit",
+      "replace stolen Glo SIM registration",
+      "port after Glo SIM replacement 7 days",
+      "Glo replacement without SIM certificate"
     ]
   },
   {
     "slug": "glo-port-number-to-glo",
-    "title": "How to port your phone number to Glo",
-    "shortTitle": "Port number to Glo",
-    "summary": "Glo's Mobile Number Portability route for switching an existing prepaid or postpaid Nigerian number to Glo, free of charge, with in-person identity verification and a new Glo SIM.",
+    "title": "Port Your Number to Glo: Free Switch, 3232 SMS and Eligibility",
+    "shortTitle": "Port your number to Glo",
+    "summary": "To move an existing Nigerian phone number from another mobile network to Glo without changing its digits, visit a Gloworld shop or Glo-authorised dealer, submit a porting request with an accepted identity document, and send PORT to 3232 from the number being moved as instructed by the Nigerian Communications Commission (NCC). Glo says the port is free and ordinarily takes up to 48 hours. Check recent SIM swaps and previous ports before applying: official NCC guidance currently disagrees about the repeat-port waiting period, with separate pages citing 45 and 90 days.",
     "category": "Telecommunications",
     "agencySlug": "globacom",
-    "feeLabel": "Free porting",
-    "feeNote": "Glo states that Mobile Number Portability is free.",
-    "timeline": "Glo states that the porting process takes a maximum of 48 hours.",
+    "feeLabel": "Porting is free; no extra porting charge",
+    "feeNote": "Both Glo and the NCC describe mobile number portability as free. Do not pay an intermediary a supposed mandatory porting fee. Plan costs or optional new-network purchases should be confirmed separately with Glo; free number porting does not carry unused airtime or packages over from the former operator.",
+    "timeline": "Glo advertises a maximum of 48 hours. The NCC's legal/regulatory FAQ says eligible prepaid and single-account postpaid requests are normally completed within 48 calendar hours, while multi-account postpaid requests may take five calendar days. Processing is conditional on identity verification, SMS/form validation and no applicable port restrictions. The current regulator materials disagree on the separate repeat-port interval.",
     "status": "verified",
     "officialPortal": "https://www.gloworld.com/ng/mnp",
     "requirements": [
-      "An existing prepaid or postpaid Nigerian mobile number on another network",
-      "A valid identity document such as National ID, passport, driver's licence or another officially validated photo ID",
-      "NIN when the subscriber cannot present an accepted identity card",
-      "An in-person visit to a Gloworld shop or authorised Glo dealer because Glo says porting cannot be completed by phone or online"
+      "An active, registered prepaid or postpaid mobile number with a different Nigerian operator. Blocked, restricted or unregistered lines can be ineligible for number portability.",
+      "The existing SIM/phone must be able to send the NCC-authorised request SMS, PORT to 3232, from the number you want to keep. Do not send the code from a different line.",
+      "A visit by the actual registered subscriber to a Gloworld shop or authorised Glo dealer; Glo and NCC say number porting is not a fully online or proxy process.",
+      "An accepted government/photo ID such as National ID, passport or driving licence. Glo says NIN is required where the subscriber cannot present an accepted ID; the outlet must complete current subscriber-registration checks.",
+      "Clear any unpaid postpaid balance and use valuable airtime/data on the donor network first. Existing credit and ancillary packages do not move automatically to Glo.",
+      "Check whether you recently ported the same number or replaced its SIM. NCC materials list a seven-day restriction after SIM replacement and disagree about a repeat-port restriction of 45 versus 90 days; ask Glo/NCC to establish current eligibility before submitting."
     ],
     "steps": [
-      "Open Glo's official Mobile Number Portability page and review the eligibility and porting conditions.",
-      "Use any remaining airtime or service value on the old network because Glo states that outstanding credit is forfeited on porting.",
-      "Visit a Gloworld shop or authorised Glo dealer with the number and valid ID or NIN.",
-      "Complete the Glo port-in and identity/SIM-registration process and receive the new Glo SIM linked to the existing number.",
-      "Wait for the porting-status SMS messages and begin using the Glo SIM after the port is confirmed."
+      "Before you travel, confirm the old number is registered, working, and not blocked or subject to a change-of-ownership request. Settle unpaid bills for a postpaid number, and use remaining prepaid credit/data because the provider says these benefits cannot be transferred to Glo.",
+      "Check whether you have recently completed a SIM replacement or ported this number. NCC's regulatory FAQ lists a seven-day cooling-off period after SIM replacement and a 45-day period after porting, but its separately published consumer explainer says 90 days for repeat porting. Do not assume the more convenient figure is guaranteed: confirm the restriction applicable to your number with the recipient outlet or NCC.",
+      "Visit a Gloworld shop or Glo-authorised dealer in person with the current working SIM, accepted photo ID and identity/NIN details. Request a port-in to Glo, not an additional new mobile number.",
+      "Complete the porting request/registration forms and send PORT to 3232 from the number you are moving, following the recipient operator's instructions. NCC says the SMS and request form must reach the clearinghouse within 48 hours of one another or the request can be rejected.",
+      "Collect the Glo SIM linked to your original phone number from the authorised outlet. Keep the old network SIM available for incoming confirmation notices until the approved cutover; do not assume the new SIM is already active when the form is handed in.",
+      "Watch for the porting status/confirmation SMS and follow any legitimate instructions. After the former SIM stops working and the process is confirmed, insert/activate the Glo SIM; test outgoing and incoming calls, SMS and mobile data.",
+      "If the request is rejected, ask the recipient outlet to identify the precise restriction (such as recent port/SIM swap, blocked line, ID mismatch, incomplete SMS/form validation or an unpaid balance) and correct that issue. Do not keep submitting duplicate port requests or pay an unofficial agent to bypass the rules."
     ],
     "notes": [
-      "Glo says a subscriber must wait 45 days after a port before porting the number again.",
-      "Porting does not transfer the former network's tariff, subscriptions, voicemail or other ancillary services.",
-      "The subscriber can cancel only before the confirmation stage; after confirmation the port proceeds to completion."
+      "Glo's official MNP page and the NCC's legal/regulatory FAQ both describe a 45-day repeat-port restriction. An NCC consumer education article published in September 2025 instead says once every 90 days. Because these official pages conflict, this guide does not promise either period as universally current; confirm with the recipient provider/NCC before relying on a date.",
+      "NCC's legal/regulatory FAQ separately states that a number cannot be ported within seven days of a SIM replacement, and it bars proxy porting. A replacement SIM application is a different operation from a network port request.",
+      "For ordinary prepaid and single-account postpaid users, Glo and NCC describe processing within 48 hours if eligible. NCC separately allows up to five calendar days for multiple postpaid accounts, and an individual cutover can briefly interrupt service.",
+      "Glo says a ported number retains its digits but not the old network's airtime balance, tariff, subscriptions or ancillary services. Back up contacts/messages and check new Glo rates before the switch.",
+      "The official port request uses the old number and the authorised 3232 SMS process. Glo does not offer a complete telephone/web-only substitute for the in-person identification step."
     ],
     "sources": [
       {
-        "label": "Glo Mobile Number Portability",
+        "label": "Glo official MNP FAQ — free in-store porting, identity, 48 hours and 45-day claim",
         "agency": "Globacom Limited",
         "url": "https://www.gloworld.com/ng/mnp",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NCC legal/regulatory FAQ — PORT 3232, SIM-swap cooling off, 45-day and multi-account periods",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/information-education/faqs/35-legal-and-regulatory-services",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NCC consumer explainer — 90-day repeat-port claim and loss of donor benefits",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/articles/106-mobile-number-portability-key-things-to-know",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -6739,13 +6773,16 @@
       "glo-sim-replacement",
       "glo-esim-activation"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
-      "port to Glo Nigeria",
-      "Glo mobile number portability",
-      "keep number switch to Glo",
-      "Glo porting requirements",
-      "Glo MNP free"
+      "port number to Glo Nigeria",
+      "Glo MNP port 3232",
+      "Glo network porting eligibility",
+      "Glo 45 days 90 days porting rule",
+      "Glo porting after SIM replacement 7 days",
+      "free Glo porting",
+      "Glo porting 48 hours",
+      "Glo authorised dealer port"
     ]
   },
   {
