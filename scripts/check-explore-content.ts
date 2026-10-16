@@ -12,10 +12,10 @@ const errors: string[] = [];
 const guideSlugs = new Set<string>();
 const placeSlugs = new Set<string>();
  
-// Nine specific visitor decisions, with their actual source links, must
+// At least 21 existing visitor decisions, with actual source links, must
 // survive all prior Tour overlay layers and appear in the exported catalog.
 const newChecks = Object.entries(furtherVisitorDecisions20261016);
-if (newChecks.length !== 9) errors.push("Expected nine independently researched Tour guide updates.");
+if (newChecks.length < 21) errors.push("Expected at least 21 independently researched Tour guide updates.");
 for (const [slug, evidence] of newChecks) {
   const guide = exploreGuides.find(item => item.slug === slug);
   const hrefs = new Set([guide?.source?.href, ...(guide?.sources ?? []).map(x => x.href)]);
@@ -29,7 +29,7 @@ for (const [slug, evidence] of newChecks) {
   }
 }
 const rock = exploreGuides.find(item => item.slug === "olumo-rock-visitor-guide");
-if (!rock?.intro.some(x => x.includes("September 2025") && x.includes("October 2026"))) {
+if (!rock?.intro.some(x => x.includes("23 August 2025") && x.includes("October 2026"))) {
   errors.push("Olumo: temporary 2025 free-entry promotion must not be reused as a 2026 tariff.");
 }
 const museum = exploreGuides.find(item => item.slug === "owo-museum-guide");
@@ -454,7 +454,7 @@ for (const [slug, sourcePart, historicalOrAccessFact, decision] of [
   ["owerre-ezukala-cave-waterfall-guide", "mocet.anambrastate.gov.ng/news/anambra-strengthens-tourism", "July 2026", "Treat proposed tourism development"],
   ["okomu-national-park-guide", "nigeriaparkservice.gov.ng/blog/2014/08/12/okomu-national-park/", "1999", "Ask Okomu staff"],
   ["cross-river-national-park-guide", "whc.unesco.org/en/tentativelists/6204/", "Tentative List", "Verify the named division"],
-  ["jos-wildlife-park-guide", "visitplateau.com/destinations/jos-wildlife-park", "not a verified same-day transaction", "Do not let a directory tariff"],
+  ["jos-wildlife-park-guide", "visitplateau.com/destinations/jos-wildlife-park", "rather than a verified same-day transaction", "Do not let a directory tariff"],
   ["assop-falls-guide", "visitplateau.com/destinations/assop-falls", "not for swimming", "Do not recommend the road stop"],
   ["arinta-waterfalls-guide", "ekitistate.gov.ng/bureau-of-tourism-development", "separate attractions", "Choose the waterfall only"],
   ["nike-art-centre-osogbo-guide", "invest.ogunstate.gov.ng/blogdetails?id=7", "1983", "Verify the specific Osogbo"],
