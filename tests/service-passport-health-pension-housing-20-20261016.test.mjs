@@ -46,6 +46,7 @@ test("official fee distinctions, eligibility changes and limitations stay visibl
   assert.match(combined("nhia-private-sector-coverage"), /five or more employees/i);
   assert.match(combined("nhia-gifship-enrolment"), /₦220,000/);
   assert.match(combined("nhia-gifship-enrolment"), /inconsistent/i);
+  assert.equal(get("nhia-gifship-enrolment").status, "conflict");
   assert.match(combined("pencom-transfer-rsa"), /365 days/);
   assert.match(combined("pencom-micro-pension-registration"), /Personal Pension Plan \(PPP\)/);
   assert.match(combined("pencom-unremitted-contributions"), /uncredited/i);
