@@ -223,17 +223,15 @@ export function applyIssuerPortalResearch20261016(item: CareerOpportunity): Care
     status: "career-page",
     title: issuerPortalTitles20261016[item.slug] ?? item.title,
     deadline: undefined,
-    nextMilestone: "Employer career destination reviewed on 16 October 2026; specific application availability, exact closing dates and completed submissions require verification from a named live posting.",
+    nextMilestone: undefined,
     statusLabel: "Issuer careers directory checked 16 October 2026 — individual opening unverified",
     verifiedAt: "2026-10-16",
     summary: checked.fact,
-    // Keep the distinct, readable action journey without the generic portal
-    // filler formerly inserted by normalizeCareerPortal.
-    applicationSteps: [
-      `Open the issuer-owned ${item.organization} careers source linked here; this directory is not itself a submitted application.`,
-      ...checked.actions,
-    ],
-    sourceNotes: [...item.sourceNotes, checked.fact],
+    // Three distinct employer-researched decisions replace the repetitive
+    // fallback application script. The article's official URL is already
+    // presented as its primary action, so do not repeat it as filler.
+    applicationSteps: [...checked.actions],
+    sourceNotes: item.sourceNotes,
     sources: originalSourceFound
       ? item.sources.map(source => source.url === checked.sourceUrl
           ? { ...source, lastChecked: "2026-10-16" }
