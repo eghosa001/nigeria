@@ -1,5 +1,6 @@
 import { exploreGuides } from "../lib/explore";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
+import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
 import { tourPracticalDecisions20261016 } from "../lib/explore-practical-decisions-2026-10-16";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
@@ -65,6 +66,30 @@ for (const slug of ["imo-state-travel-guide","kaltungo-hills-guide","katsina-her
   const note = [evidence?.intro, evidence?.planning.detail].filter(Boolean).join(" ");
   if (!guide || !/advises against (all|all but essential) travel/i.test(note))
     errors.push(slug + ": preserve documented current UK government travel warning.");
+}
+
+// Changed-scope evidence contract. Do not certify prices, safe travel,
+// visits, copyright or AdSense with this automated check.
+const accessSlugs = Object.keys(tourAccessDecisions20261016C);
+if (accessSlugs.length !== 20 || new Set(accessSlugs).size !== 20)
+  errors.push("Tour batch 2026-10-16 C must have 20 unique canonical guides.");
+for (const slug of accessSlugs) {
+  const guide = exploreGuides.find(g => g.slug === slug);
+  const note = tourAccessDecisions20261016C[slug];
+  if (!guide || !guide.intro.includes(note.intro ?? "") ||
+      !guide.planning.some(p => p.label === note.planning.label && p.detail === note.planning.detail) ||
+      ![guide.source?.href, ...(guide.sources ?? []).map(s => s.href)].includes(note.source.href) ||
+      guide.lastReviewed !== "2026-10-16")
+    errors.push(slug + ": missing dated source-checked visitor task.");
+  const text = [note.intro, note.planning.detail].filter(Boolean).join(" ");
+  if (/\bFCDO\b/.test(text)) {
+    if (!guide?.sources?.some(s => s.href === "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks") &&
+        guide?.source?.href !== "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks")
+      errors.push(slug + ": lacks directly cited official travel warning.");
+  }
+  const urls = [guide?.source?.href, ...(guide?.sources ?? []).map(s => s.href)].filter(Boolean);
+  if (new Set(urls).size !== urls.length)
+    errors.push(slug + ": source links duplicated after update.");
 }
 
 // Regression: publication screening and the actual Tour guide page must agree
