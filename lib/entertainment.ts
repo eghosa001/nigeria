@@ -1,4 +1,5 @@
 import { verifiedPsychologicalThrillerOctober20261013 } from "@/lib/entertainment-thriller-2026-10-13";
+import { reviewedMovieRecords20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { verifiedFilmDirectorCredits20261015 } from "@/lib/entertainment-verified-credits-2026-10-15";
 import { verifiedOctoberMovieReleases20261013 } from "@/lib/entertainment-october-releases-2026-10-13";
 import { verifiedOctoberFilm } from "@/lib/entertainment-social-trends-2026-10-10";
@@ -2814,13 +2815,17 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
 // Apply reviewed credit evidence to both old and newly imported records, without
 // overriding existing documented director fields or inventing availability.
 export const entertainmentTitles: EntertainmentTitle[] = uncorrectedEntertainmentTitles.map((title) => {
-  const correction = verifiedFilmDirectorCredits20261015[title.slug];
-  if (!correction || title.directors?.length) return title;
-  return {
-    ...title,
-    directors: correction.directors,
-    references: [...(title.references ?? []).filter((ref) => ref.href !== correction.source.href), correction.source],
-  };
+  const credit = verifiedFilmDirectorCredits20261015[title.slug];
+  const credited = credit && !title.directors?.length
+    ? { ...title, directors: credit.directors,
+        references: [...(title.references ?? []).filter((ref) => ref.href !== credit.source.href), credit.source] }
+    : title;
+  const repair = reviewedMovieRecords20261016[title.slug];
+  if (!repair) return credited;
+  const prior = (credited.references ?? []).filter(
+    (ref) => !repair.references.some((source) => source.href === ref.href),
+  );
+  return { ...credited, ...repair, references: [...prior, ...repair.references] };
 });
 
 export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava", "Cinema", "Africa Magic"] as const;
