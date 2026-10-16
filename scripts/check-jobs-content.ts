@@ -9,6 +9,7 @@ import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
 import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
 import { verifiedPortalSlugs20261016 } from "../lib/job-issuer-portals-reviewed-2026-10-16";
 import { issuerCareerReviewSlugs20261016B } from "../lib/job-issuer-career-research-2026-10-16-b";
+import { individuallyCheckedMoniepointRoles20261016 } from "../lib/job-moniepoint-exact-roles-2026-10-16";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -49,6 +50,26 @@ for (const slug of issuerCareerReviewSlugs20261016B) {
 const piggyvestPortal = jobOpportunities.find(item => item.slug === "piggyvest-careers");
 assert(piggyvestPortal?.summary.includes("No Open Positions"),
   "PiggyVest board showed no roles at verification; do not invent a vacancy.");
+
+// The six Moniepoint pages must show issuer-owned role evidence, not the
+// old Greenhouse landing redirects. A live title does not prove a submission.
+assert(individuallyCheckedMoniepointRoles20261016.length === 6,
+  "Six independent Moniepoint role updates expected.");
+for (const slug of individuallyCheckedMoniepointRoles20261016) {
+  const item = jobOpportunities.find(job => job.slug === slug);
+  assert(item?.kind === "vacancy" && item.officialUrl.startsWith("https://moniepoint.com/careers/roles/"),
+    slug + ": link should point to the actual official job description.");
+  assert(item.verifiedAt === "2026-10-16" && item.applicationSteps.length === 4 &&
+      item.sourceNotes.length === 3 &&
+      item.sources.some(source => source.url === item.officialUrl && source.lastChecked === "2026-10-16"),
+    slug + ": individual issuer source and role-specific next steps missing.");
+  assert(!item.deadline && !item.jobPostingAuthorization,
+    slug + ": do not invent a closing date or structured job-publishing authorization.");
+}
+const moniepointResearch = jobOpportunities.find(job => job.slug === "moniepoint-customer-experience-researcher");
+assert(moniepointResearch?.status === "unverified" &&
+    !isIndexableJobOpportunity(moniepointResearch),
+    "Customer Experience Researcher must remain noindex until a current accepting vacancy is substantiated.");
 
 // Verify that an HTTP 200 page containing 'expired' or an employer-board redirect
 // does not masquerade as a live Apply form in the Jobs pillar.
