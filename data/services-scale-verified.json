@@ -8947,11 +8947,11 @@
     "slug": "uba-919-ussd-banking",
     "title": "How to register and use UBA *919# USSD banking",
     "shortTitle": "UBA *919#",
-    "summary": "UBA Nigeria's *919# Magic Banking route for enrolment, transfers, airtime/data, bills, account opening and other supported services from a registered mobile number without internet access.",
+    "summary": "UBA's *919# USSD banking operates from the mobile number registered to a UBA account or prepaid card and supports account setup, payments and transfers. For an emergency, UBA's published Nigeria transaction table distinguishes a ₦5 debit-card block with *919*10#, a free online-transaction freeze with *919*9#, and a third-party debit-card block with *919*911#. Other UBA pages label *919*911# as an account-freeze route, so verify the requested restriction before relying on that code to secure an entire account.",
     "category": "Banking",
     "agencySlug": "uba",
     "feeLabel": "Enrolment is free; service charges vary by transaction",
-    "feeNote": "UBA publishes transaction-specific *919# charges. Enrolment and account opening are free, while transfers, bill payments, OTP generation and other services can attract published fees plus the applicable telecom USSD session charge.",
+    "feeNote": "UBA publishes transaction-specific *919# charges, including ₦5 for the standard debit-card block (*919*10#) and no service charge for freezing online transactions (*919*9#). A separate network USSD session charge can apply. The bank's online sources conflict about the role of *919*911#; do not infer a universal account-freeze cost or effect without UBA confirmation.",
     "timeline": "USSD enrolment completes during the active session after the account/prepaid-card registration and PIN setup succeed.",
     "status": "verified",
     "officialPortal": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
@@ -8962,29 +8962,37 @@
       "A private USSD PIN created during the first registration process"
     ],
     "steps": [
-      "Open the phone dialler on the mobile number maintained on the UBA account or prepaid card and dial *919#.",
-      "Choose the registration option for a UBA Account or UBA Prepaid Card and complete the identity prompts.",
-      "Create the USSD PIN and confirm the new *919# profile.",
-      "Dial *919# again and select the required transfer, airtime, data, bills, balance, card or other supported service.",
-      "Review any displayed charge and authenticate the transaction with the UBA USSD PIN or required security method."
+      "Dial *919# from the mobile number registered with a UBA account or eligible UBA prepaid card and choose the correct account/prepaid-card enrolment menu if this is your first use.",
+      "Complete the genuine bank verification prompts and set a private USSD PIN. Never disclose that PIN, a generated OTP or Secure Pass code to another person.",
+      "Use the menu or UBA's documented direct transaction code for the ordinary action you intend: transfer, airtime, bills, statement or account services. Read any service fee and telecom USSD session charge shown before confirmation.",
+      "For a compromised debit card, UBA's dedicated card page lists *919*10# (₦5 service fee). Its USSD table separately describes *919*911# as a third-party debit-card block; card blocking does not necessarily stop access through mobile and internet banking.",
+      "For a compromised online banking session, UBA's USSD page lists *919*9# as Freeze Online Transactions (free service charge). UBA's self-service page also lists *919*911# as an account-freeze route, so confirm the actual action shown by the bank rather than conflating an online restriction with a complete account lock.",
+      "Keep confirmation or transaction references. If a freeze or block does not show success, contact the genuine UBA Customer Fulfilment Centre or use the official Self Service → Block My Account/Block My Card options to confirm what is restricted."
     ],
     "notes": [
-      "UBA says the phone number used for *919# must be maintained on the account or prepaid card.",
-      "The bank publishes direct short codes for many functions, including account opening, card blocking, bill payment and BVN retrieval.",
-      "Never disclose the USSD PIN, OTP or Secure Pass code to another person."
+      "UBA's primary 919 transaction table lists *919*10# for normal card block (₦5), *919*911# for third-party debit-card block, and *919*9# for online-transaction freeze (free service). Distinguish these codes from a complete account freeze.",
+      "The UBA Nigeria Self Service page contains duplicated conflicting code descriptions, calling *919*911# an account freeze and elsewhere displaying *919*9# for account freezing. Users should check the live prompts and contact the bank for full account protection.",
+      "UBA says the registered phone number is required for ordinary USSD enrolment and financial operations; a stolen SIM or handset calls for immediate provider and bank action through trusted channels.",
+      "UBA also publishes fees for other *919# operations. Fees and menu options can change; confirm the on-screen cost and never share your USSD PIN, OTP or Secure Pass code."
     ],
     "sources": [
       {
-        "label": "UBA *919# USSD Banking",
+        "label": "UBA Nigeria — official *919# USSD codes, charge table and security menu",
         "agency": "United Bank for Africa",
         "url": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "UBA Self Service",
+        "label": "UBA Nigeria — self-service card/account lock options and Leo",
         "agency": "United Bank for Africa",
         "url": "https://www.ubagroup.com/nigeria/self-service/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "UBA Nigeria — debit-card loss reporting and *919*10# instruction",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/cards/debit-cards/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -8993,62 +9001,71 @@
       "uba-freeze-account",
       "firstbank-894-ussd"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "UBA USSD code",
       "*919# UBA",
       "register UBA USSD",
       "UBA Magic Banking",
-      "UBA transfer code"
+      "UBA transfer code",
+      "UBA *919*9 freeze online transactions",
+      "UBA *919*911 third party freeze",
+      "UBA *919*10 block debit card",
+      "UBA 919 account freeze code conflicting instructions"
     ]
   },
   {
     "slug": "uba-block-debit-card",
-    "title": "How to block a UBA debit card",
+    "title": "Block a Lost UBA Debit Card: *919*10#, Leo and App",
     "shortTitle": "Block UBA debit card",
-    "summary": "UBA's official card-block routes through *919*10#, *919*911#, Leo or Mobile Banking for a lost, stolen or compromised debit card.",
+    "summary": "For a lost or stolen UBA debit card, UBA's card-specific page and *919# transaction table list *919*10# as the dedicated card-block route. UBA also offers BLOCK CARD through Leo and a self-service card block in its mobile app. The official USSD table separately lists *919*911# as a third-party debit-card block, while UBA's self-service page uses the same code in some account-freezing guidance. Follow the exact card-block option displayed, confirm successful blocking, and report suspected unauthorised transactions to the bank.",
     "category": "Banking",
     "agencySlug": "uba",
-    "feeLabel": "₦5 via the published *919*10# card-block service",
-    "feeNote": "UBA's current *919# service table lists a ₦5 charge for Block Debit Card. Other support channels such as Leo or Mobile Banking can follow their own service terms.",
-    "timeline": "UBA presents card blocking as an immediate security action after successful authentication.",
+    "feeLabel": "UBA publishes ₦5 for *919*10# card blocking",
+    "feeNote": "UBA's Nigeria *919# USSD service table lists ₦5 for the dedicated debit-card block action *919*10#, with any operator USSD session fee potentially separate. Its list includes *919*911# as third-party card blocking without publishing a universal transaction fee for that route; Leo/app charges are not established by this guide. Follow the charge shown by UBA and never pay an unofficial person to secure a card.",
+    "timeline": "The bank describes card blocking as an emergency self-service action. The request is effective only when its own channel confirms it; no publicly verified promise that entering a code without successful completion blocks the card. Escalate immediately to official UBA support if you cannot obtain confirmation.",
     "status": "verified",
     "officialPortal": "https://www.ubagroup.com/nigeria/self-service/",
     "requirements": [
-      "A UBA debit card that needs to be blocked because it is lost, stolen or compromised",
-      "Access to the registered mobile number for *919*10#, or access to another UBA self-service channel",
-      "The account/security information requested by UBA to authenticate the block request"
+      "The lost, stolen, compromised or suspicious UBA debit card, or the linked UBA account so you can select the correct card to disable.",
+      "Access to the UBA-registered phone line for the dedicated *919*10# USSD route, or a legitimate UBA Mobile Banking/Leo channel already under your control.",
+      "The genuine bank authentication information requested inside UBA's own app or USSD prompt; never disclose a card PIN, OTP or Secure Pass code to a caller or agent.",
+      "For a missing registered phone, access to an official alternate UBA contact route. UBA lists *919*911# for third-party card blocking, but the same bank's self-service descriptions conflict about its role, so follow the live on-screen instructions rather than assuming its effect."
     ],
     "steps": [
-      "Dial *919*10# from the registered UBA phone number, or open Leo/Mobile Banking and choose the card-block option.",
-      "Identify the affected card/account when UBA asks which debit card should be blocked.",
-      "Complete the USSD PIN, app PIN or other authentication shown by the selected channel.",
-      "Confirm the block request and keep the success message or in-app confirmation.",
-      "Review recent transactions and contact UBA's official support immediately if unauthorised activity has already occurred."
+      "If the physical debit card is lost or its details are exposed, act before trying to locate it. On the UBA-registered phone dial *919*10#, the specific card-block short code in UBA's official debit-card page and Nigeria USSD transaction table.",
+      "Follow the displayed UBA USSD prompt to identify the card and authorise the card-block action. UBA lists a ₦5 service charge for *919*10#; read any session or service charge shown before completing.",
+      "If you can still use an authenticated UBA Mobile Banking session, go to Self-Service → Block Card and select the affected card. Alternatively, use UBA's genuine Leo channel and send BLOCK CARD to the official account identified from UBA's own website.",
+      "If your registered phone is missing, seek the bank's genuine third-party block path or contact its support. UBA lists *919*911# as third-party debit-card blocking in its USSD table, but self-service pages also describe this code as an account freeze; do not assume simply dialing it achieves both outcomes.",
+      "Confirm that UBA actually processed the request through its success message or the card's current status. Keep the time, reference (if shown) and any report made to the fraud/support desk; a partially completed USSD session is not a block confirmation.",
+      "Review recent transactions and promptly report any unauthorised debits or purchases using UBA's official support details. The debit-card product page provides its Fraud Helpdesk and Customer Fulfilment Centre contact routes; document disputed transactions separately.",
+      "If the phone, banking app login, OTP delivery or account credentials are also compromised, request a separate account-level restriction or freeze. Blocking a card does not certify that all transfers, mobile app sessions, internet banking or other payment channels were stopped."
     ],
     "notes": [
-      "UBA also publishes *919*911# as a security/freeze route that can be used in urgent situations.",
-      "Blocking a debit card does not necessarily freeze every account channel.",
-      "The provider states that loss should be reported immediately to limit fraudulent purchase exposure."
+      "UBA's dedicated Nigeria USSD page distinguishes three different actions: *919*10# = standard debit-card block, *919*911# = third-party debit-card block, and *919*9# = freeze online transactions. These are not interchangeable, and the first two are not automatic proof the entire bank account is frozen.",
+      "UBA's Self Service page contains contradictory duplicated sections, describing *919*911# as both account-freezing and card-blocking, and a later section showing *919*9# / *919*10*#. This guide favours UBA's action-specific card page plus transaction table and clearly discloses the conflict.",
+      "UBA describes card-loss liability coverage from the time a loss is reported to its fraud or customer fulfilment desk for applicable cards. Do not interpret that as a blanket guarantee that every unauthorised transaction will be reimbursed; notify the bank promptly and follow its claims rules.",
+      "If the phone itself is stolen, do not wait for recovery to secure card and online-account access. Use official contact channels; never respond to a stranger asking for a PIN or OTP to block the card.",
+      "The ₦5 figure is the service fee in UBA's online USSD table, not a verified universal cost of blocking through all digital channels. Mobile-network session fees may also apply."
     ],
     "sources": [
       {
-        "label": "UBA Self Service",
-        "agency": "United Bank for Africa",
-        "url": "https://www.ubagroup.com/nigeria/self-service/",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "UBA Debit Cards",
-        "agency": "United Bank for Africa",
-        "url": "https://www.ubagroup.com/nigeria/personal-banking/cards/debit-cards/",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "UBA *919# USSD Banking",
+        "label": "UBA Nigeria — official *919# USSD codes, charge table and security menu",
         "agency": "United Bank for Africa",
         "url": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "UBA Nigeria — debit-card loss reporting and *919*10# instruction",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/cards/debit-cards/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "UBA Nigeria — self-service card/account lock options and Leo",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/self-service/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -9056,50 +9073,71 @@
       "uba-freeze-account",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block UBA card",
       "UBA debit card block code",
       "*919*10#",
       "UBA lost ATM card",
-      "UBA card freeze"
+      "UBA card freeze",
+      "UBA *919*911 third party debit card freeze",
+      "UBA *919*10 block card fee",
+      "UBA card block Leo app official",
+      "UBA stolen phone lost ATM card account security"
     ]
   },
   {
     "slug": "uba-freeze-account",
-    "title": "How to freeze a UBA account if your phone or account is compromised",
+    "title": "Freeze or Restrict a UBA Account: *919*9#, Leo and Emergency Support",
     "shortTitle": "Freeze UBA account",
-    "summary": "UBA's emergency account-freeze route through *919*911#, Leo and other official self-service channels when the customer needs to stop access to an account urgently.",
+    "summary": "If a UBA account or phone is compromised, use the official UBA Self Service page's Block My Account option or send FREEZE ACCOUNT through the bank's legitimate Leo channel, then obtain confirmation of what access was restricted. UBA's Nigeria USSD table labels *919*9# a freeze of online transactions—not necessarily a complete account freeze. Its self-service guidance also names *919*911# for freezing an account, whereas its USSD table describes that code as third-party debit-card blocking. Because UBA's own instructions conflict, verify the result with UBA rather than promising that one dialled code freezes every channel.",
     "category": "Banking",
     "agencySlug": "uba",
-    "feeLabel": "No separate freeze-account fee stated",
-    "feeNote": "UBA's self-service page presents account freezing as a security action and does not state a separate freeze-account fee.",
-    "timeline": "UBA presents the freeze-account action as an immediate emergency security request after successful authentication.",
+    "feeLabel": "UBA lists *919*9# online-transaction freeze as free; other costs unconfirmed",
+    "feeNote": "The official *919# USSD transaction table lists Freeze Online Transactions (*919*9#) as free, but separate telecom USSD session charges may apply. The self-service page does not establish a single reliable charge for every account-level lock or third-party security route. Confirm the action, charge and account restriction in the actual bank channel.",
+    "timeline": "Use official UBA emergency support immediately if fraud or a stolen phone is suspected. Restrictions depend on successful authentication/processing and the specific service chosen. The bank does not publish a single guaranteed time for a full account-level freeze or recovery in the reviewed pages.",
     "status": "verified",
     "officialPortal": "https://www.ubagroup.com/nigeria/self-service/",
     "requirements": [
-      "A UBA account that needs to be secured because the phone, credentials or account access may be compromised",
-      "Access to a phone or official UBA digital channel capable of starting the freeze request",
-      "The account/security information requested by UBA during authentication"
+      "The affected UBA bank account, or enough information for UBA to identify and secure it through its real emergency-support channel.",
+      "Access to UBA's official Self Service Block My Account option, its verified Leo channel, or the official bank support numbers published on the UBA website; do not require access to the stolen phone to begin escalating a compromise.",
+      "If using USSD, the phone and account authentication required by UBA. The documented *919*9# command restricts online transactions, which may not stop ATM/card activity or every account channel.",
+      "Any available transaction dates, amounts, beneficiary references, suspicious activity notices and approximate time the phone or account was compromised, to report the incident and request appropriate restrictions without disclosing your PIN or OTP."
     ],
     "steps": [
-      "Dial *919*911# or open an official UBA self-service channel such as Leo when the account needs urgent protection.",
-      "Choose the Freeze Account or equivalent emergency security option presented by UBA.",
-      "Enter the account or registered-phone information requested by the channel.",
-      "Complete the authentication prompts and confirm the freeze request.",
-      "Contact UBA through an official support channel to review unauthorised transactions and follow the bank's process before restoring normal access."
+      "If the phone or online banking credentials are stolen or compromised, use another trusted device to open https://www.ubagroup.com/nigeria/self-service/ and look for UBA's Block My Account option. Alternatively open the bank's genuine Leo channel from UBA's own website and send FREEZE ACCOUNT, not your personal banking PIN.",
+      "Explain to UBA whether you need to restrict the full account, only the card or only online transactions. UBA's Nigeria USSD page explicitly labels *919*9# as Freeze Online Transactions; selecting it does not independently prove a full account freeze.",
+      "If you rely on a USSD emergency option, note the conflicting bank publications: UBA's self-service page says *919*911# can freeze an account, but its USSD transaction table calls *919*911# third-party debit-card blocking. Check the on-screen action before confirmation and request bank support if the choice does not match your risk.",
+      "Supply only the account identification and verification information requested inside the official bank service. Never give a caller, social-media intermediary or unsolicited chatbot your full PIN, password, Secure Pass or one-time code.",
+      "Complete the requested freeze/lock action and retain the bank-issued confirmation or case reference. If no confirmation is received, contact UBA's Customer Fulfilment Centre through the phone/email published on the official *919# banking page rather than assuming the account is safe.",
+      "Request that UBA clarify which access channels are now blocked—outgoing transfers, mobile/internet banking, card transactions and other instruments may require separate controls. Immediately block a compromised debit card using its separate *919*10# route or UBA mobile app if applicable.",
+      "Document unauthorised transactions for the bank's fraud dispute process, preserve message/statement evidence, and ask UBA what identity/branch steps are required to restore safe access. A security freeze is not proof disputed money has been reversed."
     ],
     "notes": [
-      "UBA's Self Service page also distinguishes card blocking from freezing the bank account.",
-      "Do not delay the security action while trying to recover a lost phone.",
-      "Never disclose a UBA PIN, Secure Pass code or OTP to someone claiming to help freeze the account."
+      "Important first-party discrepancy: UBA Nigeria's Self Service page uses *919*911# as an emergency account-freeze command, but its dedicated USSD page lists *919*911# as third-party debit-card blocking. Its older duplicated self-service block also quotes *919*9# for a freeze, while the dedicated USSD table restricts that label to online transactions. The exact account-level effect should be confirmed with UBA.",
+      "Use the bank's website-listed Block My Account and Leo FREEZE ACCOUNT routes when you need an account-level lock. If a menu shows only an online-transaction or card block, escalate to human UBA support for additional protections.",
+      "UBA's dedicated *919# transaction table lists *919*9# (Freeze Online Transactions) as free; this does not establish that every mobile-network USSD session or account reopening is free.",
+      "Prevent additional exposure from a lost phone by securing mobile-network SIM access and other financial apps independently. A card block is not equivalent to protecting the account login, mobile banking or the SIM.",
+      "Do not send sensitive credentials or bank account statements to a number, social-media profile or website obtained from an unrelated advert. Find genuine UBA contact details from the bank's own published channels."
     ],
     "sources": [
       {
-        "label": "UBA Self Service",
+        "label": "UBA Nigeria — self-service card/account lock options and Leo",
         "agency": "United Bank for Africa",
         "url": "https://www.ubagroup.com/nigeria/self-service/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "UBA Nigeria — official *919# USSD codes, charge table and security menu",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/digital-banking/919-ussd-banking/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "UBA Nigeria — debit-card loss reporting and *919*10# instruction",
+        "agency": "United Bank for Africa",
+        "url": "https://www.ubagroup.com/nigeria/personal-banking/cards/debit-cards/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -9107,13 +9145,17 @@
       "uba-919-ussd-banking",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "freeze UBA account",
       "*919*911#",
       "UBA emergency account block",
       "UBA lost phone account",
-      "UBA freeze code"
+      "UBA freeze code",
+      "UBA freeze whole account vs online transactions",
+      "UBA *919*9 freeze online transactions",
+      "UBA *919*911 third-party card block account conflict",
+      "UBA Block My Account official Leo FREEZE ACCOUNT"
     ]
   },
   {
