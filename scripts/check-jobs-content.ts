@@ -120,11 +120,11 @@ for (const slug of verifiedPortalSlugs20261016) {
   assert(item.sources.some(source => source.url === item.officialUrl &&
     source.lastChecked === "2026-10-16"),
     slug + " needs a checked exact first-party issuer link.");
-  assert(item.applicationSteps.length === 4 &&
+  assert(item.applicationSteps.length === 3 &&
     !item.applicationSteps.some(step => /Browse or search the employer's current opportunities; relevant hiring areas/.test(step)),
     slug + " must have a specific decision path, not reusable portal filler.");
-  assert(item.nextMilestone?.includes("specific application availability"),
-    slug + " must distinguish landing page retrieval from authenticated Apply.");
+  assert(!item.nextMilestone,
+    slug + " must not display a generic or stale application milestone.");
   assert(!buildJobPostingJsonLd(item, "https://mynigeriaguide.com/jobs/" + slug),
     slug + " must not expose JobPosting on a directory without a vacancy.");
 }
