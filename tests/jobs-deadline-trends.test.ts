@@ -1,10 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { getEffectiveJobStatus, getEffectiveStatusLabel, getClosingSoonJobs, isEffectivelyOpen, pickDistinctEmployerPreview, todayIsoNigeria } from "../lib/job-runtime";
+import { getEffectiveJobStatus, getEffectiveStatusLabel, getJobAvailabilityNotice, getClosingSoonJobs, isEffectivelyOpen, pickDistinctEmployerPreview, todayIsoNigeria } from "../lib/job-runtime";
 import { getCurrentHomeSocialTrends } from "../data/home-social-trends";
 import { careerGuides } from "../lib/career-guides";
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
+import { concludedIssuerWindowSlugs20261017 } from "../lib/job-concluded-windows-2026-10-17";
 import type { CareerOpportunity } from "../lib/jobs";
 
 const source = (file: string) => readFileSync(new URL("../" + file, import.meta.url), "utf8");
@@ -32,6 +33,34 @@ test("a one-off role with no deadline is automatically unverified after 14 days 
   assert.equal(getEffectiveJobStatus({ ...vacancy, verifiedAt: "2026-10-14" }, "2026-10-15"), "open");
   assert.equal(getEffectiveJobStatus({ ...vacancy, status: "closed" }, "2026-10-16"), "closed");
   assert.equal(getEffectiveJobStatus({ ...vacancy, kind: "programme" }, "2026-10-16"), "open");
+});
+
+test("expired and unverified job summaries never masquerade as current applications", () => {
+  assert.equal(getJobAvailabilityNotice(sample, "2026-10-08"), null);
+  assert.match(getJobAvailabilityNotice(sample, "2026-10-09") ?? "", /deadline was 2026-10-08.*passed/i);
+  assert.match(getJobAvailabilityNotice({ ...sample, deadline: undefined, verifiedAt: "2026-10-01" }, "2026-10-17") ?? "", /have not been verified/i);
+  assert.match(getJobAvailabilityNotice({ ...sample, status: "closed", deadline: undefined }, "2026-10-17") ?? "", /recorded as closed/i);
+  assert.equal(getJobAvailabilityNotice({ ...sample, status: "career-page", kind: "career-page" }, "2026-10-17"), null);
+});
+
+test("four issuer-confirmed ended recruitments keep historical guidance without advertising an open form", () => {
+  assert.equal(concludedIssuerWindowSlugs20261017.length, 4);
+  for (const slug of concludedIssuerWindowSlugs20261017) {
+    const item = jobOpportunities.find(job => job.slug === slug);
+    assert.ok(item, slug);
+    assert.equal(item.status, "closed", slug);
+    assert.equal(item.verifiedAt, "2026-10-17", slug);
+    assert.match(item.summary, /passed|window|deadline|closed/i, slug);
+    assert.equal(item.applicationSteps.length, 5, slug);
+    assert.ok(item.sources.some(source => source.lastChecked === "2026-10-17"), slug);
+    assert.equal(getEffectiveJobStatus(item), "closed", slug);
+  }
+  assert.equal(isIndexableJobOpportunity(jobOpportunities.find(job => job.slug === "deloitte-nigeria-early-careers")!), false);
+  for (const slug of ["snv-energy-advisor-abuja-2026", "snv-project-manager-abuja-2026"]) {
+    assert.equal(isIndexableJobOpportunity(jobOpportunities.find(job => job.slug === slug)!), false, slug);
+  }
+  const kaduna = jobOpportunities.find(job => job.slug === "kaduna-phcb-recruitment-2026")!;
+  assert.match(kaduna.applicationSteps.join(" "), /login|applicant|screening/i);
 });
 
 test("stale individual vacancies lose index eligibility when the current Nigerian day advances", () => {
