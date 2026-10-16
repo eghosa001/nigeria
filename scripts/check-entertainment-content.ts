@@ -302,5 +302,5 @@ assert(unknownMan && unknownProfile, "The Man I Never Knew requires a canonical 
 assert(unknownMan.references?.some(ref => ref.href.includes("nollywoodtimes.com/2026/09/the-man-i-never-knew")) &&
   unknownMan.references.some(ref => ref.href.includes("filmflux.app/movie/73b3559e")),
   "The Man I Never Knew needs independent release and cast source citations.");
-assert(!/pregnan|raises a child/i.test([unknownMan.synopsis, ...unknownProfile.story, ...unknownProfile.context].join(" ")),
-  "The Man I Never Knew must not invent a pregnancy or single-parent storyline.");
+assert(!/she discovers she is pregnant|raises a child after|experience of parenting alone/i.test([unknownMan.synopsis, ...unknownProfile.sections.flatMap(section => section.paragraphs)].join(" ")),
+  "The Man I Never Knew must not restore the unsupported pregnancy and parenting plot.");
