@@ -13,7 +13,8 @@ test("the eight existing film guides use the source-backed correction layer", ()
     "monica", "fruit-covenant", "sister-agatha",
   ]) assert.ok(source.includes('"' + slug + '": {'), slug);
   assert.match(catalog, /reviewedMovieRecords20261016\[title\.slug\]/);
-  assert.match(registry, /movieEditorialProfilesRemainingB,[\s\S]*reviewedMovieDossiers20261016,/);
+  assert.match(registry, /\.\.\.reviewedMovieDossiers20261016,/);
+  assert.doesNotMatch(registry.split("export const allMovieEditorialProfiles")[0], /^  reviewedMovieDossiers20261016,$/m);
 });
 
 test("documented corrections do not silently reinstate contested facts", () => {
