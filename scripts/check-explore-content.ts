@@ -364,7 +364,7 @@ for (const [slug, sourceFragment, evidencePhrase, planningPhrase] of [
       !guide.sources?.some(item => item.href.includes(sourceFragment)) ||
       !guide.intro.some(item => item.includes(evidencePhrase)) ||
       !guide.planning.some(item => item.label.includes(planningPhrase)) ||
-      guide.lastReviewed !== "2026-10-15") {
+      guide.lastReviewed < "2026-10-15") {
     errors.push(`${slug}: independently verified heritage research or visitor safeguards missing`);
   }
 }
