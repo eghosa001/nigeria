@@ -237,6 +237,15 @@ for (const [slug, expectedSource] of [
   }
 }
 
+
+const gashaka = exploreGuides.find(item => item.slug === "gashaka-gumti-national-park");
+if (!gashaka ||
+    !gashaka.sources?.some(item => item.href === "https://whc.unesco.org/en/tentativelists/6918/") ||
+    !gashaka.intro.some(text => text.includes("5,907") && text.includes("6,731") && text.includes("differ")) ||
+    !gashaka.planning.some(item => item.label.includes("2025 UNESCO nomination") && item.detail.includes("not a ranger-led tour schedule"))) {
+  errors.push("gashaka-gumti-national-park: verified 2025 UNESCO nomination or conflicting area clarification missing");
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);
