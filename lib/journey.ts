@@ -663,7 +663,7 @@ const verifiedCivicJourneys: Record<string, ServiceJourney> = {
   "npc-check-attestation-status": {
     mode: "online", modeLabel: "NPC existing attestation Payment Reference",
     startLabel: "Resume the already submitted NPC attestation",
-    startDetail: "Use Payment Reference to check status and download only after approval. Do not use temporary attestation number as payment reference.",
+    startDetail: "Open NPC Services or the live VitalReg self-service account; use Payment Reference to check status and download after approval. The former standalone attestation host is currently unreachable.",
     onlineAvailable: true, physicalStatus: "not-stated",
     physicalLabel: "No compulsory office visit for standard online status lookup",
     alternativeLabel: "If the reference is not recognised",
@@ -672,7 +672,7 @@ const verifiedCivicJourneys: Record<string, ServiceJourney> = {
   "npc-modify-birth-record": {
     mode: "online", modeLabel: "NPC digital-record modification",
     startLabel: "Select Modify Record for an existing certificate",
-    startDetail: "Use NPC dashboard (+) → third Modify Record or official modification service. Only digital records qualify; portal lists US$20 convenience fee.",
+    startDetail: "Use the existing VitalReg dashboard (+) → third Modify Record for a digitised record. Former standalone link is not resolving; old US$20 price must not be treated as current checkout.",
     onlineAvailable: true, physicalStatus: "not-stated",
     physicalLabel: "Online modification is supported for eligible digitised records",
     alternativeLabel: "If original record is not digitised",
