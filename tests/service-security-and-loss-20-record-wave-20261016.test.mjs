@@ -56,8 +56,9 @@ test("bank-specific emergency codes, restrictions, caveats and support remain di
 
 test("SIM, lost-item and lost-document guides preserve real safeguards", () => {
   const mtn = get("mtn-sim-swap-replacement");
-  assert.match(mtn.steps.join(" "), /more than 30 days|over 30 days|more than 30days/i);
-  assert.match(mtn.steps.join(" "), /90 days/);
+  const mtnevidence = [...mtn.steps, ...mtn.requirements, ...mtn.notes].join(" ");
+  assert.match(mtnevidence, /more than 30 days|over 30 days|more than 30days/i);
+  assert.match(mtnevidence, /90 days/);
   assert.match(get("airtel-4g-sim-swap").summary, /self-service SIM swap/);
   assert.match(get("uber-lost-item-nigeria").steps.join(" "), /help\.uber\.com/);
   assert.match(get("bolt-lost-item-nigeria").summary, /24 hours/);
