@@ -8128,36 +8128,35 @@
     "slug": "nhf-registration-and-contributions",
     "title": "How to register for the National Housing Fund (NHF) and check contributions",
     "shortTitle": "NHF registration",
-    "summary": "The Federal Mortgage Bank of Nigeria (FMBN) administers National Housing Fund (NHF) contributions and contributor statements. The NHF rate described on FMBN's scheme FAQ is 2.5% of qualifying monthly income, but enrolment depends on employer/self-employed status. Contributors should obtain their NHF account number and independently verify actual remittances; payslip deductions by themselves do not confirm the fund has credited them.",
+    "summary": "FMBN's official iBank portal provides online National Housing Fund contributor registration, activation, contribution payments and credited-payment statements. A new individual contributor chooses New User, Individual Contributor, enters an accessible email, phone and BVN, verifies an email OTP and selects employed or self-employed; after approval, the NHF number is issued for account activation. The portal's Contribution History proves credited contributions more reliably than a payroll deduction alone.",
     "category": "Housing",
     "agencySlug": "fmbn",
     "feeLabel": "2.5% monthly income contribution",
     "feeNote": "FMBN's NHF information states a 2.5% monthly contribution basis; check the current official rule that applies to your employment/self-employment status.",
     "timeline": "Registration and crediting of contributions depend on employer/self-employed remittance and FMBN processing.",
     "status": "verified",
-    "officialPortal": "https://fmbn.gov.ng/",
+    "officialPortal": "https://ibank.fmbn.gov.ng/",
     "requirements": [
-      "Valid identity and contact information matching the NHF contributor record.",
-      "Employer/payroll details for employees or approved self-employed enrolment information.",
-      "NHF contribution/account number issued on registration or a way to retrieve it through FMBN.",
-      "Pay statements or personal contribution receipts to reconcile each month.",
-      "Details of previous employers when changing jobs so old NHF periods remain traceable."
+      "A personal email that can receive FMBN OTPs, valid mobile number and BVN.",
+      "Correct identity information and whether the individual is employed or self-employed.",
+      "Existing NHF account/number when activating a contributor account rather than applying afresh.",
+      "Employer identity and contribution period details to reconcile missing payments."
     ],
     "steps": [
-      "Open FMBN's NHF Scheme information and identify the enrolment route for employed or self-employed contributors.",
-      "For a salaried applicant, confirm the employer enrolled the worker and remits the NHF deduction under the correct personal record.",
-      "For self-employed contributors, use the FMBN-approved registration and contribution instructions; do not imitate payroll registration with inaccurate employer details.",
-      "Obtain the contributor's NHF number and confirm name, date of birth and employment records before making future deductions.",
-      "Use FMBN's website account/contribution verification service or a branch office to obtain an NHF statement; FMBN says branch staff can print federal workers' statements.",
-      "Compare the statement with payroll/personal payment records and create a list of missing months or discrepancies.",
-      "Ask payroll/remittance staff and the FMBN NHF account officer to reconcile specific remittance references, especially across job changes.",
-      "Retain the official contribution record for any eventual mortgage or refund application."
+      "Open https://ibank.fmbn.gov.ng/ and select New Contributor / New User under the official FMBN banking login.",
+      "Choose Individual Contributor, enter email, phone number and BVN, request the one-time email code and validate it.",
+      "Select Employed or Self-employed as appropriate, complete the personal/employer fields and submit the registration for FMBN approval.",
+      "After receiving the NHF account-number notification, return to Activate Account, confirm registered email or NHF number and phone number and validate the OTP.",
+      "Create the contributor portal password, then sign in to check Contribution History for credited payments by your employer or yourself.",
+      "If self-remitting, open Payment Menu then Single Contribution for a single period or Backlog Payment for multiple periods, and select an approved Remita or Etransact channel.",
+      "Review Payment History to confirm a transaction settled and Contribution History to ensure it is credited to the contributor record.",
+      "Use Self Service then Statement of Account to generate a statement; when changing jobs use Change Employer instead of a duplicate NHF contributor registration."
     ],
     "notes": [
-      "FMBN's public NHF page describes a 2.5% contribution basis; determine the exact eligible income component from official guidance.",
-      "A payslip deduction does not prove a matching NHF contribution reached the FMBN record.",
-      "FMBN's FAQ says federal employees can request NHF statements from FMBN state offices.",
-      "Refund eligibility and mortgage approval have additional conditions unrelated to merely having a registration number."
+      "The official FMBN iBank portal publishes detailed New User, Activate Account, Payment Menu and Contribution History steps.",
+      "FMBN's employer portal separately supports bulk Employee Reg templates and employer remittances; an employee should not impersonate the employer account.",
+      "An employer deduction is not proof of an NHF credit until the official account shows it.",
+      "The NHF mortgage and refund have separate eligibility conditions beyond receiving an NHF number."
     ],
     "sources": [
       {
@@ -8170,6 +8169,12 @@
         "label": "FMBN NHF Scheme FAQ",
         "agency": "Federal Mortgage Bank of Nigeria",
         "url": "https://fmbn.gov.ng/products/nhf-scheme/faqs",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "FMBN official iBank contributor and employer self-service portal instructions",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://ibank.fmbn.gov.ng/",
         "lastChecked": "2026-10-16"
       }
     ],
@@ -8189,14 +8194,14 @@
     "slug": "nhf-mortgage-loan",
     "title": "How to apply for an NHF mortgage loan",
     "shortTitle": "NHF mortgage loan",
-    "summary": "The FMBN NHF Mortgage Loan is not an automatic loan for every contributor. The current product is offered through accredited Primary Mortgage Banks (PMBs), with FMBN funds on-lent to eligible NHF contributors at 6% a year. Applicants need at least six months of qualifying contributions, an appropriate house/property, stable income and repayment capacity, clean title and a successful mortgage-bank assessment.",
+    "summary": "FMBN's current NHF Mortgage Loan product is an eligibility-tested housing loan for qualifying NHF contributors, commonly administered with accredited mortgage banks and at the published 6% annual onward mortgage rate. Its official iBank contributor dashboard now also offers Loans → Initiate Loan: select loan type, attach supporting records, run Check Affordability and use Request to send the application to FMBN. An online request does not mean a loan is approved or that property title checks have been completed.",
     "category": "Housing",
     "agencySlug": "fmbn",
     "feeLabel": "6% p.a. NHF mortgage rate",
     "feeNote": "FMBN's current product page states that participating mortgage banks on-lend NHF mortgage funds to contributors at 6% per annum.",
     "timeline": "Depends on property documentation, affordability assessment, participating mortgage bank processing and FMBN approval.",
     "status": "verified",
-    "officialPortal": "https://fmbn.gov.ng/products/nhf_mortgage_loan",
+    "officialPortal": "https://ibank.fmbn.gov.ng/",
     "requirements": [
       "An NHF contributor account with at least six months of contributions as described by the FMBN product/legal terms.",
       "Stable employment income or, for self-employed applicants, satisfactory evidence of regular receipts.",
@@ -8205,20 +8210,20 @@
       "Identity evidence, NHF statement and any underwriting or affordability documents required by PMB/FMBN."
     ],
     "steps": [
-      "Verify an NHF account and at least six months of credited contributions; a payroll deduction not credited is not yet an established NHF contribution.",
-      "Review FMBN's current NHF Mortgage Loan product information and confirm the stated 6% annual on-lending interest rate with the accredited PMB.",
-      "Check the maximum permitted loan amount/tenor and estimate a realistic repayment based on actual take-home income, other debts and the property cost.",
-      "Identify a participating licensed PMB that handles FMBN/NHF mortgages; do not apply through an unverified housing-agent link.",
-      "Select or identify a residential property and collect credible title, valuation and development documents before committing a non-refundable deposit.",
-      "Submit the identity, NHF contribution statement, income proof and property records through the PMB's authorised channel.",
-      "Respond to the PMB's eligibility, property title/valuation and FMBN funding queries, then review the actual offer, charges and repayment schedule before signing.",
-      "Retain the official approval/disbursement paperwork and verify the lender's payment instructions before transferring money."
+      "Activate or sign in to the NHF contributor account at https://ibank.fmbn.gov.ng/ and verify NHF Contribution History, including the product's minimum contribution period.",
+      "Review the NHF Mortgage Loan page and applicable eligibility, 6% onward rate, tenor, affordability and the property/title rules.",
+      "Speak to an accredited participating Primary Mortgage Bank where the product requires it, and gather the purchase/construction property's credible title and income evidence.",
+      "In the official FMBN iBank dashboard open Loans, select Initiate Loan and choose the actual loan product matching the intended property.",
+      "Fill the loan form with correct applicant/property details and attach the identity, income and property documents requested.",
+      "Use the portal's Check Affordability function to review whether the proposed repayments fit the applicant's financial profile.",
+      "Select Request to submit the application to FMBN for processing, and keep its reference while the lender reviews title, valuation and underwriting.",
+      "Before accepting an offer, confirm the final repayment schedule and disclosed costs through FMBN/participating mortgage bank; a submitted online form is not final loan approval."
     ],
     "notes": [
-      "FMBN's current product page states a maximum tenure of up to 30 years and a ceiling of up to ₦50 million subject to eligibility and underwriting.",
-      "Six months of contributions meets only one initial condition; it does not oblige the bank to lend.",
-      "The published 6% interest rate is distinct from any properly disclosed ancillary transaction/valuation costs.",
-      "A mortgage loan is not the same as an NHF contribution refund or a home renovation loan."
+      "FMBN's current iBank portal explicitly offers Loans → Initiate Loan → Check Affordability → Request.",
+      "A minimum NHF contribution record is only an initial criterion; income, property and lender review can still block approval.",
+      "FMBN's mortgage product currently references on-lending at 6% to NHF contributors and a possible 30-year tenor, subject to conditions.",
+      "Do not confuse the NHF Mortgage Loan with the distinct Home Renovation Loan, Rent to Own or NHF Refund services."
     ],
     "sources": [
       {
@@ -8228,9 +8233,9 @@
         "lastChecked": "2026-10-16"
       },
       {
-        "label": "FMBN NHF statutory loan qualification and contributor requirements",
+        "label": "FMBN official iBank contributor and employer self-service portal instructions",
         "agency": "Federal Mortgage Bank of Nigeria",
-        "url": "https://www.fmbn.gov.ng/documents/NHF_ACT._CAP_N45.pdf",
+        "url": "https://ibank.fmbn.gov.ng/",
         "lastChecked": "2026-10-16"
       }
     ],
@@ -8250,37 +8255,36 @@
     "slug": "nhf-contribution-refund",
     "title": "How to apply for an NHF contribution refund",
     "shortTitle": "NHF contribution refund",
-    "summary": "FMBN's published NHF refund service charter allows eligible contributors to seek their accumulated NHF contributions when they meet specified age/service or retirement/incapacity conditions, and their legal next of kin may claim for a deceased contributor. The charter requests an application letter, employment/retirement records, contribution book/passbook, account details and special medical/estate documents when relevant. Its historic 90-day target is conditional on complete verified documentation, not an unconditional current promise.",
+    "summary": "FMBN now publishes an NHF Refund application workflow inside its official iBank contributor portal: sign in, select Refund menu, preview the eligible record, proceed to application, choose the refund condition, upload supporting evidence and Apply. Refunds are eligibility-based, including applicable retirement, age, incapacity or legal estate cases; simply leaving one employer does not entitle every contributor to withdraw. Older FMBN printed service-charter times and charges should not be treated as guaranteed current promises.",
     "category": "Housing",
     "agencySlug": "fmbn",
-    "feeLabel": "FMBN service charter lists no NHF refund application fee",
-    "feeNote": "FMBN's published SERVICOM charter states 'None' under NHF Refund fees and a 90-day processing standard subject to fully complete documentation. Check current branch requirements and avoid private 'release' payments.",
-    "timeline": "FMBN's published SERVICOM charter quotes 90 days after receipt of a complete qualifying application; verify present turnaround directly, as this is a historic service standard.",
+    "feeLabel": "Verify the official FMBN iBank refund application charges",
+    "feeNote": "The current FMBN iBank manual provides an online Refund menu but does not state a universal new refund fee or guaranteed processing time. Follow its actual official instructions; no agent's upfront release charge is verified.",
+    "timeline": "No universally verified current iBank refund completion deadline is published on the checked official portal. FMBN approval and validation control the actual timing.",
     "status": "verified",
-    "officialPortal": "https://fmbn.gov.ng/",
+    "officialPortal": "https://ibank.fmbn.gov.ng/",
     "requirements": [
-      "Personal NHF contributor number, contribution evidence and NHF passbook/official statement.",
-      "An application letter requesting refund, employment appointment letter and the appropriate retirement/employer-introduction documents.",
-      "Birth certificate/declaration of age or formal proof of qualifying retirement/incapacity.",
-      "Bank account details to receive an authorised refund.",
-      "Medical incapacity report if applying on incapacity; death certificate and letters of administration for an eligible deceased contributor's next of kin.",
-      "Contribution payment receipts where the person was self-employed."
+      "An existing activated FMBN NHF individual-contributor portal account with a verified contribution statement.",
+      "The age, retirement, incapacity or other qualification evidence required by the refund condition offered in the live portal.",
+      "Employment appointment/retirement documents and NHF contributor record if relevant.",
+      "An account into which an approved refund can lawfully be paid.",
+      "For an eligible deceased contributor, death and legal-estate authority records requested by FMBN."
     ],
     "steps": [
-      "Determine the claimed NHF refund basis: FMBN's charter lists age 60, 35 years in service, certain retirement/incapacity cases and eligible deceased contributors' next-of-kin claims.",
-      "Get the full contribution statement or passbook from FMBN and reconcile missing periods with previous employers before starting the claim.",
-      "Prepare a dated refund request letter plus appointment, retirement and employer introduction letters as relevant.",
-      "Add birth/age evidence, NHF passbook/contribution receipts and the claimant's bank-account documentation.",
-      "If claiming after death, assemble the death certificate and legal letters of administration; for incapacity add the medical report specified in the charter.",
-      "Obtain and complete FMBN's NHF Contribution Withdrawal forms at the official FMBN branch/service route and submit the documents together.",
-      "Keep a stamped or acknowledged submission reference and follow the FMBN branch's documented processing and verification queries.",
-      "Use the bank's published historic 90-day benchmark only as a conditional standard, not a guarantee; confirm actual timing and status with FMBN."
+      "Confirm the NHF contribution account is correctly activated on https://ibank.fmbn.gov.ng/ and review Self Service → Statement of Account for the relevant years.",
+      "Reconcile missing employer or self-employed remittances in Contribution History before filing a refund.",
+      "Sign in to the contributor portal and select the Refund menu, then the Refund option described in FMBN's published iBank manual.",
+      "Read the account preview; if the NHF identity and contribution details are correct, select Proceed to Application.",
+      "Select the qualifying refund condition displayed by FMBN rather than choosing an unsupported category just to access the form.",
+      "Attach the identity, service, retirement, incapacity or estate documents applicable to that selected refund condition.",
+      "Review the applicant and beneficiary banking information and select Apply to send the refund claim to FMBN.",
+      "Retain the official transaction/submission acknowledgement and follow any verification query; do not rely on an outdated guaranteed 90-day release claim."
     ],
     "notes": [
-      "A contributor cannot automatically withdraw every past payroll deduction merely because they leave one job or resign.",
-      "The official charter's deceased claimant route requires legal administration evidence, not just a verbal next-of-kin assertion.",
-      "FMBN's historic 90-day service target assumes all conditions and documents are satisfied; current practice should be verified.",
-      "The bank's listed application fee is none; an agent's 'processing fee' is not proof of an official charge."
+      "FMBN's current official iBank portal documents a live Refund → Refund → Proceed to Application → Apply route.",
+      "The account must meet the eligibility condition actually selected and FMBN must validate documentation.",
+      "Old service charter references to no fee and a 90-day processing benchmark are not a confirmed current payment promise.",
+      "A deceased contributor's next-of-kin/estate application needs documentary legal authority, not solely a verbal family claim."
     ],
     "sources": [
       {
@@ -8296,9 +8300,9 @@
         "lastChecked": "2026-10-16"
       },
       {
-        "label": "FMBN SERVICOM Charter: NHF Refund eligibility, documents, fees and 90-day standard",
+        "label": "FMBN official iBank contributor and employer self-service portal instructions",
         "agency": "Federal Mortgage Bank of Nigeria",
-        "url": "https://www.fmbn.gov.ng/documents/FMBN_SERVICOM_CHARTER.pdf",
+        "url": "https://ibank.fmbn.gov.ng/",
         "lastChecked": "2026-10-16"
       }
     ],
