@@ -262,13 +262,14 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
     "languages": [
       "Yoruba"
     ],
-    "synopsis": "A married woman reconnects with someone from her past and finds that a private decision has consequences for her home and relationships. The Yoruba-language drama explores accountability, loyalty and the cost of keeping secrets. Released through LibraTV in October 2026, it features Mide Martins, Ayo Olaiya, Antar Laniyan and producer-performer Omobolanle Salisu.",
+    "synopsis": "Abe Odale (Blade of Betrayal) is an October 2026 Yoruba-language movie written and produced by Omobolanle Salisu, directed by Wasiu Adeyanju and promoted for release through the LibraTV YouTube channel. Release reporting names Mide Martins, Ayo Olaiya, Antar Laniyan and Omobolanle Salisu, but does not independently document a detailed scene-by-scene plot or reliable character assignments. Do not confuse publicity about the theme of betrayal with a verified synopsis.",
     "cast": [
       "Mide Martins",
       "Ayo Olaiya",
       "Antar Laniyan",
       "Omobolanle Salisu"
     ],
+    "directors": ["Wasiu Adeyanju"],
     "featuredCast": [
       "Mide Martins",
       "Ayo Olaiya",
@@ -278,8 +279,8 @@ export const verifiedOctoberMovieReleases20261013: EntertainmentTitle[] = [
       {
         "label": "Nollywood Times — Abe Odale release, channel and confirmed cast",
         "href": "https://www.nollywoodtimes.com/2026/10/abe-odale-premieres-on-libratv-youtube.html",
-        "lastChecked": "2026-10-13",
-        "note": "Reports 11 October release on LibraTV; supporting credits beyond named cast have not been independently reconciled."
+        "lastChecked": "2026-10-16",
+        "note": "The film-specific 12 October report names director Wasiu Adeyanju, writer/producer Omobolanle Salisu and the 11 October LibraTV premiere. It does NOT verify a detailed synopsis, role assignments, or an exact watch URL."
       }
     ],
     "watchLinks": []
