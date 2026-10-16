@@ -122,7 +122,7 @@ jobs:
 
           youtube="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/youtube.xml")"
           assert_has "$youtube" "/entertainment/youtube/channels/" "YouTube sitemap"
-          # Directory-only videos are deliberately noindex until verified;
+          # Standalone directory-only video records are deliberately noindex
           # require the channel hub and valid XML instead of an arbitrary video URL.
           assert_has "$youtube" "<urlset" "YouTube sitemap"
 
