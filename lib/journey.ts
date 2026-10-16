@@ -62,6 +62,36 @@ export function getServiceJourney(service: Service): ServiceJourney {
     };
   }
 
+  // Glo publishes guidance online, but in-store identification is compulsory.
+  // Do not infer an online transaction route from the presence of its FAQ URL.
+  if (service.slug === "glo-port-number-to-glo") {
+    return {
+      mode: "physical",
+      modeLabel: "Glo shop / authorised dealer",
+      startLabel: "Check port eligibility before visiting Glo",
+      startDetail: "Use your working old-network SIM and verify recent port/SIM replacement restrictions, then visit a Gloworld shop or authorised dealer. The NCC requires the signed porting request and the PORT to 3232 SMS.",
+      onlineAvailable: false,
+      physicalStatus: "required",
+      physicalLabel: "In-person identity check and new SIM issuance",
+      alternativeLabel: "If your port request is not accepted",
+      alternativeDetail: "Ask Glo which eligibility, subscriber registration or clearinghouse verification rule stopped the request. Confirm the conflicting repeat-port waiting periods with Glo or NCC rather than guessing.",
+    };
+  }
+
+  if (service.slug === "glo-sim-replacement") {
+    return {
+      mode: "physical",
+      modeLabel: "Gloworld in-person visit",
+      startLabel: "Prepare the right SIM-replacement form and identity evidence",
+      startDetail: "Get the prepaid, corporate or provider-accepted proxy form from Glo's Self Care site. The form can be prepared online, but the replacement itself is handled at a Gloworld shop.",
+      onlineAvailable: false,
+      physicalStatus: "required",
+      physicalLabel: "Present ownership evidence and collect replacement SIM",
+      alternativeLabel: "If the original SIM evidence is unavailable",
+      alternativeDetail: "Ask the official Gloworld service staff what alternate ownership checks they accept before paying any third party. Secure the lost number and linked financial accounts through official channels.",
+    };
+  }
+
   if (service.slug === "bvn-validation") {
     return {
       mode: "agency-guided",
