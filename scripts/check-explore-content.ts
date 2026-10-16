@@ -497,6 +497,20 @@ for (const [slug, evidence] of Object.entries(remainingTourResearch20261016)) {
   }
 }
 
+// Safety-sensitive tourist leads must disclose the regional warning *before*
+// the visitor gets to the detailed planning cautions.
+const warningLeads = Object.entries(remainingTourResearch20261016)
+  .filter(([, item]) => Boolean(item.summary));
+if (warningLeads.length !== 12) errors.push("Expected 12 evidence-backed Tour security-first summaries.");
+for (const [slug, item] of warningLeads) {
+  const guide = exploreGuides.find(record => record.slug === slug);
+  if (!guide || guide.summary !== item.summary ||
+      !guide.summary.includes("FCDO") ||
+      !guide.planning.some(step => /advis|warning|essential travel|travel to/i.test(step.detail))) {
+    errors.push(`${slug}: safety warning must appear in the first answer as well as practical instructions`);
+  }
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);
