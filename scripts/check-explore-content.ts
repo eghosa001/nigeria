@@ -4,6 +4,7 @@ import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
 import { tourLeadFixes20261016 } from "../lib/explore-tour-lead-fixes-2026-10-16";
 import { tourRealityChecks20261016 } from "../lib/explore-tour-reality-2026-10-16";
+import { researchedTourDecisions20261016, researchedTourSlugs20261016 } from "../lib/explore-source-decisions-2026-10-16-d";
 import { tourPracticalDecisions20261016 } from "../lib/explore-practical-decisions-2026-10-16";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
@@ -57,6 +58,45 @@ for (const guide of exploreGuides) {
     errors.push(`${guide.slug}: duplicate location cards add no independent reader value`);
   }
 }
+
+// Distinct visitor journeys from 20 separate primary-source checks: historical
+// context is not live admission, a registered park is not open public land,
+// and a government tourism listing is not a same-day booking facility.
+if (researchedTourSlugs20261016.length !== 20 ||
+    new Set(researchedTourSlugs20261016).size !== 20)
+  errors.push("The 16 October source-researched batch must cover 20 unique existing Tour guide URLs.");
+for (const slug of researchedTourSlugs20261016) {
+  const item = exploreGuides.find(guide => guide.slug === slug);
+  const update = researchedTourDecisions20261016[slug];
+  if (!item || !update.intro || !item.intro.includes(update.intro) ||
+      !item.planning.some(decision => decision.label === update.planning.label &&
+        decision.detail === update.planning.detail) ||
+      item.lastReviewed !== "2026-10-16") {
+    errors.push(slug + ": researched visitor answer and checked date are not rendered.");
+    continue;
+  }
+  const links = [item.source?.href, ...(item.sources ?? []).map(source => source.href)].filter(Boolean);
+  for (const link of [update.source.href, ...update.additionalSources.map(source => source.href)]) {
+    if (!links.includes(link)) errors.push(slug + ": missing direct institutional evidence " + link);
+  }
+  if (links.length !== new Set(links).size)
+    errors.push(slug + ": duplicate source links instead of independent evidence.");
+  if (!/^https:\/\//.test(update.source.href) ||
+      !update.additionalSources.every(source => source.href.startsWith("https://")))
+    errors.push(slug + ": primary or secondary source must be an HTTPS original.");
+}
+const northwestResearch = exploreGuides.find(guide => guide.slug === "northwest-heritage-road-trip");
+if (!northwestResearch?.summary.includes("not an active leisure itinerary") ||
+    !northwestResearch.intro.some(text => text.includes("Katsina") && text.includes("Zamfara") &&
+      text.includes("advises against all travel")) ||
+    !northwestResearch.planning.some(step => step.detail.includes("Do not propose self-drive leg times")))
+  errors.push("Northwest legacy trip must not promote leisure travel against the current travel warning.");
+const heritageResearch = exploreGuides.find(guide => guide.slug === "nigeria-national-parks-guide");
+if (!heritageResearch?.intro.some(text => text.includes("Yankari") && text.includes("2006")))
+  errors.push("National Parks hub must distinguish a reserve from the federal park network.");
+const oilHeritage = exploreGuides.find(guide => guide.slug === "nigeria-industrial-heritage-guide");
+if (!oilHeritage?.intro.some(text => text.includes("2023") && text.includes("not completion")))
+  errors.push("Historic Oloibiri museum groundbreaking must not become a fictional public opening.");
 
 // Source and route assertions are deliberately restricted to the 12 changed
 // guides. Automatic validity cannot establish live admission, prices or safety.

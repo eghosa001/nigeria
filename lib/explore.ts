@@ -7,6 +7,7 @@ import { highPriorityTourEvidence20261016 } from "@/lib/explore-high-priority-20
 import { tourAccessDecisions20261016C } from "@/lib/explore-access-decisions-2026-10-16-c";
 import { tourLeadFixes20261016 } from "@/lib/explore-tour-lead-fixes-2026-10-16";
 import { tourRealityChecks20261016 } from "@/lib/explore-tour-reality-2026-10-16";
+import { researchedTourDecisions20261016 } from "@/lib/explore-source-decisions-2026-10-16-d";
 import { independentVisitorEvidence20261015 } from "@/lib/explore-independent-evidence-2026-10-15";
 import { verifiedOctoberHeritageEvents20261013 } from "@/lib/explore-heritage-events-2026-10-13";
 import { museumCollectionsGuide20261013 } from "@/lib/explore-museum-collections-2026-10-13";
@@ -13697,22 +13698,25 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
 // Authoritative access updates are additive: do not erase the original
 // guide's researched details, first source, or earlier review dates.
 const firstPassExploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide) => {
-  const freshlyChecked = tourRealityChecks20261016[guide.slug] ?? tourAccessDecisions20261016C[guide.slug] ?? highPriorityTourEvidence20261016[guide.slug] ?? tourPracticalDecisions20261016[guide.slug] ?? verifiedTourDecisions20261016[guide.slug];
+  const freshlyChecked = researchedTourDecisions20261016[guide.slug] ?? tourRealityChecks20261016[guide.slug] ?? tourAccessDecisions20261016C[guide.slug] ?? highPriorityTourEvidence20261016[guide.slug] ?? tourPracticalDecisions20261016[guide.slug] ?? verifiedTourDecisions20261016[guide.slug];
   const update = freshlyChecked ?? independentVisitorEvidence20261015[guide.slug] ?? verifiedVisitAdditions20261015[guide.slug];
   if (!update) return guide;
   const sources = [...(guide.sources ?? [])];
   const known = new Set([guide.source?.href, ...sources.map((source) => source.href)]);
-  if (!known.has(update.source.href)) sources.push(update.source);
+  if (!known.has(update.source.href)) { sources.push(update.source); known.add(update.source.href); }
+  for (const citation of researchedTourDecisions20261016[guide.slug]?.additionalSources ?? []) {
+    if (!known.has(citation.href)) { sources.push(citation); known.add(citation.href); }
+  }
   // Explicit safety sources are linked on the actual guide, not buried
   // in prose. Preserve one copy of every source URL when checks overlap.
-  const matchedWarning = [tourRealityChecks20261016[guide.slug], tourAccessDecisions20261016C[guide.slug], highPriorityTourEvidence20261016[guide.slug]]
+  const matchedWarning = [researchedTourDecisions20261016[guide.slug], tourRealityChecks20261016[guide.slug], tourAccessDecisions20261016C[guide.slug], highPriorityTourEvidence20261016[guide.slug]]
     .some(record => /\bFCDO\b/.test([record?.intro, record?.planning.detail].filter(Boolean).join(" ")));
   const travelWarningUrl = "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks";
   if (matchedWarning && ![guide.source?.href, ...sources.map(source => source.href)].includes(travelWarningUrl)) {
     sources.push({ label: "UK FCDO — Nigeria regional security and travel advisories", href: travelWarningUrl });
   }
   const leadFix = tourLeadFixes20261016[guide.slug];
-  const freshSummary = tourRealityChecks20261016[guide.slug]?.summary;
+  const freshSummary = researchedTourDecisions20261016[guide.slug]?.summary ?? tourRealityChecks20261016[guide.slug]?.summary;
   const correctedHighlights = leadFix
     ? guide.highlights.map(item => ({ ...item, detail: leadFix.highlightChanges[item.name] ?? item.detail }))
     : guide.highlights;
