@@ -7,6 +7,7 @@ import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
 import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale-wave";
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
 import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
+import { verifiedPortalSlugs20261016 } from "../lib/job-issuer-portals-reviewed-2026-10-16";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -102,6 +103,46 @@ assert(fulafia?.officialUrl === "https://careers.fulafia.edu.ng/" &&
   "FULAFIA must use the live university portal and valid FCC deadline, not the 404 item URL.");
 assert(!fulafia.sources.some(source => source.url.includes("/job-listings/federal-university-of-lafia")),
   "Definitively broken FCC job-detail link must not remain in the active source collection.");
+
+// Issuer-specific 25-portal correction: career information does not equal an
+// open vacancy. Check the exact source, visible application decisions and
+// absence of a fictitious universal deadline or JobPosting.
+assert(verifiedPortalSlugs20261016.length === 25 &&
+  new Set(verifiedPortalSlugs20261016).size === 25,
+  "25 independently reviewed issuer career destinations must stay distinct.");
+for (const slug of verifiedPortalSlugs20261016) {
+  const item = jobOpportunities.find(job => job.slug === slug);
+  assert(item?.kind === "career-page" && item.status === "career-page",
+    slug + " must remain a career directory, not an open recruitment.");
+  assert(item.verifiedAt === "2026-10-16" && item.title &&
+    item.statusLabel.includes("individual opening unverified") && !item.deadline,
+    slug + " must disclose career-directory status and avoid invented deadlines.");
+  assert(item.sources.some(source => source.url === item.officialUrl &&
+    source.lastChecked === "2026-10-16"),
+    slug + " needs a checked exact first-party issuer link.");
+  assert(item.applicationSteps.length === 4 &&
+    !item.applicationSteps.some(step => /Browse or search the employer's current opportunities; relevant hiring areas/.test(step)),
+    slug + " must have a specific decision path, not reusable portal filler.");
+  assert(item.nextMilestone?.includes("specific application availability"),
+    slug + " must distinguish landing page retrieval from authenticated Apply.");
+  assert(!buildJobPostingJsonLd(item, "https://mynigeriaguide.com/jobs/" + slug),
+    slug + " must not expose JobPosting on a directory without a vacancy.");
+}
+const airtelPortal = jobOpportunities.find(x => x.slug === "airtel-nigeria-careers");
+assert(airtelPortal?.applicationSteps.some(s => s.includes("April–June") && s.includes("July–September")) &&
+  airtelPortal.applicationSteps.some(s => s.includes("Vacancies@ng.airtel.com")),
+  "Airtel's actual internship timing and unsolicited CV route must be distinguished.");
+const unicefPortal = jobOpportunities.find(x => x.slug === "unicef-nigeria-careers");
+assert(unicefPortal?.summary.includes("No vacancies at this time") &&
+  unicefPortal.applicationSteps.some(s => s.includes("does not accept unsolicited CVs")),
+  "UNICEF's currently empty section and no unsolicited CV policy must remain explicit.");
+const firstBankPortal = jobOpportunities.find(x => x.slug === "firstbank-graduate-trainee-careers");
+assert(firstBankPortal?.applicationSteps.some(s => s.includes("under-27") &&
+  s.includes("HND Upper Credit")),
+  "FirstBank's published programme entry rules must be separated from live intake.");
+const moniepointPortal = jobOpportunities.find(x => x.slug === "moniepoint-nigeria-careers");
+assert(moniepointPortal?.summary.includes("four-stage hiring process"),
+  "Moniepoint must have its unique official interview-process explanation.");
 
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
