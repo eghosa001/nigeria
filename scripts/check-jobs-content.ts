@@ -94,6 +94,15 @@ for (const slug of verifiedJobSlugs20261016) {
   }
 }
 
+const fulafia = jobOpportunities.find(item => item.slug === "federal-university-lafia-recruitment-2026");
+assert(fulafia?.officialUrl === "https://careers.fulafia.edu.ng/" &&
+  fulafia.sources.some(source => source.url === "https://fcc.gov.ng/recruitment/") &&
+  fulafia.deadline === "2026-10-28" &&
+  fulafia.applicationSteps.some(step => step.includes("registrar@fulafia.edu.ng")),
+  "FULAFIA must use the live university portal and valid FCC deadline, not the 404 item URL.");
+assert(!fulafia.sources.some(source => source.url.includes("/job-listings/federal-university-of-lafia")),
+  "Definitively broken FCC job-detail link must not remain in the active source collection.");
+
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");
 assert(defaultDirectory.items.length <= JOBS_DIRECTORY_PAGE_SIZE, "The browser-facing Jobs directory must be paginated.");
