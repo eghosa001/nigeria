@@ -511,6 +511,14 @@ for (const [slug, item] of warningLeads) {
   }
 }
 
+// A newspaper's March 2018 report cannot establish a 2017 rally date.
+const oxbow = exploreGuides.find(guide => guide.slug === "ox-bow-lake-yenagoa-guide");
+if (!oxbow?.intro.some(paragraph => paragraph.includes("28 March 2018") && paragraph.includes("Oxbow Lake Pavilion")) ||
+    oxbow.intro.some(paragraph => /Oxbow Lake Pavilion in 2017/.test(paragraph)) ||
+    !oxbow.sources?.some(source => source.href === "https://guardian.ng/politics/when-agitation-for-restructuring-comes-with-higher-pitch-from-the-creeks/")) {
+  errors.push("Yenagoa Oxbow Pavilion: historical reporting date and source must remain accurate.");
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);

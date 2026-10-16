@@ -71,9 +71,9 @@ export const remainingTourResearch20261016: Record<string, Decision> = {
   },
   "ox-bow-lake-yenagoa-guide": {
     summary: "Yenagoa Oxbow Lake's pavilion has a documented civic history, but current boating is unverified. UK FCDO warns against all but essential travel to non-riverine Bayelsa and all travel to boat-only riverine areas.",
-    source:{label:"Guardian — historical 2017 Yenagoa Oxbow Lake Pavilion gathering",href:"https://guardian.ng/politics/when-agitation-for-restructuring-comes-with-higher-pitch-from-the-creeks/"},
+    source:{label:"The Guardian — March 2018 report on Yenagoa Oxbow Lake Pavilion rally",href:"https://guardian.ng/politics/when-agitation-for-restructuring-comes-with-higher-pitch-from-the-creeks/"},
     additionalSources:[{label:"UK FCDO — Bayelsa riverine travel restrictions",href:"https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks"}],
-    intro:"The Guardian recorded a major public gathering at Yenagoa's Oxbow Lake Pavilion in 2017. This supports the waterfront's historic use as an event setting, not a claim that a marina, boat hire or organised swimming is still operating in 2026. The lakefront pavilion and any boat boarding point are not interchangeable addresses or admission arrangements.",
+    intro:"A 28 March 2018 Guardian report documents a civic rally at Yenagoa's Oxbow Lake Pavilion shortly before its publication. This supports the waterfront's historic use as an event setting, not a claim that a marina, boat hire or organised swimming is still operating in 2026. The lakefront pavilion and any boat boarding point are not interchangeable addresses or admission arrangements.",
     planning:{label:"Do not interpret an old pavilion event as a current water attraction",detail:"The UK FCDO advises against all travel to boat-only riverine areas of Bayelsa and against all but essential travel to its non-riverine areas. Keep the lake as location and civic-history research rather than selling a weekend boat excursion. No contemporary authorised operator, lifesaving service, entrance charge or departure schedule was established; request fresh issuer evidence before changing this guidance."},
   },
   "river-ethiope-source-guide": {
