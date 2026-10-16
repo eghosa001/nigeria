@@ -1,4 +1,5 @@
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
+import { remainingTourResearch20261016 } from "@/lib/explore-priority-review-decisions-2026-10-16";
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
 import { verifiedTourDecisions20261016 } from "@/lib/explore-verified-visitor-updates-2026-10-16";
@@ -13740,7 +13741,7 @@ const firstPassExploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((gui
 // Keep prior primary visitor reviews intact. These follow-up research notes
 // add independently attributable decisions to nine existing published guides;
 // they never invent admission prices, hours, licences or a personal visit.
-export const exploreGuides: ExploreGuide[] = firstPassExploreGuides.map((guide) => {
+const secondPassExploreGuides: ExploreGuide[] = firstPassExploreGuides.map((guide) => {
   const extra = furtherVisitorDecisions20261016[guide.slug];
   if (!extra) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13754,6 +13755,27 @@ export const exploreGuides: ExploreGuide[] = firstPassExploreGuides.map((guide) 
     intro: extra.intro && !guide.intro.includes(extra.intro) ? [...guide.intro, extra.intro] : guide.intro,
     planning: guide.planning.some(x => x.label === extra.planning.label)
       ? guide.planning : [...guide.planning, extra.planning],
+    sources,
+    lastReviewed: "2026-10-16",
+  };
+});
+
+// Third pass is explicitly additive: preserve earlier publisher facts and
+// corrections from other agents. Distinct sources are linked on the page.
+export const exploreGuides: ExploreGuide[] = secondPassExploreGuides.map((guide) => {
+  const update = remainingTourResearch20261016[guide.slug];
+  if (!update) return guide;
+  const sources = [...(guide.sources ?? [])];
+  for (const citation of [update.source, ...(update.additionalSources ?? [])]) {
+    if (citation.href !== guide.source?.href && !sources.some(source => source.href === citation.href)) {
+      sources.push(citation);
+    }
+  }
+  return {
+    ...guide,
+    intro: update.intro && !guide.intro.includes(update.intro) ? [...guide.intro, update.intro] : guide.intro,
+    planning: guide.planning.some(item => item.label === update.planning.label)
+      ? guide.planning : [...guide.planning, update.planning],
     sources,
     lastReviewed: "2026-10-16",
   };
