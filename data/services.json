@@ -595,7 +595,7 @@
     "slug": "cac-business-name-registration",
     "title": "How to register a business name with CAC",
     "shortTitle": "CAC business name registration",
-    "summary": "Official CAC steps for checking a name, completing registration and receiving electronic registration documents.",
+    "summary": "Register a CAC business name using the new iCRP: reserve the correct name, use the generated AV Code, upload each proprietor's identification, photograph and signature, pay through the official portal and retrieve the certificate/status report. Business-name approval may be automated, but an actual approval must appear before the business is described as registered.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
@@ -605,20 +605,28 @@
       "Proposed business name",
       "Proprietor's full legal name, residential/contact address, phone/email and identity information requested in the CAC CRP",
       "Business nature/activity details",
-      "Registration documents displayed by the CRP for the selected business-name application"
+      "Registration documents displayed by the CRP for the selected business-name application",
+      "An image of each proprietor's valid means of identification, passport photograph and signature, matching the iCRP proprietor record.",
+      "The name-reservation AV Code for the exact business entity and access to the registered iCRP account and email verification."
     ],
     "steps": [
+      "Check whether a business name is the appropriate legal form for the owner; a business-name certificate is not incorporation of a limited liability company. Make sure the proposed proprietor and business address details are accurate.",
       "Use CAC's CRP to check whether the proposed business name is available and complete name reservation when the portal requires it.",
       "Open the business-name pre-registration form in the CRP and enter the proprietor and business particulars.",
       "Use the reservation's AV Code from the official iCRP when prompted, and review every proposed business and proprietor detail before submitting.",
       "Upload the supporting registration documents requested in that CRP application.",
       "Pay the filing fee through the integrated CAC payment route and submit the application for approval.",
-      "After CAC approves the filing, download the electronic Certificate of Registration and Certified Extract from the CRP dashboard."
+      "Use the iCRP's Registration → Register New Business action and the AV Code for the matching reservation; CAC's current FAQ requires email, business address, commencement date and proprietor particulars.",
+      "For each proprietor, prepare means of identification, passport photograph and signature in the image formats requested by CAC. Check that an attachment was saved for each proprietor before progressing.",
+      "After CAC approves the filing, download the electronic Certificate of Registration and Certified Extract from the CRP dashboard.",
+      "If the dashboard shows Queried, open Action → View Query History, then Modify Application and resubmit; Pending only means the portal is still reviewing, not that a certificate has been issued."
     ],
     "notes": [
       "CAC states proprietors can register business names without a lawyer, chartered accountant or chartered secretary.",
       "CAC's current iCRP guidance says business-name registrations can be AI-approved and processed instantly, while CAC's formal service timeline allows up to 24 working hours for a complete application. Treat instant processing as possible, not guaranteed.",
-      "CAC's October 2026 iCRP FAQ distinguishes automatically processed business-name registrations from limited liability companies and other entity types that still undergo manual approval."
+      "CAC's October 2026 iCRP FAQ distinguishes automatically processed business-name registrations from limited liability companies and other entity types that still undergo manual approval.",
+      "CAC's FAQ says new iCRP business-name registrations may receive AI approval; the application still needs an Approved status before certificate download.",
+      "The latest iCRP login may request email-based two-factor authentication, so retain access to the correct applicant email."
     ],
     "sources": [
       {
@@ -644,9 +652,15 @@
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/support/faq/",
         "lastChecked": "2026-10-10"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/auth/login/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "CAC business name registration",
       "How to register a business name with CAC",
@@ -670,7 +684,7 @@
     "slug": "cac-company-registration",
     "title": "How to register a company with CAC",
     "shortTitle": "CAC company registration",
-    "summary": "Register a limited company through CAC's official iCRP: name reservation, company and officer details, statutory filing and documents. This differs from registering a business name.",
+    "summary": "Form a limited liability company on CAC iCRP rather than the business-name workflow. Name reservation is not final approval: company incorporation still receives manual review, with statutory filing/stamp duty and company-type-specific director/share and control information.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Depends on company/share structure",
@@ -680,19 +694,27 @@
     "requirements": [
       "Proposed company name",
       "Company and officer details",
-      "The incorporation attachments shown by CAC CRP after the company type is selected; CAC does not use one identical attachment list for every company structure"
+      "The incorporation attachments shown by CAC CRP after the company type is selected; CAC does not use one identical attachment list for every company structure",
+      "Names and legally required identity or governance particulars for the proposed officers, shareholders and beneficial owners, as requested for the selected entity type.",
+      "Proposed registered office, business activities and any incorporation attachments prompted by the selected company structure."
     ],
     "steps": [
+      "Decide whether the proposed entity is a company rather than a sole-proprietor business name, incorporated trustee or partnership; the company type governs the documents and fees the portal requests.",
       "Open CAC's official Company Registration Portal and run the preliminary name-availability search so you do not prepare documents for a name that cannot be registered.",
       "Reserve the selected company name where the portal requires reservation, then start the company-registration application under the correct company type.",
       "Complete the digital pre-registration form with the company details and upload the supporting documents requested by CAC for the chosen company type.",
       "Review the application carefully and pay the filing fee and statutory stamp duty through CAC's integrated payment gateway; keep the transaction evidence in case CAC raises a query.",
-      "Monitor the CRP dashboard for approval or a query. Correct and resubmit anything CAC queries; after approval, download the electronic Certificate and Certified Extract from the portal."
+      "Gather directors', shareholders' and other company particulars and verify consistency across identity and statutory fields before submission; do not substitute a business-name form for incorporation.",
+      "Where the application asks for share structure or beneficial ownership, use the actual company's control information. Review the filing fee and stamp-duty components individually before authorising payment.",
+      "Monitor the CRP dashboard for approval or a query. Correct and resubmit anything CAC queries; after approval, download the electronic Certificate and Certified Extract from the portal.",
+      "If CAC raises a query, use the application's original iCRP dashboard to answer it; only after manual approval download the electronic certificate and certified extract and compare details with the original submission."
     ],
     "notes": [
       "CAC publishes a 24-working-hour service timeline for company registration once relevant documents are complete and any query is resolved.",
       "The current CAC iCRP FAQ says limited liability company, incorporated-trustee, LLP and LP filings still follow manual review, unlike the portal's AI-processed business-name registration route. Do not interpret automated name reservation as full company incorporation approval.",
-      "A sole proprietor wanting only a business-name registration should use CAC's separate business-name procedure, not this limited-company incorporation route."
+      "A sole proprietor wanting only a business-name registration should use CAC's separate business-name procedure, not this limited-company incorporation route.",
+      "The current CAC iCRP FAQ expressly distinguishes manually reviewed LLC incorporation from automated business-name registration.",
+      "A successful name search, AV Code or fee payment alone is not a company certificate or a guarantee of approval."
     ],
     "sources": [
       {
@@ -714,7 +736,7 @@
         "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-11",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "CAC company registration",
       "How to register a company with CAC",
@@ -798,7 +820,7 @@
     "slug": "cac-name-reservation",
     "title": "How CAC name reservation works",
     "shortTitle": "CAC name reservation",
-    "summary": "Start a company, business-name or trustee registration by checking and reserving an available name.",
+    "summary": "Use CAC iCRP to reserve a proposed name for the correct entity classification. Ordinary available names may receive an instant AV Code after payment; restricted words or names requiring consent follow a separate application reviewed manually.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
@@ -808,19 +830,26 @@
     "requirements": [
       "A proposed entity name",
       "The correct business classification and entity type, such as Company, LLP, LP or Business Name",
-      "Nature/specific nature of the proposed business"
+      "Nature/specific nature of the proposed business",
+      "For a consent-requiring name, the precise consent reason, entity contact/address details and any supporting authorisation specified on the dedicated application."
     ],
     "steps": [
+      "Choose the entity classification first—Company, Business Name, LP, LLP or trustee—because the reservation must later match the actual registration application.",
       "Create or sign in to the official CAC iCRP account and open Name Reservation.",
       "Choose the business classification and business type.",
       "Enter the proposed name and business nature, then run the availability check.",
       "If the name is available, continue to the official payment; after successful payment, keep the AV Code for the registration that follows.",
-      "Use the reservation's AV Code only for the matching entity-registration application. If CAC asks for consent to restricted words, follow the additional approval process rather than repeatedly submitting the same name."
+      "If the portal returns an unavailable name, change the proposed wording or use CAC's name suggestions before paying; an availability result by itself is not a reserved name.",
+      "If the name requires consent, start the dedicated consent workflow and record the reason, entity contact/address information and supporting approval rather than repeatedly using ordinary name reservation.",
+      "Use the reservation's AV Code only for the matching entity-registration application. If CAC asks for consent to restricted words, follow the additional approval process rather than repeatedly submitting the same name.",
+      "Save the AV Code and the account's official payment reference. For consent requests monitor the email and dashboard for Approved or Queried; use an approved reservation only for its correct later registration."
     ],
     "notes": [
       "CAC's current iCRP FAQ says standard name reservation is automated after successful payment.",
       "Restricted names and names requiring consent follow a separate manually reviewed route.",
-      "A preliminary availability search is not an approved reservation or certificate. For ordinary reservations the iCRP's FAQ describes an automated process after successful payment; names requiring consent must follow the separate review route."
+      "A preliminary availability search is not an approved reservation or certificate. For ordinary reservations the iCRP's FAQ describes an automated process after successful payment; names requiring consent must follow the separate review route.",
+      "CAC's FAQ says restricted-word/consent requests go to an approving officer after Remita payment; no instant acceptance should be promised.",
+      "The approved name and AV Code do not incorporate the entity; a separate registration application remains."
     ],
     "sources": [
       {
@@ -842,7 +871,7 @@
         "lastChecked": "2026-10-10"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "CAC name reservation",
       "How CAC name reservation works",
@@ -858,29 +887,35 @@
     "slug": "cac-annual-returns",
     "title": "How to file CAC annual returns",
     "shortTitle": "CAC annual returns",
-    "summary": "File a CAC annual return through the official iCRP account for your registered entity. CAC currently offers the business-name annual-return option for registrations before July 2025; newer business names should follow the portal's notice as the newer process is introduced.",
+    "summary": "File the return for the correct CAC entity and accounting period using the official iCRP post-registration route. CAC's current notice makes business-name annual returns available for names registered before July 2025, while its new process for later business names is still described as forthcoming; it should not be treated as universally live.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Fee varies by entity and filing",
-    "timeline": "CAC currently lists 24 working hours for company annual returns.",
+    "timeline": "Business-name returns are available on iCRP for registrations before July 2025; CAC has announced but not universally opened the enhanced route for newer business names.",
     "status": "verified",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "CAC entity name/registration number and access to the entity record in CRP",
-      "Return-year information and the entity-specific annual-return fields shown by CRP; the fields differ for companies, business names and incorporated trustees"
+      "Return-year information and the entity-specific annual-return fields shown by CRP; the fields differ for companies, business names and incorporated trustees",
+      "The correct financial/return year, turnover and net-assets details where the CAC form calls for them; obtain the entity's records rather than guessing.",
+      "Access to the entity's approved CAC record and any outstanding return-year history or official penalty figures."
     ],
     "steps": [
+      "Confirm whether the record is a company, business name or incorporated trustee, then identify the actual return period; the annual return is not an application to change an owner or director.",
       "Open the official iCRP at icrp.cac.gov.ng and sign in with the entity's registered portal account; create an account or recover access using the portal's official links if necessary.",
       "Open the Annual Returns or post-registration area and choose the return for your particular company, business name or incorporated trustee; confirm that this entity and registration year are eligible for the option currently displayed.",
       "Enter the required entity and return-period details, review the particulars shown in the portal and submit the applicable filing. Use the official portal payment route if a filing fee is requested.",
-      "Save the payment or application acknowledgement and check the iCRP record for an approval, a query requiring action or a correction. If the annual-return option is unavailable for a newer business name, follow CAC's published rollout notice instead of paying an outside agent."
+      "For business-name filings, the CAC/BN 06 form distinguishes return year, principal place of business, turnover, net assets and proprietor particulars from a change-of-proprietor notice.",
+      "If the entity has outstanding prior periods or an unexpected payment/late fee, verify each outstanding filing and charge on CAC iCRP before making payment.",
+      "Save the payment or application acknowledgement and check the iCRP record for an approval, a query requiring action or a correction. If the annual-return option is unavailable for a newer business name, follow CAC's published rollout notice instead of paying an outside agent.",
+      "Keep the generated acknowledgment, return year and final acceptance or query notice. If the business-name menu is not yet offered for a post-June-2025 registration, retain the official portal notice and seek CAC guidance instead of declaring the return filed."
     ],
     "notes": [
       "CAC's current CRP notice says annual-return filing is available for business names registered before July 2025.",
       "CAC says it is upgrading the business-name system with an AI-powered annual-returns process intended to support both older business names and those created after July 2025.",
       "Company, business-name and incorporated-trustee annual returns use different filing fields and fees, so use the entity-specific form shown in CRP.",
-      "The official iCRP landing page distinguishes business names registered before July 2025 from those after July 2025 as the new AI-based returns workflow is introduced; if your filing option is not yet active, follow CAC's current portal notices rather than an unofficial payment link.",
-      "CAC's live iCRP notice states that business-name annual returns are currently available for businesses registered before July 2025; an updated automated route for later registrations is planned, not yet universally available."
+      "Current iCRP notice: business-name returns for registrations before July 2025 are available; an automated path covering subsequent registrations is announced, not yet universally usable.",
+      "An annual return is not the same as amending a company's directors, PSC, registered address or business-name proprietor."
     ],
     "sources": [
       {
@@ -894,9 +929,15 @@
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/assets/docs/REGULATIONS-2021.pdf",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "CAC annual returns",
       "How to file CAC annual returns",
@@ -2728,7 +2769,7 @@
     "slug": "cac-status-report",
     "title": "How to obtain a CAC status report",
     "shortTitle": "CAC status report",
-    "summary": "CAC lists status reports among its post-registration services and currently describes the service timeline as instant.",
+    "summary": "Retrieve a CAC E-Status Report for the correct registered entity. CAC introduced the report to replace the old company CAC 1.1, business-name BN 1 and trustee IT 1 document formats; a copy is not the same as the public name-search result or a Certified True Copy.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
@@ -2738,18 +2779,25 @@
     "requirements": [
       "A registered CAC entity",
       "The entity's registration details or number requested by the iCRP",
-      "Access to the CAC portal account or service route used for the entity"
+      "Access to the CAC portal account or service route used for the entity",
+      "Identification of the precise entity and the E-Status Report required; a similarly named business is not enough."
     ],
     "steps": [
+      "Ask the requesting bank, regulator or counterparty whether it needs the standard E-Status Report, a certified copy of another filing or only a basic public search; each produces different evidence.",
       "Sign in to CAC's official iCRP with the account used to access the relevant registered entity, then locate the entity by its registered name or registration details.",
       "Open the post-registration or E-Status Report service for that entity and confirm that the entity displayed is the one for which the report is required.",
       "Review the request details and complete the official payment shown by CAC, keeping the transaction reference if the portal needs to be revisited.",
       "Use the portal to generate or retrieve the Status Report; CAC currently lists Status Report as an instant service once the valid request is completed.",
-      "Download the generated report from the official portal and check the entity particulars before sharing or using it for another transaction."
+      "For a new incorporation, first check the entity's approved registration downloads: the E-Status Report may already be present with the electronic certificate.",
+      "For a historical document or additional certified version, follow CAC's specific post-registration/CTC action instead of assuming a fresh business registration is needed.",
+      "Download the generated report from the official portal and check the entity particulars before sharing or using it for another transaction.",
+      "Open the downloaded document to check entity legal name, number and principal particulars. If the report is unavailable despite an Approved record, use CAC's official iCRP helpdesk/account recovery before paying an intermediary."
     ],
     "notes": [
       "Use the current portal fee displayed for the entity or request type.",
-      "CAC's portal lists E-Status Report among its electronic services."
+      "CAC's portal lists E-Status Report among its electronic services.",
+      "CAC describes the E-Status Report as a replacement for old CAC 1.1, BN 1 and IT 1 issuance formats.",
+      "Public Search may reveal a registry match but does not by itself supply the certified filing document an institution may require."
     ],
     "sources": [
       {
@@ -2763,9 +2811,21 @@
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/sublink/e-status-report/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/support/faq/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "CAC status report",
       "How to obtain a CAC status report",
@@ -2781,7 +2841,7 @@
     "slug": "cac-certified-true-copy",
     "title": "How to request a CAC Certified True Copy",
     "shortTitle": "CAC Certified True Copy",
-    "summary": "Request a Certified True Copy (CTC) of an existing CAC certificate through the commission's post-registration route. Identify the correct entity and document, submit the required request and fee, and check for any CAC query. CAC's published company CTC target is 12 working hours after a complete submission or cleared query.",
+    "summary": "Request the specific CAC Certified True Copy (CTC) or certified filing needed by a bank, procurement office or other recipient. The ordinary E-Status Report, certificate download and basic Public Search are distinct outputs; avoid ordering or paying for the wrong document.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "See current CAC fee schedule",
@@ -2790,17 +2850,24 @@
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "CAC entity name/registration number used to locate the record",
-      "The exact filed document or certificate for which the Certified True Copy is requested"
+      "The exact filed document or certificate for which the Certified True Copy is requested",
+      "The particular statutory record and, where relevant, filing date/version being certified, not simply a request for 'all CAC papers'."
     ],
     "steps": [
+      "Ask the requesting recipient which particular filed document and certification level it accepts; a general CAC status report may not satisfy a request for a CTC.",
       "Sign in to the official CAC iCRP portal using the account authorised to handle the registered company or other entity.",
       "Open the relevant post-registration services and select Certified True Copy for the required certificate or document, then confirm the registration details and exactly what is being certified.",
       "Review the requested document, number of copies and any supporting evidence shown in the portal. Pay the fee displayed by the official CAC payment route and keep the transaction acknowledgement.",
-      "Monitor the request for a query or completed document. CAC publishes a 12-working-hour target for company certificate CTCs after complete documents or compliance with a query; other entity types and incomplete applications may differ."
+      "Check the historical filing or document type in the CAC post-registration dashboard and identify its date/version, if the account holds more than one.",
+      "If the document is missing from the entity dashboard or a different authorised account owns the entity, resolve legitimate entity access with CAC before paying a third party.",
+      "Monitor the request for a query or completed document. CAC publishes a 12-working-hour target for company certificate CTCs after complete documents or compliance with a query; other entity types and incomplete applications may differ.",
+      "When the document is ready, verify the entity number and that the CTC reproduces the requested filed record. Keep the portal receipt and query reference for any incomplete request."
     ],
     "notes": [
       "Timelines assume a complete application and resolution of any CAC query.",
-      "CAC's 12-working-hour target for company certificate CTCs is conditional on a complete application or resolved query, not a universal guarantee for every entity."
+      "CAC's 12-working-hour target for company certificate CTCs is conditional on a complete application or resolved query, not a universal guarantee for every entity.",
+      "The 12-working-hour target for company certificate CTCs begins after a complete submission or resolved query; do not present it as a guaranteed delivery appointment.",
+      "The original incorporation E-Status Report and a later certified copy of a filing serve different administrative purposes."
     ],
     "sources": [
       {
@@ -2814,9 +2881,15 @@
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/sublink/e-status-report/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "CAC Certified True Copy",
       "How to request a CAC Certified True Copy",
@@ -8810,32 +8883,39 @@
     "slug": "nipo-trademark-registration",
     "title": "How to register a trademark in Nigeria",
     "shortTitle": "Register a trademark",
-    "summary": "The Nigerian Industrial Property Office process for checking availability, filing a trademark, passing examination and publication, and obtaining the registration certificate.",
+    "summary": "NIPO trademark registration requires a distinctive mark, correct class, an accredited filing route and examination before acceptance and publication. The two-month opposition period starts from Trademark Journal publication, not payment; a certificate follows only if the registration proceeds successfully.",
     "category": "Business",
     "agencySlug": "nipo",
     "feeLabel": "NIPO filing and certificate fees apply",
     "feeNote": "NIPO's current service schedule lists separate charges for availability search, filing and certificate issuance. Confirm the live invoice before payment.",
-    "timeline": "NIPO's SLA lists 24 hours for preliminary search and filing stages, but full registration also includes examination, journal publication and a two-month opposition period.",
+    "timeline": "Acceptance, Journal publication and a two-month opposition period precede final registration. Initial validity is 7 years; later renewals are 14 years.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nipo.gov.ng/trademark.jsp",
     "requirements": [
       "The proposed word mark, logo or other distinctive sign and the correct trademark class",
       "Applicant or company name, address and nationality",
       "A clear representation of the mark",
-      "Authorisation or power of attorney for the accredited agent filing the application"
+      "Authorisation or power of attorney for the accredited agent filing the application",
+      "Goods/services class or classes to be covered, and evidence of the chosen agent's NIPO accreditation."
     ],
     "steps": [
+      "Search for confusingly similar marks and define the goods/services class before commissioning logos or paying the official filing invoice; CAC name registration is not a trademark search.",
       "Check the proposed mark through NIPO's preliminary search route and identify the correct trademark class before filing.",
       "File the trademark application through a NIPO-accredited agent and keep the official acknowledgement number and filing date.",
       "Track examination and respond to any refusal, query or correction raised by the Registry before acceptance.",
       "After acceptance, confirm publication in the Nigerian Trademark Journal and allow the statutory two-month opposition period to run.",
-      "If no opposition succeeds, pay the certificate-stage fee through the official NIPO route and retain the issued registration certificate."
+      "Verify the filing agent against NIPO's published accredited agents directory and retain the pre-generated invoice and official acknowledgement/application ID.",
+      "After acceptance, monitor the Journal's two-month opposition period; a trademark that faces a valid opposition or outstanding Registry query is not yet finally registered.",
+      "If no opposition succeeds, pay the certificate-stage fee through the official NIPO route and retain the issued registration certificate.",
+      "After receiving the certificate, note that NIPO states initial registration lasts seven years and subsequent renewals are for 14-year periods; retain the filing class and any registered colour restrictions."
     ],
     "notes": [
       "NIPO states that online trademark, patent and design filings are handled through certified agents.",
       "Trademark registration is different from CAC business-name or company registration; CAC registration does not itself create a trademark right.",
-      "A colour-specific filing can limit protection to the registered colours, according to NIPO's trademark guidance."
+      "A colour-specific filing can limit protection to the registered colours, according to NIPO's trademark guidance.",
+      "NIPO says ordinary trademark applications can be filed electronically through its accredited agents; an acceptance letter is not the final certificate.",
+      "Trademark registration lasts an initial seven years and may be renewed for 14-year periods, according to NIPO's current guidance."
     ],
     "sources": [
       {
@@ -8855,6 +8935,12 @@
         "agency": "Nigerian Industrial Property Office",
         "url": "https://nipo.gov.ng/feesandcharges.jsp",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://www.nipo.gov.ng/agents.jsp",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -8875,32 +8961,40 @@
     "slug": "nipo-patent-registration",
     "title": "How to apply for a patent in Nigeria",
     "shortTitle": "Register a patent",
-    "summary": "How inventors use the Nigerian Industrial Property Office patent route, including search, filing, supporting specifications and ongoing renewal obligations.",
+    "summary": "A NIPO patent filing needs a signed request, specification with claims in duplicate, applicable drawings, any inventor declaration and proper agent authority. Nigeria's registry examination is principally formal rather than a substantive worldwide novelty determination; granted patents last up to 20 years subject to annual fees.",
     "category": "Business",
     "agencySlug": "nipo",
     "feeLabel": "NIPO patent filing fees apply",
     "feeNote": "NIPO publishes separate fees for patent search, grant applications, renewals and later record changes. Confirm the current invoice for the exact filing type.",
-    "timeline": "Processing depends on the completeness of the patent specification and Registry review; NIPO does not publish one universal end-to-end completion time on the filing page.",
+    "timeline": "NIPO says patent rights can last up to 20 years from filing, subject to annual fees; late annuity payment has a six-month grace period and surcharge.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nipo.gov.ng/patents.jsp",
     "requirements": [
       "A new invention that is capable of industrial application and falls within patentable subject matter",
       "Applicant and inventor identity/address information",
       "A patent specification describing the invention, with claims and drawings where needed",
-      "Authorisation for the accredited agent handling the Nigerian filing"
+      "Authorisation for the accredited agent handling the Nigerian filing",
+      "Signed petition with applicant name/address, specification and claims in duplicate, drawings in duplicate if any.",
+      "Signed agent authorisation, Nigerian service address for nonresident applicants, and any signed inventor declaration or priority documentation that applies."
     ],
     "steps": [
+      "Before public disclosure, ask the qualified filing agent to assess whether the subject matter is a patentable technical invention and whether any foreign-priority claim must be preserved.",
       "Review NIPO's patentability guidance and confirm that the invention is suitable for patent protection rather than trademark, design or copyright treatment.",
       "Prepare the technical specification, claims and any drawings with the accredited agent before the application is filed.",
       "Submit the patent application through the official NIPO filing route and retain the acknowledgement or application number.",
       "Respond to any formal examination query and keep the grant document when the Registry completes the application.",
-      "Track annual patent-renewal obligations and pay the applicable annuity through NIPO's published renewal service to keep the right in force."
+      "The NIPO filing checklist requires petition/request and a specification with claim(s) in duplicate; include plans/drawings in duplicate when applicable and the true-inventor declaration if relevant.",
+      "For a nonresident applicant, ensure an address for service in Nigeria is provided. Where a foreign priority claim is made, use the earlier application details and documentary priority procedure.",
+      "Track annual patent-renewal obligations and pay the applicable annuity through NIPO's published renewal service to keep the right in force.",
+      "Understand that NIPO describes patent examination as formal, not a substantive guarantee of novelty. Calendar annual fees; its guidance gives a 20-year maximum term and six-month annuity grace period with surcharge."
     ],
     "notes": [
       "NIPO says patents protect qualifying inventions, not merely business ideas, artistic works or discoveries as such.",
       "Patent disclosure can affect later rights, so applicants with commercially sensitive inventions should prepare the filing before unnecessary public disclosure.",
-      "Patent registration and trademark registration protect different kinds of intellectual property."
+      "Patent registration and trademark registration protect different kinds of intellectual property.",
+      "A patent grant in Nigeria is not proof that NIPO has independently searched all worldwide prior art; its published examination is essentially formal.",
+      "NIPO states expiry after twenty years from filing, or earlier lapse for unpaid annual fees after the applicable grace period."
     ],
     "sources": [
       {
@@ -8914,6 +9008,12 @@
         "agency": "Nigerian Industrial Property Office",
         "url": "https://nipo.gov.ng/feesandcharges.jsp",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Nigerian Industrial Property Office",
+        "url": "https://www.nipo.gov.ng/agents.jsp",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -8932,32 +9032,39 @@
     "slug": "nipo-industrial-design-registration",
     "title": "How to register an industrial design in Nigeria",
     "shortTitle": "Register industrial design",
-    "summary": "The NIPO route for protecting the visual or ornamental appearance of a product, including design search, novelty statement, representation and renewal.",
+    "summary": "NIPO industrial-design registration protects the new ornamental appearance of an article, not the machine's technical function. Applicants provide an appropriate textile/non-textile form, novelty statement, visual representations and agent authorisation; protection can last up to 15 years through five-year renewals.",
     "category": "Business",
     "agencySlug": "nipo",
     "feeLabel": "NIPO design fees apply",
     "feeNote": "NIPO publishes separate design search, application and renewal charges. Confirm the current fee schedule before payment.",
     "timeline": "NIPO processes the filing after the required design representation, novelty statement and authorisation are submitted; the page does not state one universal end-to-end timeline.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nipo.gov.ng/design.jsp",
     "requirements": [
       "A design that is new or original and concerns the visual or ornamental appearance of an article",
       "A statement of novelty identifying the visual features claimed",
       "Graphic or photographic representations or specimens of the design",
-      "Authorisation or power of attorney for the agent filing the application"
+      "Authorisation or power of attorney for the agent filing the application",
+      "Textile/non-textile design classification and the corresponding NIPO form, plus coherent novelty statement and visual specimens."
     ],
     "steps": [
+      "Identify exactly which visible pattern, lines, shape or colour arrangement is claimed; an industrial design does not protect how a mechanism works.",
       "Check NIPO's design guidance and conduct an availability search before filing the design application.",
       "Prepare the correct design form, statement of novelty and clear visual representations that show the features being claimed.",
       "Submit the design application through the recognised NIPO filing route with the agent authorisation and official payment.",
       "Keep the application reference and respond to any Registry query until the design certificate is issued.",
-      "Calendar the five-year renewal points because NIPO states that industrial-design protection can continue up to 15 years subject to renewal."
+      "NIPO differentiates forms 1/2 for textile design and 3/4 for non-textile design. Prepare the correct route and novelty statement before payment.",
+      "Upload or submit clear photographs/drawings or specimens that match the novelty statement, and ensure the NIPO agent holds appropriate authority.",
+      "Calendar the five-year renewal points because NIPO states that industrial-design protection can continue up to 15 years subject to renewal.",
+      "Retain the issued certificate and calendar the five-year renewal intervals to maintain protection for the maximum stated 15-year period."
     ],
     "notes": [
       "Industrial design protects visual appearance rather than the technical function of an invention.",
       "NIPO states that the Nigerian design registration can last up to 15 years, subject to renewal after each five-year period.",
-      "Copyright and industrial-design protection can involve different legal questions; choose the route that matches the asset."
+      "Copyright and industrial-design protection can involve different legal questions; choose the route that matches the asset.",
+      "A decorative design and a technical patent may protect different aspects of the same product; using the wrong application will not protect both.",
+      "NIPO says design registration can last up to 15 years subject to each five-year renewal."
     ],
     "sources": [
       {
@@ -8989,32 +9096,40 @@
     "slug": "copyright-work-registration",
     "title": "How to register a copyright work in Nigeria",
     "shortTitle": "Copyright registration",
-    "summary": "How authors and right owners voluntarily record a copyright work through the Nigerian Copyright e-Registration System and obtain an acknowledgement certificate.",
+    "summary": "Copyright arises automatically on eligible original creation, without a Nigerian Copyright Commission registration. Voluntary NCeRS registration records a specific work and ownership facts; after account activation, file the work, pay an official application fee and retain the resulting evidentiary acknowledgment.",
     "category": "Business",
     "agencySlug": "copyright-commission",
     "feeLabel": "₦10,000 registration fee",
     "feeNote": "The Nigerian Copyright Commission's current NCeRS help page lists ₦10,000 for a Nigerian-currency copyright registration application and separate fees for certified copies or later corrections.",
     "timeline": "The Commission says applications are generally processed within about 10 working days, with online submissions potentially taking less time.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://eregistration.copyright.gov.ng/",
     "requirements": [
       "An original copyright work or a right acquired in the work that you are entitled to register",
       "Applicant/author/right-owner identity and contact information",
       "A copy of the work in the format accepted by NCeRS",
-      "A separate official payment reference for the individual work or application"
+      "A separate official payment reference for the individual work or application",
+      "A description of authorship/creation and proof of ownership or acquired rights for each registered work or eligible collection.",
+      "Access to the NCeRS activation email and a legible copy of the work in a format the portal accepts."
     ],
     "steps": [
+      "Decide whether this is an original copyright work or an interest acquired by assignment; assemble proof of authorship/ownership and confirm that voluntary registration is the service needed.",
       "Create and activate an NCeRS account using an email address you can access throughout the application.",
       "Start a new copyright registration, identify the work and right owner accurately, and upload the copy of the work.",
       "Pay the prescribed fee through an official NCeRS payment method and attach or validate the payment reference for that application.",
       "Submit the application and monitor the account for approval, correction requests or other Commission communication.",
-      "After approval, open the approved-application area and retain the electronic certificate or acknowledgement connected to the registered work."
+      "Verify the NCeRS account through the activation email; the Commission's help page instructs applicants to check spam and the portal's resend route before opening a second account.",
+      "Register separate works under separate applications unless the NCC's described collection exception applies, such as an album registered under one collection title.",
+      "After approval, open the approved-application area and retain the electronic certificate or acknowledgement connected to the registered work.",
+      "If online filing cannot be completed, the Commission says its offices still accept manual applications; check the current desk requirements and prescribed fee before travelling."
     ],
     "notes": [
       "Copyright protection exists automatically when an eligible original work is created; registration is voluntary and provides an official evidentiary record.",
       "NCeRS says separate works normally require separate applications, although a collection such as an album may be registered as one titled collection in the circumstances described by the Commission.",
-      "Do not confuse the Nigerian Copyright Commission with the Nigerian Communications Commission; both use the abbreviation NCC."
+      "Do not confuse the Nigerian Copyright Commission with the Nigerian Communications Commission; both use the abbreviation NCC.",
+      "Neither copyright protection nor the right to stop copying depends on NCeRS registration; the certificate is supporting evidence.",
+      "NCeRS says manual filing remains available through Copyright Commission offices as an alternative to the portal."
     ],
     "sources": [
       {
@@ -9028,6 +9143,12 @@
         "agency": "Nigerian Copyright Commission",
         "url": "https://www.eregistration.copyright.gov.ng/ncc/help",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Nigerian Copyright Commission",
+        "url": "https://www.eregistration.copyright.gov.ng/ncc/about",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -9046,32 +9167,40 @@
     "slug": "nepc-exporter-registration",
     "title": "How to register as an exporter with NEPC",
     "shortTitle": "NEPC exporter registration",
-    "summary": "The official Nigerian Export Promotion Council e-registration process for obtaining an Exporter's Certificate before formal non-oil export activities.",
+    "summary": "NEPC requires exporters to obtain an Exporter's Certificate via its own e-registration account. Documents differ for limited companies, cooperatives and NGOs; confirm payment with the transaction Order ID and download the issued certificate digitally rather than attending an office to collect it.",
     "category": "Business",
     "agencySlug": "nepc",
     "feeLabel": "₦13,500 new certificate",
     "feeNote": "NEPC currently lists ₦13,500 for a new Exporter's Certificate, excluding payment-channel charges. Confirm the amount displayed by the e-registration platform.",
-    "timeline": "NEPC says the certificate is issued within one working day after payment confirmation when the application information and documents are complete.",
+    "timeline": "NEPC targets 1 working day after payment confirmation and complete documentation, not automatically after card debit.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nepc.gov.ng/ereg/exporter/",
     "requirements": [
       "A qualifying registered business, cooperative, government organisation or NGO",
       "Entity-specific registration documents such as CAC incorporation records or cooperative registration",
       "The governing or constitutional documents applicable to the entity type",
-      "A board resolution to register with NEPC where NEPC lists one for the entity type"
+      "A board resolution to register with NEPC where NEPC lists one for the entity type",
+      "For a limited company, CAC incorporation certificate, directors' section/Status Report, memorandum/articles and authorised board resolution; other entity types use their own NEPC checklist."
     ],
     "steps": [
+      "Before paying, check whether the applicant is a limited company, cooperative or eligible government/non-government organisation and collect that entity type's NEPC documents.",
       "Open the NEPC e-registration platform and create the exporter account for the legal entity that will carry out the export activity.",
       "Complete the entity profile and upload the registration, governance and board-resolution documents applicable to that entity type.",
       "Generate and pay the official NEPC registration charge using one of the payment methods offered on the platform.",
       "Use the transaction Order ID in the payment-status function to confirm that NEPC has received the payment.",
-      "After approval, open Registration Details and download or print the electronic Exporter's Certificate instead of travelling to an NEPC office for collection."
+      "For a limited company, NEPC lists the CAC incorporation certificate, Memorandum and Articles, CAC 1.1 directors section or Status Report, and board resolution to register as an exporter.",
+      "After checkout, open the certificate transaction log, copy the Order ID and run Get Status to confirm NEPC payment; a card debit without a confirmed transaction may delay issuance.",
+      "After approval, open Registration Details and download or print the electronic Exporter's Certificate instead of travelling to an NEPC office for collection.",
+      "Once approved, sign in to Registration Details → Action → Download and Print Certificate; NEPC states physical certificate collection has been discontinued.",
+      "NEPC's one-working-day service target starts after payment confirmation and sufficient valid documents. Product permits, Customs and destination rules must still be met separately."
     ],
     "notes": [
       "NEPC states that formal exporters must register and obtain an Exporter's Certificate through its e-registration platform.",
       "The initial certificate is valid for two years; later renewals are annual under NEPC's current guidance.",
-      "Exporter registration does not replace product-specific approvals, Customs documentation or destination-country requirements."
+      "Exporter registration does not replace product-specific approvals, Customs documentation or destination-country requirements.",
+      "The public NEPC e-registration site states an initial 24-month validity and then annual renewals.",
+      "Digital download replaces physical collection; a bank debit alone is not the agency's confirmed certificate approval."
     ],
     "sources": [
       {
@@ -9103,31 +9232,39 @@
     "slug": "nepc-exporter-certificate-renewal-verification",
     "title": "How to renew or verify an NEPC Exporter's Certificate",
     "shortTitle": "Renew/verify NEPC certificate",
-    "summary": "How existing Nigerian exporters renew an expired NEPC certificate, deal with late renewal and verify exporter status through the Council's official tools.",
+    "summary": "Renew the existing NEPC Exporter's Certificate through the original account and independently verify the result using NEPC's public company-name or certificate-number lookup. The current NEPC schedule distinguishes ordinary expired renewal from late renewal after three months.",
     "category": "Business",
     "agencySlug": "nepc",
     "feeLabel": "₦7,500 renewal / ₦12,500 late renewal",
     "feeNote": "NEPC currently lists ₦7,500 for expired-certificate renewal and ₦12,500 for late renewal after three months, excluding payment-channel charges.",
     "timeline": "NEPC states that exporter certificates are issued within one working day after payment confirmation when the record and supporting information are complete.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nepc.gov.ng/ereg/exporter/",
     "requirements": [
       "The existing exporter account and certificate registration information",
       "Current entity records if NEPC requires an update during renewal",
-      "An official renewal payment generated through the NEPC platform"
+      "An official renewal payment generated through the NEPC platform",
+      "The old exporter certificate registration number and active original NEPC account credentials.",
+      "Confirmation of renewal timing to distinguish the current ₦7,500 ordinary renewal from ₦12,500 late renewal after three months."
     ],
     "steps": [
+      "Check the certificate's original issue date and expiry before paying: NEPC says the initial certificate lasts 24 months and later extensions run annually.",
       "Sign in to the existing NEPC exporter account and open the registration or certificate-renewal action rather than creating a duplicate exporter identity.",
       "Review the legal-entity information and update any record the platform marks as outdated before submitting the renewal.",
       "Pay the renewal or late-renewal amount generated by the official NEPC platform and retain the transaction Order ID.",
       "Confirm the payment status in the NEPC transaction log and download the renewed certificate after approval.",
-      "For third-party verification, use NEPC's Exporter Certificate Verification Portal and search by company name or certificate registration number."
+      "Use the NEPC Transactions Log and Order ID → Get Status to confirm the renewal payment before assuming the new certificate was issued.",
+      "After renewal, download the issued file from Registration Details and open the public Exporter Certificate Verification Portal to confirm it matches the registered company.",
+      "For third-party verification, use NEPC's Exporter Certificate Verification Portal and search by company name or certificate registration number.",
+      "If no verified renewal appears, retain the transaction ID and report the unresolved account or documentation mismatch to official NEPC support; do not create a second exporter account."
     ],
     "notes": [
       "NEPC says the first certificate is valid for 24 months and later renewals are annual.",
       "A certificate can be checked independently through NEPC's public verification portal.",
-      "Renewing NEPC registration does not by itself satisfy all export documentation or product-regulatory requirements."
+      "Renewing NEPC registration does not by itself satisfy all export documentation or product-regulatory requirements.",
+      "NEPC's verification portal accepts company name or certificate registration number; a PDF supplied by a salesperson should still be checked independently.",
+      "Public verification confirms the NEPC record, not every separate product export permit or Customs clearance."
     ],
     "sources": [
       {
@@ -9141,6 +9278,12 @@
         "agency": "Nigerian Export Promotion Council",
         "url": "https://nepc.gov.ng/verify-exporter/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Nigerian Export Promotion Council",
+        "url": "https://nepc.gov.ng/ereg/exporter/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -9157,31 +9300,39 @@
     "slug": "smedan-msme-registration",
     "title": "How to register a business with SMEDAN",
     "shortTitle": "SMEDAN registration",
-    "summary": "How Nigerian micro, small and medium businesses create a SMEDAN account, complete business onboarding and access the agency's support-service ecosystem.",
+    "summary": "Create a SMEDAN MSME account with personal details and finish business onboarding, including CAC status, main product, industry, location, turnover and employee category. SMEDAN registration does not replace CAC legal registration and does not itself approve grants, loans or supplier licences.",
     "category": "Business",
     "agencySlug": "smedan",
     "feeLabel": "Use the official SMEDAN portal",
     "feeNote": "SMEDAN's registration pages do not publish a general onboarding charge. Do not pay an unofficial agent merely to create the portal account.",
     "timeline": "Account creation is online; access to individual SMEDAN programmes, grants, loans or support services follows each programme's own eligibility and timeline.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://portal.smedan.gov.ng/signup",
     "requirements": [
       "Business owner's first name, last name and working email address",
       "Business information including CAC registration status, line of business, main product and business location",
-      "Annual-turnover and employment information used to classify the enterprise"
+      "Annual-turnover and employment information used to classify the enterprise",
+      "Accurate business registration status and, if registered, matching CAC details.",
+      "Actual main product, premises/location, industry, annual turnover and number of employees for SMEDAN classification."
     ],
     "steps": [
+      "Go directly to portal.smedan.gov.ng/signup rather than responding to a third-party grant invitation; provide an email address you control.",
       "Create a SMEDAN portal account with your real name, email address and a password you can retain securely.",
       "Continue the onboarding and state whether the business already has CAC registration before entering the business identity information.",
       "Complete the business description, industry, location, annual-turnover category and employment category accurately.",
       "Finish the business profile and open the Services area to see the support programmes and assessments currently available to that enterprise.",
-      "Keep the SMEDAN profile current because individual financing, training or grant opportunities can use the registered business information for eligibility checks."
+      "The SMEDAN Business Information screen specifically asks whether the enterprise is registered with CAC. Answer truthfully instead of inventing an RC or BN number.",
+      "The Business Description step requests main product, business premises, industry/area, annual-turnover category and employment category; select the actual business sizes rather than inflating eligibility.",
+      "Keep the SMEDAN profile current because individual financing, training or grant opportunities can use the registered business information for eligibility checks.",
+      "Once onboarding is complete, assess each available programme's separate eligibility and application deadline; a SMEDAN profile is not a loan decision."
     ],
     "notes": [
       "SMEDAN registration is not the same as CAC legal registration; the two systems serve different purposes.",
       "Registration can provide access to business-development, finance, training and other opportunities, but it does not guarantee a loan or grant.",
-      "Use the official SMEDAN domain because fraudulent grant and loan registration pages are common."
+      "Use the official SMEDAN domain because fraudulent grant and loan registration pages are common.",
+      "SMEDAN account creation uses personal first/last name, email and password; business details are collected in later onboarding.",
+      "Do not confuse SMEDAN registration with CAC incorporation or a grant-award letter."
     ],
     "sources": [
       {
@@ -9201,6 +9352,12 @@
         "agency": "Small and Medium Enterprises Development Agency of Nigeria",
         "url": "https://portal.smedan.gov.ng/business-information",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "SMEDAN",
+        "url": "https://portal.smedan.gov.ng/business-description",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -9220,32 +9377,40 @@
     "slug": "bpp-contractor-registration",
     "title": "How to register as a federal contractor with BPP",
     "shortTitle": "BPP contractor registration",
-    "summary": "How contractors, consultants and service providers join the Bureau of Public Procurement national database used for Federal Government procurement.",
+    "summary": "BPP's federal contractor national database begins with a company email and temporary contractor ID, then requires compliance, directors, category, finances, staff, equipment and past-work information. The Interim Registration Report confirms registration in the database; it is not an award of a government contract.",
     "category": "Business",
     "agencySlug": "bpp",
     "feeLabel": "Use the BPP registration system",
     "feeNote": "BPP's published registration procedure focuses on online registration and compliance information. Do not pay a private 'federal contractor registration' fee outside the official system.",
     "timeline": "Timing depends on completion of the company, compliance, personnel, financial, equipment and completed-job information required by the database.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://www.bpp.gov.ng/contractor",
     "requirements": [
       "A legally registered corporate entity intending to supply goods, works, consultancy or services to the Federal Government",
       "Company name, address and working email for creation of the temporary contractor ID",
       "Tax, pension, ITF/social-security compliance information applicable to the company",
-      "Board/director, business-category, financial, personnel, equipment and completed-job information"
+      "Board/director, business-category, financial, personnel, equipment and completed-job information",
+      "Working company email that can receive the temporary contractor login and details of the firm's directors, finances, equipment, staff and completed projects.",
+      "Current evidence for the tax, pension, ITF and other compliance categories applicable to the firm, with exemptions confirmed by BPP where relevant."
     ],
     "steps": [
+      "Check that the business is applying for the Federal Government BPP contractors/consultants database rather than a specific ministry's open tender or a separate state procurement registry.",
       "Open BPP's Contractor, Consultant and Service Provider registration page and use the Contractor Registration system link.",
       "Create the company account with the basic company identity, address and email, then retrieve the temporary contractor ID and password sent to the email account.",
       "Sign in with the temporary credentials and complete the compliance, directors, business-category, financial, personnel, equipment and completed-jobs sections.",
       "Review the company record carefully and submit the application once the required sections and supporting information are complete.",
-      "After successful completion, print the Interim Registration Report that BPP identifies as evidence of registration for Federal Government procurement."
+      "After requesting account access, check both inbox and spam for the temporary BPP Contractor ID/password; the password is case sensitive.",
+      "Complete all categories BPP lists, including company contacts, compliance, directors, parent company, professional affiliations, financial data, personnel, projects and equipment before final submission.",
+      "After successful completion, print the Interim Registration Report that BPP identifies as evidence of registration for Federal Government procurement.",
+      "Print the Interim Registration Report after successful filing, then check each actual tender's current statutory compliance, professional licences and procurement conditions separately."
     ],
     "notes": [
       "BPP says the database is for contractors, consultants and service providers doing or intending to do business with the Federal Government.",
       "The BPP record does not replace professional licences or sector-specific registrations required for a particular procurement.",
-      "Foreign contractors and suppliers can also fall within the database requirements described by BPP."
+      "Foreign contractors and suppliers can also fall within the database requirements described by BPP.",
+      "BPP's published registration procedure identifies the IRR as the evidence generated after completed database registration, not evidence of contract eligibility or selection.",
+      "Older BPP instructions list conditional compliance exemptions; confirm current eligibility before asserting an exemption from pension or industrial training obligations."
     ],
     "sources": [
       {
@@ -9253,6 +9418,12 @@
         "agency": "Bureau of Public Procurement",
         "url": "https://www.bpp.gov.ng/contractor",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Bureau of Public Procurement",
+        "url": "https://www.bpp.gov.ng/wp-content/uploads/2019/01/REGISTRATION-PROCEDURE.pdf",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -10426,11 +10597,11 @@
     "slug": "scuml-certificate-registration",
     "title": "How to register for a SCUML certificate in Nigeria",
     "shortTitle": "SCUML registration",
-    "summary": "The official EFCC-SCUML registration process for Designated Non-Financial Businesses and Professions, including sector-specific documents, online filing and e-certificate timing.",
+    "summary": "Eligible designated non-financial businesses and professions register with EFCC SCUML using the official sector-specific application; the certificate is issued free. The current SCUML guideline distinguishes company, business-name and NGO documents, and SCUML warns against anyone charging to fast-track registration.",
     "category": "Business",
     "agencySlug": "scuml",
     "feeLabel": "Free",
-    "feeNote": "SCUML states that registration and certification are completely free of charge. Do not pay an agent for a SCUML certificate.",
+    "feeNote": "SCUML states that both registration and certification are completely free. Do not pay any purported agent or portal intermediary for official issuance.",
     "timeline": "SCUML's current FAQ says the e-certificate is normally ready about 7–10 days after approval.",
     "status": "verified",
     "officialPortal": "https://scumlportal.efcc.gov.ng/mhatabz.php",
@@ -10439,20 +10610,28 @@
       "Tax Identification Number (TIN) printout for the registered entity",
       "Sector-specific professional licence, association certificate or regulator approval where SCUML lists one for that DNFBP category",
       "Organisation address, phone and email plus the director/contact person's name, NIN, address, email and mobile number",
-      "Bank/account information and source-of-funds/source-of-wealth information requested by the current SCUML registration form"
+      "Bank/account information and source-of-funds/source-of-wealth information requested by the current SCUML registration form",
+      "Correct DNFBP sector and legal form, together with all sector-specific CAC, tax and professional evidence listed on SCUML's current guideline."
     ],
     "steps": [
+      "Confirm that the business activity is within SCUML's DNFBP categories and select the correct entity/sector before filling the form; financial institutions may have different supervisory authorities.",
       "Check SCUML's registration guideline and confirm that the business or profession falls within a Designated Non-Financial Business or Profession category before filing.",
       "Open the official SCUML registration form and select the business category, CAC registration type and sector that match the registered entity.",
       "Enter the CAC/NEPZA number, registered name, incorporation date, TIN, head-office address, bank details and organisation contact information exactly as shown in the supporting records.",
       "Enter the director or organisation contact person's NIN and contact details, then upload the CAC, tax and sector-specific documents listed for that business type.",
       "Review the attestation and submit the registration through the official SCUML portal, keeping the application or registration reference.",
-      "Track the application on the SCUML portal and, after approval, download the e-certificate when it becomes available."
+      "Choose the sector-specific checklist: companies ordinarily need incorporation, Memorandum/Articles, CAC status or director records and TIN; business names need the BN registration/status and tax evidence.",
+      "Scan documents legibly in the file sizes/formats accepted by the current form; check any professional registration evidence for law/accounting or other regulated practices.",
+      "Track the application on the SCUML portal and, after approval, download the e-certificate when it becomes available.",
+      "If an application is pending or queried, use the official status route and supply corrected originals where directed; do not pay an Instagram or WhatsApp agent for 'activation'.",
+      "For reporting obligations, SCUML announced that relevant CTR/CBTR reports from 1 January 2026 use the portal rather than email. A certificate is not automatic proof that later reports are compliant."
     ],
     "notes": [
       "SCUML warns that third parties advertising paid registration or certification are not its authorised agents.",
       "The exact document list depends on the business sector; professional firms can require an additional professional licence or certificate.",
-      "From 1 January 2026, SCUML says relevant transaction reports such as CTR/CBTR submissions are handled through the SCUML portal rather than email."
+      "From 1 January 2026, SCUML says relevant transaction reports such as CTR/CBTR submissions are handled through the SCUML portal rather than email.",
+      "SCUML expressly says its registration and certification are free and warns that social-media 'agents' are unauthorised.",
+      "The portal's 2026 reporting notice is separate from obtaining an initial certificate: future compliance is not discharged by registration alone."
     ],
     "sources": [
       {
@@ -10472,6 +10651,12 @@
         "agency": "Special Control Unit Against Money Laundering / EFCC",
         "url": "https://scuml.efcc.gov.ng/faqs/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "EFCC SCUML",
+        "url": "https://scuml.efcc.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -10486,13 +10671,13 @@
       "cac-company-registration",
       "cac-business-name-registration"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "scuml-certificate-verification",
     "title": "How to verify a SCUML certificate",
     "shortTitle": "Verify SCUML certificate",
-    "summary": "Use the official EFCC-SCUML verification service to check a certificate instead of relying only on a PDF, printout or certificate image supplied by a business.",
+    "summary": "Verify an EFCC-SCUML certificate independently on the official SCUML verification page, then compare the returned legal name and registration reference against the entity. A screenshot or certificate image alone cannot establish authenticity or current compliance.",
     "category": "Business",
     "agencySlug": "scuml",
     "feeLabel": "Free verification",
@@ -10502,18 +10687,25 @@
     "officialPortal": "https://scumlportal.efcc.gov.ng/verify.php",
     "requirements": [
       "The SCUML certificate or registration reference shown on the certificate being checked",
-      "The registered business name and CAC details needed to compare the returned record with the entity presenting the certificate"
+      "The registered business name and CAC details needed to compare the returned record with the entity presenting the certificate",
+      "A legible certificate registration/reference number rather than only a photo with cropped identifying fields."
     ],
     "steps": [
+      "Obtain the certificate number or registration identifier directly from the document and the entity's CAC legal name; compare against an independently obtained company registration record.",
       "Open the official SCUML certificate-verification page and confirm that the address is on the scumlportal.efcc.gov.ng domain.",
       "Enter the certificate or registration information requested by the verification service.",
       "Submit the lookup and compare the returned registered entity information with the business name and certificate presented to you.",
-      "If the certificate cannot be verified or the returned entity does not match, treat the certificate as unresolved and contact SCUML through its official channels."
+      "Check the browser address itself before submission: SCUML tells users the authorised verification route must be under scumlportal.efcc.gov.ng/verify.",
+      "Match the portal's result to the certificate's entity, registered details and any expiry/status shown; do not accept a similar business name as proof.",
+      "If the certificate cannot be verified or the returned entity does not match, treat the certificate as unresolved and contact SCUML through its official channels.",
+      "If verification fails, pause the transaction and use SCUML's official status/support instructions; do not make a substitute fee payment to a verification agent."
     ],
     "notes": [
       "A certificate image or PDF can be copied, altered or outdated, so use the official verification service for an independent check.",
       "SCUML itself tells users to make sure the verification page is on the official scumlportal.efcc.gov.ng domain.",
-      "Verification does not replace checking other licences or registrations required for the business's sector."
+      "Verification does not replace checking other licences or registrations required for the business's sector.",
+      "SCUML certificate verification is a check of the agency record, not confirmation of CAC ownership, professional licences or later AML reports.",
+      "An absent or mismatched result requires resolution with the issuing regulator; it should not be presented as confirmed valid."
     ],
     "sources": [
       {
@@ -10539,7 +10731,7 @@
       "scuml-certificate-registration",
       "cac-status-report"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "pencom-pension-clearance-certificate",
@@ -11268,32 +11460,39 @@
     "slug": "cac-change-director",
     "title": "How to add, remove or change a company director with CAC",
     "shortTitle": "Change CAC director",
-    "summary": "How a Nigerian company files a post-incorporation director appointment, removal or change of director particulars through CAC's current iCRP system.",
+    "summary": "Use CAC post-incorporation filing to record an actual appointment, cessation or change of director particulars after the company has made the required corporate decision. A CAC director change does not automatically update share ownership or the Persons with Significant Control register.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "CAC post-incorporation filing fee applies",
     "feeNote": "Use the current CAC fee schedule and the amount generated by iCRP for the exact director filing. Late filings can attract additional charges.",
     "timeline": "CAC's current service timeline lists 12 working hours for CAC 7/director particulars and Edit Director filings after receipt of the required documents or resolution of a query.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "The company's CAC registration number and access to an iCRP account authorised to make its post-incorporation filings",
       "The corporate resolution or approval supporting the appointment, removal or change",
       "Identity and statutory particulars of the incoming or affected director",
-      "The consent, notice or supporting corporate document applicable to the exact director change"
+      "The consent, notice or supporting corporate document applicable to the exact director change",
+      "Accurate effective date, appointment/cessation reason and affected director's identity particulars; signed consent or notice if required by the selected filing."
     ],
     "steps": [
+      "Decide whether this is a new appointment, removal/cessation or correction of existing particulars; obtain the company authorisation before editing an official public record.",
       "Sign in to CAC iCRP with the account authorised to manage post-incorporation filings for the company.",
       "Open the company's post-incorporation services and select the director appointment, removal or particulars-change transaction that matches the approved corporate action.",
       "Enter the affected director's statutory particulars and upload the corporate resolution, identity and consent or notice documents applicable to the filing.",
       "Review the director information, generate the official CAC transaction and pay the filing or late fee shown by iCRP.",
-      "Submit the application, monitor the dashboard for any CAC query and confirm the updated director information after approval."
+      "From the iCRP dashboard select Post Inc. → the correct company record. CAC's current FAQ says post-incorporation filings still receive manual officer review.",
+      "Match the directors' names and effective dates against the board/shareholder decision and verify whether the same event also changes beneficial ownership before submission.",
+      "Submit the application, monitor the dashboard for any CAC query and confirm the updated director information after approval.",
+      "After approval, obtain the updated company record or status report and notify banks, regulators and counterparties holding separate director files; a CAC acknowledgement alone may not update those external systems."
     ],
     "notes": [
       "Changing a director is different from transferring shares or changing a beneficial owner; use the filing that matches the legal action actually taken.",
       "CAC's published service timelines list director post-registration changes at 12 working hours once a complete filing is received or a query is resolved.",
-      "After approval, check the updated company record before relying on the change for banking, contracts or another regulator."
+      "After approval, check the updated company record before relying on the change for banking, contracts or another regulator.",
+      "Post-incorporation applications still receive manual approval or queries even though iCRP now uses single sign-on.",
+      "Director records and the PSC register are different filings; an ownership-control change can require both."
     ],
     "sources": [
       {
@@ -11307,6 +11506,12 @@
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://bor.cac.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11327,32 +11532,39 @@
     "slug": "cac-change-registered-address",
     "title": "How to change a company's registered address with CAC",
     "shortTitle": "Change CAC registered address",
-    "summary": "How a Nigerian company updates its registered office through CAC post-incorporation services and confirms the new address on the company record.",
+    "summary": "Change the registered office in CAC's company record through the manually reviewed post-incorporation workflow. A relocated shop, operating branch or delivery address is not automatically a legal registered-office amendment.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "CAC post-incorporation filing fee applies",
     "feeNote": "Use the current CAC fee schedule and the amount generated in iCRP for the address-change filing. Late filing can attract additional charges.",
     "timeline": "CAC's current service timeline lists 12 working hours for CAC 8/registered-address changes after receipt of the required filing or resolution of a query.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "The company's CAC registration number and authorised iCRP access",
       "The complete new registered-office address, including the building or house number, street, locality, state and other address fields used by CAC",
       "The corporate resolution or approval supporting the registered-office change where the company's governance process requires it",
-      "Any address evidence or notice required by the specific CAC post-incorporation transaction"
+      "Any address evidence or notice required by the specific CAC post-incorporation transaction",
+      "A legible new-office address and supporting corporate approval/evidence required by the chosen address-change transaction."
     ],
     "steps": [
+      "Confirm that the company is actually changing its legal registered office, rather than only a trading address, branch or shipping location.",
       "Sign in to the CAC iCRP account authorised to manage the company's post-incorporation records.",
       "Open post-incorporation services for the company and select the registered-address change transaction.",
       "Enter the complete new registered-office address and upload the corporate approval or address evidence applicable to the filing.",
       "Review the new address carefully, pay the official filing or late fee generated by iCRP and submit the transaction.",
-      "Monitor any CAC query and, after approval, confirm that the new registered address appears on the updated company record."
+      "Use iCRP's Post Inc. single sign-on and find the correct company; a change for one RC number must not be applied to a similarly named business.",
+      "Validate house number, street, area, LGA, state and effective date against supporting records, and respond to any manual-review query before treating the change as approved.",
+      "Monitor any CAC query and, after approval, confirm that the new registered address appears on the updated company record.",
+      "After approval, obtain an updated CAC record and separately notify the company's bank, tax authority and relevant licences of the new legal address."
     ],
     "notes": [
       "The registered office is the legal address recorded by CAC; moving a shop, branch or operating location does not automatically update that legal record.",
       "CAC's current service timeline lists registered-address changes at 12 working hours once a complete filing is received or a query is resolved.",
-      "After the CAC change is approved, update banks, tax authorities and other regulators separately where they maintain their own address records."
+      "After the CAC change is approved, update banks, tax authorities and other regulators separately where they maintain their own address records.",
+      "CAC post-incorporation submissions remain subject to manual approval rather than the business-name AI review.",
+      "An address entered on another regulator's portal does not update the company's CAC statutory address."
     ],
     "sources": [
       {
@@ -11384,32 +11596,39 @@
     "slug": "cac-beneficial-ownership-psc",
     "title": "How to file or update Persons with Significant Control (PSC) with CAC",
     "shortTitle": "CAC beneficial ownership / PSC",
-    "summary": "How companies and LLPs report or update beneficial-owner information for Persons with Significant Control through CAC and verify published ownership information in the Beneficial Ownership Register.",
+    "summary": "Report and update the natural persons who ultimately exercise significant control over a CAC company or LLP. PSC details differ from director particulars and require an actual control basis; CAC's Beneficial Ownership Register identifies the five-percent share/vote test alongside other control tests.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "CAC filing rules and fees apply",
     "feeNote": "PSC information can be reported through incorporation, annual-return or amendment processes as applicable. Use the current iCRP transaction and CAC fee schedule for a paid post-incorporation filing.",
     "timeline": "CAC's current service timeline lists 12 working hours for a Change of Person with Significant Control after receipt of the required filing or resolution of a query.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
       "The company's or LLP's CAC registration details and authorised iCRP access",
       "Full identity and contact particulars of each natural person who meets the current PSC or beneficial-owner test",
       "The shareholding, voting rights, appointment power or other ownership/control basis that makes the person reportable",
-      "The date the person became, changed or ceased to be a PSC and the supporting corporate record for that change"
+      "The date the person became, changed or ceased to be a PSC and the supporting corporate record for that change",
+      "Ownership-chain evidence and effective dates showing how the natural person reaches the applicable direct/indirect share, vote or control threshold."
     ],
     "steps": [
+      "Assess natural persons with direct or indirect shareholding, voting power or other significant influence, rather than listing the company secretary or corporate shareholder automatically.",
       "Check CAC's current PSC criteria and identify the natural person or persons who meet the beneficial-owner reporting threshold before filing.",
       "Sign in to CAC iCRP and open the incorporation, annual-return or post-incorporation transaction through which the PSC information must be reported or amended.",
       "Enter each reportable person's identity, ownership or control basis and effective date accurately, then attach the supporting corporate record used for the change.",
       "Review the beneficial-ownership information, complete any official filing charge generated by iCRP and submit the transaction.",
-      "After CAC processes the filing, confirm the updated company record and use the public Beneficial Ownership Register to check the published PSC information."
+      "Map the control chain and effective dates using ownership records. A change of director alone does not necessarily create or end a reportable PSC.",
+      "Use the authorised iCRP incorporation, amendment or annual-return stage for PSC updates and ensure each reported natural person's identity and means of control match the supporting record.",
+      "After CAC processes the filing, confirm the updated company record and use the public Beneficial Ownership Register to check the published PSC information.",
+      "Check the Beneficial Ownership Register after processing; if the public entry is inconsistent, keep filing evidence and ask CAC how to correct the PSC record."
     ],
     "notes": [
       "CAC's Beneficial Ownership Register says the reporting threshold includes a natural person with at least 5% direct or indirect shares or voting rights, or another qualifying form of significant control.",
       "The CAC register states that companies should notify the Commission of acquisition or changes in PSC information within the applicable statutory period.",
-      "Beneficial ownership identifies the natural people who ultimately own or control an entity, not merely an intermediary company."
+      "Beneficial ownership identifies the natural people who ultimately own or control an entity, not merely an intermediary company.",
+      "CAC BOR refers to five percent direct or indirect shareholding/votes or other qualifying control, not an automatic report for every director.",
+      "PSC information must reflect the human beneficial owners rather than stop at a holding company where further ownership data is required."
     ],
     "sources": [
       {
@@ -12040,7 +12259,7 @@
     "slug": "cac-public-search",
     "title": "How to search and verify a company or business on CAC Public Search",
     "shortTitle": "CAC Public Search",
-    "summary": "CAC's official iCRP Public Search offers name, RC number or AV code lookup for existing Nigerian companies and business entities. Basic results can help confirm the claimed registered entity, but a public-search screenshot is not the same as a CAC Certified True Copy or signed official status report, which are separate services.",
+    "summary": "Check a Nigerian entity using CAC's public registry by legal name, RC/BN registration number or AV Code; compare the exact record rather than trusting an invoice's company name. Public Search is not proof that the salesperson is authorised, nor a paid E-Status Report/Certified True Copy.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Basic public search is available online",
@@ -12051,21 +12270,28 @@
     "requirements": [
       "An official entity name, RC/BN registration number or AV code to enter in CAC's public search field.",
       "Another independent entity identifier, such as address or entity type, to distinguish similar company names.",
-      "A current source for comparison when acting on a contract, invoice or bank-payment request."
+      "A current source for comparison when acting on a contract, invoice or bank-payment request.",
+      "An independent registration number or other identifier to distinguish a genuine registry entry from a lookalike."
     ],
     "steps": [
+      "Get an independent legal name and RC/BN number from a genuine entity document, then open CAC Public Search yourself instead of following a payment-request message.",
       "Open the genuine CAC Public Search at https://icrp.cac.gov.ng/public-search/ without buying a third-party search subscription.",
       "Choose the search method shown and enter the legal name, RC number or AV code exactly as supplied by the company.",
       "Read the returned list and choose the matching entity rather than assuming the first similarly named business is the intended company.",
       "Compare the registration number, legal entity type and status against the documents or invoice you are verifying.",
       "If CAC provides limited public details, request the separate CAC Status Report or Certified True Copy rather than altering a public-search screenshot.",
-      "Keep a record of the official lookup for your internal checks, but use a formally issued CAC document when a bank, legal office or procurement team requires certified proof."
+      "Use a second identifier such as registration number, entity type or state to distinguish similarly named records and avoid false matches.",
+      "For a large transaction, ask the entity for an authorised representative's identity and, when required, an official CAC Status Report/CTC; a public search cannot verify control of a bank account.",
+      "Keep a record of the official lookup for your internal checks, but use a formally issued CAC document when a bank, legal office or procurement team requires certified proof.",
+      "If no matching record is found or the details conflict, postpone the transaction and request a CAC-issued explanation or formal record; do not alter screenshots to make an entity appear registered."
     ],
     "notes": [
       "The CAC portal's placeholder explicitly accepts 'Entity name, RC number, or AV code'.",
       "Public Search is accessible without the pre-incorporation user registration flow; registering a company or requesting certified documents is different.",
       "A match confirms a registry entry but does not establish that every salesperson using the company name is authorised.",
-      "Do not confuse CAC basic search with CAC name reservation when forming a new company."
+      "Do not confuse CAC basic search with CAC name reservation when forming a new company.",
+      "A valid CAC entry is not a warranty that an unrelated seller, bank account or social-media page genuinely represents that company.",
+      "CAC E-Status Reports and CTCs are separate documentary evidence and are not generated by the free public search alone."
     ],
     "sources": [
       {
@@ -12078,6 +12304,12 @@
         "label": "CAC Company Search",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/company-search",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency process and eligibility guidance",
+        "agency": "Corporate Affairs Commission",
+        "url": "https://icrp.cac.gov.ng/sublink/e-status-report/",
         "lastChecked": "2026-10-16"
       }
     ],
