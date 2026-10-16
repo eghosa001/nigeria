@@ -53,6 +53,7 @@ export const reviewedMovieRecords20261016: Record<string, RecordRepair> = {
     }]
   },
   "where-love-lives": {
+    cast: ["Uzor Arukwe", "Bimbo Ademoye", "Chioma Nwosu", "Osas Ighodaro", "Emem Udonquak"],
     synopsis: "To celebrate their wedding anniversary, Ekene surprises his wife Demilade with a house in a wealthy Lagos estate. Neighbours Queen, Imade and Eno challenge the new arrival's place in their circle, while family pressure about children and emerging financial problems test the couple's marriage. Bimbo Ademoye and Uzor Arukwe lead this 2025 romantic comedy about class, loyalty and the appearance of success.",
     references: [
       {
