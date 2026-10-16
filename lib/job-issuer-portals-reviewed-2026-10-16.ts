@@ -211,6 +211,109 @@ const issuerPortalTitles20261016: Record<string, string> = {
   "seplat-energy-careers": "Seplat Energy Careers: Check Whether an Actual Vacancy Is Open"
 };
 
+const issuerPortalFollowUp20261016: Record<string, [string, string]> = {
+  "access-bank-early-careers": [
+    "If the Access board shows no early-career intake, bookmark that specific category and check the employer again instead of completing an unofficial graduate form.",
+    "Record the exact Access Bank requisition title and application confirmation when the employer opens a specific vacancy; this is what distinguishes a submitted role from a saved search."
+  ],
+  "gtbank-entry-level-careers": [
+    "If the GTBank page only shows a loading indicator, allow scripts and try the employer's own navigation; do not assume an invisible job listing is open or closed.",
+    "When an actual GTBank vacancy appears, record its employer-hosted final destination and application evidence before sharing the role with another applicant."
+  ],
+  "uba-careers-graduate-programme": [
+    "The UBA Academy is employee learning and career development; do not use an Academy enrolment description as evidence of external recruitment eligibility.",
+    "If an advertised UBA position is for another African country, check that country's labour and applicant-residency conditions before submitting from Nigeria."
+  ],
+  "firstbank-graduate-trainee-careers": [
+    "The below-27 and 2:2/HND Upper Credit standard belongs to FirstBank's described Graduate Trainee Programme, not automatically to experienced hires.",
+    "If no current FirstBank trainee intake is published, use the experienced-hire job list only if your own work experience meets a named vacancy."
+  ],
+  "stanbic-ibtc-careers": [
+    "After following Stanbic's linked recruiting system, retain the specific reference identifier so another group's similarly named opening is not mistaken for yours.",
+    "If a search returns no Nigerian role in your discipline, avoid filling unrelated Standard Bank Group country applications just to create an account."
+  ],
+  "mtn-nigeria-careers": [
+    "Separate a permanent MTN Nigeria network/operations role from a graduate-development programme, which may use different country and experience eligibility.",
+    "If the MTN Nigeria careers home provides only employer culture and no job-specific Apply link, treat the vacancy as unverified and check the issuer again later."
+  ],
+  "airtel-nigeria-careers": [
+    "For October enquiries about undergraduate internship, verify whether Airtel has published an exception to its Apr–Jun application window before preparing a supposed 'open now' form.",
+    "If you use Airtel's employer-published unsolicited CV address, label the message speculative and do not claim you have entered any named Airtel vacancy selection."
+  ],
+  "nestle-nigeria-careers": [
+    "A Nestlé 'global' job listing may have a different country's visa or residency rule; Nigerian nationality alone does not establish eligibility.",
+    "After submitting a named Nestlé job, use the employer's application-status feature rather than sending duplicate applications through unsanctioned recruiting sites."
+  ],
+  "kpmg-nigeria-careers": [
+    "Do not reuse an internship's student eligibility for KPMG's graduate or experienced categories: select the track shown in the actual open advert.",
+    "If the preferred KPMG Nigeria career category contains only a description and no intake notice, hold off on presenting it as a 2026 application deadline."
+  ],
+  "pwc-nigeria-careers": [
+    "An independently contracted PwC engagement and an employee recruitment are different relationships; apply through the matching official route.",
+    "If a graduate search redirects to the global PwC site, reapply its Nigeria location filter and read the exact job's country eligibility before proceeding."
+  ],
+  "shell-nigeria-careers": [
+    "For SIWES, check Shell's separate Nigerian student industrial-training eligibility and institution requirements, not the experienced-hire listing.",
+    "A third-party request to pay for a Shell placement or submit identity documents outside the recruitment domain should be verified through Shell's official applicant help route."
+  ],
+  "nlng-careers": [
+    "If NLNG's careers home shows no current Bonny or mainland opening, do not treat its corporate introduction as an invitation to submit a resume.",
+    "For an actual plant vacancy, verify worksite, rotation and travel arrangements from the precise job details rather than the company's Bonny infrastructure descriptions."
+  ],
+  "chevron-nigeria-careers": [
+    "Cross-check a claimed Chevron Nigerian role against the actual employer requisition instead of trusting unsolicited messages or copied branded letters.",
+    "Do not pay an 'interview processing' or travel deposit; Chevron explicitly warns that it never seeks fees from candidates."
+  ],
+  "totalenergies-nigeria-graduate-careers": [
+    "Before applying to a TotalEnergies Young Graduate posting, check the named country, degree year, location and programme criteria in the active advert.",
+    "If the vacancy is on a different national careers market, don't re-label it as an available Nigeria application because the multinational operates there."
+  ],
+  "unilever-nigeria-careers": [
+    "Use the precise Unilever role's worksite field to distinguish Lagos office work from factory and field postings.",
+    "If the Unilever country landing page has only employer information, the next useful step is a job-search filter, not an invented graduate-application URL."
+  ],
+  "dangote-group-careers": [
+    "Use the plant/city and business-unit filters: an Ibese cement maintenance vacancy is not the same as a Lagos head-office finance role.",
+    "After selecting a Dangote role, save its individual job URL and employer-generated submission confirmation, not merely an email from the talent newsletter."
+  ],
+  "flutterwave-nigeria-careers": [
+    "The Flutterwave vacancies board distinguishes Abuja from generic Nigeria locations; do not substitute Abuja or Lagos as a location without the actual role detail.",
+    "A Node.js engineering role, fraud-risk analyst and non-engineering account role have materially different screening; tailor proof to the specific duties."
+  ],
+  "paystack-nigeria-careers": [
+    "Check whether Paystack's candidate platform displays a role's actual application deadline or closes its form; a cached job card can outlive the vacancy.",
+    "When multiple Paystack role listings look similar, keep the exact posting identifier and location shown on the final employer page."
+  ],
+  "moniepoint-nigeria-careers": [
+    "Prepare accurate examples for a potential Moniepoint case study; the employer's listed interview stages are indicative and can vary with the team.",
+    "Verify a remote designation and hiring-country restriction in the specific Moniepoint job, not by relying on a general 'work from anywhere' benefits claim."
+  ],
+  "fidelity-bank-nigeria-careers": [
+    "Graduate Developer is not the same training route as Fidelity's Graduate Trainee or undergraduate internship; compare each intake's entry requirements separately.",
+    "If Fidelity's overview has no active programme registration link, don't assign an application closing date based on previous cohorts or recruiter posts."
+  ],
+  "british-council-nigeria-careers": [
+    "The British Council's global vacancy site contains multiple countries; confirm Nigeria as the actual job location before describing a vacancy as local.",
+    "A safeguarding or background check requirement should come from the actual British Council role, not a made-up requirement for every applicant."
+  ],
+  "unicef-nigeria-careers": [
+    "UNICEF's Nigeria page may change after this check: revisit the Vacancies or Consultancies section for a named posting before treating 'No vacancies at this time' as out of date.",
+    "If a UNICEF opportunity is only on the global portal, confirm the duty station and employment type; UNICEF says unsolicited CVs are not accepted."
+  ],
+  "undp-careers-nigeria": [
+    "UNDP staff appointments, consultant tenders and other engagement types may have different submission methods; read the selected role's own instructions.",
+    "Do not mistake a global UNDP success story or Nigeria country programme article for a specific recruitment notice."
+  ],
+  "who-careers-nigeria": [
+    "A WHO listing for the African Region is not automatically a Nigeria duty-station job; verify the named duty station and contractual level.",
+    "Only a WHO recruitment-system confirmation demonstrates that a job application was submitted; reading WHO's careers overview does not."
+  ],
+  "seplat-energy-careers": [
+    "For a Seplat field role, confirm the named facility and required safety credentials rather than inferring these from Seplat's oil and gas profile.",
+    "If Seplat's employer page does not contain an active vacancy form, do not invent an application address or reuse an expired graduate-cohort link."
+  ]
+};
+
 export const verifiedPortalSlugs20261016 = Object.keys(issuerPortalEvidence20261016);
 
 export function applyIssuerPortalResearch20261016(item: CareerOpportunity): CareerOpportunity {
@@ -230,7 +333,7 @@ export function applyIssuerPortalResearch20261016(item: CareerOpportunity): Care
     // Three distinct employer-researched decisions replace the repetitive
     // fallback application script. The article's official URL is already
     // presented as its primary action, so do not repeat it as filler.
-    applicationSteps: [...checked.actions],
+    applicationSteps: [...checked.actions, ...issuerPortalFollowUp20261016[item.slug]],
     sourceNotes: item.sourceNotes,
     sources: originalSourceFound
       ? item.sources.map(source => source.url === checked.sourceUrl
