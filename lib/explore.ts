@@ -13840,13 +13840,34 @@ export const exploreGuides: ExploreGuide[] = previousPublishedExploreGuides.map(
       sources.push(citation);
     }
   }
+  const archivedAfrigeo = guide.slug === "10th-afrigeo-symposium-abuja-2026";
   return {
     ...guide,
     summary: review.summary,
-    intro: review.intro && !guide.intro.includes(review.intro)
-      ? [...guide.intro, review.intro] : guide.intro,
-    planning: guide.planning.some(item => item.label === review.planning.label)
-      ? guide.planning : [...guide.planning, review.planning],
+    intro: archivedAfrigeo
+      ? [
+          "This 2026 symposium has ended. NASRDA confirmed the 6 October opening at NACCAS in Abuja, and the official programme assigns different venues to the capacity-development and main conference days.",
+          review.intro ?? "",
+        ]
+      : review.intro && !guide.intro.includes(review.intro)
+        ? [...guide.intro, review.intro] : guide.intro,
+    highlights: archivedAfrigeo
+      ? guide.highlights.map(item => ({
+          ...item,
+          detail: item.name === "NASRDA Obasanjo Space Centre"
+            ? "The official programme used multiple venues, including DSA/NASRDA facilities and NACCAS; review the date-specific organiser timetable."
+            : item.detail,
+        }))
+      : guide.highlights,
+    planning: archivedAfrigeo
+      ? [
+          { label: "Registration is closed", detail: "The symposium ended on 8 October 2026. The old professional-registration link is archival, not a current ticket or conference admission." },
+          { label: "Distinguish venues by day", detail: "The 5 October capacity-development programme and 6–8 October NACCAS conference sessions were not all held at one venue; check the official day-by-day timetable before citing an address." },
+          { label: "Research the technical sessions", detail: "Review the original programme for Earth-observation, climate adaptation, disaster risk, and data infrastructure topics. Published speakers and agendas do not prove every proposed presentation took place without post-event reports." },
+          review.planning,
+        ]
+      : guide.planning.some(item => item.label === review.planning.label)
+        ? guide.planning : [...guide.planning, review.planning],
     sources,
     lastReviewed: "2026-10-17",
   };
