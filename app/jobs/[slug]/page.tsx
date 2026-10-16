@@ -10,7 +10,7 @@ import { getJobOpportunity, isIndexableJobOpportunity, jobOpportunities } from "
 import { retiredJobRedirects } from "@/lib/job-scale-wave";
 import { getJobTopicsForOpportunity } from "@/lib/job-topics";
 import { getEmployerOpportunities, getJobEmployer } from "@/lib/job-employers";
-import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel } from "@/lib/job-runtime";
+import { buildJobPostingJsonLd, getEffectiveJobStatus, getEffectiveStatusLabel, getJobFreshnessLabel, getJobAvailabilityNotice } from "@/lib/job-runtime";
 import { getSiteUrl } from "@/lib/site";
 import { getSimilarOpenJobs } from "@/lib/job-discovery";
 import { SavePageButton } from "@/components/personal-library";
@@ -57,15 +57,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!item) return {};
   const seoOverride = jobSeoOverrides[item.slug];
   const isCareerPortal = item.status === "career-page" || item.kind === "career-page";
+  const availabilityNotice = isCareerPortal ? null : getJobAvailabilityNotice(item);
   const label = isCareerPortal
     ? item.title + ": Official Careers"
-    : item.title + ": Status & How to Apply";
+    : availabilityNotice ? item.title + ": Application Status" : item.title + ": Status & How to Apply";
   const summary = item.summary.replace(/\s+/g, " ").trim();
   const sourceContext = isCareerPortal
     ? "Check the employer's official careers portal for current roles and requirements."
     : "Check application status, eligibility and the verified official application source.";
-  const description = summary.length >= 90
-    ? summary
+  const description = availabilityNotice ? item.organization + ": " + availabilityNotice
+    : summary.length >= 90 ? summary
     : summary.replace(/[.!?]$/, "") + (summary ? ". " : "") + sourceContext;
 
   return {
@@ -92,6 +93,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
   const employerHubHref = employer && employer.opportunitySlugs.length >= 2 ? "/jobs/employers/" + employer.slug : null;
   const effectiveStatus = getEffectiveJobStatus(item);
   const effectiveStatusLabel = getEffectiveStatusLabel(item);
+  const availabilityNotice = isCareerPortal ? null : getJobAvailabilityNotice(item);
   const similarOpenJobs = getSimilarOpenJobs(item);
   const sectorBrowse =
     item.sector === "Government"
@@ -130,7 +132,8 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
             </div>
             <p className="job-organisation">{item.organization}</p>
             <h1>{item.title}</h1>
-            <p className="page-intro">{item.summary}</p>
+            <p className="page-intro">{availabilityNotice ?? item.summary}</p>
+            {availabilityNotice ? <p className="job-muted"><strong>Original listing (historical context):</strong> {item.summary}</p> : null}
             <div className="guide-save-action"><SavePageButton href={"/jobs/" + item.slug} title={item.title} kind="job" /></div>
             {!isIndexableJobOpportunity(item) ? (
               <p className="job-muted">
@@ -144,7 +147,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               </p>
             ) : null}
             <p className="job-muted">Applies to {item.location} · Employer: {item.organization} · Verified {item.verifiedAt}</p>
-            {item.nextMilestone ? <div className="job-milestone"><strong>Current next step</strong><p>{item.nextMilestone}</p></div> : null}
+            {item.nextMilestone ? <div className="job-milestone"><strong>{effectiveStatus === "closed" ? "Previous application milestone" : effectiveStatus === "unverified" ? "Published milestone — availability unverified" : "Current next step"}</strong><p>{item.nextMilestone}</p></div> : null}
           </div>
 
           <aside className="job-apply-card" id="official-application">
