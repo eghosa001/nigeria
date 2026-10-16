@@ -279,7 +279,12 @@ for (const [slug, director, source] of [
 const oilAndWater = entertainmentTitles.find(movie => movie.slug === "oil-and-water-2025");
 const oilAndWaterProfile = getMovieEditorialProfile("oil-and-water-2025");
 assert(oilAndWater && oilAndWaterProfile, "Oil and Water needs its original film and reader-facing dossier.");
-assert(!oilAndWater.directors?.length, "Oil and Water's conflicting director claims must not be silently resolved.");
+assert(oilAndWater.directors?.includes("Olubunmi Akingbola"),
+  "Oil and Water must attribute the credit named in the producer's formal brochure.");
+assert(oilAndWater.references?.some(ref => ref.href.includes("ssp-brochure-2025.pdf")),
+  "Oil and Water's director needs the directly attributable original producer brochure.");
+assert(oilAndWaterProfile.sections.flatMap(section => section.paragraphs).join(" ").includes("original publisher video description"),
+  "The published film guide must disclose the conflicting director phrase on the video.");
 assert(oilAndWater.synopsis.includes("mother-daughter"),
   "Oil and Water should follow the original full-length publisher synopsis.");
 assert(oilAndWater.references?.some(ref => ref.href.includes("shutterspeedprojects.com/our-portfolio")),

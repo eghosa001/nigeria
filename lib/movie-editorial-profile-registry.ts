@@ -1,4 +1,5 @@
 import { distinctLongEnoughEditorialProfiles } from "@/lib/movie-editorial-profiles-long-enough-2026-10-15";
+import { reviewedMovieDossiers20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { filmSpecificEditorial20261016 } from "@/lib/movie-editorial-profiles-reviewed-2026-10-16";
 import { reviewedFilmDossiers20261015 } from "@/lib/movie-editorial-profiles-reviewed-2026-10-15";
 import { individuallyResearchedFilmDossiers20261015B } from "@/lib/movie-editorial-profiles-reviewed-2026-10-15-b";
@@ -41,8 +42,12 @@ export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] 
   movieEditorialProfilesRemainingB,
 ];
 
-export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> =
-  Object.assign({}, ...movieEditorialCollections);
+// A researched amendment replaces earlier copy for the same canonical film, without
+// introducing a duplicate editorial collection ID into the strict uniqueness gate.
+export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> = {
+  ...Object.assign({}, ...movieEditorialCollections),
+  ...reviewedMovieDossiers20261016,
+};
 
 export function getMovieEditorialProfile(slug: string): MovieEditorialProfile | undefined {
   return allMovieEditorialProfiles[slug];
