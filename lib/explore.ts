@@ -13773,6 +13773,7 @@ export const exploreGuides: ExploreGuide[] = secondPassExploreGuides.map((guide)
   }
   return {
     ...guide,
+    summary: update.summary ?? guide.summary,
     intro: update.intro && !guide.intro.includes(update.intro) ? [...guide.intro, update.intro] : guide.intro,
     planning: guide.planning.some(item => item.label === update.planning.label)
       ? guide.planning : [...guide.planning, update.planning],
