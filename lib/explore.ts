@@ -13698,6 +13698,14 @@ export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide
   const sources = [...(guide.sources ?? [])];
   const known = new Set([guide.source?.href, ...sources.map((source) => source.href)]);
   if (!known.has(update.source.href)) sources.push(update.source);
+  // Material security caveats must have a directly clickable official source,
+  // not a prose-only attribution. Apply this to individually reviewed guides
+  // whose new note actually references current FCDO regional advice.
+  const checkedTour = highPriorityTourEvidence20261016[guide.slug];
+  const travelWarningUrl = "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks";
+  if (checkedTour?.planning.detail.includes("FCDO") && !known.has(travelWarningUrl)) {
+    sources.push({ label: "UK FCDO — Nigeria regional risks and state-specific warnings", href: travelWarningUrl });
+  }
   return {
     ...guide,
     intro: update.intro && !guide.intro.includes(update.intro) ? [...guide.intro, update.intro] : guide.intro,
