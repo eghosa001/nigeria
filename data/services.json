@@ -9853,7 +9853,7 @@
       "Check the imported product's HS code, SONCAP coverage and any exemption/import-permit route before the goods ship; do not assume all goods need identical certificates.",
       "Use a SON-recognised Independent Accredited Firm in the exporting country to arrange the required inspection, testing and conformity assessment.",
       "Obtain the applicable Route A PC1, Route B PC2 or Route C PC3 Product Certificate before Form M processing, and match its importer TIN, product and manufacturer details.",
-      "Where required, use the firm's Certificate of Conformity for issuance of the shipment-level SONCAP Certificate (SC); the Product Certificate alone is not the final cargo-clearance certificate.",
+      "Send the approved Independent Accredited Firm's Certificate of Conformity (CoC) to the SONCAP issuance workflow to obtain the shipment-level SONCAP Certificate (SC). A Product Certificate alone does not complete cargo-clearance certification.",
       "Open https://nsw.gov.ng and update the importer profile; activate the accredited firm's Product and Shipment Certificates on NSW for Form M, PAAR and cargo clearance.",
       "For SONCAP default cases and the categories of import permits named in SON's March 2026 notice, initiate/process applications on NSW rather than the old independent portal.",
       "Compare the final NSW activation status and shipment identifiers with trade documents before presenting them to Customs; a document generated but not activated is not the completed NSW clearance step."
@@ -11263,7 +11263,7 @@
       "Evidence that outstanding pension contributions and late-remittance penalties identified by PenCom have been settled, where applicable",
       "Current group life insurance evidence for employees and legacy pension-asset transfer evidence where those requirements apply",
       "Employer's e-Hub credentials and real pension remittance records, rather than an old PCC portal login as a new application.",
-      "Current Group Life policy and premium payment evidence, where required by PenCom's PCC checklist."
+      "The current employer Group Life Insurance Policy certificate, insurer policy document and premium payment receipt covering employees, as specified in PenCom's PCC checklist."
     ],
     "steps": [
       "Open https://pcc.pencom.gov.ng/ and read its 1 July 2026 transition notice, then follow the Employer Hub at https://ehub.pencom.gov.ng for any NEW PCC application.",
