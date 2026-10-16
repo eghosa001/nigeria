@@ -116,7 +116,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
       <div className="container page-outline-wrap">
         <PageOutline label="Series guide sections" items={[
           { href: "#series-overview", label: "Series facts" },
-          ...(editorial ? [{ href: "#series-editorial", label: "Verified story and viewing guidance" }] : []),
+          ...(editorial ? [{ href: "#series-editorial" as const, label: "Verified story and viewing guidance" }] : []),
           ...(item.cast.length ? [{ href: "#cast" as const, label: "Cast" }] : []),
           { href: "#watch", label: "Where to watch" },
           { href: "#series-sources", label: "Verified sources" },
