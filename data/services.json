@@ -537,40 +537,48 @@
     "slug": "upgrade-drivers-licence-class",
     "title": "How to add or remove classes on a Nigerian driver's licence",
     "shortTitle": "Upgrade driver's licence class",
-    "summary": "How FRSC says to change licence classes using renewal or reissue.",
+    "summary": "To add or remove a class on an existing Nigerian driver's licence, FRSC says to use Re-Issue if the licence is still valid or Renewal if expired, then enter the current licence number and select the permitted classes. Its FAQ says multi-class licences can carry up to three classes, while each class may be charged separately. Commercial-licence applications require a capture-centre initiation with medical and driving-school evidence.",
     "category": "Driving",
     "agencySlug": "frsc",
-    "feeLabel": "Depends on licence class",
+    "feeLabel": "Separate licence-class and validity charges; check live FRSC checkout",
     "status": "verified",
-    "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng",
+    "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng/",
     "requirements": [
-      "Existing driver's licence number",
-      "A licence record eligible for the requested class change under FRSC rules"
+      "The existing driver's licence number and matching date of birth/identity record.",
+      "The licence's current expiry date to choose Re-Issue versus Renewal.",
+      "The category or classes requested, subject to the maximum of three classes on a multiple-class licence.",
+      "For a commercial class, a medical certificate and driving-school certificate, plus attendance at a recognised capture centre."
     ],
     "steps": [
-      "Check whether the current licence is still valid or already expired.",
-      "Use Reissue if it is still valid, or Renewal if it has expired.",
-      "Enter the existing driver's licence number in the official FRSC application.",
-      "Use the application form to add or remove only the classes the system permits, then complete the remaining payment/capture steps."
+      "Check your existing licence validity and identify whether the added class is A/B, a higher class within the same category or a commercial class. FRSC says multi-class licences are limited to three classes.",
+      "Open the official Nigeria Driver's Licence portal and choose DL Application → Re-Issue for a valid licence, or DL Application → Renewal after its expiry.",
+      "Enter your existing driver's licence number in the requested lookup, then check the identity and existing class information before changing any fields.",
+      "Use Processing Centre & Licence Type to select the available classes and 3-year or 5-year validity. The portal applies the allowed class combination rather than permitting every requested class.",
+      "If you need a commercial driver's licence, take the required medical certificate and driving-school certificate to a capture centre; FRSC says a centre operator initiates this category rather than the ordinary public portal homepage.",
+      "Review class-specific charges, the centre and payment amount; FRSC warns that multiple classes can be charged separately and payment channels may add charges.",
+      "Complete the official payment and any biometric/capture or testing appointment on the submitted application. Retain the acknowledgement and use the portal tracking facility."
     ],
     "notes": [
-      "FRSC's FAQ says class upgrades are handled through the reissue or renewal process rather than a separate standalone application."
+      "Do not buy a stand-alone 'upgrade form' from an unofficial agent: FRSC directs existing holders to renewal or reissue.",
+      "FRSC distinguishes a new applicant's maximum initial A/B classes from the maximum of three for a multiple-class licence.",
+      "An edited application can be changed before payment; FRSC says unpaid drafts are purged after three months.",
+      "The live portal determines eligibility, charge and centre requirements; it does not guarantee approval of an incompatible licence category."
     ],
     "sources": [
       {
         "label": "Nigeria Driver's Licence FAQ",
         "agency": "Federal Road Safety Corps",
         "url": "https://nigeriadriverslicence.frsc.gov.ng/faq",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "Nigeria Driver's Licence official portal",
         "agency": "Federal Road Safety Corps",
         "url": "https://www.nigeriadriverslicence.frsc.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Upgrade driver's licence class",
       "How to add or remove classes on a Nigerian driver's licence",
@@ -581,7 +589,7 @@
       "renew-drivers-licence",
       "replace-lost-drivers-licence"
     ],
-    "feeNote": "A class upgrade is handled through the applicable renewal/reissue route, so MyNigeriaGuide does not quote one universal upgrade amount. Confirm the class, validity and amount shown by the official FRSC portal before payment."
+    "feeNote": "FRSC's FAQ publishes reference prices by class and 3-/5-year validity, warns that each class may be billed separately and that channel charges may apply. An upgrade is performed through reissue/renewal, so the final official checkout—not a flat 'upgrade fee'—is authoritative."
   },
   {
     "slug": "cac-business-name-registration",
@@ -730,44 +738,49 @@
     "slug": "cac-incorporated-trustee-registration",
     "title": "How to register an incorporated trustee with CAC",
     "shortTitle": "Incorporated trustee registration",
-    "summary": "Official CAC steps and core supporting documents for incorporated trustees.",
+    "summary": "CAC publishes a fully online Company Registration Portal route for an Incorporated Trustee: reserve a name, complete CAC-IT01, provide the constitution and trustee appointment evidence, pay official fees, resolve queries and download an electronic certificate and certified extract on approval. CAC requires at least two qualified trustees and says newspaper publication may also be required. Its 24-working-hour target applies after complete documents or resolution of raised queries.",
     "category": "Business",
     "agencySlug": "cac",
-    "feeLabel": "See current CAC fee schedule",
+    "feeLabel": "CAC official iCRP fee, based on the Incorporated Trustee filing",
     "status": "verified",
     "officialPortal": "https://icrp.cac.gov.ng/",
     "requirements": [
-      "Reserved proposed name",
-      "Organisation constitution",
-      "Trustee names, addresses and IDs",
-      "Minutes appointing trustees",
-      "Trustee declaration forms"
+      "A reserved Incorporated Trustee name and organisation constitution consistent with CAC filing rules.",
+      "At least two qualified trustees, with names, addresses, IDs and eligibility details.",
+      "Minutes documenting the valid appointment of trustees and the relevant signed declarations.",
+      "Any required newspaper notice and other supporting document requested under CAC's Incorporated Trustee rules.",
+      "Access to the official iCRP application, transaction records and payment method."
     ],
     "steps": [
-      "Open CAC's Company Registration Portal, check the proposed incorporated-trustee name and reserve it before preparing the full filing.",
-      "Complete the CAC-IT01 pre-registration form with the organisation and trustee details, ensuring the filing reflects the constitution and appointed trustees.",
-      "Upload the organisation constitution, trustee names, addresses and IDs, minutes appointing the trustees, trustee declarations and any additional document CAC requests.",
-      "Review the submission, complete the applicable CAC payment through the official portal and keep the application and payment reference while the filing is reviewed.",
-      "Monitor the CRP for approval or a query; resolve any query in the same application, then download the electronic Certificate of Incorporation and Certified Extract after approval."
+      "Check the proposed Incorporated Trustee name on CAC's official portal and secure name reservation before filing.",
+      "Confirm the constitution, purpose and minimum two eligible trustees, checking names and IDs before filling CAC-IT01.",
+      "Open the Incorporated Trustee pre-registration application and complete CAC-IT01 using the organisation's accurate constitution and appointment details.",
+      "Upload the constitution, trustee details, appointment minutes and declarations. Provide any CAC-required newspaper notice or extra compliance document for the specific organisation.",
+      "Review each uploaded item and pay the fee generated by the official CRP; do not assume the 24-working-hour target starts before a complete filing.",
+      "Monitor the CRP for an official query, correct missing materials in the same application and preserve the transaction reference.",
+      "After approval, download CAC's electronic Certificate of Incorporation and Certified Extract and compare them with the approved organisation information."
     ],
     "notes": [
-      "CAC lists 24 working hours as its current new-registration timeline for Incorporated Trustees once documents are complete."
+      "The 24-working-hour CAC service standard is measured after all relevant documents are received or queries are satisfied, not from the first name search.",
+      "CAC states that at least two trustees are required and that legal disqualifications can apply.",
+      "An incorporated trustee is not a standard limited company or ordinary business name: the documents and legal route differ.",
+      "The CRP's electronic approval products do not mean a paper certificate can be purchased faster from an intermediary."
     ],
     "sources": [
       {
         "label": "CAC Incorporated Trustees",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/incorporated-trustees",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "CAC Revised Service Timelines",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/service-timelines",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Incorporated trustee registration",
       "How to register an incorporated trustee with CAC",
@@ -777,7 +790,9 @@
       "cac-company-registration",
       "cac-business-name-registration",
       "cac-name-reservation"
-    ]
+    ],
+    "feeNote": "CAC directs applicants to its current fee schedule and the official iCRP checkout for the actual Incorporated Trustee charge. Name reservation, filing and any requested certified document may be separate; avoid an invented single total.",
+    "timeline": "CAC publishes a target of 24 working hours upon receipt of complete documents or satisfaction of raised queries. Name consent/reservation and applicant preparation are separate and may take additional time."
   },
   {
     "slug": "cac-name-reservation",
@@ -1006,43 +1021,48 @@
     "slug": "jamb-retrieve-profile-code",
     "title": "How to retrieve a lost JAMB profile code",
     "shortTitle": "Retrieve JAMB profile code",
-    "summary": "The official JAMB RESEND method for retrieving a lost profile code.",
+    "summary": "Lost your JAMB profile code? JAMB's official FAQ says to text RESEND from the same unique SIM originally registered with JAMB to 55019 or 66019. This is distinct from generating a first profile code with 'NIN [11-digit NIN]' or retrieving a lost UTME e-PIN with UTMEPIN. Never give a third-party agent access to the SIM or one-time reply.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
     "status": "verified",
-    "officialPortal": "https://www.jamb.gov.ng",
+    "officialPortal": "https://www.jamb.gov.ng/FAQ",
     "requirements": [
-      "The same unique mobile number originally used for the JAMB profile",
-      "Access to that SIM so the SMS can be sent and the returned code received"
+      "The same mobile SIM and number JAMB previously linked to the candidate; a different SIM will not be a matching profile identifier.",
+      "Sufficient SMS airtime and mobile-network service; data balance is not a substitute for SMS airtime.",
+      "Access to the original JAMB profile details to check that the returned code belongs to the correct candidate."
     ],
     "steps": [
-      "Open a new SMS from the same unique mobile number originally linked to the candidate's JAMB profile; do not attempt retrieval from a different phone number.",
-      "Create a new SMS containing only the word RESEND and send it from that linked number to 55019 or 66019.",
-      "Wait for JAMB to return the profile code to the same SIM, then keep the recovered code securely for registration or another official JAMB service.",
-      "If the SMS route repeatedly fails, use JAMB's official support channel rather than paying an unofficial agent to recover the candidate profile."
+      "Confirm that a JAMB profile code already existed. If one has never been created, JAMB instead publishes the first-time message 'NIN' followed by a space and the 11-digit NIN.",
+      "Insert or activate the exact phone line used for the original profile code, not another relative's phone.",
+      "Open the phone's SMS app, type only RESEND and send it to 55019 or 66019.",
+      "Check the same line's incoming SMS messages for the 10-character profile code, then compare it with the name on the original candidate profile.",
+      "If a prior-year code is needed for a new registration cycle, JAMB also allows RESEND to refresh that code rather than creating a second profile on a different number.",
+      "If messages fail, check SMS service and airtime, then open official JAMB ticket support rather than buying an unofficial 'code recovery' service."
     ],
     "notes": [
-      "JAMB says the same unique mobile number remains the candidate's identifier for present and future Board transactions.",
-      "RESEND can also refresh a prior-year profile code for a new registration cycle."
+      "JAMB's published first-time and recovery SMS keywords are different: NIN for new code, RESEND for an existing code, UTMEPIN for a lost UTME e-PIN.",
+      "The registered number is a unique candidate identifier for future transactions; avoid swapping to another person's number.",
+      "The JAMB support knowledge base gives ₦50 airtime as a practical SMS balance check; network charges are separate from a candidate's data bundle."
     ],
     "sources": [
       {
         "label": "JAMB FAQ",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/FAQ",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "jamb-profile-code"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Retrieve JAMB profile code",
       "How to retrieve a lost JAMB profile code",
       "Education"
-    ]
+    ],
+    "feeNote": "JAMB's official support FAQ recommends at least ₦50 airtime for its SMS registration/retrieval channel. This is an airtime safeguard, not a claim that every RESEND text costs exactly ₦50."
   },
   {
     "slug": "jamb-retrieve-lost-epin",
@@ -1099,55 +1119,58 @@
     "slug": "jamb-caps",
     "title": "JAMB CAPS: how to check admission status and use CAPS",
     "shortTitle": "JAMB CAPS",
-    "summary": "JAMB CAPS for the 2026/2027 admission cycle: check admission status, institution/course details and any accept/reject action shown in the candidate's official e-Facility account.",
+    "summary": "JAMB CAPS records institution admission recommendations and the candidate's authorised acceptance or rejection of an actual offer. Candidates should open their own JAMB e-Facility account to access the admission/CAPS function. The separate caps.jamb.gov.ng/login/ screen is for institutional users and asks institutions to reset their staff account passwords; candidates should not try to sign in there with personal e-Facility credentials.",
     "category": "Education",
     "agencySlug": "jamb",
-    "feeLabel": "No separate fee stated on CAPS overview",
+    "feeLabel": "Checking CAPS admission status is free; printing an admission letter is separate",
     "status": "verified",
-    "officialPortal": "https://jamb.gov.ng/caps",
+    "officialPortal": "https://efacility.jamb.gov.ng/account/",
     "requirements": [
-      "Access to the candidate's JAMB e-Facility account",
-      "A JAMB candidate or admission record for the relevant admission cycle"
+      "The candidate's own JAMB e-Facility login and the relevant examination year/registration record.",
+      "A CAPS-supported admission record; the availability of Accept/Reject controls depends on the applicant's admission stage.",
+      "Any uploaded O'level result required for the institution's CAPS admission consideration."
     ],
     "steps": [
-      "Open JAMB e-Facility and sign in with the registered candidate account.",
-      "Choose the admission or CAPS service available on the dashboard.",
-      "Review the admission status and institution/programme information shown for the candidate.",
-      "Use only the acceptance, rejection or other admission action actually presented by JAMB for that profile."
+      "Open the official JAMB e-Facility candidate login at https://efacility.jamb.gov.ng/account/ and sign in using the candidate's registered profile.",
+      "Select Check Admission Status or the CAPS service from the e-Facility candidate dashboard and choose the relevant examination/admission year if prompted.",
+      "Review the candidate's institution, proposed course, admission status and any available action rather than relying solely on a school admission letter.",
+      "If CAPS displays an actionable provisional offer, carefully compare its details and choose Accept or Reject only when certain of the decision.",
+      "If the account says Not Admitted or no offer is available, check again after the institution's admission processing updates; no offer can be manufactured by paying an agent.",
+      "After acceptance, use JAMB's distinct paid Admission Letter service for a printable letter if your institution needs it; viewing CAPS does not require a separate printing fee."
     ],
     "notes": [
-      "JAMB's official CAPS dashboard is currently operating for the 2026/2027 admission year.",
-      "The 2026 Policy Meeting set the minimum tolerable admission scores at 150 for universities and colleges of nursing, and 100 for polytechnics, monotechnics, colleges of agriculture, colleges of education and IEIs.",
-      "The general minimum age for admission remains 16 years.",
-      "Available CAPS actions differ by candidate profile and admission stage; act only on what JAMB displays for the candidate."
+      "The institutional CAPS login at caps.jamb.gov.ng/login/ is for institution personnel, not the candidate's ordinary account.",
+      "JAMB's candidate admission status check is free; a printable admission letter is a distinct charged service.",
+      "An institution's provisional admission outside CAPS does not by itself replace JAMB's recognised admission record.",
+      "Do not claim a candidate has been admitted based on a third-party screenshot or an unverified school list."
     ],
     "sources": [
       {
         "label": "JAMB CAPS",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://jamb.gov.ng/caps",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "JAMB CAPS login",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://caps.jamb.gov.ng/login/",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "JAMB 2026 admission policy",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://jamb.gov.ng/",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "JAMB e-Facility",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://efacility.jamb.gov.ng/account/",
-        "lastChecked": "2026-10-04"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "JAMB CAPS",
       "How JAMB CAPS works for admission",
@@ -1875,42 +1898,46 @@
     "slug": "nysc-revalidation",
     "title": "When and how to use NYSC revalidation",
     "shortTitle": "NYSC revalidation",
-    "summary": "Revalidation is for people previously deployed in a batch who did not report to orientation camp.",
+    "summary": "NYSC revalidation is for a prospective corps member already deployed in an earlier batch who never reported to the orientation camp. It is different from remobilisation for someone who had begun service and later absconded. The institution may need to include the graduate in a revalidation list for the relevant mobilisation timetable; a former call-up letter alone is not proof the new deployment is complete.",
     "category": "Youth service",
     "agencySlug": "nysc",
-    "feeLabel": "Use the active NYSC portal process",
+    "feeLabel": "Check the active NYSC portal; no fixed revalidation fee established",
     "status": "verified",
     "officialPortal": "https://portal.nysc.org.ng/nysc/",
     "requirements": [
-      "A previous NYSC deployment or call-up in which the prospective corps member did not report to orientation camp",
-      "The previous NYSC registration/call-up details and access to the same NYSC profile used for the earlier deployment",
-      "Where applicable, the candidate's institution must include the person in the revalidation list submitted for mobilisation"
+      "Proof of a previous NYSC registration and deployment/call-up without orientation-camp reporting.",
+      "Access to the original NYSC account and the prior call-up/registration details.",
+      "The relevant institution's Student Affairs/Mobilisation Officer contact where the graduate's revalidation list needs confirmation.",
+      "An active NYSC mobilisation/revalidation window for the targeted batch."
     ],
     "steps": [
-      "Confirm that the situation is revalidation: you were previously deployed but did not report to camp.",
-      "Check the current NYSC mobilisation timetable and portal window, then sign in to the official portal.",
-      "Use the Revalidation option and complete the online process shown for the existing profile.",
-      "Follow the new deployment or call-up instructions NYSC issues when processing is completed."
+      "Confirm you were previously deployed but did not report to camp. If service already began and was interrupted, ask NYSC about remobilisation instead.",
+      "Check the current NYSC mobilisation timetable and relevant institution's notice for an open revalidation window; do not rely on an older batch's deadline.",
+      "Contact the institution's Student Affairs/Mobilisation Officer to verify the graduate appears in the revalidation list NYSC expects from Corps Producing Institutions.",
+      "Log in to the original NYSC portal account and use the Revalidation option when active, reusing the existing registration rather than creating a second identity.",
+      "Complete the available revalidation information and retain the application acknowledgement or updated status.",
+      "Recheck the call-up letter/deployment details on the official portal and report to camp only under a valid new deployment instruction."
     ],
     "notes": [
-      "NYSC distinguishes revalidation from remobilization, which is for a corps member who had started service and later absconded.",
-      "Institutions participate in submitting revalidation lists as part of mobilisation."
+      "NYSC's Mobilisation Division handles deployment revalidations; institutions submit approved revalidation lists alongside other mobilisation records.",
+      "A new call-up is subject to NYSC approval, correct school records and the current batch's timetable.",
+      "Do not confuse revalidation with relocation after deployment or remobilisation after starting service."
     ],
     "sources": [
       {
         "label": "Official NYSC Portal",
         "agency": "National Youth Service Corps",
         "url": "https://portal.nysc.org.ng/nysc/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NYSC Corps Mobilization",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/corpmob.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NYSC revalidation",
       "When and how to use NYSC revalidation",
@@ -1920,7 +1947,8 @@
       "nysc-remobilization",
       "nysc-registration-local",
       "nysc-call-up-letter"
-    ]
+    ],
+    "feeNote": "The NYSC references confirm the revalidation and institution-list routes but do not establish a universal separate revalidation fee. Pay only a charge explicitly generated by the genuine NYSC portal."
   },
   {
     "slug": "nysc-remobilization",
@@ -2265,48 +2293,55 @@
     "slug": "npc-digital-birth-certificate-reissuance",
     "title": "How to get a digital version of an old NPC birth certificate",
     "shortTitle": "Digital birth certificate reissuance",
-    "summary": "NPC directs holders of old birth certificates to its Certificate Reissuance service.",
+    "summary": "NPC's Certificate Reissuance is specifically for a qualifying old non-digital certificate issued before the VitalReg launch of 8 November 2023. The official application page publishes a US$30 self-service convenience fee, requires an upload of the old certificate, provides Start Application/Check Status/Update Application routes, and warns that payments are non-refundable and an approved certificate may be downloaded only once.",
     "category": "Civil records",
     "agencySlug": "npc",
-    "feeLabel": "Check current NPC self-service portal",
+    "feeLabel": "US$30 NPC digital reissuance convenience fee",
     "status": "verified",
     "officialPortal": "https://www.reissuance.nationalpopulation.gov.ng/",
     "requirements": [
-      "NPC self-service account",
-      "NIN-linked account setup as required by NPC",
-      "Existing NPC birth-record/certificate reference plus the name, date of birth and other record details needed to match the old record"
+      "An existing old non-digital NPC certificate dated before 8 November 2023, when VitalReg launched.",
+      "An image/scan of the actual old certificate for upload in the reissuance application.",
+      "The certificate holder's NIN when available; NPC says applicants without NIN receive a temporary certificate number.",
+      "A functional email address for the payment reference, updates and application status.",
+      "For attestation reissuance, a court affidavit as specifically required on NPC's portal."
     ],
     "steps": [
-      "Create an account on, or sign in to, the NPC self-service platform using the identity details required by the Commission for the certificate holder.",
-      "Open the Certificate Reissuance service for an existing birth record; do not use this route if the person has never had a birth record registered.",
-      "Enter the existing birth-record details and complete the NIN linking or identity-verification step shown by NPC so the platform can match the request to the correct record.",
-      "Review the record and request details, complete any official charge shown by the NPC platform and submit the digital reissuance request.",
-      "Return to the self-service dashboard to follow the request and, once the certificate is available, download it and verify the personal and birth details."
+      "Inspect the existing certificate and confirm it was issued before the 8 November 2023 VitalReg launch; a non-digital certificate issued later does not qualify for this reissuance route.",
+      "Go to reissuance.nationalpopulation.gov.ng, read its published US$30, document and single-download conditions, and choose Start Application.",
+      "Enter the holder's correct identity and certificate data and supply the NIN when available. The portal describes a temporary certificate number for applicants without NIN.",
+      "Upload the non-digital certificate image and, if applying for attestation reissuance, add the court affidavit NPC specifies.",
+      "Review the application and non-refundable payment before completing the official checkout; keep the emailed payment reference.",
+      "Use Check Status or Update Application to monitor a pending request instead of paying and starting a duplicate submission.",
+      "After approval, plan a secure download/print immediately because NPC warns that the new certificate can only be downloaded once."
     ],
     "notes": [
-      "This route is for reissuing an existing record, not creating a new birth record."
+      "An old non-digital certificate issued on or after 8 November 2023 is not eligible for this specific reissuance process; NPC points such applicants toward a new digital certificate route.",
+      "Do not promise repeat certificate downloads; the reissuance portal says only one download is available after successful approval.",
+      "NPC says payment is non-refundable. Check documents and eligibility before spending the US$30.",
+      "This service does not create a previously unregistered birth record; it converts or reissues an existing qualifying record."
     ],
     "sources": [
       {
         "label": "NPC Certificate Reissuance",
         "agency": "National Population Commission",
         "url": "https://www.reissuance.nationalpopulation.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NPC Self-Service FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/FAQs",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NPC Vital Registration FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/faq-vitalreg",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Digital birth certificate reissuance",
       "How to get a digital version of an old NPC birth certificate",
@@ -2317,52 +2352,60 @@
       "npc-birth-certificate-reprint",
       "npc-modify-birth-record"
     ],
-    "feeNote": "No single current reissuance amount is quoted here unless it is shown by the verified NPC route. Confirm the amount displayed in the official NPC reissuance process before payment."
+    "feeNote": "NPC's official Certificate Reissuance page lists US$30 as a self-service convenience fee and warns that payments are non-refundable. Confirm currency conversion and the final checkout total on the official portal before payment. The reissue service is not a general replacement for any post-8 November 2023 certificate."
   },
   {
     "slug": "npc-birth-certificate-reprint",
     "title": "How to reprint an NPC birth certificate",
     "shortTitle": "NPC certificate reprint",
-    "summary": "NPC's self-service FAQ points existing record holders to the Certificate Reprint module.",
+    "summary": "NPC's Certificate Reprint module is for obtaining a copy of an existing registered birth certificate, not issuing a new certificate or converting a pre-VitalReg paper certificate. Its official reprint page currently displays a US$30 charge. Choose the correct certificate type and match the original birth record before making the portal payment.",
     "category": "Civil records",
     "agencySlug": "npc",
-    "feeLabel": "Reprint payment required",
+    "feeLabel": "NPC reprint portal lists US$30",
     "status": "verified",
     "officialPortal": "https://www.certificatereprint.nationalpopulation.gov.ng/",
     "requirements": [
-      "NPC self-service account",
-      "Existing NPC certificate/record reference plus the holder's identifying details needed to locate the exact birth record for reprint"
+      "An existing NPC birth registration/certificate already issued to the person; first-time birth registration is not a reprint.",
+      "The certificate type and identifying data that match the original birth record.",
+      "Access to the NPC Certificate Reprint service and the contact/payment method accepted on the live portal.",
+      "A means to verify spelling, birth date and certificate details against the original registration."
     ],
     "steps": [
-      "Sign in to the official NPC self-service dashboard using the account connected to the existing birth record you want to reprint.",
-      "Open the Certificate Reprint module and enter or select the existing birth-record reference shown in the account so the reprint is tied to the correct registered record.",
-      "Check that the displayed record belongs to the correct person, then complete the official reprint payment or confirmation step shown by the platform.",
-      "After the transaction is accepted, use the dashboard's reprint or download action to obtain the certificate and verify the details before relying on the copy."
+      "Confirm that a certificate was previously issued for this person. If the record is old non-digital and you need a newly digitalised version, check NPC's separate Reissuance eligibility first.",
+      "Open the official NPC Certificate Reprint page at certificatereprint.nationalpopulation.gov.ng.",
+      "Read the displayed US$30 reprint charge before choosing the correct certificate type from the portal selector.",
+      "Enter the existing registered person and certificate record details in the fields shown by NPC, checking spelling and birth date carefully.",
+      "Review any matched record before making the official reprint payment; do not register a fresh birth merely to replace an old certificate.",
+      "Use the payment confirmation/return link or account status to obtain the reprint when the portal marks it ready, then inspect the downloaded record.",
+      "If the certificate type or old record cannot be found, use the NPC support/FAQ routes to determine whether reissuance or birth-record correction is necessary."
     ],
     "notes": [
-      "NPC's FAQ distinguishes reprint from certificate reissuance."
+      "Reprint, reissuance, attestation and first-time birth registration are separate NPC workflows.",
+      "The US$30 is explicitly shown on the reprint homepage; do not substitute a generic 'fees vary' label for that published amount.",
+      "A portal submission does not establish that the person qualifies for a fresh digital record, nor does it promise instant approval.",
+      "Do not share a scanned certificate with an unofficial agent offering a shortcut."
     ],
     "sources": [
       {
         "label": "NPC Certificate Reprint",
         "agency": "National Population Commission",
         "url": "https://www.certificatereprint.nationalpopulation.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NPC Self-Service FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/FAQs",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NPC Vital Registration FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/faq-vitalreg",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NPC certificate reprint",
       "How to reprint an NPC birth certificate",
@@ -2372,7 +2415,8 @@
       "npc-digital-birth-certificate-reissuance",
       "npc-birth-attestation",
       "npc-check-attestation-status"
-    ]
+    ],
+    "feeNote": "The official NPC Certificate Reprint landing page visibly states '30 USD' for a certificate reprint. This is the portal's advertised charge, not a claim about local bank conversion, taxes, convenience charges or approval. Check the payment breakdown in the genuine NPC system before proceeding."
   },
   {
     "slug": "nrs-individual-tax-registration",
@@ -2683,35 +2727,39 @@
     "slug": "jamb-reset-profile-password",
     "title": "How to reset a JAMB profile password",
     "shortTitle": "Reset JAMB password",
-    "summary": "JAMB publishes an SMS method for resetting a lost or forgotten profile password.",
+    "summary": "JAMB provides an SMS password recovery method for candidates who still control their registered mobile number. Send PASSWORD, one space and the email address on the JAMB profile to 55019 or 66019 from that same SIM; do not confuse it with RESEND for profile code retrieval. Sign in only through JAMB's official e-Facility after receiving its reply.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
     "status": "verified",
-    "officialPortal": "https://www.jamb.gov.ng",
+    "officialPortal": "https://efacility.jamb.gov.ng/account/",
     "requirements": [
-      "The same mobile number tied to the JAMB profile",
-      "The email address on the profile"
+      "Control of the candidate's JAMB-registered mobile SIM.",
+      "Exact email address originally associated with the JAMB e-Facility profile.",
+      "SMS airtime and access to the genuine official portal at efacility.jamb.gov.ng."
     ],
     "steps": [
-      "Use the same mobile number already tied to the candidate's JAMB profile and confirm the email address registered on that profile.",
-      "Create a new SMS in the format PASSWORD followed by one space and the registered email address, checking the spelling before sending it.",
-      "Send the message from the linked candidate number to 55019 or 66019 and wait for JAMB's response on that same SIM.",
-      "Follow the reset credentials or instruction returned by JAMB, then sign in through the official e-Facility and use the password as directed.",
-      "If the SMS reset fails, raise the problem through JAMB's official support channel rather than giving the profile credentials to an unofficial recovery service."
+      "Find the phone number originally attached to the candidate's JAMB profile and confirm the exact registered email address before sending the reset message.",
+      "Open SMS on that same number and type PASSWORD followed by a space and the registered email, for example PASSWORD candidate@example.com.",
+      "Send the SMS to either 55019 or 66019 and read the response delivered to the linked number; allow for SMS service charges.",
+      "Use the reset credential or instruction JAMB returns to sign in at the official e-Facility profile rather than a website sent by a third party.",
+      "If recovery fails, check the registered email and SIM availability, then raise the issue with JAMB's official support ticket system.",
+      "Once account access is restored, check the candidate identity and any pending admissions, e-PIN or payment transactions without sharing the recovered password."
     ],
     "notes": [
-      "The request should come from the phone number linked to the candidate profile."
+      "PASSWORD [registered email] is for profile password recovery; RESEND is for retrieving an existing profile code.",
+      "JAMB does not require an unofficial agent to receive or forward the reset SMS.",
+      "Do not enter credentials into a URL supplied through an unsolicited message."
     ],
     "sources": [
       {
         "label": "JAMB FAQ",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/FAQ",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Reset JAMB password",
       "How to reset a JAMB profile password",
@@ -3021,34 +3069,41 @@
     "slug": "nysc-exemption-certificate",
     "title": "How NYSC exemption certificates are issued and collected",
     "shortTitle": "NYSC exemption certificate",
-    "summary": "NYSC determines exemption classification during registration and publishes collection/correction rules.",
+    "summary": "NYSC issues Certificates of Exemption to graduates classified as exempt at registration. Nigerian-trained eligible graduates collect their certificates from the institution that presented them for mobilisation; foreign-trained eligible graduates collect at NYSC National Directorate Headquarters at the communicated batch time and must attend personally with identification such as an international passport. Exclusion Letters for part-time graduates are a different online-printable document.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "No general certificate fee stated on NYSC guidance",
     "status": "verified",
     "officialPortal": "https://www.nysc.gov.ng/certcollectexp.html",
     "requirements": [
-      "NYSC registration/classification as exempted",
-      "For foreign-trained graduates collecting at NYSC Headquarters: identification such as the international passport; the bearer must be physically present. Home-trained graduates collect through their institution",
-      "For foreign graduates, physical presence at the communicated collection process"
+      "An existing NYSC registration and exemption classification; completing an NYSC registration does not automatically mean every graduate qualifies for exemption.",
+      "For Nigerian-trained graduates, information from the awarding institution about its NYSC certificate collection.",
+      "For foreign-trained graduates, personal attendance at NYSC headquarters at the announced collection time and official identification such as an international passport.",
+      "Any correction documentation NYSC or the graduating institution specifically requests if the certificate contains a mistake."
     ],
     "steps": [
-      "Complete NYSC registration so exemption status can be determined.",
-      "Follow the collection instructions communicated by NYSC for the relevant service batch.",
-      "Present the required identification in person where NYSC requires it."
+      "Check the prospective corps member's NYSC registration result to confirm Exempted rather than Called Up or Excluded.",
+      "If Nigerian-trained, contact the institution's Student Affairs/Mobilisation Office to find out when its NYSC exemption certificates are ready and how to collect yours.",
+      "If foreign-trained, check the NYSC notice/batch instructions for headquarters collection and bring the original recognised identification including passport where applicable.",
+      "Present yourself for collection: NYSC states that the bearer of a foreign-trained Certificate of Exemption must be physically present.",
+      "Inspect the name and classification when the certificate is issued. Nigerian-trained corrections go through the former institution; foreign-trained corrections are addressed to NYSC with the evidence it specifies.",
+      "If the certificate was lost or burnt, use NYSC's separate Letter of Confirmation procedure; NYSC does not reprint such certificates."
     ],
     "notes": [
-      "NYSC says foreign graduates collect exemption certificates at the Directorate Headquarters at the stipulated time and must be physically present."
+      "Part-time Exclusion Letters can be printed online; they are not Certificates of Exemption and do not use the same collection route.",
+      "NYSC headquarters, not the alma mater, handles foreign-trained exemption certificate collection.",
+      "NYSC groups foreign graduate collection under service-year batches, so do not promise immediate pickup after dashboard classification.",
+      "Lost exemption certificates are not reprinted; the appropriate replacement evidence is a Letter of Confirmation."
     ],
     "sources": [
       {
         "label": "NYSC Certificate of Exemption",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/certcollectexp.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NYSC exemption certificate",
       "How NYSC exemption certificates are issued and collected",
@@ -3505,42 +3560,53 @@
     "slug": "fct-verify-tax-clearance",
     "title": "How to verify an FCT tax clearance certificate",
     "shortTitle": "Verify FCT tax clearance",
-    "summary": "FCT-IRS provides an online Tax Clearance Certificate verification service from its official digital services.",
+    "summary": "FCT-IRS lets recipients verify a Tax Clearance Certificate (TCC) electronically using its dedicated fcttaxportal.fctirs.gov.ng/tccver.aspx form or the QR code on the certificate. The form explicitly asks for the TCC reference, taxpayer TIN, verifier's email and organisation/individual name; compare the official response with the actual paper/PDF certificate before accepting it.",
     "category": "State services",
     "agencySlug": "fctirs",
     "feeLabel": "Verification service listed by FCT-IRS",
     "status": "verified",
-    "officialPortal": "https://fctirs.gov.ng/",
+    "officialPortal": "https://fcttaxportal.fctirs.gov.ng/tccver.aspx",
     "requirements": [
-      "The TCC reference number printed on the certificate",
-      "The taxpayer TIN",
-      "An email address and the individual or organization name requested by the verification form"
+      "The TCC reference number printed on the certificate being checked.",
+      "The taxpayer's TIN that appears on or is tied to the same tax-clearance document.",
+      "An email address to receive the system's acknowledgement and the verifier's organisation or individual name.",
+      "The original physical or PDF TCC for comparing the verification response."
     ],
     "steps": [
-      "Open the official FCT-IRS TCC verification service or scan the QR code on the TCC.",
-      "Enter the TCC reference number and TIN together with the email and name fields requested by FCT-IRS.",
-      "Submit the verification request and review the result returned by the official service.",
-      "Compare the verified electronic record with the physical TCC before relying on it."
+      "Open FCT-IRS's official Verify TCC service from https://fctirs.gov.ng/ or navigate directly to https://fcttaxportal.fctirs.gov.ng/tccver.aspx and use the verification form.",
+      "If starting from a printed certificate, scan its QR code and confirm the destination is an FCT-IRS-controlled verification site before entering personal information.",
+      "Enter the certificate's TCC Ref# and the associated taxpayer TIN in the exact form fields.",
+      "Supply the verifier email and Name of Organization/Individual as requested and submit the official online check.",
+      "Compare the electronic verification details with the certificate presented, including identity, reference and status; FCT-IRS requires the verified and physical TCC to match.",
+      "If the portal fails or the numbers conflict, contact FCT-IRS through its published enquiry route before relying on the document or paying any additional demand."
     ],
     "notes": [
-      "Use the live FCT-IRS verification service rather than a screenshot or third-party certificate checker.",
-      "FCT-IRS instructs users to ensure the verified record and physical TCC match."
+      "The FCT-IRS dedicated TCC verification page and QR scan are verification tools, not a fresh TCC application.",
+      "Do not confuse the issuing year's certificate validity with the timing of a verification response.",
+      "FCT-IRS also accepts correspondence for authenticity checks, but its current public verification form is a distinct online service.",
+      "A missing or mismatched TCC result is a reason to seek confirmation from FCT-IRS, not immediate proof of forgery."
     ],
     "sources": [
       {
         "label": "FCT-IRS official website",
         "agency": "Federal Capital Territory Internal Revenue Service",
         "url": "https://fctirs.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "FCT-IRS TCC verification",
         "agency": "Federal Capital Territory Internal Revenue Service",
         "url": "https://fctirs.gov.ng/howto/tcc-verification/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "FCT-IRS TCC online verification form",
+        "agency": "FCT Internal Revenue Service",
+        "url": "https://fcttaxportal.fctirs.gov.ng/tccver.aspx",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Verify FCT tax clearance",
       "How to verify an FCT tax clearance certificate",
@@ -3556,25 +3622,32 @@
     "slug": "edo-tax-id-access",
     "title": "How to register or verify a Tax ID from Edo State",
     "shortTitle": "Edo Tax ID access",
-    "summary": "Edo IRS directs taxpayers to official Tax ID registration/verification channels and provides its ERAS portal for revenue services.",
+    "summary": "Edo State Internal Revenue Service's December 2025 guidance offers three concrete Tax Identification Number (TIN) routes: the official Joint Tax Board portal tin.jtb.gov.ng for registration/verification, the *668# USSD route, and decentralised EIRS zonal offices. Edo IRS announced fourteen additional state registration centres; its ERAS site remains a separate state revenue-account portal, not the only way to obtain or confirm a TIN.",
     "category": "State services",
     "agencySlug": "eirs",
     "feeLabel": "Use official EIRS/JRB channels",
     "status": "verified",
-    "officialPortal": "https://eras.eirs.gov.ng/",
+    "officialPortal": "https://tin.jtb.gov.ng",
     "requirements": [
-      "For an individual, the government identity details used by the Tax ID route; for a business, the CAC/business registration details used to identify the taxpayer",
-      "For individuals, identity data should match the government identity record used by the Tax ID system"
+      "For an individual, the genuine taxpayer identity/NIN data accepted by the JTB Tax ID system.",
+      "For a company, CAC/business registration details matching the taxpayer entity being registered or verified.",
+      "A mobile SIM able to use *668# USSD if selecting the SMS-independent phone route.",
+      "A location/official EIRS contact when face-to-face registration is preferable."
     ],
     "steps": [
-      "Open the Edo Revenue Administration System or the Tax ID link published by EIRS.",
-      "Choose the applicable taxpayer registration or verification route.",
-      "Complete identity/business verification through the official system.",
-      "Keep the official Tax ID/verification result for tax transactions."
+      "Decide whether you need a first Tax ID registration or to verify an already-issued TIN; do not create a duplicate registration if the taxpayer already has a number.",
+      "Open https://tin.jtb.gov.ng, the specific Tax ID registration/verification URL published by Edo IRS, and select the individual or corporate category shown.",
+      "If an internet form is not practical, dial *668# from a supported Nigerian phone and use the Tax ID menu published in EIRS's official announcement.",
+      "For an in-person option, visit an EIRS zonal office: the notice identifies Oredo 1 at 18 Ihama Road, GRA Benin City and Egor at 190 Uselu-Lagos Road among fourteen additional centres.",
+      "Provide the correct individual NIN or CAC business details requested for the taxpayer, and check spelling/registration identity before submission.",
+      "Keep the generated Tax ID/verification record and verify it through the official JTB route rather than using ERAS login status as proof of Tax ID issuance.",
+      "If a taxpayer identity cannot be matched, contact EIRS at info@eirs.gov.ng or 0813 097 0146 from the public notice for authoritative next steps."
     ],
     "notes": [
-      "EIRS has published Tax ID registration access through its offices and official JTB/JRB-linked channels.",
-      "Office structures can change, so MyNigeriaGuide links the live EIRS channels instead of reproducing an old office list."
+      "EIRS's 4 December 2025 official notice expressly announces *668# and tin.jtb.gov.ng; the original guide did not provide either starting action.",
+      "EIRS lists fourteen additional registration points across the state; verify opening hours with the selected office rather than assuming it accepts walk-ins on any day.",
+      "The JTB Tax ID system and Edo ERAS revenue dashboard have different functions. One can be used for Tax ID lookup while the other handles state revenue services.",
+      "Never enter taxpayer NIN/CAC details into a third-party 'TIN generator' website."
     ],
     "sources": [
       {
@@ -3582,16 +3655,22 @@
         "agency": "Edo State Internal Revenue Service",
         "url": "https://eirs.gov.ng/tax-reforms-edo-irs-decentralizes-tin-registration-introduces-ussd-code-to-ease-tax-compliance/",
         "published": "2025-12-04",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "Edo Revenue Administration System",
         "agency": "Edo State Internal Revenue Service",
         "url": "https://eras.eirs.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "JTB Tax ID registration and verification portal referenced by Edo IRS",
+        "agency": "Joint Tax Board",
+        "url": "https://tin.jtb.gov.ng",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Edo Tax ID access",
       "How to register or verify a Tax ID from Edo State",
@@ -3829,44 +3908,49 @@
     "slug": "nin-slip-reissue",
     "title": "How to reissue a lost, damaged or stolen NIN slip",
     "shortTitle": "NIN slip reissue",
-    "summary": "NIMC's current Fees page lists the reissue charges for lost, damaged, stolen and post-modification NIN slips, with supporting-document requirements published by NIMC.",
+    "summary": "NIMC publishes conflicting figures for NIN slip reissuance on two official pages. The dedicated current Fees table says ₦600 for loss, damage or theft and ₦1,000 for each modified data field, while its detailed reissuance page still says ₦500. For loss/theft, NIMC requests a recent police report, affidavit and photo ID; damage needs the damaged slip; post-modification reissue needs the transaction slip. Check the generated NIMC/Remita invoice instead of guessing.",
     "category": "Identity",
     "agencySlug": "nimc",
-    "feeLabel": "₦600 loss/damage/theft; ₦1,000 per modified field",
-    "feeNote": "Fee shown follows NIMC's dedicated current Fees page. The older re-issuance detail page still displays ₦500 figures.",
-    "status": "verified",
+    "feeLabel": "Official fee pages conflict: ₦600/₦1,000 vs older ₦500",
+    "feeNote": "NIMC's Fees table states ₦600 for loss/damage/theft and ₦1,000 per modified field, but its NIN Slip Re-Issuance instructions still cite ₦500. Both pages are published by NIMC. Confirm the exact selected service and generated official Remita invoice; do not tell users that the discrepancy is resolved or that an old ₦500 figure is necessarily payable.",
+    "status": "conflict",
     "officialPortal": "https://nimc.gov.ng/nin/nin-slip-reissuance",
     "requirements": [
-      "For loss/theft: recent police report, court affidavit and photo ID",
-      "For damage: the damaged NIN slip",
-      "For post-modification reissue: the modification transaction slip",
-      "Evidence of payment through the official NIMC route"
+      "Loss or theft: a recent police extract/report, court affidavit for the missing document and photo identification.",
+      "Damage: the original damaged NIN slip to present for replacement.",
+      "Reissue after modification: the original NIMC transaction slip from the already-approved data correction.",
+      "An official NIMC payment invoice and Remita Retrieval Reference (RRR) for the applicable reissue item."
     ],
     "steps": [
-      "Check the current NIMC Fees page and prepare the documents for your reason for reissue.",
-      "Generate the NIMC payment invoice through Remita, note the Remita Retrieval Reference (RRR) and complete payment using the permitted card, bank, USSD, internet-banking or wallet option.",
-      "Present the reissue documents together with the payment invoice/RRR evidence through the NIMC reissue route.",
-      "Collect or download the reissued slip through the approved NIMC route and keep your transaction evidence."
+      "Determine whether the slip is lost, stolen, damaged or being reissued after an approved data modification; collect the separate evidence NIMC specifies for that reason.",
+      "Read both NIMC's current Fees table and its older detailed Re-Issuance instructions so you understand the ₦600/₦1,000 versus ₦500 published discrepancy.",
+      "At remita.net choose the National Identity Management Commission as biller, select the exact reissue purpose and generate an official invoice/RRR.",
+      "Review the amount that NIMC/Remita generates before paying. If the discrepancy persists or the requested purpose is missing, confirm it with NIMC rather than choosing an unrelated fee to force payment.",
+      "Pay using the supported card, bank, USSD, internet-banking or wallet option, keeping the actual official payment reference.",
+      "Present the required police report/affidavit/ID, damaged slip or modification transaction slip as relevant, along with payment evidence, through the NIMC authorised reissue route.",
+      "Receive and inspect the reissued slip; if a downloaded/printed version is provided, ensure the recorded NIN and the corrected fields are consistent."
     ],
     "notes": [
-      "NIMC's dedicated Fees page currently lists ₦600 for loss, damage or theft and ₦1,000 per modified data field.",
-      "The older re-issuance detail page still displays ₦500; if the official payment system generates a different amount, follow the amount shown by NIMC before completing payment."
+      "The NIN itself is not being replaced; this service issues another copy of the slip.",
+      "This page must remain explicit about the official-source fee conflict instead of changing both figures into a false definitive price.",
+      "Date-of-birth data correction fees are unrelated to the fee for reissuing a slip after modification.",
+      "NIMC's detailed page describes an 'Immediately' target, which should not be treated as a guaranteed same-day completion across every route."
     ],
     "sources": [
       {
         "label": "NIMC Fees",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/fees",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NIMC NIN slip re-issuance",
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/nin/nin-slip-reissuance",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NIN slip reissue",
       "How to reissue a lost, damaged or stolen NIN slip",
@@ -4132,10 +4216,10 @@
     "slug": "jamb-admission-letter",
     "title": "How to print a JAMB admission letter",
     "shortTitle": "JAMB admission letter",
-    "summary": "JAMB's current service schedule lists its admission-letter service and e-Facility provides the candidate route.",
+    "summary": "Print a JAMB admission letter from the candidate's e-Facility profile only after confirming the correct recognised admission. JAMB's payment schedule lists ₦1,000 for an ordinary admission letter and a ₦100 CBT service charge, whereas a change-of-admission-letter or fresh irregular admission application is a different, more expensive service. JAMB's printing instruction also describes a transaction ID and payment-status check before printing.",
     "category": "Education",
     "agencySlug": "jamb",
-    "feeLabel": "₦1,000 + ₦100 CBT service charge",
+    "feeLabel": "Normal admission letter: ₦1,000 + published ₦100 CBT service charge",
     "status": "verified",
     "officialPortal": "https://efacility.jamb.gov.ng/account/",
     "requirements": [
@@ -4144,36 +4228,41 @@
       "Payment through the official JAMB transaction flow"
     ],
     "steps": [
-      "Sign in to the candidate's official JAMB e-Facility account and confirm that the admission record you intend to print is available under that candidate profile.",
-      "Open the admission-letter service from the candidate services menu and review the admission details before starting the paid transaction.",
-      "Complete the official JAMB admission-letter transaction or payment shown in e-Facility and keep the transaction reference if the portal needs to be revisited.",
-      "After the payment is accepted, return to the admission-letter service and generate the letter for the admission record linked to the candidate.",
-      "Download or print the JAMB admission letter and check the candidate, institution and programme details before using it for matriculation, clearance or another official purpose."
+      "Sign in to the candidate's real JAMB e-Facility account using its registered email and password.",
+      "Use the admission-status function to confirm the candidate's JAMB admission before initiating a paid admission-letter print.",
+      "Select Print Admission Letter from candidate services; review the confirmation screen and save the unique transaction ID.",
+      "Check the normal admission-letter service amount against JAMB's payment-services schedule (₦1,000, plus ₦100 CBT service charge if applicable) and pay only using the e-Facility payment gateway.",
+      "If payment is interrupted, use My Payment/Transaction status within the existing profile rather than creating duplicate charges immediately.",
+      "After payment confirmation, enter the examination year and registration number if prompted, then generate and save the official PDF.",
+      "Check the name, JAMB registration number, institution and course on the letter; a wrong institution/course may require a separate admission amendment rather than repeated letter printing."
     ],
     "notes": [
-      "JAMB's matriculation-list guidance also tells candidates to print their Admission Letter and Result Slip online from e-Facility."
+      "JAMB's published ordinary admission-letter cost is not its ₦5,000 change-of-admission-letter or fresh irregular admission service.",
+      "The transaction ID is used for retrieving a pending or completed e-Facility payment.",
+      "Printing a letter for an admission that has not been recognised by JAMB does not validate that admission.",
+      "A paid printing transaction is not a substitute for resolving a missing JAMB matriculation-list record."
     ],
     "sources": [
       {
         "label": "JAMB payment and services schedule",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/payment-Services",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "JAMB e-Facility",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://efacility.jamb.gov.ng/account/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "JAMB CAPS",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://jamb.gov.ng/caps",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "JAMB admission letter",
       "How to print a JAMB admission letter",
@@ -4183,7 +4272,8 @@
       "jamb-caps",
       "jamb-matriculation-list",
       "jamb-print-result"
-    ]
+    ],
+    "feeNote": "JAMB's official payment-services table lists ₦1,000 for an ordinary Admission Letter and a ₦100 CBT service charge. Change/Fresh Application of Admission Letter is a distinct ₦5,000 + ₦300 service. Confirm the live checkout and select the correct service to avoid paying for an amendment unnecessarily."
   },
   {
     "slug": "waec-withheld-result-complaint",
@@ -4287,7 +4377,7 @@
     "slug": "nysc-correct-course-of-study",
     "title": "How to correct your course of study on NYSC",
     "shortTitle": "NYSC course correction",
-    "summary": "NYSC provides a dashboard correction route, with final approval handled by the institution's Student Affairs Officer.",
+    "summary": "A prospective corps member can request correction of an incorrect course of study from the original NYSC dashboard, selecting the course, qualification and class of degree. NYSC expressly states that the institution's Student Affairs Officer must give final approval; a dashboard submission without institutional approval is not a completed correction.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "No correction fee stated on NYSC guidance",
@@ -4299,30 +4389,33 @@
       "Institutional Student Affairs Officer approval"
     ],
     "steps": [
-      "Sign in to the prospective corps member's official NYSC dashboard and open the Correction of Course of Study service for the existing mobilisation record.",
-      "Select the correct course of study and, where requested, the correct qualification and class of degree that match the institution's academic record.",
-      "Review the requested correction carefully before submitting it because the institution must later confirm the corrected academic information.",
-      "Submit the correction through the NYSC dashboard and contact the institution's Student Affairs Officer with the relevant mobilisation details for the required final approval.",
-      "Keep checking the NYSC dashboard until the corrected course information is reflected; if the institution has not approved it, resolve the record with Student Affairs rather than creating another registration."
+      "Sign in to the prospective corps member's own NYSC portal dashboard using the previously registered account.",
+      "Open Correction of Course of Study from the NYSC service menu.",
+      "Select the correct course, qualification and class of degree that match the institution's recognised academic record.",
+      "Review the selections before pressing Submit rather than Cancel; correct any mismatched field before submitting.",
+      "Contact the school Student Affairs Officer with the candidate's correct academic record and existing NYSC registration details, and request the final institutional approval NYSC requires.",
+      "Return to the same NYSC dashboard to see whether the course correction has been approved. If it has not, reconcile the mismatch with the institution instead of opening a duplicate NYSC registration."
     ],
     "notes": [
-      "NYSC says institutional Student Affairs approval is required for the course correction."
+      "NYSC's explicit procedure covers course, qualification and class of degree—not arbitrary corrections of name or date of birth through this same menu.",
+      "Submitting from the candidate account does not bypass Student Affairs Officer approval.",
+      "If the wrong course originates from a school Senate/Academic Board list, the institution is responsible for reconciling its source record."
     ],
     "sources": [
       {
         "label": "NYSC course-of-study correction",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/correctcourse.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "NYSC FAQ",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/faq.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NYSC course correction",
       "How to correct your course of study on NYSC",
@@ -4332,7 +4425,8 @@
       "nysc-correct-date-of-birth",
       "nysc-senate-list",
       "nysc-registration-local"
-    ]
+    ],
+    "feeNote": "NYSC's course-correction instructions do not specify a fee. If the live system offers an official charged service, verify the item before paying; do not treat a private agent's fee as mandatory."
   },
   {
     "slug": "npc-modify-birth-record",
@@ -7210,41 +7304,53 @@
     "slug": "vehicle-proof-of-ownership-verification",
     "title": "How to verify a vehicle Proof of Ownership in Nigeria",
     "shortTitle": "Verify Proof of Ownership",
-    "summary": "The official FRSC Proof of Ownership Certificate verification route and why it should be checked separately from a plate or insurance policy.",
+    "summary": "FRSC's National Vehicle Identification System provides a concrete Proof of Ownership search using a vehicle's plate number or chassis number. Use the official NVIS Proof of Ownership Print/Search page and compare the vehicle details with the registration and seller records. Proof of Ownership checks do not automatically establish insurance validity, customs duty payment or freedom from encumbrance.",
     "category": "Driving",
     "agencySlug": "frsc",
     "feeLabel": "Verification route",
     "feeNote": "Use the official FRSC Proof of Ownership Certificate portal.",
     "timeline": "Online verification when the service is available.",
     "status": "verified",
-    "officialPortal": "https://poc.frsc.gov.ng/",
+    "officialPortal": "https://nvis.frsc.gov.ng/ApplicationProcess/ProofOfOwnershipPrint",
     "requirements": [
-      "The Proof of Ownership Certificate details or vehicle information requested by the official portal",
-      "The vehicle registration/plate or seller/owner information you will compare with the returned ownership record"
+      "The registered number plate or chassis/VIN number for the vehicle; FRSC's official NVIS search shows a Plate Number / Chasis No field.",
+      "The seller or registered owner's record for matching the returned vehicle identity.",
+      "The existing ownership certificate or registration document, if available, for confirming the record is genuine.",
+      "Access to the official NVIS/FRSC page rather than a third-party payment or verification app."
     ],
     "steps": [
-      "Open the official FRSC Proof of Ownership Certificate portal.",
-      "Choose the verification/search function provided for the certificate or vehicle record.",
-      "Enter the requested ownership or vehicle details exactly as shown on the document.",
-      "Compare the returned information with the seller/owner and vehicle details.",
-      "If the ownership record conflicts with the vehicle being sold or transferred, resolve the discrepancy with the relevant registration authority before completing the transaction."
+      "Open https://nvis.frsc.gov.ng/ApplicationProcess/ProofOfOwnershipPrint in the official FRSC National Vehicle Identification System.",
+      "Enter the plate number or chassis/VIN into the Search field; use the exact code printed on the vehicle/registration document.",
+      "Submit Search and inspect the resulting record. If the portal requires authentication to obtain a printout, use only the official login rather than a copied third-party document.",
+      "Compare the displayed vehicle identity and registered ownership information with the seller's papers, vehicle's physical chassis marking and purchase agreement.",
+      "If the vehicle or ownership record differs, stop the transaction and ask the official registering authority to reconcile the mismatch before making the purchase.",
+      "For a used vehicle, independently check number-plate status, insurance and customs-related records where appropriate; these are separate validations.",
+      "Retain a verifiable official result or reference rather than relying on a dealer's screenshot alone."
     ],
     "notes": [
-      "Proof of ownership, number-plate verification, insurance verification and customs-duty verification answer different questions.",
-      "For a used vehicle purchase, checking more than one official record reduces the risk of relying on a forged document."
+      "The FRSC NVIS page explicitly provides a Plate Number / Chasis No search field. Do not promise an unverified universal certificate fee from that search.",
+      "A proof-of-ownership match does not prove a vehicle is free of finance, theft reports or other legal claims.",
+      "A seller's name can differ from the currently registered owner until a transfer is formally recorded; obtain documentary explanation rather than assuming the transfer happened automatically.",
+      "The consumer should not confuse issuing or printing a Proof of Ownership certificate with checking a registration plate or motor-insurance policy."
     ],
     "sources": [
       {
         "label": "FRSC Proof of Ownership Certificate Portal",
         "agency": "Federal Road Safety Corps",
         "url": "https://poc.frsc.gov.ng/",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "FRSC NVIS Proof of Ownership Print/Search",
         "agency": "Federal Road Safety Corps",
         "url": "https://nvis.frsc.gov.ng/ApplicationProcess/ProofOfOwnershipPrint?area=Identity&page=%2FAccount%2FLogin",
-        "lastChecked": "2026-10-01"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "FRSC National Vehicle Identification System Proof of Ownership plate/chassis lookup",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/ApplicationProcess/ProofOfOwnershipPrint",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7253,7 +7359,7 @@
       "vehicle-insurance-validation-ussd",
       "customs-vehicle-duty-verification"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "proof of ownership certificate Nigeria",
       "verify vehicle ownership Nigeria",
@@ -11230,7 +11336,7 @@
     "slug": "inec-find-pvc-pickup-location",
     "title": "How to find your INEC PVC pickup location",
     "shortTitle": "Find PVC pickup location",
-    "summary": "Use INEC's Uncollected PVC service to check where a previously registered voter should go to collect an uncollected card.",
+    "summary": "INEC's Uncollected PVC service helps previously registered voters identify where to collect an uncollected Permanent Voter Card. The collection point may change during temporary distribution exercises, so confirm the current INEC announcement before travelling. INEC rules require collection in person; an agent, friend or relative cannot collect the PVC by proxy.",
     "category": "Civic services",
     "agencySlug": "inec",
     "feeLabel": "PVC pickup lookup is FREE",
@@ -11238,34 +11344,39 @@
     "status": "verified",
     "officialPortal": "https://cvr.inecnigeria.org/Public/getStarted",
     "requirements": [
-      "A previous INEC voter registration",
-      "The voter details required by the INEC lookup",
-      "Personal attendance and identity confirmation when collecting the PVC"
+      "A prior INEC voter registration; the service does not enrol a first-time voter.",
+      "The registered voter's name and previous registration identity information used by INEC's Uncollected PVC search; match the record before relying on the result.",
+      "The registered voter's own presence and any registration slip or identity evidence used at the designated collection point.",
+      "A current official INEC collection notice if the local centre or schedule has changed."
     ],
     "steps": [
-      "Open the official INEC CVR portal and choose Uncollected PVC.",
-      "Enter the voter information requested by the official lookup and check the returned pickup information carefully.",
-      "Note the collection location before travelling and check INEC announcements for any temporary collection-centre or timetable changes.",
-      "Attend the official collection point yourself with the identification or registration evidence INEC requests; INEC's CVR guidelines state that PVC collection is not by proxy."
+      "Open the official INEC CVR portal and select the Uncollected PVC service for someone already registered to vote.",
+      "Use the voter details the lookup accepts and record the pickup location that matches the registered person's record.",
+      "Cross-check the location and collection dates against current INEC State Office/LGA announcements; an old election's temporary collection centre might no longer operate.",
+      "Prepare the voter registration slip if available and the identity evidence needed for INEC's collection officer to find the voter in the register.",
+      "Attend the designated INEC pickup point personally; the Commission's guidelines expressly forbid PVC collection by proxy.",
+      "Ask the officer to confirm the registered voter's record before card handover and complete the collection acknowledgment requested by INEC.",
+      "If the record says collected or the centre cannot locate the card, request an official INEC check rather than paying a third party or using the polling-unit locator as a substitute."
     ],
     "notes": [
-      "This is for people who registered previously but have not collected their PVC.",
-      "Collection locations and schedules can change during special distribution exercises, so recheck current INEC information before travelling.",
-      "This guide is an administrative locator guide only."
+      "PVC collection point and election-day polling unit are different locations; the latter lookup cannot tell you where uncollected cards are stored.",
+      "INEC permits verification of identity where the voter has lost the registration slip, but still requires personal attendance.",
+      "The portal lookup is an administrative service and does not guarantee that cards are available for same-day pickup.",
+      "No fee is stated for the ordinary uncollected PVC location lookup."
     ],
     "sources": [
       {
         "label": "INEC Continuous Voter Registration portal — Uncollected PVC",
         "agency": "Independent National Electoral Commission",
         "url": "https://cvr.inecnigeria.org/Public/getStarted",
-        "lastChecked": "2026-10-02"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "INEC remarks on personal PVC collection",
         "agency": "Independent National Electoral Commission",
         "url": "https://wp1.inecnigeria.org/remarks-by-the-chairman-inec-prof-mahmood-yakubu-at-a-meeting-with-the-resident-electoral-commissioners-recs-held-at-the-inec-conference-room-abuja-on-19th-august-2024/",
         "published": "2024-08-19",
-        "lastChecked": "2026-10-02"
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11275,7 +11386,7 @@
       "find my PVC",
       "INEC PVC pickup"
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-16",
     "related": [
       "inec-pvc-status",
       "inec-replace-lost-damaged-pvc",
@@ -11286,7 +11397,7 @@
     "slug": "inec-polling-unit-locator",
     "title": "How to find your INEC polling unit",
     "shortTitle": "Find INEC polling unit",
-    "summary": "Use INEC's official polling-unit directory and locator to confirm a registered voting location and its official details.",
+    "summary": "INEC's official polling-unit locator directs registered voters to their assigned voting location by State, LGA and Registration Area/Ward and returns the polling-unit location description and coordinates when available. The polling unit is where the voter is accredited and votes, not the INEC office used to collect an uncollected PVC.",
     "category": "Civic services",
     "agencySlug": "inec",
     "feeLabel": "Polling-unit lookup is FREE",
@@ -11294,32 +11405,37 @@
     "status": "verified",
     "officialPortal": "https://inecnigeria.org/polling-units/",
     "requirements": [
-      "Your registered State, Local Government Area and Registration Area/Ward",
-      "An internet connection to use INEC's polling-unit directory/locator"
+      "The State and LGA of the existing voter registration, not merely the current city or residence.",
+      "The ward/Registration Area (RA) and polling-unit number or code where known.",
+      "An internet connection to INEC's official cvr.inecnigeria.org/pu polling-unit tool.",
+      "The voter's existing PVC or voter record to cross-check any returned unit."
     ],
     "steps": [
-      "Open INEC's official Polling Units page and choose the official polling-unit locator.",
-      "Select the state of registration, Local Government Area and Registration Area/Ward requested by the locator.",
-      "Review the returned polling-unit name, code, location description and any coordinates/directions shown by INEC.",
-      "If the result conflicts with an older card, screenshot or third-party map listing, use INEC's current voter-record and polling-unit tools to verify the registered location before relying on it."
+      "Open https://inecnigeria.org/polling-units/ and use the official Find Polling Unit link to the INEC CVR locator.",
+      "Check the polling-unit code printed on the PVC if available, then choose State of registration, LGA and Ward/Registration Area.",
+      "Select or search the listed polling unit, checking the official unit name and location description rather than guessing from a nearby school or landmark.",
+      "Use available coordinates/directions carefully and compare the displayed unit with the PVC or voter record before election-day travel.",
+      "If the locator shows a unit different from an old screenshot, consult the current INEC voter-record or transfer service; updating a registered unit is not achieved just by visiting a closer one.",
+      "For PVC collection, use the separate Uncollected PVC lookup instead of travelling to the polling unit to request the card."
     ],
     "notes": [
-      "INEC says the national polling-unit network contains 176,846 polling units.",
-      "A polling-unit locator identifies the official voting location; it is different from a PVC collection-centre lookup.",
-      "MyNigeriaGuide provides no voting recommendation on this page; it only explains how to locate the official INEC facility."
+      "INEC lists 176,846 polling units across the 36 states and FCT; this guide concerns locating one assigned unit.",
+      "The public locator is free and does not itself change an existing voter registration.",
+      "A voter ordinarily votes at their registered unit, subject to INEC's applicable voter-record rules and an approved transfer.",
+      "Keep official civic instructions neutral; MyNigeriaGuide does not endorse any party or candidate."
     ],
     "sources": [
       {
         "label": "INEC Polling Units Directory",
         "agency": "Independent National Electoral Commission",
         "url": "https://inecnigeria.org/polling-units/",
-        "lastChecked": "2026-10-02"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "INEC official website — Polling Unit Locator",
         "agency": "Independent National Electoral Commission",
         "url": "https://inecnigeria.org/",
-        "lastChecked": "2026-10-02"
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11329,7 +11445,7 @@
       "where is my polling unit",
       "polling unit code"
     ],
-    "lastVerified": "2026-10-02",
+    "lastVerified": "2026-10-16",
     "related": [
       "inec-pvc-status",
       "inec-voter-transfer",
@@ -11405,7 +11521,7 @@
     "slug": "jamb-matriculation-list",
     "title": "How to check the JAMB matriculation list",
     "shortTitle": "JAMB matriculation list",
-    "summary": "Check whether JAMB recognises your admission on the matriculation list and see what to do if your name is missing before NYSC mobilisation.",
+    "summary": "JAMB's matriculation-list check indicates whether the Board recognises the student's admission for the relevant institutional record, which matters for NYSC mobilisation. Start with the public JAMB checker. If the name is absent, JAMB directs students to obtain their official admission letter and result slip and take them to the institution's admissions officer for verification; repeatedly checking the page does not correct a missing admission.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "Free to check the matriculation list",
@@ -11419,28 +11535,31 @@
       "Access to your JAMB e-Facility records if you need to print your result slip or admission letter"
     ],
     "steps": [
-      "Open JAMB's official Matriculation List checker.",
-      "Select the examination details requested and enter your JAMB registration number.",
-      "Check whether your name appears on the matriculation list.",
-      "If your name is missing, confirm that you have printed your JAMB Admission Letter and Result Slip.",
-      "Take the required JAMB documents to the admission officer in your institution for verification, because JAMB states that recognised admission records are required for NYSC eligibility."
+      "Open https://efacility.jamb.gov.ng/CheckMatriculationList and select the examination type/year requested on the public form.",
+      "Enter the JAMB registration number accurately, then submit the matriculation-list lookup.",
+      "If the candidate is listed, compare the name and available record details with the institution's admission and keep the result for reference.",
+      "If the name is missing, sign in to the genuine JAMB e-Facility profile and check the admission status before buying a document.",
+      "Print the official JAMB result slip and admission letter using their separate e-Facility services if JAMB says either is outstanding.",
+      "Present both documents to the institution's admissions officer to complete the verification JAMB describes, and ask the institution to confirm that its admissions record is corrected.",
+      "Recheck the JAMB matriculation list later; do not substitute a school-generated admission notice for a missing JAMB admission record."
     ],
     "notes": [
-      "JAMB states that only candidates whose names are on the matriculation list are recognised as bona fide students for this purpose.",
-      "JAMB's official checker says printing the admission letter and result slip, then verifying them with the institution's admission officer, is part of qualifying for the list."
+      "The public matriculation-list lookup is free, while generating an official result slip and admission letter can be charged separately.",
+      "A missing name is an issue to reconcile with the institution/JAMB, not a cue to buy third-party 'NYSC clearance'.",
+      "Institutional corrections may not display immediately after uploading documents; do not promise a guaranteed date."
     ],
     "sources": [
       {
         "label": "JAMB Matriculation List checker",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://efacility.jamb.gov.ng/CheckMatriculationList",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "JAMB Payment & Services",
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://jamb.gov.ng/Payment-Services",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11455,7 +11574,7 @@
       "jamb-print-result",
       "nysc-senate-list"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "jamb-regularization-condonement",
@@ -11517,7 +11636,7 @@
     "slug": "cac-public-search",
     "title": "How to search and verify a company or business on CAC Public Search",
     "shortTitle": "CAC Public Search",
-    "summary": "Use CAC's official public-search service to look up a Nigerian company or business by entity name, RC number or available search identifier before paying for certified records.",
+    "summary": "CAC's official iCRP Public Search offers name, RC number or AV code lookup for existing Nigerian companies and business entities. Basic results can help confirm the claimed registered entity, but a public-search screenshot is not the same as a CAC Certified True Copy or signed official status report, which are separate services.",
     "category": "Business",
     "agencySlug": "cac",
     "feeLabel": "Basic public search is available online",
@@ -11526,31 +11645,36 @@
     "status": "verified",
     "officialPortal": "https://icrp.cac.gov.ng/public-search/",
     "requirements": [
-      "The registered entity name, RC/BN number or other search identifier you want to check",
-      "Enough identifying information to distinguish the correct entity when CAC returns similar names"
+      "An official entity name, RC/BN registration number or AV code to enter in CAC's public search field.",
+      "Another independent entity identifier, such as address or entity type, to distinguish similar company names.",
+      "A current source for comparison when acting on a contract, invoice or bank-payment request."
     ],
     "steps": [
-      "Open the official CAC iCRP Public Search page and place the entity name, RC/BN number or other available identifier in the public-search field.",
-      "Submit the search form and open the matching entity result returned by CAC.",
-      "Compare the returned registered name, registration number, entity type and status with the company or business you are checking.",
-      "If you need formal evidence rather than an on-screen public search, open the separate CAC Status Report or Certified True Copy service and complete that document request."
+      "Open the genuine CAC Public Search at https://icrp.cac.gov.ng/public-search/ without buying a third-party search subscription.",
+      "Choose the search method shown and enter the legal name, RC number or AV code exactly as supplied by the company.",
+      "Read the returned list and choose the matching entity rather than assuming the first similarly named business is the intended company.",
+      "Compare the registration number, legal entity type and status against the documents or invoice you are verifying.",
+      "If CAC provides limited public details, request the separate CAC Status Report or Certified True Copy rather than altering a public-search screenshot.",
+      "Keep a record of the official lookup for your internal checks, but use a formally issued CAC document when a bank, legal office or procurement team requires certified proof."
     ],
     "notes": [
-      "CAC describes Public Search as a way to search existing companies and business entities.",
-      "CAC also publishes a separate Company Search service for verifying registration status and company information."
+      "The CAC portal's placeholder explicitly accepts 'Entity name, RC number, or AV code'.",
+      "Public Search is accessible without the pre-incorporation user registration flow; registering a company or requesting certified documents is different.",
+      "A match confirms a registry entry but does not establish that every salesperson using the company name is authorised.",
+      "Do not confuse CAC basic search with CAC name reservation when forming a new company."
     ],
     "sources": [
       {
         "label": "CAC Public Search",
         "agency": "Corporate Affairs Commission",
         "url": "https://icrp.cac.gov.ng/public-search/",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "CAC Company Search",
         "agency": "Corporate Affairs Commission",
         "url": "https://www.cac.gov.ng/services/company-search",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11566,7 +11690,7 @@
       "cac-certified-true-copy",
       "cac-company-registration"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "bvn-validation",
@@ -11825,41 +11949,47 @@
     "slug": "drivers-licence-verification",
     "title": "How to verify a Nigerian driver's licence",
     "shortTitle": "Verify driver's licence",
-    "summary": "Check the authenticity of a Nigerian driver's-licence document through FRSC's official verification service using the RID or licence number.",
+    "summary": "FRSC offers two different driver's-licence verification routes: a public RID/licence-number document check and an institutional verification request. The quick check at ndlverification.frsc.gov.ng/verify is not a paid certificate-delivery order. For official organisational requests, FRSC requires an agency recipient address and can charge for verification and shipping; personal or residential recipient addresses are not accepted.",
     "category": "Driving",
     "agencySlug": "frsc",
-    "feeLabel": "Public document check is available on the FRSC verification page",
-    "feeNote": "FRSC also offers a broader verification-request workflow that can require verification and/or shipping payment for institutional requests. The public document-check page itself presents an RID/licence-number lookup.",
+    "feeLabel": "Public RID check; formal institutional verification/shipping may cost extra",
+    "feeNote": "The quick RID/licence-number check is a public lookup. FRSC's separate agency-directed verification requests can attract verification or shipping charges; check that workflow before paying.",
     "timeline": "The public verification check is performed online after you submit the RID or licence number.",
     "status": "verified",
     "officialPortal": "https://ndlverification.frsc.gov.ng/verify",
     "requirements": [
-      "The RID number printed on the driver's-licence record or verification document, if available",
-      "The Nigerian driver's-licence number when using the licence-number lookup",
-      "A phone or computer with internet access to the official FRSC verification portal"
+      "The document's RID number or driver's-licence number for the public lookup.",
+      "The original record or licence to compare with the portal's returned identity and issuance details.",
+      "If requesting formal verification for an organisation, authorised organisation details and an agency receiving address.",
+      "For a formal delivery request, portal account access and the verification/shipping payment requested by FRSC."
     ],
     "steps": [
-      "Open the official FRSC driver's-licence verification page at ndlverification.frsc.gov.ng/verify.",
-      "Choose the available document lookup and enter the RID number or driver's-licence number exactly as printed on the record.",
-      "Submit the verification form and wait for the FRSC portal to return the document information.",
-      "Compare the returned identity and licence details with the physical or digital licence you are checking, and use the FRSC contact route on the portal if the records do not match."
+      "For a direct public check, open https://ndlverification.frsc.gov.ng/verify, not a third-party validation page.",
+      "Type the RID number or Nigerian driver's-licence number in the single lookup field and submit Verify Document.",
+      "Compare the response with the supplied licence, especially the registered number, holder and issuance details. Treat missing or conflicting data as requiring FRSC follow-up rather than proof of fraud on its own.",
+      "For an official document sent to an institution, return to the main FRSC verification portal and register/sign in as the authorised requester.",
+      "Complete its verification form, enter the government/private/non-governmental organisation's delivery address, confirm any verification and shipping charges and submit the paid request.",
+      "Track delivery using the tracking number FRSC issues and record confirmation of receipt after the agency gets the document.",
+      "If the public lookup fails or the formal record conflicts, send the RID and issue date to the verification support contact on the official portal."
     ],
     "notes": [
-      "FRSC advises authorities to verify both old and new licence documents through the secure portal.",
-      "The institutional verification workflow is different from simply renewing or applying for a licence."
+      "FRSC says formal verification applications addressed to individuals or residential addresses are not processed, even if payment was made.",
+      "The public RID lookup and formal paid verification/shipping flow are not the same product.",
+      "The verification portal lists verification@ndlverification.frsc.gov.ng for document-check complaints and verification@frsc.gov.ng for main service requests.",
+      "A lookup cannot substitute for licence renewal, category upgrade or replacement."
     ],
     "sources": [
       {
         "label": "FRSC Driver's Licence Document Verification",
         "agency": "Federal Road Safety Corps",
         "url": "https://ndlverification.frsc.gov.ng/verify",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-16"
       },
       {
         "label": "FRSC Driver's Licence Verification Portal",
         "agency": "Federal Road Safety Corps",
         "url": "https://ndlverification.frsc.gov.ng/",
-        "lastChecked": "2026-10-03"
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11874,7 +12004,7 @@
       "renew-drivers-licence",
       "replace-lost-drivers-licence"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "waec-2026-private-candidates-timetable",
