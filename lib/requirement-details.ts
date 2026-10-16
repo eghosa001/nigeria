@@ -54,6 +54,25 @@ function kindFor(item: string): RequirementKind {
 }
 
 function purposeFor(item: string, service: Service) {
+  // A photo-bearing ID is identity evidence, not a request for a separate
+  // passport photograph or a downloadable application photo.
+  if (service.slug === "glo-port-number-to-glo" || service.slug === "glo-sim-replacement") {
+    if (/\b(?:photo[- ]?(?:bearing|graphic)?\s*ID|photo\s+identification)\b/i.test(item)) {
+      return "Used by the authorised Glo outlet to verify the subscriber's identity against the number or SIM ownership record. Bring the document requested by Glo; this is not a passport-photo upload.";
+    }
+    if (/\bPORT\b.{0,12}\b3232\b/i.test(item)) {
+      return "The NCC specifies this SMS for validation of the port request from the original number; it is not a fee-payment instruction.";
+    }
+    if (/\b(?:SIM certificate|cardholder|purchase receipt)\b/i.test(item)) {
+      return "Glo lists this as evidence that the replacement is requested by the recorded owner of the SIM.";
+    }
+    if (/police report|sworn affidavit/i.test(item)) {
+      return "Glo lists this as supporting evidence when replacing a SIM reported lost or stolen. Ask an authorised outlet about exceptions instead of assuming a substitute.";
+    }
+    if (/\b(?:Gloworld|Glo dealer)\b/i.test(item)) {
+      return "The required in-person location for subscriber/ownership verification and the port or replacement SIM issue.";
+    }
+  }
   // Device compatibility, line ownership, store attendance and data purchases
   // are different tasks. Do not label every Glo requirement as an SMS/OTP item.
   if (service.slug === "glo-esim-activation") {

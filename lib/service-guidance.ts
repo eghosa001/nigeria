@@ -66,6 +66,34 @@ const explicit: Record<string, DetailedServiceGuidance> = {
       { title: "Separate identity errors from app errors", detail: "If an existing NIN does not match the official record, use NIMC's own correction/support route. Reinstalling an app or buying an unofficial Sharecode does not amend national identity records." },
     ],
   },
+  "glo-port-number-to-glo": {
+    route: {
+      startTitle: "Confirm old-line eligibility and visit Glo in person",
+      startDetail: "Keep the active old-network SIM, clear outstanding bills, and bring accepted ID/NIN information to an authorised Gloworld/dealer outlet. Check the NCC's seven-day post-SIM-replacement limit and ask about the contradictory 45/90-day repeat-port rules.",
+      physicalTitle: "Port form, PORT to 3232 SMS and Glo SIM handover",
+      physicalDetail: "Complete the in-store port request and send PORT to 3232 from the number being moved when instructed. Glo issues a new SIM with the same number, but activation follows clearinghouse validation; a website visit alone cannot complete porting.",
+      fallbackTitle: "If Glo rejects or delays your port",
+      fallbackDetail: "Ask the outlet for the exact eligibility or verification problem, including the previous port date, recent SIM replacement, restricted line, old-network billing or failure to receive both form and SMS. Escalate an unresolved case to the operator or NCC.",
+    },
+    aftercare: [
+      { title: "Test the new SIM after the confirmation", detail: "Once the old network has switched off and Glo confirms success, test an outgoing and incoming call, text messages and data on the replacement Glo SIM." },
+      { title: "Recheck services tied to the number", detail: "Any former network's airtime, subscriptions and tariffs do not automatically move. Review phone-based account recovery and new Glo package terms before relying on them." },
+    ],
+  },
+  "glo-sim-replacement": {
+    route: {
+      startTitle: "Secure a lost number and prepare Glo's official replacement form",
+      startDetail: "If the line is stolen, promptly use official Glo support and separately secure phone-linked banking access. Download the correct prepaid or Glo Business form on Glo's Self Care site and prepare the ownership paperwork.",
+      physicalTitle: "Original photo ID, ownership evidence and Gloworld visit",
+      physicalDetail: "Take the required original and photocopy of accepted ID, SIM certificate/receipt or business account records, plus the listed police report and affidavit. Glo publishes a ₦100 replacement charge; confirm the outlet's present charge before paying.",
+      fallbackTitle: "If you lack the old SIM cardholder or receipt",
+      fallbackDetail: "Contact the authorised Gloworld service desk and request its acceptable identity/ownership recovery steps. Do not buy a purported remote SIM swap or give a third party your NIN details, OTPs or account credentials.",
+    },
+    aftercare: [
+      { title: "Confirm your original number has been restored", detail: "Ask the outlet to verify activation and test calls and messages; follow the stated next step if network activation has not completed." },
+      { title: "Review linked account access", detail: "A replacement SIM does not automatically secure banking or social accounts previously exposed through the lost phone. Independently protect them through their official services." },
+    ],
+  },
   "glo-esim-activation": {
     route: {
       startTitle: "Check the EID, then visit a Gloworld shop or Glo dealer",
