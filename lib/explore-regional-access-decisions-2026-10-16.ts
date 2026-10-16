@@ -35,7 +35,7 @@ export const regionalAccessDecisions20261016: Record<string, Decision> = {
   "south-south-waterfront-heritage-route": {
     summary: "The Niger Delta has important waterfront history, but a multi-state boat-based leisure itinerary is not risk-cleared: UK FCDO advises against all travel to boat-only riverine areas of five South-South states.",
     source: { label: "UK FCDO — riverine and non-riverine security distinctions", href: "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks" },
-    additionalSources: [{"label":"UNESCO — Niger Delta Mangroves nomination remains tentative","href":"https://whc.unesco.org/en/tentativelists/5080/"}],
+    additionalSources: [{"label":"UNESCO — Niger Delta Mangroves nomination remains tentative","href":"https://whc.unesco.org/en/tentativelists/494/"}],
     intro: "UK FCDO guidance differentiates areas only reachable by boat, where it advises against all travel in Delta, Bayelsa, Rivers, Akwa Ibom and Cross River, from non-riverine Delta, Bayelsa and Rivers, where it advises against all but essential travel. Museum collections, a city waterfront, a hotel overlooking water and a boat landing are four different visitor tasks; a promotional article cannot prove a tour vessel is authorised, insured or equipped.",
     planning: { label: "Do not present connected river crossings as a safe tour route", detail: "Keep Delta, Bayelsa and Rivers waterfront descriptions as research rather than proposing river cruises or casual water taxis. For essential movement, separate urban road access from boat-only areas and obtain up-to-date local authority directions and safety requirements. Avoid promising ferries, departure timetables, life jackets, uniform fees or an all-in-one mangrove excursion." },
   },
