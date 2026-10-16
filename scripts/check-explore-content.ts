@@ -2,6 +2,7 @@ import { exploreGuides } from "../lib/explore";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
 import { tourLeadFixes20261016 } from "../lib/explore-tour-lead-fixes-2026-10-16";
+import { tourRealityChecks20261016 } from "../lib/explore-tour-reality-2026-10-16";
 import { tourPracticalDecisions20261016 } from "../lib/explore-practical-decisions-2026-10-16";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
@@ -129,6 +130,32 @@ if (!kirijiPin || kirijiPin.kind !== "landmark" ||
     !warHistory?.highlights.some(h => h.name === "Kiriji war site")) {
   errors.push("Kiriji place card and all linked Tour guides must not claim an unverified public museum.");
 }
+
+// Change-scoped editorial release checks. A green test is not a claim of
+// human visits, working admissions, safe travel, originality or AdSense trust.
+const realitySlugs = Object.keys(tourRealityChecks20261016);
+if (realitySlugs.length !== 18 || new Set(realitySlugs).size !== 18)
+  errors.push("18 distinct Tour decision records required in the source-verification batch.");
+for (const slug of realitySlugs) {
+  const guide = exploreGuides.find(record => record.slug === slug);
+  const correction = tourRealityChecks20261016[slug];
+  if (!guide || guide.summary !== correction.summary ||
+      !guide.intro.includes(correction.intro) ||
+      !guide.planning.some(step => step.label === correction.planning.label && step.detail === correction.planning.detail) ||
+      ![guide.source?.href, ...(guide.sources ?? []).map(source => source.href)].includes(correction.source.href) ||
+      guide.lastReviewed !== "2026-10-16")
+    errors.push(slug + ": insufficient real visitor-task, primary evidence or checked-date updates.");
+  const allText = [correction.intro, correction.planning.detail].join(" ");
+  if (/\bFCDO\b/.test(allText) && ![guide?.source?.href, ...(guide?.sources ?? []).map(source => source.href)]
+    .includes("https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks"))
+    errors.push(slug + ": travel warning not directly linked to visitor-facing guide.");
+}
+const ngwoGuide = exploreGuides.find(guide => guide.slug === "ngwo-pine-forest-guide");
+if (!ngwoGuide?.summary.includes("not verified operational facilities"))
+  errors.push("Ngwo must not promote a future zipline/cable car as live.");
+const gombeGuide = exploreGuides.find(guide => guide.slug === "nafada-riverside-guide");
+if (!gombeGuide?.summary.includes("advises against all travel"))
+  errors.push("Nafada must not lead with a proposed nature excursion despite Gombe all-travel warning.");
 
 // Regression: publication screening and the actual Tour guide page must agree
 // about already sourced, shared, canonical place cards. A guide should not be
