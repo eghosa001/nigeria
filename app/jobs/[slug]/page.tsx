@@ -190,7 +190,7 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               </div>
             </section>
 
-            <AdSlot slot={AD_SLOTS.jobAfterFacts} label="Advertisement" />
+            {isIndexableJobOpportunity(item) ? <AdSlot slot={AD_SLOTS.jobAfterFacts} label="Advertisement" /> : null}
 
             <section>
               <h2>Who {item.title} is for</h2>
