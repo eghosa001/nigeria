@@ -1,4 +1,5 @@
 import { exploreGuides } from "../lib/explore";
+import { furtherVisitorDecisions20261016 } from "../lib/explore-additional-editorial-2026-10-16";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
 import { tourLeadFixes20261016 } from "../lib/explore-tour-lead-fixes-2026-10-16";
@@ -9,6 +10,32 @@ import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 const errors: string[] = [];
 const guideSlugs = new Set<string>();
 const placeSlugs = new Set<string>();
+ 
+// Nine specific visitor decisions, with their actual source links, must
+// survive all prior Tour overlay layers and appear in the exported catalog.
+const newChecks = Object.entries(furtherVisitorDecisions20261016);
+if (newChecks.length !== 9) errors.push("Expected nine independently researched Tour guide updates.");
+for (const [slug, evidence] of newChecks) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const hrefs = new Set([guide?.source?.href, ...(guide?.sources ?? []).map(x => x.href)]);
+  const expected = [evidence.source, ...(evidence.additionalSources ?? [])];
+  if (!guide || guide.lastReviewed !== "2026-10-16" ||
+      !guide.intro.includes(evidence.intro ?? "") ||
+      !guide.planning.some(x => x.label === evidence.planning.label && x.detail === evidence.planning.detail) ||
+      expected.some(x => !hrefs.has(x.href)) ||
+      hrefs.size !== [guide.source?.href, ...(guide.sources ?? []).map(x => x.href)].length) {
+    errors.push(slug + ": visitor task correction, source citations or URL deduplication regressed");
+  }
+}
+const rock = exploreGuides.find(item => item.slug === "olumo-rock-visitor-guide");
+if (!rock?.intro.some(x => x.includes("September 2025") && x.includes("October 2026"))) {
+  errors.push("Olumo: temporary 2025 free-entry promotion must not be reused as a 2026 tariff.");
+}
+const museum = exploreGuides.find(item => item.slug === "owo-museum-guide");
+if (!museum?.sources?.some(x => x.href === "https://collection.museum.ng/owo-terracotta-bust/")) {
+  errors.push("Owo: preserve NCMM object's actual current collection-location evidence.");
+}
+
 
 for (const guide of exploreGuides) {
   if (guideSlugs.has(guide.slug)) errors.push(`duplicate guide slug: ${guide.slug}`);
