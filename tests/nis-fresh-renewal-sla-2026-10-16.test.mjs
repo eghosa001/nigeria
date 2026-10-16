@@ -18,7 +18,7 @@ test("2026 NIS passport pages retain separate original canonical and appropriate
     assert.ok(record.sources.every((source) => !source.url.includes("SERVICE_LEVEL_AGREEMENT_2025")));
     assert.ok(record.sources.every((source) => !source.url.includes("SERVICE-LEVEL-AGREEMENT-2025")));
     assert.equal(record.officialPortal, "https://passport.immigration.gov.ng/");
-    assert.match(record.timeline, /not a guaranteed|not a guarantee/i);
+    assert.match(record.timeline, /not (?:an appointment wait-time or guaranteed|a guaranteed|a guarantee)/i);
     assert.ok(record.steps.length >= 7);
     assert.ok(record.sources.every((source) => source.lastChecked === "2026-10-16"));
   }
