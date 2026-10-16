@@ -42,7 +42,7 @@ for (const slug of issuerCareerReviewSlugs20261016B) {
   assert(item?.kind === "career-page" && item.status === "career-page",
     slug + ": company careers hub cannot be labelled an open vacancy.");
   assert(item.verifiedAt === "2026-10-16" &&
-    item.applicationSteps.length === 3 &&
+    item.applicationSteps.length === 5 && item.sourceNotes.length >= 3 &&
     item.sources.some(src => src.lastChecked === "2026-10-16") &&
     !item.deadline, slug + ": checked application path, sources or deadline claim regressed.");
 }
