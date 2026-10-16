@@ -1,4 +1,5 @@
 import { distinctLongEnoughEditorialProfiles } from "@/lib/movie-editorial-profiles-long-enough-2026-10-15";
+import { reviewedMovieDossiers20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { filmSpecificEditorial20261016 } from "@/lib/movie-editorial-profiles-reviewed-2026-10-16";
 import { reviewedFilmDossiers20261015 } from "@/lib/movie-editorial-profiles-reviewed-2026-10-15";
 import { individuallyResearchedFilmDossiers20261015B } from "@/lib/movie-editorial-profiles-reviewed-2026-10-15-b";
@@ -39,6 +40,8 @@ export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] 
   movieEditorialProfilesStreamingB,
   movieEditorialProfilesRemainingA,
   movieEditorialProfilesRemainingB,
+  // Last wins: source-researched corrections supersede earlier unverified copy.
+  reviewedMovieDossiers20261016,
 ];
 
 export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> =
