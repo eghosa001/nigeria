@@ -9,6 +9,7 @@ import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
 import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
 import { verifiedPortalSlugs20261016 } from "../lib/job-issuer-portals-reviewed-2026-10-16";
 import { issuerCareerReviewSlugs20261016B } from "../lib/job-issuer-career-research-2026-10-16-b";
+import { checkedIssuerCareerSlugs20261016, checkedIssuerCareers20261016 } from "../lib/job-issuer-more-reviewed-2026-10-16";
 import { individuallyCheckedMoniepointRoles20261016 } from "../lib/job-moniepoint-exact-roles-2026-10-16";
 
 function assert(condition: unknown, message: string): asserts condition {
@@ -311,3 +312,35 @@ console.log("  career guides:", careerGuides.length);
 console.log("  directory page size:", defaultDirectory.items.length);
 console.log("  authorised JobPosting pages:", jobOpportunities.filter((item) => item.jobPostingAuthorization).length);
 console.log("  retired thin vacancy redirects:", retiredJobRedirects.size);
+
+// 25 source-verified employer paths, distinct from earlier reviewed batches.
+assert(checkedIssuerCareerSlugs20261016.length === 25,
+  "Missing one of 25 newly reviewed careers directory records.");
+assert(new Set(checkedIssuerCareerSlugs20261016).size === 25,
+  "Duplicate employer-directory review slug.");
+for (const slug of checkedIssuerCareerSlugs20261016) {
+  const job = jobOpportunities.find(entry => entry.slug === slug);
+  const evidence = checkedIssuerCareers20261016[slug];
+  assert(job?.kind === "career-page" && job.status === "career-page",
+    slug + " must remain a careers directory, not an open vacancy.");
+  assert(job.verifiedAt === "2026-10-16" && job.deadline === undefined,
+    slug + " must have a factual date and no universal application deadline.");
+  assert(job.summary === evidence.lead && job.applicationSteps.length === 5 &&
+    job.applicationSteps.every(step => step.length >= 85),
+    slug + " must serve original issuer-specific application decisions.");
+  assert(job.sourceNotes.some(note => note.includes(evidence.guard.slice(0, 35))),
+    slug + " must retain issuer-specific applicant safety caveat.");
+  assert(job.sources.some(source => source.url === evidence.url &&
+    source.lastChecked === "2026-10-16"), slug + " lost its issuer's original citation.");
+}
+for (const slug of ["keystone-bank-careers", "coronation-merchant-bank-careers",
+  "nem-insurance-careers"]) {
+  assert(/no vacanc|no job openings|no open roles/i.test(jobOpportunities.find(job =>
+    job.slug === slug)?.summary ?? ""), slug + " must not advertise nonexistent live vacancies.");
+}
+assert(jobOpportunities.find(job => job.slug === "prestige-assurance-careers")?.sourceNotes
+  .some(note => /disagree|conflict/i.test(note)),
+  "Prestige's contradictory issuer vacancy pages must remain disclosed.");
+assert(jobOpportunities.find(job => job.slug === "regency-alliance-careers")?.summary
+  .includes("Consulting WP"),
+  "Regency's unreplaced placeholder page must be named, not represented as a professional jobs board.");
