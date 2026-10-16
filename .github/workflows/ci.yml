@@ -333,6 +333,9 @@ jobs:
       - name: Verify 20 public-record service corrections
         if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
         run: node --test tests/service-public-records-20-20261016.test.mjs
+      - name: Check 20 passport, health, pension and housing guide repairs
+        if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
+        run: node --test tests/service-passport-health-pension-housing-20-20261016.test.mjs
       - name: Validate published-content quality changes
         if: steps.scope.outputs.mode == 'quality'
         run: |
