@@ -6994,7 +6994,7 @@
       "The actual registration-plate number and issuing insurer's policy number/receipt for investigation if the databases disagree."
     ],
     "steps": [
-      "Read the registration plate exactly from the vehicle and compare it with the insurer's issued policy schedule before starting either NIID verification route.",
+      "Dial *565*11# on a Nigerian mobile phone with at least ₦20 airtime, or open https://askniid.org/ and choose Check Policy. Before submitting either lookup, copy the exact plate number from the vehicle and compare it to the insurance schedule.",
       "For the NIBSS USSD route, dial *565*11# on a mobile phone and enter the vehicle registration number when prompted. NIBSS publishes a ₦20 charge for each validation.",
       "Read the response: 'Policy Valid till ...' gives a stated expiry date. 'Vehicle Registration Number not found' can reflect an invalid number, no insurance record or a policy that expired over a year ago; it does not by itself prove which situation applies.",
       "Do not treat a successful insurance-database response as a substitute for reading your policy's exclusions, the insurer's genuine licence or claims procedure. If there is a dispute, contact the insurer or the insurance regulator through their official channels.",
@@ -7619,7 +7619,7 @@
       "The precise billing month and kWh/naira calculation, plus any applicable monthly energy-cap or metering-removal information."
     ],
     "steps": [
-      "Get the exact disputed bill, your customer account, previous three months' bill/vending records and the DisCo name before asking for a recalculation.",
+      "Open your latest DisCo electricity bill or prepaid vending receipt and place it beside the previous three months' records. Write down the disputed amount, billing month, kWh and account number before filing the complaint.",
       "Check the disputed bill against your recent billing or vending history and identify the exact amount and billing period you are challenging.",
       "Check whether the account is metered, the meter is faulty/removed, or the bill is an estimate subject to NERC's capping rules.",
       "Ask for an acknowledgment or complaint reference and keep it.",
@@ -7691,7 +7691,7 @@
       "Property's state to determine competent intrastate electricity regulator rather than assume nationwide NERC jurisdiction."
     ],
     "steps": [
-      "Use the DisCo printed on your bill and lodge the issue first with its official Customer Complaints Unit; ask for a ticket/reference, not just a phone promise.",
+      "Open the official customer-support or Customer Complaints Unit page of the DisCo printed on your electricity bill, and lodge a dated complaint there first. Request the provider's reference before using any regulator form.",
       "Allow the DisCo's complaint process to run and keep all replies and evidence.",
       "Attach the original complaint, DisCo response or proof of non-resolution, and all relevant account evidence.",
       "If the regulator asks for additional information, respond using the same complaint reference so the record remains connected.",
@@ -9013,7 +9013,7 @@
       "Accurate vehicle import and VIN evidence so NCS can assess the non-standard declaration without fabricated chassis data."
     ],
     "steps": [
-      "Determine whether the vehicle's customs declaration truly has a non-standard or challenged VIN. Use the normal official CVMS VIN verification route for ordinary imported cars.",
+      "Open https://846.customs.gov.ng/verify/ if you already have a claimed 846 document; enter the reference number to check it. If you need a first application for a challenged VIN, contact an NCS Area Command-approved licensed Customs declarant.",
       "Use the portal's verification/status tools to confirm the resulting record.",
       "Engage a licensed Customs declarant with the necessary Area Command-approved 846 user access; the public is not automatically eligible to create an importer login.",
       "Ask the declarant to show the exact import reference, chassis number and reason why the ordinary VIN valuation procedure cannot be used before filing.",
@@ -10787,7 +10787,7 @@
       "The date you first lodged the complaint with the bank and evidence of nonresolution after the category-specific permitted period."
     ],
     "steps": [
-      "Report the precise disputed debit, card error, loan charge or service failure through the bank's official helpdesk before using the CBN complaints portal. Ask for a complaint reference and dated acknowledgement.",
+      "Open your bank's official app helpdesk, customer complaints page or verified branch contact and file the disputed debit, card error, loan charge or failed service there first. Ask for a dated bank complaint reference before going to the CBN.",
       "Report the issue first through the financial institution's complaint channel and obtain a complaint or tracking reference.",
       "Allow the applicable bank resolution period to run while preserving statements, receipts and correspondence connected to the dispute.",
       "Provide a concise chronology, disputed amount and supporting documents without including PINs, passwords or one-time codes.",
