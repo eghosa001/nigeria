@@ -49,7 +49,13 @@ if (changed.split("\n").includes(layer)) {
   if (!entries.length) throw new Error("No verified film record amendments.");
   const today = new Date(Date.now() + 3600_000).toISOString().slice(0, 10);
   const age = (iso) => (Date.parse(today + "T00:00:00Z") - Date.parse(iso + "T00:00:00Z")) / 86400000;
-  const existingSlugs = new Set([...source.matchAll(/\n    slug: "([^"]+)"/g)].map((match) => match[1]));
+  // The curated catalogue includes separately imported growth-wave titles.
+  const indexedTitles = [
+    source,
+    readFileSync("lib/entertainment-growth-wave-3.ts", "utf8"),
+    readFileSync("lib/entertainment-growth-wave-7.ts", "utf8"),
+  ].join("\n");
+  const existingSlugs = new Set([...indexedTitles.matchAll(/\n    slug: "([^"]+)"/g)].map((match) => match[1]));
   let citations = 0;
   for (let i = 0; i < entries.length; i++) {
     const slug = entries[i][1];
