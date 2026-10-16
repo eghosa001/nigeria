@@ -3668,50 +3668,53 @@
     "slug": "gtbank-block-debit-card",
     "title": "How to block a GTBank debit card",
     "shortTitle": "Block GTBank debit card",
-    "summary": "GTBank's official emergency routes for hotlisting a debit card with the *737*51*10# code or blocking the card inside GTWorld when it is lost, stolen or should no longer be used.",
+    "summary": "GTBank publishes two ways to hotlist a lost or exposed debit card: dial *737*51*10# from the registered GTBank phone line, or use GTWorld → Account Details → Cards → Block Card. The bank's separate *737*6*3# code only checks card status; it is not the blocking command. Treat card blocking, GTWorld account access, and fraudulent transfer reporting as separate security tasks.",
     "category": "Banking",
     "agencySlug": "gtbank",
     "feeLabel": "No card-block fee stated",
-    "feeNote": "GTBank does not state a separate fee for hotlisting or blocking the debit card through the published 737 or GTWorld routes.",
-    "timeline": "The block request is a security action performed through 737 or GTWorld; GTBank does not publish a separate fixed processing delay on the help page.",
+    "feeNote": "GTBank's complaints guide and 737 features page confirm the hotlist command but do not publish a guaranteed fee or claim that the transaction is universally free. Check any bank/network charge shown; fraud reporting and replacement card charges may differ.",
+    "timeline": "Hotlisting is an urgent security instruction, not an SLA-backed guaranteed instant result. Confirm the card's blocked status in GTWorld or through official GTBank support before treating the card as secured.",
     "status": "verified",
     "officialPortal": "https://www.gtbank.com/help-centre/complaints-enquiries",
     "requirements": [
-      "The mobile number registered with the GTBank account when using the *737*51*10# emergency hotlist code",
-      "Access to the GTWorld account when using the in-app card-block route",
-      "The correct card/account selection so the customer does not block a different active card by mistake"
+      "Identify the particular lost, stolen or compromised GTBank debit card and associated account; do not disable the wrong card.",
+      "A working registered GTBank phone line for *737*51*10#, or an uncompromised authenticated GTWorld session.",
+      "Use only the security verification shown inside GTBank's real USSD/app interface. Do not supply a complete card PIN or 737 PIN to an unsolicited caller.",
+      "Access to GTBank's official help-centre contact route if the registered SIM or phone is itself lost."
     ],
     "steps": [
-      "For the fastest USSD route, dial *737*51*10# from the mobile number registered with GTBank.",
-      "Complete the security prompts shown by GTBank and confirm the debit-card hotlist request.",
-      "Alternatively, sign in to GTWorld, open Account Details and select Cards.",
-      "Choose the debit card that needs to be stopped and select Block Card to submit the in-app request.",
-      "After blocking the card, review recent transactions and contact GTBank immediately through an official support channel if any unauthorised activity is visible."
+      "For USSD, dial *737*51*10# from the mobile line registered on your GTBank account; the bank calls this the Card Hotlist option.",
+      "Authenticate using GTBank's actual prompts and select or confirm the debit card being disabled. Do not give anyone your one-time password over a phone call.",
+      "If an already-secure GTWorld session is available, sign in and choose Account Details → Cards → Block Card, then select the affected card and confirm.",
+      "Check for the success notice and, where possible, use GTWorld or GTBank support to verify the card status. The separate *737*6*3# menu is for card-status enquiries, not an alternative hotlist request.",
+      "If suspicious withdrawals or online purchases are visible, contact GTBank's real complaints/enquiries channel immediately, give transaction dates/amounts and preserve evidence for dispute handling.",
+      "If a phone, SIM or banking login is also compromised, ask GTBank what additional account/app transfer restrictions it can apply. Hotlisting plastic alone is not proof that the bank account has been frozen."
     ],
     "notes": [
-      "Blocking the card is different from closing the underlying bank account.",
-      "If the phone itself is lost, use another official GTBank support route rather than waiting to recover the device before securing the account.",
-      "Never provide an OTP, 737 PIN or full debit-card PIN to a caller claiming to reverse a fraudulent transaction."
+      "GTBank's card hotlist command *737*51*10# is independently listed in both its GTWorld help page and its 737 features table. These sources do not establish a fixed universal processing fee.",
+      "The bank's 737 menu lists *737*6*3# for card-status enquiries; do not advise readers to use the status command to stop transactions.",
+      "An in-app Card Block applies to a selected card. A transfer-account restriction, disputed transaction or lost SIM needs separate attention.",
+      "Use the bank's real help-centre links, not a random recovery agent or social-media contact requesting OTPs."
     ],
     "sources": [
       {
-        "label": "GTBank Complaints & Enquiries",
-        "agency": "Guaranty Trust Bank Limited",
+        "label": "GTBank official help — USSD card hotlist and exact GTWorld card menus",
+        "agency": "Official provider",
         "url": "https://www.gtbank.com/help-centre/complaints-enquiries",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "GTBank 737 Features",
-        "agency": "Guaranty Trust Bank Limited",
+        "label": "GTBank 737 features — card hotlist and distinct status check commands",
+        "agency": "Official provider",
         "url": "https://737.gtbank.com/features",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "gtbank-737-open-account",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block GTBank card",
       "GTBank card hotlist code",
@@ -4017,56 +4020,53 @@
     "slug": "opay-emergency-lock-account-card",
     "title": "How to lock an OPay account or card if your phone is lost",
     "shortTitle": "OPay emergency lock",
-    "summary": "OPay's emergency security route for quickly locking an account or card with the published *955*131# and *955*132# codes when a phone, card or account access is at risk.",
+    "summary": "OPay's official security page assigns *955*131# to locking an OPay account after a lost/stolen phone, and *955*132# to locking a missing or compromised OPay card. Its homepage merely lists both together; the detailed security page resolves which code does what. Use the matching code from a trusted phone, complete only legitimate bank verification, confirm the lock, and report suspicious activity to OPay App & Card support (0700 8888 328 or 020 18888 328).",
     "category": "Banking",
     "agencySlug": "opay",
     "feeLabel": "No emergency-lock fee stated",
-    "feeNote": "OPay does not state a separate charge for the emergency lock codes on its security page.",
-    "timeline": "The USSD codes are presented by OPay as an instant account/card locking feature; contact official support immediately if the security action cannot be completed.",
+    "feeNote": "OPay's published homepage/security instructions do not specify an emergency-lock service charge, and do not establish any fixed separate telecom USSD charge. Confirm anything shown by the USSD gateway. Never pay a stranger to perform an emergency lock.",
+    "timeline": "The codes are emergency locking routes but OPay's reviewed pages do not publish a precise end-to-end SLA for failed requests, subsequent refund investigations or unlocking; obtain a bank-issued confirmation and escalate if none appears.",
     "status": "verified",
-    "officialPortal": "https://opayweb.com/security",
+    "officialPortal": "https://static.opayweb.com/security",
     "requirements": [
-      "Access to a phone capable of dialing the OPay emergency USSD service",
-      "Enough account-identifying information to complete the security prompts without revealing a PIN or OTP to another person",
-      "Official OPay support contact details as a fallback if the USSD emergency route does not secure the account"
+      "Decide what is missing: phone/app account access versus the physical or virtual card. OPay publishes different *955# short codes for these.",
+      "Access to any trusted phone capable of dialing the security code, and the affected OPay subscriber/account identification the legitimate USSD prompts ask for.",
+      "Have a way to reach OPay's official app/card support on 0700 8888 328 or 020 18888 328 if the code fails or suspicious transfers are already recorded.",
+      "Do not share the wallet PIN, app password, card details, verification SMS or OTP with callers offering to lock or reopen the account."
     ],
     "steps": [
-      "Dial *955*131# or *955*132#, the emergency security codes OPay publishes for locking an account or card.",
-      "Use the on-screen security menu to identify the account or card that needs to be protected.",
-      "Complete the account-owner verification shown by the USSD service and confirm the lock request.",
-      "Check the account through the official OPay app only if the phone and login remain under the customer's control.",
-      "Contact OPay's official app/card support immediately if the USSD request fails or if unauthorised transactions have already occurred."
+      "If your OPay phone/account access is stolen or compromised, dial *955*131#—the account-lock code stated on OPay's detailed security page.",
+      "If only an OPay card is lost or its number exposed, dial *955*132#—the card-lock code on the same official page. Blocking a card should not be assumed to disable every wallet-transfer channel.",
+      "Read the actual security prompts and authenticate only inside the legitimate OPay USSD interface. Do not transmit a PIN or OTP to a person over chat or telephone.",
+      "Keep any confirmation or support-case reference; if no lock success appears, do not assume the account/card is protected.",
+      "Call OPay App & Card support on 0700 8888 328 or 020 18888 328, or use the official in-app service centre if you still control a secure logged-in device. Tell support whether it concerns account access, a card, or both.",
+      "List the times, amounts and recipients of suspicious transactions for the fraud/dispute request. Request separately how to regain safe access after the incident has been reviewed."
     ],
     "notes": [
-      "OPay publishes the two emergency codes together as quick account/card locking routes but does not map each code to a named action on the public page.",
-      "Do not delay securing the account while trying to recover a lost phone or physical debit card.",
-      "OPay says its in-app customer-service centre can also handle transfer and card disputes with status updates."
+      "The provider's general homepage lists *955*131# and *955*132# together without an explicit mapping, but its detailed official security article maps 131 to an account lock and 132 to a card lock.",
+      "A device theft also threatens the linked SIM and recovery messages. Secure mobile-network access and any other financial apps separately.",
+      "OPay's own security notice says it never requests a customer's login, card details, PIN or token via unsolicited phone, SMS or email.",
+      "A successful lock does not mean a disputed transfer has automatically been reversed; follow the official dispute process."
     ],
     "sources": [
       {
-        "label": "OPay Security",
-        "agency": "OPay",
-        "url": "https://opayweb.com/security",
-        "lastChecked": "2026-10-05"
+        "label": "OPay official security — exact account lock 131, card lock 132 and support numbers",
+        "agency": "Official provider",
+        "url": "https://static.opayweb.com/security",
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "OPay Service Level Agreement",
-        "agency": "OPay",
-        "url": "https://www.opayweb.com/service-level-agreement/",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "OPay Contact Us",
-        "agency": "OPay",
-        "url": "https://static.opayweb.com/contact-us",
-        "lastChecked": "2026-10-05"
+        "label": "OPay current homepage — emergency lock shortcuts and App/Card helpline",
+        "agency": "Official provider",
+        "url": "https://opayweb.com/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "opay-account-opening-nigeria",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "lock OPay account",
       "OPay emergency code",
@@ -6473,44 +6473,42 @@
     "slug": "mtn-sim-swap-replacement",
     "title": "How to replace or swap an MTN SIM in Nigeria",
     "shortTitle": "MTN SIM swap",
-    "summary": "MTN Nigeria's SIM swap/replacement route for a lost, stolen, damaged, faulty or obsolete line, using the registered number, NIN/VNIN and ownership/usage verification before the old number is moved to a new SIM.",
+    "summary": "MTN Nigeria replaces an existing registered SIM for a lost, stolen, damaged, faulty or obsolete line through a new SIM and its Welcome Back replacement form. MTN requires NIN or virtual NIN and may verify the most recent recharge, three frequently dialled numbers and activation year. An authorised proxy request has separate documentary safeguards, including a signed indemnity letter and identity evidence for both people; it is not permission to bypass ownership checks.",
     "category": "Telecommunications",
     "agencySlug": "mtn-nigeria",
     "feeLabel": "New replacement SIM cost applies",
-    "feeNote": "MTN states that the customer purchases a new SIM card for the swap; the current replacement-SIM price is determined by MTN and should be confirmed at the MTN outlet before payment.",
-    "timeline": "MTN does not publish one fixed completion time for every SIM swap; completion depends on identity, NIN and line-ownership verification.",
+    "feeNote": "MTN confirms customers must buy a new SIM for a replacement but does not publish one universal fixed charge in its reviewed SIM Swap guide. Confirm the current price and any verification costs with an authorised MTN outlet before paying.",
+    "timeline": "No universal SIM activation deadline is published on MTN's public SIM Swap page. Completion depends on registered-line status, ownership/NIN checks and new-SIM provisioning. Ask the actual outlet when calls/SMS should resume, and do not promise immediate SMS/OTP delivery.",
     "status": "verified",
     "officialPortal": "https://www.mtn.ng/sim/sim-swap/",
     "requirements": [
-      "An MTN phone number that is already registered",
-      "The customer's National Identification Number or Virtual NIN",
-      "Correct line-usage information when MTN asks for ownership checks, such as last recharge amount/date, frequently dialled numbers and year of activation",
-      "A new MTN SIM card onto which the existing phone number can be transferred"
+      "The original registered MTN phone number and the applicant's NIN or VNIN. An unregistered line is not eligible under the published minimum conditions.",
+      "The completed MTN SIM REPLACEMENT (Welcome Back) form, and a new MTN SIM purchased through a legitimate MTN channel.",
+      "Correct answers where MTN requests historical line-usage information: latest recharge amount/date, three frequently dialled numbers and year of activation.",
+      "For a proxy: NIN for both subscriber and proxy, the subscriber's accepted ID/passport details where applicable, court/notary affidavit stating reason, original SIM pack/eSIM QR profile or affidavit, and signed application/indemnity letter.",
+      "The proxy must already have been an MTN customer for more than 30 days, must not have represented someone else in the preceding 90 days, and must visit an MTN store with hard-copy documentation."
     ],
     "steps": [
-      "Open MTN Nigeria's SIM Swap page or visit an MTN store and request replacement of the registered line.",
-      "Provide the registered phone number and NIN or Virtual NIN for identity validation.",
-      "Answer the line-ownership questions MTN presents, including usage information when those checks appear.",
-      "Purchase the replacement MTN SIM and allow the MTN agent or approved swap channel to transfer the existing number to it.",
-      "Confirm that the replacement SIM registers on the MTN network and test calls/SMS before discarding the old or damaged SIM."
+      "Secure accounts associated with a stolen SIM or phone, including bank services and messaging accounts, through those providers' genuine support first; replacing the number later cannot undo transactions already made.",
+      "Review https://www.mtn.ng/sim/sim-swap/ and get the Welcome Back form. Confirm the old line is registered, prepare NIN/VNIN and historical usage details, and find an MTN store through the official site.",
+      "For your own line, visit the authorised MTN service location with the verification details and complete the SIM replacement form. Confirm the new SIM price before buying.",
+      "Answer the actual MTN ownership questions truthfully: last recharge amount/date, three frequently dialled numbers and year the line was activated if requested. Do not purchase another person's claimed 'OTP bypass' services.",
+      "If the owner cannot attend, use MTN's documented proxy route instead: assemble both NINs, owner photo ID, reason affidavit, proof of line ownership or substitute affidavit, indemnity letter and the proxy's eligibility evidence.",
+      "For a proxy, the nominated person must bring hard copies to an MTN store and coordinate with customercare.ng@mtn.com about the store visit, as MTN's published instructions require.",
+      "When staff completes the transfer, put the number on the new MTN SIM. Test inbound/outbound calling and SMS and verify network service; ask the outlet what to do if provisioning is still pending."
     ],
     "notes": [
-      "MTN lists lost, stolen, damaged, faulty and obsolete SIMs as reasons a customer may need a swap or replacement.",
-      "A SIM swap keeps the existing phone number but replaces the physical SIM profile.",
-      "For a stolen phone or SIM, report the loss promptly and do not disclose OTPs or banking credentials to anyone offering an unofficial swap."
+      "The provider explicitly says purchase of a replacement SIM is required; no accurate flat naira amount is shown on the official source for every case.",
+      "MTN's proxy rules are restrictive: proxy must be an established subscriber for over 30 days and cannot have been a proxy for another customer within the last 90 days.",
+      "The replacement form and registration checks are distinct from the separate process for converting an existing line to an eSIM.",
+      "Bank and app security must be handled independently if a SIM/phone was stolen. Never share PINs or OTPs with a purported SIM-swap agent."
     ],
     "sources": [
       {
-        "label": "MTN Nigeria SIM Swap",
-        "agency": "MTN Nigeria",
+        "label": "MTN Nigeria official SIM Swap/Welcome Back and detailed proxy safeguards",
+        "agency": "Official provider",
         "url": "https://www.mtn.ng/sim/sim-swap/",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "MTN SIM Services",
-        "agency": "MTN Nigeria",
-        "url": "https://www.mtn.ng/sim/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -6519,7 +6517,7 @@
       "nin-sim-linkage",
       "check-nin-sim-linkage-status"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "MTN SIM swap Nigeria",
       "replace lost MTN SIM",
@@ -6590,44 +6588,40 @@
     "slug": "airtel-4g-sim-swap",
     "title": "How to upgrade or swap an Airtel SIM to 4G",
     "shortTitle": "Airtel 4G SIM swap",
-    "summary": "Airtel Nigeria's route for moving an existing number to a 4G-compatible USIM through an Airtel shop/partner outlet or the available self-service SIM swap, while retaining the phone number.",
+    "summary": "An Airtel customer needs both a 4G-compatible device and an LTE-ready Airtel SIM (USIM) to receive 4G service where coverage exists. Airtel's current FAQ says a customer can visit an Airtel store/partner outlet, or initiate its supported self-service SIM swap, retain the existing number and pay the current SIM cost. The FAQ does not provide a universal self-service web address or fixed swap fee, so use only the route Airtel itself makes available.",
     "category": "Telecommunications",
     "agencySlug": "airtel-nigeria",
     "feeLabel": "Current Airtel SIM cost applies",
-    "feeNote": "Airtel states that the current SIM cost applies to a 4G LTE SIM swap; confirm the amount at the Airtel outlet or self-service route before completing the swap.",
-    "timeline": "Airtel does not publish one universal completion time for every 4G SIM swap; the number is retained after the swap is completed.",
+    "feeNote": "Airtel says the prevailing SIM price applies to the 4G LTE replacement, without displaying one confirmed national naira price on its 4G support page. Confirm a legitimate outlet quote or supported self-service checkout; regular data bundle rates apply once service works.",
+    "timeline": "Airtel has not published a guaranteed completion time for every LTE SIM swap on its 4G support page. New SIM registration and identity verification must complete before the original number is transferred; network coverage and device settings affect whether LTE appears.",
     "status": "verified",
     "officialPortal": "https://www.airtel.com.ng/ng/personal/support/airtel-4g",
     "requirements": [
-      "An existing Airtel line that needs a 4G-compatible SIM/USIM",
-      "A 4G-compatible phone or device if the customer intends to use Airtel LTE service",
-      "The identity/SIM-swap documents requested by Airtel for ownership verification",
-      "A replacement Airtel SIM obtained through an Airtel shop, partner outlet or supported self-service swap"
+      "An existing Airtel number and proof of subscriber ownership required for the SIM swap. Bring valid identity/NIN documentation requested at the Airtel outlet.",
+      "A 4G/LTE-compatible smartphone, router or hotspot. Airtel says the SIM upgrade alone cannot make an unsupported device LTE-capable.",
+      "An Airtel USIM replacement purchased via Airtel shop/partner outlet or a genuine self-service swap when that option is actually offered.",
+      "Check LTE coverage in your area and ensure the device's preferred network can select LTE/4G; some locations may still connect to 3G/2G."
     ],
     "steps": [
-      "Open Airtel Nigeria's 4G support page and confirm that the existing SIM needs an upgrade for 4G/LTE service.",
-      "Visit an Airtel shop or partner outlet, or start Airtel's supported self-service SIM swap route.",
-      "Complete Airtel's ownership and identity verification for the existing mobile number.",
-      "Pay the current replacement-SIM amount and complete the swap from the old SIM to the new 4G-capable Airtel SIM.",
-      "Insert/activate the new SIM, enable LTE/4G in the device network settings and confirm that the existing Airtel number remains active."
+      "On the current phone, open cellular/network settings and check for LTE/4G: iPhone Settings → Mobile/Cellular → Voice & Data; Android Settings → Mobile Data → Network Mode (the labels vary by device).",
+      "If your handset supports 4G but the existing Airtel SIM does not, open Airtel's published 4G support page and decide between visiting an Airtel Store/partner outlet or an available genuine self-service SIM-swap option.",
+      "Present or enter the line-registration and identity details Airtel requests and select a 4G-capable USIM. The public FAQ does not specify a universal web link or identical document list for every subscriber.",
+      "Confirm the replacement's present SIM cost, complete the subscriber-verification step and wait for Airtel to move your existing number to the new SIM.",
+      "Insert the new SIM and select LTE/4G where appropriate, then confirm network registration and test calls, SMS and data. Existing eligible Airtel bundles work across 2G/3G/4G; buying a special '4G plan' is not mandatory.",
+      "If the phone remains on 3G/2G, check 4G coverage, phone-band compatibility, plan balance and device network setting before concluding the swap failed. Contact Airtel's official store/support if the number never becomes active."
     ],
     "notes": [
-      "Airtel says the customer's existing phone number is retained after the 4G SIM swap.",
-      "A special 4G data plan is not required; eligible Airtel data plans can work across 2G/3G/4G.",
-      "The 4G SIM upgrade is different from Airtel eSIM activation."
+      "The published Airtel 4G guide explicitly supports store and partner swaps plus available self-service swapping, but does not publish one guaranteed public self-service URL or flat price.",
+      "Keep the same Airtel number through a valid 4G SIM swap; do not confuse a SIM upgrade with buying a new line.",
+      "Phone compatibility, LTE coverage and device settings matter independently of a 4G SIM. Airtel states the usual eligible bundles work on LTE.",
+      "A physical 4G USIM is different from Airtel eSIM activation: the separate eSIM route requires EID compatibility and an outlet-issued QR profile."
     ],
     "sources": [
       {
-        "label": "Airtel Nigeria 4G Support",
-        "agency": "Airtel Nigeria",
+        "label": "Airtel Nigeria official 4G SIM, self-service/store swap, LTE settings and standard data policy",
+        "agency": "Official provider",
         "url": "https://www.airtel.com.ng/ng/personal/support/airtel-4g",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Airtel Nigeria FAQ",
-        "agency": "Airtel Nigeria",
-        "url": "https://www.airtel.com.ng/ng/personal/faq",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -6635,7 +6629,7 @@
       "mtn-sim-swap-replacement",
       "nin-sim-linkage"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Airtel SIM swap Nigeria",
       "Airtel 4G SIM upgrade",
@@ -7328,38 +7322,40 @@
     "slug": "sterling-emergency-block-account",
     "title": "How to block a Sterling account if your phone is lost",
     "shortTitle": "Sterling emergency block",
-    "summary": "Sterling Bank's emergency USSD account-block route using *822*911# from any mobile phone for registered Sterling USSD users when a device is lost or unauthorised access is suspected.",
+    "summary": "Sterling OneBank says a registered *822# USSD customer can block a compromised account by dialing *822*911# from any phone and completing the authentic bank prompts. The bank explicitly requires prior USSD registration. If the customer has not registered, lost the phone or cannot complete the request, contact Sterling's One Customer Centre on 07008220000 or an official branch without delaying fraud reporting.",
     "category": "Banking",
     "agencySlug": "sterling-bank",
     "feeLabel": "No emergency-block fee stated",
-    "feeNote": "Sterling's OneBank FAQ does not state a separate charge for using the published *822*911# emergency block route.",
-    "timeline": "Sterling presents *822*911# as an immediate emergency action; account recovery after blocking uses Sterling support or branch assistance.",
+    "feeNote": "Sterling's published OneBank FAQ does not state a bank-specific fee for the emergency block; it does not guarantee that all telecom USSD sessions are free. Confirm any prompt before submitting. Do not send a 'freeze release' payment to an agent.",
+    "timeline": "The emergency code is intended for immediate account protection but the official page does not give a measured completion guarantee or an automatic unblocking deadline. Check confirmation and seek bank support when no success appears.",
     "status": "verified",
     "officialPortal": "https://sterling.ng/onebank/faqs/",
     "requirements": [
-      "A Sterling account whose owner has previously registered for Sterling USSD banking",
-      "Access to any mobile phone capable of dialing the *822*911# emergency code",
-      "The account-owner information requested by Sterling's USSD prompts",
-      "Official Sterling support details for follow-up if the account or OneBank profile must later be restored"
+      "A Sterling account exposed through a stolen handset, unauthorised login, compromised credentials or suspicious transfers.",
+      "Prior registration as a Sterling *822# USSD user; Sterling explicitly states this prerequisite even when dialing the emergency code from another phone.",
+      "Access to any phone that can connect to the *822*911# USSD service and the legitimate account-owner identification required by the menus.",
+      "Sterling's official One Customer Centre number 07008220000 or a bank branch as fallback for people who cannot authenticate or were never enrolled."
     ],
     "steps": [
-      "Open the phone dialler on any available mobile phone and dial *822*911# as soon as the Sterling account is at risk.",
-      "Complete the account-identification and security prompts shown by Sterling's emergency USSD menu.",
-      "Confirm the request to block the Sterling account from further unauthorised access.",
-      "Review recent activity through a safe official channel after the account is secured.",
-      "Contact Sterling's One Customer Centre or visit a branch for recovery/unblocking assistance after the threat has been contained."
+      "If Sterling access may be compromised, borrow a trusted phone if necessary and dial *822*911#. Sterling states the emergency block can originate from any mobile number.",
+      "Use the bank's on-screen identification/authentication questions to locate the correct account and confirm the emergency restriction. Never tell a caller your USSD PIN or OneBank OTP.",
+      "Check for a bank-issued success indication. If no success appears, do not infer that all outgoing account channels have been secured.",
+      "If you never registered for Sterling *822# USSD, use One Customer Centre 07008220000 or an authorised branch for immediate reporting. Registration via *822# is a separate enrolment step, not an assured emergency workaround.",
+      "After confirmation, report suspect transfers, card activity and login/device compromise to Sterling, keeping approximate timestamps, beneficiary details and transaction references.",
+      "Ask Sterling to explain the block's scope and the identity checks required to safely restore OneBank or other account services when the immediate threat is resolved."
     ],
     "notes": [
-      "Sterling says the emergency code works for customers who are already registered Sterling USSD users.",
-      "A customer who has not registered for USSD can dial *822# and use Registration, but this should not delay other official fraud-reporting steps during an active compromise.",
-      "Sterling warns customers never to disclose OTPs or security credentials to callers or message senders."
+      "Sterling's official FAQ explicitly says emergency *822*911# access requires a previously registered USSD user, even though the command can be dialed from any phone.",
+      "The bank publishes 07008220000 as its One Customer Centre contact number and instructs customers never to disclose security/OTP details.",
+      "A secured bank account does not automatically recover a stolen phone or SIM, or reverse transactions; handle these separately.",
+      "No third party can legitimately bypass the bank's identity checks for a recovery fee."
     ],
     "sources": [
       {
-        "label": "Sterling OneBank FAQs",
-        "agency": "Sterling Bank",
+        "label": "Sterling OneBank FAQs — precise *822*911# preregistration, any-phone route and support",
+        "agency": "Official provider",
         "url": "https://sterling.ng/onebank/faqs/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7368,7 +7364,7 @@
       "gtbank-block-debit-card",
       "opay-emergency-lock-account-card"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block Sterling account",
       "Sterling *822*911#",
@@ -7839,44 +7835,46 @@
     "slug": "union-bank-debit-card-management",
     "title": "How to request, block or unblock a Union Bank debit card",
     "shortTitle": "Union Bank debit card",
-    "summary": "Union Bank's UnionOnline self-service route for requesting a debit card, choosing the card type and pickup branch, or blocking/unblocking an existing debit card with security-word and OTP/token authentication.",
+    "summary": "Union Bank offers card request, block and unblock actions inside UnionOnline Self Service after signing in with the right account and authenticating with a security word and token/OTP. Its separate *826# banking table identifies *826*21# for debit-card requests/management; it also publishes *826*6# to block an account from the registered phone and *826*6*mobile number# from another phone. A card block and an account block have different effects.",
     "category": "Banking",
     "agencySlug": "union-bank",
     "feeLabel": "Card issuance or replacement charges can apply",
-    "feeNote": "Union Bank's FAQ documents the request/block workflow but does not publish one universal debit-card charge on that page. Confirm the current card fee before submitting a new-card or replacement request.",
-    "timeline": "Union Bank does not publish one universal card-production time on the FAQ; the customer is notified when a requested card is ready for branch pickup.",
+    "feeNote": "Union Bank's self-service FAQ documents the process but does not supply a confirmed universal card-block or replacement-card tariff. Bank and network charges can vary; request the bank's actual quote before ordering a new card.",
+    "timeline": "Existing card blocking uses the authenticated UnionOnline/USSD process. The provider promises no specific universal card-delivery date on its FAQ, and says a newly requested card is collected at a chosen branch after the bank's readiness communication.",
     "status": "verified",
     "officialPortal": "https://unionbankng.com/support/faqs/",
     "requirements": [
-      "An existing Union Bank account with access to UnionOnline",
-      "The account number from which the debit card should be requested or managed",
-      "The customer's UnionOnline security word and Token/OTP for authentication",
-      "For a new card, the preferred card type/class and Union Bank branch selected for pickup"
+      "For UnionOnline, a legitimate account login, the affected account/card and the customer's registered security word and token/OTP.",
+      "For a card request, the desired Mastercard/Verve card class, associated account and a preferred Union Bank pickup branch.",
+      "For *826# card-management, access to the bank's valid USSD channel; this is separate from full account blocking under *826*6#.",
+      "If a phone is lost or card activity is fraudulent, access to genuine Union Bank customer support as a recovery/escalation option rather than relying on an intercepted OTP."
     ],
     "steps": [
-      "Sign in to UnionOnline and open the account that needs the debit-card service.",
-      "Open Self Service and choose Request for Debit Card, or choose Block/Unblock Debit Card for an existing card.",
-      "For a new card, select the account, card type/class and the preferred Union Bank pickup branch.",
-      "Enter the security word and Token/OTP and submit the card request or block/unblock instruction.",
-      "For a new card, wait for Union Bank's readiness notification before visiting the selected branch for collection."
+      "If a card is lost or its details have been exposed, sign into genuine UnionOnline from a trusted device, open your account → Self Service → Block/Unblock Debit Card.",
+      "Select the correct account/card and submit the block using your UnionOnline security word and bank-issued token/OTP. Confirm the successful result before assuming purchases have stopped.",
+      "Alternatively, Union Bank's published *826# menu lists *826*21# for card management including blocking or unblocking. Select the displayed card-specific action and verify the result.",
+      "For a new card request, use UnionOnline → Self Service → Request for Debit Card; select the account, card type/class and the branch for pickup, then submit using the security word and token/OTP.",
+      "If your whole account rather than just the debit card is compromised, Union Bank lists *826*6# from the linked phone and *826*6*mobile number# from a different phone for account blocking. Confirm which account and channels the command protects.",
+      "For suspicious withdrawals or purchases, notify Union Bank support separately, retain transaction references, and ask about restoring or replacing the card only after identity is verified."
     ],
     "notes": [
-      "Union Bank also publishes *826*21# for debit-card request/management through USSD.",
-      "Blocking a card is different from blocking the entire bank account.",
-      "If card details are compromised, block the card before waiting to investigate unauthorised transactions."
+      "The same *826*21# menu supports card requests and management; the user should choose the specific action shown rather than assume this shortcode alone blocks a card.",
+      "For the larger risk of account takeover, Union Bank's published USSD table lists different *826*6# emergency account-blocking strings.",
+      "UnionOnline uses security word and token/OTP. No genuine support agent needs the user to disclose their token code in a call or unsolicited message.",
+      "A replacement card has pickup/issuance rules separate from the act of blocking the previous card."
     ],
     "sources": [
       {
-        "label": "Union Bank FAQs",
-        "agency": "Union Bank of Nigeria",
+        "label": "Union Bank FAQs — UnionOnline card request/block and security-word/token steps",
+        "agency": "Official provider",
         "url": "https://unionbankng.com/support/faqs/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "Union Bank 24/7 Banking",
-        "agency": "Union Bank of Nigeria",
-        "url": "https://unionbankng.com/services/247-banking/",
-        "lastChecked": "2026-10-05"
+        "label": "Union Bank official *826# table — card management and distinct account blocking",
+        "agency": "Official provider",
+        "url": "https://www.unionbankng.com/personal/826-2/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7884,7 +7882,7 @@
       "union-bank-826-ussd",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "request Union Bank debit card",
       "block Union Bank card",
@@ -7897,7 +7895,7 @@
     "slug": "union-bank-826-ussd",
     "title": "How to use Union Bank *826# USSD banking",
     "shortTitle": "Union Bank *826#",
-    "summary": "Union Bank's *826# mobile banking route for transfers, airtime, bills, card management, account blocking and other supported services without needing internet access.",
+    "summary": "Union Bank's official *826# USSD menu covers account balance, airtime, transfers, bills and separate emergency security functions. Its transaction table lists *826*21# for card request/management, *826*6# for account blocking from the registered line, and *826*6*mobile number# to initiate a block from another phone. Card blocking and whole-account blocking are different tasks; choose the menu that matches the risk and verify a successful restriction.",
     "category": "Banking",
     "agencySlug": "union-bank",
     "feeLabel": "USSD and transaction charges can apply",
@@ -7911,23 +7909,30 @@
       "The Union Bank USSD PIN or security authentication requested before a financial transaction is completed"
     ],
     "steps": [
-      "Open your phone dialler and dial *826# or the published direct short code for the Union Bank service you need.",
-      "Choose the transfer, airtime, bills, card, balance or other service from the USSD menu.",
-      "Enter the account, recipient or payment information requested for that service.",
-      "Review the transaction details and authenticate the request with the required Union Bank USSD PIN/security step.",
-      "Keep the success or reference message, and use *826*6# if the urgent need is to block the customer's Union Bank account."
+      "Dial *826# from the registered Union Bank account phone for ordinary balance, airtime, payment or transfer services and choose the action displayed.",
+      "For debit-card requests/management, Union Bank lists *826*21#. Enter the Card Management menu, choose Block Card for a lost card or Request Card for a new card, then authenticate with the bank's legitimate PIN/security prompts.",
+      "For a compromised whole account, the bank publishes *826*6# when using the linked phone, or *826*6*mobile number# when dialing from a different line. Identify the registered line and the actual account before confirming.",
+      "Do not confuse the card and account lock options; a card restriction does not demonstrate that transfer access or other payment channels have been blocked.",
+      "Keep the verified transaction/lock confirmation. If the USSD request stops midway or the phone/SIM is stolen, contact genuine Union Bank support rather than continue guessing a PIN.",
+      "When a disputed transfer or stolen SIM is involved, document the event and ask the bank how to restore safe access after the incident has been reviewed."
     ],
     "notes": [
-      "Union Bank publishes direct codes including *826*4# for balance, *826*21# for card management and *826*6# for account blocking.",
-      "The bank also publishes *826*6*mobile number# to block an account from another phone number.",
-      "A debit-card block and an entire account block are separate security actions."
+      "Union Bank's published *826# page lists three distinct strings: *826*21# for card-management, *826*6# for blocking from your number, and *826*6*mobile number# from another line.",
+      "Existing card blocks can also be requested using UnionOnline's Self Service → Block/Unblock Debit Card, with a security word and token/OTP.",
+      "Never share the USSD PIN, card PIN or OTP with a stranger helping to freeze an account; authenticate only inside the actual bank channel."
     ],
     "sources": [
       {
-        "label": "Union Bank *826# USSD Banking",
-        "agency": "Union Bank of Nigeria",
+        "label": "Union Bank official *826# table — card management and two account block variants",
+        "agency": "Official provider",
         "url": "https://www.unionbankng.com/personal/826-2/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Union Bank UnionOnline FAQ — separate card block path",
+        "agency": "Official provider",
+        "url": "https://unionbankng.com/support/faqs/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7935,7 +7940,7 @@
       "union-bank-debit-card-management",
       "keystone-7111-ussd"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Union Bank USSD code",
       "*826# Union Bank",
@@ -8006,43 +8011,46 @@
     "slug": "keystone-emergency-account-block",
     "title": "How to block Keystone Bank accounts if your phone is lost",
     "shortTitle": "Keystone emergency block",
-    "summary": "Keystone Bank's emergency *7111*911# panic-code route for placing a Post No Debit restriction on a customer's accounts from any phone when the registered phone is lost or account access is at risk.",
+    "summary": "Keystone Bank publishes the emergency *7111*911# panic code for a lost phone or threatened account. Dial it from any phone and use the menu to block the customer's linked Keystone accounts; Keystone describes the result as a Post No Debit (PND) restriction. Its help pages also give an emergency contact centre (070020003000) and contactcentre@keystonebankng.com if the phone command fails.",
     "category": "Banking",
     "agencySlug": "keystone-bank",
     "feeLabel": "No emergency-block fee stated",
-    "feeNote": "Keystone does not state a separate fee for using the published *7111*911# panic code to secure accounts.",
-    "timeline": "Keystone presents the panic code as an immediate emergency action; contact the bank if the code cannot complete the restriction.",
+    "feeNote": "The bank's published USSD and KeyMobile FAQ confirm the panic code but do not establish one specific emergency-block fee. Telecom session fees, if shown, may be separate; do not transfer a release fee to an intermediary.",
+    "timeline": "Keystone describes an immediate emergency response but supplies no universal completion SLA for failed authentication or for lifting the PND restriction. Confirm the actual successful block with bank support.",
     "status": "verified",
     "officialPortal": "https://www.keystonebankng.com/ussd-banking/",
     "requirements": [
-      "Access to any mobile phone capable of dialing the Keystone Bank emergency USSD code",
-      "The account number or registered phone-number information requested by the panic-code prompts",
-      "An official Keystone Bank support channel as a fallback if the USSD restriction cannot be completed"
+      "A Keystone Bank account at risk due to stolen/lost phone, suspicious access or compromised login credentials.",
+      "A trusted mobile phone (not necessarily the registered handset) capable of dialing *7111*911#.",
+      "The correct registered account/phone information to identify the affected accounts through genuine bank prompts.",
+      "The bank's verified emergency support number 070020003000 or contactcentre@keystonebankng.com if the USSD request cannot be completed."
     ],
     "steps": [
-      "Open any available phone's dialler and dial *7111*911# as soon as the Keystone Bank account needs to be secured.",
-      "Enter the account or phone information requested by the emergency menu.",
-      "Complete the verification prompt and confirm the instruction to place a Post No Debit restriction on the accounts.",
-      "Contact Keystone Bank immediately through the official contact centre or a branch if the panic-code request fails.",
-      "After the accounts are secured, review recent transactions with the bank and follow its official process before restoring normal account access."
+      "As soon as a Keystone bank-linked phone or credential is compromised, dial *7111*911# from any available phone; Keystone's official USSD and KeyMobile help pages both publish this command.",
+      "Complete only the bank's official prompts to identify and restrict the customer's Keystone accounts; the bank characterises this as Post No Debit rather than merely disabling one ATM card.",
+      "Save any on-screen or SMS confirmation; if the session ends without confirmation, do not assume a full restriction succeeded.",
+      "Immediately contact Keystone on 070020003000 or contactcentre@keystonebankng.com if you cannot authenticate, the menu fails, or unauthorised transfers appear.",
+      "Give Keystone dates/amounts/beneficiaries of suspicious activity and request the bank's official dispute and recovery steps; keep a case/reference number.",
+      "Ask the bank for identity verification and the procedure to lift the PND restriction when the compromised phone, SIM and account credentials have been secured."
     ],
     "notes": [
-      "Keystone explicitly says the *7111*911# panic code can be dialled from any phone.",
-      "The bank says the code places a PND restriction on all the customer's accounts.",
-      "Do not share a transaction PIN, OTP or card PIN with anyone offering to unlock the account."
+      "A Post No Debit (PND) security restriction is broader than simply hotlisting one debit card. It can interrupt normal outgoing use until the bank lifts the restriction.",
+      "Keystone explicitly permits dialing its *7111*911# panic code from any phone; it also publishes its contact-centre number and email for fallback.",
+      "Keystone's mobile app help notes three incorrect PIN entries can lock out that channel, so do not keep guessing a secret PIN during an emergency.",
+      "Never disclose an OTP or transaction PIN to an unsolicited 'fraud reversal' caller."
     ],
     "sources": [
       {
-        "label": "Keystone Bank USSD Banking",
-        "agency": "Keystone Bank Limited",
+        "label": "Keystone official *7111# banking — any-phone panic code and fallback support",
+        "agency": "Official provider",
         "url": "https://www.keystonebankng.com/ussd-banking/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "Keystone KeyMobile App FAQ",
-        "agency": "Keystone Bank Limited",
+        "label": "Keystone KeyMobile FAQ — lost-phone account-block guidance",
+        "agency": "Official provider",
         "url": "https://www.keystonebankng.com/keymobile-app/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -8050,7 +8058,7 @@
       "union-bank-826-ussd",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Keystone Bank emergency code",
       "*7111*911#",
@@ -9162,7 +9170,7 @@
     "slug": "stanbic-909-ussd-banking",
     "title": "How to register and use Stanbic IBTC *909# USSD banking",
     "shortTitle": "Stanbic *909#",
-    "summary": "Stanbic IBTC's *909# registration route using the customer's debit card or BVN, date of birth and a four-digit PIN, followed by transfers, bills, airtime/data, card and account services.",
+    "summary": "Stanbic IBTC's *909# banking can be registered from the bank-linked phone by dialing *909*11*1#, choosing debit-card/BVN verification, entering date of birth in DDMMYYYY format and creating a four-digit PIN. Normal airtime/bill/transfer features are separate from its *909*1*911# emergency account-blocking option for a stolen phone or compromised banking access. The bank lists its Contact Centre as the fallback when a SIM or the registered phone is unavailable.",
     "category": "Banking",
     "agencySlug": "stanbic-ibtc-bank",
     "feeLabel": "Telecom USSD session charge and transaction fees can apply",
@@ -9177,23 +9185,25 @@
       "A new four-digit USSD transaction PIN"
     ],
     "steps": [
-      "Open the phone dialler on the Stanbic IBTC customer line and dial *909*11*1# to start USSD registration.",
-      "Enter the last six debit-card digits or BVN and then enter the date of birth in DDMMYYYY format.",
-      "Create a four-digit USSD PIN and enter it again to complete the setup.",
-      "Dial *909# and choose the required transfer, airtime/data, bill, electricity, card, statement or other service.",
-      "Authenticate the selected transaction with the USSD PIN and keep the success or reference message."
+      "Using the Stanbic registered mobile number, dial *909*11*1# to enrol or reset the Stanbic IBTC *909# PIN.",
+      "Select debit card or BVN identification. Enter the last six digits of the card or BVN as directed, plus the date of birth in DDMMYYYY format to verify the user.",
+      "Create a four-digit transaction PIN within the legitimate USSD prompts, confirm it, and keep it secret.",
+      "For everyday banking, dial *909# and select the desired airtime, data, money transfer, bill-payment or other supported option. Check beneficiary information and transaction/session charges before authenticating.",
+      "For a stolen SIM/phone or compromised account, Stanbic separately publishes *909*1*911# as its instant account-block command. Confirm the security result, not just the USSD session opening.",
+      "If the account cannot be blocked with the shortcode, contact Stanbic immediately on 0700 909 9099 or 0201 422 2222 and report any suspicious transfers separately."
     ],
     "notes": [
-      "Stanbic IBTC says *909# works on any type of mobile phone.",
-      "The service can also open an instant account and block an account through dedicated short codes.",
-      "The registered phone number should have enough airtime for the telecom USSD session charge."
+      "The registered phone and card/BVN identity process applies to ordinary *909# registration; an emergency account-block shortcode is a different operation.",
+      "Stanbic's official FAQ publishes both *909*1*911# and its contact-centre numbers for lost/stolen phones and SIMs.",
+      "Stanbic mentions a ₦6.98 airtime prerequisite on its USSD help page. That is not proof the emergency block itself carries a particular bank charge.",
+      "Never give another person the *909# PIN, bank card digits or date of birth in response to an unsolicited 'security' phone call."
     ],
     "sources": [
       {
-        "label": "Stanbic IBTC *909# USSD Banking",
-        "agency": "Stanbic IBTC Bank",
+        "label": "Stanbic official *909# FAQ — enrolment, instant account block and contact route",
+        "agency": "Official provider",
         "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -9201,7 +9211,7 @@
       "stanbic-emergency-account-block",
       "stanbic-bizsmart-account"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Stanbic IBTC USSD code",
       "*909# Stanbic",
@@ -9265,37 +9275,40 @@
     "slug": "stanbic-emergency-account-block",
     "title": "How to block a Stanbic IBTC account with *909*1*911#",
     "shortTitle": "Stanbic emergency block",
-    "summary": "Stanbic IBTC's published instant account-blocking route using *909*1*911# when a customer's phone or banking access is lost or compromised.",
+    "summary": "Stanbic IBTC's official *909# support page directs customers whose mobile phone or SIM is lost, stolen or damaged to dial *909*1*911# to block the bank account immediately. It also publishes its Customer Contact Centre on 0700 909 9099 or 0201 422 2222. A card lock, an account-level block and recovering a damaged or lost SIM are separate actions; confirm the result before assuming all risks are contained.",
     "category": "Banking",
     "agencySlug": "stanbic-ibtc-bank",
     "feeLabel": "No emergency-block fee stated",
-    "feeNote": "Stanbic IBTC does not state a separate fee for the instant account-blocking code on its USSD guide.",
-    "timeline": "The provider presents *909*1*911# as an instant account-blocking service after the required security prompts succeed.",
+    "feeNote": "Stanbic IBTC's published FAQ does not specify a separate bank fee for the emergency account-block command. The bank separately says normal *909# access may require telecom USSD airtime, quoting ₦6.98 at the time of its FAQ; check the current session charge.",
+    "timeline": "Stanbic labels the feature 'instant account blocking' but provides no guaranteed date for unblocking, charge reversal or restoring a lost phone number. Keep the bank's success notice or escalate immediately if the request fails.",
     "status": "verified",
     "officialPortal": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
     "requirements": [
-      "A Stanbic IBTC account that needs urgent protection",
-      "Access to a phone capable of dialing the *909# security service",
-      "The account/security information requested during the block-account prompts"
+      "The affected Stanbic IBTC bank account and the associated registered phone details, even when calling from an alternative device.",
+      "A working mobile phone capable of dialing *909*1*911# and any legitimate identification prompts shown by the bank.",
+      "Stanbic official 24/7 contact centre details 0700 909 9099 / 0201 422 2222 when USSD is unavailable.",
+      "A record of unexpected transfers or account messages to lodge a fraud report if funds may have been moved."
     ],
     "steps": [
-      "Open a phone dialler and dial *909*1*911# as soon as the Stanbic IBTC account needs to be secured.",
-      "Enter the account or phone information requested by the emergency USSD menu.",
-      "Complete the security verification and confirm the account-block instruction.",
-      "Keep the success message and contact Stanbic IBTC through an official support channel if the block does not complete.",
-      "Review recent transactions with the bank before requesting restoration of normal access."
+      "If the SIM, phone or account credentials are compromised, dial Stanbic's exact *909*1*911# emergency account-block command.",
+      "Use the actual *909# account verification menus, confirm you are restricting the intended account and complete only in-channel security prompts.",
+      "Keep the success screen/SMS if it appears and check with Stanbic whether the account block applies to the intended accounts; a started menu is not proof the request completed.",
+      "If USSD cannot run or the handset is unavailable, call 0700 909 9099 or 0201 422 2222 using the official bank contact centre and urgently request the restriction.",
+      "Report any suspicious outgoing transfers separately with amounts, timestamps and destination references, and secure the stolen SIM with the network.",
+      "Ask the bank what identity and documentation will be needed to remove restrictions and re-enrol a safe device after the immediate incident."
     ],
     "notes": [
-      "Stanbic IBTC lists *909*1*911# as its instant account-blocking USSD string.",
-      "A card block and an account block are separate actions.",
-      "Never share the USSD PIN or OTP while trying to secure the account."
+      "Both the USSD feature list and the lost-phone answer on Stanbic's official site explicitly name *909*1*911# for instant account blocking.",
+      "The same page publishes 0700 909 9099 and 0201 422 2222 as contact-centre routes; do not rely exclusively on a stolen mobile phone.",
+      "Stanbic lists an ordinary *909# telecom session airtime requirement, but that statement does not establish a specific emergency-block bank fee.",
+      "Blocking an account does not automatically replace the SIM or reverse disputed transactions."
     ],
     "sources": [
       {
-        "label": "Stanbic IBTC *909# USSD Banking",
-        "agency": "Stanbic IBTC Bank",
+        "label": "Stanbic IBTC USSD FAQ — emergency blocking, support, PIN and telecom charge",
+        "agency": "Official provider",
         "url": "https://www.stanbicibtcbank.com/nigeriabank/personal/ways-to-bank/self-service-banking/ussd-banking",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -9303,7 +9316,7 @@
       "stanbic-instant-account-909",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block Stanbic account",
       "*909*1*911#",
@@ -9374,43 +9387,41 @@
     "slug": "access-bank-block-account",
     "title": "How to block an Access Bank account with *901*911#",
     "shortTitle": "Block Access Bank account",
-    "summary": "Access Bank's emergency account-blocking route through *901*911# from the customer's phone or another phone, with a USSD PIN used to validate the security request.",
+    "summary": "Access Bank says dial *901*911# on any phone, choose Option 2 Block Account, then Self or Third Party, identify the registered phone number and select one linked account or Block All Accounts. The bank requires the customer's pre-existing *901# USSD PIN even when the request originates from another phone; merely knowing another person's number cannot authorise a block. Access Bank calls the service free but says the telecom USSD session charge can still apply.",
     "category": "Banking",
     "agencySlug": "access-bank",
     "feeLabel": "No Access Bank block-account fee; telecom USSD charge can apply",
-    "feeNote": "Access Bank says the block-account service itself is free, while the standard ₦6.98 telecom USSD charge can still apply.",
-    "timeline": "Access Bank states that a correctly completed block-account request is applied instantly.",
+    "feeNote": "Access Bank explicitly says the block-account service itself is free while quoting a ₦6.98 telecom USSD fee for applicable sessions. This is a provider-published tariff, not a guaranteed present-day telco bill; see the current session notice. Unblocking is handled separately through its support/branch process.",
+    "timeline": "Access Bank says a correctly authenticated block request takes effect instantly and displays a successful-request notice. If the bank does not show that notice, contact support; an entered short code alone is not proof the account was blocked.",
     "status": "verified",
     "officialPortal": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
     "requirements": [
-      "The phone number linked to the Access Bank account that needs to be secured",
-      "An existing *901# USSD PIN, or enough account/date-of-birth information to create one if the customer has not previously enrolled",
-      "Access to any phone capable of dialing *901*911# when the registered phone is lost"
+      "The mobile number registered against the Access Bank account(s) being secured, even when a different person's phone is used.",
+      "A *901# USSD PIN already associated with the account owner; Access Bank says its PIN is mandatory to confirm both Self and Third Party blocks.",
+      "Access to any working mobile phone, and enough identification to choose one account or all accounts linked to the registered line.",
+      "For recovery, the official Access Bank Contact Centre (07003000000), signed email instruction to contactcenter@accessbankplc.com or a branch."
     ],
     "steps": [
-      "Dial *901*911# from the available phone and select Block Account.",
-      "Choose Self or Third Party depending on whether the customer is using the registered phone or another person's phone.",
-      "Enter the phone number linked to the affected Access Bank account.",
-      "Select the account to block or choose all linked accounts and authenticate with the *901# PIN.",
-      "Keep the success notification and contact Access Bank if unauthorised transactions need to be investigated before the account is unblocked."
+      "Dial *901*911# from any available phone and select Option 2 (Block Account), according to Access Bank's published USSD FAQ.",
+      "Choose Self when using the account owner's own channel or Third Party when using another person's phone. Third Party does not authorise an unrelated person to bypass the owner's PIN.",
+      "Enter the phone number registered to the affected account, then select the specific account to block or choose Block All Accounts if every linked account is at risk.",
+      "Authorise with the account owner's existing *901# USSD PIN. If that PIN is unknown or never created, contact Access Bank rather than promising that a non-enrolled customer can finish the menu.",
+      "Check the on-screen success notification. Access Bank says the confirmed block prevents access to the selected account(s) across its channels, unlike its distinct USSD Opt Out feature which only turns off *901#.",
+      "If suspicious transactions occurred, contact the official centre on 07003000000, record the suspicious amounts and timestamps, and request a fraud complaint reference.",
+      "To unblock after verifying the incident, Access Bank directs customers to a signed instruction emailed to contactcenter@accessbankplc.com, the 24-hour contact centre or a branch. Do not send bank details to an unrelated third-party contact."
     ],
     "notes": [
-      "Access Bank says the third-party option can be used from another phone when the customer's phone is lost.",
-      "The bank states that a valid USSD PIN is required before the block request is accepted.",
-      "Unblocking requires an official Access Bank support, email or branch route."
+      "The bank's official FAQ contains an apparent contradictory question/answer about whether unregistered users can enrol, but its explicit blocking steps and other answers require an existing USSD PIN for a successful request. This guide does not invent a non-enrolled bypass.",
+      "A Third Party block may be initiated from another phone but still needs the legitimate account owner's USSD PIN; no one can secure a stranger's account by knowing only a phone number.",
+      "Access Bank distinguishes full account blocking from the USSD Opt Out option; a block restricts account access more broadly.",
+      "The provider quotes a ₦6.98 telecom USSD session charge despite describing its own block-account service as free; telco charges can change."
     ],
     "sources": [
       {
-        "label": "Access Bank USSD Banking FAQ",
-        "agency": "Access Bank Plc",
+        "label": "Access Bank block-account FAQ — Self/Third Party, PIN, all accounts, unblock and fees",
+        "agency": "Official provider",
         "url": "https://www.accessbankplc.com/help/frequently-asked-questions/ussd-banking",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Access Bank Service Hub",
-        "agency": "Access Bank Plc",
-        "url": "https://theaccessservicehub.accessbankplc.com/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -9418,7 +9429,7 @@
       "access-money-account",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block Access Bank account",
       "*901*911#",
@@ -10210,37 +10221,40 @@
     "slug": "zenith-emergency-account-block",
     "title": "How to block a Zenith Bank account with *966*911#",
     "shortTitle": "Zenith emergency block",
-    "summary": "Zenith Bank publishes *966*911# as its emergency self-service code for automatically blocking an account when a phone is stolen or banking credentials may be compromised.",
+    "summary": "Zenith Bank's 2025 annual report lists *966*911# as the self-service emergency command to block bank accounts when a handset is stolen or banking details are compromised. It distinguishes *966*60# as a menu for other card/self-service actions; it is not the primary emergency account-block code. ZenithDirect provides human follow-up through 0201 278 7000, 091 1987 7000 and zenithdirect@zenithbank.com.",
     "category": "Banking",
     "agencySlug": "zenith-bank",
     "feeLabel": "No emergency-block fee stated",
-    "feeNote": "Zenith Bank does not state a separate account-blocking fee in the published emergency-code guidance.",
-    "timeline": "Zenith describes *966*911# as an automatic emergency account-blocking service after the security prompts are completed.",
+    "feeNote": "Zenith Bank's published annual report states the emergency USSD number but does not state a separate transaction fee. Check any official USSD/operator prompt; a stolen-card replacement or dispute procedure can have unrelated charges.",
+    "timeline": "Zenith describes the *966*911# service as automatic account blocking, but the public report does not establish a guaranteed response time if the menu or verification fails, nor a restoration date. Confirm success with ZenithDirect.",
     "status": "verified",
     "officialPortal": "https://www.zenithbank.com/",
     "requirements": [
-      "A Zenith Bank account that needs urgent protection because the customer's phone or banking credentials are compromised",
-      "Access to a phone capable of dialing the Zenith *966# service",
-      "The account/security information requested by the emergency USSD prompts"
+      "A Zenith Bank account at risk after theft of a phone, leaked banking credentials or suspicious activity.",
+      "Access to an available phone capable of using the bank's official *966# shortcode.",
+      "The affected account identifier and the legitimate security verification requested within Zenith's own USSD process.",
+      "ZenithDirect customer-service access (0201 278 7000 or 091 1987 7000) when USSD is unavailable or funds may have been moved."
     ],
     "steps": [
-      "Open a phone dialler and dial *966*911# as soon as the Zenith Bank account needs to be secured.",
-      "Enter the account or customer information requested by the emergency menu.",
-      "Complete the verification prompts and confirm the instruction to block the account.",
-      "Keep the success message and contact ZenithDirect if the emergency block cannot be completed.",
-      "Review recent transactions with Zenith Bank before requesting restoration of normal account access."
+      "On a trusted phone, dial *966*911#—Zenith's published distress code for automatically blocking accounts after phone theft or compromised banking details.",
+      "Read the real USSD menu and provide only the identification and authentication it requests to restrict the correct account.",
+      "Keep the resulting confirmation and use ZenithDirect to confirm the actual restriction, especially when the menu does not show a completion message.",
+      "If only a debit card is affected, Zenith's report lists *966*60# for several card-management functions including Block Cards. Do not mistake that menu for the published *966*911# emergency account restriction.",
+      "Call 0201 278 7000 or 091 1987 7000 or email zenithdirect@zenithbank.com using contact details in the bank's own published report when immediate help is needed.",
+      "Report fraudulent transfers with transaction timestamps/amounts to ZenithDirect and ask how to restore the accounts securely after recovering the SIM/device."
     ],
     "notes": [
-      "Zenith's 2025 annual report explicitly identifies *966*911# as the self-service emergency code to block accounts.",
-      "The bank also publishes *966*60# for other card/self-service functions.",
-      "Never disclose a PIN, OTP or banking password to someone offering to help unblock the account."
+      "The annual report is a named primary bank source, not a guarantee that every future user session will accept a code without authentication.",
+      "The provider distinguishes the *966*911# distress code from the more general *966*60# card/self-service menu.",
+      "A confirmed bank account block does not recover a stolen SIM or automatically reimburse disputed transfers.",
+      "Only contact Zenith through independently obtained official channels; do not send PINs/OTPs to an impersonating fraud officer."
     ],
     "sources": [
       {
-        "label": "Zenith Bank Annual Report 2025 — Digital Service Codes",
+        "label": "Zenith Bank 2025 annual report — *966*911# distress code, *966*60# cards and ZenithDirect contacts",
         "agency": "Zenith Bank Plc",
         "url": "https://www.digital.zenithbank.com/pdfs/annualreport2025.pdf",
-        "lastChecked": "2026-10-05",
+        "lastChecked": "2026-10-16",
         "published": "2025"
       }
     ],
@@ -10248,7 +10262,7 @@
       "zenith-online-account-opening",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Zenith Bank block account code",
       "*966*911#",
@@ -10261,7 +10275,7 @@
     "slug": "fidelity-770-ussd-banking",
     "title": "How to register and use Fidelity Bank *770# USSD",
     "shortTitle": "Fidelity *770#",
-    "summary": "Fidelity Bank's *770# instant-banking route for registration, account opening, transfers, airtime/data, bills, balance, card services and other supported transactions.",
+    "summary": "Fidelity's *770# Instant Banking menu covers account opening, balance, transfers, airtime and payments. Its published FAQ has an important internal security contradiction: the emergency USSD table labels *770*911# Block Card, but a later card-fraud answer says dial *770*991#. The same table prints *770*PhoneNumber# for Block/Freeze Account without a worked example. Verify the specific action inside the real bank channel or with TrueServe before depending on any short code for urgent protection.",
     "category": "Banking",
     "agencySlug": "fidelity-bank",
     "feeLabel": "USSD and transaction charges can apply",
@@ -10275,23 +10289,25 @@
       "The account number and a private USSD PIN created during registration"
     ],
     "steps": [
-      "Dial *770# from the phone linked to the Fidelity Bank account and select a transaction from the menu.",
-      "When prompted to register, enter the Fidelity account number.",
-      "Create the private *770# transaction PIN, re-enter it when Fidelity asks for confirmation, and wait for the USSD registration success message.",
-      "Dial *770*1# or another published *770# short code and choose the transfer, airtime, bill, balance, card or account service needed.",
-      "Authenticate the transaction with the USSD PIN and keep the success or reference message."
+      "Dial *770# or *770*1# for the official menu on the registered Fidelity phone and enrol/choose the service appropriate to your bank account.",
+      "For ordinary airtime, transfer, bills or balance checks, review the amount/beneficiary and any displayed session charge before confirming with the *770# transaction PIN.",
+      "For a lost card, the Fidelity FAQ simultaneously prints *770*911# as Block Card and *770*991# in its card-fraud Q&A. Do not assume those codes are interchangeable: confirm with TrueServe or the actual in-channel Block Card menu.",
+      "For an account compromise, Fidelity's emergency table prints *770*PhoneNumber# for Block/Freeze Account but does not illustrate the accepted number format. Ask the bank to confirm the exact shortcode and scope before relying on it.",
+      "After obtaining a genuine bank lock response, record its success or case number; report suspicious transactions through TrueServe/branch even if a card lock succeeded.",
+      "Keep passwords/OTP/PIN secret, secure the stolen SIM separately, and obtain verified instructions from the bank before restoring account access."
     ],
     "notes": [
-      "Fidelity currently publishes *770*01# for account opening and *770*1# for the instant-banking menu.",
-      "Its FAQ lists a cumulative daily transfer limit of ₦100,000 for the published USSD transfer service.",
-      "The bank provides separate emergency codes for card blocking and account freezing."
+      "The two Fidelity card-block code values appear in different sections of the same current official FAQ and contradict each other; this must remain visible until the issuer clarifies it.",
+      "The account-freeze shortcode is a schematic placeholder in the official table. Do not publish a guessed working code with a phone number embedded.",
+      "A *770# card block and a broad bank-account restriction protect different channels. Use TrueServe or a branch for unresolved account access concerns.",
+      "A successful account freeze does not itself reverse disputed debits."
     ],
     "sources": [
       {
-        "label": "Fidelity Bank FAQs — *770#",
-        "agency": "Fidelity Bank Plc",
+        "label": "Fidelity official FAQ — normal *770# services and conflicting security commands",
+        "agency": "Official provider",
         "url": "https://www.fidelitybank.ng/help-support/faqs/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -10299,7 +10315,7 @@
       "fidelity-business-account-online",
       "firstbank-894-ussd"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Fidelity Bank USSD code",
       "*770# Fidelity",
@@ -10312,44 +10328,47 @@
     "slug": "fidelity-emergency-block",
     "title": "How to block a Fidelity card or freeze an account with *770#",
     "shortTitle": "Fidelity emergency block",
-    "summary": "Fidelity Bank publishes separate *770# emergency actions for blocking a debit card and freezing an account when a phone, card or banking access is compromised.",
+    "summary": "Fidelity Bank's current FAQ contains conflicting debit-card-block codes: its USSD emergency table says *770*911#, but its separate 'card fraud' answer says *770*991#. The same table prints *770*PhoneNumber# for account freeze, without providing a worked example or the verification flow. Because these bank-published instructions disagree, the safest guide is to verify the card-specific action displayed by the bank or call official TrueServe/branch support rather than assert either short code is universally correct.",
     "category": "Banking",
     "agencySlug": "fidelity-bank",
     "feeLabel": "No emergency-block fee stated",
-    "feeNote": "Fidelity's FAQ lists the emergency short codes but does not state a separate provider fee for the block/freeze request.",
-    "timeline": "Fidelity presents the emergency block/freeze actions as immediate USSD security services after the prompts are completed.",
+    "feeNote": "Fidelity's public FAQ doesn't give one verified emergency block-account/card service fee or a definite telecom session tariff for all users. Do not pay third parties to 'activate' or release a fraud restriction; confirm fees through the bank.",
+    "timeline": "Security restrictions depend on correctly completing the actual bank's confirmation or human-assisted lock. The FAQ does not provide a universal completion or dispute-refund time, and it gives conflicting card-block shortcuts; escalate promptly if no confirmation appears.",
     "status": "verified",
     "officialPortal": "https://fidelitybank.ng/help-support/faqs/",
     "requirements": [
-      "A Fidelity Bank card or account that needs urgent protection",
-      "Access to a phone capable of dialing the *770# emergency service",
-      "The customer/account information requested by Fidelity during the security prompts"
+      "Identify whether the Fidelity debit card, the underlying account or both are at risk, and which specific bank account/card is affected.",
+      "Access to a legitimate Fidelity *770# channel or verified TrueServe/branch support. Do not depend exclusively on a stolen SIM.",
+      "The owner information requested within the bank's authenticated short code or human verification flow. Never read out an OTP or PIN to an unsolicited caller.",
+      "A short description of suspicious transactions with date, amount and recipient for the bank's dispute/fraud desk."
     ],
     "steps": [
-      "Open a phone dialler and dial *770*911# when the urgent task is to block a Fidelity debit card.",
-      "For an account freeze, use Fidelity's published *770*PhoneNumber# emergency account-freeze route with the phone number tied to the affected account.",
-      "Complete the identity/security prompts shown by the USSD service and confirm the requested block or freeze.",
-      "Keep the success message and contact Fidelity through an official support channel if the security action fails.",
-      "Review recent transactions with the bank before restoring the card or account to normal use."
+      "If a Fidelity debit card is lost or its card number exposed, check the real *770# emergency/card menu or Fidelity's verified TrueServe/branch support. The bank's FAQ lists *770*911# in a general USSD emergency table and *770*991# in its separate card-fraud answer; don't assume the conflicting shortcuts mean the same thing.",
+      "Use only the bank's displayed Block Card action and the correct customer-authentication route. If the shortcode leads to an unexpected menu, stop and contact the bank, rather than guessing additional digits.",
+      "If the account itself is compromised, the published table describes Block/Freeze Account as *770*PhoneNumber#, but provides no complete worked example. Ask Fidelity support to confirm the exact string and intended account before use.",
+      "Once a real bank block succeeds, retain the confirmation or incident-reference number; a failed or disconnected USSD session does not prove the card/account has been protected.",
+      "Report suspicious debits immediately to Fidelity's official TrueServe or a branch, with times and amounts, and ask for the separate fraud-dispute process.",
+      "Secure a stolen SIM and other banking apps independently; ask Fidelity what it needs to reactivate a safe card/account rather than trusting an unofficial release agent."
     ],
     "notes": [
-      "Fidelity's current FAQ distinguishes Block Card (*770*911#) from Block/Freeze Account (*770*PhoneNumber#).",
-      "A card block does not necessarily stop every other account channel.",
-      "Never reveal the *770# PIN or OTP to someone claiming to be a Fidelity support agent."
+      "Verified primary-source inconsistency: Fidelity's FAQ USSD table lists *770*911# as Block Card while its card fraud Q&A instructs *770*991#. The guide cannot responsibly promise one definitive code while the issuer disagrees.",
+      "The published account-freeze line is a schematic *770*PhoneNumber#, not a verified all-network literal shortcode. Do not tell users to dial the text 'PhoneNumber' or assume the menu identifies the intended account without checking.",
+      "Fidelity identifies TrueServe/branch help as alternatives; a card block is not proof the full account and digital channels are disabled.",
+      "Do not disclose card PIN, *770# transaction PIN, account password or OTP to a person claiming to be bank staff."
     ],
     "sources": [
       {
-        "label": "Fidelity Bank FAQs — Emergency *770# Codes",
-        "agency": "Fidelity Bank Plc",
+        "label": "Fidelity official FAQs — conflicting card block shortcuts and account-freeze format",
+        "agency": "Official provider",
         "url": "https://www.fidelitybank.ng/help-support/faqs/",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "fidelity-770-ussd-banking",
       "cbn-bank-complaint"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block Fidelity card",
       "freeze Fidelity account",
