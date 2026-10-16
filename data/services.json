@@ -4903,7 +4903,7 @@
     "slug": "bvn-enrolment",
     "title": "How to enrol for a BVN in Nigeria",
     "shortTitle": "BVN enrolment",
-    "summary": "How an adult in Nigeria gets a Bank Verification Number through an authorised bank or BVN enrolment channel, including biometric capture and what to keep afterward.",
+    "summary": "BVN registration within Nigeria is free and now restricted to people aged 18 or older under the CBN rules effective 1 May 2026. The applicant must use an authorised bank enrolment location, present permitted identity evidence and attend personal biometric capture. An acknowledgement is not the assigned BVN; follow up using the enrolment reference if it is delayed.",
     "category": "Banking",
     "agencySlug": "cbn",
     "feeLabel": "FREE in Nigeria",
@@ -4914,19 +4914,28 @@
       "Applicant must be at least 18 years old under the CBN amendment effective 1 May 2026",
       "A valid means of identification accepted by the enrolling bank or authorised channel",
       "Personal attendance for facial image, fingerprints and other biometric capture",
-      "A working phone number for enrolment communication and later BVN-related services"
+      "A working phone number for enrolment communication and later BVN-related services",
+      "Applicant's own valid identity record and ability to appear for live biometric capture, not a proxy enrolment.",
+      "A phone number controlled by the applicant, reviewed carefully before submission because CBN limits changes to BVN-linked phone numbers."
     ],
     "steps": [
+      "Check CBN's BVN eligibility notice before travelling: only people aged 18 or above may obtain a new BVN, and enrolment inside Nigeria is free.",
       "Choose a bank branch or authorised BVN enrolment channel and confirm that the location performs BVN enrolment before travelling there.",
       "Take the valid identification accepted by the enrolling institution, complete the BVN enrolment form and check the demographic details before biometric capture begins.",
       "Present yourself for the required biometric capture, including facial image and fingerprints, and make sure the enrolment operator completes the submission rather than leaving it as a draft.",
       "Collect and keep the acknowledgement slip or transaction ID issued after enrolment because it is the reference to use if the BVN does not arrive as expected.",
-      "Wait for NIBSS to synchronise the enrolment data and generate the BVN; once the enrolling institution or BVN notification provides the number, give it to each bank where it needs to be linked to your accounts. If it is still unavailable after 72 hours, follow up with the enrolling institution using the transaction ID."
+      "Wait for NIBSS to synchronise the enrolment data and generate the BVN; once the enrolling institution or BVN notification provides the number, give it to each bank where it needs to be linked to your accounts. If it is still unavailable after 72 hours, follow up with the enrolling institution using the transaction ID.",
+      "Ask the bank's BVN desk to confirm its accepted photo identity document and the branch's biometric service hours; bring the original document, not a photo of another person's ID.",
+      "Check that the name, date of birth and phone number entered by the operator exactly match the supporting identity record before submitting the fingerprint and face capture.",
+      "Do not enter your BVN into a 'free BVN generation' website: a BVN is assigned through enrolment and its number must remain linked to the same person.",
+      "If the registered phone number needs a later update, ask the bank about the May 2026 rule permitting a BVN-linked phone number change only once; preserve the correct line from the start."
     ],
     "notes": [
       "CBN says BVN enrolment in Nigeria is free.",
       "From 1 May 2026, CBN says only people aged 18 and above may enrol for BVN.",
-      "CBN's 2026 amendment also states that a BVN-linked phone number may be changed only once."
+      "CBN's 2026 amendment also states that a BVN-linked phone number may be changed only once.",
+      "CBN's 2026 reforms impose a minimum age of 18 for BVN enrolment and allow only one change of the linked mobile number.",
+      "The enrolling bank remains the first point of contact for a BVN record or unresolved synchronisation issue, even if the NIBSS database generates the final number."
     ],
     "sources": [
       {
@@ -4968,13 +4977,13 @@
       "bvn-retrieval",
       "non-resident-bvn"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "bvn-retrieval",
     "title": "How to retrieve your BVN with *565*0#",
     "shortTitle": "Retrieve BVN",
-    "summary": "The official NIBSS USSD method for retrieving the BVN already linked to your registered phone number.",
+    "summary": "NIBSS *565*0# returns the BVN already registered to the caller's own phone number and currently costs ₦20. The query will not return the BVN if the line is shared by multiple BVNs, is not the enrolled line or there is no matching record. A failed USSD lookup is not evidence that the BVN never existed.",
     "category": "Banking",
     "agencySlug": "cbn",
     "feeLabel": "₦20",
@@ -4983,19 +4992,27 @@
     "requirements": [
       "A BVN that has already been enrolled",
       "The same phone number registered to that BVN",
-      "Enough airtime for the ₦20 NIBSS USSD service charge"
+      "Enough airtime for the ₦20 NIBSS USSD service charge",
+      "Access to the BVN's registered line; unrelated SIMs are not valid for this lookup."
     ],
     "steps": [
+      "Find the SIM originally registered to your BVN, insert it in a working phone and confirm it can make ordinary USSD calls before dialling *565*0#.",
       "Use the mobile phone number that was registered during BVN enrolment; the retrieval service will not return the BVN from an unrelated number.",
       "Dial *565*0# on that registered line and follow the USSD session until NIBSS completes the BVN lookup.",
       "Allow the ₦20 service charge and read the BVN returned on screen carefully, then store it somewhere private rather than sharing it publicly.",
       "If no BVN is returned, first confirm that you used the registered phone number; NIBSS also says the service will not return a BVN where that phone number is linked to more than one BVN.",
-      "If the registered number is no longer available or the lookup cannot resolve the record, contact your bank or the institution that manages the BVN record rather than repeatedly paying the USSD charge."
+      "If the registered number is no longer available or the lookup cannot resolve the record, contact your bank or the institution that manages the BVN record rather than repeatedly paying the USSD charge.",
+      "Read the returned eleven-digit number privately and compare it with any BVN confirmation previously issued by the enrolling bank; do not post it on a group chat or supply it to a reversal agent.",
+      "If your phone number is linked to more than one BVN, NIBSS says *565*0# will not disclose the number; visit your bank with your identity document for account-specific retrieval.",
+      "If the registered SIM has been lost or reassigned, follow the bank's supported BVN phone-record correction route. Buying another NIBSS lookup from a new SIM will not match the original BVN.",
+      "If the USSD session deducts ₦20 but fails repeatedly, keep the transaction notice and contact the bank or NIBSS's official customer support instead of paying an intermediary."
     ],
     "notes": [
       "A BVN is not a bank account number or a payment credential, but it is sensitive identity information and should still be protected.",
       "NIBSS requires the phone number registered to the BVN for *565*0# retrieval.",
-      "NIBSS currently lists *565*0# for BVN retrieval from the phone number registered to the BVN and publishes a ₦20 service fee."
+      "NIBSS currently lists *565*0# for BVN retrieval from the phone number registered to the BVN and publishes a ₦20 service fee.",
+      "NIBSS expressly refuses *565*0# disclosure where a single phone number is tied to more than one BVN.",
+      "Do not mistake BVN retrieval for validation: *565*1# separately checks a BVN/name and may expose personal information on screen."
     ],
     "sources": [
       {
@@ -5035,13 +5052,13 @@
       "bvn-enrolment",
       "non-resident-bvn"
     ],
-    "lastVerified": "2026-10-05"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "non-resident-bvn",
     "title": "How Nigerians abroad can obtain a BVN through NRBVN",
     "shortTitle": "NRBVN for Nigerians abroad",
-    "summary": "CBN and NIBSS provide a remote Non-Resident BVN route so eligible Nigerians abroad can complete BVN enrolment without travelling back to Nigeria for the biometric stage.",
+    "summary": "Eligible Nigerians living outside Nigeria can use CBN and NIBSS's voluntary NRBVN remote enrolment service without travelling back solely for BVN biometric capture. The roughly US$50 quoted by CBN is a remote-processing and identity-verification charge, not a fee for the BVN itself; regular domestic BVN enrolment is free.",
     "category": "Banking",
     "agencySlug": "cbn",
     "feeLabel": "About US$50 processing cost",
@@ -5052,18 +5069,28 @@
       "A Nigerian applicant residing outside Nigeria",
       "Internet access and a device suitable for the NRBVN remote identity and biometric process",
       "Identity and KYC evidence for the remote verification process",
-      "Ability to complete the platform's remote-processing charge where applicable"
+      "Ability to complete the platform's remote-processing charge where applicable",
+      "The applicant's own documents and device for remote live verification, plus the existing BVN if previously registered.",
+      "Confirmation of the official NRBVN checkout amount before payment; it may differ from the CBN's approximate quote."
     ],
     "steps": [
+      "Start from CBN or NIBSS's official Non-Resident BVN information and confirm that the applicant lives abroad; do not pay an overseas agent simply to apply on your behalf.",
       "Open the NRBVN platform linked by CBN and start the non-resident enrolment route instead of using an unofficial diaspora BVN agent.",
       "Create the applicant profile with the Nigerian identity and contact information used for the remote verification process, then verify the account through the official platform.",
       "Complete the remote identity, due-diligence and biometric capture stages presented by NRBVN, checking that the captured personal information matches the applicant's Nigerian records.",
       "Review the remote-processing charge shown by the official platform and complete the payment only inside the authorised NRBVN flow.",
-      "Monitor the NRBVN application for completion and keep the generated BVN and transaction evidence securely; use the official CBN or NIBSS support route if the application stalls."
+      "Monitor the NRBVN application for completion and keep the generated BVN and transaction evidence securely; use the official CBN or NIBSS support route if the application stalls.",
+      "Check whether an existing BVN has already been assigned to you through a past Nigerian bank account; use the bank's record retrieval instead of creating a second identity.",
+      "Prepare the Nigerian identity evidence and a phone/email address that you can use to complete account verification from your country of residence.",
+      "Complete the platform's biometric capture and anti-impersonation checks yourself. A third party must not supply a face image, fingerprint, password or verification code for the applicant.",
+      "Treat the approximately US$50 cost in CBN's notice as an indicative remote processing cost; confirm the actual official checkout and currency/channel fees.",
+      "If the NRBVN account fails identity validation or payment confirmation, retain the platform's application reference and use its official helpdesk rather than re-enrolling in Nigeria or remitting funds to private accounts."
     ],
     "notes": [
       "CBN launched NRBVN with NIBSS on 13 May 2025 as a voluntary remote option for Nigerians abroad.",
-      "CBN has warned that the processing charge is specific to remote verification; ordinary BVN registration within Nigeria remains free."
+      "CBN has warned that the processing charge is specific to remote verification; ordinary BVN registration within Nigeria remains free.",
+      "NRBVN is a voluntary alternative for nonresident Nigerians and is not a requirement for every visitor who already holds a BVN.",
+      "CBN distinguishes the remote due-diligence processing cost from a charge for issuing the BVN number itself."
     ],
     "sources": [
       {
@@ -5100,7 +5127,7 @@
       "bvn-retrieval",
       "passport-application-abroad"
     ],
-    "lastVerified": "2026-09-28"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "ecowas-travel-certificate",
@@ -6878,7 +6905,7 @@
     "slug": "nip-transfer-status",
     "title": "NIP Transfer Status: Check a NIBSS Transfer with *565*5#",
     "shortTitle": "Check NIP transfer status",
-    "summary": "NIBSS's NIP Transaction Tracker lets the sender check an instant bank transfer made within the past 48 hours. Dial *565*5# from the mobile number registered to the sending bank account, provide the sender's account number and transaction amount, and interpret the reply before taking a dispute to the bank. NIBSS publishes a ₦20 USSD charge.",
+    "summary": "Use NIBSS *565*5# to check the sending account's NIP transfers from the previous 48 hours, at ₦20 per lookup. The registered sending phone line, sending account number and amount are required. 'Yes', 'No', 'ACCOUNT NOT FOUND' and 'NO TRANSACTIONS FOUND' represent different next actions; the status checker is not a refund request.",
     "category": "Banking",
     "agencySlug": "nibss",
     "feeLabel": "₦20",
@@ -6889,22 +6916,31 @@
       "The sender's mobile phone number that is linked to the bank account used for the transfer",
       "The sender's bank account number",
       "The exact transaction amount for the NIP transfer being checked",
-      "Enough airtime for the ₦20 NIBSS USSD service charge"
+      "Enough airtime for the ₦20 NIBSS USSD service charge",
+      "Time of transfer within NIBSS's 48-hour lookup window; older disputes require the original bank's trace route."
     ],
     "steps": [
+      "Locate the sender's debit receipt and verify its amount, sending bank account and time. The NIBSS tracker covers transactions in the past 48 hours only.",
       "Before dialling, confirm the debit alert or receipt shows the correct sending account, amount and approximate transaction time; the USSD tracker covers only the previous 48 hours and only works with the mobile line registered to that sender's bank account.",
       "Dial *565*5# from the registered sending line. Enter the sender's bank account number and the precise transaction amount when prompted; NIBSS says the service may also display the last five NIP transfers.",
       "Read the transaction outcome carefully: a transaction marked 'Yes' succeeded in NIBSS's record; 'No' means the transfer was unsuccessful; 'ACCOUNT NOT FOUND' means the phone line is not associated with the entered sending account.",
       "If the tracker reports no matching transaction within 48 hours, NIBSS says it may not yet have been processed by the sending bank. Contact your sending bank and quote the receipt or transaction reference; a missing tracker result is not proof that money was received.",
       "If NIBSS says successful but the recipient has not received the money, ask the recipient to contact the receiving bank with transfer details while you retain proof of debit. For failed transfers with no reversal, lodge a documented complaint with the sending bank.",
-      "Keep the bank's complaint reference and follow its resolution process. If the regulated bank fails to resolve the complaint within the applicable timeline, check CBN's official Consumer Protection Department guidance for escalation; do not send your PIN, OTP or passwords to a purported reversal agent."
+      "Keep the bank's complaint reference and follow its resolution process. If the regulated bank fails to resolve the complaint within the applicable timeline, check CBN's official Consumer Protection Department guidance for escalation; do not send your PIN, OTP or passwords to a purported reversal agent.",
+      "If the result is 'No', keep the debit proof and ask the sending bank to trace or reverse the failed payment; a failed status is not evidence that you should transfer again immediately.",
+      "If the result is 'Yes' but the beneficiary says no credit was received, give the transaction details to both banks and ask the receiving bank to investigate the beneficiary's ledger.",
+      "If 'ACCOUNT NOT FOUND' appears, retry only from the mobile number registered with that sending bank account; NIBSS will not authenticate a beneficiary's or unrelated SIM.",
+      "For 'NO TRANSACTIONS FOUND WITHIN THE LAST 48HOURS', NIBSS says the sending bank may not yet have processed it; provide the original debit reference to that bank.",
+      "Avoid repeated chargeable lookups once a status is known. Preserve the bank complaint ticket for later CBN escalation if the case remains unresolved."
     ],
     "notes": [
       "The NIBSS USSD service itself is chargeable at ₦20 per lookup according to its current public information; network and carrier costs should be confirmed on the phone prompt, and repeated lookups are unnecessary once the result is known.",
       "Use the number linked to the sending bank account, not the beneficiary's line; do not enter a beneficiary account number in the sender-account field.",
       "NIBSS notes that 'NO TRANSACTIONS FOUND WITHIN THE LAST 48HOURS' can mean the transfer was not processed by the sending bank; it is not confirmation of payment.",
       "NIBSS's own troubleshooting examples distinguish 'No' (failed, reversal expected) from 'Yes' (successful, beneficiary should contact receiving bank if no credit).",
-      "The CBN says customers should first report problems to their bank and retain proof and a complaint reference before escalating. Its general complaint guidance discusses two weeks, but particular electronic-transfer disputes can have different binding resolution rules; ask the bank for the applicable timeline."
+      "The CBN says customers should first report problems to their bank and retain proof and a complaint reference before escalating. Its general complaint guidance discusses two weeks, but particular electronic-transfer disputes can have different binding resolution rules; ask the bank for the applicable timeline.",
+      "A successful NIBSS transaction record does not confirm that the particular recipient's balance shows the credit; the receiving bank must investigate missing credit.",
+      "NIBSS's published *565*5# service uses the sender's bank account rather than the beneficiary account and charges ₦20 per lookup."
     ],
     "sources": [
       {
@@ -6943,13 +6979,13 @@
     "related": [
       "bvn-retrieval"
     ],
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "vehicle-insurance-validation-ussd",
     "title": "How to validate a vehicle insurance policy with *565*11#",
     "shortTitle": "Validate vehicle insurance",
-    "summary": "Check whether a motor vehicle's insurance is recorded as active on the Nigerian Insurance Industry Database (NIID). NIBSS publishes the *565*11# USSD route at ₦20 per check. The Nigerian Insurers Association also offers a web-based 'Check Policy' route on askniid.org; if either check returns no match, contact the issuing insurer instead of assuming the vehicle is definitely uninsured.",
+    "summary": "Validate a Nigerian motor insurance record using NIBSS *565*11# for ₦20 per USSD lookup or independently through the Nigerian Insurers Association's NIID Check Policy website. Enter the exact plate number; a 'not found' message has several possible meanings and does not conclusively prove the car is uninsured.",
     "category": "Insurance",
     "agencySlug": "nibss",
     "feeLabel": "₦20",
@@ -6958,21 +6994,31 @@
     "requirements": [
       "The vehicle registration number exactly as issued for the vehicle",
       "A mobile phone that can access the NIBSS *565# USSD service",
-      "Enough airtime for the ₦20 NIBSS USSD service charge"
+      "Enough airtime for the ₦20 NIBSS USSD service charge",
+      "The actual registration-plate number and issuing insurer's policy number/receipt for investigation if the databases disagree."
     ],
     "steps": [
+      "Read the registration plate exactly from the vehicle and compare it with the insurer's issued policy schedule before starting either NIID verification route.",
       "Have the exact registration number shown on the vehicle documents and the issuing insurer's policy details available. Double-check letters and digits before submitting; verification reports depend on matching the registered record.",
       "For the NIBSS USSD route, dial *565*11# on a mobile phone and enter the vehicle registration number when prompted. NIBSS publishes a ₦20 charge for each validation.",
       "Read the response: 'Policy Valid till ...' gives a stated expiry date. 'Vehicle Registration Number not found' can reflect an invalid number, no insurance record or a policy that expired over a year ago; it does not by itself prove which situation applies.",
       "Alternatively, open the Nigerian Insurers Association's official NIID verification website at askniid.org. Choose 'Check Policy' and follow the site's own form and verification instructions; do not give personal details to lookalike insurance-checking pages.",
       "If a current policy is missing, or the response appears to have the wrong expiry date, compare the policy document and registration plate then contact the insurer to correct or upload its NIID entry. Keep your receipt and policy number.",
-      "Do not treat a successful insurance-database response as a substitute for reading your policy's exclusions, the insurer's genuine licence or claims procedure. If there is a dispute, contact the insurer or the insurance regulator through their official channels."
+      "Do not treat a successful insurance-database response as a substitute for reading your policy's exclusions, the insurer's genuine licence or claims procedure. If there is a dispute, contact the insurer or the insurance regulator through their official channels.",
+      "For the NIBSS mobile option, dial *565*11#, input the exact registration number, then inspect the returned policy expiry date; the official charge is ₦20.",
+      "For the web option, open askniid.org and choose Check Policy from the NIID homepage, then follow its own vehicle-policy identification instructions.",
+      "If the result says 'Vehicle Registration Number not found', check spelling, registration format, insurer-upload delay and policy age before drawing a conclusion.",
+      "If a policy is missing or wrongly dated, ask the issuing insurer to reconcile the NIID record and retain the premium receipt and policy number.",
+      "Do not purchase another policy solely because the first lookup failed. Independently check that the issuing insurer is authorised if a seller offered a very cheap certificate.",
+      "A verified policy record says nothing definitive about vehicle ownership, customs duty or whether a particular accident is covered; inspect those separately."
     ],
     "notes": [
       "NIBSS publishes *565*11# and ₦20 per lookup; NIID's current homepage separately advertises a 'Check Policy' website option.",
       "The Nigerian Insurers Association operates NIID as a database of compulsory insurance certificates, including motor insurance. Its official site independently confirms the *565*11# verification channel.",
       "NIBSS's 'not found' outcomes do not uniquely identify the cause. A new valid policy may not appear immediately; ask the insurer directly rather than buying another policy from an unsolicited agent.",
-      "An online verification is not a purchase portal, and the existence of a record is not a guarantee that all claimed losses will be covered."
+      "An online verification is not a purchase portal, and the existence of a record is not a guarantee that all claimed losses will be covered.",
+      "NIBSS lists the USSD return 'Vehicle Registration Number not found' for several possible conditions, including invalid number or policy expired more than a year.",
+      "The NIID website check is an alternative to NIBSS's ₦20 USSD service; users should not infer both have the same charge."
     ],
     "sources": [
       {
@@ -7007,13 +7053,13 @@
       "vehicle-registration-nvis",
       "vehicle-proof-of-ownership-verification"
     ],
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "nin-sim-linkage",
     "title": "How to link your NIN to a Nigerian SIM",
     "shortTitle": "Link NIN to SIM",
-    "summary": "The official NCC-guided route for linking a NIN to a mobile line, including the network self-service code and what must match before linkage succeeds.",
+    "summary": "Link the registered owner of a Nigerian SIM to that same person's NIN using the network operator's approved channel or NCC's free *996# option. NCC says the operator validates SIM registration KYC against NIMC and linkage fails if details do not match. Its FAQ also explains when to supply a Virtual NIN instead of exposing the original number.",
     "category": "Telecommunications",
     "agencySlug": "ncc",
     "feeLabel": "No NCC linkage fee",
@@ -7025,20 +7071,30 @@
       "A valid NIN belonging to the person who owns the SIM",
       "The Nigerian mobile line to be linked",
       "Customer details on the SIM registration record that match the NIN identity record",
-      "Access to the network's approved NIN-linkage channel or the NCC-supported *996# self-service route"
+      "Access to the network's approved NIN-linkage channel or the NCC-supported *996# self-service route",
+      "The mobile network's approved linkage channel and accurate SIM registration details matching the owner's NIMC record.",
+      "Owner attendance and proof of ownership/usage if the operator needs re-registration for a SIM in another person's name."
     ],
     "steps": [
+      "Check the legal owner of the SIM and the applicant's NIN on the NIMC slip or authorised retrieval route. A number registered under another person's name cannot simply be linked to your NIN.",
       "Confirm that the NIN belongs to the registered owner of the SIM and that the names and other core identity details are consistent.",
       "Dial *996# from the affected line and follow the SIM-NIN options, or use the linkage channel provided by your mobile network.",
       "Provide the NIN or the requested Virtual NIN information exactly as prompted by the operator.",
       "Wait for the network to validate the identity information against NIMC records.",
-      "Check the linkage status after submission rather than repeating the process immediately if confirmation is still pending."
+      "Check the linkage status after submission rather than repeating the process immediately if confirmation is still pending.",
+      "Insert the affected SIM and dial the NCC-supported free *996# menu, or use only the mobile operator's official linkage page or service-centre route.",
+      "Where the operator asks for a Virtual NIN (VNIN), follow the approved NIMC method shown in NCC's FAQ; don't send your full NIN to an unofficial agent.",
+      "Ensure the subscriber name, date of birth and other KYC details match the NIN record before submission; an existing NIN alone does not guarantee network acceptance.",
+      "Read the operator's receipt/SMS confirmation and then run the *996# linkage-status option. The act of entering a NIN is not the same as successful backend validation.",
+      "If a SIM belongs to another person, visit the operator with your actual proof of usage/ownership and follow its re-registration process; NCC prohibits individual proxy linkage."
     ],
     "notes": [
       "NCC says the *996# SIM-NIN service is free.",
       "A mismatch between the SIM registration record and the NIN record can stop successful linkage.",
       "NCC states that a subscriber may have up to four SIMs on one network linked to the same NIN.",
-      "If the SIM is being used by someone other than its registered owner, the user should visit the operator and complete the proper ownership/re-registration process instead of trying to link another person's identity."
+      "If the SIM is being used by someone other than its registered owner, the user should visit the operator and complete the proper ownership/re-registration process instead of trying to link another person's identity.",
+      "NCC says individual NIN-to-SIM linkage cannot be performed by proxy; corporate SIMs have separate rules.",
+      "NCC's FAQ allows up to four SIMs per network operator for an individual and states that *996# is free."
     ],
     "sources": [
       {
@@ -7059,7 +7115,7 @@
       "fix-failed-nin-sim-linkage",
       "nin-enrolment"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "link NIN to SIM",
       "NIN SIM linkage",
@@ -7072,7 +7128,7 @@
     "slug": "check-nin-sim-linkage-status",
     "title": "How to check whether your NIN is linked to your SIM",
     "shortTitle": "Check NIN-SIM status",
-    "summary": "How to use the NCC-supported self-service route to confirm a line's NIN-linkage status before visiting a network shop.",
+    "summary": "Use the affected SIM to dial NCC's free *996# service and check whether the network has actually linked and validated that SIM against its registered owner's NIN. An SMS confirming mere submission is different from a successful linkage; pending or failed status requires operator investigation.",
     "category": "Telecommunications",
     "agencySlug": "ncc",
     "feeLabel": "Free via *996#",
@@ -7083,19 +7139,28 @@
     "requirements": [
       "The mobile line you want to check",
       "Access to the line on a phone",
-      "The registered owner's NIN if the network asks you to complete or correct linkage"
+      "The registered owner's NIN if the network asks you to complete or correct linkage",
+      "Any prior operator confirmation SMS and the actual subscriber-owner's NIN for diagnosing a pending or failed result."
     ],
     "steps": [
+      "Put the exact SIM you want to check in a phone with network service; *996# checks the calling line, not another number whose SIM is elsewhere.",
       "Insert or activate the mobile line you want to check.",
       "Dial *996# and select the option for checking SIM-NIN linkage status.",
       "Read the result carefully to distinguish a completed linkage from a pending, failed or identity-mismatch case.",
       "If the line is not linked, use the same approved flow or your operator's official channel to submit the NIN.",
-      "If the status remains incorrect after a valid submission, follow the failed-linkage troubleshooting guide and contact the operator."
+      "If the status remains incorrect after a valid submission, follow the failed-linkage troubleshooting guide and contact the operator.",
+      "From *996#, choose the network's 'Check NIN Status' or linkage-status option and allow the live menu to finish rather than assuming the initial submission worked.",
+      "Compare the result with the mobile operator's own final confirmation SMS. A message only saying 'received' or 'submitted' is not necessarily a verified linkage.",
+      "If the status shows mismatch, ask the operator which SIM registration identity detail failed. Do not repeat the same data without correcting the real source.",
+      "If the affected line is barred and the code cannot open, contact the operator through its official store or supported digital channel with the owner's NIN and SIM details.",
+      "Keep the date/SMS and any complaint number so you can follow up or escalate if the operator does not fix a verified ownership match."
     ],
     "notes": [
       "Checking the status first can avoid unnecessary repeat submissions.",
       "If the number is not registered in your own name, the correct fix is normally an operator-assisted ownership or registration update.",
-      "Do not provide your NIN to unofficial agents or unverified websites."
+      "Do not provide your NIN to unofficial agents or unverified websites.",
+      "NCC says the *996# service costs nothing; any unrelated third-party charge to 'check NIN linkage' is not NCC's fee.",
+      "A SIM with a different legal registered owner must follow the network's identity/ownership correction route."
     ],
     "sources": [
       {
@@ -7109,7 +7174,7 @@
       "nin-sim-linkage",
       "fix-failed-nin-sim-linkage"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "check NIN linked to SIM",
       "NIN linkage status",
@@ -7121,7 +7186,7 @@
     "slug": "fix-failed-nin-sim-linkage",
     "title": "What to do when NIN-to-SIM linkage fails or your line remains barred",
     "shortTitle": "Fix failed NIN-SIM linkage",
-    "summary": "A practical troubleshooting route for NIN validation failures, record mismatches and lines that remain restricted after a linkage attempt.",
+    "summary": "Diagnose a failed SIM-to-NIN match by confirming that the line is registered to the same person as the NIN, reviewing the operator's status SMS and correcting the appropriate source record. An NIMC identity error requires an official NIMC amendment; an ownership mismatch requires an operator shop, not repeated USSD submissions.",
     "category": "Telecommunications",
     "agencySlug": "ncc",
     "feeLabel": "No NCC troubleshooting fee",
@@ -7133,19 +7198,28 @@
       "The affected phone number",
       "The registered owner's NIN",
       "Valid identity information that matches the SIM record",
-      "Proof of ownership/usage if the operator requests re-registration"
+      "Proof of ownership/usage if the operator requests re-registration",
+      "The original network rejection message or status, plus the SIM owner's true KYC and government identity records."
     ],
     "steps": [
+      "Dial *996# from the affected SIM where possible and read the final status or network failure SMS. Save the exact error before restarting linkage.",
       "Use *996# to confirm the current linkage status and avoid assuming that a submitted request has already been validated.",
       "Compare the subscriber details registered on the line with the NIN identity record, especially the registered owner and core biodata.",
       "If the NIN itself contains an error, correct the relevant NIMC record first before repeatedly resubmitting the same mismatch.",
       "If NIN verification continues to fail or the line remains barred, visit the mobile operator's official outlet with the NIN and requested identity evidence.",
-      "If the SIM is not registered to you, ask the operator to transfer or re-register ownership and present the proof of ownership or usage it asks for."
+      "If the SIM is not registered to you, ask the operator to transfer or re-register ownership and present the proof of ownership or usage it asks for.",
+      "Check whether the operator rejected the NIN submission because no request was received, NIMC validation failed or SIM KYC does not match: these require different fixes.",
+      "For a phone registered to a previous owner, go to the operator's official shop with NIN and its requested usage proof, such as last recharge or frequently dialled numbers.",
+      "If the subscriber record is right but the name or birth date on NIN is wrong, use NIMC's formal modification process and wait for approval before trying again.",
+      "After the appropriate correction, use the operator's official re-link option, obtain its confirmation and check status on *996#.",
+      "If the restriction persists, use the operator's helpline 300 to open a complaint ticket; if unresolved, NCC publishes an escalation route through 622 or its Consumer Portal."
     ],
     "notes": [
       "NCC guidance says subscribers with NIN-verification problems should visit their service provider.",
       "A successful NIN record does not automatically fix a SIM registered in another person's name.",
-      "Keep any operator ticket, SMS or reference number until the restriction has been resolved."
+      "Keep any operator ticket, SMS or reference number until the restriction has been resolved.",
+      "NCC's FAQ expressly directs failed NIN verification to the network provider's outlet.",
+      "Do not use a stranger's NIN or promise instant unbarring when ownership or identity mismatches have not been resolved."
     ],
     "sources": [
       {
@@ -7159,6 +7233,12 @@
         "agency": "Nigerian Communications Commission",
         "url": "https://www.ncc.gov.ng/media-center/public-notices/frequently-asked-questions-nin-and-sim-integration",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/articles/115-telecom-complaint-resolution-a-step-by-step-guide",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7167,7 +7247,7 @@
       "nin-name-modification",
       "nin-phone-modification"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "SIM still barred after linking NIN",
       "NIN verification failed SIM",
@@ -7387,7 +7467,7 @@
     "slug": "electricity-prepaid-meter-application",
     "title": "How to apply and pay for a prepaid electricity meter",
     "shortTitle": "Apply for prepaid meter",
-    "summary": "The NERC-backed metering route, what to confirm before paying and what happens after a Meter Asset Provider payment.",
+    "summary": "Request a prepaid meter through your own electricity Distribution Company's authorised metering programme; distinguish any free rollout from upfront Meter Asset Provider (MAP) payment. NERC's meter guidance refers to a 10-working-day MAP installation window after full payment and repayment through energy credits, with a new amended reimbursement order effective March 2026.",
     "category": "Electricity",
     "agencySlug": "nerc",
     "feeLabel": "Current approved meter price",
@@ -7398,20 +7478,31 @@
     "requirements": [
       "An electricity customer/account number with your DisCo",
       "The service address plus the customer/account information shown on your DisCo bill or account",
-      "Payment through the official DisCo/MAP route if using the upfront MAP option"
+      "Payment through the official DisCo/MAP route if using the upfront MAP option",
+      "The exact DisCo name and current account/service address; authorised MAP invoice if opting for upfront meter purchase.",
+      "The payment receipt and installation request/reference to claim follow-up or reimbursement credits later."
     ],
     "steps": [
+      "Check the DisCo named on your latest bill and open that DisCo's official meter application route; do not use a random installer or agent payment link.",
       "Identify your electricity Distribution Company and open its official metering channel.",
       "Complete the meter request with your customer/account and property information.",
       "Review the meter type and current approved price shown by the authorised channel before paying.",
       "Pay only through the official DisCo/MAP payment route and keep the receipt/reference.",
       "Track the installation request and make the premises accessible when an appointment is arranged.",
-      "If a paid MAP meter is not installed within the NERC-stated window, use the delayed-installation complaint route."
+      "If a paid MAP meter is not installed within the NERC-stated window, use the delayed-installation complaint route.",
+      "Check whether the request is for a free allocation under an available rollout or an upfront paid MAP meter. Only the latter should generate a regulated MAP invoice to the customer.",
+      "Verify the customer account number, premises address, meter type and regulated DisCo/MAP price before payment; a meter belongs with its assigned property.",
+      "After making full authorised MAP payment, record the exact date and reference; NERC's metering FAQ describes an installation target of 10 working days.",
+      "Arrange legitimate installation access, check that the meter number matches the property/account and test that prepaid vending works before signing a handover.",
+      "Keep the official receipt because MAP meter cost reimbursement is normally through future energy credits and NERC published an amended reimbursement order effective 1 March 2026.",
+      "If installation is overdue, complain first to the DisCo with the payment proof and escalate to your State Electricity Regulator in a transferred state, otherwise follow NERC's applicable channel."
     ],
     "notes": [
       "NERC says customers should verify current meter prices with the relevant DisCo.",
       "Under the MAP arrangement, the meter remains part of the electricity distribution system even where the customer pays upfront.",
-      "Do not pay cash to an unofficial installer without an official invoice or receipt."
+      "Do not pay cash to an unofficial installer without an official invoice or receipt.",
+      "Under NERC's MAP framework, upfront costs are reimbursed through regulated electricity credits rather than automatically returned as cash.",
+      "Complaint oversight for intrastate electricity distribution has transferred in 15 states; verify the property's state before using a regulator's complaint portal."
     ],
     "sources": [
       {
@@ -7419,6 +7510,18 @@
         "agency": "Nigerian Electricity Regulatory Commission",
         "url": "https://nerc.gov.ng/faq/metering/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/resources/amended-order-on-the-reimbursement-of-meter-costs/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7426,7 +7529,7 @@
       "electricity-estimated-billing-dispute",
       "electricity-complaint-escalation"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "prepaid meter application Nigeria",
       "MAP meter",
@@ -7438,31 +7541,41 @@
     "slug": "electricity-meter-paid-not-installed",
     "title": "What to do if you paid for an electricity meter but it was not installed",
     "shortTitle": "Paid meter not installed",
-    "summary": "How to document a delayed MAP meter, complain to the DisCo and escalate if the installation remains unresolved.",
+    "summary": "If you paid an official MAP meter invoice but installation has not happened, compare the payment date with NERC's published 10-working-day window, obtain a DisCo complaint reference and escalate to the regulator with jurisdiction over your state. From 2026, 15 states use their own electricity regulators for intrastate complaints.",
     "category": "Electricity",
     "agencySlug": "nerc",
     "feeLabel": "No extra official installation payment should be improvised",
     "feeNote": "Keep the original official payment evidence; do not pay a second unofficial fee to move the request forward.",
     "timeline": "NERC's metering FAQ says a MAP meter should be installed within 10 working days after full payment.",
     "status": "verified",
-    "officialPortal": "https://nerc.gov.ng/faq/metering/",
+    "officialPortal": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
     "requirements": [
       "Meter payment receipt or transaction reference",
       "DisCo customer/account number",
       "Property/service address",
-      "Any installation ticket or prior correspondence"
+      "Any installation ticket or prior correspondence",
+      "Dated full official MAP payment proof and meter application ID, plus evidence that the property has not yet been metered."
     ],
     "steps": [
+      "Check the DisCo's meter order and bank receipt for the same customer account, address, meter type and successful MAP payment date before claiming a delayed installation.",
       "Confirm that the payment was made through the authorised MAP/DisCo channel and note the payment date.",
       "If the NERC-stated installation period has passed, contact the DisCo with the payment evidence, account number and service address.",
       "Request a complaint or ticket reference and keep a copy of the complaint.",
       "If the DisCo does not resolve the case, escalate it through the applicable electricity complaint channel.",
-      "Where your state's electricity market has transferred to a state regulator, use that regulator's complaint route; otherwise follow NERC's current escalation guidance."
+      "Where your state's electricity market has transferred to a state regulator, use that regulator's complaint route; otherwise follow NERC's current escalation guidance.",
+      "Count working days from completion of authorised MAP payment. NERC's FAQ says an uninstalled meter after 10 working days should be reported with payment evidence.",
+      "Contact the DisCo's metering department by its official channel and request the installation status, proposed appointment and complaint/ticket number.",
+      "Preserve a photo of the premises' meter location, receipt, MAP order and all appointment promises without publishing account details publicly.",
+      "Use the regulator matching the service address: in transferred intrastate markets such as Lagos, Edo, Ogun and Anambra, contact the State Electricity Regulator; use NERC's channel only where it remains responsible.",
+      "For reimbursement after successful installation, check actual energy-credit vending entries and the applicable 2026 amended reimbursement order rather than expecting automatic cash refunds.",
+      "If a contractor demands extra cash to install an already paid-for meter, verify the demand with the DisCo before payment and report unsupported demands through the complaint ticket."
     ],
     "notes": [
       "NERC specifically advises customers to report paid meters that are not installed within the stated period and to provide evidence of payment.",
       "Do not discard the receipt after installation because it may be needed for any credit/refund or complaint issue.",
-      "Regulatory responsibility has transferred to state electricity regulators in a growing number of states, so the correct escalation body depends on location."
+      "Regulatory responsibility has transferred to state electricity regulators in a growing number of states, so the correct escalation body depends on location.",
+      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "NERC's meter FAQ states a 10-working-day MAP installation period and directs unpaid/late metering complaints to the competent regulator with payment evidence."
     ],
     "sources": [
       {
@@ -7477,13 +7590,25 @@
         "url": "https://nerc.gov.ng/media/new-electricity-complaint-channels-for-15-states/",
         "published": "2026-05-04",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/resources/amended-order-on-the-reimbursement-of-meter-costs/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "electricity-prepaid-meter-application",
       "electricity-complaint-escalation"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "paid for meter not installed",
       "prepaid meter delay Nigeria",
@@ -7495,7 +7620,7 @@
     "slug": "electricity-estimated-billing-dispute",
     "title": "How to challenge an estimated electricity bill in Nigeria",
     "shortTitle": "Dispute estimated bill",
-    "summary": "What NERC's billing rules say and how to challenge an estimated bill with the DisCo before escalating the complaint.",
+    "summary": "Challenge a disputed estimated bill by checking your DisCo customer account, tariff band, monthly capping rules and meter history, then filing an evidence-backed complaint. NERC's guidance restricts estimated billing following faulty meter removal; for states whose electricity regulation transferred in 2026, unresolved intrastate disputes go to the state regulator rather than NERC.",
     "category": "Electricity",
     "agencySlug": "nerc",
     "feeLabel": "No complaint filing fee stated",
@@ -7507,19 +7632,29 @@
       "Recent electricity bills or vending records",
       "Customer/account number",
       "Meter number if applicable",
-      "Evidence of meter fault/removal or prior complaints if relevant"
+      "Evidence of meter fault/removal or prior complaints if relevant",
+      "The precise billing month and kWh/naira calculation, plus any applicable monthly energy-cap or metering-removal information."
     ],
     "steps": [
+      "Get the exact disputed bill, your customer account, previous three months' bill/vending records and the DisCo name before asking for a recalculation.",
       "Check the disputed bill against your recent billing or vending history and identify the exact amount and billing period you are challenging.",
       "Check whether the account is metered, the meter is faulty/removed, or the bill is an estimate subject to NERC's capping rules.",
       "Submit a written complaint to the DisCo Customer Complaints Unit with the account number and supporting bills or meter evidence.",
       "Ask for an acknowledgment or complaint reference and keep it.",
-      "If the DisCo does not resolve the issue within the applicable complaint process, escalate to the regulator responsible for your state."
+      "If the DisCo does not resolve the issue within the applicable complaint process, escalate to the regulator responsible for your state.",
+      "Compare the billed kWh and tariff band with your previous usage. Check the monthly energy cap applicable to that DisCo and month rather than applying a nationwide naira amount.",
+      "If the DisCo removed a defective meter, NERC's billing FAQ states it should not simply transfer the customer to unrestricted estimation; check whether it used the prior three-month average as specified.",
+      "Send a written demand for bill breakdown/correction to the DisCo's official complaint channel with supporting receipts and the meter-removal record.",
+      "Request a reference and a written determination of the disputed amount; keep a record of all undisputed current payments and avoid a second unrelated account.",
+      "When escalating, match the service address to the State Electricity Regulator for transferred intrastate markets, or to the NERC channel where federal oversight applies.",
+      "If the DisCo promises replacement metering, retain the date and insist on a written installation plan and subsequent vending/credit reconciliation."
     ],
     "notes": [
       "NERC states that estimated billing is capped rather than unlimited.",
       "Where a faulty or obsolete meter is removed and not immediately replaced, NERC's billing guidance restricts how the customer should be billed.",
-      "Keep paying undisputed current charges where appropriate while the disputed amount is being formally reviewed."
+      "Keep paying undisputed current charges where appropriate while the disputed amount is being formally reviewed.",
+      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "NERC says an obsolete/faulty meter removed by a DisCo must be replaced; if not replaced within a billing period, its FAQ uses the average of the prior three months for energy-consumption calculations."
     ],
     "sources": [
       {
@@ -7533,6 +7668,12 @@
         "agency": "Nigerian Electricity Regulatory Commission",
         "url": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7540,7 +7681,7 @@
       "electricity-prepaid-meter-application",
       "electricity-tariff-band"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "estimated bill complaint Nigeria",
       "NERC estimated billing",
@@ -7552,32 +7693,42 @@
     "slug": "electricity-complaint-escalation",
     "title": "How to escalate an unresolved electricity complaint",
     "shortTitle": "Escalate electricity complaint",
-    "summary": "The complaint ladder from your DisCo to the correct electricity regulator, including the records you should keep.",
+    "summary": "Escalate an unresolved meter, bill or poor electricity service complaint from the DisCo to the right regulator. Following the Electricity Act 2023 transfers, NERC's 4 May 2026 notice lists 15 states that now handle their intrastate disputes through State Electricity Regulators rather than the federal NERC complaint forum.",
     "category": "Electricity",
     "agencySlug": "nerc",
     "feeLabel": "No regulatory complaint fee stated",
     "feeNote": "Start with the DisCo complaint unit and keep evidence before escalating.",
     "timeline": "NERC guidance says a DisCo complaint should generally be resolved within 15 working days depending on complexity.",
     "status": "verified",
-    "officialPortal": "https://nerc.gov.ng/need-help/services/how-to-file-a-complaint/",
+    "officialPortal": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
     "requirements": [
       "A complaint already lodged with the DisCo",
       "DisCo acknowledgment or ticket/reference",
       "Bills, receipts, meter records, photographs or correspondence relevant to the complaint",
-      "Customer/account and contact details"
+      "Customer/account and contact details",
+      "Property's state to determine competent intrastate electricity regulator rather than assume nationwide NERC jurisdiction."
     ],
     "steps": [
+      "Use the DisCo printed on your bill and lodge the issue first with its official Customer Complaints Unit; ask for a ticket/reference, not just a phone promise.",
       "Submit the complaint first to the DisCo's Customer Complaints Unit and obtain an acknowledgment or reference.",
       "Allow the DisCo's complaint process to run and keep all replies and evidence.",
       "If it remains unresolved, identify whether electricity regulation in your state has transferred to a state electricity regulator.",
       "Escalate to the applicable state regulator where responsibility has transferred; otherwise use NERC's current complaint/Consumer Forum route.",
       "Attach the original complaint, DisCo response or proof of non-resolution, and all relevant account evidence.",
-      "If the regulator asks for additional information, respond using the same complaint reference so the record remains connected."
+      "If the regulator asks for additional information, respond using the same complaint reference so the record remains connected.",
+      "Create a dated case file with meter/account ID, property state, bills, vending receipts, photos, previous complaint and the specific outcome requested.",
+      "Verify the property state against NERC's published transfer list before submitting regulatory escalation; Lagos, Edo, Anambra, Ogun and 11 other named states have State Electricity Regulator jurisdiction.",
+      "For a transferred intrastate market, find the State Electricity Regulator's official complaint contact from its government website, not a private 'electricity ombudsman' WhatsApp page.",
+      "For states still subject to NERC's applicable framework, check the NERC Consumer Forum and regulator complaint route after the DisCo opportunity to resolve the case.",
+      "Attach the same DisCo reference and proof of unresolved status. Do not report the case as already approved or refunded just because the regulator received the email.",
+      "If the matter affects more than one household, retain each affected account's details separately and do not share another customer's meter number in a public post."
     ],
     "notes": [
       "The correct escalation body is now location-dependent because some states regulate their intrastate electricity market.",
       "A verbal complaint without a reference is harder to escalate; submit it through a channel that leaves a record.",
-      "Do not start a fresh unrelated complaint at every stage—carry the same evidence and chronology forward."
+      "Do not start a fresh unrelated complaint at every stage—carry the same evidence and chronology forward.",
+      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "The correct regulatory complaint destination is location-dependent; a generic 'always email NERC' instruction is now inaccurate for the transferred intrastate markets."
     ],
     "sources": [
       {
@@ -7598,6 +7749,12 @@
         "url": "https://nerc.gov.ng/media/new-electricity-complaint-channels-for-15-states/",
         "published": "2026-05-04",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7605,7 +7762,7 @@
       "electricity-meter-paid-not-installed",
       "electricity-tariff-band"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NERC complaint",
       "electricity complaint Nigeria",
@@ -7617,7 +7774,7 @@
     "slug": "electricity-tariff-band",
     "title": "How to check your electricity tariff band and service level",
     "shortTitle": "Check electricity band",
-    "summary": "What Bands A–E mean under the Service-Based Tariff framework and where to confirm the band actually applied to your account.",
+    "summary": "Check the electricity tariff band on your own DisCo bill or prepaid vending receipt, then compare the feeder's promised daily service hours with the regulator's Service-Based Tariff definitions. Band A promises at least 20 hours/day; B 16, C 12, D 8 and E 4. Actual kWh prices are DisCo-, tariff- and date-specific, not one fixed national price.",
     "category": "Electricity",
     "agencySlug": "nerc",
     "feeLabel": "No fee to check",
@@ -7627,19 +7784,30 @@
     "officialPortal": "https://nerc.gov.ng/faq/electricity-tariffs/",
     "requirements": [
       "A recent electricity bill or prepaid vending receipt",
-      "Your DisCo/customer account information"
+      "Your DisCo/customer account information",
+      "Customer account/feeder and actual billing month; a band letter without a date or DisCo is insufficient for checking tariff rate."
     ],
     "steps": [
+      "Open your latest electricity bill or prepaid vending receipt and find the DisCo, tariff classification, feeder and period. This is the actual band charged to your account.",
       "Check the tariff/class information printed on your latest bill or prepaid vending receipt.",
       "Use the DisCo's official account or tariff checker if one is provided.",
       "Compare the stated band with NERC's service-level definitions: Band A is at least 20 hours/day, B at least 16, C at least 12, D at least 8 and E at least 4.",
       "If the tariff/band on your account appears inconsistent with the service level or DisCo information, submit a complaint to the DisCo with the bill or vending evidence.",
-      "Escalate an unresolved complaint through the regulator responsible for your state."
+      "Escalate an unresolved complaint through the regulator responsible for your state.",
+      "Check your DisCo's authorised feeder/tariff-band lookup using the property or feeder number. A neighbour on another feeder may legitimately show a different band.",
+      "Compare the bill's service band to NERC's published thresholds—A 20, B 16, C 12, D 8, E 4 minimum daily supply hours—rather than assuming any number of outages automatically reclassifies a band.",
+      "Read the current DisCo tariff order to identify the applicable price per kWh for the billed month; don't use a social-media rate without an effective date.",
+      "If hours of supply are consistently below the promised band, collect a dated daily outage log and the bill or vending evidence before approaching the DisCo.",
+      "Raise a ticket for an incorrect band, energy rate or service-level violation with your DisCo, then escalate to your State Electricity Regulator where the 2026 jurisdiction transfer applies.",
+      "Keep updated receipts, as band/feeder allocations and tariffs can change between billing periods."
     ],
     "notes": [
       "The band is tied to the service level assigned to the feeder/customer class, not simply to the customer's preference.",
       "Tariff rates can be reviewed, so use the current DisCo/NERC information for the actual amount per kWh.",
-      "Keep recent vending receipts because they show the tariff information applied when you bought energy."
+      "Keep recent vending receipts because they show the tariff information applied when you bought energy.",
+      "NERC's 4 May 2026 transition notice lists Abia, Anambra, Bayelsa, Edo, Ekiti, Enugu, Imo, Kogi, Lagos, Nasarawa, Niger, Ogun, Ondo, Oyo and Plateau as states whose intrastate electricity complaints belong to the respective State Electricity Regulators. For other states, check NERC's current federal complaint/Forum route.",
+      "Bands describe minimum service commitments and are not a guarantee that a consumer receives continuous supply every day.",
+      "Your actual tariff is the applicable price on the bill/vending receipt or contemporaneous DisCo regulator order, not a fixed national amount."
     ],
     "sources": [
       {
@@ -7647,13 +7815,19 @@
         "agency": "Nigerian Electricity Regulatory Commission",
         "url": "https://nerc.gov.ng/faq/electricity-tariffs/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Electricity Regulatory Commission",
+        "url": "https://nerc.gov.ng/media/update-on-electricity-regulation-transition-to-state-electricity-regulators/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "electricity-estimated-billing-dispute",
       "electricity-complaint-escalation"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Band A electricity Nigeria",
       "check electricity band",
@@ -8514,32 +8688,44 @@
     "slug": "fccpc-consumer-complaint",
     "title": "How to file a consumer complaint with FCCPC",
     "shortTitle": "FCCPC consumer complaint",
-    "summary": "How to document a failed transaction or poor service, submit it to FCCPC and keep enough evidence for resolution.",
+    "summary": "Submit a consumer complaint through FCCPC's current official online portal after organising the transaction timeline, disputed product/service and supporting receipts. The portal creates a registered account and emails a tracking code; the code is how to follow the same investigation, which may involve an additional sector regulator.",
     "category": "Consumer protection",
     "agencySlug": "fccpc",
     "feeLabel": "No complaint fee stated",
     "feeNote": "FCCPC provides official complaint channels online and through its offices.",
     "timeline": "FCCPC says complaint resolution may take about 1–45 days, although more complex cases can take longer.",
     "status": "verified",
-    "officialPortal": "https://fccpc.gov.ng/consumers/complaint-handling/",
+    "officialPortal": "https://complaints.fccpc.gov.ng/Home/createAccount",
     "requirements": [
       "Your contact details",
       "The business/provider's details",
       "A clear description and chronology of the problem",
       "Receipts, invoices, agreements, screenshots, emails/messages or other supporting evidence",
-      "Evidence of any attempt to resolve the issue directly with the business where available"
+      "Evidence of any attempt to resolve the issue directly with the business where available",
+      "A reachable email for FCCPC tracking-code delivery and a precise remedy requested from the business.",
+      "Legible transaction evidence and attempted-provider-resolution details if those exist."
     ],
     "steps": [
+      "Collect the seller's trading name/contact, order or transaction number, dated payment receipt and messages showing what was promised before starting an FCCPC case.",
       "Collect the transaction documents and write a short timeline of what happened, what you requested and what the business did or failed to do.",
       "Use FCCPC's official complaint route to create/submit the complaint and attach the relevant evidence.",
       "Keep the tracking code or acknowledgment sent after submission.",
       "Monitor the case and respond if FCCPC requests clarification or additional documents.",
-      "Do not delete the original receipts or correspondence until the matter is closed."
+      "Do not delete the original receipts or correspondence until the matter is closed.",
+      "Open https://complaints.fccpc.gov.ng/Home/createAccount to sign up with your real name, email and phone; you can reuse the same account for later consumer complaints.",
+      "Before submitting, describe exactly what you bought, what went wrong, the remedy requested and any documented attempt to resolve it directly with the provider.",
+      "Upload readable receipts, contracts and communications. Avoid sending your card security code, bank PIN, OTP or unrelated personal identity documents.",
+      "Submit the actual complaint and watch the account email for FCCPC's assigned tracking code; a saved draft is not a submitted case.",
+      "Return to the official complaint dashboard with the tracking code and respond when the caseworker requests clarification or a business reply.",
+      "FCCPC states that resolution can range from one to 45 days, but exceptions exist; do not promise a guaranteed refund or automatic regulatory outcome.",
+      "If the problem concerns a specialist regulated product such as banking or telecoms, keep any concurrent CBN/NCC ticket and let FCCPC know of it instead of misrepresenting which regulator is handling the case."
     ],
     "notes": [
       "A concise chronology with receipts and correspondence is more useful than an unsupported accusation.",
       "FCCPC also accepts complaints through other official channels such as email, letters or walk-in contact where appropriate.",
-      "Resolution time varies with the type of transaction and cooperation required from the business."
+      "Resolution time varies with the type of transaction and cooperation required from the business.",
+      "FCCPC's live complaint portal includes registered account creation and supports attachment-based case evidence.",
+      "The agency says ordinary redress can take one to 45 days, with some cases lasting longer; the exact outcome depends on investigation."
     ],
     "sources": [
       {
@@ -8547,12 +8733,18 @@
         "agency": "Federal Competition and Consumer Protection Commission",
         "url": "https://fccpc.gov.ng/consumers/complaint-handling/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Federal Competition and Consumer Protection Commission",
+        "url": "https://complaints.fccpc.gov.ng/Home/createAccount",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "electricity-complaint-escalation"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "report business Nigeria",
       "FCCPC complaint",
@@ -8758,7 +8950,7 @@
     "slug": "customs-vehicle-duty-verification",
     "title": "How to verify customs duty and clearance on an imported vehicle",
     "shortTitle": "Verify vehicle customs duty",
-    "summary": "Use the Nigeria Customs Service verification route to check whether an imported vehicle's clearance/duty claim matches an official customs record.",
+    "summary": "Verify the Nigeria Customs clearance position of an imported car using the Vehicle Identification Number (VIN) on the official Customs Verification Management System (CVMS). Customs describes its verified receipt as a reference/QR-code record; a customs duty check is distinct from FRSC plate verification, legal ownership and motor insurance.",
     "category": "Customs",
     "agencySlug": "ncs",
     "feeLabel": "Use the official Customs verification charge shown",
@@ -8769,19 +8961,30 @@
     "requirements": [
       "Vehicle chassis/VIN",
       "Import/clearance documents or duty-payment information available from the owner/seller",
-      "Accurate vehicle details for comparison with the returned Customs record"
+      "Accurate vehicle details for comparison with the returned Customs record",
+      "A verified, legible chassis/VIN taken from the vehicle itself, not solely an advertisement or seller's screenshot.",
+      "The customs receipt/reference and any export/import documents needed to resolve an official data mismatch."
     ],
     "steps": [
+      "Before paying a vehicle seller, read the chassis/VIN directly from the vehicle itself and compare it character by character against the import and clearance papers.",
       "Open the official Nigeria Customs Service website and use its Customs Verification Management System/service link.",
       "Enter the vehicle chassis/VIN and other requested vehicle details exactly as shown on the vehicle.",
       "Complete any official verification payment step generated by the system and keep its reference.",
       "Review the returned clearance/duty information and compare it with the documents supplied for the vehicle.",
-      "If the record cannot be verified or conflicts with the documents, resolve the discrepancy with Customs before relying on the vehicle's clearance claim."
+      "If the record cannot be verified or conflicts with the documents, resolve the discrepancy with Customs before relying on the vehicle's clearance claim.",
+      "Start from customs.gov.ng → Services → Customs Verification Management System; follow only the official CVMS link to enter VIN/chassis data.",
+      "Compare any make, model, import entry or vehicle description in the CVMS preview to the physical car. A mismatched chassis should be resolved with NCS before purchase.",
+      "If the official system requests a verification payment, use its integrated checkout and retain the original transaction reference. Ignore unsolicited 'customs clearance' bank accounts.",
+      "Download or save the resulting official Customs verification receipt, reference and QR code for the vehicle records, and verify the QR/reference where offered.",
+      "A positive duty record does not prove a seller owns the vehicle. Check FRSC Proof of Ownership/plate data and NIID insurance separately.",
+      "If a vehicle carries a non-standard VIN and cannot use ordinary CVMS, consult a licensed Customs declarant on the separate 846 route rather than altering the VIN digits."
     ],
     "notes": [
       "A customs verification answers a different question from FRSC ownership, number-plate or insurance verification.",
       "For a used imported vehicle, verify the VIN directly on the vehicle rather than relying only on a document supplied by the seller.",
-      "Do not use unofficial 'customs checker' websites that ask for vehicle data or payment when an official NCS route is available."
+      "Do not use unofficial 'customs checker' websites that ask for vehicle data or payment when an official NCS route is available.",
+      "NCS describes CVMS as a VIN-based Customs verification and a QR-coded receipt, not as a car ownership registry.",
+      "The official 846 non-standard VIN application is a different Customs workflow handled through licensed declarants."
     ],
     "sources": [
       {
@@ -8795,6 +8998,12 @@
         "agency": "Nigeria Customs Service",
         "url": "https://customs.gov.ng/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigeria Customs Service",
+        "url": "https://846.customs.gov.ng/verify/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -8802,7 +9011,7 @@
       "vehicle-proof-of-ownership-verification",
       "verify-vehicle-number-plate"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "verify customs duty car Nigeria",
       "customs vehicle verification",
@@ -8814,7 +9023,7 @@
     "slug": "customs-846-non-standard-vin",
     "title": "How the Nigeria Customs 846 non-standard VIN portal works",
     "shortTitle": "Customs 846 VIN portal",
-    "summary": "What the NCS 846 route is for, who should use it and how an authorised declarant handles a vehicle that cannot follow the standard VIN valuation path.",
+    "summary": "Nigeria Customs 846 is a special filing route for applicable non-standard or problematic VIN import cases, not a general public shortcut to reduce assessed duty. The official portal says creating an applicant/declarant account requires a valid Customs Agent Licence and authorisation through the Area Command; the public verification page accepts an existing 846 reference number without pretending the buyer can submit the declaration themselves.",
     "category": "Customs",
     "agencySlug": "ncs",
     "feeLabel": "Customs assessment applies",
@@ -8826,20 +9035,32 @@
       "A non-standard/challenged VIN case that requires the 846 process",
       "Registered portal user/authorised declarant credentials",
       "Valid Customs agent licence where the portal requires it",
-      "Vehicle/import details and supporting documents requested in the application"
+      "Vehicle/import details and supporting documents requested in the application",
+      "A licensed Customs agent authorised by the appropriate Area Command to operate the 846 application, or an existing 846 reference for public verification.",
+      "Accurate vehicle import and VIN evidence so NCS can assess the non-standard declaration without fabricated chassis data."
     ],
     "steps": [
+      "Determine whether the vehicle's customs declaration truly has a non-standard or challenged VIN. Use the normal official CVMS VIN verification route for ordinary imported cars.",
       "Confirm that the vehicle actually requires the 846/non-standard VIN process rather than the normal VIN valuation route.",
       "An authorised user/declarant signs in to the official 846 Customs portal.",
       "Create the application and enter the vehicle/import details and supporting documents requested.",
       "Submit the case for Customs assessment and follow the status through the portal.",
       "Complete only the official assessment/payment instructions and retain the generated reference/receipt.",
-      "Use the portal's verification/status tools to confirm the resulting record."
+      "Use the portal's verification/status tools to confirm the resulting record.",
+      "Engage a licensed Customs declarant with the necessary Area Command-approved 846 user access; the public is not automatically eligible to create an importer login.",
+      "Ask the declarant to show the exact import reference, chassis number and reason why the ordinary VIN valuation procedure cannot be used before filing.",
+      "The licensed declarant signs in at the official 846 e-Application, submits supporting documents and follows NCS officer review or assessment.",
+      "Keep the Customs assessment and reference number; only follow payment instructions produced by the authorised Customs process, not a personal agent transfer.",
+      "Independently open https://846.customs.gov.ng/verify/ and enter the issued 846 Reference Number to check its status on the official site.",
+      "If the verification response does not match the vehicle or reference, seek clarification from the responsible Customs Area Command before trusting the duty claim.",
+      "A buyer should still complete FRSC proof-of-ownership, title and insurance checks; 846 confirms only the Customs declaration issue it addresses."
     ],
     "notes": [
       "This is not a general consumer shortcut for reducing vehicle duty; the portal is designed for the applicable non-standard VIN/customs-declaration cases.",
       "The portal's account requirements can involve a licensed Customs agent/declarant.",
-      "A buyer can still ask for the resulting official Customs record and separately verify vehicle ownership and registration."
+      "A buyer can still ask for the resulting official Customs record and separately verify vehicle ownership and registration.",
+      "NCS's 846 verification portal states explicitly that creating a new application account requires a valid Customs Agent Licence and Area Command approval.",
+      "The public verification page only checks an existing 846 reference; it is not a consumer self-service declaration form."
     ],
     "sources": [
       {
@@ -8859,7 +9080,7 @@
       "customs-vehicle-duty-verification",
       "vehicle-registration-nvis"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Customs 846 Nigeria",
       "non standard VIN customs",
@@ -10581,32 +10802,41 @@
     "slug": "cbn-bank-complaint",
     "title": "How to escalate an unresolved bank complaint to CBN",
     "shortTitle": "CBN bank complaint",
-    "summary": "The Central Bank of Nigeria complaint route for customers whose bank or other CBN-regulated financial institution has not resolved a documented complaint.",
+    "summary": "Escalate a documented problem with a CBN-regulated bank or financial institution after first reporting it to that institution and preserving its complaint ticket. CBN's own guidance allows two weeks for many complaints and up to 30 days for excess-charge and loan categories; do not apply the same deadline to every dispute.",
     "category": "Banking",
     "agencySlug": "cbn",
     "feeLabel": "No CBN complaint fee stated",
     "feeNote": "The CBN complaint process is a consumer-redress channel. Do not pay an intermediary to lodge a complaint.",
     "timeline": "CBN guidance describes two weeks for many unresolved complaints and a 30-day period for some loan or excess-charge complaints; check the current category-specific rule.",
     "status": "verified",
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://complaintsportal.cbn.gov.ng/",
     "requirements": [
       "A complaint already lodged with the bank or other CBN-regulated institution",
       "The financial institution's complaint or tracking reference number",
       "Transaction date, disputed amount and a concise chronology of the problem",
-      "Receipts, statements, correspondence or screenshots supporting the complaint"
+      "Receipts, statements, correspondence or screenshots supporting the complaint",
+      "The date you first lodged the complaint with the bank and evidence of nonresolution after the category-specific permitted period."
     ],
     "steps": [
+      "Report the precise disputed debit, card error, loan charge or service failure through the bank's official helpdesk before using the CBN complaints portal. Ask for a complaint reference and dated acknowledgement.",
       "Report the issue first through the financial institution's complaint channel and obtain a complaint or tracking reference.",
       "Allow the applicable bank resolution period to run while preserving statements, receipts and correspondence connected to the dispute.",
       "Open the CBN complaints portal and use the bank's tracking reference plus the identifying information needed to locate or escalate the complaint.",
       "Provide a concise chronology, disputed amount and supporting documents without including PINs, passwords or one-time codes.",
-      "Keep the CBN tracking information and respond to any request for further evidence until the complaint is closed."
+      "Keep the CBN tracking information and respond to any request for further evidence until the complaint is closed.",
+      "Identify the category before claiming the bank is late: CBN's complaint-lodgement page distinguishes the usual two-week period from 30 days for loan/excess-charge issues.",
+      "Write a short timeline with the bank name, account identifiers limited to what the official form requests, disputed amount, event date, past correspondence and outcome sought.",
+      "Attach the bank's original ticket, statement/receipt excerpts and follow-up replies. Do not send PIN, online banking password, full card security code or OTP.",
+      "If the CBN portal is unavailable, use the Consumer Protection Department's published official correspondence channel instead; keep the same original bank ticket.",
+      "Respond to requests under the existing CBN complaint reference. A CBN filing is a regulator investigation channel, not an instant compulsory bank reversal."
     ],
     "notes": [
       "CBN says customers must normally complain to the regulated institution first before escalating to the Consumer Protection function.",
       "CBN's complaint-lodgement guidance distinguishes a two-week period for many complaints from a 30-day period for some loan and excess-charge issues. Confirm the category and applicable current period before escalating.",
-      "Never include a card PIN, internet-banking password or OTP in a complaint submission."
+      "Never include a card PIN, internet-banking password or OTP in a complaint submission.",
+      "CBN publishes different general response windows: 14 days for most bank complaints, 30 days for excess charges and loans.",
+      "Bank-regulated issues should start at the bank; telecom complaints may instead belong to NCC or other competent regulators."
     ],
     "sources": [
       {
@@ -10644,32 +10874,41 @@
     "slug": "ncc-telecom-complaint",
     "title": "How to escalate a telecom complaint to NCC",
     "shortTitle": "NCC telecom complaint",
-    "summary": "The Nigerian Communications Commission complaint process for unresolved billing, data depletion, service quality and other telecom problems after contacting the provider.",
+    "summary": "Raise an NCC telecom consumer complaint only after recording an unresolved issue with the affected operator. NCC's October 2026 advice emphasizes retaining one complaint ticket, following up under the same reference and escalating through the Consumer Portal or toll-free 622 when the provider's response is inadequate.",
     "category": "Telecommunications",
     "agencySlug": "ncc",
     "feeLabel": "No NCC complaint fee stated",
     "feeNote": "NCC provides complaint channels for consumers after the service provider has been contacted. Do not pay a third party to create a complaint ticket.",
     "timeline": "The service provider gets the first opportunity to resolve the complaint; NCC escalation follows when the provider does not resolve it within the applicable timeline.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://consumer.ncc.gov.ng/consumer-complaints/complaint-form",
     "requirements": [
       "The affected phone number and service provider",
       "The service provider's complaint ticket/reference number",
       "Date of the first provider complaint and a clear description of the unresolved issue",
-      "Bills, screenshots, service agreements or other evidence relevant to the complaint"
+      "Bills, screenshots, service agreements or other evidence relevant to the complaint",
+      "Date of first complaint and the existing operator ticket/complaint reference, plus clear service-specific proof."
     ],
     "steps": [
+      "Report the issue to the operator through the official helpline 300, service centre, app or email. Record the affected line, date and exact failure, then request a complaint ticket number.",
       "Contact the telecom service provider first through customer care, an official service centre, email or another provider support channel.",
       "Explain the problem clearly and obtain a complaint ticket or reference number before ending the provider interaction.",
       "Allow the provider the applicable resolution period and keep the ticket plus any SMS, bill or screenshot showing the issue.",
       "If the problem remains unresolved, open the NCC Consumer Complaint Form and enter the provider ticket, affected number, dates and complaint category.",
-      "Submit the evidence and desired remedy to NCC and keep the Commission complaint reference for follow-up."
+      "Submit the evidence and desired remedy to NCC and keep the Commission complaint reference for follow-up.",
+      "Record which data bundle, airtime charge, coverage problem, barred line or VAS deduction is disputed, and attach the corresponding transaction/date evidence.",
+      "Allow the provider's quoted resolution window and follow up with the same ticket. NCC's 8 October 2026 guidance warns against creating unrelated duplicate complaints.",
+      "If still unresolved, complete NCC's Consumer Complaint Form with the operator, ticket ID, first complaint date, affected number, category and requested remedy.",
+      "As another official route, call NCC 622 toll-free with the existing operator ticket. Do not enter sensitive passwords or full identity documents in social-media messages.",
+      "Monitor subsequent replies and keep screenshots of both the operator's and NCC's resolutions; if the operator requires additional evidence, answer within the same case."
     ],
     "notes": [
       "NCC specifically requires the consumer to complain to the service provider first and keep the ticket number before escalation.",
       "The complaint route covers issues such as billing, data depletion, quality of service and value-added services.",
-      "NCC also publishes consumer contact channels for people who cannot complete the web form."
+      "NCC also publishes consumer contact channels for people who cannot complete the web form.",
+      "NCC published additional complaint-handling instructions on 8 October 2026 confirming first contact with the operator and preservation of one ticket.",
+      "NCC's official toll-free escalation number is 622, while 300 is the operator customer-care helpline."
     ],
     "sources": [
       {
@@ -10684,6 +10923,12 @@
         "agency": "Nigerian Communications Commission",
         "url": "https://consumer.ncc.gov.ng/consumer-complaints/complaint-form",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Nigerian Communications Commission",
+        "url": "https://consumer.ncc.gov.ng/articles/126-before-you-escalate-your-complaint-steps-to-take-first",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -12533,7 +12778,7 @@
     "slug": "bvn-validation",
     "title": "How to validate a BVN with NIBSS *565*1#",
     "shortTitle": "Validate BVN",
-    "summary": "Confirm whether a BVN is valid and see the name registered to it using NIBSS's official *565*1# USSD validation service.",
+    "summary": "NIBSS *565*1# validates whether an 11-digit BVN exists and displays the name recorded against it, for a published ₦20 USSD fee. This is distinct from the owner's BVN retrieval (*565*0#) and does not prove control of the linked bank account or authorise sharing personal identifiers.",
     "category": "Banking",
     "agencySlug": "nibss",
     "feeLabel": "₦20",
@@ -12544,17 +12789,25 @@
     "requirements": [
       "The 11-digit BVN you want to validate",
       "A Nigerian mobile line that can dial NIBSS *565# USSD services",
-      "At least ₦20 airtime for the NIBSS BVN-validation service charge"
+      "At least ₦20 airtime for the NIBSS BVN-validation service charge",
+      "Permission to perform an identity validation, and a number transmitted through a secure channel rather than an unsolicited public post."
     ],
     "steps": [
+      "Only validate an eleven-digit BVN for an authorised identity-checking purpose; ask the individual whose record is involved to supply it securely rather than harvesting BVNs from documents.",
       "Open the phone dialler on a Nigerian mobile line and dial *565*1# to start the NIBSS BVN-validation service.",
       "Enter the 11-digit BVN in the USSD prompt and review the number before sending the request.",
       "Confirm the request so the ₦20 NIBSS service charge can be applied to the USSD session.",
-      "Read the validation response and compare the returned registered name with the person or record you are checking before relying on the BVN."
+      "Read the validation response and compare the returned registered name with the person or record you are checking before relying on the BVN.",
+      "Dial *565*1#, enter the eleven digits and review them before sending to avoid paying for a mistyped lookup.",
+      "Read the name supplied by NIBSS and compare it with the independently presented identification; spelling or identity mismatches should be resolved with the bank.",
+      "Do not assume that a valid number and matching name proves that a caller owns a bank account or is authorised to receive payment; confirm the account independently with the bank.",
+      "If the USSD lookup cannot run, check airtime and service availability before retrying. NIBSS publishes a ₦20 charge, and repeated calls are unnecessary once the result is recorded."
     ],
     "notes": [
       "NIBSS says the service confirms that a BVN is correct and returns the name registered to the BVN.",
-      "This is different from retrieving your own forgotten BVN with *565*0#."
+      "This is different from retrieving your own forgotten BVN with *565*0#.",
+      "The service discloses a name, so treat the returned output as sensitive personal data and avoid exposing it in messages or screenshots.",
+      "BVN validation is not a way to change an enrollee's name or date of birth; the bank's amendment procedure handles corrections."
     ],
     "sources": [
       {
@@ -12576,13 +12829,13 @@
       "bvn-retrieval",
       "bvn-enrolment"
     ],
-    "lastVerified": "2026-10-03"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "bvn-data-update",
     "title": "How to correct or update BVN details",
     "shortTitle": "Update BVN details",
-    "summary": "Correct a BVN name, date of birth or other permitted demographic detail through the banking channel allowed under CBN's BVN framework.",
+    "summary": "Correct a BVN-linked name, date of birth or permitted demographic field through an authorised bank, not a third-party online BVN 'editor'. The CBN framework limits birth-date corrections to one supported change, and its May 2026 rule allows the BVN-linked mobile number to be changed only once; collect bank evidence before submitting.",
     "category": "Banking",
     "agencySlug": "cbn",
     "feeLabel": "No single central BVN-update fee is published by CBN",
@@ -12594,19 +12847,28 @@
       "Your existing BVN and a valid government-issued identity document",
       "A completed BVN data-amendment form supplied by the bank handling the correction",
       "For a name change: the legal evidence accepted for the change, such as a marriage certificate, divorce document, court order or other bank-accepted supporting record",
-      "For a date-of-birth correction: documentary evidence showing the correct date of birth, noting that the CBN framework permits this correction only once"
+      "For a date-of-birth correction: documentary evidence showing the correct date of birth, noting that the CBN framework permits this correction only once",
+      "The original and proposed field values, legal supporting evidence and any historic BVN amendments already completed."
     ],
     "steps": [
+      "Identify which field is wrong on your existing BVN record and compare it against the supporting government ID or civil document before requesting a BVN amendment at your bank.",
       "Visit or contact the bank that will handle the BVN amendment and request its current BVN data-amendment form for the exact field you need to correct.",
       "Complete the amendment form with your existing BVN and the corrected demographic information exactly as supported by your identity records.",
       "Submit the completed form, valid identification and the supporting document for the requested name, date-of-birth or other permitted correction.",
       "Complete the identity or biometric verification requested by the bank and collect a reference, acknowledgement or complaint ticket for the submitted amendment.",
-      "Check the updated BVN record through your bank after processing and escalate the request to the bank if a complete submission remains unresolved beyond the applicable handling period."
+      "Check the updated BVN record through your bank after processing and escalate the request to the bank if a complete submission remains unresolved beyond the applicable handling period.",
+      "For a birth-date correction, ask the bank to review the civil evidence and the once-only amendment restriction before submission. The bank may reject unsupported conflicting dates.",
+      "For a name change due to marriage, divorce or court process, assemble the exact certificate or court document the bank accepts instead of asking for an arbitrary spelling replacement.",
+      "For a phone-number change, confirm which line should be permanently linked because CBN's May 2026 rules allow only one change.",
+      "Keep the bank's dated amendment ticket and later check the linked account or bank BVN record. A bank account profile update may not mean the BVN registry has synchronised.",
+      "If another bank still sees the old record, report the mismatch to the original amending bank with the ticket rather than opening a second BVN."
     ],
     "notes": [
       "CBN allows date-of-birth correction once with supporting documents and permits supported name changes and minor corrections.",
       "A BVN itself does not change when the underlying customer record is corrected.",
-      "The CBN framework limits supported date-of-birth corrections to one change. Check your supporting records carefully with the bank before submitting this particular amendment."
+      "The CBN framework limits supported date-of-birth corrections to one change. Check your supporting records carefully with the bank before submitting this particular amendment.",
+      "CBN's reforms effective May 2026 restrict BVN-linked phone-number changes to one.",
+      "Only authorised institutions can access the BVN database; do not upload original identifiers to purported public BVN 'update' sites."
     ],
     "sources": [
       {
@@ -12620,6 +12882,12 @@
         "agency": "Central Bank of Nigeria",
         "url": "https://www.cbn.gov.ng/out/2017/bpsd/circular%20on%20the%20regulatory%20framework%20for%20bvn%20%20watchlist%20for%20nigerian%20financial%20system.pdf",
         "lastChecked": "2026-10-03"
+      },
+      {
+        "label": "Official agency procedure and current consumer rights",
+        "agency": "Central Bank of Nigeria and NIBSS",
+        "url": "https://www.cbn.gov.ng/AboutCBN/Reforms.html",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -12637,7 +12905,7 @@
       "bvn-retrieval",
       "bvn-enrolment"
     ],
-    "lastVerified": "2026-10-09"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "nrs-tax-id-retrieval",
