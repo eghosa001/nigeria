@@ -48,7 +48,7 @@ export const seriesTitles: SeriesTitle[] = [
     creators: ["Ruth Kadiri"],
     status: "ongoing",
     premiereLabel: "Series began 6 August 2026 on RuthKadiri247",
-    episodeInfo: "FilmFlux lists 8 feature-length episodes in the current run; new instalments continued through September 2026.",
+    episodeInfo: "FilmFlux listed 10 numbered, feature-length instalments on 16 October 2026. Check RuthKadiri247 for any later original uploads.",
     watchLinks: [
       {
         platform: "YouTube",

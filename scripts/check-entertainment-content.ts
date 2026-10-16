@@ -1,4 +1,6 @@
 import { entertainmentTitles } from "../lib/entertainment";
+import { seriesTitles } from "../lib/series";
+import { reviewedSeriesEditorial20261016 } from "../lib/series-editorial-verified-2026-10-16";
 import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registry";
 import { entertainmentPeople, personEditorialProfiles, hasIndexablePersonEditorial } from "../lib/entertainment-extras";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
@@ -309,3 +311,25 @@ assert(unknownMan.references?.some(ref => ref.href.includes("nollywoodtimes.com/
   "The Man I Never Knew needs independent release and cast source citations.");
 assert(!/she discovers she is pregnant|raises a child after|experience of parenting alone/i.test([unknownMan.synopsis, ...unknownProfile.sections.flatMap(section => section.paragraphs)].join(" ")),
   "The Man I Never Knew must not restore the unsupported pregnancy and parenting plot.");
+
+// Change-scoped source/editorial checks for the ten existing TV series guides.
+// This is a content-shape and provenance guard, not a claim of human viewing.
+const seriesEditorialIds = Object.keys(reviewedSeriesEditorial20261016);
+assert(seriesEditorialIds.length === 10, "Expected ten individually researched canonical series.");
+for (const slug of seriesEditorialIds) {
+  const item = seriesTitles.find(series => series.slug === slug);
+  const editorial = reviewedSeriesEditorial20261016[slug];
+  assert(item, "Research note has no canonical series page: " + slug);
+  assert(editorial.sections.length === 2 && editorial.sections.every(section =>
+    section.heading.length > 15 && section.paragraphs.length === 2 &&
+    section.paragraphs.every(paragraph => paragraph.length >= 110)),
+    slug + " needs two distinct, substantial, individually sourced sections.");
+  assert(editorial.references.length >= 2 && editorial.references.every(source =>
+    source.label.length > 15 && /^https:\/\/[^\s/]+\.[^\s/]+/.test(source.href)),
+    slug + " needs at least two attributable HTTPS research references.");
+}
+assert(seriesTitles.find(item => item.slug === "once-upon-a-village")?.episodeInfo?.includes("10 numbered"),
+  "Once Upon a Village must no longer present the old eight-episode count.");
+assert(reviewedSeriesEditorial20261016["wata-shida"].sections.some(s =>
+  s.paragraphs.join(" ").includes("12 August 2026")),
+  "Wata Shida guide must distinguish the confirmed season-four release.");
