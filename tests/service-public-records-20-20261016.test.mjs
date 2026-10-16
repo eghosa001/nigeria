@@ -35,7 +35,7 @@ test("fees and application exceptions match distinct government services", () =>
   const get = (slug) => bySlug.get(slug);
   assert.match(get("npc-birth-certificate-reprint").feeNote, /US\$30/);
   assert.match(get("npc-digital-birth-certificate-reissuance").summary, /8 November 2023/);
-  assert.match(get("npc-digital-birth-certificate-reissuance").steps.join(" "), /only once/);
+  assert.match(get("npc-digital-birth-certificate-reissuance").steps.join(" "), /download.*once/i);
   assert.match(get("upgrade-drivers-licence-class").steps.join(" "), /commercial.*capture centre/i);
   assert.match(get("jamb-admission-letter").feeNote, /₦1,000.*₦100/);
   assert.match(get("nysc-exemption-certificate").summary, /foreign-trained.*person/i);
