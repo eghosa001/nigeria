@@ -122,7 +122,7 @@ const records: Record<string,Entry> = {
     ],
     "context": [
       "Maurice Sam and Sarian Martin appear in the 2026 film's documented lead cast. The source record links an authorised full-length YouTube release, allowing viewers to distinguish the scripted drama from awards-show or sports footage using the same title.",
-      "No reliably confirmed individual roles, athletic biography or director are provided in the current credits. Those facts should remain unassigned until the original publisher or another credible film-credit source establishes them."
+      "Film-specific reporting attributes directing to Okey Ifeanyi, independently cross-referenced against a filmography that lists this exact January 2026 production. Character names and any real-life athletic biography remain unverified, and no original end-credit transcription is claimed."
     ],
     "questions": [
       [
@@ -237,17 +237,17 @@ const records: Record<string,Entry> = {
   },
   "the-man-i-never-knew": {
     "story": [
-      "The Man I Never Knew follows Mila after a romantic encounter at a resort ends with the other person leaving her. She discovers she is pregnant and must build a life for herself without his support. Years later the man returns, but his response to her is not the reunion she imagined.",
-      "His insistence that he does not recognise her raises questions about memory, responsibility and whether the past can be repaired. Mila's experience of parenting alone gives the new encounter its weight; the story does not rely only on the surprise of seeing an old partner again."
+      "The Man I Never Knew starts from Mila's relationship with a man she meets at a resort. After a painful separation, she later confronts someone with the same appearance and apparent identity who insists he has never met her. The mystery is whether she is seeing an old love again or whether appearances hide a different explanation; the available publisher-linked summaries do not establish a pregnancy subplot.",
+      "That denial changes the narrative from a simple reunion into an identity mystery. The reporting from Nollywood Times and the separate FilmFlux listing agree on the cast and the unfamiliar man's refusal to recognise Mila, but describe the underlying twist at different levels of detail. This guide preserves the unresolved question rather than asserting that Mila raised a child or inventing a final revelation."
     ],
     "context": [
       "TooSweet Annan, Chisom Agoawuike and Mojoyin Fadaka appear in the documented cast of the 2026 Nigerian movie. The existing film entry links to an authorised full-length YouTube publisher video.",
-      "The public plot identifies Mila but does not provide a dependable character-role mapping for every actor. The film should not be confused with other romances about lost memories, abandoned pregnancies or reunions; its resort story and year distinguish it."
+      "The secondary plot source identifies Mila but does not establish which performer plays every character. The Royal Arts TV release is dated 24 September 2026; no director or individual cast-to-role assignment is inferred from the channel thumbnail. Neither external source supplies a reliable pregnancy storyline, so that claim has been withdrawn."
     ],
     "questions": [
       [
         "Who is Mila in The Man I Never Knew?",
-        "Mila is a woman who raises a child after a resort romance ends, before the man unexpectedly returns."
+        "Mila's resort relationship ends painfully; years later she recognises a man who denies knowing her. Published film-specific descriptions do not verify a child or pregnancy."
       ],
       [
         "Who appears in The Man I Never Knew?",
