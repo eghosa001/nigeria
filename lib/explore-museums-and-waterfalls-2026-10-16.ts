@@ -48,7 +48,6 @@ export const museumAndVisitorReviews20261016: Record<string, EditorialReview> = 
     planning: {label: "Keep the Argungu museum enquiry separate from the concluded festival", detail: "UK FCDO advises against all but essential travel to Kebbi. For essential travel, contact the NCMM museum station to confirm gallery access. Check any future festival programme with its organiser rather than copying February dates; no combined festival-and-museum pass was confirmed."},
   },
   "kebbi-heritage-weekend-itinerary": {
-    summary: "The 2026 Argungu festival ended in February; Kebbi museum and royal heritage remain research topics, not a bookable October cultural weekend under current regional travel advice.",
     source: {label: "Sokoto State — completed 2026 Argungu finale", href: "https://sokotostate.gov.ng/argungu-fishing-finale-sokoto-governor-rewards-winners/"},
     additionalSources: [{"label":"UNESCO — Argungu intangible heritage history","href":"https://ich.unesco.org/en/RL/argungu-international-fishing-and-cultural-festival-00901"},{"label":"UK FCDO — Kebbi regional advice","href":"https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks"}],
     intro: "Sokoto State's February 15 report confirms the conclusion of Argungu's 2026 fishing festival. UNESCO's 2016 recognition protects an intangible community tradition, not a permanently bookable attraction at Matan Fada. Kanta Museum, Gwandu heritage and any Zuru-area visit have different custodians and locations; a festival headline cannot establish one combined heritage pass.",
@@ -62,7 +61,6 @@ export const museumAndVisitorReviews20261016: Record<string, EditorialReview> = 
     planning: {label: "Distinguish Kebbi's actual stations, event dates and travel restrictions", detail: "UK FCDO advises against all but essential travel to the state. Avoid recommending an unverified Gwandu–Argungu–Zuru leisure driving circuit. The Argungu museum has an NCMM station contact; festival organisers control future dates, and the two cannot be treated as a single ticket."},
   },
   "benue-state-travel-guide": {
-    summary: "Makurdi's River Benue is significant to local history, but UK FCDO advises against all but essential travel to Benue and a June 2026 boat tragedy led to an official investigation.",
     source: {label: "Guardian — NSIB investigation into June 2026 Wadata boat accident", href: "https://guardian.ng/news/benue-boat-mishap-nsib-begins-investigation-seeks-safer-waterways/"},
     additionalSources: [{"label":"UK FCDO — Benue regional violence and travel warning","href":"https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks"}],
     intro: "Reporting on 18 June 2026 described the Nigerian Safety Investigation Bureau's investigation into a serious River Benue boat accident near Makurdi's Wadata district. A riverfront view and transport boat are not certified leisure cruises; water levels, operator licensing and life-jacket availability are materially different considerations. Travel advice also cites serious intercommunal and criminal violence in Benue State.",
