@@ -13696,7 +13696,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
 
 // Authoritative access updates are additive: do not erase the original
 // guide's researched details, first source, or earlier review dates.
-export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide) => {
+const firstPassExploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide) => {
   const freshlyChecked = tourRealityChecks20261016[guide.slug] ?? tourAccessDecisions20261016C[guide.slug] ?? highPriorityTourEvidence20261016[guide.slug] ?? tourPracticalDecisions20261016[guide.slug] ?? verifiedTourDecisions20261016[guide.slug];
   const update = freshlyChecked ?? independentVisitorEvidence20261015[guide.slug] ?? verifiedVisitAdditions20261015[guide.slug];
   if (!update) return guide;
@@ -13736,7 +13736,7 @@ export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide
 // Keep prior primary visitor reviews intact. These follow-up research notes
 // add independently attributable decisions to nine existing published guides;
 // they never invent admission prices, hours, licences or a personal visit.
-const exploreGuidesWithFurtherEvidence: ExploreGuide[] = exploreGuides.map((guide) => {
+export const exploreGuides: ExploreGuide[] = firstPassExploreGuides.map((guide) => {
   const extra = furtherVisitorDecisions20261016[guide.slug];
   if (!extra) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13757,7 +13757,7 @@ const exploreGuidesWithFurtherEvidence: ExploreGuide[] = exploreGuides.map((guid
 // module. Index once instead of scanning every record for each guide request.
 // Keep the first record for a slug, matching Array.find if duplicates exist.
 const exploreGuidesBySlug = new Map<string, ExploreGuide>();
-for (const guide of exploreGuidesWithFurtherEvidence) {
+for (const guide of exploreGuides) {
   if (!exploreGuidesBySlug.has(guide.slug)) {
     exploreGuidesBySlug.set(guide.slug, guide);
   }
