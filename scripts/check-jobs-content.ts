@@ -120,7 +120,7 @@ for (const slug of verifiedPortalSlugs20261016) {
   assert(item.sources.some(source => source.url === item.officialUrl &&
     source.lastChecked === "2026-10-16"),
     slug + " needs a checked exact first-party issuer link.");
-  assert(item.applicationSteps.length === 3 &&
+  assert(item.applicationSteps.length === 5 &&
     !item.applicationSteps.some(step => /Browse or search the employer's current opportunities; relevant hiring areas/.test(step)),
     slug + " must have a specific decision path, not reusable portal filler.");
   assert(!item.nextMilestone,
