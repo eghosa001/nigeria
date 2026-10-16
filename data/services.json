@@ -3325,7 +3325,7 @@
       "Open the NIS domestic Passport Correction of Data/Change of Data service, not the routine Renewal/Re-issue flow.",
       "Enter existing passport and NIN details precisely and specify the requested marital-status update.",
       "Upload the marriage certificate, birth/High Court age declaration, origin certificate, explanatory letter, affidavit, newspaper publication and existing passport datapage as requested.",
-      "Review the resulting details carefully; follow the official non-refundable administrative-charge/payment step and book the appointed passport office.",
+      "Match the requested marital-status and surname fields to the marriage certificate, pay the non-refundable Change of Data invoice generated in the NIS portal and save the payment receipt and selected appointment date.",
       "Bring the existing passport booklet, payment/appointment slips and original civil documents to the immigration office for identity checking and biometrics.",
       "For a person resident abroad, use the international application route and the responsible mission's appointment instructions.",
       "Inspect the final passport's name and other data before making a travel booking; correct any NIN inconsistency through its separate lawful procedure."
@@ -3429,7 +3429,7 @@
       "Official NIS payment, appointment and biometric enrolment records."
     ],
     "steps": [
-      "Review the restricted blue official-passport eligibility categories at the NIS Passports page rather than treating ordinary government employment as automatic entitlement.",
+      "Open the NIS Passports page and compare the restricted blue official-passport eligibility list with the applicant's current public-service appointment or approved assignment; ordinary employment alone is not automatic eligibility.",
       "Ask the employing organisation to issue a correctly addressed introduction/application letter identifying the official capacity or assignment.",
       "Collect the appointment/promotion letter, valid official ID, age evidence and two passport photographs; add the election-return certificate if applicable.",
       "Use the official NIS passport application route appropriate to the official-passport category and confirm the amount at checkout.",
@@ -6923,7 +6923,7 @@
       "Approved disbursed student loan and the terms shown in the borrower's official NELFUND account.",
       "NYSC completion evidence where the borrower served, to determine the published two-year post-NYSC condition.",
       "Current employer details and changes of employment for payroll repayment.",
-      "For self-employed borrowers, formal business name/address and financial/banking details requested by NELFUND.",
+      "For self-employed borrowers, the registered business name, operating address and ownership/banking records specified in the NELFUND loan terms for the 60-day update.",
       "Records of repayments, salary deductions, notices and any optional full/partial early payment."
     ],
     "steps": [
@@ -9523,7 +9523,7 @@
       "Account access on cerpac.immigration.gov.ng and any appointment/biometric documentation requested by NIS."
     ],
     "steps": [
-      "Read the expiry date and residence category on your existing CERPAC; begin before it lapses, as overstays are a separate compliance issue.",
+      "Check the expiry date and residence category printed on your current CERPAC, then open the official NIS e-CERPAC website before the permission lapses.",
       "Open https://cerpac.immigration.gov.ng/requirements to confirm the current residence-permit classes, then choose the class corresponding to your present legal basis of stay.",
       "Enter the official e-CERPAC lobby/login using the existing applicant or employer-authorised account rather than registering a duplicate resident record.",
       "Confirm your passport number, expiring CERPAC record and relevant class; check for a renewal action offered in that account.",
@@ -9709,7 +9709,7 @@
       "An approved payment route and an affordable voluntary savings amount/pattern."
     ],
     "steps": [
-      "Read PenCom's Personal Pension Plan (PPP) page rather than relying on old Micro Pension Plan agents or product names.",
+      "Open PenCom's Personal Pension Plan (PPP) page and compare the current programme and licensed-PFA rules with old Micro Pension marketing claims.",
       "Confirm eligibility as a self-employed/informal-sector worker or employee of an organisation with fewer than three employees.",
       "Choose a genuine licensed PFA and ask it to enrol you under PPP, clarifying whether an existing Micro Pension RSA is already on the system.",
       "Complete its ECRS/RSA identity process and review the RSA PIN and beneficiary/contact information before making payments.",
@@ -12802,7 +12802,7 @@
       "Read the precise result or rejection reason shown, such as quality, dimensions or upload failure, without assuming every upload error means the photograph is unacceptable.",
       "If it fails, replace or recrop the photo to satisfy the live checker and try again with the revised image.",
       "After a successful precheck, begin the correct Fresh, Renewal/Re-issue or Change of Data application and keep the image available if the form requests it.",
-      "Book and attend the NIS biometric appointment where required; the photo tool is not the appointment or the final identity-capture step."
+      "After the photo precheck, select Book Appointment from the actual NIS passport application, save the appointment slip and attend the selected NIS processing office for photograph and biometric capture."
     ],
     "notes": [
       "NIS does not publish a universal separate charge for this pre-application checker.",
