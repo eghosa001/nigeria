@@ -11345,7 +11345,7 @@
     "officialPortal": "https://cvr.inecnigeria.org/Public/getStarted",
     "requirements": [
       "A prior INEC voter registration; the service does not enrol a first-time voter.",
-      "The existing voter identity/registration details requested by INEC's Uncollected PVC lookup.",
+      "The registered voter's name and previous registration identity information used by INEC's Uncollected PVC search; match the record before relying on the result.",
       "The registered voter's own presence and any registration slip or identity evidence used at the designated collection point.",
       "A current official INEC collection notice if the local centre or schedule has changed."
     ],
