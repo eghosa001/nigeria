@@ -10151,12 +10151,12 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
     "region": "Osun State",
     "summary": "Use Kiriji War Museum as a focused Ilesa-area history stop for context on the long Yoruba civil wars of the nineteenth century.",
     "intro": [
-      "Kiriji War Museum gives the Ilesa area a distinct military-history and Yoruba-history intent beyond waterfalls and royal landmarks.",
+      "The Kiriji war site is documented by Osun State at Imesi-Ile; current evidence does not establish a staffed museum, gallery admission or ticket counter in Ilesa.",
       "The subject benefits from careful interpretation, especially where oral tradition and documented history intersect."
     ],
     "bestFor": [
       "Yoruba history",
-      "Museums",
+      "Historic sites",
       "Military history",
       "Ilesa"
     ],
@@ -10189,7 +10189,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
       },
       {
         "label": "Follow photography rules",
-        "detail": "Ask before photographing exhibits."
+        "detail": "Ask community custodians before photographing any memorial feature or other people at a historic site."
       },
       {
         "label": "Allow enough time",
@@ -10229,8 +10229,8 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
         "detail": "Its meaning is strongest within the wider historic city."
       },
       {
-        "name": "Museum pairing",
-        "detail": "Kiriji War Museum can add political and military context."
+        "name": "Kiriji conflict history",
+        "detail": "The documented Kiriji historic site is associated with Imesi-Ile; a staffed museum or same-day public tour has not been verified."
       },
       {
         "name": "Short heritage stop",
