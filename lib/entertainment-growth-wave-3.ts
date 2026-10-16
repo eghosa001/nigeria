@@ -93,17 +93,23 @@ export const entertainmentGrowthWave3: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Romance", "Family", "Nollywood"],
     languages: ["English"],
-    synopsis: "A marriage is pushed into crisis by a desperate decision around having a baby, turning love and trust into a conflict shaped by betrayal, consequences and one wife's determination to protect her relationship.",
+    synopsis: "After an unsuccessful IVF attempt strains their savings, Jason and Emerald rent part of their home to Dare and Pamela to help fund another cycle. Conflicting expectations about privacy, house rules and tenancy rights turn a practical financial decision into a dangerous domestic confrontation. The September 2026 Enyinna Jonas TV drama explores boundaries and marital trust without relying on a vague betrayal premise.",
     cast: ["Omeche Oko", "Ray Emodi", "Symon Oko", "Amaka Ndukwe", "Jennifer Obichere"],
     featuredCast: ["Omeche Oko", "Ray Emodi", "Symon Oko"],
     runtimeMinutes: 135,
     featured: true,
     references: [
       {
+        label: "African Movie Database — Third Party Risk (2026), storyline and specific character roles",
+        href: "https://africanmoviedb.com/title/third-party-risk-2026",
+        lastChecked: "2026-10-16",
+        note: "Names Jason, Emerald and Dare; gives director Uche Alexmoore as database attribution, not direct on-screen verification. Distinguish from unrelated 2026 Third Party and 1954/55 Third Party Risk."
+      },
+      {
         label: "FilmFlux — Third Party Risk",
         href: "https://filmflux.app/movie/ad80f748-a91a-46e6-b027-90a66e7d2185-third-party-risk",
-        lastChecked: "2026-10-07",
-        note: "Independent catalog reference used to verify cast, release date and story context."
+        lastChecked: "2026-10-16",
+        note: "Independent publisher-linked credits confirm the Enyinna Jonas TV release, date and cast. Uche Alex-Moore is credited for technical crew functions here; the film-specific director requires corroboration."
       }
     ],
     watchLinks: [
@@ -112,8 +118,8 @@ export const entertainmentGrowthWave3: EntertainmentTitle[] = [
         label: "Watch Third Party Risk on Enyinna Jonas TV",
         href: "https://www.youtube.com/watch?v=zxvtMba4MYE",
         access: "full-movie",
-        lastChecked: "2026-10-07",
-        note: "Official full-length upload on Enyinna Jonas TV.",
+        lastChecked: "2026-10-16",
+        note: "Original publisher's September 2026 full-length upload. Playback or geographic restrictions may change.",
         publisher: "ENYINNA JONAS TV",
         publisherUrl: "https://www.youtube.com/@enyinnajonastv"
       }

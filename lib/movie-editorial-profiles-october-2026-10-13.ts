@@ -203,39 +203,33 @@ export const movieEditorialProfilesOctober20261013: Record<string, MovieEditoria
     ]
   },
   "abe-odale-2026": {
-    "releaseDate": "2026-10-11",
-    "roles": [],
-    "crew": [
-      {
-        "role": "Writer and producer",
-        "name": "Omobolanle Salisu"
-      }
+    releaseDate: "2026-10-11",
+    roles: [],
+    crew: [
+      { role: "Director (Nollywood Times film-specific reporting)", name: "Wasiu Adeyanju" },
+      { role: "Writer and producer", name: "Omobolanle Salisu" },
     ],
-    "sections": [
+    sections: [
       {
-        "heading": "A Yoruba relationship drama about a past connection",
-        "paragraphs": [
-          "Abe Odale, translated in some reports as Blade of Betrayal, follows Olaide after a personal decision brings someone from her past back into her married life. What begins as a private matter carries repercussions for trust at home. The core narrative turns on whether those involved acknowledge the consequences of their choices rather than letting secrecy shape the relationship.",
-          "The film is a Yoruba-language release and should not be mistaken for other works with similar English titles. Mide Martins, Ayo Olaiya, Antar Laniyan and Omobolanle Salisu are among the named performers in available release coverage. Additional casting lists vary between publishers, so ambiguous name variants and unverified character assignments have deliberately been omitted."
-        ]
+        heading: "The film's identity: Abe Odale (Blade of Betrayal)",
+        paragraphs: [
+          "Abe Odale, also publicised as Blade of Betrayal, is a Yoruba-language film released through LibraTV on 11 October 2026. Mide Martins, Ayo Olaiya, Antar Laniyan and Omobolanle Salisu are named in the October 12 release report. The English title is a translation used for discovery; this is one Yoruba production, not two separately licensed features.",
+          "Some film listings describe a married woman reconnecting with someone from the past, but the checked release report explicitly does not publish a reliable detailed plot. Without source-backed character relationships, this guide will not identify an invented heroine, assert unverified infidelity scenes or turn the film's English subtitle into an imagined plot. Readers should use the exact publisher and film title to identify it.",
+        ],
       },
       {
-        "heading": "LibraTV premiere and production verification",
-        "paragraphs": [
-          "Abe Odale premiered on LibraTV's YouTube channel on 11 October 2026. The release therefore belongs to direct-to-YouTube Yoruba cinema, rather than an independently confirmed Netflix or cinema rollout. Readers looking for the title should identify the publisher as LibraTV and check the original channel's upload rather than using unauthorised mirror or download pages.",
-          "Available independent release coverage identifies Omobolanle Salisu as writer and producer as well as a performer. It does not establish an independently verifiable director credit in the cited source. The entry therefore preserves the confirmed creative role and leaves the director field unfilled pending reliable evidence."
-        ]
-      }
-    ],
-    "questions": [
-      {
-        "question": "Where was Abe Odale (Blade of Betrayal) released?",
-        "answer": "The Yoruba movie premiered through the LibraTV YouTube channel on 11 October 2026."
+        heading: "What is verified about the filmmakers and release",
+        paragraphs: [
+          "The film-specific Nollywood Times report names Wasiu Adeyanju as director and identifies Omobolanle Salisu as writer and producer. It also names Femi Adebayo among the cast, alongside Mide Martins, Ayo Olaiya and Antar Laniyan. Those are production and performer facts reported by that outlet; the available evidence does not justify attributing particular character names to any performer.",
+          "The outlet dates the YouTube premiere to Sunday, 11 October 2026, on LibraTV. It does not establish a separate Netflix licence, cinema programme or fee. The original LibraTV channel is the safest discovery starting point, but the exact specific video URL has not been independently confirmed during this check, so the page deliberately avoids linking an unrelated film or promising current playback.",
+          "This is a narrow, transparent editorial dossier: it helps viewers distinguish the correct Yoruba title, published credits, channel and evidence gaps. A full plot guide, ending explanation or role table would require direct source viewing or film-specific verified credits, not promotional title guesswork.",
+        ],
       },
-      {
-        "question": "Which actors are confirmed for Abe Odale in 2026?",
-        "answer": "Mide Martins, Ayo Olaiya, Antar Laniyan and Omobolanle Salisu are identified in the release coverage."
-      }
-    ]
-  }
+    ],
+    questions: [
+      { question: "Who directed Abe Odale and who produced it?", answer: "Nollywood Times identifies Wasiu Adeyanju as director and Omobolanle Salisu as writer and producer of the October 2026 Yoruba film." },
+      { question: "What characters do Mide Martins and Ayo Olaiya play?", answer: "Their participation is reported, but individual character assignments were not established by the checked source. The guide does not guess." },
+      { question: "Where can I watch the full Abe Odale film?", answer: "The film was reported as premiering on LibraTV's YouTube channel on 11 October 2026. An exact film-specific working playback URL has not been verified here, so use the official publisher channel rather than claiming a third-party mirror is authorised." },
+    ],
+  },
 };

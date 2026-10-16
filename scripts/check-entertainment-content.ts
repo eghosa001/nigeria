@@ -32,6 +32,26 @@ for (const person of entertainmentPeople) {
     person.slug + " must not become indexable merely by inheriting a linked movie's source.");
 }
 
+// Changed-scope review: the 2026 movie entries must name only supported
+// character credits and explicitly distinguish uncertain source-attributed roles.
+const thirdParty = entertainmentTitles.find(movie => movie.slug === "third-party-risk");
+const thirdPartyProfile = getMovieEditorialProfile("third-party-risk");
+assert(Boolean(thirdParty && thirdPartyProfile) &&
+  thirdParty!.references?.some(source => source.href === "https://africanmoviedb.com/title/third-party-risk-2026") &&
+  thirdPartyProfile!.roles.some(role => role.actor === "Ray Emodi" && role.character === "Jason") &&
+  thirdPartyProfile!.sections.length >= 3 &&
+  thirdPartyProfile!.sections.some(section => section.paragraphs.some(paragraph => paragraph.includes("FilmFlux") && paragraph.includes("cinematography"))),
+  "Third Party Risk needs original film-specific dossier and honest director-credit provenance.");
+const abe = entertainmentTitles.find(movie => movie.slug === "abe-odale-2026");
+const abeProfile = getMovieEditorialProfile("abe-odale-2026");
+assert(Boolean(abe && abeProfile) &&
+  abe!.directors?.includes("Wasiu Adeyanju") &&
+  abe!.references?.some(source => source.href.includes("nollywoodtimes.com/2026/10/abe-odale")) &&
+  abeProfile!.crew.some(entry => entry.role.includes("Director") && entry.name === "Wasiu Adeyanju") &&
+  abeProfile!.roles.length === 0 &&
+  abeProfile!.sections.some(section => section.paragraphs.some(paragraph => paragraph.includes("does not publish a reliable detailed plot"))),
+  "Abe Odale must preserve verified director/producer, not infer a fictional heroine or unverified roles.");
+
 assert(entertainmentTitles.length > 0, "Entertainment catalog cannot be empty.");
 assert(
   new Set(entertainmentTitles.map((title) => title.slug)).size === entertainmentTitles.length,
