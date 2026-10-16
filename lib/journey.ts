@@ -330,7 +330,151 @@ const verifiedPublicRecordJourneys: Record<string, ServiceJourney> = {
   },
 };
 
+const verifiedFinancialAndPassportJourneys: Record<string, ServiceJourney> = {
+  "passport-centre-availability": {
+    mode: "online", modeLabel: "NIS pre-application availability",
+    startLabel: "Check centre dates before submitting", startDetail: "NIS shows earliest available centre dates, not reserved appointments.",
+    onlineAvailable: true,
+    physicalStatus: "not-stated", physicalLabel: "No visit to check available dates",
+    alternativeLabel: "If the date disappears", alternativeDetail: "Compare another NIS centre; book only from a genuine passport application.",
+  },
+  "passport-photo-compliance": {
+    mode: "online", modeLabel: "NIS photo precheck",
+    startLabel: "Test the digital photo first", startDetail: "Test Photo Upload checks proposed photo compliance; biometrics are a different stage.",
+    onlineAvailable: true,
+    physicalStatus: "not-stated", physicalLabel: "No visit for the image precheck",
+    alternativeLabel: "If the photo fails", alternativeDetail: "Correct the image to meet the live NIS validation rules before applying.",
+  },
+  "passport-appointment": {
+    mode: "hybrid", modeLabel: "NIS application plus capture",
+    startLabel: "Book against your existing application", startDetail: "Use Book Appointment after completing the real passport application; Check Centre Availability is only a preview.",
+    onlineAvailable: true,
+    physicalStatus: "required", physicalLabel: "Attend the booked passport office for the NIS photo/biometric stage",
+    alternativeLabel: "If dates are unavailable", alternativeDetail: "Check another suitable processing centre on the NIS portal, not an unofficial agent.",
+  },
+  "passport-application-abroad": {
+    mode: "hybrid", modeLabel: "International NIS plus mission",
+    startLabel: "Use Apply from outside Nigeria", startDetail: "Follow the official international route and the responsible Embassy, High Commission or Consulate.",
+    onlineAvailable: true,
+    physicalStatus: "required", physicalLabel: "The responsible mission requires document verification and biometrics",
+    alternativeLabel: "If the mission is not accepting bookings", alternativeDetail: "Ask that specific Nigerian mission for current processing arrangements.",
+  },
+  "passport-name-change": {
+    mode: "hybrid", modeLabel: "NIS Change of Data",
+    startLabel: "Use correction, not ordinary renewal", startDetail: "Name addition, deletion, replacement and rearrangement require supporting civil evidence, payment and biometric attendance.",
+    onlineAvailable: true,
+    physicalStatus: "required", physicalLabel: "Original passport and evidence presented for NIS capture",
+    alternativeLabel: "If documents have inconsistent names", alternativeDetail: "Reconcile supporting civil records before paying a non-refundable NIS fee.",
+  },
+  "passport-change-marital-status": {
+    mode: "hybrid", modeLabel: "NIS marital-status correction",
+    startLabel: "Use Change of Data with marriage evidence", startDetail: "The published change route needs marriage, affidavit, age/origin, newspaper and original passport evidence.",
+    onlineAvailable: true,
+    physicalStatus: "required", physicalLabel: "NIS office visit for original checks and biometric capture",
+    alternativeLabel: "If also changing a surname", alternativeDetail: "Keep the desired order of names consistent with all supporting documents.",
+  },
+  "official-nigerian-passport": {
+    mode: "hybrid", modeLabel: "NIS restricted official passport",
+    startLabel: "Check eligibility and employer introduction", startDetail: "The blue passport requires an NIS-listed official category, authorised organisational evidence and a capture appointment.",
+    onlineAvailable: true,
+    physicalStatus: "required", physicalLabel: "Identity and biometric enrolment at the official centre",
+    alternativeLabel: "If official category cannot be confirmed", alternativeDetail: "Ask NIS or the applicant's government organisation; do not use an ordinary passport renewal.",
+  },
+  "emergency-travel-certificate": {
+    mode: "agency-guided", modeLabel: "Nigerian mission emergency document",
+    startLabel: "Confirm ETC versus STEP with your mission", startDetail: "NIS has published an emergency certificate and announced STEP replacement; verify actual document and travel validity.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "The mission may need personal identity/capture attendance",
+    alternativeLabel: "If departure or transit is uncertain", alternativeDetail: "Ask the Nigerian mission and carrier which emergency document is acceptable before paying.",
+  },
+  "e-cerpac-renewal": {
+    mode: "hybrid", modeLabel: "NIS category-specific e-CERPAC",
+    startLabel: "Check existing permit category and expiry", startDetail: "Sign in on NIS e-CERPAC, update category documents, make official payment and follow identity/biometric instructions.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "NIS may direct additional identity or biometric steps",
+    alternativeLabel: "If employer or category changed", alternativeDetail: "Ask NIS about a fresh class or regularisation before attempting routine renewal.",
+  },
+  "nhia-find-right-health-plan": {
+    mode: "online", modeLabel: "NHIA programme selector",
+    startLabel: "Use Get Covered employment questions", startDetail: "The NHIA questionnaire recommends eligible programme routes; it does not activate insurance.",
+    onlineAvailable: true,
+    physicalStatus: "not-stated", physicalLabel: "Programme selection is online; later enrolment varies",
+    alternativeLabel: "If no recommendation fits", alternativeDetail: "Contact NHIA to distinguish employer, GIFSHIP and other plan eligibility.",
+  },
+  "nhia-private-sector-coverage": {
+    mode: "agency-guided", modeLabel: "Employer-led NHIA OPSSHIP",
+    startLabel: "Employer applies to NHIA", startDetail: "NHIA states that businesses with five or more employees apply first; NHIA then coordinates workforce enrolment.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "NHIA may require employer/forms coordination",
+    alternativeLabel: "If the employer has fewer than five staff", alternativeDetail: "Review NHIA's individual or group GIFSHIP route instead of claiming OPSSHIP eligibility.",
+  },
+  "nhia-gifship-enrolment": {
+    mode: "hybrid", modeLabel: "NHIA GIFSHIP and Remita",
+    startLabel: "Confirm package and collect official forms", startDetail: "Individuals/families may use an NHIA office or approved form submission; groups have separate Remita and ten-member rules.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "Forms or enrolment evidence can require NHIA office support",
+    alternativeLabel: "If premium wording does not add up", alternativeDetail: "NHIA's own family wording is inconsistent: confirm the package price before payment.",
+  },
+  "pencom-transfer-rsa": {
+    mode: "hybrid", modeLabel: "Receiving PFA via RSA Transfer System",
+    startLabel: "Begin with your chosen receiving PFA", startDetail: "Check the 365-day rule and ECRS data recapture before requesting transfer.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "Biometric identity verification may require a PFA visit",
+    alternativeLabel: "If the application is rejected", alternativeDetail: "Ask the receiving PFA to review ECRS biometrics or last transfer date.",
+  },
+  "pencom-unremitted-contributions": {
+    mode: "agency-guided", modeLabel: "PFA reconciliation or PenCom complaint",
+    startLabel: "Check PFA credits before alleging non-remittance", startDetail: "Distinguish genuinely unpaid remittances from funds already held but not credited to the RSA.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "A PFA can request identity documents or data recapture",
+    alternativeLabel: "If your employer failed to remit", alternativeDetail: "Report the employer name and address directly to PenCom and retain the complaint reference.",
+  },
+  "pencom-micro-pension-registration": {
+    mode: "hybrid", modeLabel: "PenCom Personal Pension Plan (PPP)",
+    startLabel: "Enrol at a licensed PFA under PPP", startDetail: "The old Micro Pension Plan is now called PPP; contributions are voluntary with regulated retirement/contingent allocations.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "The PFA may require identity/ECRS verification",
+    alternativeLabel: "If offered a legacy Micro Pension form", alternativeDetail: "Confirm the current PPP terms and legal PFA identity before contributing.",
+  },
+  "nhf-registration-and-contributions": {
+    mode: "hybrid", modeLabel: "FMBN NHF registration and statements",
+    startLabel: "Obtain and verify your NHF contributor record", startDetail: "Use employer/self-employed registration, obtain your NHF number and compare actual credited payments to deductions.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "FMBN branch can provide statements or reconciliation",
+    alternativeLabel: "If amounts are missing", alternativeDetail: "Get payroll remittance evidence and ask FMBN to reconcile by period.",
+  },
+  "nhf-contribution-refund": {
+    mode: "agency-guided", modeLabel: "FMBN qualified NHF refund",
+    startLabel: "Confirm age/service or incapacity eligibility", startDetail: "FMBN requires withdrawal forms plus supporting employment, retirement, account or estate records.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "FMBN's refund forms and documents may be submitted through a branch",
+    alternativeLabel: "If the application is incomplete", alternativeDetail: "Resolve missing contribution or legal-estate documents rather than paying an agent.",
+  },
+  "nhf-mortgage-loan": {
+    mode: "hybrid", modeLabel: "FMBN through accredited PMB",
+    startLabel: "Check NHF contributions and a licensed mortgage bank", startDetail: "Six months of contributions and property documents are initial conditions; bank underwriting and affordability still apply.",
+    onlineAvailable: true,
+    physicalStatus: "may-be-required", physicalLabel: "Property valuation, title and lender documentation may require physical handling",
+    alternativeLabel: "If the property is ineligible", alternativeDetail: "Verify title and discuss approved alternative properties with the accredited PMB.",
+  },
+  "nelfund-loan-repayment": {
+    mode: "online", modeLabel: "NELFUND employer and borrower records",
+    startLabel: "Check your repayment trigger and employer status", startDetail: "Two years after NYSC applies to those who served; employed borrowers must update the employer for salary deductions.",
+    onlineAvailable: true,
+    physicalStatus: "not-stated", physicalLabel: "No mandatory office visit established for account updates",
+    alternativeLabel: "If self-employed", alternativeDetail: "Submit business details within the terms' 60-day window and use the authorised fund instructions.",
+  },
+  "nelfund-loan-status-and-upkeep": {
+    mode: "online", modeLabel: "NELFUND disbursement dashboard",
+    startLabel: "Check tuition and upkeep separately", startDetail: "School institutional charges and student-bank upkeep are different disbursements; neither guarantees the other is paid.",
+    onlineAvailable: true,
+    physicalStatus: "not-stated", physicalLabel: "Status view is online; bank/school reconciliation may follow",
+    alternativeLabel: "If one payment is stuck", alternativeDetail: "Check the appropriate school or bank record and raise an official fund support case.",
+  },
+};
+
 export function getServiceJourney(service: Service): ServiceJourney {
+  if (verifiedFinancialAndPassportJourneys[service.slug]) return verifiedFinancialAndPassportJourneys[service.slug];
   if (verifiedSecurityJourney[service.slug]) return verifiedSecurityJourney[service.slug];
   if (verifiedPublicRecordJourneys[service.slug]) return verifiedPublicRecordJourneys[service.slug];
   if (verifiedEditorialJourneys[service.slug]) return verifiedEditorialJourneys[service.slug];
