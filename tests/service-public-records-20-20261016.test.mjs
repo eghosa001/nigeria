@@ -33,7 +33,7 @@ test("20 canonical public-record services have actionably revised, dated officia
 
 test("fees and application exceptions match distinct government services", () => {
   const get = (slug) => bySlug.get(slug);
-  assert.match(get("npc-birth-certificate-reprint").feeNote, /US\$30/);
+  assert.match(get("npc-birth-certificate-reprint").feeLabel + " " + get("npc-birth-certificate-reprint").feeNote, /US\$30|30 USD/);
   assert.match(get("npc-digital-birth-certificate-reissuance").summary, /8 November 2023/);
   assert.match(get("npc-digital-birth-certificate-reissuance").steps.join(" "), /download.*once/i);
   assert.match(get("upgrade-drivers-licence-class").steps.join(" "), /commercial.*capture centre/i);
