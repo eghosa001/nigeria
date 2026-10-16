@@ -336,6 +336,9 @@ jobs:
       - name: Check 20 passport, health, pension and housing guide repairs
         if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
         run: node --test tests/service-passport-health-pension-housing-20-20261016.test.mjs
+      - name: Verify 20 JAMB, WAEC, NECO and NYSC guide repairs
+        if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
+        run: node --test tests/service-exams-certificates-nysc-20-20261016.test.mjs
       - name: Validate published-content quality changes
         if: steps.scope.outputs.mode == 'quality'
         run: |
