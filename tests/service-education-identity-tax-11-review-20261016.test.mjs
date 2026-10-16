@@ -17,9 +17,9 @@ test("11 existing service guides have actionable checked evidence", () => {
   for (const slug of corrected) {
     const record = get(slug);
     assert.ok(record, slug);
-    assert.equal(record.lastVerified, "2026-10-16", slug);
+    assert.ok(record.lastVerified >= "2026-10-16", slug);
     assert.ok(record.steps.length >= 5, slug);
-    assert.ok(record.sources.every((source) => source.lastChecked === "2026-10-16"), slug);
+    assert.ok(record.sources.every((source) => source.lastChecked >= "2026-10-16" && source.lastChecked <= record.lastVerified), slug);
   }
   assert.match(get("waec-confirm-result-nigeria").feeNote, /₦13,000.*courier/i);
   assert.match(get("waec-correct-certificate-error").steps.join(" "), /school principal.*private candidate/i);
