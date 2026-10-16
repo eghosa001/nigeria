@@ -14,10 +14,9 @@ export const museumAndVisitorReviews20261016: Record<string, EditorialReview> = 
     planning: {label: "Check roadworks and the named Agbokim entrance, not just a government promise", detail: "Ask the site's custodian or tourism authority whether roadworks, guide requirements or seasonal water flow restrict access. Request the approved approach before booking any vehicle. Ikom's carved-stone sites are separately controlled and should not be presumed included in one ticket."},
   },
   "bowers-tower-guide": {
-    summary: "Bower's Tower in Ibadan is subject to phased redevelopment plans; the 2026 concession and older illustrated prospectus are not proof that gardens, cafés or amphitheatre facilities are operating.",
+    summary: "Bower's Tower in Ibadan is subject to phased redevelopment: Oyo's April 2026 concession allowed a rehabilitation period, not an immediate opening of new facilities.",
     source: {label: "Punch — Oyo signs Bower's Tower redevelopment concession, April 2026", href: "https://punchng.com/oyo-signs-deal-to-redevelop-bowers-tower-boost-tourism/"},
-    additionalSources: [{"label":"Oyo State — Bower's Tower redevelopment proposal, July 2025","href":"https://tourism.oyostate.gov.ng/wp-content/uploads/2025/07/NEW-DEAL-BOOK-ITSOYOSTATE-2025.pdf"}],
-    intro: "Oyo State's July 2025 investment prospectus illustrates a proposed Bower's Tower visitor centre, café, improved trails and amphitheatre. Its visitor demand and capital cost figures are projections, not admission prices. In April 2026 the government announced a development concession, but signing that agreement did not open the proposed facilities to the public.",
+    intro: "Oyo State signed a concession with SystemSpecs Whatadeal in April 2026 to rehabilitate Bower's Tower in phases. Reporting from the signing states the company was allowed up to 24 months for rehabilitation and modernisation, with work also envisaged on access roads. A concession signature, promised future amenities or a government projection must not be presented as completed facilities or an October 2026 ticket price.",
     planning: {label: "Verify access to the original hilltop tower during redevelopment", detail: "Ask the concessionaire or Oyo tourism office whether visitors can presently reach the old lookout, whether construction changes the climb, and who collects legitimate fees. Leave the proposed café, stage and landscaped trails out of a practical itinerary until the operator announces their opening."},
   },
   "national-museum-unity-ibadan-guide": {
