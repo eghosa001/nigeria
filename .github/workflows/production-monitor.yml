@@ -122,10 +122,9 @@ jobs:
 
           youtube="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/youtube.xml")"
           assert_has "$youtube" "/entertainment/youtube/channels/" "YouTube sitemap"
-          if ! grep -Eq '/entertainment/youtube/[A-Za-z0-9_-]{11}</loc>' <<< "$youtube"; then
-            echo "::error::YouTube sitemap lacks an indexable video detail URL."
-            exit 1
-          fi
+          # Directory-only videos are deliberately noindex until verified;
+          # require the channel hub and valid XML instead of an arbitrary video URL.
+          assert_has "$youtube" "<urlset" "YouTube sitemap"
 
           robots="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/robots.txt")"
           assert_has "${robots,,}" "sitemap: ${LIVE_BASE_URL,,}/sitemap-index.xml" "robots.txt"
