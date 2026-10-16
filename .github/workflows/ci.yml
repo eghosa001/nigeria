@@ -348,6 +348,9 @@ jobs:
       - name: Verify 20 banking, telecom, electricity and customs guide repairs
         if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
         run: node --test tests/service-consumer-banking-telecom-power-20-20261016.test.mjs
+      - name: Verify 20 NAFDAC, SON, NSITF, ITF, pensions and NIMC guide repairs
+        if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
+        run: node --test tests/service-regulation-employment-pension-20-20261016.test.mjs
       - name: Validate published-content quality changes
         if: steps.scope.outputs.mode == 'quality'
         run: |
