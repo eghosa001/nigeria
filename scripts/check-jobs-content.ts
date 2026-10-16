@@ -6,6 +6,7 @@ import { buildJobPostingJsonLd, daysSinceIsoDate, getEffectiveJobStatus } from "
 import { JOBS_DIRECTORY_PAGE_SIZE, queryJobDirectory } from "../lib/job-query";
 import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale-wave";
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
+import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -74,6 +75,33 @@ for (const slug of [
   assert(!/\b(is hiring|is recruiting|seeks|currently accepting|applications open)\b/i.test(item.summary),
     slug + " summary must not present the employer's withdrawn role as a current vacancy.");
 }
+
+// Change-scoped issuer-route check: no generic career portal can be substituted
+// for the twelve individually verified FMN, Dangote and Olam vacancies.
+assert(verifiedJobSlugs20261016.length === 12 && new Set(verifiedJobSlugs20261016).size === 12,
+  "October 2026 source check must cover twelve distinct vacancies.");
+for (const slug of verifiedJobSlugs20261016) {
+  const record = jobOpportunities.find((item) => item.slug === slug);
+  assert(record?.kind === "vacancy" && record.status === "open" && record.verifiedAt === "2026-10-16",
+    slug + " must remain a recently checked individual vacancy.");
+  assert(record.sources.some((source) => source.url === record.officialUrl && source.lastChecked === "2026-10-16"),
+    slug + " must cite the exact currently checked issuer URL.");
+  assert(record.applicationSteps.some((step) => step.includes("own work")) &&
+    record.applicationSteps.some((step) => step.includes("Apply")), slug + " needs useful applicant steps.");
+  if (record.officialUrl.includes("fmnplc.e-recruiter.ng")) {
+    assert(record.applicationSteps.some((step) => step.includes("Computer Exposure") && step.includes("Referee")),
+      slug + " needs FMN registration and CV sections, not a fictitious open submission form.");
+  }
+}
+
+const fulafia = jobOpportunities.find(item => item.slug === "federal-university-lafia-recruitment-2026");
+assert(fulafia?.officialUrl === "https://careers.fulafia.edu.ng/" &&
+  fulafia.sources.some(source => source.url === "https://fcc.gov.ng/recruitment/") &&
+  fulafia.deadline === "2026-10-28" &&
+  fulafia.applicationSteps.some(step => step.includes("registrar@fulafia.edu.ng")),
+  "FULAFIA must use the live university portal and valid FCC deadline, not the 404 item URL.");
+assert(!fulafia.sources.some(source => source.url.includes("/job-listings/federal-university-of-lafia")),
+  "Definitively broken FCC job-detail link must not remain in the active source collection.");
 
 const defaultDirectory = queryJobDirectory({ page: 1 });
 assert(defaultDirectory.total === jobOpportunities.length, "Server directory total must match the catalog.");

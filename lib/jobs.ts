@@ -1,6 +1,7 @@
 import { getEffectiveJobStatus } from "@/lib/job-runtime";
 import { verifiedDangoteOlamJobs20261012 } from "@/lib/job-growth-wave-14";
 import { officialJobPostingEvidence20261015 } from "@/lib/job-official-posting-evidence-2026-10-15";
+import { applyVerifiedJobPaths20261016 } from "@/lib/job-verified-pathways-2026-10-16";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -267,7 +268,7 @@ const rawJobOpportunities: CareerOpportunity[] = [
     kind: "recruitment-exercise",
     sector: "Government",
     status: "open",
-    statusLabel: "Applications open until 28 October 2026",
+    statusLabel: "FCC recruitment directory lists 28 October deadline — apply on university portal",
     summary: "Federal University of Lafia is recruiting academic and non-teaching staff. The Federal Character Commission's official listing marks the exercise ongoing, posted 23 September 2026, with an application deadline of 28 October 2026.",
     location: "Lafia, Nasarawa State",
     employmentType: "Full-time university appointments",
@@ -285,23 +286,26 @@ const rawJobOpportunities: CareerOpportunity[] = [
     ],
     documents: ["CV and academic/professional credentials required for the selected position", "Supporting experience/publication evidence where the selected academic rank requires it", "Referee information/reports where requested by the official notice"],
     applicationSteps: [
-      "Open the Federal Character Commission's official Federal University of Lafia vacancy listing.",
-      "Review the advertised academic and non-teaching positions and choose the exact role/rank you qualify for.",
-      "Follow the university application route and referee instructions stated in the notice.",
-      "Submit before 28 October 2026 and keep your application evidence."
+      "Check the FCC's current recruitment directory at fcc.gov.ng/recruitment/ for Federal University of Lafia's 28 October 2026 deadline; the former FCC item-specific link is currently unavailable.",
+      "Open the university's own employment portal at careers.fulafia.edu.ng, which directs applicants to create an account before applying.",
+      "Choose the precise academic rank, faculty or non-teaching vacancy and compare its advertised qualification and work-experience rules; do not submit a generic university CV in place of the appropriate application.",
+      "Complete the university portal's application steps. The official recruitment notice also instructs applicants to request referee reports addressed to registrar@fulafia.edu.ng; follow any updated portal instructions.",
+      "Complete your submission before 28 October 2026, retain its acknowledgement and never pay an intermediary for an appointment."
     ],
-    officialUrl: "https://fcc.gov.ng/job-listings/federal-university-of-lafia-p-m-b-146-lafia-nasarawa-state-office-of-the-registrar-www-fulafia-edu-ng/",
-    officialUrlLabel: "Open the official Federal Character Commission vacancy listing",
-    verifiedAt: "2026-10-06",
+    officialUrl: "https://careers.fulafia.edu.ng/",
+    officialUrlLabel: "Open Federal University of Lafia official employment portal",
+    verifiedAt: "2026-10-16",
     deadline: "2026-10-28",
-    nextMilestone: "Applications close 28 October 2026.",
+    nextMilestone: "FCC lists 28 October 2026 as the closing date. Its old job-detail link returned HTTP 404 on 16 October; the direct Federal University of Lafia careers portal is accessible, but an authenticated submission was not tested.",
     feeNote: "No recruitment fee is stated in the official Federal Character Commission listing. Avoid unofficial payment requests.",
     sourceNotes: [
+      "On 16 October the previous FCC job-specific path returned HTTP 404; its broader official recruitment directory still listed this 2026 exercise as ongoing with a 28 October deadline. The university careers portal displayed Create an Account to start applying.",
       "The Federal Character Commission lists the recruitment as ongoing and gives 28 October 2026 as the deadline.",
       "The exercise covers academic staff across multiple faculties as well as non-teaching/professional positions."
     ],
     sources: [
-      { label: "Federal Character Commission — Federal University of Lafia vacancies", url: "https://fcc.gov.ng/job-listings/federal-university-of-lafia-p-m-b-146-lafia-nasarawa-state-office-of-the-registrar-www-fulafia-edu-ng/", lastChecked: "2026-10-06" }
+      { label: "Federal University of Lafia — official employment portal", url: "https://careers.fulafia.edu.ng/", lastChecked: "2026-10-16" },
+      { label: "Federal Character Commission — official current recruitment directory", url: "https://fcc.gov.ng/recruitment/", lastChecked: "2026-10-16" }
     ]
   },
   {
@@ -3832,6 +3836,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(normalizeCareerPortal)
   .map(applyCurrentJobCorrections)
   .map(closeExpiredJob)
+  .map(applyVerifiedJobPaths20261016)
   .map((item) => {
     const evidence = officialJobPostingEvidence20261015[item.slug];
     if (!evidence || item.posting || item.kind !== "vacancy" ||
