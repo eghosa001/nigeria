@@ -1,5 +1,6 @@
 import { exploreGuides } from "../lib/explore";
 import { furtherVisitorDecisions20261016 } from "../lib/explore-additional-editorial-2026-10-16";
+import { museumAndVisitorReviews20261016 } from "../lib/explore-museums-and-waterfalls-2026-10-16";
 import { remainingTourResearch20261016 } from "../lib/explore-priority-review-decisions-2026-10-16";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
@@ -517,6 +518,28 @@ if (!oxbow?.intro.some(paragraph => paragraph.includes("28 March 2018") && parag
     oxbow.intro.some(paragraph => /Oxbow Lake Pavilion in 2017/.test(paragraph)) ||
     !oxbow.sources?.some(source => source.href === "https://guardian.ng/politics/when-agitation-for-restructuring-comes-with-higher-pitch-from-the-creeks/")) {
   errors.push("Yenagoa Oxbow Pavilion: historical reporting date and source must remain accurate.");
+}
+
+// Keep 16 institution- and evidence-specific October editorial corrections
+// visible and linked; a passed test is not live-gate or human editorial approval.
+const heritageReviews = Object.entries(museumAndVisitorReviews20261016);
+if (heritageReviews.length !== 16) errors.push("Expected 16 independently sourced Museum/Waterfall/Heritage review updates.");
+for (const [slug, review] of heritageReviews) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const actualLinks = [guide?.source?.href, ...(guide?.sources ?? []).map(item => item.href)];
+  const expectedSources = [review.source, ...(review.additionalSources ?? [])];
+  if (!guide || guide.lastReviewed !== "2026-10-16" ||
+      (review.summary && guide.summary !== review.summary) ||
+      !guide.intro.includes(review.intro ?? "") ||
+      !guide.planning.some(item => item.label === review.planning.label && item.detail === review.planning.detail) ||
+      expectedSources.some(source => !actualLinks.includes(source.href)) ||
+      actualLinks.length !== new Set(actualLinks).size) {
+    errors.push(`${slug}: source-specific heritage research or visitor safeguard missing from rendered guide`);
+  }
+}
+for (const slug of ["kebbi-state-travel-guide", "kebbi-heritage-weekend-itinerary", "benue-state-travel-guide"]) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  if (!guide?.summary.includes("FCDO")) errors.push(slug + ": regional travel warning missing from main visitor answer.");
 }
 
 for (const place of explorePlaces) {
