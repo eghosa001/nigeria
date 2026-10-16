@@ -79,4 +79,64 @@ export const verifiedTourDecisions20261016: Record<string, VerifiedVisitAddition
     intro: "NCMM's national collections catalogue organises objects by cultural histories including Nok, Ife, Benin and Igbo-Ukwu. This is a research route into Nigeria's material heritage, not a real-time floor plan for the National Museum Lagos. A featured digital object may be conserved or exhibited elsewhere.",
     planning: { label: "Ask which gallery actually contains your subject", detail: "Before heading to Lagos National Museum, identify whether you are interested in Benin metalwork, Ife sculpture, archaeology or political history and ask museum staff whether that collection is currently on public display. Check the admission tariff and closing time with the venue itself. Neither a national digital object record nor a past return-of-objects ceremony is evidence of a present exhibition." },
   },
+  "kano-2-day-itinerary": {
+    source: { label: "UNESCO — Ancient Kano City Walls and Associated Sites (Tentative List)", href: "https://whc.unesco.org/en/tentativelists/5171/" },
+    intro: "Kano's historic-wall nomination includes Dala Hill, Kurmi Market and the Emir's Palace as distinct sites linked by the old city's history. They are not one managed venue, and UNESCO's nomination is not a two-day tourist itinerary or a pass granting palace entry.",
+    planning: { label: "Build two realistic old-city blocks around separate access rules", detail: "For one block, identify a surviving wall or gate section and a safe Dala Hill approach before arranging local transport. For the other, research Kurmi Market's active trading lanes and ask separately whether any palace-area tour is permitted. Respect prayers, market commerce, photography restrictions and current road safety. Confirm actual opening/guide arrangements locally; UNESCO's tentative listing supplies no verified 2026 fees." },
+  },
+  "emirs-palace-kano-old-city": {
+    source: { label: "UNESCO — Kano city walls, Emir's Palace and associated heritage", href: "https://whc.unesco.org/en/tentativelists/5171/" },
+    intro: "The Emir's Palace is a functioning traditional institution, not a museum with unrestricted daytime admission. UNESCO's historical description helps explain its place in the old Kano city complex but does not authorize entry into residences or ceremonial courtyards.",
+    planning: { label: "Seek explicit palace permission before planning an interior visit", detail: "Treat palace architecture as a subject to understand from an authorised public area unless custodians confirm a permitted tour, entry point and time. Ask before photographing guards, ceremonies or people. If access is unavailable, choose a separately verified historic gate or public market stop; do not promise a same-ticket palace, Kurmi Market and Dala Hill excursion." },
+  },
+  "ancient-kano-city-walls": {
+    source: { label: "UNESCO — Ancient Kano City Walls and Associated Sites", href: "https://whc.unesco.org/en/tentativelists/5171/" },
+    intro: "Kano's old walls and gates form a historic urban defence system with surviving sections in a living city. UNESCO's tentative-list nomination is historical heritage evidence, not proof of an uninterrupted walkable wall trail or a World Heritage inscription.",
+    planning: { label: "Visit a particular surviving gate or wall section, not an imaginary full circuit", detail: "Confirm the exact surviving structure with a local heritage contact and choose a legal, safe place to stop without standing in traffic or crossing private land. Check whether conservation works or markets obstruct it. Plan Kurmi or Dala as separate stops with their own access expectations; do not interpret UNESCO map coordinates as a tourist entrance." },
+  },
+  "sukur-terraces-guide": {
+    source: { label: "UNESCO — Sukur Cultural Landscape (World Heritage)", href: "https://whc.unesco.org/en/list/938/" },
+    intro: "Sukur's hill terraces are part of a living agricultural and sacred landscape rather than a free-access hiking network. UNESCO recognises the whole Sukur Cultural Landscape as World Heritage, but inscription neither guarantees safe travel to Madagali nor visitor permission on privately or communally used paths.",
+    planning: { label: "Treat this as heritage research until current safety and access are independently cleared", detail: "Study UNESCO's descriptions of the Hidi's Palace, terraced fields and iron-working history without turning the map into an unsupervised walking route. Sukur is in a border-region locality affected by serious security concerns. Do not book remote transport or attempt terrace access from an evergreen guide; require current independent security advice and explicit community and heritage-authority permission before any site plan." },
+  },
+  "sukur-cultural-landscape-main": {
+    source: { label: "UNESCO — Sukur Cultural Landscape", href: "https://whc.unesco.org/en/list/938/" },
+    intro: "Sukur is one of Nigeria's two inscribed UNESCO World Heritage sites, valued for a living mountain community, Hidi's Palace, terraces and historic iron-working remains. It is not interchangeable with an ordinary village viewpoint or a ticketed park attraction; protection and security conditions can change access.",
+    planning: { label: "Separate historical significance from current permission to travel", detail: "Use UNESCO to understand the inscribed landscape, and ask competent security and heritage authorities about current access rather than inferring safety from its World Heritage label. The remote Madagali setting requires a stronger evidence threshold than a city museum outing. Without independently confirmed safe conditions and permission from appropriate custodians, treat this guide as research-only." },
+  },
+  "alok-ikom-monoliths-guide": {
+    source: { label: "UNESCO — Ikom Monoliths Tentative List", href: "https://whc.unesco.org/en/tentativelists/5173/" },
+    intro: "UNESCO documents carved stone monoliths associated with Ejagham communities in Cross River State, with collections at more than one location. The 2007 submission is on the Tentative List, not an inscribed World Heritage property or a single fully staffed museum compound.",
+    planning: { label: "Identify the precise protected cluster and its local custodian", detail: "Before driving to a mapped 'Ikom Monoliths' pin, distinguish Alok from other community stone sites and ask the responsible custodian and heritage authority which objects, paths and interpretation are accessible. Avoid touching or photographing sacred material without consent; get current directions and security advice and ask about authorised guiding and charges. UNESCO provides no current ticket price." },
+  },
+  "sungbo-eredo-ogun": {
+    source: { label: "UNESCO — Sungbo's Eredo and Benin Iya Tentative List", href: "https://whc.unesco.org/en/tentativelists/488/" },
+    intro: "Sungbo's Eredo is a major historic earthwork associated with Ijebu traditions in Ogun State. UNESCO's tentative-list entry discusses it alongside Benin Iya, a separate earthwork system in Edo State. They are not adjacent visitor stops or one ticketed tourist complex.",
+    planning: { label: "Locate an authorised Ijebu earthwork section rather than following an old monument pin", detail: "Choose a specific accessible segment with community or responsible heritage guidance. Earthworks can pass through forests, settlement edges and private-use areas; check rights of way, weather, vegetation and safe access before departure. The 1995 UNESCO tentative entry describes archaeological significance, not a staffed entrance, fixed daily admission fee or permission to explore the full ramparts." },
+  },
+  "national-museum-unity-ibadan-guide": {
+    source: { label: "NCMM — National Museums directory: Museum of Unity Ibadan", href: "https://museum.ng/national-museums-list/" },
+    intro: "The National Commission for Museums and Monuments lists Ibadan's Museum of Unity around Alesinloye in Oyo State. It is a museum destination within Ibadan, not the archaeological Old Oyo capital and not a national ticket to every Oyo heritage site.",
+    planning: { label: "Check exhibitions and the correct Alesinloye entrance", detail: "Ask NCMM or the museum about current gallery access, any temporary closures, the collection relevant to your interests, accessibility and admission charge. Pair with a nearby city stop only after confirming museum hours; the NCMM directory is a location and contact starting point, not a real-time exhibition or entrance-price service." },
+  },
+  "kanta-museum-argungu-guide": {
+    source: { label: "NCMM — National Museums and monuments listings", href: "https://museum.ng/museums/" },
+    intro: "Kanta Museum in Argungu is a distinct heritage museum associated with the Kebbi emirate's history. Its existence in NCMM listings does not mean the Argungu Fishing Festival is occurring on the same day or that a festival ticket grants museum access.",
+    planning: { label: "Plan the museum and fishing festival independently", detail: "Confirm the museum's current public entrance and exhibition availability with the responsible curator or local authority before a road trip. If interested in the fishing festival, use the organiser's current-year announcement to confirm dates, crowd arrangements and separate activities; never use a previous-year festival image as a schedule or assume everyday access to ceremonial spaces." },
+  },
+  "benin-city-national-museum-guide": {
+    source: { label: "NCMM — Nigerian Museums and Collections", href: "https://collection.museum.ng/" },
+    intro: "NCMM's public collection catalogue explains objects and cultural traditions associated with Benin metalwork, but it is not a real-time inventory of galleries at the National Museum Benin City. The museum is separate from the Oba's Palace and Igun craft workshops, each with different access and photography rules.",
+    planning: { label: "Ask about the specific gallery, not just whether Benin objects exist", detail: "Choose whether you want archaeological interpretation, sculpture or Benin royal history, then contact the relevant museum staff about exhibitions actually accessible on the date of travel. Distinguish publicly displayed collections from objects in digital archives or restitution announcements. Check admission with the venue and arrange Igun workshops or palace-area visits separately with appropriate permission." },
+  },
+  "osun-osogbo-sacred-grove": {
+    source: { label: "UNESCO — Osun-Osogbo Sacred Grove inscription", href: "https://whc.unesco.org/en/list/1118/" },
+    intro: "UNESCO inscribes Osun-Osogbo as a sacred forest with shrines and artworks connected to a living Yoruba religious tradition. Its heritage label is not permission for unrestricted photography, entry to worship areas or a promise that the annual festival programme operates on every visit date.",
+    planning: { label: "Distinguish worship, festival days and ordinary interpretation", detail: "Choose whether you are visiting to learn about the landscape or for an announced ceremony. Ask recognised custodians about available paths, current opening, photography and guiding rules before entering; expect worship areas to have their own restrictions. Check the festival's actual organiser schedule rather than treating the UNESCO listing as a booking calendar or current price list." },
+  },
+  "national-war-museum-umuahia-guide": {
+    source: { label: "Federal Ministry of Information — Umuahia War Museum and Ojukwu Bunker rehabilitation, 15 September 2026", href: "https://fmino.gov.ng/federal-governments-war-museum-and-ojukwu-bunker-get-major-historical-preservation-boost-in-abia/" },
+    intro: "A federal information report on 15 September 2026 described the National War Museum Umuahia and Ojukwu Bunker as undergoing rehabilitation, with work estimated around 80 percent complete at that point. That is an announcement about restoration progress, not a guarantee that all exhibits and the bunker are presently open to visitors.",
+    planning: { label: "Confirm each Umuahia heritage venue during restoration", detail: "Contact the responsible museum or heritage authority to ask which War Museum galleries, access roads and exhibits are actually open during works. Ask separately whether Ojukwu Bunker admits visitors or requires a prearranged guide. Obtain current charges and arrival instructions from each operator; a September project-completion forecast is not an October opening notice." },
+  },
 };
