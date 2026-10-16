@@ -199,6 +199,44 @@ for (const [slug, expected] of [
   }
 }
 
+
+// Source-grounded 16 October editorial fixes: historical burial, protected forest,
+// and a conflicting event calendar must never regress into unsafe visitor claims.
+for (const [slug, primarySource, detail, decision] of [
+  ["akwa-ibom-heritage-route", "akwaibomstate.gov.ng/about-akwa-ibom/", "burial at Duke Town cemetery in Calabar", "Choose the right Mary Slessor destination"],
+  ["becheve-nature-reserve-guide", "ncfnigeria.org/forest-green-recovery-nigeria/", "canopy walkway here in 2006", "Do not assume the canopy walkway is open"],
+  ["african-traditional-food-fair-abuja-2026", "afritraditionalfoodfair.org/", "16–17 October", "Resolve Friday versus Saturday"],
+] as const) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  if (!guide ||
+      !guide.source?.href.includes(primarySource) ||
+      !guide.intro.some(paragraph => paragraph.includes(detail)) ||
+      !guide.planning.some(item => item.label.includes(decision)) ||
+      guide.lastReviewed !== "2026-10-16") {
+    errors.push(`${slug}: the independently checked 16 October correction has regressed`);
+  }
+}
+const akka = exploreGuides.find(item => item.slug === "akwa-ibom-heritage-route");
+if (!akka?.sources?.some(source => source.href.includes("maryslessor.org/2014/04/eka-kpukpro-owo/")) ||
+    !akka?.sources?.some(source => source.href.includes("discoverakwaibom.com/heritage-sites/1929-women-war-memorial/")) ||
+    akka.highlights.some(item => item.name === "Mary Slessor Tomb")) {
+  errors.push("Akwa Ibom: historically incorrect Mary Slessor tomb must not return");
+}
+const fair = exploreGuides.find(item => item.slug === "african-traditional-food-fair-abuja-2026");
+if (!fair?.sources?.some(source => source.href.includes("/register/")) ||
+    !fair?.sources?.some(source => source.href.includes("visitabuja.org/events/"))) {
+  errors.push("Abuja food fair: official attendee registration and conflicting calendar sources missing");
+}
+for (const [slug, expectedSource] of [
+  ["becheve-nature-reserve", "https://ncfnigeria.org/forest-green-recovery-nigeria/"],
+  ["fct-exhibition-pavilion-food-fair-2026", "https://afritraditionalfoodfair.org/"],
+] as const) {
+  const place = explorePlaces.find(item => item.slug === slug);
+  if (place?.source.href !== expectedSource || place.checkedAt !== "2026-10-16") {
+    errors.push(`${slug}: mapped place source or review date has regressed`);
+  }
+}
+
 for (const place of explorePlaces) {
   if (placeSlugs.has(place.slug)) errors.push(`duplicate place slug: ${place.slug}`);
   placeSlugs.add(place.slug);
