@@ -89,7 +89,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Cast, status and where to watch " + item.title}
-            summary="Use the verified cast, episode details and source links below to decide where you can legally watch this series."
+            summary="Check documented cast credits where available, confirmed episode details and official viewing links below."
             facts={[
               { label: "Country / year", value: item.country + " · " + item.year },
               { label: "Status", value: item.status },
@@ -97,7 +97,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
               { label: "Availability checked", value: checked },
             ]}
             links={[
-              { href: "#cast", label: "See cast" },
+              ...(item.cast.length ? [{ href: "#cast", label: "See cast" }] : []),
               { href: "#watch", label: "Where to watch" },
               ...(item.internalLinks ?? []).slice(0, 1).map((link) => ({ href: link.href, label: link.label })),
               ...(item.watchLinks[0] ? [{ href: item.watchLinks[0].href, label: item.watchLinks[0].label, external: true, primary: true }] : []),
