@@ -1,4 +1,5 @@
 import { exploreGuides } from "../lib/explore";
+import { tourPracticalDecisions20261016 } from "../lib/explore-practical-decisions-2026-10-16";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
 const errors: string[] = [];
@@ -23,6 +24,23 @@ for (const guide of exploreGuides) {
   const seenGuidePlaces = new Set(places.map(place => place.slug));
   if (seenGuidePlaces.size !== places.length) {
     errors.push(`${guide.slug}: duplicate location cards add no independent reader value`);
+  }
+}
+
+// Source and route assertions are deliberately restricted to the 12 changed
+// guides. Automatic validity cannot establish live admission, prices or safety.
+const checkedGuideSlugs = Object.keys(tourPracticalDecisions20261016);
+if (checkedGuideSlugs.length !== 12 || new Set(checkedGuideSlugs).size !== 12) {
+  errors.push("The 16 October Tour correction batch must cover 12 distinct guide URLs.");
+}
+for (const slug of checkedGuideSlugs) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const update = tourPracticalDecisions20261016[slug];
+  if (!guide || !guide.intro.includes(update.intro ?? "") ||
+      !guide.planning.some(step => step.label === update.planning.label && step.detail === update.planning.detail) ||
+      guide.lastReviewed !== "2026-10-16" ||
+      ![guide.source?.href, ...(guide.sources ?? []).map(source => source.href)].includes(update.source.href)) {
+    errors.push(slug + ": missing dated institution-backed visitor decision, planning or reference.");
   }
 }
 
