@@ -4349,7 +4349,7 @@
     "slug": "nin-name-modification",
     "title": "How to change your name on NIN",
     "shortTitle": "NIN name modification",
-    "summary": "To correct an eligible name field on an existing NIN, use NIMC's official Self-Service Modifications portal or its published centre-assisted route, not a new NIN enrolment. NIMC lists a sworn affidavit and newspaper extract for a name change, plus a marriage certificate when the change is due to marriage. Confirm the fee on the actual modification invoice before payment.",
+    "summary": "Correct an existing NIN name through NIMC's authorised self-service or assisted amendment process. The required affidavit, newspaper extract or marriage certificate depends on the reason for the change. The existing NIN must remain the same; the ₦2,000 ordinary field fee is distinct from NIMC's higher date-of-birth correction charge.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
@@ -4360,21 +4360,24 @@
       "Your existing valid NIN and access to the NIMC self-service account or the authorised NIMC centre process.",
       "Sworn affidavit and newspaper extract supporting the requested name change.",
       "Marriage certificate where the change is due to marriage.",
-      "Other identity or civil records requested by NIMC to reconcile the name with the existing identity record."
+      "Other identity or civil records requested by NIMC to reconcile the name with the existing identity record.",
+      "An accurate existing 11-digit NIN and real civil/legal documents supporting the change, including optional marriage evidence where relevant.",
+      "A supported NIMC account or the official assisted modification location if the online account is device-bound or unavailable."
     ],
     "steps": [
-      "Start from nimc.gov.ng/self-service-modifications/ and follow NIMC's genuine self-service modification link. Do not submit a fresh NIN enrolment.",
-      "Sign in and choose the specific name field(s) to modify; check the present NIN entry and the spelling on your supporting documents.",
-      "Prepare the affidavit and newspaper extract, and add marriage evidence where applicable. Upload only the documents required for the selected request.",
-      "Check NIMC's current fee table and the official invoice for the selected fields, then complete payment only inside the provider-authorised route.",
-      "Review the corrected spelling and submit; retain the official transaction acknowledgement.",
-      "Check the official application status. If self-service is unsuitable, ask a NIMC enrolment centre for its assisted document-verification process; an informational NIMC page is not itself a completed application."
+      "Open https://nimc.gov.ng/self-service-modifications/ and follow its genuine self-service portal link using the existing NIN, not the first-time NIN enrolment form.",
+      "Identify whether the error is a minor spelling correction, marriage-related surname change or other legally supported change before selecting the precise name field.",
+      "Gather NIMC's supporting evidence: sworn affidavit/newspaper notice where applicable, and a marriage certificate for a change arising from marriage.",
+      "Compare the original NIMC demographic entry with the proposed spelling and check that the uploaded civil/identity documents consistently show the right name.",
+      "Choose the specific eligible name-modification field(s), verify the current NIMC invoice and ordinary-field ₦2,000 fee guidance before paying.",
+      "Submit the change through the official service and keep its transaction reference. Paying a fee does not immediately update every bank, SIM or tax record.",
+      "Monitor the NIMC decision and answer any document query using the original request; where self-service cannot handle it, use NIMC's centre-assisted route.",
+      "After approval, retrieve the updated NIN slip and separately request name corrections from organisations using the old record, keeping official documentary proof."
     ],
     "notes": [
-      "An existing NIN remains the starting point: a name change does not justify creating a second identity record.",
-      "NIMC distinguishes its self-service portal from centre-assisted modification; do not label all name changes exclusively online or exclusively walk-in.",
-      "Affidavit, newspaper extract and marriage certificate requirements are conditional on the reason for the change. Ensure submitted documents genuinely support the requested spelling.",
-      "NIMC's ₦2,000 listing relates to ordinary updatable fields; date of birth has a separate tariff and should not be bundled into a name-only fee."
+      "Name and date-of-birth modifications are separate NIMC fee categories. Do not quote a DOB-only fee for a name field.",
+      "No new NIN is created on an approved name modification.",
+      "Where a legal document differs from the NIN field, upload genuine evidence or first resolve the underlying civil-record discrepancy."
     ],
     "sources": [
       {
@@ -4486,7 +4489,7 @@
     "slug": "nin-address-modification",
     "title": "How to change your address on NIN",
     "shortTitle": "NIN address modification",
-    "summary": "NIMC lists address as an updatable NIN detail. To change it, start with NIMC's official Self-Service Modifications route and provide current evidence such as a utility bill, tenancy agreement, bank statement or community-leader attestation. An assisted NIMC enrolment-centre route is also published; confirm the actual payment invoice and do not create a second NIN.",
+    "summary": "Update an existing NIN address through NIMC's official self-service modification or an authorised assisted route, using real evidence for the new residence. NIMC lists utility bills, tenancy agreements, bank statements or community-leader attestations as possible support; the ordinary-field ₦2,000 charge is subject to the official current invoice.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
@@ -4496,21 +4499,24 @@
       "Existing NIN and access to the official NIMC self-service modification account or an authorised NIMC centre.",
       "The complete new address as it should appear on the identity record.",
       "Supporting proof of address accepted by NIMC: utility bill, tenancy agreement, bank statement or community-leader attestation.",
-      "An official invoice or application acknowledgement for the selected address field."
+      "An official invoice or application acknowledgement for the selected address field.",
+      "Evidence issued for or capable of verifying the actual new address, as accepted by NIMC.",
+      "The existing NIN-linked self-service account or access to a genuine NIMC assisted centre when self-service is blocked."
     ],
     "steps": [
-      "Open the self-service modifications section on nimc.gov.ng and follow NIMC's official link to its modification system.",
-      "Sign in with the existing NIN and select Address as the specific field to change.",
-      "Enter the new address exactly as supported by the available evidence, then upload the relevant utility bill, tenancy agreement, bank statement or attestation accepted by NIMC.",
-      "Review the requested field and charge against the official NIMC fee schedule and live invoice before paying.",
-      "Submit the modification and keep the official reference or receipt to check the result.",
-      "If self-service cannot handle the case, contact a NIMC enrolment centre for the published assisted procedure and identity-document checks."
+      "Open https://nimc.gov.ng/self-service-modifications/ and sign in through the linked NIMC account for the already-issued NIN.",
+      "Choose Address Modification rather than NIN Enrolment, Duplicate NIN or Date of Birth Modification.",
+      "Write the correct new house/street, community, local government and state as the current form requires; check that all components are consistent.",
+      "Prepare the proof of address accepted for the case, such as an authentic utility bill, tenancy agreement, bank statement or community-leader attestation.",
+      "Upload the readable supporting document and check that name and address match the application; an unrelated utility bill may not establish the applicant's residence.",
+      "Compare the live invoice against the current NIMC ordinary-field fee guidance and pay only through the authorised portal.",
+      "Submit the request, save the transaction reference and monitor its approval/query status, correcting the evidence through NIMC if required.",
+      "After approval, retrieve the updated NIN slip and independently update any bank, employer or telecom customer file that retains the previous address."
     ],
     "notes": [
-      "NIMC's adult modifications page lists four types of address evidence, including bank statements; the earlier guide omitted that option.",
-      "An address correction does not change the NIN itself; do not apply for a replacement number.",
-      "NIMC's public fee table lists ₦2,000 for an ordinary updatable field, while the actual charge should be confirmed on the official invoice.",
-      "Do not assume the document will be accepted if the new address and supporting record are inconsistent."
+      "Changing an address does not generate a new NIN.",
+      "Bank statements and community-leader attestations are among NIMC's listed address evidence alternatives.",
+      "A new address entered in a bank app is not automatically pushed to NIMC's identity register."
     ],
     "sources": [
       {
@@ -8216,7 +8222,7 @@
     "slug": "pencom-open-rsa",
     "title": "How to open a Retirement Savings Account (RSA) in Nigeria",
     "shortTitle": "Open a pension RSA",
-    "summary": "To open a pension RSA in Nigeria, choose a PenCom-licensed Pension Fund Administrator (PFA), present the required employment and identity documents, and obtain your RSA PIN. Give that existing PIN to your employer for contributions; do not open a second RSA when you change jobs.",
+    "summary": "Open a Retirement Savings Account (RSA) with a PenCom-licensed Pension Fund Administrator (PFA) chosen by the worker, not selected coercively by an employer. Register using real employment and identity records, receive a unique PIN and use the same RSA when jobs change. Opening a second RSA is not an account-recovery method.",
     "category": "Pensions",
     "agencySlug": "pencom",
     "feeLabel": "No account-opening fee stated",
@@ -8228,23 +8234,24 @@
       "An employment or attestation letter where applicable to your category, following PenCom's RSA-registration guidance",
       "A valid identity document such as staff ID, national driver's licence, permanent voter's card, national ID or passport data page",
       "The NIMC enrolment slip showing your National Identification Number (NIN), as listed in PenCom's registration FAQ",
-      "Your current phone number, postal address and employer name for the RSA registration record"
+      "Your current phone number, postal address and employer name for the RSA registration record",
+      "Worker's NIN-linked identity and actual employer particulars, not a colleague's RSA PIN.",
+      "Existing RSA/PFA history if the applicant has worked before so duplicate accounts are avoided."
     ],
     "steps": [
-      "Open PenCom's current list of licensed Pension Fund Administrators and choose the PFA you want to manage your RSA; your employer should not force a specific provider.",
-      "Ask that PFA for its RSA registration form and the precise onboarding process, then gather your employment letter, accepted identity document, NIN enrolment slip and contact details.",
-      "Complete the PFA's registration and required identity or biometric verification; use its official office or authorised channel rather than a recruiter or broker.",
-      "Obtain the PFA's registration or welcome letter and unique RSA PIN after the account is opened. Check that your name, employer and contact details are recorded accurately.",
-      "Give your existing RSA PIN and relevant registration details to your employer's payroll or pensions unit for contribution remittance; keep a private copy of the welcome letter.",
-      "Check PFA statements and employer payslips for remittances. If contributions have not been credited, contact the PFA and employer and use PenCom's published guidance for uncredited contributions."
+      "Open https://www.pencom.gov.ng/pension-fund-administrators/ and choose a PFA from PenCom's current licensed list; avoid pension registration links offered by unknown agents.",
+      "If you previously worked for a pension-contributing employer, first look for an existing RSA PIN on your PFA statement/payslip; use recovery rather than opening a duplicate.",
+      "Ask the selected PFA for its authentic RSA enrolment form and whether initial biometric/identity verification takes place through its office or approved onboarding channel.",
+      "Prepare the employment/attestation document, accepted photo ID and NIMC enrolment slip/NIN along with your contact and employer details.",
+      "Complete the enrolment and PFA's verification using the actual worker's identity. Compare recorded legal names with the NIN and employer record.",
+      "Obtain the PFA welcome letter and unique RSA PIN after opening; review all digits and keep the PIN and identity evidence privately.",
+      "Give the existing RSA PIN to your employer's payroll desk and verify the first contribution through official PFA statements.",
+      "If an employer demands a particular PFA or forces transfer, consult PenCom's June 2025 worker-choice circular and lodge a documented complaint."
     ],
     "notes": [
-      "PenCom says a worker should maintain one RSA across changes of employment. Give the new employer your existing PIN instead of registering a new account.",
-      "RSA registration happens with a licensed Pension Fund Administrator, not through a generic MyNigeriaGuide application form.",
-      "PenCom's June 2025 circular warns employers and affiliated financial institutions not to coerce employees into a particular PFA or an RSA transfer; PFA choice belongs to the employee.",
-      "An RSA is a retirement account, not a normal savings account for immediate withdrawals; special permitted benefits follow separate statutory rules.",
-      "Save the PFA's official welcome letter, PIN and confirmation. Never publish your RSA PIN with identity documents or share account passwords or OTPs.",
-      "If you have an old RSA but cannot remember the PFA or PIN, resolve the existing record through PenCom or your PFA rather than creating another account."
+      "PenCom's 2025 circular warns employers against coercing a worker's PFA choice or transfer.",
+      "A worker keeps one RSA and can transfer a provider through a regulated process; a job change does not require a fresh RSA.",
+      "RSA registration is an account-opening process, not immediate eligibility for pension withdrawals."
     ],
     "sources": [
       {
@@ -8276,7 +8283,7 @@
       "pencom-transfer-rsa",
       "pencom-unremitted-contributions"
     ],
-    "lastVerified": "2026-10-12",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "open RSA Nigeria",
       "open RSA online",
@@ -10489,31 +10496,36 @@
     "slug": "pencom-job-loss-25-percent-withdrawal",
     "title": "How the 25% RSA withdrawal after job loss works",
     "shortTitle": "25% pension withdrawal",
-    "summary": "The PenCom rule for eligible RSA holders under 50 who remain unemployed after leaving a job and want to access up to 25% of their Retirement Savings Account balance.",
+    "summary": "An RSA holder who qualifies for PenCom's temporary unemployment benefit may apply through their own PFA for up to 25% of the RSA balance after at least four months without another job. The rule is not an unrestricted loan or automatic entitlement for anyone with an RSA; age, retirement eligibility and proof of employment termination still matter.",
     "category": "Pensions",
     "agencySlug": "pencom",
     "feeLabel": "No PenCom application fee stated",
     "feeNote": "The benefit is paid from the eligible person's own RSA through the PFA. Do not pay an agent to 'unlock' pension funds.",
     "timeline": "PenCom's current reports describe eligibility after four months without another job; PFA verification and PenCom approval add processing time.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://www.pencom.gov.ng/category/frequently-asked-questions/payment-of-retirement-benefits/",
     "requirements": [
       "An RSA holder who is below the retirement age threshold applicable to the temporary job-loss benefit",
       "Evidence that employment ended and that another job has not been secured after the required four-month period",
-      "The RSA/PFA identity and employment-separation records needed by the Pension Fund Administrator"
+      "The RSA/PFA identity and employment-separation records needed by the Pension Fund Administrator",
+      "Evidence that the person has not secured another job for at least four months after documented employment exit.",
+      "Confirmation from the chosen PFA that the holder meets the temporary job-loss category and is not already following a normal retirement route."
     ],
     "steps": [
-      "Confirm with your Pension Fund Administrator that your employment exit and age fit PenCom's temporary job-loss withdrawal rule.",
-      "Allow the required four-month unemployment period to pass before submitting the benefit request unless current PenCom rules state otherwise.",
-      "Give the PFA the RSA identity, employment-separation evidence and any additional document used to verify that the job has ended.",
-      "Submit the PFA benefit application and keep the acknowledgement while the PFA and PenCom complete the regulated benefit review.",
-      "Check the amount paid against the approved percentage and retain the PFA/PenCom benefit record for future retirement-account reconciliation."
+      "Contact the Pension Fund Administrator holding your existing RSA and ask specifically about the temporary job-loss 25% benefit, not normal retirement benefits.",
+      "Check whether you are below the relevant retirement eligibility age and have genuinely left the former employment; ask your PFA to confirm any prior job-loss claim limits.",
+      "Calculate the four-month unemployment period from the actual employment exit date. PenCom reports eligibility where another job has not been secured four months after exit.",
+      "Gather the employer's termination/resignation/exit documentation, RSA PIN, bank identity and additional unemployment evidence requested by your PFA.",
+      "Complete the PFA's official benefit-application and signature/biometric authentication process without releasing your PIN or online account credentials to an agent.",
+      "Keep the submission receipt and respond to PFA/PenCom queries about pension contributions, identity, or an overlapping retirement claim.",
+      "Compare the permitted 25% ceiling and payment to the approved withdrawal calculation. A bank alert alone does not specify the future RSA impact.",
+      "After payment, review your updated RSA statement and continue your existing account when employed again; 25% taken now reduces retirement savings."
     ],
     "notes": [
-      "PenCom's 2025 report states that the 25% benefit applies to people unable to secure another job four months after exiting employment.",
-      "Taking the job-loss benefit reduces the amount remaining in the RSA for future retirement benefits.",
-      "A person already at normal retirement eligibility follows the retirement-benefit rules rather than the temporary job-loss route."
+      "PenCom's 2025 quarterly report confirms four-month unemployment as a prerequisite for temporary job-loss 25% payments.",
+      "The 25% benefit is part of the worker's existing RSA assets and reduces the balance for retirement.",
+      "No authorised third party can guarantee fast approval by charging an 'unlock' fee."
     ],
     "sources": [
       {
@@ -11027,32 +11039,37 @@
     "slug": "fmbn-home-renovation-loan",
     "title": "How to apply for an FMBN Home Renovation Loan",
     "shortTitle": "FMBN renovation loan",
-    "summary": "How eligible NHF contributors finance renovation or improvement of an existing home through the Federal Mortgage Bank of Nigeria Home Renovation Loan route.",
+    "summary": "FMBN's Home Renovation Loan supports improvement of an existing eligible contributor's personally or family-owned home, and ordinarily requires NHF contribution history, income evidence and a costed renovation proposal through an authorised employer/aggregator. FMBN also advertises a separate NHF Mortgage Loan for buying/building/improving property; do not conflate their loan ceilings or rates.",
     "category": "Housing",
     "agencySlug": "fmbn",
     "feeLabel": "Product terms apply",
     "feeNote": "FMBN's public documents contain legacy and current product descriptions with differing figures, so confirm the live loan ceiling, interest rate and tenor with FMBN before accepting an offer.",
     "timeline": "FMBN's older SERVICOM charter listed up to three months after receipt of a complete application; current processing can vary by employer/aggregator and documentation.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://fmbn.gov.ng/products/nhf-scheme/faqs",
     "requirements": [
       "An applicant aged 18 or older who has contributed to the NHF for at least six months",
       "Evidence of regular income sufficient for the proposed repayment",
       "Ownership or family-ownership basis for the existing property being renovated",
-      "A certified Bill of Quantities or renovation-cost evidence where FMBN requires it"
+      "A certified Bill of Quantities or renovation-cost evidence where FMBN requires it",
+      "Proof of personally or family-owned existing property and a defensible renovation budget or certified bill of quantities.",
+      "The authorised aggregator for the applicant's employment category and evidence of continuous NHF contribution/income."
     ],
     "steps": [
-      "Verify the applicant's NHF contribution history and confirm that the minimum contribution period has been met.",
-      "Ask FMBN or the recognised employer/authority channel which current Home Renovation Loan application route applies to the applicant's employment category.",
-      "Prepare the income evidence, property basis, NHF contribution record and certified renovation-cost documentation before submission.",
-      "Submit the application through the recognised FMBN aggregation or online route and keep the acknowledgement or application reference.",
-      "Review the approved amount, interest rate, tenor and repayment deduction carefully before accepting the loan offer and draw-down conditions."
+      "Open https://fmbn.gov.ng/products/nhf-scheme/faqs and select Home Renovation Loan rather than assuming the published NHF Mortgage Loan terms are identical.",
+      "Verify that the applicant is at least 18, has the six-month minimum NHF contributions and can demonstrate regular income for payroll or direct repayment.",
+      "Confirm actual ownership or eligible family-ownership basis for the home and gather renovation scope, bills of quantities and supporting estimates required by FMBN.",
+      "Find the employer/aggregator for the category: federal government workers may use FGSHLB, state workers an authorised state body, and certain private workers the employer's chief executive/permanent secretary channel.",
+      "Ask the aggregator and FMBN for the current HRL application pack, loan ceiling, interest, tenor, salary-deduction terms and property documents. Historical product PDFs may quote outdated figures.",
+      "Submit a correctly costed renovation proposal and NHF/employment records through the authorised route, keeping a dated acknowledgement.",
+      "Review FMBN or its designated processing partner's offer after credit/eligibility checks; membership and six months of NHF payment do not guarantee acceptance.",
+      "Confirm repayment, deductions, any facility conditions and approved draw-down timing before undertaking major works; preserve the offer and future repayment evidence."
     ],
     "notes": [
-      "FMBN states that the Home Renovation Loan is for improving an existing home owned personally or through family ownership.",
-      "Product limits and terms have changed in FMBN materials over time; the live offer and current FMBN product terms should control rather than an old PDF shared online.",
-      "NHF contribution by itself does not guarantee approval; income and eligibility checks still apply."
+      "The original FMBN Home Renovation Loan conditions specify federal/state/private-sector aggregator routes and at least six months' NHF contributions.",
+      "FMBN's public NHF Mortgage Loan currently advertises separate up-to-₦50 million/6% terms; do not transplant those numbers to a different Home Renovation Loan.",
+      "FMBN's historical HRL materials have changed over time, so display the live offer and agency-confirmed terms rather than a universal repayment rate."
     ],
     "sources": [
       {
@@ -11067,6 +11084,18 @@
         "url": "https://fmbn.gov.ng/resources/news/fmbn-fgshlb-forge-fresh-path-to-affordable-housing-for-civil-servants",
         "published": "2026-04-27",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency eligibility and process guidance",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://www.fmbn.gov.ng/documents/hrl_conditions.pdf",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency eligibility and process guidance",
+        "agency": "Federal Mortgage Bank of Nigeria",
+        "url": "https://fmbn.gov.ng/products/nhf_mortgage_loan",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11224,7 +11253,7 @@
     "slug": "pencom-pension-clearance-certificate",
     "title": "How an employer applies for a PenCom Pension Clearance Certificate",
     "shortTitle": "PenCom PCC",
-    "summary": "The current Employer Hub route for Nigerian employers applying for a Pension Clearance Certificate, including employee schedules, remittance evidence and group-life cover.",
+    "summary": "Employers must apply for new PenCom Pension Clearance Certificates (PCC) through the Employer Hub (e-Hub), not the legacy PCC portal. From 1 July 2026 the former portal is solely for certificates approved before that date. The application verifies employer contributions, three years of remittances where applicable and a current group-life policy.",
     "category": "Pensions",
     "agencySlug": "pencom",
     "feeLabel": "No PenCom application fee stated",
@@ -11238,20 +11267,24 @@
       "Certified monthly pension contribution rates showing at least 10% employer and 8% employee contributions under the published PCC requirements",
       "Evidence of monthly pension remittances for the last three fiscal years, or from incorporation/registration/licensing where the organisation is newer",
       "Evidence that outstanding pension contributions and late-remittance penalties identified by PenCom have been settled, where applicable",
-      "Current group life insurance evidence for employees and legacy pension-asset transfer evidence where those requirements apply"
+      "Current group life insurance evidence for employees and legacy pension-asset transfer evidence where those requirements apply",
+      "Employer's e-Hub credentials and real pension remittance records, rather than an old PCC portal login as a new application.",
+      "Current Group Life policy and premium payment evidence, where required by PenCom's PCC checklist."
     ],
     "steps": [
-      "Open the PenCom Employer Hub and register or sign in with the employer code used for the organisation's pension-compliance record.",
-      "Confirm that the company profile and employer information are current before starting the Pension Clearance Certificate application.",
-      "Prepare the certified employee list, contribution-rate statement, pension-remittance evidence and current group-life insurance record required for the application.",
-      "Upload the supporting compliance documents and submit the PCC application through the Employer Hub.",
-      "Track the application in the Employer Hub and respond to any PenCom query about missing remittances, employee records or compliance evidence.",
-      "After approval, download and retain the Pension Clearance Certificate and check its validity before using it for procurement or another compliance purpose."
+      "Open https://pcc.pencom.gov.ng/ and read its 1 July 2026 transition notice, then follow the Employer Hub at https://ehub.pencom.gov.ng for any NEW PCC application.",
+      "Confirm that the employer's registered PenCom code, identity, authorised contact and financial year are correct before assembling the return.",
+      "Prepare a certified employee list at the last fiscal year-end and pension contribution rates, showing at least 10% employer and 8% employee shares.",
+      "Gather monthly pension remittance proof for the preceding three fiscal years, or the shorter period since incorporation if the company is younger.",
+      "Attach current Group Life Insurance Policy, certificate and payment proof as required; PenCom describes cover of at least three times the employee's annual total emoluments.",
+      "Resolve any outstanding contribution or late-remittance penalties identified by PenCom, as well as any legacy pre-2004 pension asset-transfer requirement that applies.",
+      "Upload the correct evidence through e-Hub and submit for formal review; use the employer dashboard to answer queries and preserve the application reference.",
+      "After PenCom approves the PCC, download the current certificate and confirm its applicable period. Use old pcc.pencom.gov.ng only for pre-1 July 2026 approved certificates."
     ],
     "notes": [
-      "Effective 1 July 2026, PenCom says new PCC applications moved to the Employer Hub; the older pcc.pencom.gov.ng portal is now for viewing, downloading and printing certificates issued before that date.",
-      "PenCom issues PCCs as evidence that an eligible organisation has complied with the pension requirements applicable to the certificate period.",
-      "A PCC does not replace ITF, NSITF, tax or other compliance certificates that a procurement process may separately require."
+      "The live legacy PCC page expressly limits itself to viewing/downloading certificates issued before 1 July 2026.",
+      "A new PCC is not obtained simply by uploading an annual employee list; arrears, rates and group-life evidence are part of review.",
+      "The 15-working-day charter target presumes complete submission and no unresolved query."
     ],
     "sources": [
       {
@@ -11271,6 +11304,12 @@
         "agency": "National Pension Commission",
         "url": "https://www.pencom.gov.ng/category/compliance-certificates/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency eligibility and process guidance",
+        "agency": "National Pension Commission",
+        "url": "https://www.pencom.gov.ng/wp-content/uploads/2020/06/FREQUENTLY-ASK-QUESTION-2020-ENGLISH-MAIN-VISUAL.pdf",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11286,38 +11325,43 @@
       "nsitf-compliance-certificate",
       "bpp-contractor-registration"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "itf-employer-registration",
     "title": "How to register an employer with the Industrial Training Fund",
     "shortTitle": "ITF employer registration",
-    "summary": "The Industrial Training Fund employer-registration route for obtaining an ITF National Number and setting up the organisation for statutory training contributions and compliance.",
+    "summary": "Register an eligible employer with Nigeria's Industrial Training Fund using ITF Form 7A and the relevant Area Office. The statutory annual training contribution is 1% of payroll where an employer has at least five staff or fewer than five with annual turnover of ₦50 million or more; ITF also requires compliance evidence for some federal contract bids.",
     "category": "Employment & social protection",
     "agencySlug": "itf",
     "feeLabel": "No separate registration fee stated",
     "feeNote": "ITF's public employer guidance directs organisations to the official e-collection portal or an ITF Area Office for registration.",
     "timeline": "Registration timing depends on the completeness of the employer's corporate, tax, payroll and address records.",
     "status": "verified",
-    "officialPortal": "https://www.pay.itf.gov.ng/Identity/Account/Registeremp?returnUrl=%2F",
+    "officialPortal": "https://www.itf.gov.ng/employer_reg/",
     "requirements": [
       "CAC Certificate of Incorporation or other recognised organisation-registration evidence",
       "Tax Identification Number and Tax Clearance Certificate information used in the ITF employer account",
       "Operational business address and the ITF Area Office responsible for the employer",
       "Staff-strength and payroll information used to determine contribution liability",
-      "Audited accounts where ITF requests them for the organisation type or registration review"
+      "Audited accounts where ITF requests them for the organisation type or registration review",
+      "Completed employer Form 7A with matching CAC, staff strength, tax and audited-account particulars.",
+      "Identified ITF Area Office for physical vetting/acknowledgement and RRR-based statutory payment where assessed."
     ],
     "steps": [
-      "Open the official ITF e-collection employer-registration page and search for the company using the registered company information.",
-      "Enter the TIN, Tax Clearance Certificate number, CAC RC number, responsible ITF Area Office, email, phone and account-user information.",
-      "Submit the employer account and provide the incorporation, operational-address, staff-strength, payroll and audited-account records requested by ITF.",
-      "Follow any Area Office verification instruction and keep the employer registration reference while the organisation's record is reviewed.",
-      "After successful registration, retain the ITF National Number and use the employer account for statutory contribution and compliance-certificate processes."
+      "Open https://www.itf.gov.ng/employer_reg/ and read ITF Registration by a New Employer; download the current Form 7A rather than completing an employee training-course form.",
+      "Check the employer's staff count and annual turnover against ITF's rule: five or more employees, or fewer than five with annual turnover of at least ₦50 million.",
+      "Prepare the business CAC certificate, accurate tax clearance and the audited accounts and payroll/personnel records requested for the company's type.",
+      "Complete Form 7A and submit it to the nearest ITF Area Office named for the company; ITF states an officer assesses liability before the official payment step.",
+      "Use the assessed RRR on ITF's Pay Portal or Remita and follow the authorised bank/payment instructions; do not pay an agent's personal account.",
+      "Return payment printout and any teller/receipt evidence to the same ITF Area Office, which issues acknowledgement and transmits the record to headquarters.",
+      "Retain the assigned ITF National Number and, when approved, obtain the corresponding Compliance Certificate from the official office/e-certificate service.",
+      "If company turnover or employee count is under the ordinary threshold but the business seeks a federal contract, check ITF's published procurement compliance requirements rather than assuming no certificate will ever be required."
     ],
     "notes": [
-      "ITF says employers with five or more employees, or employers with fewer than five employees but annual turnover of ₦50 million or more, are liable under the contribution rules.",
-      "The ITF National Number is the unique identifier issued to a registered organisation.",
-      "Employer registration is separate from SIWES employer participation and from an individual's training-course certificate."
+      "ITF's own registration procedure requires Form 7A, an Area Office liability assessment, RRR payment and office acknowledgement before a National Number.",
+      "Annual contribution is 1% of payroll when the statutory employee count or ₦50 million threshold applies.",
+      "The ITF FAQ separately says federal procurement may need a compliance certificate below the normal statutory contribution threshold."
     ],
     "sources": [
       {
@@ -11331,6 +11375,18 @@
         "agency": "Industrial Training Fund",
         "url": "https://www.pay.itf.gov.ng/Identity/Account/Registeremp?returnUrl=%2F",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency eligibility and process guidance",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.itf.gov.ng/employer_reg/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency eligibility and process guidance",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.itf.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11345,13 +11401,13 @@
       "bpp-contractor-registration",
       "nsitf-employer-registration"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "itf-compliance-certificate",
     "title": "How to obtain an ITF compliance certificate",
     "shortTitle": "ITF compliance certificate",
-    "summary": "How Nigerian employers meet Industrial Training Fund contribution requirements and obtain the compliance certificate commonly requested for Federal Government procurement.",
+    "summary": "Obtain an ITF Compliance Certificate after employer registration, verification of the applicable 1% payroll contribution and submission to the appropriate ITF Area Office. ITF's procedure distinguishes new Form 7A applicants from existing employers' Form 5A; an online e-Certificate login alone does not clear unpaid statutory contributions.",
     "category": "Employment & social protection",
     "agencySlug": "itf",
     "feeLabel": "1% statutory training contribution for liable employers",
@@ -11363,20 +11419,24 @@
       "A registered employer with an ITF National Number or completed ITF employer-registration record",
       "Current staff and payroll records used to calculate the organisation's statutory contribution",
       "Evidence of payment of the applicable 1% annual training contribution and any outstanding statutory amount",
-      "Corporate and tax records requested by the responsible ITF Area Office during compliance verification"
+      "Corporate and tax records requested by the responsible ITF Area Office during compliance verification",
+      "Current Form 5A for an existing ITF employer or completed Form 7A for a new one, with payroll records and ITF National Number.",
+      "Verified contribution/penalty assessment and official RRR/payment evidence for the relevant compliance period."
     ],
     "steps": [
-      "Confirm that the organisation's ITF registration and National Number are active and that the staff and payroll records are current.",
-      "Calculate and remit the statutory training contribution through the official ITF payment route using the payroll accepted for the compliance period.",
-      "Submit the payroll, payment and supporting corporate records required by the responsible ITF Area Office for compliance verification.",
-      "Resolve any outstanding contribution or record discrepancy identified during the ITF review and keep the official payment evidence.",
-      "After approval, sign in to the ITF e-certificate service to manage the issued compliance certificate and retain its certificate reference for verification or procurement use."
+      "Open https://www.itf.gov.ng/employer_reg/ and choose the applicable new-employer or registered-employer route before seeking a compliance certificate.",
+      "If previously registered, prepare ITF Form 5A and use the Area Office where the employer's National Number is recorded. New employers use Form 7A first.",
+      "Calculate the actual annual payroll and employee/turnover threshold, and gather tax, CAC, audited account and prior remittance evidence for ITF's review.",
+      "Submit the return and supporting records to the Area Office for liability assessment; note the invoice and any outstanding penalties instead of guessing an annual fee.",
+      "Generate an RRR through the ITF Pay Portal or Remita according to the Area Office's assessment; pay through the authorised channel and preserve the official evidence.",
+      "Return the payment/teller evidence for reconciliation. ITF says existing employers receive the compliance certificate after verification by the Area Office.",
+      "Use https://e-certificate.itf.gov.ng/ for the available account-based certificate management and confirm the entity, period and issuing record.",
+      "If preparing a tender, verify its required ITF compliance even for below-threshold companies; do not substitute NSITF, PenCom or tax clearance for ITF's separate record."
     ],
     "notes": [
-      "ITF says the contribution rule applies to employers with five or more employees, or fewer than five employees with annual turnover of at least ₦50 million.",
-      "ITF's FAQ says failure to remit within the statutory period can attract 5% compounded interest on the unpaid amount monthly.",
-      "ITF also states that a company seeking Federal Government contracts may need an ITF compliance certificate even where its staff/turnover falls below the normal contribution threshold.",
-      "Federal procurement can separately require PenCom, NSITF, tax and BPP compliance records."
+      "ITF says statutory 1% annual payroll remittance is due by 31 March; late unpaid amounts can attract 5% compounded monthly interest under the cited rules.",
+      "Federal contract bidders may need an ITF compliance certificate even if they are below five staff and ₦50 million in turnover.",
+      "The e-Certificate portal is a certificate-management route, not proof that a company's unpaid liability was waived."
     ],
     "sources": [
       {
@@ -11396,6 +11456,12 @@
         "agency": "Industrial Training Fund",
         "url": "https://www.pay.itf.gov.ng/Identity/Account/Registeremp?returnUrl=%2F",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Official agency eligibility and process guidance",
+        "agency": "Industrial Training Fund",
+        "url": "https://www.itf.gov.ng/employer_reg/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11411,7 +11477,7 @@
       "nsitf-compliance-certificate",
       "bpp-contractor-registration"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "lagos-lasrra-registration",
@@ -13460,7 +13526,7 @@
     "slug": "check-nin-number",
     "title": "How to check or retrieve your NIN with *346#",
     "shortTitle": "Check or retrieve NIN",
-    "summary": "To retrieve an existing 11-digit NIN, dial *346# on the telephone line you registered with NIMC and follow the retrieval prompt (the NCC describes option 1). NIMC's February 2026 Service Charter lists ₦50 for *346# retrieval. You can instead check an existing official NIMC ID record or contact NIMC if the registered SIM has been lost.",
+    "summary": "Retrieve an existing NIN using *346# on the telephone line registered during NIMC enrolment. NIMC's February 2026 Service Charter lists a ₦50 USSD charge; some older NCC material mentions a temporary ₦20 waiver. Check the live prompt and use the existing slip first to avoid unnecessary deductions.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦50 published USSD retrieval fee",
@@ -13470,21 +13536,24 @@
       "An NIN must already have been issued; *346# does not enrol a first-time applicant.",
       "An active Nigerian mobile line that matches the phone number provided during NIMC registration, as NCC specifies.",
       "At least the published ₦50 retrieval fee available as airtime if the network charges as listed in NIMC's current service charter.",
-      "If the registered SIM is lost or no retrieval result appears, enough identity evidence to seek assistance through a genuine NIMC office or operator."
+      "If the registered SIM is lost or no retrieval result appears, enough identity evidence to seek assistance through a genuine NIMC office or operator.",
+      "An already issued NIN, with the originally registered SIM if using the self-service USSD route.",
+      "Access to NIMC support and genuine identification if the original registered SIM is unavailable."
     ],
     "steps": [
-      "Confirm whether your NIN is already printed on the NIMC slip issued during enrolment; it is normally the 11-digit number on that document. Do not pay for a fresh retrieval if you already have it.",
-      "From the mobile number previously registered with NIMC, dial *346#. Choose the NIN retrieval option shown on the menu; NCC's published guidance describes pressing 1.",
-      "Read the fee prompt before proceeding. NIMC's February 2026 Service Charter states ₦50 for *346# retrieval; old pages mentioning a temporary ₦20 waiver should not be used as the current fee.",
-      "Complete the USSD prompts and keep the returned 11-digit NIN private. Never share a screenshot of your full NIN or OTP publicly or with an unofficial agent.",
-      "If the lookup says the phone number is not linked to a NIN, check that you are using the originally registered SIM. NCC advises calling your telecom provider if USSD returns an error; NIMC can assist at an official centre with forgotten records.",
-      "If you are attempting to link a SIM rather than retrieve the number, use your network operator's own NIN-linking channel; *346# is the retrieval step, not the complete mobile-line linkage process."
+      "Check your physical or digital NIMC enrolment/NIN slip for the existing eleven-digit NIN before paying for another retrieval.",
+      "Insert the SIM you used during NIN enrolment into a phone that can make USSD requests; retrieval from an unrelated line may fail.",
+      "Dial *346# and choose the NIN retrieval option described in NCC's guidance, normally option 1 if the current network menu matches it.",
+      "Inspect the live USSD payment prompt before authorising deduction: NIMC's February 2026 Service Charter quotes ₦50, not the older temporary ₦20 waiver.",
+      "Finish the USSD session, read the returned eleven digits and store them privately. This is a retrieval of an existing NIN, not a fresh enrolment.",
+      "If the service reports no matching number, confirm the original SIM details with the network provider and use the official NIMC record-help route if the line is gone.",
+      "Avoid repeated chargeable *346# attempts with the wrong SIM or a bank-account number; contact a recognised NIMC centre with genuine identity documents to recover the issued record.",
+      "For SIM–NIN linkage, use the mobile operator's *996# or approved linkage service after retrieving the NIN; the two USSD operations are different."
     ],
     "notes": [
-      "The NCC explicitly distinguishes retrieval via *346# from NIN–SIM linking. The line used for retrieval must match the NIMC enrolment record.",
-      "NIMC's February 2026 published schedule lists ₦50 for the *346# lookup; an older NCC FAQ mentioned a time-limited ₦20 fee waiver during the original SIM-link campaign.",
-      "The 11-digit NIN is not the same as a virtual NIN, share code or the separate *346*2*Your NIN# Mobile ID function, which needs the NIN you already know.",
-      "NIMC provides an in-person fallback when the registered phone cannot retrieve an existing NIN. Do not use fake 'instant retrieval' sites or give strangers your identity number."
+      "NIMC's February 2026 charter lists ₦50 for *346# retrieval; older NCC documents discussed a time-limited ₦20 waiver.",
+      "NIN retrieval does not enrol a first-time applicant or update the linked SIM's owner.",
+      "Do not disclose the full NIN and login OTPs to a third-party 'number recovery' page."
     ],
     "sources": [
       {
@@ -13526,13 +13595,13 @@
       "nin-slip-reissue",
       "ninauth-nin-verification"
     ],
-    "lastVerified": "2026-10-15"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "unclaimed-dividends-nigeria",
     "title": "How to check and claim unclaimed dividends in Nigeria",
     "shortTitle": "Unclaimed dividends",
-    "summary": "Use the SEC unclaimed-dividend search to identify outstanding holdings and the responsible registrar, then complete the official e-Dividend mandate route for payment.",
+    "summary": "Find unmandated or unpaid dividends through the Securities and Exchange Commission's official shareholder-name search, identify the relevant registrar, and use the revamped NIBSS e-Dividend Mandate Management System (e-DMMS) self-service route or registrar/bank form. A search result is not an automatic cash payout, and one shareholder may have records with multiple registrars.",
     "category": "Investing",
     "agencySlug": "sec",
     "feeLabel": "SEC search is free; confirm any registrar/bank process charge",
@@ -13543,19 +13612,24 @@
       "The shareholder's name as it appears on the investment record",
       "The registrar name returned by the SEC search, where a matching record is found",
       "Bank and identity information required by the official e-Dividend mandate process",
-      "Any additional proof requested by the registrar or bank for the specific shareholder record"
+      "Any additional proof requested by the registrar or bank for the specific shareholder record",
+      "Genuine shareholder/CHN and registrar identifiers for each distinct holding, not merely another investor's matching name.",
+      "A bank account controlled by the eligible shareholder or legally entitled beneficiary, with supporting identity/estate documents where needed."
     ],
     "steps": [
-      "Open the Securities and Exchange Commission's official unclaimed-dividend/non-mandated search and search the shareholder's name.",
-      "If a matching holding appears, note the registrar attached to that record; different companies can use different registrars.",
-      "Use SEC's e-Dividend guidance to start the mandate through the NIBSS self-service route where available, or approach the relevant registrar or bank.",
-      "Complete the e-Dividend mandate information and any identity/bank validation requested for the shareholder record.",
-      "Keep confirmation details and follow up with the registrar or bank if the mandate or outstanding dividend payment remains unresolved."
+      "Open https://sec.gov.ng/non-mandated/ and search the shareholder's first and last names as recorded on shareholding accounts. Check spelling variants where the original records differ.",
+      "For each plausible entry, identify the public company/shareholding and Registrar name; do not assume every similarly named investor is the same person.",
+      "Open SEC's e-Dividend Mandate Management System guidance and choose the NIBSS Self Service link to start online bank-account mandate matching.",
+      "Complete required shareholder name, CHN/shareholder number and bank account/BVN verification requested by the official system for the particular holdings.",
+      "If the online route cannot match identity or ownership, download the correct registrar's e-Dividend form and submit through that registrar or the bank as SEC's official FAQ instructs.",
+      "For deceased investors, changed names or family holdings, ask the registrar about estate/succession or supporting-document requirements rather than pretending a personal account belongs to the deceased.",
+      "Save the official e-DMMS submission/validation reference, then follow up with each registrar until the bank mandate is validated and outstanding dividends are remitted.",
+      "Check the actual bank credit and registrar statement. No entry or a pending mandate does not prove the shareholding was cancelled; use SEC/registrar support with identity evidence."
     ],
     "notes": [
-      "SEC launched a revamped e-Dividend Mandate Management System with a self-service route so investors can mandate accounts without always visiting a registrar or bank.",
-      "SEC's 2025 circular states that public companies and registrars should continue to honour eligible unclaimed-dividend requests under the current legal framework.",
-      "Do not pay an unofficial agent simply to search for your name; begin with SEC's official search and the registrar shown for the record."
+      "SEC launched a revamped self-service e-DMMS route in 2024, alongside the existing bank/registrar form route.",
+      "SEC's unmandated search identifies possible holders and their registrars; it does not automatically verify title, estate entitlement or pay funds.",
+      "Never pay a WhatsApp 'dividend recovery agent' to release an alleged amount based only on a copied SEC search screen."
     ],
     "sources": [
       {
@@ -13597,7 +13671,7 @@
       "bvn-retrieval",
       "bvn-validation"
     ],
-    "lastVerified": "2026-10-04"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "jamb-examination-slip-2026",
