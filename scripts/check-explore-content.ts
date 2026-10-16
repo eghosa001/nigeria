@@ -61,7 +61,8 @@ for (const slug of highPriorityChecked) {
 }
 for (const slug of ["imo-state-travel-guide","kaltungo-hills-guide","katsina-heritage-weekend-itinerary","katsina-state-travel-guide"]) {
   const guide = exploreGuides.find(item => item.slug === slug);
-  const note = highPriorityTourEvidence20261016[slug]?.planning.detail ?? "";
+  const evidence = highPriorityTourEvidence20261016[slug];
+  const note = [evidence?.intro, evidence?.planning.detail].filter(Boolean).join(" ");
   if (!guide || !/advises against (all|all but essential) travel/i.test(note))
     errors.push(slug + ": preserve documented current UK government travel warning.");
 }
