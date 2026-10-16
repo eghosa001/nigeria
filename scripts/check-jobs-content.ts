@@ -304,7 +304,7 @@ for (const slug of checkedIssuerCareerSlugs20261016) {
     slug + " must remain a careers directory, not an open vacancy.");
   assert(job.verifiedAt === "2026-10-16" && job.deadline === undefined,
     slug + " must have a factual date and no universal application deadline.");
-  assert(job.summary === evidence.lead && job.applicationSteps.length === 3 &&
+  assert(job.summary === evidence.lead && job.applicationSteps.length === 5 &&
     job.applicationSteps.every(step => step.length >= 85),
     slug + " must serve original issuer-specific application decisions.");
   assert(job.sourceNotes.some(note => note.includes(evidence.guard.slice(0, 35))),
