@@ -342,6 +342,9 @@ jobs:
       - name: Verify 20 CAC, NIPO, NEPC and SCUML business guide repairs
         if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
         run: node --test tests/service-business-compliance-20-20261016.test.mjs
+      - name: Verify 20 NIMC, FRSC, NPC, civil and tax guide repairs
+        if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
+        run: node --test tests/service-civic-identity-tax-20-20261016.test.mjs
       - name: Validate published-content quality changes
         if: steps.scope.outputs.mode == 'quality'
         run: |

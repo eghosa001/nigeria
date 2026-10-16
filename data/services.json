@@ -263,7 +263,7 @@
     "slug": "nin-enrolment",
     "title": "How to enrol for a NIN",
     "shortTitle": "NIN enrolment",
-    "summary": "NIN enrolment is free for eligible Nigerian citizens and legal residents, including children. NIMC records demographic and biometric information, checks for an existing identity record, then issues a unique NIN. Use the official NIMC instructions and confirm the required applicant-category documents before visiting a centre.",
+    "summary": "Get a first National Identification Number through NIMC's free enrolment process. Citizens and legal residents of any age are eligible; NIMC captures demographic information, performs age-appropriate biometric checks and de-duplicates the record before issuing an 11-digit NIN. Registration, a transaction slip and an issued NIN slip are distinct stages.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "FREE",
@@ -272,18 +272,23 @@
     "officialPortal": "https://nimc.gov.ng/NIN",
     "requirements": [
       "Eligibility as a Nigerian citizen or legal resident",
-      "Applicant demographic and contact details collected during enrolment; NIMC does not publish one universal supporting-document list for every applicant category, so follow the exact centre/self-service prompt for the identity record it requests"
+      "Applicant demographic and contact details collected during enrolment; NIMC does not publish one universal supporting-document list for every applicant category, so follow the exact centre/self-service prompt for the identity record it requests",
+      "A valid civil or identity record appropriate to the enrolment category, particularly for a minor, checked against the centre's published requirements.",
+      "Access to an official NIMC enrolment centre or authorised front-end partner; biometric or identity verification must be completed by the applicant, not a paid agent."
     ],
     "steps": [
-      "Read NIMC's official NIN enrolment instructions, choose the assisted or available self-service route, and confirm where your applicant category must complete identity verification or biometric capture.",
-      "At the selected NIMC enrolment centre, supply your full name, date of birth and contact information in the appropriate fields; carefully review the captured demographic record before biometric processing.",
-      "Complete biometric capture, including fingerprints, facial image and signature where applicable.",
-      "Collect the transaction/NIN slip after successful processing."
+      "Open NIMC's official NIN page and Find an Enrolment Centre directory to choose a recognised centre/front-end partner. New NIN enrolment and issuance are free.",
+      "Confirm the correct category for an adult, child or legal resident and ask that centre about acceptable birth/identity documents before travelling; NIMC does not publish one universal list for every case.",
+      "At the authorised enrolment centre, provide the applicant's full legal name, date/place of birth and other requested details. Review the display before submission.",
+      "Complete the photograph, fingerprint and digital-signature capture appropriate to the applicant's age and circumstances; NIMC runs a duplicate identity check before issuing a NIN.",
+      "Keep the Transaction Slip and any acknowledgement. This is not automatically the final NIN slip, and successful data capture does not guarantee immediate issuance.",
+      "Return through the centre's official follow-up/collection instructions for the issued NIN slip. NIMC says NIN collection requires biometric verification and cannot be delegated to a proxy.",
+      "If there is a duplicate or identity mismatch, contact NIMC or the enrolment centre with the transaction reference rather than starting another paid registration or changing details informally."
     ],
     "notes": [
-      "NIMC states that a NIN is unique and is not reassigned to another person.",
-      "NIN collection requires biometric verification and cannot be collected by proxy.",
-      "NIMC describes a transaction slip and a separate NIN slip after the data is checked; enrolment itself is free, but later data changes or lost-slip reissuance may carry separate charges."
+      "NIMC says citizens and legal residents from birth are eligible and ordinary enrolment and NIN issuance are free.",
+      "A NIN is unique for life. Do not publish it together with a name and contact details on social media.",
+      "NIMC distinguishes the transaction slip from the NIN slip after processing and requires the owner's biometric verification for collection."
     ],
     "sources": [
       {
@@ -297,9 +302,21 @@
         "agency": "National Identity Management Commission",
         "url": "https://nimc.gov.ng/fees",
         "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "National Identity Management Commission",
+        "url": "https://nimc.gov.ng/nin/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "National Identity Management Commission",
+        "url": "https://nimc.gov.ng/enrolment-centres?country=nigeria",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-15",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NIN enrolment",
       "How to enrol for a NIN",
@@ -318,7 +335,7 @@
     "slug": "nin-date-of-birth-modification",
     "title": "How to change your date of birth on NIN",
     "shortTitle": "NIN date-of-birth correction",
-    "summary": "NIMC's current Fees page lists ₦28,574 for date-of-birth modification, with self-service and assisted modification routes published by NIMC.",
+    "summary": "Correct a date of birth already attached to an existing NIN through NIMC's official self-service or authorised assisted modification route. The required NPC digitised birth certificate or attestation must support the date. NIMC currently publishes conflicting prices of ₦28,574 and ₦15,000; verify the live authorised invoice, not a third-party quote.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦28,574",
@@ -329,19 +346,24 @@
       "Existing NIN",
       "Digitised NPC birth certificate for applicants born after 1992, or digitised NPC attestation certificate for applicants born before 1992",
       "Access to the NIMC self-service modification account or an official NIMC enrolment/modification centre",
-      "Payment through the official NIMC modification route"
+      "Payment through the official NIMC modification route",
+      "The exact existing date on the NIN record and correct date supported by an NPC digital birth certificate or an eligible NPC attestation.",
+      "A working NIMC self-service account or access to an authorised modification centre; keep payment and transaction references."
     ],
     "steps": [
-      "Open NIMC's official self-service modification portal and verify your NIN/login details.",
-      "Choose Date of Birth modification and complete the payment requested by the official portal.",
-      "Enter and validate the NPC certificate or attestation details, then upload the required supporting document.",
-      "Preview the change, submit the request and keep the modification transaction slip.",
-      "Follow the approval status in the portal; after approval, download or print the updated NIN slip."
+      "Before paying, compare the existing NIN details against the legal civil record. If the NPC birth record is itself wrong, use NPC's correction route rather than uploading conflicting dates.",
+      "Check whether the applicant has the appropriate digitised NPC birth certificate or attestation. NIMC's guidance distinguishes people born before 1992 from those born later.",
+      "Open https://selfservicemodification.nimc.gov.ng/ or NIMC's linked modification route and authenticate the existing NIN account. Use an authorised NIMC centre if self-service is not accessible.",
+      "Choose Date of Birth modification (not ordinary name, phone or address modification). Compare the displayed price against NIMC's fee schedule and any official payment invoice before authorising payment.",
+      "Enter the certificate number and requested civil-record details, upload legible evidence and check the preview to avoid changing a correct field inadvertently.",
+      "Submit the correction request and retain the official transaction/payment reference. A submitted or paid application is not evidence that the underlying identity record has already changed.",
+      "Monitor the NIMC request status and respond to any official document query. After approval, retrieve the updated NIN slip and verify the corrected birth date.",
+      "If NIMC's older ₦15,000 page conflicts with the current ₦28,574 fees page or the generated invoice, use NIMC customer support to confirm the amount. Never pay an intermediary's personal bank account."
     ],
     "notes": [
-      "NIMC's dedicated Fees page has listed ₦28,574 for a date-of-birth change while its adult-modification details have also displayed ₦15,000; the published official pages are not consistent.",
-      "Check the amount calculated in NIMC's current official self-service payment flow before paying. Do not rely on a previously quoted fee or an unofficial agent.",
-      "NIMC requires the appropriate NPC digital birth certificate or attestation record and reviews the requested correction before it takes effect."
+      "NIMC's official fees page states ₦28,574 for date-of-birth modification, while its older adults modification page still states ₦15,000; retain the editorial conflict until NIMC aligns these official pages.",
+      "Date of birth is separately charged, not part of the ₦2,000-per-updatable-field standard category.",
+      "A correct NPC record and completed payment do not automatically approve the NIMC modification."
     ],
     "sources": [
       {
@@ -363,7 +385,7 @@
         "lastChecked": "2026-10-05"
       }
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NIN date-of-birth correction",
       "How to change your date of birth on NIN",
@@ -385,7 +407,7 @@
     "slug": "new-drivers-licence",
     "title": "How to get a new Nigerian driver's licence",
     "shortTitle": "New driver's licence",
-    "summary": "Official FRSC entry steps and currently listed licence fees for fresh applicants.",
+    "summary": "A first Nigerian driver's licence requires accredited driving-school training, a certificate number, the official FRSC application and payment, State Board of Internal Revenue confirmation, VIO driving test and personal FRSC biometric capture. The fee depends on Class A versus other classes and a three- or five-year term.",
     "category": "Driving",
     "agencySlug": "frsc",
     "feeLabel": "From ₦7,000",
@@ -396,17 +418,24 @@
       "Applicant must be at least 18 years old",
       "Completed training at an accredited driving school",
       "Driving-school certificate number used to initiate the fresh application",
-      "Personal/contact details plus the processing centre, validity period and licence class selected in the FRSC application form"
+      "Personal/contact details plus the processing centre, validity period and licence class selected in the FRSC application form",
+      "Proof of completing accredited driving-school training and the certificate number that FRSC asks for at fresh-application entry.",
+      "Ability to attend the VIO test and FRSC Driver's Licence Centre for photograph/fingerprint capture; a third party cannot do the biometric stage."
     ],
     "steps": [
-      "Complete training at an accredited driving school and obtain the driving-school certificate number required to begin a fresh licence application.",
-      "Open the official Nigeria Driver's Licence portal, start a fresh application, enter the driving-school certificate number, choose the licence class, validity period and processing centre, then review the personal details before submission.",
-      "Pay the licence fee generated by the official application route and keep the payment and application evidence for the remaining physical stages.",
-      "Take the application and payment evidence through the State Board of Internal Revenue confirmation stage and attend the VIO driving test required for a fresh applicant.",
-      "Proceed to the FRSC officer at the Driver's Licence Centre for photograph and biometric data capture, then keep the acknowledgement or temporary card for tracking and eventual collection."
+      "Confirm that the candidate is at least 18 and has completed training with an FRSC-accredited driving school. Obtain the school's driving certificate number.",
+      "On the official Nigeria Driver's Licence portal select a fresh application and enter the school certificate number to begin, not Renewal or Reissue.",
+      "Select the correct licence class, three- or five-year validity and preferred processing centre. Check contact and personal details before moving to payment.",
+      "Review FRSC's price table: Class A ₦7,000/₦11,000 and other classes ₦15,000/₦21,000 for three/five years respectively, with possible extra channel/class charges.",
+      "Pay only through the FRSC portal or a participating bank identified by it; preserve the application ID, receipt and appointment instructions.",
+      "Take the application and payment receipt to the State Board of Internal Revenue desk associated with the selected Driver's Licence Centre. Ask the BIR desk to validate the official payment, then attend the Vehicle Inspection Officer's practical driving test at the VIO test location given by the centre.",
+      "Attend the selected FRSC Driver's Licence Centre in person for photograph and biometric capture; keep the acknowledgement or temporary licence documentation issued.",
+      "Use FRSC Track DL Application Status for the real stage of printing/collection. Contact the processing centre if the record stalls rather than paying someone who promises faster approval."
     ],
     "notes": [
-      "Fees vary by class and validity period."
+      "FRSC's official price table separates Class A and other classes as well as three- and five-year validity.",
+      "The original training certificate is used to initiate fresh registration; simply paying online is not completion of driving competence testing.",
+      "Fresh licensing differs from renewal of an expired existing licence or reissue of a valid one."
     ],
     "sources": [
       {
@@ -414,13 +443,19 @@
         "agency": "Federal Road Safety Corps",
         "url": "https://nigeriadriverslicence.frsc.gov.ng/faq",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nigeriadriverslicence.frsc.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "renew-drivers-licence",
       "replace-lost-drivers-licence"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "New driver's licence",
       "How to get a new Nigerian driver's licence",
@@ -431,7 +466,7 @@
     "slug": "renew-drivers-licence",
     "title": "How to renew a Nigerian driver's licence",
     "shortTitle": "Driver's licence renewal",
-    "summary": "Renew an expired Nigerian driver's licence through the FRSC Driver's Licence portal, using your existing licence number, date of birth, class and preferred three- or five-year validity. Official fees start at ₦7,000 for Class A; other classes have different rates.",
+    "summary": "Renew an expired licence through FRSC using the existing driver's-licence number, date of birth and selected class/validity. Licence fees depend on class, additional classes and payment channel. The online payment step is not proof that FRSC has completed any required photograph, biometric or collection stage.",
     "category": "Driving",
     "agencySlug": "frsc",
     "feeLabel": "From ₦7,000",
@@ -442,19 +477,24 @@
       "Existing driver's licence number",
       "Applicant's date of birth used to access/edit the application",
       "Updated personal/contact details where needed",
-      "Chosen processing centre, licence class and 3-year or 5-year validity option"
+      "Chosen processing centre, licence class and 3-year or 5-year validity option",
+      "The expired original driver's-licence number and date of birth for the correct FRSC record.",
+      "Current photograph/biometric attendance and collection evidence if the FRSC application dashboard or centre requires it."
     ],
     "steps": [
-      "On the official FRSC driver's-licence portal, open DL Application and select Renewal of Driver's Licence for an expired licence.",
-      "Enter the existing driver's-licence number. Complete Personal Details, Contact Details, Processing Centre & Licence Type, and Review & Pay, checking the class and three- or five-year option before payment.",
-      "Choose one of the payment methods shown on the official portal and keep the acknowledgement or transaction number; channel fees and multiple licence classes can change the amount payable.",
-      "Follow the testing and biometric-capture instructions shown for your application at the selected FRSC Driver's Licence Centre; attend in person when instructed.",
-      "On the FRSC portal select Track DL Application Status, enter the application ID or licence number and date of birth, and check the displayed stage. When the licence is ready, contact the chosen Driver's Licence Centre for pickup instructions and bring its stated collection evidence."
+      "Verify that the licence is actually expired. FRSC distinguishes Renewal of an expired card from Reissue/Upgrade actions for a still-valid card that needs another class.",
+      "On the genuine FRSC Driver's Licence portal open DL Application → Renewal and find the correct existing licence record using licence number and date of birth.",
+      "Update personal/contact details, selected processing centre, class and validity (three or five years). Do not inadvertently change the holder or select the wrong class.",
+      "Check the payable charge in FRSC's table and official checkout, noting that multiple classes and payment-channel charges can increase the cost.",
+      "Complete payment through the official authorised route and keep the acknowledgement, application ID and transaction receipt.",
+      "Follow any FRSC directions to attend the chosen Driver's Licence Centre for biometric recapture or other identity/testing stage. Another person cannot provide your biometrics.",
+      "Track status using the FRSC Track DL Application Status option with application ID or existing licence number and date of birth.",
+      "When FRSC marks the card ready, contact the selected centre for collection requirements. If payment succeeded but no application exists, report the payment reference to official FRSC support before repeating payment."
     ],
     "notes": [
-      "FRSC says to use Renewal when the existing licence has expired. For a still-valid licence that needs a class change, follow the official Reissue or Upgrade guidance.",
-      "FRSC's FAQ lists ₦7,000/₦11,000 for Class A (3/5 years) and ₦15,000/₦21,000 for other classes; payment-channel charges and extra classes can increase the amount.",
-      "FRSC states applicants cannot send another person to complete their biometric processing."
+      "FRSC lists ₦7,000/₦11,000 Class A and ₦15,000/₦21,000 other-class fees for three/five years on its official FAQ.",
+      "A renewed card still requires actual issuance and, when instructed, in-person biometric processing.",
+      "Renewal is not interchangeable with the route for changing classes on a still-valid licence."
     ],
     "sources": [
       {
@@ -468,7 +508,7 @@
       "new-drivers-licence",
       "replace-lost-drivers-licence"
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Driver's licence renewal",
       "How to renew a Nigerian driver's licence",
@@ -2442,7 +2482,7 @@
     "slug": "npc-child-birth-registration",
     "title": "How NPC birth registration works for a child",
     "shortTitle": "NPC child birth registration",
-    "summary": "NPC birth registration applies to children aged 0–17. An adult parent or guardian creates the self-service account with their own NIN; NPC says a child without a NIN can still be registered if a parent or guardian has a valid NIN.",
+    "summary": "Register a child aged 0–17 through the National Population Commission VitalReg/self-service route. A parent or adult guardian (18+) creates the account with their own NIN; NPC says the child may be registered even without a child NIN if that adult has a valid NIN. Do not create duplicate records under both parents.",
     "category": "Civil records",
     "agencySlug": "npc",
     "feeLabel": "Check current NPC self-service portal",
@@ -2452,19 +2492,24 @@
       "Child aged 0 to 17",
       "Valid parent/guardian NIN for the adult self-service account and identity verification",
       "Child's NIN if one has already been issued; NPC says the child may still be registered without one when the parent/guardian has a valid NIN",
-      "Parent's attestation number or other information requested by NPC for the relevant case"
+      "Parent's attestation number or other information requested by NPC for the relevant case",
+      "Adult parent's or guardian's working email and valid NIN for NPC's account and identity matching.",
+      "Child's date/place of birth and accurate parental/guardian relationship details; supply the child NIN only if already issued or required for the particular route."
     ],
     "steps": [
-      "Visit nationalpopulation.gov.ng, open Services and select Birth Registration. The self-service account is created by a parent or guardian aged at least 18, not by a child.",
-      "Sign in or create an account with the adult's name, email and NIN, following NPC's facial-verification and account-matching instructions.",
-      "Select Birth Registration for the child and supply the child's details and the parent/guardian identity information required by the service. NPC allows registration of a child without a NIN when the parent/guardian has a valid NIN.",
-      "Review the names, date and place of birth, relationships and required supporting information before completing any confirmation or official payment displayed in the current portal.",
-      "Keep the application reference and check the NPC dashboard for the certificate or status. If the child's record is already linked to one parent's NIN, do not create a second registration solely because the other parent cannot see it."
+      "Visit the National Population Commission site, choose Services → Birth Registration and verify that the child is aged under 18; adults use a distinct Birth Attestation service.",
+      "The adult parent/guardian creates the NPC self-service account with an email address and NIN; complete the official identity/facial match before registering the child.",
+      "Confirm whether the child already has a registration in one parent's account or a previous issued certificate. Do not file a second record for the same birth.",
+      "Choose Birth Registration and enter the child's identity, date and place of birth, parent/guardian relationships and any requested child NIN or attestation number.",
+      "NPC's FAQ allows a child without a NIN to be registered through the parent's valid NIN; if the form rejects that case, use NPC's help route before inventing a child's identity number.",
+      "Check spellings, order of names, date and parental details carefully against available records and review any official portal charge before payment.",
+      "Submit and retain the official reference. Watch the NPC dashboard for approval, a document query or a permitted certificate download.",
+      "If the child is already attached to one adult account, follow NPC's official access/help process instead of repeatedly applying under another adult's NIN."
     ],
     "notes": [
-      "NPC states birth registration is for ages 0–17, while birth attestation is for people aged 18 and above.",
-      "NPC's current FAQ expressly allows a child without a NIN to be registered using a parent/guardian's valid NIN, despite the general requirements list also mentioning a child's NIN.",
-      "One adult parent can register a child; both parents do not need to create duplicate records for the same child."
+      "NPC defines Birth Registration as ages 0–17 and Birth Attestation as ages 18 and above.",
+      "NPC's official FAQ says the child need not already have a NIN if a parent or guardian has a valid NIN.",
+      "Approval, payment, certificate generation and download can be separate portal stages."
     ],
     "sources": [
       {
@@ -2480,7 +2525,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NPC child birth registration",
       "How NPC birth registration works for a child",
@@ -3379,42 +3424,53 @@
     "slug": "npc-check-attestation-status",
     "title": "How to check NPC birth-attestation status",
     "shortTitle": "NPC attestation status",
-    "summary": "NPC's attestation service uses the payment reference to check status and download an approved certificate.",
+    "summary": "Track an existing NPC Birth Attestation using the Payment Reference generated for that application—not a newly generated temporary attestation number. Approved certificates can then be downloaded from the official account dashboard; an unsuccessful lookup does not justify paying again or creating duplicate civil records.",
     "category": "Civil records",
     "agencySlug": "npc",
     "feeLabel": "No extra status-check fee stated",
     "status": "verified",
-    "officialPortal": "https://attestation.nationalpopulation.gov.ng/",
+    "officialPortal": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
     "requirements": [
       "A birth-attestation application that has already reached the payment-reference stage",
-      "The Payment Reference generated for that application"
+      "The Payment Reference generated for that application",
+      "The exact NPC Payment Reference from the same Birth Attestation transaction.",
+      "Access to the NPC account or verified identity information associated with the existing attestation record."
     ],
     "steps": [
-      "Open the official NPC birth-attestation portal and choose the status-check route for an application that has already been created.",
-      "Enter the Payment Reference generated for that attestation application; use the exact reference rather than a temporary attestation number or unrelated receipt.",
-      "Submit the status check and read the application state shown by NPC before attempting another payment or creating a duplicate application.",
-      "If the application is approved or completed, choose the Download Certificate action provided by the portal and save the resulting certificate securely.",
-      "If the portal does not find the reference or the request remains unresolved, use NPC's official support route with the Payment Reference so the correct application can be traced."
+      "Identify the original attestation application and locate its NPC Payment Reference in the official receipt/account history.",
+      "Open https://www.nationalpopulation.gov.ng/, choose Services → Birth Attestation, and use the Check Status or existing VitalReg account route offered there. The older standalone attestation domain is currently unreachable, so do not use a saved link to it.",
+      "Enter the Payment Reference precisely; it is different from a provisional attestation number or unrelated card/bank reference.",
+      "Read the NPC result carefully: pending, queried, approved and downloadable records need different follow-up actions.",
+      "If approved, use the authorised Download Certificate control. A completed application may not automatically display the download before the approval state updates.",
+      "If the portal cannot locate the record, check the reference/account details before starting another application or making another payment.",
+      "Use NPC official support with the original Payment Reference and receipt for a stalled request; store the downloaded certificate securely."
     ],
     "notes": [
-      "NPC uses the Payment Reference both to resume an attestation and to check or download an approved certificate.",
-      "A temporary attestation number is not the same thing as a completed certificate."
+      "NPC's application reference and the Payment Reference used for status checks are not necessarily interchangeable.",
+      "The older standalone attestation subdomain is not currently resolving. Begin from NPC Services or the live VitalReg account to avoid a dead official link.",
+      "An application marked pending is not the same as an approved, verifiable attestation certificate."
     ],
     "sources": [
-      {
-        "label": "NPC Birth Attestation Self-Service",
-        "agency": "National Population Commission",
-        "url": "https://attestation.nationalpopulation.gov.ng/",
-        "lastChecked": "2026-09-28"
-      },
       {
         "label": "NPC Vital Registration FAQ",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/faq-vitalreg",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "National Population Commission",
+        "url": "https://www.nationalpopulation.gov.ng/FAQs",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NPC live VitalReg self-service account",
+        "agency": "National Population Commission",
+        "url": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NPC attestation status",
       "How to check NPC birth-attestation status",
@@ -3431,7 +3487,7 @@
     "slug": "nrs-self-tax-filing",
     "title": "Where to file tax through NRS self-service",
     "shortTitle": "NRS self tax filing",
-    "summary": "NRS lists Self Tax Filing as a service in its federal taxpayer self-service portal.",
+    "summary": "File an applicable federal tax return through the Nigeria Revenue Service Taxpayer Self-Service Portal using the taxpayer's authorised NRS SSO/Rev360 account. Self Tax Filing, Assessments, Payments and Tax Clearance are different actions; saving a draft or paying a tax does not prove the correct return was submitted.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "Tax liability depends on the taxpayer",
@@ -3439,17 +3495,24 @@
     "officialPortal": "https://selfservice.nrs.gov.ng/",
     "requirements": [
       "Registered NRS taxpayer account",
-      "Income, transaction and filing-period records/figures requested by NRS self-service for the taxpayer type; the exact fields depend on the return being filed"
+      "Income, transaction and filing-period records/figures requested by NRS self-service for the taxpayer type; the exact fields depend on the return being filed",
+      "Valid taxpayer profile with the correct NRS Tax ID/TIN and approved login or Rev360/TaxPro Max account recovery.",
+      "Return-period income, turnover, deduction and supporting records applicable to that taxpayer and the actual return type."
     ],
     "steps": [
-      "Sign in to the official NRS Taxpayer Self-Service Portal through the taxpayer's NRS account and confirm that you are working in the correct taxpayer profile.",
-      "Open Self Tax Filing and select the return or filing period shown for the taxpayer, then review the filing type before entering figures.",
-      "Enter the tax information requested for that filing period and provide the supporting records required by the portal for the selected return.",
-      "Review the completed return, especially taxpayer identity, period and declared figures, then submit it through the portal rather than treating a saved draft as filed.",
-      "Keep the filing acknowledgement or reference generated by NRS and check Assessments, Taxes Due or Payments if the submitted return creates a liability."
+      "Open https://selfservice.nrs.gov.ng/ and sign in through the official NRS SSO option. New taxpayers use the portal's New Taxpayer route; legacy TaxPro Max users can follow its documented credential migration.",
+      "Confirm the selected taxpayer profile and tax identity, especially where an agent operates more than one client account.",
+      "Select Self Tax Filing and then the actual return type and filing period; don't confuse this action with opening an assessment or paying an existing demand.",
+      "Prepare the tax figures from the underlying books, income, allowable deductions and transactions for that period. Use the portal's type-specific fields rather than guessing one universal tax form.",
+      "Enter the figures and attach documents requested by that return. Review taxpayer, period, figures and any self-assessed liability against source records.",
+      "Submit rather than merely save a draft; retain the actual filing acknowledgement/reference and return status.",
+      "If the portal generates an assessment or outstanding liability, examine that record in Assessments/Taxes Due and follow the separate Payments action if legitimately due.",
+      "If the return is rejected or credentials fail, use the official Rev360 recovery/help route and keep the original filing reference before starting over."
     ],
     "notes": [
-      "The portal also provides assessments, payments, tax clearance and other taxpayer functions."
+      "NRS's live portal distinguishes Self Tax Filing, Assessments, Taxes Due and Payments.",
+      "Tax liability varies by taxpayer, return and period, rather than a universal service fee.",
+      "A paid tax receipt is not necessarily proof that an annual return was filed for the required year."
     ],
     "sources": [
       {
@@ -3457,9 +3520,15 @@
         "agency": "Nigeria Revenue Service",
         "url": "https://selfservice.nrs.gov.ng/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Nigeria Revenue Service",
+        "url": "https://selfservice.nrs.gov.ng/taxes-due",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NRS self tax filing",
       "Where to file tax through NRS self-service",
@@ -3476,7 +3545,7 @@
     "slug": "nrs-tax-payment",
     "title": "Where to make a federal tax payment through NRS",
     "shortTitle": "NRS tax payment",
-    "summary": "NRS includes secure Payments among the services in its taxpayer self-service portal.",
+    "summary": "Pay a federal tax liability using NRS Taxpayer Self-Service only after matching the intended taxpayer, tax type, return/assessment period and reference. The NRS dashboard separates Payments, Taxes Due and Assessments; a debit without portal reconciliation should not be treated as an already cleared assessment.",
     "category": "Tax",
     "agencySlug": "nrs",
     "feeLabel": "Amount depends on the taxpayer's liability/assessment",
@@ -3484,17 +3553,23 @@
     "officialPortal": "https://selfservice.nrs.gov.ng/",
     "requirements": [
       "Registered NRS taxpayer account",
-      "The taxpayer's TIN/Tax ID, assessment or liability reference, tax type/period and amount shown in the NRS account before payment"
+      "The taxpayer's TIN/Tax ID, assessment or liability reference, tax type/period and amount shown in the NRS account before payment",
+      "The exact taxpayer profile and Tax ID/TIN, tax type, payment period, assessment or invoice reference and payable amount.",
+      "A secure payment option supported in NRS self-service and a way to retain the transaction/receipt reference."
     ],
     "steps": [
-      "Sign in to the official NRS Taxpayer Self-Service Portal and confirm that the taxpayer profile and TIN or account shown belong to the person or organisation making the payment.",
-      "Open Payments or the relevant outstanding liability or assessment and identify the exact tax type and period to which the payment should be applied.",
-      "Review the assessment or liability amount before starting the transaction so a payment is not accidentally posted against the wrong tax period or taxpayer account.",
-      "Use the official payment route provided by NRS to complete the transaction and retain the payment reference, receipt or acknowledgement produced by the portal.",
-      "Return to the taxpayer account after payment to confirm that the transaction is reflected against the intended liability; use NRS support if the status does not update correctly."
+      "Log in through https://selfservice.nrs.gov.ng/ and verify that the profile belongs to the correct individual or entity.",
+      "Open Assessments or Taxes Due and identify the specific tax and period to be settled. Review any previous payment/credit already applied.",
+      "Compare the actual assessed liability, due date and taxpayer identity with the intended transaction; if the figures are disputed, use the official assessment query route before paying.",
+      "Choose Payments through the authenticated NRS dashboard and use the payment method offered by that transaction rather than an account number shared through social media.",
+      "Authorise the official amount and save the payment reference and receipt generated for the specific taxpayer and period.",
+      "Return to Payments/Taxes Due to confirm the transaction has posted against the correct assessment instead of assuming a bank debit means reconciliation succeeded.",
+      "If the status remains unpaid or a payment is missing, submit the proof and exact reference to NRS support. Avoid repeat payment until the original debit is investigated."
     ],
     "notes": [
-      "Confirm that the liability belongs to the correct taxpayer/account before paying."
+      "NRS's taxpayer portal has distinct areas for assessments, payments and tax wallet balances.",
+      "Tax due is taxpayer- and period-dependent. Do not publish a fixed 'tax-payment service fee' for every applicant.",
+      "A successful payment does not automatically generate a Tax Clearance Certificate or substitute for a filed tax return."
     ],
     "sources": [
       {
@@ -3502,9 +3577,15 @@
         "agency": "Nigeria Revenue Service",
         "url": "https://selfservice.nrs.gov.ng/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Nigeria Revenue Service",
+        "url": "https://selfservice.nrs.gov.ng/taxes-due",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NRS tax payment",
       "Where to make a federal tax payment through NRS",
@@ -3791,7 +3872,7 @@
     "slug": "fct-file-individual-tax-return",
     "title": "How to file an individual tax return in the FCT",
     "shortTitle": "FCT individual tax return",
-    "summary": "FCT-IRS's published return-filing sequence uses a taxpayer self-service login: sign in with TIN, open Tax Returns → File Returns → File a New Return, choose assessment date and year, generate a Returns Reference Number and complete Parts A–D before submitting.",
+    "summary": "File an individual FCT return using the FCT-IRS taxpayer portal and the agency's documented Tax Returns → File Returns → File a New Return route. The historical tutorial refers to a former self-service URL while the current FCT-IRS home page links the new tax portal; start from the government website and save the generated Returns Reference Number.",
     "category": "State services",
     "agencySlug": "fctirs",
     "feeLabel": "Filing service is provided through FCT-IRS",
@@ -3800,19 +3881,24 @@
     "requirements": [
       "FCT-IRS self-service account with TIN and password",
       "Assessment date and assessment year for the return",
-      "Accurate information needed to complete Parts A, B, C and D of the electronic assessment/return form"
+      "Accurate information needed to complete Parts A, B, C and D of the electronic assessment/return form",
+      "The correct FCT-IRS taxpayer TIN and active portal password, or the official registration/recovery route.",
+      "Assessment date and year, and accurate data for assessment parts A, B, C and D."
     ],
     "steps": [
-      "Start from the official FCT-IRS website and follow its self-service login link; the agency's filing tutorial refers to a specific self-service address, while the site's current taxpayer portal may redirect to an updated sign-in page.",
-      "Use your Tax Identification Number (TIN) and password to sign in. If no self-service account exists, use the official registration option before trying to file a return.",
-      "Open the Menu, select Tax Returns and then File Returns. Choose File a New Return for the assessment period to be reported.",
-      "Enter the assessment date and assessment year and select Generate Returns Reference Number as shown in FCT-IRS's filing instructions.",
-      "Complete the required Assessment Page sections A, B, C and D with accurate information, review the figures and submit for approval. Retain the generated return reference and monitor the filing status."
+      "Start at https://fctirs.gov.ng/ and follow its current How to File Tax Return or taxpayer-portal link; verify the destination before entering tax credentials.",
+      "Sign in using the taxpayer's TIN and password. If no account exists, use official registration rather than another taxpayer's credentials.",
+      "Select the Menu → Tax Returns → File Returns and click File a New Return for the intended filing period.",
+      "Choose assessment date and assessment year and generate the Returns Reference Number, as specified in FCT-IRS's tutorial.",
+      "Complete assessment sections A, B, C and D using the taxpayer's actual income and supporting figures; check required attachments for the exact case.",
+      "Preview the return, correct errors and submit for approval. Merely generating a reference or leaving a draft does not complete filing.",
+      "Retain the Returns Reference Number and official submission acknowledgement and use the dashboard to check whether FCT-IRS accepted or queried the return.",
+      "If legacy tutorial and new portal sign-in destinations differ, start again from fctirs.gov.ng, not a copied login link; seek FCT-IRS assistance rather than exposing credentials to an intermediary."
     ],
     "notes": [
-      "FCT-IRS states that electronic filing is the approved method for individual annual returns.",
-      "Use the live portal for the current filing window and any current deadline notice.",
-      "FCT-IRS's official tutorial names a legacy-looking self-service URL while its current portal is also accessible at taxporta.fctirs.gov.ng/login; use links reached from the FCT-IRS website and never enter tax credentials on unofficial lookalike pages."
+      "FCT-IRS's official tutorial shows the sequence and its current homepage points to a newer portal address.",
+      "A reference number generated before submitting sections A–D is not proof the return was accepted.",
+      "Filing an annual return and applying for an FCT Tax Clearance Certificate are separate administrative services."
     ],
     "sources": [
       {
@@ -3828,7 +3914,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "FCT individual tax return",
       "How to file an individual tax return in the FCT",
@@ -4081,7 +4167,7 @@
     "slug": "lagos-payer-id",
     "title": "How to create a Lagos State Payer ID",
     "shortTitle": "Lagos Payer ID",
-    "summary": "The Lagos State Revenue Portal provides an online Create Payer ID process using identity/contact matching.",
+    "summary": "Create or recover a Lagos State Revenue Portal Payer ID using the official Create Payer ID identity-matching process. The live form accepts NIN, BVN or phone search criteria and legal names; finding an existing Payer ID is not the same as registering a second profile or paying a tax bill.",
     "category": "State services",
     "agencySlug": "lagos-revenue",
     "feeLabel": "Create through the official Lagos Revenue Portal",
@@ -4089,17 +4175,24 @@
     "officialPortal": "https://revenue.lagosstate.gov.ng/Login",
     "requirements": [
       "Name details",
-      "One of the identity/contact options accepted by the portal, such as NIN, BVN or phone number, as applicable"
+      "One of the identity/contact options accepted by the portal, such as NIN, BVN or phone number, as applicable",
+      "A real NIN, BVN or phone contact accepted by the portal, plus the matching legal given/surname details.",
+      "A current email and phone number for any later sign-up or password recovery; do not expose BVN/NIN to unofficial agents."
     ],
     "steps": [
-      "Open the official Lagos State Revenue Portal login page and choose Create Payer ID instead of attempting to sign in without an existing payer record.",
-      "Select one of the identity or search criteria offered by the portal—NIN, BVN or phone—and enter the person's first, middle and last names as applicable.",
-      "Enter the matching NIN, BVN or phone number for the selected criterion, then use the portal's confirmation or create action to match the identity details.",
-      "Review any identity details returned by the portal and stop if they belong to somebody else; use the Lagos Revenue helpdesk where the official record does not match.",
-      "Complete the payer creation flow, keep the generated Payer ID securely and use it to sign up or sign in for Lagos State revenue services."
+      "Open https://revenue.lagosstate.gov.ng/Login and choose Create Payer ID rather than the ordinary existing-user Sign In form.",
+      "Choose the exact criterion—NIN, BVN or Phone—supported for the person or entity and enter legal first/middle/last names.",
+      "Enter the same person's chosen identity/contact detail and use the Confirm BVN/NIN Details or Create Payer control the live form presents.",
+      "Review the identity that the system returns before creating or accepting a payer number. A mismatch should be referred to official Revenue Portal helpdesk, not bypassed using another person's BVN.",
+      "If a valid Payer ID already exists, use its account/recovery route rather than filing a duplicate profile.",
+      "Keep the verified Payer ID and, when required, complete the separate Sign Up with email/phone and password to access services.",
+      "For tax registration or payment, confirm which Lagos tax platform actually administers the tax: the Revenue Portal and LIRS eTax can have different workflows.",
+      "If the form cannot match NIN/BVN or phone, use the official contact/helpdesk link while keeping credentials and OTPs private."
     ],
     "notes": [
-      "Do not enter identity details on a copied or unofficial payment page; use the Lagos State Revenue Portal domain linked here."
+      "Lagos State Revenue Portal's live Create Payer ID form accepts NIN, BVN and Phone as separate search criteria.",
+      "Payer ID generation is not payment, return filing or issuance of a Tax Clearance Certificate.",
+      "An existing identity match should be recovered, not duplicated to solve a forgotten password."
     ],
     "sources": [
       {
@@ -4107,9 +4200,15 @@
         "agency": "Lagos State Government",
         "url": "https://revenue.lagosstate.gov.ng/Login",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Lagos State Revenue Service",
+        "url": "https://revenue.lagosstate.gov.ng/Login/NewUserRegistration",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Lagos Payer ID",
       "How to create a Lagos State Payer ID",
@@ -4316,7 +4415,7 @@
     "slug": "nin-phone-modification",
     "title": "How to change your phone number on NIN",
     "shortTitle": "NIN phone-number modification",
-    "summary": "Change the phone number on a NIN through NIMC's official modification route. Current NIMC fees list ₦2,000 per ordinary updatable field; a police report is required for the lost/damaged-number case.",
+    "summary": "Change a NIN-linked phone number through NIMC's official modification workflow. The old registered SIM may be needed to access a device-bound account; NIMC's guidance requires a police report in a lost/damaged-number case. Ordinary updatable-field fees are currently listed at ₦2,000, subject to the real portal invoice.",
     "category": "Identity",
     "agencySlug": "nimc",
     "feeLabel": "₦2,000 per updatable field",
@@ -4325,18 +4424,24 @@
     "requirements": [
       "Police report for the lost/damaged-phone-number modification case",
       "Existing NIN and access to the NIMC self-service modification account",
-      "The new Nigerian phone number entered in +234 format without the leading zero"
+      "The new Nigerian phone number entered in +234 format without the leading zero",
+      "Evidence explaining loss or damage of the previous number, including the police report specified for that case.",
+      "A replacement line the applicant controls, entered in +234 international format without the leading domestic zero."
     ],
     "steps": [
-      "Open NIMC's official self-service modification portal and sign in with the NIN-linked account; where the account is device-bound, use the same browser and device originally used to register it.",
-      "Choose Phone Number modification and prepare the police report required by NIMC for the lost or damaged phone-number modification case.",
-      "Upload the police report and enter the replacement Nigerian phone number in NIMC's +234 format, omitting the leading zero from the local mobile number.",
-      "Review the new number digit by digit, complete the official modification payment generated by NIMC and submit the request only after the preview is correct.",
-      "Save the modification transaction slip and monitor the dashboard until the request is approved, then verify that the updated NIN record reflects the new phone number."
+      "Check whether the old phone number is merely inactive or actually lost/stolen. If it is recoverable, confirm legitimate SIM replacement with the network before changing sensitive identity details.",
+      "Open the NIMC official self-service modifications entry point with the applicant's NIN. A previously registered browser/device may be needed; follow NIMC's authorised unlink procedure if access fails.",
+      "Select the Phone Number modification, not the Date of Birth or NIN re-enrolment service.",
+      "For a lost or damaged number, prepare the police report called for by NIMC and upload the documentary evidence the current form requests.",
+      "Enter the new number using +234 without the leading zero; inspect each digit and ensure it belongs to the NIN holder.",
+      "Compare the on-screen payment against the official NIMC fees table, complete the authorised charge and retain the transaction reference.",
+      "Submit and monitor the request until it is approved. Confirm that the updated record reflects the new number before relying on it for other agency services.",
+      "If the request remains blocked by an old device or identity mismatch, contact NIMC modification support; do not give an agent your NIN account password or OTP."
     ],
     "notes": [
-      "NIMC's guidance shows Nigerian numbers in +234 format without the leading zero.",
-      "NIMC says a self-service modification account can be tied to the browser and device used to register it, so changing browser/device can prevent access until the account is unlinked through the official process."
+      "NIMC currently lists ₦2,000 for an ordinary updatable field, excluding the separate date-of-birth fee.",
+      "The official phone-change guidance asks for a police report in the lost/damaged-number case; document requirements for other circumstances may differ.",
+      "NIMC's self-service account can be bound to the device/browser used for registration. Repeatedly opening new accounts may not resolve this."
     ],
     "sources": [
       {
@@ -4358,7 +4463,7 @@
         "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-10-04",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NIN phone-number modification",
       "How to change your phone number on NIN",
@@ -4739,26 +4844,33 @@
     "slug": "npc-modify-birth-record",
     "title": "How to modify an NPC birth or attestation record",
     "shortTitle": "NPC record modification",
-    "summary": "To change an existing NPC birth or attestation record, sign in to your NPC self-service dashboard, select the record's plus (+) control and choose the third action labelled Modify Record. Review the changes and pay only the fee shown by the official portal.",
+    "summary": "Correct an existing NPC digitised birth registration or attestation from the live VitalReg self-service dashboard. NPC's FAQ says to choose the record's plus (+) menu and the third Modify Record action. The former standalone modification subdomain is not currently resolving; do not rely on its historical US$20 quote or pay an intermediary.",
     "category": "Civil records",
     "agencySlug": "npc",
-    "feeLabel": "Current modification charge is shown in the NPC self-service flow",
+    "feeLabel": "Check the current NPC VitalReg Modify Record checkout",
     "status": "verified",
-    "officialPortal": "https://www.nationalpopulation.gov.ng/FAQs",
+    "officialPortal": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
     "requirements": [
       "NPC self-service account",
       "Existing NPC birth/attestation reference plus the current recorded name, date of birth and other identifying details needed to locate the record being corrected",
-      "Documentary evidence supporting the exact birth/attestation field being changed; the evidence depends on whether the correction concerns name, date, parent details or another recorded field"
+      "Documentary evidence supporting the exact birth/attestation field being changed; the evidence depends on whether the correction concerns name, date, parent details or another recorded field",
+      "The existing digital NPC birth registration/attestation certificate number, not just a paper document with no linked record.",
+      "An active email and phone number, record-specific legal evidence for the corrected field and ability to receive the payment reference."
     ],
     "steps": [
-      "Open nationalpopulation.gov.ng, select the NPC self-service account from the Services section and sign in; on the dashboard locate the birth or attestation record that needs correction.",
-      "Use the plus (+) button for the correct record and choose the third action labelled Modify Record; avoid the neighbouring download or certificate-reprint actions.",
-      "Enter the requested correction and upload or provide only the supporting identity or civil-registration evidence asked for in the NPC modification flow.",
-      "Review the exact old and new details and the official fee displayed, then submit and keep the acknowledgement. Check the portal for approval or further requests before downloading the revised record."
+      "Open https://www.nationalpopulation.gov.ng/ and choose Services → your existing birth registration or attestation self-service account. Sign in with the existing VitalReg account and locate the exact original record.",
+      "Sign in and open the plus (+) menu for the correct existing civil record; NPC's FAQ identifies its third action as Modify Record.",
+      "Within the live VitalReg self-service dashboard identify the record and its certificate number. Use the Modify Record action for the record type; NPC's older standalone modification link is currently not resolving, so do not send payment through it.",
+      "Choose the exact name, date or parental field to correct, and match the new value to supporting civil evidence; do not request an unrelated new birth registration.",
+      "Review the old/new field preview and the fee generated in your current VitalReg account before paying. An older standalone NPC modification page listed US$20, but that page is currently unreachable and the old figure is not confirmed as the live price.",
+      "Submit the official request, retain the payment/reference details delivered to the email and monitor any query or approval state.",
+      "After NPC approves the modified record, follow its reprint procedure to obtain the changed certificate; approval may not automatically replace an earlier downloaded copy.",
+      "If the old record is not digitised or cannot be matched, contact NPC about the correct legacy-record digitisation/assisted route instead of paying repeatedly."
     ],
     "notes": [
-      "Check all information carefully before submitting a modification request.",
-      "NPC's own FAQ identifies Modify Record as the third action under the dashboard's plus (+) menu."
+      "NPC's FAQ uses the dashboard's third (+) action, Modify Record, for existing applications.",
+      "The historical standalone modification page listed US$20 but is not currently accessible. The current fee must be checked inside the live VitalReg dashboard.",
+      "An approved modification may require a separate certificate reprint; do not assume the previous PDF becomes corrected automatically."
     ],
     "sources": [
       {
@@ -4766,9 +4878,15 @@
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/FAQs",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "NPC live VitalReg self-service login for existing records",
+        "agency": "National Population Commission",
+        "url": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NPC record modification",
       "How to modify an NPC birth or attestation record",
@@ -4778,7 +4896,8 @@
       "npc-birth-attestation",
       "npc-birth-certificate-reprint",
       "npc-child-birth-registration"
-    ]
+    ],
+    "feeNote": "An older NPC modification subdomain displayed a US$20 non-refundable convenience fee, but its website is currently unreachable. The amount has not been confirmed on the current VitalReg dashboard; verify its live invoice before paying."
   },
   {
     "slug": "bvn-enrolment",
@@ -7546,7 +7665,7 @@
     "slug": "vehicle-registration-nvis",
     "title": "How to register a vehicle through Nigeria's NVIS system",
     "shortTitle": "Vehicle registration",
-    "summary": "The FRSC NVIS vehicle-registration data requirements and the official route for creating a Nigerian vehicle registration record.",
+    "summary": "Register a vehicle through the authorised FRSC National Vehicle Identification System (NVIS) workflow, including vehicle technical data, VIN/chassis number, engine number, owner identification, insurance policy and plate-allocation state. Online form entry is only one stage; authorised licensing-centre checks and document/payment completion may be required.",
     "category": "Driving",
     "agencySlug": "frsc",
     "feeLabel": "Varies by vehicle and registration services",
@@ -7559,20 +7678,25 @@
       "Chassis/VIN and engine number",
       "Owner identity, phone and address information",
       "Insurance policy details where requested",
-      "Driver's licence/identity information and state of plate allocation"
+      "Driver's licence/identity information and state of plate allocation",
+      "Vehicle's actual chassis/VIN and engine numbers checked against the body/engine and authentic ownership/import record.",
+      "Owner identity, address, insurance policy number and state/plate-allocation details required by the NVIS form.",
+      "An FRSC-approved motor licensing centre if the applicant needs assisted identity, ownership, payment or plate issuance."
     ],
     "steps": [
-      "Open the official FRSC NVIS vehicle-registration page or use an authorised registration centre.",
-      "Enter the vehicle category and technical details exactly as they appear on the supporting documents.",
-      "Provide the chassis/VIN, engine number, insurance policy information, owner's phone/address and driver's-licence or identity information shown on the NVIS form.",
-      "Select the state/plate allocation information and any permitted plate option.",
-      "Review the submitted identifiers carefully before payment or final processing because an incorrect VIN/engine number can create later verification problems.",
-      "Complete the authorised payment/physical processing and keep the registration, plate and proof-of-ownership records issued for the vehicle."
+      "Open the official FRSC NVIS vehicle-registration page and check the approved licensing-centre directory for the relevant state before choosing a processing route.",
+      "Identify whether this is a fresh registration, transfer/revalidation or continuing an existing application; do not create two competing vehicle records for one chassis.",
+      "Enter vehicle category, make/model, year, colour, fuel type and capacity using the vehicle and its supporting manufacturer/registration information.",
+      "Copy the chassis/VIN and engine numbers directly from the vehicle and reliable title/import papers, not solely a seller's handwritten note.",
+      "Complete the owner identity/contact fields, insurance policy number, driver's licence fields where requested and the state of plate allocation.",
+      "Review the preview and verify that vehicle and owner details match before any official payment or final submission; an incorrect VIN can cause later proof-of-ownership problems.",
+      "Complete the state's authorised payment, identity/ownership and plate processing steps through the NVIS-approved channel; preserve the registration and receipts.",
+      "After allocation, use https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo to confirm the issued plate. If the registration is incomplete, open https://nvis.frsc.gov.ng/VehicleManagement/EditApplicationForm and enter the Reference Item/Chassis No to find the existing submission rather than making another one."
     ],
     "notes": [
-      "Use the chassis/VIN and engine number from the vehicle itself and its import/ownership documents rather than relying on a handwritten copy.",
-      "Vehicle registration is separate from driver's-licence issuance.",
-      "After registration, the number plate and proof-of-ownership record can be checked through FRSC's official verification services."
+      "NVIS's actual Register Vehicle form separately requests technical, owner and plate-allocation details.",
+      "FRSC publishes a state-by-state list of approved licensing centres; any physical-processing requirement should be confirmed with the relevant authorised centre.",
+      "Plate lookup is separate from ownership proof, insurance validity or customs verification."
     ],
     "sources": [
       {
@@ -7580,6 +7704,18 @@
         "agency": "Federal Road Safety Corps",
         "url": "https://nvis.frsc.gov.ng/VehicleManagement/RegisterVehicle",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/Home/approvecenter",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/VehicleManagement/EditApplicationForm",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7587,7 +7723,7 @@
       "vehicle-proof-of-ownership-verification",
       "vehicle-insurance-validation-ussd"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "register car Nigeria",
       "vehicle registration FRSC",
@@ -7599,7 +7735,7 @@
     "slug": "verify-vehicle-number-plate",
     "title": "How to verify a Nigerian vehicle number plate",
     "shortTitle": "Verify number plate",
-    "summary": "Check a vehicle's registration number using the FRSC NVIS Verify Number Plate page. Enter the exact number plate, submit it and compare the returned information with the vehicle documentation; a matching result does not independently prove ownership or insurance.",
+    "summary": "Use FRSC NVIS Verify Number Plate to check the registration record corresponding to a plate number. Enter the exact characters and compare returned vehicle information with the car and official documentation; a successful result is not independent proof of beneficial ownership, valid insurance or import-duty clearance.",
     "category": "Driving",
     "agencySlug": "frsc",
     "feeLabel": "No verification fee stated",
@@ -7609,18 +7745,23 @@
     "officialPortal": "https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo",
     "requirements": [
       "The Nigerian vehicle number plate to be checked",
-      "The vehicle make/model or ownership document you will compare with the NVIS result"
+      "The vehicle make/model or ownership document you will compare with the NVIS result",
+      "The unaltered plate characters from the actual vehicle, not just an image in a sales advertisement.",
+      "The chassis/VIN and vehicle description from the ownership documents for a meaningful comparison when the official lookup returns information."
     ],
     "steps": [
-      "Open the official FRSC National Vehicle Identification System (NVIS) Verify Number Plate form at nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo.",
-      "Type the plate number exactly as it appears on the vehicle and use the page's Submit control to request the record lookup.",
-      "Check the verification response and compare the returned vehicle details with the physical vehicle and its registration documents, rather than relying only on a printed certificate.",
-      "If no match is returned or details disagree, ask FRSC or the responsible vehicle licensing authority to resolve it before buying or transferring the vehicle. Verify ownership and insurance separately."
+      "Type or open https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo and confirm the page is on the official FRSC nvis.frsc.gov.ng domain.",
+      "Read the plate from the vehicle itself, preserving letters, numbers and local format; don't rely solely on a seller's screenshot.",
+      "Enter it in the Number Plate field and press Submit once. Check whether the portal returns a matching record or an error.",
+      "Compare make/model, type and other returned registration details with the vehicle and supporting papers. A lookalike plate number does not resolve a chassis mismatch.",
+      "Use the separate NVIS Proof of Ownership route if title confirmation is required; do not interpret the plate match as a guarantee that the seller may transfer the car.",
+      "For discrepancies or a missing record, get clarification from FRSC or the authorised motor licensing office before paying for the vehicle.",
+      "Also check insurance coverage and import/customs status through the separate competent sources where relevant; FRSC plate lookup does not perform those checks."
     ],
     "notes": [
-      "Plate verification is useful when buying a used vehicle or checking a registration record.",
-      "A valid-looking plate does not replace separate checks of ownership, insurance and customs status where those checks are relevant.",
-      "The official NVIS form asks for a Number Plate and provides a Submit action; its validation is one check, not a title or insurance guarantee."
+      "The official public plate-check form asks for Number Plate and has a Submit action.",
+      "A valid registration record does not prove the person offering a car for sale is its lawful owner.",
+      "Checking a plate and obtaining a vehicle proof-of-ownership document are different FRSC services."
     ],
     "sources": [
       {
@@ -7628,6 +7769,12 @@
         "agency": "Federal Road Safety Corps",
         "url": "https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nvis.frsc.gov.ng/ApplicationProcess/ProofOfOwnershipPrint",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -7635,7 +7782,7 @@
       "vehicle-proof-of-ownership-verification",
       "vehicle-insurance-validation-ussd"
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "verify number plate Nigeria",
       "FRSC plate verification",
@@ -8728,7 +8875,7 @@
     "slug": "federal-marriage-application",
     "title": "How to apply for a federal statutory marriage in Nigeria",
     "shortTitle": "Federal marriage application",
-    "summary": "How to use the Federal Ministry of Interior marriage portal for an ordinary or special statutory marriage and proceed to the selected federal registry.",
+    "summary": "Apply for an ordinary or special statutory marriage on the Federal Ministry of Interior Marriage Portal, choose the correct registry and complete documentation, payment, notice and appointment stages. Current listed portal charges are ₦75,000 for ordinary marriage and ₦100,000 for special marriage; confirmation of a date must come from the actual registry application.",
     "category": "Civil records",
     "agencySlug": "interior",
     "feeLabel": "₦75,000 ordinary / ₦100,000 special",
@@ -8740,20 +8887,25 @@
       "Applicant accounts/details for both parties as requested by the portal",
       "Identity and personal-status documents requested for the marriage type",
       "Choice of federal marriage registry/venue",
-      "Official portal payment and appointment details"
+      "Official portal payment and appointment details",
+      "Both parties' full names, eligibility/civil-status information and valid identity or other documents requested for the marriage category.",
+      "Ability for the required parties/witnesses to attend the chosen federal marriage registry on its assigned date with original documents."
     ],
     "steps": [
-      "Open the Ministry of Interior marriage portal and create/sign in to the required account.",
-      "Choose the applicable statutory marriage service, such as Ordinary Marriage or Special Marriage.",
-      "Complete the parties' personal information and upload the documents requested by the portal.",
-      "Choose the registry/venue and available appointment details presented by the system.",
-      "Review the application and pay the official portal fee.",
-      "Attend the selected federal marriage registry on the portal-assigned date with the original identity and civil-status documents listed on your appointment/application record."
+      "Confirm that a federal statutory marriage is the intended route; a customary or religious celebration is not automatically an entry in the federal marriage register.",
+      "Open https://candb.interior.gov.ng/marriage/ and create a Marriage Application Management System account using contact information controlled by the applicant.",
+      "Choose Ordinary Marriage or Special Marriage, confirm the eligibility and statutory notice requirements applicable to that service.",
+      "Enter both parties' identity, age, marital-status, address and contact details; upload any required evidence such as consent or proof of prior marital-status change when the form requests it.",
+      "Select the appropriate federal registry/venue and examine the offered scheduling/notice instructions before finalising the date.",
+      "Verify the displayed fee—₦75,000 ordinary or ₦100,000 special on the current Ministry portal—then make payment only via its authorised checkout.",
+      "Keep official registration/payment acknowledgement and any notice or appointment instructions; payment alone does not solemnise a marriage.",
+      "Attend the assigned marriage registry with original documents and any witnesses required by the specific application. Confirm the official certificate record after the ceremony.",
+      "If an appointment or payment is missing, contact the Ministry through its portal support with the application reference before paying a third party to 'book' the venue."
     ],
     "notes": [
-      "The federal statutory-marriage process is different from customary or religious ceremonies that are not being registered through this federal route.",
-      "Use the fee shown on the official Ministry of Interior portal because charges can be revised.",
-      "Do not pay a private account to reserve a federal registry date."
+      "The Ministry's current homepage separates ordinary and special marriage with different listed fees.",
+      "Document Verification and Certified True Copy are separate services; neither is an application to perform a new marriage.",
+      "A federal statutory marriage appointment involves an actual registry stage, even when the paperwork begins online."
     ],
     "sources": [
       {
@@ -8773,7 +8925,7 @@
       "marriage-document-verification-and-ctc",
       "npc-birth-attestation"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "marriage registry Nigeria",
       "federal marriage Lagos Abuja",
@@ -8785,7 +8937,7 @@
     "slug": "marriage-document-verification-and-ctc",
     "title": "How to verify a federal marriage document or request a Certified True Copy",
     "shortTitle": "Verify marriage document",
-    "summary": "The Ministry of Interior's online document-verification and Certified True Copy services for federal statutory marriage records.",
+    "summary": "Verify an existing federal statutory marriage record or obtain a Certified True Copy (CTC) through the Interior Ministry's separate Marriage Portal options. Both currently display ₦50,000, but verification and certified issuance are different deliverables; selecting the wrong service may not produce the document an institution requires.",
     "category": "Civil records",
     "agencySlug": "interior",
     "feeLabel": "₦50,000",
@@ -8796,19 +8948,24 @@
     "requirements": [
       "Marriage certificate or record details such as the parties' names, marriage date, registry and certificate/reference number available on the record",
       "Applicant contact/account details",
-      "Information that allows the Ministry to identify the federal marriage record"
+      "Information that allows the Ministry to identify the federal marriage record",
+      "The existing federal statutory marriage registry and correct certificate/record number, dates and both parties' legal names.",
+      "The receiving institution's specification: record verification or an authenticated Certified True Copy."
     ],
     "steps": [
-      "Open the Ministry of Interior marriage portal.",
-      "Choose Document Verification if you need to check a record, or Certified True Copy if you need an authenticated copy.",
-      "Enter the marriage/certificate details requested so the record can be located.",
-      "Review the service and pay the official portal amount.",
-      "Track the request and follow any instruction to provide additional record details or collect/download the result."
+      "Ask the receiving institution whether it needs the Ministry to verify an existing marriage record or a formally certified copy of the registry document.",
+      "Open the Ministry of Interior Marriage Portal and sign in with an authorised applicant account.",
+      "Select Document Verification for an existing record check, or Certify True Copy if a certified copy is required. Do not choose a new marriage application.",
+      "Enter the registry, certificate/reference number, couple's names and marriage date precisely as issued.",
+      "Check the service description and fee: the public portal lists ₦50,000 for each of the two distinct transactions. Review live checkout before committing.",
+      "Submit the official request and save the payment/application reference; use the dashboard to check whether additional original records or verification are requested.",
+      "Use the Ministry's declared delivery/download or collection method for the selected service and compare the returned particulars before presenting the document.",
+      "If the marriage was recorded only in a customary or church register outside the federal route, ask the original issuing registry how to authenticate it rather than paying for a search with no federal record."
     ],
     "notes": [
-      "Verification and a Certified True Copy are different services: verification checks the record, while the CTC is an authenticated copy of the record.",
-      "A church/customary marriage that was never registered in the federal statutory-marriage system may not be found there.",
-      "Check names and marriage date carefully before submitting because a data mismatch can prevent record matching."
+      "Document Verification is a registry check; CTC is an authenticated copy of the existing document.",
+      "A church/customary ceremony without a federal statutory record may not be searchable in the Interior Ministry database.",
+      "The homepage lists ₦50,000 for each service; payment must go through the official portal only."
     ],
     "sources": [
       {
@@ -8821,7 +8978,7 @@
     "related": [
       "federal-marriage-application"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "verify marriage certificate Nigeria",
       "certified true copy marriage certificate",
@@ -8833,7 +8990,7 @@
     "slug": "npc-death-registration",
     "title": "How to register a death with the National Population Commission",
     "shortTitle": "NPC death registration",
-    "summary": "The official NPC death-notification/registration route, including the informant's NIN requirement and confirmation process.",
+    "summary": "Notify or register a death with Nigeria's National Population Commission through its official free Death Notification portal. An informant must provide a NIN and accurate details about the deceased and maintain access to the email used for NPC's confirmation. This is a civil record, not a hospital certificate or a promise of instant document issuance.",
     "category": "Civil records",
     "agencySlug": "npc",
     "feeLabel": "Free",
@@ -8845,19 +9002,24 @@
       "NIN of the person acting as informant",
       "Details of the deceased and death requested by the NPC portal",
       "A working email address for confirmation/communication",
-      "Supporting information or documents requested for the death record"
+      "Supporting information or documents requested for the death record",
+      "The informant's own valid NIN and working email address for the NPC confirmation.",
+      "Accurate details of the deceased, date/place of death and supporting records requested by the NPC death-notification form."
     ],
     "steps": [
-      "Open the official NPC death-notification/registration portal.",
-      "Enter the informant's NIN and complete the identity information requested.",
-      "Provide the deceased person's and death details accurately.",
-      "Submit the record and any supporting information requested by NPC.",
-      "Watch the supplied email/contact channel for successful-registration confirmation or any request for correction."
+      "Open the NPC Death Notification site and confirm that you are using the genuine nationalpopulation.gov.ng subdomain.",
+      "Read the portal conditions: NPC states that death registration is free, informants must provide a NIN, and successful registration triggers an email.",
+      "Use the actual informant's NIN and reachable email; don't enter another person's number merely to bypass identity checks.",
+      "Supply the deceased's name, death date/location and other facts exactly as recorded in medical, burial or identity documents available for the case.",
+      "Upload any record the live form specifically requests and confirm that the details match before submission.",
+      "Submit the notification and retain the official acknowledgement/reference or screen evidence without disclosing NIN publicly.",
+      "Check the registered email for NPC's confirmation; follow the agency's instructions if it requests an error correction or additional record.",
+      "If the submission stalls, use NPC's official contact/portal route. A private payment demand is inconsistent with the site's stated free registration."
     ],
     "notes": [
-      "NPC states that death registration is free.",
-      "The informant should use a valid NIN and accurate contact information.",
-      "Death registration is a civil-record process; a hospital or burial document does not automatically replace the NPC registration record."
+      "NPC's official Death Notification landing page explicitly says registration is free and requires the informant's NIN.",
+      "A hospital or burial notice does not automatically substitute for the NPC civil-registration record.",
+      "The portal promises an email after successful registration, not an unconditional instant certificate download."
     ],
     "sources": [
       {
@@ -8871,7 +9033,7 @@
       "npc-child-birth-registration",
       "npc-birth-attestation"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "death certificate Nigeria",
       "register death NPC",
@@ -11053,7 +11215,7 @@
     "slug": "lagos-tax-clearance-verification",
     "title": "How to verify a Lagos Tax Clearance Certificate online",
     "shortTitle": "Verify Lagos TCC",
-    "summary": "Use the official Lagos LIRS eTax service to verify a Tax Clearance Certificate instead of relying only on a PDF, screenshot or printed copy.",
+    "summary": "Verify a Lagos Tax Clearance Certificate (TCC) directly through the official LIRS eTax verification field, using the certificate number and returned taxpayer details. A screenshot or PDF is not independent confirmation; successful TCC verification does not confirm payments outside the applicable Lagos tax system.",
     "category": "State services",
     "agencySlug": "lagos-revenue",
     "feeLabel": "No verification fee stated",
@@ -11063,19 +11225,23 @@
     "officialPortal": "https://etax.lirs.net/",
     "requirements": [
       "The Lagos Tax Clearance Certificate number in the format recognised by LIRS eTax",
-      "The taxpayer name or other certificate details needed to compare the returned record with the document being checked"
+      "The taxpayer name or other certificate details needed to compare the returned record with the document being checked",
+      "The full LIRS certificate number in the requested format (for example, the eTax sample begins LA/TCC/).",
+      "The taxpayer or organisation name and relevant certificate period to compare with the returned official record."
     ],
     "steps": [
-      "Open the official Lagos LIRS eTax portal and locate the Tax Clearance Certificate verification section.",
-      "Enter the certificate number exactly as shown on the Lagos TCC and submit the verification request.",
-      "Compare the returned taxpayer and certificate information with the document presented to you.",
-      "If the certificate cannot be verified or the details conflict, treat the document as unresolved and contact LIRS through an official support channel.",
-      "For your own tax account, sign in to eTax to review filing, payment and certificate information linked to your Payer ID."
+      "Open the official Lagos Internal Revenue Service eTax site at https://etax.lirs.net/.",
+      "Find the Verify Tax Clearance Certificate (TCC) section and enter the full certificate number exactly as printed, including its prefix and slashes.",
+      "Submit Verify TCC and read the record from the actual LIRS portal rather than relying on a photocopied screenshot.",
+      "Match taxpayer identity and any validity/year information supplied by the system to the presented certificate.",
+      "If the site finds no match, double-check the prefix and reference before classifying it as false; a temporary service error can also affect lookups.",
+      "If the returned identity differs, do not rely on the document for hiring, procurement or another high-stakes transaction; seek clarification through LIRS official help.",
+      "For the owner's filing or tax payment position, sign in to the separate authenticated eTax account using Payer ID; public verification is not the account dashboard."
     ],
     "notes": [
-      "LIRS eTax also supports taxpayer registration, Payer ID generation, tax payments, return filing and access to tax certificates.",
-      "A printed certificate can be copied or altered, so verification is preferable when a TCC is being used for a transaction.",
-      "A Lagos TCC is part of the Lagos tax system and should not be confused with an FCT or another state's tax clearance certificate."
+      "The public LIRS eTax page provides a dedicated certificate-number field and Verify TCC action.",
+      "Lagos-issued tax clearance is not the same record as federal NRS or FCT state-IRS certificates.",
+      "A copied certificate may be stale or falsified; compare the response with the purported holder."
     ],
     "sources": [
       {
@@ -11096,7 +11262,7 @@
       "lagos-land-use-charge",
       "fct-verify-tax-clearance"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "lagos-building-completion-certificate",
@@ -11221,30 +11387,36 @@
     "slug": "ogun-taxpayer-registration",
     "title": "How to register as a taxpayer with Ogun State IRS",
     "shortTitle": "Ogun taxpayer registration",
-    "summary": "How an individual or organisation enters the Ogun State Internal Revenue Service taxpayer system and obtains access to the state's tax self-service tools.",
+    "summary": "Get an Ogun State S-TIN through the Ogun State Internal Revenue Service's current individual or organisation registration workflow. The live self-service FAQ says individuals search using a phone number, while corporate applicants search using a CAC number; an existing taxpayer should recover their S-TIN rather than register again.",
     "category": "State services",
     "agencySlug": "ogirs",
     "feeLabel": "No registration fee stated",
     "feeNote": "Use the official Ogun State IRS taxpayer registration route and approved revenue channels.",
     "timeline": "Account access depends on registration details being accepted by Ogun State IRS.",
     "status": "verified",
-    "officialPortal": "https://www.ogunstaterevenue.com/",
+    "officialPortal": "https://www.ogunstaterevenue.com/en/selfservice",
     "requirements": [
       "Individual or organisation identity information appropriate to the taxpayer type",
       "Contact and address information used by Ogun State IRS to create the taxpayer record",
-      "For organisations, legal registration details and employer/tax-agent information where applicable"
+      "For organisations, legal registration details and employer/tax-agent information where applicable",
+      "For individual registration, a usable phone number and correct personal/contact and local-government address details.",
+      "For incorporated entities, the CAC registration number and legal organisation details as required by Ogun's corporate route.",
+      "An accessible email for the registration activation/password link, or an official revenue-office update if existing data lacks a contact email."
     ],
     "steps": [
-      "Open the official Ogun State Internal Revenue Service website and choose TaxPayer Registration for the appropriate taxpayer type.",
-      "Enter the taxpayer's legal name, taxpayer type, residential or business address, phone number and email shown on the Ogun State registration form.",
-      "Submit the registration and keep the S-TIN or taxpayer identifier and access information issued for the account.",
-      "Use the taxpayer account to review payments, returns and other Ogun State tax services.",
-      "Keep the taxpayer record current when the address, employer, organisation or contact information changes."
+      "Open https://www.ogunstaterevenue.com/en/selfservice, then under Get Ogun State Tax ID Number select Individual or Organization. This is the official Ogun IRS S-TIN entry point.",
+      "Before creating a new registration, use the search function: individuals search by phone number and corporations search by CAC number, according to Ogun's own FAQ.",
+      "If the taxpayer exists, retrieve the existing S-TIN or use Get Access Password rather than creating a duplicate state tax identity.",
+      "If no record exists, select Register, provide legal name, email, telephone, address and the registration type's other required fields.",
+      "Submit and monitor the registered email for the activation link and instructions to create the access password.",
+      "Sign in with the S-TIN/phone/email and password through the official Self Service Portal; review the taxpayer's identity and contact details.",
+      "If Get Password fails because the profile has incomplete contact records, visit an Ogun Revenue Office or use its official registration-update support process.",
+      "Once active, use the separate state tax return, payment and TCC actions appropriate to the taxpayer; successful registration does not prove tax was paid."
     ],
     "notes": [
-      "Ogun State IRS provides separate taxpayer and tax-agent/employer registration functions.",
-      "The taxpayer identifier is used across the state's receipt, payment and tax-clearance services.",
-      "Do not send tax payments to an account provided only by an unofficial agent; verify current payment routes through Ogun State IRS."
+      "Ogun IRS calls its state identifier S-TIN and distinguishes individual-phone from corporate-CAC search.",
+      "The official Self Service FAQ says incomplete registration may prevent sending the activation/password link and describes a revenue-office correction path.",
+      "Ogun's older login pages use legacy terminology, so start from the current Self Service Centre rather than assuming every historic login route is interchangeable."
     ],
     "sources": [
       {
@@ -11258,6 +11430,24 @@
         "agency": "Ogun State Internal Revenue Service",
         "url": "https://www.ogunstaterevenue.com/OgunRevenue/Login.aspx",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://www.ogunstaterevenue.com/en/selfservice",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://applications.ogunstaterevenue.com/SelfService/Account/Login",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Ogun State Internal Revenue Service",
+        "url": "https://reg.ogunstaterevenue.com/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11270,7 +11460,7 @@
       "ogun-tax-clearance-certificate",
       "fct-tax-clearance-application"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "ogun-tax-clearance-certificate",
@@ -11334,7 +11524,7 @@
     "slug": "rivers-rivtin-registration",
     "title": "How to get a Rivers State RIVTIN",
     "shortTitle": "Rivers RIVTIN",
-    "summary": "The Rivers State Internal Revenue Service registration process for individuals and organisations to obtain and activate a RIVTIN on RIVTAMIS.",
+    "summary": "Register or recover a Rivers State RIVTIN through RIVTAMIS, the Rivers State Internal Revenue Service's taxpayer system. Search for an existing individual or corporate account before creating a new one, then validate the registered contact information and use the issued Tax ID for separate payment, returns or TCC services.",
     "category": "State services",
     "agencySlug": "rivers-birs",
     "feeLabel": "No taxpayer-registration fee stated",
@@ -11345,20 +11535,24 @@
     "requirements": [
       "Individual or corporate identity information used to search for an existing taxpayer record before creating a new one",
       "A valid email address and phone number for account access and activation",
-      "For organisations, the registered organisation name and corporate information required by RIVTAMIS"
+      "For organisations, the registered organisation name and corporate information required by RIVTAMIS",
+      "Individual or organisation identification and contact information; corporate users must follow the organisation registration class.",
+      "A valid email/phone to receive any required activation or account-recovery instructions."
     ],
     "steps": [
-      "Open the official RIVTAMIS platform and search for your name or company before creating a duplicate taxpayer record.",
-      "Choose the individual or corporate registration route and complete or update the taxpayer information shown by the portal.",
-      "Submit the registration and confirm or activate the account using the contact information provided.",
-      "Allow the stated activation period and sign in with the email, phone number or RIVTIN/TAXID once the account is active.",
-      "Retrieve and retain the RIVTIN for later direct assessment, tax payments, annual returns and TCC applications."
+      "Open the official Rivers RIVTAMIS website and look for Search RivTIN before registering. Search an existing taxpayer first.",
+      "If a matching RIVTIN is already assigned to the individual or organisation, use the recovery/sign-in process rather than creating duplicate accounts.",
+      "If new, choose the Individual or Corporate Sign Up route that matches the entity type.",
+      "Complete the true legal name, tax identity, phone, email and address/organisation fields requested by the official form.",
+      "Confirm the submission and complete any email or phone activation steps; keep the taxpayer reference without publishing it.",
+      "If activation is delayed, use the official RIVTAMIS status/contact route rather than inventing a 24-hour guaranteed completion time.",
+      "Sign in using the registered email or Tax ID when the account is active and verify the information returned.",
+      "Use the RIVTIN for the separate Demand Notice Payment, TCC verification, filing or other state tax function; registration alone does not issue tax clearance."
     ],
     "notes": [
-      "Rivers State IRS says users should search first because an individual or organisation may already exist in the system.",
-      "RIVTAMIS also supports tax calculation, payments, annual returns, TCC requests and TCC verification.",
-      "An informal-sector group can use the organised-group route where the portal makes that category available.",
-      "If you are registering an organisation rather than an individual, use the same RIVTAMIS sign-up flow and select the Corporate account type described by Rivers State IRS."
+      "RIVTAMIS has a public Search RivTIN lookup and separate sign-in for Email/TAXID.",
+      "The original Rivers guide quotes about 24 hours for activation, but this is an agency indication rather than guaranteed account activation for every application.",
+      "Do not substitute a Lagos Payer ID or federal NRS Tax ID for Rivers' internal account access unless the official form explicitly accepts it."
     ],
     "sources": [
       {
@@ -11378,6 +11572,12 @@
         "agency": "Rivers State Internal Revenue Service",
         "url": "https://rivtamis.riversbirs.gov.ng/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Agency source for process, eligibility and exception handling",
+        "agency": "Rivers State Internal Revenue Service",
+        "url": "https://rivtamis.riversbirs.gov.ng/home.html?url=individual",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -11390,7 +11590,7 @@
       "rivers-tax-clearance-certificate",
       "ogun-taxpayer-registration"
     ],
-    "lastVerified": "2026-10-01"
+    "lastVerified": "2026-10-16"
   },
   {
     "slug": "rivers-tax-clearance-certificate",
