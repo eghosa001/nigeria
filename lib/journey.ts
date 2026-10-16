@@ -1,6 +1,6 @@
 import type { Service } from "@/lib/types";
 
-export type JourneyMode = "online" | "hybrid" | "physical" | "agency-guided";
+export type JourneyMode = "online" | "hybrid" | "physical" | "agency-guided" | "ussd";
 
 export type ServiceJourney = {
   mode: JourneyMode;
@@ -57,77 +57,77 @@ const verifiedSecurityJourney: Record<string, ServiceJourney> = {
     alternativeDetail: "Contact GTBank through its genuine Complaints & Enquiries channel. A card block alone does not freeze transfers on the full bank account.",
   },
   "opay-emergency-lock-account-card": {
-    mode: "agency-guided", modeLabel: "Emergency USSD lock", startLabel: "Choose account or card lock",
+    mode: "ussd", modeLabel: "Emergency USSD lock", startLabel: "Choose account or card lock",
     startDetail: "OPay's official security page says *955*131# locks the account and *955*132# locks the card. Verify which one you need and complete the genuine USSD prompts.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No mandatory physical visit stated for the emergency USSD lock",
     alternativeLabel: "If USSD fails or funds were taken",
     alternativeDetail: "Call OPay App & Card support on 0700 8888 328 or 020 18888 328. Do not assume a card lock disables all account transfers.",
   },
   "sterling-emergency-block-account": {
-    mode: "agency-guided", modeLabel: "USSD account emergency", startLabel: "Block with *822*911# if already enrolled",
+    mode: "ussd", modeLabel: "USSD account emergency", startLabel: "Block with *822*911# if already enrolled",
     startDetail: "Dial *822*911# from any mobile phone. Sterling says this requires prior *822# registration; it is not an ordinary web-application portal.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No branch visit required for an eligible completed USSD block",
     alternativeLabel: "If you never registered or cannot use the code",
     alternativeDetail: "Call Sterling One Customer Centre on 07008220000 rather than delaying an active fraud report.",
   },
   "keystone-emergency-account-block": {
-    mode: "agency-guided", modeLabel: "USSD panic block", startLabel: "Dial Keystone's *7111*911# from any phone",
+    mode: "ussd", modeLabel: "USSD panic block", startLabel: "Dial Keystone's *7111*911# from any phone",
     startDetail: "The bank states that the panic code places a Post No Debit restriction on linked Keystone accounts after the required prompts.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No initial visit required for a successful emergency USSD restriction",
     alternativeLabel: "If the menu fails",
     alternativeDetail: "Contact 070020003000 or contactcentre@keystonebankng.com through Keystone's official support.",
   },
   "stanbic-emergency-account-block": {
-    mode: "agency-guided", modeLabel: "USSD emergency account block", startLabel: "Dial *909*1*911#",
+    mode: "ussd", modeLabel: "USSD emergency account block", startLabel: "Dial *909*1*911#",
     startDetail: "Stanbic lists *909*1*911# as its emergency account block for lost phones or compromised banking details.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "A branch visit is not the first required step",
     alternativeLabel: "If the bank does not confirm the block",
     alternativeDetail: "Call Stanbic's Contact Centre on 0700 909 9099 or 0201 422 2222.",
   },
   "access-bank-block-account": {
-    mode: "agency-guided", modeLabel: "USSD account block", startLabel: "Dial *901*911# and choose Block Account",
+    mode: "ussd", modeLabel: "USSD account block", startLabel: "Dial *901*911# and choose Block Account",
     startDetail: "Choose Option 2, then Self or Third Party, choose one account or all and authorise with the owner's existing *901# PIN. Another person's number cannot bypass that PIN.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No office visit required for a successfully authenticated USSD block",
     alternativeLabel: "If the PIN is missing or the request fails",
     alternativeDetail: "Call Access Bank's official Contact Centre 07003000000. The USSD Opt Out is not the same as Block Account.",
   },
   "zenith-emergency-account-block": {
-    mode: "agency-guided", modeLabel: "USSD distress block", startLabel: "Dial Zenith's *966*911#",
+    mode: "ussd", modeLabel: "USSD distress block", startLabel: "Dial Zenith's *966*911#",
     startDetail: "Zenith's own annual report names *966*911# for emergency account blocking and distinguishes *966*60# card management.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No mandatory branch attendance is stated for the initial distress code",
     alternativeLabel: "If you cannot confirm the block",
     alternativeDetail: "Call ZenithDirect on 0201 278 7000 or 091 1987 7000 for help with the full account, not just a card.",
   },
   "fidelity-emergency-block": {
-    mode: "agency-guided", modeLabel: "Confirm issuer's security route", startLabel: "Ask Fidelity to verify the affected card or account block",
+    mode: "ussd", modeLabel: "Confirm issuer's security route", startLabel: "Ask Fidelity to verify the affected card or account block",
     startDetail: "Fidelity's FAQ contradicts itself: its table says *770*911# for cards, but a card-fraud answer says *770*991#. Do not treat one as settled; verify the real menu or call TrueServe.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "A confirmed bank phone/USSD support process is required, not necessarily a branch visit",
     alternativeLabel: "If urgent security action cannot complete",
     alternativeDetail: "Use the official Fidelity TrueServe or branch support. A card lock and an account-wide restriction are different.",
   },
   "smartcash-emergency-block-wallet": {
-    mode: "agency-guided", modeLabel: "USSD wallet emergency", startLabel: "Lock the wallet using SmartCash's USSD codes",
+    mode: "ussd", modeLabel: "USSD wallet emergency", startLabel: "Lock the wallet using SmartCash's USSD codes",
     startDetail: "Dial *939*911# from the registered line or *939*911*CustomerPhoneNumber# from another line, then use the affected wallet owner's PIN in the genuine service.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No required branch visit is stated for a successful USSD lock",
     alternativeLabel: "If locked out or suspecting fraud",
     alternativeDetail: "Call SmartCash at 09125-939-939 or email frauddesk@smartcashpsb.ng for an official investigation and recovery.",
   },
   "union-bank-826-ussd": {
-    mode: "agency-guided", modeLabel: "Union Bank USSD", startLabel: "Choose *826# banking, card or account security",
+    mode: "ussd", modeLabel: "Union Bank USSD", startLabel: "Choose *826# banking, card or account security",
     startDetail: "Union Bank lists *826*21# for card management, *826*6# to block a linked account, and *826*6*mobile number# from a different phone.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "Normal USSD transactions do not require a bank visit",
     alternativeLabel: "If card or account restriction fails",
     alternativeDetail: "Use legitimate Union Bank support or the authenticated UnionOnline Self Service → Block/Unblock Card where appropriate.",
   },
   "stanbic-909-ussd-banking": {
-    mode: "agency-guided", modeLabel: "Stanbic USSD banking", startLabel: "Start *909# services from the bank-linked phone",
+    mode: "ussd", modeLabel: "Stanbic USSD banking", startLabel: "Start *909# services from the bank-linked phone",
     startDetail: "Register with *909*11*1# using BVN or debit card and date of birth; *909*1*911# is a distinct emergency account block.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "Routine USSD registration does not require a bank visit",
     alternativeLabel: "If the registered SIM is missing",
     alternativeDetail: "Use Stanbic's official Contact Centre 0700 909 9099 or 0201 422 2222 for emergency blocking and recovery.",
   },
   "fidelity-770-ussd-banking": {
-    mode: "agency-guided", modeLabel: "Fidelity USSD banking", startLabel: "Use Fidelity's *770# banking menu",
+    mode: "ussd", modeLabel: "Fidelity USSD banking", startLabel: "Use Fidelity's *770# banking menu",
     startDetail: "The bank's own FAQ contradicts itself on card-block codes (*770*911# versus *770*991#). Ask Fidelity to verify the actual emergency menu; do not guess.",
     onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "Routine *770# menu access does not require a physical visit",
     alternativeLabel: "If your phone or card is stolen",
