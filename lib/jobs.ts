@@ -4,6 +4,7 @@ import { officialJobPostingEvidence20261015 } from "@/lib/job-official-posting-e
 import { applyVerifiedJobPaths20261016 } from "@/lib/job-verified-pathways-2026-10-16";
 import { applyIssuerPortalResearch20261016 } from "@/lib/job-issuer-portals-reviewed-2026-10-16";
 import { applyIssuerCareerReview20261016B } from "@/lib/job-issuer-career-research-2026-10-16-b";
+import { applyIndividualMoniepointRoleResearch20261016 } from "@/lib/job-moniepoint-exact-roles-2026-10-16";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -3841,6 +3842,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(applyCurrentJobCorrections)
   .map(closeExpiredJob)
   .map(applyVerifiedJobPaths20261016)
+  .map(applyIndividualMoniepointRoleResearch20261016)
   .map((item) => {
     const evidence = officialJobPostingEvidence20261015[item.slug];
     if (!evidence || item.posting || item.kind !== "vacancy" ||
