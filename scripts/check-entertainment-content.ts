@@ -288,3 +288,19 @@ assert(oilAndWater.watchLinks.some(link => link.href.includes("youtube.com/watch
   "Oil and Water must retain the authorised full-length original.");
 assert(oilAndWaterProfile.sections.flatMap(section => section.paragraphs).join(" ").includes("source discrepancy"),
   "Oil and Water must explain the conflicting descriptions, not conflate both plots.");
+
+// Film-specific correction regression (16 October 2026): evidence must
+// support the published plot and director attribution.
+const manOfYear = entertainmentTitles.find(movie => movie.slug === "man-of-the-year-2026");
+assert(manOfYear?.directors?.includes("Okey Ifeanyi"),
+  "Man of the Year director attribution must survive reviewed-credit overlay.");
+assert(manOfYear?.references?.some(ref => ref.href.includes("nollywoodtimes.com/2026/02/man-of-year")),
+  "Man of the Year needs a film-specific director source.");
+const unknownMan = entertainmentTitles.find(movie => movie.slug === "the-man-i-never-knew");
+const unknownProfile = getMovieEditorialProfile("the-man-i-never-knew");
+assert(unknownMan && unknownProfile, "The Man I Never Knew requires a canonical record and editorial dossier.");
+assert(unknownMan.references?.some(ref => ref.href.includes("nollywoodtimes.com/2026/09/the-man-i-never-knew")) &&
+  unknownMan.references.some(ref => ref.href.includes("filmflux.app/movie/73b3559e")),
+  "The Man I Never Knew needs independent release and cast source citations.");
+assert(!/she discovers she is pregnant|raises a child after|experience of parenting alone/i.test([unknownMan.synopsis, ...unknownProfile.sections.flatMap(section => section.paragraphs)].join(" ")),
+  "The Man I Never Knew must not restore the unsupported pregnancy and parenting plot.");

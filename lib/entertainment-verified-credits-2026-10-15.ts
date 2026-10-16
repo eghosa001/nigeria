@@ -208,4 +208,9 @@ export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit>
     directors: ["Okey Ifeanyi"],
     source: { label: "NollyMeter — A Ride Forever (2026) cast and crew", href: "https://www.nollymeter.com/movies/a-ride-forever", lastChecked: "2026-10-15", note: "The film-specific entry lists Okey Ifeanyi as director and Sarian Martin and Deza the Great as leads. Do not confuse film titles or use this credit to claim new streaming rights." },
   },
+  "man-of-the-year-2026": {
+    directors: ["Okey Ifeanyi"],
+    source: { label: "Nollywood Times — Man of the Year (2026) individual film review and director attribution", href: "https://www.nollywoodtimes.com/2026/02/man-of-year-2026-review-maurice-sams.html", lastChecked: "2026-10-16", note: "Names Okey Ifeanyi as director for the Maurice Sam boxing romance. PartyJollof's film-specific director filmography independently associates Okey Ifeanyi with a January 2026 Man of the Year; original film titles not personally checked." },
+  },
+
 };

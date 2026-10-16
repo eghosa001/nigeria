@@ -2360,6 +2360,12 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     synopsis: "A fighter discovers that the harder battle is outside the ring when love, pride and destiny force him to prove his worth beyond strength and public recognition.",
     cast: ["Maurice Sam", "Sarian Martin"],
     featuredCast: ["Maurice Sam", "Sarian Martin"],
+    references: [{
+      label: "PartyJollof TV — Okey Ifeanyi filmography listing this exact 2026 release",
+      href: "https://www.partyjolloftv.com/people/okey-ifeanyi",
+      lastChecked: "2026-10-16",
+      note: "A separate filmography associates director Okey Ifeanyi with Man of the Year (20 January 2026); it is not a verified transcription of on-screen film credits."
+    }],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
@@ -2486,10 +2492,14 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
     format: "movie",
     genres: ["Drama", "Romance", "Nollywood"],
     languages: ["English"],
-    synopsis: "After a resort romance ends in abandonment and pregnancy, Mila rebuilds her life alone until the man from her past reappears years later and insists he does not know her.",
+    synopsis: "After a resort romance, Mila is devastated when the man she loved disappears. Years later someone who looks just like him moves nearby but denies knowing her. The Royal Arts TV romance builds its mystery around identity and the gap between memory and recognition; published summaries differ on the exact relationship twist, so this overview avoids an unverified pregnancy or an invented ending.",
     cast: ["TooSweet Annan", "Chisom Agoawuike", "Mojoyin Fadaka"],
     featuredCast: ["TooSweet Annan", "Chisom Agoawuike", "Mojoyin Fadaka"],
     runtimeMinutes: 94,
+    references: [
+      { label: "Royal Arts TV release reporting — Nollywood Times, 25 September 2026", href: "https://www.nollywoodtimes.com/2026/09/the-man-i-never-knew-starring-toosweet.html", lastChecked: "2026-10-16", note: "Reports a 24 September Royal Arts TV release, the cast, and a woman recognising a man who denies knowing her. Does not support a pregnancy claim or name a director." },
+      { label: "FilmFlux — The Man I Never Knew exact Royal Arts TV release", href: "https://filmflux.app/movie/73b3559e-59aa-49f3-869f-74d69ca0a8e5-the-man-i-never-knew", lastChecked: "2026-10-16", note: "Confirms the Royal Arts TV upload, duration, cast and identity-mystery plot. Its more detailed twist is not presented as independently verified film footage." },
+    ],
     watchLinks: [{
       platform: "YouTube",
       label: "Watch the full movie on YouTube",
