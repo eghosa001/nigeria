@@ -1,60 +1,73 @@
 [
   {
     "slug": "passport-renewal",
-    "title": "How to renew a Nigerian passport",
-    "shortTitle": "Passport renewal",
-    "summary": "Renew an expiring or expired Nigerian passport on the NIS application dashboard. Domestic standard-passport fees are ₦100,000 for 32 pages/5 years or ₦200,000 for 64 pages/10 years, excluding bank charges; biometric enrolment still requires attendance at the selected office.",
+    "title": "Renew a Nigerian Passport: 2026 Fees, NIN Check and 21-Day Target",
+    "shortTitle": "Nigerian passport renewal",
+    "summary": "To renew or reissue an existing Nigerian passport, use the NIS official passport portal's Apply for Renewal/Reissue route, verify NIN and date of birth, enter your current passport data, choose a processing centre and booklet, then upload supporting documents, pay and book an in-person biometric appointment. NIS's revised April 2026 agreement still lists ₦100,000 (32 pages/5 years) or ₦200,000 (64 pages/10 years) for domestic applications, excluding bank charges, and a reissue service target of 21 days after successful biometric enrolment.",
     "category": "Immigration",
     "agencySlug": "nis",
-    "feeLabel": "₦100,000 / ₦200,000",
-    "feeNote": "For applications in Nigeria: 32-page 5-year passport ₦100,000; 64-page 10-year passport ₦200,000. Bank charges are excluded.",
-    "timeline": "NIS's 2025 Service Level Agreement lists standard-passport reissue at 21 days after successful enrolment.",
+    "feeLabel": "Inside Nigeria: ₦100,000 (32 pages/5 years) or ₦200,000 (64 pages/10 years)",
+    "feeNote": "The April 2026 NIS SLA lists domestic standard-passport prices of ₦100,000 and ₦200,000 for the two common booklet options, excluding bank charges. The September 2025 NIS press release lists diaspora prices of $150 and $230; confirm the current category-specific amount on the official portal or mission. Renewing a passport does not automatically incur the ₦30,000 correction-of-data administrative fee, which applies to a separate service where relevant.",
+    "timeline": "NIS's April 2026 SLA lists 21 days after successful biometric enrolment for a standard-passport renewal/reissue. The target does not include time waiting for an appointment and is not a guaranteed passport collection date. Check the application's actual NIS status before travel.",
     "status": "verified",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
-      "NIN slip",
-      "Current passport booklet",
-      "Valid email address for NIS communication",
-      "For a simple expiry renewal, keep the NIN and current passport ready; if the request is actually a reissue for loss, damage or data change, use the dedicated guide because the supporting evidence changes with the reason"
+      "Your existing Nigerian passport and legible data-page details, including the booklet for presentation at the biometric appointment. A missing or stolen passport may require the separate lost-passport replacement route.",
+      "Your NIN slip or official NIN verification details matching the application. NIS compares current passport identity with your NIMC details and asks for a date-of-birth check.",
+      "An NPC birth certificate or High Court declaration of age and local-government/indigene or state-of-origin document if requested by the official NIS renewal checklist.",
+      "An ICAO-compliant passport photograph for the NIS upload and a valid personal email, contact address and next-of-kin information.",
+      "Any additional documents specific to the renewal reason; an actual name, marital-status or other biodata correction uses NIS's change-of-data process and its own evidence/administrative charge.",
+      "The official payment amount and access to the application acknowledgement, receipt and biometric appointment slips."
     ],
     "steps": [
-      "Sign in to the NIS passport application dashboard and choose Apply for Renewal/Reissue.",
-      "Verify the NIN using the requested date-of-birth check, then enter the current passport details and review the NIN/passport data comparison.",
-      "Select the processing centre and booklet size, upload an ICAO-compliant photograph and the supporting documents required for the application type.",
-      "Review and submit the application, complete the official payment and book the biometric-enrolment appointment.",
-      "Appear at the selected Immigration office for biometric data capture."
+      "Open https://passport.immigration.gov.ng/ and select Apply for Renewal/Re-issue, not Apply for Fresh Passport or Correction of Data. If you are applying from outside Nigeria, choose the overseas application path and check the Nigerian mission's instructions.",
+      "Verify the NIN using the requested date-of-birth check and enter the current passport booklet/data-page details. Compare the returned NIMC identity fields with the existing passport; do not create inconsistent information to get through validation.",
+      "Confirm that your case is an ordinary expired/expiring renewal. If the passport is lost/stolen or you need to change a name, date of birth or marital status, use the relevant NIS replacement/change-of-data guidance because the evidence and administrative charges can differ.",
+      "Choose the processing centre and 32-page/5-year or 64-page/10-year booklet. Check appointment availability, upload a compliant photograph and supply the birth/origin and supporting documents requested for your application type.",
+      "Review your personal details, contact/next-of-kin information and passport data-page evidence. Correct any error through the proper responsible authority before final submission rather than paying for an application based on contradictory records.",
+      "Pay through the official NIS checkout and book the biometric appointment. Domestic baseline booklet fees are ₦100,000 and ₦200,000 excluding bank charges; check the live checkout total for your selected route, then save/print the receipt, acknowledgement and appointment slip.",
+      "Attend the selected Immigration Office in person on the scheduled date with your current passport booklet and required originals. NIS requires a photograph and biometric data capture even after online submission and payment.",
+      "After successful enrolment, use the NIS application status/receipt service for updates and follow the processing office's collection instruction. NIS's April 2026 SLA lists a 21-day reissue target after enrolment, not a guaranteed ready date after online payment."
     ],
     "notes": [
-      "These listed standard-passport prices apply to applications made in Nigeria; applications abroad have separate fees.",
-      "Use the renewal/reissue route for an existing passport. Loss, damage and personal-data changes can require different documents and procedures.",
-      "Pay only through the official NIS application flow, not a payment link sent by an unknown agent."
+      "Ordinary renewal of expired/unexpired validity and correction or replacement for loss are not interchangeable. Consult the appropriate NIS guide if you have changed personal information or cannot present the existing booklet.",
+      "Do not infer a ₦30,000 correction-of-data administrative fee for every simple renewal from the table of additional services. The official portal determines the charges applicable to the particular application.",
+      "The revised April 2026 NIS SLA retained a 21-day target after successful enrolment for reissue. It is not a guarantee that a booklet can be collected on a precise date or a promise of an appointment within 21 days.",
+      "NIS asks renewal applicants to upload a compliant photograph and relevant civil/origin evidence and appear with the current booklet for biometric capture. A fully remote renewal is not established by the official guidance.",
+      "Passport fees quoted in naira apply to applications within Nigeria. NIS has published distinct US-dollar amounts for applications abroad; verify current mission and payment requirements."
     ],
     "sources": [
       {
-        "label": "NIS Renewal of Passport",
+        "label": "NIS — official Renewal/Reissue steps including NIN verification and photo upload",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/renewal-of-passport/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "NIS Passports",
+        "label": "NIS — renewal documents, expired/unexpired validity and current booklet",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
-        "lastChecked": "2026-10-14"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "NIS passport fee review",
+        "label": "NIS — official domestic passport portal and renewal application",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Nigeria Immigration Service — revised April 2026 Service Level Agreement, standard-passport fees and timelines (printed pp. 10–12)",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
+        "published": "2026-04-26",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NIS — domestic and diaspora standard-passport fee announcement effective September 2025",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/nigeria-immigration-service-announces-upward-review-of-nigerian-standard-passport-fees/",
         "published": "2025-08-28",
-        "lastChecked": "2026-10-14"
-      },
-      {
-        "label": "NIS Service Level Agreement 2025",
-        "agency": "Nigeria Immigration Service",
-        "url": "https://immigration.gov.ng/wp-content/uploads/2025/10/SERVICE_LEVEL_AGREEMENT_2025_.pdf",
-        "published": "2025",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -65,78 +78,101 @@
       "first-nigerian-passport",
       "passport-change-of-data"
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
-      "Passport renewal",
-      "How to renew a Nigerian passport",
-      "Immigration"
+      "renew Nigerian passport 2026",
+      "Nigerian passport renewal fee 100000 200000",
+      "NIS passport renewal 21 days after enrolment",
+      "renew Nigerian passport NIN passport data page",
+      "NIS renewal reissue biometric appointment",
+      "renew passport abroad Nigeria mission",
+      "Nigerian expired passport renewal"
     ]
   },
   {
     "slug": "first-nigerian-passport",
-    "title": "How to apply for your first Nigerian passport",
+    "title": "First Nigerian Passport: Application, ₦100,000/₦200,000 Fees and Requirements",
     "shortTitle": "First Nigerian passport",
-    "summary": "A source-linked starter checklist for a fresh Nigerian standard passport application.",
+    "summary": "First-time Nigerian standard-passport applicants should start on the official NIS passport portal, choose Apply for Fresh Passport, verify their NIN and date of birth, select a processing centre and booklet, upload the required birth/citizenship documents, then pay and book biometric enrolment. The April 2026 NIS Service Level Agreement lists ₦100,000 for 32 pages/5 years or ₦200,000 for 64 pages/10 years for applications inside Nigeria, excluding bank charges, and a 42-day service target measured after successful biometric enrolment—not after payment.",
     "category": "Immigration",
     "agencySlug": "nis",
-    "feeLabel": "₦100,000 / ₦200,000",
-    "feeNote": "For applications in Nigeria: 32-page 5-year passport ₦100,000; 64-page 10-year passport ₦200,000. Bank charges are excluded.",
-    "timeline": "NIS's 2025 Service Level Agreement lists fresh standard-passport applications at 42 days after successful enrolment.",
+    "feeLabel": "Inside Nigeria: ₦100,000 (32 pages/5 years) or ₦200,000 (64 pages/10 years)",
+    "feeNote": "NIS's April 2026 SLA confirms the domestic standard-passport amounts ₦100,000 and ₦200,000, both excluding bank charges. NIS's published announcement separately lists $150 and $230 for those booklet categories for applications abroad. These are official published rates rather than a guarantee of the exact checkout for every location or citizenship category; confirm the current payment on NIS's own portal and never pay an intermediary.",
+    "timeline": "The revised April 2026 NIS SLA lists a target of 42 days after successful biometric enrolment for a fresh standard passport. It is a service target, not an appointment wait-time or guaranteed ready-for-collection date. Track status using NIS after enrolling, especially before making travel plans.",
     "status": "verified",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
-      "NIN slip",
-      "NPC birth certificate or High Court declaration of age",
-      "Local Government/Indigene Certificate or other NIS-listed origin/identity evidence for the applicant category",
-      "ICAO-compliant passport photograph"
+      "A NIN slip or other identity verification evidence requested by the official NIS portal. The application checks NIN-linked date of birth and displays NIMC personal details for review.",
+      "An NPC birth certificate or High Court declaration of age, plus local-government/state-of-origin/indigene evidence applicable to the citizenship category and processing centre.",
+      "An ICAO-compliant passport photograph for portal upload. Check NIS's photo-compliance tool and any additional printed photographs or guarantor documentation required for your citizenship category.",
+      "A working personal email address, contact/residential address and next-of-kin information for the NIS form and application notices.",
+      "For applicants under 18: parent/guardian consent, evidence of the parent's Nigerian citizenship and the child's birth certificate; NIS lists additional court/state ministry documents for adopted children.",
+      "For applicants whose Nigerian citizenship is by naturalisation or registration, the relevant Presidential naturalisation/registration certificate and any category-specific identity/guarantor evidence. The domestic NIS portal directs these categories and adopted/surrogacy cases to NIS Headquarters Abuja.",
+      "Funds for the exact official booklet selection, bank charges and a means to save or print the application acknowledgement, payment and biometric appointment evidence."
     ],
     "steps": [
-      "Open the official NIS passport portal and choose a fresh passport application.",
-      "Enter the applicant details, upload the NPC birth certificate/declaration of age and state/local-government origin evidence, then choose the processing centre and booklet.",
-      "Complete the official payment and book the appointment shown by the portal.",
-      "Take the payment and appointment slips to the selected passport office on the scheduled date.",
-      "Appear personally for photograph and biometric data capture."
+      "Open https://passport.immigration.gov.ng/ and select Apply for Fresh Passport. Check the domestic/overseas route first: the domestic portal offers an Apply from outside Nigeria option and not every applicant category is processed at the same location.",
+      "Use the official NIS dashboard to verify your NIN and the required date-of-birth match. Carefully compare the displayed NIMC name/date details with your genuine birth and citizenship records; resolve material inconsistencies through the relevant issuer rather than inventing new details in the form.",
+      "Choose the correct processing centre and passport booklet size—32 pages/5 years or 64 pages/10 years—and prepare a compliant photograph. Check centre appointment availability on the official NIS portal before making time-sensitive travel arrangements.",
+      "Enter your contact address, next-of-kin details and valid email. Upload the NPC birth certificate or accepted court declaration and the state/local-government origin or citizenship evidence NIS requests for your applicant category.",
+      "Before submission, check the category-specific document list. A minor may need parental citizenship documents and consent; naturalised/registered citizens and adoption/surrogacy categories have additional requirements or processing-location limits. Do not assume an adult citizen-by-birth checklist is sufficient for every applicant.",
+      "Review the application in full, submit through NIS's own portal, pay the amount the portal quotes and book the available biometric enrolment appointment. NIS's published domestic baseline is ₦100,000 or ₦200,000, excluding bank charges; do not pay a personal bank account or an unofficial agent.",
+      "Save or print the payment receipt, application acknowledgement and appointment slip. Attend your selected Immigration Office personally on the appointed date with all original evidence requested by NIS; photograph and biometric data capture cannot be completed simply by uploading online.",
+      "After successful enrolment, monitor the official application status/receipt route and follow NIS's specific collection instructions. The April 2026 SLA states a 42-day target after enrolment, not a promise that the passport will be ready exactly 42 days after online submission."
     ],
     "notes": [
-      "Fresh applications and reissues have different timelines and supporting-document rules.",
-      "NIS lists 42 days after successful enrolment for a fresh standard passport in its 2025 Service Level Agreement."
+      "Fresh passport and renewal/reissue are different routes. An applicant with an existing valid or expired passport should normally use Renewal/Reissue; replacing a lost booklet or changing personal data may require a separate documented process.",
+      "Domestic NIS passport fees are published as ₦100,000 and ₦200,000 for the two common booklet options, exclusive of bank charges. The official NIS fee announcement lists separate dollar-denominated diaspora amounts; check current portal/mission instructions before paying abroad.",
+      "A successful online payment or booked appointment is not a completed passport application. The applicant must attend physical biometric/photo enrolment, and the published 42-day service target begins after successful enrolment.",
+      "NIS lists additional rules for minors, adopted children and citizens by naturalisation or registration. Verify your own category rather than uploading guessed or unrelated affidavits or using a generic adult checklist.",
+      "Check the exact online portal status and official collection instructions. Do not purchase travel tickets on the assumption a published service target is a guaranteed issuance date."
     ],
     "sources": [
       {
-        "label": "NIS How to Apply for Standard Passport",
+        "label": "NIS — official step-by-step first passport application and biometric enrolment",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/how-to-apply-for-standard-passport/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "NIS Passports",
+        "label": "NIS — passport category requirements, adults, minors and diaspora",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "NIS passport fee review",
+        "label": "NIS — domestic application portal, citizenship categories and photo/centre checks",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Nigeria Immigration Service — revised April 2026 Service Level Agreement, standard-passport fees and timelines (printed pp. 10–12)",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://immigration.gov.ng/wp-content/uploads/2026/04/SERVICE-LEVEL-AGREEMENT-2026_.pdf",
+        "published": "2026-04-26",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NIS — domestic and diaspora standard-passport fee announcement effective September 2025",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/nigeria-immigration-service-announces-upward-review-of-nigerian-standard-passport-fees/",
         "published": "2025-08-28",
-        "lastChecked": "2026-09-28"
-      },
-      {
-        "label": "NIS Service Level Agreement 2025",
-        "agency": "Nigeria Immigration Service",
-        "url": "https://immigration.gov.ng/wp-content/uploads/2025/10/SERVICE_LEVEL_AGREEMENT_2025_.pdf",
-        "published": "2025",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "passport-renewal"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
-      "First Nigerian passport",
-      "How to apply for your first Nigerian passport",
-      "Immigration"
+      "first Nigerian passport application 2026",
+      "Nigerian fresh passport fee 100000 200000",
+      "NIS passport NIN birth certificate original",
+      "Nigerian first passport under 18 parental consent",
+      "NIS standard passport 42 days successful enrolment",
+      "fresh Nigerian passport official portal biometric appointment",
+      "Nigerian passport outside Nigeria application"
     ]
   },
   {
