@@ -1,6 +1,7 @@
 import { exploreGuides } from "../lib/explore";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
+import { tourLeadFixes20261016 } from "../lib/explore-tour-lead-fixes-2026-10-16";
 import { tourPracticalDecisions20261016 } from "../lib/explore-practical-decisions-2026-10-16";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
@@ -91,6 +92,27 @@ for (const slug of accessSlugs) {
   if (new Set(urls).size !== urls.length)
     errors.push(slug + ": source links duplicated after update.");
 }
+
+// Hero copy may not contradict checked visit permissions or official safety
+// advice; preserve the substantive guide and existing canonical identifiers.
+const heroSlugs = Object.keys(tourLeadFixes20261016);
+if (heroSlugs.length !== 17 || new Set(heroSlugs).size !== 17)
+  errors.push("17 distinct Tour hero corrections expected from source-backed research.");
+for (const slug of heroSlugs) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const correction = tourLeadFixes20261016[slug];
+  if (!guide || guide.summary !== correction.summary ||
+      (correction.title && guide.title !== correction.title) ||
+      (correction.shortTitle && guide.shortTitle !== correction.shortTitle))
+    errors.push(slug + ": source-corrected public title, short title or summary missing.");
+  for (const [label, detail] of Object.entries(correction.highlightChanges)) {
+    if (!guide?.highlights.some(h => h.name === label && h.detail === detail))
+      errors.push(slug + ": unsourced original highlight still surfaced: " + label);
+  }
+}
+const kiriji = exploreGuides.find(item => item.slug === "kiriji-war-museum-guide");
+if (!kiriji || kiriji.title.includes("Museum") || !kiriji.summary.includes("no current operating museum"))
+  errors.push("Kiriji site must not be presented to visitors as an established staffed museum.");
 
 // Regression: publication screening and the actual Tour guide page must agree
 // about already sourced, shared, canonical place cards. A guide should not be
