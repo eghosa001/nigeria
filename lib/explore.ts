@@ -4,6 +4,7 @@ import { verifiedTourDecisions20261016 } from "@/lib/explore-verified-visitor-up
 import { tourPracticalDecisions20261016 } from "@/lib/explore-practical-decisions-2026-10-16";
 import { highPriorityTourEvidence20261016 } from "@/lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "@/lib/explore-access-decisions-2026-10-16-c";
+import { tourLeadFixes20261016 } from "@/lib/explore-tour-lead-fixes-2026-10-16";
 import { independentVisitorEvidence20261015 } from "@/lib/explore-independent-evidence-2026-10-15";
 import { verifiedOctoberHeritageEvents20261013 } from "@/lib/explore-heritage-events-2026-10-13";
 import { museumCollectionsGuide20261013 } from "@/lib/explore-museum-collections-2026-10-13";
@@ -13707,8 +13708,18 @@ export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide
   if (matchedWarning && ![guide.source?.href, ...sources.map(source => source.href)].includes(travelWarningUrl)) {
     sources.push({ label: "UK FCDO — Nigeria regional security and travel advisories", href: travelWarningUrl });
   }
+  const leadFix = tourLeadFixes20261016[guide.slug];
+  const correctedHighlights = leadFix
+    ? guide.highlights.map(item => ({ ...item, detail: leadFix.highlightChanges[item.name] ?? item.detail }))
+    : guide.highlights;
   return {
     ...guide,
+    ...(leadFix ? {
+      title: leadFix.title ?? guide.title,
+      shortTitle: leadFix.shortTitle ?? guide.shortTitle,
+      summary: leadFix.summary,
+      highlights: correctedHighlights,
+    } : {}),
     intro: update.intro && !guide.intro.includes(update.intro) ? [...guide.intro, update.intro] : guide.intro,
     planning: guide.planning.some((item) => item.label === update.planning.label)
       ? guide.planning : [...guide.planning, update.planning],
