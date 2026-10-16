@@ -6,6 +6,7 @@ import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getSeriesTitle, seriesLastChecked, seriesTitles } from "@/lib/series";
+import { reviewedSeriesEditorial20261016 } from "@/lib/series-editorial-verified-2026-10-16";
 import { getSiteUrl } from "@/lib/site";
 
 export const dynamic="force-static";
@@ -48,6 +49,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
   const base=getSiteUrl();
   const pageUrl=base+"/entertainment/series/"+item.slug;
   const checked=seriesLastChecked(item);
+  const editorial=reviewedSeriesEditorial20261016[item.slug];
   const related=seriesTitles
     .filter((candidate)=>candidate.slug!==item.slug)
     .map((candidate)=>({
@@ -114,6 +116,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
       <div className="container page-outline-wrap">
         <PageOutline label="Series guide sections" items={[
           { href: "#series-overview", label: "Series facts" },
+          ...(editorial ? [{ href: "#series-editorial", label: "Verified story and viewing guidance" }] : []),
           ...(item.cast.length ? [{ href: "#cast" as const, label: "Cast" }] : []),
           { href: "#watch", label: "Where to watch" },
           { href: "#series-sources", label: "Verified sources" },
@@ -136,6 +139,20 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
                 <article><span>Genres</span><strong>{item.genres.join(", ")}</strong></article>
               </div>
             </section>
+
+            {editorial ? (
+              <section id="series-editorial">
+                <span className="eyebrow">Individually researched context</span>
+                <h2>{item.title}: the story and how to follow it</h2>
+                {editorial.sections.map((section) => (
+                  <div className="movie-long-summary" key={section.heading}>
+                    <h3>{section.heading}</h3>
+                    {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                  </div>
+                ))}
+                <small className="movie-freshness-note">Research checked 16 October 2026. Release announcements and source listings do not guarantee today's playback access.</small>
+              </section>
+            ) : null}
 
             {item.cast.length?(
               <section id="cast">
@@ -192,6 +209,11 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
               <h2 id="series-sources">Sources used to verify {item.title}</h2>
               <div className="source-list">
                 {item.sources.map((source)=><a href={source.url} target="_blank" rel="noreferrer" key={source.url}><strong>{source.label}</strong><span>Checked {source.lastChecked} ↗</span></a>)}
+                {editorial?.references.filter((source) => !item.sources.some((entry) => entry.url === source.href)).map((source) => (
+                  <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>
+                    <strong>{source.label}</strong><span>Editorial research · 16 October 2026 ↗</span>
+                  </a>
+                ))}
               </div>
             </section>
           </article>
