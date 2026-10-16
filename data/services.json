@@ -428,7 +428,7 @@
       "Select the correct licence class, three- or five-year validity and preferred processing centre. Check contact and personal details before moving to payment.",
       "Review FRSC's price table: Class A ₦7,000/₦11,000 and other classes ₦15,000/₦21,000 for three/five years respectively, with possible extra channel/class charges.",
       "Pay only through the FRSC portal or a participating bank identified by it; preserve the application ID, receipt and appointment instructions.",
-      "Follow the State Board of Internal Revenue confirmation process and take the practical driving test with the Vehicle Inspection Officer as instructed.",
+      "Take the application and payment receipt to the State Board of Internal Revenue desk associated with the selected Driver's Licence Centre. Ask the BIR desk to validate the official payment, then attend the Vehicle Inspection Officer's practical driving test at the VIO test location given by the centre.",
       "Attend the selected FRSC Driver's Licence Centre in person for photograph and biometric capture; keep the acknowledgement or temporary licence documentation issued.",
       "Use FRSC Track DL Application Status for the real stage of printing/collection. Contact the processing centre if the record stalls rather than paying someone who promises faster approval."
     ],
@@ -3429,7 +3429,7 @@
     "agencySlug": "npc",
     "feeLabel": "No extra status-check fee stated",
     "status": "verified",
-    "officialPortal": "https://attestation.nationalpopulation.gov.ng/",
+    "officialPortal": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
     "requirements": [
       "A birth-attestation application that has already reached the payment-reference stage",
       "The Payment Reference generated for that application",
@@ -3438,7 +3438,7 @@
     ],
     "steps": [
       "Identify the original attestation application and locate its NPC Payment Reference in the official receipt/account history.",
-      "Open https://attestation.nationalpopulation.gov.ng/ from the NPC official services route and select the existing application's status/resume option.",
+      "Open https://www.nationalpopulation.gov.ng/, choose Services → Birth Attestation, and use the Check Status or existing VitalReg account route offered there. The older standalone attestation domain is currently unreachable, so do not use a saved link to it.",
       "Enter the Payment Reference precisely; it is different from a provisional attestation number or unrelated card/bank reference.",
       "Read the NPC result carefully: pending, queried, approved and downloadable records need different follow-up actions.",
       "If approved, use the authorised Download Certificate control. A completed application may not automatically display the download before the approval state updates.",
@@ -3447,16 +3447,10 @@
     ],
     "notes": [
       "NPC's application reference and the Payment Reference used for status checks are not necessarily interchangeable.",
-      "Status checking does not by itself incur a second official attestation application charge.",
+      "The older standalone attestation subdomain is not currently resolving. Begin from NPC Services or the live VitalReg account to avoid a dead official link.",
       "An application marked pending is not the same as an approved, verifiable attestation certificate."
     ],
     "sources": [
-      {
-        "label": "NPC Birth Attestation Self-Service",
-        "agency": "National Population Commission",
-        "url": "https://attestation.nationalpopulation.gov.ng/",
-        "lastChecked": "2026-09-28"
-      },
       {
         "label": "NPC Vital Registration FAQ",
         "agency": "National Population Commission",
@@ -3467,6 +3461,12 @@
         "label": "Agency source for process, eligibility and exception handling",
         "agency": "National Population Commission",
         "url": "https://www.nationalpopulation.gov.ng/FAQs",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NPC live VitalReg self-service account",
+        "agency": "National Population Commission",
+        "url": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
         "lastChecked": "2026-10-16"
       }
     ],
@@ -4844,12 +4844,12 @@
     "slug": "npc-modify-birth-record",
     "title": "How to modify an NPC birth or attestation record",
     "shortTitle": "NPC record modification",
-    "summary": "Correct an existing NPC birth registration or birth attestation through its official Modify Record control or modification portal. NPC's separate modification page states that only digitised records can be modified and lists a non-refundable US$20 self-service convenience fee; verify the exact live checkout before submitting.",
+    "summary": "Correct an existing NPC digitised birth registration or attestation from the live VitalReg self-service dashboard. NPC's FAQ says to choose the record's plus (+) menu and the third Modify Record action. The former standalone modification subdomain is not currently resolving; do not rely on its historical US$20 quote or pay an intermediary.",
     "category": "Civil records",
     "agencySlug": "npc",
-    "feeLabel": "Official modification portal lists US$20 self-service convenience fee",
+    "feeLabel": "Check the current NPC VitalReg Modify Record checkout",
     "status": "verified",
-    "officialPortal": "https://www.nationalpopulation.gov.ng/FAQs",
+    "officialPortal": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
     "requirements": [
       "NPC self-service account",
       "Existing NPC birth/attestation reference plus the current recorded name, date of birth and other identifying details needed to locate the record being corrected",
@@ -4858,18 +4858,18 @@
       "An active email and phone number, record-specific legal evidence for the corrected field and ability to receive the payment reference."
     ],
     "steps": [
-      "Find the original record in the official NPC account. Only digitised birth registration/attestation records qualify for the separate online modification portal.",
+      "Open https://www.nationalpopulation.gov.ng/ and choose Services → your existing birth registration or attestation self-service account. Sign in with the existing VitalReg account and locate the exact original record.",
       "Sign in and open the plus (+) menu for the correct existing civil record; NPC's FAQ identifies its third action as Modify Record.",
-      "Alternatively use NPC's linked Modification Self-Service, which asks for the existing certificate number and active email/phone; check that the transaction concerns the intended record.",
+      "Within the live VitalReg self-service dashboard identify the record and its certificate number. Use the Modify Record action for the record type; NPC's older standalone modification link is currently not resolving, so do not send payment through it.",
       "Choose the exact name, date or parental field to correct, and match the new value to supporting civil evidence; do not request an unrelated new birth registration.",
-      "Review the old/new field preview and the displayed payment before submitting. NPC's published modification portal lists a non-refundable US$20 self-service convenience fee.",
+      "Review the old/new field preview and the fee generated in your current VitalReg account before paying. An older standalone NPC modification page listed US$20, but that page is currently unreachable and the old figure is not confirmed as the live price.",
       "Submit the official request, retain the payment/reference details delivered to the email and monitor any query or approval state.",
       "After NPC approves the modified record, follow its reprint procedure to obtain the changed certificate; approval may not automatically replace an earlier downloaded copy.",
       "If the old record is not digitised or cannot be matched, contact NPC about the correct legacy-record digitisation/assisted route instead of paying repeatedly."
     ],
     "notes": [
       "NPC's FAQ uses the dashboard's third (+) action, Modify Record, for existing applications.",
-      "The separate official modification page lists US$20 non-refundable convenience fee and requires a digitised record and active contact details.",
+      "The historical standalone modification page listed US$20 but is not currently accessible. The current fee must be checked inside the live VitalReg dashboard.",
       "An approved modification may require a separate certificate reprint; do not assume the previous PDF becomes corrected automatically."
     ],
     "sources": [
@@ -4880,9 +4880,9 @@
         "lastChecked": "2026-10-14"
       },
       {
-        "label": "Agency source for process, eligibility and exception handling",
+        "label": "NPC live VitalReg self-service login for existing records",
         "agency": "National Population Commission",
-        "url": "https://modification.nationalpopulation.gov.ng/",
+        "url": "https://vitalreg-selfservice.nationalpopulation.gov.ng/",
         "lastChecked": "2026-10-16"
       }
     ],
@@ -4897,7 +4897,7 @@
       "npc-birth-certificate-reprint",
       "npc-child-birth-registration"
     ],
-    "feeNote": "NPC's separate modification service lists a non-refundable US$20 convenience fee for eligible digital records. Confirm live fee and whether certificate reprint is separately charged before paying."
+    "feeNote": "An older NPC modification subdomain displayed a US$20 non-refundable convenience fee, but its website is currently unreachable. The amount has not been confirmed on the current VitalReg dashboard; verify its live invoice before paying."
   },
   {
     "slug": "bvn-enrolment",
@@ -7691,7 +7691,7 @@
       "Complete the owner identity/contact fields, insurance policy number, driver's licence fields where requested and the state of plate allocation.",
       "Review the preview and verify that vehicle and owner details match before any official payment or final submission; an incorrect VIN can cause later proof-of-ownership problems.",
       "Complete the state's authorised payment, identity/ownership and plate processing steps through the NVIS-approved channel; preserve the registration and receipts.",
-      "After the plate/proof of ownership is issued, verify the number plate through FRSC's separate plate checker. For incomplete processing use Continue Existing Registration or your licensing centre rather than starting afresh."
+      "After allocation, use https://nvis.frsc.gov.ng/VehicleManagement/VerifyPlateNo to confirm the issued plate. If the registration is incomplete, open https://nvis.frsc.gov.ng/VehicleManagement/EditApplicationForm and enter the Reference Item/Chassis No to find the existing submission rather than making another one."
     ],
     "notes": [
       "NVIS's actual Register Vehicle form separately requests technical, owner and plate-allocation details.",
@@ -11404,7 +11404,7 @@
       "An accessible email for the registration activation/password link, or an official revenue-office update if existing data lacks a contact email."
     ],
     "steps": [
-      "Start on the Ogun State IRS Self Service Centre and choose Get Ogun State Tax ID Number as Individual or Organization.",
+      "Open https://www.ogunstaterevenue.com/en/selfservice, then under Get Ogun State Tax ID Number select Individual or Organization. This is the official Ogun IRS S-TIN entry point.",
       "Before creating a new registration, use the search function: individuals search by phone number and corporations search by CAC number, according to Ogun's own FAQ.",
       "If the taxpayer exists, retrieve the existing S-TIN or use Get Access Password rather than creating a duplicate state tax identity.",
       "If no record exists, select Register, provide legal name, email, telephone, address and the registration type's other required fields.",
