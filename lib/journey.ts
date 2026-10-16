@@ -215,8 +215,124 @@ const verifiedEditorialJourneys: Record<string, ServiceJourney> = {
   },
 };
 
+const verifiedPublicRecordJourneys: Record<string, ServiceJourney> = {
+  "upgrade-drivers-licence-class": {
+    mode: "hybrid", modeLabel: "FRSC renewal/reissue + capture",
+    startLabel: "Re-Issue valid licences; Renew expired ones",
+    startDetail: "Open the FRSC DL Application menu, enter your existing licence and select the permitted class. Commercial classes must be initiated at a capture centre with medical and driving-school evidence.",
+    onlineAvailable: true, physicalStatus: "required", physicalLabel: "FRSC capture or testing stage; commercial classes start at a centre",
+    alternativeLabel: "If an upgrade class is not offered online",
+    alternativeDetail: "Contact an authorised FRSC capture centre to confirm eligibility. Do not buy a separate unofficial upgrade form.",
+  },
+  "drivers-licence-verification": {
+    mode: "online", modeLabel: "RID quick check or formal request",
+    startLabel: "Check RID or licence number",
+    startDetail: "Use ndlverification.frsc.gov.ng/verify for a public document check. A full institutional verification request is separate and may involve an agency address and shipping fees.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "No public quick-check office visit established",
+    alternativeLabel: "If formal agency verification is needed",
+    alternativeDetail: "Create a request on the main FRSC verification portal and provide the receiving organisation address, not a personal residential address.",
+  },
+  "jamb-retrieve-profile-code": {
+    mode: "agency-guided", modeLabel: "Registered-SIM text message",
+    startLabel: "SMS RESEND to 55019 or 66019",
+    startDetail: "Text RESEND from the candidate's original JAMB-registered phone number. This is an SMS service, not a web application or USSD dial code.",
+    onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No physical visit is necessary for a successful SMS response",
+    alternativeLabel: "If the registered SIM is unavailable",
+    alternativeDetail: "Contact official JAMB support rather than texting from another person's number.",
+  },
+  "jamb-reset-profile-password": {
+    mode: "agency-guided", modeLabel: "Registered-SIM password reset",
+    startLabel: "Text PASSWORD and registered email",
+    startDetail: "From the linked SIM send PASSWORD followed by one space and the account email to 55019 or 66019. Use the reply to recover the candidate e-Facility access.",
+    onlineAvailable: false, physicalStatus: "not-stated", physicalLabel: "No physical visit established for the SMS reset",
+    alternativeLabel: "If the reset fails",
+    alternativeDetail: "Use the official JAMB support ticket system; do not pay a third party to read the reset SMS.",
+  },
+  "jamb-caps": {
+    mode: "online", modeLabel: "Candidate JAMB e-Facility",
+    startLabel: "Check admission in the candidate e-Facility account",
+    startDetail: "Use efacility.jamb.gov.ng/account. The separate caps.jamb.gov.ng/login is an institution/staff login; do not enter candidate credentials there.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "Admission-status check does not require an office visit",
+    alternativeLabel: "If the record is missing",
+    alternativeDetail: "Ask the institution's admissions office to check recognised CAPS records; a direct paid admission-letter print does not create an admission.",
+  },
+  "nysc-exemption-certificate": {
+    mode: "agency-guided", modeLabel: "Institution or NYSC HQ collection",
+    startLabel: "Choose home-trained or foreign-trained collection",
+    startDetail: "Home-trained graduates obtain exemption certificates through their school. Foreign-trained graduates must appear in person at NYSC HQ at the communicated batch time.",
+    onlineAvailable: false, physicalStatus: "required", physicalLabel: "Foreign-trained exemption certificate collection requires personal attendance",
+    alternativeLabel: "If the certificate is lost or burnt",
+    alternativeDetail: "NYSC does not reprint it; request a Letter of Confirmation using the relevant home/foreign-trained evidence route.",
+  },
+  "npc-birth-certificate-reprint": {
+    mode: "online", modeLabel: "NPC existing certificate reprint",
+    startLabel: "Check record and US$30 reprint charge",
+    startDetail: "Use certificatereprint.nationalpopulation.gov.ng for an already-issued record. This is different from converting a pre-2023 non-digital certificate.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "No compulsory office visit established by the published reprint home page",
+    alternativeLabel: "If the record is an old paper certificate",
+    alternativeDetail: "Check NPC's separate Certificate Reissuance eligibility, especially the 8 November 2023 issue-date boundary.",
+  },
+  "npc-digital-birth-certificate-reissuance": {
+    mode: "online", modeLabel: "NPC pre-VitalReg reissuance",
+    startLabel: "Check certificate date and upload old copy",
+    startDetail: "NPC accepts qualifying old non-digital certificates issued before 8 November 2023. US$30 is non-refundable, and an approved download is single-use.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "Application and status functions appear online",
+    alternativeLabel: "If your certificate is too recent",
+    alternativeDetail: "NPC excludes old-format certificates issued after the VitalReg launch; look for the separate new digital certificate route.",
+  },
+  "inec-find-pvc-pickup-location": {
+    mode: "hybrid", modeLabel: "Online lookup + in-person PVC collection",
+    startLabel: "Check Uncollected PVC then attend personally",
+    startDetail: "Use INEC's Uncollected PVC lookup and verify local collection arrangements before visiting the official collection point. No proxy collection is allowed.",
+    onlineAvailable: true, physicalStatus: "required", physicalLabel: "INEC requires voter attendance for card collection",
+    alternativeLabel: "If the PVC isn't at the listed centre",
+    alternativeDetail: "Check current State/LGA INEC notices; do not mistake the election-day polling-unit locator for a card collection service.",
+  },
+  "cac-incorporated-trustee-registration": {
+    mode: "online", modeLabel: "CAC iCRP end-to-end",
+    startLabel: "Reserve name and complete CAC-IT01",
+    startDetail: "CAC states Incorporated Trustee registration is end-to-end online, including constitution, trustees, appointment minutes, declarations and final e-certificate on approval.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "No mandatory walk-in step in the published CAC route",
+    alternativeLabel: "If the application gets a query",
+    alternativeDetail: "Answer the query inside the official iCRP. The 24-working-hour service target depends on complete documents and resolved queries.",
+  },
+  "nin-slip-reissue": {
+    mode: "agency-guided", modeLabel: "NIMC documents + Remita invoice",
+    startLabel: "Choose the slip reissue reason",
+    startDetail: "Prepare the documents for loss, theft, damage or post-modification reissue. NIMC's published prices conflict, so confirm the official generated Remita invoice before payment.",
+    onlineAvailable: false, physicalStatus: "may-be-required", physicalLabel: "Document handover via the NIMC-approved reissue route",
+    alternativeLabel: "If Remita and NIMC price listings differ",
+    alternativeDetail: "Do not pay an unrelated bill. NIMC's Fees table states ₦600/₦1,000 while its older detailed page says ₦500.",
+  },
+  "fct-verify-tax-clearance": {
+    mode: "online", modeLabel: "Official FCT-IRS TCC verification",
+    startLabel: "Use TCC Ref#, TIN, verifier name and email",
+    startDetail: "Open fcttaxportal.fctirs.gov.ng/tccver.aspx or use the certificate QR code, then compare the response with the presented certificate.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "No walk-in required for the online check",
+    alternativeLabel: "If the records do not match",
+    alternativeDetail: "Contact official FCT-IRS support. A public verification form does not issue a new TCC.",
+  },
+  "edo-tax-id-access": {
+    mode: "online", modeLabel: "JTB portal, *668# or EIRS office",
+    startLabel: "Register or verify at tin.jtb.gov.ng",
+    startDetail: "Edo IRS also publishes *668# USSD and fourteen zonal tax offices; ERAS is a separate revenue service, not the only Tax ID entry point.",
+    onlineAvailable: true, physicalStatus: "may-be-required", physicalLabel: "An office option exists but is not mandatory for the online route",
+    alternativeLabel: "If online verification fails",
+    alternativeDetail: "Use *668# or visit an authorised EIRS zonal office, such as Oredo 1 at 18 Ihama Road, GRA Benin City.",
+  },
+  "vehicle-proof-of-ownership-verification": {
+    mode: "online", modeLabel: "FRSC NVIS plate/chassis lookup",
+    startLabel: "Search by plate or chassis number",
+    startDetail: "Use the FRSC NVIS Proof of Ownership Print/Search page, entering the plate number or chassis number and comparing the vehicle and seller records.",
+    onlineAvailable: true, physicalStatus: "not-stated", physicalLabel: "Initial NVIS lookup is online; printing may require login",
+    alternativeLabel: "If the ownership details conflict",
+    alternativeDetail: "Ask the relevant vehicle-registration authority to reconcile ownership; an insurance or number-plate check cannot replace a proof-of-ownership record.",
+  },
+};
+
 export function getServiceJourney(service: Service): ServiceJourney {
   if (verifiedSecurityJourney[service.slug]) return verifiedSecurityJourney[service.slug];
+  if (verifiedPublicRecordJourneys[service.slug]) return verifiedPublicRecordJourneys[service.slug];
   if (verifiedEditorialJourneys[service.slug]) return verifiedEditorialJourneys[service.slug];
   // The Glo webpage explains eSIM but does not accept a complete online swap.
   // Its official FAQ requires NIN checks and QR installation at a Gloworld/dealer outlet.
