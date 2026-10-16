@@ -150,25 +150,29 @@ export const exploreGrowthWave9: ExploreGuide[] = [
     shortTitle: "Akwa Ibom heritage",
     kind: "itinerary",
     region: "Akwa Ibom State",
-    summary: "Trace Akwa Ibom's missionary, anti-colonial and coastal heritage through Mary Slessor's Itu history, Ukam Market and the first Qua Iboe Church at Ibeno.",
+    summary: "Plan Akwa Ibom heritage around Mary Slessor’s final mission station at Use Ikot Oku, Ikot Abasi’s 1929 women’s resistance sites, and Ibeno’s first Qua Iboe Church, without misplacing Slessor’s Calabar grave.",
     intro: [
-      "Akwa Ibom State's official history highlights several visitor-worthy heritage locations outside central Uyo, including Mary Slessor's tomb in the Itu area, the Ikot Abasi market linked to the 1929 women's resistance, and the first Qua Iboe Church in Ibeno.",
-      "These sites are spread across the state, so pair them with existing coastal or Uyo attractions over more than one day rather than treating them as a short city loop."
+      "A crucial historical distinction: Mary Slessor died at Use Ikot Oku in January 1915, in today’s Akwa Ibom State, but historical biographical sources place her burial at Duke Town cemetery in Calabar, Cross River State. Akwa Ibom’s government references a grave monument at Use; do not mistake that local memorial for her actual burial place.",
+      "For a history-focused trip, begin with the 1929 Women War Memorial and Ukam Market in Ikot Abasi, which local heritage documentation links to the women’s anti-colonial protest. Use Ikot Oku and the first Qua Iboe Church at Ibeno require separate journeys. Visiting Mary Slessor’s actual grave means travelling onward to Duke Town in Calabar rather than following a map pin to Use."
     ],
     bestFor: ["Missionary history", "Women's history", "Coastal heritage", "Educational travel"],
     highlights: [
-      { name: "Mary Slessor Tomb", detail: "The state government identifies Use Ikot Oku in Ibiono Ibom as the place where Mary Slessor spent much of her later life and where her grave monument remains." },
-      { name: "Ukam Market", detail: "Akwa Ibom's official history links the market in Ikot Abasi with the origins of the 1929 Aba Women's resistance." },
+      { name: "Mary Slessor’s final mission station", detail: "Use Ikot Oku is associated with her last years and death, while her documented grave is in Duke Town, Calabar. A monument in Use is not her burial site." },
+      { name: "1929 Women War Memorial and Ukam Market", detail: "The Ikot Abasi memorial museum commemorates women killed during anti-colonial protests; local heritage material links the episode to Ukam Market. Confirm museum access before planning around it." },
       { name: "First Qua Iboe Church", detail: "The state identifies the 1887 church in Ibeno as the first Qua Iboe Church." },
       { name: "Existing coastal route", detail: "The heritage circuit can be combined with MyNigeriaGuide's existing Ibeno and Ikot Abasi coastal records without duplicating those pages." }
     ],
     planning: [
       { label: "Use Uyo as the main base", detail: "The capital provides the easiest accommodation and transport hub for separate heritage day trips." },
-      { label: "Confirm community access", detail: "Historic church, market and memorial sites are living community spaces, not controlled museum campuses." },
-      { label: "Respect worship and local activity", detail: "Do not disrupt services, trading or private memorial areas for sightseeing." },
+      { label: "Choose the right Mary Slessor destination", detail: "For her final-station history, ask local custodians about Use Ikot Oku; for her burial monument, biographical research identifies Duke Town cemetery in Calabar. Do not book a supposed Itu grave tour." },
+      { label: "Check the Women War Memorial before leaving Uyo", detail: "Local tourism documentation places the 1929 Women War Memorial Museum in Ikot Abasi. Ask about current opening, guide arrangements and access; published heritage history does not verify October 2026 visitor hours or admission." },
       { label: "Pair heritage with coastal stops", detail: "Ibeno and Ikot Abasi are easier to justify as full-day routes when history and coastline are combined." }
     ],
     source: { label: "Akwa Ibom State Government — About Akwa Ibom", href: "https://akwaibomstate.gov.ng/about-akwa-ibom/" },
-    lastReviewed: "2026-10-07"
+    sources: [
+      { label: "The Guardian Nigeria — Mary Slessor died at Use but was buried in Calabar", href: "https://guardian.ng/sunday-magazine/mary-mitchell-slessor-a-catalyst-of-change/" },
+      { label: "Discover Akwa Ibom — 1929 Women War Memorial, Ikot Abasi", href: "https://discoverakwaibom.com/heritage-sites/1929-women-war-memorial/" },
+    ],
+    lastReviewed: "2026-10-16"
   }
 ];

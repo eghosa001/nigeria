@@ -141,26 +141,31 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
     shortTitle: "African Traditional Food Fair",
     kind: "event",
     region: "Federal Capital Territory",
-    summary: "The 8th African Traditional Food Fair is scheduled for 17 October 2026 from 10:00 AM to 6:00 PM at the FCT Exhibition Pavilion in Abuja, with indigenous food, tasting, cooking, farmers and food producers.",
+    summary: "The organiser lists the African Traditional Food Fair for 17 October 2026 at Abuja’s FCT Exhibition Pavilion, while local calendars conflict on whether an additional 16 October programme exists. Check the official attendee registration and Friday access before travelling.",
     intro: [
-      "The 2026 African Traditional Food Fair is a one-day Abuja event focused on indigenous African food systems under the theme 'Reviving Indigenous Foods for Healthy People, Climate Resilience and a Food-Secure Nigeria'.",
-      "Visit Abuja lists the fair for Saturday 17 October from 10:00 AM to 6:00 PM at the FCT Exhibition Pavilion beside the International Conference Centre."
+      "The event organiser’s official website identifies the 8th African Traditional Food Fair for Saturday 17 October 2026 at the FCT Exhibition Pavilion on Herbert Macaulay Way in Abuja. Its programme spans indigenous-food stalls, live cooking, nutrition conversations, cultural performances and policy discussions.",
+      "Public timetables disagree: Visit Abuja’s individual event page lists 17 October from 10:00 AM to 6:00 PM, but its October events calendar lists 16–17 October. The organiser’s own homepage and attendee registration page identify 17 October without confirming an open Friday programme. Do not assume public entry on Friday 16 October until the organiser confirms the additional day and times."
     ],
     bestFor: ["Food", "Culture", "Family outings", "October events"],
     highlights: [
       { name: "17 October 2026", detail: "The fair runs from 10:00 AM to 6:00 PM." },
       { name: "FCT Exhibition Pavilion", detail: "The listed venue is on Herbert Macaulay Way in Central Area, beside the International Conference Centre." },
       { name: "Indigenous food & tasting", detail: "The programme brings together farmers, chefs, food producers, policymakers and food innovators with public tasting, cooking and produce stalls." },
-      { name: "One-day event", detail: "Build the visit around the published Saturday programme rather than treating it as a multi-day festival." }
+      { name: "Registration and date check", detail: "The organiser provides an attendee registration form at afritraditionalfoodfair.org/register/. Its landing page confirms 17 October; ask directly before planning for Friday 16 October." }
     ],
     planning: [
-      { label: "Confirm access before leaving", detail: "Check the organiser's current event page for registration, ticket or entry updates." },
+      { label: "Register using the organiser’s attendee form", detail: "The official registration page offers an Attendee category and requests name, email, phone and consent. Use https://afritraditionalfoodfair.org/register/; the form’s availability does not establish a paid or free entry policy, so ask the organiser to confirm any cost." },
       { label: "Arrive with a Central Area transport plan", detail: "The venue is close to major Abuja event and conference traffic; allow time for parking or ride-hailing pickup." },
       { label: "Check food-allergy details directly", detail: "If you have a serious allergy or dietary restriction, ask individual vendors about ingredients rather than relying on assumptions." },
-      { label: "Re-check the programme", detail: "Talks, demonstrations and vendor schedules can change even when the event date stays fixed." }
+      { label: "Resolve Friday versus Saturday before travelling", detail: "For Friday 16 October, the local events calendar conflicts with the official 17 October date. Contact the organiser via afritradfoodfair@gmail.com or +234 813 668 6874 to confirm whether Friday is open to attendees; do not rely on a third-party listing as a ticket." }
     ],
-    source: { label: "Visit Abuja — 8th African Traditional Food Fair", href: "https://www.visitabuja.org/event/8th-african-traditional-food-fair/" },
-    lastReviewed: "2026-10-06"
+    source: { label: "African Traditional Food Fair — organiser and 2026 venue", href: "https://afritraditionalfoodfair.org/" },
+    sources: [
+      { label: "African Traditional Food Fair — official attendee registration", href: "https://afritraditionalfoodfair.org/register/" },
+      { label: "Visit Abuja — event date as listed on individual event page", href: "https://www.visitabuja.org/event/8th-african-traditional-food-fair/" },
+      { label: "Visit Abuja — October calendar listing, including conflicting Friday date", href: "https://www.visitabuja.org/events/" },
+    ],
+    lastReviewed: "2026-10-16"
   },
   {
     slug: "abuja-international-film-festival-2026",
@@ -9409,8 +9414,8 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
     "region": "Cross River State",
     "summary": "Plan Becheve Nature Reserve as a conservation-focused Obudu Plateau visit with current access, guide and trail checks.",
     "intro": [
-      "Becheve Nature Reserve provides a distinct forest-and-conservation experience within the Obudu Plateau area.",
-      "Treat it as a managed natural environment rather than an unrestricted hiking zone and confirm current visitor arrangements."
+      "The Nigerian Conservation Foundation (NCF) identifies Becheve Nature Reserve on the Obudu Plateau as a community-owned montane forest, jointly held by six communities and managed in collaboration with NCF. Its published programme describes conservation and environmental education, not simply a resort hiking attraction.",
+      "NCF says the Cross River State Government built a canopy walkway here in 2006. That is historical infrastructure evidence, not confirmation that the walkway remains safe, accessible or open in October 2026. The conservation landscape and any resort-operated tourist facilities require separate, current checks."
     ],
     "bestFor": [
       "Forest",
@@ -9420,45 +9425,45 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
     ],
     "highlights": [
       {
-        "name": "Montane nature",
-        "detail": "The reserve adds forest and biodiversity value to a highland resort trip."
+        "name": "Community-owned montane forest",
+        "detail": "NCF describes conservation work jointly managed with six Obudu Plateau communities; visitors should respect custodians and the protected habitat."
       },
       {
-        "name": "Trail experience",
-        "detail": "Use recognised routes and local guidance rather than improvising through vegetation."
+        "name": "Historic 2006 canopy walkway",
+        "detail": "NCF records the walkway as a past ecotourism development. No October 2026 maintenance inspection or public-access notice has been established."
       },
       {
-        "name": "Obudu pairing",
-        "detail": "The main resort and Ulanga views can form separate blocks in a longer stay."
+        "name": "Highland biodiversity",
+        "detail": "NCF identifies the reserve and neighbouring Obudu Plateau as valuable habitats for Afro-tropical highland bird species."
       },
       {
-        "name": "Wildlife etiquette",
-        "detail": "Observe quietly and do not pursue animals for photographs."
+        "name": "Active conservation responsibilities",
+        "detail": "NCF describes biodiversity monitoring, environmental education, community engagement and afforestation in the area."
       }
     ],
     "planning": [
       {
-        "label": "Confirm reserve access",
-        "detail": "Check whether a guide or advance arrangement is required."
+        "label": "Ask NCF and community custodians about visitor permission",
+        "detail": "Before travelling to Obudu Plateau, confirm whether nature walks are currently accepted, who is authorised to guide, any entry charge and how access is arranged. An NCF project description is not a 2026 booking service."
       },
       {
-        "label": "Prepare for wet trails",
-        "detail": "Use suitable footwear and rain protection."
+        "label": "Do not assume the canopy walkway is open",
+        "detail": "The published 2006 construction date is not proof of current structural safety. Do not enter a raised walkway without permission and a current on-site safety assessment."
       },
       {
-        "label": "Carry water",
-        "detail": "Do not assume supplies on reserve trails."
+        "label": "Plan for steep, wet plateau conditions",
+        "detail": "Wear grippy footwear, bring drinking water and rain protection, and stay on locally approved paths. Stop a walk when weather or conditions make the route unsafe."
       },
       {
-        "label": "Leave no trace",
-        "detail": "Carry waste out and avoid disturbing habitat."
+        "label": "Protect wildlife and community-owned habitat",
+        "detail": "Carry out litter, avoid disturbing nesting birds or vegetation, and seek permission before photographing residents or sacred areas."
       }
     ],
     "source": {
-      "label": "Obudu LGA — Tourism",
-      "href": "https://obudu.crossriverstate.gov.ng/tourism"
+      "label": "Nigerian Conservation Foundation — Becheve Nature Reserve programme",
+      "href": "https://ncfnigeria.org/forest-green-recovery-nigeria/"
     },
-    "lastReviewed": "2026-10-05"
+    "lastReviewed": "2026-10-16"
   },
   {
     "slug": "ulanga-mountain-obudu-guide",
