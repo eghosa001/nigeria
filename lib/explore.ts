@@ -13740,8 +13740,10 @@ export const exploreGuides: ExploreGuide[] = firstPassExploreGuides.map((guide) 
   const extra = furtherVisitorDecisions20261016[guide.slug];
   if (!extra) return guide;
   const sources = [...(guide.sources ?? [])];
-  if (guide.source?.href !== extra.source.href && !sources.some(x => x.href === extra.source.href)) {
-    sources.push(extra.source);
+  for (const citation of [extra.source, ...(extra.additionalSources ?? [])]) {
+    if (guide.source?.href !== citation.href && !sources.some(x => x.href === citation.href)) {
+      sources.push(citation);
+    }
   }
   return {
     ...guide,
