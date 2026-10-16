@@ -1,3 +1,4 @@
+import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
 import { verifiedTourDecisions20261016 } from "@/lib/explore-verified-visitor-updates-2026-10-16";
@@ -13732,11 +13733,31 @@ export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide
   };
 });
 
+// Keep prior primary visitor reviews intact. These follow-up research notes
+// add independently attributable decisions to nine existing published guides;
+// they never invent admission prices, hours, licences or a personal visit.
+const exploreGuidesWithFurtherEvidence: ExploreGuide[] = exploreGuides.map((guide) => {
+  const extra = furtherVisitorDecisions20261016[guide.slug];
+  if (!extra) return guide;
+  const sources = [...(guide.sources ?? [])];
+  if (guide.source?.href !== extra.source.href && !sources.some(x => x.href === extra.source.href)) {
+    sources.push(extra.source);
+  }
+  return {
+    ...guide,
+    intro: extra.intro && !guide.intro.includes(extra.intro) ? [...guide.intro, extra.intro] : guide.intro,
+    planning: guide.planning.some(x => x.label === extra.planning.label)
+      ? guide.planning : [...guide.planning, extra.planning],
+    sources,
+    lastReviewed: "2026-10-16",
+  };
+});
+
 // The checked-in Tour catalog is immutable for the lifetime of this Worker
 // module. Index once instead of scanning every record for each guide request.
 // Keep the first record for a slug, matching Array.find if duplicates exist.
 const exploreGuidesBySlug = new Map<string, ExploreGuide>();
-for (const guide of exploreGuides) {
+for (const guide of exploreGuidesWithFurtherEvidence) {
   if (!exploreGuidesBySlug.has(guide.slug)) {
     exploreGuidesBySlug.set(guide.slug, guide);
   }
