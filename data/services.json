@@ -7431,7 +7431,7 @@
     "feeLabel": "NHIA publishes ₦22,000 per person/year for group packages and ₦1,500 ID charge",
     "feeNote": "NHIA's GIFSHIP registration-requirements page lists a minimum 10-person group of ₦220,000 per year, ₦22,000 for each additional member, and ₦1,500 per enrollee ID card. The individual/family text is internally inconsistent about persons and totals; do not calculate a binding solo/family price from it. Obtain a current written NHIA package confirmation before Remita payment.",
     "timeline": "Depends on payment confirmation, identity verification and the HMO/HCP selection process.",
-    "status": "verified",
+    "status": "conflict",
     "officialPortal": "https://www.nhia.gov.ng/service/land-insurance/",
     "requirements": [
       "NIN for every enrollee; NHIA requires it for both individual/family and group registration.",
@@ -7455,7 +7455,8 @@
       "Some Nigerian diaspora members can sponsor relations or friends residing in Nigeria under the published GIFSHIP programme.",
       "The official enrolment-requirements page contains contradictory individual/family numerical wording; ask NHIA directly and keep its quote rather than inventing a total.",
       "Paying a Remita bill does not alone prove that coverage has been activated.",
-      "Different NHIA programmes have different dependant rules; do not apply the employer's spouse-plus-four rule to every GIFSHIP group."
+      "Different NHIA programmes have different dependant rules; do not apply the employer's spouse-plus-four rule to every GIFSHIP group.",
+      "Editorial review remains flagged until NHIA reconciles the published individual/family pricing; only the clearly stated group amounts are used here as reference prices."
     ],
     "sources": [
       {
