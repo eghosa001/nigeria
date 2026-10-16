@@ -151,7 +151,7 @@ for (const slug of realitySlugs) {
     errors.push(slug + ": travel warning not directly linked to visitor-facing guide.");
 }
 const ngwoGuide = exploreGuides.find(guide => guide.slug === "ngwo-pine-forest-guide");
-if (!ngwoGuide?.summary.includes("not verified operational facilities"))
+if (!ngwoGuide?.summary.includes("not a verified operating ride"))
   errors.push("Ngwo must not promote a future zipline/cable car as live.");
 const gombeGuide = exploreGuides.find(guide => guide.slug === "nafada-riverside-guide");
 if (!gombeGuide?.summary.includes("advises against all travel"))
