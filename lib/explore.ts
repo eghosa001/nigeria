@@ -10259,6 +10259,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
       "label": "Osun State Government — Tourist Centres",
       "href": "https://www.osunstate.gov.ng/tourist-centres/"
     },
+    "sources": [{ "label": "Osun State Government — Kiriji site identified at Imesi-Ile (2014)", "href": "https://www.osunstate.gov.ng/2014/09/osun-community-tasks-aregbesola-development/" }],
     "lastReviewed": "2026-10-05"
   },
   {
