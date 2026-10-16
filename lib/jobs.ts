@@ -6,6 +6,7 @@ import { applyIssuerPortalResearch20261016 } from "@/lib/job-issuer-portals-revi
 import { applyIssuerCareerReview20261016B } from "@/lib/job-issuer-career-research-2026-10-16-b";
 import { applyMoreIssuerCareerReviews20261016 } from "@/lib/job-issuer-more-reviewed-2026-10-16";
 import { applyIndividualMoniepointRoleResearch20261016 } from "@/lib/job-moniepoint-exact-roles-2026-10-16";
+import { applyConcludedIssuerWindows20261017 } from "@/lib/job-concluded-windows-2026-10-17";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
 import { verifiedFmnRoles20261012 } from "@/lib/job-growth-wave-11";
@@ -3841,6 +3842,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(applyIssuerPortalResearch20261016)
   .map(applyIssuerCareerReview20261016B)
   .map(applyMoreIssuerCareerReviews20261016)
+  .map(applyConcludedIssuerWindows20261017)
   .map(applyCurrentJobCorrections)
   .map(closeExpiredJob)
   .map(applyVerifiedJobPaths20261016)
@@ -3865,6 +3867,9 @@ export const internationalOpportunities = jobOpportunities.filter((item) => item
 // eligible as long as their own publication evidence supports indexing.
 export function isIndexableJobOpportunity(item: CareerOpportunity): boolean {
   if (templateCareerPortalSlugs.has(item.slug)) return false;
+  // The ended Deloitte intake has no remaining live application or unique
+  // post-application service pathway; retain its useful archive internally.
+  if (item.slug === "deloitte-nigeria-early-careers" && getEffectiveJobStatus(item) === "closed") return false;
   // Follow the same deadline and source-verification lifecycle as the
   // visitor-facing open list and JobPosting schema. Never index a stale
   // one-off vacancy as if the last "Apply" check were still current.
