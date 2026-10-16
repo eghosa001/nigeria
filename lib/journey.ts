@@ -383,7 +383,7 @@ const verifiedFinancialAndPassportJourneys: Record<string, ServiceJourney> = {
   "emergency-travel-certificate": {
     mode: "agency-guided", modeLabel: "Nigerian mission emergency document",
     startLabel: "Confirm ETC versus STEP with your mission", startDetail: "NIS has published an emergency certificate and announced STEP replacement; verify actual document and travel validity.",
-    onlineAvailable: true,
+    onlineAvailable: false,
     physicalStatus: "may-be-required", physicalLabel: "The mission may need personal identity/capture attendance",
     alternativeLabel: "If departure or transit is uncertain", alternativeDetail: "Ask the Nigerian mission and carrier which emergency document is acceptable before paying.",
   },
@@ -404,7 +404,7 @@ const verifiedFinancialAndPassportJourneys: Record<string, ServiceJourney> = {
   "nhia-private-sector-coverage": {
     mode: "agency-guided", modeLabel: "Employer-led NHIA OPSSHIP",
     startLabel: "Employer applies to NHIA", startDetail: "NHIA states that businesses with five or more employees apply first; NHIA then coordinates workforce enrolment.",
-    onlineAvailable: true,
+    onlineAvailable: false,
     physicalStatus: "may-be-required", physicalLabel: "NHIA may require employer/forms coordination",
     alternativeLabel: "If the employer has fewer than five staff", alternativeDetail: "Review NHIA's individual or group GIFSHIP route instead of claiming OPSSHIP eligibility.",
   },
@@ -425,7 +425,7 @@ const verifiedFinancialAndPassportJourneys: Record<string, ServiceJourney> = {
   "pencom-unremitted-contributions": {
     mode: "agency-guided", modeLabel: "PFA reconciliation or PenCom complaint",
     startLabel: "Check PFA credits before alleging non-remittance", startDetail: "Distinguish genuinely unpaid remittances from funds already held but not credited to the RSA.",
-    onlineAvailable: true,
+    onlineAvailable: false,
     physicalStatus: "may-be-required", physicalLabel: "A PFA can request identity documents or data recapture",
     alternativeLabel: "If your employer failed to remit", alternativeDetail: "Report the employer name and address directly to PenCom and retain the complaint reference.",
   },
@@ -446,7 +446,7 @@ const verifiedFinancialAndPassportJourneys: Record<string, ServiceJourney> = {
   "nhf-contribution-refund": {
     mode: "agency-guided", modeLabel: "FMBN qualified NHF refund",
     startLabel: "Confirm age/service or incapacity eligibility", startDetail: "FMBN requires withdrawal forms plus supporting employment, retirement, account or estate records.",
-    onlineAvailable: true,
+    onlineAvailable: false,
     physicalStatus: "may-be-required", physicalLabel: "FMBN's refund forms and documents may be submitted through a branch",
     alternativeLabel: "If the application is incomplete", alternativeDetail: "Resolve missing contribution or legal-estate documents rather than paying an agent.",
   },
