@@ -3,7 +3,7 @@ import type { MovieEditorialProfile } from "@/lib/movie-editorial-profiles";
 import { movieEditorialProfilesRemainingB } from "@/lib/movie-editorial-profiles-remaining-b";
 import { featuredEditorialProfiles } from "@/lib/movie-editorial-profiles-featured";
 
-// Five individually researched corrections to existing, canonical movie pages.
+// Eight individually researched corrections to existing, canonical movie pages.
 // Sources checked 16 October 2026. A database duration is not a measured video
 // duration, a film credit is not a rights grant, and a publisher description is
 // not evidence that a film has been watched independently.
@@ -25,39 +25,6 @@ export const reviewedMovieRecords20261016: Record<string, RecordRepair> = {
         href: "https://shutterspeedprojects.com/wp-content/uploads/2025/10/ssp-brochure-2025.pdf",
         lastChecked: "2026-10-16",
         note: "Official production brochure's Oil and Water entry names Olubunmi Akingbola as director and describes an estranged mother and daughter; the generic original-video description instead says produced and directed by Biodun Stephen."
-      }
-    ]
-  },
-  "the-man-i-never-knew": {
-    synopsis: "Mila meets Val at a resort and defies a family-arranged marriage to be with him. Years later, someone who looks like her former love appears but insists he has never met her. The 2026 Royal Arts TV romance turns this apparent reunion into a question of identity; this summary does not reveal the explanation.",
-    references: [
-      {
-        label: "FilmFlux — The Man I Never Knew (2026) original release record",
-        href: "https://filmflux.app/movie/73b3559e-59aa-49f3-869f-74d69ca0a8e5-the-man-i-never-knew",
-        lastChecked: "2026-10-16",
-        note: "Documents the resort meeting, cancelled arranged marriage, identity complication, publisher Royal Arts TV, September 24 release and billed cast. It does not claim a pregnancy."
-      },
-      {
-        label: "Nollywood Times — original Royal Arts TV release reporting",
-        href: "https://www.nollywoodtimes.com/2026/09/the-man-i-never-knew-starring-toosweet.html",
-        lastChecked: "2026-10-16",
-        note: "Independent September 25 report confirms Royal Arts TV's 24 September 2026 release, listed performers, and a lookalike who denies recognising Mila; no pregnancy is reported."
-      }
-    ]
-  },
-  "man-of-the-year-2026": {
-    references: [
-      {
-        label: "Nollywire — Man of the Year (2026) film profile",
-        href: "https://nollywire.com/films/man-of-the-year",
-        lastChecked: "2026-10-16",
-        note: "Independently corroborates Nigerian drama, Maurice Sam and Sarian Martins; its 101-minute listing conflicts with the 126-minute runtime given by NollyMeter and is not an exact YouTube-player measurement."
-      },
-      {
-        label: "NollyMeter — Man of the Year original January 2026 film listing",
-        href: "https://nollymeter.com/movies/man-of-the-year",
-        lastChecked: "2026-10-16",
-        note: "Publisher-description synopsis, 20 January 2026 release, credited leads and a 126-minute running-time listing. The duration discrepancy remains unresolved; no director attribution inferred."
       }
     ]
   },
@@ -169,31 +136,6 @@ const featured = featuredEditorialProfiles;
 const sourceQuestion = (question: string, answer: string) => ({ question, answer });
 
 export const reviewedMovieDossiers20261016: Record<string, MovieEditorialProfile> = {
-  "the-man-i-never-knew": {
-    ...existing["the-man-i-never-knew"],
-    sections: [
-      {
-        heading: "Mila, Val and the person who denies knowing her",
-        paragraphs: [
-          "Mila meets Val during a resort visit and falls for him strongly enough to go against her father's choice of a marriage partner. The next major conflict is not simply a former lover returning. After years have passed, she comes across someone who looks like Val, but he claims never to have known her. The production's published description establishes this as an identity mystery; the film-specific record supplies further information about the explanation, which is left out here for viewers who want to avoid spoilers.",
-          "The distinction matters because a previous description of this film claimed Mila was abandoned while pregnant and later raised a child alone. Neither the original film record examined for this revision nor contemporary coverage supports those pregnancy and parenting details. They have been withdrawn, rather than repeated as established plot facts.",
-          "TooSweet Annan, Chisom Agoawuike and Mojoyin Fadaka are named in both the publisher-linked FilmFlux entry and release reporting. Those sources do not establish which performer portrays every supporting character, so no extra roles are assigned."
-        ]
-      },
-      {
-        heading: "Which release is this, and where does the evidence stop?",
-        paragraphs: [
-          "The Nigerian film appeared on Royal Arts TV on 24 September 2026; an independent 25 September news report describes its mystery about a familiar-looking man who refuses recognition. The catalogued running time is approximately 94 minutes. Use the original publisher-linked YouTube video on this page rather than confusing a similarly named film, a trailer or an unauthorised repost with the full movie.",
-          "The available film-specific sources do not reliably name a director. The plot explanation in a third-party catalogue should also not be confused with a first-hand review of the finished movie. The central identification problem is enough to explain the story's premise without presenting unsupported details as fact."
-        ]
-      }
-    ],
-    questions: [
-      sourceQuestion("Does Mila have a child in The Man I Never Knew?", "The sources checked for this update do not confirm pregnancy or a child. The verified setup concerns Mila's resort romance with Val and a later identity mystery."),
-      sourceQuestion("Where can I watch The Man I Never Knew (2026)?", "The film was released through Royal Arts TV on 24 September 2026. Follow the original publisher video linked on this page; access can change."),
-      sourceQuestion("Who appears in The Man I Never Knew?", "TooSweet Annan, Chisom Agoawuike and Mojoyin Fadaka are the billed performers. Specific character assignments beyond the documented storyline remain unverified.")
-    ]
-  },
   "oil-and-water-2025": {
     ...existing["oil-and-water-2025"],
     crew: [
@@ -212,24 +154,6 @@ export const reviewedMovieDossiers20261016: Record<string, MovieEditorialProfile
     questions: [
       ...existing["oil-and-water-2025"].questions,
       sourceQuestion("Who directed Oil and Water (2025)?", "The producer's official portfolio and brochure, supported by FilmFlux, name Olubunmi Akingbola. A conflicting director phrase on the original video is disclosed; on-screen title credits were not independently viewed.")
-    ]
-  },
-  "man-of-the-year-2026": {
-    ...existing["man-of-the-year-2026"],
-    sections: [
-      ...existing["man-of-the-year-2026"].sections,
-      {
-        heading: "Confirmed release, cast and running-time uncertainty",
-        paragraphs: [
-          "The original Maurice Sam TV full-length video was published on 20 January 2026 and describes a fighter whose difficulties extend beyond competition into love and pride. Nollywire identifies the same film as a 2026 Nigerian drama and lists Maurice Sam and Sarian Martins among its stars. The channel's film title spells her surname Martin; those two spellings do not establish different performers.",
-          "Runtime records conflict: Nollywire shows 1 hour 41 minutes and NollyMeter lists 2 hours 6 minutes. Neither is a verified measurement of the currently accessible YouTube player, so the page should not present a single precise duration as settled. No identified reliable source establishes the director; no directorial credit is invented."
-        ]
-      }
-    ],
-    questions: [
-      ...existing["man-of-the-year-2026"].questions,
-      sourceQuestion("How long is Man of the Year (2026)?", "Nollywire lists 101 minutes, while NollyMeter lists 126 minutes. Check the original Maurice Sam TV player for its actual current duration."),
-      sourceQuestion("Who directed Man of the Year (2026)?", "The checked film-specific publisher and catalogue records do not establish a director, so this page does not assign one.")
     ]
   },
   "for-richer-for-poorer-2026": {
@@ -267,7 +191,8 @@ export const reviewedMovieDossiers20261016: Record<string, MovieEditorialProfile
       sourceQuestion("Which One More Night film does this guide cover?", "The 7 February 2025 full-length Frederick Leonard TV release featuring Frederick Leonard and Cynthia Clarke, not another production sharing the title."),
       sourceQuestion("Who directed One More Night (2025)?", "The film-specific sources checked identify production crew but do not reliably name the director. This guide therefore leaves the director unassigned.")
     ]
-  }  "a-place-with-you": {
+  },
+  "a-place-with-you": {
     ...existing["a-place-with-you"],
     roles: [
       { actor: "Uche Montana", character: "Chidiomimi" },
