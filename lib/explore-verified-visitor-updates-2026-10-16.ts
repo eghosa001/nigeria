@@ -58,12 +58,12 @@ export const verifiedTourDecisions20261016: Record<string, VerifiedVisitAddition
     source: { label: "NCMM — Nigeria's federal museums and collections", href: "https://museum.ng/museums/" },
     intro: "Gidan Makama is a Kano heritage museum, not the Kurmi trading market or a hall inside the Emir's private residential palace. Those different institutions answer different visitor interests; an old-city heritage itinerary should not present their hours or access rights as interchangeable.",
     planning: { label: "Choose the museum visit independently of the market and palace", detail: "Use the relevant NCMM and Kano heritage contacts to confirm which museum entrance, collections and exhibitions are available on your chosen date. Ask about current ticketing and photography rules. For a separate Kurmi Market visit, ask traders before taking photographs and do not block trading lanes. A museum listing does not validate today's admission fee or palace entry." },
-  }
+  },
   "nigeria-unesco-heritage-guide": {
     source: { label: "UNESCO — Nigeria World Heritage and Tentative Lists", href: "https://whc.unesco.org/en/statesparties/ng/" },
     intro: "Nigeria has two inscribed UNESCO World Heritage properties, Osun-Osogbo Sacred Grove and Sukur Cultural Landscape. Old Oyo, Idanre, Kano's ancient walls, the Ikom monoliths and other heritage landscapes appear on the Tentative List. A tentative submission is not a third World Heritage inscription.",
     planning: { label: "Read each UNESCO designation before choosing where to travel", detail: "Pick an actual inscribed site or a specific tentative-list heritage landscape according to your interests, not an assumed admission privilege. UNESCO's Nigeria index explains designation, while current visitor safety, permitted entrances, operating hours, weather and fee information must come from the relevant local custodians and operators. For remote or conflict-affected landscapes, historical status is not a recommendation to travel." },
-  }
+  },
   "oyo-state-travel-guide": {
     source: { label: "UNESCO — Old Oyo archaeological ruins (Tentative List)", href: "https://whc.unesco.org/en/tentativelists/489" },
     intro: "Old Oyo is an archaeological former-capital landscape documented by UNESCO, not an Ibadan city-centre attraction. A trip focused on Ibadan's civic landmarks and food has different transport requirements from a specialist journey to Old Oyo's extensive earthworks.",
@@ -88,12 +88,12 @@ export const verifiedTourDecisions20261016: Record<string, VerifiedVisitAddition
     source: { label: "UNESCO — Ancient Kano City Walls and associated Emir's Palace", href: "https://whc.unesco.org/en/tentativelists/5171/" },
     intro: "UNESCO's Kano tentative-list description treats the Emir's Palace as a living historical institution inside an inhabited city, not a museum that guarantees tourists full interior access. Similar visitor questions arise at royal sites across Nigeria, where ceremonial spaces and public surroundings may have separate custodians.",
     planning: { label: "Distinguish a public viewpoint from permission to enter a royal compound", detail: "For Kano, identify a lawful public approach and ask the palace authorities whether any actual visitor route is permitted that day. Apply the same permission-first question to other active palaces, but verify each independently: a palace being named by a tourism site does not confer entrance to residences or ceremonies. Confirm dates, dress requirements, guide arrangements and photography consent before travel." },
-  }
+  },
   "northern-museums-heritage-route": {
     source: { label: "NCMM — Museum locations and contacts", href: "https://museum.ng/museums/" },
     intro: "Northern Nigeria's federal museum listings represent multiple separate institutions and collections, not a single corridor where one guide or ticket covers them all. Museum access is a different practical decision from exploring palace surroundings, market lanes or UNESCO-listed archaeological ruins.",
     planning: { label: "Confirm each museum and collection before choosing a multi-city route", detail: "Select a first city and ask the relevant NCMM museum which galleries and exhibits are currently open, its exact entrance, visiting hours and admission. Check transport separately for any second city; do not infer a shared ticket, distance or current exhibition from a national directory. Where a heritage site is outside a museum, confirm local custodian permission and appropriate security information independently." },
-  }
+  },
   "sukur-terraces-guide": {
     source: { label: "UNESCO — Sukur Cultural Landscape (World Heritage)", href: "https://whc.unesco.org/en/list/938/" },
     intro: "Sukur's hill terraces are part of a living agricultural and sacred landscape rather than a free-access hiking network. UNESCO recognises the whole Sukur Cultural Landscape as World Heritage, but inscription neither guarantees safe travel to Madagali nor visitor permission on privately or communally used paths.",
