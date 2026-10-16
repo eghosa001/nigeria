@@ -919,7 +919,7 @@
     "slug": "jamb-profile-code",
     "title": "How to generate a JAMB profile code",
     "shortTitle": "JAMB profile code",
-    "summary": "To get your JAMB profile code, text NIN, one space, and your 11-digit NIN (for example, NIN 00123456789) to 55019 or 66019 from the candidate's own phone number. Keep the returned code and the SIM for e-PIN purchase and later JAMB transactions.",
+    "summary": "To get your JAMB profile code, text NIN, one space, and your 11-digit NIN (for example, NIN 00123456789) to 55019 or 66019 from the candidate's own phone number. Keep the returned code and the SIM for e-PIN purchase and later JAMB transactions. The profile code is a persistent candidate identifier, not an admission or purchased e-PIN; NIN/name mismatches and unavailable linked SIMs must be resolved before a paid registration attempt.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
@@ -927,17 +927,23 @@
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "11-digit NIN",
-      "A phone number/SIM that will remain tied to the candidate's JAMB transactions"
+      "A phone number/SIM that will remain tied to the candidate's JAMB transactions",
+      "Enough airtime on the linked SIM for JAMB's SMS request (JAMB support currently advises at least ₦50 airtime, not merely data balance)."
     ],
     "steps": [
       "Using the candidate's own phone number that will remain linked to JAMB transactions, open a new SMS and type NIN followed by one space and the candidate's 11-digit NIN.",
+      "Check that the candidate's SIM is registered in the candidate's own name and that NIN biodata agrees with the intended examination documents; JAMB says numbers cannot be shared between siblings or candidates.",
+      "Confirm there is sufficient airtime (JAMB's help centre says at least ₦50), that ordinary SMS is enabled, and that the NIN is exactly 11 digits before sending the text.",
       "Check that the message contains the correct NIN and no extra words, then send the SMS to either 55019 or 66019 from that same candidate number.",
       "Wait for JAMB's reply on the same SIM and confirm that the returned message contains the candidate's profile code or a clear error that needs to be corrected.",
+      "If the response fails or displays incorrect personal particulars, stop before buying an e-PIN; verify the underlying NIN with NIMC and open an official JAMB support ticket if the SIM command remains unsuccessful.",
       "Keep the profile code and linked SIM securely because the code is used to buy the e-PIN and the phone number remains the candidate's identifier for later JAMB transactions."
     ],
     "notes": [
       "Use the exact SMS format NIN followed by one space and the 11-digit NIN; send it to 55019 or 66019.",
-      "JAMB says the phone number becomes linked to the candidate's biodata and future transactions, so do not use a phone number controlled by an agent."
+      "JAMB says the phone number becomes linked to the candidate's biodata and future transactions, so do not use a phone number controlled by an agent.",
+      "A profile code is not a paid UTME or Direct Entry e-PIN; it does not complete registration at a CBT centre.",
+      "JAMB's FAQ includes older cycle-specific age guidance: candidates must use the notice for their own examination year instead of treating the FAQ's 2025 threshold as the 2026 rule."
     ],
     "sources": [
       {
@@ -952,13 +958,19 @@
         "url": "https://www.jamb.gov.ng/PDFs/2026/2026%20TRAINING%20MANUAL%20%20final.pdf",
         "published": "2026",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "JAMB",
+        "url": "https://support.jamb.gov.ng/faqs",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "jamb-2026-utme-registration",
       "jamb-retrieve-profile-code"
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "JAMB profile code",
       "How to generate a JAMB profile code",
@@ -969,7 +981,7 @@
     "slug": "jamb-2026-utme-registration",
     "title": "How much is JAMB UTME registration in 2026?",
     "shortTitle": "2026 JAMB registration",
-    "summary": "JAMB's 2026 UTME e-PIN package was ₦7,200 without the optional mock exam or ₦8,700 with the mock, according to its 2026 training manual. Candidates need a NIN-based profile code, an approved e-PIN and in-person registration at an accredited CBT centre.",
+    "summary": "JAMB's 2026 UTME e-PIN package was ₦7,200 without the optional mock exam or ₦8,700 with the mock, according to its 2026 training manual. Candidates need a NIN-based profile code, an approved e-PIN and in-person registration at an accredited CBT centre. The quoted 2026 figures are historical package amounts as of October 2026, not an invitation to register after the official window. Registration must be completed at an accredited CBT centre; the e-PIN purchase alone is not registration.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "₦7,200 UTME only / ₦8,700 with mock",
@@ -980,17 +992,24 @@
       "NIN",
       "JAMB profile code",
       "Active candidate phone number",
-      "e-PIN"
+      "e-PIN",
+      "A functioning personal email address and candidates' intended institution, course and UTME subject choices; awaiting results must be uploaded when released."
     ],
     "steps": [
       "From the candidate's own SIM, create the JAMB profile code by texting NIN, a space and the 11-digit NIN to 55019 or 66019, then keep the reply.",
+      "Check JAMB's 2026 bulletin or timetable for the actual registration dates before buying anything. A live advertisement for a later examination cycle does not reopen 2026 UTME registration.",
+      "Ensure the candidate's NIN name and birth details agree with examination credentials and that the candidate's SIM has not been used for another person's JAMB profile.",
       "Check the active UTME registration window and purchase the correct 2026 e-PIN package through a JAMB-approved payment or vending channel; do not pay an unofficial agent.",
       "At a JAMB-accredited CBT centre, provide the profile code and e-PIN, submit the candidate's biodata and exam selections and undergo biometric capture as directed by the registration officer.",
+      "Confirm the selected institutions/programmes, examination town and subject combination on the draft record; candidates with disabilities should indicate the required support during registration.",
+      "If the centre reports a biometric or profile validation error, use JAMB's official support route and accredited centre instructions rather than allowing an agent to substitute a different candidate's fingerprints or SIM.",
       "Review the captured personal and examination details before confirming the submission, and keep the official registration slip and phone number securely."
     ],
     "notes": [
       "The figures here document the 2026 UTME registration cycle; they are not proof that new 2026 applications remain open in October or that a later cycle will cost the same.",
-      "JAMB describes UTME/DE registration as cashless and requires approved channels and accredited CBT centres."
+      "JAMB describes UTME/DE registration as cashless and requires approved channels and accredited CBT centres.",
+      "The mock-exam package is optional; the two 2026 prices must not be combined or treated as an additional compulsory fee.",
+      "JAMB requires awaiting results to be uploaded to its portal after release; a school admission offer does not replace the required upload."
     ],
     "sources": [
       {
@@ -1005,12 +1024,18 @@
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/FAQ",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "JAMB",
+        "url": "https://support.jamb.gov.ng/faqs",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "jamb-profile-code"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "2026 JAMB registration",
       "How much is JAMB UTME registration in 2026?",
@@ -1068,7 +1093,7 @@
     "slug": "jamb-retrieve-lost-epin",
     "title": "How to retrieve a lost JAMB UTME e-PIN",
     "shortTitle": "Retrieve lost JAMB e-PIN",
-    "summary": "If a purchased JAMB UTME e-PIN is lost, send UTMEPIN to 55019 or 66019 from the same SIM linked to the candidate's JAMB profile. JAMB returns the previously issued PIN to that number; this is retrieval, not a new purchase.",
+    "summary": "If a purchased JAMB UTME e-PIN is lost, send UTMEPIN to 55019 or 66019 from the same SIM linked to the candidate's JAMB profile. JAMB returns the previously issued PIN to that number; this is retrieval, not a new purchase. This is recovery of a previously paid UTME e-PIN, not profile-code recovery, Direct Entry recovery or replacement of a SIM. The SIM and examination type must match the original purchase.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "SMS/network charge may apply",
@@ -1076,18 +1101,24 @@
     "officialPortal": "https://www.jamb.gov.ng",
     "requirements": [
       "The unique mobile number linked to the candidate profile",
-      "An e-PIN that was previously purchased or issued for the candidate"
+      "An e-PIN that was previously purchased or issued for the candidate",
+      "Confirmation of whether the missing code was for UTME or Direct Entry; the UTMEPIN command is for UTME only."
     ],
     "steps": [
       "Confirm that the candidate has already purchased or been issued a UTME e-PIN and still has access to the unique mobile number linked to the JAMB profile.",
+      "Distinguish the 10-character JAMB profile code from the paid UTME e-PIN: send RESEND for a lost profile code, but UTMEPIN for a missing UTME purchase; JAMB lists DEPIN for Direct Entry.",
       "From that linked number, create an SMS containing UTMEPIN and send it to 55019 or 66019; do not send the command from another person's SIM.",
       "Wait for JAMB to return the recovered UTME e-PIN to the same number, then keep the message private because the e-PIN is part of the candidate's registration credentials.",
+      "If no e-PIN comes back, check the original vending receipt or transaction acknowledgement and raise a request via support.jamb.gov.ng before attempting a second purchase.",
+      "If the linked SIM has been lost or reassigned, seek a legitimate telecom SIM recovery and JAMB support instead of sending a candidate's personal codes to an intermediary.",
       "Take the recovered e-PIN together with the profile code to a JAMB-accredited CBT centre when completing UTME registration; use official JAMB support if the recovery command fails."
     ],
     "notes": [
       "This command retrieves a previously bought or issued UTME e-PIN. For Direct Entry, JAMB publishes the separate command DEPIN.",
       "Use the candidate's registered phone number; do not buy a replacement e-PIN from an unofficial reseller because the original SMS was lost.",
-      "JAMB maintains a cashless registration regime and provides official support if the command fails."
+      "JAMB maintains a cashless registration regime and provides official support if the command fails.",
+      "Never publish screenshots showing the recovered e-PIN or send the code to a social-media adviser.",
+      "Recovery cannot make an expired registration window active again."
     ],
     "sources": [
       {
@@ -1103,7 +1134,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Retrieve lost JAMB e-PIN",
       "How to retrieve a lost JAMB UTME e-PIN",
@@ -1197,7 +1228,7 @@
     "slug": "waec-check-result",
     "title": "WAEC Result Checker: how to check a WAEC result online",
     "shortTitle": "Check WAEC result",
-    "summary": "Use the official WAEC Result Checker with your examination number, year, exam type, e-PIN and serial number, then save or print the result.",
+    "summary": "Use the official WAEC Result Checker with your examination number, year, exam type, e-PIN and serial number, then save or print the result. The result-checking website supplies an online statement of grades, not a newly issued original WAEC certificate or an institutional confirmation letter.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Requires a valid WAEC result-checker e-PIN",
@@ -1212,13 +1243,18 @@
     ],
     "steps": [
       "Open the official WAEC Direct result-checking portal and have the examination number, examination year, examination type and valid result-checker e-PIN ready before starting.",
+      "Check whether the examination was WASSCE for School Candidates or one of the private-candidate series; the examination type is not interchangeable even when the year is identical.",
       "Enter the examination number exactly as issued and select the correct examination year so the portal searches the correct WAEC record.",
       "Choose the correct examination type, then enter the e-PIN or PIN and the serial number printed with the valid WAEC result-checker voucher or card.",
       "Review the examination details before submitting the request, then use the result-check action to retrieve the candidate's result.",
+      "If the portal says no result found, recheck the examination year, candidate number, exam type and voucher details before consuming more card uses.",
+      "Where a result shows held, withheld or cancelled, use the appropriate WAEC explanation/complaints process; purchasing additional cards does not change the result decision.",
       "Read the displayed result carefully and save or print a copy if needed; if the card has exhausted its permitted uses, use a new valid WAEC result-checker card."
     ],
     "notes": [
-      "WAEC Direct states that a new result-checker card is required after the allowable uses on a card are exhausted."
+      "WAEC Direct states that a new result-checker card is required after the allowable uses on a card are exhausted.",
+      "Do not forward the result-checker PIN or candidate personal information to unofficial result-checking services.",
+      "An online WAEC Direct result is not itself an employer- or university-addressed confirmation of result."
     ],
     "sources": [
       {
@@ -1226,9 +1262,15 @@
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecdirect.org/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "WAEC",
+        "url": "https://www.waecnigeria.org/faq",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-09",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Check WAEC result",
       "How to check a WAEC result online",
@@ -1249,7 +1291,7 @@
     "slug": "waec-digital-certificate",
     "title": "How to access a WAEC digital certificate",
     "shortTitle": "WAEC digital certificate",
-    "summary": "WAEC's digital certificate platform allows candidates to access soft copies of original certificates.",
+    "summary": "WAEC's digital certificate platform allows candidates to access soft copies of original certificates. Candidates use Certificate Access; institutions use a distinct Certificate Confirmation account. WAEC warns it will not request account credentials or payment details through messages, calls or email.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Platform charges may apply",
@@ -1257,17 +1299,23 @@
     "officialPortal": "https://portal.waec.org/account/register",
     "requirements": [
       "Examination number, examination year/type and candidate biodata used to match the WAEC record",
-      "An account under Certificate Access"
+      "An account under Certificate Access",
+      "Access to the candidate's personal email and the official account-verification method, rather than an account registered by an unauthorised middleman."
     ],
     "steps": [
       "Open the official WAEC Digital Certificate Platform and choose the candidate Certificate Access route rather than the institutional Certificate Confirmation route.",
+      "At registration choose Certificate Access (Candidate), not Candidate/Certificate Confirmation (Institution); the other route is intended for a school, employer or validating organisation.",
       "Create or sign in to the candidate Certificate Access account with the candidate's own contact information, then complete the account verification shown before searching for the certificate.",
       "After the account is verified, use the Certificate Access area to locate the candidate's WAEC certificate associated with that account before starting any download or sharing action.",
       "Review any platform charge or verification requirement shown by WAEC, complete the authorised transaction if required, and submit the certificate-access request.",
+      "Check whether the matched certificate is available for the chosen examination record and confirm the account's identity before sharing any file.",
+      "If a login reset is needed, use the website's Forgotten your password? route and WAEC's stated support contact; do not send account passwords or payment details to social-media messages.",
       "Once the certificate is available, open it, verify the candidate details and use the platform's official download or sharing functions where available."
     ],
     "notes": [
-      "WAEC says Certificate Confirmation accounts are intended for institutions and organisations, while Certificate Access is for candidates."
+      "WAEC says Certificate Confirmation accounts are intended for institutions and organisations, while Certificate Access is for candidates.",
+      "A candidate certificate-access account is not the same as an institution's confirmation account.",
+      "WAEC's own security notice says it does not solicit login details or payment information through unsolicited SMS, calls, emails or social messaging."
     ],
     "sources": [
       {
@@ -1275,9 +1323,15 @@
         "agency": "West African Examinations Council",
         "url": "https://portal.waec.org/account/register",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "WAEC",
+        "url": "https://portal.waec.org/account/password/forgot",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "WAEC digital certificate",
       "How to access a WAEC digital certificate",
@@ -1293,7 +1347,7 @@
     "slug": "waec-collect-certificate",
     "title": "How to collect a WAEC certificate",
     "shortTitle": "Collect WAEC certificate",
-    "summary": "School WASSCE candidates collect their WAEC certificates from their schools. Private candidates collect from the WAEC Zonal or Branch office responsible for the state where they wrote the examination. Contact the correct collection point and confirm its ID requirements before travelling.",
+    "summary": "School WASSCE candidates collect their WAEC certificates from their schools. Private candidates collect from the WAEC Zonal or Branch office responsible for the state where they wrote the examination. Contact the correct collection point and confirm its ID requirements before travelling. Only the issuing school or the responsible WAEC office can confirm whether a particular certificate has arrived. The fact that a result is online does not mean the physical certificate is available for collection.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Collection process depends on candidate type",
@@ -1305,15 +1359,20 @@
     ],
     "steps": [
       "Start by confirming whether the candidate sat the examination as a school candidate or a private candidate because WAEC uses different collection points for the two routes.",
+      "For school candidates, first ask the school whether the actual certificate for that exam year has been delivered; a principal's statement of result is not the same as the original certificate.",
+      "For private candidates, find the Zonal or Branch office responsible for the state of examination rather than travelling to an unrelated WAEC office.",
       "If it was a school examination, contact the school where the candidate sat WASSCE and ask for the school's certificate-collection requirements before travelling there.",
       "If it was a private-candidate examination, identify the WAEC Zonal or Branch office responsible for the state where the examination was taken and use that office for collection.",
       "Take the candidate and examination information plus any identification requested by the school or WAEC office, then present them at the correct collection point.",
+      "Ask the responsible school or WAEC office in advance whether a representative may collect on behalf of the candidate and what identity/authorization documents they will actually accept.",
       "Before leaving, check the spelling of the candidate's name and examination details; use WAEC's correction or support route if an error is found."
     ],
     "notes": [
       "WAEC says school candidates collect certificates from their schools and private candidates collect directly from WAEC.",
       "WAEC's Zonal and Branch offices serve the state where the private candidate sat for the exam.",
-      "WAEC certificates do not expire."
+      "WAEC certificates do not expire.",
+      "Do not make a cross-state journey until the correct school or WAEC office confirms the record and collection arrangement.",
+      "WAEC's FAQ states original certificates have no expiry date; collection logistics and potential late charges are separate questions."
     ],
     "sources": [
       {
@@ -1323,7 +1382,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Collect WAEC certificate",
       "How to collect a WAEC certificate",
@@ -1340,7 +1399,7 @@
     "slug": "waec-confirm-result-nigeria",
     "title": "How to confirm a WAEC result for an institution in Nigeria",
     "shortTitle": "WAEC result confirmation in Nigeria",
-    "summary": "WAEC result confirmation for a school candidate is a formal dispatch to a named recipient, not an instant online result checker. Prepare the result copy, court affidavit, two passport photographs, two 9x4 envelopes and the specified scratch card, then confirm payment and courier arrangements with WAEC. WAEC currently lists a ₦19,500 local administrative charge per result/recipient and ₦13,000 for the scratch card; courier charges are additional.",
+    "summary": "WAEC result confirmation for a school candidate is a formal dispatch to a named recipient, not an instant online result checker. Prepare the result copy, court affidavit, two passport photographs, two 9x4 envelopes and the specified scratch card, then confirm payment and courier arrangements with WAEC. WAEC currently lists a ₦19,500 local administrative charge per result/recipient and ₦13,000 for the scratch card; courier charges are additional. This request sends a formal result verification directly to a Nigerian institution or recipient. It should not be confused with checking grades online or downloading a candidate certificate.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Published local fee: ₦19,500 per result/recipient + ₦13,000 scratch card; courier extra",
@@ -1356,16 +1415,21 @@
     ],
     "steps": [
       "Read the official WAEC 'Requirements for Confirmation of Result for School Candidates' page; this is for a confirmation sent to a recipient, not online checking or a replacement certificate.",
+      "Verify the school's examination record and decide whether the institution needs WAEC's official dispatched confirmation rather than a normal WAEC Direct printout.",
       "Prepare the result printout/certificate copy, court affidavit, two passport photos, two 9x4 envelopes and the WAEC scratch card the requirements page specifies.",
       "Identify the Nigerian institution/establishment that must receive the confirmation and check its delivery details before asking WAEC to dispatch.",
       "Confirm with WAEC how to submit the package and settle the local administrative fee, scratch-card cost and courier cost through approved channels. Do not treat any one component as the total charge.",
+      "Ask WAEC whether the receiving institution accepts the approved courier delivery format and how a candidate can identify the dispatch without opening sealed materials.",
+      "If a recipient reports non-delivery, compare the recipient address with the courier reference and follow up with WAEC/approved dispatch provider, not with a replacement online-result checker payment.",
       "WAEC dispatches the confirmation to the named institution using the approved courier arrangement. Retain the courier reference and ask the receiving institution to acknowledge delivery of the specific result confirmation."
     ],
     "notes": [
       "WAEC publishes separate charges for local and international/embassy recipients. This guide covers a Nigerian recipient; use the overseas guide for the other category.",
       "WAEC's requirement page lists approved courier agents at its office but says it is not liable for courier-company misconduct. Confirm the delivery address and retain the official dispatch receipt.",
       "A scanned result or ordinary website check is not the same as a result-confirmation letter dispatched to a third party.",
-      "Prices are published amounts, not a guarantee of the current cashier total; verify charges with WAEC."
+      "Prices are published amounts, not a guarantee of the current cashier total; verify charges with WAEC.",
+      "An international/embassy recipient can fall under a different fee class; this Nigerian-recipient price must not be applied universally.",
+      "WAEC's published page contains a visibly inconsistent figure for some international destinations. Retain the existing separate overseas guide conflict flag until WAEC clarifies it."
     ],
     "sources": [
       {
@@ -1378,6 +1442,12 @@
         "label": "WAEC Nigeria FAQ",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/faq",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "WAEC",
+        "url": "https://waecnigeria.org/node/12",
         "lastChecked": "2026-10-16"
       }
     ],
@@ -1397,7 +1467,7 @@
     "slug": "waec-lost-certificate",
     "title": "What to do if a WAEC certificate is lost or damaged",
     "shortTitle": "Lost WAEC certificate",
-    "summary": "WAEC does not issue an ordinary duplicate of a lost certificate. It offers a statement of result, paid result confirmation or an attestation of result for lost or damaged certificates; use WAEC's official support route and confirm the requirements for your examination type.",
+    "summary": "WAEC does not issue an ordinary duplicate of a lost certificate. It offers a statement of result, paid result confirmation or an attestation of result for lost or damaged certificates; use WAEC's official support route and confirm the requirements for your examination type. WAEC does not routinely print a duplicate of a lost original. Candidates must choose a statement, attestation or result confirmation based on what the receiving institution actually requires.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "Fee depends on requested service",
@@ -1409,14 +1479,19 @@
     ],
     "steps": [
       "Confirm the examination year, examination number and school or private-candidate category from the available result details before requesting any supporting document.",
+      "Ask the institution or employer requesting proof whether it accepts a WAEC statement, WAEC attestation of result or a formal confirmation sent directly from WAEC; these are different services.",
       "Read WAEC Nigeria's official FAQ on lost or damaged certificates to choose the correct outcome: statement of result, paid confirmation of results or attestation of result rather than a reprinted certificate.",
       "School candidates should ask their former school for help identifying the appropriate WAEC office or submission route; private candidates can contact WAEC directly through its official channels.",
       "Ask the responsible WAEC office for the current supporting documents, identity requirements and fee for the chosen service before submitting an application or paying.",
+      "For a school-candidate record, approach the former school or principal first; private candidates should confirm the direct WAEC office route rather than relying on a school that did not enter them.",
+      "If an agent advertises a 'duplicate WAEC certificate', decline the offer and verify the claimed product through the official WAEC Nigeria FAQ or office.",
       "Keep the official acknowledgement and follow up through the same WAEC route. The original lost certificate is not reissued as an ordinary duplicate."
     ],
     "notes": [
       "WAEC's FAQ states that lost certificates are not replaced with a duplicate certificate in the ordinary way.",
-      "WAEC explicitly states that lost certificates are not replaced in the usual manner; statements, confirmation and attestation are different official options."
+      "WAEC explicitly states that lost certificates are not replaced in the usual manner; statements, confirmation and attestation are different official options.",
+      "Check the document type the recipient will accept before paying for a service that produces a different output.",
+      "Ordinary certificate loss does not mean WAEC can change grades or recreate a full replacement original."
     ],
     "sources": [
       {
@@ -1426,7 +1501,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Lost WAEC certificate",
       "What to do if a WAEC certificate is lost or damaged",
@@ -1443,12 +1518,12 @@
     "slug": "neco-2026-ssce-internal-registration",
     "title": "NECO 2026 SSCE Internal registration fees and deadlines",
     "shortTitle": "NECO 2026 SSCE Internal",
-    "summary": "NECO's official 2026 school-candidate guidelines set the registration fee at ₦30,000 per candidate, inclusive of the four-figure mathematical table and waterproof certificate jacket/folder.",
+    "summary": "NECO's official 2026 school-candidate guidelines set the registration fee at ₦30,000 per candidate, inclusive of the four-figure mathematical table and waterproof certificate jacket/folder. This school-led route closed in May 2026. It is not the 2026 SSCE External registration, which has its own separate portal, timetable and conditions.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "₦30,000 per candidate",
     "feeNote": "NECO's 2026 guidelines list ₦30,000 per candidate. Stamp duty, service and Remita charges apply. Late registration attracts an additional ₦5,000 per candidate.",
-    "timeline": "Normal school registration closed 25 May 2026; late registration closed 29 May 2026. NECO stated there would be no extension.",
+    "timeline": "2026 SSCE Internal school registration closed on 25 May 2026 (normal) and 29 May 2026 (late). The external-candidate SSCE is a different active registration route.",
     "status": "verified",
     "officialPortal": "https://ssceinternal.neco.gov.ng/",
     "requirements": [
@@ -1462,15 +1537,21 @@
     ],
     "steps": [
       "The school registers candidates in the official SSCE Internal portal.",
+      "Schools must validate candidate entries and obtain State Coordinator activation using the signed validation list, photocards, applicable endorsed schedule and subject analysis before quota payments.",
+      "Once activated, the school pays into the NECO Treasury Single Account through its approved school-portal Remita process; the published guidance discourages ordinary bank transfer.",
       "The school generates the official payment invoice and pays for the selected candidates.",
       "After payment, NECO allocates registration quota corresponding to the amount paid.",
       "The school uploads/finalises the selected candidates and submits the signed validation list and payment evidence to the NECO State Office as required.",
+      "After payment, the school should verify the 12-digit Remita RRR against its transaction using the portal's Verify Bank Payment action and confirm that quota is allocated.",
+      "Before final upload, ask each candidate to verify name, photograph, date of birth and subjects; late corrections can incur a school non-validation penalty and photograph changes have stricter time limits.",
       "Each candidate keeps the final photocard bearing the NECO registration number for identification during the examination."
     ],
     "notes": [
       "The ₦30,000 fee already includes the four-figure mathematical table and waterproof certificate jacket/folder.",
       "A centre with fewer than 20 registered candidates is classed as unviable; NECO lists a ₦70,000 unviable-centre fee.",
-      "Registration payments are non-refundable."
+      "Registration payments are non-refundable.",
+      "As of 16 October 2026 the internal registration deadline has passed; do not send private candidates through the closed school-candidate route.",
+      "NECO's 2026 examinations page says SSCE Internal centres must submit third-year continuous assessment (CAS 3) in the stipulated window or candidate results may be withheld."
     ],
     "sources": [
       {
@@ -1479,9 +1560,21 @@
         "url": "https://neco.gov.ng/2026%20GUIDELINES.pdf",
         "published": "2026",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NECO",
+        "url": "https://ssceinternal.neco.gov.ng/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NECO",
+        "url": "https://neco.gov.ng/exams",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NECO 2026 SSCE Internal",
       "NECO 2026 SSCE Internal registration fees and deadlines",
@@ -1563,7 +1656,7 @@
     "slug": "neco-check-result",
     "title": "NECO Result Checker 2026: Check Result & Use a Result Token",
     "shortTitle": "Check NECO result",
-    "summary": "Check a NECO result on the official NECO Results Portal using the examination year, exam type, result token and registration number, with the official token-purchase route when needed.",
+    "summary": "Check a NECO result on the official NECO Results Portal using the examination year, exam type, result token and registration number, with the official token-purchase route when needed. Token purchase and result lookup are different transactions. Selecting a wrong examination type or year can make a valid candidate record appear unavailable.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Requires a NECO result token",
@@ -1577,15 +1670,20 @@
     ],
     "steps": [
       "Open the official NECO Results Portal and have the examination year, examination type, result token and candidate registration number ready.",
+      "Check the exact NECO examination type shown on the candidate's photocard rather than assuming all school and external NECO results are in the same session.",
       "Select the exact examination year and examination type shown on the candidate's NECO record so the portal searches the correct examination session.",
       "Enter the result token and registration number carefully, checking for mistyped characters before sending the query.",
       "Choose the Check my result action and wait for the portal to return the candidate's result rather than submitting duplicate queries.",
+      "If the token purchase was recent, check its account or receipt before buying another token; a result-check form does not issue a new token automatically.",
+      "If the result is missing or partially available, retain the registration number and contact the proper NECO examination/centre support; repeat token purchases do not release results.",
       "Review the displayed result and save or print a copy if needed; if there is no valid token, use the purchase-token option provided by the official NECO portal."
     ],
     "notes": [
       "The NECO result portal requires an examination year, examination type, token and registration number.",
       "If you do not have a valid result token, use the Purchase Token option on NECO's official results portal.",
-      "The online checker returns the candidate's result when available; do not assume a payment or repeated submission will release withheld results."
+      "The online checker returns the candidate's result when available; do not assume a payment or repeated submission will release withheld results.",
+      "Use the NECO-operated results.neco.gov.ng hostname; a paid third-party result page is not required.",
+      "An online checked result and an officially issued NECO certificate are not interchangeable documents."
     ],
     "sources": [
       {
@@ -1595,7 +1693,7 @@
         "lastChecked": "2026-10-14"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Check NECO result",
       "How to check a NECO result online",
@@ -1618,7 +1716,7 @@
     "slug": "neco-purchase-result-token",
     "title": "NECO Result Token: Price, Purchase Portal and Steps",
     "shortTitle": "NECO result token",
-    "summary": "Buy a NECO result-checking token through the official NECO Results Portal. NECO's published service schedule lists the result-checker token at ₦1,000 and the live portal provides the current Purchase Token route.",
+    "summary": "Buy a NECO result-checking token through the official NECO Results Portal. NECO's published service schedule lists the result-checker token at ₦1,000 and the live portal provides the current Purchase Token route. The Purchase Token action is separate from checking a result. Payment should be matched with the signed-in portal account or official receipt before a retry.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "₦1,000 in NECO's published service schedule",
@@ -1631,15 +1729,20 @@
     ],
     "steps": [
       "Open the official NECO Results Portal and choose Purchase Token.",
+      "Determine whether the candidate already has a usable token; opening the result checker does not require purchase if a valid token is available.",
       "Sign in with the email address and password already registered on the NECO Results Portal; if you are new, create an account with your first name, middle name if applicable, last name, email address, phone number and password.",
       "Start the token purchase from the official portal and review the amount before payment.",
       "Complete payment through the official payment route and save the transaction evidence.",
+      "After payment, confirm the token is recorded in the portal account/receipt and copy it accurately; do not depend only on an unauthorised seller's screenshot.",
+      "If the token is absent after successful payment, keep the payment reference and contact NECO via its official site rather than making repeated purchases immediately.",
       "Return to the result checker, select the examination year and type, enter the token and candidate registration number, then check the result."
     ],
     "notes": [
       "The NECO Results Portal currently exposes a Purchase Token button directly from the result-checking page.",
       "The token is used together with the examination year, examination type and candidate registration number.",
-      "Use the live NECO portal rather than third-party token sellers."
+      "Use the live NECO portal rather than third-party token sellers.",
+      "The ₦1,000 figure comes from a published NECO service schedule, not an independently confirmed live October 2026 checkout price; confirm the actual amount on screen.",
+      "Never post a purchased result token or candidate registration number publicly."
     ],
     "sources": [
       {
@@ -1653,9 +1756,15 @@
         "agency": "National Examinations Council",
         "url": "https://neco.gov.ng/2024%20Annual%20Report%20NECO.pdf",
         "lastChecked": "2026-10-06"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NECO",
+        "url": "https://neco.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-06",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NECO token purchase",
       "NECO result token",
@@ -1729,7 +1838,7 @@
     "slug": "neco-payment",
     "title": "How to make an official NECO service payment",
     "shortTitle": "NECO service payment",
-    "summary": "NECO's payment portal explains how to use a payment-item code and retain evidence of payment.",
+    "summary": "NECO's payment portal explains how to use a payment-item code and retain evidence of payment. NECO's general payment portal explicitly says no user account is needed to make a service payment. A verified payment-item code is still required, and NECO warns completed payments are non-refundable.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Depends on NECO service",
@@ -1741,13 +1850,19 @@
     ],
     "steps": [
       "Identify the exact NECO service you are paying for and obtain the correct payment-item code from NECO before opening the payment page.",
+      "Confirm that this is the general NECO payments service; SSCE Internal quota payments are handled through an activated school's separate registration/Remita workflow.",
+      "Use NECO's official website to obtain the exact payment-item code rather than selecting a similarly named item supplied by a third-party agent.",
       "Open the official NECO payment portal, select the matching payment item and confirm that its description corresponds to the service you actually need.",
       "Enter the payer information and the selected NECO payment-item information in the payment form, review the service description and amount, then choose one of the payment methods presented by the official portal.",
       "Complete the payment only after confirming the amount and service item, then save or print the receipt, RRR or other payment evidence generated by the portal.",
+      "The general NECO payments site expressly states that no account is needed. Do not create an unrelated paid account simply because another NECO portal asks for login.",
+      "After successful payment, retain the service description, amount and receipt; the payments site directs users to present evidence at the appropriate NECO office.",
       "Use that evidence in the related NECO service workflow; because NECO warns completed payments are not refundable, do not pay again unless the agency confirms the first transaction failed."
     ],
     "notes": [
-      "NECO warns users to verify the payment details before paying and states refunds are not applicable once payment is completed."
+      "NECO warns users to verify the payment details before paying and states refunds are not applicable once payment is completed.",
+      "An ordinary NECO general-service item is not a school exam registration quota or a result token unless the relevant NECO portal explicitly links that item.",
+      "NECO's general portal allows payment without creating an account, but the underlying service can still require agency identification or office processing."
     ],
     "sources": [
       {
@@ -1757,7 +1872,7 @@
         "lastChecked": "2026-09-28"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NECO service payment",
       "How to make an official NECO service payment",
@@ -1768,13 +1883,13 @@
       "neco-e-verify",
       "neco-certificate-service"
     ],
-    "feeNote": "The NECO payment portal prices the specific service selected rather than one universal NECO fee. Verify the service description and amount on the official payment page before completing payment."
+    "feeNote": "The NECO general payments site states no account is needed, but the correct official payment-item code is required. NECO warns that completed payments are non-refundable; confirm the payment item before submitting."
   },
   {
     "slug": "nysc-registration-local",
     "title": "How NYSC registration works for locally trained graduates",
     "shortTitle": "NYSC registration",
-    "summary": "Official NYSC registration for locally trained graduates, including the confirmed 2026 Batch C Stream II camp timetable and what requires an individual call-up letter.",
+    "summary": "Official NYSC registration for locally trained graduates, including the confirmed 2026 Batch C Stream II camp timetable and what requires an individual call-up letter. Fresh registration is distinct from revalidation for someone previously called up who did not report, or remobilisation for someone who absconded after mobilisation.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Portal payment applies to optional/portal services as shown by NYSC",
@@ -1789,16 +1904,22 @@
     ],
     "steps": [
       "Confirm that your name/details appear on the approved Senate/Academic Board mobilisation list; if they do not, resolve the record with your institution before attempting registration.",
+      "On the NYSC portal choose Fresh Registration only if you have not previously registered and been deployed; a person who missed a former camp uses Revalidation, while an absconder uses Remobilization.",
+      "Check the current NYSC batch registration announcement and the personal dashboard for dates; a November camp timetable is not a substitute for an online registration opening notice.",
       "Open the official NYSC portal during the active mobilisation registration window and create/sign in to the prospective-corps-member account.",
       "Enter the required personal, education and deployment information and complete the biometric-enabled registration process.",
       "Review the submitted details and keep the registration/dashboard information generated by NYSC.",
+      "If the university's Senate List name/matriculation number does not match, contact the institution's Student Affairs Officer before completing or paying for an application.",
+      "If the candidate is a part-time graduate, check the NYSC Exclusion Letter process instead of assuming an ordinary full-time service call-up.",
       "After successful mobilisation, monitor the dashboard for the call-up number and call-up letter; NYSC says candidates who subscribed for online printing can print the letter online, while others obtain it through their institutions."
     ],
     "notes": [
       "NYSC says locally trained graduates whose names are not on the approved Senate/Academic Board list cannot register.",
       "NYSC's 2 October 2026 announcement fixes the 2026 Batch C Stream II orientation course for 4–24 November 2026 in the 36 states and FCT. Camp registration is 4–6 November (until midnight 6 November); swearing-in is Friday 6 November.",
       "The camp timetable is not the online registration or call-up-letter release date. Log in to your personal NYSC dashboard for your actual deployment and camp address; do not pay unofficial agents who promise an early call-up letter.",
-      "Travel safely and use the location printed on your call-up letter, not a copied venue list. Changes or exceptions should be verified through NYSC's official portal and current notices."
+      "Travel safely and use the location printed on your call-up letter, not a copied venue list. Changes or exceptions should be verified through NYSC's official portal and current notices.",
+      "A published orientation-course date is not a guarantee of a particular applicant's posting; deployment is determined by the call-up letter.",
+      "Do not pay a cybercafé to 'create' a missing Senate List entry. Only the originating institution can resolve the approved graduation record."
     ],
     "sources": [
       {
@@ -1818,9 +1939,21 @@
         "agency": "National Youth Service Corps",
         "url": "https://www.facebook.com/officialnyscng/posts/2026-batch-c-stream-ii-orientation-commences-november-4the-management-of-nationa/1434109108907117/",
         "lastChecked": "2026-10-10"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NYSC",
+        "url": "https://portal.nysc.org.ng/NYSC/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NYSC",
+        "url": "https://nysc.gov.ng/faq.html",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-10",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NYSC registration",
       "How NYSC registration works for locally trained graduates",
@@ -1843,7 +1976,7 @@
     "slug": "nysc-foreign-trained-registration",
     "title": "How NYSC registration works for foreign-trained Nigerian graduates",
     "shortTitle": "NYSC foreign-trained registration",
-    "summary": "Foreign-trained Nigerian graduates register at the NYSC portal, upload the required educational and travel credentials and undergo physical verification at a location and date shown in their NYSC dashboard. Do not travel on the assumption that a prior batch's venue applies.",
+    "summary": "Foreign-trained Nigerian graduates register at the NYSC portal, upload the required educational and travel credentials and undergo physical verification at a location and date shown in their NYSC dashboard. Do not travel on the assumption that a prior batch's venue applies. Online upload does not remove NYSC's original-document and physical verification requirements. Foreign-trained graduates must use the individual dashboard to check the current batch's venue and decision.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Use official NYSC portal for any applicable payment",
@@ -1859,14 +1992,20 @@
     ],
     "steps": [
       "Open portal.nysc.org.ng during an active registration window and register as a foreign-trained prospective corps member using your personal details and applicable qualifications.",
+      "Before registering, check that the graduation credential and official transcript are original or officially issued documents acceptable to NYSC, not downloaded statements or private attestations.",
+      "Compare international passport, travel history and any visa/residence-permit periods with the stated years of study; gather documents for every passport used during that period.",
       "Upload the academic and international-passport evidence required for your particular foreign institution and qualification. NYSC states that downloaded certificates, statements of results and attestation letters are not accepted as substitutes where original credentials are required.",
       "Check the NYSC dashboard for the assigned physical-verification venue, dates and duration. Carry the original academic credentials and original travel documents specified by NYSC, not only scanned copies.",
       "Attend the designated pre-camp physical verification on the assigned date; if NYSC instead assigns a call-up number without pre-camp verification, report for credential verification at the camp printed in the NYSC call-up letter.",
+      "Check official NYSC registration guidance for any mandatory credential translation, and bring the required originals and photocopies to the assigned physical-verification venue.",
+      "If evaluation remains pending or a document is rejected, use the foreign-evaluation support lines and dashboard instructions before making any travel or camp booking.",
       "Keep your original documents available until NYSC officials have physically verified them and review the dashboard for the next verified mobilisation decision."
     ],
     "notes": [
       "NYSC states that downloaded certificates/transcripts, statements of result and attestation letters are not accepted for this route.",
-      "NYSC says foreign-trained graduates who do not complete pre-camp physical verification may be verified at orientation camp where assigned; do not assume online upload alone ends the check."
+      "NYSC says foreign-trained graduates who do not complete pre-camp physical verification may be verified at orientation camp where assigned; do not assume online upload alone ends the check.",
+      "A school-issued online result printout is not a substitute for the original O'level certificate where NYSC requires it.",
+      "Do not assume a previous batch's foreign verification date or centre applies to the present call-up."
     ],
     "sources": [
       {
@@ -1880,9 +2019,15 @@
         "agency": "National Youth Service Corps",
         "url": "https://portal.nysc.org.ng/nysc/",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NYSC",
+        "url": "https://www.nysc.gov.ng/supportline.html",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NYSC foreign-trained registration",
       "How NYSC registration works for foreign-trained Nigerian graduates",
@@ -1954,7 +2099,7 @@
     "slug": "nysc-remobilization",
     "title": "When and how to use NYSC remobilization",
     "shortTitle": "NYSC remobilization",
-    "summary": "NYSC describes remobilization as the route for corps members who absconded and are ready to return.",
+    "summary": "NYSC describes remobilization as the route for corps members who absconded and are ready to return. NYSC explicitly separates Remobilization (previously deployed and absconded) from Revalidation (previously called up but did not attend camp). Remobilization applications require approval before registration.",
     "category": "Youth service",
     "agencySlug": "nysc",
     "feeLabel": "Use the active NYSC portal process",
@@ -1971,15 +2116,21 @@
     ],
     "steps": [
       "Confirm that your case is remobilization: NYSC defines this route for a corps member who was mobilized in a previous batch but absconded from service; someone who was deployed but never reported to camp should use revalidation instead.",
+      "Choose NYSC's Remobilization option only if you previously commenced the service process and absconded; select Revalidation instead if you were deployed but never reported to camp.",
+      "On the official Apply for Remobilisation form, match previous call-up number, previous state code, batch, deployment state and contact details to the old service record.",
       "Open the NYSC Remobilization application during an active remobilization window.",
       "Enter the personal details, previous call-up number, previous state code, previous batch, previous deployment state and phone number requested by the remobilization form.",
       "If applying as a married female corps member for the relevant concession, upload the marital/residence documents listed by NYSC.",
+      "After submitting interest, track approval through the legitimate NYSC route. The portal says only approved remobilisation requests become eligible for new registration.",
+      "Married female applicants requesting the concession should use the portal's specific marital-document workflow (marriage proof, husband's identity and residence documents) rather than assuming the form checkbox alone grants approval.",
       "Submit the remobilization application and wait for NYSC's approval; the portal states that only approved applications are eligible to proceed to remobilization registration."
     ],
     "notes": [
       "Do not confuse remobilization with revalidation for someone who was deployed but never reported to camp.",
       "NYSC's remobilization form is an approval request first; approval is required before remobilization registration can continue.",
-      "Use NYSC's official mobilisation support lines if the previous service record or application cannot be resolved through the portal."
+      "Use NYSC's official mobilisation support lines if the previous service record or application cannot be resolved through the portal.",
+      "The NYSC form spells the service 'Remobilisation' and states it is subject to approval; completing the interest form alone does not restart service.",
+      "Do not use this route to evade a previous disciplinary status; NYSC decides how the old service record is resolved."
     ],
     "sources": [
       {
@@ -1993,9 +2144,21 @@
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/corpmob.html",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NYSC",
+        "url": "https://portal.nysc.org.ng/nysc1/RemobInterest.aspx",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "NYSC",
+        "url": "https://portal.nysc.org.ng/NYSC/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NYSC remobilization",
       "When and how to use NYSC remobilization",
@@ -2669,7 +2832,7 @@
     "slug": "jamb-direct-entry-2026",
     "title": "How much is JAMB Direct Entry registration in 2026?",
     "shortTitle": "2026 JAMB Direct Entry",
-    "summary": "The 2026 JAMB training manual states the Direct Entry e-PIN amount and uses the same profile-code foundation as the registration process.",
+    "summary": "The 2026 JAMB training manual states the Direct Entry e-PIN amount and uses the same profile-code foundation as the registration process. Direct Entry is a separate qualification route from UTME, and possession of an e-PIN does not prove that a candidate has registered. Institutions assess qualifying credentials through the official JAMB admissions process.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "₦5,700 e-PIN",
@@ -2682,19 +2845,26 @@
       "JAMB profile code",
       "2026 Direct Entry e-PIN",
       "Valid personal email address",
-      "Direct Entry qualification/result details and certificates required for the candidate's entry route"
+      "Direct Entry qualification/result details and certificates required for the candidate's entry route",
+      "O'level or A'level/degree-equivalent credentials applicable to the chosen Direct Entry category and access to upload or validate results through the approved registration route."
     ],
     "steps": [
       "Generate the profile code with the candidate's NIN using JAMB's current profile-code method, or refresh an existing profile code when applicable.",
+      "Check the currently published Direct Entry registration window and eligibility for the candidate's qualification before purchasing the e-PIN; do not use a UTME e-PIN for this separate transaction.",
+      "Check the NIN biodata, candidate email and original SIM before paying, and retain evidence of the exact DE package purchased from the approved vendor.",
       "Use the profile code to purchase the 2026 Direct Entry e-PIN through a JAMB-approved vending/payment channel; the e-PIN is tied to the candidate's unique number.",
       "Go personally to a JAMB-accredited CBT centre with the profile code and Direct Entry e-PIN.",
       "At the CBT centre, validate the biodata pulled from the JAMB/NIN profile, supply the Direct Entry qualification, institution/programme and other registration details, and upload the relevant certificate/result information requested for the application.",
+      "Review the qualification category, awarding institution, graduation/result dates and uploaded credentials in the CBT registration preview; missing required records can affect subsequent admissions decisions.",
+      "If the centre cannot validate a qualifying certificate or biometric identity, stop the transaction and use JAMB's official ticket or correction procedure instead of declaring registration completed.",
       "Complete photograph and ten-fingerprint biometric capture, cross-check every entry and use biometric authentication to confirm the registration before collecting the printed registration slip."
     ],
     "notes": [
       "JAMB's 2026 manual says a candidate should not pay a separate CBT-centre service charge for registration.",
       "Keep the unique SIM, profile code, e-PIN, email and printed registration slip private because they are used for later JAMB transactions.",
-      "If a result is awaiting, JAMB requires it to be uploaded when available; institutions cannot rely on a result that has not been uploaded to JAMB."
+      "If a result is awaiting, JAMB requires it to be uploaded when available; institutions cannot rely on a result that has not been uploaded to JAMB.",
+      "2026 prices in the title are historical for that registration cycle; consult JAMB for subsequent-year prices and opening dates.",
+      "JAMB's online e-Facility account cannot substitute for required accredited-centre biometric registration."
     ],
     "sources": [
       {
@@ -2709,9 +2879,15 @@
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://www.jamb.gov.ng/FAQ",
         "lastChecked": "2026-09-28"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "JAMB",
+        "url": "https://support.jamb.gov.ng/faqs",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "2026 JAMB Direct Entry",
       "How much is JAMB Direct Entry registration in 2026?",
@@ -2830,7 +3006,7 @@
     "slug": "waec-result-confirmation-overseas",
     "title": "How to confirm a WAEC result for an overseas institution",
     "shortTitle": "WAEC overseas result confirmation",
-    "summary": "WAEC's result-confirmation request is delivered directly to the institution, not handed back to the candidate. Its live Request Management System lists ₦52,000 for the International category and ₦39,000 for Embassy/African Countries, with courier charges separate. An older WAEC FAQ describes ₦39,000 for overseas institutions generally; confirm the recipient category and final amount on WAEC's live request portal before paying.",
+    "summary": "WAEC's result-confirmation request is delivered directly to the institution, not handed back to the candidate. Its live Request Management System lists ₦52,000 for the International category and ₦39,000 for Embassy/African Countries, with courier charges separate. An older WAEC FAQ describes ₦39,000 for overseas institutions generally; confirm the recipient category and final amount on WAEC's live request portal before paying. Fees differ by recipient class and published WAEC pages contain conflicting international amounts. The correct destination classification and final transaction total must be resolved with WAEC before payment.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "₦39,000 or ₦52,000 by destination category",
@@ -2846,14 +3022,19 @@
     ],
     "steps": [
       "Check WAEC's official result-confirmation requirements and prepare a copy of the certificate/result, sworn court affidavit with exam details, two candidate passport photographs, two 9×4 envelopes and any required scratch-card details.",
+      "Ask the overseas university, embassy or other recipient for its exact legal name, country, department and acceptable official delivery address before choosing a WAEC confirmation class.",
       "Open WAEC's official Request Management System, select the correct Confirmation of Result destination class (Embassy/African Countries or International), and check the displayed service-token and administrative charges before paying.",
       "Specify the receiving institution and destination accurately, arrange delivery using WAEC's stated courier process, and confirm the separate courier amount before authorising any payment.",
+      "Compare the live WAEC Request Management System category with the older FAQ/article price tables. Where the figures disagree, keep the conflict unresolved and request a written current quote from WAEC.",
+      "Confirm whether the portal charge, scratch card, token and courier amount are separate items and avoid purchasing an information-only token in place of a service-request token.",
       "Keep the official service request reference, payment and courier receipt for follow-up; WAEC sends the confirmed result to the designated institution instead of handing the document to the applicant."
     ],
     "notes": [
       "WAEC sends confirmed results directly to the institution or establishment rather than handing them to the candidate.",
       "WAEC's older FAQ quotes ₦39,000 for overseas institutions while its current request portal separates ₦39,000 Embassy/African Countries from ₦52,000 International. Another WAEC article displays ₦39,000,000 for international confirmation, inconsistent with both routes; do not rely on that apparent typographical error or pay from a third-party link.",
-      "WAEC's request portal distinguishes a token for information from a token to make a service request. Check the purpose before buying because an information-only token does not itself submit a result-confirmation application."
+      "WAEC's request portal distinguishes a token for information from a token to make a service request. Check the purpose before buying because an information-only token does not itself submit a result-confirmation application.",
+      "A successful token purchase does not by itself establish that the result-confirmation request was lodged.",
+      "WAEC issues confirmations to the institution, not as a candidate-owned certificate file. Preserve the recipient's acknowledgement as proof of delivery."
     ],
     "sources": [
       {
@@ -2873,9 +3054,15 @@
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/article/requirements-confirmation-result-school-candidates",
         "lastChecked": "2026-10-15"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "WAEC",
+        "url": "https://waecnigeria.org/node/12",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-15",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "WAEC overseas result confirmation",
       "How to confirm a WAEC result for an overseas institution",
@@ -4184,7 +4371,7 @@
     "slug": "jamb-print-result",
     "title": "How to print a JAMB result slip",
     "shortTitle": "JAMB result slip",
-    "summary": "Print a JAMB result slip from the official e-Facility account. JAMB's published payment schedule lists ₦1,000 for the result slip plus a ₦100 CBT service charge; confirm the transaction shown for your candidate before paying.",
+    "summary": "Print a JAMB result slip from the official e-Facility account. JAMB's published payment schedule lists ₦1,000 for the result slip plus a ₦100 CBT service charge; confirm the transaction shown for your candidate before paying. The paid result slip differs from a quick result notice and from admission status. Only a successfully generated slip for the candidate's correct examination year should be submitted to an institution.",
     "category": "Education",
     "agencySlug": "jamb",
     "feeLabel": "₦1,000 + ₦100 CBT service charge",
@@ -4192,17 +4379,23 @@
     "officialPortal": "https://efacility.jamb.gov.ng/account/",
     "requirements": [
       "JAMB e-Facility account/candidate details",
-      "Payment through the official JAMB transaction flow"
+      "Payment through the official JAMB transaction flow",
+      "Access to the registered e-Facility email and password, or the official JAMB account-recovery route if credentials are missing."
     ],
     "steps": [
       "Go to efacility.jamb.gov.ng/account, select the official sign-in control and enter the candidate's registered email address and password.",
+      "Make sure the candidate can sign in to the registered e-Facility account; use JAMB's official password-recovery or ticketing route when the linked email or phone is inaccessible.",
       "From the candidate's dashboard choose the available result or examination service for printing a result slip; confirm the exam year and candidate record shown by JAMB.",
       "Review the displayed result-slip price before making the official portal payment. JAMB's payment schedule lists ₦1,000 plus a ₦100 CBT service charge, though the live transaction details control.",
+      "Verify that the result has actually been released and that the selected examination year and candidate record are correct before submitting a paid print request.",
+      "If payment succeeds but the slip is absent, keep the transaction reference and check the existing paid-service status with JAMB instead of repeatedly paying.",
       "After the transaction succeeds, use the portal's print or download control to obtain the result slip. Retain the payment receipt and seek JAMB support if the service is unavailable or payment is not reflected."
     ],
     "notes": [
       "JAMB's current payment schedule lists the result slip at ₦1,000 with a ₦100 CBT service charge.",
-      "A result-slip payment does not mean a previously withheld examination result has been released; check JAMB's official candidate record."
+      "A result-slip payment does not mean a previously withheld examination result has been released; check JAMB's official candidate record.",
+      "JAMB lists separate charges for other services, including admission-letter printing; a result slip is not a university admission letter.",
+      "Do not assume that a third-party result printout or an unpaid screenshot substitutes for the official slip requested by a recipient."
     ],
     "sources": [
       {
@@ -4216,9 +4409,15 @@
         "agency": "Joint Admissions and Matriculation Board",
         "url": "https://efacility.jamb.gov.ng/account/",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "JAMB",
+        "url": "https://support.jamb.gov.ng/faqs",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "JAMB result slip",
       "How to print a JAMB result slip",
@@ -4303,7 +4502,7 @@
     "slug": "waec-withheld-result-complaint",
     "title": "How to lodge a complaint about a withheld or held WAEC result",
     "shortTitle": "WAEC withheld-result complaint",
-    "summary": "Candidates whose WAEC results are marked withheld or held can use the complaints/defence portal linked from WAEC Nigeria's official announcement. Start at WAEC's notice, follow its waecinternational.org complaints link, identify the correct examination and submit a factual account. This is a complaint channel, not a guarantee that WAEC will release a withheld result.",
+    "summary": "Candidates whose WAEC results are marked withheld or held can use the complaints/defence portal linked from WAEC Nigeria's official announcement. Start at WAEC's notice, follow its waecinternational.org complaints link, identify the correct examination and submit a factual account. This is a complaint channel, not a guarantee that WAEC will release a withheld result. The complaints/defence channel is for candidates whose published result is held or withheld. WAEC review, result-score protests and certificate corrections are separate processes with different eligibility.",
     "category": "Education",
     "agencySlug": "waec",
     "feeLabel": "No complaint fee stated on WAEC's notice",
@@ -4316,21 +4515,32 @@
     ],
     "steps": [
       "Open the official WAEC Nigeria notice headed 'Complaint Portal for Candidates Whose Results Were Withheld/Held' and follow its link to waecinternational.org/complaints.",
+      "Record the exact wording displayed on the candidate's result: held, withheld, cancelled or partial release are not necessarily handled by identical routes.",
       "Check that you are entering the WAEC complaints domain linked by the official notice rather than a lookalike form or a social-media message.",
       "Select or identify the affected examination/candidate according to the current form and provide the explanation or defence requested.",
       "Submit only facts and relevant supporting documents. Save the official acknowledgement or reference if one is issued.",
+      "For school candidates, inform the school principal as WAEC's FAQ normally routes school-candidate communication through principals; retain copies of the school examination record.",
+      "If an official acknowledgement is not produced, record the date and legitimate portal reference and seek WAEC support rather than paying anyone to release a result.",
       "Use the portal's available follow-up instructions and check WAEC's official result status. Do not interpret complaint submission as approval or automatic result release."
     ],
     "notes": [
       "WAEC itself describes this as a complaints/defence route for both held and withheld results; it is separate from a request to review an examination score.",
       "Do not pay a person who promises to 'unhold' the result. No release outcome or response deadline is guaranteed by the official notice.",
-      "If the link changes, reopen the notice on the WAEC Nigeria website to locate the official complaints route."
+      "If the link changes, reopen the notice on the WAEC Nigeria website to locate the official complaints route.",
+      "WAEC's FAQ distinguishes school-candidate score review (via the principal, subject to deadlines) from withheld-result complaints; do not substitute one for the other.",
+      "A complaint reference proves submission only and is not an assurance that the examination committee will reverse a decision."
     ],
     "sources": [
       {
         "label": "WAEC withheld/held result complaint portal guidance",
         "agency": "West African Examinations Council Nigeria",
         "url": "https://www.waecnigeria.org/article/complaint-portal-candidates-whose-results-were-withheldheld",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Official agency guidance — checked against current workflow",
+        "agency": "WAEC",
+        "url": "https://www.waecnigeria.org/faq",
         "lastChecked": "2026-10-16"
       }
     ],
@@ -6414,7 +6624,7 @@
     "slug": "neco-certificate-service",
     "title": "How to collect or reprint a NECO certificate",
     "shortTitle": "NECO certificate collection",
-    "summary": "NECO publishes official certificate collection and reprint services. Start with the NECO payment route, keep the payment evidence, then complete the certificate request through the relevant NECO office.",
+    "summary": "NECO publishes official certificate collection and reprint services. Start with the NECO payment route, keep the payment evidence, then complete the certificate request through the relevant NECO office. Certificate collection and a reprint request are not the same service; the candidate must identify the correct request and present the matching payment evidence and examination documents to NECO.",
     "category": "Education",
     "agencySlug": "neco",
     "feeLabel": "Confirm the current certificate payment item before paying",
@@ -6427,14 +6637,20 @@
     ],
     "steps": [
       "Open the official NECO Payment Portal, select the certificate-related payment category or item that matches the request, and confirm the current amount before paying.",
+      "Decide whether the original certificate is ready for collection or a separate approved reprint is required, then check the matching service item at NECO's payment portal.",
+      "Obtain the correct NECO payment-item code from an official NECO source and confirm the displayed amount before completing the irreversible general-service payment.",
       "Complete the official payment and keep the payment evidence or receipt generated by the NECO payment route.",
       "Present the payment evidence and the candidate details at the relevant NECO office; for a reprint, include the request letter and result printout listed by NECO.",
+      "For a reprint, prepare the written request letter and exam result printout specified in NECO's published service schedule; confirm any current identity evidence with the receiving office.",
+      "Ask the receiving NECO office how its collection or acknowledgement works before travelling and retain the original payment evidence for any follow-up.",
       "Confirm the collection or follow-up instruction given by NECO for the specific certificate request before leaving the office."
     ],
     "notes": [
       "NECO's payment portal says payment evidence should be presented to the nearest NECO office for the service paid for.",
       "Original certificate collection and certificate reprint are different services and can have different requirements and fees.",
-      "Do not pay an unofficial agent or use a third-party payment account for a NECO certificate request."
+      "Do not pay an unofficial agent or use a third-party payment account for a NECO certificate request.",
+      "The payments site says no account is needed for general NECO service fees, but that does not replace office verification for a certificate.",
+      "Do not buy a NECO result-checking token in place of the certificate collection or reprint payment item."
     ],
     "sources": [
       {
@@ -6450,7 +6666,7 @@
         "lastChecked": "2026-10-04"
       }
     ],
-    "lastVerified": "2026-10-04",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NECO certificate",
       "NECO certificate collection",
