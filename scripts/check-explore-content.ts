@@ -1,4 +1,5 @@
 import { exploreGuides } from "../lib/explore";
+import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourPracticalDecisions20261016 } from "../lib/explore-practical-decisions-2026-10-16";
 import { explorePlaces, getExplorePlacesForGuide } from "../lib/explore-places";
 
@@ -42,6 +43,28 @@ for (const slug of checkedGuideSlugs) {
       ![guide.source?.href, ...(guide.sources ?? []).map(source => source.href)].includes(update.source.href)) {
     errors.push(slug + ": missing dated institution-backed visitor decision, planning or reference.");
   }
+}
+
+// Change-scoped source-and-experience assertions for 10 guides. These are
+// NOT a claim of local visits, safe travel, rights clearance or ticket prices.
+const highPriorityChecked = Object.keys(highPriorityTourEvidence20261016);
+if (highPriorityChecked.length !== 10 || new Set(highPriorityChecked).size !== 10)
+  errors.push("16 October primary-source Tour batch must cover ten actual guide slugs.");
+for (const slug of highPriorityChecked) {
+  const record = exploreGuides.find(guide => guide.slug === slug);
+  const evidence = highPriorityTourEvidence20261016[slug];
+  if (!record || !record.intro.includes(evidence.intro ?? "") ||
+      !record.planning.some(part => part.label === evidence.planning.label && part.detail === evidence.planning.detail) ||
+      ![record.source?.href, ...(record.sources ?? []).map(source => source.href)].includes(evidence.source.href) ||
+      record.lastReviewed !== "2026-10-16")
+    errors.push(slug + ": missing source-linked and dated, actionable visitor access guidance.");
+}
+for (const slug of ["imo-state-travel-guide","kaltungo-hills-guide","katsina-heritage-weekend-itinerary","katsina-state-travel-guide"]) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const evidence = highPriorityTourEvidence20261016[slug];
+  const note = [evidence?.intro, evidence?.planning.detail].filter(Boolean).join(" ");
+  if (!guide || !/advises against (all|all but essential) travel/i.test(note))
+    errors.push(slug + ": preserve documented current UK government travel warning.");
 }
 
 // Regression: publication screening and the actual Tour guide page must agree
