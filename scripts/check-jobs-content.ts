@@ -8,6 +8,7 @@ import { retiredJobRedirects, templateCareerPortalSlugs } from "../lib/job-scale
 import { isIndexableJobOpportunity, jobOpportunities } from "../lib/jobs";
 import { verifiedJobSlugs20261016 } from "../lib/job-verified-pathways-2026-10-16";
 import { verifiedPortalSlugs20261016 } from "../lib/job-issuer-portals-reviewed-2026-10-16";
+import { issuerCareerReviewSlugs20261016B } from "../lib/job-issuer-career-research-2026-10-16-b";
 
 function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
@@ -32,6 +33,22 @@ for (const slug of [
   assert(getEffectiveJobStatus(record) === "career-page",
     slug + " must not enter the open-now vacancy list.");
 }
+
+// Nine independently checked employer directories must expose the actual
+// role-specific route, not be promoted into open single-job listings.
+assert(issuerCareerReviewSlugs20261016B.length === 9, "Nine issuer career directories must have individual evidence.");
+for (const slug of issuerCareerReviewSlugs20261016B) {
+  const item = jobOpportunities.find(job => job.slug === slug);
+  assert(item?.kind === "career-page" && item.status === "career-page",
+    slug + ": company careers hub cannot be labelled an open vacancy.");
+  assert(item.verifiedAt === "2026-10-16" &&
+    item.applicationSteps.length === 5 && item.sourceNotes.length >= 3 &&
+    item.sources.some(src => src.lastChecked === "2026-10-16") &&
+    !item.deadline, slug + ": checked application path, sources or deadline claim regressed.");
+}
+const piggyvestPortal = jobOpportunities.find(item => item.slug === "piggyvest-careers");
+assert(piggyvestPortal?.summary.includes("No Open Positions"),
+  "PiggyVest board showed no roles at verification; do not invent a vacancy.");
 
 // Verify that an HTTP 200 page containing 'expired' or an employer-board redirect
 // does not masquerade as a live Apply form in the Jobs pillar.
