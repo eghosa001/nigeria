@@ -217,7 +217,7 @@ for (const [slug, primarySource, detail, decision] of [
   }
 }
 const akka = exploreGuides.find(item => item.slug === "akwa-ibom-heritage-route");
-if (!akka?.sources?.some(source => source.href.includes("maryslessor.org/2014/04/eka-kpukpro-owo/")) ||
+if (!akka?.sources?.some(source => source.href.includes("guardian.ng/sunday-magazine/mary-mitchell-slessor-a-catalyst-of-change/")) ||
     !akka?.sources?.some(source => source.href.includes("discoverakwaibom.com/heritage-sites/1929-women-war-memorial/")) ||
     akka.highlights.some(item => item.name === "Mary Slessor Tomb")) {
   errors.push("Akwa Ibom: historically incorrect Mary Slessor tomb must not return");
