@@ -194,9 +194,13 @@ test("fee pages distinguish official conflicts from verified amounts", async ({ 
     await expect(page.locator(".conflict-alert")).toContainText("Confirm current details before payment");
 
     await page.goto("/services/nin-slip-reissue");
-    await expect(page.locator(".status-badge.status-verified")).toContainText("Verified");
+    // The current NIMC Fees table shows ₦600 / ₦1,000 while its older
+    // re-issuance instruction still says ₦500. Preserve the real conflict.
+    await expect(page.locator(".status-badge.status-conflict")).toContainText("Confirm current details");
     await expect(page.getByText("₦600", { exact: false }).first()).toBeVisible();
-    await expect(page.locator(".conflict-alert")).toHaveCount(0);
+    await expect(page.getByText("₦1,000", { exact: false }).first()).toBeVisible();
+    await expect(page.getByText("₦500", { exact: false }).first()).toBeVisible();
+    await expect(page.locator(".conflict-alert")).toContainText("Confirm current details before payment");
 
     // WAEC's current category pricing and its older overseas FAQ disagree:
     // a conflict is the correct public status, not an obsolete "Verified".
