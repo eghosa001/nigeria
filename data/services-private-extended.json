@@ -938,50 +938,46 @@
     "slug": "uber-lost-item-nigeria",
     "title": "How to recover a lost item after an Uber ride",
     "shortTitle": "Uber lost item",
-    "summary": "Uber's rider support route for contacting the driver after a completed trip, reporting a lost phone or other item and escalating through Help when the driver cannot be reached.",
+    "summary": "For an item forgotten on an Uber trip in Nigeria, open Uber → Activity → the correct trip → Find Lost Item → Contact driver about a lost item, then enter a working phone number for Uber's anonymous callback connection. If the lost item is your phone, use help.uber.com in a browser from another device, choose the trip and provide an alternative number. Uber's own rider support says the support team can assist when the driver cannot be contacted; neither locating the item nor return time is guaranteed.",
     "category": "Ride-hailing",
     "agencySlug": "uber-nigeria",
     "feeLabel": "Possible return fee when an item is returned",
-    "feeNote": "Uber states that a lost-item return fee can apply and the amount varies by city. Confirm the amount shown by Uber when the item is returned.",
-    "timeline": "Contact the driver as soon as possible after the trip; Uber recommends allowing time for a response and does not guarantee recovery of a lost item.",
+    "feeNote": "Uber may charge a return fee for a recovered item, and the provider's help text says the amount can vary by city and payment method. The reviewed Nigeria contact explainer does not establish a fixed nationwide refund or item-return amount. Confirm the local amount in the actual Uber support flow.",
+    "timeline": "Uber's current rider help says it generally sends a support update within about 24 hours when direct driver contact fails, but that is not a guarantee that the item will be recovered or returned within that period.",
     "status": "verified",
-    "officialPortal": "https://help.uber.com/en/riders/article/i-need-to-contact-my-driver-about-a-lost-item?nodeId=3ac8868f-93ac-4548-bfe0-36330d70bda1",
+    "officialPortal": "https://help.uber.com/en/riders/article/forgot-something-in-an-uber?nodeId=feab9beb-9eac-47a2-b63a-6915d8821e1d",
     "requirements": [
-      "Access to the Uber account that requested the completed trip, or another contact route if the lost item is the phone itself",
-      "The trip in which the item was left",
-      "A phone number Uber can use to connect the rider with the driver",
-      "A clear description of the lost item and enough trip detail to identify it"
+      "The signed-in Uber rider account or the help.uber.com login associated with the completed trip.",
+      "The correct ride in Activity/Your Trips with date and pickup/drop-off details, plus a useful item description.",
+      "A phone number you can presently answer; when the original handset is lost, use a relative's or other trusted number instead.",
+      "Any payment/return-fee information shown in Uber's real help case; the driver may not have found the item."
     ],
     "steps": [
-      "Open the Uber app or help website and select the completed trip in which the item was lost.",
-      "Choose the lost-item option and select the route to contact the driver.",
-      "Enter a phone number Uber can call and use the connection to ask the driver whether the item was found.",
-      "If the lost item is the phone or the driver cannot be reached, use Uber's lost-item support form with the trip and item details.",
-      "Agree on a safe return arrangement if the item is found and review any return fee shown by Uber after recovery."
+      "Sign into Uber on a safe device, open Activity (or Your Trips on older versions), and select the completed trip where the item was lost.",
+      "Select Find Lost Item → Contact driver about a lost item. Supply a phone number that can currently receive a call and use Uber's call-connection prompts to contact the driver rather than obtaining a stranger's direct number.",
+      "If your own registered phone was left in the car, go to https://help.uber.com/ using another browser/device, sign into your account, choose Riders → Help with a trip → the affected trip → Find Lost Item and provide a trusted alternative phone number.",
+      "If the driver cannot be reached, select the 'couldn't reach my driver about a lost item' support option on the trip, describe the object and provide the ride details. Uber says it generally updates such cases within about 24 hours.",
+      "If the driver confirms the item is available, arrange a safe meeting or return. Check Uber's current local fee instructions, since its published help says a return charge can vary by city.",
+      "If a wallet, identity document or phone is missing, secure bank cards, mobile SIMs and account sessions independently. Uber does not guarantee the driver has the item or that it can be delivered immediately."
     ],
     "notes": [
-      "Uber says neither it nor the driver can guarantee that a lost item will be found or returned.",
-      "If the lost item is a phone, another reachable phone number can be used in the support form.",
-      "Uber warns customers not to provide bank or card details to someone claiming to return a lost item."
+      "Uber's older Nigeria help blog uses 'Your Trips' while its current international rider help uses Activity → Find Lost Item; users should select the equivalent trip-specific menu shown in their app.",
+      "The official browser help route is useful when the rider cannot access the original phone; it asks for a reachable alternate number.",
+      "A lost-item return fee may apply and varies by market. Do not invent a fixed Nigeria amount from an overseas rider help article.",
+      "Uber explicitly does not guarantee item recovery or a particular handover time, and an update from support is not a refund."
     ],
     "sources": [
       {
-        "label": "Uber Nigeria — Contact and lost items",
+        "label": "Uber current Rider Help — Activity, direct contact, alternative phone and support escalation",
+        "agency": "Uber",
+        "url": "https://help.uber.com/en/riders/article/forgot-something-in-an-uber?nodeId=feab9beb-9eac-47a2-b63a-6915d8821e1d",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Uber Nigeria original contact explainer — Your Trips and browser lost-item route",
         "agency": "Uber",
         "url": "https://www.uber.com/ng/en/blog/how-to-contact-uber/",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Uber Help — Contact driver about a lost item",
-        "agency": "Uber",
-        "url": "https://help.uber.com/en/riders/article/i-need-to-contact-my-driver-about-a-lost-item?nodeId=3ac8868f-93ac-4548-bfe0-36330d70bda1",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Uber Help — Lost phone",
-        "agency": "Uber",
-        "url": "https://help.uber.com/en/riders/article/i-left-my-phone-in-a-vehicle?nodeId=b371bf38-007e-413d-b6da-9b658be0cd95",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -989,7 +985,7 @@
       "uber-request-ride-online-nigeria",
       "uber-reserve-ride-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Uber lost item Nigeria",
       "forgot phone in Uber",
@@ -1002,44 +998,40 @@
     "slug": "bolt-lost-item-nigeria",
     "title": "How to recover a lost item after a Bolt ride in Nigeria",
     "shortTitle": "Bolt lost item",
-    "summary": "Bolt Nigeria's rider route for contacting the driver about a forgotten item within 24 hours and escalating to in-app support or the lost-phone form when direct contact is no longer available.",
+    "summary": "If you left an item in a Bolt car in Nigeria, open the Bolt app → Activity → the completed ride and contact the driver there within 24 hours. Bolt says the 24-hour window is for the rider's direct in-app driver contact; after that, or if the driver does not respond, use in-app Support and provide the trip and missing-item details. For a lost phone, Bolt's official support page has a separate web form requesting an alternative callback number, not the number inside the lost phone.",
     "category": "Ride-hailing",
     "agencySlug": "bolt-nigeria",
     "feeLabel": "No standard recovery fee stated",
-    "feeNote": "Bolt's Nigeria lost-item guidance does not state a standard fee for reporting a forgotten item.",
-    "timeline": "Bolt gives riders a 24-hour window to contact the driver through the app before the support route becomes the main recovery path.",
+    "feeNote": "Bolt says a driver may request compensation for the cost of returning a lost phone or item, but its public lost-item instructions do not establish one fixed nationwide amount. Agree on the actual return arrangement before paying, and avoid sending money to someone impersonating the driver.",
+    "timeline": "Bolt permits direct driver contact inside the app for 24 hours after the trip; this is not a promise that a driver will answer or return the item within a day. Later contact goes through Bolt Support, and there is no guaranteed recovery date.",
     "status": "verified",
-    "officialPortal": "https://bolt.eu/en-ng/support/articles/115002906973/",
+    "officialPortal": "https://bolt.eu/en/support/articles/115002906973/",
     "requirements": [
-      "The Bolt account used to request the ride",
-      "The completed ride in which the item was left",
-      "A description of the lost item and the phone number used for the order",
-      "A reachable phone number and email when reporting a lost phone through Bolt support"
+      "The Bolt account linked to the ride (or its associated email/phone for the lost-phone web form).",
+      "The correct completed trip in Activity, including date/time, origin/destination and driver where shown.",
+      "A specific description of the lost item, including identifying features and a safe alternate contact phone number when the original handset is missing.",
+      "Access to the official Bolt in-app support or lost-phone support form; drivers may not have the item, so there is no assured recovery."
     ],
     "steps": [
-      "Open Bolt and select Activity from the menu, then choose the completed ride in which the item was lost.",
-      "Use the contact-driver option within 24 hours of the trip and ask whether the item was found.",
-      "If the driver does not respond, open Bolt Support in the app and report the lost item with the ride details.",
-      "If more than 24 hours have passed, contact support directly and provide the order phone number and item description.",
-      "For a lost phone, complete Bolt's recovery form with the account phone number, a reachable contact number and trip details."
+      "From a trusted device, open Bolt → Activity and select the exact completed trip when you think the item was left behind.",
+      "Within 24 hours after that trip, use Bolt's Contact Driver action to enquire about the item. Give a clear description and keep communication professional; a driver may be working on another ride.",
+      "If the driver does not respond or more than 24 hours have passed, open Bolt's in-app Support and provide the ride details, booking phone number and lost-item description.",
+      "If the missing item is the phone you used for Bolt, open the provider's official Recovering a Lost Item support page in a browser and complete its Lost Phone form with account email, registered mobile, an alternate number the driver can call, trip city and details.",
+      "If the driver confirms the item is found, arrange a safe public handover or agreed delivery. Bolt says drivers are independent providers, it does not store lost items and the driver may request a reasonable return fee.",
+      "For a missing phone or wallet, secure your SIM, payment cards and online accounts through the relevant original providers separately while the search continues. Do not send OTPs or passwords to a purported Bolt agent."
     ],
     "notes": [
-      "Bolt states that neither it nor drivers can guarantee recovery of a forgotten belonging.",
-      "Nigeria's lost-item terms set separate handling expectations for drivers when unclaimed items are handed to Bolt or the police.",
-      "Report high-value or sensitive items promptly and preserve the ride information."
+      "The 24-hour limit on Bolt's official page is the direct in-app driver contact window, not a deadline guaranteeing recovery.",
+      "The lost-phone form is a distinct online fallback: Bolt shares the rider's stated alternate contact with the driver, who can respond directly.",
+      "Bolt warns that neither item recovery nor driver possession of the lost object can be guaranteed, and that it does not hold lost items in storage.",
+      "Driver return costs are not published as a fixed Nigerian tariff on the official help page; verify any proposed compensation before meeting."
     ],
     "sources": [
       {
-        "label": "Bolt Nigeria — Recovering a lost item",
+        "label": "Bolt official Recovering a Lost Item — 24-hour direct contact, support fallback, lost-phone form",
         "agency": "Bolt",
-        "url": "https://bolt.eu/en-ng/support/articles/115002906973/",
-        "lastChecked": "2026-10-05"
-      },
-      {
-        "label": "Bolt Nigeria — Lost items terms",
-        "agency": "Bolt",
-        "url": "https://bolt.eu/en-ng/legal/rides/tnc-lost-items/",
-        "lastChecked": "2026-10-05"
+        "url": "https://bolt.eu/en/support/articles/115002906973/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -1047,7 +1039,7 @@
       "bolt-schedule-ride-nigeria",
       "bolt-ride-insurance-claim-nigeria"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Bolt lost item Nigeria",
       "forgot phone in Bolt",
@@ -6642,37 +6634,40 @@
     "slug": "smartcash-emergency-block-wallet",
     "title": "How to block a SmartCash wallet if a phone is lost or compromised",
     "shortTitle": "Block SmartCash wallet",
-    "summary": "SmartCash's emergency wallet-lock route using *939*911# from the registered line or *939*911*customer-number# from another phone, followed by the wallet PIN.",
+    "summary": "SmartCash PSB says a stolen or compromised SmartCash wallet can be locked by dialing *939*911# from the registered number, or *939*911*CustomerPhoneNumber# from another phone, then entering the PIN belonging to the affected wallet. The PIN is required even when dialing from another phone. If you cannot authenticate or need the wallet reopened, SmartCash publishes 09125-939-939, frauddesk@smartcashpsb.ng and its customer-service inbox as official support routes.",
     "category": "Banking",
     "agencySlug": "smartcash-psb",
     "feeLabel": "No emergency-block fee stated",
-    "feeNote": "SmartCash does not state a separate fee for using its published emergency wallet-block code.",
-    "timeline": "SmartCash presents the USSD route as an emergency security action; contact customer care immediately if the block cannot be completed.",
+    "feeNote": "SmartCash's Help & Support page does not display a particular emergency-wallet-block service fee or a universal telecom session charge. Confirm any bank/network prompt and never pay an unknown agent to unlock or recover a wallet.",
+    "timeline": "Blocking is an urgent user-initiated request, but the public Help & Support FAQ does not guarantee how quickly a failed block, fraud review or wallet reopening is completed. Look for actual success confirmation and report unblocked exposure immediately.",
     "status": "verified",
     "officialPortal": "https://smartcashpsb.ng/help-and-support",
     "requirements": [
-      "The registered SmartCash phone number for the wallet that needs to be blocked",
-      "The wallet PIN used to authenticate the emergency request",
-      "Access to the registered phone or another phone capable of dialing the emergency USSD code"
+      "The affected SmartCash phone number/wallet, including the customer number when the registered SIM is not available.",
+      "The customer's own wallet PIN to authenticate the emergency block; SmartCash requires it on either phone route, and a stranger should never obtain it.",
+      "Access to any legitimate mobile phone supporting USSD or direct SmartCash support when the registered handset is stolen.",
+      "Official SmartCash assistance via 09125-939-939, frauddesk@smartcashpsb.ng or customerservice@smartcashpsb.ng if the phone flow fails, funds were taken or unblocking is requested."
     ],
     "steps": [
-      "From the registered SmartCash number, dial *939*911#; from another phone, dial *939*911*customer-phone-number#.",
-      "Enter the PIN linked to the wallet when the USSD prompt requests authentication.",
-      "Confirm the emergency block request and stop using any compromised device or session.",
-      "Contact SmartCash customer care if the USSD action fails or if suspicious transactions are already visible.",
-      "Use the provider's official customer-care route when ready to request wallet unblocking or further fraud investigation."
+      "If the registered phone is still available and safe to operate, dial *939*911# to start SmartCash's emergency wallet block.",
+      "If the phone or SIM is missing, dial *939*911*CustomerPhoneNumber# from a different phone, inserting the actual phone number registered to the affected wallet.",
+      "Only within the genuine SmartCash USSD prompt, enter the PIN linked to the wallet being blocked. Never tell someone your wallet PIN over a call, WhatsApp message or chat.",
+      "Complete the provider's block menu and check for a successful bank-issued result. If USSD disconnects or refuses the PIN, do not assume the wallet is secure.",
+      "Call SmartCash support on 09125-939-939 and email frauddesk@smartcashpsb.ng when suspicious transactions or account takeover are involved; record incident times and payment references.",
+      "For wallet unblocking/recovery, SmartCash directs customers to its customer-service team instead of listing an instant reversal shortcode. Secure the SIM, mobile device and any other linked financial apps before restoring access."
     ],
     "notes": [
-      "SmartCash explicitly labels this route for a lost, stolen or compromised phone/wallet.",
-      "The provider's help page says unblocking requires contacting customer service.",
-      "Do not disclose the PIN to anyone assisting with the emergency block."
+      "The third-party-phone shortcode requires the actual affected wallet's registered customer number and the account owner's PIN; it does not let strangers lock a wallet with phone-number knowledge alone.",
+      "SmartCash identifies 09125-939-939 as primary support, frauddesk@smartcashpsb.ng for fraud reports and customerservice@smartcashpsb.ng for customer service.",
+      "SmartCash publishes customer-support contact as the unblocking route; do not offer a fictional one-tap account-unlock code.",
+      "A locked wallet does not automatically refund an unauthorised transfer or stop SIM-based recovery risks on other accounts."
     ],
     "sources": [
       {
-        "label": "SmartCash Help & Support",
+        "label": "SmartCash official Help & Support — emergency lock both phone variants, PIN, frauddesk and unlocking",
         "agency": "SmartCash Payment Service Bank",
         "url": "https://smartcashpsb.ng/help-and-support",
-        "lastChecked": "2026-10-05"
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -6680,7 +6675,7 @@
       "smartcash-wallet-upgrade",
       "opay-emergency-lock-account-card"
     ],
-    "lastVerified": "2026-10-05",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "block SmartCash wallet",
       "SmartCash emergency code",

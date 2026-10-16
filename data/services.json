@@ -479,51 +479,59 @@
     "slug": "replace-lost-drivers-licence",
     "title": "How to replace a lost or stolen Nigerian driver's licence",
     "shortTitle": "Replace lost driver's licence",
-    "summary": "FRSC's official reissue route for an existing licence that is lost or stolen.",
+    "summary": "FRSC's official Nigeria Driver's Licence portal issues a Reissue for a licence that is lost, stolen, defaced or illegible. To replace a lost card, first obtain a police extract with particulars of the loss and swear an affidavit. On nigeriadriverslicence.frsc.gov.ng select DL Application → Reissue of Driver's Licence, not Fresh or Renewal, retrieve the existing record using licence number or NIN and date of birth, complete the application, pay the portal-prescribed class/validity charge and attend any required identity/biometric collection steps.",
     "category": "Driving",
     "agencySlug": "frsc",
-    "feeLabel": "Licence fee depends on class/validity",
+    "feeLabel": "Reissue fee depends on licence class/term and portal quote",
     "status": "verified",
     "officialPortal": "https://nigeriadriverslicence.frsc.gov.ng",
     "requirements": [
-      "Existing driver's licence number",
-      "Police extract stating the particulars of the loss, damage or defacement",
-      "Sworn affidavit stating the loss, damage or defacement"
+      "The existing Driver's Licence number, or registered NIN and date of birth where the portal supports retrieval; this is a reissue of an existing record.",
+      "A police extract/report detailing the lost, stolen, damaged or defaced licence.",
+      "A sworn affidavit stating the same loss, damage or defacement as required by the FRSC portal.",
+      "Correct name, date-of-birth and licence class details, plus legitimate means to pay the charge the official reissue application actually quotes.",
+      "Availability to attend a driver licence centre personally if FRSC requires biometric capture or identity verification; the FAQ prohibits sending a proxy for capture."
     ],
     "steps": [
-      "Obtain the police extract and swear the required affidavit before starting the reissue.",
-      "Open DL Application on the official FRSC portal and select Reissue of Driver's Licence.",
-      "Enter the existing licence number, complete the reissue application and pay the prescribed fee.",
-      "Print/retain the acknowledgement or application form, complete any capture/verification stage shown for the reissue, track the application status and use the DLC/MLA/VIO collection route shown by FRSC when the replacement card is ready."
+      "Report the licence's loss or theft to the police and obtain an extract showing what happened; prepare a court affidavit describing the loss/defacement.",
+      "Open https://nigeriadriverslicence.frsc.gov.ng/ and choose DL Application → Reissue of Driver's Licence. Do not mistakenly start a fresh driving-school-based application.",
+      "Retrieve the driver's existing record with the licence number or an available NIN search and the date of birth; resolve a mismatched record with FRSC instead of starting a duplicate identity.",
+      "Complete the reissue particulars, choose the applicable licence class/validity and processing centre, and review the generated payment amount before submission.",
+      "Pay the prescribed fee using the official channel. Retain the application's receipt, any ID/reference and the portal's biometric/appointment instructions.",
+      "Attend the specified FRSC driver licence centre in person if the reissue requires biometric validation or collection checks. A friend cannot substitute their fingerprints or photograph.",
+      "Track the application status or contact the identified licence centre, and collect the replacement using the authority's current collection and identification rules."
     ],
     "notes": [
-      "FRSC states that reissue covers licences that are illegible, defaced, lost or stolen.",
-      "Keep the police extract and affidavit available for the reissue process."
+      "FRSC's public homepage explicitly requires both police extract and affidavit before a lost/stolen reissue, as well as payment of the prescribed fee.",
+      "A renewal is for an expired/expiring licence; a reissue is for an existing licence that is lost, stolen, damaged or illegible. These are separate DL Application choices.",
+      "The form can be retrieved using the existing licence number or NIN together with date of birth where supported by FRSC. Do not create a second record to bypass a retrieval problem.",
+      "Never use new-licence published prices as an unqualified fixed replacement charge; payment-channel and reissue rules may differ."
     ],
     "sources": [
       {
-        "label": "Nigeria Driver's Licence FAQ",
-        "agency": "Federal Road Safety Corps",
-        "url": "https://nigeriadriverslicence.frsc.gov.ng/faq",
-        "lastChecked": "2026-09-28"
-      },
-      {
-        "label": "Nigeria Driver's Licence official portal",
+        "label": "FRSC licence portal — official Reissue for loss, police extract and affidavit",
         "agency": "Federal Road Safety Corps",
         "url": "https://www.nigeriadriverslicence.frsc.gov.ng/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "FRSC FAQ — Reissue menu, NIN/licence retrieval, fees and in-person identity checks",
+        "agency": "Federal Road Safety Corps",
+        "url": "https://nigeriadriverslicence.frsc.gov.ng/faq",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "renew-drivers-licence"
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Replace lost driver's licence",
       "How to replace a lost or stolen Nigerian driver's licence",
       "Driving"
     ],
-    "feeNote": "The reissue amount is not presented here as one universal figure because the transaction depends on the licence class and validity selected. Confirm the amount generated on the official FRSC licence portal before paying."
+    "feeNote": "FRSC says the prescribed reissue amount must be paid. The general FAQ separately publishes New Licence prices (Class A: ₦7,000 for three years and ₦11,000 for five; other classes ₦15,000/₦21,000), but these are not established as a separate universal LOST-licence reissue tariff. Use the exact reissue amount calculated on the official portal, including any disclosed payment-channel charge.",
+    "timeline": "FRSC does not publish a single universally guaranteed reissue completion time on the inspected public FAQ. Application/retrieval and payment precede any required physical identity/biometric check and eventual licence centre collection; the current applicant portal status controls."
   },
   {
     "slug": "upgrade-drivers-licence-class",
@@ -2013,37 +2021,51 @@
     "slug": "nysc-lost-discharge-certificate",
     "title": "What to do if an NYSC discharge certificate is lost",
     "shortTitle": "Lost NYSC discharge certificate",
-    "summary": "NYSC's official requirements after loss of a Certificate of National Service.",
+    "summary": "NYSC explicitly does not reprint lost or burnt Certificates of National Service. An ex-corps member instead requests a Letter of Confirmation with a police extract/report, court affidavit, a letter of introduction from the NYSC State Secretariat where the person served and a copy of the original certificate if available. NYSC's published price schedule lists ₦20,000 for loss of a Certificate of National Service/Exemption; confirm payment instructions with the NYSC certification office rather than paying a third party.",
     "category": "Youth service",
     "agencySlug": "nysc",
-    "feeLabel": "NYSC does not reprint lost/burnt certificates",
+    "feeLabel": "NYSC publishes ₦20,000 loss-related charge; no certificate reprint",
     "status": "verified",
     "officialPortal": "https://www.nysc.gov.ng/certcollectcns.html",
     "requirements": [
-      "Police extract/report",
-      "Court affidavit",
-      "Letter of introduction from the state of service",
-      "Copy of the lost certificate where available"
+      "A police extract/report documenting the missing Certificate of National Service.",
+      "A court affidavit describing the loss and naming the former corps member correctly.",
+      "A formal letter of introduction from the NYSC State Secretariat of discharge (the State of Service).",
+      "A copy or clear scan of the missing original discharge certificate if one still exists; NYSC says this is optional 'where available'.",
+      "Identification/service or call-up details sufficient for NYSC to locate the historical service record; the approving office confirms any extra evidence.",
+      "The current verified NYSC certification fee/payment guidance; the published price schedule lists ₦20,000 for certificate loss."
     ],
     "steps": [
-      "Obtain a police extract or report for the lost Certificate of National Service and prepare a court affidavit describing the loss, as required by NYSC.",
-      "Get a letter of introduction from the NYSC state where the holder served and include a copy of the lost certificate if one is still available.",
-      "Submit the complete supporting documents through the relevant NYSC certification channel and clearly request confirmation of the lost Certificate of National Service.",
-      "Keep copies of everything submitted and follow the NYSC certification channel for the outcome; NYSC states that a lost or burnt discharge certificate is not reprinted.",
-      "When NYSC completes the request, use the Letter of Confirmation issued by NYSC as the official confirmation route instead of expecting a replacement discharge certificate."
+      "Confirm that the missing document is the Certificate of National Service (discharge certificate). NYSC has separate forms/rules for an Exemption Certificate, and neither is reprinted after loss.",
+      "Get a police extract/report describing the lost certificate and obtain a sworn court affidavit about the same incident.",
+      "Contact the NYSC State Secretariat where the former corps member was discharged and obtain the required Letter of Introduction from that State of Service.",
+      "Attach a copy of the original certificate when available, and prepare identity/service evidence to match the NYSC record. Do not invent a certificate number if no copy exists.",
+      "Present the complete request to the official NYSC certification channel identified by the State Secretariat and request a Letter of Confirmation, not a replacement original.",
+      "Verify the applicable fee directly with NYSC before paying: its published schedule lists ₦20,000 for loss of Certificate of National Service or Exemption. Retain an official receipt/reference.",
+      "Use the NYSC certification office's reference or written response to check the request's progress. If approved, NYSC issues a Letter of Confirmation, not another Certificate of National Service. The public certification instructions do not promise a fixed date for completion."
     ],
     "notes": [
-      "NYSC states lost or burnt Certificates of National Service are not reprinted; Letters of Confirmation are issued instead."
+      "NYSC states as a matter of policy that a lost or burnt Certificate of National Service is not reprinted and a Letter of Confirmation is issued instead.",
+      "The required introduction must come from the State of Service where the ex-corps member was discharged; a former employer's casual note is not established as an equivalent.",
+      "A copy of the lost certificate is requested only when available; losing that copy does not negate the requirement for independent police, affidavit and service-state records.",
+      "NYSC publishes a ₦20,000 loss-related charge in its official fee schedule (last updated 19 August 2024). Payment/processing methods require direct confirmation, and intermediaries should not receive personal-account transfers.",
+      "NYSC does not issue Certificates of National Service by proxy under its certification policy. Seek official clarification about Letter of Confirmation collection requirements."
     ],
     "sources": [
       {
-        "label": "NYSC Certificate of National Service",
+        "label": "NYSC Certificate of National Service — loss documentation, no reprint and Letter of Confirmation",
         "agency": "National Youth Service Corps",
         "url": "https://www.nysc.gov.ng/certcollectcns.html",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NYSC schedule of verification charges — ₦20,000 for lost service/exemption certificate",
+        "agency": "National Youth Service Corps",
+        "url": "https://nysc.gov.ng/certpricecharges.html",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Lost NYSC discharge certificate",
       "What to do if an NYSC discharge certificate is lost",
@@ -2053,7 +2075,9 @@
       "nysc-exemption-certificate",
       "nysc-call-up-letter",
       "nysc-registration-local"
-    ]
+    ],
+    "feeNote": "NYSC's official charge schedule updated 19 August 2024 lists ₦20,000 for Loss of Certificate of National Service / Certificate of Exemption. Confirm that this charge and the designated collection/payment method still apply to your case with the NYSC certification office. NYSC does not offer a paid reprint of a lost/burnt original; it issues a Letter of Confirmation.",
+    "timeline": "The publicly reviewed NYSC certification and fee pages do not promise a fixed turnaround for the Letter of Confirmation. Processing depends on the state of service, identification and document verification; ask the relevant Secretariat for a case reference and return instructions."
   },
   {
     "slug": "nysc-lost-exemption-certificate",
@@ -3692,45 +3716,56 @@
     "slug": "lost-nigerian-passport",
     "title": "What to do if your Nigerian passport is lost",
     "shortTitle": "Lost Nigerian passport",
-    "summary": "NIS publishes a specific replacement process for a passport reported lost, including a police extract and High Court affidavit.",
+    "summary": "If a Nigerian passport is lost or stolen, NIS directs the holder to Apply for Renewal/Re-issue on the official passport portal, not to submit a new first-time application. Required evidence includes an NPC birth certificate or qualifying court declaration, Local Government Indigeneship Certificate, police extract describing the loss and a High Court sworn affidavit. Dual nationals holding a foreign passport should also upload its data page. Pay the actual NIS replacement charge, save receipt/acknowledgement and attend the selected passport office for biometric capture.",
     "category": "Immigration",
     "agencySlug": "nis",
-    "feeLabel": "Replacement passport fees apply",
+    "feeLabel": "NIS replacement fees apply; confirm total at the official checkout",
     "status": "verified",
     "officialPortal": "https://passport.immigration.gov.ng/",
     "requirements": [
-      "Birth certificate issued by NPC or a qualifying declaration of age",
-      "Local Government Certificate of Indigeneship",
-      "Police extract for the lost passport",
-      "High Court sworn affidavit for loss",
-      "If dual nationality applies, the data page of the non-Nigerian passport; also take any extra identity/civil document NIS specifically requests for the applicant's lost-passport case"
+      "Existing passport number or other records identifying the lost document, where available; report details truthfully rather than guessing.",
+      "Birth certificate from the National Population Commission or a qualifying declaration of age from a Federal/State High Court or Customary Court of Appeal.",
+      "Local Government Certificate of Indigeneship, consistent with the applicant's identity and nationality record.",
+      "Police extract recording loss of the passport and a sworn High Court affidavit specifically for the loss.",
+      "The data page of a valid non-Nigerian passport if the holder has dual nationality; relevant marriage or other civil evidence where the applicant's names differ.",
+      "Official passport-portal access, payment method, selection of a processing centre and ability to attend in person with original identity evidence."
     ],
     "steps": [
-      "Open the official passport portal and choose Renewal/Re-issue.",
-      "Upload the supporting documents required for a lost passport.",
-      "Pay the official replacement fees shown in the NIS process.",
-      "Print the acknowledgement/payment slips and attend the required processing/biometric appointment."
+      "Obtain the police extract/report for the lost passport and a sworn High Court affidavit explaining the loss, including the original passport identity details you can reliably confirm.",
+      "Gather NPC birth record or qualifying declaration of age, local-government indigeneship evidence, and any relevant foreign passport data page or name-change record when applicable.",
+      "Open https://passport.immigration.gov.ng/ and select Apply for Renewal/Re-issue Passport. NIS's official lost-passport guide explicitly uses this existing-passport route, not the Fresh Passport pathway.",
+      "Enter the actual identity/passport details requested, select the appropriate processing centre, and upload the police extract, affidavit, citizenship/birth and other category documents.",
+      "Check the final amount shown by NIS for this replacement, pay through the official portal and print/save the actual payment and application acknowledgement slips.",
+      "Attend the processing/biometric appointment in person with original records the office requests. If applying from outside Nigeria, consult the Nigerian mission responsible for that processing route.",
+      "Check the application status through the NIS portal and the selected office's collection directions. If the missing booklet is found later, do not resume using a passport already formally declared lost; ask NIS how to surrender or handle it."
     ],
     "notes": [
-      "NIS warns against continued use of a passport already declared lost.",
-      "Applicants with dual nationality may need to upload the data page of the non-Nigerian passport."
+      "NIS warns the continued use of a passport already declared lost can be treated as fraudulent misuse of a government document. A recovered booklet should be taken to NIS rather than reused without clearance.",
+      "Dual nationals with a foreign passport must disclose and upload its data page under the official NIS loss application instructions.",
+      "Different personal-data changes or ordinary validity renewals use different evidence rules; the loss affidavit and police report are not substitutes for a name/date correction application.",
+      "An online form or a receipt does not eliminate the physical identity and biometric checks required for reissue."
     ],
     "sources": [
       {
-        "label": "NIS replacement of lost passport",
+        "label": "NIS — loss-specific passport replacement, supporting evidence and ban on reuse",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/info-center/how-to-apply-for-the-replacement-of-lost-passport/",
-        "published": "2025-07-28",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
       },
       {
-        "label": "NIS Passports",
+        "label": "NIS Passports — categories, biometrics and diaspora routes",
         "agency": "Nigeria Immigration Service",
         "url": "https://immigration.gov.ng/passports/",
-        "lastChecked": "2026-09-28"
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "NIS official passport application portal — Renewal/Re-issue",
+        "agency": "Nigeria Immigration Service",
+        "url": "https://passport.immigration.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Lost Nigerian passport",
       "What to do if your Nigerian passport is lost",
@@ -3740,7 +3775,9 @@
       "passport-renewal",
       "first-nigerian-passport",
       "emergency-travel-certificate"
-    ]
+    ],
+    "feeNote": "The NIS lost-passport replacement guide requires payment of the appropriate replacement fees but does not establish a universal additional lost-passport tariff for every case. The general passport booklet fee does not necessarily account for every category-specific administrative payment or bank charge. Check the actual official passport.immigration.gov.ng checkout before paying; do not send money to a purported police/passport agent.",
+    "timeline": "NIS's public lost-passport instructions do not guarantee a single receipt-to-collection period. The relevant processing timetable begins from successful enrolment under the applicable replacement category; verify the case status after completing biometrics and do not promise a collection date."
   },
   {
     "slug": "nin-slip-reissue",
