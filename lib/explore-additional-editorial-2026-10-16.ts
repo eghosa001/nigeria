@@ -5,19 +5,21 @@ import type { VerifiedVisitAddition } from "@/lib/explore-verified-visitor-updat
 // sources establish identity and historical context; they do NOT establish
 // that a facility is admitting guests right now or that an older tariff holds.
 // All visitor steps below are conditional, not claims of personal attendance.
-export const furtherVisitorDecisions20261016: Record<string, VerifiedVisitAddition> = {
+type MoreEvidence = VerifiedVisitAddition & { additionalSources?: Array<{ label: string; href: string }> };
+export const furtherVisitorDecisions20261016: Record<string, MoreEvidence> = {
   "olumo-rock-visitor-guide": {
     source: { label: "Punch — Ogun reopened the renovated rock centre on 31 July 2025", href: "https://punchng.com/dapo-abiodun-opens-newly-renovated-olumo-rock/" },
     intro: "Ogun's Olumo Rock Tourist Centre reopened after its 2025 renovation, when the government announced lift upgrades, new visitor facilities and online as well as on-site ticketing. The free-entry offer announced at reopening ended in September 2025; an August 2025 report must not be used as evidence of free entry in October 2026. The rock's Egba history and the modern centre are related but different reasons to visit.",
     planning: { label: "Check today's Olumo ticket and lift service", detail: "Use the centre's own current booking or contact route for admission and guide terms, then verify that the lift operates before relying on it instead of the climb. Keep Itoku adire shopping as a separate, optional Abeokuta stop if rain, physical access or a sold-out session disrupts the rock visit. Neither the historic reopening promotion nor a third-party quote supplies today's exact price." },
   },
   "nike-art-gallery-lagos-guide": {
-    source: { label: "ART X Lagos — Nike Art Gallery's 2026 exhibitor profile", href: "https://www.artxlagos.com/exhibitors/nike-art-gallery-2026" },
+    source: { label: "Woya — independent 2026 Lekki venue listing (hours need operator confirmation)", href: "https://www.woya.me/place/nike-art-gallery-b00c0714-ce5c-4314-8793-50c57a6ff570" },
     intro: "ART X Lagos identifies Nike Art Gallery as a four-floor Lagos art space established in 2009 by Chief Nike Okundaye. Its 2026 exhibitor profile names artists including Bruce Onobrakpeya, Jimoh Buraimoh and Uche Edochie. A fair-booth exhibitor profile documents the gallery's participation, not the opening hours, availability or asking price of every artwork at its separate Lekki location.",
     planning: { label: "Separate gallery browsing from an exhibition or workshop booking", detail: "If seeing the permanent display is the goal, ask the Lekki gallery for that day's visitor rules; if you want a named artist, school group or textile demonstration, enquire whether that experience is actually scheduled. The ART X exhibitor page is not admission to an art fair, a private tour or a guarantee that works pictured there remain for sale." },
   },
   "owo-museum-guide": {
     source: { label: "NCMM — National Museum Owo official station listing", href: "https://museum.ng/museums/national-museums/" },
+    additionalSources: [{ label: "NCMM collection — Owo terracotta bust, current location National Museum Lagos", href: "https://collection.museum.ng/owo-terracotta-bust/" }],
     intro: "The National Commission for Museums and Monuments lists National Museum Owo at Olowo's Palace in Owo. This is a distinct institutional address, not an annex of the National Museum Akure or the National Museum Lagos. NCMM's digital collection includes fifteenth-century Owo terracotta recovered around Igbo 'Laja; its entry records the example's current location as National Museum Lagos, so readers must not assume every published Owo object is physically exhibited in Owo.",
     planning: { label: "Confirm the Owo gallery, not just an object of Owo provenance", detail: "Ask NCMM's Owo station whether it is receiving visitors and which galleries or guided explanations are available on your date. If researching a particular terracotta, check the item's current collection location before travelling; the online Owo provenance is not proof of display at Olowo's Palace. The museum's general published hours are not a site-specific reservation or confirmed admission fee." },
   },
@@ -28,11 +30,13 @@ export const furtherVisitorDecisions20261016: Record<string, VerifiedVisitAdditi
   },
   "national-war-museum-umuahia-guide": {
     source: { label: "NCMM — National War Museum Umuahia station and contact", href: "https://museum.ng/museums/national-museums/" },
+    additionalSources: [{ label: "UK FCDO — Abia regional travel advice", href: "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks" }],
     intro: "NCMM locates the National War Museum on the Ugwunchara/Isingwu side of Umuahia, not at a generic city-centre landmark. Its war-history exhibits and the separate Ojukwu Bunker may be affected differently by the 2026 federal preservation work already cited on this page; a restoration announcement must not be interpreted as a declaration that both have fully reopened.",
     planning: { label: "Check two access decisions and the Abia security warning", detail: "Confirm the War Museum's exact approach, exhibition access and any renovation restrictions with NCMM, then ask independently whether the Ojukwu Bunker accepts visitors. Do not promise the bunker is included in one ticket. The UK FCDO currently advises against all but essential travel to Abia State; this history reference should not be treated as approval of a recreational drive." },
   },
   "gidan-makama-museum-guide": {
     source: { label: "NCMM — Gidan Makama/National Museum Kano address", href: "https://museum.ng/national-museums-list/" },
+    additionalSources: [{ label: "UK FCDO — Kano regional travel advice", href: "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks" }],
     intro: "NCMM's station list identifies Gidan Makama Museum opposite the Emir's Palace in old Kano. That makes it a different visitor task from Dala Hill's exterior viewpoint, the working Kurmi market and palace interiors whose access is controlled separately. The official listing verifies the museum's heritage identity and address; it does not confirm a currently open gallery or an unescorted palace tour.",
     planning: { label: "Do not package Gidan Makama into an automatic Kano walking circuit", detail: "The UK FCDO advises against all but essential travel to Kano. Preserve the museum as historical research and ask NCMM or local custodians about access only if travel is essential and appropriately risk-assessed. Do not infer admission to the Emir's Palace, a guide, photography rights, the museum's current fee or a safe walking route from the station's location." },
   },
