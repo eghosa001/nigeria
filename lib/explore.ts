@@ -1,6 +1,7 @@
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
 import { regionalAccessDecisions20261016 } from "@/lib/explore-regional-access-decisions-2026-10-16";
+import { districtAndEventCorrections20261017 } from "@/lib/explore-district-and-event-corrections-2026-10-17";
 import { remainingTourResearch20261016 } from "@/lib/explore-priority-review-decisions-2026-10-16";
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
@@ -13808,7 +13809,7 @@ const museumReviewedExploreGuides: ExploreGuide[] = priorReviewedExploreGuides.m
 
 // Fifth evidence pass: keep existing collections, visitor research and hero
 // corrections intact while surfacing nine region-specific access decisions.
-export const exploreGuides: ExploreGuide[] = museumReviewedExploreGuides.map((guide) => {
+const previousPublishedExploreGuides: ExploreGuide[] = museumReviewedExploreGuides.map((guide) => {
   const review = regionalAccessDecisions20261016[guide.slug];
   if (!review) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13825,6 +13826,50 @@ export const exploreGuides: ExploreGuide[] = museumReviewedExploreGuides.map((gu
       ? guide.planning : [...guide.planning, review.planning],
     sources,
     lastReviewed: "2026-10-16",
+  };
+});
+
+// Sixth editorial pass: preserve the canonical URLs and every previously
+// researched decision. Each dated evidence link is attached only to its guide.
+export const exploreGuides: ExploreGuide[] = previousPublishedExploreGuides.map((guide) => {
+  const review = districtAndEventCorrections20261017[guide.slug];
+  if (!review) return guide;
+  const sources = [...(guide.sources ?? [])];
+  for (const citation of [review.source, ...review.additionalSources]) {
+    if (citation.href !== guide.source?.href && !sources.some(x => x.href === citation.href)) {
+      sources.push(citation);
+    }
+  }
+  const archivedAfrigeo = guide.slug === "10th-afrigeo-symposium-abuja-2026";
+  return {
+    ...guide,
+    summary: review.summary,
+    intro: archivedAfrigeo
+      ? [
+          "This 2026 symposium has ended. NASRDA confirmed the 6 October opening at NACCAS in Abuja, and the official programme assigns different venues to the capacity-development and main conference days.",
+          review.intro ?? "",
+        ]
+      : review.intro && !guide.intro.includes(review.intro)
+        ? [...guide.intro, review.intro] : guide.intro,
+    highlights: archivedAfrigeo
+      ? guide.highlights.map(item => ({
+          ...item,
+          detail: item.name === "NASRDA Obasanjo Space Centre"
+            ? "The official programme used multiple venues, including DSA/NASRDA facilities and NACCAS; review the date-specific organiser timetable."
+            : item.detail,
+        }))
+      : guide.highlights,
+    planning: archivedAfrigeo
+      ? [
+          { label: "Registration is closed", detail: "The symposium ended on 8 October 2026. The old professional-registration link is archival, not a current ticket or conference admission." },
+          { label: "Distinguish venues by day", detail: "The 5 October capacity-development programme and 6–8 October NACCAS conference sessions were not all held at one venue; check the official day-by-day timetable before citing an address." },
+          { label: "Research the technical sessions", detail: "Review the original programme for Earth-observation, climate adaptation, disaster risk, and data infrastructure topics. Published speakers and agendas do not prove every proposed presentation took place without post-event reports." },
+          review.planning,
+        ]
+      : guide.planning.some(item => item.label === review.planning.label)
+        ? guide.planning : [...guide.planning, review.planning],
+    sources,
+    lastReviewed: "2026-10-17",
   };
 });
 

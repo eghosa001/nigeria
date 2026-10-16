@@ -2,6 +2,7 @@ import { exploreGuides } from "../lib/explore";
 import { furtherVisitorDecisions20261016 } from "../lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "../lib/explore-museums-and-waterfalls-2026-10-16";
 import { regionalAccessDecisions20261016 } from "../lib/explore-regional-access-decisions-2026-10-16";
+import { districtAndEventCorrections20261017 } from "../lib/explore-district-and-event-corrections-2026-10-17";
 import { remainingTourResearch20261016 } from "../lib/explore-priority-review-decisions-2026-10-16";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
@@ -363,7 +364,7 @@ for (const [slug, sourceFragment, evidencePhrase, planningPhrase] of [
       !guide.sources?.some(item => item.href.includes(sourceFragment)) ||
       !guide.intro.some(item => item.includes(evidencePhrase)) ||
       !guide.planning.some(item => item.label.includes(planningPhrase)) ||
-      guide.lastReviewed !== "2026-10-15") {
+      guide.lastReviewed < "2026-10-15") {
     errors.push(`${slug}: independently verified heritage research or visitor safeguards missing`);
   }
 }
@@ -566,6 +567,39 @@ for (const slug of ["ushongo-hills-guide", "south-south-waterfront-heritage-rout
   if (!guide || !/FCDO|travel|warning|restrict/i.test(guide.summary) ||
       !guide.sources?.some(source => source.href === "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks")) {
     errors.push(slug + ": up-front regional safety disclaimer or source missing");
+  }
+}
+
+// The 17 October research replaces unsafe/promotional summary claims on 12
+// exact canonical pages, not a global boilerplate banner or review flag reset.
+const exactRegionalCorrections = Object.entries(districtAndEventCorrections20261017);
+if (exactRegionalCorrections.length !== 12)
+  errors.push("Expected 12 independently sourced region/event corrections.");
+for (const [slug, evidence] of exactRegionalCorrections) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const cited = [guide?.source?.href, ...(guide?.sources ?? []).map(s => s.href)];
+  const expected = [evidence.source, ...evidence.additionalSources];
+  if (!guide || guide.lastReviewed !== "2026-10-17" ||
+      guide.summary !== evidence.summary ||
+      !guide.intro.includes(evidence.intro ?? "") ||
+      !guide.planning.some(item => item.label === evidence.planning.label && item.detail === evidence.planning.detail) ||
+      expected.some(source => !cited.includes(source.href)) ||
+      cited.length !== new Set(cited).size) {
+    errors.push(`${slug}: editorial source, verified event status or practical visitor decision regressed`);
+  }
+}
+const afrigeo = exploreGuides.find(item => item.slug === "10th-afrigeo-symposium-abuja-2026");
+if (!afrigeo?.summary.startsWith("Past event:") ||
+    !afrigeo.summary.includes("Registration is closed") ||
+    !afrigeo.sources?.some(s => s.href.includes("central.nasrda.gov.ng/afrigeo-2026"))) {
+  errors.push("AfriGEO: closed October 2026 event may not read as bookable or give one erroneous venue.");
+}
+for (const slug of ["kebbi-heritage", "taraba-highlands", "niger-state-nature",
+  "abia-war-history", "anambra-heritage", "asaba", "yenagoa", "makurdi"]) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  if (!guide?.sources?.some(s => s.href === "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks") ||
+      !/FCDO|essential travel|travel advice|travel restrictions/i.test(guide.summary)) {
+    errors.push(slug + ": regional FCDO warning must be prominent before itinerary guidance.");
   }
 }
 
