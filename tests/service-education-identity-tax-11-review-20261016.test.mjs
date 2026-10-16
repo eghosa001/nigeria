@@ -43,6 +43,6 @@ test("SEO monitor discovery assertions avoid grep -q upstream pipe SIGPIPE", () 
   const yaml = readFileSync(".github/workflows/production-monitor.yml", "utf8");
   const discovery = yaml.split("- name: Verify SEO discovery endpoints")[1].split("- name: Verify Google AdSense")[0];
   assert.ok(discovery.includes('grep -Fq -- "$needle" <<< "$body"'));
-  assert.ok(!/printf[^\n]+\|\s*grep\s+-[A-Za-z]*q/.test(discovery));
+  assert.ok(!discovery.split("\n").some((line) => /^\s*printf\s+.*\|\s*grep\s+-[A-Za-z]*q/.test(line)));
   assert.match(discovery, /Sitemap index, section sitemaps and robots discovery checks passed/);
 });
