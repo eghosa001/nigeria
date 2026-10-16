@@ -114,6 +114,22 @@ const kiriji = exploreGuides.find(item => item.slug === "kiriji-war-museum-guide
 if (!kiriji || kiriji.title.includes("Museum") || !kiriji.summary.includes("no current operating museum"))
   errors.push("Kiriji site must not be presented to visitors as an established staffed museum.");
 
+// A heritage map pin must not falsely certify a staffed museum. This page's
+// canonical URL and place identifier are intentionally preserved.
+const kirijiPin = explorePlaces.find(p => p.slug === "kiriji-war-museum");
+const owa = exploreGuides.find(g => g.slug === "owa-obokun-statue-guide");
+const warHistory = exploreGuides.find(g => g.slug === "nigeria-war-history-guide");
+if (!kirijiPin || kirijiPin.kind !== "landmark" ||
+    kirijiPin.guideSlug !== "kiriji-war-museum-guide" ||
+    kirijiPin.name.includes("Museum") ||
+    !kirijiPin.mapQuery?.includes("Imesi-Ile") ||
+    !kirijiPin.source.href.includes("osun-community-tasks-aregbesola-development") ||
+    kirijiPin.checkedAt !== "2026-10-16" ||
+    !owa?.summary.includes("a public Kiriji museum has not been verified") ||
+    !warHistory?.highlights.some(h => h.name === "Kiriji war site")) {
+  errors.push("Kiriji place card and all linked Tour guides must not claim an unverified public museum.");
+}
+
 // Regression: publication screening and the actual Tour guide page must agree
 // about already sourced, shared, canonical place cards. A guide should not be
 // marked 'unmapped' solely because a card's primary owner is another guide.

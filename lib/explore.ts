@@ -10208,7 +10208,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
     "shortTitle": "Owa Obokun Statue",
     "kind": "destination",
     "region": "Osun State",
-    "summary": "Use the Owa Obokun monument as a focused Ilesa royal-heritage stop, paired with museum context rather than a rushed photo-only visit.",
+    "summary": "Use the Owa Obokun monument for Ilesa royal history, with separate Kiriji battlefield background; a public Kiriji museum has not been verified.",
     "intro": [
       "The Owa Obokun monument gives Ilesa a distinct royal-history landmark within Osun State's broader heritage network.",
       "Pairing it with historical interpretation makes the stop more useful than treating it only as a city marker."
@@ -11714,7 +11714,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
       },
       {
         "name": "Ilesa",
-        "detail": "Add Kiriji War Museum and Owa Obokun context."
+        "detail": "Study the documented Kiriji war site at Imesi-Ile and the separate Owa Obokun monument; do not assume a visitor museum or a shared ticket."
       },
       {
         "name": "Nature option",
@@ -12238,8 +12238,8 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
         "detail": "The National War Museum and Ojukwu Bunker anchor Civil War interpretation."
       },
       {
-        "name": "Kiriji War Museum",
-        "detail": "Provides regional context for nineteenth-century Yoruba conflict."
+        "name": "Kiriji war site",
+        "detail": "The Imesi-Ile historical site is documented, but no staffed exhibition or public visitor opening is confirmed."
       },
       {
         "name": "Museum-first planning",
