@@ -50,8 +50,9 @@ test("official fee distinctions, eligibility changes and limitations stay visibl
   assert.match(combined("pencom-transfer-rsa"), /365 days/);
   assert.match(combined("pencom-micro-pension-registration"), /Personal Pension Plan \(PPP\)/);
   assert.match(combined("pencom-unremitted-contributions"), /uncredited/i);
-  assert.match(combined("nhf-contribution-refund"), /90 days/);
-  assert.match(combined("nhf-contribution-refund"), /None|no NHF refund application fee/i);
+  assert.match(combined("nhf-contribution-refund"), /Refund → Proceed to Application/);
+  assert.match(combined("nhf-registration-and-contributions"), /Contribution History/);
+  assert.match(combined("nhf-mortgage-loan"), /Check Affordability/);
   assert.match(combined("nhf-mortgage-loan"), /6%/);
   assert.match(combined("nelfund-loan-repayment"), /60.days/i);
   assert.match(combined("nelfund-loan-status-and-upkeep"), /institutional charges/i);
@@ -74,5 +75,5 @@ test("all 20 public service journeys prevent fake fully-online or wrong account 
   assert.match(src, /"nhia-private-sector-coverage": \{\s*mode: "agency-guided"/);
   assert.match(src, /"pencom-micro-pension-registration": \{\s*mode: "hybrid"/);
   assert.match(src, /"emergency-travel-certificate": \{\s*mode: "agency-guided"/);
-  assert.match(src, /"nhf-contribution-refund": \{\s*mode: "agency-guided"/);
+  assert.match(src, /"nhf-contribution-refund": \{\s*mode: "online"/);
 });
