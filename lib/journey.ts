@@ -46,6 +46,24 @@ function explicitlyOnlineStep(step: string) {
 }
 
 export function getServiceJourney(service: Service): ServiceJourney {
+  // WAEC's certificate-amendment FAQ specifies a principal-mediated route for
+  // school candidates and a direct request to WAEC for private candidates.
+  // The linked official FAQ is NOT an online amendment application form.
+  // Primary source checked 2026-10-16: https://waecnigeria.org/node/17
+  if (service.slug === "waec-correct-certificate-error") {
+    return {
+      mode: "agency-guided",
+      modeLabel: "WAEC / school-principal request",
+      startLabel: "Use the correct candidate route",
+      startDetail: "School candidates request an amendment through their school principal. Private candidates send the request directly to WAEC. WAEC says the original certificate accompanies the request; confirm the current delivery method and address before sending it.",
+      onlineAvailable: false,
+      physicalStatus: "not-stated",
+      physicalLabel: "WAEC does not specify a compulsory walk-in visit in its certificate-amendment FAQ",
+      alternativeLabel: "Before sending your original certificate",
+      alternativeDetail: "Confirm submission instructions and any applicable charge with WAEC through its official contact channels. Keep a copy of the certificate and proof of submission. The FAQ does not establish a self-service online form or fixed processing time.",
+    };
+  }
+
   // The Glo webpage explains eSIM but does not accept a complete online swap.
   // Its official FAQ requires NIN checks and QR installation at a Gloworld/dealer outlet.
   if (service.slug === "glo-esim-activation") {
