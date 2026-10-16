@@ -1,5 +1,6 @@
 import { exploreGuides } from "../lib/explore";
 import { furtherVisitorDecisions20261016 } from "../lib/explore-additional-editorial-2026-10-16";
+import { remainingTourResearch20261016 } from "../lib/explore-priority-review-decisions-2026-10-16";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
 import { tourLeadFixes20261016 } from "../lib/explore-tour-lead-fixes-2026-10-16";
@@ -476,6 +477,24 @@ for (const [slug, sourcePart, historicalOrAccessFact, decision] of [
 const olumoEditorial = exploreGuides.find(item => item.slug === "olumo-rock-visitor-guide");
 if (olumoEditorial?.intro.some(item => item.includes("ended in September 2025"))) {
   errors.push("Olumo Rock: superseded September 2025 free-entry end claim returned; actual end was 23 August.");
+}
+
+// Focused 14-record editorial evidence guard. A passed test proves source
+// citation wiring, not first-hand visitor access or human originality review.
+if (Object.keys(remainingTourResearch20261016).length !== 14) {
+  errors.push("Expected 14 source-verified Tour review corrections.");
+}
+for (const [slug, evidence] of Object.entries(remainingTourResearch20261016)) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const urls = [guide?.source?.href, ...(guide?.sources ?? []).map(item => item.href)];
+  const expected = [evidence.source, ...(evidence.additionalSources ?? [])];
+  if (!guide || guide.lastReviewed !== "2026-10-16" ||
+      !guide.intro.includes(evidence.intro ?? "") ||
+      !guide.planning.some(item => item.label === evidence.planning.label && item.detail === evidence.planning.detail) ||
+      expected.some(item => !urls.includes(item.href)) ||
+      urls.length !== new Set(urls).size) {
+    errors.push(`${slug}: independent source, caveat, or visitor decision missing from rendered catalog`);
+  }
 }
 
 for (const place of explorePlaces) {
