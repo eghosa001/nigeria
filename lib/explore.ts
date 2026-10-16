@@ -2,6 +2,7 @@ import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festiva
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
 import { verifiedTourDecisions20261016 } from "@/lib/explore-verified-visitor-updates-2026-10-16";
 import { tourPracticalDecisions20261016 } from "@/lib/explore-practical-decisions-2026-10-16";
+import { highPriorityTourEvidence20261016 } from "@/lib/explore-high-priority-2026-10-16";
 import { independentVisitorEvidence20261015 } from "@/lib/explore-independent-evidence-2026-10-15";
 import { verifiedOctoberHeritageEvents20261013 } from "@/lib/explore-heritage-events-2026-10-13";
 import { museumCollectionsGuide20261013 } from "@/lib/explore-museum-collections-2026-10-13";
@@ -13691,7 +13692,7 @@ const uncorrectedExploreGuides: ExploreGuide[] = [
 // Authoritative access updates are additive: do not erase the original
 // guide's researched details, first source, or earlier review dates.
 export const exploreGuides: ExploreGuide[] = uncorrectedExploreGuides.map((guide) => {
-  const freshlyChecked = tourPracticalDecisions20261016[guide.slug] ?? verifiedTourDecisions20261016[guide.slug];
+  const freshlyChecked = highPriorityTourEvidence20261016[guide.slug] ?? tourPracticalDecisions20261016[guide.slug] ?? verifiedTourDecisions20261016[guide.slug];
   const update = freshlyChecked ?? independentVisitorEvidence20261015[guide.slug] ?? verifiedVisitAdditions20261015[guide.slug];
   if (!update) return guide;
   const sources = [...(guide.sources ?? [])];
