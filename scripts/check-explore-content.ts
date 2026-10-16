@@ -140,7 +140,7 @@ for (const slug of realitySlugs) {
   const guide = exploreGuides.find(record => record.slug === slug);
   const correction = tourRealityChecks20261016[slug];
   if (!guide || guide.summary !== correction.summary ||
-      !guide.intro.includes(correction.intro) ||
+      !guide.intro.includes(correction.intro ?? "") ||
       !guide.planning.some(step => step.label === correction.planning.label && step.detail === correction.planning.detail) ||
       ![guide.source?.href, ...(guide.sources ?? []).map(source => source.href)].includes(correction.source.href) ||
       guide.lastReviewed !== "2026-10-16")
