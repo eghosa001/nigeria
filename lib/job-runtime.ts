@@ -42,6 +42,27 @@ export function getEffectiveStatusLabel(item: CareerOpportunity, todayIso = toda
   return item.statusLabel;
 }
 
+// Visible, request-time context for archived or unconfirmed application routes.
+// This does not claim to have retested the employer's submission form.
+export function getJobAvailabilityNotice(item: CareerOpportunity, todayIso = todayIsoNigeria()): string | null {
+  const status = getEffectiveJobStatus(item, todayIso);
+  if (status === "closed") {
+    if (item.deadline && item.deadline < todayIso) {
+      return "The published application deadline was " + item.deadline +
+        ". That application window has passed; no extension has been independently confirmed. " +
+        "The original listing remains below for reference. Check the official issuer for a fresh notice.";
+    }
+    return "This opportunity is recorded as closed, not currently accepting confirmed applications. " +
+      "The original listing remains below for reference; check the official issuer for any new recruitment.";
+  }
+  if (status === "unverified") {
+    return "Current applications for this exact opportunity have not been verified. " +
+      "A historical advert or accessible job page does not prove that its submission route is open. " +
+      "Confirm the named role on the official issuer's current vacancy board before applying.";
+  }
+  return null;
+}
+
 export function isEffectivelyOpen(item: CareerOpportunity, todayIso = todayIsoNigeria()) {
   return getEffectiveJobStatus(item, todayIso) === "open";
 }
