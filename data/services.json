@@ -8500,7 +8500,7 @@
     "slug": "nafdac-product-registration",
     "title": "How to register a product with NAFDAC",
     "shortTitle": "NAFDAC product registration",
-    "summary": "The official NAPAMS product-registration route for food, cosmetics, medicines, water, medical devices and other regulated products.",
+    "summary": "Register a regulated product with NAFDAC through the correct NAPAMS product application rather than treating company registration as product approval. Food, water, cosmetics, medicine and medical devices have different dossiers, labelling, testing and facility requirements; approval must be issued before the business advertises the product as NAFDAC-registered.",
     "category": "Product regulation",
     "agencySlug": "nafdac",
     "feeLabel": "Varies by product and application",
@@ -8513,20 +8513,24 @@
       "Company or business registration and Tax ID details requested during account setup",
       "Product category and product details",
       "Manufacturing/importation and facility documents applicable to the product type",
-      "Product labels/artwork and technical/supporting documents requested by the relevant NAFDAC guideline"
+      "Product labels/artwork and technical/supporting documents requested by the relevant NAFDAC guideline",
+      "Legal manufacturer and applicant identity, a product-specific dossier and compliant label rather than another company's certificate.",
+      "Inspection/sampling access and the applicable technical tests for the chosen product category, where NAFDAC requires them."
     ],
     "steps": [
-      "Create or sign in to the official NAFDAC NAPAMS account for the applicant/company.",
-      "Choose Registration Form and start a New Product Registration for the correct product category.",
-      "Complete the company, product, manufacturer and facility information requested by the portal.",
-      "Upload the supporting documents required for that product type and submit the application.",
-      "Pay only through the official NAFDAC-generated payment route and keep the reference.",
-      "Track the submitted application and respond to queries, inspection/testing requests or corrections until a final decision is issued."
+      "Open https://registration.nafdac.gov.ng/Home/ and choose Login as a Client → Register as a New Client if your company has not created a NAPAMS account.",
+      "Identify the product's exact NAFDAC category and check its latest technical guideline, not a generic list for all foods, drugs, cosmetics and devices.",
+      "Prepare CAC registration, business TIN, correct manufacturer/importer details, compliant artwork, product-specific laboratory and facility records, and any licence or power of attorney required for that category.",
+      "Sign in as the genuine registration holder, open Registration Form → New Product Registration, and enter the manufacturer and individual product particulars that match its label.",
+      "Upload each document into the relevant dossier field; imported goods may need separate manufacture, country-of-origin and distribution evidence. Submit one application per product where the category guideline requires it.",
+      "Review the official fee invoice and pay through NAFDAC's linked portal channel, saving the application and payment references. No personal-account payments.",
+      "Track regulatory document queries and, where applicable, arrange NAFDAC facility inspection, sampling or laboratory analysis; a fee receipt is not an approval.",
+      "On approval, compare the issued product registration number, exact registered brand, manufacturer, category and validity with the product packaging before commercial release."
     ],
     "notes": [
-      "Requirements differ significantly between foods, cosmetics, drugs, water and medical devices; use the category-specific NAFDAC guideline.",
-      "Do not copy another product's registration number or label claim.",
-      "A submitted application is not the same as an approved product registration."
+      "NAFDAC's NAPAMS FAQ distinguishes New Product Registration from renewals and legacy record data capture.",
+      "An application marked submitted, paid or undergoing inspection is not permission to use a NAFDAC registration number.",
+      "NAFDAC's product-specific guidelines determine technical documents; packaging approval for one product does not cover another formulation."
     ],
     "sources": [
       {
@@ -8540,6 +8544,12 @@
         "agency": "National Agency for Food and Drug Administration and Control",
         "url": "https://services.nafdac.gov.ng/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/?id=40&option=com_content&view=category",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
@@ -8547,7 +8557,7 @@
       "nafdac-product-renewal",
       "cac-business-name-registration"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "NAFDAC registration",
       "register food NAFDAC",
@@ -8559,7 +8569,7 @@
     "slug": "nafdac-product-verification",
     "title": "How to verify a NAFDAC product registration",
     "shortTitle": "Verify NAFDAC product",
-    "summary": "Use the NAFDAC iRIMS Stakeholder Portal's Verify Product control to check a product's registration number against official records. Compare the registered product and responsible company with the packaging; do not treat a printed number alone as proof of authenticity.",
+    "summary": "Verify an alleged NAFDAC product approval using the iRIMS Stakeholder Portal's dedicated Verify NAFDAC Documents control, rather than trusting a number printed on a pack. Match the returned name, registration holder, product type and status; an unrelated or expired entry does not authenticate the item.",
     "category": "Product regulation",
     "agencySlug": "nafdac",
     "feeLabel": "Official verification service",
@@ -8569,19 +8579,24 @@
     "officialPortal": "https://services.nafdac.gov.ng/",
     "requirements": [
       "The product's NAFDAC registration number and/or identifying product details",
-      "The product name, brand/manufacturer or pack information needed to confirm that the returned registration belongs to the same product"
+      "The product name, brand/manufacturer or pack information needed to confirm that the returned registration belongs to the same product",
+      "The original full product registration number and sufficient packaging details to compare holder, product category and brand.",
+      "For suspected counterfeit or expired goods, batch and expiry particulars for a separate safety complaint."
     ],
     "steps": [
-      "Open the official NAFDAC iRIMS Stakeholder Portal at services.nafdac.gov.ng and choose Verify Product or the Verify NAFDAC Documents section.",
-      "Enter the complete product registration number in the official verification field as shown on the packaging or registration document, then choose Verify Now.",
-      "Read the result and compare the name, product category, manufacturer or registered holder and status with the item you intend to use or sell.",
-      "If the number is missing, unrecognised or attached to a different product, do not infer that the product is approved. Report or clarify it through NAFDAC's official support contacts."
+      "Open https://services.nafdac.gov.ng/ and locate Verify NAFDAC Documents / Verify Product on the official iRIMS Stakeholder Portal.",
+      "Read the full NAFDAC registration number on the package or supplied regulatory document and check that no letters, prefixes or digits are omitted.",
+      "Enter the number into the official verification field and select Verify Now; do not use a seller-provided screenshot as proof of a successful lookup.",
+      "Compare the returned brand, product category, registration holder, manufacturer and any validity/status information with the actual package.",
+      "Look for inconsistent batch numbers, packaging, spelling, product formulation or expiry separately; a registered number can be copied onto counterfeit packaging.",
+      "If the record is missing, suspended or linked to a different product, do not treat it as approved; check the relevant NAFDAC registry or agency enquiry route.",
+      "If a seller claims a recent renewal or product transfer, request the current issued approval evidence and verify the updated holder instead of relying on an old document.",
+      "Retain the query details and report suspected misleading registration to NAFDAC using its official complaint/support channel rather than paying a third party for an 'authentication certificate'."
     ],
     "notes": [
-      "A NAFDAC number printed on packaging can be copied or misused, so verify the record rather than relying on appearance alone.",
-      "Check the product name and holder/manufacturer information, not just whether a number exists.",
-      "For a business preparing to sell a regulated product, verification does not replace the need to obtain its own required approval.",
-      "The NAFDAC iRIMS page currently includes a dedicated Verify Product control and a registration-number verification field; it also hosts other regulatory applications, so choose verification rather than a new-registration process."
+      "The NAFDAC iRIMS page handles multiple document types; choose Product Registration verification rather than Import Permit or an unrelated certificate.",
+      "A valid number does not prove the physical package is genuine or that the product is within its approved expiry/conditions.",
+      "Verification is not a substitute for registering the seller's different formulation or a separate brand."
     ],
     "sources": [
       {
@@ -8589,13 +8604,19 @@
         "agency": "National Agency for Food and Drug Administration and Control",
         "url": "https://services.nafdac.gov.ng/",
         "lastChecked": "2026-10-14"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://nafdac.gov.ng/home/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "nafdac-product-registration",
       "nafdac-product-renewal"
     ],
-    "lastVerified": "2026-10-14",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "verify NAFDAC number",
       "check NAFDAC product",
@@ -8607,7 +8628,7 @@
     "slug": "nafdac-product-renewal",
     "title": "How to renew a NAFDAC product registration",
     "shortTitle": "Renew NAFDAC registration",
-    "summary": "Where renewal sits in NAPAMS, including what to do when an older product record is not yet visible in the online account.",
+    "summary": "Renew an existing NAFDAC product record through the registration holder's NAPAMS product listing. If the old approval is absent from Submitted Applications, NAFDAC instructs holders to perform Data Capture first; it is not a reason to register a duplicate new product. Renewal remains subject to the current dossier, payment and agency review.",
     "category": "Product regulation",
     "agencySlug": "nafdac",
     "feeLabel": "Varies by product",
@@ -8619,20 +8640,24 @@
       "NAPAMS account for the registration holder",
       "Existing product registration details",
       "Updated product/company documents requested for the renewal",
-      "Current labels/artwork and any compliance documents required by the product category"
+      "Current labels/artwork and any compliance documents required by the product category",
+      "Current registered product number, applicant/company ownership record and supporting original dossier.",
+      "Any updated labels, manufacturing/import certificates and category-specific test or inspection records requested for renewal."
     ],
     "steps": [
-      "Sign in to NAPAMS with the account for the registration holder.",
-      "Check Submitted Applications/Product Listing for the product that needs renewal.",
-      "Start the renewal action for the existing product and update any company/product information requested.",
-      "If a legacy product is not present in the online listing, use the NAFDAC data-capture route before attempting renewal.",
-      "Upload the renewal documents, pay the official invoice and submit the application.",
-      "Track the renewal and respond to any query or correction request from NAFDAC."
+      "Open https://registration.nafdac.gov.ng/Home/ and sign in as the owner of the existing product registration before its expiry.",
+      "From Applications → Submitted Applications / Product Listing, search for the exact product and its existing registration number.",
+      "If the earlier product is not in the account, follow Registration Forms → Data Capture as the NAFDAC FAQ directs for legacy approvals; preserve its original registration details.",
+      "Select the Renewal action on the original product listing only after confirming that the brand, manufacturer and ownership records are correct.",
+      "Upload updated category-specific licences, label/artwork, compliance, product and facility evidence requested by the live renewal form.",
+      "Review and pay the official NAFDAC renewal invoice, retain the receipt/reference and confirm that NAPAMS records the submission.",
+      "Respond to every technical query or product inspection/testing request through NAPAMS. Do not advertise a renewal as approved while it remains pending.",
+      "Once the agency issues a renewed approval, verify the registration number and new validity details on the document and future packaging."
     ],
     "notes": [
-      "Renew the existing registration rather than creating a duplicate new-product record unless NAFDAC specifically directs you to do so.",
-      "Legacy registrations may need data capture before they can be managed in NAPAMS.",
-      "Continue to use only the claims and product information permitted by the current registration."
+      "NAFDAC explicitly describes data capture as the first action when a previously registered product is not visible in the NAPAMS listing.",
+      "Renewal and first-time product registration are different actions; avoid a duplicate record with an unrelated ID.",
+      "A renewal invoice or submission acknowledgement does not extend a registration automatically unless NAFDAC confirms it."
     ],
     "sources": [
       {
@@ -8646,13 +8671,19 @@
         "agency": "National Agency for Food and Drug Administration and Control",
         "url": "https://services.nafdac.gov.ng/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "National Agency for Food and Drug Administration and Control",
+        "url": "https://registration.nafdac.gov.ng/?id=40&option=com_content&view=category",
+        "lastChecked": "2026-10-16"
       }
     ],
     "related": [
       "nafdac-product-registration",
       "nafdac-product-verification"
     ],
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "renew NAFDAC number",
       "NAFDAC renewal",
@@ -9793,32 +9824,37 @@
     "slug": "soncap-import-certification",
     "title": "How SONCAP certification works for imports into Nigeria",
     "shortTitle": "SONCAP certification",
-    "summary": "The Standards Organisation of Nigeria process for regulated imports, from Product Certificate and conformity assessment to the SONCAP Certificate used for Customs clearance.",
+    "summary": "For SONCAP-regulated imports, arrange pre-shipment conformity assessment via a SON-approved Independent Accredited Firm, obtain the route-specific Product Certificate and shipment SONCAP Certificate, then activate the certificate through Nigeria's National Single Window. SON mandated NSW activation from 27 March 2026; the old stand-alone activation instructions are obsolete.",
     "category": "Product regulation",
     "agencySlug": "son",
     "feeLabel": "SONCAP and conformity-assessment fees apply",
     "feeNote": "Charges vary by certificate route, accredited conformity-assessment firm and service. Use SON's current approved fee schedule and official portal invoice.",
     "timeline": "SON says Product Certificates, SONCAP Certificates and qualifying SONCAP Import Permits have a maximum 96-hour turnaround after all application requirements are met; external testing or conformity work can add time.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
-    "officialPortal": "https://soncap.son.gov.ng/",
+    "lastVerified": "2026-10-16",
+    "officialPortal": "https://nsw.gov.ng",
     "requirements": [
       "A regulated imported product identified by its correct product description and HS code",
       "Importer TIN that is valid for the Nigerian trade/PAAR process",
       "Product conformity documents and test/inspection evidence produced through a SON-approved Independent Accredited Firm",
-      "The appropriate Product Certificate for the import route before Form M processing"
+      "The appropriate Product Certificate for the import route before Form M processing",
+      "Product HS code and correct route eligibility, with genuine foreign conformity evidence and importer TIN.",
+      "Access to the NSW importer profile to activate certificates; an IAF certificate alone does not complete the migrated activation stage."
     ],
     "steps": [
-      "Check whether the product is SONCAP-regulated and identify the applicable Route A, B or C Product Certificate process before shipment.",
-      "Work through a SON-approved Independent Accredited Firm for the required product verification, inspection, testing and Certificate of Conformity process.",
-      "Use the Product Certificate in the Form M process and ensure the importer TIN and shipment information are consistent across trade documents.",
-      "Register or activate the relevant certificate through the official e-SONCAP portal and retain the certificate/status reference.",
-      "Use the issued SONCAP Certificate in the PAAR and Nigerian Customs clearance process for the regulated shipment."
+      "Open https://son.gov.ng/2026/03/31/mandatory-migration-of-soncap-and-import-permit-processes-to-the-national-single-window-nsw-platform/ and identify the mandatory National Single Window (NSW) path effective 27 March 2026.",
+      "Check the imported product's HS code, SONCAP coverage and any exemption/import-permit route before the goods ship; do not assume all goods need identical certificates.",
+      "Use a SON-recognised Independent Accredited Firm in the exporting country to arrange the required inspection, testing and conformity assessment.",
+      "Obtain the applicable Route A PC1, Route B PC2 or Route C PC3 Product Certificate before Form M processing, and match its importer TIN, product and manufacturer details.",
+      "Where required, use the firm's Certificate of Conformity for issuance of the shipment-level SONCAP Certificate (SC); the Product Certificate alone is not the final cargo-clearance certificate.",
+      "Open https://nsw.gov.ng and update the importer profile; activate the accredited firm's Product and Shipment Certificates on NSW for Form M, PAAR and cargo clearance.",
+      "For SONCAP default cases and the categories of import permits named in SON's March 2026 notice, initiate/process applications on NSW rather than the old independent portal.",
+      "Compare the final NSW activation status and shipment identifiers with trade documents before presenting them to Customs; a document generated but not activated is not the completed NSW clearance step."
     ],
     "notes": [
-      "SONCAP is a pre-shipment conformity process; waiting until goods arrive in Nigeria can create detention, testing and other clearance problems.",
-      "SON distinguishes a Product Certificate from the shipment-level SONCAP Certificate.",
-      "Some products or importer circumstances use exemptions or import permits; verify the exact product status with SON before shipment."
+      "SON's 25 March 2026 notice, effective 27 March, mandates NSW for SONCAP default/import-permit applications and certificate activation.",
+      "Approved Independent Accredited Firms still issue SONCAP Product and Shipment Certificates through SON's portal; activation for Form M/PAAR now belongs on NSW.",
+      "Incorrect or missing pre-shipment certification can cause delays, testing, detention or rejection; no instant acceptance is guaranteed."
     ],
     "sources": [
       {
@@ -9838,6 +9874,12 @@
         "agency": "Standards Organisation of Nigeria",
         "url": "https://son.gov.ng/soncap-faq/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/2026/03/31/mandatory-migration-of-soncap-and-import-permit-processes-to-the-national-single-window-nsw-platform/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -9857,32 +9899,37 @@
     "slug": "son-mancap-certification",
     "title": "How to get MANCAP certification for a Nigerian-made product",
     "shortTitle": "MANCAP certification",
-    "summary": "How local manufacturers work with the Standards Organisation of Nigeria to inspect, test and certify products under the Mandatory Conformity Assessment Programme.",
+    "summary": "Certify locally manufactured products under SON's MANCAP through the e-MANCAP system and actual factory inspection/testing, rather than using SONCAP's import workflow. SON's published guidance requires at least two quarterly inspections, permits e-MANCAP accounts, and lists a three-year certificate validity with periodic surveillance.",
     "category": "Product regulation",
     "agencySlug": "son",
     "feeLabel": "MANCAP administrative and testing charges apply",
     "feeNote": "SON publishes MANCAP administrative charges and the relevant laboratory/testing costs can depend on the product. Confirm the current schedule with the State Office.",
     "timeline": "Certification includes at least two quarterly inspections under SON's current MANCAP FAQ, so it is not an instant one-visit process.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
-    "officialPortal": "https://son.gov.ng/mancapservice/",
+    "lastVerified": "2026-10-16",
+    "officialPortal": "https://mancap.son.gov.ng/",
     "requirements": [
       "A locally manufactured product that is subject to the relevant Nigerian Industrial Standard",
       "CAC certificate of incorporation or business registration for the manufacturer",
       "SON or IPAN-accredited laboratory test evidence where the required on-the-spot testing is not comprehensive",
-      "Evidence of official payment for the MANCAP form and certification process"
+      "Evidence of official payment for the MANCAP form and certification process",
+      "Factory production address, validated TIN/CAC registration and product-specific Nigerian Industrial Standard.",
+      "Inspection access, test reports and evidence that deficiencies found by SON have been corrected."
     ],
     "steps": [
-      "Contact the nearest SON State Office and obtain the MANCAP application route for the locally manufactured product.",
-      "Submit the manufacturer registration documents, application and applicable test evidence with the official payment records.",
-      "Make the production facility and product available for SON inspection, sampling and testing against the relevant Nigerian Industrial Standard.",
-      "Complete the required inspection cycle and correct any non-conformity identified by SON before certification is recommended.",
-      "After approval, retain the MANCAP certificate and unique identification information and continue to meet surveillance and renewal requirements."
+      "Open https://mancap.son.gov.ng/ and create a company client profile with validated TIN, CAC RC number, factory address, contact and sector details.",
+      "Determine which Nigerian Industrial Standard applies to the locally manufactured product; ask SON's State Office whether regular MANCAP, Fast Track or Product Identification Scheme is appropriate.",
+      "Prepare the CAC certificate, product list, production facility evidence, required laboratory/test report and official payment record for the selected scheme.",
+      "Submit the e-MANCAP product/factory application and follow the State Office's scheduling process for inspection and sampling.",
+      "Allow SON to examine production processes and product quality; its MANCAP FAQ requires a minimum of two quarterly inspections before full certification.",
+      "Address nonconformities and supply test evidence before seeking an issuance decision; a temporary Fast Track logo is not full MANCAP certification.",
+      "After approval, check the issued MANCAP unique logo number, actual products and validity. SON's FAQ states three-year validity and quarterly surveillance.",
+      "Schedule revalidation before certificate expiry and preserve inspection findings for future visits; do not claim a SONCAP imported-goods certificate as a MANCAP approval."
     ],
     "notes": [
-      "MANCAP applies to locally manufactured products; SONCAP is the conformity route for many regulated imports.",
-      "SON's FAQ says a minimum of two quarterly inspections are required before MANCAP certification.",
-      "Certification is tied to continued conformity with the relevant Nigerian Industrial Standard."
+      "SON now offers e-MANCAP accounts through mancap.son.gov.ng, while State Offices still conduct factory inspections.",
+      "SON's FAQ states a minimum of two quarterly inspections and three-year certificate validity, not an instant online-only approval.",
+      "Fast Track is a provisional verification arrangement, not a substitute for permanent MANCAP certification."
     ],
     "sources": [
       {
@@ -9896,6 +9943,18 @@
         "agency": "Standards Organisation of Nigeria",
         "url": "https://son.gov.ng/mancap-faq/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://mancap.son.gov.ng/",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/wp-content/uploads/2026/05/MANCAP-ADMINISTRATIVE-CHARGES-1.pdf",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -9914,32 +9973,37 @@
     "slug": "son-product-registration",
     "title": "How to register a regulated product with SON",
     "shortTitle": "SON product registration",
-    "summary": "The Standards Organisation of Nigeria product-registration requirements for regulated products distributed in Nigeria, including company, trademark, authority and test records.",
+    "summary": "SON Product Registration, SONCAP import conformity and MANCAP local manufacturing certificates are different approvals. A SON Product Registration Certificate requires the product's CAC, trademark, distribution-authorisation, test and payment documents; SON's public FAQ cites six weeks from payment and one-year validity, subject to review.",
     "category": "Product regulation",
     "agencySlug": "son",
     "feeLabel": "SON product-registration charges apply",
     "feeNote": "SON requires official payment evidence and publishes current product-certification charges separately. Confirm the live charge for the product category.",
     "timeline": "SON's Product Registration FAQ states a six-week period from payment to certificate issuance when the application proceeds normally.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://son.gov.ng/product-registration-faq/",
     "requirements": [
       "CAC registration for the Nigerian business responsible for the product",
       "Trademark certificate for the product or brand",
       "Letter of authority to distribute the product in Nigeria where applicable",
-      "Laboratory test result and official payment evidence"
+      "Laboratory test result and official payment evidence",
+      "Evidence of trademark ownership or authority to distribute this specific product in Nigeria.",
+      "Product-specific laboratory test and the correct Nigerian company entity's registration information."
     ],
     "steps": [
-      "Check SON's product-registration guidance and confirm that the product belongs under SON rather than another regulator such as NAFDAC.",
-      "Prepare the CAC record, trademark certificate, distribution authority and laboratory test result before lodging the application.",
-      "Submit the product-registration application through the SON service channel and make only the official payment shown for the transaction.",
-      "Respond to any technical, labelling or documentation query raised during the review and retain the application reference.",
-      "When SON notifies you that processing is complete, obtain the Product Registration Certificate and calendar its validity or renewal requirements."
+      "Open https://son.gov.ng/product-registration-faq/ and check the exact product category before using the SON registration route; products regulated by NAFDAC or other agencies may require different or additional approval.",
+      "Collect the Nigerian legal entity's CAC evidence, product trademark certificate and the authority to distribute it in Nigeria, where applicable.",
+      "Obtain the laboratory result for the actual product and supporting packaging/brand evidence, not only a lab report for another model.",
+      "Contact SON's nearest recognised office or currently designated service route and submit the product-registration application with the listed documents.",
+      "Make payment only using the SON-approved instruction and retain the TSA/payment reference; the FAQ's six-week processing indication begins from payment in the normal case.",
+      "Respond to any SON product test, label or distribution query instead of paying an agent to 'release' the certificate.",
+      "Upon official notice of completion, collect/download the Product Registration Certificate and compare the registered brand, company and exact product.",
+      "Record the one-year certificate validity described by SON and seek timely renewal. Do not use the SONCAP Product Certificate as though it were this annual registration."
     ],
     "notes": [
-      "SON states that its Product Registration Certificate is not the same as a SONCAP Product Certificate.",
-      "The current SON FAQ lists a one-year validity period for the Product Registration Certificate.",
-      "Regulatory responsibility depends on the product type; do not assume SON registration replaces NAFDAC or another sector regulator."
+      "SON FAQ says six weeks from payment under normal processing and one-year validity; these are not guaranteed timelines for queried or incomplete submissions.",
+      "A SON Product Registration Certificate differs from PC1/PC2/PC3 or the shipment SONCAP Certificate.",
+      "Product Identification Scheme and MANCAP have separate eligibility/fees; do not assume every locally produced item follows this registration route."
     ],
     "sources": [
       {
@@ -9953,6 +10017,12 @@
         "agency": "Standards Organisation of Nigeria",
         "url": "https://www.son.gov.ng/son-product-certification/",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "Standards Organisation of Nigeria",
+        "url": "https://son.gov.ng/product-identification-scheme/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -9971,32 +10041,37 @@
     "slug": "nsitf-employer-registration",
     "title": "How to register an employer with NSITF",
     "shortTitle": "NSITF employer registration",
-    "summary": "How Nigerian employers onboard to the Employees' Compensation Scheme, obtain an ECS number and begin statutory contribution and compliance management.",
+    "summary": "Register an organisation with NSITF's Employees' Compensation Scheme (ECS), which is funded by employers at 1% of payroll rather than worker deductions. New employers create an ECS account on the official Employer Onboarding Portal; existing branch-registered organisations activate the online account without registering a second employer.",
     "category": "Employment & social protection",
     "agencySlug": "nsitf",
     "feeLabel": "Official ECS onboarding applies",
     "feeNote": "NSITF's current digital services page directs employers to the Employer Self-Service Portal for registration and contribution payments. Use the amount generated by that official system.",
     "timeline": "NSITF's current digital-services page does not publish one fixed end-to-end employer-onboarding timeline; processing depends on complete employer and employee records.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://ecsonline.nsitf.gov.ng/",
     "requirements": [
       "Employer legal name, business type, incorporation or registration information and operating address",
       "Employer phone number, email and responsible-contact information",
       "Employee and payroll information needed for Employees' Compensation Scheme onboarding",
-      "Supporting business documents needed to establish the employer's legal identity"
+      "Supporting business documents needed to establish the employer's legal identity",
+      "Actual workforce and total monthly payroll figures used to calculate employer-funded statutory ECS contributions.",
+      "Existing ECS number if previously registered in-branch, so the applicant activates rather than duplicates the company record."
     ],
     "steps": [
-      "Create an employer account on the official NSITF Employer Self-Service Portal and enter the organisation's legal identity information.",
-      "Complete the business-address, contact and employer-registration sections and upload the supporting organisation records shown in the onboarding flow.",
-      "Add the workforce or payroll information needed to establish the Employees' Compensation Scheme account.",
-      "Submit the employer onboarding and retain the ECS number or registration confirmation produced by NSITF.",
-      "Use the same employer account for monthly contribution, employee management and later compliance-certificate actions."
+      "Open https://ecsonline.nsitf.gov.ng/ and choose Create Account if the employer has not registered for ECS before.",
+      "If the employer already received an ECS number through an NSITF office, choose the Registered In-branch → Reset Password route instead of creating a second organisation.",
+      "Enter legal company/CAC details, branch, service address, employer contact and other applicant fields as prompted by the current onboarding form.",
+      "Prepare an accurate employee/payroll schedule to determine the ECS contribution base; NSITF publicly states the employer's monthly contribution is 1% of total payroll.",
+      "Complete digital onboarding and retain the generated ECS number and access credentials securely.",
+      "Use the employer portal to file monthly employee schedules and contributions through its legitimate payment route, keeping each receipt.",
+      "Review contribution and staff records after submission; a payroll debit is not evidence that the correct workers were registered.",
+      "Use the official NSITF services dashboard for compliance certificates, registration updates or verified support rather than paying a third-party employer-registration agent."
     ],
     "notes": [
-      "NSITF states that the Employees' Compensation Scheme contribution is employer-funded, not a deduction that employees should separately pay to an agent.",
-      "The digital portal can also be activated for employers who previously registered at an NSITF branch.",
-      "Keep employee and payroll records current because they affect contribution and claim administration."
+      "NSITF's current services portal states a 1% employer-funded monthly payroll contribution.",
+      "Branch-registered employers use the onboarding site's password reset/activation process to access the new portal.",
+      "Employees do not pay an enrolment charge to obtain protection under ECS; a company's certificate is separate from a worker's claim."
     ],
     "sources": [
       {
@@ -10028,32 +10103,37 @@
     "slug": "nsitf-workplace-injury-claim",
     "title": "How to file an NSITF workplace injury or compensation claim",
     "shortTitle": "NSITF compensation claim",
-    "summary": "How a registered worker or employer reports a work-related injury, occupational disease, disability or death and follows the NSITF Employees' Compensation Scheme claim.",
+    "summary": "Make an NSITF Employees' Compensation Scheme (ECS) claim for a workplace injury, occupational illness, disability or death using NSITF's published paper/official claims forms, not the employer self-service portal. NSITF explicitly states that claims are not yet filed on that portal; the employer's Notification of Accident form is ECS CCF01.",
     "category": "Employment & social protection",
     "agencySlug": "nsitf",
     "feeLabel": "No worker claim fee stated",
     "feeNote": "NSITF describes employee protection under the Employees' Compensation Scheme as statutory and employer-funded. Do not pay an unofficial claims agent.",
     "timeline": "NSITF's current services page says claims are processed within about seven working days, although investigation, medical evidence or complex disability cases can take longer.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nsitf.gov.ng/compensation",
     "requirements": [
       "The affected worker's identity and employer/ECS information",
       "Date, location and factual description of the workplace incident or occupational condition",
       "Medical, hospital or other evidence showing the injury, disease, disability or death",
-      "Employer incident report and any witness or investigation information available"
+      "Employer incident report and any witness or investigation information available",
+      "Employer's accurate ECS registration and signed Notification of Accident (ECS CCF01), plus factual incident and employment details.",
+      "Medical treatment reports and applicable police/dependant/rehabilitation evidence for the individual claim."
     ],
     "steps": [
-      "Report the workplace injury, occupational disease or fatal incident promptly to the employer and preserve the basic incident evidence before opening the NSITF claim.",
-      "Open the NSITF claim route and identify the employee, registered employer, incident date and type of compensation being requested.",
-      "Upload or present the medical records, incident documents and other evidence that support the claim and the employment relationship.",
-      "Keep the claim reference and cooperate with any NSITF accident investigation, medical assessment or request for additional records.",
-      "Track the claim outcome and retain the approval, benefit schedule or rehabilitation instructions issued under the Employees' Compensation Scheme."
+      "Open https://nsitf.gov.ng/compensation and read the employee claim route. Obtain immediate medical care and notify the employer when an injury/illness occurs.",
+      "Document incident date, job duties, site, injured worker's identity, witnesses and medical treatment as accurately as possible; retain reports rather than relying only on an oral statement.",
+      "Download the current ECS claim forms and medical-report guidance from https://nsitf.gov.ng/resources; NSITF identifies employer Notification of Accident as ECS CCF01.",
+      "Ask the employer to complete/report the workplace incident promptly and attach the signed medical evidence, police report where relevant, or dependant records for a fatal claim.",
+      "Submit the complete claim through the channel NSITF currently publishes for Claims and Compensation; its live page says claims are NOT yet submitted through Employer Self-Service.",
+      "Keep a case acknowledgement, claimant contact, all receipts and medical updates; supply additional reports for medical assessment or injury investigation when requested.",
+      "Follow up with NSITF's official claims contact and obtain an approval/benefit decision before assuming a seven-working-day service target is a payout guarantee.",
+      "Review the authorised medical, disability, wage-replacement or dependant support granted. If claim is refused or stalled, use NSITF's official review/contact path rather than paying a claims-facilitation broker."
     ],
     "notes": [
-      "NSITF says the scheme covers work-related injury, occupational disease, disability and death regardless of fault, subject to the statutory claim rules.",
-      "Compensation can include medical care, income replacement, disability payments, counselling, rehabilitation and dependant support depending on the case.",
-      "A worker should not include bank PINs or passwords in claim documents or support correspondence."
+      "NSITF's compensation page explicitly states: Claims are not yet handled on the Employer Self-Service Portal.",
+      "The Employees' Compensation Scheme is no-fault and includes nonstandard workers such as contract or casual staff according to NSITF's current description.",
+      "The website says its team processes claims within seven working days; complete medical investigation and benefit disbursement can differ."
     ],
     "sources": [
       {
@@ -10067,6 +10147,12 @@
         "agency": "Nigeria Social Insurance Trust Fund",
         "url": "https://nsitf.gov.ng/services",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://nsitf.gov.ng/resources",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -10084,31 +10170,36 @@
     "slug": "nsitf-compliance-certificate",
     "title": "How to obtain or verify an NSITF compliance certificate",
     "shortTitle": "NSITF compliance certificate",
-    "summary": "How registered employers use the NSITF employer portal for contribution compliance and obtain or independently verify an Employees' Compensation Scheme certificate.",
+    "summary": "NSITF employers obtain compliance evidence through the ECS Employer Self-Service Portal after accurately registering workers, completing monthly returns and paying employer-funded contributions. A printed compliance certificate should also be verified using NSITF's official Verify a Certificate service; it does not replace ITF or PenCom certification.",
     "category": "Employment & social protection",
     "agencySlug": "nsitf",
     "feeLabel": "Portal-generated compliance certificate fee",
     "feeNote": "NSITF directs employers to the Employer Self-Service Portal for compliance-certificate payments. Use the amount generated by that official system.",
     "timeline": "Timing depends on an up-to-date employer record, contribution compliance and NSITF review.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
+    "lastVerified": "2026-10-16",
     "officialPortal": "https://nsitf.gov.ng/services",
     "requirements": [
       "A registered employer with an ECS number",
       "Up-to-date employer and employee records",
-      "Evidence that the required Employees' Compensation Scheme contributions have been remitted for the relevant period"
+      "Evidence that the required Employees' Compensation Scheme contributions have been remitted for the relevant period",
+      "Company ECS employer record with complete employee/payroll schedules and evidence of current remittances.",
+      "Certificate number and period for independent NSITF verification or procurement submission."
     ],
     "steps": [
-      "Sign in to the NSITF Employer Self-Service Portal with the employer's ECS account and review outstanding contribution or compliance issues.",
-      "Bring employee records and contribution payments up to date before starting the yearly compliance-certificate request.",
-      "Start the compliance-certificate action and pay the official amount generated through the NSITF employer system.",
-      "Retain the issued certificate and its identifying number after NSITF completes the compliance review.",
-      "When checking a certificate from another company, use NSITF's official Verify a Certificate service rather than relying on a PDF or photocopy alone."
+      "Open https://ecsonline.nsitf.gov.ng/ and sign in with the employer's ECS number-linked account; registered-in-branch employers use the reset-password activation route.",
+      "Check that company particulars, active employee lists and the monthly payroll records are accurate for the period of certification.",
+      "Review monthly ECS contributions; NSITF states the statutory rate is 1% of the employer's payroll, rather than a deduction from workers.",
+      "Resolve any unpaid assessed contribution, inspection liability or record mismatch in the employer portal with actual official payment evidence.",
+      "Select the Employer Self-Service Certificate of Compliance issuance/renewal action and use only the system's authorised invoice.",
+      "Retain the generated certificate, reference and expiry/coverage period, and compare them against the submitted workforce data.",
+      "For a third-party company, use NSITF's website Verify a Certificate lookup instead of relying only on a PDF or image.",
+      "If certificate verification fails or renewal is queried, use the official NSITF services support route and preserve the original employer and payment references."
     ],
     "notes": [
-      "NSITF's service page links employer registration, monthly contributions and compliance certification in the same employer system.",
-      "A compliance certificate can be relevant to procurement and regulatory processes but does not replace tax, pension or other sector certificates.",
-      "Verification is important because a visually convincing certificate can still be invalid or expired."
+      "NSITF employer registration, monthly contributions and annual compliance certificates are separate actions on the ECS portal.",
+      "A certificate image is not sufficient proof without the agency's verification result.",
+      "ITF training contribution and PenCom pension/group-life obligations remain separately applicable."
     ],
     "sources": [
       {
@@ -10116,6 +10207,12 @@
         "agency": "Nigeria Social Insurance Trust Fund",
         "url": "https://nsitf.gov.ng/services",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "Nigeria Social Insurance Trust Fund",
+        "url": "https://ecsonline.nsitf.gov.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
@@ -10133,32 +10230,37 @@
     "slug": "nde-rhei-registration",
     "title": "How to register for NDE Renewed Hope Employment Initiative programmes",
     "shortTitle": "NDE RHEI registration",
-    "summary": "How applicants use the National Directorate of Employment Job Creation Portal for the 2026 RHEI programme, including pre-enrolment assessment and programme matching.",
+    "summary": "NDE's 2026 RHEI Phase III is currently closed to new applications: the official signup page explicitly says the application is CLOSED. The phase ran in July 2026 and closed on 30 July. Existing applicants can retain their account and check official status; prospective candidates should check for a newly announced round instead of paying for a nonexistent open slot.",
     "category": "Employment & social protection",
     "agencySlug": "nde",
     "feeLabel": "No application fee published",
     "feeNote": "The official NDE Job Creation Portal does not publish an application fee for the RHEI pre-enrolment process. Do not pay an unofficial person for a placement slot.",
     "timeline": "Programme timing varies by the selected RHEI scheme, state allocation and training cycle; many listed 2026 training schemes run for about three months.",
     "status": "verified",
-    "lastVerified": "2026-10-01",
-    "officialPortal": "https://nderegistrationportal.ng/",
+    "lastVerified": "2026-10-16",
+    "officialPortal": "https://www.nderegistrationportal.ng/signup",
     "requirements": [
       "A profile that meets the age and other eligibility rule for the specific NDE scheme",
       "A valid identity document for the portal's identity verification",
       "BVN and bank-account information for the portal's verification stage",
-      "A suitable passport photograph and state-of-residence information for programme matching"
+      "A suitable passport photograph and state-of-residence information for programme matching",
+      "For previous applicants, original registered email and application/assessment reference for the official client dashboard.",
+      "Future applicants should wait for a newly announced NDE registration window; NIN/BVN information should never be supplied to an unofficial 'slot' seller."
     ],
     "steps": [
-      "Open the official NDE Job Creation Portal and complete the pre-enrolment assessment before choosing a training scheme.",
-      "Enter the identity, age, state-of-residence and bank-verification information used by the portal to assess eligibility.",
-      "Review the RHEI programme groups and choose an available scheme whose age range, skill area and location match your profile.",
-      "Complete the application and keep the client-account credentials or application reference for later status checks.",
-      "Sign in to the Client Portal to monitor the application, training-centre information and any programme-specific instruction issued by NDE."
+      "Open https://www.nderegistrationportal.ng/signup and read the current banner before beginning; the official signup page currently says RHEI Phase-III is CLOSED.",
+      "If you already applied during the authorised July window, sign in to the NDE Client Portal to review your submitted pre-enrolment assessment and any allocation or verification notice.",
+      "Check that the submitted assessment covered eligibility, NIN identity, BVN/bank matching, programme/state choice, nearest training centre and passport photo.",
+      "Review the selected scheme's own age restrictions and state allocation rather than assuming all NDE programmes accept the same applicants.",
+      "Use the dashboard's official Support Tickets or helpdesk if the recorded NIN/BVN, programme selection or account status is inconsistent.",
+      "If you did not complete the original application, follow NDE's announcement channels for a future phase; do not treat the general programme overview as a reopened application.",
+      "Never pay an agent for a training place or registration bypass. The NDE programme describes its training/application as free.",
+      "When a genuine new round opens, create or reuse an official account as NDE instructs and follow the published deadline, not a forwarded WhatsApp poster."
     ],
     "notes": [
-      "The portal currently identifies the programme as RHEI Phase 3 for 2026 and lists scheme-specific age ranges and allocations.",
-      "Eligibility for one NDE scheme does not automatically make an applicant eligible for every other scheme.",
-      "Use the official NDE portal because employment and empowerment programmes are frequent targets for fake registration pages."
+      "The official NDE /signup page currently displays 'APPLICATION FOR ... RHEI PHASE-III IS CLOSED'.",
+      "NDE announced closure of Phase III at 4:00 p.m. on 30 July 2026 after a short extension.",
+      "A programme overview that still lists Apply Now steps does not override the explicit live signup closure."
     ],
     "sources": [
       {
@@ -10172,6 +10274,18 @@
         "agency": "National Directorate of Employment",
         "url": "https://www.nderegistrationportal.ng/client-login",
         "lastChecked": "2026-10-01"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "National Directorate of Employment",
+        "url": "https://www.nderegistrationportal.ng/signup",
+        "lastChecked": "2026-10-16"
+      },
+      {
+        "label": "Verified agency process and eligibility guidance",
+        "agency": "National Directorate of Employment",
+        "url": "https://www.nderegistrationportal.ng/",
+        "lastChecked": "2026-10-16"
       }
     ],
     "searchTerms": [
