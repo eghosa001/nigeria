@@ -1336,7 +1336,7 @@
       "Prepare the result printout/certificate copy, court affidavit, two passport photos, two 9x4 envelopes and the WAEC scratch card the requirements page specifies.",
       "Identify the Nigerian institution/establishment that must receive the confirmation and check its delivery details before asking WAEC to dispatch.",
       "Confirm with WAEC how to submit the package and settle the local administrative fee, scratch-card cost and courier cost through approved channels. Do not treat any one component as the total charge.",
-      "Follow the official dispatch/recipient confirmation process. Ask the receiving institution to confirm delivery; do not assume the candidate receives the institution's official confirmation."
+      "WAEC dispatches the confirmation to the named institution using the approved courier arrangement. Retain the courier reference and ask the receiving institution to acknowledge delivery of the specific result confirmation."
     ],
     "notes": [
       "WAEC publishes separate charges for local and international/embassy recipients. This guide covers a Nigerian recipient; use the overseas guide for the other category.",
@@ -2859,7 +2859,7 @@
       "Open everify.neco.gov.ng and choose Institutional Verifier; do not create an Individual Verifier account for the institution's bulk or API workflow.",
       "Use 'Register Institution' if the institution does not have an approved account, providing its official institutional and administrator details. NECO says registration information is verified before the bulk route can be used.",
       "Sign in to the institutional dashboard after approval and select single verification, bulk verification or the documented API integration option appropriate to your organisation.",
-      "If the candidate is supplying payment evidence, use the official 'Verify Candidate Token' workflow for a NECO e-Verify token/RRR; alternatively follow the portal's reference-code application route where supported.",
+      "If the candidate has paid for verification, open 'Verify Candidate Token' in the institutional dashboard and validate their NECO token or RRR. For a reference-code request, enter the issued reference code using the application field shown by NECO.",
       "Check examination number/type/year and validate payment through the official dashboard before submitting the institutional verification request.",
       "Retrieve the official report through the dashboard or the recipient email used for the request; contact NECO e-Verify support when a token or account is rejected."
     ],
@@ -4198,7 +4198,7 @@
     "requirements": [
       "The candidate's examination year, type and examination/candidate number needed to identify the held or withheld record.",
       "The wording/status shown on the affected result and an accurate account of the complaint or defence.",
-      "Any supporting evidence genuinely relevant to the complaint, and access to the contact details requested by the official portal."
+      "The result notice showing the held or withheld status, plus any examination-day incident report, correction letter or WAEC correspondence that supports the candidate's account. Supply contact information in the current complaints form."
     ],
     "steps": [
       "Open the official WAEC Nigeria notice headed 'Complaint Portal for Candidates Whose Results Were Withheld/Held' and follow its link to waecinternational.org/complaints.",
