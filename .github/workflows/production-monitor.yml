@@ -112,7 +112,10 @@ jobs:
 
           youtube="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/sitemaps/youtube.xml")"
           printf '%s' "$youtube" | grep -q "/entertainment/youtube/channels/"
-          printf '%s' "$youtube" | grep -Eq '/entertainment/youtube/[A-Za-z0-9_-]{11}</loc>'
+          # Standalone directory-only video records are deliberately noindex and
+          # omitted from sitemaps until each has a verified editorial dossier.
+          # A channel discovery URL and valid URL set are the expected contract.
+          printf '%s' "$youtube" | grep -q '<urlset'
 
           robots="$(curl --fail-with-body --silent --show-error --max-time 30 "$LIVE_BASE_URL/robots.txt")"
           printf '%s' "$robots" | grep -qi "sitemap: $LIVE_BASE_URL/sitemap-index.xml"
