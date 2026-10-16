@@ -152,7 +152,7 @@ export const exploreGrowthWave9: ExploreGuide[] = [
     region: "Akwa Ibom State",
     summary: "Plan Akwa Ibom heritage around Mary Slessor’s final mission station at Use Ikot Oku, Ikot Abasi’s 1929 women’s resistance sites, and Ibeno’s first Qua Iboe Church, without misplacing Slessor’s Calabar grave.",
     intro: [
-      "A crucial historical distinction: Mary Slessor died at Use Ikot Oku in January 1915, in today’s Akwa Ibom State, but the Mary Slessor Foundation records her burial at Duke Town cemetery in Calabar, Cross River State. Akwa Ibom’s government references a grave monument at Use; do not mistake that local memorial for her actual burial place.",
+      "A crucial historical distinction: Mary Slessor died at Use Ikot Oku in January 1915, in today’s Akwa Ibom State, but historical biographical sources place her burial at Duke Town cemetery in Calabar, Cross River State. Akwa Ibom’s government references a grave monument at Use; do not mistake that local memorial for her actual burial place.",
       "For a history-focused trip, begin with the 1929 Women War Memorial and Ukam Market in Ikot Abasi, which local heritage documentation links to the women’s anti-colonial protest. Use Ikot Oku and the first Qua Iboe Church at Ibeno require separate journeys. Visiting Mary Slessor’s actual grave means travelling onward to Duke Town in Calabar rather than following a map pin to Use."
     ],
     bestFor: ["Missionary history", "Women's history", "Coastal heritage", "Educational travel"],
@@ -164,13 +164,13 @@ export const exploreGrowthWave9: ExploreGuide[] = [
     ],
     planning: [
       { label: "Use Uyo as the main base", detail: "The capital provides the easiest accommodation and transport hub for separate heritage day trips." },
-      { label: "Choose the right Mary Slessor destination", detail: "For her final-station history, ask local custodians about Use Ikot Oku; for her burial monument, the Mary Slessor Foundation identifies Duke Town cemetery in Calabar. Do not book a supposed Itu grave tour." },
+      { label: "Choose the right Mary Slessor destination", detail: "For her final-station history, ask local custodians about Use Ikot Oku; for her burial monument, biographical research identifies Duke Town cemetery in Calabar. Do not book a supposed Itu grave tour." },
       { label: "Check the Women War Memorial before leaving Uyo", detail: "Local tourism documentation places the 1929 Women War Memorial Museum in Ikot Abasi. Ask about current opening, guide arrangements and access; published heritage history does not verify October 2026 visitor hours or admission." },
       { label: "Pair heritage with coastal stops", detail: "Ibeno and Ikot Abasi are easier to justify as full-day routes when history and coastline are combined." }
     ],
     source: { label: "Akwa Ibom State Government — About Akwa Ibom", href: "https://akwaibomstate.gov.ng/about-akwa-ibom/" },
     sources: [
-      { label: "Mary Slessor Foundation — death at Use and burial at Duke Town, Calabar", href: "https://maryslessor.org/2014/04/eka-kpukpro-owo/" },
+      { label: "The Guardian Nigeria — Mary Slessor died at Use but was buried in Calabar", href: "https://guardian.ng/sunday-magazine/mary-mitchell-slessor-a-catalyst-of-change/" },
       { label: "Discover Akwa Ibom — 1929 Women War Memorial, Ikot Abasi", href: "https://discoverakwaibom.com/heritage-sites/1929-women-war-memorial/" },
     ],
     lastReviewed: "2026-10-16"
