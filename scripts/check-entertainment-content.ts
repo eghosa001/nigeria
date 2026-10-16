@@ -1,4 +1,5 @@
 import { entertainmentTitles } from "../lib/entertainment";
+import { releaseItems } from "../lib/entertainment-extras";
 import { seriesTitles } from "../lib/series";
 import { reviewedSeriesEditorial20261016 } from "../lib/series-editorial-verified-2026-10-16";
 import { getMovieEditorialProfile } from "../lib/movie-editorial-profile-registry";
@@ -333,3 +334,25 @@ assert(seriesTitles.find(item => item.slug === "once-upon-a-village")?.episodeIn
 assert(reviewedSeriesEditorial20261016["wata-shida"].sections.some(s =>
   s.paragraphs.join(" ").includes("12 August 2026")),
   "Wata Shida guide must distinguish the confirmed season-four release.");
+
+// 17 October 2026 film and venue recheck: do not promote superseded cinema listings or
+// a Netflix NG title that explicitly reports country unavailability.
+const sourceReviewedReleases = [
+  "agbara-nla-the-return-cinema", "black-market-cinema",
+  "mko-documentary-cinema", "colours-of-fire-netflix",
+  "king-of-thieves-2-netflix", "starlomo-silverbird",
+];
+for (const id of sourceReviewedReleases) {
+  const release = releaseItems.find(item => item.id === id);
+  assert(Boolean(release) && release!.lastChecked === "2026-10-17" &&
+    release!.summary.length > 100 && release!.officialUrl.startsWith("https://"),
+    id + ": verified source and caveat must be retained");
+}
+assert(!releaseItems.some(item => item.id === "ordinary-people-netflix"),
+  "Ordinary People Nigeria Netflix page reported unavailable: no unverified New on Netflix promotion.");
+for (const id of ["agbara-nla-the-return-cinema", "black-market-cinema",
+  "mko-documentary-cinema", "starlomo-silverbird"]) {
+  const release = releaseItems.find(item => item.id === id);
+  assert(release?.endDate === "2026-10-22" && release.summary.includes("16–22 October"),
+    id + ": venue-specific schedule needs an explicit expiration boundary.");
+}
