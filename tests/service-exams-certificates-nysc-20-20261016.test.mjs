@@ -64,13 +64,13 @@ test("20 journeys specify usable entry points rather than generic portal guesses
   assert.match(source, /if \(verifiedEducationJourneys\[service.slug\]\)/);
   for (const slug of ["jamb-2026-utme-registration", "jamb-direct-entry-2026", "nysc-foreign-trained-registration"]) {
     const from = block.indexOf(JSON.stringify(slug) + ": {");
-    const section = block.slice(from, block.indexOf("\\n  },", from));
+    const section = block.slice(from, block.indexOf("\n  },", from));
     assert.match(section, /mode: "hybrid"/, slug);
     assert.match(section, /physicalStatus: "required"/, slug);
   }
   for (const slug of ["waec-collect-certificate", "neco-certificate-service"]) {
     const from = block.indexOf(JSON.stringify(slug) + ": {");
-    const section = block.slice(from, block.indexOf("\\n  },", from));
+    const section = block.slice(from, block.indexOf("\n  },", from));
     assert.match(section, /physicalStatus: "required"/, slug);
   }
 });
