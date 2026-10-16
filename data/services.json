@@ -3573,7 +3573,7 @@
       "The original physical or PDF TCC for comparing the verification response."
     ],
     "steps": [
-      "Open FCT-IRS's official Verify TCC service from https://fctirs.gov.ng/ or navigate directly to https://fcttaxportal.fctirs.gov.ng/tccver.aspx.",
+      "Open FCT-IRS's official Verify TCC service from https://fctirs.gov.ng/ or navigate directly to https://fcttaxportal.fctirs.gov.ng/tccver.aspx and use the verification form.",
       "If starting from a printed certificate, scan its QR code and confirm the destination is an FCT-IRS-controlled verification site before entering personal information.",
       "Enter the certificate's TCC Ref# and the associated taxpayer TIN in the exact form fields.",
       "Supply the verifier email and Name of Organization/Individual as requested and submit the official online check.",
