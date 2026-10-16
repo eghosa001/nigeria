@@ -183,6 +183,34 @@ const issuerPortalEvidence20261016: Record<string, {
   },
 };
 
+const issuerPortalTitles20261016: Record<string, string> = {
+  "access-bank-early-careers": "Access Bank Careers: Find Actual Vacancies and Early-Career Intakes",
+  "gtbank-entry-level-careers": "GTBank Careers: Verify an Active Entry-Level Application",
+  "uba-careers-graduate-programme": "UBA Careers: Recruitment Notices vs UBA Academy",
+  "firstbank-graduate-trainee-careers": "FirstBank Careers: Graduate Trainee Rules and Actual Openings",
+  "stanbic-ibtc-careers": "Stanbic IBTC Careers: Find Nigerian Roles on the Recruitment Platform",
+  "mtn-nigeria-careers": "MTN Nigeria Careers: Check Live Vacancies and Graduate Intakes",
+  "airtel-nigeria-careers": "Airtel Nigeria Careers: Vacancies, Undergraduate Internships and Timing",
+  "nestle-nigeria-careers": "Nestlé Careers: Filter for Actual Nigeria Vacancies",
+  "kpmg-nigeria-careers": "KPMG Nigeria Careers: Internship, Graduate Trainee or Experienced Hire",
+  "pwc-nigeria-careers": "PwC Nigeria Careers: Graduate, Experienced and Contract Routes",
+  "shell-nigeria-careers": "Shell Nigeria Careers: Graduate, Student Training and Professional Routes",
+  "nlng-careers": "Nigeria LNG Careers: Check Real Roles and Worksites",
+  "chevron-nigeria-careers": "Chevron Nigeria Careers: Actual Vacancies and Fee Scam Warning",
+  "totalenergies-nigeria-graduate-careers": "TotalEnergies Careers: Verify Nigeria Roles and Young Graduate Intake",
+  "unilever-nigeria-careers": "Unilever Nigeria Careers: Find Nigeria-Based Jobs",
+  "dangote-group-careers": "Dangote Careers: Apply to a Specific Job, Not Job Alerts",
+  "flutterwave-nigeria-careers": "Flutterwave Careers: Check Individual Nigeria Job Listings",
+  "paystack-nigeria-careers": "Paystack Careers: Check the Actual Current Job Board",
+  "moniepoint-nigeria-careers": "Moniepoint Careers: Vacancies and Interview Process",
+  "fidelity-bank-nigeria-careers": "Fidelity Bank Careers: Separate Trainee, Developer and Internship",
+  "british-council-nigeria-careers": "British Council Nigeria Jobs: Check the Official Vacancy System",
+  "unicef-nigeria-careers": "UNICEF Nigeria Opportunities: Check Vacancies, Consultancies and Internships",
+  "undp-careers-nigeria": "UNDP Careers: Find Roles with Nigeria as Duty Station",
+  "who-careers-nigeria": "WHO Careers: Verify Nigeria-Based Vacancies",
+  "seplat-energy-careers": "Seplat Energy Careers: Check Whether an Actual Vacancy Is Open"
+};
+
 export const verifiedPortalSlugs20261016 = Object.keys(issuerPortalEvidence20261016);
 
 export function applyIssuerPortalResearch20261016(item: CareerOpportunity): CareerOpportunity {
@@ -191,7 +219,11 @@ export function applyIssuerPortalResearch20261016(item: CareerOpportunity): Care
   const originalSourceFound = item.sources.some(source => source.url === checked.sourceUrl);
   return {
     ...item,
+    kind: "career-page",
     status: "career-page",
+    title: issuerPortalTitles20261016[item.slug] ?? item.title,
+    deadline: undefined,
+    nextMilestone: "Employer career destination reviewed on 16 October 2026; specific application availability, exact closing dates and completed submissions require verification from a named live posting.",
     statusLabel: "Issuer careers directory checked 16 October 2026 — individual opening unverified",
     verifiedAt: "2026-10-16",
     summary: checked.fact,
