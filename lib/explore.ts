@@ -1,5 +1,6 @@
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
+import { regionalAccessDecisions20261016 } from "@/lib/explore-regional-access-decisions-2026-10-16";
 import { remainingTourResearch20261016 } from "@/lib/explore-priority-review-decisions-2026-10-16";
 import { efcfBeninFestivalGuide20261013 } from "@/lib/explore-efcf-benin-festival-2026-10-13";
 import { verifiedVisitAdditions20261015 } from "@/lib/explore-verified-visitor-updates-2026-10-15";
@@ -13785,7 +13786,7 @@ const priorReviewedExploreGuides: ExploreGuide[] = secondPassExploreGuides.map((
 
 // Fourth review pass is additive and source-specific. Preserve every earlier
 // correction and deduplicate citations across overlapping agent batches.
-export const exploreGuides: ExploreGuide[] = priorReviewedExploreGuides.map((guide) => {
+const museumReviewedExploreGuides: ExploreGuide[] = priorReviewedExploreGuides.map((guide) => {
   const review = museumAndVisitorReviews20261016[guide.slug];
   if (!review) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13797,6 +13798,28 @@ export const exploreGuides: ExploreGuide[] = priorReviewedExploreGuides.map((gui
   return {
     ...guide,
     summary: review.summary ?? guide.summary,
+    intro: review.intro && !guide.intro.includes(review.intro) ? [...guide.intro, review.intro] : guide.intro,
+    planning: guide.planning.some(item => item.label === review.planning.label)
+      ? guide.planning : [...guide.planning, review.planning],
+    sources,
+    lastReviewed: "2026-10-16",
+  };
+});
+
+// Fifth evidence pass: keep existing collections, visitor research and hero
+// corrections intact while surfacing nine region-specific access decisions.
+export const exploreGuides: ExploreGuide[] = museumReviewedExploreGuides.map((guide) => {
+  const review = regionalAccessDecisions20261016[guide.slug];
+  if (!review) return guide;
+  const sources = [...(guide.sources ?? [])];
+  for (const source of [review.source, ...(review.additionalSources ?? [])]) {
+    if (source.href !== guide.source?.href && !sources.some(item => item.href === source.href)) {
+      sources.push(source);
+    }
+  }
+  return {
+    ...guide,
+    summary: review.summary,
     intro: review.intro && !guide.intro.includes(review.intro) ? [...guide.intro, review.intro] : guide.intro,
     planning: guide.planning.some(item => item.label === review.planning.label)
       ? guide.planning : [...guide.planning, review.planning],

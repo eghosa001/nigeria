@@ -1,6 +1,7 @@
 import { exploreGuides } from "../lib/explore";
 import { furtherVisitorDecisions20261016 } from "../lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "../lib/explore-museums-and-waterfalls-2026-10-16";
+import { regionalAccessDecisions20261016 } from "../lib/explore-regional-access-decisions-2026-10-16";
 import { remainingTourResearch20261016 } from "../lib/explore-priority-review-decisions-2026-10-16";
 import { highPriorityTourEvidence20261016 } from "../lib/explore-high-priority-2026-10-16";
 import { tourAccessDecisions20261016C } from "../lib/explore-access-decisions-2026-10-16-c";
@@ -540,6 +541,32 @@ for (const [slug, review] of heritageReviews) {
 for (const slug of ["kebbi-state-travel-guide", "kebbi-heritage-weekend-itinerary", "benue-state-travel-guide"]) {
   const guide = exploreGuides.find(item => item.slug === slug);
   if (!guide?.summary.includes("FCDO")) errors.push(slug + ": regional travel warning missing from main visitor answer.");
+}
+
+// Nine independent region-specific review decisions belong on the existing
+// canonical guides, with all sources visible and no duplicate source URLs.
+const reviewedRegionalRoutes = Object.entries(regionalAccessDecisions20261016);
+if (reviewedRegionalRoutes.length !== 9) errors.push("Expected nine exact Tour regional-access editorial repairs.");
+for (const [slug, evidence] of reviewedRegionalRoutes) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  const sourceUrls = [guide?.source?.href, ...(guide?.sources ?? []).map(item => item.href)];
+  if (!guide || guide.lastReviewed !== "2026-10-16" ||
+      guide.summary !== evidence.summary ||
+      !guide.intro.includes(evidence.intro ?? "") ||
+      !guide.planning.some(item => item.label === evidence.planning.label && item.detail === evidence.planning.detail) ||
+      [evidence.source, ...(evidence.additionalSources ?? [])].some(source => !sourceUrls.includes(source.href)) ||
+      new Set(sourceUrls).size !== sourceUrls.length) {
+    errors.push(`${slug}: region-specific source, summary or practical visitor decision regressed`);
+  }
+}
+for (const slug of ["ushongo-hills-guide", "south-south-waterfront-heritage-route",
+  "southeast-caves-lakes-road-trip", "north-central-rocks-waterfalls-road-trip",
+  "northern-museums-heritage-route"]) {
+  const guide = exploreGuides.find(item => item.slug === slug);
+  if (!guide || !/FCDO|travel|warning|restrict/i.test(guide.summary) ||
+      !guide.sources?.some(source => source.href === "https://www.gov.uk/foreign-travel-advice/nigeria/regional-risks")) {
+    errors.push(slug + ": up-front regional safety disclaimer or source missing");
+  }
 }
 
 for (const place of explorePlaces) {
