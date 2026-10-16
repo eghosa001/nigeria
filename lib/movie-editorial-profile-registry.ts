@@ -40,12 +40,14 @@ export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] 
   movieEditorialProfilesStreamingB,
   movieEditorialProfilesRemainingA,
   movieEditorialProfilesRemainingB,
-  // Last wins: source-researched corrections supersede earlier unverified copy.
-  reviewedMovieDossiers20261016,
 ];
 
-export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> =
-  Object.assign({}, ...movieEditorialCollections);
+// A researched amendment replaces earlier copy for the same canonical film, without
+// introducing a duplicate editorial collection ID into the strict uniqueness gate.
+export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> = {
+  ...Object.assign({}, ...movieEditorialCollections),
+  ...reviewedMovieDossiers20261016,
+};
 
 export function getMovieEditorialProfile(slug: string): MovieEditorialProfile | undefined {
   return allMovieEditorialProfiles[slug];
