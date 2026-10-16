@@ -14,7 +14,7 @@ export function ServiceJourney({ service }: { service: Service }) {
       <div className="section-heading journey-heading">
         <div>
           <span className="eyebrow">How to get this service</span>
-          <h2>Online, physical or both?</h2>
+          <h2>{journey.mode === "ussd" ? "USSD or another support channel?" : "Online, physical or both?"}</h2>
         </div>
         <span className={"journey-mode journey-mode-" + journey.mode}>{journey.modeLabel}</span>
       </div>
