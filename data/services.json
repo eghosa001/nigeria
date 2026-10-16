@@ -9385,7 +9385,7 @@
     "timeline": "Timing depends on completion of the company, compliance, personnel, financial, equipment and completed-job information required by the database.",
     "status": "verified",
     "lastVerified": "2026-10-16",
-    "officialPortal": "https://www.bpp.gov.ng/contractor",
+    "officialPortal": "https://federalcontractors.bpp.gov.ng/",
     "requirements": [
       "A legally registered corporate entity intending to supply goods, works, consultancy or services to the Federal Government",
       "Company name, address and working email for creation of the temporary contractor ID",
@@ -9410,7 +9410,8 @@
       "The BPP record does not replace professional licences or sector-specific registrations required for a particular procurement.",
       "Foreign contractors and suppliers can also fall within the database requirements described by BPP.",
       "BPP's published registration procedure identifies the IRR as the evidence generated after completed database registration, not evidence of contract eligibility or selection.",
-      "Older BPP instructions list conditional compliance exemptions; confirm current eligibility before asserting an exemption from pension or industrial training obligations."
+      "Older BPP instructions list conditional compliance exemptions; confirm current eligibility before asserting an exemption from pension or industrial training obligations.",
+      "BPP's currently linked registration site is federalcontractors.bpp.gov.ng; avoid old PDF guidance URLs that now return 404."
     ],
     "sources": [
       {
@@ -9420,9 +9421,9 @@
         "lastChecked": "2026-10-01"
       },
       {
-        "label": "Official agency process and eligibility guidance",
+        "label": "BPP official Contractor, Consultant and Service Provider system",
         "agency": "Bureau of Public Procurement",
-        "url": "https://www.bpp.gov.ng/wp-content/uploads/2019/01/REGISTRATION-PROCEDURE.pdf",
+        "url": "https://bpp.gov.ng/contractor-consultant-service-provider/",
         "lastChecked": "2026-10-16"
       }
     ],
