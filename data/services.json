@@ -2653,7 +2653,7 @@
     "agencySlug": "waec",
     "feeLabel": "A fee may apply if the error came from the candidate",
     "status": "verified",
-    "officialPortal": "https://www.waecnigeria.org",
+    "officialPortal": "https://waecnigeria.org/node/17",
     "requirements": [
       "Original certificate",
       "Evidence supporting the requested correction",
@@ -2665,17 +2665,19 @@
       "Include the original certificate and supporting documents requested by WAEC."
     ],
     "notes": [
-      "WAEC says amendments are charged where the error originated from the candidate; otherwise the correction is free."
+      "WAEC directs school candidates to request an amendment through their principal; private candidates submit directly to WAEC. The original certificate accompanies the amendment request.",
+      "WAEC charges for corrections when the error came from the candidate; otherwise WAEC says the amendment is free. The official instruction does not state a fixed amount.",
+      "WAEC's certificate-amendment FAQ is guidance, not a verified online application form. Confirm the current submission address or delivery procedure with WAEC before sending the original certificate; keep copies and proof of submission."
     ],
     "sources": [
       {
-        "label": "WAEC Nigeria FAQ",
+        "label": "WAEC Nigeria — certificate amendment instructions",
         "agency": "West African Examinations Council Nigeria",
-        "url": "https://www.waecnigeria.org/faq",
-        "lastChecked": "2026-09-28"
+        "url": "https://waecnigeria.org/node/17",
+        "lastChecked": "2026-10-16"
       }
     ],
-    "lastVerified": "2026-09-28",
+    "lastVerified": "2026-10-16",
     "searchTerms": [
       "Correct WAEC certificate error",
       "How to request correction of an error on a WAEC certificate",
