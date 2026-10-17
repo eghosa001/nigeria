@@ -1,6 +1,6 @@
 import type { ExploreGuide } from "@/lib/explore";
 
-// Targeted visitor-facing follow-up for seven specific flagged guides.
+// Targeted visitor-facing follow-up for seven flagged guides and four additional single-source event guides.
 // Retain unverified fees/hours as unknown. A local pricing or operating claim
 // is not validated merely because a landmark appears on an official directory.
 export type VisitorGuideAmendment = {
@@ -68,6 +68,54 @@ export const practicalVisitorAmendments20261017: Record<string, VisitorGuideAmen
         detail: "The federal tourism overview does not publish one valid climbing fee, ticket or opening schedule for Dala, Idanre, Shere, Mambilla and Obudu. Before picking a climb, ask its local site manager about guide charges and access, then check rain, visibility and daylight for the particular route.",
       },
     ],
+  },
+  "smfest-abuja-2026": {
+    planning: [
+      {
+        label: "Confirm venue and price against an independent Abuja calendar",
+        detail: "Visit Abuja independently lists the 17–18 October event at Family Worship Centre, Plot 648 Idris Gidado Street, Wuye, with doors at 9 AM and a listed starting ticket tier of ₦15,000. Its listing does not resolve the separate organiser FAQ's reference to 16 October, nor guarantee the current checkout total or each day's closing time.",
+      },
+    ],
+    sources: [
+      { label: "Visit Abuja — SMFest 2026 venue, dates and listed prices, checked 12 October", href: "https://www.visitabuja.org/event/smfest-abuja-2026/" },
+    ],
+    reviewedAt: "2026-10-17",
+  },
+  "design-week-lagos-2026": {
+    planning: [
+      {
+        label: "Cross-check full-week events with hall-only sessions",
+        detail: "Design Week Lagos itself advertises 18–25 October with the National Theatre as main hub and other activities across the city; the theatre's separate venue programme specifically sets out 22–25 October Hall events. A festival pass or eight-day date range does not guarantee entry to every National Theatre session. Match your confirmation to the dated venue programme.",
+      },
+    ],
+    sources: [
+      { label: "Design Week Lagos — organiser's 18–25 October citywide schedule and hub", href: "https://designweeklagos.com/" },
+    ],
+    reviewedAt: "2026-10-17",
+  },
+  "abuja-international-film-festival-2026": {
+    planning: [
+      {
+        label: "Use the festival's own programme for exact session dates",
+        detail: "The festival organiser confirms 20–24 October and a 2026 theme addressing AI, ethics and filmmaking. Its programme page shows a broad agenda but says the full schedule is still coming; the Visit Abuja listing separately names Silverbird, Transcorp Hilton and the University of Abuja Mini Campus. Treat those as potential venue guides, not verified locations for every screening, and confirm the final screening timetable before booking transport.",
+      },
+    ],
+    sources: [
+      { label: "Abuja International Film Festival — official 2026 programme and outstanding timetable", href: "https://abujainternationalfilmfestival.org/aiff-2026-programme" },
+    ],
+    reviewedAt: "2026-10-17",
+  },
+  "ecowas-food-cultural-festival-benin-2026": {
+    planning: [
+      {
+        label: "Check the updated October organiser claims against local reporting",
+        detail: "InsideBusiness reported on 16 October that the Benin City programme remains announced for 27–31 October, highlighting food heritage, trade and regional cultural exchange. The reporting cites a festival communications director, not proof that a fixed public venue gate or daily admission price has been published. Obtain those particulars directly in writing before booking a drop-off.",
+      },
+    ],
+    sources: [
+      { label: "InsideBusiness — independent 16 October EFCF 2026 event reporting", href: "https://insidebusiness.ng/249219/ecowas-food-and-cultural-festival-2026-enters-final-phase/" },
+    ],
+    reviewedAt: "2026-10-17",
   },
   "nigeria-textile-craft-guide": {
     planning: [
