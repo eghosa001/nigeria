@@ -13919,7 +13919,7 @@ const priorIndependentHeritageReviewGuides: ExploreGuide[] = districtReviewedExp
   };
 });
 
-// Source-specific, visitor-useful corroboration for eighteen already published
+// Source-specific, visitor-useful corroboration for twenty-five published
 // heritage/city routes. This does not establish museum admission or licence.
 export const exploreGuides: ExploreGuide[] = priorIndependentHeritageReviewGuides.map((guide) => {
   const reviewed = independentHeritageDecisions20261017[guide.slug];
