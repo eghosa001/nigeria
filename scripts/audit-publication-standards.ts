@@ -21,6 +21,7 @@ import { hasCompletedAttributableBiographyReview } from "../lib/entertainment-bi
 import { youtubeMovieLibrary, indexableYouTubeMovies } from "../lib/youtube-library";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
+import { hasDocumentedDangoteDeadlineOmission } from "../lib/job-dangote-no-deadline-evidence-2026-10-17";
 import { inspectEmployerDirectoryEvidence } from "../lib/job-directory-audit-evidence";
 import { hasCompletedIssuerDirectoryReview } from "../lib/job-reviewed-directory-evidence-2026-10-17";
 import { hasDocumentedCrossAgentIssuerReview } from "../lib/job-cross-agent-reviewed-directory-2026-10-17";
@@ -217,8 +218,9 @@ for (const job of jobOpportunities) {
     issues.push(blocker("closed-vacancy-indexable", "Closed one-off opening must not remain in active search sitemaps."));
   if (job.kind === "vacancy" && status === "open" && ageDays(job.verifiedAt) > 14)
     issues.push(blocker("open-vacancy-check-expired", "Current open status needs a recent issuer-level source check."));
-  if (job.kind === "vacancy" && status === "open" && !job.deadline)
-    issues.push(review("open-no-deadline-verification", "Explain ongoing/rolling hiring only if employer confirms."));
+  if (job.kind === "vacancy" && status === "open" && !job.deadline &&
+      !hasDocumentedDangoteDeadlineOmission(job, now))
+    issues.push(review("open-no-deadline-verification", "Explain ongoing/rolling hiring only if employer confirms; a specific independently checked no-deadline notice may be sufficient without claiming rolling hiring."));
   if (job.kind === "vacancy" && status === "open" && !job.posting)
     issues.push(review("job-posting-provenance", "Verify original post date, actual role detail and application source."));
   if (status === "closed" && job.statusLabel.toLowerCase().includes("open"))
