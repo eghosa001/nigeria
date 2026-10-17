@@ -1,3 +1,4 @@
+import { filmCreditAndAvailabilityReviews20261017 } from "@/lib/entertainment-director-and-territory-evidence-2026-10-17";
 import { fourVerifiedFilmDossiers20261017 } from "@/lib/movie-editorial-dossiers-2026-10-17";
 import { distinctLongEnoughEditorialProfiles } from "@/lib/movie-editorial-profiles-long-enough-2026-10-15";
 import { reviewedMovieDossiers20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
@@ -45,11 +46,32 @@ export const movieEditorialCollections: Record<string, MovieEditorialProfile>[] 
 
 // A researched amendment replaces earlier copy for the same canonical film, without
 // introducing a duplicate editorial collection ID into the strict uniqueness gate.
-export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> = {
+const baseMovieEditorialProfiles: Record<string, MovieEditorialProfile> = {
   ...Object.assign({}, ...movieEditorialCollections),
   ...reviewedMovieDossiers20261016,
   ...fourVerifiedFilmDossiers20261017,
 };
+
+// Movie-specific source and credit notes are added to existing original guides,
+// never used to manufacture a second review or invent unsupported role names.
+export const allMovieEditorialProfiles: Record<string, MovieEditorialProfile> = Object.fromEntries(
+  Object.entries(baseMovieEditorialProfiles).map(([slug, base]) => {
+    const review = filmCreditAndAvailabilityReviews20261017[slug]?.editorial;
+    if (!review) return [slug, base];
+    const crew = [...base.crew];
+    for (const item of review.crew ?? []) {
+      if (!crew.some(existing => existing.name === item.name && /director/i.test(existing.role))) crew.push(item);
+    }
+    return [slug, {
+      ...base,
+      crew,
+      sections: base.sections.some(section => section.heading === review.heading)
+        ? base.sections : [...base.sections, { heading: review.heading, paragraphs: review.paragraphs }],
+      questions: base.questions.some(item => item.question === review.question.question)
+        ? base.questions : [...base.questions, review.question],
+    }];
+  })
+);
 
 export function getMovieEditorialProfile(slug: string): MovieEditorialProfile | undefined {
   return allMovieEditorialProfiles[slug];
