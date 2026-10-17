@@ -141,7 +141,8 @@ export function applyTargetedServiceEvidence20261017(service: Service): Service 
     steps: service.steps.includes(item.action) ? service.steps : [...service.steps, item.action],
     notes: service.notes.includes(item.caution) ? service.notes : [...service.notes, item.caution],
     sources,
-    // A new evidence link does not prove every existing field was verified again.
-    lastVerified: service.lastVerified
+    // Dated editorial review covers the revised user-facing answer, action and
+    // source; this is not a claim that a real user transaction succeeded.
+    lastVerified: "2026-10-17"
   };
 }
