@@ -1,4 +1,3 @@
-import { filmCreditAndAvailabilityReviews20261017 } from "@/lib/entertainment-director-and-territory-evidence-2026-10-17";
 import { verifiedPsychologicalThrillerOctober20261013 } from "@/lib/entertainment-thriller-2026-10-13";
 import { reviewedMovieRecords20261016 } from "@/lib/movie-editorial-source-repairs-2026-10-16";
 import { verifiedFilmDirectorCredits20261015 } from "@/lib/entertainment-verified-credits-2026-10-15";
@@ -2825,7 +2824,7 @@ const uncorrectedEntertainmentTitles: EntertainmentTitle[] = [
 
 // Apply reviewed credit evidence to both old and newly imported records, without
 // overriding existing documented director fields or inventing availability.
-const previouslyReviewedEntertainmentTitles: EntertainmentTitle[] = uncorrectedEntertainmentTitles.map((title) => {
+export const entertainmentTitles: EntertainmentTitle[] = uncorrectedEntertainmentTitles.map((title) => {
   const credit = verifiedFilmDirectorCredits20261015[title.slug];
   const credited = credit && !title.directors?.length
     ? { ...title, directors: credit.directors,
@@ -2837,23 +2836,6 @@ const previouslyReviewedEntertainmentTitles: EntertainmentTitle[] = uncorrectedE
     (ref) => !repair.references.some((source) => source.href === ref.href),
   );
   return { ...credited, ...repair, references: [...prior, ...repair.references] };
-});
-
-// Add only independently attributed exact-film credit evidence. Unverified
-// streams and territory-blocked catalogue pages remain reference links, never
-// watchLinks. This preserves earlier director verification and source notes.
-export const entertainmentTitles: EntertainmentTitle[] = previouslyReviewedEntertainmentTitles.map(title => {
-  const review = filmCreditAndAvailabilityReviews20261017[title.slug];
-  if (!review) return title;
-  const earlierReferences = (title.references ?? []).filter(
-    ref => !review.references.some(updated => updated.href === ref.href)
-  );
-  return {
-    ...title,
-    ...(review.directors && !title.directors?.length ? { directors: review.directors } : {}),
-    ...(review.synopsis ? { synopsis: review.synopsis } : {}),
-    references: [...earlierReferences, ...review.references],
-  };
 });
 
 export const entertainmentPlatforms = ["Netflix", "YouTube", "Prime Video", "Kava", "Cinema", "Africa Magic"] as const;
