@@ -2,6 +2,7 @@ import type { EntertainmentTitle, EntertainmentReferenceLink } from "@/lib/enter
 import type { MovieEditorialProfile } from "@/lib/movie-editorial-profiles";
 import { movieEditorialProfilesRemainingB } from "@/lib/movie-editorial-profiles-remaining-b";
 import { featuredEditorialProfiles } from "@/lib/movie-editorial-profiles-featured";
+import { filmCreditAndAvailabilityReviews20261017 } from "@/lib/entertainment-director-and-territory-evidence-2026-10-17";
 
 // Eight individually researched corrections to existing, canonical movie pages.
 // Sources checked 16 October 2026. A database duration is not a measured video
@@ -131,6 +132,22 @@ export const reviewedMovieRecords20261016: Record<string, RecordRepair> = {
     ]
   }
 };
+
+// Later, exact-film source checks are merged into this established correction
+// registry. Keep the original eight amendments and their historical citations;
+// replacing a matching URL updates its evidence date without duplicating it.
+for (const [slug, review] of Object.entries(filmCreditAndAvailabilityReviews20261017)) {
+  const prior = reviewedMovieRecords20261016[slug];
+  reviewedMovieRecords20261016[slug] = {
+    ...(prior ?? {}),
+    ...(review.directors ? { directors: review.directors } : {}),
+    ...(review.synopsis ? { synopsis: review.synopsis } : {}),
+    references: [
+      ...(prior?.references ?? []).filter(ref => !review.references.some(next => next.href === ref.href)),
+      ...review.references,
+    ],
+  };
+}
 
 const existing = movieEditorialProfilesRemainingB;
 const featured = featuredEditorialProfiles;

@@ -37,8 +37,12 @@ if (changed.split("\n").includes(layer)) {
   return { ...credited, ...repair, references: [...prior, ...repair.references] };
 });`;
   if (mapper !== expectedMapper) throw new Error("Unexpected movie-mapper changes require direct review.");
-  const reverted = source.replace(layerImport, "").replace(mapper, baseline.slice(prev, oldUntil));
-  if (reverted !== baseline) throw new Error("Movie source changes outside the reviewed overlay must be checked separately.");
+  // The reviewed correction layer already exists on main. Its later source-
+  // only updates do not need to rewrite the unchanged catalog mapping.
+  if (source !== baseline) {
+    const reverted = source.replace(layerImport, "").replace(mapper, baseline.slice(prev, oldUntil));
+    if (reverted !== baseline) throw new Error("Movie source changes outside the reviewed overlay must be checked separately.");
+  }
 
   const corrections = readFileSync(layer, "utf8");
   const from = corrections.indexOf("export const reviewedMovieRecords20261016:");
