@@ -30,10 +30,10 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   if(!item) return {};
   // Short search snippets refer to the exact series; detailed context stays
   // on the page, rather than duplicating a full synopsis in the meta tag.
-  const synopsis = item.synopsis.replace(/\\s+/g, " ").trim();
+  const synopsis = item.synopsis.replace(/\s+/g, " ").trim();
   const prefix = item.title + " (" + item.year + "): cast, episodes and verified viewing sources. ";
   const space = Math.max(0, 150 - prefix.length);
-  const summary = synopsis.length > space ? synopsis.slice(0, space).replace(/\\s+\\S*$/, "").trimEnd() + "…" : synopsis;
+  const summary = synopsis.length > space ? synopsis.slice(0, space).replace(/\s+\S*$/, "").trimEnd() + "…" : synopsis;
   const description = prefix + summary;
   const seoTitle = item.title + " (" + item.year + "): Cast & Episodes";
   return {
