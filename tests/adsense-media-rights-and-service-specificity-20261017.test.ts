@@ -28,7 +28,7 @@ test("movie cards do not embed external thumbnails without rights evidence", () 
 
 test("generated artwork is embedded per title without depending on a poster HTTP request", () => {
   const src = readFileSync("components/entertainment-artwork.tsx", "utf8");
-  assert.match(src, /title\.title<\/strong>/);
+  assert.match(src, /<strong>\{title\.title\}<\/strong>/);
   assert.match(src, /posterPalette\(title\.slug\)/);
   assert.match(src, /aria-label=\{"Original illustrated poster for "/);
   assert.match(src, /data-artwork-source="generated-original"/);
