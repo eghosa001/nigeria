@@ -6,6 +6,7 @@ import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { getSeriesTitle, seriesLastChecked, seriesTitles } from "@/lib/series";
+import { seriesReaderDecisions20261017 } from "@/lib/series-reader-decisions-2026-10-17";
 import { reviewedSeriesEditorial20261016 } from "@/lib/series-editorial-verified-2026-10-16";
 import { getSiteUrl } from "@/lib/site";
 
@@ -50,6 +51,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
   const pageUrl=base+"/entertainment/series/"+item.slug;
   const checked=seriesLastChecked(item);
   const editorial=reviewedSeriesEditorial20261016[item.slug];
+  const readerDecision=seriesReaderDecisions20261017[item.slug];
   const related=seriesTitles
     .filter((candidate)=>candidate.slug!==item.slug)
     .map((candidate)=>({
@@ -89,7 +91,7 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
           <AnswerFirst
             eyebrow="Quick answer"
             title={"Cast, status and where to watch " + item.title}
-            summary="Check documented cast credits where available, confirmed episode details and official viewing links below."
+            summary={readerDecision?.answer ?? "Check documented cast, episode details and official viewing links below."}
             facts={[
               { label: "Country / year", value: item.country + " · " + item.year },
               { label: "Status", value: item.status },
@@ -139,6 +141,14 @@ export default async function SeriesDetailPage({params}:{params:Promise<{slug:st
                 <article><span>Genres</span><strong>{item.genres.join(", ")}</strong></article>
               </div>
             </section>
+
+            {readerDecision ? (
+              <section aria-label="Viewing decision" className="movie-long-summary">
+                <h2>What to check before watching</h2>
+                <p>{readerDecision.decision}</p>
+                <p>{readerDecision.limit}</p>
+              </section>
+            ) : null}
 
             {editorial ? (
               <section id="series-editorial">

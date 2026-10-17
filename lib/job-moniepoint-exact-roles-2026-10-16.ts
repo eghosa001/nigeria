@@ -63,35 +63,77 @@ const issuerRoleEvidence: Record<string, RoleReview> = {
   },
 };
 
+export const moniepointRoleFollowups20261017: Record<string, { id: string; decision: string; action: string }> = {
+  "moniepoint-early-careers-talent-acquisition-specialist": {
+    "id": "4981411101",
+    "decision": "This is a mid-to-senior campus-recruitment operator post requiring five to seven years of talent-acquisition work. Do not confuse it with an internship or Moniepoint's separate graduate cohort applications.",
+    "action": "Check the named Early Careers TA role's Greenhouse Apply destination for an active form before submitting; the job-detail page contains no verified deadline or guaranteed rolling intake."
+  },
+  "moniepoint-business-relationship-manager-anambra": {
+    "id": "4105673101",
+    "decision": "The Anambra BRM position is commercial field acquisition, terminal deployment and merchant retention, accepting OND/HND/degree qualifications with two to four years of relevant sales experience.",
+    "action": "Read the Anambra-specific state territory, salary-plus-commission wording and exact employer Apply destination; a differently located BRM advert is a separate requisition."
+  },
+  "moniepoint-talent-acquisition-specialist": {
+    "id": "4056914101",
+    "decision": "The Lagos TA Specialist role requires at least five years of full-life-cycle recruiting across technical and non-technical vacancies; it is not the same job as Early Careers TA or a Nairobi role of similar name.",
+    "action": "Before submitting the exact Lagos role, prepare agency and in-house hiring evidence and check its linked Greenhouse application form; no fixed closing date was verified."
+  },
+  "moniepoint-financial-planning-analyst": {
+    "id": "4355709101",
+    "decision": "The Nigerian Group FP&A role supports consolidation, subsidiary forecasts and board reporting, with four to six years of experience and multi-entity or multi-currency analysis. It is not the Nairobi finance position.",
+    "action": "Check the exact Nigeria-remote Financial Planning Analyst Apply link and prepare a concrete consolidation/forecasting example; the original issuer page does not state a universal deadline."
+  },
+  "moniepoint-team-lead-site-reliability-engineering": {
+    "id": "4369828101",
+    "decision": "The Lagos-based SRE team lead post requires six-plus years in SRE/backend engineering, including two years as a lead or senior/staff engineer, plus distributed systems and cloud/Kubernetes expertise.",
+    "action": "Check the Lagos SRE team-lead page's linked application form and prepare incident/architecture and mentorship examples; an Apply control alone is not confirmation that the submission succeeds."
+  },
+  "moniepoint-customer-experience-researcher": {
+    "id": "4880701101",
+    "decision": "The Lagos CX Researcher role asks for at least four years of qualitative or mixed-methods research and continuous customer discovery within a product team; it is not an entry-level survey assistant position.",
+    "action": "The original role page displays an Apply link but a historic Greenhouse redirection was observed; reconfirm the real form accepts applications before relying on this listing as open."
+  }
+};
+
 export const individuallyCheckedMoniepointRoles20261016 = Object.keys(issuerRoleEvidence);
 
 export function applyIndividualMoniepointRoleResearch20261016(item: CareerOpportunity): CareerOpportunity {
   const reviewed = issuerRoleEvidence[item.slug];
   if (!reviewed || item.kind !== "vacancy" || !item.officialUrl.includes("/jobs/" + reviewed.greenhouseId)) return item;
+  const followup = moniepointRoleFollowups20261017[item.slug];
   const sourceUrl = "https://moniepoint.com/careers/roles/" + reviewed.greenhouseId;
-  const sources = item.sources.filter(source => source.url !== item.officialUrl);
+  const sources = item.sources.filter(source => source.url !== item.officialUrl)
+    .map(source => followup && source.url === sourceUrl ? {...source,lastChecked:"2026-10-17"} : source);
   if (!sources.some(source => source.url === sourceUrl)) {
-    sources.push({ label: "Moniepoint Inc. — employer-hosted individual role and qualification details", url: sourceUrl, lastChecked: "2026-10-16" });
+    sources.push({ label: "Moniepoint Inc. — employer-hosted individual role and qualification details", url: sourceUrl, lastChecked: followup ? "2026-10-17" : "2026-10-16" });
   }
   const remainsUnverified = item.status === "unverified" || item.status === "closed";
+  if (followup && !sources.some(source => source.url === "https://moniepoint.com/careers")) {
+    sources.push({label:"Moniepoint original employer careers board — roles and location filters may change",url:"https://moniepoint.com/careers",lastChecked:"2026-10-17"});
+  }
   return {
     ...item,
     officialUrl: sourceUrl,
     officialUrlLabel: "View this exact role on Moniepoint's official website",
-    verifiedAt: "2026-10-16",
+    verifiedAt: followup ? "2026-10-17" : "2026-10-16",
     summary: reviewed.answer,
     statusLabel: remainsUnverified
       ? "Individual employer role page found — application availability not independently verified"
-      : "Named employer role and Apply link checked 16 October 2026 — confirm form remains active",
+      : followup
+        ? "Named employer role checked 17 October 2026 — final application acceptance and deadline unverified"
+        : "Named employer role and Apply link checked 16 October 2026 — confirm form remains active",
     nextMilestone: "No employer closing date has been independently verified; check the exact listing and application form before submitting.",
     applicationSteps: [
       "Open Moniepoint's issuer-hosted " + reviewed.roleName + " page, not a general employer or job-board landing page.",
-      ...reviewed.steps
+      ...reviewed.steps,
+      ...(followup ? [followup.action] : [])
     ],
     sourceNotes: [
       "Employer role is specific to " + reviewed.location + "; this is not an arbitrary global or alternative-state job with the same title.",
       reviewed.limitation,
-      "The employer displays an Apply entry point, but the application submission, salary amount and unannounced deadline were not tested or inferred."
+      "The employer displays an Apply entry point, but the application submission, salary amount and unannounced deadline were not tested or inferred.",
+      ...(followup ? [followup.decision, "Rechecked the exact employer-hosted role details 17 October 2026; the public Apply control does not prove the external Greenhouse form accepts a completed submission or that the vacancy has a closing date."] : [])
     ],
     sources,
   };
