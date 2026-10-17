@@ -15,7 +15,7 @@ const redirects = await redirectFactory();
 const bySource = new Map(redirects.map((item) => [item.source, item]));
 
 assert(new Set(retiredJobRoutes.map((item) => item.sourceSlug)).size === retiredJobRoutes.length, "Retired Jobs redirect source slugs must be unique.");
-assert(retiredJobRoutes.length === 111, "Retired Jobs redirect table must preserve all 111 compatibility routes.");
+assert(retiredJobRoutes.length === 113, "Retired Jobs redirect table must preserve all 113 compatibility routes.");
 
 for (const item of retiredJobRoutes) {
   const source = "/jobs/" + item.sourceSlug;
@@ -23,6 +23,16 @@ for (const item of retiredJobRoutes) {
   assert(Boolean(configured), source + " is missing from next.config redirects().");
   assert(configured?.destination === item.destinationPath, source + " points to the wrong destination.");
   assert(configured?.permanent === true, source + " must be a permanent framework redirect.");
+}
+
+const moniepointAliases = [
+  ["moniepoint-financial-planning-analyst-nigeria-2026", "/jobs/moniepoint-financial-planning-analyst"],
+  ["moniepoint-early-careers-talent-acquisition-specialist-2026", "/jobs/moniepoint-early-careers-talent-acquisition-specialist"],
+];
+for (const [alias, canonical] of moniepointAliases) {
+  const configured = bySource.get("/jobs/" + alias);
+  assert(configured?.destination === canonical && configured.permanent === true,
+    "Moniepoint duplicate alias must permanently redirect to its matching issuer requisition: " + alias);
 }
 
 const reliance = bySource.get("/jobs/reliance-health-associate-data-scientist-2026");
