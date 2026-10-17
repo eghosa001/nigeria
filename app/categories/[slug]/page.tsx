@@ -80,7 +80,7 @@ export default async function CategoryPage({
   const itemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: category.name + " government services in Nigeria",
+    name: category.name + " services and guides in Nigeria",
     numberOfItems: services.length,
     itemListElement: services.map((service, index) => ({
       "@type": "ListItem",
@@ -105,7 +105,7 @@ export default async function CategoryPage({
 
   return (
     <>
-      <JsonLd data={[breadcrumbLd, collectionLd, itemList, faqLd]} />
+      <JsonLd data={[breadcrumbLd, collectionLd, itemList, ...(faqs.length ? [faqLd] : [])]} />
       <section className="section page-top">
         <div className="container">
           <Breadcrumbs
