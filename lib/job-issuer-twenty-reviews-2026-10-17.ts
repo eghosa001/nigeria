@@ -213,6 +213,13 @@ export const twentyIssuerCareerRoutes20261017: Record<string, Review> = {
   },
 };
 
+const issuerStatusLabels: Record<string, string> = {
+  "ndlea-careers": "No current NDLEA recruitment window verified — watch official notices",
+  "standards-organisation-nigeria-careers": "SON disowns vacancy adverts — no authorised recruitment announced",
+  "nerc-careers": "Historical 2022 careers resource — new applications unverified",
+  "ibom-air-careers": "Flight-deck application deadline passed in September 2025",
+};
+
 export const checkedIssuerCareerSlugs20261017 = Object.keys(twentyIssuerCareerRoutes20261017);
 
 export function applyTwentyIssuerCareerRoutes20261017(item: CareerOpportunity): CareerOpportunity {
@@ -232,7 +239,7 @@ export function applyTwentyIssuerCareerRoutes20261017(item: CareerOpportunity): 
   return {
     ...item,
     summary: review.answer,
-    statusLabel: "Employer-wide careers information — exact openings must be verified",
+    statusLabel: issuerStatusLabels[item.slug] ?? "Employer-wide careers information — exact openings must be verified",
     nextMilestone: review.caveat,
     applicationSteps: [
       ...review.steps,
