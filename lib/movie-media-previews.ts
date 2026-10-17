@@ -12,9 +12,11 @@ export function getVerifiedYouTubePreview(title: EntertainmentTitle): VerifiedYo
   const fullMovie = title.watchLinks.find((link) =>
     link.platform === "YouTube" &&
     link.access === "full-movie" &&
-    link.lastChecked &&
-    link.publisher &&
-    link.publisherUrl,
+    // Source-checked direct video links can be valid without a separate
+    // publisher profile URL. Older reviewed records store the channel in
+    // publisher or note, but not in the optional publisherUrl property.
+    Boolean(link.lastChecked?.trim()) &&
+    Boolean(link.href),
   );
   const choices = [
     title.trailer && title.trailer.lastChecked
