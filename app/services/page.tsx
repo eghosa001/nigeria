@@ -13,6 +13,7 @@ const popularServiceLinks = [
   { label: "JAMB profile code and recovery", href: "/services/jamb-profile-code" },
   { label: "JAMB CAPS admission status", href: "/services/jamb-caps" },
   { label: "WAEC result checker", href: "/services/waec-check-result" },
+  { label: "Collect original WAEC certificate", href: "/services/waec-collect-certificate" },
   { label: "NECO result checker", href: "/services/neco-check-result" },
   { label: "NYSC senate list", href: "/services/nysc-senate-list" },
   { label: "NYSC call-up letter", href: "/services/nysc-call-up-letter" },
@@ -22,6 +23,10 @@ const popularServiceLinks = [
   { label: "Nigeria individual tax registration", href: "/services/nrs-individual-tax-registration" },
   { label: "Money transfer reversal", href: "/services/momo-psb-wrong-transfer-reversal" },
   { label: "Air Peace online check-in", href: "/services/air-peace-online-check-in" },
+  { label: "AEDC MAP meter refund and token", href: "/services/aedc-map-refund" },
+  { label: "IBEDC MAP meter refund and token", href: "/services/ibedc-map-refund" },
+  { label: "Track Western Union transfer with MTCN", href: "/services/western-union-track-transfer-nigeria" },
+  { label: "Spotify Premium Nigeria plan prices", href: "/services/spotify-premium-nigeria" },
   { label: "Pension and RSA processes", href: "/topics/pension-services-nigeria" },
   { label: "Find official Nigerian portals", href: "/official-portals" },
 ];
