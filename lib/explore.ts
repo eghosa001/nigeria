@@ -1,6 +1,7 @@
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
 import { museumAndVisitorReviews20261016 } from "@/lib/explore-museums-and-waterfalls-2026-10-16";
 import { regionalAccessDecisions20261016 } from "@/lib/explore-regional-access-decisions-2026-10-16";
+import { independentHeritageDecisions20261017 } from "@/lib/explore-heritage-source-followups-2026-10-17";
 import { practicalVisitorAmendments20261017 } from "@/lib/explore-practical-visitor-amendments-2026-10-17";
 import { districtAndEventCorrections20261017 } from "@/lib/explore-district-and-event-corrections-2026-10-17";
 import { remainingTourResearch20261016 } from "@/lib/explore-priority-review-decisions-2026-10-16";
@@ -13876,7 +13877,7 @@ const districtReviewedExploreGuides: ExploreGuide[] = previousPublishedExploreGu
 
 // Eleven individually targeted visitor fixes: add useful, qualified access and
 // fee decisions to the authored guide body instead of changing audit thresholds.
-export const exploreGuides: ExploreGuide[] = districtReviewedExploreGuides.map((guide) => {
+const priorIndependentHeritageReviewGuides: ExploreGuide[] = districtReviewedExploreGuides.map((guide) => {
   const amendment = practicalVisitorAmendments20261017[guide.slug];
   if (!amendment) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -13915,6 +13916,24 @@ export const exploreGuides: ExploreGuide[] = districtReviewedExploreGuides.map((
     ],
     sources,
     lastReviewed: amendment.reviewedAt ?? guide.lastReviewed,
+  };
+});
+
+// Source-specific, visitor-useful corroboration for eighteen already published
+// heritage/city routes. This does not establish museum admission or licence.
+export const exploreGuides: ExploreGuide[] = priorIndependentHeritageReviewGuides.map((guide) => {
+  const reviewed = independentHeritageDecisions20261017[guide.slug];
+  if (!reviewed) return guide;
+  const sources = [...(guide.sources ?? [])];
+  if (guide.source?.href !== reviewed.source.href &&
+      !sources.some(source => source.href === reviewed.source.href)) sources.push(reviewed.source);
+  return {
+    ...guide,
+    intro: guide.intro.includes(reviewed.detail) ? guide.intro : [...guide.intro, reviewed.detail],
+    planning: guide.planning.some(item => item.label === reviewed.planning.label)
+      ? guide.planning : [...guide.planning, reviewed.planning],
+    sources,
+    lastReviewed: "2026-10-17",
   };
 });
 
