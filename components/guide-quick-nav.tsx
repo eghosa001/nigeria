@@ -7,7 +7,7 @@ const items = [
   ["official-sources", "Sources"],
 ] as const;
 
-export function GuideQuickNav({ showQuickAnswers = false, showAftercare = false }: { showQuickAnswers?: boolean; showAftercare?: boolean }) {
+export function GuideQuickNav({ showQuickAnswers = false, showAftercare = false, showScenarios = false }: { showQuickAnswers?: boolean; showAftercare?: boolean; showScenarios?: boolean }) {
   function jump(id: string) {
     const target = document.getElementById(id);
     if (!target) return;
@@ -19,7 +19,7 @@ export function GuideQuickNav({ showQuickAnswers = false, showAftercare = false 
   return (
     <nav className="guide-quick-nav" aria-label="On this page">
       <span>On this page</span>
-      {[...items.slice(0, 3), ...(showAftercare ? [["after-submit", "After submission"] as const] : []), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(3)].map(([id, label]) => (
+      {[...items.slice(0, 1), ...(showScenarios ? [["case-guidance", "Problem solving"] as const] : []), ...items.slice(1, 3), ...(showAftercare ? [["after-submit", "After submission"] as const] : []), ...(showQuickAnswers ? [["quick-answers", "Extra answers"] as const] : []), ["notes", "Cautions"] as const, ...items.slice(3)].map(([id, label]) => (
         <a
           key={id}
           href={"#" + id}
