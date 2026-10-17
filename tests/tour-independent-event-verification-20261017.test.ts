@@ -3,9 +3,9 @@ import assert from "node:assert/strict";
 import { exploreGuides } from "../lib/explore";
 import { independentlyCheckedEvents20261017 } from "../lib/explore-independent-event-verification-2026-10-17";
 
-test("thirteen canonical event guides include a distinct dated source and specific visitor action", () => {
+test("eighteen canonical event guides include a distinct dated source and specific visitor action", () => {
   const reviewed = Object.entries(independentlyCheckedEvents20261017);
-  assert.equal(reviewed.length, 13);
+  assert.equal(reviewed.length, 18);
   for (const [slug, evidence] of reviewed) {
     const matches = exploreGuides.filter(item => item.slug === slug);
     assert.equal(matches.length, 1, slug + ": canonical page");
@@ -26,4 +26,8 @@ test("expired literature ticket and conflicting investor summit dates are not ad
   const summit = exploreGuides.find(item => item.slug === "investors-summit-nigeria-abuja-2026");
   assert.ok(literature?.summary.includes("dates have now passed"));
   assert.ok(summit?.intro.some(item => item.includes("four-day event") && item.includes("conflict")));
+  const expo = exploreGuides.find(item => item.slug === "abuja-study-abroad-expo-2026");
+  assert.ok(expo?.summary.includes("18 February 2027"));
+  const cocoa = exploreGuides.find(item => item.slug === "cocoa-xp-dotti-abuja-2026");
+  assert.ok(cocoa?.summary.includes("dates conflict"));
 });
