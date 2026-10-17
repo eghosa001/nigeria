@@ -1,4 +1,5 @@
 import serviceRecords from "@/data/services.json" with { type: "json" };
+import { applyCandidateServiceReviews20261017 } from "@/lib/service-candidate-editorial-2026-10-17";
 import universityRecords from "@/data/services-universities.json" with { type: "json" };
 import universityWave2 from "@/data/services-universities-wave2.json" with { type: "json" };
 import privateUniversityGuide from "@/data/services-wellspring-2026.json" with { type: "json" };
@@ -627,7 +628,7 @@ agencies.push(...[
   }
 ]);
 
-export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7, ...universityWave8]);
+export const services: Service[] = validateServiceCatalog([...serviceRecords, ...scaleServiceRecords, ...privateServiceRecords, ...growthServiceRecords, ...wave5ServiceRecords, ...wave6ServiceRecords, ...wave7ServiceRecords, ...cacPartnershipServiceRecords, ...universityRecords, ...universityWave2, ...privateUniversityGuide, ...universityWave4, ...universityWave5, ...universityWave6, ...universityWave7, ...universityWave8].map(applyCandidateServiceReviews20261017));
 export const publicServices = services.filter((service) => service.status !== "review");
 
 export type PublicServiceListing = Pick<
