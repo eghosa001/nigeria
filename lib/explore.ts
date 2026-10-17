@@ -1,4 +1,5 @@
 import { thirdAgentTourEvidence20261017 } from "@/lib/explore-third-agent-evidence-2026-10-17";
+import { secondSourceTourDecisions20261017 } from "@/lib/explore-second-source-decisions-2026-10-17";
 import { tourSourceSafetyDecisions20261017 } from "@/lib/explore-tour-evidence-safety-2026-10-17";
 import { independentlyCheckedVisitorRoutesBatch4 } from "@/lib/explore-independent-heritage-water-batch4-2026-10-17";
 import { furtherVisitorDecisions20261016 } from "@/lib/explore-additional-editorial-2026-10-16";
@@ -14004,7 +14005,7 @@ const beforeThirdAgentTourReview: ExploreGuide[] = beforeTourBatch4.map(guide =>
 // Independent source corrections not covered by the concurrent 14-guide
 // source audit. Preserve every earlier dated visitor review without duplicate
 // commentary and do not change any existing URL or indexability setting.
-export const exploreGuides: ExploreGuide[] = beforeThirdAgentTourReview.map(guide => {
+const beforeSecondSourceTourGuides: ExploreGuide[] = beforeThirdAgentTourReview.map(guide => {
   const review = thirdAgentTourEvidence20261017[guide.slug];
   if (!review) return guide;
   const sources = [...(guide.sources ?? [])];
@@ -14016,6 +14017,25 @@ export const exploreGuides: ExploreGuide[] = beforeThirdAgentTourReview.map(guid
     summary: review.summary ?? guide.summary,
     intro: guide.intro.includes(review.context) ? guide.intro : [review.context, ...guide.intro],
     planning: guide.planning.some(p => p.label === review.planning.label)
+      ? guide.planning : [...guide.planning, review.planning],
+    sources,
+    lastReviewed: "2026-10-17",
+  };
+});
+
+// Eleven visitor decisions still absent from the other agents' published Tour
+// source corrections, applied last to retain earlier source and access evidence.
+export const exploreGuides: ExploreGuide[] = beforeSecondSourceTourGuides.map(guide => {
+  const review = secondSourceTourDecisions20261017[guide.slug];
+  if (!review) return guide;
+  const sources = [...(guide.sources ?? [])];
+  if (review.source.href !== guide.source?.href &&
+      !sources.some(source => source.href === review.source.href)) sources.push(review.source);
+  return {
+    ...guide,
+    summary: review.summary ?? guide.summary,
+    intro: guide.intro.includes(review.context) ? guide.intro : [review.context, ...guide.intro],
+    planning: guide.planning.some(item => item.label === review.planning.label)
       ? guide.planning : [...guide.planning, review.planning],
     sources,
     lastReviewed: "2026-10-17",
