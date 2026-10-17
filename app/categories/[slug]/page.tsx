@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { CategoryFaqs } from "@/components/category-faqs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
+import { ServiceTaskComparison } from "@/components/service-task-comparison";
 import { getCategoryFaqs } from "@/data/category-faqs";
 import { categorySlug } from "@/lib/category";
 import { categories, publicServices } from "@/lib/data";
@@ -139,6 +140,8 @@ export default async function CategoryPage({
             <div><strong>{agencies.length}</strong><span>agency group{agencies.length === 1 ? "" : "s"}</span></div>
             <div><strong>{services.filter((service) => service.status === "conflict").length}</strong><span>official-source conflicts</span></div>
           </div>
+
+          <ServiceTaskComparison services={services} heading={"Which " + category.name.toLowerCase() + " process do you need?"} limit={6} />
 
           {topicHubs.length ? (
             <section className="service-topic-links" aria-labelledby="category-topic-hubs">
