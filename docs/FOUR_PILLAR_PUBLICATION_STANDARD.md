@@ -150,6 +150,35 @@ must meet stricter gates before being promoted to standalone indexable content.
 Automated reports use all imported catalog rows; live HTTP/browser checks are a
 separate, sampled validation step and must not be represented as a full crawl.
 
+## Closing an automatic editorial review without hiding quality problems
+A review flag is not a permanent punishment and should not remain after
+a **specific, independently attributable source review** has been incorporated
+into the published record. Equally, merely adding length, moving a check date,
+or declaring an internal status complete is not evidence of quality.
+
+- Employer directories require a preserved role-versus-portal distinction,
+  exact issuer route, dated source and three individually researched
+  application decisions, with an anti-fraud caution. A generic careers
+  homepage never becomes a live JobPosting; source expiry or changed claims
+  must reopen the flag. Template-only pages remain noindex.
+- An actor biography requires attributed original institution, broadcaster,
+  industry festival or named interview evidence covering the actual asserted
+  film or career milestone. A cast mention does not establish directing or
+  producing, and a film synopsis is not evidence of private-life facts.
+- Movie streaming needs a specific rights-holder, verified distributor route,
+  or source-grounded negative availability decision. A release date, channel
+  hub or unofficial reupload is not proof of a playable authorised movie.
+- The audit must report **indexable** review counts by pillar separately
+  from nonindexable discovery records; do not sum review flags across both
+  as though they were identical reader-facing failures.
+- When concurrent agents fix the same original records, compare source
+  files and canonical slugs before merging and count each resolved finding
+  once, using a fresh audit against the final main-branch commit.
+- Human originality assessment, licensing, exact live source status, image
+  permissions and mobile testing remain distinct MANUAL CHECKS even when
+  the automatic editorial review closes. No amount of script coverage
+  constitutes external Google AdSense or publisher approval.
+
 ## Official policy basis
 - Google AdSense site readiness: https://support.google.com/adsense/answer/12176698
 - Google AdSense page-quality tips: https://support.google.com/adsense/answer/7299563
