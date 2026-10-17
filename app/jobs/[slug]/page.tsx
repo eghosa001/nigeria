@@ -6,6 +6,7 @@ import { AdSlot } from "@/components/ad-slot";
 import { AD_SLOTS } from "@/lib/adsense-config";
 import { JsonLd } from "@/components/json-ld";
 import { JobApplyLink } from "@/components/job-apply-link";
+import { JobApplicationReadiness } from "@/components/job-application-readiness";
 import { getJobOpportunity, isIndexableJobOpportunity, jobOpportunities } from "@/lib/jobs";
 import { retiredJobRedirects } from "@/lib/job-scale-wave";
 import { getJobTopicsForOpportunity } from "@/lib/job-topics";
@@ -219,6 +220,8 @@ export default async function JobOpportunityPage({ params }: { params: Promise<{
               <h2>Documents to prepare for {item.title}</h2>
               <ul>{item.documents.map((text) => <li key={text}>{text}</li>)}</ul>
             </section>
+
+            {item.kind === "vacancy" && effectiveStatus === "open" ? <JobApplicationReadiness /> : null}
 
             <section id="apply">
               <h2>{isCareerPortal ? "How to use " + item.organization + "'s official careers portal" : "How to apply for " + item.title + " or check your status"}</h2>
