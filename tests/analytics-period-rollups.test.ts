@@ -93,6 +93,8 @@ test("complete AI exports contain every returned page, all five periods, hourly 
       impressions: 30, clicks: 2, impressions24h: 30, clicks24h: 2, hoursReported24h: 2,
       rows: [{ hour: "2026-10-14T12:00:00-07:00", impressions: 30, clicks: 2, ctr: 2 / 30,
         position: 8, provisional: true }] },
+    posthogDaily: { available: true, startDate: "2026-10-05", endDate: "2026-10-15", error: null,
+      rows: [{ date: "2026-10-14", views: 120 }] },
     posthog: { available: true, startDate: "2026-09-29", endDate: "2026-10-15",
       views: 120, visitors: 65, sessions: 75, averageSessionDurationSeconds: 23,
       bounceRate: 0.55 },
@@ -107,7 +109,8 @@ test("complete AI exports contain every returned page, all five periods, hourly 
 
   const csv = completeVisitsCsv(report);
   const lines = csv.trim().split("\r\n");
-  assert.equal(lines.length, 1 + 18 + 5 + 1 + 151 + 123 + 2 + 14 + 1 + 8 + 4);
+  assert.equal(lines.length, 1 + 18 + 5 + 1 + 1 + 151 + 123 + 2 + 14 + 1 + 8 + 4);
+  assert.equal((csv.match(/"daily_trend","PostHog"/g) ?? []).length, 1);
   assert.equal((csv.match(/"search_page","GSC"/g) ?? []).length, 151);
   assert.equal((csv.match(/"visited_page","GA4"/g) ?? []).length, 123);
   assert.equal((csv.match(/"period_summary"/g) ?? []).length, 5);
