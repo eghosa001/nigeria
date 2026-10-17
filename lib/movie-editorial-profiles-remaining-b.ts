@@ -76,13 +76,15 @@ const records: Record<string,Entry> = {
     ]
   },
   "monica": {
+    "roles": [["Uche Montana", "Monica"], ["John Tyler Ekanem", "Pascal"]],
+    "crew": [["Director (IMDb full credits)", "Omoruyi Efosa Emmanuel"], ["Writer (IMDb full credits)", "Karyn Udeh"]],
     "story": [
-      "Monica tells a contemporary romantic story involving a woman whose feelings and decisions grow more difficult as her relationship develops. The movie focuses on personal choices and the emotional effects of miscommunication rather than using a historical or supernatural premise.",
-      "Because the story continues in Monica 2, viewing the first film supplies the necessary context for the later family and relationship complications. This entry covers the original instalment only and does not assume events described for the sequel take place here."
+      "Monica is the original 2026 Uche Montana-led drama, rather than a generic story about a person with that name. IMDb's film-specific cast identifies Uche Montana as Monica, John Tyler Ekanem as Pascal, and several younger and family characters. Those credited roles establish the film's identity, but the public cast table is not evidence of a particular romance outcome or a scene that a synopsis has not documented.",
+      "This first-film guide keeps Monica separate from the follow-up titled Monica 2. A returning title does not by itself prove every cast member, director, or plot event carried over unchanged. Anyone searching for the original should match the Uche Montana film's own credits and source video before borrowing details from the later instalment."
     ],
     "context": [
       "The 2026 original lists Uche Montana and John Ekanem in its principal cast. The authorised first-film YouTube upload is a separate source from the video labelled Monica 2, so they should remain distinct pages with separate links and credits.",
-      "The public catalog supplies only a brief synopsis and a small billed cast. There is not enough title-specific evidence to claim a director, full credited cast or exact actor-to-character assignments. The movie can still be described accurately without inventing those details."
+      "IMDb's full film-specific credits name Omoruyi Wallz Efosa (also credited as Omoruyi Efosa Emmanuel) as director, Karyn Udeh as writer and the original film's supporting actors and roles. These are attributed credits for Monica (2026), not permissions to infer the director of Monica 2 or to invent scenes absent from the film's published storyline."
     ],
     "questions": [
       [
@@ -176,13 +178,15 @@ const records: Record<string,Entry> = {
     ]
   },
   "forever-found": {
+    "roles": [["Chinenye Nnebe", "Lilian"], ["John Ekanem", "Adewale"], ["Chioma Nwosu", "Big Mummy"], ["Amaka Ndukwe", "Fejiro"]],
+    "crew": [["Director (Nollywood.com film credit)", "Uche Alexmoore"]],
     "story": [
-      "Forever Found examines the balance between wanting a lasting relationship and preserving an independent sense of identity. A romance brings difficult choices about patience, sacrifice and whether two people are genuinely supporting each other.",
-      "The film approaches love as a decision that may require compromise without making self-erasure its ideal. Its conflict is emotional rather than a thriller mystery, and the available synopsis does not support declaring the exact ending or assigning hidden motives to named characters."
+      "Forever Found follows a relationship threatened by pressure from the surrounding family and secrets that the couple have not fully resolved. Nollywood.com's exact 2026 entry identifies Lilian (Chinenye Nnebe) and Adewale (John Ekanem), as well as Big Mummy (Chioma Nwosu) and Fejiro (Amaka Ndukwe). Naming those verified characters helps distinguish this production from generic online romances using the same title.",
+      "The documented conflict concerns trust, choices and possible reconciliation, but a plot description cannot prove which relative is responsible for a betrayal or how the romance ends. What matters for a prospective viewer is the family-drama emphasis: the story tests whether the central relationship can withstand competing demands, rather than promising a murder mystery or a fully explained ending."
     ],
     "context": [
       "Chinenye Nnebe and John Ekanem feature alongside Chioma Nwosu and Amaka Ndukwe in the recorded 2026 cast. The catalog lists an authorised full-length YouTube source that identifies the original production.",
-      "The title is a common phrase used in music and religious material. The country, year, cast and official movie publisher are important for telling this romance apart from unrelated clips. Character names and director have not been independently established in the stored record."
+      "The Nollywood.com film record names Uche Alexmoore as director and assigns individually recorded roles to Lilian, Adewale, Big Mummy and Fejiro. That is a film-specific secondary credit, not a claim that we watched the closing titles. The original publishing channel remains the correct place to check the full video; an unaffiliated repost is not interchangeable evidence of authorisation."
     ],
     "questions": [
       [
@@ -196,13 +200,15 @@ const records: Record<string,Entry> = {
     ]
   },
   "all-things-equal": {
+    "roles": [["Sarian Martin", "Christy"], ["Daniel Etim Effiong", "Jude"]],
+    "crew": [["Director (Nollywood.com credit)", "Omoruyi Efosa Emmanuel"], ["Writer (Nollywood.com credit)", "Onyii C. Onyii"]],
     "story": [
-      "All Things Equal follows two independent people attempting to build a relationship without losing the careers and commitments that matter to them. Their differing priorities turn decisions about time, sacrifice and support into a source of tension.",
-      "The movie asks whether equality within a partnership means identical choices or a fair recognition of each person's needs. Its conflict is built around an emotional relationship, not a legal or economic theory despite the broad meaning of its title."
+      "All Things Equal follows Christy (Sarian Martin) as her career prospects and earning power improve, while her husband Jude (Daniel Etim Effiong) struggles with the new financial balance inside the marriage. Nollywood.com's film record establishes the couple's names and the conflict about professional ambition and traditional expectations. This is a specific domestic drama about an existing marriage, not simply a story of two people beginning a romance.",
+      "A useful way to read the central dispute is to separate financial contribution from respect: Christy's promotion alters how the spouses negotiate decisions and self-worth, while Jude's insecurity makes the difference in salaries emotionally charged. The film's title raises a question about emotional equity rather than proving either partner right. The available synopsis does not verify a particular reconciliation or final decision."
     ],
     "context": [
       "Sarian Martin and Daniel Etim Effiong star in this 2026 Nigerian romance. The full-length authorised movie is linked through the original YouTube publisher record; viewers should identify the film by these performers and its release year.",
-      "The existing source does not establish a complete supporting cast, director or actor-to-character roles. Rather than inventing them, the guide concentrates on the documented two-person premise and available viewing information."
+      "Nollywood.com's exact-title 2026 film page attributes direction to Omoruyi Efosa Emmanuel and writing to Onyii C. Onyii, while listing Daniel Etim Effiong as Jude and Sarian Martin as Christy. The supporting cast there includes other credited performers, but we do not transfer unconfirmed scenes or character motivations from a different film with the same title."
     ],
     "questions": [
       [

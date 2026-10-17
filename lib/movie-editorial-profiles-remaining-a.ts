@@ -204,11 +204,11 @@ const records: Record<string,Entry> = {
   },
   "the-long-way-home": {
     "story": [
-      "The Long Way Home uses a journey back toward familiar people and places as a starting point for a contemporary romance. Distance has changed what the people involved expect from one another, and the return brings conversations they could postpone while apart.",
-      "Its central emotional tension concerns whether coming home can also mean rebuilding a relationship. The plot draws on difficult choices and the difference between what a person remembers and what life now demands, rather than a documented travel route or destination guide."
+      "The Long Way Home is the July 2026 Uche Montana TV drama in which family secrets, an unexpected pregnancy and betrayal put existing relationships under pressure. Despite the title, the film's documented premise is about the breakdown of trust within a family, not a verified travel itinerary or an account of someone returning to a particular Nigerian city.",
+      "The tension is the gap between what relatives believe about one another and what concealed information forces them to reconsider. That distinguishes this production from unrelated films and songs called The Long Way Home. The film's listed synopsis does not identify every character behind those events or establish how the relationships end, so neither a final reconciliation nor a specific character's pregnancy is asserted here."
     ],
     "context": [
-      "Uche Montana, Maurice Sam and Nadia Buari are named in the film's 2026 cast record. The existing authorised YouTube upload identifies the original film, but the synopsis does not establish all character names, director or exact release day.",
+      "Nollywood.com's exact-film record lists Uche Montana, Maurice Sam and Nadia Buari, attributes co-direction to Reuben Reng and Uche Montana, and dates the original YouTube release to 4 July 2026. Those are production and distribution credits, not proof of particular unlisted character names or today's playback rights.",
       "The title is shared by unrelated English-language films, songs and television episodes. Pairing the Nigerian year and billed cast with the source video is important for search accuracy. No unverified plot resolution or relationship status is asserted here."
     ],
     "questions": [
@@ -218,7 +218,7 @@ const records: Record<string,Entry> = {
       ],
       [
         "What is the theme of The Long Way Home?",
-        "Its romance concerns distance, emotional return and choices that complicate reunion."
+        "Its published premise involves family secrets, betrayal and an unexpected pregnancy straining important relationships. The outcome has not been independently established in this guide."
       ]
     ]
   },
@@ -243,13 +243,15 @@ const records: Record<string,Entry> = {
     ]
   },
   "the-merger": {
+    "roles": [["Uche Montana", "Natalie"], ["Timini Egbuson", "Theo"]],
+    "crew": [["Director (FilmFlux and Zikoko)", "Best Okoduwa"]],
     "story": [
-      "The Merger centres on two people drawn into an arrangement neither originally imagined would become a romance. They are forced to work through their contrasting expectations before the connection between them can be understood as more than circumstance.",
-      "The story's title hints at a joining of lives or plans, but the existing published synopsis does not support asserting a specific corporate acquisition, wedding or other event not identified by the filmmaker. It is a relationship drama about an unexpected bond."
+      "The Merger places Theo, played by Timini Egbuson, and Natalie, played by Uche Montana, on the teams negotiating a merger between their employers. Their professional duties require them to evaluate a transaction whose terms matter to both businesses. When attraction develops during the negotiations, the relationship introduces a separate question: can either lead defend their employer's interests without allowing private feelings to change the balance of power?",
+      "The corporate deal is not just a metaphor for romance; September reporting from Zikoko and a film-specific independent review describe the merger negotiation as the setting of the conflict. This makes the film useful to distinguish from stories merely about two people forming a couple. The unresolved question is how professional trust and personal attachment can coexist when the two negotiators are accountable to different organisations. A general uploader's description alone does not establish every scene or the final terms of the deal."
     ],
     "context": [
-      "Uche Montana and Timini Egbuson lead the documented 2026 movie cast. The catalog links the authorised full-length YouTube film, allowing viewers to identify this production without confusing it with business news, merger announcements or other films sharing the title.",
-      "No verified director or actor-to-character assignments appear in the current movie record. This guide leaves those fields open rather than filling them with information from the actors' other collaborations, which helps keep search snippets accurate."
+      "Uche Montana TV published The Merger on 5 September 2026, starring Uche Montana as Natalie and Timini Egbuson as Theo. The official full-film link identifies this production; it should not be confused with corporate news articles or an unrelated title. The recorded runtime is approximately 94 minutes, not a promise that every later video edit is identical.",
+      "Zikoko's September film listing, FilmFlux's film-specific crew record and contemporary release coverage credit Best Okoduwa as director. The independent review identifies the same Theo and Natalie pairing. These are attributed film-specific details rather than role names guessed from Uche Montana and Timini Egbuson's other collaborations."
     ],
     "questions": [
       [
@@ -258,7 +260,7 @@ const records: Record<string,Entry> = {
       ],
       [
         "Is The Merger about a company acquisition?",
-        "The available verified film synopsis describes an unexpected relationship, not a documented corporate merger."
+        "Yes. Theo and Natalie work on opposite sides of an actual company-merger negotiation, and their developing romance complicates their professional responsibilities. Film-specific September coverage confirms that premise."
       ]
     ]
   },
@@ -283,13 +285,14 @@ const records: Record<string,Entry> = {
     ]
   },
   "just-before-forever": {
+    "crew": [["Director (FilmFlux attribution)", "Omoruyi Efosa Emmanuel"]],
     "story": [
-      "Just Before Forever follows three people whose personal relationships become entangled at a point when life-changing decisions can no longer be postponed. Feelings, loyalties and competing expectations place pressure on what they believe a lasting partnership should mean.",
-      "The story is about consequences rather than the simple arrival of a new romance. As each person weighs a different future, choices that seem private affect the others. The official synopsis offers this broad conflict but does not reveal a reliably documented final pairing."
+      "Just Before Forever is the 11 August 2026 Maurice Sam TV romantic drama with Maurice Sam, Pamela Okoye and Uche Montana. The publisher's short description concerns love and difficult choices, but does not establish which characters form a triangle or whose actions cause a particular breakup. Those details should not be invented to make an otherwise brief synopsis sound more dramatic.",
+      "The useful distinction for viewers is its actual film identity: the original channel, August 2026 date, approximately 112-minute running time and credited actors distinguish it from many unrelated 'forever' romance titles. FilmFlux provides production metadata and the identified publisher hosts the original upload; neither source alone verifies a scene-by-scene plot or an ending, so this guide confines its story account to the supported premise."
     ],
     "context": [
       "Maurice Sam, Uche Montana and Pamela Okoye lead the recorded cast of the 2026 film. Its authorised full-length YouTube publisher link identifies the correct production, rather than a similarly named marriage-advice video or unrelated romantic drama.",
-      "The available record does not establish a verified director or individual character roles. Those facts should be added only if a film-credit source supports them, particularly because two of its actors have appeared together in other Nigerian romance releases."
+      "FilmFlux's exact 11 August 2026 Maurice Sam TV record attributes direction to Omoruyi Efosa Emmanuel and identifies Maurice Sam, Pamela Okoye and Uche Montana among the cast. It separately lists Maurice Sam as executive producer; producer and director credits should not be interchanged. Individual character assignments and a definite final pairing have not been corroborated here."
     ],
     "questions": [
       [
