@@ -37,7 +37,7 @@ test("the 21 editorially consolidated guides keep core facts and adequate task i
   assert.ok(g.notes.length >= 3, slug+" cautions");
   assert.ok(g.sources.length, slug+" issuer source links");
   for(const field of ["requirements","steps","notes"] as const) {
-    const normalized=g[field].map(x=>x.toLowerCase().replace(/[^a-z0-9]+/g," ").trim());
+    const normalized: string[] = (g[field] as string[]).map((value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim());
     assert.equal(new Set(normalized).size,normalized.length,slug+" duplicate in "+field);
   }
  }
