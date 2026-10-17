@@ -33,7 +33,7 @@ test("generated artwork is embedded per title without depending on a poster HTTP
   assert.match(src, /aria-label=\{"Original illustrated poster for "/);
   assert.match(src, /data-artwork-source="generated-original"/);
   assert.match(src, /not official film artwork/);
-  assert.doesNotMatch(src, /<img[\\s\\S]*?generatedPosterHref/);
+  assert.doesNotMatch(src, /generatedPosterHref/);
 });
 
 test("generic service aftercare is omitted, with no broken quick-navigation target", () => {
