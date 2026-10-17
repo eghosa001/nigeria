@@ -4,6 +4,7 @@ import { AnswerFirst } from "@/components/answer-first";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { JsonLd } from "@/components/json-ld";
 import { ServiceCard } from "@/components/service-card";
+import { ServiceTaskComparison } from "@/components/service-task-comparison";
 import { agencies, getAgency, getServicesByAgency } from "@/lib/data";
 import { getSiteUrl } from "@/lib/site";
 import { shouldIndexAgencyHub } from "@/lib/agency-indexing";
@@ -60,7 +61,7 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
       "@type": "Organization",
       name: agency.name,
       sameAs: agency.website,
-      logo: base + "/icon.svg",
+      // The publisher favicon is not an official agency logo; do not misattribute it.
     },
     mainEntity: {
       "@type": "ItemList",
@@ -80,9 +81,10 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
       <section className="section page-top">
         <div className="container">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services" }, { label: agency.shortName }]} />
-          <span className="eyebrow">Official agency</span>
+          <span className="eyebrow">Independent agency guide</span>
           <h1>{agency.name}</h1>
           <p className="page-intro">{agency.description}</p>
+          <p className="topic-trust-note">This is independent explanatory guidance, not an agency-operated website. Follow the official link below for live forms and announcements.</p>
           <AnswerFirst
             title={"What " + agency.shortName + " handles here"}
             summary={agency.description}
@@ -110,6 +112,8 @@ export default async function AgencyPage({ params }: { params: Promise<{ slug: s
               </a>
             </div>
           ) : null}
+
+          <ServiceTaskComparison services={agencyServices} heading={"Compare " + agency.shortName + " service tasks"} limit={6} />
 
           <div className="service-grid top-gap">
             {visibleServices.map((service) => <ServiceCard key={service.slug} service={service} />)}
