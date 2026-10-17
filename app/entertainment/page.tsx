@@ -56,7 +56,7 @@ export default function EntertainmentPage() {
       <section className="section page-top minimal-section-hero">
         <div className="container">
           <span className="eyebrow">Movies & Entertainment</span>
-          <h1>Find something worth watching.</h1>
+          <h1>Nigerian movies, casts and where to watch.</h1>
           <p className="page-intro">Search Nigerian films, series, actors, cinemas and official places to watch, then continue to the responsible platform.</p>
           <form className="section-quick-search" action="/entertainment/movies#curated-movies" method="get" role="search">
             <label>
