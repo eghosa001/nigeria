@@ -6,6 +6,7 @@ import { applyIssuerPortalResearch20261016 } from "@/lib/job-issuer-portals-revi
 import { applyIssuerCareerReview20261016B } from "@/lib/job-issuer-career-research-2026-10-16-b";
 import { applyMoreIssuerCareerReviews20261016 } from "@/lib/job-issuer-more-reviewed-2026-10-16";
 import { applyIndividualMoniepointRoleResearch20261016 } from "@/lib/job-moniepoint-exact-roles-2026-10-16";
+import { applyOriginalMoniepointAtsProof20261017 } from "@/lib/job-moniepoint-greenhouse-publication-2026-10-17";
 import { applyTwentyIssuerCareerRoutes20261017 } from "@/lib/job-issuer-twenty-reviews-2026-10-17";
 import { applyFifteenExactRoleChecks20261017 } from "@/lib/job-fifteen-exact-issuer-checks-2026-10-17";
 import { applyRemainingIssuerResearch20261017 } from "@/lib/job-remaining-issuer-research-2026-10-17";
@@ -3869,6 +3870,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(applyVerifiedJobPaths20261016)
   .map(applyIndividualMoniepointRoleResearch20261016)
   .map(applyFifteenExactRoleChecks20261017)
+  .map(applyOriginalMoniepointAtsProof20261017)
   .map(applyRemainingDirectoryReviews20261017)
   .map(applyTwoRemainingDirectoryReviews20261017)
   .map((item) => {
