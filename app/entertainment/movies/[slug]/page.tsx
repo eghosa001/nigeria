@@ -25,6 +25,10 @@ export function generateStaticParams() {
 }
 
 const movieSeoOverrides: Record<string, { title: string; description?: string }> = {
+  "abe-odale-2026": {
+    title: "Abe Odale (2026): Cast & Release",
+    description: "Abe Odale cast, credited director and documented LibraTV premiere. The exact authorised full-film URL has not been independently confirmed.",
+  },
   "forever-isnt-long-enough-2025": { title: "Forever Isn\u2019t Long Enough (2025): Cast & Film", description: "Forever Isn\u2019t Long Enough (2025): Grace\u2019s story, confirmed Michael Dappa and Inem King cast, Uche Alexmoore director, and official Royal Arts TV film." },
   "long-enough-2026": { title: "Long Enough (2026) Cast, Plot & Film Details", description: "Long Enough (2026) cast includes Victory Michael, Prisma James and Jennifer Obodo. Story, director Austin Onyema and verified release sources." },
   "holy-matrimony": {
@@ -90,7 +94,7 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Millionaire Until Morning cast, story, runtime and the official Omoni Oboli TV full-movie link. Starring Chris Attoh, Sophia Chisom and Chimsom Chuka.",
   },
   "the-man-i-never-knew": {
-    title: "The Man I Never Knew: Cast & Full Movie on YouTube",
+    title: "The Man I Never Knew: Cast & Film",
     description: "The Man I Never Knew cast, story and the official Royal Arts TV full-movie link. Starring TooSweet Annan, Chisom Agoawuike and Mojoyin Fadaka.",
   },
   "pieces-that-fit": {
@@ -111,11 +115,11 @@ const movieSeoOverrides: Record<string, { title: string; description?: string }>
     description: "Bowale cast, story, 121-minute runtime and the official BIODUNSTEPHEN TV full-movie link. Starring BamBam Olawumi, Bobby Ekpe and Jude Chukwuka.",
   },
   "sister-agatha": {
-    title: "Sister Agatha Nigerian Movie: Cast & Full Movie",
+    title: "Sister Agatha: Cast & Watch Sources",
     description: "Sister Agatha cast, story, 108-minute runtime and the official full-movie link. Starring Blessing Obasi, Kiekie, Michael Ejoor and Kenzy Udosen.",
   },
   "my-housemate": {
-    title: "My Housemate Nigerian Movie: Cast & Full Movie",
+    title: "My Housemate: Cast & Film Details",
     description: "My Housemate cast, story, 81-minute runtime and the official Bolaji Ogunmola TV full-movie link, starring Bolaji Ogunmola and Nosa Rex.",
   },
   "monica": {
