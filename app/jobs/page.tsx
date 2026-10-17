@@ -65,7 +65,7 @@ export default function JobsPage() {
         <div className="container jobs-hero-grid">
           <div>
             <span className="eyebrow">Jobs & Careers</span>
-            <h1>Know what is open. Know what you need. Apply at the source.</h1>
+            <h1>Jobs in Nigeria: know what is open and where to apply.</h1>
             <p className="page-intro">Government recruitment, graduate opportunities, internships, NGO/UN pathways and reputable employer career routes — checked against the organisation responsible for the application.</p>
             <form className="section-quick-search" action="/jobs#opportunities" method="get" role="search">
               <label>

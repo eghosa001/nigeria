@@ -86,7 +86,7 @@ export default function HomePage() {
         <div className="container minimal-home-hero-inner">
           <div className="minimal-home-copy">
             <span className="eyebrow">MyNigeriaGuide</span>
-            <h1>Nigeria, easier to explore.</h1>
+            <h1>Nigerian movies, services, travel and jobs — made easier.</h1>
             <p>Watch Nigerian movies, handle essential services, find verified career opportunities, and discover places worth going.</p>
           </div>
 
