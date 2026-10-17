@@ -10,6 +10,7 @@ import { applyTwentyIssuerCareerRoutes20261017 } from "@/lib/job-issuer-twenty-r
 import { applyFifteenExactRoleChecks20261017 } from "@/lib/job-fifteen-exact-issuer-checks-2026-10-17";
 import { applyRemainingIssuerResearch20261017 } from "@/lib/job-remaining-issuer-research-2026-10-17";
 import { applyThirdAgentIssuerReviews20261017 } from "@/lib/job-issuer-third-agent-reviews-2026-10-17";
+import { applyNineCareerIssuerDecisions20261017 } from "@/lib/job-nine-issuer-application-decisions-2026-10-17";
 import { applyConcludedIssuerWindows20261017 } from "@/lib/job-concluded-windows-2026-10-17";
 import { verifiedFmnFinalBoardJobs20261012 } from "@/lib/job-growth-wave-13";
 import { verifiedFmnOperationsJobs20261012 } from "@/lib/job-growth-wave-12";
@@ -3858,6 +3859,7 @@ export const jobOpportunities: CareerOpportunity[] = rawJobOpportunities
   .map(applyMoreIssuerCareerReviews20261016)
   .map(applyTwentyIssuerCareerRoutes20261017)
   .map(applyThirdAgentIssuerReviews20261017)
+  .map(applyNineCareerIssuerDecisions20261017)
   .map(applyRemainingIssuerResearch20261017)
   .map(applyConcludedIssuerWindows20261017)
   .map(applyCurrentJobCorrections)

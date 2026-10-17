@@ -19,6 +19,7 @@ import { entertainmentPeople, getPersonEditorialProfile, hasIndexablePersonEdito
 import { youtubeMovieLibrary, indexableYouTubeMovies } from "../lib/youtube-library";
 import { youtubeEditorialDossiers } from "../lib/youtube-editorial-dossiers";
 import { jobOpportunities, isIndexableJobOpportunity } from "../lib/jobs";
+import { inspectEmployerDirectoryEvidence } from "../lib/job-directory-audit-evidence";
 import { hasCompletedIssuerDirectoryReview } from "../lib/job-reviewed-directory-evidence-2026-10-17";
 import { careerGuides } from "../lib/career-guides";
 import { getEffectiveJobStatus, todayIsoNigeria } from "../lib/job-runtime";
@@ -231,6 +232,23 @@ for (const guide of careerGuides) {
     "/jobs/guides/" + guide.slug, guide.title, true, issues);
 }
 
+// Retain the current evidence-sensitive completed-review gate from PR #545;
+// diagnostic categories here are supplemental and do not waive any finding.
+const careerDirectoryEvidence = jobOpportunities
+  .filter(job => job.kind === "career-page" && isIndexableJobOpportunity(job))
+  .map(job => inspectEmployerDirectoryEvidence(job, now))
+  .filter((item): item is NonNullable<typeof item> => item !== null);
+const careerDirectoryEvidenceTriage = {
+  scanned: careerDirectoryEvidence.length,
+  recordedEvidenceCheckedWithin14Days: careerDirectoryEvidence.filter(x => x.checks.hasRecentDatedIssuerEvidence).length,
+  withoutRecentDatedSourceEvidence: careerDirectoryEvidence.filter(x => !x.checks.hasRecentDatedIssuerEvidence).length,
+  needingRoleSelectionInstructionReview: careerDirectoryEvidence.filter(x => !x.checks.providesRoleSelectionAction).length,
+  needingDirectoryVsVacancyClarityReview: careerDirectoryEvidence.filter(x => !x.checks.distinguishesDirectoryFromVacancy).length,
+  needingRecruitmentFraudGuidanceReview: careerDirectoryEvidence.filter(x => !x.checks.warnsAboutRecruitmentPayment).length,
+  caveat: "Record-text and date diagnostics only. Existing evidence-sensitive employer-directory-depth findings remain unchanged; no live link, exact role, applicant outcome or human approval was inferred.",
+  records: careerDirectoryEvidence,
+};
+
 const pillars: Pillar[] = ["Movies & Entertainment", "Services", "Tour Nigeria", "Jobs & Careers"];
 const byPillar = pillars.map(pillar => {
   const section = rows.filter(r => r.pillar === pillar);
@@ -259,6 +277,7 @@ const audit = {
     nonindexable: rows.filter(r => !r.indexable).length,
     manuallyLiveChecked: 0, individuallyHumanApproved: 0 },
   byPillar, issueCounts,
+  careerDirectoryEvidenceTriage,
   highPrioritySample: priorityRows.slice(0, 80).map(({ pillar, kind, url, disposition, findings }) =>
     ({ pillar, kind, url, disposition, findings: findings.filter(f => f.severity !== "manual-check") })),
   caveats: [
