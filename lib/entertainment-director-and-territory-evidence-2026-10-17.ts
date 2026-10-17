@@ -83,7 +83,7 @@ export const filmCreditAndAvailabilityReviews20261017: Record<string, MovieRevie
       label: "Netflix Nigeria — Colours of Fire local availability warning",
       href: "https://www.netflix.com/ng/title/82752912",
       lastChecked: "2026-10-17",
-      note: "Nigerian storefront still displays 'This title currently isn't available to watch in your country'. A local metadata listing must not be portrayed as a valid watch option."
+      note: "Nigerian storefront explicitly marks the film unavailable: 'This title currently isn't available to watch in your country'. A local metadata listing must not be portrayed as a valid watch option."
     }],
     editorial: {
       heading: "Where Nigerians cannot currently watch Colours of Fire",
