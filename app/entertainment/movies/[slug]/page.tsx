@@ -14,6 +14,7 @@ import { getSiteUrl } from "@/lib/site";
 import { SavePageButton } from "@/components/personal-library";
 import { getMovieRecommendationShelves } from "@/lib/movie-discovery";
 import { getMovieEditorialProfile } from "@/lib/movie-editorial-profile-registry";
+import { documentedMovieAvailabilityVerdict } from "@/lib/movie-availability-evidence-2026-10-17";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -252,6 +253,7 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
   const title = getEntertainmentTitle(slug);
   if (!title) notFound();
 
+  const availabilityVerdict = documentedMovieAvailabilityVerdict(title, new Date().toISOString().slice(0,10));
   const availabilityLinks: WatchLink[] = [];
   const seenAvailability = new Set<string>();
   for (const link of title.watchLinks) {
@@ -572,7 +574,9 @@ export default async function MovieDetailPage({ params }: { params: Promise<{ sl
                 <p className="movie-long-summary">
                   {title.slug === "oversabi-aunty"
                     ? "No currently playable Nigerian streaming option has been independently verified for this title. The Netflix reference below documents its listing and availability notice, not a viewing link."
-                    : "No current official streaming, broadcast or cinema link is verified for this title. The references below verify the movie record without implying that it is available to watch there."}
+                    : availabilityVerdict
+                      ? availabilityVerdict.description
+                      : "No current official streaming, broadcast or cinema link is verified for this title. The references below verify the movie record without implying that it is available to watch there."}
                 </p>
               ) : null}
               {watchHereVideoId && watchHereSource ? (
