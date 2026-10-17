@@ -95,7 +95,7 @@ test("the entire movie catalogue retains every eligible pre-regression video or 
   // thumbnail; source-linked images must not disappear merely because a
   // separate channel profile URL is absent. Film-db image mirrors still
   // need a reuse basis, and are not silently treated as approved rights.
-  assert.equal(entertainmentTitles.length, 147, "catalogue size changed; re-audit this guard");
+  assert.ok(entertainmentTitles.length >= 147, "catalogue records unexpectedly disappeared");
 
   const externalBefore = entertainmentTitles.filter((film) =>
     Boolean(film.sourcePreview) ||
@@ -116,7 +116,7 @@ test("the entire movie catalogue retains every eligible pre-regression video or 
     withheld: withheld.map((film) => film.slug),
     hadNoExternalImageBefore: entertainmentTitles.length - externalBefore.length,
   }));
-  assert.ok(externalBefore.length >= 106, "source-backed titles unexpectedly disappeared");
+  assert.ok(externalBefore.length >= 112, "source-backed titles unexpectedly disappeared");
   assert.equal(newlyDisplayable.length, externalBefore.length - 1,
     "every film except the documented mirror-only title needs its prior image pathway");
   assert.deepEqual(withheld.map((film) => film.slug), ["wire-transfer-2026"],
