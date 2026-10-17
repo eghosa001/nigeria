@@ -90,6 +90,50 @@ test("previously linked producer thumbnails are not hidden by missing optional p
   assert.equal(getVerifiedYouTubePreview(wrongAccess), null);
 });
 
+test("the entire movie catalogue retains every eligible pre-regression video or credited visual source", () => {
+  // PR #563 displayed a checked official poster, sourcePreview or video
+  // thumbnail; source-linked images must not disappear merely because a
+  // separate channel profile URL is absent. Film-db image mirrors still
+  // need a reuse basis, and are not silently treated as approved rights.
+  assert.equal(entertainmentTitles.length, 140, "catalogue size changed; re-audit this guard");
+
+  const externalBefore = entertainmentTitles.filter((film) =>
+    Boolean(film.sourcePreview) ||
+    Boolean(film.trailer) ||
+    film.watchLinks.some((link) => link.platform === "YouTube" && link.access === "full-movie") ||
+    canDisplayEntertainmentArtwork(film),
+  );
+  const newlyDisplayable = externalBefore.filter((film) =>
+    canDisplayEntertainmentArtwork(film) ||
+    Boolean(getSourceLinkedFilmPreview(film)) ||
+    Boolean(getVerifiedYouTubePreview(film)),
+  );
+  const withheld = externalBefore.filter((film) => !newlyDisplayable.includes(film));
+  assert.equal(externalBefore.length, 106, "source-backed catalogue changed; investigate before adjusting");
+  assert.equal(newlyDisplayable.length, 105, "every eligible film needs its existing verified video or credited official poster");
+  assert.deepEqual(withheld.map((film) => film.slug), ["wire-transfer-2026"],
+    "no other previously pictured movie may silently lose its poster");
+
+  // These are current film-specific source citations for original video
+  // previews, not grants to reuse the mirrored third-party promo posters.
+  assert.equal(getVerifiedYouTubePreview(entertainmentTitles.find(
+    (film) => film.slug === "a-land-apart-2026")!)?.videoId, "qMoZdjkCAb4");
+  assert.equal(getVerifiedYouTubePreview(entertainmentTitles.find(
+    (film) => film.slug === "phoenix-fury-2026")!)?.videoId, "TGFvzpk27s4");
+
+  const noExternalBefore = entertainmentTitles.filter((film) => !externalBefore.includes(film));
+  assert.equal(noExternalBefore.length, 34, "separate genuinely new artwork work from regressions");
+  const cards = readFileSync("components/entertainment-artwork.tsx", "utf8");
+  const home = readFileSync("app/page.tsx", "utf8");
+  const filmDirectory = readFileSync("components/entertainment-catalog.tsx", "utf8");
+  const filmPage = readFileSync("app/entertainment/movies/[slug]/page.tsx", "utf8");
+  assert.match(cards, /getSourceLinkedFilmPreview/);
+  assert.match(cards, /getVerifiedYouTubePreview/);
+  for (const surface of [home, filmDirectory, filmPage]) {
+    assert.match(surface, /<EntertainmentArtwork/, "a key movie surface bypassed the shared repaired component");
+  }
+});
+
 test("YouTube movie cards and all remote previews fail visibly, not with blank boxes", () => {
   const preview = readFileSync("components/remote-movie-preview-image.tsx", "utf8");
   const movieCards = readFileSync("components/youtube-movie-card.tsx", "utf8");
