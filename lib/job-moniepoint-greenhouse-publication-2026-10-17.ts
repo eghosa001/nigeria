@@ -79,8 +79,8 @@ export function applyOriginalMoniepointAtsProof20261017(item: CareerOpportunity)
   return {
     ...item,
     posting: { jobTitle: proof.title, datePosted: proof.firstPublished, locations: proof.locations },
-    officialUrl: application,
-    officialUrlLabel: "Apply through Moniepoint's exact Greenhouse requisition",
+    // Preserve Moniepoint's original role-detail URL for the on-page primary
+    // action; the exact employer-linked ATS form remains an independent source.
     statusLabel,
     verifiedAt: checkDate,
     nextMilestone: "Original Greenhouse form visible 17 October 2026; no stated employer closing date. Confirm that it still accepts applications before submitting.",
@@ -100,7 +100,7 @@ export function hasCompletedMoniepointAtsReview20261017(item: CareerOpportunity,
   const proof = originalMoniepointAtsProof20261017[item.slug];
   if (!proof || item.kind !== "vacancy" || item.status !== "open" ||
       item.deadline || item.jobPostingAuthorization ||
-      item.officialUrl !== proof.atsUrl || item.statusLabel !== statusLabel ||
+      item.officialUrl !== proof.issuerUrl || item.statusLabel !== statusLabel ||
       !item.posting || item.posting.datePosted !== proof.firstPublished ||
       item.posting.jobTitle !== proof.title ||
       JSON.stringify(item.posting.locations) !== JSON.stringify(proof.locations) ||
