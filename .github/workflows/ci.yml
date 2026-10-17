@@ -327,6 +327,9 @@ jobs:
         run: |
           python3 scripts/fast_path_guard.py
           npm run check:explore
+      - name: Check 42 original service decisions and contextual route authenticity
+        if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality' || steps.scope.outputs.mode == 'service-route'
+        run: npx tsx --test tests/service-original-decisions-20261017.test.ts
       - name: Verify source-linked service task comparisons and truthful hub schema
         if: steps.scope.outputs.mode == 'full' || steps.scope.outputs.mode == 'quality'
         run: npx tsx --test tests/service-task-comparison.test.ts
