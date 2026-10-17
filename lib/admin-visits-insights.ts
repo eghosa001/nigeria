@@ -1,5 +1,5 @@
 import { ANALYTICS_CLEAN_START, ANALYTICS_PRODUCTION_HOSTS } from "@/lib/analytics-safety";
-import { runReport, searchConsoleQuery, getHourlySearchPerformance, runRealtime, dateInTimeZone, analyticsReadConfigured } from "@/lib/analytics-data";
+import { runReport, searchConsoleQuery, getHourlySearchPerformance, runRealtime, dateInTimeZone, analyticsReadConfigured, verifyAnalyticsConnection, type AnalyticsConnectionStatus } from "@/lib/analytics-data";
 import { buildPeriodRows, shiftIsoDay, type PeriodRow, type TrafficDay } from "@/lib/analytics-period-rollups";
 import { getPostHogOverview, type PostHogOverview } from "@/lib/posthog-data";
 import { POSTHOG_COLLECTION_START } from "@/lib/posthog-config";
@@ -19,6 +19,9 @@ export type InsightsReport = {
   detailGscStartDate: string;
   latestGA4Date: string | null;
   latestGSCDate: string | null;
+  ga4Connection: AnalyticsConnectionStatus | null;
+  /** Unfiltered GA4 count is diagnostic only: it can include tests and preview hosts. */
+  ga4RawPageViews: number | null;
   pageViewsByPage: VisitedPage[];
   searchPages: SearchPage[];
   pageListsTruncated: { ga4: boolean; gsc: boolean };
@@ -103,7 +106,21 @@ async function queryOverview() {
         position: row.position ?? 0,
       })).filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date)) : [];
   const ga4Totals = ga4Lifetime.status === "fulfilled"
-    ? (ga4Lifetime.value.totals?.[0] ?? ga4Lifetime.value.rows?.[0] ?? {}) : null;
+    ? (ga4Lifetime.value.totals?.[0] ?? ga4Lifetime.value.rows?.[0] ?? null) : null;
+  // When filtered traffic appears empty, probe the unfiltered property to
+  // diagnose host/path-filter mistakes. NEVER display raw data as public visits.
+  const cleanViews = ga4Totals ? value(ga4Totals, 0) : null;
+  let ga4RawPageViews: number | null = null;
+  if (ga4Daily.status === "fulfilled" && cleanViews !== null && cleanViews <= 1) {
+    try {
+      const raw = await runReport({
+        dateRanges: [{ startDate: ga4StartDate, endDate: "today" }],
+        metrics: [{ name: "screenPageViews" }],
+      });
+      const rawRow = raw.totals?.[0] ?? raw.rows?.[0];
+      if (rawRow) ga4RawPageViews = value(rawRow, 0);
+    } catch { /* Diagnostics must not break the Visits dashboard. */ }
+  }
   const gscTotals = gscLifetime.status === "fulfilled" ? gscLifetime.value.rows?.[0] : null;
 
   const periods = buildPeriodRows(ga4Days, gscDays, lagosDay, {
@@ -124,6 +141,7 @@ async function queryOverview() {
     latestGA4Date: ga4Days.at(-1)?.date ?? null,
     latestGSCDate: gscDays.at(-1)?.date ?? null,
     ga4Error: resultError(ga4Daily) || resultError(ga4Lifetime),
+    ga4RawPageViews,
     gscError: resultError(gscDaily) || resultError(gscLifetime),
   };
 }
@@ -150,7 +168,7 @@ export async function getVisitsInsights(range: InsightRange, forceFresh = false)
   const gscDay = dateInTimeZone("America/Los_Angeles");
   const detailStartDate = range === "all" ? ANALYTICS_CLEAN_START : shiftIsoDay(lagosDay, 1 - dayCounts[range]);
   const detailGscStartDate = range === "all" ? earliestSearchDay(gscDay) : shiftIsoDay(gscDay, 1 - dayCounts[range]);
-  const [overview, ga4Pages, gscPages, realtime, hourly, posthog] = await Promise.all([
+  const [overview, ga4Pages, gscPages, realtime, hourly, posthog, ga4Connection] = await Promise.all([
     getOverview(forceFresh),
     analyticsReadConfigured() ? runReport({
       dateRanges: [{ startDate: detailStartDate, endDate: "today" }],
@@ -171,6 +189,7 @@ export async function getVisitsInsights(range: InsightRange, forceFresh = false)
     analyticsReadConfigured() ? runRealtime().catch(() => null) : Promise.resolve(null),
     getHourlySearchPerformance(),
     getPostHogOverview(detailStartDate > POSTHOG_COLLECTION_START ? detailStartDate : POSTHOG_COLLECTION_START, lagosDay, forceFresh),
+    analyticsReadConfigured() ? verifyAnalyticsConnection().catch(() => null) : Promise.resolve(null),
   ]);
   const report: InsightsReport = {
     generatedAt: new Date().toISOString(), selectedRange: range,
@@ -178,6 +197,7 @@ export async function getVisitsInsights(range: InsightRange, forceFresh = false)
     ga4StartDate: overview.ga4StartDate, gscStartDate: overview.gscStartDate,
     detailStartDate, detailGscStartDate,
     latestGA4Date: overview.latestGA4Date, latestGSCDate: overview.latestGSCDate,
+    ga4RawPageViews: overview.ga4RawPageViews, ga4Connection,
     pageViewsByPage: (ga4Pages.data?.rows ?? []).map((row) => ({
       path: textValue(row, 0) || "/", title: textValue(row, 1) || "Untitled page",
       views: value(row, 0), users: value(row, 1),

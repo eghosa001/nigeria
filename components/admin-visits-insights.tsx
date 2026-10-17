@@ -5,6 +5,7 @@ import type { InsightRange, InsightsReport, SearchPage } from "@/lib/admin-visit
 import { metricDelta, type TrafficDay } from "@/lib/analytics-period-rollups";
 import { completeVisitsReport, completeVisitsCsv } from "@/lib/visits-export";
 import { findSearchOpportunities } from "@/lib/visits-search-opportunities";
+import { decideTrafficSource } from "@/lib/visits-traffic-health";
 
 const mobileLabels: Record<InsightRange, string> = { "1d": "1D", "7d": "7D", "30d": "30D", "90d": "90D", all: "All" };
 const ranges: InsightRange[] = ["1d", "7d", "30d", "90d", "all"];
@@ -301,6 +302,10 @@ export function AdminVisitsInsights() {
 
   const lifetime = report.periods.find((row) => row.key === "all")!;
   const sampledViews = report.pageViewsByPage;
+  const traffic = decideTrafficSource(current.pageViews, current.sessions,
+    range === "all" ? report.ga4StartDate : current.startDate, current.endDate, report.posthog);
+  const ga4ExcludedByFilter = report.ga4RawPageViews !== null &&
+    (lifetime.pageViews ?? 0) <= 1 && report.ga4RawPageViews >= 10;
   return <div className="visits-insights">
     <section className="admin-panel visits-hero">
       <div className="section-heading">
@@ -322,9 +327,13 @@ export function AdminVisitsInsights() {
       <div className="visits-current-kpis" aria-label="Selected period key statistics">
         <div><span>Google impressions</span><strong>{count(current.impressions)}</strong><Delta current={current.impressions} previous={current.previousImpressions} /></div>
         <div><span>Google clicks</span><strong>{count(current.clicks)}</strong><Delta current={current.clicks} previous={current.previousClicks} /></div>
-        <div><span>Website page views</span><strong>{count(current.pageViews)}</strong><Delta current={current.pageViews} previous={current.previousPageViews} /></div>
-        <div><span>Website visits</span><strong>{count(current.sessions)}</strong><Delta current={current.sessions} previous={current.previousSessions} /></div>
+        <div><span>Website page views · {traffic.source}</span><strong>{count(traffic.views)}</strong>{traffic.source === "GA4" ? <Delta current={current.pageViews} previous={current.previousPageViews} /> : <small>From {traffic.sourceStartDate ?? "unavailable"} · independently measured</small>}</div>
+        <div><span>Website visits · {traffic.source}</span><strong>{count(traffic.sessions)}</strong>{traffic.source === "GA4" ? <Delta current={current.sessions} previous={current.previousSessions} /> : <small>Same source and coverage as page views</small>}</div>
       </div>
+      {traffic.warning ? <p className="visits-source-warning" role="alert">{traffic.warning} {traffic.source === "PostHog" && traffic.sourceStartDate! > (range === "all" ? report.ga4StartDate : current.startDate) ? "PostHog only covers dates from " + traffic.sourceStartDate + "; this is not the full selected period." : ""}</p> : null}
+      {ga4ExcludedByFilter ? <p className="visits-source-warning" role="alert">GA4 reports {count(report.ga4RawPageViews)} unfiltered views but {count(lifetime.pageViews)} clean public views. The production-host/path filter may be excluding recorded traffic. Raw counts include possible test traffic and must not replace clean visits automatically.</p> : null}
+      {report.ga4Connection?.status === "mismatch" ? <p className="visits-source-warning" role="alert">GA4 tracking mismatch: public measurement ID {report.ga4Connection.measurementId} does not belong to configured property {report.ga4Connection.propertyId}. Correct the server GA4_PROPERTY_ID or public measurement ID.</p> : null}
+      {report.ga4Connection?.status === "unavailable" ? <p className="visits-footnote">GA4 stream verification unavailable: {report.ga4Connection.error ?? "check Google Analytics Admin API permissions"}. This does not itself mean tracking is disconnected.</p> : null}
       <div className="visits-current-secondary">
         <span>CTR <strong>{current.impressions && current.clicks != null ? percent(current.clicks / current.impressions) : "—"}</strong></span>
         <span>Avg. position <strong>{current.position == null ? "—" : current.position.toFixed(1)}</strong></span>
@@ -481,6 +490,7 @@ export function AdminVisitsInsights() {
     <section className="admin-panel visits-viewed-panel">
       <div className="section-heading"><div><span className="eyebrow">GA4 · {labels[range]}</span><h2>Pages actually viewed on the website</h2></div></div>
       {report.errors.ga4Pages ? <p className="visits-source-warning">{report.errors.ga4Pages}</p> : null}
+      {!sampledViews.length ? <p className="visits-source-warning">GA4 returned no page-level view records for this period. PostHog overview totals cannot identify individual pages; this table is incomplete, not proof that nobody visited.</p> : null}
       <div className="visits-mobile-only visits-mobile-results" aria-label="Website pages visited">
         {sampledViews.slice(0, mobileShowVisited).map((row, index) => <article key={row.path + index} className="visits-result-card visits-view-card">
           <span className="visits-card-kicker">Visited page</span>

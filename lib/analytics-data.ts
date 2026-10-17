@@ -349,7 +349,7 @@ async function batchRunReports(requests: Array<Record<string, unknown>>) {
   return await response.json() as BatchRunReportsResponse;
 }
 
-async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
+export async function verifyAnalyticsConnection(): Promise<AnalyticsConnectionStatus> {
   const { propertyId = "" } = config();
   const measurementId = GA_MEASUREMENT_ID;
 
