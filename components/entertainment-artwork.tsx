@@ -1,6 +1,10 @@
 import type { EntertainmentTitle } from "@/lib/entertainment";
 import { canDisplayEntertainmentArtwork } from "@/lib/entertainment";
 
+function generatedPosterHref(title: EntertainmentTitle) {
+  return "/entertainment/poster/" + encodeURIComponent(title.slug);
+}
+
 function GeneratedArtwork({ title, variant, showSourceLink }: { title: EntertainmentTitle; variant: "card" | "hero"; showSourceLink: boolean }) {
   return (
     <figure
