@@ -33,3 +33,9 @@ Property: `sc-domain:mynigeriaguide.com`. Search type: Web. Settled reporting wi
 - On deployment, check the home H1, the two edited snippets, rendered canonical and metadata, and that historical guides retain the same URL.
 - Compare **query+page** clicks, CTR, impressions and average positions after a full post-deploy settled interval (28 days is a useful comparison) against this 28-day baseline, accounting for indexing lag, external SERP changes and seasonality. CTR change cannot be attributed solely to title edits.
 - Do not change robots, sitemaps or `lastmod` solely because a snippet was edited.
+
+## GSC indexing finding (17 October 2026)
+
+The GSC Wizard tracker identifies one Google **soft 404** for `/services/waec-collect-certificate`, last crawled on 17 October 2026. The service record itself is a complete, source-linked guide reviewed 16 October; the failure is Google's page-quality classification, not evidence that the website intentionally responds 404. The SEO override now describes the real school-candidate versus private-candidate collection routes, plus identity/readiness precautions, without a fictitious standard fee. Confirm the production page returns HTTP 200 and correct canonical after deployment, then reinspect in Search Console; recrawling and indexing remain Google's choice. Original content/steps and source links were not changed in this SEO PR.
+
+The broader tracker has 40/85 pages indexed, 28 unknown to Google, 12 discovered not indexed, four crawled but not indexed and one soft 404. Chrome real-user PHONE p75 ending October 10 reports LCP 2.79s, INP 224ms, CLS 0 and TTFB 1.86s; audit Cloudflare Worker/server latency without blindly freezing midnight-dependent dynamic routes. Sitemap API shows zero parse errors, so do not regenerate sitemaps as an indexability cure.
