@@ -25,7 +25,7 @@ export const serviceSeoTitleTemplates: Record<string, string> = {
   "aedc-map-refund": "AEDC MAP Refund Portal: Check Meter & Token Status",
   "ibedc-map-refund": "IBEDC MAP Refund Checker: Meter Number & Tokens",
   "western-union-track-transfer-nigeria": "Western Union Nigeria Tracking: 10-Digit MTCN Check",
-  "spotify-premium-nigeria": "Spotify Premium Nigeria: Individual ₦1,600, Student ₦800",
+  "spotify-premium-nigeria": "Spotify Premium Nigeria {year}: Prices, Plans & Payment",
   "cac-business-name-registration": "CAC Business Name Registration: Fees & Online Steps",
   "jamb-direct-entry-2026": "JAMB Direct Entry {year}: Form, Fee & Registration",
   "pencom-open-rsa": "RSA Registration Nigeria {year}: NIN & Pension Account",
