@@ -35,7 +35,7 @@ export async function generateMetadata({params}:{params:Promise<{slug:string}>})
   const space = Math.max(0, 150 - prefix.length);
   const summary = synopsis.length > space ? synopsis.slice(0, space).replace(/\s+\S*$/, "").trimEnd() + "…" : synopsis;
   const description = prefix + summary;
-  const seoTitle = item.title + " (" + item.year + "): Cast & Episodes";
+  const seoTitle = item.title + ": Episodes & Cast";
   return {
     title:seoTitle,
     description,
