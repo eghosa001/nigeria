@@ -6,6 +6,15 @@ type VerifiedCredit = {
   source: { label: string; href: string; lastChecked: string; note: string };
 };
 export const verifiedFilmDirectorCredits20261015: Record<string, VerifiedCredit> = {
+  "third-party-risk": {
+    directors: ["Uche Alexmoore"],
+    source: {
+      label: "African Movies Database — Third Party Risk (2026) director and crew",
+      href: "https://africanmoviedb.com/title/third-party-risk-2026",
+      lastChecked: "2026-10-17",
+      note: "Exact 8 September 2026 production credits identify Uche Alexmoore as director and director of photography, with Enyinna Jonas as executive producer. Cast credits for Ray Emodi, Omeche Oko and Symon Oko match this release; the source is not evidence of current streaming rights."
+    },
+  },
   "chief-daddy": {
     directors: ["Niyi Akinmolayan"],
     source: { label: "EbonyLife Films — Chief Daddy production announcement", href: "https://ebonylifetv.com/filming-wraps-up-for-ebonylife-production-chief-daddy/", lastChecked: "2026-10-15", note: "Producer's production announcement explicitly names Niyi Akinmolayan as director." },
