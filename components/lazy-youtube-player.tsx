@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { RemoteMoviePreviewImage } from "@/components/remote-movie-preview-image";
 
 type Props = {
   videoId: string;
@@ -84,14 +85,12 @@ export function LazyYouTubePlayer({ videoId, title, sourceUrl, publisher }: Prop
             onClick={() => setActive(true)}
             aria-label={"Watch " + title + " here"}
           >
-            <img
+            <RemoteMoviePreviewImage
               src={thumbnail}
-              alt={title + " official YouTube thumbnail"}
-              width={480}
-              height={360}
+              fallbackSrc={"https://img.youtube.com/vi/" + videoId + "/mqdefault.jpg"}
+              title={title}
+              alt={title + " original YouTube video thumbnail"}
               loading="lazy"
-              decoding="async"
-              referrerPolicy="no-referrer"
             />
             <span className="lazy-youtube-play" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="m9 7 8 5-8 5V7Z" /></svg>
