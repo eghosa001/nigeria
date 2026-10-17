@@ -59,8 +59,8 @@ test("YouTube movie cards and all remote previews fail visibly, not with blank b
   const movieCards = readFileSync("components/youtube-movie-card.tsx", "utf8");
   const styles = readFileSync("app/globals.css", "utf8");
   assert.match(movieCards, /RemoteMoviePreviewImage/);
-  assert.match(movieCards, /i\\.ytimg\\.com/);
-  assert.match(preview, /onError=\\{\\(\\) => setAttempt/);
+  assert.ok(movieCards.includes("i.ytimg.com"));
+  assert.ok(preview.includes("onError={() => setAttempt"));
   assert.match(preview, /remote-movie-preview-fallback/);
   assert.match(styles, /remote-movie-preview-picture/);
 });
